@@ -25,6 +25,8 @@ Topics:
   * Focus less on exact styling and more on the structure of your React components.
   * You are free to leverage bootstrap for this project for the purposes of styling. I recommend the great [react-bootstrap](https://react-bootstrap.github.io) library, which is a library of bootstrap components that have been implemented using React, so they're really easy to just drop straight into React projects. 
 
+---
+
 Your search bar should look something like this:
 ![alt tag](/assets/ig_search_bar.png)
 
