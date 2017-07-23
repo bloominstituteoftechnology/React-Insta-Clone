@@ -1,7 +1,6 @@
 # React II
 
 Topics:
-
  * create-react-app
  * JSX
  * state
@@ -28,8 +27,6 @@ Topics:
 
 Your search bar should look something like this:
 ![alt tag](/assets/ig_search_bar.png)
-
-
 
 Your post container should look something like this:
 ![alt tag](/assets/ig_post.png)
