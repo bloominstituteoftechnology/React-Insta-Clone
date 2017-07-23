@@ -37,4 +37,5 @@ Your post container should look something like this:
 
 ## Extra Credit
   * Implement the ability to like a post by clicking on the heart icon and having the number of likes increment accordingly. 
+  * Look into the [moment.js](https://momentjs.com/) library to read about how to dynamically format the timestamp into a human-readable format like how it is being displayed in the screenshot. 
   * In the bottom right corner of the Post Container, you'll see an ellipsis icon. Clicking this icon will pop up a modal that, on Instagram's site, gives you options for flagging the post as inappropriate. Look into implementing this modal functionality in your own project. 
