@@ -1,0 +1,23 @@
+{
+  "name": "instagram",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-scripts": "1.0.10"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "enzyme": "^2.9.1",
+    "react-addons-test-utils": "^15.6.0",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
+    "sinon": "^2.3.8"
+  }
+}
