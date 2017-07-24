@@ -11,6 +11,11 @@ Topics:
  * map
  * functional vs class components
 
+## Objectives
+The purpose of this project is to continue building on your knowledge of React that started with the React I project. Here, you'll be implementing a lot of the same concepts and structuring your components in a very similar fashion. The main difference this time around is that you'll be using the `create-react-app` utility to generate your React projects for you. Don't worry about all of the extra files that you may not understand. The overall structure of the project is exactly the same as what you guys worked with in React I. There are also some tests this time around to give you guys a better sense of your progress. 
+
+By the end of this project, you should be comfortable with what components are, the notion of state within a component, as well as passing data from a parent component down to a child component. 
+
 ## Project Setup
   * Run `npm i -g create-react-app` to install the React app generator.
   * Run `create-react-app instagram` to create your starter application.
