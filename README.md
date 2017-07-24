@@ -16,6 +16,8 @@ The purpose of this project is to continue building on your knowledge of React t
 
 By the end of this project, you should be comfortable with what components are, the notion of state within a component, as well as passing data from a parent component down to a child component. 
 
+Try to get all of the tests passing. If you don't get there, then aim for creating all of the different components and organizing them appropriately in terms of the parent-child relationship, with data getting passed around accordingly. 
+
 ## Project Setup
   * Run `npm i -g create-react-app` to install the React app generator.
   * Run `create-react-app instagram` to create your starter application.
