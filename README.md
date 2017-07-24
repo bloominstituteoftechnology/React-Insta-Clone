@@ -1,6 +1,6 @@
 # React II
 
-## Topics:
+## Topics - OKAY √
  * create-react-app
  * JSX
  * state
@@ -23,14 +23,14 @@
  * map
  * functional vs class components
 
-## Objectives
-The purpose of this project is to continue building on your knowledge of React that started with the React I project. Here, you'll be implementing a lot of the same concepts and structuring your components in a very similar fashion. The main difference this time around is that you'll be using the `create-react-app` utility to generate your React projects for you. Don't worry about all of the extra files that you may not understand. The overall structure of the project is exactly the same as what you guys worked with in React I. There are also some tests this time around to give you guys a better sense of your progress.
+## Objectives - OKAY √
+The purpose of this project is to continue building on your knowledge of React that started with the React I project. Here, you'll be implementing a lot of the same concepts and structuring your components in a very similar fashion. The main difference this time around is that you'll be using the `create-react-app` utility to generate your React projects for you. Don't worry about all of the extra files that you may not understand. The overall structure of the project is exactly the same as what you worked with in React I. There are also some tests this time around to give you a better sense of your progress.
 
 By the end of this project, you should be comfortable with what components are, the notion of state within a component, as well as passing data from a parent component down to a child component.
 
 Try to get all of the tests passing. If you don't get there, then aim for creating all of the different components and organizing them appropriately in terms of the parent-child relationship, with data getting passed around accordingly.
 
-## Project Setup
+## Project Setup - DONE √
   * Run `npm i -g create-react-app` to install the React app generator. - DONE √
   * Run `create-react-app instagram` to create your starter application. - DONE √
   ```console
@@ -100,7 +100,7 @@ Try to get all of the tests passing. If you don't get there, then aim for creati
     ```
   * Move the provided `/tests` directory as well as the `application-data.js` file into the `/src` directory of your newly-generated React project. - DONE √
 
-## Project Description
+## Project Description - OKAY √
   * There are two overarching components that you'll need to implement for this project: the Search Bar and the Post Container.
   * You'll want to separate the comment section of the Post Container into its own Comment Section component that will be a child of the Post Container.
   * Focus less on exact styling and more on the structure of your React components.
