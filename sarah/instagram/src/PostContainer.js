@@ -1,20 +1,19 @@
 // Post container
 // should render two image tags
-// needs to handle state (or is it just props??) ---> should be container component --> should be a class
 import React, { Component } from 'react';
 import CommentSection from './CommentSection';
 
 class PostContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>
-        {/* <CommentSection comments={this.props.postData.comments} /> */}
-        Text from the Post Container component...and:
-        <CommentSection />
+	<div>
+	 <img src={this.props.thumbnailUrl} alt='Thumbnail'/>
+	    console.log(this.props.thumbnailUrl);
+	 <h4>Username: {this.props.username}</h4>
+	</div>
+	<img src={this.props.data} alt='PostedPicture'/>
+	<CommentSection comments={this.props.comments}/>
       </div>
     );
   }
