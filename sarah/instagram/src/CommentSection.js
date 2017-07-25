@@ -16,12 +16,30 @@ class CommentSection extends Component {
   }
 
   // componentDidMount() {
-  //
+  //   this.setState({
+  //     comments: this.props.comments;
+  //     });
   // }
 
   render() {
     return (
-      <div>Text from the Comment Section component (passed to the Post Container)</div>
+      <div>
+	<div>
+	  <i className="material-icons">star</i>
+	  <i className="material-icons">chat bubble outline</i>
+	</div>
+	{[this.props.comments].map((comment, i) => {
+          return(
+	    <div key={this.props.index}>
+              <h5>Username: {this.props.comments.username}</h5>
+              <p> text: {this.props.comments.text}</p>
+	    </div>
+          );
+        })}
+	<form>
+	  <input type="text" name="comment" />
+	</form>
+      </div>
     )
   }
 }
