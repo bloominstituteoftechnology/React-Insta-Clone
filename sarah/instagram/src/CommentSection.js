@@ -31,11 +31,14 @@ class CommentSection extends Component {
 	{[this.props.comments].map((comment, i) => {
           return(
 	    <div key={this.props.index}>
-              <h5>Username: {this.props.username}</h5>
-              <p> text: {this.props.text}</p>
+              <h5>Username: {this.props.comments.username}</h5>
+              <p> text: {this.props.comments.text}</p>
 	    </div>
           );
         })}
+	<form>
+	  <input type="text" name="comment" />
+	</form>
       </div>
     )
   }
