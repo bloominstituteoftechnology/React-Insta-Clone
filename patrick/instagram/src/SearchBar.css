@@ -1,5 +1,7 @@
 .masthead {
+  height: 50px;
   text-align: center;
+  background-color: #ffddee;
 }
 
 .App-logo {
