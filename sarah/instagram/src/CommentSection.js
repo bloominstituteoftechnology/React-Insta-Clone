@@ -24,21 +24,21 @@ class CommentSection extends Component {
   render() {
     return (
       <div>
-	<div>
-	  <i className="material-icons">star</i>
-	  <i className="material-icons">chat bubble outline</i>
-	</div>
-	{[this.props.comments].map((comment, i) => {
+      	<div>
+      	  <i className="material-icons">star</i>
+      	  <i className="material-icons">chat bubble outline</i>
+      	</div>
+      	{[this.props.comments].map((comment, i) => {
           return(
-	    <div key={this.props.index}>
+      	    <div key={this.props.index}>
               <h5>Username: {this.props.comments.username}</h5>
               <p> text: {this.props.comments.text}</p>
-	    </div>
+      	    </div>
           );
         })}
-	<form>
-	  <input type="text" name="comment" />
-	</form>
+      	<form>
+      	  <input type="text" name="comment" />
+      	</form>
       </div>
     )
   }
