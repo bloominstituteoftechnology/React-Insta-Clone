@@ -10,6 +10,7 @@ const SearchBar = (props) => {
       <img src={logo} className="App-logo" alt="logo" />
       &loz; | Instagram&nbsp;
       <input
+        className="searchBar"
         type="text"
         placeholder="...I can help!"
       />
