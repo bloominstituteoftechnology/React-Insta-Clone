@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import CommentSection from './components/CommentSection';
+// import CommentSection from './components/CommentSection'; // NOPE
 import SearchBar from './components/SearchBar';
 import PostContainer from './components/PostContainer';
 import postData from './application-data.js';
@@ -14,7 +14,7 @@ class App extends Component {
         {postData.map((data, i) => {
           return <PostContainer postData={data} />
         })}
-        <PostContainer postData={postData} />
+        {/* <PostContainer postData={postData} /> // Map is the preferred way! Put mapping into component tho?*/}
       </div>
     )
 
