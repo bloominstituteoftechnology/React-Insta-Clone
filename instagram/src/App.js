@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-// import CommentSection from './components/CommentSection'; // NOPE
-import SearchBar from './components/SearchBar';
-import PostContainer from './components/PostContainer';
+import SearchBar from './SearchBar';
+import PostContainer from './PostContainer';
 import postData from './application-data.js';
 
 class App extends Component {
@@ -11,9 +10,10 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
-        {postData.map((data, i) => {
+        <PostContainer />
+        {/* {postData.map((data, i) => {
           return <PostContainer postData={data} />
-        })}
+        })} */}
         {/* <PostContainer postData={postData} /> // Map is the preferred way! Put mapping into component tho?*/}
       </div>
     )

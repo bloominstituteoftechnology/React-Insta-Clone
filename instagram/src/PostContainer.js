@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CommentSection from './components/CommentSection';
+import CommentSection from './CommentSection';
 
 class PostContainer extends Component {
   constructor(props) {
@@ -9,7 +9,9 @@ class PostContainer extends Component {
   render() {
     return (
       <div>
-        <CommentSection comments={this.props.postData.comments} />
+        {/* <CommentSection comments={this.props.postData.comments} /> */}
+        Text from the Post Container component...and:
+        <CommentSection />
       </div>
     );
   }

@@ -9,13 +9,13 @@ class CommentSection extends Component {
     };
   }
 
-  componentDidMount() {
-
-  }
+  // componentDidMount() {
+  //
+  // }
 
   render() {
     return (
-      <div></div>
+      <div>Text from the Comment Section component (passed to the Post Container)</div>
     )
   }
 
