@@ -109,12 +109,12 @@ Try to get all of the tests passing. If you don't get there, then aim for creati
 ---
 
 Your search bar should look something like this:
-![alt tag](/assets/ig_search_bar.png)
+![alt tag](/patrick/instagram/assets/ig_search_bar.png)
 
 ---
 
 Your post container should look something like this:
-![alt tag](/assets/ig_post.png)
+![alt tag](/patrick/instagram/assets/ig_post.png)
 
 ## Extra Credit - OKAY √
   * Implement the ability to like a post by clicking on the heart icon and having the number of likes increment accordingly.
