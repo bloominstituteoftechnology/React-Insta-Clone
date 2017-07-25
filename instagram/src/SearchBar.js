@@ -8,7 +8,9 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div>Text from the Search Bar component</div>
+      <div>
+        Text from the Search Bar component
+      </div>
     )
   }
 }
