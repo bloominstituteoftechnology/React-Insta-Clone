@@ -21,6 +21,7 @@ Try to get all of the tests passing. If you don't get there, then aim for creati
 ## Project Setup
   * Run `npm i -g create-react-app` to install the React app generator.
   * Run `create-react-app instagram` to create your starter application.
+  * Ensure that there is a `package-lock.json` file at the same directory level as the `package.json` file in the `instagram` directory. If there isn't one, then you'll need to update your version of Node. Use a utility such as [nvm](https://github.com/creationix/nvm) to do this. 
   * Inside your React app, run `npm i --save-dev enzyme sinon` to install Enzyme and Sinon, which are libraries that are needed for testing your components. 
   * If you are using React 14.X or React < 15.5, then you'll need to run `npm i --save-dev react-addons-test-utils react-dom` as well.
   * If you are using React >= 15.5, then you'll need to run `npm i --save-dev react-test-renderer react-dom` as well. 
