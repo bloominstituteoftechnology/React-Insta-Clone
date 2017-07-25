@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import SearchBar from './SearchBar';
 import PostContainer from './PostContainer';
@@ -10,9 +9,18 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
+        {/* <PostContainer /> */}
+        {/* {postData.map((data, i) => {
+          return <PostContainer postData={data} />
+        })} */}
         {postData.map((data, i) => {
-          return <PostContainer key={data.imageUrl} thumbnail={data.thumbnailUrl} img={data.imageUrl} username={data.username} comments={data.comments} />
-        })} 
+          return <PostContainer
+                  key={data.imageUrl}
+                  thumbnail={data.thumbnailUrl}
+                  img={data.imageUrl}
+                  username={data.username}
+                  comments={data.comments} />
+        })}
       </div>
     )
   }
