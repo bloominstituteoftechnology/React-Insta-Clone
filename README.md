@@ -32,7 +32,8 @@ Try to get all of the tests passing. If you don't get there, then aim for creati
 
 ## Project Setup - DONE √
   * Run `npm i -g create-react-app` to install the React app generator. - DONE √
-  * Run `create-react-app instagram` to create your starter application. - DONE √
+  * Run `create-react-app instagram` to create your starter application. - DONE √  
+
   ```console
   3 mixelpix Mon Jul 24 17:31:02$  create-react-app instagram
     Creating a new React app in /Users/mixelpix/Lambda-University/LS-React-2/instagram.
