@@ -18,7 +18,6 @@ class CommentSection extends Component {
       <div>Text from the Comment Section component (passed to the Post Container)</div>
     )
   }
-
 }
 
 export default CommentSection;
