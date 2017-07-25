@@ -32,53 +32,53 @@ Try to get all of the tests passing. If you don't get there, then aim for creati
 
 ## Project Setup - DONE √
   * Run `npm i -g create-react-app` to install the React app generator. - DONE √
-  * Run `create-react-app instagram` to create your starter application. - DONE √  
+  * Run `create-react-app instagram` to create your starter application. - DONE √
 
-  ```console
-  3 mixelpix Mon Jul 24 17:31:02$  create-react-app instagram
-    Creating a new React app in /Users/mixelpix/Lambda-University/LS-React-2/instagram.
+    ```console
+    3 mixelpix Mon Jul 24 17:31:02$  create-react-app instagram
+      Creating a new React app in /Users/mixelpix/Lambda-University/LS-React-2/instagram.
 
-    Installing packages. This might take a couple minutes.
-    Installing react, react-dom, and react-scripts...
-
-
-    > fsevents@1.1.2 install /Users/mixelpix/Lambda-University/LS-React-2/instagram/node_modules/fsevents
-    > node install
-
-    [fsevents] Success: "/Users/mixelpix/Lambda-University/LS-React-2/instagram/node_modules/fsevents/lib/binding/Release/node-v57-
-    darwin-x64/fse.node" already installed
-    Pass --update-binary to reinstall or --build-from-source to recompile
-    npm notice created a lockfile as package-lock.json. You should commit this file.
-
-    + react-scripts@1.0.10
-    + react-dom@15.6.1
-    + react@15.6.1
-    added 1204 packages in 126.303s
-
-    Success! Created instagram at /Users/mixelpix/Lambda-University/LS-React-2/instagram
-    Inside that directory, you can run several commands:
-
-      npm start
-        Starts the development server.
-
-      npm run build
-        Bundles the app into static files for production.
-
-      npm test
-        Starts the test runner.
-
-      npm run eject
-        Removes this tool and copies build dependencies, configuration files
-        and scripts into the app directory. If you do this, you can’t go back!
+      Installing packages. This might take a couple minutes.
+      Installing react, react-dom, and react-scripts...
 
 
-    We suggest that you begin by typing:
+      > fsevents@1.1.2 install /Users/mixelpix/Lambda-University/LS-React-2/instagram/node_modules/fsevents
+      > node install
 
-      cd instagram
-      npm start
+      [fsevents] Success: "/Users/mixelpix/Lambda-University/LS-React-2/instagram/node_modules/fsevents/lib/binding/Release/node-v57-
+      darwin-x64/fse.node" already installed
+      Pass --update-binary to reinstall or --build-from-source to recompile
+      npm notice created a lockfile as package-lock.json. You should commit this file.
 
-    Happy hacking!
-  ```
+      + react-scripts@1.0.10
+      + react-dom@15.6.1
+      + react@15.6.1
+      added 1204 packages in 126.303s
+
+      Success! Created instagram at /Users/mixelpix/Lambda-University/LS-React-2/instagram
+      Inside that directory, you can run several commands:
+
+        npm start
+          Starts the development server.
+
+        npm run build
+          Bundles the app into static files for production.
+
+        npm test
+          Starts the test runner.
+
+        npm run eject
+          Removes this tool and copies build dependencies, configuration files
+          and scripts into the app directory. If you do this, you can’t go back!
+
+
+      We suggest that you begin by typing:
+
+        cd instagram
+        npm start
+
+      Happy hacking!
+    ```
 
 
   * Inside your React app, run `npm i --save-dev enzyme sinon` to install Enzyme and Sinon, which are libraries that are needed for testing your components. - DONE√
