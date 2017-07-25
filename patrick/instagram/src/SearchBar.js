@@ -7,7 +7,10 @@ import React, { Component } from 'react';
 const SearchBar = (props) => {
   return (
     <div>
-      Text from the Search Bar component
+      <input
+        type="text"
+        placeholder="...I can help!"
+      />
     </div>
   )
 }
