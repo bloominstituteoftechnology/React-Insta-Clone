@@ -25,7 +25,7 @@ class CommentSection extends Component {
       	{this.props.comments.map((comment, i) => {
           return(
             // <div key={this.props.comments[i].username}>
-      	    <div key={Math.random() * i}>
+      	    <div key={i}>
               <h5>Username: {this.props.comments[i].username}</h5>
               <p>text: {this.props.comments[i].text}</p>
       	    </div>
