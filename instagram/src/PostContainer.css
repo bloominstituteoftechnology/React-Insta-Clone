@@ -1,3 +1,7 @@
+.blocker {
+  display: block;
+}
+
 .heart {
   padding: .25em .5em 0 .25em;
   float: left;
@@ -5,18 +9,24 @@
 
 .con {
   padding: .17em .25em 0 .1em;
+  float: left;
 }
 
 .master {
   margin: 1em;
   border: solid 1px black;
   width: 600px;
+  margin: 2em 20em;
 }
 
 .postPic {
   margin: 0 auto;
   max-height: 600px;
   
+}
+
+.thumbnail {
+  margin: 0;
 }
 
 .thumbnail img {
@@ -38,6 +48,9 @@ h4 {
 
 h5 {
   padding-left: .5em;
+  display: block;
+  float: none;
+  margin: 3em .5em .5em .5em;
 }
 ul {
   list-style: none;

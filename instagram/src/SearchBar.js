@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
         <Navbar.Header>
           <FontAwesome name="instagram" className="insta" size="2x" />
           <Navbar.Brand pullRight>
-            <span>Instagram</span>
+            <span className="brand">Instagram</span>
           </Navbar.Brand>
         </Navbar.Header>
           <Navbar.Form>
@@ -20,7 +20,9 @@ class SearchBar extends React.Component {
               <FormControl className="sear" type="text" placeholder="Search" />
             </FormGroup>
           </Navbar.Form>
+          <span><FontAwesome className="compass" name="compass" size="2x" /></span>
           <span><FontAwesome className="hearts" name="heart-o" size="2x" /></span>
+          <span><FontAwesome className="user" name="user-o" size="2x" /></span>
       </Navbar>
     </div>
   );

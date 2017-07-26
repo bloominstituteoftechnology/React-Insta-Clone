@@ -1,3 +1,7 @@
+.brand {
+  font-family: "Lobster", cursive;
+}
+
 .insta {
   border-right: solid 1px gray;
   padding-right: .75em;
@@ -8,13 +12,32 @@
 .hearts {
   float: right;
   display: inline-block;
-  top: 0;
+  top: .5em;
+  right: 1em;
+  margin-right: 3em;
   position: absolute;
   
 }
 
+.user {
+  float: right;
+  display: inline-block;
+  top: .5em;
+  right: 2.7em;
+  position: absolute;
+}
+
+.compass {
+  float: right;
+  display: inline-block;
+  top: .5em;
+  right: 5.5em;
+  position: absolute;
+}
+
 .sear {
-  display: inline-flex;
+  display: inline-block;
+  margin-left: 20em;
 }
 
 Navbar.Header {
