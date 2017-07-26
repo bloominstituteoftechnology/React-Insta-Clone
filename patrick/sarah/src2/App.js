@@ -10,7 +10,7 @@ class App extends Component {
       <div>
         <SearchBar />
         {postData.map((data, i) => {
-          return <PostContainer
+          return <PostContainer 
             key={data.imageUrl}
 	    thumbnail={data.thumbnailUrl}
 	    img={data.imageUrl}
@@ -18,7 +18,7 @@ class App extends Component {
 	    comments={data.comments}
 	    likes={data.likes}
 	  />
-        })}
+        })} 
       </div>
     )
   }
