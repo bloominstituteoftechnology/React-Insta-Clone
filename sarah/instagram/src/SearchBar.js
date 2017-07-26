@@ -2,17 +2,24 @@
 // should render an input tag
 // no need to handle state --> can be a functional component
 
-import React, { Component } from 'react';
+import React from 'react';
+import './SearchBar.css';
+import logo from './logo.svg';
 
-
-class SearchBar extends Component {
-  render() {
-    return (
-      <div>
-        Text from the Search Bar component
-      </div>
-    )
-  }
+const SearchBar = (props) => {
+  return (
+    <div className="masthead">
+      <img src={logo} className="App-logo" alt="logo" />
+      &loz; | Instagram&nbsp;
+      <input
+        className="searchBar"
+        type="text"
+        placeholder="...I can help!"
+      />
+      &nbsp;&lambda; | &hearts; | lol
+      <img src={logo} className="App-logo" alt="logo" />
+    </div>
+  )
 }
 
 export default SearchBar;
