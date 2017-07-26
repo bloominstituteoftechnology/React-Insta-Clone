@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import SearchBar from './SearchBar';
 import PostContainer from './PostContainer';
@@ -10,26 +9,20 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
-        <PostContainer />
+        {/* <PostContainer /> */}
         {/* {postData.map((data, i) => {
           return <PostContainer postData={data} />
         })} */}
-        {/* <PostContainer postData={postData} /> // Map is the preferred way! Put mapping into component tho?*/}
+        {postData.map((data, i) => {
+          return <PostContainer
+                  key={data.imageUrl}
+                  thumbnail={data.thumbnailUrl}
+                  img={data.imageUrl}
+                  username={data.username}
+                  comments={data.comments} />
+        })}
       </div>
     )
-
-    // // Default create-react-app return
-    // return (
-    //   <div className="App">
-    //     <div className="App-header">
-    //       <img src={logo} className="App-logo" alt="logo" />
-    //       <h2>Welcome to React</h2>
-    //     </div>
-    //     <p className="App-intro">
-    //       To get started, edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //   </div>
-    // );
   }
 }
 
