@@ -9,7 +9,6 @@ body {
 }
 
 .container {
-  /*position: relative;*/
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -55,6 +54,7 @@ body {
   border: 1px solid rgba(0,0,0,.0975);
   border-radius: 2px;
   margin-top: -1px;
+  width: 622px;
 }
 
 .top-post {
@@ -119,18 +119,19 @@ body {
 }
 
 .likes {
+  text-align: left;
+  width: 100%;
   float: left;
-  /*position: relative;*/
   font-weight: bold;
 }
 
 .comments-div {
-  /*position: relative;*/
+  word-wrap: break-word;
 }
 
 .comments {
+  float: left;
   text-align: left;
-  /*position: relative;*/
   margin: 0;
   padding: 0;
   float: left;
@@ -141,6 +142,7 @@ body {
 
 .comments li {
   padding-bottom: 5px;
+  word-wrap: break-word;
 }
 
 .comments li strong {
@@ -149,7 +151,7 @@ body {
 }
 
 .comment-field {
-  width: 117.8%;
+  width: 580px;
 }
 .textBox {
   height: 55px;
