@@ -11,12 +11,9 @@ class CommentSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: [],
-      newComment:{
-        username: 'NotARobot',
-        text: '',
-      }
-    };
+      input: '',
+      comments: this.props.comments
+    }
     this.addComment = this.addComment.bind(this);
     this.handleChange = this.handleChange.bind(this)
   }
@@ -26,17 +23,25 @@ class CommentSection extends Component {
       comments: this.props.comments
       });
   }
-  
+
   addComment(event) {
     event.preventDefault();
-    const commentList = this.state.comments;
-    commentList.push(this.state.newComment);
-    this.setState({newComment: ''});
-    this.setState({commentList});
+    const userAndComment = {
+      username: 'AN AMAZING PERSON',
+      text: this.state.input
+    };
+    this.setState({
+      input: '',
+      comments: [...this.state.comments, userAndComment]
+    });
+    // const commentList = this.state.comments;
+    // commentList.push(this.state.newComment);
+    // this.setState({newComment: ''});
+    // this.setState({commentList});
   }
 
   handleChange(event) {
-    this.setState({newComment: event.target.value});
+    this.setState({input: event.target.value});
   }
 
   render() {
@@ -46,26 +51,24 @@ class CommentSection extends Component {
       	  <i className="material-icons">star</i>
       	  <i className="material-icons">chat bubble outline</i>
       	</div>
-      	{this.props.comments.map((comment, i) => {
+      	{this.state.comments.map((comment, i) => {
           return(
-      	    <div key={this.props.comments[i].text}>
-              <h5>{this.props.comments[i].username}</h5>
-              <p>{this.props.comments[i].text}</p>
+      	    <div key={i}>
+              <h5>{this.state.comments[i].username}</h5>
+              <p>{this.state.comments[i].text}</p>
       	    </div>
           );
         })}
       	<form onSubmit={this.addComment}>
-      	  <input 
-	    type="text"
-	    name="comment"
-	    placeholder="What do you think?"
-	    onChange={this.handleChange}
-	    value={this.state.newComment.text}
-	  />
+      	  <input
+      	    // type="text"
+      	    // name="comment"
+      	    placeholder="What do you think?"
+      	    onChange={this.handleChange}
+      	    value={this.state.input}
+      	  />
       	</form>
       </div>
     )
   }
-}
-
-export default CommentSection;
+}export default CommentSection;
