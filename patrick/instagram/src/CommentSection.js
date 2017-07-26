@@ -18,7 +18,7 @@ class CommentSection extends Component {
     //   }
       this.state = {
         input: '',
-        comments: this.props.comments
+        comments: []
       }
       this.addComment = this.addComment.bind(this);
       this.handleChange = this.handleChange.bind(this);
@@ -52,6 +52,7 @@ class CommentSection extends Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <div>
       	<div>
