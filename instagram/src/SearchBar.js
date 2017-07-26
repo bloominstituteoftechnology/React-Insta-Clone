@@ -1,27 +1,26 @@
 import React from 'react';
 //import * as ReactBootstrap from 'react-bootstrap';
-import { Navbar, FormGroup, FormControl, Button } from 'react-bootstrap';
+import { Navbar, FormGroup, FormControl, Button, Nav } from 'react-bootstrap';
 import './SearchBar.css';
+import FontAwesome from 'react-fontawesome';
 
 class SearchBar extends React.Component {
   render() {
   return (
     <div>
-      <Navbar>
+      <Navbar fluid>
         <Navbar.Header>
-          <Navbar.Brand>
-            <a href="https://www.instagram.com/?hl=en">Instagram</a>
+          <FontAwesome name="instagram" className="insta" size="2x" />
+          <Navbar.Brand pullRight>
+            <span>Instagram</span>
           </Navbar.Brand>
         </Navbar.Header>
-        <Navbar.Collapse>
           <Navbar.Form>
             <FormGroup>
-              <FormControl type="text" placeholder="Search" />
+              <FormControl className="sear" type="text" placeholder="Search" />
             </FormGroup>
-            {' '}
-            <Button type="submit">Submit</Button>
           </Navbar.Form>
-        </Navbar.Collapse>
+          <span><FontAwesome className="hearts" name="heart-o" size="2x" /></span>
       </Navbar>
     </div>
   );

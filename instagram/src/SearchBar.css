@@ -1,35 +1,27 @@
-/*Button {
-  background-color: white;
-  display: inline-block;
-}
-nav {
-  background-color: aquamarine;
-  text-align: center;
-}
-.navbar-collapse {
-  display: inline-block;
-}
-.navbar-form {
-  display: inline-block;
-}
-.form-group {
-  display: inline-block;
-}
-.navbar-header {
-  display: inline-block;
+.insta {
+  border-right: solid 1px gray;
+  padding-right: .75em;
   float: left;
-}
-ReactBootstrapNavbar {
-  background-color: cadetblue;
-}
-FormControl {
-  float: right;
-}
-FormGroup {
-  float: right;
+  margin: .5em;
 }
 
-.Header {
-  display: inline-block;
+.hearts {
   float: right;
-} */
+  display: inline-block;
+  top: 0;
+  position: absolute;
+  
+}
+
+.sear {
+  display: inline-flex;
+}
+
+Navbar.Header {
+  justify-content: right;
+}
+
+span {
+  display: inline-block;
+  float: right
+}

@@ -1,0 +1,44 @@
+.heart {
+  padding: .25em .5em 0 .25em;
+  float: left;
+}
+
+.con {
+  padding: .17em .25em 0 .1em;
+}
+
+.master {
+  margin: 1em;
+  border: solid 1px black;
+  width: 600px;
+}
+
+.postPic {
+  margin: 0 auto;
+  max-height: 600px;
+  
+}
+
+.thumbnail img {
+  max-height: 30px;
+  max-width: 30px;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+input {
+  width: 100%;
+  height: 4em;
+}
+
+h4 {
+  display: inline-block;
+  padding-left: 1em;
+}
+
+h5 {
+  padding-left: .5em;
+}
+ul {
+  list-style: none;
+}
