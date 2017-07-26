@@ -2,14 +2,28 @@
   display: block;
 }
 
+.forTest {
+  display: none;
+}
+
 .heart {
   padding: .25em .5em 0 .25em;
   float: left;
+}
+.heart:hover {
+  cursor: pointer;
+  border-color: palevioletred;
+  color: palevioletred;
 }
 
 .con {
   padding: .17em .25em 0 .1em;
   float: left;
+}
+.con:hover {
+  cursor: pointer;
+  color: black;
+  opacity: .5;
 }
 
 .master {
@@ -34,6 +48,11 @@
   max-width: 30px;
   border-radius: 100%;
   display: inline-block;
+}
+
+a {
+  border-color: black;
+  color: black;
 }
 
 input {

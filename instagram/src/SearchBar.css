@@ -1,5 +1,15 @@
 .brand {
   font-family: "Lobster", cursive;
+  font-size: 2em;
+  margin-top: .15em;
+}
+.brand:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.forTest {
+  display: none;
 }
 
 .insta {
@@ -7,6 +17,10 @@
   padding-right: .75em;
   float: left;
   margin: .5em;
+}
+.insta:hover {
+  cursor: pointer;
+  color: mediumpurple;
 }
 
 .hearts {
@@ -18,6 +32,10 @@
   position: absolute;
   
 }
+.hearts:hover {
+  cursor: pointer;
+  color: palevioletred;
+}
 
 .user {
   float: right;
@@ -25,6 +43,10 @@
   top: .5em;
   right: 2.7em;
   position: absolute;
+}
+.user:hover {
+  cursor: pointer;
+  color: cornflowerblue;
 }
 
 .compass {
@@ -34,10 +56,19 @@
   right: 5.5em;
   position: absolute;
 }
+.compass:hover {
+  cursor: pointer;
+  color: silver;
+}
 
 .sear {
   display: inline-block;
   margin-left: 20em;
+}
+
+a:hover {
+  text-decoration-line: none;
+  color: mediumpurple;
 }
 
 Navbar.Header {
