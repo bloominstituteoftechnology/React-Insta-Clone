@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDom, { render } from 'react-dom';
 import CommentField from './CommentField';
 
 class CommentSection extends Component {
@@ -35,13 +36,18 @@ class CommentSection extends Component {
     });
   }
 
+  clickHandler(e) {
+    e.preventDefault();
+    ReactDom.findDOMNode(this.commentFieldRef).focus();
+  }
+
   render() {
     let imgSource = ((this.state.hearts > this.props.postData.likes) ? "http://i.imgur.com/AqiwoAc.png" : "https://d30y9cdsu7xlg0.cloudfront.net/png/65570-200.png");
     return (
       <div className="comment-section">
         <div className="like-section">
           <a onClick={this.onHeart} href=""><img className="heart-icon" src={imgSource} /></a>
-          <a href="#"><img className="bubble-icon" src="http://i.imgur.com/TEYiH4l.png" /></a>
+          <a onClick={this.clickHandler.bind(this)} href="#"><img className="bubble-icon" src="http://i.imgur.com/TEYiH4l.png" /></a>
         </div>
         <div className="likes"><p>{this.state.hearts} likes</p></div>
         <div className="comments-div">
@@ -51,7 +57,7 @@ class CommentSection extends Component {
             })}
           </ul>
         </div>
-        <div className="comment-field"><CommentField onSave={this.onSave} /></div>
+        <div className="comment-field"><CommentField ref={(c)=>this.commentFieldRef=c} onSave={this.onSave} /></div>
       </div>
     );
   }
