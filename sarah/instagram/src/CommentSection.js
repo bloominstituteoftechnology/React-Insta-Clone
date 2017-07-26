@@ -11,14 +11,14 @@ class CommentSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      comments: [],
       newComment:{
         username: 'NotARobot',
         text: '',
-      },
-      comments: []
+      }
     };
     this.addComment = this.addComment.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChange = this.handleChange.bind(this)
   }
 
   componentDidMount() {
@@ -29,10 +29,10 @@ class CommentSection extends Component {
   
   addComment(event) {
     event.preventDefault();
-    const comment = this.state.comments;
-    this.comments.push(this.state.newComment);
-    this.setState({newComment.text: ''});
-    this.setState({this.comments});
+    const commentList = this.state.comments;
+    commentList.push(this.state.newComment);
+    this.setState({newComment: ''});
+    this.setState({commentList});
   }
 
   handleChange(event) {
@@ -48,15 +48,20 @@ class CommentSection extends Component {
       	</div>
       	{this.props.comments.map((comment, i) => {
           return(
-            // <div key={this.props.comments[i].username}>
-      	    <div key={i}>
+      	    <div key={this.props.comments[i].text}>
               <h5>{this.props.comments[i].username}</h5>
               <p>{this.props.comments[i].text}</p>
       	    </div>
           );
         })}
-      	<form>
-      	  <input type="text" name="comment" placeholder="leave a comment?"/>
+      	<form onSubmit={this.addComment}>
+      	  <input 
+	    type="text"
+	    name="comment"
+	    placeholder="What do you think?"
+	    onChange={this.handleChange}
+	    value={this.state.newComment.text}
+	  />
       	</form>
       </div>
     )
