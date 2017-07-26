@@ -26,7 +26,7 @@ class CommentSection extends Component {
       comments: this.props.comments
       });
   }
-  
+
   addComment(event) {
     event.preventDefault();
     const comment = this.state.comments;
