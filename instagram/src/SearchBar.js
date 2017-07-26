@@ -26,7 +26,7 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="top-bar">
-        <img className="instagram-logo" src="http://i.imgur.com/f2H8wAC.png"/>
+        <a href="#"><img className="instagram-logo" src="http://i.imgur.com/f2H8wAC.png"/></a>
         <FormControl
         className="search-bar"
         type="text"
@@ -35,7 +35,7 @@ class SearchBar extends Component {
         onChange={this.handleChange}
         onKeyDown={this.handleSubmit}
         />
-        <img className="top-right-logo" src="http://i.imgur.com/wx9qEzH.png"/>
+        <a href="#"><img className="top-right-logo" src="http://i.imgur.com/wx9qEzH.png"/></a>
       </div>
     );
   }

@@ -8,9 +8,16 @@ class PostContainer extends Component {
 
   render() {
     return (
-      <div>
-        
-        <CommentSection comments={this.props.postData.comments} />
+      <div className="outter-container">
+        <div className="top-post">
+          <img src={this.props.postData.thumbnailUrl}/>
+          <strong>{this.props.postData.username}</strong>
+        </div>
+        <div className="mid-post">
+          <p>{this.props.postData.timestamp}</p>
+          <img src={this.props.postData.imageUrl} />
+        </div>
+        <CommentSection postData={this.props.postData} />
       </div>
     );
   }
