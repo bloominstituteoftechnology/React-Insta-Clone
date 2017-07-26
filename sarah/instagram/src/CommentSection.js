@@ -11,15 +11,33 @@ class CommentSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      newComment:{
+        username: 'NotARobot',
+        text: '',
+      },
       comments: []
     };
+    this.addComment = this.addComment.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.setState({
-  //     comments: this.props.comments;
-  //     });
-  // }
+  componentDidMount() {
+    this.setState({
+      comments: this.props.comments
+      });
+  }
+  
+  addComment(event) {
+    event.preventDefault();
+    const comment = this.state.comments;
+    this.comments.push(this.state.newComment);
+    this.setState({newComment.text: ''});
+    this.setState({this.comments});
+  }
+
+  handleChange(event) {
+    this.setState({newComment: event.target.value});
+  }
 
   render() {
     return (
@@ -31,9 +49,9 @@ class CommentSection extends Component {
       	{this.props.comments.map((comment, i) => {
           return(
             // <div key={this.props.comments[i].username}>
-      	    <div key={Math.random() * i}>
-              <h5>Username: {this.props.comments[i].username}</h5>
-              <p>text: {this.props.comments[i].text}</p>
+      	    <div key={i}>
+              <h5>{this.props.comments[i].username}</h5>
+              <p>{this.props.comments[i].text}</p>
       	    </div>
           );
         })}
