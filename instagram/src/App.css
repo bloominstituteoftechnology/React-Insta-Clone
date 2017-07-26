@@ -1,0 +1,172 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.top-bar {
+  width: 100%;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+}
+
+.instagram-logo {
+  float: left;
+  width: 168.11px;
+  height: 39.47px;
+  margin-top: -6px;
+  margin-left: 20px;
+}
+
+.search-bar {
+  width: 215px;
+  height: 28px;
+  display: inline-block;
+  text-align: center;
+  background-color: rgba(0,0,0,.02);
+}
+
+.top-right-logo {
+  float: right;
+  height: 38px;
+  width: 170.72px;
+  margin-top: -5px;
+}
+
+.outter-container {
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.0975);
+  border-radius: 2px;
+  margin-top: -1px;
+  width: 622px;
+}
+
+.top-post {
+  float: left;
+  padding: 4px;
+}
+
+.top-post img {
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  margin: 6px;
+  margin-right: 10px;
+}
+
+.mid-post {
+  width: 620px;
+}
+
+.mid-post p {
+  float: right;
+  margin-top: 19px;
+  margin-right: 7px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.mid-post img {
+  width: 620px;
+}
+
+.next-page {
+  position:absolute;
+  margin-top: 0.4px;
+}
+
+.comment-section {
+  font-size: 14.5px;
+  padding-left: 20px;
+  vertical-align: bottom;
+  display: table;
+}
+
+.like-section {
+  padding-bottom: 45px;
+}
+
+.bubble-icon {
+  float: left;
+  width: 23px;
+  margin-top: 13px;
+}
+
+.heart-icon {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  margin-top: 5px;
+  margin-left: -5px;
+}
+
+.likes {
+  text-align: left;
+  width: 100%;
+  float: left;
+  font-weight: bold;
+}
+
+.comments-div {
+  word-wrap: break-word;
+}
+
+.comments {
+  float: left;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style-type: none;
+  display: table;
+  padding-bottom: 8px;
+}
+
+.comments li {
+  padding-bottom: 5px;
+  word-wrap: break-word;
+}
+
+.comments li strong {
+  float: left;
+  padding-right: 5px;
+}
+
+.comment-field {
+  width: 580px;
+}
+.textBox {
+  height: 55px;
+  border-radius: 0px;
+  border-top-color: rgba(0, 0, 0, 0.0975);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+
+.textBox:focus {
+  box-shadow: none;
+  border-top-color: rgba(0, 0, 0, 0.0975);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
