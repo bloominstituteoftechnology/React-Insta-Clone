@@ -1,0 +1,81 @@
+.brand {
+  font-family: "Lobster", cursive;
+  font-size: 2em;
+  margin-top: .15em;
+}
+.brand:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.forTest {
+  display: none;
+}
+
+.insta {
+  border-right: solid 1px gray;
+  padding-right: .75em;
+  float: left;
+  margin: .5em;
+}
+.insta:hover {
+  cursor: pointer;
+  color: mediumpurple;
+}
+
+.hearts {
+  float: right;
+  display: inline-block;
+  top: .5em;
+  right: 1em;
+  margin-right: 3em;
+  position: absolute;
+  
+}
+.hearts:hover {
+  cursor: pointer;
+  color: palevioletred;
+}
+
+.user {
+  float: right;
+  display: inline-block;
+  top: .5em;
+  right: 2.7em;
+  position: absolute;
+}
+.user:hover {
+  cursor: pointer;
+  color: cornflowerblue;
+}
+
+.compass {
+  float: right;
+  display: inline-block;
+  top: .5em;
+  right: 5.5em;
+  position: absolute;
+}
+.compass:hover {
+  cursor: pointer;
+  color: silver;
+}
+
+.sear {
+  display: inline-block;
+  margin-left: 20em;
+}
+
+a:hover {
+  text-decoration-line: none;
+  color: mediumpurple;
+}
+
+Navbar.Header {
+  justify-content: right;
+}
+
+span {
+  display: inline-block;
+  float: right
+}

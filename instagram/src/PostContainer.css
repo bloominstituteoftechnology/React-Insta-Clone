@@ -1,0 +1,76 @@
+.blocker {
+  display: block;
+}
+
+.forTest {
+  display: none;
+}
+
+.heart {
+  padding: .25em .5em 0 .25em;
+  float: left;
+}
+.heart:hover {
+  cursor: pointer;
+  border-color: palevioletred;
+  color: palevioletred;
+}
+
+.con {
+  padding: .17em .25em 0 .1em;
+  float: left;
+}
+.con:hover {
+  cursor: pointer;
+  color: black;
+  opacity: .5;
+}
+
+.master {
+  margin: 1em;
+  border: solid 1px black;
+  width: 600px;
+  margin: 2em 20em;
+}
+
+.postPic {
+  margin: 0 auto;
+  max-height: 600px;
+  
+}
+
+.thumbnail {
+  margin: 0;
+}
+
+.thumbnail img {
+  max-height: 30px;
+  max-width: 30px;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+a {
+  border-color: black;
+  color: black;
+}
+
+input {
+  width: 100%;
+  height: 4em;
+}
+
+h4 {
+  display: inline-block;
+  padding-left: 1em;
+}
+
+h5 {
+  padding-left: .5em;
+  display: block;
+  float: none;
+  margin: 3em .5em .5em .5em;
+}
+ul {
+  list-style: none;
+}
