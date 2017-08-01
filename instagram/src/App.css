@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: white;
+  height: 2em;;
+  padding: 10px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.Post {
+    width: 45%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+}
+
+.User-photo {width: 100%}
+
+.Post-list {
+    text-align: center;
+    padding: 10px 20px;
+    list-style: none;
+    margin-bottom: 5em;
+}
+
+.User-icon {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  display: flex;
+  width: 2.5em;
+  height: 2.5em;
+  text-align: auto;
+  border-radius: 20px;
+}
+
+.Username {
+  text-align: left;
+  display: flex;
+  margin-left: 1em;
+  padding-bottom: 6em;
+}
+
+.img-header {
+  height: 4em;
+  display: flex;
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+
+.Nav-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    height: 2.5em;
+    margin: 1em;
+}
+
+.heart-btn {
+  background-image: url(https://www.instagram.com/static/sprites/core/0e4847.png);
+  background-size: 420px 395px;
+  background-position: -162px -352px;
+  background-repeat: no-repeat;
+  height: 24;
+  width: 24;
+}
