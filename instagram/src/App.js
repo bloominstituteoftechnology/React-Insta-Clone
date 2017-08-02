@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './css/App.css';
-import SearchBar from './components/SearchBar'
+import { SearchBar } from './components/SearchBar'
+import PostContainer from './components/PostContainer'
+import postData from './application-data.js'
 
 class App extends Component {
   render() {
     return (
       <div>
         <SearchBar />
+        <PostContainer postData={postData} />
       </div>
     );
   }

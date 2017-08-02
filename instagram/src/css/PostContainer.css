@@ -1,0 +1,36 @@
+.postContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.post {
+  flex-grow: 1;
+  max-width: 400px;
+  margin: 20px;
+}
+.thumbnail {
+  border-radius: 50%;
+  max-width: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.username {
+  font-weight: 700;
+  display: inline-block;
+  margin: 0px;
+  padding-left: 5px;
+
+}
+
+.postImage {
+  max-width: 400px;
+}
+
+input {
+  width: 80%;
+}
