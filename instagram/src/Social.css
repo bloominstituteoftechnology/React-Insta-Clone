@@ -1,0 +1,20 @@
+/* CSS for the interactive social area */
+
+div.social * {
+  padding-bottom: .5em;
+}
+div.interact {
+  height: 30px;
+  width: 100%;
+  display: inline-block;
+}
+
+div.social p {
+  display: block;
+}
+
+div.interact img {
+ cursor: pointer;
+ height: 100%;
+ padding-right: 1em;
+}

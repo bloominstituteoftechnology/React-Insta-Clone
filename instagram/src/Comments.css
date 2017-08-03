@@ -1,0 +1,60 @@
+/* CSS for the comment section */
+
+div.comments {
+  display: block;
+}
+
+div.comment {
+  display: block;
+  padding-bottom: .2em;
+}
+
+footer div.comment h1, p {
+  font-size: inherit;
+  display: inline;
+}
+
+footer div.comment h1 {
+  cursor: pointer;
+}
+
+footer div.comment p {
+  padding-top: .5em;
+}
+
+p.time {
+  font-size: .8em;
+  padding-top: .5em;
+  padding-bottom: .7em;
+  opacity: .5;
+  display: block;
+  text-transform: uppercase;
+}
+
+form {
+  width: 90%;
+  display: inline-block;
+}
+
+input {
+  font-size: 1em;
+  padding: 12px 0 12px 0;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 4px;
+}
+
+div.elipses {
+  display: inline-block;
+  font-size: 2.5em; /* Idealy use an icon for this.. */
+  letter-spacing: -2px;
+  cursor: pointer;
+  opacity: .5;
+}
+
+div.truncationBox p.truncation {
+  opacity: .5;
+  cursor: pointer;
+  padding: .3em 0 .3em 0;
+  display: block;
+}

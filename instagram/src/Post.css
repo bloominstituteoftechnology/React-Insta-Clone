@@ -1,0 +1,43 @@
+p {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+div.parentContainer {
+  display: inline-flex;
+}
+
+div.post {
+  display: inline-block;
+  padding-right: 1em;
+  width: 600px;
+}
+
+header {
+  height: 2em;
+  margin: .5em;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+header img {
+  border-radius: 50%;
+  height: 25px;
+  display: inline;
+  vertical-align: middle;
+}
+
+header p {
+  display: inline;
+  padding-left: .7em;
+}
+
+img.main {
+  width: 600px;
+  height: 600px;
+}
+
+footer {
+  padding: .5em;
+}
