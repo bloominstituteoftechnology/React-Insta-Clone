@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^15.6.1"
+    "jest-cli": "^20.0.4",
+    "react": "^15.6.1",
+    "react-fontawesome": "^1.6.1"
   },
   "devDependencies": {
     "enzyme": "^2.9.1",

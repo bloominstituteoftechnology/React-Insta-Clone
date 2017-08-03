@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
-import CommentSection from './CommentSection'
+import CommentSection from './CommentSection';
 import '../css/PostContainer.css';
+
+import Likes from './Likes'
 
 class PostContainer extends Component {
       constructor(props) {
         super(props);
         this.state = {
-          postData: [],
+          postData: []
         };
+        
       }
       componentDidMount() {
         this.setState({postData: this.props.postData})
       }
+
+      
+
       render() {
         return (
           <div className="postContainer">
@@ -23,7 +29,9 @@ class PostContainer extends Component {
                   <p className="username">{obj.username}</p>
                 </div>
                 <img src={obj.imageUrl} className="postImage"/>
-                <CommentSection comments={obj.comments}/>
+                
+                <Likes likes={obj.likes} />
+                <CommentSection comments={obj.comments} />
               </div>
               )
           })}
