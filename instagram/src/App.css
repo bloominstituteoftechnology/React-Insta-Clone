@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+  background-color: #fafafa;
+}
+.NavBar {
+  border-bottom: 1px solid lightgray;
+  background-color: white;
+  width: 100%;
+}
+.show-grid {
+  padding: 20px;
+  display: inline-block;
+  margin: auto;
+  width: 100%;
+  margin-right: -500px;
+}
+.Logo {
+  background-image: url("https://www.instagram.com/static/sprites/core/0e4847.png");
+  background-position: -177px 0;
+  height: 35px;
+  width: 176px;
+  margin-left: -100px;
+  margin-right: 100px;
+}
+.Icons {
+  background-image: url("https://www.instagram.com/static/sprites/core/0e4847.png");
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  margin-right: 30px;
+}
+.Explore {
+  background-position: -32px -352px;
+}
+.Activity {
+  background-position: -110px -352px;
+}
+.User {
+  background-position: -318px -352px;
+}
+.postPanel {
+  border: 1px solid lightgrey;
+  width: 50%;
+  overflow: hidden;
+  margin: 35px auto;
+}
+.postPanel .postImage {
+  width: 100%;
+}
+.postPanel .thumbNail {
+  height: 32px;
+  float: left;
+  margin-right: 10px;
+}
+.postPanel p {
+  text-align: left;
+}
+.postPanel .username {
+  font-weight: 800;
+  padding: 5px 0px 20px 0px;
+}
+.postPanel .likes {
+  font-weight: 700;
+}
+.postPanel .timestamp {
+  color: gray;
+  padding-top: 10px;
+}
+.postPanel .heart_icon {
+  background-image: url("https://www.instagram.com/static/sprites/core/0e4847.png");
+  background-repeat: no-repeat;
+  background-position: -162px -352px;
+  height: 24px;
+  width: 50px;
+  padding-bottom: 30px;
+}
+.commentUser {
+  font-weight: 700;
+}
