@@ -43,7 +43,7 @@ class Post extends Component {
                 <footer>
                   <Social likes={post.likes} />
 
-                  <Comments comments={post.comments} time={post.timestamp} />
+                  <Comments comments={post.comments} time={post.timestamp} name={post.username}/>
 
                 </footer>
 
