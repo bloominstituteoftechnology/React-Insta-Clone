@@ -1,0 +1,148 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: white;
+  height: 2em;;
+  padding: 10px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.Post {
+    width: 600px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+}
+
+.User-photo {width: 100%}
+
+.Post-list {
+    text-align: center;
+    padding: 20px 20px;
+    list-style: none;
+    margin-bottom: 4em;
+    margin-right: 2em;
+}
+
+.User-icon {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-size: 20px;
+  background-color: white;
+  display: flex;
+  width: 2.25em;
+  height: 2.25em;
+  text-align: left;
+  border-radius: 20px;
+  margin-top: 5px;
+}
+
+.Username {
+  margin-left: 1em;
+}
+
+.img-header {
+  height: 2.75em;
+  display: flex;
+  flex-flow: row;
+  margin-left: 1em;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+
+.Nav-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    height: 2.5em;
+    margin: 1em;
+}
+
+.heart-btn {
+  background-image: url("https://www.instagram.com/static/sprites/core/0e4847.png");
+  background-size: 420px 395px;
+  background-position: -155px -325px;
+  background-repeat: no-repeat;
+  height: 29px;
+  width: 30px;
+  margin-left: 15px;
+  margin-bottom: 0px;
+  list-style: none;
+}
+
+.cmt-btn {
+  background-image: url("https://www.instagram.com/static/sprites/core/0e4847.png");
+  background-size: 420px 395px;
+  background-position: -183px -325px;
+  background-repeat: no-repeat;
+  height: 29px;
+  width: 30px;
+  margin-left: 7px;
+  margin-bottom: 0px;
+  list-style: none;
+}
+
+.comments-div {
+  margin-top: 4px;
+  height: 30px;
+  display: flex;
+}
+
+.Likes-p {
+  font-family: helvetica;
+  text-align: left;
+  height: 15px;
+  margin-left: 21px;
+  margin-bottom: 0px;
+  margin-top: 1px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.Likes-div {
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 15em;
+}
+
+.comments {
+  text-align: left;
+  margin-bottom: 10em;
+  margin-left: 21px;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.more-btn {
+  background-image: url("https://www.instagram.com/static/sprites/core/0e4847.png");
+  background-size: 420px 395px;
+  background-position: -359px -50px;
+  background-repeat: no-repeat;
+  height: 28px;
+  width: 30px;
+  margin-left: 70%;
+  margin-bottom: 0px;
+  margin-top: 7px;
+}
+
+.comments-likes {
+  display: block;
+  margin-bottom: 5em;
+}
+
+.Post-Container {
+  margin-top: 2em;
+}
