@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { PostContainer } from './components/PostContainer';
 import postData from './application-data';
+import LikeButton from './components/LikeButton';
+import NavBar from './components/NavBar';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       postData: [],
+      comments: []
     };
   }
 
@@ -22,9 +25,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="Nav-bar">
+        <div>
+          <NavBar />
         </div>
-        <div className="Post-container">
+        <div className="Post-Container">
           <PostContainer postData={this.state.postData} />
         </div>
       </div>
