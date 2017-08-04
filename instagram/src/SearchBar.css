@@ -1,0 +1,74 @@
+.Header {
+  width: 90%;
+  min-width: 600px;
+  height: 50px;
+  border-bottom: 1px solid lightgray;
+  margin-left: 5%;
+  padding: 0px;
+}
+
+.Logo, .Branding, .Left, .Middle, .Right {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Left, .Middle, .Right {
+  width: 30%;
+  margin: 0;
+  padding: 0;
+}
+
+.Middle {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.Right {
+  text-align: right;
+  margin-left: 10%;
+}
+
+.Right ul {
+  list-style: none;
+  margin-right: 0px;
+}
+
+.Right ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.Logo, .Branding, {
+  margin: 5px;
+}
+
+.Logo {
+  margin-top: 0px;
+  margin-left: 15px;
+  border-right: 2px solid lightgray;
+  padding-right: 20px;
+}
+
+.Logo i.fa-instagram {
+  font-size: 30px;
+}
+
+.Right ul li i.fa {
+  font-size: 20px;
+}
+
+.Branding {
+  font-size: 18px;
+  margin-top: 0px;
+  margin-left: 15px;
+}
+
+.Header input {
+  text-align: center;
+  margin-left: 25%;
+  backgoround-color: rgb(234,234,234);
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  color: lightgray;
+  height: 20px;
+}
