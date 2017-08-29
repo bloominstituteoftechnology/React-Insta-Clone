@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import PostContainer from '../PostContainer';
-import postData from '../application-data';
+import { PostContainer } from '../Components';
+import postData from '../data/application-data';
 
 describe('Post Container', () => {
     it('should render two image tags', () => {
