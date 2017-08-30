@@ -59,9 +59,6 @@ class CommentSection extends React.Component {
             }
         });
     }
-    reportBox() {
-
-    }
     render() {
     return (
         <div className="comment-section">
