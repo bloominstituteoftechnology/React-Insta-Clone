@@ -1,0 +1,16 @@
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 6px;
+}
+.ellipsis {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background-image: url(./assets/db9f2a.png);
+  background-repeat: no-repeat;
+  background-position: -431px -340px;
+  height: 16px;
+  width: 16px;
+}
