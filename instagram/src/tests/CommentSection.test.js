@@ -2,8 +2,8 @@ import React from 'react';
 import sinon from 'sinon';
 import { shallow, mount } from 'enzyme';
 
-import CommentSection from '../CommentSection';
-import postData from '../application-data';
+import { CommentSection } from '../Components';
+import postData from '../data/application-data';
 
 describe('Comment Section', () => {
     it('should render an input tag', () => {
