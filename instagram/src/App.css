@@ -10,6 +10,17 @@ body {
   background-color: white;
   height: 77px;
   width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.search-wrapper-small {
+  background-color: white;
+  height: 57px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 .searcher {
   position: absolute;
@@ -22,10 +33,11 @@ body {
   background-repeat: no-repeat;
 }
 .form {
-  position: relative;
+  position: fixed;
   margin: 0 auto;
   padding: 0;
-  bottom: 15%;
+  top: 25px;
+  left: 32%;
   width: 400px;
 }
 .input {
@@ -49,6 +61,23 @@ body {
   border-image-slice: 100%;
   display: block;
   width: 176px;
+  height: 35px;
+  line-height: 18px;
+  margin: 0 4em;
+  border-image-repeat: stretch;
+  transform: scale(1.0);
+  transform-origin: left;
+  overflow: hidden;
+  position: relative;
+  padding-right: 0;
+  top: 25%;
+}
+.top-left-image-small {
+  background-image: url("https://www.instagram.com/static/sprites/core/fc4759.png");
+  background-position-x: -177px;
+  border-image-slice: 100%;
+  display: block;
+  width: 40px;
   height: 35px;
   line-height: 18px;
   margin: 0 4em;
@@ -107,7 +136,7 @@ body {
 }
 .right-images {
   position: relative;
-  bottom: 10%;
+  bottom: 15%;
   height: 30px;
   width: 200px;
   float: right;
@@ -123,6 +152,7 @@ body {
   width: 600px;
   margin: auto;
   margin-bottom: 15px;
+  padding-top: 80px;
 }
 li {
   list-style: none;
@@ -329,6 +359,31 @@ ul {
   opacity: 2.0;
   margin: 0 auto;
   top: 25%;
+}
+.modal-hide {
+  display: none;
+}
+.sub {
+  z-index: 1;
+  display: block;
+  background-color: white;
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  margin: auto;
+  height: 40px;
+  width: 250px;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 20px;
+  border: solid 1px rgba(153, 153, 153, .3);
+  border-radius: 4px;
+  overflow: hidden;
+  font-weight: 600;
+  color: #262626;
+}
+.sub-hide {
+  display: none;
 }
 .report {
   width: 100%;
