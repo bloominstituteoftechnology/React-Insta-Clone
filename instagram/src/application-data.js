@@ -8,7 +8,7 @@ const postData = [
         comments: [
             {
                 username: "philzcoffee",
-                text: "We've got more than just delicious coffees to offer at our shops!"
+                text: "We've got more 🍩 \u200B than just delicious coffees ☕ \u200B to offer at our shops!"
             },
             {
                 username: "biancasaurus",
@@ -33,7 +33,7 @@ const postData = [
             },
             {
                 username: "michaelmarzetta",
-                text: "Omg that match was crazy"
+                text: "Omg that match was crazy 🤘"
             },
             {
                 username: "themexican_leprechaun",
@@ -70,7 +70,7 @@ const postData = [
             },
             {
                 username: "awaywetravel",
-                text: "I <3 Hearthstone."
+                text: "I ❤️ \u200B Hearthstone."
             },
             {
                 username: "awesomebt28",

@@ -1,0 +1,140 @@
+.container {
+  width: 100%;
+}
+.content-wrapper {
+  width: 602px;
+  position: absolute;
+  top: 136px;
+  left: 50%;
+  transform: translate(-50%);
+}
+article {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  margin-bottom: 60px;
+}
+/* Header */
+.head {
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  padding: 16px;
+}
+.thumbnail {
+  border: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+}
+.username {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  height: 18px;
+  margin-left: 10px;
+  padding-top: 5px;
+}
+/* Image */
+.image {
+  height: 600px;
+  width: 600px;
+}
+img {
+  width: 100%;
+}
+/* Icons */
+.icons {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.com-hea-wrapper {
+  display: flex;
+  margin-left: -8px;
+  padding: 8px;
+  position: relative;
+}
+.comments-heart {
+  background-image: url(./assets/ig_components.png);
+  background-repeat: no-repeat;
+  background-position: -405px -52px;
+  height: 24px;
+  width: 24px;
+  position: relative;
+}
+.com-cha-wrapper {
+  display: flex;
+  padding: 8px;
+  position: relative;
+}
+.comments-chat-bubble {
+  background-image: url(./assets/ig_components.png);
+  background-repeat: no-repeat;
+  background-position: -322px -352px;
+  height: 24px;
+  width: 24px;
+  position: relative;
+}
+/* Likes */
+.likes {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  margin-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+/* Time */
+.time-posted {
+  display: block;
+  margin-top: -2px;
+  margin-bottom: 8px;
+  padding-left: 16px;
+  position: relative;
+}
+.time-text, .time-text:hover, .time-text:visited {
+  color: #999;
+  font-size:  10px;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+}
+/* Add Comment */
+.add-comment {
+  border-top: 1px solid #efefef;
+  color: #999;
+  font-size: 14px;
+  margin: 4px 16px 0px 16px;
+  min-height: 56px;
+  padding: 18px 26px 16px 0px;
+  position: relative;
+}
+textarea, textarea::-webkit-input-placeholder {
+  background: 0 0;
+  border: none;
+  color: #999;
+  font-size: inherit;
+  height: 18px;
+  outline: none;
+  padding: 0;
+  resize: none;
+  max-height: 80px;
+}
+/* More Options */
+.inappropriate {
+  bottom: 0;
+  height: 52px;
+  right: -6px;
+  top: 15px;
+  justify-content: center;
+  position: absolute;
+}
