@@ -1,0 +1,107 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.comments-wrapper {
+  padding: 0;
+  margin: 0;
+
+}
+
+.comments-wrapper * {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.comments {
+  list-style: none;
+  width: 100%;
+}
+
+.comments-item {
+  width: 100%;
+}
+
+.comment {
+  display: block;
+  text-align: left;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.comment .username {
+  display: inline;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: .5rem;
+}
+
+.comment .text {
+  display: inline;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  height: 200px;
+}
+
+
+.comment-bar {
+  margin-top: 1rem;
+}
+
+.comment-bar * {
+  margin: 0;
+  padding: 0;
+  line-height: 2rem;
+  vertical-align: middle;
+}
+
+.comment-bar > hr {
+  opacity: .25;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.comment-bar > .span-input {
+  display: block;
+  overflow: hidden;
+  padding-right: 10px;
+  /*float: left;*/
+}
+
+.comment-bar .span-post {
+  display: none;
+}
+
+.comment-bar .input {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  background: transparent;
+  outline: none;
+}
+
+.span-menu {
+  float: right;
+}
+
+.span-post > button{
+  float: right;
+  font-weight: 500;
+  font-family: Segoe UI, Roboto, Helvetica, Arial, inherit;
+  font-size: 16px;
+  color: rgba(107,171,255,0.55098039215686275);
+  text-shadow: 1px 1px 0px rgba(107,171,255,0.45098039215686275);
+}
+
+.comment-menu svg:hover {
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  transform: scale(1.1);
+}
+
+.comment-menu svg:active {
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  transform: scale(.95);
+}

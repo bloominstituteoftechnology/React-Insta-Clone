@@ -1,0 +1,185 @@
+button {
+  border:none!important;
+  outline: none !important;
+  text-decoration:none !important;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:hover {
+  cursor: default;
+}
+
+button:hover, button *:hover {
+  cursor: pointer;
+}
+
+img {
+  user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.post {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  width: 600px;
+  padding: 1px;
+  border-style: solid;
+  border-width: .5px;
+  border-radius: 1px 1px 1px 1px;
+  border-color: rgba(84,84,84,0.1862745098039215);
+  text-align: left;
+  background-color: white;
+}
+
+.post > * {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.post .user {
+  display: inline;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.post .user > * {
+  display: inline;
+  vertical-align: middle;
+}
+
+.post .user .top-comment-menu {
+  display: none;
+  float: right;
+}
+
+.post .user > img {
+  width: 1.7rem;
+  border-radius: 50%;
+  margin-right: .8rem;
+}
+
+.post .image {
+  width: 100%;
+  float: center;
+}
+
+.likes-wrapper {
+  text-align: left;
+  display: block;
+}
+
+.likes-wrapper .heart {
+  margin: 0 1rem 0 0;
+}
+
+.likes-wrapper .reply {
+  margin: 0 1rem 0 0;
+}
+
+.likes-wrapper > button > div {
+  padding: 0;
+  margin: 0;
+}
+
+.likes-wrapper svg {
+  font-size: 1.4rem;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+
+.likes-wrapper svg:hover {
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.likes-wrapper svg:active {
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  -webkit-transform: scale(.95);
+          transform: scale(.95);
+}
+
+.likes {
+  display: block;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.top-wrapper, .bottom-wrapper {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.top-wrapper {
+  padding: 0.7rem 1rem 0.7rem 1rem;
+  max-width: auto !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+
+.bottom-wrapper {
+  padding: 0.5rem 1rem 0.7rem 1rem;
+}
+
+@media screen and (max-width: 640px) {
+  .post {
+    position: relative;
+    display: inline-block;
+    width: 99%;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    border: none !important;
+  }
+
+  .post .user .top-comment-menu {
+    display: block;
+    margin-top: .7rem;
+    margin-right: .3rem;
+  }
+
+  .likes-wrapper svg:hover, .comment-menu svg:hover{
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  .likes-wrapper svg:active, .comment-menu svg:active {
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  .comment-bar {
+    display: none;
+  }
+
+  .comment-bar .span-menu {
+    display: none;
+  }
+
+  .comment-bar .span-post {
+    display: block;
+  }
+}

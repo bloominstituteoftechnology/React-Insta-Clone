@@ -1,1 +1,16 @@
 .DS_Store
+/package-lock.json
+/instagram/node_modules
+/instagram/public/js
+/instagram/public/favicon.ico
+/instagram/public/manifest.json
+/instagram/.gitignore
+/instagram/package-lock.json
+/instagram/package.json
+/instagram/README.md
+/instagram/src/tests
+/instagram/src/logo.svg
+/instagram/src/index.js
+/instagram/src/index.css
+/instagram/src/App.test.js
+/instagram/src/registerServiceWorker.js
