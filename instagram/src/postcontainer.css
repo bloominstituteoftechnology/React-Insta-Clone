@@ -1,0 +1,23 @@
+.post {
+    margin: 50px;
+    width:700px;
+
+}
+.top {
+    text-align: inline;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.userName {
+    text-align: inline;
+}
+.thumbnail {
+    border-radius: 50%;
+    float: left;
+    height: 30px;
+    width: 30px;
+}
+.mainImage {
+    height: 800px;
+    width: 700px;
+}
