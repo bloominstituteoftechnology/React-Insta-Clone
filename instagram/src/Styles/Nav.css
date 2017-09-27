@@ -1,0 +1,96 @@
+#nav_bar{
+    background-color: whitesmoke;
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    text-align: left;
+    padding: 1%;
+    left:0;
+    border-bottom: 1px solid #515151;
+    z-index: 1;
+}
+#logo_pic{
+    position: absolute;
+    width: 3%;
+    top:15%;
+}
+#logo_word{
+    position: absolute;
+    top:15%;
+    left:5%;
+    width: 10%;
+}
+#logout_btn{
+    background-color: #AEAEAE;
+    width: 70%;
+    padding: 5% 0;
+    text-align: center;
+    position: relative;
+    left: 15%;
+    top:10%;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    border:1px solid black;
+    -webkit-transition: border 0.2s;
+    transition: border 0.5s, color 0.5s;
+}
+#logout_btn:hover{
+    border: 1px solid #FF14FB;
+    color:#FF14FB;
+    cursor: pointer;
+}
+#nav-user_block{
+    position: absolute;
+    right:-28%;
+    top:15%;
+    display: inline-block;
+   
+}
+#nav-user_block div, img{
+-webkit-transition: border 0.5s, color 0.5s;
+display: inline-block;
+
+}
+#nav-user_block:hover div {
+    color:#FF14FB;
+    cursor: pointer;
+}
+#nav-user_block:hover img {
+    border: 1px solid #FF14FB;
+    cursor: pointer;
+}
+#nav-username{
+    position: relative;
+    top:-15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:0.9em;
+    color:black;
+    font-weight: 700;
+    margin-left: 2%;
+    display: inline-block;
+    
+
+}
+#nav-user_image{
+    position: relative;
+    border-radius: 40px;
+    border:1px solid #000000;
+   
+}
+#nav-login_dropdown{
+    width: 7%;
+    height: 0px;
+    display: none;
+    position: absolute;
+    right:2%;
+    top:100%;
+    background-color: #DAD9D9;
+    border:1px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    -webkit-transition:height 0.5s;
+    transition: height 0.5s; 
+}

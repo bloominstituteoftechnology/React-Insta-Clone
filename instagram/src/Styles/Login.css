@@ -1,0 +1,24 @@
+#login_box{
+    width: 40%;
+    height:40%;
+    background-color: whitesmoke;
+    position: relative;
+    top:25%;
+    left:40%;
+    border-radius: 20px;
+    padding:5%;
+    border:1px solid black;
+}
+#login_box input{
+    text-align: center;
+    border-radius: 5px;
+}
+.footer{
+    width:100%;
+    padding:1% 0;
+    position: absolute;
+    bottom:5%;
+    left:0;
+    background-color: #ECECEC;
+    font-size: 0.7em;
+}

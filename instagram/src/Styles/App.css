@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  position: absolute;
+  width: 50%;
+  height:100%;
+}
+#footer {
+  width:100%;
+  padding:1% 0;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  background-color: whitesmoke;
+  border-top:1px solid black;
+  font-size: 0.7em;
+
+}
