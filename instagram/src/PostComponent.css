@@ -1,0 +1,48 @@
+.Post-Component {
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 1em grey;
+}
+
+.username-thumbnail {
+  display: flex;
+}
+
+.username {
+  text-align: center;
+  padding-top: 5px;
+  margin: 10px;
+}
+.thumbnail-img {
+  height: 30px;
+  width: auto;
+  border-radius: 100px;
+  margin: 10px;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+}
+
+.Post-Image {
+  height: 600px;
+  width: 600px;
+}
+.Like-Comment-block {
+  margin-left: 40px;
+}
+
+.Like-Button {
+  margin-right: 10px;
+}
+
+.Likes {
+  margin-left: 40px;
+}
+
+.Comments-Textbox {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
