@@ -1,0 +1,59 @@
+.username {
+    font-weight: 800;
+    height: 20px;
+    padding-top: 7px;
+}
+
+.thumbnail {
+    height: 25px;
+    border-radius: 100%;
+    width: 25px;
+    margin: 6px;
+    margin-left: 10px;
+}
+
+.container {
+    text-align: left;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 500px;
+    margin-top: 60px;
+    box-shadow: 2px 2px 4px 5px #ccc;
+    padding: 6px;
+}
+
+.container:hover {
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.image {
+    text-align: center;
+    width: 96%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.topSection {
+    display: flex;
+    padding: 1px;
+    padding-top: 0px;
+}
+
+.underPic {
+    margin-bottom: 13px;
+    margin-top: 0px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.likes {
+    margin-bottom: 3px;
+    margin-top: 0px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+i {
+    padding: 0px 14px 0 0;
+}
