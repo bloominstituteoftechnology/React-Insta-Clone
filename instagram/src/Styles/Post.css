@@ -1,0 +1,118 @@
+.post{
+    position: relative;
+   /* // height: 550px; */
+    width: 70%;
+    left:13%;
+    background-color: #DCDCDC;
+    margin-top:2%;
+    border-radius: 5px;
+    padding: 2%;
+    border: 1px solid black;
+    box-shadow: 0px 0px 3px black;
+}
+.post-image{
+    position: relative;
+    width:99.5%;
+    background-color: #5B5A5A;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border: 1px solid black;
+    box-shadow: inset 0px 0px 5px 1px black;
+
+}
+.comment_section{
+    width: 100%;
+    min-height: 150px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: whitesmoke;
+
+}
+.commentBox{
+    width: 96%;
+    background-color: whitesmoke;
+    padding:2%;
+    text-align: left;
+}
+.user_block{
+    display: inline-block;
+    position: relative;
+}
+.post-user_block{
+    display: inline-block;
+    position: relative;
+    left:-45%;
+}
+.user_pic_thumb{
+    height: 50px;
+    width:50px;
+    border-radius: 40px;
+    border:1px solid black;
+}
+.username{
+    display: inline-block;
+    position: absolute;
+    top:25%;
+    margin-left:15%;
+    font-weight: 700;
+}
+.comment {
+    white-space: pre-wrap;
+    margin-left:10%;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+}
+.like_controls{
+    width: 96%;
+    background-color: whitesmoke;
+    text-align: left;
+    position: relative;
+    display: inline-block;
+    padding:1% 2%;
+}
+.like_controls span{
+    font-weight: 700;
+    margin-right: 2%;
+}
+.heart_button {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right:2%;
+    text-align:center;
+    -webkit-transition: height 0.5s,width 0.5s;
+    transition: height 0.5s,width 0.5s;
+}
+.heart_button:hover {
+    height:30px;
+    width:30px;
+    cursor: pointer;
+}
+
+.comment_button {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right:2%;
+    text-align: center;
+    -webkit-transition: height 0.5s,width 0.5s;
+    transition: height 0.5s,width 0.5s;
+}
+.comment_button:hover {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.add_comment{
+    position: relative;
+    width:100%;
+    background-color:red;
+
+}
+.add_comment input{
+    width:97.5%;
+    height: 50px;
+    font-size: 1.2em;
+    padding-left:2%;
+}
+
