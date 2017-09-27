@@ -2,7 +2,7 @@ import React from 'react';
 import sinon from 'sinon';
 import { shallow, mount } from 'enzyme';
 
-import CommentSection from '../CommentSection';
+import CommentSection from '../Components/CommentSection';
 import postData from '../application-data';
 
 describe('Comment Section', () => {
