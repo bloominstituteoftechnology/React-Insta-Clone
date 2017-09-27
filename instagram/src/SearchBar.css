@@ -1,0 +1,22 @@
+.Bar {
+    display: block;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px;
+    border-color: grey;
+    border-style: solid;
+}
+
+.Search {
+    padding: 10px 0px;
+    text-align: center;
+    border-style: solid;
+    border-color: grey;
+    border: 2px;
+    margin-top: 0px;
+    font-weight: 800;
+    border-radius: 30px;
+    width: 20%;
+}
