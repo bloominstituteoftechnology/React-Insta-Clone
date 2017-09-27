@@ -1,0 +1,9 @@
+We have postData which includes:
+
+username
+thumbnailUrl
+imageUrl
+likes
+timestamp
+comments {username, text}
+
