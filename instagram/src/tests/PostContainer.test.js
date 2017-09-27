@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import PostContainer from '../PostContainer';
+import PostContainer from '../Components/PostContainer';
 import postData from '../application-data';
 
 describe('Post Container', () => {
