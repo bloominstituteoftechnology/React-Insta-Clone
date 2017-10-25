@@ -6,11 +6,12 @@ export default class PostContainer extends Component {
   constructor() {
     super();
     this.state = {
-      currentPost: postData[0]
+      currentPost: postData
     };
   }
 
   render() {
+
     return this.state.currentPost.map(post => {
     return (
       <div className = "post">
@@ -26,5 +27,21 @@ export default class PostContainer extends Component {
       </div>
     );
   });
+
+    // console.log(this.state.currentPost);
+//     return this.state.currentPost.map(post => {
+//       return (
+//         <div>
+//           <div>{post.username}</div>
+//           <div>{post.thumbnailUrl}</div>
+//           <div>{post.imageUrl}</div>
+//           <div>{post.likes}</div>
+//           <div>{post.timestamp}</div>
+//           <div />
+//           <CommentSection comments={post.comments} />
+//         </div>
+//       );
+//     });
+
   }
 }
