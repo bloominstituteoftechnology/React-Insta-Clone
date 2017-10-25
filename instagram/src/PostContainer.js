@@ -5,22 +5,24 @@ export default class PostContainer extends Component {
   constructor() {
     super();
     this.state = {
-      currentPost: postData[0]
+      currentPost: postData
     };
   }
 
   render() {
     // console.log(this.state.currentPost);
-    return (
-      <div>
-        <div>{this.state.currentPost.username}</div>
-        <div>{this.state.currentPost.thumbnailUrl}</div>
-        <div>{this.state.currentPost.imageUrl}</div>
-        <div>{this.state.currentPost.likes}</div>
-        <div>{this.state.currentPost.timestamp}</div>
-        <div />
-        {/* {<CommentSection foo="this.state.bar" />} */}
-      </div>
-    );
+    return this.state.currentPost.map(post => {
+      return (
+        <div>
+          <div>{post.username}</div>
+          <div>{post.thumbnailUrl}</div>
+          <div>{post.imageUrl}</div>
+          <div>{post.likes}</div>
+          <div>{post.timestamp}</div>
+          <div />
+          <CommentSection comments={post.comments} />
+        </div>
+      );
+    });
   }
 }
