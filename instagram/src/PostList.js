@@ -19,6 +19,7 @@ const PostList = (props) => {
               { post.comments.map((comment) => {
                 return <p>{comment.username}: {comment.text}</p>
               })}
+              <p>{post.timestamp}</p>
             </div>
           </div>
         )
