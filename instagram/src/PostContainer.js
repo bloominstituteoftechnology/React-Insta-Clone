@@ -16,19 +16,13 @@ export default class PostContainer extends Component {
         <div className="post">
           <div className="post_Header">
             <div className="post_Header_Thumb">
-              <img
-                className="img-circle"
-                src={this.state.currentPost.thumbnailUrl}
-                alt="alt"
-              />
+              <img className="img-circle" src={post.thumbnailUrl} alt="alt" />
             </div>
-            <div className="post_Header_User">
-              {this.state.currentPost.username}
-            </div>
+            <div className="post_Header_User">{post.username}</div>
           </div>
-          <div>{this.state.currentPost.imageUrl}</div>
-          <div>{this.state.currentPost.likes}</div>
-          <div>{this.state.currentPost.timestamp}</div>
+          <img src={post.imageUrl} alt="alt" />
+          <div>{post.likes}</div>
+          <div>{post.timestamp}</div>
           <div />
           <CommentSection comments={post.comments} />
         </div>

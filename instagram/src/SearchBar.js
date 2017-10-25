@@ -4,6 +4,15 @@ export default class SearchBar extends Component {
   constructor() {
     super();
     this.state = {};
+    this.searchBox;
+  }
+
+  componentDidMount() {
+    this.searchBox = document.getElementById('searchBox');
+  }
+
+  search() {
+    console.log('hi');
   }
 
   render() {
@@ -12,7 +21,13 @@ export default class SearchBar extends Component {
         <div className="NavBar">
           <div className="NavBar__child">Logo</div>
           <div className="NavBar__child">Instagram Text</div>
-          <input type="text" className="NavBar__child" placeholder="search" />
+          <input
+            id="searchBox"
+            type="text"
+            className="NavBar__child"
+            placeholder="search"
+            onchange={this.search}
+          />
           <div className="NavBar__child">compass</div>
           <div className="NavBar__child">heart</div>
           <div className="NavBar__child">person</div>
