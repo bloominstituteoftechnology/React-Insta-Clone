@@ -1,0 +1,24 @@
+.post {
+    display:inline-block;
+    border: 2px solid black;
+    width: 400px;
+}
+
+.post_Header{
+    display: flex;
+    height: 60px;
+}
+
+.post_Header_Thumb{
+    height:50px;
+    padding: 10px;
+}
+
+.img-circle{
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+.post_Header_User {
+    padding-left: 20px;
+}

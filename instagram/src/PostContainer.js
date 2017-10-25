@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import postData from './application-data';
 import { CommentSection } from './CommentSection';
+import './PostContainer.css';
 export default class PostContainer extends Component {
   constructor() {
     super();
@@ -10,19 +11,37 @@ export default class PostContainer extends Component {
   }
 
   render() {
-    // console.log(this.state.currentPost);
+
     return this.state.currentPost.map(post => {
-      return (
-        <div>
-          <div>{post.username}</div>
-          <div>{post.thumbnailUrl}</div>
-          <div>{post.imageUrl}</div>
-          <div>{post.likes}</div>
-          <div>{post.timestamp}</div>
-          <div />
-          <CommentSection comments={post.comments} />
+    return (
+      <div className = "post">
+        <div className = "post_Header">
+        <div className = "post_Header_Thumb"><img className = "img-circle" src = {this.state.currentPost.thumbnailUrl}></img></div>
+        <div className = "post_Header_User">{this.state.currentPost.username}</div>
         </div>
-      );
-    });
+        <div>{this.state.currentPost.imageUrl}</div>
+        <div>{this.state.currentPost.likes}</div>
+        <div>{this.state.currentPost.timestamp}</div>
+        <div />
+        <CommentSection comments={post.comments} />
+      </div>
+    );
+  });
+
+    // console.log(this.state.currentPost);
+//     return this.state.currentPost.map(post => {
+//       return (
+//         <div>
+//           <div>{post.username}</div>
+//           <div>{post.thumbnailUrl}</div>
+//           <div>{post.imageUrl}</div>
+//           <div>{post.likes}</div>
+//           <div>{post.timestamp}</div>
+//           <div />
+//           <CommentSection comments={post.comments} />
+//         </div>
+//       );
+//     });
+
   }
 }
