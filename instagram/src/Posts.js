@@ -1,31 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
 import moment from 'moment';
-/*import postData from './application-data';*/
 
 const Posts = (props) => {
   return (
     <div>
-      {
-        props.post.map(post => {
+      {props.post.map(post => {
         return (
-        <div>
-          <h2><img src={post.thumbnailUrl} style={{width:50+'px'}}/>{post.username}</h2>
-          <img src={post.imageUrl} style={{'max-width':500+'px'}}/>
-          <span>likes: {post.likes}</span>
-          <span>{moment(`${post.timestamp}`, "MMMDD YYYY HH:mm:ss a", 'en').fromNow()}</span>
-          {post.comments.map(comment => {
-            return (
-              <div>
-                <span>{comment.username}</span>
-                <span>{comment.text}</span>
-              </div>
-            )
-          })}
-        </div>
-      )})}
+          <div>
+            <h2><img src={post.thumbnailUrl} style={{width:50+'px'}}/>{post.username}</h2>
+            <img src={post.imageUrl} style={{maxWidth:500+'px'}}/>
+            <span>likes: {post.likes}</span>
+            <span>{moment(`${post.timestamp}`, "MMMDD YYYY HH:mm:ss a", 'en').fromNow()}</span>
+            {post.comments.map(comment => {
+              return (
+                <div>
+                  <span>{comment.username}</span>
+                  <span>{comment.text}</span>
+                </div>
+              )
+            })}
+            <form>
+              <input type="text" placeholder="Comment here..." />
+              <input type="button" value="Submit" onClick={() => {post.comments.push('test')}} />
+          </form>
+          </div>
+        );
+      })}
     </div>
   );
-}
+};
 export default Posts;
 /*
   username: "philzcoffee",
