@@ -11,7 +11,7 @@ export default class PostContainer extends Component {
   }
 
   render() {
-    // console.log(this.state.currentPost);
+    return this.state.currentPost.map(post => {
     return (
       <div className = "post">
         <div className = "post_Header">
@@ -22,8 +22,9 @@ export default class PostContainer extends Component {
         <div>{this.state.currentPost.likes}</div>
         <div>{this.state.currentPost.timestamp}</div>
         <div />
-        {/* {<CommentSection foo="this.state.bar" />} */}
+        <CommentSection comments={post.comments} />
       </div>
     );
+  });
   }
 }
