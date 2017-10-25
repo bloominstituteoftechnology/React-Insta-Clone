@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@import './header/header.css';
+
+
+.post-section {
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@import './post/post.css';
