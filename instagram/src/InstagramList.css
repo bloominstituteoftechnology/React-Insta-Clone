@@ -1,0 +1,12 @@
+.InstagramList {
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    width: 100px;
+}
+
+.InstagramList__item {
+    max-width: 500px;
+    background-color:white;
+    display: inline-block;
+}
