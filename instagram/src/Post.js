@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export const Posts = (props) => {
   return (
-    <div>
+    <div className="posts">
       {props.posts.map((post) => {
         return (
           <div className="post">
@@ -20,6 +20,7 @@ export const Posts = (props) => {
                   <div className="comment">
                     <span className="username">{comment.username}</span>
                     <span className="commentText">{comment.text}</span>
+                    <div className="addComment"></div>
                   </div>
                 );
               })}

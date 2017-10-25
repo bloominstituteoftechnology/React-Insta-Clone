@@ -18,15 +18,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
+      <div className="app">
+        <div className="app-header">
           <i className="em em-camera"></i>
           // INSTASHAM //
           SEARCH BAR ***
           <i className="em em-heart"></i>
           <i className="em em-smiley"></i>
         </div>
-        <div className="Body">
+        <div className="body">
           <Posts posts = {this.state.posts} />
           </div>
         </div>
