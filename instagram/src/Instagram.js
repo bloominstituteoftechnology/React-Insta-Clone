@@ -81,7 +81,7 @@ class Instagram extends Component {
             }
             <header className="instagram__header">
                 <nav>
-                    <a className="logo" href="/">instagram</a>
+                    <a className="logo" href="/" onClick={(e) => e.preventDefault()}>instagram</a>
                     <SearchBar search={this.search}/>
                     <div className="instagram__nav">
                         <a className="discover" href="/" onClick={(e) => e.preventDefault()}>Discover</a>
