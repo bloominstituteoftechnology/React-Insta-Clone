@@ -1,0 +1,61 @@
+.App {
+  width: 80%;
+  display: flex;
+  flex-flow: wrap column;
+  margin: auto;
+  align-items: center;
+}
+
+.App__NavBar {
+  padding: 2%;
+  border-bottom: 2px solid rgb(216, 207, 207);
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.App__PostContainer {
+  display: flex;
+  flex-flow: wrap column;
+  margin: auto;
+  width: 50%;
+  justify-content: center;
+}
+
+.App__PostContainer img {
+  width: 100%;
+  object-fit: contain;
+  margin: 0.5%;
+  padding: 0.5%;
+}
+
+.App__PostContainer-header {
+  display: flex;
+  flex-flow: wrap row;
+  align-items: center;
+}
+
+.App__PostContainer-header img {
+  height: 1%;
+  width: 3%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.App__Comments {
+  display: flex;
+  flex-flow: wrap column;
+  margin: auto;
+  justify-content: center;
+}
+
+.App__Comment {
+  padding: 0.5%;
+  margin: 0.5%;
+}
+
+.App__Comments Input {
+  padding: 0.5%;
+  margin: 0.5%;
+  width: 100%;
+}
