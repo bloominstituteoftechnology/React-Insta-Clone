@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import Modal from './Modal.js'
 import AddComment from './AddComment.js'
-import Icons from './Icons.js'
+import Heart from './Icons.js'
 import './Post.css'
 
 class Post extends Component {
@@ -44,10 +44,10 @@ class Post extends Component {
   }
   render() {
     return (
-      <div>
+      <div style={{'outline': this.state.flagged ? 3+'px solid salmon' : ''}}>
         <h2><img src={this.props.post.thumbnailUrl} style={{width:50+'px'}}/>{this.props.post.username}</h2>
         <img src={this.props.post.imageUrl} style={{maxWidth:500+'px'}}/>
-        <Icons name={ 'heart' } addLike={ this.addLike }/>
+        <Heart addLike={ this.addLike }/>
         <span>likes: {this.state.likes}</span>
         <span>{moment(`${this.props.post.timestamp}`, "MMMDD YYYY HH:mm:ss a", 'en').fromNow()}</span>
         { this.state.comments.map(comment => <span>{`${comment.username} ${comment.text}`}</span>) }
