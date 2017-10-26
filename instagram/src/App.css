@@ -1,0 +1,71 @@
+.App {
+  background-color: rgb(192, 206, 223);
+  padding: 5px;
+}
+
+.navbar-brand {
+    height: 100%;
+}
+
+.PostList__post {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+	display: block;
+    border: 1px black solid;
+    width: 75%;
+    background-color: white;
+}
+
+.PostList__comment {
+    color: #6a8f5a;
+    margin-left: 5px;
+}
+
+.PostList__comment-name {
+    font-weight: bold;
+    color: #8d7f6a;
+}
+
+img.PostList__post-postimage {
+    width: 100%;
+    height: auto;
+}
+
+.PostList__post-likes {
+    margin: 5px 0 0 5px;
+    font-weight: 600;
+}
+
+.PostList__stamp {
+    color: rgb(151, 146, 146);
+    font-size: 11px;
+    margin: 0 0 5px 5px;
+}
+
+.PostList__top {
+    margin-top: 15px;
+    padding-left: 1%;
+}
+
+.PostList__top-name {
+   font-weight: 600;
+   text-align: left;
+   margin: 10px;
+
+}
+.PostList__top-thumb {
+    width: 5%;
+    height: auto;
+}
+
+.PostList__comment-box {
+    border-top: 1px grey solid;
+}
+
+.PostList__comment-input {
+    padding: 15px;
+    height: 60%;
+    width: 100%;
+    border: none;
+}
