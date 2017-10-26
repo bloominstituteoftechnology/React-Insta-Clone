@@ -1,14 +1,15 @@
 import React from 'react';
+import './CommentSection.css';
 export const CommentSection = props => {
   return (
     <div>
       {console.log(props.comments)}
       {props.comments.map(comment => {
         return (
-          <div>
+          <div className = "comment_Box">
             {console.log(comment)}
-            <div>{comment['username']}</div>
-            <div>{comment['text']}</div>
+            <div> <b>{comment['username']}</b> {comment['text']}</div>
+            
           </div>
         );
       })}
