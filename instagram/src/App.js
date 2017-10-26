@@ -1,7 +1,7 @@
 /*eslint*/
 import React, { Component } from 'react';
 import postData from './application-data';
-import Posts from './Posts';
+import Post from './Post.js';
 import Search from './Search.js';
 import './App.css';
 
@@ -27,10 +27,15 @@ class App extends Component {
           search={ this.state.search }
           searchPosts={ this.searchPosts }
         />
-        <Posts 
-          post={ this.state.posts.filter(post => {return post.username.indexOf(this.state.search) !== -1}) }
-          search={ this.state.search }
-        />
+        {this.state.posts.filter(post => {return post.username.indexOf(this.state.search) !== -1}).map(post => {
+          //console.log(post);
+          return (
+            <Post 
+              post={ post }
+              search={ this.state.search }
+            />
+          );
+        })}
       </div>
     );
   }
