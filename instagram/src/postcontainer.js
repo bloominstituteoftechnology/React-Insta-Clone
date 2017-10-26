@@ -7,18 +7,25 @@ export const Data = (props) => {
             {props.postData.map((post) => {
                 return(
                     <div className="PostList__post" key={post.username}>
-                        <img src={post.thumbnailUrl} alt=""/> {post.username}
-                        <img src={post.imageUrl} alt="work!"/>
+                        <div className="PostList__top">
+                            <img className="PostList__top-thumb" src={post.thumbnailUrl} alt=""/><span className="PostList__top-name">{post.username}</span>
+                        </div>
+                        <br />
+                        <img className="PostList__post-postimage" src={post.imageUrl} alt="work!"/>
+                        <br />
                         {/* buttons */}
-                        {post.likes}
-                        {post.comments[0].username}
-                        {post.comments[0].text}
-                        {post.comments[1].username}
-                        {post.comments[1].text}
-                        {post.comments[2].username}
-                        {post.comments[2].text}
+                        <div className="PostList__post-likes">{post.likes} likes</div>
+                        <br />
+                        {post.comments.map((comment) => {
+                            return (
+                            <div className="PostList__comment" key={comment.text}>
+                                <span className="PostList__comment-name">{comment.username}: </span><span className="PostList__comment">{comment.text}</span>
+                            </div>
+                            );
+                        })}
                         {/* input */}
-                        {post.timestamp}
+                        <br />
+                        <div className="PostList__stamp">{post.timestamp}</div>
                     </div>
                 )
             })}
@@ -27,23 +34,9 @@ export const Data = (props) => {
 }
 
 
-// class posts extends component {
-    
 
-//     postData.thumbnailUrl postData.username
 
-// postData.imagepost
-
-// }
-// class comments extends posts { 
-// postData.likes postData.caption
-
-// postData.comments[i]
-
-// postData.timestamp
-// }
-
-// export default Data;
+ export default Data;
 // {
 //     username: "philzcoffee",
 //     thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',

@@ -1,32 +1,46 @@
 .App {
   text-align: center;
 }
-img {
-    width: 50%;
+
+.PostList__post {
+	display: block;
+    border: 1px black solid;
+    width: 75%;
+}
+
+.PostList__comment {
+	color: #6a8f5a
+}
+
+.PostList__comment-name {
+    font-weight: bold;
+    color: #8d7f6a;
+}
+
+img.PostList__post-postimage {
+    width: 100%;
     height: auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.PostList__post-likes {
+    font-weight: 600;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.PostList__stamp {
+    color: rgb(151, 146, 146);
+    font-size: 11px;
 }
-
-.App-title {
-  font-size: 1.5em;
+.PostList__top {
+    margin-top: 5px;
+    padding-left: 1%;
 }
+.PostList__top-name {
+   font-weight: 600;
+   text-align: left;
+   margin: 10px;
 
-.App-intro {
-  font-size: large;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.PostList__top-thumb {
+    width: 5%;
+    height: auto;
 }

@@ -38,6 +38,24 @@ class App extends Component {
       </div>
     );
   }
-}
+//   existingComments() {
+//     var  = document.createElement('div');
+//   }
+// }
+
+// let layout= [
+//     [
+//         {
+//             type: 'text',
+//             value: 'abc'
+
+
+//  let rows = [];
+//  var div = document.createElement('div');
+//  for (let i = 0; i < layout.length; i++) {
+//      rows.push('<div className="row" key={i}></div>');
+//      var s = '<li>'+layout[i][0].type+': '+layout[i][0].value+'</li>'; 
+//      document.body.innerHTML +=s;
+  }
 
 export default App;
