@@ -1,7 +1,7 @@
+import { Navbar, FormGroup, FormControl, Nav } from 'react-bootstrap';
 import React, { Component } from 'react';
 import './App.css';
 import './application-data.js';
-import { Navbar, FormGroup, FormControl } from 'react-bootstrap';
 import { postData } from './application-data';
 import PostList from './postData.js';
 
@@ -20,15 +20,15 @@ class App extends Component {
       <div>
         <Navbar>
           <Navbar.Collapse>
-            <Navbar.Form pullLeft>
-              <FormGroup>
-                <a className="Link" href="#">Potatogram</a>
-                <FormControl className="SearchBar" type="text" placeholder="Search" />
-                <a className="Link Link2" href="#">
-                  Like
-                </a>
-              </FormGroup>
-            </Navbar.Form>
+            <Nav className="NavBar">
+              <a className="Link Link1" href="#">Potatogram</a>
+              <Navbar.Form>
+                <FormGroup>
+                  <FormControl className="SearchBar" type="text" placeholder="Search" />
+                </FormGroup>
+              </Navbar.Form>
+              <a className="Link Link2" href="#">Like</a>
+            </Nav>
           </Navbar.Collapse>
         </Navbar>
         <PostList postData ={this.state.postData} />
@@ -37,3 +37,4 @@ class App extends Component {
   }
 }
 export default App;
+

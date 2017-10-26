@@ -10,13 +10,15 @@ const PostList = (props) => {
           <div className="Commenter" key={poster.username}>
             <h3><Image className="thumbnail" src={poster.thumbnailUrl} /> { poster.username }</h3>
             <Image className="post" src = {poster.imageUrl} />
-            <div className="Comments">
+            <div className="Info">
               <p className="post PostList">{poster.likes} likes</p>
               {poster.comments.map((comment) => {
                 return(
-                  <div key={comment.username}>
-                    <p className="User PostList"> {comment.username}</p>
-                    <p className="Comment">{comment.text}</p>
+                  <div className="Comments" key={comment.username}>
+                    <div className="Comment">
+                      <p className="PostList">{comment.username}</p> {comment.text}
+                    </div>
+
                   </div>
                 )
               })}
