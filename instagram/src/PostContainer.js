@@ -20,12 +20,29 @@ export default class PostContainer extends Component {
             </div>
             <div className="post_Header_User">{post.username}</div>
           </div>
-          <img src={post.imageUrl} alt="alt" />
-          <div>{post.likes}</div>
-          <div>{post.timestamp}</div>
+
+          <img className = "post_Img" src={post.imageUrl} alt="alt" />
+          <div className = "icon_Bar">
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            <i class="fa fa-comment-o" aria-hidden="true"></i>
+          </div>
+          <div className = "like_Bar">{post.likes} likes</div>
+          <div className = "bottom_Box">
           <div />
           <CommentSection comments={post.comments} />
         </div>
+        <div className = "date_Bar">
+          <div> {post.timestamp}</div>
+        </div>
+        </div>
+
+//           <img src={post.imageUrl} alt="alt" />
+//           <div>{post.likes}</div>
+//           <div>{post.timestamp}</div>
+//           <div />
+//           <CommentSection comments={post.comments} />
+//         </div>
+
       );
     });
   }

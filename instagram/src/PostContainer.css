@@ -1,17 +1,24 @@
 .post {
-    display:inline-block;
-    border: 2px solid black;
-    width: 400px;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    border: 2px solid rgb(223, 212, 212);
+    width: 500px;
+    margin: 20px;  
 }
 
 .post_Header{
     display: flex;
-    height: 60px;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
 }
 
 .post_Header_Thumb{
-    height:50px;
-    padding: 10px;
+    height: 35px;
+    display: flex;
+    /* padding: 5px; */
 }
 
 .img-circle{
@@ -20,5 +27,48 @@
 }
 
 .post_Header_User {
+    padding: 10px;
     padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+.post_Img {
+    max-width: 100%;
+}
+
+.icon_Bar{
+    text-align: left;
+    padding-left: 5px;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 22pt;
+}
+
+.like_Bar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 11pt;
+    text-align: left;
+    padding-left: 15px;  
+}
+
+.bottom_Box{
+    padding-top: 5px;
+}
+
+.date_Bar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    text-align: left;
+    font-weight: bold;
+    opacity: .6;
+    padding: 12px;
+}
+
+.comment_Entry {
+    border: 2px solid black;
 }
