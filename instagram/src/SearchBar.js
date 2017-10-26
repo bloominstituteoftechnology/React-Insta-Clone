@@ -26,7 +26,7 @@ export default class SearchBar extends Component {
             type="text"
             className="NavBar__child"
             placeholder="search"
-            onchange={this.search}
+            onChange={this.search}
           />
           <div className="NavBar__child">compass</div>
           <div className="NavBar__child">heart</div>
