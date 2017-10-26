@@ -1,4 +1,4 @@
-`import React from 'react';
+import React from 'react';
 import './PostList.css';
 
 const PostList = (props) => {
