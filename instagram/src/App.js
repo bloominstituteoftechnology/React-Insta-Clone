@@ -30,7 +30,6 @@ class App extends Component {
         <Posts 
           post={ this.state.posts.filter(post => {return post.username.indexOf(this.state.search) !== -1}) }
           search={ this.state.search }
-          comments={ <commentSection/> }
         />
       </div>
     );

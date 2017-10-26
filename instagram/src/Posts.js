@@ -1,5 +1,6 @@
 import React from 'react';
-import moment from 'moment';
+import Post from './Post.js';
+
 
 const Posts = (props) => {
   return (
@@ -7,28 +8,14 @@ const Posts = (props) => {
       {props.post.map(post => {
         return (
           <div>
-            <h2><img src={post.thumbnailUrl} style={{width:50+'px'}}/>{post.username}</h2>
-            <img src={post.imageUrl} style={{maxWidth:500+'px'}}/>
-            <span>likes: {post.likes}</span>
-            <span>{moment(`${post.timestamp}`, "MMMDD YYYY HH:mm:ss a", 'en').fromNow()}</span>
-            {post.comments.map(comment => {
-              return (
-                <div>
-                  <span>{comment.username}</span>
-                  <span>{comment.text}</span>
-                </div>
-              )
-            })}
-            <form>
-              <input type="text" placeholder="Comment here..." />
-              <input type="button" value="Submit" onClick={() => {post.comments.push('test')}} />
-          </form>
+            <Post post={ post } search={ props.search }/>
           </div>
         );
       })}
     </div>
   );
 };
+
 export default Posts;
 /*
   username: "philzcoffee",
