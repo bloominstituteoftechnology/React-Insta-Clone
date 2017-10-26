@@ -13,7 +13,8 @@ class Instagram extends Component {
             username: 'vibes',
             allPosts: posts,
             posts,
-            optionsOpened: false
+            optionsOpened: false,
+            offset: 0
         }
     }
     search = (value) => {
@@ -54,19 +55,22 @@ class Instagram extends Component {
         })
     }
     openOptions = () => {
-        const offsetY = window.pageYOffset
+        const offset = window.pageYOffset
         document.body.style.position = "fixed";
-        document.body.style.top = `-${offsetY}px`;
+        document.body.style.top = `-${offset}px`;
 
         this.setState({
-            optionsOpened: true
+            optionsOpened: true,
+            offset
         })
     }
     closeOptions = () => {
-        document.body.style.position = "";
-        document.body.style.top = "";
+        document.body.removeAttribute('style');
+        window.scrollTo(0, this.state.offset);
+        
         this.setState({
-            optionsOpened: false
+            optionsOpened: false,
+            offset: 0
         })
     }
     render() {
