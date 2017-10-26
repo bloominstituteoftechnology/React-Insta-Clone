@@ -1,0 +1,28 @@
+.background {
+  background-color: lightseagreen;
+  width: 50rem;
+}
+
+.appName {
+  display: inline-block;
+  margin: 10px 30px 10px 200px;
+  font-size: 24px;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+}
+
+input[type='text'] {
+  display: inline-block;
+  background-color: lightcyan;
+  border: 0;
+}
+
+.input__button {
+  display: inline-block;
+  background-color: salmon;
+  color: white;
+  font-weight: bold;
+  margin: 0 0 0 4px;
+  border: 0;
+}

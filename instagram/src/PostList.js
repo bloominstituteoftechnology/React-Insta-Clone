@@ -1,25 +1,25 @@
-import React from 'react';
-// import './PostList.css';
+`import React from 'react';
+import './PostList.css';
 
 const PostList = (props) => {
   return (
     <div>
       {props.postData.map((post) => {
         return (
-          <div>
-            <div>
-              <img src={post.thumbnailUrl} />{post.username}
+          <div className="container">
+            <div className="container--header">
+              <img src={post.thumbnailUrl} className="thumbnail" alt="" /><div className="username">{post.username}</div>
             </div>
-            <div>
-              <img src={post.imageUrl} />
+            <div className="container--image">
+              <img src={post.imageUrl} className="contentImage" alt=""/>
             </div>
-            <div>
+            <div className="postInfo">
               {/* favicons later */}
-              <p>{post.likes} likes</p>
+              <p className="postInfo__p">{post.likes} likes</p>
               { post.comments.map((comment) => {
-                return <p>{comment.username}: {comment.text}</p>
+                return <p className="postInfo__p">{comment.username}: {comment.text}</p>
               })}
-              <p>{post.timestamp}</p>
+              <p className="postInfo__p">{post.timestamp}</p>
             </div>
           </div>
         )
