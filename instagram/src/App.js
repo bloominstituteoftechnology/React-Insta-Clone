@@ -11,11 +11,9 @@ class App extends Component {
     super();
     this.state = {
       query: '',
-      comment: '',
       postData: []
     }
     this.handleQuery = this.handleQuery.bind(this);
-    this.handleComment = this.handleComment.bind(this);
   }
 
   componentDidMount() {
@@ -24,10 +22,6 @@ class App extends Component {
 
   handleQuery(event) {
     this.setState({query: event.target.value});
-  }
-
-  handleComment(event) {
-    this.setState({comment: event.target.value});
   }
 
   render() {
