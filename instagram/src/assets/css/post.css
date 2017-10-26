@@ -1,0 +1,88 @@
+.post {
+    background: #ffffff;
+    margin-bottom: 30px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+}
+.post__header {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    color: #262626;
+}
+.post__thumbnail {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,.0975);
+}
+.post__username {
+    color: #262626;
+    font-weight: 600;
+    padding-left: 16px;
+}
+.post__image img {
+    display: block;
+}
+.post__actions {
+    padding: 5px 16px;
+    display: flex;
+    padding-bottom: 0;
+    align-items: center;
+}
+.post__actions a {
+    display: block;
+    padding: 8px;
+}
+.post__actions a span{
+    background: url('../img/sprites.png');    
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    display: block;
+    text-decoration: none;
+    text-indent: 110%;
+    overflow: hidden;
+}
+.post__actions .heart {
+    padding-left: 0;
+}
+.post__actions .heart span {
+    background-position: -208px -336px;
+}
+.post__actions .heart.liked span{
+    background-position: -182px -336px;
+}
+.post__actions .comment span{
+    background-position: -355px -263px;
+}
+.post__likes {
+    padding: 5px 16px;
+    color: #262626;
+    font-weight: 600;
+}
+.post__date {
+    color: #999;
+    font-size: 12px;
+    letter-spacing: .2px;
+    line-height: 18px;
+    padding-bottom: 6px;
+}
+.more_options {
+    background: url('../img/sprites.png');    
+    background-repeat: no-repeat;
+    background-position: -276px -115px;
+    height: 16px;
+    width: 16px;
+    margin-left: auto;
+    border: none;
+    display: block;
+    overflow: hidden;
+    outline: none;
+}
+.more_options span {
+    text-indent: 110%;
+    overflow: hidden;
+    display: block;
+}
