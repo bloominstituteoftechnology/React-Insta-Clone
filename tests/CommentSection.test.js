@@ -1,9 +1,12 @@
 import React from 'react';
 import sinon from 'sinon';
-import { shallow, mount } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
 import CommentSection from '../CommentSection';
-import postData from '../application-data';
+import postData from '../../application-data';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 describe('Comment Section', () => {
     it('should render an input tag', () => {

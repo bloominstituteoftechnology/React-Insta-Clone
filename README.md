@@ -21,11 +21,9 @@ Try to get all of the tests passing. If you don't get there, then aim for creati
 ## Project Setup
   * Run `npm i -g create-react-app` to install the React app generator.
   * Run `create-react-app instagram` to create your starter application.
-  * Ensure that there is a `package-lock.json` file at the same directory level as the `package.json` file in the `instagram` directory. If there isn't one, then you'll need to update your version of Node. Use a utility such as [nvm](https://github.com/creationix/nvm) to do this. 
-  * Inside your React app, run `npm i --save-dev enzyme sinon` to install Enzyme and Sinon, which are libraries that are needed for testing your components. 
-  * If you are using React 14.X or React < 15.5, then you'll need to run `npm i --save-dev react-addons-test-utils react-dom` as well.
-  * If you are using React >= 15.5, then you'll need to run `npm i --save-dev react-test-renderer react-dom` as well. 
-  * Move the provided `/tests` directory as well as the `application-data.js` file into the `/src` directory of your newly-generated React project.
+  * Inside your React app, run `npm i --save enzyme sinon` to install Enzyme and Sinon, which are libraries that are needed for testing your components. 
+  * You'll also want to run `npm i --save enzyme-adapter-react-16 react-test-renderer`. These additional dependencies are needed in order to run the tests.
+  * Move the provided `/tests` directory into the `/src` directory of your newly-generated React project.
 
 ## Project Description
   * There are two overarching components that you'll need to implement for this project: the Search Bar and the Post Container. 
