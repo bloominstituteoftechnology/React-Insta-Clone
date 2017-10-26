@@ -1,0 +1,26 @@
+.comment {
+  width: 100%;
+}
+
+.comment_column {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.comment_center{
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+}
+
+.comment_user {
+    font-weight: bold;
+}
+
+.comment_text {
+
+}
