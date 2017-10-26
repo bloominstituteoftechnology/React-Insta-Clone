@@ -1,12 +1,55 @@
-.img-container {
-	border: 2px solid #e8ebef;
-	display: inline-block;
+.navbar {
+	background-color: #eaecef;
+	width: 100%;
+	/*max-height: 500px;*/
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 40px;
 }
 
-img{
-	display:flex;
-    margin-left: auto;
+.navbar a {
+  	margin: 10px;
+  	text-decoration: none;
+	color: white;
+}
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+.horizontal-bar {
+	position: fixed;
+	height: 5px;
+	background-color: #eaecef;
+}
+
+.img-container {
+	border: 2px solid #e8ebef;
+	margin-left: auto;
     margin-right: auto;
+	width: 40%;
+}
+
+.img-post {
+	display:flex;
+    margin-left: auto;  // Following 2 help center the image in its container.
+    margin-right: auto;
+    max-width: 100%;  // Following 2 help scale the image to the width/height of its container.
+    max-height: 100%;
 	clear: both;
 }
 
@@ -17,8 +60,25 @@ img{
 }
 
 .img-header {
-	padding: 20px;
 	text-align: left;
+	padding: 10px;
+}
+
+.header-icon-div {
+	display: inline-block;
+	width: 2em;
+}
+
+.header-icon-img {
+	max-width: 100%;  // Following 2 help scale the image to the width/height of its container.
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+.header-username {
+	display: inline-block;
+    padding: 5px;
+    font-weight: bold;
 }
 
 .unicode-size {
