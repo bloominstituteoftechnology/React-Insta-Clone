@@ -28,7 +28,7 @@ export default class Comments extends Component {
 
     }
     render() {
-        const { comments } = this.props;
+        const { comments, commentBoxRef, children } = this.props;
         return (
             <section className="comments">
                 { comments.map((comment, index) => (
@@ -37,10 +37,10 @@ export default class Comments extends Component {
                         <span className="text">{comment.text}</span>
                     </div>
                 ))}
-                { this.props.children }
+                { children }
                 <div className="comments__add">
                     <form onSubmit={this.addComment}>
-                        <textarea value={this.state.comment} onChange={this.handleChange} placeholder="Add comment..." onKeyDown={this.handleKeyDown}></textarea>
+                        <textarea ref={ commentBoxRef } value={this.state.comment} onChange={this.handleChange} placeholder="Add comment..." onKeyDown={this.handleKeyDown}></textarea>
                     </form>
                 </div>
             </section>
