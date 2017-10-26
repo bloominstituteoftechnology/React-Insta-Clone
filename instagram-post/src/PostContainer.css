@@ -1,5 +1,4 @@
 .img-container {
-	padding-bottom: 20px;
 	border: 2px solid #e8ebef;
 	display: inline-block;
 }
@@ -13,11 +12,19 @@ img{
 
 .img-caption {
 	justify-content: center;
-	padding: 10px;
+	padding: 0px 10px 10px 10px;
 	text-align: left;
 }
 
 .img-header {
 	padding: 20px;
 	text-align: left;
+}
+
+.unicode-size {
+	font-size: 40px;
+}
+
+.comment-section {
+	padding-top: 5px;
 }
