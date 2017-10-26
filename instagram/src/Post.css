@@ -1,9 +1,55 @@
-div {
+.post-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  width: 510px;
+}
+.user-tag {
+  align-self: right;
+  display: flex;
+  margin-bottom: 10px;
+}
+.post-icon {
+  width: 70px;
+  height: 70px;
+  margin-right: 50px;
+}
+.post-misc {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
 }
 .fa-heart {
   color: tomato;
+}
+.post-comments {
+  align-self: left;
+  font-family: 'Verdana', sans-serif;
+  font-size: .9em;
+  margin-bottom: 3px;
+}
+.comment-user {
+  font-weight: bold; 
+}
+.post-add-comment {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  margin-top: 10px;
+}
+.post-add-comment > input {
+  height: 40px;
+}
+.post-add-comment > button {
+  background-color: white;
+}
+.post-add-comment > button:hover {
+  background-color: lightgray;
 }

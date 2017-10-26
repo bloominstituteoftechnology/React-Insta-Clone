@@ -44,13 +44,18 @@ class Post extends Component {
   }
   render() {
     return (
-      <div style={{'outline': this.state.flagged ? 3+'px solid salmon' : ''}}>
-        <h2><img src={this.props.post.thumbnailUrl} style={{width:50+'px'}}/>{this.props.post.username}</h2>
+      <div className='post-container' style={{'outline': this.state.flagged ? 3+'px solid salmon' : 1+'px solid lightgray'}}>
+        <span className='user-tag'>
+          <img className='post-icon' src={this.props.post.thumbnailUrl} />
+          <h2>{this.props.post.username}</h2>
+        </span>
         <img src={this.props.post.imageUrl} style={{maxWidth:500+'px'}}/>
-        <Heart addLike={ this.addLike }/>
-        <span>likes: {this.state.likes}</span>
-        <span>{moment(`${this.props.post.timestamp}`, "MMMDD YYYY HH:mm:ss a", 'en').fromNow()}</span>
-        { this.state.comments.map(comment => <span>{`${comment.username} ${comment.text}`}</span>) }
+        <div className='post-misc'>
+          <Heart addLike={ this.addLike }/>
+          <span>likes: {this.state.likes}</span>
+          <span>{moment(`${this.props.post.timestamp}`, "MMMDD YYYY HH:mm:ss a", 'en').fromNow()}</span>
+        </div>
+        { this.state.comments.map(comment => <span className='post-comments'><span className='comment-user'>{`${comment.username}`}</span> {comment.text}</span>) }
         <AddComment
           newComment={ this.newComment }
           typeComment={ this.typeComment }

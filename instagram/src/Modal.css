@@ -2,6 +2,7 @@
   width: 500px;
   position: fixed;
   top: 50%;
+  right: 30%;
   background-color: white;
   display: grid;
   grid-template-columns: 100%;
