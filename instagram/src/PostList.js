@@ -22,7 +22,10 @@ const PostList = (props) => {
               })}
               <p className="postInfo__p">{post.timestamp}</p>
             </div>
-            {/* <Comment comments={this.props.comment} /> */}
+            <div>
+              {/* <p>Comments here!</p> */}
+              {<Comment comments={props.comment} />}
+            </div>
           </div>
         )
       })}

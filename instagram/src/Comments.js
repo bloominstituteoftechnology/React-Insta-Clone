@@ -1,10 +1,10 @@
 import React from 'react';
-import './Search.css';
+import './Comments.css';
 
 const Comment = (props) => {
   return (
-    <div className="background">
-      <div className="appName">Comment</div>
+    <div className="comment--background">
+      <div className="comment">Leave a comment:</div>
       <input type="text" value={props.comment} onChange={props.changeHandler} />
       <button onClick={props.comment} className="input__button">Comment</button>
       <p></p>
