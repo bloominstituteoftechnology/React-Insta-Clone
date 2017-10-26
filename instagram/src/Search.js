@@ -7,6 +7,7 @@ const Search = (props) => {
         type='text'
         value={ props.search }
         onChange={ props.searchPosts }
+        placeholder='search...'
       />
     </div>
   );

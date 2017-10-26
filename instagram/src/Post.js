@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import AddComment from './AddComment'
+import AddComment from './AddComment.js'
+import Icons from './Icons.js'
+import './Post.css'
 
 class Post extends Component {
   constructor(props) {
@@ -8,13 +10,15 @@ class Post extends Component {
     this.state = {
       comments: [],
       newComment: '',
+      likes: 0,
     };
     this.props = props;
     this.addComment = this.addComment.bind(this);
     this.typeComment = this.typeComment.bind(this);
+    this.addLike = this.addLike.bind(this);
   }
   componentDidMount() {
-    this.setState({ comments: this.props.post.comments, });
+    this.setState({ comments: this.props.post.comments, likes: this.props.post.likes, });
   }
   addComment(e) {
     e.preventDefault();
@@ -25,12 +29,20 @@ class Post extends Component {
   typeComment(event) {
     this.setState({ newComment: event.target.value, });
   }
+  addLike(val) {
+    if (val === 'remove') {
+      this.setState({ likes: ++this.state.likes });
+    } else if (val === 'add') {
+      this.setState({ likes: --this.state.likes });
+    }
+  }
   render() {
     return (
       <div>
         <h2><img src={this.props.post.thumbnailUrl} style={{width:50+'px'}}/>{this.props.post.username}</h2>
         <img src={this.props.post.imageUrl} style={{maxWidth:500+'px'}}/>
-        <span>likes: {this.props.post.likes}</span>
+        <Icons name={ 'heart' } addLike={ this.addLike }/>
+        <span>likes: {this.state.likes}</span>
         <span>{moment(`${this.props.post.timestamp}`, "MMMDD YYYY HH:mm:ss a", 'en').fromNow()}</span>
         { this.state.comments.map(comment => <span>{`${comment.username} ${comment.text}`}</span>) }
         <AddComment
@@ -38,6 +50,7 @@ class Post extends Component {
           typeComment={ this.typeComment }
           addComment={ this.addComment }
         />
+        <span>...</span>
       </div>
     );
   }

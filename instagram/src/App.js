@@ -23,18 +23,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <nav>
         <Search 
           search={ this.state.search }
           searchPosts={ this.searchPosts }
         />
-        {this.state.posts.filter(post => {return post.username.indexOf(this.state.search) !== -1}).map(post => {
-          //console.log(post);
-          return (
-            <Post 
-              post={ post }
-              search={ this.state.search }
-            />
-          );
+        </nav>
+        {this.state.posts.map(post => {
+          if (post.username.indexOf( this.state.search ) !== -1) {
+            return <Post post={ post } />
+          }
         })}
       </div>
     );
