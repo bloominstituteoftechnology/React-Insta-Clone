@@ -83,6 +83,11 @@ class Instagram extends Component {
                 <nav>
                     <a className="logo" href="/">instagram</a>
                     <SearchBar search={this.search}/>
+                    <div className="instagram__nav">
+                        <a className="discover" href="/">Discover</a>
+                        <a className="feed" href="/">Feed</a>
+                        <a className="profile" href="/">Profile</a>
+                    </div>
                 </nav>
             </header>
                 <section className="posts">
