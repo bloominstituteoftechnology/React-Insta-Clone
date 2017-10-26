@@ -23,9 +23,13 @@ export const Data = (props) => {
                             </div>
                             );
                         })}
-                        {/* input */}
                         <br />
                         <div className="PostList__stamp">{post.timestamp}</div>
+                        <div className="PostList__comment-box">
+                            <form action="">
+                                <input className="PostList__comment-input" type="text" placeholder="Add a comment..."></input>
+                            </form>
+                        </div>
                     </div>
                 )
             })}
