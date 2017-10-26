@@ -1,5 +1,6 @@
 import React from 'react';
 import './PostList.css';
+import Comment from './Comments.js';
 
 const PostList = (props) => {
   return (
@@ -21,6 +22,7 @@ const PostList = (props) => {
               })}
               <p className="postInfo__p">{post.timestamp}</p>
             </div>
+            {/* <Comment comments={this.props.comment} /> */}
           </div>
         )
       })}
