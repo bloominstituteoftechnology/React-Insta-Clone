@@ -1,0 +1,22 @@
+.thumbnail-image {
+    border-radius: 50%;
+    width: 40px;
+    display: inline-block;
+}
+
+.username {
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.likes {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.comment-form {
+    margin-top: 20px;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import SearchBar from '../SearchBar';
+import SearchBar from '../NavBar.js';
 
 describe('Search Bar', () => {
     it('should render an input tag', () => {
