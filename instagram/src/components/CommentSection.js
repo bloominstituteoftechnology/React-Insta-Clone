@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import '../assets/css/comments.css';
+
 export default class Comments extends Component {
     constructor(props) {
         super(props);
@@ -17,7 +19,7 @@ export default class Comments extends Component {
         })
     }
     handleKeyDown = (event) => {
-        if(event.keyCode === 13) {
+        if(event.keyCode === 13 && this.state.comment) {
             this.addComment()
             this.setState({
                 comment: ''
@@ -31,13 +33,14 @@ export default class Comments extends Component {
             <section className="comments">
                 { comments.map((comment, index) => (
                     <div className="comment" key={index}>
-                        <span>{comment.username}</span>
-                        <span>{comment.text}</span>
+                        <span className="username">{comment.username}</span>
+                        <span className="text">{comment.text}</span>
                     </div>
                 ))}
+                { this.props.children }
                 <div className="comments__add">
                     <form onSubmit={this.addComment}>
-                        <textarea value={this.state.comment} onChange={this.handleChange} placeholder="Add comment" onKeyDown={this.handleKeyDown}></textarea>
+                        <textarea value={this.state.comment} onChange={this.handleChange} placeholder="Add comment..." onKeyDown={this.handleKeyDown}></textarea>
                     </form>
                 </div>
             </section>

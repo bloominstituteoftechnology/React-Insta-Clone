@@ -1,7 +1,10 @@
 import React from 'react';
-import Comments from './CommentSection';
+import moment from 'moment';
 
-export default ({index, post, addComment}) => (
+import Comments from './CommentSection';
+import '../assets/css/post.css';
+
+export default ({index, post, addComment, toggleLike, liked}) => (
     <div className="post">
         <header className="post__header">
             <div className="post__thumbnail">
@@ -13,9 +16,14 @@ export default ({index, post, addComment}) => (
             <img src={post.imageUrl} alt=""/>
         </div>
         <div className="post__actions">
-            <a href="/">like</a>
-            <a href="/">comment</a>
+            <a className={`heart ${liked ? 'liked' : ''}`} href="/" onClick={toggleLike}><span>like</span></a>
+            <a className="comment" href="/"><span>comment</span></a>
         </div>
-        <Comments comments={post.comments} addComment={addComment}/>
+        <div className="post__likes">
+            <span>{post.likes} likes</span>
+        </div>
+        <Comments comments={post.comments} addComment={addComment}>
+            <div className="post__date">{moment("July 17th 2017, 12:42:40 pm", "MMMM Do YYYY, h:mm:ss a").fromNow()}</div>
+        </Comments>
     </div>
 )

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Instagram from './Instagram';
 
-import './App.css';
+import './assets/css/app.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <Instagram />
       </div>
     );

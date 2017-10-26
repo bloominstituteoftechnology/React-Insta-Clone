@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../assets/css/search.css';
 
 export default class Search extends Component {
     constructor(props) {
@@ -21,7 +22,7 @@ export default class Search extends Component {
     render() {
         return (
             <div className="search">
-                <input type="text" onChange={this.handleChange} value={this.state.value}/>
+                <input type="text" onChange={this.handleChange} value={this.state.value} placeholder="Search"/>
             </div>
         )
     }

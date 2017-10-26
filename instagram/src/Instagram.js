@@ -3,6 +3,7 @@ import Post from './components/PostContainer';
 import SearchBar from './components/SearchBar';
 
 import posts from './application-data';
+import './assets/css/instagram.css';
 
 class Instagram extends Component {
     constructor() {
@@ -36,17 +37,25 @@ class Instagram extends Component {
             posts
         });
     }
+    toggleLike = (id) => {
+        
+    }
     render() {
         return (
             <div className="instagram">
-            <header>
-                <SearchBar search={this.search}/>
+            <header className="instagram__header">
+                <nav>
+                    <a className="logo" href="/">instagram</a>
+                    <SearchBar search={this.search}/>
+                </nav>
             </header>
+                <section className="posts">
                 {
                     this.state.posts.map((post, index) => (
                         <Post post={post} key={index} index={index} addComment={(comment) => this.addComment(index, comment)}/>
                     ))
                 }
+                </section>
             </div>
         )
     }

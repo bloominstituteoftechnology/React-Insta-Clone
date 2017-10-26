@@ -1,0 +1,32 @@
+.instagram {
+    background: #fafafa;
+}
+.instagram__header {
+    background: #ffffff;
+}
+.instagram__header nav {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1010px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.instagram__header .logo {
+    background: url('../img/sprites.png');
+    background-repeat: no-repeat;
+    background-position: -177px 0;
+    height: 35px;
+    width: 176px;
+    text-decoration: none;
+    text-indent: 110%;
+    overflow: hidden;
+}
+
+.posts {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 60px;
+}

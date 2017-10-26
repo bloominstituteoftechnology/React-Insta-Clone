@@ -18,7 +18,8 @@ const postData = [
                 username: "martinseludo",
                 text: "Can't wait to try it!"
             }
-        ]
+        ], 
+        liked: false
     },
     {
         username: "twitch",
@@ -47,7 +48,8 @@ const postData = [
                 username: "dennis_futbol",
                 text: "Is"
             }
-        ]
+        ], 
+        liked: false
     },
     {
         username: "playhearthstone",
@@ -76,7 +78,8 @@ const postData = [
                 username: "awesomebt28",
                 text: "I like how gul'dan looks so old and useless"
             }
-        ]
+        ], 
+        liked: false
     }
 ];
 
