@@ -1,4 +1,10 @@
 
+h3 {
+    text-align: left;
+    float: right;
+}
+
+
 .wrapper {
     margin:auto;
 }
@@ -6,7 +12,6 @@
 .InstagramList {
     margin: auto;
     padding: 15px;
-    text-align: center;
     width: 50%;
 }
 
@@ -17,17 +22,34 @@
     border: solid 1px lightgrey;
 }
 
+.InstagramList__item__topWrapper{
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    position: relative;
+}
+
+.InstagramList__item__topWrapper__thumbnail {
+    height: 30px;
+    width: 30px;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 50%;
+}
+
 .InstagramList__item__mainImages {
     max-width:100%;
     max-height:100%;
 }
 
-InstagramList__item__bottomSection {
+.InstagramList__item__bottomSection {
     width: 100%;
 }
 
 .InstagramList__item__bottomSection__likes {
     text-align: left;
+    font-weight: bold;
+    font-size: 15px;
     top: 0px;
     left: 0px;
 }
