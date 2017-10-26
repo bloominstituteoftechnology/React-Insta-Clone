@@ -1,0 +1,107 @@
+.SearchBar {
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #d9d9d9;
+    border-color: #d9d9d9;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    font-size: 100%;
+    margin: 0;
+    width: 198px;
+
+}
+.NavBar {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+.Link {
+    color: Black;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Trebuchet MS;
+    font-weight: 850;
+    font-size: 150%;
+    width: 200px;
+}
+
+.Link1 {
+    text-align: start;
+}
+
+.Link2 {
+    text-align: end;
+}
+
+.thumbnail {
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    margin-left: 2%;
+}
+
+.post{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2%;
+}
+
+.Commenter {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    border-width: 2px;
+    border-color: #d9d9d9;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: white;
+    width: 55%;
+}
+.UserPosts {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+a:hover {
+    color: #666666;
+}
+.Info {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 2%;
+    font-family: Geneva, sans-serif;
+    font-size: 90%;
+    color: black;
+
+}
+.Comments{
+    display: inline-block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%
+
+}
+.Comment {
+    display: inline;
+    width: 90%;
+}
+
+.PostList {
+    font-weight: bold;
+    display: inline;
+    margin: 0;
+    width: 100%;
+}
+.CommentAdd{
+    color: #d9d9d9;
+    border: none;
+    width: 100%;
+    margin-top: 1%;
+}
