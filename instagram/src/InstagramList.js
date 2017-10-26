@@ -8,8 +8,15 @@ const InstagramList = (props) => {
                 return(
                     <div className="InstagramList__item" key={item.id}>
                     <h3>{item.username}</h3>
-                        <p>{item.text}</p>
+                        <img className="InstagramList__item__mainImages" src= {item.imageUrl} alt={item.username}></img>
+                        <div className="InstagramList__item__bottomSection">
+                        <div className="InstagramList__item__bottomSection__likes">{item.likes}</div>
+                        <img src="./images/icons.png"></img>
+                        {/* {let length = {item.comments.length};
+                        for(let i = 0; i < length; i++){
+                        } */}
                         </div>
+                    </div>
                 )
             })}
             </div>
