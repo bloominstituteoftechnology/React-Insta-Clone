@@ -1,4 +1,4 @@
-const postData = [
+export const postData = [
     {
         username: "philzcoffee",
         thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
