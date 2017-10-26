@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+import Modal from './Modal.js'
 import AddComment from './AddComment.js'
 import Icons from './Icons.js'
 import './Post.css'
@@ -11,11 +12,13 @@ class Post extends Component {
       comments: [],
       newComment: '',
       likes: 0,
+      flagged: false,
     };
     this.props = props;
     this.addComment = this.addComment.bind(this);
     this.typeComment = this.typeComment.bind(this);
     this.addLike = this.addLike.bind(this);
+    this.flag = this.flag.bind(this);
   }
   componentDidMount() {
     this.setState({ comments: this.props.post.comments, likes: this.props.post.likes, });
@@ -36,6 +39,9 @@ class Post extends Component {
       this.setState({ likes: --this.state.likes });
     }
   }
+  flag() {
+    this.setState({ flagged: !(this.state.flagged) });
+  }
   render() {
     return (
       <div>
@@ -50,7 +56,7 @@ class Post extends Component {
           typeComment={ this.typeComment }
           addComment={ this.addComment }
         />
-        <span>...</span>
+        <Modal flag={ this.flag }/>
       </div>
     );
   }
