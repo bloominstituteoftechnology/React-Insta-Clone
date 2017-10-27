@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import postData from './application-data.js'
-import PostList from './PostList.js'
+import postData from './application-data.js';
+import PostList from './PostList.js';
 
 class App extends Component {
   constructor() {
