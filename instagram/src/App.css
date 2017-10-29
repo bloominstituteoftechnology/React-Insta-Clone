@@ -21,6 +21,11 @@
 .App-intro {
   font-size: large;
 }
+.App__searchbox {
+  width: 12.6%;
+
+
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

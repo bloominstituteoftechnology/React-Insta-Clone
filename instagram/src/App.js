@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import postData from './application-data.js';
+import PostList from './PostList.js';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      arrPosts:[]
+    }
+  }
+
+  componentDidMount() {
+    this.setState({arrPosts: postData});
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <h1> Instagram </h1>
+        <div class = "App__searchbox"> <input type = "text"/> <button> search </button> </div>
+          <PostList postName = {this.state.arrPosts} />
       </div>
     );
   }
