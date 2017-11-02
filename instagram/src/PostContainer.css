@@ -1,0 +1,21 @@
+.PostData {
+    width: 600px;
+    padding: 50px;
+}
+.Data {
+    border: solid;
+    margin: 20px;
+    padding: 15px;
+}
+.img-responsive {
+    width: 500px;
+    height: 500px;
+}
+.thumb-reponsive {
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+}
+.text {
+    font-size: 1.2em;
+}
