@@ -1,4 +1,3 @@
-/*eslint*/
 import React, { Component } from 'react';
 import postData from './application-data';
 import Post from './Post.js';
@@ -24,10 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <nav>
-        <Search 
-          search={ this.state.search }
-          searchPosts={ this.searchPosts }
-        />
+        <Search search={ this.state.search } searchPosts={ this.searchPosts } />
         </nav>
         {this.state.posts.map(post => {
           if (post.username.indexOf( this.state.search ) !== -1) {
