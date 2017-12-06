@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import PostContainer from '../PostContainer';
+import PostContainer from '../components/PostContainer/PostContainer';
 import postData from '../../application-data';
 
 Enzyme.configure({ adapter: new Adapter() });
