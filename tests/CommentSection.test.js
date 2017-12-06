@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import CommentSection from '../CommentSection/CommentSection';
+import CommentSection from '../components/CommentSection/CommentSection';
 import postData from '../dummy-data';
 
 Enzyme.configure({ adapter: new Adapter() });
