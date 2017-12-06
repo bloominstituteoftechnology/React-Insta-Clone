@@ -23,6 +23,7 @@ Try to get all of the tests passing. If you don't get there, then aim for creati
   * Each `PostContainer` component will then pass the array of comments on each post object as a prop to an instance of the `CommentSection` component. 
   * The `CommentSection` component will receive the array of comments as props and render each one with the username of the poster as well as the post's text. Additionally, there should be an input box that allows users to submit a new comment for any post. Since there is no login page or anything of that sort, hard code a static username.  
   * You are free to leverage the Bootstrap library for this project for the purposes of theming and styling. I recommend the awesome [react-bootstrap](https://react-bootstrap.github.io) library, which is a library of Bootstrap components that have been implemented using React, so they're really easy to just drop straight into React projects. 
+  * In addition to Bootstrap for theming, you'll want to add your own styles via CSS. To keep things organized, have the CSS file that corresponds with a component live in the same directory as the component file. 
 
 ---
 
@@ -35,6 +36,6 @@ Your post container should look something like this:
 ![alt tag](/assets/ig_post.png)
 
 ## Extra Credit
-  * Implement the ability to like a post by clicking on the heart icon and having the number of likes increment accordingly. 
+  * Implement the ability to like a post by clicking on a heart icon and having the number of likes increment accordingly. 
   * Get the Search Bar to filter posts by the post's username. When you submit a search term should filter out posts by users whose usernames do not match the search term. 
   * Look into the [moment.js](https://momentjs.com/) library to read about how to dynamically format the timestamp into a human-readable format like how it is being displayed in the screenshot. 
