@@ -13,7 +13,7 @@ Try to get all of the tests passing. If you don't get there, then aim for creati
   * Run `npm i -g create-react-app` to install the React app generator globally.
   * Run `create-react-app instagram` to create your starter application with the name `instagram`.
   * Once your React project has been created, move the provided `/tests` directory as well as the `dummy-data.js` file into the `/src` directory of your newly-generated React project.
-  * Inside your `instagram` project directory, run `npm i --save enzyme sinon enzyme-adapter-react-16`, which will install additional necessary dependencies that `create-react-app` doesn't install for you off the bat.
+  * Inside your `instagram` project directory, run `npm i --save-dev enzyme sinon enzyme-adapter-react-16 jest-cli`, which will install additional necessary dependencies that `create-react-app` doesn't install for you off the bat.
   * Create a `components` directory inside the `src` directory, and then create a directory called `SearchBar`, another one called `PostContainer`, and lastly one called `CommentSection`, all inside the `src` directory. Each of these directories should contain the component file as well as the CSS for their respective components. Your file structure should end up looking like this:
   
 ![alt tag](/assets/folder_structure.png) 
