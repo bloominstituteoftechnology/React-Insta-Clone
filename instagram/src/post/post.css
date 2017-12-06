@@ -1,0 +1,101 @@
+.post {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 40px;
+	box-sizing: border-box;
+	border: 1px solid #D7D3E2;
+}
+.post>div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.title {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 90%;
+	height: 50px;
+}
+
+.user {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+}
+
+.title>.user>img {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.time {
+	height: 30px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: #A7A3B0;
+	text-align: left;
+	width: 90%;
+}
+
+h1 {
+	font-size: 1em;
+	text-align: left;
+}
+
+.post .image {
+	width: 100%;
+	height: auto;
+}
+
+.post .image>img {
+	width: 100%;
+	height: auto;
+}
+
+.likes {
+	width: 90%;
+	text-align: left;
+	font-weight: 900;
+}
+
+.comments {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 10px;
+}
+
+.comments>p {
+	width: 90%;
+	text-align: left;
+	margin: 5px 0;
+}
+
+.add-a-comment {
+	width: 100%;
+	height: 40px;
+}
+
+.add-a-comment textarea {
+	height: 40px;
+	width: 100%;
+	ouline: none;
+	border: none;
+	font-size: 1em;
+	border: none;
+	border-top: 1px solid #D7D3E2;
+	border-radius: 0px;
+	box-sizing: border-box;
+}
