@@ -1,0 +1,19 @@
+.modal {
+  width: 500px;
+  position: fixed;
+  top: 50%;
+  right: 30%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 100%;
+}
+.modal > span {
+  font-size: 1.3em;
+  text-align: center;
+  padding: 25px 0;
+  outline: 1px solid black;
+}
+.modal > span:hover {
+  background-color: lightgray;
+  transition: background-color 0.5s ease;
+}
