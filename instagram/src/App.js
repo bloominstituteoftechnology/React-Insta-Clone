@@ -1,8 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import PostContainer from './PostContainer/PostContainer';
+import SearchBar from './SearchBar/SearchBar';
+import dummyData from './dummy-data';
 
-class App extends Component {
+// file with import dummyData from './dummy-data';
+// and iterate over said data,
+// passing each individual object as a prop to an instance of PostContainer.
+
+
+const App = () => {
+  return(
+    <div className= "App">
+  <SearchBar/>
+  {dummyData.map((post, i) => <PostContainer key= {i} postData={post} />)}
+  </div>
+  );
+}
+  
+export default App;
+/*class App extends Component {
   render() {
     return (
       <div className="App">
@@ -16,6 +34,6 @@ class App extends Component {
       </div>
     );
   }
-}
+}*/
 
-export default App;
+
