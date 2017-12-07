@@ -1,0 +1,14 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 700px;
+}
+
+.App--Wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: flex-start;
+}

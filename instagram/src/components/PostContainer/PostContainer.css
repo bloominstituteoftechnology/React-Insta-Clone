@@ -1,0 +1,71 @@
+.Post {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    margin: 20px;
+    border: 1px solid #DADADA;
+    max-width: 700px;
+}
+
+.Post__Header {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    justify-content: flex-start;
+}
+
+.Post__Header h3 {
+    margin-top: 25px;
+}
+
+.Post__Header img {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.Post__Image {
+    margin: 0px 10px 0px 0px;
+    width: 100%;
+}
+
+.Post__Interact img {
+    margin: 5px 0px 0px 10px;
+}
+
+.Post__Likes {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 4px 10px 6px 10px;
+}
+
+.Post__Time {
+    font-size: 14px;
+    margin: 4px 10px 15px 10px;
+    color: #999999;
+}
+
+.Add {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.Add__Comment {
+    color: #999999;
+    justify-content: flex-start;
+    margin: 0px 0px 20px 20px;
+    border: none;
+    font-weight: bold; 
+    width: 90%;
+}
+
+.Divider hr {
+    margin: 4px 10px 0px 10px;
+    border: 1px solid #DADADA;
+}
