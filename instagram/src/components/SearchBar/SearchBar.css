@@ -1,0 +1,61 @@
+.SearchBar {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.SearchBar__icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  background-size: 60% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.SearchBar__icon-camera {
+  background-image: url("../../images/icons/camera-icon.png");
+  background-size: contain;
+}
+.SearchBar__icon-explore {
+  background-image: url("../../images/icons/explore-icon.png");
+}
+.SearchBar__icon-like {
+  background-image: url("../../images/icons/like-icon.png");
+}
+.SearchBar__icon-user {
+  background-image: url("../../images/icons/user-icon.png");
+}
+
+.SearchBar__iconset {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.SearchBar__logo {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 5px;
+  width: 100%;
+  max-width: 200px;
+  height: 50px;
+  background-image: url("../../images/logo.png");  
+  background-size: 75% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.SearchBar__input {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 500px);
+}
+.SearchBar__input > input {
+  font-size: 15px;
+  padding: 10px;
+  outline: 0px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+}
