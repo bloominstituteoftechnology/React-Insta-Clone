@@ -10,7 +10,12 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer key={'2'} postData={postData} />
+        {
+          Array.from(postData).map((post, index) => (
+            <PostContainer key={index} postData={post} />
+          ))
+        }
+        
       </div>
     );
   }

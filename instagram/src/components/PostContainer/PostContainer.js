@@ -18,32 +18,23 @@ class PostContainer extends Component {
 
   render() {
     return (
-      <div className="PostContainer">
-      {
-        Array.from(this.state.postData).map((post, index) => (
+      <div className="Post__item">
 
-          <div className="Post__item" key={index + ""}>
+        <div className="Post__header">
+          <img src={this.state.postData.thumbnailUrl} className="Post__user-thumb" alt="User Thumb" draggable="false" />
+          <div className="Post__user-name">philzcoffee</div>
+        </div>
 
-            <div className="Post__header">
-              <img src={post.thumbnailUrl} className="Post__user-thumb" alt="User Thumb" draggable="false" />
-              <div className="Post__user-name">philzcoffee</div>
-            </div>
+        <img src={this.state.postData.imageUrl} className="Post__image" alt="Posted by User" draggable="false" />
+              
+        <div className="Post__reactions">
+          <div className="Post__reaction-icon Post__like-icon"></div>
+          <div className="Post__reaction-icon Post__comment-icon"></div>
+          <div className="Post__likes">{this.state.postData.likes} likes</div>
+        </div>
 
-            <img src={post.imageUrl} className="Post__image" alt="Posted by User" draggable="false" />
-                  
-            <div className="Post__reactions">
-              <div className="Post__reaction-icon Post__like-icon"></div>
-              <div className="Post__reaction-icon Post__comment-icon"></div>
-              <div className="Post__likes">{post.likes} likes</div>
-            </div>
+        <CommentSection key="1" comments={this.state.postData.comments} />
 
-            <CommentSection key="1" comments={post.comments} />
-
-          </div>
-        
-        ))
-
-      }
       </div>
     );
   }
