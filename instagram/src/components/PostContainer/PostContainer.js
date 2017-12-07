@@ -21,6 +21,7 @@ class PostContainer extends Component {
                 <div><button type="alert">Click Me</button></div>
                 <div>This is the post container</div>
                 <div>{this.state.posts.username}</div>
+                <div><img src = {this.state.posts.url} alt = "insta post" /></div>
                 {console.log(this.state.posts.username)}
                 {console.log(this.state.comments)}
                 {this.state.comments.map((obj, i) =><CommentSection key={i} item={obj} />)}
