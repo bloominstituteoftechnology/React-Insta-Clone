@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
-        {dummyData.map((post, i) => <PostContainer key={i} post={post} />)}
+        {dummyData.map((post, i) => <PostContainer postData={post} key={i} />)}
       </div>
     );
   }

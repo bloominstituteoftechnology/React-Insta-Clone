@@ -5,20 +5,15 @@ class PostContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: props.comments,
-            imageUrl: props.imageUrl,
-            likes: props.likes,
-            thumbnailUrl: props.thumbnailUrl,
-            timestamp: props.timestamp,
-            username: props.username,
+            data: props.postData,
         }
     }
     render() {
         return (
             <div>
-                <img alt="" src={this.state.imageUrl}/>
-                <img alt=""/>
-                <CommentSection />
+                <img alt="" src={this.state.data.imageUrl}/>
+                <img alt="" src={this.state.data.thumbnailUrl}/>
+                <CommentSection likes={this.state.data.likes} comments={this.state.data.comments}/>
             </div>
         )
     }
