@@ -1,15 +1,20 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 
-export const PostContainer = (props) => {
+const PostContainer = (props) => {
+  console.log('props are ', props)
   return(
     <div>
-      {props.dummyData.map(((post, index) => {
-          return <CommentSection key={index} post={post}/>
-      }))}
+      <div>
+        <div><img src={props.postData.thumbnailUrl} alt="img"/></div>
+        <div><img src={props.postData.imageUrl} alt="img"/></div>
+        <CommentSection post={props.postData}/>
+      </div>
     </div>
   )
 };
+
+export default PostContainer;
 
 
 
