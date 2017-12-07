@@ -3,31 +3,38 @@ import React, {Component} from 'react';
 class SearchBar extends Component {
   constructor () {
     super();
-    this.state = 
+    this.state = {
+      searchInput: ''
+    };
   }
 
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.setState({
-      this
-    })
+    this.setState({searchInput: ''});
   }
 
-
-
+  handleSearchInput = (event) => {
+    this.setState({searchInput: event.target.value});
+  }
 
   render () {
     return (
-      <div className="searchBarStyle">
-        <form onSubmit={this.handleSubmit}>
-            <input type="text" onChange={this.handleEmailInput} value={this.state.newEmail}/>
-        </form>
-      </div>
-      );
+      <Navbar>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a href="#">Lambda School React II</a>
+          </Navbar.Brand>
+        </Navbar.Header>
+        <Navbar.Form pullLeft>
+          <input type="text" placeholder="Search" value={this.state.searchInput} onChange={this.handleSearchInput}/>
+          <Button type="submit" onClick={this.handleSubmit}>Submit</Button>
+        </Navbar.Form>
+      </Navbar>
+    );
   }
 
-	}
+}
 
 
 

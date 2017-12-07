@@ -1,1 +1,7 @@
-PostContainer.css
+.image img {
+	height: 25;
+}
+
+.thumbnail img {
+	height: 5em;
+}
