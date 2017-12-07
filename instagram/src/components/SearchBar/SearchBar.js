@@ -12,17 +12,19 @@ class SearchBar extends Component {
     }
     handleSearch = (evt) => {
         this.setState({searchTerm: evt.target.value})
+        this.props.onChange();
     }
 
     handleReturn = (evt) => {
         if(evt.keyCode === 13) { // When enter is pressed do this
-            console.log('Submitting: ', this.state.searchTerm)
+            // console.log('Submitting: ', this.state.searchTerm)
             let searchTerm = this.state.searchTerm;
             this.setState({submitTerm: searchTerm, searchTerm: ''})
+            this.props.onChange();
         } else if (this.state.searchTerm === 'Search') { // When it is clicked do this
             this.setState({searchTerm: ''});
         } else {
-            console.log(this.state.searchTerm); // Report curent entry
+            // console.log(this.state.searchTerm); // Report curent entry
         }
     }
 

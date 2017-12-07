@@ -77,7 +77,28 @@ const dummyData = [
                 text: "I like how gul'dan looks so old and useless"
             }
         ]
-    }
+    },
+    {
+        username: "designerexpert",
+        thumbnailUrl: 'https://instagram.fmia1-2.fna.fbcdn.net/t51.2885-19/s150x150/13686882_1680049718987637_47605772_a.jpg',
+        imageUrl: 'https://instagram.fmia1-2.fna.fbcdn.net/t51.2885-15/e35/14276614_1566366740338319_1943654623_n.jpg',
+        likes: 9001,
+        timestamp: "July 17th 2017, 12:42:40 pm",
+        comments: [
+            {
+                username: "designerexpert",
+                text: "Its Overninethousand! likes!"
+            },
+            {
+                username: "GokuSan",
+                text: "Begeta what is his powerlevel!"
+            },
+            {
+                username: "martinseludo",
+                text: "Can't wait to try it!"
+            }
+        ]
+    },
 ];
 
 export default dummyData;

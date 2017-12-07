@@ -1,14 +1,20 @@
 .App {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  min-width: 700px;
 }
 
 .App--Wrapper {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  min-width: 700px;
+}
+
+.separateTop {
+  margin-top: 100px;
+  width: 720px;
 }
