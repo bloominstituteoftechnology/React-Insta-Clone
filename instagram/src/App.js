@@ -14,7 +14,7 @@ const App = () => (
 export default App;  */
 
 import React from 'react';
-import logo from './logo.svg';
+/*import logo from './logo.svg';*/
 import './App.css';
 import PostContainer from './PostContainer/PostContainer';
 import SearchBar from './SearchBar/SearchBar';

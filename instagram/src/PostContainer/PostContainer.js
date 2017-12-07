@@ -26,7 +26,7 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';//go up two to source then can access Comment
 import './PostContainer.css'; // stay on folder 
 
-const PostContainer = ( postData) => {
+const PostContainer = ({ postData }) => {
     return (
         <div className= "post-container">
             <div className= "thumbnail">
