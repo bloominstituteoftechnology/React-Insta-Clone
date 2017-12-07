@@ -1,0 +1,14 @@
+.postBox {
+    border: 0.05em solid #d9d9d9;
+    margin: 3em;
+}
+
+.image {
+    max-width: 80%
+}
+
+.thumbnail {
+    display:inline-block;
+    float: left;
+    border-radius: 50%;
+}
