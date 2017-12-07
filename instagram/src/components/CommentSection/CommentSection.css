@@ -1,0 +1,21 @@
+.listcomment{
+    /* height: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start
+}
+.comment__text{
+    margin-left: 5px;
+    text-align: left;
+}
+.container__comment__input{
+    height: 30px;
+    width:100%;
+    margin-top:10px;
+}
+

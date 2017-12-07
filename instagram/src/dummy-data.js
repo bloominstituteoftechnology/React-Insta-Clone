@@ -77,6 +77,27 @@ const dummyData = [
                 text: "I like how gul'dan looks so old and useless"
             }
         ]
+    },
+    {
+        username: "philzcoffee",
+        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
+        imageUrl: 'http://donpk.com/wp-content/uploads/2016/07/funny-baby-pictures-pics-wallpaper-download36.jpg?x46012',
+        likes: 300,
+        timestamp: "July 17th 2017, 12:42:40 pm",
+        comments: [
+            {
+                username: "philzcoffee",
+                text: "Such a Cutie!"
+            },
+            {
+                username: "biancasaurus",
+                text: "Looks delicious!"
+            },
+            {
+                username: "martinseludo",
+                text: "Cute Cute !"
+            }
+        ]
     }
 ];
 
