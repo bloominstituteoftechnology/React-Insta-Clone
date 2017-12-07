@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+/*import React, { Component } from "react";
 import { Navbar, Button } from "react-bootstrap";
 
 class SearchBar extends Component {
@@ -42,8 +42,8 @@ class SearchBar extends Component {
   }
 }
 
-export default SearchBar;
-/*import React, {Component} from 'react';
+export default SearchBar; */
+import React, {Component} from 'react';
 import {Navbar, Button} from 'react-bootstrap';
 
 class SearchBar extends Component {
@@ -79,4 +79,4 @@ class SearchBar extends Component {
         );
     }
 }
-export default SearchBar; */
+export default SearchBar;  

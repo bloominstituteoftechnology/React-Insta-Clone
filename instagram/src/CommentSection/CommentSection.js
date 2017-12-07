@@ -3,7 +3,7 @@
 //as well as the post's text. Additionally,
 // an input box that allows users to submit a new comment for any post.
 // Since there is no login page or anything of that sort, hard code a static username.
-import React, { Component } from "react";
+/*import React, { Component } from "react";
 
 class CommentSection extends Component {
   constructor() {
@@ -65,9 +65,9 @@ class CommentSection extends Component {
   }
 }
 
-export default CommentSection;
+export default CommentSection;  */
 
-/*import React, {Component} from 'react';
+import React, {Component} from 'react';
 
 
 class CommentSection extends Component{
@@ -106,7 +106,7 @@ class CommentSection extends Component{
     render () {
         return (
             <div className="comment-section">
-            {his.state.comments? this.state.comments.map((comment, i) => (
+            {this.state.comments? this.state.comments.map((comment, i) => (
                 <div className= "comment" key= {i}>
                 <div className= "comment-user"><strong>{comment.username}</strong></div>
                 <div className= "comment-text">{comment.text}</div>
@@ -122,4 +122,4 @@ class CommentSection extends Component{
 
     }
 
-    export default CommentSection; */
+    export default CommentSection;  

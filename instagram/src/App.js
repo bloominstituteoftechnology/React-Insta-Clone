@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
@@ -11,9 +11,9 @@ const App = () => (
   </div>
 );
 
-export default App;
+export default App;  */
 
-/*import React from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import PostContainer from './PostContainer/PostContainer';
@@ -34,7 +34,7 @@ const App = () => {
   );
 }
   
-export default App; */
+export default App;  
  
 
 

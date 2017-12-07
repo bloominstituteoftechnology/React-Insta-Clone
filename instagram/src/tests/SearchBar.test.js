@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import Enzyme, { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
@@ -11,8 +11,8 @@ describe("Search Bar", () => {
     const component = shallow(<SearchBar />);
     expect(component.find("input").length).toBe(1);
   });
-});
-/*import React from 'react';
+}); */
+import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -25,4 +25,4 @@ describe('Search Bar', () => {
         const component = shallow(<SearchBar />);
         expect(component.find('input').length).toBe(1);
     });
-}); */
+});  

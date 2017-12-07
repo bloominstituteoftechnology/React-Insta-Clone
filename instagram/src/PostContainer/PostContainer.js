@@ -1,7 +1,7 @@
 //Each PostContainer component will then pass the array of comments on
 //each post object as a prop to an instance of the CommentSection component.
 
-import React from "react";
+/*import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
 import "./PostContainer.css";
 
@@ -20,9 +20,9 @@ const PostContainer = ({ postData }) => (
   </div>
 );
 
-export default PostContainer;
+export default PostContainer;  */
 
-/*import React from 'react';
+import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';//go up two to source then can access Comment
 import './PostContainer.css'; // stay on folder 
 
@@ -41,4 +41,4 @@ const PostContainer = ( postData) => {
     );
 
 }
-export default PostContainer; */
+export default PostContainer;  

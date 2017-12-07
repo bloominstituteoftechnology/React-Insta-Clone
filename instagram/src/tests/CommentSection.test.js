@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import sinon from "sinon";
 import Enzyme, { shallow, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
@@ -32,8 +32,9 @@ describe("Comment Section", () => {
     expect(component.find("div.comment").length).toBe(2);
   });
 });
+*/
 
-/* import React from 'react';
+import React from 'react';
 import sinon from 'sinon';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -66,4 +67,4 @@ describe("Comment Section", () => {
   });
 });
 
-*/
+ 

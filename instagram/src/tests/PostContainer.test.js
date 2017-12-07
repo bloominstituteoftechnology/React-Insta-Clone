@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import Enzyme, { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
@@ -15,8 +15,9 @@ describe("Post Container", () => {
     expect(component.find("img").length).toBe(2);
   });
 });
+*/
 
-/*import React from 'react';
+import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -31,4 +32,4 @@ describe('Post Container', () => {
         expect(component.find('img').length).toBe(2);
     });
 });
-*/
+ 
