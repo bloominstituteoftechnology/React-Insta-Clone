@@ -22,6 +22,7 @@ describe('Comment Section', () => {
 
     it('should store comments in state', () => {
         const component = shallow(<CommentSection />);
+        console.log(component.state());
         expect(component.state('comments')).toBeDefined();
     });
 
