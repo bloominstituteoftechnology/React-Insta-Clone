@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './CommentSection.css'
+import moment from 'moment';
 import {Glyphicon,Button} from 'react-bootstrap'
 class CommentSection extends Component{
     constructor(props){
@@ -8,7 +9,9 @@ class CommentSection extends Component{
             comments:props.comments,
             likes : props.likes,
             liked : false,
-            newComment: {}
+            newComment: {},
+            // moment("20120620", "YYYYMMDD").fromNow()
+            timeLastComment: moment(props.timestamp,'MMMM Do YYYY, h:mm:ss a').toArray()
         }
         // console.log(this.state)
     }
@@ -24,8 +27,11 @@ class CommentSection extends Component{
         event.preventDefault();
         const comments = this.state.comments;
         comments.push(this.state.newComment);
-        this.setState({ Comments: comments 
-        ,newComment:{'text':'','username':'StewieGriffin'}});
+        let newCommentTimestamp = moment().toArray();
+        console.log(newCommentTimestamp)
+        this.setState({ Comments: comments,
+            timeLastComment:newCommentTimestamp,
+        newComment:{'text':'','username':'StewieGriffin'}});
     }
     addLike = (event) =>{
         // console.log('liking')
@@ -33,6 +39,7 @@ class CommentSection extends Component{
         let newlike = !this.state.liked ? ++this.state.likes : --this.state.likes
         this.setState({ likes: newlike,liked:!this.state.liked});
     }
+  
     componentDidMount() {
         this.setState({ comments: this.props.comments });
       }
@@ -57,6 +64,7 @@ class CommentSection extends Component{
                         }
                         </div>
             )}
+            <p style={{'text-align':'left'}}>{moment(this.state.timeLastComment).fromNow()}</p>
             <form onSubmit={this.addComment}>
                 <input className='container__comment__input' type="text" placeholder="Enter new Comment" onChange={this.handleCommentInput} value={this.state.newComment.text}/>
             </form> 

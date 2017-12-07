@@ -21,9 +21,9 @@ class SearchBar extends Component{
     filterSearch = (event) => {
         event.preventDefault();
         let filteredData = this.state.data.filter(obj => obj.username === this.state.newSearch);
-        console.log(filteredData)
+        // console.log(filteredData)
         this.setState({searchData:filteredData,newSearch:''});
-        console.log(this.state)
+        // console.log(this.state)
     }
     
     
@@ -37,13 +37,11 @@ class SearchBar extends Component{
             </div>
             {this.state.searchData.length ? 
             <div>
-                {console.log('I am in search ')}
             {this.state.searchData.map((obj)=> 
                 <PostContainer postData={obj} />
                )}
             </div> :
             <div>
-                 {console.log('I am not in  search ')}
             {this.state.data.map((obj,index)=> {
                 return <PostContainer postData={obj} key={index} />
                })}

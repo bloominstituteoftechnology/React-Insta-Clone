@@ -23,7 +23,7 @@ class PostContainer extends Component {
                 <img className ='container__body__img' alt='O yeah'src ={this.state.data.imageUrl}/>
             </div>
             <div className='container__comments'>
-            <CommentSection  likes= {this.state.data.likes} comments={this.state.data.comments}/>    
+            <CommentSection  timestamp = {this.state.data.timestamp} likes= {this.state.data.likes} comments={this.state.data.comments}/>    
             </div>
         </div>  
         )
