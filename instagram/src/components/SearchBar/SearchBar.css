@@ -1,0 +1,10 @@
+.Searchbar{
+    display: flex;
+    flex-direction: row;
+    padding:10px;
+    height:60px;
+    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+    justify-content: center;
+    align-items: center;
+}
