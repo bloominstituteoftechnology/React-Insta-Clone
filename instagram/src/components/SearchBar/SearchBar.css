@@ -1,0 +1,42 @@
+container {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5FCFF;
+  }
+  welcome {
+    font-size: 20;
+    text-align: center;
+    margin: 10;
+  }
+  instructions {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 5;
+  }
+  searchArea {
+    padding-top: 20;
+    background-color:#fff; 
+  }
+  searchInput {
+    height:22;
+    font-size:12;
+    width:  - 20;
+    background-color:#ddd;
+    border-radius:5;
+    margin-left:10;
+    text-align:center;
+    margin-bottom:10; 
+
+ 
+  }
+  viewrow {
+    flex-direction:row;
+  }
+  rowimage {
+    width: 30%;
+    height: width/3;
+    border-width: 50%;
+    border-color: #fff;
+
+  }
