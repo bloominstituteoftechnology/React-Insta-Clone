@@ -1,0 +1,28 @@
+.comments {
+    padding: 5px 16px;
+    padding-top: 0;
+}
+.comments .username {
+    color: #262626;
+    font-weight: 600;
+    padding-right: 5px;
+}
+.comment {
+    padding-bottom: 5px;
+}
+.comments__add {
+    padding: 20px 0;
+    border-top: 1px solid #efefef;
+}
+.comments__add textarea{
+    height: 18px;
+    max-height: 80px;
+    outline: none;
+    width: 100%;
+    border: none;
+    max-width: 100%;
+    min-width: 100%;
+    color: #262626;
+    font-size: 14px;
+    min-height: 18px;
+}
