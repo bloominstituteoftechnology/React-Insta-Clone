@@ -1,0 +1,54 @@
+.instagram {
+    background: #fafafa;
+}
+.instagram__header {
+    background: #ffffff;
+}
+.instagram__header nav {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1010px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.instagram__header .logo {
+    background: url('../img/sprites.png');
+    background-repeat: no-repeat;
+    background-position: -177px 0;
+    height: 35px;
+    width: 176px;
+    text-decoration: none;
+    text-indent: 110%;
+    overflow: hidden;
+}
+
+.posts {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+.instagram__nav {
+    display: flex;
+}
+.instagram__nav a{
+    background: url('../img/sprites.png');
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    text-indent: 110%;
+    display: block;
+    overflow: hidden;
+    margin: 0px 10px;
+}
+.instagram__nav .discover {
+    background-position: -387px -104px;
+}
+.instagram__nav .feed {
+    background-position: -338px -336px;
+}
+.instagram__nav .profile {
+    background-position: -287px -179px;
+}

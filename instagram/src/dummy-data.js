@@ -1,4 +1,4 @@
-const dummyData = [
+const postData = [
     {
         username: "philzcoffee",
         thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
@@ -18,7 +18,8 @@ const dummyData = [
                 username: "martinseludo",
                 text: "Can't wait to try it!"
             }
-        ]
+        ], 
+        liked: false
     },
     {
         username: "twitch",
@@ -47,7 +48,8 @@ const dummyData = [
                 username: "dennis_futbol",
                 text: "Is"
             }
-        ]
+        ], 
+        liked: false
     },
     {
         username: "playhearthstone",
@@ -76,8 +78,9 @@ const dummyData = [
                 username: "awesomebt28",
                 text: "I like how gul'dan looks so old and useless"
             }
-        ]
+        ], 
+        liked: false
     }
 ];
 
-export default dummyData;
+export default postData;
