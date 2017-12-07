@@ -1,16 +1,24 @@
 import React, {Component} from 'react'
+import CommentSection from '../CommentSection/CommentSection';
 
 class PostContainer extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            happy: ''
+            comments: props.comments,
+            imageUrl: props.imageUrl,
+            likes: props.likes,
+            thumbnailUrl: props.thumbnailUrl,
+            timestamp: props.timestamp,
+            username: props.username,
         }
     }
     render() {
         return (
             <div>
-                <img/><img/>
+                <img alt="" src={this.state.imageUrl}/>
+                <img alt=""/>
+                <CommentSection />
             </div>
         )
     }

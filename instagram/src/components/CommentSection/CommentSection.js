@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
-
+import dummyData from '../../dummy-data';
 class CommentSection extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             comments: [],
         }
     }
     componentDidMount() {
-       
+       this.setState({comments: this.props.comments});
     }
     render() {
         return (
