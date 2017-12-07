@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Button } from '/instagram/node-modules/react-bootstrap';
+import { Navbar, Button } from '/instagram/node_modules/react-bootstrap';
 
 const SearchBar = () => (
     <Navbar>
