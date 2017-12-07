@@ -1,0 +1,23 @@
+.Comment--Wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.Comment {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
+.Comment p {
+    margin-bottom: -8px;
+    width: 100%;
+}
+
+.User {
+    float: left;
+    padding-right: 10px;
+    font-weight: bold;
+}

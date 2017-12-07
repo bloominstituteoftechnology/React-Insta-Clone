@@ -1,0 +1,49 @@
+.Nav {
+    margin: 20px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 700px;
+    background-color: #FFFFFF;
+}
+
+.Nav__Item {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.Search {
+    border: 2px solid #DADADA;
+    border-radius: 3px;
+    background-color: #FAFAFA;
+    text-align: center;
+    width: 220px;
+    margin-left: 10px;
+}
+
+.HomeIcon {
+    width: 55px;
+    padding-bottom: 10px;
+}
+
+.HomeLogo {
+    height: 45px;
+}
+
+.Right__Nav {
+    padding: 10px;
+}
+
+.VerticalLine {
+    align-items: center;
+    font-size: 35px;
+    font-weight: 50;
+    padding-bottom: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #DADADA;
+}
