@@ -10,14 +10,14 @@ const App = () => {
     <div className="App">
       <Grid>
         <Row className="show-grid">
-          <Col xs={12} md={12}>
+          <Col xs={12} md={12} >
             <SearchBar />
           </Col>
         </Row>
         {dummyData.map((post, i) => {
           return (
             <Row className="show-grid" key={i}>
-              <Col xs={10} md={8}>
+              <Col xs={6} md={6}>
                 <PostContainer key={i} postData={post} />
               </Col>
             </Row>
