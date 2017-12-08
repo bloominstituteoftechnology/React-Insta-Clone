@@ -22,7 +22,7 @@ class App extends Component {
     if (search === "") {
       this.setState({ searchPosts: this.state.posts });
     } else {
-      const posts = this.state.posts.filter((post) => post.username.includes(searchWord) );
+      const posts = this.state.posts.filter((post) => post.username.includes(search) );
       this.setState({ searchPosts: posts });
     }
   }
