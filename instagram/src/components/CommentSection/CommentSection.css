@@ -1,0 +1,16 @@
+
+.Comment__item {
+  font-size: 15px;
+  text-align: left;
+}
+.Comment__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.Comment__username {
+  color: #e91e63;
+  font-weight: 500;
+  margin-right: 7px;
+}
+.Comment__text {
+
+}
