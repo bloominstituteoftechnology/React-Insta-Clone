@@ -1,9 +1,11 @@
+import React, { Component } from 'react';
+import './CommentSection.css';
 class CommentSection extends Component {
-    constructor(props) {
-        super(props);
-
+    constructor() {
+        super();
         this.state = {
-            comments: []
+            comments: [],
+            newComment: ''
         };
     }
 
@@ -13,32 +15,34 @@ class CommentSection extends Component {
         });
     }
 
-    handleSubmit = (e) => {
+    addComment = (e) => {
         e.preventDefault();
-        const text = findDOMNode(this.refs.commentInput).value;
-        const newComment = {
-            username: 'Sean',
-            text
+        const commentObj = {
+            username: 'Franz',
+            text: this.state.newComment
         };
         this.setState({
-            comments: [...this.state.comments, newComment]
+            comments: [...this.state.comments, commentObj],
+            newComment: ''
         });
-        findDOMNode(this.refs.commentInput).value = '';
-    };
+    }
+
+    handleCommentInput = (e) => {
+        this.setState({ newComment: e.target.value });
+    }
 
     render() {
         return (
             <div className="comment-section">
-                {this.state.comments.map((comment, i) =>
-                    <div className="comment">
-                        <div className="comment-user">{comment.username}</div>
+                {this.state.comments? this.state.comments.map((comment, i) => ( 
+                    <div className="comment" key={i}>
+                        <div className="comment-user"><b>{comment.username}</b></div>
                         <div className="comment-text">{comment.text}</div>
-                    </div>
-                )}
+                    </div>)
+                ) : null}
                  <div className="comment-input">
-                    <input type="text" placeholder="..." ref="commentInput" />
-                        {' '}
-                    <button type="submit" onClick={this.handleSubmit}>Submit</button>
+                    <input type="text" placeholder="..." value={this.state.newComment} onChange={this.handleCommentInput} />
+                    <button type="submit" onClick={this.addComment}>Submit</button>
                 </div>
             </div>
         );
@@ -46,7 +50,6 @@ class CommentSection extends Component {
 }
 
 export default CommentSection;
-
 //first try
 // import React from 'react';
 // import '../styles/CommentSection.css';

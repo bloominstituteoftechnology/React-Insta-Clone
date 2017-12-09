@@ -1,8 +1,8 @@
-.CommentBox {
+.comment-section {
     width: 100%;
   }
   
-  .CommentBox__input {
+  .comment-input {
     width: 100%;
     margin: 0;
     border: none !important;
