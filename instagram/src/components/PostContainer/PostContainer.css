@@ -1,0 +1,13 @@
+.image img {
+    height: 25em;
+}
+
+.thumbnail img {
+    height: 5em;
+}
+
+.box {
+    border: solid;
+    border-color: orange;
+    border-width: 1em;
+}
