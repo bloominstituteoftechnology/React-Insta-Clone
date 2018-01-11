@@ -9,6 +9,12 @@ class CommentSection extends Component {
     }
   }
 
+  componentDidMount() {
+    this.setState({
+      comments: this.props.comments
+    });
+  }
+
   processNewComment = (event) => {
     this.setState({ text: event.target.value });
   };
@@ -16,7 +22,7 @@ class CommentSection extends Component {
   addNewComment = () => {
     const text = this.state.text;
     const comments = this.state.comments.slice();
-    const comment = { username: 'perrya', text, key: this.state.comments.length };
+    const comment = { username: 'Perry', text, key: this.state.comments.length };
     comments.push(comment);
     this.setState({ comments, text: '' });
   }
@@ -29,7 +35,7 @@ class CommentSection extends Component {
             return <li>{comment.username}: {comment.text}</li>
           })}
         </ul>
-        <input onChange={this.processNewComment.bind(this)} type="text" placeholder="Add a comment" value={this.state.newComment} />
+        <input onChange={this.processNewComment.bind(this)} type="text" placeholder="Add a comment)" value={this.state.newComment} />
         <button onClick={this.addNewComment.bind(this)}>Comment</button>
       </div>
     );
