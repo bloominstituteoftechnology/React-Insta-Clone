@@ -5,6 +5,7 @@ const dummyData = [
         imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/20066915_1526002357431295_3266739979170086912_n.jpg',
         likes: 400,
         timestamp: "July 17th 2017, 12:42:40 pm",
+        liked: false,
         comments: [
             {
                 username: "philzcoffee",
@@ -25,6 +26,7 @@ const dummyData = [
         thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
         imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985884_314122025700633_6705675951834923008_n.jpg',
         likes: 4307,
+        liked: false,
         timestamp: "July 15th 2017, 03:12:09 pm",
         comments: [
             {
@@ -54,6 +56,7 @@ const dummyData = [
         thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
         imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985681_748672068646566_4231149029783764992_n.jpg',
         likes: 5306,
+        liked: false,
         timestamp: "July 14th 2017, 10:04:08 am",
         comments: [
             {
