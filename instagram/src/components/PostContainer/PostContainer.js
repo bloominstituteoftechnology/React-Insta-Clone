@@ -18,9 +18,7 @@ const PostContainer = (props) => {
                     {props.data.likes}
                 </div>
                 <div>
-                    {props.data.comments.map((comment, index) => {
-                        return <CommentSection data={comment} key={index} />
-                    })}
+                    <CommentSection comments={props.data.comments} />
                 </div>
             </div>
         </div>
