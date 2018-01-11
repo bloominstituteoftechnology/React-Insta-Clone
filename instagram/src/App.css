@@ -1,0 +1,21 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  background-color: #222;
+  padding: 5px;
+  width: 500px;
+  color: white;
+  margin-bottom: 20px;
+  display: flex;
+  align-self: center;
+}
+
+.App-title {
+  left: 60px;
+  font-size: 30px;
+  margin: auto;
+}

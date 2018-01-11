@@ -1,5 +1,7 @@
 .Comment {
 	margin-top: 10px;
+	justify-content: center;
+	align-self: center;
 }
 
 .Comment-username {

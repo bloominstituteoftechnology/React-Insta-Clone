@@ -3,6 +3,7 @@ import './App.css';
 import SearchBar from './components/Search/SearchBar';
 import PostContainer from './components/Container/PostContainer';
 import dummyData from './dummy-data.js';
+import { Col } from 'react-bootstrap'; 
 
 class App extends Component {
 
@@ -41,7 +42,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <h1 className="App-title">Calum's InstaClone</h1>
+          <h1 className="App-title">InstaClone</h1>
           <SearchBar posts={this.state.displayedPosts} filterPosts={this.filterPosts}/>
         </header>
         <div className="Posts">
