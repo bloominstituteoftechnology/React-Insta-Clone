@@ -8,9 +8,9 @@
     margin: 30px;
     max-width: 500px;
 }
-
 /* .post-all {
-    display: flex;
-    justify-content: center;
-    max-width: 500px
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 } */
+

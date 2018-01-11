@@ -4,7 +4,6 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar'
 import PostContainer from './components/PostContainer/PostContainer'
 import dummyData from './dummy-data';
-import CommentSection from './components/CommentSection/CommentSection'
 
 class App extends Component {
   constructor() {
@@ -25,8 +24,9 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         <div className="posts">
-          <PostContainer data={this.state.dummyData} />
-          <CommentSection data={this.state.dummyData} />
+          {dummyData.map((post, index) => {
+            return <PostContainer data={post} key={index} />
+          })}
         </div>
       </div>
     );

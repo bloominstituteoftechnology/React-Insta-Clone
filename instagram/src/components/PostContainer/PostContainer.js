@@ -1,24 +1,28 @@
 import React from 'react';
 import './PostContainer.css'
 import { Image }  from 'react-bootstrap'
+import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = (props) => {
     return (
         <div className="posts-all">
-        {props.data.map((post, index) => {
-            return <div key={index} className="posts-individual">
+            <div className="posts-individual">
                 <div>
-                <img src={post.thumbnailUrl} alt="user's profile"/>
-                {post.username}
+                    <img src={props.data.thumbnailUrl} alt="user's profile"/>
+                    {props.data.username}
+                </div>  
+                <div>
+                    <Image src={props.data.imageUrl} alt="post" className="post-image" responsive/>
                 </div>
                 <div>
-                <Image src={post.imageUrl} alt="post" className="post-image" responsive/>
+                    {props.data.likes}
                 </div>
                 <div>
-                    {post.likes}
+                    {props.data.comments.map((comment, index) => {
+                        return <CommentSection data={comment} key={index} />
+                    })}
                 </div>
             </div>
-        })}
         </div>
     );
 }
