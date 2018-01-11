@@ -1,9 +1,11 @@
 .PostContainer {
-
+  width: 500px;
 }
 
 .Post {
-  /* border: 5px solid red; */
-  padding-top: 25px;
+  box-sizing: border-box;
+  width: 500px;
+  border: 2px solid blue;
+  padding: 10px;
   list-style: none;
 }

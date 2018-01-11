@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './CommentSection.css';
 
 class CommentSection extends Component {
   constructor(props) {
@@ -22,20 +23,22 @@ class CommentSection extends Component {
   addNewComment = () => {
     const text = this.state.text;
     const comments = this.state.comments.slice();
-    const comment = { username: 'Perry', text, key: this.state.comments.length };
+    const comment = { username: 'Perry', text };
     comments.push(comment);
     this.setState({ comments, text: '' });
   }
 
   render() {
     return (
-      <div>
-        <ul>
-          {this.state.comments.map(comment => {
-            return <li>{comment.username}: {comment.text}</li>
-          })}
+      <div className='CommentSection'>
+        <ul className='CommentSection--ul'>
+          {this.state.comments ?
+            this.state.comments.map((comment, index) => {
+              return <li key={index}>{comment.username}: {comment.text}</li>
+            })
+           : null }
         </ul>
-        <input onChange={this.processNewComment.bind(this)} type="text" placeholder="Add a comment)" value={this.state.newComment} />
+        <input onChange={this.processNewComment.bind(this)} type="text" placeholder="Add a comment)" value={this.state.text} />
         <button onClick={this.addNewComment.bind(this)}>Comment</button>
       </div>
     );
