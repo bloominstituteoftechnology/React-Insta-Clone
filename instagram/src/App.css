@@ -1,0 +1,11 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.PostsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

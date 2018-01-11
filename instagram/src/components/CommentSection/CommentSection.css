@@ -1,0 +1,24 @@
+.CommentContainer {
+/*	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;*/
+}
+
+.Comments {
+	border-bottom: solid;
+	border-width: 1px;
+  border-color: #ededed;
+  padding-bottom: 5px;
+}
+
+.Comment {
+	margin-bottom: 2px;
+}
+
+.CommentInput {
+	width: 450px;
+	margin-top: 10px;
+	/*margin-bottom: 10px;*/
+	border: none;
+	outline: none;
+}

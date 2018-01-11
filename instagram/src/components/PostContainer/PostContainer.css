@@ -1,0 +1,58 @@
+.PostContainer {
+	margin: 25px;
+	width: 502px;
+
+	border-style: solid;
+  border-width: 1px;
+  border-color: #ededed;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.PostHeader {
+	display: flex;
+	flex-direction: row;
+}
+
+.PostHeader__thumbnail {
+	width: 40px;
+	height: 40px;
+	margin: 10px;
+}
+
+.PostHeader__username {
+	font-weight: bold; 
+
+	align-self: center;
+}
+
+.PostImage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.PostImage__image {
+	width: 500px;
+	height: 500px;
+	object-fit: contain;
+}
+
+.PostLikes {
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+.PostCommentsContainer {
+	margin: 10px;
+/*	border-bottom: solid;
+	border-width: 1px;
+  border-color: #ededed;
+*/}
+
+.PostFooter {
+	/*margin-bottom: 10px;*/
+}

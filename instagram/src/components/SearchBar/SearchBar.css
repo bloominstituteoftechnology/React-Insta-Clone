@@ -1,0 +1,7 @@
+.SearchBox {
+	margin: 25px;
+}
+
+.SearchBox:placeholder-shown {
+	text-align: center;
+}
