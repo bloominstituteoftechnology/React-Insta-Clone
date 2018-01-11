@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+.searchBar {
+    display: flex;
+    height: 25px;
+    align-items: center;
+    padding: 26px 40px 26px 40px;
+    border-bottom: 1px solid #e6e6e6;;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.searchbar__iconset {
+    height: 30px;
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.searchBar__icon {
+    border-right: 1px solid black;
+    padding-right: 10px;
+}
+
+.searchBar__logo {
+    font-family: 'Dancing Script';
+    font-weight: bolder;
+    font-size: 32px;
+    color: black;
+    padding-left: 15px; 
+    transform:scale(0.7,1); 
+}
+
+.searchbar__input {
+    background-image: url(https://digiday.com/wp-content/themes/digiday/static/images/icon_search.svg);
+    background-repeat: no-repeat;
+    text-indent: 20px;
+}
+
+
+.searchbar__input:focus {
+    background-image:none;
+}
+
+searchbar__input__field {
+
+}

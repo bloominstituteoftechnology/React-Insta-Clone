@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+.post {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    border-style: solid;
+    border-color: #e6e6e6;
+    border-width: 1px;
+}
+
+.post__user {
+    display: flex;
+    margin: 2px;
+    padding: 16px;
+}
+
+.post__user-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.post__user__thumbnail {
+    width: 24px;
+    border-radius: 50%;
+    border: 0.2px solid grey;
+    align-self: left;
+}
+
+.post__user__image {
+    width: 600px;
+}
