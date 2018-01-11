@@ -1,16 +1,20 @@
 .PostContainer {
-	border: .25px solid gray;
-	height: 550px;
+	border: .1px solid lightgray;
+	height: 575px;
 	width: 400px;
 	margin-bottom: 40px;
 	font-size: 12.5px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	box-shadow: 1px 1px 8px lightgray;
 }
 
 .PostContainer_thumbnailUrl {
 	border-radius: 50%;
 	border: 1px solid gray;
 	display: inline-block;
-	margin-left: 20px;
+	margin-left: 10px;
 	margin-bottom: 20px;
 	margin-top: 20px;
 	margin-right: 10px;
@@ -22,6 +26,7 @@
 	float: left;
 	padding-bottom: 20px;
 	padding-top: 15px;
+	font-family: "Helvetica Neue";
 }
 
 .PostContainer_imageUrl {
@@ -29,7 +34,39 @@
 	height: 400px;
 }
 
+.PostContainer_likesandcomments {
+	margin-left: 10px;
+	width: 400px;
+}
+
+.PostContainer_likesUrl {
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.PostContainer_commentsUrl {
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.PostContainer_indications {
+	width: 400px;
+	display: inline;
+}
+
 .PostContainer_likes {
-	text-align: right;
-	width: 390px;
+	/*text-align: left;*/
+	display: inline;
+	float: left;
+	/*float: left;*/
+	padding-top: 7px;
+	/*margin-bottom: 10px;*/
+	margin-left: -40px;
+	/*width: 400px;*/
+	/*padding-left: 15px;*/
+	font-weight: bold;
+	font-family: "Helvetica Neue";
+	/*width: 400px;*/
 }

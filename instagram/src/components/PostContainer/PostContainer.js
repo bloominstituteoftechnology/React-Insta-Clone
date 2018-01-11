@@ -2,30 +2,6 @@ import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 
-// function PostContainer(props) {
-// 	const post = props.post;
-// 	return (
-// 		<div className="PostContainer">
-// 			<div className="PostContainer_header">
-// 				<img src={post.thumbnailURL}/>
-// 				<h3 className="PostContainer_username">{post.username}</h3>
-// 			</div>
-
-// 			<div className="PostContainer_image">
-// 				<img src={post.imageURL}/>
-// 			</div>
-
-// 			<div className="PostContainer_body">
-// 				<div className="PostContainer_indications">
-// 					<h3 className="PostContainer_likes">{post.likes} likes</h3>
-// 				</div>
-
-// 				<CommentSection comments={post.comments} timestamp={post.timestamp}/>
-// 			</div>
-// 		</div>
-// 	);
-// }
-
 const PostContainer = (props) => {
 	return (
 		<div className="PostContainer">
@@ -34,7 +10,7 @@ const PostContainer = (props) => {
 					<div className="PostContainer">
 						<div className="PostContainer_header">
 							<img className="PostContainer_thumbnailUrl" width="30" height="30" src={container.thumbnailUrl}/>
-							<p className="PostContainer_username">{container.username}</p>
+							<h4 className="PostContainer_username">{container.username}</h4>
 						</div>
 
 						<div className="PostContainer_image">
@@ -42,11 +18,13 @@ const PostContainer = (props) => {
 						</div>
 
 						<div className="PostContainer_body">
-							<div className="PostContainer_indications">
-								<p className="PostContainer_likes">{container.likes} likes</p>
+							<div className="PostContainer_likesandcomments">
+								<img className="PostContainer_likesUrl" width="27" height="15" src="https://imageog.flaticon.com/icons/png/512/14/14949.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF"/>
+								<img className="PostContainer_commentsUrl" width="17" height="15" src="https://png.icons8.com/ios/540//speech-bubble.png"/>
 							</div>
-
-							<CommentSection className="CommentSection" comments={container.comments} timestamp={container.timestamp}/>
+							<div className="PostContainer_indications">
+								<h4 className="PostContainer_likes">{container.likes} likes</h4>
+							</div>
 						</div>
 					</div>
 				);
