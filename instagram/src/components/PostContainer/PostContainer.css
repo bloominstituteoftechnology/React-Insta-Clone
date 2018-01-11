@@ -1,0 +1,35 @@
+.PostContainer {
+	border: .25px solid gray;
+	height: 550px;
+	width: 400px;
+	margin-bottom: 40px;
+	font-size: 12.5px;
+}
+
+.PostContainer_thumbnailUrl {
+	border-radius: 50%;
+	border: 1px solid gray;
+	display: inline-block;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-right: 10px;
+	float: left;
+}
+
+.PostContainer_username {
+	display: inline-block;
+	float: left;
+	padding-bottom: 20px;
+	padding-top: 15px;
+}
+
+.PostContainer_imageUrl {
+	width: 400px;
+	height: 400px;
+}
+
+.PostContainer_likes {
+	text-align: right;
+	width: 390px;
+}
