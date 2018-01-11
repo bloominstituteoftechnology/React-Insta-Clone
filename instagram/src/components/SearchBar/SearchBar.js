@@ -1,9 +1,9 @@
 import React from 'react';
 import './SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
 	return(
-		<input className="SearchBox" type="text" placeholder="Search" />
+		<input className="SearchBox" onChange={props.filterResults} type="text" placeholder="Search" />
 	)
 }
 

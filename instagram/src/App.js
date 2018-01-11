@@ -8,21 +8,39 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      postData: dummyData,
+      data: dummyData,
     }
+
+    this.filterResults.bind(this);
   }
+
   componentDidMount() {
     // this.setState = {
-    //   postData: dummyData,
+    //   data: dummyData,
     // }
+  }
+
+  filterResults(event) {
+    const query = event.target.value;
+    const data = dummyData.slice(0);
+    if (query) {
+      this.setState({
+        data: data.filter((post) => post.username.includes(query)),
+      });
+    } else {
+      this.setState({
+        data: dummyData,
+      });
+    }
+    
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar filterResults={this.filterResults.bind(this)}/>
         <div className="PostsContainer">
-          {this.state.postData.map((post, i) => {
+          {this.state.data.map((post, i) => {
             return <PostContainer key={i} postData={post} />
           })}
         </div>
