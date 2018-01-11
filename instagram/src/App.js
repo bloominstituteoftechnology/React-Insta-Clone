@@ -9,15 +9,9 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      posts: dummyData  // if using cDM below remove ': dummyData'
+      posts: dummyData
     }
   }
-
-  // componentDidMount() {
-  //   this.setState({
-  //     posts: dummyData
-  //   });
-  // }
 
   render() {
     return (
