@@ -1,16 +1,25 @@
-/* .post-image {
-    max-width: 600px;
-} */
-
 .posts-individual {
     border: 1px solid;
     border-color: #dddddd;
     margin: 30px;
     max-width: 500px;
 }
-/* .post-all {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-} */
 
+.posts-thumbnail {
+    max-width: 60px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.posts-header {
+    font-weight: bold;
+}
+
+.posts-likes {
+    font-weight: bold;
+    padding: 5px;
+}
+
+.posts-comments {
+    padding: 5px;
+}

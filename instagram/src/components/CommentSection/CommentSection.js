@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { FormGroup, FormControl } from 'react-bootstrap';
+import './CommentSection.css'
+
 
 class CommentSection extends Component {
     constructor() {
@@ -22,7 +25,8 @@ class CommentSection extends Component {
         })
     }
 
-    addComment = () => {
+    addComment = (event) => {
+        event.preventDefault();
         const myComment = this.state.newComment;
         const myEntireComment = {
             username: 'Clara',
@@ -41,15 +45,16 @@ class CommentSection extends Component {
             <div>
                 <div>
                     {this.state.allComments.map((comment, index) => {
-                        return <div key={index}>
-                            {comment.username} {' '} {comment.text}
+                        return <div key={index} className="comments">
+                            <span className="comment-username">{comment.username}</span>
+                            {' '}
+                            <span>{comment.text}</span>
                         </div>
                     })}
                 </div>
-                <div>
-                    <input placeholder="Add a comment..." value={this.state.newComment} onChange={this.onChange}/>
-                    <button onClick={this.addComment}>Submit</button>
-                </div>
+                <form onSubmit={this.addComment} className="addComment">
+                    <input value={this.state.newComment} onChange={this.onChange} type="text" placeholder="Add a comment..."/> 
+                </form>
             </div>
         );
     }

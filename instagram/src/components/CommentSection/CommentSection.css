@@ -1,0 +1,11 @@
+.comment-username {
+    font-weight: bold;
+}
+
+.comments {
+    padding-bottom: 5px;
+}
+
+input {
+    border: none;
+}

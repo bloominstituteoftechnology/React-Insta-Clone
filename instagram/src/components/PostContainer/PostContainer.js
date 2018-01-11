@@ -7,17 +7,17 @@ const PostContainer = (props) => {
     return (
         <div className="posts-all">
             <div className="posts-individual">
-                <div>
-                    <img src={props.data.thumbnailUrl} alt="user's profile"/>
+                <div className="posts-header">
+                    <img className="posts-thumbnail" src={props.data.thumbnailUrl} alt="user's profile"/>
                     {props.data.username}
                 </div>  
                 <div>
                     <Image src={props.data.imageUrl} alt="post" className="post-image" responsive/>
                 </div>
-                <div>
-                    {props.data.likes}
+                <div className="posts-likes">
+                    {props.data.likes} {' '} likes
                 </div>
-                <div>
+                <div className="posts-comments">
                     <CommentSection comments={props.data.comments} />
                 </div>
             </div>
