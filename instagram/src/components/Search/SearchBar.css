@@ -1,0 +1,18 @@
+.SearchBar {
+  margin-top: 30px;
+  display: inline-flex;
+  position: absolute;
+  margin: auto;
+}
+
+.SearchBar input {
+	height: 30px;
+  width: 250px;
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  border: 2px solid black;
+  position: absolute;
+  left: 400px;
+  margin: auto;
+}
