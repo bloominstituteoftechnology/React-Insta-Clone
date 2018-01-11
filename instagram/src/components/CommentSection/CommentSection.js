@@ -14,7 +14,7 @@ class CommentSection extends Component {
 	}
 
 	componentDidMount() {
-		
+
 	}
 
   addNewComment = (event) => {
@@ -49,9 +49,9 @@ class CommentSection extends Component {
   	return (
 		<div className="CommentContainer">
 			<div className="Comments">
-				{this.state.comments.map((comment, i) => {
+				{this.state.comments ? this.state.comments.map((comment, i) => {
 					return <div key={i} className="Comment"><strong>{comment.username}</strong> {comment.text}</div>
-				})}
+				}) : 	null}
 			</div>
 			<form onSubmit={this.addNewComment}>
         <input className="CommentInput" type="text" onChange={this.handleNewComment} placeholder="Add a comment..." value={this.state.comment.text} />

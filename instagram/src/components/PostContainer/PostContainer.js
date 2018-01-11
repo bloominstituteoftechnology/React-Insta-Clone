@@ -3,7 +3,7 @@ import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 
 const PostContainer = (props) => {
-  const post = props.post;
+  const post = props.postData;
   console.log(post)
   return (
     <div className="PostContainer">

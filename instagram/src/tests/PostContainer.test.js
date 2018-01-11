@@ -9,7 +9,6 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('Post Container', () => {
     it('should render two image tags', () => {
-    		console.log(postData[0].thumbnailUrl);
         const component = shallow(<PostContainer key={'2'} postData={postData[0]} />);
         expect(component.find('img').length).toBe(2);
     });

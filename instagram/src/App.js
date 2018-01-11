@@ -5,13 +5,25 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      postData: dummyData,
+    }
+  }
+  componentDidMount() {
+    // this.setState = {
+    //   postData: dummyData,
+    // }
+  }
+
   render() {
     return (
       <div className="App">
         <SearchBar />
         <div className="PostsContainer">
-          {dummyData.map((post, i) => {
-            return <PostContainer key={i} post={post} />
+          {this.state.postData.map((post, i) => {
+            return <PostContainer key={i} postData={post} />
           })}
         </div>
       </div>
