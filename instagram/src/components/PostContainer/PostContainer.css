@@ -1,0 +1,16 @@
+/* .post-image {
+    max-width: 600px;
+} */
+
+.posts-individual {
+    border: 1px solid;
+    border-color: #dddddd;
+    margin: 30px;
+    max-width: 500px;
+}
+
+/* .post-all {
+    display: flex;
+    justify-content: center;
+    max-width: 500px
+} */
