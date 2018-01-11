@@ -23,3 +23,12 @@
 .posts-comments {
     padding: 5px;
 }
+
+.likes-icon {
+    max-width: 20px;
+    margin: 5px;
+}
+
+.comments-icon {
+    max-width: 35px;
+}

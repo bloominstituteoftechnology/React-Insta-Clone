@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { FormGroup, FormControl } from 'react-bootstrap';
-import './CommentSection.css'
+import './CommentSection.css';
+import Moment from 'react-moment';
 
 
 class CommentSection extends Component {
@@ -8,14 +8,16 @@ class CommentSection extends Component {
         super();
         this.state = {
             newComment: '',
-            allComments: []
+            allComments: [],
+            time: ''
 
         }
     }
 
     componentDidMount = () => {
         this.setState({
-            allComments: this.props.comments
+            allComments: this.props.comments,
+            time: this.props.data
         })
     }
 
@@ -52,6 +54,9 @@ class CommentSection extends Component {
                         </div>
                     })}
                 </div>
+                <Moment parse="MMMM Do YYYY, hh:mm:ss A" fromNow>
+                    {this.state.time}
+                </Moment>
                 <form onSubmit={this.addComment} className="addComment">
                     <input value={this.state.newComment} onChange={this.onChange} type="text" placeholder="Add a comment..."/> 
                 </form>
