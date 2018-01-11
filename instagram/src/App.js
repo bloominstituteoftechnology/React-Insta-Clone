@@ -6,16 +6,15 @@ import PostContainer from './components/PostContainer/PostContainer.js';
 import CommentSection from './components/CommentSection/CommentSection.js';
 
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <SearchBar />
-        {dummyData.map((post,i) => <PostContainer key={i} postData={post} />)}
-        {/*<CommentSection comments={}/>*/}
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <div>
+      <SearchBar />
+      {/* Map over imported dummy data. */}
+      {/* PostContainer with key, and postData props */}
+      {dummyData.map((post,i) => <PostContainer key={i} postData={post} />)}
+    </div>
+  );
 }
 
 export default App;

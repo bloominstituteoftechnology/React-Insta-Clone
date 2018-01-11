@@ -1,19 +1,25 @@
 import React from 'react';
-//import comment section
+import CommentSection from '../CommentSection/CommentSection.js';
 
 
-const PostContainer = ({postData}) => {
+
+const PostContainer = ({postData}) => { // why does passing in {postData} work?
   return (
     <div >
       <div>
-        <h2>{postData.username}</h2>
         <img src={postData.thumbnailUrl}/>
+        <b>{postData.username}</b>
       </div>
       <div>
         <img src={postData.imageUrl}/>
       </div>
+      <CommentSection comments={postData.comments} />
     </div>
     //comment section
+
+      // .comments .timestamp
+
+
   );
 };
 
