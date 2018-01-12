@@ -10,7 +10,7 @@ class App extends Component {
     super()
     this.state = {
       allPosts: postData,
-      filteredPosts: []
+      filteredPosts: postData
     }
     this.filterPostsByUser = this.filterPostsByUser.bind(this);
   }
@@ -18,8 +18,9 @@ class App extends Component {
   filterPostsByUser(filterText) {
     if (filterText) {
       const postsToDisplay = [];
-      this.state.posts.map(post => {
+      this.state.allPosts.map(post => {
         if (post.username === filterText) postsToDisplay.push(post);
+        // if (post.username.includes(filterText)) postsToDisplay.push(post);        
       })
       this.setState({ filteredPosts: postsToDisplay });
     } else {
@@ -30,8 +31,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SearchBar posts={this.state.filteredPosts} filterPostsByUser={this.state.fiterPostsByUser} />
-        {this.state.allPosts.map((post, index) => {
+        <SearchBar posts={this.state.filteredPosts} filterPostsByUser={this.filterPostsByUser} />
+        {this.state.filteredPosts.map((post, index) => {
           return (
             <PostContainer postData={post} key={index} />
           )
