@@ -1,28 +1,34 @@
 import React from 'react';
+
 import CommentSection from '../CommentSection/CommentSection.js';
 
 
 
-const PostContainer = ({postData}) => { // why does passing in {postData} work?
+const PostContainer = (props) => {
+  const post = props.post // write post.key instead of props.post.key
   return (
-    <div >
+    <div>
+
       <div>
-        <img src={postData.thumbnailUrl}/>
-        <b>{postData.username}</b>
+        <img src={post.thumbnailUrl} />
+        <h3>{post.username}</h3>
       </div>
 
       <div>
-        <img src={postData.imageUrl}/>
+        <img src={post.imageUrl} />
       </div>
 
-      <CommentSection comments={postData.comments} />
+      <div>
+        <div>
+          <h3>{post.likes}</h3>
+        </div>
+
+
+        <CommentSection comments={post.comments} timestamp={post.timestamp} />
+      </div>
+
     </div>
-    //comment section
-
-      // .comments .timestamp
-
-
-  );
+  )
 };
 
 export default PostContainer;

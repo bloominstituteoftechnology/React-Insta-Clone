@@ -1,5 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {Navbar, FormGroup, Button} from 'react-bootstrap';
+
+
+
+
+
+// class SearchBar extends Component {}
 
 const SearchBar = (props) => {
   return (
