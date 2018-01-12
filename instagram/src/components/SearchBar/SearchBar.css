@@ -1,6 +1,6 @@
 .SearchBar {
-  width: 500px;
+  width: 525px;
   margin: 20px 0 0 40px;
   padding: 20px;
-  border: 2px solid blue;
+  border: 2px solid slategray;
 }

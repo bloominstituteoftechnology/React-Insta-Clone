@@ -8,11 +8,11 @@ const PostContainer = (props) => {
   return (
     <ul className='PostContainer'>
       <li className='Post'>
-        <div>
+        <div className='header'>
           <img src={post.thumbnailUrl} width='25px' alt='Avatar thumbnail' /> {post.username}
         </div>
         <div>
-          <img src={post.imageUrl} alt='User content' />
+          <img src={post.imageUrl} className='contentImage' alt='User content' />
         </div>
         {post.likes} likes, {post.timestamp}
         <CommentSection comments={post.comments} />

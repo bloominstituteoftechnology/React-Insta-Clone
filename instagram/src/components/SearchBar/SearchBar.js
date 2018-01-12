@@ -1,33 +1,33 @@
+// import React from 'react';
+// import './SearchBar.css';
+
+// const SearchBar = () => {
+//   return (
+//     <div className='SearchBar'>
+//       <input type="text" placeholder="Search (doesn't work yet...)" />
+//       <button>Search</button>
+//     </div>
+//   );
+// }
+
+// export default SearchBar;
+
 import React, { Component } from 'react';
-import PostContainer from '../PostContainer/PostContainer';
-import './SearchBar.css';
 
 class SearchBar extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      posts: props.allPosts,
-      inquiry: ''
-    }
-  }
 
-  render() {
-    return (
-      <div>
-        <div className='SearchBar'>
-          <input type="text" placeholder="Search (doesn't work yet...)" />
-          <button>Search</button>
-        </div>
-        <div>
-          {this.state.posts.map((post, index) => {
-            return (
-              <PostContainer postData={post} key={index} />
-            )
-          })}
-        </div>
-      </div>
-    );
-  }
-}
+	submitFilter = (event) => {
+	  const criterion = this.input.value;
+	  this.props.filterPostsByUser(criterion);
+	}
+
+	render() {
+		return (
+			<div className="SearchBar">
+				<input className="SearchBar-field" type="text" onChange={this.submitFilter} ref={input => this.input = input} placeholder="Search"></input>
+			</div>
+		);
+	}
+};
 
 export default SearchBar;

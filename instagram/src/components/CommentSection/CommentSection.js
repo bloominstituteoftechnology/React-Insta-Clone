@@ -20,7 +20,8 @@ class CommentSection extends Component {
     this.setState({ text: event.target.value });
   };
 
-  addNewComment = () => {
+  addNewComment = (event) => {
+    event.preventDefault();
     const text = this.state.text;
     const comments = this.state.comments.slice();
     const comment = { username: 'Perry', text };
