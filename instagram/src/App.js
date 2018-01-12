@@ -12,7 +12,12 @@ const App = () => {
       <SearchBar />
       {/* Map over imported dummy data. */}
       {/* PostContainer with key, and postData props */}
-      {dummyData.map((post,i) => <PostContainer key={i} postData={post} />)}
+      {dummyData.map((post,index) => {
+        return (
+        // returning an instance of post containter
+          <PostContainer key={index} postData={post} />
+        )
+      })}
     </div>
   );
 }

@@ -10,9 +10,11 @@ const PostContainer = ({postData}) => { // why does passing in {postData} work?
         <img src={postData.thumbnailUrl}/>
         <b>{postData.username}</b>
       </div>
+
       <div>
         <img src={postData.imageUrl}/>
       </div>
+
       <CommentSection comments={postData.comments} />
     </div>
     //comment section

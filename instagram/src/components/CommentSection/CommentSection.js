@@ -33,7 +33,7 @@ class CommentSection extends Component {
     });
   };
 
-  handleInput(e) {
+  handleInput(e) { // come up with a better name for this method
     this.setState({newComment: e.target.value}); //handling the user input as it's entered
   }
 
@@ -42,13 +42,22 @@ class CommentSection extends Component {
   render() {
     return (
       <div>
-        {/*
-        {this.state.comments.map((comment, i) => (
 
-        ))}
-      */}
-        <input type="text" value={this.state.value} onChange={this.handleInput}/>
-        <button onClick={this.addComment}>Comment</button>
+        {this.state.comments.map((comment, i) => {
+          return (
+            <div key={i}>
+            </div>
+          );
+        })}
+
+        <input
+          type="text"
+          value={this.state.value}
+          onChange={this.handleInput}
+        ></input>
+        <button
+          onClick={this.addComment}
+        >Comment</button>
       </div>
     );
   };
