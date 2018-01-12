@@ -8,4 +8,11 @@
 
 input {
     border: none;
+    margin-top: 5px;
+}
+
+.time {
+    font-size: small;
+    margin-top: 5px;
+    color: #696969;
 }

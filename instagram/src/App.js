@@ -3,28 +3,43 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar'
 import PostContainer from './components/PostContainer/PostContainer'
-import dummyData from './dummy-data';
+import dummy from './dummy-data';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: []
+      dummyData: [],
+      filteredPosts: []
     }
   }
   
   componentDidMount = () => {
     this.setState({
-      dummyData
+      dummyData: dummy,
+      filteredPosts: this.state.dummyData
     })
+  }
+
+  filterPosts = (searchCriteria) => {
+    if(searchCriteria === '') {
+      this.setState({
+        filteredPosts: this.state.dummyData
+      })
+    } else {
+      const filteredPosts = this.state.dummyData.filter(post => post.username.includes(searchCriteria));
+      this.setState({
+        dummyData: filteredPosts
+      })
+    }
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar data={this.state.filteredPosts} filtered={this.filterPosts} />
         <div className="posts">
-          {dummyData.map((post, index) => {
+          {this.state.dummyData.map((post, index) => {
             return <PostContainer data={post} key={index} />
           })}
         </div>

@@ -5,6 +5,21 @@ import logo from './instagram-text-logo.png';
 
 
 class SearchBar extends Component {
+    constructor() {
+        super();
+        this.state = {
+            search: ''
+        }
+    }
+
+    submitFilter = (event) => {
+        this.setState({
+            search: event.target.value
+        });
+        this.props.filtered(this.state.search);
+    }
+
+
     render() {
         return (
         <Navbar collapseOnSelect>
@@ -28,7 +43,7 @@ class SearchBar extends Component {
                 </Nav>
                 <Navbar.Form>
                     <FormGroup>
-                        <FormControl type="text" placeholder="Search" />
+                        <input type="text" placeholder="Search" value={this.state.search} onChange={this.submitFilter} />
                     </FormGroup>{' '}
                 </Navbar.Form>
             </Navbar.Collapse>

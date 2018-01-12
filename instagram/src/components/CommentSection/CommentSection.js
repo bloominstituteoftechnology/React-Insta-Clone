@@ -54,7 +54,7 @@ class CommentSection extends Component {
                         </div>
                     })}
                 </div>
-                <Moment parse="MMMM Do YYYY, hh:mm:ss A" fromNow>
+                <Moment className="time" parse="MMMM Do YYYY, hh:mm:ss A" fromNow>
                     {this.state.time}
                 </Moment>
                 <form onSubmit={this.addComment} className="addComment">
