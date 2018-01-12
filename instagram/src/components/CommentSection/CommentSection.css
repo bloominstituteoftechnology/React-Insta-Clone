@@ -1,0 +1,42 @@
+.CommentSection_container {
+	width: 400px;
+	/*height: 200px;*/
+	float: left;
+	margin-left: auto;
+	margin-right: auto;
+	/*margin-top: auto;*/
+	/*margin-top: 5px;*/
+}
+
+.CommentSection_thread {
+	/*display: inline-block;*/
+	float: left;
+	text-align: left;
+	margin-bottom: -7px;
+	margin-left: 10px;
+	width: 400px;
+	font-family: "Helvetica";
+	font-size: 12.5;
+	/*min-height: 1px;*/
+}
+
+.CommentSection_username {
+	float: left;
+	/*display: inline-block;*/
+	/*font-weight: bold;*/
+	margin-right: 5px;
+}
+
+.CommentSection_comment {
+	text-align: left;
+	/*width: 400px;*/
+	/*padding-left: 15px;*/
+	/*display: inline-block;*/
+}
+
+.CommentSection_timestamp {
+	float: left;
+	margin-left: 10px;
+	font-size: 10px;
+	color: gray;
+}

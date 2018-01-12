@@ -1,30 +1,35 @@
 import React, { Component } from 'react';
 import './CommentSection.css';
 // import { dummyData } from '/Users/e144574/Desktop/Camila Programming/LAMBDA/CS 6/week4/React-II/instagram/src/dummy-data.js';
+import App from '../../App.js';
 
 class CommentSection extends Component {
-	constructor() {
+	constructor(props) {
 		super();
 		this.state = {
-			// data: dummyData,
-			comments: []
+			comments: [],
+			username: 'camila'
 		}
 	}
 
 	componentDidMount() {
 		this.setState({
-			comments: []
-		});
+			comments: this.props.comments
+		})
 	}
 
 	render() {
 		return (
 			<div>
-				<form>
-					<input type="text" onChange={this.componentDidMount} placeholder="Add a comment..."/>
-				</form>
+				{this.props.comments.map((comment) => {
+					return(
+						<div className="CommentSection_container">
+							<p className="CommentSection_thread"><strong>{comment.username}</strong> {comment.text}</p>
+						</div>
+					)
+				})}
 			</div>
-		);
+		)
 	}
 }
 

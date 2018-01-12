@@ -1,12 +1,12 @@
 .PostContainer {
 	border: .1px solid lightgray;
-	height: 575px;
+	height: 900;
 	width: 400px;
-	margin-bottom: 40px;
 	font-size: 12.5px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: auto;
+	margin-bottom: 40px;
 	box-shadow: 1px 1px 8px lightgray;
 }
 
@@ -24,9 +24,9 @@
 .PostContainer_username {
 	display: inline-block;
 	float: left;
-	padding-bottom: 20px;
-	padding-top: 15px;
-	font-family: "Helvetica Neue";
+	padding-bottom: 7px;
+	padding-top: 7px;
+	font-family: "Helvetica";
 }
 
 .PostContainer_imageUrl {
@@ -42,7 +42,7 @@
 .PostContainer_likesUrl {
 	float: left;
 	margin-top: 5px;
-	margin-bottom: 5px;
+	/*margin-bottom: 5px;*/
 }
 
 .PostContainer_commentsUrl {
@@ -58,15 +58,14 @@
 
 .PostContainer_likes {
 	/*text-align: left;*/
-	display: inline;
+	/*display: inline;*/
 	float: left;
 	/*float: left;*/
-	padding-top: 7px;
+	padding-top: 15px;
 	/*margin-bottom: 10px;*/
 	margin-left: -40px;
 	/*width: 400px;*/
 	/*padding-left: 15px;*/
-	font-weight: bold;
 	font-family: "Helvetica Neue";
 	/*width: 400px;*/
 }
