@@ -39,8 +39,19 @@
 	object-fit: contain;
 }
 
+
+.PostInteractionContainer button {
+	border: none;
+	outline: none;
+}
+
+.PostInteractionContainer img {
+	width: 35px;
+	height: 35px;
+}
+
 .PostLikes {
-	margin-top: 10px;
+	margin-top: 0;
 	margin-left: 10px;
 	margin-right: 10px;
 	font-weight: bold;

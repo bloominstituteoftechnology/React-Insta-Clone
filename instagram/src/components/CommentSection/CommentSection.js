@@ -5,7 +5,7 @@ class CommentSection extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			comments: props.comments,
+			comments: [],
 			comment: {
         username: '',
         text: '',
@@ -14,7 +14,9 @@ class CommentSection extends Component {
 	}
 
 	componentDidMount() {
-
+		this.setState({
+			comments: this.props.comments,
+		})
 	}
 
   addNewComment = (event) => {
@@ -51,7 +53,7 @@ class CommentSection extends Component {
 			<div className="Comments">
 				{this.state.comments ? this.state.comments.map((comment, i) => {
 					return <div key={i} className="Comment"><strong>{comment.username}</strong> {comment.text}</div>
-				}) : 	null}
+				}) : null}
 			</div>
 			<form onSubmit={this.addNewComment}>
         <input className="CommentInput" type="text" onChange={this.handleNewComment} placeholder="Add a comment..." value={this.state.comment.text} />
