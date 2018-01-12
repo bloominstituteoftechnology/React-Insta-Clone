@@ -3,10 +3,12 @@
 }
 
 .SearchBar input {
-	height: 30px;
-  max-width: 500px;
+  position: relative;
+  height: 30px;
   font-size: 25px;
   color: black;
   text-align: center;
   border: 2px solid black;
+  width: 250px;
+  left: 60px;
 }

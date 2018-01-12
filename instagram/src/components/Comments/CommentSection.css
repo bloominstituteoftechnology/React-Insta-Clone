@@ -1,17 +1,13 @@
 .Comment {
 	margin-top: 10px;
-	justify-content: center;
-	align-self: center;
 }
 
-.Comment-username {
-	display: inline;
+.Comment-user {
 	font-weight: 800;
 	font-size: 14px;
 }
 
 .Comment-body {
-	display: inline;
 	padding-left: 5px;
 	font-size: 14px;
 	font-weight: 600;
@@ -28,7 +24,7 @@
 	border: none;
 }
 
-.Comments-timestamp {
+.Comments-time {
 	margin: 10px 0 10px 0;
 	opacity: .5;
 	text-transform: uppercase;

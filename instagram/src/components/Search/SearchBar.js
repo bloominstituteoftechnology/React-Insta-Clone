@@ -11,7 +11,9 @@ class SearchBar extends Component {
 	render() {
 		return (
 			<div className="SearchBar">
-				<input className="SearchBar-field" type="text" onChange={this.submitFilter} ref={input => this.input = input} placeholder="Search"></input>
+				<input className="SearchBar-field" type="text" onChange={this.submitFilter} 
+				ref={input => this.input = input} 
+				placeholder="Search"></input>
 			</div>
 		);
 	}

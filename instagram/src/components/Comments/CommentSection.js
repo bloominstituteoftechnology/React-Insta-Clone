@@ -43,14 +43,14 @@ class CommentSection extends Component {
 					{this.state.comments.map((comment) => {
 						return (
 							<div className="Comment">
-								<h4 className="Comment-username">{comment.username}</h4>
+								<h4 className="Comment-user">{comment.username}</h4>
 								<p className="Comment-body">{comment.text}</p>
 							</div>
 						);
 					})}
 				</div>
 
-				<div className="Comments-timestamp">
+				<div className="Comments-time">
 					<Moment parse="hh:mm:ss" fromNow>{this.props.timestamp}</Moment>
 				</div>
 

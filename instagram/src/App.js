@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchBar from './components/Search/SearchBar';
 import PostContainer from './components/Container/PostContainer';
-import dummyData from './dummy-data.js';
-import { Col } from 'react-bootstrap'; 
+import dummyData from './dummy-data.js'; 
 
 class App extends Component {
 
