@@ -26,7 +26,6 @@ class App extends Component {
 
       const likedPosts = {};
       dummyData.forEach(postData => {
-        const emptyLikedPost = {};
         const key = postData.timestamp;
         likedPosts[key] = false;
       })
@@ -54,14 +53,45 @@ class App extends Component {
   }
 
   updateLike(timestamp) {
-    const likedPosts = this.state.likedPosts;
+    const likedPosts = Object.assign({}, this.state.likedPosts);
     likedPosts[timestamp] = !likedPosts[timestamp];
+
+    this.updateNumberOfLikes(timestamp, likedPosts[timestamp]);
 
     this.setState( { likedPosts } );
   }
 
+  updateNumberOfLikes(timestamp, likeStatus) {
+    let likedPost = {};
+
+    this.state.internal.forEach(post => {
+      if (post.timestamp === timestamp) likedPost = Object.assign({}, post);
+    });
+    
+    if (likeStatus) likedPost.likes++;
+    else likedPost.likes--;
+
+    const internal = [];
+    const data = [];
+
+    this.state.internal.forEach(post => {
+      if (post.timestamp === timestamp) {
+        internal.push(likedPost);
+        data.push(likedPost);
+      }
+      else {
+        internal.push(post);
+        data.push(post);
+      }
+    });
+
+    this.setState({
+      data,
+      internal,
+    })
+  }
+
   render() {
-    // console.log(this.state.likedPosts)
     return (
       <div className="App">
         <SearchBar filterResults={this.filterResults.bind(this)}/>
