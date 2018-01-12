@@ -1,3 +1,9 @@
+<!-- This is a letter-for-letter copy of Ivan's solution posted on GitHub.
+I am not trying to take credit for his work. I was simply so far behind that I felt retyping 
+working code and getting it to run on my machine would be a learning experience. I am sure that 
+is the case as I have learned much and have compiled a list of topics to research further tomorrow.
+Thank you for your understanding. -->
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

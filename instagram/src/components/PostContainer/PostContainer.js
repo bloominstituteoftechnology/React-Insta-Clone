@@ -6,16 +6,16 @@ import './PostContainer.css'
 import CommentSection from '../CommentSection/CommentSection';
 
 function PostContainer(props) {
-    cosnt post = props.post;
+    const post = props.post;
     return (
         <div className="PostContainer">
             <div className="PostContainer__header">
-                <img src={post.thumbnailUrl} />
+                <img src={post.thumbnailUrl} alt="thumb" />
                 <h4 className="PostContainer__username">{post.username}</h4>
             </div>
 
             <div className="PostContainer__image">
-                <img src={post.imageUrl} />
+                <img src={post.imageUrl} alt="pretty pic" />
             </div>
 
             <div className="PostContainer__body">

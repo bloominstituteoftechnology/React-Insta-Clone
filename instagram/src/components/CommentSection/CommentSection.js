@@ -28,7 +28,7 @@ class CommentSection extends Component {
             }
 
             this.setState({
-                comments: [...this.state.comments, new],
+                comments: [...this.state.comments, newComment],
                 newCommentText: ""
             })
         }
@@ -65,7 +65,7 @@ class CommentSection extends Component {
                         onChange={this.updateNewComment}
                         onKeyDown={this.submitNewComment}
                         placeholder="Care to add to the discussion?"
-                    ></input>                                           // this is the coolest form, I was going to use this no matter what!
+                    ></input>
                 </div>
             </div>
         );
