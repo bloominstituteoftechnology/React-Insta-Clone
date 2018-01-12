@@ -19,8 +19,8 @@ class App extends Component {
     if (filterText) {
       const postsToDisplay = [];
       this.state.allPosts.map(post => {
-        if (post.username === filterText) postsToDisplay.push(post);
-        // if (post.username.includes(filterText)) postsToDisplay.push(post);        
+        // if (post.username === filterText) postsToDisplay.push(post);
+        if (post.username.includes(filterText)) postsToDisplay.push(post);        
       })
       this.setState({ filteredPosts: postsToDisplay });
     } else {

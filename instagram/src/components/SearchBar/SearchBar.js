@@ -13,18 +13,35 @@
 // export default SearchBar;
 
 import React, { Component } from 'react';
+import './SearchBar.css';
 
 class SearchBar extends Component {
+	constructor() {
+		super()
+		this.state = {
+			text: ''
+		}
+	}
 
-	submitFilter = (event) => {
-	  const criterion = this.input.value;
-	  this.props.filterPostsByUser(criterion);
+	submitFilter = (filter) => {
+	  this.props.filterPostsByUser(filter);
+	}
+
+	processNewSearch = (event) => {
+		this.setState({ text: event.target.value });
+	}
+
+	submitNewSearch = (event) => {
+		const text = this.state.text;
+		this.setState({text: ''});
+		this.submitFilter(text);
 	}
 
 	render() {
 		return (
 			<div className="SearchBar">
-				<input className="SearchBar-field" type="text" onChange={this.submitFilter} ref={input => this.input = input} placeholder="Search"></input>
+				<input type="text" onChange={this.processNewSearch.bind(this)} placeholder="Search" value={this.state.text}></input>
+				<button onClick={this.submitNewSearch.bind(this)}>Search</button>
 			</div>
 		);
 	}
