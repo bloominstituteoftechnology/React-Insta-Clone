@@ -24,7 +24,7 @@ class CommentSection extends Component {
         if (event.keyCode === 13) {
             const newComment= {
                 username: this.state.username,
-                test: this.state.newCommentText,
+                text: this.state.newCommentText,
             }
 
             this.setState({

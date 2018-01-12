@@ -3,29 +3,30 @@
   margin-left: 40px;
 }
 
-header {
+.App-header {
   background-color: rgb(100, 120, 207);
-  text-align: center;
+  /* text-align: center; */
   width: 100%;
-  height: 100%;
-  padding: 20px;
+  height: 100px;
+  padding: 10px;
   margin-bottom: 20px;
 }
 
 .App-title {
   position: absolute;
   left: 60px;
+  width: 175px;
 }
 
 .SearchBar {
   position: absolute;
-  right: 50px;
+  left: 350px;
   display: inline;
-  margin-top: 30px;
+  margin-top: -39px;
 }
 
 .SearchBar input {
   height: 20px;
-  width: 100px;
+  width: 200px;
   text-align: left;
 }

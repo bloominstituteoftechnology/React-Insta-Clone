@@ -25,13 +25,13 @@ class App extends Component {
     });
   }
 
-  filterPosts(searchterm) {
-    if (searchterm === '') {
+  filterPosts(searchTerm) {
+    if (searchTerm === '') {
       this.setState({
         displayedPosts: this.state.allPosts
       });
     } else {
-      const filteredPosts = this.state.allPosts.filter(post => post.username.includes(searchterm));
+      const filteredPosts = this.state.allPosts.filter(post => post.username.includes(searchTerm));
       this.setState({
         displayedPosts: filteredPosts
       });
@@ -41,7 +41,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
+        <header className="App-header">
           <h1 className="App=title">picsOfStuff</h1>
           <SearchBar posts={this.state.displayedPosts} filterPosts={this.filterPosts}/>
         </header>

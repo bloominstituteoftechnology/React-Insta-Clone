@@ -12,6 +12,7 @@
 }
 
 .CommentSection__add input {
+    width: 250px;
     margin-top: 15px;
     border: none;
         border-top: 0.5px solid blue;
