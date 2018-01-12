@@ -1,6 +1,6 @@
 import React, { Component }  from 'react';
 import './CommentSection.css'
-
+var moment = require('moment');
 class CommentSection extends Component {
     constructor() {
         super();
@@ -8,12 +8,14 @@ class CommentSection extends Component {
             comments: [],
             newComment: '',
             timestamp: '',
-            likes: 0        };
+            likes: 0,
+            liked: false
+        };
 
     }
 
     componentDidMount() {
-        this.setState({ comments: this.props.comments, timestamp: this.props.timestamp, likes: this.props.likes });
+        this.setState({ comments: this.props.comments, timestamp: this.props.timestamp, likes: this.props.likes, liked: false });
     }
 
     addComment = event => {
@@ -30,6 +32,27 @@ class CommentSection extends Component {
         });
     }
 
+    addLike = event => {
+        let likes = this.state.likes;
+        let liked = this.state.liked;
+        let unlikedHeart = document.getElementById("unliked-heart");
+        let likedHeart = document.getElementById("liked-heart");
+        if (liked === false) {
+            liked = true;
+            likes++;
+            unlikedHeart.classList.add("hidden");
+            likedHeart.classList.remove("hidden");            
+            this.setState({likes, liked});
+        }
+        else {
+            liked = false;
+            likes--;
+            likedHeart.classList.add("hidden");
+            unlikedHeart.classList.remove("hidden");
+            this.setState({likes, liked});
+        }
+    }
+
     commentHandler = event => {
         this.setState({ newComment: event.target.value });
     }
@@ -39,7 +62,9 @@ class CommentSection extends Component {
             <div className="comments">
                 <div className="comments__header">
                     <div className="icon__favorite">
-                        <img  src="https://visualpharm.com/assets/343/Heart-595b40b65ba036ed117d1f0d.svg" alt="favorite" className="comments__icons" />
+                    <input type="image" onClick={this.addLike}src="https://visualpharm.com/assets/343/Heart-595b40b65ba036ed117d1f0d.svg" alt="favorite" className="comments__icons" id="unliked-heart" />
+
+                    <input type="image" onClick={this.addLike}src="http://www.pngall.com/wp-content/uploads/2016/04/Instagram-Heart-Free-Download-PNG.png" alt="favorite" className="comments__icons hidden" id="liked-heart" />
                     </div>
                     <div className="icon__comment">
                         <img src="http://www.iconarchive.com/download/i89260/icons8/ios7/Very-Basic-Speech-Bubble.ico" alt="comment" className="comments__icons" />
@@ -60,7 +85,7 @@ class CommentSection extends Component {
                     )) : "comments failed to load"}
                 </div>
                     <div className="date">
-                        {this.state.timestamp}
+                        {moment(this.state.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}
                     </div>
                     <div className="comments__add">
                         <input className="comments__add__input" type="text" placeholder="Add comment..." value={this.state.newComment} onChange={this.commentHandler}/>

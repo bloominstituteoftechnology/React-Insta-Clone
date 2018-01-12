@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
+.hidden {
+    display: none;
+}
+
 .post {
     width: 600px;
     margin-left: auto;
@@ -8,6 +12,7 @@
     border-style: solid;
     border-color: #e6e6e6;
     border-width: 1px;
+    border-radius: 0.5%;
 }
 
 .post__user {
