@@ -28,7 +28,6 @@ const PostContainer = (props) => {
 							</div>
 						</div>
 						<CommentSection comments={container.comments}/>
-						<p className="CommentSection_timestamp">6 MONTHS AGO</p>
 					</div>
 				);
 			}))}

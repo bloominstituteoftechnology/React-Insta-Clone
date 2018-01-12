@@ -39,4 +39,13 @@
 	margin-left: 10px;
 	font-size: 10px;
 	color: gray;
+	/*margin-bottom: 20px;*/
+}
+
+.CommentSection_form {
+	float: left;
+	margin-left: -75px;
+	margin-top: 100px;
+	border: 0px;
+	background-color: transparent;
 }

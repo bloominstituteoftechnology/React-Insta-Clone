@@ -8,8 +8,11 @@ class CommentSection extends Component {
 		super();
 		this.state = {
 			comments: [],
-			username: 'camila'
+			username: 'camila',
+			newComment: ''
 		}
+		this.addNewComment = this.addNewComment.bind(this);
+		this.handleComment = this.handleComment.bind(this);
 	}
 
 	componentDidMount() {
@@ -18,16 +21,36 @@ class CommentSection extends Component {
 		})
 	}
 
+	addNewComment(event) {
+		event.preventDefault();
+		this.state.comments.push({
+			username: this.state.username,
+			text: this.state.newComment
+		});
+		this.setState({
+			newComment: '',
+			comments: this.state.comments
+		});
+	}
+
+	handleComment(event) {
+		this.setState({
+			newComment: event.target.value
+		})
+	}
+
 	render() {
 		return (
-			<div>
+			<div className="CommentSection_container">
 				{this.props.comments.map((comment) => {
 					return(
-						<div className="CommentSection_container">
-							<p className="CommentSection_thread"><strong>{comment.username}</strong> {comment.text}</p>
-						</div>
+						<p className="CommentSection_thread"><strong>{comment.username}</strong> {comment.text}</p>
 					)
 				})}
+				<p className="CommentSection_timestamp">6 MONTHS AGO</p>
+				<form className="CommentSection_form" onSubmit={this.addNewComment}>
+					<input type="text" onChange={this.handleComment} placeholder="Add a comment..." value={this.state.newComment}/>
+				</form>
 			</div>
 		)
 	}
