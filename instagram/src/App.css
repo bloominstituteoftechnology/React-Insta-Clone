@@ -4,6 +4,24 @@
   align-items: center; 
 }
 
+.App-header {
+  /*background-color: #aeaeae;*/
+  width: 35%;
+  height: 125px;
+
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: #ededed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .PostsContainer {
   display: flex;
   flex-direction: column;

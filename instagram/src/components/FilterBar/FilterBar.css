@@ -1,9 +1,9 @@
-.SearchBox {
+.FilterBar {
 	text-align: center;
 	margin: 10px;
 	width: 250px;
 }
 
-.SearchBox:placeholder-shown {
+.FilterBar:placeholder-shown {
 	text-align: center;
 }

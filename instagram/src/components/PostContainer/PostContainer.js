@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'react-moment';
 import CommentSection from '../CommentSection/CommentSection';
 import heartEmpty from './Assets/heart.png';
 import heartLiked from './Assets/heart-liked.png';
@@ -6,12 +7,10 @@ import './PostContainer.css';
 
 const PostContainer = (props) => {
   const post = props.postData;
-
+  console.log(post.timestamp)
   const likeButtonClicked = () => {
     props.likePost(post.timestamp);
   }
-
-  // console.log(props);
 
   return (
     <div className="PostContainer">
@@ -31,8 +30,11 @@ const PostContainer = (props) => {
         <div>{post.likes} likes</div>
       </div>
       <div className="PostCommentsContainer">
-        <CommentSection comments={post.comments}/>
+        <CommentSection comments={post.comments} updateComments={props.updateComments} id={post.timestamp}>
+          <div><Moment to={props.timestampFormatted} /></div>
+        </CommentSection>
       </div>
+
       <div className="PostFooter"></div>
     </div>
   )

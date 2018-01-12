@@ -16,6 +16,7 @@
 }
 
 .PostHeader__thumbnail {
+	border-radius: 50%;
 	width: 40px;
 	height: 40px;
 	margin: 10px;
@@ -63,6 +64,10 @@
 	border-width: 1px;
   border-color: #ededed;
 */}
+
+/*.PostTimeContainer {
+	font-size: 10px;
+}*/
 
 .PostFooter {
 	/*margin-bottom: 10px;*/

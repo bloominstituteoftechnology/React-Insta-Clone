@@ -11,6 +11,7 @@ class CommentSection extends Component {
         text: '',
 			},
 		}
+
 	}
 
 	componentDidMount() {
@@ -33,7 +34,9 @@ class CommentSection extends Component {
       }
     });
 
-    event.stopPropagation();
+    this.props.updateComments(this.props.id, comments);
+
+    // event.stopPropagation();
   }
 
   handleNewComment = (event) => {
@@ -44,7 +47,7 @@ class CommentSection extends Component {
     
     this.setState( { comment } );
 
-    event.stopPropagation();
+    // event.stopPropagation();
   }
 
   render() {
@@ -55,6 +58,7 @@ class CommentSection extends Component {
 					return <div key={i} className="Comment"><strong>{comment.username}</strong> {comment.text}</div>
 				}) : null}
 			</div>
+			<div className="PostTime">{this.props.children}</div>
 			<form onSubmit={this.addNewComment}>
         <input className="CommentInput" type="text" onChange={this.handleNewComment} placeholder="Add a comment..." value={this.state.comment.text} />
       </form>			
