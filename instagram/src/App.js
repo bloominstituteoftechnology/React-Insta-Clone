@@ -26,7 +26,6 @@ class App extends Component {
         const key = postData.timestamp;
         likedPosts[key] = false;
       })
-      console.log('componentDidMount');
 
       this.setState({
         data,
@@ -150,14 +149,19 @@ class App extends Component {
 
     formattedTimestamp += timeElementsArray[2].slice(0,4);
     formattedTimestamp += months[timeElementsArray[0]];
-    // formattedTimestamp += ;
-    console.log(timestamp)
+    formattedTimestamp += timeElementsArray[1].slice(0,2);
+    formattedTimestamp += 'T';
 
-    return '20180112T010000'
+    const timeAMPM = timeElementsArray[3].replace(':', '').replace(':', '');
+
+    if (timeElementsArray[4] === 'pm' && Number(timeAMPM.slice(0,2)) < 12 ) {
+      formattedTimestamp += String(Number(timeAMPM) + 120000);
+    } else formattedTimestamp += timeAMPM;
+
+    return formattedTimestamp;
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="App">
         <header className="App-header">

@@ -7,7 +7,6 @@ import './PostContainer.css';
 
 const PostContainer = (props) => {
   const post = props.postData;
-  console.log(post.timestamp)
   const likeButtonClicked = () => {
     props.likePost(post.timestamp);
   }
