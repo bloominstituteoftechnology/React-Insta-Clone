@@ -1,0 +1,44 @@
+.PostContainer {
+    border: 0.5px solid blue;
+    max-width: 500px;
+    margin-bottom: 40px;
+}
+
+.PostContainer__header {
+    width: 100%;
+    position: relative;
+    height: 60px;
+}
+
+.PostContainer__header img {
+    display: inline-block;
+    height: 30px;
+    padding: 15px;
+}
+
+.PostContainer__header h4 {
+    position: absolute;
+    display: inline;
+    margin-top: 20px;
+}
+
+.PostContainer__image {
+    width: 100%;
+}
+
+.PostContainer__image img {
+    background-size: contain;
+    width: 100%;
+}
+
+.PostContainer__body {
+    margin: 15px;
+}
+
+.PostContainer__likes {
+    display: inline;
+}
+
+.PostContainer__timestamp {
+    margin: 10px 0 10px 0;
+}

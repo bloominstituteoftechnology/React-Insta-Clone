@@ -1,0 +1,32 @@
+.App {
+  text-align: left;
+  margin-left: 40px;
+}
+
+.App-header {
+  background-color: rgb(100, 120, 207);
+  /* text-align: center; */
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.App-title {
+  position: absolute;
+  left: 60px;
+  width: 175px;
+}
+
+.SearchBar {
+  position: absolute;
+  left: 350px;
+  display: inline;
+  margin-top: -39px;
+}
+
+.SearchBar input {
+  height: 20px;
+  width: 200px;
+  text-align: left;
+}
