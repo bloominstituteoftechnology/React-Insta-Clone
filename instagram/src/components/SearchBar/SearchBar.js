@@ -1,9 +1,7 @@
 import React from 'react';
+import { Navbar, NavbarBrand } from 'react-bootstrap';
 
 class SearchBar extends React.Component {
-  state = {
-    searchTerm: '',
-  };
 
   handleInputChange = event => {
     this.setState({ searchTerm: event.target.value });
@@ -11,22 +9,20 @@ class SearchBar extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const newTerms = {
-
-    }
-
-    this.setState({ searchTerm: '' })
+    const searchFor = this.input.value;
+    this.props.filterPosts(searchFor);
   }
 
   render() {
     return (
-      <div className="SearchBar">
-        <form onSubmit={this.handleSubmit}>
-        <input type="text" value={this.state.searchTerm}
-        onChange={this.handleInputChange} />
-        <button type="submit">Search</button>
-        </form>
-      </div>
+      <Navbar>
+        <NavbarBrand>
+          <b>Instaclone</b>
+          <input type="text" onChange={this.handleSubmit}
+          ref={input => this.input = input}
+          placeholder="Search"></input>
+        </NavbarBrand>
+      </Navbar>
     )
   }
 }
