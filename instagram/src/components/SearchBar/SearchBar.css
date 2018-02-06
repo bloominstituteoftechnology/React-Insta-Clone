@@ -1,0 +1,49 @@
+.SearchBar_container {
+	width: 400px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	border-bottom: 1px solid lightgray;
+}
+
+.SearchBar_logoUrl {
+	display: inline-block;
+	float: left;
+}
+
+.SearchBar_dividerUrl {
+	display: inline-block;
+	float: left;
+}
+
+.SearchBar_nameUrl {
+	display: inline-block;
+	float: left;
+}
+
+.SearchBar {
+	display: inline-block;
+}
+
+.SearchBar_locationUrl {
+	display: inline-block;
+	float: right;
+}
+
+.SearchBar_likesUrl {
+	display: inline-block;
+	float: right;
+}
+
+.SearchBar_profileUrl {
+	display: inline-block;
+	float: right;
+}
+
+input {
+	text-align: center;
+}

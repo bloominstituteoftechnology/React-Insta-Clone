@@ -1,0 +1,71 @@
+.PostContainer {
+	border: .1px solid lightgray;
+	height: 800;
+	width: 400px;
+	font-size: 12.5px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 40px;
+	box-shadow: 1px 1px 8px lightgray;
+}
+
+.PostContainer_thumbnailUrl {
+	border-radius: 50%;
+	border: 1px solid gray;
+	display: inline-block;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-right: 10px;
+	float: left;
+}
+
+.PostContainer_username {
+	display: inline-block;
+	float: left;
+	padding-bottom: 7px;
+	padding-top: 7px;
+	font-family: "Helvetica";
+}
+
+.PostContainer_imageUrl {
+	width: 400px;
+	height: 400px;
+}
+
+.PostContainer_likesandcomments {
+	margin-left: 10px;
+	width: 400px;
+}
+
+.PostContainer_likesUrl {
+	float: left;
+	margin-top: 5px;
+	/*margin-bottom: 5px;*/
+}
+
+.PostContainer_commentsUrl {
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.PostContainer_indications {
+	width: 400px;
+	display: inline;
+}
+
+.PostContainer_likes {
+	/*text-align: left;*/
+	/*display: inline;*/
+	float: left;
+	/*float: left;*/
+	padding-top: 15px;
+	/*margin-bottom: 10px;*/
+	margin-left: -40px;
+	/*width: 400px;*/
+	/*padding-left: 15px;*/
+	font-family: "Helvetica Neue";
+	/*width: 400px;*/
+}
