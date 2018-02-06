@@ -8,17 +8,20 @@ class PostContainer extends Component {
   };
 
   render() {
-    return ( <div>
-    {this.state.dummyData.map(user => {
-    return (
+    return ( 
     <div>
-      <img />
-        <CommentSection key={user.username} />
-      </div>
+      {this.state.dummyData.map(post => {
+        return (
+        <div>
+          {post.comments.map(comment => {
+            return <CommentSection key={comment.username} user={comment.username} />
+          })}
+        </div>
       )
     })
   }
   </div>
-  );
+  )
+}
 }
 export default PostContainer;
