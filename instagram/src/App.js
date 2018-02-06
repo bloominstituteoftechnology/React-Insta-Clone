@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import './dummy-data.js';
+import dummyData from './dummy-data.js';
 import SearchBar from './components/SearchBar/SearchBar';
 import CommentSection from './components/CommentSection/CommentSection';
 import PostContainer from './components/PostContainer/PostContainer';
@@ -13,7 +13,7 @@ class App extends Component {
           <h1>Instagram</h1>
         </header>
         <SearchBar />
-        <PostContainer />
+        <PostContainer dd={dummyData} />
         <CommentSection />
       </div>
     );
