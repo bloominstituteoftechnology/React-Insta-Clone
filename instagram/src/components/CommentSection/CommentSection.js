@@ -1,6 +1,15 @@
 import React from 'react';
 
 class CommentSection extends React.Component {
+  nextId = 1;
+  state = {
+    comments: [],
+  };
+
+  getNextId = () => {
+    return this.nextId++;
+  }
+
   render() {
     return (
       <div className="SearchBar">
