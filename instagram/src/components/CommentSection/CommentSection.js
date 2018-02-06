@@ -3,6 +3,7 @@ import React from 'react';
 class CommentSection extends React.Component {
   nextId = 1;
   state = {
+    id: 0,
     username: 'User',
     comments: [],
     newComment: '',
@@ -21,9 +22,18 @@ class CommentSection extends React.Component {
   addComment = (event) => {
     event.preventDefault();
     const newComment = {
+      id: this.getNextId(),
       username: this.state.username,
       text: this.state.newComment,
-    }
+    };
+
+    const updateCommentArr = this.state.comments;
+    updateCommentArr.push(newComment);
+
+    this.setState({
+      comments: updateCommentArr,
+      newComment: '',
+    });
   }
 
   updateNewComment = (event) => {
@@ -36,18 +46,18 @@ class CommentSection extends React.Component {
         {this.state.comments.map((comment, i) => {
           return (
             <div key={i}>
-              <h3>{comment.username}</h3>
+              <h4>{comment.username}</h4>
               <p>{comment.text}</p>
             </div>
           );
         })}
-
+        <form onSubmit={this.addComment}>
         <input 
         type="text"
         value={this.state.newComment}
         onChange={this.updateNewComment}
-        onKeyDown={this.addComment}
         placeholder="Add comment" />
+        </form>
       </div>
     )
   };
