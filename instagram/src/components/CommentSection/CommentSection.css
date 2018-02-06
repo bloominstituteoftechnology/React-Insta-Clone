@@ -1,0 +1,7 @@
+.CommentSection {
+  width: 500px;
+}
+
+.CommentSection--ul {
+  list-style: none;
+}

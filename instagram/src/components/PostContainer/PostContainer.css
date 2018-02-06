@@ -1,0 +1,24 @@
+.PostContainer {
+  width: 525px;
+}
+
+.Post {
+  width: 525px;
+  border: 2px solid slategray;
+  padding: 10px;
+  list-style: none;
+  margin: auto; 
+}
+
+.contentImage {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  border: 1px solid gray;
+}
+
+.header {
+  padding-bottom: 5px;
+}
