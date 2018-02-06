@@ -1,0 +1,13 @@
+.container {
+     border: 2px solid black;
+     margin: 0px;
+     padding: 0px;
+}
+
+.header {
+    font-size: 30px;
+    background: black;
+    color: white;
+    padding: 5px;
+    text-align: left;
+}

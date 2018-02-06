@@ -1,78 +1,91 @@
 const dummyData = [
     {
+        id: 1,
         username: "philzcoffee",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/20066915_1526002357431295_3266739979170086912_n.jpg',
+        imageUrl: 'https://c1.staticflickr.com/8/7371/15787647793_67f8b681dc_b.jpg',
         likes: 400,
         timestamp: "July 17th 2017, 12:42:40 pm",
         comments: [
             {
+                id: 1,
                 username: "philzcoffee",
                 text: "We've got more than just delicious coffees to offer at our shops!"
             },
             {
+                id: 2,
                 username: "biancasaurus",
                 text: "Looks delicious!"
             },
             {
+                id: 3,
                 username: "martinseludo",
                 text: "Can't wait to try it!"
             }
         ]
     },
     {
+        id: 2,
         username: "twitch",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985884_314122025700633_6705675951834923008_n.jpg',
+        imageUrl: 'https://metrouk2.files.wordpress.com/2014/05/twitch-tv-2.jpg',
         likes: 4307,
         timestamp: "July 15th 2017, 03:12:09 pm",
         comments: [
             {
+                id: 1,
                 username: "twitch",
                 text: "Epic Street Fighter action here in Las Vegas at #EVO2017!"
             },
             {
+                id: 2,
                 username: "michaelmarzetta",
                 text: "Omg that match was crazy"
             },
             {
+                id: 3,
                 username: "themexican_leprechaun",
                 text: "What a setup"
             },
             {
+                id: 4,
                 username: "dennis_futbol",
                 text: "It that injustice"
             },
             {
+                id: 5,
                 username: "dennis_futbol",
                 text: "Is"
             }
         ]
     },
     {
+        id: 3,
         username: "playhearthstone",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985681_748672068646566_4231149029783764992_n.jpg',
+        imageUrl: 'http://4.bp.blogspot.com/-QVuFN7qv2qc/VC7V5tTd3XI/AAAAAAAADF8/vSjxACF4imo/s1600/hearthstone_dwarf_11.jpg',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
         comments: [
             {
+                id: 1,
                 username: "playhearthstone",
                 text: "Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
             },
             {
+                id: 2,
                 username: "tapmelon",
                 text: "Wish that death knight could be added as a new playable class in this expansion."
             },
             {
+                id: 3,
                 username: "micpetboudreau",
                 text: "Can't wait"
             },
             {
+                id: 4,
                 username: "awaywetravel",
                 text: "I <3 Hearthstone."
             },
             {
+                id: 5,
                 username: "awesomebt28",
                 text: "I like how gul'dan looks so old and useless"
             }

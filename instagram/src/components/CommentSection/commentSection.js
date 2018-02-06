@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './commentSection.css';
 
-class CommentSection extends Component {
-    render() {
-      return (
-        <li>CommentSection</li>
-      );
-    }
-  }
+function CommentSection(props) {
+  return (
+    <div className="comment">
+      <span className="bolded">{props.comment.username}:  </span>  
+      <span className="normal">  {props.comment.text}</span>
+    </div>
+  )
+}
 
 export default CommentSection;

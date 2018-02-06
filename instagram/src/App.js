@@ -8,11 +8,20 @@ import dummyData from './dummy-data';
 //passing each individual object as a prop to an instance of PostContainer.
 
 class App extends Component {
+  state= {
+    data: dummyData,
+  }
+
   render() {
     return (
       <div className="App">
-      <SearchBar />
-      <PostContainer />
+        <SearchBar dummy={this.state.data}/>
+        {this.state.data.map((data) => {
+            return <PostContainer 
+            key={data.id} 
+            data={data}
+            />;
+			  })}
       </div>
     );
   }
