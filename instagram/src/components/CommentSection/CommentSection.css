@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+.comments {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    text-align: left;
+    padding: 0 16px 0 16px;
+}
+
+.comments__header {
+    display: flex;
+}
+
+.comments__icons {
+    width: 24px;
+}
+
+.icon__favorite {
+    padding: 8px;
+    margin: 0 0 0 -8px;
+}
+
+.icon__comment {
+    padding: 8px;
+}
+
+.icon__bookmark {
+    padding: 8px;
+    margin: 0 -8px 0 464px;
+}
+
+.likes {
+    font-weight: bold;
+}
+
+.comments__wrapper {
+    padding: 5px 0 6px 0;
+}
+
+.comments__user {
+    display: inline-block;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 4.2px 0 0;
+}
+
+.comments__text{
+    display: inline-block;
+    
+}
+
+.comments__section {
+    margin: 0 0 4px 0;
+}
+
+.comments__add {
+    border-top: 1px solid;
+    border-color: #e6e6e6;
+    padding:16px 26px 16px 0;
+}
+
+.comments__add__input {
+    background-color: transparent;
+    border: 0px solid;
+    height: 20px;
+    width: 89%;
+    color: #CCC;
+}
+
+input:focus {
+    outline:none;
+}
+
+.date {
+    font-size: 12px;
+    font-weight: bold;
+    color: #999999;
+    margin: 0 0 4px 0;
+}
