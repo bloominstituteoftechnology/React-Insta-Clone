@@ -3,22 +3,22 @@ import './SearchBar.css';
 
 function SearchBar() {
   return (<div className="container">
-    <div className="container__box container__box-1">
-      <div>hi</div>
-      <div>hello</div>
-      <div>hey</div>
+    <div className="container__box">
+      <div className="container__box-1"></div>
+      <div className="container__box-2"></div>
+      <div className="container__box-3">Instagram</div>
     </div>
     
-    <div className="container__box container__box-2">
+    <div className="container__box">
       <form>
         <input type="text" placeholder="Search"/>
       </form>
     </div>
 
-    <div className="container__box container__box-3">
-      <div>hey</div>
-      <div>hi</div>
-      <div>hello</div>
+    <div className="container__box">
+      <div className="container__box-4"></div>
+      <div className="container__box-5"></div>
+      <div className="container__box-6"></div>
     </div>
 
   </div>);
