@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CommentSection from '../CommentSection/comment-section'
+import './post-container.css'
 
 
 function PostContainer(props) {
@@ -12,7 +13,17 @@ function PostContainer(props) {
       <p>{props.post.imageUrl}</p>
       <p>{props.post.likes}</p>
       <p>{props.post.timestamp}</p>
-      <CommentSection comments={props.post.comments} />
+      <div>{props.post.comments.map((comment, i) => {
+        return (
+          <CommentSection
+          key={i} 
+          username={comment.username}
+          text={comment.text}
+          />
+        )
+
+      })}
+      </div>
     </div>
   )
 
