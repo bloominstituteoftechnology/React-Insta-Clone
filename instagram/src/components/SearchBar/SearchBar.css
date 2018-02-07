@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.searchbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: solid 0.5px grey;
+  margin-bottom: 15px;
+}
+
+.searchbar__img {
+  width: 250px;
+  height: 70px;
+}
+
+.searchbar__field {
+  margin-top: 20px;
+}
