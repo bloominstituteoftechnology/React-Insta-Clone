@@ -1,0 +1,31 @@
+.App {
+  width: 60vw;
+  margin: 0 20%;
+}
+
+.App-header {
+  padding:  20px 0;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.dummy-post {
+    margin: 10px 0;
+}
+
+.post-username {
+    margin: 0 0 20px 10px;
+}
+
+.post-header {
+    margin-top: 20px
+}
+.search-bar { 
+  width: 43%
+}
