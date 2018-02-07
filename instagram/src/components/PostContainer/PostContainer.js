@@ -9,6 +9,9 @@ function PostContainer(props) {
         <div><img className="thumbnail" src={post.thumbnailUrl}/></div><div>{post.username}</div>
         <img className="postImage" src={post.imageUrl}/>
         <CommentSection arrComments={post.comments} />
+        <form>
+          <input type="text" value={props.newComment}/><button>Submit</button>
+        </form>
       </div>
     )
       }));

@@ -14,10 +14,7 @@ class App extends Component {
           <h1>Instagram</h1>
         </header>
         <SearchBar />
-        <PostContainer dd={dummyData} />
-        <form>
-          <input type="text" value={this.newComment}/><button>Submit</button>
-        </form>
+        <PostContainer dd={dummyData} staticUser={this.staticUser} newComment={this.newComment} />
       </div>
     );
   }
