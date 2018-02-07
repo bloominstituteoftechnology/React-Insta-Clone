@@ -1,5 +1,9 @@
 import React from 'react';
+import moment from 'moment';
 import CommentSection from '../CommentSection/CommentSection';
+import SearchBar from '../SearchBar/SearchBar';
+
+
 
 class PostContainer extends React.Component {
 	state = this.props;
@@ -15,18 +19,45 @@ class PostContainer extends React.Component {
 
 	}
 
+	searchPost = (event)=>{
+		this.setState({search: event.target.value, searching: 'searching...'});
+	} 
 	render(){
+		console.log(this.state);
+		let filteredPost = this.state.post;
+		if(this.state.search){
+
+				filteredPost = filteredPost.filter((post) => {
+
+				return post.username.indexOf(this.state.search) !== -1;
+			});
+		}
+
 		return ( 
 			<div>
-				{this.state.post.map((post)=>{
+				<SearchBar searchPost={this.searchPost} searching={this.state.searching}/>
+				{filteredPost.map((post)=>{
 					return (
 						<div key={post.id} className="post-container">
-							<div className="username">{post.username}</div>
-							<img src="https://static-s.aa-cdn.net/img/gp/20600008182729/S6lDNmlqADCAddb_rsocOhC9sZJyp19_KlCG7xs8UY8Jrk1u8dYh8Dr0_Mt2Qdu8i2VN=w300" alt="img" />
-							<div className="likes">{post.likes} Likes</div>
-							<div className="increaseLikes" onClick={()=>{this.increaseLikes(post.id)}}>Increase Like!</div>
+
+							<div className="username">
+								 <i class="far fa-user-circle"></i> <span>{post.username}</span>
+							</div>
+							<div className="image">
+								<img src={post.imageUrl} alt="img" />
+							</div>
+							<div className="heart">
+								<span onClick={()=>{this.increaseLikes(post.id)}}>
+								<i className="far fa-heart"></i></span> <i className="far fa-comment"></i>
+							</div>							
+							<div className="likes">
+								{post.likes} Likes
+							</div>
+
 							<CommentSection comments={post.comments} />
-							<div className="time">{post.timestamp}</div>
+
+							
+							<div className="time">{moment().startOf(post.timestamp).fromNow()}</div>
 						</div>
 					);
 				})
