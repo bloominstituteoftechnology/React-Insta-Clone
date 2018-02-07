@@ -1,7 +1,7 @@
 import React from 'react';
 
-function CommentSection() {
-  return null;
+function CommentSection(props) {
+  return <div><b>{props.commentInfo.username}</b> {props.commentInfo.text}</div>
 }
 
 export default CommentSection;

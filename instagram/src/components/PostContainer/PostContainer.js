@@ -16,9 +16,11 @@ function PostContainer(props) {
     <div className="container__likes">
       <div>{props.postInfo.likes} people and/or bots liked this.</div>
     </div>
-    {props.postInfo.comments.map((comment, i) => {
-      return <CommentSection key={'2'+i} commentInfo={comment} />
-    })}
+    <div className="container__comments">
+      {props.postInfo.comments.map((comment, i) => {
+        return <CommentSection key={'2'+i} commentInfo={comment} />
+      })}
+    </div>
   </div>);
 }
 

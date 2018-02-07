@@ -45,6 +45,13 @@ margin-right: 5px;
 }
 
 .container__likes {
-  margin-bottom: 20px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container__comments {
+  margin-bottom: 20px;
+  max-width: 50%;
+  background: rgb(211, 211, 211);
+  border: 2px solid black;
+  border-radius: 2%;
 }
