@@ -1,0 +1,7 @@
+.post-container {
+    max-width: 900px;
+    width: 100%;
+    background: rgb(189, 182, 182);
+    box-shadow: 5px 5px 5px;
+    border: 1px solid red;
+}
