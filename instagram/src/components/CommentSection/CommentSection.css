@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+.comments {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.comments__box-field {
+  width: 100%;
+  margin: 5px 0px 15px 0px;
+}
+
+.comment {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.comment__user {
+  font-weight: bold;
+}
+
+.comment__text {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: 10px;
+}

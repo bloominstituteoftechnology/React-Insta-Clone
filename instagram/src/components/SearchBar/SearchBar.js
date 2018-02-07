@@ -14,14 +14,18 @@ class SearchBar extends React.Component {
 
   render = () => {
     return (
-      <div className="searchBar">
-        <form className="searchBar__field">
-          <input 
-            type="text"
-            value={this.state.input}
-            onChange={this.updateSearch}
-            />
-        </form>
+      <div className="searchbar">
+        <img className="searchbar__img" src="https://i.imgur.com/NRaL8eG.png" alt="alt text" />
+          <form className="searchbar__field">
+            <input 
+              type="text"
+              value={this.state.input}
+              onChange={this.updateSearch}
+              placeholder="Search"
+              size="50"
+              />
+          </form>
+        <img className="searchbar__img" src="https://i.imgur.com/gFP8Ipc.png" alt="alt text" />
       </div>
     );
   };
