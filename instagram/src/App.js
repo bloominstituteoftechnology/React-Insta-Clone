@@ -10,20 +10,25 @@ import dummyData from './dummy-data';
 class App extends Component {
   state= {
     data: dummyData,
+    current: dummyData,
   }
 
   focus = (username) => {
     const newData = this.state.data.filter(data => {
       return data.username === username;
     });
-    this.setState({data: newData});
+    console.log(newData.length);
+    // checks if a username was searched that doesn't exist
+    // if it doesn't, just repopulates all users
+    // otherwise sets it to the correct username
+    (newData.length === 0) ? this.setState({current: dummyData}) : this.setState({current: newData});
   }
 
   render() {
     return (
       <div className="App">
         <SearchBar focusData={this.focus}/>
-        {this.state.data.map((data) => {
+        {this.state.current.map((data) => {
             return <PostContainer 
             key={data.id} 
             data={data}
