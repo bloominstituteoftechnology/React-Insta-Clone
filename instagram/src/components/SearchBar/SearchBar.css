@@ -1,0 +1,16 @@
+.search-container {
+    margin-top: 10px;
+}
+
+.input {
+    text-align: center;
+    font-size: 16px;
+    color: #a59a9a;
+}
+
+.search-image {
+    width: 20px;
+    opacity: 50%;
+    position: relative;
+    left: -150px;
+}
