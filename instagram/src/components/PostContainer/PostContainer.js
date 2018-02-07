@@ -1,5 +1,5 @@
 import React from 'react';
-import { Panel, Image,Thumbnail, Grid, Row, Col, Clearfix } from 'react-bootstrap';
+import { Panel, Image,Thumbnail, Grid, Row, Col, Clearfix, Well } from 'react-bootstrap';
 import CommentSection from '../CommentSection/CommentSection.js'
 
 const PostContainer = (props) => {
@@ -30,8 +30,7 @@ const PostContainer = (props) => {
         </Col>
       </Row>
       <Panel>
-        <br />
-          <CommentSection comments={post.comments} />
+          <Well><CommentSection comments={post.comments} /></Well>
         <br />
       </Panel>
     </Grid>
