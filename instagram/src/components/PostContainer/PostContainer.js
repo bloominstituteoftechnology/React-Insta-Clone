@@ -12,6 +12,7 @@ const PostContainer = (props) => {
         </div>
         <img src={props.imageUrl} className="image" alt="featured image" />
         <div className="likes">{props.likes} {props.likes === 1 ? 'like' : 'likes'}</div>
+        <div className="timestamp">{props.timestamp}</div>
         <CommentSection className="comments" comments={props.comments} />
       </div>
     </div>
