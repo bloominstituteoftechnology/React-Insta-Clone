@@ -10,10 +10,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <h1>Instagram</h1>
-        </header>
-        <SearchBar />
+        <h1 className="image">
+          <img className="instaLogo" src="https://image.freepik.com/free-vector/cool-smiling-hop-brewing-mascot-with-sunglasses-vector-illustration-logo-icon_7688-11.jpg"/><SearchBar />
+        </h1>
         <PostContainer dd={dummyData} staticUser={this.staticUser} newComment={this.newComment} />
       </div>
     );

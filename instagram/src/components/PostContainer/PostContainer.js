@@ -1,16 +1,17 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import './PostContainer.css';
 
 function PostContainer(props) {
   return (
     props.dd.map((post, index) => {
     return (
         <div className="postStyle"  key={index}>
-        <div><img className="thumbnail" src={post.thumbnailUrl}/></div><div>{post.username}</div>
+        <div className="postHeader"><img className="thumbnail" src={post.thumbnailUrl}/><div className="username">{post.username}</div></div>
         <img className="postImage" src={post.imageUrl}/>
         <CommentSection arrComments={post.comments} />
-        <form>
-          <input type="text" value={props.newComment}/><button>Submit</button>
+        <form className="postFooter">
+          <input className="commentInput" type="text" value={props.newComment}/><button className="commentButton">Submit</button>
         </form>
       </div>
     )
