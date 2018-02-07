@@ -9,8 +9,10 @@ class CommentSection extends Component {
   render() {
     return (
       <div>
-        <h3>Comments</h3>
           {this.props.comments.map((val, i) => <Comment key={i} comment={val} />)}
+          <form>
+            <input className='comment__input' type='text' placeholder='Add a comment...'/>
+          </form>
       </div>
     );
   }

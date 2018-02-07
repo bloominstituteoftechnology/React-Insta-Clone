@@ -5,3 +5,13 @@
 .comment--bold {
   font-weight: bold;
 }
+
+.comment__input {
+  margin: 0;
+  padding-left: 5px;
+  box-sizing: border-box;
+  outline: none;
+  background-color: #e7e7e7;
+  border: none;
+  color: #666;
+}
