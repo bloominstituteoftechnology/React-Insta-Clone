@@ -11,18 +11,15 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         {
-        this.state.map(post => {
+        this.state.map(post1 => {
           return <PostContainer
-            post={post}
+            post={post1}
             />;
           })
         }
         <header className="App-header">
           <h1 className="App-title">Welcome to Cool Instagram</h1>
         </header>
-        <p className="App-intro">
-          Here is some random stuff
-        </p>
       </div>
     );
   }
