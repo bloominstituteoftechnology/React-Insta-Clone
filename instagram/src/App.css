@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+.app__container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
