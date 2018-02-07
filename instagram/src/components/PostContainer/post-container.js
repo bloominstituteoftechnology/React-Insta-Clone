@@ -11,11 +11,11 @@ class PostContainer extends Component {
       <div>
         <h1>Post</h1>
         <div>
-          <img src={this.props.user.thumbnailUrl} />
+          <img className='thumbnail' src={this.props.user.thumbnailUrl} alt='' />
           <p>{this.props.user.username}</p>
         </div>
         <div>
-          <img src={this.props.user.imageUrl} />
+          <img className='image' src={this.props.user.imageUrl} alt ='' />
         </div>
         <p>{this.props.user.likes} likes</p>
         <CommentSection comments={this.props.user.comments} />
