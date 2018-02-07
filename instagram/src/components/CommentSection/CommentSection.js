@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class CommentSection extends Component {
-    state = {
-    }
-    render() {
-        return <div></div>;
-    };
+function Comment(props) {
+    return <div><a href="#">{props.comment.username} </a>{props.comment.text}</div>;
 }
-export default CommentSection;
+
+export default Comment;
