@@ -6,7 +6,7 @@ function SearchBar() {
     <div className="container__box">
       <div className="container__box-1"></div>
       <div className="container__box-2"></div>
-      <div className="container__box-3">Instagram</div>
+      <div className="container__box-3">Insta<s>gram</s></div>
     </div>
     
     <div className="container__box">

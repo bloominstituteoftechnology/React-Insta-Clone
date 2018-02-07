@@ -27,7 +27,6 @@ margin-right: 5px;
 
 .container__bottom {
   display: flex;
-  margin-bottom: 20px;
 }
 
 .bottom__button {
@@ -46,5 +45,6 @@ margin-right: 5px;
 }
 
 .container__likes {
-
+  margin-bottom: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

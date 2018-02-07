@@ -5,7 +5,7 @@ function PostContainer(props) {
   return (<div className="PC__container">
     <div className="container__top">
       <img className="container__top-img" src={props.postInfo.thumbnailUrl} alt="profile" />
-      <div>{props.postInfo.username}</div>
+      <div>{props.postInfo.username} ({props.postInfo.timestamp})</div>
     </div>
     <img className="container__middle" src={props.postInfo.imageUrl} alt="pickypick" />
     <div className="container__bottom">
@@ -13,7 +13,7 @@ function PostContainer(props) {
       <button className="bottom__button bottom__button-right">Comments</button>
     </div>
     <div className="container__likes">
-      <div></div>
+      <div>{props.postInfo.likes} people and/or bots liked this.</div>
     </div>
   </div>);
 }
