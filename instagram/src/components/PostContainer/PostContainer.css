@@ -1,0 +1,37 @@
+
+.post {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    border-style: solid;
+    border-color: rgb(12, 24, 197);
+    border-width: 35%;
+    align-content: center
+}
+
+.post__user {
+    width: auto;
+    margin: 5%;
+    padding: 16px;
+    text-align-last: center;
+}
+
+.post__user-text {
+    font-family: 'Rometto_one', sans-serif;
+    font-size: 12rem;
+    margin-left: 12px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.post__user__thumbnail {
+    width: auto;
+    align-self: auto;
+}
+
+.post__user__image {
+    align-self: auto
+}
