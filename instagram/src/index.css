@@ -201,6 +201,10 @@ body,
   width: 100%;
   border-top: 1px solid #EEEEEE;
 }
+.post-container .post .comment-section .timestamp {
+  font-size: 0.7rem;
+  margin-bottom: 3px;
+}
 .post-container .post .comment-section .comment-box {
   display: flex;
   flex-direction: row;

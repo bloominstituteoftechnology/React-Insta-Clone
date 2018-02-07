@@ -1,9 +1,12 @@
 import React from 'react';
+let moment = require('moment');
+
 
 class CommentSection extends React.Component {
     state = {
         comments: this.props.comments,
         commentEntry: '',
+        time: moment(this.props.timestamp, "MMMM-Do-YYYY hh:mm-ss"),
     }
 
     handleChange = (event) => {
@@ -32,6 +35,7 @@ class CommentSection extends React.Component {
                     </div>
                     );
                 })}
+                <div className='timestamp'>{this.state.time.fromNow()}</div>
                 <div className='sectioner'></div>
                 <form className='comment-box' onSubmit={this.addComment}>
                     <input type='text' placeholder='Add a comment...' value={this.state.commentEntry} onChange={this.handleChange} />
