@@ -23,16 +23,16 @@ class App extends Component {
 
   addComment = (event) => {
     event.preventDefault();
-    const index = Array.from(event.target.parent.children).indexOf(event.target);
+    const index = Array.from(event.target.parentNode.parentNode.children).indexOf(event.target.parentNode);
     const posts = this.state.posts;
     this.setState({
       posts: [...posts.slice(0, index), {
-          username: this.state.posts[index].username,
-          thumbnailUrl: this.state.posts[index].thumbnailUrl,
-          imageUrl: this.state.posts[index].imageUrl,
-          likes: this.state.posts[index].likes,
-          timestamp: this.state.posts[index].timestamp,
-          comments: [...this.state.posts.comments,
+          username: posts[index].username,
+          thumbnailUrl: posts[index].thumbnailUrl,
+          imageUrl: posts[index].imageUrl,
+          likes: posts[index].likes,
+          timestamp: posts[index].timestamp,
+          comments: [...posts[index].comments,
             {
               username: "algorithmsrock",
               text: `${this.state.newComment}`,
@@ -62,8 +62,9 @@ class App extends Component {
                 <PostContainer key={i} username={post.username} thumbnailUrl={post.thumbnailUrl} 
                   imageUrl={post.imageUrl} likes={post.likes} timestamp={post.timestamp} 
                     comments={JSON.stringify(post.comments)} />
-                <form onSubmit={this.addComment}>
-                  <input id={`new-comment-${i}`} type="text" placeholder="Add a comment..." onChange={this.updateComment} />
+                <form key={i} onSubmit={this.addComment}>
+                  <input key={i} className="new-comment" id={`new-comment-${i}`} type="text"
+                    placeholder="Add a comment..." onChange={this.updateComment} />
                 </form>
               </div>);
             })}
