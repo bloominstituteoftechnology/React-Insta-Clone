@@ -31,7 +31,6 @@ const PostContainer = (props) => {
       </Row>
       <Panel>
           <Well><CommentSection comments={post.comments} /></Well>
-        <br />
       </Panel>
     </Grid>
   )
