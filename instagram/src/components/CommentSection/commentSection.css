@@ -1,0 +1,11 @@
+.bolded {
+    font-weight: bold;
+}
+
+.normal {
+    font-weight: normal;
+}
+
+.comment {
+    padding: 5px;
+}

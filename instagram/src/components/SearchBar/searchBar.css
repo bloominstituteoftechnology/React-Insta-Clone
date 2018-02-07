@@ -1,0 +1,10 @@
+.searchBar {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.logo {
+    float: left;
+    height: 25px;
+    width: 25px;
+}

@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  max-width: 800px;
+}
+
+img {
+  width: 100%;
+}

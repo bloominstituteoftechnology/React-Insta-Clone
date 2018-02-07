@@ -1,0 +1,20 @@
+.container {
+     border: 2px solid black;
+     margin: 0px;
+     padding: 0px;
+     display: flex;
+     flex-flow: column;
+}
+
+.header {
+    display: flex;
+    font-size: 30px;
+    padding: 5px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.thumbnail {
+    width: 40px;
+    height: 40px;
+}
