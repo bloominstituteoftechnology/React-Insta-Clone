@@ -1,5 +1,6 @@
 import React from 'react';
 import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection'
 
 function PostContainer(props) {
   return (<div className="PC__container">
@@ -15,6 +16,9 @@ function PostContainer(props) {
     <div className="container__likes">
       <div>{props.postInfo.likes} people and/or bots liked this.</div>
     </div>
+    {props.postInfo.comments.map((comment, i) => {
+      return <CommentSection key={'2'+i} commentInfo={comment} />
+    })}
   </div>);
 }
 
