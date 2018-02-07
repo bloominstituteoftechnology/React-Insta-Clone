@@ -1,16 +1,26 @@
 import React from 'react';
 import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection.js';
 
-function PostContainer(props) {
+function PostContainer(testing) {
   return(
     <div className="main">
       <div className="top">
-        <img className='profile' src={props.post.thumbnailUrl} alt="profile pic" />
-        <p className="user">{props.post.username}</p>
+        <img className='profile' src={testing.post.thumbnailUrl} alt="profile pic" />
+        <p className="user"><strong><i>{testing.post.username}</i></strong></p>
       </div>
-      <img className='post' src={props.post.imageUrl} alt="the main image" />
+      <img className='post' src={testing.post.imageUrl} alt="the main pic" />
       <div className="likes">
-        <p className="NoLikes">{props.post.likes} likes</p>
+        <p className="NoLikes">{testing.post.likes} likes</p>
+      </div>
+      <div className="comments">
+      {
+        testing.post.comments.map(SingleComment => {
+          return <CommentSection
+            comment={SingleComment}
+          />;
+        })
+      }
       </div>
     </div>
   )
