@@ -1,0 +1,13 @@
+.search-text {
+    color: #bfbfbf;
+    opacity: 50%;
+    position: relative;
+    top: -26px;
+}
+.search-icon {
+    width: 12px;
+    opacity: 50%;
+    position: relative;
+    top: -52px;
+    left: -36px; 
+}

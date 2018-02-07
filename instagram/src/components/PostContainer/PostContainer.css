@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.post {
+    width: 452px;
+    border: 1px solid #cccccc;
+}
+.top {
+    text-align: left;
+}
+.thumbnail {
+    width: 70px; 
+    padding: 10px;
+    float: left;				 
+}
+.username {
+    font-weight: bold;
+    padding: 12px 0;
+}
+.image {
+    width: 450px;
+}
+.likes {
+   margin-top: 5px;
+}
