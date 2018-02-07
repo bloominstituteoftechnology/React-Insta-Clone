@@ -1,8 +1,8 @@
 const dummyData = [
     {
         username: "philzcoffee",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/20066915_1526002357431295_3266739979170086912_n.jpg',
+        thumbnailUrl: 'https://tse1.mm.bing.net/th?id=OIP.NCjvfkdCNGcN54zeA4hwoQHaFj&w=244&h=183&c=7&o=5&pid=1.7',
+        imageUrl: 'https://tse1.mm.bing.net/th?id=OIP.6mep0KYM2gDBu0O8BkDk5wHaEL&w=234&h=160&c=7&o=5&pid=1.7',
         likes: 400,
         timestamp: "July 17th 2017, 12:42:40 pm",
         comments: [
@@ -22,8 +22,8 @@ const dummyData = [
     },
     {
         username: "twitch",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985884_314122025700633_6705675951834923008_n.jpg',
+        thumbnailUrl: 'https://tse1.mm.bing.net/th?q=Silly+Dogs&w=120&h=120&c=1&rs=1&qlt=90&pid=InlineBlock&mkt=en-US&adlt=moderate&t=1&mw=247',
+        imageUrl: 'https://stock.adobe.com/premium/Ka0iPs3nqgXxi5GkIKHzuDqoPFSIPMYa?load_type=premium+lp',
         likes: 4307,
         timestamp: "July 15th 2017, 03:12:09 pm",
         comments: [
@@ -51,7 +51,7 @@ const dummyData = [
     },
     {
         username: "playhearthstone",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
+        thumbnailUrl: 'http://cdn1.smosh.com/sites/default/files/ftpuploads/bloguploads/1113/cartoon-network-better-nick-fb.jpg',
         imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985681_748672068646566_4231149029783764992_n.jpg',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
