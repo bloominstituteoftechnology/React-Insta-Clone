@@ -14,12 +14,10 @@ function SearchBar(props) {
         <img className="lettering" src={lettering} alt="instagram" />
       </div>
       <div className='form'>
-        <form>
-          <input
-            type="text"
-            placeholder="Search"
-          />
-        </form>
+        <input className='search'
+          type="text"
+          placeholder="Search"
+        />
       </div>
       <div className="right">
         <img className='compass' src={compass} alt="explore icon" />

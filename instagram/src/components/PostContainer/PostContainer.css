@@ -2,6 +2,7 @@
   border: 1px solid rgb(227, 227, 227);
   max-width: 500px;
   margin: 10px auto;
+  background: white;
 }
 .head {
   display: flex;
@@ -73,4 +74,22 @@ p {
   margin: 2px 12px;
   padding: 4px 0;
   border-bottom: 1px solid rgb(227, 227, 227);
+}
+
+.addComment {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addAComment {
+  border: 0;
+  font-size: 12px;
+  margin: 4px 0 0 12px;
+}
+
+.options {
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  margin: 0 10px 0 0;
 }

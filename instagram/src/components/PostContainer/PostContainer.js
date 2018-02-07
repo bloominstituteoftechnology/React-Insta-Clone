@@ -32,8 +32,12 @@ function PostContainer(props) {
       <p className='time'>{props.post.timestamp}</p>
       <div className="addComment">
         <form>
+          <input className='addAComment'
+            type='text'
+            placeholder='Add a comment...'
+          />
         </form>
-        <img src={ellipsis} alt="options" />
+        <img className='options' src={ellipsis} alt="options" />
       </div>
     </div>
   )
