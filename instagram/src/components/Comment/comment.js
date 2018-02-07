@@ -8,7 +8,7 @@ class Comment extends Component {
   render() {
     return (
       <div>
-        <p>{this.props.comment.text}</p>
+        <p><span className = 'comment--bold'>{this.props.comment.username}: </span>{this.props.comment.text}</p>
       </div>  
     );
   }

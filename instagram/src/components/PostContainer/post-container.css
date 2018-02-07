@@ -1,10 +1,24 @@
-.image {
-    width: 500px;
-    max-height: 350px;
+.post-container {
+  padding: 20px;
 }
 
-.thumbnail {
-    width: 40px;
-    height: 40px;
+.post-container__head-name {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.post-container__image {
+  width: 500px;
+  max-height: 350px;
+}
+
+.post-container__thumbnail {
+  width: 40px;
+  height: 40px;
+}
+
+.post-container--bold {
+  font-weight: bold;
 }
 

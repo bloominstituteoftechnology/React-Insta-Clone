@@ -8,16 +8,16 @@ class PostContainer extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='post-container'>
         <h1>Post</h1>
         <div>
-          <img className='thumbnail' src={this.props.user.thumbnailUrl} alt='' />
-          <p>{this.props.user.username}</p>
+          <img className='post-container__thumbnail' src={this.props.user.thumbnailUrl} alt='' />
+          <p className='post-container__head-name'>{this.props.user.username}</p>
         </div>
         <div>
-          <img className='image' src={this.props.user.imageUrl} alt ='' />
+          <img className='post-container__image' src={this.props.user.imageUrl} alt ='' />
         </div>
-        <p>{this.props.user.likes} likes</p>
+        <p>{this.props.user.likes} likes <span className='post-container--bold'> Posted: </span>{this.props.user.timestamp}</p>
         <CommentSection comments={this.props.user.comments} />
       </div>
     );
