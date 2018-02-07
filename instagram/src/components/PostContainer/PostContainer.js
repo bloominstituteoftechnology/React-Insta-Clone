@@ -30,6 +30,16 @@ class PostContainer extends Component {
                 })}
               </div>
               <p className="posted-time">{post.timestamp}</p>
+              <form onSubmit={this.handleSubmit}>
+                <label htmlFor="title" />
+                <input
+                  placeholder="Add a comment..."
+                  type="text"
+                  //value={}
+                  onChange={this.handleCommentChange}
+                />
+                <button type="submit">Add Movie</button>
+              </form>
             </div>
           );
         })}
