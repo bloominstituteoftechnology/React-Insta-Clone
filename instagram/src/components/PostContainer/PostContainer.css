@@ -51,6 +51,7 @@ margin-right: 5px;
 .container__comments {
   margin-bottom: 20px;
   max-width: 50%;
+  padding-left: 2px;
   background: rgb(211, 211, 211);
   border: 2px solid black;
   border-radius: 2%;
