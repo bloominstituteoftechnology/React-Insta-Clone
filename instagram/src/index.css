@@ -5,6 +5,10 @@ body {
   font-size: 62.5%;
 }
 
+#root {
+  width: 70%;
+}
+
 h1 {
   font-size: 3rem;
 }
@@ -21,12 +25,21 @@ h4 {
   font-size: 1.5rem;
 }
 
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.7rem;
+}
+
 p {
   font-size: 1rem;
 }
 
 .search-bar {
   border: 4px solid black;
+  margin: 5px;
 }
 
 .post-container {

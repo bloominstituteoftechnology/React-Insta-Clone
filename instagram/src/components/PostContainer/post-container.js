@@ -9,11 +9,12 @@ function PostContainer(props) {
       <h2>Post</h2>
       <p>User: {props.post.username}</p>
       <p>{props.post.thumbnailUrl}</p>
-      <p>{props.post.imageUrl}</p>
+      {/* <p>{props.post.imageUrl}</p> */}
+      <img src={props.post.imageUrl} />
       <p>{props.post.likes} Likes</p>
       <p>posted at {props.post.timestamp}</p>
       <div className='comments'>
-      Comments
+      <h5>Comments</h5>
       {props.post.comments.map((comment, i) => {
         return (
           <CommentSection

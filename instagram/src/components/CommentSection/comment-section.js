@@ -5,8 +5,7 @@ function CommentSection(props) {
   // console.log(props);
   return (
     <div className='comment-section'>
-      {/* <h6>Comment</h6> */}
-      <h5>{props.username}</h5>
+      <h6>{props.username}</h6>
       <p>{props.text}</p>
     </div>
   )
