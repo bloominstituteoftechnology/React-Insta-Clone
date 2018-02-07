@@ -6,3 +6,12 @@
   max-height: 732px;
   height: 100%;
 }
+
+.commentSection--align {
+  display: flex;
+  flex-direction: row;
+}
+
+.commentSection__username {
+  font-weight: 700;
+}
