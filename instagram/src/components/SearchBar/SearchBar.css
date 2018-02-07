@@ -1,0 +1,42 @@
+. {
+  box-sizing: border-box;
+}
+
+.block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+img {
+  height: 35px;
+  width: auto;
+  padding: 5px 10px;
+}
+
+.icon {
+  padding: 5px 15px;
+}
+
+.lettering {
+  padding: 10px 15px 5px 15px;
+  border-left: 1px solid rgb(197, 196, 196);
+}
+
+.form {
+  padding: 5px 0 0 0 ;
+}
+
+input {
+  text-align: center;
+  font-size: 15px;
+  height: 25px;
+  border-color: rgb(236, 235, 235);
+  border-radius: 5px;
+  background: rgb(236, 235, 235);
+}
+
+.compass {
+  opacity: 0.2;
+}
