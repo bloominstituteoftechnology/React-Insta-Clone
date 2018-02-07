@@ -1,11 +1,13 @@
 import React from 'react';
 
 function SearchBar() {
-    return <form onSubmit={this.handleSubmit}>
+    return <form>
     <label htmlFor="search"></label>
     <input
       type="text"
-      onChange={this.handleInputChange}
+      placeholder="Search"
     />
   </form>;
 }
+
+export default SearchBar;
