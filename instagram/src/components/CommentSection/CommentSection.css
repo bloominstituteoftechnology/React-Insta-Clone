@@ -1,0 +1,8 @@
+.commentSection {
+  border: 1px solid rgb(201, 201, 200);
+  box-sizing: border-box;
+  max-width: 614px;
+  width: 100%;
+  max-height: 732px;
+  height: 100%;
+}
