@@ -17,7 +17,7 @@ class PostContainer extends React.Component {
                 <img src={this.props.imageUrl} alt='broke'/>
                 <div> <div onClick={this.like} >{likeHeart}</div> <img src={require('../assets/icons/comment.png')} alt='broke' /> </div>
                 <div> {this.props.likes} </div>
-                <CommentSection comments={this.props.comments} timestamp={this.props.timestamp}/>
+                <CommentSection comments={this.props.comments} timestamp={this.props.timestamp} currentUser={this.props.currentUser}/>
             </div>
         )
     }
