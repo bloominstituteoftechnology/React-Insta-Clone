@@ -52,7 +52,7 @@ const dummyData = [
     {
         username: "playhearthstone",
         thumbnailUrl: 'http://dl1.cbsistatic.com/i/r/2017/09/05/c38cb5f9-9b16-4dc9-8db7-5fd9cada8fde/thumbnail/64x64/34dfa5e2d7b4739ab87bdca2d5d8fa8c/imgingest-1198953273408146569.jpg',
-        imageUrl: 'http://wallpaper-gallery.net/images/pictures-of-awesome-wallpapers/pictures-of-awesome-wallpapers-3.jpg',
+        imageUrl: 'https://imgfave.azureedge.net/image_cache/1346165307185350.jpg',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
         comments: [

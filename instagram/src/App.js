@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
 import SearchBar from './components/SearchBar/SearchBar';
-import CommentSection from './components/CommentSection/CommentSection';
 import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
@@ -14,7 +13,6 @@ class App extends Component {
         </header>
         <SearchBar />
         <PostContainer dd={dummyData} />
-        <CommentSection />
       </div>
     );
   }
