@@ -1,0 +1,7 @@
+.comment-section {
+    box-sizing: border-box;
+
+}
+.comment-section .username {
+    font-weight: bolder;
+}

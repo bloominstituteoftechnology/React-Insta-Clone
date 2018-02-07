@@ -1,8 +1,8 @@
 const dummyData = [
     {
         username: "philzcoffee",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/20066915_1526002357431295_3266739979170086912_n.jpg',
+        thumbnailUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Coffee_cup_icon.svg/120px-Coffee_cup_icon.svg.png?w=50',
+        imageUrl: 'https://images.pexels.com/photos/273222/pexels-photo-273222.jpeg?h=350&auto=compress&cs=tinysrgb',
         likes: 400,
         timestamp: "July 17th 2017, 12:42:40 pm",
         comments: [
@@ -22,8 +22,8 @@ const dummyData = [
     },
     {
         username: "twitch",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985884_314122025700633_6705675951834923008_n.jpg',
+        thumbnailUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Twitch_font_awesome.svg/120px-Twitch_font_awesome.svg.png',
+        imageUrl: 'https://images.pexels.com/photos/1705/love-heart-yellow-photography.jpg?h=350&auto=compress&cs=tinysrgb',
         likes: 4307,
         timestamp: "July 15th 2017, 03:12:09 pm",
         comments: [
@@ -51,8 +51,8 @@ const dummyData = [
     },
     {
         username: "playhearthstone",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985681_748672068646566_4231149029783764992_n.jpg',
+        thumbnailUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Hearthstone_Castle_1985.png/120px-Hearthstone_Castle_1985.png',
+        imageUrl: 'https://images.pexels.com/photos/756439/pexels-photo-756439.jpeg?h=350&auto=compress&cs=tinysrgb',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
         comments: [
