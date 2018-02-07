@@ -1,0 +1,26 @@
+.Post {
+  width: 50vw;
+  margin-bottom: 10px;
+}
+
+.Post__header {
+  border: 1px solid #e6e6e6;
+  padding: 10px 0;
+  background-color: #fff;
+}
+
+img.Post__user-avatar {
+  border-radius: 50%;
+  height: 32px;
+  margin-right: 10px;
+}
+
+img.Post__image {
+  width: 50vw;
+}
+
+.icon--med {
+  font-size: 200%;
+  padding-right: 20px;
+  color: grey;
+}
