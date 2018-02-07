@@ -9,7 +9,6 @@ class PostContainer extends Component {
   render() {
     return (
       <div className='post-container'>
-        <h1>Post</h1>
         <div>
           <img className='post-container__thumbnail' src={this.props.user.thumbnailUrl} alt='' />
           <p className='post-container__head-name'>{this.props.user.username}</p>

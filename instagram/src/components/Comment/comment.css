@@ -1,3 +1,7 @@
+.comment__text {
+  margin-bottom: 5px;
+}
+
 .comment--bold {
   font-weight: bold;
 }
