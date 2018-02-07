@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import dummydata from './dummy-data';
+import PostContainer from '../src/components/PostContainer'
 
 class App extends Component {
   render() {
@@ -11,7 +13,11 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+        <ul>
+           {dummydata.map(obj=>{
+         return <PostContainer key={obj.username} comments={obj.comments} />; 
+         })}
+        </ul>
         </p>
       </div>
     );
@@ -19,3 +25,6 @@ class App extends Component {
 }
 
 export default App;
+
+
+
