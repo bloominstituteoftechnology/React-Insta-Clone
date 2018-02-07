@@ -1,0 +1,50 @@
+.PC__container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+}
+
+.container__top {
+display: flex;
+width: 100%;
+margin-bottom: 10px;
+}
+
+.container__top-img {
+width:30px;
+height:30px;
+border: 1px solid black;
+border-radius: 50%;
+margin-right: 5px;
+}
+
+.container__middle {
+  max-width: 70%;
+  max-height: 600px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+}
+
+.container__bottom {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.bottom__button {
+  height: 30px;
+  border-radius: 10%;
+}
+
+.bottom__button-left {
+  background: green;
+  color: white;
+}
+
+.bottom__button-right {
+  background: blue;
+  color: white;
+}
+
+.container__likes {
+
+}

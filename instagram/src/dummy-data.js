@@ -1,8 +1,8 @@
 const dummyData = [
     {
         username: "philzcoffee",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/20066915_1526002357431295_3266739979170086912_n.jpg',
+        thumbnailUrl: 'http://icons.iconarchive.com/icons/artbees/paradise-fruits/128/Banana-icon.png',
+        imageUrl: 'https://static.pexels.com/photos/38283/bananas-fruit-carbohydrates-sweet-38283.jpeg',
         likes: 400,
         timestamp: "July 17th 2017, 12:42:40 pm",
         comments: [
@@ -22,8 +22,8 @@ const dummyData = [
     },
     {
         username: "twitch",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985884_314122025700633_6705675951834923008_n.jpg',
+        thumbnailUrl: 'https://images.freshop.com/produce_bell_pepper_red/dd97bcec5eb8b1bb8306b18c1ff09514_medium.png',
+        imageUrl: 'https://static.pexels.com/photos/750225/pexels-photo-750225.jpeg',
         likes: 4307,
         timestamp: "July 15th 2017, 03:12:09 pm",
         comments: [
@@ -51,8 +51,8 @@ const dummyData = [
     },
     {
         username: "playhearthstone",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985681_748672068646566_4231149029783764992_n.jpg',
+        thumbnailUrl: 'https://findicons.com/files/icons/1786/oxygen_refit/128/face_monkey.png',
+        imageUrl: 'https://static.pexels.com/photos/786187/pexels-photo-786187.jpeg',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
         comments: [
