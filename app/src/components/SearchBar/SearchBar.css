@@ -2,8 +2,9 @@
   box-sizing: border-box;
 }
 .container {
+  background-color: grey;
+  width: 100%;
   height: 100px;
-  margin: auto;
 }
 .form {
   position: relative;
