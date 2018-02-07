@@ -1,0 +1,5 @@
+{    
+    "less.compile": {
+        "out":       "./index.css", // false => DON'T output .css files (overridable per-file, see below)
+    }
+}

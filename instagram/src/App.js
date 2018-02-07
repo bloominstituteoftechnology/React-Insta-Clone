@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+
+import SearchBar from './components/SearchBar.js';
+import PostContainer from './components/PostContainer.js';
+
+import dummyData from './dummy-data';
 
 class App extends Component {
+  state = {
+    data: dummyData,
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <div>
+          <SearchBar />
+        </div>
+        {this.state.data.map(post => {
+          return <PostContainer key={post.id}
+                                id={post.id}
+                                username={post.username}
+                                imageUrl={post.imageUrl}
+                                likes={post.likes}
+                                timestamp={post.timestamp}
+                                comments={post.comments}
+                                />
+        })}
       </div>
     );
   }
