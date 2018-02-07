@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+.post {
+    width: 452px;
+    border: 1px solid #cccccc;
+}
+.top {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.thumbnail {
+    align-content: left;
+    width: 90px;
+    padding: 20px;
+}
+.username {
+    font-weight: bold;
+}
+.image {
+    width: 450px;
+}
