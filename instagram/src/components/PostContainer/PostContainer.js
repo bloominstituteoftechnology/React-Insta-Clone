@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import CommentSection from '../CommentSection/CommentSection';
-import dummyData from '../../dummy-data';
+import Comment from "../CommentSection/CommentSection";
+import dummyData from "../../dummy-data";
 
 class PostContainer extends Component {
   state = {
@@ -8,20 +8,33 @@ class PostContainer extends Component {
   };
 
   render() {
-    return ( 
-    <div>
-      {this.state.dummyData.map(post => {
-        return (
-        <div>
-          {post.comments.map(comment => {
-            return <CommentSection key={comment.username} user={comment.username} />
-          })}
-        </div>
-      )
-    })
+    return (
+      <div>
+        {this.state.dummyData.map(post => {
+          return (
+            <div>
+              <div>
+                <div>
+                  <img src={post.thumbnailUrl} />
+                  <a href="#">{post.username}</a>
+                </div>
+                <img src={post.imageUrl} />
+                <div>
+                  <img src="/heart" />
+                </div>
+                <p className="like-count">{post.likes} likes</p>
+              </div>
+              <div>
+                {post.comments.map(comment => {
+                  return <Comment key={comment.username} comment={comment} />;
+                })}
+              </div>
+              <p className="posted-time">{post.timestamp}</p>
+            </div>
+          );
+        })}
+      </div>
+    );
   }
-  </div>
-  )
-}
 }
 export default PostContainer;
