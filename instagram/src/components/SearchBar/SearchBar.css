@@ -7,6 +7,9 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
+  max-width: 650px;
+  min-width: 500px;
+  margin: 0 auto;
 }
 
 img {

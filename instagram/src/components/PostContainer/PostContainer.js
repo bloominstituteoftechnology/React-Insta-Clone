@@ -4,15 +4,16 @@ import comment from './comment.png';
 import ellipsis from './ellipsis.png';
 import heart from './heart.png';
 import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection';
 
 function PostContainer(props) {
   return( 
     <div className="main">
       <div className="head">
-        <img className='profile' src={props.post.thumbnailUrl} alt="photo of poster" />
+        <img className='profile' src={props.post.thumbnailUrl} alt="poster's profile favicon" />
         <p className="user">{props.post.username}</p>
       </div>
-      <img className='post' src={props.post.imageUrl} alt="post's photo" />
+      <img className='post' src={props.post.imageUrl} alt="post (visual)" />
       <div className="interactions">
         <div className='left'>
           <img className='leftInter1'src={heart} alt="like post" />
@@ -21,7 +22,7 @@ function PostContainer(props) {
         <img className='rightInter'src={bookmark} alt="bookmark this post" />
       </div>
       <p className="NoLikes">{props.post.likes} likes</p>
-      {/* <CommentSection /> */}
+      {/*{<CommentSection />}*/}
       <p className='time'>{props.post.timestamp}</p>
       <div className="addComment">
         <form>

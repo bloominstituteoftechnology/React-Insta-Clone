@@ -22,14 +22,14 @@ const dummyData = [
     },
     {
         username: "twitch",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985884_314122025700633_6705675951834923008_n.jpg',
+        thumbnailUrl: 'https://scontent-sjc3-1.cdninstagram.com/vp/34d83d4be4de74c2fd4f41f1735b801c/5B0E3B40/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
+        imageUrl: 'https://scontent-sjc3-1.cdninstagram.com/vp/50f1c8ad3a7bb45ef0f191ba9ceb180b/5B17908C/t51.2885-15/s640x640/sh0.08/e35/23161071_189189271643162_5559163126844227584_n.jpg',
         likes: 4307,
         timestamp: "July 15th 2017, 03:12:09 pm",
         comments: [
             {
                 username: "twitch",
-                text: "Epic Street Fighter action here in Las Vegas at #EVO2017!"
+                text: "So we meet again, Kerrigan. #BlizzCon"
             },
             {
                 username: "michaelmarzetta",
@@ -51,14 +51,14 @@ const dummyData = [
     },
     {
         username: "playhearthstone",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985681_748672068646566_4231149029783764992_n.jpg',
+        thumbnailUrl: 'https://scontent-sjc3-1.cdninstagram.com/vp/1b3bb4284ceeb2c1678bfc1d6ae48796/5B19A401/t51.2885-19/s320x320/13398400_140638743023210_310840336_a.jpg',
+        imageUrl: 'https://scontent-sjc3-1.cdninstagram.com/vp/5289c46ea7ad1ba775d677ec8dbcf940/5B150A41/t51.2885-15/s640x640/sh0.08/e35/25038917_1978298569058775_6081161469041311744_n.jpg',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
         comments: [
             {
                 username: "playhearthstone",
-                text: "Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
+                text: "What’s on YOUR menu for the end of the year? #hearthstone #kobolds #menu #newyear #celebration"
             },
             {
                 username: "tapmelon",

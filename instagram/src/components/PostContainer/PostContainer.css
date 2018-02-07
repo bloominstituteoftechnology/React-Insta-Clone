@@ -1,7 +1,7 @@
 .main {
   border: 1px solid rgb(227, 227, 227);
   max-width: 500px;
-  margin: 10px 0;
+  margin: 10px auto;
 }
 .head {
   display: flex;
