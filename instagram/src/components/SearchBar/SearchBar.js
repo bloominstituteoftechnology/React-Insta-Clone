@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./SearchBar.css";
 
 
@@ -8,7 +8,7 @@ function SearchBar(props) {
 
       <div className="header__logo">
         <a href="https://www.instagram.com/">
-          <img src="https://i.imgur.com/4wdX7zL.jpg" />
+          <img alt="logo" src="https://i.imgur.com/4wdX7zL.jpg" />
         </a>
       </div>
 
@@ -20,7 +20,7 @@ function SearchBar(props) {
 
       <div className="header__buttons">
         <a href="https://www.instagram.com/">
-          <img src="https://i.imgur.com/IjXkxAg.jpg" />
+          <img alt="buttons" src="https://i.imgur.com/IjXkxAg.jpg" />
         </a>
       </div>
 

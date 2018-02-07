@@ -1,0 +1,43 @@
+.postContainer {
+  display: flex;
+  box-sizing: border-box;
+  max-width: 614px;
+  width: 100%;
+  max-height: 732px;
+  height: 100%;
+  border: 1px solid rgb(201, 201, 200);
+  justify-content: center;
+  flex-direction: column;
+}
+
+.postContainer--header {
+  display: flex;
+}
+
+.postContainer--header--thumbnail {
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+
+.postContainer--header--image {
+  justify-content: center;
+}
+  
+#name {
+    font-weight: bold;
+}
+
+#id {
+  font-weight: 100;
+}
+
+#image {
+  max-width: 614px;
+  width: 100%;
+  max-height: 600px;
+  height: 100%;
+  align-self: flex-end;
+  display: block;
+}
