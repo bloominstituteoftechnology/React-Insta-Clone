@@ -1,8 +1,8 @@
 const dummyData = [
     {
         username: "philzcoffee",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/20066915_1526002357431295_3266739979170086912_n.jpg',
+        thumbnailUrl: 'https://cdn4.iconfinder.com/data/icons/tiny-coffee/64/tiny_coffee-02-128.png',
+        imageUrl: 'https://cdn.cnn.com/cnnnext/dam/assets/150929101049-black-coffee-stock-super-tease.jpg',
         likes: 400,
         timestamp: "July 17th 2017, 12:42:40 pm",
         comments: [
@@ -22,8 +22,8 @@ const dummyData = [
     },
     {
         username: "twitch",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985884_314122025700633_6705675951834923008_n.jpg',
+        thumbnailUrl: 'http://www-cdn.jtvnw.net/images/twitch_logo3.jpg',
+        imageUrl: 'http://images.eurogamer.net/2017/articles/2017-12-12-17-30/battlegrounds_main_visual_1.jpg/EG11/resize/600x-1/quality/80/format/jpg',
         likes: 4307,
         timestamp: "July 15th 2017, 03:12:09 pm",
         comments: [
@@ -51,8 +51,8 @@ const dummyData = [
     },
     {
         username: "playhearthstone",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985681_748672068646566_4231149029783764992_n.jpg',
+        thumbnailUrl: 'https://blznav.akamaized.net/img/games/logo-hs-beb1a37bc84beefb.png',
+        imageUrl: 'https://cnet2.cbsistatic.com/img/De2uzdPYTM9NYbiwhr0vHSNGqJc=/fit-in/970x0/2017/04/27/c3d70043-0152-4edb-96c9-09f933017ee6/hearthstone-screenshot-04-07-17-14-08-40.png',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
         comments: [
