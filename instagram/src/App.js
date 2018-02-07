@@ -12,10 +12,17 @@ class App extends Component {
     data: dummyData,
   }
 
+  focus = (username) => {
+    const newData = this.state.data.filter(data => {
+      return data.username === username;
+    });
+    this.setState({data: newData});
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar dummy={this.state.data}/>
+        <SearchBar focusData={this.focus}/>
         {this.state.data.map((data) => {
             return <PostContainer 
             key={data.id} 

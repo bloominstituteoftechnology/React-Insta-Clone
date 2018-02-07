@@ -8,6 +8,7 @@ class SearchBar extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    this.props.focusData(this.state.value);
     this.setState({value: ''});
   }
   handleInput = (event) => {
@@ -15,19 +16,20 @@ class SearchBar extends React.Component {
   }
 
   render() {
-  return (
-    <div className="searchBar">
-    <img className="logo" src='https://c1.staticflickr.com/6/5515/10094221256_eb08c5088d_b.jpg' alt="logo"/>
-    <form onSubmit={this.handleSubmit}>
-      <input 
-        type="text" 
-        value={this.state.value} 
-        onChange={this.handleInput}
-      /> 
-    <button type="submit">Search</button>
-  </form></div>
-  )
-}
+    return (
+      <div className="searchBar">
+        <img className="logo" src='https://c1.staticflickr.com/6/5515/10094221256_eb08c5088d_b.jpg' alt="logo"/>
+        <form onSubmit={this.handleSubmit}>
+          <input 
+            type="text" 
+            value={this.state.value} 
+            onChange={this.handleInput}
+          /> 
+        <button type="submit">Search</button>
+        </form>
+      </div>
+    )
+  }
 }
 
 export default SearchBar;
