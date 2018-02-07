@@ -9,6 +9,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <header className="App-header">
+        <h1 className="App-title">Welcome to Cool Instagram</h1>
+      </header>
         <SearchBar />
         {
         this.state.map(post1 => {
@@ -17,9 +20,6 @@ class App extends Component {
             />;
           })
         }
-        <header className="App-header">
-          <h1 className="App-title">Welcome to Cool Instagram</h1>
-        </header>
       </div>
     );
   }
