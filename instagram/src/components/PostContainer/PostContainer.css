@@ -8,18 +8,16 @@
     border: 1px solid #cccccc;
 }
 .top {
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-start;
-    align-items: center;
+    text-align: left;
 }
 .thumbnail {
-    align-content: left;
-    width: 90px;
-    padding: 20px;
+    width: 70px;
+    padding: 10px;
+    float: left;
 }
 .username {
     font-weight: bold;
+    padding: 12px 0;
 }
 .image {
     width: 450px;
