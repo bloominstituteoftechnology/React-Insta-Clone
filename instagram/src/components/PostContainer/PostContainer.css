@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.post {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 20px;
+}
+
+.post__user {
+  display: flex;
+  flex-flow: row;
+  align-self: flex-start;
+  align-items: center;
+}
+
+.post__user-thumbnail {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.post__user-username {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.post__picture {
+  margin-top: 10px;
+  height: 600px;
+  width: 600px;
+  overflow: hidden;
+}

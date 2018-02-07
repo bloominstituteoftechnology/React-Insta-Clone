@@ -1,8 +1,8 @@
 const dummyData = [
     {
         username: "philzcoffee",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/20066915_1526002357431295_3266739979170086912_n.jpg',
+        thumbnailUrl: 'http://www.readersdigest.ca/wp-content/uploads/2011/01/4-ways-cheer-up-depressed-cat.jpg',
+        imageUrl: 'http://2.bp.blogspot.com/-f8yfbnylkFs/UymEKALHCcI/AAAAAAAAMV0/mt_Jj_ANXXM/s1600/3fa6bdfaad0111e3abf8121c25a38fa2_8.jpg',
         likes: 400,
         timestamp: "July 17th 2017, 12:42:40 pm",
         comments: [
@@ -22,8 +22,8 @@ const dummyData = [
     },
     {
         username: "twitch",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985884_314122025700633_6705675951834923008_n.jpg',
+        thumbnailUrl: 'http://r.ddmcdn.com/s_f/o_1/cx_462/cy_245/cw_1349/ch_1349/w_720/APL/uploads/2015/06/caturday-shutterstock_149320799.jpg',
+        imageUrl: 'https://www.bbcgoodfood.com/sites/default/files/editor_files/2016/07/instagram-symmetry-breakfast-300.jpg',
         likes: 4307,
         timestamp: "July 15th 2017, 03:12:09 pm",
         comments: [
@@ -51,8 +51,8 @@ const dummyData = [
     },
     {
         username: "playhearthstone",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
-        imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/19985681_748672068646566_4231149029783764992_n.jpg',
+        thumbnailUrl: 'http://wuvely.com/wp-content/uploads/2017/05/358c57c204a2fec21fa50b917a0728aa.jpg',
+        imageUrl: 'https://www.bbcgoodfood.com/sites/default/files/editor_files/2016/07/instagram-dan-doherty-300.jpg',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
         comments: [
