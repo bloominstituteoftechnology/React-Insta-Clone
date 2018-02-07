@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Comment from '../Comment/comment.js';
 import './comment-section.css';
 
 class CommentSection extends Component {
@@ -8,8 +9,8 @@ class CommentSection extends Component {
   render() {
     return (
       <div>
-        <h1>Comments</h1>
-        <p>{this.props.comments[0].text}</p>
+        <h3>Comments</h3>
+          {this.props.comments.map((val, i) => <Comment key={i} comment={val} />)}
       </div>
     );
   }
