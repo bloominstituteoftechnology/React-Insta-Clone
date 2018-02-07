@@ -1,0 +1,75 @@
+.main {
+  border: 1px solid rgb(227, 227, 227);
+  max-width: 500px;
+  margin: 10px 0;
+}
+.head {
+  display: flex;
+  flex-direction: row;
+}
+.profile {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin: 4px 0 0 2px;
+  padding: 5px;
+}
+p {
+  font-weight: bold;
+  font-size: 12px;
+}
+.user {
+  margin: 10px 0 0 0;
+}
+
+
+.post {
+  padding: 0;
+  margin: 2px 0 0 0;
+  width: 498px;
+  height: auto;
+}
+
+
+.interactions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 4px 0 0 0;
+}
+.leftInter1 {
+  flex-basis: 25px;
+  padding: 4px 6px 4px 12px;
+  height: 25px;
+  width: auto;
+}
+.leftInter2 {
+  flex-basis: 25px;
+  height: 35px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.rightInter {
+  flex-basis: 25px;
+  height: 20px;
+  margin: 0 10px 0 0;
+  padding: 0;
+  align-self: center;
+}
+
+
+.NoLikes {
+  text-align: left;
+  padding: 0 0 0 12px;
+}
+
+.time {
+  color: rgb(173, 173, 173);
+  font-size: 10px;
+  font-weight: normal;
+  text-align: left;
+  margin: 2px 12px;
+  padding: 4px 0;
+  border-bottom: 1px solid rgb(227, 227, 227);
+}

@@ -3,23 +3,26 @@ import bookmark from './Bookmark.png';
 import comment from './comment.png';
 import ellipsis from './ellipsis.png';
 import heart from './heart.png';
+import './PostContainer.css';
 
 function PostContainer(props) {
   return( 
-    <div>
+    <div className="main">
       <div className="head">
-        <img src={props.post.thumbnailUrl} alt="photo of poster" />
-        <h3>{props.post.username}</h3>
+        <img className='profile' src={props.post.thumbnailUrl} alt="photo of poster" />
+        <p className="user">{props.post.username}</p>
       </div>
-      <img src={props.post.imageUrl} alt="post's photo" />
+      <img className='post' src={props.post.imageUrl} alt="post's photo" />
       <div className="interactions">
-        <img src={heart} alt="like post" />
-        <img src={comment} alt="comment on post" />
-        <img src={bookmark} alt="bookmark this post" />
+        <div className='left'>
+          <img className='leftInter1'src={heart} alt="like post" />
+          <img className='leftInter2'src={comment} alt="comment on post" />
+        </div>
+        <img className='rightInter'src={bookmark} alt="bookmark this post" />
       </div>
-      <h4>{props.post.likes} likes</h4>
+      <p className="NoLikes">{props.post.likes} likes</p>
       {/* <CommentSection /> */}
-      <h4>{props.post.timestamp}</h4>
+      <p className='time'>{props.post.timestamp}</p>
       <div className="addComment">
         <form>
         </form>
