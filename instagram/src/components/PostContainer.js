@@ -6,7 +6,7 @@ function PostContainer(props) {
 
     return (
         <div>
-        <img src={props.obj.imageUrl} />
+        <img className="App-image" alt="coffee" src={props.obj.imageUrl} />
         <CommentSection comments={props.obj.comments} />
         </div>
         )
