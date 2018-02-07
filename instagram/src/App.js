@@ -10,7 +10,7 @@ import dummyData from './dummy-data';
 class App extends Component {
   state = {
     data: dummyData,
-    currentUser: '',
+    currentUser: 'default user',
   }
   login = (user) => {
     this.setState({ currentUser: user });
@@ -18,22 +18,24 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div>
+      <div className='main-container'>
+        <div className='top'>
           <PsuedoLogin login={this.login}/>
           <SearchBar />
         </div>
-        {this.state.data.map(post => {
-          return <PostContainer key={post.id}
-                                id={post.id}
-                                username={post.username}
-                                currentUser={this.state.currentUser}
-                                imageUrl={post.imageUrl}
-                                likes={post.likes}
-                                timestamp={post.timestamp}
-                                comments={post.comments}
-                                />
-        })}
+        <div className='post-container'>
+          {this.state.data.map(post => {
+            return <PostContainer key={post.id}
+                                  id={post.id}
+                                  username={post.username}
+                                  currentUser={this.state.currentUser}
+                                  imageUrl={post.imageUrl}
+                                  likes={post.likes}
+                                  timestamp={post.timestamp}
+                                  comments={post.comments}
+                                  />
+          })}
+        </div>
       </div>
     );
   }

@@ -1,5 +1,221 @@
-body {
+body,
+#root {
   margin: 0;
   padding: 0;
+  font-family: Montserrat, Ariel;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root {
+  width: 100%;
+}
+.main-container {
+  width: 100%;
   font-size: 62.5%;
+}
+.top {
+  font-size: 0.73rem;
+  color: #A3A6A8;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #E6E6E6;
+}
+.top .login-container {
+  width: 52%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 5px;
+}
+.top .login-container input {
+  background: #FAFAFA;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #cfcfcf;
+}
+.top .search-container {
+  width: 52%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.top .search-container .logos {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  margin: 8px;
+}
+.top .search-container .logos .logo .instagram {
+  width: 140px;
+  height: auto;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.top .search-container .logos .small-logo {
+  border-right: 1px solid black;
+}
+.top .search-container .logos .small-logo .icon {
+  width: 33px;
+  height: auto;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.top .search-container form {
+  width: 22%;
+}
+.top .search-container form input {
+  height: 28px;
+  width: 100%;
+  margin: 15px;
+  text-align: center;
+  border-radius: 3px;
+  background: #FAFAFA;
+  border: 1px solid #cfcfcf;
+}
+.top .search-container form input:focus {
+  outline: none;
+}
+.top .search-container form button {
+  cursor: pointer;
+}
+.top .search-container .options {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+.top .search-container .options .compass {
+  height: auto;
+  width: 35px;
+  margin: 10px;
+  cursor: pointer;
+}
+.top .search-container .options .heart {
+  height: auto;
+  width: 35px;
+  margin: 10px;
+  cursor: pointer;
+}
+.top .search-container .options .profile {
+  height: auto;
+  width: 35px;
+  margin: 10px;
+  cursor: pointer;
+}
+.post-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #FAFAFA;
+}
+.post-container .post {
+  width: 601px;
+  background: white;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  margin-top: 50px;
+}
+.post-container .post .post-name-section {
+  height: 33px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-size: 0.9rem;
+  margin: 15px;
+}
+.post-container .post .post-name-section .profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: black;
+  margin-right: 12px;
+}
+.post-container .post .post-name-section .username {
+  cursor: pointer;
+  font-weight: bold;
+}
+.post-container .post .post-img {
+  object-fit: cover;
+  width: 599px;
+  height: 599px;
+}
+.post-container .post .post-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px;
+  margin-bottom: 6px;
+}
+.post-container .post .post-options .post-options-left {
+  order: -1;
+  display: flex;
+  flex-direction: row;
+}
+.post-container .post .post-options .post-options-left .heart-action {
+  width: 25px;
+  height: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.post-container .post .post-options .post-options-left .comment-action {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+.post-container .post .post-options .bookmark {
+  width: 25px;
+  height: auto;
+  cursor: pointer;
+}
+.post-container .post .likes {
+  margin-left: 17px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.post-container .post .comment-section {
+  margin: 17px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+.post-container .post .comment-section .comment {
+  margin-bottom: 6px;
+}
+.post-container .post .comment-section .comment .comment-username {
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.post-container .post .comment-section .sectioner {
+  width: 100%;
+  border-top: 1px solid #EEEEEE;
+}
+.post-container .post .comment-section .comment-box {
+  display: flex;
+  flex-direction: row;
+}
+.post-container .post .comment-section .comment-box input {
+  width: 100%;
+  height: 50px;
+  border: none;
+}
+.post-container .post .comment-section .comment-box input:focus {
+  outline: none;
+}
+.post-container .post .comment-section .comment-box .ellipsis {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+  margin-top: 18px;
 }

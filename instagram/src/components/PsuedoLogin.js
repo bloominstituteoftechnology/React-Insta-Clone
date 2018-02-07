@@ -11,9 +11,9 @@ class PsuedoLogin extends React.Component {
 
     render() {
         return (
-            <div>
-            <input type='type' value={this.state.entry} placeholder='Type Username here' onChange={this.handleChange} />
-            <button onClick={() => {this.props.login(this.state.entry)}}>Login</button>
+            <div className='login-container'>
+                <input type='type' value={this.state.entry} placeholder='Username -> Click' onChange={this.handleChange} />
+                <button onClick={() => {this.props.login(this.state.entry)}}>Login</button>
             </div>
         );
     }

@@ -23,16 +23,20 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='comment-section'>
                 {this.state.comments.map(comment => {
                     return(
-                    <div key={comment.id}>
-                        <h4>{comment.username}</h4>
-                        <div>{comment.text}</div>
+                    <div key={comment.id} className='comment'>
+                        <span className='comment-username'>{comment.username}</span>
+                        <span className='comment-text'>{comment.text}</span>
                     </div>
                     );
                 })}
-                <form onSubmit={this.addComment}> <input type='text' placeholder='This doesnt work' onChange={this.handleChange} /> </form>
+                <div className='sectioner'></div>
+                <form className='comment-box' onSubmit={this.addComment}>
+                    <input type='text' placeholder='Add a comment...' value={this.state.commentEntry} onChange={this.handleChange} />
+                    <div><img className='ellipsis' src={require('../assets/icons/ellipsis.png')} alt='broke' /></div>
+                </form>
             </div>
         );
     }
