@@ -17,7 +17,7 @@ class SearchBar extends React.Component {
     return (
       <Navbar>
         <NavbarBrand>
-          <b>Instaclone</b>
+          <b>Instaclone </b>
           <input type="text" onChange={this.handleSubmit}
           ref={input => this.input = input}
           placeholder="Search"></input>

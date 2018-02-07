@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Panel, Image, Grid, Row, Col, Clearfix } from 'react-bootstrap';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar.js'
 import PostContainer from './components/PostContainer/PostContainer.js'
@@ -6,7 +7,9 @@ import PostContainer from './components/PostContainer/PostContainer.js'
 import './App.css';
 
 class App extends Component {
+  nextId = 1;
   state = {
+    id: 1,
     allPosts: [],
     renderedPosts: [],
   };
@@ -18,13 +21,18 @@ class App extends Component {
     });
   }
 
+  getNextId = () => {
+    return this.nextId++;
+  }
+
   filterPosts = (filter) => {
     if (filter === '') {
       this.setState({ renderedPosts: this.state.allPosts});
     } else {
       const filterPosts = this.state.allPosts.filter(
         post => post.username.includes(filter));
-        this.setState({ renderedPosts: filterPosts })
+        this.setState({
+          renderedPosts: filterPosts })
     }
   }
 
@@ -35,13 +43,13 @@ class App extends Component {
           <SearchBar posts={this.state.renderedPosts}
           filterPosts={this.filterPosts} />
         </div>
-        <div>
+        <Grid>
         {this.state.renderedPosts.map((post, i) => {
           return (
-            <PostContainer post={post} />
+            <PostContainer key={i} post={post} />
           )
         })}
-        </div>
+        </Grid>
       </div>
     )
   }

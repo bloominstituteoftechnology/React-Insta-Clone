@@ -1,30 +1,36 @@
 import React from 'react';
+import { Panel, Image, Grid, Row, Col, Clearfix } from 'react-bootstrap';
 import CommentSection from '../CommentSection/CommentSection.js'
 
 const PostContainer = (props) => {
   const post = props.post;
 
   return (
-    <div className="PostContainer">
-      <div>
-        <img src={post.thumbnailUrl} alt={post.thumbnailUrl} />
-        <h3>{post.username}</h3>
-      </div>
+    <Grid>
+      <Row>
+        <Col>
+          <Image src={post.thumbnailUrl} alt={post.thumbnailUrl} responsive />
+        </Col>
+        <Col>
+          <h3>{post.username}</h3>
+        </Col>
+      </Row>
 
-      <div>
-        <img src={post.imageUrl} alt={post.imageUrl} />
-      </div>
+      <Row>
+        <Image src={post.imageUrl} alt={post.imageUrl} responsive />
+      </Row>
 
-      <div>
-        <h3>Likes: {post.likes}</h3>
-      </div>
-
-      <div>
-        <h3>{post.timestamp}</h3>
-      </div>
+      <Row>
+        <Col>
+          Likes: {post.likes}
+        </Col>
+        <Col>
+          {post.timestamp}
+        </Col>
+      </Row>
 
       <CommentSection comments={post.comments} />
-    </div>
+    </Grid>
   )
 }
 

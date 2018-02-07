@@ -1,9 +1,10 @@
 import React from 'react';
+import { Panel, Image, Grid, Row, Col, Clearfix } from 'react-bootstrap';
 
 class CommentSection extends React.Component {
   nextId = 1;
   state = {
-    id: 0,
+    id: 1,
     username: 'User',
     comments: [],
     newComment: '',
@@ -42,23 +43,23 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <div className="CommentSection">
+      <Grid>
         {this.state.comments.map((comment, i) => {
           return (
-            <div key={i}>
-              <h4>{comment.username}</h4>
-              <p>{comment.text}</p>
-            </div>
+            <Col key={this.getNextId()}>
+              <Row><strong>{comment.username}</strong></Row>
+              <Row>{comment.text}</Row>
+            </Col>
           );
         })}
         <form onSubmit={this.addComment}>
-        <input 
-        type="text"
-        value={this.state.newComment}
-        onChange={this.updateNewComment}
-        placeholder="Add comment" />
+          <input 
+          type="text"
+          value={this.state.newComment}
+          onChange={this.updateNewComment}
+          placeholder="Add comment" />
         </form>
-      </div>
+      </Grid>
     )
   };
 }
