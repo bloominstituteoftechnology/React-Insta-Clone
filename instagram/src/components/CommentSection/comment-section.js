@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './comment-section.css'
 
 function CommentSection(props) {
   // console.log(props);
   return (
     <div className='comment-section'>
-      <h3>Comment Section</h3>
-      <h4>{props.username}</h4>
+      {/* <h6>Comment</h6> */}
+      <h5>{props.username}</h5>
       <p>{props.text}</p>
     </div>
   )

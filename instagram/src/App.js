@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/search-bar'
 import PostContainer from './components/PostContainer/post-container'
-// import CommentSection from './components/CommentSection/comment-section.js'
 
 class App extends Component {
   state = {dummyData};
@@ -17,8 +15,8 @@ class App extends Component {
         {this.state.dummyData.map((post, i) => {
           return (
           <PostContainer
-          key={i}
-          post={post}
+            key={i}
+            post={post}
           />)
         })}
       </div>
