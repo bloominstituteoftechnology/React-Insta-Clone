@@ -43,13 +43,13 @@ class App extends Component {
           <SearchBar posts={this.state.renderedPosts}
           filterPosts={this.filterPosts} />
         </div>
-        <Grid>
+        <div>
         {this.state.renderedPosts.map((post, i) => {
           return (
             <PostContainer key={i} post={post} />
           )
         })}
-        </Grid>
+        </div>
       </div>
     )
   }

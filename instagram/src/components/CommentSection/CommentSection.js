@@ -52,6 +52,7 @@ class CommentSection extends React.Component {
             </Col>
           );
         })}
+        <br />
         <form onSubmit={this.addComment}>
           <input 
           type="text"

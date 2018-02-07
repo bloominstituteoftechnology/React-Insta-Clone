@@ -1,5 +1,5 @@
 import React from 'react';
-import { Panel, Image, Grid, Row, Col, Clearfix } from 'react-bootstrap';
+import { Panel, Image,Thumbnail, Grid, Row, Col, Clearfix } from 'react-bootstrap';
 import CommentSection from '../CommentSection/CommentSection.js'
 
 const PostContainer = (props) => {
@@ -7,29 +7,33 @@ const PostContainer = (props) => {
 
   return (
     <Grid>
+      <br />
       <Row>
         <Col>
-          <Image src={post.thumbnailUrl} alt={post.thumbnailUrl} responsive />
+          <img src={post.thumbnailUrl} width="64" height="64" alt="Nope" />
         </Col>
         <Col>
-          <h3>{post.username}</h3>
+          <h3>&nbsp; {post.username}</h3>
         </Col>
       </Row>
 
       <Row>
-        <Image src={post.imageUrl} alt={post.imageUrl} responsive />
+        <Image src={post.imageUrl} alt="Nope" responsive />
       </Row>
 
       <Row>
         <Col>
-          Likes: {post.likes}
+          <strong>Likes:</strong> {post.likes}
         </Col>
         <Col>
-          {post.timestamp}
+          &nbsp; <strong>Posted:</strong> {post.timestamp}
         </Col>
       </Row>
-
-      <CommentSection comments={post.comments} />
+      <Panel>
+        <br />
+          <CommentSection comments={post.comments} />
+        <br />
+      </Panel>
     </Grid>
   )
 }
