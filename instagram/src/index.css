@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #a9a9a9;
+  font-family: Roboto, sans-serif;
+
+}
+
+.app {
+  margin: 0 auto;
+  max-width: 1100px;  
+  background: #74ebd5;
+  background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
+  background: linear-gradient(to right, #ACB6E5, #74ebd5);
+}

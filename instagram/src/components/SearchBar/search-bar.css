@@ -1,0 +1,17 @@
+.search {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.search__input {
+  height: 40px;
+  width: 350px;
+  margin: 0;
+  padding-left: 20px;
+  box-sizing: border-box;
+  outline: none;
+  background-color: #e7e7e7;
+  border: none;
+  font-size: 20px;
+  color: #666;
+}
