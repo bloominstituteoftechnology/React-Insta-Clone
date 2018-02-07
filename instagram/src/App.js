@@ -15,7 +15,7 @@ class App extends Component {
         <p className="App-intro">
         <ul>
            {dummydata.map(obj=>{
-         return <PostContainer key={obj.username} comments={obj.comments} />; 
+         return <PostContainer key={obj.username} obj={obj} />; 
          })}
         </ul>
         </p>
