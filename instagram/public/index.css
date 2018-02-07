@@ -1,0 +1,28 @@
+.App {
+
+}
+
+.post-container {
+	border: 1px solid gray;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.post-container .username{
+	color: red;
+}
+
+.comment {
+	text-align: left;
+}
+.form {
+	text-align: left;
+}
+
+.likes {
+	text-align: left;
+}
+
+.time {
+	text-align: left;
+}
