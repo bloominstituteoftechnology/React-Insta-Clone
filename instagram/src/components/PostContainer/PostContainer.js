@@ -22,7 +22,13 @@ function PostContainer(props) {
         <img className='rightInter'src={bookmark} alt="bookmark this post" />
       </div>
       <p className="NoLikes">{props.post.likes} likes</p>
-      {/*{<CommentSection />}*/}
+      {
+        props.post.comments.map(comment => {
+          return <CommentSection 
+            comment={comment}
+          />;
+        })
+      }
       <p className='time'>{props.post.timestamp}</p>
       <div className="addComment">
         <form>
