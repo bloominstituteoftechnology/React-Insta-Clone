@@ -16,8 +16,9 @@ class App extends Component {
     return (
       <div className="container">
         <SearchBar />
-        <PostContainer dummy={dummyData} />
-        
+        <div className="container--main">
+          <PostContainer dummy={dummyData} />
+        </div>
       </div>
     );
   }

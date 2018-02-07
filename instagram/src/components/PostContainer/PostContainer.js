@@ -9,7 +9,7 @@ function PostContainer(props) {
 
         <img className="postContainer--header--thumbnail" alt="thumbnail" src="https://scontent-lax3-2.cdninstagram.com/vp/d019d2aea0535e4f0bb4c0c1c3995b6f/5B0806B9/t51.2885-19/11356421_1603857263217252_510625750_a.jpg" />
 
-        <p id="username">{props.dummy[0].username}</p>
+        <p className="postContainer--header--username">{props.dummy[0].username}</p>
 
       </div>
       
