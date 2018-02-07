@@ -5,7 +5,7 @@ import searchIcon from './search-icon.png';
 const SearchBar = () => {
   return (
     <div>
-      <input type="text" placeholder="Search" />
+      <input className="input" type="text" placeholder="Search" />
       <img className="search-icon" src={searchIcon} alt="search icon" />
     </div>
   );

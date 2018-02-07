@@ -12,7 +12,7 @@ class App extends Component {
       posts: dummyData, 
       newComment: '',
     };
-  } 
+  }
   
   updateComment = (event) => {
     this.setState({
@@ -38,7 +38,7 @@ class App extends Component {
               text: `${this.state.newComment}`,
             }
           ],
-        }, ...posts.slice(index, posts.length)],
+        }, ...posts.slice(index + 1, posts.length)],
       newComment: '',
     });
     document.getElementById(`new-comment-${index}`).value = '';
