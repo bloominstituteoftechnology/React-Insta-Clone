@@ -1,0 +1,79 @@
+
+.post-container {
+	border: 1px solid gray;
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: left;
+	padding: 10px 15px;
+}
+
+.post-container .username{
+	font-size: 20px;
+	font-weight: bold;
+	padding:20px 0px 15px 0px;
+	position: relative;
+
+}
+.username span {
+	padding-left: 34px;
+}
+.image {
+	text-align: center;
+}
+.image img {
+	width: 100%;
+}
+
+.comment {
+	font-size: 18px;
+	padding-bottom: 7px;
+}
+.form {
+	font-size: 18px;
+	padding: 10px 0px;
+}
+.form input {
+	width: 80%;
+	padding: 10px;
+}
+.form button {
+	padding: 10px;
+}
+.likes {
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+.time {
+
+}
+
+.search-box {
+	max-width: 900px;
+	width: 100%;
+	background: gray;
+	margin: 0 auto;
+	height: 170px;
+}
+.search-box .app-title {
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Pacifico', cursive;
+	font-size: 50px;
+	color: white;
+}
+
+.search-box input {
+	font-size: 20px;
+	width: 600px;
+	margin-top: 30px;
+	padding: 5px;
+}
+
+.heart {
+	font-size: 33px;
+}
+
+.fa-user-circle {
+	font-size: 30px;
+	position: absolute;
+}
