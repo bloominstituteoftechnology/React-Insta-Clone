@@ -1,0 +1,35 @@
+.postStyle {
+  border-style: groove;
+}
+.postHeader {
+  display: inline-flex;
+  width: 100%;
+}
+
+.thumbnail {
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  justify-content: flex-start;
+}
+
+.postFooter {
+  display: inline-flex;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.commentInput {
+  width: 100%;
+}
+
+.postImage {
+  width: 100%;
+}
+
+.commentButton {
+  width: 10%;
+}

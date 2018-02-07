@@ -1,0 +1,10 @@
+html, body {
+  align-self: center;
+  display: inline-flex;
+  max-width: 1200px;
+  height:100%;
+  font-size: 62.5%;
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

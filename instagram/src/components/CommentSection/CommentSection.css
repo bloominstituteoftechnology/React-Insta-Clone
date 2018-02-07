@@ -1,0 +1,15 @@
+.commentStyle {
+  width: 100%;
+  display: inline-flex;
+}
+
+.usernameComments {
+  height: 100%;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.comment {
+  font-size: 1.5rem;
+}
