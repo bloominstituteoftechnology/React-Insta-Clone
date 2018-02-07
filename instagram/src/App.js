@@ -27,6 +27,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1 class="title"> Poor Man's "Instagram" </h1>
         <SearchBar focusData={this.focus}/>
         {this.state.current.map((data) => {
             return <PostContainer 

@@ -3,6 +3,7 @@ const dummyData = [
         id: 1,
         username: "philzcoffee",
         imageUrl: 'https://c1.staticflickr.com/8/7371/15787647793_67f8b681dc_b.jpg',
+        thumb: 'http://www.urchicago.com/storage/interviews/post-images/FatMikeCokieClown.jpg?__SQUARESPACE_CACHEVERSION=1473965635635',
         likes: 400,
         timestamp: "July 17th 2017, 12:42:40 pm",
         comments: [
@@ -27,6 +28,7 @@ const dummyData = [
         id: 2,
         username: "twitch",
         imageUrl: 'https://metrouk2.files.wordpress.com/2014/05/twitch-tv-2.jpg',
+        thumb: 'http://www.funbull.com/funny-pictures/Funny-Pictures/Punk-Rock-Baby-2279.jpg',
         likes: 4307,
         timestamp: "July 15th 2017, 03:12:09 pm",
         comments: [
@@ -61,6 +63,7 @@ const dummyData = [
         id: 3,
         username: "playhearthstone",
         imageUrl: 'http://4.bp.blogspot.com/-QVuFN7qv2qc/VC7V5tTd3XI/AAAAAAAADF8/vSjxACF4imo/s1600/hearthstone_dwarf_11.jpg',
+        thumb: 'http://media-cache-ec0.pinimg.com/736x/3e/6a/bc/3e6abc7d86f7c92be6fff8e6da494cbf.jpg',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
         comments: [
