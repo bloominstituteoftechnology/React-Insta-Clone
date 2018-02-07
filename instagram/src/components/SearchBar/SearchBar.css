@@ -1,3 +1,24 @@
 .search-bar {
-    background: rosybrown;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: center;
+    align-content: space-between;
+    border-bottom: black 0.5px;
 }
+
+.page-header {
+    
+}
+
+.search-bar img {
+    height: 50px;
+}
+
+.search-input{
+    width: 600px;
+    content:"\e003";
+    align-self: center;
+    padding: 5px 100px;
+}
+

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection'
 import dummyData from '../../dummy-data';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 class PostContainer extends Component {
     state = {dummyData}
@@ -11,16 +12,20 @@ class PostContainer extends Component {
                 {this.state.dummyData.map(post => {
                     return (
                     <div className="post-container">
-                        <div><img src={post.thumbnailUrl} />{post.username}</div>
+                        <div className="username"><img src={post.thumbnailUrl} />{post.username}</div>
                         
                         <div><img src={post.imageUrl} /></div>
                         <div>likes: {post.likes} {post.timestamp}</div>
                         <div className="comment-section">{post.comments.map(comment => {
                             return (
-                                <ul>
-                                    <li>{comment.username}</li>
-                                    <li>{comment.text}</li>
-                                </ul>
+                                <Grid>
+                                    <Row>
+                                    <Col xs={6} md={4}>
+                                        <div className="username">{comment.username}</div>
+                                        <div>{comment.text}</div>
+                                    </Col>
+                                    </Row>
+                                </Grid>
                             )
                         })}
                         </div>
