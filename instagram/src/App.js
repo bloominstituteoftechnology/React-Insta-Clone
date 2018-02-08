@@ -15,14 +15,9 @@ class App extends Component {
 }
 
 class NavBar extends Component {
-  state = {
-    input: '',
-  }
-
   render () {
     return (
       <div className='nav__bar'>
-        <div className='searchbarImg__wrapper'>
 
         <div className='menu__buttons'>        
           <a href=""><img src="https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-32.png" alt="" /></a>
@@ -31,7 +26,6 @@ class NavBar extends Component {
           <a href=""><img src="https://cdn2.iconfinder.com/data/icons/pittogrammi/142/87-32.png" alt="" /></a>
           </div>
         </div>
-      </div>
     );
   }
 }
@@ -41,8 +35,6 @@ class MainContent extends Component {
   render () {
     return (
       <div className='main__content'>
-        <div className='content__heading'>
-        </div>
         </div>
     );
   }
@@ -51,7 +43,3 @@ class MainContent extends Component {
 
 
 export default App;
-
-
-//   
-//

@@ -2,9 +2,16 @@ body {
   background: #fff;
 }
 
+/* Main Navigation */
+
 .menu__buttons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: #FAFAFA;
   border-bottom: 1px solid #ccc;
+  z-index: 20;
 }
 
 .menu__buttons a {
@@ -18,6 +25,26 @@ body {
   color: black;
 }
 
-.menu__buttons a:hover {
-  color: red;
+/* Main Content */
+
+.body__container {
+  background-color: rgb(245, 245, 246);
+  padding-top: 50px;
+  position: absolute;
+  bottom: 0;
+  top: 50px;
+  width: 100%;
 }
+
+.main__content {
+  margin: 0 auto;
+  height: 500px;
+  width: 500px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+
+
+
