@@ -4,19 +4,20 @@ body {
 
 .menu__buttons {
   background: #FAFAFA;
+  border-bottom: 1px solid #ccc;
 }
 
 .menu__buttons a {
   box-sizing: border-box;
   width: 25%;
+  height: 10%;
   display: inline-block;
   margin-left: -3px;
   text-align: center;
   padding: 12px;
+  color: black;
 }
 
-.menu__buttons fa {
-  color: #111;
-  font-size: 25px;
+.menu__buttons a:hover {
+  color: red;
 }
-
