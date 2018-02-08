@@ -43,8 +43,13 @@ class MainContent extends Component {
           <div className="location">location</div>
           </div>
           <div className="time">
-            Time
+            3 Days Ago
           </div>
+
+          {/* <div className="highlight"> */}
+            <img className="highlight" src="http://images2.fanpop.com/images/photos/2800000/Computer-Pup-domestic-animals-2871786-468-351.jpg" alt=""/>
+          {/* </div> */}
+
         </div>
       </div>
     );

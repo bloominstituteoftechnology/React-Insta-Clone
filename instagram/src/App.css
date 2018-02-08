@@ -39,7 +39,7 @@ body {
 .main__content {
   margin: 0 auto;
   height: 500px;
-  width: 500px;
+  width: 600px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 2px;
@@ -55,6 +55,8 @@ body {
   height: 30px;
   width: 30px;
   border-radius: 50%;
+  position: relative;
+  top: 3px;
 }
 
 .profile-info {
@@ -66,6 +68,7 @@ body {
 .time {
   float: right;
   font-size: 12px;
+  font-weight: 700;
   
 }
 
@@ -78,6 +81,10 @@ body {
 .location {
   font-size: 12px;
   color: #111;
+}
+
+.highlight {
+  width: 100%;
 }
 
 
