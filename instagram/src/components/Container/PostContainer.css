@@ -1,0 +1,55 @@
+.Posts {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	width: 500px;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.Post {
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	margin-bottom: 40px;
+	margin-top: -20px;
+	
+}
+
+.Post-head {
+	display: flex;
+	height: 60px;
+	left: 50px;
+}
+
+.Post-head img {
+	height: 80px;
+	position: relative;
+	border-radius: 50%;
+	padding: 15px;
+	width: 80px;
+	bottom: 10px;
+}
+
+.Post-head h3 {
+	font-weight: bold;
+	font-size: 15px;
+	position: relative;
+	left: -10px;
+	
+}
+
+.Post-img {
+	width: 100%;
+}
+
+.Post-img img {
+	background-size: contain;
+	width: 100%;
+}
+
+.Post-body {
+	margin: 15px;
+}
+
+.Post-likes {
+	display: inline;
+	font-size: 15px;
+	font-weight: bold;
+}

@@ -1,0 +1,32 @@
+.Comment {
+	margin-top: 10px;
+}
+
+.Comment-user {
+	font-weight: 800;
+	font-size: 14px;
+}
+
+.Comment-body {
+	padding-left: 5px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.Comments-add {
+	border-top: .5px solid rgba(0, 0, 0, 0.2);
+	opacity: .5;
+	font-weight: bold;
+}
+
+.Comments-add input {
+	margin-top: 15px;
+	border: none;
+}
+
+.Comments-time {
+	margin: 10px 0 10px 0;
+	opacity: .5;
+	text-transform: uppercase;
+	font-size: 10px;
+}
