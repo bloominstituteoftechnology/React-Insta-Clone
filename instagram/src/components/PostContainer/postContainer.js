@@ -5,6 +5,7 @@ import React from 'react';import ReactDOM from 'react-dom';import './index.cs
 // Go outside of the component and create an array
 
 // AFTER MODELING REMOVE THIS ARRAY AND USE DUMMY-DATA.JS
+/*
 const dummyData = [
 	{
 		username: "philzcoffee",
@@ -28,22 +29,38 @@ const dummyData = [
 		]
 	}
 ];
-
+*/
 
 // CHANGE CLASS NAMES TO MEET SPEC AND ADD JSX AND JS LOGIC
 class postContainer extends React.Component {
 	render () {
 		return (
-			<div className='message-box'>
-				<header className="App-header">
-					<img src={"./assets/android-icon-96x96.png"} className="App-logo" alt="logo" />
-					<h1 className="App-title">This is D2rd-o-Gram</h1>
-				</header>
-				Hello, my name is Post Container {this.props.name}
+			<div className='userHeader'>
+				<div className='userLogo'>
+					<img src={"./assets/android-icon-96x96.png"} className="App-logo" alt="logo" /> 
+				</div>
+				<div className='userName'>
+					{this.props.username}
+				</div>
 			</div>
-		);
+			<div className='postImage'>
+					<img src={"./assets/[placeholder-someImage].png"} className="postLogo" alt="image" /> 
+			</div>
+			<div className='favicons'>
+				<img src={"./assets/[placeholder-HeartIcon]"} className="App-logo" alt="logo" /> 
+				<img src={"./assets/[placeholder-CommentIcon]"} className="App-logo" alt="logo" /> 
+			</div>
+			<div className='postLikes'>
+				{this.props.likes}
+			</div>
+			<div className='postComment'>
+					{this.props.userName} + ":" + {this.props.text} 
+					{this.props.comments}
+			</div>
+		)}
 	}
-}
+	
+
 
 
 

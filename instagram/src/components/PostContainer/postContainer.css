@@ -1,0 +1,16 @@
+/* Styles for postContainer Component */
+.userHeader {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.userLogo {
+  animation: App-logo-spin infinite 20s linear; /* spins logo*/
+  height: 80px;
+}
+.userName {
+  font-size: 1.5em;
+}
+
