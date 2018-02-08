@@ -35,7 +35,18 @@ class MainContent extends Component {
   render () {
     return (
       <div className='main__content'>
+        <div className="main__content__header">
+          <div className="profile-img">
+          </div>
+          <div className="profile-info">
+          <div className="name">name</div>
+          <div className="location">location</div>
+          </div>
+          <div className="time">
+            Time
+          </div>
         </div>
+      </div>
     );
   }
 }
