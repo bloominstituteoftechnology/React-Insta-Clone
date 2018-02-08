@@ -34,15 +34,16 @@ body {
   bottom: 0;
   top: 50px;
   width: 100%;
+  /* box-sizing: border-box; */
 }
 
 .main__content {
   margin: 0 auto;
-  height: 500px;
   width: 600px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 2px;
+  /* box-sizing: border-box; */
 }
 
 .main__content__header {
@@ -87,5 +88,15 @@ body {
   width: 100%;
 }
 
+.likes {
+  font-weight: 700;
+  font-size: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.input {
+  width: 100%;
+}
 
 

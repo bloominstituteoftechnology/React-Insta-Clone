@@ -46,9 +46,16 @@ class MainContent extends Component {
             3 Days Ago
           </div>
 
-          {/* <div className="highlight"> */}
+     
             <img className="highlight" src="http://images2.fanpop.com/images/photos/2800000/Computer-Pup-domestic-animals-2871786-468-351.jpg" alt=""/>
-          {/* </div> */}
+            <div className="likes">21 Likes</div>
+            <div className="caption">Description Here</div>
+            <div className="comments"> Here Are My Comments</div>
+            <input 
+            type="text" 
+            class="input" 
+            placeholder="Comment" style='padding-left: 5px'
+            />
 
         </div>
       </div>
