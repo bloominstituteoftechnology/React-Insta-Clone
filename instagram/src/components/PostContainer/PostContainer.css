@@ -1,0 +1,37 @@
+.postContainer {
+  display: flex;
+  box-sizing: border-box;
+  max-width: 614px;
+  width: 100%;
+  max-height: 732px;
+  height: 100%;
+  border: 1px solid rgb(201, 201, 200);
+  flex-direction: column;
+  justify-content: center;
+}
+
+.postContainer--header {
+  display: flex;
+  height: 60px;
+}
+
+.postContainer--header--thumbnail {
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin: 14px 15px 0 15px;
+}
+
+.postContainer--header--username {
+  margin-top: 15px;
+}
+ 
+#image {
+  max-width: 614px;
+  width: 100%;
+  max-height: 600px;
+  height: 100%;
+  align-self: flex-end;
+  display: block;
+}

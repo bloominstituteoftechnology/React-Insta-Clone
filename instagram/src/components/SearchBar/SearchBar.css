@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__searchbar--styling {
+  text-align: center;
+  margin-top: 28px;
+}

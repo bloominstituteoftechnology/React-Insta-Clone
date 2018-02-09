@@ -1,7 +1,7 @@
 const dummyData = [
     {
         username: "philzcoffee",
-        thumbnailUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
+        thumbnailUrl: 'https://scontent-lax3-2.cdninstagram.com/vp/d019d2aea0535e4f0bb4c0c1c3995b6f/5B0806B9/t51.2885-19/11356421_1603857263217252_510625750_a.jpg',
         imageUrl: 'https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/20066915_1526002357431295_3266739979170086912_n.jpg',
         likes: 400,
         timestamp: "July 17th 2017, 12:42:40 pm",
