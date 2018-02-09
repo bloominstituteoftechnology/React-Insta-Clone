@@ -4,6 +4,7 @@
     margin: 10px 0;
 }
 .post {
+    text-align: left;
     width: 452px;
     border: 1px solid #cccccc;
 }
@@ -23,5 +24,21 @@
     width: 450px;
 }
 .likes {
-    margin-top: 5px;
+    margin: 10px 10px 0 10px;
+    font-weight: bold;
+    float: left;
+}
+.likes-container {
+    margin-bottom: 5px;
+}
+.timestamp {
+    margin: 5px 10px;
+    color: #909090;
+    font-size: 12px;
+    font-variant: small-caps;
+    text-align: left;
+}
+.heart-icon {
+    width: 22px;
+    margin: 10px 0 5px 0;
 }

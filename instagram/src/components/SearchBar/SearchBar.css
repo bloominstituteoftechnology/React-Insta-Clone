@@ -1,4 +1,4 @@
-.search-input {
+#search-input {
     z-index: 3;
     background: rgba(255, 255, 255, 0);
     position: relative;
@@ -6,7 +6,7 @@
     height: 30px;
 }
 .search-text {
-    color: #bfbfbf;
+    color: #909090;
     opacity: 50%;
     z-index: 2;
     position: relative;
@@ -25,7 +25,11 @@
     height: 30px;
     position: relative;
     top: -30px;
-    left: calc(50% - 100px);
+    left: calc(50% - 165px);
     background: white;
     z-index: 1;
+}
+.reset-button {
+    width: 120px;
+    margin-left: 10px;
 }
