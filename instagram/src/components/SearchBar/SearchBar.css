@@ -1,0 +1,35 @@
+#search-input {
+    z-index: 3;
+    background: rgba(255, 255, 255, 0);
+    position: relative;
+    width: 200px;
+    height: 30px;
+}
+.search-text {
+    color: #909090;
+    opacity: 50%;
+    z-index: 2;
+    position: relative;
+    top: 4px;
+}
+.search-icon {
+    width: 12px;
+    opacity: 50%;
+    z-index: 2;
+    position: relative;
+    top: -21px;
+    left: -35px; 
+}
+.search-container {
+    width: 200px;
+    height: 30px;
+    position: relative;
+    top: -30px;
+    left: calc(50% - 165px);
+    background: white;
+    z-index: 1;
+}
+.reset-button {
+    width: 120px;
+    margin-left: 10px;
+}
