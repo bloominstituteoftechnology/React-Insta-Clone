@@ -1,0 +1,74 @@
+.PostContainer {
+	margin: 25px;
+	width: 502px;
+
+	border-style: solid;
+  border-width: 1px;
+  border-color: #ededed;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.PostHeader {
+	display: flex;
+	flex-direction: row;
+}
+
+.PostHeader__thumbnail {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	margin: 10px;
+}
+
+.PostHeader__username {
+	font-weight: bold; 
+
+	align-self: center;
+}
+
+.PostImage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.PostImage__image {
+	width: 500px;
+	height: 500px;
+	object-fit: contain;
+}
+
+
+.PostInteractionContainer button {
+	border: none;
+	outline: none;
+}
+
+.PostInteractionContainer img {
+	width: 35px;
+	height: 35px;
+}
+
+.PostLikes {
+	margin-top: 0;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+.PostCommentsContainer {
+	margin: 10px;
+/*	border-bottom: solid;
+	border-width: 1px;
+  border-color: #ededed;
+*/}
+
+/*.PostTimeContainer {
+	font-size: 10px;
+}*/
+
+.PostFooter {
+	/*margin-bottom: 10px;*/
+}

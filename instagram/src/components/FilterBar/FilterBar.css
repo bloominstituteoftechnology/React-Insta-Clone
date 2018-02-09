@@ -1,0 +1,9 @@
+.FilterBar {
+	text-align: center;
+	margin: 10px;
+	width: 250px;
+}
+
+.FilterBar:placeholder-shown {
+	text-align: center;
+}
