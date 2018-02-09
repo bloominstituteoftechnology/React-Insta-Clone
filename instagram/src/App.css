@@ -1,0 +1,103 @@
+body {
+  background: #fff;
+}
+
+/* Main Navigation */
+
+.menu__buttons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #FAFAFA;
+  border-bottom: 1px solid #ccc;
+  z-index: 20;
+}
+
+.menu__buttons a {
+  box-sizing: border-box;
+  width: 25%;
+  height: 10%;
+  display: inline-block;
+  margin-left: -3px;
+  text-align: center;
+  padding: 12px;
+  color: black;
+}
+
+
+/* Main Content */
+
+.body__container {
+  background-color: rgb(245, 245, 246);
+  padding-top: 50px;
+  position: absolute;
+  bottom: 0;
+  top: 50px;
+  width: 100%;
+  /* box-sizing: border-box; */
+}
+
+.main__content {
+  margin: 0 auto;
+  width: 600px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  /* box-sizing: border-box; */
+}
+
+.main__content__header {
+  padding: 10px;
+}
+
+.profile-img {
+  display: inline-block;
+  background-color: red;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: relative;
+  top: 3px;
+}
+
+.profile-info {
+  display: inline-block;
+  padding-left: 5px;
+
+}
+
+.time {
+  float: right;
+  font-size: 12px;
+  font-weight: 700;
+  
+}
+
+.name {
+  font-size: 14px;
+  color: #111;
+  font-weight: 700;
+}
+
+.location {
+  font-size: 12px;
+  color: #111;
+}
+
+.highlight {
+  width: 100%;
+}
+
+.likes {
+  font-weight: 700;
+  font-size: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.input {
+  width: 100%;
+}
+
+
