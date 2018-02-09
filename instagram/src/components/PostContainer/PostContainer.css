@@ -4,6 +4,51 @@
     margin: 10px 0;
 }
 .post {
+    text-align: left;
+    width: 452px;
+    border: 1px solid #cccccc;
+}
+.top {
+    text-align: left;
+}
+.thumbnail {
+    width: 70px;
+    padding: 10px;
+    float: left;
+}
+.username {
+    font-weight: bold;
+    padding: 12px 0;
+}
+.image {
+    width: 450px;
+}
+.likes {
+    margin: 10px 10px 0 10px;
+    font-weight: bold;
+    float: left;
+}
+.likes-container {
+    margin-bottom: 5px;
+}
+.timestamp {
+    margin: 5px 10px;
+    color: #909090;
+    font-size: 12px;
+    font-variant: small-caps;
+    text-align: left;
+}
+.heart-icon {
+    width: 22px;
+    margin: 10px 0 5px 0;
+}
+
+/*.wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.post {
     width: 452px;
     border: 1px solid #cccccc;
 }
@@ -24,4 +69,4 @@
 }
 .likes {
    margin-top: 5px;
-}
+}*/
