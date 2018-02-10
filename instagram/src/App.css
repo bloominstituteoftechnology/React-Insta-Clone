@@ -1,0 +1,5 @@
+@import './components/PostContainer/PostContainer.css';
+
+.container {
+ max-width:600px;
+}
