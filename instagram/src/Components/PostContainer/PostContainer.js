@@ -5,9 +5,13 @@ import './PostContainer.css';
 const PostContainer = ({ post }) => {
   return (
     <div className="post-container">
-      <div className="thubnail">
-        <img src={post.thumbnailUrl} />
-        <span><b>{post.username}</b></span>
+      <div className="thumbnail">
+        <div className="thumbnail-img">
+          <img src={post.thumbnailUrl} />
+        </div>
+        <div className="thumbnail-username"> 
+          <b>{post.username}</b>
+        </div>
       </div>
       <div className="image">
         <img src={post.imageUrl} />
@@ -18,6 +22,7 @@ const PostContainer = ({ post }) => {
 }
 
 export default PostContainer;
+
 // const PostContainer = (props) => {
 //   console.log(props)
 
@@ -32,6 +37,5 @@ export default PostContainer;
 //   );
 // }
 
-export default PostContainer;
 
 
