@@ -5,17 +5,34 @@ class SearchBar extends Component {
         super();
 
         this.state = {
-            searchItem = []
+            searchItem:''
         };
 
+    };
+
+    handleChange = event => {
+        this.setState({searchItem: event.target.value});
     };
 
     render() {
         return(
             <div className={'row'}>
-                <img src={'./../../logo.svg'} />
-
+                <div className={'col-3'}>
+                <img src={this.props.headerImage} style={{height: '150px', width: '150px'}} alt='logo' />
+                </div>
+                <div className={'col-9'}>
+                    <form>
+                        <input style={{width: '90%'}}
+                            type='text'
+                            onChange={this.handleChange}
+                            placeholder='Search'
+                            value={this.state.searchItem}
+                        />
+                    </form>
+                </div>
             </div>
         );
     }
 }
+
+export default SearchBar;
