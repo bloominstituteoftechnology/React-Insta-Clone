@@ -6,7 +6,7 @@ export default class PostContainer extends Component {
   render() {
     console.log("Post Container props", this.props.data.comments);
     return (
-      <div className="post-container container-fluid">
+      <div className="post-container container">
         <div className="row">
           {
             <img
