@@ -8,7 +8,7 @@ import SearchBar from './components/SearchBar/SearchBar.js';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className='body'>
         <SearchBar />
         {/* <PostContainer /> */}
       </div>
