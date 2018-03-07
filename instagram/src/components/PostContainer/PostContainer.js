@@ -7,10 +7,10 @@ const PostContainer = props => {
     <div>
       <div>
         <div>
-          <img src={post.thumbnailUrl} /> {post.username}
+          <img src={post.thumbnailUrl} alt="Instagram" /> {post.username}
         </div>
         <div className="instaImg">
-          <img src={post.imageUrl} />
+          <img src={post.imageUrl} alt="Instagram" />
         </div>
         <div>{post.likes}</div>
         <div>
