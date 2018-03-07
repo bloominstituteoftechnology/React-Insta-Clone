@@ -15,7 +15,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log('componentdidmount')
     this.setState({ Posts: dummyData });
   }
 

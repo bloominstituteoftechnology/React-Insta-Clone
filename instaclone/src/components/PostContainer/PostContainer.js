@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 
-export const PostContainer = (props) => {
-  return (
-    <div>
+export class PostContainer extends Component {
+  constructor(props) {
+    super(props);
+  }
+  
+  componentDidMount(props) {
+      // userPosts = props.post;
+    }
+    render() {
+      // let userPosts = null;
+
+    
+    return (
       <div>
-        {props.post.map((item) => {
-          return <div>{item.thumbnailUrl} </div>
-        })}
-      </div>
+        {/* <div>{userPosts.username}</div> */}
     </div>
   );
+}
 }
