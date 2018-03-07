@@ -3,6 +3,7 @@ import "./App.css";
 import PostContainer from "./components/PostContainer/PostContainer.js";
 import SearchBar from "./components/SearchBar/SearchBar.js";
 import { dummyData } from "./dummy-data.js";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
   constructor() {
