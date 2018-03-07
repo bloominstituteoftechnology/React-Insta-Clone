@@ -1,0 +1,21 @@
+.PostContainer {
+  max-width: 600px;
+  margin: auto;
+}
+
+img[alt="thumbnail"] {
+  width: 3rem;
+  height: auto;
+  border-radius: 50%;
+  margin: 1.25rem;
+}
+
+img[alt="postimage"] {
+  width: 60rem;
+  height: auto;
+}
+
+.toggle-heart {
+  font-size: 3rem;
+  cursor: pointer;
+}
