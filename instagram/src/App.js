@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar.js';
-import data from './dummy-data.js';
+import dummyData from './dummy-data.js';
 // import PostContainer from './components/PostContainer/PostContainer.js';
 
 
@@ -14,7 +14,7 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    const {dummyData} = data;
+    
     this.setState ({
       dummyDataList: dummyData,
     })
