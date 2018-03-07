@@ -1,21 +1,30 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import "./CommentSection/CommentSection.js";
-import "./PostContainer/PostContainer.js";
-import "./SearchBar/SearchBar.js";
+import PostContainer from "./components/PostContainer/PostContainer.js";
+import SearchBar from "./components/SearchBar/SearchBar.js";
+import { dummyData } from "./dummy-data.js";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data: []
+    };
+  }
+  componentDidMount() {
+    console.log(dummyData);
+    this.setState({ data: dummyData });
+    console.log("CDM Check", this.state.data);
+  }
   render() {
+    console.log("Render Check", this.state.data);
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        {this.state.data.map((post, i) => {
+          return <PostContainer key={i} data={post} />;
+        })}
+
+        <SearchBar data={this.state.data} />
       </div>
     );
   }
