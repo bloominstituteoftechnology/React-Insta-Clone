@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data.js';
 import PostContainer from "./components/PostContainer/PostContainer.js";
@@ -19,7 +18,7 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         {this.state.posts.map( (e,i) =>{
-          return <PostContainer post={e[0]} key={i} />;
+          return <PostContainer className="Post" post={e[0]} key={i} />;
         })
         }
       </div>

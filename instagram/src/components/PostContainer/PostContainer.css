@@ -1,9 +1,10 @@
-.Post{
-  margin:30px;
-}
 .ImageUrl{
-  height:200px;
+  height:600px;
 }
 .ThumbnailUrl{
-  height:80px;
+  height:100px;
+  margin:10px;
+}
+.OriginalPost{
+  width:100%;
 }

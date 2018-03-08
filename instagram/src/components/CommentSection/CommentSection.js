@@ -6,16 +6,27 @@ class CommentSection extends Component{
     super(props);
     this.state = {
       username:this.props.username,
-      text:this.props.text
+      text:this.props.text,
+      original:this.props.original
     }
   }
 
   render(){
-    return (<div className="CommentDiv">
-      <p className="Name">{this.state.username}</p>
-      <p className="Comment">{this.state.text}</p>
-    </div>
-    );
+    if(this.state.original === true){
+      return (<div className="Original">
+        <p className="Name" >{this.state.username}</p>
+        <p className="Comment" >{this.state.text}</p>
+      </div>
+      );
+    }
+    else{
+      return (<div className="CommentDiv">
+        <p className="Name">{this.state.username}</p>
+        <p className="Comment">{this.state.text}</p>
+      </div>
+      );
+    }
+
   }
 }
 

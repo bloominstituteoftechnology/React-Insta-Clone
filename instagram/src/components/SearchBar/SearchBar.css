@@ -1,0 +1,21 @@
+.Nav{
+  position:fixed;
+  z-index:1;
+}
+.DontShow{
+  position:fixed;
+  z-index:1;
+  left:-10px;
+
+}
+
+.Show{
+  position:fixed;
+  border:none;
+  padding: 2px 2px;
+  left:10px;
+}
+
+input{
+  border-radius:5px;
+}

@@ -3,6 +3,13 @@
   border:2px dotted black;
   background:lightgray;
 }
+.Original{
+  margin:5px;
+  padding:5px;
+  background:lightgray;
+  border:none;
+  font-size:.8em;
+}
 .Name{
   font-size:1.5em;
 }
