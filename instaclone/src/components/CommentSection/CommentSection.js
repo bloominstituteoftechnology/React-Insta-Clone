@@ -1,14 +1,14 @@
 import React from 'react';
 
-export const CommentSection = (props) => {
-
+const CommentSection = (props) => {
 
   return (
     <div>
-      {props.post.map((comments) => {
-        return <div>{comments.comment}</div>
-      })}
+      <form>
+        <input />
+      </form>
     </div>
   );
 
 }
+export default CommentSection;
