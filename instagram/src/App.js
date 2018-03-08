@@ -4,6 +4,7 @@ import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
 
+
 class App extends Component {
   constructor() {
     super();
@@ -18,11 +19,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <SearchBar />
-        {this.state.data.map(post => {
-          return <PostContainer key={post.username} data={post} />
-        })}
+
+      <div className="container">
+        <div className="App">
+          <SearchBar />
+          {this.state.data.map(post => {
+            return <PostContainer key={post.username} data={post} />
+          })}
+        </div>
       </div>
     );
   }
