@@ -13,13 +13,16 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const { data } = dummyData;
+    // const { data } = dummyData;
+    // console.log('CDM initialized');
     this.setState({
-      objectArray: data,
+      objectArray: dummyData,
     });
   }
 
   render() {
+    // console.log('render initialized');
+    // console.log(this.state.objectArray);
     return (
       //  this component's div
       <div className="App">
