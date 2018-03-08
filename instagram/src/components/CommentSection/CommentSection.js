@@ -10,7 +10,8 @@ export default class CommentSection extends Component {
         {this.props.comments.map(comment => {
           return (
             <CardText>
-              {comment.username} {comment.text}
+              <span className="font-weight-bold">{comment.username}</span>{" "}
+              {comment.text}
             </CardText>
           );
         })}
