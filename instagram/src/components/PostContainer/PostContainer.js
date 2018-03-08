@@ -8,7 +8,7 @@ const PostContainer = props => {
   return (
     <div className="carDiv">
       <Card className="cardClass">
-        <CardBody>
+        <CardBody className="cardHeader">
           <CardTitle className="profileImg">
             <img src={post.thumbnailUrl} alt="User Profile" /> {post.username}
           </CardTitle>

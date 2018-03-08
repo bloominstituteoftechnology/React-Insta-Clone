@@ -7,6 +7,12 @@
   max-width: 70%;
 }
 
+.cardHeader {
+  display: flex;
+  justify-content: flex-start;
+  /* margin-left: -50px; */
+}
+
 .profileImg img {
   border-radius: 100px;
   width: 50px;
