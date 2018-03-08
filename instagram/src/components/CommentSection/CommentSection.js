@@ -13,7 +13,8 @@ class CommentSection extends Component {
   // addComment() {
   //   event.preventDefault();
   //   const newComment = this.state.commentSubmitted;
-  //   newComment.push(this.state.comments)
+  //   commentSubmitted = event.target.value;
+  //   comment.push(this.state.commentSubmitted)
   //   commentSubmitted = '';
   // }
 
