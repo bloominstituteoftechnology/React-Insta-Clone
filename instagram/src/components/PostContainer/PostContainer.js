@@ -25,6 +25,10 @@ class PostContainer extends Component {
           return (<CommentSection key={this.state.post.comments[i].username + i.toString()} comment={item} />)
         })}
         <p>{this.state.post.timestamp}</p>
+        <hr/>
+        <form>
+          <input type="text" placeholder= "Add a comment..."/>
+        </form>
       </div>
     )
   }
