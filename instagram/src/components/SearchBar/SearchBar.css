@@ -11,3 +11,8 @@
 .col1 {
   border-right: 2px solid lightgray;
 }
+
+.col2 {
+  font-family: cursive;
+  font-size : 20px;
+}
