@@ -3,24 +3,23 @@ import CommentSection from '../CommentSection/CommentSection'
 import PropTypes from 'prop-types';
 
 class PostContainer extends Component {
-    constructor () {
-        super();
+    constructor (props) {
+        super(props);
         this.state = {
-            commentPostsArray: [],
-            tempObj: {},
+            commentPostsArray: this.props.thing.comments,
         }
     }
 
-    componentDidMount() {
-        // all I want is the comments array from each "thing"
-        this.setState = {
-            tempObj: this.props.thing,
-            commentPostsArray: this.props.thing.comments
-        }
-        // console.log('CDM in PostContainer initialized');
-        // console.log(this.state.commentPostArray);
+    // componentDidMount() {
+    //     // all I want is the comments array from each "thing"
+    //     this.setState = {
+    //         tempObj: this.props.thing,
+    //         commentPostsArray: this.props.thing.comments
+    //     }
+    //     // console.log('CDM in PostContainer initialized');
+    //     // console.log(this.state.commentPostArray);
 
-    }
+    // }
 
     render() {
         // console.log('render in PostContainer initialized');

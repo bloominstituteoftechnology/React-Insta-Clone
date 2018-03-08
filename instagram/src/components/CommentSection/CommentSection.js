@@ -2,19 +2,30 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class CommentSection extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
         }
     }
 
-    componentsDidMount() {
-
-    }
+    // componentDidMount() {
+    //     this.setState = {
+    //         commentsArray: this.props.thing
+    //     }
+    // }
 
     render() {
         return (
-            <div></div>
+            <div>
+                {this.props.thing.map(obj => {
+                    return (
+                        <div>
+                            <p>username: {obj.username}</p>
+                            <p>text: {obj.text}</p>
+                        </div>
+                    );
+                })}
+            </div>
         );
     }
 }
