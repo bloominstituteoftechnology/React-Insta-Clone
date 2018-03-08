@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./CommentSection.css";
-import { CardBody, CardSubtitle, CardText } from "reactstrap";
+import { CardBody, CardText } from "reactstrap";
 
 export default class CommentSection extends Component {
   render() {

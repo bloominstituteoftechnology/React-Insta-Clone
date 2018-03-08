@@ -3,13 +3,7 @@ import PropTypes from "prop-types";
 
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection.js";
-import {
-  Container,
-  CardImg,
-  CardBody,
-  CardTitle,
-  CardSubtitle
-} from "reactstrap";
+import { CardImg, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 
 export default class PostContainer extends Component {
   render() {
