@@ -33,7 +33,8 @@ export default class PostContainer extends Component {
         />
         <CardBody>
           <CardText>
-            <i class="far fa-heart" /> <i class="far fa-comment" />
+            <i class="far fa-heart fa-lg mr-3" />
+            {"    "} <i class="far fa-comment fa-lg" />
           </CardText>
           <CardSubtitle className="font-weight-bold">
             {this.props.data.likes} Likes

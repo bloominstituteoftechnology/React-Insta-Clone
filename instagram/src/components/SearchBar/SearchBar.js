@@ -14,7 +14,7 @@ import "./SearchBar.css";
 const SearchBar = props => {
   return (
     <container>
-      <Row className="my-2">
+      <Row className="my-1">
         <Col sm="1" className="col1">
           <img
             className="logo"
