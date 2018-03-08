@@ -10,10 +10,10 @@ class PostContainer extends Component {
         return (
           <div key={post.username + index}>
             <div>
-              <img src={post.thumbnailUrl} alt=" " />
+              <img src={post.thumbnailUrl} alt="InstagramPic" />
               <h5>{post.username}</h5>
             </div>
-            <img src={post.imageUrl} alt=" " />
+            <img src={post.imageUrl} alt="InstagramPic" />
             <div>
               <i className="far fa-heart fa-lg"></i>
               <i className="far fa-comment"></i>
