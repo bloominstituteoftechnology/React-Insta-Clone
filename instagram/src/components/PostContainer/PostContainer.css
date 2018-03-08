@@ -1,0 +1,11 @@
+.thumb {
+  width: 40px;
+  height: 40px;
+  /* margin-left: 5%; */
+  border-radius: 50%;
+}
+
+.img {
+  padding: 30px;
+  
+}
