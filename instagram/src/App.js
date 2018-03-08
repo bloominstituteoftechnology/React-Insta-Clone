@@ -17,11 +17,9 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state);
-    console.log(this.state.username)
     return (
       <div className="App">
-      {/* <PostContainer username={this.state.DummyData.username} */}
+      <PostContainer username={this.state.DummyData.username} />
       </div>
     );
   }
