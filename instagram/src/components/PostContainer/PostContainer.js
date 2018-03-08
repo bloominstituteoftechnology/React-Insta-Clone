@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CommentSection from '../../components/CommentSection/CommentSection';
+import { Card, CardBody, Button, CardTitle, CardText, CardImg } from 'reactstrap';
 import './PostContainer.css';
 
 class PostContainer extends Component {
@@ -13,11 +14,16 @@ class PostContainer extends Component {
         {this.props.people.map(person => {
           return (
           <div className="people" key={person.timestamp}>
-          <h4>{person.username}</h4>
-          <img src={person.thumbnailUrl} alt=""/>
+          <Card>
+              <CardBody>
+          <CardTitle>{person.username}</CardTitle>
+          <CardImg src={person.thumbnailUrl} alt={person.username}/>
           <h4>{person.likes}</h4>
           <h4>{person.timestamp}</h4>
           <CommentSection comments={person.comments} />
+          
+          </CardBody>
+          </Card>
           </div>);
         }
         )}
