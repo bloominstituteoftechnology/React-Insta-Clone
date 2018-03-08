@@ -7,7 +7,7 @@ export default class PostContainer extends Component {
     console.log("Post Container props", this.props.data.comments);
     return (
       <div className="post-container container">
-        <div className="row">
+        <div className="row d-flex align-items-center">
           {
             <img
               className="thumbnail"
@@ -15,7 +15,9 @@ export default class PostContainer extends Component {
               alt="Thumbnail"
             />
           }
-          <div>{this.props.data.username}</div>
+          <div className="username align-middle">
+            {this.props.data.username}
+          </div>
         </div>
         {
           <img
