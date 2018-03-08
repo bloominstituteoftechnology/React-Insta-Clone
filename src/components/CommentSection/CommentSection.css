@@ -1,0 +1,12 @@
+.commentSection {
+    display: flex;
+    margin: 5px 0px 0px 20px;
+}
+
+.commentUserName {
+    margin-top: 5px
+}
+
+.comments {
+    margin: 5px 0px 0px 8px;
+}

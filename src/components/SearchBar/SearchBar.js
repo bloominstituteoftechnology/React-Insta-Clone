@@ -20,7 +20,7 @@ class SearchBar extends Component {
               <span class="search"><input type="text" placeholder="Search.."/></span>
                 
                 <span class="right">
-                    <span class="compass"><img src="http://images.gofreedownload.net/compass-symbol-6425.jpg" height="60" width="60"/></span>
+                    <span class="compass"><img src="https://image.flaticon.com/icons/svg/20/20043.svg" height="60" width="60"/></span>
                     <span class="heart"><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-heart-outline-128.png" height="70" width="70"/></span>
                     <span class="user"><img src="http://icons.iconarchive.com/icons/custom-icon-design/silky-line-user/512/user-icon.png" height="60" width="70"/></span>
                 </span>

@@ -1,10 +1,11 @@
 import React from 'react';
+import './CommentSection.css';
 
 const CommentSection = (props) => {
   return(
-    <div>
-      <div>{props.eachComment.username}</div>
-      <div>{props.eachComment.text}</div>
+    <div class='commentSection'>
+      <div class='commentUserName'><b>{props.eachComment.username}</b></div>
+      <div class='comments'>{props.eachComment.text}</div>
     </div>
   );
 };

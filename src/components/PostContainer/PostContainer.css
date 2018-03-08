@@ -1,0 +1,32 @@
+/* .container {
+    display: flex;
+    flex-wrap: nowrap !important;
+    margin: 20px;
+} */
+    
+.userName {
+    display: flex;
+    margin: 40px 0px 0px 20px;
+    font-weight: bold;
+}
+
+.rounded {
+    border-radius: 50% !important;
+    margin: 0px 15px 0px 0px;
+}
+
+.mainImage {
+    margin: 15px 0px 0px 20px;
+}
+
+.userID {
+    padding-top: 15px;
+}
+
+.likes {
+    margin: 0px 0px 0px 20px;
+}
+
+.commentHeart {
+    margin: 10px 0px 0px 20px;
+}
