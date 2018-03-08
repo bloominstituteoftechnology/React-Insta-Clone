@@ -1,31 +1,23 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
-import SearchBar from './components/SearchBar/SearchBar.js';
-import dummyData from './dummy-data.js';
-// import PostContainer from './components/PostContainer/PostContainer.js';
+import dummyData from './dummy-data';
+import { PostContainer } from './components/PostContainer/PostContainer';
 
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
-    this.state ={
-    dummyDataList: [],
-    }
-  }
-  componentDidMount() {
-    
-    this.setState ({
-      dummyDataList: dummyData,
-    })
-    console.log(this.state.dummyDataList);
+    this.state = { Post: [] }
   }
 
+  componentDidMount() {
+    this.setState({Post: dummyData});
+  }
+  
   render() {
     return (
-      <div className='body'>
-        <SearchBar />
-        {/* <PostContainer /> */}
+      <div className="App">
+        <PostContainer dummyData={this.state.Post} />
       </div>
     );
   }

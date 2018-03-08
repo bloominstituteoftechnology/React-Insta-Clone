@@ -1,39 +1,19 @@
 import React, { Component } from 'react';
-import './SearchBar.css'
+
 class SearchBar extends Component {
-  constructor() {
-    super()
-    this.state = {
-      searchText: ''
+
+    submitFilter = (event) => {
+        const criterion = this.input.value;
+        this.props.filterPosts(criterion);
     }
-    
-    
-  }
-  
-  handleSearchChange = (event) => {
-    this.setState({searchText: event.target.value})
-    console.log(this.state.searchText)
-  }
 
-  searching = (event) => {
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <nav className='navBar'>
-        <div>CameraPic || Instagram 2.0</div>
-        <form onSubmit={this.searching}>
-          <input 
-            type="text" 
-            onChange={this.handleSearchChange} 
-            placeholder='Search for what??' 
-            value={this.state.searchText}
-          />
-        </form>
-      </nav>
-    )
-  }
-}
+    render() {
+        return (
+            <div className='SearchBar'>
+                <input className='SearchBar-field' type='text' onChage={this.submitFilter} ref={input => this.input = input} placeholder='Search'></input>
+            </div>
+        );
+    }
+};
 
 export default SearchBar;
