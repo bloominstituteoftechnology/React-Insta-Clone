@@ -1,7 +1,20 @@
 .sticky {
   position: fixed;
+  margin-bottom: 50px;
+  border-bottom: 0.1px solid lightgray;
 }
 
 .navLinkImgs {
   color: black;
+}
+
+.navBrandItems {
+  display: flex;
+  align-items: center;
+}
+
+.navTitle {
+  margin-left: 20px;
+  font-family: 'Pacifico';
+  font-size: 2em;
 }

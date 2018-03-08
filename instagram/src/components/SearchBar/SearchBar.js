@@ -6,9 +6,12 @@ const SearchBar = () => {
   return (
     <div>
       <Navbar className="sticky">
-        <NavbarBrand>
-          <i className="fab fa-instagram fa-2x" /> NotInstagram
-        </NavbarBrand>
+        <div className="navBrandItems">
+          <NavbarBrand>
+            <i className="fab fa-instagram fa-2x" />{' '}
+            <span className="navTitle">Not Instagram</span>
+          </NavbarBrand>
+        </div>
         <form action="">
           <input type="text" placeholder="Search" />
         </form>
