@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
+import { SearchBar } from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
@@ -18,10 +19,11 @@ class App extends Component {
   }
 
   render() {
-    this.state.Posts.forEach(post => console.log(post));
+    //this.state.Posts.forEach(post => console.log(post));
     return (
       <div className="container">
-        <PostContainer />
+        <SearchBar />
+        {this.state.Posts.map((post, index) => <PostContainer key={index} post={post} />)}
       </div>
     );
   }
