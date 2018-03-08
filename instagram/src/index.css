@@ -22,7 +22,17 @@ body {
 
 .username {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
+}
+
+.commentUserName {
+  display: flex;
+  align-items: center;
+}
+
+.commentBox {
+  margin: 10px 0;
+  text-align: start;
 }
 
 @media (max-width: 800px) {
