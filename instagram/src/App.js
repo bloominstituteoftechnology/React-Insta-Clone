@@ -25,10 +25,10 @@ class App extends Component {
         {this.state.dummyData.map((post, index) => {
           return (
             <div key={index}>
-              <PostContainer insta={post} />;
+              <PostContainer insta={post} />
             </div>
           );
-        })};
+        })}
       </div>
     );
   }

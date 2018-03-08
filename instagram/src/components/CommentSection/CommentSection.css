@@ -1,0 +1,10 @@
+.cmtBody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.cmtUsername {
+  margin-left: 0px;
+  padding-right: 10px;
+}

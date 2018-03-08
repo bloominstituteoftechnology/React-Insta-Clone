@@ -1,0 +1,32 @@
+.carDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.cardClass {
+  max-width: 70%;
+}
+
+.profileImg img {
+  border-radius: 100px;
+  width: 50px;
+}
+
+.likes {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.likeHeart {
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.likeComment {
+  margin-bottom: 20px;
+}
+
+.likesAmt {
+  justify-content: flex-start;
+}
