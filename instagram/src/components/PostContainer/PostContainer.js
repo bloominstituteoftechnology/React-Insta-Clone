@@ -16,22 +16,24 @@ export default class PostContainer extends Component {
     console.log("Post Container props", this.props.data.comments);
     return (
       <div>
-        <CardTitle>
-          <img
-            className="thumbnail"
-            src={this.props.data.thumbnailUrl}
-            alt="Thumbnail"
-          />
-          {this.props.data.username}
-        </CardTitle>
+        <CardBody>
+          <CardTitle>
+            <img
+              className="thumbnail"
+              src={this.props.data.thumbnailUrl}
+              alt="Thumbnail"
+            />
+            {this.props.data.username}
+          </CardTitle>
+        </CardBody>
         <CardImg
-          top
           width="100%"
           src={this.props.data.imageUrl}
           alt="Card image cap"
         />
-        <CardSubtitle>{this.props.data.likes} Likes</CardSubtitle>
         <CardBody>
+          <CardSubtitle>{this.props.data.likes} Likes</CardSubtitle>
+
           {<CommentSection comments={this.props.data.comments} />}
           <small className="text-muted">{this.props.data.timestamp}</small>
         </CardBody>

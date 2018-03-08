@@ -1,21 +1,20 @@
 import React, { Component } from "react";
 import "./CommentSection.css";
-import { CardSubtitle, CardText } from "reactstrap";
+import { CardBody, CardSubtitle, CardText } from "reactstrap";
 
 export default class CommentSection extends Component {
   render() {
     console.log("Comment Section Props", this.props);
     return (
-      <div>
+      <CardBody>
         {this.props.comments.map(comment => {
           return (
-            <div>
-              <CardSubtitle>{comment.username}</CardSubtitle>
-              <CardText>{comment.text}</CardText>
-            </div>
+            <CardText>
+              {comment.username} {comment.text}
+            </CardText>
           );
         })}
-      </div>
+      </CardBody>
     );
   }
 }
