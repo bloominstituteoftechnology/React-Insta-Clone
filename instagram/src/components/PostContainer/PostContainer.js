@@ -3,32 +3,38 @@ import PropTypes from "prop-types";
 
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection.js";
+import {
+  Container,
+  CardImg,
+  CardBody,
+  CardTitle,
+  CardSubtitle
+} from "reactstrap";
 
 export default class PostContainer extends Component {
   render() {
     console.log("Post Container props", this.props.data.comments);
     return (
-      <div className="post-container container">
-        <div className="row d-flex align-items-center">
-          {
-            <img
-              className="thumbnail"
-              src={this.props.data.thumbnailUrl}
-              alt="Thumbnail"
-            />
-          }
-          <div className="username align-middle">
-            {this.props.data.username}
-          </div>
-        </div>
-        {
+      <div>
+        <CardTitle>
           <img
-            className="img-fluid"
-            src={this.props.data.imageUrl}
-            alt="Post"
+            className="thumbnail"
+            src={this.props.data.thumbnailUrl}
+            alt="Thumbnail"
           />
-        }
-        <div>{<CommentSection comments={this.props.data.comments} />}</div>
+          {this.props.data.username}
+        </CardTitle>
+        <CardImg
+          top
+          width="100%"
+          src={this.props.data.imageUrl}
+          alt="Card image cap"
+        />
+        <CardSubtitle>{this.props.data.likes} Likes</CardSubtitle>
+        <CardBody>
+          {<CommentSection comments={this.props.data.comments} />}
+          <small className="text-muted">{this.props.data.timestamp}</small>
+        </CardBody>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./CommentSection.css";
+import { CardSubtitle, CardText } from "reactstrap";
 
 export default class CommentSection extends Component {
   render() {
@@ -9,8 +10,8 @@ export default class CommentSection extends Component {
         {this.props.comments.map(comment => {
           return (
             <div>
-              <p>{comment.username}</p>
-              <p>{comment.text}</p>
+              <CardSubtitle>{comment.username}</CardSubtitle>
+              <CardText>{comment.text}</CardText>
             </div>
           );
         })}

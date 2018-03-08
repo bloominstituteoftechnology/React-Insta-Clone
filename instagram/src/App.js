@@ -4,7 +4,7 @@ import PostContainer from "./components/PostContainer/PostContainer.js";
 import SearchBar from "./components/SearchBar/SearchBar.js";
 import { dummyData } from "./dummy-data.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Card } from "reactstrap";
 
 class App extends Component {
   constructor() {
@@ -26,7 +26,11 @@ class App extends Component {
           <SearchBar data={this.state.data} />
 
           {this.state.data.map((post, i) => {
-            return <PostContainer key={i} data={post} />;
+            return (
+              <Card>
+                <PostContainer key={i} data={post} />{" "}
+              </Card>
+            );
           })}
         </Container>
       </div>
