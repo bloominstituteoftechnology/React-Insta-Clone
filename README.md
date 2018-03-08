@@ -22,12 +22,12 @@ Try to get all of the tests passing. If you don't get there, then aim for creati
   
   * Create a `components` directory inside the `src` directory, and then create a directory called `SearchBar`, another one called `PostContainer`, and lastly one called `CommentSection`, all inside the `src` directory. Each of these directories should contain the component file as well as the CSS for their respective components. Your file structure should end up looking like this:
   
-![alt tag](/assets/folder_structure.png) 
+![alt tag](/assets/folder_structure.png)
 
 ## Project Description
   * There are three components that you'll need to implement for this project: the Search Bar, the Post Container, and the Comment Section.
   * In your completed project, there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Post Container and a Comment Section for every piece of mock data in the `dummy-data.js` file. 
-  * The root App component of your application should import the dummy data from the `dummy-data.js` file with `import dummyData from './dummy-data';` and iterate over said data, passing each individual object as a prop to an instance of `PostContainer`.
+  * The root App component of your application should import the dummy data from the `dummy-data.js` file with `import dummyData from './dummy-data';` and iterate over said data, passing each individual object as a prop to an instance of `PostContainer`. 
   * Each `PostContainer` component will then pass the array of comments on each post object as a prop to an instance of the `CommentSection` component. 
   * The `CommentSection` component will receive the array of comments as props and render each one with the username of the poster as well as the post's text. Additionally, there should be an input box that allows users to submit a new comment for any post. Since there is no login page or anything of that sort, hard code a static username.  
   * You are free to leverage the Bootstrap library for this project for the purposes of theming and styling. I recommend the awesome [react-bootstrap](https://react-bootstrap.github.io) library, which is a library of Bootstrap components that have been implemented using React, so they're really easy to just drop straight into React projects. 
