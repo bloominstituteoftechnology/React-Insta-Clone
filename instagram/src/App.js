@@ -21,11 +21,11 @@ class App extends Component {
     console.log("Render Check", this.state.data);
     return (
       <div className="App">
+        <SearchBar data={this.state.data} />
+
         {this.state.data.map((post, i) => {
           return <PostContainer key={i} data={post} />;
         })}
-
-        <SearchBar data={this.state.data} />
       </div>
     );
   }
