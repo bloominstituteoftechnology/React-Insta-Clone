@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import  dummyData  from './dummy-data';
 import { PostContainer } from './components/PostContainer/PostContainer';
 //import { CommentSection }  from './components/CommentSection/CommentSection';
-// import { SearchBar } from './components/SearchBar';
+//import { SearchBar } from './components/SearchBar';
 
 import './App.css';
 
@@ -18,8 +18,6 @@ class App extends Component {
     this.setState({ Posts: dummyData });
     console.log(this.state.Posts);
   }
-
-
 
   render() {
     console.log(this.state.Posts)

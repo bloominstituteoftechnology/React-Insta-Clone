@@ -4,6 +4,7 @@ import CommentSection from '../CommentSection/CommentSection';
 
 export const PostContainer = (props) => {
   const userPosts = props.post;
+
   return (
     <div>
         {userPosts.map(post => {
@@ -15,7 +16,7 @@ export const PostContainer = (props) => {
               </div>
               <img src={post.imageUrl} alt="profileImage"/>
               <div>
-                <i class="far fa-heart"></i> <i class="far fa-comment"></i>
+                <i className="far fa-heart"></i> <i className="far fa-comment"></i>
               </div>
               <div>Likes: {post.likes}</div>
               {post.comments.map(comment => {
