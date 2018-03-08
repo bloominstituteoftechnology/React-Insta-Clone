@@ -9,7 +9,16 @@ class CommentSection extends Component {
 
   render() {
     return (
-      <div>test</div>
+      <div>{this.props.comments.map((comment, index) => {
+        return (
+          <div key={comment.username + index}>
+            <p>
+              <span>{comment.username}</span> <span>{comment.text}</span>
+            </p>
+          </div>
+        );
+      })}
+      </div>
     )
   }
 }

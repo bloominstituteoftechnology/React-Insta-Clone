@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import CommentSection from './components/CommentSection/CommentSection'
+import CommentSection from '../CommentSection/CommentSection'
 
 
 class PostContainer extends Component {
@@ -11,13 +11,20 @@ class PostContainer extends Component {
 
   render() {
     return (
-      <div>{this.props.posts.map((post, index) => {
+      <div>{this.props.posts.map( (post, index) => {
         return (
-          <div>
-            <h2 key={post.username + index}>{post.username}</h2>
-            <img src={post.imageUrl} />
-            <div>{post.likes}</div>
-            {/* <CommentSection comments= {post.comments} /> */}
+          <div key={post.username + index}>
+            <div>
+              <img src={post.thumbnailUrl} alt=" " />
+              <h5>{post.username}</h5>
+            </div>
+            <img src={post.imageUrl} alt=" " />
+            <div>
+              <i className="far fa-heart fa-lg"></i>
+              <i className="far fa-comment"></i>
+            </div>
+            <div>{post.likes} likes</div>
+            <CommentSection comments={post.comments} />
             <div>{post.timestamp}</div>
           </div>
         );
