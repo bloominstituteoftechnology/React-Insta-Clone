@@ -18,16 +18,16 @@ class App extends Component {
     this.setState ({
       dummyDataList: dummyData,
     })
-    console.log(this.state.dummyDataList);
+    
   }
 
   render() {
     return (
       <div className='body'>
         <SearchBar />
-        {this.state.dummyDataList.map(item => {
+        {this.state.dummyDataList.map((item, i) => {
           return(
-            <PostContainer dataArray={item}/>
+            <PostContainer key={i + 8124} dataArray={item}/>
           )
         })}
       </div>
