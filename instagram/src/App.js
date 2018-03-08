@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar.js';
+import PostContainer from './components/PostContainer/PostContainer.js';
+import dummyData from './dummy-data.js';
 
 class App extends Component {
   render() {
@@ -15,6 +17,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <SearchBar headerImage={logo} />
+        <PostContainer feed={dummyData}/>
       </div>
     );
   }
