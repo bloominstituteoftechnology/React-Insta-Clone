@@ -26,7 +26,9 @@ export default class PostContainer extends Component {
           alt="Card image cap"
         />
         <CardBody>
-          <CardSubtitle>{this.props.data.likes} Likes</CardSubtitle>
+          <CardSubtitle className="font-weight-bold">
+            {this.props.data.likes} Likes
+          </CardSubtitle>
 
           {<CommentSection comments={this.props.data.comments} />}
           <small className="text-muted">{this.props.data.timestamp}</small>
