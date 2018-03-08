@@ -1,13 +1,25 @@
 .SearchBar__Main {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     height: 80px;
 }
 
+.SearchBar__Group {
+    display: flex;
+    width: 100%;
+}
+
+.SearchBar__Title {
+    font-family: cursive;
+    font-size: 30px;
+    border-left: 2px solid grey;
+    padding: 0 10%;
+}
+
 .SearchBar__Button {
-    height: 50px;
-    width: 50px;
+    margin: 0 10%;
 }
 
 .SearchBar__Input {
