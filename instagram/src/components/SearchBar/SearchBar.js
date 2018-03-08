@@ -1,8 +1,6 @@
-
-import React, {Component} from "react";
-import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
-import { Container, Row, Col } from 'reactstrap';
-import { FormGroup, Label} from "reactstrap";
+import React from "react";
+import { InputGroup, InputGroupAddon, InputGroupText, Input } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import "./SearchBar.css";
 
 // const SearchBar = props => {
@@ -13,7 +11,7 @@ import "./SearchBar.css";
 //   );
 // };
 
-const SearchBar = (props) => {
+const SearchBar = props => {
   return (
     <container>
       <Row className="my-2">
@@ -27,24 +25,23 @@ const SearchBar = (props) => {
         <Col sm="1">
           <p>Instagram</p>
         </Col>
-        <Col sm="7" md={{ size: 4, offset: 2}}>
+        <Col sm="7" md={{ size: 4, offset: 2 }}>
           <InputGroup>
             <InputGroupAddon addonType="prepend">
               <InputGroupText>
-              <img
-                className="search-icon"
-                src="http://www.clker.com/cliparts/z/1/T/u/9/2/search-icon-hi.png"
-                alt="search icon"
-              />
+                <img
+                  className="search-icon"
+                  src="http://www.clker.com/cliparts/z/1/T/u/9/2/search-icon-hi.png"
+                  alt="search icon"
+                />
               </InputGroupText>
             </InputGroupAddon>
             <Input placeholder="search" />
           </InputGroup>
         </Col>
       </Row>
-
     </container>
-  )
-}
+  );
+};
 
 export default SearchBar;
