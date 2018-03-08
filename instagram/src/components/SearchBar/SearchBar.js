@@ -14,17 +14,17 @@ const SearchBar = () => {
         </form>
         <Nav>
           <NavItem>
-            <NavLink href="#">
+            <NavLink href="#" className="navLinkImgs">
               <i className="far fa-compass fa-2x" />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">
+            <NavLink href="#" className="navLinkImgs">
               <i className="far fa-heart fa-2x" />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">
+            <NavLink href="#" className="navLinkImgs">
               <i className="far fa-user fa-2x" />
             </NavLink>
           </NavItem>

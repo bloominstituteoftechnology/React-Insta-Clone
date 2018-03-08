@@ -1,3 +1,7 @@
 .sticky {
-  position: sticky;
+  position: fixed;
+}
+
+.navLinkImgs {
+  color: black;
 }

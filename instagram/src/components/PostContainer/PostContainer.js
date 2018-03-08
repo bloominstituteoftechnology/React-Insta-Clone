@@ -28,7 +28,7 @@ const PostContainer = props => {
             </div>
           </CardText>
           <div>
-            <CommentSection words={post.comments} />
+            <CommentSection key={post.username} words={post.comments} />
           </div>
           <div>{post.timestamp}</div>
           <hr />
@@ -51,7 +51,7 @@ PostContainer.propTypes = {
     imageUrl: PropTypes.string,
     likes: PropTypes.number,
     timestamp: PropTypes.string,
-    comments: PropTypes.arrayOf(PropTypes.string)
+    comments: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
   })
 };
 

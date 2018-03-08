@@ -28,7 +28,7 @@ CommentSection.propTypes = {
   words: PropTypes.arrayOf(
     PropTypes.shape({
       username: PropTypes.string,
-      text: PropTypes.number
+      text: PropTypes.string
     })
   )
 };
