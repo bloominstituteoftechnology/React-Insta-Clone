@@ -10,10 +10,10 @@ export const PostContainer = (props) => {
           return (
             <div>
               <div>
-                <img src={post.thumbnailUrl} />
+                <img src={post.thumbnailUrl} alt="thumbnail"/>
                 <div>{post.username}</div>
               </div>
-              <img src={post.imageUrl} />
+              <img src={post.imageUrl} alt="profileImage"/>
               <div>
                 <i class="far fa-heart"></i> <i class="far fa-comment"></i>
               </div>
