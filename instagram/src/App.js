@@ -6,17 +6,18 @@ import PostContainer from './components/PostContainer/PostContainer.js';
 
 class App extends Component {
   state = { 
-    people: [] 
+    people: [],
+    comments: []
   }
 
   componentDidMount() {
     console.log("CDM Called: ", this.state.people);
     this.setState({ people: dummyData });
-    console.log('dummydata', this.state.people);
+    
   }
 
   render() {
-    console.log("Render called: ", this.state.people);
+    console.log("Render app: ", this.state.people);
     return (
       <div className="App">
         <header className="App-header">
@@ -24,7 +25,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro"></p>
-        <PostContainer people={this.state.people} />
+        <PostContainer people={this.state.people} username={this.state.people.username}  />
       </div>
     );
   }
