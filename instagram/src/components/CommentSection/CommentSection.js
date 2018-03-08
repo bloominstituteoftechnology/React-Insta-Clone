@@ -1,6 +1,7 @@
 import React from 'react';
 import { CardBody, CardTitle, CardText } from 'reactstrap';
 import './CommentSection.css';
+import PropTypes from 'prop-types';
 
 const CommentSection = props => {
   return (
@@ -21,6 +22,15 @@ const CommentSection = props => {
       })}
     </div>
   );
+};
+
+CommentSection.propTypes = {
+  words: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string,
+      text: PropTypes.number
+    })
+  )
 };
 
 export default CommentSection;

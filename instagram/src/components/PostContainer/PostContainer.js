@@ -2,6 +2,7 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection.js';
 import { Card, CardText, CardBody, CardTitle } from 'reactstrap';
 import './PostContainer.css';
+import PropTypes from 'prop-types';
 
 const PostContainer = props => {
   const post = props.insta;
@@ -31,14 +32,27 @@ const PostContainer = props => {
           </div>
           <div>{post.timestamp}</div>
           <hr />
-          <form action="">
-            <input type="text" placeholder="Add a comment..." />
+          <div className="footer">
+            <form action="">
+              <input type="text" placeholder="Add a comment..." />
+            </form>
             <i className="fas fa-ellipsis-h" />
-          </form>
+          </div>
         </CardBody>
       </Card>
     </div>
   );
+};
+
+PostContainer.propTypes = {
+  insta: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    timestamp: PropTypes.string,
+    comments: PropTypes.arrayOf(PropTypes.string)
+  })
 };
 
 export default PostContainer;

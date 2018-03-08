@@ -10,7 +10,6 @@
 .cardHeader {
   display: flex;
   justify-content: flex-start;
-  /* margin-left: -50px; */
 }
 
 .profileImg img {
@@ -34,5 +33,10 @@
 }
 
 .likesAmt {
+  justify-content: flex-start;
+}
+
+.cardFoot {
+  display: flex;
   justify-content: flex-start;
 }
