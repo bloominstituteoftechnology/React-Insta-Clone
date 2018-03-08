@@ -6,7 +6,7 @@ const CommentSection = (props) => {
             {props.comments.map(comment => {
                 return (
                     <div>
-                        {comment.username}
+                        {comment.username} {/* !! username should have heavier weight, can use Post__heading css? */}
                         {comment.text}
                     </div>
                 )

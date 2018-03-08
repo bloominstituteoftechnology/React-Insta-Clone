@@ -17,16 +17,16 @@ class Post extends Component {
 
     render() {
         return (
-            <div className='Post'>
-                <div className='Post__heading'>
+            <div className='Post'> {/* !! need font modifier for all children? */}
+                <div className='Post__heading'> {/* !! definitely need heavier font-weight modifier for headings */}
                     <img className='Post__thumbnail' src={this.state.post.thumbnailUrl} alt=""/>
                     <div>{this.state.post.username}</div>
                 </div>
                 <img className='Post__image' src={this.state.post.imageUrl} alt=""/>
-                <div>heartIcon commentIcon</div>
-                <div>{this.state.post.likes} likes</div>
-                <CommentSection comments={this.state.comments}/>
-                <div>{this.state.post.timestamp}</div>
+                <div>heartIcon commentIcon</div> {/* !! will need className for positioning, still need actual icons */}
+                <div>{this.state.post.likes} likes</div> {/* !! may need className for positioning */}
+                <CommentSection comments={this.state.comments}/> {/* !! may need className for text-wrap, etc? */}
+                <div>{this.state.post.timestamp}</div> {/* !! may need className for format */}
             </div>
         )
     }
