@@ -3,7 +3,11 @@
     flex-wrap: nowrap !important;
     margin: 20px;
 } */
-    
+
+.mainContainer {
+  margin-left: 70px;
+}
+
 .userName {
     display: flex;
     margin: 40px 0px 0px 20px;

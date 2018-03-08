@@ -4,18 +4,18 @@ import './PostContainer.css';
 
 const PostContainer = (props) => {
   return (
-    <div>
-      <div class="userName">
-        <img src ={props.postings.thumbnailUrl} height='60'  width='60' class='rounded' />
-        <div  class='userID'>{props.postings.username}</div>
+    <div className="mainContainer">
+      <div className="userName">
+        <img src ={props.postings.thumbnailUrl} alt ="icon" height='60'  width='60' className='rounded' />
+        <div className='userID'>{props.postings.username}</div>
       </div>
-      <img src ={props.postings.imageUrl} height='600' class='mainImage'/>
-      <div class='commentHeart'>
-        <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-heart-outline-128.png" height="35" width="35"/>
-        <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/124237-200.png" height="45" width="45"/>
+      <img src ={props.postings.imageUrl} alt ="mainPost" height='600' className='mainImage'/>
+      <div className='commentHeart'>
+        <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-heart-outline-128.png" alt ="Women's Day!" height="35" width="35"/>
+        <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/124237-200.png" alt ="comment" height="45" width="45"/>
       </div>
-      
-      <div class='likes'><b>{props.postings.likes}</b> likes</div>
+
+      <div className='likes'><b>{props.postings.likes}</b> likes</div>
       <div>
         {props.postings.comments.map((comment, i) => {
           return (
