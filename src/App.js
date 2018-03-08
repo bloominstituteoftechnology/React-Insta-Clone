@@ -10,17 +10,16 @@ import { Image } from 'react-bootstrap';
 class App extends Component {
   render() {
     return (
-      <div className="App-header">
+      <div className="">
         <nav>
           <SearchBar />
         </nav>
-
+{/* 
         <Button bsStyle="warning">Warning</Button>
 
         <Button bsStyle="success">Success</Button>
 
-        <Image src="./ilogo.png" responsive />;
-
+ */}
 
       </div>
     );
