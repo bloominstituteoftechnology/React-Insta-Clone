@@ -1,26 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
-import { Button } from 'react-bootstrap';
-import { Image } from 'react-bootstrap';
-
-
+import PostContainer from './components/PostContainer/PostContainer';
+import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      posts: [],
+    }
+  }
+  
+  componentDidMount() {
+    this.setState({ posts: dummyData });
+    
+  }
+  
   render() {
     return (
-      <div className="">
-        <nav>
-          <SearchBar />
-        </nav>
-{/* 
-        <Button bsStyle="warning">Warning</Button>
+    
+      <div>
+        <SearchBar />
 
-        <Button bsStyle="success">Success</Button>
-
- */}
-
+        <div>
+          {this.state.posts.map(post => {
+            return (
+              <PostContainer key={post.timestamp} postings={post} />
+            )
+          })}
+        </div>
       </div>
     );
   }

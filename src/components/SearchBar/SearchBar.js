@@ -12,12 +12,12 @@ class SearchBar extends Component {
     render () {
         return (
             <div class="container">
-                 <span class="left">
-                    <span class="instagramLogo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTRo0P4SFoEGXk42eagPbi-OUGSwuIKiNmT_duNZWGQNyeIbOz" height="80" width="80"/></span>
-                    <span class="instagram"><img src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2013/05/InstagramLogo-730x278.png" height="80" width="180"/></span>
-                 </span>
+              <span class="left">
+                <span class="instagramLogo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTRo0P4SFoEGXk42eagPbi-OUGSwuIKiNmT_duNZWGQNyeIbOz" height="80" width="80"/></span>
+                <span class="instagram"><img src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2013/05/InstagramLogo-730x278.png" height="80" width="180"/></span>
+              </span>
 
-                <span class="search"><input type="text" placeholder="Search.."/></span>
+              <span class="search"><input type="text" placeholder="Search.."/></span>
                 
                 <span class="right">
                     <span class="compass"><img src="http://images.gofreedownload.net/compass-symbol-6425.jpg" height="60" width="60"/></span>
