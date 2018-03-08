@@ -1,0 +1,10 @@
+.SearchBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: bisque
+}
+
+.SearchBar__element {
+
+}

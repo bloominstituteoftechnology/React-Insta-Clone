@@ -1,0 +1,12 @@
+.Post {
+    border: 1px solid pink;
+    width: 500px;
+}
+
+.Post__heading {
+    display: flex;
+}
+
+.Post__image {
+    width: 500px;
+}
