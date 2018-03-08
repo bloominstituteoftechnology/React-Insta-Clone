@@ -1,0 +1,111 @@
+.post {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.post_column {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.post_center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    border: 1px solid #d9d9d9;
+    background-color: white;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    height: 50px;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.user_img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.time {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #A7A3B0;
+}
+
+h1 {
+    font-size: 1em;
+    text-align: left;
+}
+
+.post .image {
+    width: 100%;
+    height: auto;
+}
+
+.post .image>img {
+    width: 100%;
+    height: auto;
+}
+
+.likes {
+    width: 95%;
+    text-align: left;
+    font-weight: 900;
+}
+
+.comments_wrapper {
+  margin: 5px;
+  width: 95%;
+}
+
+.add_comment {
+  display: flex;
+  width: 100%;
+  height: 3em;
+  justify-content: center;
+}
+
+.comment_field {
+  border: none;
+  border-top: 1px solid #d9d9d9;
+  width: 95%;
+  height: 2.5em;
+  font-size: 0.9em;
+}
+
+.like-quote {
+  display: flex;
+  width: 95%;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.like-quote_button {
+  margin: 0.5em;
+}
+
+@media (min-width: 1000px) {.post_column { width: 33% }}

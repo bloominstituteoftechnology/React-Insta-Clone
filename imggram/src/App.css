@@ -1,0 +1,7 @@
+@import './header.css';
+@import './post.css';
+@import './comments.css';
+
+.App {
+  text-align: center;
+}
