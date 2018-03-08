@@ -1,6 +1,6 @@
 import React from "react";
 import { InputGroup, InputGroupAddon, InputGroupText, Input } from "reactstrap";
-import { Row, Col } from "reactstrap";
+import { Row, Col, Container } from "reactstrap";
 import "./SearchBar.css";
 
 // const SearchBar = props => {
@@ -13,20 +13,20 @@ import "./SearchBar.css";
 
 const SearchBar = props => {
   return (
-    <container>
-      <Row className="my-1">
-        <Col sm="1" className="col1">
+    <Container>
+      <Row className="my-3">
+        <Col sm={1} className="col1 pr-5 d-flex">
           <img
-            className="logo"
+            className="logo align-self-center"
             src="http://www.clker.com/cliparts/U/d/x/w/I/q/instagram-logo-md.png"
             alt="Logo"
           />
         </Col>
-        <Col className="col2" sm="1">
-          <p>Instagram</p>
+        <Col className="col2" sm={2}>
+          <p className="m-0">Instagram</p>
         </Col>
-        <Col sm="7" md={{ size: 4, offset: 2 }}>
-          <InputGroup>
+        <Col sm={7} md={{ size: 4, offset: 2 }}>
+          <InputGroup className="align-self-center">
             <InputGroupAddon addonType="prepend">
               <InputGroupText>
                 <img
@@ -40,7 +40,7 @@ const SearchBar = props => {
           </InputGroup>
         </Col>
       </Row>
-    </container>
+    </Container>
   );
 };
 
