@@ -1,15 +1,15 @@
 import React from 'react';
-import CommentSection from './components/CommentSection/CommentSection.js';
+import CommentSection from '../CommentSection/CommentSection.js';
 
 
 const PostContainer = (props) => {
   return (
     <div className='post'>
       <div className='post__user'>
-        <img src = {props.post.thumbnailUrl} alt = 'text' />
+        <img src = './assets/ig_post.png' alt = 'text' />
         <div>{props.post.username}</div>
       </div>
-      <img src = {props.post.imageUrl} alt = 'text' />
+      <img src = './assets/ig_post.png' alt = 'text' />
       <div>{props.post.likes} likes</div>
       <CommentSection comments = {props.post.comments} />
       <div>{props.post.timestamp}</div>

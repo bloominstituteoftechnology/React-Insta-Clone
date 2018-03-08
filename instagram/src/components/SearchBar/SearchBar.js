@@ -15,7 +15,7 @@ class SearchBar extends Component {
   render() {
     return (
       <div>
-        <img src = './assets/ig_search_bar.png' alt= 'search bar' />
+        <img src = './assets/ig_search_bar.jpg' alt= 'search bar' />
         <form className= 'SearchBar__field'>
           <input type = 'text' value = {this.state.input} onChange = {this.updateSearch} placeholder = 'search' />
         </form>
