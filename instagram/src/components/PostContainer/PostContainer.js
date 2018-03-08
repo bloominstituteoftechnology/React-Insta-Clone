@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-
+import {InputGroup, InputGroupAddon, Input, Button} from 'reactstrap';
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection.js";
 import {
@@ -41,6 +41,10 @@ export default class PostContainer extends Component {
 
           {<CommentSection comments={this.props.data.comments} />}
           <small className="text-muted">{this.props.data.timestamp}</small>
+          <InputGroup>
+            <Input placeholder="Add a comment..."/>
+            <InputGroupAddon addonType="append"><Button>...</Button></InputGroupAddon>
+        </InputGroup>
         </CardBody>
       </div>
     );
