@@ -3,7 +3,13 @@ import PropTypes from "prop-types";
 
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection.js";
-import { CardImg, CardBody, CardTitle, CardSubtitle } from "reactstrap";
+import {
+  CardImg,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  CardText
+} from "reactstrap";
 
 export default class PostContainer extends Component {
   render() {
@@ -26,6 +32,9 @@ export default class PostContainer extends Component {
           alt="Card image cap"
         />
         <CardBody>
+          <CardText>
+            <i class="far fa-heart" /> <i class="far fa-comment" />
+          </CardText>
           <CardSubtitle className="font-weight-bold">
             {this.props.data.likes} Likes
           </CardSubtitle>
