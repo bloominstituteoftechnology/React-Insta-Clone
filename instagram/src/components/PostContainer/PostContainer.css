@@ -1,0 +1,45 @@
+.Post {
+        border: 0.5px solid gray;
+        max-width: 500px;
+        margin-bottom: 40px;
+    }
+    
+    .Post__header {
+        width: 100%;
+        position: relative;
+        height: 60px;
+    }
+    
+    .Post__header img {
+        display: inline-block;
+        height: 30px;
+        border-radius: 50%;
+        padding: 15px;
+    }
+    
+    .Post__header h3 {
+        position: absolute;
+        display: inline;
+        margin-top: 20px;
+    }
+    
+    .Post__image {
+        width: 100%;
+    }
+    
+    .Post__image img{
+        background-size: contain;
+        width: 100%;
+    }
+    
+    .Post__body {
+        margin: 15px;
+    }
+    
+    .Post__likes {
+        display: inline;
+    }
+    
+    .Post__timestamp {
+        margin: 10px 0 10px 0;
+    }

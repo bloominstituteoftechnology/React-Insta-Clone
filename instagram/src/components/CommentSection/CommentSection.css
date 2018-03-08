@@ -1,0 +1,18 @@
+.Comments {
+    margin-top: 12px;
+}
+
+.Comments__comment-username {
+    display:inline;
+}
+
+.Comments__comment-body {
+    display: inline;
+    padding-left: 12px;
+}
+
+.Comments_add input {
+    margin-top: 12px;
+    border: none;
+    border-top: 1px solid teal;
+}
