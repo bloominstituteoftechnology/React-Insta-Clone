@@ -4,6 +4,7 @@ import PostContainer from "./components/PostContainer/PostContainer.js";
 import SearchBar from "./components/SearchBar/SearchBar.js";
 import { dummyData } from "./dummy-data.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row, Col } from "reactstrap";
 
 class App extends Component {
   constructor() {
@@ -21,11 +22,13 @@ class App extends Component {
     console.log("Render Check", this.state.data);
     return (
       <div className="App">
-        <SearchBar data={this.state.data} />
+        <Container>
+          <SearchBar data={this.state.data} />
 
-        {this.state.data.map((post, i) => {
-          return <PostContainer key={i} data={post} />;
-        })}
+          {this.state.data.map((post, i) => {
+            return <PostContainer key={i} data={post} />;
+          })}
+        </Container>
       </div>
     );
   }
