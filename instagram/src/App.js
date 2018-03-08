@@ -18,9 +18,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1> Please for the love of god be happy </h1>
+        <h1> Instagram </h1>
         {this.state.data.map(post => {
-          return <div><PostContainer key={post.username}data={post} /></div>
+          return <PostContainer key={post.username} data={post} />
         })}
       </div>
     );
