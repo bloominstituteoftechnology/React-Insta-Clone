@@ -22,14 +22,7 @@ const SearchBar = props => {
             alt="Logo"
           />
         </Col>
-        <Col sm="1" className="col1">
-          <img
-            className="logo"
-            src="http://www.clker.com/cliparts/U/d/x/w/I/q/instagram-logo-md.png"
-            alt="Logo"
-          />
-        </Col>
-        <Col sm="1">
+        <Col className="col2" sm="1">
           <p>Instagram</p>
         </Col>
         <Col sm="7" md={{ size: 4, offset: 2 }}>
