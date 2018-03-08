@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import dummyData from './dummy-data.js';
-// import PostContainer from './components/PostContainer/PostContainer.js';
+import PostContainer from './components/PostContainer/PostContainer.js';
 
 
 class App extends Component {
@@ -25,7 +25,11 @@ class App extends Component {
     return (
       <div className='body'>
         <SearchBar />
-        {/* <PostContainer /> */}
+        {this.state.dummyDataList.map(item => {
+          return(
+            <PostContainer dataArray={item}/>
+          )
+        })}
       </div>
     );
   }
