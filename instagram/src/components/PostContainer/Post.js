@@ -25,7 +25,7 @@ class Post extends Component {
                 <img className='Post__image' src={this.state.post.imageUrl} alt=""/>
                 <div>heartIcon commentIcon</div>
                 <div>{this.state.post.likes} likes</div>
-                <CommentSection />
+                <CommentSection comments={this.state.comments}/>
                 <div>{this.state.post.timestamp}</div>
             </div>
         )

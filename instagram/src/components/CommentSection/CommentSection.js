@@ -1,14 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class CommentSection extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {}
-    };
-
-    render() {
-        return <div>x</div>
-    }
-}
+const CommentSection = (props) => {
+    return (
+        <div>
+            {props.comments.map(comment => {
+                return (
+                    <div>
+                        {comment.username}
+                        {comment.text}
+                    </div>
+                )
+            })}
+        </div>
+    )
+};
 
 export default CommentSection;
