@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection.js";
 
@@ -31,3 +33,7 @@ export default class PostContainer extends Component {
     );
   }
 }
+
+PostContainer.propTypes = {
+  data: PropTypes.object
+};
