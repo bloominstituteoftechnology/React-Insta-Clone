@@ -1,28 +1,26 @@
-// import React, { Component } from 'react';
+import React, { Component } from 'react';
 
-// // class CommentSection extends Component {
-// //   constructor(props) {
-// //     super(props);
-// //     this.state = {
-// //       comments: [],
-// //     };
-// //   }
+class CommentSection extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: []
+    };
+  };
 
+  componentDidMount() {
+    this.setState({ comments: this.props.comments });
+  }
 
-// //   // componentDidMount(props) {
-// //   //   this.setState({ comments: props });
-// //   // }
+  render() {
+    return (
+        <div>
+            {this.state.comments.map((comment) => {
+                return <h4>hey</h4>
+      })}
+      </div>
+    );
+  }
+}
 
-// //   render() {
-// //     return (
-
-// //       this.state.comments.map(comment => {
-// //         return <h4> {comment.username} </h4>
-// //       })
-
-// //     );
-
-// //   }
-// // }
-
-// export default CommentSection;
+export default CommentSection;

@@ -3,7 +3,6 @@ import CommentSection from '../CommentSection/CommentSection';
 
 
 export const PostContainer = (props) => {
-  // <CommentSection comments={props.comments} />
-  console.log(props.comments);
+    return <CommentSection comments={props.comments} />
 }
 export default PostContainer;

@@ -20,9 +20,8 @@ class App extends Component {
       <div className="App">
         <h1> Please for the love of god be happy </h1>
         {this.state.data.map(post => {
-          return <div><PostContainer data={post} /></div>
+          return <div><PostContainer key={post.username}data={post} /></div>
         })}
-
       </div>
     );
   }
