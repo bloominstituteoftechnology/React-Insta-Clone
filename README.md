@@ -47,3 +47,4 @@ Your post container should look something like this:
   * Implement the ability to like a post by clicking on a heart icon and having the number of likes increment accordingly. 
   * Get the Search Bar to filter posts by the post's username. When you submit a search term should filter out posts by users whose usernames do not match the search term. 
   * Look into the [moment.js](https://momentjs.com/) library to read about how to dynamically format the timestamp into a human-readable format like how it is being displayed in the screenshot. 
+  * Add type checking

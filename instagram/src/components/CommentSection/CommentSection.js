@@ -6,8 +6,8 @@ export const CommentSection = (props) => {
         <div>
             {props.comments.map(((comment, index) => {
                 return (
-                    <div key={comment.username + index}>
-                        <span>{comment.username} {comment.text}</span>
+                    <div className="CommentSection" key={comment.username + index}>
+                        <span className="CommentSection__comment">{comment.username}</span> {comment.text}
                     </div>
                 )
             }))}

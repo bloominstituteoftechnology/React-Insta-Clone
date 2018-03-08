@@ -1,0 +1,7 @@
+.CommentSection {
+    padding: 0.1% 2%;
+}
+
+.CommentSection__comment {
+    font-weight: 500;
+}
