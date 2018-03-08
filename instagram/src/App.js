@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer.js';
+import CommentSection from './components/CommentSection/CommentSection.js';
 
 class App extends Component {
   constructor() {
@@ -11,13 +12,15 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    this.setState({users: dummyData})
+    this.setState({ users: dummyData });
   }
-  
+
   render() {
-  return (
-      <PostContainer users={this.state.users} />
-      
+    return (
+      <div>
+        <PostContainer users={this.state.users} />
+        <CommentSection users={this.state.users} />
+      </div>
     );
   }
 }

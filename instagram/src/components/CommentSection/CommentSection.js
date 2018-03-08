@@ -1,20 +1,26 @@
 import React from 'react';
 
 const CommentSection = props => {
-    const { users } = props;
+  const { users } = props;
 
-    return (
-        <div>
-            <div>
-                {user.comments.map(comment => {
-                    return(<p><span>{comment.username + ' '}</span>{comment.text}</p>);
-                })}
-            </div>
-        </div>
-                  
-      
+  return (
+    <div>
+      <div>
+        {users.forEach(user => {
+          user.comments.map(comment => {
+            return (<p><span>{comment.username + ' '}</span>{comment.text}</p>);
+          });
+        })}
+      </div>
+    </div>
+
+  );
+};
 
 
 
+export default CommentSection;
 
-export default CommentSection 
+//  {users.forEach(user => user.comments.map(comment => {
+//           return (<p><span>{comment.username + ' '}</span>{comment.text}</p>);
+//         }))}

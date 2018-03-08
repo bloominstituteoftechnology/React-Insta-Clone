@@ -18,12 +18,12 @@ const PostContainer = props => {
                         <div>
                             <div>{user.likes + ' likes'}</div>
                         </div>
-                        <CommentSection />
+
                     </div>
                 );
             })}
         </div>
-    )
-}
+    );
+};
 
-export default PostContainer
+export default PostContainer;
