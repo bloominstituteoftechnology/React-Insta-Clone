@@ -12,14 +12,22 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState( {Data: dummyData});
+    this.setState( {Data: dummyData} );
   }
+
+    
+  incrementValue = (i) => {
+    const target = i.target.value;
+    const newData = this.state.Data;
+    newData[target].likes += 1;
+    this.setState({Data: newData});
+}
 
   render() {
     return (
       <div className="App">
         <SearchBar />
-        {this.state.Data.map(((data, index) => <PostContainer data={data} key={index}/>))}
+        {this.state.Data.map(((data, index) => <PostContainer click={this.incrementValue} data={data} i={index} key={index}/>))}
       </div>
     );
   }

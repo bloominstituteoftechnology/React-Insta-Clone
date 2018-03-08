@@ -26,8 +26,19 @@
     padding: 1% 2%;
 }
 .PostContainer__icons-icon {
+    position: relative;
     color: black;
     padding-right: 3%;
+    z-index: 1;
+    border: none;
+    background-color: none;
+}
+.PostContainer__icons-icon:focus {
+    outline: none;
+}
+
+.PostContainer__icons-liked {
+    color: red;
 }
 
 .PostContainer__comment-content {
@@ -48,4 +59,9 @@
     width: 540px;
     border: none;
     border-top: 1px solid rgb(228, 228, 228);
+}
+
+svg {
+    position: relative;
+    z-index: -1;
 }
