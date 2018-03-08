@@ -14,21 +14,24 @@ class PostContainer extends Component {
   render() {
     return (
       <div>
-        <div className="row">
+         <hr/>
+        <div className="row my-3">
           <img className="mx-5 rounded-circle img-fluid" src={this.state.post.thumbnailUrl} alt={this.state.post.username}/>
-          <div className="font-weight-bold">{this.state.post.username}</div>
+          <div className="font-weight-bold d-flex align-items-center text-uppercase ">{this.state.post.username}</div>
         </div>
         <img className="img-fluid" src={this.state.post.imageUrl} alt=""/>
-        <button>Like Pic</button>
+        <button className="spacer">Like Pic</button>
         <p>{this.state.post.likes} likes</p>
         {this.state.post.comments.map((item, i) => {
-          return (<CommentSection key={this.state.post.comments[i].username + i.toString()} comment={item} />)
+          return (<CommentSection  key={this.state.post.comments[i].username + i.toString()} comment={item} />)
         })}
         <p>{this.state.post.timestamp}</p>
-        <hr/>
-        <form>
-          <input type="text" placeholder= "Add a comment..."/>
-        </form>
+        
+        <div className="border-top border-bottom border-dark"> 
+            <form className="py-2">
+                <input type="text" placeholder= "Add a comment..."/>
+            </form>
+        </div>
       </div>
     )
   }

@@ -14,7 +14,7 @@ class CommentSection extends Component {
 
   render() {
     return(
-      <div>
+      <div className="my-2">
         
         <span className="font-weight-bold">{this.state.comment.username} </span>
         <span> {this.state.comment.text}</span>
