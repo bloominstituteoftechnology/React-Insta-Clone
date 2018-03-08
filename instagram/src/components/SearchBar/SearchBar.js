@@ -20,9 +20,9 @@ class SearchBar extends Component {
                 <div className={'col-3'}>
                 <img src={this.props.headerImage} style={{height: '150px', width: '150px'}} alt='logo' />
                 </div>
-                <div className={'col-9'}>
-                    <form>
-                        <input style={{width: '90%'}}
+                <div className={'col-9 d-flex justify-content-start align-items-center'}>
+                    <form className={'form'}>
+                        <input className={'w-100'}
                             type='text'
                             onChange={this.handleChange}
                             placeholder='Search'
