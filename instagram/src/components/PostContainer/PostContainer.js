@@ -3,11 +3,6 @@ import CommentSection from '../CommentSection/CommentSection'
 
 
 class PostContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
 
   render() {
     return (

@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  border: 2px solid green;
+  height: 100px;
+}
+
+.nav_left {
+  width: 25%;
+  border: 2px solid blue;
+}
+
+.logo {
+  width: 307px;
+  height: 80px;
+}
+
+.nav_center {
+  border: 2px solid red;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar {
+  text-align: center;
+  cursor: text;
+  width: 270px;
+}
+
+.nav_right {
+  width: 25%;
+  display: flex;
+  border: 2px solid black;
+  justify-content: flex-end;
+}
+
+.findpeople {
+  cursor: pointer;
+}
+
+.activity {
+  cursor: pointer;
+}
+
+.profile {
+  cursor: pointer;
+}

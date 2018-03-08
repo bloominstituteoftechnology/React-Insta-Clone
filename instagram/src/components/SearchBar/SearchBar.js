@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
-
+import './SearchBar.css'
+import logo from './img/logo.png'
 
 class SearchBar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
 
   render() {
     return (
-      <div>
-        <i className="fab fa-instagram fa-lg"></i>
-        <span fontStyle="romanesco">Instagram</span>
-        <input type="text" placeholder="            Search"/>
-        <i className="far fa-compass fa-lg"></i>
-        <i className="far fa-heart fa-lg"></i>
-        <i className="far fa-user fa-lg"></i>
+      <div className="navbar">
+        <div className="navbar nav_left">
+          <img className="logo" src={logo} alt="logo" />
+        </div>
+        {/* <i className="fab fa-instagram fa-lg"></i> */}
+        {/* <span fontStyle="romanesco">Instagram</span> */}
+        <div className="navbar nav_center">
+          <input className="searchbar" type="text" placeholder="Search" />
+        </div>
+        <div className="navbar nav_right">
+          <i className="far fa-compass fa-lg findpeople"></i>
+          <i className="far fa-heart fa-lg activity"></i>
+          <i className="far fa-user fa-lg profile"></i>
+        </div>
       </div>  
     )
   }
