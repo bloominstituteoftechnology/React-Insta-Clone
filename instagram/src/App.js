@@ -10,7 +10,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({ people });
+    console.log("CDM Called: ", this.state.people);
+    this.setState({ people: dummyData });
+    console.log('dummydata', this.state.people);
   }
 
   render() {
