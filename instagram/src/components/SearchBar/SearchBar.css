@@ -1,0 +1,19 @@
+.SearchBar__Main {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 80px;
+}
+
+.SearchBar__Button {
+    height: 50px;
+    width: 50px;
+}
+
+.SearchBar__Input {
+    height: 30px;
+    width: 160px;
+    text-align: center;
+    font-weight: 100;
+    color: grey;
+}
