@@ -4,7 +4,8 @@
 }
 
 .PostContainer__main {
-    width: 520px;
+    width: 542px;
+    border: 1px solid lightgrey;
 }
 .PostContainer__header {
     padding: 1% 2%;
@@ -52,13 +53,17 @@
     padding: 1% 2%;
 }
 .PostContainer__input {
-    padding: 0 2%;
+    margin: 0 2%;
     margin-bottom: 3%;
     font-size: 16px;
     height: 50px;
-    width: 540px;
+    width: 500px;
     border: none;
     border-top: 1px solid rgb(228, 228, 228);
+}
+
+.PostContainer__input:focus {
+    outline: none;
 }
 
 svg {

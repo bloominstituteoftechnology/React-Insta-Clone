@@ -23,9 +23,9 @@ class App extends Component {
     this.setState({Data: newData});
 }
 
-  incrementValue = (i) => {
+  incrementValue = (index) => {
     const newData = this.state.Data;
-    newData[i].likes += 1;
+    newData[index].likes += 1;
     this.setState({Data: newData});
 }
 

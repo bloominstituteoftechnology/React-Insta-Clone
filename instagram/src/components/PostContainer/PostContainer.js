@@ -25,7 +25,7 @@ export const PostContainer = (props) => {
             <CommentSection comments={props.data.comments}/>
             <div className="PostContainer__timestamp PostContainer__comment-content">{props.data.timestamp}</div>
             <form onSubmit={commentSubmit} id={props.i}>
-            <input className="PostContainer__input" placeholder="Add a comment..."></input>
+            <input className="PostContainer__input" placeholder="Add a comment..."></input><span>...</span>
             </form>
             </div>
         </div>
