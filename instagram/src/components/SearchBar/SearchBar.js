@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './SearchBar.css';
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Button, Form, Input, Label, FormText, Row, Col, Container  } from 'reactstrap';
 import fontawesome from '@fortawesome/fontawesome';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
@@ -7,7 +8,9 @@ import { faHeart as farHeart } from '@fortawesome/fontawesome-free-regular';
 import { faComment as farComment } from '@fortawesome/fontawesome-free-regular';
 import { faCompass as farCompass } from '@fortawesome/fontawesome-free-regular';
 import { faUser as farUser } from '@fortawesome/fontawesome-free-regular';
+import { faSearch } from '@fortawesome/fontawesome-free-solid';
 import { faInstagram } from '@fortawesome/fontawesome-free-brands';
+
 
 class SearchBar extends Component {
     constructor() {
@@ -28,21 +31,23 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <Navbar className="justify-content-around">
-                    <NavbarBrand>
-                         <FontAwesomeIcon icon={faInstagram} className="fa-2x"/>
-
-                        <a href="#"> Lambda School React II</a>
+            <Container fluid className="sticky-top bg-white border-bottom align-items-center d-flex flex-column">
+            <Navbar className="SearchBar w-100" light color="faded">
+                    <NavbarBrand href="#" className="SearchBar__branding">
+                         <FontAwesomeIcon icon={faInstagram} className=""/>
+                         <span className="SearchBar__text">|</span>
+                         <span className="SearchBar__text">Lambdagram</span>
                     </NavbarBrand>
-                <Form inline>
-                    <Input type="text" placeholder="Search" value={this.state.searchInput} onChange={this.handleSearchInput} />
+                <Form inline className="SearchBar__input">
+                    <Input className="bg-light" type="text" placeholder="Search" value={this.state.searchInput} onChange={this.handleSearchInput} />
                 </Form>
-                <Nav>
-                    <NavItem><FontAwesomeIcon icon={farCompass} className="fa-2x" /></NavItem>
-                    <NavItem><FontAwesomeIcon icon={farHeart} className="fa-2x"/> </NavItem>
-                    <NavItem><FontAwesomeIcon icon={farUser} className="fa-2x"/></NavItem>
+                <Nav navbar className="SearchBar__nav justify-content-end flex-row">
+                    <NavItem><NavLink href="#"><FontAwesomeIcon icon={farCompass} className="fa-2x" /></NavLink></NavItem>
+                    <NavItem><NavLink href="#"><FontAwesomeIcon icon={farHeart} className="fa-2x"/></NavLink> </NavItem>
+                    <NavItem><NavLink href="#"><FontAwesomeIcon icon={farUser} className="fa-2x"/></NavLink></NavItem>
                 </Nav>
             </Navbar>
+            </Container>
         )
     }
 }

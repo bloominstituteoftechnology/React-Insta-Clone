@@ -8,7 +8,7 @@ import PostContainer from './components/PostContainer/PostContainer';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App bg-light">
       <SearchBar />
       {dummyData.map((post, index) =>  {
         return (

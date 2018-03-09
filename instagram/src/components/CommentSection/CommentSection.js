@@ -36,8 +36,6 @@ class CommentSection extends Component {
         this.setState({ newCommentInput: event.target.value });
     }
 
-
-
 render() {
     return (
         <div className="CommentSection">
