@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.thumbnail {
+  width: 75px;
+  height: 75px;
+
+}
+
+.form {
+  width: 90%;
+}
+
+.postImg {
+  width: 50%;
+  height: 100%;
+
+}
+
+.username {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.commentUserName {
+  display: flex;
+  align-items: center;
+}
+
+.commentBox {
+  margin: 10px 0;
+  text-align: start;
+}
+
+.formInput {
+  box-shadow: -2px 2px 10px gray;
+}
+
+@media (max-width: 800px) {
+  .thumbnail {
+    width: 40px;
+    height: 40px;
+  }
+
+  .username {
+    font-size: 16px;
+  }
+
+}
