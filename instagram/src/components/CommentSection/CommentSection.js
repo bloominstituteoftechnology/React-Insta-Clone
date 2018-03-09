@@ -14,10 +14,12 @@ class CommentSection extends Component {
         this.setState({comments: this.props.comments});
     };
 
-    addNewComment = (newComment) => {
-        //event.preventDefault();
+    addNewComment = (newCommentText) => {
         const tempComments = this.state.comments;
-        tempComments.push(newComment);
+        tempComments.push({
+            text: newCommentText,
+            username: 'Fred'
+        });
         this.setState({comments: tempComments});
 
     };
@@ -33,7 +35,7 @@ class CommentSection extends Component {
                         </div>
                     )
                 })}
-                <AddComment add={this.addNewComment}/>
+                <AddComment addNewComment={this.addNewComment}/>
             </div>
         );
     };
