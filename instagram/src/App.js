@@ -3,6 +3,8 @@ import {SearchBar} from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 import './App.css';
 import dummyData from './dummy-data';
+import { Button } from 'reactstrap';
+
 
 class App extends Component {
   constructor(){
@@ -22,6 +24,9 @@ class App extends Component {
         <div>
           <SearchBar/>
         </div>
+        <Button>
+          I'm a button
+        </Button>
         <div>
           {this.state.data.map((post, index)=><PostContainer key={index} post={post}/>)}
         </div>
