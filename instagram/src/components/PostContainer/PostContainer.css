@@ -2,12 +2,23 @@
     box-sizing: border-box;
 }
 
+.feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid green;
+
+}
 .instagramPic {
-    height: 400px;
-    width: 400px;
+    max-width: 600px;
 }
 
 .thumbnailPic {
     height: 50px;
     width: 50px;
+}
+
+.post {
+    border: 2px solid gray;
+    max-width: 610px;
 }

@@ -6,9 +6,9 @@ class PostContainer extends Component {
 
   render() {
     return (
-      <div>{this.props.posts.map( (post, index) => {
+      <div className="feed">{this.props.posts.map( (post, index) => {
         return (
-          <div key={post.username + index}>
+          <div className="post" key={post.username + index}>
             <div>
               <img className="thumbnailPic" src={post.thumbnailUrl} alt="ThumbnailPic" />
               <h5>{post.username}</h5>
