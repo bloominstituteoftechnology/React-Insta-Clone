@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+
 export default class CommentSection extends Component {
     constructor(){
         super();
@@ -18,9 +19,9 @@ export default class CommentSection extends Component {
     }
     render () {
         return(
-            <div>
-                <div>
-                    {this.state.userName}
+            <div className ='comments-text'>
+                <div className = 'commenter-name'>
+                    {this.state.userName}: 
                 </div>
                 <div>
                     {this.state.text}

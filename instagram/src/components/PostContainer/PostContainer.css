@@ -1,0 +1,56 @@
+
+.card{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.container{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3%;
+}
+.post-header{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+.post-header-img{
+    border: 2px rgb(185, 29, 2) solid;
+    padding: 1%;
+    border-radius: 50%;
+    width: 40%;
+    height: auto;
+}
+
+.post-header-username{
+    font-size: 2rem;
+    margin-left: -40px;
+}
+
+.signs-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.signs{
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+.comments{
+    margin: 1% 0;
+}
+
+.comments-text{
+    display: flex;
+}
+
+.commenter-name{
+    margin-right: 1%;
+    font-weight: bold;
+}
