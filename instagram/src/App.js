@@ -12,7 +12,7 @@ class App extends Component {
       <SearchBar />
       {dummyData.map((post, index) =>  {
         return (
-       <PostContainer key={index} post={post} />
+       <PostContainer id={index} key={index} post={post} />
         )
       })}
       </div>

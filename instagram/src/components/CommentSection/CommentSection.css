@@ -8,3 +8,7 @@
 .CommentSection__comment {
     padding-bottom: 5px;
 }
+
+.CommentSection__timestamp {
+    font-size: 0.625rem;
+}

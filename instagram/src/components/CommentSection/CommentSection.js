@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
 import { Form, Input } from 'reactstrap';
 import './CommentSection.css';
+import Moment from 'react-moment';
 
 class CommentSection extends Component {
+    
     constructor(props) {
         super();
         this.state = {
+            id: 0,
             comments: [],
-            newComment: ''
+            newComment: '',
+            timestamp: '',
         }
     }
 
     componentDidMount() {
         this.setState({
-            comments: this.props.comments
+            id: this.props.id,
+            comments: this.props.comments,
+            timestamp: this.props.timestamp,
         });
     }
 
@@ -46,12 +52,17 @@ render() {
                         <span className="CommentSection__comment-user">{comment.username}</span>
                         <span className="CommentSection__comment-text">{comment.text}</span>
                     </div>
+                    
                  );
          })}
             </div>
+            <div className="CommentSection__timestamp">
+             <span className="text-uppercase font-weight-light text-muted"><Moment parse="MMMM Do YYYY, hh:mm:ss A" fromNow>{this.state.timestamp}</Moment></span>
+            </div>
 
-            <div className="CommenSection__addComment">
-                <Input type="text" placeholder="Add comment..." value={this.state.newCommentInput} onChange={this.handleCommentInput} onKeyDown={this.addComment} />
+            <div className="CommenSection__addComment mt-2 pt-3 border-top">
+            
+                <Input id={`CommentSection__${this.state.id}`} type="text" placeholder="Add a comment..." value={this.state.newCommentInput} onChange={this.handleCommentInput} onKeyDown={this.addComment} />
 
             </div>
         </div>
