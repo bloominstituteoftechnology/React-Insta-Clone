@@ -14,7 +14,6 @@ class PostContainer extends Component {
   render() {
     return (
       <div>
-         <hr/>
         <div className="row my-3">
           <img className="mx-5 rounded-circle img-fluid" src={this.state.post.thumbnailUrl} alt={this.state.post.username}/>
           <div className="font-weight-bold d-flex align-items-center text-uppercase ">{this.state.post.username}</div>
