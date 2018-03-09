@@ -9,8 +9,9 @@ class PostContainer extends Component {
         {this.props.dummyData.map(post => {
           return (
             <div key={post.timestamp + post.username}>
-              <p>{post.username}</p>
-              <img src={post.thumbnailUrl} alt="" />
+              <p className="userInfo">
+                <img src={post.thumbnailUrl} alt="" /> {post.username}
+              </p>
               <img src={post.imageUrl} alt="" />
               <p>{post.likes}</p>
               <p>{post.timestamp}</p>

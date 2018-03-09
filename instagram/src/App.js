@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <SearchBar /> */}
+        <SearchBar />
         <PostContainer dummyData={this.state.Post} />
       </div>
     );
