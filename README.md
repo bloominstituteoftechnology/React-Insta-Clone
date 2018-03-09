@@ -1,5 +1,6 @@
 # React II
 
+
 ## Objectives
 The purpose of this project is to continue building on your knowledge of React that was started with the React I project. Here, you'll be implementing a lot of the same concepts and structuring your components in a very similar fashion. The main difference this time around is that you'll be using the `create-react-app` utility to generate your React project for you. Don't worry about all of the extra files that you may not understand are present inside the created React application. The overall structure of the project remains exactly the same as what you worked with in React I.
 

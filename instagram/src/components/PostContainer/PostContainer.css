@@ -1,0 +1,8 @@
+.PostContainer {
+    max-width: 614px;
+    margin-bottom: 30px;
+}
+
+.PostContainer__thumbnail img {
+   height: 50px;
+}
