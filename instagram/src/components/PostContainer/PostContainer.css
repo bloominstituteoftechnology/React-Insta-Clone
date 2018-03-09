@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+.instagramPic {
+    height: 400px;
+    width: 400px;
+}
+
+.thumbnailPic {
+    height: 50px;
+    width: 50px;
+}

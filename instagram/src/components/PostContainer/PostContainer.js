@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection'
-
+import './PostContainer.css'
 
 class PostContainer extends Component {
 
@@ -10,10 +10,10 @@ class PostContainer extends Component {
         return (
           <div key={post.username + index}>
             <div>
-              <img src={post.thumbnailUrl} alt="InstagramPic" />
+              <img className="thumbnailPic" src={post.thumbnailUrl} alt="ThumbnailPic" />
               <h5>{post.username}</h5>
             </div>
-            <img src={post.imageUrl} alt="InstagramPic" />
+              <img className="instagramPic" src={post.imageUrl} alt="InstagramPic" />
             <div>
               <i className="far fa-heart fa-lg"></i>
               <i className="far fa-comment"></i>

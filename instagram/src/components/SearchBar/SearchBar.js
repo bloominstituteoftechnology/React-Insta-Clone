@@ -10,8 +10,6 @@ class SearchBar extends Component {
         <div className="navbar nav_left">
           <img className="logo" src={logo} alt="logo" />
         </div>
-        {/* <i className="fab fa-instagram fa-lg"></i> */}
-        {/* <span fontStyle="romanesco">Instagram</span> */}
         <div className="navbar nav_center">
           <input className="searchbar" type="text" placeholder="Search" />
         </div>
