@@ -22,9 +22,9 @@ class App extends Component {
     console.log("Render Check", this.state.data);
     return (
       <div className="App">
-        <Container>
-          <SearchBar data={this.state.data} />
+        <SearchBar data={this.state.data} />
 
+        <Container>
           {this.state.data.map((post, i) => {
             return (
               <Card>

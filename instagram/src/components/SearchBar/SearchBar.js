@@ -13,7 +13,7 @@ import "./SearchBar.css";
 
 const SearchBar = props => {
   return (
-    <Container>
+    <Container id="header">
       <Row className="my-3">
         <Col sm={1} className="col1 pr-5 d-flex">
           <img
@@ -22,10 +22,10 @@ const SearchBar = props => {
             alt="Logo"
           />
         </Col>
-        <Col className="col2" sm={2}>
+        <Col className="col2" sm={3}>
           <p className="m-0">Instagram</p>
         </Col>
-        <Col sm={7} md={{ size: 4, offset: 2 }}>
+        <Col sm={4}>
           <InputGroup className="align-self-center">
             <InputGroupAddon addonType="prepend">
               <InputGroupText>
@@ -38,6 +38,14 @@ const SearchBar = props => {
             </InputGroupAddon>
             <Input placeholder="search" />
           </InputGroup>
+        </Col>
+        <Col
+          className="d-flex justify-content-around align-items-center"
+          sm={3}
+        >
+          <i className="far fa-compass fa-lg" />
+          <i className="far fa-heart fa-lg" />
+          <i className="far fa-user fa-lg" />
         </Col>
       </Row>
     </Container>
