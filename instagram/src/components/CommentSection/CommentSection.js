@@ -18,7 +18,7 @@ class CommentSection extends Component {
         const tempComments = this.state.comments;
         tempComments.push({
             text: newCommentText,
-            username: 'Fred'
+            username: 'Anonymous User'
         });
         this.setState({comments: tempComments});
 
@@ -26,7 +26,7 @@ class CommentSection extends Component {
 
     render() {
         return (
-            <div>
+            <div className={'container-fluid mb-5'}>
                 {this.state.comments.map(comment => {
                     return (
                         <div className={'row'}>

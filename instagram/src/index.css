@@ -35,6 +35,10 @@ body {
   text-align: start;
 }
 
+.formInput {
+  box-shadow: -2px 2px 10px gray;
+}
+
 @media (max-width: 800px) {
   .thumbnail {
     width: 40px;
@@ -44,4 +48,5 @@ body {
   .username {
     font-size: 16px;
   }
+
 }

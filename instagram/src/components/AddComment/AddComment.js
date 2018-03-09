@@ -24,7 +24,7 @@ class AddComment extends Component {
             <div className={'row'}>
                 <div className={'col'}>
                     <form onSubmit={this.handleFormSubmit}>
-                        <input onChange={this.handleNewComment} placeholder='Comment Here!' value={this.state.newComment} />
+                        <input className={'w-75 formInput'} onChange={this.handleNewComment} placeholder='Comment Here!' value={this.state.newComment} />
                     </form>
                 </div>
             </div>
