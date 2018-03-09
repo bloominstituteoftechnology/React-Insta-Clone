@@ -40,3 +40,12 @@
   display: flex;
   justify-content: flex-start;
 }
+
+.timeS {
+  font-size: 0.8em;
+  color: lightgray;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-left: 18px;
+}

@@ -30,7 +30,7 @@ const PostContainer = props => {
           <div>
             <CommentSection key={post.username} words={post.comments} />
           </div>
-          <div>{post.timestamp}</div>
+          <div className="timeS">{post.timestamp}</div>
           <hr />
           <div className="footer">
             <form action="">
