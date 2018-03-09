@@ -6,7 +6,13 @@ export const PostContainer = (props) => {
     
     function click(event) {
         event.target.classList.toggle("PostContainer__icons-liked")
-        props.click(event);
+        props.click(event.target.value);
+    }
+
+    function commentSubmit(event) {
+        event.preventDefault();
+        props.comment(event);
+        event.target.firstChild.value = "";
     }
 
     return (
@@ -18,7 +24,9 @@ export const PostContainer = (props) => {
             <div className="PostContainer__comment-content">{props.data.likes} likes</div>
             <CommentSection comments={props.data.comments}/>
             <div className="PostContainer__timestamp PostContainer__comment-content">{props.data.timestamp}</div>
+            <form onSubmit={commentSubmit} id={props.i}>
             <input className="PostContainer__input" placeholder="Add a comment..."></input>
+            </form>
             </div>
         </div>
     )

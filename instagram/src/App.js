@@ -16,10 +16,16 @@ class App extends Component {
   }
 
     
-  incrementValue = (i) => {
-    const target = i.target.value;
+  addComment = (event) => {
+    const index = event.target.id;
     const newData = this.state.Data;
-    newData[target].likes += 1;
+    newData[index].comments.push({username: "newuser", text: event.target.firstChild.value});
+    this.setState({Data: newData});
+}
+
+  incrementValue = (i) => {
+    const newData = this.state.Data;
+    newData[i].likes += 1;
     this.setState({Data: newData});
 }
 
@@ -27,7 +33,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        {this.state.Data.map(((data, index) => <PostContainer click={this.incrementValue} data={data} i={index} key={index}/>))}
+        {this.state.Data.map(((data, index) => <PostContainer click={this.incrementValue} comment={this.addComment} data={data} i={index} key={index}/>))}
       </div>
     );
   }
