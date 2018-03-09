@@ -1,0 +1,34 @@
+.SearchBar {
+    max-width: 1010px;
+}
+
+.SearchBar__branding {
+    flex: 1 9999 0%;
+    font-size: 2em !important;
+}
+
+.SearchBar__text {
+    font-size: 2rem;
+    padding-left: 20px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+.SearchBar__input {
+    flex: 0 1 auto;
+}
+
+.SearchBar__nav {
+    flex: 1 0 0%
+}
+
+
+.SearchBar__nav li:not(:first-child) {
+    margin-left: 30px;
+} 
+
+/* Remove blue glow/highlight from boostrap's form input styling */
+input[type="text"], textarea {
+    outline: none;
+    box-shadow:none !important;
+    border: 0px solid #ccc !important;
+    }

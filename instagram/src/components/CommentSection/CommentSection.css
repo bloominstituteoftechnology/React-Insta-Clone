@@ -1,0 +1,14 @@
+.CommentSection__comment-user {
+    font-weight: 600;
+    margin-right: .5rem;
+
+}
+
+
+.CommentSection__comment {
+    padding-bottom: 5px;
+}
+
+.CommentSection__timestamp {
+    font-size: 0.625rem;
+}

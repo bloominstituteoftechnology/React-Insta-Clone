@@ -1,0 +1,29 @@
+.PostContainer {
+    max-width: 614px;
+    margin: 15px 0 45px 0;
+}
+
+.PostContainer__thumbnail {
+    font-weight: 600;
+
+}
+
+.PostContainer__thumbnail img {
+   height: 30px;
+}
+
+.PostContainer__likes {
+    font-weight: 600;
+    margin-bottom: 8px;
+
+ }
+
+ .PostContainer__misc span:not(:first-child) {
+    padding: 0 8px 8px 8px;
+   
+    
+ }
+
+ .PostContainer__misc span {
+    font-size: 1rem;
+ }
