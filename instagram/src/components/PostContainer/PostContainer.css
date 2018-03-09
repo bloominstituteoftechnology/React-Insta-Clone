@@ -1,0 +1,19 @@
+.thumbnail {
+    max-width: 10%;
+    justify-content: center;
+}
+
+.userCard {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+}
+
+.topCard{
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    padding: 25px auto;
+}
