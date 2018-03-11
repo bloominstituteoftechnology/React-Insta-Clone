@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { SearchBar } from './components/SearchBar/SearchBar';
 import './App.css';
-import { PostList } from './components/PostContainer/posts';
+import { PostContainer } from './components/PostContainer/PostContainer';
 import { Comments } from './components/CommentSection/CommentSection';
-
 import { dummyData } from './dummy-data';
-
 
 
 class App extends Component {
@@ -23,15 +20,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-        <h1 className="App-title">Instagram</h1>
-
-        <div id = "search">
+      <div className="sticky-top">
         <SearchBar  />
-         </div>
-        </header>
-        <PostList dummyData={this.state.Posts} />
-
+        </div>
+        {dummyData.map((post, i) => <PostContainer key={i} dummyData={post} />)}
       </div>
     );
   }

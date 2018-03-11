@@ -1,5 +1,15 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+html {
+  font-size: 62.5%;
+  width: 100%;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
