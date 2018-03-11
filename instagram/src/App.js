@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import { SearchBar } from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import { Container, Row, Col } from 'reactstrap';
 
 class App extends Component {
   constructor() {
@@ -18,10 +19,14 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-          <SearchBar />
-          <PostContainer posts={this.state.Posts} />
-      </div>
+      <Container>
+            <SearchBar/>
+          <Row>
+            <Col xs={6} md={8}>
+              <PostContainer posts={this.state.Posts} />
+            </Col>
+          </Row>
+      </Container>
     );
   }
 }

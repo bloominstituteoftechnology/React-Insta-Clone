@@ -1,12 +1,15 @@
 .Post {
-    border: 1px solid pink;
     width: 500px;
 }
-
-.Post__heading {
-    display: flex;
+.cardSubtitle {
+    font-weight: bold;
+    padding: 25px 15px;
+}
+.img-thumbnail {
+    width: 60px;
+    height: 60px;
 }
 
 .Post__image {
-    width: 500px;
+    width: 100%;
 }

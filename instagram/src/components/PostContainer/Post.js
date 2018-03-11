@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection.js';
+import {
+    Card,
+    CardImg,
+    CardText,
+    CardBody,
+    CardSubtitle,
+    Row } from 'reactstrap';
 import './post.css';
 
 class Post extends Component {
@@ -17,17 +24,31 @@ class Post extends Component {
 
     render() {
         return (
-            <div className='Post'> {/* !! need font modifier for all children? */}
-                <div className='Post__heading'> {/* !! definitely need heavier font-weight modifier for headings */}
-                    <img className='Post__thumbnail' src={this.state.post.thumbnailUrl} alt=""/>
-                    <div>{this.state.post.username}</div>
-                </div>
-                <img className='Post__image' src={this.state.post.imageUrl} alt=""/>
-                <div>heartIcon commentIcon</div> {/* !! will need className for positioning, still need actual icons */}
-                <div>{this.state.post.likes} likes</div> {/* !! may need className for positioning */}
-                <CommentSection comments={this.state.comments}/> {/* !! may need className for text-wrap, etc? */}
-                <div>{this.state.post.timestamp}</div> {/* !! may need className for format */}
-            </div>
+                <Card >
+                    <CardBody>
+                        <Row>
+                            <img style={{borderRadius: 90}} className='img-thumbnail' src={this.state.post.thumbnailUrl} alt=""/>
+                            <CardSubtitle className='cardSubtitle'>{this.state.post.username}</CardSubtitle>
+
+                        </Row>
+                    </CardBody>
+                        <CardImg className='Post__image' src={this.state.post.imageUrl} alt=""/>
+                    <CardBody>
+                    <CardText>
+                        <i class="icons fas fa-heart fa-2x"></i>
+                        <i class="icons far fa-comment fa-2x"></i>
+                    </CardText>
+                    <CardText>
+                        <div>{this.state.post.likes} likes</div>
+                    </CardText>
+                    <CardText>
+                        <CommentSection comments={this.state.comments}/>
+                    </CardText>
+                    <CardText>
+                        <div>{this.state.post.timestamp}</div>
+                    </CardText>
+                    </CardBody>
+                </Card>
         )
     }
 }
