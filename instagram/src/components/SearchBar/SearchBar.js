@@ -3,14 +3,13 @@ import { Navbar } from 'react-bootstrap'
 import './SearchBar.css';
 
 
-export const SearchBar = (props) => {
+export const SearchBar = ({headerImage}) => {
     
       return (
         <Navbar>
             <Navbar.Header>
                 <Navbar.Brand>
-                  <div className="InstagramBrand">
-                  </div>
+                    <img src={headerImage} style={{height: '80%', width: '80%'}} alt='logo' />
                 </Navbar.Brand>
             </Navbar.Header>
             <Navbar.Form pullLeft>

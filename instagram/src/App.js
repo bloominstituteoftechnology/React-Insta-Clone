@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { SearchBar } from './components/SearchBar/SearchBar';
+import InstagramBrand from './InstagramBrand.png'; 
 import './App.css';
 import { PostContainer } from './components/PostContainer/PostContainer';
 import { Comments } from './components/CommentSection/CommentSection';
@@ -21,7 +22,7 @@ class App extends Component {
     return (
       <div className="App">
       <div className="sticky-top">
-        <SearchBar  />
+        <SearchBar headerImage={InstagramBrand}/>
         </div>
         {dummyData.map((post, i) => <PostContainer key={i} dummyData={post} />)}
       </div>
