@@ -1,0 +1,15 @@
+.Post {
+    width: 500px;
+}
+.cardSubtitle {
+    font-weight: bold;
+    padding: 25px 15px;
+}
+.img-thumbnail {
+    width: 60px;
+    height: 60px;
+}
+
+.Post__image {
+    width: 100%;
+}
