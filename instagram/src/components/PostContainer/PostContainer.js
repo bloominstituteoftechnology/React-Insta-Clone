@@ -1,11 +1,13 @@
 import React from 'react';
+import CommentSection from '../CommentSection/CommentSection.js'
+
 
 const PostContainer = props => {
-    const { users } = props;
+    const { posts } = props;
 
     return (
         <div>
-            {users.map(user => {
+            {posts.map(user => {
                 return (
                     <div key={user.username}>
                         <div>
@@ -18,7 +20,9 @@ const PostContainer = props => {
                         <div>
                             <div>{user.likes + ' likes'}</div>
                         </div>
-
+                        <div>
+                            <div> <CommentSection key={user.index} comments={user.comments} /></div>
+                        </div>
                     </div>
                 );
             })}

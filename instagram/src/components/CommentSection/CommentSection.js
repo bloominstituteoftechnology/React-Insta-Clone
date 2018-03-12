@@ -1,26 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const CommentSection = props => {
-  const { users } = props;
 
-  return (
-    <div>
+class CommentSection extends Component {
+
+  render() {
+    return (
       <div>
-        {users.forEach(user => {
-          user.comments.map(comment => {
-            return (<p><span>{comment.username + ' '}</span>{comment.text}</p>);
-          });
-        })}
+        {this.props.comments.map((comment, index) => {
+         return <div key={`${comment} ${index}`}><div>{comment.username}</div><p>{comment.text}</p></div>
+        })};
       </div>
-    </div>
-
-  );
-};
-
-
+    )
+  }
+}
 
 export default CommentSection;
-
-//  {users.forEach(user => user.comments.map(comment => {
-//           return (<p><span>{comment.username + ' '}</span>{comment.text}</p>);
-//         }))}
