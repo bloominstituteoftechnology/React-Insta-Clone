@@ -1,0 +1,18 @@
+@import  '../PostContainer/PostContainer.css'
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100%;
+
+}
+
+#root {
+  max-width: 880px;
+  width: 100%;
+  margin:  auto;
+}
+
