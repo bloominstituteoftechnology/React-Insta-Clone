@@ -1,0 +1,22 @@
+
+.container {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.search {
+    justify-content: center;
+}
+
+.instagram {
+    margin-left: 10px;
+}
+
+.instagramLogo {
+    border-right: 3px solid grey;
+}
