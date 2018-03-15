@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
+import logo from './logo.svg';
 import './App.css';
+import SearchBar from './components/SearchBar/SearchBar';
+import PostContainer from './components/PostContainer/PostContainer';
 import dummyData from './dummy-data';
-import { PostContainer } from './components/PostContainer/PostContainer';
-
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = { Post: [] }
-  }
-
-  componentDidMount() {
-    this.setState({Post: dummyData});
-  }
-  
   render() {
     return (
-      <div className="App">
-        <PostContainer dummyData={this.state.Post} />
+      <div className="container-fluid App">
+          <header className="App-header">
+              <img src={logo} className="App-logo" alt="logo" />
+          </header>
+          <SearchBar headerImage={logo} />
+          <PostContainer feed={dummyData} />
       </div>
     );
   }

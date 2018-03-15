@@ -1,32 +1,33 @@
 import React, { Component } from 'react';
-import './PostContainer.css';
-import { CommentSection } from '../CommentSection/CommentSection';
+import CommentSection from '../CommentSection/CommentSection.js';
 
 class PostContainer extends Component {
-    constructor (props) {
-        super(props);
-        this.state = {
-            
-        };
-    }
-    render() {
-        return (
-            <div className="Post-Wrapper">
-                {this.props.dummyData.map((post => {
-                    return (
-                        <div key={post.timestamp + post.username}>
-                            <p>{post.username}</p>
-                            <img src={post.thumbnailUrl} alt="" />
-                            <img src={post.imageUrl} alt="" />
-                            <p>{post.likes}</p>
-                            <p>{post.timestamp}</p>
-                            <CommentSection dummyData={this.state.Comments} />
-                        </div>
-                    )
-                }))}
-            </div>
-        )
-    }
-}; 
+  constructor() {
+    super();
+    this.state = {
+      postImage: '',
+      userName: ''
+    };
+  };
 
-export {PostContainer};
+  render() {
+    return (
+      this.props.feed.map(post => {
+        return (
+          <div>
+                <div className={'row d-flex justify-content-start mt-3'}>
+                    <div className={'col-2'}><img className={'thumbnail'} src={post.thumbnailUrl} alt='thumbnail'/></div>
+                    <div className={'col d-flex align-items-center justify-content-start username'}>{post.username}</div>
+                </div>
+                <div className={'row mb-4'}>
+                    <div className={'col'}><img className={'postImage'} src={post.imageUrl} alt='PostImg' /></div>
+                    </div>
+                    <CommentSection comments={post.comments} />
+          </div>
+        );
+      })
+    );
+  }
+};
+
+export default PostContainer;
