@@ -1,0 +1,32 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js start
+
+PATH: 
+  C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\UCRT\;C:\Program Files\Intel\UCRT\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Microsoft VS Code\bin;C:\Users\Brett\AppData\Local\GitHubDesktop\bin;C:\Users\Brett\AppData\Roaming\npm;C:\Users\Brett\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.2.1
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Couldn't find a package.json file in "C:\\Code\\Lambda Projects\\React-II"
+      at new MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:40048:15
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:98:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:109:13
+      at <anonymous>

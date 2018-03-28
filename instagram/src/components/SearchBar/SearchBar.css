@@ -1,0 +1,18 @@
+.Nav__Section{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+    opacity: .5;
+}
+
+.Nav__Search{
+    align-self: center;
+}
+.Nav__SearchText{
+    text-align: center;
+}
+
+.Nav__Icons{
+    padding-top: 5px;
+}
