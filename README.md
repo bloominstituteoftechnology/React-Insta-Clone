@@ -1,8 +1,8 @@
-# Insta-Clone-React
+# React-Insta-Clone
 
 ## Objectives
 
-The purpose of this project is to continue building on your knowledge of React that was started with the React I project. Here, you'll be implementing a lot of the same concepts and structuring your components in a very similar fashion. The main difference this time around is that you'll be using the `create-react-app` utility to generate your React project for you. Don't worry about all of the extra files that you may not understand are present inside the created React application. The overall structure of the project remains exactly the same as what you worked with in React I.
+The purpose of this project is to continue building on your knowledge of React that was started with the React I project. Here, you'll be implementing a lot of the same concepts and structuring your components in a very similar fashion. The main difference this time around is that you'll be using the `create-react-app` utility to generate your React project for you. Don't worry about all of the extra files that you may not understand are present inside the created React application. The overall structure of the project remains exactly the same as what you worked with in React-Todo.
 
 For this project, you'll be building a simple Instagram clone using React. There is a provided file called `dummy-data.js` that contains some mock data. Each object in the mock data represents a faux Instagram post. Your React application will receive this faux post data and render each as a separate Instagram post.
 
