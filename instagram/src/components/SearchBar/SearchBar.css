@@ -1,0 +1,21 @@
+.search-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.logo {
+  max-height: 40px;
+}
+
+.col1 {
+  border-right: 2px solid lightgray;
+}
+
+.col2 {
+  font-family: "Norican", cursive;
+  font-size: 35px;
+  color: rgb(42, 44, 44);
+}
+#header {
+  width: 100%;
+}
