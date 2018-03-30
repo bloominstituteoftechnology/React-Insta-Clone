@@ -14,7 +14,7 @@ Try to get all of the tests passing. If you don't get there, then aim for creati
 
 * Run `create-react-app instagram` to create your starter application with the name `instagram`.
 * Once your React project has been created, move the provided `/tests` directory as well as the `dummy-data.js` file into the `/src` directory of your newly-generated React project.
-* Inside your `instagram` project directory, run `yarn add enzyme sinon enzyme-adapter-react-16 [package] --dev`, which will install additional necessary dependencies that `create-react-app` doesn't install for you off the bat.
+* Inside your `instagram` project directory, run `yarn add enzyme sinon enzyme-adapter-react-16 --dev`, which will install additional necessary dependencies that `create-react-app` doesn't install for you off the bat.
 * You'll also need to install the Reactstrap library, which will come in handy for theming and styling of your project. Run `yarn add reactstrap` to install it. Then, copy and paste these two links into the head of the `index.html` file in `instagram/public`:
 
 ```
