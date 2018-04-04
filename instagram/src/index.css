@@ -1,6 +1,8 @@
-@import "./src/components/CommentSection/CommentSection.css";
-@import "./src/components/SearchBar/SearchBar.css";
-@import "./src/components/PostContainer/PostContainer.css";
+@import "./components/SearchBar/SearchBar.css";
+@import "./components/PostContainer/PostContainer.css";
+@import "./components/CommentSection/CommentSection.css";
+
+
 
 body {
   margin: 0;
