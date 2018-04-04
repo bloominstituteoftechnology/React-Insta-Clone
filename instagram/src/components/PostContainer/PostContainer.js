@@ -6,11 +6,10 @@ const PostContainer = props => {
 	// console.log(props.dummy);
   return (
   	<div>
-  		{props.dummy.map(post => {
-  			<div><CommentSection commentList={post.comments}/></div>
-  		})}
+  	
+  		<CommentSection commentList={props.commentList} />
   	</div>
-  )
+  );
 }
 
 export default PostContainer;
