@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Post from './components/Post/Post.js';
+import SearchBar from './components/SearchBar/SearchBar.js';
+import dummyData from './dummy-data.js';
 
 class App extends Component {
+  componentWillMount() {
+    this.setState({ posts: dummyData, searchText: '' });
+  }
+
+  postElements() {
+    return this.state.posts
+      .filter((post) => post.username.includes(this.state.searchText))
+      .map((post) => <Post {...post} />);
+  }
+
+  handleSearch = (e) => this.setState({ searchText: e.target.value })
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <SearchBar searchText={this.state.searchText} handleSearch={this.handleSearch} />
+        {this.postElements()}
       </div>
     );
   }

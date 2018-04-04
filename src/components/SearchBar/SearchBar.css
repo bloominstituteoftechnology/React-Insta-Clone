@@ -1,0 +1,18 @@
+.SearchBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.SearchBar__sitename {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Chicle';
+}
+
+.SearchBar__actions img {
+  height: 40px;
+}
