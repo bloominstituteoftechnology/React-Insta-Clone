@@ -10,10 +10,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="Header">
+        <div className="header">
+          <div className="header_left">
+            <img className="instaLogo" src="https://image.flaticon.com/icons/svg/87/87390.svg"/>
+            <h3 className="instaTitle">Instagram</h3>
+          </div>
+
           <SearchBar />
+
+          <div className="header_right">
+
+          </div>
         </div>
-        
+        <PostContainer />
       </div>
     );
   }
