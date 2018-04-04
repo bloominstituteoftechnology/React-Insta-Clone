@@ -1,0 +1,22 @@
+.headerBar {
+    display: flex;
+    width: 100%;
+}
+.searchDiv {
+    justify-content: start;
+    align-content: center;
+}
+.searchDiv {
+    justify-content: center;
+    align-content: center;
+}
+.rightIcons {
+    justify-content: end;
+    align-content: center;
+}
+.image {
+    padding: 10px;
+}
+.firstImage {
+    border-right: 1px solid black;
+}
