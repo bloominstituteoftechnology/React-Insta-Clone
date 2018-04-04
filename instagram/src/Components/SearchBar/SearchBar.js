@@ -8,7 +8,7 @@ export const SearchBar = props => {
             Instagram
           </span>
         </a>
-        <input className="SearchBar__Input" placeholder="&#128269; Search" />
+        <input className="SearchBar__Input" placeholder="Search" />
         <span className="SearchBar__Buttons">
           <a className="SearchBar__Button" href="/">
             <i class="far fa-compass fa-2x" />
