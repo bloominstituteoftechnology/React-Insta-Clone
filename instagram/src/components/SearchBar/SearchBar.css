@@ -17,3 +17,16 @@
 .right {
     margin: 0 10px;
 }
+
+.fontControl {
+    font-family: "FontAwesome";
+}
+
+input {
+    text-align: center;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  color: gray;
+  margin-left: 5px;
+}

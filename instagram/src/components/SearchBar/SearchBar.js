@@ -7,8 +7,7 @@ const SearchBar = () => {
         <div className="verticalLine left" />
         <span className="left">Instagram</span>
         <div className="middle">
-          <i className="fas fa-search" />
-          <input type="text" placeholder="Search" />
+          <input type="text" className="fontControl" placeholder="&#xf002; Search" />
         </div>
         <i className="far fa-compass right" />
         <i className="far fa-heart right" />
