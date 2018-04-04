@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './SearchBar.css'
 class SearchBar extends React.Component {
     constructor() {
         super();
@@ -7,8 +7,11 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div>
-            <h1>Search Bar</h1>
+            <div className='SearchBar'>
+            <h3>Instagram</h3>
+            <form>
+            <input type="text" placeholder='Search'/>
+          </form> 
             </div>
         );
     }
