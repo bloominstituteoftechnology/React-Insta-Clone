@@ -2,11 +2,24 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
-import SearchBar from './SearchBar/SearchBar.js';
-import PostContainer from './PostContainer/PostContainer.js';
-import CommentSection from './CommentSection/CommentSection.js';
+// import SearchBar from './SearchBar/SearchBar.js';
+import PostContainer from './components/PostContainer/PostContainer.js';
+import CommentSection from './components/CommentSection/CommentSection.js';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      dummyList: []
+    };
+  }
+
+  componentDidMount = () => {
+    this.setState({dummyList: dummyData})
+    // console.log(dummyData);
+  }
+
+
   render() {
     return (
       <div className="App">
@@ -17,9 +30,9 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <SearchBar />
-        <PostContainer />
-        <CommentSection />
+        {/* <SearchBar /> */}
+        <PostContainer dummy={this.state.dummyList}/>
+        {/* <CommentSection /> */}
       </div>
     );
   }
