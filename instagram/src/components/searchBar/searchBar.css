@@ -1,0 +1,25 @@
+.Container{
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px;
+  align-items: baseline;
+  
+}
+.iconContainer{
+  border-right: 1px solid black;
+  padding: 10px 20px 10px 10px;
+}
+
+.logo{
+  font-family: 'Pacifico', cursive;
+  font-weight: normal;
+  margin: 0 20px;
+}
+.input{
+  border-radius: 3px;
+  border: 1px solid lightgray;
+  padding: 5px;
+}
+.icon{
+  font-size: 30px;
+}
