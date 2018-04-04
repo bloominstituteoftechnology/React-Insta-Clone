@@ -6,6 +6,16 @@ import PostContainer from './components/PostContainer/PostContainer';
 import dummyData from './dummy-data.js';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      posts: []
+    }
+  }
+
+  componentDidMount() {
+    this.setState( { post: dummyData } );
+  }
   render() {
     return (
       <div className="App">
@@ -17,6 +27,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <SearchBar />
+        <PostContainer posts = {this.state.posts}/>
       </div>
     );
   }
