@@ -1,24 +1,13 @@
-import React from 'react';
-import CommentSection from './components/CommentSection/CommentSection';
+import React from "react";
 
-const PostContainer = (props) => {
-    console.log(props.dummy);
-    return (
-        <div>
-            {props.dummy.map(post => (
-                <div>
-                    <CommentSection comments={post.comments}/>
-                </div>                
-            ))}
-        </div>
-    );
-}
+const PostContainer = props => {
+  return (
+    <div>
+      {props.dummy.map(post => (
+        <div>{<CommentSection commentList={comments} />}</div>
+      ))}
+    </div>
+  );
+};
 
-
-
-
-
-
-
-
-export default PostContainer
+export default PostContainer;
