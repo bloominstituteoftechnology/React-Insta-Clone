@@ -1,0 +1,7 @@
+.Container {
+  border: 1px solid black;
+}
+
+.Container__header {
+  display: flex;
+}
