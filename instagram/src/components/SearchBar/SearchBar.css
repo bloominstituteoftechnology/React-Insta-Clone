@@ -1,0 +1,19 @@
+.verticalLine {
+    border-left: 2px solid #C9C9C9;
+}
+
+.searchBar {
+    display: flex;
+}
+
+.left {
+    margin: 0 10px;
+}
+
+.middle {
+    margin: 0 70px;
+}
+
+.right {
+    margin: 0 10px;
+}
