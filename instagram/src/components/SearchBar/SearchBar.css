@@ -1,6 +1,10 @@
 .searchBar {
 display: inline-block;
-width: 50%;
+width: 25%;
 padding: 2%;
-border-bottom: 1px solid gray;
+}
+
+.headerBox {
+  border-bottom: 1px solid gray;
+
 }
