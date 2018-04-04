@@ -2,27 +2,32 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.header_left {
+  display: flex;
+  align-items: center;
 }
 
-.App-title {
-  font-size: 1.5em;
+.instaLogo {
+  border-right: 2px solid gray;
+  height: 50px;
+  width: 50px;
 }
 
-.App-intro {
-  font-size: large;
+.instaTitle {
+  margin-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.header_right {
+  align-items: center;
+  display: flex;
 }
+
