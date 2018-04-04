@@ -1,4 +1,6 @@
 .searchBar {
 display: inline-block;
-width: 25%;
+width: 50%;
+padding: 2%;
+border-bottom: 1px solid gray;
 }

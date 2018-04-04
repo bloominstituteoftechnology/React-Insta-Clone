@@ -1,12 +1,20 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-const SearchBar = () => {
+
+
+
+const Header = () => {
   return (
-    <div class= "searchBar">
-     <Input type="text" name="searchBar" placeholder="Search Here!" />
-       <img src="./img/dabman.png" alt="dabman" className="dabman-responsive"/>
+    <div class= "Header">
+     {/* <img src="http://www.freelogovectors.net/wp-content/uploads/2016/12/instagram-logo1.png" width="24" height="24"/> */}
   </div>
   )
 }
 
-export default SearchBar;
+const searchBar = () => {
+  return (
+    <div> <Input type="text" name="searchBar" placeholder="Search Here!" /> </div>
+  )
+}
+
+export default Header;
