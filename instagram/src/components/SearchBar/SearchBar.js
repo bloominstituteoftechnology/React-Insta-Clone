@@ -6,7 +6,7 @@ const SearchBar = props => {
       <img src="img/logo.png" alt="Instagram logo" />
       <input onChange={props.change}
           className="search-input"
-          placeholder =" "
+          placeholder=" "
           value={props.field}/>
       <div className="search-icons">
         <img src="img/compass.png" alt="Compass icon" />
