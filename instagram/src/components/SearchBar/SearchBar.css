@@ -8,8 +8,8 @@
 }
 
 .SearchBar input {
-    height: 100px;
-    width: 800px;
+    height: 75px;
+    width: 400px;
     font-size: 2rem;
 }
 /* Title Header  */
@@ -20,6 +20,7 @@
 }
 
 /* User Action buttons  */
-.SearchBar__actions img {
-    height: 50px;
-}
+/*.SearchBar__actions img {*/
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+/*}*/
