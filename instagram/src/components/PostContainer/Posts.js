@@ -13,18 +13,19 @@ class Posts extends React.Component {
     } = this.props.postdata;
     return (
       <div className="post">
-        <div className="postheader">
-          <img className="thumb" src={thumbnailUrl} />
-          <h2 className="username">{username}</h2>
+        <div className="post_header">
+          <img className="post_thumb" src={thumbnailUrl} alt="user picture" />
+          <h2 className="post_username">{username}</h2>
         </div>
-        <div className="banner">
-          <img className="heroimg" src={imageUrl} />
-          <span className="likes">{likes}</span>
+        <img className="post_image" src={imageUrl} alt="Main picture" />
+        <div className="post_footer">
+          <div className="post_iconbar" />
+          <div className="post_likes">{likes} likes</div>
           {/* {comments.map(comment => {
             return <Comments comments={comment} />;
           })} */}
           <Comments comments={comments} />
-          <span className="timestamp">{timestamp}</span>
+          <div className="post_timeline">{timestamp}</div>
         </div>
       </div>
     );
