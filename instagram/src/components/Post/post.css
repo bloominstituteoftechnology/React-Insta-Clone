@@ -1,0 +1,38 @@
+.container {
+    border: 1px solid red;
+    width: 50%;
+    padding: 0;
+    font-weight: bold;
+}
+
+.contentHeader {
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    margin: 20px 30px;
+}
+
+.thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 15px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.mainImage {
+    width: 100%;
+}
+
+.likeAndTime {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.time {
+    font-weight: normal;
+}

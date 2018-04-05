@@ -1,13 +1,18 @@
 import React, { Component } from "react";
+import dummyData from '../../dummy-data.js'
+import Post from '../Post/Post.js'
 
-const PostContainer = props => {
-    return <div>
-        <div class="row">
-            <div class="col-12">
+export class PostContainer extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            postContent: [...dummyData]
+        };
+    }
 
-            </div>
-        </div>
-    </div>;
+    render() {
+        return <div>{this.state.postContent.map((content) => (<Post userPost={content} />))}</div>;
+    }
 };
 
 export default PostContainer;
