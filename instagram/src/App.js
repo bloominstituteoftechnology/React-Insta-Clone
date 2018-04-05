@@ -20,7 +20,7 @@ class App extends Component {
             <img className="icon icons_compass" src={require("./Images/user.png")}/>
           </div>
         </div>
-        <PostContainer />
+        <PostContainer data={dummyData}/>
       </div>
     );
   }
