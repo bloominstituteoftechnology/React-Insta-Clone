@@ -1,9 +1,21 @@
 .searchBar {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  margin-right: 4.5rem;
+}
+.searchBar .icon {
+  height: 1.3rem;
+  right: -7rem;
+  bottom: .1rem;
+  opacity: 0.3;
+  position: relative; 
+  width: 1.3rem;
 }
 
 .searchBar input {
-  text-align: center;
+  border: .1rem solid lightgrey;
+  border-radius: .5rem;
+  height: 3rem;
+  text-indent: 3.5rem;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
