@@ -30,10 +30,13 @@ class App extends Component {
 }
 
 //should deal with the actual effect of liking a post
-// handleLikePost = (toggle, index) => {
-// console.log(toggle);
-
-// }
+handleLikePost = (toggle, index) => {
+console.log(toggle);
+const { data } = this.state;
+data[index].likes = toggle ? data[index].likes + 1 : data[index].likes - 1; //checks if post is liked, if liked already, unlike if not liked, like it
+// probably will break i dunno
+this.ssetState({'data' : data});
+}
 
 
 
