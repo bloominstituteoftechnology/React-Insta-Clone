@@ -9,19 +9,22 @@
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  position: fixed;
+  width: 100%;
 }
 
 .header_left {
-  display: flex;
   align-items: center;
+  display: flex;
+  opacity: .9;
 }
 
 .instaIcon {
+  border-right: .1rem solid rgb(200, 200, 200);
   height: 4rem;
-  width: 5rem;
   padding: .5rem;
   padding-right: 1.5rem;
-  border-right: .1rem solid rgb(200, 200, 200);
+  width: 5rem;
 }
 
 .instaTitle {
@@ -42,6 +45,7 @@
 
 .icon {
   height: 3rem;
-  width: 3rem;
   margin-right: 4rem;
+  opacity: 0.6;
+  width: 3rem;
 }
