@@ -1,11 +1,15 @@
 import React from 'react';
+import user from './user.png';
+import compass from './compass.png';
+import instalogo from './instalogo.jpg';
+import camera from './cameralogo.svg';
 
 const SearchBar = () => {
     return (
         <div className="headerBar">
             <div className="leftIcons">
-                <img className="firstImage image" src="http:" />
-                <img className="image"src="http:" />
+                <img className="firstImage image" src={camera} />
+                <img className="image"src={instalogo} />
             </div>
             <div className="searchDiv">
                 <input className="inputField" 
@@ -16,9 +20,8 @@ const SearchBar = () => {
             />
             </div>
             <div className="rightIcons">
-            <img className="image" src="http:" />
-            <img className="image" src="http:" />
-            <img className="image" src="http:" />
+            <img className="image" src={compass} />
+            <img className="image" src={user} />
             </div>
         </div>
     )

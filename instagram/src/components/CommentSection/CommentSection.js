@@ -1,11 +1,13 @@
 import React from 'react';
+import heart from './love.png';
+import comBubble from './comment.png';
 
 const CommentSection = () => {
     return (
         <div className="commentDiv">
             <div>
-                <img className="image" src="http:" />
-                <img className="image" src="http:" />
+                <img className="image" src={heart} />
+                <img className="image" src={comBubble} />
             </div>
             {/* <p>{this.state.likes} likes</p> */}
             {/* <div>

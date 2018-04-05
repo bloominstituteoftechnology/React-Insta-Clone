@@ -4,22 +4,29 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import CommentSection from './components/CommentSection/CommentSection.js';
 import PostContainer from './components/PostContainer/PostContainer.js';
+import dummyData from './dummy-data.js';
 
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      search: ''
+      search: '',
+      posts: dummyData
     }
+  }
+
+  postElements = () => {
+    return this.state.posts.map(post => {
+      return <PostContainer {...post}/>
+    })
   }
 
   render() {
     return (
       <div>
         <SearchBar />
-        <PostContainer />
-        <CommentSection />
+        {this.postElements()}
       </div>
     );
   }

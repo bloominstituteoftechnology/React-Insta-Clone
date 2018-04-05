@@ -1,3 +1,7 @@
+@import './components/SearchBar/SearchBar.css';
+@import './components/CommentSection/CommentSection.css';
+@import './components/PostContainer/PostContainer.css';
+
 .App {
   text-align: center;
 }
