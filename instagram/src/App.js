@@ -12,8 +12,8 @@ class App extends Component {
       <div className="App">
         <div className="header">
           <div className="header_left">
-            <img className="instaLogo" src="https://image.flaticon.com/icons/svg/87/87390.svg"/>
-            <h3 className="instaTitle">Instagram</h3>
+            <img className="instaIcon" src={require("./Images/instagram-logo-img.png")}/>
+            <img className="instaTitle" src={require("./Images/instagram-logo-title.png")}/>
           </div>
 
           <SearchBar />

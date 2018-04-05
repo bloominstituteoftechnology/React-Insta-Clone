@@ -16,10 +16,19 @@
   align-items: center;
 }
 
-.instaLogo {
-  border-right: 2px solid gray;
+.instaIcon {
   height: 50px;
-  width: 50px;
+  width: 60px;
+  padding: 5px;
+  padding-right: 15px;
+  border-right: 1px solid rgb(200, 200, 200);
+}
+
+.instaTitle {
+  height: 60px;
+  padding: 5px;
+  padding-left: 10px;
+  margin-bottom: -15px;
 }
 
 .instaTitle {
