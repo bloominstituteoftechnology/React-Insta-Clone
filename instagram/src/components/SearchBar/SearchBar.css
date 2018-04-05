@@ -10,7 +10,7 @@
 }
 .instaLogo{
 display:flex;
-margin-right: 75px;
+margin-right: 10px;
 font-family: cursive;
 
 }
@@ -26,11 +26,11 @@ width: 150px;
 height:15px;
 }
 .iconsStyles{
-   
+   margin-top:5px;
     width: 100px;
 display:flex;
 justify-content: space-around;
-margin-left: 75px;
+margin-left: 10px;
 
 
 

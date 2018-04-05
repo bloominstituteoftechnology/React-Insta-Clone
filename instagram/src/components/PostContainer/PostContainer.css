@@ -1,0 +1,23 @@
+.container{
+ margin-left:100px
+}
+.header{
+    margin-top:10px;
+    display: flex;
+    margin-bottom: 3px;
+}
+.icon-style{
+    width:30px;
+    height: 30px;
+    border-radius: 30px;
+}
+.ptag-style{
+    font-size: 12px;
+    margin-top:5px;
+}
+.mainImg-style{
+  
+width:250px;
+height:250px;
+margin-bottom: 20px;
+}
