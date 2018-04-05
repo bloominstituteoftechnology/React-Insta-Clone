@@ -24,11 +24,6 @@ class CommentList extends Component {
         Comments: this.props.comments
       };
     };
-
-    AddComment(Username, Text) {
-        console.log('pushed ;D')
-        this.props.comments.push({Username, Text});
-    }
   
     componentDidMount() {
       this.setState({ Comments: this.props.comments });
@@ -44,7 +39,7 @@ class CommentList extends Component {
                     </div>
                 ))}
                 <form className="AddComment">
-                    <input className="AddComment__Text" placeholder="Add a comment..."></input>
+                    <input id="NewComment" className="AddComment__Text" placeholder="Add a comment..."></input>
                     <button className="AddComment__Button" onClick={this.AddComment}>Submit</button>
                 </form>
             </div>
