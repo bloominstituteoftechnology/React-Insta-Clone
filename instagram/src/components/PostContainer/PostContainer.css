@@ -1,0 +1,43 @@
+.Post__Id {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+
+.Post__Thumbnail {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.Post__Username {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.Post__Img {
+    width: 80%;
+}
+
+.Post__Icon{
+    width: 25px;
+    height: 25px;
+    display: flex;
+}
+
+.Post__LikeIcons {
+    display: flex;
+    margin-left: 10%;
+    padding: 10px 0 10px 0;
+}
+
+.Post__Icon {
+    margin-right: 10px;
+}
+
+.Post__Likes {
+    text-align: left;
+    margin-left: 10%;
+    font-weight: bold;
+}
