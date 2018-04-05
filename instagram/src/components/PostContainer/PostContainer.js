@@ -22,7 +22,15 @@ export default class PostContainer extends Component {
     handleChange = (e) => this.setState({newComment: e.target.value});
 
     addComment = (e) => {
-
+        this.setState((prevs) => {
+            return {
+                comments: prevs.comments.concat({
+                    username: "buster",
+                    text: prevs.newComment
+                }),
+                newComment: ''
+            };
+        });
     };
     render() {
         {let currentDate = Date()}
@@ -45,8 +53,8 @@ export default class PostContainer extends Component {
                 />
                 <div className='Post__footer'>
                     <div className='Post__action-bar'>
-                        <FontAwesomeIcon icon={faHeart} size='sm' onClick={this.increaseLikes} className='hear-icon'/>
-                        <FontAwesomeIcon icon={faComment} size='sm'/>
+                        <FontAwesomeIcon icon={faHeart} size='2x' onClick={this.increaseLikes} className='hear-icon'/>
+                        <FontAwesomeIcon icon={faComment} size='2x'/>
                     </div>
                     <div className='Post__likes'>
                         {this.state.likes} likes
@@ -63,7 +71,7 @@ export default class PostContainer extends Component {
                          placeholder='Add a comment....'
                          onChange={this.handleChange}
                         />
-                        <button>Send</button>
+                        <button onClick={this.addComment}>Send</button>
                     </div>
                 </div>
             </div>

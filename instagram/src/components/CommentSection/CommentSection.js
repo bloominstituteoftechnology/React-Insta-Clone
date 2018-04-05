@@ -10,7 +10,7 @@ export default class CommentSection extends React.Component {
     render() {
         return (
             <div className='CommentSection'>
-                {this.getComment()};
+                {this.getComment()}
             </div>
         );
     }
