@@ -32,3 +32,16 @@
     width: 100%;
     border: 1px solid black;
 }
+
+.Post__footer {
+    margin: 5px 10px 0;
+}
+
+.Post__action-bar {
+    margin-right: -8px;
+}
+
+
+.Post__likes {
+    font-weight: bold;
+}
