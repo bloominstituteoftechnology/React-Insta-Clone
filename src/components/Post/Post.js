@@ -49,7 +49,7 @@ export default class Post extends React.Component{
         <img
           className="Post__image"
           src={this.props.imageUrl}
-          alt="Post Image" />
+          alt="Main" />
         <div className="Post__footer">
           <div className="Post__action-bar">
             <img src={love} alt="Love" onClick={this.incrementLikes} /> 

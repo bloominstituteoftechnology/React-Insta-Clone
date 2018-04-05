@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class CommentSection extends React.Component {
   commentElements() {
-    return this.props.comments.map((comment) => <Comment {...comment} />);
+    return this.props.comments.map((comment, i) => <Comment key={i} {...comment} />);
   }
 
   render() {
