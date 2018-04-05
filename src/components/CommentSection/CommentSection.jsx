@@ -15,6 +15,10 @@ export default class CommentSection extends Component {
   }
 
   render() {
-    return <input />
+    return (
+      <div className="Post--comments">
+        <input />
+      </div>
+    )
   }
 }
