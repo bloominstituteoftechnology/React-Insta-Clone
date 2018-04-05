@@ -39,6 +39,7 @@ class CommentSection extends Component {
           onChange={this.handleAddComment}
         />
         <button onClick={this.handleSubmitComment}>Add Comment</button>
+        <div>{this.props.time}</div>
       </div>
     );
   }
