@@ -1,0 +1,37 @@
+.Icon{
+    width: 25px;
+    height: 25px;
+}
+
+.InstaLogo {
+    margin-right: 10px;;
+}
+
+.instagramText{
+    font-family: 'Grand Hotel', cursive;
+    border-left: 1px solid gray;
+    padding-left: 10px;
+}
+
+.SearchBar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.SearchBar__LeftSide {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.SearchBar__Center {
+    align-items: center;
+}
+
+.SearchBar__RightSide img {
+    margin-right: 10px;
+    align-items: center;
+}

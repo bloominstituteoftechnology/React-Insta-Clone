@@ -1,0 +1,27 @@
+.Comment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    border-bottom: 1px solid gray;
+}
+
+.Comment__Id {
+    display: flex;
+    align-items: baseline;
+    margin-left: 10%;
+}
+
+.Comment__Username {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.Comment__Text {
+    text-align: left;
+}
+
+.Comment__AddComment {
+    margin: 25px 0 25px 10%;
+    text-align: left;
+    color: gray;
+}
