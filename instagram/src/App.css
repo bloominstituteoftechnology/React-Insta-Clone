@@ -1,14 +1,14 @@
 .App {
   text-align: center;
+  min-width: 650px;
 }
 
 .header {
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid lightgrey;
+  padding: 10px;
 }
 
 .header_left {
@@ -40,3 +40,8 @@
   display: flex;
 }
 
+.icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}

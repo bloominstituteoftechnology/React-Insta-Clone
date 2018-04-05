@@ -1,3 +1,15 @@
 .searchBar {
   font-size: 1.6rem;
 }
+
+.searchBar input {
+  text-align: center;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgb(180, 180, 180);
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgb(180, 180, 180);
+}

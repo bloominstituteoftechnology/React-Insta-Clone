@@ -19,7 +19,9 @@ class App extends Component {
           <SearchBar />
 
           <div className="header_right">
-
+            <img className="icon icons_compass" src={require("./Images/compass.png")}/>
+            <img className="icon icons_compass" src={require("./Images/heart.png")}/>
+            <img className="icon icons_compass" src={require("./Images/user.png")}/>
           </div>
         </div>
         <PostContainer />
