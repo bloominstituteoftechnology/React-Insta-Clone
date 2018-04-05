@@ -20,7 +20,7 @@ class CommentSection extends React.Component {
 	// add new comments to a post's list of comments
 	addNewComment = () => {
 		const commentBox = this.state.comments;
-		commentBox.push(this.state.newComment);
+		commentBox.push({username: this.state.username, text: this.state.newComment});
 		this.setState({ comments: commentBox, newComment: "" });
 	}
 
@@ -28,7 +28,7 @@ class CommentSection extends React.Component {
 		// console.log('comments: ', this.state.comments);
 	  return(
 	    <div>
-	    	{this.props.commentList.map((comment, index) => (
+	    	{this.state.comments.map((comment, index) => (
 	    		[
 	    			<div>{comment.username}</div>,
 	    			<div>{comment.text}</div>
