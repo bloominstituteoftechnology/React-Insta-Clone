@@ -15,11 +15,24 @@ class App extends Component {
   componentDidMount() {
     this.setState({ data: dummyData });
   }
+
+  incrementLikes = index => {
+    let data = this.state.data;
+    data[index].likes = data[index].likes + 1;
+    this.setState({ data });
+  };
   render() {
     return (
       <div className="App">
-        {this.state.data.map(postdata => {
-          return <Posts postdata={postdata} />;
+        {this.state.data.map((postdata, index) => {
+          return (
+            <Posts
+              postdata={postdata}
+              key={index}
+              index={index}
+              incrementLikes={this.incrementLikes}
+            />
+          );
         })}
       </div>
     );

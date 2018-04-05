@@ -44,3 +44,16 @@
 .post_footer {
   padding: 1px 10px;
 }
+
+.fa-heart {
+  color: red;
+  margin-right: 20px;
+}
+
+.fa-comment {
+  color: lightgray;
+}
+
+.clickableAwesomeFont {
+  cursor: pointer;
+}
