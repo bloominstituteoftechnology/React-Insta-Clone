@@ -19,6 +19,14 @@ const Post = props => {
             <CardImg className="Post__image" src={props.post.imageUrl} alt="" />
             <CardBody>
                 <CardText>
-                    <div>{}
-    )
-}
+                    <div>{props.post.likes} likes</div>
+                </CardText>
+                <CardText>
+                    <divd>{props.post.timestamp}</div>
+                </CardText>
+            </CardBody>
+        </Card>
+    );
+};
+
+export default Post;
