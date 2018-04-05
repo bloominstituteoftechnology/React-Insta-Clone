@@ -1,0 +1,10 @@
+.post {
+    border: 10px solid black;
+    width: 70%;
+    display: block;
+    margin: 4% auto;
+}
+
+.post__individual {
+    border: 1px solid green;
+}
