@@ -1,8 +1,10 @@
 import React from "react"
+import CommentSection from "../CommentSection"
 
 export default props => (
   <div>
-    <img src={props.thumbnailUrl} />
-    <img src={props.imageUrl} />
+    <img alt="thumbnail" src={props.thumbnailUrl} />
+    <img alt="main" src={props.imageUrl} />
+    <CommentSection />
   </div>
 )
