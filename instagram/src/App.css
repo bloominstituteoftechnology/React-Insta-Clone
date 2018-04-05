@@ -10,7 +10,7 @@
 }
 .centeredContainer {
   max-width: 1000px;
-  min-width: 500px;
+  min-width: 220px;
   border: 2px solid white;
   background: white;
 }

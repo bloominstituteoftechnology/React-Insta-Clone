@@ -24,10 +24,18 @@
     padding-right: 15px;
     padding-bottom: 4px;
     height: 30px;
+    border-right: 1px solid lightgrey;
 }
 .secondImage {
     height: 50px;
 }
-.firstImage {
-    border-right: 1px solid lightgrey;
+
+@media (max-width: 500px) {
+    .searchDiv {
+        order: 5;
+    }
+    .headerBar {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
 }
