@@ -1,8 +1,8 @@
 import React from "react";
 import heart from "./heart.svg";
 import comment from "./comment.svg";
+import CommentSection from "../CommentSection/CommentSection.js"
 const PostContainer = props => {
-    console.log(props.data[0].thumbnailUrl);
     return(
         <div className="post">
             {props.data.map(post => (
@@ -19,6 +19,7 @@ const PostContainer = props => {
                         <img className="post__icon post__icon-heart" src={comment}/>
                     </div>
                     <div className="likes">{post.likes} likes</div>
+                    <CommentSection comments={post.comments}/>
                 </div>
             ))}
         </div>
