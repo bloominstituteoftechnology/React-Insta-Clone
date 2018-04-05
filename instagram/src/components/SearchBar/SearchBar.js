@@ -3,15 +3,19 @@ import './SearchBar.css'
 
 const SearchBar = () => {
     return <div className="searchBar">
-        <i className="fab fa-instagram fa-2x left" />
-        <div className="verticalLine left" />
-        <span className="left">Instagram</span>
+        <div className="left">
+          <i className="fab fa-instagram fa-2x left" />
+          <div className="verticalLine left" />
+          <div className="appText">Instagram</div>
+        </div>
         <div className="middle">
           <input type="text" className="fontControl" placeholder="&#xf002; Search" />
         </div>
-        <i className="far fa-compass right" />
-        <i className="far fa-heart right" />
-        <i className="far fa-user right" />
+        <div className="right">
+          <i className="far fa-compass" />
+          <i className="far fa-heart rightitems" />
+          <i className="far fa-user rightitems" />
+        </div>
       </div>;
 }
 
