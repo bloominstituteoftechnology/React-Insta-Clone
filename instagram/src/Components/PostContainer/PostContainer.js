@@ -1,15 +1,24 @@
 import React from "react";
-
+import heart from "./heart.svg";
+import comment from "./comment.svg";
 const PostContainer = props => {
+    console.log(props.data[0].thumbnailUrl);
     return(
         <div className="post">
             {props.data.map(post => (
                 <div className="post__individual">
-                    <div>
-                        <img src={props.thumbnailUrl}/>
-                        <div>{post.username}</div>
+                    <div className="post__head">
+                        <img className="post__thumbnail" src={post.thumbnailUrl} alt={post.username}/>
+                        <div className="post__username">{post.username}</div>
                     </div>
-                    <div>{post.likes}</div>
+                    <div>
+                        <img className="post__image" src={post.imageUrl} alt="An instapost"/>
+                    </div>
+                    <div className="post__icons">
+                        <img className="post__icon" src={heart}/>
+                        <img className="post__icon post__icon-heart" src={comment}/>
+                    </div>
+                    <div className="likes">{post.likes} likes</div>
                 </div>
             ))}
         </div>

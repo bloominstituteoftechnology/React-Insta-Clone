@@ -1,10 +1,51 @@
 .post {
-    border: 10px solid black;
+    border: 2px solid black;
     width: 70%;
     display: block;
     margin: 4% auto;
 }
 
 .post__individual {
-    border: 1px solid green;
+     margin-top: 7%;
+     border: 10px solid green;
+}
+.post__individual:first-of-type {
+    margin-top: 0;
+}
+.post__head {
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.post__thumbnail {
+    width: 2.5rem;
+    height: 100%;
+    border-radius: 1.5rem;
+    margin: 1% 2% 0% 1%;
+}
+
+.post__username {
+    align-self: center;
+    margin-left: 1%;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.post__image {
+    max-width: 100%;
+}
+
+.post__icon{
+    width: 4.5%;
+    fill: currentColor;
+    margin: 1% 1% 0% 1%
+}
+
+.post__icon-heart {
+    width: 3.8%;
+}
+
+.likes {
+    margin: 1% 0 0 1.5%;
+    font-size: 1.3rem;
 }
