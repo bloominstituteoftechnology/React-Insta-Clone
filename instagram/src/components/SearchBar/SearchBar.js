@@ -13,6 +13,8 @@ class SearchBar extends React.Component {
           className="searchbar_input"
           type="text"
           placeholder="Search..."
+          onChange={this.props.handleChange}
+          onSubmit={this.props.searchPost}
         />
         <div className="searchbar_icons">
           <i className="fa fa-compass fa-2x" />

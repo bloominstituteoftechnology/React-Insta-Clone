@@ -8,7 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      searchText: ""
     };
   }
   componentDidMount() {
@@ -20,20 +21,32 @@ class App extends Component {
     data[index].likes = data[index].likes + 1;
     this.setState({ data });
   };
+
+  handleChange = e => {
+    this.setState({ searchText: e.target.value });
+  };
+
+  searchPost = () => {
+    return this.state.data
+      .filter(data => data.username.includes(this.state.searchText))
+      .map((data, index) => (
+        <Posts
+          postdata={data}
+          key={index}
+          index={index}
+          incrementLikes={this.incrementLikes}
+        />
+      ));
+    console.log(this.state.searchText);
+  };
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        {this.state.data.map((postdata, index) => {
-          return (
-            <Posts
-              postdata={postdata}
-              key={index}
-              index={index}
-              incrementLikes={this.incrementLikes}
-            />
-          );
-        })}
+        <SearchBar
+          handleChange={this.handleChange}
+          searchText={this.searchPost}
+        />
+        {this.searchPost()}
       </div>
     );
   }
