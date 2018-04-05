@@ -20,10 +20,10 @@
   text-indent: 3.5rem;
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+::-webkit-input-placeholder {
   color: rgb(180, 180, 180);
 }
 
-::-moz-placeholder { /* Firefox 19+ */
+::-moz-placeholder {
   color: rgb(180, 180, 180);
 }
