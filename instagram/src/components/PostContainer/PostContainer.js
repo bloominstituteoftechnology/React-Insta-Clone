@@ -11,6 +11,7 @@ export default class PostContainer extends Component {
         this.state = {
             comments:props.comments,
             likes: props.likes,
+            timestamp: props.timestamp,
             newComment: ''
         };
     }
@@ -18,10 +19,11 @@ export default class PostContainer extends Component {
     // increase number of likes
     increaseLikes = (e) => this.setState({likes: this.state.likes + 1});
 
-    //time since
-    // getTimeSince() {
-    //     return moment(this.props.timestamp, 'YYYMMDD').fromNow();
-    // }
+    handleChange = (e) => this.setState({newComment: e.target.value});
+
+    addComment = (e) => {
+
+    };
     render() {
         {let currentDate = Date()}
         return (
@@ -51,8 +53,17 @@ export default class PostContainer extends Component {
                         <CommentSection comments={this.state.comments}/>
                     </div>
                     <div className='Post__timesine'>
-
-                        <Moment fromNow now>{this.state.timestamp}</Moment>
+                        {console.log('Buster', this.state.timestamp)}
+                        <Moment fromNow>{this.state.timestamp}</Moment>
+                    </div>
+                    <div className='Post__newcomment'>
+                        <input
+                         type='text'
+                         value={this.state.newComment}
+                         placeholder='Add a comment....'
+                         onChange={this.handleChange}
+                        />
+                        <button>Send</button>
                     </div>
                 </div>
             </div>

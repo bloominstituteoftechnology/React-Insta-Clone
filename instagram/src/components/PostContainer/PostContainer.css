@@ -49,3 +49,12 @@
 .Post__timesine {
     color: lightslategray;
 }
+
+.Post__newcomment {
+    display: flex;
+    margin-top: 10px;
+}
+
+.Post__newcomment input {
+    flex-grow: 1;
+}
