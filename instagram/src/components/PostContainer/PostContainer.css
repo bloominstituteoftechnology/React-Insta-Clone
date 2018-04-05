@@ -28,6 +28,12 @@
     font-weight: bold;
 }
 
+.postContainerImageContainer {
+    display: flex;
+    height: 100%;
+}
+
 .postContainerImage {
+
     max-width: 100%;
 }
