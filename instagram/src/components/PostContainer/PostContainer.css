@@ -1,3 +1,19 @@
 .post-container {
     margin: 0 10% 2%;
 }
+
+.post-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2%;
+}
+
+.likes-container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 2% 2%;
+    width: 20%;
+    flex-wrap: wrap;
+    text-align: left;
+}

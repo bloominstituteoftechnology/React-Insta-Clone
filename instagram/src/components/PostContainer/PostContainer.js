@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 import { Card, CardTitle, CardText, CardSubtitle, CardBody } from 'reactstrap';
+import logo from './../../logo.svg';
 
 class PostContainer extends Component {
     constructor(props) {
@@ -20,9 +21,6 @@ class PostContainer extends Component {
 
     handleAddComment = e => {
         this.setState({ [e.target.name]: e.target.value })
-        console.log(this.state)
-        // console.log(this.state.newComment)
-        // console.log(this.props.postData.comments,'newcomment changed')
     }
 
     handleSubmitComment = () => {
@@ -30,7 +28,7 @@ class PostContainer extends Component {
         console.log(postData);
         if(this.state.newComment !== ""){
             postData.comments.push({
-                username: 'Insert username here',
+                username: 'Username',
                 text: this.state.newComment
             })
         };
@@ -44,20 +42,23 @@ class PostContainer extends Component {
                 {/* {[...this.state].map((post, index) => (
                 <div>{post[index].username}</div>
             ))} */}
-                <CardTitle>
+                <CardTitle className="post-header">
+                    <img style={{width: '10%'}} className="img-fluid" src={logo} />
                     {[...this.props.postData.username]}
-                    <p>{this.props.postData.timestamp}</p>
                 </CardTitle>
                 {/* <CardBody> */}
                     <img className="img-fluid" src={`${this.props.postData.imageUrl}`} />
                 {/* </CardBody> */}
-                <div>
-                    {this.props.postData.likes}
+                <div className="likes-container">
+                    <img style={{width: '30%', height: '10%'}} src={logo} />
+                    <img style={{width: '30%', height: '10%'}} src={logo} />
+                    <b style={{marginTop: '5%'}}>{`${this.props.postData.likes} likes`}</b>
                 </div>
                 <div className="comment-container">
                 {this.props.postData.comments.map((comment, index) =>
                     <CommentSection key={index} commentData={comment}
                     />)}
+                    <p>{this.props.postData.timestamp}</p>
                     <input
                     type="text"
                     name="newComment"
