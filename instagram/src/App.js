@@ -6,15 +6,29 @@ import PostContainer from './components/PostContainer/PostContainer.js'
 import dummyData from './dummy-data';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      'data': dummyData,
+      'newComment': [],
+      'searchField': ''
+    };
+  }
+
+
   render() {
     return (<div className="App">
       <SearchBar />
      <PostContainer />
     </div>);
-  }
+  };
 }
 
+//should deal with the actual effect of liking a post
+// handleLikePost = (toggle, index) => {
+// console.log(toggle);
 
+// }
 
 
 
