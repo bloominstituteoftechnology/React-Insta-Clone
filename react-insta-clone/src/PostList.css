@@ -1,0 +1,54 @@
+.Post {
+    width: 600px;
+    margin: 50px auto;
+    border: 1px solid lightslategray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.Post__Head {
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px 10px 0 0;
+}
+
+.UserPicture {
+    width: 7%;
+    height: 7%;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.Username {
+    margin: auto 10px;
+    font-weight: bold;
+}
+
+.Post__Img {
+    width: 100%;
+}
+
+.Post__Foot {
+    background-color: white;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+}
+
+.Social {
+    display: flex;
+    flex-direction: row;
+}
+
+.Social__Heart {
+    width: 30px;
+    height: 30px;
+}
+
+.Social__Likes {
+    margin: auto 10px;
+    font-weight: bold;
+}
