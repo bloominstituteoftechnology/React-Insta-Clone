@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import dummyData from "./dummy-data";
-import Comments from "./components/CommentSection/Comments";
 import Posts from "./components/PostContainer/Posts";
 import SearchBar from "./components/SearchBar/SearchBar";
 

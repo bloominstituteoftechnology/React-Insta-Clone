@@ -1,10 +1,18 @@
 import React from "react";
 import Comments from "../CommentSection/Comments";
+import moment from "moment";
 
 class Posts extends React.Component {
   handleClick = () => {
     this.props.incrementLikes(this.props.index);
   };
+
+  timestampAgo() {
+    return moment(
+      this.props.postdata.timestamp,
+      "MMMM Do YYYY, h:mm:ss a"
+    ).fromNow();
+  }
   render() {
     const {
       username,
@@ -31,7 +39,7 @@ class Posts extends React.Component {
           </div>
           <div className="post_likes">{likes} likes</div>
           <Comments comments={comments} />
-          <div className="post_timeline">{timestamp}</div>
+          <div className="post_timeline">{this.timestampAgo()}</div>
         </div>
       </div>
     );
