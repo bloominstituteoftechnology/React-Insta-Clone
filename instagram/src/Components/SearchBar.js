@@ -4,7 +4,7 @@ const Bar = () => {
     return (
     <div id="searchBar">
         <div className="se"><img className="icons" alt="is a useless thing" src="https://image.flaticon.com/icons/svg/39/39772.svg" /> 
-        <span className="dumbText">Instagram</span> 
+        <span className="dumbText">Clonestagram</span> 
         <input 
         className="seaBar"
         placeholder="search"
