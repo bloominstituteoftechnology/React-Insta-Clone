@@ -26,7 +26,7 @@ body {
 .searchbar .search-input {
   display: flex; 
   align-self: center; 
-margin-left: 120px; 
+  margin-left: 120px; 
   width: 400px;
   height: 40px;
   

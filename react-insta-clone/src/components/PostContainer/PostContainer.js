@@ -5,45 +5,39 @@ class PostContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      'thumbnailUrl' : props.data.thumbnailUrl,
-      'username' : props.data.username,
-      'imageUrl' : props.data.imageUrl,
-      'likes' : props.data.likes,
-      'comments' : props.data.comments,
-      'change' : props.change,
-      'submit' : props.submit,
-      'value' : props.value,
       'likeHandler' : props.like,
-      'liked' : false
+      'liked' : false,
+      'url': 'img/heart.png'
     }
   }
 
   likeButtonClick = () => {
-    let liked = this.state.liked;
+    let url, liked = this.state.liked;
     this.state.likeHandler(!liked);
-    this.setState({'liked' : !liked})
+    url = liked ? 'img/heart.png' : 'img/heart-like.png'
+    this.setState({'liked' : !liked, 'url' : url});
   }
 
   render() {
     return (
       <div className="post-container">
         <div className="header-img">
-          <img className="icon" src={this.state.thumbnailUrl} alt="User icon" />
-          <h5 className="header">{this.state.username}</h5>
+          <img className="icon" src={this.props.post.thumbnailUrl} alt="User icon" />
+          <h5 className="header">{this.props.post.username}</h5>
         </div>
         <div>
-          <img className="main-img" src={this.state.imageUrl} alt="Main post content" />
+          <img className="main-img" src={this.props.post.imageUrl} alt="Main post content" />
         </div>
         <div className="img-button-container">
           <img onClick={this.likeButtonClick} className="img-button" src="https://raw.githubusercontent.com/cjmarsh725/React-Insta-Clone/1fb9629edcbb54ca399755abb994a95cde774c3e/instagram/public/img/heart-like.png" alt="Like button"/>
           <img className="img-button" src="https://raw.githubusercontent.com/cjmarsh725/React-Insta-Clone/1fb9629edcbb54ca399755abb994a95cde774c3e/instagram/public/img/answer.png" alt="Comment button" />
         </div>
-        <div className="likes"><p>{this.state.likes} Likes</p></div>
+        <div className="likes"><p>{this.props.post.likes} Likes</p></div>
         <CommentSection
-          change={this.state.change}
-          submit={this.state.submit}
-          comments={this.state.comments}
-          value={this.state.value} />
+          change={this.props.change}
+          submit={this.props.submit}
+          comments={this.props.post.comments}
+          value={this.props.value} />
       </div>
     );
   }

@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-
 import SearchBar from './components/SearchBar/SearchBar.js';
 import PostContainer from './components/PostContainer/PostContainer.js';
 import dummyData from './dummy-data.js';
-import './App.css';
-
-
 
 class App extends Component {
   constructor() {
@@ -36,13 +32,9 @@ class App extends Component {
   }
 
   handleLikePost = (toggled, i) => {
-    console.log(toggled);
     const { data } = this.state;
     data[i].likes = toggled ? data[i].likes + 1 : data[i].likes - 1;
-    this.setState({ 'data' : data });
-  }
-  componentDidMount(){
-    console.log('CDM Called!'); 
+    this.setState({ data });
   }
 
   render() {
@@ -59,7 +51,7 @@ class App extends Component {
                         change={e => this.handleAddComment(e, i)}
                         submit={() => this.handleSubmitComment(i)}
                         like={t => this.handleLikePost(t, i)}
-                        data={post}
+                        post={post}
                         value={this.state.newComment[i]} />
               );
             }
