@@ -1,0 +1,42 @@
+.headerBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+}
+.inputField {
+    width: 200px;
+    height: 25px;
+    font-size: 1rem;
+    text-align: center;
+    background: #F9F9F9;
+    border: 1px solid lightgrey;
+}
+
+.image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    cursor: pointer;
+}
+.firstImage {
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-bottom: 4px;
+    height: 30px;
+    border-right: 1px solid lightgrey;
+}
+.secondImage {
+    height: 50px;
+}
+
+@media (max-width: 500px) {
+    .searchDiv {
+        order: 5;
+    }
+    .headerBar {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
