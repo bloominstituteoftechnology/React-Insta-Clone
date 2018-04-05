@@ -23,6 +23,7 @@ import {
 const searchBar = () => {
   return (<div>
     <div className="headerBox">
+      <img src={require("../../img/dabman.png")} />
       <Input className="searchBar" type="text" name="searchBar" placeholder="Search Here!"/>
     </div>
   </div>)
