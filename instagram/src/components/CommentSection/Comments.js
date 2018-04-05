@@ -7,9 +7,9 @@ class Comments extends React.Component {
       <div>
         {this.props.comments.map(comment => {
           return (
-            <div>
-              <p>{comment.username}</p>
-              <p>{comment.text}</p>
+            <div className="comments">
+              <p className="comments_username">{comment.username}</p>
+              <p className="comments_text">{comment.text}</p>
             </div>
           );
         })}

@@ -1,0 +1,20 @@
+.comments {
+  background-color: #e3e0cf;
+  border: 1px solid #c5d5cb;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.comments_username {
+  font-weight: bold;
+  font-style: italic;
+  font-family: Roboto;
+  padding: 2px;
+  margin-left: 4px;
+  color: #9fa8a3;
+}
+
+.comments_text {
+  padding: 4px;
+  margin-left: 2px;
+}

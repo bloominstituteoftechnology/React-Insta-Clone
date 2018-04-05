@@ -7,6 +7,7 @@
   padding: 8px 0px;
   background-color: #fff;
   margin-top: 20px;
+  box-shadow: 2px 4px 4px 2px #9fa8a3;
 }
 
 .post_header {
@@ -22,6 +23,7 @@
   font-weight: 400;
   margin: 0;
   color: #c5d5cb;
+  font-family: Helvetica;
 }
 
 .post_thumb {
@@ -56,4 +58,8 @@
 
 .clickableAwesomeFont {
   cursor: pointer;
+}
+
+.comment_count {
+  font-size: 0.85rem;
 }

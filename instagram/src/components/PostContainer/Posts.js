@@ -26,7 +26,8 @@ class Posts extends React.Component {
             <span className="clickableAwesomeFont" onClick={this.handleClick}>
               <i className="fa fa-heart fa-1x" />
             </span>
-            <i className="fa fa-comment fa-1x" />
+            <i className="fa fa-comment fa-1x" />{" "}
+            <span className="comment_count">{comments.length}</span>
           </div>
           <div className="post_likes">{likes} likes</div>
           <Comments comments={comments} />
