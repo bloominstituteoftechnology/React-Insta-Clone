@@ -1,5 +1,8 @@
 body {
+  display: flex;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  justify-content: center;
+  max-width: 100%;
 }

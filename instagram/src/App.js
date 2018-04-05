@@ -24,8 +24,14 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <SearchBar />
+        <div className="container-fluid">
+        <div className="row">
+        <div className="col">
         {dummyData.map((post, index) =>
         <PostContainer key={index} postData={post} />)}
+        </div>
+        </div>
+        </div>
       </div>
     );
   }
