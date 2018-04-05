@@ -11,4 +11,9 @@ padding: 2%;
 }
 
 
-
+.instaLogo {
+  max-height: 40px;
+  max-width: 40px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
