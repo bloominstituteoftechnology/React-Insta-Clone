@@ -1,49 +1,52 @@
-import React, { Component } from 'react';
-import CommentSection from '../CommentSection/CommentSection.js'
+import React, {Component} from 'react';
+import CommentSection from '../CommentSection/CommentSection.js';
 
-const headerImgStyles = {
-  display: 'flex',
-}
+class PostContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      'thumbnailUrl' : props.data.thumbnailUrl,
+      'username' : props.data.username,
+      'imageUrl' : props.data.imageUrl,
+      'likes' : props.data.likes,
+      'comments' : props.data.comments,
+      'change' : props.change,
+      'submit' : props.submit,
+      'value' : props.value,
+      'likeHandler' : props.like,
+      'liked' : false
+    }
+  }
 
-const iconStyles = {
-  width: '32px',
-  height: '32px',
-  borderRadius: '16px'
-}
+  likeButtonClick = () => {
+    let liked = this.state.liked;
+    this.state.likeHandler(!liked);
+    this.setState({'liked' : !liked})
+  }
 
-const headerStyles = {
-  paddingLeft: '20px',
-  paddingTop: '5px'
-}
-
-const imageStyles = {
-  maxWidth: '600px'
-}
-
-const likesStyles = {
-  display: 'flex',
-  justifyContent: 'start',
-  paddingLeft: '20px'
-}
-
-const PostContainer = props => {
-  return (
-    <div>
-      <div style={headerImgStyles}>
-        <img style={iconStyles} src={props.data.thumbnailUrl} />
-        <h5 style={headerStyles}>{props.data.username}</h5>
+  render() {
+    return (
+      <div className="post-container">
+        <div className="header-img">
+          <img className="icon" src={this.state.thumbnailUrl} alt="User icon" />
+          <h5 className="header">{this.state.username}</h5>
+        </div>
+        <div>
+          <img className="main-img" src={this.state.imageUrl} alt="Main post content" />
+        </div>
+        <div className="img-button-container">
+          <img onClick={this.likeButtonClick} className="img-button" src="https://raw.githubusercontent.com/cjmarsh725/React-Insta-Clone/1fb9629edcbb54ca399755abb994a95cde774c3e/instagram/public/img/heart-like.png" alt="Like button"/>
+          <img className="img-button" src="https://raw.githubusercontent.com/cjmarsh725/React-Insta-Clone/1fb9629edcbb54ca399755abb994a95cde774c3e/instagram/public/img/answer.png" alt="Comment button" />
+        </div>
+        <div className="likes"><p>{this.state.likes} Likes</p></div>
+        <CommentSection
+          change={this.state.change}
+          submit={this.state.submit}
+          comments={this.state.comments}
+          value={this.state.value} />
       </div>
-      <div>
-        <img style={imageStyles} src={props.data.imageUrl} />
-      </div>
-      <div style={likesStyles}><p>{props.data.likes} Likes</p></div>
-      <CommentSection
-        change={props.change}
-        submit={props.submit}
-        comments={props.data.comments}
-        value={props.value} />
-    </div>
-  );
+    );
+  }
 }
 
 export default PostContainer;
