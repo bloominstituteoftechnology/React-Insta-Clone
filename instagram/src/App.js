@@ -37,12 +37,15 @@ class App extends Component {
 
   render() {
     return (
-      <div style={mainStyles} className="App">
-        {this.state.data.map((post, i) => <PostContainer
-          change={(e) => this.handleAddComment(e, i)}
-          submit={() => this.handleSubmitComment(i)}
-          data={post}
-          value={this.state.newComment[i]} />)}
+      <div>
+        <SearchBar />
+        <div className="main">
+          {this.state.data.map((post, i) => <PostContainer
+            change={(e) => this.handleAddComment(e, i)}
+            submit={() => this.handleSubmitComment(i)}
+            data={post}
+            value={this.state.newComment[i]} />)}
+        </div>
       </div>
     );
   }

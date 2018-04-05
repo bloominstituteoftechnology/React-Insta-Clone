@@ -1,24 +1,6 @@
 import React, { Component } from 'react';
-import CommentSection from '../CommentSection/CommentSection.js'
+import CommentSection from '../CommentSection/CommentSection.js';
 
-const headerImgStyles = {
-  display: 'flex',
-}
-
-const iconStyles = {
-  width: '32px',
-  height: '32px',
-  borderRadius: '16px'
-}
-
-const headerStyles = {
-  paddingLeft: '20px',
-  paddingTop: '5px'
-}
-
-const imageStyles = {
-  maxWidth: '600px'
-}
 
 const likesStyles = {
   display: 'flex',
@@ -28,15 +10,19 @@ const likesStyles = {
 
 const PostContainer = props => {
   return (
-    <div>
-      <div style={headerImgStyles}>
-        <img style={iconStyles} src={props.data.thumbnailUrl} />
-        <h5 style={headerStyles}>{props.data.username}</h5>
+    <div className="post-container">
+      <div className="header-img">
+        <img className="icon" src={props.data.thumbnailUrl} />
+        <h5 className="header">{props.data.username}</h5>
       </div>
       <div>
-        <img style={imageStyles} src={props.data.imageUrl} />
+        <img className="main-img" src={props.data.imageUrl} />
       </div>
-      <div style={likesStyles}><p>{props.data.likes} Likes</p></div>
+      <div className="img-button-container">
+        <img className="img-button" src="img/heart.png" />
+        <img className="img-button" src="img/answer.png" />
+      </div>
+      <div className="likes"><p>{props.data.likes} Likes</p></div>
       <CommentSection
         change={props.change}
         submit={props.submit}
