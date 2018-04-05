@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import dummyData from './dummy-data';
+// will pass to post container
 
 class App extends Component {
   render() {

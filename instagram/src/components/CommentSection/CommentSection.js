@@ -1,0 +1,1 @@
+//comment section will render user name and posts text also create a text input box
