@@ -1,0 +1,31 @@
+.searchbar {
+  width: 100%;
+  background-color: #c5d5cb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 1px 1px 1px #9fa8a3;
+}
+
+.searchbar_brand {
+  color: white;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.searchbar_brand_text {
+  font-family: "Comic Sans";
+  font-style: italic;
+}
+
+.searchbar_input {
+  height: 40px;
+  background-color: #9fa8a3;
+  color: #fff;
+}
+
+.fa-2x {
+  margin-left: 20px;
+  color: white;
+  margin-top: 10px;
+}
