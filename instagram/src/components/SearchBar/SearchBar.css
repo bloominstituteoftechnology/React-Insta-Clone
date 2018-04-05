@@ -1,6 +1,7 @@
 .searchBar {
-width: 15%;
+width: 100%;
 padding: 2%;
+background: #F2F1F1;
 }
 
 .headerBox {
@@ -8,12 +9,19 @@ padding: 2%;
   justify-content: space-between;
   border-bottom: 1px solid gray;
   align-items: center;
+  padding: 20px;
 }
 
 
 .instaLogo {
-  max-height: 40px;
-  max-width: 40px;
+  max-height: 30px;
+  max-width: 30px;
   margin-right: 20px;
   margin-left: 10px;
 }
+
+.instaTitle {
+  max-height: 50px;
+  max-width: 200px;
+}
+

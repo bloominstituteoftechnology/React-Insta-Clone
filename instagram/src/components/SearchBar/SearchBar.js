@@ -24,17 +24,19 @@ import {
 const SearchBar = props => {
   return (<div>
     <div className="headerBox">
+    <div className="leftLogos">
       <img className="instaLogo" src={require("../../img/instagram-logo-img.png")} />
+      <img className="instaTitle" src={require("../../img/instagram-logo-title.png")}/>
+      </div>
+      <div>
       <Input className="searchBar" type="text" name="searchBar" placeholder="Search Here!"/>
+      </div>
       <div className= "searchBarIcons">
         <img className="instaLogo" src={require("../../img/compass.png")} />
         <img className="instaLogo" src={require("../../img/heart.png")} />
         <img className="instaLogo" src={require("../../img/user.png")} />
       </div>
     </div>
-    
-    <div className="logosRight">
-     </div>
    </div>)
 }
 // const logoLeft = () => {
