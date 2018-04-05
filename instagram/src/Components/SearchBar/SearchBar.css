@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
+
+.div-25 {
+    width: 25%;
+}
+
+.div-50{
+    width: 50%;
+}
+
+.flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.search {
+    height: 6vw;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+
+.search h4 {
+    border-left: .1rem solid #ccc;
+    font-size: 2rem;
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
+    width: 50%;
+    text-align: center;
+}
+
+.search__Images {
+    width: 2rem;
+}
+
+.search__Images-logo {
+    margin-left: 30%;
+    width: 12%;
+}
+
+.search__input {
+    width: 50%;
+    height: 2rem;
+    background-color: rgb(236, 236, 236);
+    display: block;
+    margin: 0 auto;
+}
+
+.search__Images-group {
+    margin-left: 20%;
+}
