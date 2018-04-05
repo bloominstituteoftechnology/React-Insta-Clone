@@ -1,0 +1,30 @@
+.posts_container {
+  font-size: 1.8rem;
+  margin: 0 auto;
+  padding-top: 50px;
+  text-align: left;
+  width: 650px;
+}
+
+.post {
+  margin: 5rem auto;
+}
+
+.post_userTitle {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.post_userThumbnail {
+  border-radius: 50%;
+  height: 50px;
+  padding: 5px;
+  width: 50px;
+}
+
+.post_userName {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 10px;
+}

@@ -5,12 +5,14 @@
 
 .header {
   align-items: center;
+  background: white;
   border-bottom: .1rem solid lightgrey;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 
 .header_left {
