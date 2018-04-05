@@ -2,10 +2,16 @@ import React from "react";
 // import PostContainer from "./src/components/PostContainer/PostContainer";
 
 const CommentSection = props => {
-	alert('made it!');
+	// alert('made it!');
+	console.log('commentList: ', props.commentList);
   return (
     <div>
-    	<h1>testing</h1>
+    	{props.commentList.map((comment, index) => (
+    		[
+    			<div>{comment.username}</div>,
+    			<div>{comment.text}</div>
+    		]
+    	))}
     </div>
   );
 }

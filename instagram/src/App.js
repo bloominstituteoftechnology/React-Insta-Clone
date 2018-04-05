@@ -16,11 +16,12 @@ class App extends Component {
   }
 
   componentDidMount = () => {
+    // console.log('rendered');
     this.setState({ dummyList: dummyData });
-    // console.log(dummyData);
   };
 
   render() {
+    // console.log(this.state.dummyList);
     return (
       <div className="App">
         <header className="App-header">
@@ -37,4 +38,3 @@ class App extends Component {
 }
 
 export default App;
-render(<App />, document.getElementById("root"));

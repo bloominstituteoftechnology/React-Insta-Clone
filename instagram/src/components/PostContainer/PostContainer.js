@@ -3,11 +3,12 @@ import CommentSection from "../CommentSection/CommentSection";
 
 const PostContainer = props => {
 	// alert('made it!');
-	// console.log(props.dummy);
+	// console.log('dummy datalist: ', props.dummy);
   return (
   	<div>
-  	
-  		<CommentSection commentList={props.commentList} />
+  		{props.dummy.map((post, index) => (
+			<CommentSection key={index} commentList={post.comments} />	
+  		))}
   	</div>
   );
 }
