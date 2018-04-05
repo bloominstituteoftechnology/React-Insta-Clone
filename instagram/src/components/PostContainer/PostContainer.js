@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './PostContainer.css'
+import CommentSection from '../CommentSection/CommentSection'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faHeart from '@fortawesome/fontawesome-free-solid/faHeart'
 import faComment from '@fortawesome/fontawesome-free-solid/faComment'
@@ -41,6 +42,7 @@ export default class PostContainer extends Component {
                     </div>
                     <div className='Post__likes'>
                         {this.state.likes} likes
+                        <CommentSection comments={this.state.comments}/>
                     </div>
                 </div>
             </div>

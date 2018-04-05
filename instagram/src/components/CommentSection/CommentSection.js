@@ -1,7 +1,26 @@
 import React from 'react'
 
 export default class CommentSection extends React.Component {
-    // getComments() {
-    //     return this.props.comments.map((comment)  => <Commen )
-    // }
+
+
+    getComment() {
+        return this.props.comments.map((comment)  => <Comment {...comment}/>);
+    }
+
+    render() {
+        return (
+            <div>
+                {this.getComment()};
+            </div>
+        );
+    }
+
+}
+
+function Comment(props) {
+    return(
+        <div>{props.username}
+            {props.text}
+        </div>
+    );
 }
