@@ -1,33 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostContainer from './components/PostContainer/PostContainer.js';
 import dummyData from './dummy-data.js';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      posts: []
-    }
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     posts: []
+  //   }
+  // }
+
+  // load data
+  componentWillMount() {
+    this.setState( { posts: dummyData, searchText: '' } );
   }
 
-  componentDidMount() {
-    this.setState( { post: dummyData } );
+  // get post items
+  getPosts() {
+      return this.state.posts
+          // This will filter when searching for a username
+          .filter((post) => post.username.includes(this.state.searchText))
+          .map((post) => <PostContainer {...post} />);
   }
+
+  // Set search text to input value
+  handleSearch = (e) => this.setState({ searchText: e.target.value })
+ 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <SearchBar />
-        <PostContainer posts = {this.state.posts}/>
+      <SearchBar searchText={this.state.searchText} handleSearch={this.handleSearch} />
+          {this.getPosts()}
       </div>
     );
   }

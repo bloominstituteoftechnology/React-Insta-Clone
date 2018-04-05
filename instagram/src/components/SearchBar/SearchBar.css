@@ -1,4 +1,25 @@
 .SearchBar {
     display: flex;
-    flex-direction: row
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #125172;
+}
+
+.SearchBar input {
+    height: 100px;
+    width: 800px;
+    font-size: 2rem;
+}
+/* Title Header  */
+.SearchBar__title {
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Times New Roman';
+}
+
+/* User Action buttons  */
+.SearchBar__actions img {
+    height: 50px;
 }

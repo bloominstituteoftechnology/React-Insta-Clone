@@ -1,0 +1,34 @@
+.Post {
+   width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 10px 5px 20px;
+    background-color: white;
+}
+
+/*Header  top */
+.Post__header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0 10px 10px;
+}
+
+.Post__thumbnailURL {
+    height: 40px;
+    margin-right: 5px;
+
+}
+
+.Post__username {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/*Main post*/
+.Post__image {
+    width: 100%;
+    border: 1px solid black;
+}
