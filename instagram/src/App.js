@@ -4,6 +4,18 @@ import SearchBar from './components/SearchBar/searchBar';
 import PostContainer from './components/PostContainer/postContainer';
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      posts: [],
+    }
+  }
+
+  componentDidMount() {
+    this.setState({ posts: dummyData });
+  }
+  
   render() {
     return (
       <div className="App">
@@ -19,7 +31,7 @@ class App extends Component {
             <img className="icon icons_compass" src={require("./Images/user.png")}/>
           </div>
         </div>
-        <PostContainer data={dummyData}/>
+        <PostContainer posts={this.state.posts}/>
       </div>
     );
   }

@@ -1,12 +1,12 @@
 .posts_container {
   font-size: 1.7rem;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 6rem;
   text-align: left;
 }
 
 .post {
-  margin: 5rem auto;
+  margin: 2.5rem auto;
   max-width: 650px;
   min-width: 400px;
 }
