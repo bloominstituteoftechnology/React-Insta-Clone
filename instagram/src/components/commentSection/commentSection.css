@@ -1,0 +1,26 @@
+.commentContainer{
+  padding: 0 20px 20px;
+}
+.commentSection{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+.commentHeader{
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.commentBar{
+  border-radius: 0;
+  width: 100%;
+  border: none;
+  border-top: 1px solid lightgray;
+  padding: 18px 0 0;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.heart:hover{
+  color: red;
+}

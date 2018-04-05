@@ -1,0 +1,32 @@
+
+.postContainer{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray;
+  margin: 20px 0;
+}
+.Header{
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  align-items: center;
+  font-size: 18px;
+}
+.thumbnail{
+  border-radius: 50%;
+  width: 50px;
+  margin-right: 10px;
+}
+.image{
+  width: 100%;
+}
+.commentIconContainer{
+  padding: 10px 20px;
+}
+.commentIcon{
+  margin-right: 20px;
+  font-size: 30px;
+}
+.likesContainer{
+  padding: 0 20px 10px;
+}
