@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentSection from './components/CommentSection/CommentSection.js';
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
@@ -31,6 +32,7 @@ const PostContainer = (props) => {
                 </div>
                 <CardBody>
                     {/* Comment Component should go here when ready */}
+                    
                 </CardBody>
             </Card>
         </div>
