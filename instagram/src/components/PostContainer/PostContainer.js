@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import CommentSection from '../CommentSection/CommentSection.js';
 import heart from '../CommentSection/love.png';
 import comBubble from '../CommentSection/comment.png';
@@ -21,12 +22,12 @@ const PostContainer = (props) => {
             </div>
             <p className="likes"><b>{props.likes} likes</b></p>
             <CommentSection comments = {props.comments}/>
+            <p className="timestamp"><b>{moment(props.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}</b></p>
             <div className="commentDiv">
-                <input className="commentInputField" 
-                type="text" 
-                placeholder="Add a comment..." 
-                name="inputField" 
-                //value={this.state.search}
+                <input className="commentInputField"
+                type="text"
+                placeholder="Add a comment..."
+                name="inputField"
             />
         </div>
     </div>
