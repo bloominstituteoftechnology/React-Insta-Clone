@@ -13,7 +13,7 @@
     font-weight: 500;
 }
 
-.PostContainer__logo {
+.PostContainer__thumbnail {
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -21,8 +21,9 @@
 }
 
 .PostContainer__image {
-    height: 540px;
-    width: 540px;
+    height: 530px;
+    width: 530px;
+    margin-left: 1%;
 }
 
 .PostContainer__icons {
@@ -51,6 +52,7 @@
     padding: 0.2% 2%;
     font-weight: 500;
 }
+
 
 .PostContainer__timestamp {
     color: grey;

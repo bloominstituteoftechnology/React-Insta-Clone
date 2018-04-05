@@ -7,7 +7,7 @@ import './CommentSection.css';
             {props.comments.map(((comment, index) => {
                 return (
                     <div className="CommentSection" key={comment.username + index}>
-                        <span className="CommentSection__comment">{comment.username}></span>
+                        <span className="CommentSection__comment">{comment.username}</span>
                         {comment.text}
                     </div>
                 )

@@ -21,7 +21,7 @@ export const PostContainer = props => {
                 <img className="PostContainer__image" src={props.data.imageUrl}alt=""></img>
                 <div className="PostContainer__icons"><button className="PostContainer__icons-icon" value={props.i} onClick={click}><i class="far fa-heart fa-2x"></i></button><button className="PostContainer__icons-icon"><i class="fa fa-comment fa-2x"></i></button></div>
                 <div className="PostContainer__comment-content">{props.data.likes} Likes </div>
-                <CommentSection comments={props.data.comment} />
+                <CommentSection comments={props.data.comments} />
                 <form onSubmit={commentSubmit} id={props.i}>
                 <input className="PostContainer__input" placeholder="leave a comment..."></input><span>...</span>
                 </form>
