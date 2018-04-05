@@ -1,0 +1,10 @@
+/* .postCard {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+} */
+
+.postContainer {
+    display: flex;
+    justify-content: center;
+}

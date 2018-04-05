@@ -21,7 +21,7 @@ import {
 // }
 
 // for reference later
-const searchBar = () => {
+const searchBar = props => {
   return (<div>
     <div className="headerBox">
       <img className="instaLogo" src={require("../../img/dabman.png")} />
