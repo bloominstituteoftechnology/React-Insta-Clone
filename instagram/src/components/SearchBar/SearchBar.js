@@ -20,13 +20,18 @@ import {
 //   )
 // }
 
+// for reference later
 const searchBar = () => {
   return (<div>
     <div className="headerBox">
-      <img src={require("../../img/dabman.png")} />
+      <img className="instaLogo" src={require("../../img/dabman.png")} />
       <Input className="searchBar" type="text" name="searchBar" placeholder="Search Here!"/>
+      <img className="instaLogo" src={require("../../img/dabman.png")} />
     </div>
-  </div>)
+    <div className="logosRight">
+
+     </div>
+   </div>)
 }
 // const logoLeft = () => {
 //   return (
