@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/searchBar';
 import PostContainer from './components/PostContainer/postContainer';
-import CommentSection from './components/PostContainer/postContainer';
 
 class App extends Component {
   render() {
