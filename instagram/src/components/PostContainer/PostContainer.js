@@ -6,7 +6,9 @@ export class PostContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      commentsArray: [props.userPost.comments] // returns the array of comments for each post
+      commentsArray: props.userPost.comments, // returns the array of comments for each post
+      numLikes: props.userPost.likes, // returns number of likes for each post
+      individualPost: this.props.userPost
     };
   }
 
@@ -30,7 +32,8 @@ export class PostContainer extends Component {
       <div className="Container">
         {this.PostHeader()}
         {this.PostImage()}
-        <CommentSection comments={this.state.commentsArray} />
+        <CommentSection comments={this.state.commentsArray} likes={this.state.numLikes} userPost={this.state.individualPost}/>
+        {console.log(this.state.commentsArray)}
       </div>
     )
   }

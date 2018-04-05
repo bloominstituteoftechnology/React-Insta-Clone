@@ -1,0 +1,66 @@
+.Comments {
+  padding: 0 16px;
+}
+
+.Comments__likes {
+  font-weight: 600;
+  padding: 0 0 5px;
+}
+
+.Comments__icons :first-child {
+  margin-left: 0;
+  margin-right: 16px;
+}
+
+.Comments__icons :last-child {
+  float: right;
+  margin-right: 0;
+}
+
+.Icons {
+  height: 24px;
+  width: 24px;
+  margin: 8px;
+}
+
+.Comments__comments {
+  float: left;
+  display: inline;
+}
+
+.Comments__comments--full {
+}
+
+.Comments__comments--user {
+  font-weight: 600;
+  height: 100%;
+  float: left;
+  margin-right: 8px;
+}
+
+.Comments__comments--text {
+  margin-bottom: 4px;
+}
+
+.TimeStamp {
+  font-size: 12px;
+  color: gray;
+  clear: both;
+}
+
+.Comment__addComment {
+  padding: 15px 0;
+  margin-top: 13px;
+  border-top: 1px solid #E1EAFF;
+}
+
+.Comment__addComment--input {
+  border: 0;
+  width: 90%;
+}
+
+.Comment__addComment--submit {
+  border: 0;
+  background-color: white;
+  float: right;
+}
