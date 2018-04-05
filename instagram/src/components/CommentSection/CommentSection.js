@@ -1,21 +1,49 @@
 import React from 'react';
+import { Button } from 'reactstrap';
 
 const styles = {
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  // width: '100%'
 }
 
 const commentsStyles = {
-  display: 'flex',
+  display: 'inline-flex',
   flexDirection: 'column',
-  alignItems: 'start',
-  padding: '20px'
+  
+  justifyContent: 'center',
+  // marginTop: 60,
+  // marginRight: '20%',
+  height: 400,
+  width: '100%',
+  marginRight: 80,
+  // border: '2px solid red',
+  marginLeft: 20,
+
+}
+const moreStyles = {
+  marginTop: 10,
+  marginBottom: 10,
+  display: 'inline-flex',
+  justifyContent: 'start',
+  // border: '2px solid blue',
+  width: '100%,',
+
+}
+const buttonStyle = {
+  display: 'flex',
+  marginTop: 10,
+  justifyContent: 'center',
+  marginLeft: '35%',
+  width: '30%'
+  // justifyContent: 'end'
 }
 
 const CommentSection = props => {
   return (
     <div style={commentsStyles}>
+    {/* {console.log(props.comments)} */}
       {props.comments.map((c, i) => (
-        <div key={c + i}><span style={styles}>{c.username}</span>: {c.text}</div>
+        <div key={c + i} style={moreStyles} ><span style={styles}>{c.username}</span>: {c.text}</div>
       ))}
       <input
         type='text'
@@ -23,7 +51,8 @@ const CommentSection = props => {
         onChange={props.change}
         value={props.value}
       />
-      <button onClick={props.submit}>Add Comment</button>
+      <Button color="primary" style={buttonStyle} onClick={props.submit}>Add Comment</Button>{' '}
+      {/* <button onClick={props.submit}>Add Comment</button> */}
     </div>
   );
 }

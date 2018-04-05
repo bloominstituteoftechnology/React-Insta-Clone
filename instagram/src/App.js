@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import PostContainer from './components/PostContainer/PostContainer.js';
 import dummyData from './dummy-data.js';
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 const mainStyles = {
   width: '600px',
   margin: '0 auto'
@@ -38,6 +38,7 @@ class App extends Component {
   render() {
     return (
       <div style={mainStyles} className="App">
+      <SearchBar />
         {this.state.data.map((post, i) => <PostContainer
           change={(e) => this.handleAddComment(e, i)}
           submit={() => this.handleSubmitComment(i)}
