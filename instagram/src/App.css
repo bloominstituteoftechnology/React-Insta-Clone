@@ -3,12 +3,18 @@
   min-width: 700px;
 }
 
+input:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
 .header {
   align-items: center;
   background: white;
   border-bottom: .1rem solid lightgrey;
   display: flex;
   justify-content: space-between;
+  min-width: 700px;
   padding: 1rem;
   position: fixed;
   width: 100%;

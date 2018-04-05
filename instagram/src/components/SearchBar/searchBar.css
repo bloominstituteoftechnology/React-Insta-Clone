@@ -12,6 +12,7 @@
 }
 
 .searchBar input {
+  background: rgb(245, 245, 245);
   border: .1rem solid lightgrey;
   border-radius: .5rem;
   height: 3rem;
