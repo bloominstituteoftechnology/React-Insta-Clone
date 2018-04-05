@@ -3,23 +3,32 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 100px;
 }
-.searchDiv {
-
+.inputField {
+    width: 200px;
+    height: 25px;
+    font-size: 1rem;
+    text-align: center;
+    background: #F9F9F9;
+    border: 1px solid lightgrey;
+    color: lightgrey;
 }
-.searchDiv {
 
+.image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    cursor: pointer;
 }
 .firstImage {
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 15px;
+    padding-bottom: 4px;
+    height: 30px;
 }
-.image {
-    margin-top: 10px;
-    margin-bottom: 10px;
+.secondImage {
     height: 50px;
 }
 .firstImage {
-    border-right: 1px solid black;
+    border-right: 1px solid lightgrey;
 }

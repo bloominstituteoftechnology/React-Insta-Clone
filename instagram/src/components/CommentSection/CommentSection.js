@@ -6,8 +6,8 @@ const CommentSection = () => {
     return (
         <div className="commentDiv">
             <div>
-                <img className="image" src={heart} />
-                <img className="image" src={comBubble} />
+                <img className="image" alt="" src={heart} />
+                <img className="image" alt="" src={comBubble} />
             </div>
             {/* <p>{this.state.likes} likes</p> */}
             {/* <div>

@@ -1,8 +1,12 @@
+.postDiv {
+    max-width: 1100px;
+}
 .logoDiv {
-    padding-left: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 .logo {
-    width: 30px;
+    width: 40px;
     border-radius: 50%;
 }
 .mainImage {

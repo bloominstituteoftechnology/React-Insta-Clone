@@ -8,8 +8,8 @@ const SearchBar = () => {
     return (
         <div className="headerBar">
             <div className="leftIcons">
-                <img className="firstImage image" src={camera} />
-                <img className="image"src={instalogo} />
+                <img className="firstImage image" alt="" src={camera} />
+                <img className="secondImage image" alt="" src={instalogo} />
             </div>
             <div className="searchDiv">
                 <input className="inputField" 
@@ -20,8 +20,8 @@ const SearchBar = () => {
             />
             </div>
             <div className="rightIcons">
-            <img className="image" src={compass} />
-            <img className="image" src={user} />
+            <img className="image" alt="" src={compass} />
+            <img className="image" alt="" src={user} />
             </div>
         </div>
     )
