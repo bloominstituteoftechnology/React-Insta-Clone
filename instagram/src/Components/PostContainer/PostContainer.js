@@ -3,12 +3,12 @@ import { CommentSection } from '../CommentSection/CommentSection.js';
 import './PostContainer.css';
 
 export const PostContainer = props => {
-     click(e) {
-        event.target.classList.toggle('PostContainer__icons-liked')
+    function click(e) {
+        e.target.classList.toggle('PostContainer__icons-liked')
         props.click(e.target.value);
     }
 
-    commentSubmit(e) {
+    function commentSubmit(e) {
         e.preventDefault();
         props.comment(e);
         e.target.firstChild.value = "";
