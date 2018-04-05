@@ -20,7 +20,7 @@ export default class SearchBar extends React.Component {
 
             {/*<div className="SearchBar__actions">*/}
               {/*<img src={user} alt="User" />*/}
-              <FontAwesomeIcon icon={faHeart} size='2x'/>
+              <FontAwesomeIcon icon={faHeart} size='2x' className='hear-icon'/>
                 <FontAwesomeIcon  icon={faUser} size='2x' />
             {/*</div>*/}
 

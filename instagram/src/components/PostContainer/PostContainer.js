@@ -45,7 +45,7 @@ export default class PostContainer extends Component {
                 />
                 <div className='Post__footer'>
                     <div className='Post__action-bar'>
-                        <FontAwesomeIcon icon={faHeart} size='sm' onClick={this.increaseLikes} />
+                        <FontAwesomeIcon icon={faHeart} size='sm' onClick={this.increaseLikes} className='hear-icon'/>
                         <FontAwesomeIcon icon={faComment} size='sm'/>
                     </div>
                     <div className='Post__likes'>
