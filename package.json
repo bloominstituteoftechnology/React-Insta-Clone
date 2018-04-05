@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "react-icons": "^2.2.7",
     "reactstrap": "^5.0.0"
   }
 }

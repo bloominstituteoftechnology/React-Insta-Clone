@@ -1,0 +1,30 @@
+.Post-Container {
+    border: 1px solid gray;
+    max-width: 700px;
+}
+
+.header-Container {
+    display: flex;
+    margin: 9px;
+}
+
+.thumb-style {
+    width: 32px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.Username-Style {
+    padding-left: 20px;
+    padding-top: 5px; 
+}
+
+.Img-style {
+    max-width: 100%;
+}
+
+.Likes-style {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
