@@ -32,10 +32,9 @@ class App extends Component {
   }
 
   handleLikePost = (toggled, i) => {
-    console.log(toggled);
     const { data } = this.state;
     data[i].likes = toggled ? data[i].likes + 1 : data[i].likes - 1;
-    this.setState({ 'data' : data });
+    this.setState({ data });
   }
 
   render() {
@@ -52,7 +51,7 @@ class App extends Component {
                         change={e => this.handleAddComment(e, i)}
                         submit={() => this.handleSubmitComment(i)}
                         like={t => this.handleLikePost(t, i)}
-                        data={post}
+                        post={post}
                         value={this.state.newComment[i]} />
               );
             }
