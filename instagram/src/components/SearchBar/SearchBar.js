@@ -10,14 +10,21 @@ class SearchBar extends Component {
     this.setState({ searchTerm: e.target.value });
   }
 
+  handleSubmitSearch = () => {
+    this.props.searchPosts(this.state.searchTerm);
+  }
+
   render() {
     return (
-      <input
-        name="searchBar"
-        value={this.state.searchTerm}
-        placeholder="Search"
-        onChange={this.handleAddSearch}
-      />
+      <div>
+        <input
+          name="searchBar"
+          value={this.state.searchTerm}
+          placeholder="Search"
+          onChange={this.handleAddSearch}
+        />
+        <button onClick={this.handleSubmitSearch}>Search Posts</button>
+      </div>
     );
   }
 }

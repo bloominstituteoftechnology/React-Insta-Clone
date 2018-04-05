@@ -17,11 +17,16 @@ class App extends Component {
     this.setState({ posts });
   }
 
+  searchPosts = (searchString) => {
+    let searchedPosts = this.state.posts.filter(post => post.username.includes(searchString));
+    this.setState({ posts: searchedPosts });
+  }
+
   render() {
     console.log(this.state.posts);
     return (
       <div className="App">
-        <SearchBar></SearchBar>
+        <SearchBar searchPosts={this.searchPosts} />
         {this.state.posts.map(post => <PostContainer post={post}></PostContainer>)}
       </div>
     );
