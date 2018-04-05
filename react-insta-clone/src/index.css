@@ -8,7 +8,7 @@ body {
 /* App Styles */
 
 .main {
-  width: 600px;
+  width: 400px;
   margin: 0px auto;
 }
 
@@ -19,12 +19,18 @@ body {
   display: flex;
   border-bottom: 2px solid #e4e3e3;
   justify-content: space-between;
+  height: 85px; 
+  
 }
 
-.search-input {
-  align-self: center;
+.searchbar .search-input {
+  display: flex; 
+  align-self: center; 
+margin-left: 120px; 
   width: 400px;
-  height: 50px;
+  height: 40px;
+  
+   
 }
 
 .search-input::placeholder {

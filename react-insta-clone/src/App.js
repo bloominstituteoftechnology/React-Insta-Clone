@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+
 import SearchBar from './components/SearchBar/SearchBar.js';
 import PostContainer from './components/PostContainer/PostContainer.js';
 import dummyData from './dummy-data.js';
 import './App.css';
 
-// const mainStyles = {
-//   width: '600px',
-//   margin: '0 auto'
-// }
+
 
 class App extends Component {
   constructor() {
