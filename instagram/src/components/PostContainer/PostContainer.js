@@ -52,7 +52,7 @@ export default class PostContainer extends Component {
                     </div>
                     <div className='Post__timesine'>
 
-                        <Moment date={this.state.timestamp}/>
+                        <Moment fromNow now>{this.state.timestamp}</Moment>
                     </div>
                 </div>
             </div>
