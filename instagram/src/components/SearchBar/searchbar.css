@@ -1,0 +1,22 @@
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.instagramLogo {
+    display: flex;
+    align-items: center;
+}
+
+.camera {
+    width: 40px;
+    height: 40px;
+}
+
+.writing {
+    width: auto;
+    height: 40px;
+    margin-top: 10px;
+}
