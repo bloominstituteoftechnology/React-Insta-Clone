@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
+import { Card, CardTitle, CardText, CardSubtitle, CardBody } from 'reactstrap';
 
 class PostContainer extends Component {
     // constructor(props) {
@@ -20,22 +21,25 @@ class PostContainer extends Component {
     render() {
         console.log('this is 2 ', this.props);
         return (
-            <div className="post-container">
+            <Card className="post-container">
                 {/* {[...this.props]} */}
                 {/* {[...this.state].map((post, index) => (
                 <div>{post[index].username}</div>
             ))} */}
-                <div>
+                <CardTitle>
                     {[...this.props.postData.username]}
-                </div>
+                    <p>{this.props.postData.timestamp}</p>
+                </CardTitle>
+                {/* <CardBody> */}
+                    <img className="img-fluid" src={`${this.props.postData.imageUrl}`} />
+                {/* </CardBody> */}
                 <div>
-                    {[...this.props.postData.likes.toString()]}
+                    {this.props.postData.likes}
                 </div>
                 {this.props.postData.comments.map((comment, index) =>
                     <CommentSection key={index} commentData={comment}
                     />)}
-                END OF POST
-            </div>
+            </Card>
         )
     }
 }

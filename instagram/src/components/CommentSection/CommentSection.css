@@ -1,0 +1,5 @@
+.comment-section {
+    display: flex;
+    margin: 0 2%;
+    justify-content: flex-start;
+}

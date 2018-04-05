@@ -4,7 +4,10 @@ import './SearchBar.css';
 const SearchBar = () => {
     return (
         <div>
-            Hello is it me (SearchBar) you're lookin' for
+            <input
+            type="text"
+            placeholder="SearchBar"
+            />
         </div>
     )
 }

@@ -4,11 +4,11 @@ import './CommentSection.css';
 const CommentSection = (props) => {
     console.log(props)
     return (
-        <div>
-            {props.commentData.username}
-            <div>
-                {props.commentData.text}
-            </div>
+        <div className="comment-section">
+            <b style={{ marginRight: '1%' }}>
+                {props.commentData.username}
+            </b>
+            {props.commentData.text}
         </div>
     )
 }
