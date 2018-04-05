@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import CommentSection from './components/CommentSection/CommentSection';
 import dummyData from './dummy-data.js';
 
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState( { post: dummyData } );
+    this.setState( { posts: dummyData } );
   }
   render() {
     return (
@@ -27,7 +28,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <SearchBar />
-        <PostContainer posts = {this.state.posts}/>
+        <PostContainer />
       </div>
     );
   }
