@@ -14,9 +14,10 @@ export class PostContainer extends Component {
     return (
       <div className="Container">
         <div className="Container__header">
-          <img src={this.props.userPost.thumbnailUrl} alt="profileThumbnail" />
-          <div>{this.props.userPost.username}</div>
+          <img src={this.props.userPost.thumbnailUrl} alt="profileThumbnail" className="Container__header--profileImg"/>
+          <div className="Container__header--displayName">{this.props.userPost.username}</div>
         </div>
+        <img src={this.props.userPost.imageUrl} alt="postImage" className="Container__postedImg"/>
         <CommentSection comments={this.state.commentsArray} />
       </div>
     )

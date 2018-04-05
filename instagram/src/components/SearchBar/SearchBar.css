@@ -1,0 +1,25 @@
+.Nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #E1EAFF;
+  padding: 1%;
+  height: 5%;
+  width: 85%;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.Nav__logo {
+  height: 15%;
+  width: 15%;
+}
+
+.Nav__input {
+  border-radius: 3px;
+  text-align: center;
+  width: 17%;
+  border: 1px solid lightgray;
+  background-color: #F0EFEB;
+}
