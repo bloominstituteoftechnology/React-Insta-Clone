@@ -2,9 +2,13 @@ import React from 'react';
 import './CommentSection.css';
 
 const CommentSection = (props) => {
+    console.log(props)
     return (
         <div>
-            Hi, it's me, CommentSection
+            {props.commentData.username}
+            <div>
+                {props.commentData.text}
+            </div>
         </div>
     )
 }

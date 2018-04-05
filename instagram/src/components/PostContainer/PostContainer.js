@@ -18,7 +18,7 @@ class PostContainer extends Component {
     // }
 
     render() {
-        console.log('this is ', this.props);
+        console.log('this is 2 ', this.props);
         return (
             <div className="post-container">
                 {/* {[...this.props]} */}
@@ -31,7 +31,10 @@ class PostContainer extends Component {
                 <div>
                     {[...this.props.postData.likes.toString()]}
                 </div>
-                <CommentSection />
+                {this.props.postData.comments.map((comment, index) =>
+                    <CommentSection key={index} commentData={comment}
+                    />)}
+                END OF POST
             </div>
         )
     }
