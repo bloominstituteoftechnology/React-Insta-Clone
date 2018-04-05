@@ -49,7 +49,7 @@ body {
 
 .post-container {
   border: 2px solid #e4e3e3;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .header-img {
@@ -119,4 +119,10 @@ body {
   border: none;
   font-size: 15px;
   width: 100%;
+}
+
+.comment-time {
+  margin-top: 8px;
+  font-size: 11px;
+  color: gray;
 }

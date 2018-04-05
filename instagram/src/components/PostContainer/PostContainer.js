@@ -37,7 +37,8 @@ class PostContainer extends Component {
           change={this.props.change}
           submit={this.props.submit}
           comments={this.props.post.comments}
-          value={this.props.value} />
+          value={this.props.value}
+          time={this.props.post.timestamp} />
       </div>
     );
   }
