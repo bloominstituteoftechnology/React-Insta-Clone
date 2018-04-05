@@ -24,8 +24,10 @@
 }
 
 .postContainerAvatarText {
-    margin-top: 3%;
-    margin-left: 2%;
     font-size: 1rem;
     font-weight: bold;
+}
+
+.postContainerImage {
+    max-width: 100%;
 }
