@@ -45,3 +45,7 @@
 .Post__likes {
     font-weight: bold;
 }
+
+.Post__timesine {
+    color: lightslategray;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Moment from 'react-moment'
 import './PostContainer.css'
 import CommentSection from '../CommentSection/CommentSection'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
@@ -17,7 +18,12 @@ export default class PostContainer extends Component {
     // increase number of likes
     increaseLikes = (e) => this.setState({likes: this.state.likes + 1});
 
+    //time since
+    // getTimeSince() {
+    //     return moment(this.props.timestamp, 'YYYMMDD').fromNow();
+    // }
     render() {
+        {let currentDate = Date()}
         return (
             <div className='Post'>
                 <div className='Post__header'>
@@ -43,6 +49,10 @@ export default class PostContainer extends Component {
                     <div className='Post__likes'>
                         {this.state.likes} likes
                         <CommentSection comments={this.state.comments}/>
+                    </div>
+                    <div className='Post__timesine'>
+
+                        <Moment date={this.state.timestamp}/>
                     </div>
                 </div>
             </div>

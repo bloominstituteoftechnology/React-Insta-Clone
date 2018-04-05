@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './CommentSection.css'
 export default class CommentSection extends React.Component {
 
 
@@ -9,7 +9,7 @@ export default class CommentSection extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='CommentSection'>
                 {this.getComment()};
             </div>
         );
@@ -19,7 +19,8 @@ export default class CommentSection extends React.Component {
 
 function Comment(props) {
     return(
-        <div>{props.username}
+        <div className='CommentSection__comment'>
+            <span className='CommentSection__username'>{props.username} </span>
             {props.text}
         </div>
     );
