@@ -10,14 +10,26 @@ export class PostContainer extends Component {
     };
   }
 
+  PostHeader = () => {
+    return (
+      <div className="Container__header">
+        <img src={this.props.userPost.thumbnailUrl} alt="profileThumbnail" className="Container__header--profileImg"/>
+        <div className="Container__header--displayName">{this.props.userPost.username}</div>
+      </div>
+    )
+  }
+
+  PostImage = () => {
+    return (
+      <img src={this.props.userPost.imageUrl} alt="postImage" className="Container__postedImg"/>
+    )
+  }
+
   render() {
     return (
       <div className="Container">
-        <div className="Container__header">
-          <img src={this.props.userPost.thumbnailUrl} alt="profileThumbnail" className="Container__header--profileImg"/>
-          <div className="Container__header--displayName">{this.props.userPost.username}</div>
-        </div>
-        <img src={this.props.userPost.imageUrl} alt="postImage" className="Container__postedImg"/>
+        {this.PostHeader()}
+        {this.PostImage()}
         <CommentSection comments={this.state.commentsArray} />
       </div>
     )
