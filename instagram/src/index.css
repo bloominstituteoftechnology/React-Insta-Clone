@@ -4,6 +4,7 @@ body {
   font-family: sans-serif;
 }
 
+
 /* App Styles */
 
 .main {
@@ -11,10 +12,36 @@ body {
   margin: 0px auto;
 }
 
+
 /* Search Bar Styles */
 
 .searchbar {
   display: flex;
+  border-bottom: 2px solid #e4e3e3;
+  justify-content: space-between;
+}
+
+.search-input {
+  align-self: center;
+  width: 400px;
+  height: 50px;
+}
+
+.search-input::placeholder {
+  color: gray;
+  height: 50px;
+  line-height: 3.2;
+  background-image: url("searchbar.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.search-icons {
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 100px;
 }
 
 

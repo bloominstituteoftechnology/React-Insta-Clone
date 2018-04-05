@@ -4,11 +4,11 @@ const CommentSection = props => {
   return (
     <div className="comments-container">
       {props.comments.map((c, i) => (
-        <div key={c + i}><span className="username">{c.username}</span>: {c.text}</div>
+        <div key={'comment' + i}><span className="username">{c.username}</span>: {c.text}</div>
       ))}
       <div className="input-container">
         <input className="comment-input" type='text' placeholder='Add a comment...' onChange={props.change} value={props.value} />
-        <div onClick={props.submit}><img src="img/elipsis.png" /></div>
+        <div onClick={props.submit}><img src="img/elipsis.png" alt="Add comment"/></div>
       </div>
     </div>
   );
