@@ -1,0 +1,36 @@
+.postContainerDiv {
+    margin-top: 50px;
+}
+
+.postContainer {
+    width: 75%;
+    margin: 50px auto;
+}
+
+.thumbnail {
+    border-radius: 50%;
+    width: 50px;
+    margin-right: 15px;
+}
+
+.card-header {
+    background-color: #FFF;
+}
+
+.card-header span {
+    font-weight: bold;
+}
+
+.postLike {
+    margin-right: 10px;
+    color: #2A2A2A;
+}
+
+.fa-comment {
+    color: #2A2A2A;
+}
+
+.likesNumber {
+    font-weight: bold;
+    color: #2A2A2A;    
+}
