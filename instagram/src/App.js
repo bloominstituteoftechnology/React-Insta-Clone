@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/searchBar';
 import PostContainer from './components/PostContainer/postContainer';
@@ -15,9 +13,7 @@ class App extends Component {
             <img className="instaIcon" src={require("./Images/instagram-logo-img.png")}/>
             <img className="instaTitle" src={require("./Images/instagram-logo-title.png")}/>
           </div>
-
           <SearchBar />
-
           <div className="header_right">
             <img className="icon icons_compass" src={require("./Images/compass.png")}/>
             <img className="icon icons_compass" src={require("./Images/heart.png")}/>
