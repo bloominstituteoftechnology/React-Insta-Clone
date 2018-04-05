@@ -25,8 +25,8 @@ class App extends Component {
   render() {
     return (
       <div className="fullContainer">
+        <SearchBar />
         <div className="centeredContainer">
-          <SearchBar />
           {this.postElements()}
         </div>
       </div >
