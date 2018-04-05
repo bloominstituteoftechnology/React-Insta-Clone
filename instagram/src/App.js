@@ -8,13 +8,13 @@ class App extends Component {
     super();
     this.state = {
       'data': dummyData,
-      'newComment': []
+      'newComment': [],
+      'searchField': ''
     };
   }
 
   handleAddComment = (e, i) => {
     const newComment = this.state.newComment;
-    console.log(newComment);
     newComment[i] = e.target.value;
     this.setState({ 'newComment': newComment });
   };
@@ -27,17 +27,29 @@ class App extends Component {
     this.setState({ data, newComment: newComment });
   };
 
+  handleAddSearch = e => {
+    this.setState({ 'searchField': e.target.value });
+  }
+
   render() {
     return (
       <div>
-        <SearchBar />
+        <SearchBar
+          field={this.state.searchField}
+          change={e => this.handleAddSearch(e)} />
         <div className="main">
-          {this.state.data.map((post, i) => <PostContainer
-            key={'post' + i}
-            change={(e) => this.handleAddComment(e, i)}
-            submit={() => this.handleSubmitComment(i)}
-            data={post}
-            value={this.state.newComment[i]} />)}
+          {this.state.data.map((post, i) => {
+            if (post.username.includes(this.state.searchField)) {
+              return (<PostContainer
+                        key={'post' + i}
+                        change={e => this.handleAddComment(e, i)}
+                        submit={() => this.handleSubmitComment(i)}
+                        data={post}
+                        value={this.state.newComment[i]} />
+              );
+            }
+            return null;
+          })}
         </div>
       </div>
     );
