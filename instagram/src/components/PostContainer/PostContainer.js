@@ -25,9 +25,13 @@ const PostContainer = props => {
                     </div>                    
                     <CommentSection className="post-comments" comments={post.comments} />
                     <div className="timestamp">
-                        {post.timestamp}
+                        {`${props.calcTime(post.timestamp)}`}
+                        {`${console.log(props.calcTime(post.timestamp))}`}
                     </div>
-                    <input className="newComment" placeholder="Add a comment..." />
+                    <div className="newComment">
+                        <input className="newComment-input" placeholder="Add a comment..." />
+                        <button className="newComment-options">...</button>
+                    </div>
                 </div>
             ))}
         </div>

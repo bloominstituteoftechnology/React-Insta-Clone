@@ -20,8 +20,7 @@
     display: flex;
     justify-content: flex-start;
     font-weight: bold;
-    margin: 0 10px;
-    padding: 10px;
+    padding: 0 10px;
 }
 
 .post-comments {
@@ -36,7 +35,7 @@
 }
 
 img.options-post {
-    margin: 5px 0 0 5px;
+    margin-top: 5px;
     width: 30px;
 }
 
@@ -46,10 +45,27 @@ button {
 }
 
 input {
-    width: 100%;
+    flex-grow: 1;
+    justify-self: flex-start;
     border: none;
 }
 
-input:focus {
-    border: 1px solid #222;
+.timestamp {
+    text-align: start;
+    padding: 5px 10px;
 }
+
+input:focus {
+    outline: none;
+}
+
+.newComment {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.newComment-options {
+    font-weight: bold;
+}
+

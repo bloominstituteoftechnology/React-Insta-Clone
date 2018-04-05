@@ -7,7 +7,7 @@ import './SearchBar.css';
 
 const SearchBar = props => {
     return (
-        <div className="header">
+        <div className="container header">
             <div>
                 <img className="logo" src={logo} alt="Instagram" />
             </div>            
