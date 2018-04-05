@@ -10,10 +10,10 @@ class App extends Component {
     this.state = {
       Posts: []
     };
-  }
+  };
 
   componentDidMount() {
-    this.setState({ Posts: dummyData })
+    this.setState({ Posts: dummyData });
   }
 
   render() {

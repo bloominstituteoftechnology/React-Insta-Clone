@@ -1,6 +1,6 @@
 import React from 'react';
 import './PostList.css';
-import { CommentList } from './CommentList.js';
+import CommentList from './CommentList.js';
 
 export const PostList = props => {
     return <div>{props.postProps.map((aPost, index) => (

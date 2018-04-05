@@ -35,6 +35,7 @@
 .Post__Foot {
     background-color: white;
     padding: 15px;
+    padding-bottom: 0;
     border-radius: 0 0 10px 10px;
 }
 
