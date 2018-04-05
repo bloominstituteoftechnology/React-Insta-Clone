@@ -1,7 +1,7 @@
 import React from 'react';
 import './CommentSection.css';
 
-export const CommentSection = props => {
+ const CommentSection = props => {
     return (
         <div>
             {props.comments.map(((comment, index) => {
@@ -15,3 +15,4 @@ export const CommentSection = props => {
         </div>
     )
 }
+export default CommentSection;

@@ -34,7 +34,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        {this.state.Data.map(((data, index) => <PostContainer click={this.incrementValue} comment={this.addComment} data={data} i={index} key={index} />))}
+        {this.state.Data.map(((data, index) => <PostContainer click={this.incrementValue} comments={this.addComment} data={data} i={index} key={index} />))}
       </div>
     );
   }
