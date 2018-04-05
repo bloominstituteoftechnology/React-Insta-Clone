@@ -15,6 +15,11 @@ class App extends Component {
     };
   }
 
+  componentWillMount() {
+    this.setState ({
+      data: dummyData,
+    })
+  }
 
   render() {
     return (<div className="App">
