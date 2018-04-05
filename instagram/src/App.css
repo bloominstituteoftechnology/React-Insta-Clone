@@ -9,7 +9,7 @@
   align-items: center;
 }
 .centeredContainer {
-  max-width: 800px;
+  max-width: 1000px;
   min-width: 500px;
   border: 2px solid white;
   background: white;
