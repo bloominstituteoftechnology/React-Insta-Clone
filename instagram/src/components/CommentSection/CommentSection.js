@@ -1,21 +1,15 @@
 import React from 'react';
-import heart from './love.png';
-import comBubble from './comment.png';
 
-const CommentSection = () => {
+const CommentSection = (props) => {
     return (
-        <div className="commentDiv">
-            <div>
-                <img className="image" alt="" src={heart} />
-                <img className="image" alt="" src={comBubble} />
-            </div>
-            {/* <p>{this.state.likes} likes</p> */}
-            {/* <div>
-                {props.todos.map(todo => {
-                    return <Todo completeTodo={props.completeTodo} todo={todo} />;
-                })}
-            </div>
-            <p><b>{this.state.user}</b> {this.state.comment}</p> */}
+        <div>
+            {props.comments.map(a => {
+                return (
+                    <div>
+                        <b>{a.username}</b> {a.text}
+                    </div>
+                )
+            })}
         </div>
     )
 }

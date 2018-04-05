@@ -21,12 +21,23 @@ class App extends Component {
     })
   }
 
+  // postComments = () => {
+  //   return this.state.posts.map(post => {
+  //     return <CommentSection {post.comments} />
+  //   })
+  // }
+
+
+ 
+
   render() {
     return (
       <div className="fullContainer">
         <div className="centeredContainer">
           <SearchBar />
           {this.postElements()}
+          {/* <CommentSection comments={this.state.posts.comments}/> */}
+          {/* {this.postComments()} */}
         </div>
       </div >
     );
