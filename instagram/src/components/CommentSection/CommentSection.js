@@ -2,7 +2,6 @@ import React from 'react';
 import './CommentSection.css';
 
 const CommentSection = (props) => {
-    console.log(props)
     return (
         <div className="comment-section">
             <b style={{ marginRight: '1%' }}>
