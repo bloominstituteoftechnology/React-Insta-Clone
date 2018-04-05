@@ -1,5 +1,6 @@
 @import "./Components/SearchBar/SearchBar.css";
 @import "./Components/PostContainer/PostContainer.css";
+@import "./Components/CommentSection/CommentSection.css";
 
 
 * {

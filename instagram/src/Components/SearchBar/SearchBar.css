@@ -26,6 +26,7 @@
     font-weight: normal;
     width: 50%;
     text-align: center;
+    cursor: pointer;
 }
 
 .search__Images {
@@ -37,12 +38,22 @@
     width: 12%;
 }
 
+.search img:hover {
+    cursor: pointer;
+}
+
 .search__input {
     width: 50%;
     height: 2rem;
     background-color: rgb(236, 236, 236);
     display: block;
     margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+}
+.search__input:focus {
+    cursor: none;
+    text-align: left;
 }
 
 .search__Images-group {

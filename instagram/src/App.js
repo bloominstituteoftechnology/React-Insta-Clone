@@ -7,6 +7,9 @@ import PostContainer from "./Components/PostContainer/PostContainer.js";
 class App extends Component {
   constructor() {
     super();
+    this.state = {
+      
+    }
   }
   render() {
     return (

@@ -19,7 +19,7 @@ const PostContainer = props => {
                         <img className="post__icon post__icon-heart" src={comment}/>
                     </div>
                     <div className="likes">{post.likes} likes</div>
-                    <CommentSection comments={post.comments}/>
+                    <CommentSection comments={post.comments} time={post.timestamp}/>
                 </div>
             ))}
         </div>
