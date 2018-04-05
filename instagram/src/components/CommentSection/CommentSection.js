@@ -14,9 +14,12 @@ class CommentSection extends Component {
   }
 
   handleSubmitComment = () => {
-    const { todos } = this.state;
-    todos.push(this.state.newComment);
-    this.setState({ todos, newComment: '' });
+    const { comments } = this.state;
+    comments.push({
+      username: 'The Dude',
+      text: this.state.newComment
+    });
+    this.setState({ comments, newComment: '' });
   }
 
   handleAddComment = e => {
@@ -26,13 +29,13 @@ class CommentSection extends Component {
   render() {
     return (
       <div>
-        {this.state.comments.map(comment => <div>{comment.username} {comment.text}</div>)}
+        {this.state.comments.map((comment, i) => <div key={i}>{comment.username} {comment.text}</div>)}
 
         <input
           type="text"
           name="newComment"
           value={this.state.newComment}
-          placeholder="add todo"
+          placeholder="add comment"
           onChange={this.handleAddComment}
         />
         <button onClick={this.handleSubmitComment}>Add Comment</button>
