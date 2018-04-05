@@ -5,6 +5,7 @@
     "sinon": "^4.5.0"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0",
     "reactstrap": "^5.0.0"
   }
 }
