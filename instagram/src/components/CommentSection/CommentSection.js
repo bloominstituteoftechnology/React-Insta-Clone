@@ -5,21 +5,27 @@ class CommentSection extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			comments:[],
+			comments: this.props.commentList,
 			username:"Guest",
 			newComment: ""
 		}
 	}
 
 	// handle new comments being typed in
-
-
+	handleNewComment = (event) => {
+		this.setState( {newComment: event.target.value });
+		console.log(event.target.value);
+	}
 
 	// add new comments to a post's list of comments
-
+	addNewComment = () => {
+		const commentBox = this.state.comments;
+		commentBox.push(this.state.newComment);
+		this.setState({ comments: commentBox, newComment: "" });
+	}
 
 	render() {
-		console.log('comments: ', this.state.comments);
+		// console.log('comments: ', this.state.comments);
 	  return(
 	    <div>
 	    	{this.props.commentList.map((comment, index) => (
