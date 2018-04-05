@@ -37,7 +37,6 @@ class App extends Component {
           incrementLikes={this.incrementLikes}
         />
       ));
-    console.log(this.state.searchText);
   };
   render() {
     return (

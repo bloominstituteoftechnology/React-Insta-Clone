@@ -1,6 +1,7 @@
 import React from "react";
 import Comments from "../CommentSection/Comments";
 import moment from "moment";
+import PropTypes from "prop-types";
 
 class Posts extends React.Component {
   handleClick = () => {
@@ -38,12 +39,26 @@ class Posts extends React.Component {
             <span className="comment_count">{comments.length}</span>
           </div>
           <div className="post_likes">{likes} likes</div>
-          <Comments comments={comments} />
+          <Comments
+            comments={comments}
+            key={`${comments[comments.length] + Date.now()}`}
+          />
           <div className="post_timeline">{this.timestampAgo()}</div>
         </div>
       </div>
     );
   }
 }
+
+Posts.propTypes = {
+  postdata: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    timestamp: PropTypes.string,
+    comments: PropTypes.array
+  })
+};
 
 export default Posts;

@@ -6,7 +6,7 @@ class SearchBar extends React.Component {
       <div className="searchbar">
         <h2 className="searchbar_brand">
           {" "}
-          <i class="fas fa-camera fa-1x" /> |{" "}
+          <i className="fas fa-camera fa-1x" /> |{" "}
           <span className="searchbar_brand_text">Instant Grannies</span>
         </h2>
         <input
