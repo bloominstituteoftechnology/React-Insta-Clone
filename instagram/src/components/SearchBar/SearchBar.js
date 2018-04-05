@@ -29,7 +29,6 @@ const searchBar = () => {
       <img className="instaLogo" src={require("../../img/dabman.png")} />
     </div>
     <div className="logosRight">
-
      </div>
    </div>)
 }
