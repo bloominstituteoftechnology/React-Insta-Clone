@@ -1,9 +1,16 @@
 import React from "react";
 
 const CommentSection = props => {
-    console.log(props.comments[0])
+    console.log('other test', props.comments);
     return(
-        <p>TEST</p>
+        <div>
+           {props.comments.map(comment => (
+               <div>
+                   <div>{comment.username}</div>
+                   <div>{comment.text}</div>
+               </div>
+           ))}
+        </div>
     )
 }
 
