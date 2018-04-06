@@ -1,10 +1,24 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightgray;
+    width: 500px;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
 .Post_image {
     height: 500px;
     width: 500px;
 }
 
 .img-thumbnail {
-    height: 90px;
-    width: 90px;
+    height: 70px;
+    width: 70px;
+}
+
+cardSubtitle {
+    display: flex;
+    padding: 20px;
 }
 

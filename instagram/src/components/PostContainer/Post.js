@@ -13,7 +13,7 @@ import CommentSection from '../CommentSection/CommentSection';
 const Post = props => {
     console.log(`PROPS ${props.post}`);
     return (
-        <Card>
+        <Card className="card-container">
             <CardBody>
                 <Row>
                     <img
@@ -25,7 +25,7 @@ const Post = props => {
                     <CardSubtitle className="cardSubtitle">
                         {props.post.username}
                     </CardSubtitle>
-                </Row > 
+                </Row> 
             </CardBody> 
             <CardImg className="Post_image" src={props.post.imageUrl} alt="" />
             <CardBody>

@@ -1,9 +1,14 @@
 .comment-username {
     font-weight: 600;
     font-size: 14px;
+    margin-left: 0px;
+    padding-right: 10px;
 }
 
 .comment-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     font-weight: 200;
     font-size: 14px;
 }
