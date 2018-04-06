@@ -6,7 +6,7 @@ import './PostContainer.css';
 
 const PostContainer = props => {
     return (
-        <div className="container">
+        <div className="container postContainer">
             {props.data.map((post, index) => (
                 <div className="post" key={post.username + index}>
                     <div className="post-header">
@@ -25,8 +25,8 @@ const PostContainer = props => {
                     </div>                    
                     <CommentSection className="post-comments" comments={post.comments} />
                     <div className="timestamp">
-                        {`${props.calcTime(post.timestamp)}`}
-                        {`${console.log(props.calcTime(post.timestamp))}`}
+                        {/* {`${props.calcTime(post.timestamp)}`} */}
+                        {post.timestamp}
                     </div>
                     <div className="newComment">
                         <input className="newComment-input" placeholder="Add a comment..." />

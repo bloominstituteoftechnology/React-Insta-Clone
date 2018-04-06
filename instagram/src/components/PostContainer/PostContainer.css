@@ -1,7 +1,15 @@
+.post {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    margin: 30px 0;
+    background-color: white;
+}
+
 .post-header {
     align-items: center;
     display: flex;
     font-weight: bold;
+    font-size: 1.5rem;
     justify-content: flex-start;
     padding: 10px;
 }
@@ -26,6 +34,7 @@
 .post-comments {
     display: flex;
     justify-content: flex-start;
+    font-size: 2rem;
 }
 
 .post-options {
@@ -48,6 +57,7 @@ input {
     flex-grow: 1;
     justify-self: flex-start;
     border: none;
+    margin-bottom: 30px;
 }
 
 .timestamp {
@@ -69,3 +79,6 @@ input:focus {
     font-weight: bold;
 }
 
+.container.postContainer {    
+    padding: 0;
+}

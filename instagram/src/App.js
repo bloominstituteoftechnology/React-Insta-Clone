@@ -37,7 +37,9 @@ class App extends Component {
           </h1>
         </header>
         <SearchBar />
-        <PostContainer calcTime={this.calcTime} data={this.state.dummyData} today={this.state.today}/>
+        <div className="postContainer">
+          <PostContainer calcTime={this.calcTime} data={this.state.dummyData} today={this.state.today}/>
+        </div>
       </div>
     );
   }
