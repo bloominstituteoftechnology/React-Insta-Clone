@@ -1,4 +1,4 @@
-const dummyData = [
+const Data = [
     {
         username: "philzcoffee",
         thumbnailUrl:  'https://instagram.fbna1-1.fna.fbcdn.net/vp/31c45306e6ca815b8c59940aed10cedc/5B2D3C88/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
@@ -80,4 +80,4 @@ const dummyData = [
     }
 ];
 
-export default dummyData;
+module.exports = {Data};

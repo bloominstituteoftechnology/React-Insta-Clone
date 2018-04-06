@@ -1,0 +1,28 @@
+.Hilal {
+ display:flex;
+ flex-direction: column;
+ align-items: flex-start; 
+ width: 500px;
+ padding:5px;
+ border:2px solid lightgrey ;
+ 
+ text-align: center;
+}
+.Top_content{
+    padding-bottom: 20px
+}
+.Top_content img {
+    width:60px;
+    height: 50px;
+    padding-right: 10px;
+    
+
+
+}
+
+
+
+.Midle_content img {
+    width:100%;
+    height: 400px;
+}

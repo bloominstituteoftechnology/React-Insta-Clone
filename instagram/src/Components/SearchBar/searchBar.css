@@ -1,0 +1,12 @@
+.SearchBar {
+    display: flex;
+     justify-content: center;
+   border : 2px solid  black;
+   
+ 
+
+}
+.Input {
+    width: 300px;
+    background: turquoise;
+}

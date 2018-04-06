@@ -1,0 +1,18 @@
+.App {
+  
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid lightgrey;
+  width: 500px;
+  margin-bottom:60px;
+  margin-top: 30px;
+ 
+}
+
+.Searchbar{
+  display: flex ;
+  justify-content: center;
+  border : 2px solid balck;
+   
+}
