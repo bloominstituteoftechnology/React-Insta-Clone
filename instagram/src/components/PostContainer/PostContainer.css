@@ -11,11 +11,13 @@
 .cardHeader {
 	display: flex;
 	align-items: center;
+	margin: 20px 0;
 }
 
 .cardHeader img {
 	border-radius: 100%;
-	width: 10%;
+	width: 5%;
+	margin: 0 1%;
 }
 
 .cardImg {
