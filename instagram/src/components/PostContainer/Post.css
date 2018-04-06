@@ -17,8 +17,28 @@
     width: 70px;
 }
 
-cardSubtitle {
+.cardSubtitle {
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
+    font-weight: 600;
+    font-size: 16px;
+
 }
 
+.timestamp {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.likes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-weight: 600;
+    font-size: 12px;
+}

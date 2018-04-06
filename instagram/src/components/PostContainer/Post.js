@@ -30,17 +30,15 @@ const Post = props => {
             <CardImg className="Post_image" src={props.post.imageUrl} alt="" />
             <CardBody>
                 <CardText>
-                    <div>{props.post.likes} likes </div> 
-                </CardText>
-                <CardText>
+                    <div className="likes">{props.post.likes} likes </div> 
                     {props.post 
                     ? props.post.comments.map(comment => (
                         <CommentSection comment={comment}/>
                     )) : null}
                   </CardText> 
-                <CardText>
-                    <div>{props.post.timestamp}</div> 
-                </CardText>    
+                <div>
+                    <span className="timestamp">{props.post.timestamp}</span> 
+                </div>    
             </CardBody> 
         </Card>
     );
