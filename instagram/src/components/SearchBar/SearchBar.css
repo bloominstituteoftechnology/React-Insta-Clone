@@ -1,0 +1,47 @@
+.verticalLine {
+    border-left: 2px solid #C9C9C9;
+    height: 5vh;
+    display: inline-flex;
+}
+
+.appText {
+    display: inline-flex;
+    vertical-align: 8px;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.left {
+    margin: 2px 10px;
+}
+
+.middle {
+    margin: 7px 70px;
+}
+
+.right {
+    margin: 10px 10px;
+}
+
+.rightitems {
+    margin-left: 30px;
+}
+
+.fontControl {
+    font-family: "FontAwesome";
+}
+
+input {
+    text-align: center;
+    color: #D1D1D1;
+    background-color: #FAFAFA;
+    border-radius: 2px;
+    border: 1px solid;
+}
+
+.fa-compass, .fa-heart, .fa-user {
+    color: gray;
+}
