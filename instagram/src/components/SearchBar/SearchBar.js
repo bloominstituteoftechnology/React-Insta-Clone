@@ -1,6 +1,6 @@
 import React from 'react';
 import {Navbar, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
-import FaBeer from 'react-icons/lib/fa/beer';
+import FaInstagram from '../../../node_modules/react-icons/lib/fa/instagram';
 
 
 const SearchBar = () => {
@@ -9,7 +9,7 @@ const SearchBar = () => {
             <Navbar className="sticky">
              <div className="navBrandItems">
                 <NavbarBrand>
-                    <i className="fab fa-instagram fa-w-14 fa-2x" />{' '}
+                    <FaInstagram />
                     <span className="navTitle">Instagram</span>
                 </NavbarBrand>
              </div>

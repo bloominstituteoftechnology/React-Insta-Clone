@@ -38,6 +38,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <SearchBar />
         {this.state.data.map((post, i) => <PostContainer
           change={(e) => this.handleAddComment(e, i)}
           submit={() => this.handleSubmitComment(i)}

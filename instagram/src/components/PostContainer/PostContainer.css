@@ -1,6 +1,7 @@
 .Post-Container {
     border: 1px solid gray;
     max-width: 700px;
+    margin: 5px;
 }
 
 .header-Container {
@@ -16,7 +17,7 @@
 
 .Username-Style {
     padding-left: 20px;
-    padding-top: 5px; 
+    padding-top: 2px; 
 }
 
 .Img-style {
@@ -27,4 +28,5 @@
     display: flex;
     justify-content: flex-start;
     padding-left: 20px;
+    padding-top: 10px;
 }
