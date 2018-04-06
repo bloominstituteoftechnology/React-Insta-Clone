@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Row } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import "./CommentSection.css"
 
 const CommentSection = props => {
   return (
     <Row>
-      <span className="comment-username">{props.comment.userName}</span>
+      <span className="comment-username">{props.comment.username}</span>
       <span className="comment-text">{props.comment.text}</span>
     </Row>
   );  
