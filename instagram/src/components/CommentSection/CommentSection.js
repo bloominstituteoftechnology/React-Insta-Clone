@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import './CommentSection.css';
 
 const CommentSection = props => {
@@ -11,6 +12,11 @@ const CommentSection = props => {
               </p>
             </div>
           ))}
+          <span className="timestamp">
+            {moment(props.time, 'MMMM Do YYYY, h:mm:ss a')
+              .fromNow()
+              .toUpperCase()}
+          </span>
         </div>
         <div className="commentInputContainer">
           <input type="text" placeholder="Add a comment..." className="commentInput" />

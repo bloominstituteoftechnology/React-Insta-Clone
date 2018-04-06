@@ -3,7 +3,7 @@
     border-bottom: 1px solid #EFEEEF;
     width: 95%;
     margin-bottom: 20px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .userInfo {
@@ -29,4 +29,9 @@ input[type="text"].commentInput::-webkit-input-placeholder {
     display: flex;
     justify-content: space-between;
     width: 98%;
+}
+
+.timestamp {
+    color: #A4A7AC;
+    font-size: 13px;
 }
