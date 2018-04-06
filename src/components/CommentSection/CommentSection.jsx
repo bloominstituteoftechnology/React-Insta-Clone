@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import "./CommentSection.css"
 
 export default class CommentSection extends Component {
   constructor(props) {
@@ -16,8 +17,8 @@ export default class CommentSection extends Component {
 
   render() {
     return (
-      <div className="Post--comments">
-        <input />
+      <div className="Post--comments Comments">
+        <input placeholder="Add a comment..." className="Comments--input" />
       </div>
     )
   }
