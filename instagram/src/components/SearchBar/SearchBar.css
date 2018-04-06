@@ -1,0 +1,55 @@
+.search-box {
+    margin-top: 60px;
+    margin-bottom:60px;
+    margin-left: 300px;
+    margin-right: 350px;
+    width: 200px;
+    height: 32px;
+    text-align: center;
+    font-size: 13px;
+}
+
+input {
+    background-image: url(http://booleanmagic.com/uploads/searchicon.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-left: 20px;
+}
+
+.div-box {
+    border-top: 4px solid lightgray;
+    border-bottom: 4px solid lightgray;
+    margin-top: 2px;
+}
+
+.CameraIcon {
+    position: left;
+    height: 45px;
+    width: 45px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.InstaLogo {
+    height: 65px;
+    width: 100px;
+    margin-right: 30px;
+}
+
+.compassIcon {
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
+}
+
+.HeartIcon {
+    height: 45px;
+    width: 40px;
+    margin-left: 10px;
+}
+
+.FriendIcon {
+    height: 45px;
+    width: 45px;
+    margin-left: 10px;
+} 

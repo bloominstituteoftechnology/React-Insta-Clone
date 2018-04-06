@@ -1,0 +1,11 @@
+.PostContainerDiv {
+    border: 2px solid gray;
+    margin-right: 90px;
+    width: 50%;
+    height: 600px;
+}
+
+.CommentIcon {
+    height: 30px;
+    width: 33px;
+}
