@@ -27,12 +27,11 @@ class CommentSection extends React.Component {
 		// console.log('comments: ', this.state.comments);
 	  return(
 	    <div>
-	    	{this.state.comments.map((comment, index) => (
-	    		[
-	    			<div>{comment.username}</div>,
-	    			<div>{comment.text}</div>
-					]
-				))}
+	    	{this.state.comments.map((comment, index) => 
+	    		
+	    			<div><strong>{comment.username}</strong> {comment.text}</div>
+					
+				)}
 				<div>
 					<form>
 						<input
