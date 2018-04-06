@@ -9,8 +9,8 @@ const CommentSection = props => {
       {props.words.map(comment => {
         return (
           <div key={comment.text}>
-            <CardBody className="cmtBody">
-              <CardTitle className="cmtUsername">
+            <CardBody className="commentBody">
+              <CardTitle className="commentUsername">
                 <div>{comment.username}</div>
               </CardTitle>
               <CardText className="cmtText">

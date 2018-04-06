@@ -1,11 +1,10 @@
-.cmtBody {
+.commentBody {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: -40px;
 }
   
-.cmtUsername {
+.commentUsername {
   margin-left: 0px;
   padding-right: 10px;
 }
