@@ -34,3 +34,7 @@
     font-weight: bold;
     color: #2A2A2A;    
 }
+
+.card-body {
+    padding-bottom: 0;
+}
