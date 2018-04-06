@@ -14,21 +14,24 @@ render(){
                
             </div>
             <div> <img class="mainImg-style" src={post.imageUrl}/></div>
-            
-            <p>{post.likes} likes</p>
+            <div class="bContainer-style">
+            <div class="bIcon-style"><i className={this.props.classBHeart}></i><i className={this.props.classComment}> </i></div>
+            <p class="likes-style">{post.likes} likes</p>
             {post.comments.map(comment=><CommentSection comment={comment}/>)}
 
-            <p>{post.timestamp}</p>
+            <p class="timestamp-style">{post.timestamp}</p>
         <div class="comment-style">
-            <input input="text" placeholder="Add a comment..."/>
+            <input class="inputText-style" input="text" placeholder="Add a comment..."/>
             <i className={this.props.classDots}></i>
 
 
         </div>
         </div>
+
+        </div>
        
         
-       
+        
     ))}
 
 

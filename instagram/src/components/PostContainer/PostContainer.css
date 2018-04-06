@@ -1,33 +1,76 @@
 .container{
- margin-left:100px
+ margin-left:100px;
+width: 270px;
 }
 .header{
+    border-top: 1px solid rgba(230, 229, 229, 0.972);
+    border-left: 1px solid rgba(230, 229, 229, 0.972);
+    border-right: 1px solid rgba(230, 229, 229, 0.972);
     margin-top:10px;
     display: flex;
-    margin-bottom: 3px;
+    width: 250px;
+    height: 30px;
+    padding-left: 5px;
+    padding-top: 5px;
+    
+
 }
 .icon-style{
-    width:30px;
-    height: 30px;
+    width:15px;
+    height: 15px;
     border-radius: 30px;
-    margin-right: 5px
+    margin-top: 7px;
+    margin-right: 5px;
 }
 .ptag-style{
-    font-size: 12px;
-    margin-top:5px;
+    font-size: 8px;
+    margin-top:7px;
 }
 .mainImg-style{
   
 width:250px;
 height:250px;
-margin-bottom: 20px;
+
+}
+.bContainer-style{
+    border: 1px solid rgba(230, 229, 229, 0.972);
+    width: 250px;
+    6
+}
+.bIcon-style{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 40px;
+    display:flex;
+    justify-content: space-between;
+    
+}
+.likes-style{
+    font-size: 10px;
+    margin-bottom: 2px;
+    
 }
 .comment-style{
     display:flex;
+    
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-bottom: 7px;
+ 
+}
+.timestamp-style{
+   font-size: 6px;
+   margin-top: 5px;
+   color:rgba(189, 180, 180, 0.972)
+}
+.inputText-style{
+  border: none;
+  font-size: 10px;
 }
 
-.x{
+.bottom-icon{
+    font-size: 7px;
     margin-top:5px;
-    margin-left:40px
+    margin-left:100px
 
 }

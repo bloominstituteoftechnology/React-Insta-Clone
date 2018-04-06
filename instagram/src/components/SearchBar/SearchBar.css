@@ -10,6 +10,8 @@
 }
 .instaLogo{
 display:flex;
+width:200px;
+margin-left: 5px;
 margin-right: 10px;
 font-family: cursive;
 
