@@ -16,6 +16,6 @@ export default props => (
     </a>
     <img alt="main" className="Post--Main" src={props.imageUrl} />
 
-    <CommentSection />
+    <CommentSection comments={props.comments} />
   </div>
 )
