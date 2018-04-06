@@ -38,7 +38,7 @@
 }
 
 .comment__Input {
-    width: 95%;
+    width: 80%;
     margin: 0 auto;
     display: block;
     border: 0;
@@ -55,4 +55,9 @@
 
 .comment__Input:focus {
     outline: .1px solid rgb(207, 206, 206);
+}
+
+.comment__button {
+    width: 20%;
+    text-align: center;
 }

@@ -1,5 +1,4 @@
 .post {
-    border: 2px solid black;
     width: 70%;
     display: block;
     margin: 4% auto;
@@ -7,7 +6,7 @@
 
 .post__individual {
      margin-top: 7%;
-     border: 10px solid green;
+     border: .5px solid gray;
 }
 .post__individual:first-of-type {
     margin-top: 0;
@@ -36,13 +35,13 @@
 }
 
 .post__icon{
-    width: 4.5%;
+    width: 4vw;
     fill: currentColor;
     margin: 1% 1% 0% 1%
 }
 
 .post__icon-heart {
-    width: 3.8%;
+    width: 3vw;
 }
 
 .likes {
