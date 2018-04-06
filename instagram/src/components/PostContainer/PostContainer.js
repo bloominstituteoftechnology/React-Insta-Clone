@@ -17,8 +17,9 @@ const PostContainer = props => {
 							<CardTitle>{post.username}</CardTitle>
 						</div>
 					<CardImg className="cardImg" src={post.imageUrl} placeholder={post.username}/>
-					<CardBody>
-	  				<h1>{post.username}</h1>
+					<CardBody className="cardBody">
+						<div> <i class="far fa-heart"></i><i class="far fa-comment"></i></div>
+						<div><strong>{post.likes} likes</strong></div>
 						<CommentSection key={index} commentList={post.comments} />
 					</CardBody>
 				</Card>

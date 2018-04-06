@@ -20,6 +20,14 @@
 	margin: 0 1%;
 }
 
+.cardBody {
+	text-align: left;
+}
+
+.fa-comment {
+	margin-left: 20px;
+}
+
 .cardImg {
 	width: 100%;
 	margin: 0 auto;
