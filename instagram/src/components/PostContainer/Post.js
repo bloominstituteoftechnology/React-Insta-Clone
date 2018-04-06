@@ -8,6 +8,7 @@ import {
     Row
 }   from 'reactstrap';
 import './Post.css';
+import CommentSection from '../CommentSection/CommentSection';
 
 const Post = props => {
     return (
@@ -29,6 +30,12 @@ const Post = props => {
             <CardBody>
                 <CardText>
                     <div>{props.post.likes} likes</div>
+                </CardText>
+                <CardText>
+                    {props.post
+                    ? props.post.comments.map(comment => 
+                        <CommentSection comment={comment} />) 
+                        : null}
                 </CardText>
                 <CardText>
                     <div>{props.post.timestamp}</div>
