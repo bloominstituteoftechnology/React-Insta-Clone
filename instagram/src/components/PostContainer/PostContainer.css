@@ -1,7 +1,11 @@
 .postWrapper {
 	border: 1px solid red;
-	max-width: 80%;
+	max-width: 800px;
 	margin: 0 auto;
+}
+
+.card {
+	margin: 75px 0;
 }
 
 .cardImg {
