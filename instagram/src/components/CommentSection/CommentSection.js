@@ -27,9 +27,10 @@ class CommentSection extends Component {
   }
 
   render() {
-    return (
-      <div>
-        {this.state.comments.map((comment, i) => <div key={i}>{comment.username} {comment.text}</div>)}
+    return ([
+      this.state.comments.map((comment, i) => {
+        return <div key={i}><strong>{comment.username}</strong> {comment.text}</div>
+      }),
 
         <input
           type="text"
@@ -37,11 +38,10 @@ class CommentSection extends Component {
           value={this.state.newComment}
           placeholder="add comment"
           onChange={this.handleAddComment}
-        />
-        <button onClick={this.handleSubmitComment}>Add Comment</button>
-        <div>{this.props.time}</div>
-      </div>
-    );
+        />,
+        <button onClick={this.handleSubmitComment}>Add Comment</button>,
+        <p className="mt-3">{this.props.time}</p>
+    ]);
   }
 }
 
