@@ -15,20 +15,19 @@ class App extends Component {
     }
   }
 
-  postElements = () => {
+  postElements() {
     return this.state.posts.map(post => {
       return <PostContainer {...post} />
     })
   }
 
-  // postComments = () => {
-  //   return this.state.posts.map(post => {
-  //     return <CommentSection {post.comments} />
-  //   })
-  // }
+  postComments() {
+    return this.state.posts.map(el => {
+      return <CommentSection {...el} />
+    })
+  }
 
 
- 
 
   render() {
     return (
@@ -36,8 +35,8 @@ class App extends Component {
         <div className="centeredContainer">
           <SearchBar />
           {this.postElements()}
-          {/* <CommentSection comments={this.state.posts.comments}/> */}
           {/* {this.postComments()} */}
+          {/* <CommentSection comments={this.state.posts}/> */}
         </div>
       </div >
     );

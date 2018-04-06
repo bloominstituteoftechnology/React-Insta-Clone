@@ -5,7 +5,7 @@
     width: 100%;
 }
 .inputField {
-    width: 200px;
+    width: 300px;
     height: 25px;
     font-size: 1rem;
     text-align: center;
@@ -25,10 +25,8 @@
     padding-right: 15px;
     padding-bottom: 4px;
     height: 30px;
+    border-right: 1px solid lightgrey;
 }
 .secondImage {
     height: 50px;
-}
-.firstImage {
-    border-right: 1px solid lightgrey;
 }
