@@ -8,14 +8,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      'data': dummyData
+      allPosts: [],
     }
+  }
+
+  componentDidMount() {
+    this.setState({
+      allPosts: dummyData
+    })
   }
 
   render() {
     return <div className="App">
         <SearchBar />
-        {this.state.data.map((post, index) => (
+        {this.state.allPosts.map((post, index) => (
           <PostContainer
             post={post}
             key={`${post.username}'s post `}
