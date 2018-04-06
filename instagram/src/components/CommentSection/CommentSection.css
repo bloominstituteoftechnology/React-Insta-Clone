@@ -1,0 +1,15 @@
+.Comment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.Username {
+    font-weight: bold;
+    padding-right: 3px;
+}
+
+.Comments {
+    display: flex;
+}
