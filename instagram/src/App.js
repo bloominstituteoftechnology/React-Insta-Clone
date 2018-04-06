@@ -8,21 +8,21 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      post: []
+      'data': dummyData
     }
   }
 
-  componentDidMount = () => {
-    this.setState({ post: dummyData });
-  }
-
   render() {
-    return (
-      <div className="App">
+    return <div className="App">
         <SearchBar />
-        <PostContainer dataProp={this.state.post} />
-      </div>
-    );
+        {this.state.data.map((post, index) => (
+          <PostContainer
+            post={post}
+            key={`${post.username}'s post `}
+            className="postContainerDiv"
+          />
+        ))}
+      </div>;
   }
 }
 
