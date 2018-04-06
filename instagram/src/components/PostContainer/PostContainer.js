@@ -1,7 +1,9 @@
 // will pass to comment section 
 import React, {Component} from "react";
+import CommentSection from "../CommentSection/commentsection.js";
 //import picture from './logo.svg';
-// import CommentSection from './components/CommentSection/CommentSection.js';
+
+
 
 
 class PostContainer extends Component {
@@ -13,7 +15,7 @@ class PostContainer extends Component {
   // }
     render(){
       // all the html that makes up each post.
-      console.log(this.props);
+      //console.log(this.props);
       const { username, thumbnailUrl, imageUrl, likes, timestamp, comments } = this.props.dummyData; 
       return(
         <div> 
@@ -32,7 +34,15 @@ class PostContainer extends Component {
           {
            // comments
           }
-          {/* <CommentSection  username='Test'> test </CommentSection> */}
+          <p className ='comments'>  this is some text</p>
+          {
+            comments.map(comment => {
+              console.log(comment) // this displays the text and comment
+              return( <CommentSection comments={comment}/>)
+               //return comment;
+            })
+            // <CommentSection {...this.state}/>
+          }
       </div>
       );
     }
