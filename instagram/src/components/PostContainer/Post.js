@@ -1,3 +1,12 @@
+import React from 'react';
+import {
+    Card,
+    CardImg,
+    CardText,
+    CardBody,
+    CardSubtitle,
+    Row
+}   from 'reactstrap';
 import './Post.css';
 
 const Post = props => {
@@ -22,7 +31,7 @@ const Post = props => {
                     <div>{props.post.likes} likes</div>
                 </CardText>
                 <CardText>
-                    <divd>{props.post.timestamp}</div>
+                    <div>{props.post.timestamp}</div>
                 </CardText>
             </CardBody>
         </Card>
