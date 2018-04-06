@@ -1,6 +1,5 @@
 import React from 'react';
 import instaHeader from '../../img/instaHeader.PNG';
-import rsz_instagram_logo from '../../img/rsz_instagram_logo.png';
 import FaCompass from '../../../node_modules/react-icons/lib/fa/compass';
 import FaHeartO from '../../../node_modules/react-icons/lib/fa/heart-o';
 import FaInstagram from '../../../node_modules/react-icons/lib/fa/instagram'; /*<FaInstagram className="Icons" /> | <img src={instaHeader} className="" />*/
