@@ -19,15 +19,11 @@ class CommentSection extends Component {
         });
         this.setState({ comments, addComment: ''});
     }
-    handleAddComment = event => {
-        this.setState({ [event.target.name] : event.target.value });
-    }
     render() {
         return (
             <div>
                 {this.state.comments.map((comment, i) => <div key={i}>{comment.username} {comment.text}</div>)}
-                <input type="text" name="addComment" value={this.state.addComment} placeholder="Add a comment... " onChange={this.andleAddComment} />
-                <button onClick={this.handleSubmitComment}>Add Comment</button>
+                <input type="text" name="addComment" value={this.state.text} placeholder="Add a comment... " onChange={this.andleAddComment} />
                 <div>{this.props.time}</div>
             </div>
         );
