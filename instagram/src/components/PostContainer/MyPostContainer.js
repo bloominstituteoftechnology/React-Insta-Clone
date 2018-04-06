@@ -22,9 +22,7 @@ const MyPostContainer = props => {
                         <CardImg className="Image " src={myData.imageUrl}  />
                     </div>
                     <h2 className="Emoji ">
-                    ♡ {#x2602} <span class="_8scx2 coreSpriteHeartOpen">Like</span>
-                    <div>{'First \u00b7 Second'}</div>
-<div>{'First ' + String.fromCharCode(183) + ' Second'}</div>
+                    ♡ 
                     </h2>
                     <CardSubtitle>
                     {myData.likes} Likes 
