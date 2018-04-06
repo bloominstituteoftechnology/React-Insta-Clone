@@ -1,5 +1,3 @@
-const InitalCommit = "";
-
 const dummyData = [
     {
         username: "philzcoffee",
