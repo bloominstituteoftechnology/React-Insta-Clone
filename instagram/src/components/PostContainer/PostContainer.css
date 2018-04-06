@@ -1,10 +1,10 @@
-.carDiv {
+.cardDiv {
     display: flex;
     justify-content: center;
-  }
+}
   
 .cardClass {
-  max-width: 70%;
+  max-width: 50%;
 }
 
 .cardHeader {
@@ -12,9 +12,9 @@
   justify-content: flex-start;
 }
 
-.profileImg img {
+.philzImg img {
   border-radius: 100px;
-  width: 50px;
+  width: 40px;
 }
 
 .likes {
@@ -23,25 +23,11 @@
   margin-left: 20px;
 }
 
-.likeHeart {
-  margin-right: 30px;
-  margin-bottom: 20px;
-}
-
-.likeComment {
-  margin-bottom: 20px;
-}
-
 .likesAmt {
   justify-content: flex-start;
 }
 
-.cardFoot {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.timeS {
+.timeStamp {
   font-size: 0.8em;
   color: lightgray;
   display: flex;

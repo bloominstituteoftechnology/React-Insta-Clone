@@ -7,21 +7,19 @@ import PropTypes from 'prop-types';
 const PostContainer = props => {
   const post = props.insta;
   return (
-    <div className="carDiv">
+    <div className="cardDiv">
       <Card className="cardClass">
         <CardBody className="cardHeader">
-          <CardTitle className="profileImg">
+          <CardTitle className="philzImg">
             <img src={post.thumbnailUrl} alt="User Profile" /> {post.username}
           </CardTitle>
         </CardBody>
         <div className="instaImg">
-          <img width="100%" src={post.imageUrl} alt="Instagram" />
+          <img width="50%" src={post.imageUrl} alt="Instagram" />
         </div>
         <CardBody>
           <CardText className="likes">
-            <div>
-              <i className="far fa-heart fa-2x likeHeart" />
-              <i className="far fa-comment fa-2x likeComment" />
+             <div>
               <CardTitle>
                 <div className="likesAmt">{post.likes} likes</div>
               </CardTitle>
@@ -30,7 +28,7 @@ const PostContainer = props => {
           <div>
             <CommentSection key={post.username} words={post.comments} />
           </div>
-          <div className="timeS">{post.timestamp}</div>
+          <div className="timeStamp">{post.timestamp}</div>
           <div className="footer">
             <form action="">
               <input type="text" placeholder="Add a comment..." />
