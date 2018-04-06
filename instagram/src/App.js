@@ -3,29 +3,26 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer.js';
+//import CommentSection from './components/CommentSection/CommentSection.js';
 // will pass to post container
 
 class App extends Component {
     constructor() {
       super();
       this.state = {
-        dummyData: [{}],
+        dummyData: dummyData,
       };
     }
 
-    componentDidMount() {
-      console.log(dummyData);
-      this.setState({ dummyData: dummyData.dummyData})
-    }
+    
   render() {
     return (
       <div className="App">
-        <PostContainer dummyData= {this.state.dummyData}/>
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h1 className="App-title">Instagram</h1>
-        </header>
-        {/* s */}
+      {
+      this.state.dummyData.map((data) =>{
+       return( <PostContainer dummyData={data}/>)
+      })
+      }
       </div>
     );
   }

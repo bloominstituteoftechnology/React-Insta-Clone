@@ -1,1 +1,12 @@
-//comment section will render user name and posts text also create a text input box
+import React, {Component} from "react";
+//import CommentSection from './components/CommentSection/CommentSection.js';
+// import PostContainer from './components/PostContainer/PostContainer.js';
+
+const CommentSection  = () => {
+    
+}
+
+  
+  
+
+export default CommentSection;

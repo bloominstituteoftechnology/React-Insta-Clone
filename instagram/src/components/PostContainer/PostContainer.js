@@ -1,11 +1,44 @@
 // will pass to comment section 
-import React from "react";
+import React, {Component} from "react";
+//import picture from './logo.svg';
+// import CommentSection from './components/CommentSection/CommentSection.js';
 
-const PostContainer = props => {
-  console.log("Props", props);
-  // map over citiesProp return a dom elment for each city name in list
-  return <div> </div>;
-  //return <div>{props.dummyDataProp.map(c => <div>{c.city}</div>)}</div>;
-};
+
+class PostContainer extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     username: props.username,
+  //   }
+  // }
+    render(){
+      // all the html that makes up each post.
+      console.log(this.props);
+      const { username, thumbnailUrl, imageUrl, likes, timestamp, comments } = this.props.dummyData; 
+      return(
+        <div> 
+          <div className= 'header'> 
+            <h2>
+              {
+                username
+              }
+            </h2>
+          </div>
+          <div className = 'image'> 
+          {
+             <img src = {imageUrl}/>
+          }
+          </div>
+          {
+           // comments
+          }
+          {/* <CommentSection  username='Test'> test </CommentSection> */}
+      </div>
+      );
+    }
+}
+
+  
+  
 
 export default PostContainer;
