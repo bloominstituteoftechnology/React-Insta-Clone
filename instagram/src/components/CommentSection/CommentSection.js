@@ -33,14 +33,17 @@ class CommentSection extends React.Component {
 					
 				)}
 				<div>
+					<p className="timeStamp"><span>2 hours ago</span></p>
 					<form>
+						
 						<input
+						 className="border-right-0 border-left-0 border-bottom-0 py-4"
 						 type="text"
 						 name="newComment"
 						 value={this.state.newComment}
 						 onChange={this.handleNewComment}
 						 placeholder= "Add a comment..."/>
-						<button type="button" onClick={this.addNewComment}>...</button>
+						<div type="button" onClick={this.addNewComment}>...</div>
 					</form>
 				</div>
 	    </div>
