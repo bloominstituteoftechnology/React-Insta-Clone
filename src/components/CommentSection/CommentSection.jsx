@@ -22,13 +22,31 @@ export default class CommentSection extends Component {
     }))
   }
 
+  keyPress(keyCode, value) {
+    keyCode === 13
+      ? this.setState(prevState => ({
+          comments: [
+            ...prevState.comments,
+            { text: value, username: "kimkardashian" }
+          ]
+        }))
+      : ""
+  }
+
   render() {
     return (
       <div className="Post--comments Comments">
         {this.state.comments.map((comment, i) => (
           <Comment key={i} {...comment} />
         ))}
-        <input placeholder="Add a comment..." className="Comments--input" />
+        <input
+          onKeyDown={({ keyCode, target: { value } }) => {
+            this.keyPress(keyCode, value)
+            keyCode === 13 ? (value = "") : ""
+          }}
+          placeholder="Add a comment..."
+          className="Comments--input"
+        />
       </div>
     )
   }
