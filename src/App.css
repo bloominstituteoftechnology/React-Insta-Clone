@@ -1,0 +1,11 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  text-align: center;
+}

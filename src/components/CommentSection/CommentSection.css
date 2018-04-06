@@ -1,0 +1,12 @@
+.Comments {
+  width: 98%;
+}
+
+.Comments--input {
+  font-size: 1.4em;
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 2% 0;
+  border-top: 2px lightgray solid;
+}

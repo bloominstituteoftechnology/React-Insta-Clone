@@ -1,0 +1,47 @@
+.Post--container {
+  display: grid;
+  max-width: 600px;
+  grid-template-columns: 7% 7% 1fr;
+  grid-column-gap: 1%;
+  grid-template-areas:
+    "thumbnail username ."
+    "🖼 🖼 🖼"
+    "🖼 🖼 🖼"
+    "📖 📖 📖";
+}
+
+.Post--thumbnail {
+  grid-area: thumbnail;
+}
+
+.Post--thumbnail__size {
+  width: 100%;
+}
+
+.Post--thumbnail__rounded {
+  border-radius: 50%;
+}
+
+.Post--Main {
+  grid-area: 🖼;
+  width: 100%;
+}
+
+.Post--username {
+  grid-area: username;
+  display: flex;
+  align-items: center;
+}
+
+.Post--username__size {
+  font-size: 1.6em;
+}
+
+.Post--username__decoration {
+  text-decoration: none;
+  color: black;
+}
+
+.Post--comments {
+  grid-area: 📖;
+}
