@@ -1,0 +1,14 @@
+.SearchBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.Instagram__Logo {
+    height: 35px;
+    width: 100px;
+}
+
+.SearchBar__Iconic {
+    display: flex;
+    justify-content: flex-end;
+}
