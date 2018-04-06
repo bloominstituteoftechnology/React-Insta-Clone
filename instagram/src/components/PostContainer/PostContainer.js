@@ -33,7 +33,6 @@ export default class PostContainer extends Component {
         });
     };
     render() {
-        {let currentDate = Date()}
         return (
             <div className='Post'>
                 <div className='Post__header'>
@@ -62,7 +61,7 @@ export default class PostContainer extends Component {
                     </div>
                     <div className='Post__timesine'>
                         {console.log('Buster', this.state.timestamp)}
-                        <Moment fromNow>{this.state.timestamp}</Moment>
+                        <Moment FromNow>{this.state.timestamp}></Moment>
                     </div>
                     <div className='Post__newcomment'>
                         <input
