@@ -7,10 +7,15 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      'data': dummyData,
+      'data': [],
       'newComment': [],
       'searchField': ''
     };
+  }
+
+  componentDidMount() {
+    console.log('CDM Called!');
+    this.setState({ 'data': dummyData });
   }
 
   handleAddComment = (e, i) => {
@@ -21,7 +26,7 @@ class App extends Component {
 
   handleSubmitComment = index => {
     const { data } = this.state;
-    data[index].comments.push({username: 'Guest', text: this.state.newComment[index]});
+    data[index].comments.push({username: 'Natalie', text: this.state.newComment[index]});
     const newComment = this.state.newComment;
     newComment[index] = '';
     this.setState({ data, newComment: newComment });
@@ -40,7 +45,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SearchBar
+        <SearchBar 
           field={this.state.searchField}
           change={e => this.handleAddSearch(e)} />
         <div className="main">
@@ -50,7 +55,7 @@ class App extends Component {
                         key={'post' + i}
                         change={e => this.handleAddComment(e, i)}
                         submit={() => this.handleSubmitComment(i)}
-                        like={t => this.handleLikePost(t, i)}
+                        like={t => this.handleLikePost(t, i)} 
                         post={post}
                         value={this.state.newComment[i]} />
               );
