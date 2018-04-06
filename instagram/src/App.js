@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
-import dummyData from './dummy-data';
+// import PostContainer from './components/PostContainer/PostContainer';
+// import dummyData from './dummy-data';
 
 
 class App extends Component {
@@ -20,17 +20,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <SearchBar />
+        </header> */}
         <div className="container-fluid">
-        <div className="row">
-        <div className="col">
-        {dummyData.map((post, index) =>
-        <PostContainer key={index} postData={post} />)}
-        </div>
-        </div>
+          <div className="row">
+            <div className="col">
+              <SearchBar />
+              {/* {dummyData.map((post, index) =>
+                <PostContainer key={index} postData={post} />)} */}
+            </div>
+          </div>
         </div>
       </div>
     );

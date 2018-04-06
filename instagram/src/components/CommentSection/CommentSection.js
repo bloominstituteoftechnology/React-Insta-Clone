@@ -2,7 +2,6 @@ import React from 'react';
 import './CommentSection.css';
 
 const CommentSection = (props) => {
-    const boldStart = ''
     return (
         <div className="comment-section">
             {/* <b style={{ marginRight: '1%' }}>
