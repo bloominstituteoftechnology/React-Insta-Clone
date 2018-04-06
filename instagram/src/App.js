@@ -11,26 +11,34 @@ class App extends Component {
  constructor(){
    super()
    this.state = {
-     Postes: dummyData.Data, 
-             Comments:{},
+     Postes:[], 
+       
                     
    }
 }
-  // componentDidMount() {
-  //   const {Postes} = this.state;   
-  //   this.setState({ Postes: dummyData.Data,  });      
-  // }
+ 
+  componentDidMount() {
+     
+    this.setState({ Postes: dummyData.Data, });      
+  }
   render() {
+   
     return (
       <div>
-       <div className="App">
         <SearchBar className="Searchbar" />
-        <PostContainer posteProps={this.state.Postes}/>
-        <CommentSection commentProps={this.state.Postes} />
-       </div>       
+
+        <div className="App">
+         <PostContainer posteProps = {this.state.Postes}/>
+         {/* <CommentSection commentProps = {this.state.Comments} /> */}
+        {/* {this.state.Postes.map(p => <CommentSection commentProps={p} />)[0]}       */}
+        </div> 
+
+        
+
       </div>
     );
   }
 }
+
 
 export default App;

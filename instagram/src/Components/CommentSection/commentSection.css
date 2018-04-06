@@ -1,5 +1,10 @@
 .CommentSection{
     width:100%;
-    height: 200px;
-    background:lightcyan;
+   
+    padding : 5px;
+}
+.Comment{
+    margin-top: 20px;
+    width: 480px;
+
 }

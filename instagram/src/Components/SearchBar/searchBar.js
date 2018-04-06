@@ -1,21 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './searchBar.css';
 
-const SearchBar = () => {
-
+class  SearchBar extends Component  {
+   render(){
     return (
-        <div  className="Searchbar">
-         <input type="text"  placeholder="Enter your Profile" name=""  className="Input"/>
-
-        </div>
-
-
-
-
+        <div className="Searchbar">
+          <div  >
+           <input type="text"  placeholder="Enter your Profile" name=""  className="Input"/>
+         </div>
+       </div>
     )
-
-
-
 }
-
+}
 export default SearchBar;
