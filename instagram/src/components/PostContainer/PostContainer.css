@@ -10,6 +10,7 @@
     width:30px;
     height: 30px;
     border-radius: 30px;
+    margin-right: 5px
 }
 .ptag-style{
     font-size: 12px;
@@ -20,4 +21,13 @@
 width:250px;
 height:250px;
 margin-bottom: 20px;
+}
+.comment-style{
+    display:flex;
+}
+
+.x{
+    margin-top:5px;
+    margin-left:40px
+
 }

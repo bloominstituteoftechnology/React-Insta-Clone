@@ -5,6 +5,7 @@ export const SearchBar = props =>{
         <div className={props.classMainDiv}>
         <div className={props.classInstaLogo}><i className={props.className}></i> <p>| Instagram</p></div> 
         <input className={props.searchClass} type="text" placeholder="search"/> 
+        
         <div className={props.classIconDiv}><i className={props.classCompass}></i><i className={props.classHeart}></i><i className={props.classUser}></i>
 
 

@@ -28,7 +28,7 @@ this.state = {
       <React.Fragment>
         <SearchBar classMainDiv="mainDiv" classInstaLogo="instaLogo" className="fab fa-instagram" searchClass="searchStyle" classIconDiv="iconsStyles" classCompass="far fa-compass" classHeart="far fa-heart" classUser="far fa-user"/>
     
-        <PostContainer {...this.state} />
+        <PostContainer classDots="fas fa-ellipsis-h x" {...this.state} />
         
      </React.Fragment>
     );
