@@ -1,32 +1,28 @@
 import React from 'react';
 import {
   Card,
-  Button,
   CardHeader,
-  CardFooter,
   CardBody,
-  CardTitle,
-  CardText,
   CardImg
 } from 'reactstrap';
 import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => {
-    return <div className="postContainerDiv">
-        {props.dataProp.map((data, index) => (
-          <div key={'post ' + index} className="postContainer">
+    return (
+          <div className="postContainer">
             <Card>
               <CardHeader>
                 <img
-                  src={data.thumbnailUrl}
-                  alt={data.username + ' profile image'}
+                  src={props.post.thumbnailUrl}
+                  alt={props.post.username + ' profile image'}
                   className="thumbnail"
                 />
-                <span>{data.username}</span>
+                <span>{props.post.username}</span>
               </CardHeader>
               <CardImg
-                src={data.imageUrl}
-                alt={data.username + 'post image'}
+                src={props.post.imageUrl}
+                alt={props.post.username + 'post image'}
               />
               <CardBody>
                 <div>
@@ -34,14 +30,13 @@ const PostContainer = props => {
                   <i className="far fa-comment fa-2x" />
                 </div>
                 <div>
-                  <p className="likesNumber">{`${data.likes} likes`}</p>
+                  <p className="likesNumber">{`${props.post.likes} likes`}</p>
                 </div>
               </CardBody>
-              
+              <CommentSection comments={props.post.comments}/>
             </Card>
           </div>
-        ))}
-      </div>;
+      ) 
 }
 
 export default PostContainer;
