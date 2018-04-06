@@ -1,0 +1,51 @@
+.carDiv {
+    display: flex;
+    justify-content: center;
+  }
+  
+.cardClass {
+  max-width: 70%;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.profileImg img {
+  border-radius: 100px;
+  width: 50px;
+}
+
+.likes {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.likeHeart {
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.likeComment {
+  margin-bottom: 20px;
+}
+
+.likesAmt {
+  justify-content: flex-start;
+}
+
+.cardFoot {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.timeS {
+  font-size: 0.8em;
+  color: lightgray;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-left: 18px;
+}
