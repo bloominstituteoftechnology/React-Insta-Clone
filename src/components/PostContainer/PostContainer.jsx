@@ -10,7 +10,7 @@ export default props => (
     />
     <a
       href={`https://instagram.com/${props.username}`}
-      class="Post--username Post--username__size Post--username__decoration"
+      className="Post--username Post--username__size Post--username__decoration"
     >
       {props.username}
     </a>
