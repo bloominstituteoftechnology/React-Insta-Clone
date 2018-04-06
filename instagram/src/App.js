@@ -14,9 +14,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      'data': dummyData,
+      'data': [],
       'newComment': []
     };
+  }
+  componentDidMount() {
+    console.log('CDM Called!');
+    this.setState({ 'data': dummyData });
   }
 
 
@@ -29,7 +33,7 @@ class App extends Component {
 
   handleSubmitComment = index => {
     const { data } = this.state;
-    data[index].comments.push({username: 'Guest', text: this.state.newComment[index]});
+    data[index].comments.push({ username: 'Guest', text: this.state.newComment[index] });
     const newComment = this.state.newComment;
     newComment[index] = '';
     this.setState({ data, newComment: newComment });
@@ -38,12 +42,15 @@ class App extends Component {
   render() {
     return (
       <div style={mainStyles} className="App">
-      <SearchBar />
+        <SearchBar />
         {this.state.data.map((post, i) => <PostContainer
           change={(e) => this.handleAddComment(e, i)}
+          // change={(e) => this.handleAddComment(e, i)}
           submit={() => this.handleSubmitComment(i)}
           data={post}
           value={this.state.newComment[i]} />)}
+        {/* <PostContainer {...this.state} /> */}
+        {/* <SearchBar {...this.state} /> */}
       </div>
     );
   }

@@ -2,6 +2,7 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection.js'
 import { Card, CardTitle, CardSubtitle, CardBody } from 'reactstrap';
 
+
 const headerImgStyles = {
   display: 'flex',
   // paddingLeft: 0
@@ -48,37 +49,52 @@ const cardStyle = {
   marginTop: 20,
   // border: '5px solid magenta'
 }
-const PostContainer = props => {
-  return (
-    <div>
-      <Card style={cardStyle}>
-        <CardBody  >
-        <CardTitle style={headerImgStyles} >
-          <img style={iconStyles}  src={props.data.thumbnailUrl} alt="thumbnail" />
-          <h5 style={headerStyles}>{props.data.username}</h5>
-        </CardTitle>
-          <img  src={props.data.imageUrl} style={imageStyles} alt="main" />
-        {/* <CardSubtitle style={likesStyles}> */}
-        <div style={likeSpecific} >{props.data.likes + " Likes"}    </div>
-        <CommentSection
 
-          change={props.change}
-          submit={props.submit}
-          comments={props.data.comments}
-          value={props.value} />
-          {/* </CardSubtitle> */}
+
+class PostContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      'data': this.props.data
+    }
+  }
+  componentDidMount() {
+
+  }
+  render() {
+    return (
+      <div>
+        <Card style={cardStyle}>
+          <CardBody  >
+            <CardTitle style={headerImgStyles} >
+              <img style={iconStyles} src={this.state.data.thumbnailUrl} alt="thumbnail" />
+              <h5 style={headerStyles}>{this.state.data.username}</h5>
+            </CardTitle>
+            <img src={this.state.data.imageUrl} style={imageStyles} alt="main" />
+
+            <div style={likeSpecific} >{this.state.data.likes + " Likes"}    </div>
+            <CommentSection
+
+              change={this.props.change}
+              submit={this.props.submit}
+              comments={this.props.data.comments}
+              value={this.props.value} />
+
           </CardBody>
-      </Card>
-    </div>
-  );
+        </Card>
+      </div>
+    );
+  }
 }
+
+
 
 export default PostContainer;
 
 // const PostContainer = props => {
 //   return (
 //     <div>
-      
+
 //         <div style={headerImgStyles}>
 //           <img style={iconStyles} src={props.data.thumbnailUrl} alt="thumbnail" />
 //           <h5 style={headerStyles}>{props.data.username}</h5>
@@ -92,7 +108,7 @@ export default PostContainer;
 //           submit={props.submit}
 //           comments={props.data.comments}
 //           value={props.value} />
-    
+
 //     </div>
 //   );
 // }

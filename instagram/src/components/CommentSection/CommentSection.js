@@ -9,7 +9,7 @@ const styles = {
 const commentsStyles = {
   display: 'inline-flex',
   flexDirection: 'column',
-  
+
   justifyContent: 'center',
   // marginTop: 60,
   // marginRight: '20%',
@@ -38,23 +38,34 @@ const buttonStyle = {
   // justifyContent: 'end'
 }
 
-const CommentSection = props => {
-  return (
-    <div style={commentsStyles}>
-    {/* {console.log(props.comments)} */}
-      {props.comments.map((c, i) => (
-        <div key={c + i} style={moreStyles} ><span style={styles}>{c.username}</span>: {c.text}</div>
-      ))}
-      <input
-        type='text'
-        placeholder='Add a comment...'
-        onChange={props.change}
-        value={props.value}
-      />
-      <Button color="primary" style={buttonStyle} onClick={props.submit}>Add Comment</Button>{' '}
-      {/* <button onClick={props.submit}>Add Comment</button> */}
-    </div>
-  );
+
+class CommentSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state= {
+      'comments': this.props.comments
+    }
+  }
+  render() {
+    // let comments = this.state.comments ;
+    return (
+      // let commentsA = this.state.comments;
+      <div style={commentsStyles}>
+        {this.state.comments.map((c, i) => ( 
+          <div key={c + i} style={moreStyles} ><span style={styles}>{c.username}</span>: {c.text}</div>
+        )
+        )}
+        <input
+          type='text'
+          placeholder='Add a comment...'
+          onChange={this.props.change}
+          value={this.props.value}
+        />
+        <Button color="primary" style={buttonStyle} onClick={this.props.submit}>Add Comment</Button>{' '}
+      </div>
+    );
+
+  }
 }
 
 export default CommentSection;
