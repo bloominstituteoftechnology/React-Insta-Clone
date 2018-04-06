@@ -5919,7 +5919,7 @@ react@^16.3.1:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-reactstrap@^5.0.0:
+reactstrap@^5.0.0-beta.3:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/reactstrap/-/reactstrap-5.0.0.tgz#d8948534df4816eddfb162a51643a499388e9228"
   dependencies:

@@ -1,0 +1,65 @@
+.card {
+    display: flex;
+    margin: auto;
+    max-width: 60%;
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+ .card-body {
+     margin-top: 0px;
+ }
+
+.userthumb {
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+.likes {
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.username {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.icon-heart {
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-chat {
+    margin-left: -15px;
+    width: 26px;
+    height: 26px;
+}
+
+.text-muted {
+    font-family: Arial;
+    
+    font-size: 11px;
+}
+.comment-button {
+    background-color: white;
+    border: 0px;
+    border-top: 1px solid rgba(211, 211, 211, 0.651);
+    border-radius: 0px;
+    font-weight: bold;
+    font-size: 19px;
+    margin-right: 0px;
+}
+.input {
+    border: 0px;
+    border-top: 1px solid rgba(202, 202, 202, 0.514);
+    font-size: 14px;
+    margin-left: -5px;
+}
+
+.comment-box {
+    margin-bottom: -10px;
+    border: 1px solid red;
+}

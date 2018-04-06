@@ -5,5 +5,6 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import SearchBar from './components/SearchBar/SearchBar.js'
 
+
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
