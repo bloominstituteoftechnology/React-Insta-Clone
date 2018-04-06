@@ -22,7 +22,7 @@ Try to get all of the tests passing. If you don't get there, then aim for creati
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
 ```
 
-* Create a `components` directory inside the `src` directory, and then create a directory called `SearchBar`, another one called `PostContainer`, and lastly one called `CommentSection`, all inside the `src` directory. Each of these directories should contain the component file as well as the CSS for their respective components. Your file structure should end up looking like this:
+* Create a `components` directory inside the `src` directory, and then create a directory called `SearchBar`, another one called `PostContainer`, and lastly one called ` `, all inside the `src` directory. Each of these directories should contain the component file as well as the CSS for their respective components. Your file structure should end up looking like this:
 
 ![alt tag](/assets/folder_structure.png)
 

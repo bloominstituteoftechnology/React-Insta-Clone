@@ -20,7 +20,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-
 .DS_Store
 node_modules
 package.json
@@ -37,3 +36,6 @@ instagram/src/App.test.js
 instagram/src/logo.svg
 instagram/src/tests/PostContainer.test.js
 instagram/src/tests/SearchBar.test.js
+instagram/src/registerServiceWorker.js
+README.md
+.gitignore
