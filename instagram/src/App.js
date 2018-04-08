@@ -4,6 +4,7 @@ import "./App.css";
 import dummyData from "./dummy-data";
 // import SearchBar from './SearchBar/SearchBar.js';
 import PostContainer from "./components/PostContainer/PostContainer";
+import SearchBar from "./components/SearchBar/SearchBar";
 
 class App extends Component {
   constructor() {
@@ -22,6 +23,7 @@ class App extends Component {
     // console.log(this.state.dummyList);
     return (
       <div className="App">
+        <SearchBar />
         <PostContainer dummy={this.state.dummyList} />
       </div>
     );

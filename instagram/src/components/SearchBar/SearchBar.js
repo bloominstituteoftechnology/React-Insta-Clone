@@ -7,8 +7,16 @@ class SearchBar extends React.Component {
 	}
 
 	render() {
-		return <h1>Search Bar goes Here</h1>
+		return (
+			<div>
+				<h1>Search Bar goes Here</h1>
+			{/* brand icon goes here */}
+		{/* brand title goes here */}
+	{/* search bar goes here */}
+{/* accent icons go here */}
+			</div>
+		);
 	}
 }
 
-export default SearchBar
+export default SearchBar;
