@@ -1,0 +1,43 @@
+.SearchBarContainer {
+  width: 100%;
+  border-bottom: 1px solid #E1EAFF;
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
+  height: 5%;
+  width: 100%;
+  max-width: 615px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  margin: auto;
+}
+
+.Nav__logo {
+  height: 70%;
+  width: 70%;
+  float: left;
+}
+
+.Nav__input {
+  border-radius: 3px;
+  text-align: center;
+  width: 17%;
+  border: 1px solid lightgray;
+  background-color: #F0EFEB;
+  position: absolute;
+  left: 45%;
+}
+
+.Nav__icons {
+  width: 20%;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-end;
+}
