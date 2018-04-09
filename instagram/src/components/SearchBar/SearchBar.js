@@ -20,6 +20,9 @@ class SearchBar extends React.Component {
 					<input type="text" placeholder="Search here..." />
 				</form>
 {/* accent icons go here */}
+				<div><a href="https://www.instagram.com/?hl=en"><i class="far fa-compass fa-2x"></i></a></div>
+				<div><a href="https://www.instagram.com/?hl=en"><i class="far fa-heart fa-2x"></i></a></div>
+				<div><a href="https://www.instagram.com/?hl=en"><i class="far fa-user fa-2x"></i></a></div>
 			</div>
 		);
 	}
