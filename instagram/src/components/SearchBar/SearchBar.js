@@ -19,7 +19,7 @@ class SearchBar extends React.Component {
 			<div className="SearchBar">
 				{/* brand icon goes here */}
 				<div className="brand">
-					<a href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram fa-3x"></i></a>
+					<a href="https://www.instagram.com/?hl=en"><i className="fab fa-instagram fa-3x"></i></a>
 					{/* brand title goes here */}
 					<p>instagram</p>
 				</div>
@@ -34,9 +34,9 @@ class SearchBar extends React.Component {
 				</form>
 				{/* accent icons go here */}
 				<div>
-					<a className="accentLogo" href="https://www.instagram.com/?hl=en"><i class="far fa-compass fa-2x"></i></a>
-					<a className="accentLogo" href="https://www.instagram.com/?hl=en"><i class="far fa-heart fa-2x"></i></a>
-					<a className="accentLogo" href="https://www.instagram.com/?hl=en"><i class="far fa-user fa-2x"></i></a>
+					<a className="accentLogo" href="https://www.instagram.com/?hl=en"><i className="far fa-compass fa-2x"></i></a>
+					<a className="accentLogo" href="https://www.instagram.com/?hl=en"><i className="far fa-heart fa-2x"></i></a>
+					<a className="accentLogo" href="https://www.instagram.com/?hl=en"><i className="far fa-user fa-2x"></i></a>
 				</div>
 			</div>
 		);

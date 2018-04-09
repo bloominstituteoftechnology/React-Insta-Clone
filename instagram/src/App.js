@@ -19,8 +19,9 @@ class App extends Component {
     this.setState({ dummyList: dummyData });
   };
 
-  search =() => {
+  search = (username) => {
     // returns posts of usernames that user searched for
+    console.log(username);
   }
 
   render() {
