@@ -29,7 +29,7 @@ class CommentSection extends React.Component {
 	    <div>
 	    	{this.state.comments.map((comment, index) => 
 	    		
-	    			<div><strong>{comment.username}</strong> {comment.text}</div>
+	    			<div key={index}><strong>{comment.username}</strong> {comment.text}</div>
 					
 				)}
 				<div>
