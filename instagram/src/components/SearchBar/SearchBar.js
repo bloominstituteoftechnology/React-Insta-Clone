@@ -1,4 +1,5 @@
 import React from 'react';
+import "./SearchBar.css";
 
 class SearchBar extends React.Component {
 	constructor(props) {
@@ -15,6 +16,9 @@ class SearchBar extends React.Component {
 		{/* brand title goes here */}
 				<h1>Instagram</h1>
 	{/* search bar goes here */}
+				<form>
+					<input type="text" placeholder="Search here..." />
+				</form>
 {/* accent icons go here */}
 			</div>
 		);
