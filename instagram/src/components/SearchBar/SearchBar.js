@@ -14,7 +14,7 @@ class SearchBar extends React.Component {
 	}
 
 	render() {
-		console.log('user: ' + this.state.user);
+		// console.log('user: ' + this.state.user);
 		return (
 			<div className="SearchBar">
 				{/* brand icon goes here */}
@@ -24,7 +24,7 @@ class SearchBar extends React.Component {
 					<p>instagram</p>
 				</div>
 				{/* search bar goes here */}
-				<form>
+				<form onSubmit={() => {this.props.search(this.state.user)}}>
 					<input 
 						type="text" 
 						placeholder="Search here..." 

@@ -19,11 +19,15 @@ class App extends Component {
     this.setState({ dummyList: dummyData });
   };
 
+  search =() => {
+    // returns posts of usernames that user searched for
+  }
+
   render() {
     // console.log(this.state.dummyList);
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar search={this.search} />
         <PostContainer dummy={this.state.dummyList} />
       </div>
     );
