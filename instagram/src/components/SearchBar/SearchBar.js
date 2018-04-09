@@ -13,6 +13,7 @@ class SearchBar extends React.Component {
 			{/* brand icon goes here */}
 				<div><a href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram fa-3x"></i></a></div>
 		{/* brand title goes here */}
+				<h1>Instagram</h1>
 	{/* search bar goes here */}
 {/* accent icons go here */}
 			</div>
