@@ -23,7 +23,7 @@ class App extends Component {
     // console.log(this.state.dummyList);
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar dummy={this.state.dummyList} />
         <PostContainer dummy={this.state.dummyList} />
       </div>
     );
