@@ -19,9 +19,20 @@ class App extends Component {
     this.setState({ dummyList: dummyData });
   };
 
-  search = (username) => {
+  search = (username, event) => {
     // returns posts of usernames that user searched for
-    console.log(username);
+    // alert('made it');
+    const searchResult = this.state.dummyList.filter((post) => {
+      return post.username === username;
+    });
+    if (searchResult.length === 0) {
+      // if no results were found OR input field is empty
+      // "refresh the page" to the previous state
+      this.setState({dummyList: dummyData});
+    } else {
+      // renders App to reflect search result
+      this.setState({ dummyList: searchResult });
+    }
   }
 
   render() {

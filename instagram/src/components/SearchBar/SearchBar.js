@@ -24,7 +24,10 @@ class SearchBar extends React.Component {
 					<p>instagram</p>
 				</div>
 				{/* search bar goes here */}
-				<form onSubmit={() => {this.props.search(this.state.user)}}>
+				<form onSubmit={(event) => {
+					event.preventDefault();
+					this.props.search(this.state.user)}
+				}>
 					<input 
 						type="text" 
 						placeholder="Search here..." 
