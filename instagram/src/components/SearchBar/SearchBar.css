@@ -7,6 +7,10 @@
 	padding: 0 1%;
 }
 
+.SearchBar a {
+	color: black;
+}
+
 .brand {
 	/*border: 1px solid red;*/
 	display: inline-block;
@@ -26,8 +30,14 @@
 	padding-left: 20px;
 }
 
-.SearchBar a {
-	color: black;
+form {
+	margin: auto;
+}
+
+form input {
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
 }
 
 .accentLogo {
