@@ -18,16 +18,12 @@ class App extends Component {
     // console.log('rendered');
     this.setState({ dummyList: dummyData });
   };
-  // returns posts of username that user submitted in the search bar
-  handleSearch = () => {
-
-  }
 
   render() {
     // console.log(this.state.dummyList);
     return (
       <div className="App">
-        <SearchBar search={this.handleSearch} />
+        <SearchBar />
         <PostContainer dummy={this.state.dummyList} />
       </div>
     );
