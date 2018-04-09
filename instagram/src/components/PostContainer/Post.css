@@ -1,0 +1,26 @@
+.Post {
+    width: 500px;
+  }
+  .cardSubtitle {
+    font-weight: bold;
+    padding: 25px 15px;
+  }
+  .img-thumbnail {
+    width: 60px;
+    height: 60px;
+    margin-left: 5px;
+  }
+  
+  .Post__image {
+    width: 100%;
+  }
+
+  .timestamp {
+    font-size: 12px;
+    color: grey;
+  }
+
+  .likes {
+    font-weight: bold;
+    font-size: 12px;
+  }
