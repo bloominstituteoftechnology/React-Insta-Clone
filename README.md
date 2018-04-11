@@ -11,7 +11,7 @@ By the end of this project, you should be comfortable with what components are, 
 Try to get all of the tests passing. If you don't get there, then aim for creating all of the different components and organizing them appropriately in terms of the parent-child relationship, with data getting passed around accordingly.
 
 ## Project Setup
-
+* install `create-react-app` globally by running `npm install --global create-react-app`.
 * Run `create-react-app instagram` to create your starter application with the name `instagram`.
 * Once your React project has been created, move the provided `/tests` directory as well as the `dummy-data.js` file into the `/src` directory of your newly-generated React project.
 * Inside your `instagram` project directory, run `yarn add enzyme sinon enzyme-adapter-react-16 --dev`, which will install additional necessary dependencies that `create-react-app` doesn't install for you off the bat.
