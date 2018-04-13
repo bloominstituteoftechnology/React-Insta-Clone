@@ -1,0 +1,12 @@
+@import './components/SearchBar/SearchBar.css';
+@import './components/Post/Post.css';
+@import './components/CommentSection/CommentSection.css';
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+  background-color: darkslateblue;
+  padding-bottom: 20px;
+}

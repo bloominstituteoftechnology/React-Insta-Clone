@@ -1,0 +1,11 @@
+.CommentSection {
+  margin-top: 5px;
+}
+
+.CommentSection__comment {
+  margin-bottom: 5px;
+}
+
+.CommentSection__username {
+  font-weight: bold;
+}

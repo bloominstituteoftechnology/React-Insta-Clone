@@ -1,0 +1,62 @@
+.Post {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  background-color: white;
+  padding: 10px 5px 20px;
+}
+
+.Post__header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 10px 10px;
+}
+
+.Post__username {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.Post__footer {
+  margin: 5px 10px 0;
+}
+
+.Post__avatar {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.Post__image {
+  width: 100%;
+  border: 1px solid darkslateblue;
+}
+
+.Post__action-bar {
+  margin-left: -8px;
+}
+
+.Post__action-bar img {
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.Post__likes {
+  font-weight: bold;
+}
+
+.Post__time-since-post {
+  color: lightslategray;
+  font-size: 0.8rem;
+}
+
+.Post__inputs {
+  display: flex;
+  margin-top: 15px;
+}
+
+.Post__inputs input {
+  flex-grow: 1;
+}
