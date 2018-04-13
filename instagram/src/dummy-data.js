@@ -20,6 +20,73 @@ const dummyData = [
             }
         ]
     },
+//KF Practice inserts
+    {
+        username: "kflyphotography",
+        thumbnailUrl:  'https://instagram.fsnc1-1.fna.fbcdn.net/vp/feb0d236d0f2c555d42f8b87918d4bfc/5B4FF459/t51.2885-19/s320x320/27877555_1576291639121634_7974852097906573312_n.jpg',
+        imageUrl: 'https://instagram.fsnc1-1.fna.fbcdn.net/vp/8745310eda421ba4316b08355993c6d6/5B6A94CA/t51.2885-15/e35/27580852_1931780843818637_4294650434787737600_n.jpg',
+        likes: 525,
+        timestamp: "July 17th 2017, 12:42:40 pm",
+        comments: [
+            {
+                username: "kflyphotography",
+                text: "Total Lunar Eclipse 2017 taken by me in Oregon"
+            },
+            {
+                username: "seatown_exotics",
+                text: "Holy picture!"
+            },
+            {
+                username: "comradeflynn",
+                text: "Amazing shot!"
+            }
+        ]
+    },
+
+    {
+        username: "kflyphotography",
+        thumbnailUrl:  'https://instagram.fsnc1-1.fna.fbcdn.net/vp/feb0d236d0f2c555d42f8b87918d4bfc/5B4FF459/t51.2885-19/s320x320/27877555_1576291639121634_7974852097906573312_n.jpg',
+        imageUrl: 'https://instagram.fsnc1-1.fna.fbcdn.net/vp/12cc4813e40887116113360edea0b5a9/5B6EE9D5/t51.2885-15/e35/27574529_149471525725242_164568140166987776_n.jpg',
+        likes: 525,
+        timestamp: "February 13th 2017, 2:42:40 pm",
+        comments: [
+            {
+                username: "kflyphotography",
+                text: "Comrade the Reindeer"
+            },
+            {
+                username: "comradeflynn",
+                text: "Rare pug deer sighting"
+            },
+            {
+                username: "pugsofinstagram",
+                text: "Amazing pug!"
+            }
+        ]
+    },
+
+    {
+        username: "kflyphotography",
+        thumbnailUrl:  'https://instagram.fsnc1-1.fna.fbcdn.net/vp/feb0d236d0f2c555d42f8b87918d4bfc/5B4FF459/t51.2885-19/s320x320/27877555_1576291639121634_7974852097906573312_n.jpg',
+        imageUrl: 'https://scontent-sea1-1.cdninstagram.com/vp/4aff82d0236ae436a6174b1f14853a94/5B5D0FFC/t51.2885-15/e35/27582312_180410419235005_6324973323482562560_n.jpg',
+        likes: 525,
+        timestamp: "February 13th 2017, 2:42:40 pm",
+        comments: [
+            {
+                username: "kflyphotography",
+                text: "Neuschwanstein Castle from our 2016 Europe Trip"
+            },
+            {
+                username: "bittersweetnakoma",
+                text: "Beautiful! :D"
+            },
+            {
+                username: "ginarod04",
+                text: "Wow! Great pic!"
+            }
+        ]
+    },
+
     {
         username: "twitch",
         thumbnailUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/81f608ddb76a034e06c0d1669e7e2b48/5B35C840/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
