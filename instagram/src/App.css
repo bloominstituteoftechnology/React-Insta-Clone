@@ -1,0 +1,90 @@
+.App {
+  text-align: left;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+body{
+  width: 100%;
+  display: flex;
+  align-content: center;
+}
+.container{
+  width:100%;
+}
+.mainImg{
+  border: solid grey 2px;
+  margin: 10px auto;
+  width: 100%;
+}
+.cont{
+ margin: 20px auto;
+ width: 100%;
+}
+.commas {
+  margin-bottom: 20px;
+}
+.likes {
+  margin: 20px auto;
+}
+.icons{
+  height: 35px;
+  width: 40px;
+  padding-right: 4%;
+  padding-left: 4%;
+  margin: 10px 0;
+}
+.se{
+  border: solid grey 2px;
+  position: fixed;
+  top: 0;
+  background: white;
+  width: 92%;
+  display: flex;
+ justify-content: center;
+}
+.thumbnail{
+  margin-top: 60px;
+}
+.dumbText{
+  padding-right: 4%;
+  margin: 20px 0;
+  font-family: 'Cedarville Cursive'
+}
+.seaBar{
+ margin: 10px 0;
+ text-align: center;
+}
+#root{
+  width: 100%;
+}
+.input1{
+  width:92.65%;
+}
+.butt{
+  width: 4%;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
