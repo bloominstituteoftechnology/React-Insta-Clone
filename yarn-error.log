@@ -23,7 +23,7 @@ Lockfile:
   No lockfile
 
 Trace: 
-  Error: Couldn't find a package.json file in "C:\\Users\\john\\lambdaschool\\react-insta-clone"
+  Error: Couldn't find a package.json file in "C:\\Users\\john\\LambdaSchool\\react-insta-clone"
       at new MessageError (C:\Users\john\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
       at C:\Users\john\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:40048:15
       at Generator.next (<anonymous>)

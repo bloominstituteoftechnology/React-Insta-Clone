@@ -1,0 +1,28 @@
+.thumbnailLogo {
+    display:inline-block;
+    position: relative;
+    right: 350px;
+}
+
+.thumbnailLogo img {
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.posttitle {
+    display: inline-block;
+    position: relative;
+    right: 350px;
+}
+
+
+.image {
+    width: 100%
+}
+
+.likes {
+    font-weight: bold;
+    position: relative;
+    right: 350px;
+}
+

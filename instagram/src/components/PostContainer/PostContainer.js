@@ -1,6 +1,7 @@
 // will pass to comment section 
 import React, {Component} from "react";
 import CommentSection from "../CommentSection/commentsection.js";
+import './PostContainer.css';
 //import picture from './logo.svg';
 
 
@@ -18,12 +19,16 @@ class PostContainer extends Component {
       //console.log(this.props);
       const { username, thumbnailUrl, imageUrl, likes, timestamp, comments } = this.props.dummyData; 
       return(
-        <div> 
-          <div className= 'header'> 
+        <div>
+        <p className='thumbnailLogo'> 
+          <img src = {thumbnailUrl} />
+        </p>
+          <div className='posttitle'> 
             <h2>
               {
                 username
               }
+              
             </h2>
           </div>
           <div className = 'image'> 
@@ -34,7 +39,7 @@ class PostContainer extends Component {
           {
            // comments
           }
-          <p className ='comments'>  this is some text</p>
+          <p className ='likes'>  {likes} likes</p>
           {
             comments.map(comment => {
               console.log(comment) // this displays the text and comment
