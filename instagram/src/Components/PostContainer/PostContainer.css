@@ -1,0 +1,29 @@
+.PostContainer {
+    display: block;
+    border: 1px solid red;
+    /* justify-content: space-between; */
+    border-bottom: 1px solid grey;
+    width: 880px;
+    max-width: 880px;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.User {
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    
+}
+
+.PostImage {
+    border: 1px solid black;
+    height: 50rem;
+    width: 30rem;
+    margin-left: 1rem;
+}
+
+.interact, .likeCount, .time {
+    display: flex;
+    margin-left: 1rem;   
+}
