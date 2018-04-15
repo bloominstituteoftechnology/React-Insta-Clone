@@ -8,21 +8,22 @@ import CommentSection from './Components/CommentSection/CommentSection.js';
 
 
 class App extends Component {
-  constructor() {
-    super();
-
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
-    const postContainers = dummyData.map((user, key) => {
+    // const postContainers = dummyData.map((user, key) => {
       return (
         <div>
           <SearchBar />
-          <PostContainer key={key} user={user} />
+          <PostContainer />
           <CommentSection />
         </div>
       )
+    }
   }
-};
+
+
 
 export default App;
