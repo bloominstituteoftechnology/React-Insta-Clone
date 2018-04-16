@@ -9,7 +9,9 @@ return (
             <div>User Icon</div>
             <div>User Name</div>
         </div>
-        <div className='PostImage'>IMG</div>
+        <div className='PostImage'>
+            <img src='https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.mlOrZMOb8g_012HwyTW73wHaEo%26pid%3D15.1&f=1'/>
+        </div>
         <div className='interact'>
             <div>Heart Button</div>
             <div>Comment Bubble</div>

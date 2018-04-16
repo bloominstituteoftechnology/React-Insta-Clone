@@ -7,12 +7,14 @@
     max-width: 880px;
     margin: auto;
     margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
 }
 
 .User {
     display: flex;
     margin-top: 1rem;
-    margin-left: 1rem;
+
     
 }
 
@@ -20,10 +22,10 @@
     border: 1px solid black;
     height: 50rem;
     width: 30rem;
-    margin-left: 1rem;
+
 }
 
 .interact, .likeCount, .time {
     display: flex;
-    margin-left: 1rem;   
+
 }

@@ -18,7 +18,6 @@ class App extends Component {
         <div>
           <SearchBar />
           <PostContainer />
-          <CommentSection />
         </div>
       )
     }
