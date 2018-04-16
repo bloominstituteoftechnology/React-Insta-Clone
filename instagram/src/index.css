@@ -1,0 +1,11 @@
+@import "./App.css";
+@import "./components/PostContainer/postContainer.css";
+@import "./components/CommentSection/commentSection.css";
+@import "./components/SearchBar/searchBar.css";
+
+html, body {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
