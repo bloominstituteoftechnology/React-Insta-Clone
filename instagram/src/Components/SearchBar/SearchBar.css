@@ -1,0 +1,14 @@
+.Search {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    width: 880px;
+    max-width: 880px;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.icon-holder {
+    display: flex;
+    width: 30%;
+}
