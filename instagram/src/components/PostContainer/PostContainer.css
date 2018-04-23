@@ -1,0 +1,39 @@
+/* .postCard {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+} */
+
+.postContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.postContainerAvatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+
+}
+
+.postContainerHeader {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.postContainerAvatarText {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.postContainerImageContainer {
+    display: flex;
+    height: 100%;
+}
+
+.postContainerImage {
+
+    max-width: 100%;
+}
