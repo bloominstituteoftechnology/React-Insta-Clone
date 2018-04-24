@@ -1,0 +1,20 @@
+.postDiv {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+}
+.logoDiv {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.logo {
+    width: 40px;
+    border-radius: 50%;
+}
+.mainImage {
+    width: 100%;
+}
+.username {
+    padding-left: 20px;
+    padding-bottom: 10px;
+}

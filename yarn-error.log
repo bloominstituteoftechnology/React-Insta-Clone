@@ -1,0 +1,32 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Dell user\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js start
+
+PATH: 
+  C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Brackets\command;C:\Program Files\nodejs\;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.0\bin;C:\Ruby24-x64\bin;C:\Users\Dell user\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Heroku\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Users\Dell user\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Users\Dell user\AppData\Roaming\npm;C:\Users\Dell user\AppData\Local\atom\bin;C:\Users\Dell user\AppData\Local\GitHubDesktop\bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.10.0
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Couldn't find a package.json file in "C:\\Users\\Dell user\\Desktop\\Temp\\LambdaSchoolCs9\\day25_React3\\React-Insta-Clone"
+      at new MessageError (C:\Users\Dell user\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
+      at C:\Users\Dell user\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:40048:15
+      at Generator.next (<anonymous>)
+      at step (C:\Users\Dell user\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:98:30)
+      at C:\Users\Dell user\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:109:13
+      at <anonymous>
