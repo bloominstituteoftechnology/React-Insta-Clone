@@ -12,7 +12,9 @@ const CommentSection = props => {
                     <span className="comment-text" >{comment.text}</span>
                 </div>
            )})}
-            <input className="comment-input" type="text" placeholder="Add a comment..."></input>
+           <div className="comment-container">
+            <input className="comment-input" type="text" placeholder="Add a comment..."></input><span><button className="commentBtn">...</button></span>
+           </div>
        </div>
     ) 
 }

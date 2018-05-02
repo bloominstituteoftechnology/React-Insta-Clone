@@ -2,6 +2,7 @@
     text-align: start;
     font-weight: bold;
     font-size: 15px;
+    margin-left: 10px;
 }
 
 .comment-text {
@@ -11,6 +12,25 @@
 }
 
 .comment-input {
-    width: 100%;
+    width: 95%;
     height: 60px;
+    /* margin-right: 30px; */
+    border: none;
+    border-top: 1px solid lightgray;
+}
+
+input::placeholder {
+    padding-left: 10px;
+}
+
+.commentBtn {
+    background-color: white;
+    border: none;
+    /* width: 5%; */
+    font-weight: bold;
+    border-top: 1px solid lightgray;
+}
+
+.comment-container {
+    display: flex;
 }
