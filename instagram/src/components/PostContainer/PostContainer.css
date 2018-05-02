@@ -1,0 +1,12 @@
+
+.post-container {
+    border: 1px solid black;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.post-image {
+    height: auto;
+    width: 100%;
+}

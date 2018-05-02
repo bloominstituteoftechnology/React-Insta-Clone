@@ -7,7 +7,7 @@ const SearchBar = () => {
         <div className="insta-header">
             <span className="header-title">
             <i class="fab fa-instagram camera"></i>
-                Instagram
+               <span className="line">|</span> Instagram
             </span>
                 <input type="text" placeholder="Search" className="header-input"></input>
             <span>

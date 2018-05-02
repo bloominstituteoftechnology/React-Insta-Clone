@@ -1,6 +1,5 @@
 .insta-header {
     font-family: 'Courgette' ;
-    font-weight: bold;
     font-size: 30px;
     display: flex;
     justify-content: space-between;
@@ -35,4 +34,7 @@
     margin-right: 20px;
 }
 
-
+.line {
+    margin-right: 15px;
+    color: lightgray;
+}
