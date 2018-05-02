@@ -44,3 +44,11 @@ input::placeholder {
 .comment-container {
     display: flex;
 }
+
+.likes{
+    text-align: start;
+    font-size: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
