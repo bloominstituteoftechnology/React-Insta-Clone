@@ -1,0 +1,41 @@
+.insta-header {
+    font-family: 'Courgette' ;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-title {
+    margin-right: 50px;
+}
+
+.header-input {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+    background-image: url(http://booleanmagic.com/uploads/searchicon.png);
+    background-repeat: no-repeat;
+    background-position: 90px;
+    background-size: 15px;
+    background-color: #f2f4f7;
+    margin-right: 150px;
+}
+
+.camera {
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+.heart {
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.line {
+    margin-right: 15px;
+    color: lightgray;
+}

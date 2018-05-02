@@ -1,0 +1,25 @@
+.post-container {
+    border: 1px solid black;
+    max-width: 40%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.post-image {
+    height: auto;
+    width: 100%;
+}
+
+.thumbnail {
+    border-radius: 50%;
+    width: 7%;
+    height: auto;
+    margin: 10px;
+}
+
+.post-header {
+    text-align: start;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 15px;
+}

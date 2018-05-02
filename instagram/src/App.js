@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import Search from './components/SearchBar/Search';
 import Post from './components/PostContainer/Post';
-//import Comment from './components/CommentSection/comment';
+import Comment from './components/CommentSection/Comment';
 import './App.css';
 
 class App extends Component {
@@ -14,13 +14,15 @@ class App extends Component {
   }
   componentDidMount() {
     this.setState({data: dummyData});
-  }
-  
+  }  
   render() { 
     return (
-      <div >
-      <Post dummydata={this.state.data} />
+      <div className="App" >
+      <header className="App-header">
+      <h1 className="App-title">Instagram</h1>
+      </header>
         <Search />
+        {this.state.data.map(data => <Post key={data.username} data={data}/>)}      
       </div>
     );
   }
