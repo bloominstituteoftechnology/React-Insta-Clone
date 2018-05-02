@@ -1,0 +1,32 @@
+#root{
+    width:100%;
+    max-width: 1200px;
+}
+
+.navBarWrapper{
+    display:flex;
+    justify-content: space-around;
+    height: 50px;
+    padding-top:20px;
+    box-sizing: border-box;
+    
+}
+
+
+.instaNotGramLogoIcon{
+   
+    max-width: 50px;
+    
+    
+}
+
+.instaNotGramLogoText{
+    max-width: 100px;
+    
+    
+}
+.instagramIcon{
+    max-width: 100px;
+    max-height:50px;
+   
+}

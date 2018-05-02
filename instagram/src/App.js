@@ -1,23 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import './logo.svg';
 import './App.css';
-import './dummy-data';
+import dummyData from './dummy-data';
+import './Components/PostContainer/PostContainer';
+import './Components/SearchBar/SearchBar';
+import './Components/CommentSection/CommentSection';
+import SearchBar from './Components/SearchBar/SearchBar';
+import './Components/PostContainer/PostContainer';
+
 
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      data: [],
+    };
+  }
+
+  componentDidMount(){
+    this.setState({data: dummyData});
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          
-        </p>
+      <div className = "App">
+        <SearchBar />
+        {/* <PostContainer data = {this.state.data}/> */}
       </div>
     );
-  }
-}
+    
+  };
+};
 
 export default App;
