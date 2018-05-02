@@ -6,7 +6,7 @@ import './Components/PostContainer/PostContainer';
 import './Components/SearchBar/SearchBar';
 import './Components/CommentSection/CommentSection';
 import SearchBar from './Components/SearchBar/SearchBar';
-import './Components/PostContainer/PostContainer';
+import PostContainer from './Components/PostContainer/PostContainer';
 
 
 
@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <div className = "App">
         <SearchBar />
-        {/* <PostContainer data = {this.state.data}/> */}
+        <PostContainer data = {this.state.data}/>
       </div>
     );
     

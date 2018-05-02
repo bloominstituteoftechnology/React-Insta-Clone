@@ -1,4 +1,9 @@
+import React from 'react';
+import './PostContainer.css';
+
 const PostContainer = props => {
-    console.log ('PROPS', props);
+    return(
+    <div>hi</div>
+    )
 }
 export default PostContainer;

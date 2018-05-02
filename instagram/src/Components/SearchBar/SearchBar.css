@@ -5,28 +5,30 @@
 
 .navBarWrapper{
     display:flex;
-    justify-content: space-around;
-    height: 50px;
-    padding-top:20px;
-    box-sizing: border-box;
-    
-}
 
-
-.instaNotGramLogoIcon{
    
-    max-width: 50px;
-    
     
 }
+.instaNotGramLogoIcon{
+    max-width: 20px;
+    max-height: 20px;
+}
 
+.SearchandTextLogo{
+    width:33%;
+}
 .instaNotGramLogoText{
     max-width: 100px;
     
     
 }
+.icons{
+    width: 33%;
+}
 .instagramIcon{
-    max-width: 100px;
-    max-height:50px;
+    width: 20px;
+    height: 20px;
+
+    
    
 }
