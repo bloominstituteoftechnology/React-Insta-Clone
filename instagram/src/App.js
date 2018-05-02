@@ -12,7 +12,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputValue: ''
+      inputValue: '',
+      dummyData: [...dummyData]
     };
   }
 
@@ -31,7 +32,9 @@ class App extends Component {
           inputValue={ this.state.inputValue }
         />
 
-        <PostContainer />
+        <PostContainer
+          dummyData={ this.state.dummyData }
+        />
       </div>
     );
   }
