@@ -29,6 +29,7 @@ input::placeholder {
     /* width: 5%; */
     font-weight: bold;
     border-top: 1px solid lightgray;
+    padding-top: 15px;
 }
 
 .comment-icons {
@@ -39,6 +40,7 @@ input::placeholder {
 
 .fa-heart {
     margin-right: 10px;
+    height: 20px;
 }
 
 .comment-container {
