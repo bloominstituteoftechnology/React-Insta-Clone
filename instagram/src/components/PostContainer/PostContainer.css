@@ -3,24 +3,23 @@ h6 {
 }
 
 .container {
+  background-color: white;
   width: 600px;
   height: auto;
-  border: 1px dotted lightgray;
-  border-radius: 12px;
-  padding-top: 12px;
+  border: 1px solid darkgray;
+  border-radius: 6px;
+  padding: 0 0.1rem 1rem 0.1rem;
+  margin-bottom: 1rem;
 }
 
-.body-header h6 {
+.post-header h4 {
+  font-size: 1rem;
   font-weight: bold;
 }
 
-.body-header span {
-  margin: 0 6px;
-}
-
 .logo-img {
-  height: 72px;
-  width: 72px;
+  height: 36px;
+  width: 36px;
 }
 
 .well-bottom {
