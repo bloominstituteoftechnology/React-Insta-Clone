@@ -16,7 +16,9 @@ class PostContainer extends React.Component {
     }
     addNewPost(e){
         e.preventDefault();
-        this.props.addNewPost(this.props.id, this.state.newPostUser, this.state.newPostText);
+        const newText = this.state.newPostText;
+        this.setState( {newPostText: ''} )
+        this.props.addNewPost(this.props.id, this.state.newPostUser, newText);
     }
     render(){
         return (
@@ -37,6 +39,7 @@ class PostContainer extends React.Component {
                     type="text"
                     name='comment'
                     placeholder='Add a comment...'
+                    value={this.state.newPostText}
                     onChange={this.handleNewComment}
                 />
                 <button type="button" onClick={this.addNewPost.bind(this)}>+</button>

@@ -18,7 +18,7 @@ class App extends Component {
   // }
   addNewPost = (id, postUser, postText) => {
     console.log('Hello from addNewPost');
-    const newPost = {username: postUser, comment: postText};
+    const newPost = {username: postUser, text: postText};
     const newData = this.state.data.slice();
     newData[id].comments.unshift(newPost);
     console.log(newData);
