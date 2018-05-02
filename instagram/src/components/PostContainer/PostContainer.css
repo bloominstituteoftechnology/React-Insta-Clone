@@ -1,0 +1,30 @@
+
+
+.card {
+    width: 100%;
+	max-width: 600px;
+    margin: 0 auto;
+    border: solid red;
+    display:flex;
+    flex-flow: row wrap;
+
+}
+
+.card .icon-container {
+    height: 60px;
+    
+}
+
+.card .image-container {
+    height: 600px;
+
+}
+.card .image {
+    height: 100%;
+
+}
+
+.card .logo {
+    height: 100%;
+    border-radius: 50%;
+}
