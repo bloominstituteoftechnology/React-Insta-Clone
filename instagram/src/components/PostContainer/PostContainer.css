@@ -1,0 +1,29 @@
+.post-header {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    /* justify-content:  */
+}
+
+.user-logo {
+    border-radius: 50%;
+    height: 30px;
+    margin-left: 3%;
+}   
+
+.main-image {
+    height: 400px;
+    width: 100%;
+}
+
+.container {
+    max-width: 500px;
+    border: 1px solid gray;
+    padding: 0;
+    margin-top: 15%;
+}
+
+.username {
+    align-self: flex-end;
+    margin-left: 2%;
+}
