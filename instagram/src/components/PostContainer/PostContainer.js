@@ -1,5 +1,6 @@
 import React from 'react';
 import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection';
 
 class PostContainer extends React.Component {
     constructor() {
@@ -38,33 +39,6 @@ class PostContainer extends React.Component {
           </div>
   
         </div>
-      )
-    }
-  
-  }
-
-  class CommentSection extends React.Component {
-    constructor() {
-      super();
-    }
-  
-    render() {
-      return (
-        <div>
-          {this.props.comments.map(function(user, index) {
-            return (
-              <div>
-                <p key={index}><strong>{user.username} </strong>{user.text}</p>
-              </div>
-              )
-          })}
-          <input
-                  type="text"
-                  placeholder="Add Comment"
-                  className="Input-Comment"
-                />
-        </div>
-  
       )
     }
   
