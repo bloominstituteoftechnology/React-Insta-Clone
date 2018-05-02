@@ -8,7 +8,7 @@ const PostContainer = props => {
         <div>
             {props.users.map(user => {
                 return (
-                    <div>
+                    <div class='container'>
                         <div class='post-header'>
                             <img class='user-logo' src={user.thumbnailUrl}></img>
                             <p class='username'>{user.username}</p>
