@@ -1,0 +1,11 @@
+.comment-username {
+    text-align: start;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.comment-text {
+    text-align: start;
+    margin-left: 10px;
+    font-weight: normal;
+}
