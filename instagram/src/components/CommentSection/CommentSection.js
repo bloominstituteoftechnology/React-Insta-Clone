@@ -10,10 +10,9 @@ const CommentSection = props => {
                 <div className="comment-username">
                     {comment.username}
                     <span className="comment-text" >{comment.text}</span>
-                        {/* <div className="comment-username">{comment.username}</div>
-                        <span className="comment-text">{comment.text}</span> */}
                 </div>
            )})}
+            <input className="comment-input" type="text" placeholder="Add a comment..."></input>
        </div>
     ) 
 }
