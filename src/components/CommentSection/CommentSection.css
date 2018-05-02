@@ -1,0 +1,29 @@
+h6 {
+    font-weight: bold;
+    display: inline-block;
+    line-height: 100%;
+    margin: 0px;
+}
+
+.wellDiv {
+    padding: 0px 30px 0px 30px;
+}
+
+.line {
+    width: 100%;
+    border-top: 1px solid lightgray;
+    margin: 20px 0px 10px 0px;
+}
+
+p {
+    display: inline-block;
+    line-height: 100%;
+}
+
+input {
+    width: 95%;
+    border: 0px;
+    margin-bottom: 20px;
+    background: #FAFAFA;
+    display: inline-block;
+}

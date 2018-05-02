@@ -21,7 +21,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      Hello 
       {this.state.data.map((element) => {
         console.log(element)
         return <PostContainer data={element}/>

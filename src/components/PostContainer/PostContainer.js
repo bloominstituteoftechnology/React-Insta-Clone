@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './PostContainer.css'
+import CommentSection from '../CommentSection/CommentSection'
 
 class PostContainer extends Component {
     constructor(props) {
@@ -12,8 +13,11 @@ class PostContainer extends Component {
             <div className="container socialCard">
             <div className="row">
                 <div className="col-12 d-flex">
-                    <CardLogo url={this.props.data.thumbnailUrl} />
-                    {/* <CardBody /> */}
+                    <BodyHeader username={this.props.data.username} url={this.props.data.thumbnailUrl} />
+                </div>
+                <div className="well col-12">
+                    <Well url={this.props.data.imageUrl} />
+                    <CommentSection time={this.props.data.timestamp} comments={this.props.data.comments} likes={this.props.data.likes} />
                 </div>
             </div>
         </div>
@@ -21,56 +25,23 @@ class PostContainer extends Component {
     }
 }
 
-const socData = [
-    {
-        logo: "",
-        name: "Lambda School",
-        handle: "@LambdaSchool",
-        date: "26 jan",
-        text: "Let's learn React by building simple interfaces with components. Don't try to overthink it, just keep it simple and have fun. Once you feel comfortable using components you are well on your way to mastering React!",
-        well: {
-            img: "https://ibin.co/3wnC6SgIOJud.png",
-            header: "Get started with React",
-            text: "React makes it painless to create interactive UIs. Design simple views for each state in your application.",
-            url: "reactjs.org",
-        },
-    }
-];
-
-const CardLogo = props => {
-    console.log(props)
-    return <img className="thumbnail rounded-circle" src={props.url} alt="User Thumbnail" />;
-};
-
-const BodyHeader = () => {
+const BodyHeader = props => {
     return (
-        <div class="body-header">
-            <h6>{socData[0].name}</h6>
-            <span>{socData[0].handle}</span>
-            <span>{socData[0].date}</span>
+        <div className="d-flex">
+            <img className="thumbnail rounded-circle" src={props.url} alt="User Thumbnail" />
+            <p className="username">{props.username}</p>
         </div>
     );
 };
 
-const Well = () => {
+const Well = props => {
     return (
         <div>
-            <img className="img-fluid rounded-top" src={socData[0].well.img} alt="Well Image" />
-            <div className="rounded-bottom well-bottom">
-                <h6>{socData[0].well.header}</h6>
-                <p>{socData[0].well.text}</p>
-                <p>{socData[0].well.url}</p>
+            <img className="img-fluid main-img" src={props.url} alt="Well" />
+            <div className="icons d-flex">
+                <i class="far fa-comment fa-2x"></i>
+                <i class="far fa-heart fa-2x"></i>
             </div>
-        </div>
-    );
-}
-
-const CardBody = () => {
-    return (
-        <div>
-            <BodyHeader />
-            <p>{socData[0].text}</p>
-            <Well />
         </div>
     );
 }
