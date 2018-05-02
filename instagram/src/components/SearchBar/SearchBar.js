@@ -5,13 +5,15 @@ import './SearchBar.css';
 const SearchBar = () => {
     return (
         <div className="insta-header">
-            <img/>
+            <i class="fab fa-instagram camera"></i>
             <span className="header-title">
-            Instagram
+                Instagram
             </span>
-            <input type="text" placeholder="Search" className="header-input"></input>
-            <img/>
-            <img/>
+                <input type="text" placeholder="Search" className="header-input"></input>
+            <span>
+                <i class="far fa-compass"></i>
+                <i class="far fa-heart heart"></i>
+            </span>
         </div>
     )
 }

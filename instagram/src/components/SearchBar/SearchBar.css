@@ -13,7 +13,7 @@
 }
 
 .header-input {
-    font-family: sans-serif;
+    font-family: Arial;
     font-weight: normal;
     font-size: 20px;
     width: 300px;
@@ -21,7 +21,17 @@
     border-radius: 5px;
     background-image: url(http://booleanmagic.com/uploads/searchicon.png);
     background-repeat: no-repeat;
-    /* background-position: left; */
     background-position: 90px;
     background-size: 15px;
+    background-color: #f2f4f7;
 }
+
+.camera {
+    margin-top: 8px;
+}
+
+.heart {
+    margin-left: 40px;
+}
+
+
