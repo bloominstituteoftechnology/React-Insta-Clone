@@ -8,50 +8,70 @@ import { PostComment } from './PostComment';
 import { Input } from '../misc/Input';
 
 export const PostContainer = props => {
-  return(
-    <div className="postcontainer">
-      <Image
-        className='postcontainer__profile-image'
-        // imgSrc={ props.imgSrc }
-      />
+  console.log(props);
+  
+     return (
+        props.dummyData.map((post, ind) => {
+          return (
+          <div className="postcontainer">
+            <Image
+              className='postcontainer__profile-image'
+              imgSrc={ post.thumbnailUrl }
+            />
+            
+            <UserName
+              className='postcontainer__username'
+              userName={ post.username }
+            />
+            
+            <Image
+              className='postcontainer__post-image'
+                imgSrc={ post.imageUrl }
+            />
+       
+            <Button
+              buttonClassName={props.heartPost}
+              handleButtonOnClick={props.handleButtonOnClick}
+            />
+       
+            <Button
+              buttonClassName={props.commentOnPost}
+              handleButtonOnClick={props.handleButtonOnClick}
+            />
+       
+            <div className='postcontainer__likes-container'>
+              <span className='postcontainer__likes-container__likes'>
+                {post.likes} likes
+              </span>
+            </div>
+       
+            <PostComment
+              postCommentContainerClassName='postcontainer__comment-container'
+              postCommentClassName='postcontainer__comment'
+              postCommentData={ post.comments }
+            />
 
-      <UserName
-        className='postcontainer__username'
-        userName='philzcoffee'
-      />
+            <div className='postcontainer__date-posted__container'>
+              <span className='postcontainer__date-posted'>
+                { post.timestamp }
+              </span>
+            </div>
 
-      <Image
-        className='postcontainer__post-image'
-        // imgSrc={ props.imgSrc }
-      />
+            <Input
+              className='postcontainer__new-comment-input'
+              name='new-comment-input'
+              onChange={props.handleInputValueChange}
+              placeholder='Add a comment...'
+              value={props.inputValue}
+            />
 
-      <Button
-        buttonClassName={ props.heartPost }
-        handleButtonOnClick={ props.handleButtonOnClick }
-      />
-
-      <Button
-        buttonClassName={ props.commentOnPost }
-        handleButtonOnClick={ props.handleButtonOnClick }
-      />
-
-      <div className='postcontainer__likes-container'>
-        <span className='postcontainer__likes-container__likes'>
-          { props.postHeartCount } likes
-        </span>
-      </div>
-
-      <PostComment/>
-
-      <div className='postcontainer__date-posted__container'>
-        <span className='postcontainer__date-posted'>
-          { props.postDatePosted } ago
-        </span>
-      </div>
-
-      <Input/>
-
-      <Button/>
-    </div>
+            <Button
+              buttonClassName='postcontainer__comment-options'
+              handleButtonOnClick={ () => alert('COMMENT OPTIONS') }
+              buttonContent='...'
+            />
+          </div>
+          )
+        })
   );
 };
