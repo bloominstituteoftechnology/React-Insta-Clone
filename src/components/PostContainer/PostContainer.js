@@ -1,6 +1,6 @@
 import React from 'react';
 import dummyData from '../../dummyData';
-import CommentSection from './components/CommentSection/CommentSection'
+//import CommentSection from './components/CommentSection/CommentSection'
 
 const PostContainer = props => {
     return <div>
@@ -20,7 +20,6 @@ const PostContainer = props => {
                 <span class="user-name2">{post.username}</span> 
                 <span class="time">{post.timestamp}</span>
                 </div>
-                <CommentSection />
             </div>
         </div>
         );
