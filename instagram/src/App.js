@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { dummyData } from  './dummy-data';
 import SearchBar from './components/SearchBar/NavBar';
-
+import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
   constructor() {
@@ -28,6 +28,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <SearchBar />
+        <PostContainer name="I am Container and I will have content" />
       </div>
     );
   }
