@@ -9,7 +9,11 @@ export const SearchBarContainer = () => {
   return (
     <div className="searchbar-container">
       <SearchBarLogo />
-      <Input />
+
+      <Input
+        inputPlaceHolder='Search'
+      />
+
       <Button
         buttonContent='C' />
       <Button
