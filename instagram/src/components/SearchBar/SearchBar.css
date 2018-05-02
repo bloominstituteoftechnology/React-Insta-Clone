@@ -1,0 +1,22 @@
+.insta-header {
+    font-family: 'Courgette' ;
+    font-weight: bold;
+    font-size: 30px;
+    max-width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-title {
+    
+}
+
+.header-input {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+}
