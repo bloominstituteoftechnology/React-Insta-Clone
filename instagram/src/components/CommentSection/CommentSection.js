@@ -5,7 +5,7 @@ class CommentSection extends React.Component {
         super();
         this.state = {
             comment: [],
-            newCom: ''
+            newComm: ''
 
         }
 
@@ -26,10 +26,10 @@ class CommentSection extends React.Component {
         const comment = this.state;
         comment.push({
             user: 'Joe_Dirt',
-            text: this.state.newCom
+            text: this.state.newComm
         })
         this.setState({
-            comment, newCom: ""
+            comment, newComm: ""
         })
     }
     //render()
