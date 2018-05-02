@@ -11,14 +11,14 @@ class App extends Component {
     super();
 
     this.state = {
-      tweets: []
+      insta: []
     }
   }
 
   componentDidMount() {
     let allTweets = dummyData.slice();
     this.setState({
-      tweets: allTweets
+      insta: allTweets
     });
   }
 
@@ -27,7 +27,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer tweets={this.state.tweets}/>
+        <PostContainer tweets={this.state.insta}/>
 
 
       </div>
