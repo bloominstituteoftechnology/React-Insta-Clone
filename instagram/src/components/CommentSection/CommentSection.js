@@ -22,8 +22,8 @@ const CommentSection = props => {
         })
       }
       <p className="mx-2 time-stamp">{props.data.timestamp}</p>
-      <div className="comment-input">
-        <input id="form-control comment-field" type="text" placeholder="Add a comment" />
+      <div className="comment-input d-flex align-items-center">
+        <input type="text" className="mx-2 mt-1" placeholder="Add a comment" /><i className="mt-1 fas fa-ellipsis-h"></i>
       </div>
     </div>
   );

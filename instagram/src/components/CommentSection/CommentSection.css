@@ -1,4 +1,13 @@
-.time-steamp {
+.comment-section .time-steamp {
   color: lightgrey;
   font-weight: bold;
+}
+
+.comment-input {
+  border-top: 1px solid lightgrey;
+}
+
+.comment-input input[type="text"] {
+  width: 90%;
+  border: none;
 }
