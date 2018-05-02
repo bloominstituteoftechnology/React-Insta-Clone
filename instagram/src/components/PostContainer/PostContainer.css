@@ -1,0 +1,39 @@
+h6 {
+  display: inline-block;
+}
+
+.container {
+  width: 600px;
+  height: auto;
+  border: 1px dotted lightgray;
+  border-radius: 12px;
+  padding-top: 12px;
+}
+
+.body-header h6 {
+  font-weight: bold;
+}
+
+.body-header span {
+  margin: 0 6px;
+}
+
+.logo-img {
+  height: 72px;
+  width: 72px;
+}
+
+.well-bottom {
+  border: 0.5px solid lightgray;
+  padding: 15px 15px 0 15px;
+  margin-bottom: 15px;
+  line-height: 100%;
+}
+
+.well-bottom h6 {
+  font-weight: bold;
+}
+
+.well-bottom p:last-child {
+  color: lightgray;
+}
