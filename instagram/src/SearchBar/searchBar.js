@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 class SearchBar extends Component {
-    constructor() {
-        super();
-        this.state {
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: props.name
         };
     }
 

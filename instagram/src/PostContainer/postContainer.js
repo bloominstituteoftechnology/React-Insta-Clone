@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class PostContainer extends Component {
     constructor() {
         super();
-        this.state {
-
+        this.state = {
+            name: props.name
         };
     }
 

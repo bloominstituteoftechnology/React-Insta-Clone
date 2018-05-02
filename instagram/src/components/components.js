@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class Components extends Component {
     constructor() {
         super();
-        this.state {
-
+        this.state = {
+            name: props.name
         };
     }
 
