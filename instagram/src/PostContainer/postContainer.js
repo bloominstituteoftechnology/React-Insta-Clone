@@ -12,9 +12,6 @@ class PostContainer extends Component {
 
     }
 
-
-
-
 }
 
 export default PostContainer;
