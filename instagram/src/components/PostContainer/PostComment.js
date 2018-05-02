@@ -4,14 +4,22 @@ import React from 'react';
 import { UserName } from '../misc/UserName';
 
 export const PostComment = props => {
+  console.log(props);
+  
   return (
-    <div className={ props.postCommentContainerClassName }>
-      <UserName/>
+    props.postCommentData.map(comment => {
+      return (
+        <div className={props.postCommentContainerClassName}>
+          <UserName
+            userNameClassName='postcontainer__comment__username'
+            userName={ comment.username }
+          />
 
-      <p className={ props.postCommentClassName }>
-        { props.postComment }
-      </p>
-    </div>
-    
+          <p className={props.postCommentClassName}>
+            {comment.text}
+          </p>
+        </div>
+      )
+    })
   );
 }
