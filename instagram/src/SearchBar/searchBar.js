@@ -8,15 +8,6 @@ class SearchBar extends Component {
         };
     }
 
-
-    searchBarEventHandler = event => {
-        this.setState({ [event.target]: event.target })
-    };
-
-    searchBarEventHandler2 = event => {
-
-    };
-
     render() {
 
     }

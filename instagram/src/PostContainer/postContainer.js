@@ -8,15 +8,6 @@ class PostContainer extends Component {
         };
     }
 
-
-    postContainerEventHandler = event => {
-        this.setState({ [event.target]: event.target })
-    };
-
-    postContainerEventHandler2 = event => {
-
-    };
-
     render() {
 
     }

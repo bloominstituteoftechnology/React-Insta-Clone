@@ -8,15 +8,6 @@ class CommentSection extends Component {
         };
     }
 
-
-    commentSectionEventHandler = event => {
-        this.setState({ [event.target]: event.target })
-    };
-
-    commentSectionEventHandler2 = event => {
-
-    };
-
     render() {
 
     }
