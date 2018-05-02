@@ -1,9 +1,10 @@
 
 .post-container {
-    border: 1px solid black;
+    border: 1px solid white;
     max-width: 40%;
     margin: 0 auto;
     margin-top: 50px;
+    background-color: white;
 }
 
 .post-image {
