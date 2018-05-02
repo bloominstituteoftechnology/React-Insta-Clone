@@ -31,6 +31,16 @@ input::placeholder {
     border-top: 1px solid lightgray;
 }
 
+.comment-icons {
+    text-align: start;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.fa-heart {
+    margin-right: 10px;
+}
+
 .comment-container {
     display: flex;
 }
