@@ -14,7 +14,7 @@ class PostContainer extends React.Component {
               return (
                 <div key={index} className="post-wrapper">
                 <section className="user-thumb">
-                  <img src={tweet.thumbnailUrl} />
+                  <img src={insta.thumbnailUrl} />
                   <p>{insta.username}</p>
                 </section>
                 <section className="main-img">
@@ -26,7 +26,7 @@ class PostContainer extends React.Component {
                     <span>&loz;</span>
                   </div>
                   <div>
-                    {tweet.likes} likes
+                    {insta.likes} likes
                   </div>
                 </section>
                 <CommentSection comments={insta.comments}/>
