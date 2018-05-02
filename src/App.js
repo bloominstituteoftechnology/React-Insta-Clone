@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import PostContainer from './components/PostContainer/PostContainer'
+import dummyData from './dummy-data'
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+    };
+  }
+  componentDidMount() {
+    // taking people, from people.js
+    // calling setState to add people to our friends array.
+    // ANY type of data fetching, SHOULD exist inside of CDM
+    this.setState({ data: dummyData });
+    console.log("didMount", this.state)
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      Hello 
+      {this.state.data.map((element) => {
+        console.log(element)
+        return <PostContainer data={element}/>
+      })}
       </div>
     );
   }
