@@ -1,5 +1,6 @@
 import React from 'react';
 import './PostContainer.css';
+
 class PostContainer extends React.Component {
     constructor() {
       super();
@@ -29,7 +30,8 @@ class PostContainer extends React.Component {
                     {insta.likes} likes
                   </div>
                 </section>
-                <CommentSection comments={insta.comments}/>
+                <div>< CommentSection comments={insta.comments}/>
+                </div>
                 </div>
                 )
             })}
@@ -40,4 +42,32 @@ class PostContainer extends React.Component {
     }
   
   }
+
+  class CommentSection extends React.Component {
+    constructor() {
+      super();
+    }
+  
+    render() {
+      return (
+        <div>
+          {this.props.comments.map(function(user, index) {
+            return (
+              <div>
+                <p key={index}><strong>{user.username} </strong>{user.text}</p>
+              </div>
+              )
+          })}
+          <input
+                  type="text"
+                  placeholder="Add Comment"
+                  className="Input-Comment"
+                />
+        </div>
+  
+      )
+    }
+  
+  }
+
 export default PostContainer;
