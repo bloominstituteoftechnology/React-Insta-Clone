@@ -8,7 +8,7 @@ const PostContainer = props => {
         
         props.data.map((obj) => {
             return (
-                <div className = "postwrapper" key={obj.username + obj.thumbnailUrl + obj.imageUrl + obj.comments.username + obj.comments.text}>
+                <div className = "postwrapper" key={obj.username + obj.thumbnailUrl + obj.imageUrl + obj.likes + obj.comments.username + obj.comments.text}>
                     <div className = "profileAndUsername">
                         <img className = "profilePic" src = {obj.thumbnailUrl} alt = "tmbnl"/>
                         <p className = "userhandle">    {obj.username}</p>
@@ -18,6 +18,7 @@ const PostContainer = props => {
                         <img className = "like" src = {like} alt ="like"/>
                         <img className = "comment" src = {comment} alt = "comment"/>
                     </div>
+                    <p className = "numberOfLikes">{obj.likes} likes</p>
                 </div>
             );
         })
