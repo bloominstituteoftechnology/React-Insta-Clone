@@ -1,11 +1,12 @@
 import React from 'react';
 
+import "./CommentSection.css";
+
 const CommentSection = ({ comments }) => {
-  console.log(comments)
   return (
     <div>
       { comments.map((comment, i) => 
-          <div key={i}>
+          <div key={i} className="comment">
             <div className="name">{comment.username}</div>
             <div className="message">{comment.text}</div>
           </div>

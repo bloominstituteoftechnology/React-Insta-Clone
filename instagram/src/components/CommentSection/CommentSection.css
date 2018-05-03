@@ -1,0 +1,8 @@
+.comment {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8em;
+}
+.comment .name {
+    font-weight: bold;
+}

@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
 
 class SearchBar extends Component {
   render() {
     return (
-      <div>
+      <Navbar color="faded" light>
+        <NavbarBrand>
         <div className="logo">Logo</div>
         <div className="brand">Instagram</div>
+        </NavbarBrand>
         <div className="searchBox">
           <div className="searchLogo"></div>
           <input name="searchInput" type="text" value=""/>
@@ -14,7 +17,7 @@ class SearchBar extends Component {
           <div className="mapIcon"></div>
           <div className="heartIcon"></div>
         </div>
-      </div>
+      </Navbar>
     );
   }
 }
