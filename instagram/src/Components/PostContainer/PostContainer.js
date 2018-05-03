@@ -16,7 +16,7 @@ const PostContainer = (props) => {
         <CardBody>
           <CardText className="post-icons">☭ ♡</CardText>
           <CardText>{props.post.likes} Likes</CardText>
-          <CommentSection />
+          <CommentSection comments={props.post.comments} />
           <CardText>{props.post.timestamp}</CardText>
         </CardBody>
         <InputGroup>
