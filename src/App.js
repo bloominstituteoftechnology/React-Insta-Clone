@@ -23,9 +23,14 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">Hello World!
-        </p>
-        <PostContainer dummyData={this.state.dummyData} />
+        <p className="App-intro">Instagram Clone!</p>
+        <div className="Posts">
+        {this.state.dummyData.map((post, index) => {
+          return (
+            <PostContainer key={index} post={post}/>        
+          )
+        })}
+        </div>
       </div>
     );
   }

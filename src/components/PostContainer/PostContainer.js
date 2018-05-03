@@ -1,11 +1,12 @@
 import React from 'react';
 import dummyData from '../../dummyData';
-//import CommentSection from './components/CommentSection/CommentSection'
+import CommentSection from '../CommentSection/CommentSection';
+
 
 const PostContainer = props => {
-    return <div>
-    
-    {props.dummyData.map(post=> {
+
+    const post = props.post;
+
         return (
         <div key={post.username + post.thumbnailUrl + post.imageUrl + post.likes + post.timestamp}>
             {/* anytime we have an array of elements, REACT NEEDS A KEY! for each elem*/}
@@ -17,16 +18,16 @@ const PostContainer = props => {
                 <img class="image-post" src={post.imageUrl}/>
                 <div class="post-bottom">
                 <span class="likes">{post.likes} likes</span>
-                <span class="user-name2">{post.username}</span> 
-                <span class="time">{post.timestamp}</span>
                 </div>
+                <CommentSection comments={post.comments}/>
+                <span class="time">{post.timestamp}</span>
             </div>
+
         </div>
-        );
-      })}
-    
-    </div>
+    );
 }
+    
+
 
 
 export default PostContainer;

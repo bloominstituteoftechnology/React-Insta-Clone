@@ -1,23 +1,34 @@
-import React from 'react';
-import dummyData from '../../dummyData';
+import React, {Component} from 'react';
 
-const CommentsSection = props => {
-    return <div>
-    
-    {props.dummyData.map(post=> {
-        return (
-        <div key={post.comments.username + post.comments.text}>
-            {/* anytime we have an array of elements, REACT NEEDS A KEY! for each elem*/}
-            <div class="comment-container">
-                <span class="user-name">{post.comments.username}</span> 
-                <p class="commet"> {post.comments.text}</p>
-            </div>
-            </div>
-        );
-      })}
-    
-    </div>
+export default class CommentSection extends Component {
+
+	constructor(props) {
+		super(props);
+
+		this.state = {
+            comments: [],
+            username: "",
+			Text: ""
+		}
+    }
+
+    componentDidMount() {
+		this.setState({
+			comments: this.props.comments
+		});
 }
 
-
-export default CommentSection;
+render() {
+    return (
+        <div class="comment-container">
+        {this.state.comments.map((comment, index) => {
+            return (
+                <div className="comment-section" key={index}>
+                    <span class="comment-username">{comment.username}</span>
+                    <p class="comment-text">{comment.text}</p>
+                </div>
+            );
+        })}
+        </div>        
+    )}
+}

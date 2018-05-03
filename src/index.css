@@ -7,7 +7,7 @@ body {
 .post-container {
   margin: 0 auto;
   width: 500px;
-  height: 700px;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -33,13 +33,6 @@ body {
   padding-top: 10px;
 }
 
-.user-name2{
-  font-weight: bold;
-  margin-left: 10px;
-  display: flex;
-  flex-direction: row;
-}
-
 .likes {
   font-weight: bold;
   margin-left: 10px;
@@ -60,9 +53,29 @@ body {
 
 .post-bottom {
   width: 500px;
-  height: 100px;
+  height: auto;
   padding-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: start;
+}
+
+.comment-section {
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.comment-username {
+  font-weight: bold;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.comment-text {
+margin-left: 10px;
+word-wrap: normal;
+text-align: left;
 }
