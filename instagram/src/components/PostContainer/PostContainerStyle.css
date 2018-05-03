@@ -1,10 +1,4 @@
 .postContainer {
-    border: 2px lightgray solid;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 700px;
     margin: 20px 0;
     }
 
@@ -17,12 +11,12 @@
 .thumbnail {
     border-radius: 50%;
     height: 60%;
-    margin: 12px;
+    margin: 15px;
 }
 
 .username {
     font-weight: bold;
-    align-self: center;
+    margin-top: 22px;
     font-size: 1.4rem;
 }
 
@@ -30,14 +24,26 @@
     width: 100%;
 }
 
+.postNav {
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+}
+
+.postNav img {
+    margin: 15px;
+    height: 100%;
+}
+
 .likes {
-    margin: 20px 0 0 20px;
+    margin: 25px 0 0 20px;
     font-size: 1.4rem;
 }
 
 .addComment {
-    height: 40px;
+    height: 60px;
     margin: 0 20px;
     border: none;
     border-top: 1px lightgray solid;
+    font-size: 1.4rem;
 }

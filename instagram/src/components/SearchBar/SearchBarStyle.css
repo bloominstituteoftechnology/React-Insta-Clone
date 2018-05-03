@@ -1,6 +1,6 @@
 .SearchBar {
     display: flex;
-    width: 90%;
+    width: 100%;
     max-width: 1000px;
     height: 50px;
     margin-top: 10px;
@@ -15,13 +15,13 @@
 
 .instagramLogo {
     height: 100%;
-    border-right: solid gray 2px;
-    padding-right: 30px;
+    border-right: solid gray 1px;
+    padding-right: 20px;
 }
 
 .instagramCursive {
-    height: 100%;
-    padding-left: 18px;
+    height: 150%;
+    padding: 5px 0 0 15px;
 }
 
 .search {
@@ -35,5 +35,14 @@
 }
 
 .quickNav {
-    margin-top: 15px;
+    display: flex;
+    min-width: 120px;
+    height: 21px;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.quickNav img {
+    width: auto;
+    height: 100%;
 }
