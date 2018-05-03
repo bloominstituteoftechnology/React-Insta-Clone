@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       comment: "",
+      search: "",
       data: [],
     };
     this.updateDataText = this.updateDataText.bind(this);
@@ -16,6 +17,23 @@ class App extends Component {
 
   componentDidMount = () => {
     this.setState({ data: dummyData });
+  }
+
+  filterPosts = () => {
+    let query = this.state.search;
+    let postArray = [ ...this.state.data ];
+
+    postArray = postArray.filter(element => element.username.includes(query));
+    
+    return postArray.map((post) => {
+      return (<PostContainer 
+        key={post.id} 
+        data={post} 
+        state={this.state}
+        addCom={(e) => this.addComment(e, post.id)}
+        update={this.updateDataText}  
+      />
+    )});
   }
 
   updateDataText = e => {
@@ -27,14 +45,14 @@ class App extends Component {
       username: "mister-corn",
       text: this.state.comment,
     }
-    console.log("addComment e.target ", e.target);
-    console.log("addComment id ", id);
+    // console.log("addComment e.target ", e.target);
+    // console.log("addComment id ", id);
 
     const postIndex = this.state.data.findIndex(p => p.id === id);
     const post = { ...this.state.data[postIndex] }
-    console.log("addComment post ", post);
+    // console.log("addComment post ", post);
     post.comments = [...post.comments, newComment];
-    console.log("addcoment post+NewComment ", post.comments);
+    // console.log("addcoment post+NewComment ", post.comments);
     
     const posts = [ ...this.state.data ];
     posts[postIndex] = post;
@@ -46,16 +64,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        { this.state.data.map((post) => {
-          return <PostContainer 
-            key={post.id} 
-            data={post} 
-            state={this.state}
-            addCom={(e) => this.addComment(e, post.id)}
-            update={this.updateDataText}  
-          />
-        }) }
+        <SearchBar
+          filter={this.filterPosts}
+          state={this.state} 
+          update={this.updateDataText}
+        />
+        { this.filterPosts() }
       </div>
     );
   }
