@@ -7,7 +7,7 @@ class PostContainer extends Component {
         super(props);
     }
     render() {
-        console.log("props", this.props)
+        // console.log("props", this.props)
         return (
             <div className="container socialCard">
                 <div className="row">

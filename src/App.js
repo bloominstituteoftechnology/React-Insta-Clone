@@ -10,20 +10,37 @@ class App extends Component {
     super(props);
     this.state = {
       data: [],
+      filteredData: [],
+      search: ''
     };
   }
   componentDidMount() {
     // taking people, from people.js
     // calling setState to add people to our friends array.
     // ANY type of data fetching, SHOULD exist inside of CDM
-    this.setState({ data: dummyData });
+    this.setState({ data: dummyData, filteredData: dummyData });
+
     console.log("didMount", this.state)
   }
+
+  handleNewItem = event => {
+    this.setState({ [event.target.name]: event.target.value })
+    let query = this.state.search;
+    let postArray = [...this.state.data];
+    console.log(postArray[0].username)
+    postArray = postArray.filter(element => element.username.includes(query));
+    this.setState({ filteredData: postArray })
+  }
+
+  filterPosts = (e) => {
+    e.preventDefault();
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar xor={this.state.data} />
-        {this.state.data.map((element) => {
+        <SearchBar xor={dummyData} filter={this.filterPosts} handle={this.handleNewItem} />
+        {this.state.filteredData.map((element) => {
           console.log(element)
           return <PostContainer data={element} />
         })}
