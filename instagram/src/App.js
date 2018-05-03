@@ -2,19 +2,8 @@ import React, {Component} from 'react';
 import './App.css';
 import PostContainer from './components/PostContainer/PostContainer.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
-import data from './dummy-data.js';
 
 class App extends Component {
-    constructor() {
-      super()
-        this.state = {
-            data: data
-        }
-    }
-
-    componentDidMount() {
-        this.setState({data: data});
-    }
 
     render() {
         return (
@@ -26,4 +15,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default App; 

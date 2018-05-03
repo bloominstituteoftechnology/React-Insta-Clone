@@ -3,7 +3,7 @@ import './PostContainer.css';
 import heart from '../assets/heart.png';
 import comment from '../assets/comment.png';
 import CommentSection from '../CommentSection/CommentSection.js';
-import data from '../../dummy-data.js';
+import data from '../../dummy-data.js'; 
 
 class PostContainer extends React.Component {
     constructor() {
@@ -20,11 +20,18 @@ class PostContainer extends React.Component {
 
     componentDidMount() {
         this.setState({
+            thumbnailUrl: data.map(i => i.thumbnailUrl),
+            username: data.map(i => i.username),
+            imageUrl: data.map(i => i.imageUrl),
+            likes: data.map(i => i.likes),
+            timestamp: data.map(i => i.timestamp),
             comments: data.map(i => i.comments)
         });
     }
     render() {
         return (
+            data.map(i => { 
+                return (
 
             <div className="post">
                 <div className="post-header">
@@ -47,6 +54,8 @@ class PostContainer extends React.Component {
                     </form>
                 </div>
             </div>
+                );
+            })
         );
     }
 }
