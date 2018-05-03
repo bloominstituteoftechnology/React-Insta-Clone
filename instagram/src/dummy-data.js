@@ -1,4 +1,5 @@
-const dummyData = [
+const dummyData = [ //array of objects
+    
     {
         username: "philzcoffee",
         thumbnailUrl:  'https://instagram.fbna1-1.fna.fbcdn.net/vp/31c45306e6ca815b8c59940aed10cedc/5B2D3C88/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
@@ -18,8 +19,8 @@ const dummyData = [
                 username: "martinseludo",
                 text: "Can't wait to try it!"
             }
-        ]
-    },
+        ]//array of comments
+    },//object
     {
         username: "twitch",
         thumbnailUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/81f608ddb76a034e06c0d1669e7e2b48/5B35C840/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
