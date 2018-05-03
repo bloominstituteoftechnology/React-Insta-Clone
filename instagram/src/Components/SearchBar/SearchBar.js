@@ -8,20 +8,19 @@ import './SearchBar.css';
 const SearchBar = props => {
     return (
     <div className = "container">
-        <div className = "navBarWrapper">
-            <img className = "instaNotGramLogoIcon" src = {icon_instagram_2} alt = "InstaNotGramIcon"/>
-            <div className = "SearchandTextLogo">
+        <img className = "instaNotGramLogoIcon" src = {icon_instagram_2} alt = "InstaNotGramIcon"/>
+        <div className = "SearchandTextLogo">
             <img className = "instaNotGramLogoText" src = {instagram_logo} alt = "InstaNotGramTextLogo"/>
             <input className = "searchBarInput" type ="text" placeholder = "Search here"/>
-            </div>
-            <div className = "icons">
-            <img className = "instagramIcon" src = {instagram_compass} alt = "InstaNotGramCompass"/>
-            <img className = "instagramIcon" src = {like} alt = "InstaNotGramHeart"/>
-            <img className = "instagramIcon" src = {person} alt = "InstaNotGramPerson"/>
-            </div>
-            {/* icons */}
         </div>
-        {/* //navBarWrapper */}
+        
+        <div className = "icons">
+            <img className = "instagramIcon compass" src = {instagram_compass} alt = "InstaNotGramCompass"/>
+            <img className = "instagramIcon likes" src = {like} alt = "InstaNotGramHeart"/>
+            <img className = "instagramIcon person" src = {person} alt = "InstaNotGramPerson"/>
+        </div>
+            {/* icons */}
+    
     </div>//container
     )
 }

@@ -7,7 +7,7 @@ const CommentSection = props => {
         
         props.data.map((obj) => {
             return (
-                <div class = "commentwrapper" key={obj.timestamp}>
+                <div className = "commentwrapper" key={obj.timestamp}>
                     
                 </div>
             );

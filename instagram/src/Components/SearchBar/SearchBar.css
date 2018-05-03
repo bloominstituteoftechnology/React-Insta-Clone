@@ -1,24 +1,40 @@
-.container{
-
-}
-.navBarWrapper{
-
-}
 .instaNotGramLogoIcon{
-
+    display: inline-block;
+    max-block-size: 2.5rem;
+    padding-top:.5rem
 }
-.SearchandTextLogo{
 
-}
 .instaNotGramLogoText{
-
+    display: inline-block;
+    max-block-size: 4rem;
+    
 }
+
 .searchBarInput{
-
+    display:inline-block;
+    max-block-size: 4rem;
+    padding-left: 2rem;
+    margin-left:2rem;
+    border: 1px solid gray;
 }
+
 .icons{
+    width:25%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    padding-top: 1rem;
 
 }
 .instagramIcon{
+    display: inline-flex;
+    max-block-size: 2rem;
+}
+
+.container{
+    display:flex;
+    justify-content: space-between;
     
+}
+.SearchAndTextLogo{
+    width: 25%;
 }

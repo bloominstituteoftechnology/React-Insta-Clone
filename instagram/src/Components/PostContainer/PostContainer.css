@@ -1,33 +1,8 @@
-.postwrapper{
-    max-width:1200px;
-    width: 100%;
-    display: block;
-    margin-left:25%;
+.like{
+    display: inline;
+    max-block-size: 2rem;
 }
-.profileAndUsername{
-    background-color: whitesmoke;
-    width: 50%;
-    height: 40px;
-    display: flex;
-
-    
+.comment{
+    display: inline;
+    max-block-size: 3rem;
 }
-.profilePic{
-    border-radius: 50%;
-    width: 40px;
-    margin-right: 20px;
-
-}
-.userhandle{
-    font-weight:bold;
-
-
-}
-.postImg{
-    width:50%;
-    margin-right:50%;
-    box-sizing: border-box;
-
-}
-
-
