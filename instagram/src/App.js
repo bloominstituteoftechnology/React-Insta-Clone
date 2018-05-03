@@ -14,7 +14,7 @@ class App extends Component {
     super(props);
     this.state = {
       inputValue: '',
-      dummyData: [...dummyData]
+      dummyData: []
     };
   }
 
@@ -24,6 +24,12 @@ class App extends Component {
       inputValue: e.target.value
     });
   };
+
+  componentDidMount() {
+    this.setState({
+      dummyData: [...dummyData]
+    });
+  }
   
   render() {
     return (
