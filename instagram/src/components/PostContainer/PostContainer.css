@@ -1,0 +1,34 @@
+.post {
+    width: 70%;
+}
+
+.each-post {
+    border: 1px solid grey;
+}
+
+.post-head {
+    display:flex;
+    margin: 20px;
+}
+
+.post-thumbnail{
+    width: 2.5rem;
+    border-radius: 50px;
+}
+
+.post-username{
+    align-self: center;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+
+.post-images {
+    max-width: 100%;
+}
+
+.timestamp {
+    margin-top: 2%;
+    font-size: .75rem;
+    text-transform: uppercase;
+}

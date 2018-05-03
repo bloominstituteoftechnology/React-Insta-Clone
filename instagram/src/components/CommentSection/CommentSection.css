@@ -1,0 +1,10 @@
+.user{
+    font-weight: bold;
+    display:inline;
+}
+
+.text{
+    font-weight: normal;
+    margin-left: 10px;
+    display:inline;
+}
