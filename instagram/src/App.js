@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import CommentSection from './Components/CommentSection/CommentSection';
+
 import PostContainer from './Components/PostContainer/PostContainer';
 import SearchBar from './Components/SearchBar/SearchBar';
 import dummyData from './dummy-data';
@@ -22,8 +21,7 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
-        <CommentSection />
-        <PostContainer />
+        {this.state.myData.map((post, index) => <PostContainer key={index} post={post} />)}
 
       </div>
 
