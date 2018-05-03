@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-
+import { Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button, ListGroup, ListGroupItem } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
+import './CommentSection.css';
 export default class CommentSection extends Component {
 
 	constructor(props) {
@@ -23,10 +26,12 @@ render() {
         <div class="comment-container">
         {this.state.comments.map((comment, index) => {
             return (
-                <div className="comment-section" key={index}>
+                <ListGroup className="Col" key={index}>
+                    <ListGroupItem class="comment-section">
                     <span class="comment-username">{comment.username}</span>
                     <p class="comment-text">{comment.text}</p>
-                </div>
+                    </ListGroupItem>
+                </ListGroup>
             );
         })}
         </div>        

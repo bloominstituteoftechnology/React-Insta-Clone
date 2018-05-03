@@ -1,0 +1,22 @@
+.comment-section {
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .comment-username {
+    font-weight: bold;
+    margin-left: 10px;
+    display: flex;
+    
+  }
+  
+  .comment-text {
+  margin-left: 10px;
+  word-wrap: break-word;
+  text-align: left;
+  display: flex;   
+    
+  
+  }

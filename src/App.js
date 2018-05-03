@@ -4,6 +4,9 @@ import './App.css';
 import {dummyData} from './dummyData';
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Container, Row, Col, ListGroup } from 'reactstrap';
 
 
 class App extends Component {
@@ -21,11 +24,9 @@ class App extends Component {
 
 
     search(user) {
-          const searchPosts = this.state.dummyData.filter(post => post.username.includes(user));
-          this.setState({
-            dummyData: searchPosts,
-          });
-        }
+      const searchPosts = this.state.dummyData.filter(post => post.username.includes(user));
+        this.setState({ dummyData: searchPosts });
+    }
 
         
 
@@ -34,9 +35,10 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <SearchBar posts={this.state.dummyData} search={this.search} init={this.initialState} />
+          <SearchBar className="search" posts={this.state.dummyData} search={this.search} />
         </header>
-        <p className="App-intro">Instagram Clone!</p>
+        
+        
         <div className="Posts">
         {this.state.dummyData.map((post, index) => {
           return (
