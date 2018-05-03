@@ -17,6 +17,7 @@
     /* margin-right: 30px; */
     border: none;
     border-top: 1px solid lightgray;
+    margin-top: 10px;
 }
 
 input::placeholder {
@@ -30,6 +31,7 @@ input::placeholder {
     font-weight: bold;
     border-top: 1px solid lightgray;
     padding-top: 15px;
+    margin-top: 10px;
 }
 
 .comment-icons {
@@ -44,17 +46,24 @@ input::placeholder {
 }
 
 .bookmark {
-    margin-left: 550px;
+    float: right;
+    margin-right: 10px;
 }
 
 .comment-container {
     display: flex;
 }
 
-.likes{
+.likes {
     text-align: start;
     font-size: 15px;
     margin-left: 10px;
     font-weight: bold;
     margin-bottom: 8px;
+}
+
+.moment {
+    margin-right: 410px;
+    font-size: 12px;
+    color: gray;
 }
