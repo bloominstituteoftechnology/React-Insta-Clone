@@ -13,6 +13,7 @@ const SearchBar = () => {
             <span>
                 <i class="far fa-compass"></i>
                 <i class="far fa-heart heart"></i>
+                <i class="far fa-user user"></i>
             </span>
         </div>
     )

@@ -20,9 +20,11 @@ class CommentSection extends Component {
     handleUpdateLikes = (e) => {
         let x = e.target;
         e.target.style.color = "red";
-        setInterval((e) => {return x.style.color = "black"},500)
+        // setInterval((e) => {return x.style.color = "black"},500)
+
         this.setState({Arr: this.state.Arr.map((num) => {return num + 1})})
-    }
+        
+        }
     
     render() {
         
