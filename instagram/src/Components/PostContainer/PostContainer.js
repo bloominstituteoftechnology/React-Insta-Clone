@@ -13,8 +13,13 @@ class PostContainer extends Component {
       imageUrl: props.post.imageUrl,
       likes: props.post.likes,
       comments: props.post.comments,
-      timestamp: props.post.timestamp
+      timestamp: props.post.timestamp,
+      comment: ""
     }
+  }
+
+  handleCommentType(event) {
+    this.setState({ comment: event.target.value });
   }
 
   render() {
@@ -33,7 +38,7 @@ class PostContainer extends Component {
             <CardText>{this.state.timestamp}</CardText>
           </CardBody>
           <InputGroup>
-            <Input />
+            <Input onChange={this.handleCommentType.bind(this)} />
             <InputGroupAddon addonType="append">
             <InputGroupText>Comment</InputGroupText>
             </InputGroupAddon>
