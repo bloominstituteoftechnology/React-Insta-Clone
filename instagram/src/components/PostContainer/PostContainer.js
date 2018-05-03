@@ -19,16 +19,31 @@ class PostContainer extends Component {
     };      
   }
 
-  handleNewComment = () => {
-
+  handleNewComment = event => {
+    this.setState({ [event.target.name]: event.target.value });
   }
+
+  handleSubmit = (e) => {
+    // console.log(e.keyCode)
+    if(e.keyCode === 13){
+      // console.log('Yes Captain?')
+      const comments = this.state.comments.slice();
+      const newComment = {
+        username: "King_Ding",
+        text: this.state.newComment,
+      };
+      comments.push(newComment);
+      this.setState({comments, newComment: ""});
+    }
+  }
+
   // I don't think i need to do this?
   // componentDidMount() {
   //   this.setState({ post: this.props })
   // }
   
   render() {
-    console.log("This is the prop: ",this.props.posts.comments);
+    // console.log("This is the prop: ",this.props.posts.comments);
     // console.log("This is the post in state: ",this.state);
 
     return(
@@ -42,11 +57,11 @@ class PostContainer extends Component {
           />
         <div>
         <input
-          name="comments"
+          name="newComment"
           onChange={this.handleNewComment}
           value={this.state.newComment}
           placeholder="Add a comment..."
-
+          onKeyDown={this.handleSubmit}
         />
         </div>
       </div>
