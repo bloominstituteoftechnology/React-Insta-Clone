@@ -58,9 +58,3 @@ export default class Example extends React.Component {
         );
     }
 }
-
-
-// const Searchbar = props => <div>buuu</div>;
-
-
-// export default Searchbar;
