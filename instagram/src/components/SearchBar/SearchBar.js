@@ -13,11 +13,13 @@ const SearchBar = (props) => {
         <i className="fab fa-instagram fa-3x"></i>
         <img src={logo} alt="Instagram" />
       </div>
-      <input id="search" 
-        name="search" 
-        type="search" 
-        placeholder="Search..." 
-      />
+        <input id="search" 
+          name="search" 
+          type="search"
+          placeholder="Search..."
+          value={props.state.search}
+          onChange={props.update} 
+        />
       <div className="d-flex justify-content-between search-icons">
         <i className="far fa-compass fa-lg"></i>
         <i className="far fa-heart fa-lg"></i>

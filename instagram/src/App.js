@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       comment: "",
+      search: "",
       data: [],
     };
     this.updateDataText = this.updateDataText.bind(this);
@@ -27,14 +28,14 @@ class App extends Component {
       username: "mister-corn",
       text: this.state.comment,
     }
-    console.log("addComment e.target ", e.target);
-    console.log("addComment id ", id);
+    // console.log("addComment e.target ", e.target);
+    // console.log("addComment id ", id);
 
     const postIndex = this.state.data.findIndex(p => p.id === id);
     const post = { ...this.state.data[postIndex] }
-    console.log("addComment post ", post);
+    // console.log("addComment post ", post);
     post.comments = [...post.comments, newComment];
-    console.log("addcoment post+NewComment ", post.comments);
+    // console.log("addcoment post+NewComment ", post.comments);
     
     const posts = [ ...this.state.data ];
     posts[postIndex] = post;
@@ -46,7 +47,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar
+          state={this.state} 
+          update={this.updateDataText}
+        />
         { this.state.data.map((post) => {
           return <PostContainer 
             key={post.id} 

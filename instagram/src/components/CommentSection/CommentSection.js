@@ -26,6 +26,7 @@ const CommentSection = props => {
       <div className="comment-input d-flex align-items-center">
         <form onSubmit={(e) => {
           e.preventDefault();
+          // console.log(props.state.comment);
           props.addCom(e);
         }}>
           <input 
@@ -34,7 +35,7 @@ const CommentSection = props => {
             type="text" 
             className="mx-2 mt-3" 
             placeholder="Add a comment"
-            value={props.state.char} 
+            value={props.state.comment} 
             onChange={props.update}
           />
         </form>
