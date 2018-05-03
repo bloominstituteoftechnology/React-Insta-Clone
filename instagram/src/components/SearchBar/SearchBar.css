@@ -1,0 +1,21 @@
+.searchBar {
+    display: flex;
+    width: 100%;
+    max-width: 880px;
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+}
+.logo {
+    width: 5%;
+    height: 5%;
+    margin: 5px;
+}
+.word {
+    width: 10%;
+    height: 10%;
+    padding-top: 2%;
+    margin-left: 2%;
+}
+.inputBar {
+    margin: 2%;
+}
