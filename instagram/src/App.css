@@ -1,3 +1,13 @@
+/************
+** GENERAL **
+************/
+.btn {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-weight: bold;
+}
+
 /*******************
 ** POST CONTAINER **
 *******************/
@@ -11,5 +21,5 @@
 }
 
 .postcontainer__new-comment-input {
-  border: 0;
+  border: none;
 }
