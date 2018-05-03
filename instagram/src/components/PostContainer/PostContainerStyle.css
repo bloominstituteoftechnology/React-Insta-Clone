@@ -1,0 +1,43 @@
+.postContainer {
+    border: 2px lightgray solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    margin: 20px 0;
+    }
+
+.user {
+    display: flex;
+    height: 60px;
+    padding: 0px;
+}
+
+.thumbnail {
+    border-radius: 50%;
+    height: 60%;
+    margin: 12px;
+}
+
+.username {
+    font-weight: bold;
+    align-self: center;
+    font-size: 1.4rem;
+}
+
+.postImage {
+    width: 100%;
+}
+
+.likes {
+    margin: 20px 0 0 20px;
+    font-size: 1.4rem;
+}
+
+.addComment {
+    height: 40px;
+    margin: 0 20px;
+    border: none;
+    border-top: 1px lightgray solid;
+}
