@@ -1,17 +1,17 @@
 import React from 'react';
+import { Row } from 'reactstrap';
 import './CommentSection.css';
+import '../PostContainer/PostContainer.js'
 
 const CommentSection = props => {
-    console.log("PROPS: ", props);
     return (
-        
-        props.data.map((obj) => {
-            return (
-                <div className = "commentwrapper" key={obj.timestamp}>
-                    
-                </div>
-            );
-        })
-    );        
-}
+        <Row>
+            <span>{props.username}</span>
+            <span>{props.comment}</span>
+            
+        </Row>
+    )};
+    
+
+            
 export default CommentSection;

@@ -5,6 +5,8 @@ import like from '../../assets/like.png';
 import person from '../../assets/person.png';
 import instagram_compass from '../../assets/instagram_compass.jpg';
 import './SearchBar.css';
+import dummyData from '../../dummy-data';
+
 const SearchBar = props => {
     return (
     <div className = "container">
