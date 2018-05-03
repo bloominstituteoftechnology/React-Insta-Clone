@@ -1,31 +1,33 @@
 //Start
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { dummyData } from './dummy-data.js';
-import { UserList } from './UserList.js';
+import dummyData from './dummy-data.js';
+import SearchBar from './components/SearchBar/SearchBar.js';
+import PostContainer from './components/PostContainer/PostContainer.js';
 
 
 
 class App extends Component {
+
   constructor() {
     super();
     this.state = {
-      dummyData: []
+       dummyData: []
     }
   }
 
   componentDidMount() {
-    this.setState({ dummyData: dummyData });
+    this.setState({ dummyData });
+
   }
 
   render() {
     return (
       <div className="App">
-        <header>
-          <h1>Instagram</h1>
-        </header>
-        <UserList dummyData={this.state.dummyData} />
+      {this.state.dummyData.map((post) => 
+        { return( <PostContainer post={post} />) }
+      )}
+      <SearchBar />
       </div>
     );
   }
