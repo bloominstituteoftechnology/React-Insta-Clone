@@ -1,15 +1,20 @@
 
-
-.card {
+.postContainer {
     width: 100%;
 	max-width: 600px;
-    margin: 0 auto;
-    border: solid red;
+    margin: 20px auto;
+    padding: 5px;
+    border: solid lightgray;
+}
+
+
+.card {
+    
     display:flex;
     flex-flow: row wrap;
 
 }
-
+ 
 .card .icon-container {
     height: 60px;
     
@@ -27,4 +32,9 @@
 .card .logo {
     height: 100%;
     border-radius: 50%;
+}
+
+.card .fadedText{
+    color: lightgray;
+    font-size: 12px;
 }
