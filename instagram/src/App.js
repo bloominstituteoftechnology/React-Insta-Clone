@@ -4,6 +4,7 @@ import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer.js';
 // import CommentSection from './components/CommentSection/CommentSection.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
+import PostHeader from './components/PostHeader/postheader.js';
 import './App.css';
 
 class App extends Component {
@@ -13,8 +14,9 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="App">
         <SearchBar />
+        <PostHeader posterHead={dummyData} />
         <PostContainer instaPost={dummyData} />
       </div>
     );
