@@ -3,6 +3,7 @@
     font-size: 30px;
     display: flex;
     justify-content: space-between;
+    margin-top: 15px;
 }
 
 .header-title {
@@ -21,7 +22,7 @@
     background-position: 90px;
     background-size: 15px;
     background-color: #f2f4f7;
-    margin-right: 150px;
+    margin-right: 170px;
 }
 
 .camera {
@@ -37,5 +38,5 @@
 
 .line {
     margin-right: 15px;
-    color: lightgray;
+    color: gray
 }
