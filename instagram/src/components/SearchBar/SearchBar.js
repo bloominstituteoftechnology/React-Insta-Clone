@@ -17,13 +17,13 @@ class SearchBar extends React.Component {
             <em>Instagram</em>
           </div>
         </div>
-        <div class="main-search">
+        <div className="main-search">
           <input
           type="text"
           placeholder="search"
           />
         </div>
-        <div class="sub-icon">
+        <div className="sub-icon">
           <span>&spades; </span>
           <span>&clubs; </span>
           <span>&diams;</span>

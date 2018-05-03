@@ -31,7 +31,23 @@ class PostContainer extends React.Component {
                   {tweet.likes} likes
                 </div>
               </section>
-              <CommentSection comments={tweet.comments} addComment={this.props.addComment}/>
+              <CommentSection
+                comments={tweet.comments}
+
+                allTweets={this.props.tweets}
+                />
+              <input
+                onChange={(e) => this.props.addComment(e)}
+                value={this.props.inputPostComment}
+                type="text"
+                placeholder="Add Comment"
+                className="input-comment"
+              />
+              <button
+                onClick={() => this.props.postComment(index)}
+              >
+                Post Comment
+                </button>
               </div>
               )
           })}

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import dummyData from "./dummy-data";
 import PostContainer from "./components/PostContainer/PostContainer";
@@ -11,16 +10,32 @@ class App extends Component {
     super();
 
     this.state = {
-      tweets: []
+      tweets: [],
+      comment: ""
     }
   }
 
-  handleAddComment(index) {
-    alert("testing");
+  handleAddComment(e) {
+    this.setState({
+      comment: e.target.value
+    })
+  }
+
+  handleSubmitComment(index) {
+    let newComment = this.state.comment;
+    let tempArray = this.state.tweets.slice();
+    let commentObj = {
+      username: "Wonder Boy",
+      text: newComment
+    };
+
+    tempArray[index].comments.push(commentObj);
+
+    this.setState({tweets: tempArray, comment: ""})
   }
 
   handleLike(index) {
-    let tempArray = this.state.tweets;
+    let tempArray = this.state.tweets.slice();
     tempArray[index].likes ++;
     this.setState({
       tweets: tempArray
@@ -38,7 +53,11 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer pressLike={this.handleLike.bind(this)} tweets={this.state.tweets} addComment={this.handleAddComment.bind(this)}/>
+        <PostContainer
+          pressLike={this.handleLike.bind(this)}
+          postComment={this.handleSubmitComment.bind(this)}
+          tweets={this.state.tweets}
+          addComment={this.handleAddComment.bind(this)}/>
       </div>
     );
   }
