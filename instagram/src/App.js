@@ -18,18 +18,18 @@ class App extends Component {
   }
 
   gramSearch(e) {
-    let Grams = dummyData;
+    let grams = dummyData;
     let queryItems = e.target.value;
     let tempArray = this.state.grams.slice();
       queryItems = queryItems.trim();
       tempArray = tempArray.filter((item) => item.username.includes(queryItems));
     if(queryItems === "") {
       this.setState({
-        grams: allGrams
+     
       })
     } else {
       this.setState({
-        tweets: tempArray,
+        grams: tempArray,
         search: queryItems
       });
     }
@@ -43,7 +43,7 @@ class App extends Component {
 
   gramSubmitComment(index) {
     let newComment = this.state.comment;
-    let tempArray = this.state.Grams.slice();
+    let tempArray = this.state.grams.slice();
     let commentObj = {
       username: "Wonder Boy",
       text: newComment
@@ -55,7 +55,7 @@ class App extends Component {
   }
 
   gramLike(index) {
-    let tempArray = this.state.Grams.slice();
+    let tempArray = this.state.grams.slice();
     tempArray[index].likes ++;
     this.setState({
       grams: tempArray
@@ -63,9 +63,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    let allGrams = dummyData.slice();
+    let allgrams = dummyData.slice();
     this.setState({
-      Grams: allGrams
+      grams: allgrams
     });
   }
 
@@ -74,14 +74,14 @@ class App extends Component {
       <div className="App">
         <div className="fixed-top">
           <SearchBar
-            search={this.handleSearch.bind(this)}
+            search={this.gramSearch.bind(this)}
           />
         </div>
         <div className="container main-content">
           <PostContainer
             pressLike={this.gramLike.bind(this)}
             postComment={this.gramSubmitComment.bind(this)}
-            Grams={this.state.Grams}
+            grams={this.state.grams}
             commentInput={this.state.comment}
             addComment={this.gramAddComment.bind(this)}
             />

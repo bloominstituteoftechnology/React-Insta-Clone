@@ -22,16 +22,16 @@ class PostContainer extends React.Component {
         <div className="post-container">
   
           <div className="row">
-            {this.props.Grams.map((Grams, index) => {
+            {this.props.grams.map(( grams, index) => {
               return (
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                   < Card key={index} className="post-wrapper">
                   <section className="user-thumb">
-                    <img src={instagram.thumbnailUrl} />
-                    <CardTitle>{Grams.username}</CardTitle>
+                   
+                    <CardTitle>{grams.username}</CardTitle>
                   </section>
                   <section className="main-img">
-                    <CardImg src={Grams.imageUrl} />
+                    <CardImg src={grams.imageUrl} />
                   </section>
                   <div className="likes-comment">
                     <section className="likes">
@@ -40,15 +40,15 @@ class PostContainer extends React.Component {
                           <span><strong>&loz;</strong></span>
                       </div>
                       <div>
-                        {Grams.likes} likes
+                        {grams.likes} likes
                       </div>
                     </section>
                     <CommentSection
-                      comments={Grams.comments}
+                      comments={grams.comments}
                       />
                     <InputGroup>
                     <Input
-                      onChange={(e) => this.handleCommentInput(e)}
+                      onChange={(e) => this.gramCommentInput(e)}
                       value={this.props.commentInput}
                       type="text"
                       placeholder="Add Comment"
