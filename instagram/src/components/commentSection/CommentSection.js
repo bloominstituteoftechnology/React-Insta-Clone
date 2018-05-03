@@ -1,9 +1,8 @@
-import React, { Component }from 'react';
-import SearchBar from './components/SearchBar/SearchBar';
+// import React, { Component }from 'react';
+// import SearchBar from './components/SearchBar/SearchBar';
 
-class CommentSection extends Component {
-    constructor() {
-        super();
-        
-    }
-}
+// class CommentSection extends Component {
+//     constructor() {
+//         super();
+//     }
+// }
