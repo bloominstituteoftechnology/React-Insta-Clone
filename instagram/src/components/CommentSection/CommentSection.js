@@ -9,7 +9,7 @@ class CommentSection extends React.Component {
         };
     }
     render(){
-        return 
+        return null;
     }
 }
 

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer.js';
 // import CommentSection from '.components/CommentSection.js';
-// import SearchBar from './SearchBar';
+import SearchBar from './components/Searchbar/SearchBar.js';
 import './App.css';
 
 class App extends Component {
@@ -14,7 +14,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <PostContainer postList={dummyData} />
+        <SearchBar />
+        <PostContainer instaPost={dummyData} />
       </div>
     );
   }

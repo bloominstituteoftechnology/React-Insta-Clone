@@ -9,7 +9,7 @@ const Post = props =>{
 const PostContainer = props =>{
     return (
         <div>
-            {props.postList.map((postData, index) => {
+            {props.instaPost.map((postData, index) => {
                 return (
                     <Post key={index} postData={postData} />
                 );
