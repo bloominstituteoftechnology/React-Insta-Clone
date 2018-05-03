@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+i {
+font-size: 25px;
+}
+
+.search {
+  border: 1px solid lightslategray;
+  height: 26px;
+  display: flex;
+}
+
+.search input[type="text"] {
+  background: none;
+  border:0 none;
+  height: 1.7em;
+  line-height: 1.7em;
+  float: left;
+  margin: 0;
+  width: 180px;
+}
+
+.search input[placeholder] {
+  text-align: center;
+  font-size: 14px;
+}
+
+.search input[type="submit"] {
+  background: #CCCCCC;
+  border: 0 none;
+  height: 1.5em;
+  line-height: 1.5em;
+  margin: 0;
+  text-indent: 100px;
+  width: 20px;
+}
+
+.instagramlogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 200px;
+  font-family: inherit;
+  font-style: italic;
+}
+
+.accountinfo {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
