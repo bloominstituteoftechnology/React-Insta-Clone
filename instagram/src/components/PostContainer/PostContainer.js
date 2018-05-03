@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import dummyData from './dummy-data';
-import CommentSection from './CommentSection';  
-
+import Post from './Posts.js';
 
 
 class PostContainer extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      posts: props.posts     
+      posts: []
     }; 
   }
 
@@ -17,18 +16,12 @@ class PostContainer extends Component {
   }
 
   render() {
-    return (
+    const { posts } = this.state;
+    return
       <div>
-        {props.posts.map(post => {
-        return (
-        <div key={post.username + post.text}>
-        {post.username} {post.text}
-        </div>
-          );
-        })}
+        {posts.map(post => <Post post={post}/>)};
       </div>
-    );
   }
 }
-
+ 
 export default PostContainer; 
