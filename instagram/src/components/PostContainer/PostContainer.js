@@ -15,7 +15,7 @@ const PostHeader = (props) => {
 const PostContent = (props) => {
   return (
     <div>
-      <img className={props.clImg} src={props.data.imageUrl} alt="Well Image" />
+      <img className={props.clImg} src={props.data.imageUrl} alt="Content" />
       <CommentSection data={props.data} />
     </div>
   );
