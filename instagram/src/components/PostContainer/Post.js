@@ -9,12 +9,19 @@ class Post extends Component {
         super(props)
         this.state = {
             commentInput : "",
-            comments: props.comments
+            comments: props.comments,
+            likes: props.likes
         }
     }
     handleChange = (e) => {
         this.setState({
             [e.target.name] : e.target.value
+        })
+    }
+    handleLike = (currentLikes) => {
+        console.log("here")
+        this.setState({
+            likes: ++currentLikes
         })
     }
     handleSubmit = (e) => {
@@ -27,8 +34,9 @@ class Post extends Component {
         }
     }
     render() {
-        const { username, thumbnailUrl, imageUrl, likes, timestamp } = this.props
-        const { comments, commentInput } = this.state
+        const { username, thumbnailUrl, imageUrl, timestamp } = this.props
+        const { comments, commentInput, likes } = this.state
+        console.log(likes)
         return ( 
         <div>
             <Card>
@@ -40,7 +48,7 @@ class Post extends Component {
                 <CardBody>
                 <div className="reaction">
                     <div className="action">
-                        <CardLink className="hearIcon">Like</CardLink>
+                        <CardLink className="hearIcon" onClick={e => this.handleLike(likes)}>Like</CardLink>
                         <CardLink className="commentIcon">Comment</CardLink>
                     </div>
                     <div className="likes">{likes}</div>
