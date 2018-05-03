@@ -1,4 +1,15 @@
 .App {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .postContainer {
+    width: 75%;
+    margin: 10px auto;
+    padding: 100px;
+  }
+
+{/*.App {
   text-align: center;
 }
 
@@ -25,4 +36,4 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+}*/}

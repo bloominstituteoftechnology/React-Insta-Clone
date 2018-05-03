@@ -1,0 +1,13 @@
+
+.container {
+    display: flex;
+}
+
+
+
+.search {
+    justify-self: center;
+    margin-left: 450px;
+
+}
+
