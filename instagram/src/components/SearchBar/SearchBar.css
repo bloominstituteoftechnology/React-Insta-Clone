@@ -1,9 +1,9 @@
 .search-wrapper {
     border-bottom: 1px solid black;
+    background: white;
 }
 
 .search-bar {
-    background: white;
     padding: 20px;
     display: flex;
     justify-content: space-evenly;
@@ -19,14 +19,14 @@
 }
 
 .search-field {
-    background: rgb(240, 240, 240);
-    border: 1px solid rgb(165, 165, 165);
+    background: rgb(245, 245, 245);
+    border: 1px solid lightgray;
     border-radius: 2px;
     height: 30px;
     width: 50%;
     max-width: 200px;
     text-align: center;
-    color: rgb(165, 165, 165);
+    color: lightgray;
 }
 
 .search-icon {

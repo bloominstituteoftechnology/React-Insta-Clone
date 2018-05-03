@@ -1,0 +1,39 @@
+.post {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    background: white;
+}
+
+.post-header {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-content: left;
+    justify-content: center;
+}
+
+.post-profile {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.post-img {
+    width: 100%;
+}
+
+.post-bottom {
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.icons-wrapper {
+    width: 100%;
+}
+
+.post-icon {
+    height: 25px;
+}
