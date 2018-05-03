@@ -8,16 +8,42 @@ class CommentSection extends Component {
         super(props);
         this.state = {
             likes: props.likes, 
-            Arr: []
+            comments: props.comments,
+            value: "",
+            Arr: [],
+            commentsArr: [] 
         }
+        console.log(this.state.commentsArr)
         // console.log(this.state.Arr)
     }
    
     componentDidMount() {
         this.state.Arr.push(this.state.likes)
-        this.setState({Arr: this.state.Arr})
+        this.state.commentsArr.concat(this.state.comments)
+        this.setState({Arr: this.state.Arr, commentsArr: this.state.comments})
+        // console.log(this.state.commentsArr)
     }
     
+    handleNewComment = (e) => {
+        // e.preventDefault;
+        // let comments = this.state.comments.slice();
+        // comments.concat(e.target.value)
+        // this.setState({comments})
+        // console.log('test')
+
+        this.setState({[e.target.name]: e.target.value});
+
+    }
+
+    handleCommentSubmit = () => {
+        const comments = this.state.comments.slice();
+        const newComment = this.state.value;
+        comments.push(newComment);
+        this.setState({comments: comments, value: ""})
+        // console.log(comments) //array of 3 objects
+    }
+
+
     handleUpdateLikes = (e) => {
         let x = e.target;
         e.target.style.color = "red";
@@ -66,8 +92,10 @@ class CommentSection extends Component {
 
                     <div className="likes">{`${this.state.Arr} likes`}</div>
                     
-                    {this.props.comments.map((comment, index) => {
+                    {this.state.comments.map((comment, index) => {
+                     
                         return (
+                            
                             <div key={comment.username + index} className="comment-username">
                                 {comment.username}
                                 <span className="comment-text" >{comment.text}</span>
@@ -75,7 +103,7 @@ class CommentSection extends Component {
                                 )})}
                     {/* <Moment className="moment"></Moment> */}
                     <div className="comment-container">
-                        <input className="comment-input" type="text" placeholder="Add a comment..."></input><span><button className="commentBtn">...</button></span>
+                       <input onChange={this.handleNewComment} name='value' value={this.state.value} className="comment-input" type="text" placeholder="Add a comment..."></input><span><button onClick={this.handleCommentSubmit} className="commentBtn">...</button></span>
                     </div>
                 </div>
 
