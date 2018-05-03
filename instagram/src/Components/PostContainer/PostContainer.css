@@ -24,13 +24,20 @@
 }
 .numberOfLikes{
     font-weight: bold;
+    margin: 1.3rem;
 }
 .like{
     display: inline;
     max-block-size: 2rem;
+    margin: 1.3rem;
 }
 .comment{
     display: inline;
     max-block-size: 3rem;
+    margin: 1rem;
+}
+
+.timestamp{
+    margin:1.3rem;
 }
 
