@@ -1,0 +1,24 @@
+.post {
+    width: 70%;
+}
+
+.each-post {
+    border: 1px solid grey;
+}
+
+.post-head {
+    display:flex;
+}
+
+.post-thumbnail{
+    width: 2.5rem;
+}
+
+.post-username{
+    align-self: center;
+}
+
+
+.post-images {
+    max-width: 100%;
+}

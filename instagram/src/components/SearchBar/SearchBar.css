@@ -1,0 +1,28 @@
+.head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.left {
+    width: 25%;
+}
+
+.images {
+    width: 2rem;
+}
+
+.images-insta {
+    margin-left: 30%;
+    width: 12%;
+}
+
+.center {
+    width: 50%;
+}
+
+.searchbar {
+    height: 10px;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    }
