@@ -13,7 +13,7 @@ class CommentSection extends Component {
 
 
     componentDidMount() {
-        this.setState({ comments: this.props.commentData, likes: this.props.likesData});
+        this.setState({ comments: this.props.commentData, likes: this.props.likesData });
     }
 
     commentInput = event => {
@@ -27,35 +27,36 @@ class CommentSection extends Component {
             username: 'SleepyViking',
             text: this.state.newComment
         }
-        commentsArray.push(myNewComment);
-        this.setState({ comments: commentsArray })
+        if (myNewComment.text !== '') commentsArray.push(myNewComment);
+        this.setState({ comments: commentsArray, newComment: '' })
     }
 
     render() {
         return (
             <div>
                 <div>
-                    <i class="far fa-heart icon"></i>
-                    <i class="far fa-comment icon"></i>
+                    <i class="far fa-heart margin-left-right icon"></i>
+                    <i class="far fa-comment margin-left-right icon"></i>
                 </div>
-                <p>{this.state.likes} likes</p>
+                <p class='margin-left-right'>{this.state.likes} likes</p>
+
                 {this.state.comments.map(comment => {
                     return (
-                        <div class='container'>
-                            {`${comment.username} : ${comment.text}`}
-
+                        <div class='margin-left-right'>
+                            <b>{`${comment.username}:`}</b> {`${comment.text}`}
                         </div>
                     );
                 })}
 
-                <form onSubmit={this.addComment}>
+                <form class='form' onSubmit={this.addComment}>
                     <input
+                        class='comment-input'
                         name='newComment'
-                        placeholder='add comment'
+                        placeholder='Add a comment as SleepyViking...'
                         value={this.state.newComment}
                         onChange={this.commentInput}
                     />
-                    <button type="submit">Add Comment</button>
+                    <button class='btn btn-primary comment-button' type="submit">Add Comment</button>
                 </form>
             </div>
         );
