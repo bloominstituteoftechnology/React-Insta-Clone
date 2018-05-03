@@ -1,0 +1,13 @@
+
+@import "./components/SearchBar/SearchBar.css";
+ @import "./components/PostContainer/PostContainer.css";
+/* @import "./components/CommentSection/CommentSection.css";  */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
