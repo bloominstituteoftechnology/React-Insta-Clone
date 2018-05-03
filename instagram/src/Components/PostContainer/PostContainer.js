@@ -11,7 +11,7 @@ const PostContainer = (props) => {
         
         props.data.map((obj) => {
             return (
-                <div className = "postwrapper" key={obj.username + obj.thumbnailUrl + obj.imageUrl + obj.likes}>
+                <div className = "postwrapper" key={obj.username + obj.thumbnailUrl + obj.imageUrl + obj.likes +obj.timestamp}>
                     <Card>
                         <div className = "profileAndUsername">
                         <img className = "profilePic" src = {obj.thumbnailUrl} alt = "tmbnl"/>
@@ -29,6 +29,7 @@ const PostContainer = (props) => {
                         <CardSubtitle>goes</CardSubtitle>
                         <CardText>here</CardText>
                         </CardBody>
+                        <div className = 'timestamp'>{obj.timestamp}</div>
                     </Card>
                     
                     
