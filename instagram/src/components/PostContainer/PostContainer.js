@@ -7,16 +7,21 @@ import { Button } from '../misc/Button';
 import { PostComment } from './PostComment';
 import { Input } from '../misc/Input';
 
+// reactstrap components
+import {
+  Card,
+  CardImg
+ } from 'reactstrap';
+
 export const PostContainer = props => {
-  console.log(props);
-  
      return (
         props.dummyData.map((post, ind) => {
           return (
-          <div className="postcontainer">
-            <Image
-              className='postcontainer__profile-image'
-              imgSrc={ post.thumbnailUrl }
+          <Card className="postcontainer">
+          
+            <CardImg
+              className='postcontainer__user-image'
+              src={ post.thumbnailUrl }
             />
             
             <UserName
@@ -70,7 +75,7 @@ export const PostContainer = props => {
               handleButtonOnClick={ () => alert('COMMENT OPTIONS') }
               buttonContent='...'
             />
-          </div>
+          </Card>
           )
         })
   );
