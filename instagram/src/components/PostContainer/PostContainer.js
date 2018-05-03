@@ -2,26 +2,11 @@ import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 
-const PostHeader = (props) => {
-  console.log("Card Logo Header", props);
-  return (
-    <div className={props.clDiv}>
-      <img className={props.clImg} src={props.data.thumbnailUrl} alt="Logo" />
-      <h4>{props.data.username}</h4>
-    </div>
-  );
-};
-
-const PostContent = (props) => {
-  return (
-    <div>
-      <img className={props.clImg} src={props.data.imageUrl} alt="Well Image" />
-      <CommentSection data={props.data} />
-    </div>
-  );
-}
-
 class PostContainer extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   console.log("this.props.update: ", this.props.update);
+  // }
   render() {
     return (
     <div className="container PostContainer">
@@ -31,10 +16,36 @@ class PostContainer extends Component {
       />
       <PostContent clImg={`img-fluid mb-2`} 
         data={this.props.data} 
+        state={this.props.state}
+        addCom={this.props.addCom}
+        update={this.props.update}
       />
     </div>
     );
   }
+}
+
+const PostHeader = props => {
+  return (
+    <div className={props.clDiv}>
+      <img className={props.clImg} src={props.data.thumbnailUrl} alt="Logo" />
+      <h4>{props.data.username}</h4>
+    </div>
+  );
+};
+
+const PostContent = props => {
+  return (
+    <div>
+      <img className={props.clImg} src={props.data.imageUrl} alt="Content" />
+      <CommentSection 
+        data={props.data} 
+        state={props.state}
+        addCom={props.addCom}
+        update={props.update} 
+      />
+    </div>
+  );
 }
 
 export default PostContainer;

@@ -1,0 +1,30 @@
+.search-bar {
+  background-color: white;
+}
+
+.search-bar .fa-instagram {
+  margin-top: 6px;
+  padding: 0 16px;
+  border-right: 1px solid lightgrey;
+}
+
+.search-bar img {
+  width: 190px;
+  height: 64px;
+  margin-top: 8px;
+  padding: 0.25rem;
+}
+
+.search-bar input[type="search"] {
+  width: 33%;
+  height: 32px;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+}
+
+.search-bar .search-icons {
+  width: 12%;
+  padding-right: 16px;
+}
+
