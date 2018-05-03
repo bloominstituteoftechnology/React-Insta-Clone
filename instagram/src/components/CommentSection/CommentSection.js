@@ -1,15 +1,24 @@
 import React from 'react';
+import {Card,
+    CardImg,
+    CardText,
+    CardBody,
+    CardLink,
+    CardTitle,
+    CardSubtitle,
+    CardHeader,
+    InputGroup,
+    InputGroupAddon,
+    InputGroupText,
+    Input } from 'reactstrap';
 
 class CommentSection extends React.Component {
     render(){
         return (
             <div>
-                <div>
-                    {this.props.comment.username}
-                    <span>{this.props.comment.text}</span>
-                </div>
-                <h3>...</h3>
-                
+                <CardText>
+                    <b>{this.props.comment.username}</b> {this.props.comment.text}
+                </CardText>
             </div>
         )
     }

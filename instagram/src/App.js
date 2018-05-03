@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data'
 import PostContainer from './components/PostContainer/PostContainer'
+import SearchBar from './components/SearchBar/SearchBar'
 
 
 class App extends Component {
@@ -31,21 +32,24 @@ class App extends Component {
     // console.log(dummyData);
     // console.log(JSON.stringify(dummyData));
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        {
-          this.state.data.map( (userPosts, i) => (
-            <PostContainer
-              id={i}
-              key={userPosts.username + i}
-              postData={userPosts}
-              addNewPost={this.addNewPost}
-            />)
-          )
-        }        
+      <div className="App container-fluid">
+        <SearchBar className="container" />
+        <div className="container custom-container">
+          <div className="row">
+            {
+              this.state.data.map( (userPosts, i) => (
+                <PostContainer
+                  className="row.12"
+                  id={i}
+                  key={userPosts.username + i}
+                  postData={userPosts}
+                  addNewPost={this.addNewPost}
+                />)
+              )
+            } 
+
+          </div>
+        </div>
       </div>
     );
   }
