@@ -11,7 +11,7 @@ export const PostComment = props => {
       return (
         <div className={props.postCommentContainerClassName}>
           <UserName
-            userNameClassName='postcontainer__comment__username'
+            userNameClassName='font-weight-bold mr-2 postcontainer__comment__username'
             userName={ comment.username }
           />
 

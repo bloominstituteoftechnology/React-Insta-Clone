@@ -6,6 +6,10 @@
   width: 604px;
 }
 
-.postcontainer__user-image {
+.user-info-container__user-image {
   width: 150px;
+}
+
+.postcontainer__new-comment-input {
+  border: 0;
 }

@@ -5,14 +5,16 @@ import { Image } from '../misc/Image';
 import { UserName } from '../misc/UserName';
 // import { Button } from '../misc/Button';
 import { PostComment } from './PostComment';
-import { Input } from '../misc/Input';
+// import { Input } from '../misc/Input';
 
 // reactstrap components
 import {
   Button,
   Card,
   CardImg,
-  CardTitle
+  CardTitle,
+  Input,
+  InputGroup
  } from 'reactstrap';
 
 export const PostContainer = props => {
@@ -54,13 +56,13 @@ export const PostContainer = props => {
           </div>
        
             <div className='postcontainer__likes-container'>
-              <span className='postcontainer__likes-container__likes'>
+              <span className='font-weight-bold postcontainer__likes-container__likes'>
                 {post.likes} likes
               </span>
             </div>
        
             <PostComment
-              postCommentContainerClassName='postcontainer__comment-container'
+              postCommentContainerClassName='d-flex postcontainer__comment-container'
               postCommentClassName='postcontainer__comment'
               postCommentData={ post.comments }
             />
@@ -71,19 +73,26 @@ export const PostContainer = props => {
               </span>
             </div>
 
-            <Input
-              className='postcontainer__new-comment-input'
-              name='new-comment-input'
-              onChange={props.handleInputValueChange}
-              placeholder='Add a comment...'
-              value={props.inputValue}
-            />
+            <hr />
 
-            <Button
-              buttonClassName='postcontainer__comment-options'
-              handleButtonOnClick={ () => alert('COMMENT OPTIONS') }
-              buttonContent='...'
-            />
+            <div className='postcontainer__footer'>
+              <InputGroup>
+                <Input
+                  className='postcontainer__new-comment-input'
+                  name='new-comment-input'
+                  onChange={props.handleInputValueChange}
+                  placeholder='Add a comment...'
+                  value={props.inputValue}
+                />
+
+                <Button
+                  className='postcontainer__comment-options'
+                  onClick={ () => alert('COMMENT OPTIONS') }
+                >
+                  ...
+                </Button>
+              </InputGroup>
+            </div>
           </Card>
           )
         })
