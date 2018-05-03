@@ -1,11 +1,10 @@
 import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
-import { Card, CardImg, CardText, CardBody, CardLink,
-  CardTitle, CardSubtitle } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody,
+  CardTitle } from 'reactstrap';
 
 const PostContainer = (props) => {
-  console.log(props.post.username);
   return (
     <div>
       <Card>
@@ -15,7 +14,8 @@ const PostContainer = (props) => {
         </CardBody>
         <CardImg width="100%" src={props.post.imageUrl} alt="posted image" />
         <CardBody>
-          <p className="post-icons">☭ ♡</p>
+          <CardText className="post-icons">☭ ♡</CardText>
+          <CardText>{props.post.likes} Likes</CardText>
           <CommentSection />
         </CardBody>
       </Card>

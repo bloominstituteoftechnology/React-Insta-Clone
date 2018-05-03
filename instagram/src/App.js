@@ -19,7 +19,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <SearchBar />
         {this.state.myData.map((post, index) => <PostContainer key={index} post={post} />)}
 
