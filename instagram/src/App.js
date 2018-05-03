@@ -20,7 +20,20 @@ class App extends Component {
   }
 
   filterPosts = () => {
+    let query = this.state.search;
+    let postArray = [ ...this.state.data ];
+
+    postArray = postArray.filter(element => element.username.includes(query));
     
+    return postArray.map((post) => {
+      return (<PostContainer 
+        key={post.id} 
+        data={post} 
+        state={this.state}
+        addCom={(e) => this.addComment(e, post.id)}
+        update={this.updateDataText}  
+      />
+    )});
   }
 
   updateDataText = e => {
@@ -52,18 +65,11 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar
+          filter={this.filterPosts}
           state={this.state} 
           update={this.updateDataText}
         />
-        { this.state.data.map((post) => {
-          return <PostContainer 
-            key={post.id} 
-            data={post} 
-            state={this.state}
-            addCom={(e) => this.addComment(e, post.id)}
-            update={this.updateDataText}  
-          />
-        }) }
+        { this.filterPosts() }
       </div>
     );
   }

@@ -13,11 +13,11 @@ const SearchBar = (props) => {
         <i className="fab fa-instagram fa-3x"></i>
         <img src={logo} alt="Instagram" />
       </div>
-      <form onSubmit={}>
+      <form className="search-form">
         <input id="search" 
           name="search" 
           type="search"
-          placeholder="Search..."
+          placeholder="Search"
           value={props.state.search}
           onChange={props.update} 
         />

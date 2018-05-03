@@ -15,12 +15,17 @@
   padding: 0.25rem;
 }
 
-.search-bar input[type="search"] {
+.search-bar .search-form {
   width: 33%;
+}
+
+.search-bar input[type="search"] {
+  width: 100%;
   height: 32px;
   border: 1px solid lightgrey;
   border-radius: 6px;
-  background-color: #f8f8f8;
+  background-color: rgb(238, 238, 238);
+  text-align: center;
 }
 
 .search-bar .search-icons {
