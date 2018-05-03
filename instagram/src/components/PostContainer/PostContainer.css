@@ -10,6 +10,8 @@
     border: 1px solid black;
     margin-bottom: 20px;
     padding: 20px 3px;
+  box-shadow: 5px 7px cornflowerblue;
+  background-color: chartreuse;
   }
   
   .user-thumb {

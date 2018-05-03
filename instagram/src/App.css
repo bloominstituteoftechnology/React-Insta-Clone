@@ -26,3 +26,19 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+body {
+  background: linear-gradient(#5e040a, #20498c);
+  background-repeat: no-repeat;
+  /*background-color: #20498c;*/
+}
+
+.main-content {
+  margin-top: 100px;
+}
+
+@media(max-height) {
+  body {
+    background-color: azure;
+  }
+}

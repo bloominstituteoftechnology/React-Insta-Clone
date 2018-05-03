@@ -1,5 +1,10 @@
 import React from 'react';
 import './CommentSection.css';
+
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from 'reactstrap';
+
+
 class CommentSection extends React.Component {
     constructor() {
       super();

@@ -1,4 +1,8 @@
 .input-comment {
     width: 100%;
     background-color: azure
-  }
+}
+.comments {
+      height: 120px;
+      overflow: scroll;
+    }

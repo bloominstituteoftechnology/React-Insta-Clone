@@ -1,11 +1,13 @@
 import React from 'react';
 import './SearchBar.css';
+import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
 
 class SearchBar extends React.Component {
     constructor() {
       super();
     }
-  
+
+
     render() {
       return (
         <div className="wrapper">
@@ -17,13 +19,15 @@ class SearchBar extends React.Component {
               <em>Instagram</em>
             </div>
           </div>
-          <div class="main-search">
-            <input
+          <div className="main-search">
+            <Input onChange={(e) => this.props.search(e)}
+  
+            className="search-input"
             type="text"
             placeholder="search"
             />
           </div>
-          <div class="sub-icon">
+          <div className="sub-icon">
             <span>&spades; </span>
             <span>&clubs; </span>
             <span>&diams;</span>
@@ -34,4 +38,5 @@ class SearchBar extends React.Component {
     }
   
   }
+  
 export default SearchBar;

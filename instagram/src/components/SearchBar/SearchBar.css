@@ -7,6 +7,14 @@
     padding: 20px 16px;
     border: 1px solid rgb(58, 1, 1);
   }
+
+  .search-input {
+    width: 270px;
+  }
+  
+  .sub-icon {
+    margin-left: 10px;
+  }
   
   .search-section1 {
     display: flex;
