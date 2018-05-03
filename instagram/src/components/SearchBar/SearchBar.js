@@ -13,6 +13,7 @@ const SearchBar = (props) => {
         <i className="fab fa-instagram fa-3x"></i>
         <img src={logo} alt="Instagram" />
       </div>
+      <form onSubmit={}>
         <input id="search" 
           name="search" 
           type="search"
@@ -20,6 +21,7 @@ const SearchBar = (props) => {
           value={props.state.search}
           onChange={props.update} 
         />
+      </form> 
       <div className="d-flex justify-content-between search-icons">
         <i className="far fa-compass fa-lg"></i>
         <i className="far fa-heart fa-lg"></i>

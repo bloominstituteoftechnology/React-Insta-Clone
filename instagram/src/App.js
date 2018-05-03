@@ -19,6 +19,10 @@ class App extends Component {
     this.setState({ data: dummyData });
   }
 
+  filterPosts = () => {
+    
+  }
+
   updateDataText = e => {
     this.setState({[e.target.name]: e.target.value});
   }
