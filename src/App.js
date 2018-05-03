@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar xor={this.state.data} />
         {this.state.data.map((element) => {
           console.log(element)
           return <PostContainer data={element} />
