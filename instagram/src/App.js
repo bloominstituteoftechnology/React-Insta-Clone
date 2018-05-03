@@ -4,21 +4,28 @@ import './App.css';
 import CommentSection from './Components/CommentSection/CommentSection';
 import PostContainer from './Components/PostContainer/PostContainer';
 import SearchBar from './Components/SearchBar/SearchBar';
+import dummyData from './dummy-data';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      mykey: "myvalue"
+      myData: []
     }
   }
 
+  componentDidMount() {
+    this.setState({ myData: dummyData });
+  }
+
   render() {
+    console.log(this.state.myData);
     return (
       <div>
+        <SearchBar />
         <CommentSection />
         <PostContainer />
-        <SearchBar />
+
       </div>
 
     );
