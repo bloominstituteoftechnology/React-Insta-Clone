@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Post.css';
 import moment from 'moment'
 import CommentSection from '../CommentSection/CommentSection';
@@ -7,7 +8,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faComment from '@fortawesome/fontawesome-free-regular/faComment'
 import faHeart from '@fortawesome/fontawesome-free-regular/faHeart'
 
-import { Row, Col } from 'reactstrap';
+import { Row } from 'reactstrap';
 import { Card, CardImg, CardBody, CardLink } from 'reactstrap';
 
 class Post extends Component {
@@ -38,7 +39,7 @@ class Post extends Component {
         <div className="rootPost">
             <Card>
                 <Row className="user">
-                    <img className="thumbnail" src={thumbnailUrl} />
+                    <img className="thumbnail" src={thumbnailUrl} alt="Thumbnail for a user"/>
                     <div className="username">{username}</div>
                 </Row>
                 <CardImg className="image" src={imageUrl} />
@@ -71,6 +72,23 @@ class Post extends Component {
         </div>
         )
     }
+}
+
+Post.propTypes = {
+    id: PropTypes.number.isRequired, 
+    username: PropTypes.string.isRequired, 
+    thumbnailUrl: PropTypes.string.isRequired, 
+    imageUrl: PropTypes.string.isRequired, 
+    timestamp: PropTypes.string.isRequired, 
+    likes: PropTypes.number.isRequired, 
+    comments: PropTypes.arrayOf(
+        PropTypes.shape({
+            username: PropTypes.string.isRequired,
+            text: PropTypes.string.isRequired
+        })
+    ), 
+    handleLike: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func.isRequired
 }
 
 export default Post;

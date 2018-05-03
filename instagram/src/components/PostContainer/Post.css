@@ -1,6 +1,9 @@
 .rootPost {
     margin-bottom: 20px;
 }
+.rootPost .card-body {
+    padding: 1rem;
+}
 .user {
     padding: 10px 30px;
 }
@@ -18,10 +21,11 @@
     font-size: 0.7em;
     padding: 5px 0;
 }
-input {
+.rootPost input {
     font-size: 0.9em;
-    padding: 5px 10px;
+    padding: 10px 0;
     width: 100%;
-    border-radius: 2px;
-    border: 0.7px solid lightgray;
+    border: none;
+    border-top: 0.7px solid lightgray;
+    outline: none;
 }

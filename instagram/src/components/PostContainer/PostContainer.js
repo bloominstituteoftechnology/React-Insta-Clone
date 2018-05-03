@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Post from './Post';
 
 import { Container, Row, Col } from 'reactstrap';
@@ -26,6 +27,12 @@ const PostContainer = ({ posts, handleLike, handleSubmit }) => {
         </Row>
     </Container>
     )
+}
+
+PostContainer.propTypes = {
+    posts: PropTypes.array.isRequired,
+    handleLike: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func.isRequired
 }
 
 export default PostContainer;
