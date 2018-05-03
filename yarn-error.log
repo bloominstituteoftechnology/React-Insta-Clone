@@ -1,0 +1,31 @@
+Arguments: 
+  D:\Program Files\nodejs\node.exe D:\Program Files (x86)\Yarn\bin\yarn.js create-react-app instagram
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\Seagate\SnapAPI\;C:\Program Files\Git\cmd;D:\Program Files (x86)\Yarn\bin\;D:\Program Files\nodejs\;C:\Users\wladi\AppData\Local\Microsoft\WindowsApps;;d:\Program Files\Docker Toolbox;C:\Program Files\Microsoft VS Code\bin;C:\Users\wladi\AppData\Local\Yarn\bin;C:\Users\wladi\AppData\Roaming\npm
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  10.0.0
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Couldn't find a package.json file in "D:\\LambdaSchool\\React-Insta-Clone"
+      at new MessageError (D:\Program Files (x86)\Yarn\lib\cli.js:186:110)
+      at D:\Program Files (x86)\Yarn\lib\cli.js:40048:15
+      at Generator.next (<anonymous>)
+      at step (D:\Program Files (x86)\Yarn\lib\cli.js:98:30)
+      at D:\Program Files (x86)\Yarn\lib\cli.js:109:13
