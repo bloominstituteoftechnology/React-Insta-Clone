@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer users = {this.state.users}/>
+        <PostContainer usersArray={this.state.users} />
       </div>
     );
   }
