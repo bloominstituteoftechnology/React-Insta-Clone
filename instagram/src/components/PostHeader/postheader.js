@@ -3,15 +3,9 @@ import './postheader.css';
 
 const PostHeader = props =>{
     return (
-        <div>
-            {props.posterHead.map(user =>{
-                return (
-                    <div key={user.thumbnailUrl + user.username}>
-                        <img className='thumbnail' src={user.thumbnailUrl}/> 
-                        {user.username}
-                    </div>
-                )
-            })}
+         <div key={props.posterHead.thumbnailUrl + props.posterHead.username}>
+            <img className='thumbnail' src={props.posterHead.thumbnailUrl}/> 
+                {props.posterHead.username}
         </div>
     )
 }
