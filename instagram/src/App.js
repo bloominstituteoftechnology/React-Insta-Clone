@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import './Components/PostContainer/PostContainer';
-import './Components/SearchBar/SearchBar';
 import CommentSection from './Components/CommentSection/CommentSection';
 import SearchBar from './Components/SearchBar/SearchBar';
 import PostContainer from './Components/PostContainer/PostContainer';

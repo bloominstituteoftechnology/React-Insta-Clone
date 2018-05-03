@@ -1,34 +1,24 @@
-#root{
-    width:100%;
-    max-width: 1200px;
+.container{
+
 }
-
 .navBarWrapper{
-    display:flex;
 
-   
-    
 }
 .instaNotGramLogoIcon{
-    max-width: 20px;
-    max-height: 20px;
-}
 
+}
 .SearchandTextLogo{
-    width:33%;
+
 }
 .instaNotGramLogoText{
-    max-width: 100px;
-    
-    
+
+}
+.searchBarInput{
+
 }
 .icons{
-    width: 33%;
+
 }
 .instagramIcon{
-    width: 20px;
-    height: 20px;
-
     
-   
 }
