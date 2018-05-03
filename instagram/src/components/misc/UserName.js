@@ -2,10 +2,10 @@ import React from 'react';
 
 export const UserName = props => {
   return(
-    <p
+    <span
       className={ props.userNameClassName }
     >
       { props.userName }
-    </p>
+    </span>
   );
 }
