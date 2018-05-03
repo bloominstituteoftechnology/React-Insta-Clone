@@ -13,8 +13,12 @@ class CommentSection extends Component {
 
 
     componentDidMount() {
-        this.setState({comments: this.props.commentData});
+        this.setState({comments: this.props.commentData, likes: this.props.likesData});
     }
+
+    commentInput = event => {
+        this.setState({ [event.target.name]: event.target.value })
+    };
 
     addComment = event => {
         event.preventDefault();
@@ -30,17 +34,29 @@ class CommentSection extends Component {
     render() {
         return (
             <div>
-                <i class="far fa-heart"></i>
-                <i class="far fa-comment"></i>                
+                <div>
+                <i class="far fa-heart icon"></i>
+                <i class="far fa-comment icon"></i> 
+                </div>      
+               <p>{this.state.likes} likes</p>
+
                 {this.state.comments.map(comment => {
-                    return (
-                        <div class='container'>
-                            {`${comment.username} : ${comment.text}`} 
-                        
+                    return (    
+                        <div class='container'> 
+                            {`${comment.username}: ${comment.text}`} 
                         </div>
                     );
                 })}
-                <button onClick={this.addComment}>Add comment</button>
+
+                <form onSubmit={this.addComment}>
+                    <input
+                        name='newComment'
+                        placeholder='add comment'
+                        value={this.state.newComment}
+                        onChange={this.commentInput}
+                    />
+                    <button type="submit">Add Comment</button>
+                </form>
             </div>
         );
     }
