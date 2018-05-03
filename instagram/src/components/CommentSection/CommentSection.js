@@ -25,19 +25,12 @@ class CommentSection extends Component {
     }
     
     handleNewComment = (e) => {
-        // e.preventDefault;
-        // let comments = this.state.comments.slice();
-        // comments.concat(e.target.value)
-        // this.setState({comments})
-        // console.log('test')
-
         this.setState({[e.target.name]: e.target.value});
-
     }
 
     handleCommentSubmit = () => {
         const comments = this.state.comments.slice();
-        const newComment = this.state.value;
+        const newComment = {username: 'Iqra', text: this.state.value};
         comments.push(newComment);
         this.setState({comments: comments, value: ""})
         // console.log(comments) //array of 3 objects
@@ -49,29 +42,29 @@ class CommentSection extends Component {
         e.target.style.color = "red";
         // setInterval((e) => {return x.style.color = "black"},500)
 
-        // this.setState({Arr: this.state.Arr.map((num) => {return num + 1})})
+        this.setState({Arr: this.state.Arr.map((num) => {return num + 1})})
 
-        this.setState({Arr: this.state.Arr.map((num) => {
+    //     this.setState({Arr: this.state.Arr.map((num) => {
            
-            let count = 0;
+    //         let count = 0;
 
-            if (count === 0) {
+    //         if (count === 0) {
                
-                return (
+    //             return (
                     
-                    count++,
-                    num = num + 1,
-                    console.log(count)
-                )
+    //                 count++,
+    //                 num = num + 1,
+    //                 console.log(count)
+    //             )
                
-            } else {
-                return num = num -1,
-                e.target.style.color = "black";
-            }
+    //         } else {
+    //             return num = num -1,
+    //             e.target.style.color = "black";
+    //         }
 
          
-        }
-        )})
+    //     }
+    //     )})
        
     }
         
