@@ -21,7 +21,7 @@ export const PostContainer = props => {
      return (
         props.dummyData.map((post, ind) => {
           return (
-          <Card className='postcontainer'>
+          <Card className='my-5 postcontainer'>
           
           <div className='d-flex postcontainer__user-info-container'>
             <CardImg
