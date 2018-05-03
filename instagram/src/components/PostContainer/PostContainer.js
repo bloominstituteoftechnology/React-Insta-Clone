@@ -74,7 +74,7 @@ class PostContainer extends Component {
 const PostBody = props => {
   return (
     
-    <div className="card">
+    <div className="ccard">
       {/* {console.log(props)} */}
       <div className="icon-container">
         <img className="logo" src={props["thumbNail"]} alt="something meaningful"/>

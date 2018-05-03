@@ -8,33 +8,33 @@
 }
 
 
-.card {
+.ccard {
     
     display:flex;
     flex-flow: row wrap;
 
 }
  
-.card .icon-container {
+.ccard .icon-container {
     height: 60px;
     
 }
 
-.card .image-container {
+.ccard .image-container {
     height: 600px;
 
 }
-.card .image {
+.ccard .image {
     height: 100%;
 
 }
 
-.card .logo {
+.ccard .logo {
     height: 100%;
     border-radius: 50%;
 }
 
-.card .fadedText{
+.ccard .fadedText{
     color: lightgray;
     font-size: 12px;
 }
