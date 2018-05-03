@@ -1,0 +1,58 @@
+body {
+    background: #FAFAFA;
+}
+
+h6 {
+    display: inline-block;
+}
+
+.well {
+    width: 100%;
+    padding: 0px;
+}
+
+.far {
+    margin: 15px 0px 12px 30px;
+}
+
+.container {
+    border: 1px solid black;
+    padding: 0px;
+    width: 600px;
+    background: #FAFAFA;
+    padding: 3px;
+    margin-top: 50px;
+}
+
+.thumbnail {
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    margin: 20px 0px 20px 20px;
+}
+
+.username {
+    align-self: center;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.main-img {
+    width: 100%;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+i {
+    font-size: 16px;
+}
+
+.row {
+    margin: 0px;
+}
+
+.col-12 {
+    padding: 0px;
+}
