@@ -21,3 +21,11 @@
     display: flex;
     justify-content: space-between
 }
+
+.icon:hover {
+    cursor: pointer;
+}
+
+.instagram {
+    display: flex;
+}

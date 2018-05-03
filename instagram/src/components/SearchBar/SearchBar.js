@@ -32,15 +32,21 @@ export default class Example extends React.Component {
         return (
             <div>
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand href="#">
-                        <i class="fa fa-instagram"></i>
-                    </NavbarBrand>
+                    <div class='instagram'>
+                        <NavbarBrand href="#">
+                            <i class="fa fa-instagram"></i>
+                        </NavbarBrand>
+                        <NavbarBrand href="#">
+                            <p>Instagram</p>
+                        </NavbarBrand>
+                    </div>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
                                 <div>
                                     <InputGroup>
                                         <Input />
+
                                         <InputGroupAddon addonType="append">
                                             <InputGroupText>SEARCH</InputGroupText>
                                         </InputGroupAddon>

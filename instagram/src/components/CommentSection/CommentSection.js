@@ -35,8 +35,8 @@ class CommentSection extends Component {
         return (
             <div>
                 <div>
-                <i class="far fa-heart margin-left-right"></i>
-                <i class="far fa-comment margin-left-right"></i> 
+                <i class="far fa-heart margin-left-right icon"></i>
+                <i class="far fa-comment margin-left-right icon"></i> 
                 </div>      
                <p class='margin-left-right'>{this.state.likes} likes</p>
 
@@ -52,7 +52,7 @@ class CommentSection extends Component {
                     <input
                         class='comment-input'
                         name='newComment'
-                        placeholder='add comment'
+                        placeholder='Add a comment as erinc_emer...'
                         value={this.state.newComment}
                         onChange={this.commentInput}
                     />
