@@ -2,9 +2,9 @@ import React from 'react';
 
 const Comment = props => {
     return (
-       <div> 
+       <div>           
        {props.comments.map((comment) => 
-            {return (
+            {return (                
                 <div className="comment-username">
                     {comment.username}
                     <span className="comment-text" >{comment.text}</span>
