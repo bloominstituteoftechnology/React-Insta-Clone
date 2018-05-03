@@ -2,15 +2,9 @@ import React from 'react';
 import "./Post-Image.css";
 
 const PostImage = props => {
-    return (
+    return(
         <div>
-            {props.dummyData.map(imageData => {
-                return(
-                    <div>
-                        <img className="main-image" src={imageData.imageUrl} />
-                    </div>
-                )
-            })}
+            <img className="main-image" src={props.dummyData.imageUrl} alt="post" />
         </div>
     )
 }

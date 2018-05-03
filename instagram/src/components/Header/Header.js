@@ -2,16 +2,11 @@ import React from 'react';
 import './Header.css';
 
 const Header = props => {
-    return (
+
+    return(
         <div>
-            {props.dummyData.map(headerData => {
-                return(
-                    <div>
-                        <img className="thumbnail" src={headerData.thumbnailUrl} />
-                        {headerData.username}
-                    </div>
-                )
-            })}
+            <img className="thumbnail" src={props.dummyData.thumbnailUrl} alt="logo thumbnail" />
+            {props.dummyData.username}
         </div>
     )
 }

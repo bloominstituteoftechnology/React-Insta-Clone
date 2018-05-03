@@ -3,15 +3,20 @@ import Post from '../Post/Post';
 
 
 const PostContainer = props => {
-    return(
+   const insta = props.postList.map((postData, index) => {
+        return (
+            <Post key={index} postData={postData} />
+        );
+    })
+
+
+    return (
         <div>
-            {props.postList.map((postData, index) => {
-                return (
-                    <Post key={index} postData={postData} />
-                )
-            })}
+            {insta[0]}
+            {insta[1]}
+            {insta[2]}
         </div>
-    );
+    )
 };
 
 export default PostContainer;
