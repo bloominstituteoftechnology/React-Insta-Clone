@@ -1,34 +1,48 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 import { InputGroup, InputGroupAddon, InputGroupText, Input, Card, CardImg, CardText, CardBody,
   CardTitle } from 'reactstrap';
 
-const PostContainer = (props) => {
-  return (
-    <div className="post-container">
-      <Card>
-        <CardBody>
-            <CardTitle><img className="posterAvatar rounded-circle" src={props.post.thumbnailUrl} alt="user avatar" /> {props.post.username} </CardTitle>
+class PostContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      thumbnailUrl: props.post.thumbnailUrl,
+      username: props.post.username,
+      imageUrl: props.post.imageUrl,
+      likes: props.post.likes,
+      comments: props.post.comments,
+      timestamp: props.post.timestamp
+    }
+  }
 
-        </CardBody>
-        <CardImg width="100%" src={props.post.imageUrl} alt="posted image" />
-        <CardBody>
-          <CardText className="post-icons">☭ ♡</CardText>
-          <CardText>{props.post.likes} Likes</CardText>
-          <CommentSection comments={props.post.comments} />
-          <CardText>{props.post.timestamp}</CardText>
-        </CardBody>
-        <InputGroup>
-          <Input />
-          <InputGroupAddon addonType="append">
-          <InputGroupText>Comment</InputGroupText>
-          </InputGroupAddon>
-        </InputGroup>
-      </Card>
+  render() {
+    return (
+      <div className="post-container">
+        <Card>
+          <CardBody>
+              <CardTitle><img className="posterAvatar rounded-circle" src={this.state.thumbnailUrl} alt="user avatar" /> {this.state.username} </CardTitle>
 
-    </div>
-  );
+          </CardBody>
+          <CardImg width="100%" src={this.state.imageUrl} alt="posted image" />
+          <CardBody>
+            <CardText className="post-icons">☭ ♡</CardText>
+            <CardText>{this.state.likes} Likes</CardText>
+            <CommentSection comments={this.state.comments} />
+            <CardText>{this.state.timestamp}</CardText>
+          </CardBody>
+          <InputGroup>
+            <Input />
+            <InputGroupAddon addonType="append">
+            <InputGroupText>Comment</InputGroupText>
+            </InputGroupAddon>
+          </InputGroup>
+        </Card>
+
+      </div>
+    );
+  }
 }
 
 export default PostContainer;
