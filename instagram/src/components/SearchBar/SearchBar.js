@@ -1,4 +1,5 @@
 import React from "react";
+import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
 import "./searchBar.css";
 
 class SearchBar extends React.Component {
@@ -18,7 +19,9 @@ class SearchBar extends React.Component {
           </div>
         </div>
         <div className="main-search">
-          <input
+          <Input onChange={(e) => this.props.search(e)}
+
+          className="search-input"
           type="text"
           placeholder="search"
           />

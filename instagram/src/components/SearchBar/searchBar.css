@@ -1,11 +1,12 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
-  max-width: 900px;
   width: 100%;
   margin: auto;
   padding: 20px 16px;
   border: 1px solid black;
+  background-color: #020b0f;
+  color: white;
 }
 
 .search-section1 {
@@ -13,5 +14,13 @@
 }
 
 .main-logo {
+  margin-left: 20px;
+}
+
+.search-input {
+  width: 300px;
+}
+
+.sub-icon {
   margin-left: 20px;
 }

@@ -11,7 +11,26 @@ class App extends Component {
 
     this.state = {
       tweets: [],
-      comment: ""
+      comment: "",
+      search: ""
+    }
+  }
+
+  handleSearch(e) {
+    let tweets = dummyData;
+    let queryItems = e.target.value;
+    let tempArray = this.state.tweets.slice();
+      queryItems = queryItems.trim();
+      tempArray = tempArray.filter((item) => item.username.includes(queryItems));
+    if(queryItems === "") {
+      this.setState({
+        tweets: tweets
+      })
+    } else {
+      this.setState({
+        tweets: tempArray,
+        search: queryItems
+      });
     }
   }
 
@@ -52,12 +71,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer
-          pressLike={this.handleLike.bind(this)}
-          postComment={this.handleSubmitComment.bind(this)}
-          tweets={this.state.tweets}
-          addComment={this.handleAddComment.bind(this)}/>
+        <div className="fixed-top">
+          <SearchBar
+            search={this.handleSearch.bind(this)}
+          />
+        </div>
+        <div className="container main-content">
+          <PostContainer
+            pressLike={this.handleLike.bind(this)}
+            postComment={this.handleSubmitComment.bind(this)}
+            tweets={this.state.tweets}
+            commentInput={this.state.comment}
+            addComment={this.handleAddComment.bind(this)}
+            />
+         </div>
       </div>
     );
   }

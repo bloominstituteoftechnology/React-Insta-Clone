@@ -77,7 +77,269 @@ const dummyData = [
                 text: "I like how gul'dan looks so old and useless"
             }
         ]
+    },
+     {
+        username: "clashroyale",
+        thumbnailUrl: 'https://vignette.wikia.nocookie.net/clashroyale/images/3/31/Clash.jpg/revision/latest/scale-to-width-down/600?cb=20160524105129',
+        imageUrl: 'https://vignette.wikia.nocookie.net/clashroyale/images/3/31/Clash.jpg/revision/latest/scale-to-width-down/600?cb=20160524105129',
+        likes: 5306,
+        timestamp: "July 14th 2017, 10:04:08 am",
+        comments: [
+            {
+                username: "playhearthstone",
+                text: "Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
+            },
+            {
+                username: "tapmelon",
+                text: "Wish that death knight could be added as a new playable class in this expansion."
+            },
+            {
+                username: "micpetboudreau",
+                text: "Can't wait"
+            },
+            {
+                username: "awaywetravel",
+                text: "I <3 Hearthstone."
+            },
+            {
+                username: "awesomebt28",
+                text: "I like how gul'dan looks so old and useless"
+            }
+        ]
+    },
+     {
+        username: "deadbydaylight",
+        thumbnailUrl: 'https://lemmingrun.com/wp-content/uploads/2017/02/DBD_Standard_Edition-600x600-min.jpg',
+        imageUrl: 'https://lemmingrun.com/wp-content/uploads/2017/02/DBD_Standard_Edition-600x600-min.jpg',
+        likes: 5306,
+        timestamp: "July 14th 2017, 10:04:08 am",
+        comments: [
+            {
+                username: "playhearthstone",
+                text: "Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
+            },
+            {
+                username: "tapmelon",
+                text: "Wish that death knight could be added as a new playable class in this expansion."
+            },
+            {
+                username: "micpetboudreau",
+                text: "Can't wait"
+            },
+            {
+                username: "awaywetravel",
+                text: "I <3 Hearthstone."
+            },
+            {
+                username: "awesomebt28",
+                text: "I like how gul'dan looks so old and useless"
+            }
+        ]
+    },
+     {
+        username: "leagueoflegends",
+        thumbnailUrl: 'https://games-b26f.kxcdn.com/wp-content/uploads/2015/02/leagueoflegendsbig_5f2028ee86d150ad8c456113ec9c54e3-600x600.jpg',
+        imageUrl: 'https://games-b26f.kxcdn.com/wp-content/uploads/2015/02/leagueoflegendsbig_5f2028ee86d150ad8c456113ec9c54e3-600x600.jpg',
+        likes: 5306,
+        timestamp: "July 14th 2017, 10:04:08 am",
+        comments: [
+            {
+                username: "playhearthstone",
+                text: "Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
+            },
+            {
+                username: "tapmelon",
+                text: "Wish that death knight could be added as a new playable class in this expansion."
+            },
+            {
+                username: "micpetboudreau",
+                text: "Can't wait"
+            },
+            {
+                username: "awaywetravel",
+                text: "I <3 Hearthstone."
+            },
+            {
+                username: "awesomebt28",
+                text: "I like how gul'dan looks so old and useless"
+            }
+        ]
+    },
+     {
+        username: "fortnite",
+        thumbnailUrl: 'https://www.mmoboosting.net/wp-content/uploads/2018/04/Fortnite-boosting-by-MMO-boosting-service.jpg',
+        imageUrl: 'https://www.mmoboosting.net/wp-content/uploads/2018/04/Fortnite-boosting-by-MMO-boosting-service.jpg',
+        likes: 5306,
+        timestamp: "July 14th 2017, 10:04:08 am",
+        comments: [
+            {
+                username: "playhearthstone",
+                text: "Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
+            },
+            {
+                username: "tapmelon",
+                text: "Wish that death knight could be added as a new playable class in this expansion."
+            },
+            {
+                username: "micpetboudreau",
+                text: "Can't wait"
+            },
+            {
+                username: "awaywetravel",
+                text: "I <3 Hearthstone."
+            },
+            {
+                username: "awesomebt28",
+                text: "I like how gul'dan looks so old and useless"
+            }
+        ]
+    },
+     {
+        username: "avengersinfinitywar",
+        thumbnailUrl: 'http://www.cinematicuniverse.com/wp-content/uploads/2018/04/ep74-infinitywar-600x600.jpg',
+        imageUrl: 'http://www.cinematicuniverse.com/wp-content/uploads/2018/04/ep74-infinitywar-600x600.jpg',
+        likes: 5306,
+        timestamp: "July 14th 2017, 10:04:08 am",
+        comments: [
+            {
+                username: "playhearthstone",
+                text: "Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
+            },
+            {
+                username: "tapmelon",
+                text: "Wish that death knight could be added as a new playable class in this expansion."
+            },
+            {
+                username: "micpetboudreau",
+                text: "Can't wait"
+            },
+            {
+                username: "awaywetravel",
+                text: "I <3 Hearthstone."
+            },
+            {
+                username: "awesomebt28",
+                text: "I like how gul'dan looks so old and useless"
+            }
+        ]
+    },
+     {
+        username: "rampage",
+        thumbnailUrl: 'https://sg-everydayonsales-infomartglobal.netdna-ssl.com/wp-content/uploads/2018/04/Filmgarde-Cineplex-Rampage-Movie-Merchandise-Giveaway.jpg',
+        imageUrl: 'https://sg-everydayonsales-infomartglobal.netdna-ssl.com/wp-content/uploads/2018/04/Filmgarde-Cineplex-Rampage-Movie-Merchandise-Giveaway.jpg',
+        likes: 5306,
+        timestamp: "July 14th 2017, 10:04:08 am",
+        comments: [
+            {
+                username: "playhearthstone",
+                text: "Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
+            },
+            {
+                username: "tapmelon",
+                text: "Wish that death knight could be added as a new playable class in this expansion."
+            },
+            {
+                username: "micpetboudreau",
+                text: "Can't wait"
+            },
+            {
+                username: "awaywetravel",
+                text: "I <3 Hearthstone."
+            },
+            {
+                username: "awesomebt28",
+                text: "I like how gul'dan looks so old and useless"
+            }
+        ]
+    },
+     {
+        username: "deadpool2",
+        thumbnailUrl: 'http://d.christiantoday.com/en/full/55965/deadpool.jpg?w=600&h=600',
+        imageUrl: 'http://d.christiantoday.com/en/full/55965/deadpool.jpg?w=600&h=600',
+        likes: 5306,
+        timestamp: "July 14th 2017, 10:04:08 am",
+        comments: [
+            {
+                username: "playhearthstone",
+                text: "Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
+            },
+            {
+                username: "tapmelon",
+                text: "Wish that death knight could be added as a new playable class in this expansion."
+            },
+            {
+                username: "micpetboudreau",
+                text: "Can't wait"
+            },
+            {
+                username: "awaywetravel",
+                text: "I <3 Hearthstone."
+            },
+            {
+                username: "awesomebt28",
+                text: "I like how gul'dan looks so old and useless"
+            }
+        ]
+    },
+     {
+        username: "thelionking",
+        thumbnailUrl: 'https://img.discogs.com/DRHyXMOLd-M_GODxqO6pOsq6cZg=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-7063603-1432852475-8178.jpeg.jpg',
+        imageUrl: 'https://img.discogs.com/DRHyXMOLd-M_GODxqO6pOsq6cZg=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-7063603-1432852475-8178.jpeg.jpg',
+        likes: 5306,
+        timestamp: "July 14th 2017, 10:04:08 am",
+        comments: [
+            {
+                username: "playhearthstone",
+                text: "Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
+            },
+            {
+                username: "tapmelon",
+                text: "Wish that death knight could be added as a new playable class in this expansion."
+            },
+            {
+                username: "micpetboudreau",
+                text: "Can't wait"
+            },
+            {
+                username: "awaywetravel",
+                text: "I <3 Hearthstone."
+            },
+            {
+                username: "awesomebt28",
+                text: "I like how gul'dan looks so old and useless"
+            }
+        ]
+    },
+     {
+        username: "monsterinc",
+        thumbnailUrl: 'https://img.discogs.com/3GwK34Z-BfNyy69I3eqh4MTcExM=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1915107-1455264118-6964.jpeg.jpg',
+        imageUrl: 'https://img.discogs.com/3GwK34Z-BfNyy69I3eqh4MTcExM=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1915107-1455264118-6964.jpeg.jpg',
+        likes: 5306,
+        timestamp: "July 14th 2017, 10:04:08 am",
+        comments: [
+            {
+                username: "playhearthstone",
+                text: "Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
+            },
+            {
+                username: "tapmelon",
+                text: "Wish that death knight could be added as a new playable class in this expansion."
+            },
+            {
+                username: "micpetboudreau",
+                text: "Can't wait"
+            },
+            {
+                username: "awaywetravel",
+                text: "I <3 Hearthstone."
+            },
+            {
+                username: "awesomebt28",
+                text: "I like how gul'dan looks so old and useless"
+            }
+        ]
     }
+
 ];
 
 export default dummyData;

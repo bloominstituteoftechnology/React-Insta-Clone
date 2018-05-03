@@ -1,4 +1,6 @@
 import React from "react";
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from 'reactstrap';
 import "./commentSection.css"
 
 class CommentSection extends React.Component {
@@ -8,11 +10,11 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="comments">
         {this.props.comments.map(function(user, index) {
           return (
             <div key={index}>
-              <p ><strong>{user.username} </strong>{user.text}</p>
+              <CardText><strong>{user.username} </strong>{user.text}</CardText>
             </div>
             )
         })}
