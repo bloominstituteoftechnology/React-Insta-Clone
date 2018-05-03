@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import './Post.css';
 import moment from 'moment'
 import CommentSection from '../CommentSection/CommentSection';
 
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faComment from '@fortawesome/fontawesome-free-regular/faComment'
+import faHeart from '@fortawesome/fontawesome-free-regular/faHeart'
 
-import { Card, CardImg, CardBody, CardLink, Button } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
+import { Card, CardImg, CardBody, CardLink } from 'reactstrap';
 
 class Post extends Component {
     constructor (props) {
@@ -27,29 +32,35 @@ class Post extends Component {
     render() {
         const { id, username, thumbnailUrl, imageUrl, timestamp, likes, comments, handleLike, handleSubmit } = this.props
         const { commentInput } = this.state
-        let formatTimestamp = moment(timestamp, 'MMMM Do YYYY, h:mm:ss a').startOf('hour').fromNow()
+        console.log(thumbnailUrl)
+        let formatTimestamp = moment(timestamp, 'MMMM Do YYYY, h:mm:ss a').startOf('hour').fromNow().toUpperCase()
         return ( 
-        <div>
+        <div className="rootPost">
             <Card>
-                <div className="user">
-                        <div className="thumbnail">{thumbnailUrl}</div>
-                        <div className="username">{username}</div>
-                </div>
+                <Row className="user">
+                    <img className="thumbnail" src={thumbnailUrl} />
+                    <div className="username">{username}</div>
+                </Row>
                 <CardImg className="image" src={imageUrl} />
                 <CardBody>
                 <div className="reaction">
                     <div className="action">
-                        <CardLink className="hearIcon" onClick={e => handleLike(id)}>Like</CardLink>
-                        <CardLink className="commentIcon">Comment</CardLink>
+                        <CardLink className="hearIcon" onClick={e => handleLike(id)}>
+                            <FontAwesomeIcon icon={faHeart} />
+                        </CardLink>
+                        <CardLink className="commentIcon">
+                        <FontAwesomeIcon icon={faComment} />
+                        </CardLink>
                     </div>
-                    <div className="likes">{likes}</div>
+                    <div className="likes">{likes} likes</div>
                     <CommentSection comments={comments} />
                     <div className="timestamp">{formatTimestamp}</div>
                     <div className="commentBar">
                         <input 
                             name="commentInput" 
                             type="text" 
-                            value={commentInput} 
+                            placeholder="Comment here..."
+                            value={commentInput}
                             onChange={e => this.handleChange(e)}
                             onKeyPress={e => handleSubmit(e, id, commentInput)}/>
                         <div className="moreIcon"></div>

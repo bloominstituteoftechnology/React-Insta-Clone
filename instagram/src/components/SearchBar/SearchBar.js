@@ -1,22 +1,34 @@
-import React, { Component } from 'react';
-import { Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import React from 'react';
+import './SearchBar.css'
+
+import { Row, Col } from 'reactstrap';
+
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
+import faHeart from '@fortawesome/fontawesome-free-regular/faHeart'
+import faCompass from '@fortawesome/fontawesome-free-regular/faCompass'
+import faSearch from '@fortawesome/fontawesome-free-solid/faSearch'
 
 const SearchBar = ({ searchInput, handleChangeSearchBar }) => {
   return (
-    <Navbar color="faded" light>
-      <NavbarBrand>
-      <div className="logo">Logo</div>
-      <div className="brand">Instagram</div>
-      </NavbarBrand>
-      <div className="searchBox">
-        <div className="searchLogo"></div>
+    <Row className="root">
+      <Col xs="1">
+        <FontAwesomeIcon icon={faInstagram} />
+      </Col>
+      <Col xs="3">Instagram</Col>
+      <Col xs="1">
+        <FontAwesomeIcon icon={faSearch} />
+      </Col>
+      <Col xs="5">
         <input name="searchInput" type="text" value={searchInput} onChange={e => handleChangeSearchBar(e)}/>
-      </div>
-      <div className="social">
-        <div className="mapIcon"></div>
-        <div className="heartIcon"></div>
-      </div>
-    </Navbar>
+      </Col>
+      <Col xs="1">
+      <FontAwesomeIcon icon={faCompass} />
+      </Col>
+      <Col xs="1">
+        <FontAwesomeIcon icon={faHeart} />
+      </Col>
+    </Row>
   );
 }
 

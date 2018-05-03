@@ -1,0 +1,27 @@
+.rootPost {
+    margin-bottom: 20px;
+}
+.user {
+    padding: 10px 30px;
+}
+.thumbnail {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.likes {
+    padding: 5px 0;
+}
+.timestamp {
+    color: gray;
+    font-size: 0.7em;
+    padding: 5px 0;
+}
+input {
+    font-size: 0.9em;
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 2px;
+    border: 0.7px solid lightgray;
+}
