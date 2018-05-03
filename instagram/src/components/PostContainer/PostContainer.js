@@ -1,5 +1,5 @@
 import React from 'react';
-
+import CommentSection from '../CommentSection/CommentSection';
 
 const Post = props => {
     return(
@@ -13,7 +13,7 @@ const PostContainer = props => {
         <div>
             {props.postList.map((postData, index) => {
                 return (
-                    <Post key={index} postData={postData}/>
+                    <Post key={index} postData={postData} />
                 )
             })}
         </div>
