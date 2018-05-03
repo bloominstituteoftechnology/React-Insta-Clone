@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class SearchBar extends Component {
+class PostContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -9,10 +9,13 @@ class SearchBar extends Component {
     }
 
     render() {
-        console.log(this.props);
-        return <div>{this.state}</div>
+        return (
+            <div>
+                {this.state}
+            </div>
+        );
     }
 
 }
 
-export default SearchBar;
+export default PostContainer;

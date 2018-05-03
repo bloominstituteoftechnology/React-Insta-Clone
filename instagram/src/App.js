@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import SearchBar from './searchBar';
+import PostContainer from './postContainer';
 // import dummyData from './dummy-data';
 
 class App extends Component {
