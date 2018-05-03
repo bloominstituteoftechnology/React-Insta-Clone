@@ -11,8 +11,9 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />        
-        
-        <PostContainer />
+        <div className="post-wrapper">
+          <PostContainer />
+        </div>
       </div>
     );
   }

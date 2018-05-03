@@ -1,15 +1,13 @@
 import React, { Component } from "react";
-import dummyData from './dummy-data';
-import Post from './Posts.js';
+import Post from './Posts';
+import dummyData from '../../dummy-data';
 
 
 class PostContainer extends Component {
-  constructor() {
-    super();
-    this.state = {
+  state = {
       posts: []
-    }; 
-  }
+  }; 
+  
 
   componentDidMount() {
       this.setState({posts: dummyData});

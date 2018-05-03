@@ -1,0 +1,11 @@
+.nav-wrapper {
+    border-bottom: 0.5px solid #e3e3e3;
+  }
+
+  .top-searchbar {
+    display: flex;
+  }
+
+  .ig-searchbar {
+    height: 100%;
+  }
