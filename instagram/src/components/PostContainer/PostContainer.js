@@ -1,5 +1,3 @@
-//PostContainer
-
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection.js";
 
@@ -18,8 +16,8 @@ const PostContainer = props => {
       <div className="likes">
 	{likes}
 	<br/>
-	{comments.map((chat, index) => <CommentSection key={index} chat={chat} />)}
-        {timestamp}
+	{comments.map((comment, index) => <CommentSection key={index} comment={comment} />)}
+        <div className="timestamp">{timestamp}</div>
       </div>
     </div>
   );

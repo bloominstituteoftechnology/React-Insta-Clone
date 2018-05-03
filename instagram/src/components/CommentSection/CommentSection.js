@@ -1,14 +1,13 @@
-//CommentSection.js
-
 import React from "react";
 
 const CommentSection = (props) => {
-  const {username,text} = props.chat;
+  const {username,text} = props.comment;
   return (
-    <div>
-      {username}
-      {text}
-    </div>
+    <span>
+      <span className="user">{username}</span>
+      <span className="text">{text}</span>
+      <br/>
+    </span>
   );
 };
 

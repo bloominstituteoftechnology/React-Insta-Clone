@@ -1,1 +1,9 @@
-//CommentSection.css
+.user{
+    font-weight: bold;
+    display:inline;
+}
+
+.text{
+    margin-left: 10px;
+    display:inline;
+}

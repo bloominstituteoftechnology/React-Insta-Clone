@@ -1,3 +1,7 @@
+@import "./components/SearchBar/SearchBar.css";
+@import "./components/PostContainer/PostContainer.css";
+@import "./components/CommentSection/CommentSection.css";
+
 body {
   margin: 0;
   padding: 0;
