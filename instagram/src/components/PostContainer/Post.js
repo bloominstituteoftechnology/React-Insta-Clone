@@ -19,13 +19,11 @@ class Post extends Component {
         })
     }
     handleLike = (currentLikes) => {
-        console.log("here")
         this.setState({
             likes: ++currentLikes
         })
     }
     handleSubmit = (e) => {
-        console.log(e.key)
         if (e.key === "Enter") {
             this.setState({
                 comments: [...this.state.comments, {username: "stranger", text: this.state.commentInput}],
@@ -36,7 +34,6 @@ class Post extends Component {
     render() {
         const { username, thumbnailUrl, imageUrl, timestamp } = this.props
         const { comments, commentInput, likes } = this.state
-        console.log(likes)
         return ( 
         <div>
             <Card>
