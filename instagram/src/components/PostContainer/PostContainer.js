@@ -41,9 +41,10 @@ class PostContainer extends React.Component {
                     <CommentSection comments={this.state.comments}/>
                     <p className="post-date">{this.state.timestamp}</p>
                     <div className="comments-divider"></div>
-                    <input className="comments-input" placeholder="Add a comment..." onChange="">
-                    <a className="comments-menu" onClick="">...</a>
-                    </input>
+                    <form className="comments-input" onSubmit="">
+                        <input type="text" placeholder="Add a comment..."></input>
+                        <a className="comments-menu" onClick="">...</a>
+                    </form>
                 </div>
             </div>
         );

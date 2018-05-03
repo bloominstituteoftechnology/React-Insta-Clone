@@ -6,6 +6,7 @@ import data from './dummy-data.js';
 
 class App extends Component {
     constructor() {
+      super()
         this.state = {
             data: data
         }
