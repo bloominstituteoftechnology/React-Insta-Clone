@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
 class CommentSection extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: props.name
-        };
-    }
+    
 
     render() {
+        return (
+            <div>
+                <h1>CommentSection</h1>
+                </div>
+        );
 
     }
 

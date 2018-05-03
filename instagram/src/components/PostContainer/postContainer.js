@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
+import CommentSection from '../CommentSection/commentSection';
 
 class PostContainer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: props.name
-        };
-    }
+    
 
     render() {
         return (
             <div>
-                {this.state}
+                <h1>PostContainer</h1>
+                <CommentSection />
             </div>
         );
     }
