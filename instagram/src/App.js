@@ -15,6 +15,18 @@ class App extends Component {
     }
   }
 
+  handleAddComment(index) {
+    alert("testing");
+  }
+
+  handleLike(index) {
+    let tempArray = this.state.tweets;
+    tempArray[index].likes ++;
+    this.setState({
+      tweets: tempArray
+    })
+  }
+
   componentDidMount() {
     let allTweets = dummyData.slice();
     this.setState({
@@ -23,13 +35,10 @@ class App extends Component {
   }
 
   render() {
-    console.log(dummyData);
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer tweets={this.state.tweets}/>
-
-
+        <PostContainer pressLike={this.handleLike.bind(this)} tweets={this.state.tweets} addComment={this.handleAddComment.bind(this)}/>
       </div>
     );
   }

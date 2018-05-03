@@ -16,12 +16,15 @@ class CommentSection extends React.Component {
             </div>
             )
         })}
+
         <input
                 type="text"
                 placeholder="Add Comment"
                 className="input-comment"
               />
+
       </div>
+
 
     )
   }

@@ -12,7 +12,7 @@ class PostContainer extends React.Component {
       <div className="post-container">
 
         <div>
-          {this.props.tweets.map(function(tweet, index) {
+          {this.props.tweets.map((tweet, index) => {
             return (
               <div key={index} className="post-wrapper">
               <section className="user-thumb">
@@ -24,14 +24,14 @@ class PostContainer extends React.Component {
               </section>
               <section className="likes">
                 <div>
-                  <span>&hearts; </span>
+                  <span onClick={() => this.props.pressLike(index)}>&hearts; </span>
                   <span>&loz;</span>
                 </div>
                 <div>
                   {tweet.likes} likes
                 </div>
               </section>
-              <CommentSection comments={tweet.comments}/>
+              <CommentSection comments={tweet.comments} addComment={this.props.addComment}/>
               </div>
               )
           })}
