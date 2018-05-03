@@ -5,6 +5,7 @@ import PostContainer from './components/PostContainer/PostContainer';
 import CommentSection from './components/CommentSection/CommentSection';
 import SearchBar from './components/SearchBar/SearchBar';
 import Header from './components/Header/Header';
+import PostImage from './components/Post-Image/Post-Image';
 
 class App extends Component {
   constructor() {
@@ -16,8 +17,10 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer postList={dummyData} />
         <Header dummyData={dummyData} />
+        <PostImage dummyData={dummyData} />
+        <PostContainer postList={dummyData} />
+        
       </div>
     );
   }

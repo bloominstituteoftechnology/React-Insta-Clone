@@ -1,11 +1,5 @@
 import React from 'react';
-import CommentSection from '../CommentSection/CommentSection';
-
-const Post = props => {
-    return(
-        <CommentSection comments={props.postData.comments} />
-    )
-}
+import Post from '../Post/Post';
 
 
 const PostContainer = props => {
