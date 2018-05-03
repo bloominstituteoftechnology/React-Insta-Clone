@@ -19,7 +19,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.myData);
     return (
       <div>
         <SearchBar />
