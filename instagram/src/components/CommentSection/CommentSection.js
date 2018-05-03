@@ -34,6 +34,7 @@ class CommentSection extends Component {
                     <div className="comment-icons">
                         <i onClick={this.handleUpdateLikes} class="fas fa-heart"></i>
                         <i class="far fa-comment"></i>
+                        <i class="far fa-bookmark bookmark"></i>
                     </div>
 
                     <div className="likes">{`${this.state.Arr} likes`}</div>

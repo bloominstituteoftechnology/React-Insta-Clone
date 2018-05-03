@@ -43,6 +43,10 @@ input::placeholder {
     height: 20px;
 }
 
+.bookmark {
+    margin-left: 550px;
+}
+
 .comment-container {
     display: flex;
 }
