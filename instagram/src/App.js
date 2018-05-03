@@ -33,7 +33,7 @@ class App extends Component {
     // console.log(JSON.stringify(dummyData));
     return (
       <div className="App container-fluid">
-        <SearchBar className="container" />
+        <SearchBar />
         <div className="container custom-container">
           <div className="row">
             {
