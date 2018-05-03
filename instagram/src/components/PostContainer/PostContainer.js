@@ -1,12 +1,11 @@
 import React from 'react';
 import './PostContainer.css';
-
+import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => {
-    // console.log(props);
     return (
         <div >
-            {props.users.map(user => {
+            {props.usersArray.map(user => {
                 return (
                     <div class='container'>
                         <div class='post-header'>
@@ -14,6 +13,9 @@ const PostContainer = props => {
                             <p class='username'>{user.username}</p>
                         </div>
                         <img class='main-image' src={user.imageUrl}></img>
+                        <div>
+                            <CommentSection commentData = {user.comments}/>
+                        </div>
                     </div>
                 );
             })}
