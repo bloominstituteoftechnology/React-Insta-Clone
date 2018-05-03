@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import './PostContainer.css'
-import CommentSection from '../CommentSection/CommentSection'
+import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection';
+import { Card, CardImg, CardBody } from 'reactstrap';
+
 
 class PostContainer extends Component {
   constructor(props) {
@@ -47,7 +49,7 @@ class PostContainer extends Component {
     // console.log("This is the post in state: ",this.state);
 
     return(
-      <div className="postContainer">
+      <Card className="postContainer">
         <PostBody username={this.username}
           likes={this.state.likes}
           thumbNail={this.thumbNail}
@@ -57,6 +59,7 @@ class PostContainer extends Component {
           />
         <div>
         <input
+          className="form-control"
           name="newComment"
           onChange={this.handleNewComment}
           value={this.state.newComment}
@@ -64,7 +67,7 @@ class PostContainer extends Component {
           onKeyDown={this.handleSubmit}
         />
         </div>
-      </div>
+      </Card>
     )
   };
 }
@@ -74,33 +77,36 @@ class PostContainer extends Component {
 const PostBody = props => {
   return (
     
-    <div className="ccard">
+    <div className="row">
       {/* {console.log(props)} */}
-      <div className="icon-container">
+      <div className="icon-container col-1">
         <img className="logo" src={props["thumbNail"]} alt="something meaningful"/>
       </div>
-      <div>
+      <div className="col-11 mt-1">
         {props["username"]}
       </div>
-      <div className="image-container">
-        <img className="image" src={props["imageUrl"]} alt="something meaningful"/>
+      <div className="">
+        <CardImg src={props["imageUrl"]} alt="something meaningful"/>
       </div>
-      <div>
-        (Heart)  (Message bubble)
-      </div>
-      <div>
-        {props.likes} likes
-      </div>
-      <div>
-        {props.comments.map(comment => {
-          // console.log(comment)
-          return <div key={comment.username + comment.text}><CommentSection comments={comment}/></div>
-        })}
-      </div>
-      <div className="fadedText">
-        {props.timeStamp}
-      </div>
-      
+      <CardBody>
+        <div className="row">  
+          {/* <div className="col-4"> */}
+          <i className="col-1 far fa-heart"></i> <i className="col-1 far fa-comment"></i>
+          {/* </div> */}
+          <div className="col-12">
+            {props.likes} likes
+          </div>
+        </div>
+        <div>
+          {props.comments.map(comment => {
+            // console.log(comment)
+            return <div key={comment.username + comment.text}><CommentSection comments={comment}/></div>
+          })}
+        </div>
+        <div className="fadedText">
+          {props.timeStamp}
+        </div>
+      </CardBody>
     </div>
   )
 };

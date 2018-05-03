@@ -1,0 +1,22 @@
+.nav-holder {
+  border-bottom: 0.5px solid lightgray;
+  background: white;
+}
+
+.instagram_logo {
+  height: 40px; 
+  padding-left: 5px;
+}
+.gram-cam {
+  height: 30px;
+  padding-right: 5px;
+  border-right: 2px solid black;
+}
+.logo {
+  height: 100%;
+}
+  
+.far {
+  color: darkgray;
+  font-size: 25px
+}
