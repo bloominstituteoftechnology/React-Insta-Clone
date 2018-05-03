@@ -1,0 +1,8 @@
+.input-comment {
+  width: 100%;
+}
+
+.comments {
+  height: 150px;
+  overflow: scroll;
+}
