@@ -1,5 +1,7 @@
 .postContainer {
-    margin: 20px 0;
+    margin: 60px 0;
+    width: 100%;
+    max-width: 600px;
     }
 
 .user {
@@ -27,7 +29,7 @@
 .postNav {
     display: flex;
     justify-content: space-between;
-    height: 25px;
+    height: 23px;
 }
 
 .postNav img {
@@ -42,6 +44,7 @@
 
 .addComment {
     height: 60px;
+    width: 90%;
     margin: 0 20px;
     border: none;
     border-top: 1px lightgray solid;

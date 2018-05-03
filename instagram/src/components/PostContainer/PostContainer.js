@@ -11,31 +11,31 @@ export const PostContainer = (props) => {
         <div>
             {props.data.map(user => {
                 return (
-                    <Container>
-                        <div className='postContainer'>
-                            <Card>
-                                <CardTitle>
-                                    <div className='user'>
-                                        <img className='thumbnail' key={user.username} src={user.thumbnailUrl} />
-                                        <p className='username'>{user.username}</p>
-                                    </div>
-                                </CardTitle>
-                                <CardImg src={user.imageUrl} />
-                                <div className='postNav'>
-                                    <div className='heartAndComment'>
-                                        <img className="postheart" src={heart} alt='postheart'/>
-                                        <img className="commenticon" src={speech} alt='commenticon' />
-                                    </div>
+                    <div className='postContainer'>
+                        <Card>
+                            <CardTitle>
+                                <div className='user'>
+                                    <img className='thumbnail' key={user.username} src={user.thumbnailUrl} />
+                                    <p className='username'>{user.username}</p>
+                                </div>
+                            </CardTitle>
+                            <CardImg src={user.imageUrl} />
+                            <div className='postNav'>
+                                <div className='heartAndComment'>
+                                    <img className="postheart" src={heart} alt='postheart'/>
+                                    <img className="commenticon" src={speech} alt='commenticon' />
+                                </div>
+                                <div>
                                     <img className="banner" src={banner} alt='banner'/>
                                 </div>
-                                <CardText>
-                                    <p className='likes'><strong>{user.likes}</strong> likes</p>
-                                    <CommentSection comments={user.comments} />
-                                    <input className="addComment" placeholder="Add a comment..." />
-                                </CardText>
-                            </Card>
-                        </div>
-                    </Container>
+                            </div>
+                            <CardText>
+                                <p className='likes'><strong>{user.likes}</strong> likes</p>
+                                <CommentSection comments={user.comments} />
+                                <input className="addComment" placeholder="Add a comment..." />
+                            </CardText>
+                        </Card>
+                    </div>
                 )
             })}
         </div>

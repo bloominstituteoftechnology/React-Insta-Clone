@@ -1,48 +1,52 @@
-.SearchBar {
+.CrossBar {
     display: flex;
+    justify-content: center;
+    border-bottom: 1px solid lightgray;
     width: 100%;
-    max-width: 1000px;
-    height: 50px;
-    margin-top: 10px;
-    padding-bottom: 20px;
-    border-bottom: 1px lightgray solid;
-    justify-content: space-between;
+    height: 70px;
 }
 
-.logos{
-    width: 247px;
+.SearchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.logos {
+    min-width: 212px;
 }
 
 .instagramLogo {
-    height: 100%;
-    border-right: solid gray 1px;
-    padding-right: 20px;
+    border-right: 1px solid black;
+    padding-right: 25px;
 }
 
 .instagramCursive {
-    height: 150%;
-    padding: 5px 0 0 15px;
+    margin-left: 25px;
+    padding-top: 10px;
 }
 
 .search {
-    align-self: center;
+    width: 100%;
+    max-width: 220px;
+    height: 28px;
     text-align: center;
-    width: 200px;
-    height: 20px;
+    font-size: 1.4rem;
     border: none;
-    border: grey 1px solid;
-    border-radius: 5px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
 }
 
 .quickNav {
     display: flex;
-    min-width: 120px;
-    height: 21px;
-    margin-top: 10px;
     justify-content: space-between;
+    width: 100%;
+    max-width: 150px;
+    height: 20px;
 }
 
 .quickNav img {
-    width: auto;
     height: 100%;
 }
