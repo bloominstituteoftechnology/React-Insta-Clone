@@ -1,0 +1,37 @@
+.border-left {
+    border-left: 1px lightgrey;
+    height: 75%;
+    align-self: center;
+    margin-right: 1%;
+}
+
+.nandobar {
+    height: 70px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 15% 0 15%;
+    border-bottom: 1px solid gray;
+}
+
+.logo {
+    height: 50px;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.fa-instagram {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.search-bar {
+    background: rgb(238, 238, 238);
+    width: 100px;
+    margin-top: 18px;
+    border: 0.7px solid gray;
+    text-align: center;
+}
+
+.asdf {
+    display: flex;
+}

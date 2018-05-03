@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import PostContainer from './components/PostContainer/PostContainer'
 import dummyData from './dummy-data'
 import './App.css';
+import SearchBar from './components/SearchBar/SearchBar'
 
 class App extends Component {
   constructor(props) {
@@ -21,10 +22,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      {this.state.data.map((element) => {
-        console.log(element)
-        return <PostContainer data={element}/>
-      })}
+        <SearchBar />
+        {this.state.data.map((element) => {
+          console.log(element)
+          return <PostContainer data={element} />
+        })}
       </div>
     );
   }
