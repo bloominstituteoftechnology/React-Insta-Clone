@@ -1,0 +1,24 @@
+.insta-layout {
+    display: flex;
+}
+.insta-logo-wrapper {
+    height: 25px;
+    padding: 2px;
+}
+.insta-cam logo-wrapper {
+    height: 18px;
+}
+.logo {
+    height: 100%;
+}
+.nav-wrapper {
+    border-bottom: 0.5px solid #e3e3e3;
+}
+.fancy-search {
+    border: 0.5px solid #e3e3e3;
+    padding: 5px;
+    height: 20px;
+    border-radius: 2px;
+    outline: none;
+    color: #666666;
+}

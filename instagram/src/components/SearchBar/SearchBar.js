@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, NavbarBrand, NavItem, NavLink, Nav } from 'reactstrap';
-import InstaImage from '../../assets/insta.png';
-import InstaCam from '../../assets/instacam.png';
+import InstaImage from './assets/insta.png';
+import InstaCam from './assets/instacam.png';
 import './SearchBar.css';
 
 const SearchBar = () => {
