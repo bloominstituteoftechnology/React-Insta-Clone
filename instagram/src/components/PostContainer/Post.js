@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment'
 import CommentSection from '../CommentSection/CommentSection';
 
 
@@ -26,6 +27,7 @@ class Post extends Component {
     render() {
         const { id, username, thumbnailUrl, imageUrl, timestamp, likes, comments, handleLike, handleSubmit } = this.props
         const { commentInput } = this.state
+        let formatTimestamp = moment(timestamp, 'MMMM Do YYYY, h:mm:ss a').startOf('hour').fromNow()
         return ( 
         <div>
             <Card>
@@ -42,7 +44,7 @@ class Post extends Component {
                     </div>
                     <div className="likes">{likes}</div>
                     <CommentSection comments={comments} />
-                    <div className="timestamp">{timestamp}</div>
+                    <div className="timestamp">{formatTimestamp}</div>
                     <div className="commentBar">
                         <input 
                             name="commentInput" 
