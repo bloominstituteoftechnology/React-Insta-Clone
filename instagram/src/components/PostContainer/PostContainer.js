@@ -7,6 +7,7 @@ const PostContainer = (props) => {
                 props.instaFeed.map((post, index)=> {
                     return (
                         <div key={index}>{post.username}</div>
+                        
                     )
                 })
             }
