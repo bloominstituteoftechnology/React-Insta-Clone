@@ -1,5 +1,28 @@
 # React-Insta-Clone
 
+### Setup
+- [ ] Install `create-react-app`
+- [ ] Use `create-react-app` to create a new React project
+- [ ] Move the `tests` directory and the `dummy-data` file into your `src` folder
+- [ ] Install necessary dependencies
+- [ ] Install reactstrap
+- [ ] Create the `components` directory and add the specified folders inside
+
+### Create Your Components
+- [ ] Search Bar
+- [ ] Post Container
+- [ ] Comment Section
+
+### Put It All Together
+- [ ] Make sure your import/export statements are correct
+- [ ] Structure your App.js component
+- [ ] Use reactstrap and/or CSS to style your page
+
+### Stretch Goals
+- [ ] Implement the ability to "like" a post
+- [ ] Implement a search bar that filters posts by username
+- [ ] Investigate how to dynamically format timestamps using the moment.js library
+
 ## Objectives
 
 The purpose of this project is to continue building on your knowledge of React that you have gained thus far. Here, you'll be implementing a lot of the same concepts and structuring your components, that you have done in previous projects, in a very similar fashion. The main difference this time around is that you'll be using the `create-react-app` utility to generate your React project for you. Don't worry about all of the extra files that you may not understand are present inside the created React application. The overall structure of the project remains exactly the same as what you worked with in Todo-React.
