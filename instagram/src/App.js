@@ -11,27 +11,49 @@ class App extends Component {
       comment: "",
       data: [],
     };
-    this.updateChar = this.updateChar.bind(this);
+    this.updateDataText = this.updateDataText.bind(this);
   }
 
   componentDidMount = () => {
     this.setState({ data: dummyData });
   }
 
-  updateChar = e => {
+  updateDataText = e => {
     this.setState({[e.target.name]: e.target.value});
+  }
+
+  addComment = (e, id) => {
+    const newComment = {
+      username: "mister-corn",
+      text: this.state.comment,
+    }
+    console.log("addComment e.target ", e.target);
+    console.log("addComment id ", id);
+
+    const postIndex = this.state.data.findIndex(p => p.id === id);
+    const post = { ...this.state.data[postIndex] }
+    console.log("addComment post ", post);
+    post.comments = [...post.comments, newComment];
+    console.log("addcoment post+NewComment ", post.comments);
+    
+    const posts = [ ...this.state.data ];
+    posts[postIndex] = post;
+
+    this.setState({ comment: "", data: posts });
+
   }
 
   render() {
     return (
       <div className="App">
         <SearchBar />
-        { this.state.data.map((post, i) => {
+        { this.state.data.map((post) => {
           return <PostContainer 
-            key={i} 
+            key={post.id} 
             data={post} 
             state={this.state}
-            update={this.updateChar}  
+            addCom={(e) => this.addComment(e, post.id)}
+            update={this.updateDataText}  
           />
         }) }
       </div>

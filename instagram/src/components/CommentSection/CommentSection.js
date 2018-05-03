@@ -24,15 +24,20 @@ const CommentSection = props => {
       }
       <p className="mx-2 time-stamp">{props.data.timestamp}</p>
       <div className="comment-input d-flex align-items-center">
-        <input 
-          id="comment"
-          name="comment"
-          type="text" 
-          className="mx-2 mt-3" 
-          placeholder="Add a comment"
-          value={props.state.char} 
-          onChange={props.update}
-        />
+        <form onSubmit={(e) => {
+          e.preventDefault();
+          props.addCom(e);
+        }}>
+          <input 
+            id="comment"
+            name="comment"
+            type="text" 
+            className="mx-2 mt-3" 
+            placeholder="Add a comment"
+            value={props.state.char} 
+            onChange={props.update}
+          />
+        </form>
         <i className="mt-3 fas fa-ellipsis-h"></i>
       </div>
     </div>

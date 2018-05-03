@@ -17,6 +17,7 @@ class PostContainer extends Component {
       <PostContent clImg={`img-fluid mb-2`} 
         data={this.props.data} 
         state={this.props.state}
+        addCom={this.props.addCom}
         update={this.props.update}
       />
     </div>
@@ -24,7 +25,7 @@ class PostContainer extends Component {
   }
 }
 
-const PostHeader = (props) => {
+const PostHeader = props => {
   return (
     <div className={props.clDiv}>
       <img className={props.clImg} src={props.data.thumbnailUrl} alt="Logo" />
@@ -33,11 +34,16 @@ const PostHeader = (props) => {
   );
 };
 
-const PostContent = (props) => {
+const PostContent = props => {
   return (
     <div>
       <img className={props.clImg} src={props.data.imageUrl} alt="Content" />
-      <CommentSection data={props.data} state={props.state} update={props.update} />
+      <CommentSection 
+        data={props.data} 
+        state={props.state}
+        addCom={props.addCom}
+        update={props.update} 
+      />
     </div>
   );
 }
