@@ -6,3 +6,11 @@
 .post-icons {
   font-size: 30px;
 }
+
+.post-container {
+  margin: 50px 0;
+}
+
+.card-body {
+  border-bottom: 1px solid gray;
+}

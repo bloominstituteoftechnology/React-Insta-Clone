@@ -7,7 +7,7 @@ import instagram from '../../assets/insta.png';
 class SearchBar extends React.Component {
   render() {
     return (
-      <Form inline className="SearchBar">
+      <Form inline className="search-bar">
 
         <div className="logos">
           <img className="insta-cam mr-2 ml-2" src={camera} alt="A little camera" />
