@@ -1,0 +1,41 @@
+.search-wrapper {
+    border-bottom: 1px solid black;
+}
+
+.search-bar {
+    background: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.divider {
+    width: 1px;
+    height: 40px;
+    background: black;
+}
+
+.search-field {
+    background: rgb(240, 240, 240);
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 2px;
+    height: 30px;
+    width: 50%;
+    max-width: 200px;
+    text-align: center;
+    color: rgb(165, 165, 165);
+}
+
+.search-icon {
+    height: 25px;
+    margin: 0 20px;
+}
+
+.logo-sm,
+.logo {
+    height: 40px;
+    margin: 0 20px 0;
+}
