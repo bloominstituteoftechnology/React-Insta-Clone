@@ -8,9 +8,14 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      posts: dummyData,
+      posts: [],
       searchInput: ""
     }
+  }
+  componentDidMount = () => {
+    this.setState({
+      posts: dummyData
+    })
   }
   handleChangeSearchBar = (e) => {
     const searchValue = e.target.value
@@ -21,12 +26,39 @@ class App extends Component {
       posts: filteredPosts
     })
   }
+  handleLike = (postId) => {
+    let newPosts = this.state.posts.map((post) => {
+      if (post.id === postId) {
+        post.likes++
+      }
+      return post
+    })
+    this.setState({
+      posts: newPosts
+    })
+  }
+  handleSubmit = (e, postId, commentInput) => {
+    if (e.key === "Enter") {
+      const newPosts = this.state.posts.map((post) => {
+        if (post.id === postId) {
+          post.comments.push({
+            username: "Stranger",
+            text: commentInput
+          })
+        }
+        return post
+      })
+      this.setState({
+        posts: newPosts
+      })
+    }
+  }
   render() {
     const { posts, searchInput } = this.state
     return (
       <div>
         <SearchBar searchInput={searchInput} handleChangeSearchBar={this.handleChangeSearchBar}/>
-        <PostContainer posts={posts} />
+        <PostContainer posts={posts} handleLike={this.handleLike} handleSubmit={this.handleSubmit}/>
       </div>
     );
   }

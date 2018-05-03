@@ -8,9 +8,14 @@ class Post extends Component {
     constructor (props) {
         super(props)
         this.state = {
-            commentInput : "",
-            comments: props.comments,
-            likes: props.likes
+            commentInput : ""
+        }
+    }
+    componentWillReceiveProps = (prevProps, nextProps) =>{
+        if (prevProps.comments !== nextProps.comments) {
+            this.setState({
+                commentInput: ""
+            })
         }
     }
     handleChange = (e) => {
@@ -18,22 +23,9 @@ class Post extends Component {
             [e.target.name] : e.target.value
         })
     }
-    handleLike = (currentLikes) => {
-        this.setState({
-            likes: ++currentLikes
-        })
-    }
-    handleSubmit = (e) => {
-        if (e.key === "Enter") {
-            this.setState({
-                comments: [...this.state.comments, {username: "stranger", text: this.state.commentInput}],
-                commentInput: ""
-            })
-        }
-    }
     render() {
-        const { username, thumbnailUrl, imageUrl, timestamp } = this.props
-        const { comments, commentInput, likes } = this.state
+        const { id, username, thumbnailUrl, imageUrl, timestamp, likes, comments, handleLike, handleSubmit } = this.props
+        const { commentInput } = this.state
         return ( 
         <div>
             <Card>
@@ -45,7 +37,7 @@ class Post extends Component {
                 <CardBody>
                 <div className="reaction">
                     <div className="action">
-                        <CardLink className="hearIcon" onClick={e => this.handleLike(likes)}>Like</CardLink>
+                        <CardLink className="hearIcon" onClick={e => handleLike(id)}>Like</CardLink>
                         <CardLink className="commentIcon">Comment</CardLink>
                     </div>
                     <div className="likes">{likes}</div>
@@ -57,7 +49,7 @@ class Post extends Component {
                             type="text" 
                             value={commentInput} 
                             onChange={e => this.handleChange(e)}
-                            onKeyPress={e => this.handleSubmit(e)}/>
+                            onKeyPress={e => handleSubmit(e, id, commentInput)}/>
                         <div className="moreIcon"></div>
                     </div>
                 </div>
