@@ -3,46 +3,55 @@ import React from 'react';
 // components
 import { Image } from '../misc/Image';
 import { UserName } from '../misc/UserName';
-import { Button } from '../misc/Button';
+// import { Button } from '../misc/Button';
 import { PostComment } from './PostComment';
 import { Input } from '../misc/Input';
 
 // reactstrap components
 import {
+  Button,
   Card,
-  CardImg
+  CardImg,
+  CardTitle
  } from 'reactstrap';
 
 export const PostContainer = props => {
      return (
         props.dummyData.map((post, ind) => {
           return (
-          <Card className="postcontainer">
+          <Card className='postcontainer'>
           
+          <div className='d-flex postcontainer__user-info-container'>
             <CardImg
-              className='postcontainer__user-image'
+              className='mr-3 user-info-container__user-image'
               src={ post.thumbnailUrl }
             />
             
-            <UserName
-              className='postcontainer__username'
-              userName={ post.username }
-            />
+            <CardTitle className='user-info-container__username' >
+              {post.username}
+            </CardTitle>
+          </div>
             
-            <Image
-              className='postcontainer__post-image'
-                imgSrc={ post.imageUrl }
+            <CardImg
+              className='w-100 postcontainer__post-image'
+              src={ post.imageUrl }
             />
        
+          <div className='postcontainer__post-interaction-container'>
             <Button
-              buttonClassName={props.heartPost}
-              handleButtonOnClick={props.handleButtonOnClick}
-            />
+              className="post-interaction-container__heart-post"
+              onClick={ props.handleButtonOnClick }
+            >
+              { `<3` }
+            </Button>
        
             <Button
-              buttonClassName={props.commentOnPost}
-              handleButtonOnClick={props.handleButtonOnClick}
-            />
+              className="post-interaction-container__comming-on-post"
+              onClick={ props.handleButtonOnClick }
+            >
+              C
+            </Button>
+          </div>
        
             <div className='postcontainer__likes-container'>
               <span className='postcontainer__likes-container__likes'>
