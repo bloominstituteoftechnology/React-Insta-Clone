@@ -4,6 +4,7 @@ import './App.css';
 import dummyData from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
+import CommentSection from './components/CommentSection/CommentSection.js';
 
 class App extends Component {
   constructor (props) {
@@ -22,6 +23,7 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         <PostContainer instaFeed={this.state.instaFeed}/>
+        <CommentSection instaFeed={this.state.instaFeed} />
       </div>
     );
   }
