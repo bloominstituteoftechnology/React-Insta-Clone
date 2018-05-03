@@ -20,3 +20,16 @@
   color: darkgray;
   font-size: 25px
 }
+
+.fas {
+  color: darkgray;
+  font-size: 25px
+}
+
+.far:hover {
+  color: black;
+}
+
+.fas:hover {
+  color: black;
+}

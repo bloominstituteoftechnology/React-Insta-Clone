@@ -37,4 +37,15 @@ image {
 .fadedText{
     color: lightgray;
     font-size: 12px;
+    
 } 
+
+.bodyCard div {
+    margin: 8px 0;
+}
+
+.postContainer .form-control {
+    border: none;
+    border-top: 1px solid lightgray;
+}
+

@@ -20,15 +20,6 @@ class CommentSection extends Component {
         <div>
           <b>{this.commentFrom}</b> {this.comments}
         </div>
-        <div>
-          {/* <input
-            name="comments"
-            onChange={this.handleNewComment}
-            value={this.comments}
-            placeholder="Add a comment..."
-
-          /> */}
-        </div>
       </div>
     )
   }

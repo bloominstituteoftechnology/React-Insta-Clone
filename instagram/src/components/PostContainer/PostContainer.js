@@ -39,6 +39,31 @@ class PostContainer extends Component {
     }
   }
 
+  handleLiked = () => {
+    console.log('test')
+    let isLiked = this.state.liked;
+    console.log(isLiked)
+    isLiked = !isLiked;
+    console.log(isLiked)
+    // this.setState({ liked: isLiked })
+    
+    console.log(this.state)
+    if(isLiked !== true){
+      return this.setState({ likes: this.state.likes - 1, liked: isLiked }); 
+    }return this.setState({ likes: this.state.likes + 1, liked: isLiked })
+    
+  }
+
+  // addLiked = () => {
+  //   console.log('test test')
+  //   const isLiked = this.state.liked;
+  //   if(isLiked !== true){
+  //     return; 
+  //   }this.setState({ likes: this.state.likes + 1 })
+
+  //   console.log(this.state)
+  // }
+
   // I don't think i need to do this?
   // componentDidMount() {
   //   this.setState({ post: this.props })
@@ -56,6 +81,8 @@ class PostContainer extends Component {
           imageUrl = {this.imageUrl}
           timeStamp = {this.timeStamp}
           comments = {this.state.comments}
+          liked = {this.handleLiked}
+          isLiked = {this.state.liked === false ? ('r'): ('s')}
           />
         <div>
         <input
@@ -89,26 +116,30 @@ const PostBody = props => {
         <CardImg src={props["imageUrl"]} alt="something meaningful"/>
       </div>
       <CardBody>
+        
         <div className="row">  
           {/* <div className="col-4"> */}
-          <i className="col-1 far fa-heart"></i> <i className="col-1 far fa-comment"></i>
+          
+          <i className={`col-1 fa${props.isLiked} fa-heart`} onClick={props.liked}></i> <i className="col-1 far fa-comment"></i>
           {/* </div> */}
           <div className="col-12">
             {props.likes} likes
           </div>
         </div>
-        <div>
-          {props.comments.map(comment => {
-            // console.log(comment)
-            return <div key={comment.username + comment.text}><CommentSection comments={comment}/></div>
-          })}
-        </div>
-        <div className="fadedText">
-          {props.timeStamp}
+        <div className="bodyCard">
+          <div>
+            {props.comments.map(comment => {
+              // console.log(comment)
+              return <div key={comment.username + comment.text}><CommentSection comments={comment}/></div>
+            })}
+          </div>
+          <div className="fadedText">
+            {props.timeStamp}
+          </div>
         </div>
       </CardBody>
     </div>
-  )
+  ) 
 };
 
 
