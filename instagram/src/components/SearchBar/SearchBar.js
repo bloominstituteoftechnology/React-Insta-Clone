@@ -14,7 +14,7 @@ const SearchBar = () => {
                 <h4 className="" >Instagram</h4>
             </div>
             <div className="div-50">
-                <input className="search__input" type="text" placeholder="search"/>
+                <input className="search__input" type="text" placeholder="Search"/>
             </div>
             <div className="div-25">
                 <img className="search__Images search__Images-group" src={compass}/>
