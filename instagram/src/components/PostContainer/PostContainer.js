@@ -14,7 +14,7 @@ const PostContainer = props => {
 	   <img src={imageUrl} alt="meaningful"/>
       </div>
       <div className="likes">
-	{likes}
+	<div>{likes} likes</div>
 	<br/>
 	{comments.map((comment, index) => <CommentSection key={index} comment={comment} />)}
         <div className="timestamp">{timestamp}</div>
