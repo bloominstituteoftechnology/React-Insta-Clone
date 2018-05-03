@@ -45,7 +45,7 @@ class App extends Component {
     let newComment = this.state.comment;
     let tempArray = this.state.grams.slice();
     let commentObj = {
-      username: "Wonder Boy",
+      username: "Emortalix",
       text: newComment
     };
 
