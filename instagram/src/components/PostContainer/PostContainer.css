@@ -6,6 +6,9 @@
     border: 1px solid lightgray;
     border-radius: 2px;
     background: white;
+    font-size: 11px;
+    font-family: sans-serif;
+    color: black;
 }
 
 .post-header {
@@ -14,6 +17,7 @@
     display: flex;
     align-content: left;
     justify-content: center;
+    font-weight: bold;
 }
 
 .post-profile {
@@ -36,4 +40,25 @@
 
 .post-icon {
     height: 25px;
+}
+.post-date {
+    font-size: 9px;
+    color: lightgray;
+}
+
+
+
+.comments-divider {
+    height: 1px;
+    width: 100%;
+    background: lightgray;
+}
+
+.comments-input {
+    height: 50;
+    color: grey;
+}
+
+.comments-menu {
+    color: dimgray;
 }

@@ -1,17 +1,28 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import CommentSection from './components/CommentSection/CommentSection.js';
 import PostContainer from './components/PostContainer/PostContainer.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
+import data from './dummy-data.js';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <SearchBar />
-      </div>
-    );
-  }
+    constructor() {
+        this.state = {
+            data: data
+        }
+    }
+
+    componentDidMount() {
+        this.setState({data: data});
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <SearchBar/>
+                <PostContainer/>
+            </div>
+        );
+    }
 }
 
 export default App;

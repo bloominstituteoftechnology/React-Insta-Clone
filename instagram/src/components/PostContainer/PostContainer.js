@@ -1,40 +1,53 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './PostContainer.css';
 import heart from '../assets/heart.png';
 import comment from '../assets/comment.png';
 import CommentSection from '../CommentSection/CommentSection.js';
+import data from '../../dummy-data.js';
 
 class PostContainer extends React.Component {
-    constructor(props){
-        super(props)
+    constructor() {
+        super()
         this.state = {
-            likes: undefined,
+            thumbnailUrl: "",
+            username: "",
+            imageUrl: "",
+            likes: 0,
             timestamp: "",
             comments: []
-        }
+        };
     }
-    return() {
-        return (
-        <div className="post">
-            <div className="post-header">
-               <img src={this.props.thumbnailUrl} className="post-profile"/>
-               <p>{this.props.username}</p>
-            </div>
-            <img src={this.props.imageUrl} className="post-img"/>
-            <div className="post-bottom">
-                <div className="icons-wrapper">
-                    <img className="post-icon" src={heart} id="post-heart"/>
-                    <img className="post-icon" src={comment} id="post-heart"/>
-                </div>
-                <p>{this.state.likes}</p>
-                <CommentSection 
-                comments={this.state.comments}/>
 
-            </div> 
-        </div>
-    );
-}
+    componentDidMount() {
+        this.setState({
+            comments: data.map(i => i.comments)
+        });
+    }
+    render() {
+        return (
+
+            <div className="post">
+                <div className="post-header">
+                    <img src={this.state.thumbnailUrl} className="post-profile"/>
+                    <p>{this.state.username}</p>
+                </div>
+                <img src={this.state.imageUrl} className="post-img"/>
+                <div className="post-bottom">
+                    <div className="icons-wrapper">
+                        <a onClick=""><img className="post-icon" src={heart} id="post-heart"/></a>
+                        <a onClick=""><img className="post-icon" src={comment} id="post-heart"/></a>
+                    </div>
+                    <p>{this.state.likes}</p>
+                    <CommentSection comments={this.state.comments}/>
+                    <p className="post-date">{this.state.timestamp}</p>
+                    <div className="comments-divider"></div>
+                    <input className="comments-input" placeholder="Add a comment..." onChange="">
+                    <a className="comments-menu" onClick="">...</a>
+                    </input>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default PostContainer;

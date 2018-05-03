@@ -6,7 +6,8 @@ const CommentSection = props => {
     return (
         <ul>
             {props.comments.map(i => {
-                return (<li key={i.username + i.text}>
+                return (
+                <li key={i.username + i.text}>
                 {i.username} {i.text}
                 </li>
             );
