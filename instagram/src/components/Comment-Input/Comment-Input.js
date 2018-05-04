@@ -3,7 +3,7 @@ import "./Comment-Input.css";
 
 const CommentInput = props => {
     return (
-        <div>
+        <div className="new-comment-container">
             <span className="timestamp"> {props.timeStamp} </span>
                 <input className="new-comment" placeholder="Add a comment..." />
         </div>

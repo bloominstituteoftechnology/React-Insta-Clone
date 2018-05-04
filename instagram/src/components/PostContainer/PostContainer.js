@@ -6,10 +6,10 @@ const PostContainer = props => {
     return (
         <div>
            {props.postList.map((postData, index) => {
-        return (
-            <Post key={index} postData={postData} />
-        );
-    })}
+            return (
+                <Post key={index} postData={postData} />
+            );
+            })}
         </div>
     )
 };

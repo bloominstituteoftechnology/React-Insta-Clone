@@ -1,5 +1,9 @@
 .insta-post{
+    display: flex;
+    flex-direction: column;
     border: 1px solid lightgray;
     border-radius: 0.5%;
     margin: 20px 0;
+    flex-wrap: wrap;
+    width: 500px;
 }

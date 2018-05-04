@@ -1,10 +1,10 @@
-.timestamp{
+.new-comment-container .timestamp{
     font-size: 12px;
     opacity: 0.5;
     margin: 10px;
 }
 
-.new-comment{
+.new-comment-container .new-comment{
     width: 90%;
     margin: 10px;
     padding: 15px 0;
