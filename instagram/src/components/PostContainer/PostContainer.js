@@ -12,7 +12,7 @@ class PostContainer extends Component {
   }
   render() {
     return (
-      <Card>
+      <Card className="post-container">
         <nav className="navbar navbar-light">
           <a className="navbar-brand" href="#">
             <img src="/assets/brand/bootstrap-solid.svg" width="50" height="50" class="d-inline-block align-top" alt="logo" />

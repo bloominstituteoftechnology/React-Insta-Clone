@@ -14,12 +14,12 @@ class SearchBar extends Component {
   }
   render() {
     return (
-      <nav className="navbar navbar-light justify-content-between">
+      <nav className="search-bar navbar navbar-light justify-content-between my-4 pb-4">
         <a className="navbar-brand"><FaInstagram /> | <img src="./assets/instaword.png" alt="instagram" width="120" height="40" /></a>
         <form className="form-inline">
           <input className="form-control" type="search" placeholder="Search" aria-label="Search" />
         </form>
-        <div>
+        <div className="social-media">
           <img src="./assets/discover.png" alt="discover" height="30" width="30" />
           <img src="./assets/like.png" alt="like" height="30" width="30" />
           <img src="./assets/profile.png" alt="profile" height="30" width="30" />
