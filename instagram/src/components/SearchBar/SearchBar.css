@@ -1,14 +1,15 @@
 .searchBar {
     display: flex;
+    justify-content: center;
+    max-width: 900px;
     width: 100%;
-    max-width: 880px;
-    text-align: center;
-    border-bottom: 1px solid lightgrey;
+    
 }
 .logo {
     width: 5%;
     height: 5%;
     margin: 5px;
+    justify-content: flex-start;
 }
 .word {
     width: 10%;
@@ -18,4 +19,6 @@
 }
 .inputBar {
     margin: 2%;
+    text-align: center;
+    
 }

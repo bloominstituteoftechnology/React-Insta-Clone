@@ -1,0 +1,14 @@
+.commentWrapper {
+    max-width: 900px;
+    width: 50%;
+    border: 1px solid gray;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+.userComment {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+}

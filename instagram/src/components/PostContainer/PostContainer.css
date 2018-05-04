@@ -1,11 +1,34 @@
-.logoSection {
-    display: flex;
-
-
-}
 
 .postContainer {
     max-width: 900px;
-    width: 100%;
+    width: 50%;
+    display: flex;
     margin: auto;
+    flex-direction: column;
+    border: 1px solid gray;
 }
+
+.logoSection {
+    display: flex;
+    flex-direction: row;
+}
+
+.thumbnail {
+    border-radius: 100px;
+    flex-direction: row;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+.user {
+    flex-direction: row;
+}
+
+.image {
+   width: 100%;
+  
+}
+
+
+
