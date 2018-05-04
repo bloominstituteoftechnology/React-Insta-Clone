@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, Row} from "reactstrap";
+import { Card, CardImg, CardText, CardBody, CardTitle, Row, InputGroup, Input, InputGroupAddon, InputGroupText} from "reactstrap";
 import CommentSection from '../CommentSection/CommentSection';
 
 
@@ -22,7 +22,7 @@ class Post extends Component {
                 </CardBody>
                 <CardImg src={this.props.post.imageUrl} alt="" />
                 <CardBody>
-                    <CardTitle>
+                    <CardTitle className="Post-likes">
                         {this.props.post.likes} likes
                     </CardTitle>
                     <CardBody>
@@ -32,9 +32,15 @@ class Post extends Component {
                             ))
                             : null}
                     </CardBody>
-                    <CardText>
+                    <CardText className="Post-date">
                         {this.props.post.timestamp}
                     </CardText>
+                    <InputGroup>
+                        <Input placeholder="Add a comment"/>
+                            <InputGroupAddon addonType="append">
+                            <InputGroupText>...</InputGroupText>
+                            </InputGroupAddon>
+                    </InputGroup>
                 </CardBody>
           </Card>
         );

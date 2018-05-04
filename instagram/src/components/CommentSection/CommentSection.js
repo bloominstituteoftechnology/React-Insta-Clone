@@ -1,11 +1,13 @@
 import React from 'react';
 import { Row } from 'reactstrap';
+import './CommentSection.css';
+
 
 const CommentSection = props => {
   return (
     <Row>
-      <span className="comment-username">{props.comment.username}</span>
-      <span className="comment-text">{props.comment.text}</span>
+      <span className="Comment-username">{props.comment.username}</span>
+      <span className="Comment-text">{props.comment.text}</span>
     </Row>
   );
 };
