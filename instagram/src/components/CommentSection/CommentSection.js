@@ -8,7 +8,7 @@ const CommentSection = props => {
             {props.comments.map(i => {
                 return (
                 <li key={i.username + i.text}>
-                {i.username} {i.text}
+                <span className="comments-username">{i.username}</span> {i.text}
                 </li>
             );
         })}

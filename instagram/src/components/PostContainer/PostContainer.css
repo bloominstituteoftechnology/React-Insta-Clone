@@ -3,8 +3,9 @@
     flex-flow: column wrap;
     width: 100%;
     max-width: 600px;
+    margin: 2vh auto;
     border: 1px solid lightgray;
-    border-radius: 2px;
+    border-radius: 4px;
     background: white;
     font-size: 11px;
     font-family: sans-serif;
@@ -15,9 +16,12 @@
     width: 100%;
     padding: 15px;
     display: flex;
-    align-content: left;
-    justify-content: center;
+    align-items: center;
     font-weight: bold;
+}
+
+.post-header p {
+    margin: 0 10px;
 }
 
 .post-profile {
@@ -31,34 +35,55 @@
 
 .post-bottom {
     width: 100%;
-    padding: 10px 15px;
+    padding: 15px;
 }
 
 .icons-wrapper {
     width: 100%;
+    margin-bottom: 5px;
+}
+
+.likes {
+    font-weight: bold;
+    margin: 0 0 2px;
 }
 
 .post-icon {
-    height: 25px;
+    height: 20px;
+    margin: 0 15px 5px 0;
 }
+.post-icon img {
+    height: 20px;
+}
+
 .post-date {
     font-size: 9px;
     color: lightgray;
+    margin: 10px 0;
 }
-
-
 
 .comments-divider {
     height: 1px;
     width: 100%;
     background: lightgray;
+    margin-bottom: 10px;
 }
 
 .comments-input {
-    height: 50;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comments-input input {
     color: grey;
+    border: none;
+    flex-grow: 1;
+    height: 30px;
+}
+.comments-input input:focus {
+    outline: none;
 }
 
 .comments-menu {
-    color: dimgray;
+    color: black;
 }

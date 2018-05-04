@@ -33,20 +33,20 @@ class PostContainer extends React.Component {
             data.map(i => { 
                 return (
 
-            <div className="post">
+            <div key={i.username} className="post">
                 <div className="post-header">
-                    <img src={this.state.thumbnailUrl} className="post-profile"/>
-                    <p>{this.state.username}</p>
+                            <img src={i.thumbnailUrl} className="post-profile"/>
+                    <p>{i.username}</p>
                 </div>
-                <img src={this.state.imageUrl} className="post-img"/>
+                <img src={i.imageUrl} className="post-img"/>
                 <div className="post-bottom">
                     <div className="icons-wrapper">
-                        <a onClick=""><img className="post-icon" src={heart} id="post-heart"/></a>
-                        <a onClick=""><img className="post-icon" src={comment} id="post-heart"/></a>
+                        <a className="post-icon" onClick=""><img src={heart} id="post-heart"/></a>
+                        <a className="post-icon" onClick=""><img src={comment} id="post-heart"/></a>
                     </div>
-                    <p>{this.state.likes}</p>
-                    <CommentSection comments={this.state.comments}/>
-                    <p className="post-date">{this.state.timestamp}</p>
+                    <p className="likes">{i.likes}</p>
+                    <CommentSection comments={i.comments}/>
+                    <p className="post-date">{i.timestamp}</p>
                     <div className="comments-divider"></div>
                     <form className="comments-input" onSubmit="">
                         <input type="text" placeholder="Add a comment..."></input>
