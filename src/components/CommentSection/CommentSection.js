@@ -1,16 +1,20 @@
 import React from 'react';
+import { Card, CardBody, CardImg, Container,CardText } from 'reactstrap';
 
 const CommentSection = props => {
     return(
         <div>
           {props.boo.map( (x,i) => <div key = {i}>
-              <p> {x.username}</p>
-              <p>{x.text}</p>
+            
+                <CardText>{x.username}</CardText>
+                <CardText>{x.text}</CardText>
+            
           </div>)}
           <input 
                     placeholder= "comments"
             />
           {/* why boooooooo? */}
+            
         </div>
     );
 }

@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import PostContainer from './components/PostContainer/PostContainer'
+import { Container } from 'reactstrap';
 
 
 
@@ -25,8 +26,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        {this.state.users.map( (x, i) => <PostContainer key={i} boo={x} />)}
+      <div >
+        <Container>
+          {this.state.users.map( (x, i) => <PostContainer key={i} boo={x} />)}
+        </Container>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/samar/.nvm/versions/node/v9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js start
+  /Users/samar/.nvm/versions/node/v9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js add bootstrap reactstrap
 
 PATH: 
   /Users/samar/.nvm/versions/node/v9.8.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -7551,16 +7551,4 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: Command failed.
-  Exit code: 127
-  Command: sh
-  Arguments: -c react-scripts start
-  Directory: /Users/samar/Documents/js/lambdaschool/course/React-Insta-Clone
-  Output:
-  
-      at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
-      at new ProcessTermError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:30281:17)
-      at ChildProcess.emit (events.js:180:13)
-      at maybeClose (internal/child_process.js:936:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)
+  Error: EACCES: permission denied, mkdir '/Users/samar/Documents/js/lambdaschool/course/React-Insta-Clone/node_modules/autoprefixer/node_modules/browserslist'
