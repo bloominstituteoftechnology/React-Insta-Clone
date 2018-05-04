@@ -10,11 +10,16 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
+        <div className="post-wrapper">
+          <PostContainer />
+        </div>
+
+
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Instagram Clone App</h1>
         </header> */}
-        <PostContainer />
+
         {/* <CommentSection /> */}
       </div>
     );

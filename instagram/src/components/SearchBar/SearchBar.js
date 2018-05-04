@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, NavbarBrand, NavItem, NavLink, Nav } from 'reactstrap';
-import InstaImage from './assets/insta.png';
-import InstaCam from './assets/instacam.png';
+// import InstaImage from '../../assets/insta.png';
+// import InstaCam from '../../assets/instacam.png';
 import './SearchBar.css';
 
 const SearchBar = () => {
@@ -10,11 +10,11 @@ const SearchBar = () => {
             <NavbarBrand>
                 <div className="logo-layout">
                     <div className="insta-cam-logo-wrapper">
-                        <img className="logo" src={InstaCam} />
+                        <img className="logo" src="React-Insta-Clone/assets/instacam.png" />
                     </div>
                     |
                     <div className="insta-logo-wrapper">
-                        <img className="logo" src={InstaImage} />
+                        <img className="logo" src="React-Insta-Clone/assets/insta.png" />
                     </div>                
                 </div>
             </NavbarBrand>
