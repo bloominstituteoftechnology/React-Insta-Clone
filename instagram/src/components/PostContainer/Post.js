@@ -16,8 +16,8 @@ class Post extends Component {
           <Card className="Post">
                 <CardBody>
                     <Row>
-                        <img src={this.props.post.thumbnailUrl} alt=""/>
-                        <CardTitle> {this.props.post.username} </CardTitle>
+                        <img className="Post-userimg" src={this.props.post.thumbnailUrl} alt=""/>
+                        <CardTitle className="Post-username"> {this.props.post.username} </CardTitle>
                     </Row>
                 </CardBody>
                 <CardImg src={this.props.post.imageUrl} alt="" />

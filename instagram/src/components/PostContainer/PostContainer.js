@@ -15,8 +15,7 @@ class PostContainer extends Component {
   }
 
   render() {
-    console.log(this.state.posts);
-    return <div className="post-container">
+    return <div className="Post-container">
       {this.state.posts.map(post => <Post key={post.username} post={post}/>)}
     </div>;
   }
