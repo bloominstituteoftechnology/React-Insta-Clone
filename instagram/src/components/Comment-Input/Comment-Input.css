@@ -3,3 +3,12 @@
     opacity: 0.5;
     margin: 10px;
 }
+
+.new-comment{
+    width: 90%;
+    margin: 10px;
+    padding: 15px 0;
+    border: none;
+    border-top: 1px solid lightgray;
+    font-size: 14px;
+}

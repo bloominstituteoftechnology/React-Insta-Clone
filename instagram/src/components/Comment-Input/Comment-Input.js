@@ -5,6 +5,7 @@ const CommentInput = props => {
     return (
         <div>
             <span className="timestamp"> {props.timeStamp} </span>
+                <input className="new-comment" placeholder="Add a comment..." />
         </div>
     )
 }
