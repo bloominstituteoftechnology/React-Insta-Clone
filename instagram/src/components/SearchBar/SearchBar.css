@@ -1,0 +1,46 @@
+.search-bar {
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+}
+.search-bar-wrapper {
+  align-items: center;
+  height: 75px;
+}
+.search-bar-wrapper .logo {
+  display: flex;
+  justify-content: flex-start;
+}
+.search-bar-wrapper .logo .fa-instagram {
+  font-size: 2em;
+}
+.search-bar-wrapper .logo .text-logo {
+  align-items: center;
+  border-left: 1px solid gray;
+  display: flex;
+  height: 35px;
+  margin: 0 0 0 20px;
+  padding: 0 0 0 20px;
+}
+.search-bar-wrapper .logo img {
+  height: 80%;
+  width: auto;
+}
+.search-bar-wrapper .icons {
+  display: flex;
+  justify-content: flex-end;
+}
+.search-bar-wrapper .search input {
+  background-color: #fafafa;
+  border: 1px solid #e4e3e3;
+  border-radius: 4px;
+  font-size: .8em;
+  min-width: 125px;
+  padding: 3px 10px;
+  text-align: center;
+  width: 215px;
+}
+.search-bar-wrapper .icons .fa-dot-circle,
+.search-bar-wrapper .icons .fa-heart,
+.search-bar-wrapper .icons .fa-user {
+  font-size: 1.5em;
+  padding: 0 0 0 40px;
+}
