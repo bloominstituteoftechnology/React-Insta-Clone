@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Row} from "reactstrap";
+import { Card, CardImg, CardText, CardBody, CardTitle, Row} from "reactstrap";
 import CommentSection from '../CommentSection/CommentSection';
 
 
@@ -12,9 +12,8 @@ class Post extends Component {
     }
 
     render() {
-        console.log("here ",this.props);
         return (
-          <Card>
+          <Card className="Post">
                 <CardBody>
                     <Row>
                         <img src={this.props.post.thumbnailUrl} alt=""/>
@@ -23,18 +22,18 @@ class Post extends Component {
                 </CardBody>
                 <CardImg src={this.props.post.imageUrl} alt="" />
                 <CardBody>
-                    <CardText>
-                        <div>{this.props.post.likes} likes</div>
-                    </CardText>
-                    <CardText>
+                    <CardTitle>
+                        {this.props.post.likes} likes
+                    </CardTitle>
+                    <CardBody>
                         {this.props.post
-                            ? this.props.post.comments.map(comment => (
-                                <CommentSection comment={comment} />
+                            ? this.props.post.comments.map((comment, index) => (
+                                <CommentSection key={index} comment={comment} />
                             ))
                             : null}
-                    </CardText>
+                    </CardBody>
                     <CardText>
-                        <div>{this.props.post.timestamp}</div>
+                        {this.props.post.timestamp}
                     </CardText>
                 </CardBody>
           </Card>

@@ -1,0 +1,10 @@
+.Post {
+    margin: 10px auto;
+    box-shadow: 15px 15px 30px #cfcdcd;
+}
+  
+.post-container {
+    margin: auto;
+    width: 60%;
+    min-width: 300px;
+  }

@@ -5,11 +5,7 @@ import explore from '../../img/explore.png';
 import heart from '../../img/heart.png';
 import man from '../../img/man.png';
 import './SearchBar.css';
-
-
 import { Navbar, NavbarBrand, Nav, NavItem, Input} from "reactstrap";
-
-
 
 class SearchBar extends Component {
   render() {
@@ -18,7 +14,7 @@ class SearchBar extends Component {
             <NavbarBrand>
                 <div>
                     <img src={logo} alt=''/>
-                    <img src={logoName} alt=''/>
+                    <img className="nav-logo-name" src={logoName} alt=''/>
                 </div>
             </NavbarBrand>
             <Nav>
@@ -28,7 +24,7 @@ class SearchBar extends Component {
                 <NavItem>
                     <img src={explore} alt=''/>
                 </NavItem>
-                <NavItem>
+                <NavItem className="nav-img">
                     <img src={heart} alt=''/>
                 </NavItem>
                 <NavItem>

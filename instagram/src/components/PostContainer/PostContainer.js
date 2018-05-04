@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import dataFile from '../../dummy-data.js';
 import Post from '../PostContainer/Post';
+import './PostContainer.css';
+
+
 
 class PostContainer extends Component {
   state = {
@@ -13,8 +16,8 @@ class PostContainer extends Component {
 
   render() {
     console.log(this.state.posts);
-    return <div>
-      {this.state.posts.map(post => <Post post={post} />)}
+    return <div className="post-container">
+      {this.state.posts.map(post => <Post key={post.username} post={post}/>)}
     </div>;
   }
 }
