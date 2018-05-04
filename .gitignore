@@ -1,2 +1,4 @@
 .DS_Store
 node_modules
+instagram/.gitignore
+instagram/yarn.lock
