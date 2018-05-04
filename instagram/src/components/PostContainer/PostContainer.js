@@ -32,6 +32,7 @@ export const PostContainer = (props) => {
                             <CardText>
                                 <p className='likes'><strong>{user.likes}</strong> likes</p>
                                 <CommentSection comments={user.comments} />
+                                <p className='timestamp'>{user.timestamp}</p>
                                 <input className="addComment" placeholder="Add a comment..." />
                             </CardText>
                         </Card>
@@ -41,24 +42,3 @@ export const PostContainer = (props) => {
         </div>
     )
 };
-
-// export const PostContainer = (props) => {
-//     return (
-//         <div>
-//             {props.data.map(user => {
-//                 return (
-//                     <div className='postContainer'>
-//                         <div className='user'>
-//                             <img className='thumbnail' key={user.username} src={user.thumbnailUrl} />
-//                             <p className='username'>{user.username}</p>
-//                         </div>
-//                         <img className='postImage' src={user.imageUrl} />
-//                         <p className='likes'><strong>{user.likes}</strong> likes</p>
-//                         <CommentSection comments={user.comments} />
-//                         <input className="addComment" placeholder='Add a comment...' />
-//                     </div>
-//                 )
-//             })}
-//         </div>
-//     )
-// };

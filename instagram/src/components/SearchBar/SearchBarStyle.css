@@ -16,6 +16,7 @@
 
 .logos {
     min-width: 212px;
+    cursor: pointer;
 }
 
 .instagramLogo {
@@ -49,4 +50,5 @@
 
 .quickNav img {
     height: 100%;
+    cursor: pointer;
 }

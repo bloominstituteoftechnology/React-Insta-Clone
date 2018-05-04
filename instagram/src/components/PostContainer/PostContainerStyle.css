@@ -14,16 +14,19 @@
     border-radius: 50%;
     height: 60%;
     margin: 15px;
+    cursor: pointer;
 }
 
 .username {
     font-weight: bold;
-    margin-top: 22px;
+    margin-top: 24px;
     font-size: 1.4rem;
+    cursor: pointer;
 }
 
 .postImage {
     width: 100%;
+    cursor: pointer;
 }
 
 .postNav {
@@ -35,6 +38,7 @@
 .postNav img {
     margin: 15px;
     height: 100%;
+    cursor: pointer;
 }
 
 .likes {
@@ -42,8 +46,14 @@
     font-size: 1.4rem;
 }
 
+.timestamp {
+    margin-left: 20px;
+    font-size: 1.0rem;
+    color: gray;
+}
+
 .addComment {
-    height: 60px;
+    height: 50px;
     width: 90%;
     margin: 0 20px;
     border: none;
