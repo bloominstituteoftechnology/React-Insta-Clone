@@ -35,11 +35,21 @@
 }*/
 
 body {
+  min-height: 100vh;
   background: linear-gradient(#5e040a, #20498c);
   background-repeat: no-repeat;
   /*background-color: #20498c;*/
 }
 
+.background-back {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -5;
+  top: 0;
+  bottom: 0;
+  barbackground: linear-gradient(#5e040a, #20498c);
+}
 .main-content {
   margin-top: 100px;
 }
