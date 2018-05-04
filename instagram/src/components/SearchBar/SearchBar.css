@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    padding: 20px 16px;
+    border: 1px transparent rgb(2, 51, 46);
+  }
+
+  .search-input {
+    width: 270px;
+  }
+  
+  .sub-icon {
+    margin-left: 10px;
+  }
+  
+  .search-section1 {
+    display: flex;
+  }
+  
+  .main-logo {
+    margin-left: 20px
+  }
