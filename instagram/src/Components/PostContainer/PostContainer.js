@@ -22,6 +22,12 @@ class PostContainer extends Component {
     this.setState({ comment: event.target.value });
   }
 
+  handleNewComment() {
+    let comments = this.state.comments.slice();
+    comments.push({username: "Anonymous", text: this.state.comment});
+    this.setState({"comment": '', "comments": comments});
+  }
+
   render() {
     return (
       <div className="post-container">
@@ -38,9 +44,9 @@ class PostContainer extends Component {
             <CardText>{this.state.timestamp}</CardText>
           </CardBody>
           <InputGroup>
-            <Input onChange={this.handleCommentType.bind(this)} />
+            <Input onChange={this.handleCommentType.bind(this)} value={this.state.comment} />
             <InputGroupAddon addonType="append">
-            <InputGroupText>Comment</InputGroupText>
+            <InputGroupText onClick={this.handleNewComment.bind(this)} >Comment</InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Card>
