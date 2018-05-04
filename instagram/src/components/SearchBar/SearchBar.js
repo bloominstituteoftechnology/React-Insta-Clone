@@ -1,20 +1,22 @@
 /** THIS IS IN ITS TOTALLITY A 'REACTSTRAP' COMPONENT */
 import React from 'react';
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    FormGroup,
+    Input } from 'reactstrap';
 import './SearchBar.css'
 
-  export default class SearchBar extends React.Component {
+export default class SearchBar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -28,39 +30,18 @@ import './SearchBar.css'
       isOpen: !this.state.isOpen
     });
   }
+  componentDidMount(){
+      document.querySelector('.navbar').style.padding = '0 6rem'
+  }
   render() {
     return (
-      <div className="custom-navbar">
-        <Navbar className="" color="light" light expand="md">
+      <div className="">
+        <Navbar className="d-flex justify-content-between" color="light" light expand="md">
           <NavbarBrand href="/">reactstrap</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            </Nav>
-          </Collapse>
+          <FormGroup>
+            {/* <Label for="exampleSearch">Search</Label> */}
+            <Input type="search" name="search" id="exampleSearch" placeholder="search placeholder" />
+          </FormGroup>
         </Navbar>
       </div>
     );
