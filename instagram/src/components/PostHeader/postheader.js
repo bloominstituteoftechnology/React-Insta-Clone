@@ -3,8 +3,8 @@ import './postheader.css';
 
 const PostHeader = props =>{
     return (
-         <div key={props.posterHead.thumbnailUrl + props.posterHead.username}>
-            <img className='thumbnail' src={props.posterHead.thumbnailUrl}/> 
+         <div className="header" key={props.posterHead.thumbnailUrl + props.posterHead.username}>
+            <img className='thumbnail' src={props.posterHead.thumbnailUrl} alt="user's profile Thmbnl"/> 
                 {props.posterHead.username}
         </div>
     )
