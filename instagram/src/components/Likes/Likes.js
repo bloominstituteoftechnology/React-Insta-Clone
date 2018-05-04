@@ -1,4 +1,5 @@
 import React from 'react';
+import './Likes.css';
 
 const Likes = props => {
     return(
