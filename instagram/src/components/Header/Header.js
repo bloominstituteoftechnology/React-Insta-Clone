@@ -4,9 +4,9 @@ import './Header.css';
 const Header = props => {
 
     return(
-        <div>
+        <div className='header'>
             <img className="thumbnail" src={props.dummyData.thumbnailUrl} alt="logo thumbnail" />
-            {props.dummyData.username}
+            <span className="username">{props.dummyData.username}</span>
         </div>
     )
 }

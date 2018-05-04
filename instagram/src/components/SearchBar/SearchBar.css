@@ -1,0 +1,23 @@
+.search-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.insta{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.search{
+    height: 35px;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    width: 170px;
+}

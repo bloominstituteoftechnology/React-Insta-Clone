@@ -1,4 +1,15 @@
+.header{
+    display: flex;
+    align-items: center;
+}
+
 .thumbnail{
-    width: 50px;
+    width: 30px;
     border-radius: 100%;
+    margin: 10px 10px; 
+}
+
+.username{
+    font-weight: bold;
+    font-size: 12px;
 }
