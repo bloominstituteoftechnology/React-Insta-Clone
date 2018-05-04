@@ -1,0 +1,31 @@
+class App extends Component {
+    constructor() {
+        super();
+        this.state = {}
+    }
+
+    render() {
+        return (
+            <div className="app">
+              <SearchBar />
+              <PostContainer imgSource='https://via.placeholder.com/100' />
+              <PostContainer imgSource='https://via.placeholder.com/500' />
+            </div>
+        );
+    }
+}
+
+const PostContainer = props => {
+    return (
+        <div className="postcontainer">
+          <PostImg newImgSource={ props.imgSource } />
+          <PostUsername />
+        </div>
+    );
+}
+
+const PostImg = props => {
+    return (
+        <img src={ props.newImgSource } />
+    );
+}
