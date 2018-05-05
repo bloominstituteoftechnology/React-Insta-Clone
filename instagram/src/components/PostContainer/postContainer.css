@@ -6,6 +6,22 @@
   box-shadow: 5px 5px;
 }*/
 
+h5.card-title  {
+  font-size: 1rem;
+}
+
+.likes div {
+  font-size: .8rem;
+}
+
+.card-text {
+  font-size: .8rem;
+}
+
+.card-text strong {
+  font-size: 1rem;
+}
+
 .post-wrapper {
   border: 1px solid black;
   margin-bottom: 20px;
