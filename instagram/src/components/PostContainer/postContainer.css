@@ -31,6 +31,13 @@ h5.card-title  {
   background-color: #9ca1a3;
 }
 
+.post-wrapper:hover {
+  position: relative;
+  width: 105%;
+  right: 2.5%;
+
+}
+
 .user-thumb {
   display: flex;
   align-items: center;
