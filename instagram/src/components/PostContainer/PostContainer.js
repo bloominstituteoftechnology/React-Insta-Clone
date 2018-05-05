@@ -49,7 +49,6 @@ class PostContainer extends React.Component {
                   <InputGroup>
                   <Input
                     onChange={(e) => this.handleCommentInput(e)}
-                    value={this.props.commentInput}
                     type="text"
                     placeholder="Add Comment"
                     className="input-comment"
