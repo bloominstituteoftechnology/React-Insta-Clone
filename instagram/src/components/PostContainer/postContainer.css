@@ -29,13 +29,15 @@ h5.card-title  {
   padding: 0 2px;
   box-shadow: 5px 7px #355563;
   background-color: #9ca1a3;
+  opacity: 0.9;
 }
 
 .post-wrapper:hover {
   position: relative;
   width: 105%;
   right: 2.5%;
-
+  height: 95.5%;
+  opacity: 1;
 }
 
 .user-thumb {
