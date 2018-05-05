@@ -24,8 +24,8 @@ class PostContainer extends React.Component {
         <div className="row">
           {this.props.tweets.map((tweet, index) => {
             return (
-              <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                < Card key={index} className="post-wrapper">
+              <div key={index} class="col-12 col-sm-6 col-md-4 col-lg-4">
+                < Card className="post-wrapper">
                 <section className="user-thumb">
                   <img src={tweet.thumbnailUrl} />
                   <CardTitle>{tweet.username}</CardTitle>

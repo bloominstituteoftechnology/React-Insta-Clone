@@ -16,11 +16,26 @@ class App extends Component {
     }
   }
 
+  handleKeyUp(e) {
+    let tweets = dummyData;
+    let tempArray = this.state.tweets.slice();
+    let queryItems = e.target.value;
+    queryItems = queryItems.replace(/ /, "");
+    if(e.keyCode === 8) {
+      if(queryItems.length > 0) {
+        tempArray = tweets.filter((item) => item.username.includes(queryItems));
+        this.setState({
+          tweets: tempArray
+        });
+      }
+    }
+  }
+
   handleSearch(e) {
     let tweets = dummyData;
     let queryItems = e.target.value;
     let tempArray = this.state.tweets.slice();
-      queryItems = queryItems.trim();
+      queryItems = queryItems.replace(/ /, "");
       tempArray = tempArray.filter((item) => item.username.includes(queryItems));
     if(queryItems === "") {
       this.setState({
@@ -74,6 +89,7 @@ class App extends Component {
         <div className="fixed-top">
           <SearchBar
             search={this.handleSearch.bind(this)}
+            keyUp={this.handleKeyUp.bind(this)}
           />
         </div>
         <div className="container main-content">
