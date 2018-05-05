@@ -166,9 +166,9 @@ const dummyData = [
         ]
     },
      {
-        username: "fortnite",
-        thumbnailUrl: 'https://www.mmoboosting.net/wp-content/uploads/2018/04/Fortnite-boosting-by-MMO-boosting-service.jpg',
-        imageUrl: 'https://www.mmoboosting.net/wp-content/uploads/2018/04/Fortnite-boosting-by-MMO-boosting-service.jpg',
+        username: "rushhour2",
+        thumbnailUrl: 'https://img.discogs.com/ZtypQKW_I3cdnioGl5yvUJ_K5uA=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3588401-1336471448.jpeg.jpg',
+        imageUrl: 'https://img.discogs.com/ZtypQKW_I3cdnioGl5yvUJ_K5uA=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3588401-1336471448.jpeg.jpg',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
         comments: [

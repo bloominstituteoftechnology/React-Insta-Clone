@@ -62,9 +62,7 @@ class App extends Component {
       username: "Wonder Boy",
       text: newComment
     };
-
     tempArray[index].comments.push(commentObj);
-
     this.setState({tweets: tempArray, comment: ""})
   }
 
