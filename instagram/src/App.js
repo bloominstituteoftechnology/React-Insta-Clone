@@ -10,20 +10,26 @@ class App extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      instaFeed: []
+      userPost: []
     }
   }
 
   componentDidMount(){
-    this.setState({ instaFeed: dummyData}); // here we are setting empty people array to people array in people.js. 
+    this.setState({ userPost: dummyData});  
   }
 
-  render() {
+  render() { 
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer instaFeed={this.state.instaFeed}/>
-        <CommentSection instaFeed={this.state.instaFeed} />
+        <header>
+          <SearchBar />
+        </header>
+        <p className="App-intro">Instagram Clone!</p>
+        <div className="Posts">
+          {this.state.userPost.map((post, index) => {
+            return <PostContainer key="index" post ={post}/>
+          })}
+        </div>        
       </div>
     );
   }

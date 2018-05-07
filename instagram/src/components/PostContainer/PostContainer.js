@@ -1,27 +1,22 @@
 import React from 'react';
 import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = (props) => {
+
+
     return (
+     <div key={props.post.username + props.post.thumbnailUrl + props.post.imageUrl + props.post.likes + props.post.timestamp}>
         <div className="postContainer">
-            {
-                props.instaFeed.map((post, index)=> {
-                    return (
-                        <div key={index}>
-                        <section className="logoSection">
-                            <img src={post.thumbnailUrl} className="thumbnail"/>
-                            <p className="user"> {post.username}</p>
-                        </section>
-                        <section className="imageSection">
-                            <img src={post.imageUrl} className="image"/>
-                        </section>
-                    
-                        </div>
-                        
-                    )
-                })
-            }
+            <div className="postHeader">
+                <span className="username">{props.post.username}</span>
+                <img className="thumbnail" src={props.post.thumbnailUrl}/>
+            </div>
+            <img className="imagePost" src={props.post.imageUrl}/>
+            <CommentSection comments={props.post.comments}/>
+            <span className="time">{props.post.timestamp}</span>
         </div>
+     </div>
     )
 }
 

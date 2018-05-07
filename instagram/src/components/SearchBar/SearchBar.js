@@ -10,9 +10,7 @@ const SearchBar = (props) => {
         <div className="searchBar">
             <img src={InstagramLogo} className="logo"/>
             <img src={InstagramWord} className="word"/>
-             
              <input type="text" placeholder="search" className="inputBar" />
-            
         </div>
     )
 }
