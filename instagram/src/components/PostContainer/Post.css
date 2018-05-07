@@ -1,0 +1,17 @@
+.post {
+    width: 500px; 
+}
+
+.post-image {
+    width: 100%; 
+}
+
+.img-thumbnail {
+    width: 60px; 
+    height: 60px; 
+}
+
+.cardSubtitle {
+    font-weight: bold; 
+    padding: 25px 15px; 
+}

@@ -1,0 +1,11 @@
+.App {
+  height: 100%; 
+  width: 100%; 
+  margin: 0; 
+  padding: 0; 
+}
+
+.post-div {
+  width: 50%; 
+  margin: 32px auto; 
+}
