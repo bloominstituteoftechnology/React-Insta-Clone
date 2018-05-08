@@ -1,0 +1,11 @@
+.icons{
+    display: flex;
+    opacity: 0.7;
+    margin: 10px 10px;
+}
+
+.likes{
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 10px;
+}

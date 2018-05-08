@@ -1,0 +1,12 @@
+.comment-section{
+    margin: 10px;
+}
+
+.comment-section .username{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.comment-section .text{
+    font-size: 12px;
+}
