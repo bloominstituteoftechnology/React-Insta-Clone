@@ -1,0 +1,25 @@
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid lightgray;
+    width: 500px;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.logo {
+    height: 20px;
+    width: 20px;
+}
+
+.insta-script {
+    height: 40px;
+    width: 100px;
+}
+
+.NavbarBrand {
+    display: flex;
+    flex-direction: row;
+    border: 4 px solid red;
+
+}
