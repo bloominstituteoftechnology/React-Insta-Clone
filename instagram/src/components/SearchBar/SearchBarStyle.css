@@ -1,0 +1,54 @@
+.CrossBar {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    height: 70px;
+}
+
+.SearchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.logos {
+    min-width: 212px;
+    cursor: pointer;
+}
+
+.instagramLogo {
+    border-right: 1px solid black;
+    padding-right: 25px;
+}
+
+.instagramCursive {
+    margin-left: 25px;
+    padding-top: 10px;
+}
+
+.search {
+    width: 100%;
+    max-width: 220px;
+    height: 28px;
+    text-align: center;
+    font-size: 1.4rem;
+    border: none;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+.quickNav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 150px;
+    height: 20px;
+}
+
+.quickNav img {
+    height: 100%;
+    cursor: pointer;
+}

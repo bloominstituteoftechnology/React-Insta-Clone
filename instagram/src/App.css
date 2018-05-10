@@ -1,0 +1,10 @@
+html {
+  font-size: 62.5%;
+}
+
+.App {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+}

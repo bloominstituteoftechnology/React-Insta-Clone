@@ -1,0 +1,62 @@
+.postContainer {
+    margin: 60px 0;
+    width: 100%;
+    max-width: 600px;
+    }
+
+.user {
+    display: flex;
+    height: 60px;
+    padding: 0px;
+}
+
+.thumbnail {
+    border-radius: 50%;
+    height: 60%;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.username {
+    font-weight: bold;
+    margin-top: 24px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.postImage {
+    width: 100%;
+    cursor: pointer;
+}
+
+.postNav {
+    display: flex;
+    justify-content: space-between;
+    height: 23px;
+}
+
+.postNav img {
+    margin: 15px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.likes {
+    margin: 25px 0 0 20px;
+    font-size: 1.4rem;
+}
+
+.timestamp {
+    margin-left: 20px;
+    font-size: 1.0rem;
+    color: gray;
+}
+
+.addComment {
+    height: 50px;
+    width: 90%;
+    margin: 0 20px;
+    border: none;
+    border-top: 1px lightgray solid;
+    font-size: 1.4rem;
+}
