@@ -1,51 +1,54 @@
 .navbar-wrapper {
-    border-bottom: 1px solid gray; 
-    justify-content: space-around; 
+    padding-bottom: 15px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: space-between; 
+    align-items: flex-end;
 }
 
-.logo-layout {
-    display: flex; 
+.navbar-brand {
+    width: 20%; 
 }
 
-.icons-layout {
-    margin: 16px 0 0 0; 
-    width: 133%;
-    display: flex; 
-    justify-content: space-between;  
+.navbar-brand-right {
+    text-align: right; 
+    margin-right: 0;
 }
 
-.instacam-div-container {
-    height: 40px; 
-    margin: 16px 0 0 0; 
+.instagram-camera-logo {
+    width: 30%;
+    padding-right: 10%; 
+    margin-right: 13%; 
+    border-right: 1px solid black;
 }
 
-.pipe {
-    height: 61px;
-    font-size: 45px;
-    margin: 0 0 0 7%;
-    color: lightgray;
+.instagram-image-logo {
+    width: 60%; 
+    margin-top: 5px; 
 }
 
-.logo {
-    height: 100%; 
+.icons {
+    width: 15%; 
+    margin-right: 5%; 
 }
 
-.instaimage-div-container {
-    height: 50px; 
-    padding: 2px; 
-    margin: 16px 0 0 7%;  
+.third-icon {
+    margin-right: 0; 
 }
 
-.search {
-    border: 0.5px solid gray; 
-    margin: 16px 0 0 0; 
-    padding: 5px; 
-    height: 42px; 
-    border-radius: 2px; 
-    outline: none; 
-    color: gray; 
-}
+@media(max-width: 400px) {
+    .navbar-wrapper {
+        flex-direction: column; 
+        align-items: center;
+    }
 
-.icons-div-container {
-    height: 30px; 
+    .instagram-camera-logo {
+        display: none; 
+    }
+
+    .navbar-brand {
+        width: 60%; 
+        text-align: center;
+    }
 }
