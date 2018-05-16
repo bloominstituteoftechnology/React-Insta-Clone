@@ -28,6 +28,11 @@
     margin-top: 5px; 
 }
 
+.search {
+    border: 1px solid gray;
+    border-radius: 2px;  
+}
+
 .icons {
     width: 15%; 
     margin-right: 5%; 

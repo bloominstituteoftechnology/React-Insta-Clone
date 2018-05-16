@@ -1,4 +1,13 @@
-.username-comment {
+.username {
     font-weight: 600; 
     font-size: 14px; 
+}
+
+.username-comment {
+    font-weight: normal;
+    font-size: 14px; 
+}
+
+.row-comment {
+    margin-left: 1%; 
 }

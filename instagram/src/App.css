@@ -3,13 +3,20 @@
   width: 100%; 
   margin: 0; 
   padding: 0; 
-  border: 1px solid red; 
   max-width: 880px; 
   width: 100%; 
   margin: 0 auto; 
 }
 
 .post-div {
-  width: 50%; 
-  margin: 32px auto; 
+  width: 100%; 
+  margin: 25px 0; 
+  border-top: 4px solid lightgray; 
 }
+
+.post-div-child {
+  width: 50%; 
+  margin: 32px 0; 
+}
+
+

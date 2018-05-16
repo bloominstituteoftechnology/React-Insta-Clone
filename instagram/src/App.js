@@ -9,7 +9,9 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         <div className="post-div">
-          <PostContainer />
+          <div className="post-div-child">
+            <PostContainer />
+          </div>
         </div>
       </div>
     );

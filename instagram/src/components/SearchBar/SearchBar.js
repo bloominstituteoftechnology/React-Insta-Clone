@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Navbar, NavbarBrand, NavItem } from 'reactstrap';
+import { Navbar, NavbarBrand } from 'reactstrap';
 import InstaImage from '../../assets/instaimage.png';
 import InstaCam from '../../assets/instacam.png';
 import Compass from '../../assets/compass.png';
@@ -15,7 +15,7 @@ const SearchBar = () => {
                 <img alt="" src={InstaImage} className="instagram-image-logo" />
             </NavbarBrand>
             <NavbarBrand className="navbar-brand">
-                <input type="text" placeholder="search" />
+                <input className="search" type="text" placeholder="search" />
             </NavbarBrand>
             <NavbarBrand className="navbar-brand navbar-brand-right">
                 <img alt="" className="icons" src={Compass} />

@@ -6,12 +6,36 @@
     width: 100%; 
 }
 
+.card {
+    margin-bottom: 32px; 
+}
+
+.first-row {
+    padding-left: 5%; 
+}
+
 .img-thumbnail {
-    width: 60px; 
-    height: 60px; 
+    width: 50px; 
+    height: 50px; 
 }
 
 .cardSubtitle {
     font-weight: bold; 
+    font-size: 14px; 
     padding: 25px 15px; 
+}
+
+.heart {
+    width: 5%;
+}
+
+.message {
+    width: 6%; 
+    margin-left: 3%; 
+}
+
+.likes {
+    font-weight: 600; 
+    font-size: 14px; 
+    margin-top: 5px; 
 }
