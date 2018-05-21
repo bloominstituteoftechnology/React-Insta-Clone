@@ -13,11 +13,6 @@ class App extends Component {
         <SearchBar/>
         <PostContainer/>
 
-        <header className="App-header">
-
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-
       </div>
     );
   }

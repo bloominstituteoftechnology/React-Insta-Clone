@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Navbar, NavbarBrand, Nav, NavItem, Input} from 'reactstrap';
+import { Navbar, NavbarBrand, Nav, Input} from 'reactstrap';
 import './SearchBar.css';
 
 class SearchBar extends Component {
