@@ -4,13 +4,21 @@
 
 The purpose of this project is to continue building on your knowledge of React that you have gained thus far. Here, you'll be implementing a lot of the same concepts and structuring your components, that you have done in previous projects, in a very similar fashion. The main difference this time around is that you'll be using the `create-react-app` utility to generate your React project for you. Don't worry about all of the extra files that you may not understand are present inside the created React application. The overall structure of the project remains exactly the same as what you worked with in Todo-React.
 
+This project will be used through the entire week. Each day as you learn new things, you will use that to build and enhance this project a little more. You will use the same repo through the whole week, adding more code, and changing things here and there as you learn new principles and techniques. It will be important to communicate any problems you're having so you don't fall behind. The goal is to finish each day's objectives, and have a working project to start with on the next day.
+
 For this project, you'll be building a simple Instagram clone using React. There is a file provided called `dummy-data.js` that contains some mock data. Each object in the mock data represents a faux Instagram post. Your React application will receive this faux post data and render each as a separate Instagram post.
 
-By the end of this project, you should be comfortable with what components are, the notion of state within a component, as well as passing data from a parent component down to a child component.
+_By the end of this project, you should be comfortable with what components are, the notion of state within a component, as well as passing data from a parent component down to a child component._
 
-Try to get all of the tests passing. If you don't get there, then aim for creating all of the different components and organizing them appropriately in terms of the parent-child relationship, with data getting passed around accordingly.
+_Try to get all of the tests passing. If you don't get there, then aim for creating all of the different components and organizing them appropriately in terms of the parent-child relationship, with data getting passed around accordingly._
 
-## Project Setup
+## Day I
+### Objectives (Day I)
+* Demonstrate the the ability to use create-react-app to boilerplate a react application
+* Describe and be able to use PropTypes to 'type check' specific data being passed down to a child component
+* Demonstrate the ability to use defaultProps in a React component
+
+### Project Setup
 * Install `create-react-app` globally by running `npm install --global create-react-app`.
 * Run `create-react-app instagram` to create your starter application with the name `instagram`.
 * Once your React project has been created, move the provided `/tests` directory as well as the `dummy-data.js` file into the `/src` directory of your newly-generated React project.
@@ -26,7 +34,7 @@ Try to get all of the tests passing. If you don't get there, then aim for creati
 
 ![alt tag](/assets/folder_structure.png)
 
-## Project Description
+### Description (Day I)
 
 * There are three components that you'll need to implement for this project: the Search Bar, the Post Container, and the Comment Section.
 * In your completed project, there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Post Container and a Comment Section for every piece of mock data in the `dummy-data.js` file.
@@ -46,7 +54,7 @@ Your search bar should look something like this:
 Your post container should look something like this:
 ![alt tag](/assets/ig_post.png)
 
-## Stretch Problem
+### Day I Stretch Problem (Day I)
 
 * Implement the ability to like a post by clicking on a heart icon and having the number of likes increment accordingly.
 * Get the Search Bar to filter posts by the post's username. When you submit a search term should filter out posts by users whose usernames do not match the search term.
