@@ -1,5 +1,5 @@
 ## Day II
-###Objectives (Day II)
+### Objectives (Day II)
 * Describe the component life-cycle and demonstrate the ability to use the built in life-cycle methods
 
 ### Daily Setup (Day II)
