@@ -3,7 +3,7 @@
 * Understand the concept of React component lifecycles, along with the major lifecycle methods such as `render`, `componentDidMount`.
 
 ### Daily Setup (Day II)
-At this point you should have a working app with a component tree that is setup kind of like this (note that this is not a design spec!):
+* At this point you should have a working app with a component tree that is setup kind of like this (note that this is not a design spec!):
 
 <img src='/assets/InstaClone-componentStructure.jpg' width='235' />
 
