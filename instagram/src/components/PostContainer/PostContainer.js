@@ -33,7 +33,7 @@ const PostContainer = props => {
 
 PostContainer.propTypes = {
     data: PropTypes.shape({
-        username: PropTypes.string,
+        username: PropTypes.string.isRequired,
         thumbnailUrl: PropTypes.string,
         imageUrl: PropTypes.string,
         likes: PropTypes.number,
