@@ -18,11 +18,17 @@ class Post extends Component {
           </div>
         </div>
         <div>
-         <div>
-          <img className="img-fluid" src={this.props.postObj.imageUrl} alt="" />
-         </div> 
+          <div>
+            <img className="img-fluid" src={this.props.postObj.imageUrl} alt="" />
+          </div>
+          <div className="icons">
+            <i className="far fa-heart"></i>
+            <i className="far fa-comment"></i>
+          </div> 
+          <div className="likes">
+            {`${this.props.postObj.likes} likes`}
+          </div>
         </div>
-
       </div>
      )
   }
