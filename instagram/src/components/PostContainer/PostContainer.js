@@ -6,6 +6,14 @@ const PostContainer = props => {
   return (
     <div className="card">
       {/* POST CONTAINER */}
+      <div className="user-display">
+        <img
+          src={props.post.thumbnailUrl}
+          alt="thumbnail image"
+          className="thumbnail-image"
+        />
+        <span className="user-name">{props.post.username}</span>
+      </div>
       <img
         src={props.post.imageUrl}
         alt="card image"

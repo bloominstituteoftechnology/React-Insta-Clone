@@ -1,0 +1,13 @@
+.comment-section {
+  text-align: left;
+  margin: 8px;
+}
+
+.comment-section .comment {
+  margin-bottom: 2px;
+}
+
+.comment-user {
+  font-weight: bold;
+  margin-right: 8px;
+}

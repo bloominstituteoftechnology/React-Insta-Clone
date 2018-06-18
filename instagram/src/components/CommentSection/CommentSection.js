@@ -1,11 +1,14 @@
 import React from "react";
 import Comment from "./Comment";
+import "./CommentSection.css";
 
 const CommentSection = props => {
   return (
-    <div>
+    <div className="comment-section">
       {/* COMMENTS SECTION */}
-      {props.post.comments.map(comment => <Comment comment={comment} />)}
+      {props.post.comments.map(comment => (
+        <Comment comment={comment} key={Math.random()} />
+      ))}
     </div>
   );
 };
