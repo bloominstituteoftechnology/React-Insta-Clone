@@ -23,7 +23,18 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p> */}
 
-        <PostContainer />
+        {this.state.data.map(data => {
+          return (
+            <PostContainer
+              username={data.username}
+              thumbnailUrl={data.thumbnailUrl}
+              imageUrl={data.imageUrl}
+              likes={data.likes}
+              timestamp={data.timestamp}
+              comments={data.comments}
+            />
+          );
+        })}
 
       </div>
     );
