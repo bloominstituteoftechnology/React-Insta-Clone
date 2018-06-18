@@ -8,6 +8,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      today: new Date(),
       dummyData: []
     };
   }
@@ -25,7 +26,7 @@ class App extends Component {
           </h1>
         </header>
         <SearchBar />
-        <PostContainer data={this.state.dummyData} />
+        <PostContainer calcTime={this.calcTime} data={this.state.dummyData} today={this.state.today}/>
       </div>
     );
   }
