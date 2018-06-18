@@ -1,0 +1,25 @@
+.searchbar-container {
+    max-width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.searchbar-header {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.searchbar-search {
+    
+}
+
+.searchbar-nav {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}

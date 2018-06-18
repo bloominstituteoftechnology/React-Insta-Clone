@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchBar.css';
 
 const SearchBar = () => {
   return (
@@ -8,7 +9,7 @@ const SearchBar = () => {
             <div>Instagram</div>
         </div>
         <div className="searchbar-search">
-            <input>Search</input>
+            <input placeholder="Search" />
         </div>
         <div className="searchbar-nav">
             <div>Image 1</div>
@@ -18,3 +19,5 @@ const SearchBar = () => {
     </div>
   );
 };
+
+export default SearchBar;
