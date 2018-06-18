@@ -1,0 +1,13 @@
+.post-container {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.header-container {
+    display:flex;
+    
+}
+
+.post-image {
+    width:100%;
+}

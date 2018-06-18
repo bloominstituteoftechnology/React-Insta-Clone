@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
-import './App.css';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
-import CommentSection from './components/CommentSection/CommentSection';
+import React, { Component } from "react";
+import "./App.css";
+import dummyData from "./dummy-data";
+import PostContainer from "./components/PostContainer/PostContainer";
 
 class App extends Component {
   constructor() {
     super();
-    this.state= {
+    this.state = {
       dummyData: dummyData
-    }
+    };
   }
   render() {
     return (
@@ -18,9 +17,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to Instagram</h1>
         </header>
         <div>
-        {this.state.dummyData.map(post =>(    
+          {this.state.dummyData.map(post => (
             <PostContainer key={post.timestamp} dummyData={post} />
-        ))} 
+          ))}
         </div>
       </div>
     );
