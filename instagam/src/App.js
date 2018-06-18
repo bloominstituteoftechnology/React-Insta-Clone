@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
-import CommentSection from './components/CommentSection';
 import PostContainer from './components/PostContainer';
 import SearchBar from './components/SearchBar';
+import dummyData from './dummy-data';
 
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      commentsData: dummyData,
+    }
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <SearchBar />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <PostContainer />
+        
+        <SearchBar />
+        <PostContainer passedState = {this.state.commentsData} />
       </div>
     );
   }
