@@ -1,0 +1,23 @@
+input {
+  height: 25px;
+  width: 200px;
+  border: 2px solid lightgray;
+  border-radius: 3px;
+  padding: 0 15px;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+  font-size: 14px;
+  color: lightgray;
+}
+
+@import url("https://use.fontawesome.com/releases/v5.0.13/css/all.css");
+  .searchbar { position: relative; }
+  .searchbar .fa-search {
+    position: absolute;
+    top: 8px;
+    left: 75px;
+    font-size: 15px;
+    color: lightgray;
+}
