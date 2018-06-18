@@ -1,0 +1,13 @@
+.title {
+  font-size: 24px;
+  display: flex;
+}
+
+.instaFont {
+  font-family: 'Dancing Script', cursive;
+}
+
+.searchButton {
+  font-size: 12px;
+  width: 200px;
+}
