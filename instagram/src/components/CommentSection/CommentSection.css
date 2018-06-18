@@ -1,0 +1,31 @@
+.margin-left-right {
+    margin-left: 2%;
+    margin-right: 2%
+}
+
+.comment-button {
+    float: right;
+    border-radius: 5px;
+}
+
+.comment-input {
+    margin-left: 2%;
+    border-left: none;
+    border-right: none;
+    border-bottom: none; 
+    width: 80%;   
+}
+
+.form {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+.instagram {
+    display: flex;
+}
