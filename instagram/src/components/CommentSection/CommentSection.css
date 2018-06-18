@@ -1,0 +1,27 @@
+.comment-container{
+	 display: flex;
+        justify-content: flex-start;
+	/*padding-left: 25%;*/
+	margin: -1% 2% -1% 2%;
+
+}
+
+.username-comment-style{
+	font-weight: bold;
+
+}
+
+.user-text{
+	margin-left: 0.5%;
+}
+
+.comment-bar{
+	margin: 2%;
+	height: 25px;
+	width: 560px;
+	border: none;
+	border-top: 1px solid #ddd;
+	padding: 2% 0% 1% 0%;
+	font-size: 0.8rem;
+		
+}

@@ -25,8 +25,15 @@ constructor(){
   render() {
     return (
       <div className="App">
-	<SearchBar searchBarStyle="search-bar" />
-	<PostContainer PostImage="post-image" HeaderContainer="header-container"  HeaderImageStyle="header-image-style" dummyData={this.state.dummyData}/>
+	<SearchBar SearchContainer="search-container"  searchBarStyle="search-bar" />
+
+	 <div>
+	{this.state.dummyData.map(dummyData => 
+		<PostContainer key={dummyData.timestamp} PostContainer="post-container"  PostImage="post-image" HeaderContainer="header-container"  HeaderImageStyle="header-image-style" dummyData={dummyData}/>
+	
+	)}		
+	 </div> 
+
       </div>
     );
   }
