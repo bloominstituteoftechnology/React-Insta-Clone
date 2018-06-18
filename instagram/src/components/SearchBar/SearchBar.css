@@ -32,10 +32,18 @@
     margin-right: 20px;
 }
 
+.instagram-icons {
+    align-items: center;
+}
+
 .instagram-icons img {
     margin-left: 30px;
     width: 30px;
     height: 27px;
+}
+
+.instagram-icons i {
+    margin-left: 30px;
 }
 
 .instagram-search::-webkit-input-placeholder {

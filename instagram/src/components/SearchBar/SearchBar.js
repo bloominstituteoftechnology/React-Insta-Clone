@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
+
 import { Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
 
 
@@ -18,10 +19,10 @@ const SearchBar = () => {
         </Nav>
         <Nav className='instagram-icons'>
           <NavItem>
-            <img src="https://png.icons8.com/metro/50/000000/compass.png" />
+            <i class="far fa-compass fa-lg"></i>
           </NavItem>
           <NavItem>
-            <img src="https://png.icons8.com/metro/50/000000/like.png" alt='' />
+            <i class="far fa-heart fa-lg"></i>
           </NavItem>
           <NavItem>
             <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/137578-200.png' alt='' />
