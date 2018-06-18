@@ -6,3 +6,9 @@
 .comment {
     margin-left: 1%;
 }
+
+.comment-adder {
+    padding: 4px 1%;
+    width: 100%;
+    height: 34px;
+}
