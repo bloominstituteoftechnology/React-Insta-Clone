@@ -8,7 +8,7 @@ function CommentSection (props) {
             <h1>comments</h1>
             {props.comments.map((comment) => {
                 return (
-                    <Comment key={comment.username + Date.now()} comment={comment} />
+                    <Comment key={comment.username + Date.now() + Math.random()} comment={comment} />
                 );
             })
             }
