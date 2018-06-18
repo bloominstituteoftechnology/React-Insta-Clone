@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uuid from 'uuid/v1';
 import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
@@ -17,7 +18,7 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         {this.state.dummyData.map(d => {
-          return <PostContainer key={Math.random()} data={d} />;
+          return <PostContainer key={uuid()} data={d} />;
         })}
       </div>
     );
