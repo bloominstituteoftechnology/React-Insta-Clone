@@ -1,0 +1,46 @@
+.searchbar-container {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.logo {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 36px;
+    padding-left: 20px;
+    font-weight: 600;
+}
+.instagram-icon {
+    font-size:36px;
+    border-right: 1px solid black;
+    padding-right: 20px;
+    font-weight: 500;
+
+}
+.inside-left-searchbar {
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+.search-input{
+    border-radius: 2px;
+    background-color:#FAFAFA;
+    width: 270px;
+    height: 35px;
+    text-align: center;
+    font-size:14px;
+    border: 1px solid lightgrey;
+    color: lightgrey;  
+}
+.inside-right-searchbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.right-icons {
+    font-size: 24px;
+    padding-right: 34px;
+    font-weight: 300;
+    color: darkgrey;
+}
