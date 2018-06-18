@@ -8,9 +8,11 @@ const CommentSection = (props) => {
   return(
     <div className="comment-section">
       <ul className="comments">
-        <Comment />
+        {props.comments.map((comment, index) => {
+          return <Comment key={`${Math.random()}${index}`} username={comment.username} text={comment.text} />;
+        })}
       </ul>
-      <CommentSectionTimestamp />
+      <CommentSectionTimestamp timestamp={props.timestamp} />
       <CommentSectionInput />
     </div>
   );

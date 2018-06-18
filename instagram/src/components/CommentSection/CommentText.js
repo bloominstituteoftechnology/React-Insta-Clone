@@ -3,7 +3,7 @@ import './CommentSection.css';
 
 const CommentText = (props) => {
   return(
-    <span className="comment__text"></span>
+    <span className="comment__text">{props.text}</span>
   );
 };
 

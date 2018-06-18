@@ -3,7 +3,7 @@ import './PostContainer.css';
 
 const PostHeaderUsername = (props) => {
   return(
-    <span className="post-header__username"></span>
+    <span className="post-header__username">{props.username}</span>
   );
 };
 

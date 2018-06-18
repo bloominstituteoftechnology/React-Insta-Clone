@@ -9,11 +9,11 @@ import CommentSection from '../CommentSection/CommentSection';
 const Post = (props) => {
   return(
     <li className="post">
-      <PostHeader />
-      <PostImage />
+      <PostHeader thumbnail={props.postData.thumbnailUrl} username={props.postData.username} />
+      <PostImage imageUrl={props.postData.imageUrl} />
       <PostActions />
-      <PostLikes />
-      <CommentSection />
+      <PostLikes likes={props.postData.likes} />
+      <CommentSection comments={props.postData.comments} timestamp={props.postData.timestamp} />
     </li>
   );
 };

@@ -5,7 +5,9 @@ import Post from './Post';
 const PostContainer = (props) => {
   return(
     <ul className="post-container">
-      <Post />
+      {props.instagramData.map((post, index) => {
+        return <Post key={`${Math.random()}${index}`} postData={post} />
+      })}
     </ul>
   );
 };

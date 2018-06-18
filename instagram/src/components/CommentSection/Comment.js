@@ -6,8 +6,8 @@ import CommentText from './CommentText';
 const Comment = (props) => {
   return(
     <li className="comment">
-      <CommentUsername />
-      <CommentText />
+      <CommentUsername username={props.username} />
+      <CommentText text={props.text} />
     </li>
   );
 };

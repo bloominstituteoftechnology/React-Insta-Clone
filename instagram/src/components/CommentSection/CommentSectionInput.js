@@ -3,7 +3,9 @@ import './CommentSection.css';
 
 const CommentSectionInput = (props) => {
   return(
-    <div className="comment-section__input"></div>
+    <form className="comment-section__input">
+      <input type="text" />
+    </form>
   );
 };
 

@@ -3,7 +3,7 @@ import './CommentSection.css';
 
 const CommentUsername = (props) => {
   return(
-    <span className="comment__username"></span>
+    <span className="comment__username">{props.username}</span>
   );
 };
 

@@ -3,7 +3,7 @@ import './CommentSection.css';
 
 const CommentSectionTimestamp = (props) => {
   return(
-    <div className="comment-section__timestamp"></div>
+    <div className="comment-section__timestamp">{props.timestamp}</div>
   );
 };
 

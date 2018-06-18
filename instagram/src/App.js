@@ -5,11 +5,17 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      instagramData: dummyData
+    }
+  }
   render() {
     return (
       <div className="app">
         <SearchBar />
-        <PostContainer />
+        <PostContainer instagramData={this.state.instagramData} />
       </div>
     );
   }
