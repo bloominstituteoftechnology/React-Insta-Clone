@@ -1,0 +1,9 @@
+.search-bar {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px
+}
+
+.navigation-logos {
+    display: flex;
+}
