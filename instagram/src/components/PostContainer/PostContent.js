@@ -5,7 +5,7 @@ const PostContent = props => {
     return (
         <div className='content'>
             <img className='image' src={props.image} />
-            {props.likes}
+            <p className='likes'>{props.likes} likes </p>
 
         </div>
     )

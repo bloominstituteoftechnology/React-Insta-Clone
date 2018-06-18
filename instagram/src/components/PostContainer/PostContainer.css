@@ -4,6 +4,7 @@
     border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
+    margin: 30px;
 }
 
 .thumbnail {
@@ -22,4 +23,27 @@
 
 .image {
     width: 640px;
+}
+
+.likes {
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px;
+}
+
+.comment {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 15px;
+}
+
+.user-comment {
+    font-weight: bold;
+}
+
+.form {
+    width: 95%;
+    height: auto;
+    margin: 15px;
 }
