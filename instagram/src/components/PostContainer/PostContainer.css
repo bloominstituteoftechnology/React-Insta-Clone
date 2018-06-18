@@ -1,0 +1,25 @@
+.container {
+    width: 640px;
+    height: auto;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnail {
+    width: 57px;
+    border-radius: 50px;
+    margin: 15px;
+
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.image {
+    width: 640px;
+}
