@@ -5,7 +5,7 @@
 .post-header-container {
     display: flex;
     align-items: center;
-    padding: 12px 1.5%; /*12px / 800px for 1.5% */
+    padding: 12px 1.5%;
     background: green;
 }
 
@@ -17,4 +17,12 @@
 .username {
     font-weight: bold;
     margin-left: 1%;
+}
+
+.post-content-container {
+
+}
+
+.picture-content {
+    width: 100%;
 }
