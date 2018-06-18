@@ -2,6 +2,11 @@
     margin: 30px 0;
 }
 
+.post-containers {
+    max-width: 604px;
+    margin: 0 auto;
+}
+
 .post-container .top-content {
     padding: 16px 17px;
     flex: none;

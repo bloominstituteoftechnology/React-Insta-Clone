@@ -3,7 +3,7 @@ import Post from './Post';
 
 const PostContainer = props => {
     return (
-        <div>
+        <div className='post-containers'>
             {props.data.map(data => <Post key={Math.random()} data={data} />)}
         </div>);
 }
