@@ -10,7 +10,12 @@ const PostContainer = (props) => {
       {props.post.map((post, index) => (
         <Card key={`${post.username}.${index}`}>
           <CardBody>
-            <img src={post.thumbnailUrl} alt='profile-pic' />
+            <img
+              src={post.thumbnailUrl}
+              alt='profile-pic'
+              className='img-fluid rounded-circle'
+            />
+            <span>{post.username}</span>
           </CardBody>
           <img width='60%' src={post.imageUrl} alt='Card cap' />
           <h6>{post.likes} likes</h6>
