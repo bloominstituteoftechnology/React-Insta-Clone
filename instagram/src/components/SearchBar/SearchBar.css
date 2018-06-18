@@ -1,0 +1,25 @@
+.SearchBar {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    height: 77px;
+  }
+  .Insta-logo-block {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    padding: 26px 40px;
+  }
+  .Insta-logo {
+      height: 35px;
+      width: 35px;
+  }
+  .Insta-name {
+      height: 35px;
+      width: 140px;
+      margin-left: 10px;
+      margin-top: 4px;
+  }
