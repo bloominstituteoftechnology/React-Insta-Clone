@@ -1,6 +1,7 @@
 import React from 'react';
 import './Post.css';
 import CommentSection from '../CommentSection/CommentSection';
+import PropTypes from 'prop-types';
 
 import {
     Card, CardText, CardBody, CardSubtitle, Row, CardImg
@@ -38,5 +39,15 @@ const Post = props => {
         </div>
     );
 }
+
+Post.propTypes = {
+    data: PropTypes.shape({
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        imageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string,
+    })
+};
 
 export default Post;

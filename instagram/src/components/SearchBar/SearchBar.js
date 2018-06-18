@@ -19,10 +19,10 @@ const SearchBar = () => {
         </Nav>
         <Nav className='instagram-icons'>
           <NavItem>
-            <i class="far fa-compass fa-lg"></i>
+            <i className="far fa-compass fa-lg"></i>
           </NavItem>
           <NavItem>
-            <i class="far fa-heart fa-lg"></i>
+            <i className="far fa-heart fa-lg"></i>
           </NavItem>
           <NavItem>
             <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/137578-200.png' alt='' />
