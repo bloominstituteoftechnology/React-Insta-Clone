@@ -1,0 +1,43 @@
+.searchbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 57px;
+    height: 57px;
+    margin-right: 10px;
+
+
+}
+.instagram {
+    width: 150px;
+    height: 57px;
+    padding-left: 15px;
+    border-left: 1px solid lightgray;
+
+}
+
+.icons {
+}
+
+.heart-icon {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+.friend-icon {
+    width: 45px;
+    height: 45px;
+    margin: 10px;
+}
