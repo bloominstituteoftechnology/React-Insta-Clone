@@ -25,21 +25,14 @@
 * If you so choose you may install `create-react-app` globally by running `npm install --global create-react-app`.
    * If you have CRA installed then run `create-react-app instagram` to create your starter application with the name `instagram`.
    * if you don't have CRA installed then run `npx create-react-app instagram` to create your starter application with the name `instagram`.
-* Inside your `instagram` project directory, run `yarn add enzyme sinon enzyme-adapter-react-16 --dev`, which will install additional necessary dependencies that `create-react-app` doesn't install for you off the bat.
-* You'll also need to install the Reactstrap library, which will come in handy for theming and styling of your project. Run `yarn add reactstrap` to install it. Then, copy and paste these two links into the head of the `index.html` file in `instagram/public`:
-
-```
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
-```
-
+   
 * Create a `components` directory inside the `src` directory, and then create a directory called `SearchBar`, another one called `PostContainer`, and lastly one called `CommentSection`, all inside the `src` directory. Each of these directories should contain the component file as well as the CSS for their respective components. Your file structure should end up looking like this:
 
 ![alt tag](/assets/folder_structure.png)
 
 ### Tasks (Day I)
 
-* There are three components that you'll need to implement for this project: the Search Bar, the Post Container, and the Comment Section.
+* There are three major container components that you'll need to implement for this project: the Header Container, the Post Container, and the Comment Section Container.
 * At the end of Day I there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Post Container and a Comment Section for every piece of mock data in the `dummy-data.js` file.
 * The root App component of your application should import the dummy data from the `dummy-data.js` file with `import dummyData from './dummy-data';` and iterate over said data, passing each individual object as a prop to an instance of `PostContainer`.
 * Each `PostContainer` component will then pass the array of comments on each post object as a prop to an instance of the `CommentSection` component.
