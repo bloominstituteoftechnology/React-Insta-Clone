@@ -1,0 +1,68 @@
+/* search bar styles */
+img {
+	height:100%;
+}
+
+.navBar {
+	height:100px;
+	display:flex;
+	justify-content:space-between;
+	border-bottom:2px solid gray;
+}
+
+.navBar .front{
+	margin-top:15px;
+	height:100%;
+	width:20%;
+	display:flex;
+	justify-content:space-between;
+}
+
+.navBar .front img{
+	height:50px;
+	width:50px;
+}
+
+.navBar .front img.logo{
+	height:50px;
+	width:115.74px;
+}
+
+.navBar .front p{
+	font-size:50px;
+}
+
+.navBar .searchField{
+	margin-top:25px;
+	background:LightGray;
+	height:55%;
+	border:1px solid Gray;
+	border-radius:5px;
+	display:flex;
+	justify-content:center;
+	width:23%;
+}
+
+.navBar .searchField img {
+	margin-top:10px;
+	height:50%;
+}
+
+.navBar .searchField p {
+	margin-left:3%;
+	margin-top:15px;
+	height:50%;
+	font-size:28px;
+}
+
+.navBar .back{
+	display:flex;
+	justify-content:space-between;
+	width:15%;
+}
+
+.navBar .back img {
+	margin-top:20px;
+	height:50px;
+	width:50px;
+}
