@@ -2,6 +2,12 @@
     display:flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color:white;
+    margin: 0;
+      border-bottom: 1px solid #EFEFEF;
+      padding: 20px;
 
 }
 .logo {
@@ -9,6 +15,7 @@
     font-size: 36px;
     padding-left: 20px;
     font-weight: 600;
+    color: #343434;
 }
 .instagram-icon {
     font-size:36px;
@@ -30,7 +37,7 @@
     height: 35px;
     text-align: center;
     font-size:14px;
-    border: 1px solid lightgrey;
+    border: 1px solid #EFEFEF;
     color: lightgrey;  
 }
 .inside-right-searchbar {
@@ -42,5 +49,5 @@
     font-size: 24px;
     padding-right: 34px;
     font-weight: 300;
-    color: darkgrey;
+    color: #898989;
 }
