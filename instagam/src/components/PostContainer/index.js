@@ -9,11 +9,11 @@ const PostContainer = (props) => {
 
             {props.passedState.map((item, i) => {
                 return ( 
-                    <div key={i} >
-                    <div className='userNameContent' >
-                        <img src={item.thumbnailUrl} className='thumbImg' alt='thumbnail' />
-                        <h4>{item.username}</h4>
-                    </div>
+                    <div key={i} className='post_container'>
+                        <div className='userNameContent' >
+                            <img src={item.thumbnailUrl} className='thumbImg' alt='thumbnail' />
+                            <h4>{item.username}</h4>
+                        </div>
                         <img src={item.imageUrl} className='postImg' alt='Post' />
                         <div className='likesPostImg'>
                             <div>
@@ -25,8 +25,17 @@ const PostContainer = (props) => {
                             </div>
                         </div>
                         <div className='commentSection'>
-                         <CommentSection passedItem={item.comments} />
+                            <CommentSection passedItem={item.comments} />
                         </div>
+                        <div className='dateStamp'>
+                            {item.timestamp}
+                        </div>
+                        <hr />
+                        <div className='footerCom'>
+                            <p>Add a comment...</p>
+                            <p>...</p>
+                        </div>
+
                     </div>
                 )
             })}

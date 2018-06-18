@@ -22,4 +22,22 @@
 }
 .commentSection {
     padding-left: 1rem;
+    margin-right: 1rem;
+}
+.dateStamp {
+    text-align: left;
+    padding-left: 1rem;
+    color: gray;
+    font-size: 0.7rem;
+}
+.footerCom {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    padding-left: 1rem;
+    margin-right: 1rem;
+}
+
+hr {
+    width: 90%;
 }

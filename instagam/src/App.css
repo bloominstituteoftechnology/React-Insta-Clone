@@ -9,3 +9,7 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.post_container {
+  border: 1px solid lightgray;
+}
