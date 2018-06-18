@@ -30,6 +30,10 @@ const Post = props => {
                     <CardText className='time-commented'>
                         {props.data.timestamp}
                     </CardText>
+                    <Row className='add-comment-section'>
+                        <input className='add-comment' type='text' placeholder='Add a comment...' />
+                        <img className='more-icon' src="https://png.icons8.com/metro/50/000000/more.png" />
+                    </Row>
                 </CardBody>
             </Card>
         </div>
