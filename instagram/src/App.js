@@ -18,9 +18,13 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Welcome to Instagram Clone</h1>
+          <h1>Instagram</h1>
+          <SearchBar />
+          <div>
+            
+          </div>          
         </header>
-        <SearchBar />
+
         <PostContainer datas={this.state.dummyData} />
       </div>
     );
