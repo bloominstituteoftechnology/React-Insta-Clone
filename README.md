@@ -1,19 +1,29 @@
 # React-Insta-Clone
 
-## Objectives
+## Introduction
+* The purpose of this project is to continue building on your knowledge of React that you have gained thus far. 
+    * Here, you'll be implementing a lot of the same concepts and structuring your components, that you have done in previous projects, in a very similar fashion. The main difference this time around is that you'll be using the `create-react-app` utility to generate your React project for you. 
+    * Don't worry about all of the extra files that you may not understand are present inside the created React application. The overall structure of the project remains exactly the same as what you worked with in Todo-React.
 
-The purpose of this project is to continue building on your knowledge of React that you have gained thus far. Here, you'll be implementing a lot of the same concepts and structuring your components, that you have done in previous projects, in a very similar fashion. The main difference this time around is that you'll be using the `create-react-app` utility to generate your React project for you. Don't worry about all of the extra files that you may not understand are present inside the created React application. The overall structure of the project remains exactly the same as what you worked with in Todo-React.
+* This project will be worked on through the entire week.
+    * Each day as you learn new things, you will use that to build and enhance this project a little more.
+    * You will use the same repo through the whole week, adding more code, and changing things here and there as you learn new principles and techniques. 
+    * It will be important to communicate any problems you're having so you don't fall behind. 
+    * The goal is to finish each day's objectives, and have a working project to start with on the next day.
 
-For this project, you'll be building a simple Instagram clone using React. There is a file provided called `dummy-data.js` that contains some mock data. Each object in the mock data represents a faux Instagram post. Your React application will receive this faux post data and render each as a separate Instagram post.
+* For this project, you'll be building a simple Instagram clone using React. 
+* There is a file provided called `dummy-data.js` that contains some mock data. Each object in the mock data represents a faux Instagram post. 
+* Your React application will receive this faux post data and render each as a separate Instagram post.
 
-By the end of this project, you should be comfortable with what components are, the notion of state within a component, as well as passing data from a parent component down to a child component.
+## Day I
+### Focus (Day I)
+* Demonstrate the the ability to use create-react-app to boilerplate a react application
+* Describe and be able to use PropTypes to 'type check' specific data being passed down to a child component
+* Demonstrate the ability to use defaultProps in a React component
 
-Try to get all of the tests passing. If you don't get there, then aim for creating all of the different components and organizing them appropriately in terms of the parent-child relationship, with data getting passed around accordingly.
-
-## Project Setup
+### Project Setup
 * Install `create-react-app` globally by running `npm install --global create-react-app`.
 * Run `create-react-app instagram` to create your starter application with the name `instagram`.
-* Once your React project has been created, move the provided `/tests` directory as well as the `dummy-data.js` file into the `/src` directory of your newly-generated React project.
 * Inside your `instagram` project directory, run `yarn add enzyme sinon enzyme-adapter-react-16 --dev`, which will install additional necessary dependencies that `create-react-app` doesn't install for you off the bat.
 * You'll also need to install the Reactstrap library, which will come in handy for theming and styling of your project. Run `yarn add reactstrap` to install it. Then, copy and paste these two links into the head of the `index.html` file in `instagram/public`:
 
@@ -26,13 +36,13 @@ Try to get all of the tests passing. If you don't get there, then aim for creati
 
 ![alt tag](/assets/folder_structure.png)
 
-## Project Description
+### Tasks (Day I)
 
 * There are three components that you'll need to implement for this project: the Search Bar, the Post Container, and the Comment Section.
-* In your completed project, there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Post Container and a Comment Section for every piece of mock data in the `dummy-data.js` file.
+* At the end of Day I there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Post Container and a Comment Section for every piece of mock data in the `dummy-data.js` file.
 * The root App component of your application should import the dummy data from the `dummy-data.js` file with `import dummyData from './dummy-data';` and iterate over said data, passing each individual object as a prop to an instance of `PostContainer`.
 * Each `PostContainer` component will then pass the array of comments on each post object as a prop to an instance of the `CommentSection` component.
-* The `CommentSection` component will receive the array of comments as props and render each one with the username of the poster as well as the post's text. Additionally, there should be an input box that allows users to submit a new comment for any post. Since there is no login page or anything of that sort, hard code a static username.
+* The `CommentSection` component will receive the array of comments as props and render each one with the username of the poster as well as the post's text. Additionally, there should be an input box that allows users to submit a new comment for any post. We'll work on posting new comments tomorrow.
 * You are free to leverage the Bootstrap library for this project for the purposes of theming and styling. I recommend the awesome [reactstrap](https://reactstrap.github.io/) library, which is a library of Bootstrap components that have been implemented using React, so they're really easy to just drop straight into React projects.
 * In addition to Bootstrap for theming, you'll want to add your own styles via CSS. To keep things organized, have the CSS file that corresponds with a component live in the same directory as the component file.
 
@@ -46,8 +56,7 @@ Your search bar should look something like this:
 Your post container should look something like this:
 ![alt tag](/assets/ig_post.png)
 
-## Stretch Problem
+### Challenges (Day I)
 
-* Implement the ability to like a post by clicking on a heart icon and having the number of likes increment accordingly.
-* Get the Search Bar to filter posts by the post's username. When you submit a search term should filter out posts by users whose usernames do not match the search term.
+* Implement the ability to comment on a post with the `Add a comment...` input.
 * Look into the [moment.js](https://momentjs.com/) library to read about how to dynamically format the timestamp into a human-readable format like how it is being displayed in the screenshot.
