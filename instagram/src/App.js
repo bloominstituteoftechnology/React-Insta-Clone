@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data'
+import PostContainer from './components/PostContainer/PostContainer'
+import SearchBar from './components/SearchBar/SearchBar'
 
 
 class App extends Component {
@@ -9,6 +11,11 @@ class App extends Component {
     this.state = {
       dummyData: dummyData
     }
+  }
+
+  changeTaskHandler = e => {
+    console.log(e)
+    this.setState ({thing: e.target.value})
   }
 
   render() {
@@ -20,9 +27,11 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
 
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <SearchBar 
+        value = {this.state.thing}
+        />
+
+        <PostContainer dummyData = {this.state.dummyData} />
 
       </div>
     );
