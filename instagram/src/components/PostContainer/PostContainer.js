@@ -18,9 +18,13 @@ function PostContainer (props) {
                 <img src={props.post.imageUrl} alt="main post image"></img>
             </div>
             <div className="icon-strip">
+                <div className="left-logos">
                 <div className="heart-icon">HEART</div>
                 <div className="speech-icon">SPEECH</div>
+                </div>
+                <div className="right-logos">
                 <div className="bookmark-icon">BOOKMARK</div>
+                </div>
             </div>
             <div className="likes-strip">
                 <h3>{"" + props.post.likes + ((props.post.likes > 1) ? " likes" : " like")}</h3>

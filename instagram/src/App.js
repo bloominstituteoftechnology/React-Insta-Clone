@@ -10,12 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div className="camera-icon">camera icon</div>
-          <div className="logo">logo</div>
           <SearchBar />
-          <div className="navigation">navigation</div>
-          <div className="like">like</div>
-          <div className="profile">profile</div>
         </header>
         {dummyData.map((post) => {
           return (

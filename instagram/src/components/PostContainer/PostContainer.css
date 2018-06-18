@@ -1,12 +1,33 @@
+
 .post-container {
     max-width: 600px;
 }
 
+.post-container h3 {
+    font-size: 1.4rem;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.icon-strip {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-strip .left-logos {
+    display: flex;
+}
+
 .user-thumbnail img {
-    width: 50px;
-    border-radius: 25px;
+    width: 30px;
+    border-radius: 15px;
+    margin: 0 15px;
 }
 
 .post-container .main-img img {
     width: 100%;
+    display: block;
 }

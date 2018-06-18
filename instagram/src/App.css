@@ -7,6 +7,14 @@ html {
   text-align: center;
   font-size: 1.6rem;
   font-family: "Source Sans Pro", sans-serif;
+  color: #262626;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
 }
 
 .App-logo {
