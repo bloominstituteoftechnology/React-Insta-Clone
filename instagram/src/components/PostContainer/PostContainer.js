@@ -12,7 +12,10 @@ const PostContainer = props => {
             <div>{props.likes}</div>
             <div>{props.comments.map(comment => {
                 return (
-                    <CommentSection />
+                    <CommentSection
+                        username={comment.username}
+                        text={comment.text}
+                    />
                 );
             })}
             </div>
