@@ -22,8 +22,9 @@
 * Demonstrate the ability to use defaultProps in a React component
 
 ### Project Setup
-* Install `create-react-app` globally by running `npm install --global create-react-app`.
-* Run `create-react-app instagram` to create your starter application with the name `instagram`.
+* If you so choose you may install `create-react-app` globally by running `npm install --global create-react-app`.
+   * If you have CRA installed then run `create-react-app instagram` to create your starter application with the name `instagram`.
+   * if you don't have CRA installed then run `npx create-react-app instagram` to create your starter application with the name `instagram`.
 * Inside your `instagram` project directory, run `yarn add enzyme sinon enzyme-adapter-react-16 --dev`, which will install additional necessary dependencies that `create-react-app` doesn't install for you off the bat.
 * You'll also need to install the Reactstrap library, which will come in handy for theming and styling of your project. Run `yarn add reactstrap` to install it. Then, copy and paste these two links into the head of the `index.html` file in `instagram/public`:
 
