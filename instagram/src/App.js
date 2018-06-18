@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import dummyData from './dummy-data.js';
+import SearchBar from './components/SearchBar/SearchBar';
+import Posts from './components/Posts';
+import PropTypes from 'prop-types';
 
 class App extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      dummyData: dummyData
+    }
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+        <SearchBar />
+        <header>
+          <h1 className="App-title">React Insta Clone</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div>
+        {this.state.dummyData.map(user => {
+          return <Posts userData={this.state.dummyData} />
+        })}
+        </div>
       </div>
     );
   }
