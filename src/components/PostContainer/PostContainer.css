@@ -1,7 +1,8 @@
 .post-container{
-    border:2px solid black;
+    border:.5px solid black;
     width: 50%;
     margin: 100px auto;
+    text-align: left;
 }
 
 .top-picture {
@@ -11,5 +12,4 @@
 }
 h1 {
     font-size: 1rem;
-    text-align: left;
 }
