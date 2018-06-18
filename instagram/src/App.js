@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer";
+import React, { Component } from 'react';
+import SearchBar from './components/SearchBar/SearchBar';
+import PostContainer from './components/PostContainer/PostContainer'
 
-import "./App.css";
-import dummyData from "./dummy-data";
+import './App.css';
+import dummyData from './dummy-data';
 
 class App extends Component {
   render() {
@@ -17,11 +17,9 @@ class App extends Component {
           <div className="like">like</div>
           <div className="profile">profile</div>
         </header>
-        {dummyData.map(post => {
+        {dummyData.map((post) => {
           return (
-            <div className="row">
-              <PostContainer key={post.thumbnailUrl} post={post} />
-            </div>
+            <PostContainer key={post.thumbnailUrl} post={post} />
           );
         })}
       </div>
