@@ -5,7 +5,10 @@ const Posts = props => {
   return (
     <div>
       {props.userData.map(user => {
-        return <PostContainer key={user.username} user={user} />
+        return <div>
+          <PostContainer key={user.timestamp} user={user} />
+          {/*<CommentSection comments={user.comments} /> */}
+        </div>
       })}
     </div>
   );
