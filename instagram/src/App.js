@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import './App.css';
+import commentSection from './Components/CommentSection';
+import postContainter from './Components/PostContainer';
+import searchBar from './Components/SearchBar';
 
 class App extends Component {
   render() {
