@@ -12,6 +12,7 @@
     width: 200px;
     display: flex;
     font-size: 26px;
+    font-family: 'Lobster', cursive;
 }
 
 .searchbar-header div {
