@@ -9,7 +9,7 @@ const PostContainer = (props) => {
         thumbnail = {props.data.thumbnailUrl} 
         username = {props.data.username}/>
         <PostContent 
-        picture = {props.data.imageURL}
+        picture = {props.data.imageUrl}
          />
     </div>
     );
