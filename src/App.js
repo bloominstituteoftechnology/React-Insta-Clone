@@ -17,7 +17,12 @@ class App extends React.Component {
         </header>
         <div>
           {this.state.data.map(post => (
-            <PostContainer  key={Math.random()} postComments={post.comments} postStarter={post.username} postImage={post.imageUrl}/>
+            <PostContainer  key={Math.random()} 
+            postComments={post.comments} 
+            postStarter={post.username}
+            postThumb={post.thumbnailUrl}
+            postImage={post.imageUrl}
+            />
           ))}
         </div>
       </div>

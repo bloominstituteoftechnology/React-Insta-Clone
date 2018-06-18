@@ -4,7 +4,9 @@
     margin: 100px auto;
     text-align: left;
 }
-
+.thumb-pic{
+    height:20px;
+}
 .top-picture {
     height: 300px;
     width: 100%;
