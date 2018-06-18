@@ -1,17 +1,31 @@
 .post-container{
     border:.5px solid black;
-    width: 50%;
-    margin: 100px auto;
+    max-width: 60%;
+    margin: 50px auto;
     text-align: left;
+}
+.top-container{
+    padding: 3% 2% 0;
 }
 .thumb-pic{
     height:20px;
+    margin-left: 2%;
 }
 .top-picture {
-    height: 300px;
+    height: 500px;
     width: 100%;
+    padding: 0 2%;
     text-align: center;
 }
 h1 {
     font-size: 1rem;
+}
+.comment-container{
+    max-width: 100%;
+    margin: 0 5% 2% 5%;
+}
+.comment-bar{
+    border: none;
+    border-top: 1px solid gray;
+    width: 90%;
 }

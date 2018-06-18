@@ -5,8 +5,11 @@ import CommentSection from '../CommentSection/CommentSection'
 const PostContainer = props => {
     return (
         <div className="post-container">
-            <h1><img className="thumb-pic"src={props.postThumb} alt="thumb"></img>
+            <div className="top-container">
+            <h1><img className="thumb-pic"src={props.postThumb} alt="thumb"></img>&nbsp;&nbsp;
             {props.postStarter}</h1>
+            </div>
+
             <img className="top-picture" src={props.postImage} alt="post-img"></img>
                 <div className="comment-container">
                     <div>
@@ -15,7 +18,7 @@ const PostContainer = props => {
                         ))}
                     </div>
                     <div>
-                        <input type="text"
+                        <input className="comment-bar"type="text"
                             placeholder="Add Comment..."
                         />
                     </div>
