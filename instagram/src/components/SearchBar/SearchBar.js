@@ -59,7 +59,7 @@ export default class SearchBar extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink href="#">
-                  <i class="far fa-user fa-2x" />
+                  <i className="far fa-user fa-2x" />
                 </NavLink>
               </NavItem>
             </Nav>
