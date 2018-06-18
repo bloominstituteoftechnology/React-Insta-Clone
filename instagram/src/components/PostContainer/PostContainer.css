@@ -1,3 +1,6 @@
 .Post-Container {
-  border: 2px solid red;
+  border: 2px solid yellow;
+  width: 620px;
+  margin: 0 auto;
+  background: white;
 }

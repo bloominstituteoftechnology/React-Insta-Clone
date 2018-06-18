@@ -7,7 +7,7 @@ import dummyData from './components/dummy-data'
 class App extends Component {
   render () {
     return (
-      <div>
+      <div className='container'>
         <TheSearchBar />
         <PostContainer post={dummyData} />
       </div>

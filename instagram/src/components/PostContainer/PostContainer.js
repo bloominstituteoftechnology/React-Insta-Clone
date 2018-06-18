@@ -2,6 +2,8 @@ import React from 'react'
 import { Card, CardBody } from 'reactstrap'
 import CommentSection from '../CommentSection/CommentSection'
 import './PostContainer.css'
+import PropTypes from 'prop-types'
+
 const PostContainer = (props) => {
   return (
     <div className='Post-Container'>
@@ -22,5 +24,8 @@ const PostContainer = (props) => {
     </div>
   )
 }
-
+PostContainer.propTypes = {
+  post: PropTypes.array,
+  likes: PropTypes.string
+}
 export default PostContainer
