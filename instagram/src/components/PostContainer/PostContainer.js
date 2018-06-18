@@ -1,21 +1,17 @@
 import React from "react";
 import CommentSection from "./../../components/CommentSection/CommentSection";
+import "./PostContainer.css";
 
 const PostContainer = props => {
   return (
-    <div>
+    <div className="card">
       {/* POST CONTAINER */}
-      {props.post.comments.map(comment => {
-        return (
-          <div>
-            <CommentSection
-              text={comment.text}
-              username={comment.username}
-              key={Math.random()}
-            />
-          </div>
-        );
-      })}
+      <img
+        src={props.post.imageUrl}
+        alt="card image"
+        className="card-img-top"
+      />
+      <CommentSection post={props.post} />
     </div>
   );
 };

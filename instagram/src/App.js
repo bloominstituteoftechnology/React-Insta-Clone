@@ -13,7 +13,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className="App container">
         <SearchBar />
         {this.state.postData.map(post => (
           <PostContainer post={post} key={Math.random()} />
