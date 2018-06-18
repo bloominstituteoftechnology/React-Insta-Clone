@@ -1,5 +1,5 @@
 .post-container{
-    border:.5px solid black;
+    border: 1px solid gray;
     max-width: 60%;
     margin: 50px auto;
     text-align: left;
@@ -14,7 +14,7 @@
 .top-picture {
     height: 500px;
     width: 100%;
-    padding: 0 2%;
+
     text-align: center;
 }
 h1 {
@@ -22,10 +22,11 @@ h1 {
 }
 .comment-container{
     max-width: 100%;
-    margin: 0 5% 2% 5%;
+    margin: 5% 5% 0 5%;
 }
 .comment-bar{
     border: none;
     border-top: 1px solid gray;
     width: 90%;
+    height: 50px;
 }
