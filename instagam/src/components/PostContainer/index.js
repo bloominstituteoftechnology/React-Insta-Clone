@@ -11,14 +11,22 @@ const PostContainer = (props) => {
                 return ( 
                     <div key={i} >
                     <div className='userNameContent' >
-                        <img src={item.thumbnailUrl} className='thumbImg' />
+                        <img src={item.thumbnailUrl} className='thumbImg' alt='thumbnail' />
                         <h4>{item.username}</h4>
                     </div>
-                        <img src={item.imageUrl} className='postImg' />
-                        <div>
-                            
+                        <img src={item.imageUrl} className='postImg' alt='Post' />
+                        <div className='likesPostImg'>
+                            <div>
+                                <i className="fa fa-heart-o" aria-hidden="true"></i> 
+                                <i className="fa fa-comment-o" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                {item.likes} likes
+                            </div>
                         </div>
-                        <CommentSection passedItem={item.comments} />
+                        <div className='commentSection'>
+                         <CommentSection passedItem={item.comments} />
+                        </div>
                     </div>
                 )
             })}

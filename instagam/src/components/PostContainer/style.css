@@ -2,7 +2,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    padding-right: 1rem;
+    padding: 0 1rem;
 }
 .userNameContent {
     display: flex;
@@ -10,4 +10,16 @@
 }
 .postImg {
     width: 100%;
+}
+.likesPostImg {
+    text-align: left;
+    margin-top: 0.3rem;
+    line-height: 1.5rem;
+    padding-left: 1rem;
+}
+.fa {
+    padding-right: 1rem;
+}
+.commentSection {
+    padding-left: 1rem;
 }
