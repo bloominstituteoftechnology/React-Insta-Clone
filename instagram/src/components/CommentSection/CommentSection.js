@@ -10,7 +10,7 @@ class CommentSection extends Component {
 
   render() { 
     return (
-      <div>
+      <div className="comments">
         {this.props.commentsArr.map( (comments,index) => <Comment key={index} comments={comments}/>)}
       </div>
      )

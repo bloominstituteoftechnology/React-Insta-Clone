@@ -8,8 +8,8 @@ class Post extends Component {
   }
   render() { 
     return (
-      <div>
-        <div className="post-header">
+      <div className="post">
+        <div className="post header">
           <div className="thumbnail">
             <img className="img-fluid" src={this.props.postObj.thumbnailUrl} alt=""/>
           </div> 
@@ -17,7 +17,7 @@ class Post extends Component {
             <span>{this.props.postObj.username}</span>
           </div>
         </div>
-        <div>
+        <div className="post content">
           <div>
             <img className="img-fluid" src={this.props.postObj.imageUrl} alt="" />
           </div>

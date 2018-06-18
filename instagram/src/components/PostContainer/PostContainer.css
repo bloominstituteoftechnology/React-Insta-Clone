@@ -1,5 +1,10 @@
-.post-header{
+.post-container{
   border: 1px solid lightgrey;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.post .header{
   display: flex;
 }
 
@@ -18,7 +23,16 @@
   padding-top: 3%;
 }
 
+.icons{
+  margin-bottom: 3px;
+}
+
 .icons i{
-  margin-top: 3.6%;
+  margin-top: 2.6%;
   margin-left: 3.6%;
+}
+
+.likes{
+  margin-left: 3.6%;
+  margin-bottom: 2px;
 }

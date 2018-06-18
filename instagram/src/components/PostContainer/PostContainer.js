@@ -10,7 +10,7 @@ class PostContainer extends Component {
   }
   render() { 
     return (
-      <div>
+      <div className="post-container">
         <Post postObj = {this.props.postObj}/>
         <CommentSection commentsArr = {this.props.postObj.comments}/>
       </div>
