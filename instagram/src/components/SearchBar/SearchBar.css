@@ -9,11 +9,23 @@
 .searchbar-header {
     width: 200px;
     display: flex;
-    justify-content: space-between;
+    font-size: 26px;
+}
+
+.searchbar-header div {
+    padding: 0 20px;
+}
+
+.searchbar-header div:first-child {
+    border-right: 2px solid grey;
 }
 
 .searchbar-search input {
+    height: 26px;
     text-align: center;
+    font-size: 18px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
 }
 
 .searchbar-nav {
