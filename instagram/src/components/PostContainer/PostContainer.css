@@ -1,0 +1,7 @@
+.post-header {
+    display: flex;
+    align-items: center;
+}
+.post-header img {
+    border-radius: 50%;
+}

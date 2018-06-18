@@ -1,17 +1,18 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import './PostContainer.css';
 
 const PostContainer = props => {
     return (
         <div className="custom-post">
-            <div>
+            <div className="post-header">
                 <img src={props.dummyData.thumbnailUrl} alt="user thumbnail"/>
                 <p>{props.dummyData.username}</p>
             </div>
-            <div>
-                <img src={props.dummyData.imageUrl} alt="post image"/>
+            <div className="post-img">
+                <img src={props.dummyData.imageUrl} alt="post content"/>
             </div>
-            <div>
+            <div className="post-comments">
                 <p>{props.dummyData.likes}</p>
                 <CommentSection dummyData={props.dummyData.comments} />
             </div>            
