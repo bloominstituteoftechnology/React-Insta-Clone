@@ -1,5 +1,5 @@
 .post-container {
-    height: 924px;
+    max-height: 924px;
     margin: 30px 0;
 }
 
@@ -43,6 +43,13 @@
 .post-likes {
     padding: 1px 3px;
     font-size: 15px;
+    margin: 1px 0;
+}
+
+.time-commented {
+    color: grey;
+    font-size: 12px;
+    padding: 1px 1px
 }
 
 .row {
