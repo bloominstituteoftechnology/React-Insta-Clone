@@ -1,0 +1,23 @@
+.post {
+  margin-bottom: 100px;
+  border: gray 1px solid;
+  width: 48.5%;
+  height: 915px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.post-top-container{
+  border: solid red 1px;
+  height: 65px;
+  
+}
+.thumbnail {
+  height: 50%;
+  display: inline-block;
+}
+.username {
+  display: inline;
+}
+.main-img {
+  width: 100%;
+}
