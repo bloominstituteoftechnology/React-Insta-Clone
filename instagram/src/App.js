@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
+import PostContainer from './components/PostContainer/PostContainer';
+import CommentSection from './components/CommentSection/CommentSection';
 
 class App extends Component {
 	constructor() {
 		super(); 
 		this.state = {
-			data: dummy-data
+			data: dummyData
 		}
 	}
   render() {
@@ -15,10 +17,13 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Instagram</h1>
         </header>
-        
-      </div>
-    );
-  }
+        <div>
+        	<PostContainer dummyData ={this.state.dummyData} />
+            </div>,
+</div>
+           )};  
+    
+  
 }
 
 export default App;
