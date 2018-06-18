@@ -14,8 +14,14 @@ const CommentSection = props => {
                 <input type="text" placeholder="Add a comment..."/>
             </div>
         </div>
-        
     )
 }
+
+CommentsSection.propTypes = {
+    comment: PropTypes.shape({
+        username: PropTypes.string,
+        text: PropTypes.string
+    })
+};
  
 export default CommentSection;
