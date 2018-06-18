@@ -1,0 +1,15 @@
+.post-container{
+    border:2px solid black;
+    width: 50%;
+    margin: 100px auto;
+}
+
+.top-picture {
+    height: 300px;
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    font-size: 1rem;
+    text-align: left;
+}
