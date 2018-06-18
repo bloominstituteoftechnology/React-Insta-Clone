@@ -11,7 +11,11 @@ const PostContainer = props => {
                 <div>{props.username}</div>
             </div>
             <div><img src={props.imageUrl} alt="post png"/></div>
-            <div>{props.likes}</div>
+            <div className="post-nav">
+                <div>Image 1</div>
+                <div>Image 2</div>
+            </div>
+            <div className="post-likes">{props.likes} likes</div>
             <div>{props.comments.map((comment, index) => {
                 return (
                     <CommentSection
@@ -22,7 +26,7 @@ const PostContainer = props => {
                 );
             })}
             </div>
-            <div>{props.timestamp}</div>
+            <div className="timestamp">{props.timestamp}</div>
         </div>
     );
 };

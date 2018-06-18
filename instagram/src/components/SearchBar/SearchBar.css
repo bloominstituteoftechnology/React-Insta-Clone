@@ -10,16 +10,14 @@
     width: 200px;
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
 }
 
-.searchbar-search {
-    
+.searchbar-search input {
+    text-align: center;
 }
 
 .searchbar-nav {
     width: 200px;
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
 }
