@@ -4,9 +4,13 @@ import './Post.css';
 const PostContent = (props) => {
     return (
         <div className='post-content-container'>
-            <img src={props.picture} className='picture-content' />
-            <div className='content-footer'>
-                
+            <img src={props.picture} className='picture__content' />
+            <div className='content__footer'>
+                <div className = 'footer__icons'>
+                <i className="far fa-heart footer__icon"></i>
+                <i className="far fa-comment footer__icon"></i>
+                </div>
+                <p className = 'footer__likes'>{props.likes} likes</p>
             </div>
         </div>
     );

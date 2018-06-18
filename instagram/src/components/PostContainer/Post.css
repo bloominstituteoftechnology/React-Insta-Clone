@@ -23,6 +23,36 @@
 
 }
 
-.picture-content {
+.picture__content {
     width: 100%;
+}
+
+.content__footer {
+    background: white;
+    padding: 12px 1.5%;
+}
+
+.footer__icons {
+}
+.fa-heart:hover {
+    color: red;
+}
+
+.fa-comment {
+    transform: scaleX(-1);
+}
+.fa-comment:hover {
+    color: lightblue;
+}
+
+.footer__icon {
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: 300;
+    margin-right: 3%;
+}
+
+.footer__likes {
+    margin-top: 6px;
+    font-weight: 400;
 }
