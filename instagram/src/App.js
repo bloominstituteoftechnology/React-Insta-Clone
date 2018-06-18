@@ -26,7 +26,7 @@ constructor(){
     return (
       <div className="App">
 	<SearchBar searchBarStyle="search-bar" />
-	<PostContainer dummyData={this.state.dummyData}/>
+	<PostContainer PostImage="post-image" HeaderContainer="header-container"  HeaderImageStyle="header-image-style" dummyData={this.state.dummyData}/>
       </div>
     );
   }
