@@ -1,0 +1,35 @@
+.post-header{
+  border: 1px solid red;
+  display: flex;
+  /* height: 64px; */
+}
+
+/* .thumbnail img{
+  width: 16%;
+  border-radius: 25px;
+  margin: 18px;
+} */
+
+.thumbnail{
+  width: 5%;
+  margin-top: 2.5%;
+  margin-left: 2.5%;
+  margin:2.5%
+}
+
+.thumbnail img{
+  /* width: 100%; */
+  border-radius: 25px;
+  /* margin: 18px; */
+}
+
+
+.username{
+  padding-top: 3%;
+}
+
+/* .post-image{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit:contain;
+} */
