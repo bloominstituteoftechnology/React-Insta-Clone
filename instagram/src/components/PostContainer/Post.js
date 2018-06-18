@@ -19,7 +19,7 @@ class Post extends Component {
 					<p>Like Comment</p>
 					<p>{this.props.post.likes} likes</p>
 					<CommentsList comments={this.props.post.comments}/>
-					<AddComment />
+					<AddComment commentHandler={this.props.commentHandler} postId={this.props.post.timestamp}/>
 				</div>
 			</div>
 		);

@@ -16,14 +16,24 @@ class App extends Component {
     }
   }
 
-  addComment(postID){
-    
+  addComment =(postId, comment) =>{
+    let data = this.state.data.slice();
+    data = data.map(post => {
+      if (postId === post.timestamp){
+        post.comments.push({
+          username: 'loganilus',
+          text: comment
+        });
+      }
+      return post;
+    })
+    this.setState({data})
   }
   render() {
     return (
       <div className='container'>
           <SearchContainer />
-          <PostContainer data={this.state.data}/>
+          <PostContainer data={this.state.data} commentHandler={this.addComment}/>
       </div>
     );
   }
