@@ -28,7 +28,7 @@ const Post = props => {
                     </CardText>
                     {props.data.comments.map(comment => <CommentSection comment={comment} />)}
                     <CardText className='time-commented'>
-                        2 hours ago
+                        {props.data.timestamp}
                     </CardText>
                 </CardBody>
             </Card>
