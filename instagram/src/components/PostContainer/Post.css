@@ -1,0 +1,24 @@
+.post-container {
+    height: 924px;
+}
+
+.post-container .card-body {
+    padding: 16px 17px;
+    flex: none;
+}
+
+.post-thumb-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 90px;
+}
+
+.post-username {
+    align-self: center;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.row {
+    margin: 0;
+}
