@@ -1,7 +1,6 @@
 # React-Insta-Clone
 
-## Objectives
-
+## Introduction
 * The purpose of this project is to continue building on your knowledge of React that you have gained thus far. 
     * Here, you'll be implementing a lot of the same concepts and structuring your components, that you have done in previous projects, in a very similar fashion. The main difference this time around is that you'll be using the `create-react-app` utility to generate your React project for you. 
     * Don't worry about all of the extra files that you may not understand are present inside the created React application. The overall structure of the project remains exactly the same as what you worked with in Todo-React.
@@ -17,7 +16,7 @@
 * Your React application will receive this faux post data and render each as a separate Instagram post.
 
 ## Day I
-### Objectives (Day I)
+### Focus (Day I)
 * Demonstrate the the ability to use create-react-app to boilerplate a react application
 * Describe and be able to use PropTypes to 'type check' specific data being passed down to a child component
 * Demonstrate the ability to use defaultProps in a React component
@@ -37,7 +36,7 @@
 
 ![alt tag](/assets/folder_structure.png)
 
-### Description (Day I)
+### Tasks (Day I)
 
 * There are three components that you'll need to implement for this project: the Search Bar, the Post Container, and the Comment Section.
 * At the end of Day I there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Post Container and a Comment Section for every piece of mock data in the `dummy-data.js` file.
@@ -57,7 +56,7 @@ Your search bar should look something like this:
 Your post container should look something like this:
 ![alt tag](/assets/ig_post.png)
 
-### Day I Stretch Problem (Day I)
+### Challenges (Day I)
 
 * Implement the ability to comment on a post with the `Add a comment...` input.
 * Look into the [moment.js](https://momentjs.com/) library to read about how to dynamically format the timestamp into a human-readable format like how it is being displayed in the screenshot.

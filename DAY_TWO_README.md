@@ -1,5 +1,5 @@
 ## Day II
-### Objectives (Day II)
+### Focus (Day II)
 * Understand the concept of React component lifecycles, along with the major lifecycle methods such as `render`, `componentDidMount`.
 
 ### Daily Setup (Day II)
@@ -19,7 +19,7 @@
 * Implement the ability to like a post by clicking on a heart icon and having the number of likes increment accordingly.
 * Get the Search Bar to filter posts by the post's username. When you submit a search term should filter out posts by users whose usernames do not match the search term.
 
-#### Day II MVP Requirements
+#### Tasks (Day II)
 * Use lifecycle methods
     * In `app.js` use `componentDidMount()` to set your data to the component's state. Use the state object to pass data to your `PostContainer` component.
 * Adding comments
@@ -32,7 +32,7 @@
 * Search
     * Set up the search bar will like the comment input and the like button. In your function, filter out any post whose username doesn't match the search term passed in, then update the state with the resulting data. 
 
-#### Day II Stretch Problems
+#### Challenges (Day II)
 * Persist your data using `localhost`. If done correctly, you will be able to refresh your page and still see your new comments.
 * Add the ability to delete a comment from your data. If your data is in `localhost`, make sure to delete it from there as well.
 * Implement a third-party library that does "fuzzy" searches into your search bar functionality (ie - search terms that aren't exact, like "phils" or "coffeephilz", would still return the username "philzcoffe").
