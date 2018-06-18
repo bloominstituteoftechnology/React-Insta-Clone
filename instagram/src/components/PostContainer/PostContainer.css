@@ -12,6 +12,10 @@
     margin: 20px auto;
 }
 
+.post-header div:last-child {
+    font-weight: bold;
+}
+
 .post-header img {
     height: 50px;
     border-radius: 50%;
@@ -26,5 +30,10 @@
 }
 
 .post-likes {
+    font-weight: bold;
+    margin: 10px 20px;
+}
+
+.timestamp {
     margin: 10px 20px;
 }
