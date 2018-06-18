@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar'
+import PostContainer from './components/PostContainer/PostContainer'
 import './App.css';
-import data from '../dummy-data'
+import data from './dummy-data'
 
 class App extends Component {
   constructor() {
@@ -14,6 +15,11 @@ class App extends Component {
     return (
       <div className="app-container">
         <SearchBar />
+        <div className="posts">
+          {this.state.data.map((post, index) => (
+            <PostContainer key={index} data={post} />
+          ))}
+        </div>
       </div>
     );
   }
