@@ -1,0 +1,20 @@
+.post-container {
+    margin-bottom: 50px;
+}
+
+.post-header-container {
+    display: flex;
+    align-items: center;
+    padding: 12px 1.5%; /*12px / 800px for 1.5% */
+    background: green;
+}
+
+.thumbnail {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.username {
+    font-weight: bold;
+    margin-left: 1%;
+}
