@@ -1,0 +1,10 @@
+.comment {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.9em;
+    padding: 2px 0;
+}
+.comment .name {
+    font-weight: bold;
+    margin-right: 5px;
+}
