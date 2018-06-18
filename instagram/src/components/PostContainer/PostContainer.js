@@ -7,11 +7,13 @@ const PostContainer = props => {
       {/* POST CONTAINER */}
       {props.post.comments.map(comment => {
         return (
-          <CommentSection
-            text={comment.text}
-            username={comment.username}
-            key={Math.random()}
-          />
+          <div>
+            <CommentSection
+              text={comment.text}
+              username={comment.username}
+              key={Math.random()}
+            />
+          </div>
         );
       })}
     </div>

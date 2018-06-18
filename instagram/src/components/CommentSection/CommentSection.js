@@ -1,11 +1,11 @@
 import React from "react";
+import Comment from "./Comment";
 
 const CommentSection = props => {
   return (
     <div>
       {/* COMMENTS SECTION */}
-      <div>{props.text}</div>
-      <div>{props.username}</div>
+      <Comment text={props.text} username={props.username} />
     </div>
   );
 };
