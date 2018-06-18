@@ -1,5 +1,12 @@
+html {
+  font-size: 10px;
+}
+
 .App {
+  font-size: 1.6rem;
   text-align: center;
+  font-size: 1.6rem;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .App-logo {
@@ -23,6 +30,10 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -1,0 +1,12 @@
+.post-container {
+    max-width: 600px;
+}
+
+.user-thumbnail img {
+    width: 50px;
+    border-radius: 25px;
+}
+
+.post-container .main-img img {
+    width: 100%;
+}
