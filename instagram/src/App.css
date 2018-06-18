@@ -54,3 +54,10 @@ body {
   font-size: 1.6rem;
   box-sizing: border-box;
 }
+
+
+.App {
+	max-width: 800px;
+	margin: 0 auto;
+	background: lightblue;
+}

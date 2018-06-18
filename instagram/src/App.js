@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
+import SearchContainer from './components/SearchBar/SearchContainer';
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      instagramData: dummyData
+      instaData: dummyData
     };
   }
   render() {
     return (
       <div className="App">
-        
+        <SearchContainer />
       </div>
     );
   }
