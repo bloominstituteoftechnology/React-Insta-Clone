@@ -6,3 +6,34 @@
     margin-bottom: 24px;
 }
 
+.logos-container {
+    display:flex;
+}
+.fa-camera-retro {
+    font-size: 2.5rem;
+    padding-right: 6%;
+    border-right: 1px solid lightgrey;
+}
+.logo {
+    font-family: serif;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-left: 6%;
+}
+
+.search-box {
+    display: flex;
+    text-align: center;
+    border-radius: 2px;
+    padding: 5px 0;
+}
+
+.search-icons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+.search-icons-container > * {
+    cursor: pointer;
+    font-size: 3rem;
+}

@@ -5,8 +5,8 @@ import './Search.css';
 const SearchLogos = (props) => {
     return (
     <div className='logos-container'>
-        <img src="" alt="camera-logo"/>
-        <img src="" alt="site-logo"/>
+        <i className="fas fa-camera-retro"></i>
+        <h1 className='logo'>Simogram</h1>
     </div>
     )
 }
