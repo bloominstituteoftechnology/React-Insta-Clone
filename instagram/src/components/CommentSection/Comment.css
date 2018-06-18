@@ -1,0 +1,8 @@
+.comment-container {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.comment {
+    margin-left: 1%;
+}
