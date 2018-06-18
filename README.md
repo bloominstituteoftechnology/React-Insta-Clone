@@ -9,9 +9,9 @@
   - Don't worry about all of the extra files that you may not understand which will be present inside your React application that you will build with CRA.
   - The overall structure of the project remains exactly the same as what you worked with in Todo-React.
 
-- This project will be worked on throughou the entire week.
+- This project will be worked on throughout the entire week.
 
-  - Each day as you learn new things, you will use that knowldge to build and enhance this project a little more.
+  - Each day as you learn new things, you will use that knowledge to build and enhance this project a little more.
   - You will use the same repo throughout the whole week, adding more code, and changing things here and there as you learn new principles and techniques.
   - It will be important to communicate any problems you're having to your Project Manager so that we can make sure to get you un-stuck along the way as soon as possible.
   - The goal is to finish each day's objectives, and have a working project to start with on the next day.
