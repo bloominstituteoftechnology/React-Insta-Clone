@@ -11,7 +11,6 @@ const PostContainer = (props) => {
                 username={props.data.username} />
             <PostContent
                 picture={props.data.imageUrl}
-                comments={props.data.comments}
                 likes={props.data.likes}
             />
 
