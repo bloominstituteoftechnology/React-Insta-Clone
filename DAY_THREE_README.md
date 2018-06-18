@@ -27,4 +27,4 @@
     * There should be a `username` input, a `password` input, and a `Login` button.
     * The component should set the user info to `localStorage` when the user logs in.
 
-#### Challenges (Day III)
+#### Stretch Problems (Day III)
