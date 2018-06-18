@@ -3,7 +3,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 20px;
     margin: 20px auto;
+    border-bottom: 1px solid lightgrey;
 }
 
 .searchbar-header {
@@ -29,7 +31,12 @@
 }
 
 .searchbar-nav {
+    font-size: 24px;
     width: 200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+}
+
+.searchbar-nav div {
+    padding: 0 20px;
 }

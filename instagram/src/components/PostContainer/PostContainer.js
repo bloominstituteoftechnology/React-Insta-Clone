@@ -12,8 +12,8 @@ const PostContainer = props => {
             </div>
             <div><img src={props.imageUrl} alt="post png"/></div>
             <div className="post-nav">
-                <div>Image 1</div>
-                <div>Image 2</div>
+                <div><i class="far fa-heart"></i></div>
+                <div><i class="far fa-comment"></i></div>
             </div>
             <div className="post-likes">{props.likes} likes</div>
             <div>{props.comments.map((comment, index) => {

@@ -24,10 +24,14 @@
 }
 
 .post-nav {
+    font-size: 28px;
     width: 150px;
     display: flex;
-    justify-content: space-between;
     margin: 10px 20px;
+}
+
+.post-nav div:first-child {
+    margin-right: 20px;
 }
 
 .post-likes {

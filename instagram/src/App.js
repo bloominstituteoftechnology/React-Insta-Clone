@@ -26,8 +26,6 @@ class App extends Component {
 
         <SearchBar />
 
-        <hr />
-
         {this.state.data.map((data, index) => {
           return (
             <PostContainer
