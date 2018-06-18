@@ -28,9 +28,10 @@ class App extends Component {
 
         <hr />
 
-        {this.state.data.map(data => {
+        {this.state.data.map((data, index) => {
           return (
             <PostContainer
+              key={index}
               username={data.username}
               thumbnailUrl={data.thumbnailUrl}
               imageUrl={data.imageUrl}
