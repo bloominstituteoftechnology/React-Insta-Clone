@@ -2,7 +2,7 @@ import React from 'react';
 import './Post.css';
 import PostHeader from './PostHeader';
 import PostContent from './PostContent';
-import PropTypes from 'prop-types';
+import CommentsContainer from '../CommentSection/CommentsContainer';
 const PostContainer = (props) => {
     return (
         <div className='post-container'>
@@ -14,6 +14,8 @@ const PostContainer = (props) => {
                 comments={props.data.comments}
                 likes={props.data.likes}
             />
+
+           <CommentsContainer comments={props.data.comments}/>
         </div>
     );
 }
