@@ -3,8 +3,7 @@ import './Post.css';
 import CommentSection from '../CommentSection/CommentSection';
 
 import {
-    Card, CardText, CardBody, CardLink,
-    CardTitle, CardSubtitle, Row
+    Card, CardText, CardBody, CardSubtitle, Row, CardImg
 } from 'reactstrap';
 
 const Post = props => {
@@ -17,22 +16,22 @@ const Post = props => {
                         <CardSubtitle className='post-username'><strong>{props.data.username}</strong></CardSubtitle>
                     </Row>
                 </CardBody>
-                <img width="100%" src={props.data.imageUrl} alt='' />
+                <CardImg width="100%" src={props.data.imageUrl} alt='' />
                 <CardBody className='bottom-content'>
                     <Row className='comment-imgs'>
-                        <img className='heart-icon' src="https://png.icons8.com/metro/50/000000/like.png" />
-                        <img className='chat-icon' src="https://png.icons8.com/metro/50/000000/topic.png" />
+                        <img className='heart-icon' src="https://png.icons8.com/metro/50/000000/like.png" alt='' />
+                        <img className='chat-icon' src="https://png.icons8.com/metro/50/000000/topic.png" alt='' />
                     </Row>
                     <CardText className='post-likes'>
                         <strong>{props.data.likes} likes </strong>
                     </CardText>
-                    {props.data.comments.map(comment => <CommentSection comment={comment} />)}
+                    {props.data.comments.map(comment => <CommentSection key={Math.random()} comment={comment} />)}
                     <CardText className='time-commented'>
                         {props.data.timestamp}
                     </CardText>
                     <Row className='add-comment-section'>
                         <input className='add-comment' type='text' placeholder='Add a comment...' />
-                        <img className='more-icon' src="https://png.icons8.com/metro/50/000000/more.png" />
+                        <img className='more-icon' src="https://png.icons8.com/metro/50/000000/more.png" alt='' />
                     </Row>
                 </CardBody>
             </Card>
