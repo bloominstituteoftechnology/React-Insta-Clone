@@ -1,5 +1,6 @@
 import React from 'react';
 import './Post.css';
+import CommentSection from '../CommentSection/CommentSection';
 
 import {
     Card, CardText, CardBody, CardLink,
@@ -10,17 +11,24 @@ const Post = props => {
     return (
         <div>
             <Card className='post-container'>
-                <CardBody>
+                <CardBody className='top-content'>
                     <Row>
                         <img className='post-thumb-img' src={props.data.thumbnailUrl} alt='' />
                         <CardSubtitle className='post-username'><strong>{props.data.username}</strong></CardSubtitle>
                     </Row>
                 </CardBody>
                 <img width="100%" src={props.data.imageUrl} />
-                <CardBody>
-                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                    <CardLink href="#">Card Link</CardLink>
-                    <CardLink href="#">Another Link</CardLink>
+                <CardBody className='bottom-content'>
+                    <Row className='comment-imgs'>
+                        <img className='heart-icon' src="https://png.icons8.com/metro/50/000000/like.png" />
+                        <img className='chat-icon' src="https://png.icons8.com/metro/50/000000/topic.png" />
+                    </Row>
+                    <CardText>
+                        <div className='post-likes'> <strong>{props.data.likes} likes </strong> </div>
+                    </CardText>
+                    <CardText>
+                        {props.data.comments.map(comment => <CommentSection comment={comment}/>)}
+                    </CardText>
                 </CardBody>
             </Card>
         </div>

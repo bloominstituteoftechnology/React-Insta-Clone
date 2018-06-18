@@ -1,9 +1,15 @@
 .post-container {
     height: 924px;
+    margin: 30px 0;
 }
 
-.post-container .card-body {
+.post-container .top-content {
     padding: 16px 17px;
+    flex: none;
+}
+
+.post-container .bottom-content {
+    padding: 8px 14px;
     flex: none;
 }
 
@@ -17,6 +23,26 @@
     align-self: center;
     margin-left: 10px;
     font-size: 14px;
+}
+
+.comment-imgs {
+    align-items: center;
+}
+
+.comment-imgs .heart-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.comment-imgs .chat-icon {
+    width: 23px;
+    height: 23px;
+    margin-left: 13px;
+}
+
+.post-likes {
+    padding: 1px 3px;
+    font-size: 15px;
 }
 
 .row {
