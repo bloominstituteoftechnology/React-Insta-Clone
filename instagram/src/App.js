@@ -20,7 +20,6 @@ class App extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
   addComment = (e, index) => {
-    e.preventDefault();
     const comment = e.target.value;
     if (comment === '') {
       return;
