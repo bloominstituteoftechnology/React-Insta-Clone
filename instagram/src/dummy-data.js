@@ -61,7 +61,7 @@ const dummyData = [
                 text: "Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
             },
             {
-                username: 234,
+                username: "tapmelon",
                 text: "Wish that death knight could be added as a new playable class in this expansion."
             },
             {
