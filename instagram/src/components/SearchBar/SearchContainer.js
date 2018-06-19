@@ -9,7 +9,7 @@ const SearchContainer = (props) => {
 				<i class="fas fa-camera-retro"/>
 			</div>
 			<p className="instaclone">InstaClone</p>
-			<Search />
+			<Search handleSearch={props.handleSearch} />
 			<div className="social">
 				<i className="fa fa-compass" />
 			</div>

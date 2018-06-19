@@ -10,6 +10,9 @@ class AddComment extends Component {
 	}
 	onSubmit=(event)=>{
 		event.preventDefault();
+		if (this.state.comment === ''){
+			return null;
+		}
 		this.props.commentHandler(this.props.postId, this.state.comment);
 		this.setState({comment: ''});
 	}

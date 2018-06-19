@@ -11,8 +11,6 @@ class App extends Component {
     super();
     this.state = {
       data: dummyData,
-      searchTerm: '',
-      comment: ''
     }
   }
 
@@ -40,12 +38,28 @@ class App extends Component {
     this.setState({data});
   }
 
-  
+  handleSearch = (searchTerm) =>{
+    let data = this.state.data.slice();
+    if (searchTerm === ''){
+      this.setState({data:dummyData})
+      return null;
+    }
+    data = data.filter(post => {
+      if (JSON.stringify(post).includes(searchTerm)){
+        return post;
+      }
+    })
+    if (data.length > 0){
+      this.setState({data});
+    } else {
+      return null;
+    }
+  }
 
   render() {
     return (
       <div className='container'>
-          <SearchContainer />
+          <SearchContainer handleSearch={this.handleSearch} />
           <PostContainer likeHandler={this.addLike} data={this.state.data} commentHandler={this.addComment}/>
       </div>
     );

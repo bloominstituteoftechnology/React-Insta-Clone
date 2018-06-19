@@ -10,11 +10,15 @@ class Search extends Component {
 	onChangeHandler = (event) => {
 		this.setState({term: event.target.value})
 	}
+	onSubmitHandler = (event) =>{
+		event.preventDefault()
+		this.props.handleSearch(this.state.term)
+	}
 	render() {
 		return (
-			<div>
-				<input value={this.state.term} onChange={this.onChangeHandler} />
-			</div>
+			<form onSubmit={this.onSubmitHandler}>
+				<input className="search-bar" placeholder="Search" value={this.state.term} onChange={this.onChangeHandler} />
+			</form>
 		);
 	}
 }
