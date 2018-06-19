@@ -10,7 +10,6 @@ class App extends Component {
     super();
     this.state = {
       data: [],
-      dataInput: ''
     }
   }
 
@@ -23,15 +22,11 @@ class App extends Component {
 
   addNewComment = (event, index) => {
     event.preventDefault;
-    this.setState({dataInput: event.target.value})
-    let newComment = {text: this.state.dataInput, username: 'user'};
+    let newComment = {text: event.target.value, username: 'user'};
     let newData = this.state.data.slice();
-    let commentArr= newData.map(i => {
-      return i.comments;
-    })
-    commentArr[index].push(newComment);
-    newData[index].push(commentArr);
-    this.setState({comments: newData});
+    let commentArr = newData[index].comments;
+    commentArr.push(newComment);
+    this.setState({data: newData});
   }
 
   likePost = () => {
