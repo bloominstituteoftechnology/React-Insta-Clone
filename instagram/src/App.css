@@ -26,3 +26,25 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+a {
+  color: black !important; 
+}
+
+.fa-search {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.container {
+  border: 1px solid black;
+  height: 50px;
+}
+
+.SearchBar {
+  height: 100%;
+}
+
+img {
+  height: 40px;
+}
