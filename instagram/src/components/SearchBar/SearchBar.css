@@ -65,19 +65,19 @@
     padding: 4px 3px;
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+.search-bar input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #999;
     text-align: center;
   }
-  ::-moz-placeholder { /* Firefox 19+ */
+  .search-bar input::-moz-placeholder { /* Firefox 19+ */
     color: #999;
     text-align: center;
   }
-  :-ms-input-placeholder { /* IE 10+ */
+  .search-bar input:-ms-input-placeholder { /* IE 10+ */
     color: #999;
     text-align: center;
   }
-  :-moz-placeholder { /* Firefox 18- */
+  .search-bar input:-moz-placeholder { /* Firefox 18- */
     color: #999;
     text-align: center;
   }

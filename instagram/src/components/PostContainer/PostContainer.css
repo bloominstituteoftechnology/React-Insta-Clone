@@ -20,7 +20,7 @@
 }
 
 .post-container .main-content {
-    padding: 16px;
+    padding: 16px 16px 0px 16px;
 }
 
 .icon-strip {
@@ -62,3 +62,43 @@
 .post-container h3, .post-container p {
     margin: 7px 0px;
 }
+
+.post-container .time-stamp p {
+    font-size: 1.3rem;
+    text-align: left;
+    color: #999;
+}
+
+.post-container .comment-input-section {
+    border-top: 1px solid #dbdbdb;
+    display: flex;
+}
+
+.post-container input {
+    border: none;
+    padding: 16px 0;
+    flex-grow: 9;
+}
+
+.post-container .comment-input-hamburger {
+    display: flex;
+    align-items: center;
+}
+
+.post-container input:focus {
+    outline: none;
+}
+
+
+.post-container input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    text-align: left;
+  }
+  .post-container input::-moz-placeholder { /* Firefox 19+ */
+    text-align: left;
+  }
+  .post-container input:-ms-input-placeholder { /* IE 10+ */
+    text-align: left;
+  }
+  .post-container input:-moz-placeholder { /* Firefox 18- */
+    text-align: left;
+  }
