@@ -5,7 +5,7 @@ const PostHeader = props => {
     return (
         <div className='header'>
            
-        <img className='thumbnail' src={props.thumbnail} />
+        <img className='thumbnail' alt='thumbnail' src={props.thumbnail} />
         {props.user}
         </div>
     )

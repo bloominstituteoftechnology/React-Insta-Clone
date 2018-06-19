@@ -9,16 +9,15 @@ const Comments = props => {
               return <p className='comment'><span className='user-comment' key={Math.random()}>{i.username} </span> 
               <span className='text-comment' key={Math.random()}>{i.text}</span></p>
           })}
+          
           </div>
-        <div>
+        <div><form>
             <input type='text'
             className='form'
             placeholder='Add a comment...'
-            onChange={props.commentHandler}
             value={props.dataInput}
-            onKeyDown={ (event) => {
-                if(event.keyCode===13) {props.addComment}}}
-            />
+            onSubmit={props.addComment}
+            /></form>
     </div>
           
           </div>

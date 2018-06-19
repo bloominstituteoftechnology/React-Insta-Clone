@@ -11,8 +11,8 @@ const PostContainer = props => {
 
              {props.data.map(item => {
                 return <div className='container'><PostHeader className='header' key={Math.random()} user={item.username} thumbnail={item.thumbnailUrl} />
-                    <PostContent className='content' key={Math.random()} image={item.imageUrl} likes={item.likes} />
-                    <Comments className='comment' key={Math.random()}  comments={item.comments} commentHandler={props.commentHandler}/></div>
+                    <PostContent className='content' key={Math.random()} image={item.imageUrl} likes={item.likes} likePost={props.likePost}/>
+                    <Comments className='comment' key={Math.random()}  comments={item.comments} addComment={props.addComment}/></div>
                })}
 
         </div>

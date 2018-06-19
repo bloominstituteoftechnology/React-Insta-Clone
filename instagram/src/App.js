@@ -9,21 +9,35 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData,
+      data: [],
       dataInput: ''
     }
   }
 
-  commentHandler = (e) => {
-    console.log(e.target.value);
-    this.setState({dataInput: e.target.value})
+  componentDidMount() {
+    this.setState({
+      data: dummyData
+    });
   }
 
-  addComment = () => {
-    let comment = {text: this.state.dataInput}
-    let newData = this.state.data.comments.slice();
-    newData.push(comment);
-    this.setState({comments: newData, dataInput: ''});
+
+  addNewComment = () => {
+    let newComment = {text: this.state.dataInput, username: 'user'};
+    let newData = this.state.data.slice();
+    let commentArr= newData.map(i => {
+      return i.comments;
+    })
+    commentArr.push(newComment);
+    newData.splice(5, 1, commentArr);
+    this.setState({data: newData, dataInput: ''});
+  }
+
+  likePost = () => {
+    console.log(this.state.data.likes);
+    let likes = this.state.data.slice();
+    likes = likes.likes;
+    console.log(likes);
+    this.setState({likes: likes});
   }
 
   render() {
@@ -33,7 +47,7 @@ class App extends Component {
           <SearchBar />
         </header>
         
-        <PostContainer data={this.state.data} dataInput={this.state.dataInput} commentHandler={this.commentHandler} addComment={this.addComment}/>
+        <PostContainer data={this.state.data} dataInput={this.state.dataInput} addComment={this.addNewComment} likePost={this.likePost}/>
       </div>
     );
   }
