@@ -1,13 +1,21 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Post from '../Post/Post';
+import dummyData from '../../dummy-data';
 
-const PostContainer = props => {
-  return (
-      <Post key = {props.user.timestamp} username={props.user.username}
-      thumbnail={props.user.thumbnailUrl} image={props.user.imageUrl}
-      time={props.user.timestamp} likes={props.user.likes} comments={props.user.comments} />
 
-  )
+class PostContainer extends Component {
+  state = {
+    postData: []
+  };
+
+  componentDidMount() {
+    this.setState({postData: dummyData});
+  }
+
+  render() {
+    const { postData } = this.state;
+    return <div>{postData.map(post => <Post post={post} />)}</div>;
+  }
 }
 
 export default PostContainer;
