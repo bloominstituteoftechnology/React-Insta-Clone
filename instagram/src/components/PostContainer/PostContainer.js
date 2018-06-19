@@ -28,14 +28,14 @@ const PostContainer = props => {
             </div>
             <div className="timestamp">{props.timestamp}</div>
             <div>
-                <form onSubmit={props.addNewComment}>
+                <form onSubmit={() => props.addNewComment(props.index)}>
                     <input
                         type="text"
                         onChange={props.handleChange}
                         placeholder="Add a comment..."
                         value={props.newComment}
                     />
-                    <button onClick={props.addNewComment}>...</button>
+                    <button type="submit">...</button>
                 </form>
             </div>
         </div>

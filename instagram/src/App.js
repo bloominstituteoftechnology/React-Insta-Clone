@@ -10,8 +10,8 @@ class App extends Component {
     super();
     this.state = {
       data: [],
-      username: "philzcoffee",
-      comment: ""
+      dfltUser: "philzcoffee",
+      newComment: ""
     };
   }
 
@@ -22,11 +22,24 @@ class App extends Component {
   }
 
   handleChange = e => {
-    this.setState({comment: e.target.value})
+    this.setState({newComment: e.target.value})
   }
 
-  addNewComment = (event, index) => {
+  addNewComment = (e, index) => {
+    e.preventDefault();
 
+    if(!this.state.comment) return null;
+
+    const state = Object.assign({}, this.state)
+    
+    const newComment = {
+      username: this.state.dfltUser,
+      text: e.target.value
+    };
+
+    let data = this.state.data[index].splice();
+    data.comments.push(newComment);
+    this.setState({});
   }
 
   render() {
@@ -46,6 +59,7 @@ class App extends Component {
           return (
             <PostContainer
               key={index}
+              index={index}
               username={data.username}
               thumbnailUrl={data.thumbnailUrl}
               imageUrl={data.imageUrl}
@@ -55,8 +69,8 @@ class App extends Component {
               
               handleChange={this.handleChange}
               addNewComment={this.addNewComment}
-              dfltUser={this.state.username}
-              newComment={this.state.comment}
+              dfltUser={this.state.dfltUser}
+              newComment={this.state.newComment}
             />
           );
         })}
