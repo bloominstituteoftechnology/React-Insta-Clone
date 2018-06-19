@@ -20,7 +20,7 @@
     font-weight: bold;
     padding-left: 6%;
 }
-::-webkit-input-placeholder {
+.search-box::-webkit-input-placeholder {
     text-align: center;
  }
 .search-box {
