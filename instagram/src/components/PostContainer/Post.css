@@ -78,7 +78,12 @@
 .add-comment {
     width: 95%;
     border: 0;
+    font-size: 14px;
+    outline: 0;
+    color: #262626;
 }
+
+
 
 .add-comment::-webkit-input-placeholder {
     color: #99999C;
