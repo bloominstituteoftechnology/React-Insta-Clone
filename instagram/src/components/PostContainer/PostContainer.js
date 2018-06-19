@@ -4,7 +4,6 @@ import CommentSection from '../CommentSection/CommentSection'
 import './PostContainer.css'
 import PropTypes from 'prop-types'
 import Moment from 'react-moment'
-import moment from 'moment'
 
 const PostContainer = (props) => {
   var moment = require('moment')
@@ -35,10 +34,13 @@ const PostContainer = (props) => {
         <div className='post-cta'>
           <div className='icons'>
             <div className='heart-icon'>
-              <i class='far fa-heart fa-lg' />
+              <i
+                className='far fa-heart fa-lg'
+                onClick={() => props.onClick(this.element)}
+              />
             </div>
             <div className='comment-icon'>
-              <i class='far fa-comment fa-lg' />
+              <i className='far fa-comment fa-lg' />
             </div>
           </div>
 
@@ -50,8 +52,11 @@ const PostContainer = (props) => {
             {' '}
             <Moment fromNow>{fortmatDate}</Moment> (<small>{moment(fortmatDate).format('LL')}</small>)
           </div>
-
-          <input placeholder='Add a comment...' type='text' />
+          <input
+            placeholder='Add a comment...'
+            type='text'
+            className='comment-input'
+          />
         </div>
       </Card>
     </div>

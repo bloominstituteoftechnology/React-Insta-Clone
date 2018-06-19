@@ -11,12 +11,21 @@ class App extends Component {
       post: dummyData
     }
   }
+
+  handlesLikes = (element) => {
+    element.style.backgroundColor = 'red'
+  }
+
   render () {
     return (
       <div className='page'>
         <TheSearchBar />
         {this.state.post.map((post, index) => (
-          <PostContainer key={post.username + index} post={post} />
+          <PostContainer
+            key={post.username + index}
+            post={post}
+            onClick={this.handlesLikes}
+          />
         ))}
       </div>
     )

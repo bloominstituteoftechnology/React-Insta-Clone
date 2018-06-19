@@ -37,12 +37,15 @@
   padding: 2%;
 }
 
-input {
+.comment-input {
   outline: none;
   width: 100%;
   border: 1px solid white;
+  padding: 2% 0;
 }
 
 .date-stamp {
   color: #999999;
+  padding: 1% 0;
+  border-bottom: 1px solid #efefef;
 }

@@ -31,33 +31,35 @@ class TheSearchBar extends Component {
   render () {
     return (
       <div>
-        <Navbar color='secondary' light expand='md'>
-          <NavbarBrand href='/'>
-            <i class='fab fa-instagram fa-lg' />
+        <Navbar color='white' light expand='md' className='navbar'>
+          <NavbarBrand className='navbarBrand' href='/'>
+            <i className='fab fa-instagram fa-lg' />
           </NavbarBrand>
-          <NavbarBrand>Instagram</NavbarBrand>
+          <NavbarBrand className='logo'>Instagram</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
+            <input
+              className='form-control mr-sm-2'
+              type='search'
+              placeholder='Search'
+              aria-label='Search'
+            />
             <Nav className='ml-auto' navbar>
               <NavItem>
-                <NavLink href='/components/'>Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href='https://github.com/reactstrap/reactstrap'>
-                  GitHub
+                <NavLink href='#'>
+                  <i className='far fa-compass fa-lg' />
                 </NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Option 1</DropdownItem>
-                  <DropdownItem>Option 2</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href='#'>
+                  <i className='far fa-heart fa-lg' />
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href='#'>
+                  <i className='far fa-user fa-lg' />{' '}
+                </NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
