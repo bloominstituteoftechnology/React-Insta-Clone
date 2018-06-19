@@ -12,7 +12,7 @@ constructor(){
         super();
 
 	this.state={
-		dummyData: dummyData,
+		dummyData: [],
 		searchItem: ""
 
 
@@ -20,6 +20,12 @@ constructor(){
 };
 
 }	
+
+componentDidMount(){
+	this.setState({dummyData: dummyData});
+
+}
+
 
 
   render() {
