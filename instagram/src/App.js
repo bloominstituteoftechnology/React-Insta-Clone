@@ -28,8 +28,8 @@ class App extends Component {
       state[`comment${index}`] = '';
     }
     console.log(state);
-    let instaData = Object.assign({}, this.state.instaData);
-    instaData[index].comments.push({username: 'skid', text: comment});
+    let instaData = Object.assign({}, this.state.instaData[index]);
+    instaData.comments.push({username: 'skid', text: comment});
     e.target.value = '';
 
     this.setState({});
