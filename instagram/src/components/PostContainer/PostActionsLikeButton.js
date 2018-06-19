@@ -3,7 +3,7 @@ import './PostContainer.css';
 
 const PostActionsLikeButton = (props) => {
   return(
-    <button className="post-actions__like-button"></button>
+    <a className="post-actions__like-button" href="#" />
   );
 };
 

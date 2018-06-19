@@ -2,7 +2,7 @@ import React from 'react';
 import './CommentSection.css';
 import Comment from './Comment';
 import CommentSectionTimestamp from './CommentSectionTimestamp';
-import CommentSectionInput from './CommentSectionInput';
+import CommentSectionForm from './CommentSectionForm';
 
 const CommentSection = (props) => {
   return(
@@ -13,7 +13,7 @@ const CommentSection = (props) => {
         })}
       </ul>
       <CommentSectionTimestamp timestamp={props.timestamp} />
-      <CommentSectionInput />
+      <CommentSectionForm />
     </div>
   );
 };

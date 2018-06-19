@@ -1,0 +1,66 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 0 40px 0;
+  border: 1px solid #e2e2e2;
+  font-size: 1.4rem;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.post-header__thumbnail {
+  width: 30px;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+}
+
+.post-header__username {
+  font-weight: 600;
+}
+
+.post__image {
+  align-self: center;
+  width: 100%;
+  margin: 0 0 15px 0;
+}
+
+.post-actions {
+  margin: 0 0 10px 0;
+  padding: 0 15px;
+}
+
+.post-actions__like-button {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../instagram-sprites.png);
+  background-position: -75px -425px;
+  background-size: 495px 483px;
+  margin: 0 15px 0 0;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.post-actions__comment-button {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../instagram-sprites.png);
+  background-position: -401px -399px;
+  background-size: 495px 483px;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.post__likes {
+  padding: 0 15px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+}

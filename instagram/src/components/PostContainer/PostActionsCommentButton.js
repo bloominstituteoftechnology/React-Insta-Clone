@@ -3,7 +3,7 @@ import './PostContainer.css';
 
 const PostActionsCommentButton = (props) => {
   return(
-    <button className="post-actions__comment-button"></button>
+    <a className="post-actions__comment-button" href="#" />
   );
 };
 
