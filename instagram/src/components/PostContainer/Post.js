@@ -2,27 +2,43 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 
-const Post = props => {
+class Post extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dummyData: props.dummyData,
+      likes: props.dummyData.likes
+    }
+  }
+
+  addLikes = (event, i) => {
+    event.preventDefault();
+    let likes = this.state.likes;
+    likes = (likes + 1);
+    this.setState({likes});
+  }
+
+  render() {
   return (
     <div className="post-border">
       <div className="post-header">
          <img
            alt="Profile Thumbnail"
            className="thumbnail"
-           src={props.post.thumbnailUrl}
+           src={this.state.dummyData.thumbnailUrl}
          />
-       <p>{props.post.username}</p>
+       <p>{this.state.dummyData.username}</p>
      </div>
       <div className="post-image-wrapper">
         <img
           alt="post thumbnail"
           className="post-image"
-          src={props.post.imageUrl}
+          src={this.state.dummyData.imageUrl}
         />
       </div>
       <div className="actions">
         <div className="like-comment">
-          <img src="https://image.ibb.co/e2FnZd/like.png" alt="like"/>
+          <img src="https://image.ibb.co/e2FnZd/like.png" alt="like" onClick={this.addLikes}/>
           <img src="https://image.ibb.co/hk3KfJ/comment.png" alt="comment"/>
         </div>
         <div className="save">
@@ -30,11 +46,11 @@ const Post = props => {
         </div>
       </div>
       <div className="likes">
-       <p>{props.post.likes} likes</p>
+       <p>{this.state.likes} likes</p>
       </div>
-      <CommentSection comments={props.post.comments} />
+      <CommentSection comments={this.state.dummyData.comments} />
     </div>
   );
 };
-
+}
 export default Post;
