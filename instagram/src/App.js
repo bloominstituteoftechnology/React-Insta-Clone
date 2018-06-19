@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import SearchContainer from './components/SearchBar/SearchContainer';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostList from './components/PostContainer/PostList';
 class App extends Component {
   constructor() {
     super();
