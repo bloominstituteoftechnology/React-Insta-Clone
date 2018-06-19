@@ -15,7 +15,8 @@ const PostContainer = props => {
                 <i className="far fa-heart"></i> <i className="far fa-comment"></i> 
                 <div>{props.postInfo.likes}</div>
             </div>
-            <CommentSection commentInfo={props.postInfo.comments}/>
+            <CommentSection commentInfo={props.postInfo.comments}
+                            commentKey={props.commentKey} />
         </div>
     
     );

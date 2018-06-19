@@ -9,5 +9,8 @@ const CommentInput = props => {
   );
 };
 
-CommentInput.PropTypes
+CommentInput.propTypes = {
+  commentKey: PropTypes.number,
+}
+
 export default CommentInput;

@@ -7,7 +7,8 @@ class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: []
+            comments: [],
+            commentKey: props.commentKey,
         }
     }
 
@@ -23,7 +24,7 @@ class CommentSection extends Component {
                             comment={comment.text}
                             userIn={comment.username} />
                 )}
-                <CommentInput />
+                <CommentInput commentKey={this.state.commentKey} />
             </div>
         );
     }
@@ -31,7 +32,9 @@ class CommentSection extends Component {
 }
 
 CommentSection.propTypes = {
-    commentInfo: PropTypes.arrayOf(PropTypes.object)
+    comments: PropTypes.arrayOf(
+        PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
+    )
 };
 
 export default CommentSection;
