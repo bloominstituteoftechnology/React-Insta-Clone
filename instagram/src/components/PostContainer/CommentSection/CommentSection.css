@@ -7,3 +7,12 @@
 .comment-section h3, .comment-section p {
     text-align: left;
 }
+
+.comment {
+    display: flex;
+    align-items: center;
+}
+
+.comment h3 {
+    padding-right: .5rem;
+}
