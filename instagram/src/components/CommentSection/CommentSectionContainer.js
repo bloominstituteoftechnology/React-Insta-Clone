@@ -15,7 +15,6 @@ class CommentSection extends React.Component {
   componentDidMount() {
     const id = this.props.postId;
     if (localStorage.getItem(id)) {
-      alert('eeeee');
       this.setState({
         comments: JSON.parse(localStorage.getItem(this.props.postId))
       });
