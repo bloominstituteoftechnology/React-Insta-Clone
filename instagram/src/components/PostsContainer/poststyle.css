@@ -1,0 +1,56 @@
+.philz {
+    display:flex;
+    align-items:center;
+    
+}
+
+.philz img {
+    border-radius:50%;
+    width:5%;
+    height:5%;
+    margin:15px;
+}
+
+.philz p {
+    font-weight:bold;
+}
+
+.imgurl img {
+    width:100%;
+}
+
+.postcont {
+    border:1px solid lightgray;
+    margin:30px 0;
+}
+
+.content {
+    padding-left:20px;
+    padding-top: 10px;
+}
+
+.smallerimg {
+    display: flex;
+    align-items: center;
+    margin-bottom:0;
+}
+
+.smallimg {
+    width:20px;
+    height:20px;
+
+}
+
+.smalling {
+    width:40px;
+    height:40px;
+}
+
+.likes {
+    font-weight:bold;
+}
+
+.likes p {
+    margin-top:5px;
+    margin-bottom:5px;
+}
