@@ -9,8 +9,16 @@ class App extends Component {
     super();
     this.state = {
       today: new Date(),
-      dummyData: []
+      dummyData: [],
+      placeHolder: 'lambdaschool'
     };
+  }
+
+  addNewComment = (event, comment, index) => {
+    event.preventDefault();
+    const newData = this.state.dummyData.slice();
+    newData[index].comments.push({username: this.state.placeHolder, text: comment});
+    this.setState({dummyData: newData});
   }
 
   componentDidMount() {
@@ -21,7 +29,7 @@ class App extends Component {
     return (
       <div className="App">  
         <SearchBar />
-        <PostContainer calcTime={this.calcTime} data={this.state.dummyData} today={this.state.today}/>
+        <PostContainer calcTime={this.calcTime} data={this.state.dummyData} today={this.state.today} addNewComment={this.addNewComment} />
       </div>
     );
   }
