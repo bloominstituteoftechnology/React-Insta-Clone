@@ -12,7 +12,7 @@ const Post = (props) => {
     <li className="post">
       <PostHeader thumbnail={props.postData.thumbnailUrl} username={props.postData.username} />
       <PostImage imageUrl={props.postData.imageUrl} />
-      <PostActions />
+      <PostActions addLike={props.addLike} postIndex={props.postIndex} />
       <PostLikes likes={props.postData.likes} />
       <CommentSection comments={props.postData.comments} timestamp={props.postData.timestamp} addNewComment={props.addNewComment} postIndex={props.postIndex} />
     </li>

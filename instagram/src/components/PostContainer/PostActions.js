@@ -6,7 +6,7 @@ import PostActionsCommentButton from './PostActionsCommentButton';
 const PostActions = (props) => {
   return(
     <div className="post-actions">
-      <PostActionsLikeButton />
+      <PostActionsLikeButton addLike={props.addLike} postIndex={props.postIndex} />
       <PostActionsCommentButton />
     </div>
   );

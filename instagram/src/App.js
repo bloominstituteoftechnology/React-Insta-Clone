@@ -24,11 +24,18 @@ class App extends Component {
     this.setState({instagramData: newData});
   }
 
+  addLike = (event, index) => {
+    event.preventDefault();
+    const newData = this.state.instagramData.slice();
+    newData[index].likes++;
+    this.setState({instagramData: newData});
+  }
+
   render() {
     return (
       <div className="app">
         <SearchBar />
-        <PostContainer instagramData={this.state.instagramData} addNewComment={this.addNewComment} />
+        <PostContainer instagramData={this.state.instagramData} addNewComment={this.addNewComment} addLike={this.addLike} />
       </div>
     );
   }
