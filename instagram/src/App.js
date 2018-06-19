@@ -8,10 +8,17 @@ class App extends Component {
     constructor() {
       super();
       this.state = {
-        data: dummyData
+        posts: []
       }
     }
 
+    componentDidMount() {
+      this.setState({ posts: dummyData });
+    }
+
+    addNewComment() {
+      
+    }
 
   render() {
     return (
@@ -20,14 +27,7 @@ class App extends Component {
           <SearchBar />
         </header>
         <p className="App-post">
-          {this.state.data.map(post => (
-            <PostContainer 
-            key={Math.random(Date.now())} 
-            postComment={postComment} 
-            postUser={post.username} 
-            postImg={post.image}
-            /> 
-          ))}
+        <PostContainer posts={this.state.posts} />
         </p>
       </div>
     );

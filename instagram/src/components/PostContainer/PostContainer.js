@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import dummyData from './dummy-data.js';
-import './PostContainer.css';
-import CommentSection from './CommentSection/CommentSection';
+// import dummyData from './dummy-data.js';
+import './Post.css';
+import Post from './Post';
 
 const PostContainer = props => {
     return (
 <div className="post-container">
-    <h2>{props.postUser}</h2>
+    {props.posts.map(p => <Post key={p.imageURL} post={p} />)}
 </div>
     );
 };

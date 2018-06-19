@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import dummyData from './dummy-data.js';
+// import dummyData from './dummy-data.js';
 import './SearchBar.css';
 
 const SearchBar = props => {
     return (
 <div className="search-bar">
-<i class="fab fa-instagram"></i>
+<i className="fa fa-instagram"></i>
 {/* <img className="logo" src={logo} /> */}
-</div>
 <input placeholder="Search"></input>
-<i class="far fa-compass"></i>
-<i class="far fa-heart"></i>
-<i class="far fa-user"></i>
+<i className="fa fa-compass"></i>
+<i className="fa fa-heart"></i>
+<i className="fa fa-user"></i>
+</div>
+
     );   
 }
 
