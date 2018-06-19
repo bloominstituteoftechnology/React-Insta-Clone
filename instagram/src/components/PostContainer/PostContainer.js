@@ -5,37 +5,59 @@ import comment from "./comment.png";
 import PropTypes from "prop-types";
 import "./PostContainer.css";
 
-const PostContainer = props => {
-  return (
-    <div className="post-container">
-      <div className="header-container">
-        <img
-          className="user-thumbnail"
-          src={props.dummyData.thumbnailUrl}
-          alt="user Thumbnail"
-        />
-        <p>{props.dummyData.username}</p>
-      </div>
+class PostContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dummyData: props.dummyData,
+      likes: props.dummyData.likes
+    };
+  }
 
-      <div>
-        <img
-          className="post-image"
-          src={props.dummyData.imageUrl}
-          alt="post"
-        />
-      </div>
-      <div>
-        <div className="post-icons">
-          <img className="heart-icon" src={heart} alt="heart" />
-          <img className="comment-icon" src={comment} alt="comment" />
+  addLikes = (event, i) => {
+    event.preventDefault();
+    let likes = this.state.likes;
+    likes += 1;
+    this.setState({ likes });
+  };
+
+  render() {
+    return (
+      <div className="post-container">
+        <div className="header-container">
+          <img
+            className="user-thumbnail"
+            src={this.state.dummyData.thumbnailUrl}
+            alt="user Thumbnail"
+          />
+          <p>{this.state.dummyData.username}</p>
         </div>
 
-        <p className="user-likes">{props.dummyData.likes} Likes</p>
-        <CommentSection dummyData={props.dummyData.comments} />
+        <div>
+          <img
+            className="post-image"
+            src={this.state.dummyData.imageUrl}
+            alt="post"
+          />
+        </div>
+        <div>
+          <div className="post-icons">
+            <img
+              onClick={this.addLikes}
+              className="heart-icon"
+              src={heart}
+              alt="heart"
+            />
+            <img className="comment-icon" src={comment} alt="comment" />
+          </div>
+
+          <p className="user-likes">{this.state.likes} Likes</p>
+          <CommentSection dummyData={this.state.dummyData.comments} />
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 PostContainer.propTypes = {
   comments: PropTypes.arrayOf(
@@ -43,7 +65,7 @@ PostContainer.propTypes = {
       username: PropTypes.string,
       thumbnailUrl: PropTypes.string,
       imageUrl: PropTypes.string,
-      likes: PropTypes.number,
+      likes: PropTypes.number
     })
   )
 };
