@@ -1,20 +1,46 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Comment from './Comment';
 import './comment-section.css';
+import AddAComment from '../CommentSection/AddAComment';
 
-const CommentSection = (props) => {
+class CommentSection extends Component {
+ constructor(props) {
+   super(props);
+   this.state ={
+     comments: props.comments,
+     newComment: '',
+     username: 'jjashcraft',
+   }
+ }
+
+ addComment= (event) => {
+ event.preventDefault();
+ let comments = this.state.comments.slice();
+ let newComment = this.state.newComment;
+ comments.push({text: newComment, username: this.state.username});
+ this.setState({comments: comments});
+
+ }  
+
+ handleChange = (event) => {
+this.setState({newComment: event.target.value});
+ }
+
+ render() {
     return (
-      <div class='comments'>
+      <div className='comments'>
             <ul>
-            {props.comments.length <= 5 && props.comments.map((comment, index) => {
+            {this.state.comments.map((comment, index) => {
                 
-    return <Comment key = {index} username = {comment.username} text = {comment.text}/>
+    return <Comment key = {Math.random()} username = {comment.username} text = {comment.text}/>
        })}
         </ul>
-
-  
-    </div>
+    
+<AddAComment value = {this.state.newComment} handleChange={this.handleChange} addComment = {this.addComment} />
+  </div>
+    
       );
+};
 };
 
 export default CommentSection;

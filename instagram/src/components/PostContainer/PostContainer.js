@@ -2,7 +2,7 @@ import React from 'react';
 import './post-container.css';
 import CommentSection from '../CommentSection/CommentSection';
 import IconHeaderBar from '../PostContainer/IconHeaderBar';
-import AddAComment from '../CommentSection/AddAComment';
+
 
 const PostContainer = (props) => (
     <div className = 'post'>
@@ -17,7 +17,6 @@ const PostContainer = (props) => (
        <div className='post-bottom'>
        <IconHeaderBar likes = {props.post.likes}/> 
 <CommentSection comments = {props.post.comments}/>
-<AddAComment />
 </div>
     </div>
 );
