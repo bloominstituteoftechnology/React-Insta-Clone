@@ -1,0 +1,9 @@
+.comment-container {
+	text-align: left;
+	line-height: 20px;
+	font-size: 15px;
+}
+
+.comment-text {
+	padding-right: 40px;
+}

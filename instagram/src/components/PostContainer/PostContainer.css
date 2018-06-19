@@ -9,3 +9,17 @@
 	width: 500px;
 	height: 300px;
 }
+
+.heading {
+	display: flex;
+}
+
+.post-thumbnail-img {
+	height: 50px;
+	border-radius: 50px;
+}
+
+.post-name {
+	font-size: 15px;
+	padding-left: 20px;
+}

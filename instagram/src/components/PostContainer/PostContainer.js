@@ -8,8 +8,8 @@ const PostContainer = props  => {
 		   <div className="post-container">
 		   	
 		   	<div className="heading">
-		   		 <img src={props.data.thumbnailUrl} alt="thumbnail pic" />
-		   	  <h1>{props.data.username}</h1>
+		   		 <img className="post-thumbnail-img" src={props.data.thumbnailUrl} alt="thumbnail pic" />
+		   	  <h1 className="post-name">{props.data.username}</h1>
 		   	</div> 
 
 		   	<img className="post-img" src = {props.data.imageUrl} alt="instagram pic" />
