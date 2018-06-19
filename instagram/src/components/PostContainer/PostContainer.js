@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 const PostContainer = (props) => {
   return (
     <div className='Post-Container'>
-      <Card key={props.key}>
+      <Card key={props.post.username + props.index}>
         <CardBody>
           <img
             src={props.post.thumbnailUrl}
@@ -29,7 +29,13 @@ const PostContainer = (props) => {
 }
 
 PostContainer.propTypes = {
-  post: PropTypes.array,
-  likes: PropTypes.string
+  post: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    timestamp: PropTypes.string,
+    comments: PropTypes.arrayOf(PropTypes.object)
+  })
 }
 export default PostContainer
