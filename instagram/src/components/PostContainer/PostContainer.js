@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody } from 'reactstrap'
+import { Card } from 'reactstrap'
 import CommentSection from '../CommentSection/CommentSection'
 import './PostContainer.css'
 import PropTypes from 'prop-types'
@@ -28,10 +28,7 @@ const PostContainer = (props) => {
         <div className='post-cta'>
           <div className='icons'>
             <div className='heart-icon'>
-              <i
-                className='far fa-heart fa-lg'
-                onClick={() => props.onClick(this.element)}
-              />
+              <i className='far fa-heart fa-lg' />
             </div>
             <div className='comment-icon'>
               <i className='far fa-comment fa-lg' />
