@@ -11,6 +11,7 @@ class CommentSection extends Component {
      comments: props.comments,
      newComment: '',
      username: 'jjashcraft',
+     likes: props.likes,
    }
  }
 
@@ -22,6 +23,14 @@ class CommentSection extends Component {
  this.setState({comments: comments});
 
  }  
+  addLike=(event) => {
+ event.preventDefault();
+ let likes = this.state.likes;
+ likes++;
+ this.setState({likes: likes});
+
+ }  
+ 
 
  handleChange = (event) => {
 this.setState({newComment: event.target.value});
@@ -31,7 +40,7 @@ this.setState({newComment: event.target.value});
     return (
       <div className='comments'>
 
-      <IconHeaderBar likes = {this.props.likes} />
+      <IconHeaderBar addLike = {this.addLike} likes = {this.props.likes} />
             <ul>
             {this.state.comments.map((comment, index) => {
                 
