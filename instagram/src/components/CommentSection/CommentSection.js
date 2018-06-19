@@ -4,7 +4,7 @@ const CommentSection = props => {
     return (
         <div>
             {props.commentInfo.map(comment => 
-                <div>
+                <div key={Math.random(Date.now())}>
                     {comment.username} {comment.text}<br />
                 </div>
             )}

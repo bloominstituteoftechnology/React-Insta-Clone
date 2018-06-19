@@ -22,7 +22,8 @@ class App extends Component {
         </header>
         <div className="posts">
           {this.state.data.map(post => 
-            <PostContainer postInfo={post} />
+            <PostContainer postInfo={post} 
+                           key={Math.random(Date.now())} />
           )}
         </div>
       </div>
