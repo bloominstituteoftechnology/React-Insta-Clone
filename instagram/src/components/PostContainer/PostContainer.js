@@ -1,19 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Post from '../Post/Post';
+import Post from '../PostContainer/Post';
+import './PostContainer.css';
 
 const PostContainer = props => {
     return (
-        <div>
-            {props.data.map(post => (
-                <Post key={Math.random()} post={post} />
+        <div className="post-container">
+            {props.posts.map(post => (
+                <Post key={post.imageUrl} post={post} />
             ))}
         </div>
     );
 };
 
-PostContainer.propTypes = {
-    PostContainer: PropTypes.arrayOf(PropTypes.object),
-}
+
 
 export default PostContainer;
