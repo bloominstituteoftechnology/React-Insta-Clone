@@ -5,6 +5,7 @@ const SearchBar = () => (
   <div className="container">
     <div className="row title">
       <i className="col-sm-1 fab fa-instagram logo" />
+      <div className="divider" />
       <div className="col-sm-1 instaFont">Instagram</div>
       <div className="col-sm-8">
         <input

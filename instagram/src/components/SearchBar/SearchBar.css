@@ -19,8 +19,17 @@
 
 .searchBox {
   font-family: FontAwesome;
+  text-align: center;
   font-size: 12px;
   width: 200px;
   padding-top: 0px;
   margin-bottom: 5px;
+}
+
+.divider {
+  width: 1px;
+  margin-top: 3px;
+  margin-left: -21px;
+  margin-bottom: 4px;
+  background: black;
 }

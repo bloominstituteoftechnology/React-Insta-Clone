@@ -18,7 +18,7 @@ const PostContainer = props => (
     </div>
     <div className="row">
       <div className="col-sm-1 postImg">
-        <img src={props.data.imageUrl} alt="post" height="auto" width="498px" />
+        <img src={props.data.imageUrl} alt="post" height="auto" width="598px" />
       </div>
     </div>
     <CommentSection post={props.data} />
