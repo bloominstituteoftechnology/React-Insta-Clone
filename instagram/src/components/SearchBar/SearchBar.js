@@ -1,18 +1,26 @@
 import React from 'react';
 import './SearchBar.css';
 
-const SearchBar = props => {
+const SearchBar = () => {
     return (
-        <div className="search">
-            <img src={require('../../img/instagram-new.png')} alt='instagram logo icon' />
+        <div className='search-bar'>
+            <i class="fab fa-instagram"></i>
             <p>|</p>
-            <img src={require('../../img/logo.png')} alt="instagram logo text" />
+            <img src={require('../../img/logo.png')} alt="Instagram" />
             <form>
-                <input placeholder="Search" />
+                <input type="text" placeholder="Search" />
             </form>
-            <img src={require('../../img/compass.png')} alt="compass icon" />
-            <img src={require('../../img/heart-icon.png')} alt="heart icon" />
-            <img src={require('../../img/people.png')} alt="people icon" />
+            <div className="social-icons">
+                <div className="icon">
+                    <i className="fa fa-compass"></i>
+                </div>
+                <div className="icon">
+                    <i className="fa fa-heart"></i>
+                </div>
+                <div className="icon">
+                    <i className="fa fa-user-circle"></i>
+                </div>
+            </div>
         </div>
     )
 }
