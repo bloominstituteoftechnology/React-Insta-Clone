@@ -7,8 +7,15 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      instaData: dummyData
+      instaData: dummyData,
+      username: '',
+      comment: '',
     };
+  }
+  changeComment = (e) => {
+    this.setState({[e.target.name]: e.target.value});
+  }
+  addComment = (e) => {
   }
   render() {
     return (
