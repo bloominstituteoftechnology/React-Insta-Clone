@@ -5,9 +5,9 @@ const SearchMidForm = props => {
     <div className="form-group">
       <input
         type="search"
-        className="form-control-sm"
+        className="form-control-lg"
         id="search-input"
-        placeholder="search"
+        placeholder="Search"
       />
     </div>
   );

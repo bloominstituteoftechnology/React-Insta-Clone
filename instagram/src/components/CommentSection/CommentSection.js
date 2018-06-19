@@ -9,14 +9,24 @@ import CommentTimeStamp from "./CommentTimeStamp";
 const CommentSection = props => {
   return (
     <div>
-      <CommentIcons />
-      <CommentLikes likes={props.post.likes} />
-      <div className="comment-section">
-        {props.post.comments.map(comment => (
-          <Comment comment={comment} key={Math.random()} />
-        ))}
+      <div className="comment-container">
+        <CommentIcons />
+        <CommentLikes likes={props.post.likes} />
+        <div className="comment-section">
+          {props.post.comments.map(comment => (
+            <Comment comment={comment} key={Math.random()} />
+          ))}
+        </div>
+        <CommentTimeStamp timestamp={props.post.timestamp} />
       </div>
-      <CommentTimeStamp timestamp={props.post.timestamp} />
+      <div className="add-comment-container">
+        <input
+          type="comment"
+          class="form-control-lg add-comment-form"
+          id="addComment"
+          placeholder="Add a comment..."
+        />
+      </div>
     </div>
   );
 };

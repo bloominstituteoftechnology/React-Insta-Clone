@@ -6,8 +6,8 @@ import commentBubble from "../../assets/instagram-comment-bubble.png";
 const CommentIcons = props => {
   return (
     <div>
-      <img src={commentHeart} alt="heart" />
-      <img src={commentBubble} alt="bubble" />
+      <img src={commentHeart} alt="heart" className="comment-icon" />
+      <img src={commentBubble} alt="bubble" className="comment-icon" />
     </div>
   );
 };
