@@ -47,21 +47,25 @@ class App extends Component {
     }
 
     addComment = username => {
+        let commentSection = JSON.parse(localStorage.getItem('comments'));
+
         if (this.state[username] === '') {
             return;
         }
 
         let comments = [];
         const data = this.state.dummydata.slice()
-            .map(comment => {
-                if (comment.username === username) {
+            .map((comment, index) => {
+                if (comment.username === username) {          
                     comments = comment.comments;
+                    commentSection[index].comments = comment.comments;
                     return comment;
                 }
                 return comment;
             });
 
         comments.push({ username: username, text: this.state[username] });
+        localStorage.setItem('comments', JSON.stringify(commentSection));
 
         this.setState({
             dummyData: data,
@@ -90,6 +94,7 @@ class App extends Component {
             });
 
         localStorage.setItem('comments', JSON.stringify(likes));
+
         this.setState({ dummydata: data });
     }
 
