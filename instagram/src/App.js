@@ -1,27 +1,30 @@
-import React, { Component } from 'react';
-import './App.css';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
-import CommentSection from './components/CommentSection/CommentSection';
+import React, { Component } from "react";
+import "./App.css";
+import dummyData from "./dummy-data";
+import PostsContainer from "./components/PostsContainer/PostsContainer";
+import SearchBar from "./components/SearchBar/SearchBarContainer";
 
 class App extends Component {
   constructor() {
+    // will be called first.
     super();
-    this.state= {
-      dummyData: dummyData
-    }
+    this.state = {
+      posts: []
+    };
+  }
+  // use componentDidMount to set dumyData on state
+  componentDidMount() {
+    // will be called third
+    window.localStorage.setItem("Mounted", true);
+    this.setState({ posts: dummyData }); // preferable for Async calls... AJAX
   }
   render() {
+    // will be called second
+    // will get called after setState
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to Instagram</h1>
-        </header>
-        <div>
-        {this.state.dummyData.map(post =>(    
-            <PostContainer key={post.timestamp} dummyData={post} />
-        ))} 
-        </div>
+        <SearchBar />
+        <PostsContainer posts={this.state.posts} />
       </div>
     );
   }
