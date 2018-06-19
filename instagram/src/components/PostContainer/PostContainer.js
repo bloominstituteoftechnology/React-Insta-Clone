@@ -16,7 +16,10 @@ const PostContainer = (props) => {
                 likes={props.dataItem.likes}
             />
 
-            <CommentsContainer comments={props.dataItem.comments} />
+            <CommentsContainer comments={props.dataItem.comments}
+                changeCommentHandler={props.changeCommentHandler}
+                addCommentHandler={props.addCommentHandler}
+                index = {props.index} />
         </div>
     );
 }
