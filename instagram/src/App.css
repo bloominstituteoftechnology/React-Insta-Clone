@@ -21,6 +21,8 @@
 .App-title {
   font-size: 1.5em;
   border-bottom:1px solid gray;
+  background:white;
+  position:fixed;
 }
 
 .App-intro {
