@@ -19,9 +19,7 @@ class App extends Component {
           <h1 className="App-title">React Insta Clone</h1>
         </header>
         <div>
-        {this.state.dummyData.map(user => {
-          return <Posts userData={this.state.dummyData} />
-        })}
+          {<Posts userData={this.state.dummyData} />}
         </div>
       </div>
     );
