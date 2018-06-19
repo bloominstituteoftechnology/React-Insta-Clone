@@ -44,6 +44,7 @@
   background-position: -75px -425px;
   background-size: 495px 483px;
   margin: 0 15px 0 0;
+  color: rgba(0,0,0,0);
   pointer-events: auto;
   cursor: pointer;
 }
@@ -55,6 +56,7 @@
   background: url(../instagram-sprites.png);
   background-position: -401px -399px;
   background-size: 495px 483px;
+  color: rgba(0,0,0,0);
   pointer-events: auto;
   cursor: pointer;
 }

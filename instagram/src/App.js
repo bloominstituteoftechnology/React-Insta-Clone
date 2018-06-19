@@ -8,9 +8,14 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      instagramData: dummyData
+      instagramData: []
     }
   }
+
+  componentDidMount() {
+    this.setState({instagramData: dummyData});
+  }
+
   render() {
     return (
       <div className="app">

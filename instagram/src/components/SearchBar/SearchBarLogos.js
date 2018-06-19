@@ -3,8 +3,7 @@ import './SearchBar.css';
 
 const SearchBarLogos = (props) => {
   return(
-    <div className="search-bar-logos">
-    </div>
+    <a className="search-bar-logos" href="instagram">Instagram</a>
   );
 };
 
