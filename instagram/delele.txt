@@ -1,0 +1,10 @@
+        {/* 
+          <header className="App-header">
+          <h1 className="App-title">Instagram Clone</h1>
+        </header> 
+      */}
+        {/* 
+          <p className="App-intro">
+          HELLO REACT
+        </p> 
+      */}

@@ -1,27 +1,41 @@
 import React, { Component } from 'react';
 import './App.css';
-import Comment from './components/CommentSection/Comment' ;
-import Post from './components/PostContainer/Post' ;
 import Search from './components/SearcgBar/Seach' ;
+import PostContainer from './components/PostContainer/PostContainer';
+import dummyData from './dummy-data';
+
 
 class App extends Component {
+  constructor(props) {
+    console.log('constructor called') ;
+    super(props) ;
+    this.state = {
+      userData: dummyData
+    } ;
+  }
+  // componentDidMount() {
+  //   console.log('setState called') ;
+  //   this.setState({
+  //     userData: dummyData
+  //   });
+  // }
   render() {
+    console.log('rendered called') ;
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Instagram Clone</h1>
-        </header>
-        <p className="App-intro">
-          HELLO REACT
-        </p>
+        <Search />     
+        {/* passing each obj(post) one-by-one to PostContainer */}
+        {this.state.userData.map((post, index) => {
+          return (
+            <PostContainer key={index} post={post} />
+          )
+        })}
 
-        <Comment />
-        <Post />
-        <Search />
-
+        {/* <PostContainer propUserData = {this.state.userData} /> */}
       </div>
     );
   }
 }
 
 export default App;
+
