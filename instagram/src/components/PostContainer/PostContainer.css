@@ -1,3 +1,7 @@
+.post-container {
+  padding: 40px 0;
+}
+
 .post {
   display: flex;
   flex-direction: column;

@@ -9,12 +9,14 @@ class App extends Component {
     super();
     this.state = {
       instagramData: [],
-      placeholderUsername: 'lambdaschool'
+      placeholderUsername: 'lambdaschool',
+      searchData: [],
+      searchTerm: ''
     }
   }
 
   componentDidMount() {
-    this.setState({instagramData: dummyData});
+    this.setState({instagramData: dummyData, searchData: dummyData});
   }
 
   addNewComment = (event, comment, index) => {
@@ -31,11 +33,20 @@ class App extends Component {
     this.setState({instagramData: newData});
   }
 
+  searchPosts = (event, term) => {
+    event.preventDefault();
+    let newData = this.state.instagramData.slice();
+    if (term.trim() !== '') {
+      newData = newData.filter((element) => element.username.includes(term));
+    }
+    this.setState({searchData: newData, searchTerm: term});
+  }
+
   render() {
     return (
       <div className="app">
-        <SearchBar />
-        <PostContainer instagramData={this.state.instagramData} addNewComment={this.addNewComment} addLike={this.addLike} />
+        <SearchBar searchPosts={this.searchPosts} />
+        <PostContainer instagramData={this.state.searchData} addNewComment={this.addNewComment} addLike={this.addLike} />
       </div>
     );
   }

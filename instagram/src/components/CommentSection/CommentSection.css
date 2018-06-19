@@ -34,7 +34,3 @@
   outline: 0;
   font-size: 1.4rem;
 }
-
-::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
-  color: #999;
-}

@@ -1,14 +1,14 @@
 import React from 'react';
 import './SearchBar.css';
 import SearchBarLogos from './SearchBarLogos';
-import SearchBarInput from './SearchBarInput';
+import SearchBarForm from './SearchBarForm';
 import SearchBarActions from './SearchBarActions';
 
 const SearchBar = (props) => {
   return(
     <div className="search-bar">
       <SearchBarLogos />
-      <SearchBarInput />
+      <SearchBarForm searchPosts={props.searchPosts} />
       <SearchBarActions />
     </div>
   );

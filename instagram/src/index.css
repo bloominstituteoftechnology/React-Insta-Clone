@@ -50,9 +50,18 @@ table {
 /* Custom styles */
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%;
   font-family: -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   font-size: 1.6rem;
+}
+
+::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+  color: #999;
 }
