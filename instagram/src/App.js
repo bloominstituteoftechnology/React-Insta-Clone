@@ -12,6 +12,9 @@ class App extends Component {
       posts: dummyData
     };
   }
+  componentDidMount() {
+  this.setState({dummyData:dummyData});
+}
   render() {
     return (
       <div className="App">

@@ -22,11 +22,11 @@ const Post = props => {
       </div>
       <div className="actions">
         <div className="like-comment">
-          <img src="https://image.ibb.co/e2FnZd/like.png"/>
-          <img src="https://image.ibb.co/hk3KfJ/comment.png"/>
+          <img src="https://image.ibb.co/e2FnZd/like.png" alt="like"/>
+          <img src="https://image.ibb.co/hk3KfJ/comment.png" alt="comment"/>
         </div>
         <div className="save">
-          <img src="https://image.ibb.co/nuT7Zd/save.png"/>
+          <img src="https://image.ibb.co/nuT7Zd/save.png" alt="save"/>
         </div>
       </div>
       <div className="likes">
