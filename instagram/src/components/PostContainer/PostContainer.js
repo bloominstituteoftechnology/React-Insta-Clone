@@ -1,52 +1,17 @@
 import React from 'react' ;
-import CommentSection from '../CommentSection/CommentSection' ;
 import './post-container.css' ;
+import PostCard from './PostCard' ;
 
-
-
-const PostContainer = (props) => {
-    console.log(props.post.username);
+const ContentContainer = (props) => {
     return(
         <div className="post-container">
-            <header className="post-header">
-                <div className="post-username">
-
-                    {props.post.username}
-                
-                </div>
-                <div className="post-user-thumb">
-
-                    <img 
-                    src={props.post.thumbnailUrl} 
-                    alt=""
-                    />
-
-                </div>
-            </header>
-            <div className="post-img">
-
-                <img 
-                src={props.post.imageUrl} 
-                alt=""
-                />
-
-            </div>
-            <div className="post-bottom">
-                <div className="likes">
-
-                    Likes: {props.post.likes}
-
-                </div>
-
-
-                <CommentSection 
-                propComments={props.post.comments}
-                />
-                {console.log(props.post.comments)}
-
-
-            </div>
+            {props.propUserData.map((obj, index) => {
+                return(
+                    <PostCard key={index} post={obj} />
+                )
+            })}
+        
         </div>
     )
 }
-export default PostContainer ;
+export default ContentContainer ;

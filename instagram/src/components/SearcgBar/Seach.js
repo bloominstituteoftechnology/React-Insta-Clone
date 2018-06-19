@@ -4,7 +4,10 @@ import './search.css' ;
 const Search = () => {
     return (
         <div className="search">
-            Placeholer: "Search Bar"        
+            Placeholer: "Search Bar"
+            <form action="">
+                <input type="text" placeholder="Search"/>
+            </form>        
         </div>
     )
 }
