@@ -31,6 +31,7 @@ PostContainer.propTypes = {
         imageUrl: PropTypes.string,
         likes: PropTypes.number,
         comments: PropTypes.array,
-    })
+    }),
+    index: PropTypes.number.isRequired
 };
 export default PostContainer;
