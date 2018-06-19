@@ -23,13 +23,15 @@ class PostContainer extends React.Component {
                 <PostHeader
                     postThumb={this.state.postThumb}
                     postStarter={this.state.postStarter}
-                    postImage={this.state.postImage} />
+                    postImage={this.state.postImage}
+                />
                 <div className="comment-container">
                     {this.state.postComments.map(post => (
                         <CommentSection
                             key={Math.random()}
                             postComments={post.text}
-                            postUser={post.username} />
+                            postUser={post.username}
+                        />
                     ))}
                     <AddComment postSubmitProp={this.state.postSubmit} />
                 </div>

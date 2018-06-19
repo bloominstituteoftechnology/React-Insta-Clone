@@ -46,8 +46,7 @@ const dummyData = [
             {
                 username: "dennis_futbol",
                 text: "Is"
-            }
-            
+            },      
         ]
     },
     {
