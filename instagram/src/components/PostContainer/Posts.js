@@ -18,7 +18,12 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <CommentSection comments={props.post.comments} />
+      <CommentSection comments={props.post.comments} 
+                      addComment={props.addComment} 
+                      key={props.key}
+                      index={props.index} 
+                      commentTemplate={props.commentTemplate}
+                      addCommentHandler={props.addCommentHandler} />
     </div>
   );
 };
