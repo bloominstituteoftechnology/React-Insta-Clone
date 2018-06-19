@@ -8,6 +8,7 @@ import {
   CardSubtitle
 } from "reactstrap";
 import CommentSection from "../CommentSection/CommentSection";
+import moment from "moment";
 
 const PostContainer = props => {
   return (
@@ -29,7 +30,7 @@ const PostContainer = props => {
           </CardSubtitle>
           <CommentSection comments={props.comments} />
           <CardSubtitle className="text-muted text-uppercase">
-            {props.timestamp}
+            {moment(props.timestamp, "MMMM Do YYYY, h:mm:ss a").fromNow()}
           </CardSubtitle>
         </CardBody>
       </Card>
