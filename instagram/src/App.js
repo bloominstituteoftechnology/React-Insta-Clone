@@ -17,7 +17,7 @@ class App extends Component {
   }
   addComment = (e, index) => {
 
-    let comment = e.target.value;
+    const comment = e.target.value;
     if (comment === '') {
       return;
     }
@@ -28,24 +28,24 @@ class App extends Component {
       state[`comment${index}`] = '';
     }
     console.log(state);
-    let instaDataItem = Object.assign({}, this.state.instaData[index]);
+    const instaDataItem = Object.assign({}, this.state.instaData[index]);
     instaDataItem.comments.push({ username: 'skid', text: comment });
     e.target.value = '';
-
-    this.setState({});
+    console.log(this.state.instaData);
+    this.setState({ instaDataItem });
   }
   addLike = (e, index) => {
 
-    let instaData = Object.assign({}, this.state.instaData);
+    const instaData = Object.assign({}, this.state.instaData);
 
     if (e.target.classList.contains('heart--active')) {
       instaData[index].likes--;
-      this.setState({});
+      this.setState({ });
 
       return;
     }
     instaData[index].likes++;
-    this.setState({});
+    this.setState({ });
   }
 
   render() {
