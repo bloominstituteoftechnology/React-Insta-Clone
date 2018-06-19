@@ -1,7 +1,19 @@
+.custom-post {
+    border: 1px solid gray;
+}
+
 .post-header {
     display: flex;
     align-items: center;
 }
 .post-header img {
     border-radius: 50%;
+    width: 10%;
+}
+
+.post-img {
+    width: 100%;
+}
+.post-img img {
+    width: 100%;
 }

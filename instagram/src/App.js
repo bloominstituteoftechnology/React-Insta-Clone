@@ -18,8 +18,8 @@ class App extends Component {
         <header className="App-header">
           <SearchBar />
         </header>
-        
-        <div>
+
+        <div className="App-content">
           {this.state.dummyData.map(post => (
             <PostContainer key={post.timestamp} dummyData={post} />
           ))}

@@ -13,7 +13,9 @@ const PostContainer = props => {
                 <img src={props.dummyData.imageUrl} alt="post content"/>
             </div>
             <div className="post-comments">
-                <p>{props.dummyData.likes}</p>
+                <i class="fa">&#xf08a;</i>
+                <i class="fa">&#xf0e5;</i>
+                <p>{props.dummyData.likes} likes</p>
                 <CommentSection dummyData={props.dummyData.comments} />
             </div>            
         </div>
