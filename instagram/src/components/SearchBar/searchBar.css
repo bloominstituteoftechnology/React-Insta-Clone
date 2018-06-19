@@ -1,0 +1,28 @@
+
+
+
+.search-contain {
+    border-bottom: 1px solid lightgray;
+}
+.camera {
+    height: 5%;
+    width: 5%;
+    padding-right: 1%;
+    border-right: 1px solid lightgray;
+}
+.instalogo {
+    height: 5%;
+    width: 12%;
+}
+.compass {
+    height: 5%;
+    width: 5%;
+}
+.heart {
+    height: 5%;
+    width: 5%; 
+}
+.person {
+    height: 5%;
+    width: 5%; 
+}

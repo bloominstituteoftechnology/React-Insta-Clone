@@ -1,0 +1,12 @@
+.comment-input {
+    margin-left: 1%;
+    margin-right: 1%;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: flex-start;
+    padding: 2% 0;
+}
+.input {
+    font-weight: bold;
+    border: none;
+}

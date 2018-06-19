@@ -9,29 +9,26 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: dummyData
+      posts: []
     }
   }
 
-  changeTaskHandler = e => {
-    console.log(e)
-    this.setState ({thing: e.target.value})
+  componentDidMount() {
+    this.setState({posts: dummyData})
   }
+
 
   render() {
     return (
       <div className="App">
 
-        <header className="App-header">
-         
-          <h1 className="App-title">Welcome to React</h1>
+        <header className="App-header">        
+          <h1 className="App-title">Instagram App</h1>
         </header>
 
-        <SearchBar 
-        value = {this.state.thing}
-        />
+        <SearchBar />
 
-        <PostContainer dummyData = {this.state.dummyData} />
+        <PostContainer posts = {this.state.posts} />
 
       </div>
     );
