@@ -21,8 +21,8 @@ class App extends Component {
     return (
       <div className="App">
         <SearchContainer />
-        {this.state.instaData.map((data,i) => {
-          return <PostContainer key = {i} data={data} />
+        {this.state.instaData.map((dataItem,i) => {
+          return <PostContainer key = {i} dataItem={dataItem} />
         })
         }
       </div>

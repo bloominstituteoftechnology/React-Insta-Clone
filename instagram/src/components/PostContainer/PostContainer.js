@@ -9,20 +9,20 @@ const PostContainer = (props) => {
     return (
         <div className='post-container'>
             <PostHeader
-                thumbnail={props.data.thumbnailUrl}
-                username={props.data.username} />
+                thumbnail={props.dataItem.thumbnailUrl}
+                username={props.dataItem.username} />
             <PostContent
-                picture={props.data.imageUrl}
-                likes={props.data.likes}
+                picture={props.dataItem.imageUrl}
+                likes={props.dataItem.likes}
             />
 
-            <CommentsContainer comments={props.data.comments} />
+            <CommentsContainer comments={props.dataItem.comments} />
         </div>
     );
 }
 
 PostContainer.propTypes = {
-    data: PropTypes.shape({
+    dataItem: PropTypes.shape({
         username: PropTypes.string.isRequired,
         thumbnailUrl: PropTypes.string.isRequired,
         imageUrl: PropTypes.string.isRequired,
