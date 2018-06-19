@@ -30,8 +30,6 @@ class App extends Component {
         }
     }
 
-
-
     handleInput = event => {
         this.setState({ [event.target.name]: event.target.value });
     }
@@ -80,14 +78,12 @@ class App extends Component {
                     if (data.liked) {
                         data.likes--;
                         data.liked = false;
-                        likes[index].likes = data.likes;
-                        likes[index].liked = data.liked;
                     } else {
                         data.likes++;
                         data.liked = true;
-                        likes[index].likes = data.likes;
-                        likes[index].liked = data.liked;
                     }
+                    likes[index].likes = data.likes;
+                    likes[index].liked = data.liked;
                     return data;
                 }
                 return data;
