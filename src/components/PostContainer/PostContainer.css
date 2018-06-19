@@ -1,14 +1,14 @@
-.post-container{
+.post-container {
     border: 1px solid gray;
     width: 60%;
     margin: 50px auto;
     text-align: left;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
-.top-container{
+.top-container {
     padding: 3% 2% 0;
 }
-.thumb-pic{
+.thumb-pic {
     height:20px;
     margin-left: 2%;
     border-radius: 50%;
@@ -21,11 +21,11 @@
 h1 {
     font-size: 1rem;
 }
-.comment-container{
+.comment-container {
     max-width: 100%;
     margin: 5% 5% 0 5%;
 }
-.comment-bar{
+.comment-bar {
     border: none;
     border-top: 1px solid gray;
     width: 90%;

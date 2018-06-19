@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from "prop-types";
 const Comment = props => {
     return (<div>
         <p><strong>{props.passedUser}</strong>&nbsp;&nbsp;{props.passedText}</p>
@@ -7,5 +7,11 @@ const Comment = props => {
     )
 
 };
+
+Comment.propTypes = {
+    passedUser: PropTypes.string,
+    passedText: PropTypes.string
+  };
+  
 
 export default Comment

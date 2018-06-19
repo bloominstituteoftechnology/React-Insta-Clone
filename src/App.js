@@ -12,14 +12,21 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount(){
-    this.setState({data:dummyData});
+  componentDidMount() {
+    this.setState({ data: dummyData });
+  }
+
+  addNewComment = (event) => {
+    console.log("ADDING NEW COMMENT!")
+    let dataCopy = this.state.data.slice();
+    dataCopy.comments.push({ username: 'flintbean', text: event.target.value });
+    return this.setState({ data: dataCopy })
   }
 
   render() {
     return (
       <div >
-          <SearchBar />
+        <SearchBar />
         <div className="App">
           {this.state.data.map(post => (
             <PostContainer key={Math.random()}
@@ -27,6 +34,7 @@ class App extends React.Component {
               postStarter={post.username}
               postThumb={post.thumbnailUrl}
               postImage={post.imageUrl}
+              postSubmit={this.addNewComment}
             />
           ))}
         </div>

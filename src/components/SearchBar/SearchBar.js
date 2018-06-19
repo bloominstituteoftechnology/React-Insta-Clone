@@ -2,7 +2,6 @@ import React from 'react';
 import './SearchBar.css'
 import {
     Navbar,
-    NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,
@@ -29,7 +28,6 @@ export default class SearchBar extends React.Component {
             <div className="search-container">
                 <Navbar color="light" light expand="md">
                     <NavbarBrand>Instragram</NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} />
                     <input type="text"
                         placeholder="Search..."
                         className="ml-auto text-center search-bar"
