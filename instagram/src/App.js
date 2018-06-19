@@ -8,12 +8,16 @@ class App extends Component {
 constructor(props) {
 super();
 this.state = {
- data: dummyData,
+ data: [],
  search: '',
 }
-
-
 }
+
+componentDidMount() {
+this.setState({data: dummyData,
+})
+}
+
 
 search = (event) => {
   event.preventDefault();
