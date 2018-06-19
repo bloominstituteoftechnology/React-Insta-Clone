@@ -1,5 +1,7 @@
 .post-container {
     margin-bottom: 50px;
+    width: 600px;
+    margin: 0 auto 24px;
 }
 
 .post-header-container {
