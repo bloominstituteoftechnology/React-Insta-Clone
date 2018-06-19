@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 
 const CommentSection = props => {
     return (
-        <div className='comment-text'><strong> {props.comment.username} </strong> {props.comment.text}</div>
+        <div className='comment-text'><strong className='comment-name' onClick={() => props.deleteComment(props.username, props.index)}> {props.comment.username} </strong>
+            {props.comment.text}</div>
     );
 }
 

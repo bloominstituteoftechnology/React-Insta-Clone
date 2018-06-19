@@ -56,7 +56,7 @@ class App extends Component {
         let comments = [];
         const data = this.state.dummydata.slice()
             .map((comment, index) => {
-                if (comment.username === username) {          
+                if (comment.username === username) {
                     comments = comment.comments;
                     commentSection[index].comments = comment.comments;
                     return comment;
@@ -71,6 +71,28 @@ class App extends Component {
             dummyData: data,
             [username]: '',
         });
+    }
+
+    deleteComment = (username, index) => {
+        let comments = [];
+        let data = this.state.dummydata.slice()
+            .map(comment => {
+                if (comment.username === username) {
+                    comments = comment.comments;
+                    return comment;
+                }
+                return comment;
+            });
+
+        comments.map((comment, i) => {
+            if (i === index) {
+                comments.splice(index, 1);
+                return comment;
+            }
+            return comment;
+        });
+
+        this.setState({ dummydata: data })
     }
 
     likeComment = username => {
@@ -103,7 +125,7 @@ class App extends Component {
             <div className="App">
                 <SearchBar value={this.state.searchString} onChange={this.searchInput} />
                 <PostContainer value={this.getName} searchString={this.state.searchString} likeComment={this.likeComment}
-                    addComment={this.addComment} onChange={this.handleInput}
+                    addComment={this.addComment} deleteComment={this.deleteComment} onChange={this.handleInput}
                     onSubmit={this.onSubmit} data={this.state.dummydata} />
             </div>
         );

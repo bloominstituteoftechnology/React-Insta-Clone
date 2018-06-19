@@ -37,7 +37,7 @@ const Post = props => {
                     <CardText className='post-likes'>
                         <strong>{props.data.likes} likes </strong>
                     </CardText>
-                    {props.data.comments.map((comment, index) => <CommentSection key={comment.username + index} comment={comment} />)}
+                    {props.data.comments.map((comment, index) => <CommentSection key={comment.username + index} username={props.data.username} index={index} deleteComment={props.deleteComment} comment={comment} />)}
                     <CardText className='time-commented'>
                         {moment(time, "MMDDYYYY").fromNow()}
                     </CardText>

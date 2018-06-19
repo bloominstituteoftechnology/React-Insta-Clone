@@ -2,3 +2,7 @@
     font-size: 15px;
     padding: 3px 3px;
 }
+
+.comment-name {
+    cursor: pointer;
+}

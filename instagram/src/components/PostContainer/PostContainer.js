@@ -13,7 +13,8 @@ const PostContainer = props => {
         <div className='post-containers'>
             {data.map((data, index) => {
                 return <Post key={data.username + index} value={props.value} onChange={props.onChange}
-                    onSubmit={props.onSubmit} likeComment={props.likeComment} addComment={props.addComment} data={data}/>
+                    onSubmit={props.onSubmit} deleteComment={props.deleteComment}
+                    likeComment={props.likeComment} addComment={props.addComment} data={data} />
             })}
         </div>);
 }
