@@ -16,12 +16,14 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        {this.state.data.map(user => {
-          return <PostContainer userData = {user} />
+        {this.state.data.map((user,index) => {
+          return <PostContainer key={`user${index}`} userData = {user} />
         })}
       </div>
     );
   }
 }
+
+
 
 export default App;
