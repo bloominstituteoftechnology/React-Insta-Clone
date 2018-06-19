@@ -17,13 +17,14 @@ function PostContainer (props) {
             <div className="main-img">
                 <img src={props.post.imageUrl} alt="main post image"></img>
             </div>
+            <div className="main-content">
             <div className="icon-strip">
-                <div className="left-logos">
-                <div className="heart-icon">HEART</div>
-                <div className="speech-icon">SPEECH</div>
+                <div className="left-icons">
+                <div className="heart-icon post-icon"><i class="far fa-heart"></i></div>
+                <div className="speech-icon post-icon"><i class="far fa-comment"></i></div>
                 </div>
-                <div className="right-logos">
-                <div className="bookmark-icon">BOOKMARK</div>
+                <div className="right-icons">
+                <div className="bookmark-icon post-icon"><i class="far fa-bookmark"></i></div>
                 </div>
             </div>
             <div className="likes-strip">
@@ -31,6 +32,8 @@ function PostContainer (props) {
             </div>
             <CommentSection comments={props.post.comments} />
             <input type="text" className="new-comment"/>
+
+            </div>
         </div>
     );
 }

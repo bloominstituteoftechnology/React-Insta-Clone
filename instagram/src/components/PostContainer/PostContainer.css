@@ -1,6 +1,13 @@
 
 .post-container {
     max-width: 600px;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    margin-top: 60px;
+}
+
+.post-container, .post-container img {
+    border-radius: 3px;
 }
 
 .post-container h3 {
@@ -12,17 +19,33 @@
     align-items: center;
 }
 
+.post-container .main-content {
+    padding: 16px;
+}
+
 .icon-strip {
     display: flex;
     justify-content: space-between;
+    font-size: 2.4rem;
+    
 }
 
-.icon-strip .left-logos {
+.icon-strip .left-icons {
     display: flex;
 }
+
+.icon-strip .left-icons .post-icon {
+    padding-right: 16px;
+}
+
+.icon-strip .left-icons 
 
 .likes-strip {
     display: flex;
+}
+
+.likes-strip h3 {
+    text-align: left;
 }
 
 .user-thumbnail img {
