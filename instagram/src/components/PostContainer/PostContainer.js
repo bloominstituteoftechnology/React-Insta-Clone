@@ -1,7 +1,6 @@
 import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
-import moment from 'moment';
 
 const PostContainer = props => {
   console.log(props.postData);
@@ -13,11 +12,15 @@ const PostContainer = props => {
         <div className="username">{props.postData.username}</div>
       </div>
       <img src={props.postData.imageUrl} />
-      <i class="far fa-heart"></i>
-      <i class="far fa-comment"></i>
-      {props.postData.likes}
-      <CommentSection comments={props.postData.comments}/>
-      {moment().startOf('day').fromNow(props.postData.timestamp)}
+      <div className="post-icons-and-comments-container">
+        <div className="post-icons-container">
+          <i class="far fa-heart"></i>
+          <i class="far fa-comment"></i>
+        </div>
+        <p>{props.postData.likes} likes</p>
+        <CommentSection comments={props.postData.comments}
+                        timestamp={props.postData.timestamp} />
+      </div>
     </div>
   );
 };

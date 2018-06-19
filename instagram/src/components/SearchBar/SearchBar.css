@@ -1,7 +1,7 @@
 input {
   height: 25px;
-  width: 200px;
-  border: 2px solid lightgray;
+  width: 180px;
+  border: 1px solid lightgray;
   border-radius: 3px;
   padding: 0 15px;
 }
@@ -12,7 +12,7 @@ input {
   color: lightgray;
 }
 
-@import url("https://use.fontawesome.com/releases/v5.0.13/css/all.css");
+/*@import url("https://use.fontawesome.com/releases/v5.0.13/css/all.css");
   .searchbar { position: relative; }
   .searchbar .fa-search {
     position: absolute;
@@ -20,4 +20,4 @@ input {
     left: 75px;
     font-size: 15px;
     color: lightgray;
-}
+}*/

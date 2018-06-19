@@ -15,9 +15,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <header>
-          <i className="fab fa-instagram"></i>
+          <div className="instagram-icon-and-logo-container">
+            <i className="fab fa-instagram"></i>
+            <p>Instagram</p>
+          </div>
+
           <SearchBar />
           <div className="header-icons">
             <i class="far fa-compass"></i>
@@ -25,7 +29,7 @@ class App extends Component {
             <i class="far fa-user"></i>
           </div>
         </header>
-        <div>
+        <div className="posts-container">
           {this.state.dummyData.map(postData => {
             return (
               <PostContainer postData={postData} />

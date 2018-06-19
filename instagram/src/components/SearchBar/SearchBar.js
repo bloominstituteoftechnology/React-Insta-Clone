@@ -12,7 +12,7 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="searchbar">
-        <span class="fa fa-search"></span>
+        {/* <span class="fa fa-search"></span> */}
         <input placeholder="Search"></input>
       </div>
     );
