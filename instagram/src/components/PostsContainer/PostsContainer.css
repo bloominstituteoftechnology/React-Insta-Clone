@@ -1,0 +1,40 @@
+
+.posts-container-wrapper {
+    height: 500px;
+    width: 40%;
+    margin: 20px auto;
+}
+
+.post-border {
+    margin: 5px 0;
+    outline: 1px solid lightgray;
+}
+
+.post-image-wrapper {
+    height: 100%;
+    width: 100%;
+}
+  
+.post-image {
+    width: 100%;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.post-thumb-wrapper {
+    height: 30px;
+    width: 30px;
+    margin: 15px;
+}
+
+.post-thumb {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.usr {
+    font-weight: bold;
+}
