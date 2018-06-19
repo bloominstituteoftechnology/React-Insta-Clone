@@ -9,7 +9,8 @@ import {
   InputGroup,
   InputGroupText,
   InputGroupAddon,
-  Input
+  Input,
+  Form
 } from "reactstrap";
 import CommentSection from "../CommentSection/CommentSection";
 import moment from "moment";
@@ -17,6 +18,7 @@ import moment from "moment";
 class PostContainer extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       comments: this.props.comments,
       newComment: {
@@ -28,8 +30,8 @@ class PostContainer extends Component {
   }
   addComment = event => {
     event.preventDefault();
-    const comments = this.state.comments;
-    comments.push(this.state.newComment.text); //NEW
+    const comments = this.state.comments.slice();
+    comments.push(this.state.newComment); //NEW
     this.setState({
       newComment: {
         //NEW
@@ -38,6 +40,7 @@ class PostContainer extends Component {
       },
       comments: comments
     });
+    console.log("addComment invoked");
   };
   handleNewCommentInput = event => {
     this.setState({
@@ -48,6 +51,7 @@ class PostContainer extends Component {
       }
     });
   };
+
   render() {
     return (
       <div>
@@ -66,26 +70,31 @@ class PostContainer extends Component {
             <CardSubtitle>
               <strong>{this.props.likes} likes</strong>
             </CardSubtitle>
-            <CommentSection comments={this.props.comments} />
+            <CommentSection comments={this.state.comments} />
+            {/* {this.state.comment.map(comment => (
+              <div key={comment.username}>{comment.text}</div>
+            ))} */}
             <CardSubtitle className="text-muted text-uppercase">
               {moment(
                 this.props.timestamp,
                 "MMMM Do YYYY, h:mm:ss a"
               ).fromNow()}
             </CardSubtitle>
-            <InputGroup onSubmit={this.addComment}>
-              <Input
-                type="text"
-                onChange={this.handleNewCommentInput}
-                placeholder="Add a comment..."
-                value={this.state.newComment.text} //NEW
-              />
-              <InputGroupAddon addonType="append">
-                <InputGroupText>
-                  <i className="fas fa-ellipsis-h" />
-                </InputGroupText>
-              </InputGroupAddon>
-            </InputGroup>
+            <Form onSubmit={this.addComment}>
+              <InputGroup>
+                <Input
+                  type="text"
+                  onChange={this.handleNewCommentInput}
+                  placeholder="Add a comment..."
+                  value={this.state.newComment.text} //NEW
+                />
+                <InputGroupAddon addonType="append">
+                  <InputGroupText>
+                    <i className="fas fa-ellipsis-h" />
+                  </InputGroupText>
+                </InputGroupAddon>
+              </InputGroup>
+            </Form>
           </CardBody>
         </Card>
       </div>
