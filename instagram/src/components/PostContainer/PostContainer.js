@@ -3,12 +3,19 @@ import { Card, CardBody } from 'reactstrap'
 import CommentSection from '../CommentSection/CommentSection'
 import './PostContainer.css'
 import PropTypes from 'prop-types'
+import Moment from 'react-moment'
+import moment from 'moment'
 
 const PostContainer = (props) => {
+  var moment = require('moment')
+  let date = props.post.timestamp
+  let fortmatDate = moment(date, 'MMMM Do YYYY, h:mm:ss a')
+
+  console.log(fortmatDate)
   return (
     <div className='Post-Container'>
       <Card key={props.post.username + props.index}>
-        <CardBody>
+        <div className='top-container'>
           <img
             src={props.post.thumbnailUrl}
             alt='profile-pic'
@@ -18,7 +25,7 @@ const PostContainer = (props) => {
           <span className='username'>
             <strong>{props.post.username}</strong>
           </span>
-        </CardBody>
+        </div>
         <img
           width='100%'
           src={props.post.imageUrl}
@@ -26,11 +33,24 @@ const PostContainer = (props) => {
           className='img-fluid'
         />
         <div className='post-cta'>
+          <div className='icons'>
+            <div className='heart-icon'>
+              <i class='far fa-heart fa-lg' />
+            </div>
+            <div className='comment-icon'>
+              <i class='far fa-comment fa-lg' />
+            </div>
+          </div>
+
           <span>
             <strong>{props.post.likes} likes</strong>
           </span>
           <CommentSection comments={props.post.comments} />
-          <h6>{props.post.timestamp}</h6>
+          <div className='date-stamp'>
+            {' '}
+            <Moment fromNow>{fortmatDate}</Moment> (<small>{moment(fortmatDate).format('LL')}</small>)
+          </div>
+
           <input placeholder='Add a comment...' type='text' />
         </div>
       </Card>

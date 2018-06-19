@@ -32,7 +32,10 @@ class TheSearchBar extends Component {
     return (
       <div>
         <Navbar color='secondary' light expand='md'>
-          <NavbarBrand href='/'>Instagram</NavbarBrand>
+          <NavbarBrand href='/'>
+            <i class='fab fa-instagram fa-lg' />
+          </NavbarBrand>
+          <NavbarBrand>Instagram</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className='ml-auto' navbar>

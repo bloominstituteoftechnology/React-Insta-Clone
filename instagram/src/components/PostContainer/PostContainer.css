@@ -1,9 +1,9 @@
 .Post-Container {
-  border: 1px solid #e6e6e6;
   max-width: 495px;
   margin: 0 auto;
   background: white;
   margin-bottom: 45px;
+  margin-top: 45px;
 }
 
 #thumbnail {
@@ -16,4 +16,33 @@
 
 .post-cta {
   padding: 1%;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 55px;
+  padding: 1%;
+}
+
+.heart-icon {
+  cursor: pointer;
+}
+
+.comment-icon {
+  cursor: pointer;
+}
+
+.top-container {
+  padding: 2%;
+}
+
+input {
+  outline: none;
+  width: 100%;
+  border: 1px solid white;
+}
+
+.date-stamp {
+  color: #999999;
 }
