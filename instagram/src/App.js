@@ -11,6 +11,7 @@ class App extends Component {
       username: '',
 
     };
+    this.searchPost = this.searchPost.bind(this);
   }
   changeComment = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -36,22 +37,34 @@ class App extends Component {
   }
   addLike = (e, index) => {
 
-    const instaData = Object.assign({}, this.state.instaData);
+    const instaData = this.state.instaData.slice();
 
     if (e.target.classList.contains('heart--active')) {
       instaData[index].likes--;
-      this.setState({ });
+      this.setState({ instaData });
 
       return;
     }
     instaData[index].likes++;
-    this.setState({ });
+    this.setState({ instaData });
+  }
+
+  searchPost = (e) => {
+    let instaData = dummyData.slice();
+    console.log('search');
+    instaData = instaData.filter(dataItem => {
+      if (dataItem.username.indexOf(e.target.value) === 0) {
+        return true;
+      }
+      return false;
+    });
+    this.setState({ instaData });
   }
 
   render() {
     return (
       <div className="App">
-        <SearchContainer />
+        <SearchContainer searchHandler={this.searchPost} />
         <PostList instaData={this.state.instaData}
           changeCommentHandler={this.changeComment}
           addCommentHandler={this.addComment}
