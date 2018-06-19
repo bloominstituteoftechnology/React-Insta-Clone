@@ -21,7 +21,7 @@ const PostContainer = props => (
         <img src={props.data.imageUrl} alt="post" height="auto" width="498px" />
       </div>
     </div>
-    <CommentSection comment={props.data.comments} likes={props.data.likes} />
+    <CommentSection post={props.data} />
   </div>
 );
 

@@ -14,13 +14,13 @@ const CommentSection = props => (
       </div>
     </div>
     <div className="row">
-      <div className="col-sm-4">{props.likes} likes</div>
+      <div className="col-sm-4">{props.post.likes} likes</div>
     </div>
     <div>
-      {props.comment.map(c => (
-        <div key={uuid()}>
-          <div>{c.username}</div>
-          <div>{c.text}</div>
+      {props.post.comments.map(c => (
+        <div key={uuid()} className="row">
+          <p className=" comment username">{c.username}</p> &nbsp;
+          <p className="comment text">{c.text}</p>
         </div>
       ))}
     </div>
