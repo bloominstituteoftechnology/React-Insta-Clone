@@ -8,7 +8,7 @@ const CommentsContainer = (props) => {
         <div className='commentsContainer'>
 
         {props.comments.map((comment, id) => {
-            return <Comment key = {Date.now()} comment = {comment}/>
+            return <Comment key = {id} comment = {comment}/>
         })
         }
 
