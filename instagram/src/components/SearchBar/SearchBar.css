@@ -1,0 +1,40 @@
+.search-bar{
+  border: 1px solid lightgray;
+  padding: 1%;
+}
+
+.gram-icon{
+  width: 82px;
+  /* border-right: 1px solid lightgrey */
+}
+
+.gram-logo{
+  width: 171px;
+  padding-top: 3px;
+  margin-left: 5px;
+}
+
+.search-field{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-field input{
+  width: 49%;
+  font-size: 1.6rem;
+  border-radius: 4px;
+  border: 1px solid lightgray
+}
+
+.search-icon-group{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-icon-group i{
+  padding: 0 7.5%;
+  font-size: 1.9rem;
+}
+
