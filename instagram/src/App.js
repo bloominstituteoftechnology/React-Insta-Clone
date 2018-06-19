@@ -1,30 +1,26 @@
 import React, { Component } from "react";
 import "./App.css";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Container,
-  Row,
-  Col,
-  Jumbotron,
-  Button
-} from "reactstrap";
 import SearchBar from "./components/SearchBar/SearchBar.js";
+import dummyData from "./dummy-data";
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      dummyData: dummyData
+    };
   }
   render() {
     return (
       <div className="App">
         <SearchBar />
+        {this.state.dummyData.map(data => {
+          return (
+            <p>
+              Username: {data.username}, Likes: {data.likes}
+            </p>
+          );
+        })}
       </div>
     );
   }

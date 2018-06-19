@@ -9,7 +9,7 @@ const SearchBar = () => {
           <i className="fa fa-instagram instagram-icon" />
           <span>Instagram</span>
         </h1>
-        <input type="text" placeholder="Search" className="col-sm-4" />
+        <input type="search" placeholder="Search" className="col-sm-4" />
         <div className="col-sm-4 right-icons">
           <i className="fa fa-compass fa-2x" />
           <i className="fa fa-heart fa-2x" />
