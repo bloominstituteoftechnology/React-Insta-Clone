@@ -1,5 +1,5 @@
 .App {
-  background-color: white;
+   background-color:#FAFAFA;
   margin: 0;
 }
 .App-header {
@@ -11,4 +11,7 @@
   margin: 0; 
   padding: 0;
 
+}
+.App-body {
+  background-color:#FAFAFA;
 }

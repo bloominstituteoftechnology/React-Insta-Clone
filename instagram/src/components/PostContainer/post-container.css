@@ -7,6 +7,10 @@
     border-radius: 4px;
     flex-direction: column;
 }
+.post-bottom {
+      padding: 0 16px 0 16px;
+
+}
 .post-image-fullsize {
     max-width: 620px;
 }
@@ -16,16 +20,28 @@
     justify-content: flex-start; 
 }
 .user-thumb{
- width: 50px;
- height: 50px;
+ width: 40px;
+ height: 40px;
  padding: 10px;
 }
 .user {
-    font-weight:bold;
-    margin: 7px 0 4px 0   ;
+    font-weight: 600;
+    margin: 10px 0 4px 0;
+    font-size: 14px;
+    color: #262626;
 
 }
 .location {
-    font-size: 10px;
+    font-size: 12px;
     margin:0;
+    color: #262626b7;
+
+}
+.likes {
+     font-weight: 600;
+     margin: 10px 0 10px 0;
+     font-size: 14px;
+     color: #262626;
+  
+
 }

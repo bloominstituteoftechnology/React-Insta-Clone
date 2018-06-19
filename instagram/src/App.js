@@ -11,6 +11,16 @@ this.state = {
  data: dummyData,
 }
 
+const search = (event) => {
+  event.preventDefault();
+  let term = event.target.value;
+  let searchData = this.dummyData.slice();
+  searchData = searchData.filter(post => post.username === term);
+  this.setState({dummyData: searchData,
+  })
+
+}
+
 }
 
 
@@ -18,9 +28,9 @@ this.state = {
     return (
       <div className="App">
         <header className="App-header">
-        <SearchBarContainer />
+        <SearchBarContainer search = {this.search}/>
          </header>
-        <div className ='post-container'>
+        <div className ='App-body'>
         {this.state.data.map(post => {
          return <PostContainer key = {Math.random()} post = {post} />
         })}

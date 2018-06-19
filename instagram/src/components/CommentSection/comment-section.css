@@ -1,0 +1,34 @@
+.comments {
+    padding-bottom: 10px;
+}
+ul {
+    list-style:none;
+    padding: 0;
+    margin: 0;
+
+}
+.user {
+    font-weight: 600;
+    margin: 10px 0 4px 0;
+    font-size: 14px;
+    color: #262626;
+}
+.user-comment {
+        font-size: 14px;
+        padding-left: 3px;
+        color: #262626b7;
+        font-weight: 400;   
+}
+.add-container {
+    border-top: 1px solid rgb(239, 239, 239);
+    padding: 16px 0 16px 0;
+    font-size: 14px;
+}
+input {
+ border: none;
+ height: 18px;
+ outline: none;
+}
+input::placeholder {
+   color: #999;
+}
