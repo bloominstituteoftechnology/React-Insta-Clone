@@ -12,6 +12,9 @@ class CommentSection extends Component {
     return (
       <div className="comments">
         {this.props.commentsArr.map( (comments,index) => <Comment key={index} comments={comments}/>)}
+        <div className="add-comment">
+          <input type="text" placeholder="Add Comment"/>
+        </div>
       </div>
      )
   }
