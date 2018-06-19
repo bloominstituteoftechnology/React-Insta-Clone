@@ -1,7 +1,9 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
-import { Card, CardImg, CardText, CardBody, CardLink,
-  CardTitle, CardSubtitle } from 'reactstrap';
+import { Card, CardImg, CardBody,
+  CardTitle } from 'reactstrap';
+
+  /*Need to come back and add prop types*/
 
 const PostContainer = props => {
   return (
@@ -16,7 +18,9 @@ const PostContainer = props => {
         <CommentSection comments={props.post.comments} />
         <h6>{props.post.timestamp}</h6>
         <hr/>
-        <input style={{width: 500 +'px'}} type="text" name="comment" placeholder="Add a comment..." value={props.value} onChange={props.addCommentHandler}/>
+        <form onSubmit={props.addCommentHandler}>
+        <input style={{width: 500 +'px'}} type="text" name="comment" placeholder="Add a comment..." value={props.value} onChange={props.commentChangeHandler} />
+        </form>
         </CardBody>
       </Card>
   );
