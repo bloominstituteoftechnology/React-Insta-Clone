@@ -14,7 +14,7 @@ class SearchBar extends Component {
         return (
             <div className="Navbar " >
             	<ul className="Navbar instagram" role="navigation">
-				    <li className=".fa-instagram"><i className="fa fa-instagram"></i></li>
+				    <li className=".fa-instagram"><i className="fa fa-instagram fa-lg"></i></li>
 				    <li className="instagram__logo">Instagram</li>
 				    <li className="instagram">
 				    	<form> <i className="fa fa-search"></i><input placeholder="search Instagram"/>
@@ -22,9 +22,9 @@ class SearchBar extends Component {
 				    	</form>
 				    	</li>
 				    
-				    <li className="fa fa-compass"></li>
-				    <li className="fa fa-heart-o"></li>
-				    <li className="fa fa-user"></li>
+				    <li className="fa fa-compass fa-lg"></li>
+				    <li className="fa fa-heart-o fa-lg"></li>
+				    <li className="fa fa-user fa-lg"></li>
 			  </ul>
                     
             </div>
