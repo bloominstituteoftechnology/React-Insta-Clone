@@ -23,11 +23,10 @@ const PostContainer = (props) => {
 
 PostContainer.propTypes = {
     dataItem: PropTypes.shape({
-        username: PropTypes.string.isRequired,
-        thumbnailUrl: PropTypes.string.isRequired,
-        imageUrl: PropTypes.string.isRequired,
-        likes: PropTypes.object.isRequired,
-
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        imageUrl: PropTypes.string,
+        likes: PropTypes.number,
         comments: PropTypes.array,
     })
 };
