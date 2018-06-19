@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -27,6 +27,11 @@
   to { transform: rotate(360deg); }
 }
 
+/* Search Bar */
+body {
+  background: #FAFAFA !important;
+}
+
 a {
   color: black !important; 
 }
@@ -37,14 +42,63 @@ a {
 }
 
 .container {
-  border: 1px solid black;
-  height: 50px;
+  height: 100px;
+  padding: 20px 0;
 }
 
 .SearchBar {
   height: 100%;
+  background: white;
 }
 
-img {
+.logo {
   height: 40px;
+}
+
+.fa-instagram::before{
+  border-right: 1px solid black;
+  padding-right: 15px;
+  margin-right: 20px;
+}
+
+/* Post Container */
+
+.card{
+  width: 604px;
+  margin: 30px auto;
+
+}
+
+.card-header {
+  padding: 15px 0;
+}
+
+.thumbnail {
+  width: 30px;
+  height: 30px;
+  margin-left: 16px;
+  margin-right: 11px;
+  border-radius: 50%;
+}
+
+.bold-text {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.comment {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.card-header {
+  background: white !important;
+}
+
+.comment-input {
+  border: none;
+
 }
