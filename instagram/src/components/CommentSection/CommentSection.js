@@ -4,13 +4,12 @@ import PropTypes from "prop-types";
 
 const  CommentSection= props => {
         return( 
-                <div  key={Date.now()}>{props.Comments.map(comment => { 
+                <div>{props.Comments.map(comment => { 
 
 		return(
-			
+
 		<div className={props.CommentContainer}>	
-		<p className={props.CommentUserNameStyle}>{comment.username} </p>
-		<p className={props.UserText}> {comment.text}</p>
+		<p className={props.UserText}><span className={props.CommentUserNameStyle}>{comment.username}</span> {comment.text}</p>
 		</div>
 		);
 
@@ -29,6 +28,8 @@ const  CommentSection= props => {
 	);
 }
 
+
+//  <p className={props.UserText}> {comment.text}</p>
 
 CommentSection.propTypes = {
   comment:PropTypes.shape({

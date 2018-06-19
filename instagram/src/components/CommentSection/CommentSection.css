@@ -1,27 +1,32 @@
 .comment-container{
-	 display: flex;
+	display: flex;
         justify-content: flex-start;
 	/*padding-left: 25%;*/
 	margin: -1% 2% -1% 2%;
+	/*margin:0% 2% 0% 2%;*/
 
 }
 
 .username-comment-style{
 	font-weight: bold;
+	/*font-size: 0.9rem;
+	text-align: left;*/
 
 }
 
 .user-text{
-	margin-left: 0.5%;
+	font-size: 0.9rem;
+	/*margin-left: 0.5%;*/
+	text-align: left;
 }
 
 .comment-bar{
 	margin: 2%;
-	height: 25px;
-	width: 560px;
+	height: 10%;
+	width: 570px;
 	border: none;
 	border-top: 1px solid #ddd;
-	padding: 2% 0% 1% 0%;
+	padding: 2% 0% 2% 0%;
 	font-size: 0.8rem;
 		
 }
