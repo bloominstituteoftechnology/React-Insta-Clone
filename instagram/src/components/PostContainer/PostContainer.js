@@ -6,13 +6,15 @@ import CommentSection from '../CommentSection/CommentSection';
 const PostContainer = props => {
     return(
         <div>
-        <div>
-        {props.dummyData.map(post)} => 
-        <PostInfo key={post.timestamp} postInfo={post} />
+        {props.dummyData.map((post) => {
+          return (
+            <div>
+            <PostInfo key={post.timestamp} postInfo={post} />
+            <CommentSection comments={post.comments} />
+            </div>
+          )
+        })}
         </div>
-        <CommentSection comment={props.dummyData.comments} />
-        </div>
-        
     )   
 }
 
