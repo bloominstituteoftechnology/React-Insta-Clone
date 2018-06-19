@@ -8,10 +8,15 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
-      post: dummyData
+      post: []
     }
   }
 
+  componentDidMount () {
+    this.setState({
+      post: dummyData
+    })
+  }
   handlesLikes = (element) => {
     element.style.backgroundColor = 'red'
   }
@@ -23,7 +28,7 @@ class App extends Component {
         {this.state.post.map((post, index) => (
           <PostContainer
             key={post.username + index}
-            post={post}
+            posts={post}
             onClick={this.handlesLikes}
           />
         ))}
