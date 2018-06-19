@@ -18,7 +18,7 @@ class App extends Component {
         <div className="container">
           {this.state.appData.map(post => (
             <PostContainer
-              key={post.id}
+              key={post.username}
               username={post.username}
               thumbnail={post.thumbnailUrl}
               image={post.imageUrl}
