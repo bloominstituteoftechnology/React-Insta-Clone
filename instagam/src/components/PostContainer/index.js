@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import CommentSection from '../CommentSection';
+// import InputSection from './InputSection';
 import PropTypes from 'prop-types'
 
 const PostContainer = (props) => {
@@ -26,16 +27,12 @@ const PostContainer = (props) => {
                             </div>
                         </div>
                         <div className='commentSection'>
-                            <CommentSection passedItem={item.comments} />
+                            <CommentSection onclickProp={props.clickProp} passedItem={item.comments} passedPropsFromPost={item} onchangeProps={props.changeProps} />
                         </div>
                         <div className='dateStamp'>
                             {item.timestamp}
                         </div>
-                        <hr />
-                        <div className='footerCom'>
-                            <input type='text' onChange={props.changeProps} placeholder='Add a comment...' />
-                            <button onClick={item.clickProp}>...</button>
-                        </div>
+                       
 
                     </div>
                 )

@@ -9,10 +9,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      commentsData: dummyData,
+      commentsData: [],
       username: 'anonymous',
       newPost: ''
     }
+  }
+  componentDidMount() {
+    this.setState ({ commentsData: dummyData });
   }
   // handleChange = e => {
   //   console.log('e target value: ', e.target.value);
@@ -26,17 +29,18 @@ class App extends Component {
 }
 
 
-handleClick = () => {
-  // const newState=this.state.commentsData.slice();
-  // const newComment={
-  //   username: this.state.username,
-  //   id: Math.random(),
-  //   text: this.state.comments.newPost
-  // };
-  // newState.push(newComment);
-  // this.setState({ commentsData : newState })
-  // console.log('state: ', this.state.commentsData)
-
+addcomment =(e) => {
+  e.preventDefault();
+  const newCommentsCopy=this.state.comments.slice();
+  console.log('sliced newCommentsCopy: ', newCommentsCopy)
+  const newComment = this.state.newPost;
+  const newObj={
+      username: 'anonymous',
+      text: newComment
+  }
+  let pushedCopy = newCommentsCopy.push(newObj);
+  console.log('new pushed copy ', pushedCopy)
+  this.setState({ comments: pushedCopy, newPost: '' })
 }
 
   render() {
@@ -48,11 +52,10 @@ handleClick = () => {
           <PostContainer 
             passedState = {this.state.commentsData} 
             changeProps={this.handleChange}  
-            clickProp = {this.handleClick} 
+            clickProp = {this.addcomment} 
             name = {this.state.newPost}
           />
         </div>
-
       </div>
     );
   }
