@@ -5,8 +5,8 @@ const PostContainer = props => {
   return (
       <Post key = {props.user.timestamp} username={props.user.username}
       thumbnail={props.user.thumbnailUrl} image={props.user.imageUrl}
-      time={props.user.timestamp} likes={props.user.likes} />
-      
+      time={props.user.timestamp} likes={props.user.likes} comments={props.user.comments} />
+
   )
 }
 

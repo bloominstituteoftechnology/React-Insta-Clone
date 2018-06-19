@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentSection from '../CommentSection/CommentSection';
 import { Card, CardImg, CardText, CardBody, CardLink,
   CardTitle, CardSubtitle } from 'reactstrap';
 
@@ -12,7 +13,8 @@ const Post = props => {
         </CardBody>
         <CardImg className="post-image" src={props.image} alt="" />
         <CardBody>
-        <h5>{props.likes}</h5>
+        <h5>{props.likes} likes</h5>
+        <CommentSection comments={props.comments} />
         <h6>{props.time}</h6>
         </CardBody>
       </Card>
