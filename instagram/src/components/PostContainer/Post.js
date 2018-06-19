@@ -75,6 +75,7 @@ Post.propTypes = {
         thumbnailUrl: PropTypes.string,
         imageUrl: PropTypes.string,
         likes: PropTypes.number,
+        liked: PropTypes.boolean,
         timestamp: PropTypes.string,
         comments: PropTypes.array
     })
