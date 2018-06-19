@@ -1,4 +1,19 @@
 .insta-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#search-input {
+  margin-top: 10px;
+}
+
+.header-right-section {
+  position: relative;
+  top: -4px;
+}
+
+.header-right-icons {
+  margin-left: 30px;
 }

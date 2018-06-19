@@ -4,9 +4,9 @@ import compass from "../../assets/instagram-compass.png";
 
 const SearchRightIcons = props => {
   return (
-    <div>
-      <img src={compass} alt="compass" />
-      <img src={heart} alt="heart" />
+    <div className="header-right-section">
+      <img src={compass} alt="compass" className="header-right-icons" />
+      <img src={heart} alt="heart" className="header-right-icons" />
     </div>
   );
 };
