@@ -42,7 +42,7 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         <div className="posts-wrapper">
-          {this.state.postData.map(post => <PostContainer post={post} addCommentHandler={this.addNewComment} commentChangeHandler={this.handleCommentChange} />)}
+          {this.state.postData.map(post => <PostContainer post={post} addCommentHandler={this.addNewComment} commentChangeHandler={this.handleCommentChange} value={this.state.comment} />)}
         </div>
       </div>
     );
