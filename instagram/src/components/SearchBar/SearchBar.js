@@ -4,12 +4,14 @@ import './SearchBar.css';
 const SearchBar = () => (
   <div className="container">
     <div className="row title">
-      <i className="col-sm-1 fab fa-instagram" />
+      <i className="col-sm-1 fab fa-instagram logo" />
       <div className="col-sm-1 instaFont">Instagram</div>
       <div className="col-sm-8">
-        <button className="searchButton">Search</button>
+        <button className="searchButton">
+          <i className="fab fa-search" /> Search
+        </button>
       </div>
-      <div className="">
+      <div>
         <i className="col-sm-1 far fa-compass" />
         <i className="col-sm-1 far fa-heart" />
         <i className="col-sm-1 far fa-user" />

@@ -1,6 +1,12 @@
 .title {
   font-size: 24px;
   display: flex;
+  border-bottom: 1px solid gray;
+  margin-bottom: 5px;
+}
+
+.logo {
+  margin-top: 5px;
 }
 
 .instaFont {
@@ -10,4 +16,6 @@
 .searchButton {
   font-size: 12px;
   width: 200px;
+  padding-top: 0px;
+  margin-bottom: 5px;
 }

@@ -4,9 +4,24 @@ import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => (
-  <div>
-    {props.data.username}
-    <CommentSection comment={props.data.comments} />
+  <div className="container posts">
+    <div className="row">
+      <div className="col-sm-4 name">
+        <img
+          src={props.data.thumbnailUrl}
+          alt="user thumbnail"
+          height="20px"
+          width="20px"
+        />{' '}
+        {props.data.username}
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-sm-1 postImg">
+        <img src={props.data.imageUrl} alt="post" height="auto" width="498px" />
+      </div>
+    </div>
+    <CommentSection comment={props.data.comments} likes={props.data.likes} />
   </div>
 );
 
