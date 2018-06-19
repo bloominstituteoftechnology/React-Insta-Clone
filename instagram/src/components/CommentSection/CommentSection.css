@@ -1,5 +1,12 @@
-.comment-selection p {
+.comment-section p {
     text-align: start;
+}
+.comment-section div {
+    width: 100%;
+}
+.comment-section input {
+    width: 100%;
+    border: none;
 }
 
 .custom-comment {
