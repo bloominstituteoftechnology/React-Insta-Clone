@@ -21,6 +21,10 @@
     display: flex;
 }
 
+.likes-strip {
+    display: flex;
+}
+
 .user-thumbnail img {
     width: 30px;
     border-radius: 15px;

@@ -1,15 +1,28 @@
-import React from 'react'
+import React from 'react';
 import './SearchBar.css';
+import logo from './img/instagram-header.png';
 
 function SearchBar (props) {
     return (
         <div className="search-bar">
-        <div className="camera-icon">camera icon</div>
-          <div className="logo">logo</div>
+        <div className="left-header-content">
+        <a href="#">
+            <div className="logo">
+        <div className="logo-icon"><i class="fab fa-instagram"></i></div>
+        
+          <img src={logo} className="logo-text"></img>
+            </div>
+          </a>
+        </div>
+        <div className="search-input">
           <input type="text" />
-          <div className="navigation">navigation</div>
-          <div className="like">like</div>
-          <div className="profile">profile</div>
+          </div>
+          <div className="right-header-content">
+          <div className="navigation"><a href="#"><i class="far fa-compass"></i></a></div>
+          <div className="like"><a href="#"><i class="far fa-heart"></i></a></div>
+          <div className="profile"><a href="#"><i class="far fa-user"></i></a></div>
+
+          </div>
         </div>
     );
 }

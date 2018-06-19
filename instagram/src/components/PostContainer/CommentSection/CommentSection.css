@@ -1,0 +1,9 @@
+
+.comment-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-section h3, .comment-section p {
+    text-align: left;
+}

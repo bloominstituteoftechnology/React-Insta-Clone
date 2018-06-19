@@ -2,6 +2,10 @@ html {
   font-size: 10px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .App {
   font-size: 1.6rem;
   text-align: center;
@@ -13,20 +17,12 @@ html {
   align-items: center;
 }
 
-header {
-  width: 100%;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
-  background-color: #222;
+  width: 100%;
   height: 150px;
   padding: 20px;
-  color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .App-title {
