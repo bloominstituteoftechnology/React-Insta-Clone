@@ -1,0 +1,13 @@
+.likes {
+    font-weight: bold;
+}
+
+.comment-container {
+    overflow: hidden;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.comment-username {
+    font-weight: bold;
+}
