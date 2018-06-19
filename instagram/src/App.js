@@ -10,8 +10,22 @@ class App extends Component {
     super();
     this.state = {
       data: dummyData,
+      dataInput: ''
     }
   }
+
+  commentHandler = (e) => {
+    console.log(e.target.value);
+    this.setState({dataInput: e.target.value})
+  }
+
+  addComment = () => {
+    let comment = {text: this.state.dataInput}
+    let newData = this.state.data.comments.slice();
+    newData.push(comment);
+    this.setState({comments: newData, dataInput: ''});
+  }
+
   render() {
     return (
       <div className="App">
@@ -19,7 +33,7 @@ class App extends Component {
           <SearchBar />
         </header>
         
-        <PostContainer data={this.state.data}/>
+        <PostContainer data={this.state.data} dataInput={this.state.dataInput} commentHandler={this.commentHandler} addComment={this.addComment}/>
       </div>
     );
   }

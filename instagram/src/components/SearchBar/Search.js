@@ -16,8 +16,10 @@ const SearchBar = props => {
                 value={props.dataInput}/>
             </div>
             <div className='icons'>
+                <div className='share-container'>
                 <img className='share-icon' alt='share icon' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIYtgKIdJZP0tzYF0PpZ6oA06CkzvmfdP8yBkNEEkRox6ptOyTjw' />
-                 <img className='heart-icon' alt='heart icon' src='https://png.icons8.com/metro/1600/like.png'/>
+                 </div>
+                 <img className='heart' alt='heart icon' src='https://png.icons8.com/metro/1600/like.png'/>
                  <img className='friend-icon' alt='friend icon' src='https://d30y9cdsu7xlg0.cloudfront.net/png/682465-200.png'/>
             </div>
         </div>
