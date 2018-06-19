@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import CommentSection from '../CommentSection';
+import PropTypes from 'prop-types'
 
 const PostContainer = (props) => {
     console.log('post cont props: ', props)
@@ -32,8 +33,8 @@ const PostContainer = (props) => {
                         </div>
                         <hr />
                         <div className='footerCom'>
-                            <p>Add a comment...</p>
-                            <p>...</p>
+                            <input type='text' onChange={props.changeProps} placeholder='Add a comment...' />
+                            <button onClick={item.clickProp}>...</button>
                         </div>
 
                     </div>
@@ -44,4 +45,17 @@ const PostContainer = (props) => {
     )
 }
  
+
+CommentSection.propTypes = {
+    passedState: PropTypes.shape({
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string,
+        text: PropTypes.string,
+
+    })
+}
+
 export default PostContainer;
+
