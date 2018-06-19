@@ -5,6 +5,7 @@ import PostImage from './PostImage';
 import PostActions from './PostActions';
 import PostLikes from './PostLikes';
 import CommentSection from '../CommentSection/CommentSection';
+import PropTypes from 'prop-types';
 
 const Post = (props) => {
   return(
@@ -16,6 +17,17 @@ const Post = (props) => {
       <CommentSection comments={props.postData.comments} timestamp={props.postData.timestamp} />
     </li>
   );
+};
+
+Post.propTypes = {
+  postData: PropTypes.shape({
+    comments: PropTypes.array.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    thumbnailUrl: PropTypes.string.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+  })
 };
 
 export default Post;
