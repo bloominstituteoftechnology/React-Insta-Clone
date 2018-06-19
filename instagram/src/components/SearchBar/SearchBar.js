@@ -8,11 +8,13 @@ const  SearchBar= props => {
 		<div className={props.SearchContainer}>
 		<input className={props.searchBarStyle}
           	type="text"
-          	//onChange={this.props.inputEvent(e); this.props.enterKeyPress(e)}
-       		// onChange={props.searchInput}
-        	 //onChange={props.enterKeyPress}
+		//onChange ={props.changeSearchValue}
+       		onChange= {(event) => { 
+                    props.changeSearchValue(event);
+                    props.searchTrigger(event);
+                    }}
           	placeholder="Search"
-          	value="" 
+          	value={props.SearchValue} 
 	  	/>
 	</div>
 	);	
