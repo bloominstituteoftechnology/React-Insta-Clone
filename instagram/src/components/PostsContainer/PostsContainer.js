@@ -7,7 +7,11 @@ import Post from './Post';
 const PostContainer = props => {
   return (
     <div className="posts-container">
-      {props.posts.map(post => <Post key={uuid()} post={post} />)}
+      {props.posts.map(post => <Post key={uuid()}
+                                      id={uuid()}
+                                     post={post}
+                                     addNewComment={props.addNewComment}
+                                     onCommentSubmit={props.onCommentSubmit} />)}
     </div>
   );
 };

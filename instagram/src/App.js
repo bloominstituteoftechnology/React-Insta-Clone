@@ -17,6 +17,16 @@ class App extends Component {
     this.setState({ posts: dummyData })
   }
 
+  onCommentSubmit = event => {
+    event.preventDefault();
+    console.log(event.target.value);
+    this.addNewComment();
+  };
+
+  addNewComment = id => {
+
+  }
+
   render() {
     return (
       <div className="container">
@@ -32,7 +42,9 @@ class App extends Component {
             <i className="far fa-user"></i>
           </div>
         </header>
-        <PostsContainer posts={this.state.posts} />
+        <PostsContainer posts={this.state.posts}
+                        addNewComment={this.addNewComment}
+                        onCommentSubmit={this.onCommentSubmit} />
       </div>
     );
   }

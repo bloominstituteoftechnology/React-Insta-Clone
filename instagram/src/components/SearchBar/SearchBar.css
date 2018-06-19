@@ -1,9 +1,13 @@
+@import '//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css';
+
 input {
+  font-family: FontAwesome;
   height: 25px;
   width: 180px;
   border: 1px solid lightgray;
   border-radius: 3px;
-  padding: 0 15px;
+  padding: 3px 15px 0 15px;
+  font-size: 13px;
 }
 
 ::-webkit-input-placeholder {

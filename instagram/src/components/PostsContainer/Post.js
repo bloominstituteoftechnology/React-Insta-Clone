@@ -17,8 +17,11 @@ const Post = props => {
           <i className="far fa-comment"></i>
         </div>
         <p>{props.post.likes} likes</p>
-        <CommentSection comments={props.post.comments}
-                        timestamp={props.post.timestamp} />
+        <CommentSection id={props.id}
+                        comments={props.post.comments}
+                        timestamp={props.post.timestamp}
+                        onCommentSubmit={props.onCommentSubmit}
+                        addNewComment={props.addNewComment} />
       </div>
     </div>
   );
