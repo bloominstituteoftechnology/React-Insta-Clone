@@ -39,7 +39,10 @@ const PostContainer = (props) => {
                 </div>
 
 
-                <CommentSection />
+                <CommentSection 
+                propComments={props.post.comments}
+                />
+                {console.log(props.post.comments)}
 
 
             </div>

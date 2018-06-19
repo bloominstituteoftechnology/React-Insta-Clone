@@ -4,7 +4,7 @@ import './search.css' ;
 const Search = () => {
     return (
         <div className="search">
-            Placeholer: "Search"        
+            Placeholer: "Search Bar"        
         </div>
     )
 }

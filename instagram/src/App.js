@@ -23,7 +23,8 @@ class App extends Component {
     console.log('rendered called') ;
     return (
       <div className="App">
-        <Search />     
+        <Search />
+        div.   
         {/* passing each obj(post) one-by-one to PostContainer */}
         {this.state.userData.map((post, index) => {
           return (
