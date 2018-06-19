@@ -2,7 +2,7 @@ import React from 'react';
 import './searchbar.css'
 
 const Icon = (props) => (
-  <div>
+  <div className="icon">
     {props.icon}
   </div>
 );

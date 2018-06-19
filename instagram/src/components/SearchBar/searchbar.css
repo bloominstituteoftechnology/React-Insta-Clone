@@ -51,3 +51,6 @@
     font-weight: 300;
     color: #898989;
 }
+.icon {
+    display: inline-block;
+}

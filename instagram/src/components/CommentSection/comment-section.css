@@ -1,10 +1,8 @@
-.comments {
-    padding-bottom: 10px;
-}
+
 ul {
     list-style:none;
     padding: 0;
-    margin: 0;
+    margin-bottom: 10px;
 
 }
 .user {
@@ -31,4 +29,20 @@ input {
 }
 input::placeholder {
    color: #999;
+}
+.like-button {
+    font-size: 20px;
+    padding-right: 10px;
+    font-weight: 200;
+    color: #404040;
+  
+}
+.chat-button {
+    font-size: 20px;
+    padding-right: 10px;
+    font-weight: 200;
+    color: #404040; 
+}
+.likes {
+    display: block;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './post-container.css';
 import CommentSection from '../CommentSection/CommentSection';
-import IconHeaderBar from '../PostContainer/IconHeaderBar';
+
 
 
 const PostContainer = (props) => (
@@ -15,8 +15,8 @@ const PostContainer = (props) => (
         </div>
        <img className='post-image-fullsize' src={props.post.imageUrl} />  
        <div className='post-bottom'>
-       <IconHeaderBar likes = {props.post.likes}/> 
-<CommentSection comments = {props.post.comments}/>
+       
+<CommentSection likes = {props.post.likes} comments = {props.post.comments}/>
 </div>
     </div>
 );

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Comment from './Comment';
 import './comment-section.css';
 import AddAComment from '../CommentSection/AddAComment';
+import IconHeaderBar from '../CommentSection/IconHeaderBar';
 
 class CommentSection extends Component {
  constructor(props) {
@@ -29,6 +30,8 @@ this.setState({newComment: event.target.value});
  render() {
     return (
       <div className='comments'>
+
+      <IconHeaderBar likes = {this.props.likes} />
             <ul>
             {this.state.comments.map((comment, index) => {
                 
