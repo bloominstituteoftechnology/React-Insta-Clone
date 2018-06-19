@@ -9,6 +9,8 @@ import {
     NavLink,
 } from 'reactstrap';
 
+
+
 export default class SearchBar extends React.Component {
     constructor(props) {
         super(props);
@@ -26,18 +28,18 @@ export default class SearchBar extends React.Component {
         return (
             <div className="search-container">
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand><img src="./icons/icons8-heart-50.png" alt="cam"></img></NavbarBrand>
+                    <NavbarBrand>Instragram</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <input type="text"
                         placeholder="Search..."
-                        className="ml-auto text-center"
+                        className="ml-auto text-center search-bar"
                     />
                     <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <NavLink href="/components/">Components</NavLink>
+                            <NavLink href="">Like</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                            <NavLink href="">Profile</NavLink>
                         </NavItem>
                     </Nav>
                 </Navbar>

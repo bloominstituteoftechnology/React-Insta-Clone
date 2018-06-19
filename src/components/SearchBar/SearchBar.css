@@ -1,3 +1,7 @@
 .search-container {
     width: 100%;
 }
+
+.search-bar{
+    margin-right: -2%;
+}

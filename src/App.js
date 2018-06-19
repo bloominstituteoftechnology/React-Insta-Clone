@@ -8,21 +8,19 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData,
+      data: []
     }
   }
 
-  // addComment = event => {
-  //   let dataCopy = this.state.dummyData.slice();
-  // }
+  componentDidMount(){
+    this.setState({data:dummyData});
+  }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div >
           <SearchBar />
-        </header>
-        <div>
+        <div className="App">
           {this.state.data.map(post => (
             <PostContainer key={Math.random()}
               postComments={post.comments}

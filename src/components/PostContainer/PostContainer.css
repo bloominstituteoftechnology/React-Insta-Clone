@@ -1,8 +1,9 @@
 .post-container{
     border: 1px solid gray;
-    max-width: 60%;
+    width: 60%;
     margin: 50px auto;
     text-align: left;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 .top-container{
     padding: 3% 2% 0;
@@ -10,6 +11,7 @@
 .thumb-pic{
     height:20px;
     margin-left: 2%;
+    border-radius: 50%;
 }
 .top-picture {
     height: 500px;
