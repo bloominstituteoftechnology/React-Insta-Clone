@@ -1,13 +1,18 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
+import heart from "./heart.png";
+import comment from "./comment.png";
 import "./PostContainer.css";
-import PropTypes from "prop-types";
 
 const PostContainer = props => {
   return (
     <div className="post-container">
       <div className="header-container">
-        <img src={props.dummyData.thumbnailUrl} alt="user Thumbnail" />
+        <img
+          className="user-thumbnail"
+          src={props.dummyData.thumbnailUrl}
+          alt="user Thumbnail"
+        />
         <p>{props.dummyData.username}</p>
       </div>
 
@@ -15,12 +20,16 @@ const PostContainer = props => {
         <img
           className="post-image"
           src={props.dummyData.imageUrl}
-          alt="post image"
+          alt="post"
         />
       </div>
-
       <div>
-          <p>{props.dummyData.likes}</p>
+        <div className="post-icons">
+          <img className="heart-icon" src={heart} alt="heart" />
+          <img className="comment-icon" src={comment} alt="comment" />
+        </div>
+
+        <p className="user-likes">{props.dummyData.likes} Likes</p>
         <CommentSection dummyData={props.dummyData.comments} />
       </div>
     </div>
