@@ -1,8 +1,8 @@
-import React from "react";
-import './CommentSection.css';
+import React from 'react';
 
-const commentSection = () => {
-
-}
+const commentSection = props => {
+return <p>placeholder</p>
+};
+ 
 
 export default commentSection;
