@@ -8,12 +8,12 @@ const PostContainer = props  => {
 		   <div className="post-container">
 		   	
 		   	<div className="heading">
-		   		<img src="{props.data.thumbnaiURL}" alt="thumbnail" />
+		   		 <img src={props.data.thumbnailUrl} alt="thumbnail pic" />
 		   	  <h1>{props.data.username}</h1>
 		   	</div> 
 
-		   		<img src="{props.data.imageURL}" alt="pic of user" />
-		   
+		   	<img className="post-img" src = {props.data.imageUrl} alt="instagram pic" />
+		   <CommentSection commentData={props.data.comments} />
 		   <div className="comment-box">
        <input placeholder="Add a Comment Here..." name="textbox" className="textbox"/>
     	 </div> 

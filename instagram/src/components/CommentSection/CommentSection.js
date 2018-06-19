@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const CommentSection = props => {
     return (
         <div>
-            {props.data.map(comments => 
+            {props.commentData.map(comments => 
                 <div>
                     {comments.username} 
                     {comments.text}
