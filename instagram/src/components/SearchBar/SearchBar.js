@@ -1,12 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './SearchBar.css';
 
-const SearchBarStyle = {
-	width: '300px',
-	zIndex: '0',
-	marginLeft: 'auto',
-	marginRight: '0'
-};
 
 class SearchBar extends React.Component{
     
@@ -25,21 +19,23 @@ class SearchBar extends React.Component{
   render(){
         return (
            <div className="SearchBar">
-               <div className="Insta-logo-block">
-                 <img className="Insta-logo" src="http://www.freelogovectors.net/wp-content/uploads/2016/12/instagram-logo1-375x375.png"/>
-                 <img className="Insta-name" src="http://www.freelogovectors.net/wp-content/uploads/2016/12/InstagramLogo-768x217.png"/>
-                 <input
-                    style={SearchBarStyle}
-                    type="text"
-                    // this needs to be different than the function on app.js (clickAddToDo does as well)
-                    onChange={this.inputSearch} 
-                    placeholder="Search"
-                    name="search"
-                    value={this.state.text}
-                  /> <div>
-               </div>
-           </div>
-        </div>
+            {/* <div className="SearchItems"> */}
+              <div className="Insta-logo-block">
+                 <img className="Insta-logo" src="http://www.freelogovectors.net/wp-content/uploads/2016/12/instagram-logo1-375x375.png" alt="insta logo"/>
+                 <img className="Insta-name" src="http://www.freelogovectors.net/wp-content/uploads/2016/12/InstagramLogo-768x217.png" alt="insta name"/>
+              </div>
+              <div className="Search-input">
+                <input
+                  placeholder="Search"
+                /> 
+              </div>
+              <div className="Search-icons">
+                <div className="Search-icon"><i class="far fa-compass"></i></div>
+                <div className="Search-icon"><i class="far fa-heart Search-icon"></i></div>  
+                <div className="Search-icon"><i class="far fa-user Search-icon"></i></div>
+              </div>
+              {/* </div> */}
+            </div>
        );
     }   
 }

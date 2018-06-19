@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+.app {
+  background-color: #fafafa;
 }
 
 .App-header {
@@ -17,7 +17,45 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.post-container {
+  margin-top: 150px;
+  max-width: 600px;
+  width: 600px;
+  margin: 50px auto;
+  border: 1px solid #d8d8d8;
+  background-color: #ffffff;
+}
+
+.name-container {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.thumbnnail-img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.poster-name {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.img {
+  max-width: 600px;
+  width: 600px;
+  height: auto;
+}
+
+.comment-container {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.commenter-name {
+  font-weight: bold;
+  margin-right: 10px;
 }

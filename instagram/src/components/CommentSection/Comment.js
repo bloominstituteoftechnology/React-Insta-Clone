@@ -3,10 +3,13 @@ import React from "react";
 const Comment = props => {
   return (
     <div>
-      <div>{props.text}</div>
-      <div>{props.username}</div>
+      <p className="comment-container">
+        <span className="commenter-name">{props.comment.username}</span>
+        {props.comment.text}
+      </p>
     </div>
   );
 };
+
 
 export default Comment;
