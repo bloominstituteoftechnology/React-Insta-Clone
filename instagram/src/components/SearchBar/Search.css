@@ -20,12 +20,13 @@
     font-weight: bold;
     padding-left: 6%;
 }
-
+::-webkit-input-placeholder {
+    text-align: center;
+ }
 .search-box {
     display: flex;
-    text-align: center;
     border-radius: 2px;
-    padding: 5px 0;
+    padding: 5px 1%;
 }
 
 .search-icons-container {
