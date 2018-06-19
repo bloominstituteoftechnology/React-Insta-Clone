@@ -1,9 +1,10 @@
 import React from 'react';
 import Comment from './Comment';
+import './CommentSection.css';
 
 const CommentSection = props => {
     return(
-        <div className='comment-container' >
+        <div className='comment-text' >
         {props.comments.map(comment => (
             <Comment commentInfo={comment} />
         ))}
