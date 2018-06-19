@@ -74,11 +74,14 @@ class App extends Component {
     }
 
     deleteComment = (username, index) => {
+        let commentSection = JSON.parse(localStorage.getItem('comments'));
         let comments = [];
+
         let data = this.state.dummydata.slice()
-            .map(comment => {
+            .map((comment, index) => {
                 if (comment.username === username) {
                     comments = comment.comments;
+                    commentSection[index].comments = comment.comments;
                     return comment;
                 }
                 return comment;
@@ -91,6 +94,8 @@ class App extends Component {
             }
             return comment;
         });
+
+        localStorage.setItem('comments', JSON.stringify(commentSection));
 
         this.setState({ dummydata: data })
     }
