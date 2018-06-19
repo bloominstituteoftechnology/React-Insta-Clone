@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
+import PostsContainer from './components/PostsContainer/PostsContainer';
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData
+      posts: dummyData
     };
   }
 
@@ -16,6 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
+        <PostsContainer posts={this.state.posts}/>
       </div>
     );
   }
