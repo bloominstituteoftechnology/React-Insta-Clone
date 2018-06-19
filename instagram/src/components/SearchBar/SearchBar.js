@@ -4,6 +4,7 @@ import './SearchBar.css';
 const SearchBar = props => {
     return (
         <div>
+        
         </div>
     );
 }
