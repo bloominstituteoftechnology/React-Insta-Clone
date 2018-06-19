@@ -22,25 +22,37 @@ const Post = props => {
     return (
         <div>
             <Card className='post-container'>
+
                 <CardBody className='top-content'>
+
                     <Row>
                         <img className='post-thumb-img' src={props.data.thumbnailUrl} alt='' />
                         <CardSubtitle className='post-username'><strong>{props.data.username}</strong></CardSubtitle>
                     </Row>
+
                 </CardBody>
+
                 <CardImg width="100%" src={props.data.imageUrl} alt='' />
+
                 <CardBody className='bottom-content'>
+
                     <Row className='comment-imgs'>
                         <img onClick={() => props.likeComment(props.data.username)} className='heart-icon' src="https://png.icons8.com/metro/50/000000/like.png" alt='' />
                         <img className='chat-icon' src="https://png.icons8.com/metro/50/000000/topic.png" alt='' />
                     </Row>
+
                     <CardText className='post-likes'>
                         <strong>{props.data.likes} likes </strong>
                     </CardText>
-                    {props.data.comments.map((comment, index) => <CommentSection key={comment.username + index} username={props.data.username} index={index} deleteComment={props.deleteComment} comment={comment} />)}
+
+                    <CardBody className='comment-section'>
+                        {props.data.comments.map((comment, index) => <CommentSection key={comment.username + index} username={props.data.username} index={index} deleteComment={props.deleteComment} comment={comment} />)}
+                    </CardBody>
+
                     <CardText className='time-commented'>
                         {moment(time, "MMDDYYYY").fromNow()}
                     </CardText>
+
                     <Row className='add-comment-section'>
                         <form className='add-comment-form' onSubmit={event => {
                             event.preventDefault();
@@ -50,6 +62,7 @@ const Post = props => {
                             <img className='more-icon' src="https://png.icons8.com/metro/50/000000/more.png" alt='' />
                         </form>
                     </Row>
+
                 </CardBody>
             </Card>
         </div>
