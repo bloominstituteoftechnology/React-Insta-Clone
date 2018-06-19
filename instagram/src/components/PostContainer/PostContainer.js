@@ -1,7 +1,7 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
 
-const PostContainer = props => props.dummyData.map(dummyData => {
+const PostContainer = props => props.dummyData.map((dummyData,index) => {
     return(
       <div className="post" key={Math.random()}>
         <div className="post-top-container">
@@ -14,6 +14,7 @@ const PostContainer = props => props.dummyData.map(dummyData => {
         <p>
         likes: {dummyData.likes}
         </p>
+        <CommentSection comments={dummyData.comments} index = {index} />
       </div>
     )
   })
