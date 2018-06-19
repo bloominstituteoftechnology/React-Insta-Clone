@@ -16,25 +16,31 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({instagramData: dummyData, searchData: dummyData});
+    const searchDummyData = dummyData.slice();
+    searchDummyData.forEach((post, index) => post.originalIndex = index);
+    this.setState({instagramData: dummyData, searchData: searchDummyData});
   }
 
   addNewComment = (event, comment, index) => {
     event.preventDefault();
     const newData = this.state.instagramData.slice();
     newData[index].comments.push({username: this.state.placeholderUsername, text: comment});
-    this.setState({instagramData: newData});
+    this.updateData(newData);
   }
 
   addLike = (event, index) => {
     event.preventDefault();
     const newData = this.state.instagramData.slice();
     newData[index].likes++;
-    this.setState({instagramData: newData});
+    this.updateData(newData);
   }
 
-  searchPosts = (event, term) => {
+  onSearchPosts = (event, term) => {
     event.preventDefault();
+    this.searchPosts(term);
+  }
+
+  searchPosts = term => {
     let newData = this.state.instagramData.slice();
     if (term.trim() !== '') {
       newData = newData.filter((element) => element.username.includes(term));
@@ -42,11 +48,16 @@ class App extends Component {
     this.setState({searchData: newData, searchTerm: term});
   }
 
+  updateData = (data) => {
+    this.setState({instagramData: data});
+    this.searchPosts(this.state.searchTerm);
+  }
+
   render() {
     return (
       <div className="app">
-        <SearchBar searchPosts={this.searchPosts} />
-        <PostContainer instagramData={this.state.searchData} addNewComment={this.addNewComment} addLike={this.addLike} />
+        <SearchBar onSearchPosts={this.onSearchPosts} />
+        <PostContainer searchData={this.state.searchData} addNewComment={this.addNewComment} addLike={this.addLike} />
       </div>
     );
   }

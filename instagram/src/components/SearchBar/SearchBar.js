@@ -8,7 +8,7 @@ const SearchBar = (props) => {
   return(
     <div className="search-bar">
       <SearchBarLogos />
-      <SearchBarForm searchPosts={props.searchPosts} />
+      <SearchBarForm onSearchPosts={props.onSearchPosts} />
       <SearchBarActions />
     </div>
   );
