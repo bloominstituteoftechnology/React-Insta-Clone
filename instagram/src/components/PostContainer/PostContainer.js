@@ -5,7 +5,11 @@ import {
   CardHeader,
   CardBody,
   CardTitle,
-  CardSubtitle
+  CardSubtitle,
+  InputGroup,
+  InputGroupText,
+  InputGroupAddon,
+  Input
 } from "reactstrap";
 import CommentSection from "../CommentSection/CommentSection";
 import moment from "moment";
@@ -32,6 +36,14 @@ const PostContainer = props => {
           <CardSubtitle className="text-muted text-uppercase">
             {moment(props.timestamp, "MMMM Do YYYY, h:mm:ss a").fromNow()}
           </CardSubtitle>
+          <InputGroup>
+            <Input placeholder="Add a comment..." />
+            <InputGroupAddon addonType="append">
+              <InputGroupText>
+                <i class="fas fa-ellipsis-h" />
+              </InputGroupText>
+            </InputGroupAddon>
+          </InputGroup>
         </CardBody>
       </Card>
     </div>
