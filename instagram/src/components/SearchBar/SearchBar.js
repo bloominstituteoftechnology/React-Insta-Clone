@@ -21,7 +21,7 @@ import './SearchBar.css';
       <div className="nav-container">
         <div className="nav">
                 <div className="navtitle">
-                  <img className="logo" src="https://image.ibb.co/jOzNHy/insta.png"/>
+                  <img className="logo" src="https://image.ibb.co/jOzNHy/insta.png" alt="logo"/>
               </div>
               <div className="search">
                 <form>
@@ -29,9 +29,9 @@ import './SearchBar.css';
                 </form>
               </div>
               <div className="links">
-                <img src="https://image.ibb.co/kpcTPd/logo.png"/>
-                <img src="https://image.ibb.co/cpSTPd/explorelink.png"/>
-                <img src="https://image.ibb.co/iArYqJ/profilelink.png"/>
+                <img src="https://image.ibb.co/kpcTPd/logo.png" alt="1"/>
+                <img src="https://image.ibb.co/cpSTPd/explorelink.png" alt="2"/>
+                <img src="https://image.ibb.co/iArYqJ/profilelink.png" alt="3"/>
               </div>
             </div>
       </div>

@@ -3,9 +3,12 @@
   }
 
 .nav-container {
+  width: 100%;
   border-bottom: 1px lightgray solid;
   height: 78px;
   background-color: white;
+  position: fixed;
+  top: 0;
 }
 .nav-container .nav {
   width: 965px;
