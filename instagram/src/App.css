@@ -33,6 +33,10 @@ html {
   font-size: large;
 }
 
+.gray-text {
+  color: #545454;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

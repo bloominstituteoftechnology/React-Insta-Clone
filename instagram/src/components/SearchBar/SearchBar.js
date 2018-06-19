@@ -9,13 +9,13 @@ function SearchBar (props) {
         <a href="#">
             <div className="logo">
         <div className="logo-icon"><i class="fab fa-instagram"></i></div>
-        
+
           <img src={logo} className="logo-text"></img>
             </div>
           </a>
         </div>
         <div className="search-input">
-          <input type="text" />
+          <input id="search-input" type="text" placeholder="Search" />
           </div>
           <div className="right-header-content">
           <div className="navigation"><a href="#"><i class="far fa-compass"></i></a></div>

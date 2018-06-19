@@ -44,4 +44,40 @@
 
 .search-bar .right-header-content {
     display: flex;
+    color: #545454;
 }
+
+.search-bar .right-header-content a {
+    font-size: 2.4rem;
+    padding-right: 3.2rem;
+}
+
+.search-bar .right-header-content div:last-of-type a {
+    padding-right: 0;
+}
+
+.search-bar input {
+    border: solid 1px #dbdbdb;
+    color: #999;
+    background-color: #FAFAFA;
+    width: 215px;
+    border-radius: 3px;
+    padding: 4px 3px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #999;
+    text-align: center;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #999;
+    text-align: center;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #999;
+    text-align: center;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #999;
+    text-align: center;
+  }
