@@ -10,19 +10,21 @@ const CommentSection = props => {
   return (
     <div>
       <CommentIcons />
-      <CommentLikes />
+      <CommentLikes likes={props.post.likes} />
       <div className="comment-section">
         {props.post.comments.map(comment => (
           <Comment comment={comment} key={Math.random()} />
         ))}
       </div>
-      <CommentTimeStamp />
+      <CommentTimeStamp timestamp={props.post.timestamp} />
     </div>
   );
 };
 
 CommentSection.propTypes = {
-  comment: PropTypes.object
+  comment: PropTypes.object,
+  timestamp: PropTypes.string,
+  likes: PropTypes.number
 };
 
 export default CommentSection;
