@@ -11,18 +11,25 @@ this.state = {
  data: dummyData,
 }
 
-const search = (event) => {
+
+}
+
+search = (event) => {
   event.preventDefault();
-  let term = event.target.value;
-  let searchData = this.dummyData.slice();
+  let term = event.target[0].value;
+  let searchData = this.state.data.slice();
+
   searchData = searchData.filter(post => post.username === term);
-  this.setState({dummyData: searchData,
+  if (searchData.length === 0) {
+this.setState({
+  data: dummyData,
+})
+  }else {
+  this.setState({
+    data: searchData,
   })
-
+  }
 }
-
-}
-
 
   render() {
     return (
