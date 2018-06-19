@@ -21,23 +21,23 @@ class App extends Component {
   }
 
 
-  addNewComment = () => {
+  addNewComment = (event, index) => {
+    event.preventDefault;
+    this.setState({dataInput: event.target.value})
     let newComment = {text: this.state.dataInput, username: 'user'};
     let newData = this.state.data.slice();
     let commentArr= newData.map(i => {
       return i.comments;
     })
-    commentArr.push(newComment);
-    newData.splice(5, 1, commentArr);
-    this.setState({data: newData, dataInput: ''});
+    commentArr[index].push(newComment);
+    newData[index].push(commentArr);
+    this.setState({comments: newData});
   }
 
   likePost = () => {
-    console.log(this.state.data.likes);
-    let likes = this.state.data.slice();
-    likes = likes.likes;
-    console.log(likes);
-    this.setState({likes: likes});
+    let newData = this.state.data.slice();
+    newData[0].likes += 1;
+    this.setState({data: newData});
   }
 
   render() {
@@ -47,7 +47,7 @@ class App extends Component {
           <SearchBar />
         </header>
         
-        <PostContainer data={this.state.data} dataInput={this.state.dataInput} addComment={this.addNewComment} likePost={this.likePost}/>
+        <PostContainer data={this.state.data} dataInput={this.state.dataInput}  addComment={this.addNewComment} likePost={this.likePost}/>
       </div>
     );
   }

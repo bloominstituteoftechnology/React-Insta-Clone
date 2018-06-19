@@ -17,6 +17,7 @@ const Comments = props => {
             placeholder='Add a comment...'
             value={props.dataInput}
             onSubmit={props.addComment}
+            
             /></form>
     </div>
           
