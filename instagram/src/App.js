@@ -18,10 +18,19 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.setState({
-            dummydata: dummyData
-        })
+        if (window.localStorage.getItem('comments')) {
+            this.setState({
+                dummydata: JSON.parse(window.localStorage.getItem('comments'))
+            })
+        } else {
+            window.localStorage.setItem('comments', JSON.stringify(dummyData));
+            this.setState({
+                dummydata: dummyData
+            })
+        }
     }
+
+
 
     handleInput = event => {
         this.setState({ [event.target.name]: event.target.value });
@@ -63,21 +72,28 @@ class App extends Component {
     }
 
     likeComment = username => {
+        let likes = JSON.parse(localStorage.getItem('comments'));
+
         const data = this.state.dummydata.slice()
-            .map(data => {
+            .map((data, index) => {
                 if (data.username === username) {
                     if (data.liked) {
                         data.likes--;
                         data.liked = false;
+                        likes[index].likes = data.likes;
+                        likes[index].liked = data.liked;
                     } else {
                         data.likes++;
                         data.liked = true;
+                        likes[index].likes = data.likes;
+                        likes[index].liked = data.liked;
                     }
                     return data;
                 }
                 return data;
             });
 
+        localStorage.setItem('comments', JSON.stringify(likes));
         this.setState({ dummydata: data });
     }
 
