@@ -20,6 +20,7 @@ class App extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
   addComment = (e, index) => {
+    e.preventDefault();
     const comment = e.target.value;
     if (comment === '') {
       return;
@@ -30,11 +31,9 @@ class App extends Component {
     if (state[`comment${index}`] === undefined) {
       state[`comment${index}`] = '';
     }
-    console.log(state);
     const instaDataItem = Object.assign({}, this.state.instaData[index]);
     instaDataItem.comments.push({ username: 'skid', text: comment });
     e.target.value = '';
-    console.log(this.state.instaData);
     this.setState({ instaDataItem });
   }
   addLike = (e, index) => {
