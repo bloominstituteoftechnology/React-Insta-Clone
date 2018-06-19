@@ -2,11 +2,12 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 import PropTypes from "prop-types";
+import Post from '../Post/Post';
 
 const PostContainer = props => {
     return (
         <div className="post-container">
-            <div className="post-header">
+            {/* <div className="post-header">
                 <div><img src={props.thumbnailUrl} alt="post logo"/></div>
                 <div>{props.username}</div>
             </div>
@@ -37,7 +38,14 @@ const PostContainer = props => {
                     />
                     <button type="submit">...</button>
                 </form>
-            </div>
+            </div> */}
+
+            {props.data.map((post, index) => {
+                return(
+                    <Post />
+                );
+            })}
+
         </div>
     );
 };

@@ -12,6 +12,10 @@ class CommentSection extends React.Component {
         }
     }
 
+    componentDidMount() {
+
+    }
+
     render() {
         return (
             <div className="comment-container">
