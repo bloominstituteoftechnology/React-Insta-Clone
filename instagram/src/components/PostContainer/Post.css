@@ -17,7 +17,6 @@
     flex: none;
 }
 
-
 .post-thumb-img {
     width: 30px;
     height: 30px;
@@ -34,9 +33,9 @@
     align-items: center;
 }
 
-.comment-imgs .heart-icon {
-    width: 30px;
-    height: 30px;
+.fa-heart {
+    padding: 0 3px;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -48,7 +47,7 @@
 }
 
 .post-likes {
-    padding: 1px 3px;
+    padding: 3px 3px;
     font-size: 15px;
     margin: 1px 0;
 }
@@ -82,8 +81,6 @@
     outline: 0;
     color: #262626;
 }
-
-
 
 .add-comment::-webkit-input-placeholder {
     color: #99999C;

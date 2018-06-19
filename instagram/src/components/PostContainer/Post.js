@@ -37,7 +37,7 @@ const Post = props => {
                 <CardBody className='bottom-content'>
 
                     <Row className='comment-imgs'>
-                        <img onClick={() => props.likeComment(props.data.username)} className='heart-icon' src="https://png.icons8.com/metro/50/000000/like.png" alt='' />
+                        <i style={props.data.liked ? { color: 'red' } : null} onClick={() => props.likeComment(props.data.username)} className="far fa-heart"></i>
                         <img className='chat-icon' src="https://png.icons8.com/metro/50/000000/topic.png" alt='' />
                     </Row>
 
