@@ -8,11 +8,14 @@ class PostContainer extends React.Component {
     super(props);
     this.state = {
       commentInput: "",
-      comments: props.post.comments
+      comments: props.post.comments,
+      userHasLiked: props.post.userHasLiked ? true : false,
+      likes: props.post.likes
     };
     this.handleInput = this.handleInput.bind(this);
     this.addComment = this.addComment.bind(this);
     this.handleCommentKeyPress = this.handleCommentKeyPress.bind(this);
+    this.handleLike = this.handleLike.bind(this);
   }
 
   handleInput(event) {
@@ -26,6 +29,20 @@ class PostContainer extends React.Component {
     }
   }
 
+  handleLike() {
+    if (!this.state.userHasLiked) {
+      this.setState({
+        userHasLiked: true,
+        likes: this.state.likes + 1
+      });
+    } else {
+      this.setState({
+        userHasLiked: false,
+        likes: this.state.likes - 1
+      });
+    }
+  }
+
   addComment() {
     let text = this.state.commentInput;
     if (text.length !== 0) {
@@ -33,7 +50,7 @@ class PostContainer extends React.Component {
         text: text,
         username: this.props.post.username
       };
-      let newComments = this.state.comments.concat([newComment])
+      let newComments = this.state.comments.concat([newComment]);
       this.setState({
         commentInput: "",
         comments: newComments
@@ -61,8 +78,12 @@ class PostContainer extends React.Component {
         <div className="main-content">
           <div className="icon-strip">
             <div className="left-icons">
-              <div className="heart-icon post-icon">
-                <i className="far fa-heart" />
+              <div className="heart-icon post-icon" onClick={this.handleLike}>
+                <i
+                  className={
+                    this.state.userHasLiked ? "fas fa-heart" : "far fa-heart"
+                  }
+                />
               </div>
               <div className="speech-icon post-icon">
                 <i className="far fa-comment" />
@@ -77,8 +98,8 @@ class PostContainer extends React.Component {
           <div className="likes-strip">
             <h3>
               {"" +
-                this.props.post.likes +
-                (this.props.post.likes > 1 ? " likes" : " like")}
+                this.state.likes +
+                (this.state.likes > 1 ? " likes" : " like")}
             </h3>
           </div>
           <CommentSection comments={this.state.comments} />
