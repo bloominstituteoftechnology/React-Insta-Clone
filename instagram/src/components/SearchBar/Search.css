@@ -27,7 +27,18 @@
 
 }
 
+.search {
+    width: 200px;
+ 
+}
+
 .icons {
+
+}
+.share-icon {
+    width: 45px;
+    height: 45px;
+    margin: 10px;
 }
 
 .heart-icon {
