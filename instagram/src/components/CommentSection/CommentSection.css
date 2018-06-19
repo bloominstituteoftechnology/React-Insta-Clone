@@ -1,0 +1,8 @@
+.comment-selection p {
+    text-align: start;
+}
+
+.custom-comment {
+    display: flex;
+    
+}

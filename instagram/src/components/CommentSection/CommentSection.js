@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './CommentSection.css';
 
 const CommentSection = props => {
     return (
-        <div>
+        <div className="comment-section">
             {props.dummyData.map(comment => (
-                <div key={Math.random()}>
+                <div className="custom-comment" key={Math.random()}>
                     <p>{comment.username}</p>
                     <p>{comment.text}</p>
                 </div>

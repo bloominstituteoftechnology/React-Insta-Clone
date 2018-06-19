@@ -1,5 +1,5 @@
 .custom-post {
-    border: 1px solid gray;
+    border: 1px solid lightgray;
 }
 
 .post-header {
@@ -8,7 +8,8 @@
 }
 .post-header img {
     border-radius: 50%;
-    width: 10%;
+    width: 7%;
+    padding: 0 10px;
 }
 
 .post-img {

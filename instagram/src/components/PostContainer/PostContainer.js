@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import CommentInteraction from '../CommentInteraction/CommentInteraction';
 import './PostContainer.css';
 
 const PostContainer = props => {
@@ -13,9 +14,8 @@ const PostContainer = props => {
                 <img src={props.dummyData.imageUrl} alt="post content"/>
             </div>
             <div className="post-comments">
-                <i class="fa">&#xf08a;</i>
-                <i class="fa">&#xf0e5;</i>
-                <p>{props.dummyData.likes} likes</p>
+                <CommentInteraction />
+                <p align="left">{props.dummyData.likes} likes</p>
                 <CommentSection dummyData={props.dummyData.comments} />
             </div>            
         </div>
