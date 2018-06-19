@@ -62,11 +62,32 @@ class App extends Component {
         });
     }
 
+    likeComment = username => {
+        const data = this.state.dummydata.slice()
+            .map(data => {
+                if (data.username === username) {
+                    if (data.liked) {
+                        data.likes--;
+                        data.liked = false;
+                    } else {
+                        data.likes++;
+                        data.liked = true;
+                    }
+                    return data;
+                }
+                return data;
+            });
+
+        this.setState({ dummydata: data });
+    }
+
     render() {
         return (
             <div className="App">
                 <SearchBar value={this.state.searchString} onChange={this.searchInput} />
-                <PostContainer value={this.getName} searchString={this.state.searchString} addComment={this.addComment} onChange={this.handleInput} onSubmit={this.onSubmit} data={this.state.dummydata} />
+                <PostContainer value={this.getName} searchString={this.state.searchString} likeComment={this.likeComment}
+                    addComment={this.addComment} onChange={this.handleInput}
+                    onSubmit={this.onSubmit} data={this.state.dummydata} />
             </div>
         );
     }
