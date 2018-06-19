@@ -1,12 +1,9 @@
 .posts {
   border: 1px solid black;
-  height: 800px;
   width: 500px;
 }
 
 .postImg {
-  /* height: 300px;
-  width: 470px; */
   padding-top: 10px;
   margin-left: -15px;
 }

@@ -1,3 +1,6 @@
+@import '//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css';
+@import '//use.fontawesome.com/releases/v5.0.13/css/all.css';
+
 .title {
   font-size: 24px;
   display: flex;
@@ -14,7 +17,8 @@
   font-family: 'Dancing Script', cursive;
 }
 
-.searchButton {
+.searchBox {
+  font-family: FontAwesome;
   font-size: 12px;
   width: 200px;
   padding-top: 0px;

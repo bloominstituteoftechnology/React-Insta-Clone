@@ -7,9 +7,12 @@ const SearchBar = () => (
       <i className="col-sm-1 fab fa-instagram logo" />
       <div className="col-sm-1 instaFont">Instagram</div>
       <div className="col-sm-8">
-        <button className="searchButton">
-          <i className="fab fa-search" /> Search
-        </button>
+        <input
+          className="searchBox"
+          type="text"
+          name="search"
+          value="&#61442; Search"
+        />
       </div>
       <div>
         <i className="col-sm-1 far fa-compass" />
