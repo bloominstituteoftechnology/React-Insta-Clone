@@ -6,7 +6,7 @@ const PostContainer = (props) => {
   return(
     <ul className="post-container">
       {props.instagramData.map((post, index) => {
-        return <Post key={`${Math.random()}${index}`} postData={post} />
+        return <Post key={`${Math.random()}${index}`} postData={post} addNewComment={props.addNewComment} postIndex={index} />
       })}
     </ul>
   );

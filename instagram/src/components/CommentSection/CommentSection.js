@@ -13,7 +13,7 @@ const CommentSection = (props) => {
         })}
       </ul>
       <CommentSectionTimestamp timestamp={props.timestamp} />
-      <CommentSectionForm />
+      <CommentSectionForm addNewComment={props.addNewComment} postIndex={props.postIndex} />
     </div>
   );
 };

@@ -8,7 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      instagramData: []
+      instagramData: [],
+      placeholderUsername: 'lambdaschool'
     }
   }
 
@@ -16,11 +17,18 @@ class App extends Component {
     this.setState({instagramData: dummyData});
   }
 
+  addNewComment = (event, comment, index) => {
+    event.preventDefault();
+    const newData = this.state.instagramData.slice();
+    newData[index].comments.push({username: this.state.placeholderUsername, text: comment});
+    this.setState({instagramData: newData});
+  }
+
   render() {
     return (
       <div className="app">
         <SearchBar />
-        <PostContainer instagramData={this.state.instagramData} />
+        <PostContainer instagramData={this.state.instagramData} addNewComment={this.addNewComment} />
       </div>
     );
   }

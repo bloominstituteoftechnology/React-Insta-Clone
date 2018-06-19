@@ -14,7 +14,7 @@ const Post = (props) => {
       <PostImage imageUrl={props.postData.imageUrl} />
       <PostActions />
       <PostLikes likes={props.postData.likes} />
-      <CommentSection comments={props.postData.comments} timestamp={props.postData.timestamp} />
+      <CommentSection comments={props.postData.comments} timestamp={props.postData.timestamp} addNewComment={props.addNewComment} postIndex={props.postIndex} />
     </li>
   );
 };
