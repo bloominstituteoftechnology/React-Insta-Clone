@@ -18,11 +18,13 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({posts: dummyData});
+    let posts = dummyData.map((post) => {
+      return Object.assign({visible: true}, post);
+    });
+    this.setState({posts: posts});
   }
 
-  handleSearch (event) {
-    event.preventDefault();
+  handleSearch () {
     if (this.state.searchInput !== '') {
       let searchStr = this.state.searchInput;
       let searchRx = new RegExp(searchStr, "i");
@@ -60,7 +62,7 @@ class App extends Component {
     let postElems = null;
     if (this.state.posts) {
       let posts = this.filterPostsforVisibility(this.state.posts);
-      posts = posts.map((post) => {
+      postElems = posts.map((post) => {
         return (
           <PostContainer key={post.thumbnailUrl} post={post} />
         );
