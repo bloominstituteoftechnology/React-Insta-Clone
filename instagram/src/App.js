@@ -18,14 +18,20 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Instagram</h1>
+          <div className="left-Nav">
+            <i class="fab fa-instagram" style={{ fontSize: '50px' }}></i>
+            <h1>Instagram</h1>
+          </div>
           <SearchBar />
-          <div>
-            
+          <div className="right-Nav">
+            <i class="far fa-compass" style={{ fontSize: '35px' }}></i>
+            <i class="far fa-heart" style={{ fontSize: '35px' }}></i>
+            <i class="far fa-user" style={{ fontSize: '35px' }}></i>  
           </div>          
         </header>
-
-        <PostContainer datas={this.state.dummyData} />
+        <div className="container">
+          <PostContainer datas={this.state.dummyData} />
+        </div>
       </div>
     );
   }

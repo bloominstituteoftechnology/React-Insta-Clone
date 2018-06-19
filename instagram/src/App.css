@@ -8,10 +8,25 @@
 }
 
 .App-header {
-  background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.left-Nav {
+  display: flex;
+}
+
+.left-Nav h1 {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.right-Nav .far {
+  padding-right: 20px;
 }
 
 .App-title {
@@ -26,3 +41,9 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
