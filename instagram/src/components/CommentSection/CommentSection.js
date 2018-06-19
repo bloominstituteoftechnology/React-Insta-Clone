@@ -1,6 +1,7 @@
 import React from "react";
 import Comment from "./Comment";
 import "./CommentSection.css";
+import PropTypes from "prop-types";
 
 const CommentSection = props => {
   return (
@@ -10,6 +11,10 @@ const CommentSection = props => {
       ))}
     </div>
   );
+};
+
+CommentSection.propTypes = {
+  comment: PropTypes.object
 };
 
 export default CommentSection;
