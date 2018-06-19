@@ -26,12 +26,12 @@ export default class SearchBar extends React.Component {
         return (
             <div className="search-container">
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand href="/">Camera | Instagram</NavbarBrand>
+                    <NavbarBrand><img src="./icons/icons8-heart-50.png" alt="cam"></img></NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <input type="text"
-                            placeholder="Search..."
-                            className="ml-auto text-center"
-                        />
+                        placeholder="Search..."
+                        className="ml-auto text-center"
+                    />
                     <Nav className="ml-auto" navbar>
                         <NavItem>
                             <NavLink href="/components/">Components</NavLink>

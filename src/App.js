@@ -11,19 +11,24 @@ class App extends React.Component {
       data: dummyData,
     }
   }
+
+  // addComment = event => {
+  //   let dataCopy = this.state.dummyData.slice();
+  // }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-        <SearchBar />
+          <SearchBar />
         </header>
         <div>
           {this.state.data.map(post => (
-            <PostContainer  key={Math.random()} 
-            postComments={post.comments} 
-            postStarter={post.username}
-            postThumb={post.thumbnailUrl}
-            postImage={post.imageUrl}
+            <PostContainer key={Math.random()}
+              postComments={post.comments}
+              postStarter={post.username}
+              postThumb={post.thumbnailUrl}
+              postImage={post.imageUrl}
             />
           ))}
         </div>
