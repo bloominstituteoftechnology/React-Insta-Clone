@@ -26,8 +26,8 @@ class CommentSection extends React.Component {
             <div className="comment-section">
                 {this.state.comments.map(comment => (
                     <div className="custom-comment" key={Math.random()}>
-                        <p>{comment.username}</p>
-                        <p>{comment.text}</p>
+                        <span><strong>{comment.username}</strong> {comment.text}</span>
+                        {/* <span>{comment.text}</span> */}
                     </div>
                 ))}
                 <form onSubmit={this.addNewComment}>

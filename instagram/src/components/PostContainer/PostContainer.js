@@ -3,26 +3,44 @@ import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 import PropTypes from 'prop-types';
 
-const PostContainer = props => {
-    return (
-        <div className="custom-post">
-            <div className="post-header">
-                <img src={props.dummyData.thumbnailUrl} alt="user thumbnail"/>
-                <p>{props.dummyData.username}</p>
-            </div>
-            <div className="post-img">
-                <img src={props.dummyData.imageUrl} alt="post content"/>
-            </div>
-            <div className="post-comments">
-                <div className="comment-interaction">
-                    <i className="fa">&#xf08a;</i>
-                    <i className="fa">&#xf0e5;</i>
+class PostContainer extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            dummyData: props.dummyData,
+            likes: props.dummyData.likes
+        }
+    }
+
+    addLikes = (event, i) => {
+        event.preventDefault();
+        let likes = this.state.likes;
+        likes = (likes + 1);
+        this.setState({likes});
+    }
+
+    render() {
+        return (
+            <div className="custom-post">
+                <div className="post-header">
+                    <img src={this.state.dummyData.thumbnailUrl} alt="user thumbnail"/>
+                    <p>{this.state.dummyData.username}</p>
                 </div>
-                <p align="left">{props.dummyData.likes} likes</p>
-                <CommentSection dummyData={props.dummyData.comments} />
-            </div>            
-        </div>
-    )
+                <div className="post-img">
+                    <img src={this.state.dummyData.imageUrl} alt="post content"/>
+                </div>
+                <div className="post-comments">
+                    <div className="comment-interaction">
+                        <i onClick={this.addLikes} className="fa">&#xf08a;</i>
+                        <i className="fa">&#xf0e5;</i>
+                    </div>
+                    <p align="left">{this.state.likes} likes</p>
+                    <CommentSection dummyData={this.state.dummyData.comments} />
+                </div>            
+            </div>
+        )
+    }
+    
 }
 
 PostContainer.propTypes = {
