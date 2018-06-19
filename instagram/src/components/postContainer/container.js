@@ -2,7 +2,7 @@ import React from 'react';
 import './container.css';
 import heart from './images/heart.png';
 import bubbles from './images/bubble.png';
-//import comments from '../commentSection/commentSection'
+import Comments from '../commentSection/commentSection'
 //tomorrow, start building a comment section.
 //on <comments />, remember to bind comments passed in as props
 //make the comment input on comment section
@@ -26,11 +26,13 @@ return (
 	<img src={heart} alt="like" className="icon"/>
 	<img src={bubbles} alt="comment" className="icon"/>
 	</div>
-	<div className="likes">
+	<div className="unliked">
 	{value.likes} likes
 	</div>
-	
 	</div>
+	<Comments
+	comments={value.comments}
+	/>
 </div>
 )
 )}

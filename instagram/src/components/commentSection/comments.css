@@ -1,0 +1,16 @@
+/*comment styles*/
+
+.commentSection{
+	display:flex;
+	flex-direction:column;
+	align-self:flex-start;
+}
+
+.comment{
+	display:flex;
+	margin-bottom:5px;
+}
+
+.user{
+	color:darkblue;
+}
