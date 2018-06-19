@@ -1,29 +1,65 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 import "./CommentSection.css";
 
-const CommentSection = props => {
-return (
-    <div>
-        {props.dummyData.map(comment => (
-            <div className="user-comments" key={Math.random()}>
-                <p className="comments-username">{comment.username} </p>
-                <p className="comments-text">{comment.text} </p>
-           
-            </div>
+class CommentSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: props.dummyData,
+      input: "",
+      placeholder: "Add a Comment..."
+    };
+  }
+
+  changeInput = event =>
+    this.setState({
+      input: event.target.value,
+    });
+
+  addNewComment = (event, i) => {
+    event.preventDefault();
+    const comments = this.state.comments.slice();
+    comments.push({ text: this.state.input, username: "Bill" });
+    this.setState({
+      comments,
+      input: "",
+      
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        {this.state.comments.map(comment => (
+          <div className="user-comments" key={Math.random()}>
+            <p className="comments-username">{comment.username} </p>
+            <p className="comments-text">{comment.text} </p>
+          </div>
         ))}
         <div className="comment-box">
-            <input className="add-comment-box"  type="text" placeholder="Add a comment..."/>
+          <form onSubmit={this.addNewComment}>
+            <input
+              onChange={this.changeInput}
+              className="add-comment-box"
+              type="text"
+              placeholder={this.state.placeholder}
+              value={this.state.input}
+            />
+          </form>
         </div>
-        </div>
-)
-};
- 
+      </div>
+    );
+  }
+}
+
 CommentSection.propTypes = {
-    comment: PropTypes.shape({
-        username: PropTypes.string,
-        text: PropTypes.string
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string,
+      text: PropTypes.string
     })
+  )
 };
 
 export default CommentSection;

@@ -13,6 +13,7 @@ align-items: center;
 .user-thumbnail {
     border-radius: 50%;
     width:10%;
+    margin-right: 2%;
 }
 
 .post-image {

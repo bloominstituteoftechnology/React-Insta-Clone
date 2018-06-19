@@ -2,6 +2,7 @@ import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
 import heart from "./heart.png";
 import comment from "./comment.png";
+import PropTypes from "prop-types";
 import "./PostContainer.css";
 
 const PostContainer = props => {
@@ -34,6 +35,17 @@ const PostContainer = props => {
       </div>
     </div>
   );
+};
+
+PostContainer.propTypes = {
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string,
+      thumbnailUrl: PropTypes.string,
+      imageUrl: PropTypes.string,
+      likes: PropTypes.number,
+    })
+  )
 };
 
 export default PostContainer;
