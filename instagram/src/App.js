@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data.js';
-import SearchBar from './components/CommentSection/CommentSection';
+import SearchBar from './components/CommentSection/CommentSectionContainer';
 import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {

@@ -1,12 +1,12 @@
 import React from 'react';
-import CommentSection from '../CommentSection/CommentSection';
+import Post from './Post';
 
 
 const PostContainer = props => {
     return (
-        <div>
+        <div className="container">
             {props.dumData.map(usersdata => (
-              <CommentSection key={Math.random(Date.now())} usersdata={usersdata} />  
+              <Post key={usersdata.imageUrl} usersdata={usersdata} />  
             ))}
         </div>
     );
