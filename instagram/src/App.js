@@ -9,7 +9,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      username: "philzcoffee",
+      comment: ""
     };
   }
 
@@ -17,6 +19,14 @@ class App extends Component {
     this.setState({
       data: dummyData
     });
+  }
+
+  handleChange = e => {
+    this.setState({comment: e.target.value})
+  }
+
+  addNewComment = (event, index) => {
+
   }
 
   render() {
@@ -42,6 +52,11 @@ class App extends Component {
               likes={data.likes}
               timestamp={data.timestamp}
               comments={data.comments}
+              
+              handleChange={this.handleChange}
+              addNewComment={this.addNewComment}
+              dfltUser={this.state.username}
+              newComment={this.state.comment}
             />
           );
         })}
