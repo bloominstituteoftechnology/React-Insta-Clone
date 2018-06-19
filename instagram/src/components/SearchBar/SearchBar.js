@@ -4,7 +4,7 @@ import './SearchBar.css';
 const SearchBar = () => {
     return (
         <div className='search-bar'>
-            <i class="fab fa-instagram"></i>
+            <i className="fab fa-instagram"></i>
             <p>|</p>
             <img src={require('../../img/logo.png')} alt="Instagram" />
             <form>
