@@ -10,15 +10,15 @@ class Post extends Component {
   onClickHeart = (e) => {
     if(e.target.classList.contains('far')){
       e.target.classList.remove('far')
-      e.target.classList.add('fas')
+      e.target.classList.add('fas', 'color-red')
       this.props.updateLikes(true,this.props.postIndex)
     }else {
-      e.target.classList.remove('fas')
+      e.target.classList.remove('fas', 'color-red')
       e.target.classList.add('far')
       this.props.updateLikes(false,this.props.postIndex)
     }
   }
-  
+
   render() { 
     return (
       <div className="post">

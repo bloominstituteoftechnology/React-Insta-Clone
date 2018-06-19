@@ -33,6 +33,10 @@
   font-size: 1rem;
 }
 
+.color-red{
+  color: red;
+}
+
 .likes{
   margin-left: 3.6%;
   margin-bottom: 2px;

@@ -20,7 +20,7 @@ class SearchBar extends Component {
             </div>  
           </div>
           <div className="col-md-6 search-field">
-            <input type="text" value="" placeholder="Search" />
+            <input type="text" placeholder="Search by username" />
           </div>
           <div className="col-md-3 search-icon-group">
             <i className="far fa-compass"></i>
