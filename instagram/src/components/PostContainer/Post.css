@@ -38,7 +38,9 @@
 .fa-heart:hover {
     color: red;
 }
-
+.heart--active {
+    color: red;
+}
 .fa-comment {
     transform: scaleX(-1);
 }

@@ -27,6 +27,7 @@
     display: flex;
     border-radius: 2px;
     padding: 5px 1%;
+    width: 30%;
 }
 
 .search-icons-container {

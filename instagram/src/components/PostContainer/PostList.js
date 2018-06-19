@@ -9,7 +9,8 @@ const PostList = (props) => {
                     key={i}
                     index={i}
                     changeCommentHandler={props.changeCommentHandler}
-                    addCommentHandler={props.addCommentHandler} />
+                    addCommentHandler={props.addCommentHandler}
+                    addLikeHandler = {props.addLikeHandler} />
             })}
         </div>
     );

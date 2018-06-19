@@ -14,6 +14,8 @@ const PostContainer = (props) => {
             <PostContent
                 imageUrl={props.dataItem.imageUrl}
                 likes={props.dataItem.likes}
+                addLikeHandler = {props.addLikeHandler}
+                index = {props.index}
             />
 
             <CommentsContainer comments={props.dataItem.comments}
