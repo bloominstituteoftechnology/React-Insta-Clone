@@ -9,12 +9,18 @@ class App extends Component {
         super();
 
         this.state = {
-            dummydata: dummyData,
+            dummydata: [],
             searchString: '',
             philzcoffee: '',
             twitch: '',
             playhearthstone: ''
         }
+    }
+
+    componentDidMount() {
+        this.setState({
+            dummydata: dummyData
+        })
     }
 
     handleInput = event => {
