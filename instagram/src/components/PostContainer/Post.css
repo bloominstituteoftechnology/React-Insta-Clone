@@ -68,6 +68,13 @@
     align-items: center;
 }
 
+.add-comment-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .add-comment {
     width: 95%;
     border: 0;

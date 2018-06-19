@@ -4,7 +4,7 @@ import './SearchBar.css';
 import { Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
 
 
-const SearchBar = () => {
+const SearchBar = props => {
   return (
     <div className='navigation'>
       <Navbar>
@@ -15,7 +15,7 @@ const SearchBar = () => {
           </div>
         </NavbarBrand>
         <Nav>
-          <input className='instagram-search' type='text' placeholder='Search' />
+          <input value={props.value} onChange={props.onChange} className='instagram-search' type='text' placeholder='Search' />
         </Nav>
         <Nav className='instagram-icons'>
           <NavItem>

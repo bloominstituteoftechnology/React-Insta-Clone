@@ -2,9 +2,18 @@ import React from 'react';
 import Post from './Post';
 
 const PostContainer = props => {
+    let data = props.data;
+    let search = props.searchString.trim().toLowerCase();
+
+    if (search.length > 0) {
+        data = data.filter(user => user.username.toLowerCase().match(search));
+    }
+
     return (
         <div className='post-containers'>
-            {props.data.map(data => <Post key={Math.random()} data={data} />)}
+            {data.map((data, index) => {
+                return <Post key={data.username + index} value={props.value} onChange={props.onChange} onSubmit={props.onSubmit} addComment={props.addComment} data={data} />
+            })}
         </div>);
 }
 

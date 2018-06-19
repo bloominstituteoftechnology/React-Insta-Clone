@@ -2,12 +2,23 @@ import React from 'react';
 import './Post.css';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 import {
     Card, CardText, CardBody, CardSubtitle, Row, CardImg
 } from 'reactstrap';
 
 const Post = props => {
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let month = '0';
+    for (let i = 0; i < months.length; i++) {
+        if (props.data.timestamp.includes(months[i])) {
+            month += i + 1;
+        }
+    }
+
+    let time = props.data.timestamp.replace('th', '').replace(months[month - 1], month);
+
     return (
         <div>
             <Card className='post-container'>
@@ -26,13 +37,18 @@ const Post = props => {
                     <CardText className='post-likes'>
                         <strong>{props.data.likes} likes </strong>
                     </CardText>
-                    {props.data.comments.map(comment => <CommentSection key={Math.random()} comment={comment} />)}
+                    {props.data.comments.map((comment, index) => <CommentSection key={comment.username + index} comment={comment} />)}
                     <CardText className='time-commented'>
-                        {props.data.timestamp}
+                        {moment(time, "MMDDYYYY").fromNow()}
                     </CardText>
                     <Row className='add-comment-section'>
-                        <input className='add-comment' type='text' placeholder='Add a comment...' />
-                        <img className='more-icon' src="https://png.icons8.com/metro/50/000000/more.png" alt='' />
+                        <form className='add-comment-form' onSubmit={event => {
+                            event.preventDefault();
+                            props.addComment(props.data.username);
+                        }}>
+                            <input value={props.value(props.data.username)} onChange={props.onChange} type='text' name={props.data.username} className='add-comment' placeholder='Add a comment...' />
+                            <img className='more-icon' src="https://png.icons8.com/metro/50/000000/more.png" alt='' />
+                        </form>
                     </Row>
                 </CardBody>
             </Card>
@@ -47,6 +63,7 @@ Post.propTypes = {
         imageUrl: PropTypes.string,
         likes: PropTypes.number,
         timestamp: PropTypes.string,
+        comments: PropTypes.array
     })
 };
 
