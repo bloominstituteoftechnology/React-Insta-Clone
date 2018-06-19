@@ -7,17 +7,19 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      instaData: dummyData,
+      instaData: [],
       username: '',
 
     };
     this.searchPost = this.searchPost.bind(this);
   }
+  componentDidMount() {
+    this.setState( { instaData: dummyData });
+  }
   changeComment = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   }
   addComment = (e, index) => {
-
     const comment = e.target.value;
     if (comment === '') {
       return;
