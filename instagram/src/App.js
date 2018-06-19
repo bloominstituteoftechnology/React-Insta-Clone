@@ -16,8 +16,8 @@ class App extends Component {
       this.setState({ posts: dummyData });
     }
 
-    addNewComment() {
-      
+    addNewComment = (event) => {
+
     }
 
   render() {
