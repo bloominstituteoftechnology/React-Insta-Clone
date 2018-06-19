@@ -8,7 +8,7 @@ const SearchBarContainer = (props) => (
             <Icon icon={< i className="fab fa-instagram fa-2x instagram-icon" > </i>}/>
             <div className="logo">Instagram</div>
         </div>
-        <div> <form onSubmit={props.search}> <input type='text' className='search-input' placeholder='Search' /> </form> </div>
+        <div> <form onSubmit={props.search}> <input type='text' onChange ={props.search} name='search' className='search-input' placeholder='Search' /> </form> </div>
        
         <div className='inside-right-searchbar'>
             <Icon icon={<i className="far fa-compass right-icons"></i>} /> 
