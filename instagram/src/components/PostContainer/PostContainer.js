@@ -9,10 +9,10 @@ const PostContainer = (props) => {
     return (
         <div className='post-container'>
             <PostHeader
-                thumbnail={props.dataItem.thumbnailUrl}
+                thumbnailUrl={props.dataItem.thumbnailUrl}
                 username={props.dataItem.username} />
             <PostContent
-                picture={props.dataItem.imageUrl}
+                imageUrl={props.dataItem.imageUrl}
                 likes={props.dataItem.likes}
             />
 
