@@ -13,10 +13,16 @@ const PostContainer = props  => {
 		   	</div> 
 
 		   	<img className="post-img" src = {props.data.imageUrl} alt="instagram pic" />
+		   		   
+         <div className="likes-section">
+           <div className="likes-icons">
+               <i className="far fa-heart"></i>
+               <i className="far fa-comment"></i>
+           </div>
+               <span className="likes-total">{props.data.likes} likes</span>
+          </div>
+
 		   <CommentSection commentData={props.data.comments} />
-		   <div className="comment-box">
-       <input placeholder="Add a Comment Here..." name="textbox" className="textbox"/>
-    	 </div> 
      </div> 
 	)
 };

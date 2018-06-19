@@ -23,3 +23,15 @@
 	font-size: 15px;
 	padding-left: 20px;
 }
+
+.likes-section {
+	text-align: left;
+}
+
+.likes-icons {
+	font-size: 20px;
+}
+
+i.far fa-comment {
+	margin: 50px;
+}

@@ -5,6 +5,7 @@ import './CommentSection.css';
 
 const CommentSection = props => {
     return (
+            
         <div className="comment-container">
             {props.commentData.map(comments => 
                 <div className="comment-text">
@@ -12,6 +13,9 @@ const CommentSection = props => {
                     {comments.text}
                 </div>
             )}
+            <div className="comment-box">
+       <input placeholder="Add a Comment Here..." name="textbox" className="textbox"/>
+    	 </div> 
         </div>
     );
 }
