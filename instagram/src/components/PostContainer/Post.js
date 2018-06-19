@@ -6,6 +6,19 @@ class Post extends Component {
     super(props);
     this.props = props
   }
+
+  onClickHeart = (e) => {
+    if(e.target.classList.contains('far')){
+      e.target.classList.remove('far')
+      e.target.classList.add('fas')
+      this.props.updateLikes(true,this.props.postIndex)
+    }else {
+      e.target.classList.remove('fas')
+      e.target.classList.add('far')
+      this.props.updateLikes(false,this.props.postIndex)
+    }
+  }
+  
   render() { 
     return (
       <div className="post">
@@ -22,7 +35,7 @@ class Post extends Component {
             <img className="img-fluid" src={this.props.postObj.imageUrl} alt="" />
           </div>
           <div className="icons">
-            <i className="far fa-heart"></i>
+            <i className="far fa-heart" onClick={(e) => this.onClickHeart(e)}></i>
             <i className="far fa-comment"></i>
           </div> 
           <div className="likes">

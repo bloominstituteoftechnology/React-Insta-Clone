@@ -11,7 +11,7 @@ class PostContainer extends Component {
   render() { 
     return (
       <div className="post-container">
-        <Post postObj = {this.props.postObj}/>
+        <Post postObj = {this.props.postObj} updateLikes={this.props.updateLikes} postIndex={this.props.postIndex}/>
         <CommentSection commentsArr = {this.props.postObj.comments} addNewComment={this.props.addNewComment} postIndex={this.props.postIndex}/>
       </div>
     )
