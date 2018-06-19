@@ -21,10 +21,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchContainer />
-        {this.state.instaData.map((dataItem,i) => {
-          return <PostContainer key = {i} dataItem={dataItem} />
-        })
-        }
+        <PostList instaData = {this.state.instaData}/>
       </div>
     );
   }
