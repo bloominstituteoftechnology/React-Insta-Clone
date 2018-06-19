@@ -21,7 +21,7 @@ class App extends Component {
     if(comment === '') {
       return;
     }
-    //If the e.target.name does not exist then create a new one
+    //If the state comment property does not exist then create a new one
     const state = Object.assign({}, this.state);
 
     if(state[`comment${index}`] === undefined) {
