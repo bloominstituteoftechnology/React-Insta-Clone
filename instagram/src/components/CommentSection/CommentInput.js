@@ -2,7 +2,7 @@ import React from 'react'
 
 const CommentInput = (props) => {
   return (
-    <form onSubmit={() => props.onSubmit(props.posts.comments)}>
+    <form onSubmit={(e) => props.onSubmit(props.posts.comments, e)}>
       <input
         placeholder='Add a comment...'
         type='text'

@@ -20,10 +20,11 @@ class CommentSection extends Component {
     })
   }
 
-  handleOnSubmit = (searchPost) => {
+  handleOnSubmit = (searchPost, e) => {
+    e.preventDefault()
     const newComment = this.state.newComment
     const newPost = this.props.comments.push({
-      username: 'userman',
+      username: 'userMan',
       text: newComment
     })
     this.setState({
