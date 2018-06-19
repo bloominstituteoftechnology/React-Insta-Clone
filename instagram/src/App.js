@@ -18,17 +18,15 @@ class App extends Component {
         <div className="container">
           {this.state.appData.map(post => (
             <PostContainer
-              key={post.banana}
+              key={post.id}
               username={post.username}
               thumbnail={post.thumbnailUrl}
               image={post.imageUrl}
               likes={post.likes}
               timestamp={post.timestamp}
+              comments={post.comments}
             />
           ))}
-          {/* {this.state.appData.map(post => (
-            <div key={post.id}>Name: {post.username}</div>
-          ))} */}
         </div>
       </div>
     );

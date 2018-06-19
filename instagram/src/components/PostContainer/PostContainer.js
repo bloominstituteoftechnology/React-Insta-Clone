@@ -27,7 +27,7 @@ const PostContainer = props => {
           <CardSubtitle>
             <strong>{props.likes} likes</strong>
           </CardSubtitle>
-          <CommentSection />
+          <CommentSection comments={props.comments} />
           <CardSubtitle className="text-muted text-uppercase">
             {props.timestamp}
           </CardSubtitle>

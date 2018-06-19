@@ -1,7 +1,19 @@
 import React from "react";
-import { CardText } from "reactstrap";
+import Comment from "./Comment";
 
 const CommentSection = props => {
-  return <CardText>comments comments comments</CardText>;
+
+    return(
+
+      {props.comments}.map(elementItem => (
+        <Comment
+          key={elementItem.id}
+          username={elementItem.username}
+          text={elementItem.text}
+        />
+      );
+    );
+  );
+  
 };
 export default CommentSection;
