@@ -1,7 +1,5 @@
 .comment-container{
-	border: 1px solid #ddd;
 	padding: 20px;
-	border-radius: 2px;
 }
 
 .comment-item{
@@ -22,4 +20,8 @@
 	font-size: 16px;
 	padding: 10px;
 	border-top: 1px solid #ccc;
+}
+
+.username {
+	font-weight: bold;
 }

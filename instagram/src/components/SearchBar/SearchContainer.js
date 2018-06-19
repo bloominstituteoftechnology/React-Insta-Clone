@@ -5,7 +5,21 @@ import './SearchBar.css'
 const SearchContainer = (props) => {
 	return (
 		<div className="header">
-			<p>CameraIcon</p> <p>Instagram</p><Search /><p>Compass</p> <p>Heart</p> <p>User</p>
+			<div className="social camera">
+				<i class="fas fa-camera-retro"/>
+			</div>
+			<p className="instaclone">InstaClone</p>
+			<Search />
+			<div className="social">
+				<i className="fa fa-compass" />
+			</div>
+			<div className="social">
+				<i class="far fa-heart" />
+			</div>
+			<div className="social">
+				<i class="far fa-user" />
+			</div>
+			  
 		</div>
 	);
 };

@@ -16,7 +16,7 @@ class Post extends Component {
 				</div>
 				<img src={this.props.post.imageUrl} alt=""/>				
 				<div className="comment-container">
-					<p>Like Comment</p>
+					<i onClick={()=>{this.props.likeHandler(this.props.post.timestamp)}} class="far fa-heart social-post"/> <i class="far fa-comment social-post" />
 					<p>{this.props.post.likes} likes</p>
 					<CommentsList comments={this.props.post.comments}/>
 					<AddComment commentHandler={this.props.commentHandler} postId={this.props.post.timestamp}/>

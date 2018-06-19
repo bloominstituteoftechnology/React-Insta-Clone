@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class AddComment extends Component {
 	constructor(props){
@@ -24,6 +25,12 @@ class AddComment extends Component {
 			</div>
 		);
 	}
+}
+
+AddComment.propTypes = {
+	onSubmit: PropTypes.func.isRequired,
+	onChangeHandler: PropTypes.func.isRequired,
+	comment: PropTypes.object.isRequired
 }
 
 export default AddComment;

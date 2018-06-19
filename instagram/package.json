@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "materialize-css": "^1.0.0-rc.1",
     "prop-types": "^15.6.1",
     "react": "^16.4.1",

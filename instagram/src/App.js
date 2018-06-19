@@ -7,8 +7,8 @@ import SearchContainer from './components/SearchBar/SearchContainer'
 import PostContainer from './components/PostContainer/PostContainer'
 
 class App extends Component {
-  constructor(props){
-    super(props);
+  constructor(){
+    super();
     this.state = {
       data: dummyData,
       searchTerm: '',
@@ -29,11 +29,24 @@ class App extends Component {
     })
     this.setState({data})
   }
+  addLike =(postId) =>{
+    let data = this.state.data.slice();
+    data = data.map(post => {
+      if(postId === post.timestamp){
+        post.likes += 1;
+      }
+      return post;
+    })
+    this.setState({data});
+  }
+
+  
+
   render() {
     return (
       <div className='container'>
           <SearchContainer />
-          <PostContainer data={this.state.data} commentHandler={this.addComment}/>
+          <PostContainer likeHandler={this.addLike} data={this.state.data} commentHandler={this.addComment}/>
       </div>
     );
   }

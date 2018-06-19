@@ -1,7 +1,6 @@
 .post-header{
 	display: flex;
 	align-items: center;
-	border: 1px solid #ddd;
 	border-radius: 2px;
 	padding: 10px;
 }
@@ -18,4 +17,19 @@
 
 .post {
 	margin: 50px 0;
+	border: 1px solid #ddd;
+	border-radius: 2px;	
+	box-shadow: 1px 1px 10px #aaa;
+}
+
+.social-post {
+	color: #333;
+	font-size: 1.5em;
+	padding: 5px 10px;
+}
+.social-post.fa-heart:hover{
+	color: pink;
+}
+.social-post.fa-comment:hover{
+	color: skyblue;
 }
