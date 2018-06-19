@@ -7,7 +7,7 @@ const PostList = (props) => {
         <div className='post-list-container'>
             {props.instaData.map((dataItem, i) => {
                 return <PostContainer dataItem={dataItem} 
-                    key={`${i * Math.random()}`}
+                    key={i}
                     index={i}
                     changeCommentHandler={props.changeCommentHandler}
                     addCommentHandler={props.addCommentHandler}
