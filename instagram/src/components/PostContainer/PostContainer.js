@@ -10,7 +10,8 @@ import {
   InputGroupText,
   InputGroupAddon,
   Input,
-  Form
+  Form,
+  Button
 } from "reactstrap";
 import CommentSection from "../CommentSection/CommentSection";
 import moment from "moment";
@@ -23,12 +24,13 @@ class PostContainer extends Component {
       comments: this.props.comments,
       newComment: {
         //NEW
-        username: "A user",
+        username: "user",
         text: ""
       }
     };
   }
-  addComment = event => {
+
+  addNewComment = event => {
     event.preventDefault();
     const comments = this.state.comments.slice();
     comments.push(this.state.newComment); //NEW
@@ -40,17 +42,18 @@ class PostContainer extends Component {
       },
       comments: comments
     });
-    console.log("addComment invoked");
   };
   handleNewCommentInput = event => {
     this.setState({
       newComment: {
         //NEW
-        username: "A user",
+        username: "user",
         text: event.target.value
       }
     });
   };
+
+  componentDidMount() {}
 
   render() {
     return (
@@ -64,23 +67,23 @@ class PostContainer extends Component {
           <CardImg width="100%" src={this.props.image} alt="" />
           <CardBody>
             <CardTitle>
-              <i className="far fa-heart" />
+              <Button color="link">
+                <i className="far fa-heart" />
+              </Button>
+
               <i className="far fa-comment" />
             </CardTitle>
             <CardSubtitle>
               <strong>{this.props.likes} likes</strong>
             </CardSubtitle>
             <CommentSection comments={this.state.comments} />
-            {/* {this.state.comment.map(comment => (
-              <div key={comment.username}>{comment.text}</div>
-            ))} */}
             <CardSubtitle className="text-muted text-uppercase">
               {moment(
                 this.props.timestamp,
                 "MMMM Do YYYY, h:mm:ss a"
               ).fromNow()}
             </CardSubtitle>
-            <Form onSubmit={this.addComment}>
+            <Form onSubmit={this.addNewComment}>
               <InputGroup>
                 <Input
                   type="text"
