@@ -12,6 +12,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap'
+import './SearchBar.css'
 
 class TheSearchBar extends Component {
   constructor (props) {

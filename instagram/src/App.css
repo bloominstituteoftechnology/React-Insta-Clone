@@ -1,3 +1,7 @@
-.container {
+body {
   background: #fafafa;
+}
+
+.page {
+  border: 2px solid blue;
 }

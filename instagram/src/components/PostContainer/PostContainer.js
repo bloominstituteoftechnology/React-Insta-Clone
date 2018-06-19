@@ -12,17 +12,27 @@ const PostContainer = (props) => {
           <img
             src={props.post.thumbnailUrl}
             alt='profile-pic'
-            className='img-fluid rounded-circle'
+            className='rounded-circle'
+            id='thumbnail'
           />
-          <span>{props.post.username}</span>
+          <span className='username'>
+            <strong>{props.post.username}</strong>
+          </span>
         </CardBody>
-        <img width='60%' src={props.post.imageUrl} alt='Card cap' />
-        <h6>{props.post.likes} likes</h6>
-        <CardBody>
+        <img
+          width='100%'
+          src={props.post.imageUrl}
+          alt='Card cap'
+          className='img-fluid'
+        />
+        <div className='post-cta'>
+          <span>
+            <strong>{props.post.likes} likes</strong>
+          </span>
           <CommentSection comments={props.post.comments} />
-        </CardBody>
-        <h6>{props.post.timestamp}</h6>
-        <input placeholder='Add Comment' type='text' />
+          <h6>{props.post.timestamp}</h6>
+          <input placeholder='Add a comment...' type='text' />
+        </div>
       </Card>
     </div>
   )

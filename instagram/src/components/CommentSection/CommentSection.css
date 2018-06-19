@@ -1,3 +1,6 @@
 .comment-section {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
+}
+.username-comment {
+  margin-right: 1%;
 }
