@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Comment.css';
 
+// Return Comment
 const Comment = props => {
     return (
         <div className="comment-container">
@@ -12,6 +13,7 @@ const Comment = props => {
     );
 };
 
+// prop-type check
 Comment.propTypes = {
     comment: PropTypes.shape({
         text: PropTypes.string,

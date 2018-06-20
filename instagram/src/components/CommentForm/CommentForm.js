@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Return CommentForm
 const CommentForm = props => {
     return (
         <form onSubmit={props.handleSubmit}>

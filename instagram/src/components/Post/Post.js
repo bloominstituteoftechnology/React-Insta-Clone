@@ -4,6 +4,8 @@ import CommentSection from '../CommentSection/CommentSection';
 import './Post.css';
 import PropTypes from 'prop-types';
 
+// Render and return Post with Likes
+// Props: key={post.imageUrl} post={post}
 class Post extends React.Component {
     constructor(props) {
         super(props);
@@ -12,7 +14,7 @@ class Post extends React.Component {
         };
     }
 
-    incrementLike = () => {
+    handleLike = () => {
         let likes = this.state.likes + 1;
         this.setState({ likes });
     };
@@ -34,6 +36,7 @@ class Post extends React.Component {
                 <div>
                     {this.props.post.likes}
                 </div>
+                {/* Pass imageUrl as postId prop and comments as comments prop */}
                 <CommentSection
                     postId={this.props.post.imageUrl}
                     comments={this.props.post.comments}
@@ -43,6 +46,7 @@ class Post extends React.Component {
     }
 }
 
+// prop-type check
 Post.propTypes = {
     post: PropTypes.shape({
         username: PropTypes.string,

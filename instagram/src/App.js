@@ -5,6 +5,7 @@ import SearchBar from "./components/SearchBar/SearchBar";
 
 import "./App.css";
 
+// Render SearchBar and PostContainer
 class App extends Component {
     constructor() {
         super();
@@ -21,6 +22,7 @@ class App extends Component {
         return (
             <div className="App">
                 <SearchBar />
+                {/* Pass all posts as prop*/}
                 <PostContainer posts={this.state.posts} />
             </div>
         );
