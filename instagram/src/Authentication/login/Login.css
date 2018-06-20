@@ -11,20 +11,25 @@
 }
 
 .login-panel {
-    height: 60vh;
+    /* height: 60vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: gray;
     opacity: .9;
-    padding: 20px;
+    padding: 50px;
+    /* margin: 20px 0px; */
 }
 
 .login-panel h1 {
     color: white;
     font-size: 4rem;
     letter-spacing: 1rem;
+}
+
+.login-icon {
+    font-size: 20rem;
 }
 
 .login-form {
@@ -38,5 +43,10 @@
 .login-form input {
     width: 60vw;
     padding: 10px 20px;
-    margin-bottom: 30px;
+    margin: 20px 0px;
+
+}
+
+.login-form input:-moz-placeholder, .login-form input:-ms-input-placeholder, .login-form input::-moz-placeholder, .login-form input::-webkit-input-placeholder {
+    text-align: center;
 }

@@ -29,12 +29,13 @@ class Login extends Component {
     return (
       <div className="login-page">
         <div className="login-panel">
-            <h1 className='login-title'>PLEASE LOG IN</h1>
+        <h1><i className="login-icon fab fa-instagram" /></h1>
           <form className="login-form" onSubmit={this.handleSubmit}>
                 <input id="login-label" placeholder="Enter username" form="login-form" value={this.state.usernameInput} onChange={this.handleUsernameInput}/>
                  <input id="login-label" placeholder="Enter password" form="login-form" value={this.state.passwordInput} onChange={this.handlePasswordInput}/>
                 <input type="submit" value="Log-in"/>
           </form>
+          <h1 className='login-title'>PLEASE LOG IN</h1>
         </div>
       </div>
     );
