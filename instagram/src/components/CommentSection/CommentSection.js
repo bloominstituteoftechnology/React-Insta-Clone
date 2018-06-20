@@ -9,6 +9,9 @@ class CommentSection extends Component {
         this.state = {
             comments: [],
             commentKey: props.commentKey,
+            addNewComment: props.addNewComment,
+            updateComment: props.updateComment,
+            commentText: props.commentText,
         }
     }
 
@@ -24,7 +27,10 @@ class CommentSection extends Component {
                             comment={comment.text}
                             userIn={comment.username} />
                 )}
-                <CommentInput commentKey={this.state.commentKey} />
+                <CommentInput commentKey={this.state.commentKey}
+                              addNewComment={this.state.addNewComment}
+                              updateComment={this.state.updateComment}
+                              commentText={this.state.commentText} />
             </div>
         );
     }

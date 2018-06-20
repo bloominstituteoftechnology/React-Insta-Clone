@@ -16,7 +16,10 @@ const PostContainer = props => {
                 <div>{props.postInfo.likes}</div>
             </div>
             <CommentSection commentInfo={props.postInfo.comments}
-                            commentKey={props.commentKey} />
+                            commentKey={props.commentKey}
+                            addNewComment={props.addNewComment}
+                            updateComment={props.updateComment}
+                            commentText={props.commentText} />
         </div>
     
     );

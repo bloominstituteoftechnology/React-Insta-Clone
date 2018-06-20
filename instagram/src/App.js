@@ -8,7 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      comment: '',
     }
   }
 
@@ -16,11 +17,18 @@ class App extends Component {
     this.setState({data: dummyData})
   }
 
+  updateComment = event => {
+    this.setState({comment: event.target.value})
+  }
   
   addNewComment = (event, ...rest) => {
     event.preventDefault();
     let newData = this.state.data.slice();
-    newData[rest[0]].comments.push(rest[1]);
+    let newComment = {
+      username: "GottaPayTheTrollToll291",
+      text: rest[1]
+    }
+    newData[rest[0]].comments.push(newComment);
 
     this.setState({data: newData});
 
@@ -37,7 +45,10 @@ class App extends Component {
           {this.state.data.map((post, index) => 
             <PostContainer postInfo={post} 
                            key={index}
-                           commentKey={index} />
+                           commentKey={index}
+                           addNewComment={this.addNewComment}
+                           updateComment={this.updateComment}
+                           commentText={this.state.comment} />
           )}
         </div>
       </div>
@@ -45,4 +56,6 @@ class App extends Component {
   }
 }
 
+
 export default App;
+

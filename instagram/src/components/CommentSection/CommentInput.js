@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 
 const CommentInput = props => {
   return (
-    <form>
-      <input type="text" placeholder="Add comment... " />
+    <form onSubmit={() => props.addNewComment(props.commentKey, {})}>
+      <input type="text" 
+              placeholder="Add comment... "
+              value={props.commentText}
+              onChange={props.updateComment} />
     </form>
   );
 };
