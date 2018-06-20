@@ -56,12 +56,13 @@ const Authenticate = App =>
 
   - Inside of `Authenticate` we need to add a constructor to hold our state data.
   - On state we need a user `loggedIn` boolean flag.
-  - On `componentDidMount` we need to check localStorage to see if a user is logged in.
+  - On `componentDidMount` we need to check `localStorage` to see if a user is logged in.
   - Inside of the render function we will check `if a user is logged in`
   - If a user is logged in we will return the `<App />`, else we will return the `<LoginPage>`
 
 #### Stretch Problems (Day III)
 
+- Now that you have a user set in `localStorage`, go ahead and use that `username` when a user posts a comment to make it so the logged in user is the one commenting on the posts.
 - Styled-Components
 
   - Watch this video about [styled-components](https://youtu.be/bIK2NwoK9xk) in its entirety.
