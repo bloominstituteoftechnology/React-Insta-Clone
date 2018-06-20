@@ -1,0 +1,8 @@
+.comment-text {
+    display: flex;
+}
+
+.comment-text .user {
+    font-weight: bold;
+    margin-right: 2.5%;
+}
