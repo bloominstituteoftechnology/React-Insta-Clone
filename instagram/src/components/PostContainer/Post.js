@@ -1,22 +1,45 @@
 import React from 'react';
 
-const Post = props => {
-    return (
-    <div>
-        <div className="insta-top">
-            <img src={props.post.thumbnailUrl} alt={props.post.username} />
-            <h1>{props.post.username}</h1>  
-        </div>
-        <img className="insta-pic" src={props.post.imageUrl} alt={props.post.username} />
-        <div className="below-insta-pic">
-            <i class="far fa-heart" style={{ fontSize: '25px' }}></i>
-            <i class="far fa-comment" style={{ fontSize: '25px' }}></i>
-        </div>
-        <p className="likes"><strong>{props.post.likes}</strong> likes</p>
-    </div>
+class Post extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            post: props.post,
+            likes: props.post.likes
+        }
+    }
 
-    )
+    addLikes = () => {
+        let likes = this.state.post.likes;
+        likes++;
+        this.setState({ likes: likes})
+        console.log(this.state)
+    }
 
+
+
+    render () {
+        return (
+            <div>
+                <div className="insta-top">
+                    <img src={this.state.post.thumbnailUrl} alt={this.state.post.username} />
+                    <h1>{this.state.post.username}</h1>  
+                </div>
+                <img className="insta-pic" src={this.state.post.imageUrl} alt={this.state.post.username} />
+                <div className="below-insta-pic">
+                    <i
+                    onClick={this.addLikes} 
+                    className="far fa-heart" 
+                    style={{ fontSize: '25px' }}
+                    ></i>
+                    <i className="far fa-comment" style={{ fontSize: '25px' }}></i>
+                </div>
+                <p className="likes"><strong>{this.state.likes}</strong> likes</p>
+            </div>
+        
+            )     
+
+    }
 }
 
 export default Post;

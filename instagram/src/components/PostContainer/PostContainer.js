@@ -6,7 +6,7 @@ import Post from './Post';
 const PostContainer = props => {
 return <div>{props.datas.map(data => 
     <div className="individual-post">
-        <Post 
+        <Post
         post={data}
         />
         <CommentSection 
