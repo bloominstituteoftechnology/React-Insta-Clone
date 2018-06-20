@@ -32,7 +32,7 @@ class Post extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="post">
                 <div className="post-border">
                     <PostHeader username={this.props.post.username} thumbnailUrl={this.props.post.thumbnailUrl} />
                 </div>
