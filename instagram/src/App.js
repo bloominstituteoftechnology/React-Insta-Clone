@@ -13,7 +13,10 @@ constructor(){
 
 	this.state={
 		dummyData: [],
-		searchItem: ""
+		searchItem: "",
+		newComment: {username: "ssg",
+			     text:""}
+
 
 
 
@@ -37,11 +40,11 @@ changeSearchBarValue = event => {
 
 searchPost = event => {
         event.preventDefault();
-	if (event.key === 'Enter'){
+	//if (event.key === 'Enter'){
         let dummyData =this.state.dummyData.slice();
         dummyData = dummyData.filter(dummyData => dummyData.username === this.state.searchItem);
-
-	}
+	this.setState({dummyData: dummyData, searchItem: ""});
+	//}
 }
        // if(dummyData.length===0){
          //       this.setState({searchItem: ""});
@@ -58,6 +61,26 @@ searchPost = event => {
 //	searchPost();
 //}
 
+changeCommentValue = event => {
+   event.preventDefault();
+   // console.log(event.target.value);
+    this.setState({ newComment: event.target.value });
+  };
+
+
+addNewComment = (event, index) => {
+	event.preventDefault();
+	let dummyData =this.state.dummyData.slice();
+
+	dummyData.forEach(dummyData => {
+	if (dummyData.imageUrl === index)
+
+        dummyData.comments.push(this.state.newComment);
+	});
+
+	this.setState({dummyData: dummyData});
+};
+
 
 
   render() {
@@ -67,7 +90,7 @@ searchPost = event => {
 
 	 <div>
 	{this.state.dummyData.map(dummyData => 
-		<PostContainer key={dummyData.timestamp} PostContainer="post-container"  PostImage="post-image" HeaderContainer="header-container"  HeaderImageStyle="header-image-style" dummyData={dummyData}/>
+		<PostContainer  addComment= {this.addNewComment.text}  NewCommentValue={this.state.newComment} changeCommentValue={this.changeCommentValue}  key={dummyData.timestamp} PostContainer="post-container"  PostImage="post-image" HeaderContainer="header-container"  HeaderImageStyle="header-image-style" dummyData={dummyData}/>
 	
 	)}		
 	 </div> 
