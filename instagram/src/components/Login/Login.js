@@ -58,7 +58,7 @@ class Login extends React.Component {
                         <a className='forgot-password' href='#_'>Forgot password?</a>
                     </FormGroup>
                 </Form>
-                <div className='bottom-content'>
+                <div className='bottom-login-content'>
                     <div className='bottom-text'>
                         Don't have an account? <a className='sign-up' href='#_'>Sign up</a>
                     </div>
