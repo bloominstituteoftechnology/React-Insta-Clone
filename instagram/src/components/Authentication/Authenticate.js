@@ -7,17 +7,12 @@ class Authenticate extends Component {
     this.state = {
       authorizedApp: props.app,
       loggedIn: false,
-      username: '',
-      password: ''
+      username: ''
     }
   }
 
   onUsernameChange = e => {
     this.setState({ username: e.target.value });
-  };
-
-  onPasswordChange = e => {
-    this.setState({ password: e.target.value });
   };
 
   onSubmitLogin = e => {
@@ -42,7 +37,7 @@ class Authenticate extends Component {
       const AuthorizedApp = this.state.authorizedApp;
       return <AuthorizedApp loggedInUsername={this.state.username} />;
     } else {
-      return <Login onUsernameChange={this.onUsernameChange} onPasswordChange={this.onPasswordChange} onSubmitLogin={this.onSubmitLogin} username={this.username} password={this.password} />;
+      return <Login onUsernameChange={this.onUsernameChange} onSubmitLogin={this.onSubmitLogin} username={this.state.username} />;
     }
   }
 }
