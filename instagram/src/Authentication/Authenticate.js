@@ -25,6 +25,7 @@ const Authenticate = App =>
             return;
           } else {
             alert("You have entered incorrect log-in information");
+            return;
           }
         } else {
           newLoginInfo = logins.slice();

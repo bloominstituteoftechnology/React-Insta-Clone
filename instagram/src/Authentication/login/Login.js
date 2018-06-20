@@ -23,6 +23,10 @@ class Login extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.props.loginHandler(this.state.usernameInput, this.state.passwordInput);
+        this.setState({
+            usernameInput: '',
+            passwordInput: ''
+        });
     }
     
   render() {
