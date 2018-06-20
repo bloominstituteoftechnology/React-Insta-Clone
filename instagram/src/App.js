@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data.js'
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
+import moment from 'moment'
 
 class App extends Component {
   constructor(){
@@ -27,7 +28,6 @@ class App extends Component {
   }
 
   addNewComment = (event,index) => {
-
     // 1. Make a shallow copy of data
     let data = [...this.state.data];
     
@@ -40,13 +40,13 @@ class App extends Component {
       text:`${event.target.value}`
     });
     
-    // 4. Put it back into our array. N.B. we *are* mutating the array here, but that's why we made a copy first
-    // items[1] = item;
+    dataObj.timestamp = moment().format('MMMM Do YYYY, h:mm:ss a');
     
+    // 4. Put it back into our array. N.B. we *are* mutating the array here, but that's why we made a copy first
+    data[index] = dataObj;
+
     // 5. Set the state to our new copy
-    this.setState({
-      data:data
-    });
+    this.setState({data:data});
   }
 
   updateLikes = (isLikeSelected,index) =>{
@@ -70,12 +70,13 @@ class App extends Component {
   }
 
   searchHandler = (e) =>{
+    e.preventDefault();
     console.log(e.target.value, '........... Step 1: Log the event target value') 
     
     //Initialize data after each change on search
     this.init()
 
-    //If the target value length is zero, do not filter
+    //If the target value length is zero, do not filter the posts
     if (e.target.value.length !== 0){
       console.log('................ Step 2: Entering filtering..')
 
@@ -110,7 +111,7 @@ class App extends Component {
       <div>
         <SearchBar searchHandler={this.searchHandler}/>
         <div className="app-container">
-          {this.state.data.map( (postObj,postIndex) =>  <PostContainer key={postObj.timestamp} postObj={postObj} postIndex={postIndex} addNewComment={this.addNewComment} updateLikes={this.updateLikes}/>)}
+          {this.state.data.map( (postObj,postIndex) => <PostContainer key={postObj.timestamp} postObj={postObj} postIndex={postIndex} addNewComment={this.addNewComment} updateLikes={this.updateLikes}/>)}
        </div>
       </div>
     );
