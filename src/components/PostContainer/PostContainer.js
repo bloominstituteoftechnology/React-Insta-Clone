@@ -1,8 +1,8 @@
 import React from 'react'
 import './PostContainer.css'
 import CommentSection from '../CommentSection/CommentSection'
-// import AddComment from '../CommentSection/AddComment'
 import PostHeader from '../PostContainer/PostHeader'
+import LikeSection from './LikeSection'
 import PropTypes from "prop-types";
 
 
@@ -15,6 +15,7 @@ class PostContainer extends React.Component {
             postStarter: props.postStarter,
             postComments: props.postComments,
             comment: "",
+            likes: 0
         }
     }
     handleChange = event => {
@@ -31,6 +32,11 @@ class PostContainer extends React.Component {
         return this.setState({ postComments: dataCopy, comment: '' });
     }
 
+    incrementLike = () => {
+        let likes = this.state.likes + 1;
+        this.setState({ likes });
+    };
+
     render() {
         return (
             <div className="post-container" >
@@ -39,7 +45,12 @@ class PostContainer extends React.Component {
                     postStarter={this.state.postStarter}
                     postImage={this.state.postImage}
                 />
+
                 <div className="comment-container">
+                    <LikeSection
+                        incrementLike={this.incrementLike}
+                        likes={this.state.likes}
+                    />
                     {this.state.postComments.map((post, i) => (
                         <CommentSection
                             key={i}
@@ -47,6 +58,7 @@ class PostContainer extends React.Component {
                             postUser={post.username}
                         />
                     ))}
+
                     <form onSubmit={this.addNewComment}>
                         <input
                             className="comment-bar"
