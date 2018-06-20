@@ -33,12 +33,17 @@ class App extends Component {
     this.setState({data: newData});
   }
 
+  logout = () => {
+    localStorage.clear();
+  }
+
   render() {
     return (
       <div className="App">
         <div className="posts">
           <PostsPage data={this.state.data} />
         </div>
+        <form onSubmit={this.logout}><button type="submit">Logout</button></form>
       </div>
     );
   }
