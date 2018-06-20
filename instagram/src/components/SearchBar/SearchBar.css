@@ -21,11 +21,11 @@
 }
 
 .search-bar-form__input {
-  min-width: 200px;
-  width: 30vw;
+  min-width: 250px;
+  width: 20vw;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   outline: 0;
-  padding: 3px 10px 3px 26px;
+  padding: 3px 30px 3px 20px;
   font-size: 1.6rem;
 }
