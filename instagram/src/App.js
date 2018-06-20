@@ -25,10 +25,7 @@ class App extends Component {
   */
 
   addNewComment = (index, comment) => {
-    // console.log('clicked!', index, comment);
-    // console.log('state before', this.state);
     let newComment = { username: 'Thomas', text: comment };
-    // console.log(newComment);
     let newState = this.state.dummyData.slice();
     newState.forEach((post, i) => {
       if (i == index) {
@@ -36,8 +33,6 @@ class App extends Component {
       }
     });
     this.setState({ dummyData: newState });
-    // this.setState({ dummyData: dummyData[index].comments.push(newComment) });
-    // console.log('state after', newState);
   };
 
   render() {
