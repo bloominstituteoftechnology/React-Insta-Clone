@@ -3,7 +3,7 @@ import React from 'react';
 
 const Login = props => {
     return (
-        <div>
+        <div className='inner-box'>
         <input 
             type='text'
             className='username'
@@ -19,7 +19,7 @@ const Login = props => {
             defaultValue=''
             onChange={props.handlePassword}
             />
-            <button onClick={props.logIn}>Log in</button>
+         <button onClick={props.logIn}>Log in</button>
         </div>
     );
 }

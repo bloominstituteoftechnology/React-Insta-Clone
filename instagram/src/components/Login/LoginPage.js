@@ -1,4 +1,5 @@
 import React from 'react';
+import './Login.css';
 import Login from './Login';
 
 class LoginPage extends React.Component {
@@ -27,8 +28,13 @@ class LoginPage extends React.Component {
 
     render (){
         return(
-        <div>
+            <div className='outer-container'>
+            <div className='login-container'>
+            <img className='login-logo' src='http://www.brandchannel.com/wp-content/uploads/2016/05/instagram-old-log-wordmark.jpg' />
+        <div className='login-box'>
             <Login handleUser={this.handleUser} handlePassword={this.handlePassword} logIn={this.logIn}/>
+        </div>
+        </div>
         </div>
         );
     }

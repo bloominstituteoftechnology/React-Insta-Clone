@@ -26,3 +26,10 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/* new styles here*/
+
+.App {
+  display: flex;
+  justify-content: center;
+}
