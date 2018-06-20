@@ -13,7 +13,7 @@ const Post = props => {
                 <img alt="post thumbnail" className="post-image" src={props.post.imageUrl} />
             </div>
             <div className="comment-section">
-                <CommentSection comments={props.post.comments} />
+                <CommentSection comments={props.post.comments} likes={props.post.likes} />
             </div>
         </div>
     )
