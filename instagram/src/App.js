@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/Search';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './Authentication/Authenticate';
+import LoginPage from './components/Login/LoginPage';
 
+
+const AuthApp = Authenticate(App);
 
 class App extends Component {
   constructor() {
@@ -17,9 +20,11 @@ class App extends Component {
 
 
 
+
   addNewComment = (event) => {
-    console.log('this');
-    let newComment = {text: this.state.comment, username: 'user'}; 
+    event.preventDefault();
+    alert('clicked');
+   /* let newComment = {text: this.state.comment, username: 'user'}; 
     console.log(newComment);
     let newData = this.state.data.slice(); 
     let commentArr= newData.map(item => {
@@ -27,7 +32,7 @@ class App extends Component {
     })
     commentArr.push(newComment);
     this.setState({data: newData}); 
-    event.preventDefault();
+    event.preventDefault();*/
   }
 
   likePost = (i) => {
@@ -65,11 +70,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="searchheader">
-          <SearchBar  handleChange={this.handleChange} searchFunction={this.searchFunc} search={this.state.search}/>
-        </header>
-        
-        <PostContainer data={this.state.data} comment={this.state.comment} handleComment={this.handleComment} addComment={this.addNewComment} likePost={this.likePost} />
+      <LoginPage handleLogin={this.handleLogin} logIn={this.logIn} />
+        <PostsPage data={this.state.data} comment={this.state.comment} handleComment={this.handleComment} addComment={this.addNewComment} likePost={this.likePost} handleChange={this.handleChange} searchFunction={this.searchFunc} search={this.state.search}/>
       </div>
     );
   }
