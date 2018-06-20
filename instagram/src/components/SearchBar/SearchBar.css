@@ -1,0 +1,54 @@
+.search-bar-wrapper {
+    border-bottom: 1px solid #3333;
+    height: 80px;
+    line-height: 70px;
+    background: #ffffff;
+    
+  }
+
+  .search-bar-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+  }
+  
+  .image-wrapper {
+    height: 30px;
+  }
+  
+  .logo-image {
+    height: 100%;
+  }
+
+  .search-bar-style {
+    position: relative;
+    text-align: center;
+    height: 26px;
+    font-size: 13px;
+    width: 215px;
+    background: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    top: 6px;
+
+  }
+
+  ::placeholder {
+    color: #9B9B9B;
+    opacity: .8;
+  }
+
+  :focus {
+    outline: none;
+  }
+  
+  .social-wrapper {
+    display: flex;
+  }
+  
+  .social {
+    width: 20px;
+    height: 20px;
+  }
+  
