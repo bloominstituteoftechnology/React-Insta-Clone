@@ -1,8 +1,8 @@
 import React from "react";
 
 class Login extends React.Component {
-constructor(){
-  super()
+constructor(props){
+  super(props)
 }
 render (){
   return(
@@ -16,18 +16,10 @@ render (){
         </div>
         <div className="form-group">
           <div className="col-sm-12 login-btn-container">
-              <a href="#" className="btn btn-dark login-btn">Login</a>
+              <a className="btn btn-dark login-btn" onClick={() => this.props.login(document.getElementById('login-username').value, document.getElementById('login-password').value)}>Login</a>
           </div>
         </div>
           <div className="form-group">
-          <div className="col-md-12 control">
-            <div >
-              Don't have an account! <br></br>
-              <a href="#">
-                Sign Up Here
-              </a>
-            </div>
-          </div>
         </div>
       </form>
     </div>
