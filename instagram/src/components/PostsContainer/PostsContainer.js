@@ -10,6 +10,6 @@ const PostsContainer = props => {
       })}
     </div>
   );
-}
+};
 
 export default PostsContainer;
