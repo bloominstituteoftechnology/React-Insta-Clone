@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Authenticate from './Authentication/Authenticate'
 import PostsPage from "./components/PostsPage";
+import Login from './components/login/Login'
 import "./App.css";
 
 
@@ -13,6 +14,8 @@ class App extends Component {
     return (
           <div className="App">
             <PostsPage />
+            {/* <Login /> */}
+
     </div>);
   }
 }
