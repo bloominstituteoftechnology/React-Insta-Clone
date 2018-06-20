@@ -9,9 +9,9 @@ const PostContainer = props => {
     return (
         <div>
 
-             {props.data.map(item => {
+             {props.data.map((item, i) => {
                 return <div className='container'><PostHeader className='header' key={Math.random()}  user={item.username} thumbnail={item.thumbnailUrl} />
-                    <PostContent className='content' key={Math.random()} image={item.imageUrl} likes={item.likes} likePost={props.likePost}/>
+                    <PostContent className='content' key={Math.random()} image={item.imageUrl} likes={item.likes} likePost={(e) => props.likePost(i)}/>
                     <Comments className='comment' key={Math.random()}  comments={item.comments} commentHandler={props.commentHandler} addComment={props.addComment}/></div>
                })}
 

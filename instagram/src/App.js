@@ -15,7 +15,8 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      data: dummyData
+      data: dummyData,
+      dataInput: ''
     });
   }
 
@@ -24,25 +25,32 @@ class App extends Component {
     event.preventDefault;
     let newComment = {text: event.target.value, username: 'user'};
     let newData = this.state.data.slice();
-    let commentArr = newData[index].comments;
-    commentArr.push(newComment);
+    newData[index].comments.push(newComment);
     this.setState({data: newData});
   }
 
-  likePost = () => {
+  likePost = (i) => {
+   
     let newData = this.state.data.slice();
-    newData[0].likes += 1;
+    newData[i].likes += 1;
     this.setState({data: newData});
+  }
+
+  searchFunc = (event) => {
+    const result = this.state.data.filter(object => 
+      event.target.value === object.username);
+      console.log(result);
+    this.setState({data: result});
   }
 
   render() {
     return (
       <div className="App">
         <header className="searchheader">
-          <SearchBar />
+          <SearchBar searchFunc={this.searchFunc} />
         </header>
         
-        <PostContainer data={this.state.data} dataInput={this.state.dataInput}  addComment={this.addNewComment} likePost={this.likePost}/>
+        <PostContainer data={this.state.data} dataInput={this.state.dataInput}  addComment={this.addNewComment} likePost={this.likePost} />
       </div>
     );
   }
