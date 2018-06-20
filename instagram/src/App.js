@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from "./components/PostContainer/PostContainer";
+import Login from "./Login/Login"
 
 class App extends Component {
   constructor(){

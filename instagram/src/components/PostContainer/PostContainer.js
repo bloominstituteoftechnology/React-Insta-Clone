@@ -12,9 +12,10 @@ const PostContainer = props => props.dummyData.map((dummyData,index) => {
         </div>
         <img src={dummyData.imageUrl} className="main-img"></img>
         <p>
-        likes: {dummyData.likes}
+          likes: {dummyData.likes}
         </p>
         <CommentSection comments={dummyData.comments} index = {index} />
+          <input type="text" className="form-control comment-form" placeholder="Add a comment..."></input>
       </div>
     )
   })

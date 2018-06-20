@@ -2,14 +2,12 @@
   margin-bottom: 100px;
   border: gray 1px solid;
   width: 48.5%;
-  height: 915px;
   margin-right: auto;
   margin-left: auto;
 }
 .post-top-container{
-  border: solid red 1px;
   height: 65px;
-  
+
 }
 .thumbnail {
   height: 50%;
@@ -20,4 +18,20 @@
 }
 .main-img {
   width: 100%;
+}
+.comment-form {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.comment {
+  list-style-type: none;
+}
+.login-form {
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+}
+.login-btn-container {
+  padding-left: 0px !important;
 }
