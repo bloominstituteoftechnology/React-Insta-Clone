@@ -3,7 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
-
+import Authenticate from "./components/Authenticate/Authenticate";
 
 
 
@@ -14,20 +14,15 @@ constructor(){
 	this.state={
 		dummyData: [],
 		searchItem: "",
-		newComment: {username: "ssg",
-			     text:""}
-
-
-
-
+		//newComment: ""
 };
 
 }	
 
 componentDidMount(){
 	this.setState({dummyData: dummyData});
-
 }
+
 
 changeSearchBarValue = event => {
    event.preventDefault();
@@ -36,46 +31,35 @@ changeSearchBarValue = event => {
   };
 
 
-
-
 searchPost = event => {
         event.preventDefault();
-	//if (event.key === 'Enter'){
         let dummyData =this.state.dummyData.slice();
         dummyData = dummyData.filter(dummyData => dummyData.username === this.state.searchItem);
 	this.setState({dummyData: dummyData, searchItem: ""});
-	//}
+	
 }
-       // if(dummyData.length===0){
-         //       this.setState({searchItem: ""});
-           //     alert('No match found');
-             //   }
-        //else{
-        //this.setState({dummyData: dummyData, searchItem: ""});
-       // }
-
-
+ 
 
 //searchHandler = () =>{
 //	changeSearchBarValue();
 //	searchPost();
 //}
 
-changeCommentValue = event => {
-   event.preventDefault();
-   // console.log(event.target.value);
-    this.setState({ newComment: event.target.value });
-  };
+
+//changeCommentValue = event => {
+  // event.preventDefault();
+   // this.setState({ newComment: event.target.value });
+ // };
 
 
 addNewComment = (event, index) => {
 	event.preventDefault();
 	let dummyData =this.state.dummyData.slice();
+	console.log(index);
+	 dummyData.forEach(dummyData => {
+	if(dummyData.imageUrl === index)
 
-	dummyData.forEach(dummyData => {
-	if (dummyData.imageUrl === index)
-
-        dummyData.comments.push(this.state.newComment);
+        dummyData.comments.push({"username":"ssg", "text":this.state.newComment});
 	});
 
 	this.setState({dummyData: dummyData});
@@ -90,7 +74,7 @@ addNewComment = (event, index) => {
 
 	 <div>
 	{this.state.dummyData.map(dummyData => 
-		<PostContainer  addComment= {this.addNewComment.text}  NewCommentValue={this.state.newComment} changeCommentValue={this.changeCommentValue}  key={dummyData.timestamp} PostContainer="post-container"  PostImage="post-image" HeaderContainer="header-container"  HeaderImageStyle="header-image-style" dummyData={dummyData}/>
+		<PostContainer  addComment= {this.addNewComment}  NewCommentValue={this.state.newComment} changeCommentValue={this.changeCommentValue}  key={dummyData.timestamp} PostContainer="post-container"  PostImage="post-image" HeaderContainer="header-container"  HeaderImageStyle="header-image-style" dummyData={dummyData}/>
 	
 	)}		
 	 </div> 
