@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <div className='search_wrapper'>
             <div className='faSearch'>
@@ -10,7 +10,7 @@ const SearchBar = () => {
                 <div className='textInsta'>Instagram</div>
             </div>
             <div className='serachInput'>
-                <input type="text" placeholder="Search.." />
+                <input type="text" placeholder="Search.." onKeyDown={props.handleSearch} />
             </div>
             <div className='faSearch'>
                 <div className='band'><i className="fa fa-bandcamp" aria-hidden="true"></i></div>
