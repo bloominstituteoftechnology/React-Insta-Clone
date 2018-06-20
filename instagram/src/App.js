@@ -7,8 +7,18 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData
+      posts: []
     };
+  }
+  componentDidMount() {
+    if (window.localStorage.getItem("comments")) {
+      this.setState({
+        posts: JSON.parse(window.localStorage.getItem("comments"))
+      });
+    } else {
+      this.setState({ posts: dummyData });
+    }
+    window.localStorage.setItem("comments", JSON.stringify(dummyData));
   }
   render() {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CommentSection = props => {
+const CommentInput = props => {
     return (
       <form>
         <input type="text" placeholder="Add comment... " />
@@ -8,4 +8,4 @@ const CommentSection = props => {
     );
   };
   
-  export default CommentSection;
+  export default CommentInput;

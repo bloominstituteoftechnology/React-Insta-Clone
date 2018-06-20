@@ -1,7 +1,7 @@
 import React from 'react';
 import PostHeader from './PostHeader';
 import './PostsContainer.css';
-import CommentSection from '../CommentSection/CommentSection';
+import CommentSection from '../CommentSection/CommentSectionContainer';
 const Post = props => {
     return (
         <div className="post-container">
