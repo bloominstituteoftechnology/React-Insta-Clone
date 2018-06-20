@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
+import PostPage from './components/PostContainer/PostPage';
 
 
 
@@ -10,24 +8,19 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData
+      data: []
     }; 
   }
 
-  componentDidMount(){
-  	this.setState({dummyData});
-  }
+
 
   render() {
     return (
       <div className="App">
-     		<SearchBar />
-        <div className="data">
-          {this.state.data.map(data => 
-            <PostContainer data={data} />
+ 
+            <PostPage  />
           )}
         </div>
-      </div>
     );
   }
 }
