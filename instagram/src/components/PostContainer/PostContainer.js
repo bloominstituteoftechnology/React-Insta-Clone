@@ -37,7 +37,7 @@ class PostContainer extends Component {
     this.setState({
       newComment: {
         //NEW
-        username: "A user",
+        username: "user",
         text: ""
       },
       comments: comments
