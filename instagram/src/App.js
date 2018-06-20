@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import data from './dummy-data';
+import SearchBar from './components/SearchBar/SearchBar';
+import PostsContainer from './components/PostsContainer/PostsContainer';
 
 class App extends Component {
   constructor() {
@@ -14,9 +16,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Instagram</h1>
-        </header>
+        <SearchBar />
+        <PostsContainer posts={this.state.posts}/>
       </div>
     );
   }
