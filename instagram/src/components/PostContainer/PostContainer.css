@@ -1,0 +1,55 @@
+.Post-Container {
+  max-width: 495px;
+  margin: 0 auto;
+  background: white;
+  margin-bottom: 45px;
+  margin-top: 45px;
+}
+
+#thumbnail {
+  height: 25px;
+}
+
+.username {
+  margin-left: 10px;
+}
+
+.post-cta {
+  padding: 1%;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 55px;
+  padding: 1%;
+}
+
+.heart-icon {
+  cursor: pointer;
+}
+
+.comment-icon {
+  cursor: pointer;
+}
+
+.top-container {
+  padding: 2%;
+}
+
+.comment-input {
+  outline: none;
+  width: 100%;
+  border: 1px solid white;
+  padding: 2% 0;
+}
+
+.date-stamp {
+  color: #999999;
+  padding: 1% 0;
+  border-bottom: 1px solid #efefef;
+}
+
+.heart-red {
+  color: red;
+}

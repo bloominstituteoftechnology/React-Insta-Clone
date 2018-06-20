@@ -1,0 +1,16 @@
+.form-control {
+  width: 30%; /* 240px */
+  margin: 0 auto;
+}
+
+.ml-auto {
+  margin-right: 10%;
+}
+
+.navbarBrand {
+  margin-left: 10%;
+}
+
+.logo {
+  font-style: bongabill;
+}

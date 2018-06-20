@@ -1,0 +1,11 @@
+.comment-section {
+  /* border: 2px solid blue; */
+}
+.username-comment {
+  margin-right: 1%;
+}
+.date-stamp {
+  color: #999999;
+  padding: 1% 0;
+  border-bottom: 1px solid #efefef;
+}
