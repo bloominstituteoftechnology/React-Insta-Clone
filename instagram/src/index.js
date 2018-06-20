@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import AuthApp from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+
+
+ReactDOM.render(<AuthApp />, document.getElementById('root'));

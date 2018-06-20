@@ -11,22 +11,20 @@ class LoginPage extends React.Component {
     }
 
     handleUser = event => {
-        window.localStorage.setItem('username', event.target.value);
+
         this.setState({username: event.target.value})
        
       }
 
       handlePassword = event => {
-        window.localStorage.setItem('password', event.target.value);
         this.setState({password: event.target.value})
         
       }
 
     logIn = (event) => {
-        event.preventDefault();
-        window.localStorage.setItem('username', event.target.value);
+        window.localStorage.setItem('username', this.state.username);
         if (window.localStorage.getItem('username')) {
-
+            this.forceUpdate();
         }
       }
 

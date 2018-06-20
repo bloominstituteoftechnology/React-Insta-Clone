@@ -6,7 +6,7 @@ import Authenticate from './Authentication/Authenticate';
 import LoginPage from './components/Login/LoginPage';
 
 
-const AuthApp = Authenticate(App);
+
 
 class App extends Component {
   constructor() {
@@ -43,7 +43,7 @@ class App extends Component {
 
   handleComment = event => {
     this.setState({comment: event.target.value});
-    event.preventDefault;
+    event.preventDefault();
   }
 
   handleChange = event => {
@@ -76,5 +76,6 @@ class App extends Component {
     );
   }
 }
+const AuthApp = Authenticate(App);
 
-export default App;
+export default AuthApp;
