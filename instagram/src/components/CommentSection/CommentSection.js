@@ -13,6 +13,7 @@ const CommentSection = props => {
                     {comments.text}
                 </div>
             )}
+            
             <div className="comment-box">
        <input placeholder="Add a Comment Here..." name="textbox" className="textbox"/>
     	 </div> 

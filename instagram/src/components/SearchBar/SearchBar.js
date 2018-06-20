@@ -11,11 +11,11 @@ const SearchBar = props => {
             </div>
             <div className="search-bar-box">
                 <i className="fas fa-search"></i>
-                <input placeholder="Search"/>
+                <input className="Search-box" placeholder="Search"/>
             </div>
             <div className="ig-icons float-right">
-                <i className="far fa-compass"></i>
-                <i className="far fa-heart"></i>
+                <i className="far fa-compass search-compass-icon"></i>
+                <i className="far fa-heart search-heart-icon"></i>
                 <i className="far fa-user"></i>
             </div>
         </div>

@@ -1,0 +1,49 @@
+.search-bar {
+	height: 70px;
+	background: lightgray;
+	border-bottom: 3px solid #084c61;
+}
+
+.ig-icons {
+	padding-right: 20px;
+	margin-top: -40px;
+	font-size: 30px;
+	color: #084c61;
+}
+
+.search-compass-icon {
+	padding-right: 30px;
+}
+
+.search-heart-icon {
+	padding-right: 30px;
+}
+
+.ig-logo-icons {
+	padding-left: 15px;
+	margin-top: 15px;
+}
+
+.ig-logo {
+	padding-left: 15px;
+	border-left: 2px solid black;
+	margin-left: 30px;
+	margin-right: 15px;
+	margin-top: -15px;
+}
+
+.fa-instagram {
+	font-size: 35px;
+}
+
+.search-bar-box {
+	margin-right: 200px;
+}
+
+
+.fa-search{
+	margin-top: 20px;
+}
+
+
+

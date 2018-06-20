@@ -18,7 +18,7 @@ const PostContainer = props  => {
          <div className="likes-section">
            <div className="likes-icons">
                <i className="far fa-heart"></i>
-               <i className="far fa-comment"></i>
+               <i className="far fa-comment likes-comment-icon"></i>
            </div>
                <span className="likes-total">{props.data.likes} likes</span>
           </div>

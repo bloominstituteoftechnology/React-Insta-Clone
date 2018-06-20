@@ -1,8 +1,13 @@
 .post-container {
-	border: 1px solid black;
+	border: 2px solid lightgray;
 	width: 500px;
-	height: 500px;
+	height: 600px;
 	margin: 0 auto;
+	box-shadow: 10px 10px 8px #3A2E39;
+	background: white;
+	margin-bottom: 40px;
+	border-radius: 4px;
+	margin-top: 4px;
 }
 
 .post-img {
@@ -12,26 +17,33 @@
 
 .heading {
 	display: flex;
+	height: 50px;
 }
 
 .post-thumbnail-img {
-	height: 50px;
+	height: 30px;
 	border-radius: 50px;
+	margin-left: 10px;
+	margin-top: 5px;
 }
 
 .post-name {
 	font-size: 15px;
 	padding-left: 20px;
+	margin-top: 15px;
 }
 
 .likes-section {
 	text-align: left;
+	margin-left: 10px;
 }
 
 .likes-icons {
 	font-size: 20px;
 }
 
-.far fa-comment {
-	margin: 50px;
+
+.likes-comment-icon {
+	margin-left: 10px;
+	transform: scaleX(-1);
 }
