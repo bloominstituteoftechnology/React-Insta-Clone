@@ -3,8 +3,8 @@ import './Login.css';
 import { Button, Form, FormGroup, Input } from 'reactstrap';
 
 class Login extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         this.state = {
             username: '',

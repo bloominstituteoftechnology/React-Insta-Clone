@@ -3,8 +3,8 @@ import LoginPage from '../Login/Login';
 
 const Authenticate = App =>
     class extends React.Component {
-        constructor(props) {
-            super(props);
+        constructor() {
+            super();
 
             this.state = {
                 loggedIn: false
