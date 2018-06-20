@@ -2,57 +2,14 @@ import React, { Component } from 'react';
 import PostContainer from './components/PostContainer';
 import SearchBar from './components/SearchBar';
 import dummyData from './dummy-data';
+import PostsPage from './components/PostsPage';
 
-import './App.css';
-
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      commentsData: [],
-      newPost: '',
-      filteredData: ''
-
-    }
-  }
-  componentDidMount() {
-    this.setState ({ commentsData: dummyData });
-  }
-  
-  handleChange = (e) => {
-    console.log('e target value: ', e.target.value);
-    this.setState({ newPost: e.target.value });
+function App() {
+  return (
+    <PostsPage />
+  )
 }
 
-filterSearch = (e) => {
-  const dataSlice = this.state.commentsData.slice();
-  const filteredState=dataSlice.filter(item => {
-    if(item.username.includes(e.target.value)) {
-      return item;
-    }
-  })
-  this.setState({ filteredData: filteredState })
-}
-
-render() {
-    return (
-      <div className="App">
-        
-        <SearchBar handleSearch={this.filterSearch} />
-        <div > 
-          <PostContainer 
-            passedState = {
-              this.state.filteredData.length >0 ? this.state.filteredData :   this.state.commentsData 
-            }
-            // changeProps={this.handleChange}  
-            // clickProp = {(e) => this.addComment}
-            // name = {this.state.newPost}
-          />
-        </div>
-      </div>
-    );
-  }
-}
 
 export default App;
 
