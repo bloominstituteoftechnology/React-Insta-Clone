@@ -11,6 +11,7 @@ class App extends Component {
       postData: dummyData
     };
   }
+
   render() {
     return (
       <div className="App container">
