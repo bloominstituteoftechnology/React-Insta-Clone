@@ -6,6 +6,16 @@ import gram_logo from './instagram.png'
 class SearchBar extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      inputValue : ''
+    }
+  }
+
+  onInputValueChange = (e) => {
+    this.setState({
+      inputValue : e.target.value
+    })
+    this.props.searchHandler(e);
   }
   render() { 
     return ( 
@@ -20,7 +30,7 @@ class SearchBar extends Component {
             </div>  
           </div>
           <div className="col-md-6 search-field">
-            <input type="text" placeholder="Search by username" />
+            <input type="text" placeholder="Search by username" value={this.state.inputValue} onChange={this.onInputValueChange}/>
           </div>
           <div className="col-md-3 search-icon-group">
             <i className="far fa-compass"></i>
