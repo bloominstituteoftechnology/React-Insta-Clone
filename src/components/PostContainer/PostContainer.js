@@ -15,7 +15,7 @@ class PostContainer extends React.Component {
             postStarter: props.postStarter,
             postComments: props.postComments,
             comment: "",
-            likes: 0
+            likes: props.postLikes
         }
     }
     handleChange = event => {

@@ -17,6 +17,7 @@ class PostsPage extends React.Component {
                         postStarter={post.username}
                         postThumb={post.thumbnailUrl}
                         postImage={post.imageUrl}
+                        postLikes={post.likes}
                     />
                 ))}
             </div>

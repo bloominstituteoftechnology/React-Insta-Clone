@@ -11,13 +11,13 @@ const LikeSection = props => {
         <i className="far fa-heart" />
       </div>
       <div className="like-section" key="likes-container">
-      <div className="like-section-wrapper">{props.likes}</div>
-    </div>
+        <div className="like-section-wrapper">{props.likes}</div>
+      </div>
       <div className="like-section-wrapper">
         <i className="far fa-comment" />
       </div>
     </div>
-  
+
   ];
 };
 
