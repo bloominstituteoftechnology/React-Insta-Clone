@@ -53,7 +53,7 @@ class Login extends React.Component {
                     <FormGroup>
                         <Input value={this.state.password} onChange={this.handlePassword} type="password" name="password" id="examplePassword" placeholder="Password" />
                     </FormGroup>
-                    <Button onClick={this.loginButton}>Log In</Button>
+                    <Button style={this.state.username.length > 0 || this.state.password.length > 0 ? { background: '#3897F0' } : { opacity: .3 }} onClick={this.loginButton}>Log In</Button>
                     <FormGroup className='forgot-form'>
                         <a className='forgot-password' href='#_'>Forgot password?</a>
                     </FormGroup>
