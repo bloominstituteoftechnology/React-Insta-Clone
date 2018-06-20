@@ -1,7 +1,7 @@
 .custom-post {
     border: 1px solid lightgray;
     border-radius: .3rem;
-    box-shadow: .2rem .2rem lightgray;
+    box-shadow: .2rem .2rem .5rem lightgray;
     margin: 1rem 0;
 }
 
