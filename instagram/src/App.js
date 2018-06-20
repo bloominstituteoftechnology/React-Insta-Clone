@@ -1,10 +1,12 @@
 import React from 'react';
 import PostsPage from './components/PostContainer/PostsPage'
 import './App.css';
-
+import Authenticate from './components/Authentication/Authenticate'
 
 const App = props => (
-      <PostsPage />
+  <PostsPage />
 );
 
-export default App;
+const AuthenticatedApp = Authenticate(App)
+
+export default AuthenticatedApp;
