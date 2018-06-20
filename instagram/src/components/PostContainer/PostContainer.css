@@ -48,7 +48,17 @@
     height: 30px;
 }
 
+.heart-icon:hover {
+    cursor: pointer;
+
+}
+
 .comment-icon {
     width: 40px;
     height: 40px;
+}
+
+.comment-icon:hover {
+    cursor: pointer;
+
 }

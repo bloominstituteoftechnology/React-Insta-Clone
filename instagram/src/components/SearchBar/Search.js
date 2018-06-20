@@ -1,6 +1,7 @@
 import React from 'react';
 import './Search.css';
 
+
 const SearchBar = props => {
     return (
         <div className='searchbar'>
@@ -9,11 +10,14 @@ const SearchBar = props => {
                 <img className='instagram' alt='instagram' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png' />
             </div>
             <div>
+                <form onSubmit={props.searchFunction}>
                 <input type='text'
                 className='search'
                 placeholder='Search'
-                onChange={props.toDoHandler}
-                value={props.dataInput}/>
+                value={props.search}
+                onChange={props.handleChange.bind(this)}
+                />
+                </form>
             </div>
             <div className='icons'>
                 <div className='share-container'>

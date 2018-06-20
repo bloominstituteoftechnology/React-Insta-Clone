@@ -11,14 +11,14 @@ const Comments = props => {
           })}
           
           </div>
-        <div><form>
+        <div><form onSubmit={props.addComment}>
             <input type='text'
             className='form'
             placeholder='Add a comment...'
-            value={props.dataInput}
-            onSubmit={props.addComment}
-            
-            /></form>
+            value={props.comment}
+            onChange={props.handleComment}
+            />
+            </form>
     </div>
           
           </div>
@@ -27,3 +27,6 @@ const Comments = props => {
 }
 
 export default Comments;
+
+/* value={props.comment}
+            onChange={props.handleComment}*/

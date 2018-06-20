@@ -10,47 +10,66 @@ class App extends Component {
     super();
     this.state = {
       data: [],
+      comment: '',
+      search: ''
     }
   }
 
-  componentDidMount() {
-    this.setState({
-      data: dummyData,
-      dataInput: ''
-    });
-  }
 
 
-  addNewComment = (event, index) => {
-    event.preventDefault;
-    let newComment = {text: event.target.value, username: 'user'};
-    let newData = this.state.data.slice();
-    newData[index].comments.push(newComment);
-    this.setState({data: newData});
+  addNewComment = (event) => {
+    console.log('this');
+    let newComment = {text: this.state.comment, username: 'user'}; 
+    console.log(newComment);
+    let newData = this.state.data.slice(); 
+    let commentArr= newData.map(item => {
+      return item[0].comments;
+    })
+    commentArr.push(newComment);
+    this.setState({data: newData}); 
+    event.preventDefault();
   }
 
   likePost = (i) => {
-   
     let newData = this.state.data.slice();
     newData[i].likes += 1;
     this.setState({data: newData});
   }
 
-  searchFunc = (event) => {
-    const result = this.state.data.filter(object => 
-      event.target.value === object.username);
-      console.log(result);
-    this.setState({data: result});
+  handleComment = event => {
+    this.setState({comment: event.target.value});
+    event.preventDefault;
   }
+
+  handleChange = event => {
+      this.setState({search: event.target.value})
+  }
+  searchFunc = event => {
+    console.log('this');
+    const updatedList = this.state.data.slice;
+    updatedList.filter(item => {
+      return item.username.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+    });
+      console.log(updatedList);
+    this.setState({search: updatedList});
+    event.preventDefault();
+  }
+
+  componentDidMount() {
+    this.setState({
+      data: dummyData,  
+    });
+  }
+
 
   render() {
     return (
       <div className="App">
         <header className="searchheader">
-          <SearchBar searchFunc={this.searchFunc} />
+          <SearchBar  handleChange={this.handleChange} searchFunction={this.searchFunc} search={this.state.search}/>
         </header>
         
-        <PostContainer data={this.state.data} dataInput={this.state.dataInput}  addComment={this.addNewComment} likePost={this.likePost} />
+        <PostContainer data={this.state.data} comment={this.state.comment} handleComment={this.handleComment} addComment={this.addNewComment} likePost={this.likePost} />
       </div>
     );
   }
