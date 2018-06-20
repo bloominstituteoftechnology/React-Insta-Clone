@@ -1,29 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer";
-import dummyData from "./dummy-data";
+import PostsPage from './components/PostContainer/PostsPage'
+import Authenticate from './components/Authenticate/Authenticate'
 
 class App extends Component {
 
   constructor() {
     super();
-    this.state = {
-      postData: dummyData
-    };
+    this.state = {};
   }
 
   render() {
     return (
       <div className="app">
-      <SearchBar />
-      {this.state.postData.map(post => (
-          <PostContainer post={post} key={Math.random()} />
-        ))}
+        <PostsPage />
       </div>
 
     );
   }
 }
 
-export default App;
+export default Authenticate(App);

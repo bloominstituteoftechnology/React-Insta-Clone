@@ -11,17 +11,38 @@ class CommentSection extends Component  {
         }
     }
 
-    inputComment = event => {
-        this.setState({ comment: event.target.value });
+    componentDidMount() {
+        const id = this.props.postId;
+        if (localStorage.getItem(id)) {
+          this.setState({
+            comments: JSON.parse(localStorage.getItem(this.props.postId))
+          });
+        } else {
+          this.inputComment();
+        }
+      }
+    
+      componenetWillUnmount() {
+        this.inputComment();
+      }
+
+    inputComment = () => {
+        localStorage.setItem(
+          this.props.postId,
+          JSON.stringify(this.state.comments)
+        );
       };
 
-    handleInputComment=(event)=>{
+    handleSubmitComment=(event)=>{
 		event.preventDefault();
         const newComment={ username: 'blkfltchr', text: this.state.comment };
         const comments = this.state.comments.slice();
         comments.push(newComment);
-		this.setState({comments, comment: ''});
-	}
+        this.setState({comments, comment: ''});
+        setTimeout(() => {
+            this.inputComment();
+          }, 500);
+	};
 	
     handleInputComment =(event)=>{
 		this.setState({comment: event.target.value});
