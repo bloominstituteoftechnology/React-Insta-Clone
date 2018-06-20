@@ -31,7 +31,13 @@ class CommentSection extends React.Component {
                     </div>
                 ))}
                 <form className="comment-form" onSubmit={this.addNewComment}>
-                    <input type="text" className="comment-input" onChange={this.changeInput} placeholder={this.state.placeholder} value={this.state.input} />
+                    <input
+                      type="text"
+                      className="comment-input"
+                      onChange={this.changeInput}
+                      placeholder={this.state.placeholder}
+                      value={this.state.input}
+                    />
                 </form>
             </div>
         )    
