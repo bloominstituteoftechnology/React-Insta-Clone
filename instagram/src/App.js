@@ -17,6 +17,20 @@ class App extends Component {
     this.setState({dummyData: dummyData})
   }
 
+  toggleSelected = event => {
+    event.preventDefault();
+    let totalData = this.state.dummyData.slice();
+    console.log('dummy: ' + this.state.dummy)
+    totalData = totalData.filter(total => total.username === this.state.dummy); 
+    console.log('dummy: ' + this.state.dummy)
+    console.log('totalData: ' + totalData )    
+    this.setState({ dummyData: totalData, dummy: ""})    
+  }
+
+  searchSelected = event => {
+    event.preventDefault();
+    this.setState({ dummy: event.target.value})
+  }
 
 
   render() {
@@ -27,7 +41,7 @@ class App extends Component {
             <i className="fab fa-instagram" style={{ fontSize: '50px' }}></i>
             <h1>Instagram</h1>
           </div>
-          <SearchBar />
+          <SearchBar value={this.state.dummy} onChange={this.searchSelected} toggleSelected={this.toggleSelected} />
           <div className="right-Nav">
             <i className="far fa-compass" style={{ fontSize: '35px' }}></i>
             <i className="far fa-heart" style={{ fontSize: '35px' }}></i>
