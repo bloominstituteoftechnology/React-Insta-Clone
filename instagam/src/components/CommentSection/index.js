@@ -46,15 +46,17 @@ class CommentSection extends React.Component {
             })}
             <hr />
             <div className='footerCom'>
-              <input
-                    type='text'
-                    placeholder='add comment here...'
-                    name='comment'
-                    onChange={this.handleChange}
+                <form onSubmit={this.addcomment} >
+                    <input
+                        type='text'
+                        placeholder='add comment here...'
+                        name='comment'
+                        onChange={this.handleChange}
                     />
-                    <button  value="Submit" onClick={this.addcomment} />
-                    </div>
-            {/* </form> */}
+                        {/* <button  value="Submit" onClick={this.addcomment} /> */}
+                        
+                </form>
+            </div>
         </div>
         )
     }
