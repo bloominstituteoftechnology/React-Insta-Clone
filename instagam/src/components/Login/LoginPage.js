@@ -1,6 +1,7 @@
 import React from 'react';
+import './style.css';
 
-class LoginPage extends Component {
+class LoginPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -15,26 +16,34 @@ class LoginPage extends Component {
         const user = this.state.username;
         localStorage.setItem(
             // set the user info: username: ?
-            
+            'username', user
         );
         window.location.reload();
     }
     render() { 
         return ( 
-            <div>
-                <input type='text'
-                    value={this.state.username}
-                    name='username'
+            <div className='loginPage'>
+            <div className='loginWrapper'>
+                <div className='inputField'>
+                    <input type='text'
+                        value={this.state.username}
+                        name='username'
+                        onChange = {this.handleChange}
+                    />
+                </div>
+                <div className='inputField'>
+                    <input type='password'
+                    value={this.state.password}
+                    name='password'
                     onChange = {this.handleChange}
-                />
-                <input type='password'
-                value={this.state.password}
-                name='password'
-                onChange = {this.handleChange}
-                />
-                <button onclick={this.handleSubmit}>
+                    />
+                </div>
+                <div className='inputField'>
+                <button onClick={this.handleSubmit}>
                 Log In  
                 </button>
+                </div>
+                </div>
             </div>
          )
     }
