@@ -29,8 +29,7 @@ class CommentSection extends Component {
                 )}
                 <CommentInput commentKey={this.state.commentKey}
                               addNewComment={this.state.addNewComment}
-                              updateComment={this.state.updateComment}
-                              commentText={this.state.commentText} />
+                              updateComment={this.state.updateComment} />
             </div>
         );
     }

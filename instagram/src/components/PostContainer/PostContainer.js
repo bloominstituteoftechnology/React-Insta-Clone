@@ -18,8 +18,7 @@ const PostContainer = props => {
             <CommentSection commentInfo={props.postInfo.comments}
                             commentKey={props.commentKey}
                             addNewComment={props.addNewComment}
-                            updateComment={props.updateComment}
-                            commentText={props.commentText} />
+                            updateComment={props.updateComment} />
         </div>
     );
 }

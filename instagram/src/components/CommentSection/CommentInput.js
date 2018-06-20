@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const CommentInput = props => {
-  return (
-    <form onSubmit={() => props.addNewComment(props.commentKey, {})}>
-      <input type="text" 
-              placeholder="Add comment... "
-              value={props.commentText}
-              onChange={props.updateComment} />
-    </form>
-  );
-};
+class CommentInput extends Component {
+    constructor(props) {
+      super(props);
+      this.handleCommentInput = this.addNewComment2(props.addNewComment);
+      this.state = {
+        updateComment: props.updateComment,
+      }
+    }
+
+    addNewComment2(inputFunction) {
+      let id = this.props.commentKey;
+      return function(event) {
+        inputFunction(event, id);
+      }
+    }
+    render() {
+      return (
+        <form onSubmit={this.handleCommentInput} >
+          <input type="text" 
+                  placeholder="Add comment... "
+                  onChange={this.state.updateComment} />
+        </form>
+      );
+    };
+  }
+
 
 CommentInput.propTypes = {
   commentKey: PropTypes.number,
 }
 
 export default CommentInput;
+

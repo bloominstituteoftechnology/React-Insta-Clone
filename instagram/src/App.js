@@ -17,21 +17,21 @@ class App extends Component {
     this.setState({data: dummyData})
   }
 
-  updateComment = event => {
-    this.setState({comment: event.target.value})
+  updateComment = event => {  
+    this.setState({comment: event.target.value});
   }
   
-  addNewComment = (event, ...rest) => {
+  addNewComment = (event, index) => {
     event.preventDefault();
     let newData = this.state.data.slice();
     let newComment = {
       username: "GottaPayTheTrollToll291",
-      text: rest[1]
+      text: this.state.comment,
     }
-    newData[rest[0]].comments.push(newComment);
+    console.log(this.state.comment, index);
+    newData[index].comments.push(newComment);
 
     this.setState({data: newData});
-
   }
 
   render() {
@@ -47,8 +47,7 @@ class App extends Component {
                            key={index}
                            commentKey={index}
                            addNewComment={this.addNewComment}
-                           updateComment={this.updateComment}
-                           commentText={this.state.comment} />
+                           updateComment={this.updateComment} />
           )}
         </div>
       </div>
