@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
-
+import Authenticate from './Authentication/Authenticate';
 
 class App extends Component {
   constructor() {
@@ -44,5 +44,6 @@ class App extends Component {
   }
 }
 
+const ValidatedApp = Authenticate(App);
 
-export default App;
+export default ValidatedApp;
