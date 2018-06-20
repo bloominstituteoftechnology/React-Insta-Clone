@@ -1,6 +1,5 @@
 .posts-container {
-    max-width: 1080px;
+    max-width: 400px;
     margin: 20px auto;
-    /* border: 1px solid lightgrey; */
     border-radius: 5px;
 }

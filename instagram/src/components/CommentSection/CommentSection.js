@@ -23,7 +23,7 @@ class CommentSection extends React.Component {
         // Else setComments()
         if (localStorage.getItem(id)) {
             this.setState({
-                comments: JSON.parse(localStorage.getItem(this.props.postId))
+                comments: JSON.parse(localStorage.getItem(id))
             });
         } else {
             this.setComments();

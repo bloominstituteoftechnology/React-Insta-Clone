@@ -23,6 +23,10 @@
     margin: 0 20px;
 }
 
+.post-image img {
+    width: 100%;
+}
+
 .post-nav {
     font-size: 28px;
     width: 150px;
