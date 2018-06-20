@@ -8,7 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state= {
-      dummyData: []
+      dummyData: [],
+      dummy: ""
     }
   }
 
@@ -16,25 +17,28 @@ class App extends Component {
     this.setState({dummyData: dummyData})
   }
 
- 
+
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <div className="left-Nav">
-            <i class="fab fa-instagram" style={{ fontSize: '50px' }}></i>
+            <i className="fab fa-instagram" style={{ fontSize: '50px' }}></i>
             <h1>Instagram</h1>
           </div>
           <SearchBar />
           <div className="right-Nav">
-            <i class="far fa-compass" style={{ fontSize: '35px' }}></i>
-            <i class="far fa-heart" style={{ fontSize: '35px' }}></i>
-            <i class="far fa-user" style={{ fontSize: '35px' }}></i>  
+            <i className="far fa-compass" style={{ fontSize: '35px' }}></i>
+            <i className="far fa-heart" style={{ fontSize: '35px' }}></i>
+            <i className="far fa-user" style={{ fontSize: '35px' }}></i>  
           </div>          
         </header>
         <div className="container">
-          <PostContainer datas={this.state.dummyData} />
+          <PostContainer 
+          datas={this.state.dummyData} 
+
+          />
         </div>
       </div>
     );

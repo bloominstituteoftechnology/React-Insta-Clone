@@ -9,10 +9,10 @@ const Post = props => {
         </div>
         <img className="insta-pic" src={props.post.imageUrl} alt={props.post.username} />
         <div className="below-insta-pic">
-            <i class="far fa-heart" style={{ fontSize: '35px' }}></i>
-            <i class="far fa-comment" style={{ fontSize: '35px' }}></i>
+            <i class="far fa-heart" style={{ fontSize: '25px' }}></i>
+            <i class="far fa-comment" style={{ fontSize: '25px' }}></i>
         </div>
-        {props.post.likes} likes
+        <p className="likes"><strong>{props.post.likes}</strong> likes</p>
     </div>
 
     )

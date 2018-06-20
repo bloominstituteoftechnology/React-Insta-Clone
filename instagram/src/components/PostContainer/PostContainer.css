@@ -1,7 +1,9 @@
 .insta-top {
     display: flex;
     font-size: 15px;
-    margin-left: 110px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-left: 10px;
 }
 
 .insta-top img {
@@ -10,6 +12,34 @@
     height: 50px;
 }
 
+.insta-top h1 {
+    margin-bottom: 0;
+    font-size: 23px;
+    padding-left: 10px;
+}
+
 .insta-pic {
     width: 100%;
+}
+
+.individual-post {
+    border: 1px solid #d3d3d3;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.below-insta-pic {
+    display: flex;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+.likes {
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.far {
+    padding-right: 15px;
 }

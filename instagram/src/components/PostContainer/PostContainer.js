@@ -5,9 +5,16 @@ import Post from './Post';
 
 const PostContainer = props => {
 return <div>{props.datas.map(data => 
-    <div>
-        <Post post={data}/>
-        <CommentSection comments={data.comments}/>
+    <div className="individual-post">
+        <Post 
+        post={data}
+        />
+        <CommentSection 
+        newValue={props.newValue} 
+        addComment={props.addComment} 
+        addNewComment={props.addNewComment} 
+        comments={data.comments}
+        />
     </div>)}
 </div>
 };
