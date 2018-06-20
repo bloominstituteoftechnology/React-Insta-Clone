@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import { Card, CardImg, CardBody,
-  CardTitle } from 'reactstrap';
+  CardTitle, Button } from 'reactstrap';
 
   /*Need to come back and add prop types*/
 
@@ -16,14 +16,14 @@ const PostContainer = props => {
         <CardBody>
         <div className="post-buttons">
         <div className="left-buttons">
-        <i className="far fa-heart like-button" onClick={props.toggleLike}></i>
+        <a className="like-button mx-2" onClick={props.toggleLike}><i className="far fa-heart"></i></a>
         {/*<i className="fas fa-heart like-selected"></i>*/}
-        <i class="far fa-comment"></i>
+        <i className="far fa-comment" ></i>
         </div>
-        <i class="far fa-bookmark"></i>
+        <i className="far fa-bookmark" onClick={props.toggleLike}></i>
         {/*<i class="fas fa-bookmark"></i>*/}
         </div>
-        <h5>{props.post.likes} likes</h5>
+        <h5 onClick={props.toggleLike}>{props.post.likes} likes</h5>
         <CommentSection comments={props.post.comments} />
         <h6>{props.post.timestamp}</h6>
         <hr/>

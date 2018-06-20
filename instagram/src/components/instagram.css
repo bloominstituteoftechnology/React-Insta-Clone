@@ -39,6 +39,13 @@
   width: 500px;
 }
 
+.like-button {
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid;
+}
+
 .like-selected {
   color: red;
 }
@@ -46,4 +53,5 @@
 .post-buttons {
   display: flex;
   justify-content: space-between;
+  font-size: 24px
 }
