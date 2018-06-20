@@ -9,5 +9,5 @@ import Login from './components/Login/Login'
 const AuthenticatedApp = Authenticate(App)
 
 //ReactDOM.render(<App />, document.getElementById('root'));
-// ReactDOM.render(<AuthenticatedApp />, document.getElementById('root'));
-ReactDOM.render(<Login />, document.getElementById('root'));
+ReactDOM.render(<AuthenticatedApp />, document.getElementById('root'));
+// ReactDOM.render(<Login />, document.getElementById('root'));
