@@ -6,24 +6,56 @@ import compass from '../../images/compass.png';
 import heart from '../../images/heart.png';
 import person from '../../images/person.png';
 
-const SearchBar = props => {
+class SearchBar extends React.Component {
+    constructor(props) {
+        super(props);
+        console.log(props.username, "propsuser")      
+        this.state = {
+            searches: props.username,
+            search: ""       
+        }           
+    }
+    
+    eventHandler = e => {
+        console.log(e);
+        this.setState ({search : e.target.value});
+    }
+
+    filterSearch = e => {
+        e.preventDefault();
+        let usernames = this.state.searches;
+        if (usernames===this.state.username)
+        usernames.filter(usernames);   
+        this.setState({usernames});
+    }
+
+    render(){
     return (
+        <div className = "search-container">
         <div className = "search-contain">
-        <span className = "search-left">
+        <div className = "search-left">
             <img className ="camera" src = {camera} alt = "cam thumbnail"/>
             <img className ="instalogo" src = {instalogo} alt = "instalogo thumbnail"/>
-        </span>
-            <input className = "search-mid"
+        </div>
+        
+        <form className = "mid-text" onSubmit = {this.filterSearch}>
+            <input 
                 type = "text"           
                 placeholder = "search"
+                value = {this.state.search}
+                onChange = {this.eventHandler}
             />
-        <span className = "search-right">
+        </form>
+        
+        <div className = "search-right">
             <img className ="compass" src = {compass} alt = "compass thumbnail"/>
-            <img className ="heart" src = {heart} alt = "heart thumbnail"/>
+            <img className ="heart-search" src = {heart} alt = "heart thumbnail"/>
             <img className ="person" src = {person} alt = "person thumbnail"/>
-        </span>
+        </div>
+        </div>
         </div>
     )
+}
 }
  
 export default SearchBar;

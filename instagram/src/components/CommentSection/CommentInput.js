@@ -11,8 +11,7 @@ const CommentInput = props => {
             placeholder = "Add a comment..."
             value = {props.value}
             />
-            </form>
-            {/* <button onClick ={props.addComment}>Add Comment </button> */}
+        </form>
         </div>
     )
 }

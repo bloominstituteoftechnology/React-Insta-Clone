@@ -2,8 +2,12 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 import './Post.css';
-import heart from '../../images/heart.png';
-import talk from '../../images/talk.png';
+import Likes from './Likes';
+
+// import heart from '../../images/heart.png';
+// import talk from '../../images/talk.png';
+
+
 
 const Post = props => {
     return (
@@ -17,13 +21,10 @@ const Post = props => {
            <div>
                 <img className = "url" src = {props.post.imageUrl} alt = "user url" />
            </div>
-           <div className= "icons">
-               <img className ="heart" src = {heart} alt = "heart thumbnail"/>
-               <img className ="talk" src = {talk} alt = "talk thumbnail" />
+           <div>
+               <Likes like = {props.post.likes}/>
            </div>
-           <div className ="likes">
-               {props.post.likes} likes
-           </div>
+           
            <div>
                 <CommentSection comments = {props.post.comments}/>
             </div>

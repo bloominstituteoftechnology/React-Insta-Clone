@@ -1,0 +1,17 @@
+.icons {
+    display: flex;
+    justify-content: flex-start;
+}
+.heart {
+    height: 5%;
+    width: 5%; 
+}
+.talk {
+    height: 5%;
+    width: 5%;
+}
+.likes {
+    margin: 1%;
+    text-align: left;
+    font-weight: bold;
+}

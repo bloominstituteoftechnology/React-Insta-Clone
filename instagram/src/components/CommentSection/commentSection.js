@@ -10,8 +10,7 @@ class CommentSection extends React.Component {
             comments: props.comments,
             comment: "",
             placeholder: "add a comment..."
-        }
-        
+        }       
     }
 
     eventHandler = e => {
