@@ -1,0 +1,26 @@
+.login{
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    height: 400px;
+    text-transform: capitalize;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.432);
+}
+.login input,
+.login input:focus{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 25px;
+    margin: 10px auto;
+    outline: none;
+    font-size: 16px;
+    
+}
+.login form{
+    text-align: start;
+}

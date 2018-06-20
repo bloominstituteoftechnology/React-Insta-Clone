@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import dummyData from './components/dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
+import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './components/Authentication/Authentication';
+
 import './App.css';
+import Login from './components/Login/Login';
 
 class App extends Component {
   constructor(){
@@ -13,6 +15,7 @@ class App extends Component {
     };
     this.addNewComment = this.addNewComment.bind(this);
   }
+
   addNewComment(e, index){
     const obj = {
                   text: e.target.value,
@@ -38,25 +41,16 @@ class App extends Component {
     this.setState({
       data: dummyData
     })
-    window.localStorage['app__data'] = JSON.stringify(this.state.data[0]);
   }
   
 
   render() {
     return (
       <div className="app">
-        <SearchBar />
-        {this.state.data.map((i, index) => (<PostContainer 
-            key={index} 
-            index={index}
-            data={i} 
-            addComment={this.addNewComment}
-            likes = {index === 0 ?  null: index}
-            addLike={this.addNewLike}
-            />))}
+        <PostsPage state={this.state} addNewComment={this.addNewComment} addNewLike={this.addNewLike}/>
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
