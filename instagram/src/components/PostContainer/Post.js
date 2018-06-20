@@ -22,10 +22,10 @@ class Post extends React.Component {
         return (
             <div>
                 <div className="insta-top">
-                    <img src={this.state.post.thumbnailUrl} alt={this.state.post.username} />
+                    <img src={this.state.post.thumbnailUrl} />
                     <h1>{this.state.post.username}</h1>  
                 </div>
-                <img className="insta-pic" src={this.state.post.imageUrl} alt={this.state.post.username} />
+                <img className="insta-pic" src={this.state.post.imageUrl} />
                 <div className="below-insta-pic">
                     <i
                     onClick={this.addLikes} 

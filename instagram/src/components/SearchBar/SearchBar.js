@@ -3,10 +3,10 @@ import './SearchBar.css';
 
 const SearchBar = (props) => {
     return (
-        <form onSubmit={props.toggleSelected}>
+        <form>
              <input
-                value={props.value} 
-                onChange={props.onChange}
+                type="text"
+                onKeyDown={props.toggleSelected}
                 className="searchbar"
                 placeholder="Search here"    
              />

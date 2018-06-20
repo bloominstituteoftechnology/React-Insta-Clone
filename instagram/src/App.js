@@ -9,7 +9,7 @@ class App extends Component {
     super();
     this.state= {
       dummyData: [],
-      dummy: ""
+      dummy: []
     }
   }
 
@@ -18,20 +18,13 @@ class App extends Component {
   }
 
   toggleSelected = event => {
-    event.preventDefault();
-    let totalData = this.state.dummyData.slice();
-    console.log('dummy: ' + this.state.dummy)
-    totalData = totalData.filter(total => total.username === this.state.dummy); 
-    console.log('dummy: ' + this.state.dummy)
-    console.log('totalData: ' + totalData )    
-    this.setState({ dummyData: totalData, dummy: ""})    
+   const totalData = this.state.dummyData.filter(total => {
+      if (total.username.includes(event.target.value)) {
+        return total;
+      }
+    }); 
+    this.setState({ dummy: totalData })    
   }
-
-  searchSelected = event => {
-    event.preventDefault();
-    this.setState({ dummy: event.target.value})
-  }
-
 
   render() {
     return (
@@ -41,7 +34,7 @@ class App extends Component {
             <i className="fab fa-instagram" style={{ fontSize: '50px' }}></i>
             <h1>Instagram</h1>
           </div>
-          <SearchBar value={this.state.dummy} onChange={this.searchSelected} toggleSelected={this.toggleSelected} />
+          <SearchBar toggleSelected={this.toggleSelected} />
           <div className="right-Nav">
             <i className="far fa-compass" style={{ fontSize: '35px' }}></i>
             <i className="far fa-heart" style={{ fontSize: '35px' }}></i>
@@ -49,8 +42,11 @@ class App extends Component {
           </div>          
         </header>
         <div className="container">
-          <PostContainer 
-          datas={this.state.dummyData} 
+          <PostContainer datas={
+            this.state.dummy.length > 0
+              ? this.state.dummy
+              : this.state.dummyData
+          }
 
           />
         </div>

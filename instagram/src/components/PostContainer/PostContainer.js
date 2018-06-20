@@ -7,6 +7,7 @@ const PostContainer = props => {
 return <div>{props.datas.map(data => 
     <div className="individual-post">
         <Post
+        key={data.imageUrl}
         post={data}
         />
         <CommentSection 
