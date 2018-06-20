@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
 import dummyData from './dummy-data.js'
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
 import moment from 'moment'
+import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
   constructor(){
@@ -108,12 +106,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
-        <SearchBar searchHandler={this.searchHandler}/>
-        <div className="app-container">
-          {this.state.data.map( (postObj,postIndex) => <PostContainer key={postObj.timestamp} postObj={postObj} postIndex={postIndex} addNewComment={this.addNewComment} updateLikes={this.updateLikes}/>)}
-       </div>
-      </div>
+      <PostsPage searchHandler={this.searchHandler} stateData={this.state.data} addNewCommentHandler={this.addNewComment} updateLikesHandler={this.updateLikes}/>
     );
   }
 }
