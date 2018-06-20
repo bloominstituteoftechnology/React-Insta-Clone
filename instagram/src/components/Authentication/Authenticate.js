@@ -11,6 +11,14 @@ const Authenticate = App =>
             }
         }
 
+        componentDidMount() {
+            if (localStorage.getItem('username') && localStorage.getItem('password')) {
+                this.setState({ loggedIn: true });
+            } else {
+                this.setState({ loggedIn: false });
+            }
+        }
+
         render() {
             if (this.state.loggedIn) { return <App /> }
             else { return <LoginPage /> }
