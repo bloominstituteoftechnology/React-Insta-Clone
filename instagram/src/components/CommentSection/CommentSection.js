@@ -11,12 +11,15 @@ const CommentSection = props => {
                 <div className="comment-text">
                     <strong>{comments.username}</strong>:
                     {comments.text}
+                   
                 </div>
+               
             )}
             
             <div className="comment-box">
-       <input placeholder="Add a Comment Here..." name="textbox" className="textbox"/>
-    	 </div> 
+       				<input placeholder="Add a Comment Here..." name="textbox" className="textbox"/>
+    	 			  
+    	 			</div> 
         </div>
     );
 }
@@ -28,6 +31,7 @@ CommentSection.propTypes = {
         thumbnailUrl: PropTypes.string,
         imageUrl: PropTypes.string,
         likes: PropTypes.number,
+        timestamp: PropTypes.string,
         comments: PropTypes.array,
     })
 };
