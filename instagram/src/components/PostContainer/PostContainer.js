@@ -7,11 +7,24 @@ const PostContainer = (props) => {
     // console.log(props);
     return (
       <div className="container">
-        <h1>{props.data.username}</h1>
-        <CommentSection comments={props.data.comments} change={props.change} input={props.input} addinput={props.addinput}/>
+        <div className="container__heading">
+            <img src={props.data.thumbnailUrl} className="container__heading--photo" alt="thumbnail"/>
+            <h1 className="container__heading--h1">{props.data.username}</h1>
+        </div>
+        <img src={props.data.imageUrl} alt="post"   className="container__img"/>
+        <i 
+            className="far fa-heart"
+            onClick={(e) => props.addLike(props.index)}
+            >
+            <span>{props.data.likes} likes </span>
+        </i>
+        <i className="far fa-comment"></i>
+        <CommentSection comments={props.data.comments} 
+                        index={props.index} 
+                        addComment={props.addComment}/>
       </div>
     );
-  
+
 };
 PostContainer.propTypes ={
     data: PropTypes.shape({

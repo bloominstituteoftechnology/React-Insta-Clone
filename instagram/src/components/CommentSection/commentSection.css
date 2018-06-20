@@ -1,0 +1,25 @@
+.comment span{
+    /* border: 1px solid red; */
+    font-weight: bold;
+}
+.comment p{
+    font-size: 14px;
+}
+.comment{
+    padding: 0 0 20px 20px;
+    margin-top: 40px;
+}
+.comment input,
+.comment input:visited,
+.comment input:focus{
+    outline: none;
+    width: 90%;
+    margin: auto;
+    padding: 10px 2px;
+    border: none;
+    border-top: 1px solid gray;
+    font-size: 16px;
+}
+.comment input::placeholder{
+    text-transform: capitalize;
+}

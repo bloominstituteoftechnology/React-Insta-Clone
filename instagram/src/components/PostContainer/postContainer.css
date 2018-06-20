@@ -1,5 +1,43 @@
 .container{
     width: 600px;
-    margin: auto;
-    text-align: center;
+    border: 1px solid rgb(207, 207, 207);
+    margin: 60px auto auto auto;
+    padding: 0 0;
+    background-color: white;
+}
+.container__heading{
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 10px;
+}
+.container__heading--h1{
+    font-size: 16px;
+    font-weight: 600;
+    display: inline;
+    margin-left: 30px;
+
+}
+.container__heading--photo{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.container__img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.container i{
+    position: relative;
+    margin: 0 30px;
+    font-size: 23px;
+    cursor: pointer;
+}
+.container i span{
+    position: absolute;
+    top: 30px;
+    left: -10px;
+    font-size: 16px;
+    width: 150px;
+    font-weight: bold;
 }
