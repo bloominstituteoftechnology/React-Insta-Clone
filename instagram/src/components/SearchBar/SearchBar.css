@@ -10,3 +10,6 @@
 .search-header input {
     margin: auto 0;
 }
+.search-header .div2 {
+    justify-content: space-between
+}
