@@ -18,6 +18,7 @@ class PostsPage extends Component {
     //post methods
     this.handleCommentInput = this.handleCommentInput.bind(this);
     this.addComment = this.addComment.bind(this);
+    this.handleCommentDelete = this.handleCommentDelete.bind(this);
     this.handleLike = this.handleLike.bind(this);
   }
 
@@ -101,6 +102,27 @@ class PostsPage extends Component {
     }
   }
 
+  handleCommentDelete(event, postId, commentId) {
+    let returnArr = this.state.posts.slice();
+    let targetPost = returnArr.find(post => post.id === postId);
+
+    if (targetPost) {
+      let commentArr = targetPost.comments.slice();
+      let deleteIndex = -1;
+      for (let i in commentArr) {
+        if (commentArr[i].id === commentId) {
+          deleteIndex = i;
+          break;
+        }
+      }
+      if (deleteIndex > -1) {
+        commentArr.splice(deleteIndex, 1);
+        targetPost.comments = commentArr;
+        this.setState({ posts: returnArr });
+      }
+    }
+}
+
   //lifestyle methods
 
   componentDidMount() {
@@ -159,6 +181,7 @@ class PostsPage extends Component {
             handleCommentInput={this.handleCommentInput}
             handleLike={this.handleLike}
             addComment={this.addComment}
+            handleCommentDelete = {this.handleCommentDelete}
           />
         );
       });

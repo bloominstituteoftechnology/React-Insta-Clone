@@ -10,12 +10,14 @@ class PostContainer extends React.Component {
     this.handleCommentInput = this.withIdArgument(props.handleCommentInput);
     this.addComment = this.withIdArgument(props.addComment);
     this.handleLike = this.withIdArgument(props.handleLike);
+    this.handleCommentDelete = this.withIdArgument(props.handleCommentDelete);
   }
 
   withIdArgument(f) {
     let id = this.props.post.id;
-    return function(event) {
-      f(event, id);
+    
+    return function(event, ...args) {
+      f(event, id, ...args);
     }
   }
 
@@ -63,7 +65,7 @@ class PostContainer extends React.Component {
                 (this.props.post.likes > 1 ? " likes" : " like")}
             </h3>
           </div>
-          <CommentSection comments={this.props.post.comments} />
+          <CommentSection comments={this.props.post.comments} handleCommentDelete={this.handleCommentDelete} />
           <div className="time-stamp">
             <p>{this.props.post.timestamp}</p>
           </div>
