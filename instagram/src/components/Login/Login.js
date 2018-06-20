@@ -13,7 +13,7 @@ class Login extends Component {
         return localStorage.getItem("userName") === null ?  "" :  localStorage.getItem("userName");
     }
 
-    userNameHandler= e => {
+    userNameHandler = e => {
         this.setState({userName: e.target.value});
     }
 
@@ -25,14 +25,14 @@ class Login extends Component {
       
     render(){
         return (
-            <div className="login">
+            <form className="login" onSubmit={this.login}>
                UserName: <input className="user-name"
                                 type="text"
                                 value={this.state.userName}
                                 onChange={this.userNameHandler} />
                 Password: <input type="password"/>
-                <button onClick={this.login}>Login</button>
-            </div>
+                <button type="submit">Login</button>
+            </form>
         );
     }
 
