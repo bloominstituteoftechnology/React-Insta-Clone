@@ -24,7 +24,7 @@ class PostContainer extends React.Component {
             <div className="custom-post">
                 <div className="post-header">
                     <img src={this.state.dummyData.thumbnailUrl} alt="user thumbnail"/>
-                    <p>{this.state.dummyData.username}</p>
+                    <p><strong>{this.state.dummyData.username}</strong></p>
                 </div>
                 <div className="post-img">
                     <img src={this.state.dummyData.imageUrl} alt="post content"/>
@@ -34,7 +34,7 @@ class PostContainer extends React.Component {
                         <i onClick={this.addLikes} className="fa">&#xf08a;</i>
                         <i className="fa">&#xf0e5;</i>
                     </div>
-                    <p align="left">{this.state.likes} likes</p>
+                    <p className="custom-likes" align="left"><strong>{this.state.likes} likes</strong></p>
                     <CommentSection dummyData={this.state.dummyData.comments} />
                 </div>            
             </div>

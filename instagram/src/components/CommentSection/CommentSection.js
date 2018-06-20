@@ -26,12 +26,12 @@ class CommentSection extends React.Component {
             <div className="comment-section">
                 {this.state.comments.map(comment => (
                     <div className="custom-comment" key={Math.random()}>
-                        <span><strong>{comment.username}</strong> {comment.text}</span>
+                        <p><strong>{comment.username}</strong> {comment.text}</p>
                         {/* <span>{comment.text}</span> */}
                     </div>
                 ))}
-                <form onSubmit={this.addNewComment}>
-                    <input type="text" onChange={this.changeInput} placeholder={this.state.placeholder} value={this.state.input} />
+                <form className="comment-form" onSubmit={this.addNewComment}>
+                    <input type="text" className="comment-input" onChange={this.changeInput} placeholder={this.state.placeholder} value={this.state.input} />
                 </form>
             </div>
         )    
