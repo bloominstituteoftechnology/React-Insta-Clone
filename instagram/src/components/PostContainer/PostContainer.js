@@ -2,7 +2,7 @@ import React from 'react' ;
 import './post-container.css' ;
 import PostCard from './PostCard' ;
 
-const ContentContainer = (props) => {
+const PostContainer = (props) => {
     return(
         <div className="post-container">
             {props.propUserData.map((obj, index) => {
@@ -14,4 +14,4 @@ const ContentContainer = (props) => {
         </div>
     )
 }
-export default ContentContainer ;
+export default PostContainer ;

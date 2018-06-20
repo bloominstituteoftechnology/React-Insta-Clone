@@ -15,7 +15,7 @@ class CommentContainer extends React.Component {
         return(
             <div className="daily-standup">
                 <h1>daily-standup</h1>
-                <Comment />
+                <Comment propPropComments={this.state.comments}/>
             </div>
         )
     }
@@ -29,7 +29,9 @@ const Comment = (props) => {
         <div className="comment-container">
             Placeholder: "CommentSection"
 
-            {props.propComments.map((comment, index) => {
+            {/* {props.propComments.map((comment, index) => { */}
+            {props.propPropComments.map((comment, index) => {
+
                 return(
                     <div className="comment" key={index}>
                     
@@ -45,4 +47,4 @@ const Comment = (props) => {
     )
 }
 //*/}
-export default Comment ;
+export default CommentContainer ;
