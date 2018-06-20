@@ -31,8 +31,9 @@ class CommentSection extends React.Component {
   };
 
   onCommentSubmit = event => {
-    console.log(this.state.comment);
     event.preventDefault();
+    this.props.addComment(this.props.postId, this.state.comment);
+    this.setState({ comment: '' });
   };
 
   render() {

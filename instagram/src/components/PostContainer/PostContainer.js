@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => (
-  <div className="container posts">
+  <div className="container posts" id={props.postId}>
     <div className="row">
       <div className="col-sm-4 name">
         <img
@@ -21,7 +21,11 @@ const PostContainer = props => (
         <img src={props.data.imageUrl} alt="post" height="auto" width="598px" />
       </div>
     </div>
-    <CommentSection post={props.data} addComment={props.addCommentHandler} />
+    <CommentSection
+      post={props.data}
+      addComment={props.addCommentHandler}
+      postId={props.postId}
+    />
   </div>
 );
 
