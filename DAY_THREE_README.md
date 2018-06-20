@@ -17,20 +17,33 @@
 
 #### Tasks (Day III)
 
-- Create a `PostsPage` component in your `components` directory. You'll have to move what is rendered in `app.js` to this new component, and in app.js, render the `PostsPage` component. Get the app working as it was before.
-- Build a Higher Order Component called `withEither` in `app.js`.
-  - `withEither` will take in a `conditionalRenderingFn` and an `EitherComponent` (LoginPage), and returns a component that takes in a component (PostsPage), and returns a component that takes in props... Phew!!!
-  - The final component will use the `conditionalRenderingFn` to determine which component to render.
-  - Create a function called `isLoggedInConditionFn` that checks if a user is logged in a returns a boolean value.
+- Create a `PostsPage` component in your `components` directory.
+  - You'll have to move a lot of what is rendered in `app.js` to this new component
+  - In app.js, render the `PostsPage` component.
+  - Make sure the app working as it was before since it has been refactored now.
+- Building the High Order Component
+  - Create a function called `isLoggedInConditionFn` that checks state to see if a user is logged in, and returns a boolean value.
+  - Create a Higher Order Component (function) called `withEither` in `app.js`
+  - `withEither` will take in `conditionalRenderingFn` and `EitherComponent` as arguments, and return a function that takes in `component` as an argument, and returns a function that takes in `props` as an argument... Phew!!!
+  - The final function will use the `conditionalRenderingFn` to determine which component to render and return that component.
   - Set a constant called `withAuthConditionalRendering`. The value will be `withEither` invoked with `isLoggedInConditionFn`, and the `LoginPage` component. (Try to think about what is returned by that function, so you know what your const is being set to)
   - Set another variable called `InstaContentConditionalRendering`. The value for this will be `withAuthConditionalRendering` invoked with the `PostsPage` component. (Again, try to think about what is returned here as well, so you know what this variable's value is being set to)
   - Now you can use `InstaContentConditionalRendering` as a component and pass it any props that `LoginPage` and `PostsPage` might need.
-- Set up `app.js` to log users in, and also to use your HOC to conditionally render the login page or the posts page.
+- Set up `app.js` to log users in
   - Add an empty `user` object to the state object.
-  - In `componentDidMount` check `LocalStorage` for user data to see if the user is logged in.
+  - Set up a login function that sets a `user` object to `localStorage` and to state.
 - Build out the LoginPage component. You can design it how you like.
   - In your `Components` directory, create a new file called `LoginPage.jsx`.
   - There should be a `username` input, a `password` input, and a `Login` button.
-  - The component should set the user info to `localStorage` when the user logs in.
+  - The component should invoke the `login` function in `app.js` when a user logs in.
 
 #### Stretch Problems (Day III)
+
+- Styled-Components
+
+  - Watch this video about [styled-components](https://youtu.be/bIK2NwoK9xk) in its entirety.
+  - Head over to the [Styled-Components docs](https://www.styled-components.com/) and learn about the library.
+  - Once you feel like you've got a good grasp of this concept, go ahead and start converting your components into styled-components.
+  - Try and make this thing as beautiful as possible
+
+- Deploy your Instagram clone to netlify and share it in the #show-it-off channel.
