@@ -4,6 +4,7 @@ import "../PostsContainer/poststyle.css";
 import heart from "./heart.png";
 import comment from "./comment.png";
 import PropTypes from 'prop-types';
+// import SearchBar from '../SearchBar/search.js';
 
 
 
@@ -22,7 +23,7 @@ class Posts extends React.Component {
   }
 
   addLike = (event, i) => {
-    event.preventDefault;
+    event.preventDefault();
     let likes = this.state.likes;
     likes =(likes + 1);
     this.setState({

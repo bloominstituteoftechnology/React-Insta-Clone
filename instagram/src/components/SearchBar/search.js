@@ -36,19 +36,15 @@ class SearchBar extends React.Component {
     //   };
 
 
-    newSearch = event => this.setState({input:event.target.value})
+    // newSearch = event => this.setState({input:event.target.value})
 
-    searchInput = (event, i) => {
-        event.preventDefault;
-        let search = this.state.dummyData.username.slice();
-        // this.username.filter()
-        search = search.filter()(find => )
-
-
-        console.log('this')
+    // searchInput = (event, i) => {
+    //     event.preventDefault;
+    //     let search = this.state.dummyData.username.slice();
+    //     this.username.filter()
+    //     alert('this')      
         
-        
-    }
+    // }
     
     
     render() {
@@ -62,7 +58,7 @@ class SearchBar extends React.Component {
                 <img src={logo2} alt=""/>
             </div>
             <form onSubmit={this.searchInput}>
-                <input onChange={this.newSearch} value={this.state.input} type="text" placeholder={this.state.placeholder} value={this.state.input}/>
+                <input onChange={this.newSearch} type="text" placeholder={this.state.placeholder} value={this.state.input}/>
             </form>
             <div className="imgholder">
                 <img src={location} alt=""/>
