@@ -15,6 +15,7 @@ class Login extends React.Component {
   };
 
   handleLogin = event => {
+    console.log('something happened')
     const user = this.state.username;
     localStorage.setItem('user', user);
     window.location.reload();
@@ -28,7 +29,7 @@ class Login extends React.Component {
         Password: <input type="text" name="password"
          value={this.state.password} placeholder="password"
          onChange={this.handleChange}/><br/>
-        <input type="submit" value="Log In" onSubmit={this.handleLogin}/>
+        <input type="submit" value="Log In" onClick={this.handleLogin}/>
       </form>
     );
   }
