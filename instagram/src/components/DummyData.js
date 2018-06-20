@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from './Post';
+import CommentSection from './CommentSection/commentSection';
 
 
 const DummyData = props => {
