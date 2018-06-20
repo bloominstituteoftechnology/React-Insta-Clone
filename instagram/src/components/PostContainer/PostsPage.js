@@ -22,7 +22,7 @@ class PostPage extends Component {
     index = event.target.getAttribute("value");
     const comments = this.state.postData[index].comments.slice();
     comments.push({
-      username: "the_mad_poster",
+      username: localStorage.getItem('user'),
       text: this.state.comment
     });
     let savedData = this.state.postData;
@@ -39,10 +39,17 @@ class PostPage extends Component {
     console.log(event.target);
   }
 
+  handleLogout = event => {
+    localStorage.removeItem('user');
+    window.location.reload();
+  }
+
+
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar handleLogout={this.handleLogout} />
         <div className="posts-wrapper">
           {this.state.postData.map((post, index) => <PostContainer key={index}
           index={index}
