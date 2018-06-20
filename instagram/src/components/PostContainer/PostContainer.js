@@ -8,11 +8,16 @@ class PostContainer extends Component {
     super(props);
     this.props = props;
   }
+
   render() { 
     return (
       <div className="post-container">
         <Post postObj = {this.props.postObj} updateLikes={this.props.updateLikes} postIndex={this.props.postIndex}/>
-        <CommentSection commentsArr = {this.props.postObj.comments} addNewComment={this.props.addNewComment} postIndex={this.props.postIndex}/>
+        <CommentSection 
+          commentsArr={this.props.postObj.comments} 
+          addNewComment={this.props.addNewComment} 
+          postIndex={this.props.postIndex} 
+          postTimeStamp={this.props.postObj.timestamp}/>
       </div>
     )
   }

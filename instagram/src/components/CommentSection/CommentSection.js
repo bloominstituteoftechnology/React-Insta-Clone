@@ -31,6 +31,7 @@ class CommentSection extends Component {
     return (
       <div className="comments">
         {this.props.commentsArr.map( (comments,index) => <Comment key={index} comments={comments}/>)}
+        <div className="timestamp">{this.props.postTimeStamp}</div>
         <div className="add-comment">
           <input type="text" placeholder="Add Comment as guest" onKeyUp={this.onKeyUp} value={this.state.comment} onChange={(e) => this.onChange(e)}/>
         </div>

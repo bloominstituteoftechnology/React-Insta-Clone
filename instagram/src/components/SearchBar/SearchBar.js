@@ -17,6 +17,7 @@ class SearchBar extends Component {
     })
     this.props.searchHandler(e);
   }
+  
   render() { 
     return ( 
       <div className="container-fluid search-bar sticky-top">
