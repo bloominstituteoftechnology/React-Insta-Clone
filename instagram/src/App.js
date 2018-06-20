@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
 import PostsPage from './components/PostContainer/PostsPage';
+
 
 class App extends Component {
   constructor() {
@@ -37,10 +36,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Insta-Clone!</h1>
-          <SearchBar />
-        </header>
         <div className="posts">
           <PostsPage data={this.state.data}/>
         </div>
