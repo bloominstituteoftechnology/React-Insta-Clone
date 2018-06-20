@@ -14,6 +14,15 @@ const PostContainer = props => {
         </CardBody>
         <CardImg className="post-image" src={props.post.imageUrl} alt="" />
         <CardBody>
+        <div className="post-buttons">
+        <div className="left-buttons">
+        <i className="far fa-heart like-button" onClick={props.toggleLike}></i>
+        {/*<i className="fas fa-heart like-selected"></i>*/}
+        <i class="far fa-comment"></i>
+        </div>
+        <i class="far fa-bookmark"></i>
+        {/*<i class="fas fa-bookmark"></i>*/}
+        </div>
         <h5>{props.post.likes} likes</h5>
         <CommentSection comments={props.post.comments} />
         <h6>{props.post.timestamp}</h6>

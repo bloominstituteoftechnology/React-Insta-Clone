@@ -9,7 +9,6 @@ class App extends Component {
     super();
     this.state = {
       postData: [],
-      /*comments: this.state.postData.comments,*/
       comment: ''
     }
   }
@@ -41,7 +40,7 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         <div className="posts-wrapper">
-          {this.state.postData.map((post, index) => <PostContainer key={index} index={index} post={post} addCommentHandler={this.addNewComment} commentChangeHandler={this.handleCommentChange} value={this.state.comment} />)}
+          {this.state.postData.map((post, index) => <PostContainer key={index} index={index} post={post} addCommentHandler={this.addNewComment} commentChangeHandler={this.handleCommentChange} value={this.state.comment} toggleLike={this.handleLikeClick} />)}
         </div>
       </div>
     );

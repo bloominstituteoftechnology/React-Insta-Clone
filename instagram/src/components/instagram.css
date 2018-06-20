@@ -1,6 +1,7 @@
 #searchBar {
   font-size: 24px;
   margin-top: 50px;
+  border: 10px;
 }
 
 .thumb-image {
@@ -26,7 +27,7 @@
   width: 600px;
   margin-left: 40px;
   margin-top: 20px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .card-header {
@@ -36,4 +37,13 @@
 
 .test-2 {
   width: 500px;
+}
+
+.like-selected {
+  color: red;
+}
+
+.post-buttons {
+  display: flex;
+  justify-content: space-between;
 }

@@ -4,8 +4,12 @@ import '../instagram.css';
 
 const SearchBar = (props) => {
   return (
-    <div>
-      {<input type="search" name="search" id="searchBar" placeholder="font-awesome Search" />}
+    <div>{
+      <div>
+        <i className="fas fa-search"></i>
+        <input type="search" name="search" id="searchBar" placeholder="Search" />
+        </div>
+      }
     </div>
   )
 }
