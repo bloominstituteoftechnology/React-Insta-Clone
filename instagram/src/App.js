@@ -89,7 +89,8 @@ class App extends Component {
       // 3. Replace the property you're intested in
       let filteredData = data.filter(cv => {
         console.log(cv.username.substring(0,e.target.value.length), '................ Step 4: logging the substring of event')
-        return cv.username.substring(0,e.target.value.length) === e.target.value
+        // return cv.username.substring(0,e.target.value.length) === e.target.value
+        return cv.username.includes(e.target.value)
       })
 
       // 4. Put it back into our array. N.B. we *are* mutating the array here, but that's why we made a copy first
@@ -98,7 +99,9 @@ class App extends Component {
       // 5. Set the state to our new copy
       this.setState({
         data:filteredData
-      });    
+      });
+
+      console.log(filteredData,'.............Step 5: Filtered Data')
     }
 
   }

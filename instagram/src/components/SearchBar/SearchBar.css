@@ -1,6 +1,7 @@
 .search-bar{
   border: 1px solid lightgray;
   padding: 1%;
+  /* position: fixed; */
 }
 
 .gram-icon{

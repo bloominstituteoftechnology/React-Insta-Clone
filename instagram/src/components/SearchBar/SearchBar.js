@@ -19,7 +19,7 @@ class SearchBar extends Component {
   }
   render() { 
     return ( 
-      <div className="container-fluid search-bar">
+      <div className="container-fluid search-bar sticky-top">
         <div className="row">
           <div className="col-md-3 d-flex">
             <div className="gram-icon">
