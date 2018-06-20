@@ -37,7 +37,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="posts">
-          <PostsPage data={this.state.data}/>
+          <PostsPage data={this.state.data} />
         </div>
       </div>
     );
