@@ -4,6 +4,7 @@ input {
   border: 1px solid lightgray;
   border-radius: 3px;
   padding: 2px 15px;
+  margin-right: 20px;
 }
 
 ::-webkit-input-placeholder {

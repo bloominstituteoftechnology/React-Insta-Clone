@@ -21,6 +21,7 @@
   border-right: 0;
   padding: 15px 0;
   width: 100%;
+  font-size: 14px;
 }
 
 .comment-section input:focus {
