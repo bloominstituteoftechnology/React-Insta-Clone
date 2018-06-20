@@ -7,7 +7,6 @@ class CommentSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            likes: props.likes,
             comments: props.comments,
             comment: '',
         };
@@ -26,12 +25,8 @@ class CommentSection extends React.Component {
     };
 
     render() {
-        console.log(this.state.comments);
         return(
             <div>
-                <i className="far fa-heart"></i>
-                <i className="far fa-comment"></i>
-                <p className="likes">{`${this.state.likes} likes`}</p>
                 {this.state.comments.map((comment, i) => <Comment key={i} comment={comment} />)}
                 <CommentInput comment={this.state.comment} submitComment={this.submitComment} commentHandler={this.commentHandler}/>
             </div>
