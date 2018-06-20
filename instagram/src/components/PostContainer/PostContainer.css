@@ -1,45 +1,6 @@
 .post-container {
     max-width: 1080px;
     margin: 20px auto;
-    border: 1px solid lightgrey;
+    /* border: 1px solid lightgrey; */
     border-radius: 5px;
-}
-
-.post-header {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    margin: 20px auto;
-}
-
-.post-header div:last-child {
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.post-header img {
-    height: 50px;
-    border-radius: 50%;
-    margin: 0 20px;
-}
-
-.post-nav {
-    font-size: 28px;
-    width: 150px;
-    display: flex;
-    margin: 10px 20px;
-}
-
-.post-nav div:first-child {
-    margin-right: 20px;
-}
-
-.post-likes {
-    font-weight: bold;
-    font-size: 18px;
-    margin: 10px 20px;
-}
-
-.timestamp {
-    margin: 10px 20px;
 }
