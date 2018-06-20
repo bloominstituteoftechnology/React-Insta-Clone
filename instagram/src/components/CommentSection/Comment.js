@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CommentSection = props => {
-    console.log(props.comments);
+    // console.log(props.comments);
     return (
         <div>
             {props.comments.map((comment,index) => {

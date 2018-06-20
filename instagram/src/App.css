@@ -109,3 +109,10 @@ a {
 .comment-input:focus{
   outline: none;
 }
+
+/* Login */
+.login {
+  padding-top: 50px;
+  width: 500px;
+  margin: auto;
+}

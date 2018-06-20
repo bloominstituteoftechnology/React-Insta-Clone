@@ -4,6 +4,7 @@ import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/Post';
 import SearchBar from './components/SearchBar/Search';
 import Authenticate from './components/Authentication/Authenticate';
+import Login from './components/Login/Login';
 
 class App extends Component {
   constructor() {
@@ -38,6 +39,8 @@ class App extends Component {
     // console.log(this.state.data[index].comments);
   }
 
+
+
   componentDidMount = () => {
     this.setState({
       data:dummyData,
@@ -49,7 +52,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        
         <SearchBar value={this.state.searchInput} onChange={this.changeHandler}/>
+        <Login />
         {this.state.data.map((user,index) => {
           if (!user.username.toLowerCase().includes(this.state.searchInput.toLowerCase())){
             return;

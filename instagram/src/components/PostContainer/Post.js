@@ -6,7 +6,7 @@ import {
 import CommentSection from '../CommentSection/Comment';
 
 const PostContainer = props => {
-    console.log(props.userData.comments)
+    // console.log(props.userData.comments)
     return (
         <div className='post-container container-fluid'>
             <Card className='card'>
