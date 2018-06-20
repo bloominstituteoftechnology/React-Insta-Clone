@@ -3,25 +3,38 @@ import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
 import './PostContainer.css';
 
-const Post = props => {
-    return (
-        <div>
-            <div className="post-border">
-                <PostHeader username={props.post.username} thumbnailUrl={props.post.thumbnailUrl} />
+class Post extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            likes: props.post.likes,
+        }
+    }
+
+    incrementLikes = () => {
+        this.setState({likes: this.props.post.likes++});
+    }
+
+    render() {
+        return (
+            <div>
+                <div className="post-border">
+                    <PostHeader username={this.props.post.username} thumbnailUrl={this.props.post.thumbnailUrl} />
+                </div>
+                <div className="post-image">
+                    <img alt="post thumbnail" className="post-image" src={this.props.post.imageUrl} />
+                </div>
+                <div className="likes">
+                    <i onClick={this.incrementLikes} className="far fa-heart"></i>
+                    <i className="far fa-comment"></i>
+                    <p className="likes">{`${this.state.likes} likes`}</p>
+                </div>
+                <div className="comment-section">
+                    <CommentSection comments={this.props.post.comments} />
+                </div>
             </div>
-            <div className="post-image">
-                <img alt="post thumbnail" className="post-image" src={props.post.imageUrl} />
-            </div>
-            <div className="likes">
-                <i className="far fa-heart"></i>
-                <i className="far fa-comment"></i>
-                <p className="likes">{`${props.post.likes} likes`}</p>
-            </div>
-            <div className="comment-section">
-                <CommentSection comments={props.post.comments} likes={props.post.likes} />
-            </div>
-        </div>
-    )
+        )
+    }
 }
     
 
