@@ -5,11 +5,11 @@ import './Post.css';
 const PostContainer = props => {
     return (
         <div className="post-container-container">
-            {props.dummyData.map(post => (
+            {props.posts.map(post => 
                 <Post 
                     key={post.id} post={post}
                 />
-            ))}
+            )}
         </div>
 
     );

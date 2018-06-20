@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer'
-import SearchBar from './components/SearchBar/SearchBar'
+import PostsPage from './components/PostContainer/PostsPage'
+import Authenticate from './components/Authentication/Authenticate';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: [],
       newComment: ""
     };
   }
@@ -28,26 +26,21 @@ class App extends Component {
   //   // window.localStorage.setItem()
   // }
 
-  componentDidMount() {
-    // will be called third
-    this.setState({ dummyData: dummyData }); // preferable for Async calls... AJAX
-    if (window.localStorage.getItem("comments")) {
-      this.setState({
-        posts: JSON.parse(window.localStorage.getItem("comments"))
-      }); // preferable for Async calls... AJAX
-    } 
-    window.localStorage.setItem("comments", JSON.stringify(dummyData));
-  }
+  // componentDidMount() {
+  //   // will be called third
+  //   this.setState({ dummyData: dummyData }); // preferable for Async calls... AJAX
+  //   if (window.localStorage.getItem("comments")) {
+  //     this.setState({
+  //       posts: JSON.parse(window.localStorage.getItem("comments"))
+  //     }); // preferable for Async calls... AJAX
+  //   } 
+  //   window.localStorage.setItem("comments", JSON.stringify(dummyData));
+  // }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer 
-          dummyData={this.state.dummyData}
-          handleAddComment={this.addComment}
-          handleChangeComment={this.changeComment}
-        />
+        <PostsPage />
       </div>
     );
   }

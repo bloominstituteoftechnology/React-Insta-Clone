@@ -23,11 +23,15 @@ class CommentSection extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    this.setComments();
+  }
+
   setComments = () => {
     localStorage.setItem(this.props.postId, JSON.stringify(this.state.comments));
   }
 
-  commentTextHandler = e => {
+  commentHandler = e => {
     this.setState({comment: e.target.value});
   };
 

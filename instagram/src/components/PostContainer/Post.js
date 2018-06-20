@@ -1,32 +1,50 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Post.css';
-import CommentSection from '../CommentSection/CommentSection'
+import CommentSection from '../CommentSection/CommentSection';
 
-const Post = props => {    
+// const Post = props => {
+class Post extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        likes: props.post.likes
+      };
+    }  
+
+    incrementLike = () => {
+      let likes = this.state.likes + 1;
+      this.setState({ likes });
+    };
+
+    render() {
       return (
     //   Post header
 
-      <div className="post-border" key={props.post.id}>
+      <div className="post-border" key={this.props.id}>
         <div className="post-container">
           <div className="post-header">
             <div className="thumbnail-container">
-              <img className="thumbnail-img" src={props.post.thumbnailUrl} />
+              <img className="thumbnail-img" src={this.props.post.thumbnailUrl} />
             </div>
-            <div className="user-name">{props.post.username}</div>
+            <div className="user-name">{this.props.post.username}</div>
           </div>
           
           <div className="post-content">
-            <img className="post-img" src={props.post.imageUrl} />
-            <div className="post-likes">{props.post.likes} likes</div>
+            <img className="post-img" src={this.props.post.imageUrl} />
+            <div className="post-likes">{this.props.post.likes} likes</div>
           </div>
 
           <div className="post-comments">
-            <CommentSection comments={props.post.comments}/>
+            <CommentSection 
+            postId={this.props.post.imageUrl}
+            comments={this.props.post.comments}
+            />
           </div>
         </div>
       </div> 
     );
+  };
 };
 
 Post.propTypes = {
