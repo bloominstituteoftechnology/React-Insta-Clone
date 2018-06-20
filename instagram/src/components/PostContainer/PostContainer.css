@@ -49,3 +49,7 @@
   padding: 1% 0;
   border-bottom: 1px solid #efefef;
 }
+
+.heart-red {
+  color: red;
+}
