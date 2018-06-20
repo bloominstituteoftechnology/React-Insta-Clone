@@ -6,30 +6,38 @@ import CommentIcons from "./CommentIcons";
 import CommentLikes from "./CommentLikes";
 import CommentTimeStamp from "./CommentTimeStamp";
 
-const CommentSection = props => {
-  return (
-    <div>
-      <div className="comment-container">
-        <CommentIcons />
-        <CommentLikes likes={props.post.likes} />
-        <div className="comment-section">
-          {props.post.comments.map(comment => (
-            <Comment comment={comment} key={Math.random()} />
-          ))}
+class CommentSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: props.post.comments
+    };
+  }
+  render() {
+    return (
+      <div>
+        <div className="comment-container">
+          <CommentIcons />
+          <CommentLikes likes={this.props.post.likes} />
+          <div className="comment-section">
+            {this.props.post.comments.map(comment => (
+              <Comment comment={comment} key={Math.random()} />
+            ))}
+          </div>
+          <CommentTimeStamp timestamp={this.props.post.timestamp} />
         </div>
-        <CommentTimeStamp timestamp={props.post.timestamp} />
+        <div className="add-comment-container">
+          <input
+            type="comment"
+            class="form-control-lg add-comment-form"
+            id="addComment"
+            placeholder="Add a comment..."
+          />
+        </div>
       </div>
-      <div className="add-comment-container">
-        <input
-          type="comment"
-          class="form-control-lg add-comment-form"
-          id="addComment"
-          placeholder="Add a comment..."
-        />
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 CommentSection.propTypes = {
   comment: PropTypes.object,
