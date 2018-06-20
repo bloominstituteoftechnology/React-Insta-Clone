@@ -43,7 +43,7 @@ class LikeSection extends React.Component {
             <div>
 
                 <div className='comment-imgs'>
-                    <i style={this.state.liked ? { color: 'red' } : null} onClick={this.likeComment} className={'fa-heart ' + (this.state.liked ? 'fas' : 'far')}></i>
+                    <i style={this.state.liked ? { color: 'red' } : null} onClick={this.likeComment} className={'fa-heart likes-heart ' + (this.state.liked ? 'fas' : 'far')}></i>
                     <i className={"far fa-comment"}></i>
                 </div>
 

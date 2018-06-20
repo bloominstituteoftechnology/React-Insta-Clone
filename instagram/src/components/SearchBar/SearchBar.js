@@ -25,7 +25,7 @@ const SearchBar = props => {
             <i className="far fa-heart fa-lg"></i>
           </NavItem>
           <NavItem>
-            <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/137578-200.png' alt='' />
+            <img className='person-icon' onClick={props.logout} src='https://d30y9cdsu7xlg0.cloudfront.net/png/137578-200.png' alt='' />
           </NavItem>
         </Nav>
       </Navbar>

@@ -21,10 +21,17 @@ class PostsPage extends React.Component {
         this.setState({ searchString: event.target.value });
     }
 
+    logoutButton = () => {
+        localStorage.removeItem('username');
+        localStorage.removeItem('password');
+
+        window.location.reload();
+    }
+
     render() {
         return (
             <div className="App">
-                <SearchBar value={this.state.searchString} onChange={this.searchInput} />
+                <SearchBar value={this.state.searchString} onChange={this.searchInput} logout={this.logoutButton} />
                 <PostContainer searchString={this.state.searchString} data={this.state.dummydata} />
             </div>
         );
