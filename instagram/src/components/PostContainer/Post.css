@@ -1,7 +1,8 @@
 .post-container {
-    margin-bottom: 50px;
     max-width: 600px;
     margin: 0 auto 24px;
+    -webkit-box-shadow: 7px 10px 31px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 7px 10px 31px 3px rgba(0, 0, 0, 0.4);
 }
 
 .post-header-container {
@@ -20,9 +21,7 @@
     margin-left: 1%;
 }
 
-.post-content-container {
-
-}
+.post-content-container {}
 
 .picture__content {
     width: 100%;
@@ -33,17 +32,20 @@
     padding: 12px 1.5%;
 }
 
-.footer__icons {
-}
+.footer__icons {}
+
 .fa-heart:hover {
     color: red;
 }
+
 .heart--active {
     color: red;
 }
+
 .fa-comment {
     transform: scaleX(-1);
 }
+
 .fa-comment:hover {
     color: lightblue;
 }

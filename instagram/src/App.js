@@ -9,7 +9,6 @@ class App extends Component {
     this.state = {
       instaData: [],
       username: '',
-
     };
     this.searchPost = this.searchPost.bind(this);
   }
@@ -19,6 +18,9 @@ class App extends Component {
   changeComment = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   }
+
+
+
   addComment = (e, index) => {
     const comment = e.target.value;
     if (comment === '') {
@@ -30,11 +32,15 @@ class App extends Component {
     if (state[`comment${index}`] === undefined) {
       state[`comment${index}`] = '';
     }
-    const instaDataItem = Object.assign({}, this.state.instaData[index]);
+    
+    const instaDataItem = Object.assign({}, this.state.instaData[index]); //
     instaDataItem.comments.push({ username: 'skid', text: comment });
     e.target.value = '';
     this.setState({ instaDataItem });
   }
+
+
+  
   addLike = (e, index) => {
 
     const instaData = this.state.instaData.slice();

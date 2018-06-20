@@ -11,7 +11,8 @@ const PostContent = (props) => {
                         props.addLikeHandler(e, props.index);
                         e.target.classList.toggle('heart--active');
                         
-                    }}></i>
+                    }}>
+                    </i>
                     <i className="far fa-comment footer__icon"></i>
                 </div>
                 <p className='footer__likes'>{props.likes} likes</p>
