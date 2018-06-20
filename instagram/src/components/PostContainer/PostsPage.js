@@ -18,7 +18,8 @@ class PostsPage extends React.Component {
   }
 
   addNewComment = (index, comment) => {
-    let newComment = { username: 'Thomas', text: comment };
+    let username = localStorage.getItem('user');
+    let newComment = { username, text: comment };
     let newState = this.state.dummyData.slice();
     newState.forEach((post, i) => {
       if (i === index) {

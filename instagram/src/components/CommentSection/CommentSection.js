@@ -8,7 +8,6 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comment: '',
-      focused: false,
     };
   }
 
@@ -16,18 +15,6 @@ class CommentSection extends React.Component {
     this.setState({
       comment: event.target.value,
     });
-  };
-
-  onCommentFocus = () => {
-    this.setState({ focused: true });
-  };
-
-  onCommentBlur = event => {
-    if (!event.target.value) {
-      this.setState({
-        focused: false,
-      });
-    }
   };
 
   onCommentSubmit = event => {
@@ -68,12 +55,9 @@ class CommentSection extends React.Component {
               className="commentBox"
               type="text"
               name="comment"
-              onFocus={this.onCommentFocus}
-              onBlur={this.onCommentBlur}
+              placeholder="Add a comment..."
               onChange={this.onCommentChange}
-              value={
-                !this.state.focused ? 'Add a comment...' : this.state.comment
-              }
+              value={this.state.comment}
             />
           </form>
         </div>

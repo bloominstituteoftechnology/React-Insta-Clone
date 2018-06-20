@@ -20,10 +20,15 @@
 .searchBox {
   font-family: FontAwesome;
   text-align: center;
-  font-size: 12px;
-  width: 200px;
+  width: 600px;
   padding-top: 0px;
+  margin-top: -15px;
   margin-bottom: 5px;
+  margin-left: 39px;
+}
+
+.far {
+  margin-right: 15px;
 }
 
 .divider {

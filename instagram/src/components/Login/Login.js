@@ -41,6 +41,7 @@ class Login extends React.Component {
               <b>Username</b>
             </label>
             <input
+              className="loginInput"
               type="text"
               placeholder="Enter Username"
               onChange={this.onUserNameChange}
@@ -52,6 +53,7 @@ class Login extends React.Component {
               <b>Password</b>
             </label>
             <input
+              className="loginInput"
               type="password"
               placeholder="Enter Password"
               onChange={this.onPasswordChange}
