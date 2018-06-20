@@ -35,7 +35,7 @@ class CommentSection extends React.Component {
 
         const comments = this.state.comments.slice();
 
-        comments.push({ username: this.props.name, text: this.state.comment });
+        comments.push({ username: localStorage.getItem('username'), text: this.state.comment });
 
         this.setState({ comments: comments, comment: '' });
 

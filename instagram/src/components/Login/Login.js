@@ -21,6 +21,10 @@ class Login extends React.Component {
     }
 
     loginButton = () => {
+        if (this.state.username === '' && this.state.password === '') {
+            alert('You need to enter a username and password!');
+            return;
+        }
         if (this.state.username === '') {
             alert('You need to enter a username!');
             return;
@@ -44,7 +48,7 @@ class Login extends React.Component {
                         <img className='login-instagram-word' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png' alt='' />
                     </FormGroup>
                     <FormGroup>
-                        <Input value={this.state.username} onChange={this.handleUsername} type="username" name="username" id='username' placeholder="Username" />
+                        <Input value={this.state.username} onChange={this.handleUsername} type="username" name="username" id='username' placeholder="Username" required />
                     </FormGroup>
                     <FormGroup>
                         <Input value={this.state.password} onChange={this.handlePassword} type="password" name="password" id="examplePassword" placeholder="Password" />
