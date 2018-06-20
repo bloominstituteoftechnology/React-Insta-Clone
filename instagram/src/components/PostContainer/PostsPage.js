@@ -25,6 +25,11 @@ class PostsPage extends React.Component {
       }); 
       this.setState({ dummy: totalData })    
     }
+
+    Logout = event => {
+        localStorage.clear();
+        window.location.reload();
+    }
   
     render() {
       return (
@@ -38,7 +43,7 @@ class PostsPage extends React.Component {
             <div className="right-Nav">
               <i className="far fa-compass" style={{ fontSize: '35px' }}></i>
               <i className="far fa-heart" style={{ fontSize: '35px' }}></i>
-              <i className="far fa-user" style={{ fontSize: '35px' }}></i>  
+              <i onClick={this.Logout} className="far fa-user" style={{ fontSize: '35px' }}></i>  
             </div>          
           </header>
           <div className="container">
