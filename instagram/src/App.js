@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/Post';
 import SearchBar from './components/SearchBar/Search';
 import Authenticate from './components/Authentication/Authenticate';
-import Login from './components/Login/Login';
+import LoginPage from './components/Login/Login';
+import PostsPage from './components/PostContainer/PostPage';
 
 class App extends Component {
   constructor() {
@@ -12,7 +12,6 @@ class App extends Component {
     this.state = {
       data: [],
       searchInput: '',
-      newComment: ''
     }
   }
 
@@ -22,28 +21,9 @@ class App extends Component {
     });
   }
 
-  commentChangeHandler = (e) => {
-    this.setState({
-      newComment: e.target.value
-    })
-  }
-
-  commentSubmitHandler = (e, index) => {
-    e.preventDefault();
-    let newCom = {};
-    newCom.jessica = this.state.newComment;
-    let currentData = this.state.data;
-    currentData[index].comments.push(newCom);
-    this.setState({data: currentData,
-                   newComment: ''});
-    // console.log(this.state.data[index].comments);
-  }
-
-
-
   componentDidMount = () => {
     this.setState({
-      data:dummyData,
+      data: dummyData,
       searchInput: '',
       newComment: ''
     });
@@ -52,21 +32,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
-        <SearchBar value={this.state.searchInput} onChange={this.changeHandler}/>
-        <Login />
-        {this.state.data.map((user,index) => {
-          if (!user.username.toLowerCase().includes(this.state.searchInput.toLowerCase())){
-            return;
-          }
-          return <PostContainer 
-                      onSubmitHandler={this.commentSubmitHandler} 
-                      index={index} 
-                      onChangeHandler={this.commentChangeHandler} 
-                      key={`user${index}`} 
-                      userData = {user}
-                      commentValue={this.state.newComment} />
-        })}
+        <SearchBar value={this.state.searchInput} onChange={this.changeHandler} />
+        <PostsPage data={this.state.data}
+          searchInput={this.state.searchInput} />
       </div>
     );
   }

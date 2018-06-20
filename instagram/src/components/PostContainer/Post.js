@@ -22,11 +22,8 @@ const PostContainer = props => {
                     </div>
                     <p className='bold-text mt-2 mb-2'>{props.userData.likes + ' likes'}</p>
                     <CommentSection
-                        onChange={props.onChangeHandler} 
                         comments={props.userData.comments} 
-                        onSubmit={props.onSubmitHandler} 
-                        index={props.index}
-                        commentValue = {props.commentValue} />
+                        index={props.index}/>
                 </CardBody>
             </Card>
         </div>
