@@ -15,7 +15,9 @@ class LoginPage extends Component {
         const user = this.state.username;
         localStorage.setItem(
             // set the user info: username: ?
-        )
+            
+        );
+        window.location.reload();
     }
     render() { 
         return ( 
