@@ -20,17 +20,16 @@ class App extends Component {
 
   addNewComment = (event, index) => {
     event.preventDefault();
-    console.log(event.target);
-    const comments = this.state.postData[0].comments.slice();
+    index = event.target.getAttribute("value");
+    const comments = this.state.postData[index].comments.slice();
     comments.push({
-      username: "RandomUser",
+      username: "the_mad_poster",
       text: this.state.comment
     });
     let savedData = this.state.postData;
-    savedData[0].comments = comments;
+    savedData[index].comments = comments;
     localStorage.setItem('savedData', JSON.stringify(savedData));
     this.setState({postData: savedData, comment: ''});
-    //Can I leave this in here? Also remember it the variable may not be "event.target.value"
   }
 
   handleCommentChange = event => {
@@ -42,7 +41,7 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         <div className="posts-wrapper">
-          {this.state.postData.map(post => <PostContainer post={post} addCommentHandler={this.addNewComment} commentChangeHandler={this.handleCommentChange} value={this.state.comment} />)}
+          {this.state.postData.map((post, index) => <PostContainer key={index} index={index} post={post} addCommentHandler={this.addNewComment} commentChangeHandler={this.handleCommentChange} value={this.state.comment} />)}
         </div>
       </div>
     );

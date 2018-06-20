@@ -18,7 +18,7 @@ const PostContainer = props => {
         <CommentSection comments={props.post.comments} />
         <h6>{props.post.timestamp}</h6>
         <hr/>
-        <form onSubmit={props.addCommentHandler}>
+        <form onSubmit={props.addCommentHandler} value={props.index}>
         <input style={{width: 500 +'px'}} type="text" name="comment" placeholder="Add a comment..." value={props.value} onChange={props.commentChangeHandler} />
         </form>
         </CardBody>
