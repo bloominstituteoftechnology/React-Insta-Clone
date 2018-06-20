@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './App/App.js';
+import Authenticate from './authentication/authenticate.js'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const WrappedApp = Authenticate(App)
+
+ReactDOM.render(<WrappedApp />, document.getElementById('root'));
