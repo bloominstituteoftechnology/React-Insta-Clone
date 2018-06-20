@@ -13,8 +13,13 @@ class Post extends React.Component {
 
   addLikes = (event, i) => {
     event.preventDefault();
-    let likes = this.state.likes;
-    likes = (likes + 1);
+    let originalLikes = this.state.likes;
+    let likes = originalLikes;
+    if (originalLikes === likes) {
+      likes = (likes + 1);
+    } else {
+      likes = originalLikes;
+    }
     this.setState({likes});
   }
 

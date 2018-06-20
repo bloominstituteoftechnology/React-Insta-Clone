@@ -2,21 +2,8 @@ import React from 'react';
 import './SearchBar.css';
 
 
-  class SearchBar extends React.Component {
-  constructor(props) {
-    super(props);
+  const SearchBar = props => {
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false
-    };
-  }
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  }
-  render() {
     return (
       <div className="nav-container">
         <div className="nav">
@@ -25,7 +12,7 @@ import './SearchBar.css';
               </div>
               <div className="search">
                 <form>
-                  <input type="text" placeholder="Search"/>
+                  <input type="text" placeholder="Search" onKeyDown={props.searchPosts}/>
                 </form>
               </div>
               <div className="links">
@@ -37,6 +24,5 @@ import './SearchBar.css';
       </div>
     );
   }
-}
 
 export default SearchBar;
