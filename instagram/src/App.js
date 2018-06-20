@@ -1,69 +1,34 @@
 import React, { Component } from 'react';
-import dummyData from './dummy-data' 
 
-import './App.css'
-
-import SearchContainer from './components/SearchBar/SearchContainer'
-import PostContainer from './components/PostContainer/PostContainer'
-
+import Authenticate from './components/Authentication/Authenticate'
+import PostsPage from './components/PostContainer/PostsPage'
+import Login from './components/Login/Login'
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-      data: dummyData,
-    }
-  }
+  constructor(props){
+    super(props);
 
-  addComment =(postId, comment) =>{
-    let data = this.state.data.slice();
-    data = data.map(post => {
-      if (postId === post.timestamp){
-        post.comments.push({
-          username: 'loganilus',
-          text: comment
-        });
-      }
-      return post;
-    })
-    this.setState({data})
-  }
-  addLike =(postId) =>{
-    let data = this.state.data.slice();
-    data = data.map(post => {
-      if(postId === post.timestamp){
-        post.likes += 1;
-      }
-      return post;
-    })
-    this.setState({data});
-  }
+    this.state ={
+      username: '',
+      password: '',
+    }
 
-  handleSearch = (searchTerm) =>{
-    let data = this.state.data.slice();
-    if (searchTerm === ''){
-      this.setState({data:dummyData})
-      return null;
-    }
-    data = data.filter(post => {
-      if (JSON.stringify(post).includes(searchTerm)){
-        return post;
-      }
-    })
-    if (data.length > 0){
-      this.setState({data});
-    } else {
-      return null;
-    }
   }
+  login = (username, password) => {
+		localStorage.setItem('username', username)
+		localStorage.setItem('password', password)
+  }
+  
 
   render() {
     return (
-      <div className='container'>
-          <SearchContainer handleSearch={this.handleSearch} />
-          <PostContainer likeHandler={this.addLike} data={this.state.data} commentHandler={this.addComment}/>
+      <div>
+        {
+			  	this.props.authenticated ?  <PostsPage logout={this.props.logout} user={this.props.user} /> : <Login login={this.login} />
+			  }
+       
       </div>
-    );
+    ) 
   }
 }
 
-export default App;
+export default Authenticate(App);

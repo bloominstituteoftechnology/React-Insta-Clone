@@ -29,3 +29,7 @@
 	padding: 0 15px;
 	font-size: 16px;
 }
+
+.social .fa-user:hover{
+	color: red;
+}

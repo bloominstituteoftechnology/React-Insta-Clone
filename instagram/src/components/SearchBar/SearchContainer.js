@@ -14,10 +14,15 @@ const SearchContainer = (props) => {
 				<i className="fa fa-compass" />
 			</div>
 			<div className="social">
-				<i class="far fa-heart" />
+				<i className="far fa-heart" />
 			</div>
-			<div className="social">
-				<i class="far fa-user" />
+			<div 
+				onClick={()=>{
+					props.logout();
+					alert(props.user.username + ' has been logged out.')
+				}}
+				className="social">
+				<i className="far fa-user" />
 			</div>
 			  
 		</div>
