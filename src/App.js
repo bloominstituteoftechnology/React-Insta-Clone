@@ -8,7 +8,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      comment: ""
     }
   }
 
@@ -16,28 +17,21 @@ class App extends React.Component {
     this.setState({ data: dummyData });
   }
 
-  addNewComment = (event, index) => {
-    console.log("ADDING NEW COMMENT!")
-    let dataCopy = this.state.data.slice();
-    dataCopy.comments.push({ username: 'flintbean', text: event.target.value });
-    return this.setState({ data: dataCopy })
-  }
-
   render() {
     return (
-      <div >
+      <div>
         <SearchBar />
         <div className="App">
-          {this.state.data.map(post => (
+          {this.state.data.map((post,i) => (
             <PostContainer
-              key={Math.random()}
+              key={i}
               postComments={post.comments}
               postStarter={post.username}
               postThumb={post.thumbnailUrl}
               postImage={post.imageUrl}
-              postSubmit={this.addNewComment}
             />
           ))}
+          
         </div>
       </div>
     );
