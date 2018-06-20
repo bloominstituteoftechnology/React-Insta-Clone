@@ -3,28 +3,35 @@ import PropTypes from "prop-types";
 import './PostsContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 
-const Post = props => {
-  return (
-    <div className="post-container">
-      <div className="post-header-container">
-        <img src={props.post.thumbnailUrl} alt={"Profile thumbnail."} />
-        <div className="username">{props.post.username}</div>
-      </div>
-      <img src={props.post.imageUrl} alt={"Post."} />
-      <div className="post-icons-and-comments-container">
-        <div className="post-icons-container">
-          <i className="far fa-heart"></i>
-          <i className="far fa-comment"></i>
+class Post extends React.Component {
+  state = {
+    likes: this.props.post.likes
+  };
+
+  likePost = () => {
+    let likes = this.state.likes + 1;
+    this.setState({ likes });
+  };
+
+  render() {
+    return (
+      <div className="post-container">
+        <div className="post-header-container">
+          <img src={this.props.post.thumbnailUrl} alt={"Profile thumbnail."} />
+          <div className="username">{this.props.post.username}</div>
         </div>
-        <p>{props.post.likes} likes</p>
-        <CommentSection id={props.id}
-                        comments={props.post.comments}
-                        timestamp={props.post.timestamp}
-                        onCommentSubmit={props.onCommentSubmit}
-                        addNewComment={props.addNewComment} />
+        <img src={this.props.post.imageUrl} alt={"Post."} />
+        <div className="post-icons-and-comments-container">
+          <div className="post-icons-container">
+            <i className="far fa-heart" onClick={this.likePost}></i>
+            <i className="far fa-comment"></i>
+          </div>
+          <p>{this.state.likes} likes</p>
+          <CommentSection post={this.props.post} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 Post.propTypes = {

@@ -9,7 +9,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: [],
+      searchPhrase: "",
+      filteredPosts: []
     }
   }
 
@@ -17,15 +19,22 @@ class App extends Component {
     this.setState({ posts: dummyData })
   }
 
-  onCommentSubmit = event => {
-    event.preventDefault();
-    console.log(event.target.value);
-    this.addNewComment();
+  searchHandler = e => {
+    this.setState({ searchPhrase: e.target.value });
+
+    setTimeout(() => {
+      const posts = this.state.posts.filter(post => {
+        return post.username.includes(this.state.searchPhrase) ? post : null;
+      });
+
+      if (posts.length > 0) {
+        this.setState({ filteredPosts: posts });
+      } else {
+        return;
+      }
+    }, 20);
+
   };
-
-  addNewComment = id => {
-
-  }
 
   render() {
     return (
@@ -35,16 +44,14 @@ class App extends Component {
             <i className="fab fa-instagram"></i>
             <p>Instagram</p>
           </div>
-          <SearchBar />
+          <SearchBar search={this.searchHandler} />
           <div className="header-icons">
             <i className="far fa-compass"></i>
             <i className="far fa-heart"></i>
             <i className="far fa-user"></i>
           </div>
         </header>
-        <PostsContainer posts={this.state.posts}
-                        addNewComment={this.addNewComment}
-                        onCommentSubmit={this.onCommentSubmit} />
+        <PostsContainer posts={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} />
       </div>
     );
   }
