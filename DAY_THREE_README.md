@@ -17,20 +17,57 @@
 
 #### Tasks (Day III)
 
-- Create a `PostsPage` component in your `components` directory. You'll have to move what is rendered in `app.js` to this new component, and in app.js, render the `PostsPage` component. Get the app working as it was before.
-- Build a Higher Order Component called `withEither` in `app.js`.
-  - `withEither` will take in a `conditionalRenderingFn` and an `EitherComponent` (LoginPage), and returns a component that takes in a component (PostsPage), and returns a component that takes in props... Phew!!!
-  - The final component will use the `conditionalRenderingFn` to determine which component to render.
-  - Create a function called `isLoggedInConditionFn` that checks if a user is logged in a returns a boolean value.
-  - Set a constant called `withAuthConditionalRendering`. The value will be `withEither` invoked with `isLoggedInConditionFn`, and the `LoginPage` component. (Try to think about what is returned by that function, so you know what your const is being set to)
-  - Set another variable called `InstaContentConditionalRendering`. The value for this will be `withAuthConditionalRendering` invoked with the `PostsPage` component. (Again, try to think about what is returned here as well, so you know what this variable's value is being set to)
-  - Now you can use `InstaContentConditionalRendering` as a component and pass it any props that `LoginPage` and `PostsPage` might need.
-- Set up `app.js` to log users in, and also to use your HOC to conditionally render the login page or the posts page.
-  - Add an empty `user` object to the state object.
-  - In `componentDidMount` check `LocalStorage` for user data to see if the user is logged in.
-- Build out the LoginPage component. You can design it how you like.
-  - In your `Components` directory, create a new file called `LoginPage.jsx`.
+- Create a `<PostsPage />` component in your `components/PostsContainer` directory.
+
+  - You'll have to move a lot of what is rendered in `app.js` to this new component
+  - In app.js, render the `PostsPage` component.
+  - Make sure the app working as it was before since it has been re-factored now.
+  - This is to ensure that we clean up our App component a little bit before we re-factor it to be wrapped up in an HOC
+
+- Building the High Order Component
+
+  - Create a directory called `Authentication`
+  - Inside that directory create a component called `<Authenticate />`. This is where all of the magic sis going to happen.
+  - This component should be able to take in a component as an argument, and it will return a `class` component.
+  - Inside of `<Authenticate />'s` render method, you'll want to return the Component that gets passed into it.
+  - Be sure to export out this component.
+  - Head over to App.js and `import` in our new `Authenticate` Higher Order Component and pass in `App`.
+  - If this worked right then everything should render as it used to.
+  - Authenticate will look a lot like this when you're done setting it up.
+
+```js
+const Authenticate = App =>
+  class extends React.Component {
+    render() {
+      return <App />;
+    }
+  };
+```
+
+- Build out the LoginPage component. You can design it how you like
+
+  - In your `components` directory, create a directory called `Login` and add a new file called `Login.js`.
   - There should be a `username` input, a `password` input, and a `Login` button.
-  - The component should set the user info to `localStorage` when the user logs in.
+  - The component should invoke the `login` function in `app.js` when a user logs in.
+  - This login function should set a `username` on `localStorage`. You'll need to check local storage to see if a user is logged in.
+  - Be sure to force the page to reload when a user logs in so that our component un-mounts and mounts again.
+
+- Extending the functionality of the HOC to conditionally render the `LoginPage` or the `App`
+
+  - Inside of `Authenticate` we need to add a constructor to hold our state data.
+  - On state we need a user `loggedIn` boolean flag.
+  - On `componentDidMount` we need to check `localStorage` to see if a user is logged in.
+  - Inside of the render function we will check `if a user is logged in`
+  - If a user is logged in we will return the `<App />`, else we will return the `<LoginPage>`
 
 #### Stretch Problems (Day III)
+
+- Now that you have a user set in `localStorage`, go ahead and use that `username` when a user posts a comment to make it so the logged in user is the one commenting on the posts.
+- Styled-Components
+
+  - Watch this video about [styled-components](https://youtu.be/bIK2NwoK9xk) in its entirety.
+  - Head over to the [Styled-Components docs](https://www.styled-components.com/) and learn about the library.
+  - Once you feel like you've got a good grasp of this concept, go ahead and start converting your components into styled-components.
+  - Try and make this thing as beautiful as possible
+
+- Deploy your Instagram clone to netlify and share it in the #show-it-off channel.
