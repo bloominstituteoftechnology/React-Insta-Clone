@@ -24,8 +24,11 @@ class PostContainer extends React.Component {
     addNewComment = (event) => {
         event.preventDefault();
         let dataCopy = this.state.postComments.slice();
-        dataCopy.push({ username: 'flintbean', text: this.state.comment });
-        return this.setState({ postComments: dataCopy, comment: ''});
+        if (this.state.comment === '') { alert('Please enter a comment'); }
+        else {
+            dataCopy.push({ username: 'flintbean', text: this.state.comment });
+        }
+        return this.setState({ postComments: dataCopy, comment: '' });
     }
 
     render() {

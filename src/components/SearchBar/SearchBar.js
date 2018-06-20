@@ -13,21 +13,16 @@ import {
 export default class SearchBar extends React.Component {
     constructor(props) {
         super(props);
-        this.toggle = this.toggle.bind(this);
+
         this.state = {
-            isOpen: false
-        };
-    }
-    toggle() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
+            search: ''
+        }
     }
     render() {
         return (
             <div className="search-container">
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand>Instragram</NavbarBrand>
+                    <NavbarBrand>Instagram</NavbarBrand>
                     <input type="text"
                         placeholder="Search..."
                         className="ml-auto text-center search-bar"

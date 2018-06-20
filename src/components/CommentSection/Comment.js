@@ -5,13 +5,12 @@ const Comment = props => {
         <p><strong>{props.passedUser}</strong>&nbsp;&nbsp;{props.passedText}</p>
     </div>
     )
-
 };
 
 Comment.propTypes = {
     passedUser: PropTypes.string,
     passedText: PropTypes.string
-  };
-  
+};
+
 
 export default Comment

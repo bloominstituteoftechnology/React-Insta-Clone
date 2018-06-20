@@ -22,7 +22,7 @@ class App extends React.Component {
       <div>
         <SearchBar />
         <div className="App">
-          {this.state.data.map((post,i) => (
+          {this.state.data.map((post, i) => (
             <PostContainer
               key={i}
               postComments={post.comments}
@@ -31,7 +31,7 @@ class App extends React.Component {
               postImage={post.imageUrl}
             />
           ))}
-          
+
         </div>
       </div>
     );
