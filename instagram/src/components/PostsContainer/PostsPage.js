@@ -5,17 +5,21 @@ import PostsContainer from './PostsContainer';
 import SearchBar from '../SearchBar/SearchBar';
 
 class PostsPage extends Component {
-  constructor() {
-    super();
-    this.state = {
-      posts: [],
-      searchPhrase: "",
-      filteredPosts: []
-    }
+  state = {
+    posts: [],
+    searchPhrase: "",
+    filteredPosts: []
   }
 
   componentDidMount() {
-    this.setState({ posts: dummyData })
+    if (window.localStorage.getItem("comments")) {
+      this.setState({
+        posts: JSON.parse(window.localStorage.getItem("comments"))
+      });
+    } else {
+      this.setState({ posts: dummyData });
+    }
+    window.localStorage.setItem("comments", JSON.stringify(dummyData));
   }
 
   searchHandler = e => {

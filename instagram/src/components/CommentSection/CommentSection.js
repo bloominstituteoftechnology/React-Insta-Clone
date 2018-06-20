@@ -10,6 +10,28 @@ class CommentSection extends React.Component {
     comment: ""
   };
 
+  componentDidMount() {
+    const id = this.props.post.imageUrl;
+    if (window.localStorage.getItem(id)) {
+      this.setState({
+        comments: JSON.parse(window.localStorage.getItem(id))
+      });
+    } else {
+      this.setComments();
+    }
+  }
+
+  componentWillUnmount() {
+    this.setComments();
+  }
+
+  setComments = () => {
+    window.localStorage.setItem(
+      this.props.post.imageUrl,
+      JSON.stringify(this.state.comments)
+    );
+  }
+
   commentHandler = e => {
     this.setState({ comment: e.target.value });
   };
