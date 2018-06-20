@@ -34,7 +34,7 @@ class Login extends React.Component {
                     }} />
                 <button className='login__submit' onClick={e => {
 
-                }}></button>
+                }}>Submit</button>
             </form>
         );
     }
