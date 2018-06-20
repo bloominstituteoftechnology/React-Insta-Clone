@@ -70,7 +70,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <LoginPage handleLogin={this.handleLogin} logIn={this.logIn} />
         <PostsPage data={this.state.data} comment={this.state.comment} handleComment={this.handleComment} addComment={this.addNewComment} likePost={this.likePost} handleChange={this.handleChange} searchFunction={this.searchFunc} search={this.state.search}/>
       </div>
     );
