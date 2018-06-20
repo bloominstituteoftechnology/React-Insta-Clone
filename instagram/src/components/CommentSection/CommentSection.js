@@ -36,11 +36,15 @@ class CommentSection extends React.Component {
     this.setState({ comment: '' });
   };
 
+  onLikeClick = () => {
+    this.props.toggleLike(this.props.postId);
+  };
+
   render() {
     return (
       <div>
         <div className="row icons">
-          <div>
+          <div onClick={this.onLikeClick}>
             <i className="col-sm-1 far fa-heart" />
           </div>
           <div>

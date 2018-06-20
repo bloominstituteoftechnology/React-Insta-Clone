@@ -24,6 +24,7 @@ const PostContainer = props => (
     <CommentSection
       post={props.data}
       addComment={props.addCommentHandler}
+      toggleLike={props.toggleLikeHandler}
       postId={props.postId}
     />
   </div>
