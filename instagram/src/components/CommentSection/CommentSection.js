@@ -3,7 +3,6 @@ import './Comments.css';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
 import CommentTime from './CommentTime';
-import PropTypes from 'prop-types';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -65,13 +64,6 @@ class CommentSection extends React.Component {
             </div>
         );
     }
-}
-
-CommentSection.propTypes = {
-    comment: PropTypes.shape({
-        username: PropTypes.string,
-        text: PropTypes.string
-    })
 }
 
 export default CommentSection;
