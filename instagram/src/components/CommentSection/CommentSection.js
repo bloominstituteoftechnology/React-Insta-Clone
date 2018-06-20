@@ -12,6 +12,23 @@ class CommentSection extends React.Component {
         };
     }
 
+    componentDidMount() {
+        if(localStorage.getItem('post')) {
+            this.setState({comments: JSON.parse(localStorage.getItem('post'))});
+        }
+        else {
+            this.setComment();
+        }
+    }
+
+    componentWillUnmount() {
+        this.setComment();
+    }
+
+    setComment = () => {
+       localStorage.setItem('post', JSON.stringify(this.state.comments)); 
+    }
+
     commentHandler = event => {
         this.setState({comment: event.target.value});
     }
