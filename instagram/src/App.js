@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostPage from "./components/PostContainer/PostPage";
 import Login from "./Login/Login"
+import Authenticate from "./Authentication/Authenticate"
 
 class App extends Component {
   constructor(){
