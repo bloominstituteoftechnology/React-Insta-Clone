@@ -20,7 +20,7 @@ class CommentsSection extends React.Component {
 
     addNewComment = (event, i) => {
         event.preventDefault();
-        const comments = this.state.comments.slice();
+        let comments = this.state.comments.slice();
         comments.push({text: this.state.input, username:'Stickmonster89'});
         this.setState({
             comments, 
