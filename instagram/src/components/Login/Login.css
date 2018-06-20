@@ -20,12 +20,30 @@
     height: 51px;
 }
 
+
 .login-form {
     max-width: 350px;
     width: 100%;
     padding: 22px 40px;
     border: 1px solid #e6e6e6;
-    background: white;
+}
+
+.forgot-password {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 25px;
+    color: #003569;
+}
+
+.forgot-password:hover {
+    text-decoration: none;
+    color: #003569;
+}
+
+.forgot-form {
+    margin-bottom: 0;
 }
 
 .form-control {
@@ -64,3 +82,26 @@
     border-color: #3898F0;
 }
 
+.bottom-content {
+    max-width: 350px;
+    width: 100%;
+    padding: 8px 40px;
+    border: 1px solid #e6e6e6;
+    margin-top: 10px;
+}
+
+.bottom-text {
+    font-size: 14px;
+    color: #262626;
+    margin: 15px;
+    text-align: center;
+}
+
+.sign-up {
+    color: #3897f0;
+}
+
+.sign-up:hover {
+    text-decoration: none;
+    color: #3897f0;
+}
