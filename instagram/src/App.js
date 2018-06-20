@@ -3,6 +3,8 @@ import './App.css';
 import dummyData from './dummy-data.js';
 import SearchBar from './components/CommentSection/CommentSectionContainer';
 import PostContainer from './components/PostContainer/PostContainer';
+import Authenticate from './Authentication/Authenticate';
+
 
 class App extends Component {
   constructor() {
@@ -17,13 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Authenticate />
         <PostContainer dumData={this.state.dummyData} />
       </div>
     );

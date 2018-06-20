@@ -7,15 +7,32 @@ class CommentSection extends React.Component {
     constructor(props) {
         super(props); 
         this.state = {
-            comments: props.comments
+            comments: props.comments,
+            comment: ""
         };
+    }
+
+    changeComments = event => {
+        this.setState({ comment: event.target.value});
+    }
+
+    commentSubmitHandler = event => {
+        event.preventDefault();
+        const newComment = { text: this.state.comment, username: "Juno"};
+        const comments = this.state.comments.slice();
+        comments.push(newComment);
+        this.setState({comments, comment: ""});
     }
 
     render() {
         return (
             <div>
-                {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-                <CommentInput />
+                {this.state.comments.map((content, index) => <Comment key={index} comment={content} />)}
+                <CommentInput 
+                    changeHandler={this.changeComments}
+                    comment={this.state.comment}
+                    saveHandler={this.commentSubmitHandler} 
+                />
             </div>
         );
     }
@@ -27,6 +44,6 @@ CommentSection.propTypes = {
                             username: PropTypes.string
         })
     )
-}
+};
 
 export default CommentSection;
