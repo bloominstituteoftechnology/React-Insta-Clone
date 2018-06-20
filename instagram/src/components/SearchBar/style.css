@@ -1,0 +1,21 @@
+.search_wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0 1rem;
+    color: gray;
+    align-items: center;
+
+}
+.faSearch {
+    display: flex;
+    align-items: center;
+}
+.line {
+    padding-right: 1rem;
+    color: gray;
+}
+.textInsta {
+    font-family: 'Just Another Hand', Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+}
