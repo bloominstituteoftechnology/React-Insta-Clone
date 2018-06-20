@@ -7,9 +7,11 @@ function Comment (props) {
     }
 
     return (
-        <div className="comment">
+        <div className="comment-block">
+            <div className="comment">
             <h3>{props.comment.username}</h3>
             <p>{props.comment.text}</p>
+            </div>
             <i className="far fa-trash-alt" onClick={handleCommentDelete}></i>
         </div>
     );
