@@ -1,0 +1,35 @@
+.primary-container {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:600px;
+    flex-direction:column;
+}
+
+.large-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.second-container {
+    margin-bottom:20px;
+}
+
+.inputtext {
+    
+    padding:0;
+    height:50px;
+
+}
+
+.inputtextone {
+    padding:0;
+    height:50px;
+
+}
+
+button {
+    width:100px;
+    height:50px;
+}
