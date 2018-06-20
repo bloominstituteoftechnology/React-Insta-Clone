@@ -18,6 +18,6 @@ const Post = props => {
         </div>
         <CommentSection comments={props.post.comments} />
         </div>
-    )
-}
+    );
+};
 export default Post;
