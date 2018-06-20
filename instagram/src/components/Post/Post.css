@@ -1,5 +1,5 @@
-.post {
-    max-width: 1080px;
+.post-container {
+    max-width: 100%;
     margin: 20px auto;
     border: 1px solid lightgrey;
     border-radius: 5px;
@@ -37,9 +37,5 @@
 .post-likes {
     font-weight: bold;
     font-size: 18px;
-    margin: 10px 20px;
-}
-
-.timestamp {
     margin: 10px 20px;
 }

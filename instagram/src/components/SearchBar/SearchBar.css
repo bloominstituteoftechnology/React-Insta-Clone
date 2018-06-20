@@ -1,4 +1,4 @@
-.searchbar-container {
+.search-bar-container {
     max-width: 1080px;
     display: flex;
     justify-content: space-between;
@@ -8,22 +8,22 @@
     border-bottom: 1px solid lightgrey;
 }
 
-.searchbar-header {
+.search-bar-header {
     width: 200px;
     display: flex;
     font-size: 26px;
     font-family: 'Lobster', cursive;
 }
 
-.searchbar-header div {
+.search-bar-header div {
     padding: 0 20px;
 }
 
-.searchbar-header div:first-child {
+.search-bar-header div:first-child {
     border-right: 2px solid grey;
 }
 
-.searchbar-search input {
+.search-bar-search input {
     height: 26px;
     text-align: center;
     font-size: 18px;
@@ -31,13 +31,13 @@
     border-radius: 5px;
 }
 
-.searchbar-nav {
+.search-bar-nav {
     font-size: 24px;
     width: 200px;
     display: flex;
     justify-content: flex-end;
 }
 
-.searchbar-nav div {
+.search-bar-nav div {
     padding: 0 20px;
 }

@@ -61,11 +61,16 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="comment-section-container">
                 {/* Map comment, index to each Comment component */}
                 {this.state.comments.map((comment, index) => (
                     <Comment key={index} comment={comment} />
                 ))}
+
+                <div className="comment-section-timestamp">
+                    {this.props.timestamp}
+                </div>
+
                 {/* Pass initial comment state and handler methods as props */}
                 <CommentForm
                     comment={this.state.comment}

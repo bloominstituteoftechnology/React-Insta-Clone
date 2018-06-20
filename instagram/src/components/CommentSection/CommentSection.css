@@ -1,10 +1,10 @@
-/* .comment-container {
-    font-size: 18px;
-    display: flex;
-    margin: 10px 20px;
+.comment-section-container {
+    max-width: 1080px;
+    margin: 20px auto;
+    /* border: 1px solid lightgrey; */
+    border-radius: 5px;
 }
 
-.comment-container div:first-child {
-    font-weight: bold;
-    margin: 0 8px 0 0;
-} */
+.comment-section-timestamp {
+    margin: 10px 20px;
+}
