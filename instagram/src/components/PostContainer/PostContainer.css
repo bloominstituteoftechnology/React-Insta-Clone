@@ -1,0 +1,21 @@
+.App {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.post {
+    border: 1px solid black;
+    margin: auto;
+}
+
+.post-header {
+    display: flex;
+}
+
+.post-header .thumbnail .profile-picture {
+    border-radius: 100%;
+}
+
+.post-image {
+    width: 100%;
+}
