@@ -20,7 +20,7 @@ const PostContainer = props => {
                         <i className="far fa-comment fa-lg fa-flip-horizontal"></i>
                     </div>
                     <p className='bold-text mt-2 mb-2'>{props.userData.likes + ' likes'}</p>
-                    <CommentSection comments={props.userData.comments} />
+                    <CommentSection onChange={props.onChangeHandler} comments={props.userData.comments} />
                 </CardBody>
             </Card>
         </div>
