@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './Authentication/Authenticate';
+import Login from './components/Login/Login';
 
 class App extends Component {
   constructor() {
@@ -33,9 +34,15 @@ class App extends Component {
     this.setState({data: newData});
   }
 
+  login = userName => {
+    localStorage.setItem("userName", userName);
+  }
+
+
   render() {
     return (
       <div className="App">
+        <Login />
         <div className="posts">
           <PostsPage data={this.state.data} />
         </div>
