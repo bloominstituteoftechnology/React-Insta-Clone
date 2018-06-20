@@ -9,10 +9,9 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <PostsPage />
-      </React.Fragment>
-    );
+          <div className="App">
+            <PostsPage />
+    </div>);
   }
 }
 

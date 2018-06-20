@@ -4,11 +4,10 @@ import PostContainer from "./PostContainer/PostContainer";
 import dummyData from "./dummy-data";
 import uuid from "uuid/v1/";
 
-
 class PostsPage extends Component {
   constructor(props) {
     super(props);
-    this.localStorageKey = 'instagram-data';
+    this.localStorageKey = "instagram-data";
     this.state = {
       searchInput: "",
       posts: null
@@ -111,7 +110,9 @@ class PostsPage extends Component {
       visible: true
     };
 
-    let storedData = JSON.parse(window.localStorage.getItem(this.localStorageKey));
+    let storedData = JSON.parse(
+      window.localStorage.getItem(this.localStorageKey)
+    );
     let posts;
 
     if (!storedData) {
@@ -138,8 +139,11 @@ class PostsPage extends Component {
     this.setState({ posts: posts });
   }
 
-  componentWillUpdate(_,nextState) {
-    window.localStorage.setItem(this.localStorageKey, (JSON.stringify(nextState)));
+  componentWillUpdate(_, nextState) {
+    window.localStorage.setItem(
+      this.localStorageKey,
+      JSON.stringify(nextState)
+    );
   }
 
   render() {
@@ -160,18 +164,19 @@ class PostsPage extends Component {
       });
     }
 
-    return (      
-    <div className="App">
-    <header className="App-header">
-      <SearchBar
-        searchInput={this.state.searchInput}
-        handleSearchInputChange={this.handleSearchInputChange}
-        handleSearch={this.handleSearch}
-      />
-    </header>
-    {postElems}
-    </div>);
-    }
+    return (
+      <React.Fragment>
+        <header className="posts-page-header">
+          <SearchBar
+            searchInput={this.state.searchInput}
+            handleSearchInputChange={this.handleSearchInputChange}
+            handleSearch={this.handleSearch}
+          />
+        </header>
+        {postElems}
+      </React.Fragment>
+    );
+  }
 }
 
 export default PostsPage;
