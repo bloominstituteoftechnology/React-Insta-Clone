@@ -1,7 +1,7 @@
 import React from 'react';
 import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar'
+import PostsPage from './components/PostContainer/PostsPage'
 import './App.css';
 
 class App extends React.Component {
@@ -9,7 +9,6 @@ class App extends React.Component {
     super();
     this.state = {
       data: [],
-      comment: "",
       //filteredPosts: []
     }
   }
@@ -29,18 +28,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <SearchBar  />
+        <SearchBar />
         <div className="App">
-          {this.state.data.map((post, i) => (
-            <PostContainer
-              key={i}
-              postComments={post.comments}
-              postStarter={post.username}
-              postThumb={post.thumbnailUrl}
-              postImage={post.imageUrl}
-            />
-          ))}
-
+          <PostsPage passedData={this.state.data} />
         </div>
       </div>
     );
