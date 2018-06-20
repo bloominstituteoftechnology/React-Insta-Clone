@@ -23,11 +23,11 @@ class Post extends React.Component {
     }
 
     incrementLike = () => {
-        this.setState({likes: this.props.post.likes++, liked: true, heartClass: 'fas fa-heart'});
+        this.setState({likes: ++this.props.post.likes, liked: true, heartClass: 'fas fa-heart'});
     }
 
     decrementLike = () => {
-        this.setState({likes: this.props.post.likes--, liked: false, heartClass: 'far fa-heart'});
+        this.setState({likes: --this.props.post.likes, liked: false, heartClass: 'far fa-heart'});
     }
 
     render() {
