@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
   constructor() {
@@ -28,7 +29,6 @@ class App extends Component {
       username: "GottaPayTheTrollToll291",
       text: this.state.comment,
     }
-    console.log(this.state.comment, index);
     newData[index].comments.push(newComment);
 
     this.setState({data: newData});
@@ -42,13 +42,7 @@ class App extends Component {
           <SearchBar />
         </header>
         <div className="posts">
-          {this.state.data.map((post, index) => 
-            <PostContainer postInfo={post} 
-                           key={index}
-                           commentKey={index}
-                           addNewComment={this.addNewComment}
-                           updateComment={this.updateComment} />
-          )}
+          <PostsPage data={this.state.data}/>
         </div>
       </div>
     );
@@ -57,4 +51,3 @@ class App extends Component {
 
 
 export default App;
-
