@@ -28,6 +28,11 @@ class CommentSection extends React.Component {
 
     addComment = event => {
         event.preventDefault();
+        if (this.state.comment === '') {
+            alert('You must provide a comment!');
+            return;
+        }
+
         const comments = this.state.comments.slice();
 
         comments.push({ username: this.props.name, text: this.state.comment });
