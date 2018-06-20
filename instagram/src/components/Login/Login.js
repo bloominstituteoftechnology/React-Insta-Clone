@@ -44,25 +44,33 @@ class Login extends React.Component {
         return (
             <div className='login-form-container'>
                 <Form className='login-form'>
+
                     <FormGroup className='instagram-word-container'>
                         <img className='login-instagram-word' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png' alt='' />
                     </FormGroup>
+
                     <FormGroup>
-                        <Input value={this.state.username} onChange={this.handleUsername} type="username" name="username" id='username' placeholder="Username" required />
+                        <Input autocomplete="off" value={this.state.username} onChange={this.handleUsername} type="username" name="username" id='username' placeholder="Username" required />
                     </FormGroup>
+
                     <FormGroup>
                         <Input value={this.state.password} onChange={this.handlePassword} type="password" name="password" id="examplePassword" placeholder="Password" />
                     </FormGroup>
+
                     <Button style={this.state.username.length > 0 || this.state.password.length > 0 ? { background: '#3897F0' } : { opacity: .3 }} onClick={this.loginButton}>Log In</Button>
+                    
                     <FormGroup className='forgot-form'>
                         <a className='forgot-password' href='#_'>Forgot password?</a>
                     </FormGroup>
+
                 </Form>
+
                 <div className='bottom-login-content'>
                     <div className='bottom-text'>
                         Don't have an account? <a className='sign-up' href='#_'>Sign up</a>
                     </div>
                 </div>
+
             </div>
         );
     }
