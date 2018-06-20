@@ -72,7 +72,7 @@ class PostsPage extends Component {
       if (text.length !== 0) {
         newComment = {
           text: text,
-          username: targetPost.username,
+          username: this.props.username,
           id: uuid()
         };
       }
