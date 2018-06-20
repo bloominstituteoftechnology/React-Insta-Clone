@@ -1,24 +1,21 @@
-import React from 'react';
-import './PostContainer.css';
-import PostInfo from './PostInfo';
-import CommentSection from '../CommentSection/CommentSection';
-
+import React from "react";
+import "./PostContainer.css";
+import PostInfo from "./PostInfo";
+import CommentSection from "../CommentSection/CommentSection";
 
 const PostContainer = props => {
-    return(
-        <div className="post-container">
-        {props.dummyData.map((post) => {
-          return (
-            <div>
+  return (
+    <div className="post-container">
+      {props.dummyData.map(post => {
+        return (
+          <div className="post">
             <PostInfo key={post.timestamp} postInfo={post} />
-            <CommentSection comments={post.comments} /> 
-            </div>
-          )
-        })}
-        </div>
-    )   
-}
-
-
+            <CommentSection comments={post.comments} />
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 export default PostContainer;

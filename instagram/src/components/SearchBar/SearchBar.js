@@ -1,11 +1,13 @@
-import React from 'react';
-import './SearchBar.css';
+import React from "react";
+import "./SearchBar.css";
+import instalogo from "../../assets/instalogo.png";
 
 const SearchBar = props => {
-    return (
-        <div>
-        
-        </div>
-    );
-}
+  return (
+    <div>
+      <img className="instalogo" src={instalogo} />
+    </div>
+  );
+};
+
 export default SearchBar;

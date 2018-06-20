@@ -1,26 +1,15 @@
-import React, { Component } from 'react';
-import './App.css';
-import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
-
+import React, { Component } from "react";
+import "./App.css";
+import PostsPage from "./components/PostContainer/PostsPage";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      dummyData: dummyData
-    }
-    console.log(this.state);
-  }
   render() {
     return (
-      <div className="App">
-      <SearchBar />
-      <PostContainer dummyData={this.state.dummyData} />
+      <div>
+        <PostsPage />
       </div>
-      
     );
   }
 }
+
 export default App;
