@@ -11,7 +11,7 @@ const SearchBar = props => {
         <i class="far fa-heart"></i>
         <i class="fas fa-user-alt"></i>
 
-
+        
 
         </div>
     );

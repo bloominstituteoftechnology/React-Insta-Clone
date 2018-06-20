@@ -21,7 +21,6 @@ const PostContainer = props => {
                 <button>...</button>
             </div>
         </div>
-    
     );
 }
 
