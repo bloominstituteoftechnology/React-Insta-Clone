@@ -10,18 +10,13 @@ class App extends Component {
     super();
     this.state = {
       commentsData: [],
-      username: 'anonymous',
-      newPost: ''
+      newPost: '',
+
     }
   }
   componentDidMount() {
     this.setState ({ commentsData: dummyData });
   }
-  // handleChange = e => {
-  //   console.log('e target value: ', e.target.value);
-  //   this.setState({ newPost: e.target.value})
-  //   console.log('newpost: ', this.state.newPost)
-  // }
   
   handleChange = (e) => {
     console.log('e target value: ', e.target.value);
@@ -29,19 +24,44 @@ class App extends Component {
 }
 
 
-addcomment =(e) => {
-  e.preventDefault();
-  const newCommentsCopy=this.state.comments.slice();
-  console.log('sliced newCommentsCopy: ', newCommentsCopy)
+addComment =(url) => {
+  // e.preventDefault();
+  // console.log('e: ', e)
+  console.log('url: ', url)
+  // map over state - commentsData
+  // if object.imgURL === url { push newObj into data.comments}
+  // setState
+  const newCommentsCopy=this.state.commentsData.slice();
+  let slicedComment = newCommentsCopy.comments;
+  console.log('slicedComment: ', typeof(slicedComment))
+
   const newComment = this.state.newPost;
-  const newObj={
-      username: 'anonymous',
+  let arr; 
+  let newObj={
+      username: 'grej',
       text: newComment
   }
-  let pushedCopy = newCommentsCopy.push(newObj);
-  console.log('new pushed copy ', pushedCopy)
-  this.setState({ comments: pushedCopy, newPost: '' })
+  // if(newCommentsCopy.imageUrl===url) {
+  //   slicedComment.push(newObj);
+  //   this.setState({ commentsData: newCommentsCopy, newPost: '' })
+  // } null;
+ 
+  newCommentsCopy.map(item => {
+    if(url === item.imageUrl){
+     arr = item.comments;
+    arr.push(newObj);
+    console.log('arr: ', arr)
+
+      return arr;
+      
+  }  null;
+})  
+let newData= newCommentsCopy;
+this.setState({ commentsData: newData, newPost: '' })
+
 }
+  
+ 
 
   render() {
     return (
@@ -52,7 +72,7 @@ addcomment =(e) => {
           <PostContainer 
             passedState = {this.state.commentsData} 
             changeProps={this.handleChange}  
-            clickProp = {this.addcomment} 
+            clickProp = {(e) => this.addComment}
             name = {this.state.newPost}
           />
         </div>

@@ -19,7 +19,7 @@ const PostContainer = (props) => {
                         <img src={item.imageUrl} className='postImg' alt='Post' />
                         <div className='likesPostImg'>
                             <div>
-                                <i className="fa fa-heart-o" aria-hidden="true"></i> 
+                                <span className='red'><i className="fa fa-heart-o" aria-hidden="true"></i></span>
                                 <i className="fa fa-comment-o" aria-hidden="true"></i>
                             </div>
                             <div>
@@ -27,7 +27,9 @@ const PostContainer = (props) => {
                             </div>
                         </div>
                         <div className='commentSection'>
-                            <CommentSection onclickProp={props.clickProp} passedItem={item.comments} passedPropsFromPost={item} onchangeProps={props.changeProps} />
+                            <CommentSection 
+                                onclickProp={props.clickProp} passedItem={item.comments} 
+                                passedPropsFromPost={item} onchangeProps={props.changeProps} />
                         </div>
                         <div className='dateStamp'>
                             {item.timestamp}
