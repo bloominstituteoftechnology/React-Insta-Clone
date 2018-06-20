@@ -1,0 +1,12 @@
+.search-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+
+.search-header .div1 {
+    display: flex;
+}
+.search-header input {
+    margin: auto 0;
+}

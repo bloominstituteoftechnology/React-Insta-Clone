@@ -42,4 +42,5 @@
 
 .red-heart {
     color: red;
+    pointer-events: none;
 }

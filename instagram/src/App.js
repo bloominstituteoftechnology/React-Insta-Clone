@@ -19,10 +19,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <SearchBar />
-        </header>
-
+        <SearchBar />
+       
         <div className="App-content">
           {this.state.dummyData.map(post => (
             <PostContainer key={post.timestamp} dummyData={post} />

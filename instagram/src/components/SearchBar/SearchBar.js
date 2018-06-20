@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchBar.css';
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -20,9 +21,22 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.newSearch}>
-                <input type="text" onChange={this.changeSearch} className="fa" placeholder={this.state.placeholder} value={this.state.input} />
-            </form>
+            <div className="search-header">
+                <div className="div1">
+                    <i className="fa">&#xf16d;</i>
+                    <h3>Instagram</h3>
+                </div>
+                
+                <form onSubmit={this.newSearch}>
+                    <input type="text" onChange={this.changeSearch} className="fa" placeholder={this.state.placeholder} value={this.state.input} />
+                </form>
+                
+                <div className="div2">
+                    <i className="fa">&#xf14e;</i>
+                    <i className="fa">&#xf08a;</i>
+                    <i className="fa">&#xf2c0;</i> 
+                </div> 
+            </div>
         )  
     }
     
