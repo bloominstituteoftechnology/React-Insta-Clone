@@ -5,11 +5,11 @@ import PostContainer from './PostContainer';
 import './PostContainer.css';
 
 class PostsPage extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       instagramData: [],
-      placeholderUsername: 'lambdaschool',
+      username: props.loggedInUsername,
       searchData: [],
       searchTerm: ''
     }
@@ -24,7 +24,7 @@ class PostsPage extends Component {
   addNewComment = (event, comment, index) => {
     event.preventDefault();
     const newData = this.state.instagramData.slice();
-    newData[index].comments.push({username: this.state.placeholderUsername, text: comment});
+    newData[index].comments.push({username: this.state.username, text: comment});
     this.updateData(newData);
   }
 

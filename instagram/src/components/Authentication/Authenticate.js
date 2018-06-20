@@ -31,15 +31,16 @@ class Authenticate extends Component {
   };
 
   componentDidMount() {
-    if (localStorage.getItem('username')) {
-      this.setState({loggedIn: true});
+    const loggedInUsername = localStorage.getItem('username');
+    if (loggedInUsername) {
+      this.setState({loggedIn: true, username: loggedInUsername});
     }
   }
 
   render() {
     if (this.state.loggedIn) {
       const AuthorizedApp = this.state.authorizedApp;
-      return <AuthorizedApp />;
+      return <AuthorizedApp loggedInUsername={this.state.username} />;
     } else {
       return <Login onUsernameChange={this.onUsernameChange} onPasswordChange={this.onPasswordChange} onSubmitLogin={this.onSubmitLogin} username={this.username} password={this.password} />;
     }
