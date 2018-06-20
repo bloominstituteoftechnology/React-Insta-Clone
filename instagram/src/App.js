@@ -4,13 +4,34 @@ import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 
-
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData
+      data: [],
+      comment: '',
     }
+  }
+
+  componentDidMount(){
+    this.setState({data: dummyData})
+  }
+
+  updateComment = event => {
+    this.setState({comment: event.target.value})
+  }
+  
+  addNewComment = (event, ...rest) => {
+    event.preventDefault();
+    let newData = this.state.data.slice();
+    let newComment = {
+      username: "GottaPayTheTrollToll291",
+      text: rest[1]
+    }
+    newData[rest[0]].comments.push(newComment);
+
+    this.setState({data: newData});
+
   }
 
   render() {
@@ -21,8 +42,13 @@ class App extends Component {
           <SearchBar />
         </header>
         <div className="posts">
-          {this.state.data.map(post => 
-            <PostContainer postInfo={post} />
+          {this.state.data.map((post, index) => 
+            <PostContainer postInfo={post} 
+                           key={index}
+                           commentKey={index}
+                           addNewComment={this.addNewComment}
+                           updateComment={this.updateComment}
+                           commentText={this.state.comment} />
           )}
         </div>
       </div>
@@ -30,4 +56,6 @@ class App extends Component {
   }
 }
 
+
 export default App;
+

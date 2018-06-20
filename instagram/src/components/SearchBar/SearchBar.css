@@ -1,6 +1,9 @@
 .search-bar {
-    height: 60%;
+    height: 40%;
     background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .insta-logo {
