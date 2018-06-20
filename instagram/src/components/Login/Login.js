@@ -11,7 +11,7 @@ class Login extends React.Component {
   }
 
   handleChange = event => {
-    this.setState({[event.target.name: event.target.value]})
+    this.setState({[event.target.name]: event.target.value})
   };
 
   handleLogin = event => {
@@ -24,13 +24,13 @@ class Login extends React.Component {
     return (
       <form>
         Username: <input type="text" placeholder="username" name="username"
-        value={this.state.username} onChange={this.handleChange}/><br>
+        value={this.state.username} onChange={this.handleChange}/><br/>
         Password: <input type="text" name="password"
          value={this.state.password} placeholder="password"
-         onChange={this.handleChange}/><br>
+         onChange={this.handleChange}/><br/>
         <input type="submit" value="Log In" onSubmit={this.handleLogin}/>
-      </form
-    )
+      </form>
+    );
   }
 }
 
