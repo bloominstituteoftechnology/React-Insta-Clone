@@ -1,6 +1,6 @@
 .post-container {
     border: 1px solid gray;
-    width: 60%;
+    width: 70%;
     margin: 50px auto;
     text-align: left;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
@@ -14,7 +14,7 @@
     border-radius: 50%;
 }
 .top-picture {
-    height: 500px;
+    height: 600px;
     width: 100%;
     text-align: center;
 }

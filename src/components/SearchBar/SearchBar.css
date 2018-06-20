@@ -17,13 +17,15 @@
   
   .social-wrapper {
     display: flex;
+    width: 10%;
   }
   
   .social {
-    width: 50px;
+    width: 100%;
+    margin-left: 1%;
   }
   
   .search-bar{
-      height: 30px;
-      margin-right: 10%;
+    height: 30px;
+    margin-right: 10%;
   }
