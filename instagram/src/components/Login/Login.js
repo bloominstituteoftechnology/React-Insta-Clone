@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Login.css';
 
 class Login extends React.Component {
   constructor(props) {
@@ -35,13 +35,13 @@ onChangeHandlerPassword = event =>{
 render(){
 	return(
 
-		<div>
+		<div className="form-container">
 		<form>
-	<input  type="text" onChange ={this.onChangeHandlerUser} placeholder="username" value={this.state.username}/>
+	<input  className="input-style"type="text" onChange ={this.onChangeHandlerUser} placeholder="username" value={this.state.username}/>
 
-	<input  type="password" onChange ={this.onChangeHandlerPassword} placeholder="password" value={this.state.password}/>
+	<input  className="input-style" type="password" onChange ={this.onChangeHandlerPassword} placeholder="password" value={this.state.password}/>
 		
-	<button onClick={this.Login}>Login</button>
+	<button className="button-style" onClick={this.Login}>Login</button>
 		</form>
 		</div>
 	
