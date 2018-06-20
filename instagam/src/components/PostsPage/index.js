@@ -10,7 +10,6 @@ class PostsPage extends Component {
     super();
     this.state = {
       commentsData: [],
-      newPost: '',
       filteredData: ''
 
     }
@@ -18,11 +17,6 @@ class PostsPage extends Component {
   componentDidMount() {
     this.setState ({ commentsData: dummyData });
   }
-  
-  handleChange = (e) => {
-    console.log('e target value: ', e.target.value);
-    this.setState({ newPost: e.target.value });
-}
 
 filterSearch = (e) => {
   const dataSlice = this.state.commentsData.slice();
