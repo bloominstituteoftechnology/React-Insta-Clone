@@ -6,11 +6,12 @@ import {
 import CommentSection from '../CommentSection/Comment';
 
 const PostContainer = props => {
+    console.log(props.userData.comments)
     return (
         <div className='post-container container-fluid'>
             <Card className='card'>
                 <div className="card-header">
-                    <img className="thumbnail" src={props.userData.thumbnailUrl} alt="thumbnail"/>
+                    <img className="thumbnail" src={props.userData.thumbnailUrl} alt="thumbnail" />
                     <span className="bold-text">{props.userData.username}</span>
                 </div>
                 <CardImg top width="100%" src={props.userData.imageUrl} alt="Card image cap" />
@@ -20,7 +21,12 @@ const PostContainer = props => {
                         <i className="far fa-comment fa-lg fa-flip-horizontal"></i>
                     </div>
                     <p className='bold-text mt-2 mb-2'>{props.userData.likes + ' likes'}</p>
-                    <CommentSection onChange={props.onChangeHandler} comments={props.userData.comments} />
+                    <CommentSection
+                        onChange={props.onChangeHandler} 
+                        comments={props.userData.comments} 
+                        onSubmit={props.onSubmitHandler} 
+                        index={props.index}
+                        commentValue = {props.commentValue} />
                 </CardBody>
             </Card>
         </div>

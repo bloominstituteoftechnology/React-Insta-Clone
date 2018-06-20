@@ -100,5 +100,12 @@ a {
 
 .comment-input {
   border: none;
+}
 
+.comment-input {
+  width: 100%;
+}
+
+.comment-input:focus{
+  outline: none;
 }

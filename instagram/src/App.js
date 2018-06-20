@@ -20,6 +20,23 @@ class App extends Component {
     });
   }
 
+  commentChangeHandler = (e) => {
+    this.setState({
+      newComment: e.target.value
+    })
+  }
+
+  commentSubmitHandler = (e, index) => {
+    e.preventDefault();
+    let newCom = {};
+    newCom.jessica = this.state.newComment;
+    let currentData = this.state.data;
+    currentData[index].comments.push(newCom);
+    this.setState({data: currentData,
+                   newComment: ''});
+    // console.log(this.state.data[index].comments);
+  }
+
   componentDidMount = () => {
     this.setState({
       data:dummyData,
@@ -36,7 +53,13 @@ class App extends Component {
           if (!user.username.toLowerCase().includes(this.state.searchInput.toLowerCase())){
             return;
           }
-          return <PostContainer onChangeHandler={this.changeHandler} key={`user${index}`} userData = {user} />
+          return <PostContainer 
+                      onSubmitHandler={this.commentSubmitHandler} 
+                      index={index} 
+                      onChangeHandler={this.commentChangeHandler} 
+                      key={`user${index}`} 
+                      userData = {user}
+                      commentValue={this.state.newComment} />
         })}
       </div>
     );
