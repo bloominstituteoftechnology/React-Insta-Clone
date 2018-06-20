@@ -43,6 +43,21 @@ body{
   align-items: center;
 }
 
+.logout {
+  border: solid gray 1px;
+  padding: 0 15px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: gray;
+}
+
+.logout:hover {
+  background-color: gray;
+  color: white;
+}
+
 .header input {
   padding-left: 10px;
   height: 30px;
