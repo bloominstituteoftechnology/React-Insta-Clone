@@ -1,0 +1,41 @@
+.posts-container-wrapper {
+  height: 50%;
+  width: 33%;
+  min-width: 400px;
+  margin: 5px auto;
+}
+.post-border {
+  border: 1px solid #d3d3d3;
+  margin: 15px 0;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+.post-image-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.post-header {
+  display: flex;
+}
+
+.post-thumb-wrapper {
+  height: 50px;
+  width: 50px;
+}
+.post-thumb {
+  height: 100%;
+  border-radius: 50%;
+}
+.like-section {
+  display: flex;
+}
+
+.like-section-wrapper {
+  height: 10px;
+  width: 10px;
+  margin: 10px;
+}
