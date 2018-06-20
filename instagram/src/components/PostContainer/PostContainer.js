@@ -17,6 +17,10 @@ class PostContainer extends React.Component {
         let likes = this.state.likes;
         likes = (likes + 1);
         this.setState({likes});
+        var element = document.getElementById('heart');
+        console.log(event);
+        element.classList.add('red-heart');
+        // .add(event.classList.add('heart'));
     }
 
     render() {
@@ -31,7 +35,7 @@ class PostContainer extends React.Component {
                 </div>
                 <div className="post-comments">
                     <div className="comment-interaction">
-                        <i onClick={this.addLikes} className="fa">&#xf08a;</i>
+                        <i onClick={this.addLikes} id="heart" className="fa">&#xf08a;</i>
                         <i className="fa">&#xf0e5;</i>
                     </div>
                     <p className="custom-likes" align="left"><strong>{this.state.likes} likes</strong></p>
