@@ -1,23 +1,15 @@
 import React from 'react';
 import './Post.css';
 import CommentSection from '../CommentSection/CommentSection';
+import LikeSection from './LikeSection';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 
 import {
-    Card, CardText, CardBody, CardSubtitle, Row, CardImg
+    Card, CardBody, CardSubtitle, Row, CardImg
 } from 'reactstrap';
 
 const Post = props => {
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    let month = '0';
-    for (let i = 0; i < months.length; i++) {
-        if (props.data.timestamp.includes(months[i])) {
-            month += i + 1;
-        }
-    }
 
-    let time = props.data.timestamp.replace('th', '').replace(months[month - 1], month);
 
     return (
         <div>
@@ -36,32 +28,13 @@ const Post = props => {
 
                 <CardBody className='bottom-content'>
 
-                    <Row className='comment-imgs'>
-                        <i style={props.data.liked ? { color: 'red' } : null} onClick={() => props.likeComment(props.data.username)} className="far fa-heart"></i>
-                        <img className='chat-icon' src="https://png.icons8.com/metro/50/000000/topic.png" alt='' />
+                    <Row>
+                        <LikeSection id={props.id} likes={props.data.likes} />
                     </Row>
-
-                    <CardText className='post-likes'>
-                        <strong>{props.data.likes} likes </strong>
-                    </CardText>
 
                     <CardBody className='comment-section'>
-                        {props.data.comments.map((comment, index) => <CommentSection key={comment.username + index} username={props.data.username} index={index} deleteComment={props.deleteComment} comment={comment} />)}
+                        <CommentSection timestamp={props.data.timestamp} id={props.id} name={props.data.username} comments={props.data.comments} />
                     </CardBody>
-
-                    <CardText className='time-commented'>
-                        {moment(time, "MMDDYYYY").fromNow()}
-                    </CardText>
-
-                    <Row className='add-comment-section'>
-                        <form className='add-comment-form' onSubmit={event => {
-                            event.preventDefault();
-                            props.addComment(props.data.username);
-                        }}>
-                            <input value={props.value(props.data.username)} onChange={props.onChange} type='text' name={props.data.username} className='add-comment' placeholder='Add a comment...' />
-                            <img className='more-icon' src="https://png.icons8.com/metro/50/000000/more.png" alt='' />
-                        </form>
-                    </Row>
 
                 </CardBody>
             </Card>
