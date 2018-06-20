@@ -1,11 +1,16 @@
 .login {
-
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 400px;
+  margin: 50px auto;
 }
 
 .login input {
-
+  margin: 0 0 10px 0;
+  padding: 10px;
 }
 
 .login__button {
-  
+  padding: 10px;
 }
