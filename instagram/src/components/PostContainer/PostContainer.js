@@ -6,55 +6,16 @@ import PropTypes from "prop-types";
 class PostContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      commentInput: "",
-      comments: props.post.comments,
-      userHasLiked: props.post.userHasLiked ? true : false,
-      likes: props.post.likes
-    };
-    this.handleInput = this.handleInput.bind(this);
-    this.addComment = this.addComment.bind(this);
-    this.handleCommentKeyPress = this.handleCommentKeyPress.bind(this);
-    this.handleLike = this.handleLike.bind(this);
+
+    this.handleCommentInput = this.withIdArgument(props.handleCommentInput);
+    this.addComment = this.withIdArgument(props.addComment);
+    this.handleLike = this.withIdArgument(props.handleLike);
   }
 
-  handleInput(event) {
-    let value = event.target.value;
-    this.setState({ commentInput: value });
-  }
-
-  handleCommentKeyPress(event) {
-    if (event.key === "Enter") {
-      this.addComment();
-    }
-  }
-
-  handleLike() {
-    if (!this.state.userHasLiked) {
-      this.setState({
-        userHasLiked: true,
-        likes: this.state.likes + 1
-      });
-    } else {
-      this.setState({
-        userHasLiked: false,
-        likes: this.state.likes - 1
-      });
-    }
-  }
-
-  addComment() {
-    let text = this.state.commentInput;
-    if (text.length !== 0) {
-      let newComment = {
-        text: text,
-        username: this.props.post.username
-      };
-      let newComments = this.state.comments.concat([newComment]);
-      this.setState({
-        commentInput: "",
-        comments: newComments
-      });
+  withIdArgument(f) {
+    let id = this.props.post.id;
+    return function(event) {
+      f(event, id);
     }
   }
 
@@ -81,7 +42,7 @@ class PostContainer extends React.Component {
               <div className="heart-icon post-icon" onClick={this.handleLike}>
                 <i
                   className={
-                    this.state.userHasLiked ? "fas fa-heart" : "far fa-heart"
+                    this.props.post.userHasLiked ? "fas fa-heart" : "far fa-heart"
                   }
                 />
               </div>
@@ -98,27 +59,28 @@ class PostContainer extends React.Component {
           <div className="likes-strip">
             <h3>
               {"" +
-                this.state.likes +
-                (this.state.likes > 1 ? " likes" : " like")}
+                this.props.post.likes +
+                (this.props.post.likes > 1 ? " likes" : " like")}
             </h3>
           </div>
-          <CommentSection comments={this.state.comments} />
+          <CommentSection comments={this.props.post.comments} />
           <div className="time-stamp">
             <p>{this.props.post.timestamp}</p>
           </div>
-          <div className="comment-input-section">
+            <form className="comment-input-section" onSubmit={this.addComment}>
             <input
               type="text"
               className="new-comment"
               placeholder="Add a comment..."
-              onChange={this.handleInput}
-              onKeyPress={this.handleCommentKeyPress}
-              value={this.state.commentInput}
+              onChange={this.handleCommentInput}
+              value={this.props.post.commentInput}
             />
-            <div className="comment-input-hamburger" onClick={this.addComment}>
+            <div className="comment-input-hamburger">
               <i className="fas fa-ellipsis-h" />
-            </div>
           </div>
+            </form>
+            
+
         </div>
       </div>
     );
