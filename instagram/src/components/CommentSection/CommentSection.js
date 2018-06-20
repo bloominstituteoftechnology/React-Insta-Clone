@@ -23,10 +23,9 @@ class CommentSection extends Component {
  this.setState({comments: comments});
 
  }  
-  addLike=(event) => {
- event.preventDefault();
+  addLike=() => {
  let likes = this.state.likes;
- likes++;
+ likes++;  
  this.setState({likes: likes});
 
  }  
