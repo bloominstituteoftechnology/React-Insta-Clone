@@ -6,9 +6,12 @@ import uuid from "uuid/v1/";
 import "./App.css";
 import dummyData from "./dummy-data";
 
+
+
 class App extends Component {
   constructor(props) {
     super(props);
+    this.localStorageKey = 'instagram-data';
     this.state = {
       searchInput: "",
       posts: null
@@ -49,28 +52,8 @@ class App extends Component {
   }
 
   //Post specific methods
-  //accepts an array of posts and a post Id. Returns an object with a targetPost property with its value as a
-  //shallow copy of the post with the matching ID, and an otherPosts property, which is an array of shallow
-  // copies of all Post Objects not selected
-  processPostsById(postsArr, postId) {
-    let nonTargetPosts = [];
-    let targetPost;
-    let postsCopy = postsArr.slice();
-    for (let i = 0; i < postsCopy.length; i++) {
-      if (postsArr[i].id === postId) {
-        targetPost = Object.assign({}, postsArr[i]);
-      } else {
-        let nonTargetPost = Object.assign({}, postsArr[i]);
-        nonTargetPosts.push(nonTargetPost);
-      }
-    }
-    return { targetPost: targetPost, nonTargetPosts: nonTargetPosts };
-  }
 
   handleCommentInput(event, postId) {
-    // let postsToProcess = this.processPostsById(this.state.posts, postId);
-    // let {targetPost, nonTargetPosts} = postsToProcess;
-
     let returnArr = this.state.posts.slice();
     let targetPost = returnArr.find(post => post.id === postId);
 
@@ -83,8 +66,6 @@ class App extends Component {
 
   addComment(event, postId) {
     event.preventDefault();
-    // let postsToProcess = this.processPostsById(this.state.posts, postId);
-    // let {targetPost, nonTargetPosts} = postsToProcess;
 
     let returnArr = this.state.posts.slice();
     let targetPost = returnArr.find(post => post.id === postId);
@@ -109,8 +90,6 @@ class App extends Component {
   }
 
   handleLike(event, postId) {
-    // let postsToProcess = this.processPostsById(this.state.posts, postId);
-    // let {targetPost, nonTargetPosts} = postsToProcess;
     let returnArr = this.state.posts.slice();
     let targetPost = returnArr.find(post => post.id === postId);
 
@@ -134,23 +113,36 @@ class App extends Component {
       userHasLiked: false,
       visible: true
     };
-    let posts = dummyData.map(post => {
-      let newObj = Object.assign({}, templatePost);
-      newObj = Object.assign(newObj, post);
 
-      let comments = newObj.comments;
-      let newComments = comments.map(comment => {
-        return Object.assign({ id: uuid() }, comment);
+    let storedData = JSON.parse(window.localStorage.getItem(this.localStorageKey));
+    let posts;
+
+    if (!storedData) {
+      posts = dummyData.map(post => {
+        let newObj = Object.assign({}, templatePost);
+        newObj = Object.assign(newObj, post);
+
+        let comments = newObj.comments;
+        let newComments = comments.map(comment => {
+          return Object.assign({ id: uuid() }, comment);
+        });
+        newObj.comments = newComments;
+
+        if (newObj.id === undefined) {
+          newObj.id = uuid();
+        }
+
+        return newObj;
       });
-      newObj.comments = newComments;
+    } else {
+      posts = storedData.posts;
+    }
 
-      if (newObj.id === undefined) {
-        newObj.id = uuid();
-      }
-
-      return newObj;
-    });
     this.setState({ posts: posts });
+  }
+
+  componentWillUpdate(_,nextState) {
+    window.localStorage.setItem(this.localStorageKey, (JSON.stringify(nextState)));
   }
 
   render() {
