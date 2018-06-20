@@ -6,7 +6,6 @@ import PostContainer from './components/PostContainer/PostContainer';
 import Authenticate from "./components/Authenticate/Authenticate";
 
 
-
 class App extends Component {
 constructor(){
         super();
@@ -84,4 +83,5 @@ addNewComment = (event, index) => {
   }
 }
 
-export default App;
+export default Authenticate(App);
+

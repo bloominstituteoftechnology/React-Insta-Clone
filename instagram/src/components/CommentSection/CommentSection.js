@@ -1,45 +1,41 @@
 import React from 'react';
 import './CommentSection.css';
 import PropTypes from "prop-types";
+import Comment from "./Comment";
+import CommentInput from "./CommentInput";
 
-const  CommentSection= props => {
-        return( 
-                <div>{props.Comments.map(comment => { 
+class CommentSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: props.Comments,
+      newComment: ""
+    };
+  }
 
-		return(
+changeCommentValue = event => {
+   event.preventDefault();
+    this.setState({ newComment: event.target.value });
 
-		<div className={props.CommentContainer}>	
-		<p className={props.UserText}><span className={props.CommentUserNameStyle}>{comment.username}</span> {comment.text}</p>
-		</div>
-		);
+  };
 
-		})}
-                
-		<input className={props.CommentBarStyle}
-                type="text"
-                //onChange={this.props.inputEvent(e); this.props.enterKeyPress(e)}
-                // onChange={props.searchInput}
-                 //onChange={props.enterKeyPress}
-                placeholder="Add a comment"
-                value=""
-                />
 
+      render(){
+	return( 
+                <div>{this.state.comments.map(comment => <Comment comment={comment}/>)}
+		<CommentInput CommentValue={this.changeCommentValue}  NewCommentValue={this.state.newComment}   />
 		</div>
 	);
 }
 
+}
 
-//  <p className={props.UserText}> {comment.text}</p>
 
 CommentSection.propTypes = {
-  comment:PropTypes.shape({
-    username: PropTypes.string,
-    text: PropTypes.string
-  })
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
+  )
 };
-
-
-
 
 
 export default CommentSection;
