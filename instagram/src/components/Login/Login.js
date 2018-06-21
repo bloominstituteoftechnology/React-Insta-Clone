@@ -13,8 +13,8 @@ class Login extends React.Component {
     }
 
     startLogin = e => {
-        localStorage.setItem('username', this.state.username);
-        localStorage.setItem('password', this.state.password);
+        sessionStorage.setItem('username', this.state.username);
+        sessionStorage.setItem('password', this.state.password);
         window.location.reload(false);
     }
     render() {

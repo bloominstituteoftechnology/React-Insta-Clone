@@ -9,14 +9,15 @@ const Authenticate = App =>
             };
         }
         componentDidMount() {
-            if (localStorage.getItem('username') === 'skid' && 
-            localStorage.getItem('password') === 'dragon') {
+            if (sessionStorage.getItem('username') === 'skid' && 
+            sessionStorage.getItem('password') === 'dragon') {
                 this.setState({ isLoggedIn: true });
             }
             else {
                 this.setState({ isLoggedIn: false });
             }
         }
+
         render() {
             if (this.state.isLoggedIn === true) {
                 return <App />;
