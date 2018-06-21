@@ -4,7 +4,6 @@ import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authentication';
 
 import './App.css';
-import Login from './components/Login/Login';
 
 class App extends Component {
   constructor(){
@@ -19,15 +18,30 @@ class App extends Component {
   addNewComment(e, index){
     const obj = {
                   text: e.target.value,
-                  username: 'sibaht'
+                  username: window.localStorage.getItem('username')
                 }
 
-    const dataItem = Object.assign({}, this.state.data[index]);
-    dataItem.comments.push(obj);
+    const dataItem =  this.state.data.slice();
+    dataItem[index].comments.push(obj);
+    window.localStorage.removeItem('data');
+
+    window.localStorage.setItem('data', JSON.stringify(dataItem))
     this.setState({
-      dataItem
+      data: JSON.parse(window.localStorage.getItem('data'))
     })
     e.target.value ="";
+  }
+  deleteComment = (index1, index2) =>{
+    console.log(index1, index2)
+    const dataItem =  JSON.parse(window.localStorage.getItem('data'));
+    dataItem[index1].comments.splice(index2, 1);
+    
+    window.localStorage.removeItem('data');
+    window.localStorage.setItem('data', JSON.stringify(dataItem))
+    this.setState({
+      data: JSON.parse(window.localStorage.getItem('data'))
+    })
+    console.log('finish deleting');
   }
   addNewLike = (index) =>{
     let dataItem =  this.state.data.slice();
@@ -37,17 +51,30 @@ class App extends Component {
       data: dataItem
     })
   }
+  componentWillUnmount(){
+    window.localStorage.removeItem('data');
+  }
   componentDidMount () {
-    this.setState({
-      data: dummyData
-    })
+    if(window.localStorage.getItem('data')){
+      this.setState({
+        data: JSON.parse(window.localStorage.getItem('data'))
+      });
+    }else{
+      this.setState({
+        data: dummyData
+      }, ()=>{
+        window.localStorage.setItem('data', JSON.stringify(this.state.data))
+      })
+    }
   }
   
 
   render() {
+    // window.localStorage.removeItem('data');
+    console.table(this.state.data);
     return (
       <div className="app">
-        <PostsPage state={this.state} addNewComment={this.addNewComment} addNewLike={this.addNewLike}/>
+        <PostsPage state={this.state} addNewComment={this.addNewComment} addNewLike={this.addNewLike} deleteComment={this.deleteComment}/>
       </div>
     );
   }

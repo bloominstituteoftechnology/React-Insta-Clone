@@ -23,3 +23,21 @@
 .comment input::placeholder{
     text-transform: capitalize;
 }
+.comment__item{
+    position: relative;
+    background-color: aliceblue;
+    padding: 10px 0 10px 10px;
+    display: block;
+}
+.comment__delete{
+    position: absolute;
+    right: 30px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    display: none;
+    transition: all .3s;
+    cursor: pointer;
+}
+.comment__item:hover .comment__delete{
+    display: inline;
+}

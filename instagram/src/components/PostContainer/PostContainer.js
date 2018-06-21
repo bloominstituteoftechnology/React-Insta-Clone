@@ -21,7 +21,8 @@ const PostContainer = (props) => {
         <i className="far fa-comment"></i>
         <CommentSection comments={props.data.comments} 
                         index={props.index} 
-                        addComment={props.addComment}/>
+                        addComment={props.addComment}
+                        deleteComment={props.deleteComment}/>
       </div>
     );
 

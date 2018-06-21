@@ -15,6 +15,7 @@ const PostsPage = (props)=> {
                     addComment={props.addNewComment}
                     likes = {index === 0 ?  null: index}
                     addLike={props.addNewLike}
+                    deleteComment={props.deleteComment}
                 />))}
         </div>
     )

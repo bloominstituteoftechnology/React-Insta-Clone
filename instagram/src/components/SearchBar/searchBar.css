@@ -5,6 +5,7 @@
     top: 0;
     background-color: white;
     padding: 20px 30px;
+    z-index: 2;
 }
 .search__container{
     max-width: 900px;

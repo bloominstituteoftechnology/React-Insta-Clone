@@ -1,16 +1,21 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import './commentSection.css';
+import moment from 'moment'
 
     const CommentSection = (props) => {    
         return (
             <div className="comment" >
                 {props.comments.map((ele, index)=> (
-                    <p key={index} >
-                        <span>{ele.username}</span> {ele.text} 
+                    <p key={index} className="comment__item" >
+                        <span>{ele.username}: </span> 
+                        {ele.text} 
+                        <span className="comment__delete" onClick={(e) => (props.deleteComment(props.index, index))}>
+                            X
+                        </span>
                     </p>
                 ))}
-                
+                <p>{moment(props.timestamp).fromNow()} </p>
                 <form onSubmit={e => {
                     e.preventDefault();
                     }}> 
