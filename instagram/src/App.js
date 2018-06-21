@@ -19,4 +19,5 @@ class App extends Component {
 
 const AppWithAuthentication = Authenticate(App);
 
-export default AppWithAuthentication;
+// export default AppWithAuthentication;
+export default App;
