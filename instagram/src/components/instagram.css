@@ -1,38 +1,7 @@
-#searchBar {
-  font-size: 24px;
-  margin-top: 50px;
-  border: 10px;
-}
-
-.thumb-image {
-  border-radius: 50%;
-  border: 2px solid blue;
-  max-width: 50px;
-  max-height: 50px;
-  margin-left: 10px;
-  margin-right: 10px;
-
-}
-
-.username {
-
-}
-
-.post-image {
-  height: 600px;
-  width: 600px;
-}
-
-.test {
-  width: 600px;
-  margin-left: 40px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.card-header {
+ .card-header {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .test-2 {
@@ -41,6 +10,7 @@
 
 .like-button {
   font-size: 24px;
+  display: inline-block;
 }
 
 .like-selected {
@@ -51,4 +21,10 @@
   display: flex;
   justify-content: space-between;
   font-size: 24px
+}
+
+.login-form {
+  width: 200px;
+  margin: auto;
+  margin-top: 10%;
 }

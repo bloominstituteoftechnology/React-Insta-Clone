@@ -4,7 +4,33 @@ import '../instagram.css';
 import { Card, CardImg, CardBody,
   CardTitle } from 'reactstrap';
 import PropTypes from 'prop-types';
+import styled from 'styled-components'
 
+const StyledThumbnail = styled.img`
+border-radius: 50%;
+max-width: 50px;
+max-height: 50px;
+margin-left: 10px;
+margin-right: 10px;
+`;
+
+const StyledCardImage = styled.img`
+height: 600px;
+width: 600px;
+`;
+
+const PostConWrapper = styled.div`
+width: 600px;
+margin: auto;
+margin-top: 20px;
+margin-bottom: 20px;
+`;
+
+const StyledCardHeader = styled.span`
+display: flex;
+justify-content: flex-start;
+align-items: center;
+`;
 
 class PostContainer extends React.Component {
   constructor(props) {
@@ -12,7 +38,8 @@ class PostContainer extends React.Component {
     this.state = {
       likes: this.props.post.likes,
       liked: false,
-      likeStyle:"fa-heart far"
+      likeStyle:"fa-heart far",
+      comments: this.props.post.comments
     }
   }
 
@@ -25,27 +52,30 @@ class PostContainer extends React.Component {
   }
   }
 
+  deleteComment = event => {
+    console.log(event.target.getAttribute('index'));
+  }
+
   render() {
     console.log("fa-heart " + (this.state.liked ? "fas":"far"))
   return (
-      <Card className="test">
+      <PostConWrapper>
+      <Card>
         <CardBody className="card-header">
-        <img className="thumb-image" src={this.props.post.thumbnailUrl} alt="" />
-        <CardTitle className="username">{this.props.post.username}</CardTitle>
+          <StyledThumbnail src={this.props.post.thumbnailUrl} alt="" />
+          <CardTitle className="username">{this.props.post.username}</CardTitle>
         </CardBody>
-        <CardImg className="post-image" src={this.props.post.imageUrl} alt="" />
+        <StyledCardImage src={this.props.post.imageUrl} alt="" />
         <CardBody>
         <div className="post-buttons">
         <div className="left-buttons">
         <div className="like-button mx-2" onClick={this.toggleLike}><i className={this.state.likeStyle}></i></div>
-        {/*<i className="fas fa-heart like-selected"></i>*/}
         <i className="far fa-comment" ></i>
         </div>
         <i className="far fa-bookmark"></i>
-        {/*<i class="fas fa-bookmark"></i>*/}
         </div>
         <h5>{this.state.likes} likes</h5>
-        <CommentSection comments={this.props.post.comments} />
+        <CommentSection deleteCommentHandler={this.deleteComment} comments={this.props.post.comments} />
         <h6>{this.props.post.timestamp}</h6>
         <hr/>
         <form onSubmit={this.props.addCommentHandler} value={this.props.index}>
@@ -53,6 +83,7 @@ class PostContainer extends React.Component {
         </form>
         </CardBody>
       </Card>
+      </PostConWrapper>
   );
 }
 
