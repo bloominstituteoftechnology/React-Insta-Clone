@@ -1,27 +1,58 @@
 import React from 'react';
-import './SearchBar.css';
+//import './SearchBar.css';
 import IGLogo from '../../assets/iglogo.png';
+import styled from 'styled-components';
+
+const Header = styled.header`
+border-bottom: 1px solid #3333;
+height: 80px;
+line-height: 70px;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-pack: justify;
+justify-content: space-between;
+background: #ffffff;
+}
+`;
+
+const ImageWrapper = styled.div`
+height: 50px;
+`;
+
+const Logo = styled.img`
+height: 100%;
+`;
+
+const SocialWrapper = styled.div`
+display:flex;
+`;
+
+const Social = styled.div`
+width: 20px;
+height: 20px;
+`;
+
 const SearchBar = () => {
     return(
-            <div className="search-bar-wrapper">
-              <div className="image-wrapper">
-                <img alt="instagram logo" src={IGLogo} className="logo-image" />
-              </div>
+            <Header>
+              <ImageWrapper>
+                <Logo alt="instagram logo" src={IGLogo} className="logo-image" />
+              </ImageWrapper>
               <div>
                 <input type="text" placeholder="Search" />
               </div>
-              <div className="social-wrapper">
-                <div className="social">
+              <SocialWrapper>
+                <Social>
                   <i className="fa fa-compass" />
-                </div>
-                <div className="social">
+                </Social>
+                <Social>
                   <i className="fa fa-heart" />
-                </div>
-                <div className="social">
+                </Social>
+                <Social>
                   <i className="fa fa-user-circle" />
-                </div>
-              </div>
-            </div>
+                </Social>
+              </SocialWrapper>
+            </Header>
           );
 }
 
