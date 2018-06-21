@@ -1,14 +1,14 @@
 import React from 'react';
 import './SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = props => {
     return (
         <div className='search-bar'>
             <i className="fab fa-instagram"></i>
             <p>|</p>
             <img src={require('../../img/logo.png')} alt="Instagram" />
             <form>
-                <input type="text" placeholder="Search" />
+                <input type="text" placeholder="Search" onChange={props.searchPosts} />
             </form>
             <div className="social-icons">
                 <div className="icon">
