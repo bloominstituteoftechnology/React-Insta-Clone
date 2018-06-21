@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import { TimeCommented } from '../ReusableComponents/PostContainer';
 
 const CommentTime = props => {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -12,7 +13,7 @@ const CommentTime = props => {
 
     let time = props.timestamp.replace('th', '').replace(months[month - 1], month);
 
-    return <div className='time-commented'>{moment(time, "MMDDYYYY").fromNow()}</div>
+    return <TimeCommented>{moment(time, "MMDDYYYY").fromNow()}</TimeCommented>
 }
 
 export default CommentTime;

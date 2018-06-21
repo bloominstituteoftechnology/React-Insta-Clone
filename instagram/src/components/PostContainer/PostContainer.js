@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from './Post';
+import { PostContainers } from '../ReusableComponents/PostContainer';
 
 const PostContainer = props => {
     let data = props.data;
@@ -10,11 +11,11 @@ const PostContainer = props => {
     }
 
     return (
-        <div className='post-containers'>
+        <PostContainers>
             {data.map((data, index) => {
                 return <Post key={data.username + index} id={index} data={data} />
             })}
-        </div>);
+        </PostContainers>);
 }
 
 export default PostContainer;

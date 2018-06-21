@@ -1,4 +1,5 @@
 import React from 'react';
+import { LikeImgs, LikeHeart, LikeComment, Likes } from '../ReusableComponents/PostContainer';
 
 class LikeSection extends React.Component {
     constructor(props) {
@@ -42,14 +43,14 @@ class LikeSection extends React.Component {
         return (
             <div>
 
-                <div className='comment-imgs'>
-                    <i style={this.state.liked ? { color: 'red' } : null} onClick={this.likeComment} className={'fa-heart likes-heart ' + (this.state.liked ? 'fas' : 'far')}></i>
-                    <i className={"far fa-comment"}></i>
-                </div>
+                <LikeImgs>
+                    <LikeHeart style={this.state.liked ? { color: 'red' } : null} onClick={this.likeComment} className={'fa-heart ' + (this.state.liked ? 'fas' : 'far')}></LikeHeart>
+                    <LikeComment className={"far fa-comment"}></LikeComment>
+                </LikeImgs>
 
-                <div className='post-likes'>
+                <Likes>
                     <strong>{this.state.likes} likes </strong>
-                </div>
+                </Likes>
 
             </div>
         );

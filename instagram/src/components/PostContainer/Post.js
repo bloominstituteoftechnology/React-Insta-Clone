@@ -4,40 +4,40 @@ import CommentSection from '../CommentSection/CommentSection';
 import LikeSection from './LikeSection';
 import PropTypes from 'prop-types';
 
-import {
-    Card, CardBody, CardSubtitle, Row, CardImg
-} from 'reactstrap';
+import { CardImg } from 'reactstrap';
+import { PostContainer, PostTopContent, PostBottomContent, ThumbnailImg, PostUsername, PostCommentSection, StyledRow } from '../ReusableComponents/PostContainer';
 
 const Post = props => {
 
 
     return (
         <div>
-            <Card className='post-container'>
+            <PostContainer>
 
-                <CardBody className='top-content'>
+                <PostTopContent>
 
-                    <Row>
-                        <img className='post-thumb-img' src={props.data.thumbnailUrl} alt='' />
-                        <CardSubtitle className='post-username'><strong>{props.data.username}</strong></CardSubtitle>
-                    </Row>
+                    <StyledRow>
+                        <ThumbnailImg src={props.data.thumbnailUrl} alt='' />
+                        <PostUsername><strong>{props.data.username}</strong></PostUsername>
+                    </StyledRow>
 
-                </CardBody>
+                </PostTopContent>
 
                 <CardImg width="100%" src={props.data.imageUrl} alt='' />
 
-                <CardBody className='bottom-content'>
+                <PostBottomContent>
 
-                    <Row>
+                    <StyledRow>
                         <LikeSection id={props.id} likes={props.data.likes} />
-                    </Row>
+                    </StyledRow>
 
-                    <CardBody className='comment-section'>
+                    <PostCommentSection>
                         <CommentSection timestamp={props.data.timestamp} id={props.id} name={props.data.username} comments={props.data.comments} />
-                    </CardBody>
+                    </PostCommentSection>
 
-                </CardBody>
-            </Card>
+                </PostBottomContent>
+
+            </PostContainer>
         </div>
     );
 }
