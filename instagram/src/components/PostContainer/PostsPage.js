@@ -6,7 +6,6 @@ const PostsPage = props => {
     return (
         <div>
             <header className="App-header">
-            <h1 className="App-title">Insta-Clone!</h1>
             <SearchBar updateSearch={props.updateSearch}
                        searchHandler={props.searchHandler}
                        search={props.search} />
