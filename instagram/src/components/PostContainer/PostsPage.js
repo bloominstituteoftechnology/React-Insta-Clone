@@ -10,13 +10,13 @@ class PostsPage extends React.Component {
     super(props) ;
     console.log('constructor called-PostsPage') ;
     this.state = {
-      userData: []      
+      defaultData: []      
     } ;
   }
   componentDidMount() {
     console.log('componentDidMount setState called-PostsPage') ;
     this.setState({
-      userData: dummyData
+      defaultData: dummyData
     });
   }
   addNewComment = (event, index) => {
@@ -35,7 +35,7 @@ class PostsPage extends React.Component {
             <PostContent key={index} post={post} />
           )
         })} */}
-        <PostContainer propUserData={this.state.userData} />
+        <PostContainer defaultData={this.state.defaultData} />
 
         {/* <PostContainer propUserData = {this.state.userData} /> */}
       </div>

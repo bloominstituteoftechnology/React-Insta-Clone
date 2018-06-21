@@ -1,5 +1,5 @@
 import React from 'react' ;
-import CommentInput from './CommentInput' ;
+// import CommentInput from './CommentInput' ;
 import './comment-section.css' ;
 
 //{/*
@@ -8,20 +8,19 @@ class CommentContainer extends React.Component {
         console.log('child CommentSection called constructor') ;
         super(props) ;
         this.state = {
-            comments: props.propComments
+            postDefaultComments: props.postDefaultComments,
+
         }
     }
     render() {
         return(
-            <div className="daily-standup">
-                <h1>daily-standup</h1>
-                <Comment propPropComments={this.state.comments}/>
+            <div className="">
+                <Comment postDefaultComments={this.props.postDefaultComments}/>
             </div>
         )
     }
 }
 //*/}
-
 
 //{/*
 const Comment = (props) => {
@@ -30,15 +29,10 @@ const Comment = (props) => {
             Placeholder: "CommentSection"
 
             {/* {props.propComments.map((comment, index) => { */}
-            {props.propPropComments.map((comment, index) => {
-
+            {props.postDefaultComments.map((comment, index) => {
                 return(
                     <div className="comment" key={index}>
-                    
                         <p>{comment.username + '- '}{comment.text}</p>
-                        
-                        
-
                     </div>
                 )                
             })}
@@ -47,4 +41,14 @@ const Comment = (props) => {
     )
 }
 //*/}
+
+const CommentInput = (props) => {
+    // console.log(props);
+    
+    return(
+        <form action="">
+            <input type="text" placeholder="Add a comment..."/>
+        </form>
+    )
+}
 export default CommentContainer ;

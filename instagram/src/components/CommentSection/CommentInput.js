@@ -1,3 +1,5 @@
+{/*
+
 import React from 'react' ;
 import './comment-section.css' ;
 
@@ -8,6 +10,7 @@ const CommentInput = (props) => {
         <form action="">
             <input type="text" placeholder="Add a comment..."/>
         </form>
+    
 
         // <form className="comment-input" onSubmit={(event => {
         //     alert('greetings from CommentInput') ;
@@ -22,3 +25,4 @@ const CommentInput = (props) => {
 
 }
 export default CommentInput ;
+*/}

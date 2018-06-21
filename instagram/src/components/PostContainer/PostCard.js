@@ -40,7 +40,7 @@ const PostCard = (props) => {
 
 
                 <CommentContainer 
-                propComments={props.post.comments}/>
+                postDefaultComments={props.post.comments}/>
                 {/* {console.log(props.post.comments)} */}
 
 
