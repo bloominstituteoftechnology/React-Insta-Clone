@@ -1,32 +1,46 @@
 import React from 'react';
 import './Comments.css';
+import CommentInput from './CommentInput';
 
-const Comments = props => {
+class Comments extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            comments: props.comments,
+            comment: ''
+        }
+    }
+
+
+  handleComment = event => {
+    this.setState({comment: event.target.value})
+  }
+
+  addComment = (event) => {
+    event.preventDefault();
+    const newComment = { text: this.state.comment, username: window.localStorage.getItem('username') };
+    const comments = this.state.comments.slice();
+    comments.push(newComment);
+    this.setState({ comments, comment: '' });
+  }
+
+  render() {
     return (
         <div>
             <div className='comments'>
-           {props.comments.map(i => {
-              return <p className='comment'><span className='user-comment' key={Math.random()}>{i.username} </span> 
-              <span className='text-comment' key={Math.random()}>{i.text}</span></p>
+           {this.state.comments.map(item => {
+              return (<p className='comment'><span className='user-comment' key={Math.random()}>{item.username} </span> 
+              <span className='text-comment' key={Math.random()}>{item.text}</span></p>)
           })}
-          
+          <CommentInput  handleComment={this.handleComment} addComment={this.addComment} comment={this.state.comment} />
           </div>
-        <div><form onSubmit={props.addComment}>
-            <input type='text'
-            className='form'
-            placeholder='Add a comment...'
-            value={props.comment}
-            onChange={props.handleComment}
-            />
-            </form>
-    </div>
+         
           
           </div>
 
     );
 };
+}
 
 export default Comments;
 
-/* value={props.comment}
-            onChange={props.handleComment}*/

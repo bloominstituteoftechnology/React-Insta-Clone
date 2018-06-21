@@ -38,7 +38,7 @@
 }
 
 .icons {
-    width: 158px;
+    width: 188px;
 padding-top: 10px;
 display: flex;
 align-items: center;
@@ -75,4 +75,14 @@ margin-right: 0.7%;
    overflow: hidden; /*hide bounds of image */
    margin: 0; 
 
+}
+
+.logout {
+    width: 35px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 0;
+    text-align: center;
 }

@@ -7,10 +7,10 @@ const PostsPage = props => {
     return (
       <div className="propsPage">
         <header className="searchheader">
-          <SearchBar  handleChange={props.handleChange} searchFunction={props.searchFunction} search={props.search}/>
+          <SearchBar  handleChange={props.handleChange} searchFunction={props.searchFunction} search={props.search} logOut={props.logOut}/>
         </header>
         
-        <PostContainer  className='post-container' data={props.data} comment={props.comment} handleComment={props.handleComment} addComment={props.addNewComment} likePost={props.likePost} />
+        <PostContainer data={props.data} handleComment={props.handleComment} addComment={props.addComment} comment={props.comment} likePost={props.likePost} />
       </div>
     );
   }

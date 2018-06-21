@@ -12,20 +12,8 @@ class App extends Component {
     super();
     this.state = {
       data: [],
-      comment: '',
       search: ''
     }
-  }
-
-  addNewComment = (event) => {
-    event.preventDefault();
-    let newComment = {text: this.state.comment, username: 'user'}; 
-    let newData = this.state.data.slice(); 
-    let commentArr= newData.map(item => {
-      return item[0].comments;
-    })
-    commentArr.push(newComment);
-    this.setState({data: newData}); 
   }
 
   likePost = (i) => {
@@ -34,10 +22,6 @@ class App extends Component {
     this.setState({data: newData});
   }
 
-  handleComment = event => {
-    this.setState({comment: event.target.value});
-    event.preventDefault();
-  }
 
   handleChange = event => {
     event.preventDefault();
@@ -55,6 +39,11 @@ class App extends Component {
     event.preventDefault();
   }
 
+  logOut = () => {
+    window.localStorage.removeItem('username');
+    window.location.reload();
+  }
+
   componentDidMount() {
     this.setState({
       data: dummyData,  
@@ -65,7 +54,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PostsPage data={this.state.data} comment={this.state.comment} handleComment={this.handleComment} addComment={this.addNewComment} likePost={this.likePost} handleChange={this.handleChange} searchFunction={this.searchFunc} search={this.state.search}/>
+        <PostsPage data={this.state.data} handleComment={this.handleComment} addComment={this.addComment} comment={this.state.comment} likePost={this.likePost} handleChange={this.handleChange} searchFunction={this.searchFunc} search={this.state.search} logOut={this.logOut}/>
       </div>
     );
   }
