@@ -1,12 +1,29 @@
 import React from 'react';
-import './Post.css';
+import styled from 'styled-components';
+
+const PostHeaderContainer = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 12px 1.5%;
+`;
+
+
+const Thumbnail = styled.img`
+    height: 40px;
+    border-radius: 50%;
+`;
+
+const Username = styled.h2`
+    font-weight: bold;
+    margin-left: 1%;
+`;
 
 const PostHeader = (props) => {
     return (
-    <div className='post-header-container'>
-        <img src = {props.thumbnailUrl} className = 'thumbnail' alt = 'thumbnail'/>
-        <h2 className = 'username'>{props.username}</h2>
-    </div>
+        <PostHeaderContainer>
+            <Thumbnail src={props.thumbnailUrl} alt='thumbnail' />
+            <Username>{props.username}</Username>
+        </PostHeaderContainer>
     );
 }
 

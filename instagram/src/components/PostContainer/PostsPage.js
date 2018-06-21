@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Post.css';
 import dummyData from '../../dummy-data';
 import SearchContainer from '../SearchBar/SearchContainer';
 import PostList from './PostList';

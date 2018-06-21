@@ -1,11 +1,14 @@
 import React from 'react';
-import './Post.css';
 import PostContainer from './PostContainer';
+import styled from 'styled-components';
 
+const PostListContainer = styled.div`
+    
+`;
 const PostList = (props) => {
     
     return (
-        <div className='post-list-container'>
+        <PostListContainer>
             {
                 props.instaData.map((dataItem, i) => {
                 return <PostContainer dataItem={dataItem} 
@@ -15,7 +18,7 @@ const PostList = (props) => {
                     addCommentHandler={props.addCommentHandler}
                     addLikeHandler = {props.addLikeHandler} />
             })}
-        </div>
+        </PostListContainer>
     );
 }
 
