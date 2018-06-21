@@ -2,9 +2,9 @@ import React from 'react';
 import Post from './Post';
 import './Post.css';
 
-const PostContainer = props => {
+const PostsContainer = props => {
   return (
-    <div className="post-container-wrapper">
+    <div className="posts-container-wrapper">
       {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
     </div>
   );
