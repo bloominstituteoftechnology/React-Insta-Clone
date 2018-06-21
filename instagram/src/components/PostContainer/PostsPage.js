@@ -17,7 +17,9 @@ const PostsPage = props => {
                                 key={index}
                                 commentKey={index}
                                 addNewComment={props.addNewComment}
-                                updateComment={props.updateComment} />
+                                updateComment={props.updateComment}
+                                like={props.like}
+                                index={index} />
                 )}
             </div>
         </div>

@@ -11,7 +11,9 @@ class App extends Component {
       data: [],
       comment: '',
       search: '',
+      like: false,
     }
+    localStorage.setItem("like", this.state.like);
   }
 
   componentDidMount(){
@@ -53,6 +55,19 @@ class App extends Component {
 
   }
 
+  like = (index) => {
+    let newData = this.state.data.slice();
+    if(localStorage.getItem("like") === "false"){
+        newData[index].likes++;
+        localStorage.setItem("like", "true");
+      }  
+    else{
+      newData[index].likes--;
+      localStorage.setItem("like", "false");
+    }
+    this.setState({data: newData, like: !this.state.like});
+  }
+
   logout = () => {
     localStorage.clear();
   }
@@ -66,7 +81,8 @@ class App extends Component {
                       updateComment={this.updateComment}
                       updateSearch={this.updateSearch}
                       searchHandler={this.searchHandler}
-                      search={this.search} />
+                      search={this.search}
+                      like={this.like} />
         </div>
         <form onSubmit={this.logout}><button type="submit">Logout</button></form>
       </div>

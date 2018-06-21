@@ -12,7 +12,7 @@ const PostContainer = props => {
             </div>
             <img className="post-img" src = {props.postInfo.imageUrl} alt="instagram post" />
             <div className="post-likes">
-                <i className="far fa-heart"></i> <i className="far fa-comment"></i> 
+                <i onClick={() => props.like(props.index)} className="far fa-heart"></i> <i className="far fa-comment"></i> 
                 <div>{props.postInfo.likes}</div>
             </div>
             <CommentSection commentInfo={props.postInfo.comments}
