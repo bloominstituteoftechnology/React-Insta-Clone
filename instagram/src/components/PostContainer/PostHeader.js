@@ -1,13 +1,25 @@
 import React from 'react';
-import './PostContainer.css';
+import Styled from 'styled-components';
+
+export const Thumbnail = Styled.img`
+width: 30px;
+border-radius: 50px;
+margin: 15px 10px 15px 15px;
+;`
+
+export const PostHead = Styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    `;
 
 const PostHeader = props => {
     return (
-        <div className='header'>
+        <PostHead>
            
-        <img className='thumbnail' alt='thumbnail' src={props.thumbnail} />
+        <Thumbnail alt='thumbnail' src={props.thumbnail} />
         {props.user}
-        </div>
+        </PostHead>
     )
 }
 

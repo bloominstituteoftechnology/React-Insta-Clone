@@ -1,10 +1,22 @@
 import React from 'react';
+import Styled from 'styled-components';
+
+const LoginBox = Styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    `;
+
+    const TextBox = Styled.input`
+    width: 170px;
+    height: 30px;
+    font-size: 14px;
+    `;
 
 
 const Login = props => {
     return (
-        <div className='inner-box'>
-        <input 
+        <LoginBox>
+        <TextBox 
             type='text'
             className='username'
             placeholder='Username'
@@ -12,7 +24,7 @@ const Login = props => {
             onChange={props.handleUser}
             />
         
-        <input 
+        <TextBox 
             type='text'
             className='password'
             placeholder='Password'
@@ -20,7 +32,7 @@ const Login = props => {
             onChange={props.handlePassword}
             />
          <button onClick={props.logIn}>Log in</button>
-        </div>
+        </LoginBox>
     );
 }
 

@@ -29,12 +29,11 @@ class App extends Component {
   }
 
   searchFunc = event => {
-    console.log('this');
-    const updatedList = this.state.data.slice;
-    updatedList.filter(item => {
-      return item.username.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+    const updatedList = this.state.data.filter(item => {
+      if (item.username.includes(event.target.value)) {
+        return item;
+      }
     });
-      console.log(updatedList);
     this.setState({search: updatedList});
     event.preventDefault();
   }
@@ -54,7 +53,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PostsPage data={this.state.data} handleComment={this.handleComment} addComment={this.addComment} comment={this.state.comment} likePost={this.likePost} handleChange={this.handleChange} searchFunction={this.searchFunc} search={this.state.search} logOut={this.logOut}/>
+        <PostsPage data={this.state.data}  likePost={this.likePost} handleChange={this.handleChange} searchFunction={this.searchFunc} search={this.state.search} logOut={this.logOut}/>
       </div>
     );
   }

@@ -1,6 +1,25 @@
 import React from 'react';
-import './Comments.css';
 import CommentInput from './CommentInput';
+import Styled from 'styled-components';
+import Emoji from 'react-emoji-render';
+
+
+const Comment = Styled.p`
+display: block;
+text-align: left;
+align-items: center;
+margin: 5px 16px;
+font-size: 14px;
+`;
+
+const User = Styled.span`
+font-weight: bold;
+`;
+
+const CommentText = Styled.span`
+margin-top: 10px;
+
+`;
 
 class Comments extends React.Component {
     constructor(props) {
@@ -10,6 +29,7 @@ class Comments extends React.Component {
             comment: ''
         }
     }
+
 
 
   handleComment = event => {
@@ -29,13 +49,11 @@ class Comments extends React.Component {
         <div>
             <div className='comments'>
            {this.state.comments.map(item => {
-              return (<p className='comment'><span className='user-comment' key={Math.random()}>{item.username} </span> 
-              <span className='text-comment' key={Math.random()}>{item.text}</span></p>)
+              return (<Comment><User key={Math.random()}>{item.username} </User> 
+              <CommentText Emoji text={item.text} key={Math.random()}><Emoji text={item.text} /></CommentText></Comment>)
           })}
           <CommentInput  handleComment={this.handleComment} addComment={this.addComment} comment={this.state.comment} />
           </div>
-         
-          
           </div>
 
     );

@@ -1,6 +1,39 @@
 import React from 'react';
-import './Login.css';
+import Styled from 'styled-components';
 import Login from './Login';
+
+
+const Body = Styled.div`
+height: 100vh;
+background-image: url("http://26.media.tumblr.com/tumblr_m1ujavOrpy1r6b7kmo1_500.jpg");
+background-repeat: no-repeat;
+background-position: left top;
+background-size: 100%;
+`;
+
+const LoginContainer = Styled.div`
+display: flex;
+    justify-content: center;
+    flex-direction: column;
+    `;
+
+    const Logo = Styled.img`
+    width: auto;
+    margin: 100px auto;
+    border: 2px black solid;
+    box-shadow: 5px 5px rgb(15, 51, 63);
+    `;
+
+    const LoginBox = Styled.div`
+    width: 60%;
+    height: 100px;
+    background: rgba(236, 212, 177, 0.795);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 12px double rgb(124, 63, 5);
+    margin: auto;
+    `;
 
 class LoginPage extends React.Component {
     constructor() {
@@ -28,14 +61,14 @@ class LoginPage extends React.Component {
 
     render (){
         return(
-            <div className='outer-container'>
-            <div className='login-container'>
-            <img className='login-logo' src='http://www.brandchannel.com/wp-content/uploads/2016/05/instagram-old-log-wordmark.jpg' />
-        <div className='login-box'>
+            <Body>
+            <LoginContainer>
+            <Logo src='http://www.brandchannel.com/wp-content/uploads/2016/05/instagram-old-log-wordmark.jpg' />
+        <LoginBox>
             <Login handleUser={this.handleUser} handlePassword={this.handlePassword} logIn={this.logIn}/>
-        </div>
-        </div>
-        </div>
+        </LoginBox>
+        </LoginContainer>
+        </Body>
         );
     }
 }
