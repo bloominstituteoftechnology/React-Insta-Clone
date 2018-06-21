@@ -1,0 +1,48 @@
+.App {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.post {
+    border: 1px solid lightgray;
+    margin: 25px auto;
+    width: 85%; 
+}
+
+.post-header .thumbnail .profile-picture {
+    border-radius: 100%;
+    width: 75px;
+    height: 100%;
+    margin: 7px;
+}
+
+.post-header .username {
+    font-weight: bold;
+}
+
+.post-header .timestamp {
+    font-size: .75rem;
+    color: grey;
+    margin-left: 15px;
+}
+
+.post-image {
+    width: 100%;
+}
+
+.likes-icons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80px;
+    margin-left: 15px;
+}
+
+.likes-icons i {
+    margin: 0 2px;
+    margin-bottom: 5px;
+}
+
+.likes-icons .likes p {
+    margin: 0;
+    font-weight: bold;
+}

@@ -1,0 +1,28 @@
+.comment-text {
+    display: flex;
+    margin-left: 15px;
+}
+
+.comment-text .user {
+    font-weight: bold;
+    margin: 5px 0;
+    margin-right: 1%;
+}
+
+.comment-text .comment {
+    margin: 5px 0;
+    text-align: left;
+}
+
+.comment-input {
+    width: 100%;
+}
+
+.comment-input input {
+    width: 95%;
+    border: 0;
+    border-top: 1px solid lightgray;
+    text-align: left;
+    margin-top: 15px;
+    padding: 15px 0;
+}
