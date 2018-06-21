@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
-import './Comment.css'
+import styled from 'styled-components'
+
+const StyledComment = styled.div`
+  margin-left: 3.6%;  
+`
 
 class Comment extends Component {
   constructor(props) {
@@ -9,9 +13,9 @@ class Comment extends Component {
   }
   render() { 
     return ( 
-      <div className="comment">
+      <StyledComment>
         <strong>{this.props.comments.username}</strong> {this.props.comments.text}
-      </div>
+      </StyledComment>
      )
   }
 }
