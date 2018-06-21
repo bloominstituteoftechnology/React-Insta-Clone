@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './PostContainer.css'
 import styled from 'styled-components'
 
@@ -20,16 +20,12 @@ const StyledUsername = styled.div`
   padding-top: 3%;  
 `
 
-const StyledIcons = styled.div`
-  margin-bottom: 3px;
-`
-
 const StyledLikes = styled.div`
   margin-left: 3.6%;
   margin-bottom: 2px;
 `
 
-class Post extends Component {
+class Post extends React.Component {
   constructor(props) {
     super(props);
     this.props = props
