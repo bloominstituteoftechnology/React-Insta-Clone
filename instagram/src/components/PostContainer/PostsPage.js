@@ -26,7 +26,7 @@ class PostsPage extends React.Component {
     console.log('rendered called-PostsPaged') ;
     return (
       <div className="posts-page">
-        <Search />
+        {/* , */}
 
            
         {/* passing each obj(post) one-by-one to PostContainer */}
