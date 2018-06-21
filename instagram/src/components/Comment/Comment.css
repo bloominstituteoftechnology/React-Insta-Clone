@@ -4,7 +4,7 @@
     margin: 10px 20px;
 }
 
-.comment-container div:first-child {
+.comment-container span:first-child {
     font-weight: bold;
     margin: 0 8px 0 0;
 }

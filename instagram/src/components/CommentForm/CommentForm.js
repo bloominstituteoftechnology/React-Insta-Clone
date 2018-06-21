@@ -15,6 +15,7 @@ const CommentForm = props => {
                     placeholder="Add comment... "
                     onChange={props.handleChange}
                 />
+                <button type="submit"><span>...</span></button>
             </form>
         </div>
     );

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import dummyData from "./dummy-data";
+import dummyData from "../../dummy-data";
 import PostContainer from './PostContainer';
 import SearchBar from "../SearchBar/SearchBar";
 
@@ -21,7 +21,7 @@ class PostPage extends Component {
     render() {
         return (
             <div className="App">
-                <SearchBar />
+                <SearchBar posts={this.state.posts} />
                 {/* Pass all posts as prop*/}
                 <PostContainer posts={this.state.posts} />
             </div>

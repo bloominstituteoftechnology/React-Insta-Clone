@@ -5,8 +5,24 @@
     border-radius: 5px;
 }
 
+form {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
 form input {
     font-size: 18px;
     border: 0;
-    margin: 0 20px;
+}
+
+form button {
+    background: white;
+    border: 0;
+    font-size: 18px;
+}
+
+form button:hover {
+    cursor: pointer;
+    letter-spacing: 5px;
 }

@@ -3,6 +3,7 @@ import CommentSection from '../CommentSection/CommentSection';
 
 import './Post.css';
 import PropTypes from 'prop-types';
+import SearchBar from '../SearchBar/SearchBar';
 
 // Render and return Post with Likes
 // Props: key={post.imageUrl} post={post}
