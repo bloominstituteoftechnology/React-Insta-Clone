@@ -3,3 +3,8 @@
   width: 880px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 600px){
+  .App{
+    width: 400px;
+  }
+}
