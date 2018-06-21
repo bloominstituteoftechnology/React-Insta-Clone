@@ -6,6 +6,12 @@ import compass from '../../images/compass.png';
 import heart from '../../images/heart.png';
 import person from '../../images/person.png';
 
+import {
+    Title,
+    SearchContainer,
+} from "../../reusables"
+
+
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
@@ -39,7 +45,7 @@ class SearchBar extends React.Component {
 
     render(){
     return (
-        <div className = "search-container">
+        <SearchContainer>
         <div className = "search-contain">
         <div className = "search-left">
             <img className ="camera" src = {camera} alt = "cam thumbnail"/>
@@ -49,7 +55,7 @@ class SearchBar extends React.Component {
         {/* onSubmit = {this.filterSearch} */}
 
         <form className = "mid-text" >
-            <input 
+            <Title 
                 onKeyDown = {this.searchPosts}
                 type = "text"           
                 placeholder = "search"
@@ -64,7 +70,7 @@ class SearchBar extends React.Component {
             <img className ="person" src = {person} alt = "person thumbnail"/>
         </div>
         </div>
-        </div>
+        </SearchContainer>
     )
 }
 }

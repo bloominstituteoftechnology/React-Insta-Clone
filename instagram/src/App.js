@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data'
 import PostsPage from './components/PostContainer/PostsPage'
-// import PostContainer from './components/PostContainer/PostContainer'
-// import SearchBar from './components/SearchBar/SearchBar'
-import Authenticate from './Authentication/Authenticate';
+import Authenticate from './Authentication/Authenticate'
+
 
 
 class App extends Component {
