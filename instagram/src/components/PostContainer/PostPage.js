@@ -9,23 +9,38 @@ class PostPage extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData
+      data: [],
+      filteredPosts: []
     }; 
   }
 
   componentDidMount(){
-  	this.setState({dummyData});
+  	this.setState({data: dummyData});
   }
+    searchPostsHandler = e => {
+    // eslint-disable-next-line
+    const data = this.state.data.filter(p => {
+      if (p.username.includes(e.target.value)) {
+        return p;
+      }
+    });
+    this.setState({ filteredPosts: data });
+  };
 
   render() {
     return (
       <div className="App">
-     		<SearchBar />
-        <div className="data">
-          {this.state.data.map((data, i) => 
-            <PostContainer data={data} />
-          )}
-        </div>
+        <SearchBar
+          searchTerm={this.state.searchTerm}
+          searchPosts={this.searchPostsHandler}
+        />
+        <PostContainer
+          data={
+            this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.data
+          }
+        />
       </div>
     );
   }

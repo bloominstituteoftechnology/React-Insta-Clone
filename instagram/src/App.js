@@ -8,22 +8,16 @@ import Authenticate from './components/Authentication/Authenticate';
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      data: []
-    }; 
+    this.state = {};
   }
-
-
 
   render() {
     return (
       <div className="App">
- 
-            <PostPage  />
-          
-        </div>
+        <PostPage />
+      </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
