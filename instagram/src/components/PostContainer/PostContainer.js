@@ -2,11 +2,11 @@ import React from 'react';
 import './PostContainer.css';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
+
 const  PostContainer= props => {
-        return(
-                <div className={props.PostContainer}>
-		
-			
+        
+	return(
+                <div className={props.PostContainer}>		
 		<div>
 
 		<div className={props.HeaderContainer}>
@@ -16,8 +16,8 @@ const  PostContainer= props => {
 
 		<img className={props.PostImage} src={props.dummyData.imageUrl} alt="" />
 		</div>
-		
-		<CommentSection CommentBarStyle="comment-bar" Comments={props.dummyData.comments} CommentContainer="comment-container" CommentUserNameStyle="username-comment-style" UserText="user-text"/>
+
+		<CommentSection postId={props.dummyData.imageUrl} addComment={props.addComment} NewCommentValue={props.NewCommentValue} CommentValue={props.changeCommentValue}  Comments={props.dummyData.comments} />
 		
 	
 		</div>

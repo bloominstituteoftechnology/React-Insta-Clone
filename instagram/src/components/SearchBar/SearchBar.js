@@ -5,13 +5,10 @@ import Iglogo from './img/instagram.png';
 
 const  SearchBar= props => {
 	return(
-	<div className={props.SearchContainer}>
+	<div className="search-container">
 		<img className="logo" src={Iglogo} alt="" />
 
-	<form onSubmit={props.searchTrigger}>
-
-	<input className={props.searchBarStyle} type="text" onChange ={props.changeSearchValue} placeholder="Search" value={props.SearchValue} />
-	</form>	
+	<input className="search-bar" type="text" onChange ={props.searchTrigger} placeholder="Search"  />
 	
 	</div>
 	

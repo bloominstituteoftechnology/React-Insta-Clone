@@ -17,14 +17,49 @@ changeCommentValue = event => {
    event.preventDefault();
     this.setState({ newComment: event.target.value });
 
+};
+
+componentDidMount() {
+    const id = this.props.postId;
+    if (localStorage.getItem(id)) {
+      this.setState({
+        comments: JSON.parse(localStorage.getItem(this.props.postId))
+      });
+    } else {
+      this.setComments();
+    }
+  }
+
+  componenetWillUnmount() {
+    this.setComments();
+  }
+
+  setComments = () => {
+    localStorage.setItem(
+      this.props.postId,
+      JSON.stringify(this.state.comments)
+    );
+  };
+
+
+addComment = event => {
+    event.preventDefault();
+    const newComment = {username: 'Indiana Jones', text: this.state.newComment };
+    const comments = this.state.comments.slice();	
+    comments.push(newComment);
+    this.setState({ comments: comments, newComment:'', comment: '' });
+   setTimeout(() => {
+     this.setComments();
+    }, 500);
   };
 
 
       render(){
 	return( 
-                <div>{this.state.comments.map(comment => <Comment comment={comment}/>)}
-		<CommentInput CommentValue={this.changeCommentValue}  NewCommentValue={this.state.newComment}   />
-		</div>
+        <div>{this.state.comments.map(comment => <Comment key={Math.random()} comment={comment}/>)}
+
+	 <CommentInput addComment={this.addComment} changeCommentValue={this.changeCommentValue}  newComment={this.state.newComment}   />
+	</div>
 	);
 }
 

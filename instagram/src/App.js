@@ -12,8 +12,7 @@ constructor(){
 
 	this.state={
 		dummyData: [],
-		searchItem: "",
-		//newComment: ""
+		searchData: [],
 };
 
 }	
@@ -23,53 +22,24 @@ componentDidMount(){
 }
 
 
-changeSearchBarValue = event => {
-   event.preventDefault();
-   // console.log(event.target.value);
-    this.setState({ searchItem: event.target.value });
-  };
-
-
 searchPost = event => {
         event.preventDefault();
         let dummyData =this.state.dummyData.slice();
-        dummyData = dummyData.filter(dummyData => dummyData.username === this.state.searchItem);
-	this.setState({dummyData: dummyData, searchItem: ""});
-	
-}
- 
-
-//searchHandler = () =>{
-//	changeSearchBarValue();
-//	searchPost();
-//}
-
-
-//changeCommentValue = event => {
-  // event.preventDefault();
-   // this.setState({ newComment: event.target.value });
- // };
-
-
-addNewComment = (event, index) => {
-	event.preventDefault();
-	let dummyData =this.state.dummyData.slice();
-	console.log(index);
-	 dummyData.forEach(dummyData => {
-	if(dummyData.imageUrl === index)
-
-        dummyData.comments.push({"username":"ssg", "text":this.state.newComment});
-	});
-
-	this.setState({dummyData: dummyData});
-};
-
+        dummyData = dummyData.filter(dummyData => 
+		
+		{if(dummyData.username.includes(event.target.value))
+		{
+			return dummyData; 
+		}
+		});
+		 this.setState({dummyData: dummyData});
+}	
 
 
   render() {
     return (
       <div className="App">
-	<SearchBar SearchValue={this.state.searchItem} changeSearchValue={this.changeSearchBarValue} searchTrigger={this.searchPost} SearchContainer="search-container"  searchBarStyle="search-bar" />
+	<SearchBar SearchValue={this.state.searchItem} changeSearchValue={this.changeSearchBarValue} searchTrigger={this.searchPost}  />
 
 	 <div>
 	{this.state.dummyData.map(dummyData => 
