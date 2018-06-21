@@ -39,6 +39,9 @@ class CommentSection extends React.Component {
         const comments = this.state.comments.slice();
         comments.push(newComment);
         this.setState({comments, comment: ''});
+        setTimeout(() => {
+            this.setComment();
+        }, 500);
     };
 
     render() {
