@@ -1,3 +1,22 @@
 .login-container{
   padding-top:15px;
 }
+
+.login{
+  padding-left: 8px;
+}
+
+.form-container{
+  padding: 5%;
+  padding-top: 2.5%;
+  border: 1px solid lightgray;
+  background-color: white;
+}
+
+.form-group input::-webkit-input-placeholder {
+  font-size: 12px;
+}
+
+form button{
+  width: 100%;
+}
