@@ -1,30 +1,17 @@
 import React, { Component } from 'react'
 import './App.css'
-import TheSearchBar from './components/SearchBar/SearchBar'
-import PostContainer from './components/PostContainer/PostContainer'
 import './index.css'
-import dummyData from './components/dummy-data'
+import PostsPage from './components/PostContainer/PostsPage'
 class App extends Component {
   constructor () {
     super()
-    this.state = {
-      post: []
-    }
-  }
-
-  componentDidMount () {
-    this.setState({
-      post: dummyData
-    })
+    this.state = {}
   }
 
   render () {
     return (
       <div className='page'>
-        <TheSearchBar />
-        {this.state.post.map((post, index) => (
-          <PostContainer key={post.username + index} posts={post} />
-        ))}
+        <PostsPage />
       </div>
     )
   }
