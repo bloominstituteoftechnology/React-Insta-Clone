@@ -1,19 +1,24 @@
-.insta-nav {
+.search-bar-wrapper {
+  border-bottom: 1px solid #3333;
+  height: 80px;
+  line-height: 70px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 10px 0;
+  background: #ffffff;
 }
 
-#search-input {
-  margin-top: 10px;
+.image-wrapper {
+  height: 50px;
 }
 
-.header-right-section {
-  position: relative;
-  top: -4px;
+.logo-image {
+  height: 100%;
 }
 
-.header-right-icons {
-  margin-left: 30px;
+.social-wrapper {
+  display: flex;
+}
+
+.social {
+  width: 50px;
 }
