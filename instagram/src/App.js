@@ -34,7 +34,7 @@ class App extends Component {
     
     // 3. Replace the property you're intested in
     dataObj.comments.push({
-      username:'guest',
+      username: JSON.parse(localStorage.getItem('instaclone'))[0].username,
       text:`${event.target.value}`
     });
     
