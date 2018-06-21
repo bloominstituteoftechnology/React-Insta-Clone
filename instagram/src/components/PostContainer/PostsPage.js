@@ -1,15 +1,39 @@
 import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
+import dummyData from '../../dummy-data';
 import './PostContainer.css'
 
-const PostsPage = props => {
-    return (
-        <div className="App">
-            <SearchBar />
-            <PostContainer posts={props.data} />
-        </div>
-    )
+class PostsPage extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            posts: [],
+            filteredPosts: [],
+        };
+    }
+
+    componentDidMount() {
+        this.setState({posts: dummyData});
+    }
+
+    searchPosts = event => {
+        const posts = this.state.posts.filter(post => {
+            if(post.username.includes(event.target.value)) {
+                return post;
+            }
+        });
+        this.setState({filteredPosts: posts});
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <SearchBar searchPosts={this.searchPosts} />
+                <PostContainer posts={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} />
+            </div>
+        )
+    }
 }
 
 export default PostsPage;
