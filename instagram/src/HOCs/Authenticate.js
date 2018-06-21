@@ -11,7 +11,7 @@ const Authenticate = WrapperComponent =>
     }
     componentDidMount(){
       //
-      if (localStorage.getItem('vim@gmail.com')) {
+      if (localStorage.getItem('instaclone')) {
         this.setState({isLoggedIn : true})
       }
     }
