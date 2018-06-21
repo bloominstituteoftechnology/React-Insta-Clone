@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import dummyData from './components/dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authentication';
-
+import Fuse from 'fuse.js';
 import './App.css';
 
 class App extends Component {
@@ -51,6 +51,24 @@ class App extends Component {
       data: dataItem
     })
   }
+
+  search = (text) =>{
+    if(text.length === 0){
+      this.setState({
+        data: JSON.parse(window.localStorage.getItem('data'))
+      })
+      return;
+    }
+    let options = {
+      keys: ['username']
+    };
+
+    let fuse = new Fuse(this.state.data, options);
+
+    this.setState({
+      data: fuse.search(text)
+    })
+  } 
   componentWillUnmount(){
     window.localStorage.removeItem('data');
   }
@@ -74,7 +92,7 @@ class App extends Component {
     console.table(this.state.data);
     return (
       <div className="app">
-        <PostsPage state={this.state} addNewComment={this.addNewComment} addNewLike={this.addNewLike} deleteComment={this.deleteComment}/>
+        <PostsPage state={this.state} search={this.search} addNewComment={this.addNewComment} addNewLike={this.addNewLike} deleteComment={this.deleteComment}/>
       </div>
     );
   }

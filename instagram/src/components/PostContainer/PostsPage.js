@@ -6,7 +6,7 @@ import PostContainer from '../PostContainer/PostContainer';
 const PostsPage = (props)=> {
     return (
         <div>
-            <SearchBar />
+            <SearchBar search={props.search}/>
             {props.state.data.map((i, index) => (
                 <PostContainer 
                     key={index} 
