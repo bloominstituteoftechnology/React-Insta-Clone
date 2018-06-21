@@ -16,7 +16,7 @@ const PostContainer = (props) => (
        <img className='post-image-fullsize' src={props.post.imageUrl} />  
        <div className='post-bottom'>
        
-<CommentSection postIndex = {props.post.thumbnailUrl} likes = {props.post.likes} comments = {props.post.comments}/>
+<CommentSection likeIndex={props.post.thumbnailUrl + 'liked'} postIndex = {props.post.thumbnailUrl} likes = {props.post.likes} comments = {props.post.comments}/>
 </div>
     </div>
 );
