@@ -1,7 +1,7 @@
 import React from 'react';
 import LoginPage from '../Login/Login';
 
-const Authenticate = App => {
+const Authenticate = App => 
   class extends React.Component {
     constructor(props) {
       super(props);
@@ -25,6 +25,6 @@ const Authenticate = App => {
       return <LoginPage />;
     }
   }
-};
+
 
 export default Authenticate;
