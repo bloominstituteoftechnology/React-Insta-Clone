@@ -2,6 +2,7 @@ import React from "react";
 import CommentSection from "./../../components/CommentSection/CommentSection";
 import "./PostContainer.css";
 import PropTypes from "prop-types";
+import CommentSectionContainer from "./CommentSectionContainer";
 
 const PostContainer = props => {
   return (
@@ -16,7 +17,7 @@ const PostContainer = props => {
         <span className="user-name">{props.post.username}</span>
       </div>
       <img src={props.post.imageUrl} alt="card" className="card-img-top" />
-      <CommentSection post={props.post} />
+      <CommentSectionContainer post={props.post} />
     </div>
   );
 };
