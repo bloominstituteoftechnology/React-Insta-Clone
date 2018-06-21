@@ -33,7 +33,11 @@ class Login extends React.Component {
     render() {
         return (
             <div className="login-container">
+                
                 <form onSubmit={this.handleLoginSubmit}>
+                <div>
+                    <img alt="instagram logo" src="https://rawgit.com/LambdaSchool/React-Insta-Clone/115c6b9b980fa9acc57494680a9d5951f9f35ee1/instagram/src/assets/iglogo.png" className="login-image" />
+                </div>
                     <input
                         className="username"
                         type="text"
