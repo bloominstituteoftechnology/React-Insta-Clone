@@ -20,24 +20,28 @@ class Login extends React.Component {
         if (user === '' || this.state.password === '') { alert('Please fill out required fields'); return };
         if (user.toLowerCase() === 'rudius' && this.state.password.toLowerCase() !== 'funboy') {
             alert(`Wrong password. Hint: Johns nickname in high school`);
-            this.setState({password: ''})
+            this.setState({ password: '' })
             return;
         }
-        if (user.toLowerCase() === 'plamz' && this.state.password.toLowerCase() !== 'silver') {
-            alert(`Wrong password. Hint: Your skill equivelent rank in counter-strike`);
-            this.setState({password: ''})
+        if (user.toLowerCase() === 'plamz' && this.state.password.toLowerCase() !== 'trumplover') {
+            alert(`Wrong password. Hint: You will never guess it`);
+            this.setState({ password: '' })
             return;
         }
         if (user.toLowerCase() === 'dilly' && this.state.password.toLowerCase() !== 'bronze') {
             alert(`Wrong password. Hint: Your skill equivelent rank in overwatch`);
-            this.setState({password: ''})
+            this.setState({ password: '' })
             return;
         }
-        
-        localStorage.setItem('user', user)
-        localStorage.setItem('password', this.state.password)
-       
+        if (user.toLowerCase() === 'flint' && this.state.password === 'plamzisascrub') {
+            localStorage.setItem('user', user)
+            localStorage.setItem('password', this.state.password)
+        }
+
+
+
         window.location.reload();
+
     }
 
     render() {

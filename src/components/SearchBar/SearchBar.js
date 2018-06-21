@@ -18,6 +18,7 @@ const SearchWrapper = styled.div`
 `;
 
 
+
 const SearchBar = props => {
   return (
     <SearchWrapper>

@@ -2,8 +2,8 @@ import React from 'react';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar'
 import PostsPage from './components/PostContainer/PostsPage'
-import './App.css';
 import Authenticate from './components/Authentication/Authenticate';
+import './App.css';
 
 class App extends React.Component {
   constructor() {
@@ -17,11 +17,10 @@ class App extends React.Component {
     this.setState({ data: dummyData });
   }
 
-
   render() {
     return (
       <div>
-        <SearchBar />
+        <SearchBar passedData={this.state.data} />
         <div className="App">
           <PostsPage passedData={this.state.data} />
         </div>
