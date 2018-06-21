@@ -50,7 +50,7 @@ class Login extends React.Component {
                     </FormGroup>
 
                     <FormGroup>
-                        <Input autocomplete="off" value={this.state.username} onChange={this.handleUsername} type="username" name="username" id='username' placeholder="Username" required />
+                        <Input autoComplete="off" value={this.state.username} onChange={this.handleUsername} type="username" name="username" id='username' placeholder="Username" required />
                     </FormGroup>
 
                     <FormGroup>
@@ -58,7 +58,7 @@ class Login extends React.Component {
                     </FormGroup>
 
                     <Button style={this.state.username.length > 0 || this.state.password.length > 0 ? { background: '#3897F0' } : { opacity: .3 }} onClick={this.loginButton}>Log In</Button>
-                    
+
                     <FormGroup className='forgot-form'>
                         <a className='forgot-password' href='#_'>Forgot password?</a>
                     </FormGroup>
