@@ -30,3 +30,21 @@
     height: 30px;
     margin-right: 10%;
   }
+  
+  @media only screen and (max-width: 600px){
+   .search-bar-wrapper{
+     flex-flow: column nowrap;
+     width: 100%;
+     height: 200px;
+     margin-left: -3%;
+     align-items: center;
+   }
+   .search-bar{
+    height: 30px;
+    margin-left: 10%;
+  }
+  .social-wrapper {
+    width: 50%;
+    margin-left: 15%;
+  }
+  }
