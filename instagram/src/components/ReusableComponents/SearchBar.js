@@ -6,20 +6,20 @@ export const Header = styled.div`
     top: 0;
     z-index: 3;
     background: white;
-`;
+`
 
 export const StyledNavBar = styled(Navbar)`
     max-width: 1010px;
     margin: 0 auto;
     padding: 0px 40px;
-`;
+`
 
 export const InstagramWord = styled.img`
     width: 130px;
     height: 39px;
     border-left: 1px solid black;
     padding-left: 20px;   
-`;
+`
 
 export const InstagramLogo = styled.img`
     height: 30px;

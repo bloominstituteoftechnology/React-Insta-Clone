@@ -1,6 +1,7 @@
 import React from 'react';
 import './Login.css';
-import { Button, Form, FormGroup, Input } from 'reactstrap';
+import { FormGroup } from 'reactstrap';
+import { LoginContainer, LoginForm, InstagramWordContainer, InstagramWord, ForgotPassword, ForgotForm, BottomLoginContent, BottomText, SignUp, StyledFormControl, StyledButton } from '../ReusableComponents/Login';
 
 class Login extends React.Component {
     constructor() {
@@ -42,36 +43,38 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div className='login-form-container'>
-                <Form className='login-form'>
+            <LoginContainer>
+                <LoginForm>
 
-                    <FormGroup className='instagram-word-container'>
-                        <img className='login-instagram-word' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png' alt='' />
+                    <InstagramWordContainer>
+                        <InstagramWord src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png' alt='' />
+                    </InstagramWordContainer>
+
+                    <FormGroup>
+                        <StyledFormControl autoComplete="off" value={this.state.username} onChange={this.handleUsername} type="username" name="username" id='username' placeholder="Username" />
                     </FormGroup>
 
                     <FormGroup>
-                        <Input autoComplete="off" value={this.state.username} onChange={this.handleUsername} type="username" name="username" id='username' placeholder="Username" required />
+                        <StyledFormControl value={this.state.password} onChange={this.handlePassword} type="password" name="password" id="examplePassword" placeholder="Password" />
                     </FormGroup>
 
-                    <FormGroup>
-                        <Input value={this.state.password} onChange={this.handlePassword} type="password" name="password" id="examplePassword" placeholder="Password" />
-                    </FormGroup>
+                    <StyledButton style={this.state.username.length > 0 || this.state.password.length > 0 ? { background: '#3897F0' } : { opacity: .3 }} onClick={this.loginButton}>Log In</StyledButton>
 
-                    <Button style={this.state.username.length > 0 || this.state.password.length > 0 ? { background: '#3897F0' } : { opacity: .3 }} onClick={this.loginButton}>Log In</Button>
+                    <ForgotForm>
+                        <ForgotPassword href='#_'>Forgot password?</ForgotPassword>
+                    </ForgotForm>
 
-                    <FormGroup className='forgot-form'>
-                        <a className='forgot-password' href='#_'>Forgot password?</a>
-                    </FormGroup>
+                </LoginForm>
 
-                </Form>
+                <BottomLoginContent>
 
-                <div className='bottom-login-content'>
-                    <div className='bottom-text'>
-                        Don't have an account? <a className='sign-up' href='#_'>Sign up</a>
-                    </div>
-                </div>
+                    <BottomText>
+                        Don't have an account? <SignUp href='#_'>Sign up</SignUp>
+                    </BottomText>
+                    
+                </BottomLoginContent>
 
-            </div>
+            </LoginContainer>
         );
     }
 }

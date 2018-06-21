@@ -38,7 +38,7 @@ const SearchBar = props => {
         </StyledNav>
 
       </StyledNavBar>
-      
+
     </Header>
   );
 }
