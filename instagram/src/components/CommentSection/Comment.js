@@ -19,7 +19,6 @@ const CommentParagraph = styled.p`
 `;
 
 const Comment = props => {
-  console.log(props.comment);
   return (
     <FlexWrapper>
       <UserName>{props.comment.username}</UserName>
