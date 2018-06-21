@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
 import PostsPage from './components/PostContainer/PostsPage'
 import Authenticate from './components/Authenticate/Authenticate'
+import {TheApp} from './components/Reusables/Reusables'
 
 class App extends Component {
 
@@ -12,9 +12,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app">
+      <TheApp>
         <PostsPage />
-      </div>
+      </TheApp>
 
     );
   }

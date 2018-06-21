@@ -1,32 +1,32 @@
 import React, { Component } from 'react';
-import PostsPage from '../PostContainer/PostsPage'
+import '../../images.css'
 
 class Login extends Component {
     constructor(props) {
         super(props);
+        
         this.state = {
             username: '',
             password: '',
-            showComponent: false,
+            isLoggedIn: false,
         };
-        this.loginSubmitHandler = this.loginSubmitHandler.bind(this);
     }
 
     loginInputHandler = event => {
         this.setState({ [event.target.name]: event.target.value });
     }
 
-    loginSubmitHandler() {
-        this.setState({
-            showComponent: true,
-        });
-    }
+    loginSubmitHandler = event => {
+        const user = this.state.username;
+        localStorage.setItem('user', user);
+        window.location.reload();
+      };
 
     render () {
         return (
             <div>
             <form>
-                <img className="Insta-name" src="http://www.freelogovectors.net/wp-content/uploads/2016/12/InstagramLogo-768x217.png" alt="insta name"/>
+                <img className="InstaName" src="http://www.freelogovectors.net/wp-content/uploads/2016/12/InstagramLogo-768x217.png" alt="insta name"/>
                 <input
                     type="text"
                     placeholder="User Name"
@@ -42,10 +42,7 @@ class Login extends Component {
                 <button onClick={this.loginSubmitHandler}>
                     Log in
                 </button>
-                {this.state.showComponent ?
-           <PostsPage /> :
-           null
-        }
+        
             </form>  
             </div>
         )};

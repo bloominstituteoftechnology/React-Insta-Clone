@@ -1,43 +1,34 @@
 import React from 'react';
-import './SearchBar.css';
+import { TheSearchBar,
+  InstaLogoBlock,
+  SearchInput,
+  SearchIcons,
+  SearchIcon
+} from '../Reusables/Reusables'
 
+import '../../images.css'
 
-class SearchBar extends React.Component{
-    
-  constructor() {
-		super();
-		this.state = { text: ''};
-		this.inputSearch = this.inputSearch.bind(this);
-  }
-  
-  inputSearch(event) {
-		this.setState({
-			text: event
-		});
-	}
-  
-  render(){
+const SearchBar = props => {
         return (
-           <div className="SearchBar">
-            {/* <div className="SearchItems"> */}
-              <div className="Insta-logo-block">
-                 <img className="Insta-logo" src="http://www.freelogovectors.net/wp-content/uploads/2016/12/instagram-logo1-375x375.png" alt="insta logo"/>
-                 <img className="Insta-name" src="http://www.freelogovectors.net/wp-content/uploads/2016/12/InstagramLogo-768x217.png" alt="insta name"/>
-              </div>
-              <div className="Search-input">
+           <TheSearchBar>
+              <InstaLogoBlock>
+                 <img className="InstaLogo" src="http://www.freelogovectors.net/wp-content/uploads/2016/12/instagram-logo1-375x375.png" alt="insta logo"/>
+                 <img className="InstaName" src="http://www.freelogovectors.net/wp-content/uploads/2016/12/InstagramLogo-768x217.png" alt="insta name"/>
+              </InstaLogoBlock>
+              <SearchInput>
                 <input
+                  type= "text"
                   placeholder="Search"
+                  onKeyDown={props.inputSearch}
                 /> 
-              </div>
-              <div className="Search-icons">
-                <div className="Search-icon"><i class="far fa-compass"></i></div>
-                <div className="Search-icon"><i class="far fa-heart Search-icon"></i></div>  
-                <div className="Search-icon"><i class="far fa-user Search-icon"></i></div>
-              </div>
-              {/* </div> */}
-            </div>
+              </SearchInput>
+              <SearchIcons>
+                <SearchIcon><i class="far fa-compass"></i></SearchIcon>
+                <SearchIcon><i class="far fa-heart Search-icon"></i></SearchIcon>  
+                <SearchIcon><i class="far fa-user Search-icon"></i></SearchIcon>
+              </SearchIcons>
+            </TheSearchBar>
        );
     }   
-}
 
 export default SearchBar

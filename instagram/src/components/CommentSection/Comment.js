@@ -1,12 +1,13 @@
 import React from "react";
+import {CommentContainer, CommenterName} from '../Reusables/Reusables';
 
 const Comment = props => {
   return (
     <div>
-      <p className="comment-container">
-        <span className="commenter-name">{props.comment.username}</span>
+      <CommentContainer>
+        <CommenterName>{props.comment.username}</CommenterName>
         {props.comment.text}
-      </p>
+      </CommentContainer>
     </div>
   );
 };
