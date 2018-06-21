@@ -17,11 +17,11 @@ class Login extends React.Component {
     handleLoginSubmit = e => {
         e.preventDefault();
         const user = this.state.username;
-        if (user === 'rudius' && this.state.password.toLowerCase() !== 'funboy') {
+        if (user.toLowerCase() === 'rudius' && this.state.password.toLowerCase() !== 'funboy') {
             alert(`Wrong password. Hint: Johns nickname in high school`);
             return;
         }
-        if (user === 'plamz' && this.state.password.toLowerCase() !== 'silver') {
+        if (user.toLowerCase() === 'plamz' && this.state.password.toLowerCase() !== 'silver') {
             alert(`Wrong password. Hint: Your skill equivelent rank in counter-strike`);
             return;
         }
