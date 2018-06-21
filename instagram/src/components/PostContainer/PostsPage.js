@@ -29,11 +29,11 @@ class PostsPage extends React.Component {
     this.setState({ dummyData: newState });
   };
 
-  toggleLike = index => {
+  toggleLike = (index, val) => {
     let newState = this.state.dummyData.slice();
     newState.forEach((post, i) => {
       if (i === index) {
-        post.likes++;
+        post.likes += val;
       }
     });
     this.setState({ dummyData: newState });
