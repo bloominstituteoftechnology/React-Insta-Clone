@@ -37,6 +37,7 @@ render() {
         <div className='borderPosts'>
           <div  className="PostsPage"> 
             <PostContainer 
+            userProp={this.props.userName}
               passedState = {
                 this.state.filteredData.length >0 ? this.state.filteredData :   this.state.commentsData 
               }
