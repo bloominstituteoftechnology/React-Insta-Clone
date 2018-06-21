@@ -9,7 +9,9 @@ class PostPage extends Component {
     super();
     this.state = {
       postData: [],
-      comment: ''
+      comment: '',
+      searchResults: [],
+      searchTerm: ''
     }
   }
 
@@ -32,11 +34,7 @@ class PostPage extends Component {
   }
 
   handleCommentChange = event => {
-    this.setState({comment: event.target.value})
-  }
-
-  handleLikeClick = event => {
-    console.log(event.target);
+    this.setState({[event.target.name]: event.target.value})
   }
 
   handleLogout = event => {
@@ -44,14 +42,28 @@ class PostPage extends Component {
     window.location.reload();
   }
 
+  handlePostsSearch = event => {
+    event.preventDefault();
+    let searchResults = this.state.postData.slice();
+    searchResults = searchResults.filter(post => {
+      if (post.username.includes(this.state.searchTerm)) {
+        return post;
+      }
+    });
+    this.setState({searchResults: searchResults});
+
+  }
+
 
 
   render() {
+    let returnedPosts;
+    returnedPosts = (this.state.searchResults.length > 0) ? this.state.searchResults : this.state.postData;
     return (
       <div className="App">
-        <SearchBar handleLogout={this.handleLogout} />
+        <SearchBar searchHandler={this.handlePostsSearch} changeHandler={this.handleCommentChange} handleLogout={this.handleLogout} />
         <div className="posts-wrapper">
-          {this.state.postData.map((post, index) => <PostContainer key={index}
+          {returnedPosts.map((post, index) => <PostContainer key={index}
           index={index}
           post={post}
           addCommentHandler={this.addNewComment}

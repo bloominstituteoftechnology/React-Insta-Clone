@@ -3,6 +3,7 @@ import CommentSection from '../CommentSection/CommentSection';
 import '../instagram.css';
 import { Card, CardImg, CardBody,
   CardTitle } from 'reactstrap';
+/*import PropTypes from 'prop-types';*/
 
   /*Need to come back and add prop types*/
 
@@ -25,7 +26,6 @@ class PostContainer extends React.Component {
   }
 
   render() {
-    console.log(this.state)
   return (
       <Card className="test">
         <CardBody className="card-header">
@@ -40,7 +40,7 @@ class PostContainer extends React.Component {
         {/*<i className="fas fa-heart like-selected"></i>*/}
         <i className="far fa-comment" ></i>
         </div>
-        <i className="far fa-bookmark" onClick={this.props.toggleLike}></i>
+        <i className="far fa-bookmark"></i>
         {/*<i class="fas fa-bookmark"></i>*/}
         </div>
         <h5>{this.state.likes} likes</h5>

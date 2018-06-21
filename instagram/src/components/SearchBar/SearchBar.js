@@ -8,7 +8,9 @@ const SearchBar = (props) => {
     <div>{
       <div>
         <i className="fas fa-search"></i>
-        <input type="search" name="search" id="searchBar" placeholder="Search" />
+        <form onSubmit={props.searchHandler}>
+        <input type="search" name="searchTerm" id="searchBar" placeholder="Search" onChange={props.changeHandler} />
+        </form>
         <button onClick={props.handleLogout}>Log Out</button>
         </div>
       }
