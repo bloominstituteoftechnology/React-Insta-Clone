@@ -1,18 +1,19 @@
 import React from 'react';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import './Login.css'
+import logo from '../SearchBar/instagram.png'
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state ={
-      data : [{email:''},{password:''}]
+      data : [{username:''},{password:''}]
     }
   }
 
-  onEmailChange =(e) =>{
+  onUsernameChange =(e) =>{
     let localState = this.state.data.slice();
-    localState[0].email = e.target.value;
+    localState[0].username = e.target.value;
     this.setState({data:localState})
   }
 
@@ -23,25 +24,28 @@ class Login extends React.Component {
   }
 
   onLoginHandler = (e) => {
-    localStorage.setItem(this.state.data[0].email,this.state.data[1].password)
+    localStorage.setItem('instaclone',JSON.stringify(this.state.data))
     window.location.reload();
   }
 
   render() { 
     return (
-      <Container className="login-container">
+      <Container className="container-fluid login-container">
         <Row className="d-flex justify-content-center login-row">
+        <div className="form-container">
+          <div className="logo-container">
+            <img className="gram-logo login" src={logo} alt="logo"/>
+          </div>
           <Form>
             <FormGroup>
-              <Label for="exampleEmail">Email</Label>
-              <Input className="email" type="email" name="email" id="exampleEmail" placeholder="Please Enter email" onChange={this.onEmailChange}/>
+              <Input className="text" type="text" name="text" id="exampleText" placeholder="Please enter your username" onChange={this.onUsernameChange}/>
             </FormGroup>
             <FormGroup>
-              <Label for="examplePassword">Password</Label>
-              <Input className="password" type="password" name="password" id="examplePassword" placeholder="Please enter password" onChange={this.onPasswordChange}/>
+              <Input className="password" type="password" name="password" id="examplePassword" placeholder="Please enter your password" onChange={this.onPasswordChange}/>
             </FormGroup>
-            <Button onClick={this.onLoginHandler}>Login</Button>
+            <Button onClick={this.onLoginHandler} color="primary">Login</Button>
           </Form>
+        </div>
         </Row>
       </Container>
      )
