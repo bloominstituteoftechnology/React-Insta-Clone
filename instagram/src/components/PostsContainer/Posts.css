@@ -18,18 +18,18 @@
   width: 100%;
 }
 
-.post-header {
+/* .post-header {
   display: flex;
-}
+} */
 
-.post-thumb-wrapper {
+/* .post-thumb-wrapper {
   height: 50px;
   width: 50px;
-}
-.post-thumb {
+} */
+/* .post-thumb {
   height: 100%;
   border-radius: 50%;
-}
+} */
 .like-section {
   display: flex;
 }

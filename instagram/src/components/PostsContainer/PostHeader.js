@@ -1,18 +1,33 @@
-import React from 'react';
-import './Posts.css';
+import React from "react";
+// import "./Posts.css";
+import styled from "styled-components";
+
+const PostHeaderStyled = styled.div`
+  display: flex;
+`;
+
+const PostThumbWrapper = styled.div`
+  height: 50px;
+  width: 50px;
+`;
+
+const PostThumb = styled.img`
+  height: 100%;
+  border-radius: 50%;
+`;
 
 const PostHeader = props => {
   return (
-    <div className="post-header">
-      <div className="post-thumb-wrapper">
-        <img
+    <PostHeaderStyled>
+      <PostThumbWrapper>
+        <PostThumb
           alt="post header"
           className="post-thumb"
           src={props.thumbnailUrl}
         />
-      </div>
+      </PostThumbWrapper>
       <div>{props.username}</div>
-    </div>
+    </PostHeaderStyled>
   );
 };
 
