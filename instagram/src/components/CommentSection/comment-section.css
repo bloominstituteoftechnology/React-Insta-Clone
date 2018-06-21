@@ -40,10 +40,17 @@ button {
     /* padding-right: 10px; */
     font-weight: 200;
     color: #404040;
-    background-color: white;
+
     border: none;
     outline: none;
   
+}
+.liked-button {
+    font-size: 20px;
+    /* padding-right: 10px; */
+    color: red;
+    fill: red;
+
 }
 .chat-button {
     font-size: 20px;

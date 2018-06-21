@@ -12,6 +12,7 @@ class CommentSection extends Component {
      newComment: '',
      username: 'jjashcraft',
      likes: props.likes,
+     userLiked: false,
    }
  }
 
@@ -23,11 +24,28 @@ class CommentSection extends Component {
  this.setState({comments: comments});
 
  }  
-  addLike=() => {
+  addLike=(event) => {
+    if (this.state.userLiked === false) {
+    event.target.className = 'fas fa-heart liked-button';
     console.log('plus one like');
  let likes = this.state.likes;
  likes = likes + 1;  
- this.setState({likes});
+ this.setState({
+   likes : likes,
+   userLiked: true,
+});
+    } else {
+event.target.className = 'far fa-heart like-button';
+console.log('no more likey');
+let likes = this.state.likes;
+likes = likes - 1;
+this.setState({
+  likes: likes,
+  userLiked: false,
+});
+
+
+    }
 
  }  
  
@@ -40,7 +58,7 @@ this.setState({newComment: event.target.value});
     return (
       <div className='comments'>
 
-      <IconHeaderBar addLike = {this.addLike} likes = {this.state.likes} />
+      <IconHeaderBar userLiked = {this.state.userLiked} addLike = {this.addLike} likes = {this.state.likes} />
             <ul>
             {this.state.comments.map((comment, index) => {
                 

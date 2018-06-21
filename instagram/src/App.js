@@ -4,6 +4,7 @@ import PostsPage from './components/PostContainer/PostsPage';
 import './App.css';
 
 
+
 class App extends Component {
 constructor(props) {
 super();
