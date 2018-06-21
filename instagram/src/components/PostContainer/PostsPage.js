@@ -18,7 +18,7 @@ class PostsPage extends Component {
 
     searchPostsHandler = e => {
         const posts = this.state.posts.filter(pIsRegularP => {
-            if (pIsRegularP.includes(e.target.value)) {
+            if (pIsRegularP.username.includes(e.target.value)) {
                 return pIsRegularP;
             }
         });
@@ -34,7 +34,7 @@ class PostsPage extends Component {
             />
             <PostContainer
             posts={
-                this.state.whatIsFilteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts 
+                this.state.whatIsFilteredPosts.length > 0 ? this.state.whatIsFilteredPosts : this.state.posts 
             }
             /> 
             {/* dummyData={props.dummyData}

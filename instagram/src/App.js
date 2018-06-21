@@ -10,6 +10,7 @@ class App extends Component {
     this.state = {
       newComment: ""
     };
+
   }
 
   // change comments property by adding another index value to that array "comments" on each individual post from dummyData
@@ -37,6 +38,11 @@ class App extends Component {
   //   window.localStorage.setItem("comments", JSON.stringify(dummyData));
   // }
 
+  componentDidMount() {
+    const user = localStorage.getItem("user");
+    this.setState({username: user});
+  }
+
   render() {
     return (
       <div className="App">
@@ -46,4 +52,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);

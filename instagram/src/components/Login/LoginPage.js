@@ -1,5 +1,5 @@
 import React from 'react';
-// needs styling
+import './Login.css';
 
 class LoginPage extends React.Component {
     constructor(props) {
@@ -26,13 +26,24 @@ class LoginPage extends React.Component {
                 <h3>Welcome to React Insta Clone</h3>
                 <div>Please Login</div>
                 <div>
-                    <input 
-                        type="text"
-                        placeholder="User Name"
-                        name="username"
-                        value={this.state.password}
-                        onChange={this.handleInputChange}
-                    />
+                    <div className="login-input">
+                        <input 
+                            type="text"
+                            placeholder="User Name"
+                            name="username"
+                            value={this.state.username}
+                            onChange={this.handleInputChange}
+                        />
+                    </div>
+                    <div className="login-input">
+                        <input
+                            type="password"
+                            placeholder="password"
+                            name="password"
+                            value={this.state.password}
+                            onChange={this.handleInputChange}
+                        />
+                    </div>
                     <br />
                     <button color="red" size="large" onClick={this.handleLoginSubmit}>
                         Log In

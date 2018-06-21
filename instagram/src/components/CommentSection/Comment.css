@@ -16,5 +16,6 @@
   
 .comment-input-text {
   outline: none;
-
+  width: 97%;
+  height: 20px;
 }

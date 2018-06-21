@@ -37,11 +37,14 @@ class CommentSection extends React.Component {
 
   commentSubmitHandler = e => {
     e.preventDefault();
-    alert("Clicked");
-    const newComment = {text: this.state.comment, username: 'Leery Jenkins'};
+    alert("Thank you for submitting your comment!");
+    const newComment = {text: this.state.comment, username: 'Leeroy Jenkins'};
     const comments = this.state.comments.slice();
     comments.push(newComment);
     this.setState({ comments, comment: "" });
+    setTimeout(() => {
+      this.setComments();
+    }, 1);
   }
 
   render() {
@@ -49,9 +52,9 @@ class CommentSection extends React.Component {
     <div>
       {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
       <CommentInput 
-      changeHandler={this.commenttextHandler}
-      comment={this.state.comment}
-      saveHandler={this.commentSubmitHandler}
+        comment={this.state.comment}
+        handleChangeComment={this.commentHandler}
+        saveHandler={this.commentSubmitHandler}
       />
     </div>
     )
