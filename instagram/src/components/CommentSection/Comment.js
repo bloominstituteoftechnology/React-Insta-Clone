@@ -10,13 +10,40 @@ class CommentSection extends React.Component {
         }
     }
 
+    componentDidMount() {
+        const id = this.props.postId;
+        if (localStorage.getItem(id)) {
+            //if id exists set the comments by that parsed array
+            this.setState({ comments: JSON.parse(localStorage.getItem(id)) });
+        } else {
+            // call setComment()
+            this.setComments();
+        }
+    }
+
+    // componentWillUnmount() {
+    //     this.setComments();
+    // }
+
+    setComments = () => {
+        localStorage.setItem(this.props.postId, JSON.stringify(this.state.comments));
+    }
+
     commentTextHandler = e => {
-        this.setState({comment: e.target.value})
+        this.setState({ comment: e.target.value })
     }
 
     commentSubmitHandler = e => {
         e.preventDefault();
-        alert('new comment')
+        let newComment = { text: this.state.comment, username: 'Sean Connery' };
+        let comments = this.state.comments.slice(); //copy the comments array
+        if (newComment.text.length > 0) {
+            comments.push(newComment);
+            this.setState({ comments, comment: '' });
+            setTimeout(() => {
+                this.setComments();
+            }, 500);
+        }
     }
 
     render() {
@@ -26,7 +53,7 @@ class CommentSection extends React.Component {
                     return <p key={index} className="comment"><span className="bold-text">{comment.username}</span> {comment.text}</p>
                 })}
                 <hr />
-                <form onSubmit={this.commentSubmitHandler}> 
+                <form onSubmit={this.commentSubmitHandler}>
                     <input onChange={this.commentTextHandler}
                         className='comment-input'
                         type="text"

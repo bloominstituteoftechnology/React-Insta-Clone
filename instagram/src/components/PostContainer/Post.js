@@ -23,7 +23,7 @@ const PostContainer = props => {
                     <p className='bold-text mt-2 mb-2'>{props.userData.likes + ' likes'}</p>
                     <CommentSection
                         comments={props.userData.comments} 
-                        index={props.index}/>
+                        postId={props.userData.imageUrl}/>
                 </CardBody>
             </Card>
         </div>
