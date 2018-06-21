@@ -1,15 +1,28 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
-import './Comment.css';
+import styled from 'styled-components';
+
+// import './Comment.css';
+
+// styled-components
+const CommentContainer = styled.div`
+    font-size: 18px;
+    display: flex;
+    margin: 10px 20px;
+
+    span:first-child {
+        font-weight: bold;
+        margin: 0 8px 0 0;
+    }
+`;
 
 // Return Comment
 const Comment = props => {
     return (
-        <div className="comment-container">
-            <span className="user">{props.comment.username}</span>
-            <span className="comment">{props.comment.text}</span>
-        </div>
+        <CommentContainer>
+            <span>{props.comment.username}</span>
+            <span>{props.comment.text}</span>
+        </CommentContainer>
     );
 };
 
