@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data.js'
 import moment from 'moment'
 import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './HOCs/Authenticate'
 
 class App extends Component {
   constructor(){
@@ -115,4 +116,6 @@ class App extends Component {
   }
 }
 
-export default App;
+const AuthenticatedApp = Authenticate(App)
+
+export default AuthenticatedApp;
