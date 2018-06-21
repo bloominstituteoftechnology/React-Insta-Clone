@@ -1,16 +1,20 @@
 import React from 'react';
+import {PostHead} from '../Styles/PostStyles';
 import './PostContainer.css';
 
 const PostHeader = props => {
     return (
-        <div className="post-header">
+        <PostHead className="post-header">
             <div className="thumbnail">
                 <img alt="profile" className="profile-picture" src={props.thumbnailUrl} />
             </div>
             <div className="username">
                 <p>{props.username}</p>
             </div>
-        </div>
+            <div className="timestamp">
+                <p>{props.timestamp}</p>
+            </div>
+        </PostHead>
     );
 };
 
