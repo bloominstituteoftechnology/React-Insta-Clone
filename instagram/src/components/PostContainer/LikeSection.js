@@ -1,4 +1,5 @@
 import React from 'react';
+import {LikeContainerStyle, LikeSectionIcons, LikeSectionNumbers} from '../ReusableStyles/ReusableStyles';
 import './PostContainer.css';
 
 const LikeSection = props => {
@@ -6,20 +7,20 @@ const LikeSection = props => {
 	return(
 		<div >
 
-		<div className="like-container-style">
+		<LikeContainerStyle>
 
-		<div className="like-section-icons" onClick={props.incrementLikes}>
+		<LikeSectionIcons onClick={props.incrementLikes}>
 		<i className="far fa-heart" />
-		</div>
+		</LikeSectionIcons>
 
-		<div className="like-section-icons">
+		<LikeSectionIcons>
                 <i className="far fa-comment" />
-                </div>
+                </LikeSectionIcons>
 
-		</div>
+		</LikeContainerStyle>
 
 	
-		<div className="like-section-numbers">{props.Likes} likes</div>
+		<LikeSectionNumbers>{props.Likes} likes</LikeSectionNumbers>
 
 		</div>
 	);

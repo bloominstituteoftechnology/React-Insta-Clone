@@ -1,5 +1,5 @@
 import React from 'react';
-import {SearchBarStyle, SearchWrapper, IgLogo} from "../ReusableStyles/ReusableStyles";
+import {SearchBarStyle, SearchIconWrapper, SearchWrapper, IgLogo, SearchBarIcons} from "../ReusableStyles/ReusableStyles";
 import Iglogo from './img/instagram.png';
 
 
@@ -11,6 +11,12 @@ const  SearchBar= props => {
 
 	<SearchBarStyle type="text" onChange ={props.searchTrigger} placeholder="Search"  />
 	
+	<SearchIconWrapper>
+		<SearchBarIcons> <i className="far fa-compass" /> </SearchBarIcons>
+		 <SearchBarIcons><i className="far fa-heart" /></SearchBarIcons>
+		<SearchBarIcons><i className="far fa-user-circle" /></SearchBarIcons>
+	</SearchIconWrapper>
+		
 	</SearchWrapper>
 	
 	);	
