@@ -35,13 +35,17 @@ h1 {
 }
 .like-section {
     display: flex;
-    margin-right: 5%;
+    margin-right: 8%;
   }
   
   .like-section-wrapper {
     height: 10px;
     width: 2%;
     margin: 5px 1% 30px 0;
+  }
+  .likes-text{
+      margin-left: 30%;
+      font-size: 1.3rem;
   }
 
   @media only screen and (max-width: 600px){
