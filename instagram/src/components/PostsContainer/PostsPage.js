@@ -45,7 +45,7 @@ class PostsPage extends Component {
         <header>
           <div className="instagram-icon-and-logo-container">
             <i className="fab fa-instagram"></i>
-            <p>Instagram</p>
+            <img src="iglogo.png" alt="Logo." />
           </div>
           <SearchBar search={this.searchHandler} />
           <div className="header-icons">

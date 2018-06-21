@@ -5,12 +5,22 @@ import CommentSection from '../CommentSection/CommentSection';
 
 class Post extends React.Component {
   state = {
-    likes: this.props.post.likes
+    likes: this.props.post.likes,
+    liked: false
   };
 
-  likePost = () => {
-    let likes = this.state.likes + 1;
-    this.setState({ likes: likes });
+  handleLike = () => {
+    let likes = this.state.likes;
+    let liked = this.state.liked;
+
+    if (liked) {
+      likes--;
+      liked = false;
+    } else {
+      likes++;
+      liked = true;
+    }
+    this.setState({ liked, likes });
   };
 
   render() {
@@ -23,7 +33,10 @@ class Post extends React.Component {
         <img src={this.props.post.imageUrl} alt={"Post."} />
         <div className="post-icons-and-comments-container">
           <div className="post-icons-container">
-            <i className="far fa-heart" onClick={this.likePost}></i>
+            <i onClick={this.handleLike}
+               style={this.state.liked ? { color: 'red' } : null}
+               className={'fa-heart likes-heart ' + (this.state.liked ? 'fas' : 'far')}>
+            </i>
             <i className="far fa-comment"></i>
           </div>
           <p>{this.state.likes} likes</p>

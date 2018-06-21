@@ -11,12 +11,21 @@
 }
 
 header {
+  position: sticky;
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  margin: 25px 0;
+  padding: 15px 0;
+  background: white;
+  /*border-bottom: 2px solid lightgray;*/
+}
+
+header img {
+  max-height: 40px;
+  height: 100%;
 }
 
 .instagram-icon-and-logo-container {

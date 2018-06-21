@@ -1,11 +1,11 @@
 import React from "react";
 import Login from '../Login/Login';
-import App from '../../App.js';
 
 const Authenticate = App =>
   class extends React.Component {
     state = {
-      loggedIn: false
+      loggedIn: false,
+      username: ""
     }
 
     componentDidMount() {
@@ -14,7 +14,7 @@ const Authenticate = App =>
           loggedIn: JSON.parse(window.localStorage.getItem("loggedIn"))
         });
       } else {
-        window.localStorage.setItem("loggedIn", JSON.stringify(this.state.loggedIn));
+        window.localStorage.setItem("loggedIn", true);
       }
     }
 
@@ -25,7 +25,7 @@ const Authenticate = App =>
         );
       } else {
         return (
-          <Login loggedIn={this.state.loggedIn} />
+          <Login />
         );
       }
     }
