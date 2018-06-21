@@ -32,19 +32,11 @@ body {
   background: #FAFAFA !important;
 }
 
-/* .fa-search {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-} */
-
 .container {
   height: 100px;
-  padding: 20px 0;
-}
-
-.SearchBar {
-  height: 100%;
-  background: white;
+  width: 100%;
+  padding: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1)
 }
 
 .fa-instagram::before{
@@ -54,23 +46,17 @@ body {
 
 /* Post Container */
 
-.card{
-  width: 604px;
-  margin: 30px auto;
-
-}
-
-.card-header {
+/* .card-header {
   padding: 15px 0;
-}
+} */
 
-.thumbnail {
+/* .thumbnail {
   width: 30px;
   height: 30px;
   margin-left: 16px;
   margin-right: 11px;
   border-radius: 50%;
-}
+} */
 
 .bold-text {
   font-size: 14px;
