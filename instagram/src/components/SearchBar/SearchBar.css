@@ -1,0 +1,50 @@
+.SearchBar {
+    background-color: #fff;
+    border-bottom: 1px solid #d8d8d8;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+  }
+
+  /* .SearchItems {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  } */
+
+  .Insta-logo-block {
+    display: flex;
+    width: 25%;
+    margin-left: 20%;
+  }
+
+  .Insta-logo {
+      height: 35px;
+      width: 35px;
+  }
+  
+  .Insta-name {
+      height: 35px;
+      width: 140px;
+      margin-left: 10px;
+      margin-top: 4px;
+  }
+
+  .Search-input {
+    width: 25%;
+  }
+
+  .Search-icons {
+      display: flex;
+      width: 25%;
+  }
+
+  .Search-icon {
+      height: 24px;
+      width: 24px;
+    }
