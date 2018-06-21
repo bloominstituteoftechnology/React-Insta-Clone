@@ -20,7 +20,6 @@ const PostsPage = props => {
                                 updateComment={props.updateComment} />
                 )}
             </div>
- 
         </div>
 
     );

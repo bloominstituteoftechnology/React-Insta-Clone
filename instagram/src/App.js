@@ -74,7 +74,7 @@ class App extends Component {
   }
 }
 
-const ValidatedApp = Authenticate(App);
 
 
-export default ValidatedApp;
+
+export default Authenticate(App);
