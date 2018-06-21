@@ -39,6 +39,12 @@ class PostsPage extends Component {
 
   };
 
+  logout() {
+    localStorage.setItem("username", "");
+    localStorage.setItem("password", "");
+    window.location.reload();
+  }
+
   render() {
     return (
       <div className="container">
@@ -51,7 +57,7 @@ class PostsPage extends Component {
           <div className="header-icons">
             <i className="far fa-compass"></i>
             <i className="far fa-heart"></i>
-            <i className="far fa-user"></i>
+            <i className="far fa-user" onClick={this.logout}></i>
           </div>
         </header>
         <PostsContainer posts={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} />

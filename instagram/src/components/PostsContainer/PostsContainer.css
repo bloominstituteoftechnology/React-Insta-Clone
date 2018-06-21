@@ -57,6 +57,10 @@ header img {
   color: lightgray;
 }
 
+.header-icons i:hover {
+  color: darkgray;
+}
+
 .posts-container {
   width: 100%;
   display: flex;

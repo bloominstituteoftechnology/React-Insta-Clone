@@ -9,12 +9,14 @@ const Authenticate = App =>
     }
 
     componentDidMount() {
-      if (window.localStorage.getItem("loggedIn")) {
+      if (localStorage.getItem('username') && localStorage.getItem('password')) {
         this.setState({
-          loggedIn: JSON.parse(window.localStorage.getItem("loggedIn"))
+          loggedIn: true
         });
       } else {
-        window.localStorage.setItem("loggedIn", true);
+        this.setState({
+          loggedIn: false
+        });
       }
     }
 

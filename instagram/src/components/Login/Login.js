@@ -25,6 +25,7 @@ class Login extends React.Component {
     return (
       <div className="login-container">
         <form onSubmit={this.login}>
+          <img src="iglogo.png" alt="Logo." className="login-logo" />
           <input type="text"
                  placeholder="Username"
                  value={this.state.username}
