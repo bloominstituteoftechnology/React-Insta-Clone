@@ -14,8 +14,8 @@ const PostsPage = props => {
                     <PostContainer postInfo={post} 
                                 key={index}
                                 commentKey={index}
-                                addNewComment={this.addNewComment}
-                                updateComment={this.updateComment} />
+                                addNewComment={props.addNewComment}
+                                updateComment={props.updateComment} />
                 )}
             </div>
  

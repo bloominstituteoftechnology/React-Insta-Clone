@@ -25,12 +25,11 @@ class App extends Component {
     event.preventDefault();
     let newData = this.state.data.slice();
     let newComment = {
-      username: "GottaPayTheTrollToll291",
+      username: localStorage.getItem("userName"),
       text: this.state.comment,
     }
     newData[index].comments.push(newComment);
-
-    this.setState({data: newData});
+    this.setState({data: newData, comment: ''});
   }
 
   logout = () => {
@@ -41,7 +40,9 @@ class App extends Component {
     return (
       <div className="App">
         <div className="posts">
-          <PostsPage data={this.state.data} />
+          <PostsPage data={this.state.data}
+                      addNewComment={this.addNewComment}
+                      updateComment={this.updateComment} />
         </div>
         <form onSubmit={this.logout}><button type="submit">Logout</button></form>
       </div>
