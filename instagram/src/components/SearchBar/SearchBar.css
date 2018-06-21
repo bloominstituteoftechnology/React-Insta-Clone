@@ -10,6 +10,7 @@
 }
 
 .logo {
+  margin-left: -14px;
   margin-top: 5px;
 }
 
@@ -34,7 +35,7 @@
 .divider {
   width: 1px;
   margin-top: 3px;
-  margin-left: -21px;
+  margin-left: 10px;
   margin-bottom: 4px;
   background: black;
 }

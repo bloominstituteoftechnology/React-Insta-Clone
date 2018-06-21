@@ -1,6 +1,31 @@
 import React from 'react';
+import styled from 'styled-components';
 import './SearchBar.css';
 
+const Title = styled.div`
+    font-size: 24px;
+    display: flex;
+    border-bottom: 1px solid gray;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+`;
+
+const Logo = styled.div`
+    margin-left: -14px;
+    margin-top: 5px;
+  }
+`;
+
+const SearchBox = styled.input`
+  font-family: FontAwesome;
+  text-align: center;
+  width: 600px;
+  padding-top: 0px;
+  margin-top: -15px;
+  margin-bottom: 5px;
+  margin-left: 39px;
+`;
 class SearchBar extends React.Component {
   constructor() {
     super();
@@ -22,13 +47,15 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="row title">
-          <i className="col-sm-1 fab fa-instagram logo" />
+        <Title className="row">
+          <Logo>
+            <i className="col-sm-1 fab fa-instagram" />
+          </Logo>
+
           <div className="divider" />
           <div className="col-sm-1 instaFont">Instagram</div>
           <div className="col-sm-8">
-            <input
-              className="searchBox"
+            <SearchBox
               onChange={this.handleChange}
               type="text"
               name="search"
@@ -41,7 +68,7 @@ class SearchBar extends React.Component {
             <i className="col-sm-1 far fa-heart" />
             <i onClick={this.handleClick} className="col-sm-1 far fa-user" />
           </div>
-        </div>
+        </Title>
       </div>
     );
   }
