@@ -1,11 +1,18 @@
 import React from 'react';
 import './SearchBar.css';
+import styled from 'styled-components';
 
+const Header = styled.header`
+	height: 70px;
+	background: lightgray;
+	border-bottom: 3px solid #084c61;
+`;
 
 
 const SearchBar = props => {
     return (
-        <div className="search-bar clear-fix">
+    <Header>
+      
             <div className="ig-logo-icons float-left">
                 <i className="fab fa-instagram "></i>
                 <img src="" className="ig-logo" alt="Ig Word Logo" />
@@ -19,7 +26,8 @@ const SearchBar = props => {
                 <i className="far fa-heart search-heart-icon"></i>
                 <i className="far fa-user"></i>
             </div>
-        </div>
+        
+        </Header>
     );
 };
 
