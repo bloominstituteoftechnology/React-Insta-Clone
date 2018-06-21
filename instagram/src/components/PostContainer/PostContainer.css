@@ -1,0 +1,14 @@
+.posts {
+  border: 1px solid black;
+  width: 600px;
+  margin-bottom: 15px;
+}
+
+.postImg {
+  padding-top: 10px;
+  margin-left: -15px;
+}
+
+.name {
+  font-weight: bold;
+}
