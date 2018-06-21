@@ -9,11 +9,12 @@ class PostsPage extends React.Component {
     super();
     this.state = {
       dummyData: [],
+      displayData: [],
     };
   }
 
   componentDidMount() {
-    this.setState({ dummyData });
+    this.setState({ dummyData, displayData: dummyData });
   }
 
   addNewComment = (index, comment) => {
@@ -38,11 +39,17 @@ class PostsPage extends React.Component {
     this.setState({ dummyData: newState });
   };
 
+  handleSearch = term => {
+    this.setState({
+      displayData: this.state.dummyData.filter(p => p.username.includes(term)),
+    });
+  };
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        {this.state.dummyData.map((d, i) => {
+        <SearchBar searchHandler={this.handleSearch} />
+        {this.state.displayData.map((d, i) => {
           return (
             <PostContainer
               key={i}

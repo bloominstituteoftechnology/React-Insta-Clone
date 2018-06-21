@@ -40,8 +40,10 @@ class SearchBar extends React.Component {
     window.location.reload();
   };
 
-  handleChange = e => {
-    this.setState({ search: e.target.value });
+  handleSearchChange = e => {
+    let term = e.target.value;
+    this.setState({ search: term });
+    this.props.searchHandler(term);
   };
 
   render() {
@@ -56,7 +58,7 @@ class SearchBar extends React.Component {
           <div className="col-sm-1 instaFont">Instagram</div>
           <div className="col-sm-8">
             <SearchBox
-              onChange={this.handleChange}
+              onChange={this.handleSearchChange}
               type="text"
               name="search"
               placeholder="&#61442; Search"
