@@ -16,9 +16,9 @@ class App extends React.Component {
     };
   }
 
-  // componentDidMount() {
-  //   this.setState({dummyData: dummyData});
-  // }
+  componentDidMount() {
+    this.setState({dummyData: dummyData});
+  }
   render() {
     console.log(this.state.dummyData)
     return (
