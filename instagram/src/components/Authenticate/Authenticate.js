@@ -10,7 +10,6 @@ const Authenticate = App =>
 	
 	};
 	
-	
 	}
 
 

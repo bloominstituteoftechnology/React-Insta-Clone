@@ -1,16 +1,17 @@
 import React from 'react';
-import './SearchBar.css';
+import {SearchBarStyle, SearchWrapper, IgLogo} from "../ReusableStyles/ReusableStyles";
 import Iglogo from './img/instagram.png';
+
 
 
 const  SearchBar= props => {
 	return(
-	<div className="search-container">
-		<img className="logo" src={Iglogo} alt="" />
+	<SearchWrapper>
+		<IgLogo src={Iglogo} alt="" />
 
-	<input className="search-bar" type="text" onChange ={props.searchTrigger} placeholder="Search"  />
+	<SearchBarStyle type="text" onChange ={props.searchTrigger} placeholder="Search"  />
 	
-	</div>
+	</SearchWrapper>
 	
 	);	
 };		
