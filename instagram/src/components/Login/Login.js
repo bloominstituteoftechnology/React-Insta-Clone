@@ -1,4 +1,51 @@
 import React, { Component } from "react";
+import styled from "styled-components";
+
+const LoginCont = styled.div`
+margin: 0 auto;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 350px;
+  height: 467px;
+  border-top:1px solid #000;;
+border-bottom:1px solid #000;;
+border-left:1px solid #000;;
+border-right:1px solid #000;;
+`;
+const LoginHeader = styled.h1`
+display: flex;
+justify-content: center;
+width: 350px;
+color:red;
+`;
+const LoginInput = styled.input`
+display: flex;
+
+width: 268px;
+height: 38px;
+border-top:1px solid gray;
+border-bottom:1px solid gray;
+border-left:1px solid gray;
+border-right:1px solid gray;
+
+
+`;
+const LoginButton = styled.button`
+display: flex;
+justify-content: center;
+text-align: center;
+width: 268px;
+height: 38px;
+background: #2196F3;
+color: white;
+border-top:1px solid gray;
+border-bottom:1px solid gray;
+border-left:1px solid gray;
+border-right:1px solid gray;
+
+
+`;
 
 class Login extends Component {
     constructor() {
@@ -54,28 +101,33 @@ changeusername = event =>
   
     render() {
       return (
-          <div className="dunno">
-              
+          <LoginCont >
+              <div>
+              <LoginHeader > Instagram
+              </LoginHeader> 
+              </div>
               <form onSubmit={this.loginSubmit}>
-         <input 
+         <LoginInput 
          onChange={this.changeusername}
               className="userinput"
               type="text"
+              placeholder="Phone number, username, or email"
               
             //   placeholder={this.state.placeholder}
               value={this.state.username} 
                    />
 
-              <input 
+              <LoginInput 
               onChange={this.changepassword}
               className="passwordinput"
               type="text"
+              placeholder="Password"
             //   placeholder={this.state.placeholder}
               value={this.state.password}
                   />
-                  <button onClick={this.loginSubmit}>Login</button>
+                  <LoginButton onClick={this.loginSubmit}>Login</LoginButton>
                   </form>
-          </div>
+          </LoginCont>
       );
     }
   }

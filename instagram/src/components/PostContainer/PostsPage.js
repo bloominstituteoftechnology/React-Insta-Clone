@@ -9,8 +9,7 @@ const PostsPage = props => {
     return (
         <div className = "App">
         <SearchBar />
-        
-    )<div className = "App-content">
+    <div className = "App-content">
     {props.dummyData.map(post =>(
         <PostContainer key={post.timestamp} dummyData={post} />
     ))}

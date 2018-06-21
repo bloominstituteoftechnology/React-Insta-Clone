@@ -5,6 +5,7 @@ import dummyData from "./dummy-data";
 // import SearchBar from "./components/SearchBar/SearchBar";
 import PostsPage from "./components/PostContainer/PostsPage";
 import Authenticate from "./Authentication/Authenticate";
+// import styled from "styled-components";
 
 class App extends Component {
   constructor() {

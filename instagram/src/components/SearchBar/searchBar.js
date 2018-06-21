@@ -1,5 +1,11 @@
 import React from 'react';
 import "./SearchBar.css";
+import styled from "styled-components";
+
+const InstaName = styled.h1`
+  
+  color: red;
+`;
 
 class SearchBar extends React.Component  {
     constructor(props){
@@ -30,7 +36,7 @@ changeSearch = event => this.setState ({input: event.target.value})
 render(){
     return (
         <div onSubmit={this.newSearch}className="search-bar"> 
-            <p>Instagram </p>
+            <InstaName>Instagram </InstaName>
             <input className="fa" type="text" onChange={this.changesearch} placeholder="&#xf002; Search" value={this.state.value}/>
              </div>
     )
