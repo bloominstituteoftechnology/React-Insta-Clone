@@ -40,7 +40,9 @@ class Login extends React.Component {
             localStorage.setItem('user', user)
             localStorage.setItem('password', this.state.password)
         }
-
+        else{
+            alert("You don't exist!!!")
+        }
         window.location.reload();
 
     }
