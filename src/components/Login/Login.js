@@ -26,6 +26,11 @@ class Login extends React.Component {
             alert(`Wrong password. Hint: Your skill equivelent rank in counter-strike`);
             return;
         }
+        if (user.toLowerCase() === 'dilly' && this.state.password.toLowerCase() !== 'bronze') {
+            alert(`Wrong password. Hint: Your skill equivelent rank in overwatch`);
+            return;
+        }
+        
         localStorage.setItem('user', user)
         localStorage.setItem('password', this.state.password)
         window.location.reload();
