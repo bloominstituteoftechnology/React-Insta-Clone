@@ -1,0 +1,41 @@
+
+.post-container {
+    max-width: 60%;
+    border-radius: .5%;
+    border: 2px solid lightgray;
+    margin: 1% 0;
+}
+.header {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    align-items: center;
+}
+.thumbnail {
+    border-radius: 50%;
+    width: 4%;
+    padding: 1%;
+}
+.username {
+    font-weight: bold;
+}
+.url {
+    max-width: 100%;
+}
+/* .likes {
+    margin: 1%;
+    text-align: left;
+    font-weight: bold;
+}
+.icons {
+    display: flex;
+    justify-content: flex-start;
+}
+.heart {
+    height: 5%;
+    width: 5%; 
+}
+.talk {
+    height: 5%;
+    width: 5%;
+} */

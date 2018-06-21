@@ -1,0 +1,40 @@
+
+/* .search-container {
+        padding: 5% 0;
+        border-top: 5px solid lightgray;
+        border-bottom: 5px solid lightgray;
+} */
+
+.search-contain {
+    border-bottom: 1px solid lightgray;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.search-left {
+    width: 20%;
+}
+.mid-text {
+    width: 20%;
+}
+.search-right {
+    width: 15%;
+}
+
+.camera {
+   width: 29%;
+   border-right: 1px solid lightgray;
+}
+.instalogo { 
+    width: 70%; 
+}
+.compass {
+     width: 30%;   
+}
+.heart-search {   
+    width: 30%;  
+}
+.person {  
+    width: 30%;      
+}
