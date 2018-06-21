@@ -1,13 +1,6 @@
 import React from "react";
 import Login from './components/Login/Login';
-import styled from 'styled-components';
-
-// import "./App.css";
-
-// styled-components
-const AppContainer = styled.div`
-
-`;
+import {AppContainer} from './components/Styles/ReusableStyles';
 
 const NewLogin = Login();
 

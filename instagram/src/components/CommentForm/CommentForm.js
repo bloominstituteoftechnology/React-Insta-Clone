@@ -1,36 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-
-// import './CommentForm.css';
-
-// styled-components
-const CommentFormContainer = styled.div`
-    max-width: 100%;
-    margin: 30px auto 20px;
-    border-radius: 5px;
-
-    form {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 20px;
-
-        input {
-            font-size: 18px;
-            border: 0;
-        }
-
-        button {
-            background: white;
-            border: 0;
-            font-size: 18px;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
-`;
+import {CommentFormContainer} from '../Styles/ReusableStyles';
 
 // Return CommentForm
 // Props: comment={this.state.comment} handleChange={this.handleCommentChange} handleSubmit={this.handleCommentSubmit}

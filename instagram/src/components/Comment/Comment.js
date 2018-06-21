@@ -1,20 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-
-// import './Comment.css';
-
-// styled-components
-const CommentContainer = styled.div`
-    font-size: 18px;
-    display: flex;
-    margin: 10px 20px;
-
-    span:first-child {
-        font-weight: bold;
-        margin: 0 8px 0 0;
-    }
-`;
+import {CommentContainer} from '../Styles/ReusableStyles';
 
 // Return Comment
 const Comment = props => {

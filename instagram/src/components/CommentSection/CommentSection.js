@@ -2,20 +2,7 @@ import React from "react";
 import Comment from "../Comment/Comment";
 import CommentForm from "../CommentForm/CommentForm";
 import PropTypes from "prop-types";
-import styled from 'styled-components';
-
-// import "./CommentSection.css";
-
-// styled-components
-const CommentSectionContainer = styled.div`
-    max-width: 100%;
-    margin: 20px auto;
-    border-radius: 5px;
-`;
-
-const CommentSectionTimestamp = styled.div`
-    margin: 10px 20px;
-`;
+import {CommentSectionContainer, CommentSectionTimestamp} from '../Styles/ReusableStyles';
 
 // Render and return CommentSection with CommentForm
 // Props: postId={this.props.post.imageUrl} comments={this.props.post.comments}

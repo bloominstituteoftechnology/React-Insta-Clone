@@ -1,15 +1,6 @@
 import React from 'react';
 import Post from '../Post/Post';
-import styled from 'styled-components';
-
-// import './PostContainer.css';
-
-// styled-components
-const PostsContainer = styled.div`
-    max-width: 540px;
-    margin: 20px auto;
-    border-radius: 5px;
-`;
+import {PostsContainer} from '../Styles/ReusableStyles';
 
 // Return PostContainer
 // Props: posts={this.state.posts}
