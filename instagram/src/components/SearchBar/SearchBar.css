@@ -1,16 +1,30 @@
-.search-bar {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
+.logo {
+    width: 30%;
+    height: 50px;
 }
 
-.search-bar img {
-    width: 30%;
-    height: 100px;
+.icon-logo {
+    display: flex;
+    align-items: center;
+    width: 41%;
+}
+
+.icon-logo p {
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: lightgray;
+    margin: 0 2%;
+}
+
+
+
+form input {
+    text-align: center;
 }
 
 .social-icons {
+    width: 20%;
     display: flex;
+    justify-content: space-evenly;
+    margin-left: 23%;
 }

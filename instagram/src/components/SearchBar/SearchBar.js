@@ -1,12 +1,15 @@
 import React from 'react';
-import './SearchBar.css';
+import {SearchDiv} from '../Styles/SearchStyles';
+import './SearchBar.css'
 
 const SearchBar = props => {
     return (
-        <div className='search-bar'>
-            <i className="fab fa-instagram"></i>
-            <p>|</p>
-            <img src={require('../../img/logo.png')} alt="Instagram" />
+        <SearchDiv className="search-bar">
+            <div className="icon-logo">
+                <i className="fab fa-instagram"></i>
+                <p>|</p>
+                <img className="logo" src={require('../../img/logo.png')} alt="Instagram" />
+            </div>
             <form>
                 <input type="text" placeholder="Search" onChange={props.searchPosts} />
             </form>
@@ -17,11 +20,11 @@ const SearchBar = props => {
                 <div className="icon">
                     <i className="fa fa-heart"></i>
                 </div>
-                <div className="icon">
+                <div className="icon" onClick={props.logout}>
                     <i className="fa fa-user-circle"></i>
                 </div>
             </div>
-        </div>
+        </SearchDiv>
     )
 }
 
