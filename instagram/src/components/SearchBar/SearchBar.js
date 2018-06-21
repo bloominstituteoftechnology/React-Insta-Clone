@@ -11,6 +11,16 @@ import {
   FormGroup,
   Input
 } from "reactstrap";
+import styled from "styled-components";
+
+const Header = styled.header``;
+const LogoHeader = styled.div`
+  font-family: "Grand Hotel", cursive;
+`;
+const LogoImage = styled.img``; // Put FontAwesome css here
+const LogoText = styled.span`
+  font-size: 2em;
+`;
 export default class SearchBar extends React.Component {
   constructor(props) {
     super(props);
@@ -27,11 +37,14 @@ export default class SearchBar extends React.Component {
   }
   render() {
     return (
-      <div>
+      <Header>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">
-            <i className="fab fa-instagram fa-2x" /> | Instagram
-          </NavbarBrand>
+          <LogoHeader>
+            <NavbarBrand href="/">
+              <i className="fab fa-instagram fa-2x" />
+              <LogoText> | Instagram</LogoText>
+            </NavbarBrand>
+          </LogoHeader>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -65,7 +78,7 @@ export default class SearchBar extends React.Component {
             </Nav>
           </Collapse>
         </Navbar>
-      </div>
+      </Header>
     );
   }
 }
