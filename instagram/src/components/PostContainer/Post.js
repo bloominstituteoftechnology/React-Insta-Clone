@@ -11,34 +11,32 @@ const Post = props => {
 
 
     return (
-        <div>
-            <PostContainer>
+        <PostContainer>
 
-                <PostTopContent>
+            <PostTopContent>
 
-                    <StyledRow>
-                        <ThumbnailImg src={props.data.thumbnailUrl} alt='' />
-                        <PostUsername><strong>{props.data.username}</strong></PostUsername>
-                    </StyledRow>
+                <StyledRow>
+                    <ThumbnailImg src={props.data.thumbnailUrl} alt='' />
+                    <PostUsername><strong>{props.data.username}</strong></PostUsername>
+                </StyledRow>
 
-                </PostTopContent>
+            </PostTopContent>
 
-                <CardImg width="100%" src={props.data.imageUrl} alt='' />
+            <CardImg width="100%" src={props.data.imageUrl} alt='' />
 
-                <PostBottomContent>
+            <PostBottomContent>
 
-                    <StyledRow>
-                        <LikeSection id={props.id} likes={props.data.likes} />
-                    </StyledRow>
+                <StyledRow>
+                    <LikeSection id={props.id} likes={props.data.likes} />
+                </StyledRow>
 
-                    <PostCommentSection>
-                        <CommentSection timestamp={props.data.timestamp} id={props.id} name={props.data.username} comments={props.data.comments} />
-                    </PostCommentSection>
+                <PostCommentSection>
+                    <CommentSection timestamp={props.data.timestamp} id={props.id} name={props.data.username} comments={props.data.comments} />
+                </PostCommentSection>
 
-                </PostBottomContent>
+            </PostBottomContent>
 
-            </PostContainer>
-        </div>
+        </PostContainer>
     );
 }
 
