@@ -25,19 +25,12 @@ class CommentSection extends React.Component {
   };
 
   onLikeClick = () => {
-    console.log('clicked like!', this.state.liked);
-    this.setState({ liked: true });
-    console.log('after state change??', this.state.liked);
     if (!this.state.liked) {
       this.props.toggleLike(this.props.postId, 1);
-      console.log('after state change????', this.state.liked);
     } else {
       this.props.toggleLike(this.props.postId, -1);
     }
-    let likeToggle = !this.state.liked;
-    console.log('likeToggle', likeToggle);
-    this.setState({ liked: likeToggle });
-    console.log('after state change??????', this.state.liked);
+    this.setState({ liked: !this.state.liked });
   };
 
   render() {

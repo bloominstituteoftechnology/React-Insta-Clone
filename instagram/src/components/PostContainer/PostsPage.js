@@ -1,5 +1,4 @@
 import React from 'react';
-import uuid from 'uuid/v1';
 import '../../App.css';
 import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar';
@@ -46,7 +45,7 @@ class PostsPage extends React.Component {
         {this.state.dummyData.map((d, i) => {
           return (
             <PostContainer
-              key={uuid()}
+              key={i}
               data={d}
               addCommentHandler={this.addNewComment}
               toggleLikeHandler={this.toggleLike}
