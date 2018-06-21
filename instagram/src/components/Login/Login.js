@@ -1,13 +1,30 @@
 import React from 'react';
-import './Login.css';
+import styled from 'styled-components';
+
+const LoginFormElement = styled.form`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 400px;
+  margin: 50px auto;
+`;
+
+const LoginInputElement = styled.input`
+  margin: 0 0 10px 0;
+  padding: 10px;
+`;
+
+const LoginButtonElement = styled.button`
+  padding: 10px;
+`;
 
 const Login = props => {
   return(
-    <form className="login" onSubmit={(e) => props.onSubmitLogin(e)}>
-      <input type="text" className="login__username" placeholder="Username" value={props.username} onChange={props.onUsernameChange} />
-      <input type="password" className="login__password" placeholder="Password" />
-      <button className="login__button" type="submit">Sign in</button>
-    </form>
+    <LoginFormElement onSubmit={(e) => props.onSubmitLogin(e)}>
+      <LoginInputElement type="text" placeholder="Username" value={props.username} onChange={props.onUsernameChange} />
+      <LoginInputElement type="password" placeholder="Password" />
+      <LoginButtonElement type="submit">Sign in</LoginButtonElement>
+    </LoginFormElement>
   );
 }
 
