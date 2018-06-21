@@ -1,0 +1,10 @@
+.comment {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2px 10px;
+}
+
+.comment-user {
+    font-weight: bold;
+    margin-right: 10px;
+}

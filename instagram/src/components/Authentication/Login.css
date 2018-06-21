@@ -1,0 +1,42 @@
+.login-page {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url('./white-background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-panel {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    opacity: .9;
+    padding: 20px;
+}
+
+.login-panel h1 {
+    color: white;
+    font-size: 4rem;
+    letter-spacing: 1rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-form input {
+    width: 60vw;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
