@@ -7,10 +7,16 @@ const PostsPage = props => {
     return (
       <div className="propsPage">
         <header className="searchheader">
-          <SearchBar  handleChange={props.handleChange} searchFunction={props.searchFunction} search={props.search} logOut={props.logOut}/>
+          <SearchBar  
+          searchFunction={props.searchFunction} 
+          logOut={props.logOut}
+          searchTerm={props.searchTerm}/>
         </header>
         
-        <PostContainer data={props.data} handleComment={props.handleComment} addComment={props.addComment} comment={props.comment} likePost={props.likePost} />
+        <PostContainer 
+        likePost={props.likePost} 
+        data={
+          props.search.length > 0 ? props.search : props.data } />
       </div>
     );
   }

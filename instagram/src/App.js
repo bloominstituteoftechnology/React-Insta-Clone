@@ -35,7 +35,6 @@ class App extends Component {
       }
     });
     this.setState({search: updatedList});
-    event.preventDefault();
   }
 
   logOut = () => {
@@ -53,7 +52,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PostsPage data={this.state.data}  likePost={this.likePost} handleChange={this.handleChange} searchFunction={this.searchFunc} search={this.state.search} logOut={this.logOut}/>
+        <PostsPage data={this.state.data}  
+        likePost={this.likePost} 
+        handleChange={this.handleChange} 
+        searchFunction={this.searchFunc} 
+        search={this.state.search} 
+        searchTerm={this.state.searchTerm}
+        logOut={this.logOut}
+        />
       </div>
     );
   }

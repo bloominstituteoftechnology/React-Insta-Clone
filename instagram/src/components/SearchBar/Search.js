@@ -11,14 +11,12 @@ const SearchBar = props => {
                 <LogoText alt='instagram' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png' />
             </LogoWrapper>
             <div>
-                <form onKeyDown={props.searchFunction}>
-                <Search type='text'
-                className='search'
-                placeholder='Search'
-                value={props.search}
                 
+                <Search type='text'
+                placeholder='Search'
+                onKeyDown={props.searchFunction}
                 />
-                </form>
+               
             </div>
             <IconsWrapper>
                 <div className='share-container'>
