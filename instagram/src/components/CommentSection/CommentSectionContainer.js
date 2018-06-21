@@ -16,7 +16,6 @@ class CommentSectionContainer extends React.Component {
   componentDidMount() {
       this.setState({comments: props.post.comments})
   }
-
   render() {
     return (
         <div className="comment-container">
