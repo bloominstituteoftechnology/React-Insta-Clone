@@ -9,7 +9,9 @@ class PostContainer extends Component {
     constructor(item) {
         super(item);
         this.state = {
-            posts: []
+            posts: [],
+            comments: item.comments,
+            newComment: ''
          };
     }
 
@@ -17,6 +19,35 @@ class PostContainer extends Component {
         this.setState( {posts: dataFile} );
     }
 
+        handleChange(e){
+            this.setState({
+              newComment: e.target.value
+            });
+          }
+  componenetWillUnmount() {
+    this.setComments();
+  }
+
+  setComments = () => {
+    localStorage.setItem(
+      this.props.postId,
+      JSON.stringify(this.state.comments)
+    );
+  };
+
+  commentHandler = e => {
+    this.setState({ comment: e.target.value });
+  };
+  handleCommentSubmit = e => {
+    e.preventDefault();
+    const newComment = { text: this.state.comment, username: '[Sam Khaled]' };
+    const comments = this.state.comments.slice();
+    comments.push(newComment);
+    this.setState({ comments, comment: '' });
+    setTimeout(() => {
+      this.setComments();
+    }, 500);
+  };
     render() {
         return (
             <div className="Post-container">
@@ -36,8 +67,11 @@ class PostContainer extends Component {
                         </CardBody>
                         <CardText className='Post-date'>{item.timestamp}</CardText>
                         <InputGroup>
-                            <Input placeholder="Add a comment" />
-                            <InputGroupText>...</InputGroupText>
+                    <input type="text" placeholder="Add a comment ..." value={this.state.newComment}
+          onChange={this.handleChange.bind(this)} 
+           onSubmit={this.handleCommentSubmit}
+           />
+        <p><h3>{this.state.newComment}</h3></p>
                         </InputGroup>
                     </CardBody>
                 </Card> )
