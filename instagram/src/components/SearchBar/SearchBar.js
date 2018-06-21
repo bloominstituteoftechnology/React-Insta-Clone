@@ -1,5 +1,72 @@
 import React from 'react';
 import './SearchBar.css';
+import styled from 'styled-components';
+
+// Styled-components
+const SearchBarContainer = styled.div`
+    max-width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin: 20px auto;
+    border-bottom: 1px solid lightgrey;
+`;
+
+const SearchBarHeader = styled.div`
+    width: 200px;
+    display: flex;
+    font-size: 26px;
+    font-family: 'Lobster', cursive;
+
+    div {
+        padding: 0 20px;
+
+        &:first-child {
+            border-right: 2px solid grey;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+`;
+
+const SearchBarLogo = styled.div``;
+const SearchBarTitle = styled.div``;
+
+const SearchBarSearch = styled.div`
+    input {
+        height: 26px;
+        text-align: center;
+        font-size: 18px;
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+    }
+`;
+
+const SearchBarNav = styled.div`
+    font-size: 24px;
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+
+    div {
+        padding: 0 20px;
+
+        i:hover {
+            cursor: pointer;
+        }
+
+        &:last-child {
+            font-family: 'Lobster', cursive;
+        }
+
+        &:last-child:hover {
+            cursor: pointer;
+        }
+    }
+`;
 
 // Return SearchBar
 // Props: posts={this.state.posts}
@@ -36,12 +103,12 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div className="search-bar-container">
-                <div className="search-bar-header">
-                    <div><i className="fas fa-camera"></i></div>
-                    <div>Instaclone</div>
-                </div>
-                <div className="search-bar-search">
+            <SearchBarContainer>
+                <SearchBarHeader>
+                    <SearchBarLogo><i className="fas fa-camera"></i></SearchBarLogo>
+                    <SearchBarTitle>Instaclone</SearchBarTitle>
+                </SearchBarHeader>
+                <SearchBarSearch>
                     <form onSubmit="">
                         <input
                             type="text"
@@ -50,14 +117,14 @@ class SearchBar extends React.Component {
                             onChange={this.handleChange}
                         />
                     </form>
-                </div>
-                <div className="search-bar-nav">
+                </SearchBarSearch>
+                <SearchBarNav>
                     <div><i className="far fa-compass"></i></div>
                     <div><i className="far fa-heart"></i></div>
                     <div><i className="far fa-user"></i></div>
                     <div>{localStorage.getItem("username")}</div>
-                </div>
-            </div>
+                </SearchBarNav>
+            </SearchBarContainer>
         );
     }
 };
