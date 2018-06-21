@@ -30,11 +30,19 @@ input {
 input::placeholder {
    color: #999;
 }
+button {
+     background-color: white;
+     border: none;
+     outline: none;
+}
 .like-button {
     font-size: 20px;
-    padding-right: 10px;
+    /* padding-right: 10px; */
     font-weight: 200;
     color: #404040;
+    background-color: white;
+    border: none;
+    outline: none;
   
 }
 .chat-button {

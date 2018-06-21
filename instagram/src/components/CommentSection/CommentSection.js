@@ -24,9 +24,10 @@ class CommentSection extends Component {
 
  }  
   addLike=() => {
+    console.log('plus one like');
  let likes = this.state.likes;
- likes++;  
- this.setState({likes: likes});
+ likes = likes + 1;  
+ this.setState({likes});
 
  }  
  
@@ -39,7 +40,7 @@ this.setState({newComment: event.target.value});
     return (
       <div className='comments'>
 
-      <IconHeaderBar addLike = {this.addLike} likes = {this.props.likes} />
+      <IconHeaderBar addLike = {this.addLike} likes = {this.state.likes} />
             <ul>
             {this.state.comments.map((comment, index) => {
                 

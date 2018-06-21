@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
-import SearchBarContainer from './components/SearchBar/SearchBarContainer';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
 import './App.css';
+
 
 class App extends Component {
 constructor(props) {
@@ -49,18 +49,7 @@ this.setState({
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-        <SearchBarContainer handleChange = {this.handleChange} value ={this.state.search} search = {this.search}/>
-         </header>
-        <div className ='App-body'>
-        {this.state.data.map(post => {
-         return <PostContainer key = {Math.random()} post = {post} />
-        })}
-
-       </div>
-      
-      </div>
+    <PostsPage data = {this.state.data} handleChange = {this.handleChange} value ={this.state.search} search = {this.search} />
     );
   }
 }
