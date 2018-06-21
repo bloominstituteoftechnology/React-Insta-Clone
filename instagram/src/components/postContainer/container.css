@@ -37,3 +37,12 @@ flex-direction:column;
 	align-self:flex-start;
 	margin-bottom:20px;
 }
+
+.heartIcon{
+	height:50px;
+	width:50px;
+}
+
+.buttons{
+display:flex;	
+}

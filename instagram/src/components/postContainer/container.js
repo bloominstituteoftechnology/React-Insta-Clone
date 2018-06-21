@@ -1,13 +1,9 @@
 import React from 'react';
 import './container.css';
-import heart from './images/heart.png';
+import Like from './like';
 import bubbles from './images/bubble.png';
 import Comments from '../commentSection/commentSection'
-//tomorrow, start building a comment section.
-//on <comments />, remember to bind comments passed in as props
-//make the comment input on comment section
-//RIGHT NOW, PROGRAM WILL NOT RUN WITH LINE 5 ACTIVE
-//comment section does not exist yet, needs created.
+
 
 const Container = props => {
 return (
@@ -23,10 +19,12 @@ return (
 	</div>
 	<div className="lower">
 	<div className="buttons">
-	<img src={heart} alt="like" className="icon"/>
+	<Like 
+	likeNumber={value.likes}
+	/>
 	<img src={bubbles} alt="comment" className="icon"/>
 	</div>
-	<div className="unliked">
+	<div className="likes">
 	{value.likes} likes
 	</div>
 	</div>
