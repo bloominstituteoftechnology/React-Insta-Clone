@@ -1,9 +1,13 @@
 import React from 'react';
-import './PostContainer.css';
+import styled from 'styled-components';
+
+const PostHeaderUsernameSpan = styled.span`
+  font-weight: 600;
+`;
 
 const PostHeaderUsername = (props) => {
   return(
-    <span className="post-header__username">{props.username}</span>
+    <PostHeaderUsernameSpan>{props.username}</PostHeaderUsernameSpan>
   );
 };
 

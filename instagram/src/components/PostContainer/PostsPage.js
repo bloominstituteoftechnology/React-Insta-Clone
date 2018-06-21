@@ -2,7 +2,14 @@ import React, {Component} from 'react';
 import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
-import './PostContainer.css';
+import styled from 'styled-components';
+
+const PostsPageDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 760px;
+`;
 
 class PostsPage extends Component {
   constructor(props) {
@@ -55,10 +62,10 @@ class PostsPage extends Component {
 
   render() {
     return (
-      <div className="posts-page">
+      <PostsPageDiv>
         <SearchBar onSearchPosts={this.onSearchPosts} />
         <PostContainer searchData={this.state.searchData} addNewComment={this.addNewComment} addLike={this.addLike} />
-      </div>
+      </PostsPageDiv>
     );
   }
 }

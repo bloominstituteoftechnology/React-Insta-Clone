@@ -1,9 +1,15 @@
 import React from 'react';
-import './PostContainer.css';
+import styled from 'styled-components';
+
+const PostHeaderThumbnailImg = styled.img`
+  width: 30px;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+`;
 
 const PostHeaderThumbnail = (props) => {
   return(
-    <img className="post-header__thumbnail" src={props.thumbnail} alt="My thumbnail" />
+    <PostHeaderThumbnailImg src={props.thumbnail} alt="My thumbnail" />
   );
 };
 

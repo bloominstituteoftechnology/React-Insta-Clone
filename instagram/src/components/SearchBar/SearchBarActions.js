@@ -19,7 +19,7 @@ const SearchBarActionsAnchor = styled.a`
     background-position: -150px -425px;
   `}
 
-  ${props => props.profile && css`
+  ${props => props.profileAction && css`
     background-position: -376px -399px;
   `}
 `;
@@ -29,7 +29,8 @@ const SearchBarActions = (props) => {
     <div className="search-bar-actions">
       <SearchBarActionsAnchor explore href="explore">Explore</SearchBarActionsAnchor>
       <SearchBarActionsAnchor activity href="activity">Activity</SearchBarActionsAnchor>
-      <SearchBarActionsAnchor profile href="profile">Profile</SearchBarActionsAnchor>
+      {/* React doesn't seem to like the word 'profile,' so I'm using profileAction */}
+      <SearchBarActionsAnchor profileAction href="profile">Profile</SearchBarActionsAnchor>
     </div>
   );
 };

@@ -1,14 +1,20 @@
 import React from 'react';
-import './PostContainer.css';
 import PostHeaderThumbnail from './PostHeaderThumbnail';
 import PostHeaderUsername from './PostHeaderUsername';
+import styled from 'styled-components';
+
+const PostHeaderDiv = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 15px;
+`;
 
 const PostHeader = (props) => {
   return(
-    <div className="post-header">
+    <PostHeaderDiv>
       <PostHeaderThumbnail thumbnail={props.thumbnail} />
       <PostHeaderUsername username={props.username} />
-    </div>
+    </PostHeaderDiv>
   );
 };
 
