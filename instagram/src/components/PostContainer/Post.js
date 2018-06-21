@@ -9,7 +9,7 @@ class Post extends React.Component {
         this.state = {
             likes: props.post.likes,
             liked: false,
-            heartClass: 'far fa-heart'
+            heartClass: 'fa-heart likes-heart far'
         }
     }
 
@@ -23,11 +23,11 @@ class Post extends React.Component {
     }
 
     incrementLike = () => {
-        this.setState({likes: ++this.props.post.likes, liked: true, heartClass: 'fas fa-heart'});
+        this.setState({likes: ++this.props.post.likes, liked: true, heartClass: 'fa-heart likes-heart fas'});
     }
 
     decrementLike = () => {
-        this.setState({likes: --this.props.post.likes, liked: false, heartClass: 'far fa-heart'});
+        this.setState({likes: --this.props.post.likes, liked: false, heartClass: 'fa-heart likes-heart far'});
     }
 
     render() {
@@ -45,7 +45,7 @@ class Post extends React.Component {
                     <p className="likes">{`${this.state.likes} likes`}</p>
                 </div>
                 <div className="comment-section">
-                    <CommentSection comments={this.props.post.comments} />
+                    <CommentSection comments={this.props.post.comments} postId={this.props.post.imageUrl} />
                 </div>
             </div>
         )
