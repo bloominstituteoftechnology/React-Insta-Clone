@@ -14,6 +14,9 @@ class Login extends React.Component {
         return this.setState({ [e.target.name]: e.target.value });
     }
 
+    createUser = e => {
+        alert("You wish muahhaa");
+    }
     handleLoginSubmit = e => {
         e.preventDefault();
         const user = this.state.username;
@@ -37,8 +40,6 @@ class Login extends React.Component {
             localStorage.setItem('user', user)
             localStorage.setItem('password', this.state.password)
         }
-
-
 
         window.location.reload();
 
@@ -71,6 +72,7 @@ class Login extends React.Component {
                     </div>
                     <button type="submit" className="login-button" onSubmit={this.handleLoginSubmit}>Login</button>
                 </form>
+                <button type="submit" className="login-button" onClick={this.createUser}>Create User</button>
             </div>
 
         )
