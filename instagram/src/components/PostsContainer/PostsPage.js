@@ -26,17 +26,9 @@ class PostsPage extends Component {
     this.setState({ searchPhrase: e.target.value });
 
     setTimeout(() => {
-      const posts = this.state.posts.filter(post => {
-        return post.username.includes(this.state.searchPhrase) ? post : null;
-      });
-
-      if (posts.length > 0) {
-        this.setState({ filteredPosts: posts });
-      } else {
-        return;
-      }
-    }, 20);
-
+      const posts = this.state.posts.filter(post => post.username.includes(this.state.searchPhrase));
+      this.setState({ filteredPosts: posts });
+    }, 1);
   };
 
   logout() {
