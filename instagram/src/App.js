@@ -4,7 +4,6 @@ import SearchBar from './components/SearchBar/SearchBar';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 import Authenticate from './components/Authentication/Authenticate';
-import Login from './components/Login/Login';
 
 class App extends Component {
   constructor() {
@@ -16,13 +15,6 @@ class App extends Component {
     };
   }
 
-  addNewComment = (event, comment, index) => {
-    event.preventDefault();
-    const newData = this.state.dummyData.slice();
-    newData[index].comments.push({username: this.state.placeHolder, text: comment});
-    this.setState({dummyData: newData});
-  }
-
   componentDidMount() {
     this.setState({ dummyData });
   }
@@ -30,7 +22,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">  
-        <Login />
         <SearchBar />
         <PostContainer calcTime={this.calcTime} data={this.state.dummyData} today={this.state.today} addNewComment={this.addNewComment} />
       </div>
