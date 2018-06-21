@@ -12,15 +12,19 @@ class App extends Component {
   }
 
   componentDidMount(){
-    this.setState({
-      data: dummyData
+    this.setState(function(prevState,currentProps){
+      return{
+        data: dummyData
+      }
     })
   }
 
   init = () => {
     console.log('................... Step 1.5: init state entered...')
-    this.setState({
-      data: dummyData
+    this.setState(function(prevState,currentProps){
+      return{
+        data: dummyData
+      }
     })
     console.log(this.state.data, '................... Step 1.6: current state...')
   }
@@ -96,8 +100,8 @@ class App extends Component {
       // data[index] = dataObj
 
       // 5. Set the state to our new copy
-      this.setState({
-        data:filteredData
+      this.setState(function(prevState,currentProps){
+        return {data:filteredData}
       });
 
       console.log(filteredData,'.............Step 5: Filtered Data')
