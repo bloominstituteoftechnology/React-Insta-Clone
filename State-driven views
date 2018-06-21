@@ -1,0 +1,6 @@
+
+In state-driven applications, the behavioral flow of an application is determined by its defined state. 
+If a user logs in, the state changes and they may view the site. If they input text into
+a field and submit, the state changes again. Taking this into account when developing applications
+provides a clear roadmap, visually and cognitively, to what needs to be done when implementing functionality.
+Since React is component-based, it makes it easier to manage multiple states in the App.
