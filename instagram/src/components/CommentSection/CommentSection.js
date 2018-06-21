@@ -39,6 +39,7 @@ class CommentSection extends React.Component {
         <div className="row icons">
           <div onClick={this.onLikeClick}>
             <i className="col-sm-1 far fa-heart" />
+            {/* fas and far are different sizes?!? */}
             {/* <i className={'col-sm-1 fa-heart ' + (this.state.liked ? 'fas' : 'far')} /> */}
           </div>
           <div>
