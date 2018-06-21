@@ -9,17 +9,12 @@ class Login extends Component {
             passwordInput: '',
         }
     }
-    handleUsernameInput = (event) => {
+    handleInput = (event) => {
         this.setState({
-            usernameInput: event.target.value
+            [event.target.name]: event.target.value
         })
     }
-    
-    handlePasswordInput = (event) => {
-        this.setState({
-            passwordInput: event.target.value
-        })
-    }
+
     handleSubmit = (event) => {
         event.preventDefault();
         this.props.loginHandler(this.state.usernameInput, this.state.passwordInput);
@@ -35,8 +30,8 @@ class Login extends Component {
         <div className="login-panel">
         <h1><i className="login-icon fab fa-instagram" /></h1>
           <form className="login-form" onSubmit={this.handleSubmit}>
-                <input id="login-label" placeholder="Enter username" form="login-form" value={this.state.usernameInput} onChange={this.handleUsernameInput}/>
-                 <input id="login-label" placeholder="Enter password" form="login-form" value={this.state.passwordInput} onChange={this.handlePasswordInput}/>
+                <input id="login-label" name="usernameInput" placeholder="Enter username" form="login-form" value={this.state.Input} onChange={this.handleUsernameInput}/>
+                 <input id="login-label" name="passwordInput" placeholder="Enter password" form="login-form" value={this.state.Input} onChange={this.handlePasswordInput}/>
                 <input type="submit" value="Log-in"/>
           </form>
           <h1 className='login-title'>PLEASE LOG IN</h1>
