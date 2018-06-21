@@ -1,21 +1,32 @@
 import React from "react";
-import PropType from 'prop-type';
-import CommentSection from './CommentSection'
+import PropTypes from "prop-types";
+import CommentSection from './CommentSection';
+import CommentIcons from './CommentIcons';
+import CommentLikes from './CommentLikes';
+import CommentFormContainer from './CommentFormContainer'
 
 class CommentSectionContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        comments=[]
+        post={}
     }
   }
 
   componentDidMount() {
-      this.setState({comments: props.comments})
+      this.setState({comments: this.props.post})
   }
 
   render() {
-    return <CommentSectionContainer comments='this.state.comments'>;
+    return (
+        <div className="comment-container">
+            <CommentIcons />
+            <CommentLikes likes={this.state.post.likes} />
+            <CommentSection comments={this.state.post.comments} />
+            <CommentFormContainer />
+        </div>
+        
+    );
   }
 }
 
