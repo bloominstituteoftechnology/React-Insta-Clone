@@ -9,7 +9,7 @@ const SearchContainer = (props) => {
         <div className = 'search-container'>
             <SearchLogos />
             <SearchBox searchHandler = {props.searchHandler}/>
-            <SearchIcons />
+            <SearchIcons handleLogout = {props.handleLogout}/>
         </div>
     );
 }

@@ -7,7 +7,7 @@ const SearchIcons = (props) => {
         <div className='search-icons-container'>
             <i className ="far fa-compass"></i>
             <i className ="far fa-heart"></i>
-            <i className ="far fa-user"></i>
+            <i className ="far fa-user" onClick ={props.handleLogout}></i>
         </div>
     )
 }
