@@ -1,6 +1,7 @@
 .search-bar{
   border: 1px solid lightgray;
   padding: 1%;
+  background-color: white;
   /* position: fixed; */
 }
 
@@ -25,7 +26,8 @@
   width: 73%;
   font-size: 1.1rem;
   border-radius: 4px;
-  border: 1px solid lightgray
+  border: 1px solid lightgray;
+  background-color:#FAFAFA;
 }
 
 .search-icon-group{
@@ -37,5 +39,13 @@
 .search-icon-group i{
   padding: 0 7.5%;
   font-size: 1.9rem;
+}
+
+.disabled{
+  color:lightgray;
+}
+
+#logoutIcon:hover{
+  cursor: pointer;
 }
 
