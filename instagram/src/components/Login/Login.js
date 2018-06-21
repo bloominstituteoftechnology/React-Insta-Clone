@@ -21,8 +21,8 @@ class Logins extends Component {
   //   window.localStorage.setItem("comments", JSON.stringify(dummyData));
   // }
 
-  changeUsername = event => this.setState({usernameInput: event.target.value});
-  changePassword = event => this.setState({passwordInput: event.target.value});
+
+  changeInput = event => {this.setState({[event.target.name]: event.target.value});};
 
   loginSubmit = (event, i) => {
     event.preventDefault();
@@ -42,14 +42,16 @@ class Logins extends Component {
         <form onSubmit={this.loginSubmit}>
           <input
             type="text"
+            name="usernameInput"
             className="username"
-            onChange={this.changeUsername}
+            onChange={this.changeInput}
             value={this.state.usernameInput}
           />
           <input
             type="text"
+            name="passwordInput"
             className="password"
-            onChange={this.changePassword}
+            onChange={this.changeInput}
             value={this.state.passwordInput}
           />
           <button onClick={this.loginSubmit}>Login</button>

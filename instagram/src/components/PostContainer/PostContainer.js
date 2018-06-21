@@ -12,15 +12,14 @@ class PostContainer extends React.Component {
         }
     }
 
-    addLikes = (event, i) => {
+    addLikes = event => {
         event.preventDefault();
-        let likes = this.state.likes;
-        likes = (likes + 1);
+        let likes = this.state.likes +1;
         this.setState({likes});
-        var element = document.getElementById('heart');
-        console.log(event);
+
+        let element = event.target;
+        // elements = Array.from(buttons).map( => )
         element.classList.add('red-heart');
-        // .add(event.classList.add('heart'));
     }
 
     render() {
@@ -30,9 +29,11 @@ class PostContainer extends React.Component {
                     <img src={this.state.dummyData.thumbnailUrl} alt="user thumbnail"/>
                     <p><strong>{this.state.dummyData.username}</strong></p>
                 </div>
+
                 <div className="post-img">
                     <img src={this.state.dummyData.imageUrl} alt="post content"/>
                 </div>
+
                 <div className="post-comments">
                     <div className="comment-interaction">
                         <i onClick={this.addLikes} id="heart" className="fa">&#xf08a;</i>

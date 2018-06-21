@@ -42,5 +42,6 @@
 
 .red-heart {
     color: red;
+    font-weight: 900;
     pointer-events: none;
 }

@@ -14,5 +14,10 @@
     justify-content: space-between
 }
 .div-mid .logout-btn {
+    
+}
+
+.fa-size {
+    font-size: 1rem;
     cursor: pointer;
 }
