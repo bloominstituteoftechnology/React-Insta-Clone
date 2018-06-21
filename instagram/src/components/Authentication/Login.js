@@ -22,7 +22,7 @@ class Login extends Component {
     }
     handleSubmit = (event) => {
         event.preventDefault();
-        alert("submitted");
+        this.props.loginHandler(this.state.usernameInput, this.state.passwordInput);
     }
     
   render() {
