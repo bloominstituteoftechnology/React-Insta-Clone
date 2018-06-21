@@ -2,6 +2,7 @@ import React from "react";
 import "./PostContainer.css";
 import CommentSection from "./CommentSection/CommentSection";
 import PropTypes from "prop-types";
+import moment from 'moment';
 
 class PostContainer extends React.Component {
   constructor(props) {
@@ -67,7 +68,7 @@ class PostContainer extends React.Component {
           </div>
           <CommentSection comments={this.props.post.comments} handleCommentDelete={this.handleCommentDelete} />
           <div className="time-stamp">
-            <p>{this.props.post.timestamp}</p>
+            <p>{moment(this.props.post.timestamp).format('MMMM DD YYYY')}</p>
           </div>
             <form className="comment-input-section" onSubmit={this.addComment}>
             <input
@@ -81,8 +82,6 @@ class PostContainer extends React.Component {
               <i className="fas fa-ellipsis-h" />
           </div>
             </form>
-            
-
         </div>
       </div>
     );

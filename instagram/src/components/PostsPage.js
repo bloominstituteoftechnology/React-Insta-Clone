@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar/SearchBar";
 import PostContainer from "./PostContainer/PostContainer";
 import dummyData from "./dummy-data";
 import uuid from "uuid/v1/";
+import moment from 'moment';
 
 class PostsPage extends Component {
   constructor(props) {
@@ -132,6 +133,7 @@ class PostsPage extends Component {
       visible: true
     };
 
+    window.localStorage.clear();
     let storedData = JSON.parse(
       window.localStorage.getItem(this.localStorageKey)
     );
@@ -141,6 +143,8 @@ class PostsPage extends Component {
       posts = dummyData.map(post => {
         let newObj = Object.assign({}, templatePost);
         newObj = Object.assign(newObj, post);
+
+        newObj.timestamp = moment(newObj.timestamp, 'MMMM Do YYYY h:mm:ss a');
 
         let comments = newObj.comments;
         let newComments = comments.map(comment => {
