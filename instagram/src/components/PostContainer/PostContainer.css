@@ -1,30 +1,3 @@
-.post-container{
-  border: 1px solid lightgrey;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  -webkit-box-shadow: 2px 2px 12px 0px rgba(191,189,189,1);
--moz-box-shadow: 2px 2px 12px 0px rgba(191,189,189,1);
-box-shadow: 2px 2px 12px 0px rgba(191,189,189,1);
-}
-
-.post .header{
-  display: flex;
-}
-
-.thumbnail{
-  width: 5%;
-  margin-top: 2.5%;
-  margin-left: 2.5%;
-  margin:2.5%
-}
-
-.thumbnail img{
-  border-radius: 25px;
-}
-
-.username{
-  padding-top: 3%;
-}
 
 .icons{
   margin-bottom: 3px;
@@ -39,9 +12,4 @@ box-shadow: 2px 2px 12px 0px rgba(191,189,189,1);
 
 .color-red{
   color: red;
-}
-
-.likes{
-  margin-left: 3.6%;
-  margin-bottom: 2px;
 }
