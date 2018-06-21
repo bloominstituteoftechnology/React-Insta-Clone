@@ -1,14 +1,24 @@
 import React from 'react';
-import './Search.css';
+import styled from 'styled-components';
 
+const IconsContainer = styled.div`
+display: flex;
+justify-content: space-between;
+width: 20%;
+
+& > * {
+    cursor: pointer;
+    font-size: 3rem;
+}
+`;
 
 const SearchIcons = (props) => {
     return (
-        <div className='search-icons-container'>
-            <i className ="far fa-compass"></i>
-            <i className ="far fa-heart"></i>
-            <i className ="far fa-user" onClick ={props.handleLogout}></i>
-        </div>
+        <IconsContainer>
+            <i className="far fa-compass"></i>
+            <i className="far fa-heart"></i>
+            <i className="far fa-user" onClick={props.handleLogout}></i>
+        </IconsContainer>
     )
 }
 

@@ -1,16 +1,24 @@
 import React from 'react';
-import './Search.css';
 import SearchLogos from './SearchLogos';
 import SearchBox from './SearchBox';
 import SearchIcons from './SearchIcons';
+import styled from 'styled-components';
+
+const Header = styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 54px;
+margin-bottom: 24px;
+`;
 
 const SearchContainer = (props) => {
     return (
-        <div className = 'search-container'>
+        <Header>
             <SearchLogos />
-            <SearchBox searchHandler = {props.searchHandler}/>
-            <SearchIcons handleLogout = {props.handleLogout}/>
-        </div>
+            <SearchBox searchHandler={props.searchHandler} />
+            <SearchIcons handleLogout={props.handleLogout} />
+        </Header>
     );
 }
 

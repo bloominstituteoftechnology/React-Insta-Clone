@@ -1,13 +1,28 @@
 import React from 'react';
-import './Search.css';
+import styled from 'styled-components';
 
+const LogosContainer = styled.div`
+display: flex;
+`;
+const CameraIcon = styled.i`
+font-size: 2.5rem;
+padding-right: 6%;
+border-right: 1px solid lightgrey;
 
+`;
+
+const LogoHeader = styled.h1`
+font-family: serif;
+font-size: 3rem;
+font-weight: bold;
+padding-left: 6%;
+`;
 const SearchLogos = (props) => {
     return (
-    <div className='logos-container'>
-        <i className="fas fa-camera-retro"></i>
-        <h1 className='logo'>Simogram</h1>
-    </div>
+        <LogosContainer>
+            <CameraIcon className="fas fa-camera-retro"></CameraIcon>
+            <LogoHeader>Simogram</LogoHeader>
+        </LogosContainer>
     )
 }
 
