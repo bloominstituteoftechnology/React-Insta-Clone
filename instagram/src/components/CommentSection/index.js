@@ -1,5 +1,7 @@
 import React from 'react';
 import './style.css';
+import styled from 'styled-components';
+import {DateStamp} from '../Styles/Reusables';
 // import InputSection from './InputSection';
 
 
@@ -18,19 +20,16 @@ class CommentSection extends React.Component {
     
     
     addcomment =(e) => {
-
-    e.preventDefault();
-    const newComment = { text: this.state.text, username: 'DDD' };
-    const comments = this.state.comments.slice();
-    comments.push(newComment);
-    this.setState({ comments, text: '' });
-   
-    
+        e.preventDefault();
+        const newComment = { text: this.state.text, username: 'DDD' };
+        const comments = this.state.comments.slice();
+        comments.push(newComment);
+        this.setState({ comments, text: '' });
     }
       
 
     render() { 
-     
+     console.log('comment section props: ', this.props)
         return (  
             <div className='commentArea'>
             {/* <form onSubmit={this.clickButton}>  */}
@@ -41,13 +40,13 @@ class CommentSection extends React.Component {
                         <p className="user"><strong>{item.username}</strong>
                         <span className="comment">    {item.text}</span></p>
                     </div>
-                    <div className='dateStamp'>
-                        {item.timestamp}
-                    </div>
+                    
                 </div>
               ) 
             })}
-
+            <DateStamp>
+                        {this.props.passedPropsFromPost.timestamp}
+            </DateStamp>
             <hr />
             <div className='footerCom'>
                 <form onSubmit={this.addcomment} >

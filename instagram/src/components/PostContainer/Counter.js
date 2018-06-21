@@ -1,4 +1,6 @@
 import React from 'react';
+import styled from 'styled-components';
+import {LikesPostImg, DisplayLikes, Ptags} from '../Styles/Reusables';
 
 class Counter extends React.Component {
     constructor(props) {
@@ -14,15 +16,15 @@ class Counter extends React.Component {
     }
     render() { 
         return ( 
-            <div className='likesPostImg'>
+            <LikesPostImg>
+                <DisplayLikes>
+                    <Ptags><span className='red'  onClick={this.addOne}><i className="fa fa-heart-o"></i></span></Ptags>
+                    <Ptags><i className="fa fa-comment-o" aria-hidden="true"></i></Ptags>
+                </DisplayLikes>
                 <div>
-                    <span className='red'  onClick={this.addOne}><i className="fa fa-heart-o"></i></span>
-                    <i className="fa fa-comment-o" aria-hidden="true"></i>
+                    <span>{this.state.likeState}</span> likes
                 </div>
-                <div>
-                    <span className='count'>{this.state.likeState}</span> likes
-                </div>
-            </div>
+            </LikesPostImg>
          )
     }
 }

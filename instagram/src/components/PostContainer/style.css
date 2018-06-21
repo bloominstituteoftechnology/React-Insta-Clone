@@ -1,9 +1,4 @@
-.thumbImg {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    padding: 0 1rem;
-}
+
 .userNameContent {
     display: flex;
     align-items: center;
@@ -50,4 +45,10 @@ hr {
     border: 1px solid lightgray;
     margin-bottom: 2rem;
     color: #272525;
+}
+.thumbImg {
+    width: 13%;
+    height: 13%;
+    border-radius: 50%;
+    padding: 0 1rem;
 }

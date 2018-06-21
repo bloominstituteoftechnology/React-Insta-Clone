@@ -1,8 +1,9 @@
 import React from 'react';
-import './style.css';
+// import './style.css';
 import CommentSection from '../CommentSection';
 import Counter from './Counter';
-// import InputSection from './InputSection';
+import styled from 'styled-components';
+import {UserNameContent, PostImg, Post_container, ThumbImg, CommentAria} from '../Styles/Reusables';
 import PropTypes from 'prop-types'
 
 class PostContainer extends React.Component {
@@ -14,27 +15,26 @@ class PostContainer extends React.Component {
         }
     }
    
-
     render() { 
         console.log('post rendered props: ', this.props.passedState)
         return ( 
             <div>
             {this.props.passedState.map((item, i) => {
                 return ( 
-                    <div key={i} className='post_container'>
-                        <div className='userNameContent' >
-                            <img src={item.thumbnailUrl} className='thumbImg' alt='thumbnail' />
+                    <Post_container key={i}>
+                        <UserNameContent>
+                            <ThumbImg src={item.thumbnailUrl} alt='thumbnail' />
                             <h4>{item.username}</h4>
-                        </div>
-                        <img src={item.imageUrl} className='postImg' alt='Post' />
+                        </UserNameContent>
+                        <PostImg src={item.imageUrl}  alt='Post' />
                             <Counter key={i} counterState={item} />
-                        <div className='commentSection'>
+                        <CommentAria>
                             <CommentSection 
                                 passedItem={item.comments} 
                                 passedPropsFromPost={item}  
                             />
-                        </div>
-                    </div>
+                        </CommentAria>
+                    </Post_container>
                 )
             })}
             </div>
