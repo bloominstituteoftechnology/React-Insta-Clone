@@ -17,6 +17,7 @@ class Login extends React.Component {
     handleLoginSubmit = e => {
         e.preventDefault();
         const user = this.state.username;
+        if(user === '' || this.state.password === ''){alert('Please fill out required fields'); return};
         if (user.toLowerCase() === 'rudius' && this.state.password.toLowerCase() !== 'funboy') {
             alert(`Wrong password. Hint: Johns nickname in high school`);
             return;
