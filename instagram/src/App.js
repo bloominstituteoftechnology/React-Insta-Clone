@@ -8,8 +8,13 @@ class App extends Component {
 constructor() {
     super();
     this.state = {
-      posts:[]
+      posts:[],
+	  comment:''
     };
+  }
+  
+  addLike = e => {
+	console.log();
   }
   
   componentDidMount(){
@@ -27,7 +32,8 @@ constructor() {
 		<SearchBar />
         </header>
         <div className="postList">
-		<Container 
+		<Container
+		addLike={this.addLike}
 		data={this.state.posts}
 		/>
         </div>

@@ -20,7 +20,9 @@ return (
 	<div className="lower">
 	<div className="buttons">
 	<Like 
-	likeNumber={value.likes}
+	addLike={props.addLike}
+	likeNumber={props.data[index].likes}
+	id={index}
 	/>
 	<img src={bubbles} alt="comment" className="icon"/>
 	</div>
