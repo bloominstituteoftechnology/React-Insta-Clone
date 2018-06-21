@@ -107,7 +107,7 @@ class SearchBar extends React.Component {
                     <div>Instaclone</div>
                 </SearchBarHeader>
                 <SearchBarSearch>
-                    <form onSubmit="">
+                    <form>
                         <input
                             type="text"
                             value={this.state.search}
