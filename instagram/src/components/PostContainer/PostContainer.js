@@ -12,20 +12,22 @@ class PostContainer extends React.Component {
     super(props);
     this.state = {
       likes: this.props.post.likes,
-      liked: false
+      liked: false,
+      likeStyle:"fa-heart far"
     }
   }
 
   toggleLike = event => {
     let likes = this.state.likes;
     if (this.state.liked) {
-    this.setState({likes: likes -=1, liked: false})
+    this.setState({likes: likes -=1, liked: false, likeStyle:"far fa-heart"})
   } else {
-    this.setState({likes: likes +=1, liked: true})
+    this.setState({likes: likes +=1, liked: true, likeStyle:"fas fa-heart"})
   }
   }
 
   render() {
+    console.log("fa-heart " + (this.state.liked ? "fas":"far"))
   return (
       <Card className="test">
         <CardBody className="card-header">
@@ -36,7 +38,7 @@ class PostContainer extends React.Component {
         <CardBody>
         <div className="post-buttons">
         <div className="left-buttons">
-        <a className="like-button mx-2" onClick={this.toggleLike}><i className={"fa-heart " + (this.state.liked ? "fas":"far")}></i></a>
+        <div className="like-button mx-2" onClick={this.toggleLike}><i className={this.state.likeStyle}></i></div>
         {/*<i className="fas fa-heart like-selected"></i>*/}
         <i className="far fa-comment" ></i>
         </div>
