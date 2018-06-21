@@ -6,8 +6,8 @@ import Authenticate from './components/Authentication/Authenticate';
 import PostsPage from './components/PostContainer/PostPage';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       data: [],
       searchInput: '',
@@ -37,7 +37,8 @@ class App extends Component {
       <div className="App">
         <SearchBar value={this.state.searchInput} onChange={this.changeHandler} />
         <PostsPage data={this.state.data}
-          searchInput={this.state.searchInput} />
+          searchInput={this.state.searchInput} 
+          username={this.props.username}/>
       </div>
     );
   }

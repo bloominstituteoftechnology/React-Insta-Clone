@@ -35,7 +35,7 @@ class CommentSection extends React.Component {
 
     commentSubmitHandler = e => {
         e.preventDefault();
-        let newComment = { text: this.state.comment, username: 'Sean Connery' };
+        let newComment = { text: this.state.comment, username: this.props.username };
         let comments = this.state.comments.slice(); //copy the comments array
         if (newComment.text.length > 0) {
             comments.push(newComment);

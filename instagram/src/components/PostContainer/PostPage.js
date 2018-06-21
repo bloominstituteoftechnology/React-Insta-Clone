@@ -14,7 +14,8 @@ const PostsPage = (props) => {
                           onChangeHandler={this.commentChangeHandler} 
                           key={`user${index}`} 
                           userData = {user}
-                          commentValue={props.newComment} />
+                          commentValue={props.newComment}
+                          username={props.username} />
               })}
         </div>
     )

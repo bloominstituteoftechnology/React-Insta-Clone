@@ -5,12 +5,13 @@ const Authenticate = App => class extends React.Component {
     constructor() {
         super();
         this.state = {
-            loggedIn: false
+            loggedIn: false,
+            username: 'stormer'
         }
     }
 
     componentDidMount = () => {
-        if (localStorage.getItem('stormer2')) {
+        if (localStorage.getItem(this.state.username)) {
             this.setState({loggedIn: true})
         } else {
             this.setState({loggedIn: false})
@@ -20,7 +21,7 @@ const Authenticate = App => class extends React.Component {
     render() {
         if (this.state.loggedIn) {
             return (
-                <App />
+                <App username={this.state.username}/>
             )
         } else {
             return (
