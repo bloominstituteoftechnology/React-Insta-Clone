@@ -1,6 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import Login from "./Login/Login"
+import dummyData from './dummy-data';
+import PostPage from "./components/PostContainer/PostPage";
+import Authenticate from "./Authentication/Authenticate"
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+const WrappedApp = Authenticate(App);
+function App (){
+  return(
+    <div></div>
+  )
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<WrappedApp />, rootElement);
+// <PostPage dummyData={this.state.dummyData}/>
+// <Login login={this.props.login}/>
