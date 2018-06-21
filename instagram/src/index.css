@@ -2,5 +2,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+
   
+}
+
+
+#root {
+	background: #F4D8CD;
+	height: 1000px;
 }

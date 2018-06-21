@@ -24,8 +24,8 @@ class Login extends Component {
   render() {
     return (
       <Form className="login-form">
-        <h3>Welcome to React Insta Clone</h3>
-        <div>Please Login</div>
+        <h3 className="login-header">React InstaClone</h3>
+        <div>Login</div>
         <FormGroup>
           <Input
             type="text"
@@ -44,7 +44,7 @@ class Login extends Component {
             onChange={this.handleInputChange}
           />
           <br />
-          <Button color="success" size="large" onClick={this.handleLoginSubmit}>
+          <Button color="secondary" size="large" onClick={this.handleLoginSubmit}>
             Log In
           </Button>
         </FormGroup>
