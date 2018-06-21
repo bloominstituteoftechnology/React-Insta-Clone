@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Set state and local storage, return form
 const Login = props => {
     return (
         class extends React.Component {
@@ -12,18 +13,11 @@ const Login = props => {
             }
 
             componentDidMount() {
-                if(localStorage.getItem('username') !== null) {
-                    this.setState({
-                        username: localStorage.getItem('username'),
-                        password: localStorage.getItem('password')
-                    });
+                if(localStorage.getItem('username')) {
+                    this.setState({username: this.state.username})
                 } else {
-                    this.setUser()
+                    this.setUser();
                 }
-            }
-
-            componentWillUnmount() {
-                this.setUser();
             }
 
             setUser = () => {
@@ -44,8 +38,7 @@ const Login = props => {
 
                 const newUsername = this.state.username;
                 const newPassword = this.state.password;
-                const username = this.state.username.slice();
-                const password = this.state.password.slice();
+
                 this.setState({
                     username: newUsername,
                     password: newPassword
@@ -53,6 +46,7 @@ const Login = props => {
 
                 setTimeout(() => {
                     this.setUser();
+                    window.location.reload()
                 }, 500);
             };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import PostPage from '../PostContainer/PostPage';
 
+// Render login page or post page
 const Authenticate = App => {
     return (
         class extends React.Component {
@@ -14,6 +15,8 @@ const Authenticate = App => {
             componentDidMount() {
                 if(localStorage.getItem("username")) {
                     this.setState({loggedIn: true});
+                } else {
+                    this.setState({loggedIn: false});
                 }
             }
 
