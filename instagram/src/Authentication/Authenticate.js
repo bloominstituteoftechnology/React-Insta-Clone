@@ -17,7 +17,7 @@ return (
     }
   }
     render() {
-      if (localStorage.getItem("admin") == "password1"){
+      if (localStorage.getItem("admin") === "password1"){
       return(
         <div>
           <PostsPage dummyData={this.state.dummyData}/>

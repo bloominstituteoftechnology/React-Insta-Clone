@@ -15,7 +15,6 @@ const PostContainer = props => props.dummyData.map((dummyData,index) => {
           likes: {dummyData.likes}
         </p>
         <CommentSection comments={dummyData.comments} index = {index} />
-          <input type="text" className="form-control comment-form" placeholder="Add a comment..."></input>
       </div>
     )
   })

@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Login from "./Login/Login"
-import dummyData from './dummy-data';
-import PostPage from "./components/PostContainer/PostPage";
 import Authenticate from "./Authentication/Authenticate"
 
 const WrappedApp = Authenticate(App);
