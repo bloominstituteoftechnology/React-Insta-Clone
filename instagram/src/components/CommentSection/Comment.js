@@ -1,11 +1,12 @@
 import React from "react";
 import { CardText } from "reactstrap";
 // import PropTypes from "prop-types";
+import Username from "../Styles/Reusables/Username";
 
 const Comment = props => {
   return (
     <CardText>
-      <strong>{props.username}</strong> {props.text}
+      <Username>{props.username}</Username> {props.text}
     </CardText>
   );
 };

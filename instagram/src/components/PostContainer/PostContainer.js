@@ -15,6 +15,10 @@ import {
 } from "reactstrap";
 import CommentSection from "../CommentSection/CommentSection";
 import moment from "moment";
+import styled from "styled-components";
+import Username from "../Styles/Reusables/Username";
+
+const UserThumbnail = styled.img``;
 
 class PostContainer extends Component {
   constructor(props) {
@@ -29,7 +33,6 @@ class PostContainer extends Component {
       }
     };
   }
-
   addNewComment = event => {
     event.preventDefault();
     const comments = this.state.comments.slice();
@@ -52,17 +55,18 @@ class PostContainer extends Component {
       }
     });
   };
-
   componentDidMount() {}
-
   render() {
     return (
       <div>
         <Card>
           <CardHeader>
-            <img src={this.props.thumbnail} alt="" className="img-thumbnail" />
-
-            <strong>{this.props.username}</strong>
+            <UserThumbnail
+              src={this.props.thumbnail}
+              alt=""
+              className="img-thumbnail"
+            />
+            <Username> {this.props.username}</Username>
           </CardHeader>
           <CardImg width="100%" src={this.props.image} alt="" />
           <CardBody>
