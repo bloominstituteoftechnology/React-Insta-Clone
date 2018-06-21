@@ -9,7 +9,7 @@ import person from '../../images/person.png';
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
-        console.log(props.username, "propsuser")      
+    
         this.state = {
             searches: props.username,
             search: ""       
@@ -21,13 +21,21 @@ class SearchBar extends React.Component {
         this.setState ({search : e.target.value});
     }
 
-    filterSearch = e => {
-        e.preventDefault();
-        let usernames = this.state.searches;
-        if (usernames===this.state.username)
-        usernames.filter(usernames);   
-        this.setState({usernames});
-    }
+    // filterSearch = e => {
+    //     e.preventDefault();
+    //     const searches = this.state.searches.filter(post =>{
+    //         if(post.username.includes(e.target.value)){
+    //             return post
+    //         }
+    //     })
+    //     this.setState({filtered})
+    //     }
+
+        // let usernames = this.state.searches;
+        // if (usernames===this.state.username)
+        // usernames.filter(usernames);   
+        // this.setState({usernames});
+    
 
     render(){
     return (
@@ -37,9 +45,12 @@ class SearchBar extends React.Component {
             <img className ="camera" src = {camera} alt = "cam thumbnail"/>
             <img className ="instalogo" src = {instalogo} alt = "instalogo thumbnail"/>
         </div>
-        
-        <form className = "mid-text" onSubmit = {this.filterSearch}>
+
+        {/* onSubmit = {this.filterSearch} */}
+
+        <form className = "mid-text" >
             <input 
+                onKeyDown = {this.searchPosts}
                 type = "text"           
                 placeholder = "search"
                 value = {this.state.search}

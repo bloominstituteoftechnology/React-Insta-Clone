@@ -26,6 +26,9 @@ class Login extends React.Component {
         e.preventDefault();
         const username = this.state.usernameInput;
         localStorage.setItem('user', username);
+        const password = this.state.passwordInput;
+        localStorage.setItem('password', password);
+
         window.location.reload();
         // let username = this.state.usernameInput
         // comments.push({text: this.state.comment, username: 'Username'});
@@ -43,7 +46,7 @@ class Login extends React.Component {
     render() {
         return(
             <div>
-                <form>
+                <form onSubmit = {this.loginSubmit}>
 
                     <input className= "username" 
                     type= "text" 
@@ -51,14 +54,12 @@ class Login extends React.Component {
                     placeholder = "Username"
                     value = {this.state.usernameInput}
                     />
-
                     <input className= "password" 
                     type= "text" 
                     onChange = {this.passwordHandler}
                     placeholder = "Password"
                     value = {this.state.passwordInput}
                     />
-
                     <button onClick = {this.loginSubmit}>Login</button>
 
                 </form>
