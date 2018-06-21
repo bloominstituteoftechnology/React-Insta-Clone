@@ -2,6 +2,16 @@ import React, { Component } from 'react'
 import CommentSection from '../CommentSection/CommentSection'
 import PropTypes from 'prop-types'
 import Post from './Post';
+import styled from 'styled-components'
+
+const StyledPostContainer = styled.div`
+  border: 1px solid lightgrey;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  -webkit-box-shadow: 2px 2px 12px 0px rgba(191,189,189,1);
+  -moz-box-shadow: 2px 2px 12px 0px rgba(191,189,189,1);
+  box-shadow: 2px 2px 12px 0px rgba(191,189,189,1);
+`
 
 class PostContainer extends Component {
   constructor(props) {
@@ -11,14 +21,14 @@ class PostContainer extends Component {
 
   render() { 
     return (
-      <div className="post-container">
+      <StyledPostContainer>
         <Post postObj = {this.props.postObj} updateLikes={this.props.updateLikes} postIndex={this.props.postIndex}/>
         <CommentSection 
           commentsArr={this.props.postObj.comments} 
           addNewComment={this.props.addNewComment} 
           postIndex={this.props.postIndex} 
           postTimeStamp={this.props.postObj.timestamp}/>
-      </div>
+      </StyledPostContainer>
     )
   }
 }

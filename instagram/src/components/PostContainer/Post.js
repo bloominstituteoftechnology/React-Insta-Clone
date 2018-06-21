@@ -1,5 +1,33 @@
 import React, { Component } from 'react';
 import './PostContainer.css'
+import styled from 'styled-components'
+
+const PostHeader = styled.div`
+  display:flex;
+`
+
+const StyledThumbnail = styled.div`
+  width: 5%;
+  margin-top: 2.5%;
+  margin-left: 2.5%;
+  margin:2.5%
+`
+const StyledThumbImg = styled.img`
+  border-radius: 25px;
+`
+
+const StyledUsername = styled.div`
+  padding-top: 3%;  
+`
+
+const StyledIcons = styled.div`
+  margin-bottom: 3px;
+`
+
+const StyledLikes = styled.div`
+  margin-left: 3.6%;
+  margin-bottom: 2px;
+`
 
 class Post extends Component {
   constructor(props) {
@@ -21,16 +49,16 @@ class Post extends Component {
 
   render() { 
     return (
-      <div className="post">
-        <div className="post header">
-          <div className="thumbnail">
-            <img className="img-fluid" src={this.props.postObj.thumbnailUrl} alt=""/>
-          </div> 
-          <div className="username">
+      <div>
+        <PostHeader>
+          <StyledThumbnail>
+            <StyledThumbImg className="img-fluid" src={this.props.postObj.thumbnailUrl} alt=""/>
+          </StyledThumbnail> 
+          <StyledUsername>
             <span>{this.props.postObj.username}</span>
-          </div>
-        </div>
-        <div className="post content">
+          </StyledUsername>
+        </PostHeader>
+        <div>
           <div>
             <img className="img-fluid" src={this.props.postObj.imageUrl} alt="" />
           </div>
@@ -38,9 +66,9 @@ class Post extends Component {
             <i className="far fa-heart" onClick={(e) => this.onClickHeart(e)}></i>
             <i className="far fa-comment"></i>
           </div> 
-          <div className="likes">
+          <StyledLikes>
             {`${this.props.postObj.likes} likes`}
-          </div>
+          </StyledLikes>
         </div>
       </div>
      )
