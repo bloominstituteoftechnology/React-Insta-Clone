@@ -3,7 +3,6 @@ import CommentSection from '../CommentSection/CommentSection';
 
 import './Post.css';
 import PropTypes from 'prop-types';
-import SearchBar from '../SearchBar/SearchBar';
 
 // Render and return Post with Likes
 // Props: key={post.imageUrl} post={post}
@@ -15,24 +14,24 @@ class Post extends React.Component {
         };
     }
 
-    componentDidMount() {
-        if(localStorage.getItem('likes')) {
-            this.setState({likes: this.state.likes});
-        } else {
-            this.handleLike();
-        }
-    }
+    // componentDidMount() {
+    //     if(localStorage.getItem('likes')) {
+    //         this.setState({likes: this.state.likes});
+    //     } else {
+    //         this.handleLike();
+    //     }
+    // }
 
     handleLike = () => {
         let likes = this.state.likes + 1;
         this.setState({ likes });
-        this.setLike();
+        // this.setLike();
        
     };
 
-    setLike = () => {
-         localStorage.setItem('likes', this.state.likes);
-    }
+    // setLike = () => {
+    //      localStorage.setItem('likes', this.state.likes);
+    // }
 
     render() {
         return (

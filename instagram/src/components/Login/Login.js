@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Login.css';
+
 // Set state and local storage, return form
 const Login = props => {
     return (
@@ -14,7 +16,7 @@ const Login = props => {
 
             componentDidMount() {
                 if(localStorage.getItem('username')) {
-                    this.setState({username: this.state.username})
+                    this.setState({username: this.state.username});
                 } else {
                     this.setUser();
                 }
@@ -22,11 +24,11 @@ const Login = props => {
 
             setUser = () => {
                 localStorage.setItem("username", this.state.username);
-                localStorage.setItem("password", this.state.password);
+                // localStorage.setItem("password", this.state.password);
             };
 
             handleUserChange = (e) => {
-                this.setState({username: e.target.value})
+                this.setState({username: e.target.value});
             };
 
             handlePassChange = (e) => {
@@ -37,11 +39,11 @@ const Login = props => {
                 e.preventDefault();
 
                 const newUsername = this.state.username;
-                const newPassword = this.state.password;
+                // const newPassword = this.state.password;
 
                 this.setState({
                     username: newUsername,
-                    password: newPassword
+                    // password: newPassword
                 });
 
                 setTimeout(() => {
@@ -53,16 +55,22 @@ const Login = props => {
             render() {
                 return (
                     <div className="login-container">
+                        <div className="login-header">
+                            <div><i className="fas fa-camera"></i></div>
+                            <div>Instaclone</div>
+                        </div>
                         <form onSubmit={this.handleSubmit}>
                             <input
                                 type="text"
                                 value={this.state.username}
+                                name="username"
                                 placeholder="username"
                                 onChange={this.handleUserChange}
                             />
                             <input 
                                 type="text"
                                 value={this.state.password}
+                                name="password"
                                 placeholder="password"
                                 onChange={this.handlePassChange}
                             />

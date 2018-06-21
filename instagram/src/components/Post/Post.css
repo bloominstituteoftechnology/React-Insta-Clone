@@ -5,44 +5,44 @@
     border-radius: 5px;
 }
 
-.post-header {
+.post-container .post-header {
     height: 50px;
     display: flex;
     align-items: center;
     margin: 20px auto;
 }
 
-.post-header div:last-child {
+.post-container .post-header div:last-child {
     font-weight: bold;
     font-size: 20px;
 }
 
-.post-header img {
+.post-container .post-header img {
     height: 50px;
     border-radius: 50%;
     margin: 0 20px;
 }
 
-.post-image img {
+.post-container .post-image img {
     width: 100%;
 }
 
-.post-nav {
+.post-container .post-nav {
     font-size: 28px;
     width: 150px;
     display: flex;
     margin: 10px 20px;
 }
 
-.post-nav div:first-child {
+.post-container .post-nav div:first-child {
     margin-right: 20px;
 }
 
-.post-nav div:hover {
+.post-container .post-nav div:hover {
     cursor: pointer;
 }
 
-.post-likes {
+.post-container .post-likes {
     font-weight: bold;
     font-size: 18px;
     margin: 10px 20px;

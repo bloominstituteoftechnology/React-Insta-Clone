@@ -55,6 +55,7 @@ class SearchBar extends React.Component {
                     <div><i className="far fa-compass"></i></div>
                     <div><i className="far fa-heart"></i></div>
                     <div><i className="far fa-user"></i></div>
+                    <div>{localStorage.getItem("username")}</div>
                 </div>
             </div>
         );

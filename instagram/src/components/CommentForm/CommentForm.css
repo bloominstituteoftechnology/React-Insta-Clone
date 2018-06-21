@@ -5,24 +5,23 @@
     border-radius: 5px;
 }
 
-form {
+.comment-form-container form {
     display: flex;
     justify-content: space-between;
     margin: 0 20px;
 }
 
-form input {
+.comment-form-container form input {
     font-size: 18px;
     border: 0;
 }
 
-form button {
+.comment-form-container form button {
     background: white;
     border: 0;
     font-size: 18px;
 }
 
-form button:hover {
+.comment-form-container form button:hover {
     cursor: pointer;
-    letter-spacing: 5px;
 }
