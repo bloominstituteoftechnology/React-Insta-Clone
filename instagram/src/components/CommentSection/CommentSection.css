@@ -1,0 +1,35 @@
+.comment {
+  margin: 5px 0;
+}
+
+.comment-username {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.timestamp {
+  color: lightgray;
+  font-size: 12px;
+  margin: 15px 0;
+}
+
+.comment-section input {
+  border-top: 1px solid lightgray;
+  border-bottom: none;
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  padding: 15px 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.comment-section input:focus {
+  outline: none;
+}
+
+.comment-section input::-webkit-input-placeholder {
+  text-align: left;
+  font-size: 14px;
+  color: lightgray;
+}

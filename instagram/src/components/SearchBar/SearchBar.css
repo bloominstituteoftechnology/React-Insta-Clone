@@ -1,0 +1,14 @@
+input {
+  height: 25px;
+  width: 180px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 2px 15px;
+  margin-right: 20px;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+  font-size: 14px;
+  color: lightgray;
+}
