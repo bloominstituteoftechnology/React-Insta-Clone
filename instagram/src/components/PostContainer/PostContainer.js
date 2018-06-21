@@ -24,7 +24,7 @@ class PostContainer extends Component {
       comments: this.props.comments,
       newComment: {
         //NEW
-        username: "user",
+        username: localStorage.getItem("username"),
         text: ""
       }
     };
@@ -37,7 +37,7 @@ class PostContainer extends Component {
     this.setState({
       newComment: {
         //NEW
-        username: "user",
+        username: localStorage.getItem("username"),
         text: ""
       },
       comments: comments
@@ -47,7 +47,7 @@ class PostContainer extends Component {
     this.setState({
       newComment: {
         //NEW
-        username: "user",
+        username: localStorage.getItem("username"),
         text: event.target.value
       }
     });
