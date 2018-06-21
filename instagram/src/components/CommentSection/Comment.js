@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentUsername from './CommentUsername';
+import UsernameSpan from '../Styles/Reusables/UsernameSpan';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -11,7 +11,7 @@ const CommentLi = styled.li`
 const Comment = (props) => {
   return(
     <CommentLi>
-      <CommentUsername username={props.username} />
+      <UsernameSpan comment>{props.username}</UsernameSpan>
       {props.text}
     </CommentLi>
   );

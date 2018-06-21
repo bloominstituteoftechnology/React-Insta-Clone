@@ -1,6 +1,6 @@
 import React from 'react';
 import PostHeaderThumbnail from './PostHeaderThumbnail';
-import PostHeaderUsername from './PostHeaderUsername';
+import UsernameSpan from '../Styles/Reusables/UsernameSpan';
 import styled from 'styled-components';
 
 const PostHeaderDiv = styled.div`
@@ -13,7 +13,7 @@ const PostHeader = (props) => {
   return(
     <PostHeaderDiv>
       <PostHeaderThumbnail thumbnail={props.thumbnail} />
-      <PostHeaderUsername username={props.username} />
+      <UsernameSpan>{props.username}</UsernameSpan>
     </PostHeaderDiv>
   );
 };
