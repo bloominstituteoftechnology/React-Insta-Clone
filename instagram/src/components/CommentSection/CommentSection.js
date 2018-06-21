@@ -4,21 +4,17 @@ import './CommentSection.css';
 
 
 const CommentSection = props => {
-    return (
-            
+    return (          
         <div className="comment-container">
-            {props.commentData.map(comments => 
-                <div className="comment-text">
-                    <strong>{comments.username}</strong>:
-                    {comments.text}
-                   
-                </div>
-               
-            )}
+            {props.commentData.map((comments, i) => 
+            	<div key={comments +i}className="comment-text">
+            	<strong>{comments.username}</strong>
+            			:{comments.text}
+        	</div>        
+         )}
             
             <div className="comment-box">
        				<input placeholder="Add a Comment Here..." name="textbox" className="textbox"/>
-    	 			  
     	 			</div> 
         </div>
     );

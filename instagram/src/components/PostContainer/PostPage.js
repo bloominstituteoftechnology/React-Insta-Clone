@@ -22,7 +22,7 @@ class PostPage extends Component {
       <div className="App">
      		<SearchBar />
         <div className="data">
-          {this.state.data.map(data => 
+          {this.state.data.map((data, i) => 
             <PostContainer data={data} />
           )}
         </div>
