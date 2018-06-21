@@ -20,14 +20,14 @@ class Login extends React.Component {
     handleLoginSubmit = e => {
         e.preventDefault();
         const user = this.state.username;
-        if (user === '' || this.state.password === '') { alert('Please fill out required fields'); return };
+        if (user === '' || this.state.password === '') { alert('Please fill out required fields'); return; };
         if (user.toLowerCase() === 'rudius' && this.state.password.toLowerCase() !== 'funboy') {
             alert(`Wrong password. Hint: Johns nickname in high school`);
             this.setState({ password: '' })
             return;
         }
-        if (user.toLowerCase() === 'plamz' && this.state.password.toLowerCase() !== 'trumplover') {
-            alert(`Wrong password. Hint: You will never guess it`);
+        if (user.toLowerCase() === 'plamz' && this.state.password.toLowerCase() !== 'π') {
+            alert(`Wrong password. Hint: Symbols are rare, symbols never dare, symbols are something that can also be shared`);
             this.setState({ password: '' })
             return;
         }
@@ -36,15 +36,14 @@ class Login extends React.Component {
             this.setState({ password: '' })
             return;
         }
-        if (user.toLowerCase() === 'flint' && this.state.password === 'plamzisascrub') {
+        if (user.toLowerCase() === 'flint' && this.state.password !== 'plamzisascrub') {
+            return;
+        }
+        if(user === 'flint' || user === 'dilly' || user === 'plamz' || user === 'rudius' ){
             localStorage.setItem('user', user)
             localStorage.setItem('password', this.state.password)
         }
-        else {
-            alert("You don't exist!!!")
-        }
         window.location.reload();
-
     }
 
     render() {
