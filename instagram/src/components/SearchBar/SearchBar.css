@@ -51,4 +51,10 @@
     width: 20px;
     height: 20px;
   }
+
+  .coreSpriteSearchIcon {
+    background: url(../../assets/instagram_sprite_sheet.png);
+    background-position: -600px -543px;
+  }
+
   

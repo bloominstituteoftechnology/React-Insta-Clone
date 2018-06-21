@@ -45,7 +45,7 @@ class LoginPage extends React.Component {
                         />
                     </div>
                     <br />
-                    <button color="red" size="large" onClick={this.handleLoginSubmit}>
+                    <button onClick={this.handleLoginSubmit}>
                         Log In
                     </button>
                 </div>

@@ -1,13 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Comment.css';
+import { UserName } from '../PostContainer/Post';
+import styled, { css } from 'styled-components';
+
+export const FlexWrapper = styled.span`
+  display: flex;
+  ${props =>
+    props &&
+    css`
+      text-align: left;
+      padding: 2px;
+      margin-left: 4px;
+    `};
+`;
+
+const CommentText = styled.span`
+  font-weight: 400;
+  font-size: 13px;
+  padding: 0 5px;
+  line-height: 25px;
+`;
+
+
 
 const Comment = props => {
   return (
-    <div className="comment-text">
-      <span className="comment">{props.comment.text}</span>{' '}
-      <span className="user">-{props.comment.username}</span>
-    </div>
+    <FlexWrapper>
+        <UserName bold>{props.comment.username}</UserName>{' '}
+      <CommentText>{props.comment.text}</CommentText>
+    </FlexWrapper>
   );
 };
 

@@ -2,6 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Post.css';
 import CommentSection from '../CommentSection/CommentSection';
+import styled, { css } from 'styled-components';
+
+export const UserName = styled.div`
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0 5px;
+  ${props => 
+    props.bold &&
+    css`
+      font-weight: 600;
+      font-size: 13px;
+      padding: 5px;
+    `};
+`;
 
 // const Post = props => {
 class Post extends React.Component {

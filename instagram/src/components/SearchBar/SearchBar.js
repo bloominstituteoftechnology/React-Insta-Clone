@@ -2,25 +2,30 @@ import React from 'react';
 import IGLogo from '../../assets/iglogo.png';
 import './SearchBar.css';
 
+
 const SearchBar = props => {
   return (
     <div className="search-bar-wrapper">
         <div className="search-bar-contents">
+            <div className="camera-logo">
+                <img src="" />
+            </div>
             <div className="image-wrapper">
                 <img alt="instagram logo" src={IGLogo} className="logo-image" />
             </div>
             <div>
-                <input className="search-bar-style" type="text" placeholder="Search" onKeyDown={props.searchPosts}/>
+                <span></span>
+                <input className="search-bar-style" type="text" placeholder="" onKeyDown={props.searchPosts}/>
             </div>
             <div className="social-wrapper">
                 <div className="social">
-                <i className="fa fa-compass" />
+                    <i className="fa fa-compass" />
                 </div>
                 <div className="social">
-                <i className="fa fa-heart" />
+                    <i className="fa fa-heart" />
                 </div>
                 <div className="social">
-                <i className="fa fa-user-circle" />
+                    <i className="fa fa-user-circle" />
                 </div>
             </div>
         </div>
