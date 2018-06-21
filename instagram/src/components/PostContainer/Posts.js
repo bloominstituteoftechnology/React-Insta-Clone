@@ -1,9 +1,23 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
+import styled from 'styled-components';
+//import './Posts.css';
 
-import './Posts.css';
+const PostBorder = styled.div`
+border: 1px solid #d3d3d3;
+margin: 5px 0;
+box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+`;
 
+const PostImageWrapper = styled.div`
+height: 100%;
+width: 100%;
+`;
+
+const PostImage = styled.img`
+width: 100%;
+`;
 class Post extends React.Component {
     constructor(props) {
         super(props);
@@ -13,22 +27,21 @@ class Post extends React.Component {
 
     render() {
     return (
-    <div className="post-border">
+    <PostBorder>
       <PostHeader
         username={this.props.post.username}
         thumbnailUrl={this.props.post.thumbnailUrl}
       />
-      <div className="post-image-wrapper">
-        <img
+      <PostImageWrapper>
+        <PostImage
           alt="post thumbnail"
-          className="post-image"
           src={this.props.post.imageUrl}
         />
-      </div>
+      </PostImageWrapper>
       <CommentSection comments={this.props.post.comments} 
                       postId={this.props.index} 
                       />
-    </div>
+    </PostBorder>
     );
     }
 }

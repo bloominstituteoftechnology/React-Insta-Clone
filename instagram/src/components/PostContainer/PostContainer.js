@@ -1,11 +1,18 @@
 import React from 'react';
 import Post from '../PostContainer/Posts';
+import styled from 'styled-components';
 
-import './Posts.css';
+//import './Posts.css';
+
+const PostsContainerWrapper = styled.div`
+height: 500px;
+width: 40%;
+margin: 5px auto;
+`;
 
 const PostContainer = props => {
     return (
-        <div className="posts-container-wrapper">
+        <PostsContainerWrapper>
       {props.posts.map(p => <Post 
                                     key={p.imageUrl} 
                                     index={p.imageUrl}
@@ -14,7 +21,7 @@ const PostContainer = props => {
                                     commentTemplate={props.commentTemplate}
                                     addCommentHandler={props.addCommentHandler}
                                     />)}
-    </div>
+    </PostsContainerWrapper>
         );    
 }
 
