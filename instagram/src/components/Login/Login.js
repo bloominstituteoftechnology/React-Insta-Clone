@@ -19,6 +19,7 @@ class Login extends React.Component {
     LoginButton = () => {
         localStorage.setItem('username', this.state.username);
         localStorage.setItem('password', this.state.password); 
+        window.location.reload();
     }
     
     render() {
