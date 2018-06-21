@@ -27,7 +27,7 @@ search = (event) => {
 
   // searchData = searchData.filter(post => post.username === term);
   searchData = searchData.filter(post => post.username.includes(term));
- 
+
   if (term.length < 1) {
 this.setState({
   data: dummyData,

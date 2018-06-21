@@ -61,7 +61,6 @@ const Authenticate = App =>
   - If a user is logged in we will return the `<App />`, else we will return the `<LoginPage>`
 
 #### Stretch Problems (Day III)
-
 - Now that you have a user set in `localStorage`, go ahead and use that `username` when a user posts a comment to make it so the logged in user is the one commenting on the posts.
 - Styled-Components
 
