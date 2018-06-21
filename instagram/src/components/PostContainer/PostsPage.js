@@ -7,7 +7,9 @@ const PostsPage = props => {
         <div>
             <header className="App-header">
             <h1 className="App-title">Insta-Clone!</h1>
-            <SearchBar />
+            <SearchBar updateSearch={props.updateSearch}
+                       searchHandler={props.searchHandler}
+                       search={props.search} />
             </header>
             <div>
                 {props.data.map((post, index) => 
