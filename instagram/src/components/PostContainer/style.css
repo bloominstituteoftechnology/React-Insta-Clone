@@ -1,0 +1,54 @@
+
+.userNameContent {
+    display: flex;
+    align-items: center;
+}
+.postImg {
+    width: 98%;
+}
+.likesPostImg {
+    text-align: left;
+    margin-top: 0.3rem;
+    line-height: 1.5rem;
+    padding-left: 1rem;
+}
+.fa {
+    padding-right: 1rem;
+}
+.commentSection {
+    padding-left: 1rem;
+    margin-right: 1rem;
+}
+.dateStamp {
+    text-align: left;
+    padding-left: 1rem;
+    color: #8F97A3;
+    font-size: 0.7rem;
+}
+.footerCom {
+    display: flex;
+    justify-content: space-between;
+    color: #8F97A3;
+    padding-left: 1rem;
+    margin:   0 1rem 1rem 0;
+}
+
+hr {
+    width: 90%;
+}
+
+.fa-heart {
+    color: red;
+}
+.post_container{
+    background-color: white;
+    border: 1px solid lightgray;
+    margin-bottom: 2rem;
+    color: #272525;
+}
+.thumbImg {
+    width: 13%;
+    height: 13%;
+    border-radius: 50%;
+    padding: 0 1rem;
+}
