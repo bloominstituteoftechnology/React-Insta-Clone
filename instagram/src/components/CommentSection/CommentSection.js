@@ -10,9 +10,14 @@ class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.post.comments
+      comments: []
     };
   }
+
+  componentDidMount(props) {
+    this.setState({ comments: props.post.comments });
+  }
+
   render() {
     return (
       <div>
