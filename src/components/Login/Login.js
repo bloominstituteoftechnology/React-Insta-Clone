@@ -40,7 +40,7 @@ class Login extends React.Component {
             localStorage.setItem('user', user)
             localStorage.setItem('password', this.state.password)
         }
-        else{
+        else {
             alert("You don't exist!!!")
         }
         window.location.reload();
@@ -72,9 +72,12 @@ class Login extends React.Component {
                             placeholder="Password"
                         />
                     </div>
-                    <button type="submit" className="login-button" onSubmit={this.handleLoginSubmit}>Login</button>
+                    <div className="button-container">
+                        <button type="submit" className="login-button" onSubmit={this.handleLoginSubmit}>Login</button>
+                        <button type="button" className="login-button" onClick={this.createUser}>Create User</button>
+                    </div>
                 </form>
-                <button type="submit" className="login-button" onClick={this.createUser}>Create User</button>
+
             </div>
 
         )
