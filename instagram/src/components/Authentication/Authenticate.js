@@ -1,4 +1,5 @@
 import React from 'react';
+import Login from '../Login/Login'
 
 const Authenticate = App =>
     class extends React.Component {
@@ -18,7 +19,8 @@ const Authenticate = App =>
             }
         }
         render() {
-            return <App />;
+            if(this.state.loggedIn) return <App/>;
+            return <Login />;
         }
     };
 
