@@ -3,6 +3,9 @@ import './App.css';
 import dummyData from '../dummy-data.js'
 import Posts from '../post-components/posts.js'
 import SearchBar from '../searchBar'
+import {
+  AppWrapper
+} from '../styles/reusables.js'
 
 class App extends React.Component {
   constructor() {
@@ -19,14 +22,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="app">
-        <header className="search-bar">
+      <AppWrapper>
+        <section>
           <SearchBar searchHandler={this.searchEvent}/>
-        </header>
+        </section>
         <div className="posts">
           <Posts data={this.state.data} search={this.state.search} />
         </div>
-      </div>
+      </AppWrapper>
     );
   }
 }

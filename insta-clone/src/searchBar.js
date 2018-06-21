@@ -1,6 +1,10 @@
 import React from 'react'
 import left from './imgs/left.png'
 import right from './imgs/right.png'
+import {
+  Heading
+} from './styles/reusables.js'
+
 
 const logOut = e => {
   localStorage.removeItem('user');
@@ -9,12 +13,12 @@ const logOut = e => {
 
 const SearchBar = props => {
   return (
-    <div className="header">
+    <Heading>
       <span><img src={left} alt="logo" /></span>
       <form onChange={props.searchHandler}><input type="text" placeholder="search" /></form>
       <span><img src={right} alt="navigation options" /></span>
       <span className="logout" onClick={logOut}>Logout</span>
-    </div>
+    </Heading>
   )
 }
 

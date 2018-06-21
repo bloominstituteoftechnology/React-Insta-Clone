@@ -7,6 +7,7 @@ body{
   margin: auto;
   background-color: white;
   padding: 25px 0;
+  background-color: papayawhip;
 }
 
 .app {
@@ -26,15 +27,25 @@ body{
   padding: 15px;
 }
 
+.login-box .container {
+  background-color: mediumseagreen;
+  padding: 25px;
+  border-radius: 10px;
+  padding-top: 5px;
+}
+
 .login-box input {
   padding: 10px;
   margin-bottom: 15px;
   width: 80%;
+  background-color: papayawhip;
 }
 
 .login-box button {
   height: 40px;
   width: 40%;
+  background-color: palevioletred;
+  border-color: palevioletred;
 }
 
 .header {
