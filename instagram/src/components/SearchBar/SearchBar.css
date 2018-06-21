@@ -23,6 +23,10 @@
     border-right: 2px solid grey;
 }
 
+.search-bar-header div:hover {
+    cursor: pointer;
+}
+
 .search-bar-search input {
     height: 26px;
     text-align: center;
@@ -40,4 +44,8 @@
 
 .search-bar-nav div {
     padding: 0 20px;
+}
+
+.search-bar-nav div i:hover {
+    cursor: pointer;
 }

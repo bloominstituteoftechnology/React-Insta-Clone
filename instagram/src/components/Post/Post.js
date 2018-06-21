@@ -14,10 +14,24 @@ class Post extends React.Component {
         };
     }
 
+    componentDidMount() {
+        if(localStorage.getItem('likes')) {
+            this.setState({likes: this.state.likes});
+        } else {
+            this.handleLike();
+        }
+    }
+
     handleLike = () => {
         let likes = this.state.likes + 1;
         this.setState({ likes });
+        this.setLike();
+       
     };
+
+    setLike = () => {
+         localStorage.setItem('likes', this.state.likes);
+    }
 
     render() {
         return (
@@ -30,11 +44,11 @@ class Post extends React.Component {
                     <img src={this.props.post.imageUrl} alt="post-pic" />
                 </div>
                 <div className="post-nav">
-                    <div><i className="far fa-heart"></i></div>
+                    <div onClick={this.handleLike}><i className="far fa-heart"></i></div>
                     <div><i className="far fa-comment"></i></div>
                 </div>
                 <div className="post-likes">
-                    {this.props.post.likes}
+                    {this.state.likes}
                 </div>
 
                 {/* Pass imageUrl as postId prop and comments as comments prop */}

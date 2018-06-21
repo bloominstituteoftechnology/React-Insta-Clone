@@ -38,6 +38,10 @@
     margin-right: 20px;
 }
 
+.post-nav div:hover {
+    cursor: pointer;
+}
+
 .post-likes {
     font-weight: bold;
     font-size: 18px;
