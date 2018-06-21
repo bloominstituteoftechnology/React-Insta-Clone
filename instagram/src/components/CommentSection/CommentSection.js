@@ -1,9 +1,21 @@
 import React from "react";
 import Comment from "../Comment/Comment";
 import CommentForm from "../CommentForm/CommentForm";
-
-import "./CommentSection.css";
 import PropTypes from "prop-types";
+import styled from 'styled-components';
+
+// import "./CommentSection.css";
+
+// styled-components
+const CommentSectionContainer = styled.div`
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 5px;
+`;
+
+const CommentSectionTimestamp = styled.div`
+    margin: 10px 20px;
+`;
 
 // Render and return CommentSection with CommentForm
 // Props: postId={this.props.post.imageUrl} comments={this.props.post.comments}
@@ -61,15 +73,15 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <div className="comment-section-container">
+            <CommentSectionContainer>
                 {/* Map comment, index to each Comment component */}
                 {this.state.comments.map((comment, index) => (
                     <Comment key={index} comment={comment} />
                 ))}
 
-                <div className="comment-section-timestamp">
+                <CommentSectionTimestamp>
                     {this.props.timestamp}
-                </div>
+                </CommentSectionTimestamp>
 
                 {/* Pass initial comment state and handler methods as props */}
                 <CommentForm
@@ -77,7 +89,7 @@ class CommentSection extends React.Component {
                     handleChange={this.handleCommentChange}
                     handleSubmit={this.handleCommentSubmit}
                 />
-            </div>
+            </CommentSectionContainer>
         );
     }
 }
