@@ -12,7 +12,7 @@ class Login extends React.Component {
         this.setState({ [e.target.name]: e.target.value });
     }
 
-    startLogin = e => {
+    startLogin = () => {
         sessionStorage.setItem('username', this.state.username);
         sessionStorage.setItem('password', this.state.password);
         window.location.reload(false);
@@ -22,6 +22,7 @@ class Login extends React.Component {
             <form className='login__form' onSubmit={e => {
                 e.preventDefault();
             }}>
+                    {/* Username */}
                 <input type="text"
                     className='login__username'
                     name='username'
@@ -29,7 +30,7 @@ class Login extends React.Component {
                     onChange={e => {
                         this.changeText(e);
                     }} />
-
+                    {/* Password */}
                 <input type="text"
                     className='login__password'
                     name='password'
@@ -37,9 +38,7 @@ class Login extends React.Component {
                     onChange={e => {
                         this.changeText(e);
                     }} />
-                <button className='login__submit' onClick={e => {
-                    this.startLogin();
-                }}>Submit</button>
+                <button className='login__submit' onClick={this.startLogin}>Submit</button>
             </form>
         );
     }
