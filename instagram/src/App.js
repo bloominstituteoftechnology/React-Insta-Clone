@@ -13,9 +13,16 @@ class App extends Component {
   }
 
   componentDidMount () {
-    this.setState({
-      post: dummyData
-    })
+    if (window.localStorage.getItem('comments')) {
+      this.setState({
+        post: JSON.parse(window.localStorage.getItem('comments'))
+      })
+    } else {
+      this.setState({
+        post: dummyData
+      })
+    }
+    window.localStorage.setItem('comments', JSON.stringify(dummyData))
   }
 
   render () {

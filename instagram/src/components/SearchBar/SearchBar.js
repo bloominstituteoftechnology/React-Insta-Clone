@@ -26,9 +26,9 @@ class TheSearchBar extends Component {
   }
   render () {
     return (
-      <div>
-        <Navbar color='white' light expand='md' className='navbar'>
-          <NavbarBrand className='navbarBrand' href='/'>
+      <nav>
+        <Navbar color='white' light expand='md' className='staticTop'>
+          <NavbarBrand className='navbarBrand ' href='/'>
             <i className='fab fa-instagram fa-lg' />
           </NavbarBrand>
           <NavbarBrand className='logo'>Instagram</NavbarBrand>
@@ -59,7 +59,7 @@ class TheSearchBar extends Component {
             </Nav>
           </Collapse>
         </Navbar>
-      </div>
+      </nav>
     )
   }
 }

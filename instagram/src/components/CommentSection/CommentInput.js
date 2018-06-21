@@ -1,6 +1,7 @@
 import React from 'react'
 
 const CommentInput = (props) => {
+  let inputRef = null
   return (
     <form onSubmit={(e) => props.onSubmit(props.posts.comments, e)}>
       <input

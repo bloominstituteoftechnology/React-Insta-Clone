@@ -14,7 +14,6 @@ class PostContainer extends Component {
 
   handleLikes = (e, index) => {
     let likes = this.state.likes
-    var span = document.querySelector('.far .fa-heart .fa-lg')
     let result = e.target.classList.contains('heart-red')
     if (result) {
       this.setState({
@@ -26,6 +25,10 @@ class PostContainer extends Component {
       })
     }
   }
+
+  // onComment = (inputRef) => {
+  //   inputRef.focus()
+  // }
 
   render () {
     return (
@@ -60,7 +63,7 @@ class PostContainer extends Component {
                 />
               </div>
               <div className='comment-icon'>
-                <i className='far fa-comment fa-lg' />
+                <i className='far fa-comment fa-lg' onClick={this.onComment} />
               </div>
             </div>
 
