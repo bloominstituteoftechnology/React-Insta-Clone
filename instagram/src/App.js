@@ -3,14 +3,15 @@ import "./App.css";
 import PostsPage from "./components/PostContainer/PostsPage";
 import Authentication from "./components/Authentication/Authenticate";
 
-const AppAuth = Authentication(App);
+const AppAuth = Authentication(PostsPage);
 
 function App() {
   return (
     <div className="App">
-      <PostsPage />
+      <AppAuth />
     </div>
   );
 }
 
 export default App;
+
