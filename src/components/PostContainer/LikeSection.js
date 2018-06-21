@@ -5,10 +5,10 @@ const LikeSection = props => {
     <div
       className="like-section"
       key="likes-icons-container"
-      onClick={props.incrementLike}
+     
     >
       <div className="like-section-wrapper">
-        <i className="far fa-heart fa-2x" />
+        <i  onClick={props.incrementLike} className="far fa-heart fa-2x" />
       </div>
       <div className="like-section" key="likes-container">
         <div className="likes-text like-section-wrapper">&nbsp;&nbsp;{props.likes}</div>
