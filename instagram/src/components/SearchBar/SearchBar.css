@@ -1,49 +1,24 @@
-.flex {
-
-
+.search-bar-wrapper {
+  border-bottom: 1px solid #3333;
+  height: 80px;
+  line-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
 }
 
-.Navbar {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:100%;
-    min-height: 20px;
-}
-.fa-instagram {
-	padding: 0;
-  	list-style: none;
+.image-wrapper {
+  height: 50px;
 }
 
-.instagram {
+.logo-image {
+  height: 100%;
+}
+
+.social-wrapper {
   display: flex;
 }
 
-ul {
-  padding: 0;
-  list-style: none;
-}
-
-li {
-	cursor: pointer;
-}
-.instagram__logo {
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer;
-}
-.instagram li:not(:last-child):not(.instagram__logo) {
-  margin-right: 10px;
-}
-.instagram li  i:not(.fa-instagram):not(.fa-instagram):not(.instagram__logo) {
-  margin-right: 3px;
-
-}
-
-.instagram li > button {
-  font-size: 0.8em;
-  border: 0;
-  background: rgba(85,172,238 ,1);
-  color: #fff;
-  border-radius: 100px;
+.social {
+  width: 50px;
 }

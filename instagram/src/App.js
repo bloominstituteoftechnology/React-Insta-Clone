@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer'
-
+import PostsPage from './components/PostsContainer/PostsPage';
+import Authenticate from './components/Authentication/Authenticate';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
   render() {
     return (
-        <div className="App">
-
-          <SearchBar/>
-          <PostContainer/>
-
+      <div className="App">
+        <PostsPage />
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
