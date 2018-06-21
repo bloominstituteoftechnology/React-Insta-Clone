@@ -13,6 +13,14 @@ class CommentSection extends Component {
         }
     }
 
+    submitComment = event =>{
+        event.preventDefault()
+        let newComment = {text : this.state.comment , username : "Sanusi"}
+        let comments = [...this.state.comments]
+        comments.push(newComment)
+        this.setState({comments, comment : ''})
+    }
+
     changeComment = event => {
         this.setState({comment : event.target.value })
     }
