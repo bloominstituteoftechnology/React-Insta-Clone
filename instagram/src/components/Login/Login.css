@@ -27,6 +27,12 @@
     border-right: 2px solid grey;
 }
 
+.login-container form {
+    width: 410px;
+    display: flex;
+    justify-content: space-between; 
+}
+
 .login-container form button:hover {
     cursor: pointer;
 }

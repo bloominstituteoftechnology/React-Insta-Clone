@@ -1,16 +1,22 @@
 import React from "react";
 import Login from './components/Login/Login';
+import styled from 'styled-components';
 
-import "./App.css";
+// import "./App.css";
+
+// styled-components
+const AppContainer = styled.div`
+
+`;
 
 const NewLogin = Login();
 
 // Invoke login
 function App() {
     return (
-        <div className="App">
+        <AppContainer>
             <NewLogin />
-        </div>
+        </AppContainer>
     );
 }
 

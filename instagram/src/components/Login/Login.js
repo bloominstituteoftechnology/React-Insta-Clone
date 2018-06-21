@@ -1,6 +1,48 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import './Login.css';
+// import './Login.css';
+
+// styled-components
+const LoginContainer = styled.div`
+    max-width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin: 20px auto;
+    border-bottom: 1px solid lightgrey;
+
+    form {
+        width: 410px;
+        display: flex;
+        justify-content: space-between;
+        
+
+        button:hover {
+            cursor: pointer;
+        }
+    }
+`;
+
+const LoginHeader = styled.div`
+    width: 200px;
+    display: flex;
+    font-size: 26px;
+    font-family: 'Lobster', cursive;
+
+    div {
+        padding: 0 20px;
+
+        :first-child {
+            border-right: 2px solid grey;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+`;
 
 // Set state and local storage, return form
 const Login = props => {
@@ -54,11 +96,11 @@ const Login = props => {
 
             render() {
                 return (
-                    <div className="login-container">
-                        <div className="login-header">
+                    <LoginContainer>
+                        <LoginHeader>
                             <div><i className="fas fa-camera"></i></div>
                             <div>Instaclone</div>
-                        </div>
+                        </LoginHeader>
                         <form onSubmit={this.handleSubmit}>
                             <input
                                 type="text"
@@ -76,7 +118,7 @@ const Login = props => {
                             />
                             <button type="submit">Log In</button>
                         </form>
-                    </div>
+                    </LoginContainer>
                 );
             }
         }
