@@ -4,6 +4,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 import dummyData from '../../dummy-data';
 
+
 class PostPage extends Component {
   constructor() {
     super();

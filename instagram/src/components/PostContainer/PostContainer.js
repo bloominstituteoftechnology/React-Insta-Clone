@@ -3,9 +3,8 @@ import CommentSection from '../CommentSection/CommentSection';
 import '../instagram.css';
 import { Card, CardImg, CardBody,
   CardTitle } from 'reactstrap';
-/*import PropTypes from 'prop-types';*/
+import PropTypes from 'prop-types';
 
-  /*Need to come back and add prop types*/
 
 class PostContainer extends React.Component {
   constructor(props) {
@@ -56,6 +55,16 @@ class PostContainer extends React.Component {
       </Card>
   );
 }
+
 };
+
+PostContainer.propTypes = {
+  post: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number
+  })
+}
 
 export default PostContainer;
