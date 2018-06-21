@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Authenticate from './Authentication/Authenticate'
+import Authenticate from './components/Authenticate/Authenticate'
 import PostsPage from "./components/PostsPage";
 import "./App.css";
 
