@@ -9,7 +9,7 @@ constructor(props) {
    this.state = {
 	   imgSrc:{heart}.heart,
 	   liked:false,
-	   likes:{props}.likeNumber
+	   props:{props},
 	    }
 	   this.handleClick=this.handleClick.bind(this);
 }
@@ -34,7 +34,6 @@ constructor(props) {
 
    render() {
     return (
-	console.log(this.props),
       <div className={`${"heartIcon"} + ${this.state.liked}`}>
         <img onClick={this.handleClick} src={this.state.imgSrc}/>
       </div>

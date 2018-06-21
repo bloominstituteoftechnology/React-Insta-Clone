@@ -14,7 +14,14 @@ constructor() {
   }
   
   addLike = e => {
-	console.log();
+	let copy = this.state;
+	copy.posts[e.state.props.props.id].likes += 1;
+	//this is so close to working...
+	//if only I knew how to make it NOT crash the page,
+	//it has all the data on it, with likes for the proper
+	//post increased by one... :(
+	console.log(copy);
+	//this.setState({posts:copy});
   }
   
   componentDidMount(){
