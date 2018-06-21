@@ -1,16 +1,17 @@
 import React from 'react';
+import { CommentForm, AddComment, MoreIcon } from '../ReusableComponents/CommentSection';
 
 const CommentInput = props => {
     return (
-        <form className='add-comment-form' onSubmit={props.addComment}>
-            <input className='add-comment'
+        <CommentForm onSubmit={props.addComment}>
+            <AddComment className='add-comment'
                 type='text'
                 value={props.comment}
                 placeholder='Add a comment...'
                 onChange={props.handleInput}
             />
-            <img className='more-icon' src="https://png.icons8.com/metro/50/000000/more.png" alt='' />
-        </form >
+            <MoreIcon src="https://png.icons8.com/metro/50/000000/more.png" alt='' />
+        </CommentForm>
     );
 };
 

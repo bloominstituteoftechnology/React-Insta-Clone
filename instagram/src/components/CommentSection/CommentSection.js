@@ -1,5 +1,4 @@
 import React from 'react';
-import './Comments.css';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
 import CommentTime from './CommentTime';

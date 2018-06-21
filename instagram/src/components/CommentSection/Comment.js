@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CommentText, CommentName } from '../ReusableComponents/CommentSection';
 
 const Comment = props => {
     return (
-        <div className='comment-text'>
-            <strong onClick={() => props.deleteComment(props.index)} className='comment-name'>{props.comment.username} </strong>
+        <CommentText>
+            <CommentName onClick={() => props.deleteComment(props.index)}>{props.comment.username} </CommentName>
             {props.comment.text}
-        </div>
+        </CommentText>
     );
 };
 
