@@ -19,7 +19,6 @@ this.setState({data: dummyData,
 })
 }
 
-
 search = (event) => {
   event.preventDefault();
   let term = event.target.value;
@@ -39,6 +38,10 @@ this.setState({
   }
 
 }
+login = (event) => {
+  console.log('attempting to login');
+  // window.location.reload(true);
+}
 
  handleChange = (event) => {
    event.preventDefault();
@@ -50,7 +53,7 @@ this.setState({
 
   render() {
     return (
-    <PostsPage data = {this.state.data} handleChange = {this.handleChange} value ={this.state.search} search = {this.search} />
+    <PostsPage login = {this.login} data = {this.state.data} handleChange = {this.handleChange} value ={this.state.search} search = {this.search} />
     );
   }
 }

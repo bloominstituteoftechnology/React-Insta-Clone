@@ -58,7 +58,7 @@ class CommentSection extends Component {
       }
     });
   }else {
-      let likeIndex = this.props.likeIndex;
+      
       if (window.localStorage.getItem(this.props.likeIndex)) {
         window.localStorage.removeItem(this.props.likeIndex);
         event.target.className = 'far fa-heart like-button';
