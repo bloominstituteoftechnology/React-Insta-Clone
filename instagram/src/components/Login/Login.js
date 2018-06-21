@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Container, Row, Button, Form, FormGroup, Input} from 'reactstrap';
 import styled from 'styled-components';
 import logo from '../SearchBar/instagram.png'
 import appleStore from './apple-store.png'
@@ -24,10 +24,6 @@ const FormContainer = styled.div`
   padding-top: 2.5%;
   border: 1px solid lightgray;
   background-color: white;
-`
-
-const LogoContainer = styled.div`
-  padding-top:15px;
 `
 
 const StyledInput = styled(Input)`
@@ -92,9 +88,9 @@ class Login extends React.Component {
         </LoginRow>
         <LoginRow>
           <div className="store">    
-            <a href="https://itunes.apple.com/us/app/instagram/id389801252" target="_blank"><img src={appleStore} alt="apple-store"/></a>
-            <a href="https://play.google.com/store/apps/details?id=com.instagram.android" target="_blank"><img src={googleStore} alt="google-store"/></a>
-            <a href="https://www.microsoft.com/en-us/p/instagram/9nblggh5l9xt" target="_blank"><img src={msStore} alt="microsoft-store"/></a>
+            <a href="https://itunes.apple.com/us/app/instagram/id389801252" target="_blank" rel="noopener noreferrer"><img src={appleStore} alt="apple-store"/></a>
+            <a href="https://play.google.com/store/apps/details?id=com.instagram.android" target="_blank" rel="noopener noreferrer"><img src={googleStore} alt="google-store"/></a>
+            <a href="https://www.microsoft.com/en-us/p/instagram/9nblggh5l9xt" target="_blank" rel="noopener noreferrer"><img src={msStore} alt="microsoft-store"/></a>
           </div>
         </LoginRow>
       </LoginContainer>
