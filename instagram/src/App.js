@@ -3,7 +3,6 @@ import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/Search';
 import Authenticate from './components/Authentication/Authenticate';
-import LoginPage from './components/Login/Login';
 import PostsPage from './components/PostContainer/PostPage';
 
 class App extends Component {
@@ -27,6 +26,10 @@ class App extends Component {
       searchInput: '',
       newComment: ''
     });
+  }
+
+  login = (e) => {
+
   }
 
   render() {

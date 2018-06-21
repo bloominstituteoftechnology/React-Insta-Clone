@@ -8,14 +8,25 @@ const Authenticate = App => class extends React.Component {
             loggedIn: false
         }
     }
-    render() {
-        return (
-            <div>
-                <LoginPage />
-                <App />
-            </div>
 
-        )
+    componentDidMount = () => {
+        if (localStorage.getItem('stormer2')) {
+            this.setState({loggedIn: true})
+        } else {
+            this.setState({loggedIn: false})
+        }
+    }
+
+    render() {
+        if (this.state.loggedIn) {
+            return (
+                <App />
+            )
+        } else {
+            return (
+                <LoginPage />
+            )
+        }
     };
 };
 

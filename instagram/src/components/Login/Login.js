@@ -2,8 +2,8 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 class LoginPage extends React.Component{
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             username: '',
             password: '',
@@ -19,18 +19,24 @@ class LoginPage extends React.Component{
     }
 
     loginSubmit = (e) => {
-        e.preventDefault();
-        if (!this.state.username || !this.state.password) {
-            alert('Please enter valid username or password');
-        } else {
-            if(localStorage.getItem(this.state.username) && this.state.password !== localStorage.getItem(this.state.username) ) {
-                alert('Wrong password')
-            }
-            else {
-                localStorage.setItem(this.state.username, this.state.password)
-                this.setState({username: '', password: ''})
-            }
-        }
+        // e.preventDefault();
+        // if (!this.state.username || !this.state.password) {
+        //     alert('Please enter valid username or password');
+        // } else {
+        //     if(localStorage.getItem(this.state.username) && this.state.password !== localStorage.getItem(this.state.username) ) {
+        //         alert('Password is incorrect');
+        //         this.setState({password: ''})
+        //     }
+        //     else {
+        //         localStorage.setItem(this.state.username, this.state.password)
+        //         this.setState({username: '', password: ''})
+        //     }
+        // }
+
+        const user=this.state.username;
+        const pw=this.state.password;
+        localStorage.setItem(user, pw);
+        window.location.reload();
     }
     
     render() {
@@ -50,7 +56,7 @@ class LoginPage extends React.Component{
               <Label for="password">Password</Label>
               <Input type="password" name="password" id="password" placeholder="..enter password" onChange={this.passwordHandler} value={this.state.password}/>
             </FormGroup>
-            <Button>Submit</Button>
+            <Button>Log In</Button>
           </Form>
         ) 
     }
