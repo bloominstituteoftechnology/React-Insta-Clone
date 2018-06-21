@@ -1,8 +1,9 @@
 import React from 'react';
-import './SearchBar.css';
 import styled from 'styled-components';
 
-// Styled-components
+// import './SearchBar.css';
+
+// styled-components
 const SearchBarContainer = styled.div`
     max-width: 1080px;
     display: flex;
@@ -31,9 +32,6 @@ const SearchBarHeader = styled.div`
         }
     }
 `;
-
-const SearchBarLogo = styled.div``;
-const SearchBarTitle = styled.div``;
 
 const SearchBarSearch = styled.div`
     input {
@@ -105,8 +103,8 @@ class SearchBar extends React.Component {
         return (
             <SearchBarContainer>
                 <SearchBarHeader>
-                    <SearchBarLogo><i className="fas fa-camera"></i></SearchBarLogo>
-                    <SearchBarTitle>Instaclone</SearchBarTitle>
+                    <div><i className="fas fa-camera"></i></div>
+                    <div>Instaclone</div>
                 </SearchBarHeader>
                 <SearchBarSearch>
                     <form onSubmit="">
