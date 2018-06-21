@@ -4,28 +4,33 @@ import PostHeader from './PostHeader';
 
 import './Posts.css';
 
-const Post = props => {
-  return (
+class Post extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state ={}
+
+    }
+
+    render() {
+    return (
     <div className="post-border">
       <PostHeader
-        username={props.post.username}
-        thumbnailUrl={props.post.thumbnailUrl}
+        username={this.props.post.username}
+        thumbnailUrl={this.props.post.thumbnailUrl}
       />
       <div className="post-image-wrapper">
         <img
           alt="post thumbnail"
           className="post-image"
-          src={props.post.imageUrl}
+          src={this.props.post.imageUrl}
         />
       </div>
-      <CommentSection comments={props.post.comments} 
-                      addComment={props.addComment} 
-                      key={props.key}
-                      index={props.index} 
-                      commentTemplate={props.commentTemplate}
-                      addCommentHandler={props.addCommentHandler} />
+      <CommentSection comments={this.props.post.comments} 
+                      postId={this.props.index} 
+                      />
     </div>
-  );
-};
+    );
+    }
+}
 
 export default Post;
