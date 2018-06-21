@@ -65,6 +65,9 @@ class CommentSection extends React.Component {
     }
 }
 
-CommentSection.propTypes = PropTypes.arrayOf(PropTypes.string.isRequired).isRequired;
+CommentSection.propTypes = PropTypes.arrayOf(PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
+}).isRequired).isRequired;
 
 export default CommentSection;

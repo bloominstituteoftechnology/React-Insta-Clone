@@ -32,14 +32,10 @@ body {
   background: #FAFAFA !important;
 }
 
-a {
-  color: black !important; 
-}
-
-.fa-search {
+/* .fa-search {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-}
+} */
 
 .container {
   height: 100px;
@@ -51,14 +47,9 @@ a {
   background: white;
 }
 
-.logo {
-  height: 40px;
-}
-
 .fa-instagram::before{
   border-right: 1px solid black;
-  padding-right: 15px;
-  margin-right: 20px;
+  padding-right: 25px;
 }
 
 /* Post Container */
