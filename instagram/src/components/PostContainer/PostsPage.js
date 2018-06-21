@@ -9,8 +9,8 @@ const PostsPage = (props) => (
         <SearchBarContainer handleChange = {props.handleChange} value ={props.value} search = {props.search}/>
          </header>
         <div className ='App-body'>
-        {props.data.map(post => {
-         return <PostContainer key = {Math.random()} post = {post} />
+        {props.data.map((post, index) => {
+         return <PostContainer key = {Math.random()} postIndex = {index} post = {post} />
         })}
 
        </div>

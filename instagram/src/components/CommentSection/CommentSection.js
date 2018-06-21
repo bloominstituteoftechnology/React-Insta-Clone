@@ -9,11 +9,21 @@ class CommentSection extends Component {
    super(props);
    this.state ={
      comments: props.comments,
-     newComment: '',
      username: 'jjashcraft',
      likes: props.likes,
      userLiked: false,
+     postIndex: props.postIndex,
    }
+ }
+ componentDidMount() {
+   let comments;
+   if (window.localStorage.getItem(this.props.postIndex)) {
+    comments = JSON.parse(window.localStorage.getItem(this.props.postIndex));
+   }else {
+    comments = this.props.comments;
+    window.localStorage.setItem(this.state.postIndex, JSON.stringify(comments));
+   }
+   this.setState({comments});
  }
 
  addComment= (event) => {
@@ -21,6 +31,7 @@ class CommentSection extends Component {
  let comments = this.state.comments.slice();
  let newComment = this.state.newComment;
  comments.push({text: newComment, username: this.state.username});
+ window.localStorage.setItem(this.state.postIndex, JSON.stringify(comments));
  this.setState({comments: comments});
 
  }  
