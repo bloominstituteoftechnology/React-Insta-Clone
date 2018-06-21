@@ -3,7 +3,7 @@ import Moment from 'react-moment'
 
 const TimeStamp = (props) => {
   var moment = require('moment')
-  let date = props.posts.timestamp
+  let date = props.timeStamp
   let fortmatDate = moment(date, 'MMMM Do YYYY, h:mm:ss a')
   return (
     <div className='date-stamp'>

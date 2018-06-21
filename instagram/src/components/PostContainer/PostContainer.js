@@ -8,7 +8,7 @@ class PostContainer extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      likes: this.props.posts.likes
+      likes: props.posts.likes
     }
   }
 
@@ -25,10 +25,6 @@ class PostContainer extends Component {
       })
     }
   }
-
-  // onComment = (inputRef) => {
-  //   inputRef.focus()
-  // }
 
   render () {
     return (
@@ -63,7 +59,7 @@ class PostContainer extends Component {
                 />
               </div>
               <div className='comment-icon'>
-                <i className='far fa-comment fa-lg' onClick={this.onComment} />
+                <i className='far fa-comment fa-lg' />
               </div>
             </div>
 
@@ -72,7 +68,8 @@ class PostContainer extends Component {
             </span>
             <CommentSection
               comments={this.props.posts.comments}
-              posts={this.props.posts}
+              keyId={this.props.posts.imageUrl}
+              timeStamp={this.props.posts.timestamp}
             />
           </div>
         </Card>

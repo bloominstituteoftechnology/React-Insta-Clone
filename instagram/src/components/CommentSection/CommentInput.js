@@ -1,9 +1,8 @@
 import React from 'react'
 
 const CommentInput = (props) => {
-  let inputRef = null
   return (
-    <form onSubmit={(e) => props.onSubmit(props.posts.comments, e)}>
+    <form onSubmit={props.onSubmit}>
       <input
         placeholder='Add a comment...'
         type='text'

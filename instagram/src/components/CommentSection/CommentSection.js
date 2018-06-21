@@ -9,9 +9,28 @@ class CommentSection extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      comments: this.props.comments,
+      comments: props.comments,
       newComment: ''
     }
+  }
+
+  componentDidMount () {
+    const id = this.props.keyId
+    if (localStorage.getItem(id)) {
+      this.setState({
+        comments: JSON.parse(localStorage.getItem(this.props.keyId))
+      })
+    } else {
+      this.setLocalStorage()
+    }
+  }
+
+  setLocalStorage = () => {
+    localStorage.setItem(this.props.keyId, JSON.stringify(this.state.comments))
+  }
+
+  componenetWillUnmount () {
+    this.setLocalStorage()
   }
 
   handleChange = (e) => {
@@ -20,27 +39,28 @@ class CommentSection extends Component {
     })
   }
 
-  handleOnSubmit = (searchPost, e) => {
+  handleOnSubmit = (e) => {
     e.preventDefault()
-    const newComment = this.state.newComment
-    const newPost = this.props.comments.push({
-      username: 'userMan',
-      text: newComment
-    })
+    const newComment = { username: 'userMan', text: this.state.newComment }
+    const newPost = this.state.comments.slice()
+    newPost.push(newComment)
     this.setState({
       comments: newPost,
       newComment: ''
     })
+    setTimeout(() => {
+      this.setLocalStorage()
+    }, 1000)
   }
+
   render () {
     return (
       <div>
-        {this.props.comments.map((comment, index) => (
-          <Comment key={index} comment={comment} />
+        {this.state.comments.map((comment, index) => (
+          <Comment key={this.props.keyId + Math.random()} comments={comment} />
         ))}
-        <TimeStamp posts={this.props.posts} />
+        <TimeStamp timeStamp={this.props.timeStamp} />
         <CommentInput
-          posts={this.props.posts}
           value={this.state.newComment}
           onChange={this.handleChange}
           onSubmit={this.handleOnSubmit}
