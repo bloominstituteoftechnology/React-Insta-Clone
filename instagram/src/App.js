@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
 import './App.css';
@@ -8,17 +7,11 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      data: [],
-    }
-  }
-
-  componentDidMount() {
-    this.setState({data: dummyData});
+    this.state = {}
   }
 
   render() {
-    return <PostsPage data={this.state.data} />;
+    return <PostsPage />;
   }
 }
 
