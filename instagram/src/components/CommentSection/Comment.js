@@ -1,15 +1,19 @@
 import React from 'react';
-import './CommentSection.css';
 import CommentUsername from './CommentUsername';
-import CommentText from './CommentText';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const CommentLi = styled.li`
+  margin: 0 0 10px 0;
+  line-height: 1.8rem;
+`;
 
 const Comment = (props) => {
   return(
-    <li className="comment">
+    <CommentLi>
       <CommentUsername username={props.username} />
-      <CommentText text={props.text} />
-    </li>
+      {props.text}
+    </CommentLi>
   );
 };
 

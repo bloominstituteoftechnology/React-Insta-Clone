@@ -1,9 +1,14 @@
 import React from 'react';
-import './CommentSection.css';
+import styled from 'styled-components';
+
+const CommentUsernameSpan = styled.span`
+  font-weight: 600;
+  margin: 0 8px 0 0;
+`;
 
 const CommentUsername = (props) => {
   return(
-    <span className="comment__username">{props.username}</span>
+    <CommentUsernameSpan>{props.username}</CommentUsernameSpan>
   );
 };
 
