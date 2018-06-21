@@ -1,3 +1,13 @@
+.like-container-style{
+	display: flex;
+	justify-content: flex-start;
+
+}
+
+.like-section-icons{
+	margin: 2%;
+
+}
 
 
 .post-container{

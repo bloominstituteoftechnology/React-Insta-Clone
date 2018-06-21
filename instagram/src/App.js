@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostWrapper from './components/PostContainer/PostWrapper';
 import Authenticate from "./components/Authenticate/Authenticate";
 
 
@@ -43,7 +43,7 @@ searchPost = event => {
 
 	 <div>
 	{this.state.dummyData.map(dummyData => 
-		<PostContainer  addComment= {this.addNewComment}  NewCommentValue={this.state.newComment} changeCommentValue={this.changeCommentValue}  key={dummyData.timestamp} PostContainer="post-container"  PostImage="post-image" HeaderContainer="header-container"  HeaderImageStyle="header-image-style" dummyData={dummyData}/>
+		<PostWrapper key={dummyData.timestamp} dummyData={dummyData}/>
 	
 	)}		
 	 </div> 
