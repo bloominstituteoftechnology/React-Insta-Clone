@@ -14,7 +14,7 @@ class CommentSectionContainer extends React.Component {
   }
 
   componentDidMount() {
-      this.setState({comments: this.props.post})
+      this.setState({comments: props.post.comments})
   }
 
   render() {
@@ -23,7 +23,7 @@ class CommentSectionContainer extends React.Component {
             <CommentIcons />
             <CommentLikes likes={this.state.post.likes} />
             <CommentSection comments={this.state.post.comments} />
-            <CommentFormContainer />
+            <CommentFormContainer handler='change me to a handler'/> {/*TODO:*/}
         </div>
         
     );
