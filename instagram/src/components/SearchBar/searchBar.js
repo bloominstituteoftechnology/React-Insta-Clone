@@ -11,21 +11,22 @@ import {
     SearchContainer,
 } from "../../reusables"
 
+const SearchBar = props => {
 
-class SearchBar extends React.Component {
-    constructor(props) {
-        super(props);
+// class SearchBar extends React.Component {
+//     constructor(props) {
+//         super(props);
     
-        this.state = {
-            searches: props.username,
-            search: ""       
-        }           
-    }
+//         this.state = {
+//             searches: props.username,
+//             search: ""       
+//         }           
+//     }
     
-    eventHandler = e => {
-        console.log(e);
-        this.setState ({search : e.target.value});
-    }
+    // eventHandler = e => {
+    //     console.log(e);
+    //     this.setState ({search : e.target.value});
+    // }
 
     // filterSearch = e => {
     //     e.preventDefault();
@@ -43,7 +44,7 @@ class SearchBar extends React.Component {
         // this.setState({usernames});
     
 
-    render(){
+    // render(){
     return (
         <SearchContainer>
         <div className = "search-contain">
@@ -56,11 +57,11 @@ class SearchBar extends React.Component {
 
         <form className = "mid-text" >
             <Title 
-                onKeyDown = {this.searchPosts}
+                // onKeyDown = {props.searchPosts}
                 type = "text"           
                 placeholder = "search"
-                value = {this.state.search}
-                onChange = {this.eventHandler}
+                value = {props.value}
+                onChange = {props.filterSearch}
             />
         </form>
         
@@ -72,7 +73,7 @@ class SearchBar extends React.Component {
         </div>
         </SearchContainer>
     )
-}
+// }
 }
  
 export default SearchBar;

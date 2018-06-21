@@ -9,7 +9,7 @@ class PostsPage  extends React.Component {
         console.log(props, 'hello')
         this.state = {
             post: props.posting,
-            filteredPosts: []
+            filteredPosts: [],
           }
     }
     
@@ -19,8 +19,6 @@ class PostsPage  extends React.Component {
                  if(post.username.includes(e.target.value)){
                      return post; 
                  }
-                 else
-                 return null;
              });
              this.setState({filteredPosts: post})
              }
@@ -29,13 +27,13 @@ class PostsPage  extends React.Component {
         return (
             <div>
                 <SearchBar 
-                username = {this.state.post} 
-                searchPosts = {this.filterSearch}
-                
+                value = {this.state.value} 
+                filterSearch = {this.filterSearch}                          
                 />
                 <PostContainer posts = {
                     this.state.filteredPosts.length > 0
-                    ? this.state.filteredPosts: this.state.post
+                    ? this.state.filteredPosts: 
+                    this.state.post
                     } 
                 />
             </div>
