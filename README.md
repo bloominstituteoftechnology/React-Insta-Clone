@@ -1,6 +1,6 @@
 # React-Insta-Clone
 
-## Introduction
+## Introduction  
 
 - The purpose of this project is to continue building on your knowledge of React that you have gained thus far.
 
