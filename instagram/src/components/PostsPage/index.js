@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PostContainer from '../PostContainer';
 import SearchBar from '../SearchBar';
 import dummyData from '../../dummy-data';
-
+import './style.css';
 import '../../App.css';
 
 class PostsPage extends Component {
@@ -30,15 +30,18 @@ filterSearch = (e) => {
 
 render() {
     return (
-      <div className="PostsPage">
-        
-        <SearchBar handleSearch={this.filterSearch} />
-        <div > 
-          <PostContainer 
-            passedState = {
-              this.state.filteredData.length >0 ? this.state.filteredData :   this.state.commentsData 
-            }
-          />
+      <div>
+        <div className='searchContainer'>  
+          <SearchBar handleSearch={this.filterSearch} />
+        </div>
+        <div className='borderPosts'>
+          <div  className="PostsPage"> 
+            <PostContainer 
+              passedState = {
+                this.state.filteredData.length >0 ? this.state.filteredData :   this.state.commentsData 
+              }
+            />
+          </div>
         </div>
       </div>
     );

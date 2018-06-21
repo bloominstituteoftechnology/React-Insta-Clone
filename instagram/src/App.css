@@ -1,9 +1,21 @@
 .PostsPage {
   text-align: center;
-  width: 500px;
-  margin: 0 auto;
+  max-width: 500px;
+  margin: 7rem auto;
+  background-color: #F9F9F9;
 }
 
-.post_container {
-  border: 1px solid lightgray;
+/* footer */
+.footerCom {
+  width: 100%;
 }
+.footerCom form {
+  width: 97%;
+}
+.footerCom input {
+  width: 100%;
+border: none;
+hight: 100%;
+  font-size: 1.1rem;
+}
+

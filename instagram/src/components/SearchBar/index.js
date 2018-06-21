@@ -5,7 +5,7 @@ const SearchBar = (props) => {
     return (
         <div className='search_wrapper'>
             <div className='faSearch'>
-                <div className='instaLogo'><i className="fa fa-instagram" aria-hidden="true"></i></div>
+                <div className='instaLogo'><i className="fa fa-instagram fa-lg" aria-hidden="true"></i></div>
                 <div className='line'>|</div>
                 <div className='textInsta'>Instagram</div>
             </div>

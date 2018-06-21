@@ -37,25 +37,27 @@ class CommentSection extends React.Component {
             {this.state.comments.map((item, i) => {
               return(
                 <div key={i}>
-                    <p className="user"><strong>{item.username}</strong>
-                    <span className="comment">    {item.text}</span></p>
-      
-    
+                    <div className='eachComment'>
+                        <p className="user"><strong>{item.username}</strong>
+                        <span className="comment">    {item.text}</span></p>
+                    </div>
+                    <div className='dateStamp'>
+                        {item.timestamp}
+                    </div>
                 </div>
               ) 
             })}
+
             <hr />
             <div className='footerCom'>
                 <form onSubmit={this.addcomment} >
                     <input
                         type='text'
-                        placeholder='add comment here...'
+                        placeholder='Add a comment...'
                         name='comment'
                         onChange={this.handleChange}
-                    />
-                        {/* <button  value="Submit" onClick={this.addcomment} /> */}
-                        
-                </form>
+                    />           
+                </form> 
             </div>
         </div>
         )

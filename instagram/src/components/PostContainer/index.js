@@ -34,9 +34,6 @@ class PostContainer extends React.Component {
                                 passedPropsFromPost={item}  
                             />
                         </div>
-                        <div className='dateStamp'>
-                            {item.timestamp}
-                        </div>
                     </div>
                 )
             })}

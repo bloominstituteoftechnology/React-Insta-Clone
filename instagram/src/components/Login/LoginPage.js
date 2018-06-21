@@ -1,5 +1,13 @@
 import React from 'react';
 import './style.css';
+import styled from "styled-components";
+
+const MyTitle = styled.h1`
+  font-size: 2.4em;
+  font-weight: 400;
+  color: #11331C;
+  margin: 0 auto;
+`;
 
 class LoginPage extends React.Component {
     constructor(props) {
@@ -24,6 +32,7 @@ class LoginPage extends React.Component {
         return ( 
             <div className='loginPage'>
                 <div className='loginWrapper'>
+                <MyTitle> React-Insta-Clone </MyTitle>
                     <div className='inputField'>
                         <input type='text'
                             value={this.state.username}

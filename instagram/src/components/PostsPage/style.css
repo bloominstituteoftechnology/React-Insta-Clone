@@ -1,0 +1,11 @@
+.searchContainer {
+    width: 100vw;
+    margin: 0 auto;
+    border-bottom: 1px solid #EBEBEB;
+    margin-bottom: 2rem;
+    background-color: white;
+    
+  position: absolute;
+  top: 0px;
+
+}

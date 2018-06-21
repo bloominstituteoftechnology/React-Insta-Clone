@@ -13,7 +13,6 @@ class Counter extends React.Component {
         this.setState({ likeState: thisLike })
     }
     render() { 
-       
         return ( 
             <div className='likesPostImg'>
                 <div>

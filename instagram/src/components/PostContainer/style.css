@@ -9,7 +9,7 @@
     align-items: center;
 }
 .postImg {
-    width: 100%;
+    width: 98%;
 }
 .likesPostImg {
     text-align: left;
@@ -27,13 +27,13 @@
 .dateStamp {
     text-align: left;
     padding-left: 1rem;
-    color: gray;
+    color: #8F97A3;
     font-size: 0.7rem;
 }
 .footerCom {
     display: flex;
     justify-content: space-between;
-    color: gray;
+    color: #8F97A3;
     padding-left: 1rem;
     margin:   0 1rem 1rem 0;
 }
@@ -41,11 +41,13 @@
 hr {
     width: 90%;
 }
-input{
-    
-    width: 80%;
-}
 
 .fa-heart {
     color: red;
+}
+.post_container{
+    background-color: white;
+    border: 1px solid lightgray;
+    margin-bottom: 2rem;
+    color: #272525;
 }
