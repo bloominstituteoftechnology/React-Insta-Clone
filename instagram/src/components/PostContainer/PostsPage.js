@@ -70,11 +70,16 @@ class PostPage extends Component {
         });
         this.setState({ instaData });
     }
-
+    handleLogout = () => {
+        localStorage.removeItem('username');
+        localStorage.removeItem('password');
+        window.location.reload(false);
+    }
     render() {
         return (
             <div className="App">
-                <SearchContainer searchHandler={this.searchPost} />
+                <SearchContainer searchHandler={this.searchPost} 
+                    handleLogout = {this.handleLogout}/>
                 <PostList instaData={this.state.instaData}
                     changeCommentHandler={this.changeComment}
                     addCommentHandler={this.addComment}
