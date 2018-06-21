@@ -27,7 +27,7 @@ class PostContainer extends React.Component {
         let dataCopy = this.state.postComments.slice();
         if (this.state.comment === '') { alert('Please enter a comment'); }
         else {
-            dataCopy.push({ username: 'flintbean', text: this.state.comment });
+            dataCopy.push({ username: localStorage.getItem('user'), text: this.state.comment });
         }
         return this.setState({ postComments: dataCopy, comment: '' });
     }

@@ -10,7 +10,7 @@ const LikeSection = props => {
       <div className="like-section-wrapper">
         <i  onClick={props.incrementLike} className="far fa-heart fa-2x" />
       </div>
-      <div className="like-section" key="likes-container">
+      <div className="like-section" key="likes-container"href="./PostContainer.js">
         <div className="likes-text like-section-wrapper">&nbsp;&nbsp;{props.likes}</div>
       </div>
       <div className="like-section-wrapper">

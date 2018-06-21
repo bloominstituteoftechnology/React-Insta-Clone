@@ -1,6 +1,11 @@
 import React from 'react';
 import './SearchBar.css'
 
+let logOutUser = e => {
+  localStorage.removeItem("user");
+  localStorage.removeItem("password")
+  window.location.reload();
+}
 const SearchBar = props => {
     return (
       <div className="search-bar-wrapper">
@@ -18,7 +23,7 @@ const SearchBar = props => {
             <i className="far fa-heart fa-2x" />
           </div>
           <div className="social">
-            <i className="far fa-user-circle fa-2x" />
+            <i className="far fa-user-circle fa-2x"  onClick={logOutUser}/>
           </div>
         </div>
       </div>

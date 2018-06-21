@@ -1,0 +1,13 @@
+.login-container {
+    width: 255px;
+    display:flex;
+    background: palevioletred;
+    border-radius: 6px;
+    margin: 100px auto;
+    padding: 10px 25px;
+  }
+
+  .login-button {
+      margin-left: 24%;
+      width: 50%;
+  }
