@@ -1,5 +1,7 @@
 import React from 'react';
-
+import './Login.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'reactstrap';
 class Login extends React.Component {
     constructor() {
         super();
@@ -8,38 +10,41 @@ class Login extends React.Component {
             password: ''
         }
     }
+
     changeText = e => {
         this.setState({ [e.target.name]: e.target.value });
     }
 
     startLogin = () => {
-        sessionStorage.setItem('username', this.state.username);
-        sessionStorage.setItem('password', this.state.password);
+        localStorage.setItem('username', this.state.username);
+        localStorage.setItem('password', this.state.password);
         window.location.reload(false);
     }
     render() {
         return (
-            <form className='login__form' onSubmit={e => {
-                e.preventDefault();
-            }}>
+            <div className='login-container'>
+                <form className='login__form' onSubmit={e => {
+                    e.preventDefault();
+                }}>
                     {/* Username */}
-                <input type="text"
-                    className='login__username'
-                    name='username'
-                    placeholder='username'
-                    onChange={e => {
-                        this.changeText(e);
-                    }} />
+                    <input type="text"
+                        className='login__helpers login__username'
+                        name='username'
+                        placeholder='username'
+                        onChange={e => {
+                            this.changeText(e);
+                        }} />
                     {/* Password */}
-                <input type="text"
-                    className='login__password'
-                    name='password'
-                    placeholder='password'
-                    onChange={e => {
-                        this.changeText(e);
-                    }} />
-                <button className='login__submit' onClick={this.startLogin}>Submit</button>
-            </form>
+                    <input type="text"
+                        className='login__helpers login__password'
+                        name='password'
+                        placeholder='password'
+                        onChange={e => {
+                            this.changeText(e);
+                        }} />
+                    <Button className='login__helpers login__submit' color = 'primary' onClick={this.startLogin}>Login</Button>
+                </form>
+            </div>
         );
     }
 
