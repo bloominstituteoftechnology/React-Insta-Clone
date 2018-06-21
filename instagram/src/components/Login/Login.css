@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    display: flex;
+    width: 33%;
+    height: 250px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.login-form-content {
+    width: 45%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+.login-form-content .login-header p {
+    margin: 0;
+}
