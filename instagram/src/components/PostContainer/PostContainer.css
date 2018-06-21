@@ -1,10 +1,11 @@
+
 .container {
     width: 600px;
     height: auto;
     border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
-    margin: 30px;
+    margin: 30px auto;
 }
 
 .thumbnail {

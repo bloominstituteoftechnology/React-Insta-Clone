@@ -1,11 +1,10 @@
 .searchbar {
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 21px 10px;
     border-bottom: 1px solid lightgray;
-    
-
 }
 
 .logos {

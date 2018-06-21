@@ -17,21 +17,15 @@ class App extends Component {
     }
   }
 
-
-
-
   addNewComment = (event) => {
     event.preventDefault();
-    alert('clicked');
-   /* let newComment = {text: this.state.comment, username: 'user'}; 
-    console.log(newComment);
+    let newComment = {text: this.state.comment, username: 'user'}; 
     let newData = this.state.data.slice(); 
     let commentArr= newData.map(item => {
       return item[0].comments;
     })
     commentArr.push(newComment);
     this.setState({data: newData}); 
-    event.preventDefault();*/
   }
 
   likePost = (i) => {
@@ -46,8 +40,10 @@ class App extends Component {
   }
 
   handleChange = event => {
-      this.setState({search: event.target.value})
+    event.preventDefault();
+      this.setState({search: event.target.value.substr(0,20)})
   }
+
   searchFunc = event => {
     console.log('this');
     const updatedList = this.state.data.slice;
