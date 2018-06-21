@@ -1,5 +1,4 @@
 import React from 'react';
-import './SearchBar.css';
 
 const SearchBarActionsProfileButton = (props) => {
   return(

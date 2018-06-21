@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
-import './SearchBar';
+import styled from 'styled-components';
+
+const SearchBarFormInput = styled.input`
+  min-width: 250px;
+  width: 20vw;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  outline: 0;
+  padding: 3px 30px 3px 20px;
+  font-size: 1.6rem;
+`;
 
 class SearchBarForm extends Component {
   constructor(props) {
@@ -15,8 +25,8 @@ class SearchBarForm extends Component {
 
   render() {
     return (
-      <form className="search-bar-form" onSubmit={(e) => this.props.onSearchPosts(e, this.state.searchTerm)}>
-        <input type="text" className="search-bar-form__input" placeholder="Search" value={this.state.searchTerm} onChange={this.onSearchChange} />
+      <form onSubmit={(e) => this.props.onSearchPosts(e, this.state.searchTerm)}>
+        <SearchBarFormInput type="text" placeholder="Search" value={this.state.searchTerm} onChange={this.onSearchChange} />
       </form>
     );
   }

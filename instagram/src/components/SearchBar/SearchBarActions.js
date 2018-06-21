@@ -1,5 +1,4 @@
 import React from 'react';
-import './SearchBar.css';
 import SearchBarActionsExploreButton from './SearchBarActionsExploreButton';
 import SearchBarActionsActivityButton from './SearchBarActionsActivityButton';
 import SearchBarActionsProfileButton from './SearchBarActionsProfileButton';

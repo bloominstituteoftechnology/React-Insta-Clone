@@ -1,5 +1,4 @@
 import React from 'react';
-import './SearchBar.css';
 
 const SearchBarActionsExploreButton = (props) => {
   return(
