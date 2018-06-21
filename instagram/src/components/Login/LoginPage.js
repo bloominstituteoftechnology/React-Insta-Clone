@@ -53,6 +53,7 @@ class LoginPage extends React.Component {
         
       }
 
+
     logIn = () => {
         window.localStorage.setItem('username', this.state.username);
         window.location.reload();
@@ -75,6 +76,3 @@ class LoginPage extends React.Component {
 
 export default LoginPage;
 
-/*
-window.localStorage.setItem('username', event.target.value);
-        window.localStorage.setItem('password', event.target.value);*/

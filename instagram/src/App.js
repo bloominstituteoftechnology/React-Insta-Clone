@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
+
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './Authentication/Authenticate';
-
-
 
 
 class App extends Component {
@@ -23,11 +21,6 @@ class App extends Component {
   }
 
 
-  handleChange = event => {
-    event.preventDefault();
-      this.setState({search: event.target.value.substr(0,20)})
-  }
-
   searchFunc = event => {
     const updatedList = this.state.data.filter(item => {
       if (item.username.includes(event.target.value)) {
@@ -40,7 +33,10 @@ class App extends Component {
   logOut = () => {
     window.localStorage.removeItem('username');
     window.location.reload();
+    alert('Goodbye');
   }
+
+
 
   componentDidMount() {
     this.setState({
@@ -54,7 +50,6 @@ class App extends Component {
       <div className="App">
         <PostsPage data={this.state.data}  
         likePost={this.likePost} 
-        handleChange={this.handleChange} 
         searchFunction={this.searchFunc} 
         search={this.state.search} 
         searchTerm={this.state.searchTerm}

@@ -55,3 +55,31 @@ export const Header = Styled.header`
     padding: 0;
     text-align: center;
     `;
+
+    export const ShareIcon = Styled.img`
+    width: 38px;
+        height: 38px;
+        margin: 10px;
+        filter: invert(100%) brightness(100%) contrast(175%);
+        border-radius: 50px;
+        margin: -5.5px;
+        `;
+
+        export const Heart = Styled.img `
+        width: 32px;
+        height: 32px;
+        margin-left: 10px;
+        `;
+
+        export const FriendIcon = Styled.img`
+        width: 40px;
+        height: 40px;
+        `;
+
+        export const ShareContainer = Styled.div`
+        width: 28px; /*container-width*/
+        height: 28px;
+        border-radius: 50px;
+       overflow: hidden;
+       margin: 0; 
+       `;

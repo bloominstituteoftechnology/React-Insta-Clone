@@ -47,9 +47,9 @@ class Comments extends React.Component {
   render() {
     return (
         <div>
-            <div className='comments'>
+            <div>
            {this.state.comments.map(item => {
-              return (<Comment><User key={Math.random()}>{item.username} </User> 
+              return (<Comment postId={item.imageUrl}><User key={Math.random()}>{item.username} </User> 
               <CommentText Emoji text={item.text} key={Math.random()}><Emoji text={item.text} /></CommentText></Comment>)
           })}
           <CommentInput  handleComment={this.handleComment} addComment={this.addComment} comment={this.state.comment} />
