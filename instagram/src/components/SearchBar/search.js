@@ -5,15 +5,15 @@ import logo2 from './logo2.png';
 import location from './location.ico';
 import heart2 from './heart2.png';
 import human from './human.png';
+import styled from 'styled-components';
 
 
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            dummyData: props.dummyData,
-            input:"",
-            placeholder:"Search"
+            // dummyData: props.dummyData,
+            input:""
 
         };
     }
@@ -24,9 +24,10 @@ class SearchBar extends React.Component {
     //     comments.push({text: this.state.input, username:'Stickmonster89'});
     //     this.setState({
     //         comments, 
-    //         input:"", 
-            
-    // });
+    //         input:""
+
+       
+    // })};
 
     // clearCompletedTodos = e => {
     //     e.preventDefault();
@@ -36,15 +37,18 @@ class SearchBar extends React.Component {
     //   };
 
 
-    // newSearch = event => this.setState({input:event.target.value})
+    // newSearch = event => this.setState({input:event.target.value})////allows you to type into field////
 
-    // searchInput = (event, i) => {
-    //     event.preventDefault;
-    //     let search = this.state.dummyData.username.slice();
-    //     this.username.filter()
-    //     alert('this')      
+    // searchInput = (event) => {
+    //     event.preventDefault();
+    //     let dummyData = this.state.dummyData.slice();
+    //     dummyData = dummyData.filter(dummyData => {
+    //         this.state.dummyData.username === this.state.input});
+    //         this.setState({ dummyData: dummyData });
+    //     alert("search");    
         
     // }
+
     
     
     render() {
@@ -57,8 +61,8 @@ class SearchBar extends React.Component {
             <div className="logo2">
                 <img src={logo2} alt=""/>
             </div>
-            <form onSubmit={this.searchInput}>
-                <input onChange={this.newSearch} type="text" placeholder={this.state.placeholder} value={this.state.input}/>
+            <form onSubmit={this.props.searchInput}>
+                <input onChange={this.props.newSearch} type="text" placeholder="search" value={this.props.input}/>
             </form>
             <div className="imgholder">
                 <img src={location} alt=""/>
@@ -66,7 +70,7 @@ class SearchBar extends React.Component {
                 <img src={human} alt=""/>
             </div>
         </div>
-    )
+    );
 }
 }
  

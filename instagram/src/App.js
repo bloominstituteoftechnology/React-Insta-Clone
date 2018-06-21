@@ -6,20 +6,23 @@ import Postspage from './components/PostsContainer/postspage.js';
 import './App.css';
 import Authenticate from './Authentication/authenticate.js';
 
-class App extends Component {
+
+class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      dummyData: [],
+      dummyData: dummyData,
       authenticate:Authenticate
     };
   }
 
-  componentDidMount() {
-    this.setState({dummyData: dummyData});
-  }
+  // componentDidMount() {
+  //   this.setState({dummyData: dummyData});
+  // }
   render() {
+    console.log(this.state.dummyData)
     return (
+      
       <Postspage dummyData={this.state.dummyData} authenticate={this.state.authenticate} />
       
       // <div className="App">

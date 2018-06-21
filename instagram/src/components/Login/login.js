@@ -1,5 +1,17 @@
-import React, {Component} from 'react';
-import './login.css';
+import React from 'react';
+import styled from 'styled-components';
+import {
+    Container,
+    PrimaryContainer,
+    LargeContainer,
+    SecondContainer,
+    InputOne,
+    InputTwo,
+    ButtonStyle,
+    FormStyle, 
+    TextAbove,
+    SignIn
+} from "../Reusables/Reusables";
 
 class Login extends React.Component {
     constructor() {
@@ -48,39 +60,46 @@ class Login extends React.Component {
 
     render() { 
         return (  
-            <div className="primary-container">
-                <div className="large-container">
-
-                  <div className="second-container">  
+            <Container>
                 
-                        <form onSubmit={this.loginSubmit}>
-                            <input 
-                            className="inputtext" 
+            <PrimaryContainer>
+                <TextAbove>
+                    <SignIn>Sign in Below</SignIn>
+
+                  </TextAbove>
+                  
+                <LargeContainer>
+                  
+
+                  <SecondContainer>  
+                
+                        <FormStyle onSubmit={this.loginSubmit}>
+                            <InputOne 
                             value={this.state.usernameInput} 
                             type="text"
                             onChange={this.changeInput}
                             placeholder="username" /> 
 
-                        <input 
-                            className="inputtextone" 
+                            <InputTwo
                             value={this.state.passwordInput} 
                             type="text"
                             placeholder="password"
                             onChange={this.passwordChange}
                             />   
 
-                            <button>Submit</button>
-                        </form> 
+                            <ButtonStyle>Submit</ButtonStyle>
+                        </FormStyle> 
 
-                    </div>             
+                    </SecondContainer>             
                         
                         
 
-                </div>
+                </LargeContainer>
+                </PrimaryContainer>
                     
                 
 
-            </div>
+            </Container>
         )
     }
 

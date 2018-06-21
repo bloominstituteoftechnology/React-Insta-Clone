@@ -4,6 +4,7 @@ import "../PostsContainer/poststyle.css";
 import heart from "./heart.png";
 import comment from "./comment.png";
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 // import SearchBar from '../SearchBar/search.js';
 
 
@@ -14,8 +15,8 @@ class Posts extends React.Component {
   constructor(props){
     super(props);
     this.state= {
-      dummyData:props.dummyData,
-      likes:props.dummyData.likes
+      dummyData: props.dummyData,
+      likes: props.dummyData.likes
       
 
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import '../CommentSection/commentsstyle.css';
+import styled from 'styled-components';
 
 class CommentsSection extends React.Component {
     constructor(props) {
