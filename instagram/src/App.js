@@ -26,4 +26,8 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
+
+//Index.js will call upon app.js
+//it'll then go to authenticate to ensure if user is in local storage
+//if true, then show webpage
