@@ -7,6 +7,7 @@ const PostContainer = (props) => {
            {props.instagramData.map(post =>{
                return <Post post ={post} key = {post.username} />
            })}
+
         </div>
     );
 };
