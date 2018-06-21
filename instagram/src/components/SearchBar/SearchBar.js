@@ -13,6 +13,11 @@ class SearchBar extends React.Component {
 
     changeSearch = event => this.setState({input: event.target.value});
 
+    logout = (event => {
+        localStorage.removeItem('user');
+        localStorage.removeItem('password');
+        document.location.reload();
+    })
     // newSearch = (event, i) => {
     //     event.preventDefault();
     //     let search = this.state.dummyData.username.slic();
@@ -27,9 +32,13 @@ class SearchBar extends React.Component {
                     <h3>Instagram</h3>
                 </div>
                 
-                <form onSubmit={this.newSearch}>
-                    <input type="text" onChange={this.changeSearch} className="fa" placeholder={this.state.placeholder} value={this.state.input} />
-                </form>
+                <div className="div-mid">
+                    <form onSubmit={this.newSearch}>
+                        <input type="text" onChange={this.changeSearch} className="fa" placeholder={this.state.placeholder} value={this.state.input} />
+                    </form>
+                    <h5 className="logout-btn" onClick={this.logout}>Logout</h5>    
+                </div>
+                
                 
                 <div className="div2">
                     <i className="fa">&#xf14e;</i>

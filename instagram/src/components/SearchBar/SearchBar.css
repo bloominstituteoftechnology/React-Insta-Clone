@@ -13,3 +13,6 @@
 .search-header .div2 {
     justify-content: space-between
 }
+.div-mid .logout-btn {
+    cursor: pointer;
+}
