@@ -9,7 +9,8 @@ class PostPage extends Component {
     constructor() {
         super();
         this.state = {
-            posts: []
+            posts: [],
+            filteredPosts: []
         };
     }
 
@@ -17,12 +18,31 @@ class PostPage extends Component {
         this.setState({ posts: dummyData });
     }
 
+    handleSearch = (e) => {
+        const posts = this.state.posts.filter(post => {
+            if(post.username.includes(e.target.value)) {
+                return post;
+            } else {
+                return null;
+            }
+        });
+        this.setState({filteredPosts: posts});
+    };
+
     render() {
         return (
             <AppContainer>
-                <SearchBar posts={this.state.posts} />
+                <SearchBar
+                    posts={this.state.posts}
+                    handleSearch={this.handleSearch}
+                    />
                 {/* Pass all posts as prop*/}
-                <PostContainer posts={this.state.posts} />
+                <PostContainer posts={
+                    this.state.filteredPosts.length > 0 
+                    ? this.state.filteredPosts 
+                    : this.state.posts
+                    }
+                />
             </AppContainer>
         );
     }

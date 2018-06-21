@@ -7,32 +7,13 @@ class SearchBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            posts: props.posts,
-            filteredPosts: [],
             search: ""
         };
     }
 
-    componentDidMount() {
-        // const id = this.props.postId;
-        // // If postId in localStorage, setState, JSON.parse, and getItem
-        // // Else setComments()
-        // if (localStorage.getItem(id)) {
-        //     this.setState({
-        //         comments: JSON.parse(localStorage.getItem(id))
-        //     });
-        // } else {
-        //     this.setComments();
-        // }
-    }
-
     handleChange = (e) => {
         this.setState({search: e.target.value});
-    }
-
-    filterPosts= () => {
-
-    }
+    };
 
     render() {
         return (
@@ -48,6 +29,7 @@ class SearchBar extends React.Component {
                             value={this.state.search}
                             placeholder="Search"
                             onChange={this.handleChange}
+                            onKeyDown={this.props.handleSearch}
                         />
                     </form>
                 </SearchBarSearch>
