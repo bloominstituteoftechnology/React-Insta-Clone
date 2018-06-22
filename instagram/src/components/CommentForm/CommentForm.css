@@ -1,0 +1,27 @@
+.comment-form-container {
+    max-width: 100%;
+    margin: 30px auto 20px;
+    /* border: 1px solid lightgrey; */
+    border-radius: 5px;
+}
+
+.comment-form-container form {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.comment-form-container form input {
+    font-size: 18px;
+    border: 0;
+}
+
+.comment-form-container form button {
+    background: white;
+    border: 0;
+    font-size: 18px;
+}
+
+.comment-form-container form button:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.comment-section-container {
+    max-width: 100%;
+    margin: 20px auto;
+    /* border: 1px solid lightgrey; */
+    border-radius: 5px;
+}
+
+.comment-section-container .comment-section-timestamp {
+    margin: 10px 20px;
+}

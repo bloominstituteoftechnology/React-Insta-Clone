@@ -1,0 +1,38 @@
+.login-container {
+    max-width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin: 20px auto;
+    border-bottom: 1px solid lightgrey;
+}
+
+.login-container .login-header {
+    width: 200px;
+    display: flex;
+    font-size: 26px;
+    font-family: 'Lobster', cursive;
+}
+
+.login-container .login-header div {
+    padding: 0 20px;
+}
+
+.login-container .login-header div:hover {
+    cursor: pointer;
+}
+
+.login-container .login-header div:first-child {
+    border-right: 2px solid grey;
+}
+
+.login-container form {
+    width: 410px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.login-container form button:hover {
+    cursor: pointer;
+}
