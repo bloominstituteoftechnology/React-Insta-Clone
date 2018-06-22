@@ -1,28 +1,47 @@
 .login-form-container {
 	padding-top: 50px;
+
+	align-items: center;
+}
+
+.login-title-row {
+	display: flex;
+	justify-content: center;
+}
+
+.ig-logo-icon {
+	display: flex;
+	font-size: 200px;
+	padding-left: 50px;
 }
 
 
-
 .login-form {
-	width: 600px;
-	height: 300px;
+	width: 500px;
+	height: 200px;
 	margin: 0 auto;
 	box-shadow: 10px 10px 8px #3A2E39;
-	background: -webkit-linear-gradient(top, rgba(254,228,208,1) 0%,rgba(255,189,139,1) 100%); 
-margin-top: 10px;
+	background: gray;
+  margin-top: 10px;
 
 }
 
 .login-header {
+	display: flex;
 	width: 600px;
 	font-size: 50px;
 	font-weight: bold;
 	color: #084c61;
-	text-align: center;
+	align-items: center;
 	margin-top: 20px;
-	
+}
 
+.login-desc {
+	font-size: 25px;
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+	padding-bottom: 10pm
 }
 
 .input-wrapper {

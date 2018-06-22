@@ -8,7 +8,7 @@ body {
 
 
 #root {
-	background: #F4D8CD;
-	height: 1000px;
+	background: -webkit-linear-gradient(top, rgba(248,219,214,1) 0%,rgba(241,166,153,1) 27%,rgba(241,166,153,1) 29%,rgba(241,166,153,1) 29%,rgba(241,166,153,1) 29%,rgba(253,116,89,1) 43%,rgba(255,163,101,1) 75%,rgba(255,97,65,1) 100%);
+	height: 800px;
 	margin-top:-20px;
 }
