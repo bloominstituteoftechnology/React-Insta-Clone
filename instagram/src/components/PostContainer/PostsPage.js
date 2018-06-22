@@ -22,6 +22,7 @@ class PostsPage extends React.Component {
   render() {
     // console.log('rendered called-PostsPaged') ;
     return (
+      
       <div className="posts-page">
         {/* , */}
 
@@ -34,6 +35,8 @@ class PostsPage extends React.Component {
         })} */}
 
         {/* <PostContainer defaultData={this.state.defaultData} /> */}
+        
+
         <PostContainer defaultData={this.state.defaultData} />
 
         {/* <PostContainer propUserData = {this.state.userData} /> */}

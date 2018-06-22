@@ -19,3 +19,6 @@ justify-content: flex-start;
 export const FlexChildEnd = styled.img`
     align-self: flex-end;
 `;
+export const FlexAlignCen = Flex.extend`
+    align-content: center ;
+`;

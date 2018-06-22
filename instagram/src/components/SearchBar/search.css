@@ -1,4 +1,19 @@
-.search {
-    background: orange ;
-    height: 50px ;
+.search-bar{
+    background-image: url(../../logos/igSearchBar.png) ; 
+    height: 154px ;
+    width: 1936px ;
+    
+}
+.search-bar form {
+    height: 100% ;
+    display: flex;
+    justify-content: center ;
+
+        
+}
+.search-bar input {
+    height: 45px ;
+    width: 300px ;
+    align-self: center ;
+    font-size: 20px ;
 }

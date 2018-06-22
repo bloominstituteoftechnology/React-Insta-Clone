@@ -1,18 +1,18 @@
 import React from 'react' ;
-import styled from 'styled-components' ;
-// import {SearchBarStyled} from '../MyStyledComponents/MyStyledComponents' ;
-// import styled, { css } from 'styled-components' ;
+import PostCard from '../PostContainer/PostCard' ;
+import './search.css' ;
 
 
 
 const SearchBar = () => {
     return(
-        
-            <form action="">
-                <input type="text" placeholder="Search"/>
-            </form>
-        
+    <div className="search-bar">
 
+        <form action="">
+                <input className="search" type="text" placeholder="Search"/>
+        </form>
+
+    </div>
     )
 }
 export default SearchBar ;

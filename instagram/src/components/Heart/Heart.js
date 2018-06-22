@@ -4,12 +4,7 @@ import heartImgGimp5050 from '../../logos/heartImgGimp5050.png' ;
 
 import saveImgGimp5050 from '../../logos/saveImgGimp5050.png' ;
 import styled, { css } from 'styled-components' ;
-import { Flex, 
-    FlexJustCen, 
-    FlexJustAr, 
-    FlexJustStart,
-    FlexChildEnd 
-} from '../MyStyledComponents/MyStyledComponents' ;
+import { FlexJustStart, Flex } from '../MyStyledComponents/MyStyledComponents' ;
 import PostCard from '../PostContainer/PostCard' ;
 
  

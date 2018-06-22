@@ -82,11 +82,12 @@ class CommentContainer extends React.Component {
 const Comment = (props) => {
     return(
         <div className="comment-container">
-
-            <span>{props.comment.username}</span>
-            <p>
-                {props.comment.text}
-            </p>
+            
+            <em><span>{props.comment.username}</span></em>
+            <span>
+                <b>{`- "${props.comment.text}"`}</b>
+            </span>
+            
 
             {/* {props.propComments.map((comment, index) => { */}
             {/* {props.postDefaultComments.map((comment, index) => {

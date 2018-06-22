@@ -2,6 +2,8 @@ import React from 'react' ;
 import './post-container.css' ;
 import CommentContainer from '../CommentSection/CommentContainer';
 import Heart from '../Heart/Heart'
+import blueCheckImgGimp2626 from '../../logos/blueCheckImgGimp2626.png' ;
+import logoImgGimp5050 from '../../logos/logoImgGimp5050.png'
 
 
 
@@ -19,21 +21,28 @@ class PostCard extends React.Component {
     }
     render() {
         return(
+            <div className="post-card-wrapper">
             <div className="post-content">
                 <header className="post-header">
-                    <div className="post-username">
-
-                        {this.props.post.username}
                     
-                    </div>
                     <div className="post-user-thumb">
-
+                        
                         <img 
                         src={this.props.post.thumbnailUrl} 
                         alt=""
                         />
-
                     </div>
+                    <div className="post-username">
+
+                        {this.props.post.username}
+                        <img src={blueCheckImgGimp2626} alt="check"/>
+
+                        
+                    
+                    </div>
+                    {/* <img src={logoImgGimp5050} alt="" claasName="logo" /> */}
+
+
                 </header>
                 <div className="post-img">
 
@@ -63,6 +72,7 @@ class PostCard extends React.Component {
 
 
                 </div>
+            </div>
             </div>
         )
     }
