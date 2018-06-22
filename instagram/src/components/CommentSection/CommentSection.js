@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Comment from '../CommentSection/Comment'
 import PropTypes from 'prop-types'
 import styled from 'styled-components';
+import {Input} from 'reactstrap'
 
 const StyledTimeStamp = styled.div`
   margin-left: 3.5%;
@@ -11,6 +12,12 @@ const StyledTimeStamp = styled.div`
 const StyledAddComment = styled.div`
   text-align: center;
   margin-top: 20px;
+`
+const StyledAddCommentInput = styled(Input)`
+  border-radius: 0;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
 `
 
 class CommentSection extends Component {
@@ -44,7 +51,7 @@ class CommentSection extends Component {
         {this.props.commentsArr.map( (comments,index) => <Comment key={index} comments={comments}/>)}
         <StyledTimeStamp>{this.props.postTimeStamp}</StyledTimeStamp>
         <StyledAddComment>
-          <input type="text" placeholder="Add Comment as guest" onKeyUp={this.onKeyUp} value={this.state.comment} onChange={(e) => this.onChange(e)}/>
+          <StyledAddCommentInput type="text" placeholder="Add Comment as guest" onKeyUp={this.onKeyUp} value={this.state.comment} onChange={(e) => this.onChange(e)}/>
         </StyledAddComment>
       </div>
      )
