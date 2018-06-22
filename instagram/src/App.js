@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './Authentication/Authenticate';
+import {Tooltip} from 'reactstrap';
 
 
 class App extends Component {

@@ -1,7 +1,6 @@
 import React from 'react';
 import {Header,LogoWrapper, LogoImage, LogoText, Search, IconsWrapper, LogOut, ShareContainer, Heart, FriendIcon, ShareIcon} from '../ReusableStyles/SearchBarStyles';
 
-
 const SearchBar = props => {
     return (
         <Header>
@@ -18,6 +17,7 @@ const SearchBar = props => {
             </div>
             <IconsWrapper>
                 <ShareContainer>
+                    
                 <ShareIcon alt='share icon' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIYtgKIdJZP0tzYF0PpZ6oA06CkzvmfdP8yBkNEEkRox6ptOyTjw' />
                  </ShareContainer>
                  <Heart alt='heart icon' src='https://png.icons8.com/metro/1600/like.png'/>

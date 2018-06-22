@@ -16,8 +16,6 @@ const Authenticate = App =>
             }
         }
 
-
-
         render() {
             if (this.state.loggedIn) {
                 return <App />

@@ -38,8 +38,8 @@ export const Header = Styled.header`
     `;
 
     export const IconsWrapper = Styled.div`
-    width: 188px;
-    padding-top: 10px;
+    width: 198px;
+    padding: 10px 10px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -54,6 +54,9 @@ export const Header = Styled.header`
     font-weight: bold;
     padding: 0;
     text-align: center;
+    &:hover {
+        cursor: pointer;
+        filter: invert(100%);
     `;
 
     export const ShareIcon = Styled.img`
@@ -63,17 +66,29 @@ export const Header = Styled.header`
         filter: invert(100%) brightness(100%) contrast(175%);
         border-radius: 50px;
         margin: -5.5px;
+        &:hover {
+            cursor: pointer;
+            filter: brightness(150%);
+        }
         `;
 
         export const Heart = Styled.img `
         width: 32px;
         height: 32px;
         margin-left: 10px;
+        &:hover {
+            cursor: pointer;
+            filter: invert(100%) brightness(50%);
+        }
         `;
 
         export const FriendIcon = Styled.img`
         width: 40px;
         height: 40px;
+        &:hover {
+            cursor: pointer;
+            filter: invert(100%) brightness(50%);
+        }
         `;
 
         export const ShareContainer = Styled.div`

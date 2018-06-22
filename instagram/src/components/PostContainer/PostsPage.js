@@ -10,13 +10,15 @@ const PostsPage = props => {
           <SearchBar  
           searchFunction={props.searchFunction} 
           logOut={props.logOut}
-          searchTerm={props.searchTerm}/>
+          searchTerm={props.searchTerm}
+          />
         </header>
         
         <PostContainer 
         likePost={props.likePost} 
         data={
-          props.search.length > 0 ? props.search : props.data } />
+          props.search.length > 0 ? props.search : props.data } 
+        />
       </div>
     );
   }
