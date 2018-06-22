@@ -2,6 +2,9 @@ import React from 'react';
 import './PostContainer.css'
 import styled from 'styled-components'
 
+const StyledPost = styled.div`
+  margin-bottom: 10px
+`
 const PostHeader = styled.div`
   display:flex;
 `
@@ -24,6 +27,8 @@ const StyledUsername = styled.div`
 const StyledLikes = styled.div`
   margin-left: 3.6%;
   margin-bottom: 2px;
+  font-size: .7rem;
+  font-weight:bold;
 `
 
 class Post extends React.Component {
@@ -46,7 +51,7 @@ class Post extends React.Component {
 
   render() { 
     return (
-      <div>
+      <StyledPost>
         <PostHeader>
           <StyledThumbnail>
             <StyledThumbImg className="img-fluid" src={this.props.postObj.thumbnailUrl} alt=""/>
@@ -67,7 +72,7 @@ class Post extends React.Component {
             {`${this.props.postObj.likes} likes`}
           </StyledLikes>
         </div>
-      </div>
+      </StyledPost>
      )
   }
 }
