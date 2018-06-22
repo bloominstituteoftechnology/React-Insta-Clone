@@ -28,7 +28,7 @@ import Styled from 'styled-components';
     filter: hue-rotate(90deg) brightness(50%);
     &:hover {
         cursor: pointer;
-        filter: invert(100%) saturate(50%) hue-rotate(90deg) brightness(50%);
+        filter: invert(100%) brightness(50%);
     }
     `;
 
@@ -37,7 +37,7 @@ import Styled from 'styled-components';
     height: 40px;
     &:hover {
         cursor: pointer;
-        filter: hue-rotate(90deg);
+        filter:  brightness(170%);
     }
     `;
 
