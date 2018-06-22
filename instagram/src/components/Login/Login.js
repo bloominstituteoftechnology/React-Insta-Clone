@@ -23,9 +23,14 @@ class Login extends Component {
 
   render() {
     return (
+      <div className="login-form-container">
+       <i className="fab fa-instagram "></i>
+      <h3 className="login-header">React InstaClone</h3>
       <Form className="login-form">
-        <h3 className="login-header">React InstaClone</h3>
-        <div>Login</div>
+       
+        <div className="input-wrapper">
+        <div className="login-txt">Login</div>
+       
         <FormGroup>
           <Input
             type="text"
@@ -48,7 +53,9 @@ class Login extends Component {
             Log In
           </Button>
         </FormGroup>
+        </div>
       </Form>
+      </div>
     );
   }
 }

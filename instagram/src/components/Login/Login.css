@@ -1,9 +1,16 @@
+.login-form-container {
+	padding-top: 50px;
+}
+
+
+
 .login-form {
 	width: 600px;
+	height: 300px;
 	margin: 0 auto;
 	box-shadow: 10px 10px 8px #3A2E39;
-	background: lightgray;
-
+	background: -webkit-linear-gradient(top, rgba(254,228,208,1) 0%,rgba(255,189,139,1) 100%); 
+margin-top: 10px;
 
 }
 
@@ -13,5 +20,16 @@
 	font-weight: bold;
 	color: #084c61;
 	text-align: center;
+	margin-top: 20px;
+	
 
+}
+
+.input-wrapper {
+	margin: 0 auto;
+	width: 400px;
+}
+
+.login-txt {
+	text-align: center;
 }
