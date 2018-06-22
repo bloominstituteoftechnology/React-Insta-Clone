@@ -1,0 +1,37 @@
+.top {
+    background: white;
+    display: flex;
+    margin-bottom:20px;
+    align-items:center;
+    margin-top:10px;
+}
+
+.top input {
+    width:200px;
+    background: #d3d3d39c;
+    margin-right:140px;
+}
+
+.logo img {
+    widows: 60px;
+    height:60px;
+    margin-right:25px;
+}
+
+.logo2 img {
+    width:120px;
+    height:60px;
+    padding-left:25px;
+    border-left:1px solid black;
+    margin-right:130px;
+
+}
+
+.imgholder {
+    display:flex;
+}
+
+.imgholder img {
+    width:60px;
+    height:60px;
+}

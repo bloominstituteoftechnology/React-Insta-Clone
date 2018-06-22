@@ -1,0 +1,26 @@
+.comments {
+
+}
+.username {
+    font-weight:bold;
+}
+
+
+.next {
+    display:flex;
+}
+
+.next p {
+    margin-right:10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.inputbottom {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.inputtext {
+    width:98%;
+}
