@@ -38,10 +38,6 @@ this.setState({
   }
 
 }
-login = (event) => {
-  console.log('attempting to login');
-  // window.location.reload(true);
-}
 
  handleChange = (event) => {
    event.preventDefault();
