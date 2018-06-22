@@ -12,7 +12,7 @@
     align-items: flex-start;
     text-align: right;
       background-color: #241337;
-      background: url('https://i.imgur.com/J6SJyJH.jpg') no-repeat right center fixed;
+      background: url('https://i.imgur.com/hwoW4Ab.jpg') no-repeat right center fixed;
       background-size: cover;
       backdrop-filter: brightness(100%);
 }
@@ -47,7 +47,7 @@
     max-width: 100%;
     margin: 5px;
     height: 30px;
-    background-color: royalblue;
+    background-color: #F64E39;  
     color: white;
     border-radius: 5px;
 }
@@ -73,14 +73,14 @@
     display: block;
     width: 200px;
     margin: 10px auto;
-    color: black;
+    color: #001459;
   
 }
 .tagline {
     width: 500px;
     display: block;
     font-family: 'Source Sans Pro:800', sans-serif;
-    font-size: 70px;
+    font-size: 60px;
     color: white;
     padding: 30px;
     font-weight: bold;
