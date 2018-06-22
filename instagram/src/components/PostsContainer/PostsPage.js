@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './PostsContainer.css';
 import dummyData from '../../dummy-data';
 import PostsContainer from './PostsContainer';
-import SearchBar from '../SearchBar/SearchBar';
+import SearchBarWrapper from '../SearchBar/SearchBar';
 
 class PostsPage extends Component {
   state = {
@@ -45,7 +45,7 @@ class PostsPage extends Component {
             <i className="fab fa-instagram"></i>
             <img src="iglogo.png" alt="Logo." />
           </div>
-          <SearchBar search={this.searchHandler} />
+          <SearchBarWrapper search={this.searchHandler} />
           <div className="header-icons">
             <i className="far fa-compass"></i>
             <i className="far fa-heart"></i>
