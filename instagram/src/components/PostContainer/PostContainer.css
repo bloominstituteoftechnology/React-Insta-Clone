@@ -1,0 +1,24 @@
+.post-container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+.post {
+  margin-bottom: 160px;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+.post-header {
+  display: flex;
+  height: 120px;
+  align-items: flex-end;
+}
+
+.user-avatar {
+  width: 150px;
+  height: 120px;
+  clip-path: circle(62px);
+}
