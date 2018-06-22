@@ -17,7 +17,8 @@ const StyledThumbImg = styled.img`
 `
 
 const StyledUsername = styled.div`
-  padding-top: 3%;  
+  padding-top: 3%;
+  font-size: 1rem;
 `
 
 const StyledLikes = styled.div`
