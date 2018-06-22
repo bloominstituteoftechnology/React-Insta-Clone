@@ -20,7 +20,7 @@ const Authenticate = App =>
             if (this.state.loggedIn) {
                 return <App />
             }
-            else return <LoginPage {alert('Type your name in the Username field and click Log in'} />
+            else return <LoginPage  />
         }
     }
 

@@ -5,13 +5,24 @@ import Comments from './../CommentSection/Comments';
 import PostHeader from './PostHeader';
 import PostContent from './PostContent';
 
-export const Container = Styled.div`
+const Body = Styled.div`
+@media (max-width: 718px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+`
+
+const Container = Styled.div`
     width: 600px;
     height: auto;
     border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
     margin: 30px auto;
+    @media (max-width: 718px) {
+        width: 80%;
+    }
 `;
 
 const PostContainer = props => {

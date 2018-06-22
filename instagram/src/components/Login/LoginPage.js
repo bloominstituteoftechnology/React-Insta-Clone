@@ -9,16 +9,22 @@ background-image: url("http://26.media.tumblr.com/tumblr_m1ujavOrpy1r6b7kmo1_500
 background-repeat: no-repeat;
 background-position: left top;
 background-size: 100%;
+@media (max-width: 718px) {
+    background-image: url("https://purr.objects-us-west-1.dream.io/i/img-20170127-wa0005.jpg");  
+}
+
 `;
 
 const LoginContainer = Styled.div`
 display: flex;
     justify-content: center;
     flex-direction: column;
+
     `;
 
     const Logo = Styled.img`
-    width: auto;
+    width: 80%;
+    height: auto;
     margin: 100px auto;
     border: 2px black solid;
     box-shadow: 5px 5px rgb(15, 51, 63);
@@ -33,6 +39,10 @@ display: flex;
     align-items: center;
     border: 12px double rgb(124, 63, 5);
     margin: auto;
+    @media (max-width: 718px) {
+        width: 80%; 
+        height: 150px;   
+    }
     `;
 
 class LoginPage extends React.Component {

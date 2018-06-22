@@ -1,5 +1,5 @@
 import React from 'react';
-import {Header,LogoWrapper, LogoImage, LogoText, Search, IconsWrapper, LogOut, ShareContainer, Heart, FriendIcon, ShareIcon} from '../ReusableStyles/SearchBarStyles';
+import {Header,LogoWrapper, LogoImage, LogoText, Search, IconsWrapper, LogOut, ShareContainer, Heart, FriendIcon, ShareIcon, SearchBox} from '../ReusableStyles/SearchBarStyles';
 
 const SearchBar = props => {
     return (
@@ -8,13 +8,13 @@ const SearchBar = props => {
                 <LogoImage alt='logo' src='https://cdn.dribbble.com/users/59145/screenshots/2722476/instagram_new_logo.jpg'/>
                 <LogoText alt='instagram' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png' />
             </LogoWrapper>
-            <div>
-                <Search type='text'
+            <Search>
+                <SearchBox type='text'
                 placeholder='Search'
                 onKeyDown={props.searchFunction}
                 />
                
-            </div>
+            </Search>
             <IconsWrapper>
                 <ShareContainer>
                     

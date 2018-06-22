@@ -4,6 +4,10 @@ import Styled from 'styled-components';
 const LoginBox = Styled.div`
     display: flex;
     justify-content: space-evenly;
+    @media (max-width: 718px) {
+        flex-direction: column;
+        align-items: center;
+    }
     `;
 
     const TextBox = Styled.input`
@@ -11,6 +15,11 @@ const LoginBox = Styled.div`
     height: 30px;
     font-size: 14px;
     `;
+    
+    const LoginButton = Styled.button`
+    @media (max-width: 718px) {
+        width: 174px;
+        height: 30px`
 
 
 const Login = props => {
@@ -31,7 +40,7 @@ const Login = props => {
             defaultValue=''
             onChange={props.handlePassword}
             />
-         <button onClick={props.logIn}>Log in</button>
+         <LoginButton onClick={props.logIn}>Log in</LoginButton>
         </LoginBox>
     );
 }

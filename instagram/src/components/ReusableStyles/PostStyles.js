@@ -4,6 +4,10 @@ import Styled from 'styled-components';
 
     export const PostImage = Styled.img`
     width: 600px;
+    @media (max-width: 718px) {
+        width: 100%;
+        height: auto;
+    }
     `;
 
     export const Likes = Styled.p`

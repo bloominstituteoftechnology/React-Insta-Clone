@@ -8,11 +8,20 @@ export const Header = Styled.header`
     align-items: center;
     padding: 21px 10px;
     border-bottom: 1px solid lightgray;
+    @media (max-width: 718px) {
+        flex-direction: column;
+    }
     `;
 
     export const LogoWrapper = Styled.div`
     display: flex;
     align-items: center;
+    @media (max-width: 718px) {
+        justify-content: center;
+        width: 100%;
+        border-bottom: 1px solid lightgray;
+        padding: 20px;
+    }
     `;
 
     export const LogoImage = Styled.img`
@@ -27,14 +36,22 @@ export const Header = Styled.header`
     padding-left: 15px;
     border-left: 1px solid lightgray;
     `;
-
-    export const Search = Styled.input`
+    export const Search = Styled.div`
     width: 255px;
+    `;
+
+    export const SearchBox = Styled.input`
+    width: 100%;
     height: 26px;
     border-radius: 3px;
     font-size: 16px;
     text-align: center;
-    margin-right: 56px;
+    @media (max-width: 718px) {
+        justify-content: center;
+        width: 100%;
+        margin: 20px 0;
+    }
+
     `;
 
     export const IconsWrapper = Styled.div`
@@ -44,6 +61,11 @@ export const Header = Styled.header`
     align-items: center;
     justify-content: space-between;
     margin-right: 0.7%;
+    @media (max-width: 718px) {
+        width: 100%;
+        justify-content: space-around;
+        border-top: 1px solid lightgray;
+        padding: 20px;
     `;
 
     export const LogOut = Styled.button`
