@@ -18,13 +18,13 @@ handleInputChange = (event) => {
 login = (event) => {
     event.preventDefault();
     console.log('attempting to login');
-    window.localStorage.setItem('userLoggedIn', this.state.username);
+    window.localStorage.setItem('username', this.state.username);
     window.location.reload(true);
 }
         
         render() {
             
-            if (window.localStorage.userLoggedIn){
+            if (window.localStorage.username){
             return <App />
             }else {
                 return <Login handleInputChange = {this.handleInputChange} login = {

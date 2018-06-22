@@ -12,6 +12,7 @@ class CommentSection extends Component {
     this.state = {
       comments: props.comments,
       username: 'jjashcraft',
+      newComment: '',
       likeHandler: {
         userLiked: false,
         likes: props.likes,},
@@ -35,13 +36,16 @@ class CommentSection extends Component {
     event.preventDefault();
     let comments = this.state.comments.slice();
     let newComment = this.state.newComment;
+    let user = window.localStorage.getItem('username');
     comments.push({
       text: newComment,
-      username: this.state.username
+      username: user,
     });
     window.localStorage.setItem(this.state.postIndex, JSON.stringify(comments));
+  
     this.setState({
-      comments: comments
+      comments: comments,
+      newComment: '',
     });
 
   }
@@ -78,7 +82,7 @@ class CommentSection extends Component {
 
   handleChange = (event) => {
     this.setState({
-      newComment: event.target.value
+      [event.target.name]: event.target.value
     });
   }
 
