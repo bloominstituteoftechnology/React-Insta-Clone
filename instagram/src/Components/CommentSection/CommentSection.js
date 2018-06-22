@@ -11,14 +11,33 @@ class CommentSection extends Component {
             comments : props.comments,
             comment : ''
         }
+
+    }
+
+    componentDidMount() {
+        const id = this.props.postId
+        if(localStorage.getItem(id)){
+            this.setState({comments : JSON.parse(localStorage.getItem(id))})
+        }else {
+            this.saveComment()
+        }
+    }
+
+
+    saveComment = () => {
+        localStorage.setItem(this.props.postId,JSON.stringify(this.state.comments))
     }
 
     submitComment = event =>{
         event.preventDefault()
-        let newComment = {text : this.state.comment , username : "Sanusi"}
+        let newComment = {username : "Sanusi", text : this.state.comment }
         let comments = [...this.state.comments]
         comments.push(newComment)
         this.setState({comments, comment : ''})
+        setTimeout(() => {
+            this.saveComment()
+        } , 500)
+        console.log(this.props.postId)
     }
 
     changeComment = event => {
