@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from '../SearchBar/Seach' ;
+// import Search from '../SearchBar/Seach' ;
 import PostContainer from '../PostContainer/PostContainer' ;
 import dummyData from '../../dummy-data' ;
 {/*NO CSS IMPORT*/}
@@ -8,22 +8,19 @@ import dummyData from '../../dummy-data' ;
 class PostsPage extends React.Component {
   constructor(props) {
     super(props) ;
-    console.log('constructor called-PostsPage') ;
+    // console.log('constructor called-PostsPage') ;
     this.state = {
       defaultData: []      
     } ;
   }
   componentDidMount() {
-    console.log('componentDidMount setState called-PostsPage') ;
+    // console.log('componentDidMount setState called-PostsPage') ;
     this.setState({
       defaultData: dummyData
     });
   }
-  addNewComment = (event, index) => {
-    alert('greeting from PostsPage.js') ;
-  }
   render() {
-    console.log('rendered called-PostsPaged') ;
+    // console.log('rendered called-PostsPaged') ;
     return (
       <div className="posts-page">
         {/* , */}
@@ -35,6 +32,8 @@ class PostsPage extends React.Component {
             <PostContent key={index} post={post} />
           )
         })} */}
+
+        {/* <PostContainer defaultData={this.state.defaultData} /> */}
         <PostContainer defaultData={this.state.defaultData} />
 
         {/* <PostContainer propUserData = {this.state.userData} /> */}

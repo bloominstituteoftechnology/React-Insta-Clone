@@ -4,48 +4,56 @@ import CommentContainer from '../CommentSection/CommentContainer';
 
 
 
-const PostCard = (props) => {
+class PostCard extends React.Component {
     // console.log(props.post.username);
-    return(
-        <div className="post-content">
-            <header className="post-header">
-                <div className="post-username">
+    constructor(props) {
+        super(props) ;
+        this.state = {}
+    }
+    render() {
+        return(
+            <div className="post-content">
+                <header className="post-header">
+                    <div className="post-username">
 
-                    {props.post.username}
-                
-                </div>
-                <div className="post-user-thumb">
+                        {this.props.post.username}
+                    
+                    </div>
+                    <div className="post-user-thumb">
+
+                        <img 
+                        src={this.props.post.thumbnailUrl} 
+                        alt=""
+                        />
+
+                    </div>
+                </header>
+                <div className="post-img">
 
                     <img 
-                    src={props.post.thumbnailUrl} 
+                    src={this.props.post.imageUrl} 
                     alt=""
                     />
 
                 </div>
-            </header>
-            <div className="post-img">
+                <div className="post-bottom">
+                    <div className="likes">
 
-                <img 
-                src={props.post.imageUrl} 
-                alt=""
-                />
+                        Likes: {this.props.post.likes}
 
-            </div>
-            <div className="post-bottom">
-                <div className="likes">
+                    </div>
 
-                    Likes: {props.post.likes}
+
+                    <CommentContainer 
+                    postDefaultComments={this.props.post.comments}
+                    postId={this.props.post.imageUrl}
+                    />
+                    {/* {console.log(props.post.comments)} */}
+
 
                 </div>
-
-
-                <CommentContainer 
-                postDefaultComments={props.post.comments}/>
-                {/* {console.log(props.post.comments)} */}
-
-
             </div>
-        </div>
-    )
+        )
+    }
 }
 export default PostCard ;

@@ -5,49 +5,111 @@ import './comment-section.css' ;
 //{/*
 class CommentContainer extends React.Component {
     constructor(props) {
-        console.log('child CommentSection called constructor') ;
         super(props) ;
-        this.state = {
+        this.state = {            
             postDefaultComments: props.postDefaultComments,
-
+            userInput: ''
+        }
+    
+    }
+    componentDidMount() {
+        const workingId = this.props.postId ;
+        if (localStorage.getItem(workingId)) {
+            this.setState({
+                postDefaultComments: JSON.parse(localStorage.getItem(this.props.postId))
+            });
+        }else{
+            this.storeComments() ;
         }
     }
-    render() {
-        return(
-            <div className="">
-                <Comment postDefaultComments={this.props.postDefaultComments}/>
-            </div>
+    componentWillUnmount() {
+        this.storeComments() ;
+    }
+    storeComments = () => {
+        localStorage.setItem(
+            this.props.postId,
+            JSON.stringify(this.state.postDefaultComments)
         )
     }
-}
-//*/}
+    grabCommentInput= (event) => {
+        this.setState({
+            userInput: event.target.value
+        });
+    }
+    submitComment = (event) => {
+        event.preventDefault() ;
+        const userComment = {
+            text: this.state.userInput,
+            username: localStorage.getItem('user') 
+        }
+        /////////////////////////////////////////////////////////////////////////
+        // NEED BELOW EXPLAINED!!!! var NAMES
+        /////////////////////////////////////////////////////////////////////////
 
-//{/*
+        const postDefaultComments = this.state.postDefaultComments.slice() ;
+        postDefaultComments.push(userComment) ;
+        this.setState({ postDefaultComments, userInput: '' });
+        setTimeout(() => {
+            this.storeComments() ;
+        }, 350) 
+    }
+
+    render() {
+
+        return(
+            <div>
+            
+                {this.state.postDefaultComments.map((mapComment, index) => <Comment key={index} comment={mapComment} />)}
+                
+                
+                <CommentInput 
+                    propUserInput={this.state.userInput}
+                    propSubmitComment={this.submitComment}
+                    propGrabCommentInput={this.grabCommentInput}
+                />
+               </div> 
+        
+        )
+        //{/*
+            // <div className="">
+            //     <Comment postDefaultComments={this.props.postDefaultComments} 
+            //     userInput={this.state.userInput}
+            //     />
+            // </div>
+            //*/}
+    }
+}
 const Comment = (props) => {
     return(
         <div className="comment-container">
-            Placeholder: "CommentSection"
+
+            <span>{props.comment.username}</span>
+            <p>
+                {props.comment.text}
+            </p>
 
             {/* {props.propComments.map((comment, index) => { */}
-            {props.postDefaultComments.map((comment, index) => {
+            {/* {props.postDefaultComments.map((comment, index) => {
                 return(
                     <div className="comment" key={index}>
                         <p>{comment.username + '- '}{comment.text}</p>
                     </div>
                 )                
             })}
-            <CommentInput />
+            <CommentInput userInput={props.userInput}/> */}
         </div>
     )
 }
-//*/}
 
 const CommentInput = (props) => {
-    // console.log(props);
-    
     return(
-        <form action="">
-            <input type="text" placeholder="Add a comment..."/>
+        <form onSubmit={props.propSubmitComment}>
+            <input 
+                type="text"
+                placeholder="Add a comment..."
+                value={props.propUserInput}
+                onChange={props.propGrabCommentInput}
+            />
         </form>
     )
 }

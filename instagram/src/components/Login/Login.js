@@ -14,15 +14,18 @@ class Login extends React.Component {
         })
     }
     submitLoginInfo = () => {
-        const loginInfo = `UserName: "${this.state.username}" / Password: "${this.state.password}"` ;       
-        localStorage.setItem('userLogin', loginInfo) ;
+        // const loginInfo = `UserName: "${this.state.username}" / Password: "${this.state.password}"` ;       
+        // localStorage.setItem('userLogin', loginInfo) ;
+        const user = this.state.username ;
+        localStorage.setItem('user', user) ;
+        window.location.reload() ;
     }
 
 
     render(){
         return(
             
-            <form action="">
+            <form>
                 <input 
                 type="text" 
                 placeholder="User Name"
