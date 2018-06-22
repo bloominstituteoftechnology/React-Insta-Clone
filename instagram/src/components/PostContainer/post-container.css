@@ -12,7 +12,7 @@
 
 }
 .post-image-fullsize {
-    max-width: 620px;
+    max-width: 100%;
 }
 .post-header{
     display: flex;

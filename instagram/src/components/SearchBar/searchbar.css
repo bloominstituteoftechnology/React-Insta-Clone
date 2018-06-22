@@ -8,8 +8,8 @@
     margin: 0;
       border-bottom: 1px solid #EFEFEF;
       padding: 20px;
-
 }
+
 .logo {
     font-family: 'Grand Hotel', cursive;
     font-size: 36px;
@@ -53,4 +53,20 @@
 }
 .icon {
     display: inline-block;
+}
+@media (max-width: 620px) {
+    .searchbar-container {
+      justify-content: space-evenly;
+      
+    }
+    .search-input {
+        display: none;  
+    }
+    .right-icons {
+        padding-right: 5px;
+        font-size: 18px;
+    }
+    .inside-right-searchbar {
+        margin-right: 20px;
+    }
 }
