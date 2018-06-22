@@ -6,11 +6,11 @@ import styled from 'styled-components'
 
 const StyledPostContainer = styled.div`
   border: 1px solid lightgrey;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  -webkit-box-shadow: 2px 2px 12px 0px rgba(191,189,189,1);
-  -moz-box-shadow: 2px 2px 12px 0px rgba(191,189,189,1);
-  box-shadow: 2px 2px 12px 0px rgba(191,189,189,1);
+  margin: 40px 0;
+  // -webkit-box-shadow: 2px 2px 12px 0px rgba(191,189,189,1);
+  // -moz-box-shadow: 2px 2px 12px 0px rgba(191,189,189,1);
+  // box-shadow: 2px 2px 12px 0px rgba(191,189,189,1);
+  background-color:white;
 `
 
 class PostContainer extends Component {
