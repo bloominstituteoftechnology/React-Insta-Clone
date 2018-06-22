@@ -1,6 +1,7 @@
 import React from 'react' ;
 import './post-container.css' ;
 import CommentContainer from '../CommentSection/CommentContainer';
+import Heart from '../Heart/Heart'
 
 
 
@@ -8,7 +9,13 @@ class PostCard extends React.Component {
     // console.log(props.post.username);
     constructor(props) {
         super(props) ;
-        this.state = {}
+        this.state = {
+            likes: props.post.likes
+        }
+    }
+    dontHeartSocialMedia = () => {
+        let likes = this.state.likes + 1 ;
+        this.setState({ likes })
     }
     render() {
         return(
@@ -38,8 +45,12 @@ class PostCard extends React.Component {
                 </div>
                 <div className="post-bottom">
                     <div className="likes">
-
-                        Likes: {this.props.post.likes}
+                        {/*PASSING PROPS THRU STYLED COMPONENTS!!!*/}
+                        <Heart                             
+                            dontHeartSocialMedia={this.dontHeartSocialMedia}
+                            brokenHearts={this.state.likes}
+                        />
+                        {/* Likes: {this.props.post.likes} */}
 
                     </div>
 
