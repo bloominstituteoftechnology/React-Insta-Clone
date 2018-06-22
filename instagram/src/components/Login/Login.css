@@ -1,6 +1,9 @@
 .login-form {
-	width: 400px;
+	width: 600px;
 	margin: 0 auto;
+	box-shadow: 10px 10px 8px #3A2E39;
+	background: lightgray;
+
 
 }
 
@@ -9,5 +12,6 @@
 	font-size: 50px;
 	font-weight: bold;
 	color: #084c61;
+	text-align: center;
 
 }

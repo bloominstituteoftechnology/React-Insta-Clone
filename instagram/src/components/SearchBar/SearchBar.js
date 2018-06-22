@@ -3,7 +3,7 @@ import './SearchBar.css';
 import styled from 'styled-components';
 
 const Header = styled.header`
-	height: 70px;
+	height: 1000px;
 	background: lightgray;
 	border-bottom: 3px solid #084c61;
 `;
@@ -17,9 +17,11 @@ const SearchBar = props => {
                 <i className="fab fa-instagram "></i>
                 <img src="" className="ig-logo" alt="Ig Word Logo" />
             </div>
+            <div className="searchbar-wrapper">
             <div className="search-bar-box">
                 <i className="fas fa-search"></i>
                 <input className="Search-box" placeholder="Search" onKeyDown={props.searchPosts}/>
+            </div>
             </div>
             <div className="ig-icons float-right">
                 <i className="far fa-compass search-compass-icon"></i>
