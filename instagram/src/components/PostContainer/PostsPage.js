@@ -7,6 +7,7 @@ class PostPage extends Component {
         super();
         this.state = {
             instaData: [],
+            filteredPosts: [],
             username: '',
         };
         this.searchPost = this.searchPost.bind(this);
@@ -15,7 +16,7 @@ class PostPage extends Component {
 
 
     componentDidMount() {
-        this.setState({ instaData: dummyData });
+        this.setState({ instaData: dummyData, filteredPosts: [] });
     }
 
     changeComment = (e) => {
@@ -59,15 +60,14 @@ class PostPage extends Component {
     }
 
     searchPost = (e) => {
-        let instaData = dummyData.slice();
-        console.log('search');
-        instaData = instaData.filter(dataItem => {
+        let instaData = this.state.instaData.slice();
+        const filteredPosts = instaData.filter(dataItem => {
             if (dataItem.username.indexOf(e.target.value) === 0) {
                 return true;
             }
             return false;
         });
-        this.setState({ instaData });
+        this.setState({ filteredPosts: filteredPosts });
     }
     handleLogout = () => {
         localStorage.removeItem('username');
@@ -79,7 +79,7 @@ class PostPage extends Component {
             <div className="App">
                 <SearchContainer searchHandler={this.searchPost} 
                     handleLogout = {this.handleLogout}/>
-                <PostList instaData={this.state.instaData}
+                <PostList instaData={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.instaData}
                     changeCommentHandler={this.changeComment}
                     addCommentHandler={this.addComment}
                     addLikeHandler={this.addLike} />
