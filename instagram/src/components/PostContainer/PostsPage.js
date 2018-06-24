@@ -20,7 +20,8 @@ class PostPage extends Component {
         for(let i = 0; i < dummyData.length; i++) {
             dummyData[i].id = uuidv1();
         }
-        this.setState({ instaData: dummyData, filteredPosts: [] });
+        console.log(dummyData);
+        this.setState({ instaData: dummyData });
     }
 
     changeComment = (e) => {
