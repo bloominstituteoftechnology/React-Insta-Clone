@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import dummyData from '../../dummy-data';
 import SearchContainer from '../SearchBar/SearchContainer';
 import PostList from './PostList';
+import uuidv1 from 'uuid/v1';
 class PostPage extends Component {
     constructor() {
         super();
@@ -16,6 +17,9 @@ class PostPage extends Component {
 
 
     componentDidMount() {
+        for(let i = 0; i < dummyData.length; i++) {
+            dummyData[i].id = uuidv1();
+        }
         this.setState({ instaData: dummyData, filteredPosts: [] });
     }
 
