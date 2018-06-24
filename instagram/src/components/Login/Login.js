@@ -48,11 +48,7 @@ class Login extends React.Component {
               this.changeText(e);
             }}
           />
-          <Button
-            className="login__helpers login__submit"
-            color="primary"
-            onClick={this.startLogin}
-          >
+          <Button color="primary" onClick={this.startLogin}>
             Login
           </Button>
         </form>
