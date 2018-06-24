@@ -3,6 +3,7 @@ import dummyData from '../../dummy-data';
 import SearchContainer from '../SearchBar/SearchContainer';
 import PostList from './PostList';
 import uuidv1 from 'uuid/v1';
+import FuzzySearch from 'fuzzy-search';
 class PostPage extends Component {
     constructor() {
         super();
@@ -66,13 +67,9 @@ class PostPage extends Component {
 
     searchPost = (e) => {
         let instaData = this.state.instaData.slice();
-        const filteredPosts = instaData.filter(dataItem => {
-            if (dataItem.username.indexOf(e.target.value) === 0) {
-                return true;
-            }
-            return false;
-        });
-        this.setState({ filteredPosts: filteredPosts });
+        const searcher = new FuzzySearch(instaData, ['username']);
+        const result = searcher.search(e.target.value);
+        this.setState({filteredPosts: result})
     }
     handleLogout = () => {
         localStorage.removeItem('username');
