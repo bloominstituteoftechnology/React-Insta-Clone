@@ -1,0 +1,4 @@
+.searchbar-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
