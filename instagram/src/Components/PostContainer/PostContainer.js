@@ -2,12 +2,12 @@ import React from 'react';
 import './PostContainer.css'
 import CommentSection from '../CommentSection/CommentSection'
 
-const PostContainer = () => {
+const PostContainer = props => {
     return (
         <div className='post-container'>
             <div className='post-header'>
                 <img className='user-thumbnail' src='' alt='User thumbnail image'/>
-                <span> ~ userID goes here ~ </span>
+                <span>~ UserID goes Here ~</span>
             </div>
             <div className='post-image'>
                 ~ Post Image goes here ~
