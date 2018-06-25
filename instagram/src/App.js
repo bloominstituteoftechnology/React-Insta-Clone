@@ -1,31 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import PostsContainer from './components/PostsContainer/PostsContainer';
+import PostContainer from './components/PostsContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
-    };
+      posts: dummyData
+    }
   }
 
-  componentDidMount() {
-    console.log("App DidMount called");
-    setTimeout(() => {
-      this.setState({
-        posts: dummyData
-      })
-    }, 0)
-  }
-
+  
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostsContainer posts={this.state.posts} />
+        <PostContainer posts={this.state.posts} />
       </div>
     );
   }

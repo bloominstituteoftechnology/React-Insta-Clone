@@ -5,8 +5,8 @@
 }
   
 .comment {
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 15px;
 }
   
 .user {
@@ -17,4 +17,8 @@
 .addComment {
     width: 71%;
     border: none;
+}
+
+.all-comments {
+    margin: 5px 10px;
 }

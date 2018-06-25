@@ -1,11 +1,16 @@
 import React from "react";
-import "./CommentSection.css";
+import "./CommentStyles.css";
 
 const CommentInput = () => {
     return (
         <div className="addComment">
             <form>
-                <input type="text" placeholder="add comment... " />
+                <input 
+                    type="text" 
+                    placeholder="add comment... " 
+                
+                
+                />
             </form>
         </div>
     );

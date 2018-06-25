@@ -8,6 +8,7 @@
 .post-border {
     margin: 5px 0;
     outline: 1px solid lightgray;
+    padding: 2px;
 }
 
 .post-image-wrapper {

@@ -1,8 +1,8 @@
 import React from 'react';
 import Post from './Post';
-import './PostsContainer.css';
+import './PostStyles.css';
 
-const PostsContainer = props => {
+const PostContainer = props => {
   return (
     <div className="posts-container-wrapper">
       {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
@@ -10,4 +10,4 @@ const PostsContainer = props => {
   );
 };
 
-export default PostsContainer;
+export default PostContainer;
