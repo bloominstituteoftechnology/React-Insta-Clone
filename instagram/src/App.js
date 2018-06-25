@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
+import request from 'superagent';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './Authentication/Authenticate';
-import {Tooltip} from 'reactstrap';
 
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
     super();
     this.state = {
       data: [],
-      search: ''
+      search: '',
     }
   }
 
@@ -36,7 +36,24 @@ class App extends Component {
     alert('Goodbye');
   }
 
+  setImage = (selectorFiles: FileList) => {
+    window.localStorage.setItem('image', selectorFiles);
 
+}
+  
+
+submitPost = () => {
+  this.setImage();
+  let post = {username: window.localStorage.getItem('username'), 
+  imageUrl: window.localStorage.getItem('image'),
+  likes: 0, 
+  timestamp: Date.now(),
+  comments: []};
+  let newArray = this.state.data.slice();
+  newArray.unshift(post);
+  console.log(newArray);
+  this.setState({data: newArray})
+}
 
   componentDidMount() {
     this.setState({
@@ -54,6 +71,8 @@ class App extends Component {
         search={this.state.search} 
         searchTerm={this.state.searchTerm}
         logOut={this.logOut}
+        submitPost={this.submitPost}
+        setImage={this.setImage}
         />
       </div>
     );
