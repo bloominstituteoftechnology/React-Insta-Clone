@@ -1,0 +1,97 @@
+.large-right {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    right: 0;
+    width: 62%;
+    /* background: url('') no-repeat center bottom fixed; */
+    background-color: #241337;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: right;
+      background-color: #241337;
+      background: url('https://i.imgur.com/hwoW4Ab.jpg') no-repeat right center fixed;
+      background-size: cover;
+      backdrop-filter: brightness(100%);
+}
+
+
+.login-form {
+    /* position: relative;
+    top: 50px; */
+    width: 200px;
+    background-color: white;
+    z-index:2;
+    margin: 0 0 0 0;
+    margin-left: 15%;
+}
+.myform {
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-around;
+        
+}
+.myinput {
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid silver;
+    background-color: white;
+    color: black;
+}
+.mybutton {
+    display: block;
+    max-width: 100%;
+    margin: 5px;
+    height: 30px;
+    background-color: #F64E39;  
+    color: white;
+    border-radius: 5px;
+}
+
+.secondary-button {
+     display: block;
+     max-width: 100%;
+     margin: 20px;
+     height: 30px;
+     background-color: white;
+     color: royalblue;
+     border-radius: 5px;
+
+}
+.store-buttons {
+    max-width: 150px;
+    display: block;
+    margin: 10px auto;
+}
+.heading {
+    font-family: 'Grand Hotel', sans-serif;
+    font-size: 30px;
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    color: black;
+  
+}
+.tagline {
+    width: 500px;
+    display: block;
+    font-family: 'Source Sans Pro:800', sans-serif;
+    font-size: 60px;
+    color: white;
+    padding: 30px;
+    font-weight: bold;
+}
+@media (max-width: 950px) {
+    .large-right {
+        display: none;
+    }
+    .login-form {
+        margin: 0 auto;
+    }
+}
+
+
