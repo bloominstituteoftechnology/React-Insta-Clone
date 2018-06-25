@@ -1,0 +1,25 @@
+.search-bar {
+  margin-top: 1rem;
+}
+
+.header-logo {
+  font-size: 2.4rem;
+  font-family: "Pacifico", cursive;
+  letter-spacing: 0.1rem;
+  margin: 0;
+}
+
+.instagram-icon {
+  padding-right: 1rem;
+  border-right: 0.2rem solid #dbdbdb;
+  margin-right: 0.4rem;
+}
+
+.right-icons .fa {
+  margin: 1rem;
+}
+
+input {
+  border-radius: 0.4rem;
+  text-align: center;
+}
