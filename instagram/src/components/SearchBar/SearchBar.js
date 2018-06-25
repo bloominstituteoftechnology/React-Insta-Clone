@@ -1,8 +1,16 @@
 import React from "react";
 
-function SearchBar() {
+const SearchBar = () => {
     return (
-        <img src="./ig_search_bar.png" />
+        <div>
+            <img src={require('../../img/ig_logo.png')} alt="logo"/>
+            <form>
+                <label>
+                    <input type="text" name="name" />
+                </label>
+            </form>
+            <img src={require('../../img/ig_icons.png')} alt="icons"/>
+        </div>
     )
 }
 
