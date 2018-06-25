@@ -4,9 +4,14 @@ const PostContainer = props => {
     return (
         <div>
             {props.postData.map(post => {
-                return ( props.postData.username)
-            }
-            )}
+                return (
+                    <div>
+                        {post.username}
+                    </div>
+                    )
+                }
+            )
+        }
         </div>
     );
 }
