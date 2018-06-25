@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
+import Search from './components/SearchBar/Search';
+import PostContainer from './components/PostContainer/PostContainer.js';
+import Post from './components/PostContainer/Post';
+import CommentSection from './components/CommentSection/CommentSection';
+import Comment from './components/CommentSection/Comment';
 
 class App extends Component {
   constructor() {
@@ -12,10 +17,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-        </header>
-        <p className="App-intro">
-        </p>
+      <h1 className="App-title">Instantgram</h1>
+      <Search />
+      <Post />
+      <CommentSection dummyData={this.state.dummyData}/>
+
       </div>
     );
   }
