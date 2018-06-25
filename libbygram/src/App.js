@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import dummyData from './DummyData';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer.js';
 
@@ -17,7 +18,10 @@ class App extends Component {
         <header className="App-header">
         <SearchBar />
         </header>
-        <PostContainer post={this.state.post}/>
+        <div className="app-post">
+        <PostContainer />
+        {/* this was in postcontainer above post={this.state.post} */}
+      </div>
       </div>
     );
   }

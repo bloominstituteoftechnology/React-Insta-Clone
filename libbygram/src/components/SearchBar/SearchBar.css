@@ -1,4 +1,18 @@
 .searchbar-wrapper {
     display: flex;
-    justify-content: space-evenly;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.searchbar-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.searchbar-center {
+    display: flex;
+    justify-content: center;
+}
+
+.searchbar-right {    
+    justify-content: flex-end;
 }
