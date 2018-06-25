@@ -3,31 +3,41 @@ import './PostContainer.css';
 import dummyData from '../../DummyData';
 // import CommentSection from './CommentSection';
 
-const PostContainer = props => {
+class PostContainer extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        thumbnailUrl: "",
+        username: "",
+        imageUrl: "",
+        likes: 0,
+        timestamp: "",
+        comments: []
+      }
+    }
+
+render() {
     return (
-<div className="post-container">
-<div className="post-header">
-     <img src={this.props.thumbnailUrl} alt="User Thumbnail"/>
-     <h1>{this.props.username}</h1>
+    <div className="post-container">
+    <div className="post-header">
+     <img src={this.thumbnailUrl} alt="User Thumbnail"/>
+     <h1>{this.username}</h1>
      </div>
      <div className="post-main">
-     {this.props.post.map(post => {
-         return (
-             <div className="post-content" key={this.props.id}>
-             {this.props.imageUrl} {this.props.text}
+             <div className="post-content" key={this.id}>
+             {this.imageUrl} {this.text}
          </div>
-         )
-        })}
+        )}
      {/* <img className="post-image" src={this.props.image} alt="Main Post"/> */}
            </div>           
     <div className="post-likes">
-      {this.props.likes} likes
+      {this.likes} likes
          </div>
      {/* <CommentSection comments={this.props.comments} date={this.props.timestamp} id={this.props.id}/> */}
 
 </div>
     );
 }
-
+}
 
 export default PostContainer;

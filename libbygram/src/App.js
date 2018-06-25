@@ -8,7 +8,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      post: []
+      post: [],
+      thumbnailUrl: "",
+      username: "",
+      imageUrl: "",
+      likes: 0,
+      timestamp: "",
+      comments: []
     }
   }
   
