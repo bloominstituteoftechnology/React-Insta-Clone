@@ -1,6 +1,7 @@
 import React from "react";
 import "./PostContainer.css";
 import { Container, Row, Col } from "reactstrap";
+import PostHeader from "./PostHeader";
 
 const PostContainer = props => {
   return (
@@ -11,7 +12,8 @@ const PostContainer = props => {
           md={{ size: 8, offset: 2 }}
           className="post-container-wrapper"
         >
-          <span className="user">{props.posts[0].username}</span>
+          <img src={props.posts[0].thumbnailUrl} alt="" />
+          <PostHeader />
         </Col>
       </Row>
     </Container>
