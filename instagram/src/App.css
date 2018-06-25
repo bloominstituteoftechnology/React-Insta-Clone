@@ -1,0 +1,83 @@
+/* .App {
+  text-align: center;
+} */
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Search Bar */
+body {
+  background: #FAFAFA !important;
+}
+
+.container {
+  height: 100px;
+  width: 100%;
+  padding: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1)
+}
+
+.fa-instagram::before{
+  border-right: 1px solid black;
+  padding-right: 25px;
+}
+
+/* Post Container */
+
+.bold-text {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.comment {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.card-header {
+  background: white !important;
+}
+
+.comment-input {
+  border: none;
+}
+
+.comment-input {
+  width: 100%;
+}
+
+.comment-input:focus{
+  outline: none;
+}
+
+/* Login */
+.login {
+  padding-top: 50px;
+  width: 500px;
+  margin: auto;
+}
