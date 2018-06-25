@@ -5,6 +5,7 @@ const dummyData = [
         imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/557a29d3526bc7f813c2a784d82de7d3/5B4E3E05/t51.2885-15/e35/26065916_2007800899433580_5879937492399947776_n.jpg',
         likes: 400,
         timestamp: "July 17th 2017, 12:42:40 pm",
+        id: 1,
         comments: [
             {
                 username: "philzcoffee",
@@ -26,6 +27,7 @@ const dummyData = [
         imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/830c01ad7ceb325547fd1d4d1a1e6897/5B465520/t51.2885-15/e35/25006313_192089151354555_3374696275667582976_n.jpg',
         likes: 4307,
         timestamp: "July 15th 2017, 03:12:09 pm",
+        id: 2,
         comments: [
             {
                 username: "twitch",
@@ -55,6 +57,7 @@ const dummyData = [
         imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/22618be7ee2a2b676d13e8d70d7d5e08/5B40BF6B/t51.2885-15/e35/25038917_1978298569058775_6081161469041311744_n.jpg',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
+        id: 3,
         comments: [
             {
                 username: "playhearthstone",

@@ -40,6 +40,6 @@
 
 #### Stretch Problems (Day II)
 
-- Persist your data using `localhost`. If done correctly, you will be able to refresh your page and still see your new comments.
-- Add the ability to delete a comment from your data. If your data is in `localhost`, make sure to delete it from there as well.
+- Persist your data using `localStorage`. If done correctly, you will be able to refresh your page and still see your new comments.
+- Add the ability to delete a comment from your data. If your data is in `localStorage`, make sure to delete it from there as well.
 - Implement a third-party library that does "fuzzy" searches into your search bar functionality (ie - search terms that aren't exact, like "phils" or "coffeephilz", would still return the username "philzcoffe").
