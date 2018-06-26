@@ -1,6 +1,6 @@
 import React from 'react';
 import './CommentSection.css';
-import Comment from '../Comment/Comment.js'
+import Comment from '../Comment/Comment.js';
 
 const CommentSection = (props) => {
   return (
@@ -20,5 +20,6 @@ const CommentSection = (props) => {
     </div>
   );
 }
+
 
 export default CommentSection;

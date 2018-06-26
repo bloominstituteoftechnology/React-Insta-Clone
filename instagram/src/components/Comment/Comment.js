@@ -1,5 +1,6 @@
 import React from 'react';
 import './Comment.css';
+import PropTypes from 'prop-types';
 
 const Comment = (props) => {
   return (
@@ -8,5 +9,10 @@ const Comment = (props) => {
     </div>
   );
 }
+
+Comment.propTypes = {
+  username: PropTypes.string,
+  comment: PropTypes.srting
+};
 
 export default Comment;
