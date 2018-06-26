@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
+import moment from 'moment';
 
 const PostContainer = (props) => {
   return (
@@ -9,11 +10,11 @@ const PostContainer = (props) => {
       <img className="thumbnail" src={props.post.thumbnailUrl} alt="thumbnail" />
       <img className="image" src={props.post.imageUrl} alt="image" />
       <div>{props.post.likes}</div>
-      <div>{props.post.timestamp}</div>
+      <div>{moment().format(props.post.timestamp)}</div>
       {props.post.comments.map((comment, index) => (
         <CommentSection key={`${comment.username} ${index}`} comment={comment} />
       ))}
-      <input type="text" placeholder="add comment" />
+      <input type="text" placeholder="Add a comment..." />
     </div>
   );
 };
