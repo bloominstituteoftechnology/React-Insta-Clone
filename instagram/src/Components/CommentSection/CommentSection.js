@@ -1,9 +1,10 @@
 import React from 'react';
 
-const CommentSection = () => {
+const CommentSection = props => {
     return (
         <div className='comments-section'>
-            <span> ~userID goes here ~  ~ Text goes here ~</span>
+            <span>{props.comment.username}</span> 
+            <span>{props.comment.text}</span>
         </div>
     );
 }

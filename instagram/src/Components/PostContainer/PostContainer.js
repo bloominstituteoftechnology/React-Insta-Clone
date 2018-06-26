@@ -6,21 +6,27 @@ const PostContainer = props => {
     return (
         <div className='post-container'>
             <div className='post-header'>
-                <img className='user-thumbnail' src='' alt='User thumbnail image'/>
-                <span>~ UserID goes Here ~</span>
+                <img className='user-thumbnail' src={props.posts.thumbnailUrl} alt='User thumbnail image'/>
+                <span>{props.posts.username}</span>
             </div>
-            <div className='post-image'>
-                ~ Post Image goes here ~
-            </div>
+            <img className='post-image' src={props.posts.imageUrl} alt='Instagram Image'/>
             <div className='post-content'>
                 <div className='icon-bar'>
                     <i className='far fa-heart'></i>
                     <i className='far fa-comment'></i>
                 </div>
                 <div className='likes-count'>
-                    ~ Likes count goes here ~
+                    {props.posts.like}
                 </div>
-                <CommentSection />
+                <div className='comment-container'>
+                    {props.posts.comments.map( comment => {
+                        return (
+                            <CommentSection
+                                comment={comment}
+                            />
+                        );
+                    })}
+                </div>
             </div>
         </div>
     );

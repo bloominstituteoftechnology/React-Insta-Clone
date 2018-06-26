@@ -9,9 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: [
-        <dummyData />
-      ],
+      dummyData: dummyData,
       newPost: ''
     }
   }
@@ -32,10 +30,10 @@ class App extends Component {
           </div>
         </div>
         <div className='posts'>
-          {this.state.posts.map( post => {
+          {this.state.dummyData.map( post => {
             return (
               <PostContainer
-                posts={this.state.posts}
+                posts={post}
               />
             );
           })}
