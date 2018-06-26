@@ -24,9 +24,9 @@ class App extends Component {
           </div>
           <SearchBar />
           <div className='header-icon-bar'>
-            <img src={require('./imgs/circle-icon.png')} className='circle-icon'/>
-            <img src={require('./imgs/heart-icon.png')} className='heart-icon'/>
-            <img src={require('./imgs/person-icon.png')} className='person-icon'/>
+            <img src={require('./imgs/circle-icon.png')} className='circle-icon' alt='circle icon'/>
+            <img src={require('./imgs/heart-icon.png')} className='heart-icon' alt='heart icon'/>
+            <img src={require('./imgs/person-icon.png')} className='person-icon' alt='person icon'/>
           </div>
         </div>
         <div className='posts'>

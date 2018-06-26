@@ -12,3 +12,34 @@
 .post-image {
     width: 100%;
 }
+
+.comment-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comments {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.add-comment {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    line-height:40px;
+}
+
+.init {
+    color: #8E8E8E;
+}
+
+.form {
+    display: none;
+}
+
+.expandable-menu {
+    font-weight: bold;
+    vertical-align: center;
+}
