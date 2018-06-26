@@ -13,10 +13,11 @@ const PostContainer = (props) => {
       {props.post.comments.map((comment, index) => (
         <CommentSection key={`${comment.username} ${index}`} comment={comment} />
       ))}
+      <input type="text" placeholder="add comment" />
     </div>
   );
 };
-
+//passing down each comment after mapping through it to comment section
 export default PostContainer;
 
 PostContainer.propTypes = {

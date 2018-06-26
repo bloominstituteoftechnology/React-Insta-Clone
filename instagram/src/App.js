@@ -29,3 +29,4 @@ class App extends Component {
 
 export default App;
 //mapping state before we pass it
+// passing down each post as 'post' to the post container

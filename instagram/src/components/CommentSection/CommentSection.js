@@ -2,18 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CommentSection = (props) => {
-  console.log(props.post.comments);
+  console.log(props.comment);
+  //comment is passed from post container as props
   return (
     <div>
-      <div>
-        {props.post.comments.map((comment) => (
+      <div>{props.comment.username}</div>
+      <div>{props.comment.text}</div>
+      {/* <div>
+        {props.comment.map((comment) => (
           <div>
             <div>{comment.username}</div>
             <div>{comment.text}</div>
           </div>
         ))}
-      </div>
-      <input type="text" placeholder="add comment" />
+      </div> */}
+      {/* <input type="text" placeholder="add comment" /> */}
     </div>
   );
 };
