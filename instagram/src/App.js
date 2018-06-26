@@ -7,16 +7,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData
+      data: []
     };
   }
-
+  componentDidMount() {
+    this.setState({ data: [...dummyData] }); //adding dummydata to data array
+  }
   render() {
+    console.log(this.state.data);
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png"
+          alt="logo"
+        />
         {this.state.data.map((post) => <PostContainer key={post.username} post={post} />)}
       </div>
     );

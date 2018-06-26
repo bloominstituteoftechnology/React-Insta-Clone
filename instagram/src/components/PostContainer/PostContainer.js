@@ -1,16 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = (props) => {
   return (
     <div>
       <div>{props.post.username}</div>
-      {/* <div>{props.post.thumbnailUrl}</div>
-      <div>{props.post.imageUrl}</div>
+      <img className="thumbnail" src={props.post.thumbnailUrl} alt="thumbnail" />
+      <img className="image" src={props.post.imageUrl} alt="image" />
       <div>{props.post.likes}</div>
-      <div>{props.post.timestamp}</div> */}
-      {/* <div>{props.post.comments}</div> */}
-      {props.post.map((comment) => <PostContainer key={props.post.username} comment={comment} />)}
+      <div>{props.post.timestamp}</div>
+      {props.post.comments.map((comment, index) => (
+        <CommentSection key={`${comment.username} ${index}`} comment={comment} />
+      ))}
     </div>
   );
 };
@@ -23,7 +25,6 @@ PostContainer.propTypes = {
     thumbnailUrl: PropTypes.string,
     imageUrl: PropTypes.string,
     likes: PropTypes.number,
-    timestamp: PropTypes.string,
-    comments: PropTypes.array
+    timestamp: PropTypes.string
   })
 };
