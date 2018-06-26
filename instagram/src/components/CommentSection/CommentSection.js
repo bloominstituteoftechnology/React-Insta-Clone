@@ -1,5 +1,6 @@
 import React from "react";
 import Comment from "./Comment";
+import PropTypes from "prop-types";
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -49,5 +50,10 @@ class CommentSection extends React.Component {
     );
   }
 }
+
+CommentSection.propTypes = {
+  username: PropTypes.string,
+  text: PropTypes.string
+};
 
 export default CommentSection;
