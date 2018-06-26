@@ -43,3 +43,7 @@ input {
     font-size: 24px;
     margin-right: 30px;
 }
+
+.far.fa-heart.thisheart {
+    margin-right: 30px;
+}

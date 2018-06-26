@@ -39,3 +39,24 @@
 .usr {
     font-weight: bold;
 }
+
+.icons {
+    display: flex;
+    margin: 10px 10px 5px 15px;;
+}
+
+.likes {
+    display: flex;
+    margin: 7px 0 10px 17px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+i.far.fa-heart {
+    margin-right: 15px;
+}
+
+i.far.fa-comment {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}

@@ -12,7 +12,7 @@ const SearchBar = () => (
         </div>
         <div className="navigation-logos">
             <i className="far fa-compass"></i>
-            <i className="far fa-heart"></i>
+            <i className="far fa-heart thisheart"></i>
             <i className="far fa-user"></i>
         </div>
     </div>

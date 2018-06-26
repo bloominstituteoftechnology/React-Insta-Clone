@@ -1,27 +1,44 @@
 import React from 'react';
 import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
+import Likes from './Likes';
 import './PostStyles.css';
 import PropTypes from 'prop-types';
 
-const Post = props => {
+class Post extends React.Component {
   // console.log(props)
+  constructor(props) {
+    super(props);
+    this.state = {
+      likes: props.post.likes
+    }
+  }
+
+  addLike = e => {
+    e.preventDefault();
+    const likes = this.state.likes + 1;
+    this.setState({ likes })
+  }
+
+  render() {
     return (
       <div className="post-border">
         <PostHeader
-          username={props.post.username}
-          thumbnailUrl={props.post.thumbnailUrl}
+          username={this.props.post.username}
+          thumbnailUrl={this.props.post.thumbnailUrl}
         />
         <div className="post-image-wrapper">
           <img
             alt="post thumbnail"
             className="post-image"
-            src={props.post.imageUrl}
+            src={this.props.post.imageUrl}
           />
         </div>
-        <CommentSection comments={props.post.comments} />
+        <Likes likes={this.state.likes} addLike={this.addLike}/>
+        <CommentSection comments={this.props.post.comments} />
       </div>
     );
+  };
 };
 
 Post.propTypes = {
