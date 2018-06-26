@@ -2,7 +2,7 @@ import React from "react";
 import "./SearchBar.css";
 import { Container, Row, Col } from "reactstrap";
 
-const SearchBar = () => {
+const SearchBar = ({ search }) => {
   return (
     <Container className="search-bar">
       <Row>
@@ -13,7 +13,7 @@ const SearchBar = () => {
           </h1>
         </Col>
         <Col sm="4">
-          <input type="search" placeholder="Search" />
+          <input type="search" placeholder="Search" onChange={search} />
         </Col>
         <Col sm="4" className="right-icons">
           <i className="fa fa-compass fa-2x" />

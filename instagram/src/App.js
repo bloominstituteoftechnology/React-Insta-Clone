@@ -8,17 +8,29 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: dummyData
+      posts: [],
+      search: ""
     };
   }
 
+  componentDidMount() {
+    this.setState({ posts: dummyData });
+  }
+
+  searchHandler = event => {
+    this.setState({ search: event.target.value });
+  };
+
   render() {
+    const { search } = this.state;
+    const filteredSearch = this.state.posts.filter(post => {
+      return post.username.toLowerCase().indexOf(search) !== -1;
+    });
+
     return (
       <div className="App">
-        <SearchBar />
-        {this.state.posts.map((post, i) => (
-          <PostContainer key={i} post={post} />
-        ))}
+        <SearchBar search={this.searchHandler} />
+        {filteredSearch.map((post, i) => <PostContainer key={i} post={post} />)}
       </div>
     );
   }

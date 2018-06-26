@@ -7,13 +7,18 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: this.props.comments, // This brings in only the comments from dummy data
-      comment: "" // this is a new state where we will push our new comments into
+      comment: "", // this is a new state where we will push our new comments into
+      like: 0
     };
   }
 
   commentHandler = event => {
     // This is an event hander. This will handle the input of the comment.
     this.setState({ comment: event.target.value }); // Here we will update state of comment and not comments.
+  };
+
+  likeHandler = event => {
+    this.setState({ like: this.state.like + 1 });
   };
 
   addComment = event => {
@@ -30,9 +35,9 @@ class CommentSection extends React.Component {
     const { comments } = this.state;
     return (
       <div>
-        <i className="fa fa-heart" />
+        <i onClick={this.likeHandler} className="fa fa-heart" />
         <i className="fa fa-comment" />
-        <span>{likes} likes</span>
+        <span>{this.state.like} likes</span>
 
         {comments.map((comment, i) => (
           <Comment username={comment.username} text={comment.text} key={i} /> // Mapping over the comments then rendering them.
