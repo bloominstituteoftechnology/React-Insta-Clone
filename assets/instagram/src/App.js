@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import instagram from "./InstagramData";
-import PostsContainer from "./components/PostsContainer/PostsContainer";
+import PostContainer from "./components/PostContainer/PostContainer";
 import SearchBar from "./components/SearchBar/SearchBarContainer";
 
 class App extends Component {
@@ -17,10 +17,10 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         <PostContainer posts={this.state.post.username} />
-        {this.state.instagram.posts(post => 
+        {this.state.instagram.posts}(post =>
       </div>
     );
   }
 }
 
-export default App;
+export default PostContainer;
