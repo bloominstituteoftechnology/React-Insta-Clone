@@ -1,13 +1,15 @@
 import React from "react";
 import "./CommentStyles.css";
 
-const CommentInput = () => {
+const CommentInput = (props) => {
     return (
         <div className="addComment">
             <form>
                 <input 
                     type="text" 
                     placeholder="add comment... " 
+                    name="comment"
+                    onChange={props.addNewComment}
                 
                 
                 />
