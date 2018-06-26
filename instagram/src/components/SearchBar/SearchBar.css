@@ -1,0 +1,37 @@
+.insta-logo {
+    width: 50px;
+    height: 40px;
+    padding-right: 5px;
+    border-right: 1px solid gray;
+    font-weight: lighter;
+    margin-top: 18px;
+    margin-right: 14px;
+
+}
+
+.title {
+    font-family: 'Playball', cursive;
+    margin-right: 187px;
+}
+
+.search {
+    border-bottom: 1px solid gray;
+    padding: 5px;
+    display: flex;
+
+}
+
+
+.search-form {
+    margin-top: 35px;
+    width: 300px;
+
+}
+
+.icons {
+    margin-top: 30px;
+}
+
+.fa-compass, .fa-heart, .fa-user {
+    margin-right: 20px;
+}
