@@ -12,7 +12,7 @@ const Comment = (props) => {
 
 Comment.propTypes = {
   username: PropTypes.string,
-  comment: PropTypes.srting
+  comment: PropTypes.string
 };
 
 export default Comment;
