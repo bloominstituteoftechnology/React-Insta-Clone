@@ -2,8 +2,10 @@ import React from "react";
 import "./PostContainer.css";
 import { Container, Row, Col } from "reactstrap";
 import PostHeader from "./PostHeader";
+import PostImage from "./PostImage";
+import CommentSection from "../CommentSection/CommentSection";
 
-const PostContainer = props => {
+const PostContainer = ({ post }) => {
   return (
     <Container>
       <Row>
@@ -12,8 +14,12 @@ const PostContainer = props => {
           md={{ size: 8, offset: 2 }}
           className="post-container-wrapper"
         >
-          <img src={props.posts[0].thumbnailUrl} alt="" />
-          <PostHeader />
+          <PostHeader
+            thumbnailUrl={post.thumbnailUrl}
+            username={post.username}
+          />
+          <PostImage postImage={post.imageUrl} />
+          <CommentSection likes={post.likes} comments={post.comments} />
         </Col>
       </Row>
     </Container>
