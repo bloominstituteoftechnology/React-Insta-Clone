@@ -4,14 +4,12 @@ import "./CommentStyles.css";
 const CommentInput = (props) => {
     return (
         <div className="addComment">
-            <form>
+            <form onSubmit={props.addNewComment}>
                 <input 
                     type="text" 
                     placeholder="add comment... " 
-                    name="comment"
-                    onChange={props.addNewComment}
-                
-                
+                    value={props.comment}
+                    onChange={props.changeComment}
                 />
             </form>
         </div>

@@ -15,12 +15,15 @@ class CommentSection extends React.Component {
 
   addNewComment = e => {
     e.preventDefault();
+    const newComment = { username: "Jacob Layton", text: this.state.comment };
     const comments = this.state.comments.slice();
-    comments.push({ username: "Jacob Layton", comment: this.state.comment });
+    comments.push( newComment );
     this.setState({ comments, comment: "" });
   };
 
-
+  changeComment = e => {
+    this.setState({ comment: e.target.value });
+  };
 
   render() {
     return (
@@ -28,7 +31,9 @@ class CommentSection extends React.Component {
       <div className="all-comments">
         {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
         <CommentInput 
+          comment={this.state.comment}
           addNewComment={this.addNewComment}
+          changeComment={this.changeComment}
         />
       </div>
     );
