@@ -5,18 +5,16 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer.js';
 
 class App extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     post: [],
-  //     thumbnailUrl: "",
-  //     username: "",
-  //     imageUrl: "",
-  //     likes: 0,
-  //     timestamp: "",
-  //     comments: []
-  //   }
-  // }
+  constructor() {
+    super();
+    this.state = {
+      post: []
+    }
+  }
+
+  componentDidMount() {
+    this.setState({ post: dummyData })
+  }
   
   render() {
     return (
@@ -25,8 +23,7 @@ class App extends Component {
         <SearchBar />
         </header>
         <div className="app-post">
-        <PostContainer />
-        {/* this was in postcontainer above post={this.state.post} */}
+        <PostContainer post={this.state.post} />
       </div>
       </div>
     );

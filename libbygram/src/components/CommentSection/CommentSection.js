@@ -3,12 +3,12 @@ import React from 'react';
 const CommentSection = props => {
     return (
 <div>
-    {props.comments.map(i => {
+    {props.comments.map(comment => {
         return (
             <div>
-            <p key={i.username + i.text}>
-            <span className="comment-user">{i.username}</span>
-            <span className="comment-text">{i.text}</span>
+            <p key={this.username + this.text}>
+            <span className="comment-user">{comment.username}</span>
+            <span className="comment-text">{comment.text}</span>
             </p>
             </div>
         );
