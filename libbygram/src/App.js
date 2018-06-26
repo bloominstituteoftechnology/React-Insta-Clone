@@ -5,18 +5,18 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer.js';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      post: [],
-      thumbnailUrl: "",
-      username: "",
-      imageUrl: "",
-      likes: 0,
-      timestamp: "",
-      comments: []
-    }
-  }
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     post: [],
+  //     thumbnailUrl: "",
+  //     username: "",
+  //     imageUrl: "",
+  //     likes: 0,
+  //     timestamp: "",
+  //     comments: []
+  //   }
+  // }
   
   render() {
     return (

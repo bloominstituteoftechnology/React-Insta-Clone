@@ -1,18 +1,35 @@
 .searchbar-wrapper {
     display: flex;
+    padding: 2px;
     border-bottom: 1px solid whitesmoke;
+    justify-content: space-between;
 }
 
 .searchbar-left {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 .searchbar-center {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    align-content: center;
 }
 
 .searchbar-right {    
-    justify-content: flex-end;
+    justify-content: space-around;
 }
+
+.logo {
+    height: 20px;
+
+}
+
+.fab .fa-instagram {
+    animation: App-logo-spin infinite 20s linear;
+}
+
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }

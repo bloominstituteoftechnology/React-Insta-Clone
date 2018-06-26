@@ -1,42 +1,57 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './PostContainer.css';
 import dummyData from '../../DummyData';
-// import CommentSection from './CommentSection';
+import CommentSection from '../CommentSection/CommentSection';
+import Comment from '../CommentSection/Comment';
 
 class PostContainer extends React.Component {
     constructor() {
       super();
       this.state = {
-        thumbnailUrl: "",
         username: "",
+        thumbnailUrl: "",
         imageUrl: "",
         likes: 0,
         timestamp: "",
         comments: []
-      }
+      };
     }
+
+componentDidMount() {
+    this.setState({
+        username: dummyData.map(i => i.username),
+        thumbnailUrl: dummyData.map(i => i.thumbnailUrl),
+        imageUrl: dummyData.map(i => i.imageUrl),
+        likes: dummyData.map(i => i.likes),
+        timestamp: dummyData.map(i => i.timestamp),
+        comments: dummyData.map(i => i.comments)
+    })
+}
 
 render() {
     return (
+        dummyData.map(i => {
+            return ( 
     <div className="post-container">
     <div className="post-header">
-     <img src={this.thumbnailUrl} alt="User Thumbnail"/>
-     <h1>{this.username}</h1>
+     <img src={i.thumbnailUrl} alt="User Thumbnail"/>
+     <h1>{i.username}</h1>
      </div>
-     <div className="post-main">
-             <div className="post-content" key={this.id}>
-             {this.imageUrl} {this.text}
-         </div>
-        )}
-     {/* <img className="post-image" src={this.props.image} alt="Main Post"/> */}
-           </div>           
-    <div className="post-likes">
-      {this.likes} likes
-         </div>
-     {/* <CommentSection comments={this.props.comments} date={this.props.timestamp} id={this.props.id}/> */}
-
+    <div className="post-img">
+        <img src={i.imageUrl} alt="Post Image" />
+        </div>
+        <p className="post-icons">
+        <i className="fa fa-heart" />
+        <i className="far fa-comment" />
+    <p className="post-likes">{i.likes}</p>
+    </p>
+    <CommentSection comments={i.comments}  />
+    <p className="post-timestamp">{i.timestamp}</p>
+    <Comment />
 </div>
     );
+})
+);
 }
 }
 
