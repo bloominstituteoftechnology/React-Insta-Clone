@@ -3,12 +3,19 @@ import Comment from './Comment'
 
 const CommentSection = props => {
     return (
+        // <div>
+        //     {props.post.comments.map (comment => (
+        //         <Comment comment = {comment}/>
+        //     ))}
+        // </div>
         <div>
-            Comment Section!!!!!!!!!!!!!!
-            {props.post.comments.map (comment => (
-                <Comment comment = {comment}/>
+            {props.comments.map (comment => (
+                <Comment 
+                    commentUsername = {comment.username}
+                    commentText = {comment.text}
+                />
             ))}
-        </div>
+        </div> 
     );
 }
 export default Comment;

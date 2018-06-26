@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
-import CommentSection from './components/CommentSection/CommentSection';
 import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends Component {
@@ -18,7 +17,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">IG APP CLONE</h1>
         </header>
-
+        <SearchBar />
         <PostContainer postData = {this.state.postData}/>        
       </div>
     );
