@@ -2,10 +2,10 @@ import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection'
 
-const PostContainer = () => {
+const PostContainer = (props) => {
   return (
     <div>
-      <p>What</p>
+      <img src={props.post.imageUrl}/>
       <CommentSection/>
     </div> 
   );

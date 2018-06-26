@@ -20,7 +20,7 @@ class App extends Component {
             return (
               <PostContainer 
                 key={obj.username}
-                oneUser={obj}
+                post={obj}
               />
             );
           })
