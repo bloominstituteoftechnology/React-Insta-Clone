@@ -20,7 +20,7 @@ export default PostContainer;
 PostContainer.propTypes = {
   post: PropTypes.shape({
     username: PropTypes.string,
-    thumbnailUrl: PropTypes.sting,
+    thumbnailUrl: PropTypes.string,
     imageUrl: PropTypes.string,
     likes: PropTypes.number,
     timestamp: PropTypes.string,
