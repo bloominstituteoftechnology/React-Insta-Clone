@@ -1,5 +1,6 @@
 import React from 'react';
 import './CommentSection.css';
+import Comment from '../Comment/Comment.js'
 
 const CommentSection = (props) => {
   return (
@@ -7,7 +8,11 @@ const CommentSection = (props) => {
       {
         props.comments.map(comment => {
           return (
-            <p key={comment.text}>{comment.text}</p>
+            <Comment 
+              key={comment.text}
+              comment={comment.text}
+              username={comment.username}
+            />
           );
         })
       }       
