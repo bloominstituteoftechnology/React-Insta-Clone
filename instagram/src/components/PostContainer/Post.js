@@ -1,20 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PostHeader from './PostHeader'
+import CommentSection from '../CommentSection/CommentSection';
+import './Posts.css';
 
 const Post = props => {
-    return 
-    <div className="post-content">
-    <img className='post-thumb' src={props.post.thumbnailUrl}/>
-    {props.post.username}
-    <img className='post-full' src={props.post.imageUrl}/>
-    </div>
+    return (
+        <div className="post-border">
+          <PostHeader
+            username={props.post.username}
+            thumbnailUrl={props.post.thumbnailUrl}
+          />
+          <div className="post-image-wrapper">
+            <img className="post-image"
+              src={props.post.imageUrl}
+            />
+          </div>
+          <CommentSection comments={props.post.comments} />
+        </div>
+    );
 };
 
 export default Post;
-
-Post.propTypes = {
-    username: PropTypes.string,
-    thumbnailUrl: PropTypes.string,
-    imageURL: PropTypes.string,
-    likes: PropTypes.number
-};
