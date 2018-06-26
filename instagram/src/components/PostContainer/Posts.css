@@ -16,7 +16,8 @@
   }
   
   .post-image {
-    width: 100%;
+    width: 99.5%;
+    margin: 5px auto;
   }
   
   .post-header {
@@ -50,8 +51,16 @@
       justify-content: flex-start;
       align-items: center;
       margin-right: 400px;
+      font-weight: 550;
+      font-size: 14px;
   }
 
   .fa-comment {
       flex-direction: row-reverse;
+      font-size: 24px;
   }
+
+  .fa-heart {
+      font-size: 24px;
+  }
+

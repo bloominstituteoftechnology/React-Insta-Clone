@@ -17,8 +17,9 @@ const Post = props => {
           <div className="post-icons">
           <i className="far fa-heart"/>
           <i class="far fa-comment"></i>
-          <span><br />{props.post.likes} likes</span> 
-        </div>
+          <span className="likes-text"><br />{props.post.likes} likes</span> 
+          </div>
+          
           <CommentSection comments={props.post.comments} />
         </div>
     );

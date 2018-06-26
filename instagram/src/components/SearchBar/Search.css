@@ -10,10 +10,9 @@
   }
   
   .image-wrapper {
-    height: 50px;
-    width: 40px;
-    margin-top: 5px;
-    border-right: 1px solid black;
+    height: 20px;
+    width: 35px;
+    margin-top: 10px;
   }
   
   .logo-image {
@@ -43,8 +42,20 @@
     width: 200px;
     height: 20px;
     margin: 20px auto;
+    font-size: 14px;
+    background: rgba(240, 239, 239, 0.986);
   }
 
   .logo-wrapper {
       height: 40px;
+  }
+
+  .search-icons .far {
+      font-size: 18px;
+      color: rgb(88, 91, 94);
+  }
+
+  .ig-cam {
+      padding: 10px;
+      border-right: 1px solid black;
   }
