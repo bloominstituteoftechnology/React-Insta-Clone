@@ -1,18 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import instagram from "./InstagramData";
+import PostsContainer from "./components/PostsContainer/PostsContainer";
+import SearchBar from "./components/SearchBar/SearchBarContainer";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      posts: instagram
+    };
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <SearchBar />
+        <PostContainer posts={this.state.post.username} />
+        {this.state.instagram.posts(post => 
       </div>
     );
   }
