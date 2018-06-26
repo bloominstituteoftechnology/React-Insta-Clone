@@ -4,7 +4,7 @@ import './SearchBar.css';
  const SearchBar = () => {
    return (
      <div>
-       <p>Up</p>
+       <span>Instagram</span><input type="text"/><span>Icons</span>
      </div>
    );
  }

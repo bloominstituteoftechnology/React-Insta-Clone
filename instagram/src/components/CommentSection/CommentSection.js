@@ -4,7 +4,7 @@ import './CommentSection.css';
 const CommentSection = () => {
   return (
     <div>
-      <p>What</p>
+      <input type="text"/>
     </div>
   );
 }
