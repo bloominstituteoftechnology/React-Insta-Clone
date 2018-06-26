@@ -6,10 +6,13 @@ const Search = props => {
     return (
     <div className="search-bar-wrapper">
       <div className="image-wrapper">
+      <i className="fab fa-instagram"></i>
+      </div>
+      <div className="logo-wrapper">
       <img alt="instagram logo" src={iglogo} className="logo-image"/>
       </div>
       <div>
-        <input type="text" placeholder="Search" />
+        <input className="search-bar" type="text" placeholder="Search" />
         </div>
       <div>
         <i className="far fa-compass"/> 

@@ -2,17 +2,23 @@
     border-bottom: 1px solid #3333;
     height: 80px;
     line-height: 70px;
+    max-width: 100%;
+    margin-top: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background: #ffffff;
   }
   
   .image-wrapper {
     height: 50px;
+    width: 40px;
+    margin-top: 5px;
+    border-right: 1px solid black;
   }
   
   .logo-image {
     height: 100%;
+    margin-top: 20px;
   }
   
   .social-wrapper {
@@ -22,4 +28,23 @@
   .social {
     width: 20px;
     height: 20px;
+  }
+
+  .far {
+    display: inline-flex;
+    justify-content: flex-end;
+    width: 30px;
+    height: 20px;
+    padding: 10px;
+    max-width: 50px;
+  }
+
+  .search-bar {
+    width: 200px;
+    height: 20px;
+    margin: 20px auto;
+  }
+
+  .logo-wrapper {
+      height: 40px;
   }

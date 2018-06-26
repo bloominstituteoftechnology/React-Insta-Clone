@@ -1,15 +1,21 @@
 .comment-text {
     text-align: left;
     padding: 2px;
-    margin-left: 4px;
+    margin-left: 15px;
   }
   
   .comment {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
   }
   
   .user {
-    font-weight: 500;
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .comment-bar {
+      height: 40px;
+      width: 95%;
+      margin: 10px auto;
   }

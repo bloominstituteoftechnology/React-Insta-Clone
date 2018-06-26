@@ -1,5 +1,5 @@
 import React from 'react';
-import PostHeader from './PostHeader'
+import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
 import './Posts.css';
 
@@ -11,10 +11,14 @@ const Post = props => {
             thumbnailUrl={props.post.thumbnailUrl}
           />
           <div className="post-image-wrapper">
-            <img className="post-image"
-              src={props.post.imageUrl}
+            <img className="post-image" src={props.post.imageUrl} alt="user-pic"
             />
           </div>
+          <div className="post-icons">
+          <i className="far fa-heart"/>
+          <i class="far fa-comment"></i>
+          <span><br />{props.post.likes} likes</span> 
+        </div>
           <CommentSection comments={props.post.comments} />
         </div>
     );

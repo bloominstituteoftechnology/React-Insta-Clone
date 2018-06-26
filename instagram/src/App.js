@@ -14,7 +14,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <h1 className="App-title">Instantgram</h1>
       <Search />
       <PostContainer posts={this.state.posts}/>
       </div>
