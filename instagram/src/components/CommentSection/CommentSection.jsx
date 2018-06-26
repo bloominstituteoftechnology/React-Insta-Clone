@@ -2,6 +2,7 @@ import React from "react";
 import Comment from "./Comment";
 import CommentInput from "./CommentInput";
 import "./CommentStyles.css";
+import PropTypes from 'prop-types';
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -19,6 +20,15 @@ class CommentSection extends React.Component {
       </div>
     );
   }
+}
+
+CommentSection.propTypes = {
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string,
+      username: PropTypes.string
+    })
+  )
 }
 
 export default CommentSection;

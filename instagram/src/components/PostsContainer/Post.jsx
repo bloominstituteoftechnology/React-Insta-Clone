@@ -2,8 +2,10 @@ import React from 'react';
 import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostStyles.css';
+import PropTypes from 'prop-types';
 
 const Post = props => {
+  // console.log(props)
     return (
       <div className="post-border">
         <PostHeader
@@ -21,5 +23,13 @@ const Post = props => {
       </div>
     );
 };
+
+Post.propTypes = {
+  post: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string
+  })
+}
 
 export default Post
