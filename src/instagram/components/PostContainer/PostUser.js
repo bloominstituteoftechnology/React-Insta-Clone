@@ -1,19 +1,25 @@
 import React from 'react';
+import './Post.css'
 
 const PostUser = user => {
     console.log(user)
-    return <div>
+    return <div className='container'>
         {user.user.map(user => {
             return <div key={Math.random()}>
-                <img src={user.thumbnailUrl} alt='img' />
+            <div className='user-head'>
+                <img className='user-img' src={user.thumbnailUrl} alt='img' />
                 {user.username}
                 {console.log(user)}
-                <div><img src={user.imageUrl} alt='sumn' /></div>
-                <div>{user.likes}</div>
-                <div>{user.comments.map(item =>
-                    <p key={Math.random()}><strong>{item.username}</strong> {item.text}</p>
+                </div>
+                <div><img className='post-pic' src={user.imageUrl} alt='sumn' /></div>
+
+                <div className='interact'>{user.likes}</div>
+
+                <div className='comments'>{user.comments.map(item =>
+                    <p key={item}><strong>{item.username}</strong> {item.text}</p>
                 )}</div>
-                <div>
+
+                <div className='add'>
                     <input
                         type='text'
                         name='addComment'
