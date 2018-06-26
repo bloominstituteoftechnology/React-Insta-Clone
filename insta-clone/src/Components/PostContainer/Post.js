@@ -1,17 +1,26 @@
 import React from 'react';
-import PropTypes from "prop-types";
+
+import Posthead from './Posthead';
+
+
 
 const Post = props => {
-    return <div> Post: {props.Post.username}</div> 
+  return (
+    <div className="post-border">
+      <Posthead
+        username={props.post.username}
+        thumbnailUrl={props.post.thumbnailUrl}
+      />
+      <div className="post-image-wrapper">
+        <img
+          alt="post thumbnail"
+          className="post-image"
+          src={props.post.imageUrl}
+        />
+      </div>
+      
+    </div>
+  );
 };
-
-Post.propTypes = {
-post: PropTypes.shape({
-username: PropTypes.string,
-
-
-})
-}
-
 
 export default Post;

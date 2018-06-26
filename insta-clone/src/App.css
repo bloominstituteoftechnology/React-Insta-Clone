@@ -26,3 +26,47 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.pic{
+  width: 400px;
+}
+
+.pfp {
+  width: 25px;
+  border-radius: 15px;
+}
+
+.posty{
+  width: 400px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  box-shadow: 1px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+ 
+}
+
+h1{
+  text-align: left;
+  font-size: 18px;
+}
+
+
+.likes{
+  font-size: 12px;
+  font-weight: Bold;
+  text-align: left;
+}
+
+.time {
+  font-size: 12px;
+  color: grey;
+  text-align: left;
+}
+
+h2{
+
+}
