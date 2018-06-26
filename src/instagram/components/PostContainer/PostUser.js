@@ -13,7 +13,13 @@ const PostUser = user => {
                 <div>{user.comments.map(item =>
                     <p key={Math.random()}><strong>{item.username}</strong> {item.text}</p>
                 )}</div>
-                
+                <div>
+                    <input
+                        type='text'
+                        name='addComment'
+                        placeholder='ADD COMMENT' />
+                </div>
+
             </div>
 
         })}
