@@ -31,7 +31,7 @@ class CommentSection extends React.Component {
   };
 
   render() {
-    const { likes } = this.props; // We are deconstructing the props here. This way we dont have to always call props.
+    // We are deconstructing the props here. This way we dont have to always call props.
     const { comments } = this.state;
     return (
       <div>

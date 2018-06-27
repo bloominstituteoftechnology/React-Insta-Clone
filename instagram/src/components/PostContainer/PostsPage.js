@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "/Users/Dan/Documents/Lambda/React/React-Insta-Clone/instagram/src/App.css";
-import dummyData from "/Users/Dan/Documents/Lambda/React/React-Insta-Clone/instagram/src/dummy-data.js";
+import "../../App.css";
+import dummyData from "../../dummy-data.js";
 import SearchBar from "../SearchBar/SearchBar";
 import PostContainer from "./PostContainer";
 
