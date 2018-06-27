@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import instagram from "./InstagramData";
-import PostContainer from "./components/PostContainer/PostContainer";
-import SearchBar from "./components/SearchBar/SearchBarContainer";
+import PostContainer from "./Components/PostContainer/PostContainer";
+import SearchBar from "./Components/SearchBar/SearchBarContainer";
 
 class App extends Component {
   constructor() {
