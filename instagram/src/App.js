@@ -19,7 +19,7 @@ class App extends Component {
         this.state.posts.map(posts => {
           return
         })
-        <p className="App-intro">
+        <p className="App-intro" key=
           Name: {}
         </p>
       </div>
