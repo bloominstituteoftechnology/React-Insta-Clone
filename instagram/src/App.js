@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import SearchBar from './components/SearchBar/SearchBarContainer';
+import PostsContainer from './components/PostContainer/PostsContainer';
 // import dummyData from './dummy-data';
 
 class App extends Component {
@@ -12,16 +14,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-        
-          <h1 className="App-title">Instagram</h1>
-        </header>
-        this.state.posts.map(posts => {
-          return
-        })
-        <p className="App-intro" key=
-          Name: {}
-        </p>
+       <SearchBar />
+       <PostsContainer posts={this.state.posts} /> 
       </div>
     );
   }
