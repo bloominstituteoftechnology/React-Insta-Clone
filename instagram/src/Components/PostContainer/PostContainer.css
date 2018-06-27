@@ -13,6 +13,10 @@
     width: 100%;
 }
 
+.likes-count {
+    border: 1px solid red;
+}
+
 .comment-container {
     width: 100%;
     display: flex;

@@ -1,15 +1,16 @@
 import React from 'react';
 import './PostContainer.css'
 import CommentSection from '../CommentSection/CommentSection'
+import PropTypes from 'prop-types';
 
 
 class PostContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: props.comments,
+            comments: props.posts.comments,
             newComment: '',
-            likes: props.likes,
+            likes: props.posts.likes,
         }
     }
 
@@ -34,8 +35,10 @@ class PostContainer extends React.Component {
     }
 
     submitNewCommentHandler = event => {
+        console.log(this.state.comments);
         event.preventDefault();
         const comments = this.state.comments.slice();
+        console.log(comments);
         comments.push({username: 'FakeUsername', text: this.state.newComment});
         this.setState({newComment: '', comments});
         setTimeout(() => {
@@ -43,9 +46,9 @@ class PostContainer extends React.Component {
         }, 500);
     }
 
-    likesCounter = event => {
+    likesCounter = () => {
         let likes = this.state.likes + 1;
-        this.setState({likes})
+        this.setState({ likes });
     }
 
     render() {
@@ -58,17 +61,18 @@ class PostContainer extends React.Component {
                 <img className='post-image' src={this.props.posts.imageUrl} alt='Instagram Post'/>
                 <div className='post-content'>
                     <div className='icon-bar'>
-                        <i className='far fa-heart'></i>
+                        <i className='far fa-heart'
+                            onClick={this.likesCounter}
+                        >
+                        </i>
                         <i className='far fa-comment'></i>
                     </div>
-                    <div className='likes-count'
-                        onClick={this.likesCounter}
-                    >
-                        {this.props.posts.likes}
+                    <div className='likes-count'>
+                        <span>{this.state.likes} Likes</span>
                     </div>
                     <div className='comment-container'>
                         <div className='comments'>
-                            {this.props.posts.comments.map( comment => {
+                            {this.state.comments.map( comment => {
                                 return (
                                     <CommentSection
                                         comments={comment}
@@ -98,6 +102,11 @@ class PostContainer extends React.Component {
     }
 }
 
+PostContainer.propTypes = {
+    posts: PropTypes.shape({
+        likes: PropTypes.number,
+    })
+}
 
  
 export default PostContainer;
