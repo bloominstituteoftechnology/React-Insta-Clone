@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./PostContainer.css";
 import dummyData from "../../DummyData";
 import CommentSection from "../CommentSection/CommentSection";
-import Comment from "../CommentSection/Comment";
+// import Comment from "../CommentSection/Comment";
 
 const PostContainer = props => {
   return (
@@ -23,10 +23,9 @@ const PostContainer = props => {
               <i className="fa fa-heart" />
               <i className="far fa-comment" />
             </div>
-            <p className="post-likes">{post.likes}</p>
+            <p className="post-likes">{post.likes} likes</p>
             <CommentSection comments={post.comments} />
             <p className="post-timestamp">{post.timestamp}</p>
-            <Comment />
           </div>
         );
       })}

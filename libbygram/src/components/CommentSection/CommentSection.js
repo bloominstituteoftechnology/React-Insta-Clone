@@ -1,4 +1,6 @@
 import React from 'react';
+import './CommentSection.css';
+import PropTypes from 'prop-types';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -14,10 +16,17 @@ class CommentSection extends React.Component {
         this.setState({ comments: this.props.comments })
     }
 
+    commentInput = event => {
+        this.setState({ [event.target.name]: event.target.value })
+    };
+
     addNewComment = e => {
         e.preventDefault();
-        const post = this.state.post.slice();
-        post.push({post: post, newPost: '' });
+        const comments = this.state.comments;
+        const newComment = this.state.newComment;
+
+        if (this.newComment !== '') comments.push(newComment);
+        this.setState({ comments: comments, newComment: '' })
       }
 
 
@@ -28,15 +37,29 @@ class CommentSection extends React.Component {
         return (
             <div>
             <p key={this.username + this.text}>
-            <span className="comment-user">{comment.username}</span>
-            <span className="comment-text">{comment.text}</span>
+            <span className="comment-user">{this.username}</span>
+            <span className="comment-text">{this.text}</span>
             </p>
             </div>
         );
     })}
+    <form onSubmit={this.addNewComment} className="comment-input">
+        <input
+        type="text"
+        placeholder="Add a comment as..."
+        value={this.state.newComment}
+        onChange={this.commentInput}
+        ></input>
+        </form>
 </div>
     );
 }
 }
+
+CommentSection.propTypes = {
+    comments: PropTypes.arrayOf(
+        PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
+    )
+};
 
 export default CommentSection;

@@ -31,7 +31,6 @@ class App extends Component {
         </header>
         <div className="app-post">
         <PostContainer post={this.state.post} 
-        addNewComment={this.addNewComment}
         />
       </div>
       </div>
