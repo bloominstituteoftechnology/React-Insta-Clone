@@ -2,13 +2,14 @@ import React from 'react';
 import Comment from './Comment'
 import SubmitComment from './SubmitComment'
 
+// We are using a constructor here because of where it gets called in the lifecycle and logistics of passing data around
 class CommentSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             comments: props.comments,
             comment: ""
-        }
+        };
     }
     // Create a function in CommentSection.js called addNewComment that takes in an event 
     // and an index number. The function will add the comment that is on the event object to 
