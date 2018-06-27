@@ -10,6 +10,13 @@ class CommentSection extends React.Component {
     }
   }
 
+  addNewComment = (e) => {
+    e.preventDefault();
+    if (e.target.commentInput.value) {
+      alert('NewComment');
+    }
+  }
+
   componentDidMount() {
     const comments = this.props.comments;
     this.setState({comments});
@@ -28,8 +35,10 @@ class CommentSection extends React.Component {
               />
             );
           })
-        }       
-        <input type="text"/>
+        }  
+        <form onSubmit={this.addNewComment}>     
+          <input type="text" placeholder="Add a comment..." name="commentInput"/>
+        </form>
       </div>
     );
   }
