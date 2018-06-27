@@ -9,16 +9,13 @@ const PostContainer = props => {
             {props.postData.map(post => (
                 <div>
                     <PostHeader 
-                        // post = {post}
                         username = {post.username}
                         thumbnailURL = {post.thumbnailUrl}
                     />
                     <PostPicture 
-                        // post = {post}
                         imageUrl = {post.imageUrl} 
                         />
                     <CommentSection 
-                        // post = {post} 
                         comments = {post.comments}
                     />
                 </div>
