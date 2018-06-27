@@ -24,7 +24,13 @@ class App extends React.Component {
   }  // "Good place to fetch your data and set your state accordingly."
 
   // LIFECYLE MOUNTING: constructor invoked ---> render called ---> add stuff to DOM ---> componentDidMount invoked (in case there's any asynchronous data we need to handle) 
+  // note that componentDidUpdate() is another method called upon after render 
+  // Summarizing: constructor---> render--->DidMount--->render--->DidUpdate
 
+  componentDidUpdate(prevProps, prevState) {
+    console.log("Prev Props:", prevProps);
+    console.log("Prev State:", prevState);
+  }
 
   render() {
     return (
