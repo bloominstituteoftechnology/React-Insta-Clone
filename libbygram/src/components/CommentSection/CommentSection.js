@@ -13,7 +13,7 @@ class CommentSection extends React.Component {
 
 
     componentDidMount() {
-        this.setState({ comments: this.props.comments })
+        this.setState({ comments: this.state.comments })
     }
 
     commentInput = event => {
@@ -22,7 +22,7 @@ class CommentSection extends React.Component {
 
     addNewComment = e => {
         e.preventDefault();
-        const comments = this.state.comments;
+        const comments = this.state.comments.slice();
         const newComment = this.state.newComment;
 
         if (this.newComment !== '') comments.push(newComment);
@@ -33,7 +33,7 @@ class CommentSection extends React.Component {
     render() {
     return (
 <div>
-    {this.props.comments.map(comment => {
+    {this.state.comments.map(comment => {
         return (
             <div>
             <p key={this.username + this.text}>
