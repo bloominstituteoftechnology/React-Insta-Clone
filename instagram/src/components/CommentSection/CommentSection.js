@@ -20,6 +20,7 @@ class CommentSection extends React.Component {
     const comments = this.state.comments.slice();
     if (e.target.commentInput.value) {
       comments.push({text: e.target.commentInput.value});
+      e.target.commentInput.value = '';
       this.setState({comments: comments})
     }
   }

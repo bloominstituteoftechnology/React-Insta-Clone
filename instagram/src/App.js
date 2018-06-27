@@ -8,7 +8,15 @@ class App extends React.Component {
     super();
     this.state = {
       data: [],
-    }
+      filtered: [],
+    };
+  }
+
+  onSearch = (e) => {
+    alert('search');
+    //let data = this.state.data.slice();
+    //filtered = data.filter(obj => (e.target.search.value === obj.username));
+    //this.setState({filtered});
   }
   
   componentDidMount() {
@@ -18,7 +26,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar onSearch={this.onSearch}/>
         {
           this.state.data.map(obj => {
             return (
