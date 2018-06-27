@@ -12,8 +12,10 @@ class CommentSection extends React.Component {
 
   addNewComment = (e) => {
     e.preventDefault();
+    const comments = this.state.comments.slice();
     if (e.target.commentInput.value) {
-      alert('NewComment');
+      comments.push({text: e.target.commentInput.value});
+      this.setState({comments: comments})
     }
   }
 
