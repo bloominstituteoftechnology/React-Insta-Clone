@@ -1,3 +1,4 @@
+
 const dummyData = [
     {
         username: "philzcoffee",
@@ -55,6 +56,7 @@ const dummyData = [
         imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/22618be7ee2a2b676d13e8d70d7d5e08/5B40BF6B/t51.2885-15/e35/25038917_1978298569058775_6081161469041311744_n.jpg',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
+        id: 3,
         comments: [
             {
                 username: "playhearthstone",
