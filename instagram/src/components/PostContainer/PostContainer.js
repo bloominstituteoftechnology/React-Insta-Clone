@@ -7,7 +7,7 @@ const PostContainer = (props) => {
     <div>
       <img src={props.post.thumbnailUrl} alt={''}/>
       <img src={props.post.imageUrl} alt={''}/>
-      <CommentSection comments={props.post.comments} />
+      <CommentSection likes={props.post.likes} comments={props.post.comments} />
     </div> 
   );
 }

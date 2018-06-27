@@ -7,7 +7,12 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: [],
+      likes: null
     }
+  }
+  addLike = () => {
+   const likes = this.state.likes + 1;
+   this.setState({likes})
   }
 
   addNewComment = (e) => {
@@ -21,12 +26,15 @@ class CommentSection extends React.Component {
 
   componentDidMount() {
     const comments = this.props.comments;
-    this.setState({comments});
+    const likes = this.props.likes;
+    this.setState({comments: comments, likes: likes});
   }
   
   render() {
     return (
       <div>
+        <button onClick={this.addLike}>Like</button>
+        <p>{this.state.likes}</p>
         {
           this.state.comments.map(comment => {
             return (
