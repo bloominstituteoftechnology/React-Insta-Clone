@@ -18,7 +18,7 @@ const PostContainer = props => {
                         imageUrl = {post.imageUrl} 
                         />
                     <CommentSection 
-                        post = {post} 
+                        // post = {post} 
                         comments = {post.comments}
                     />
                 </div>

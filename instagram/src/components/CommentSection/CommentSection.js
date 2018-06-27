@@ -13,6 +13,7 @@ const CommentSection = props => {
                 <Comment 
                     commentUsername = {comment.username}
                     commentText = {comment.text}
+                    comment = {comment}
                 />
             ))}
         </div> 
