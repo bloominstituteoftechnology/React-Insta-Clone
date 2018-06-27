@@ -1,0 +1,17 @@
+
+.post-thumbnail {
+    width: 60px;
+    height: 60px;
+    margin-left: 6px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+
+
+.post-title {
+    font-size: 18px;
+}
+
+.post-header {
+    display: flex;
+}
