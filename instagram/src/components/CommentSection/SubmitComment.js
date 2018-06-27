@@ -3,11 +3,12 @@ import React from 'react';
 const SubmitComment = props => {
     return (
         <div>
-            <form onSubmit = {props.addNewComment}>
+            <form onSubmit = {props.addNewComment} >
                 <input 
                     type = "text" 
                     placeholder = "Add a comment..."
-                    // value = {props.comment}
+                    onChange = {props.onChangeSignal}
+                    value = {props.activeValue}
                 />
             </form>
         </div>

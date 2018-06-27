@@ -18,12 +18,21 @@ class CommentSection extends React.Component {
     // 'Add a comment...' input.
 
     
-    addNewComment = (event,index) => {
+    addNewComment = () => {
         const comments = this.state.comments.slice();
-        comments.push(this.state.comment);
+        const newComment = {
+            username: "default username",
+            text: this.state.comment
+        }
+        comments.push(newComment);
         this.setState({comments: comments, comment: ""});
     }
     
+    changeAddNewCommentHandler = event => {
+        console.log(event.target.value);
+        this.setState({comment:event.target.value});
+    }
+
     render() {
         return (
             <div>
@@ -35,8 +44,9 @@ class CommentSection extends React.Component {
                     />
                 ))}
                 <SubmitComment 
+                    activeValue = {this.state.comment}
+                    onChangeSignal = {this.changeAddNewCommentHandler}
                     addNewComment = {this.addNewComment}
-                    comment = {this.comment}
                 />
             </div>
         );
