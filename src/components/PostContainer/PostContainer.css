@@ -1,0 +1,15 @@
+import React from 'react';
+
+const PostContainer = (props) => {
+ return (
+   <div>
+     <div>{props.post.username}</div>
+     {/* <div>{props.post.thumbnailUrl}</div>
+     <div>{props.post.imageUrl}</div>
+     <div>{props.post.likes}</div>
+     <div>{props.post.timestamp}</div> */}
+     {/* <div>{props.post.comments}</div> */}
+     {props.post.map((comment) => <PostContainer key={props.post.username} comment={comment} />)}
+   </div>
+ );};
+  +export default PostContainer;
