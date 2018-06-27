@@ -17,16 +17,14 @@ class CommentSection extends React.Component {
     }
 
     commentInput = event => {
-        this.setState({ [event.target.name]: event.target.value })
+        this.setState({ comment: event.target.value })
     };
 
-    addNewComment = e => {
-        e.preventDefault();
+    addNewComment = event => {
+        event.preventDefault();
         const comments = this.state.comments.slice();
-        const newComment = this.state.newComment;
-
-        if (this.newComment !== '') comments.push(newComment);
-        this.setState({ comments: comments, newComment: '' })
+        if (this.comment !== '') comments.push({ username:'libbmae', text:this.state.comment });
+        this.setState({ comments, comment: '' })
       }
 
 
@@ -36,9 +34,9 @@ class CommentSection extends React.Component {
     {this.state.comments.map(comment => {
         return (
             <div>
-            <p key={this.username + this.text}>
-            <span className="comment-user">{this.username}</span>
-            <span className="comment-text">{this.text}</span>
+            <p key={this.state.username + this.state.text}>
+            <span className="comment-user">{comment.username}:</span>
+            <span className="comment-text">{comment.text}</span>
             </p>
             </div>
         );
