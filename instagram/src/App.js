@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import './App.css';
 import PostContainer from './components/PostContainer/PostContainer';
+import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends Component {
   constructor() {
@@ -17,10 +18,7 @@ class App extends Component {
     console.log(this.state.data);
     return (
       <div className="App">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png"
-          alt="logo"
-        />
+        <SearchBar />
         <div className="posts-container-wrapper">
           {this.state.data.map((post) => <PostContainer key={post.username} post={post} />)}
         </div>

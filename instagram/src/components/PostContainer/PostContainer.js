@@ -19,9 +19,7 @@ const PostContainer = (props) => {
           .endOf(props.post.timestamp)
           .fromNow()}
       </div>
-      {props.post.comments.map((comment, index) => (
-        <CommentSection key={`${comment.username} ${index}`} comment={comment} />
-      ))}
+      <CommentSection comments={props.post.comments} />
     </div>
   );
 };

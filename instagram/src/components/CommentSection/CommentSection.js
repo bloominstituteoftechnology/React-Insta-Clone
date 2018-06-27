@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
+import CommentForm from './CommentForm';
 
 class CommentSection extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       comments: props.comments,
       comment: '',
@@ -12,35 +13,38 @@ class CommentSection extends Component {
     };
   }
   componentDidMount() {
-    this.setState({ comments: [...props.comments] });
+    let comments = this.state.comments;
+    this.setState({ comments });
   }
 
   addNewComment = (e, i) => {
-    event.preventDefault();
-    let comments = this.state.comments;
-    comments.push(this.state.comment);
+    e.preventDefault();
+    let comments = this.state.comments.slice();
+    const comment = this.state.comment;
+    const obj = {
+      username: 'test',
+      text: comment
+    };
+    comments.push(obj);
+    console.log(comment);
     this.setState({
-      comment: '',
-      comments: comments
+      comments: comments,
+      comment: ''
     });
   };
 
   handleCommentInput = (e) => {
-    this.setState({ comment: event.target.value });
+    this.setState({ comment: e.target.value });
   };
 
   render() {
     return (
       <div>
-        <Comment comment={this.state.comment} />
-        <form onSubmit={this.addNewComment}>
-          <input
-            type="text"
-            placeholder="Add a comment..."
-            onChange={this.handleCommentInput}
-            value={this.state.comment}
-          />
-        </form>
+        {this.state.comments.map((comment, i) => <Comment comment={comment} key={i} />)}
+        <CommentForm
+          addNewComment={this.addNewComment}
+          handleCommentInput={this.handleCommentInput}
+        />
       </div>
     );
   }
