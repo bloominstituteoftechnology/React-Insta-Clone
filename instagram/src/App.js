@@ -16,8 +16,11 @@ class App extends Component {
         
           <h1 className="App-title">Instagram</h1>
         </header>
+        this.state.posts.map(posts => {
+          return
+        })
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Name: {}
         </p>
       </div>
     );
