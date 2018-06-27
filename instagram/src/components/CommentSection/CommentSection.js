@@ -6,8 +6,21 @@ class CommentSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: props.comments
+            comments: props.comments,
+            comment: ""
         }
+    }
+    // Create a function in CommentSection.js called addNewComment that takes in an event 
+    // and an index number. The function will add the comment that is on the event object to 
+    // the post that is at that index number.
+    // Pass the addNewComment function down the component tree to where ever you have your 
+    // 'Add a comment...' input.
+
+    
+    addNewComment = (event,index) => {
+        const comments = this.state.comments.slice();
+        comments.push(this.state.comment);
+        this.setState({comments: comments, comment: ""});
     }
     
     render() {
@@ -15,12 +28,15 @@ class CommentSection extends React.Component {
             <div>
                 {this.state.comments.map((comment,index) => (
                     <Comment 
+                        key = {index}
                         commentUsername = {comment.username}
                         commentText = {comment.text}
-                        key = {index}
                     />
                 ))}
-                <SubmitComment />
+                <SubmitComment 
+                    addNewComment = {this.addNewComment}
+                    comment = {this.comment}
+                />
             </div>
         );
     }
@@ -43,7 +59,3 @@ class CommentSection extends React.Component {
 export default CommentSection;
 
 
-// Lets divide up the data that we've been working with this far by separating the 
-// comments array onto a new component's state. Pass down the comments through each 
-// post to the CommentSection component. Be sure that you set the incoming comments
-// props data on the state of the CommentSection component.
