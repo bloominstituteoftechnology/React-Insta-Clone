@@ -1,22 +1,18 @@
 import React from 'react';
 import Comment from './Comment'
+import SubmitComment from './SubmitComment'
 
 const CommentSection = props => {
     return (
-        // <div>
-        //     {props.post.comments.map (comment => (
-        //         <Comment comment = {comment}/>
-        //     ))}
-        // </div>
         <div>
-            {props.comments.map (comment => (
+            {props.comments.map(comment => (
                 <Comment 
                     commentUsername = {comment.username}
                     commentText = {comment.text}
-                    comment = {comment}
                 />
             ))}
-        </div> 
+            <SubmitComment />
+        </div>
     );
 }
-export default Comment;
+export default CommentSection;
