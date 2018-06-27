@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import dummyData from './DummyData';
-import SearchBar from './SearchBar/SearchBar';
-import PostContainer from './PostContainer/PostContainer';
+import dummyData from '../../DummyData';
+import SearchBar from '../SearchBar/SearchBar';
+import PostContainer from './PostContainer';
 
 class PostsPage extends Component {
   constructor() {
@@ -28,5 +28,6 @@ class PostsPage extends Component {
       </div>
       );
   }
-  
+}
+
   export default PostsPage;
