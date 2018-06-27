@@ -1,0 +1,39 @@
+
+.heart-icon {
+    border: none;
+}
+
+
+.heart-icon img {
+width: 30px;
+height: 30px;
+margin-left: 10px;
+margin-top: 10px;
+}
+
+
+
+.comment-icon {
+    border: none;
+}
+
+
+.comment-icon img {
+width: 30px;
+height: 30px;
+margin-left: 10px;
+margin-top: 10px;
+}
+
+
+.likes {
+    font-size: 16px;
+    margin-left: 15px;
+
+}
+
+.date {
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: lighter;
+}

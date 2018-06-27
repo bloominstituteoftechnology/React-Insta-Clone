@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './PostImage.css'
 
 
@@ -6,7 +6,7 @@ import './PostImage.css'
 const PostImage = props => {
     return (
         <div>
-        <img className="post-image" src={props.image} alt="post-image" />
+        <img className="post-image" src={props.image} alt="post" />
         </div>
     )
 }

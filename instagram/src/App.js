@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import dummyData from './dummy-data';
