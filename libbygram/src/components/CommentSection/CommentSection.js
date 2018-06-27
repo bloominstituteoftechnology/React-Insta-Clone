@@ -1,9 +1,30 @@
 import React from 'react';
 
-const CommentSection = props => {
+class CommentSection extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            comments: props.comments,
+            comment: ''
+        };
+    }
+
+
+    componentDidMount() {
+        this.setState({ comments: this.props.comments })
+    }
+
+    addNewComment = e => {
+        e.preventDefault();
+        const post = this.state.post.slice();
+        post.push({post: post, newPost: '' });
+      }
+
+
+    render() {
     return (
 <div>
-    {props.comments.map(comment => {
+    {this.props.comments.map(comment => {
         return (
             <div>
             <p key={this.username + this.text}>
@@ -16,6 +37,6 @@ const CommentSection = props => {
 </div>
     );
 }
-
+}
 
 export default CommentSection;

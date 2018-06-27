@@ -8,14 +8,21 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      post: []
-    }
-  }
+      post: [],
+    };
+    newPost: ''
+  };
 
   componentDidMount() {
     this.setState({ post: dummyData })
   }
   
+  // addNewComment = e => {
+  //   e.preventDefault();
+  //   const post = this.state.post.slice();
+  //   post.push({post: post, newPost: '' });
+  // }
+
   render() {
     return (
       <div className="App">
@@ -23,7 +30,9 @@ class App extends Component {
         <SearchBar />
         </header>
         <div className="app-post">
-        <PostContainer post={this.state.post} />
+        <PostContainer post={this.state.post} 
+        addNewComment={this.addNewComment}
+        />
       </div>
       </div>
     );
