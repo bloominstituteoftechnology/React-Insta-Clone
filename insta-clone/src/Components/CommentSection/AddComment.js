@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CommentInput = props => {
+const AddComment = props => {
   return (
     <form onSubmit={props.submitComment}>
       <input
@@ -13,4 +13,4 @@ const CommentInput = props => {
   );
 };
 
-export default CommentInput;
+export default AddComment;
