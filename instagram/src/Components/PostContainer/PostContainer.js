@@ -5,12 +5,28 @@ import CommentSection from '../CommentSection/CommentSection'
 
 class PostContainer extends React.Component {
     constructor(props) {
-        console.log(props)
         super(props);
         this.state = {
             comments: props.comments,
             newComment: '',
+            likes: props.likes,
         }
+    }
+
+    commentDidMount() {
+        const id = this.props.posts.timestamp;
+        if (localStorage.getItem(id)) {
+            this.setState({comments: JSON.parse(localStorage.getItem(id))});
+        } else {
+            this.setComments();
+        }
+    }
+
+    setComments = () => {
+        localStorage.setItem(
+            this.props.timestamp,
+            JSON.stringify(this.state.comments)
+        );
     }
 
     addNewCommentHandler = event => {
@@ -22,6 +38,14 @@ class PostContainer extends React.Component {
         const comments = this.state.comments.slice();
         comments.push({username: 'FakeUsername', text: this.state.newComment});
         this.setState({newComment: '', comments});
+        setTimeout(() => {
+            this.setComments();
+        }, 500);
+    }
+
+    likesCounter = event => {
+        let likes = this.state.likes + 1;
+        this.setState({likes})
     }
 
     render() {
@@ -37,8 +61,10 @@ class PostContainer extends React.Component {
                         <i className='far fa-heart'></i>
                         <i className='far fa-comment'></i>
                     </div>
-                    <div className='likes-count'>
-                        {this.props.posts.like}
+                    <div className='likes-count'
+                        onClick={this.likesCounter}
+                    >
+                        {this.props.posts.likes}
                     </div>
                     <div className='comment-container'>
                         <div className='comments'>
