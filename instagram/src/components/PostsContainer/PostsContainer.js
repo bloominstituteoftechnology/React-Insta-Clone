@@ -6,8 +6,9 @@ const PostContainer= props =>{
     return (
         <div className="post-container">
             <span>Post Container</span>
-            {props.posts.map(post => <PostContent key={post.imageUrl} post={post}
-                />)}
+            {props.posts.map(post => 
+            <PostContent key={post.imageUrl} post={post}
+            />)}
         </div>
     );
 }
