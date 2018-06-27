@@ -1,25 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Comment from './Comment';
 
-const CommentSection = (props) => {
-  console.log(props.comment);
-  //comment is passed from post container as props
-  return (
-    <div>
-      <div>{props.comment.username}</div>
-      <div>{props.comment.text}</div>
-      {/* <div>
-        {props.comment.map((comment) => (
-          <div>
-            <div>{comment.username}</div>
-            <div>{comment.text}</div>
-          </div>
-        ))}
-      </div> */}
-      {/* <input type="text" placeholder="add comment" /> */}
-    </div>
-  );
-};
+class CommentSection extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: props.comments,
+      comment: '',
+      likes: 0
+    };
+  }
+  componentDidMount() {
+    this.setState({ comments: [...props.comments] });
+  }
+
+  render() {
+    return (
+      <div>
+        <Comment comment={this.state.comment} />
+      </div>
+    );
+  }
+}
 
 export default CommentSection;
 

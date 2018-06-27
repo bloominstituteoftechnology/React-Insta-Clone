@@ -12,3 +12,9 @@
 .App-intro {
   font-size: large;
 }
+
+.posts-container-wrapper {
+  height: 500px;
+  width: 50%;
+  margin: 5px auto;
+}

@@ -21,7 +21,9 @@ class App extends Component {
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png"
           alt="logo"
         />
-        {this.state.data.map((post) => <PostContainer key={post.username} post={post} />)}
+        <div className="posts-container-wrapper">
+          {this.state.data.map((post) => <PostContainer key={post.username} post={post} />)}
+        </div>
       </div>
     );
   }
