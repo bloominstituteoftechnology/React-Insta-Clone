@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from './dummy-data';
+import dummyData from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      data: dummyData
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        dummyData = dummyData.map((item) => {
-          <PostContainer obj={item} />
-        });
+        <div className="Posts">
+        {this.state.data.map(item => {
+          return(
+            <PostContainer
+              key={Math.random()}
+              item={item}
+            />
+          )
+        })}
+        </div>
       </div>
     );
   }

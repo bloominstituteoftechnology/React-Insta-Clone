@@ -1,0 +1,36 @@
+.post-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  border: 1px solid lightgray;
+  margin: 2px 0;
+}
+
+.header-bar {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+}
+
+.header-bar img {
+  width: 32px;
+  height: 32px;
+  margin: 14px 8px 14px 16px;
+  border-radius: 50%;
+}
+
+.post-img {
+  width: 600px;
+}
+
+
+h2 {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #003569;
+}
+
+.footer{
+  padding: 8px 16px 0;
+}

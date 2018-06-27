@@ -1,52 +1,83 @@
-const dummyData = [{"id":1,"name":"Fat-tailed dunnart","species":"Smithopsis crassicaudata"},
-{"id":2,"name":"Macaw, blue and gold","species":"Ara ararauna"},
-{"id":3,"name":"Robin, kalahari scrub","species":"Certotrichas paena"},
-{"id":4,"name":"Fox, crab-eating","species":"Dusicyon thous"},
-{"id":5,"name":"Polar bear","species":"Ursus maritimus"},
-{"id":6,"name":"Heron, green-backed","species":"Butorides striatus"},
-{"id":7,"name":"Greater sage grouse","species":"Centrocercus urophasianus"},
-{"id":8,"name":"Lorikeet, scaly-breasted","species":"Trichoglossus chlorolepidotus"},
-{"id":9,"name":"Avocet, pied","species":"Recurvirostra avosetta"},
-{"id":10,"name":"Water legaan","species":"Varanus salvator"},
-{"id":11,"name":"Cormorant, flightless","species":"Nannopterum harrisi"},
-{"id":12,"name":"Common genet","species":"Genetta genetta"},
-{"id":13,"name":"Andean goose","species":"Chloephaga melanoptera"},
-{"id":14,"name":"Blue duck","species":"Hymenolaimus malacorhynchus"},
-{"id":15,"name":"Sloth, two-toed","species":"Choloepus hoffmani"},
-{"id":16,"name":"Vulture, oriental white-backed","species":"Gyps bengalensis"},
-{"id":17,"name":"Cat, jungle","species":"Felis chaus"},
-{"id":18,"name":"Red-tailed cockatoo","species":"Calyptorhynchus magnificus"},
-{"id":19,"name":"Lion, asian","species":"Panthera leo persica"},
-{"id":20,"name":"Pacific gull","species":"Gabianus pacificus"},
-{"id":21,"name":"Crane, stanley","species":"Anthropoides paradisea"},
-{"id":22,"name":"Eastern boa constrictor","species":"Acrantophis madagascariensis"},
-{"id":23,"name":"Crane, stanley","species":"Anthropoides paradisea"},
-{"id":24,"name":"Pine siskin","species":"Carduelis pinus"},
-{"id":25,"name":"Badger, american","species":"Taxidea taxus"},
-{"id":26,"name":"Chuckwalla","species":"Sauromalus obesus"},
-{"id":27,"name":"Francolin, coqui","species":"Francolinus coqui"},
-{"id":28,"name":"Red-tailed cockatoo","species":"Calyptorhynchus magnificus"},
-{"id":29,"name":"Eastern dwarf mongoose","species":"Helogale undulata"},
-{"id":30,"name":"African lynx","species":"Felis caracal"},
-{"id":31,"name":"Kite, black","species":"Milvus migrans"},
-{"id":32,"name":"Dog, raccoon","species":"Nyctereutes procyonoides"},
-{"id":33,"name":"Heron, yellow-crowned night","species":"Nyctanassa violacea"},
-{"id":34,"name":"Brown lemur","species":"Lemur fulvus"},
-{"id":35,"name":"White-fronted bee-eater","species":"Merops bullockoides"},
-{"id":36,"name":"Puna ibis","species":"Plegadis ridgwayi"},
-{"id":37,"name":"Australian masked owl","species":"Tyto novaehollandiae"},
-{"id":38,"name":"Raccoon, crab-eating","species":"Procyon cancrivorus"},
-{"id":39,"name":"Otter, small-clawed","species":"Aonyx cinerea"},
-{"id":40,"name":"Long-billed corella","species":"Cacatua tenuirostris"},
-{"id":41,"name":"Owl, great horned","species":"Bubo virginianus"},
-{"id":42,"name":"Sage grouse","species":"Centrocercus urophasianus"},
-{"id":43,"name":"Ringtail cat","species":"Bassariscus astutus"},
-{"id":44,"name":"Dunnart, fat-tailed","species":"Smithopsis crassicaudata"},
-{"id":45,"name":"Stork, marabou","species":"Leptoptilos crumeniferus"},
-{"id":46,"name":"Asiatic wild ass","species":"Equus hemionus"},
-{"id":47,"name":"Penguin, little blue","species":"Eudyptula minor"},
-{"id":48,"name":"Radiated tortoise","species":"Geochelone radiata"},
-{"id":49,"name":"Common zorro","species":"Dusicyon thous"},
-{"id":50,"name":"White spoonbill","species":"Platalea leucordia"}];
+const dummyData = [
+    {
+        username: "philzcoffee",
+        thumbnailUrl:  'https://scontent-sjc3-1.cdninstagram.com/vp/01ecf730c41cfe822c0953993cd06026/5BCB7088/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
+        imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/557a29d3526bc7f813c2a784d82de7d3/5B4E3E05/t51.2885-15/e35/26065916_2007800899433580_5879937492399947776_n.jpg',
+        likes: 400,
+        timestamp: "July 17th 2017, 12:42:40 pm",
+        comments: [
+            {
+                username: "philzcoffee",
+                text: "We've got more than just delicious coffees to offer at our shops!"
+            },
+            {
+                username: "biancasaurus",
+                text: "Looks delicious!"
+            },
+            {
+                username: "martinseludo",
+                text: "Can't wait to try it!"
+            }
+        ]
+    },
+    {
+        username: "twitch",
+        thumbnailUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/81f608ddb76a034e06c0d1669e7e2b48/5B35C840/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
+        imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/830c01ad7ceb325547fd1d4d1a1e6897/5B465520/t51.2885-15/e35/25006313_192089151354555_3374696275667582976_n.jpg',
+        likes: 4307,
+        timestamp: "July 15th 2017, 03:12:09 pm",
+        comments: [
+            {
+                username: "twitch",
+                text: "Epic Street Fighter action here in Las Vegas at #EVO2017!"
+            },
+            {
+                username: "michaelmarzetta",
+                text: "Omg that match was crazy"
+            },
+            {
+                username: "themexican_leprechaun",
+                text: "What a setup"
+            },
+            {
+                username: "dennis_futbol",
+                text: "It that injustice"
+            },
+            {
+                username: "dennis_futbol",
+                text: "Is"
+            }
+        ]
+    },
+    {
+        username: "playhearthstone",
+        thumbnailUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/51d5b37438ae3a47df37b7ed3fda141f/5B4ABAA7/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
+        imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/22618be7ee2a2b676d13e8d70d7d5e08/5B40BF6B/t51.2885-15/e35/25038917_1978298569058775_6081161469041311744_n.jpg',
+        likes: 5306,
+        timestamp: "July 14th 2017, 10:04:08 am",
+        comments: [
+            {
+                username: "playhearthstone",
+                text: "Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
+            },
+            {
+                username: "tapmelon",
+                text: "Wish that death knight could be added as a new playable class in this expansion."
+            },
+            {
+                username: "micpetboudreau",
+                text: "Can't wait"
+            },
+            {
+                username: "awaywetravel",
+                text: "I <3 Hearthstone."
+            },
+            {
+                username: "awesomebt28",
+                text: "I like how gul'dan looks so old and useless"
+            }
+        ]
+    }
+];
 
 export default dummyData;
