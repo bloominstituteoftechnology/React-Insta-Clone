@@ -11,16 +11,14 @@ class App extends Component {
       posts: instagram
     };
   }
-
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer posts={this.state.post.username} />
-        {this.state.instagram.posts}(post =>
+        <PostContainer posts={this.state.posts} />
       </div>
     );
   }
 }
 
-export default PostContainer;
+export default App;
