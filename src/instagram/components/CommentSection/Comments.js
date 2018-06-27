@@ -25,8 +25,8 @@ const Comments = comments => {
         );
     })}
     
-    </div> 
-    
+</div> 
 }
+
  
 export default Comments;

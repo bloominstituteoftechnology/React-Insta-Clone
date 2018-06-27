@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import './App.css';
-import SearchContainer from './instagram/components/SearchBar/SearchContainer';
-import PostContainer from './instagram/components/PostContainer/PostContainer';
+import PostPage from './instagram/components/PostContainer/PostPage';
+import Authorize from './instagram/components/Authorize/Authorize';
 
 class App extends Component {
   constructor() {
@@ -15,12 +15,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-      <SearchContainer />
-      <PostContainer posts={this.state.posts} />
-      </div>
+      <PostPage />
     );
   }
 }
 
-export default App;
+export default Authorize(App);

@@ -16,7 +16,7 @@ const PostUser = user => {
                 <div className='interact'>{user.likes}</div>
 
                 <div className='comments'>{user.comments.map(item =>
-                    <p key={item}><strong>{item.username}</strong> {item.text}</p>
+                    <p key={Math.random()}><strong>{item.username}</strong> {item.text}</p>
                 )}</div>
 
                 <div className='add'>
