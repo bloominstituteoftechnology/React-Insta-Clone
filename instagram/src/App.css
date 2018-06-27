@@ -1,0 +1,9 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Lato';
+}
+.container {
+	width: 800px;
+	margin: 0 auto;
+	
+}

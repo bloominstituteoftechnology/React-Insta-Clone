@@ -1,0 +1,35 @@
+.header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 1200px;
+	margin-left: -200px;
+}
+
+.social {
+	font-size: 2em;
+	color: #ccc;
+}
+
+.social.camera {
+	color: #333;
+}
+
+.instaclone {
+	font-family: 'Great Vibes', cursive;
+	font-weight: bold;
+	font-size: 3em;
+}
+
+.search-bar {
+	height: 35px;
+	width: 300px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	padding: 0 15px;
+	font-size: 16px;
+}
+
+.social .fa-user:hover{
+	color: red;
+}
