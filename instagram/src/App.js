@@ -10,9 +10,14 @@ class App extends Component {
     super();
     this.state = {
       dummyData: dummyData,
+      filteredPosts: [],
     }
   }
 
+  filterSearchResults = e => {
+    const filteredResults = this.state.dummyData.filter(post => post.username.includes(e.target.value) = true);
+    return filteredResults;
+  }
 
   render() {
     return (
@@ -22,7 +27,9 @@ class App extends Component {
             <img src={require('./imgs/instagram-camera.png')} className='logo-camera' alt='insta-camera'/>
             <img src={require('./imgs/instagram-logo.svg.png')} className='logo-name' alt='header-logo'/>
           </div>
-          <SearchBar />
+          <SearchBar
+            filterSearchResults = {this.filterSearchResults}
+          />
           <div className='header-icon-bar'>
             <img src={require('./imgs/circle-icon.png')} className='circle-icon' alt='circle icon'/>
             <img src={require('./imgs/heart-icon.png')} className='heart-icon' alt='heart icon'/>

@@ -5,7 +5,8 @@ const SearchBar = () => {
         <form className='search-bar-input'>
             <input
                 type='text'
-                placeholder='Search'  
+                placeholder='Search'
+                onChange={props.filterSearchResults}  
             />
         </form>
     );
