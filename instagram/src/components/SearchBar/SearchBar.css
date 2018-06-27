@@ -19,7 +19,7 @@
   margin: 1rem;
 }
 
-input {
+.search-input {
   border-radius: 0.4rem;
   text-align: center;
   width: 100%;

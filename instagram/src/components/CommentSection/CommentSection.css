@@ -1,0 +1,26 @@
+.comments-wrapper {
+  display: flex;
+}
+
+.comments-text {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.likes-area {
+  display: flex;
+}
+
+.likes-area i {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.comment-input {
+  width: 100%;
+  height: 5rem;
+  margin-top: 1rem;
+}

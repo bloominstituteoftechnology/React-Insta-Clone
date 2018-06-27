@@ -35,9 +35,11 @@ class CommentSection extends React.Component {
     const { comments } = this.state;
     return (
       <div>
-        <i onClick={this.likeHandler} className="fa fa-heart" />
-        <i className="fa fa-comment" />
-        <span>{this.state.like} likes</span>
+        <div className="likes-area">
+          <i onClick={this.likeHandler} className="fa fa-heart fa-2x" />
+          <i className="fa fa-comment fa-2x" />
+        </div>
+        <span className="like-count">{this.state.like} likes</span>
 
         {comments.map((comment, i) => (
           <Comment username={comment.username} text={comment.text} key={i} /> // Mapping over the comments then rendering them.
@@ -46,9 +48,10 @@ class CommentSection extends React.Component {
         <form onSubmit={this.addComment}>
           <input
             type="text"
-            placeholder="Add a Comment"
+            placeholder=" Add a Comment ..."
             onChange={this.commentHandler} // This handles changing the state.
             value={this.state.comment} // This sets the value to the input.
+            className="comment-input"
           />
         </form>
       </div>

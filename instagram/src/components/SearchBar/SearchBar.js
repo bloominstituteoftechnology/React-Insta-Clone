@@ -13,7 +13,12 @@ const SearchBar = ({ search }) => {
           </h1>
         </Col>
         <Col sm="4">
-          <input type="search" placeholder="Search" onChange={search} />
+          <input
+            type="search"
+            placeholder="Search"
+            onChange={search}
+            className="search-input"
+          />
         </Col>
         <Col sm="4" className="right-icons">
           <i className="fa fa-compass fa-2x" />
