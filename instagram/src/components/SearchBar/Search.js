@@ -14,7 +14,7 @@ const Search = props => {
       <img alt="instagram logo" src={iglogo} className="logo-image"/>
       </div>
       <div>
-       <input className="search-bar" type="text" placeholder="Search"/>
+       <input className="search-bar" type="text" placeholder="Search" onInput={props.searchPosts}/>
         </div>
       <div className="search-icons">
         <i className="far fa-compass"/> 

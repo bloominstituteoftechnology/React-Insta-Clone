@@ -13,22 +13,24 @@ class App extends Component {
     };
   }
     componentDidMount(){
-      this.setState({ posts: dummyData });
+      this.setState({posts: dummyData});
     }
     searchPostsHandler = e => {
       const posts = this.state.posts.filter(p => {
-        if (p.username.includes(e.target.value)) {
+        if (p.username.includes(e.target.value)){
           return p;
         }
       });
-      this.setState({ filteredPosts: posts });
+      this.setState({filteredPosts: posts});
     };
 
   render(){
     return (
       <div className="App">
-      <Search />
-      <PostContainer posts={this.state.posts}/>
+      <Search searchPosts={this.searchPostsHandler}/>
+      <PostContainer posts={
+        this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts
+        } />
       </div>
     );
   };
