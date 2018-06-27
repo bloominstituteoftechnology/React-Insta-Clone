@@ -1,14 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CommentSection = props => {
+class CommentSection extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
 
-    return (
-        <div className='comments-section'>
-            <span>{props.comment.username}</span> 
-            <span>{props.comment.text}</span>
-        </div>
-    );
+        }
+    }
+    
+    render() {
+        return (
+            <div className='comments-section'>
+                <span>{this.props.comments.username}</span> 
+                <span>{this.props.comments.text}</span>
+            </div>
+        );
+    }
 }
 
 CommentSection.propTypes = {

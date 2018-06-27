@@ -31,12 +31,12 @@
     line-height:40px;
 }
 
-.init {
+.form {
     color: #8E8E8E;
 }
 
-.form {
-    display: none;
+.input {
+    border: none;
 }
 
 .expandable-menu {
