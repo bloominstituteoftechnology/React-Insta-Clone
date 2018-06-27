@@ -12,7 +12,7 @@ const PostContainer = (props) => {
       <div className="post-image">
         <img className="image" src={props.post.imageUrl} alt="image" />
       </div>
-      <i className="fa fa-heart" />
+      <i className="far fa-heart" />
       <div>{props.post.likes}</div>
       <div>
         {moment()
@@ -22,7 +22,6 @@ const PostContainer = (props) => {
       {props.post.comments.map((comment, index) => (
         <CommentSection key={`${comment.username} ${index}`} comment={comment} />
       ))}
-      <input type="text" placeholder="Add a comment..." />
     </div>
   );
 };
