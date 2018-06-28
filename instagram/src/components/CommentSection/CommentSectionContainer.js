@@ -12,7 +12,9 @@ class CommentSection extends React.Component {
           likes: 0
       };
     }
-ComponentDidMount() {}
+componentDidMount() {
+    
+}
     
 }
 export default CommentSection;
