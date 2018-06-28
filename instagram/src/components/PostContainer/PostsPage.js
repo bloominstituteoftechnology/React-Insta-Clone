@@ -10,10 +10,11 @@ const PostsPage = props => {
                 <h1 className="App-title">IG APP CLONE</h1>
             </header>
             <SearchBar 
-            searchFieldHandler = {props.searchFieldHandler}
-            activeValue = {props.searchField}
-            searchUsername = {props.searchUsername}
+                searchFieldHandler = {props.searchFieldHandler}
+                activeValue = {props.searchField}
+                searchUsername = {props.searchUsername}
             />
+            
             <PostContainer postData = {props.postData}/>  
         </div>
     );
