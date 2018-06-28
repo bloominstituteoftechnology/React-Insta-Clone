@@ -5,8 +5,11 @@ const Authenticate = Component =>
         render() {
             return <Component />;
         }
-
 }
+
+
+// If user is logged in (or exists in the local storage), render the app 
+// If user is not logged in, render a log in page
 
 
 
