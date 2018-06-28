@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import PostsPage from './components/PostContainer/PostsPage'
 import Authenticate from './Authentication/Authenticate'
+import Login from './components/LoginPage/Login'
 
 class App extends React.Component {
   constructor () {
@@ -9,6 +10,10 @@ class App extends React.Component {
     this.state = {
       
     };
+  }
+
+  login = (e) => {
+    alert('login')
   }
 
   
@@ -19,6 +24,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>clown</h1>
+        <Login login={this.login}/>
         <PostsPage />
       </div>
     );
