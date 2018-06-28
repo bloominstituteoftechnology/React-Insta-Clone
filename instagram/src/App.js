@@ -13,15 +13,7 @@ class App extends React.Component {
     };
   }
   
-  inputHandler = (e) => {
-    this.setState({[e.target.name]: e.target.value})
-  }
-
-  login = (e) => {
-    const user = this.state.username;
-    localStorage.setItem('user', user);
-    window.location.reload();
-  }
+ 
 
   
   componentDidMount() {
@@ -31,7 +23,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>clown</h1>
-        <Login login={this.login} inputHandler={this.inputHandler}/>
+        
         <PostsPage />
       </div>
     );
