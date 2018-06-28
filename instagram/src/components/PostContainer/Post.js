@@ -17,7 +17,9 @@ const Post = props => {
         alt="post-thumbnail"
         />
         </div>
-        <CommentSection comments={props.post.comments} />
+        <CommentSection
+        postId={props.post.imageUrl}
+         comments={props.post.comments} />
         </div>
     );
 };
