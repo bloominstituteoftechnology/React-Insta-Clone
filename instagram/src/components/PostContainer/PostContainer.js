@@ -17,6 +17,7 @@ const PostContainer = props => {
                     />
                     <CommentSection 
                         comments = {post.comments}
+                        numberOfLikes= {post.likes}
                     />
                 </div>
             ))}

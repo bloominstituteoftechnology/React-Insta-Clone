@@ -10,7 +10,8 @@ class CommentSection extends React.Component {
         super(props);
         this.state = {
             comments: props.comments,
-            comment: ""
+            comment: "",
+            numberOfLikes: props.numberOfLikes
         };
     }
     // Create a function in CommentSection.js called addNewComment that takes in an event 
@@ -36,10 +37,20 @@ class CommentSection extends React.Component {
         this.setState({comment:event.target.value});
     }
 
+    likeAPost = (event,index) => {
+        let numberOfLikes = this.state.numberOfLikes;
+        numberOfLikes = numberOfLikes + 1;
+        this.setState({numberOfLikes:numberOfLikes});
+    }
+
     render() {
         return (
             <div>
-                <CommentsHeader />
+                <CommentsHeader 
+                    numberOfLikes = {this.state.numberOfLikes}
+                    likeAPost = {this.likeAPost}
+                />
+
                 {this.state.comments.map((comment,index) => (
                     <Comment 
                         key = {index}
@@ -47,6 +58,7 @@ class CommentSection extends React.Component {
                         commentText = {comment.text}
                     />
                 ))}
+
                 <SubmitComment 
                     activeValue = {this.state.comment}
                     onChangeSignal = {this.changeAddNewCommentHandler}

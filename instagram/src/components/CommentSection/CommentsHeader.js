@@ -9,10 +9,10 @@ const CommentsHeader = props => {
     return (
         <div>
             Heart Icon 
-            <img src = {instagramCommentHeart} alt = "" />
+            <img onClick = {props.likeAPost} src = {instagramCommentHeart} alt = "" />
             Comment Icon
             <img src = {instagramCommentBubble} alt = "" />
-            # of Likes
+            {props.numberOfLikes} likes
         </div>
     );
 }
