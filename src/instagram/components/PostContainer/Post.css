@@ -1,0 +1,36 @@
+.container {
+    width: 500px;
+    margin: auto;
+}
+
+.user-head {
+    box-sizing: border-box;
+    width: 500px;
+    margin: auto;
+    padding-right: 335px;
+    
+}
+
+.user-img {
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+}
+
+.post-pic {
+    width: 500px;
+    height: 500px;
+}
+
+.interact {
+    text-align: left;
+    margin-left: 25px;
+}
+
+.comments {
+    text-align: left;
+}
+
+.add {
+    margin-bottom: 50px;
+}
