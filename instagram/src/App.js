@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
 import Search from './components/SearchBar/Search';
-import PostContainer from './components/PostContainer/PostContainer.js';
+import PostContainer from './components/PostContainer/PostContainer';
+import Authentication from './components/Authentication/Authentication';
 
 class App extends Component {
   constructor() {
@@ -27,7 +28,8 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-      <Search searchPosts={this.searchPostsHandler}/>
+      <Search searchPosts={this.searchPostsHandler}
+      searchTerm={this.state.searchTerm}/>
       <PostContainer posts={
         this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts
         } />
@@ -36,4 +38,4 @@ class App extends Component {
   };
 }
 
-export default App;
+export default Authentication(App);

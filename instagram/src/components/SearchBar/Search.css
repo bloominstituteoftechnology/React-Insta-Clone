@@ -5,7 +5,7 @@
     max-width: 100%;
     margin-top: 10px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background: #ffffff;
   }
   
@@ -17,7 +17,7 @@
   
   .logo-image {
     height: 100%;
-    margin-top: 20px;
+    margin-right: 10px;
   }
   
   .social-wrapper {
@@ -57,5 +57,7 @@
 
   .ig-cam {
       padding: 10px;
+      margin-right: 5px;
+      margin-bottom: 20px;
       border-right: 1px solid black;
   }

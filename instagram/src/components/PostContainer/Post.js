@@ -3,6 +3,7 @@ import PostHeader from './PostHeader';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import './Posts.css';
+
 class Post extends React.Component {
     constructor(props) {
       super(props);
@@ -32,8 +33,9 @@ class Post extends React.Component {
           <i class="far fa-comment"/>
           <span className="likes-text"><br />{this.props.post.likes} likes</span> 
           </div>
-          <CommentSection comments={this.props.post.comments} />
-        </div>
+          <CommentSection comments={this.props.post.comments} postId={this.props.post.imageUrl} 
+          />
+          </div>  
     );
     }
 };
