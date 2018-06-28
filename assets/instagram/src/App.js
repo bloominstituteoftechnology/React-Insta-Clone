@@ -3,6 +3,7 @@ import "./App.css";
 import instagram from "./InstagramData";
 import PostContainer from "./Components/PostContainer/PostContainer";
 import SearchBar from "./Components/SearchBar/SearchBarContainer";
+import "font-awesome/css/font-awesome.min.css";
 
 class App extends Component {
   constructor() {
