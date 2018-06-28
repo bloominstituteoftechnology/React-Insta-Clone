@@ -4,12 +4,10 @@ import './post-container.css';
 
 const PostContainer= props =>{
     return (
-        <div className="post-container">
-            <span>Post Container</span>
-            {props.posts.map(post => 
-            <PostContent key={post.imageUrl} post={post}
-            />)}
+        <div className="posts-container-wrapper">
+            {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
         </div>
+        
     );
 }
 
