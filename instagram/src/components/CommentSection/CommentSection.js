@@ -1,6 +1,8 @@
 import React from 'react';
 import Comment from './Comment'
 import SubmitComment from './SubmitComment'
+import CommentsHeader from './CommentsHeader'
+
 
 // We are using a constructor here because of where it gets called in the lifecycle and logistics of passing data around
 class CommentSection extends React.Component {
@@ -18,8 +20,8 @@ class CommentSection extends React.Component {
     // 'Add a comment...' input.
 
     
-    addNewComment = (e,i) => { 
-        e.preventDefault();
+    addNewComment = (event,index) => { 
+        event.preventDefault();
         const comments = this.state.comments.slice();
         const newComment = {
             username: "default usrname",
@@ -37,6 +39,7 @@ class CommentSection extends React.Component {
     render() {
         return (
             <div>
+                <CommentsHeader />
                 {this.state.comments.map((comment,index) => (
                     <Comment 
                         key = {index}
