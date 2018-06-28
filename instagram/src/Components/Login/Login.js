@@ -9,6 +9,19 @@ class Login extends Component {
         };
     }
 
+    updateUsernameState = e => {
+        this.setState({[e.target.name]: e.target.value})
+    }
+
+    submitLoginInfo = e => {
+        let username = this.state.username;
+        let password = this.state.password
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password)
+        window.location.reload();
+
+    }
+
     render() {
         return (
             <div>
@@ -17,14 +30,18 @@ class Login extends Component {
                     <input
                         type='text'
                         placeholder='Username'
+                        name='username'
+                        value={this.state.username}
+                        onChange={this.updateUsernameState}
                     />
                     <input
                         type='password'
                         placeholder='Password'
+                        name='username'
+                        value={this.state.password}
+                        onChange={this.updateUsernameState}
                     />
-                    <button
-                        onClick=''
-                    >Submit</button>
+                    <button onClick={this.submitLoginInfo}>Submit</button>
                 </form>
             </div>
         );
