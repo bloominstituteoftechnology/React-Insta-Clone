@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
 import './App.css';
 import SearchBar from './Components/SearchBar/SearchBar'
-import PostContainer from './Components/PostContainer/PostContainer'
 import dummyData from './dummy-data';
+import PostsPlaceholder from './Components/PostsPlaceholder/PostsPlaceholder';
 
 class App extends Component {
   
   constructor() {
     super();
     this.state = {
-      dummyData: dummyData,
+      posts: [],
       filteredPosts: [],
     }
   }
 
+  componentDidMount() {
+    this.setState({posts: dummyData})
+  }
+
   filterSearchResults = e => {
-    const filteredResults = this.state.dummyData.filter( post => {
+    const filteredResults = this.state.posts.filter( post => {
       if (post.username.includes(e.target.value)) {
-        return filteredResults;
+        return post;
+      } else {
+        return null;
       }
     });
     this.setState({filteredPosts: filteredResults});
@@ -41,23 +47,13 @@ class App extends Component {
           </div>
         </div>
         <div className='posts'>
-          if (this.state.filteredPosts.length === 0) {
-            {this.state.dummyData.map( post => {
-              return (
-                <PostContainer
-                  posts={post}
-                />
-              );
-            })}
-          } else {
-            {this.state.filteredPosts.map( post => {
-              return (
-                <PostContainer
-                  posts={post}
-                />
-              );
-            })}
-          }
+          <PostsPlaceholder 
+            posts= {
+              this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.posts
+            }
+          />
         </div>
       </div>
     );
