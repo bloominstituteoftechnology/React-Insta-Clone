@@ -10,7 +10,33 @@ class App extends React.Component {
     this.state = {
       // postData: dummyData,
       postData: [],
+      originalPostData: [],
+      searchField: ""
     };
+  }
+
+  addNewComment = (event,index) => { 
+    event.preventDefault();
+    const comments = this.state.comments.slice();
+    const newComment = {
+        username: "default usrname",
+        text: this.state.comment
+    }
+    comments.push(newComment);
+    this.setState({comments: comments, comment: ""});
+}
+
+
+  searchUsername = (event) => {
+    event.preventDefault();
+    const postData = this.state.originalPostData.slice();
+    const filteredPostData = postData.filter(item => item.username === this.state.searchField);
+    this.setState({postData: filteredPostData, searchField: ""})
+  }
+
+  searchFieldHandler = event => {
+    console.log(event.target.value);
+    this.setState({searchField:event.target.value})
   }
 
   // In app.js use componentDidMount() to set your data to the component's state. Use the 
@@ -19,7 +45,8 @@ class App extends React.Component {
   componentDidMount() {
     console.log("App DidMount called");
     this.setState({
-      postData: dummyData
+      postData: dummyData,
+      originalPostData: dummyData
     })
   }  // "Good place to fetch your data and set your state accordingly."
 
@@ -40,7 +67,11 @@ class App extends React.Component {
         <header className="App-header">
           <h1 className="App-title">IG APP CLONE</h1>
         </header>
-        <SearchBar />
+        <SearchBar 
+          searchFieldHandler = {this.searchFieldHandler}
+          activeValue = {this.state.searchField}
+          searchUsername = {this.searchUsername}
+        />
         <PostContainer postData = {this.state.postData}/>        
       </div>
     );
