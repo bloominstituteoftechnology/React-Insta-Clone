@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+    box-sizing: border-box;
+
+}
+
+
+.App-header {
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}

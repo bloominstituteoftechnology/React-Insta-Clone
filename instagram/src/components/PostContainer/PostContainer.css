@@ -1,0 +1,42 @@
+.post-container {
+    margin: 10px auto;
+    max-width: 500px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+.header-container {
+    display:flex;
+align-items: center;    
+}
+
+.user-thumbnail {
+    border-radius: 50%;
+    width:10%;
+    margin-right: 2%;
+}
+
+.post-image {
+    width:100%;
+}
+
+.post-icons {
+text-align: left;
+margin-left: 2%;
+}
+
+.heart-icon {
+    width: 5%;
+
+}
+.comment-icon {
+    width: 5%;
+text-align: left;
+margin-left: 2%;
+}
+
+.user-likes {
+    text-align: left;
+    font-size: 12px;
+    margin-left: 2%;
+}
