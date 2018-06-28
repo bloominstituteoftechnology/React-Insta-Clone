@@ -1,0 +1,12 @@
+.login-container {
+    display: flex;
+    width: 300px;
+    background: lightskyblue;
+    margin: 100px 0;
+    padding: 10px;
+}
+
+.login-button {
+    margin: 10px;
+    width: 50%;
+}

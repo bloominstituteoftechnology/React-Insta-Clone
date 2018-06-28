@@ -19,12 +19,7 @@ const PostContainer = props => {
               <p className="username">{post.username}</p>
             </div>
             <img className="post-img" src={post.imageUrl} alt="Post Image" />
-            <div className="post-icons">
-              <i className="fa fa-heart" />
-              <i className="far fa-comment" />
-            </div>
-            <p className="post-likes">{post.likes} likes</p>
-            <CommentSection comments={post.comments} />
+            <CommentSection comments={post.comments} likes={post.likes}/>
             <p className="post-timestamp">{post.timestamp}</p>
           </div>
         );

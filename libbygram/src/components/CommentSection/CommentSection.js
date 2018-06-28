@@ -1,6 +1,7 @@
 import React from 'react';
 import './CommentSection.css';
 import PropTypes from 'prop-types';
+import Likes from './Likes';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -27,6 +28,11 @@ class CommentSection extends React.Component {
         this.setState({ comments, comment: '' })
       }
 
+    iLikeIt = () => {
+        const likes = this.state.likes + 1;
+        this.setState({ likes })
+    };
+
 
     render() {
     return (
@@ -34,6 +40,7 @@ class CommentSection extends React.Component {
     {this.state.comments.map(comment => {
         return (
             <div>
+            <Likes />
             <p key={this.state.username + this.state.text}>
             <span className="comment-user">{comment.username}:</span>
             <span className="comment-text">{comment.text}</span>
