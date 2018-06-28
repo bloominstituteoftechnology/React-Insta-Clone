@@ -11,7 +11,7 @@ const SearchBar = props => {
         <img className="logo" src={logo} alt="Instagram" />
       </div>
       <div className="searchbar-center">
-        <input placeholder="Search" />
+        <input placeholder="Search" onClick={props.searchPosts} />
       </div>
       <div className="searchbar-right">
         <i className="fa fa-compass" />

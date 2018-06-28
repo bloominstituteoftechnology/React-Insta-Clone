@@ -7,7 +7,9 @@ import Authenticate from './components/Authentication/Authenticate';
 class App extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      post: []
+    };
   }
 
   componentDidMount() {

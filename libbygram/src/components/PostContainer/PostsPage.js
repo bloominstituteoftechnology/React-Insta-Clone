@@ -7,7 +7,8 @@ class PostsPage extends Component {
   constructor() {
     super();
     this.state = {
-        post: []
+        post: [],
+        filteredPosts: []
     };
   }
 
@@ -15,14 +16,28 @@ class PostsPage extends Component {
     this.setState({ post: dummyData })
   }
 
+  searchHandler = event => {
+    const post = this.state.post.filter(filtered => {
+      if (filtered.username.includes(event.target.value)) {
+      return filtered;
+      }
+    });
+    this.setState({ filteredPosts: post })
+  }
+
   render() {
       return (
         <div className="App">
         <header className="App-header">
-        <SearchBar />
+        <SearchBar 
+          searchTerm={this.state.searchTerm}
+          searchPosts={this.searchHandler}/>
         </header>
         <div className="app-post">
-        <PostContainer post={this.state.post} 
+        <PostContainer post={
+          this.state.filteredPosts.length > 0
+          ? this.state.filteredPosts
+          : this.state.post} 
         />
       </div>
       </div>

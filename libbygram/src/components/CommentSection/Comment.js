@@ -1,19 +1,22 @@
-// import React from 'react';
-// import PropTypes from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-// const Comment = props => {
-//     return (
-//         <form className="comment-input">
-//         <input
-//         type="text"
-//         placeholder="Add a comment as..."
-//         ></input>
-//         </form>
-//     )
-// }
+const Comment = props => {
+    return (
+        <div className="comment-wrapper">
+        <p key={props.comment.username + props.comment.text}>
+            <span className="comment-user">{props.comment.username}:</span>
+            <span className="comment-text">{props.comment.text}</span>
+            </p>        
+            </div>
+    );
+}
 
-// Comment.propTypes = {
+Comment.propTypes = {
+    comment: PropTypes.shape({
+        text: PropTypes.string,
+        username: PropTypes.string
+    })
+};
 
-// }
-
-// export default Comment;
+export default Comment;
