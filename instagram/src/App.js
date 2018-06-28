@@ -15,8 +15,12 @@ class App extends Component {
   }
 
   filterSearchResults = e => {
-    const filteredResults = this.state.dummyData.filter(post => post.username.includes(e.target.value) = true);
-    return filteredResults;
+    const filteredResults = this.state.dummyData.filter( post => {
+      if (post.username.includes(e.target.value)) {
+        return filteredResults;
+      }
+    });
+    this.setState({filteredPosts: filteredResults});
   }
 
   render() {
@@ -37,13 +41,23 @@ class App extends Component {
           </div>
         </div>
         <div className='posts'>
-          {this.state.dummyData.map( post => {
-            return (
-              <PostContainer
-                posts={post}
-              />
-            );
-          })}
+          if (this.state.filteredPosts.length === 0) {
+            {this.state.dummyData.map( post => {
+              return (
+                <PostContainer
+                  posts={post}
+                />
+              );
+            })}
+          } else {
+            {this.state.filteredPosts.map( post => {
+              return (
+                <PostContainer
+                  posts={post}
+                />
+              );
+            })}
+          }
         </div>
       </div>
     );
