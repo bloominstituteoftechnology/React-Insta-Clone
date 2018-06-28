@@ -2,6 +2,7 @@ import React from 'react';
 import Comment from './Comment'
 import SubmitComment from './SubmitComment'
 import CommentsHeader from './CommentsHeader'
+import './commentSection.css'
 
 
 // We are using a constructor here because of where it gets called in the lifecycle and logistics of passing data around

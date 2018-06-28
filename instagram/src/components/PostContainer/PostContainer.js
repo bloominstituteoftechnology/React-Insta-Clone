@@ -2,6 +2,7 @@ import React from 'react';
 import PostHeader from './PostHeader'
 import PostPicture from './PostPicture'
 import CommentSection from '../CommentSection/CommentSection'
+import './postContainer.css'
 
 const PostContainer = props => {
     return (

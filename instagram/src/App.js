@@ -15,18 +15,6 @@ class App extends React.Component {
     };
   }
 
-  addNewComment = (event,index) => { 
-    event.preventDefault();
-    const comments = this.state.comments.slice();
-    const newComment = {
-        username: "default usrname",
-        text: this.state.comment
-    }
-    comments.push(newComment);
-    this.setState({comments: comments, comment: ""});
-}
-
-
   searchUsername = (event) => {
     event.preventDefault();
     const postData = this.state.originalPostData.slice();

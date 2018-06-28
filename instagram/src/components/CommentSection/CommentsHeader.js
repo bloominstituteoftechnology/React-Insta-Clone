@@ -10,12 +10,14 @@ const CommentsHeader = props => {
         <div>
             Heart Icon 
             <img onClick = {props.likeAPost} src = {instagramCommentHeart} alt = "" />
-            Comment Icon
+            Comment Icon 
             <img src = {instagramCommentBubble} alt = "" />
             {props.numberOfLikes} likes
         </div>
     );
 }
+
+// (Consider adding .focus() functionality when you click on comment bubble icon )
 
     // The 'Add a comment...' input should be wrapped in a <form></form> element. Using that 
     // form's onSubmit event handler, invoke the addNewComment function and pass it the 
