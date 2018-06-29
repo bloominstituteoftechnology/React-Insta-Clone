@@ -39,7 +39,7 @@ class CommentSection extends React.Component {
 
         if (window.localStorage.getItem("comments")) {
             this.setState({
-                comments: JSON.parse(window.localStorage.getItem(`${this.state.comments[0].username}commentStorage`))
+                comments: JSON.parse(window.localStorage.getItem(`${this.state.comments[0].username}CommentStorage`))
             });
         }
 
