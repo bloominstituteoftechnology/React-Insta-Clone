@@ -13,6 +13,7 @@ const PostHeaderStyles = styled.div`
     margin-right:auto;
     padding-top:12px;
     padding-bottom:12px;
+    background-color:#ffffff;
 `
 const UserThumbnailStyles = styled.img`  
     width: 30px;

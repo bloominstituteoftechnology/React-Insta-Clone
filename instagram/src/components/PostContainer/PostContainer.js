@@ -7,10 +7,11 @@ import styled from 'styled-components';
 
 
 const IndividualPostContainerStyles = styled.div`
-    margin-bottom:55px;
+    margin-bottom:60px;
 `
 const PostContainerStyles = styled.div`
     background-color: #fafafa;
+    z-index: -1;
 `
 
 const PostContainer = props => {
