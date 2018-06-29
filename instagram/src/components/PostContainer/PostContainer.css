@@ -1,0 +1,50 @@
+.postWrapper {
+	/*border: 1px solid red;*/
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.card {
+	margin: 75px 0;
+}
+
+.cardHeader {
+	display: flex;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.cardHeader img {
+	border-radius: 100%;
+	width: 5%;
+	margin: 0 1%;
+}
+
+.cardBody {
+	text-align: left;
+}
+
+.fa-comment {
+	margin-left: 20px;
+}
+
+.cardImg {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.timeStamp{
+	color: gray;
+	font-size: 12px;
+}
+
+form {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+input {
+	border: 0.5px solid gray;
+	width: 100%;
+}

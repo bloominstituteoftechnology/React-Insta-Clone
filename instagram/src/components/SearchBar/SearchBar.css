@@ -1,0 +1,45 @@
+.SearchBar {
+	border-bottom: 0.5px solid gray;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 1%;
+	padding: 0 1%;
+}
+
+.SearchBar a {
+	color: black;
+}
+
+.brand {
+	/*border: 1px solid red;*/
+	display: inline-block;
+	align-items: center;
+}
+
+.brand a, .brand p {
+	display: inline-block;
+}
+
+.brand a {
+	border-right: 1px solid black;
+	padding-right: 20px;
+}
+
+.brand p {
+	padding-left: 20px;
+}
+
+form {
+	margin: auto;
+}
+
+.SearchBar input {
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+}
+
+.accentLogo {
+	margin: 0 20px;
+}
