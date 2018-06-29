@@ -34,7 +34,8 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.addLike}>Like</button>
+        <i onClick={this.addLike} className="far fa-heart fa-3x"></i>
+        <i className="far fa-comment fa-3x"></i>
         <p>{this.state.likes}</p>
         {
           this.state.comments.map(comment => {
