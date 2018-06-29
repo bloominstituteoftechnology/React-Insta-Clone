@@ -32,6 +32,34 @@ class CommentSection extends React.Component {
     // Pass the addNewComment function down the component tree to where ever you have your 
     // 'Add a comment...' input.
 
+    componentDidMount() {
+        // window.localStorage.setItem("comments", JSON.stringify(this.state.comments));
+        // let commentStorage = [];
+        // commentStorage.push(window.localStorage.getItem("comments"));
+
+        if (window.localStorage.getItem("comments")) {
+            this.setState({
+                comments: JSON.parse(window.localStorage.getItem(`${this.state.comments[0].username}commentStorage`))
+            });
+        }
+
+        // console.log(commentStorage);
+        console.log("doneDidMount")
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log("Prev CProps:", prevProps);
+        console.log("Prev CState:", prevState);
+
+        window.localStorage.setItem(`${this.state.comments[0].username}CommentStorage`, JSON.stringify(this.state.comments));
+        // console.log(window.localStorage.getItem(`${this.state.comments[0].username}commentStorage`))
+
+        // window.localStorage.setItem(`${this.state.comments[0].username}NumberOfLikes`, JSON.stringify(this.state.numberOfLikes));
+        // console.log(window.localStorage.getItem(`${this.state.numberOfLikes}NumberOfLikes`))
+
+
+        console.log(this.state.comments)
+      }
     
     addNewComment = (event,index) => { 
         event.preventDefault();
@@ -42,6 +70,8 @@ class CommentSection extends React.Component {
         }
         comments.push(newComment);
         this.setState({comments: comments, comment: ""});
+        console.log("Done adding comment")
+
     }
     
     changeAddNewCommentHandler = event => {

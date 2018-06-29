@@ -29,10 +29,15 @@ class App extends React.Component {
 
   componentDidMount() {
     console.log("App DidMount called");
+
     this.setState({
       postData: dummyData,
       originalPostData: dummyData
     })
+
+    window.localStorage.setItem("comments", JSON.stringify(this.state.postData ))
+
+
   }  // "Good place to fetch your data and set your state accordingly."
 
   // LIFECYLE MOUNTING: constructor invoked ---> render called ---> add stuff to DOM ---> componentDidMount invoked (in case there's any asynchronous data we need to handle) 
@@ -40,15 +45,16 @@ class App extends React.Component {
   // Summarizing: constructor---> render--->DidMount--->render--->DidUpdate
 
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   console.log("Prev Props:", prevProps);
-  //   console.log("Prev State:", prevState);
-  // }
+  componentDidUpdate(prevProps, prevState) {
+    console.log("Prev Props:", prevProps);
+    console.log("Prev State:", prevState);
+  }
 
 
 
   render() {
     return (
+
       <div className="App">
         <PostsPage 
           searchFieldHandler = {this.searchFieldHandler}
@@ -56,7 +62,9 @@ class App extends React.Component {
           searchUsername = {this.searchUsername}
           postData = {this.state.postData}
         />       
+        {console.log(this.state.postData.comments)}
       </div>
+                
     );
   }
 }
