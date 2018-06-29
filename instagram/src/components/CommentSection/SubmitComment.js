@@ -7,14 +7,16 @@ const SubmitCommentContainerStyles = styled.div`
     border-top:0.5px solid #dbdbdb;
     margin-left:9px;
     margin-right:9px;
-    padding-top:12px;
-    padding-bottom:10px; 
+    padding-top:14px;
+    padding-bottom:12px; 
+
 `
 const SubmitCommentInputStyles = styled.input`
     border: 0px solid;
     margin-left:13px;
-    font-size:15px;
+    font-size:14px;
     color:#dbdbdb;
+    color:black;
 `
 const InterpunctStyles = styled.div`
     font-weight:bold;
