@@ -14,12 +14,10 @@ class PostsPage extends React.Component {
 
   onSearch = (e) => {
     const filtered = this.state.data.filter((post) => {
-      if (post.username.includes(e.target.value)) {
+      if (post.username.startsWith(e.target.value)) {
         return post;
       }
     });
-    //let data = this.state.data.slice();
-    //filtered = data.filter(obj => (e.target.search.value === obj.username));
     this.setState({filtered});
   }
 

@@ -21,7 +21,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>clown</h1>
         
         <PostsPage />
       </div>
