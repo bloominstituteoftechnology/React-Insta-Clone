@@ -1,13 +1,16 @@
 import React from 'react';
+import styled from 'styled-components'
+
+const PostPictureContainer = styled.img`
+    width:615px;
+`;
 
 const PostPicture = props => {
     return (
-        <div className = "post-picture">
-            {/* <img src =  {props.post.imageUrl} alt = "" />  */}
-            <img src =  {props.imageUrl} alt = "" /> 
-        </div>
-        )
+            <PostPictureContainer alt = "" src = {props.imageUrl} />   
+        );
     };
 
 
 export default PostPicture;
+
