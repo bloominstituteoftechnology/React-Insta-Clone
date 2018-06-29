@@ -9,9 +9,9 @@ const CommentSectionContainerStyles = styled.div`
     width:613px;
     margin-left:auto;
     margin-right:auto;
-    border-left:1px solid lightgray;
-    border-right:1px solid lightgray;
-    border-bottom:1px solid lightgray;
+    border-left:1px solid #dbdbdb;
+    border-right:1px solid #dbdbdb;
+    border-bottom:1px solid #dbdbdb;
     margin-top:-4px;
 `
 

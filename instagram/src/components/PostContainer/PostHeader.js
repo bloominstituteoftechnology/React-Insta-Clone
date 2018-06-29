@@ -5,9 +5,9 @@ const PostHeaderStyles = styled.div`
     display:flex;
     justify-content:left;
     align-items: center;
-    border-top: 1px solid lightgray;
-    border-right: 1px solid lightgray;
-    border-left: 1px solid lightgray;
+    border-top: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
     width:613px;
     margin-left:auto;
     margin-right:auto;
