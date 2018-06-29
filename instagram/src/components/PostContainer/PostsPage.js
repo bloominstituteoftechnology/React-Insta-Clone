@@ -2,7 +2,6 @@ import React from 'react';
 import PostContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
 
-
 const PostsPage = props => {
     return (
         <div>
@@ -14,10 +13,9 @@ const PostsPage = props => {
                 activeValue = {props.searchField}
                 searchUsername = {props.searchUsername}
             />
-            
             <PostContainer postData = {props.postData}/>  
         </div>
-    );
+    )
 }
 
 export default PostsPage;

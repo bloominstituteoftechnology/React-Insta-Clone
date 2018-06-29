@@ -7,10 +7,11 @@ import styled from 'styled-components';
 
 
 const IndividualPostContainerStyles = styled.div`
-    margin-bottom:60px;
+    padding-top:60px;
 `
 const PostContainerStyles = styled.div`
     background-color: #fafafa;
+    border-top:1px solid #dbdbdb;
     z-index: -1;
 `
 
