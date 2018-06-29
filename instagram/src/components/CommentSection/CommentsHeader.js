@@ -17,6 +17,7 @@ const CommentsHeaderIcons = styled.img`
     width:27px;
     margin-right:10px;
     margin-top:8px;
+    margin-bottom:2px;
 `
 
 const CommentsHeader = props => {
