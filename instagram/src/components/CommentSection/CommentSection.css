@@ -14,3 +14,7 @@ span .user{
   margin-right: 8px;
 
 }
+
+.comment-section p{
+  color: lightgray;
+}

@@ -1,24 +1,23 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import PostContent from './PostContent';
 import './PostContainer.css';
 
 const PostContainer = props => {
   return(
     <div className="post-container">
-      <div className="header-bar">
-        <img className="profile-img"
-          src={props.item.thumbnailUrl}
-          alt="Usr"
-        />
-        <h2>{props.item.username}</h2>
-      </div>
-      <img
-        className="post-img"
-        src={props.item.imageUrl}
-      />
+      <PostContent item={props.item}/>
       <div className="footer">
         <h2>{props.item.likes} likes</h2>
-        <CommentSection comments={props.item.comments} />
+        <img className="comment-icon"
+          src="./PostAssets/instagram-comment-bubble.png"
+          alt="/"
+        />
+        <img className="like-icon"
+          src="./PostAssets/icons8-heart-50.png"
+          alt="/"
+        />
+        <CommentSection comments={props.item.comments} postId={props.item.timestamp} />
       </div>
     </div>
   )

@@ -3,7 +3,16 @@
   flex-direction: column;
   padding: 2px;
   border: 1px solid lightgray;
-  margin: 2px 0;
+  margin: 40px 0 2px;
+  background: white;
+}
+
+.post-container:last-child {
+  margin-bottom: 40px;
+}
+
+.post-container:first-child{
+  margin-top: 80px;
 }
 
 .header-bar {
