@@ -11,7 +11,7 @@ const SearchWrap = styled.div`
 
 const Search = styled.input`
 height: 30px;
-width: 180px;
+width: 200px;
 `;
 
 

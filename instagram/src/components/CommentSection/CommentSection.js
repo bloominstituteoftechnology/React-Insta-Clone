@@ -1,6 +1,7 @@
 import React from 'react';
 import './CommentSection.css';
 import Comment from '../Comment/Comment.js';
+import styled from 'styled-components';
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -32,10 +33,19 @@ class CommentSection extends React.Component {
   }
   
   render() {
+    const Icon = styled.i`
+    padding: 20px 20px 20px 0;
+    `;
+
+    const Input = styled.input`
+      height: 30px;
+      width: 200px;
+    `;
+
     return (
       <div>
-        <i onClick={this.addLike} className="far fa-heart fa-3x"></i>
-        <i className="far fa-comment fa-3x"></i>
+        <Icon onClick={this.addLike} className="far fa-heart fa-3x"></Icon>
+        <Icon className="far fa-comment fa-3x"></Icon>
         <p>{this.state.likes}</p>
         {
           this.state.comments.map(comment => {
@@ -49,7 +59,7 @@ class CommentSection extends React.Component {
           })
         }  
         <form onSubmit={this.addNewComment}>     
-          <input type="text" placeholder="Add a comment..." name="commentInput"/>
+          <Input type="text" placeholder="Add a comment..." name="commentInput"/>
         </form>
       </div>
     );
