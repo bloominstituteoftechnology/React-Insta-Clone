@@ -18,12 +18,12 @@ const UserThumbnailStyles = styled.img`
     width: 30px;
     border-radius:50%;
     margin-left:13px;
+    margin-right:13px;
 `
 
-const UserNameStyles = styled.div`
+export const UsernameStyles = styled.div`
     font-size:15px;
     font-weight: bold;
-    margin-left:12px;
 `
 
 
@@ -34,11 +34,11 @@ const PostHeader = props => {
                 <UserThumbnailStyles src = {props.thumbnailURL} alt = "" />
             </div> 
             <div>
-                <UserNameStyles>
+                <UsernameStyles>
                     <div>
                         {props.username}
                     </div>
-                </UserNameStyles>
+                </UsernameStyles>
             </div>
         </PostHeaderStyles>
         )

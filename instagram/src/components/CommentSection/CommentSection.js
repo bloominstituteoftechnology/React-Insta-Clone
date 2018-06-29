@@ -1,9 +1,18 @@
 import React from 'react';
-import Comment from './Comment'
-import SubmitComment from './SubmitComment'
-import CommentsHeader from './CommentsHeader'
+import Comment from './Comment';
+import SubmitComment from './SubmitComment';
+import CommentsHeader from './CommentsHeader';
+import styled from 'styled-components';
 import './commentSection.css'
 
+const CommentSectionContainerStyles = styled.div`
+    width:613px;
+    margin-left:auto;
+    margin-right:auto;
+    border-left:1px solid lightgray;
+    border-right:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+`
 
 // We are using a constructor here because of where it gets called in the lifecycle and logistics of passing data around
 class CommentSection extends React.Component {
@@ -46,6 +55,7 @@ class CommentSection extends React.Component {
 
     render() {
         return (
+            <CommentSectionContainerStyles>
             <div>
                 <CommentsHeader 
                     numberOfLikes = {this.state.numberOfLikes}
@@ -66,6 +76,7 @@ class CommentSection extends React.Component {
                     addNewComment = {this.addNewComment}
                 />
             </div>
+            </CommentSectionContainerStyles>
         );
     }
 }
