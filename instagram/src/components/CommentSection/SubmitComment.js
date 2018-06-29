@@ -17,6 +17,7 @@ const SubmitCommentInputStyles = styled.input`
     font-size:14px;
     color:#dbdbdb;
     color:black;
+    outline:none;
 `
 const InterpunctStyles = styled.div`
     font-weight:bold;
