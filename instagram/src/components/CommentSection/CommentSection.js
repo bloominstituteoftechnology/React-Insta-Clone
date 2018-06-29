@@ -12,6 +12,7 @@ const CommentSectionContainerStyles = styled.div`
     border-left:1px solid lightgray;
     border-right:1px solid lightgray;
     border-bottom:1px solid lightgray;
+    margin-top:-4px;
 `
 
 // We are using a constructor here because of where it gets called in the lifecycle and logistics of passing data around

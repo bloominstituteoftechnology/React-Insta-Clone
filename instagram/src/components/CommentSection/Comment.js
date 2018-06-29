@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components'
-import {UsernameStyles} from '../PostContainer/PostHeader'
+import styled from 'styled-components';
+import {UsernameStyles} from '../PostContainer/PostHeader';
 
 const SingleCommentContainerStyles = styled.div`
     display:flex;
@@ -9,8 +9,8 @@ const SingleCommentContainerStyles = styled.div`
     margin-left:auto;
     margin-right:auto;
     margin-bottom:8px;
-    padding-left:15px;
-    padding-right:15px;
+    padding-left:12px;
+    padding-right:12px;
 `
 const CommentTextStyles = styled.div`
     font-size:15px;

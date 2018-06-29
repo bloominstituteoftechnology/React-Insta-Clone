@@ -1,19 +1,35 @@
 import React from 'react';
-// import instagramCommentHeart from "../../../public/img/iconsAndLogos/instagram-comment-heart.png"
-import instagramCommentHeart from "../../img/iconsAndLogos/instagram-comment-heart.png"
-import instagramCommentBubble from "../../img/iconsAndLogos/instagram-comment-bubble.png"
+import instagramCommentHeart from "../../img/iconsAndLogos/instagram-comment-heart.png";
+import instagramCommentBubble from "../../img/iconsAndLogos/instagram-comment-bubble.png";
+import styled from 'styled-components';
+import {UsernameStyles} from '../PostContainer/PostHeader';
 
+const CommentsHeaderContainer = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    padding-left:7px;
+    width:613px;
+    margin-bottom:8px;
+`
 
+const CommentsHeaderIcons = styled.img`
+    width:27px;
+    margin-right:10px;
+    margin-top:8px;
+`
 
 const CommentsHeader = props => {
     return (
-        <div>
-            Heart Icon 
-            <img onClick = {props.likeAPost} src = {instagramCommentHeart} alt = "" />
-            Comment Icon 
-            <img src = {instagramCommentBubble} alt = "" />
-            {props.numberOfLikes} likes
-        </div>
+        <CommentsHeaderContainer>
+            <div> 
+                <CommentsHeaderIcons onClick = {props.likeAPost} src = {instagramCommentHeart} alt = "" />
+                <CommentsHeaderIcons src = {instagramCommentBubble} alt = "" />
+                <UsernameStyles>
+                    {props.numberOfLikes} likes
+                </UsernameStyles>
+            </div>
+        </CommentsHeaderContainer>
     );
 }
 
