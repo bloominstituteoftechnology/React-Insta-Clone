@@ -1,0 +1,20 @@
+
+span{
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+  text-align: left;
+  line-height: 16px;
+  margin: 1px 0;
+}
+
+span .user{
+  color: #003569;
+  font-weight: 700;
+  margin-right: 8px;
+
+}
+
+.comment-section p{
+  color: lightgray;
+}
