@@ -1,0 +1,34 @@
+.app-container {
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.search-bar-container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid grey;
+    margin-bottom: 50px;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 145px;
+}
+
+.header-logo .logo-name {
+    width: 100px;
+}
+
+.header-icon-bar {
+    width: 145px;
+    display: flex;
+    justify-content: space-between;
+}

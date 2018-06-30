@@ -1,0 +1,49 @@
+.post-container {
+    width: 604px;
+    border: 1px solid #E2E2E2;
+    margin-bottom: 50px;
+}
+
+.user-thumbnail {
+    width: 30px;
+    border-radius: 15px;
+}
+
+.post-image {
+    width: 100%;
+}
+
+.likes-count {
+    border: 1px solid red;
+}
+
+.comment-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comments {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.add-comment {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    line-height:40px;
+}
+
+.form {
+    color: #8E8E8E;
+}
+
+.input {
+    border: none;
+}
+
+.expandable-menu {
+    font-weight: bold;
+    vertical-align: center;
+}
