@@ -1,0 +1,15 @@
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    border-bottom: 1px solid gray;
+}
+
+.activity-container {
+    display: flex;
+}
+
+.activity {
+    margin-right: 15px;
+}

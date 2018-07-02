@@ -1,0 +1,28 @@
+.post-container {
+    border: 1px solid #e5e5e5;
+    width: 500px;
+    margin: 20px 0;
+}
+
+.post-header-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+}
+
+.post-header-thumbnail {
+    border-radius: 50%;
+    width: 30px;
+}
+
+.post-header-username {
+    font-weight: bold;
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+.post-image {
+    width: 100%;
+}
+
