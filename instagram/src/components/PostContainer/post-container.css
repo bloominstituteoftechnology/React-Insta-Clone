@@ -1,0 +1,49 @@
+.post-container {
+    /* background: dodgerblue ; */
+    /* width: 500px ;
+    height: 500px ;
+    margin: 0 auto ; */
+    /* margin: 15px 0 ; */
+        /* border: 1px solid red ; */
+
+
+}
+.post-content {
+    border: 1px solid rgb(195, 195, 195) ;
+    width: 60% ;
+    display: flex ;
+    flex-direction: column;
+    margin: 0 auto ;
+    padding: 75px 0 ;
+}
+.post-card-wrapper {
+    /* height: 110% ;
+    border: 10px solid red; */
+    margin: 50px 0 ;
+}
+.post-header {
+    display: flex ;
+    width: 100% ;
+    /* border: 1px solid red ; */
+}
+.post-user-thumb {
+    background-image: url(../../logos/profileCircleWhtBGClearMiddleImgGimp7575.png);
+    height: 75px ;
+    width: 75px ;
+    margin-left: 30px
+}
+.post-user-thumb img {
+    width: 75px ;
+    height: 75px ;
+}
+.post-username {
+    align-self: center ;
+    margin-left: 25px;
+    font-size: 28px
+}
+.post-username img {
+    margin-left: 5px;
+ 
+}
+
+
