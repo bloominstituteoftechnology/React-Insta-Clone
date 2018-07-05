@@ -1,0 +1,13 @@
+.nav-container {
+  border-bottom: 0.5px solid #e6e4e4;
+}
+
+.nav-logo-name {
+  border-left: 1px solid black;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.nav-img {
+  margin: auto 20px;
+}
