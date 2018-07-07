@@ -1,5 +1,5 @@
 import React from 'react';
-import Comment from './Comment';
+import Comment from './Comment'; 
 import SubmitComment from './SubmitComment';
 import CommentsHeader from './CommentsHeader';
 import styled from 'styled-components';
@@ -37,7 +37,7 @@ class CommentSection extends React.Component {
         // let commentStorage = [];
         // commentStorage.push(window.localStorage.getItem("comments"));
 
-        if (window.localStorage.getItem("comments")) {
+        if (window.localStorage.getItem("comments") === true) {
             this.setState({
                 comments: JSON.parse(window.localStorage.getItem(`${this.state.comments[0].username}CommentStorage`))
             });
@@ -100,7 +100,7 @@ class CommentSection extends React.Component {
                         commentUsername = {comment.username}
                         commentText = {comment.text}
                     />
-                ))}
+                ))} 
 
                 <SubmitComment 
                     activeValue = {this.state.comment}

@@ -7,7 +7,7 @@ import instagramCompass from "../../img/iconsAndLogos/instagram-compass.png"
 import instagramHeaderHeart from "../../img/iconsAndLogos/instagram-header-heart.png"
 import instagramUser from "../../img/iconsAndLogos/instagram-user.png" 
 import instagramHeaderLogo from "../../img/iconsAndLogos/instagram-header-logo.png" 
-
+ 
 const SearchBarInnerContainerStyles = styled.div`
     background-color:#ffffff;
     display:flex;

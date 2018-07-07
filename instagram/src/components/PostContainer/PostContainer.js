@@ -39,7 +39,7 @@ const PostContainer = props => {
         </div>
         </PostContainerStyles>
     );
-}
+} 
 
 
 
