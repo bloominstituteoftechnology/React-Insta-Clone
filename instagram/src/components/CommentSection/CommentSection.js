@@ -11,7 +11,6 @@ class CommentSection extends Component {
     render() {
         return (
             <div>
-                {console.log(this.state.comments)}
                 { this.state.comments.map((comment, index) =>  {
                     return [ 
                     <div key={index}>

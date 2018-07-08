@@ -8,14 +8,14 @@ class PostContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            posts: props.posts
+            comments: props.post.comments
         };
     }
 
     render() {
         return (
             <div className= 'PostContainer'>
-                <CommentSection comments={ this.state.posts.comments } />
+                <CommentSection comments={ this.state.comments } />
             </div>
         )
     }

@@ -9,25 +9,26 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: dummyData
     }
   }
 
-  componentDidMount() {
-    let posts = [].concat(this.state.posts);
-    posts = posts.concat(dummyData);
-    this.setState({ posts });
-  }
+  // componentDidMount() {
+  //   let posts = [].concat(this.state.posts);
+  //   posts = posts.concat(dummyData);
+  //   this.setState({ posts });
+  // }
   
   render() {
     return (
       <div className="App">
         <SearchBar />
-        { this.state.posts.map((post, index) => {
+        {/* { this.state.posts.map((post, index) => {
           return <div key={index}>
             <PostContainer posts = { post } />
             </div>
-        })}
+        })} */}
+        <PostContainer post={ this.state.posts[0]} />
       </div>
     );
   }
