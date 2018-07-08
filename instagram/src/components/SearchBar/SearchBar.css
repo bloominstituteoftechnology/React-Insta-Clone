@@ -7,7 +7,8 @@
 .Header__Instagram {
     display: flex;
     justify-content: space-around;
-    width: 180px;
+    width: 150px;
+    margin-left: 10px;
 }
 
 img {
@@ -16,12 +17,13 @@ img {
 
 .Header__P {
     color: grey;
-    font-size: 40px;
+    font-size: 30px;
+    margin-top: 6px;
 }
 
 .Header__SearchBar {
     align-self: center;
-    margin-left: 130px;
+    margin-left: 60px;
 }
 
 .SearchBar__Search {
@@ -32,6 +34,6 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 150px;
-    margin-left: 130px;
+    width: 110px;
+    margin-left: 75px;
 }

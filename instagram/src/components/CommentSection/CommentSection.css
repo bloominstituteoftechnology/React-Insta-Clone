@@ -1,0 +1,26 @@
+.CommentSection {
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.Comment {
+    display: flex;  
+}
+
+.Comment__H1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.CommentSection__Timestamp {
+    font-size: 10px;
+    color: grey;
+    padding-bottom: 10px;
+    border-bottom: 1px grey solid;
+}
+
+.CommentSection__AddComment {
+    color: grey;
+    padding-bottom: 15px;
+}

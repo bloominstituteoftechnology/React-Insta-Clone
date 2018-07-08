@@ -23,11 +23,6 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        {/* { this.state.posts.map((post, index) => {
-          return <div key={index}>
-            <PostContainer posts = { post } />
-            </div>
-        })} */}
         <PostContainer post={ this.state.posts[0]} />
       </div>
     );
@@ -35,3 +30,9 @@ class App extends Component {
 }
 
 export default App;
+
+{/* { this.state.posts.map((post, index) => {
+  return <div key={index}>
+    <PostContainer posts = { post } />
+    </div>
+})} */}

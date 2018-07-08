@@ -1,0 +1,7 @@
+.PostContainer__Header {
+    display: flex;
+    justify-content: space-around;
+    width: 120px;
+    margin: 10px;
+    font-weight: bold;
+}

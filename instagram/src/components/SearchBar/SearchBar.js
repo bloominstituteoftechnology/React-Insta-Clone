@@ -9,14 +9,14 @@ export const SearchBar = () => {
             <div className="Header__Instagram">
                 <img 
                     src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Instagram_simple_icon.svg"
-                    width="30"
+                    width="20"
                     alt="instagram-logo"
                 />
                 <p className="Header__P"> | </p>
                 <img 
                     src="http://www.androidguys.com/wp-content/uploads/2015/04/insta.png"
                     width="100"
-                    height="40"
+                    height="30"
                     alt="instagram"
                 />
             </div>
