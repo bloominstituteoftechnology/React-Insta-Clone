@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
 
 class CommentSection extends Component {
-    getComment() {
-        return this.props.comments.map((comment) => < Comment{... comment}/>);
-    };  
-
-    render() {
-        return (
-            <div className= 'CommentSection'>
-                {this.getComment()}
-            </div>
-            );
+    constructor(props) {
+        super(props);
+        this.state = {
+            comments: props.comments
         }
     }
-
-function Comment(props) {
-    return(
-        <div className=''>
-            <div className='CommentSection__username'>{props.username} </div>
-            {props.text}
-        </div>
-    );
+    
+    render() {
+        return (
+            <div>
+                {console.log(this.state.comments)}
+                { this.state.comments.map((comment, index) =>  {
+                    return [ 
+                    <div key={index}>
+                        <h1> {comment.username} </h1>
+                        <p> {comment.text} </p>
+                    </div>
+                    ]
+                })}
+            </div>
+        )
+    }
 }
 
 export default CommentSection;

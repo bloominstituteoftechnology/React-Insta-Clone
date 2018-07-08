@@ -6,7 +6,7 @@
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-scripts": "1.1.4",
-    "reactstrap": "^5.0.0"
+    "reactstrap": "^6.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
