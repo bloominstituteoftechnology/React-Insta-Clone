@@ -5,3 +5,16 @@
     margin: 10px;
     font-weight: bold;
 }
+
+.PostContainer__Actions {
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+    padding: 10px;
+}
+
+.PostContainer__Likes {
+    font-weight: bold;
+    display: inline;
+    padding-left: 15px;
+}
