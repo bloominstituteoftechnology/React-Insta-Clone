@@ -1,4 +1,37 @@
-.SearchBar {
+.Header {
     display: flex;
-    flex-direction: row
+    height: 60px;
+    border: 1px solid black;
+}
+
+.Header__Instagram {
+    display: flex;
+    justify-content: space-around;
+    width: 180px;
+}
+
+img {
+    align-self: center;
+}
+
+.Header__P {
+    color: grey;
+    font-size: 40px;
+}
+
+.Header__SearchBar {
+    align-self: center;
+    margin-left: 130px;
+}
+
+.SearchBar__Search {
+    text-align: center;
+}
+
+.Header__Icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    margin-left: 130px;
 }

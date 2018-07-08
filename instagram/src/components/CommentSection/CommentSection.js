@@ -20,6 +20,7 @@ class CommentSection extends Component {
                     </div>
                     ]
                 })}
+                <div>Add a comment...</div>
             </div>
         )
     }

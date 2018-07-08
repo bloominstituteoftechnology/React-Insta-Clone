@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer';
-// import SearchBar from './components/SearchBar/SearchBar';
-// import CommentSection from './components/CommentSection/CommentSection';
+import { SearchBar } from './components/SearchBar/SearchBar';
 
 class App extends Component {
   constructor() {
@@ -23,13 +22,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header"> </header>
+        <SearchBar />
         { this.state.posts.map((post, index) => {
           return <div key={index}>
             <PostContainer posts = { post } />
             </div>
         })}
-        {/* <SearchBar /> */}
       </div>
     );
   }
