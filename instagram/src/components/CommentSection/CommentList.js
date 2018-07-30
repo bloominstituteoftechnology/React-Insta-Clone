@@ -11,6 +11,7 @@ const CommentList = (props) => {
                     return <Comment key={comment.username} comment={comment}/>
             })
         }
+            <input placeholder="Add a comment..." />
         </div>
     )
 }
