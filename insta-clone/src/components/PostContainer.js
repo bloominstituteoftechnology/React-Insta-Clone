@@ -1,6 +1,6 @@
 import React from 'react';
 import Comments from './Comments';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 
 class PostContainer extends React.Component {
@@ -32,12 +32,12 @@ class PostContainer extends React.Component {
     }
 }
 
-PostContainer.PropTypes = {
-    thumbnail: PropTypes.string,
-    images: PropTypes.string,
-    username: PropTypes.string,
-    likes: PropTypes.number,
-    comment: PropTypes.arrayOf(PropTypes.object)
+PostContainer.propTypes = {
+    thumbnail: propTypes.string,
+    images: propTypes.string,
+    username: propTypes.string,
+    likes: propTypes.number,
+    comment: propTypes.arrayOf(propTypes.object)
 
 }
 

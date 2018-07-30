@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 
 class Comments extends React.Component {
@@ -20,9 +20,9 @@ class Comments extends React.Component {
     }
 }
 
-Comments.PropTypes = {
-    comments: PropTypes.string,
-    username: PropTypes.string
+Comments.propTypes = {
+    comments: propTypes.string,
+    username: propTypes.string
 }
 
 export default Comments;
