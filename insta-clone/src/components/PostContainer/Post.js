@@ -22,6 +22,7 @@ class Post extends Component {
         let newComment = {text: comment, username: user};
         newList.push(newComment);
         this.setState({comments: newList});
+        event.target.children[0].value = '';
     }
 
     render() {
