@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './commentsection.css'
 
 const Comment = (props) => {
     return ( 
         <div>
-            <h3>{props.username}</h3><p>{props.text}</p>
+            <p className="comment"><span className="username">{props.username}</span>{props.text}</p>
         </div>
     );
 }
+
+
  
 export default Comment;

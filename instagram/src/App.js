@@ -12,8 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      {/* {console.log(this.state.data)} */}
-      {this.state.data.map(item =>  <PostContainer data={item} />)}
+      {this.state.data.map(item =>  <PostContainer data={item} key={item.timestamp}/>)}
       </div>
     );
   }
