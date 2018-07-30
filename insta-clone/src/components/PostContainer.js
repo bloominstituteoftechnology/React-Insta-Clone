@@ -1,5 +1,6 @@
 import React from 'react';
 import Comments from './Comments';
+import PropTypes from 'prop-types';
 
 
 class PostContainer extends React.Component {
@@ -16,8 +17,8 @@ class PostContainer extends React.Component {
     render() {
         return(
             <div className="postContainer">
-               <h4><img src={this.state.thumbnail} alt="userIcon" />{this.state.username}</h4>
-               <img src={this.state.images}  alt="insta"/>
+               <h4><img className="userIcon" src={this.state.thumbnail} alt="userIcon" />{this.state.username}</h4>
+               <img src={this.state.images}  alt="insta" />
                <header><i className="far fa-heart"></i> <i className="far fa-comment"></i></header>
                <div>{this.state.likes}</div>
                {this.state.comments.map(comment=> <Comments values={comment} key={Date.now()} />)} 
@@ -25,6 +26,15 @@ class PostContainer extends React.Component {
             </div>
         )
     }
+}
+
+PostContainer.PropTypes = {
+    thumbnail: PropTypes.string,
+    images: PropTypes.string,
+    username: PropTypes.string,
+    likes: PropTypes.number,
+    comment: PropTypes.arrayOf(PropTypes.object)
+
 }
 
 export default PostContainer;

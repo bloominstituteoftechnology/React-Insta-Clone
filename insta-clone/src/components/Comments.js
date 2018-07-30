@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 class Comments extends React.Component {
     constructor(props) {
@@ -17,6 +19,11 @@ class Comments extends React.Component {
         </div>
         )
     }
+}
+
+Comments.PropTypes = {
+    comments: PropTypes.string,
+    username: PropTypes.string
 }
 
 export default Comments;
