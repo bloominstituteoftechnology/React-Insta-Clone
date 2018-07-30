@@ -19,7 +19,7 @@ const PostContainer = props => {
                     </div>
 
                     <div>
-                    <i class="far fa-heart"></i> <i class="far fa-comment"></i>
+                    <i className="far fa-heart"></i> <i className="far fa-comment"></i>
                     </div>
 
                     <div className='likes'>

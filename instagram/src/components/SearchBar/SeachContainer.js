@@ -6,7 +6,7 @@ const SearchContainer = () => {
         <div className='container'>
 
             <div className='logo'>
-                <h1><i class="fab fa-instagram"></i>INSTAGRAM</h1>
+                <h1><i className="fab fa-instagram"></i>INSTAGRAM</h1>
             </div>
 
             <div className='search'>
@@ -18,7 +18,7 @@ const SearchContainer = () => {
             </div>
 
             <div className='options'>
-            <i class="far fa-compass"></i> <i class="far fa-heart"></i> <i class="fas fa-user"></i>
+            <i className="far fa-compass"></i> <i className="far fa-heart"></i> <i className="fas fa-user"></i>
         </div>
 
         </div>
