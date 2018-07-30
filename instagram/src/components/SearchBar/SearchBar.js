@@ -3,8 +3,8 @@ import './SearchBar.css';
 
 const SearchBar = () => {
     return (
-        <div>
-
+        <div className="search-bar">
+            this is the search bars
         </div>
     );
 }

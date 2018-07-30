@@ -3,8 +3,8 @@ import './CommentSection.css';
 
 const CommentSection = () => {
     return (
-        <div>
-
+        <div className="comment-section">
+            hello
         </div>
     );
 }
