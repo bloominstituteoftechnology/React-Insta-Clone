@@ -3,6 +3,10 @@
     max-width: 70%;
 }
 
+.Card:not(:last-child){
+    margin-bottom: 5rem;
+}
+
 .Card__header {
     padding: 1rem 2rem;
     display: flex;
