@@ -1,0 +1,23 @@
+.posting {
+    width: 700px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.thumbnail {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.posting-header {
+    position: relative;
+    margin-left: -500px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
