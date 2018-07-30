@@ -10,7 +10,7 @@ const PostContainer = props => {
     <div className='post'>
       <PostHeader user={props.user}/>
       <PostImage src={props.user.imageUrl}/>
-      <CommentSection user={props.user} />
+      <CommentSection likes={props.user.likes} comments={props.user.comments} />
     </div>
   );
 };
