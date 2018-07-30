@@ -13,8 +13,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <div>
         <h1 className="App-title">Henlo</h1>
         <PostContainer instaPost={this.state.instaPosts}/>
+        </div>
       </div>
     );
   }

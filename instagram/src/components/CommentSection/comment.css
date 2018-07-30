@@ -1,0 +1,12 @@
+.comment {
+    width: 500px;
+    display: flex;
+    margin: 2% 0 2% 1.5%; ;
+}
+.commentusername {
+    margin-right: 2%;
+}
+
+.comment2 {
+    width: 500px;
+}

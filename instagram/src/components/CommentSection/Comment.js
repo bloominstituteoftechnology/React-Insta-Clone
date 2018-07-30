@@ -1,10 +1,10 @@
 import React from 'react';
+import './comment.css'
 
 const Comment = props => {
     return (
-        <div>
-            <div>{props.com.username}</div>
-            <div>{props.com.text}</div>
+        <div className="comment">
+            <div className="comment2"><span className="commentusername">{props.com.username}</span>{props.com.text}</div>
         </div>
     )
 }

@@ -1,0 +1,62 @@
+.user {
+    width: 500px;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 2%;
+  
+}
+
+.username {
+    margin: 3%;
+}
+.mainImg {
+    width: 500px;
+    height: 500px;
+    margin-top: 2%;
+    object-fit: cover;
+}
+
+.likeCommentIcons {
+    width: 500px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.likes {
+    width: 500px;
+    margin-left: 3%;
+}
+
+i {
+    font-size: 200%;
+    margin: 3%;
+
+}
+
+span {
+    font-weight: bold;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    object-fit: cover;
+    margin-left: 1%;
+}
+
+.post {
+    display:flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-bottom: 8%;
+    padding-bottom: 3%;
+    border: dotted lightgray .5px;
+}
+
+.theCSSdream {
+    background: white;
+    width: 501px;
+}
