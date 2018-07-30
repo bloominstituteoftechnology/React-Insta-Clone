@@ -18,6 +18,10 @@ const PostContainer = props => {
                         <img className='img' src={user.imageUrl} alt='img' />
                     </div>
 
+                    <div>
+                    <i class="far fa-heart"></i> <i class="far fa-comment"></i>
+                    </div>
+
                     <div className='likes'>
                         {user.likes}
                     </div>
