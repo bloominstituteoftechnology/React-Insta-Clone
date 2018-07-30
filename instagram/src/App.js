@@ -5,6 +5,7 @@ import dummyData from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
 
+
 class App extends Component {
   constructor(){
     super();
@@ -18,8 +19,8 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <header className="search">
-          <SearchBar />
+        <header >
+          <SearchBar  />
         </header>
 
        {this.state.dummyData.map(dummyData => <PostContainer key={dummyData.timestamp} dummyData={dummyData}/>)}

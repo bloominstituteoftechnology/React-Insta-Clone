@@ -1,0 +1,25 @@
+.search{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    max-width: 100%;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    font-size: 46px;
+}
+
+.fas{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.fab{
+    font-size: 46px;
+}
+
+.search-bar{
+    margin: auto;
+}
