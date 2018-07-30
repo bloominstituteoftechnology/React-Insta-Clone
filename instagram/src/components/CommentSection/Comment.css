@@ -1,0 +1,23 @@
+
+.comment-list-container {
+    margin: 8% auto;
+    width: 100%;
+
+}
+
+.comment-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+}
+
+.comment-container .comment-username {
+    font-weight: 700;
+    margin: 3px;
+}
+
+.comment-container .comment-text {
+    padding-left: 1%;
+    overflow-y: 
+}
