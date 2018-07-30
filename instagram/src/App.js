@@ -10,6 +10,7 @@ class App extends Component {
     this.state = {
       dummyData
     }
+
   }
 
 
@@ -21,8 +22,8 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
 
-       {this.state.dummyData.map(dummyData => <PostContainer dummyData={dummyData}/>)}
-
+       {this.state.dummyData.map(dummyData => <PostContainer key={dummyData.timestamp} dummyData={dummyData}/>)}
+  
       </div>
     );
   }
