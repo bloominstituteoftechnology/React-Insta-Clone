@@ -7,9 +7,23 @@ class CommentSection extends Component {
         super(props);
         this.state = {
             comments: props.comments,
+            current: '',
             time: props.time
         };
     }
+
+    addComment = e => {
+        e.preventDefault();
+        this.setState({
+            comments: this.state.comments.concat({text: this.state.current, username: 'A Person'}),
+        });
+    };
+
+    onInputChange = e => {
+        this.setState({
+            current: e.target.value,
+        });
+    };
 
     render () {
         return (
@@ -20,8 +34,12 @@ class CommentSection extends Component {
                 }
                 <p>{this.state.time}</p>
                 <hr />
-                <form>
-                    <input className="comment-input" type="text" placeholder="Add a comment..." />
+                <form onSubmit={this.addComment}>
+                    <input 
+                        onChange={this.onInputChange} 
+                        className="comment-input" 
+                        type="text" 
+                        placeholder="Add a comment..." />
                 </form>
             </div>
         );

@@ -17,7 +17,7 @@ const PostContainer = props => {
             </div>
             <CommentSection
                 comments={props.comments} 
-                time={moment().subtract(props.time, 'days').calendar()} />
+                time={moment(props.time, 'MMMM Do YYYY, h:mm:ss a').fromNow()} />
         </div>
     );
 };
