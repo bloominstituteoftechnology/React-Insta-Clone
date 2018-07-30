@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CommentSection from '../CommentSection/CommentSection';
 
 const Post = (props) => {
     return (  
@@ -9,6 +10,7 @@ const Post = (props) => {
         <img src={props.data.imageUrl}/>
         <div>{props.data.likes}</div>
         <div>{props.data.timestamp}</div>
+        <CommentSection com={props.post} />
         </div>
     );
 }
