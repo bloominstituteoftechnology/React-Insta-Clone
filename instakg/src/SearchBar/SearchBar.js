@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from './logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCompass, faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCompass, faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
+
 import './SearchBar.css';
 
 

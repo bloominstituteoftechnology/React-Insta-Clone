@@ -18,13 +18,14 @@
     height: 2em;
     width: auto;
     border-radius: 50%;
+    margin-right: 5px;
 
 }
 .userName{
     font-weight: bold;
     line-height: 2em;
     text-align: center;
-    margin:  0 10px;
+    margin-right: 5px;
 }
 .postImageContainer{
     margin: 0 -10px;
@@ -78,4 +79,10 @@ img{
 }
 .commentSubmitField{
     opacity: .5;
+}
+
+.commentBox{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
 }

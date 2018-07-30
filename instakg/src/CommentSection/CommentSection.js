@@ -3,7 +3,10 @@ import './CommentSection.css';
 
  const CommentSection = (props) =>{
    return(
-    <div> Test </div>     
+    <div className ='comment'>
+    <span className='userName'> {props.data.username}</span>
+    <span className='userComment'>{props.data.text}</span>
+    </div> 
   )
 }
 
