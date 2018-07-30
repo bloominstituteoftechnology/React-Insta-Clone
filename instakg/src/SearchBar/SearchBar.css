@@ -1,0 +1,45 @@
+.icon{
+    font-weight: regular;
+    font-family: 'Font Awesome 5 Free';
+    font-size: 30px;
+}
+.logo{
+    height: 100%;
+}
+.searchBarContainer{
+    display:grid;
+    grid-template-columns: 4% 2% 10% auto 3% 3% 3%;
+    grid-template-rows: 3em;
+    align-items: center;
+    min-width: 100%;
+    box-sizing: border-box;
+
+
+}
+#search{
+    margin:  0 10vw;
+    width: auto;
+    font-size: 24px;
+}
+.splitBar{
+    font-size: 2.5rem;
+    font-weight: 100;
+    opacity: .2;
+}
+
+img {
+    width: auto ;
+    height: 100%;
+}
+.logoText{
+    font-size: 3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
+
+.borderBox{
+    padding: 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, .2);
+
+
+}
