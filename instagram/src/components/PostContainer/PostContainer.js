@@ -13,9 +13,11 @@ const PostContainer = props => {
                 <div className="icons">
                     <i class="far fa-heart fa-2x" /> &emsp; <i class="far fa-comment fa-2x" />
                 </div>
-                <p className="likes">{props.likes} likes</p>
+                <p className="likes" onClick={props.handleLike}>{props.likes} likes</p>
             </div>
-            <CommentSection comments={props.comments} time={moment().subtract(props.time, 'days').calendar()} />
+            <CommentSection
+                comments={props.comments} 
+                time={moment().subtract(props.time, 'days').calendar()} />
         </div>
     );
 };

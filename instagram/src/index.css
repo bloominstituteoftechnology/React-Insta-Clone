@@ -62,6 +62,7 @@ body {
 }
 .search-bar form i {
   left: 60px;
+  pointer-events: none;
   position: relative;
   z-index: 2;
 }
