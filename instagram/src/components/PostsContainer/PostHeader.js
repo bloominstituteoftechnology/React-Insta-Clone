@@ -1,4 +1,4 @@
 import React from "react";
 
 
-export default PostsHeader;
+//export default PostHeader;

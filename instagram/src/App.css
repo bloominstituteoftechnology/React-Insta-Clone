@@ -3,10 +3,9 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .App-title {
@@ -15,6 +14,7 @@
 
 .App-intro {
   font-size: large;
+  
 }
 
 .thumbnail {

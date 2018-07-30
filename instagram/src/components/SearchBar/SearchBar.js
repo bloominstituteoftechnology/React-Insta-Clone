@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchBar = () => {
     return (
-        <div>
+        <div className="App-header">
             <img src={require('../../img/ig_logo.png')} alt="logo"/>
             <form>
                 <label>
