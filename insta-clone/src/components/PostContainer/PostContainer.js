@@ -2,6 +2,8 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 import './PostContainer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const PostContainer = (props) => {
     return(
@@ -12,12 +14,14 @@ const PostContainer = (props) => {
                         <div className="header row">
                             <div className="col-sm-12 d-flex">
                                 <img src={post.thumbnailUrl} alt="thumbnail of user"/>
-                                <p>{post.username}</p>
+                                <p className="username">{post.username}</p>
                             </div>
                         </div>
                         <img src={post.imageUrl} alt="user's beautiful post" />
                         <div className="bottom">
-                            <p>{post.likes} likes</p>
+                            <div className="likes d-flex">
+                                <FontAwesomeIcon icon={['far', 'heart']} className="icon" /><p>{post.likes} likes</p>
+                            </div>
                             <CommentSection comments={post.comments} />
                             <p>{post.timestamp}</p>
                         </div>

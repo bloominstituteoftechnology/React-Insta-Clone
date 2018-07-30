@@ -12,6 +12,15 @@
     margin: 0 20px;
 }
 
+.post-container .header .username {
+    font-weight: bold;
+}
+
 .post-container .bottom {
     margin: 10px 20px;
+}
+
+.post-container .icon {
+    margin-right: 10px;
+    font-size: 20px;
 }
