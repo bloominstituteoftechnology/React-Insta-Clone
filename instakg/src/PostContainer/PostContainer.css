@@ -1,6 +1,6 @@
 .post{
     max-width: 600px;
-    margin: auto;
+    margin: 2vh auto;
     background-color:white;
     display:flex;
     flex-direction: column;

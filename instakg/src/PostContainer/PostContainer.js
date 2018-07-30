@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faComment } from '@fortawesome/free-regular-svg-icons';
 import {  faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import CommentSection from '../CommentSection/CommentSection';
+import PropTypes from 'prop-types';
+
 
  const PostContainer = (props) =>{
    return(
@@ -34,6 +36,15 @@ import CommentSection from '../CommentSection/CommentSection';
     </div>
   )
 }
-
+PostContainer.PostContainer = {
+  data: PropTypes.shape({
+      username:PropTypes.string.isRequired,
+      thumbnailUrl:PropTypes.string.isRequired,
+      imageUrl:PropTypes.string.isRequired,
+      likes:PropTypes.number.isRequired,
+      timestamp:PropTypes.string.isRequired,
+      comments:PropTypes.array.isRequired,
+  })
+}
 
 export default PostContainer;
