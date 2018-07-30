@@ -1,10 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+
 .icon{
     font-weight: regular;
     font-family: 'Font Awesome 5 Free';
     font-size: 30px;
+
 }
 .logo{
-    height: 100%;
+    height: auto;
+    width: 100%;
 }
 .searchBarContainer{
     display:grid;
@@ -25,6 +31,10 @@
     font-size: 2.5rem;
     font-weight: 100;
     opacity: .2;
+    background-color: black;
+    width: 2px;
+    height: 100%;
+    justify-self: center;
 }
 
 img {
@@ -32,14 +42,15 @@ img {
     height: 100%;
 }
 .logoText{
-    font-size: 3em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    font-family: 'Press Start 2P', cursive;
     font-weight: bold;
 }
 
 .borderBox{
     padding: 10px;
     border-bottom: 2px solid rgba(0, 0, 0, .2);
-
+    position: sticky;
+    background-color: white;
 
 }

@@ -10,7 +10,7 @@ import './SearchBar.css';
     <div className="borderBox">
         <div className="searchBarContainer"> 
         <div className="logo"><img src={logo}  alt="logo" /> </div>
-        <span className="splitBar"> | </span> 
+        <span className="splitBar"> </span> 
         <span className="logoText"> InstaKG  </span> 
         <input id='search' placeholder="   &#128269; Search" type="text"/>
         <FontAwesomeIcon className="icon" icon={faCompass} />
