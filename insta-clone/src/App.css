@@ -1,28 +1,73 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.searchbar {
+  display: inline-flex;
+  justify-content: space-between;
+  width:100%;
+}
+.searchbar div {
+  display: flex;
+  justify-content: space-between;
+  width: 33%;
+  margin-right: 20px;
+}
+.searchbar .instaDiv {
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+.searchbar .far {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.searchbar .fab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-right:1px solid black;
+}
+.searchbar .insta {
+  height: 50px;
+  margin-left: 0;
+  padding: 5px 20px;
+}
+.searchbar input {
+  height: 30px;
+  width: 100%;
+  align-self: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.postContainer {
+  margin: 0 25%;
 }
-
-.App-title {
-  font-size: 1.5em;
+.postContainer h4 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-
-.App-intro {
-  font-size: large;
+.postContainer h4 img {
+  border-radius: 50%;
+  height: 60px;
+  width:60px;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.postContainer h4 p{
+  align-self: center;
+  padding-left: 20px;
+}
+.postContainer .likes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.postContainer i {
+  padding: 0 10px;
+}
+.postContainer p {
+  margin-left: 10px;
+  font-size: 20px;
 }
