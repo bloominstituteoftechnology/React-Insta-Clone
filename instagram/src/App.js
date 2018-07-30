@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import SearchBar from './components/SearchBar/SearchBar';
 
 
+
 class App extends Component {
   constructor() {
     super();

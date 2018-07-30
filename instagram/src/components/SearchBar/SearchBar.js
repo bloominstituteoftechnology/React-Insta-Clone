@@ -1,19 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col, Form, FormGroup, Input } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faCompass, faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
+
+
+
+
 
 const SearchBar = () => {
     return (
         <Row>
-            <Col></Col>
+            <Col>
+                <FontAwesomeIcon icon={faInstagram} />
+                {/* <img src={image} /> */}
+                <img src={window.location.origin + '/instagramtext.png'} alt='Instagram logo' height='50px' />
+                </Col>
             <Col>
                 <Form>
-                    <FormGroup>
-                        <Input type="search" name="search" id="exampleSearch" placeholder="search"/>
+                    <FormGroup >
+                        <FontAwesomeIcon icon={faSearch} />
+                        <Input type="search" name="search" id="exampleSearch" placeholder="search" />
                     </FormGroup>
                 </Form>
             </Col>
-            <Col></Col>
+            <Col>
+                <FontAwesomeIcon icon={faCompass} />
+                <FontAwesomeIcon icon={faHeart} />
+                <FontAwesomeIcon icon={faUser} />
+            </Col>
         </Row>
     );
 }
