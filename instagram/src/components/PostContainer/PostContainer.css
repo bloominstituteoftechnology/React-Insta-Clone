@@ -1,6 +1,7 @@
 .post-container{
     border: 1px solid lightgray;
     padding: 1rem;
+    max-width: 658px;
 }
 .user{
     padding: 1rem;
@@ -36,6 +37,6 @@
     font-size: 1.5rem;
     position: absolute;
     top: 15px;
-    right: 30px;
+    right: 10px;
     padding: none;
 }

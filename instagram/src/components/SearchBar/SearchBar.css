@@ -5,6 +5,13 @@
     border-bottom: 5px solid lightgray;
     padding: 2rem;
 }
+.title{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+}
 .search span{
     color: lightgray;
 }
@@ -14,11 +21,11 @@
 .search .fa-search{
     position: absolute;
     top:5px;
-    left: 5px;
+    left: 20px;
 }
 .search-icons{
     font-size: 2.5rem;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
 }
 
 input{

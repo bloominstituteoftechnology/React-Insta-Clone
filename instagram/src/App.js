@@ -24,9 +24,6 @@ class App extends Component {
     super();
     this.state = {data:dummyData};
   }
-  addComment(e){
-
-  }
   render() {
     return (
       <div className="container">
