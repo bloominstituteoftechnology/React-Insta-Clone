@@ -1,0 +1,70 @@
+.Header {
+  padding: 1.3rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.Header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header__nav-brand {
+  font-size: 2.8rem;
+  text-decoration: none;
+  font-family: 'Lobster Two', cursive;
+  color: inherit;
+}
+
+.Header__brand {
+  margin-right: 2rem;
+  border-right: 1px solid #212121;
+  padding-right: 2rem;
+  font-size: 3rem;
+}
+
+.Header__three-buttons  i {
+  font-size: 2rem;
+}
+
+.Header__three-buttons  i:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.Header__search-bar {
+  width: 25rem;
+  position: relative;
+  padding: .5rem 0;
+}
+
+.Header__search-input {
+  width: 100%;
+  display: block;
+  padding: .5rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 3px;
+  border: 1px solid #cdcdcd;
+}
+
+.Header__input-overlay {
+  position: absolute;
+  top: .5rem;
+  width: 100%;
+  height: calc(100% - .8rem);
+  justify-content: center;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  border: 1px solid #cdcdcd;
+  display: flex;
+  align-items: center;
+  color: #999;
+}
+
+.Header__input-overlay i {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.Header__three-buttons  {
+  display: flex;
+  align-items: center;
+}
