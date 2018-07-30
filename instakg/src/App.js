@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CommentSection from "./CommentSection/CommentSection";
+import SearchBar from './SearchBar/SearchBar';
+import PostContainer from './PostContainer/PostContainer';
 
 class App extends Component {
   render() {
@@ -13,6 +16,9 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <CommentSection />
+        <PostContainer />
+        <SearchBar />
       </div>
     );
   }
