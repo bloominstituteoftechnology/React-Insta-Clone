@@ -11,12 +11,6 @@ class App extends Component {
     };
   }
 
-  incrementLikes = () => {
-    this.setState({
-      
-    });
-  };
-
   render() {
     return (
       <div className="App">
@@ -31,7 +25,6 @@ class App extends Component {
             likes={data.likes} 
             time={data.timestamp}
             comments={data.comments}
-            handleLike={this.incrementLikes}
           />)
         }
       </div>

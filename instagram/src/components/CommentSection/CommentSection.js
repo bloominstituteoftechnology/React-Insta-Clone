@@ -15,7 +15,7 @@ class CommentSection extends Component {
     addComment = e => {
         e.preventDefault();
         this.setState({
-            comments: this.state.comments.concat({text: this.state.current, username: 'A Person'}),
+            comments: this.state.comments.concat({text: this.state.current, username: 'You'}),
         });
     };
 

@@ -4,22 +4,45 @@ import PostHeader from './PostHeader';
 import PropTypes from 'prop-types';
 import moment from 'moment'
 
-const PostContainer = props => {
-    return (
-        <div className="post">
-            <PostHeader user={props.user} thumbnail={props.thumbnail} />
-            <img className="post-img" src={props.img} alt="" />
-            <div className="stats">
-                <div className="icons">
-                    <i class="far fa-heart fa-2x" /> &emsp; <i class="far fa-comment fa-2x" />
+class PostContainer extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            user: props.user,
+            thumbnail: props.thumbnail,
+            img: props.img,
+            likes: props.likes,
+            comments: props.comments,
+            time: props.time,
+        };
+    }
+
+    incrementLikes = () => {
+        this.setState({
+            likes: this.state.likes + 1,
+        });
+    };
+
+    render() {
+        return (
+            <div className="post">
+                <PostHeader user={this.state.user} thumbnail={this.state.thumbnail} />
+                <img className="post-img" src={this.state.img} alt="" />
+                <div className="stats">
+                    <div className="icons">
+                        <i class="far fa-heart fa-2x" onClick={this.incrementLikes} /> 
+                        &emsp; 
+                        <i class="far fa-comment fa-2x" 
+                            onClick={() => alert(`Sending ${this.state.user} a ping!`)} />
+                    </div>
+                    <p className="likes">{this.state.likes} likes</p>
                 </div>
-                <p className="likes" onClick={props.handleLike}>{props.likes} likes</p>
+                <CommentSection
+                    comments={this.state.comments} 
+                    time={moment(this.state.time, 'MMMM Do YYYY, h:mm:ss a').fromNow()} />
             </div>
-            <CommentSection
-                comments={props.comments} 
-                time={moment(props.time, 'MMMM Do YYYY, h:mm:ss a').fromNow()} />
-        </div>
-    );
+        );
+    }
 };
 
 PostContainer.propTypes = {
