@@ -6,7 +6,7 @@ import CommentSection from '../CommentSection/CommentSection';
 class Post extends Component {
     constructor(props){
         super(props);
-        this.state = {currentComment: '', currentUser: 'Bobby123'};
+        this.state = {comments: props.post.comments, currentComment: '', currentUser: 'Bobby123'};
     }
 
     commentHolder = (event) => {
@@ -17,7 +17,10 @@ class Post extends Component {
         event.preventDefault();
         let comment = this.state.currentComment;
         let user = this.state.currentUser;
-        console.log(comment, user);
+        let newList = this.state.comments.slice();
+        let newComment = {text: comment, username: user};
+        newList.push(newComment);
+        this.setState({comments: newList});
     }
 
     render() {
@@ -36,7 +39,7 @@ class Post extends Component {
                         <FontAwesomeIcon icon={['far', 'comment']} className="icon" />
                     </div>
                     <p>{this.props.post.likes} likes</p>
-                    <CommentSection comments={this.props.post.comments} />
+                    <CommentSection comments={this.state.comments} />
                     <form onSubmit={this.addComment}>
                         <input type="text" placeholder="Add a comment" onChange={this.commentHolder} ></input>
                     </form>
