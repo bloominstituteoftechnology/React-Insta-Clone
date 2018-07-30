@@ -1,0 +1,47 @@
+.search-bar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.fa-instagram {
+    padding: 40px;
+    font-size: 70px;
+}
+
+.insta-words {
+    border-left: 1px solid grey;
+    padding-left: 30px;
+}
+
+.search-bar-wrapper {
+    position: relative;
+}
+
+.fa-search {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-size: 25px;
+    color: gray;
+    z-index: 1;
+}
+
+.search-bar {
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    color: grey;
+    /* border-radius: 10px; */
+    /* background: #DCDCDC; */
+}
+
+.far {
+    margin: 0 25px;
+    font-size: 50px;
+    font-weight: 100;
+    -webkit-text-stroke: 3px white;
+}
