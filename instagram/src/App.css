@@ -1,7 +1,8 @@
 .App {
   text-align: center;
-  margin-right: 24.45%;
-  margin-left: 24.45%; 
+  margin-right: 4.08997%;
+  margin-left: 4.08997%; 
+  border: 1px solid blue;
 }
 
 .App-logo {
@@ -12,7 +13,7 @@
 .App-header {
   /* background-color: #222; */
   height: 150px;
-  padding: 20px;
+  padding-top: 34px;
   /* color: white; */
   font-size: 1.5rem;
   margin-top: 4px solid #E1E4E8;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data'; 
+import SearchBar from './components/SearchBar/SearchBar.js'; 
 
 
 class App extends Component {
@@ -9,9 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        <div>
-        <i class="fab fa-instagram">   &#124;</i> <span>Instagram</span> <input placeholder="search"/> <i class="far fa-heart"></i> <i class="far fa-user"></i>
-        </div>
+        <SearchBar  />
         </header>
         
       </div>
