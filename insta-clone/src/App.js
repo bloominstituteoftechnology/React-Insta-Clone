@@ -3,7 +3,6 @@ import dummyData from './dummy-data'
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
-import CommentSection from './components/CommentSection/CommentSection';
 
 class App extends Component {
   constructor(){
@@ -16,7 +15,6 @@ class App extends Component {
       <div className="container">
         <SearchBar />
         <PostContainer posts={this.state.data} />
-        <CommentSection posts={this.state.data} />
       </div>
     );
     }
