@@ -4,7 +4,7 @@ import './CommentSection.css';
 const CommentSection = (props) => {
     return (
         <div>
-            Comment Section Test Text
+            
         </div>
     )
 };
