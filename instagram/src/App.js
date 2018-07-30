@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        {this.state.data.map(item => <PostContainer post={item} />)}
+        {this.state.data.map(item => <PostContainer post={item} key={item.timestamp} />)}
       </div>
     );
   }

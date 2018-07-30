@@ -1,5 +1,22 @@
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 800px;
+    margin: 20px auto;
+    padding-right: 50px;
+}
+
+.icons{
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.search-bar {
+    width: 230px;
+    height: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1 px solid grey;
 }

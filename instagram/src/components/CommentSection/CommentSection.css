@@ -2,6 +2,7 @@
     display: flex;
     justify-content: flex-start;
     text-align: left;
+    margin: 5px 0;
 }
 
 .comments-section span {

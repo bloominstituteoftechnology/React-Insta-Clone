@@ -4,11 +4,11 @@ import './SearchBar.css';
 const SearchBar = () => {
     return (
         <div className="header">
-            <img src="img/logo.png" />
-            <input name="search" placeholder={'\u2315' +' Search'} />
-            <img src="img/search.png" />
-            <img src="img/heart.png"/>
-            <img src="img/profile.png" />
+            <div><img src="img/logo.png" alt="Instagram logo" className="logo"/></div>
+            <div><input name="search" placeholder={'\u2315' +' Search'} className="search-bar"/></div>
+            <div className="icons"><img src="img/search.png" alt="Explore"/>
+            <img src="img/heart.png" alt="Hearts"/>
+            <img src="img/profile.png" alt="Profile"/></div>
         </div>
     );
 }
