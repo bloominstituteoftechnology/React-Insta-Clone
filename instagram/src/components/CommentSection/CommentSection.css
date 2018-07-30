@@ -1,6 +1,6 @@
 .comment {
   display: flex;
-  padding: 3px 0;
+  padding-bottom: 5px;
 }
 .comment h1 {
   padding-right: 5px;

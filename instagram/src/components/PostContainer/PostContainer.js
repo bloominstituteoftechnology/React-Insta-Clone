@@ -20,9 +20,9 @@ const PostContainer = props => (
       <img src={like} />
       <img src={comment} />
     </div>
-    <h1> {props.post.likes} likes </h1>
+    <h1 className="post__likes"> {props.post.likes} likes </h1>
     {props.post.comments.map(comment => <CommentSection comment={comment} />)}
-    <p> {props.post.timestamp} </p>
+    <p className="post__date"> {moment(props.post.timestamp, "MMMM Do YYYY, hh:mm:ss").fromNow().toUpperCase()} </p>
     </div>
   </div>
 );

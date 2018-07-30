@@ -23,8 +23,8 @@
 }
 
 .search-bar__brand {
-  display: flex;
-  margin-right: 12px;
+  margin: -6px 0;
+  width: auto;
 }
 
 .search-bar__brand img {
@@ -37,17 +37,17 @@
   border: 1px solid #e6e6e6;
   border-radius: 5px;
   height: 28px;
+  background-color: #fafafa;
 }
 
 .search-bar__search input {
   border: none;
-  height: 90%;
 }
 
 .search-bar__icons img {
   height: 100%;
   width: auto;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 

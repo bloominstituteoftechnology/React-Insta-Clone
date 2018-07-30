@@ -4,11 +4,22 @@
   max-width: 614px;
   border: 1px solid #e6e6e6;
   background-color: white;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .post h1 {
   font-weight: bold;
+}
+
+.post__likes {
+  margin-bottom: 8px;
+}
+
+.post__date {
+  margin: 5px 0;
+  font-size: 10px;
+  letter-spacing: .2px;
+  color: #999;
 }
 
 .post__header {
