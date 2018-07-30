@@ -8,8 +8,6 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "build-css": "less-watch-compiler --run-once --main-file=index.less src/less/ src/less/",
-    "watch-css": "npm run build-css && less-watch-compiler --main-file=index.less src/less/ src/less/",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
