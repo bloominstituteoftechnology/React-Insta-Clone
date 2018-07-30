@@ -22,6 +22,8 @@
     align-items: flex-start;
     width: 100px;
     margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.5rem;
 
 }
 
@@ -29,10 +31,21 @@
     display:flex;
     align-items: flex-start;
     margin-left: 20px;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     width: 50px; 
 }
 
 .posting .far {
     margin-right:18px;
+}
+
+.likes {
+    display:flex;
+    align-items: flex-start;
+    margin-top:12px; 
+    margin-bottom:15px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+
 }

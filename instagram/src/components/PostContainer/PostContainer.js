@@ -20,7 +20,7 @@ class PostContainer extends React.Component {
                <div className = "postIcons">
                <i className="far fa-heart"></i> <i className="far fa-comment"></i>
                </div>
-               <h3>{this.props.likes} likes </h3>
+               <h3 className = "likes">{this.props.likes} likes </h3>
             </div>
 
         );
