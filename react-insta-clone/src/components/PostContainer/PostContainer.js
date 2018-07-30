@@ -1,12 +1,20 @@
 import React from 'react';
 import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection';
+import PostHeader from './PostHeader';
 
 const PostContainer = props => {
+    console.log('containerProps', props.posts);
     return (
-        <div className='post-container'>
+        <div>
              {props.posts.map(post => (
                  <div>
-                {post.username}  
+                    <PostHeader 
+                        username={props.posts.username}
+                        thumbnailUrl={props.posts.thumbnailUrl}
+                    /> 
+                    {post.likes} Likes
+                    <CommentSection />
                 </div>
              ))}
         </div>
