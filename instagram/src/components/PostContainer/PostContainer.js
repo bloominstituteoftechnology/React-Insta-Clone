@@ -1,0 +1,16 @@
+import React from 'react';
+import Post from './Post';
+import PropTypes from 'prop-types';
+
+const PostContainer = (props) => {
+    return ( 
+        <div>
+    {props.dog.map(dummy_data=><Post data={dummy_data}/>)}
+    </div>
+     );
+}
+ 
+
+PostContainer.propTypes=
+{dog:PropTypes.arrayOf(PropTypes.object)}
+export default PostContainer;
