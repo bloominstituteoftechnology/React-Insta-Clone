@@ -5,6 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 15px;
   width: 100%;
 }
 body {
@@ -13,18 +14,39 @@ body {
   padding: 0;
 }
 .post {
+  border: 1px solid lightgray;
+  border-radius: 3px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 50px;
 }
-.thumbnail-img {
-  border-radius: 50%;
-  width: 30px;
+.post .comments,
+.post .stats {
+  margin: 0 25px;
 }
-.user,
-.likes {
+.post .comment-input {
+  border: none;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.post .likes {
+  margin-top: 5px;
+}
+.post .likes,
+.post .user {
   font-weight: bold;
+}
+.post .post-header {
+  margin: 15px 15px 0;
+}
+.post .post-img {
+  margin: 15px 0;
+}
+.post .thumbnail-img {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 30px;
 }
 .search-bar {
   display: flex;
@@ -46,5 +68,4 @@ body {
 .search-bar .search {
   border-radius: 5px;
   background: whitesmoke;
-  text-align: center;
 }

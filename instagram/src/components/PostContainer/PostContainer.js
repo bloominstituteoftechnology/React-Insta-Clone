@@ -2,17 +2,20 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
 import PropTypes from 'prop-types';
+import moment from 'moment'
 
 const PostContainer = props => {
     return (
         <div className="post">
             <PostHeader user={props.user} thumbnail={props.thumbnail} />
-            <img src={props.img} alt="" />
-            <div>
-                <i class="far fa-heart fa-2x" /> &emsp; <i class="far fa-comment fa-2x" />
+            <img className="post-img" src={props.img} alt="" />
+            <div className="stats">
+                <div className="icons">
+                    <i class="far fa-heart fa-2x" /> &emsp; <i class="far fa-comment fa-2x" />
+                </div>
+                <p className="likes">{props.likes} likes</p>
             </div>
-            <p className="likes">{props.likes}</p>
-            <CommentSection comments={props.comments} time={props.time} />
+            <CommentSection comments={props.comments} time={moment().subtract(props.time, 'days').calendar()} />
         </div>
     );
 };
