@@ -1,0 +1,36 @@
+.app-container{
+    width: 500px; 
+    height: auto; 
+    border: 1px solid lightcoral; 
+    margin: auto; 
+}
+.top-bar{
+    border: 1px solid black; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin: auto; 
+    height: 50px; 
+}
+.top-bar-left{
+    border: 1px solid lightblue; 
+    width: 150px; 
+    height: 40px; 
+}
+.top-bar-right{
+    border: 1px solid lightblue; 
+    width: 100px; 
+    height: 40px; 
+}
+.post-container{
+    height: 700px; 
+    margin: auto; 
+    border: 1px solid lightgreen; 
+}
+.img-post{
+    height: auto; ; 
+}
+.comment-container{
+    border: 1px solid seagreen; 
+    height: 150px; 
+}
