@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './CommentSection.css';
 
 const CommentSection = (props) => {
     return (
@@ -7,8 +8,8 @@ const CommentSection = (props) => {
             {props.comments.map(comment => {
                 return (
                     <div className="comment" key={comment.text}>
-                        <p>{comment.username}</p>
-                        <p>{comment.text}</p>
+                        <p className="username">{comment.username}</p>
+                        <p className="text">{comment.text}</p>
                     </div>
                 )
             })}

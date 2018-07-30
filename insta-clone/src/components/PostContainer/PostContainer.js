@@ -1,19 +1,26 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
+import './PostContainer.css';
 
 const PostContainer = (props) => {
     return(
-        <div className="post-container">
+        <div className="post-container container">
             {props.posts.map(post => {
                 return (
                     <div className="post" key={post.timestamp}>
-                        <img src={post.thumbnailUrl} alt="thumbnail of user"/>
-                        <p>{post.username}</p>
+                        <div className="header row">
+                            <div className="col-sm-12 d-flex">
+                                <img src={post.thumbnailUrl} alt="thumbnail of user"/>
+                                <p>{post.username}</p>
+                            </div>
+                        </div>
                         <img src={post.imageUrl} alt="user's beautiful post" />
-                        <p>{post.likes}</p>
-                        <CommentSection comments={post.comments} />
-                        <p>{post.timestamp}</p>
+                        <div className="bottom">
+                            <p>{post.likes} likes</p>
+                            <CommentSection comments={post.comments} />
+                            <p>{post.timestamp}</p>
+                        </div>
                     </div>
                 )
             })}
