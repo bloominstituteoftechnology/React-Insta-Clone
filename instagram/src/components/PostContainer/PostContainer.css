@@ -1,0 +1,33 @@
+.post {
+  width: 100%;
+  max-width: 614px;
+  border: 1px solid #e6e6e6
+}
+
+.post__header {
+  height: 60px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.post__header__image {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.post__header__image img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+}

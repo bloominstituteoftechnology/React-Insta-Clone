@@ -1,0 +1,51 @@
+@font-face {
+  font-family: Billabong;
+  src: url(../../assets/Billabong.ttf)
+}
+.search-bar {
+  height: 77px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+  position: fixed;
+  top: 0;
+}
+
+.search-bar__wrapper {
+  display: flex;
+  height: 100%;
+  padding: 22px 40px;
+  /* max-width: 1010px;
+  width: 100%; */
+}
+
+.search-bar__brand {
+  display: flex;
+  margin-right: 12px;
+}
+
+.search-bar__brand__wordmark {
+  border-left: 1px solid black;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.search-bar__brand__wordmark h1 {
+  font-family: Billabong;
+  font-size: 40px;
+}
+
+.search-bar__brand img {
+  max-height: 100%;
+  width: auto;
+}
+
+.search-bar__search {
+  width: 215px;
+  border: 1px solid black;
+  height: 28px;
+}
+
+.search-bar__search input {
+  border: none;
+  height: 90%;
+}
