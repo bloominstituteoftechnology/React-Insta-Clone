@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   constructor() {
@@ -18,6 +19,10 @@ class App extends Component {
       </div>
     );
   }
+}
+
+App.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default App;
