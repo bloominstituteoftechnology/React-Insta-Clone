@@ -1,0 +1,10 @@
+.Search-Bar {
+    display: flex;
+    justify-content: space-around
+}
+
+.action-buttons {
+    display: flex;
+    width: 15%;
+    justify-content: space-between
+}
