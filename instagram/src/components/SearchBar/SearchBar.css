@@ -1,0 +1,33 @@
+
+.search-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 153px;
+    border: 1px solid black;
+    top: 0;
+}
+
+.logo {
+    max-width: 375px;
+}
+
+input {
+    width: 430px;
+    height: 55px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 3.2rem;
+    font-family: Arial, FontAwesome;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+
+    
+}

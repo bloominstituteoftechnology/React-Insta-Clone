@@ -17,6 +17,9 @@ class App extends Component {
     return (
       <div className="App">
       <SearchBar />
+      <div className="container">
+      
+
         {this.state.data.map(data => {
           return (
             <PostContainer 
@@ -29,6 +32,7 @@ class App extends Component {
             />
           )
         })}
+        </div>
       </div>
     );
   }
