@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 
 class PostContainer extends Component {
-    constructor(props) {
-        super(props);
-    }
+    
     
     render() { 
        
@@ -19,7 +17,10 @@ class PostContainer extends Component {
                     <div>
                         {this.props.comments.map(comment => {
                             return (
-                                <CommentSection />
+                                <CommentSection 
+                                    username={comment.username}
+                                    text={comment.text}
+                                 />
                             )
                     })}
                 </div>
