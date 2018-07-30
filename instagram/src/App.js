@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
+import React, { Component } from 'react';
 import "./App.css";
-import dummyData from "./dummy-data.js";
+import dummyData from './dummy-data.js';
+import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends Component {
   constructor() {
@@ -10,11 +10,11 @@ class App extends Component {
       posts: dummyData 
     };
   }
-
+ 
   render() {
     return (
       <div>
-      {this.state.posts.map(post => <div>{post.username}</div>)}
+      <SearchBar />
       </div>
     );
   }

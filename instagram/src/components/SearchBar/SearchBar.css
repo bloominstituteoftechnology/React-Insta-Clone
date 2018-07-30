@@ -1,0 +1,29 @@
+.header {
+    border-bottom: 1px solid #3333;
+    height: 80px;
+    background: #ffffff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .image-group {
+    height: 40px;
+  }
+  
+  .logo-image {
+    height: 100%;
+  }
+
+  .text-logo {
+      height: 80%;
+  }
