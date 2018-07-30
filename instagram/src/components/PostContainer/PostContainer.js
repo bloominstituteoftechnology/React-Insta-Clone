@@ -11,12 +11,12 @@ class PostContainer extends React.Component {
     render() {
 
         return(
-            <div>
+            <div className = "posting">
                 <div className = "postHeader">
-                <img className ="thumbNail" src={this.props.thumbNail} />
+                <img className ="thumbNail" src={this.props.thumbNail} alt="" />
                 <div>{this.props.userName}</div>
                 </div>
-                <img src={this.props.image} />
+                <img className ="postImage" src={this.props.image} alt="" />
                <div className = "postIcons">
                <i className="far fa-heart"></i> <i className="far fa-comment"></i>
                </div>

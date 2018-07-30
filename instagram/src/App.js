@@ -16,16 +16,13 @@ class App extends Component {
     dummyData.map((post, i) => console.log(post.comments.username))
     return (
       <div className="App">
-        <header className="App-header">
         
-        
-        </header>
         {dummyData.map((post, i) => <div className = "post">
-        <SearchBar  key={i}/> 
+        <SearchBar  key={i}/> <div className = "containerPost">
         <PostContainer key = {i} userName = {post.username} thumbNail={post.thumbnailUrl} image={post.imageUrl}
         likes = {post.likes}/> 
         <CommentSection comments = {post.comments} time = {post.timestamp}/> 
-        </div>)}
+        </div> </div>)}
         
 
         

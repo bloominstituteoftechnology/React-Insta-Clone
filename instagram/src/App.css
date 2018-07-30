@@ -3,7 +3,14 @@
   margin-right: 4.08997%;
   margin-left: 4.08997%; 
   border: 1px solid blue;
+  width: 978px;
+  max-width: 100%; 
 }
+
+.containerPost {
+  border: 1px solid red;
+}
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -16,8 +23,8 @@
   padding-top: 34px;
   /* color: white; */
   font-size: 1.5rem;
-  margin-top: 4px solid #E1E4E8;
-  margin-bottom: 4px solid #E1E4E8;
+  
+  
 
 
 }
