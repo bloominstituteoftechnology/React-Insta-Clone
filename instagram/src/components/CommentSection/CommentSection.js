@@ -1,14 +1,33 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 //recieve array from Post container via props and render a 'comment' component with, username, and text,
 
-const CommentSection = props => {
+const Comment = props => {
+  console.log(props)
   return (
-    <div className="comment-section">comment-section
+    <div className="comment">
+    {props.comments.username} {props.comments.text}
     </div>
   )
 }
-//include an input field for new comments.
+
+const CommentSection = props => {
+  console.log(props.comments);
+  return (
+
+    <div className="comment-section">
+      {props.comments.map( (comment) => <Comment
+        key={comment.id}
+        comments={comment}/>)}
+      <p className="timestamp">{props.time}</p>
+    </div>
+  )
+}
+
+CommentSection.propTypes = {
+  comments: PropTypes.array
+}
 
 //check that data is the correct type
 

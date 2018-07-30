@@ -4,26 +4,77 @@
 }
 .comment-section {
   border: 1px solid green;
-  height: 50px;
   margin: 5px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.comment-section .comment {
+  border: 1px solid yellow;
+  widht: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+.comment-section .comment .user {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.comment-section .timestamp {
+  border: 1px solid orange;
 }
 .post-container {
   border: 1px solid red;
   width: 400px;
-  height: 400px;
   margin: 5px;
   display: flex;
   flex-direction: column;
+}
+.post-container .row {
+  border: 1px solid green;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+}
+.post-container .heart,
+.post-container .bubble {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}
+.post-container .thumbnail {
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}
+.post-container .username {
+  border: 1px solid red;
+  font-weight: bold;
+  margin: 5px;
+}
+.post-container .main-photo {
+  width: 100%;
+  height: auto;
+}
+.post-container .likes {
+  margin: 5px;
+}
+.post-container .add-comment {
+  height: 50px;
+  border: 1px solid purple;
+  margin: 5px;
+}
+.search-main {
+  border: 1px solid green;
+  display: flex;
+  width: 100%;
 }
 .search-bar {
   border: 1px solid orange;
-  width: 400px;
+  width: 100%;
   height: 50px;
-  display: flex;
-  justify-content: center;
 }
 .app {
   border: 1px solid blue;
