@@ -40,10 +40,10 @@ class Post extends Component {
                     </div>
                     <p>{this.props.post.likes} likes</p>
                     <CommentSection comments={this.state.comments} />
-                    <form onSubmit={this.addComment}>
+                    <p>{this.props.post.timestamp}</p>
+                    <form onSubmit={this.addComment} className="add-comment">
                         <input type="text" placeholder="Add a comment" onChange={this.commentHolder} ></input>
                     </form>
-                    <p>{this.props.post.timestamp}</p>
                 </div>
             </div>
         );
