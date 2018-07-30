@@ -1,6 +1,15 @@
 .container {
-  max-width: 1140px;
+  max-width: 910px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.App__cards-container {
+  margin-top: 5rem;
+  margin-bottom:  5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
