@@ -7,7 +7,7 @@ const dummyData = [
     imageUrl:
       "https://tk-assets.lambdaschool.com/69cf901b-f96d-466e-a745-ff2a01effac9_philz-image.jpg",
     likes: 400,
-    timestamp: "July 17th 2017, 12:42:40 pm",
+    timestamp: "July 30th 2018, 12:42:40 pm",
     comments: [
       {
         username: "philzcoffee",
@@ -31,7 +31,7 @@ const dummyData = [
     imageUrl:
       "https://tk-assets.lambdaschool.com/89d13918-b7a2-4b40-9658-f376ea3f6b59_37131538_213683546146400_1083714364399157248_n.jpg",
     likes: 4307,
-    timestamp: "July 15th 2017, 03:12:09 pm",
+    timestamp: "July 15th 2018, 03:12:09 pm",
     comments: [
       {
         username: "twitch",
@@ -62,7 +62,7 @@ const dummyData = [
     imageUrl:
       "https://tk-assets.lambdaschool.com/43bf01f9-319c-469d-8cf5-0120fe1007f1_yosemite.jpg",
     likes: 5306,
-    timestamp: "July 14th 2017, 10:04:08 am",
+    timestamp: "July 14th 2018, 10:04:08 am",
     comments: [
       {
         username: "playhearthstone",

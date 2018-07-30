@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './PostContainer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CommentSection from '../CommentSection/CommentSection';
+import moment from 'moment';
 
 class Post extends Component {
     constructor(props){
@@ -40,7 +41,7 @@ class Post extends Component {
                     </div>
                     <p>{this.props.post.likes} likes</p>
                     <CommentSection comments={this.state.comments} />
-                    <p>{this.props.post.timestamp}</p>
+                    <p>{moment(this.props.post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}</p>
                     <form onSubmit={this.addComment} className="add-comment">
                         <input type="text" placeholder="Add a comment" onChange={this.commentHolder} ></input>
                     </form>

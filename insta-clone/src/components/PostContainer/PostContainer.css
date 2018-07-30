@@ -20,9 +20,13 @@
     margin: 10px 20px;
 }
 
+.post-container .icons {
+    margin-bottom: 10px;
+}
+
 .post-container .icon {
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .add-comment {
