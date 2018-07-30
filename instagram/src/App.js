@@ -13,8 +13,10 @@ class App extends Component {
     return (
       <div className="App">
       <SearchBar />
+      <div className="main-body">
       <div className="posts">
       {this.state.posts.map(post => <PostContainer post = {post} />)}
+      </div>
       </div>
       </div>
     );

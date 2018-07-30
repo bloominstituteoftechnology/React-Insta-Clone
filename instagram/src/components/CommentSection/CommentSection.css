@@ -1,0 +1,8 @@
+.comment {
+  display: flex;
+  padding: 3px 0;
+}
+.comment h1 {
+  padding-right: 5px;
+  font-weight: bold;
+}

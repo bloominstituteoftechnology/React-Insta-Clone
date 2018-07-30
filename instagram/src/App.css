@@ -48,6 +48,12 @@ table {
 	border-spacing: 0;
 }
 
-.posts {
+.main-body {
 	margin-top: 77px;
+	/* padding-top: 60px; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fafafa;
+	font-family: 'Roboto', sans-serif;
 }

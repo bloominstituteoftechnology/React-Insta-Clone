@@ -1,7 +1,14 @@
 .post {
+  margin-top: 60px;
   width: 100%;
   max-width: 614px;
-  border: 1px solid #e6e6e6
+  border: 1px solid #e6e6e6;
+  background-color: white;
+  font-size: 16px;
+}
+
+.post h1 {
+  font-weight: bold;
 }
 
 .post__header {
@@ -18,7 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 .post__header__image img {
@@ -27,7 +34,22 @@
   border-radius: 50%;
 }
 
-.post img {
+.post__main-img {
   width: 100%;
   height: auto;
+}
+
+.post__text {
+  padding: 0 16px;
+}
+
+.post__buttons {
+  height: 24px;
+  margin: 10px 0;
+}
+
+.post__buttons img {
+  height: 100%;
+  width: auto;
+  margin-right: 10px;
 }
