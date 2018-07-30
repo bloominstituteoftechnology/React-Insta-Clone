@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
+import { Button, Container } from 'reactstrap';
 
 
 class App extends Component {
@@ -9,10 +10,11 @@ class App extends Component {
     super();
     this.state = {
       dummyData: dummyData
-    }
+    };
   }
   render() {
     return (
+      <Container>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -22,8 +24,13 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
+      </Container>
     );
   }
+}
+
+Container.propTypes = {
+  fluid:  PropTypes.bool
 }
 
 export default App;
