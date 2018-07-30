@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
+import SearchBar from './components/SearchBar/SearchBar.js';
+import CommentSection from './components/CommentSection/CommentSection.js';
 
 class App extends Component {
   constructor(){
@@ -15,7 +16,8 @@ class App extends Component {
     return (
       <div className="App">
       <SearchBar />
-      <PostContainer posts={this.state.posts} />
+      {/* <PostContainer posts={this.state.posts} /> */}
+      <CommentSection/>
         
       </div>
     );
