@@ -19,9 +19,9 @@ const SearchBar = (props) => {
       {/* start links div */}
       <div className="searchBarLinksDiv">
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li><i class="fa fa-compass"></i></li>
+          <li><i class="fa fa-heart"></i></li>
+          <li><i class="fa fa-user"></i></li>
         </ul>
       </div>
 
