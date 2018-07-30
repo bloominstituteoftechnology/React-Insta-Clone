@@ -6,7 +6,7 @@ const PostContainer = props => {
         <div className='post-container'>
              {props.posts.map(post => (
                  <div>
-                {post.username}
+                {post.username}  
                 </div>
              ))}
         </div>
