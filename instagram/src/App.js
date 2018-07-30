@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import dummyData from '../../instagram/src/dummy-data';
-import SearchBar from '../components/SearchBar/SearchBar';
+import SearchBar from './components/SearchBar/SearchBar';
 import './App.css';
 
 
