@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import SearchBar from './components/SearchBarComponent/search-bar';
+import Card from './components/PostComponent/card';
 
 class App extends Component {
   constructor (){
@@ -12,8 +13,13 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="header">
-        <SearchBar />
+      <div>
+        <div className="header">
+          <SearchBar />
+        </div>
+        <div className="middle">
+          <Card />
+        </div>
       </div>
     );
   }

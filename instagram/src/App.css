@@ -1,3 +1,7 @@
+body {
+  background-color: #FAFAFA
+}
+
 .App {
   text-align: center;
 }
@@ -8,7 +12,7 @@
 }
 
 .header {
-  background-color: #FAFAFA;
+  background-color: #FFFFFF;
   padding: 20px;
   color: #2F2F2F;
 }
@@ -24,4 +28,9 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
 }
