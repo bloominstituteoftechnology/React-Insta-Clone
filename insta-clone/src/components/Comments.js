@@ -12,11 +12,10 @@ class Comments extends React.Component {
     }
     render() {
         return(
-        <div>
-            <div className="posted">
-            <p>{this.state.username}</p> <p>{this.state.comments}</p>    
-            </div> 
-        </div>
+        <div className="posted">
+            <div className="user">{this.state.username}</div>
+            <div><p>{this.state.comments}</p></div>
+        </div> 
         )
     }
 }
