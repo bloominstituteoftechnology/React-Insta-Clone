@@ -16,11 +16,13 @@ const SearchBar = () => {
               className="logo-image text-logo"
             />
           </div>
-          <div className="input-group"><input type="text" placeholder="Search" /></div>
+          <div className="input-group">
+            <input type="text" placeholder="Search" />
+          </div>
           <div className="social-group">
-             <i className="far fa-compass"></i>
-            <i className="far fa-heart"></i>
-            <i className="far fa-user-circle"></i>
+             <span className="header-icon"><i className="far fa-compass icon"></i></span>
+             <span className="header-icon"><i className="far fa-heart"></i></span>
+             <span className="header-icon"><i className="far fa-user-circle"></i></span>
           </div>
         </div>
       </div>

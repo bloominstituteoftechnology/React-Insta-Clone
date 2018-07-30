@@ -19,11 +19,36 @@
   .image-group {
     height: 40px;
   }
+
+ .header-icon {
+     font-size: 20px;
+     padding: 0 5px;
+ }
   
   .logo-image {
-    height: 100%;
+    height: 90%;
   }
 
   .text-logo {
       height: 80%;
+      padding-left: 20px;
+  }
+
+  .input-group {
+    flex: 0 1 auto;
+    min-width: 125px;
+    max-width: 215px;
+  }
+
+  .search-bar input {
+    border: solid 1px #dbdbdb;
+    border-radius: 3px;
+    color: #262626;
+    outline: 0;
+    padding: 7px 0px 7px 0px;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight:300;
   }
