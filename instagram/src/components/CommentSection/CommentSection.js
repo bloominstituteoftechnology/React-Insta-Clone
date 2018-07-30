@@ -16,12 +16,18 @@ class CommentSection extends React.Component {
         return(
 
             <div>
-                {comments.map((comment, i) => <Comments userName = {comment.username} text = {comment.text}/>)}
+                {comments.map((comment, i) => <Comments key={i}userName = {comment.username} text = {comment.text}/>)}
             </div>
             
             
         );
     }
+}
+
+
+
+CommentSection.propTypes = {
+    comments: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default CommentSection; 

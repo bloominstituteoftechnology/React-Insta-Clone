@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
 
         return (
         <div>
-          <i class="fab fa-instagram">   &#124;</i> <span>Instagram</span> <input placeholder="search"/> <i class="far fa-compass"></i><i class="far fa-heart"></i> <i class="far fa-user"></i>
+          <i className="fab fa-instagram">   &#124;</i> <span>Instagram</span> <input placeholder="search"/> <i className="far fa-compass"></i><i className="far fa-heart"></i> <i className="far fa-user"></i>
           <hr/>
         </div>
         );

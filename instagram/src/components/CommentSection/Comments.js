@@ -23,4 +23,13 @@ class Comments extends React.Component {
     }
 }
 
+// AverngersList.proopTypes = {
+//     avengers: PropTypes.arrayOf(PropTypes.string)
+// }
+
+Comments.propTypes = {
+    userName: PropTypes.string,
+    text: PropTypes.string
+}
+
 export default Comments 
