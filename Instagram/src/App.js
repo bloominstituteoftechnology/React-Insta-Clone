@@ -6,7 +6,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: []
+      dummyData = { props.dummyData.map(data => <Data />) }
     };
   }
 
