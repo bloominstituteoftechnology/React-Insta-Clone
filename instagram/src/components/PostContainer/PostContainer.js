@@ -30,9 +30,9 @@ class PostContainer extends React.Component {
                 <img className="post-img" src={this.state.img} alt="" />
                 <div className="stats">
                     <div className="icons">
-                        <i class="far fa-heart fa-2x" onClick={this.incrementLikes} /> 
+                        <i className="far fa-heart fa-2x" onClick={this.incrementLikes} /> 
                         &emsp; 
-                        <i class="far fa-comment fa-2x" 
+                        <i className="far fa-comment fa-2x" 
                             onClick={() => alert(`Sending ${this.state.user} a ping!`)} />
                     </div>
                     <p className="likes">{this.state.likes} likes</p>

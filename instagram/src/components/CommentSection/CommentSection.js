@@ -8,6 +8,7 @@ class CommentSection extends Component {
         this.state = {
             comments: props.comments,
             current: '',
+            isEmpty: true,
             time: props.time
         };
     }
@@ -19,7 +20,7 @@ class CommentSection extends Component {
         });
     };
 
-    onInputChange = e => {
+    handleInputChange = e => {
         this.setState({
             current: e.target.value,
         });
@@ -36,7 +37,7 @@ class CommentSection extends Component {
                 <hr />
                 <form onSubmit={this.addComment}>
                     <input 
-                        onChange={this.onInputChange} 
+                        onChange={this.handleInputChange} 
                         className="comment-input" 
                         type="text" 
                         placeholder="Add a comment..." />
