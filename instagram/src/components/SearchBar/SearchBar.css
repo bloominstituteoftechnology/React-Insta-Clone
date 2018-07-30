@@ -1,13 +1,41 @@
 .searchBarMainDiv {
-  background: white;
+  background: red;
   color: black;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .searchBarLogoDiv {
   font-size: 3rem;
   color: black;
+  padding: 0 1rem;
 }
-
+.searchBarLogoDiv i {
+  padding: 0 .5rem;
+}
+.searchBarLogoDiv span {
+  position: relative;
+  bottom: 4px;
+}
 .searchBarLogoDiv img {
   width: 5rem;
+  padding: 0 .5rem;
+}
+
+.searchBarInputDiv input{
+  border-radius: 4px;
+}
+.searchBarLinksDiv ul {
+  font-size: 1.5rem;
+  list-style: none;
+  display: flex;
+}
+
+.searchBarLinksDiv ul li{
+  padding: 0 1rem;
 }
