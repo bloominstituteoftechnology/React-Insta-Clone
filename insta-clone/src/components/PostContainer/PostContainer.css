@@ -43,3 +43,13 @@
 .add-comment input:focus {
     outline: none;
 }
+
+.post .likes {
+    font-weight: bold;
+}
+
+.post .timestamp {
+    font-weight: lighter;
+    color: grey;
+    font-size: 12px;
+}

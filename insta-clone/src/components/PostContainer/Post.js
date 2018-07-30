@@ -40,9 +40,9 @@ class Post extends Component {
                         <FontAwesomeIcon icon={['far', 'heart']} className="icon" />
                         <FontAwesomeIcon icon={['far', 'comment']} className="icon" />
                     </div>
-                    <p>{this.props.post.likes} likes</p>
+                    <p className="likes">{this.props.post.likes} likes</p>
                     <CommentSection comments={this.state.comments} />
-                    <p>{moment(this.props.post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}</p>
+                    <p className="timestamp">{moment(this.props.post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</p>
                     <form onSubmit={this.addComment} className="add-comment">
                         <input type="text" placeholder="Add a comment" onChange={this.commentHolder} ></input>
                     </form>
