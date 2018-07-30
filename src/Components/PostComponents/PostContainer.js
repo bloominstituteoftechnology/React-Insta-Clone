@@ -10,7 +10,7 @@ const PostContainer = props => {
     <div className="post-container">
       <PostHeader thumbnail={props.post.thumbnailUrl} user={props.post.username} />
       <div className="post-image"><img className="fluid-img" alt="post" src={props.post.imageUrl} /></div>
-      <CommentSection comments={props.post.comments} />
+      <CommentSection comments={props.post.comments} likes={props.post.likes} />
     </div>
   );
 };
