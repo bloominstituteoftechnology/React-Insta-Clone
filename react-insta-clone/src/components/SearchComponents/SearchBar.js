@@ -2,14 +2,22 @@ import React from "react";
 
 const SearchBar = props => {
     return (
+        <div className = "search-container">
+        <div>
+        <i class="fab fa-instagram"></i>
+        </div>
         <div>
            <input
-            //onChange={props.handleTodoChange}
             type="text"
             name="search"
-            //value={props.value}
             placeholder="Search"
             /> 
+        </div>
+        <div>
+        <i class="far fa-compass"></i>
+        <i class="far fa-heart"></i>
+        <i class="far fa-user"></i>
+        </div>
         </div>
     )
 }
