@@ -21,8 +21,4 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object)
-}
-
 export default App;

@@ -24,6 +24,6 @@ const PostContainer = props => {
 
 PostContainer.propTypes = {
     comments: PropTypes.arrayOf(PropTypes.object)
-}
+};
 
 export default PostContainer;
