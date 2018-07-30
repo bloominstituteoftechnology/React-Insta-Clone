@@ -8,15 +8,15 @@ import CommentSection from './components/CommentSection/CommentSection';
 class App extends Component {
   constructor(){
     super();
-    this.state = {};
+    this.state = {data: dummyData};
   }
 
   render() {
     return (
       <div className="container">
         <SearchBar />
-        <PostContainer />
-        <CommentSection />
+        <PostContainer posts={this.state.data} />
+        <CommentSection posts={this.state.data} />
       </div>
     );
     }
