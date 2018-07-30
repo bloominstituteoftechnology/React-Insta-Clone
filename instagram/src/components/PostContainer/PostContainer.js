@@ -8,6 +8,10 @@ const PostContainer = props => {
         <div className="post">
             <PostHeader user={props.user} thumbnail={props.thumbnail} />
             <img src={props.img} alt="" />
+            <div>
+                <i class="far fa-heart fa-2x" /> &emsp; <i class="far fa-comment fa-2x" />
+            </div>
+            <p className="likes">{props.likes}</p>
             <CommentSection comments={props.comments} time={props.time} />
         </div>
     );

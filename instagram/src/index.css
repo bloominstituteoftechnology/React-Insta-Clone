@@ -1,18 +1,50 @@
+* {
+  box-sizing: border-box;
+}
 .App {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 body {
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+}
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
 }
 .thumbnail-img {
   border-radius: 50%;
   width: 30px;
 }
+.user,
+.likes {
+  font-weight: bold;
+}
 .search-bar {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  position: fixed;
   width: 100%;
+}
+.search-bar form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.search-bar form i {
+  left: 60px;
+  position: relative;
+  z-index: 2;
+}
+.search-bar .search {
+  border-radius: 5px;
+  background: whitesmoke;
   text-align: center;
 }
