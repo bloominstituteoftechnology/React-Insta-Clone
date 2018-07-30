@@ -7,3 +7,7 @@
   font-size: 3rem;
   color: black;
 }
+
+.searchBarLogoDiv img {
+  width: 5rem;
+}
