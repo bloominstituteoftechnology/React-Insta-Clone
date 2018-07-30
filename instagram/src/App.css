@@ -1,6 +1,7 @@
 .App {
   max-width: 1080px;
   margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
 
   display: flex;
   justify-content: center;
@@ -8,29 +9,68 @@
 
 .post-container {
   border: 1px lightgray solid;
+  margin: 20px 0;
 }
 
 .user {
   display: flex;
+  align-items: center;
 }
 
 .user img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  margin: 10px 10px;
+}
+
+.user p {
+  font-weight: bold;
+}
+
+.action-buttons {
+  margin: 10px 10px;
+}
+
+.action-buttons .icon {
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.likes {
+  font-weight: bold;
+  margin: 10px 10px;
 }
 
 .comment {
   display: flex;
+  margin: 0 10px;
+}
+
+.comment :first-child {
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 .comment-input {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 10px 10px;
+  border-top: 1px solid lightgray;
 }
 
 .comment-input input{
   max-width: 90%;
   width: 85%;
   border: 0;
+  height: 40px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.timestamp {
+  margin: 10px 10px;
+  text-transform: uppercase;
+  font-size: 12px;
 }
