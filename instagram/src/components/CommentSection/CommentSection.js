@@ -3,7 +3,9 @@ import Comment from './Comment.js';
 const CommentSection=prop=>{
     return (
         prop.data.map(e=><Comment data={e}/>),
-        <input type='text' placeholder='Add a comment...'/>
+        <div>
+        <input type='text' placeholder='Add a comment...'/><i class="fas fa-ellipsis-h"></i>
+        </div>
     )
 };
 

@@ -1,0 +1,8 @@
+.searchbar {
+    display: flex;
+    justify-content: flex-start;
+
+}
+.searchbar i {
+    display: inline;
+}
