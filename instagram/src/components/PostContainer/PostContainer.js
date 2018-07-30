@@ -5,7 +5,7 @@ import {
     CardTitle, CardSubtitle, Button} from 'reactstrap';
     import CommentSection from '../CommentSection/CommentSection'
 
-const PostContainer = () => {
+const PostContainer = (props) => {
   return(
     <div className = 'container'>
     <h1> Post </h1>

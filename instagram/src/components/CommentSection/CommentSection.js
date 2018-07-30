@@ -4,7 +4,7 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button} from 'reactstrap';
 
-    const CommentSection  = () => {
+    const CommentSection  = (props) => {
       return(
       <div> hello </div>
     )
