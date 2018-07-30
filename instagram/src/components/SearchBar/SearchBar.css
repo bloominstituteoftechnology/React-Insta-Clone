@@ -2,6 +2,8 @@
     border-bottom: 1px solid #3333;
     height: 80px;
     background: #ffffff;
+    position: fixed;
+    width: 100vw;
 }
 
 .container {
