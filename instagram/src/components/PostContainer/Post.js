@@ -22,4 +22,12 @@ const Post = (props) => {
     )
 }
 
+Post.propTypes = {
+    thumbnailUrl : PropTypes.string,
+    username: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.string,
+    comments: PropTypes.string,
+}
+
 export default Post;

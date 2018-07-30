@@ -16,4 +16,8 @@ const PostList = (props) => {
     )
 }
 
+PostList.propTypes = {
+    postData: PropTypes.arrayOf(PropTypes.object)
+}
+
 export default PostList;
