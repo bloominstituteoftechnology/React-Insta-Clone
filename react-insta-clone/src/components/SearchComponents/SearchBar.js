@@ -1,10 +1,11 @@
 import React from "react";
+import './SearchBar.css';
 
 const SearchBar = props => {
     return (
         <div className = "search-container">
         <div>
-        <i class="fab fa-instagram"></i>
+        <i className="fab fa-instagram"></i>
         </div>
         <div>
            <input
@@ -14,9 +15,9 @@ const SearchBar = props => {
             /> 
         </div>
         <div>
-        <i class="far fa-compass"></i>
-        <i class="far fa-heart"></i>
-        <i class="far fa-user"></i>
+        <i className="far fa-compass"></i>
+        <i className="far fa-heart"></i>
+        <i className="far fa-user"></i>
         </div>
         </div>
     )

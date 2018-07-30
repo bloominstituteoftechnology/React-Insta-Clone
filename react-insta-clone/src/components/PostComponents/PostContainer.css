@@ -1,0 +1,28 @@
+.post-container{
+    max-width: 640px;
+    width: 100%;
+    margin: auto;
+}
+
+.post-card{
+    border: 1px solid gray;
+    margin-bottom: 50px;
+}
+
+.card-header{
+    display: flex;
+    padding: 10px;
+}
+
+.card-info{
+    padding: 10px;
+}
+
+.user-thumbnail{
+    height: 50px;
+    width: 50px;
+}
+
+.user-post{
+    width: 100%;
+}
