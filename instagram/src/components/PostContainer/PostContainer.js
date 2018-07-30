@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 
 class PostContainer extends Component {
@@ -9,7 +10,7 @@ class PostContainer extends Component {
         return (
             <div className="post-container">
                 <div className="post-header">
-                    <div><img src={this.props.thumbnailUrl} alt="" /></div>
+                    <div className="thumbnail"><img src={this.props.thumbnailUrl} alt="" /></div>
                     <div>{this.props.username}</div>
                 </div>
                 <div><img src={this.props.imageUrl} alt="" /></div>

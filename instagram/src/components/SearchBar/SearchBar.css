@@ -4,10 +4,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    height: 153px;
-    border: 1px solid black;
+    padding: 30px 20px;
+    
+    border-bottom: 2px solid lightgray;
     top: 0;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .logo {
