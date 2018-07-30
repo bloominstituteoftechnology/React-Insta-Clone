@@ -3,17 +3,17 @@ import AddComment from './AddComment';
 
 const CommentContainer = props => {
     console.log(props.comments)
-    return ( 
+    return (
         <div>
-        {props.comments.map((comment, index) => {
-            return <div key={index}><p><strong>{comment.username}</strong> {comment.text}</p></div>
-        })}
+            {props.comments.map((comment, index) => {
+                return <div key={index}><p><strong>{comment.username}</strong> {comment.text}</p></div>
+            })}
 
-        <AddComment />
+            <AddComment />
         </div>
 
-        
-     );
+
+    );
 }
- 
+
 export default CommentContainer;

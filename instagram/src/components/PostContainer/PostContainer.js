@@ -3,27 +3,27 @@ import CommentContainer from '../CommentSection/CommentContainer';
 
 const PostContainer = props => {
     console.log(props.user)
-    return ( 
+    return (
         <div>
-        {props.user.map((user, index) => {
-            return <div key={index}><img src={user.thumbnailUrl} alt='thumbnail' /> {user.username}
-            
-            <div>
-            <img src={user.imageUrl} alt='img' />
-            </div>
+            {props.user.map((user, index) => {
+                return <div key={index}><img src={user.thumbnailUrl} alt='thumbnail' /> {user.username}
 
-            <div>
-            {user.likes}
-            </div>
+                    <div>
+                        <img src={user.imageUrl} alt='img' />
+                    </div>
 
-            <div>
-            <CommentContainer comments={user.comments} />
-            </div>
-            
-            </div>
-        })}
+                    <div>
+                        {user.likes}
+                    </div>
+
+                    <div>
+                        <CommentContainer comments={user.comments} />
+                    </div>
+
+                </div>
+            })}
         </div>
-     );
+    );
 }
- 
+
 export default PostContainer;

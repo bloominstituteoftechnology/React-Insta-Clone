@@ -5,18 +5,18 @@ import SearchContainer from './components/SearchBar/SeachContainer';
 import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
-constructor() {
-  super()
-  this.state = {
-    data: dummyData
+  constructor() {
+    super()
+    this.state = {
+      data: dummyData
+    }
   }
-}
 
   render() {
     return (
-      <div className="App">
-      <SearchContainer />
-      <PostContainer user={this.state.data} />
+      <div>
+        <SearchContainer />
+        <PostContainer user={this.state.data} />
       </div>
     );
   }
