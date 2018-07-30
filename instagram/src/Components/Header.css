@@ -45,6 +45,10 @@
   border: 1px solid #cdcdcd;
 }
 
+.Header__search-input:focus {
+  outline: none;
+}
+
 .Header__input-overlay {
   position: absolute;
   top: .5rem;

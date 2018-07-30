@@ -1,7 +1,12 @@
 .Card {
   border: 1px solid #cdcdcd;
-  max-width: 70%;
+  max-width: 58rem;
+  width: 100%;
   border-radius: 3px;
+}
+
+.Card:not(:last-child) {
+  margin-bottom: 5rem;
 }
 
 .Card__header {
@@ -82,4 +87,12 @@
   flex-grow: 1;
   border: none;
   font-size: inherit;
+}
+
+.Card__input:focus {
+  outline: none;
+}
+
+.Card__input::placeholder {
+  color: #999;
 }
