@@ -5,16 +5,28 @@
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .search-container .logo {
   width: 201px;
     height: 48px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .search-container .input-container {
   width: 201px;
     height: 48px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.search-container .input-container input {
+
 }
 
 .search-container .options-container {
