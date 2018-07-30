@@ -2,12 +2,29 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js'
 import SearchBar from './Components/SearchBar/SearchBar';
+import PostContainer from './Components/PostContainer/PostContainer'; 
 
 class App extends Component {
+  constructor(){
+    super(); 
+    this.state = {
+      data: dummyData
+    }
+  }
   render() {
+
+    console.log(this.state.data); 
     return (
       <div className="App">
         <SearchBar />
+        {this.state.data.map((user, index) =>  {
+          return <PostContainer 
+            usernameImg = {user.thumbnailUrl}
+            username = {user.username}
+            img = {user.imageUrl}
+            likes = {user.likes}
+          />
+        })}
       </div>
     );
   }
