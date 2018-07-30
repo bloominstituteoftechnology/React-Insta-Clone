@@ -13,14 +13,22 @@ class App extends Component {
     this.state = {}
   }
   render() {
+    dummyData.map((post, i) => console.log(post.comments.username))
     return (
       <div className="App">
         <header className="App-header">
         
         
         </header>
-        {dummyData.map((i,post) => <div className = "post"><SearchBar  key={i}/> <PostContainer key = {i} userName = {post.username} thumbNail={post.thumbnailUrl} image={post.imageUrl}
-        likes = {post.likes} time ={post.timestamp}/> <CommentSection comments = {post.comments}/> </div>)}
+        {dummyData.map((post, i) => <div className = "post">
+        <SearchBar  key={i}/> 
+        <PostContainer key = {i} userName = {post.username} thumbNail={post.thumbnailUrl} image={post.imageUrl}
+        likes = {post.likes} time ={post.timestamp}/> 
+        <CommentSection comments = {post.comments}/> 
+        </div>)}
+        
+
+        
       </div>
     );
   }
