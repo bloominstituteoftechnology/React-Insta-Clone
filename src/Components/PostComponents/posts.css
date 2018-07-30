@@ -1,5 +1,29 @@
 .post-container{
   width: 600px;
   margin: 0 auto;
-  border: 1px solid pink;
+  border: 1px solid black;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.post-container .post-header{
+  height: 75px;
+  width: 50%;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.post-container .post-header .user-icon{
+  height: 80%;
+}
+
+.post-container .post-header .user-icon img{
+  border-radius: 50%;
+  height: 100%;
+}
+
+.post-container .post-header .user-name{
+  margin-left: 15px;
 }

@@ -5,3 +5,9 @@
   align-items: center;
   flex-direction: column;
 }
+
+
+.fluid-img{
+  width: 100%;
+  height: auto;
+}

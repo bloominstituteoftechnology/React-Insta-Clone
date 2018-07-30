@@ -13,5 +13,9 @@ const CommentSection = props => {
 
 export default CommentSection;
 
+//needs icon section and likes at top
+//timestamp at bottom of comments
+//commenting input - use todo header swapper
+
 
 // {props.post.comments.map(comment => <CommentSection comment={comment} />)}
