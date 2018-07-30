@@ -11,7 +11,7 @@ const PostContainer = props => {
                     <img className ='thumbnail' src={item.thumbnailUrl} alt ='user thumbnail img'/>
                     <img className = 'post-img' src={item.imageUrl} alt='Post Img'/>
                     <div>{item.likes} likes</div>
-                    <div><CommentSection comments={this.posts}/></div>
+                    <div><CommentSection comments={item.comments}/></div>
                     <div>{item.timestamp}</div>
                 </div>
                 )}
