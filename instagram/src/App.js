@@ -1,7 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
-import PostContainer from './components/PostContainer/PostContainer';
+import Search from './components/SearchBar/SearchBar';
+import Post from './components/PostContainer/PostContainer';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Container,
+  Row,
+  Col,
+  Jumbotron,
+  Button
+} from 'reactstrap';
 
 class App extends Component {
   constructor(){
@@ -11,7 +26,9 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-          <PostContainer posts={this.state.data} />
+          <Search />
+          <Post posts={this.state.data} />
+          <Row></Row>
       </div>
     );
   }

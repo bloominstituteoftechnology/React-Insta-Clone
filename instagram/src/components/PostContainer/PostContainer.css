@@ -1,0 +1,23 @@
+.post-container{
+    border: 1px solid lightgray;
+}
+.user{
+    padding: 1rem;
+    font-weight: bold;
+}
+.thumbnail {
+    border-radius: 200px;
+    width: 35px;
+    height: 35px;
+}
+.likes{
+    font-weight: bold;
+}
+.like-comment{
+    font-size: 2rem;
+    padding: 1rem;
+}
+.bottom-section{
+    padding: 1rem;
+    border-bottom: 1px solid lightgray;
+}
