@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './posts.css';
 
 const PostHeader = props => {
@@ -9,5 +10,10 @@ const PostHeader = props => {
     </div>
   );
 };
+
+PostHeader.propTypes = {
+  thumbnail: PropTypes.string.isRequired,
+  user: PropTypes.string.isRequired
+}
 
 export default PostHeader;
