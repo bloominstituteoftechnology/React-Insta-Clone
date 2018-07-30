@@ -1,0 +1,15 @@
+.comments {
+    display:flex;
+    align-items: flex-start;
+
+}
+.comment{
+    margin-top: 15px; 
+    display:flex;
+    margin-left: 20px;
+}
+
+.userCommentName {
+    font-weight: bold;
+    margin-right: 6px;
+}
