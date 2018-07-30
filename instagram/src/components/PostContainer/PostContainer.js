@@ -20,6 +20,7 @@ const Post = props => {
                             <div><Comment comments={item.comments}/></div>
                             <div>{item.timestamp}</div>
                         </div>
+                        <div className='footer'><input className='add-comment' placeholder="Add a comment..."></input><i className="fa fa-ellipsis-h"></i></div>
                     </div>
                 )}
             )}

@@ -1,5 +1,6 @@
 .post-container{
     border: 1px solid lightgray;
+    padding: 1rem;
 }
 .user{
     padding: 1rem;
@@ -20,4 +21,21 @@
 .bottom-section{
     padding: 1rem;
     border-bottom: 1px solid lightgray;
+}
+.footer{
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+.add-comment{
+    text-align: left;
+    width: 95%;
+    border: none;
+    padding: 1rem;
+}
+.fa-ellipsis-h{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    padding: none;
 }

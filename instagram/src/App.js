@@ -18,17 +18,20 @@ import {
   Button
 } from 'reactstrap';
 
+
 class App extends Component {
   constructor(){
     super();
     this.state = {data:dummyData};
+  }
+  addComment(e){
+
   }
   render() {
     return (
       <div className="container">
           <Search />
           <Post posts={this.state.data} />
-          <Row></Row>
       </div>
     );
   }

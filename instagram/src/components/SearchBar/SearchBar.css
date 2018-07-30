@@ -5,7 +5,17 @@
     border-bottom: 5px solid lightgray;
     padding: 2rem;
 }
-
+.search span{
+    color: lightgray;
+}
+.search{
+    position: relative;
+}
+.search .fa-search{
+    position: absolute;
+    top:5px;
+    left: 5px;
+}
 .search-icons{
     font-size: 2.5rem;
     padding: 0 0.5rem;
