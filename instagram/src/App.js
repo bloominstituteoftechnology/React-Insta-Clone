@@ -1,15 +1,31 @@
 import React, { Component } from 'react';
+import dummyData from './dummy-data';
+import SearchBar from './components/SearchBar/SearchBar';
+import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data: dummyData,
+    };
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <SearchBar />
+        {
+          this.state.data.map(data =>
+          <PostContainer
+            key={data.timestamp}
+            user={data.username} 
+            thumbnail={data.thumbnail} 
+            img={data.imageUrl} 
+            likes={data.likes} 
+            time={data.timestamp}
+            comments={data.comments}
+          />)
+        }
       </div>
     );
   }
