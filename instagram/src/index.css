@@ -1,8 +1,18 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+.thumbnail-img {
+  border-radius: 50%;
+  width: 30px;
+}
+.search-bar {
+  width: 100%;
+  text-align: center;
 }

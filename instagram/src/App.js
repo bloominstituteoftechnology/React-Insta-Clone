@@ -19,7 +19,7 @@ class App extends Component {
           <PostContainer
             key={data.timestamp}
             user={data.username} 
-            thumbnail={data.thumbnail} 
+            thumbnail={data.thumbnailUrl} 
             img={data.imageUrl} 
             likes={data.likes} 
             time={data.timestamp}
