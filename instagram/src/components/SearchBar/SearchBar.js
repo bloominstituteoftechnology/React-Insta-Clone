@@ -16,8 +16,12 @@ const SearchBar = () => {
               className="logo-image text-logo"
             />
           </div>
-          <div className="input-group">test</div>
-          <div className="social-group">teat</div>
+          <div className="input-group"><input type="text" placeholder="Search" /></div>
+          <div className="social-group">
+             <i className="far fa-compass"></i>
+            <i className="far fa-heart"></i>
+            <i className="far fa-user-circle"></i>
+          </div>
         </div>
       </div>
     </div>
