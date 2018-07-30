@@ -1,0 +1,38 @@
+.Header {
+	padding: 2rem 0;
+	border-bottom: 1 px solid #ddd;
+}
+
+.Header__nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.Header__nav--brand {
+	font-size: 2.4rem;
+	text-decoration: none;
+	font-family: "Lobster Two", cursive;
+	color: inherit;
+	margin-left: 2rem;
+}
+
+.fa-instagram {
+	padding-right: 1rem;
+	margin-right: 1rem;
+	border-right: 1px solid black;
+}
+
+.fa-compass {
+	margin-right: 3rem;
+}
+
+.fa-heart {
+	margin-right: 3rem;
+}
+
+.Header__brand {
+	margin-right: 3rem;
+	border-right: 1px solid #212121;
+	padding-right: 2rem;
+	font-size: 3rem;
+}
