@@ -8,14 +8,14 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: {dummyData}
+      dummyData: dummyData
     };
   }
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer />
+        {this.state.dummyData.map(item => < PostContainer post={item} />)}
       </div>
     );
   }

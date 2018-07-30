@@ -2,11 +2,10 @@ import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 
-const PostContainer = () => {
+const PostContainer = props => {
     return (
         <div className="post-container">
-            this is the post container
-            <CommentSection />
+            {props.post.comments.map(comment => < CommentSection comment={comment} /> )}    
         </div>
     );
 }
