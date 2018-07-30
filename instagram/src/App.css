@@ -1,0 +1,36 @@
+.App {
+  max-width: 1080px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+}
+
+.post-container {
+  border: 1px lightgray solid;
+}
+
+.user {
+  display: flex;
+}
+
+.user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.comment {
+  display: flex;
+}
+
+.comment-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-input input{
+  max-width: 90%;
+  width: 85%;
+  border: 0;
+}
