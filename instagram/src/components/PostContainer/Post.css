@@ -1,0 +1,10 @@
+.user {
+    margin-top: 2%;
+    margin-bottom: 1.25%;
+    font-weight: bold;
+}
+
+.thumbnail {
+    border-radius: 100px;
+    width: 50px;
+}

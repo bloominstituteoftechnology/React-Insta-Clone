@@ -1,18 +1,24 @@
 import React from 'react';
 import CommentContainer from '../CommentSection/CommentContainer';
+import './Post.css'
 
 const PostContainer = props => {
     console.log(props.user)
     return (
         <div>
             {props.user.map((user, index) => {
-                return <div key={index}><img src={user.thumbnailUrl} alt='thumbnail' /> {user.username}
+                return <div key={index} className='container'>
 
-                    <div>
-                        <img src={user.imageUrl} alt='img' />
+                    <div className='user'>
+                        <img className='thumbnail' src={user.thumbnailUrl} alt='thumbnail' /> {user.username}
                     </div>
 
-                    <div>
+
+                    <div className='image'>
+                        <img className='img' src={user.imageUrl} alt='img' />
+                    </div>
+
+                    <div className='likes'>
                         {user.likes}
                     </div>
 

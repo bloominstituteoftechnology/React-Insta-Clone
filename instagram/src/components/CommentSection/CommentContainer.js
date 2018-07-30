@@ -9,6 +9,8 @@ const CommentContainer = props => {
                 return <div key={index}><p><strong>{comment.username}</strong> {comment.text}</p></div>
             })}
 
+            <hr />
+
             <AddComment />
         </div>
 
