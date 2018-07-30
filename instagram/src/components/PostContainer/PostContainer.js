@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import CommentSection from '../CommentSection/CommentSection.js'
 
 //recieve props from app.js with comments then pass it to commentSection

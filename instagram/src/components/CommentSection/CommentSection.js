@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 //recieve array from Post container via props and render a 'comment' component with, username, and text,
 

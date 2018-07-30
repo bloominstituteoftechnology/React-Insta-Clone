@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './css/index.css';
 import './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer.js';
+import SearchBar from './components/SearchBar/SearchBar.js';
 
 class App extends Component {
   constructor() {
@@ -14,10 +14,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <header className="App-header">
           <h6 className="App-title">MIKE-instagram</h6>
         </header>
+        <SearchBar />
         <PostContainer />
       </div>
     );

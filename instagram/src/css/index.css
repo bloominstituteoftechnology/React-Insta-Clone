@@ -1,11 +1,35 @@
+.center {
+  display: flex;
+  justify-content: center;
+}
 .comment-section {
   border: 1px solid green;
-  width: 400px;
   height: 50px;
-  box-sizing: border-box;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
 }
 .post-container {
   border: 1px solid red;
   width: 400px;
   height: 400px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search-bar {
+  border: 1px solid orange;
+  width: 400px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+.app {
+  border: 1px solid blue;
+  width: 420px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
