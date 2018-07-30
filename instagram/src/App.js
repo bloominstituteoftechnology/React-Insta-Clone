@@ -24,7 +24,6 @@ class App extends Component {
         <CommentSection comments = {post.comments} time = {post.timestamp}/> 
         </div> </div>)}
         
-
         
       </div>
     );

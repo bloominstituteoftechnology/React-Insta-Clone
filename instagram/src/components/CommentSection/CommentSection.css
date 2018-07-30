@@ -13,3 +13,16 @@
     font-weight: bold;
     margin-right: 6px;
 }
+
+.postHrLine{
+    margin-bottom:15px;
+}
+
+.addComment {
+    display: flex;
+    align-items:flex-start;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
