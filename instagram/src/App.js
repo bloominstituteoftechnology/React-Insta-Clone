@@ -10,25 +10,31 @@ class App extends Component {
     super();
     this.state = {
       data: dummyData,
-    }
+    };
   }
+
+  onSearch = e => {
+    e.preventDefault();
+  };
 
   render() {
     return (
       <div className="App">
-        <SearchBar/>
-        {this.state.data.map(data => 
-        <PostContainer
-          key={data.timestamp}
-          user={data.user}
-          thumbnail={data.thumbnailUrl}
-          img={data.imageUrl}
-          likes={data.likes}
-          time={data.timestamp}
-          comments={data.comments}
-
-          />)
-        }
+        <SearchBar onSearch={this.onSearch}/>
+        <div className='ig-posts'>
+          {
+            this.state.data.map(data => 
+            <PostContainer
+              key={data.timestamp}
+              user={data.user}
+              thumbnail={data.thumbnailUrl}
+              img={data.imageUrl}
+              likes={data.likes}
+              time={data.timestamp}
+              comments={data.comments}
+            />)
+          }
+        </div>
       </div>
     );
   }
