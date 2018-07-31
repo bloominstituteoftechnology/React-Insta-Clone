@@ -1,28 +1,24 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import dummyData from './dummy-data'
 import SearchBar from './components/SearchBarComponent/search-bar';
-import Card from './components/PostComponent/card';
+import CardContainer from './components/PostComponent/CardContainer';
 
 class App extends Component {
-  constructor (){
-    super()
-    this.state = {
-
-    }
+  constructor(){
+    super();
+    this.state = {data: dummyData};
   }
+
   render() {
     return (
-      <div>
-        <div className="header">
-          <SearchBar />
-        </div>
-        <div className="middle">
-          <Card />
-        </div>
+      <div className="container">
+        <SearchBar />
+        <CardContainer posts={this.state.data} />
       </div>
     );
-  }
+    }
 }
 
 export default App;

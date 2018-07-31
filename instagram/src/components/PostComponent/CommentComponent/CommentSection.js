@@ -1,15 +1,27 @@
-import React from 'react'
-import UserComment from './UserComment';
-import Comment from './Comment'
+import React from 'react';
+import PropTypes from 'prop-types';
+import './CommentSection.css';
 
-function CommentSection (props){
+const CommentSection = (props) => {
     return (
-        <div className="commentSection">
-            <postData />
-            <UserComment />
-            <Comment />
+        <div className="comment-container">
+            {props.comments.map(comment => {
+                return (
+                    <div className="comment" key={comment.text + comment.username}>
+                        <p className="username">{comment.username}</p>
+                        <p className="text">{comment.text}</p>
+                    </div>
+                )
+            })}
         </div>
-    )
+    );
 }
 
-export default CommentSection
+CommentSection.propTypes = {
+    comments: PropTypes.arrayOf(PropTypes.shape({
+        text: PropTypes.string,
+        username: PropTypes.string
+    }))
+}
+
+export default CommentSection;

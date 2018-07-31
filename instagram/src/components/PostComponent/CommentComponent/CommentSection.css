@@ -1,0 +1,9 @@
+.comment-container .comment {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comment-container .comment .username {
+    margin-right: 10px;
+    font-weight: bold;
+}
