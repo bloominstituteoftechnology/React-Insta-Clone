@@ -8,7 +8,7 @@ const SearchBar = (props) => {
     <div className="searchBarMainDiv">
       {/* start logo div */}
       <div className="searchBarLogoDiv">
-        <i class="fa fa-instagram"></i><span>|</span><img src={logoText} alt="instagram text" />
+        <i className="fa fa-instagram"></i><span>|</span><img src={logoText} alt="instagram text" />
       </div>
 
       {/* start input div */}
@@ -19,9 +19,9 @@ const SearchBar = (props) => {
       {/* start links div */}
       <div className="searchBarLinksDiv">
         <ul>
-          <li><i class="fa fa-compass"></i></li>
-          <li><i class="fa fa-heart-o"></i></li>
-          <li><i class="fa fa-user-o"></i></li>
+          <li><i className="fa fa-compass"></i></li>
+          <li><i className="fa fa-heart-o"></i></li>
+          <li><i className="fa fa-user-o"></i></li>
         </ul>
       </div>
 
