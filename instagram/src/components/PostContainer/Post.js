@@ -6,7 +6,7 @@ import "./Posts.css";
 
 const Post = props => {
   return (
-    <div>
+    <div className="post-border">
     <PostHeader
         username={props.post.username}
         thumbnailUrl={props.post.thumbnailUrl}

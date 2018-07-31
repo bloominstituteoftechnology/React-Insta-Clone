@@ -1,9 +1,11 @@
 import React from 'react';
+import './Comment.css'
 
 const CommentInput = props => {
   return (
-    <form onSubmit={props.submitComment}>
+    <form onSubmit={props.addComment}>
       <input
+        className="comment-input"
         value={props.comment}
         onChange={props.commentInput}
        type="text" 

@@ -1,16 +1,40 @@
 .comment-text {
-    text-align: left;
-    padding: 2px;
-    margin-left: 4px;
-  }
-  
-  .comment {
-    font-weight: 300;
-    font-size: 14px;
-  }
-  
-  .user {
-    font-weight: 500;
-    font-size: 12px;
-  }
-  
+  text-align: left;
+  padding: 2px;
+  margin-left: 4px;
+}
+
+.comment-input {
+  padding: 7px 0 10px 7px;
+  font-size: 14px;
+  margin: 10px 0 10px 0;
+  outline: none;
+  border: none;
+}
+
+/* input:focus {
+  border: 2px solid #3897f0;
+} */
+
+.comment {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.user {
+  font-weight: 600;
+  font-size: 14px;
+  color: #003569;
+}
+
+.like-icon {
+  font-size: 20px;
+  padding: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
+}
+
+p .likes {
+    font-weight: 600;
+  font-size: 14px;
+  color: #003569;
+}

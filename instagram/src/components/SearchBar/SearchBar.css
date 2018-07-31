@@ -18,6 +18,7 @@
     align-items: center;
     padding: 20px;
   }
+
   
   .image-group {
     height: 40px;
@@ -56,9 +57,17 @@
     font-weight:300;
   }
 
-
-@media (max-width:480px) {
-    .text-logo {
-        display: none;
+  @media (max-width: 480px) {
+    .search-bar input {
+    display: none;
     }
+    .text-logo {
+        height: 80%;
+        padding-right: 0px;
+    }
+    .input-group {
+        flex: 0 1 auto;
+        min-width: 80px;
+        max-width: 215px;
+      }
 }
