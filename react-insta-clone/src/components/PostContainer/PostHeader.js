@@ -4,11 +4,11 @@ import './PostContainer.css';
 const PostHeader = props => {
     console.log('headerProps', props);
     return (
-        <div>
-            <div className='postThumbnail'>
+        <div className='post-header'>
+            <div className='post-thumbnail'>
                 <img src={props.thumbnailUrl} />
             </div>
-            <div>
+            <div className='post-username'>
                 {props.username}
             </div>
         </div>

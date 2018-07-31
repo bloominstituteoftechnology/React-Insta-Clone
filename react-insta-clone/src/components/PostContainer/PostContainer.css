@@ -1,0 +1,8 @@
+.post-border {
+    height: 400px;
+    width: 60%;
+}
+
+.post-header {
+    display: flex;
+}
