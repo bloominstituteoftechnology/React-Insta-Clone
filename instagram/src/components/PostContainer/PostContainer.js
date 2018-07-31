@@ -11,11 +11,9 @@ const PostContainer = props => {
             <PostHeader post={props.post}/>
             <Post post={props.post} />
             <div className="bottom-text">
-                <div className="comments-icons"><img src="img/comment-heart.png" alt="Comment heart"/><img src="img/comment-bubble.png" alt="Comment bubble" className="comment-bubble"/></div>
+                <div className="comments-icons"><img src="img/comment-heart.png" alt="Comment heart" onClick={() => {if(!props.liked)props.like(props.index)}}/><img src="img/comment-bubble.png" alt="Comment bubble" className="comment-bubble"/></div>
                 <div className="likes">{props.post.likes} likes</div>
-                
                 <CommentSection comments={props.post.comments} timestamp={props.post.timestamp} />
-                
             </div>
         </div>
     );
