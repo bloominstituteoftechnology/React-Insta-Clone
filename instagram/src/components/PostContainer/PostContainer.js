@@ -20,7 +20,7 @@ class PostContainer extends React.Component {
 
   handleAddComment = (e) => {
     if (e.keyCode === 13) {
-      this.props.handleAddComment(this.state.comment, this.props.post)
+      this.props.handleAddComment(this.state.comment, this.props.post.id)
       this.setState({ comment: '' })
     }
   }
@@ -32,7 +32,7 @@ class PostContainer extends React.Component {
     } else {
       this.setState({ likedSrc: unliked})
     }
-    this.props.handleLikeToggle(this.state.liked, this.props.post);
+    this.props.handleLikeToggle(this.state.liked, this.props.post.id);
   }
 
   render() {
@@ -56,7 +56,7 @@ class PostContainer extends React.Component {
           {this.props.post.comments.map(comment => (
             <CommentSection 
               comment={comment} 
-              onClick={() => this.props.handleDeleteComment(comment, this.props.post)}
+              onClick={() => this.props.handleDeleteComment(comment, this.props.post.id)}
             />
           ))}
           <p className="post__date">

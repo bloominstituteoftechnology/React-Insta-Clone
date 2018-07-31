@@ -1,19 +1,30 @@
 import React, { Component } from "react";
 import dummyData from "./dummy-data";
+import fuzzysearch from "fuzzysearch";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
 import "./App.css";
 
 class App extends Component {
   state = {
-    posts: dummyData,
+    posts: [],
     searchInput: ''
   };
   componentDidMount() {
     const storedPosts = JSON.parse(localStorage.getItem('posts'))
     if (storedPosts) {
+      console.log("true")
       this.setState({ posts: storedPosts })
-    }
+    } else {
+      let posts = JSON.parse(JSON.stringify(dummyData))
+      posts = posts.map(currentPost => {
+        let o = {...currentPost}
+        o.id = currentPost.thumbnailUrl
+        return o;
+      })
+      this.setState({
+        posts: posts})
+    } 
   }
 
   componentDidUpdate(prevState) {
@@ -22,11 +33,11 @@ class App extends Component {
     }
   }
 
-  handleAddComment = (comment, post) => {
+  handleAddComment = (comment, id) => {
     this.setState(prevState => {
       return {
         posts: prevState.posts.map(currentPost => {
-          if (currentPost === post) {
+          if (currentPost.id === id) {
             return {
               ...currentPost,
               comments: [
@@ -45,11 +56,11 @@ class App extends Component {
     });
   };
 
-  handleLikeToggle = (liked, post) => {
+  handleLikeToggle = (liked, id) => {
     this.setState(prevState => {
       return {
         posts: prevState.posts.map(currentPost => {
-          if (currentPost === post) {
+          if (currentPost.id === id) {
             if (liked) {
               return {
                 ...currentPost,
@@ -74,15 +85,15 @@ class App extends Component {
   }
 
   handleSearchSubmit = () => {
-    let filteredInput = this.state.posts.filter(post => post.username === this.state.searchInput)
+    let filteredInput = this.state.posts.filter(post => fuzzysearch(this.state.searchInput, post.username))
     this.setState({ filteredInput: filteredInput})
   }
 
-  handleDeleteComment = (comment, post) => {
+  handleDeleteComment = (comment, id) => {
     this.setState(prevState => {
       return {
         posts: prevState.posts.map(currentPost => {
-          if (currentPost === post) {
+          if (currentPost.id === id) {
             return {
               ...currentPost,
               comments: currentPost.comments.filter(thisComment => thisComment !== comment)
