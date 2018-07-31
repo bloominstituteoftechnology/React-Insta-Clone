@@ -11,7 +11,6 @@ class App extends Component {
     this.state = {
       data: [],
       text: '',
-      likes: 0,
       search: ''
     }
   }
@@ -21,11 +20,11 @@ class App extends Component {
   }
 
   liked = () => {
-    this.setState({ likes: this.state.likes + 1})
+    this.setState({ [this.state.data.likes]: this.state.data.likes + 1})
   }
 
   startSearch = e => {
-    this.setState({[e.target.name]: e.target.value})
+    this.setState({ [e.target.name]: e.target.value})
   }
 
   search = e => {
@@ -39,7 +38,7 @@ class App extends Component {
     return (
       <div>
         <SearchContainer search={this.state.search} startSearch={this.startSearch}/>
-        <PostContainer user={this.state.data} likes={this.state.likes} liked={this.liked} text={this.state.text}/>
+        <PostContainer user={this.state.data}  liked={this.liked} text={this.state.text}/>
       </div>
     );
   }
