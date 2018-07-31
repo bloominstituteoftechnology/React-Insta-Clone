@@ -8,7 +8,7 @@ const SearchBar = (props) => {
             <div className="instagramIcon">
                 <FontAwesomeIcon icon={['fab', 'instagram']} className="icon" /> | <img src="https://3rockmarketing.com/wp-content/uploads/2016/09/instagram-logo.png" alt="instagram" className="instagram-text" />
             </div>
-            <input type="text" placeholder="Search"></input>
+            <input type="text" placeholder="Search" onChange={props.onSearch} ></input>
             <div className="icon-holder">
                 <FontAwesomeIcon icon={['far', 'compass']} className="icon" />
                 <FontAwesomeIcon icon={['far', 'heart']} className="icon" />

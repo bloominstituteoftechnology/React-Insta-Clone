@@ -12,18 +12,26 @@ library.add(far, fab);
 class App extends Component {
   constructor(){
     super();
-    this.state = {data: []};
+    this.state = {data: [], searchValue: '', shownPosts: [] };
   }
 
-  componentDidMount(){
-    this.setState({data: dummyData});
+  componentDidMount = () => {
+    this.setState({data: dummyData, shownPosts: dummyData});
+  }
+
+  searchInput = (event) => {
+    // this.setState({searchValue: event.target.value});
+    let searchTerm = event.target.value;
+    this.setState((prevState) => {
+      return ({ shownPosts: prevState.data.filter(post => post.username.indexOf(searchTerm) !== -1)})
+    });
   }
 
   render() {
     return (
       <div className="container">
-        <SearchBar />
-        <PostContainer posts={this.state.data} />
+        <SearchBar onSearch={this.searchInput} />
+        <PostContainer posts={this.state.shownPosts} />
       </div>
     );
     }
