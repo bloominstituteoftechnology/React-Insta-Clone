@@ -22,20 +22,15 @@ class App extends Component {
     const dummyData = this.state.prevDummyData; 
     const prevDummyData = this.state.prevDummyData; 
     //fd === filteredData 
-    console.log(event.target.value); 
+
     const fd  = dummyData.filter(post => post.username.includes(event.target.value))
-    console.log(fd.length);
-    console.log(fd);
+    
     this.setState({dummyData: fd, searchText:event.target.value}) 
 
-    if(this.state.searchText.length === 0){
+    if(event.target.value === 0){
       this.setState({dummyData: prevDummyData});
     }
     
-    //this.setState({ dummyData: dummyData});
-    // if(filteredData.length < 1 ){
-    //   this.setState({dummyData: prevDummyData})
-    // }
 
   }
 
