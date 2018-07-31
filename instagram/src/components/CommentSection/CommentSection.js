@@ -8,8 +8,8 @@ const CommentsSection = props => {
   
     return(
         <div>
-        <div>{props.comments.username}</div>
-        <div>{props.comments.text}</div>
+        <div>{props.username}</div>
+        <div>{props.text}</div>
         <input placeholder="Add a comment . . ." type="text"/>
         </div>
     

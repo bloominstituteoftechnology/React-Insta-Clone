@@ -1,13 +1,12 @@
 import React from 'react';
-import CommentsSection from '../CommentSection/CommentSection.js';
+import Posts from '../PostContainer/Posts.js';
 
 
 
 const PostContainer = props => {
   return(
     <div>
-    {props.dummyData.comments.map(comments => <CommentsSection key={comments.text} comments={comments}/>)}
-    
+    {props.posts.map(post => <Posts key={post.text} posts={post}/>)}
     </div>
    );
 };

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import './App.css';
 import dummyData from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer';
@@ -10,20 +9,18 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      dummyData
+      posts: dummyData
     }
 
   }
 
-
   render() {
     return (
       <div className="container">
-        <header >
-          <SearchBar  />
-        </header>
 
-       {this.state.dummyData.map(dummyData => <PostContainer key={dummyData.timestamp} dummyData={dummyData}/>)}
+       <SearchBar  />
+
+       <PostContainer posts={this.state.posts}/>)
   
       </div>
     );
