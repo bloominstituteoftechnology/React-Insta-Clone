@@ -3,7 +3,7 @@ import './posts.css';
 
 const PostsContainer = (props) => {
   <main className="main-body-container">
-
+    
   </main>
 }
 

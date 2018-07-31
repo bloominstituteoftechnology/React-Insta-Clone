@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
 import SearchBarContainer from './components/SearchBarComp/SearchBarContainer';
+import PostsContainer from './components/PostsComp/PostsContainer';
 
 class App extends Component {
   constructor() {
@@ -14,7 +15,7 @@ class App extends Component {
     return (
       <div className="main-container">
         <SearchBarContainer />
-        <PostsContainer postInfo={item}/>
+        <PostsContainer postInfo={this.state.postData}/>
       </div>
     );
   }
