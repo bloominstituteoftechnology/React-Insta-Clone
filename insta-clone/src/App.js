@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import fuzzysearch from "fuzzysearch";
 import "./App.css";
 import Header from "./Components/Header";
 import Card from "./Components/Card";
@@ -11,54 +12,89 @@ class App extends Component {
 	};
 
 	componentDidMount() {
-		this.setState({
-			data: dummy
-		});
+		const localData = JSON.parse(localStorage.getItem("persist-data"));
+		if (localData) {
+			this.setState({
+				data: localData
+			});
+		} else {
+			this.setState({
+				data: dummy
+			});
+		}
 	}
 
+	updateLocalStorage = () =>
+		localStorage.setItem("persist-data", JSON.stringify(this.state.data));
+
 	handleAddComment = (id, comment) => {
-		this.setState(prevState => ({
-			data: prevState.data.map(post => {
-				if (post.id === id) {
-					return {
-						...post,
-						comments: [
-							...post.comments,
-							{
-								username: "anonymous",
-								text: comment
-							}
-						]
-					};
-				} else {
-					return post;
-				}
-			})
-		}));
+		this.setState(
+			prevState => ({
+				data: prevState.data.map(post => {
+					if (post.id === id) {
+						return {
+							...post,
+							comments: [
+								...post.comments,
+								{
+									username: "anonymous",
+									text: comment
+								}
+							]
+						};
+					} else {
+						return post;
+					}
+				})
+			}),
+			this.updateLocalStorage
+		);
 	};
 
-	handleToggleLike = (id, liked ) =>
-		this.setState(prevState => ({
-			data: prevState.data.map(post => {
-				if (post.id === id) {
-					if (liked) {
+
+	handleDeleteComment = (id, commentToDelete) => {
+		this.setState(
+			prevState => ({
+				data: prevState.data.map(post => {
+					if (post.id === id) {
 						return {
 							...post,
-							likes: post.likes + 1,
-							liked
+							comments: post.comments.filter(comment => JSON.stringify(comment) !== JSON.stringify(commentToDelete))
 						};
-					} else{
-						return {
-							...post,
-							likes: post.likes -1,
-							liked
-						}
+					} else {
+						return post;
 					}
-				} else {
-					return post;
-				}
-			})
-		}));
+				})
+			}),
+			this.updateLocalStorage
+		);
+	};
+
+	handleToggleLike = (id, liked) =>
+		this.setState(
+			prevState => ({
+				data: prevState.data.map(post => {
+					if (post.id === id) {
+						if (liked) {
+							return {
+								...post,
+								likes: post.likes + 1,
+								liked
+							};
+						} else {
+							return {
+								...post,
+								likes: post.likes - 1,
+								liked
+							};
+						}
+					} else {
+						return post;
+					}
+				})
+			}),
+			this.updateLocalStorage
+		);
 
 	handleSearch = searchTerm => this.setState({ searchTerm });
 
@@ -79,6 +115,7 @@ class App extends Component {
 								key={card.id}
 								{...card}
 								onToggleLike={this.handleToggleLike}
+								onDeleteComment={this.handleDeleteComment}
 								onAddComment={this.handleAddComment}
 							/>
 						))}

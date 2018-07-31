@@ -25,6 +25,7 @@ class Card extends React.Component {
 			timestamp,
 			comments,
 			onAddComment,
+			onDeleteComment,
 			onToggleLike
 		} = this.props;
 		return (
@@ -47,10 +48,16 @@ class Card extends React.Component {
 							liked ? "Card__icons--liked" : ""
 						}`}
 					/>
-					<i class="far fa-comment Card__icons--bubble" onClick={ ()=> this.bubbleRef.current.focus() } />
+					<i
+						class="far fa-comment Card__icons--bubble"
+						onClick={() => this.bubbleRef.current.focus()}
+					/>
 				</div>
 				<div className="Card__likes">{likes} likes</div>
-				<Comments {...{ timestamp, comments }} />
+				<Comments
+					{...{ timestamp, comments }}
+					onDeleteComment={comment => onDeleteComment(id, comment)}
+				/>
 				<div className="Card__input-wrapper">
 					<input
 						ref={this.bubbleRef}
@@ -83,6 +90,7 @@ Card.propTypes = {
 	timestamp: PropTypes.number.isRequired,
 	comments: PropTypes.string.isRequired,
 	onAddComment: PropTypes.func.isRequired,
+	onDeleteComment: PropTypes.func.isRequired,
 	onAddLike: PropTypes.func.isRequired
 };
 

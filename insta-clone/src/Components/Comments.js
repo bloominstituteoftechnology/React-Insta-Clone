@@ -3,15 +3,16 @@ import moment from "moment";
 import PropTypes from "prop-types";
 import "./Card.css";
 
-const Comments = ({ timestamp, comments }) => {
+const Comments = ({ timestamp, comments, onDeleteComment}) => {
 	return (
 		<div className="Card__comments">
-			{comments.map(({ username, text }, i) => (
+			{comments.map(( comment,i ) => (
 				<div key={i} className="Card__comment">
 					<p>
-						<span className="Card__comment-user">{username}</span>
-						{text}
+						<span className="Card__comment-user">{comment.username}</span>
+						{comment.text}
 					</p>
+					<span className="Card__comment-close" onClick={() => onDeleteComment(comment)}>&times;</span>
 				</div>
 			))}
 			<div className="Card__last-comment">
@@ -23,6 +24,7 @@ const Comments = ({ timestamp, comments }) => {
 
 Comments.propTypes = {
 	timestamp: PropTypes.string.isRequired,
+	onDeleteComment: PropTypes.func.isRequired,
 	comments: PropTypes.arrayOf(
 		PropTypes.shape({
 			username: PropTypes.string.isRequired,
