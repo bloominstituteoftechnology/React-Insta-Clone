@@ -4,7 +4,6 @@
 }
 .comment-section {
   border: 1px solid green;
-  margin: 5px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -21,12 +20,13 @@
   margin: 0;
   padding: 0;
 }
-.comment-section .comment .comment {
-  margin-left: -70px;
-  text-indent: 70px;
+.comment-section .comment p {
+  margin: 5px;
 }
 .comment-section .timestamp {
   border: 1px solid orange;
+  margin: 0 0 0 5px;
+  color: gray;
 }
 .post-container {
   border: 1px solid red;
@@ -66,7 +66,7 @@
   margin: 5px;
 }
 .post-container .add-comment {
-  height: 50px;
+  height: 30px;
   border: 1px solid purple;
   margin: 5px;
 }
@@ -87,17 +87,17 @@
 .icon {
   width: 25px;
   height: 25px;
-  margin: 10px;
+  margin: 15px;
 }
 .insta-logo-word {
   height: 25px;
   margin: 10px;
-  padding-left: 10px;
+  padding-left: 15px;
   border-left: 1px solid gray;
 }
 .app {
   border: 1px solid blue;
-  width: 420px;
+  width: 520px;
   height: auto;
   display: flex;
   align-items: center;

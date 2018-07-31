@@ -7,7 +7,7 @@ const Comment = props => {
   console.log(props)
   return (
     <div className="comment">
-      <p><strong>{props.comments.username}</strong>{props.comments.text}</p>
+      <p><strong>{props.comments.username} </strong>{props.comments.text}</p>
     </div>
   )
 }

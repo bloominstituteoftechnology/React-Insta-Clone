@@ -19,7 +19,7 @@ const PostContainer = props => {
         <img className="heart" src="https://www.freepngimg.com/download/instagram/1-2-instagram-heart-transparent.png" alt="heart"></img>
         <img className="bubble" src="https://image.flaticon.com/icons/png/512/22/22302.png" alt="bubble"></img>
       </div>
-      <div className="likes">{props.data.likes} likes</div>
+      <p className="likes"><strong>{props.data.likes} likes</strong> </p>
       <CommentSection comments={props.data.comments} time={props.data.timestamp}/>
       <input className="add-comment" placeholder="Add a comment..."></input>
 
