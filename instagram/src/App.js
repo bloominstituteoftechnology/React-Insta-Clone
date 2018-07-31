@@ -28,7 +28,7 @@ class App extends Component {
     this.setState({data:dummyData});
   }
   addLike = () => {
-    console.log(this.state.data.likes);
+  
   }
   search = e => {
     this.setState({input: e.target.value});
@@ -37,7 +37,6 @@ class App extends Component {
     e.preventDefault();
     let result = this.state.input; 
     let filtered = this.state.data.filter(data => data.username.includes(result));
-    console.log(filtered);
     this.setState({data: filtered});
   }
   render() {

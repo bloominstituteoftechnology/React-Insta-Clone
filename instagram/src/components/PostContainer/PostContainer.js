@@ -3,7 +3,6 @@ import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from "prop-types";
 
-
 const Post = props => {
     return (
         <div className='post-container'>
@@ -18,8 +17,7 @@ const Post = props => {
                         </div>
                         <div className="bottom-section">
                             <div className='likes'>{item.likes} likes</div>
-                            <div><CommentSection comments={item.comments}/></div>
-                            <div>{item.timestamp}</div>
+                            <div><CommentSection comments={item.comments} timestamp={item.timestamp}/></div>
                         </div>
                     </div>
                 )}
