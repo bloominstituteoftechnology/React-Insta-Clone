@@ -17,6 +17,7 @@ const SearchContainer = props => {
                         placeholder='search'
                         value={props.search}
                         onChange={props.startSearch}
+                        autoComplete="off"
                     />
                 </form>
 

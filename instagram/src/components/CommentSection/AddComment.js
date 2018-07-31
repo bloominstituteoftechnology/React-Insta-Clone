@@ -11,6 +11,7 @@ const AddComment = props => {
                     name='text'
                     onChange={props.change}
                     value={props.text}
+                    autoComplete="off"
                 />
             </form>
         </div>
