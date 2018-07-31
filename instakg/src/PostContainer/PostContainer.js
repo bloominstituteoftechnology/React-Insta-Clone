@@ -21,7 +21,7 @@ import moment from 'moment';
       <FontAwesomeIcon className="icon" icon={faComment} />
     </div>
     <div className="likes">{props.data.likes} likes</div>
-   < CommentSection  data={props.data.comments} />
+   < CommentSection methods={props.methods[2].bind(this)} data={props.data.comments} />
     <div className='timeStamp'> {moment(props.data.timestamp, "MMMM Do YYYY, h:mm:ss a").fromNow()}</div>
     <div className='commentBar'/>
     <div className="row AddComment">

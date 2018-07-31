@@ -12,6 +12,11 @@ import PropTypes from 'prop-types';
   componentDidMount(){
      this.setState({ comments: this.props.data },()=>{});
   }
+  componentDidUpdate(prevProps){
+    if (this.props.data !== prevProps.data) {
+    this.setState({ comments: this.props.data },()=>{});
+    }
+ }
   addComment(){
     console.log('success')
   }
@@ -22,6 +27,7 @@ import PropTypes from 'prop-types';
           return (<div key={i} className='comment'>
          <span className='userName'> {e.username}</span>
           <span className='userComment'>{e.text}</span>
+          <span onClick={this.props.methods} className='deleteButton'> ␡ </span>
           </div>)
         })}
     </div> 

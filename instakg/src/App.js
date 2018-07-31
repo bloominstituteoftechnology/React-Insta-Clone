@@ -14,10 +14,20 @@ class App extends Component {
     }
   }
   componentDidMount(){
-    this.setState({ data: dummyData,display:dummyData },()=>{});
+    document.title = "InstaKG";
+    if(localStorage.getItem("postList")===null){     
+      this.resetData();
+    }
+    else{
+      this.readLS();
+    }
+  }
+  resetData(){ 
+    this.setState({ data: dummyData, display:dummyData},()=>{this.writeToLS()});
   }
   incrimentLike = (event)=>{
     const dataImport = this.state.data;
+    event.target.classList.toggle('liked');
     dataImport.map((element,index)=>{
       if(event.target.id === index.toString()){
         if(element.liked === true){
@@ -29,13 +39,11 @@ class App extends Component {
           element.likes ++;
          element.liked = true;
           return element;
-        }
-         
+        } 
       }
       else{
         return element;
       }
-        
     })
     this.setState({ data: dataImport, display:dataImport },()=>{});
   }
@@ -56,6 +64,7 @@ class App extends Component {
   this.setState({ display: newArray },()=>{});
 }
   handleKeyPressComment = (event) => {
+   
     const dataImport = this.state.data;
     if(event.key === 'Enter'){
        if (event.target.value === ''){
@@ -71,18 +80,46 @@ class App extends Component {
         else{
           return element;
         }
-          
       })
       event.target.value = '';
-    this.setState({ data: dataImport, display: dataImport },()=>{});
+      
+    this.setState({ data: dataImport, display: dataImport },()=>{this.writeToLS();});
     }
+    else if(event.key === '~'){
+      this.resetData();
+    }
+  }
+  writeToLS = () =>{
+    localStorage.setItem('postList', JSON.stringify(this.state.data));
+  }
+  readLS = () =>{
+    let output = JSON.parse(localStorage.getItem('postList'));
+    this.setState({data: output, display: output }); 
+  }
+  deleteComment(event){  
+    const dataImport = this.state.data;
+    const modded = dataImport.map((element)=>{
+         element.comments = element.comments.filter((e)=>{
+          if(e.text === event.target.previousSibling.innerHTML){
+            return false;
+          }
+          else{
+            return true;
+          }
+        })
+        return element;
+    })
+
+    this.setState({ data: modded, display: modded },()=>{this.writeToLS();});
+    
   }
   loadPosts = ()=>{
   return this.state.display.map((element,index) => {
-        return <PostContainer methods={[this.handleKeyPressComment,this.incrimentLike, ]} key={index} id={index} data={element} />
+        return <PostContainer methods={[this.handleKeyPressComment,this.incrimentLike, this.deleteComment.bind(this)]} key={index} id={index} data={element} />
       });
   }
   render() {
+    
     return (
       <div className="App">
         <SearchBar methods={this.handleKeyPressSearch} />
