@@ -20,7 +20,7 @@ class App extends Component {
   }
   
   handleSearchBarChange=(event)=>{
-    this.setState({searchBarValue:event.target.value},this.filterPosts());
+    this.setState({searchBarValue:event.target.value},()=>this.filterPosts());
   }
   filterPosts=()=>{
     let filteredPosts=this.state.posts.slice();
