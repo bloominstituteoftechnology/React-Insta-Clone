@@ -38,12 +38,12 @@ class CommentSection extends React.Component{
     });
   }
 
-  render()
-  {
+  render(){
+    let color = this.state.liked ? 'active' : '';
     return(
       <div className="comment-section">
         <div className="icon-bar">
-          <i className="far fa-heart icon" onClick={this.handleLiking}></i>
+          <i className={`far fa-heart icon ${color}`} onClick={this.handleLiking}></i>
           <i className="far fa-comment icon icon-flipped"></i>
         </div>
         <div className="likes"><strong>{this.state.likes} likes</strong></div>

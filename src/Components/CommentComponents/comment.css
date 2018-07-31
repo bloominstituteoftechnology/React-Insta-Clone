@@ -19,6 +19,10 @@
   transform: rotateY(180deg);
 }
 
+.comment-section .icon-bar .fa-heart.icon.active{
+  color: blue;
+}
+
 .comment-section .likes{
   margin-top: 10px;
   font-size: 2rem;
