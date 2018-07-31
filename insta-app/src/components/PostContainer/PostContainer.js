@@ -32,4 +32,12 @@ const PostContainer = props =>{
     </div>
     )
 }
+PostContainer.propTypes ={
+PostContainer: PropTypes.shape,
+    thumbnailUrl: PropTypes.object, 
+    username: PropTypes.string, 
+    imageUrl: PropTypes.object, 
+    comments: PropTypes.string, 
+    likes: PropTypes.string, 
+}
 export default PostContainer; 
