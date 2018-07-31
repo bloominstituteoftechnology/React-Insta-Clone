@@ -1,35 +1,32 @@
 .searchBar {
   border-top: 4px solid #E1E4E8;
-  border-bottom: 4px solid #E1E4E8;
-  margin-top: 3px; 
+  border-bottom: 1px solid #e7e7e7;
+  margin-top: 15px; 
   margin-bottom: 50px;
   display: flex;
   flex-direction: row;
+  /* flex-wrap: wrap; */
+  justify-content: center;
   width: 898px;
   max-width: 100%;
-  border: 1px solid red;
   font-size: 2vw;
   font-size: 3vh;
   align-items: center;
+  padding-top: 40px;
+  height: 152px;
 }
 
 .hrLine {
-    margin-Bottom: 40px;
-    color: gray;
+    margin-bottom:30px;
+    margin-top: 15px;
+    width:898px;
     max-width: 100%; 
-}
-
-.searchInput {
-    width: 12vw; 
     display:flex;
-    justify-content: center;
-    text-align: center;
-    color: #808080;
-    max-width: 100%;
-    font-size: 1vh;
-    font-size: 1.5vw;
-
+    align-items: flex-start;
+    margin-left: 0;
+    border:4px solid #E1E4e8;
 }
+
 .logoTitle {
     margin-left: 1.94274%;
 }
@@ -38,15 +35,36 @@
     margin-left: 3.5%;
 }
 
-/* .fa-search {
-    position:relative;
-    left:-17%;
-    
-    font-size: 1vh;
+.topSearch {
+  display: inline-flex;
+  flex: 1 1 200px;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  
+}
+.searchIcon {
+    padding-top: .5rem;
+    padding-left: 3vw;
+    padding-right: .2rem;
+    font-size: .5vh;
     font-size: 1vw;
-    color: #808080;
-    
-} */
+    color: gray;
+}
+
+.searchInput {
+  border: 0;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  flex: 1;
+}
+
+.addCommentInput {
+    width: 400px;
+    height: 40px;
+    border: none;
+}
+
 .verticalLine {
     color: gray;
 }
@@ -54,8 +72,6 @@
     display: flex;
     justify-content: space-between;
     margin-left: 13.27394vw;
-    /* border-bottom: 1px solid gray; */
-    /* max-width: 100%; */
 }
 
 .rightSideSearchBar i {
@@ -70,12 +86,8 @@
     margin-right: 10.28016vw;
     width: 175px;
     max-width: 100%; 
-    /* border-bottom: 1px solid gray; */
 }
-.topSearch {
-    position: relative;
-    /* border-bottom: 1px solid gray; */
-}
+
 .fa-compass {
     margin-right: 3.57873vw;
 }

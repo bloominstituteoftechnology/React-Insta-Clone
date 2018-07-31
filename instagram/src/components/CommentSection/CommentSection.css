@@ -9,7 +9,8 @@
     margin-top: 15px; 
     display:flex;
     margin-left: 2.04498%;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
+    font-size: 2.5vh;
     width: 100%;
     max-width: 100%; 
 }
@@ -17,6 +18,7 @@
 .userCommentName {
     font-weight: bold;
     margin-right: .61349%;
+    line-height: 3.5vh;
 }
 
 .postHrLine{
@@ -26,14 +28,21 @@
     display:flex;
     align-items: flex-start;
     margin-left: 0;
+    border: .5px solid #e7e7e7;
 }
 
 .addComment {
     display: flex;
-    align-items:flex-start;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
     margin-left: 2.04498%;
     border: none;
+    width:898px;
+}
+.fa-ellipsis-h{
+    margin-right: 2.0044vw;
+    font-size: 1vw;
 }
 
 .timeStamp {
@@ -45,5 +54,9 @@
     color: gray;
     font-size: 1.5rem;
 }
+.userCommentText {
+    line-height: 3.5vh;
+}
+
 
 

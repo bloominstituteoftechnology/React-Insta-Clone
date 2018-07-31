@@ -18,7 +18,7 @@ class App extends Component {
       <div className="App">
         
         {dummyData.map((post, i) => <div key = {i} className = "post">
-        <SearchBar  key={Date.now()}/> <div className = "containerPost">
+        <SearchBar  key={Date.now()}/> <hr className ="hrLine"/> <div className = "containerPost">
         <PostContainer key = {Date.now()} userName = {post.username} thumbNail={post.thumbnailUrl} image={post.imageUrl}
         likes = {post.likes}/> 
         <CommentSection key ={i} comments = {post.comments} time = {post.timestamp}/> 

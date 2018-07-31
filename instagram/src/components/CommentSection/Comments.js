@@ -17,16 +17,13 @@ class Comments extends React.Component {
             <div className ="comments">
               <div className = "comment">
                 <h3 className= "userCommentName">{this.props.userName}</h3>
-                <p className = "userCommentText">{this.props.text}</p>
+                <p align= "left" className = "userCommentText">{this.props.text}</p>
               </div>
             </div> 
         ); 
     }
 }
 
-// AverngersList.proopTypes = {
-//     avengers: PropTypes.arrayOf(PropTypes.string)
-// }
 
 Comments.propTypes = {
     userName: PropTypes.string,

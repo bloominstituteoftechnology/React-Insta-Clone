@@ -18,8 +18,11 @@ class CommentSection extends React.Component {
                 {comments.map((comment, i) => <Comments key={i}userName = {comment.username} text = {comment.text}/>)}
                 
                 <h4 className = "timeStamp">{this.props.time}</h4>
-                <hr className ="hrLine postHrLine"/>
-                <input className ="addComment" placeholder = "Add a comment..."/>
+                <hr className ="postHrLine"/>
+                <div className = "addComment">
+                  <input className ="addCommentInput" placeholder = "Add a comment..."/>
+                  <i className="fas fa-ellipsis-h"></i>
+                </div>
                 
             </div>
             
