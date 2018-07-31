@@ -3,7 +3,7 @@ import dummyData from './dummy-data';
 import SearchBar from './SearchBar'
 import Comments from './Comments'
 import PostContainer from './PostContainer'
-
+import './App.css';
 
 class App extends Component {
   constructor(){
