@@ -6,15 +6,21 @@ const SearchBar = () => {
     return (
         <div className="header-container">
             <div className="image-container">
-                
+                <img className="instagram" src={require('./img/instagram.png')} />
             </div>
-            <div>
+            <div class="search-input">
                 <input type="text" placeholder="Search" />
             </div>  
             <div className="icons-container">
-                <i className="fa fa-compass" />
-                <i className="fa fa-heart" />
-                <i className="fa fa-user-circle" />
+                <div className="nav">
+                    <i className="fa fa-compass" />
+                </div>
+                <div className="heart"> 
+                    <i className="fa fa-heart" />
+                </div>
+                <div className="person">
+                    <i className="fa fa-user-circle" />
+                </div>
             </div>
         </div>
     );   
