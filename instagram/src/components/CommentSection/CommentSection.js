@@ -4,36 +4,47 @@ import './CommentSection.css';
 import Comments from '../CommentSection/Comments';
 import CommentInput from '../CommentSection/CommentInput';
 
-const CommentSection = (props) => {
-  let postDate = props.comment.timestamp.split(",")[0];
-  postDate = postDate.replace("th", "").split(" ")
-  postDate = postDate[1] + " " + postDate[0] + " " + postDate[2]
-  postDate = new Date(postDate).getTime();
-  let dateNow = Date.now();
-  let timeSince = Math.ceil((dateNow - postDate) / (1000 * 3600 * 24))
-  console.log(timeSince)
+class CommentSection extends React.Component {
+  constructor(props) {
+    // let postDate = props.comment.timestamp.split(",")[0];
+    // postDate = postDate.replace("th", "").split(" ")
+    // postDate = postDate[1] + " " + postDate[0] + " " + postDate[2]
+    // postDate = new Date(postDate).getTime();
+    // let dateNow = Date.now();
+    // let timeSince = Math.ceil((dateNow - postDate) / (1000 * 3600 * 24))
+    // console.log(timeSince)
+    super(props);
+    this.state={
+      comment: props.comment,
+      
+    }
+  }
+  render () {
+
+  
   return (
     <div className="commentDiv">
       <div className="userNameDiv">
-        <img src={props.comment.thumbnailUrl} />
-        <h2>{props.comment.username}</h2>
+        <img src={this.state.comment.thumbnailUrl} />
+        <h2>{this.state.comment.username}</h2>
       </div>
 
-      <img src={props.comment.imageUrl} className="commentImg"/>
+      <img src={this.state.comment.imageUrl} className="commentImg"/>
       
       <div className="faPostDiv">
         <i className="fa fa-heart-o"></i> 
         <i className="fa fa-comment-o fa-flip-horizontal"></i>
       </div>
-      <h4>{props.comment.likes} likes</h4>
+      <h4>{this.state.comment.likes} likes</h4>
       <div className="listOfCommentsDiv">
-        {props.comment.comments.map(comment => <Comments comment={comment} />)} 
+        {this.state.comment.comments.map(comment => <Comments comment={comment} />)} 
       </div>
-      <h4 className="timeStamp">{timeSince} DAYS AGO</h4>
+      <h4 className="timeStamp">{this.state.comment.timestamp} DAYS AGO</h4>
 
       <CommentInput />
     </div>
   )
+}
 }
 
 
