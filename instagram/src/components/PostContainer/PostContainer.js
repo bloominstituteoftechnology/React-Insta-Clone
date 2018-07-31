@@ -14,6 +14,7 @@ class PostContainer extends React.Component {
             likes: props.likes,
             comments: props.comments,
             time: props.time,
+            id: props.id
         };
     }
 
@@ -24,6 +25,16 @@ class PostContainer extends React.Component {
     };
 
     /* Lifecycle Method(s)*/
+
+    componentWillMount() {
+        localStorage.getItem(`${this.state.id} likes`) && this.setState({
+          likes: JSON.parse(localStorage.getItem(`${this.state.id} likes`))
+        });
+    }
+    
+    componentWillUpdate(nextProps, nextState) {
+        localStorage.setItem(`${this.state.id} likes`, JSON.stringify(nextState.likes));
+    }
 
     render() {
         return (
@@ -41,6 +52,7 @@ class PostContainer extends React.Component {
                     <p className="likes">{this.state.likes} likes</p>
                 </div>
                 <CommentSection
+                    id={this.state.id}
                     comments={this.state.comments} 
                     time={moment(this.state.time, 'MMMM Do YYYY, h:mm:ss a').fromNow()} />
             </div>

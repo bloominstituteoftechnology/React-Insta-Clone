@@ -51,6 +51,7 @@ class App extends Component {
               data.map((data, ind) =>
                 <PostContainer
                   key={data.timestamp + ind}
+                  id={data.timestamp + ind}
                   user={data.username} 
                   thumbnail={data.thumbnailUrl} 
                   img={data.imageUrl} 

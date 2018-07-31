@@ -8,18 +8,20 @@ class CommentSection extends Component {
         this.state = {
             comments: props.comments,
             current: '',
-            time: props.time
+            time: props.time,
+            id: props.id,
         };
     }
 
     addComment = e => {
         e.preventDefault();
-        this.setState({
-            comments: this.state.comments.concat({text: this.state.current, username: 'You'}),
-        });
+        let comments = this.state.comments.concat({text: this.state.current, username: 'You'});
+        localStorage.setItem(this.state.id, JSON.stringify(comments))
+        this.setState({comments});
     };
 
     deleteComment = id => {
+        localStorage.removeItem(this.state.id);
         this.setState({
             comments: this.state.comments.filter(comment => comment.text + comment.user !== id)
         });
@@ -32,6 +34,16 @@ class CommentSection extends Component {
     };
 
     /* Lifecycle Methods */
+
+    componentWillMount() {
+        localStorage.getItem(this.state.id) && this.setState({
+            comments: JSON.parse(localStorage.getItem(this.state.id))
+        });
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+        localStorage.setItem(this.state.id, JSON.stringify(nextState.comments));
+    }
 
     render () {
         return (
