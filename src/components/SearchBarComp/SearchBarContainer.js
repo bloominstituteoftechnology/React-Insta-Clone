@@ -1,25 +1,23 @@
 import React from 'react';
 import './search-bar.css';
-import SearchBar from './SearchBar';
 
-const SearchBarContainer = () => {
+const SearchBarContainer = props => {
   return (
-    <header className="main-header-container">
-      <div className="main-header__logos">
-        <div className="main-header__logo-container">
-          <img className="main-header__logo" src="#" alt="instagram logo"/>
-        </div>
-        <div className="main-header__logo-container">
-          <img className="main-header__logo" src="#" alt="instagram logo"/>
-        </div>
-      </div>
-
-      <SearchBar />
-      
-      <div className="main-header__icons-container">
-        
-      </div>
-    </header>
+    <div className="main-header__searchbar-container">
+      <form onSubmit={props.onSubmit} action="submit">
+        <label htmlFor="searchinput"></label>
+        <input 
+          id="searchinput" 
+          className="main-header__searchbar" 
+          type="text" 
+          placeholder="Search"
+          value={props.input}
+          onChange={props.onChange}
+          required
+        />
+      </form>
+    </div>
   );
 }
 
+export default SearchBarContainer;
