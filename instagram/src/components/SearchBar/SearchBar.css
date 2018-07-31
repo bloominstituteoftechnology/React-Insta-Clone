@@ -1,0 +1,29 @@
+.search-bar{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.title{
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+}
+.search-box{
+    border: 1px solid lightgray;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+.search-box input{
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-align: center;
+}
+.search-box input:focus{
+    outline:0;
+}

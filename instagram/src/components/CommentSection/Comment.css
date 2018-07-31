@@ -1,0 +1,13 @@
+.comment-container{
+    padding: 20px;
+}
+.comment-content{
+    margin: 5px 0;
+}
+.comment-username{
+    font-weight: bold;
+}
+.time{
+    color: grey;
+    margin-top: 10px;
+}
