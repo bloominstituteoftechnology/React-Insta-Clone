@@ -19,12 +19,20 @@ class CommentSection extends React.Component {
         event.preventDefault();
         this.setState({comments: this.state.comments.concat({username: 'Pseudosaurus', text: [event.target[0].value]})});
         console.log(event);
+        localStorage.setItem(index, JSON.stringify({username: 'Pseudosaurus', text: [event.target[0].value]}));
     }
 
     render() {
+        let localArr = [];
+        if (localStorage.length > 0) {
+            for(let i = 0; i < localStorage.length; i++) {
+                localArr.push(localStorage.getItem(localStorage.key(i)));
+            }
+        }
         return (
             <div className="comments-section">
             {this.state.comments.map((comment, index) => <Comment username={comment.username} text={comment.text} key={index} />)}
+            {localArr.map((comment, index) => <Comment username={comment.username} text={comment.text} key={index} />)}
             <div className="timestamp">{this.state.timestamp}</div>
             <CommentInput add={this.addNewComment} />
             </div>
