@@ -17,7 +17,7 @@ const SearchBar = props => {
         <div className="icons">
         <i className="fas fa-map-marker-alt"></i>
         <i className="fas fa-heart"></i>
-        <i class="fas fa-user-friends"></i>
+        <i className="fas fa-user-friends"></i>
         </div>
 
 

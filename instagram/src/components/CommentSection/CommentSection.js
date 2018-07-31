@@ -18,9 +18,9 @@ const CommentsSection = props => {
 };
 
 CommentsSection.propTypes = {
-    comments: PropTypes.shape({
+    props: PropTypes.shape({
         username: PropTypes.string,
-        comments: PropTypes.string
+        text: PropTypes.string
     })   
 };
 
