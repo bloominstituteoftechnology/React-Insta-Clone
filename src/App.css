@@ -1,10 +1,13 @@
 .app-container{
   width: 100%;
+  height: 100vh;
   margin: 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;
   background: #EEE;
+  overflow-y: scroll;
+  padding-right: 20px;
 }
 
 
