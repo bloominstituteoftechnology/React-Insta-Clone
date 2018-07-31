@@ -43,6 +43,11 @@
 .timeStamp {
   font-size: .75rem !important;
   color: #AA9999;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom: 1px solid lightgray;
+  padding-left: 6px !important;
+  margin-bottom: 0 !important;
 }
 
 .commentsListDiv h4 {
@@ -52,4 +57,18 @@
 
 .commentsListDiv span {
   color: #403F44;
+}
+
+.commentInputForm {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  
+}
+.commentInput {
+  padding: 1rem 15rem 1rem 1rem;
+  font-size: .9rem;
+  font-weight: bold;
+  border: none;
+  color: #AA9999;
 }

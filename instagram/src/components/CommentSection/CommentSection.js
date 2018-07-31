@@ -2,6 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import './CommentSection.css';
 import Comments from '../CommentSection/Comments';
+import CommentInput from '../CommentSection/CommentInput';
 
 const CommentSection = (props) => {
   let postDate = props.comment.timestamp.split(",")[0];
@@ -30,6 +31,7 @@ const CommentSection = (props) => {
       </div>
       <h4 className="timeStamp">{timeSince} DAYS AGO</h4>
 
+      <CommentInput />
     </div>
   )
 }
