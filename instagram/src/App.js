@@ -3,20 +3,20 @@ import './App.css';
 import dummyData from './dummy-data.js';
 import Search from './components/SearchBar/SearchBar';
 import Post from './components/PostContainer/PostContainer';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Container,
-  Row,
-  Col,
-  Jumbotron,
-  Button
-} from 'reactstrap';
+// import {
+//   Collapse,
+//   Navbar,
+//   NavbarToggler,
+//   NavbarBrand,
+//   Nav,
+//   NavItem,
+//   NavLink,
+//   Container,
+//   Row,
+//   Col,
+//   Jumbotron,
+//   Button
+// } from 'reactstrap';
 
 
 class App extends Component {

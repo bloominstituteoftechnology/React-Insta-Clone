@@ -1,6 +1,6 @@
 import React from 'react';
 import './PostContainer.css';
-import Comment from '../CommentSection/CommentSection';
+import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from "prop-types";
 
 const Post = props => {
@@ -17,7 +17,7 @@ const Post = props => {
                         </div>
                         <div className="bottom-section">
                             <div className='likes'>{item.likes} likes</div>
-                            <div><Comment comments={item.comments}/></div>
+                            <div><CommentSection comments={item.comments}/></div>
                             <div>{item.timestamp}</div>
                         </div>
                         <div className='footer'><input className='add-comment' placeholder="Add a comment..."></input><i className="fa fa-ellipsis-h"></i></div>

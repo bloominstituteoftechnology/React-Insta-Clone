@@ -2,6 +2,7 @@
     border: 1px solid lightgray;
     padding: 1rem;
     max-width: 658px;
+    margin: 0 auto;
 }
 .user{
     padding: 1rem;
