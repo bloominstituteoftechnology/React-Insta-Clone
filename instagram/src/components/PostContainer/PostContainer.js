@@ -11,7 +11,7 @@ const PostContainer = props => {
             </div>
 
             <div className="image-container">
-                <img src={props.post.imageUrl} alt="post image" className="post-image"/> 
+                <img src={props.post.imageUrl} alt="post display" className="post-image"/> 
             </div>
 
             <div className="likes-container">{props.post.likes} likes</div>

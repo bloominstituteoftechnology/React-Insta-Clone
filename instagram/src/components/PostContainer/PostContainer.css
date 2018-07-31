@@ -1,3 +1,23 @@
 .post-container {
-    border: 1px solid red;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.post-container .post-top {
+    border: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.post-container .post-top .user-thumbnail {
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+}
+
+.post-container .post-top .post-username {
+    margin: 0;
+    margin-left: 10px;
+    font-size: 15px;
 }
