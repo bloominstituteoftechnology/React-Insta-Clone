@@ -23,18 +23,26 @@
     height: 40px; 
 }
 .post-container{
-    height: 700px; 
     margin: auto; 
     border: 1px solid lightgreen; 
 }
+.thumbnail{
+    border-radius: 50%;
+    width: 50px; 
+    height: 50px; 
+}
 .userName{
     height:50px; 
-    border:1px solid lightslategray; 
 }
-.img-post{
-    height: auto; ; 
+.post-img{
+    height: 500px;
+    width: 500px; 
 }
+
 .comment-container{
     border: 1px solid seagreen; 
-    height: 150px; 
+    height: auto; 
+}
+.comment{
+    font-size: 12px; 
 }

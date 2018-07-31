@@ -6,24 +6,17 @@ import dummyData from '../../dummy-data'
 const PostContainer = props =>{
     return(
     <div className="post-container">
-    <div className="userName">
-    {props.dummyData.map((username, data)=>
-    <div key = {data}>
-    <img>{dummyData. thumbnailUrl}</img>
-    <h1>{dummyData.username}</h1>
-    </div>
-    )};
-    </div>
-    <div className ="img-post">
-    {props.dummyData.map((image, data)=>
-    <div key = {data}>
-    <img>{dummyData.imageUrl}</img>
-    <p>{dummyData.likes}</p>
-    <p>{dummyData.timestamp}</p>
-    </div>
-    )};
-    </div>
-    <CommentSection />
+    {props.posts.map((item, data)=>{
+        return(
+            <div key={data}>
+            <img className = "thumbnail" src={item.thumbnailUrl} alt="user"/>
+            <div>{item.username}</div>
+            <img className = "post-img" src={item.imageUrl} alt="Post-Image"/>
+            <div>Likes{item.likes}</div>
+            <div><CommentSection comments={item.comments}/></div>
+            </div>
+        )}
+    )}
     </div>
     )
 }

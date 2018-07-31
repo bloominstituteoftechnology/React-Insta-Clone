@@ -7,8 +7,8 @@ const CommentSection = props =>{
     <div className="comment-container">
     {props.comments.map((comments, data) =>
     <div key = {data}>
-        <h1>{comments.username}</h1>
-        <p>{comments.text}</p>
+        <h1 className="comment">{comments.username}</h1>
+        <p className="comment">{comments.text}</p>
     </div>
     )}
     </div>
