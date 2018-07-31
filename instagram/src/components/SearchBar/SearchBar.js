@@ -8,7 +8,7 @@ const SearchBar = () => {
         </div>
 
         <form className="search">
-        <input type="text" placeholder="Search" /> 
+        <input className="fa fa-input" placeholder="&#xf002; Search"/>
         </form>
         
         <div className="rightnav">
