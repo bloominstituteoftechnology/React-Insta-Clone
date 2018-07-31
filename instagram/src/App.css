@@ -1,6 +1,5 @@
 .App {
   display: flex;
-  justify-content: center;
   max-width: 1080px;
   margin: 0 auto;
  
@@ -31,11 +30,14 @@
   height: auto; 
 }
 .comment{
-  font-size: 12px; 
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .user{
- padding: 1%;
+  text-align: left;
+  padding: 2px;
+  margin-left: 4px;
  
 }
 
@@ -46,7 +48,7 @@
   display: flex;
   justify-content: space-between;
   background: #ffffff;
-  width: 800px;
+  
 }
 
 .image-wrapper {
