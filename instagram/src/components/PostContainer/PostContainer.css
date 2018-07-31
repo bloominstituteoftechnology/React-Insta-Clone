@@ -2,6 +2,7 @@
     /* text-align: left; */
     /* display: flex; */
     /* flex-wrap: wrap; */
+    margin: 22px 0;
 }
 
 .post-header-wrap {
@@ -16,4 +17,13 @@
 .post-thumb {
     height: 100%;
     border-radius: 50%;
-  }
+}
+
+.comment-section-wrap {
+    text-align: left;
+    /* display: flex; */
+}
+
+.comments-social {
+    margin: 0 20px;
+}

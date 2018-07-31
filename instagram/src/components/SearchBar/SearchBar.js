@@ -6,13 +6,13 @@ const SearchBar = props => {
         <div className="search-bar-wrap" >
             <input className="search-input" placeholder="&#8981; Search" />
             <span>
-                <i className="fa fa-compass " />
+                <i className="far fa-compass fa-lg" />
             </span>
             <span>
-                <i className="fa fa-heart" />
+                <i className="far fa-heart fa-lg" />
             </span>
             <span>
-                <i className="fa fa-user-circle" />
+                <i className="far fa-user-circle fa-lg" />
             </span>
         </div>
 
