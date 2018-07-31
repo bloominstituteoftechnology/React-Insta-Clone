@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import dummyData from '../../instagram/src/dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import './App.css';
-
+import PostContainer from './components/PostContainer/PostContainer';
 
 
 class App extends Component {
@@ -17,6 +17,18 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar/>
+        {this.state.data.map(data => 
+        <PostContainer
+          key={data.timestamp}
+          user={data.user}
+          thumbnail={data.thumbnailUrl}
+          img={data.imageUrl}
+          likes={data.likes}
+          time={data.timestamp}
+          comments={data.comments}
+
+          />)
+        }
       </div>
     );
   }
