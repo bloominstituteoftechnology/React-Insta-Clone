@@ -5,7 +5,7 @@ const SearchBar = () => {
     return (
         <div className="searchbar">
             <div className="logo">
-            <i className="fab fa-instagram"></i> <p className="instap">Instagram</p>
+            <i className="fab fa-instagram"></i> <p className="instap">Instaclone</p>
             </div>
             <input className="fa fa-input" placeholder="&#xf002; Search"/>
             <div className="iconz">

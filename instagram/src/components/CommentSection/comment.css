@@ -1,7 +1,7 @@
 .comment {
-    width:600px;
+    width: 570px;
     display: flex;
-    margin: 2% 0 2% 2%; ;
+    margin: 2% 0 2% 1%; 
 }
 .commentusername {
     margin-right: 2%;
@@ -9,4 +9,14 @@
 
 .comment2 {
     width: 600px;
+}
+
+.commentinput {
+    width: 594px;
+    height: 40px;
+    border-top: dotted gray 1px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
 }

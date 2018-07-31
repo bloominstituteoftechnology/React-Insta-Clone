@@ -8,15 +8,39 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      instaPosts: dummyData
+      instaPosts: [],
+      liked: false,
     }
   }
+  componentDidMount(i) {
+    this.setState ({instaPosts: dummyData})
+    // this.setState ({likes: this.state.instaPosts[i].likes})
+  }
+
+
+  addLike = (username) => {
+   const instacopy = this.state.instaPosts.slice();
+  for (let i=0; i<instacopy.length; i++){
+    if (username === instacopy[i].username) {
+     instacopy[i].likes++
+    } 
+  }
+  this.setState({instaPosts: instacopy})
+
+  }
+
+  minusLike = () => {
+    this.setState ({liked: false})
+  }
+
+
+
   render() {
     return (
       <div className="desktop">
         <SearchBar/>
         <div className="App">
-          <PostContainer instaPost={this.state.instaPosts}/>
+          <PostContainer liked={this.state.liked} minusLike={this.minusLike} addLike={this.addLike} instaPost={this.state.instaPosts}/>
         </div>
       </div>
     );
