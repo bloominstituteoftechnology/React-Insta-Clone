@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   handleFilter = event => {
-    let searchValue = event.target.value;
+    let searchValue = event.target.value.toLowerCase();
     if(searchValue !== '')
     {
       let newFilteredPosts = this.state.posts.filter(post => post.username.includes(searchValue));
