@@ -8,16 +8,30 @@ class CommentSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: props.comments
+            comments: props.comments,
+            input: ''
         };
     }
+
+    
+    addNewComment = event => {
+        event.preventDefault();
+        const comments = this.state.comments.slice();
+        comments.push({ text: this.state.input, username: "internet user" });
+        this.setState({ comments, input: '' });
+    }
+
+    commentInput = event => {
+    this.setState({ input: event.target.value });
+    }
+
     render() {
         return (
             <div>
                 {this.state.comments.map((comment, i) => (
                     <Comment key={i} comment={comment} />
                 ))}
-                <CommentInput />
+                <CommentInput value={this.state.input} commentInputHandler={this.commentInput} addNewCommentHandler={this.addNewComment} />
             </div>
         );
     }
