@@ -3,10 +3,10 @@ import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection.js'
 
 const PostContainer = props => {
-    return ( 
-        <div>
-        {props.data.map(post => {
-          return (
+  return (
+    <div>
+      {props.data.map(post => {
+        return (
           <div className="PostContainer"
             username={post.username}
             avatar={post.thumbnailUrl}
@@ -15,26 +15,27 @@ const PostContainer = props => {
             timestamp={post.timestamp} >
 
             <div className="postTop">
-            <img className="avatar" src={post.thumbnailUrl} />
-            <div className="postUser">{post.username}</div>
+              <img className="avatar" src={post.thumbnailUrl} />
+              <div className="postUser">{post.username}</div>
             </div>
-            
+
             <img src={post.imageUrl} />
 
             <div className="postBot">
-            <div className="botIcons"> 
-            <i class="far fa-heart"></i>
-            <i class="far fa-comment"></i>
+              <div className="botIcons">
+                <i class="far fa-heart"></i>
+                <i class="far fa-comment"></i>
+              </div>
+              <div className="postLikes">{post.likes + " likes"} </div>
             </div>
-            <div className="postLikes">{post.likes + " likes"} </div>
-            </div>
-            <CommentSection comments={post.comments}  />
+            <CommentSection comments={post.comments} />
             <div className="postTimestamp">{post.timestamp}</div>
-         </div>
-         )
-        })}
+          </div>
+        )
+      })}
 
-</div>
-)};
- 
+    </div>
+  )
+};
+
 export default PostContainer;
