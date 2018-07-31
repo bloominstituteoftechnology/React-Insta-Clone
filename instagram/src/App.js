@@ -20,9 +20,12 @@ import {
 
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {data:dummyData};
+  constructor(props){
+    super(props);
+    this.state = {data: []};
+  }
+  componentDidMount(){
+    this.setState({data:dummyData});
   }
   render() {
     return (
