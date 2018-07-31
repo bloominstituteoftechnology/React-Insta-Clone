@@ -42,6 +42,12 @@ class CommentSection extends React.Component {
     handleOnSubmit = event => {
         event.preventDefault(); 
     }
+
+    deleteComment = event => {
+        console.log(event.target)
+    }
+
+    
     
 
     render(){
@@ -57,7 +63,7 @@ class CommentSection extends React.Component {
 
             <div>
                 
-                {comments.map((comment, i) => <Comments key={i}userName = {comment.username} text = {comment.text}/>)}
+                {comments.map((comment, i) => <Comments key={i}userName = {comment.username} text = {comment.text} onDoubleClick = {this.deleteComment}/>)}
                 
                 <h4 className = "timeStamp">{time}</h4>
                 <hr className ="postHrLine"/>
