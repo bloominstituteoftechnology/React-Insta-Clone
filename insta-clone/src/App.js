@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Fuse from 'fuse.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -20,11 +21,19 @@ class App extends Component {
   }
 
   searchInput = (event) => {
-    // this.setState({searchValue: event.target.value});
+    //this.setState({searchValue: event.target.value});
     let searchTerm = event.target.value;
     this.setState((prevState) => {
       return ({ shownPosts: prevState.data.filter(post => post.username.indexOf(searchTerm) !== -1)})
     });
+    // let options = {
+    //   keys: ['username']
+    // };
+    // let fuse = new Fuse(this.state.data, options);
+    // this.setState((prevState) => {
+    //   return ({ shownPosts: fuse.search(searchTerm)});
+    // })
+    // console.log(fuse.search(searchTerm));
   }
 
   render() {

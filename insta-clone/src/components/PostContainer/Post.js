@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CommentSection from '../CommentSection/CommentSection';
 import moment from 'moment';
 
+// let storage = window.localStorage;
+// storage.setItem('posts', '');
+
 class Post extends Component {
     constructor(props){
         super(props);
@@ -12,6 +15,9 @@ class Post extends Component {
 
     componentDidMount(){
         this.setState({comments: this.props.post.comments, likes: this.props.post.likes});
+        // let storagePost = storage.getItem('posts');
+        // storagePost += JSON.stringify(this.props);
+        // storage.setItem('posts', storagePost);
     }
 
     commentHolder = (event) => {

@@ -3,8 +3,6 @@ import Post from './Post.js';
 import PropTypes from 'prop-types';
 import './PostContainer.css';
 
-
-
 const PostContainer = (props) => {
     return(
         <div className="post-container container">
