@@ -19,18 +19,20 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar onSearch={this.onSearch} />
-        {
-          this.state.data.map(data =>
-          <PostContainer
-            key={data.timestamp}
-            user={data.username} 
-            thumbnail={data.thumbnailUrl} 
-            img={data.imageUrl} 
-            likes={data.likes} 
-            time={data.timestamp}
-            comments={data.comments}
-          />)
-        }
+        <div className="posts">
+          {
+            this.state.data.map(data =>
+            <PostContainer
+              key={data.timestamp}
+              user={data.username} 
+              thumbnail={data.thumbnailUrl} 
+              img={data.imageUrl} 
+              likes={data.likes} 
+              time={data.timestamp}
+              comments={data.comments}
+            />)
+          }
+        </div>
       </div>
     );
   }

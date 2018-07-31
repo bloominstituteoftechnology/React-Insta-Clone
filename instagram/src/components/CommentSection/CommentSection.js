@@ -50,6 +50,7 @@ class CommentSection extends Component {
 CommentSection.propTypes = {
     username: PropTypes.string,
     text: PropTypes.string,
+    time: PropTypes.string,
 };
 
 export default CommentSection;
