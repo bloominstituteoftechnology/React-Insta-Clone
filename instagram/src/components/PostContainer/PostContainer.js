@@ -23,6 +23,8 @@ class PostContainer extends React.Component {
         });
     };
 
+    /* Lifecycle Method(s)*/
+
     render() {
         return (
             <div className="post">
@@ -30,7 +32,8 @@ class PostContainer extends React.Component {
                 <img className="post-img" src={this.state.img} alt="" />
                 <div className="stats">
                     <div className="icons">
-                        <i className="far fa-heart fa-2x" onClick={this.incrementLikes} /> 
+                        <i className="far fa-heart fa-2x" 
+                        onClick={this.incrementLikes} /> 
                         &emsp; 
                         <i className="far fa-comment fa-2x" 
                             onClick={() => alert(`Sending ${this.state.user} a ping!`)} />

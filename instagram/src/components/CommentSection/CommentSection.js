@@ -19,11 +19,19 @@ class CommentSection extends Component {
         });
     };
 
+    deleteComment = id => {
+        this.setState({
+            comments: this.state.comments.filter(comment => comment.text + comment.user !== id)
+        });
+    };
+
     handleInputChange = e => {
         this.setState({
             current: e.target.value,
         });
     };
+
+    /* Lifecycle Methods */
 
     render () {
         return (
@@ -32,8 +40,10 @@ class CommentSection extends Component {
                     this.state.comments.map((comment, ind) =>
                     <Comment 
                         key={comment.text + ind} 
+                        id={comment.text + comment.user}
                         user={comment.username} 
-                        text={comment.text} />)
+                        text={comment.text} 
+                        delete={this.deleteComment} />)
                 }
                 <p>{this.state.time}</p>
                 <hr />

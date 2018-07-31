@@ -35,6 +35,9 @@ body {
   margin-bottom: 15px;
   width: 100%;
 }
+.post .fa-times-circle {
+  float: right;
+}
 .post .likes {
   margin-top: 5px;
 }

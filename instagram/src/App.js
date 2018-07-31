@@ -30,6 +30,8 @@ class App extends Component {
     });
   };
 
+  /* Lifecycle Methods */
+
   componentDidMount() {
     this.setState({
       data: dummyData,
