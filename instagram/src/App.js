@@ -8,13 +8,16 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      data: []
+      data: [
+       {liked: false}
+      ],
+      
     };
   }
 
-componentDidMount() {
-  this.setState({data: dummyData})
-}
+  componentDidMount() {
+    this.setState({data: dummyData})
+  }
 
   render() {
     return (

@@ -8,12 +8,15 @@ class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: props.data
+            data: props.data,
+            input: ''
         }
     }
 
     handleCommentChange = event => {
-        this.setState({ text: event.target.value})
+        // console.log('test');
+        this.setState({[event.target.name]: event.target.value})
+        console.log(this.state.input);
       };
 
     addNewComment = (event) => {
@@ -22,11 +25,13 @@ class CommentSection extends Component {
         arr.push(
             {
             username: this.state.data.username,
-            text: this.state.data.text,
+            text: this.state.input,
             id: Date.now()
             }
         );
-        this.setState({comments: arr, text: ''})
+        console.log(arr);
+        this.setState({data: {comments: arr}, input: ''})
+        // console.log(this.state.data);
     }
 
     render(){
@@ -35,10 +40,10 @@ class CommentSection extends Component {
                 {this.state.data.comments.map(item => <Comment username={item.username} text={item.text} key={item.username} likes={item.likes}/>)}
                 <div className="timestamp">{this.state.data.timestamp}</div>
                 <hr/>
-                <form>
-                    <input placeholder="Add a comment..." type="text" className="form-control no-border comment-field" onSubmit={this.state.addNewComment} onChange={this.state.handleCommentChange} value={this.state.value}/>
+                <form onSubmit={this.addNewComment}>
+                    <input placeholder="Add a comment..." name="input" type="text" className="form-control no-border comment-field" onChange={this.handleCommentChange} value={this.state.input} />
                 </form>
-                {console.log(this.state.data.comments)}
+                {/* {console.log(this.state.data)} */}
             </div>
         );
     }
