@@ -1,10 +1,11 @@
+/*===================  T O P    S E C T I O N =============*/
 .post-container {
-    border: 1px solid lightgray;
+    border: .5px solid lightgray;
     border-radius: 5px;
 }
 
 .post-container .post-top {
-    border: 1px solid lightgray;
+    border: .5px solid lightgray;
     display: flex;
     align-items: center;
     padding: 15px;
@@ -19,5 +20,22 @@
 .post-container .post-top .post-username {
     margin: 0;
     margin-left: 10px;
+    /* font-size: 15px; */
+}
+
+/*===================  I M A G E    S E C T I O N =============*/
+.post-container .image-container {
+    width: 100%;
+}
+
+.post-container .image-container .post-image {
+    width: 100%;
+    height: 100%;
+}
+
+/*===================  L I K E   S E C T I O N =============*/
+.post-container .like-container {
+    padding: 10px 15px;
+    font-weight: bold;
     font-size: 15px;
 }
