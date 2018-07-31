@@ -58,20 +58,22 @@ class App extends Component {
     });
   };
 
-  handleLikeToggle = (liked, id) => {
+  handleLikeToggle = (id) => {
     this.setState(prevState => {
       return {
         posts: prevState.posts.map(currentPost => {
           if (currentPost.id === id) {
-            if (liked) {
+            if (!currentPost.liked) {
               return {
                 ...currentPost,
                 likes: currentPost.likes + 1,
+                liked: true
               };
             } else {
               return {
                 ...currentPost,
                 likes: currentPost.likes - 1,
+                liked: false
               };
             }
           } else {

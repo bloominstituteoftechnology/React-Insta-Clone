@@ -10,8 +10,6 @@ import "./PostContainer.css";
 class PostContainer extends React.Component {
   state = {
     comment: '',
-    liked: false,
-    // likedSrc: unliked
   }
 
   handleChange = (e) => {
@@ -23,18 +21,6 @@ class PostContainer extends React.Component {
       this.props.handleAddComment(this.state.comment, this.props.post.id)
       this.setState({ comment: '' })
     }
-  }
-
-  handleLikeToggle = () => {
-    this.setState({ liked: !this.state.liked}, 
-      () => this.props.handleLikeToggle(this.state.liked, this.props.post.id))
-    
-    // if(this.state.liked) {
-    //   this.setState({likedSrc: liked})
-    // } else {
-    //   this.setState({ likedSrc: unliked})
-    // }
-    
   }
 
   render() {
@@ -50,8 +36,8 @@ class PostContainer extends React.Component {
         <div className="post__text">
           <div className="post__buttons">
             <img
-              src={this.state.liked ? liked : unliked}
-              onClick={this.handleLikeToggle}
+              src={this.props.post.liked ? liked : unliked}
+              onClick={() => this.props.handleLikeToggle(this.props.post.id)}
               alt="liked" />
             <img src={comment} alt="comment" />
           </div>
