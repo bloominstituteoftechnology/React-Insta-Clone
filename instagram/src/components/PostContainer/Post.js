@@ -5,10 +5,10 @@ import './Post.css';
 import moment from 'moment';
 
 const Post = (props) => {
-
-
-    let timestamp = moment(props.post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow();
-    console.log(props.post.timestamp);
+    console.log(props);
+    
+let timestamp = moment(props.post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow();
+    
     return (
         <div className="post-container">
             <div className="post-header">
@@ -17,7 +17,7 @@ const Post = (props) => {
             </div>
             <img className="post-img" src={props.post.imageUrl}/>
             <div className="likes-container">
-                <div className="post-heart"></div>
+                <div className="post-heart" onClick={() => { props.handleLike(props.post.timestamp) }}></div>
                 <div className="post-bubble"></div>
             </div>
             <div className="likes-count">{props.post.likes} likes</div>

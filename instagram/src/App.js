@@ -8,17 +8,34 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      dummydata: DummyData,
+      dummydata: [],
     }
   }
 
-  
+  componentDidMount(){
+    this.setState({
+      dummydata : DummyData
+    })
+  }
+
+  handleLike = (t) => {
+    let dummy = this.state.dummydata.slice();
+    let index = dummy.findIndex((el)=>{
+      return el.timestamp === t;
+    });
+    let post = dummy[index];
+    post.likes = post.likes + 1;
+    dummy[index] = post;
+    this.setState({
+      dummydata: dummy
+    })
+  }
 
   render() {
     return (
       <div className="App">
         <Search className="search-bar"/>
-        <PostList postData={this.state.dummydata} className="post-list-container"/>
+        <PostList postData={this.state.dummydata} className="post-list-container" handleLike={this.handleLike}/>
       </div>
     );
   }

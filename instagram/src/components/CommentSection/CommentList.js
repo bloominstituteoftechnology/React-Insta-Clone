@@ -9,7 +9,6 @@ class CommentList extends React.Component {
             comments: [],
             newCommentHolder: '',
         };
-        console.log(props);
         
     }
 
@@ -20,7 +19,6 @@ class CommentList extends React.Component {
     }
 
     handleCommentInput = (e) => {
-        console.log(e.target.value);
         this.setState({
             newCommentHolder: e.target.value
         });
