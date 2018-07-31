@@ -1,9 +1,10 @@
 .comment-section{
   margin-left: 10px;
+  padding: 25px;
 }
 
 .comment-section .icon-bar{
-  width: 10%;
+  width: 20%;
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
@@ -21,4 +22,30 @@
 .comment-section .likes{
   margin-top: 10px;
   font-size: 2rem;
+}
+
+.comment-section .time{
+  font-weight: lighter;
+}
+
+.comment-section .dividing-line {
+  margin-top: 25px;
+}
+
+.comment-section form{
+  width: 100%;
+  margin-top: 25px;
+}
+
+.comment-section form .comment-box{
+  width: 100%;
+  height: 50px;
+  padding-left: 15px;
+  overflow-y: scroll;
+}
+
+.comment-section .comment-add-text{
+  width: 100%;
+  cursor: pointer;
+  height: 40px;
 }

@@ -1,8 +1,15 @@
 .post-container{
   width: 50%;
-  margin: 50px auto 0;
+  max-width: 880px;
+  margin: 25px auto;
   border: 1px solid #ddd;
   border-radius: 5px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.post-container:nth-child(2){
+  margin-top: 100px;
 }
 
 .post-container .post-header{
@@ -12,6 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-top: 10px;
 }
 
 .post-container .post-header .user-icon{
