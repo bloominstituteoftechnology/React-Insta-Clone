@@ -15,7 +15,7 @@ class App extends Component {
 
 componentDidMount() {
   console.log('componentDidMount');
-  this.setState=({posts: dummyData});
+  this.setState({posts: dummyData});
 }
 
   render() {
