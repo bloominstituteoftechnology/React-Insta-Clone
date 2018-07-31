@@ -22,19 +22,28 @@ import Post from './components/PostContainer/PostContainer';
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {data: []};
+    this.state = {data: [], input: []};
   }
   componentDidMount(){
     this.setState({data:dummyData});
   }
   addLike = () => {
-    let likes = this.state.data.likes;
-    console.log(likes);
+    console.log(this.state.data.likes);
+  }
+  search = e => {
+    this.setState({input: e.target.value});
+  }
+  filter = (e) => {
+    e.preventDefault();
+    let result = this.state.input; 
+    let filtered = this.state.data.filter(data => data.username.includes(result));
+    console.log(filtered);
+    this.setState({data: filtered});
   }
   render() {
     return (
       <div className="container">
-          <Search />
+          <Search searchUser={this.search} result={this.filter} />
           <Post posts={this.state.data} addLikes={this.addLike} />
       </div>
     );
