@@ -28,7 +28,7 @@ const CommentSection = (props) => {
       <div className="listOfCommentsDiv">
         {props.comment.comments.map(comment => <Comments comment={comment} />)} 
       </div>
-      <h4>{timeSince} DAYS AGO</h4>
+      <h4 className="timeStamp">{timeSince} DAYS AGO</h4>
 
     </div>
   )

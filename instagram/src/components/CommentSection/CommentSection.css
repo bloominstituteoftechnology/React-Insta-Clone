@@ -35,6 +35,16 @@
   padding: .7rem .5rem .3rem 1rem;
 }
 
-/* .commentsListDiv span {
-  font-weight:600;
-} */
+.timeStamp {
+  font-size: .75rem !important;
+  color: #AA9999;
+}
+
+.commentsListDiv h4 {
+  padding: 0 0 0 1rem;
+  margin-bottom: .8rem;
+}
+
+.commentsListDiv span {
+  color: #403F44;
+}
