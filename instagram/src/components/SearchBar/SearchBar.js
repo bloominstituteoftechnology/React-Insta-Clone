@@ -9,20 +9,17 @@ import { faCompass, faHeart, faUser } from '@fortawesome/free-regular-svg-icons'
 
 
 
-
 const SearchBar = () => {
     return (
         <Row>
             <Col>
                 <FontAwesomeIcon icon={faInstagram} />
-                {/* <img src={image} /> */}
                 <img src={window.location.origin + '/instagramtext.png'} alt='Instagram logo' height='50px' />
                 </Col>
             <Col>
                 <Form>
                     <FormGroup >
-                        <FontAwesomeIcon icon={faSearch} />
-                        <Input type="search" name="search" id="exampleSearch" placeholder="search" />
+                        <Input type="search" name="search" id="exampleSearch" placeholder="   &#128269; Search" />
                     </FormGroup>
                 </Form>
             </Col>

@@ -4,6 +4,7 @@ import dummyData from './dummy-data';
 import { Container, Row, Col } from 'reactstrap';
 import PropTypes from 'prop-types';
 import SearchBar from './components/SearchBar/SearchBar';
+import PostContainer from './components/PostContainer/PostContainer';
 
 
 
@@ -16,8 +17,9 @@ class App extends Component {
   }
   render() {
     return (
-      <Container>
+      <Container className="App">
         <SearchBar />
+        {this.state.dummyData.map(post => <PostContainer postProp={post} />)}
       </Container>
     );
   }
