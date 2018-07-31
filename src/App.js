@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
+import dummyData from './dummy-data.js';
+import SearchBarContainer from './components/SearchBarComp/SearchBarContainer';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      postData: dummyData
+    }
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
+      <div className="main-container">
+        <SearchBarContainer />
+        <PostsContainer postInfo={item}/>
       </div>
     );
   }
