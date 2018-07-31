@@ -6,7 +6,7 @@ import CommentSection from '../CommentSection/CommentSection.js';
 const PostContainer=prop=>{
     return (
         <div className="card">
-            <Post data={prop.data}/>
+            <Post data={prop.data} liked={prop.liked}/>
             <CommentSection comments={prop.data.comments} timestamp={prop.data.timestamp}/> 
         </div>
     )
