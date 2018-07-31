@@ -14,6 +14,7 @@ class CommentSection extends React.Component {
     // let timeSince = Math.ceil((dateNow - postDate) / (1000 * 3600 * 24))
     // console.log(timeSince)
     super(props);
+    console.log("comment section", props)
     this.state={
       comment: props.comment,
       comments: props.comment.comments,
@@ -51,14 +52,15 @@ class CommentSection extends React.Component {
       </div>
       <h4>{this.state.comment.likes} likes</h4>
       <div className="listOfCommentsDiv">
-        {this.state.comment.comments.map(comment => <Comments comment={this.state.comments} />)} 
+        {this.state.comments.map(comment => <Comments comment={comment} />)} 
       </div>
       <h4 className="timeStamp">{this.state.comment.timestamp} DAYS AGO</h4>
-      <div className="commentInputForm">
+      <CommentInput handleSubmit={this.handleSubmit} comments={this.state.comment.comments}/>
+      {/* <div className="commentInputForm">
         <form onSubmit={this.handleSubmit}>
           <input className="commentInput" placeholder="Add a comment..." />
         </form>
-      </div>
+      </div> */}
     </div>
   )
 }

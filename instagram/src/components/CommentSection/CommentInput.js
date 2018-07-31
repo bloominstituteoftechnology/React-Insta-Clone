@@ -6,17 +6,29 @@ import './CommentSection.css';
 class CommentInput extends React.Component {
   constructor (props) {
     super(props);
+    console.log("commentInputProps", props)
     this.state = {
-      comment: props.comment,
+      comments: props.comments,
+      handleSubmit: props.handleSubmit,
     }
   }
 
-  
+  // handleSubmit = event => {
+  //     event.preventDefault();
+  //     let arrayOfComments = this.state.comments.slice();
+  //     arrayOfComments.push({
+  //       username: "Frank",
+  //       text: "test"
+  //     })
+  //     this.setState({
+  //       comments: arrayOfComments,
+  //     })
+  //   }
+
   render () {
-    {console.log(this.state.comment)}
     return (
       <div className="commentInputForm">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.state.handleSubmit}>
           <input className="commentInput" placeholder="Add a comment..." />
         </form>
       </div>
