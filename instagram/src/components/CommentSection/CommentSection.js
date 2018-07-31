@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col, Form, FormGroup, Input } from 'reactstrap';
+import { Row, Col} from 'reactstrap';
+import CommentInput from './CommentInput';
+import Comment from './Comment'
+
 
 
 class CommentSection extends React.Component {
@@ -12,14 +15,25 @@ class CommentSection extends React.Component {
     }
     render() {
         return (
-           <div>
-            {/* {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
-            <CommentInput /> */}
-           </div> 
-           
+            <Row>
+                <Col>
+                    {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
+                    <CommentInput />
+                </Col>
+            </Row>
+
         )
     }
 
+}
+
+CommentSection.propTypes = {
+    comments: PropTypes.arrayOf(
+        PropTypes.shape({
+            text: PropTypes.string,
+            username: PropTypes.string
+        })
+    )
 }
 
 export default CommentSection;

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Row, Col, Container } from 'reactstrap';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
@@ -29,12 +29,10 @@ const PostContainer = props => {
                     {likes}
                 </Col>
             </Row>
-            <Row>
-                <Col>
-                    <CommentSection comments={props.postProp.comments}/>
-                </Col>
-            </Row>
-        </Container>);
+            <CommentSection comments={props.postProp.comments}/>
+        </Container>
+        
+    );
 }
 
 export default PostContainer;

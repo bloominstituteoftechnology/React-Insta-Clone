@@ -27,6 +27,11 @@ class App extends Component {
 }
 
 
+PostContainer.propTypes = {
+  postProp: PropTypes.shape({
+
+  })
+}
 
 Container.propTypes = {
   fluid: PropTypes.bool
