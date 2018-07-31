@@ -21,9 +21,10 @@ class App extends Component {
     let data = this.state.dataSet.slice();
     data = data.map(post => {
       if (post.imageUrl === url){
-        console.log("heart has been clicked");
+        return post.likes++;
       }
     })
+    this.setState({data});
   }
 
   addNewComment = e => {
