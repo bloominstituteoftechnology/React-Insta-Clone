@@ -12,7 +12,7 @@ const Post = props => {
             <img className="user-post" src={props.newPost.imageUrl} alt="post" />
 
             <div className="card-info">
-            <i className="far fa-heart"></i>
+            <i className="far fa-heart" onClick={() => props.increment(props.newPost.imageUrl)}></i>
             <i className="far fa-comment"></i>
             <p><b>{props.newPost.likes} likes</b></p>
             <CommentSection

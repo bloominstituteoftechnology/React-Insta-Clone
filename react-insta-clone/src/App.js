@@ -10,17 +10,37 @@ class App extends Component {
     this.state = {
       dataSet: []
     }
+    this.incrementLikes = this.incrementLikes.bind(this);
   }
 
   componentDidMount() {
     this.setState({ dataSet: dummyData})
   }
 
+  incrementLikes(url) {
+    let data = this.state.dataSet.slice();
+    data = data.map(post => {
+      if (post.imageUrl === url){
+        console.log("heart has been clicked");
+      }
+    })
+  }
+
+  addNewComment = e => {
+    e.preventDefault();
+    const comments = this.state.comments.slice();
+    comments.push({ text: this.state.comment, username: "anon" });
+    this.setState({ comments, comment: "" });
+  }
+
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer dataSet = {this.state.dataSet} />
+        <PostContainer
+        dataSet = {this.state.dataSet}
+        incrementLikes = {this.incrementLikes}
+        />
       </div>
     );
   }
