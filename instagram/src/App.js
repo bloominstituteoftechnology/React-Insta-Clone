@@ -9,7 +9,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData,
+      data: [],
+      dataHolder: null,
+      Empty: true,
+      filteredSearch: '',
     };
   }
 
@@ -17,25 +20,31 @@ class App extends Component {
     e.preventDefault();
   };
 
+  componentDidMount() {
+    this.setState({
+      data: dummyData,
+    });
+  };
+
   render() {
     return (
       <div className='App'>
         <SearchBar onSearch={this.onSearch}/>
         <div className='ig-posts'>
-          {
-            this.state.data.map(data => 
-            <PostContainer
-              key={data.timestamp}
-              user={data.username}
-              thumbnail={data.thumbnailUrl}
-              img={data.imageUrl}
-              likes={data.likes}
-              time={data.timestamp}
-              comments={data.comments}
-            />)
-          }
+
+           { this.state.data.map(data => 
+             <PostContainer
+               key={data.timestamp}
+               user={data.username}
+               thumbnail={data.thumbnailUrl}
+               img={data.imageUrl}
+               likes={data.likes}
+               time={data.timestamp}
+               comments={data.comments}
+             />)
+            }
+          </div>
         </div>
-      </div>
     );
   }
 }

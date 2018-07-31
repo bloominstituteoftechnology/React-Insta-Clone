@@ -27,15 +27,13 @@ class PostContainer extends Component {
         return (
             <div className='post-container'>
                 <PostHeader thumbnail={this.state.thumbnail} user={this.state.user}/>
-                <img className='ig-post-img' src={this.state.img} alt=""/>
+                <img className='ig-post-img' src={this.state.img} alt=''/>
                 <div className='stats'>
                     <div className='icons'>
-                        <i className="far fa-heart fa-2x" onClick={this.incrementLikes} /> 
-                        &emsp; 
-                        <i className="far fa-comment fa-2x" 
-                            onClick={() => alert(`Sending ${this.state.user} a ping!`)} />
+                        <i className="far fa-heart fa-2x" onClick={this.incrementLikes}/> 
+                        <i className="far fa-comment fa-2x" onClick={() => alert(`Sending ${this.state.user} a message`)}/>
                     </div>
-                    <p className='likes'>{this.state.likes} likes</p>
+                    <p className='likes'>{this.state.likes}likes</p>
                 </div>
                 <CommentSection 
                     comments={this.state.comments}

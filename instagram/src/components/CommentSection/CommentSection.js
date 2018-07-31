@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Comment from './Comment';
 import PropTypes from 'prop-types';
+import './CommentSection.css';
 
 
 class CommentSection extends Component {
@@ -14,7 +15,7 @@ class CommentSection extends Component {
         };
     }
 
-    addComment = e => {
+    addNewComment = e => {
         e.preventDefault();
         this.setState({
             comments: this.state.comments.concat({
@@ -32,13 +33,14 @@ class CommentSection extends Component {
     render() {
         return (
             <div className='comment-section'>
-                {
-                this.state.comments.map((comment, index) => 
-                <Comment key={index} user={comment.username} text={comment.text}/>)
-                }
+                {this.state.comments.map((comment, index) => 
+                <Comment 
+                    key={index} 
+                    user={comment.username} 
+                    text={comment.text}
+                />)}
                 <p>{this.state.time}</p>
-                <hr/>
-                <form onSubmit={this.addComment}>
+                <form onSubmit={this.addNewComment}>
                     <input 
                         onChange={this.handleInputChange}
                         className='comment-section-input'
@@ -46,6 +48,7 @@ class CommentSection extends Component {
                         placeholder='Add Comment'
                     />
                 </form>
+                <hr/>
             </div>
         )
     }

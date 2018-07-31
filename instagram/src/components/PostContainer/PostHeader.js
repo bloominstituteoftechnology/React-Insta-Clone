@@ -12,4 +12,10 @@ const PostHeader = props => {
     );
 };
 
+PostHeader.propTypes = {
+    thumbnail: PropTypes.string,
+    user: PropTypes.string,
+};
+
+
 export default PostHeader;
