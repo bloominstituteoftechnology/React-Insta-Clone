@@ -12,27 +12,24 @@ import PropTypes from 'prop-types';
   componentDidMount(){
      this.setState({ comments: this.props.data },()=>{});
   }
+  addComment(){
+    console.log('success')
+  }
   render(){
    return(
     <div className ='commentBox'>
-    {console.log(this.state.comments)}
-        { this.state.comments.map((e) =>{
-          return (<div className='comment'>
+        { this.state.comments.map((e,i) =>{
+          return (<div key={i} className='comment'>
          <span className='userName'> {e.username}</span>
           <span className='userComment'>{e.text}</span>
           </div>)
         })}
-    {/* <span className='userName'> {props.data.username}</span>
-    <span className='userComment'>{props.data.text}</span> */}
     </div> 
   )
 }
  }
-// CommentSection.propTypes = {
-//    data: PropTypes.shape({
-//        username:PropTypes.string.isRequired,
-//        text:PropTypes.string.isRequired,
-//    })
-// }
+CommentSection.propTypes = {
+   data: PropTypes.array.isRequired
+}
 
 export default CommentSection;

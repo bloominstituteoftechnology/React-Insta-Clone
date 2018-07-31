@@ -37,27 +37,24 @@ class App extends Component {
       }
         
     })
-    this.setState({ data: dataImport, display:dataImport },()=>{
-      
-    });
+    this.setState({ data: dataImport, display:dataImport },()=>{});
   }
-  // handleKeyPressSearch = (event) => {
-  //   const dataImport = this.state.data;
-  //   if (event.target.value === ''){
-  //     return;
-  //   }
-  //   dataImport.map((element,index)=>{
-  //     if(event.target.value === index.toString()){
-  //        element.comments.push({
-  //         username: this.state.currentUser,
-  //         text : event.target.value})
-  //         return element;
-  //     }
-  //     else{
-  //       return element;
-  //     }
-
-  // }
+  handleKeyPressSearch = (event) => {
+    const dataImport = this.state.data;
+    if (event.target.value === ''){
+      this.setState({display: this.setState.data},()=>{});
+     }
+    let newArray = dataImport.filter((element)=>{
+      if(element.username.toLowerCase().includes(event.target.value.toLowerCase())){        
+        return true;
+      }
+      else{
+        return false;
+      }
+  })
+ 
+  this.setState({ display: newArray },()=>{});
+}
   handleKeyPressComment = (event) => {
     const dataImport = this.state.data;
     if(event.key === 'Enter'){
@@ -77,20 +74,18 @@ class App extends Component {
           
       })
       event.target.value = '';
-    this.setState({ data: dataImport, display: dataImport },()=>{
-      
-    });
+    this.setState({ data: dataImport, display: dataImport },()=>{});
     }
   }
   loadPosts = ()=>{
   return this.state.display.map((element,index) => {
-        return <PostContainer methods={[this.handleKeyPressComment,this.incrimentLike]} key={index} id={index} data={element} />
+        return <PostContainer methods={[this.handleKeyPressComment,this.incrimentLike, ]} key={index} id={index} data={element} />
       });
   }
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar methods={this.handleKeyPressSearch} />
         <div className="postsHolder">
         {this.loadPosts()}
         </div>
