@@ -27,11 +27,15 @@ class App extends Component {
   componentDidMount(){
     this.setState({data:dummyData});
   }
+  addLike = () => {
+    let likes = this.state.data.likes;
+    console.log(likes);
+  }
   render() {
     return (
       <div className="container">
           <Search />
-          <Post posts={this.state.data} />
+          <Post posts={this.state.data} addLikes={this.addLike} />
       </div>
     );
   }

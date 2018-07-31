@@ -6,20 +6,39 @@ import PropTypes from "prop-types";
 class CommentSection extends React.Component{
     constructor(props){
         super(props);
-        this.state={comments: props.comments}
+        this.state={
+            comments: props.comments,
+            input: ''
+        }
+    }
+    addNewComment = (e,i) => {
+        e.preventDefault();
+        let comments = this.state.comments.slice(i);
+        comments.push({username: 'FakeAcct', comments: this.state.input});
+        this.setState({comments, input:''})
+    }
+    handleNewComment = e => {
+        this.setState({input: e.target.value});
     }
     render(){
         return(
             <div>
-              {this.state.comments.map((comment, i) => {
-                  return (
-                    <div key={i}>
-                        <Comment comment={comment} /> 
-                    </div>
-                  )
-                })}
+                <div>
+                {this.state.comments.map((comment, i) => {
+                    return (
+                        <div key={i}>
+                            <Comment comment={comment} /> 
+                        </div>
+                    )})}
+                </div>
+                <form className='footer' onSubmit={this.addNewComment}>
+                    <input onChange={this.handleNewComment}
+                           className='add-comment' placeholder="Add a comment...">
+                    </input>
+                    <i className="fa fa-ellipsis-h"></i>
+                </form>
             </div>
-        )
+        );  
     }
 }
 
