@@ -7,9 +7,20 @@ import "./App.css";
 class App extends Component {
   state = {
     posts: dummyData,
-    filteredPosts: [],
     searchInput: ''
   };
+  componentDidMount() {
+    const storedPosts = JSON.parse(localStorage.getItem('posts'))
+    if (storedPosts) {
+      this.setState({ posts: storedPosts })
+    }
+  }
+
+  componentDidUpdate(prevState) {
+    if (prevState.posts !== this.state.posts) {
+      localStorage.setItem('posts', JSON.stringify(this.state.posts))
+    }
+  }
 
   handleAddComment = (comment, post) => {
     this.setState(prevState => {
@@ -67,6 +78,23 @@ class App extends Component {
     this.setState({ filteredInput: filteredInput})
   }
 
+  handleDeleteComment = (comment, post) => {
+    this.setState(prevState => {
+      return {
+        posts: prevState.posts.map(currentPost => {
+          if (currentPost === post) {
+            return {
+              ...currentPost,
+              comments: currentPost.comments.filter(thisComment => thisComment !== comment)
+            };
+          } else {
+            return currentPost;
+          }
+        }),
+      };
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -82,13 +110,15 @@ class App extends Component {
                 post={post}
                 handleAddComment={this.handleAddComment}
                 handleLikeToggle={this.handleLikeToggle}
+                handleDeleteComment={this.handleDeleteComment}
               />
             )) : this.state.filteredInput.map(post=> (
               <PostContainer
                 post={post}
                 handleAddComment={this.handleAddComment}
                 handleLikeToggle={this.handleLikeToggle}
-              />
+                handleDeleteComment={this.handleDeleteComment}
+                />
             ))}
           </div>
         </div>

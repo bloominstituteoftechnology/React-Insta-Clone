@@ -54,7 +54,10 @@ class PostContainer extends React.Component {
           </div>
           <h1 className="post__likes"> {this.props.post.likes} likes </h1>
           {this.props.post.comments.map(comment => (
-            <CommentSection comment={comment} />
+            <CommentSection 
+              comment={comment} 
+              onClick={() => this.props.handleDeleteComment(comment, this.props.post)}
+            />
           ))}
           <p className="post__date">
             {moment(this.props.post.timestamp, "MMMM Do YYYY, hh:mm:ss")
