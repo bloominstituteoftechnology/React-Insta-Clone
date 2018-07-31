@@ -25,6 +25,7 @@ class Card extends React.Component {
       timestamp,
       comments,
       onAddComment,
+      onDeleteComment,
       onToggleLike
     } = this.props;
 
@@ -49,7 +50,10 @@ class Card extends React.Component {
         </div>
         <div className="Card__likes">{likes} likes</div>
 
-        <Comments {...{ timestamp, comments }} />
+        <Comments
+          {...{ timestamp, comments }}
+          onDeleteComment={comment => onDeleteComment(id, comment)}
+        />
 
         <div className="Card__input-wrapper">
           <input
@@ -83,6 +87,7 @@ Card.propTypes = {
   timestamp: PropTypes.string.isRequired,
   comments: PropTypes.string.isRequired,
   onAddComment: PropTypes.func.isRequired,
+  onDeleteComment: PropTypes.func.isRequired,
   onToggleLike: PropTypes.func.isRequired
 };
 
