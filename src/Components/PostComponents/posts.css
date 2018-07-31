@@ -12,6 +12,10 @@
   margin-top: 100px;
 }
 
+.post-container:last-child{
+  margin-bottom: 100px;
+}
+
 .post-container .post-header{
   height: 75px;
   width: 50%;
