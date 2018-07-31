@@ -10,10 +10,16 @@ import CommentSection from './components/CommentSection/CommentSection.js';
 class App extends Component {
   constructor(){
     super();
-    this.state = {}
+    this.state = {dummyData: [], cmdCalled: false}
   }
+
+  componentDidMount () {
+    this.setState({dummyData:dummyData, cmdCalled: true});
+  }
+
   render() {
-    //dummyData.map((post, i) => console.log(post.timestamp))
+    let dummyData; 
+    this.state.cmdCalled ? dummyData = this.state.dummyData : dummyData = []
     return (
       <div className="App">
         
@@ -23,10 +29,13 @@ class App extends Component {
         likes = {post.likes}/> 
         <CommentSection key ={i} comments = {post.comments} time = {post.timestamp}/> 
         </div> </div>)}
+
+        
         
         
       </div>
     );
+    
   }
 }
 
