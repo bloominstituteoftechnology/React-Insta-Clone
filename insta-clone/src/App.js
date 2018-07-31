@@ -1,20 +1,47 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Components/Header";
 import Card from "./Components/Card";
-import dummy from './dummy-data';
+import dummy from "./dummy-data";
 
 class App extends Component {
-  state = {
-    data: dummy,
-  }
+	state = {
+		data: dummy
+	};
+
+	addComment = (id, comment) => {
+		this.setState(prevState => ({
+			data: prevState.data.map(post => {
+				if (post.id === id) {
+					return {
+						...post,
+						comments: [
+							...post.comments,
+							{
+								username: "anonymous",
+								text: comment
+							}
+						]
+					};
+				} else {
+					return post;
+				}
+			})
+		}));
+	};
+
 	render() {
 		return (
 			<div className="App">
 				<Header />
 				<section className="container App__cards-container">
-          {this.state.data.map(( e, i ) => <Card key={ i } { ...e }/>)}
+					{this.state.data.map((e, i) => (
+						<Card
+							key={Card.id}
+							{...e}
+							onAddComment={this.addComment}
+						/>
+					))}
 				</section>
 			</div>
 		);

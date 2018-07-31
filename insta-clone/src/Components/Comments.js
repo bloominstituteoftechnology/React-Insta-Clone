@@ -1,17 +1,19 @@
 import React from "react";
+import moment from 'moment';
 import "./Card.css";
 
 const Comments = ({ timestamp, comments }) => {
 	return (
 		<div className="Card__comments">
-			<div className="Card__comment">
-				<p>
-					<span className="Card__comment--user">philzcoffee</span>
-					We've got more than just delicious coffees to offer at our
-					shops!
-				</p>
-			</div>
-			<div className="Card__last-comment">{timestamp}</div>
+			{comments.map(({ username, text }, i) => (
+				<div key={i} className="Card__comment">
+					<p>
+						<span className="Card__comment-user">{username}</span>
+						{text}
+					</p>
+				</div>
+			))}
+			<div className="Card__last-comment">{moment(timestamp,'MMM Do YYYY h:mm:ss').fromNow()}</div>
 		</div>
 	);
 };
