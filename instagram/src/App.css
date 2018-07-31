@@ -12,9 +12,25 @@
   font-size: 1.5em;
 }
 
+.Post-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .App-intro {
+  width: 500px;
+  border: 1px solid #d3d3d3;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.App-intro p {
+  padding-left: 20px;
   font-size: large;
-  
+  text-align: left;
 }
 
 .thumbnail {
@@ -25,6 +41,24 @@
   width: 500px;
 }
 
-.thumb-user {
-  
+#thumb-user {
+  position: relative;
+  top: -8px;
+  left: 10px;
+}
+
+#user {
+  font-weight: bold;
+}
+
+#input {
+  width: 497px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.buttons {
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 13px;
 }

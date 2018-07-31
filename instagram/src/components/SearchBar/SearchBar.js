@@ -6,7 +6,7 @@ const SearchBar = () => {
             <img src={require('../../img/ig_logo.png')} alt="logo"/>
             <form>
                 <label>
-                    <input type="text" name="name" />
+                    <input type="text" placeholder="                  Search " name="name" />
                 </label>
             </form>
             <img src={require('../../img/ig_icons.png')} alt="icons"/>

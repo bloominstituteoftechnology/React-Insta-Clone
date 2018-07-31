@@ -2,7 +2,7 @@ import React from 'react';
 
 const Comment = props => {
     return (
-        <p><span>{props.u}</span> {props.t}</p>
+        <p><span id="user">{props.u}</span> {props.t}</p>
     )
 }
 
