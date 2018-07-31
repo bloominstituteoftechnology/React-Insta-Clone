@@ -5,7 +5,7 @@ let PostHeader = props => {
     return (
         <div className="post-header">
             <div className="post-thumb-wrapper">
-                <Img
+                <img
                     alt="post header"
                     className="post-thumb"
                     src={props.thumbnailUrl}

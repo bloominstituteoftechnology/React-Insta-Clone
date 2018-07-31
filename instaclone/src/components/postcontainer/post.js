@@ -11,7 +11,7 @@ let Post = props => {
                 thumbnailUrl={props.post.thumbnailUrl}
             />
             <div className="post-image-wrapper">
-                <Img
+                <img
                     alt="post thumbnail"
                     className="post-image"
                     src={props.post.imageUrl}
@@ -21,3 +21,5 @@ let Post = props => {
         </div>
     );
 };
+
+export default Post;
