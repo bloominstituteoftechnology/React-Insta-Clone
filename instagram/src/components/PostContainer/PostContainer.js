@@ -1,11 +1,12 @@
 // import PropTypes from "prop-types";
 import React from "react";
+import "./PostContainer.css";
+import Post from "./Post.js";
 
-const postContainer = () => {
+const postContainer = props => {
   return (
     <div className="post-container">
-      <div className="post-header"> usericon username </div>
-      <img className="post-img" src="" alt="" />
+      {props.toes.map(item => <Post butt={item} />)}
     </div>
   );
 };

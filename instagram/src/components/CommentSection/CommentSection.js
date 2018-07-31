@@ -8,6 +8,7 @@ const CommentSection = () => {
       <div className="comment-list"> </div>
       <form>
         <input placeholder="Add a comment..." />
+        <i className="fa fa-ellipsis-h" aria-hidden="true" />
       </form>
     </div>
   );

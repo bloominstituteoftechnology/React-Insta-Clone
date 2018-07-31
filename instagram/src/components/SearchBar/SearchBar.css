@@ -1,0 +1,68 @@
+.container-header {
+  padding: 25px 0 0;
+  justify-content: space-around;
+  /* align-items: center; */
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #cdcdcd;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+}
+
+.left-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.insta {
+  font-family: "Lobster Two", cursive;
+}
+
+.search-input {
+  width: 300px;
+  text-align: center;
+}
+
+.scaled {
+  transform: scale(1.5);
+}
+.fab {
+  margin-top: 5px;
+  height: 42px;
+}
+
+.line {
+  display: inline;
+  color: gray;
+  font-size: 20px;
+}
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.logo {
+  /* padding-left: 50px; */
+  height: 30px;
+}
+
+.head-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+}
