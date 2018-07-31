@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 }
 
 .comment {
@@ -13,4 +14,11 @@
 h1 {
   font-size: 20px;
   margin: 0 10px;
+}
+
+.new-comment {
+  height: 35px;
+  align-self: center;
+  width: 80%;
+  margin-bottom: 10px;
 }

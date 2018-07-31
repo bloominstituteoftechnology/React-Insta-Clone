@@ -9,6 +9,16 @@ class CommentsSection extends React.Component {
     }
   }
 
+addComment = event => {
+  let currentComments = this.state.comments;
+  currentComments.push({
+    username: 'Joe Blow',
+    text: event.target.value
+  });
+  event.target.value = '';
+  this.setState({ currentComments });
+}
+
   render() {
     return(
       <div className='comment-container'>
@@ -20,6 +30,9 @@ class CommentsSection extends React.Component {
             </div>
           )
         })}
+        <input className='new-comment' placeholder='Comment...' onKeyPress={e => {if (e.charCode === 13) {
+          this.addComment(e)
+        }}} />
       </div>
     )
   }
