@@ -7,7 +7,11 @@ import PostContainer from './components/PostContainer/PostContainer';
 class App extends Component {
   constructor() {
     super();
-    this.state = {data: dummyData};
+    this.state = {data: []};
+  }
+
+  componentDidMount() {
+    this.setState({data: dummyData});
   }
 
   render() {

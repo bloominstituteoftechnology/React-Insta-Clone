@@ -14,9 +14,8 @@ const PostContainer = props => {
                 <div className="comments-icons"><img src="img/comment-heart.png" alt="Comment heart"/><img src="img/comment-bubble.png" alt="Comment bubble" className="comment-bubble"/></div>
                 <div className="likes">{props.post.likes} likes</div>
                 
-                <CommentSection comments={props.post.comments} />
-                <div className="timestamp">{props.post.timestamp}</div>
-                <div className="comment-field"><input placeholder="Add a comment..." className="add-comment"/><img src="img/ellipsis.png" alt="ellipsis" className="ellipsis"/></div>
+                <CommentSection comments={props.post.comments} timestamp={props.post.timestamp} />
+                
             </div>
         </div>
     );
