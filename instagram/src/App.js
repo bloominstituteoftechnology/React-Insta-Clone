@@ -3,13 +3,15 @@ import './App.css';
 import dummyData from './dummy-data.js'
 import SearchBar from './Components/SearchBar/SearchBar';
 import PostContainer from './Components/PostContainer/PostContainer'; 
+import AllPostContainers from './Components/PostContainer/AllPostContainers';
 
 class App extends Component {
   constructor(){
     super(); 
     this.state = {
       data: [], 
-      filteredData : []
+      filteredData : [], 
+      searchValue: ''
     }
   }
 
@@ -19,58 +21,41 @@ class App extends Component {
     })
   }
 
-  filterSearchHandler = (event) => {
-    const users = this.state.data.filter(post => {
-      if(post.username.includes(event.target.value)){
-        return post; 
-      }
-    }); 
+  
+  valueHandler = (event) => {
+    const value = event.target.value;
     this.setState({
-      filteredData: users
+      searchValue : value
     })
+  }
+  
+  submitSearchHandler = (event) => {
+    event.preventDefault(); 
+    const users = this.state.data.filter(post => {
+        if(post.username.includes(this.state.searchValue)){
+          return post; 
+        }
+      }); 
+      this.setState({
+        filteredData: users,
+        searchValue: ''
+      })
   }
 
  
 
   render() {
 
-    let allUsers = null;
-    let filteredUsers = null;
-
-    if(this.state.filteredData.length > 0){
-      allUsers = null; 
-      filteredUsers = this.state.filteredData.map((user, index) =>  {
-        return (<PostContainer 
-          key = {index}
-          usernameImg = {user.thumbnailUrl}
-          username = {user.username}
-          img = {user.imageUrl}
-          likes = {user.likes}
-          comments = {user.comments}
-          timeStamp = {user.timestamp}
-          clickLike = {this.increaseLikeHandler}
-        />)
-      })
-    }else{
-      allUsers = this.state.data.map((user, index) =>  {
-        return (<PostContainer 
-          key = {index}
-          usernameImg = {user.thumbnailUrl}
-          username = {user.username}
-          img = {user.imageUrl}
-          likes = {user.likes}
-          comments = {user.comments}
-          timeStamp = {user.timestamp}
-          clickLike = {this.increaseLikeHandler}
-        />)
-      })
-    }
+   
+    
 
     return (
       <div className="App">
-        <SearchBar keyDown = {this.filterSearchHandler} />
-        {allUsers}
-        {filteredUsers}
+        <SearchBar change= {this.valueHandler} submit = {this.submitSearchHandler}/>
+        <AllPostContainers 
+        data ={
+          this.state.filteredData.length > 0 ? this.state.filteredData : this.state.data
+        } />
       </div>
     );
   }
