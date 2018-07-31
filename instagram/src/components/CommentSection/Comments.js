@@ -12,12 +12,12 @@ class Comments extends React.Component {
 
 
     render () {
-
+        console.log(this.props);
 
         return (
             <div className ="comments">
               <div className = "comment">
-                <h3 className className= "userCommentName">{this.props.userName}</h3>
+                <h3 className= "userCommentName">{this.props.userName}</h3>
                 <p className = "userCommentText">{this.props.text}</p>
               </div>
               <h4>{this.props.time}</h4>

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 class PostContainer extends React.Component {
     constructor(props){
         super(props)
+        this.state = {}
     }
 
 

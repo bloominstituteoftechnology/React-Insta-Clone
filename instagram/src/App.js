@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data'; 
 import SearchBar from './components/SearchBar/SearchBar.js'; 
@@ -13,15 +13,15 @@ class App extends Component {
     this.state = {}
   }
   render() {
-    dummyData.map((post, i) => console.log(post.comments.username))
+    dummyData.map((post, i) => console.log(post.timestamp))
     return (
       <div className="App">
         
-        {dummyData.map((post, i) => <div className = "post">
-        <SearchBar  key={i}/> <div className = "containerPost">
-        <PostContainer key = {i} userName = {post.username} thumbNail={post.thumbnailUrl} image={post.imageUrl}
+        {dummyData.map((post, i) => <div key = {i} className = "post">
+        <SearchBar  key={Date.now()}/> <div className = "containerPost">
+        <PostContainer key = {Date.now()} userName = {post.username} thumbNail={post.thumbnailUrl} image={post.imageUrl}
         likes = {post.likes}/> 
-        <CommentSection comments = {post.comments} time = {post.timestamp}/> 
+        <CommentSection key ={i} comments = {post.comments} time = {post.timestamp}/> 
         </div> </div>)}
         
         
