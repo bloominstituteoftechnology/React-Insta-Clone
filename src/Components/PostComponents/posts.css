@@ -32,3 +32,15 @@
 .post-container .post-image{
   margin-top: 15px;
 }
+
+@media (max-width: 756px){
+  .post-container{
+    width: 75%;
+  }
+}
+
+@media (max-width: 400px){
+  .post-container{
+    width: 90%;
+  }
+}
