@@ -37,8 +37,6 @@ class CommentSection extends React.Component {
             comments.push({username: "you", text:text})
             this.setState({comments: comments, temp:""});
         }
-
-    
     }
 
     handleOnSubmit = event => {
@@ -47,6 +45,7 @@ class CommentSection extends React.Component {
     
 
     render(){
+        
         let comments;
         this.state.cmdCalled ? comments = this.state.comments : comments = [];
 
@@ -69,7 +68,6 @@ class CommentSection extends React.Component {
                 </div>
                 
             </div>
-            
             
         );
     }

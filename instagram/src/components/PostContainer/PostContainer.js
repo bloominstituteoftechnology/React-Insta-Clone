@@ -5,12 +5,22 @@ import PropTypes from 'prop-types';
 class PostContainer extends React.Component {
     constructor(props){
         super(props)
-        this.state = {}
+        this.state = {likes: this.props.likes, cmdCalled: false}
+    }
+
+    componentDidMount (){
+        this.setState({cmdCalled:true});
+    }
+
+    handleLikeClick = () => {
+        this.setState({likes: this.state.likes + 1}); 
     }
 
 
     render() {
 
+        let likes;
+        this.state.cmdCalled ? likes = this.state.likes : likes = 0; 
         return(
             <div className = "posting">
                 <div className = "postHeader">
@@ -19,9 +29,9 @@ class PostContainer extends React.Component {
                 </div>
                 <img className ="postImage" src={this.props.image} alt="" />
                <div className = "postIcons">
-               <i className="far fa-heart"></i> <i className="far fa-comment"></i>
+               <i className="far fa-heart" onClick = {this.handleLikeClick}></i> <i className="far fa-comment"></i>
                </div>
-               <h3 className = "likes">{this.props.likes} likes </h3>
+               <h3 className = "likes" >{likes} likes </h3>
             </div>
 
         );
