@@ -2,11 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types'; 
 import CommentList from '../CommentSection/CommentList.js';
 import './Post.css';
+import moment from 'moment';
 
 const Post = (props) => {
-    
+
+
+    let timestamp = moment(props.post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow();
+    console.log(props.post.timestamp);
     return (
-        <div className="post-list-container">
+        <div className="post-container">
             <div className="post-header">
                 <img className="post-user-avatar" src={props.post.thumbnailUrl}/>
                 <div className="post-user">{props.post.username}</div>
@@ -18,6 +22,7 @@ const Post = (props) => {
             </div>
             <div className="likes-count">{props.post.likes} likes</div>
             <CommentList comments={props.post.comments}/>
+            <div className="timestamp">{timestamp}</div>
         </div>
     )
 }

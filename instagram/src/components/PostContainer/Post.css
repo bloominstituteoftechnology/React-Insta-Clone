@@ -1,10 +1,11 @@
 
-.post-list-container {
+.post-container {
     width: 100%;
     /* height: 100%; */
     display: flex;
     flex-flow: column;
     margin-top: 5px;
+    border: 1px solid black;
 }
 
 .post-list-container .post-header {

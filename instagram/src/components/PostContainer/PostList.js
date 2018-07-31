@@ -6,7 +6,7 @@ const PostList = (props) => {
     console.log(props.postData);
     
     return (
-        <div className="comment-list-container">
+        <div className="post-list-container">
        { 
            props.postData.map((post)=>{
                 return <Post key={post.timestamp} post={post}/>
