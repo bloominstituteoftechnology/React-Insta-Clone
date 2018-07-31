@@ -9,7 +9,7 @@ const SearchBar = props => {
                 <img className = "insta-logo" src = {require("./insta-logo.png")} alt = "Instagram logo"/>
             </div>
             <div className = "search">
-                <input className = "search-input" type = "search" placeholder = " &#128269; Search"/>
+                <input className = "search-input fa fa-input" type = "search" placeholder = "&#xf002; Search"/>
             </div>
             <div className = "nav-icons">
                 <i className="far fa-compass fa-2x"></i>

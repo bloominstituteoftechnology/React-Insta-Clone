@@ -19,10 +19,13 @@ class App extends Component {
         <SearchBar />
         {this.state.data.map((user, index) =>  {
           return <PostContainer 
+            key = {index}
             usernameImg = {user.thumbnailUrl}
             username = {user.username}
             img = {user.imageUrl}
             likes = {user.likes}
+            comments = {user.comments}
+            timeStamp = {user.timestamp}
           />
         })}
       </div>

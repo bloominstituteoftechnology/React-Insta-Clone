@@ -2,12 +2,12 @@
 .postContainer {
     display: flex; 
     flex-direction: column; 
+    margin: 0 auto; 
     margin-top: 30px; 
     justify-content: center; 
     align-items: center; 
     width: 72%; 
-    border: 1px solid lightgrey;
-    border-bottom: none;    
+    border: 1px solid lightgrey;   
 }
 
 .username {
@@ -45,5 +45,10 @@
 
 .likes {
     font-weight: bold; 
+}
+
+.comments {
+    align-self: flex-start; 
+    margin-left: 3%; 
 }
 

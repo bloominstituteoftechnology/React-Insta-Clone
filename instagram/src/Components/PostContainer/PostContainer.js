@@ -1,5 +1,7 @@
 import React from 'react'
 import "./PostContainer.css"
+import CommentSection from '../CommentSection/CommentSection';
+
 
 const PostContainer = props => {
     return (
@@ -18,6 +20,11 @@ const PostContainer = props => {
             </div>
             <p className = "likes">{props.likes} likes</p>
         </div>
+        <div className = "comments">
+            <CommentSection comments = {props.comments} 
+                            timeStamp = {props.timeStamp}/>
+        </div>
+
     </div>
     )
 }

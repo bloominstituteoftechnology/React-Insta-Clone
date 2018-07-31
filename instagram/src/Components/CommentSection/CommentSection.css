@@ -1,0 +1,16 @@
+
+.comment .strong {
+    margin-right: 10px; 
+}
+
+.timestamp {
+    color:  grey; 
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 5px; 
+}
+
+.addComment {
+    color: grey; 
+    margin-top: 20px; 
+    margin-bottom: 20px;     
+}
