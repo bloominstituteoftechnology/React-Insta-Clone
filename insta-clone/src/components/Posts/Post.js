@@ -1,5 +1,6 @@
 import React from 'react';
 import Comments from '../Comments';
+import propTypes from 'prop-types';
 
 class Post extends React.Component {
     constructor(props) {
@@ -13,7 +14,6 @@ class Post extends React.Component {
         }
     }
     render() {
-        // console.log(this.state.comments)
         return(
             <div className="post">
                 <h4><img className="userIcon" src={this.state.thumbnail} alt="userIcon" /><p>{this.state.username}</p></h4>
@@ -31,4 +31,12 @@ class Post extends React.Component {
     }
 }
 
+postMessage.propTypes = {
+    thumbnail: propTypes.string,
+    images: propTypes.string,
+    username: propTypes.string,
+    likes: propTypes.number,
+    comment: propTypes.arrayOf(propTypes.object)
+
+}
 export default Post;

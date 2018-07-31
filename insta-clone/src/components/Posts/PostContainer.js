@@ -6,7 +6,6 @@ import Posts from './Post'
 class PostContainer extends React.Component {
     constructor(props) {
         super();
-        // console.log(this);
         this.state = {
             posts: props.values
      
@@ -22,11 +21,7 @@ class PostContainer extends React.Component {
 }
 
 PostContainer.propTypes = {
-    thumbnail: propTypes.string,
-    images: propTypes.string,
-    username: propTypes.string,
-    likes: propTypes.number,
-    comment: propTypes.arrayOf(propTypes.object)
+    posts: propTypes.arrayOf(propTypes.object)
 
 }
 
