@@ -2,6 +2,7 @@ import React from 'react';
 import Comment from './Comment.js';
 import PropTypes from 'prop-types';
 import './CommentSection.css';
+import AddCommentBar from './addcommentbar.js';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -13,20 +14,19 @@ class CommentSection extends React.Component {
     }
     addNewComment=(e,index)=>{
         const commentsCopy=this.state.comments.slice();
-        commentsCopy[index].comments.push({
+        commentsCopy[index]=({
             username: 'sonOfCoul',
-            text: e.target.value
-        })
+            text: e.target.querySelector('.comment-input').value
+        });
+        this.setState({comments: commentsCopy});
     }
     render() {
         return (
             <div>
-                {this.state.comments.map(e=><Comment data={e} key={e.text}/>)}
+                {this.state.comments.map((e,i)=><Comment data={e} key={i}/>)}
                 <p className='time-stamp'>{this.state.timestamp}</p>
                 <div className='rule'></div>
-                <div className='input-comment'>
-                <input className='comment-input' type='text' placeholder='Add a comment...'/><i className="dot fas fa-ellipsis-h"></i>
-                </div>
+                <AddCommentBar handleInputSubmit={this.addNewComment} length={this.state.comments.length}/>
             </div>
         )
     }
