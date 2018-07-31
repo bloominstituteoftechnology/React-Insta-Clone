@@ -1,11 +1,12 @@
 import React from 'react';
 import Comment from './Comment.js';
+import PropTypes from 'prop-types';
 import './CommentSection.css';
 
 const CommentSection=prop=>{
     return (
         <div>
-            {prop.data.map(e=><Comment data={e} key={e.text}/>)}
+            {prop.comments.map(e=><Comment data={e} key={e.text}/>)}
             <p className='time-stamp'>{prop.timestamp}</p>
             <div className='rule'></div>
             <div className='input-comment'>
@@ -14,5 +15,8 @@ const CommentSection=prop=>{
         </div>
     )
 };
-
+CommentSection.propTypes={
+    comments: PropTypes.arrayOf(PropTypes.object).isRequired,
+    timestamp: PropTypes.string.isRequired
+}
 export default CommentSection;

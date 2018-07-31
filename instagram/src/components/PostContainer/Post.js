@@ -1,6 +1,6 @@
 import React from 'react';
 import './PostContainer.css';
-
+import PropTypes from 'prop-types';
 const Post=prop=>{
     return (
         <div>
@@ -18,5 +18,8 @@ const Post=prop=>{
             <p className='likes'>{prop.data.likes} likes</p>
         </div>
     )
+}
+Post.propTypes={
+    data: PropTypes.object.isRequired
 }
 export default Post;

@@ -7,8 +7,11 @@ const PostContainer=prop=>{
     return (
         <div className="card">
             <Post data={prop.data}/>
-            <CommentSection data={prop.data.comments} timestamp={prop.data.timestamp}/>   
+            <CommentSection comments={prop.data.comments} timestamp={prop.data.timestamp}/>   
         </div>
     )
 }
+PostContainer.propTypes={
+    data: PropTypes.object.isRequired
+  }
 export default PostContainer;
