@@ -5,7 +5,9 @@ import MaterialIcon from 'material-icons-react'
 function Search (props){
     return (
         <div className="search-block">
-            <input type="text" placeholder="🔍 Search"/>
+            <form onSubmit={props.onClick}>
+            <input type="text" placeholder="🔍 Search" onChange={props.inputChange}/>
+            </form>
         </div>
     )
 }

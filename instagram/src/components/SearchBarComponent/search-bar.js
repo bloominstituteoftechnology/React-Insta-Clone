@@ -10,7 +10,7 @@ function SearchBar (props){
         <div className="Search-Bar">
             <Logo imgSrc={props.imgSrc} />
             <Title title={props.title} />
-            <Search />
+            <Search inputChange={props.inputChange} onClick={props.onClick} />
             <Actions />
         </div>
     )
