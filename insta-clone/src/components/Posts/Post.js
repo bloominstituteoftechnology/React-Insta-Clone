@@ -13,6 +13,16 @@ class Post extends React.Component {
             comments: props.obj.comments
         }
     }
+    handleAddComment = (event)=> {
+        if (event.key === 'Enter') {
+            this.props.obj.comments.push({
+                username: 'you',
+                text: event.target.value
+            })
+            event.target.value = '';
+        }
+        this.setState({comments: this.props.obj.comments})
+    }
     render() {
         return(
             <div className="post">
@@ -25,7 +35,7 @@ class Post extends React.Component {
                     <p>{this.state.likes} likes</p>
                 </div>
                {this.state.comments.map((comment, i)=> <Comments values={comment} key={i} />)} 
-                <input type="text" placeholder="Comment" /><button>...</button>  
+                <input type="text" placeholder="Comment" onKeyPress={this.handleAddComment} /><button>...</button>  
             </div>
         )
     }

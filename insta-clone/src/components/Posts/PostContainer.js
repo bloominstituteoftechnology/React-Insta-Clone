@@ -5,7 +5,7 @@ import Posts from './Post'
 
 class PostContainer extends React.Component {
     constructor(props) {
-        super();
+        super(props);
         this.state = {
             posts: props.values
      
