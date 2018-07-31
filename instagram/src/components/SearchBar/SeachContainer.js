@@ -18,8 +18,8 @@ const SearchContainer = () => {
             </div>
 
             <div className='options'>
-            <i className="far fa-compass"></i> <i className="far fa-heart"></i> <i className="fas fa-user"></i>
-        </div>
+                <i className="far fa-compass"></i> <i className="far fa-heart"></i> <i className="fas fa-user"></i>
+            </div>
 
         </div>
     );
