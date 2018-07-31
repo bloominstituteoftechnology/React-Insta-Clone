@@ -26,7 +26,9 @@ import Comment from './Comment';
 
     CommentSection.propTypes = {
       comments: PropTypes.arrayOf(
-        PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
+        PropTypes.shape({
+           text: PropTypes.string, 
+          username: PropTypes.string })
       )
     };
 
