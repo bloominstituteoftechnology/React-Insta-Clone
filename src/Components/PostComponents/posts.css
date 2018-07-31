@@ -47,8 +47,12 @@
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 430px){
   .post-container{
     width: 90%;
+  }
+
+  .post-container .post-header .user-icon{
+    display: none;
   }
 }

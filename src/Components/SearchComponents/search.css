@@ -45,3 +45,23 @@
 .search-bar .search-bar-right .icons{
   color: lightgray;
 }
+
+@media (max-width: 756px){
+  .search-bar .search-bar-left{
+    width: 30%;
+  }
+
+  .search-bar input{
+    width: 40%;
+  }
+
+  .search-bar .search-bar-right{
+    width: 30%;
+  }
+}
+
+@media (max-width: 430px){
+  .search-bar{
+    font-size: 1.6rem;
+  }
+}

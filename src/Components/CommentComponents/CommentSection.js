@@ -20,14 +20,16 @@ class CommentSection extends React.Component{
   handleSubmit = event => {
     event.preventDefault();
     let newComments = this.state.comments.slice();
-    newComments.push({
-      username: 'Johanon',
-      text: event.target.comment.value,
-    });
-    this.setState({
-      comments: newComments,
-      addingComment: false,
-    });
+    if(event.target.comment.value){
+      newComments.push({
+        username: 'Johanon',
+        text: event.target.comment.value,
+      });
+      this.setState({
+        comments: newComments,
+        addingComment: false,
+      });
+    }
   }
 
   handleLiking = () =>{
@@ -51,7 +53,7 @@ class CommentSection extends React.Component{
         <div className="time">{moment(this.state.time, 'MMM Do YYYY h:mm:ss').fromNow()}</div>
         <hr className="dividing-line" />
         {this.state.addingComment ?
-          <form onSubmit={this.handleSubmit}><input type="text" className="comment-box" name="comment" autoFocus /></form> :
+          <form onSubmit={this.handleSubmit}><input onBlur={()=>this.setState({addingComment: false})} type="text" className="comment-box" name="comment" autoFocus /></form> :
           <div className="comment-add-text" onClick={()=> this.setState({addingComment: true})}>Add a comment...</div>}
       </div>
     )
