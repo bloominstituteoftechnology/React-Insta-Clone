@@ -28,14 +28,15 @@
   font-size: 12px;
 }
 .comment-section .add-comment {
+  width: 95%;
   height: 20px;
-  margin: 10px 5px 10px 0;
+  margin: 10px 0 10px 5px;
 }
 .post-container {
   border: 1px solid lightgray;
   background-color: white;
   width: 400px;
-  margin: 10px;
+  margin: 15px;
   display: flex;
   flex-direction: column;
   filter: drop-shadow(4px 4px 10px gray);
@@ -55,6 +56,17 @@
 .post-container .heart:hover,
 .post-container .bubble:hover {
   cursor: pointer;
+}
+.post-container .dark-heart {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}
+.post-container .dark-heart:hover {
+  cursor: pointer;
+}
+.post-container .hide {
+  display: none;
 }
 .post-container .thumbnail {
   border-radius: 50px;
@@ -78,11 +90,16 @@
   background-color: white;
   z-index: 10;
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 100%;
   padding: 5px 0;
   top: 0px;
   position: fixed;
+}
+form {
+  margin-right: 15px;
+  padding: 0;
 }
 .search-bar {
   border: .5px solid gray;
@@ -118,5 +135,5 @@
   flex-direction: column;
 }
 .app .all-posts {
-  margin-top: 60px;
+  margin-top: 50px;
 }

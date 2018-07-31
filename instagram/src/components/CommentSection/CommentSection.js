@@ -20,7 +20,8 @@ class CommentSection extends React.Component {
     })
   }
 
-  addNewComment = newComment => {
+  addNewComment = (newComment, i) => {
+    newComment.preventDefault();
     const newCommentArray = this.state.comments.slice();
     newCommentArray.push(this.state.newComments)
     this.setState({
@@ -38,7 +39,10 @@ class CommentSection extends React.Component {
             comments={comment} />
         })}
         <p className="timestamp">{this.state.time}</p>
-        <input value={this.inputValue} onChange={this.inputChange} onClick={this.addNewComment} className="add-comment" placeholder="Add a comment...">{this.inputValue}</input>
+        <form onSubmit={this.addNewComment}>
+          <input value={this.state.inputValue} onChange={this.inputChange} className="add-comment" placeholder=" Add a comment...">{this.inputValue}</input>
+        </form>
+
       </div>
     )
   };

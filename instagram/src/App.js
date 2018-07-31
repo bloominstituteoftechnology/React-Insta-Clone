@@ -7,15 +7,50 @@ import SearchBar from './components/SearchBar/SearchBar.js';
 class App extends Component {
   constructor() {
     super();
-    this.state = { data: DummyData}
+    this.state = {
+      data: [],
+      displayData: [],
+      searchValue: '',
+    }
+  }
+
+  valueHandler = e => {
+    this.setState({
+      searchValue: e.target.value,
+    })
+  }
+
+  searchHandler = e => {
+    e.preventDefault();
+    const searchArray = this.state.data.slice();
+    console.log(searchArray)
+    console.log(this.state.searchValue)
+
+    const newSearchArray = searchArray.filter( post => post.username.includes(this.state.searchValue));
+
+    this.setState({
+      displayData: newSearchArray,
+      searchValue: '',
+    })
+    console.log('searchHandler envoked')
+  }
+
+  componentDidMount(){
+    this.setState({
+      data: DummyData,
+      displayData: DummyData,
+    })
   }
 
   render() {
     return (
       <div className="app">
-        <SearchBar />
+        <SearchBar searchHandler={this.searchHandler}
+        searchValue={this.state.searchValue}
+        valueHandler={this.valueHandler}
+      />
         <div className="all-posts">
-          {this.state.data.map( (post) => {
+          {this.state.displayData.map( (post) => {
               return <PostContainer
                 key={post.timestamp}
                 data={post}/>
