@@ -21,6 +21,10 @@
   margin: 0;
   padding: 0;
 }
+.comment-section .comment .comment {
+  margin-left: -70px;
+  text-indent: 70px;
+}
 .comment-section .timestamp {
   border: 1px solid orange;
 }
