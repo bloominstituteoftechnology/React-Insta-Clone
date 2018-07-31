@@ -1,15 +1,21 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  box-sizing: inhereit;
+  box-sizing: inherit;
 }
 
-html{
+html {
   font-size: 62.5%;
 }
 
-body{
+body {
   font-size: 1.6rem;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #212121;
+}
+
+input {
+  font-family: inherit;
 }

@@ -35,10 +35,10 @@ class App extends Component {
 			<div className="App">
 				<Header />
 				<section className="container App__cards-container">
-					{this.state.data.map((e, i) => (
+					{this.state.data.map(card => (
 						<Card
-							key={Card.id}
-							{...e}
+							key={card.id}
+							{...card}
 							onAddComment={this.addComment}
 						/>
 					))}

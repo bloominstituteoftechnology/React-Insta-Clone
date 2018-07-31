@@ -1,6 +1,7 @@
 .Card {
     border: 1px solid #cdcdcd;
     max-width: 70%;
+    border-radius: 4px;
 }
 
 .Card:not(:last-child){
@@ -52,7 +53,6 @@
 
 .Card__comment:not(:last-child){
     margin-bottom: 1rem;
-    
 }
 
 .Card__comment{
