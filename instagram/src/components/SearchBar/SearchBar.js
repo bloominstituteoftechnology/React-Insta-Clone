@@ -18,9 +18,9 @@ class SearchBar extends Component {
                     //onChange
                 />
             <div className="icons">
-                <div><i class="far fa-compass fa-5x"></i></div>
-                <div><i class="far fa-heart fa-5x"></i></div>
-                <div><i class="far fa-user fa-5x"></i></div>
+                <div><i className="far fa-compass fa-5x"></i></div>
+                <div><i className="far fa-heart fa-5x"></i></div>
+                <div><i className="far fa-user fa-5x"></i></div>
             </div>    
             </div>
          );

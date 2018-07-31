@@ -18,11 +18,10 @@ class App extends Component {
       <div className="App">
       <SearchBar />
       <div className="container">
-      
-
         {this.state.data.map(data => {
           return (
-            <PostContainer 
+            <PostContainer
+              key={data.username} 
               username={data.username}
               thumbnailUrl={data.thumbnailUrl}
               imageUrl={data.imageUrl}

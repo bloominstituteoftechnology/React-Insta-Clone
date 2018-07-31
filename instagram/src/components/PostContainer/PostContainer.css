@@ -1,8 +1,17 @@
+.post-container {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 5px 10px 5px;
+}
 
 .post-header {
     display: flex;
     align-items: center;
     padding-top: 5px;
+    font-size: 1.6rem;
+    font-size: bold;
 
 }
 
@@ -10,9 +19,29 @@
     width: 30px;
     margin-left: 15px;
     margin-right: 15px;
-    margin-bottom: 15px;
 }
 
 .thumbnail img {
     border-radius: 50%;
+}
+
+.comment-icons {
+    display: flex;
+    margin: 5px;
+    max-width: 75px;
+    justify-content: space-between;
+    
+}
+
+.section-comments {
+    margin: 5px;
+}
+
+.likes {
+    margin: 5px;
+    font-size: 1.2rem;
+}
+
+.timestamp {
+    margin: 5px;
 }
