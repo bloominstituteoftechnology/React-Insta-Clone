@@ -1,0 +1,43 @@
+.nav-container {
+    padding-top: 5px;
+    padding: 20px;
+}
+
+.fab {
+    font-size: 35px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.logo-text {
+    font-size: 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 200px;
+}
+
+.onlyInput {
+    display: inline-block;
+    margin-right: 200px;
+    text-align:center;
+    border: solid 1px #dbdbdb;
+    border-radius: 3px;
+    color: #262626;
+    outline: 0;
+    padding: 3px 10px 3px 26px;
+    z-index: 2;
+}
+
+.onlyInput:focus {
+    text-align: left;
+}
+
+.right-nav {
+    display: inline-block;
+    
+}
+
+.far {
+    margin: 10px 10px 10px 10px;
+}
+
