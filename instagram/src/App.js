@@ -17,9 +17,10 @@ class App extends Component {
       data: dummyData
     })
   }
+
+
   render() {
 
-    
     return (
       <div className="App">
         <SearchBar />
@@ -32,6 +33,7 @@ class App extends Component {
             likes = {user.likes}
             comments = {user.comments}
             timeStamp = {user.timestamp}
+            clickLike = {this.increaseLikeHandler}
           />
         })}
       </div>
