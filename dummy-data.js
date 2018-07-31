@@ -1,4 +1,5 @@
 const dummyData = [
+ master
     {
       username: "philzcoffee",
       thumbnailUrl:
