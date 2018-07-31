@@ -65,8 +65,9 @@ body {
   margin: 0 auto;
   padding: 0;
   font-family: sans-serif;
-  width: 978px; 
+  width: 1058px; 
   max-width: 100%;
   border: 1px solid black; 
+  height: auto;
 
 }

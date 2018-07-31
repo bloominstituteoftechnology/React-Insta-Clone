@@ -1,13 +1,21 @@
 .searchBar {
   border-top: 4px solid #E1E4E8;
   border-bottom: 4px solid #E1E4E8;
-  margin-top: 75px; 
+  margin-top: 3px; 
   margin-bottom: 50x;
   display: flex;
   flex-direction: row;
-  
+  width: 100%;
+  justify-content: space-between;
+  font-size: 2.75rem;
   align-items: center;
 }
+/* .searchBar .leftSideSearchBar {
+    margin-left: 54px;
+} */
+/* .searchBar div {
+    margin-right: 170px;
+} */
 
 .hrLine {
     margin-Bottom: 40px;
@@ -15,19 +23,47 @@
 
 .searchInput {
     width: 20.14314; 
+    display:flex;
+    justify-content: center;
+    
 }
-.rightSideSearhBar{
-    /* display: flex;
+.logoTitle {
+    margin-left: 1.94274%;
+}
+.fa-instagram {
+    margin-right: 1.94274%;
+}
+
+.fa-search {
+    position:absolute;
+    left:50%;
+    font-size: 1.25rem;
+
+}
+.verticalLine {
+    color: gray;
+}
+.rightSideSearchBar{
+    display: flex;
     flex-direction: row;
-    justify-content: space-between; */
-    width: 72px;
-    padding-right: 34px;
+    /* justify-content: space-between; */
+    /* width: 200; */
+    /* padding-right: 34px; */
+    border: 1px solid green;
+    margin-left: 200px;
+}
+
+.rightSideSearchBar i {
+    margin-right: 3.57873%;
 }
 
 .leftSideSearchBar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 169px;
-    width: 122px;
+    margin-right: 17.28016%;
+    width: 175px;
+    border: 1px solid green;
+    /* margin-left: 54px; */
+    /* align-items: flex-start; */
 }
