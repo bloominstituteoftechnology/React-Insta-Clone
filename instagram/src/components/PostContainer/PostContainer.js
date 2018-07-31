@@ -11,7 +11,7 @@ class PostContainer extends React.Component {
   state = {
     comment: '',
     liked: false,
-    likedSrc: unliked
+    // likedSrc: unliked
   }
 
   handleChange = (e) => {
@@ -26,13 +26,15 @@ class PostContainer extends React.Component {
   }
 
   handleLikeToggle = () => {
-    this.state.liked = !this.state.liked
-    if(this.state.liked) {
-      this.setState({likedSrc: liked})
-    } else {
-      this.setState({ likedSrc: unliked})
-    }
-    this.props.handleLikeToggle(this.state.liked, this.props.post.id);
+    this.setState({ liked: !this.state.liked}, 
+      () => this.props.handleLikeToggle(this.state.liked, this.props.post.id))
+    
+    // if(this.state.liked) {
+    //   this.setState({likedSrc: liked})
+    // } else {
+    //   this.setState({ likedSrc: unliked})
+    // }
+    
   }
 
   render() {
@@ -40,23 +42,25 @@ class PostContainer extends React.Component {
       <div className="post">
         <div className="post__header">
           <div className="post__header__image">
-            <img src={this.props.post.thumbnailUrl} />
+            <img src={this.props.post.thumbnailUrl} alt="thumbnail"/>
           </div>
           <h1> {this.props.post.username} </h1>
         </div>
-        <img className="post__main-img" src={this.props.post.imageUrl} />
+        <img className="post__main-img" src={this.props.post.imageUrl} alt="main"/>
         <div className="post__text">
           <div className="post__buttons">
             <img
-              src={this.state.likedSrc}
-              onClick={this.handleLikeToggle} />
-            <img src={comment} />
+              src={this.state.liked ? liked : unliked}
+              onClick={this.handleLikeToggle}
+              alt="liked" />
+            <img src={comment} alt="comment" />
           </div>
           <h1 className="post__likes"> {this.props.post.likes} likes </h1>
-          {this.props.post.comments.map(comment => (
+          {this.props.post.comments.map((comment,index) => (
             <CommentSection 
+              key={index}
               comment={comment} 
-              onClick={() => this.props.handleDeleteComment(comment, this.props.post.id)}
+              onClick={() => this.props.handleDeleteComment(comment.id, this.props.post.id)}
             />
           ))}
           <p className="post__date">

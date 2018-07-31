@@ -22,11 +22,11 @@ const SearchBar = props => {
     <div className="search-bar">
       <div className="search-bar__wrapper">
         <div className="search-bar__brand">
-          <img src={logo} />
+          <img src={logo} alt="logo"/>
         </div>
         <div className="search-bar__search">
           <div className="search-bar__input">
-            <img src={search} />
+            <img src={search} alt="search"/>
             <input 
             value={props.searchInput}
             type="text" 
@@ -36,9 +36,9 @@ const SearchBar = props => {
           </div>
         </div>
         <div className="search-bar__icons">
-          <img src={navigate} />
-          <img src={favorite} />
-          <img src={profile} />
+          <img src={navigate} alt="nav"/>
+          <img src={favorite} alt="fave"/>
+          <img src={profile} alt="profile"/>
         </div>
       </div>
     </div>
