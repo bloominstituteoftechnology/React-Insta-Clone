@@ -13,7 +13,7 @@ class CommentSection extends React.Component {
             newComment: ''
         }
     }
-    addNewComment=(e,index)=>{
+    addNewComment=(index)=>{
         const commentsCopy=this.state.comments.slice();
         commentsCopy[index]=({
             username: 'sonOfCoul',
