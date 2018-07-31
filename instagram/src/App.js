@@ -8,10 +8,12 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      filteredData: []
     };
 
     this.likeIncrement = this.likeIncrement.bind(this);
+    this.filterData = this.filterData.bind(this);
   }
 
   componentDidMount() {
@@ -19,16 +21,30 @@ class App extends Component {
   }
 
   likeIncrement(index) {
-    // event.preventDefault();
-    console.log(this.state.data[index].liked);
-    this.setState({[this.state.data[index].likes]: [this.state.data[index].likes++], [this.state.data[index].liked]: true})
-    console.log(this.state.data[index].liked);
+    this.setState(function(prevState, props){
+      return {[prevState.data[index].likes]: [prevState.data[index].likes++], [prevState.data[index].liked]: true}
+    });
+    console.log([this.state.data[index].liked]);
+    // this.setState({[this.state.data[index].likes]: [this.state.data[index].likes++]})
+    // this.setState({[this.state.data[index].liked]: true})
+  }
+
+  filterData(event) {
+    if(event.target.value === '') {
+      this.setState({data: dummyData})
+    } else {
+      this.setState({filteredData: this.state.data.filter(item => item.username.includes(event.target.value))})
+      this.setState(function(prevState, props){
+        return {data: prevState.filteredData}
+      })
+    }
+    
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar filter={this.filterData} />
         {this.state.data.map((item, index) => <PostContainer post={item} key={item.timestamp} index={index} like={this.likeIncrement} liked={item.liked} />)}
       </div>
     );
