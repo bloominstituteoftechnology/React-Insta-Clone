@@ -1,6 +1,7 @@
 import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection.js'
+import PropTypes from 'prop-types';
 
 const PostContainer = props => {
   return (
@@ -28,8 +29,9 @@ const PostContainer = props => {
               </div>
               <div className="postLikes">{post.likes + " likes"} </div>
             </div>
-            <CommentSection comments={post.comments} />
             <div className="postTimestamp">{post.timestamp}</div>
+            <CommentSection comments={post.comments} />
+            
           </div>
         )
       })}
@@ -37,5 +39,9 @@ const PostContainer = props => {
     </div>
   )
 };
+
+PostContainer.propTypes = {
+  data: PropTypes.array
+}
 
 export default PostContainer;

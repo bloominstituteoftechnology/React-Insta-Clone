@@ -5,12 +5,18 @@ import SearchBar from './components/SearchBar/SearchBar.js'
 import PostContainer from './components/PostContainer/PostContainer.js'
 
 
+
+
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      data: dummyData
+      data: []
     }
+  }
+
+  componentDidMount() {
+    this.setState({data: dummyData});
   }
   render() {
     return (
@@ -25,5 +31,6 @@ class App extends Component {
 }
 
 //dummyData.map(post => <post )
+
 
 export default App;

@@ -6,3 +6,7 @@
     font-weight: bold;
 }
 
+.commentInput {
+    width: 99%;
+    height: 60px;
+}
