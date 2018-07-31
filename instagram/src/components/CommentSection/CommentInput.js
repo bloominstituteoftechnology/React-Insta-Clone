@@ -13,8 +13,8 @@ class CommentInput extends React.Component {
 
     render() {
         return (
-            <div className="comment-field">
-                <form onSubmit={this.props.add}>
+            <div>
+                <form onSubmit={this.props.add}  className="comment-field">
                     <input placeholder="Add a comment..." className="add-comment" name="input" type="text" /><img src="img/ellipsis.png" alt="ellipsis" className="ellipsis"/>
                 </form>
             </div>

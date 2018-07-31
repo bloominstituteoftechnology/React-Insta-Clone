@@ -14,3 +14,10 @@
 .comment {
     margin: 5px 0;
 }
+
+.comment-field {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
