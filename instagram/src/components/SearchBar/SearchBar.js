@@ -8,7 +8,6 @@ import { faCompass, faHeart, faUser } from '@fortawesome/free-regular-svg-icons'
 
 
 
-
 const SearchBar = () => {
     return (
         <Row>

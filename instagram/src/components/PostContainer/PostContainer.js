@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col, Form, FormGroup, Input, Container } from 'reactstrap';
+import { Row, Col, Container } from 'reactstrap';
 import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => {
     const { username } = props.postProp;
     const { likes } = props.postProp;
     const { thumbnailUrl } = props.postProp;
-    const {imageUrl} = props.postProp;
+    const { imageUrl } = props.postProp;
     return (
         <Container  >
             <Row>
@@ -20,12 +21,17 @@ const PostContainer = props => {
             </Row>
             <Row>
                 <Col>
-                    <img src={imageUrl} rounded />
+                    <img src={imageUrl} />
                 </Col>
             </Row>
             <Row>
                 <Col>
                     {likes}
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <CommentSection comments={props.postProp.comments}/>
                 </Col>
             </Row>
         </Container>);
