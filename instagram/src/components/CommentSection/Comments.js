@@ -20,7 +20,6 @@ class Comments extends React.Component {
                 <h3 className= "userCommentName">{this.props.userName}</h3>
                 <p className = "userCommentText">{this.props.text}</p>
               </div>
-              <h4>{this.props.time}</h4>
             </div> 
         ); 
     }
