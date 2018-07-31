@@ -20,7 +20,7 @@ class App extends Component {
       <div className="App">
       <SearchBar/>
       <div className='posts'>
-      {this.state.posts.map((e)=><PostContainer data={e} key={e.username}/>)}
+      {this.state.posts.map((e)=><PostContainer data={e} key={e.imageUrl}/>)}
       </div>
       </div>
     );
