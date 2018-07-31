@@ -7,7 +7,11 @@ import CardContainer from './components/PostComponent/CardContainer';
 class App extends Component {
   constructor(){
     super();
-    this.state = {data: dummyData};
+    this.state = {data: []};
+  }
+
+  componentDidMount(){
+    this.setState({data: dummyData})
   }
 
   render() {
