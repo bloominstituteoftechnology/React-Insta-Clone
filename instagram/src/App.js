@@ -9,14 +9,26 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData
+      posts: dummyData,
+      searchInfo: ''
     }
+  }
+
+  searchItemHandler =(event)=> {
+    this.setState({searchInfo: event.target.value});
+  }
+
+  searchSubmitHandler=(event)=> {
+    event.preventDefault();
+    let myPosts= this.state.posts.filter(item => item.username === this.state.searchInfo);
+    console.log(myPosts);
+    this.setState({posts: myPosts, searchInfo: ''});
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar searchItem={this.searchItemHandler} searchValue={this.searchInfo} searchSubmit={this.searchSubmitHandler}/>
         {this.state.posts.map(item => <PostContainer post={item} comments={item.comments} key={item.timestamp} /> )}
       </div>
     );
