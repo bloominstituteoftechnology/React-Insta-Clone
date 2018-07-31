@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import './SearchBar.css';
 import logoText from './instagramLogoText.png';
 
@@ -13,7 +13,7 @@ const SearchBar = (props) => {
 
       {/* start input div */}
       <div className="searchBarInputDiv">
-        <input placeholder="&#x1F50D;Search" />
+        <input placeholder="&#x1F50D; Search" type="text"/>
       </div>
 
       {/* start links div */}
