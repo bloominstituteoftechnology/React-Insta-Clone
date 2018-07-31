@@ -22,11 +22,12 @@ class App extends Component {
 
   likeIncrement(index) {
     this.setState(function(prevState, props){
-      return {[prevState.data[index].likes]: [prevState.data[index].likes++], [prevState.data[index].liked]: true}
+      return {[this.state.data[index].likes]: [prevState.data[index].likes++]}
+    });
+    this.setState(function(prevState, props){
+      return {[this.state.data[index].liked]: true}
     });
     console.log([this.state.data[index].liked]);
-    // this.setState({[this.state.data[index].likes]: [this.state.data[index].likes++]})
-    // this.setState({[this.state.data[index].liked]: true})
   }
 
   filterData(event) {
