@@ -33,15 +33,30 @@
 }
 
 .search-bar__search {
+  display: flex;
+  align-items: center;
   width: 215px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #dbdbdb;
   border-radius: 5px;
   height: 28px;
   background-color: #fafafa;
 }
 
+.search-bar__search img {
+  height: 11px;
+  width: auto;
+}
+
+/* .search-bar__input {
+  
+} */
+
 .search-bar__search input {
+  padding-left: 5px;
+  font-size: 14px;
   border: none;
+  outline: none;
+  background-color: #fafafa;
 }
 
 .search-bar__icons img {
