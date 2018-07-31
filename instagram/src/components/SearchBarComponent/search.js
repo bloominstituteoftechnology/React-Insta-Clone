@@ -4,7 +4,9 @@ import MaterialIcon from 'material-icons-react'
 
 function Search (props){
     return (
-        <div className="search-boc"><input type="text" placeholder="search"/></div>
+        <div className="search-block">
+            <input type="text" placeholder="🔍 Search"/>
+        </div>
     )
 }
 

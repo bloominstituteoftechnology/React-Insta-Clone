@@ -3,7 +3,7 @@ import './search-bar.css'
 
 function Logo (props) {
     return (
-        <div className="img-logo"><img src='./instagram-logo.png' alt="img-logo"/></div>
+        <div className="img-logo"><i class="fab fa-instagram"></i></div>
     )
 }
 
