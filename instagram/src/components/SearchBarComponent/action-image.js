@@ -1,6 +1,6 @@
 import React from 'react';
 import './search-bar.css'
-import MaterialIcon, {colorPalette} from 'material-icons-react';
+import MaterialIcon from 'material-icons-react';
 
 function Actions (props){
     return (

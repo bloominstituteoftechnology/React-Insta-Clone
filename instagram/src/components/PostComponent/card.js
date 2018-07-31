@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import './PostContainer.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CommentSection from './CommentComponent/CommentSection';
 import moment from 'moment';
 
 class Card extends Component {
     constructor(props){
         super(props);
-        this.state = {comments: props.post.comments, currentComment: '', currentUser: 'Bobby123'};
+        this.state = {
+            comments: props.post.comments,
+            currentComment: '',
+            currentUser: 'kamalnrf',
+            likes: props.post.likes,
+            liked: false
+        };
     }
 
     commentHolder = (event) => {
@@ -25,6 +30,23 @@ class Card extends Component {
         event.target.children[0].value = '';
     }
 
+    addLike = (event, prevState) => {
+        console.log('Clicked')
+        const likes = this.state.likes
+        this.setState(state => {
+            if (!state.liked)
+                return {
+                    likes: likes + 1,
+                    liked: true
+                }
+            else
+                return {
+                    likes: likes - 1,
+                    liked: false
+                }
+        })
+    }
+
     render() {
         return (
             <div className="post" key={this.props.post.timestamp}>
@@ -37,10 +59,10 @@ class Card extends Component {
                 <img src={this.props.post.imageUrl} alt="user's beautiful post" />
                 <div className="bottom">
                     <div className="icons">
-                        <FontAwesomeIcon icon={['far', 'heart']} className="icon" />
-                        <FontAwesomeIcon icon={['far', 'comment']} className="icon" />
+                        <i className="fas fa-heart" onClick={this.addLike}></i>
+                        <i className="fas fa-comment"></i>
                     </div>
-                    <p className="likes">{this.props.post.likes} likes</p>
+                    <p className="likes">{this.state.likes} likes</p>
                     <CommentSection comments={this.state.comments} />
                     <p className="timestamp">{moment(this.props.post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</p>
                     <form onSubmit={this.addComment} className="add-comment">
