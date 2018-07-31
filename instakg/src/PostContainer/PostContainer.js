@@ -5,7 +5,7 @@ import { faHeart, faComment } from '@fortawesome/free-regular-svg-icons';
 import {  faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
-
+import moment from 'moment';
 
  const PostContainer = (props) =>{
    return(
@@ -22,7 +22,7 @@ import PropTypes from 'prop-types';
     </div>
     <div className="likes">{props.data.likes} likes</div>
    < CommentSection  data={props.data.comments} />
-    <div className='timeStamp'> 2 HOURS AGO</div>
+    <div className='timeStamp'> {moment(props.data.timestamp, "MMMM Do YYYY, h:mm:ss a").fromNow()}</div>
     <div className='commentBar'/>
     <div className="row AddComment">
     <input type='text' id={props.id} className='commentSubmitField' placeholder='Add a comment...' onKeyUp={props.methods[0]}></input>
