@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './CommentSection.css';
 
 
 const Comment = props => {
     return (  
         <div>
-           <p className="comment"><span className="username">{props.comments.username}</span>{props.comments.text}</p>
+           <p className="comment"><span className="username">{props.comment.username}</span>{props.comment.text}</p>
         </div>
     );
 }
