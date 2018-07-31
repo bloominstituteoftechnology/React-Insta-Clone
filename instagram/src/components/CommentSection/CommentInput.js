@@ -10,6 +10,7 @@ class CommentInput extends React.Component {
     this.state = {
       comments: props.comments,
       handleSubmit: props.handleSubmit,
+      handleInputChange: props.handleInputChange
     }
   }
 
@@ -29,7 +30,13 @@ class CommentInput extends React.Component {
     return (
       <div className="commentInputForm">
         <form onSubmit={this.state.handleSubmit}>
-          <input className="commentInput" placeholder="Add a comment..." />
+          <input 
+            className="commentInput" 
+            placeholder="Add a comment..."
+            onChange={this.state.handleInputChange}
+            value={this.state.value}
+            // textInput={this.state.textInput}
+          />
         </form>
       </div>
     )
