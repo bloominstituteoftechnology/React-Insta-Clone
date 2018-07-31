@@ -21,12 +21,7 @@ import PropTypes from 'prop-types';
       <FontAwesomeIcon className="icon" icon={faComment} />
     </div>
     <div className="likes">{props.data.likes} likes</div>
-    <div className="commentBox">
-    { props.data.comments.map((element,index) => {
-        return < CommentSection key={index} data={element} />
-
-    } )}
-    </div>
+   < CommentSection  data={props.data.comments} />
     <div className='timeStamp'> 2 HOURS AGO</div>
     <div className='commentBar'/>
     <div className="row AddComment">
@@ -36,7 +31,7 @@ import PropTypes from 'prop-types';
     </div>
   )
 }
-PostContainer.PostContainer = {
+PostContainer.propTypes = {
   data: PropTypes.shape({
       username:PropTypes.string.isRequired,
       thumbnailUrl:PropTypes.string.isRequired,

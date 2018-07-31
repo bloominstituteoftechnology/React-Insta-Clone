@@ -8,11 +8,13 @@ class App extends Component {
     super();
     this.state={
       data:[],
-      currentUser:'You'
+      currentUser:'You',
+      display:[],
+      textBoxString: ''
     }
   }
   componentDidMount(){
-    this.setState({ data: dummyData },()=>{});
+    this.setState({ data: dummyData,display:dummyData },()=>{});
   }
   incrimentLike = (event)=>{
     const dataImport = this.state.data;
@@ -35,11 +37,28 @@ class App extends Component {
       }
         
     })
-    this.setState({ data: dataImport },()=>{
+    this.setState({ data: dataImport, display:dataImport },()=>{
       
     });
   }
-  handleKeyPress = (event) => {
+  // handleKeyPressSearch = (event) => {
+  //   const dataImport = this.state.data;
+  //   if (event.target.value === ''){
+  //     return;
+  //   }
+  //   dataImport.map((element,index)=>{
+  //     if(event.target.value === index.toString()){
+  //        element.comments.push({
+  //         username: this.state.currentUser,
+  //         text : event.target.value})
+  //         return element;
+  //     }
+  //     else{
+  //       return element;
+  //     }
+
+  // }
+  handleKeyPressComment = (event) => {
     const dataImport = this.state.data;
     if(event.key === 'Enter'){
        if (event.target.value === ''){
@@ -58,14 +77,14 @@ class App extends Component {
           
       })
       event.target.value = '';
-    this.setState({ data: dataImport },()=>{
+    this.setState({ data: dataImport, display: dataImport },()=>{
       
     });
     }
   }
   loadPosts = ()=>{
-  return this.state.data.map((element,index) => {
-        return <PostContainer methods={[this.handleKeyPress,this.incrimentLike]} key={index} id={index} data={element} />
+  return this.state.display.map((element,index) => {
+        return <PostContainer methods={[this.handleKeyPressComment,this.incrimentLike]} key={index} id={index} data={element} />
       });
   }
   render() {
