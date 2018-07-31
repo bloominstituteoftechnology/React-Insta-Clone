@@ -1,6 +1,7 @@
 .comments {
     display:flex;
     align-items: flex-start;
+    width: 898px;
 
 }
 .comment{
@@ -17,6 +18,10 @@
 
 .postHrLine{
     margin-bottom:15px;
+    width:898px;
+    display:flex;
+    align-items: flex-start;
+    margin-left: 0;
 }
 
 .addComment {

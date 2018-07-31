@@ -19,7 +19,11 @@ class SearchBar extends React.Component {
           <span className="fa fa-search"></span>
           <input className = "searchInput"placeholder="Search"/>
           </div>
-          <div className = "rightSideSearchBar"><i className="far fa-compass"></i><i className="far fa-heart"></i> <i className="far fa-user"></i></div>
+          <div className = "rightSideSearchBar">
+            <i className="far fa-compass"></i>
+            <i className="far fa-heart"></i> 
+            <i className="far fa-user"></i>
+          </div>
           <hr className ="hrLine"/>
         
         </div>
