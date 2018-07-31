@@ -11,19 +11,22 @@
 .logo{
     height: auto;
     width: 100%;
+    max-width: 50px;
+    padding-top: 5px;
 }
 .searchBarContainer{
     display:grid;
-    grid-template-columns: 4% 2% 10% auto 3% 3% 3%;
-    grid-template-rows: 3em;
+    grid-template-columns: 4% 2% 20% auto 5% 5% 5%;
+    grid-template-rows: 3vh;
     align-items: center;
     min-width: 100%;
+    min-height: 30px;
     box-sizing: border-box;
 
 
 }
 #search{
-    margin:  0 10vw;
+    margin:  0 1vw;
     width: auto;
     font-size: 24px;
 }
@@ -42,7 +45,7 @@ img {
     height: 100%;
 }
 .logoText{
-    font-size: 2em;
+    font-size: 2.3vw;
     font-family: 'Press Start 2P', cursive;
     font-weight: bold;
 }
@@ -54,3 +57,9 @@ img {
     background-color: white;
 
 }
+
+@media screen and (min-width: 1200px) {
+    .logoText {
+       font-size: 28px;
+    }
+  }

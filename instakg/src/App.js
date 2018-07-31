@@ -7,19 +7,41 @@ class App extends Component {
   constructor(){
     super();
     this.state={
-      data:dummyData,
+      data:[],
       currentUser:'You'
     }
   }
   componentDidMount(){
+    this.setState({ data: dummyData },()=>{});
   }
-  addComment(){
-
+  incrimentLike = (event)=>{
+    const dataImport = this.state.data;
+    dataImport.map((element,index)=>{
+      if(event.target.id === index.toString()){
+        if(element.liked === true){
+          element.likes --;
+         element.liked = false;
+          return element;
+        }
+        else{
+          element.likes ++;
+         element.liked = true;
+          return element;
+        }
+         
+      }
+      else{
+        return element;
+      }
+        
+    })
+    this.setState({ data: dataImport },()=>{
+      
+    });
   }
   handleKeyPress = (event) => {
     const dataImport = this.state.data;
     if(event.key === 'Enter'){
-      console.log(event.target.value)
        if (event.target.value === ''){
          return;
        }
@@ -41,9 +63,9 @@ class App extends Component {
     });
     }
   }
-  loadPosts(){
+  loadPosts = ()=>{
   return this.state.data.map((element,index) => {
-        return <PostContainer methods={this.handleKeyPress} key={index} id={index} data={element} />
+        return <PostContainer methods={[this.handleKeyPress,this.incrimentLike]} key={index} id={index} data={element} />
       });
   }
   render() {

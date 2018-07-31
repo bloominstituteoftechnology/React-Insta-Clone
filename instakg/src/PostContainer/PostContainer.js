@@ -17,7 +17,7 @@ import PropTypes from 'prop-types';
     <div className='postImageContainer'><img alt='postimage' src={props.data.imageUrl}></img> </div> 
     <div className='row iconRow'>
     
-      <FontAwesomeIcon className="icon" icon={faHeart} />
+      <FontAwesomeIcon id={props.id}  onClick={props.methods[1]} className="icon" icon={faHeart} />
       <FontAwesomeIcon className="icon" icon={faComment} />
     </div>
     <div className="likes">{props.data.likes} likes</div>
@@ -30,7 +30,7 @@ import PropTypes from 'prop-types';
     <div className='timeStamp'> 2 HOURS AGO</div>
     <div className='commentBar'/>
     <div className="row AddComment">
-    <input type='text' id={props.id} className='commentSubmitField' placeholder='Add a comment...' onKeyUp={props.methods}></input>
+    <input type='text' id={props.id} className='commentSubmitField' placeholder='Add a comment...' onKeyUp={props.methods[0]}></input>
     <FontAwesomeIcon className="icon moreIcon" icon={faEllipsisH} />
     </div>
     </div>
