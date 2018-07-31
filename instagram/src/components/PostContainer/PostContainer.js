@@ -73,7 +73,7 @@ class PostContainer extends React.Component {
             ref={this.textInput}
             type="text"
             value={this.state.comment}
-            placeholder="Add Comment..."
+            placeholder="Add a comment..."
             onChange={this.handleChange}
             onKeyDown={this.handleAddComment}
           />

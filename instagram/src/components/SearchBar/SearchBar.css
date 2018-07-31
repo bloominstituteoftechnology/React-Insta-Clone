@@ -24,7 +24,7 @@
 
 .search-bar__brand {
   margin: -6px 0;
-  width: auto;
+  width: 200px;
 }
 
 .search-bar__brand img {
@@ -43,6 +43,7 @@
 }
 
 .search-bar__search img {
+  padding-left: 5px;
   height: 11px;
   width: auto;
 }

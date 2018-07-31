@@ -65,10 +65,13 @@
   margin-right: 10px;
 }
 
+.add-comment {
+  border-top: 1px solid #efefef;
+  padding: 20px 0;
+  margin: 0 16px;
+}
 .add-comment input {
   font-size: 14px;
-  border-top: 1px solid #999;
-  padding: 10px;
   color: #999;
   outline: none;
   border: none;

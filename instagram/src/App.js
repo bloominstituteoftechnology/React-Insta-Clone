@@ -6,10 +6,13 @@ import PostContainer from "./components/PostContainer/PostContainer";
 import "./App.css";
 
 class App extends Component {
-  state = {
-    posts: [],
-    searchInput: "",
-  };
+  constructor() {
+    super();
+    this.state = {
+      posts: [],
+      searchInput: "",
+    };
+  }
   componentDidMount() {
     const storedPosts = JSON.parse(localStorage.getItem("posts"));
     if (storedPosts) {
@@ -46,7 +49,7 @@ class App extends Component {
                 {
                   username: "test",
                   text: comment,
-                  id: new Date()
+                  id: new Date(),
                 },
               ],
             };
@@ -58,7 +61,7 @@ class App extends Component {
     });
   };
 
-  handleLikeToggle = (id) => {
+  handleLikeToggle = id => {
     this.setState(prevState => {
       return {
         posts: prevState.posts.map(currentPost => {
@@ -67,13 +70,13 @@ class App extends Component {
               return {
                 ...currentPost,
                 likes: currentPost.likes + 1,
-                liked: true
+                liked: true,
               };
             } else {
               return {
                 ...currentPost,
                 likes: currentPost.likes - 1,
-                liked: false
+                liked: false,
               };
             }
           } else {
