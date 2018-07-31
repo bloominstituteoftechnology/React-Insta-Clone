@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col, Form, FormGroup, Input, Container } from 'reactstrap';
+import './PostContainer.css';
 
 const PostContainer = props => {
     const { username } = props.postProp;
@@ -11,7 +12,7 @@ const PostContainer = props => {
         <Container  >
             <Row>
                 <Col>
-                    <img src={thumbnailUrl} />
+                    <img className="profile-img" src={thumbnailUrl} />
                 </Col>
                 <Col>
                     {username}
@@ -19,7 +20,7 @@ const PostContainer = props => {
             </Row>
             <Row>
                 <Col>
-                    <img src={imageUrl} />
+                    <img src={imageUrl} rounded />
                 </Col>
             </Row>
             <Row>
