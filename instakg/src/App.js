@@ -49,6 +49,7 @@ class App extends Component {
   }
   handleKeyPressSearch = (event) => {
     const dataImport = this.state.data;
+    
     if (event.target.value === ''){
       this.setState({display: this.setState.data},()=>{});
      }
@@ -66,6 +67,8 @@ class App extends Component {
   handleKeyPressComment = (event) => {
    
     const dataImport = this.state.data;
+    const displayImport = this.state.display;
+
     if(event.key === 'Enter'){
        if (event.target.value === ''){
          return;
@@ -81,15 +84,27 @@ class App extends Component {
           return element;
         }
       })
+      displayImport.map((element,index)=>{
+        if(event.target.id === index.toString()){
+           element.comments.push({
+            username: this.state.currentUser,
+            text : event.target.value})
+            return element;
+        }
+        else{
+          return element;
+        }
+      })
       event.target.value = '';
       
-    this.setState({ data: dataImport, display: dataImport },()=>{this.writeToLS();});
+    this.setState({ data: dataImport, display: displayImport },()=>{this.writeToLS();});
     }
     else if(event.key === '~'){
       this.resetData();
     }
   }
   writeToLS = () =>{
+    
     localStorage.setItem('postList', JSON.stringify(this.state.data));
   }
   readLS = () =>{
@@ -98,7 +113,9 @@ class App extends Component {
   }
   deleteComment(event){  
     const dataImport = this.state.data;
-    const modded = dataImport.map((element)=>{
+    const displayImport = this.state.display;
+
+    const moddedData= dataImport.map((element)=>{
          element.comments = element.comments.filter((e)=>{
           if(e.text === event.target.previousSibling.innerHTML){
             return false;
@@ -109,8 +126,19 @@ class App extends Component {
         })
         return element;
     })
-
-    this.setState({ data: modded, display: modded },()=>{this.writeToLS();});
+    const moddedDisplay= displayImport.map((element)=>{
+      element.comments = element.comments.filter((e)=>{
+       if(e.text === event.target.previousSibling.innerHTML){
+         return false;
+       }
+       else{
+         return true;
+       }
+     })
+     return element;
+ })
+    
+    this.setState({ data: moddedData, display: moddedDisplay },()=>{this.writeToLS();});
     
   }
   loadPosts = ()=>{
