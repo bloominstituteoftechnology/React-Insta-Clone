@@ -16,8 +16,7 @@ class PostContainer extends React.Component{
         this.setState({likes : this.state.likes+1})
     }
 
-    render(){ 
-    console.log(this.state)   
+    render(){       
     return(
         <div className = "post-container">
             

@@ -14,7 +14,7 @@ class CommentSection extends React.Component{
         }
     }    
 
-    updateNewComment = event => this.setState({ newComment : event.target.value})
+    updateNewComment = event => this.setState({newComment : event.target.value})
 
     addNewComment=event=>{
         event.preventDefault();
