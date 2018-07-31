@@ -21,6 +21,38 @@ import dummyData from "./dummy-data";
             //Loaded Comments
             //Add Comment
 
+
+const MainHeader = props => {
+  return (
+    <div className = "main-header"> 
+      <div className = "left-icons">
+        <div className="fab fa-instagram"></div>
+        <div class="vl"></div>
+        <div className = "instagram">
+          <h2> Instagram</h2>
+        </div>
+      </div>
+
+       <div className = "search-field">
+      <input type = "search" placeholder = "search"/>
+      </div>
+    
+      <div className = "right-icons">
+        <div className = "icons"> 
+          <i className="fa fa-compass" />
+        </div>
+        <div className = "icons"> 
+          <i className="fa fa-heart" />
+        </div>
+        <div className = "icons"> 
+          <i className="fa fa-user-circle" />
+        </div>
+      </div>
+    </div> 
+
+  )
+}
+
 const Post = props => {
   return (
     <div className = "post-container">
@@ -33,7 +65,7 @@ const Post = props => {
 
 const Posts = props => {
   return (
-    <div className = "posts">
+    <div className = "all-posts">
     {props.posts.map(post => <Post key = {post.username} post = {post} />)}
     </div>
   )
@@ -55,13 +87,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <MainHeader />
         <div className = "Posts">
         <Posts posts = {this.state.posts} />
         </div>
