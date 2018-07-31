@@ -15,11 +15,10 @@ import Comment from './Comment';
       render() {
         return (
           <div className = 'commentsection'>
-            {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
+            {this.state.comments.map((a, i) => <Comment key={i} comment={a} />)}
             <form>
               <input type="text" placeholder="Add comment... " />
             </form>
-
           </div>
         );
       }
