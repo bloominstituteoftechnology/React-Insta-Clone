@@ -7,8 +7,26 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.comments,
-      time: props.time
+      time: props.time,
+      inputValue: "",
+      newComments: {}
     };
+  }
+
+  inputChange = event => {
+    this.setState({
+      inputValue: event.target.value,
+      newComments: {text: event.target.value, username: "mike" }
+    })
+  }
+
+  addNewComment = newComment => {
+    const newCommentArray = this.state.comments.slice();
+    newCommentArray.push(this.state.newComments)
+    this.setState({
+      inputValue: '',
+      comments: newCommentArray
+    })
   }
 
   render() {
@@ -20,7 +38,7 @@ class CommentSection extends React.Component {
             comments={comment} />
         })}
         <p className="timestamp">{this.state.time}</p>
-        <input className="add-comment" placeholder="Add a comment..."></input>
+        <input value={this.inputValue} onChange={this.inputChange} onClick={this.addNewComment} className="add-comment" placeholder="Add a comment...">{this.inputValue}</input>
       </div>
     )
   };
