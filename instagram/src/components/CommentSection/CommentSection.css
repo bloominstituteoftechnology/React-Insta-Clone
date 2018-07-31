@@ -1,5 +1,6 @@
 .comments-section {
     display: flex;
+    flex-flow: column wrap;
     justify-content: flex-start;
     text-align: left;
     margin: 5px 0;

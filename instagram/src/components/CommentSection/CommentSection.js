@@ -1,14 +1,23 @@
 import React from 'react';
 import './CommentSection.css';
 import PropTypes from 'prop-types';
+import Comment from './Comment';
 
-const CommentSection = props => {
-    return (
-        <div className="comments-section">
-            <span>{props.comment.username}</span>
-            {props.comment.text}
-        </div>
-    );
+class CommentSection extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            comments: props.comments
+        }
+    }
+
+    render() {
+        return (
+            <div className="comments-section">
+            {this.state.comments.map((comment, index) => <Comment username={comment.username} text={comment.text} key={index} />)}
+            </div>
+        );
+    }
 }
 
 CommentSection.propTypes = {
