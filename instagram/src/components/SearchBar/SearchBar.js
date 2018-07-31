@@ -10,14 +10,14 @@ class SearchBar extends React.Component {
     }
 
     render () {
-
+        console.log(this.props)
         return (
         <div className = "searchBar">
           
           <div className ="leftSideSearchBar"><i className="fab fa-instagram"></i> <span className="verticalLine">&#124;</span><span className ="logoTitle">Instagram</span> </div>
           <div className = "topSearch">
           {/* &#128269    */}
-          <input className = "searchInput" placeholder="&#128269; Search"/>
+          <input className = "searchInput" onChange = {this.props.onChange} value ={this.props.value} placeholder="&#128269; Search"/>
           </div>
           <div className = "rightSideSearchBar">
             <i className="far fa-compass"></i>
