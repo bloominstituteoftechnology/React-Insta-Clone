@@ -3,25 +3,39 @@ import CommentSection from '../CommentSection/CommentSection'
 import Post from './Post'
 import './Post.css'
 
-const PostContainer = props =>{ 
-    console.log(props.data.timestamp)   
+class PostContainer extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            likes: props.data.likes,
+            data: props.data
+        }
+    }
+
+    plusLikes = () =>{        
+        this.setState({likes : this.state.likes+1})
+    }
+
+    render(){ 
+    console.log(this.state)   
     return(
         <div className = "post-container">
             
             <Post 
-                name = {props.data.username}
-                thumbImg = {props.data.thumbnailUrl}
-                mainImg = {props.data.imageUrl}
-                likes = {props.data.likes}                
+                name = {this.state.data.username}
+                thumbImg = {this.state.data.thumbnailUrl}
+                mainImg = {this.state.data.imageUrl}
+                likes = {this.state.likes}    
+                handleAddLike = {this.plusLikes}            
             />
             
             
             <CommentSection 
-                data = {props.data}
+                data = {this.state.data}
             />
             
         </div>
-    )         
+    )}
 }
 
 export default PostContainer
