@@ -10,28 +10,29 @@ import CommentSection from './components/CommentSection/CommentSection.js';
 class App extends Component {
   constructor(){
     super();
-    this.state = {dummyData: [], cmdCalled: false, searchText: "", filteredData: []}
+    this.state = {dummyData: [], cmdCalled: false, searchText: "", prevDummyData: []}
   }
 
   componentDidMount () {
-    this.setState({dummyData:dummyData, cmdCalled: true});
+    this.setState({dummyData:dummyData, prevDummyData: dummyData, cmdCalled: true});
   }
 
   handleSearchChange = event => {
     this.setState({searchText: event.target.value});
     const dummyData = this.state.dummyData; 
-    const filteredData = [];
+    const prevDummyData = this.state.prevDummyData; 
     
-    dummyData.filter(post => post.username.includes(this.state.searchText) ? filteredData.push(post): console.log("not included"));
-    this.setState({filteredData: filteredData})
-    
-    this.state.searchText !== "" ? this.setState({filteredData: filteredData}) : this.setState({filteredData: []});
+    console.log(this.state.searchText); 
+    const filteredData  = dummyData.filter(post => post.username.includes(event.target.value))
+    console.log(filteredData);
+    console.log(event.target.value); 
+    event.target.value !== "" ? this.setState({dummyData: filteredData}) : this.setState({ dummyData: prevDummyData});
+
   }
-  
 
   render() {
     let dummyData; 
-    this.state.cmdCalled && this.state.filteredData.length < 1 ? dummyData = this.state.dummyData : dummyData = this.state.filteredData;
+    this.state.cmdCalled ? dummyData = this.state.dummyData : dummyData = [];
     
     return (
       <div className="App">
