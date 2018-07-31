@@ -1,23 +1,28 @@
-import React from 'react'; 
-import PropTypes from 'prop-types'; 
-import dummyData from './dummy-data';
+import React from 'react';
+import './App.css';
+import IGLogo from '../../assets'
 
- const SearchBar = props => {
-    return(
-        <div className="top-bar">
-            <div className="top-bar-left"> 
-            </div>
-                <form>
-                    <input
-                    className="search-bar" 
-                    type="text"
-                    name="search-bar"
-                    placeholder="Search"
-                    />
-                </form>
-                <div className="top-bar-right">
-                </div>
+const SearchBar = () => {
+  return (
+    <div className="search-bar-wrapper">
+      <div className="image-wrapper">
+        <img alt="instagram logo" src={IGLogo} className="logo-image" />
+      </div>
+      <div>
+        <input type="text" placeholder="Search" />
+      </div>
+      <div className="social-wrapper">
+        <div className="social">
+          <i className="fa fa-compass" />
         </div>
-    )
-}
+        <div className="social">
+          <i className="fa fa-heart" />
+        </div>
+        <div className="social">
+          <i className="fa fa-user-circle" />
+        </div>
+      </div>
+    </div>
+  );
+};
 export default SearchBar;
