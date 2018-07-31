@@ -56,6 +56,7 @@ class CommentSection extends React.Component {
         return(
 
             <div>
+                
                 {comments.map((comment, i) => <Comments key={i}userName = {comment.username} text = {comment.text}/>)}
                 
                 <h4 className = "timeStamp">{time}</h4>

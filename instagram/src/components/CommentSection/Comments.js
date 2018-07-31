@@ -15,6 +15,7 @@ class Comments extends React.Component {
 
         return (
             <div className ="comments">
+                
               <div className = "comment">
                 <h3 className= "userCommentName">{this.props.userName}</h3>
                 <p align= "left" className = "userCommentText">{this.props.text}</p>

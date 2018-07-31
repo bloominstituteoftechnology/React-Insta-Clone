@@ -1,7 +1,7 @@
 import React from 'react'; 
 import './SearchBar.css'; 
 import PropTypes from 'prop-types'; 
-
+import SimpleStorage from "react-simple-storage"; 
 
 class SearchBar extends React.Component {
     constructor(props){
@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
         
         return (
         <div className = "searchBar">
-          
+          <SimpleStorage parent={this} />
           <div className ="leftSideSearchBar"><i className="fab fa-instagram"></i> <span className="verticalLine">&#124;</span><span className ="logoTitle">Instagram</span> </div>
           <div className = "topSearch">
           <input className = "searchInput" onChange = {this.props.onChange} value ={this.props.value} placeholder="&#128269; Search"/>
