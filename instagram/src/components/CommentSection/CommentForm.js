@@ -3,15 +3,15 @@ import React from 'react';
 
 
 
-const CommentForm = props => {
+const Comment = props => {
     return(
-        <form onSubmit={props.addNewComment}>
-        <input placeholder="Add a comment . . ." type="text"/>
-
+        <form >
+        <input onChange={props.handleComment} placeholder="Add a comment . . ." type="text"/>
+        <button onClick={props.addNewComment}>Add Comment</button>
         </form>
     
     );
 
 };
 
-export default CommentForm;
+export default Comment;

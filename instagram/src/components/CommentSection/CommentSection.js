@@ -1,39 +1,39 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CommentForm from './CommentForm.js';
-
+import Comment from './Comment.js';
 
 class CommentsSection extends Component {
   constructor(props){
     super(props);
     this.state = {
-        comments: props.comments
+        comments: props.comments,
+        comment: ''
     };
   }
 
-  addNewComment(event, index){
-      event.preventDefault();
+  handleCommentAdd = e =>{
+      this.setState({ 
+        comment: e.target.value})
+  }
 
-        let commentsCopy = this.state.comments.slice();
-        
-        if(commentsCopy.indexOf() === index){
-            
-            commentsCopy.push({
-                username: "mboegner",
-                text: event.target.value
-            })
-        } else {return null}
-        
-        this.setState({comments: commentsCopy})
-    }
+  handleAddNewComment = e =>{
+      e.preventDefault();
+      const commentsCopy = this.state.comments.slice();
+      commentsCopy.push({username: "mboegner", text: this.state.comment})
+      this.setState({comments: commentsCopy})
+  }
   
   render(){
+    console.log(this.state.comment);
     return(
       <div>
-        <div>{this.state.username}</div>
-        <div>{this.state.text}</div>
-        <CommentForm 
-           addNewComment={this.addNewComment}/>
+        {this.state.comments.map( comment => <Comment key={comment.text} comments={comment}/>)}
+        
+        <CommentForm
+         handleComment={this.handleCommentAdd}    
+         addNewComment={this.handleAddNewComment}
+            />
       </div>
     );
 }

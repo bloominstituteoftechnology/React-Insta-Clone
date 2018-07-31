@@ -5,6 +5,7 @@ import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
 
 
+
 class App extends Component {
   constructor(){
     super();
@@ -14,12 +15,9 @@ class App extends Component {
   }
 
 componentDidMount() {
-  console.log('componentDidMount');
   this.setState({posts: dummyData});
 }
-
   render() {
-   console.log('rendering', this.state);
     return (
       <div className="container">
 
