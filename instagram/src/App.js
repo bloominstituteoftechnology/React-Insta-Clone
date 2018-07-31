@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Fuse from 'fuse.js';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
   constructor() {
@@ -59,21 +59,7 @@ class App extends Component {
           onSearch={this.onSearch} 
           onChange={this.handleSearchChange} 
           isEmpty={this.state.isEmpty} />
-        <div className="posts">
-          {
-              data.map((data, ind) =>
-                <PostContainer
-                  key={data.timestamp + ind}
-                  id={data.timestamp + ind}
-                  user={data.username} 
-                  thumbnail={data.thumbnailUrl} 
-                  img={data.imageUrl} 
-                  likes={data.likes} 
-                  time={data.timestamp}
-                  comments={data.comments}
-                />)
-          }
-        </div>
+        <PostsPage data={data} />
       </div>
     );
   }

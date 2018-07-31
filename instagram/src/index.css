@@ -35,6 +35,11 @@ body {
   margin-bottom: 15px;
   width: 100%;
 }
+.post .fa-comment,
+.post .fa-heart,
+.post .fa-times-circle {
+  cursor: pointer;
+}
 .post .fa-times-circle {
   float: right;
 }
