@@ -1,0 +1,10 @@
+.commentsection{
+  max-width: 500px;
+    text-align: center;
+}
+
+.commenting{
+  max-width: 500px;
+  display: flex;
+  text-align: left;
+}
