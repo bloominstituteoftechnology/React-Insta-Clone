@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col} from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 
 const Comment = props => {
     return (
         <Row>
-        <Col>
-            {props.comment.text}
-        </Col>
-        <Col>
-            {props.comment.username}
-        </Col>
-    </Row>
+            <Col sm={2}>
+                {props.comment.username}
+            </Col>
+            <Col sm={5}>
+                {props.comment.text}
+            </Col>
+        </Row>
     )
 }
 

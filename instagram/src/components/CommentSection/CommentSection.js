@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col} from 'reactstrap';
+import { Container } from 'reactstrap';
 import CommentInput from './CommentInput';
 import Comment from './Comment'
 
@@ -15,13 +15,11 @@ class CommentSection extends React.Component {
     }
     render() {
         return (
-            <Row>
-                <Col>
-                    {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
-                    <CommentInput />
-                </Col>
-            </Row>
+            <Container>
+                {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
+                <CommentInput />
 
+            </Container>
         )
     }
 
