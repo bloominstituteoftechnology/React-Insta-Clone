@@ -10,7 +10,6 @@ class CommentsSection extends React.Component {
   }
 
   render() {
-    console.log(this.state.comments);
     return(
       <div className='comment-container'>
         {this.state.comments.map((comment, i) => {
