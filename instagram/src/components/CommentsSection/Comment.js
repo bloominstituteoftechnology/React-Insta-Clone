@@ -1,9 +1,10 @@
 import React from 'react';
+import './CommentsSection.css';
 
 const Comment = (props) => {
     return (
         <div>
-          <span className="user-name">{props.username}:</span> <p> {props.text}</p>
+          <p> <span className="user-name">{props.username}:</span> {props.text}</p>
         </div>
       );
 }
