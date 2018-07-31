@@ -22,7 +22,7 @@ const PostContainer = props => {
       </div>
       <p className="likes"><strong>{props.data.likes} likes</strong> </p>
       <CommentSection comments={props.data.comments} time={props.data.timestamp}/>
-      <input className="add-comment" placeholder="Add a comment..."></input>
+      
     </div>
   )
 }

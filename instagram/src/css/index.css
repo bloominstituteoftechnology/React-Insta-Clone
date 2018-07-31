@@ -27,6 +27,10 @@
   color: gray;
   font-size: 12px;
 }
+.comment-section .add-comment {
+  height: 20px;
+  margin: 10px 5px 10px 0;
+}
 .post-container {
   border: 1px solid lightgray;
   background-color: white;
@@ -68,10 +72,6 @@
 }
 .post-container .likes {
   margin: 5px;
-}
-.post-container .add-comment {
-  height: 25px;
-  margin: 10px 5px;
 }
 .search-main {
   border: .5px solid lightgray;
