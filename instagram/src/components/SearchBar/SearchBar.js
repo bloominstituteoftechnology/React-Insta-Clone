@@ -19,7 +19,7 @@ const SearchBar = () => {
             <Col>
                 <Form>
                     <FormGroup >
-                        <Input type="search" name="search" id="exampleSearch" placeholder="   &#128269; Search" />
+                        <Input type="search" name="search" id="exampleSearch" className="fa fa-input" placeholder="&#xf002; Search" />
                     </FormGroup>
                 </Form>
             </Col>
