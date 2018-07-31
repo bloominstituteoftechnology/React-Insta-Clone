@@ -9,7 +9,16 @@ class App extends Component {
   constructor(){
     super()
     this.state ={
-      posts: dummyData
+      posts: dummyData,
+      value: undefined
+    }
+  }
+  componentDidMount(){
+    console.log("hey there what the hell is going on")
+    //this is asynchronous so this allows for rerendering with new data
+    //but it's only asynchronous depending on the rendering context. 
+    this.setState = {
+      value: true
     }
   }
   render() {
