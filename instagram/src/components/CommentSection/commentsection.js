@@ -16,7 +16,6 @@ class CommentSection extends Component {
     handleCommentChange = event => {
         // console.log('test');
         this.setState({[event.target.name]: event.target.value})
-        console.log(this.state.input);
       };
 
     addNewComment = (event) => {
@@ -29,7 +28,6 @@ class CommentSection extends Component {
             id: Date.now()
             }
         );
-        console.log(arr);
         this.setState({data: {comments: arr}, input: ''})
         // console.log(this.state.data);
     }
