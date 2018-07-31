@@ -9,7 +9,9 @@ class App extends Component {
     return (
       <div className="App">
       <SearchBar/>
+      <div class='posts'>
       {dummyData.map((e)=><PostContainer data={e} key={e.username}/>)}
+      </div>
       </div>
     );
   }
