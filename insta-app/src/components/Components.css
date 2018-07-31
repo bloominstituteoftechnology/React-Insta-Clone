@@ -10,9 +10,8 @@
     margin: auto; 
     height: 50px; 
 }
-:placeholder-shown{
-    display: flex;
-    align-content: center; 
+i {
+    margin: 0 10px; 
 }
 /* Top bar content Above */
 .post-container{

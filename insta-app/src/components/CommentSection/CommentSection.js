@@ -19,8 +19,5 @@ const CommentSection = props =>{
     </div>
     )
 }
-CommentSection.propTypes={
-    CommentSection: PropTypes.shape,
-    
-}
+
 export default CommentSection; 
