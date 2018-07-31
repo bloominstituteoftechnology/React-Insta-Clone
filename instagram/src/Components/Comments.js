@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import './Card.css';
 
 const Comments = ({ timestamp, comments }) => {
@@ -12,7 +13,9 @@ const Comments = ({ timestamp, comments }) => {
           </p>
         </div>
       ))}
-      <div className="Card__last-comment">{timestamp}</div>
+      <div className="Card__last-comment">
+        {moment(timestamp, 'MMM Do YYYY h:mm:ss').fromNow()}
+      </div>
     </div>
   );
 };

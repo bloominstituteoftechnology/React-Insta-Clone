@@ -38,6 +38,7 @@
 
 .Header__search-input {
   width: 100%;
+  height: 100%;
   display: block;
   padding: .5rem 2rem;
   font-size: 1.4rem;
@@ -53,7 +54,7 @@
   position: absolute;
   top: .5rem;
   width: 100%;
-  height: calc(100% - .8rem);
+  height: calc(100% - 1rem);
   justify-content: center;
   background-color: #f7f7f7;
   border-radius: 3px;

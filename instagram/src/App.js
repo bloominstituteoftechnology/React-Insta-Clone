@@ -9,12 +9,35 @@ class App extends Component {
     data: dummy
   };
 
+  addComment = (id, comment) => {
+    this.setState(prevState => ({
+      data: prevState.data.map(post => {
+        if (post.id === id) {
+          return {
+            ...post,
+            comments: [
+              ...post.comments,
+              {
+                username: 'anonymous',
+                text: comment
+              }
+            ]
+          };
+        } else {
+          return post;
+        }
+      })
+    }));
+  };
+
   render() {
     return (
       <div className="App">
         <Header />
         <section className="container App__cards-container">
-          {this.state.data.map((card, i) => <Card key={i} {...card} />)}
+          {this.state.data.map(card => (
+            <Card key={card.id} {...card} onAddComment={this.addComment} />
+          ))}
         </section>
       </div>
     );
