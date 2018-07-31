@@ -18,6 +18,8 @@ class Post extends Component {
         let comments = JSON.parse(localStorage.getItem(this.state.id));
         if (localStorage.getItem(this.state.id)){
             this.setState({comments});
+        } else {
+            localStorage.setItem(this.state.id, JSON.stringify(this.state.comments));
         }
     }
 
