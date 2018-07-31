@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  border: 1px solid salmon;
+  /* max-width: 70%; */
+  /* display:flex;
+  flex-wrap: wrap;
+  border: 1px solid black; */
+  /* flex: 0 1 60%; */
+  min-width: 400px;
 }
 
 .App-logo {

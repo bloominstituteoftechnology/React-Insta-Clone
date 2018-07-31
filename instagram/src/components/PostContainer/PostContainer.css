@@ -1,0 +1,19 @@
+.post-container-wrap {
+    /* text-align: left; */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+}
+
+.post-header-wrap {
+    display: flex;
+}
+
+.post-thumb-wrap {
+    height: 50px;
+    width: 50px;
+}
+
+.post-thumb {
+    height: 100%;
+    border-radius: 50%;
+  }

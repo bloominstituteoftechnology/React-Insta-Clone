@@ -16,8 +16,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer posts={this.state.posts} />
+        <div>
+          <SearchBar /> 
+        </div>
+        <div>
+          {this.state.posts.map(post => (
+          <PostContainer post={post} />
+          ) ) } 
+        </div>
       </div>
     );
   }
