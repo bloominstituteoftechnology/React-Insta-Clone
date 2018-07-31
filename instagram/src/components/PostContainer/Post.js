@@ -5,7 +5,6 @@ import './post.css';
 
 const Post = props => {
     return(
-        <div className="theCSSdream">
         <div className="post">
             <div className="user">
                 <div className="username" >{props.post.username}</div> 
@@ -17,10 +16,9 @@ const Post = props => {
                 <i className="far fa-comment"></i>
             </div>
             <div className="likes">{props.post.likes} <span>likes</span></div>
-            <div>{props.post.timestamp}</div>
             <CommentSection com={props.post} />
+            <div>{props.post.timestamp}</div>
             </div>
-        </div>
     )
 };
 

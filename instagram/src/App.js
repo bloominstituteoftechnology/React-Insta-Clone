@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainter'
+import PostContainer from './components/PostContainer/PostContainer'
+import SearchBar from './components/SearchBar/SearchBar'
 
 class App extends Component {
   constructor(){
@@ -12,10 +13,10 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
-      <div>
-        <h1 className="App-title">Henlo</h1>
-        <PostContainer instaPost={this.state.instaPosts}/>
+      <div className="desktop">
+        <SearchBar/>
+        <div className="App">
+          <PostContainer instaPost={this.state.instaPosts}/>
         </div>
       </div>
     );

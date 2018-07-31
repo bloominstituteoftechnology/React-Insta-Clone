@@ -1,5 +1,5 @@
 .user {
-    width: 500px;
+    width: 600px;
     display:flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -12,21 +12,21 @@
     margin: 3%;
 }
 .mainImg {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     margin-top: 2%;
     object-fit: cover;
 }
 
 .likeCommentIcons {
-    width: 500px;
+    width: 600px;
     display: flex;
     justify-content: flex-start;
 }
 
 .likes {
-    width: 500px;
-    margin-left: 3%;
+    width: 600px;
+    margin-left: 4%;
 }
 
 i {
@@ -49,14 +49,15 @@ span {
 
 .post {
     display:flex;
-    flex-direction: column; 
+    flex-direction: column;  
     align-items: center;
     margin-bottom: 8%;
     padding-bottom: 3%;
-    border: dotted lightgray .5px;
+    border: solid lightgray .5px;
+    border-radius: 3px;
+    background: white;
 }
 
-.theCSSdream {
-    background: white;
-    width: 501px;
+.postcontainer {
+    margin-top: 100px;
 }

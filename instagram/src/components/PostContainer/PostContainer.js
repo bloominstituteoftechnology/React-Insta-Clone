@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const PostContainer = props => {
     return(
-        <div>
+        <div className="postcontainer">
             {props.instaPost.map(item => <Post post={item}/>)}
         </div>
     )

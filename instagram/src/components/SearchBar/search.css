@@ -1,0 +1,56 @@
+.searchbar {
+    width: 100vw;
+    height: 70px;
+    background: white;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    border-bottom: solid lightgray 1px;
+
+    
+}
+
+.iconz {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+input {
+    height: 20px;
+    border-radius: 5px;
+    width: 150px;
+}
+/* ::-webkit-input-placeholder {
+    font-family: 'Georgia';
+  }
+::-moz-placeholder { 
+    font-family: 'Georgia';
+  }
+:-ms-input-placeholder { 
+    font-family: 'Georgia';
+  }
+:-moz-placeholder { 
+    font-family: 'Georgia';
+  } */
+
+.instap {
+    font-family: 'Lobster Two', cursive;
+    font-size: 200%;
+    padding-left: 8%;
+}
+
+i.fab {
+    font-size: 250%;
+    border-right: solid gray 1px;
+    padding-right: 15%;
+    box-sizing: border-box;
+}
+
+.logo {
+    display:flex;
+    align-items: center;
+}
