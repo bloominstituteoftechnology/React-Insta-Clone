@@ -21,7 +21,23 @@
     padding-left: 20px;
 }
 
+.comment-text {
+    display: flex;
+    padding: 5px 0;
+    height: auto;
+}
 
+.user {
+    font-weight: bold;
+    padding-left: 15px;
+    width: auto;
+    text-align: left;
+}
+
+.comment {
+    text-align: left;
+    padding-left: 5px;
+}
 
 .comment-input {
     border: 1px solid white;

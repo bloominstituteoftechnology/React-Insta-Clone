@@ -1,5 +1,5 @@
 import React from 'react';
-// import Comment from './Comment';
+import Comment from './Comment';
 import CommentInput from './CommentInput';
 import PropTypes from 'prop-types';
 import CommentFeedback from './CommentFeedback';
@@ -17,7 +17,7 @@ class CommentSection extends React.Component {
         return (
             <div>
                 <CommentFeedback />
-                {/* {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)} */}
+                {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
                 <CommentInput />
             </div>
         );

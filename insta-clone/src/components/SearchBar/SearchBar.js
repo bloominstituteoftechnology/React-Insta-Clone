@@ -7,7 +7,7 @@ const SearchBar = () => {
         <div className="search-bar-top">
             <div className="logos-wrapper">
                 <i className="fab fa-instagram"></i>
-                <img src = {require("/Users/bryceevans/Desktop/LambdaSchool/React-Insta-Clone/insta-clone/src/assets/insta.png")} alt="logo" className="insta-words" />
+                <img src = {require("../../assets/insta.png")} alt="logo" className="insta-words" />
             </div>
             <div className="search-bar-wrapper">
                 <span className="fa fa-search"></span>
