@@ -1,6 +1,11 @@
 .Header {
 	padding: 1.3rem 0;
 	border-bottom: 1px solid #ddd;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 100000000000;
 }
 
 .Header__nav {
