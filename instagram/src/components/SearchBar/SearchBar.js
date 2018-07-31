@@ -1,35 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-class SearchBar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            current: '',
-            isEmpty: true,
-            onSearch: props.onSearch
-        };
-    }
+const SearchBar = props => {
+    return (
+        <div className="search-bar">
+            <i className="fab fa-instagram fa-2x"></i>
+            <form onSubmit={props.onSearch}>
+                {props.isEmpty ?  <i className="fas fa-search"></i> : <p>&emsp;</p>}
+                <input 
+                    className="search" 
+                    onChange={props.onChange}
+                    type="text" 
+                    placeholder="              Search" />
+            </form>
+        </div>
+    );
+};
 
-    handleSearchChange = e => {
-        var isEmpty = !(e.target.value !== '');
-        this.setState({isEmpty: isEmpty});
-    };
-
-    render () {
-        return (
-            <div className="search-bar">
-                    <i className="fab fa-instagram fa-2x"></i>
-                <form onSubmit={this.state.onSearch}>
-                    {this.state.isEmpty ?  <i className="fas fa-search"></i> : <p>&emsp;</p>}
-                    <input 
-                        className="search" 
-                        onChange={this.handleSearchChange}
-                        type="text" 
-                        placeholder="              Search" />
-                </form>
-            </div>
-        );
-    }
+SearchBar.propTypes = {
+    onSearch: PropTypes.func,
+    onChange: PropTypes.func,
+    isEmpty: PropTypes.bool
 };
 
 export default SearchBar;

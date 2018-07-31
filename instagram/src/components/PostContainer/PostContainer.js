@@ -47,11 +47,11 @@ class PostContainer extends React.Component {
 
 PostContainer.propTypes = {
     comments: PropTypes.arrayOf(PropTypes.object),
-    imageUrl: PropTypes.string,
+    img: PropTypes.string,
     likes: PropTypes.number,
-    thumbnailUrl: PropTypes.string,
-    timestamp: PropTypes.string,
-    username: PropTypes.string,
+    thumbnail: PropTypes.string,
+    time: PropTypes.string,
+    user: PropTypes.string,
 };
 
 export default PostContainer;

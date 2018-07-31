@@ -8,6 +8,8 @@ class App extends Component {
     super();
     this.state = {
       data: dummyData,
+      isEmpty: true,
+      current: '',
     };
   }
 
@@ -15,15 +17,19 @@ class App extends Component {
     e.preventDefault();
   };
 
+  handleSearchChange = e => {
+    this.setState({isEmpty: !(e.target.value !== '')});
+  };
+
   render() {
     return (
       <div className="App">
-        <SearchBar onSearch={this.onSearch} />
+        <SearchBar onSearch={this.onSearch} onChange={this.handleSearchChange} isEmpty={this.state.isEmpty} />
         <div className="posts">
           {
-            this.state.data.map(data =>
+            this.state.data.map((data, ind) =>
             <PostContainer
-              key={data.timestamp}
+              key={data.timestamp + ind}
               user={data.username} 
               thumbnail={data.thumbnailUrl} 
               img={data.imageUrl} 

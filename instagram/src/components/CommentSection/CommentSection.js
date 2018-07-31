@@ -8,7 +8,6 @@ class CommentSection extends Component {
         this.state = {
             comments: props.comments,
             current: '',
-            isEmpty: true,
             time: props.time
         };
     }
@@ -31,7 +30,10 @@ class CommentSection extends Component {
             <div className="comments">
                 {
                     this.state.comments.map((comment, ind) =>
-                    <Comment key={ind} user={comment.username} text={comment.text} />)
+                    <Comment 
+                        key={comment.text + ind} 
+                        user={comment.username} 
+                        text={comment.text} />)
                 }
                 <p>{this.state.time}</p>
                 <hr />
@@ -48,8 +50,9 @@ class CommentSection extends Component {
 };
 
 CommentSection.propTypes = {
-    username: PropTypes.string,
-    text: PropTypes.string,
+    comments: PropTypes.arrayOf(
+        PropTypes.objectOf(PropTypes.string),
+    ),
     time: PropTypes.string,
 };
 
