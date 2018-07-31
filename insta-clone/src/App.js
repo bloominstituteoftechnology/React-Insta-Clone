@@ -6,10 +6,17 @@ import dummy from "./dummy-data";
 
 class App extends Component {
 	state = {
-		data: dummy
+		data: [],
+		searchTerm: ""
 	};
 
-	addComment = (id, comment) => {
+	componentDidMount() {
+		this.setState({
+			data: dummy
+		});
+	}
+
+	handleAddComment = (id, comment) => {
 		this.setState(prevState => ({
 			data: prevState.data.map(post => {
 				if (post.id === id) {
@@ -30,18 +37,51 @@ class App extends Component {
 		}));
 	};
 
+	handleToggleLike = (id, liked ) =>
+		this.setState(prevState => ({
+			data: prevState.data.map(post => {
+				if (post.id === id) {
+					if (liked) {
+						return {
+							...post,
+							likes: post.likes + 1,
+							liked
+						};
+					} else{
+						return {
+							...post,
+							likes: post.likes -1,
+							liked
+						}
+					}
+				} else {
+					return post;
+				}
+			})
+		}));
+
+	handleSearch = searchTerm => this.setState({ searchTerm });
+
 	render() {
+		console.log(this.state.data);
 		return (
 			<div className="App">
-				<Header />
+				<Header onSearch={this.handleSearch} />
 				<section className="container App__cards-container">
-					{this.state.data.map(card => (
-						<Card
-							key={card.id}
-							{...card}
-							onAddComment={this.addComment}
-						/>
-					))}
+					{this.state.data
+						.filter(card =>
+							card.username
+								.toLowerCase()
+								.includes(this.state.searchTerm.toLowerCase())
+						)
+						.map(card => (
+							<Card
+								key={card.id}
+								{...card}
+								onToggleLike={this.handleToggleLike}
+								onAddComment={this.handleAddComment}
+							/>
+						))}
 				</section>
 			</div>
 		);

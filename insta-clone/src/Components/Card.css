@@ -37,8 +37,25 @@
     padding: 1.5rem;
 }
 
+.Card__icons i{
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.Card__icons i:hover {
+    color:#007fff;
+}
+
 .Card__icons i:not(:last-child){
     margin-right: 1rem;
+}
+
+.Card__icons--bubble{
+    transform: rotateY(180deg);
+}
+
+.Card__icons--liked{
+    color:#f44336;
 }
 
 .Card__likes{
@@ -82,4 +99,12 @@
     display: block;
     flex-grow: 1;
     border: none;
+}
+
+.Card__input:focus{
+    outline:none;
+}
+
+.Card__input::placeholder{
+    color: #999;
 }
