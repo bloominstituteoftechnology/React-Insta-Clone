@@ -24,7 +24,7 @@ class App extends Component {
   filterPosts=()=>{
     let filteredPosts=this.state.posts.slice();
     filteredPosts=filteredPosts.filter((e)=>e.username.includes(this.state.searchBarValue));
-    this.setState({filteredPosts:filteredPosts},console.log(this.state.filteredPosts));
+    this.setState({filteredPosts:filteredPosts});
   }
 
   render() {
@@ -32,7 +32,7 @@ class App extends Component {
       <div className="App">
       <SearchBar searchValue={this.state.searchBarValue} handleInputChange={this.handleSearchBarChange}/>
       <div className='posts'>
-      {this.state.filteredPosts.length===0 ?
+      {this.state.searchBarValue==='' ?
       this.state.posts.map((e)=><PostContainer data={e} key={e.imageUrl}/>):
       this.state.filteredPosts.map((e)=><PostContainer data={e} key={e.imageUrl}/>
     )}
