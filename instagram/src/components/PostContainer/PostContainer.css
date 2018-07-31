@@ -2,6 +2,7 @@
 .post-container {
     border: .5px solid lightgray;
     border-radius: 5px;
+    padding-bottom: 5px;
 }
 
 .post-container .post-top {
@@ -19,6 +20,7 @@
 .post-container .post-top .post-username {
     margin: 0;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 /*===================  I M A G E    S E C T I O N =============*/
@@ -36,6 +38,7 @@
     padding: 10px 15px;
     font-weight: bold;
     font-size: 15px;
+    cursor: pointer;
 }
 
 /*===================  I N P U T   S E C T I O N =============*/

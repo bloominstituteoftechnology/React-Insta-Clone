@@ -1,6 +1,9 @@
 /*===================  C O M M E N T   S E C T I O N =============*/
 .comment-section {
-    /* border: 1px solid blue; */
     padding: 5px 15px;
     font-size: 15px;
+}
+
+.comment-section .comment-username {
+    cursor: pointer;
 }
