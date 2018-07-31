@@ -24,7 +24,7 @@ const PostContainer = props => {
             </div>
             
             <div className="comment-input">
-               <input type="text" placeholder="Add a comment..."/> 
+               <input type="text" placeholder="Add a comment..." className="custom-input"/> 
             </div>
             
         </div>
