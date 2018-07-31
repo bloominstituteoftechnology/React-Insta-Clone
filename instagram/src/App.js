@@ -16,6 +16,8 @@ class App extends Component {
 
   onSearch = e => {
     e.preventDefault();
+    e.target.reset();
+    this.setState({data: this.state.data, dataTemp: null, isEmpty: true});
   };
 
   handleSearchChange = e => {

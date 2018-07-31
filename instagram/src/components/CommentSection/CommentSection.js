@@ -17,6 +17,7 @@ class CommentSection extends Component {
         e.preventDefault();
         let comments = this.state.comments.concat({text: this.state.current, username: 'You'});
         localStorage.setItem(this.state.id, JSON.stringify(comments))
+        e.target.reset();
         this.setState({comments});
     };
 
