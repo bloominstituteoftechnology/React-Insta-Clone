@@ -6,25 +6,42 @@ import profile from "../../assets/profile.png";
 import search from "../../assets/search.png";
 import "./SearchBar.css";
 
-const SearchBar = () => (
-  <div className="search-bar">
-    <div className="search-bar__wrapper">
-      <div className="search-bar__brand">
-        <img src={logo} />
-      </div>
-      <div className="search-bar__search">
-        <div className="search-bar__input">
-          <img src={search} />
-          <input type="text" placeholder="Search" />
+const SearchBar = props => {
+  const handleChange = e => {
+    props.handleChange(e.target.value)
+  }
+
+  const handleKeyPress = e => {
+    console.log(e.keyCode)
+    if (e.keyCode === 13) {
+      props.handleSearchSubmit()
+    }
+  }
+
+  return (
+    <div className="search-bar">
+      <div className="search-bar__wrapper">
+        <div className="search-bar__brand">
+          <img src={logo} />
+        </div>
+        <div className="search-bar__search">
+          <div className="search-bar__input">
+            <img src={search} />
+            <input 
+            value={props.searchInput}
+            type="text" 
+            placeholder="Search" 
+            onChange={handleChange}
+            onKeyDown={handleKeyPress} />
+          </div>
+        </div>
+        <div className="search-bar__icons">
+          <img src={navigate} />
+          <img src={favorite} />
+          <img src={profile} />
         </div>
       </div>
-      <div className="search-bar__icons">
-        <img src={navigate} />
-        <img src={favorite} />
-        <img src={profile} />
-      </div>
     </div>
-  </div>
-);
-
+  );
+};
 export default SearchBar;

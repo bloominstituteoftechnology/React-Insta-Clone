@@ -7,6 +7,8 @@ import "./App.css";
 class App extends Component {
   state = {
     posts: dummyData,
+    filteredPosts: [],
+    searchInput: ''
   };
 
   handleAddComment = (comment, post) => {
@@ -55,13 +57,33 @@ class App extends Component {
       }
     })
   }
+
+  handleChange = value => {
+    this.setState({ searchInput: value.toLowerCase()})
+  }
+
+  handleSearchSubmit = () => {
+    let filteredInput = this.state.posts.filter(post => post.username === this.state.searchInput)
+    this.setState({ filteredInput: filteredInput})
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar 
+          handleChange={this.handleChange}
+          searchInput={this.state.searchInput}
+          handleSearchSubmit={this.handleSearchSubmit}
+        />
         <div className="main-body">
           <div className="posts">
-            {this.state.posts.map(post => (
+            {!this.state.filteredInput ? this.state.posts.map(post => (
+              <PostContainer
+                post={post}
+                handleAddComment={this.handleAddComment}
+                handleLikeToggle={this.handleLikeToggle}
+              />
+            )) : this.state.filteredInput.map(post=> (
               <PostContainer
                 post={post}
                 handleAddComment={this.handleAddComment}
