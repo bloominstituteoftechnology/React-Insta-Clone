@@ -35,30 +35,35 @@
     margin-left: 3.5%;
 }
 
-.topSearch {
-  display: inline-flex;
-  flex: 1 1 200px;
+ /* .topSearch {
+  display: flex;
+  width: 197px;
   position: relative;
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
   
-}
-.searchIcon {
+}  */
+/* .searchIcon {
     padding-top: .5rem;
     padding-left: 3vw;
     padding-right: .2rem;
-    font-size: .5vh;
+    font-size: 1vh;
     font-size: 1vw;
-    color: gray;
-}
+    color: gray;} */
+
 
 .searchInput {
-  border: 0;
-  padding: 0.5rem 0.5rem 0.5rem 0;
-  flex: 1;
-}
+  text-align:center; 
+ }
 
+.searchIcon {
+    font-size: .5vh;
+    color: gray; 
+    font-size: .5vw;
+    position: relative;
+    left:35.5%;
+}
 .addCommentInput {
     width: 400px;
     height: 40px;
@@ -71,11 +76,11 @@
 .rightSideSearchBar{
     display: flex;
     justify-content: space-between;
-    margin-left: 13.27394vw;
+    margin-left: 3.27394vw;
 }
 
 .rightSideSearchBar i {
-    margin-right: 3.57873vw;
+    margin-right: 3.87873vw;
     max-width: 100%; 
 }
 
@@ -83,7 +88,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 10.28016vw;
+    margin-right: 8.28016vw;
     width: 175px;
     max-width: 100%; 
 }
