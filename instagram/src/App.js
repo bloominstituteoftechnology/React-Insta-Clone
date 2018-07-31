@@ -9,14 +9,14 @@ class App extends Component {
   constructor(){
     super()
     this.state ={
-      dummyData
+      posts: dummyData
     }
   }
   render() {
     return (
       <div className="container">
         <SearchBar />
-          <PostContainer />
+          <PostContainer posts={this.state.posts}/>
       </div>
     );
   }

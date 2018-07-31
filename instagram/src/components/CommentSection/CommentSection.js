@@ -1,13 +1,34 @@
 import React, { Component } from 'react';
 import './CommentSection.css';
-import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button} from 'reactstrap';
+import PropTypes from 'prop-types';
+import Comment from './Comment';
 
-    const CommentSection  = (props) => {
-      return(
-      <div> hello </div>
-    )
+
+
+    class CommentSection extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          comments: props.comments
+        };
+      }
+      render() {
+        return (
+          <div className = 'commentsection'>
+            {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
+            <form>
+              <input type="text" placeholder="Add comment... " />
+            </form>
+
+          </div>
+        );
+      }
     }
 
-    export  default CommentSection
+    CommentSection.propTypes = {
+      comments: PropTypes.arrayOf(
+        PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
+      )
+    };
+
+    export default CommentSection;

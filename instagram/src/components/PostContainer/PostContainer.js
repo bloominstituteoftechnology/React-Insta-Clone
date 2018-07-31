@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
 import './PostContainer.css';
-import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button} from 'reactstrap';
-    import CommentSection from '../CommentSection/CommentSection'
+import PostBody from './PostBody'
 
-const PostContainer = (props) => {
+const PostContainer = props => {
   return(
     <div className = 'container'>
-    <h1> Post </h1>
-    <CommentSection/>
-
-    </div>
+        {props.posts.map(a => <PostBody key={a.imageUrl} post={a} />)}
+      </div>
   )
 
   }
