@@ -1,6 +1,6 @@
 import React from 'react'
 // import CommentSection from "../CommentSection/CommentSectionContainer";
-// import PostHeader from "./PostHeader";
+import PostHeader from "./PostHeader";
 
 import "./Posts.css";
 
@@ -16,9 +16,13 @@ import "./Posts.css";
 const Post = props => {
   return (
     <div>
+    <PostHeader
+        username={props.post.username}
+        thumbnailUrl={props.post.thumbnailUrl}
+      />
       <div>
         <img
-          alt="post thumbnail"
+          alt="someones content"
           className="post-image"
           src={props.post.imageUrl}
         />
@@ -26,5 +30,6 @@ const Post = props => {
     </div>
   );
 };
+
 
 export default Post;
