@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import dummyData from "../../dummy-data";
 
 //what is going on in the code
 //I am creating a object called CommentSection.
@@ -8,22 +7,16 @@ import dummyData from "../../dummy-data";
 const CommentSection = props => {
   return (
     <div className="comment-container">
-      {this.state.comments.map((comments, data) => (
-        <div key={data}>
+      {props.comments.map((eachComment, index) => (
+        <div key={index}>
           <div className="comment-section">
-            <p className="comment user">{props.comments.username}</p>
-            <p className="comment">{props.comments.text}</p>
+            <p className="comment user">{eachComment.username}</p>
+            <p className="comment">{eachComment.text}</p>
           </div>
         </div>
       ))}
     </div>
   );
-};
+}; 
 
-CommentSection.propTypes = {
-  comment: PropTypes.shape({
-    text: PropTypes.string,
-    username: PropTypes.string
-  })
-};
 export default CommentSection;

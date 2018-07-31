@@ -1,14 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
 import CommentInput from "../CommentSection/CommentInput";
 import dummyData from "../../dummy-data";
 
 const PostContainer = props => {
   return (
     <div className="post-container">
-      {props.posts.map((item, data) => {
+      {props.posts.map((item, index) => {
         return (
-          <div key={data}>
+          <div key={index}>
             <div className="username-header">
               <img className="thumbnail" src={item.thumbnailUrl} alt="user" />
               <div className="user head">{item.username}</div>
