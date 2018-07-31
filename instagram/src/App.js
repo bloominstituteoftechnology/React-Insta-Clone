@@ -13,7 +13,7 @@ class App extends Component {
     this.state = {}
   }
   render() {
-    dummyData.map((post, i) => console.log(post.timestamp))
+    //dummyData.map((post, i) => console.log(post.timestamp))
     return (
       <div className="App">
         

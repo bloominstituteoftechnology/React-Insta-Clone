@@ -12,11 +12,12 @@ class CommentSection extends React.Component {
 
     render(){
         const comments = this.props.comments;   
-
+        //console.log(comments);
+        console.log(this.props)
         return(
 
             <div>
-                {comments.map((comment, i) => <Comments key={i}userName = {comment.username} text = {comment.text} time ={comment.timestamp}/>)}
+                {comments.map((comment, i) => <Comments key={i}userName = {comment.username} text = {comment.text} time ={this.props.time}/>)}
                 <hr className ="hrLine postHrLine"/>
                 <input className ="addComment" placeholder = "Add a comment..."/>
             </div>
