@@ -1,12 +1,13 @@
 import React from 'react';
 import './SearchBar.css';
 
+
 const SearchBar = () => {
     return (
         <div className="search-bar-top">
             <div className="logos-wrapper">
                 <i class="fab fa-instagram"></i>
-                <img src="./insta.png" alt="logo" className="insta-words" />
+                <img src = {require("/Users/bryceevans/Desktop/LambdaSchool/React-Insta-Clone/insta-clone/src/assets/insta.png")} alt="logo" className="insta-words" />
             </div>
             <div className="search-bar-wrapper">
                 <span class="fa fa-search"></span>

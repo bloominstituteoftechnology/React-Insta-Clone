@@ -13,7 +13,8 @@
 
 .insta-words {
     border-left: 1px solid grey;
-    padding-left: 30px;
+    padding-left: 20px;
+    height: 50px;
 }
 
 .search-bar-wrapper {
