@@ -10,14 +10,17 @@ import moment from 'moment';
 class Post extends Component {
     constructor(props){
         super(props);
-        this.state = {comments: [], currentComment: '', currentUser: 'Bobby123', likes: 0, liked: false};
+        this.state = {comments: props.post.comments, currentComment: '', likes: props.post.likes, liked: false, id: props.id};
     }
 
     componentDidMount(){
-        this.setState({comments: this.props.post.comments, likes: this.props.post.likes});
-        // let storagePost = storage.getItem('posts');
-        // storagePost += JSON.stringify(this.props);
-        // storage.setItem('posts', storagePost);
+        localStorage.getItem(this.state.id) && this.setState({
+            comments: JSON.parse(localStorage.getItem(this.state.id))
+        });
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+        localStorage.setItem(this.state.id, JSON.stringify(nextState.comments));
     }
 
     commentHolder = (event) => {
@@ -27,12 +30,19 @@ class Post extends Component {
     addComment = (event, prevState) => {
         event.preventDefault();
         let comment = this.state.currentComment;
-        let user = this.state.currentUser;
+        let user = this.props.currentUser;
         let newList = this.state.comments.slice();
         let newComment = {text: comment, username: user};
         newList.push(newComment);
         this.setState({comments: newList});
         event.target.children[0].value = '';
+        localStorage.setItem(this.state.id, JSON.stringify(newList));
+    }
+
+    deleteComment = (event) => {
+        this.setState({
+            comments: this.state.comments.filter(comment => comment.text !== event.target.innerText)
+        })
     }
 
     toggleLike= () => {
@@ -63,7 +73,7 @@ class Post extends Component {
                         <FontAwesomeIcon icon={['far', 'comment']} className="icon" />
                     </div>
                     <p className="likes">{this.state.likes} likes</p>
-                    <CommentSection comments={this.state.comments} />
+                    <CommentSection comments={this.state.comments} deleteComment={this.deleteComment} />
                     <p className="timestamp">{moment(this.props.post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</p>
                     <form onSubmit={this.addComment} className="add-comment">
                         <input type="text" placeholder="Add a comment" onChange={this.commentHolder} ></input>

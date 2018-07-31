@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <div className="container">
         <SearchBar onSearch={this.searchInput} />
-        <PostContainer posts={this.state.shownPosts} />
+        <PostContainer posts={this.state.shownPosts} currentUser={'Bobby123'} />
       </div>
     );
     }

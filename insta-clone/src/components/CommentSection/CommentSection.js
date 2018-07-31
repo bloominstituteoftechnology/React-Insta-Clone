@@ -7,7 +7,7 @@ const CommentSection = (props) => {
         <div className="comment-container">
             {props.comments.map(comment => {
                 return (
-                    <div className="comment" key={comment.text + comment.username}>
+                    <div className="comment" key={comment.text + comment.username} onClick={props.deleteComment} >
                         <p className="username">{comment.username}</p>
                         <p className="text">{comment.text}</p>
                     </div>
