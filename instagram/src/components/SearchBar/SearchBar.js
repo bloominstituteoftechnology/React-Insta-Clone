@@ -3,6 +3,9 @@ import "./SearchBar.css";
 import cam from "../../assets/instagram-brands.svg";
 import textLogo from "../../assets/insta-text-logo.svg";
 
+
+// input field should be refactored eventually into its own component
+
 const SearchBar = () => {
   return (
     <div className="header">

@@ -4,6 +4,7 @@
     background: #ffffff;
     position: fixed;
     width: 100vw;
+    top: 0;
 }
 
 .container {
