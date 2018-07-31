@@ -11,7 +11,7 @@ class CommentSection extends React.Component {
     }
 
     componentDidMount () {
-        this.setState({comments:this.props.comments, cmdCalled: true, temp: ""});
+        this.setState({comments:this.props.comments, cmdCalled: true, temp: "", valueSet: false});
       }
 
     
@@ -19,29 +19,22 @@ class CommentSection extends React.Component {
         this.setState({
             temp: event.target.value
         })
-        console.log(this.state.temp);
+        // console.log(this.state.temp);
+        //this.state.temp ? this.setState({valueSet: true}): this.setState({valueSet: false}); 
     }
 
-    handleChange = event => {
-        this.setState(
-          {temp: event.target.value}
-        )
-        console.log(event.target.value);
-      }
+    
     addNewComment = event => {
         const text = this.state.temp;
         const comments = this.state.comments; 
-
         if(event.keyCode === 13 ){ 
             comments.push({username: "you", text:text})
             event.target.value = ""
             this.setState({comments: comments, temp:""});
         }
 
-        console.log(event.target.placeholder);
         if(event.target.innerHTML === "Submit" && text.length > 0){
             comments.push({username: "you", text:text})
-            event.target.value = ""
             this.setState({comments: comments, temp:""});
         }
 
@@ -59,7 +52,8 @@ class CommentSection extends React.Component {
 
         const time = moment(this.props.time, 'MMMM Do YYYY, h:mm:ss a').fromNow()
         
-        const value = this.state.temp;
+        let value;
+        this.state.temp ? value = this.state.temp : value = ""; 
         return(
 
             <div>
@@ -69,7 +63,7 @@ class CommentSection extends React.Component {
                 <hr className ="postHrLine"/>
                 <div className = "addComment">
                   <form onSubmit ={this.handleOnSubmit}>      
-                    <input className ="addCommentInput"  onChange = {this.handleOnChange} onKeyUp = {this.addNewComment} placeholder = "Add a comment..."/>
+                    <input className ="addCommentInput"  value = {value} onChange = {this.handleOnChange} onKeyUp = {this.addNewComment} placeholder = "Add a comment..."/>
                     <i onClick= {this.addNewComment} className="fas fa-ellipsis-h">Submit</i>
                  </form>
                 </div>
