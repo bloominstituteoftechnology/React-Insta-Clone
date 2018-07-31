@@ -9,8 +9,32 @@ class CommentSection extends React.Component {
         super(props);
         this.state = {
             comments: props.comments, 
-            timeStamp: props.timeStamp
+            timeStamp: props.timeStamp,
+            newComment: ''
         }
+    }
+
+    addNewCommentHandler = event => {
+        let inputValue = event.target.value; 
+        this.setState({
+            newComment: inputValue
+        })
+    }
+
+    onSubmitHandler = event => {
+        event.preventDefault(); 
+        let comments =this.state.comments.slice(); 
+        console.log(comments)
+        let comment = {
+            username: "katiagilligan",
+            text: this.state.newComment
+        }
+        comments.push(comment); 
+        this.setState({
+            comments: comments, 
+            newComment: ""
+        })
+
     }
 
     render() {
@@ -19,11 +43,13 @@ class CommentSection extends React.Component {
                {this.state.comments.map((comment, index) => {
                   return <NewComment key = {index} commentUser = {comment.username} commentText = {comment.text}/>
                 })}
-                {console.log(this.state.comments)}
                 <p className = "timestamp">{this.state.timeStamp}</p>
                 <div className = "addComment">
-                    <p>Add a comment...</p>
-                </div>
+                    <form onSubmit = {this.onSubmitHandler}>
+                        <input value = {this.state.newComment} type = "text" onChange = {this.addNewCommentHandler} placeholder = "Add a comment..." />
+                        <input type = "submit" />   
+                    </form>
+                </div>  
             </div>
         )
     }
