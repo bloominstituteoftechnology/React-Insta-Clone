@@ -19,14 +19,18 @@ class App extends Component {
 
   handleSearchChange = event => {
     this.setState({searchText: event.target.value});
-    console.log(this.state.searchText);
+    const dummyData = this.state.dummyData; 
+    const prevDummyData = this.state.dummyData; 
+    dummyData.filter(post => post.username === this.state.searchText);
+    
+    dummyData ? this.setState({dummyData:dummyData}) : this.setState({dummyData: prevDummyData});
   }
   
 
   render() {
     let dummyData; 
     this.state.cmdCalled ? dummyData = this.state.dummyData : dummyData = []
-    console.log(this.handleSearchChange)
+    
     return (
       <div className="App">
         <SearchBar  value ={this.state.searchText} onChange = {this.handleSearchChange}/>
