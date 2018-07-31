@@ -20,11 +20,15 @@ class App extends Component {
     this.setState({data: dummyData})
   }
 
+  liked = e => {
+    this.setState({ likes: this.state.likes + 1})
+  }
+
   render() {
     return (
       <div>
         <SearchContainer />
-        <PostContainer user={this.state.data} />
+        <PostContainer user={this.state.data} likes={this.state.likes} liked={this.liked}/>
       </div>
     );
   }

@@ -4,6 +4,7 @@ import './Post.css'
 
 const PostContainer = props => {
     console.log(props.user)
+    console.log(props)
     return (
         <div>
             {props.user.map((user, index) => {
@@ -19,7 +20,7 @@ const PostContainer = props => {
                     </div>
 
                     <div>
-                    <i className="far fa-heart"></i> <i className="far fa-comment"></i>
+                    <i onClick={props.liked} className="far fa-heart"> {props.likes} </i> <i className="far fa-comment"></i>
                     </div>
 
                     <div className='likes'>
