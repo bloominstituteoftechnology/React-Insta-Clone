@@ -1,6 +1,33 @@
 .search-container{
-    height: 154px;
+    height: 77px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 77px;
+}
+.instagram{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 5px;
+    border-left: 1px solid lightgray;
+}
+.search-container input{
+    font-size: 16px;
+    text-align: center;
+    width: 215px;
+    line-height: 1.5;
+    border-radius: 5px;
+}
+.search-container .far{
+    font-size: 24px;
+    padding: 0 15px;
+}
+.search-container .fab{
+    font-size: 30px;
+    padding: 0 15px;
 }
