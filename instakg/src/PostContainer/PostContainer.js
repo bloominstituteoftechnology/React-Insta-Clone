@@ -11,10 +11,10 @@ import PropTypes from 'prop-types';
    return(
     <div className="post">
       <div className="row header">
-        <div className='userIcon'> <img className="userIcon" src={props.data.thumbnailUrl}></img> </div>     
+        <div className='userIcon'> <img alt='usericon' className="userIcon" src={props.data.thumbnailUrl}></img> </div>     
         <div className='userName'> {props.data.username}</div>
       </div>
-    <div className='postImageContainer'><img src={props.data.imageUrl}></img> </div> 
+    <div className='postImageContainer'><img alt='postimage' src={props.data.imageUrl}></img> </div> 
     <div className='row iconRow'>
     
       <FontAwesomeIcon className="icon" icon={faHeart} />
@@ -30,7 +30,7 @@ import PropTypes from 'prop-types';
     <div className='timeStamp'> 2 HOURS AGO</div>
     <div className='commentBar'/>
     <div className="row AddComment">
-    <span className="commentSubmitField">Add a comment...</span>
+    <input type='text' id={props.id} className='commentSubmitField' placeholder='Add a comment...' onKeyUp={props.methods}></input>
     <FontAwesomeIcon className="icon moreIcon" icon={faEllipsisH} />
     </div>
     </div>

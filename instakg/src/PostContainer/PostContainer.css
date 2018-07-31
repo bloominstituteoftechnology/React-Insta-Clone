@@ -79,6 +79,13 @@ img{
 }
 .commentSubmitField{
     opacity: .5;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+
+}
+.commentSubmitField:focus{
+    opacity: 1;
 }
 
 .commentBox{
@@ -86,3 +93,4 @@ img{
     flex-direction: column;
     align-items: flex-start;
 }
+
