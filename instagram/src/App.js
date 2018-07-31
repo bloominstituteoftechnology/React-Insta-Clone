@@ -22,17 +22,13 @@ class App extends Component {
 
   searchHandler = e => {
     e.preventDefault();
+    console.log('searchHandler envoked')
     const searchArray = this.state.data.slice();
-    console.log(searchArray)
-    console.log(this.state.searchValue)
-
     const newSearchArray = searchArray.filter( post => post.username.includes(this.state.searchValue));
-
     this.setState({
       displayData: newSearchArray,
       searchValue: '',
     })
-    console.log('searchHandler envoked')
   }
 
   componentDidMount(){

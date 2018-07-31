@@ -15,8 +15,6 @@ class PostContainer extends React.Component {
     }
   }
 
-
-
   toggleLike = (e) => {
     e.preventDefault();
     let newLikes = this.state.likes;
@@ -43,20 +41,31 @@ class PostContainer extends React.Component {
 
   render() {
     return (
-      <div className="post-container" data={this.state.data}>
-        {/* {console.log(props)} */}
-        <div className="row">
-          <img className="thumbnail" src={this.state.data.thumbnailUrl} alt="thumbnail"></img>
+      <div
+        className="post-container"
+        data={this.state.data}>
+        <div
+          className="row">
+          <img
+            className="thumbnail" src={this.state.data.thumbnailUrl} alt="thumbnail"></img>
           <p className="username">{this.state.data.username}</p>
         </div>
-        <img className="main-photo" src={this.state.data.imageUrl} alt="main"></img>
+        <img
+          className="main-photo" src={this.state.data.imageUrl} alt="main"></img>
         <div className="row">
-          <img onClick={this.toggleLike} className={(this.state.likeStatus) ? "heart hide" : "heart"}  src="https://www.freepngimg.com/download/instagram/1-2-instagram-heart-transparent.png" alt="heart"></img>
-          <img onClick={this.toggleLike} className={(this.state.likeStatus) ? "dark-heart" : "dark-heart hide"} src={require("./heart.svg")} alt="dark-heart"></img>
-          <img className="bubble" src="https://image.flaticon.com/icons/png/512/22/22302.png" alt="bubble"></img>
+          <img
+            onClick={this.toggleLike} className={(this.state.likeStatus) ? "heart hide" : "heart"}  src="https://www.freepngimg.com/download/instagram/1-2-instagram-heart-transparent.png" alt="heart"></img>
+          <img
+            onClick={this.toggleLike} className={(this.state.likeStatus) ? "dark-heart" : "dark-heart hide"} src={require("./heart.svg")} alt="dark-heart"></img>
+          <img
+            className="bubble"
+            src="https://image.flaticon.com/icons/png/512/22/22302.png"
+            alt="bubble"></img>
         </div>
         <p className="likes"><strong>{this.state.likes} likes</strong> </p>
-        <CommentSection comments={this.state.data.comments} time={this.state.data.timestamp}/>
+        <CommentSection
+          comments={this.state.data.comments}
+          time={this.state.data.timestamp}/>
       </div>
     )
   }
@@ -72,6 +81,5 @@ PostContainer.propTypes = {
     comments: PropTypes.array
   })
 }
-//check that data is the correct type
 
 export default PostContainer;

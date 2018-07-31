@@ -38,11 +38,27 @@
   - Update your state with the new comment (This should trigger your component tree to "re-render" with your new comment on that post). -->
 <!-- - Liking posts
   - This will be set up a lot like the 'Add a comment...' input. Pass a function down to where your heart icon is, and use `onClick` event handler to increment that post's likes. -->
-- Search
-  - Set up the search bar will like the comment input and the like button. In your function, filter out any post whose username doesn't match the search term passed in, then update the state with the resulting data.
+<!-- - Search
+  - Set up the search bar will like the comment input and the like button. In your function, filter out any post whose username doesn't match the search term passed in, then update the state with the resulting data. -->
 
 #### Stretch Problems (Day II)
 
 - Persist your data using `localhost`. If done correctly, you will be able to refresh your page and still see your new comments.
 - Add the ability to delete a comment from your data. If your data is in `localhost`, make sure to delete it from there as well.
 - Implement a third-party library that does "fuzzy" searches into your search bar functionality (ie - search terms that aren't exact, like "phils" or "coffeephilz", would still return the username "philzcoffe").
+
+
+// 
+// const newSearchArray = searchArray.filter( post => {
+//   if (post.username.includes(this.state.searchValue)) {
+//   this.setState({
+//     displayData: newSearchArray,
+//     searchValue: '',
+//   })} else if (post.text.includes(this.state.searchValue)) {
+//     this.setState({
+//       displayData: newSearchArray,
+//       searchValue: '',
+//     })
+//   }
+// console.log('searchHandler envoked');
+// }
