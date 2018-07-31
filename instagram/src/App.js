@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Fuse from 'fuse.js';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
@@ -10,7 +11,6 @@ class App extends Component {
       data: [],
       dataTemp: null,
       isEmpty: true,
-      query: '',
     };
   }
 
@@ -19,14 +19,25 @@ class App extends Component {
   };
 
   handleSearchChange = e => {
-    let dataTemp = (e.target.value !== '' ?
-      this.state.data.filter(data => 
-        data.username.includes(this.state.query))
-      : null);
+    if (e.target.value !== '') {
+      var dataTemp;
+      let options = {
+        shouldSort: true,
+        threshold: 0.6,
+        location: 0,
+        distance: 20,
+        maxPatternLength: 30,
+        minMatchCharLength: 1,
+        keys: ["username"]
+      };
+      dataTemp = new Fuse(this.state.data, options).search(e.target.value);
+    } else {
+      dataTemp = null;
+    }
+
     this.setState({
-      dataTemp: dataTemp,
+      dataTemp: dataTemp, 
       isEmpty: !(e.target.value !== ''),
-      query: e.target.value,
     });
   };
 
