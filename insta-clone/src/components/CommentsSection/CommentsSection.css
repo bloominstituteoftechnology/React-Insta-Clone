@@ -1,0 +1,16 @@
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.comment {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0 10px;
+}

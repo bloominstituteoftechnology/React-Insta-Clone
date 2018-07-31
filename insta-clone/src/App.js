@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
-import CommentsSection from './components/CommentsSection/CommentsSection';
 import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
-
+import SearchBar from './components/SearchBar/SearchBar'
+import dummyData from './dummy-data.js';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      posts: dummyData
+    };
+  }
   render() {
     return (
       <div className="App">
-
         <SearchBar />
-        <PostContainer />
-        <CommentsSection />
+        {this.state.posts.map(post => {
+          return <PostContainer key={post.timestamp} data={post} />
+        })}
       </div>
     );
   }

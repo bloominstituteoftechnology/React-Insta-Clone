@@ -1,0 +1,43 @@
+.post-container {
+  border: 1px solid black;
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px;
+  width: 100%;
+}
+
+.thumbnail {
+  width: 5%;
+  height: 10%;
+  border-radius: 45px;
+  margin: 10px;
+}
+
+h4 {
+  margin: 15px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.buttons i {
+  margin-right: 10px;
+}
