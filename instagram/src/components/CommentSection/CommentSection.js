@@ -34,12 +34,14 @@ class CommentSection extends React.Component {
 
         if(event.keyCode === 13 ){ 
             comments.push({username: "you", text:text})
+            event.target.value = ""
             this.setState({comments: comments, temp:""});
         }
 
         console.log(event.target.placeholder);
         if(event.target.innerHTML === "Submit" && text.length > 0){
             comments.push({username: "you", text:text})
+            event.target.value = ""
             this.setState({comments: comments, temp:""});
         }
 
