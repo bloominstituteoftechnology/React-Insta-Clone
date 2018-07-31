@@ -8,6 +8,9 @@ const CommentSection = props => {
             {props.comments.map(comment => (
                 <Comment comment={comment} />
             ))}
+            <form>
+                <input type="text" placeholder="Add comment... " className="comment-input" />
+            </form>
         </div>
     );
 };

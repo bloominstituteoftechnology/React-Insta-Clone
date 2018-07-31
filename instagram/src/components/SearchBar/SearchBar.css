@@ -6,7 +6,18 @@
     height: 40px;
 }
 
+.search-bar-left {
+    text-align: left;
+    width: 188px;
+}
+
 .search-input {
     text-align: center;
-    /* margin-right: 39px; */
+    margin-left: 20%;
+    margin-right: 20%;
+    /* margin-bottom: 42px; */
+}
+
+.search-icons {
+    margin: 0 5px;
 }

@@ -2,3 +2,8 @@
     font-weight: bold;
     margin-left: 20px;
 }
+
+.comment-input {
+    width: 100%;
+    line-height: 32px;
+}
