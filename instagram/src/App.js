@@ -7,9 +7,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData,
+      data: [],
+      dataTemp: null,
       isEmpty: true,
-      current: '',
+      query: '',
     };
   }
 
@@ -18,25 +19,43 @@ class App extends Component {
   };
 
   handleSearchChange = e => {
-    this.setState({isEmpty: !(e.target.value !== '')});
+    let dataTemp = (e.target.value !== '' ?
+      this.state.data.filter(data => 
+        data.username.includes(this.state.query))
+      : null);
+    this.setState({
+      dataTemp: dataTemp,
+      isEmpty: !(e.target.value !== ''),
+      query: e.target.value,
+    });
   };
 
+  componentDidMount() {
+    this.setState({
+      data: dummyData,
+    });
+  }
+
   render() {
+    let data = (this.state.dataTemp ? this.state.dataTemp : this.state.data)
     return (
       <div className="App">
-        <SearchBar onSearch={this.onSearch} onChange={this.handleSearchChange} isEmpty={this.state.isEmpty} />
+        <SearchBar 
+          onSearch={this.onSearch} 
+          onChange={this.handleSearchChange} 
+          isEmpty={this.state.isEmpty} />
         <div className="posts">
           {
-            this.state.data.map((data, ind) =>
-            <PostContainer
-              key={data.timestamp + ind}
-              user={data.username} 
-              thumbnail={data.thumbnailUrl} 
-              img={data.imageUrl} 
-              likes={data.likes} 
-              time={data.timestamp}
-              comments={data.comments}
-            />)
+              data.map((data, ind) =>
+                <PostContainer
+                  key={data.timestamp + ind}
+                  user={data.username} 
+                  thumbnail={data.thumbnailUrl} 
+                  img={data.imageUrl} 
+                  likes={data.likes} 
+                  time={data.timestamp}
+                  comments={data.comments}
+                />)
           }
         </div>
       </div>
