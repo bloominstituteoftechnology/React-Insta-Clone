@@ -9,10 +9,22 @@ const PostContainer = props =>{
     {props.posts.map((item, data)=>{
         return(
             <div key={data}>
+            <div className="username-header">
             <img className = "thumbnail" src={item.thumbnailUrl} alt="user"/>
-            <div>{item.username}</div>
+            <div className="user head">{item.username}</div>
+            </div>
             <img className = "post-img" src={item.imageUrl} alt="Post-Image"/>
-            <div>Likes{item.likes}</div>
+            <div className="img-icons">
+            <div className="img-icon-left">
+            <i class="far fa-heart"></i>
+            <i class="far fa-comment"></i>
+            <i class="fas fa-paper-plane"></i>
+            </div>
+            <div className="img-icon-right">
+            <i class="far fa-bookmark"></i>
+            </div>
+            </div>
+            <div class="comment user likes">{item.likes} likes</div>
             <div><CommentSection comments={item.comments}/></div>
             </div>
         )}
