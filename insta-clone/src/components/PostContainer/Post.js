@@ -13,14 +13,12 @@ class Post extends Component {
         this.state = {comments: props.post.comments, currentComment: '', likes: props.post.likes, liked: false, id: props.id};
     }
 
-    componentDidMount(){
-        localStorage.getItem(this.state.id) && this.setState({
-            comments: JSON.parse(localStorage.getItem(this.state.id))
-        });
-    }
-
-    componentWillUpdate(nextProps, nextState) {
-        localStorage.setItem(this.state.id, JSON.stringify(nextState.comments));
+    componentDidMount() {
+        // localStorage.getItem(this.state.id) && 
+        let comments = JSON.parse(localStorage.getItem(this.state.id));
+        if (localStorage.getItem(this.state.id)){
+            this.setState({comments});
+        }
     }
 
     commentHolder = (event) => {
@@ -40,6 +38,9 @@ class Post extends Component {
     }
 
     deleteComment = (event) => {
+        let comments = JSON.parse(localStorage.getItem(this.state.id));
+        let result = comments.filter(comment => comment.text !== event.target.innerText)
+        localStorage.setItem(this.state.id, JSON.stringify(result));
         this.setState({
             comments: this.state.comments.filter(comment => comment.text !== event.target.innerText)
         })
