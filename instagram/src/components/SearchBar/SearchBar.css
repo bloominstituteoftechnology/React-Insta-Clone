@@ -1,4 +1,19 @@
+/*==================== S E A R C H  B A R    S E C T I O N ================*/
 .search-bar {
-    border: solid black;
-    margin: 20px auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    /* border-bottom: .5px solid lightgray; */
+}
+
+.search-bar .search-input {
+    width: 220px;
+    text-align: center;
+    background-color: #FAFAFA;
+    color: lightgrey;
+    border: .5px solid lightgray;
+    border-radius: 5px;
+    padding: 5px 0;
+    font-size: 15px;
 }

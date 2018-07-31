@@ -5,7 +5,6 @@
 }
 
 .post-container .post-top {
-    border: .5px solid lightgray;
     display: flex;
     align-items: center;
     padding: 15px;
@@ -20,7 +19,6 @@
 .post-container .post-top .post-username {
     margin: 0;
     margin-left: 10px;
-    /* font-size: 15px; */
 }
 
 /*===================  I M A G E    S E C T I O N =============*/
@@ -42,8 +40,8 @@
 
 /*===================  I N P U T   S E C T I O N =============*/
 .post-container .comment-input {
-    /* border: 1px solid red; */
     padding: 0 15px;
+    color: red;
 }
 
 .post-container .comment-input .custom-input {
