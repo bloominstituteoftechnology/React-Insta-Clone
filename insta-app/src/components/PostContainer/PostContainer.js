@@ -1,44 +1,37 @@
-import React from 'react'; 
-import PropTypes from 'prop-types'; 
-import CommentSection from '../CommentSection/CommentSection'; 
-import dummyData from '../../dummy-data'
+import React from "react";
+import PropTypes from "prop-types";
+import CommentInput from "../CommentSection/CommentInput";
+import dummyData from "../../dummy-data";
 
-const PostContainer = props =>{
-    return(
+const PostContainer = props => {
+  return (
     <div className="post-container">
-    {props.posts.map((item, data)=>{
-        return(
-            <div key={data}>
+      {props.posts.map((item, data) => {
+        return (
+          <div key={data}>
             <div className="username-header">
-            <img className = "thumbnail" src={item.thumbnailUrl} alt="user"/>
-            <div className="user head">{item.username}</div>
+              <img className="thumbnail" src={item.thumbnailUrl} alt="user" />
+              <div className="user head">{item.username}</div>
             </div>
-            <img className = "post-img" src={item.imageUrl} alt="Post-Image"/>
+            <img className="post-img" src={item.imageUrl} alt="Post-Image" />
             <div className="img-icons">
-            <div className="img-icon-left">
-            <i className="far fa-heart"></i>
-            <i className="far fa-comment"></i>
-            <i className="fas fa-paper-plane"></i>
-            </div>
-            <div className="img-icon-right">
-            <i className="far fa-bookmark"></i>
-            </div>
+              <div className="img-icon-left">
+                <i className="far fa-heart" />
+                <i className="far fa-comment" />
+                <i className="fas fa-paper-plane" />
+              </div>
+              <div className="img-icon-right">
+                <i className="far fa-bookmark" />
+              </div>
             </div>
             <div className="comment user likes">{item.likes} likes</div>
-            <div><CommentSection comments={item.comments}/></div>
+            <div>
+              <CommentInput comments={item.comments} />
             </div>
-        )}
-    )}
+          </div>
+        );
+      })}
     </div>
-    )
-}
-PostContainer.propTypes ={
-   item: PropTypes.arrayOf(PropTypes.object),
-        PostContainer: PropTypes.shape,
-            thumbnailUrl: PropTypes.object, 
-            username: PropTypes.string, 
-            imageUrl: PropTypes.object, 
-            comments: PropTypes.string, 
-            likes: PropTypes.string, 
-}
-export default PostContainer; 
+  );
+};
+export default PostContainer;

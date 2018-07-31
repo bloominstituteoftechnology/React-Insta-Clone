@@ -12,6 +12,7 @@
 }
 i {
     margin: 0 10px; 
+    cursor: pointer;
 }
 /* Top bar content Above */
 .post-container{
@@ -35,8 +36,7 @@ i {
     height:50px; 
 }
 .post-img{
-    height: 500px;
-    width: 500px; 
+   width: 100%; 
 }
 .likes{
     margin: 10px 0; 
