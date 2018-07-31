@@ -1,11 +1,9 @@
 .app-container{
     width: 500px; 
     height: auto; 
-    border: 1px solid lightcoral; 
     margin: auto; 
 }
 .top-bar{
-    border: 1px solid black; 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
@@ -13,18 +11,29 @@
     height: 50px; 
 }
 .top-bar-left{
-    border: 1px solid lightblue; 
     width: 150px; 
     height: 40px; 
 }
 .top-bar-right{
-    border: 1px solid lightblue; 
     width: 100px; 
     height: 40px; 
 }
+:placeholder-shown{
+    display: flex;
+    align-content: center; 
+}
+/* Top bar content Above */
 .post-container{
     margin: auto; 
-    border: 1px solid lightgreen; 
+}
+.username-header{
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    margin: 10px 0; 
+}
+.head{
+    margin-left: 10px; 
 }
 .thumbnail{
     border-radius: 50%;
@@ -38,11 +47,39 @@
     height: 500px;
     width: 500px; 
 }
-
+.likes{
+    margin: 10px 0; 
+}
+.img-icons{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    width:auto; 
+}
+.img-icon-left{
+    margin: 5px 0; 
+    display: flex; 
+    align-items: center; 
+}
+.img-icon-right{
+    margin: 5px 0; 
+    display: flex; 
+    align-items: center; 
+}
+/* Username and img Above */
 .comment-container{
-    border: 1px solid seagreen; 
     height: auto; 
 }
-.comment{
-    font-size: 12px; 
+.comment-section{
+    display: flex; 
+    flex-direction: row; 
+    margin: 10px 0; 
 }
+.user{
+    font-weight: 700; 
+}
+.comment{
+    font-size: 12px;
+    margin-left: 10px;  
+}
+/* Comment Section */
