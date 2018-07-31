@@ -4,6 +4,13 @@ import './CommentSection.css';
 import Comments from '../CommentSection/Comments';
 
 const CommentSection = (props) => {
+  let postDate = props.comment.timestamp.split(",")[0];
+  postDate = postDate.replace("th", "").split(" ")
+  postDate = postDate[1] + " " + postDate[0] + " " + postDate[2]
+  postDate = new Date(postDate).getTime();
+  let dateNow = Date.now();
+  let timeSince = Math.ceil((dateNow - postDate) / (1000 * 3600 * 24))
+  console.log(timeSince)
   return (
     <div className="commentDiv">
       <div className="userNameDiv">
@@ -21,7 +28,7 @@ const CommentSection = (props) => {
       <div className="listOfCommentsDiv">
         {props.comment.comments.map(comment => <Comments comment={comment} />)} 
       </div>
-      <h5>{Date.now()}</h5> // add real date here
+      <h4>{timeSince} DAYS AGO</h4>
 
     </div>
   )
