@@ -1,7 +1,7 @@
 import React from 'react';
 import './Search.css'
 
-const SearchContainer = () => {
+const SearchContainer = props => {
     return (
         <div className='container'>
 
@@ -10,11 +10,16 @@ const SearchContainer = () => {
             </div>
 
             <div className='search'>
-                <input
-                    type='text'
-                    name='search'
-                    placeholder='search'
-                />
+                <form onSubmit={props.search}>
+                    <input
+                        type='text'
+                        name='search'
+                        placeholder='search'
+                        value={props.search}
+                        onChange={props.startSearch}
+                    />
+                </form>
+
             </div>
 
             <div className='options'>

@@ -7,7 +7,8 @@ class CommentContainer extends Component {
         this.state = { 
             comment: props.comments,
             username: 'Me',
-            text: ''
+            text: '',
+            
          }
          console.log(this.state.comment)
     }
@@ -24,6 +25,7 @@ class CommentContainer extends Component {
         })
         this.setState({text: ''})
     }
+
 
     render() { 
         return ( 
