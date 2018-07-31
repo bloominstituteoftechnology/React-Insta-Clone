@@ -3,6 +3,7 @@
   justify-content: center;
 }
 .comment-section {
+  margin: 0 0 0 5px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -19,19 +20,21 @@
   padding: 0;
 }
 .comment-section .comment p {
-  margin: 5px;
+  margin: 3px;
 }
 .comment-section .timestamp {
-  margin: 0 0 0 5px;
+  margin: 5px 0 0 5px;
   color: gray;
   font-size: 12px;
 }
 .post-container {
   border: 1px solid lightgray;
+  background-color: white;
   width: 400px;
-  margin: 5px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
+  filter: drop-shadow(4px 4px 10px gray);
 }
 .post-container .row {
   display: flex;
@@ -72,10 +75,14 @@
 }
 .search-main {
   border: .5px solid lightgray;
+  background-color: white;
+  z-index: 10;
   display: flex;
   align-items: center;
   width: 100%;
   padding: 5px 0;
+  top: 0px;
+  position: fixed;
 }
 .search-bar {
   border: .5px solid gray;
@@ -103,9 +110,13 @@
   cursor: pointer;
 }
 .app {
-  width: 520px;
+  width: 100%;
+  margin: 0 auto;
   height: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+.app .all-posts {
+  margin-top: 60px;
 }

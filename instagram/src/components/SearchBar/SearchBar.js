@@ -1,9 +1,7 @@
 import React from 'react';
 
 const SearchBar = props => {
-  let mag = {
-    imageUrl: "https://image.freepik.com/icones-gratis/simples-lupa_318-31673.jpg"
-  }
+  
   return (
     <div className="search-main">
       <img className="icon insta-logo" src={require("./instagram-logo.png")} alt="insta-logo"></img>

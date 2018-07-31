@@ -6,10 +6,11 @@ import PropTypes from 'prop-types';
 //recieve props from app.js with comments then pass it to commentSection
 
 const PostContainer = props => {
+
   return (
 
     <div className="post-container" data={props.data}>
-      {console.log(props)}
+      {/* {console.log(props)} */}
       <div className="row">
         <img className="thumbnail" src={props.data.thumbnailUrl} alt="thumbnail"></img>
         <p className="username">{props.data.username}</p>
@@ -22,7 +23,6 @@ const PostContainer = props => {
       <p className="likes"><strong>{props.data.likes} likes</strong> </p>
       <CommentSection comments={props.data.comments} time={props.data.timestamp}/>
       <input className="add-comment" placeholder="Add a comment..."></input>
-
     </div>
   )
 }

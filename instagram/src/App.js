@@ -14,12 +14,14 @@ class App extends Component {
     return (
       <div className="app">
         <SearchBar />
-        {console.log(this.state.data)}
-        {this.state.data.map( (post) => {
-            return <PostContainer
-              key={post.timestamp}
-              data={post}/>
-        })}
+        <div className="all-posts">
+          {this.state.data.map( (post) => {
+              return <PostContainer
+                key={post.timestamp}
+                data={post}/>
+          })}
+        </div>
+
 
       </div>
     );
