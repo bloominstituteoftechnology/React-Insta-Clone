@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import './CommentSection.css';
-// import CommentSection from '../CommentSection/CommentSection';
+import Comments from '../CommentSection/Comments';
 
 const CommentSection = (props) => {
   return (
@@ -14,9 +14,15 @@ const CommentSection = (props) => {
       <img src={props.comment.imageUrl} className="commentImg"/>
       
       <div className="faPostDiv">
-        <i class="fa fa-heart-o"></i>
-        <i class="fa fa-comment-o fa-flip-horizontal"></i>
+        <i className="fa fa-heart-o"></i>
+        <i className="fa fa-comment-o fa-flip-horizontal"></i>
       </div>
+      <h4>{props.comment.likes} likes</h4>
+      <div className="listOfCommentsDiv">
+        {props.comment.comments.map(comment => <Comments comment={comment} />)} 
+      </div>
+      <h5>{Date.now()}</h5> // add real date here
+
     </div>
   )
 }
