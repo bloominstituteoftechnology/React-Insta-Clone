@@ -11,17 +11,17 @@ const PostContainer = props => {
     const { imageUrl } = props.postProp;
     return (
         <Container  >
-            <Row>
-                <Col>
-                    <img className="profile-img" src={thumbnailUrl} />
+            <Row className="flex-start">
+                <Col sm={1}>
+                    <img className="profile-img" alt="profilepic" src={thumbnailUrl} />
                 </Col>
-                <Col>
+                <Col sm={1}>
                     {username}
                 </Col>
             </Row>
             <Row>
                 <Col>
-                    <img src={imageUrl} />
+                    <img src={imageUrl} alt="instapost" className="post-img" />
                 </Col>
             </Row>
             <Row>

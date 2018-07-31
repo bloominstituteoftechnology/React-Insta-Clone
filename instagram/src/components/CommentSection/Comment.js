@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col, Form, FormGroup, Input } from 'reactstrap';
+import { Row, Col} from 'reactstrap';
 
 const Comment = props => {
     return (

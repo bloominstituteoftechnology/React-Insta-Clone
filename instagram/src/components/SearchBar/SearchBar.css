@@ -1,0 +1,10 @@
+.flex-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.custom-icon {
+    width: 20px !important;
+    height: 20px !important;
+}
