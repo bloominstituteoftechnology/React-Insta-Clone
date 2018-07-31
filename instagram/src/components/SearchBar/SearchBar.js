@@ -7,7 +7,7 @@ const SearchBar = props => {
             <span className="search-bar-left" >
                 <i className="fab fa-instagram fa-2x "></i>
             </span>
-            <input className="search-input" placeholder="&#8981; Search" />
+            <input type="text" className="search-input" placeholder="&#8981; Search" />
             <span className="search-icons" >
                 <i className="far fa-compass fa-lg" />
             </span>

@@ -7,14 +7,14 @@ const PostContainer = props => {
         <div className="post-container-wrap" >
             <div className="post-header-wrap" >
                 <div className="post-thumb-wrap" >
-                    <img src={props.post.thumbnailUrl} className="post-thumb" />
+                    <img src={props.post.thumbnailUrl} className="post-thumb" alt="" />
                 </div>
                 <div className="post-username">
                     {props.post.username}
                 </div>
             </div>
             <div >
-                <img src={props.post.imageUrl} alt="${props.post.username} image" />
+                <img src={props.post.imageUrl} alt="" />
             </div>
             <div className="comment-section-wrap" >
                 <span className="comments-social" >
