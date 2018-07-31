@@ -8,17 +8,19 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dataSet: dummyData
+      dataSet: []
     }
   }
+
+  componentDidMount() {
+    this.setState({ dataSet: dummyData})
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar
-        />
-        <PostContainer
-        dataSet = {this.state.dataSet}
-        />
+        <SearchBar />
+        <PostContainer dataSet = {this.state.dataSet} />
       </div>
     );
   }
