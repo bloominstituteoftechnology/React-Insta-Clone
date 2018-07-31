@@ -25,11 +25,17 @@
 
 .comment-section .likes{
   margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 2rem;
+}
+
+.comment-section .comment p{
+  margin: 5px 0;
 }
 
 .comment-section .time{
   font-weight: lighter;
+  margin-top: 10px;
 }
 
 .comment-section .dividing-line {
