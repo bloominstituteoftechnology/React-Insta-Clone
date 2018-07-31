@@ -17,7 +17,7 @@ class SearchBar extends React.Component {
           <div className ="leftSideSearchBar"><i className="fab fa-instagram"></i> <span className="verticalLine">&#124;</span><span className ="logoTitle">Instagram</span> </div>
           <div className = "topSearch">
           <span className="fa fa-search"></span>
-          <input className = "searchInput"placeholder="search"/>
+          <input className = "searchInput"placeholder="Search"/>
           </div>
           <div className = "rightSideSearchBar"><i className="far fa-compass"></i><i className="far fa-heart"></i> <i className="far fa-user"></i></div>
           <hr className ="hrLine"/>

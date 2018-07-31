@@ -25,7 +25,9 @@
     width: 20.14314; 
     display:flex;
     justify-content: center;
-    
+    text-align: center;
+    color: #808080;
+
 }
 .logoTitle {
     margin-left: 1.94274%;
@@ -36,9 +38,10 @@
 
 .fa-search {
     position:absolute;
-    left:50%;
-    font-size: 1.25rem;
-
+    left:44%;
+    font-size: 1rem;
+    color: #808080;
+    margin-top:7px;
 }
 .verticalLine {
     color: gray;
@@ -50,7 +53,7 @@
     /* width: 200; */
     /* padding-right: 34px; */
     border: 1px solid green;
-    margin-left: 200px;
+    margin-left: 209px;
 }
 
 .rightSideSearchBar i {

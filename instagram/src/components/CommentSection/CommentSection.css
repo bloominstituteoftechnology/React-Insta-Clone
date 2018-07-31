@@ -7,6 +7,7 @@
     margin-top: 15px; 
     display:flex;
     margin-left: 20px;
+    font-size: 1.5rem;
 }
 
 .userCommentName {
@@ -23,6 +24,7 @@
     align-items:flex-start;
     margin-bottom: 20px;
     margin-left: 20px;
+    border: none;
 }
 
 
