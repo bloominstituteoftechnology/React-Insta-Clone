@@ -24,9 +24,9 @@ class App extends Component {
     this.state.cmdCalled ? dummyData = this.state.dummyData : dummyData = []
     return (
       <div className="App">
-        
+        <SearchBar  key={Date.now()}/>
         {dummyData.map((post, i) => <div key = {i} className = "post">
-        <SearchBar  key={Date.now()}/> <hr className ="hrLine"/> <div className = "containerPost">
+        <hr className ="hrLine"/> <div className = "containerPost">
         <PostContainer key = {Date.now()} userName = {post.username} thumbNail={post.thumbnailUrl} image={post.imageUrl}
         likes = {post.likes}/> 
         <CommentSection key ={i} comments = {post.comments} time = {post.timestamp}/> 
