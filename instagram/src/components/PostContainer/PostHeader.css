@@ -1,0 +1,16 @@
+.post-header {
+    display: flex;
+}
+
+.thumbnail-img {
+    border-radius: 50%;
+    height: 50px;
+    padding: 1%;
+    margin-left: 21%;
+}
+
+.user { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

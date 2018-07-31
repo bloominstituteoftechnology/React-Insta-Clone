@@ -26,16 +26,16 @@ class PostContainer extends Component {
     render() {
         return (
             <div className='post-container'>
-                <PostHeader user={this.state.user} thumbnail={this.state.thumbnail}/>
+                <PostHeader thumbnail={this.state.thumbnail} user={this.state.user}/>
                 <img className='ig-post-img' src={this.state.img} alt=""/>
-                <div className="stats">
-                    <div className="icons">
+                <div className='stats'>
+                    <div className='icons'>
                         <i className="far fa-heart fa-2x" onClick={this.incrementLikes} /> 
                         &emsp; 
                         <i className="far fa-comment fa-2x" 
                             onClick={() => alert(`Sending ${this.state.user} a ping!`)} />
                     </div>
-                    <p className="likes">{this.state.likes} likes</p>
+                    <p className='likes'>{this.state.likes} likes</p>
                 </div>
                 <CommentSection 
                     comments={this.state.comments}
@@ -49,7 +49,7 @@ class PostContainer extends Component {
 PostContainer.propTypes = {
     comments: PropTypes.arrayOf(PropTypes.object),
     imageUrl: PropTypes.string,
-    likes: PropTypes.numer,
+    likes: PropTypes.number,
     thumbnailURL: PropTypes.string,
     timestamp: PropTypes.string,
     username: PropTypes.string,

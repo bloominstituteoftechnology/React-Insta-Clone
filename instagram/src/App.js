@@ -19,14 +19,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <SearchBar onSearch={this.onSearch}/>
         <div className='ig-posts'>
           {
             this.state.data.map(data => 
             <PostContainer
               key={data.timestamp}
-              user={data.user}
+              user={data.username}
               thumbnail={data.thumbnailUrl}
               img={data.imageUrl}
               likes={data.likes}

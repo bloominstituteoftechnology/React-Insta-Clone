@@ -11,7 +11,7 @@ const SearchBar = () => {
                 
             <input className='search-input' type='search' placeholder='Search'/>
                 
-            <div className="nav-icons">
+            <div className='nav-icons'>
                 <i className="far fa-compass fa-2x"></i>
                 <i className="far fa-heart fa-2x"></i>
                 <i className="far fa-user fa-2x"></i>

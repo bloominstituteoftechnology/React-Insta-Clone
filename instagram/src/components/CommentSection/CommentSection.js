@@ -19,7 +19,7 @@ class CommentSection extends Component {
         this.setState({
             comments: this.state.comments.concat({
                 text: this.state.current,
-                username: 'You'
+                username: 'Jurgen'
             })
         })
     }
@@ -38,7 +38,7 @@ class CommentSection extends Component {
                 }
                 <p>{this.state.time}</p>
                 <hr/>
-                <form>
+                <form onSubmit={this.addComment}>
                     <input 
                         onChange={this.handleInputChange}
                         className='comment-section-input'
