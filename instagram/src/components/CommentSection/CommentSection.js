@@ -39,6 +39,10 @@ class CommentSection extends React.Component {
 
     
     }
+
+    handleOnSubmit = event => {
+        event.preventDefault(); 
+    }
     
 
     render(){
@@ -47,6 +51,7 @@ class CommentSection extends React.Component {
 
         const time = moment(this.props.time, 'MMMM Do YYYY, h:mm:ss a').fromNow()
         
+        const value = this.state.temp;
         return(
 
             <div>
@@ -55,8 +60,10 @@ class CommentSection extends React.Component {
                 <h4 className = "timeStamp">{time}</h4>
                 <hr className ="postHrLine"/>
                 <div className = "addComment">
-                  <input className ="addCommentInput" onChange = {this.handleOnChange} onKeyUp = {this.addNewComment} placeholder = "Add a comment..."/>
-                  <i className="fas fa-ellipsis-h"></i>
+                  <form onSubmit ={this.handleOnSubmit}>      
+                    <input className ="addCommentInput"  onChange = {this.handleOnChange} onKeyUp = {this.addNewComment} placeholder = "Add a comment..."/>
+                    <i className="fas fa-ellipsis-h"></i>
+                 </form>
                 </div>
                 
             </div>
