@@ -29,6 +29,10 @@
     font-size: 24px;
 }
 
+.post-container .red {
+    color: red;
+}
+
 .add-comment {
     border-top: 1px solid grey;
 }

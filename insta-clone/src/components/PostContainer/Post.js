@@ -7,7 +7,11 @@ import moment from 'moment';
 class Post extends Component {
     constructor(props){
         super(props);
-        this.state = {comments: props.post.comments, currentComment: '', currentUser: 'Bobby123'};
+        this.state = {comments: [], currentComment: '', currentUser: 'Bobby123', likes: 0, liked: false};
+    }
+
+    componentDidMount(){
+        this.setState({comments: this.props.post.comments, likes: this.props.post.likes});
     }
 
     commentHolder = (event) => {
@@ -25,6 +29,18 @@ class Post extends Component {
         event.target.children[0].value = '';
     }
 
+    toggleLike= () => {
+        if (!this.state.liked){
+            this.setState((prevState) => {
+                return ({likes: prevState.likes + 1, liked: !prevState.liked});
+            });
+        } else {
+            this.setState((prevState) => {
+                return ({likes: prevState.likes - 1, liked: !prevState.liked});
+            })
+        }
+    }
+
     render() {
         return (
             <div className="post" key={this.props.post.timestamp}>
@@ -37,10 +53,10 @@ class Post extends Component {
                 <img src={this.props.post.imageUrl} alt="user's beautiful post" />
                 <div className="bottom">
                     <div className="icons">
-                        <FontAwesomeIcon icon={['far', 'heart']} className="icon" />
+                        <FontAwesomeIcon icon={['far', 'heart']} className={`icon ${this.state.liked ? 'red' : ''}`} onClick={this.toggleLike} />
                         <FontAwesomeIcon icon={['far', 'comment']} className="icon" />
                     </div>
-                    <p className="likes">{this.props.post.likes} likes</p>
+                    <p className="likes">{this.state.likes} likes</p>
                     <CommentSection comments={this.state.comments} />
                     <p className="timestamp">{moment(this.props.post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</p>
                     <form onSubmit={this.addComment} className="add-comment">
