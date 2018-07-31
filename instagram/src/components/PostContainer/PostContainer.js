@@ -15,15 +15,21 @@ const PostContainer = props => {
             timestamp={post.timestamp} >
 
             <div className="postTop">
-            <div>{post.username}</div>
             <img className="avatar" src={post.thumbnailUrl} />
+            <div className="postUser">{post.username}</div>
             </div>
             
             <img src={post.imageUrl} />
-            <div className="postBot"></div>
-            <div>{post.likes}</div>
-            <div>{post.timestamp}</div>
+
+            <div className="postBot">
+            <div className="botIcons"> 
+            <i class="far fa-heart"></i>
+            <i class="far fa-comment"></i>
+            </div>
+            <div className="postLikes">{post.likes + " likes"} </div>
+            </div>
             <CommentSection comments={post.comments}  />
+            <div className="postTimestamp">{post.timestamp}</div>
          </div>
          )
         })}

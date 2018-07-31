@@ -1,12 +1,53 @@
 .avatar {
     border-radius: 50%;
-    height: 80px;
+    height: 30px;
+    margin-right: 10px;
+   
+}
+.postTop {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 20px;
+    
+}
+.PostContainer {
+    box-sizing: border-box;
+    padding: 15px 0 30px 0;
+    border-right: 1px solid rgb(197, 197, 197);
+    border-left: 1px solid rgb(197, 197, 197);
+    border-top: 61px solid rgb(197, 197, 197);
+    
    
 }
 
-.PostContainer {
-    margin-top:40px;
-    margin-bottom: 30px;
+.postUser {
+    font-weight: bold;
+}
+
+.postBot {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+i {
+    font-size: 25px;
+}
+
+.botIcons {
+    display: flex;
+    justify-content: space-between;
+    width: 65px;
+    margin-bottom: 10px;
+}
+
+.postLikes {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.postTimestamp {
+    padding-left: 15px;
+    font-size: 12px;
     
-    background-color: rgba(209, 209, 209, 0.555);
 }
