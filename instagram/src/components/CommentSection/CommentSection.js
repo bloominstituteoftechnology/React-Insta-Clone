@@ -7,8 +7,17 @@ class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: props.comments
+            comments: props.comments,
+            newComment: '',
+            newUsername: ''
         };
+    }
+
+    addNewComment = (event) => {
+        event.preventDefault();
+        const comments = this.state.comments.slice();
+        comments.push({ username: this.state.newUsername, text: this.state.newComment });
+        this.setState({ comments, newUsername: '', newComment: ''});
     }
     
     render() {
