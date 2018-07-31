@@ -11,6 +11,13 @@ class CommentSection extends React.Component {
             timestamp: props.timestamp
         }
     }
+    addNewComment=(e,index)=>{
+        const commentsCopy=this.state.comments.slice();
+        commentsCopy[index].comments.push({
+            username: 'sonOfCoul',
+            text: e.target.value
+        })
+    }
     render() {
         return (
             <div>
@@ -24,6 +31,9 @@ class CommentSection extends React.Component {
         )
     }
 }
-
+CommentSection.propTypes={
+    comments: PropTypes.arrayOf(PropTypes.object).isRequired,
+    timestamp: PropTypes.string.isRequired
+}
 
 export default CommentSection;
