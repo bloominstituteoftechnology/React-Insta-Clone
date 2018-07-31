@@ -20,12 +20,26 @@ class CommentSection extends React.Component {
     console.log(this.state)
   };
 
+  // handles the comment submit
+   // pushing new todo onto sliced todos array
+  submitCommentHandler = event => {
+      event.preventDefault();
+      this.setState(prevState => {
+          return {
+              comments: prevState.comments.concat({ text: prevState.comment, username: "keeganb" }),
+              comment: ''
+          }
+      })
+    }
+
   render() {
     return (
       <div>
-        {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
+        {this.state.comments.map((com, index) => <Comment key={index} comment={com} />)}
         <CommentInput
+        comment={this.state.comment}
         commentInput={this.commentInputHandler}
+        submitComment={this.submitCommentHandler}
          />
       </div>
     );
