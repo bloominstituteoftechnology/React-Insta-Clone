@@ -1,17 +1,14 @@
 import React from 'react';
 
 class SearchBar extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             current: '',
-            isEmpty: false,
+            isEmpty: true,
+            onSearch: props.onSearch
         };
     }
-
-    onSearch = e => {
-        e.preventDefault();
-    };
 
     handleSearchChange = e => {
         var isEmpty = !(e.target.value !== '');
@@ -22,10 +19,8 @@ class SearchBar extends React.Component {
         return (
             <div className="search-bar">
                     <i className="fab fa-instagram fa-2x"></i>
-                <form>
-                    <span className="{this.state.isEmpty ? null : 'd-none'}">
-                        <i className="fas fa-search"></i>
-                    </span>
+                <form onSubmit={this.state.onSearch}>
+                    {this.state.isEmpty ?  <i className="fas fa-search"></i> : <p>&emsp;</p>}
                     <input 
                         className="search" 
                         onChange={this.handleSearchChange}

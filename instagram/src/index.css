@@ -55,6 +55,9 @@ body {
   position: fixed;
   width: 100%;
 }
+.search-bar .fa-instagram {
+  margin-top: 2px;
+}
 .search-bar form {
   display: flex;
   align-items: center;

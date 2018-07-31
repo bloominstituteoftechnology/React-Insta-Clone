@@ -11,10 +11,14 @@ class App extends Component {
     };
   }
 
+  onSearch = e => {
+    e.preventDefault();
+  };
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar onSearch={this.onSearch} />
         {
           this.state.data.map(data =>
           <PostContainer
