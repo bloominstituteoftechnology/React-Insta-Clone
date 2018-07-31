@@ -2,8 +2,34 @@
     padding: 20px 20px 10px 20px;
 }
 .comment-content{
-    margin: 5px 0;
+    margin: 10px 0;
 }
 .comment-username{
     font-weight: bold;
+}
+.time{
+    color: grey;     
+    font-size: 14px;  
+    padding-bottom: 10px;
+}
+.add-comment{
+    padding: 10px 0;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.add-comment input{
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 90%;
+    height: 30px;
+    font-size: 18px;
+}
+.add-comment input:focus{
+    outline: 0;
 }

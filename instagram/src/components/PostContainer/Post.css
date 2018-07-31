@@ -4,6 +4,7 @@
     border: 1px solid lightgray;
     border-radius: 5px;
     margin-bottom: 20px;
+    box-shadow: 5px 7px 5px rgba(131, 131, 131, 0.459);
 }
 .post-header{
     display: flex;
@@ -28,14 +29,13 @@
 .icons{
     padding-left: 20px;
     margin: 10px 0;
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
 }
 .likes{
     font-weight: bold;
     padding-left: 20px;
 }
-.time{
-    color: grey;
-    
-    padding: 0px 0 20px 20px;
-}
+
 

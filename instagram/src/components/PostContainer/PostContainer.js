@@ -4,7 +4,7 @@ import Post from './Post'
 import './Post.css'
 
 const PostContainer = props =>{ 
-    console.log(props.data)   
+    console.log(props.data.timestamp)   
     return(
         <div className = "post-container">
             
@@ -19,9 +19,7 @@ const PostContainer = props =>{
             <CommentSection 
                 data = {props.data}
             />
-            <div className = "time">
-                {props.data.timestamp}
-            </div>
+            
         </div>
     )         
 }
