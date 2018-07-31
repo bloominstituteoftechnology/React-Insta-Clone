@@ -5,8 +5,18 @@ import './CommentSection.css';
 
 const CommentSection = (props) => {
   return (
-    <div>
-      <h2>{props.comment.username}</h2>
+    <div className="commentDiv">
+      <div className="userNameDiv">
+        <img src={props.comment.thumbnailUrl} />
+        <h2>{props.comment.username}</h2>
+      </div>
+
+      <img src={props.comment.imageUrl} className="commentImg"/>
+      
+      <div className="faPostDiv">
+        <i class="fa fa-heart-o"></i>
+        <i class="fa fa-comment-o fa-flip-horizontal"></i>
+      </div>
     </div>
   )
 }

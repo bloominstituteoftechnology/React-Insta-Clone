@@ -1,0 +1,29 @@
+.userNameDiv {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  font-size: .6rem;
+}
+.commentDiv {
+  width: 100%;
+}
+.commentImg {
+  width: 100%;
+  height: auto;
+}
+.userNameDiv img {
+  height: 2rem;
+  width: auto;
+  border-radius: 25px;
+  margin-right: 1rem;
+}
+
+.faPostDiv {
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: start;
+}
+
+.faPostDiv i {
+  padding: 1rem .5rem .2rem 1rem;
+}

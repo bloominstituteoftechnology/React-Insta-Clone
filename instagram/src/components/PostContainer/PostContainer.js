@@ -5,7 +5,7 @@ import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = (props) => {
   console.log(props)
-  return <div>{props.comments.map(comment => <CommentSection comment={comment} />)}</div>;
+  return <div className="postContainerDiv">{props.comments.map(comment => <CommentSection comment={comment} />)}</div>;
 }
 
 
