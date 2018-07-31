@@ -9,16 +9,17 @@ import {
 
 const PostBody = props => {
   return (
-    <Card className="col">
-      <CardBody>
+    <Card >
       <PostTop  username={props.post.username} thumbnailUrl={props.post.thumbnailUrl} />
-      <div className="pbody">
         <img alt="thumbnail"  className="pimage"  src={props.post.imageUrl} />
+      <CardBody>
+
+      <div className="pbody">
+
         <img alt="like comment icons"  className="likecons"  src={like} />
         <div className="likes">{props.post.likes} likes</div>
       </div>
-    <div className="row">
-      </div>
+
 
       <CommentSection comments={props.post.comments} />
     </CardBody>
