@@ -10,7 +10,7 @@ import CommentSection from './components/CommentSection/CommentSection.js';
 class App extends Component {
   constructor(){
     super();
-    this.state = {dummyData: [], cmdCalled: false}
+    this.state = {dummyData: [], cmdCalled: false, commentPlaceHolder: "Add a comment..."}
   }
 
   componentDidMount () {
@@ -27,7 +27,7 @@ class App extends Component {
         <SearchBar  key={Date.now()}/> <hr className ="hrLine"/> <div className = "containerPost">
         <PostContainer key = {Date.now()} userName = {post.username} thumbNail={post.thumbnailUrl} image={post.imageUrl}
         likes = {post.likes}/> 
-        <CommentSection key ={i} comments = {post.comments} time = {post.timestamp}/> 
+        <CommentSection key ={i} comments = {post.comments} time = {post.timestamp} placeHolder = {this.state.commentPlaceHolder}/> 
         </div> </div>)}
 
         

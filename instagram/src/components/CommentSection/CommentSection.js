@@ -7,7 +7,7 @@ import * as moment from 'moment';
 class CommentSection extends React.Component {
     constructor(props){
         super(props); 
-        this.state = {comments: [], cmdCalled: false}; 
+        this.state = {comments: [], cmdCalled: false, placeholder: this.props.placeholder}; 
     }
 
     componentDidMount () {
@@ -37,6 +37,12 @@ class CommentSection extends React.Component {
             this.setState({comments: comments, temp:""});
         }
 
+        console.log(event.target.placeholder);
+        if(event.target.innerHTML === "Submit" && text.length > 0){
+            comments.push({username: "you", text:text})
+            this.setState({comments: comments, temp:""});
+        }
+
     
     }
 
@@ -62,7 +68,7 @@ class CommentSection extends React.Component {
                 <div className = "addComment">
                   <form onSubmit ={this.handleOnSubmit}>      
                     <input className ="addCommentInput"  onChange = {this.handleOnChange} onKeyUp = {this.addNewComment} placeholder = "Add a comment..."/>
-                    <i className="fas fa-ellipsis-h"></i>
+                    <i onClick= {this.addNewComment} className="fas fa-ellipsis-h">Submit</i>
                  </form>
                 </div>
                 
