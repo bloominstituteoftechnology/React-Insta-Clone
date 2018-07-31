@@ -10,7 +10,7 @@ import CommentSection from './components/CommentSection/CommentSection.js';
 class App extends Component {
   constructor(){
     super();
-    this.state = {dummyData: [], cmdCalled: false, searchText: ""}
+    this.state = {dummyData: [], cmdCalled: false, searchText: "", filteredData: []}
   }
 
   componentDidMount () {
@@ -20,16 +20,18 @@ class App extends Component {
   handleSearchChange = event => {
     this.setState({searchText: event.target.value});
     const dummyData = this.state.dummyData; 
-    const prevDummyData = this.state.dummyData; 
-    dummyData.filter(post => post.username === this.state.searchText);
+    const filteredData = [];
     
-    dummyData ? this.setState({dummyData:dummyData}) : this.setState({dummyData: prevDummyData});
+    dummyData.filter(post => post.username.includes(this.state.searchText) ? filteredData.push(post): console.log("not included"));
+    this.setState({filteredData: filteredData})
+    
+    this.state.searchText !== "" ? this.setState({filteredData: filteredData}) : this.setState({filteredData: []});
   }
   
 
   render() {
     let dummyData; 
-    this.state.cmdCalled ? dummyData = this.state.dummyData : dummyData = []
+    this.state.cmdCalled && this.state.filteredData.length < 1 ? dummyData = this.state.dummyData : dummyData = this.state.filteredData;
     
     return (
       <div className="App">
