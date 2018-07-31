@@ -1,5 +1,6 @@
 import React from 'react';
+import './CommentSection.css';
 const Comment=prop=>
-    <p><span><strong>{prop.data.username}</strong></span><span>{prop.data.text}</span></p>
+    <p className='user-comment'><span>{prop.data.username}</span> {prop.data.text}</p>
 
 export default Comment;
