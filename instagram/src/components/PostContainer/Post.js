@@ -5,7 +5,6 @@ import './Post.css';
 import moment from 'moment';
 
 const Post = (props) => {
-    console.log(props);
     
 let timestamp = moment(props.post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow();
     

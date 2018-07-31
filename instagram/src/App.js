@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       dummydata: [],
+      searchString: ''
     }
   }
 
@@ -31,10 +32,32 @@ class App extends Component {
     })
   }
 
+  handleSearchString = (e) => {
+    e.preventDefault();
+    this.setState({
+      searchString: e.target.value
+    })
+  }
+
+  handleSearchSubmit = (e) => {
+    e.preventDefault();
+    let dummy = this.state.dummydata.slice();
+    let username = this.state.searchString.toLowerCase();
+    console.log("username", username);
+    
+    let results = dummy.filter((el)=>{
+      return el.username === username;
+    })
+    console.log("results", results);
+    this.setState({
+      dummydata: results
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <Search className="search-bar"/>
+        <Search handleSearchString={this.handleSearchString} handleSearchSubmit={this.handleSearchSubmit}/>
         <PostList postData={this.state.dummydata} className="post-list-container" handleLike={this.handleLike}/>
       </div>
     );

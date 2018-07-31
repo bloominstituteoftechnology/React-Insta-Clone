@@ -1,7 +1,7 @@
 .App {
     text-align: center;
     width: 604px;
-    height: 904px;
+    /* height: 904px; */
     margin: 0 auto;
     background: #fff;
     display: flex;
@@ -9,12 +9,13 @@
     margin-top: 2%;
 }
 
-.App .search-bar {
+/* .App .search-bar {
     width: 100%;
     height: 50px;
     display: flex;
     flex-flow: row;
-}
+    margin-bottom: 4%;
+} */
 
 .post-list-container {
   width: 100%;
