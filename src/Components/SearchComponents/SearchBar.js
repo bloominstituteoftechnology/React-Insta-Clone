@@ -8,7 +8,7 @@ const SearchBar = props => {
         <i className="fab fa-instagram icons"></i>
         <div className="company-name"> | Instagram</div>
       </div>
-      <input className="search-input" type="text" placeholder="&#xF002; Search" />
+      <input className="search-input" type="text" placeholder="&#xF002; Search" onChange={props.filter}/>
       <div className="search-bar-right">
         <i className="far fa-compass icons"></i>
         <i className="far fa-heart icons"></i>
