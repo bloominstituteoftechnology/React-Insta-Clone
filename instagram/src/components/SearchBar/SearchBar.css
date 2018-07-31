@@ -1,18 +1,27 @@
 .search-bar{
     display: flex;
     justify-content: space-evenly;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 30px;
+    padding: 10px 0;
 }
 
 
 .title{
     font-family: 'Dancing Script', cursive;
-    font-size: 20px;
+    font-size: 30px;
+    padding-left: 10px;
+    border-left: 1px solid lightgray;
+}
+.fa-camera-retro{
+    padding-right: 10px;
 }
 .search-box{
     border: 1px solid lightgray;
     width: 200px;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 5px;
 }
 .search-box input{
@@ -26,4 +35,12 @@
 }
 .search-box input:focus{
     outline:0;
+}
+.sb-icons{
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+.fa-search{
+    color: lightgray;
 }

@@ -19,7 +19,9 @@ const PostContainer = props =>{
             <CommentSection 
                 data = {props.data}
             />
-            
+            <div className = "time">
+                {props.data.timestamp}
+            </div>
         </div>
     )         
 }

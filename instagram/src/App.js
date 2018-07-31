@@ -5,12 +5,17 @@ import PostConatainer from './components/PostContainer/PostContainer'
 import SearchBar from './components/SearchBar/SearchBar'
 
 class App extends Component {
-  
+  constructor(){
+    super()
+    this.state = {
+        data: dummyData
+    }
+} 
   render() {console.log(dummyData)
     return (
       <div className="App">
         <SearchBar />
-        {dummyData.map(data =>
+        {this.state.data.map(data =>
           <PostConatainer data = {data} />
         )}        
       </div>
