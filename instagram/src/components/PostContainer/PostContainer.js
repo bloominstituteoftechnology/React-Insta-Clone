@@ -23,7 +23,9 @@ const PostContainer = props => {
 }
 
 PostContainer.propTypes = {
-    comments: PropTypes.arrayOf(PropTypes.object)
+    post: PropTypes.shape({
+        comments: PropTypes.arrayOf(PropTypes.object)
+    })
 };
 
 export default PostContainer;
