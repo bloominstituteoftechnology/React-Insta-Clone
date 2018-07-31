@@ -20,7 +20,7 @@ const CommentSection = props => {
       {props.comments.map( (comment) => <Comment
         key={comment.id}
         comments={comment}/>)}
-      <p className="timestamp">{props.time}</p>
+      <p className="timestamp">{/*moment().format*/(props.time)}</p>
     </div>
   )
 }
