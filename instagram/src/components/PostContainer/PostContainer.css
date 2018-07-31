@@ -11,12 +11,16 @@
 }
 
 .thumbNail {
-    width: 30px;
-    height: 20px;
+    width: 30.06748%;
+    height: 2.04498%;
     border-radius: 50%; 
-    margin-right: 20px;
+    margin-right: 2.04498%;
+    max-width: 100%; 
 }
 
+.postUserName {
+    margin-top: 5px;
+}
 .postHeader {
     display:flex;
     align-items: flex-start;
@@ -24,21 +28,23 @@
     margin-top: 15px;
     font-weight: bold;
     font-size: 1.5rem;
-    margin-left: 20px; 
+    margin-left: 2.04498%; 
+    text-align: center;
+    max-width: 100%; 
 
 }
 
 .postIcons {
     display:flex;
     align-items: flex-start;
-    margin-left: 20px;
+    margin-left: 2.04498%;
     margin-top: 10px;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     width: 50px; 
 }
 
 .posting .far {
-    margin-right:18px;
+    margin-right:40%;
 }
 
 .likes {
@@ -46,8 +52,10 @@
     align-items: flex-start;
     margin-top:12px; 
     margin-bottom:15px;
-    margin-left: 20px;
+    margin-left: 2.04498%;
     font-weight: bold;
     font-size: 1.5rem;
-
+}
+posting {
+    max-width: 100%; 
 }

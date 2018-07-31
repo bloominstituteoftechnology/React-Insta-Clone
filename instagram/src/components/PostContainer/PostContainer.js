@@ -15,7 +15,7 @@ class PostContainer extends React.Component {
             <div className = "posting">
                 <div className = "postHeader">
                 <img className ="thumbNail" src={this.props.thumbNail} alt="" />
-                <div>{this.props.userName}</div>
+                <div className ="postUserName">{this.props.userName}</div>
                 </div>
                 <img className ="postImage" src={this.props.image} alt="" />
                <div className = "postIcons">

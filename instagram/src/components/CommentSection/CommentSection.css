@@ -2,6 +2,7 @@
     display:flex;
     align-items: flex-start;
     width: 898px;
+    max-width: 100%; 
 
 }
 .comment{
@@ -9,16 +10,19 @@
     display:flex;
     margin-left: 2.04498%;
     font-size: 1.5rem;
+    width: 100%;
+    max-width: 100%; 
 }
 
 .userCommentName {
     font-weight: bold;
-    margin-right: 6px;
+    margin-right: .61349%;
 }
 
 .postHrLine{
     margin-bottom:15px;
     width:898px;
+    max-width: 100%; 
     display:flex;
     align-items: flex-start;
     margin-left: 0;

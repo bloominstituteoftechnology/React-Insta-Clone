@@ -12,8 +12,6 @@ class CommentSection extends React.Component {
 
     render(){
         const comments = this.props.comments;   
-        //console.log(comments);
-        console.log(this.props)
         return(
 
             <div>
