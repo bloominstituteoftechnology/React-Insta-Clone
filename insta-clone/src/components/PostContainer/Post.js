@@ -1,5 +1,6 @@
 import React from 'react';
 import PostHeader from './PostHeader';
+import CommentSection from '../CommentSection/CommentSectionContainer';
 
 const Post = props => {
     return (
@@ -9,10 +10,9 @@ const Post = props => {
             thumbnailUrl={props.post.thumbnailUrl}
             />
             <div className="post-image-wrapper">
-            <img src={props.post.imageUrl} alt="post-image" className="post-image" />
+            <img src={props.post.imageUrl} alt="post-content" className="post-image" />
             </div>
-        
-        
+            <CommentSection comment={props.post.comments} />
         </div>
     );
 };

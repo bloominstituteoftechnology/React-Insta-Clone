@@ -6,17 +6,17 @@ const SearchBar = () => {
     return (
         <div className="search-bar-top">
             <div className="logos-wrapper">
-                <i class="fab fa-instagram"></i>
+                <i className="fab fa-instagram"></i>
                 <img src = {require("/Users/bryceevans/Desktop/LambdaSchool/React-Insta-Clone/insta-clone/src/assets/insta.png")} alt="logo" className="insta-words" />
             </div>
             <div className="search-bar-wrapper">
-                <span class="fa fa-search"></span>
+                <span className="fa fa-search"></span>
                 <input type="text" placeholder="Search" className="search-bar" />
             </div>
             <div className="social-wrapper">
-                <i class="far fa-compass"></i>
-                <i class="far fa-heart"></i>
-                <i class="far fa-user"></i>
+                <i className="far fa-compass"></i>
+                <i className="far fa-heart"></i>
+                <i className="far fa-user"></i>
             </div>
         </div>
     );
