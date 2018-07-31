@@ -1,4 +1,6 @@
 .post-container {
+  margin: 10px auto;
+  max-width: 640px;
   width: 100%;
   border: 1px solid lightgray;
 }

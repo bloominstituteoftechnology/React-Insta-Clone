@@ -11,3 +11,16 @@
   width: 180px;
   text-align: center;
 }
+
+.logo-font-img, .logo-img {
+  height: 60px;
+}
+
+.search-bar-icons {
+  height: 20px;
+}
+
+.search-bar-icon-container {
+  width: 230px;
+  text-align: right;
+}

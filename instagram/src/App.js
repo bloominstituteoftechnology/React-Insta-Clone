@@ -3,6 +3,7 @@ import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import './App.css';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   constructor() {

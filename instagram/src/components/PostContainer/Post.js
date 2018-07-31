@@ -1,5 +1,6 @@
 import React from 'react';
 import './PostContainer.css';
+import PropTypes from 'prop-types';
 
 const Post = (props) => {
   return (
@@ -12,4 +13,11 @@ const Post = (props) => {
     );
 }
 
+Post.propTypes = {
+  post: PropTypes.shape({
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    timestamp: PropTypes.string
+  })
+};
 export default Post;
