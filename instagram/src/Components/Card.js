@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Card.css';
 import Comments from './Comments';
 
@@ -6,6 +7,8 @@ class Card extends React.Component {
   state = {
     input: ''
   };
+
+  bubbleRef = React.createRef();
 
   handleChange = input => {
     this.setState({ input });
@@ -18,9 +21,11 @@ class Card extends React.Component {
       thumbnailUrl,
       imageUrl,
       likes,
+      liked,
       timestamp,
       comments,
-      onAddComment
+      onAddComment,
+      onToggleLike
     } = this.props;
 
     return (
@@ -33,13 +38,22 @@ class Card extends React.Component {
           <img className="Card__banner-img" src={imageUrl} />
         </div>
         <div className="Card__icons">
-          <i className="far fa-heart" />
-          <i className="far fa-comment" />
+          <i
+            className={`far fa-heart ${liked ? 'Card__icons--liked' : ''} `}
+            onClick={() => onToggleLike(id, !liked)}
+          />
+          <i
+            className="far fa-comment"
+            onClick={() => this.bubbleRef.current.focus()}
+          />
         </div>
         <div className="Card__likes">{likes} likes</div>
+
         <Comments {...{ timestamp, comments }} />
+
         <div className="Card__input-wrapper">
           <input
+            ref={this.bubbleRef}
             onChange={e => this.handleChange(e.target.value)}
             value={this.state.input}
             className="Card__input"
@@ -58,5 +72,18 @@ class Card extends React.Component {
     );
   }
 }
+
+Card.propTypes = {
+  id: PropTypes.number.isRequired,
+  username: PropTypes.string.isRequired,
+  thumbnailUrl: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  likes: PropTypes.number.isRequired,
+  liked: PropTypes.bool.isRequired,
+  timestamp: PropTypes.string.isRequired,
+  comments: PropTypes.string.isRequired,
+  onAddComment: PropTypes.func.isRequired,
+  onToggleLike: PropTypes.func.isRequired
+};
 
 export default Card;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Header.css';
 
 class Header extends React.Component {
@@ -30,6 +31,7 @@ class Header extends React.Component {
                 type="text"
                 className="Header__search-input"
                 placeholder="Search"
+                onChange={e => this.props.onSearch(e.target.value)}
               />
               {this.state.show ? (
                 <div
@@ -52,5 +54,9 @@ class Header extends React.Component {
     );
   }
 }
+
+Header.propTypes = {
+  onSearch: PropTypes.func.isRequired
+};
 
 export default Header;

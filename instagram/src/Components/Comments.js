@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 import './Card.css';
 
 const Comments = ({ timestamp, comments }) => {
@@ -18,6 +19,16 @@ const Comments = ({ timestamp, comments }) => {
       </div>
     </div>
   );
+};
+
+Comments.propTypes = {
+  timestamp: PropTypes.string.isRequired,
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
+    })
+  )
 };
 
 export default Comments;

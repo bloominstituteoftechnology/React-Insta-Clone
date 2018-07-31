@@ -39,7 +39,18 @@
 
 .Card__icons i {
   font-size: 2rem;
+  cursor: pointer;
+  transition: all .2s;
 }
+
+.Card__icons i:hover {
+  color: #007fff;
+}
+
+.Card__icons--liked {
+  color: #f44336;
+}
+
 
 .Card__icons i:not(:last-child) {
   margin-right: 1rem;
