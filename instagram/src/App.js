@@ -29,7 +29,7 @@ class App extends Component {
   }
   liked=(data)=>{
     const postsCopy=this.state.posts.slice();
-    postsCopy.forEach(e=>{if(e===data){e.likes+=1;}});
+    postsCopy.forEach(e=>{if(e===data && e.liked===undefined){e.likes+=1; e.liked=true;}});
     return this.setState({posts:postsCopy});
   }
   render() {
