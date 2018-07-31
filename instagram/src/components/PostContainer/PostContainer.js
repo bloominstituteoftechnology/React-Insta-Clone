@@ -4,7 +4,7 @@ import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => {
     return (
-        <div>
+        <div className="post-container-wrap" >
             {props.posts.map(post => (
                 <CommentSection post={post} />
             ) )}

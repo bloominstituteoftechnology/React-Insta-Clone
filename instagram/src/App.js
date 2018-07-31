@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data.js';
 import SearchBar from './components/SearchBar/SearchBar';
+import PostContainer from './components/PostContainer/PostContainer';
 
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
+        <PostContainer posts={this.state.posts} />
       </div>
     );
   }
