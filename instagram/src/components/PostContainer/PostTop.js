@@ -3,15 +3,15 @@ import './PostContainer.css';
 
 const PostTop = props => {
   return (
-    <div className="row">
-      <div className="posttop">
+    <div className="posttop row ">
+      <div>
         <img
           alt="postimgthumbnail"
           className="post-thumb"
           src={props.thumbnailUrl}
         />
       </div>
-      <div>{props.username}</div>
+      <div className = "username">{props.username.charAt(0).toUpperCase() + props.username.substr(1)}</div>
     </div>
   );
 };

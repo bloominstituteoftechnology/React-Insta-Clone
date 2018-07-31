@@ -1,10 +1,26 @@
 .commentsection{
-  max-width: 500px;
-    text-align: center;
+  width: 390px;
+    text-align: left;
+    margin: 5px 20px 20px 12px;
 }
 
 .commenting{
   max-width: 500px;
   display: flex;
   text-align: left;
+}
+
+.formholder{
+  outline: none;
+  border: hidden;
+  margin: 10px 0 0 -20px;
+}
+
+.user{
+  margin: 0 5px 0 0;
+  font-weight: bold;
+}
+
+.comment{
+  font-size: 1.25rem
 }

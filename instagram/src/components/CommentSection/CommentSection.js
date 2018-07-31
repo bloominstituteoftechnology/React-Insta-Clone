@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './CommentSection.css';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
-import  like from "../../assets/likecons.png";
+
 
 
 
@@ -16,13 +16,14 @@ import  like from "../../assets/likecons.png";
       render() {
         return (
           <div className = 'col'>
-          <div className="row">
-              <img alt="like comment icons"  className="likecons"  src={like} />
+            <div className="row">
+
+
           </div>
           <div className = 'commentsection'>
-            {this.state.comments.map((a, i) => <Comment key={i} comment={a} />)}
-            <form>
-              <input type="text" placeholder="Add comment... " />
+            {this.state.comments.map((a, i) => <Comment key={i.username} comment={a} />)}
+            <form >
+              <input className = " formholder" type="text" placeholder="Add comment... " />
             </form>
           </div>
         </div>
@@ -30,13 +31,6 @@ import  like from "../../assets/likecons.png";
       }
     }
 
-    CommentSection.propTypes = {
-      comments: PropTypes.arrayOf(
-        PropTypes.shape({
-           text: PropTypes.string,
-          username: PropTypes.string,
-          likes: PropTypes.number })
-      )
-    };
+
 
     export default CommentSection;
