@@ -16,15 +16,15 @@ const PostContainer = props =>{
             <img className = "post-img" src={item.imageUrl} alt="Post-Image"/>
             <div className="img-icons">
             <div className="img-icon-left">
-            <i class="far fa-heart"></i>
-            <i class="far fa-comment"></i>
-            <i class="fas fa-paper-plane"></i>
+            <i className="far fa-heart"></i>
+            <i className="far fa-comment"></i>
+            <i className="fas fa-paper-plane"></i>
             </div>
             <div className="img-icon-right">
-            <i class="far fa-bookmark"></i>
+            <i className="far fa-bookmark"></i>
             </div>
             </div>
-            <div class="comment user likes">{item.likes} likes</div>
+            <div className="comment user likes">{item.likes} likes</div>
             <div><CommentSection comments={item.comments}/></div>
             </div>
         )}
@@ -33,6 +33,7 @@ const PostContainer = props =>{
     )
 }
 PostContainer.propTypes ={
+   item: PropTypes.arrayOf(PropTypes.object),
 PostContainer: PropTypes.shape,
     thumbnailUrl: PropTypes.object, 
     username: PropTypes.string, 

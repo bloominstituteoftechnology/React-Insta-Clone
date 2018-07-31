@@ -10,14 +10,6 @@
     margin: auto; 
     height: 50px; 
 }
-.top-bar-left{
-    width: 150px; 
-    height: 40px; 
-}
-.top-bar-right{
-    width: 100px; 
-    height: 40px; 
-}
 :placeholder-shown{
     display: flex;
     align-content: center; 
