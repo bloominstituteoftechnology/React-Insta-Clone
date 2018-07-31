@@ -11,7 +11,8 @@ class App extends Component {
     this.state = {
       data: [],
       text: '',
-      username: ''
+      username: '',
+      likes: 0
     }
   }
 
