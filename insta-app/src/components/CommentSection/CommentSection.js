@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types'; 
 import dummyData from '../../dummy-data'; 
 
+//what is going on in the code
+//I am creating a object called CommentSection. 
+
 const CommentSection = props =>{
     return(
     <div className="comment-container">
@@ -15,5 +18,9 @@ const CommentSection = props =>{
     )}
     </div>
     )
+}
+CommentSection.propTypes={
+    CommentSection: PropTypes.shape,
+    
 }
 export default CommentSection; 
