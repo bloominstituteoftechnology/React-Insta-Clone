@@ -27,15 +27,14 @@ class App extends Component {
     filteredPosts=filteredPosts.filter((e)=>e.username.includes(this.state.searchBarValue));
     this.setState({filteredPosts:filteredPosts});
   }
-  liked=(num)=>{
-    let postsCopy=this.state.posts.slice();
-    
+  liked=(data)=>{
+    const postsCopy=this.state.posts.slice();
     for (let i=0; i<postsCopy.length; i++) {
-      if (postsCopy[i].likes===num) {
-        postsCopy[i].likes=postsCopy[i].likes+1;
-        return this.setState({posts:postsCopy});
+      if (postsCopy[i]===data) {
+        postsCopy[i].likes+=1;
       }
     }
+    return this.setState({posts:postsCopy})
   }
   render() {
     return (
