@@ -16,9 +16,23 @@ class CommentSection extends React.Component {
     super(props);
     this.state={
       comment: props.comment,
+      comments: props.comment.comments,
       
     }
   }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    let arrayOfComments = this.state.comments.slice();
+    arrayOfComments.push({
+      username: "Frank",
+      text: "test"
+    })
+    this.setState({
+      comments: arrayOfComments,
+    })
+  }
+
   render () {
 
   
@@ -37,11 +51,14 @@ class CommentSection extends React.Component {
       </div>
       <h4>{this.state.comment.likes} likes</h4>
       <div className="listOfCommentsDiv">
-        {this.state.comment.comments.map(comment => <Comments comment={comment} />)} 
+        {this.state.comment.comments.map(comment => <Comments comment={this.state.comments} />)} 
       </div>
       <h4 className="timeStamp">{this.state.comment.timestamp} DAYS AGO</h4>
-
-      <CommentInput />
+      <div className="commentInputForm">
+        <form onSubmit={this.handleSubmit}>
+          <input className="commentInput" placeholder="Add a comment..." />
+        </form>
+      </div>
     </div>
   )
 }

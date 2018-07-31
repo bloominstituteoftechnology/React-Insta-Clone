@@ -3,15 +3,25 @@ import React from 'react';
 import './CommentSection.css';
 
 
-const CommentInput= (props) => {
-  console.log(props)
-  return (
-    <div className="commentInputForm">
-      <form >
-        <input className="commentInput" placeholder="Add a comment..." />
-      </form>
-    </div>
-  )
+class CommentInput extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      comment: props.comment,
+    }
+  }
+
+  
+  render () {
+    {console.log(this.state.comment)}
+    return (
+      <div className="commentInputForm">
+        <form onSubmit={this.handleSubmit}>
+          <input className="commentInput" placeholder="Add a comment..." />
+        </form>
+      </div>
+    )
+  }
 }
 
 
