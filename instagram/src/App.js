@@ -18,15 +18,24 @@ class App extends Component {
   }
 
   handleSearchChange = event => {
-    this.setState({searchText: event.target.value});
-    const dummyData = this.state.dummyData; 
-    const prevDummyData = this.state.prevDummyData; 
     
-    console.log(this.state.searchText); 
-    const filteredData  = dummyData.filter(post => post.username.includes(event.target.value))
-    console.log(filteredData);
+    const dummyData = this.state.prevDummyData; 
+    const prevDummyData = this.state.prevDummyData; 
+    //fd === filteredData 
     console.log(event.target.value); 
-    event.target.value !== "" ? this.setState({dummyData: filteredData}) : this.setState({ dummyData: prevDummyData});
+    const fd  = dummyData.filter(post => post.username.includes(event.target.value))
+    console.log(fd.length);
+    console.log(fd);
+    this.setState({dummyData: fd, searchText:event.target.value}) 
+
+    if(this.state.searchText.length === 0){
+      this.setState({dummyData: prevDummyData});
+    }
+    
+    //this.setState({ dummyData: dummyData});
+    // if(filteredData.length < 1 ){
+    //   this.setState({dummyData: prevDummyData})
+    // }
 
   }
 
