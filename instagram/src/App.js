@@ -13,10 +13,18 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData 
+      posts: dummyData,
+      filteredPosts: []
     };
   }
  
+  componentDidMount() {
+    this.setState({
+     posts: dummyData 
+      });
+      console.log("data mounted", this.state)
+  }
+  
   render() {
     return (
       <div>

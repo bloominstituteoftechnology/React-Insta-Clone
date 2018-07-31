@@ -14,11 +14,19 @@ class CommentSection extends React.Component {
     };
     console.log(this.state);
   }
+ 
+  // what should i do here ????
+  componentDidMount() {
+    this.setState({
+     comments: this.state.comments,
+      comment: ""
+    });
+    console.log("component mounted: ", this.state);
+  }
 
-  //handles the commment input // works
+  //handles the commment input 
   commentInputHandler = event => {
     this.setState({ comment: event.target.value });
-    console.log(this.state);
   };
 
   // handles the comment submit
@@ -36,9 +44,9 @@ class CommentSection extends React.Component {
     });
   };
 
+  // question about this
   incrementLike = () => {
-    console.log(this.state);
-    this.setState(prevState => {
+    this.setState(prevState  => {
       return {
         like: prevState.like + 1
       };
