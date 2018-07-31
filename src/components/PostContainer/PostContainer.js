@@ -6,8 +6,7 @@ import {
   CardText,
   CardBody,
   CardTitle,
-  CardSubtitle,
-  Button
+  CardSubtitle
 } from "reactstrap";
 import CommentSection from "../CommentSection/CommentSection";
 
@@ -35,7 +34,6 @@ const PostContainer = props => {
         {props.user.comments.map((comments, i) => {
           return <CommentSection comments={comments} key={i} />;
         })}
-        <Button>Button</Button>
       </CardBody>
     </Card>
   );

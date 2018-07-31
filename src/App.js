@@ -4,7 +4,6 @@ import DummyData from './dummy-data';
 //components
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
-import CommentSection from './components/CommentSection/CommentSection'
 
 class App extends Component {
   constructor() {
@@ -22,8 +21,6 @@ class App extends Component {
       {DummyData.map((user, i) => {
         return <PostContainer user={user} key={i}/>
       })}
-      
-      <CommentSection />
       </div>
     );
   }
