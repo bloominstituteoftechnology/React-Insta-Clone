@@ -105,12 +105,7 @@ class App extends Component {
 				<Header onSearch={this.handleSearch} />
 				<section className="container App__cards-container">
 					{this.state.data
-						.filter(card =>
-							card.username
-								.toLowerCase()
-								.includes(this.state.searchTerm.toLowerCase())
-						)
-						.map(card => (
+						.filter(card => fuzzysearch(this.state.searchTerm, card.username)).map(card => (
 							<Card
 								key={card.id}
 								{...card}
