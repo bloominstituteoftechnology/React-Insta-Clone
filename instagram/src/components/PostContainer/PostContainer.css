@@ -12,3 +12,14 @@
     .post-img {
        width: 100%;
 }
+
+.custom-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .flex-evenly {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }

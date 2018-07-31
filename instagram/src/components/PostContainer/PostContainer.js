@@ -3,6 +3,8 @@ import React from 'react';
 import { Row, Col, Container } from 'reactstrap';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart, faComment } from '@fortawesome/free-regular-svg-icons';
 
 const PostContainer = props => {
     const { username } = props.postProp;
@@ -10,7 +12,7 @@ const PostContainer = props => {
     const { thumbnailUrl } = props.postProp;
     const { imageUrl } = props.postProp;
     return (
-        <Container  >
+        <Container className="custom-container" >
             <Row className="flex-start">
                 <Col sm={1}>
                     <img className="profile-img" alt="profilepic" src={thumbnailUrl} />
@@ -25,13 +27,19 @@ const PostContainer = props => {
                 </Col>
             </Row>
             <Row>
-                <Col>
-                    {likes}
+                <Col sm={2} className="flex-evenly">
+                    <FontAwesomeIcon icon={faHeart} className="custom-icon" />
+                    <FontAwesomeIcon icon={faComment} className="custom-icon" />
+                </Col>
+            </Row> 
+            <Row>
+                <Col sm={2}>
+                    {likes} likes
                 </Col>
             </Row>
-            <CommentSection comments={props.postProp.comments}/>
+            <CommentSection comments={props.postProp.comments} />
         </Container>
-        
+
     );
 }
 
