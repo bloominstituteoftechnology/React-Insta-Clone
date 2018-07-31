@@ -8,14 +8,25 @@ class CommentsSection extends Component {
     super(props);
     this.state = {
         comments: props.comments
-    }
-
+    };
   }
-  
+
   addNewComment(event, index){
+      event.preventDefault();
 
-  }
-
+        let commentsCopy = this.state.comments.slice();
+        
+        if(commentsCopy.indexOf() === index){
+            
+            commentsCopy.push({
+                username: "mboegner",
+                text: event.target.value
+            })
+        } else {return null}
+        
+        this.setState({comments: commentsCopy})
+    }
+  
   render(){
     return(
       <div>
@@ -26,7 +37,7 @@ class CommentsSection extends Component {
       </div>
     );
 }
-};
+}
 
 
 
