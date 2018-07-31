@@ -12,7 +12,7 @@ const CommentSection = props => {
             )
           })}
         <p>{props.timestamp}</p>
-          <input
+          <input className="comment-input"
             type="text"
             name="comment"
             placeholder="Add a comment..."
