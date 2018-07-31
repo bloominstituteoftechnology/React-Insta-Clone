@@ -12,6 +12,10 @@
   font-weight: bold;
 }
 
+.post-icon {
+  height: 30px;
+}
+
 .profile-pic {
   width: 50px;
   border-radius: 25px;
