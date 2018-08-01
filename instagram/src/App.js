@@ -12,13 +12,16 @@ class App extends Component {
     }
   }
 
+  handleLogin (event) {
+    localStorage.setItem('username', 'frank')
+  }
   componentDidMount () {
   }
   render() {
     return (
       <div>
       <PostsPage />
-      <Login />
+      <Login loginHandler={this.handleLogin}/>
       </div>
     );
   }

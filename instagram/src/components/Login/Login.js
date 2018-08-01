@@ -6,7 +6,7 @@ class Login extends React.Component {
     super(props);
     
     this.state={
-
+      loginHandler: props.loginHandler
     }
   }
 
@@ -16,7 +16,7 @@ class Login extends React.Component {
         <form className="loginForm">
           <input className="usernameInput" placeholder="Username"/>
           <input className="passwordInput" placeholder="Password"/>
-          <button className="loginButton">Submit</button>
+          <button className="loginButton" onClick={this.state.loginHandler}>Submit</button>
         </form>
 
       </div>
