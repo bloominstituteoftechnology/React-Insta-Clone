@@ -1,17 +1,18 @@
 import React from "react";
 
-const Authenticate = Login =>
+const Authenticate = App =>
   class extends React.Component {
-    constructor() {
-      super();
-      this.state = {
-         
-      };
+    constructor(){
+        super();
+        this.state={
+            loggedin: false
+        }
     }
-
+    
+    
     render() {
       return (
-        <Login />
+        <App />
       );
     }
   };

@@ -10,7 +10,7 @@ const LogIn = props => {
         <input  onChange={props.handlePassword} placeholder="Password" type="text"></input>
         <button>Log-In</button>
         </form>
-    
+        
     );
 
 };

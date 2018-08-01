@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
+import Authenticate from './components/Authentication/Authenticate';
+import Login from './components/Authentication/Login'
+import PostsPage from './components/PostContainer/PostsPage';
 
+const Auth = Authenticate(App);
 
 
 class App extends Component {
@@ -14,17 +16,19 @@ class App extends Component {
      };
   }
 
+addNewLogin(e) {
+  localStorage.setItem(e.target.value);
+
+}
+
 componentDidMount() {
   this.setState({posts: dummyData});
+  return(localStorage.getItem("mboegner", "NewEnglandClamChowder") ? <PostsPage /> : <Login />)
 }
   render() {
     return (
       <div className="container">
-
-       <SearchBar  />
-
-       <PostContainer posts={this.state.posts}/>
-  
+       <Login addNewLogin={this.addNewLogin}/>
       </div>
     );
   }
