@@ -1,9 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Card.css";
 import Comments from "./Comments";
 import PropTypes from "prop-types";
 
-class Card extends React.Component {
+class Card extends Component {
+	constructor(props){
+		super(props)
+	}
 	state = {
 		input: ""
 	};
@@ -36,10 +39,10 @@ class Card extends React.Component {
 						src={thumbnailUrl}
 						alt=""
 					/>
-					<span className="Card__username">{username}</span>
+					<span className="Card__username">{ username }</span>
 				</div>
 				<div className="Card__banner">
-					<img className="Card__banner-img" src={imageUrl} alt="" />
+					<img className="Card__banner-img" src={ imageUrl } alt="" />
 				</div>
 				<div className="Card__icons">
 					<i
@@ -86,8 +89,8 @@ Card.propTypes = {
 	thumbnailUrl: PropTypes.string.isRequired,
 	imageUrl: PropTypes.string.isRequired,
 	likes: PropTypes.number.isRequired,
-	lies: PropTypes.bool.isRequired,
-	timestamp: PropTypes.number.isRequired,
+	liked: PropTypes.bool.isRequired,
+	timestamp: PropTypes.string.isRequired,
 	comments: PropTypes.string.isRequired,
 	onAddComment: PropTypes.func.isRequired,
 	onDeleteComment: PropTypes.func.isRequired,

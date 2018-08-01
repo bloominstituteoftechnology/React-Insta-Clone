@@ -1,8 +1,8 @@
-import React from "react";
+import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import "./Header.css";
 
-class Header extends React.Component {
+class Header extends Component {
 	state = {
 		show: true
 	};
@@ -32,7 +32,7 @@ class Header extends React.Component {
 								type="text"
 								className="Header__search-input"
 								placeholder="Search"
-								onChange={e =>this.props.onSearch(e.target.value)}
+								onChange={e => this.props.onSearch(e.target.value)}
 							/>
 							{this.state.show ? (
 								<div

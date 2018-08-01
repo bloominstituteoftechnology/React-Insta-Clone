@@ -10,7 +10,7 @@
 
 .Header__nav {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .Header__nav-brand {
