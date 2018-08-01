@@ -42,13 +42,7 @@ class App extends Component {
       })
   }
 
- 
-
   render() {
-
-   
-    
-
     return (
       <div className="App">
         <SearchBar change= {this.valueHandler} submit = {this.submitSearchHandler}/>

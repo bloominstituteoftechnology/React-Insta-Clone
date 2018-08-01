@@ -6,13 +6,8 @@ import PropTypes from 'prop-types';
 class PostContainer extends React.Component {
    constructor(props){
        super(props); 
-        this.state = {
-            usernameImg: props.usernameImg,
-            username : props.username,
-            img: props.img, 
+        this.state = { 
             likes: props.likes,
-            comments: props.comments, 
-            timeStamp: props.timeStamp
         }
    } 
   
@@ -28,11 +23,11 @@ class PostContainer extends React.Component {
     return (
     <div className = "postContainer">
         <div  className = "username">
-            <img src = {this.state.usernameImg} alt = "User Picture" width = "40px" height = "40px"/>
-            <h4>{this.state.username}</h4>
+            <img src = {this.props.usernameImg} alt = "User Picture" width = "40px" height = "40px"/>
+            <h4>{this.props.username}</h4>
         </div>
         <div className = "userImage">
-            <img src = {this.state.img}/>    
+            <img src = {this.props.img}/>    
         </div>
         <div className = "commentsLikes">
             <div className = 'icons'>
@@ -42,8 +37,8 @@ class PostContainer extends React.Component {
             <p className = "likes">{this.state.likes} likes</p>
         </div>
         <div className = "comments">
-            <CommentSection comments = {this.state.comments} 
-                            timeStamp = {this.state.timeStamp}/>
+            <CommentSection comments = {this.props.comments} 
+                            timeStamp = {this.props.timeStamp}/>
         </div>
 
     </div>
