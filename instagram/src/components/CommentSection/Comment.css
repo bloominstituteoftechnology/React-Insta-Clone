@@ -1,6 +1,6 @@
 .comment-text {
   text-align: left;
-  padding: 2px;
+  padding: 3px 10px;
   margin-left: 4px;
 }
 
@@ -11,6 +11,7 @@
   margin: 10px 0 10px 0;
   outline: none;
   border: none;
+  padding: 10px 0 0 10px;
 }
 
 /* input:focus {
@@ -30,7 +31,7 @@
 
 .like-icon {
   font-size: 20px;
-  padding: 10px 0 10px 0;
+  padding: 10px 0 10px 10px;
   margin: 10px 0 10px 0;
   cursor: pointer;
 }
