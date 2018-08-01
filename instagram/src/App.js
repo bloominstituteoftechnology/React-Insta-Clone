@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import dummyData from "./dummy-data";
-import fuzzysearch from "fuzzysearch";
+import Fuse from "fuse.js";
+import dataOptions from "./SearchOptions";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
 import "./App.css";
@@ -92,9 +93,9 @@ class App extends Component {
   };
 
   handleSearchSubmit = () => {
-    let filteredInput = this.state.posts.filter(post =>
-      fuzzysearch(this.state.searchInput, post.username)
-    );
+    let fuse = new Fuse(this.state.posts, dataOptions)
+    let filtered = fuse.search(this.state.searchInput)
+    let filteredInput = this.state.posts.filter(post => filtered.toString() === post.id);
     this.setState({ filteredInput: filteredInput });
   };
 

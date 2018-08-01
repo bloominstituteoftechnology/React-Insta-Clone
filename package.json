@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "fuse.js": "^3.2.1",
     "moment": "^2.22.2"
   }
 }
