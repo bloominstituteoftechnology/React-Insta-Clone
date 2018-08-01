@@ -33,6 +33,13 @@
     height: 90%;
   }
 
+  .line {
+    width:1px;
+    border:1px inset;
+    margin:5px;
+    color: black;
+  }
+
   .text-logo {
       height: 80%;
       padding-left: 20px;

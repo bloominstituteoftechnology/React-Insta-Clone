@@ -10,7 +10,8 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.comments,
-      comment: ""
+      comment: "",
+      like: 0
     };
     console.log(this.state);
   }
@@ -19,7 +20,7 @@ class CommentSection extends React.Component {
   componentDidMount() {
     this.setState({
      comments: this.state.comments,
-      comment: ""
+      comment: "",
     });
     console.log("component mounted: ", this.state);
   }
