@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './components/Authentication/Authenticate';
+
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       data: [],
-      filteredData: []
+      filteredData: [],
+      loggedIn: false
     };
 
     this.likeIncrement = this.likeIncrement.bind(this);
@@ -17,7 +21,14 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({data: dummyData});
-  }
+    let username = localStorage.getItem('username');
+    console.log(username);
+    if (username.length > 0) {
+      this.setState(function() {
+        return {loggedIn: true}
+      });
+    }
+  } 
 
   likeIncrement(index) {
     this.setState(function(prevState, props){
@@ -38,16 +49,30 @@ class App extends Component {
         return {data: prevState.filteredData}
       })
     }
-    
   }
 
+  handleLogin = (user) => {
+    console.log('should be logged in');
+    localStorage.setItem('username', user);
+  }
+  
+
   render() {
-    return (
-      <div className="App">
-        <PostsPage data={this.state.data} filter={this.filterData} like={this.likeIncrement} />
-      </div>
-    );
+    
+    if (this.state.loggedIn === true) {
+      return (
+        <div className="App">
+          <PostsPage data={this.state.data} filter={this.filterData} like={this.likeIncrement} />
+        </div>
+      );
+    } else {
+      return (
+          <AuthenticatedApp handleLogin={this.handleLogin} />
+      );
+    }
   }
 }
+
+const AuthenticatedApp = Authenticate(App);
 
 export default App;
