@@ -12,12 +12,13 @@
 }
 
 .iglogo {
-    width: 69px;
+    width: 75px;
     margin-left: 10px;
 }
 .search-bar-left {
-    text-align: left;
+    /* text-align: left; */
     width: 188px;
+    border-right: 1px solid lightgray;
 }
 
 .search-input {
