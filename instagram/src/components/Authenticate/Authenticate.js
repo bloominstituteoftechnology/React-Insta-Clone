@@ -3,23 +3,22 @@ import LogIn from '../LogIn/Login.js';
 
 const Authenticate = App => {
     return class extends React.Component {
-        constructor(props){
-            super(props);
+        constructor(App){
+            super(App);
             this.state = {
-
+                isLoggedIn: false
             }
+            console.log("Inside auth for props", App);
+            
         }
 
-        retrieveLocalStorage = (name) => {
-            return localStorage.getItem('name', name)
+        componentDidMount(){
+            console.log("in auth", App);
+            
         }
 
         render(){
-            if(this.retrieveLocalStorage('Erik')){
-                return <App />
-            } else {
-                return <LogIn />
-            }
+           return <App />
         }
     }
 
