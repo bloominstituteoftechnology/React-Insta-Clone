@@ -20,14 +20,12 @@ class CommentSection extends React.Component{
     }
     incrementLike = () => {
         let likes = this.state.likes + 1;
-        console.log(likes);
         this.setState({likes});
     }
     handleNewComment = e => {
         this.setState({input: e.target.value});
     }
     render(){
-        console.log(this.state)
         return(
             <div>
                 <div>

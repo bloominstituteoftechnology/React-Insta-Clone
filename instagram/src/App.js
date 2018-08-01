@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
+import Authenticate from './components/Authentication/Autheticate';
 import Search from './components/SearchBar/SearchBar';
 import PostPage from './components/PostContainer/PostPage';
+
 // import {
 //   Collapse,
 //   Navbar,
@@ -48,4 +50,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
