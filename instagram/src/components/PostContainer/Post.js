@@ -13,7 +13,7 @@ class Post extends Component {
                 </div>
                 
                 <div className="post-body">
-                    <img className="post-image" src={this.props.imageUrl}/>
+                    <img className="post-image" src={this.props.imageUrl} alt="" />
                         <div className="comment-icons">
                             <div><i className="far fa-heart fa-3x" onClick={this.props.increaseLike}></i></div>
                             <div><i className="far fa-comment fa-flip-horizontal fa-3x"></i></div>

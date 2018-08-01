@@ -36,9 +36,9 @@ class App extends Component {
       <div className="App">
       <SearchBar  value={this.state.search} handleSearch={this.handleSearch} />
       <div className="container">
-        {this.state.posts.map(post => {
+        {this.state.posts.map((post, index) => {
           return (
-            <PostContainer posts={post} />
+            <PostContainer key={index} posts={post} />
           )
         })}
         </div>

@@ -22,6 +22,7 @@ class PostContainer extends Component {
        
         return (
             <div className="post-container">
+            
                 <Post
                     username={this.state.posts.username}
                     thumbnailUrl={this.state.posts.thumbnailUrl}

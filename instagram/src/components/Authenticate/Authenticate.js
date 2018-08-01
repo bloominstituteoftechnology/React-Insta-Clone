@@ -6,21 +6,21 @@ const Authenticate = (App) =>
         constructor(props){
             super(props);
             this.state = {
-                login: false
+                loggedIn: false
             }
         }
 
         componentDidMount() {
             if(!localStorage.getItem("user")) {
-                this.setState({login: false});
+                this.setState({loggedIn: false});
             } else {
-                this.setState({login: true});
+                this.setState({loggedIn: true});
             }
         }
 
 
         render() { 
-            if (this.state.login) {
+            if (this.state.loggedIn) {
                 return ( <App /> );
             } else {
                 return ( <Login /> );

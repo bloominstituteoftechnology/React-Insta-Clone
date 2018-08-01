@@ -21,6 +21,9 @@ class CommentSection extends Component {
 
     addNewComment = (event) => {
         event.preventDefault();
+        if (this.state.newComment === ""){
+            return null;
+        }
         let comments = this.state.comments.slice();
         comments.push({
             username: this.state.username,
@@ -37,8 +40,9 @@ class CommentSection extends Component {
     render() { 
         return ( 
             <div className="comment-container">
-                 {this.state.comments.map(comment => 
-                    <Comment 
+                 {this.state.comments.map((comment, index) => 
+                    <Comment
+                        key={index}
                         name={comment.username}
                         comment={comment.text}
                     />
