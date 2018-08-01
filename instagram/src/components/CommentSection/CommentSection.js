@@ -8,23 +8,35 @@ class CommentSection extends Component {
         super(props);
         this.state = {
             comments: props.comments,
-            newComment: '',
-            newUsername: ''
+            comment: ''
         };
     }
+    
+    commentHandler = event => {
+        this.setState({ comment: event.target.value });
+    };
 
     addNewComment = (event) => {
         event.preventDefault();
+        if (this.state.comment === "") {
+            alert("You must provide a comment");
+            return;
+        }
+        const newComment = { text: this.state.comment, username: "lfsalazarcruz" };
         const comments = this.state.comments.slice();
-        comments.push({ username: this.state.newUsername, text: this.state.newComment });
-        this.setState({ comments, newUsername: '', newComment: ''});
+        comments.push(newComment);
+        this.setState({ comments, comment: "" });
     }
     
     render() {
         return (
             <div>
                 {this.state.comments.map((comment, index) => <Comment key={index} comment ={comment} />)}
-                <CommentInput />
+                <CommentInput 
+                    comment={ this.state.comment }
+                    submitComment={ this.addNewComment }
+                    changeComment={ this.commentHandler }
+                />
             </div>
         );
     }

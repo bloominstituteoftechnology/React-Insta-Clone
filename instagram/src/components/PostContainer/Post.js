@@ -1,6 +1,7 @@
 import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection'
+import { FontAwesomeIcon } from '../../../node_modules/@fortawesome/react-fontawesome';
 
 const Post = props => {
     return (
@@ -17,6 +18,8 @@ const Post = props => {
             </div>
 
             {/* LIKES SECTION */}
+            <FontAwesomeIcon icon="heart" className="heart-icon"/>
+            <FontAwesomeIcon icon="comment" />
             <div className="like-container">{props.post.likes} likes</div>
 
             <CommentSection comments={props.post.comments} />

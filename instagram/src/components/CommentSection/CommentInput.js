@@ -3,8 +3,10 @@ import './CommentSection.css';
 
 const CommentSection = props => {
     return (
-        <form className="comment-input" onSubmit={props.addNewComment}>
+        <form className="comment-input" onSubmit={ props.submitComment }>
             <input
+                onChange={ props.changeComment }
+                value={ props.comment }
                 type="text" 
                 placeholder="Add a comment..." 
                 className="custom-input"
