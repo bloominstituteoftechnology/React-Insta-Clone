@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './CommentSection.css';
 
 class Comment extends Component {
     

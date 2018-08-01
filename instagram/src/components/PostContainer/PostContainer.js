@@ -15,7 +15,7 @@ class PostContainer extends Component {
     }
     
     likesIncrement = () => {
-        this.setState({likes: this.state.likes++})
+        this.setState({likes: this.state.likes+1})
     }
 
     render() { 
@@ -27,6 +27,7 @@ class PostContainer extends Component {
                     thumbnailUrl={this.state.posts.thumbnailUrl}
                     imageUrl={this.state.posts.imageUrl}
                     likes={this.state.likes}
+                    increaseLike={this.likesIncrement}
                 />
                 <CommentSection 
                     posts={this.state.posts}
