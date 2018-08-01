@@ -10,9 +10,11 @@
     text-align: center;
     font-size: 25px;
     color: grey;
-    margin: 10px 0;
+    margin: 10px 0; 
+}
 
-    
+.username-field {
+    margin-top: 20px;
 }
 
 .login-button:hover {

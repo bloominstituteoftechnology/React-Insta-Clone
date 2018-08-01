@@ -5,6 +5,7 @@ import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
 
 const App = Authenticate(
+  
   class App extends Component {
     constructor() {
       super();
@@ -27,6 +28,7 @@ const App = Authenticate(
       );
     }
   }
+
 );
 
 export default App;

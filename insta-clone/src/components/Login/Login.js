@@ -32,6 +32,7 @@ class Login extends React.Component {
         return (
             <div>
             <form className="login-form">
+
                 <input 
                 type="text" 
                 placeholder="Username..." 

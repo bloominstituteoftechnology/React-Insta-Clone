@@ -22,13 +22,13 @@ class CommentSection extends React.Component {
         // prevent page refresh
         event.preventDefault();
         // build out our comment obj
-        const newComment = { text: this.state.comment, username: 'Bryce_Monkey' };
+        const newComment = { text: this.state.comment, username: '' };
         // clone our comments array
         const comments = this.state.comments.slice();
         // push obj into new clone
         comments.push(newComment);
         // set new clone as state... + reset our comment str
-        this.setState({ comments, comment: '' });
+        this.setState({ comments, comment: 'Bryce' });
     };
 
     render() {
