@@ -25,6 +25,8 @@ class CommentSection extends React.Component {
         const comments = this.state.comments.slice();
         comments.push(newComment);
         this.setState({ comments, comment: "" });
+
+        //the above line is a short cut for this.setState({ comments: comments, comment: "" });
     };
 
     render() {
