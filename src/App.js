@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCompass } from '@fortawesome/free-solid-svg-icons'
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { faCompass } from '@fortawesome/free-regular-svg-icons'
+import { faHeart } from '@fortawesome/free-regular-svg-icons'
+import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import instaLogo from './instagram-logo.png';
 import './App.css';
