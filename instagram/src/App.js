@@ -34,13 +34,13 @@ class App extends Component {
   likeIncrement(index) {
     if (this.state.data[index].liked === false) {
       this.setState((prevState, props) => {
-        return {[this.state.data[index].likes]: [prevState.data[index].likes++], [this.state.data[index].liked]: true}
+        return {[this.state.data[index].likes]: [prevState.data[index].likes++]}
       });
       let arr = this.state.data.slice();
       arr.map(((el, i) => {if(i === index) return el.liked = !(el.liked);}))
     } else {
       this.setState((prevState, props) => {
-        return {[this.state.data[index].likes]: [prevState.data[index].likes--], [this.state.data[index].liked]: false}
+        return {[this.state.data[index].likes]: [prevState.data[index].likes--]}
       });
       let arr = this.state.data.slice();
       arr.map(((el, i) => {if(i === index) return el.liked = !(el.liked);}))
