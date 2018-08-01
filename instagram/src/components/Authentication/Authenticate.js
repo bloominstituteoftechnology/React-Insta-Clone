@@ -5,9 +5,7 @@ const Authenticate = App =>
     class extends React.Component {
         constructor(props) {
             super(props);
-            this.state = {
-                loggedIn: false
-            }
+            this.state = {}
         }
 
 

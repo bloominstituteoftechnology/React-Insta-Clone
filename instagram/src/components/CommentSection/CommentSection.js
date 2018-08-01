@@ -17,7 +17,7 @@ class CommentSection extends React.Component {
 
     addNewComment(event, index) {
         event.preventDefault();
-        this.setState({comments: this.state.comments.concat({username: 'Pseudosaurus', text: [event.target[0].value]})});
+        this.setState({comments: this.state.comments.concat({username: localStorage.getItem('username'), text: [event.target[0].value]})});
         // localStorage.setItem(index, JSON.stringify({username: 'Pseudosaurus', text: [event.target[0].value]}));
     }
 

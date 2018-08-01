@@ -23,7 +23,7 @@ class App extends Component {
     this.setState({data: dummyData});
     let username = localStorage.getItem('username');
     console.log(username);
-    if (username.length > 0) {
+    if (username) {
       this.setState(function() {
         return {loggedIn: true}
       });
