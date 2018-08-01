@@ -12,7 +12,8 @@ class App extends Component {
     this.state = {
       data: [],
       filteredData: [],
-      loggedIn: false
+      loggedIn: false,
+      comment: ''
     };
 
     this.likeIncrement = this.likeIncrement.bind(this);
@@ -56,13 +57,20 @@ class App extends Component {
     localStorage.setItem('username', user);
   }
   
+  handleInputChange = (event) => {
+    this.setState({[event.target.name]: event.target.value});
+  }
+
+  clearComment = () => {
+    this.setState({comment: ''})
+  }
 
   render() {
     
     if (this.state.loggedIn === true) {
       return (
         <div className="App">
-          <PostsPage data={this.state.data} filter={this.filterData} like={this.likeIncrement} />
+          <PostsPage data={this.state.data} filter={this.filterData} like={this.likeIncrement} input={this.handleInputChange} comment={this.state.comment} clear={this.clearComment} />
         </div>
       );
     } else {

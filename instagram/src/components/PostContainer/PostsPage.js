@@ -7,7 +7,7 @@ const PostsPage = props => {
     return (
         <div className="App">
             <SearchBar filter={props.filter} />
-            {props.data.map((item, index) => <PostContainer post={item} key={item.timestamp} index={index} like={props.like} liked={item.liked} />)}
+            {props.data.map((item, index) => <PostContainer post={item} key={item.timestamp} index={index} like={props.like} liked={item.liked} input={props.input} comment={props.comment} clear={props.clear} />)}
         </div>
         );
 }
