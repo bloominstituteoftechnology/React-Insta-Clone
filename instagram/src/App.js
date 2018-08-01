@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-import dummyData from './dummy-data';
+import PostsPage from './components/PostContainer/PostsPage';
 import { Container} from 'reactstrap';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import './App.css';
+import Authenticate from './components/Authentication/Authenticate';
 
 
 
@@ -11,18 +10,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: [],
-      filteredPosts: []
+      username:''
     };
   }
+
   componentDidMount(){
-    this.setState({ dummyData: dummyData });
+    //login.js > state:username/password, localStorage.setItem()
+    const user =localStorage.getItem('user');
+    this.setState({username:user})
   }
+
   render() {
     return (
       <Container className="App">
-        <SearchBar />
-        {this.state.dummyData.map(post => <PostContainer key={post.timestamp} postProp={post} />)}
+        <PostsPage />
       </Container>
     );
   }
@@ -30,4 +31,4 @@ class App extends Component {
 
 
 
-export default App;
+export default Authenticate(App);
