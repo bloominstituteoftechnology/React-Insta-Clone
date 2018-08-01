@@ -18,9 +18,9 @@ const SearchBar = props => {
 };
 
 SearchBar.propTypes = {
-    onSearch: PropTypes.func,
+    isEmpty: PropTypes.bool,
     onChange: PropTypes.func,
-    isEmpty: PropTypes.bool
+    onSearch: PropTypes.func
 };
 
 export default SearchBar;

@@ -13,8 +13,8 @@ const PostsPage = props => {
                     thumbnail={data.thumbnailUrl} 
                     img={data.imageUrl} 
                     likes={data.likes} 
-                    time={data.timestamp}
                     comments={data.comments}
+                    time={data.timestamp}
                 />)
             }
         </div>

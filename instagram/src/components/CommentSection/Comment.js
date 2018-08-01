@@ -14,8 +14,8 @@ const Comment = props => {
 };
 
 Comment.propTypes = {
-    user: PropTypes.string,
-    text: PropTypes.string
+    text: PropTypes.string,
+    user: PropTypes.string
 };
 
 export default Comment;

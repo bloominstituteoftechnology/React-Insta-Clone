@@ -11,8 +11,8 @@ const PostHeader = props => {
 };
 
 PostHeader.propTypes = {
-    user: PropTypes.string,
-    thumbnail: PropTypes.string
+    thumbnail: PropTypes.string,
+    user: PropTypes.string
 };
 
 export default PostHeader;
