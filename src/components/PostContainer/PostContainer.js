@@ -8,7 +8,8 @@ import {
   CardHeader,
   CardSubtitle,
   CardFooter,
-  Input
+  Input,
+  Form
 } from "reactstrap";
 import CommentSection from "../CommentSection/CommentSection";
 import PropTypes from 'prop-types';
@@ -53,7 +54,9 @@ const PostContainer = props => {
           {props.user.comments.map((comment, i) => {
             return <CommentSection comment={comment} key={i} />;
           })}
-          <Input placeholder="add a comment" />
+          <Form onSubmit={props.handleCommentSubmit}>
+          <Input value={props.comment} onChange={props.handleCommentInput} placeholder="add a comment" />
+          </Form>
         </CardFooter>
       </CardBody>
     </Card>
