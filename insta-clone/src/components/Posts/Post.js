@@ -30,8 +30,8 @@ class Post extends React.Component {
     }
     incrementLike = () => {
         if (!this.state.likes.liked){
-            this.setState(() => ({ likes: {
-                count: this.state.likes.count+1,
+            this.setState((prevState) => ({ likes: {
+                count: prevState.likes.count+1,
                 liked: true
                 }
             }));
@@ -63,7 +63,7 @@ postMessage.propTypes = {
     thumbnail: propTypes.string,
     images: propTypes.string,
     username: propTypes.string,
-    likes: propTypes.number,
+    likes: propTypes.object,
     comment: propTypes.arrayOf(propTypes.object)
 
 }
