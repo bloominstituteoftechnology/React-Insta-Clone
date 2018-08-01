@@ -19,7 +19,9 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBarContainer />
-        {this.state.users.map(user => <PostContainer key={user.username} user={user}/>)}
+        <div className="container">
+          {this.state.users.map(user => <PostContainer key={user.username} user={user}/>)}
+        </div>
       </div>
     );
   }

@@ -1,4 +1,54 @@
 .post {
   border: 1px solid #E6E6E6;
-  max-width: 640px;
+  width: 640px;
+  margin-bottom: 75px;
+}
+
+.post .post-header {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1% 2%;
+}
+
+.post .post-header h5 {
+  font-size: 14px;
+  margin-left: 1%;
+}
+.post .post-header .thumbnail-img {
+  border-radius: 50%;
+  Width: 5%;
+  height: 5%;
+}
+
+.post .post-img-wrapper {
+  display:flex;
+  width: 100%;
+}
+
+.like-section {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.like-section .like-section-icons {
+  font-size: 24px;
+  padding: 15px 0px 5px 0px;
+}
+
+.like-section .like-section-icons i {
+  margin-left: 15px;
+}
+
+.like-section p {
+  width: 100%;
+  margin: 0;
+  padding-left: 15px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 15px;
 }

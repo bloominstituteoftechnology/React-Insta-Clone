@@ -1,6 +1,5 @@
 import React from 'react';
 import PostHeader from './PostHeader';
-import PostImage from './PostImage';
 import CommentSection from '../CommentSection/CommentSection';
 import './Post.css'
 
@@ -9,8 +8,17 @@ const PostContainer = props => {
   return (
     <div className='post'>
       <PostHeader user={props.user}/>
-      <PostImage src={props.user.imageUrl}/>
-      <CommentSection likes={props.user.likes} comments={props.user.comments} />
+      <div className='post-img-wrapper'>
+        <img className='post-img' src={props.user.imageUrl} />
+      </div>
+      <div className='like-section'>
+        <div className='like-section-icons'>
+          <i className='far fa-heart'></i>
+          <i className='far fa-comment'></i>
+        </div>
+        <p>{props.user.likes} likes</p>
+      </div>
+      <CommentSection comments={props.user.comments} />
     </div>
   );
 };

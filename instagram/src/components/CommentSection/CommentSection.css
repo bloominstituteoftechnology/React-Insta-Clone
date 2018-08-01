@@ -1,0 +1,20 @@
+.comment-section {
+  padding: 5px 15px 15px 15px;
+}
+
+.comment-section .comment-wrapper {
+  text-align: left;
+  font-size: 14px;
+}
+
+.comment-section .comment-wrapper p {
+  margin: 5px 0px 10px 0px;
+}
+
+.comment-section input {
+  width: 100%;
+  border: 0px;
+  border-top: 1px solid #E6E6E6;
+  padding-top: 15px;
+  font-size: 16px;
+}
