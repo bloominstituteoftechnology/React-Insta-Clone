@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import dummyData from "./dummy-data";
+import dummyData from "../../dummy-data";
 import Fuse from "fuse.js";
-import dataOptions from "./SearchOptions";
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer";
+import dataOptions from "../../SearchOptions";
+import SearchBar from "../SearchBar/SearchBar";
+import PostContainer from "../PostContainer/PostContainer";
 import "./App.css";
 
 class App extends Component {

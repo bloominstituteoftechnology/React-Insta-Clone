@@ -1,0 +1,15 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+.main-body {
+	margin-top: 77px;
+	/* padding-top: 60px; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fafafa;
+	font-family: 'Roboto', sans-serif;
+}
