@@ -20,7 +20,7 @@ class PostContainer extends React.Component {
   };
 
   handleAddComment = e => {
-    if (e.keyCode === 13) {
+    if (e.keyCode === 13 && this.state.comment) {
       this.props.handleAddComment(this.state.comment, this.props.post.id);
       this.setState({ comment: "" });
     }
