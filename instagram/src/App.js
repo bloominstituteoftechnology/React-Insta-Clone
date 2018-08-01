@@ -5,6 +5,7 @@ import PostsPage from './components/PostContainer/PostsPage.js';
 import fuzzy from 'fuzzy';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import Authenticate from './components/Authentication/Authenticate.js';
+import Login from './components/Login/login.js';
 
 const App=Authenticate(
   class App extends Component {
@@ -14,6 +15,7 @@ const App=Authenticate(
       posts:[],
       filteredPosts:[],
       searchBarValue:'',
+      username:''
     }
   }
   componentDidMount(){
@@ -22,6 +24,9 @@ const App=Authenticate(
   
   handleSearchBarChange=(event)=>{
     this.setState({searchBarValue:event.target.value},()=>this.filterPosts());
+  }
+  login=()=>{
+    localStorage.setItem('username',this.state.username);
   }
   filterPosts=()=>{
     let filteredPosts=this.state.posts.slice();
@@ -47,6 +52,7 @@ const App=Authenticate(
         <SearchBar searchValue={this.searchBarValue} handleInputChange={this.handleSearchBarChange}/>
         <PostsPage searchBarValue={this.state.searchBarValue} posts={this.state.posts} filteredPosts={this.state.filteredPosts} 
         liked={this.liked} handleInputChange={this.handleSearchBarChange}/>
+        <Login newUser={this.state.username} logIn={this.login}/>
       </div>
     );
   }
