@@ -14,8 +14,8 @@ import './SearchBar.css';
         <span className="splitBar"> </span> 
         <span className="logoText"> InstaKG  </span> 
         <input onChange={props.methods} id='search' placeholder="   &#128269; Search" type="text"/>
-        <FontAwesomeIcon className="icon" icon={faCompass} />
-        <FontAwesomeIcon className="icon" icon={faHeart} />
+        <div><FontAwesomeIcon className="icon" icon={faCompass} /></div>
+        <div><FontAwesomeIcon className="icon" icon={faHeart} /></div>
         <div onClick={function(event){event.currentTarget.childNodes[1].classList.toggle('visible')}} className='dropDown'>
         <FontAwesomeIcon  className="icon" icon={faUser} />
         <div className='dropDownBox' onClick={props.logout}>Logout</div>
