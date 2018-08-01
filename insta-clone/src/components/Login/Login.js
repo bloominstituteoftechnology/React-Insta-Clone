@@ -14,13 +14,13 @@ class Login extends React.Component {
         this.setState({ [event.target.name]: event.target.value });
     };
 
-    updateUsername = event => {
-        this.setState({ username: event.target.value });
-    }
+    // updateUsername = event => {
+    //     this.setState({ username: event.target.value });
+    // }
 
-    updatePassword = event => {
-        this.setState({ password: event.target.value })
-    }
+    // updatePassword = event => {
+    //     this.setState({ password: event.target.value })
+    // }
 
     submitLogin = event => {
         const user = this.state.username;
@@ -36,16 +36,18 @@ class Login extends React.Component {
                 type="text" 
                 placeholder="Username..." 
                 className="username-field"
+                name="username"
                 value={this.state.username}
-                onChange={this.updateUsername}
+                onChange={this.inputChange}
                 />
 
                 <input 
                 type="text" 
                 placeholder="Password..." 
                 className="password-field" 
+                name="password"
                 value={this.state.password}
-                onChange={this.updatePassword}
+                onChange={this.inputChange}
                 />
 
                 <button 
