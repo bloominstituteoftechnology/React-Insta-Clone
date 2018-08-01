@@ -13,11 +13,18 @@ const Authenticate = Posts =>
     }
 
     componentDidMount(){
-      //check if local storage has login
+      if(localStorage.getItem('login')){
+        this.setState({
+          isLoggedIn: localStorage.getItem('login'),
+          username: localStorage.getItem('username')
+        });
+      }
     }
 
     handleLogin = event =>{
       event.preventDefault();
+      localStorage.setItem('login', true);
+      localStorage.setItem('username', this.state.username);
       this.setState({ isLoggedIn: true, });
     }
 
@@ -26,13 +33,14 @@ const Authenticate = Posts =>
     }
 
     handleLogout = () => {
-      this.setState({isLoggedIn: false});
+      localStorage.setItem('login', false);
+      this.setState({username: '', isLoggedIn: false});
     }
 
     render(){
       return(
           this.state.isLoggedIn ?
-            <Posts loggedIn={this.state.isLoggedIn} username={this.state.username} /> :
+            <Posts handleLogout={this.handleLogout} loggedIn={this.state.isLoggedIn} username={this.state.username} /> :
             <Login handleUserChange={this.handleUserChange} handleLogin={this.handleLogin} />
       );
     }

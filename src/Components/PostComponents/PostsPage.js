@@ -37,7 +37,7 @@ class PostsPage extends React.Component {
   render(){
     return(
       <div className="app-container">
-        <SearchBar filter={this.handleFilter} />
+        <SearchBar handleLogout={this.props.handleLogout} filter={this.handleFilter} />
         {this.state.filteredPosts === undefined ?
           this.state.posts.map(post => <PostContainer username={this.state.username} post={post} />) :
           this.state.filteredPosts.map(post => <PostContainer username={this.state.username} post={post} />)}

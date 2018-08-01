@@ -12,7 +12,7 @@ const SearchBar = props => {
       <div className="search-bar-right">
         <i className="far fa-compass icons"></i>
         <i className="far fa-heart icons"></i>
-        <i className="far fa-user icons"></i>
+        <i className="far fa-user icons" onClick={props.handleLogout}></i>
       </div>
     </div>
   );
