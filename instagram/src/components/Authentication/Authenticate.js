@@ -13,9 +13,13 @@ const Authenticate= Page =>
             const username = localStorage.getItem('username');
             const password = localStorage.getItem('password');
             console.log(username, "username")
-            if(username && password) {
+            if(username && password && this.state.loggedIn === false) {
                 this.setState({loggedIn: true, userIn: username});
             }
+        }
+        componentWillUnmount () {
+            localStorage.removeItem('username')
+            localStorage.removeItem('password')
         }
 
         render() {

@@ -26,6 +26,10 @@ class App extends Component {
   login = (username, password) => {
 
   }
+  componentWillUnmount () {
+    localStorage.removeItem('username')
+    localStorage.removeItem('password')
+}
 
 
   render() {
