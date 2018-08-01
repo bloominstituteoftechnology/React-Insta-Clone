@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import LoginPage from '../components/Login/LoginPage';
 
 const Authenticate = App => {
     return class extends Component {
@@ -12,11 +13,17 @@ const Authenticate = App => {
         /* Lifecycle Methods */
 
         componentDidMount() {
-            localStorage.getItem();
+            localStorage.getItem('username') &&
+            this.setState({
+                loggedIn: true,
+                username: localStorage.getItem('username')
+            });
         }
 
         render () {
-            return this.state.loggedIn ? <App /> : <LoginPage />;
+            return this.state.loggedIn ? 
+                <App username={this.state.username} /> : 
+                <LoginPage />;
         }
     };
 };

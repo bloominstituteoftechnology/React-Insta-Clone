@@ -82,7 +82,7 @@ body {
   position: relative;
   z-index: 2;
 }
-.search-bar .search {
+.search-bar form .search {
   border-radius: 5px;
   background: whitesmoke;
 }
