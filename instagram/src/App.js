@@ -16,11 +16,16 @@ class App extends Component {
   componentDidMount(){
     this.setState({data: dummyData});}
 
+    likeBtn(index){
+      this.state.likes + 1; 
+      }
+
   render() {
     return (
       <div className="App">
       <SearchBar/>
-      <PostContainer posts={this.state.data} />
+      <PostContainer handleLikeBtn = {this.likeBtn}
+        posts={this.state.data} />
       </div>
     );
   }
