@@ -8,17 +8,25 @@ const Authenticate = App => {
             this.state = {
                 isLoggedIn: false
             }
-            console.log("Inside auth for props", App);
+            // console.log("Inside auth for props", App);
             
         }
 
         componentDidMount(){
-            console.log("in auth", App);
-            
+            console.log("in auth", localStorage.getItem('name'));
+            if (localStorage.getItem('name')){
+                this.setState({
+                    isLoggedIn: true
+                })
+            }
         }
 
         render(){
-           return <App />
+            if(this.state.isLoggedIn === true){
+                return <App />
+            } else {
+                return <LogIn />
+            }
         }
     }
 

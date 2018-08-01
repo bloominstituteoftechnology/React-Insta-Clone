@@ -5,7 +5,8 @@ class LogIn extends React.Component {
         super();
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            isLoggedIn: false
         }
     }
 
@@ -25,11 +26,11 @@ class LogIn extends React.Component {
 
     submitDataToStorage = (e) => {
         e.preventDefault();
-        console.log("submitdata");
-        
         localStorage.setItem('name', this.state.username);
         localStorage.setItem('password', this.state.password);
-        console.log(localStorage.getItem('name'));
+        this.setState({
+            isLoggedIn: true
+        })
         
     }
 

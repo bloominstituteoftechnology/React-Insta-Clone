@@ -12,7 +12,7 @@ class App extends Component {
       username: '',
       pw: ''
     }
-    console.log("username is", this.state.username);
+    // console.log("username is", this.state.username);
     
   }
 
@@ -22,11 +22,9 @@ class App extends Component {
 
 
   render(){
-    if(this.state.isLoggedIn === false){
-      return <LogIn handleLocalStorage={this.handleLocalStorage} textInput={this.textInput}/>
-    } else {
+   
       return <PostsPage />
-    }
+    
   }
 
   
