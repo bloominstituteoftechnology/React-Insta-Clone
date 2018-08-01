@@ -4,8 +4,10 @@ import dummyData from './dummy-data.js';
 import PostsPage from './components/PostContainer/PostsPage.js';
 import fuzzy from 'fuzzy';
 import SearchBar from './components/SearchBar/SearchBar.js';
+import Authenticate from './components/Authentication/Authenticate.js';
 
-class App extends Component {
+const App=Authenticate(
+  class App extends Component {
   constructor() {
     super();
     this.state={
@@ -48,6 +50,5 @@ class App extends Component {
       </div>
     );
   }
-}
-
+});
 export default App;
