@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
+import PostsPage from './components/PostContainer/PostsPage'
 
 class App extends Component {
   constructor() {
@@ -14,7 +15,7 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
-        <PostContainer name={this.state.name} />
+        <PostsPage name={this.state.name} />
       </div>
     );
   }
