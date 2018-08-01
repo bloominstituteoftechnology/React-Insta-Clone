@@ -30,23 +30,19 @@ class LoginPage extends React.Component {
         return (
 
             <div className = "loginPage">
-                <div className = "searchBar">
+                <div className = "loginHeader">
           
                     {/* <div className ="leftSideSearchBar"><i className="fab fa-instagram"></i> <span className="verticalLine">&#124;</span><span className ="logoTitle">Instagram</span> </div> */}
-                    <img src={logo} alt="Instagram Logo"/>
-                    <div className = "rightSideSearchBar">
-                        <i className="far fa-compass"></i>
-                        <i className="far fa-heart"></i> 
-                        <i className="far fa-user"></i>
-                    </div>
+                    <img className = "logo" src={logo} alt="Instagram Logo"/>
           
                 </div>
                 <div>
-                    <form action="">
+                    <form className = "credentials">
                         <h1>UserName</h1>
                         <input onChange = {this.handleUsernameChange} type="text" value = {this.state.username}/>
                         <h1>Password</h1>
                         <input onChange={this.handlePasswordChange} type="text" value = {this.state.password}/>
+                        <br/>
                         <button onClick ={this.handleSubmit}>Login</button>
                     </form>
 

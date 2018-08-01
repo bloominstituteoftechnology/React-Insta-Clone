@@ -1,0 +1,13 @@
+.logo {
+    max-width: 100%; 
+
+}
+
+.credentials h1 {
+    margin:10px;
+    font-size: 3vw;
+}
+
+.loginPage {
+    margin: 0 auto;
+}
