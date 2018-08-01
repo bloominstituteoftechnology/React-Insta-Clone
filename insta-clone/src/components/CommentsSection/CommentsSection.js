@@ -5,23 +5,35 @@ class CommentsSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.data
+      comments: props.data,
+      likes: props.likes
     }
   }
 
-addComment = event => {
-  let currentComments = this.state.comments;
-  currentComments.push({
-    username: 'Joe Blow',
-    text: event.target.value
-  });
-  event.target.value = '';
-  this.setState({ currentComments });
-}
+  incrementLikes = event => {
+    let likes = this.state.likes;
+    likes++;
+    this.setState({ likes: likes });
+  }
+
+  addComment = event => {
+    let currentComments = this.state.comments;
+    currentComments.push({
+      username: 'Joe Blow',
+      text: event.target.value
+    });
+    event.target.value = '';
+    this.setState({ currentComments });
+  }
 
   render() {
     return(
       <div className='comment-container'>
+        <h4>{this.state.likes} likes</h4>
+        <div className='buttons'>
+          <i className='far fa-heart' onClick={ this.incrementLikes } />
+          <i className='far fa-comment' />
+        </div>
         {this.state.comments.map((comment, i) => {
           return (
             <div key={i} className='comment'>
