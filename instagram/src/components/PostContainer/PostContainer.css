@@ -1,0 +1,59 @@
+.postContainer {
+    width: 66.67%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border: 1px solid lightgray;
+}
+
+.topPC {
+    padding-left: 15px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.thumbnail {
+    border-radius: 50%;
+    width: 5%;
+}
+
+.username {
+    text-align: center;
+    padding-left: 10px;
+}
+
+.image {
+    width: 100%;
+}
+
+.postHeartIcon {
+    width: 7%;
+}
+
+.postCommentIcon {
+    width: 11%;
+}
+
+.hncIcons {
+    display: flex;
+    align-items: center;
+}
+
+.underImage {
+    padding-left: 15px;
+}
+
+.inputArea {
+    padding-top: 20px;
+    border-top: 1px solid lightgray;
+    margin-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.optionsIcon {
+    width: 5%;
+}
