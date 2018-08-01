@@ -10,16 +10,11 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      data: []
+      
     }
   }
   
-  componentDidMount(){
-    this.setState({data: dummyData});}
-
-    likeBtn(index){
-      this.state.likes + 1; 
-      }
+ 
 
   render() {
     return (

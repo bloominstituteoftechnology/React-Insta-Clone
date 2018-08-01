@@ -1,4 +1,5 @@
 import React from "react";
+import Login from './Login'
 
  const Authenticate = App =>
   class extends React.Component {
