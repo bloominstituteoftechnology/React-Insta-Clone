@@ -15,6 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <PostContainer dog={this.state.insta_posts}/>
+        <PostsPage />
       </div>
     );
   }
