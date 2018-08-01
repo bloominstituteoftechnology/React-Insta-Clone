@@ -7,5 +7,5 @@
 
 [build]
   base    = "./instakg"
-  publish = "public"
+  publish = ""
   command = "yarn build"
