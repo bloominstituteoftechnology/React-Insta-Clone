@@ -9,7 +9,8 @@ class CommentSection extends React.Component{
         this.state={
             comments: props.comments,
             input: '',
-            likes: props.likes
+            likes: props.likes,
+            liked: false
         }
     }
     addNewComment = (e,i) => {
@@ -18,9 +19,10 @@ class CommentSection extends React.Component{
         comments.push({username: 'FakeAcct', text: this.state.input});
         this.setState({comments, input:''})
     }
-    incrementLike = () => {
-        let likes = this.state.likes + 1;
-        this.setState({likes});
+    incrementLike = prevState => {
+        let likes = this.state.likes;
+        likes+=1;
+        this.setState({likes, liked:!prevState.liked});
     }
     handleNewComment = e => {
         this.setState({input: e.target.value});
