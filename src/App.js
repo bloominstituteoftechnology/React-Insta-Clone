@@ -40,28 +40,27 @@ class App extends Component {
     let filteredPosts = this.state.postData.filter((post) => {
         return (post.username.toLocaleLowerCase().includes(this.state.input.toLocaleLowerCase()));
     });
-    
     return (
       <div className="main-container">
         <header className="main-header">
-          <div className="main-header__logos">
+          <section className="main-header__logos">
             <div className="main-header__logo-container">
               <FontAwesomeIcon className="main-header__logo" icon={faInstagram} />
             </div>
             <div className="main-header__logo-container">
               <img className="main-header__logo" src={instaLogo} alt="instagram logo"/>
             </div>
-          </div>
+          </section>
           <SearchBarContainer 
             input={this.state.input}
             onChange={this.handleChange}
             /*onSubmit={this.filterPosts} - need a form submit for this*/
           />
-          <div className="main-header__icons-container">
+          <section className="main-header__icons">
             <FontAwesomeIcon icon={faCompass} />
             <FontAwesomeIcon icon={faHeart} />
             <FontAwesomeIcon icon={faUser} />
-          </div>
+          </section>
         </header>
         {filteredPosts.length > 0 ? <PostContainer postData={filteredPosts} /> : <p>No Posts!</p> }
       </div>

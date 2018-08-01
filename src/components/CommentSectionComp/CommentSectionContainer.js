@@ -62,8 +62,8 @@ class CommentSectionContainer extends React.Component {
 
   render() {
     return (
-      <div className="comment-section">
-        <div className="comment-section__icons-likes">
+      <section className="main-post__comment-section">
+        <div className="comment-section__top">
           <div className="comment-section__icons">
             <div className="comment-section__icon--like">
               <FontAwesomeIcon onClick={this.addLike} icon={this.state.shouldAddLike ? faSHeart : faHeart} />
@@ -80,19 +80,18 @@ class CommentSectionContainer extends React.Component {
         <div className="comment-section__timestamp">
           <p><strong>{this.state.timestamp}</strong></p>
         </div>
-        {this.state.shouldAddComment ? 
-          <form className="comment-section__input-container" onSubmit={this.addComment}>
-            <input 
+        {this.state.shouldAddComment ?
+          <form className="comment-section__input" onSubmit={this.addComment}>
+            <input
               onChange={this.handleChange}
-              placeholder="Add comment..." 
+              placeholder="Add comment..."
               value={this.state.input}
-              type="text" 
-              className="comment-section__input" 
+              type="text"
             />
             <span>...</span>
-          </form> 
+          </form>
         : null}
-      </div>
+      </section>
     );
   }
 }

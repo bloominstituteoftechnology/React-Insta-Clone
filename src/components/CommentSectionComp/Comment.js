@@ -3,8 +3,8 @@ import './comment-section.css';
 
 const Comment = props => {
   return (
-    <div className="comment-section__comment-container">
-      <p className="comment-section__comment"><strong>{props.username}</strong> {props.text}</p>
+    <div className="comment-section__user-comments">
+      <p><strong>{props.username}</strong> {props.text}</p>
     </div>
   );
 }

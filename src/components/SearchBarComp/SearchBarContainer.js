@@ -3,7 +3,7 @@ import './search-bar.css';
 
 const SearchBarContainer = props => {
   return (
-    <div className="main-header__searchbar-container">
+    <section className="main-header__searchbar">
       <label htmlFor="searchinput"></label>
       <input 
         id="searchinput" 
@@ -14,7 +14,7 @@ const SearchBarContainer = props => {
         onChange={props.onChange}
         required
       />
-    </div>
+    </section>
   );
 }
 

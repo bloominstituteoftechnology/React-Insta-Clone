@@ -4,24 +4,24 @@ import CommentSectionContainer from '../CommentSectionComp/CommentSectionContain
 
 const Post = props => {
   return (
-    <div className="post-container">
-      <header className="post-header">
-        <div className="post-header__img-container">
-          <img src={props.userThumbnail} alt="user profile" className="post-header__img"/>
+    <article className="main-post">
+      <header className="main-post__header">
+        <div className="main-post__user-img">
+          <img src={props.userThumbnail} alt="user profile" className="main-post__img"/>
         </div>
-        <div className="post-header__user-container">
-          <p className="post-header__user">{props.username}</p>
+        <div className="main-post__user">
+          <p>{props.username}</p>
         </div>
       </header>
-      <div className="post-img-container">
-        <img src={props.image} alt="post" className="post-img"/>
-      </div>
+      <section className="main-post__img">
+        <img src={props.image} alt="post" />
+      </section>
       <CommentSectionContainer 
         comments={props.comments} 
         timestamp={props.timestamp}
         likes={props.likes}
       />
-    </div>
+    </article>
   );
 }
 
