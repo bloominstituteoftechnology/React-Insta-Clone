@@ -1,0 +1,63 @@
+import React from 'react';
+import './Login.css'
+
+class Login extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            username: '',
+            password: '',
+        }
+    }
+
+    inputChange = event => {
+        this.setState({ [event.target.name]: event.target.value });
+    };
+
+    updateUsername = event => {
+        this.setState({ username: event.target.value });
+    }
+
+    updatePassword = event => {
+        this.setState({ password: event.target.value })
+    }
+
+    submitLogin = event => {
+        const user = this.state.username;
+        localStorage.setItem('user', user);
+        window.location.reload();
+    };
+
+    render() {
+        return (
+            <div>
+            <form className="login-form">
+                <input 
+                type="text" 
+                placeholder="Username..." 
+                className="username-field"
+                value={this.state.username}
+                onChange={this.updateUsername}
+                />
+
+                <input 
+                type="text" 
+                placeholder="Password..." 
+                className="password-field" 
+                value={this.state.password}
+                onChange={this.updatePassword}
+                />
+
+                <button 
+                className="login-button" 
+                onClick={this.submitLogin}
+                >
+                Login
+                </button>
+            </form>
+        </div>
+        );
+    }
+};
+
+export default Login;
