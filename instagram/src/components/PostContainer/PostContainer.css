@@ -10,8 +10,9 @@
     display: flex;
     align-items: center;
     padding-top: 5px;
+    padding-bottom: 5px;
     font-size: 1.6rem;
-    font-size: bold;
+    font-weight: bold;
 
 }
 

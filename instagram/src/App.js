@@ -3,6 +3,7 @@ import dummyData from './dummy-data';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import Authenticate from './components/Authenticate/Authenticate';
 
 class App extends Component {
   constructor() {
@@ -24,7 +25,6 @@ class App extends Component {
   }
 
   handleSearch = (event) => {
-    
     this.setState ({
       search: event.target.value,
       posts: this.state.allPosts.filter(post => new RegExp(event.target.value, "i").exec(post.username))
@@ -47,4 +47,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);

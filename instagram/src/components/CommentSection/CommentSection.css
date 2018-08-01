@@ -5,14 +5,14 @@
     align-items: baseline;
 }
 
-.username {
+.comment-username {
     font-size: 1.4rem;
     font-weight: bold;
     margin-right: 5px;
     
 }
 
-.text {
+.comment {
     font-size: 1.2rem;
 }
 
