@@ -2,6 +2,7 @@ import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection'
 import { FontAwesomeIcon } from '../../../node_modules/@fortawesome/react-fontawesome';
+import PropTypes from "prop-types";
 
 const Post = props => {
     return (
@@ -27,8 +28,12 @@ const Post = props => {
             <CommentSection comments={props.post.comments} />
         </div>
         
-
     );
 }
+
+Post.propTypes = {
+    thumbnailUrl: PropTypes.string,
+    username: PropTypes.string
+};
 
 export default Post;
