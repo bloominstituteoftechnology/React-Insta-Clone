@@ -1,5 +1,6 @@
 import React from 'react'; 
-
+import logo from './instagramlogo.jpg';
+import './Authentication.css';
 class LoginPage extends React.Component {
     constructor(){
         super();
@@ -31,8 +32,8 @@ class LoginPage extends React.Component {
             <div className = "loginPage">
                 <div className = "searchBar">
           
-                    <div className ="leftSideSearchBar"><i className="fab fa-instagram"></i> <span className="verticalLine">&#124;</span><span className ="logoTitle">Instagram</span> </div>
-                    
+                    {/* <div className ="leftSideSearchBar"><i className="fab fa-instagram"></i> <span className="verticalLine">&#124;</span><span className ="logoTitle">Instagram</span> </div> */}
+                    <img src={logo} alt="Instagram Logo"/>
                     <div className = "rightSideSearchBar">
                         <i className="far fa-compass"></i>
                         <i className="far fa-heart"></i> 
