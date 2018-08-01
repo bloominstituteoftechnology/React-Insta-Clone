@@ -13,10 +13,11 @@ const Authenticate = Posts =>
     }
 
     componentDidMount(){
-      if(localStorage.getItem('login')){
+      const local = localStorage.getItem('login');
+      if(local && local !== 'false'){
         this.setState({
           isLoggedIn: localStorage.getItem('login'),
-          username: localStorage.getItem('username')
+          username: localStorage.getItem('username'),
         });
       }
     }
