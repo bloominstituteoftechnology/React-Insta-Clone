@@ -6,12 +6,16 @@
 }
 
 .post-header-wrap {
-    display: flex;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    margin: 10px 0; 
 }
 
 .post-thumb-wrap {
     height: 50px;
     width: 50px;
+    margin-right: 10px;
 }
 
 .post-thumb {
