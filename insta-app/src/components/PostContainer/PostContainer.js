@@ -1,6 +1,5 @@
 import React from "react";
 import CommentInput from "../CommentSection/CommentInput";
-import dummyData from "../../dummy-data";
 
 const PostContainer = props => {
   return (
@@ -15,7 +14,6 @@ const PostContainer = props => {
             <img className="post-img" src={item.imageUrl} alt="Post-Image" />
             <div className="img-icons">
             </div>
-            {/* <div className="comment user likes">{item.likes} likes</div> */}
             <div>
               <CommentInput likes={item.likes} comments={item.comments} />
             </div>
