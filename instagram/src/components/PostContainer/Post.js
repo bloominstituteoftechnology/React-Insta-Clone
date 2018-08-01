@@ -18,8 +18,10 @@ const Post = props => {
             </div>
 
             {/* LIKES SECTION */}
-            <FontAwesomeIcon icon="heart" className="heart-icon"/>
-            <FontAwesomeIcon icon="comment" />
+            <div className="comment-icon-container">
+                <FontAwesomeIcon icon="heart" className="heart-icon"/>
+                <FontAwesomeIcon icon="comment" className="comment-icon"/>
+            </div>         
             <div className="like-container">{props.post.likes} likes</div>
 
             <CommentSection comments={props.post.comments} />
