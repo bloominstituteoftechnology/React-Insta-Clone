@@ -13,7 +13,7 @@ const Authenticate = App => class extends Component {
   }
 
   componentDidMount() {
-    if (window.localStorage.length !== 0) {
+    if (window.localStorage.length !== 0 && this.state.username.length !== 0) {
       this.setState({ isLoggedIn: true });
     } 
   }
