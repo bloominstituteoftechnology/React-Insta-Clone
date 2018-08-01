@@ -20,6 +20,7 @@
     border-radius: 8px;
     height: 60%;
     text-align: center;
+    margin: 0;
 }
 
 .search-bar input:focus {
