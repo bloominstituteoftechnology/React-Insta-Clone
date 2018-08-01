@@ -9,31 +9,43 @@ class App extends Component {
     super();
 
     this.state = {
-      data: []
+      posts: [],
+      allPosts: [],
+      search: "",
+     
     }
   }
 
   componentDidMount() {
     this.setState ({
-      data: dummyData
+      posts: dummyData,
+      allPosts: dummyData
     });
+  }
+
+  handleSearch = (event) => {
+    
+    this.setState ({
+      search: event.target.value,
+      posts: this.state.allPosts.filter(post => new RegExp(event.target.value, "i").exec(post.username))
+    })
   }
 
   render() {
     return (
       <div className="App">
-      <SearchBar />
+      <SearchBar  value={this.state.search} handleSearch={this.handleSearch} />
       <div className="container">
-        {this.state.data.map(data => {
+        {this.state.posts.map(post => {
           return (
             <PostContainer
-              key={data.username} 
-              username={data.username}
-              thumbnailUrl={data.thumbnailUrl}
-              imageUrl={data.imageUrl}
-              likes={data.likes}
-              timestamp={data.timestamp}
-              comments={data.comments}
+              key={post.username} 
+              username={post.username}
+              thumbnailUrl={post.thumbnailUrl}
+              imageUrl={post.imageUrl}
+              likes={post.likes}
+              timestamp={post.timestamp}
+              comments={post.comments}
             />
           )
         })}

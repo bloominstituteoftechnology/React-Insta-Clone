@@ -14,8 +14,8 @@ class SearchBar extends Component {
                 <input 
                     type="text"
                     placeholder="Search"
-                    //value
-                    //onChange
+                    value={this.props.value}
+                    onChange={this.props.handleSearch}
                 />
             <div className="icons">
                 <div><i className="far fa-compass fa-5x"></i></div>
