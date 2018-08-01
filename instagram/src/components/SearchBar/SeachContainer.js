@@ -10,7 +10,7 @@ const SearchContainer = props => {
             </div>
 
             <div className='search'>
-                <form onSubmit={props.search}>
+                <form onSubmit={props.filterSearch}>
                     <input
                         type='text'
                         name='search'

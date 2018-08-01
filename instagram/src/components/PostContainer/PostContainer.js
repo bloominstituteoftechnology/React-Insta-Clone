@@ -20,11 +20,7 @@ const PostContainer = props => {
                     </div>
 
                     <div>
-                    <i onClick={props.liked} className="far fa-heart"> {props.likes} </i> <i className="far fa-comment"></i>
-                    </div>
-
-                    <div className='likes'>
-                        
+                    <i onClick={props.liked} value={props.likes} className="far fa-heart"> {props.likes} </i> <i className="far fa-comment"></i>
                     </div>
 
                     <div>
