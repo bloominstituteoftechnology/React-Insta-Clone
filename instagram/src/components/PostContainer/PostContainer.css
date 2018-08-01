@@ -35,4 +35,9 @@
     justify-content: space-evenly;
    
   }
+
+.like-section{
+  display:inline-block;
+  padding-left: 4px;
+}
   

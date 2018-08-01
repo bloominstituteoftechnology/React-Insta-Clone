@@ -4,9 +4,10 @@ import './SearchBar.css';
 const SearchBar = props => {
     return (  
 <div className="search-bar">
+    <h2>Instagram</h2>
       <div className="image">
-      <i class="fab fa-instagram"></i>
-    </div>
+      <i className="fab fa-instagram"></i>
+      </div>
       <div>
         <input type="text" placeholder="Search" onKeyDown={props.searchPosts}/>
       </div>
