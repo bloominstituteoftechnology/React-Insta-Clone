@@ -1,14 +1,21 @@
+.background{
+    background: lightgrey; 
+}
+
 .app-container{
     width: 500px; 
     height: auto; 
     margin: auto; 
+    background: white;
 }
+
 .top-bar{
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
     margin: auto; 
-    height: 50px; 
+    height: 150px;
+    background: white; 
 }
 .top-bar-left{
     display: flex;
@@ -23,12 +30,9 @@ i {
     margin: 0 10px; 
     cursor: pointer;
 }
-/* .insta-img{
-    width: 25%;
-} */
 /* Top bar content Above */
 .post-container{
-    margin: auto; 
+    margin:auto; 
 }
 .username-header{
     display: flex; 
@@ -72,11 +76,11 @@ i {
 /* Username and img Above */
 .comment-container{
     height: auto; 
+    margin: 20px 0; 
 }
 .comment-section{
     display: flex; 
     flex-direction: row; 
-    margin: 10px 0; 
 }
 .user{
     font-weight: 700; 
