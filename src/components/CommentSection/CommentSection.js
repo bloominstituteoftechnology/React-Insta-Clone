@@ -3,8 +3,9 @@ import './CommentSection.css';
 
 const CommentSection = (props) => {
     return (
-        <div>
-            
+        <div className="d-flex align-items-left">
+            <strong>{props.comment.username}</strong>
+            {props.comment.text}
         </div>
     )
 };

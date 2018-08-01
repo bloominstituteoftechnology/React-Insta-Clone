@@ -5,8 +5,10 @@ import {
   CardImg,
   CardText,
   CardBody,
-  CardTitle,
-  CardSubtitle
+  CardHeader,
+  CardSubtitle,
+  CardFooter,
+  Input
 } from "reactstrap";
 import CommentSection from "../CommentSection/CommentSection";
 
@@ -18,22 +20,40 @@ const PostContainer = props => {
   };
 
   return (
-    <Card>
+    <Card className="align-items-center">
       <CardBody>
-        <CardImg
-          width="10%"
-          src={props.user.thumbnailUrl}
-          alt="userImage"
-          style={thumbStyle}
-        />
-        <CardTitle>{props.user.username}</CardTitle>
-        <CardImg width="40%" src={props.user.imageUrl} alt="Card image cap" />
-        <CardSubtitle>Card subtitle</CardSubtitle>
-        <CardSubtitle>{props.user.likes} likes</CardSubtitle>
+        <CardHeader className="d-flex align-items-left">
+          <CardImg
+            width="10%"
+            className="mr-3"
+            src={props.user.thumbnailUrl}
+            alt="userImage"
+            style={thumbStyle}
+          />
+          <CardText className="cardUser">
+            <strong>{props.user.username}</strong>
+          </CardText>
+        </CardHeader>
 
-        {props.user.comments.map((comments, i) => {
-          return <CommentSection comments={comments} key={i} />;
-        })}
+        <CardImg
+          className="d-flex justify-content-center"
+          src={props.user.imageUrl}
+          alt="Card image cap"
+        />
+
+        <CardFooter>
+          <div className="likeIcon">
+            <i class="far fa-heart" />
+            <i class="far fa-comment" />
+          </div>
+          <CardSubtitle className="d-flex align-items-left">
+            <strong>{props.user.likes} likes</strong>
+          </CardSubtitle>
+          {props.user.comments.map((comment, i) => {
+            return <CommentSection comment={comment} key={i} />;
+          })}
+          <Input placeholder="add a comment" />
+        </CardFooter>
       </CardBody>
     </Card>
   );

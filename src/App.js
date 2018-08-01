@@ -21,6 +21,7 @@ class App extends Component {
       {DummyData.map((user, i) => {
         return <PostContainer user={user} key={i}/>
       })}
+
       </div>
     );
   }
