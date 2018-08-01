@@ -3,7 +3,7 @@ import "./Comment.css";
 
 const Like = props => {
   return (
-      <div>
+      <div className="flex-center neg-10-margin-bottom">
        <span onClick={props.increment} className="like-icon"><i className="far fa-heart"></i></span>
        <span className="likes">{props.like} likes</span>
       </div>

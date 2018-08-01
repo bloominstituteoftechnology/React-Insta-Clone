@@ -42,3 +42,12 @@
     color: #003569;
     padding: 10px;
 }
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.neg-10-margin-bottom {
+    margin-bottom: -10px;
+}
