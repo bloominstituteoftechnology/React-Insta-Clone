@@ -19,11 +19,9 @@
     width: 30px;
     margin-left: 15px;
     margin-right: 15px;
-}
-
-.thumbnail img {
     border-radius: 50%;
 }
+
 
 .comment-icons {
     display: flex;

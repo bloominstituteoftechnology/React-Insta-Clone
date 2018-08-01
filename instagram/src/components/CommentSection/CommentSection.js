@@ -7,14 +7,15 @@ class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            comments: "",
-            date: "",
+            comments: props.posts.comments,
+            date: props.posts.timestamp,
             newComment: "",
             username: "Das MA"
          }
     }
 
     handleCommentUpdate = (event) => {
+        event.preventDefault();
         this.setState({newComment: event.target.value})
     }
 
@@ -36,11 +37,12 @@ class CommentSection extends Component {
     render() { 
         return ( 
             <div className="comment-container">
-                 
+                 {this.state.comments.map(comment => 
                     <Comment 
-                        
+                        name={comment.username}
+                        comment={comment.text}
                     />
-               
+                )}
                 
                 <div className="timestamp">
                     {this.state.date}

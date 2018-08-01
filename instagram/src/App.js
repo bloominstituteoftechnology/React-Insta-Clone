@@ -38,15 +38,7 @@ class App extends Component {
       <div className="container">
         {this.state.posts.map(post => {
           return (
-            <PostContainer
-              key={post.username} 
-              username={post.username}
-              thumbnailUrl={post.thumbnailUrl}
-              imageUrl={post.imageUrl}
-              likes={post.likes}
-              timestamp={post.timestamp}
-              comments={post.comments}
-            />
+            <PostContainer posts={post} />
           )
         })}
         </div>

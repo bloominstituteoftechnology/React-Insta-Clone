@@ -11,7 +11,7 @@ class AddComment extends Component {
                     onChange={this.props.handleCommentUpdate}
                     value={this.props.value}
                 />
-                <i className="fas fa-ellipsis-h"></i>
+                <i className="fas fa-ellipsis-h" onClick={this.props.addNewComment}></i>
             </div>
          );
     }

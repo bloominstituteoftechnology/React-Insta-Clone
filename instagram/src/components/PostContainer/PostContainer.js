@@ -1,26 +1,36 @@
 import React, { Component } from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
+import Post from './Post';
 
 
 class PostContainer extends Component {
+    constructor(props){
+        super(props);
+
+        this.state = {
+            likes: props.posts.likes,
+            posts: props.posts
+        }
+    }
     
-    
+    likesIncrement = () => {
+        this.setState({likes: this.state.likes++})
+    }
+
     render() { 
        
         return (
             <div className="post-container">
-                <div className="post-header">
-                    <div className="thumbnail"><img src={this.props.thumbnailUrl} alt="" /></div>
-                    <div>{this.props.username}</div>
-                </div>
-                <div><img src={this.props.imageUrl} alt="" /></div>
-                <div className="comment-icons">
-                <div><i className="far fa-heart fa-3x"></i></div>
-                <div><i className="far fa-comment fa-flip-horizontal fa-3x"></i></div>
-                </div>
-                <span className="likes">{this.props.likes} likes</span>
-                <CommentSection />
+                <Post
+                    username={this.state.posts.username}
+                    thumbnailUrl={this.state.posts.thumbnailUrl}
+                    imageUrl={this.state.posts.imageUrl}
+                    likes={this.state.likes}
+                />
+                <CommentSection 
+                    posts={this.state.posts}
+                />
             </div>
         )
     }
