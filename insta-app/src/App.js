@@ -6,8 +6,8 @@ import Authenticate from "./components/Authentication /Authentication";
 
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(App) {
+    super(App);
     this.state = {
 
     };
@@ -15,11 +15,11 @@ class App extends Component {
  
   render() {
     return (
-      <div>
-       <PostsPage />
-      </div>
+        <div>
+          <PostsPage />
+        </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
