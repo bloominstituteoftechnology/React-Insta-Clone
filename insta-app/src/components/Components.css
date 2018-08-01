@@ -10,10 +10,22 @@
     margin: auto; 
     height: 50px; 
 }
+.top-bar-left{
+    display: flex;
+    align-items: center; 
+    width: 150px;
+}
+.insta-img{
+    width: 55%;
+    margin-left: 10px; 
+}
 i {
     margin: 0 10px; 
     cursor: pointer;
 }
+/* .insta-img{
+    width: 25%;
+} */
 /* Top bar content Above */
 .post-container{
     margin: auto; 
