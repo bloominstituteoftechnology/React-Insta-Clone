@@ -15,6 +15,11 @@ class CommentSection extends Component {
 
     addComment = e => {
         e.preventDefault();
+        if (this.state.comments.indexOf({
+                text: this.state.current, 
+                username: localStorage.getItem('username')
+            }) !== -1) return;
+
         let comments = this.state.comments.concat({
             text: this.state.current, 
             username: localStorage.getItem('username')

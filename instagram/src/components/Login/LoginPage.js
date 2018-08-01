@@ -30,7 +30,7 @@ class LoginPage extends React.Component {
                     </FormGroup>
                     <FormGroup className="mb-1">
                         <Input 
-                            type="text" placeholder="Password"
+                            type="password" placeholder="Password"
                             autoComplete="off" />
                     </FormGroup>
                     <button onClick={this.handleLogin}>
