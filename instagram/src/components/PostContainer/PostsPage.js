@@ -6,22 +6,22 @@ import PostContainer from './PostContainer';
 import dummyData from './dummy-data';
 
 class PostsPage extends React.Component {
-  constructor () {
-    super();
+  constructor (props) {
+    super(props);
     this.state = {
       instaData: [],
       username: ""
     }
   }
 
-  handleLoginChange (event) {
+  handleLoginChange = (event) => {
     console.log(event.target.value)
-    // this.setState({
-    //   username: event.target.value,
-    // })
+    this.setState({
+      username: event.target.value,
+    })
   }
-  handleLogin () {
-    localStorage.setItem('username', 'frank')
+  handleLogin = () => {
+    localStorage.setItem('username', this.state.username)
   }
 
   componentDidMount () {
