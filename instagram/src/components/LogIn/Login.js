@@ -25,7 +25,7 @@ class LogIn extends React.Component {
     }
 
     submitDataToStorage = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         localStorage.setItem('name', this.state.username);
         localStorage.setItem('password', this.state.password);
         this.setState({
