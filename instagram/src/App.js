@@ -5,33 +5,33 @@ import SearchBar from './components/SearchBar/SearchBar.js'
 import PostContainer from './components/PostContainer/PostContainer.js'
 import Authenticate from './components/Authentication/Authenticate.js'
 
-const App = Authenticate(AppVar);
+const App = Authenticate(
 
 
-const AppVar = class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      data: []
+  class App extends Component {
+    constructor() {
+      super()
+      this.state = {
+        data: []
+      }
+    }
+
+    componentDidMount() {
+      this.setState({ data: dummyData });
+    }
+    render() {
+      return (
+        <div className="App">
+          <header>
+            <SearchBar />
+          </header>
+          <PostContainer data = { this.state.data}/>
+        </div>
+
+      );
     }
   }
-
-  componentDidMount() {
-    this.setState({data: dummyData});
-  }
-  render() {
-    return (
-      <div className="App">
-        <header>
-          <SearchBar />
-        </header>
-        <PostContainer />
-      </div>
-      
-    );
-  }
-}
-
+)
 //dummyData.map(post => <post )
 
 

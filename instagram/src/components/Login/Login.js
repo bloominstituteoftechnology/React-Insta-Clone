@@ -19,9 +19,9 @@ class Login extends Component {
         return (
             <div className="login-containter">
                 <form className="login-form">
-                    <input className="username-input" placeholder="Enter Username" onChange=/>
+                    <input className="username-input" placeholder="Enter Username" onChange={this.save}/>
                     <input classname="password-input" placeholder="Enter Password" />
-                    <button onClick={this.save} className="Button-input" />
+                    <button onClick={this.login} className="Button-input" />
                 </form>
             </div>
 
