@@ -1,6 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import './LogIn.css';
+
+const Button = styled.button`
+  width: 100%;
+  display: block;
+  border-radius: 3px;
+  border: 1px solid #64b5f6;
+  font-size: inherit;
+  padding: 1rem 2rem;
+  background-color: #64b5f6;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: hsl(207, 89%, 60%);
+  }
+`;
+
+const Container = styled.div`
+  max-width: 910px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 10%;
+  max-width: 45rem;
+`;
 
 class LogIn extends React.Component {
   state = {
@@ -14,7 +43,7 @@ class LogIn extends React.Component {
 
   render() {
     return (
-      <div className="container LogIn">
+      <Container>
         <form
           className="form"
           onSubmit={e => {
@@ -44,11 +73,9 @@ class LogIn extends React.Component {
               required
             />
           </div>
-          <button className="button button--submit" type="submit">
-            Log In
-          </button>
+          <Button type="submit">Log In</Button>
         </form>
-      </div>
+      </Container>
     );
   }
 }
