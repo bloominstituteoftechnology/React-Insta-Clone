@@ -1,4 +1,4 @@
-.login {
+.wrapper {
   background-color: #fafafa;
   height: 100vh;
   width: 100%;
@@ -7,16 +7,24 @@
   align-items: center;
 }
 
-.login__box {
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
   background-color: white;
   width: 300px;
   height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid #e6e6e6;
 }
 
-.login__box--inside {
+.login__box {
   width: 80%;
   height: 80%;
   display: flex;
@@ -48,7 +56,7 @@
   width: 100%;
   height: 38px;
   margin: 10px 0;
-  color: #efefef
+  color: black;
 }
 
 .login--btn {
@@ -60,4 +68,31 @@
   font-weight: bold;
   width: 100%;
   line-height: 26px;
+}
+
+.login--btn:disabled {
+  opacity: .3;
+}
+
+.signUp {
+  margin-top: 10px;
+  border: 1px solid #e6e6e6;
+  background-color: white;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signUp-box {
+  width: 80%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signUp-box p {
+  padding-right: 4px;
 }
