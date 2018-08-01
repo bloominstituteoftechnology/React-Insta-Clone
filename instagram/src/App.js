@@ -12,7 +12,6 @@ class App extends Component {
       posts:[],
       filteredPosts:[],
       searchBarValue:'',
-
     }
   }
   componentDidMount(){
@@ -23,12 +22,11 @@ class App extends Component {
     this.setState({searchBarValue:event.target.value},()=>this.filterPosts());
   }
   filterPosts=()=>{
-    let postsToBeFiltered=this.state.posts.slice();
-    let filteredPosts=postsToBeFiltered.map(e=>e.username);
-    filteredPosts=fuzzy.filter(this.state.searchBarValue,filteredPosts);
-    filteredPosts=filteredPosts.map(e=>e.string);
-    postsToBeFiltered=postsToBeFiltered.filter((e)=>filteredPosts.indexOf(e.username)!==-1);
-    this.setState({filteredPosts:postsToBeFiltered});
+    let filteredPosts=this.state.posts.slice();
+    let itemsToBeFiltered=filteredPosts.map(e=>e.username);
+    itemsToBeFiltered=fuzzy.filter(this.state.searchBarValue,itemsToBeFiltered).map(e=>e.string);
+    filteredPosts=filteredPosts.filter((e)=>itemsToBeFiltered.indexOf(e.username)!==-1);
+    this.setState({filteredPosts:filteredPosts});
   }
   liked=(data)=>{
     const postsCopy=this.state.posts.slice();

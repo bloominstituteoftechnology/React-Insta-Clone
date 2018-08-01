@@ -6,7 +6,6 @@ const SearchBar=props=>{
         <div className='searchbar'>
         <div className='instagramTrademark'>
             <i className="fab fa-instagram fa-3x"></i>
-            <div className='vr'></div>
             <img className='instalogo' src='http://assets.stickpng.com/thumbs/5a4e432a2da5ad73df7efe7a.png' alt='instagram logo'/>
         </div>    
         <div className='searchBarInput'>
