@@ -19,15 +19,15 @@ class CommentSection extends Component {
 
     addNewComment = (event) => {
         event.preventDefault();
-        const arr = this.state.data.comments.slice();
-        arr.push(
+        const comments = this.state.data.comments.slice();
+        comments.push(
             {
-            username: this.state.data.username,
+            username: 'Adam Lee',
             text: this.state.input,
             id: Date.now()
             }
         );
-        this.setState({data: {comments: arr}, input: ''})
+        this.setState({data: {comments: comments}, input: ''})
         console.log(this.state.data.comments);
     }
 

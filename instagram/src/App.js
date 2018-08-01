@@ -1,21 +1,32 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/postcontainer';
-import SearchBar from './components/SearchBar/searchbar';
+import PostPage from './components/PostContainer/postpage';
+import Authenticate from './components/Authentication/authenticate';
+import Login from './components/login/login';
 
 class App extends Component {
   constructor(){
     super();
     this.state = {
       data: [],
-      searchQuery: ''
+      searchQuery: '',
+      usernameInput: ''
     };
   }
 
+ 
+
   componentDidMount() {
+    const user = localStorage.getItem("user")
     this.setState({data: dummyData})
-  }
+  };
+
+  login() {
+    const username = this.state.data.username.slice();
+    localStorage.setitem(username, this.state.input);
+    console.log(username);
+  };
 
   handleSearchChange = event => {
     this.setState({searchQuery: event.target.value})
@@ -31,16 +42,18 @@ class App extends Component {
   };
 
   render() {
-    const userSearch = this.state.data.filter((data) => {
-      return data.username.toLowerCase().indexOf(this.state.searchQuery.toLowerCase()) != -1   
-    })
-    return (
-      <div className="App">
-        <SearchBar searchTerm={this.state.searchTerm} searchPosts={this.searchPostsHandler} onChange={this.handleSearchChange}/>
-        {userSearch.map(item =>  <PostContainer data={item} key={item.timestamp}/>)}
-      </div>
-    );
+   return (
+     <div>
+      <Login onclick={this.login}/>
+      <PostPage 
+        data={this.state.data} 
+        searchQuery={this.state.searchQuery} 
+        searchPosts={this.searchPostsHandler}
+        onChange={this.handleSearchChange}
+      />
+     </div>     
+   )
   }
 }
 
-export default App;
+export default Authenticate(App);
