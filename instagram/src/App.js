@@ -19,17 +19,40 @@ class App extends Component {
       searchValue: e.target.value,
     })
   }
+// this works for username
+  // searchHandler = e => {
+  //   e.preventDefault();
+  //   console.log('searchHandler envoked')
+  //   const searchArray = this.state.data.slice();
+  //   const newSearchArray = searchArray.filter( post => post.username.includes(this.state.searchValue));
+  //   this.setState({
+  //     displayData: newSearchArray,
+  //     searchValue: '',
+  //   })
+  // }
 
-  searchHandler = e => {
-    e.preventDefault();
-    console.log('searchHandler envoked')
-    const searchArray = this.state.data.slice();
-    const newSearchArray = searchArray.filter( post => post.username.includes(this.state.searchValue));
-    this.setState({
-      displayData: newSearchArray,
-      searchValue: '',
-    })
-  }
+//all messed up
+//   searchHandler = e => {
+//     e.preventDefault();
+//     console.log('searchHandler envoked')
+//     const searchArray = this.state.data.slice();
+//
+//     const newSearchArray = [];
+//
+//     searchArray.forEach( post => {
+//       const result = post.comments.filter( comment => {   comment.text.includes(this.state.searchValue)}
+//       console.log(comment)
+//     );
+//           console.log(result);
+//       }
+//       // do something with filteredPosts
+// )
+//     this.setState({
+//       displayData: newSearchArray,
+//       searchValue: '',
+//     })
+//
+// }
 
   componentDidMount(){
     this.setState({
