@@ -1,4 +1,5 @@
 .search-bar {
+    background: whitesmoke;
     display: flex;
     height: 40px;
     justify-content: center;
@@ -10,8 +11,8 @@
     }
 
     form {
-        display: flex;
         align-items: center;
+        display: flex;
         position: relative;
         i {
             left: 60px;
@@ -20,8 +21,20 @@
             z-index: 2;
         }
         .search {
+            background: white;
             border-radius: 5px;
-            background: whitesmoke;
+            width: 80%;
+        }
+    }
+
+    .btn-container {
+        align-items: center;
+        display: flex;
+        left: -10px;
+        position: relative;
+        
+        button {
+            border-radius: 5px;
         }
     }
 }

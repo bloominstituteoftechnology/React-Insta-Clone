@@ -5,7 +5,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './Authentication/Authenticate';
 
-const App = Authenticate (
+const App = Authenticate(
   class App extends Component {
     constructor() {
       super();
@@ -16,10 +16,14 @@ const App = Authenticate (
       };
     }
 
+    logOut = () => {
+      localStorage.removeItem('username');
+    };
+
     onSearch = e => {
       e.preventDefault();
       e.target.reset();
-      this.setState({data: this.state.data, dataTemp: null, isEmpty: true});
+      this.setState({data: this.state.data, filteredData: null, isEmpty: true});
     };
 
     handleSearchChange = e => {
@@ -27,7 +31,7 @@ const App = Authenticate (
       if (e.target.value === '') {
         filteredData = null;
       } else {
-        let options = {
+        let options = { // options for fuse search below
           shouldSort: true,
           threshold: 0.6,
           location: 0,
@@ -58,6 +62,7 @@ const App = Authenticate (
       return (
         <div className="App">
           <SearchBar 
+          logOut={this.logOut}
             onSearch={this.onSearch} 
             onChange={this.handleSearchChange} 
             isEmpty={this.state.isEmpty} />

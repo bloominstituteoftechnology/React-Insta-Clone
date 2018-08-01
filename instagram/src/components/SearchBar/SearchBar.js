@@ -13,6 +13,11 @@ const SearchBar = props => {
                     type="text" 
                     placeholder="              Search" />
             </form>
+            <div className="btn-container">
+                <form>
+                    <button onClick={props.logOut}>Log Out!</button>
+                </form>
+            </div>
         </div>
     );
 };

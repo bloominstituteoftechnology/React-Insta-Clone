@@ -13,6 +13,31 @@ body {
   margin: 0;
   padding: 0;
 }
+.login {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: center;
+}
+.login h1 {
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 30px;
+}
+.login button {
+  background: white;
+  border-color: darkgray;
+  border-radius: 5px;
+  color: black;
+  display: block;
+  margin: 0 auto;
+  transition-duration: 300ms;
+  width: 40%;
+}
+.login button:hover {
+  background: darkgray;
+  color: white;
+}
 @media (max-width: 768px) {
   .posts {
     flex-direction: row;
@@ -25,6 +50,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin-top: 50px;
+  width: 641px;
 }
 .post .comments,
 .post .stats {
@@ -32,7 +58,8 @@ body {
 }
 .post .comment-input {
   border: none;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  padding: 5px;
   width: 100%;
 }
 .post .fa-comment,
@@ -54,7 +81,7 @@ body {
   margin: 15px 15px 0;
 }
 .post .post-img {
-  margin: 15px 0;
+  margin: 15px auto;
 }
 .post .thumbnail-img {
   border-radius: 50%;
@@ -62,6 +89,7 @@ body {
   width: 30px;
 }
 .search-bar {
+  background: whitesmoke;
   display: flex;
   height: 40px;
   justify-content: center;
@@ -72,8 +100,8 @@ body {
   margin-top: 2px;
 }
 .search-bar form {
-  display: flex;
   align-items: center;
+  display: flex;
   position: relative;
 }
 .search-bar form i {
@@ -83,6 +111,16 @@ body {
   z-index: 2;
 }
 .search-bar form .search {
+  background: white;
   border-radius: 5px;
-  background: whitesmoke;
+  width: 80%;
+}
+.search-bar .btn-container {
+  align-items: center;
+  display: flex;
+  left: -10px;
+  position: relative;
+}
+.search-bar .btn-container button {
+  border-radius: 5px;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Form, FormGroup, Input} from 'reactstrap';
 
 class LoginPage extends React.Component {
     constructor() {
@@ -18,18 +19,25 @@ class LoginPage extends React.Component {
 
     render() {
         return (
-            <form className="login">
-                <input 
-                    onChange={this.handleUserInput} 
-                    type="text" placeholder="Username" 
-                    autocomplete="off" required />
-                <input 
-                    type="text" placeholder="Password" 
-                    autocomplete="off" />
-                <button onClick={this.handleLogin}>
-                    Login
-                </button>
-            </form>
+            <div className="login">
+                <h1>A Lovely Instagram Clone</h1>
+                <Form>
+                    <FormGroup className="mb-2">
+                        <Input 
+                            onChange={this.handleUserInput}
+                            type="text" placeholder="Username"
+                            autoComplete="off" required />
+                    </FormGroup>
+                    <FormGroup className="mb-1">
+                        <Input 
+                            type="text" placeholder="Password"
+                            autoComplete="off" />
+                    </FormGroup>
+                    <button onClick={this.handleLogin}>
+                        Login
+                    </button>
+                </Form>
+            </div>
         );
     }
 };

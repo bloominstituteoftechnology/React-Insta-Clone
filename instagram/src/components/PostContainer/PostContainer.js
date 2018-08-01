@@ -2,7 +2,7 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
 import PropTypes from 'prop-types';
-import moment from 'moment'
+import moment from 'moment';
 
 class PostContainer extends React.Component {
     constructor(props) {
