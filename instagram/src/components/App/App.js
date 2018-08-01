@@ -54,7 +54,7 @@ class App extends Component {
               comments: [
                 ...currentPost.comments,
                 {
-                  username: "test",
+                  username: this.props.username.toLowerCase(),
                   text: comment,
                   id: new Date(),
                 },
