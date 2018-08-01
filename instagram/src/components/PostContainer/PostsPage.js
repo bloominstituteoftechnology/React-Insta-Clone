@@ -10,10 +10,17 @@ class PostsPage extends React.Component {
     super();
     this.state = {
       instaData: [],
+      username: ""
     }
   }
 
-  handleLogin (event) {
+  handleLoginChange (event) {
+    console.log(event.target.value)
+    // this.setState({
+    //   username: event.target.value,
+    // })
+  }
+  handleLogin () {
     localStorage.setItem('username', 'frank')
   }
 
@@ -25,7 +32,7 @@ class PostsPage extends React.Component {
       <div className="App">
         <SearchBar instagramData={this.state.instaData}/>
         <PostContainer comments={this.state.instaData} />
-        <Login loginHandler={this.handleLogin}/>
+        <Login loginHandler={this.handleLogin} loginChangeHandler={this.handleLoginChange}/>
       </div>
     )
   }
