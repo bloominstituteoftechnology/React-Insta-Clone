@@ -12,24 +12,24 @@ class CommentSection extends React.Component {
     // postDate = new Date(postDate).getTime();
     // let dateNow = Date.now();
     // let timeSince = Math.ceil((dateNow - postDate) / (1000 * 3600 * 24))
-    // console.log(timeSince)
     super(props);
-    console.log("comment section", props);
+
     this.state = {
       comment: props.comment,
       comments: props.comment.comments,
       imageUrl: props.comment.imageUrl,
-      likes: props.comment.likes
+      likes: props.comment.likes,
+      filteredComments: []
     };
   }
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log("EVENT", event)
     let arrayOfComments = this.state.comments.slice();
     arrayOfComments.push({
       username: "Frank",
-      text: this.state.text
+      text: this.state.text,
+      
     });
     this.setState({
       comments: arrayOfComments
@@ -38,10 +38,10 @@ class CommentSection extends React.Component {
 
   handleInputChange = event => {
     // update the message field on state.
-    console.log("EVENT 1" , event)
     this.setState({ text: event.target.value });
   };
 
+  
   handleLike = () => {
     let likesTotal = this.state.likes + (this.state.liked ? -1 : 1);
     this.setState({

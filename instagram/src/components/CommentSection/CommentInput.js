@@ -6,7 +6,6 @@ import './CommentSection.css';
 class CommentInput extends React.Component {
   constructor (props) {
     super(props);
-    console.log("commentInputProps", props)
     this.state = {
       comments: props.comments,
       handleSubmit: props.handleSubmit,

@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar instagramData={this.state.instaData}/>
         <PostContainer comments={this.state.instaData} />
       </div>
     );
