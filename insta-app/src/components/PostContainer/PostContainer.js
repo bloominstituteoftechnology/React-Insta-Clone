@@ -14,18 +14,10 @@ const PostContainer = props => {
             </div>
             <img className="post-img" src={item.imageUrl} alt="Post-Image" />
             <div className="img-icons">
-              <div className="img-icon-left">
-                <i className="far fa-heart" />
-                <i className="far fa-comment" />
-                <i className="fas fa-paper-plane" />
-              </div>
-              <div className="img-icon-right">
-                <i className="far fa-bookmark" />
-              </div>
             </div>
-            <div className="comment user likes">{item.likes} likes</div>
+            {/* <div className="comment user likes">{item.likes} likes</div> */}
             <div>
-              <CommentInput comments={item.comments} />
+              <CommentInput likes={item.likes} comments={item.comments} />
             </div>
           </div>
         );

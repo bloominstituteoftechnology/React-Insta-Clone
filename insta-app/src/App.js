@@ -15,13 +15,19 @@ class App extends Component {
   componentDidMount(){
     this.setState({data: dummyData}); 
   }
+ likeBtn(index){
+ this.state.likes + 1; 
+ }
+ 
   render() {
     return (
       <div className="app-container">
         <div>
           <SearchBar />
         </div>
-        <PostContainer posts={this.state.data} />
+        <PostContainer 
+        handleLikeBtn = {this.likeBtn}
+        posts={this.state.data} />
       </div>
     );
   }

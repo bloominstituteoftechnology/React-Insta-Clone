@@ -9,6 +9,7 @@ class CommentInput extends React.Component {
     this.state = {
       comments: props.comments,
       added: "", 
+      likes: props.likes, 
     };
   }
   addComment = i =>{
@@ -23,9 +24,25 @@ class CommentInput extends React.Component {
  changeComment = e => this.setState({
      added: e.target.value
  })
+ likeBtn = l =>{
+   l.preventDefault; 
+   const likes = this.state.likes +1; 
+   this.setState({likes}); 
+ }
   render() {
     return (
       <div>
+        <div className="img-icons">
+        <div className="img-icon-left">
+            <i onClick={this.likeBtn}className="far fa-heart" />
+            <i className="far fa-comment" />
+            <i className="fas fa-paper-plane" />
+        </div>
+        <div className="img-icon-right">
+            <i className="far fa-bookmark" />
+        </div>
+        </div>
+        <div className="comment user likes">{this.state.likes} likes</div>
         <CommentSection 
         comments={this.state.comments} />
         <Comment
