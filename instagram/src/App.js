@@ -25,9 +25,16 @@ class App extends Component {
 
   constructor () {
     super();
-    this.state = {};
+    this.state = {
+      username: ""
+    };
   }
   
+componentDidMount() {
+  const user = localStorage.getItem("user");
+  this.setState({ username: user });
+}
+
   render() {
     return (
       <div className="App">

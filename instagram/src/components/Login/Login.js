@@ -16,13 +16,20 @@ class Login extends Component {
         };
     }
 
-//function to deal with changing input handleChange
+//function to deal with changing username
+handleInputChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+};
 
-// handleChange = event => {
-//     this.setState({[event.target.name]: event.target.value});
-// };
 
-//function to submit  handleSubmit
+//function to submit handleSubmit
+handleSubmit = event => {
+    const user = this.state.username;
+    localStorage.setItem('user', user);
+    window.location.reload();
+}
+
+
 
     render () {
         return (
@@ -36,16 +43,18 @@ class Login extends Component {
                 <div className = "login-credentials">
                     <div className = "username">
                         <input type="text" 
-                        placeholder = "User Name" 
+                        placeholder = "User Name"
+                        name = "username" 
                         value = {this.state.username} 
-                        onChange = {this.handleChange} />
+                        onChange = {this.handleInputChange} />
                     </div>
 
                     <div className = "password">
                         <input type="text" 
-                        placeholder = "password" 
-                        value = {this.state.username} 
-                        onChange = {this.handleChange} />
+                        placeholder = "Password"
+                        name = "password" 
+                        value = {this.state.password} //password same as username
+                        onChange = {this.handleInputChange} />
                     </div>
                 </div>
 
