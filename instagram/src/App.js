@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './Components/SearchBar/SearchBar';
@@ -9,14 +8,14 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      post : [dummyData]
+      posts : dummyData
     };
   }
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer post={this.state.post} />
+        <PostContainer posts={this.state.posts} />
       </div>
     );
   }

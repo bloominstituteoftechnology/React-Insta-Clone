@@ -1,14 +1,15 @@
 import React from 'react';
 import './PostStyling.css';
-import Posts from './Posts';
+import Post from './Post';
 
 
 
 
 const PostContainer = props => {
     return (
-        <div className="posts-container-wrapper">
-        </div>
+     <div className="posts-container-wrapper">
+       {props.posts.map(p => <Post post={p} /> )};
+     </div>
     );
 };
 
