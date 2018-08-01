@@ -38,7 +38,7 @@ const SearchBar = props => {
         <div className="search-bar__icons">
           <img src={navigate} alt="nav"/>
           <img src={favorite} alt="fave"/>
-          <img src={profile} alt="profile"/>
+          <img src={profile} alt="profile" onClick={props.handleLogOut}/>
         </div>
       </div>
     </div>

@@ -12,10 +12,12 @@ class App extends Component {
     this.state = {
       posts: [],
       searchInput: "",
+      username: ""
     };
   }
   componentDidMount() {
     const storedPosts = JSON.parse(localStorage.getItem("posts"));
+    const username = localStorage.getItem('username');
     if (storedPosts) {
       console.log("true");
       this.setState({ posts: storedPosts });
@@ -30,11 +32,15 @@ class App extends Component {
         posts: posts,
       });
     }
+    this.setState({ username })
   }
 
   componentDidUpdate(prevState) {
     if (prevState.posts !== this.state.posts) {
       localStorage.setItem("posts", JSON.stringify(this.state.posts));
+    }
+    if (!this.state.username) {
+      localStorage.removeItem('username')
     }
   }
 
@@ -118,6 +124,13 @@ class App extends Component {
     });
   };
 
+  handleLogOut = () => {
+    console.log('clicked')
+    console.log(this.props.username)
+    
+    this.props.handleLogOut();
+  }
+
   render() {
     return (
       <div className="App">
@@ -125,6 +138,7 @@ class App extends Component {
           handleChange={this.handleChange}
           searchInput={this.state.searchInput}
           handleSearchSubmit={this.handleSearchSubmit}
+          handleLogOut={this.handleLogOut}
         />
         <div className="main-body">
           <div className="posts">

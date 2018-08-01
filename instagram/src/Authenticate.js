@@ -3,8 +3,8 @@ import LogIn from './components/LogIn/LogIn'
 
 const Authenticate = App =>
   class extends React.Component {
-    constructor() {
-      super();
+    constructor(props) {
+      super(props);
       this.state= {
         username: ''
       }
@@ -15,11 +15,18 @@ const Authenticate = App =>
       this.setState({ username })
     }
 
+    handleLogIn = (username) => {
+      this.setState({ username })
+    }
+  
+    handleLogOut = () => {
+      this.setState({username: ''})
+    }
+
     render() {
-      console.log(this.state.username)
         return (this.state.username) 
-        ? <App />
-        : <LogIn />
+        ? <App username={this.state.username} handleLogOut={this.handleLogOut}/>
+        : <LogIn handleLogIn={this.handleLogIn}/>
     }
   }
 

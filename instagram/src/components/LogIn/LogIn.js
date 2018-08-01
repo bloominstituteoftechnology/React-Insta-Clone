@@ -14,9 +14,12 @@ class LogIn extends React.Component {
     this.setState({ username: e.target.value })
   }
 
-  handleSubmit = () => {
+  handleSubmit = (e) => {
+    e.preventDefault();
     localStorage.setItem('username', this.state.username)
+    this.props.handleLogIn(this.state.username);
   }
+
   render() {
     return (
       <div className="login">
