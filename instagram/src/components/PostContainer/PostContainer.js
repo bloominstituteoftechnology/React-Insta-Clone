@@ -3,8 +3,6 @@ import React from 'react';
 import { Row, Col, Container } from 'reactstrap';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faComment } from '@fortawesome/free-regular-svg-icons';
 import LikesSection from './LikesSection';
 
 class PostContainer extends React.Component {
