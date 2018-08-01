@@ -14,7 +14,7 @@ const Post = props => {
             </div>
             <CommentSection 
             comments={props.post.comments} 
-            
+            likes={props.post.likes}
             />
         </div>
     );

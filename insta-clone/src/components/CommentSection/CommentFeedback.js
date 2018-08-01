@@ -13,7 +13,7 @@ const CommentFeedback = props => {
             </div>
         </div>
         <div className="like-amout">
-            <p><bold># likes</bold></p>
+            <p>{props.likes} likes</p>
         </div>
         </div>
     );

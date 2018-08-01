@@ -17,13 +17,13 @@ class App extends Component {
     this.setState({ posts: dummyData });
   }
 
-
   render() {
     return (
       <div className="App">
         <SearchBar />
         <PostsContainer 
         posts={this.state.posts}
+        
         />
       </div>
     );

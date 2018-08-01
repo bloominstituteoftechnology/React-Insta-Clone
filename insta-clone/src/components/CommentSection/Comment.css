@@ -18,7 +18,7 @@
 .like-amout p {
     text-align: left;
     font-weight: bold;
-    padding-left: 20px;
+    padding-left: 15px;
 }
 
 .comment-text {
@@ -43,8 +43,9 @@
     border: 1px solid white;
     border-top: 1px solid lightgrey;
     width: 94%;
-    height: 50px;
+    height: 40px;
     text-align: left;
     font-size: 15px;
     color: grey;
+    margin: 10px 0;
 }
