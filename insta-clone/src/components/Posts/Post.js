@@ -27,6 +27,10 @@ class Post extends React.Component {
     handleComment = (event)=> {
         this.setState({temp: event.target.value});
     }
+    incrementLike = () => {
+        let likes = this.state.likes + 1;
+        this.setState({ likes });
+      };
     render() {
         // console.log("test");
         return(
@@ -35,7 +39,7 @@ class Post extends React.Component {
                <img src={this.state.images}  alt="insta" />
                <div className="likes">
                     <div>   
-                        <i className="far fa-heart fa-2x"></i> <i className="far fa-comment fa-2x"></i>
+                        <i onClick={this.incrementLike} className="far fa-heart fa-2x"></i> <i className="far fa-comment fa-2x"></i>
                     </div>
                     <p>{this.state.likes} likes</p>
                 </div>

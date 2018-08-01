@@ -9,7 +9,7 @@ const SearchBar = (props)=> {
                 <img className="insta" src={insta} alt="insta" />
             </div>
             <div>
-                <input type="text" placeholder="Search" />
+                <input onChange={props.searchPosts} type="text" placeholder="Search" />
             </div>
             <div>
                 <i className="far fa-compass fa-2x"></i>
