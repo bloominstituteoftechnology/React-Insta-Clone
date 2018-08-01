@@ -1,21 +1,19 @@
 import React from 'react';
 import './SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = props => {
+    console.log('imProps', props)
     return (
         <div className='searchContainer'>
-            <div className='searchLeft'>
-                logos
+            <div className='logoLeft'>
+                logo
             </div>
-
             <div className='input'>
-            <input type="text" placeholder="Search" />
+               <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
             </div>
-
-            <div className='searchRight'>
-                logos
+            <div className='logoRight'>
+                logo
             </div>
-
         </div>
     );
 };

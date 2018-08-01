@@ -11,7 +11,7 @@ const Post = props => {
             />
             <div className='post-image-wrapper'>
                 <img
-                    alt='post thumbnail'
+                    alt='post-thumbnail'
                     className='post-image'
                     src={props.post.imageUrl}
                 />

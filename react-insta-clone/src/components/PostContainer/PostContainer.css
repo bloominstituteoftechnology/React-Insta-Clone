@@ -1,8 +1,19 @@
+.posts-container-wrapper {
+    height: 350px;
+    width: 40%;
+    margin: 1px auto;
+}
+
 .post-border {
-    height: 400px;
-    width: 60%;
+    border: 1px solid black;
 }
 
 .post-header {
-    display: flex;
+    width: 100%;
+  display: flex;
+}
+
+.post-image {
+    height: 100%;
+    width: 100%;
 }
