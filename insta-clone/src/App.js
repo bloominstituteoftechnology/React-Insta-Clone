@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from '../src/dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostsContainer from './components/PostContainer/PostsContainer';
-
+import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
   constructor() {
@@ -20,10 +18,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostsContainer 
+        <PostsPage 
         posts={this.state.posts}
-        
         />
       </div>
     );
