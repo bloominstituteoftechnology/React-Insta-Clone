@@ -8,6 +8,14 @@ const Authenticate = (App) =>
             this.state = {loggedIn: false, currentUser: ''}
         }
 
+        componentDidMount(){
+            let loggedInCheck = JSON.parse(localStorage.getItem('loggedIn'));
+            if (loggedInCheck){
+                let usernameCheck = JSON.parse(localStorage.getItem('username'));
+                this.setState({loggedIn: true, currentUser: usernameCheck});
+            }
+        }
+
         storeUser = (event) => {
             this.setState({currentUser: event.target.value});
         }
@@ -18,6 +26,8 @@ const Authenticate = (App) =>
                     loggedIn: !prevState.loggedIn
                 }
             });
+            localStorage.setItem('loggedIn', JSON.stringify(true));
+            localStorage.setItem('username', JSON.stringify(this.state.currentUser));
         }
 
         render() {
