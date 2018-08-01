@@ -29,11 +29,7 @@ class CommentSection extends React.Component {
         let dynamicDate=date;
         dynamicDate=date.split(' ');
         let newDate='';
-        for (let i=0; i<dynamicDate[1].length; i++) {
-            if (parseInt(dynamicDate[1][i],10)>0){
-                newDate+=dynamicDate[1][i];
-            }
-        }
+        dynamicDate[1].split('').forEach(e=>{if (parseInt(e,10)>0){newDate+=e}});
         dynamicDate[1]=newDate;
         dynamicDate=new Date(dynamicDate.join(' '));
         return moment(dynamicDate).fromNow();

@@ -3,7 +3,7 @@ import './App.css';
 import dummyData from './dummy-data.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import PostContainer from './components/PostContainer/PostContainer.js';
-
+import fuzzy from 'fuzzy';
 
 class App extends Component {
   constructor() {
@@ -23,9 +23,12 @@ class App extends Component {
     this.setState({searchBarValue:event.target.value},()=>this.filterPosts());
   }
   filterPosts=()=>{
-    let filteredPosts=this.state.posts.slice();
-    filteredPosts=filteredPosts.filter((e)=>e.username.includes(this.state.searchBarValue));
-    this.setState({filteredPosts:filteredPosts});
+    let postsToBeFiltered=this.state.posts.slice();
+    let filteredPosts=postsToBeFiltered.map(e=>e.username);
+    filteredPosts=fuzzy.filter(this.state.searchBarValue,filteredPosts);
+    filteredPosts=filteredPosts.map(e=>e.string);
+    postsToBeFiltered=postsToBeFiltered.filter((e)=>filteredPosts.indexOf(e.username)!==-1);
+    this.setState({filteredPosts:postsToBeFiltered});
   }
   liked=(data)=>{
     const postsCopy=this.state.posts.slice();
