@@ -29,9 +29,6 @@ class App extends Component {
   componentDidMount(){
     this.setState({data:dummyData});
   }
-  addLike = () => {
-    console.log()
-  }
   search = e => {
     this.setState({input: e.target.value});
   }
@@ -45,7 +42,7 @@ class App extends Component {
     return (
       <div className="container">
           <Search searchUser={this.search} result={this.filter} />
-          <Post posts={this.state.data} addLikes={this.addLike} />
+          <Post posts={this.state.data} />
       </div>
     );
   }

@@ -27,13 +27,14 @@ class CommentSection extends React.Component{
         this.setState({input: e.target.value});
     }
     render(){
+        console.log(this.state)
         return(
             <div>
                 <div>
                     <i onClick={this.incrementLike} className="fa fa-heart-o like-comment" aria-hidden="true"></i>
                     <i className="fa fa-comment-o like-comment" aria-hidden="true"></i>
                 </div>
-                <div className='likes'>{this.props.likes} likes</div>
+                <div className='likes'>{this.state.likes} likes</div>
                 <div>
                     {this.state.comments.map((comment, i) => {
                         return (
