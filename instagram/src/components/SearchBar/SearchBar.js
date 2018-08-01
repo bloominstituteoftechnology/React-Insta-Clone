@@ -9,7 +9,7 @@ const SearchBar=props=>{
             <img className='instalogo' src='http://assets.stickpng.com/thumbs/5a4e432a2da5ad73df7efe7a.png' alt='instagram logo'/>
         </div>    
         <div className='searchBarInput'>
-            <input type='text' placeholder='&#x1F50D; Search' value={props.searchValue} onChange={(e)=>{return props.handleInputChange(e)}}/>
+            <input type='text' placeholder='&#x1F50D; Search' value={props.searchValue} onChange={(e)=>props.handleInputChange(e)}/>
         </div>
         <div className='searchBarIcons'>
             <i className="far fa-compass fa-3x"></i>

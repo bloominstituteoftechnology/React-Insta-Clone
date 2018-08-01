@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
-import SearchBar from './components/SearchBar/SearchBar.js';
-import PostContainer from './components/PostContainer/PostContainer.js';
+import PostsPage from './components/PostContainer/PostsPage.js';
 import fuzzy from 'fuzzy';
+import SearchBar from './components/SearchBar/SearchBar.js';
 
 class App extends Component {
   constructor() {
@@ -42,13 +42,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <SearchBar searchValue={this.state.searchBarValue} handleInputChange={this.handleSearchBarChange}/>
-      <div className='posts'>
-      {this.state.searchBarValue==='' ?
-      this.state.posts.map((e)=><PostContainer data={e} key={e.imageUrl} liked={this.liked}/>):
-      this.state.filteredPosts.map((e)=><PostContainer data={e} key={e.imageUrl}/>
-    )}
-      </div>
+        <SearchBar searchValue={this.searchBarValue} handleInputChange={this.handleSearchBarChange}/>
+        <PostsPage searchBarValue={this.state.searchBarValue} posts={this.state.posts} filteredPosts={this.state.filteredPosts} 
+        liked={this.liked} handleInputChange={this.handleSearchBarChange}/>
       </div>
     );
   }
