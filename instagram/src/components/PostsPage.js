@@ -54,9 +54,16 @@ class PostsPage extends React.Component {
         })
     }
 
+    getUserName = () => {
+        return localStorage.getItem('name')
+    }
+
     render() {
         return (
             <div className="App">
+                <div className="loginName">
+                    <h3>Logged in as {this.getUserName()}</h3>
+                </div>
                 <Search handleSearchString={this.handleSearchString} handleSearchSubmit={this.handleSearchSubmit} />
                 <PostList postData={this.state.dummydata} className="post-list-container" handleLike={this.handleLike} />
             </div>
