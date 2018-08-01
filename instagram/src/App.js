@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
 import Search from './components/SearchBar/SearchBar';
-import Post from './components/PostContainer/PostContainer';
+import PostPage from './components/PostContainer/PostPage';
 // import {
 //   Collapse,
 //   Navbar,
@@ -42,7 +42,7 @@ class App extends Component {
     return (
       <div className="container">
           <Search searchUser={this.search} result={this.filter} />
-          <Post posts={this.state.data} />
+          <PostPage posts={this.state.data} />
       </div>
     );
   }

@@ -3,10 +3,10 @@ import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from "prop-types";
 
-const Post = props => {
+const PostContainer = props => {
     return (
         <div className='post-container'>
-            {props.posts.map((item,i) => {
+            {props.post.map((item,i) => {
                 return(
                     <div key={i}>
                         <div className='user'><img className ='thumbnail' src={item.thumbnailUrl} alt ='user thumbnail img'/> {item.username}</div>
@@ -24,8 +24,8 @@ const Post = props => {
     )
 }
 
-Post.proptypes = {
-    posts: PropTypes.shape({
+PostContainer.proptypes = {
+    post: PropTypes.shape({
         username: PropTypes.string,
         thumbnailUrl: PropTypes.string,
         imageUrl: PropTypes.string,
@@ -35,4 +35,4 @@ Post.proptypes = {
     })
 }
 
-export default Post;
+export default PostContainer;
