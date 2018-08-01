@@ -5,7 +5,7 @@ import dummyData from './dummy-data';
 // import SearchBar from './components/SearchBar/SearchBar.js'; 
 // import PostContainer from './components/PostContainer/PostContainer.js'; 
 // import CommentSection from './components/CommentSection/CommentSection.js'; 
-import PostsPage from './components/PostContainer/PostsPage';
+// import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
 
 
@@ -23,9 +23,8 @@ class App extends Component {
     this.setState({dummyData:dummyData, prevDummyData: dummyData, cmdCalled: true});
     
   }
-  login = (username, password) => {
-
-  }
+  
+  
   componentWillUnmount () {
     localStorage.removeItem('username')
     localStorage.removeItem('password')
@@ -33,18 +32,16 @@ class App extends Component {
 
 
   render() {
-    let dummyData = this.state.dummyData.slice(); 
+    
     
     
     return (
         <div className ="App">
           <AuthenticatedApp />
-          {/* <PostsPage dummyData={dummyData}/> */}
+          
 
         </div>
         
-        
-      
 
     );
     

@@ -29,6 +29,17 @@ class LoginPage extends React.Component {
         return (
 
             <div className = "loginPage">
+                <div className = "searchBar">
+          
+                    <div className ="leftSideSearchBar"><i className="fab fa-instagram"></i> <span className="verticalLine">&#124;</span><span className ="logoTitle">Instagram</span> </div>
+                    
+                    <div className = "rightSideSearchBar">
+                        <i className="far fa-compass"></i>
+                        <i className="far fa-heart"></i> 
+                        <i className="far fa-user"></i>
+                    </div>
+          
+                </div>
                 <div>
                     <form action="">
                         <h1>UserName</h1>

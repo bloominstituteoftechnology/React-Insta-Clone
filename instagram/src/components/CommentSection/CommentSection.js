@@ -28,13 +28,13 @@ class CommentSection extends React.Component {
         const text = this.state.temp;
         const comments = this.state.comments; 
         if(event.keyCode === 13 ){ 
-            comments.push({username: "you", text:text})
+            comments.push({username: this.props.userIn, text:text})
             event.target.value = ""
             this.setState({comments: comments, temp:""});
         }
 
         if(event.target.innerHTML === "Submit" && text.length > 0){
-            comments.push({username: "you", text:text})
+            comments.push({username: this.props.userIn, text:text})
             this.setState({comments: comments, temp:""});
         }
     }
