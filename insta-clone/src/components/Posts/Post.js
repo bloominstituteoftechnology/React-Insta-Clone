@@ -6,24 +6,29 @@ class Post extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            thumbnail: props.obj.thumbnailUrl,
-            images: props.obj.imageUrl,
-            username: props.obj.username,
-            likes: props.obj.likes,
-            comments: props.obj.comments
+            thumbnail: props.value.thumbnailUrl,
+            images: props.value.imageUrl,
+            username: props.value.username,
+            likes: props.value.likes,
+            comments: props.value.comments,
+            temp: ''
         }
     }
     handleAddComment = (event)=> {
-        if (event.key === 'Enter') {
-            this.props.obj.comments.push({
-                username: 'you',
-                text: event.target.value
-            })
-            event.target.value = '';
+        event.preventDefault();
+        if (this.state.temp.length > 0){
+            this.props.value.comments.push({
+            username: 'you',
+            text: this.state.temp})
+            this.setState({comments: this.props.value.comments})
+            event.target.reset();
         }
-        this.setState({comments: this.props.obj.comments})
+    }
+    handleComment = (event)=> {
+        this.setState({temp: event.target.value});
     }
     render() {
+        // console.log("test");
         return(
             <div className="post">
                 <h4><img className="userIcon" src={this.state.thumbnail} alt="userIcon" /><p>{this.state.username}</p></h4>
@@ -35,7 +40,10 @@ class Post extends React.Component {
                     <p>{this.state.likes} likes</p>
                 </div>
                {this.state.comments.map((comment, i)=> <Comments values={comment} key={i} />)} 
-                <input type="text" placeholder="Comment" onKeyPress={this.handleAddComment} /><button>...</button>  
+                <form onSubmit={this.handleAddComment}>
+                    <input type="text" placeholder="Comment" onChange={this.handleComment}/>
+                    <button>...</button>  
+                </form>
             </div>
         )
     }

@@ -1,24 +1,16 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import Posts from './Post'
+import Post from './Post'
 
 
-class PostContainer extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            posts: props.values
-     
-        }
-    }
-    render() {
-        return(
-            <div className="postContainer">
-            {this.state.posts.map(post=> <Posts obj={post} key={post.timestamp} />)}
-            </div>
-        )
-    }
-}
+const PostContainer = props => {
+    console.log(props.posts);
+    return (
+      <div className="postContainer">
+        {props.posts.map(post => <Post key={post.timestamp} value={post} />)}
+      </div>
+    );
+  };
 
 PostContainer.propTypes = {
     posts: propTypes.arrayOf(propTypes.object)
