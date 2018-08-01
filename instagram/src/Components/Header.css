@@ -1,6 +1,11 @@
 .Header {
   padding: 1.3rem 0;
   border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
 }
 
 .Header__nav {
@@ -11,9 +16,11 @@
 .Header__nav-brand {
   font-size: 2.8rem;
   text-decoration: none;
-  font-family: 'Lobster Two', cursive;
   color: inherit;
+  font-family: 'Lobster Two', cursive;
 }
+
+
 
 .Header__brand {
   margin-right: 2rem;

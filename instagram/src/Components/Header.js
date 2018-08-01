@@ -46,7 +46,11 @@ class Header extends React.Component {
             <div className="Header__three-buttons">
               <i className="far fa-compass" />
               <i className="far fa-heart" />
-              <i className="far fa-user" />
+              <i
+                onClick={this.props.onLogOut}
+                style={{ cursor: 'pointer' }}
+                className="far fa-user"
+              />
             </div>
           </div>
         </div>

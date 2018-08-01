@@ -1,3 +1,7 @@
+.App {
+  margin-top: 10rem;
+}
+
 .container {
   max-width: 910px;
   width: 100%;
