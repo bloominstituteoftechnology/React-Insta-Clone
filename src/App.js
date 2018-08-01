@@ -15,8 +15,12 @@ class App extends Component {
     super();
     this.state = {
       postData: [],
-      input: ''
+      input: '',
     }
+  }
+
+  componentDidMount() {
+    this.setState({ postData: dummyData })
   }
 
   handleChange = e => this.setState({ input: e.target.value });
@@ -32,17 +36,13 @@ class App extends Component {
     e.preventDefault();
   }
 
-  componentDidMount() {
-    this.setState({ postData: dummyData })
-  }
-
   render() {
     return (
       <div className="main-container">
         <header className="main-header">
           <div className="main-header__logos">
             <div className="main-header__logo-container">
-            <FontAwesomeIcon icon={faInstagram} />
+              <FontAwesomeIcon className="main-header__logo" icon={faInstagram} />
             </div>
             <div className="main-header__logo-container">
               <img className="main-header__logo" src={instaLogo} alt="instagram logo"/>
@@ -59,7 +59,7 @@ class App extends Component {
             <FontAwesomeIcon icon={faUser} />
           </div>
         </header>    
-        <PostContainer postData={this.state.postData} />
+        {this.state.postData.length > 0 ? <PostContainer postData={this.state.postData} /> : <p>No Posts!</p> }
       </div>
     );
   }

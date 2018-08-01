@@ -50,7 +50,13 @@ class CommentSectionContainer extends React.Component {
       username: 'anonymous',
       text: this.state.input,
     });
-    this.setState({ comments: comments, input: '' });
+    this.setState(prevState => {
+      return {
+        shouldAddComment: !prevState.shouldAddComment, 
+        comments: comments, 
+        input: ''
+      };
+    })
     e.preventDefault();
   }
 
