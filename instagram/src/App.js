@@ -5,33 +5,55 @@ import Authenticate from './components/Authentication/Authenticate';
 import Login from './components/Authentication/Login'
 import PostsPage from './components/PostContainer/PostsPage';
 
-const Auth = Authenticate(App);
+
 
 
 class App extends Component {
   constructor(){
     super();
     this.state = {
-      posts:[]
+      posts: [],
+
+      username:'', 
+      
+      password:''
+
      };
   }
 
-addNewLogin(e) {
-  localStorage.setItem(e.target.value);
+handleUsername = e => {
+ this.setState({username: e.target.value});
+}
 
+handlePassword = e => {
+  this.setState({password: e.target.value});
+}
+
+addNewLogin = e => {
+  e.preventDefault();
+  localStorage.setItem(this.state.username, this.state.password);
 }
 
 componentDidMount() {
+  console.log('mounty component', this.state)
   this.setState({posts: dummyData});
-  return(localStorage.getItem("mboegner", "NewEnglandClamChowder") ? <PostsPage /> : <Login />)
+   localStorage.getItem("mboegner", "password") ? <PostsPage posts={this.state.posts}/> : <Login />
+
 }
+
   render() {
+    console.log('page rendered', this.state)
     return (
       <div className="container">
-       <Login addNewLogin={this.addNewLogin}/>
+       <Login 
+       addNewLogin={this.addNewLogin}
+       handleUsername={this.handleUsername}
+       handlePassword={this.handlePassword}
+       />
       </div>
     );
   }
 }
 
+const Auth = Authenticate(App);
 export default App;

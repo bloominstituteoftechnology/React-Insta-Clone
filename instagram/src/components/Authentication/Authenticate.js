@@ -5,7 +5,8 @@ const Authenticate = App =>
     constructor(){
         super();
         this.state={
-            loggedin: false
+            loggedin: false,
+            
         }
     }
     

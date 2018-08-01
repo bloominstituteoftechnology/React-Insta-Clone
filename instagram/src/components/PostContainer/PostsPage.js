@@ -7,7 +7,7 @@ const PostsPage = props => {
     <div>
       <SearchBar />
 
-      <PostContainer posts={this.state.posts} />
+      <PostContainer posts={props.posts} />
     </div>
   );
 };
