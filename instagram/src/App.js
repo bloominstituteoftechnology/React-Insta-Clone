@@ -4,6 +4,8 @@ import dummyData from './dummy-data'
 import SearchBar from './components/SearchBarComponent/search-bar';
 import CardContainer from './components/PostComponent/CardContainer';
 import PostPage from './components/PostsPage';
+import Authenticate from './Authentication/Authenticate'
+import Login from './components/Login/Login';
 
 class App extends Component {
   constructor(){
@@ -11,7 +13,9 @@ class App extends Component {
     this.state = {
       data: [],
       search: '',
-      cloneData: []
+      cloneData: [],
+      userName: '',
+      password: ''
     };
   }
 
@@ -35,11 +39,35 @@ class App extends Component {
     this.setState({data: newData})
   }
 
+  loginUser (event){
+    event.preventDefault()
+    console.log('Storing')
+    const userName = this.state.userName 
+    const password = this.state.password
+    localStorage.setItem('userName', userName)
+    window.location.reload()
+    console.log(localStorage.getItem('userName'))
+  }
+
+  onUserInputChnage (event){
+    this.setState({userName: event.target.value})
+  }
+
+  onPasswordInputChange (event){
+    this.setState({password: event.target.value})
+  }
+
   render() {
     return (
-      <PostPage data={this.state.data} inputChange={this.onInputChange.bind(this)} onClick={this.search.bind(this)}/>
+      <Login onChangeFunction = {{
+        userName: this.onUserInputChnage.bind(this),
+        password: this.onPasswordInputChange.bind(this),
+        loginUser: this.loginUser.bind(this)
+       }} />
     )
   }
 }
+
+// <PostPage data={this.state.data} inputChange={this.onInputChange.bind(this)} onClick={this.search.bind(this)}/>
 
 export default App;
