@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchBar.css";
-import logo from "./../../logo.png";
-const searchBar = props => {
+
+const searchBar = () => {
   return (
     <div className="container-header">
       <div className="left-icons scaled">

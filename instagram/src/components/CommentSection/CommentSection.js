@@ -1,17 +1,24 @@
-import React from "react";
-import "./CommentSection.css";
+// import React, { Component } from "react";
+// import "./CommentSection.css";
+// import Comment from "./Comment";
+// import CommentInput from "./CommentInput";
 
-const CommentSection = () => {
-  return (
-    <div className="comment-container">
-      <div className="comment-icons"> </div>
-      <div className="comment-list"> </div>
-      <form>
-        <input placeholder="Add a comment..." />
-        <i className="fa fa-ellipsis-h" aria-hidden="true" />
-      </form>
-    </div>
-  );
-};
+// class CommentSection extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       comments: props.comments
+//     };
+//   }
 
-export default CommentSection;
+//   render() {
+//     return (
+//       <div>
+//         {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
+//         <CommentInput />
+//       </div>
+//     );
+//   }
+// }
+
+// export default CommentSection;
