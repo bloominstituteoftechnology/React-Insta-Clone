@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data'
 import SearchBar from './components/SearchBarComponent/search-bar';
 import CardContainer from './components/PostComponent/CardContainer';
+import PostPage from './components/PostsPage';
 
 class App extends Component {
   constructor(){
@@ -36,12 +37,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        <SearchBar inputChange={this.onInputChange.bind(this)} onClick={this.search.bind(this)}/>
-        <CardContainer posts={this.state.data} />
-      </div>
-    );
-    }
+      <PostPage data={this.state.data} inputChange={this.onInputChange.bind(this)} onClick={this.search.bind(this)}/>
+    )
+  }
 }
 
 export default App;
