@@ -1,12 +1,11 @@
 import React from 'react';
-import Button from './Button.js'
 
 const ButtonContainer = props => {
   return (
-    <div>
-      <Button />
-      <Button />
-      <Button />
+    <div className='button-container'>
+      <a href="index.html"><i className='far fa-compass' ></i></a>
+      <a href="index.html"><i className='far fa-heart' ></i></a>
+      <a href="index.html"><i className='far fa-user' ></i></a>
     </div>
   );
 };

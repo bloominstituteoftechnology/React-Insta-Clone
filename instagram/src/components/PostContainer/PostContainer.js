@@ -9,7 +9,7 @@ const PostContainer = props => {
     <div className='post'>
       <PostHeader user={props.user}/>
       <div className='post-img-wrapper'>
-        <img className='post-img' src={props.user.imageUrl} />
+        <img className='post-img' src={props.user.imageUrl} alt=''/>
       </div>
       <div className='like-section'>
         <div className='like-section-icons'>

@@ -1,0 +1,56 @@
+
+.search-container {
+  width: 1024px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.search-bar-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 33%;
+}
+
+.image-container .insta-img-logo {
+  width: 15%;
+  height: 15%;
+}
+
+.image-container .insta-name-logo {
+  width: 40%;
+  height: 40%;
+  border-left: 1px solid #ADADAD;
+}
+
+.search-container form {
+  width: 33%;
+}
+
+.search-container form input {
+  text-align: center;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #FAFAFA;
+  padding: 3px 5px 3px 5px;
+}
+
+.button-container {
+  width: 33%;
+}
+
+.button-container a {
+  font-size: 21px;
+  padding: 5px 15px;
+  color: #7B7B7B
+}

@@ -44,6 +44,11 @@
   margin-left: 15px;
 }
 
+.like-section .like-section-icons .fa-heart:hover {
+  cursor: pointer;
+  color: gray;
+}
+
 .like-section p {
   width: 100%;
   margin: 0;
