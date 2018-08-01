@@ -43,6 +43,9 @@
     width: 50px; 
 }
 
+.fa-heart:hover{
+    cursor:pointer;
+}
 .posting .far {
     margin-right:40%;
 }

@@ -45,6 +45,9 @@
     font-size: 1vw;
 }
 
+.fa-ellipsis-h:hover {
+    cursor: pointer;
+}
 .timeStamp {
     display: flex;
     align-items: flex-start;
