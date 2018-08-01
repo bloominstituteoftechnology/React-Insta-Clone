@@ -12,12 +12,6 @@ const Post = props => {
                 <img className="icon" src={props.post.thumbnailUrl} alt="thumbnail"/>
             </div>
             <img className="mainImg" src={props.post.imageUrl} alt="imagepost"/>
-            <div className="likeCommentIcons">
-                <i onClick={()=>props.addLike(props.post.username)} className={props.liked ? "fas fa-heart":"far fa-heart"}></i>
-                <i className="far fa-comment"></i>
-            </div>
-            <div className="likes">{props.post.likes} <span>likes</span></div>
-            <div className="timestamp">{props.post.timestamp}</div>
             <CommentSection com={props.post} />
             </div>
     )

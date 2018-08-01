@@ -8,8 +8,7 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      instaPosts: [],
-      liked: false,
+      instaPosts: []
     }
   }
   componentDidMount(i) {
@@ -18,16 +17,16 @@ class App extends Component {
   }
 
 
-  addLike = (username) => {
-   const instacopy = this.state.instaPosts.slice();
-  for (let i=0; i<instacopy.length; i++){
-    if (username === instacopy[i].username) {
-     instacopy[i].likes++
-    } 
-  }
-  this.setState({instaPosts: instacopy})
+  // addLike = (username) => {
+  //  const instacopy = this.state.instaPosts.slice();
+  // for (let i=0; i<instacopy.length; i++){
+  //   if (username === instacopy[i].username) {
+  //    instacopy[i].likes++
+  //   } 
+  // }
+  // this.setState({instaPosts: instacopy})
 
-  }
+  // }
 
   minusLike = () => {
     this.setState ({liked: false})
