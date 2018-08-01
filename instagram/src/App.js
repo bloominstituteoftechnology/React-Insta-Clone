@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import dummyData from "./dummy-data";
-
+import MainHeader from "./components/SearchBar/MainHeader";
+import PostContainer from "./components/PostContainer/PostContainer";
 
 // Outline:
 
 //App
     //Main Header
         //Page Title
-        //Search Bar
+        //Search Field
         //Header Icons
     //Post Container
         //Header
@@ -20,69 +20,6 @@ import dummyData from "./dummy-data";
             //Post Icons
             //Loaded Comments
             //Add Comment
-
-
-const MainHeader = props => {
-  return (
-    <div className = "main-header"> 
-      <div className = "left-icons">
-        <div className="fab fa-instagram"></div>
-        <div class="vl"></div>
-        <div className = "instagram">
-          <h2> Instagram</h2>
-        </div>
-      </div>
-
-       <div className = "search-field">
-      <input type = "search" placeholder = "search"/>
-      </div>
-    
-      <div className = "right-icons">
-        <div className = "icons"> 
-          <i className="fa fa-compass" />
-        </div>
-        <div className = "icons"> 
-          <i className="fa fa-heart" />
-        </div>
-        <div className = "icons"> 
-          <i className="fa fa-user-circle" />
-        </div>
-      </div>
-    </div> 
-
-  )
-}
-
-const Post = props => {
-  return (
-    <div className = "post-container">
-      <div className = "post">
-        
-        <div className = "post-header">
-          <img src = {props.post.thumbnailUrl} />
-          <h3> {props.post.username} </h3>
-        </div>
-        
-        <div className = "post-image">
-          <img src={props.post.imageUrl} />
-        </div>
-        
-        <div className = "post-footer">
-          <p> {props.post.likes} </p>
-          <p> {props.post.timestamp} </p>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-const Posts = props => {
-  return (
-    <div className = "all-posts">
-    {props.posts.map(post => <Post key = {post.username} post = {post} />)}
-    </div>
-  )
-}
 
 
 class App extends Component {
@@ -102,7 +39,7 @@ class App extends Component {
       <div className="App">
         <MainHeader />
         <div className = "Posts">
-        <Posts posts = {this.state.posts} />
+        <PostContainer posts = {this.state.posts} />
         </div>
       </div>
     );
