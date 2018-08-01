@@ -1,6 +1,6 @@
 import React from 'react';
 import './PostContainer.css'; 
-
+import dummyData from '../dummy-data.js'
 import SearchBar from '../SearchBar/SearchBar.js'; 
 import PostContainer from './PostContainer.js'; 
 import CommentSection from '../CommentSection/CommentSection';
@@ -10,7 +10,7 @@ import CommentSection from '../CommentSection/CommentSection';
 class PostsPage extends React.Component{
     constructor(){
         super();
-        this.state = {dummyData: [], searchText: "", prevDummyData: []}; 
+        this.state = {dummyData: dummyData, searchText: "", prevDummyData: dummyData}; 
     }
 
     
@@ -29,15 +29,14 @@ class PostsPage extends React.Component{
             this.setState({dummyData: prevDummyData});
         }
     
-
     }
 
     render() {
-        let dummyData = this.props.dummyData; 
+        let dummyData = this.state.dummyData.slice(); 
         
 
         return(
-        <div className="App">
+        <div>
             <SearchBar  value ={this.state.searchText} onChange = {this.handleSearchChange}/>
             {dummyData.map((post, i) => <div key = {i} className = "post">
             <hr className ="hrLine"/> <div className = "containerPost">
