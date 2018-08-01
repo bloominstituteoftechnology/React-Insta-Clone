@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import dummyData from './dummy-data';
-import SearchBar from './Components/SearchComponents/SearchBar';
-import PostContainer from './Components/PostComponents/PostContainer';
+import PostsPage from './Components/PostComponents/PostsPage';
 
 class App extends Component {
   constructor(){
@@ -36,12 +35,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app-container">
-        <SearchBar filter={this.handleFilter} />
-        {this.state.filteredPosts === undefined ?
-          this.state.posts.map(post => <PostContainer post={post} />) :
-          this.state.filteredPosts.map(post => <PostContainer post={post} />)}
-      </div>
+      <PostsPage
+        posts={this.state.posts}
+        handleFilter={this.handleFilter}
+        filteredPosts={this.state.filteredPosts}
+      />
     );
   }
 }
