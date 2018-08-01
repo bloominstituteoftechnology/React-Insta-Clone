@@ -6,20 +6,21 @@ import CommentInput from "../CommentSection/CommentInput";
 
 class CommentSection extends React.Component {
   constructor(props) {
-    // let postDate = props.comment.timestamp.split(",")[0];
-    // postDate = postDate.replace("th", "").split(" ")
-    // postDate = postDate[1] + " " + postDate[0] + " " + postDate[2]
-    // postDate = new Date(postDate).getTime();
-    // let dateNow = Date.now();
-    // let timeSince = Math.ceil((dateNow - postDate) / (1000 * 3600 * 24))
     super(props);
+    let postDate = props.comment.timestamp.split(",")[0];
+    postDate = postDate.replace("th", "").split(" ")
+    postDate = postDate[1] + " " + postDate[0] + " " + postDate[2]
+    postDate = new Date(postDate).getTime();
+    let dateNow = Date.now();
+    this.timeSince = Math.ceil((dateNow - postDate) / (1000 * 3600 * 24))
 
     this.state = {
       comment: props.comment,
       comments: props.comment.comments,
       imageUrl: props.comment.imageUrl,
       likes: props.comment.likes,
-      filteredComments: []
+      filteredComments: [],
+      timeSince: props.timeSince
     };
   }
 
@@ -72,7 +73,8 @@ class CommentSection extends React.Component {
         <div className="listOfCommentsDiv">
           {this.state.comments.map(comment => <Comments comment={comment} />)}
         </div>
-        <h4 className="timeStamp">{this.state.comment.timestamp} DAYS AGO</h4>
+        {/* <h4 className="timeStamp">{this.state.comment.timestamp} DAYS AGO</h4> */}
+        <h4 className="timeStamp">{this.timeSince} DAYS AGO</h4>
         <CommentInput
           handleSubmit={this.handleSubmit}
           comments={this.state.comment.comments}
