@@ -25,7 +25,7 @@ class CommentSection extends Component {
     const newComment = this.state.comment;
     // create the specific comment
     const newCommentObject = {
-      username: 'testing' + Math.floor(Math.random() * 100),
+      username: window.localStorage.getItem('username'),
       text: input
     };
     // create a new modified comment object 
