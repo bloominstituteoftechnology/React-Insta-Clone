@@ -37,9 +37,8 @@ class App extends Component {
   }
   */
   render() {
-    console.log(this.state.input)
     let filteredPosts = this.state.postData.filter((post) => {
-        return post.username.indexOf(this.state.input) !== -1;
+        return (post.username.toLocaleLowerCase().includes(this.state.input.toLocaleLowerCase()));
     });
     
     return (
