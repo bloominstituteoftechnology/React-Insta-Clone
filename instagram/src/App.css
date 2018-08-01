@@ -6,10 +6,10 @@
 }
 
 .post-container {
-  width: 59.4%; 
-  display: flex; 
-  flex-direction: column; 
-  margin-top: 100px; 
+  width: 100%; 
+   
+   
+  
   border: 1px solid lightgrey;
   border-bottom: none;
   justify-content: center; 

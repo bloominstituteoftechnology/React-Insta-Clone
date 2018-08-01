@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
-import SearchBar from './SearchBar'
-import Comments from './Comments'
-import PostContainer from './PostContainer'
+
 import './App.css';
+import PostsPage from './PostPage' 
+
 
 class App extends Component {
   constructor(){
@@ -23,9 +23,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <SearchBar/>
-      <PostContainer handleLikeBtn = {this.likeBtn}
-        posts={this.state.data} />
+        <PostsPage />
       </div>
     );
   }
