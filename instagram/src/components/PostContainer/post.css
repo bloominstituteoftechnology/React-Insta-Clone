@@ -7,7 +7,6 @@
     margin-top: 2%;
   
 }
-
 .username {
     margin: 3%;
 }
@@ -16,27 +15,6 @@
     height: 600px;
     margin-top: 2%;
     object-fit: cover;
-}
-
-.likeCommentIcons {
-    width: 600px;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.likes {
-    width: 600px;
-    margin-left: 4%;
-}
-
-i {
-    font-size: 200%;
-    margin: 3%;
-
-}
-
-span {
-    font-weight: bold;
 }
 
 .icon {
@@ -52,7 +30,7 @@ span {
     flex-direction: column;  
     align-items: center;
     margin-bottom: 8%;
-    padding-bottom: 3%;
+    padding-bottom: 2%;
     border: solid lightgray .5px;
     border-radius: 3px;
     background: white;

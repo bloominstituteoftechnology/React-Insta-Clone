@@ -5,6 +5,7 @@
 }
 .commentusername {
     margin-right: 2%;
+    margin-left: 2%;
 }
 
 .comment2 {
@@ -12,11 +13,40 @@
 }
 
 .commentinput {
-    width: 594px;
+    margin-left: 1.5%;
+    width: 580px;
     height: 40px;
     border-top: dotted gray 1px;
     border-bottom: none;
     border-left: none;
     border-right: none;
     border-radius: 0;
+    font-size: 105%;
+}
+
+.timestamp {
+    display: flex;
+    justify-content: center;
+}
+
+.likeCommentIcons {
+    width: 600px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.likes {
+    width: 600px;
+    margin-left: 3%;
+}
+
+
+i {
+    font-size: 200%;
+    margin: 3%;
+
+}
+
+span {
+    font-weight: bold;
 }

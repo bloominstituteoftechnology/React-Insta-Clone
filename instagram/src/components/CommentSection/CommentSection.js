@@ -19,7 +19,7 @@ class CommentSection extends React.Component {
     }
   
     addLike = () => {
-        let likescopy = this.state.likes.slice();
+        let likescopy = this.state.likes;
         if (this.state.liked === false) {
             likescopy++;
             this.setState({likes: likescopy});
