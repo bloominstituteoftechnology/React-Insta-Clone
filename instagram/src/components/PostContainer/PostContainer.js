@@ -2,6 +2,7 @@ import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection.js'
 import PropTypes from 'prop-types';
+//import Moment from 'react-moment';
 
 const PostContainer = props => {
   return (
@@ -29,9 +30,8 @@ const PostContainer = props => {
               </div>
               <div className="postLikes">{post.likes + " likes"} </div>
             </div>
-            <div className="postTimestamp">{post.timestamp}</div>
             <CommentSection comments={post.comments} />
-            
+            <div className="postTimestamp">{post.timestamp}</div>
           </div>
         )
       })}

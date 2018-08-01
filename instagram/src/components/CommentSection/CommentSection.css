@@ -1,5 +1,7 @@
 .commentContent {
     padding-left: 15px;
+    font-size: 14px;
+    line-height: 6px;
 }
 
 .commentUser {
@@ -7,6 +9,8 @@
 }
 
 .commentInput {
-    width: 99%;
-    height: 60px;
+    width: 99.6%;
+    height: 80px;
+    margin-bottom: 20px;
+    margin-top: 15px;
 }

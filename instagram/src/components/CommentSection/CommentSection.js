@@ -3,6 +3,7 @@ import './CommentSection.css';
 import PropTypes from 'prop-types';
 
 
+
 class CommentSection extends React.Component {
     constructor(props) {
         super(props)
@@ -46,7 +47,7 @@ class CommentSection extends React.Component {
                 )}
                 
                 <form>
-                    <input className="commentInput" placeholder="Add a comment..." />
+                    <input addNewComment={this.addNewComment} className="commentInput" placeholder="Add a comment..." />
                 </form>
             </div>
         );
