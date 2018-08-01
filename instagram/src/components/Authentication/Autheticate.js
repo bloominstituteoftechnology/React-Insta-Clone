@@ -13,32 +13,24 @@ const Authenticate = App =>
         currentUser = e => {
             this.setState({user: e.target.value});
         }
-        loggedInUser = () => {
-            this.setState((prevState)=>{
-                return {
-                    loggedIn: !prevState.loggedIn
-                }
-            })
-        }
         loginUser = () => {
-            localStorage.setItem('username', this.state.user)
-            this.setState({loggedIn:true})
-          }
-        // componentDidMount(){
-        //     localStorage.getItem('username') &&
-        //     this.setState({
-        //         loggedIn: true,
-        //         username: localStorage.getItem('username')
-        //     });
-        // }
+            localStorage.setItem('username', this.state.user);
+            window.location.reload();
+        }
+        componentDidMount(){
+            const savedUserName=localStorage.getItem('username');
+            if(savedUserName) {
+                this.setState({loggedIn:true});
+            } else {
+                this.setState({loggedIn:false});
+            }
+        }        
         render(){
             if(this.state.loggedIn){
                 return <App />
             }
             else {
-                return(
-                    <Login login={this.loginUser} username={this.currentUser}/>
-                )
+                return <Login login={this.loginUser} username={this.currentUser}/>
             }
         }
     }
