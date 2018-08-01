@@ -15,6 +15,13 @@ class CommentSection extends React.Component{
       addingComment: false,
       liked: props.liked,
       username: props.username,
+      id: props.id,
+    }
+  }
+
+  componentDidMount(){
+    if(localStorage.getItem(this.state.id)){
+      this.setState({comments: JSON.parse(localStorage.getItem(this.state.id))});
     }
   }
 
@@ -26,6 +33,7 @@ class CommentSection extends React.Component{
         username: this.state.username,
         text: event.target.comment.value,
       });
+      localStorage.setItem(this.state.id, JSON.stringify(newComments));
       this.setState({
         comments: newComments,
         addingComment: false,
