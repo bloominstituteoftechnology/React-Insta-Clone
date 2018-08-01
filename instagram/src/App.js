@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: [],
+      filteredPosts: []
     }
   }
 
@@ -20,15 +21,19 @@ class App extends Component {
   }
 
   filterPosts = event => {
-    event.preventDefault();
-    
+    const posts = this.state.posts.filter(post => {
+      if (post.username == event.target.value) {
+        return post;
+      }
+    });
+    this.setState({ filteredPosts: posts });
   }
 
   render() {
     return (
       <div className="App">
         <div>
-          <SearchBar /> 
+          <SearchBar filterPostsHandler={this.filterPosts} /> 
         </div>
         <div>
           {this.state.posts.map(post => (
