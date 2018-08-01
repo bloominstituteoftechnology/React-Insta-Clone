@@ -3,31 +3,23 @@ import Login from "../components/Login/Login";
 
 const Authenticate = App =>
   class extends React.Component {
-    // set up our state so that we have some conditional logging
     constructor(props) {
-        super(props);
-        this.state = {
-            loggedIn: false
-        };
+      super(props);
+      this.state = {
+        loggedIn: false
+      };
     }
-
     componentDidMount() {
-        // runs after render() 
-        // check if user exists in localstorage
-        // if it does, set state to true, if it doesnt set state to false 
+      if (!localStorage.getItem('user')) {
+        this.setState({ loggedIn: false });
+      } else {
+        this.setState({ loggedIn: true });
+      }
     }
-
-    render(){
-        // if user is logged in... render app
-        // else render a login comonent.
-        if(this.state.loggedIn === true){
-            return <App />;
-        } else {
-            return <Login />;
-        }
+    render() {
+      if (this.state.loggedIn) return <App />;
+      return <Login />;
     }
-        
-}
+  };
 
-
-  export default Authenticate;
+export default Authenticate;
