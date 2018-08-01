@@ -5,6 +5,7 @@ import DummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 
+
 class App extends Component {
   constructor() {
     super();
@@ -13,7 +14,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(DummyData);
     return (
       <div className="App">
       <SearchBar />

@@ -9,4 +9,9 @@ const Comment = (props) => {
     )
 }
 
+Comment.propTypes = {
+    user:propTypes.string,
+    text:propTypes.string
+}
+
 export default Comment;

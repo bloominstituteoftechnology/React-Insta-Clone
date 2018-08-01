@@ -11,6 +11,7 @@ import {
   Input
 } from "reactstrap";
 import CommentSection from "../CommentSection/CommentSection";
+import PropTypes from 'prop-types';
 
 const PostContainer = props => {
   let thumbStyle = {
@@ -43,8 +44,8 @@ const PostContainer = props => {
 
         <CardFooter>
           <div className="likeIcon">
-            <i class="far fa-heart" />
-            <i class="far fa-comment" />
+            <i className="far fa-heart" />
+            <i className="far fa-comment" />
           </div>
           <CardSubtitle className="d-flex align-items-left">
             <strong>{props.user.likes} likes</strong>
@@ -58,5 +59,12 @@ const PostContainer = props => {
     </Card>
   );
 };
+
+PostContainer.propTypes = {
+  thumbnailUrl:PropTypes.string,
+  username:PropTypes.string,
+  imageUrl:PropTypes.string,
+  likes:PropTypes.number
+}
 
 export default PostContainer;

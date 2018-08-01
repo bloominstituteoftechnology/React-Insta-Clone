@@ -11,13 +11,13 @@ class SearchBar extends Component {
       <div className="nav-container">
         <nav>
           <ul>
-          <i class="fab fa-instagram"></i>
+          <i className="fab fa-instagram"></i>
             <li className="logo-text">| Instagram</li>
             <input className="onlyInput" placeholder="Search" />
             <div className="right-nav">
-            <i class="far fa-compass"></i>
-            <i class="far fa-heart"></i>
-            <i class="far fa-user"></i>
+            <i className="far fa-compass"></i>
+            <i className="far fa-heart"></i>
+            <i className="far fa-user"></i>
             </div>
           </ul>
         </nav>
