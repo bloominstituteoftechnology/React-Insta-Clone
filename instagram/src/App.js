@@ -26,12 +26,10 @@ class App extends Component {
     this.state = {
       data: [],
       input: [],
-      username: ''
     };
   }
   componentDidMount(){
-    const user = localStorage.getItem('username');
-    this.setState({data:dummyData, username: user});
+    this.setState({data:dummyData});
   }
   search = e => {
     this.setState({input: e.target.value});
