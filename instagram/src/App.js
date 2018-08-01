@@ -6,15 +6,24 @@ import PostsPage from './components/PostContainer/PostsPage.js';
 import Authenticate from './components/Authentication/Authenticate.js';
 
 class App extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super();
+    this.state = {
+      username: ""
+    }
   }
-  render(props) {
+
+// componentDidMount =()=> {
+//   const user = localStorage.getItem("user");
+//   this.setState(username: user)
+// }
+
+  render() {
     return
       <div className="App">
-        <PostsPage posts={props.posts} searchItemHandler={props.searchItemHandler} searchInfo={props.searchInfo} searchSubmitHandler={props.searchSubmitHandler} />
+        <PostsPage />
       </div>
   }
 }
 
-export default App;
+export default Authenticate(App);
