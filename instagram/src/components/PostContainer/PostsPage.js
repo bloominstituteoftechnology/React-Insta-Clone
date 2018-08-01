@@ -27,11 +27,12 @@ class PostsPage extends React.Component {
   }
 
   render () {
-    return
+    return (
         <div>
           <SearchBar searchItem={this.searchItemHandler} searchValue={this.state.searchInfo} searchSubmit={this.searchSubmitHandler} />
           {this.state.posts.map(item => <PostContainer post={item} comments={item.comments} key={item.timestamp} /> )}
         </div>
+      )
   };
 }
 

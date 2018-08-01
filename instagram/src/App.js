@@ -19,11 +19,12 @@ class App extends Component {
 // }
 
   render() {
-    return
+    return (
       <div className="App">
         <PostsPage />
       </div>
-  }
+    )
+  };
 }
 
 export default Authenticate(App);
