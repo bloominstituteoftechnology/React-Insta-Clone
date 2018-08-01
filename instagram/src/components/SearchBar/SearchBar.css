@@ -1,19 +1,20 @@
 /*==================== S E A R C H  B A R    S E C T I O N ================*/
 .search-bar {
-    margin: 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px 0;
-    /* border-bottom: .5px solid lightgray; */
+    border-bottom: 1px solid #3333;
+    height: 50px;
+    background: #ffffff;
 }
 
 .search-bar .search-input {
     width: 220px;
     text-align: center;
     background-color: #FAFAFA;
-    color: lightgrey;
+    height: 30px;
     border: .5px solid lightgray;
     border-radius: 5px;
-    padding: 5px 0;
     font-size: 15px;
 }

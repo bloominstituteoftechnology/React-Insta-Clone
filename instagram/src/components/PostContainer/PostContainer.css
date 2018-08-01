@@ -3,6 +3,8 @@
     border: .5px solid lightgray;
     border-radius: 5px;
     padding-bottom: 5px;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .post-container .post-top {
@@ -39,6 +41,10 @@
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
+}
+
+.post-container .heart-icon {
+    
 }
 
 /*===================  I N P U T   S E C T I O N =============*/
