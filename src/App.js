@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   handleChange = e => this.setState({ input: e.target.value });
-
+  /*
   filterPosts = (e) => {
     let posts = this.state.postData.slice();
     let filteredPosts = posts.filter(item => {
@@ -35,8 +35,13 @@ class App extends Component {
     this.setState({ postData: filteredPosts, input: '' });
     e.preventDefault();
   }
-
+  */
   render() {
+    console.log(this.state.input)
+    let filteredPosts = this.state.postData.filter((post) => {
+        return post.username.indexOf(this.state.input) !== -1;
+    });
+    
     return (
       <div className="main-container">
         <header className="main-header">
@@ -51,15 +56,15 @@ class App extends Component {
           <SearchBarContainer 
             input={this.state.input}
             onChange={this.handleChange}
-            onSubmit={this.filterPosts}
+            /*onSubmit={this.filterPosts} - need a form submit for this*/
           />
           <div className="main-header__icons-container">
             <FontAwesomeIcon icon={faCompass} />
             <FontAwesomeIcon icon={faHeart} />
             <FontAwesomeIcon icon={faUser} />
           </div>
-        </header>    
-        {this.state.postData.length > 0 ? <PostContainer postData={this.state.postData} /> : <p>No Posts!</p> }
+        </header>
+        {filteredPosts.length > 0 ? <PostContainer postData={filteredPosts} /> : <p>No Posts!</p> }
       </div>
     );
   }
