@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./Login.css";
 
 class Login extends React.Component {
 	state = {
@@ -13,15 +14,23 @@ class Login extends React.Component {
 
 	render() {
 		return (
-			<div className="container">
+			<div className="container Login">
+				<h1 className="Header__nav-brand Header__nav-brand--big">
+				</h1>
+				<a href="#" className="Header__nav-brand">
+					<i className="fab fa-instagram Header__brand" />
+					Instagram
+				</a>
 				<form
+					className="form"
 					onSubmit={e => {
 						e.preventDefault();
 						this.props.onLogIn(this.state.username);
 					}}
 				>
-					<div>
+					<div className="form__group">
 						<input
+							className="form__input"
 							type="text"
 							placeholder="Username"
 							required
@@ -29,14 +38,17 @@ class Login extends React.Component {
 							onChange={this.handleChange}
 						/>
 					</div>
-					<div>
+					<div className="form__group">
 						<input
+						className="form__input"
 							type="password"
 							placeholder="Password"
 							required
 						/>
 					</div>
-					<button type="submit">Submit</button>
+					<button className="button button--submit" type="submit">
+						Submit
+					</button>
 				</form>
 			</div>
 		);

@@ -35,6 +35,10 @@
 	margin-right: 2rem;
 }
 
+.Header__icons {
+	cursor: pointer;
+}
+
 .Header__search-bar {
 	width: 25rem;
 	position: relative;

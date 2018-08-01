@@ -106,8 +106,8 @@ class PostsPage extends Component {
 	render() {
 		return (
 			<div className="App">
-				<Header onSearch={this.handleSearch} />
-				<button onClick={this.props.onLogOut}>Log Out</button>
+				<Header logoutProp={this.props.onLogOut} onSearch={this.handleSearch} />
+				{/* <button onClick={this.props.onLogOut}>Log Out</button> */}
 				<section className="container App__cards-container">
 					{this.state.data
 						.filter(card =>

@@ -45,9 +45,9 @@ class Header extends Component {
 							) : null}
 						</div>
 						<div className="Header__three-buttons">
-							<i className="far fa-compass" />
-							<i className="far fa-heart" />
-							<i className="far fa-user" />
+							<i className="far fa-compass Header__icons Header__icons--compass" />
+							<i className="far fa-heart Header__icons Header__icons--heart" />
+							<i onClick={ this.props.logoutProp }className="far fa-user Header__icons Header__icons--user" />
 						</div>
 					</div>
 				</div>
