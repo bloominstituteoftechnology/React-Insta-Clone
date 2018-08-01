@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import dummyData from './dummy-data';
-
+import CommentInput from './CommentInput';
 
 const Comments = props =>{
 
@@ -13,7 +13,9 @@ const Comments = props =>{
                             <div className='user'>{comments.username}</div>
                             <div className='comment'>{comments.text}</div>
                         </div>
+                        
                     )}
+                    <CommentInput />
                 </div>
             )
         }

@@ -5,7 +5,7 @@ import './App.css';
 const SearchBar = () => {
   return (
     <div className="search-bar-wrapper">
-     
+      
       <div>
         <input type="text" placeholder="Search" />
       </div>
