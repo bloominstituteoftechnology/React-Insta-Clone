@@ -21,6 +21,7 @@ class CommentSection extends React.Component {
     const comments = this.state.comments.slice();
     comments.push({ text: this.state.comment, username: "anon" });
     this.setState({ comments, comment: "" });
+    //what you define here is what is replaced in state
   }
 
   render() {

@@ -8,16 +8,16 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dataSet: []
+      dataSet: [],
+      filteredPosts: []
     }
-    this.incrementLikes = this.incrementLikes.bind(this);
   }
 
   componentDidMount() {
     this.setState({ dataSet: dummyData})
   }
 
-  incrementLikes(url) {
+  incrementLikes = url => {
     let data = this.state.dataSet.slice();
     data = data.map(post => {
       if (post.imageUrl === url){
@@ -27,17 +27,24 @@ class App extends Component {
     this.setState({data});
   }
 
-  addNewComment = e => {
+  searchInputHandler = e => {
+    this.setState({filteredPosts: e.target.value});
+  }
+
+  searchPosts = e => {
     e.preventDefault();
-    const comments = this.state.comments.slice();
-    comments.push({ text: this.state.comment, username: "anon" });
-    this.setState({ comments, comment: "" });
+    let search = this.state.filteredPosts; 
+    let filtered = this.state.dataSet.filter(data => data.username.includes(search));
+    this.setState({dataSet: filtered});
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar
+        searchInputHandler = {this.searchInputHandler}
+        searchPosts = {this.searchPosts}
+        />
         <PostContainer
         dataSet = {this.state.dataSet}
         incrementLikes = {this.incrementLikes}
