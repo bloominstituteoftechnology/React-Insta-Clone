@@ -14,6 +14,7 @@ class CommentSection extends React.Component{
       likes: props.likes,
       addingComment: false,
       liked: props.liked,
+      username: props.username,
     }
   }
 
@@ -22,7 +23,7 @@ class CommentSection extends React.Component{
     let newComments = this.state.comments.slice();
     if(event.target.comment.value){
       newComments.push({
-        username: 'Johanon',
+        username: this.state.username,
         text: event.target.comment.value,
       });
       this.setState({

@@ -1,0 +1,33 @@
+.login-page{
+  width: 100vw;
+  height: 100vh;
+  background: #ddd;
+  padding-top: 100px;
+}
+
+.login-page .login-form{
+  width: 50%;
+  height: 50%;
+  margin: 0px auto;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.login-page .login-form label{
+  margin: 10px 0;
+}
+
+.login-page .login-form input{
+  margin: 10px 0;
+  width: 40%;
+  height: 10%;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: 2rem;
+}

@@ -7,7 +7,7 @@ const Authenticate = Posts =>
     constructor(){
       super();
       this.state = {
-        isLoggedIn: true,
+        isLoggedIn: false,
         username: '',
       }
     }
@@ -16,15 +16,24 @@ const Authenticate = Posts =>
       //check if local storage has login
     }
 
-    handleLoginIn = username =>{
-      this.setState({ username });
+    handleLogin = event =>{
+      event.preventDefault();
+      this.setState({ isLoggedIn: true, });
+    }
+
+    handleUserChange = event =>{
+      this.setState({username: event.target.value})
+    }
+
+    handleLogout = () => {
+      this.setState({isLoggedIn: false});
     }
 
     render(){
       return(
           this.state.isLoggedIn ?
             <Posts loggedIn={this.state.isLoggedIn} username={this.state.username} /> :
-            <Login handleLogin={this.handleLogin} />
+            <Login handleUserChange={this.handleUserChange} handleLogin={this.handleLogin} />
       );
     }
   }
