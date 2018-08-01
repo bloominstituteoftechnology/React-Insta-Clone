@@ -7,8 +7,12 @@ import Authenticate from './components/Authentication/Authenticate.js';
 class App extends Component {
   constructor(){
     super();
-    this.state = {};
+    this.state = {
+      username: ""
+    };
   }
+
+  
 
     render() {
     return (

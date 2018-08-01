@@ -4,14 +4,14 @@ class Login extends Component {
     constructor(props){
     super(props);
     this.state = {
-        username : '';
+        username: '',
         password: ''
         };
     }
 
 
     handleInputChange = e => {
-        this.setState({[e.target.name]: e.target.});
+        this.setState({[e.target.name]: e.target});
     }
 
     handleLoginSubmit = e => {
@@ -23,24 +23,24 @@ class Login extends Component {
     
     render(){
         return (  
-            <Form>
-                <Input
+            <form>
+                <input
                 type="text" 
                 placeholder="User Name"
                 value={this.state.username}
                 onChange= {this.handleInputChange}
                  />
-                <Input 
+                <input 
                 type="password"
                 placeholder="Password" 
                 value={this.state.password}
                 onChange={this.handleInputChange}
                 />
                 <br />
-                <Button onClick={this.handleLoginSubmit}>
+                <button onClick={this.handleLoginSubmit}>
                 Log In 
-                </Button>
-                </Form>
+                </button>
+                </form>
         );
     }
 }
