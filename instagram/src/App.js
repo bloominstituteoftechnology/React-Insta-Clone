@@ -36,9 +36,11 @@ class App extends Component {
           <SearchBar filterPostsHandler={this.filterPosts} /> 
         </div>
         <div>
-          {this.state.posts.map(post => (
+          {this.state.filteredPosts.length > 0 ? this.state.filteredPosts.map(post => (
           <PostContainer key={post.timestamp} post={post} addLikeHandler={this.addLike} />
-          ) ) } 
+          ) ) : this.state.posts.map(post => (
+            <PostContainer key={post.timestamp} post={post} addLikeHandler={this.addLike} />
+            ) )  } 
         </div>
       </div>
     );
