@@ -11,7 +11,6 @@ class LogIn extends React.Component {
 
     handleUsernameChange = (e) => {
         let nUser = e.target.value;
-
         this.setState({
             username: nUser
         })
@@ -20,17 +19,17 @@ class LogIn extends React.Component {
     handlePasswordChange = (e) => {
         let nuPw = e.target.value;
         this.setState({
-            username: nuPw
+            password: nuPw
         })
     }
 
     submitDataToStorage = (e) => {
-        e.prevenDefault();
+        e.preventDefault();
         console.log("submitdata");
         
-        // localStorage.setItem('name', this.state.username);
-        // localStorage.setItem('password', this.state.password);
-        // console.log(localStorage.getItem('name'));
+        localStorage.setItem('name', this.state.username);
+        localStorage.setItem('password', this.state.password);
+        console.log(localStorage.getItem('name'));
         
     }
 
@@ -42,6 +41,7 @@ class LogIn extends React.Component {
             <form onSubmit={this.submitDataToStorage}>
                 <input type="text" placeholder="username" onChange={this.handleUsernameChange} />
                 <input type="text" placeholder="password" onChange={this.handlePasswordChange} />
+                <button type="submit"></button>
             </form>
         )
     }
