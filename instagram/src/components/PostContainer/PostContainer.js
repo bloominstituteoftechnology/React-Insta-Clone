@@ -17,17 +17,17 @@ const PostContainer = props => {
                 <img src={props.post.imageUrl} alt="" />
             </div>
             <div className="comment-section-wrap" >
-                <span className="comments-social" >
+                {/* <span className="comments-social" >
                     <i className="far fa-heart fa-lg" />
                 </span>
                 <span>
                     <i className="far fa-comment fa-lg" />
-                </span>
-                <div className="comments-social" >
+                </span> */}
+                {/* <div className="comments-social" onClick={props.addLikeHandler} >
                     {props.post.likes} likes
-                </div>
+                </div> */}
                 <div>
-                    <CommentSection comments={props.post.comments}  />
+                    <CommentSection comments={props.post.comments} likes={props.post.likes} />
                 </div>
             </div>
         </div>

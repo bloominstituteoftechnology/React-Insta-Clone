@@ -19,6 +19,11 @@ class App extends Component {
     });
   }
 
+  // addLike = event => {
+  //   event.preventDefault();
+  //   const likes = this.state.
+  // }
+
   render() {
     return (
       <div className="App">
@@ -27,7 +32,7 @@ class App extends Component {
         </div>
         <div>
           {this.state.posts.map(post => (
-          <PostContainer key={post.timestamp} post={post} />
+          <PostContainer key={post.timestamp} post={post} addLikeHandler={this.addLike} />
           ) ) } 
         </div>
       </div>
