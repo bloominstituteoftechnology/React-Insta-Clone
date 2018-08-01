@@ -1,6 +1,6 @@
 
 .search-container {
-  width: 1024px;
+  max-width: 1024px;
   margin: auto;
   margin-bottom: 25px;
 }
@@ -10,7 +10,7 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 15px;
+  padding: 20px 0 20px 0;
 }
 
 .image-container {
@@ -23,6 +23,7 @@
 .image-container .insta-img-logo {
   width: 15%;
   height: 15%;
+  margin-left: 15px;
 }
 
 .image-container .insta-name-logo {
@@ -51,6 +52,7 @@
 
 .button-container a {
   font-size: 21px;
-  padding: 5px 15px;
+  padding: 5px 0 5px 15px;
+  margin-right: 15px;
   color: #7B7B7B
 }

@@ -2,6 +2,7 @@
   border: 1px solid #E6E6E6;
   width: 640px;
   margin-bottom: 75px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .post .post-header {
