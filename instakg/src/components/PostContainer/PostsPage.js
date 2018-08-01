@@ -14,7 +14,6 @@ class PostsPage extends Component {
   }
   componentDidMount(){
     document.title = "InstaKG";
-    console.log(this.props.user)
     this.setState({currentUser:this.props.user})
     if(localStorage.getItem("postList")===null){     
       this.resetData();
@@ -66,7 +65,6 @@ class PostsPage extends Component {
   this.setState({ display: newArray },()=>{});
 }
   handleKeyPressComment = (event) => {
-   
     const dataImport = this.state.data;
     const displayImport = this.state.display;
 
@@ -75,6 +73,7 @@ class PostsPage extends Component {
          return;
        }
       dataImport.map((element,index)=>{
+        
         if(event.target.id === index.toString()){
            element.comments.push({
             username: this.state.currentUser,
@@ -85,17 +84,17 @@ class PostsPage extends Component {
           return element;
         }
       })
-      displayImport.map((element,index)=>{
-        if(event.target.id === index.toString()){
-           element.comments.push({
-            username: this.state.currentUser,
-            text : event.target.value})
-            return element;
-        }
-        else{
-          return element;
-        }
-      })
+      // displayImport.map((element,index)=>{
+      //   if(event.target.id === index.toString()){
+      //      element.comments.push({
+      //       username: this.state.currentUser,
+      //       text : event.target.value})
+      //       return element;
+      //   }
+      //   else{
+      //     return element;
+      //   }
+      // })
       event.target.value = '';
       
     this.setState({ data: dataImport, display: displayImport },()=>{this.writeToLS();});
@@ -105,7 +104,6 @@ class PostsPage extends Component {
     }
   }
   writeToLS = () =>{
-    
     localStorage.setItem('postList', JSON.stringify(this.state.data));
   }
   readLS = () =>{
