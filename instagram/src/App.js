@@ -28,6 +28,9 @@ const App=Authenticate(
   login=()=>{
     localStorage.setItem('username',this.state.username);
   }
+  handleLogInChange=(e)=>{
+    this.setState({username:e.target.value},console.log(this.state.username));
+  }
   filterPosts=()=>{
     let filteredPosts=this.state.posts.slice();
     let itemsToBeFiltered=filteredPosts.map(e=>e.username);
@@ -52,7 +55,7 @@ const App=Authenticate(
         <SearchBar searchValue={this.searchBarValue} handleInputChange={this.handleSearchBarChange}/>
         <PostsPage searchBarValue={this.state.searchBarValue} posts={this.state.posts} filteredPosts={this.state.filteredPosts} 
         liked={this.liked} handleInputChange={this.handleSearchBarChange}/>
-        <Login newUser={this.state.username} logIn={this.login}/>
+        <Login newUser={this.state.username} logIn={this.login} logInChange={this.handleLogInChange}/>
       </div>
     );
   }

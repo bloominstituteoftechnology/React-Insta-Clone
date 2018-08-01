@@ -1,12 +1,12 @@
 import React from 'react';
 
-const login=props=>{
+const Login=props=>{
     return (
         <form onSubmit={props.login}>
-            <input type='text' placeholder='enter a username' value={props.username}/>
+            <input type='text' placeholder='enter a username' value={props.username} onChange={(e)=>props.logInChange(e)}/>
             <input type='password'/>
             <button>Login</button>
         </form>
     )
 }
-export default login;
+export default Login;
