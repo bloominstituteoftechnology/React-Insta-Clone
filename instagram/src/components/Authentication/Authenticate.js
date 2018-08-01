@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginPage from './Login/Login';
+import PostsPage from '../PostContainer/PostsPage';
 
 const Authenticate= Page => 
     class extends React.Component {
@@ -22,7 +23,8 @@ const Authenticate= Page =>
             return (
                 //is user logged  ? yes then produce the normal App page content.  no? make them login with the loginPage
                 this.state.loggedIn ? 
-                <Page userIn={this.state.userIn}/> 
+                
+                <PostsPage userIn={this.state.userIn}/>
                 :
                 <LoginPage />
                 

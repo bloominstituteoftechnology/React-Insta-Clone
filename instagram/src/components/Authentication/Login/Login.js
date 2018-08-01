@@ -35,7 +35,7 @@ class LoginPage extends React.Component {
                         <input onChange = {this.handleUsernameChange} type="text" value = {this.state.username}/>
                         <h1>Password</h1>
                         <input onChange={this.handlePasswordChange} type="text" value = {this.state.password}/>
-                        <button >Login</button>
+                        <button onClick ={this.handleSubmit}>Login</button>
                     </form>
 
                 </div>

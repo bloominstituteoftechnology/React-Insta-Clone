@@ -35,7 +35,7 @@ class App extends Component {
     return (
         <div className ="App">
           <AuthenticatedApp />
-          <PostsPage dummyData={dummyData}/>
+          {/* <PostsPage dummyData={dummyData}/> */}
 
         </div>
         
