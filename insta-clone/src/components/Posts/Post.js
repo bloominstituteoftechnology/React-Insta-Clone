@@ -2,6 +2,7 @@ import React from 'react';
 import Comments from '../Comments';
 import propTypes from 'prop-types';
 
+
 class Post extends React.Component {
     constructor(props) {
         super();
@@ -28,11 +29,16 @@ class Post extends React.Component {
         this.setState({temp: event.target.value});
     }
     incrementLike = () => {
-        let likes = this.state.likes + 1;
-        this.setState({ likes });
-      };
+        if (!this.state.likes.liked){
+            this.setState(() => ({ likes: {
+                count: this.state.likes.count+1,
+                liked: true
+                }
+            }));
+        }
+
+    };
     render() {
-        // console.log("test");
         return(
             <div className="post">
                 <h4><img className="userIcon" src={this.state.thumbnail} alt="userIcon" /><p>{this.state.username}</p></h4>
@@ -41,7 +47,7 @@ class Post extends React.Component {
                     <div>   
                         <i onClick={this.incrementLike} className="far fa-heart fa-2x"></i> <i className="far fa-comment fa-2x"></i>
                     </div>
-                    <p>{this.state.likes} likes</p>
+                    <p>{this.state.likes.count} likes</p>
                 </div>
                {this.state.comments.map((comment, i)=> <Comments values={comment} key={i} />)} 
                 <form onSubmit={this.handleAddComment}>
