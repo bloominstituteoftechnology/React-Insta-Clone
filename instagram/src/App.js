@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from "./dummy-data";
-import MainHeader from "./components/SearchBar/MainHeader";
-import PostContainer from "./components/PostContainer/PostContainer";
-
+import PostsPage from "./components/PostContainer/PostsPage";
 // Outline:
 
 //App
@@ -23,24 +20,11 @@ import PostContainer from "./components/PostContainer/PostContainer";
 
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      posts: []
-    };
-  }
-
-  componentDidMount(){
-    this.setState({posts: dummyData});
-  }
   
   render() {
     return (
       <div className="App">
-        <MainHeader />
-        <div className = "Posts">
-        <PostContainer posts = {this.state.posts} />
-        </div>
+        <PostsPage />
       </div>
     );
   }
