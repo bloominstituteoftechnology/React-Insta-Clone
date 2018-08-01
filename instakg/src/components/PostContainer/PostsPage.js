@@ -3,8 +3,8 @@ import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from '../PostContainer/PostContainer';
 import dummyData from '../../dummy-data';
 class PostsPage extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state={
       data:[],
       currentUser:'You',
@@ -14,6 +14,8 @@ class PostsPage extends Component {
   }
   componentDidMount(){
     document.title = "InstaKG";
+    console.log(this.props.user)
+    this.setState({currentUser:this.props.user})
     if(localStorage.getItem("postList")===null){     
       this.resetData();
     }

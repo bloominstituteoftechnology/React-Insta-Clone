@@ -11,7 +11,7 @@ const Authentication = (Page,Login ) =>
         }
     loginTrue(){
         if(this.state.loggedin){
-            return <Page />
+            return <Page user={ JSON.parse(localStorage.getItem('userName'))}/>
         }
         else{
             return <Login  methods={[this.login.bind(this), this.userNameChange.bind(this)]}  />
