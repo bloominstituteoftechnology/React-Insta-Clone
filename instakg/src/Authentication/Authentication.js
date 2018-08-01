@@ -21,8 +21,10 @@ const Authentication = (Page,Login ) =>
         this.setState({ userName: event.target.value },()=>{});
      }
      login(event){
-   
-       this.writeToLS(this.state.userName)
+        if(this.state.userName !== undefined){
+            this.writeToLS(this.state.userName)
+
+        }
      }
      writeToLS = (passin) =>{
        localStorage.setItem('userName', JSON.stringify(passin));
