@@ -1,4 +1,5 @@
 import React from "react";
+import LogIn from "./Login";
 
 const Authenticate = App =>
   class extends React.Component {
@@ -10,10 +11,17 @@ const Authenticate = App =>
         }
     }
     
+    consultDidMount(){
+        return (localStorage.getItem('username') === 'mboegner' &&
+        localStorage.getItem('password') === 'password'      
+        ? this.setState({loggedin: !this.state.loggedin}) : null);
+    }
     
     render() {
       return (
-        <App />
+          <div>
+        {this.state.loggedin} ? <App /> : <LogIn />;
+        </div>
       );
     }
   };

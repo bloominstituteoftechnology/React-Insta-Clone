@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import Login from './components/Authentication/Login'
-import PostsPage from './components/PostContainer/PostsPage';
-import Authenticate from './components/Authentication/Authenticate'
+
+
 
 
 class App extends Component {
@@ -11,6 +11,8 @@ class App extends Component {
     super();
     this.state = {
       posts: [],
+
+      loggedin: true,
 
       username:'', 
       
@@ -34,11 +36,10 @@ addNewLogin = e => {
 }
 
 componentDidMount() {
-  console.log('mounty component', this.state)
+  console.log('mounty component', this.state);
+  
   this.setState({posts: dummyData});
-  return localStorage.getItem('username') === 'mboegner' &&
-         localStorage.getItem('password') === 'password'      
-         ? <PostsPage posts={this.state.posts}/> : <Login />
+  
 
 }
 
@@ -56,6 +57,6 @@ componentDidMount() {
   }
 }
 
-const Auth = Authenticate(App)
+// const Auth = Authenticate(App)
 
-export default Auth;
+export default App;
