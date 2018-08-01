@@ -12,7 +12,7 @@
 ### Description (Day III)
 
 - Today you will be building a "Higher Order Component" (HOC)
-- The HOC will not let users see the posts until they have logged in. (Our login system for this will be faked using LocalStorage).
+<!-- - The HOC will not let users see the posts until they have logged in. (Our login system for this will be faked using LocalStorage).
 - The job of the HOC will be to render a login page if the user is not logged in, then render the posts after the user is logged in.
 
 #### Tasks (Day III)
@@ -22,7 +22,7 @@
   - You'll have to move a lot of what is rendered in `app.js` to this new component
   - In app.js, render the `PostsPage` component.
   - Make sure the app working as it was before since it has been re-factored now.
-  - This is to ensure that we clean up our App component a little bit before we re-factor it to be wrapped up in an HOC
+  - This is to ensure that we clean up our App component a little bit before we re-factor it to be wrapped up in an HOC -->
 
 - Building the High Order Component
 

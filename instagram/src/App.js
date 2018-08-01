@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import './css/index.css';
-import DummyData from './dummy-data.js';
+// import DummyData from './dummy-data.js';
 import PostsPage from './components/PostContainer/PostsPage.js';
+import Authentication from './components/Authentication/Authentication.js';
+import Login from './components/Login/Login.js';
 
+// const HOCAuthentication = Authentication(Login);
 
 class App extends Component {
   constructor() {
@@ -17,7 +20,8 @@ class App extends Component {
   render() {
     return (
       <div >
-
+        <Login />
+        {/* <HOCAuthentication /> */}
         <PostsPage />
       </div>
     );
