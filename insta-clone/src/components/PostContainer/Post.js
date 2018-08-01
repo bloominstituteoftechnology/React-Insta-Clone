@@ -34,8 +34,7 @@ class Post extends Component {
         let newList = this.state.comments.slice();
         let newComment = {text: comment, username: user};
         newList.push(newComment);
-        this.setState({comments: newList});
-        event.target.children[0].value = '';
+        this.setState({comments: newList, currentComment: ''});
         localStorage.setItem(this.state.id, JSON.stringify(newList));
     }
 
@@ -79,7 +78,7 @@ class Post extends Component {
                     <CommentSection comments={this.state.comments} deleteComment={this.deleteComment} />
                     <p className="timestamp">{moment(this.props.post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</p>
                     <form onSubmit={this.addComment} className="add-comment">
-                        <input type="text" placeholder="Add a comment" onChange={this.commentHolder} ></input>
+                        <input type="text" placeholder="Add a comment" onChange={this.commentHolder} value={this.state.currentComment} ></input>
                     </form>
                 </div>
             </div>

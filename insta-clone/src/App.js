@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Fuse from 'fuse.js';
+//import Fuse from 'fuse.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -7,13 +7,14 @@ import dummyData from './dummy-data'
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import Authenticate from './components/Authentication/Authenticate';
 
 library.add(far, fab);
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {data: [], searchValue: '', shownPosts: [] };
+  constructor(props){
+    super(props);
+    this.state = {data: [], searchValue: '', shownPosts: [], currentUser: props.currentUser };
   }
 
   componentDidMount = () => {
@@ -40,10 +41,10 @@ class App extends Component {
     return (
       <div className="container">
         <SearchBar onSearch={this.searchInput} />
-        <PostContainer posts={this.state.shownPosts} currentUser={'Bobby123'} />
+        <PostContainer posts={this.state.shownPosts} currentUser={this.state.currentUser} />
       </div>
     );
     }
 }
 
-export default App;
+export default Authenticate(App);
