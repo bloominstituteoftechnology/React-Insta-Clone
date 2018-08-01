@@ -32,13 +32,20 @@ class App extends Component {
   } 
 
   likeIncrement(index) {
-    this.setState(function(prevState, props){
-      return {[this.state.data[index].likes]: [prevState.data[index].likes++]}
-    });
-    this.setState(function(prevState, props){
-      return {[this.state.data[index].liked]: true}
-    });
-    console.log([this.state.data[index].liked]);
+    if (this.state.data[index].liked === false) {
+      this.setState((prevState, props) => {
+        return {[this.state.data[index].likes]: [prevState.data[index].likes++], [this.state.data[index].liked]: true}
+      });
+      let arr = this.state.data.slice();
+      arr.map(((el, i) => {if(i === index) return el.liked = !(el.liked);}))
+    } else {
+      this.setState((prevState, props) => {
+        return {[this.state.data[index].likes]: [prevState.data[index].likes--], [this.state.data[index].liked]: false}
+      });
+      let arr = this.state.data.slice();
+      arr.map(((el, i) => {if(i === index) return el.liked = !(el.liked);}))
+    }
+
   }
 
   filterData(event) {
