@@ -20,7 +20,8 @@ class CommentSection extends React.Component{
   }
 
   componentDidMount(){
-    if(localStorage.getItem(this.state.id)){
+    let idString = this.state.id.toString();
+    if(localStorage.getItem(idString)){
       this.setState({comments: JSON.parse(localStorage.getItem(this.state.id))});
     }
   }
@@ -33,7 +34,8 @@ class CommentSection extends React.Component{
         username: this.state.username,
         text: event.target.comment.value,
       });
-      localStorage.setItem(this.state.id, JSON.stringify(newComments));
+      let idString = this.state.id.toString();
+      localStorage.setItem(idString, JSON.stringify(newComments));
       this.setState({
         comments: newComments,
         addingComment: false,
