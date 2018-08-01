@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 const SearchBar = props => {
   return (
@@ -15,6 +14,7 @@ const SearchBar = props => {
           name="search-bar"
           placeholder="            Search"
           onChange={props.handleNameSearch}
+        //   value={props.value}
         />
       </form>
       <div className="top-bar-right">
