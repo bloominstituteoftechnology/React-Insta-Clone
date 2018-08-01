@@ -26,8 +26,10 @@ class CommentSection extends Component {
     }
 
     handleInputChange = e => {
+        e.preventDefault();
         this.setState({
             current: e.target.value,
+
         });
     };
     render() {
@@ -44,6 +46,7 @@ class CommentSection extends Component {
                     <input 
                         onChange={this.handleInputChange}
                         className='comment-section-input'
+                        comment={this.state.comments}
                         type='text'
                         placeholder='Add Comment'
                     />

@@ -18,6 +18,12 @@ class App extends Component {
 
   onSearch = e => {
     e.preventDefault();
+    e.target.reset();
+    this.setState({
+      data: this.state.data, 
+      dataHolder: null,
+      Empty: true,
+    });
   };
 
   componentDidMount() {
@@ -27,9 +33,12 @@ class App extends Component {
   };
 
   render() {
+    let data = (this.state.dataHolder ? this.state.dataHolder : this.state.data)
     return (
       <div className='App'>
-        <SearchBar onSearch={this.onSearch}/>
+        <SearchBar 
+          onSearch={this.onSearch}
+          />
         <div className='ig-posts'>
 
            { this.state.data.map(data => 
