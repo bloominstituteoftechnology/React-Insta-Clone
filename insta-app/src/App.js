@@ -9,16 +9,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      names: ""
     };
   }
   componentDidMount(){
     this.setState({data: dummyData}); 
   }
- likeBtn(index){
- this.state.likes + 1; 
- }
- 
   render() {
     return (
         <div className="background">
