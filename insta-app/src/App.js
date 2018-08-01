@@ -21,13 +21,13 @@ class App extends Component {
  
   render() {
     return (
-      <div className="app-container">
-        <div>
-          <SearchBar />
-        </div>
+        <div className="background">
+         <SearchBar />
+        <div className="app-container">
         <PostContainer 
         handleLikeBtn = {this.likeBtn}
         posts={this.state.data} />
+      </div>
       </div>
     );
   }
