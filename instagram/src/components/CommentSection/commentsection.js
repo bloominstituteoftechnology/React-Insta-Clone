@@ -14,7 +14,6 @@ class CommentSection extends Component {
     }
 
     handleCommentChange = event => {
-        // console.log('test');
         this.setState({[event.target.name]: event.target.value})
       };
 
@@ -29,7 +28,7 @@ class CommentSection extends Component {
             }
         );
         this.setState({data: {comments: arr}, input: ''})
-        // console.log(this.state.data);
+        console.log(this.state.data.comments);
     }
 
     render(){
