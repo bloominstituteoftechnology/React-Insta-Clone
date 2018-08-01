@@ -6,6 +6,10 @@
     height: 40px;
 }
 
+.iglogo {
+    width: 60px;
+    margin-left: 10px;
+}
 .search-bar-left {
     text-align: left;
     width: 188px;

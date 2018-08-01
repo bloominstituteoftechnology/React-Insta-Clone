@@ -7,7 +7,8 @@ const SearchBar = props => {
             <span className="search-bar-left" >
                 <i className="fab fa-instagram fa-2x "></i>
             </span>
-            <input type="text" className="search-input" placeholder="&#8981; Search" />
+            <img src="https://raw.githubusercontent.com/LambdaSchool/React-Insta-Clone/4079cf6fb6d11bd3ad7a422cdec35e0aab4e2bfe/instagram/src/assets/iglogo.png" alt="" className="iglogo" />
+            <input type="text" className="search-input" placeholder="&#8981; Search"  />
             <span className="search-icons" >
                 <i className="far fa-compass fa-lg" />
             </span>

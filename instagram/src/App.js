@@ -19,10 +19,10 @@ class App extends Component {
     });
   }
 
-  // addLike = event => {
-  //   event.preventDefault();
-  //   const likes = this.state.
-  // }
+  filterPosts = event => {
+    event.preventDefault();
+    
+  }
 
   render() {
     return (
