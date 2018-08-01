@@ -45,6 +45,12 @@ class CommentSection extends React.Component {
 
     deleteComment = event => {
         console.log(event.target)
+        // let commentDelete = confirm("Are you sure you want to delete? You cannot take it back...")
+        // if(commentDelete){
+        //     txt = "You have chosen to delete";
+        // } else {
+        //     txt = "Deletion cancelled";
+        // }
     }
 
     
