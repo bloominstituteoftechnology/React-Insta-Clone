@@ -10,8 +10,16 @@ class CommentSection extends React.Component {
         this.state = {
             comments: props.comments, 
             timeStamp: props.timeStamp,
-            newComment: ''
+            newComment: '', 
+            username: ""
         }
+    }
+
+    componentDidMount(){
+        const username = localStorage.getItem('username'); 
+        this.setState({
+            username: username
+        })
     }
 
     addNewCommentHandler = event => {
@@ -26,7 +34,7 @@ class CommentSection extends React.Component {
         let comments =this.state.comments.slice(); 
         console.log(comments)
         let comment = {
-            username: "katiagilligan",
+            username: this.state.username,
             text: this.state.newComment
         }
         comments.push(comment); 

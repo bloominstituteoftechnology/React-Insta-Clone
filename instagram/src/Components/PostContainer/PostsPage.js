@@ -1,7 +1,6 @@
 import React, {Component} from 'react'; 
 import dummyData from '../../dummy-data.js'
 import SearchBar from '../SearchBar/SearchBar';
-import PostContainer from './PostContainer'; 
 import AllPostContainers from './AllPostContainers';
 
 class PostsPage extends Component {
@@ -10,13 +9,16 @@ class PostsPage extends Component {
       this.state = {
         data: [], 
         filteredData : [], 
-        searchValue: ''
+        searchValue: '', 
+        username: ''
       }
     }
   
     componentDidMount() {
+        const username = localStorage.getItem('username');
       this.setState({
-        data: dummyData
+        data: dummyData,
+        username: username
       })
     }
   
