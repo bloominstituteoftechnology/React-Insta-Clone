@@ -20,9 +20,17 @@ const Authenticate = App =>
                 }
             })
         }
-        loginUser = e => {
+        loginUser = () => {
             localStorage.setItem('username', this.state.user)
+            this.setState({loggedIn:true})
           }
+        // componentDidMount(){
+        //     localStorage.getItem('username') &&
+        //     this.setState({
+        //         loggedIn: true,
+        //         username: localStorage.getItem('username')
+        //     });
+        // }
         render(){
             if(this.state.loggedIn){
                 return <App />
