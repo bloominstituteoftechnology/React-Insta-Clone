@@ -1,26 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection.js';
 import PostHeader from '../PostContainer/PostHeader.js';
 
 
 
-const Posts = props => {
-  return(
+class Posts extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+       posts: props.posts
+    };
+  }
+  
+  render(){
+   return(
     <div>
      <PostHeader 
-        username={props.posts.username}
-        thumbnailUrl={props.posts.thumbnailUrl}
+        username={this.state.posts.username}
+        thumbnailUrl={this.state.posts.thumbnailUrl}
      />
      <div>
          <img
             alt="post thubmnail"
             className="post-image"
-            src={props.posts.imageUrl}
+            src={this.state.posts.imageUrl}
           />
+     <div>
+       {/* <LikeButton 
+         addLikes={this.addLikesHandler}> 
+         {this.state.posts.likes}</LikeButton>  */}
      </div>
-        <CommentSection comments={props.posts.comments}/>
+     </div>
+        <CommentSection comments={this.state.posts.comments}/>
     </div>
    );
+  }
 };
 
 

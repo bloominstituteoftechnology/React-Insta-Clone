@@ -3,10 +3,10 @@ import React from 'react';
 
 
 
-const Comment = props => {
+const CommentForm = props => {
     return(
-        <form >
-        <input onChange={props.handleComment} placeholder="Add a comment . . ." type="text"/>
+        <form onChange={props.handleComment}>
+        <input  placeholder="Add a comment . . ." type="text"/>
         <button onClick={props.addNewComment}>Add Comment</button>
         </form>
     
@@ -14,4 +14,4 @@ const Comment = props => {
 
 };
 
-export default Comment;
+export default CommentForm;

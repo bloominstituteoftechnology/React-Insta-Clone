@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import CommentForm from './CommentForm.js';
 import Comment from './Comment.js';
 
+
+
 class CommentsSection extends Component {
   constructor(props){
     super(props);
@@ -21,8 +23,10 @@ class CommentsSection extends Component {
       e.preventDefault();
       const commentsCopy = this.state.comments.slice();
       commentsCopy.push({username: "mboegner", text: this.state.comment})
-      this.setState({comments: commentsCopy})
+      this.setState({comments: commentsCopy, comment:''})
   }
+
+  
   
   render(){
     console.log(this.state.comment);
