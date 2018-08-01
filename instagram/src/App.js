@@ -18,17 +18,19 @@ import Post from './components/PostContainer/PostContainer';
 //   Button
 // } from 'reactstrap';
 
-
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {data: [], input: []};
+    this.state = {
+      data: [],
+      input: []
+    };
   }
   componentDidMount(){
     this.setState({data:dummyData});
   }
   addLike = () => {
-  
+    console.log()
   }
   search = e => {
     this.setState({input: e.target.value});

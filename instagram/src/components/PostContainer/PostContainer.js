@@ -11,20 +11,18 @@ const Post = props => {
                     <div key={i}>
                         <div className='user'><img className ='thumbnail' src={item.thumbnailUrl} alt ='user thumbnail img'/> {item.username}</div>
                         <img className = 'post-img' src={item.imageUrl} alt='Post Img'/>
-                        <div>
-                            <i className="fa fa-heart-o like-comment" onClick={props.addLikes} aria-hidden="true"></i>
-                            <i className="fa fa-comment-o like-comment" aria-hidden="true"></i>
-                        </div>
                         <div className="bottom-section">
-                            <div className='likes'>{item.likes} likes</div>
-                            <div><CommentSection comments={item.comments} timestamp={item.timestamp}/></div>
+                            <div>
+                                <CommentSection comments={item.comments}
+                                                timestamp={item.timestamp}
+                                                likes={item.likes}/>
+                            </div>
                         </div>
                     </div>
                 )}
             )}
         </div>
     )
-
 }
 
 Post.proptypes = {

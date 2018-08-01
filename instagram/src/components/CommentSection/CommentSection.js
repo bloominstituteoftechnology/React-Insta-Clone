@@ -8,7 +8,8 @@ class CommentSection extends React.Component{
         super(props);
         this.state={
             comments: props.comments,
-            input: ''
+            input: '',
+            likes: props.likes
         }
     }
     addNewComment = (e,i) => {
@@ -17,6 +18,11 @@ class CommentSection extends React.Component{
         comments.push({username: 'FakeAcct', text: this.state.input});
         this.setState({comments, input:''})
     }
+    incrementLike = () => {
+        let likes = this.state.likes + 1;
+        console.log(likes);
+        this.setState({likes});
+    }
     handleNewComment = e => {
         this.setState({input: e.target.value});
     }
@@ -24,12 +30,17 @@ class CommentSection extends React.Component{
         return(
             <div>
                 <div>
-                {this.state.comments.map((comment, i) => {
-                    return (
-                        <div key={i}>
-                            <Comment comment={comment} /> 
-                        </div>
-                    )})}
+                    <i onClick={this.incrementLike} className="fa fa-heart-o like-comment" aria-hidden="true"></i>
+                    <i className="fa fa-comment-o like-comment" aria-hidden="true"></i>
+                </div>
+                <div className='likes'>{this.props.likes} likes</div>
+                <div>
+                    {this.state.comments.map((comment, i) => {
+                        return (
+                            <div key={i}>
+                                <Comment comment={comment} /> 
+                            </div>
+                        )})}
                 </div>
                 <div>{this.props.timestamp}</div>
                 <form className='footer' onSubmit={this.addNewComment}>
