@@ -29,13 +29,15 @@ class Post extends Component {
 
     addComment = (event, prevState) => {
         event.preventDefault();
-        let comment = this.state.currentComment;
-        let user = this.props.currentUser;
-        let newList = this.state.comments.slice();
-        let newComment = {text: comment, username: user};
-        newList.push(newComment);
-        this.setState({comments: newList, currentComment: ''});
-        localStorage.setItem(this.state.id, JSON.stringify(newList));
+        if (this.state.currentComment.length > 0){
+            let comment = this.state.currentComment;
+            let user = this.props.currentUser;
+            let newList = this.state.comments.slice();
+            let newComment = {text: comment, username: user};
+            newList.push(newComment);
+            this.setState({comments: newList, currentComment: ''});
+            localStorage.setItem(this.state.id, JSON.stringify(newList));
+        }
     }
 
     deleteComment = (event) => {
