@@ -45,7 +45,7 @@ class PostsPage extends Component {
         return element;
       }
     })
-    this.setState({ data: dataImport, display:dataImport },()=>{});
+    this.setState({ data: dataImport },()=>{});
   }
   handleKeyPressSearch = (event) => {
     const dataImport = this.state.data;
@@ -140,6 +140,10 @@ class PostsPage extends Component {
     this.setState({ data: moddedData, display: moddedDisplay },()=>{this.writeToLS();});
     
   }
+  logout =() =>{
+    localStorage.removeItem('userName');
+    window.location.reload();
+  }
   loadPosts = ()=>{
   return this.state.display.map((element,index) => {
         return <PostContainer methods={[this.handleKeyPressComment,this.incrimentLike, this.deleteComment.bind(this)]} key={index} id={index} data={element} />
@@ -149,7 +153,7 @@ class PostsPage extends Component {
     
     return (
       <div className="App">
-        <SearchBar methods={this.handleKeyPressSearch} />
+        <SearchBar logout={this.logout}methods={this.handleKeyPressSearch} />
         <div className="postsHolder">
         {this.loadPosts()}
         </div>

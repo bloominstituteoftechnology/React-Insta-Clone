@@ -64,3 +64,21 @@ img {
        font-size: 28px;
     }
   }
+
+  .dropDownBox{
+position: absolute;
+margin-left: -30px;
+background: rgb(250, 250, 250);
+height: 3em;
+width: 5em;
+display:flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+visibility: hidden;
+
+  }
+  .visible{
+    visibility: visible;
+
+  }

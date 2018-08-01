@@ -16,8 +16,10 @@ import './SearchBar.css';
         <input onChange={props.methods} id='search' placeholder="   &#128269; Search" type="text"/>
         <FontAwesomeIcon className="icon" icon={faCompass} />
         <FontAwesomeIcon className="icon" icon={faHeart} />
-        <FontAwesomeIcon className="icon" icon={faUser} />
-
+        <div onClick={function(event){event.currentTarget.childNodes[1].classList.toggle('visible')}} className='dropDown'>
+        <FontAwesomeIcon  className="icon" icon={faUser} />
+        <div className='dropDownBox' onClick={props.logout}>Logout</div>
+         </div>
         </div>  
         </div>   
   )
