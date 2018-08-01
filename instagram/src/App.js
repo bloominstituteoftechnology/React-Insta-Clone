@@ -3,6 +3,7 @@ import dummyData from './dummy-data';
 
 import './App.css';
 import PostsPage from './PostPage' 
+import Authenticate from './authentication';
 
 
 class App extends Component {
@@ -29,4 +30,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
