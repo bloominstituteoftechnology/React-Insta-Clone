@@ -3,7 +3,7 @@ import './CommentSection.css';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
-
+import styled from 'styled-components';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -24,6 +24,14 @@ class CommentSection extends React.Component {
     }
 
     render() {
+
+        const Section = styled.div`
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            text-align: left;
+            margin: 5px 0;
+        `;
         // let localArr = [];
         // if (localStorage.length > 0) {
         //     for(let i = 0; i < localStorage.length; i++) {
@@ -31,12 +39,12 @@ class CommentSection extends React.Component {
         //     }
         // }
         return (
-            <div className="comments-section">
+            <Section>
             {this.state.comments.map((comment, index) => <Comment username={comment.username} text={comment.text} key={index} />)}
             {/* {localArr.map((comment, index) => <Comment username={comment.username} text={comment.text} key={index} />)} */}
             <div className="timestamp">{this.state.timestamp}</div>
             <CommentInput add={this.addNewComment} value={this.state.comment} input={this.props.input} comment={this.props.comment} />
-            </div>
+            </Section>
         );
     }
 }
