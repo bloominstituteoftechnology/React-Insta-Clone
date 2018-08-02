@@ -25,7 +25,7 @@ export const SearchWrapper = styled.div`
 `
 export const SearchBrandWrapper = styled.div`
   margin: -6px 0;
-  display: inline;
+  display: inline-block;
   
   @media (max-width: 768px) {
     transform: scale(.8);
@@ -72,4 +72,7 @@ export const SearchIcons = Image.extend`
   @media (max-width: 580px) {
     margin-left: 20px;
   }
+`
+export const HeaderIcons = styled.div`
+  display: inline-block;
 `

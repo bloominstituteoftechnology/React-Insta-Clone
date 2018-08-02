@@ -12,6 +12,7 @@ import {
   Search,
   Input,
   SearchIcons,
+  HeaderIcons
 } from "./header-styles";
 
 const Header = props => {
@@ -44,7 +45,7 @@ const Header = props => {
             onKeyDown={handleKeyPress}
           />
         </Search>
-        <div>
+        <HeaderIcons>
           <SearchIcons src={navigate} alt="nav" />
           <SearchIcons src={favorite} alt="fave" />
           <SearchIcons
@@ -52,7 +53,7 @@ const Header = props => {
             alt="profile"
             onClick={props.handleLogOut}
           />
-        </div>
+        </HeaderIcons>
       </SearchWrapper>
     </HeaderContainer>
   );

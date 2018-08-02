@@ -1,5 +1,5 @@
 import React from "react";
-import "./LogIn.css";
+import {Wrapper} from "./start-styles"
 import Login from "./Login";
 import SignUp from "./SignUp";
 
@@ -70,7 +70,7 @@ class Start extends React.Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <Wrapper>
         {this.state.signUpTriggered ? (
           <SignUp
             handleSwitchScreens={this.handleSwitchScreens}
@@ -82,7 +82,7 @@ class Start extends React.Component {
             handleSwitchScreens={this.handleSwitchScreens}
           />
         )}
-      </div>
+      </Wrapper>
     );
   }
 }

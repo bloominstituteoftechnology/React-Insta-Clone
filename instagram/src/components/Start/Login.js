@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/instagramlogin.png";
+import {ContentWrapper, Box, SecondaryBox, InnerBox, SecondaryInnerBox, InputWrapper, LogoImg, ErrorMessage, Input, Button, Link, Text} from "./start-styles"
 
 class Login extends React.Component {
   constructor(props) {
@@ -35,41 +36,39 @@ class Login extends React.Component {
   render() {
     let fieldsValid = this.state.username && this.state.password;
     return (
-      <div className="content">
-        <div className="box login">
-          <form className="login__box" onSubmit={this.handleSubmit}>
-            <img src={logo} alt="logo" className="start--logo" />
-            <div className="input-box">
-              <input
+      <ContentWrapper>
+        <Box login='true'>
+          <InnerBox onSubmit={this.handleSubmit}>
+            <LogoImg src={logo} alt="logo"/>
+            <InputWrapper>
+              <Input
                 name="username"
                 type="text"
-                className="input input--username"
                 placeholder="Username"
                 value={this.state.username}
                 onChange={this.handleChange}
               />
-              <input
+              <Input
                 name="password"
-                className="input input--password"
                 type="password"
                 placeholder="Password"
                 value={this.state.password}
                 onChange={this.handleChange}
               />
-            </div>
-            {this.state.error && <p className="error">{this.state.error}</p>}
-            <button disabled={!fieldsValid} className="btn" type="submit">
+            </InputWrapper>
+            {this.state.error && <ErrorMessage>{this.state.error}</ErrorMessage>}
+            <Button disabled={!fieldsValid} type="submit">
               Log in
-            </button>
-          </form>
-        </div>
-        <div className="box secondary">
-          <div className="secondary-box">
-            <p> Don't have an account? </p>
-            <button onClick={this.props.handleSwitchScreens}>Sign Up</button>
-          </div>
-        </div>
-      </div>
+            </Button>
+          </InnerBox>
+        </Box>
+        <SecondaryBox>
+          <SecondaryInnerBox>
+            <Text> Don't have an account? </Text>
+            <Link onClick={this.props.handleSwitchScreens}>Sign Up</Link>
+          </SecondaryInnerBox>
+        </SecondaryBox>
+      </ContentWrapper>
     );
   }
 }

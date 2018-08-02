@@ -1,55 +1,61 @@
-.wrapper {
+import styled from 'styled-components';
+
+export const Wrapper = styled.div`
   background-color: #fafafa;
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.content {
+`
+export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.box {
+`
+export const Box = styled.div`
   background-color: white;
   width: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #e6e6e6;
-}
-
-.login {
-  height: 300px;
-}
-
-.login__box {
+  height: ${props => props.login ? '300px' : '450px'};
+`
+export const SecondaryBox = Box.extend`
+  margin-top: 10px;
+  height: 50px;
+`
+export const InnerBox = styled.form`
   width: 80%;
   height: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-}
-
-.start--logo {
-  width: 80%;
-  height: auto;
-}
-
-.input-box {
+`
+export const SecondaryInnerBox = InnerBox.extend`
+  font-size: 14px;
+  flex-direction: row;
+  justify-content: center;
+`
+export const InputWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-}
-
-.input {
+`
+export const LogoImg = styled.img`
+  width: 80%;
+  height: auto;
+`
+export const ErrorMessage = styled.p`
+  color: #999;
+  font-size: 14px;
+`
+export const Input = styled.input`
   box-sizing: border-box;
   padding-left: 8px;
   outline: none;
@@ -60,9 +66,8 @@
   height: 38px;
   margin: 3px 0;
   color: black;
-}
-
-.btn {
+`
+export const Button = styled.button`
   outline: none;
   font-size: 14px;
   background-color: rgb(56, 151, 240);
@@ -72,64 +77,29 @@
   font-weight: bold;
   width: 100%;
   line-height: 26px;
-}
 
-.btn:disabled {
-  opacity: .3;
-}
-
-.btn:focus {
-  outline: none;
-}
-
-.secondary {
-  margin-top: 10px;
-  height: 50px;
-}
-
-.secondary-box {
-  width: 80%;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.secondary-box p {
-  padding-right: 4px;
-}
-
-.secondary-box button {
+  &:disabled {
+    opacity: .3;
+  }
+  &:focus {
+    outline: none;
+  }
+`
+export const Link = styled.button`
   font-size: 14px;
   border: none;
   outline: none;
   text-decoration: none;
   color: rgb(56, 151, 240);
-}
-
-.signUpPage {
-  height: 450px;
-}
-
-.signUp-page--box {
-  width: 80%;
-  height: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-
-.signUp-header {
+  cursor: pointer;
+`
+export const Text = styled.p`
+  padding-right: 4px;
+`
+export const HeadInfoText = styled.p`
   font-weight: 600;
   line-height: 20px;
   font-size: 17px;
   color: #999;
   text-align: center;
-}
-
-.error {
-  color: #999;
-  font-size: 14px;
-}
-
+`

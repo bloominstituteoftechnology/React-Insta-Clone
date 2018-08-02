@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/instagramlogin.png";
+import {ContentWrapper, Box, SecondaryBox, InnerBox, SecondaryInnerBox, InputWrapper, LogoImg, Input, ErrorMessage, Button, Link, Text, HeadInfoText} from "./start-styles"
 
 class SignUp extends React.Component {
   constructor(props) {
@@ -31,60 +32,56 @@ class SignUp extends React.Component {
   render() {
     let fieldsValid = this.state.password && this.state.username && this.state.phoneNumber && this.state.fullName;
     return (
-      <div className="content">
-        <div className="box signUpPage">
-          <form className="signUp-page--box" onSubmit={this.handleSubmit}>
-            <img src={logo} alt="logo" className="start--logo" />
-            <p className="signUp-header">
+      <ContentWrapper>
+        <Box>
+          <InnerBox onSubmit={this.handleSubmit}>
+            <LogoImg src={logo} alt="logo"/>
+            <HeadInfoText>
               Sign up to see photos and videos from your friends.
-            </p>
-            <div className="input-box">
-              <input
+            </HeadInfoText>
+            <InputWrapper>
+              <Input
                 name="phoneNumber"
                 type="tel"
-                className="input input--phone"
                 placeholder="Phone Number"
                 value={this.state.phoneNumber}
                 onChange={this.handleChange}
               />
-              <input
+              <Input
                 name="fullName"
                 type="text"
-                className="input input--fullname"
                 placeholder="Full Name"
                 value={this.state.fullName}
                 onChange={this.handleChange}
               />
-              <input
+              <Input
               name="username"
                 type="text"
-                className="input input--username"
                 placeholder="Username"
                 value={this.state.username}
                 onChange={this.handleChange}
               />
-              <input
+              <Input
                 name="password"
                 type="password"
-                className="input input--password"
                 placeholder="Password"
                 value={this.state.password}
                 onChange={this.handleChange}
               />
-            </div>
-            {this.state.error && <p className="error">{this.state.error}</p>}
-            <button disabled={!fieldsValid} className="btn" type="submit">
+            </InputWrapper>
+            {this.state.error && <ErrorMessage>{this.state.error}</ErrorMessage>}
+            <Button disabled={!fieldsValid} type="submit">
               Sign Up
-            </button>
-          </form>
-        </div>
-        <div className="box box__signUp secondary">
-          <div className="secondary-box">
-            <p> Have an account? </p>
-            <button onClick={this.props.handleSwitchScreens}>Log In</button>
-          </div>
-        </div>
-      </div>
+            </Button>
+          </InnerBox>
+        </Box>
+        <SecondaryBox>
+          <SecondaryInnerBox>
+            <Text> Have an account? </Text>
+            <Link onClick={this.props.handleSwitchScreens}>Log In</Link>
+          </SecondaryInnerBox>
+        </SecondaryBox>
+      </ContentWrapper>
     );
   }
 }
