@@ -9,20 +9,13 @@ const App = Authenticate(
   class App extends Component {
     constructor() {
       super();
-      this.state = {
-        posts: [],
-        filteredPosts: [],
-      };
-    }
-    componentDidMount() {
-      this.setState({ posts: dummyData });
+      this.state = {};
     }
 
     render() {
       return (
         <div className="App">
           <PostsPage 
-          posts={this.state.posts}
           />
         </div>
       );
