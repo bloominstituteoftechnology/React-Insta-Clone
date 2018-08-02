@@ -1,5 +1,22 @@
 import React, { Component } from 'react';
 import './login.css';
+import styled from 'styled-components';
+
+const LoginInput = styled.input`
+    margin: 15px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px slategray;
+    padding-left: 10px;
+`
+
+const LoginButton = styled.button`
+    margin: 15px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px slategray;
+    padding-left: 10px;
+`
 
 class Login extends Component {
     constructor(props) {
@@ -11,12 +28,11 @@ class Login extends Component {
     };
 
     handleLoginChange = event => {
-        this.setState({username: event.target.value})
+        this.setState({[event.target.name]: event.target.value})
       };
 
     loginHandler = (e) => {
         const user = this.state.username;
-        console.log(user);
         localStorage.setItem('user', user);
     };
 
@@ -24,24 +40,24 @@ class Login extends Component {
     return ( 
         <div className="login d-flex justify-content-center col-12">
             <form autoComplete="off" className="login-container d-flex flex-column justify-content-center">
-                <input 
-                    className="login-el"
+                <LoginInput
                     type="text" 
                     placeholder="Username" 
                     name="username" 
+                    value={this.state.username}
                     onChange={this.handleLoginChange}
                 />
-                <input
-                    className="login-el"
+                <LoginInput
                     type="password" 
                     placeholder="Password" 
                     name="password"
+                    value={this.state.passwrod}
+                    onChange={this.handleLoginChange}
                 />
-                <button  
-                    className="login-el"
+                <LoginButton
                     onClick={this.loginHandler}>
                     Login
-                </button>
+                </LoginButton>
             </form>
         </div>
     )};

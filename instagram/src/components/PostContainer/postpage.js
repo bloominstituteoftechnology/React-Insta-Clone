@@ -16,9 +16,10 @@ class PostPage extends Component {
     this.setState({data: dummyData})
   };
 
-  logOut() {
+  logOut = () =>{
     localStorage.removeItem('user');
-    window.location.reload();
+    // window.location.reload();
+    this.props.onLogout();
   }
 
   handleSearchChange = event => {
@@ -36,7 +37,7 @@ class PostPage extends Component {
 
   render() {
     const userSearch = this.state.data.filter((data) => {
-    return data.username.toLowerCase().indexOf(this.state.searchQuery.toLowerCase()) != -1   
+    return data.username.toLowerCase().indexOf(this.state.searchQuery.toLowerCase()) !== -1   
     })
     return (
       <div className="App">
