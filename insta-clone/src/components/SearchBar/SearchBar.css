@@ -47,3 +47,13 @@
   padding-left: 10px;
   padding-top: 10px;
 }
+
+.search-input {
+  display: flex;
+  align-items: baseline;
+}
+
+.submit-btn {
+  height: 35px;
+  border: 1px solid lightgrey;
+}

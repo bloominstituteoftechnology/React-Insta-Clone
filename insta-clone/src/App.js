@@ -1,31 +1,28 @@
 import React, { Component } from 'react';
 import './App.css';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar'
-import dummyData from './dummy-data.js';
+import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './components/Authenticate/Authenticate';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
-    };
+      username: ''
+    }
   }
 
   componentDidMount() {
-    this.setState({ posts: dummyData });
+    const user = localStorage.getItem('user');
+    this.setState({ username: user });
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        {this.state.posts.map(post => {
-          return <PostContainer key={post.timestamp} data={post} incrementLikes={this.incrementLikes}/>
-        })}
+        <PostsPage />
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);

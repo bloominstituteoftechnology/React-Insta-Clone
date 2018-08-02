@@ -19,11 +19,32 @@ class CommentsSection extends React.Component {
   addComment = event => {
     let currentComments = this.state.comments;
     currentComments.push({
-      username: 'Joe Blow',
+      username: localStorage.getItem('user'),
       text: event.target.value
     });
     event.target.value = '';
     this.setState({ currentComments });
+    this.saveState();
+  }
+
+  saveState = () => {
+    let comments = JSON.stringify(this.state.comments);
+    let likes = JSON.stringify(this.state.likes);
+
+    localStorage.setItem('comments', comments);
+    localStorage.setItem('likes', likes);
+  }
+
+  componentDidMount() {
+    let comments = JSON.parse(localStorage.getItem('comments'));
+    let likes = JSON.parse(localStorage.getItem('likes'));
+
+    if(comments) {
+      this.setState({ comments: comments });
+    }
+    if(likes) {
+      this.setState({ likes: likes });
+    }
   }
 
   render() {
