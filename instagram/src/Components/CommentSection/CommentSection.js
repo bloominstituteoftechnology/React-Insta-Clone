@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import NewComment from './Comment';
 import "./CommentSection.css";
 import PropTypes from 'prop-types';
-
+import { Form, Input, Button } from 'reactstrap';   
 
 class CommentSection extends React.Component {
     constructor(props){
@@ -53,10 +53,9 @@ class CommentSection extends React.Component {
                 })}
                 <p className = "timestamp">{this.state.timeStamp}</p>
                 <div className = "addComment">
-                    <form onSubmit = {this.onSubmitHandler}>
-                        <input value = {this.state.newComment} type = "text" onChange = {this.addNewCommentHandler} placeholder = "Add a comment..." />
-                        <input type = "submit" />   
-                    </form>
+                    <Form onSubmit = {this.onSubmitHandler}>
+                        <Input value = {this.state.newComment} type = "text" onChange = {this.addNewCommentHandler} placeholder = "Add a comment..." />  
+                    </Form>
                 </div>  
             </div>
         )
