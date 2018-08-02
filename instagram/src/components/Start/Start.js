@@ -7,30 +7,43 @@ class Start extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
-      password: "",
+      users: [],
       signUpTriggered: false
     };
   }
 
-  handleChange = e => {
-    console.log(e.target.type)
-    if (e.target.type === 'text') {
-      this.setState({ username: e.target.value });
-    } if (e.target.type === 'password') {
-      this.setState({ password: e.target.value})
+  componentDidMount() {
+    let users = JSON.parse(localStorage.getItem('users'))
+    if (users) {
+    this.setState({ users })
     }
-  };
-
-  handleSubmit = e => {
-    e.preventDefault();
-    localStorage.setItem("username", this.state.username);
-    this.props.handleLogIn(this.state.username);
-  };
+  }
 
   handleSwitchScreens = e => {
     e.preventDefault();
     this.setState(prevState => ({ signUpTriggered: !prevState.signUpTriggered }))
+  }
+
+  handleNewProfile = (phone, name, username, password) => {
+    let user = {
+      id: phone,
+      name: name,
+      username: username,
+      password: password
+    }
+    let users = this.state.users.concat(user)
+    this.setState({ users })
+    localStorage.setItem('users', JSON.stringify(users))
+    this.props.handleLogIn(username)
+  }
+
+  handleLoginSubmit = (username, password) => {
+    if (this.state.users) {
+    this.state.users.forEach(user => {
+      if (user.username === username && user.password === password) {
+        this.props.handleLogIn(username)
+      }
+    }) }
   }
 
   render() {
@@ -39,12 +52,10 @@ class Start extends React.Component {
       {this.state.signUpTriggered 
         ? <SignUp 
           handleSwitchScreens={this.handleSwitchScreens}
+          handleNewProfile={this.handleNewProfile}
         />
         : <Login 
-          handleSubmit={this.handleSubmit}
-          username={this.state.username}
-          onChange={this.onChange}
-          password={this.state.password}
+          handleLoginSubmit={this.handleLoginSubmit}
           handleSwitchScreens={this.handleSwitchScreens}
         />
       }

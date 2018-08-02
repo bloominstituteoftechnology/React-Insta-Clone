@@ -5,7 +5,7 @@ class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      phoneNumber: undefined,
+      phoneNumber: '',
       fullName: '',
       username: '',
       password: ''
@@ -18,11 +18,18 @@ class SignUp extends React.Component {
     })
   }
 
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.props.handleNewProfile(this.state.phoneNumber, this.state.fullName, this.state.username, this.state.password)
+  }
+
+
   render() {
+    let fieldsValid = this.state.password && this.state.username && this.state.phoneNumber && this.state.fullName;
     return (
       <div className="content">
         <div className="box signUpPage">
-          <form className="signUp-page--box">
+          <form className="signUp-page--box" onSubmit={this.handleSubmit}>
             <img src={logo} alt="logo" className="start--logo" />
             <p className="signUp-header">
               Sign up to see photos and videos from your friends.
@@ -61,7 +68,7 @@ class SignUp extends React.Component {
                 onChange={this.handleChange}
               />
             </div>
-            <button className="btn" type="submit">
+            <button disabled={!fieldsValid} className="btn" type="submit">
               Sign Up
             </button>
           </form>

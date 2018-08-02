@@ -16,10 +16,12 @@ const Authenticate = App =>
     }
 
     handleLogIn = (username) => {
+      localStorage.setItem('username', username)
       this.setState({ username })
     }
   
     handleLogOut = () => {
+      localStorage.removeItem('username')
       this.setState({username: ''})
     }
 

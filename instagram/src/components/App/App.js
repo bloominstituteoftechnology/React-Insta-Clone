@@ -17,9 +17,8 @@ class App extends Component {
   }
   componentDidMount() {
     const storedPosts = JSON.parse(localStorage.getItem("posts"));
-    const username = localStorage.getItem('username');
+    // const username = localStorage.getItem('username');
     if (storedPosts) {
-      console.log("true");
       this.setState({ posts: storedPosts });
     } else {
       let posts = JSON.parse(JSON.stringify(dummyData));
@@ -32,16 +31,16 @@ class App extends Component {
         posts: posts,
       });
     }
-    this.setState({ username })
+    this.setState({ username: this.props.username })
   }
 
   componentDidUpdate(prevState) {
     if (prevState.posts !== this.state.posts) {
       localStorage.setItem("posts", JSON.stringify(this.state.posts));
     }
-    if (!this.state.username) {
-      localStorage.removeItem('username')
-    }
+    // if (!this.state.username) {
+    //   localStorage.removeItem('username')
+    // }
   }
 
   handleAddComment = (comment, id) => {
@@ -125,9 +124,6 @@ class App extends Component {
   };
 
   handleLogOut = () => {
-    console.log('clicked')
-    console.log(this.props.username)
-    
     this.props.handleLogOut();
   }
 
