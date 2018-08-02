@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import './LogIn.css';
+import Phone from './Phone';
+import FadeCarousel from './FadeCarousel';
 
 const Button = styled.button`
   width: 100%;
@@ -24,11 +26,10 @@ const Container = styled.div`
   max-width: 910px;
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   margin: 0 auto;
-  padding-top: 10%;
-  max-width: 45rem;
+  padding-top: 1%;
 `;
 
 class LogIn extends React.Component {
@@ -44,6 +45,10 @@ class LogIn extends React.Component {
   render() {
     return (
       <Container>
+        <Phone>
+          <FadeCarousel />
+        </Phone>
+
         <form
           className="form"
           onSubmit={e => {
