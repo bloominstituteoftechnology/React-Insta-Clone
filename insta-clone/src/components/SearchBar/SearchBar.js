@@ -1,5 +1,4 @@
 import React from 'react';
-import './SearchBar.css';
 import logo from '../../assets/instagramlogin.png';
 import styled from 'styled-components';
 
@@ -37,21 +36,48 @@ const SocialWrapper = styled.div`
 
 `;
 
+const InstagramLogo = styled.i`
+    margin: 40px 0 40px 40px;
+    padding-right: 40px;
+    font-size: 70px;
+    border-right: 1px solid grey;
+`;
+
+const SearchIcon = styled.span`
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-size: 25px;
+    color: gray;
+    z-index: 1;
+`;
+
+const Icon = styled.i`
+    margin: 0 25px;
+    font-size: 50px;
+    font-weight: 100;
+    -webkit-text-stroke: 3px white;
+`;
+
+const LastIcon = styled.i`
+    padding-right: 20px;
+`;
+
 const SearchBar = props => {
     return (
         <Header>
             <DoubleLogosWrapper>
-                <i className="fab fa-instagram"></i>
+                <InstagramLogo className="fab fa-instagram" />
                 <ImgWrapper src = {logo} alt="logo" />
             </DoubleLogosWrapper>
             <SearchBarWrapper>
-                <span className="fa fa-search"></span>
+                <SearchIcon className="fa fa-search" />
                 <SearchBarSearch type="text" placeholder="Search" className="search-bar" onKeyDown={props.searchPosts}/>
             </SearchBarWrapper>
             <SocialWrapper>
-                <i className="far fa-compass"></i>
-                <i className="far fa-heart"></i>
-                <i className="far fa-user"></i>
+                <Icon className="far fa-compass" />
+                <Icon className="far fa-heart" />
+                <LastIcon className="far fa-user" />
             </SocialWrapper>
         </Header>
     );
