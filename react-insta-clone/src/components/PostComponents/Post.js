@@ -1,5 +1,6 @@
 import React from "react";
 import CommentSection from "../CommentComponents/CommentSection";
+import styled from 'styled-components';
 
 const Post = props => {
     return (

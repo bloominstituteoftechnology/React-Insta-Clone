@@ -19,12 +19,12 @@ class PostsPage extends Component {
 
   incrementLikes = url => {
     let data = this.state.dataSet.slice();
-    data = data.map(post => {
-      if (post.imageUrl === url){
-        return post.likes++;
-      }
-    })
-    this.setState({data});
+      data = data.map(post => {
+        if (post.imageUrl === url){
+          return post.likes++;
+        }
+      })
+      this.setState({data});
   }
 
   searchInputHandler = e => {

@@ -11,7 +11,6 @@ class App extends Component {
   }
   
   componentDidMount() {
-    // login.js -> state: username/password, localStorage.setItem() 
     const user = localStorage.getItem("user");
     this.setState({ username: user });
   }

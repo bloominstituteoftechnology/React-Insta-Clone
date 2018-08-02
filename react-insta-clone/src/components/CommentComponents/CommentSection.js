@@ -24,6 +24,8 @@ class CommentSection extends React.Component {
     //what you define here is what is replaced in state
   }
 
+  //let moment = moment().startOf('hour').fromNow();
+
   render() {
     return (
       <div>
