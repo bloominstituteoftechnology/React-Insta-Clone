@@ -11,17 +11,22 @@ const Authenticate = App =>
       };
     };
 
+    
+    
     consultDidMount() {
-      return localStorage.getItem("username") === "mboegner" &&
-        localStorage.getItem("password") === "password"
-        ? this.setState({ loggedin: !this.state.loggedin })
-        : null;
+      return localStorage.getItem("password") === "password" && 
+      localStorage.getItem("username") === "mboegner" ? 
+      this.setState({ loggedin: !this.state.loggedin }) : null;
     }
 
+
+
     render() {
+      const isLoggedIn = this.state.loggedin;
+
       return (
         <div>
-          {this.state.loggedin} ? <App /> : <LogIn />
+         {isLoggedIn ? <App /> : <LogIn />}
         </div>
       );
     }

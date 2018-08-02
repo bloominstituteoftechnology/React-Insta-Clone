@@ -21,16 +21,18 @@ class LogIn extends Component{
       };
     
       addNewLogin = e => {
-        e.preventDefault();
+
         localStorage.setItem("username", this.state.username);
         localStorage.setItem("password", this.state.password);
+        window.location.reload();
       };
     
     render(){
+        console.log(this.state);
     return(
-        <form onSubmit={this.state.addNewLogin}>
-        <input onChange={this.state.handleUsername}  placeholder="Username" type="text"></input>
-        <input  onChange={this.state.handlePassword}  placeholder="Password" type="text"></input>
+        <form onSubmit={this.addNewLogin}>
+        <input onChange={this.handleUsername}  placeholder="Username" type="text"></input>
+        <input  onChange={this.handlePassword}  placeholder="Password" type="text"></input>
         <button>Log-In</button>
         </form>
         
