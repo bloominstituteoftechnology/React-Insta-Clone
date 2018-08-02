@@ -9,16 +9,52 @@ class CommentSection extends React.Component {
         this.state = {
             comments: props.comments
         };
-}
-render() {
-    return (
-        <div>
-            {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-            <CommentInput />
-        </div>
+    }
+
+    componentDidMount() {
+        let id = this.props.postID;
+        if (localStorage.getItem(id)) {
+            this.setState({
+                comments: JSON.parse(localStorage.getItem(this.props.postID))
+            });
+        }
+    } else {
+        this.setComments();
+    }
+
+    setComments = () => {
+        localStorage.setItem(
+            this.props.postID,
+            JSON.stringify(this.state.comments)
         );
     };
-};
+
+
+    commentHandler = event = =>{
+        this.setState({ comment: event.target.value })
+    }
+
+    handleCommentSubmit = event => {
+        event.preventDefault();
+        let newComment = { text: this.state.comment, username: 'Parzival'};
+        let comments = this.state.comments.slice();
+        comments.push(newComment);
+        this.setState({ comment, comment: ''});
+        setTimeout(() => {
+            this.setComments();
+        }, 500);
+    };
+
+
+    render() {
+        return (
+            <div>
+                {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
+                <CommentInput />
+            </div>
+        );
+    };
+ };
 
 CommentSection.propTypes = {
     comments: PropTypes.arrayOf(
