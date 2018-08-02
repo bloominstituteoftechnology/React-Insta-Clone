@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './login.css';
 class Login extends React.Component{
     constructor(props) {
         super(props);
@@ -18,10 +18,10 @@ logIn=()=>{
 }
 render () {
     return (
-        <form onSubmit={this.logIn}>
+        <form className='login' onSubmit={this.logIn}>
             <input type='text' placeholder='enter a username' value={this.state.username} onChange={(e)=>this.handleUserNameChange(e)}/>
             <input type='password' placeholder='enter a password' value={this.state.password} onChange={(e)=>this.handlePassWordChange(e)}/>
-            <button>Login</button>
+            <button className='btn waves-effect waves-light'>Login</button>
         </form>
     )
 }
