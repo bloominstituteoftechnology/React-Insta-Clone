@@ -103,5 +103,27 @@
 
 }
 
+.tooltip:hover {
+    background: red;
+    cursor: pointer;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    top:0%;
+    left:10%;
+    position:relative;
+    font-size: 1vw;
+}
+
+.tooltiptext:hover{
+    text-decoration: underline;
+    cursor: pointer; 
+}
+
+
+
+
+
 
 
