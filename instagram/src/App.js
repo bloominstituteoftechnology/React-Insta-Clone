@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-import './App.css';
-import dummyData from './dummy-data'; 
-// import SearchBar from './components/SearchBar/SearchBar.js'; 
-// import PostContainer from './components/PostContainer/PostContainer.js'; 
-// import CommentSection from './components/CommentSection/CommentSection.js'; 
-// import PostsPage from './components/PostContainer/PostsPage';
-import Authenticate from './components/Authentication/Authenticate';
 
+import dummyData from './dummy-data'; 
+import Authenticate from './components/Authentication/Authenticate';
+import AppStyled from './AppStyled.js';
 
  
 
@@ -30,11 +25,12 @@ class App extends Component {
     
     
     return (
-        <div className ="App">
+        
+        <AppStyled className = "App">
           <AuthenticatedApp />
           
-
-        </div>
+        </AppStyled> 
+        
         
 
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import './CommentSection.css'; 
+
 import PropTypes from 'prop-types'; 
 import {CommentsStyled, CommentStyled, UserCommentName, UserCommentText} from './CommentSectionStyled.js';
 

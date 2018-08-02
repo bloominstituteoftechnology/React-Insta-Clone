@@ -1,5 +1,5 @@
 import React from 'react'; 
-import './PostContainer.css';
+
 import PropTypes from 'prop-types';
 import {Posting, Likes, PostIcons, Icon, PostHeader,
     ThumbNail, PostUserName,PostImage, FlipIcon} from './PostStyled.js';

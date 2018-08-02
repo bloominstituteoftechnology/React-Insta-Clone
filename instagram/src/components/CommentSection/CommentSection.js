@@ -1,5 +1,5 @@
 import React from 'react';
-import './CommentSection.css'; 
+
 import PropTypes from 'prop-types'; 
 import Comments from './Comments'; 
 import * as moment from 'moment'; 

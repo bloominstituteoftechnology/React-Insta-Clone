@@ -1,6 +1,6 @@
 import React from 'react'; 
 import logo from './instagramlogo.jpg';
-import './Authentication.css';
+
 import {Logo, NamePassword,LoginBorderDiv, PasswordInput} from './AuthenticatedStyledComponents.js'; 
 
 
