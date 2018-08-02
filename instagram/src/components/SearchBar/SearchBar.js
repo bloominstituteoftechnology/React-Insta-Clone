@@ -1,28 +1,59 @@
 import React, { Component } from 'react';
-import './SearchBar.css';
+import styled from 'styled-components';
+
+
+const SearchBarHeader = styled.div`
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 20px;
+        border-bottom: 2px solid lightgray;
+        top: 0;
+        flex-wrap: wrap;
+
+        > img {
+            max-width: 375px;
+        }
+
+        > input {
+            width: 430px;
+            height: 55px;
+            border: 2px solid lightgray;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 3.2rem;
+            font-family: Arial, FontAwesome;
+        }
+
+        > icons {
+            display: flex;
+            justify-content: space-between;
+            width: 270px;
+        }
+    `
+   
+
 
 
 class SearchBar extends Component {
     
     render() { 
         return ( 
-            <div className="search-bar">
-                <div className="logo">
+            <SearchBarHeader>
                 <img src="https://www.juut.com/wp-content/uploads/2016/02/instagram.png" alt="logo" />
-                </div>
-
                 <input 
                     type="text"
                     placeholder="Search"
                     value={this.props.value}
                     onChange={this.props.handleSearch}
                 />
-            <div className="icons">
+            <icons>
                 <div><i className="far fa-compass fa-5x"></i></div>
                 <div><i className="far fa-heart fa-5x"></i></div>
                 <div><i className="far fa-user fa-5x"></i></div>
-            </div>    
-            </div>
+            </icons>    
+            </SearchBarHeader>
          );
     }
 }

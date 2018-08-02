@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 import Post from './Post';
+
 
 
 class PostContainer extends Component {
@@ -22,7 +24,6 @@ class PostContainer extends Component {
        
         return (
             <div className="post-container">
-            
                 <Post
                     username={this.state.posts.username}
                     thumbnailUrl={this.state.posts.thumbnailUrl}

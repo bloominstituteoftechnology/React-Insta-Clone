@@ -6,6 +6,7 @@ class Login extends Component {
         this.state = { 
             username: "",
             password: ""
+
          };
     }
 
@@ -16,15 +17,12 @@ class Login extends Component {
     handleSubmit = () => {
         const user = this.state.username;
         localStorage.setItem("user", user);
-        window.location.reload();
+       window.location.reload();
     }
 
     render() { 
         return ( 
             <form>
-                <div className="login-message">
-                    <p>Login</p>
-                </div>
                 <input
                     type="text"
                     placeholder="Username"

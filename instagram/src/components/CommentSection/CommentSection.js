@@ -9,29 +9,27 @@ class CommentSection extends Component {
         this.state = { 
             comments: props.posts.comments,
             date: props.posts.timestamp,
-            newComment: "",
-            username: "Das MA"
+            comment: ""
+           
          }
     }
 
     handleCommentUpdate = (event) => {
-        event.preventDefault();
-        this.setState({newComment: event.target.value})
+        
+        this.setState({comment: event.target.value})
     }
 
     addNewComment = (event) => {
         event.preventDefault();
-        if (this.state.newComment === ""){
+        if (this.state.comment === ""){
             return null;
         }
-        let comments = this.state.comments.slice();
-        comments.push({
-            username: this.state.username,
-            text: this.state.newComment
-        })
+        const newComment = {text: this.state.comment, username: localStorage.getItem("user")}
+        const comments = this.state.comments.slice();
+        comments.push(newComment);
         this.setState({
-            comments: comments,
-            newComment: ""
+            comments,
+            comment:""
         })
     }
 
@@ -53,7 +51,7 @@ class CommentSection extends Component {
                 </div>
                 <AddComment 
                     addNewComment={this.addNewComment}
-                    value={this.state.newComment}
+                    value={this.state.comment}
                     handleCommentUpdate={this.handleCommentUpdate}
                 />
 
