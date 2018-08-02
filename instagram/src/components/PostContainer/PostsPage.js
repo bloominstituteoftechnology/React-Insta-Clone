@@ -40,19 +40,19 @@ class PostsPage extends Component {
 
   render(){
     return (
-        <div className="app"><h1
-           // logOut={props.logOut}
-           >LOCK PAGE</h1>
-        <SearchBar searchHandler={this.searchHandler}
-        searchValue={this.state.searchValue}
-        valueHandler={this.valueHandler}
-      />
+      <div className="app">
+        <SearchBar
+          searchHandler={this.searchHandler}
+          searchValue={this.state.searchValue}
+          valueHandler={this.valueHandler}
+        />
         <div className="all-posts">
           {this.state.displayData.map( (post) => {
-              return <PostContainer
-                key={post.timestamp}
-                data={post}/>
-          })}
+            return <PostContainer
+                    key={post.timestamp}
+                    data={post}/>
+            })
+          }
         </div>
       </div>
     )

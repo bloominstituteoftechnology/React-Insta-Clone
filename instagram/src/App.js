@@ -15,7 +15,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>App.js
+      <div>
         <PostsPage />
       </div>
     );

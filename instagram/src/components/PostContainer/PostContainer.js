@@ -41,17 +41,12 @@ class PostContainer extends React.Component {
 
   render() {
     return (
-      <div
-        className="post-container"
-        data={this.state.data}>
-        <div
-          className="row">
-          <img
-            className="thumbnail" src={this.state.data.thumbnailUrl} alt="thumbnail"></img>
+      <div className="post-container" data={this.state.data}>
+        <div className="row">
+          <img className="thumbnail" src={this.state.data.thumbnailUrl} alt="thumbnail"></img>
           <p className="username">{this.state.data.username}</p>
         </div>
-        <img
-          className="main-photo" src={this.state.data.imageUrl} alt="main"></img>
+        <img className="main-photo" src={this.state.data.imageUrl} alt="main"></img>
         <div className="row">
           <img
             onClick={this.toggleLike} className={(this.state.likeStatus) ? "heart hide" : "heart"}  src="https://www.freepngimg.com/download/instagram/1-2-instagram-heart-transparent.png" alt="heart"></img>
