@@ -19,7 +19,7 @@ const withAuthorization = (LogInComponent, MainComponent) =>
         localStorage.setItem('insta-user', username)
       );
     };
-    handleLogOut = () => this.setState({ loggedIn: false });
+    handleLogOut = () => this.setState({ loggedIn: false }, () => localStorage.removeItem('insta-user'));
 
     render() {
       if (this.state.loggedIn) {
