@@ -10,8 +10,8 @@ const MainHeader = () => {
             <i className="fab fa-instagram" />
           </div>
           <div class="vl"></div>
-          <div className = "instagram">
-            <h2> Instagram </h2>
+          <div >
+            <h2 className = "instagram"> Instagram </h2>
             {/* <img alt = "instagram logo" src = '/iglogo.png' className = "logo-image" /> */}
           </div>
         </div>
