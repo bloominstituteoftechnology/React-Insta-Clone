@@ -35,6 +35,7 @@ class CommentSection extends Component {
         return (
             <div>
                 {this.state.comments.map((comment, index) => <Comment key={index} comment ={comment} />)}
+                <div className="time-stamp">1 hour ago</div>
                 <CommentInput 
                     comment={ this.state.comment }
                     submitComment={ this.addNewComment }

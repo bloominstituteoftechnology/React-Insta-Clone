@@ -4,6 +4,7 @@ import './CommentSection.css';
 const CommentSection = props => {
     return (
         <form className="comment-input" onSubmit={ props.submitComment }>
+            
             <input
                 onChange={ props.changeComment }
                 value={ props.comment }

@@ -4,6 +4,14 @@
     font-size: 15px;
 }
 
+.time-stamp {
+    margin: 5px 15px 10px;
+    color: gray;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: .5px;
+}
+
 .comment-section .comment-username {
     cursor: pointer;
 }
