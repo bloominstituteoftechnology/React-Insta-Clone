@@ -16,7 +16,7 @@ class App extends Component {
     const user = localStorage.getItem("username");
     this.setState({username: user});
 
-    localStorage.clear(); // This is so I can reload page and keep testing the login
+    //localStorage.clear(); // This is so I can reload page and keep testing the login
   }
 
   render() {

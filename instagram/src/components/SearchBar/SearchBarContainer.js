@@ -9,7 +9,7 @@ const SearchBarContainer = props => {
       <div className='search-bar-container'>
         <ImageContainer />
         <form>
-          <input placeholder='Search'/>
+          <input type='text' placeholder='Search'onKeyDown={props.searchPosts}/>
         </form>
         <ButtonContainer />
       </div>
