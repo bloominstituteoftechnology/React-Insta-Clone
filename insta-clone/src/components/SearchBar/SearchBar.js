@@ -60,6 +60,10 @@ const Icon = styled.i`
 `;
 
 const LastIcon = styled.i`
+    margin: 0 25px;
+    font-size: 50px;
+    font-weight: 100;
+    -webkit-text-stroke: 3px white;
     padding-right: 20px;
 `;
 

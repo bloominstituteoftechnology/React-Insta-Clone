@@ -1,24 +1,48 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const PostFeedbackContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const FeedbackItems = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
+
+const Far = styled.i`
+    font-size: 30px;
+    font-weight: 100;
+    margin: 5px 10px;
+    -webkit-text-stroke: 1px white;
+`;
+
+const LikeAmount = styled.div`
+    text-align: left;
+    font-weight: bold;
+    padding-left: 15px;
+`;
 
 const PostLikesSection = props => {
     return (
-        <div className="post-feedback-container">
-        <div className="feedback-items">
+        <PostFeedbackContainer>
+        <FeedbackItems>
             <div className="right-feedback">
-                <i className="far fa-heart" 
+                <Far className="far fa-heart" 
                 onClick={props.incrementLike}
                 />
-                <i className="far fa-comment" />
-                <i class="far fa-paper-plane" />
+                <Far className="far fa-comment" />
+                <Far className="far fa-paper-plane" />
             </div>
             <div className="left-feedback">
-                <i className="far fa-bookmark" />
+                <Far className="far fa-bookmark" />
             </div>
-        </div>
-        <div className="like-amout">
+        </FeedbackItems>
+        <LikeAmount>
             <p>{props.likes} likes</p>
-        </div>
-        </div>
+        </LikeAmount>
+        </PostFeedbackContainer>
     );
 };
 
