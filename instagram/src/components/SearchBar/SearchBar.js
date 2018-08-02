@@ -1,6 +1,9 @@
 import React from 'react'; 
 import './SearchBar.css'; 
+import logo from './instagram.png';
 import PropTypes from 'prop-types'; 
+import {SearchBarDiv, PostPageLogo, LeftSideDiv, SearchInput,
+RightSideDiv,ToolTipTextDiv} from './SearchBarStyled.js';
 
 
 class SearchBar extends React.Component {
@@ -22,12 +25,30 @@ class SearchBar extends React.Component {
         const text = document.querySelector(".tooltiptext");
         
         text.style.visibility = 'visible';
+        const tip = document.querySelector(".tooltip");
+        tip.style.background = 'red'; 
+        tip.style.cursor = "pointer";
     }
+    
+    handleToolTipText = () => {
+        const text = document.querySelector(".tooltiptext");
+        text.style.cursor = 'pointer'; 
+        text.style.textDecoration = 'underline';
+    }
+    handleToolTipTextLeave = () => {
+        const text = document.querySelector(".tooltiptext");
+        text.style.cursor = 'none'; 
+        text.style.textDecoration = 'none';
+    }
+
     handleOut = () => {
         const text = document.querySelector(".tooltiptext");
         if(!this.state.logOut){
             text.style.visibility = 'hidden';  
         }
+        const tip = document.querySelector(".tooltip");
+        tip.style.background = 'none'; 
+        
         
     }
 
@@ -36,26 +57,29 @@ class SearchBar extends React.Component {
         localStorage.removeItem('password');
         window.location.reload(); 
         
-        
     }
 
     render () {
         
         return (
-        <div className = "searchBar">
-          
-          <div className ="leftSideSearchBar"><i className="fab fa-instagram"></i> <span className="verticalLine">&#124;</span><span className ="logoTitle">Instagram</span> </div>
+        
+        <SearchBarDiv>
+          {/* <div className ="leftSideSearchBar"><i className="fab fa-instagram"></i> <span className="verticalLine">&#124;</span><span className ="logoTitle">Instagram</span> </div> */}
+          <LeftSideDiv><PostPageLogo src={logo} alt ="Instagram"/> </LeftSideDiv>
           <div className = "topSearch">
-          <input className = "searchInput" onChange = {this.props.onChange} value ={this.props.value} placeholder="&#128269;Search"/>
+          {/* <input className = "searchInput" onChange = {this.props.onChange} value ={this.props.value} placeholder="&#128269;Search"/> */}
+            <SearchInput onChange = {this.props.onChange} value ={this.props.value} placeholder ="&#128269;Search"/>
           </div>
-          <div className = "rightSideSearchBar">
+          
+          <RightSideDiv>
             <i className="far fa-compass"></i>
             <i className="far fa-heart"></i> 
             <i className="far fa-user tooltip" onDoubleClick = {this.handleLogOut} onClick = {this.handleClick} onMouseEnter = {this.handleHover} onMouseLeave = {this.handleOut}></i>
-            <span className ="tooltiptext" onClick = {this.handleLogOut}>  Log out</span>
-          </div>
+            {/* <span className ="tooltiptext" >  Log out</span> */}
+            <ToolTipTextDiv className = "tooltiptext" onMouseEnter = {this.handleToolTipText} onMouseLeave = {this.handleToolTipTextLeave} onClick = {this.handleLogOut}>Log out</ToolTipTextDiv>
+          </RightSideDiv>
         
-        </div>
+        </SearchBarDiv>
         );
     }
 }

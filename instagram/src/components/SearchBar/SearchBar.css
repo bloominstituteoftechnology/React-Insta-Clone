@@ -1,4 +1,4 @@
-.searchBar {
+/* .searchBar {
   border-top: 4px solid #E1E4E8;
   border-bottom: 1px solid #e7e7e7;
   margin-top: 15px; 
@@ -12,7 +12,7 @@
   align-items: center;
   padding-top: 40px;
   height: 152px;
-}
+} */
 
 .hrLine {
     margin-bottom:30px;
@@ -25,21 +25,21 @@
     border:4px solid #E1E4e8;
 }
 
-.logoTitle {
+/* .logoTitle {
     margin-left: 1.94274%;
 }
 .fa-instagram {
     margin-right: 1.94274%;
     margin-left: 3.5%;
-}
+} */
 
 
-.searchInput {
+/* .searchInput {
   text-align:center; 
   max-width: 100%;
   width: 9vw;
   height: 4vh;
- }
+ } */
 
 
 .addCommentInput {
@@ -48,11 +48,13 @@
     border: none;
 }
 
-.verticalLine {
+/* .verticalLine {
     color: gray;
-}
+    font-size: 3vh;
+    
+} */
 
-.rightSideSearchBar {
+/* .rightSideSearchBar {
     margin-right: 1.87873vw;
     display: flex;
     flex-direction: row;
@@ -60,9 +62,9 @@
     max-width: 100%; 
     margin-left: 10.0vw;
     width:200vw;
-}
+} */
 
-.leftSideSearchBar {
+/* .leftSideSearchBar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -70,25 +72,25 @@
     width: 175vw;
     max-width: 100%; 
     margin-left: 1vw;
-}
+} */
 
-.tooltip:hover {
+/* .tooltip:hover {
     background: red;
     cursor: pointer;
-}
+} */
 
-.tooltiptext {
+/* .tooltiptext {
     visibility: hidden;
     top:0%;
     left:0%;
     position:relative;
     font-size: 1vw;
-}
+} */
 
-.tooltiptext:hover{
+/* .tooltiptext:hover{
     text-decoration: underline;
     cursor: pointer; 
-}
+} */
 
 @media(max-width: 500px){
     .searchBar {
