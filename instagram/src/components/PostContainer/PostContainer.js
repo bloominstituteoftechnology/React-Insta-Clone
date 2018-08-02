@@ -8,12 +8,8 @@ class PostContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            user: props.user,
-            thumbnail: props.thumbnail,
-            img: props.img,
             likes: props.likes,
-            comments: props.comments,
-            time: props.time,
+            comments: props.comments
         };
     }
 
@@ -26,8 +22,8 @@ class PostContainer extends Component {
     render() {
         return (
             <div className='post-container'>
-                <PostHeader thumbnail={this.state.thumbnail} user={this.state.user}/>
-                <img className='ig-post-img' src={this.state.img} alt=''/>
+                <PostHeader thumbnail={this.props.thumbnail} user={this.props.user}/>
+                <img className='ig-post-img' src={this.props.img} alt=''/>
                 <div className='stats'>
                     <div className='icons'>
                         <i className="far fa-heart fa-2x" onClick={this.incrementLikes} /> 
