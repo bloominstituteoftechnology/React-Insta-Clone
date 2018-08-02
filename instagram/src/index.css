@@ -13,31 +13,6 @@ body {
   margin: 0;
   padding: 0;
 }
-.login {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 50vh;
-  justify-content: center;
-}
-.login h1 {
-  font-family: 'Pacifico', cursive;
-  margin-bottom: 30px;
-}
-.login button {
-  background: white;
-  border-color: darkgray;
-  border-radius: 5px;
-  color: black;
-  display: block;
-  margin: 0 auto;
-  transition-duration: 300ms;
-  width: 40%;
-}
-.login button:hover {
-  background: darkgray;
-  color: white;
-}
 @media (max-width: 768px) {
   .posts {
     flex-direction: row;

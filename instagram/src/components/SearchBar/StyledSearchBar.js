@@ -39,4 +39,6 @@ const StyledLogoutBtn = styled.button`
     border-radius: 5px;
 `;
 
-export {StyledSearchBar, StyledSearchForm, StyledSearchInput, StyledBtnDiv, StyledLogoutBtn};
+export {StyledSearchBar, 
+    StyledSearchForm, StyledSearchInput, 
+    StyledBtnDiv, StyledLogoutBtn};

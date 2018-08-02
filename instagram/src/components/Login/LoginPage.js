@@ -1,5 +1,6 @@
 import React from 'react';
 import {Form, FormGroup, Input} from 'reactstrap';
+import StyledLogin, {StyledLoginBtn} from './StyledLogin';
 
 class LoginPage extends React.Component {
     constructor() {
@@ -19,7 +20,7 @@ class LoginPage extends React.Component {
 
     render() {
         return (
-            <div className="login">
+            <StyledLogin>
                 <h1>A Lovely Instagram Clone</h1>
                 <Form>
                     <FormGroup className="mb-2">
@@ -33,11 +34,11 @@ class LoginPage extends React.Component {
                             type="password" placeholder="Password"
                             autoComplete="off" />
                     </FormGroup>
-                    <button onClick={this.handleLogin}>
+                    <StyledLoginBtn onClick={this.handleLogin}>
                         Login
-                    </button>
+                    </StyledLoginBtn>
                 </Form>
-            </div>
+            </StyledLogin>
         );
     }
 };
