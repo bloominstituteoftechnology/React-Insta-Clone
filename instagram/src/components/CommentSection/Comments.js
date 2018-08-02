@@ -6,7 +6,7 @@ import styled from "styled-components";
 const CommentsListDiv = styled.div``;
 const CommentsListH4 = styled.h4`
   padding: 0 0 0 1rem;
-  margin-bottom: 0.8rem;
+  margin-top: 1rem;
 `;
 const CommentsListSpan = styled.span`
   color: #403f44;
