@@ -26,10 +26,15 @@ class PostsPage extends React.Component {
     this.setState({posts: myPosts, searchInfo: ''});
   }
 
+  logOut() {
+    localStorage.removeItem('user');
+    window.location.reload();
+  }
+
   render () {
     return (
-        <div>
-          <SearchBar searchItem={this.searchItemHandler} searchValue={this.state.searchInfo} searchSubmit={this.searchSubmitHandler} />
+        <div className="App">
+          <SearchBar logOut={this.logOut} searchItem={this.searchItemHandler} searchValue={this.state.searchInfo} searchSubmit={this.searchSubmitHandler} />
           {this.state.posts.map(item => <PostContainer post={item} comments={item.comments} key={item.timestamp} /> )}
         </div>
       )

@@ -13,10 +13,11 @@ class App extends Component {
     }
   }
 
-// componentDidMount =()=> {
-//   const user = localStorage.getItem("user");
-//   this.setState(username: user)
-// }
+componentDidMount =()=> {
+  const user = localStorage.getItem("user");
+  this.setState({username: user})
+}
+
 
   render() {
     return (
