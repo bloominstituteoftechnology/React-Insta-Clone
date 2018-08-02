@@ -1,47 +1,15 @@
 import React, {Component} from 'react';
 
 class Login extends Component {
-  constructor(){
-    super();
-    this.state = {
-      loggedIn: false,
-    }
+  constructor(props){
+    super(props);
+    // this.state = {
+    //   loggedIn: props.state.loggedIn,
+    //   username: props.state.username,
+    //   password: props.state.password,
+    // }
   }
 
-  usernameHandler = event => {
-    this.setState({
-      username: event.target.value,
-    })
-  }
-
-  passwordHandler = event => {
-    this.setState({
-      password: event.target.value,
-    })
-  }
-
-  toStorage = event => {
-    event.preventDefault();
-    console.log(event.target.value);
-    console.log("authenticationDidMount")
-    localStorage.setItem("Username", `${this.state.username}`)
-    localStorage.setItem("Password", `${this.state.password}`)
-    this.setState({
-      username: "",
-      password: "",
-    })
-
-    let userCheck = '';
-    userCheck = localStorage.getItem('username');
-    if (userCheck === '') {
-      console.log("usernameEmpty");
-    } else {
-      console.log("usernameLogged")
-      this.setState({
-        loggedIn: true,
-      })
-    }
-  }
 
   render(){
     return (
@@ -49,17 +17,18 @@ class Login extends Component {
         <h1>LOGIN PAGE</h1>
         <form
           className="login"
-          onSubmit={this.toStorage}>
+          onSubmit={this.props.toStorage}>
           <input
-            value={this.state.username}
+            value={this.props.username}
             placeholder="name"
-            onChange={this.usernameHandler}>{this.value}</input>
+            onChange={this.props.user}
+            >{this.value}</input>
           <input
-            value={this.state.password}
+            value={this.props.password}
             placeholder="password"
-            onChange={this.passwordHandler}>{this.value}</input>
+            onChange={this.props.pass}>{this.value}</input>
           <button
-            onClick={this.toStorage}>Submit</button>
+            onClick={this.props.toStorage}>Submit</button>
         </form>
       </div>
     )
