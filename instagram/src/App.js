@@ -31,11 +31,16 @@ const App = Authenticate(
       this.setState({ filteredPosts: posts });
     }
 
+    logout = () => {
+      localStorage.removeItem("username");
+      window.location.reload();
+    } 
+
     render() {
       return (
         <div className="App">
           <div>
-            <SearchBar filterPostsHandler={this.filterPosts} /> 
+            <SearchBar filterPostsHandler={this.filterPosts} logoutHandler={this.logout} /> 
           </div>
           <div>
             {this.state.filteredPosts.length > 0 ? this.state.filteredPosts.map(post => (
