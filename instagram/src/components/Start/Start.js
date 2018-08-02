@@ -29,7 +29,8 @@ class Start extends React.Component {
       id: phone,
       name: name,
       username: username,
-      password: password
+      password: password,
+      likedPosts: []
     }
     let users = this.state.users.concat(user)
     this.setState({ users })

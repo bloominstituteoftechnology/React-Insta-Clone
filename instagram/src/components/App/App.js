@@ -13,7 +13,7 @@ class App extends Component {
       posts: [],
       searchInput: "",
       username: "",
-      filteredInput: ''
+      filteredInput: "",
     };
   }
   componentDidMount() {
@@ -31,7 +31,7 @@ class App extends Component {
         posts: posts,
       });
     }
-    this.setState({ username: this.props.username })
+    this.setState({ username: this.props.username });
   }
 
   componentDidUpdate(prevState) {
@@ -95,10 +95,16 @@ class App extends Component {
   };
 
   handleSearchSubmit = () => {
-    let fuse = new Fuse(this.state.posts, dataOptions)
-    let filtered = fuse.search(this.state.searchInput)
-    let filteredInput = this.state.posts.filter(post => filtered.toString() === post.id);
-    this.setState({ filteredInput: filteredInput });
+    if (this.state.searchInput) {
+      let fuse = new Fuse(this.state.posts, dataOptions);
+      let filtered = fuse.search(this.state.searchInput);
+      let filteredInput = this.state.posts.filter(
+        post => filtered.toString() === post.id
+      );
+      this.setState({ filteredInput: filteredInput });
+    } else {
+      this.handleShowAll();
+    }
   };
 
   handleDeleteComment = (commentId, id) => {
@@ -122,11 +128,11 @@ class App extends Component {
 
   handleLogOut = () => {
     this.props.handleLogOut();
-  }
+  };
 
   handleShowAll = () => {
-    this.setState({filteredInput: ''})
-  }
+    this.setState({ filteredInput: "" });
+  };
 
   render() {
     return (
