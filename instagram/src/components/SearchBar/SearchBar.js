@@ -2,6 +2,70 @@ import React from "react";
 // import PropTypes from 'prop-types';
 import "./SearchBar.css";
 import logoText from "./instagramLogoText.png";
+import styled from "styled-components";
+
+const SearchBarMainDiv = styled.div`
+  background: white;
+  color: black;
+  box-shadow: 0 0 30px -10px #777;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+`;
+
+const SearchBarLogoDiv = styled.div`
+  font-size: 2.2rem;
+  color: black;
+  padding: 0 1rem;
+  margin-left: 4rem;
+  position: relative;
+  right: 18px;
+`;
+
+const SearchBarBarSpan = styled.span`
+  position: relative;
+  bottom: 7px;
+`;
+
+const SearchBarImg = styled.img`
+  height: 2.5rem;
+  width: auto;
+  padding: 0 0.5rem;
+  position: relative;
+  top: 10px;
+`;
+
+const SearchBarInput = styled.input`
+  border-radius: 4px;
+  padding: 4px 22px;
+  text-align: center;
+  color: black;
+`;
+
+const SearchBarForm = styled.form``;
+
+const SearchBarLinksDiv = styled.div`
+  margin-right: 4rem;
+`;
+
+const SearchBarUL = styled.ul`
+  font-size: 1.5rem;
+  list-style: none;
+  display: flex;
+  position: relative;
+  top: 6px;
+  right: 8px;
+`;
+
+const SearchBarLi = styled.li`
+  padding: 0 1rem;
+  font-size: 1.6rem;
+`;
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -29,41 +93,41 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="searchBarMainDiv">
+      <SearchBarMainDiv className="searchBarMainDiv">
         {/* start logo div */}
-        <div className="searchBarLogoDiv">
+        <SearchBarLogoDiv className="searchBarLogoDiv">
           <i className="fa fa-instagram" />
-          <span>|</span>
-          <img src={logoText} alt="instagram text" />
-        </div>
+          <SearchBarBarSpan>|</SearchBarBarSpan>
+          <SearchBarImg src={logoText} alt="instagram text" />
+        </SearchBarLogoDiv>
 
         {/* start input div */}
-        <form
+        <SearchBarForm
           className="searchBarInputDiv"
           onChange={this.handleSearchBarInputChange}
         >
-          <input
+          <SearchBarInput
             className="search-input fa fa-input"
             placeholder="&#xf002; Search"
             type="search"
           />
-        </form>
+        </SearchBarForm>
 
         {/* start links div */}
-        <div className="searchBarLinksDiv">
-          <ul>
-            <li>
+        <SearchBarLinksDiv className="searchBarLinksDiv">
+          <SearchBarUL>
+            <SearchBarLi>
               <i className="fa fa-compass" />
-            </li>
-            <li>
+            </SearchBarLi>
+            <SearchBarLi>
               <i className="fa fa-heart-o" />
-            </li>
-            <li>
+            </SearchBarLi>
+            <SearchBarLi>
               <i className="fa fa-user-o" />
-            </li>
-          </ul>
-        </div>
-      </div>
+            </SearchBarLi>
+          </SearchBarUL>
+        </SearchBarLinksDiv>
+      </SearchBarMainDiv>
     );
   }
 }
