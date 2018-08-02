@@ -30,7 +30,8 @@ class App extends Component {
     }
   } 
 
-  likeIncrement(index) {
+  likeIncrement(index, event) {
+    event.stopPropagation();
     if (this.state.data[index].liked === false) {
       this.setState((prevState, props) => {
         return {[this.state.data[index].likes]: [prevState.data[index].likes++]}
