@@ -6,9 +6,13 @@ import styled from 'styled-components';
 
 const PostCont = styled.div `
   margin: 10px auto;
-  max-width: 640px;
+  max-width: 800px;
   width: 100%;
   border: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
 `;
 
 const PostContainer = (props) => {

@@ -5,10 +5,14 @@ import styled from 'styled-components';
 
 const AddComment = styled.input `
   padding: 20px;
-  width: 93%;
+  width: 100%;
   height: 40px;
-  margin: 0 auto;
+  margin: 0 auto 15px;
   font-size: 20px;
+`;
+
+const CommentsSectionDiv = styled.div `
+  width: 640px;
 `;
 
 class CommentsSection extends React.Component {
@@ -38,10 +42,10 @@ class CommentsSection extends React.Component {
 
   render() {
     return (
-      <div className="comments-section">
+      <CommentsSectionDiv>
         {this.state.commentsArr.map(comment => <Comment username={comment.username} text={comment.text} key={comment.text} />)}
         <form onSubmit={this.newCommentAdder}> <AddComment onChange={this.newCommendHandler} placeholder="Add a comment..." value={this.state.newComment} /></form>
-      </div>
+      </CommentsSectionDiv>
     )};
 }
 

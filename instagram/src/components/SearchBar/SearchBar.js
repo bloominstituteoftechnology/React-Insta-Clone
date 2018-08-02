@@ -7,6 +7,7 @@ height: 70px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+background-color: white;
 `;
 
 const Input = styled.input `

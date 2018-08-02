@@ -1,6 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const LoginPage = styled.div `
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ba1e33;
+`;
+
 const LogoDiv = styled.div `
   display: flex;
   justify-content: center;
@@ -10,11 +17,11 @@ const LogoDiv = styled.div `
 
 const LoginFormDiv = styled.div`
   margin: 0 auto;
-  max-width: 899px;
+  max-width: 998px;
   width: 100%;
-  height:1000px;
+  height:900px;
   padding-top: 90px;
-  background-image: url("https://picsum.photos/899/1000");
+  background-image: url("https://picsum.photos/998/900");
   display: flex;
   justify-content: center;
 `;
@@ -31,18 +38,12 @@ const LoginForm = styled.form `
 const LoginButton = styled.button `
   margin-top: 10px;
   width: 150px;
-  background-color:#7992af
+  background-color: #ba1e33;
+  color: white;
 `;
 
 const LogoImage = styled.img `
   height: 60px;
-`;
-
-const LoginPage = styled.div `
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #7992af;
 `;
 
 const LoginInput = styled.input `
