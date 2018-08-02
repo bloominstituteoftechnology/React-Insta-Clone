@@ -3,7 +3,8 @@ import styled from 'styled-components';
 const StyledCommentsDiv = styled.div`
     margin: 0 25px;
 
-    > div > p > span { {/* username */}
+    {/* username */}
+    > div > p > span {
         font-weight: bold;
     }
 `;

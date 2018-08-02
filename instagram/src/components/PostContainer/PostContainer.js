@@ -21,7 +21,7 @@ class PostContainer extends React.Component {
         });
     };
 
-    /* Lifecycle Methods*/
+    /* Lifecycle Methods */
 
     componentWillMount() {
         localStorage.getItem(`${this.props.id} likes`) && this.setState({

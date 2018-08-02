@@ -7,7 +7,8 @@ const Comment = props => {
             <p>
                 <span>{props.username}</span> 
                 &thinsp; {props.text} 
-                <i onClick={() => props.delete(props.id)} className="far fa-times-circle" />
+                <i onClick={() => props.delete(props.id)} 
+                    className="far fa-times-circle" />
             </p>
         </div>
     );
