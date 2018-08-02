@@ -20,8 +20,9 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div className="comment" onMouseEnter={this.showDelete} onMouseLeave={this.hideDelete}>
-        <h1>{this.props.comment.username}</h1>
-        <p>{this.props.comment.text}</p>
+        <span><span className="comment-user">{this.props.comment.username}</span>
+        <span>{this.props.comment.text}</span>
+        </span>
         {this.state.deleteShowing && <img className="deleteImg" src={deleteImg} onClick={this.props.onClick} alt="delete"/>}
       </div>
     );

@@ -17,7 +17,7 @@
 
 .post__date {
   margin: 5px 0;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: .2px;
   color: #999;
 }
@@ -82,11 +82,13 @@
   .post {
     margin-top: 0;
     border: none;
-  }
-  .post__header {
     background-color:#fafafa;
   }
+  
   .hide {
     display: none;
+  }
+  .post-date {
+    padding-bottom: 8px;
   }
 }
