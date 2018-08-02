@@ -2,32 +2,32 @@
   /* border: 1px solid black; */
   /* width: 100px; */
   display: flex;
-  /* position: fixed; */
+
   margin-top: 100px;
   flex-direction: column;
   justify-content: center;
 }
 
-.post-card {
+/* .post-card {
   display: flex;
   border: 1px solid gray;
-  /* border-bottom: none; */
+
   flex-direction: column;
   width: 600px;
   margin-bottom: 20px;
-}
+} */
 
-.thumbnail {
+/* .thumbnail {
   border-radius: 100px;
   width: 40px;
   height: 40px;
-}
-.card-title {
+} */
+/* .card-title {
   display: flex;
   align-items: center;
   margin: 10px 10px;
-}
-
+} */
+/* 
 .username {
   margin-left: 10px;
-}
+} */
