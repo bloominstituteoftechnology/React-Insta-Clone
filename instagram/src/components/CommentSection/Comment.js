@@ -6,7 +6,7 @@ import Span from '../Styles/Styles';
 const Comment = props => {
     return(
     <Row>
-        <Col><Span>{props.comment.username}</Span></Col>
+        <Col><Span weight={700}>{props.comment.username}</Span></Col>
         {props.comment.text}
     </Row>
     )

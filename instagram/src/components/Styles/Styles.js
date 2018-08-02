@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Span = styled.span`
-    font-weight: bold;
+    font-weight: ${props => props.weight};
 `;
 
 export default Span;

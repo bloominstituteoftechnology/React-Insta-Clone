@@ -16,7 +16,12 @@ const ContainerPost = styled.div`
     padding: 1rem;
     max-width: 700px;
     margin: 0 auto;
-    border: none;
+    border: 1px solid lightgray;
+`;
+
+const User = styled.div`
+    padding: 1rem;
+    font-weight: 900;
 `;
 
 const PostContainer = props => {
@@ -25,9 +30,9 @@ const PostContainer = props => {
             {props.post.map((item,i) => {
                 return(
                     <Container key={i}>
-                        <Col className='user'><Image className ='thumbnail' src={item.thumbnailUrl} alt ='user thumbnail img'/><Span> {item.username}</Span></Col>
+                        <User><Image src={item.thumbnailUrl} alt ='user thumbnail img'/><Span weight={900}> {item.username}</Span></User>
                         <img className = 'post-img' src={item.imageUrl} alt='Post Img'/>
-                        <Row className="bottom-section">
+                        <Row>
                                 <CommentSection comments={item.comments}
                                                 timestamp={item.timestamp}
                                                 likes={item.likes}/>

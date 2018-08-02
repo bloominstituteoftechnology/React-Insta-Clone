@@ -1,36 +1,5 @@
-
-.user{
-    padding: 1rem;
-    font-weight: bold;
-}
-/* .thumbnail {
-
-} */
-.likes{
-    font-weight: bold;
-}
 .like-comment{
     font-size: 2rem;
     padding: 1rem;
 }
-.bottom-section{
-    padding: 1rem;
-
-}
-.footer{
-
-    position: relative;
-}
-.add-comment{
-    text-align: left;
-    width: 95%;
-    border: none;
-    padding: 1rem;
-}
-.fa-ellipsis-h{
-    font-size: 1.5rem;
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    padding: none;
-}
+/*in CommentSection.js*/

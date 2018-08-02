@@ -3,10 +3,7 @@ import Comment from './Comment';
 import PropTypes from "prop-types";
 import {Row, Col, Form, Input} from 'reactstrap';
 import styled from 'styled-components';
-
-const Span = styled.span`
-    font-weight: bold;
-`;
+import Span from '../Styles/Styles';
 
 class CommentSection extends React.Component{
     constructor(props){
@@ -39,7 +36,7 @@ class CommentSection extends React.Component{
                     <i onClick={this.incrementLike} className="fa fa-heart-o like-comment" aria-hidden="true"></i>
                     <i className="fa fa-comment-o like-comment" aria-hidden="true"></i>
                 </Row>
-                <Span>{this.state.likes} likes</Span>
+                <Span weight={700}>{this.state.likes} likes</Span>
                 <Col>
                     {this.state.comments.map((comment, i) => {
                         return (
@@ -49,12 +46,15 @@ class CommentSection extends React.Component{
                         )})}
                 </Col>
                 <Col sm={{offset: -2}}>{this.props.timestamp}</Col>
-                <Form className='footer' onSubmit={this.addNewComment}>
-                    <Input onChange={this.handleNewComment}
-                           className='add-comment' placeholder="Add a comment...">
-                    </Input>
-                    <i className="fa fa-ellipsis-h"></i>
+                <Form onSubmit={this.addNewComment}>
+                    <Row>
+                        <Col sm='11'><Input onChange={this.handleNewComment}
+                            placeholder="Add a comment...">
+                        </Input></Col>
+                        <Col sm='1'><i className="fa fa-ellipsis-h"></i></Col>
+                    </Row>
                 </Form>
+                
             </Col>
         );  
     }

@@ -25,9 +25,11 @@ const LoginIcon = styled.span`
 `;
 
 const LoginForm = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     max-width: 200px;
     margin: 0 auto;
-    padding: 0.5rem;
 `;
 
 const Login = props => {
