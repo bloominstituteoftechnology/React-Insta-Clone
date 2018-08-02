@@ -2,7 +2,6 @@ import React from 'react';
 import './PostContainer.css';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Bold from '../Styles/Bold';
 
 const Thumbnail = styled.img`
     border-radius: 50%;

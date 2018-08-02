@@ -37,13 +37,13 @@ class App extends Component {
         return {[this.state.data[index].likes]: [prevState.data[index].likes++]}
       });
       let arr = this.state.data.slice();
-      arr.map(((el, i) => {if(i === index) return el.liked = !(el.liked);}))
+      arr.map(((el, i) => {if(i === index) return el.liked = !(el.liked)}))
     } else {
       this.setState((prevState, props) => {
         return {[this.state.data[index].likes]: [prevState.data[index].likes--]}
       });
       let arr = this.state.data.slice();
-      arr.map(((el, i) => {if(i === index) return el.liked = !(el.liked);}))
+      arr.map(((el, i) => {if(i === index) return el.liked = !(el.liked)}))
     }
 
   }
@@ -80,7 +80,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" render={props => (<PostsPage data={this.state.data} filter={this.filterData} like={this.likeIncrement} input={this.handleInputChange} comment={this.state.comment} clear={this.clearComment} />)} />
-            <Route path="/:number" render={props => (<PostsPage data={this.state.data.slice(parseInt(props.match.params.number), parseInt(props.match.params.number)+1)} filter={this.filterData} like={this.likeIncrement} input={this.handleInputChange} comment={this.state.comment} clear={this.clearComment} />)} />
+            <Route path="/:number" render={props => (<PostsPage data={this.state.data.slice(parseInt(props.match.params.number, 10), parseInt(props.match.params.number, 10)+1)} filter={this.filterData} like={this.likeIncrement} input={this.handleInputChange} comment={this.state.comment} clear={this.clearComment} />)} />
           </Switch>
         </Router>
         </div>

@@ -21,7 +21,7 @@ const SearchBar = props => {
     return (
         <Header>
             <LogoHeader><LogoImage src="img/logo.png"></LogoImage></LogoHeader>
-            <div><input name="search" placeholder={'\u2315' +' Search'} className="search-bar" type="text" onChange={props.filter} /></div>
+            <div><input name="search" placeholder={'\u2315 Search'} className="search-bar" type="text" onChange={props.filter} /></div>
             <div className="icons"><img src="img/search.png" alt="Explore"/>
             <img src="img/heart.png" alt="Hearts"/>
             <img src="img/profile.png" alt="Profile"/></div>
