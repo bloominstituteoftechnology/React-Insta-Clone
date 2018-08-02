@@ -1,4 +1,4 @@
-.Card {
+/* .Card {
     border: 1px solid #cdcdcd;
     max-width: 70%;
     border-radius: 4px;
@@ -35,7 +35,7 @@
 .Card__icons{
     font-size: 2rem;
     padding: 1.5rem;
-}
+} */
 
 .Card__icons i{
     cursor: pointer;

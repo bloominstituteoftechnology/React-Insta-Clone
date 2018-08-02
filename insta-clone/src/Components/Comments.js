@@ -3,22 +3,24 @@ import moment from "moment";
 import PropTypes from "prop-types";
 import "./Card.css";
 
+import {Card__comments, Card__comment, Card__commentUser, Card__lastComment} from ".//CardStyle"
+
 const Comments = ({ timestamp, comments, onDeleteComment}) => {
 	return (
-		<div className="Card__comments">
+		<Card__comments>
 			{comments.map(( comment,i ) => (
-				<div key={i} className="Card__comment">
+				<Card__comment key={i}>
 					<p>
-						<span className="Card__comment-user">{comment.username}</span>
-						{comment.text}
+						<Card__commentUser> { comment.username } </Card__commentUser>
+						{ comment.text }
 					</p>
 					<span className="Card__comment-close" onClick={() => onDeleteComment(comment)}>&times;</span>
-				</div>
+				</Card__comment>
 			))}
-			<div className="Card__last-comment">
+			<Card__lastComment>
 				{moment(timestamp, "MMM Do YYYY h:mm:ss").fromNow()}
-			</div>
-		</div>
+			</Card__lastComment>
+		</Card__comments>
 	);
 };
 

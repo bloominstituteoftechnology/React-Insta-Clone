@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./Card.css";
 import Comments from "./Comments";
 import PropTypes from "prop-types";
+import {StyledCard, Card__header, Card__thumbnail, Card__username, Card__bannerImg,
+		Card__icons,Card__likes,} from "./CardStyle";
 
 class Card extends Component {
 	constructor(props){
@@ -32,19 +34,18 @@ class Card extends Component {
 			onToggleLike
 		} = this.props;
 		return (
-			<section className="Card">
-				<div className="Card__header">
-					<img
-						className="Card__thumbnail"
+			<StyledCard>
+				<Card__header>
+					<Card__thumbnail
 						src={thumbnailUrl}
 						alt=""
 					/>
-					<span className="Card__username">{ username }</span>
-				</div>
+					<Card__username>{ username }</Card__username>
+				</Card__header>
 				<div className="Card__banner">
-					<img className="Card__banner-img" src={ imageUrl } alt="" />
+					<Card__bannerImg src={ imageUrl } alt="" />
 				</div>
-				<div className="Card__icons">
+				<Card__icons>
 					<i
 						onClick={() => onToggleLike(id, !liked)}
 						class={`far fa-heart ${
@@ -55,8 +56,8 @@ class Card extends Component {
 						class="far fa-comment Card__icons--bubble"
 						onClick={() => this.bubbleRef.current.focus()}
 					/>
-				</div>
-				<div className="Card__likes">{likes} likes</div>
+				</Card__icons>
+				<Card__likes> { likes } likes </Card__likes>
 				<Comments
 					{...{ timestamp, comments }}
 					onDeleteComment={comment => onDeleteComment(id, comment)}
@@ -78,7 +79,7 @@ class Card extends Component {
 					/>
 					<i class="fas fa-ellipsis-h" />
 				</div>
-			</section>
+			</StyledCard>
 		);
 	}
 }

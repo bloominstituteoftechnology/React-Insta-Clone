@@ -8,6 +8,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import thumbnail from "./thumbnail.png";
 
+
 const NewPostsInput = styled.input`
 border:1px solid #dedede;
 border-radius: 3px;
