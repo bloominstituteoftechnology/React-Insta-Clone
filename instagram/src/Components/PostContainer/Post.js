@@ -2,6 +2,7 @@ import React from 'react';
 import PostHeader from './PostsHeader';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostStyling.css';
+import LikeAddition from './LikeAddition';
 
 const Post = props => {
     return (
