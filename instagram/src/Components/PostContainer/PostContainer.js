@@ -53,16 +53,28 @@ class PostContainer extends React.Component {
        super(props); 
         this.state = { 
             likes: props.likes,
+            increaseLikes: false
         }
    } 
   
    increaseLikeHandler = (event) => {
-    this.setState(prevState =>{
-      return {
-        likes: prevState.likes + 1
-      }
-    })
+       if(this.state.increaseLikes === false){
+            this.setState(prevState =>{
+            return {
+                likes: prevState.likes + 1, 
+                increaseLikes: true
+            }
+            })
+        }else {
+            this.setState(prevState => {
+                return {
+                    likes: prevState.likes - 1, 
+                    increaseLikes: false
+                }
+            })
+        }   
     }
+
   
     render (){
     return (
@@ -77,7 +89,7 @@ class PostContainer extends React.Component {
         </div>
         <PostIcons>
             <div className = 'icons'>
-                <i onClick = {this.increaseLikeHandler} className = "far fa-heart fa-2x"></i>
+                <i onClick = {this.increaseLikeHandler} className = {"far fa-2x fa-heart " + (this.state.increaseLikes ? ' red' : null)} ></i>
                 <i className="far fa-comment fa-2x"></i>
             </div>
             <p className = "likes">{this.state.likes} likes</p>
