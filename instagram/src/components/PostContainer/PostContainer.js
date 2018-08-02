@@ -55,6 +55,7 @@ class PostContainer extends React.Component {
           <h1 className="post__likes"> {this.props.post.likes} likes </h1>
           {this.props.post.comments.map((comment, index) => (
             <CommentSection
+              username={this.props.username}
               key={index}
               comment={comment}
               onClick={() =>

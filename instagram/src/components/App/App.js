@@ -12,12 +12,12 @@ class App extends Component {
     this.state = {
       posts: [],
       searchInput: "",
-      username: ""
+      username: "",
+      filteredInput: ''
     };
   }
   componentDidMount() {
     const storedPosts = JSON.parse(localStorage.getItem("posts"));
-    // const username = localStorage.getItem('username');
     if (storedPosts) {
       this.setState({ posts: storedPosts });
     } else {
@@ -38,9 +38,6 @@ class App extends Component {
     if (prevState.posts !== this.state.posts) {
       localStorage.setItem("posts", JSON.stringify(this.state.posts));
     }
-    // if (!this.state.username) {
-    //   localStorage.removeItem('username')
-    // }
   }
 
   handleAddComment = (comment, id) => {
@@ -141,6 +138,7 @@ class App extends Component {
             {!this.state.filteredInput
               ? this.state.posts.map(post => (
                   <PostContainer
+                    username={this.state.username}
                     key={post.id}
                     post={post}
                     handleAddComment={this.handleAddComment}
@@ -150,6 +148,7 @@ class App extends Component {
                 ))
               : this.state.filteredInput.map(post => (
                   <PostContainer
+                    username={this.state.username}
                     key={post.id}
                     post={post}
                     handleAddComment={this.handleAddComment}

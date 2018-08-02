@@ -9,7 +9,9 @@ class CommentSection extends React.Component {
   };
 
   showDelete = () => {
-    this.setState({ deleteShowing: true });
+    if (this.props.comment.username === this.props.username) {
+      this.setState({ deleteShowing: true });
+    }  
   };
 
   hideDelete = () => {
