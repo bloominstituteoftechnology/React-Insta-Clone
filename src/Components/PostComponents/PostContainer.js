@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './posts.css';
+import { PostWrapper, PostImageWrapper } from './PostStyle';
 
 import CommentSection from './../CommentComponents/CommentSection';
 import PostHeader from './PostHeader';
 
 const PostContainer = props => {
   return(
-    <div className="post-container">
+    <PostWrapper>
       <PostHeader thumbnail={props.post.thumbnailUrl} user={props.post.username} />
-      <div className="post-image"><img className="fluid-img" alt="post" src={props.post.imageUrl} /></div>
+      <PostImageWrapper><img className="fluid-img" alt="post" src={props.post.imageUrl} /></PostImageWrapper>
       <CommentSection key={props.id} id={props.id} username={props.username} comments={props.post.comments} likes={props.post.likes} timestamp={props.post.timestamp}/>
-    </div>
+    </PostWrapper>
   );
 };
 

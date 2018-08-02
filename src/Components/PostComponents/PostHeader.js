@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './posts.css';
+import { PostHeading, UserIcon, IconImg, UserName } from './PostStyle';
 
 const PostHeader = props => {
   return(
-    <div className="post-header">
-      <div className="user-icon"><img src={props.thumbnail} alt="user profile icon" /></div>
-      <div className="user-name"><strong>{props.user}</strong></div>
-    </div>
+    <PostHeading>
+      <UserIcon><IconImg src={props.thumbnail} alt="user profile icon" /></UserIcon>
+      <UserName><strong>{props.user}</strong></UserName>
+    </PostHeading>
   );
 };
 
