@@ -6,6 +6,7 @@ import Authentication from './components/Authentication/Authentication.js';
 import Login from './components/Login/Login.js';
 
 const HOCAuthentication = Authentication(App);
+const HOCLogin = Authentication(Login);
 
 class App extends Component {
   constructor() {
@@ -20,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <div >
-        {/* <Login /> */}
+        <Login />
         {/* <HOCAuthentication /> */}
         <PostsPage />
       </div>
