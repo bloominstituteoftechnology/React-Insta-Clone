@@ -1,27 +1,27 @@
-.fa-comment {
+/* .fa-comment {
     transform: rotateY(180deg);
-}
+} */
 
-.postImage {
+/* .postImage {
     max-width: 100%;
     width: 600px; 
     display:flex;
     align-items:flex-start;
     margin-top: 15px;
-}
+} */
 
-.thumbNail {
+/* .thumbNail {
     width: 30.06748%;
     height: 2.04498%;
     border-radius: 50%; 
     margin-right: 2.04498%;
     max-width: 100%; 
-}
+} */
 
-.postUserName {
+/* .postUserName {
     margin-top: 5px;
-}
-.postHeader {
+} */
+/* .postHeader {
     display:flex;
     align-items: flex-start;
     width: 100px;
@@ -32,25 +32,25 @@
     text-align: center;
     max-width: 100%; 
 
-}
+} */
 
-.postIcons {
+/* .postIcons {
     display:flex;
     align-items: flex-start;
     margin-left: 2.04498%;
     margin-top: 10px;
     font-size: 2.5rem;
     width: 50px; 
-}
+} */
 
-.postIcons .fa-heart:hover{
+/* .postIcons .fa-heart:hover{
     cursor:pointer;
-}
-.posting .far {
+} */
+/* .posting .far {
     margin-right:40%;
-}
+} */
 
-.likes {
+/* .likes {
     display:flex;
     align-items: flex-start;
     margin-top:12px; 
@@ -58,7 +58,7 @@
     margin-left: 2.04498%;
     font-weight: bold;
     font-size: 1.5rem;
-}
-posting {
+} */
+/* posting {
     max-width: 100%; 
-}
+} */
