@@ -12,23 +12,23 @@
 }
 
 .iglogo {
-    width: 75px;
-    margin-left: 10px;
+    /* width: 75px;
+    margin-left: 10px; */
 }
 .search-bar-left {
     /* text-align: left; */
-    width: 188px;
-    border-right: 1px solid lightgray;
+    /* width: 188px;
+    border-right: 1px solid lightgray; */
 }
 
 .search-input {
-    text-align: center;
+    /* text-align: center;
     margin-left: 15%;
-    margin-right: 15%;
+    margin-right: 15%; */
     /* margin-bottom: 42px; */
 }
 
 .search-icons {
-    margin: 0 5px;
-    font-weight: 100;
+    /* margin: 0 5px;
+    font-weight: 100; */
 }
