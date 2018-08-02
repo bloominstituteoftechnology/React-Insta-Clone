@@ -1,3 +1,12 @@
 .nameAndComment {
     margin-bottom: 10px;
 }
+
+.inputArea {
+    padding-top: 20px;
+    border-top: 1px solid lightgray;
+    margin-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

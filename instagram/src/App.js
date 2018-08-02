@@ -8,8 +8,15 @@ import PostsPage from './components/PostContainer/PostsPage'
 class App extends Component {
   constructor() {
     super();
-    this.state = {name: dummyData};
+    this.state = {
+      name: []
+    };
   }
+
+  componentDidMount() {
+    this.setState({name: dummyData});
+  }
+  
   render() {
     console.log(this.state.data);
     return (

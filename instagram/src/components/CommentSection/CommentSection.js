@@ -1,20 +1,42 @@
 import React from 'react';
 import './CommentSection.css'
 import PropTypes from 'prop-types';
+import dummyData from '../../dummy-data'
 
-const CommentSection = props => {
-    return(
-        <div>
-           {props.comments.map(comment => {
-               return (
-                    <div className="nameAndComment" key={comment.text}>
-                        <span><strong>{comment.username}</strong></span>
-                        <span> {comment.text}</span>
-                    </div>
-               );
-           })} 
-        </div>
-    );
+class CommentSection extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            comments: [],
+            comment: ''
+        };
+    }
+
+    componentDidMount () {
+        this.setState({comments: dummyData.comments})
+        console.log(this.state.comments);
+    }
+    
+    // const addNewComment = (e, i) => {
+    //     return {
+    //         e.target.value
+    //     }
+    // }
+
+    render() {
+        return(
+            <div>
+                {this.props.comments.map(comment => {
+                    return (
+                        <div className="nameAndComment" key={comment.text}>
+                            <span><strong>{comment.username}</strong></span>
+                            <span> {comment.text}</span>
+                        </div>
+                    );
+                })} 
+            </div>
+        );
+    }
 }
 
 CommentSection.propTypes = {

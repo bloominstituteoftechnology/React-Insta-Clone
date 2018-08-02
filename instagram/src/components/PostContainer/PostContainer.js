@@ -22,10 +22,7 @@ const PostContainer = props => {
                             <p><strong>{dData.likes} likes</strong></p>
                             <CommentSection comments={dData.comments} />
                             <p>{dData.timestamp}</p>
-                            <div className="inputArea">
-                                <input value="Add a comment..." />
-                                <img className="optionsIcon" src="https://image.flaticon.com/icons/svg/54/54175.svg" alt="options logo" />
-                            </div>
+                            {/* <CommentInput /> */}
                         </div>
                     </div>
                 );

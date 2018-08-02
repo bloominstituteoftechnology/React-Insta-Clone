@@ -45,15 +45,6 @@
     padding-left: 15px;
 }
 
-.inputArea {
-    padding-top: 20px;
-    border-top: 1px solid lightgray;
-    margin-right: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .optionsIcon {
     width: 5%;
 }
