@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
 
 class Login extends Component {
   constructor(props){
@@ -25,29 +26,54 @@ class Login extends Component {
   }
 
   render(){
+    const FormDiv = styled.form`
+      z-index: 20;
+      width: 100%;
+      height: 100vh;
+      background-color: blue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    `;
+    const InputDiv = styled.input`
+      width: 100px;
+      height: 50px;
+      background: white;
+    `;
+
     return (
-      <div className="login">Login.js
-        <h1>LOGIN PAGE</h1>
-        <form
-            className="login"
-            onSubmit={this.toStorage}>
-          <input
-            name="username"
-            value={this.state.username}
-            placeholder="name"
-            onChange={this.inputHandler}
-            >{this.value}</input>
-          <input
-            type="password"
-            name="password"
-            value={this.state.password}
-            placeholder="password"
-            onChange={this.inputHandler}>{this.value}</input>
-          <button>Submit</button>
-        </form>
-      </div>
+      <FormDiv onSubmit={this.toStorage}>
+        <h1>Login</h1>
+        <input
+          name="username"
+          value={this.state.username}
+          placeholder="name"
+          onChange={this.inputHandler}
+          ></input>
+        <input
+          type="password"
+          name="password"
+          value={this.state.password}
+          placeholder="password"
+          onChange={this.inputHandler}>{this.value}</input>
+        <button>Submit</button>
+      </FormDiv>
     )
   }
 }
 
 export default Login;
+
+  // <InputDiv name="username"
+  // value={this.state.username}
+  // placeholder="name"
+  // onChange={this.inputHandler}></InputDiv>
+  // <InputDiv type="password"
+  // name="password"
+  // value={this.state.password}
+  // placeholder="password"
+  // onChange={this.inputHandler}>
+  // {this.value}
+  // </InputDiv>

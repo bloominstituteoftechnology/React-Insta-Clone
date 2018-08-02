@@ -13,9 +13,9 @@ const Header = styled.header`
 `;
 
 const Icon = styled.img`
-    width: 25px;
-    height: 25px;
-    margin: 15px;
+  width: 25px;
+  height: 25px;
+  margin: 15px;
 `;
 const WordIcon = styled.img`
   height: 20px;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DummyData from '../../dummy-data.js';
 import PostContainer from './PostContainer.js';
 import SearchBar from '../SearchBar/SearchBar.js';
+import styled from 'styled-components';
 
 class PostsPage extends Component {
   constructor(props){
@@ -39,22 +40,35 @@ class PostsPage extends Component {
   }
 
   render(){
+
+    const AppDiv = styled.div`
+      ${'' /* border: 1px solid blue; */}
+      background-color: snow;
+      width: 100%;
+      margin: 0 auto;
+      height: auto;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    `;
+
+    const AllPostsDiv = styled.div`
+        margin-top: 50px;
+    `;
+
     return (
-      <div className="app">
+      <AppDiv>
         <SearchBar
           searchHandler={this.searchHandler}
           searchValue={this.state.searchValue}
-          valueHandler={this.valueHandler}
-        />
-        <div className="all-posts">
-          {this.state.displayData.map( (post) => {
+          valueHandler={this.valueHandler}/>
+        <AllPostsDiv>{this.state.displayData.map( (post) => {
             return <PostContainer
                     key={post.timestamp}
                     data={post}/>
             })
-          }
-        </div>
-      </div>
+          }</AllPostsDiv>
+      </AppDiv>
     )
   }
 }
