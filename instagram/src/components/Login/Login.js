@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Login.css";
 
 class Login extends Component {
   constructor() {
@@ -18,16 +19,21 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="login-cont">
-        <form className="login-form">
-          <input
-            className="input"
-            placeholder="username"
-            onChange={this.save}
-          />
-          <input className="password" placeholder="password" />
-          <button onClick={this.login} className="login-buttn" />
-        </form>
+      <div className="container2">
+        <h1 className="insta">Instagram</h1>
+        <div className="logins">
+          <form className="login-form">
+            <input
+              className="input"
+              placeholder="username"
+              onChange={this.save}
+            />
+            <input className="password" placeholder="password" />
+            <button onClick={this.login} className="login-buttn">
+              Login
+            </button>
+          </form>
+        </div>
       </div>
     );
   }
