@@ -5,12 +5,25 @@ import Header from "./Components/Header";
 import Card from "./Components/Card";
 import dummy from "./dummy-data";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import thumbnail from "./thumbnail.png";
 
+const NewPostsInput = styled.input`
+border:1px solid #dedede;
+border-radius: 3px;
+padding: 1rem 2rem;
+display: block;
+margin: 2rem auto;
+width 90%;
+max-width: 50rem;
+`
 
 class PostsPage extends Component {
 	state = {
 		data: [],
-		searchTerm: ""
+		searchTerm: "",
+		thumbnailURL: "",
+		newPostURL:""
 	};
 
 	componentDidMount() {
@@ -103,11 +116,37 @@ class PostsPage extends Component {
 
 	handleSearch = searchTerm => this.setState({ searchTerm });
 
+	handleNewPostChange = url => this.setState({ newPostURL :url});
+
+	handleNewPostSubmit =() => {
+		this.setState(prevState=>({
+			data: [
+				...prevState.data,
+				{
+					id: Date.now(),
+					username: localStorage.getItem('insta-user'),
+					thumbnailUrl: thumbnail,
+					imageUrl: prevState.newPostURL,
+					likes: 0,
+					liked: false,
+					timestamp: Date.now(),
+					comments:[]
+
+				}
+			]
+		}))
+	}
+
 	render() {
 		return (
 			<div className="App">
 				<Header logoutProp={this.props.onLogOut} onSearch={this.handleSearch} />
-				{/* <button onClick={this.props.onLogOut}>Log Out</button> */}
+				<NewPostsInput 
+				onChange={e => this.handleNewPostChange(e.target.value)}
+				onKeyDown={e => e.key === 'Enter' ?	this.handleNewPostSubmit() : null}
+				value={this.state.newPostURL}
+				type="text"
+				placeholder="Enter the URL of an Image!"  />
 				<section className="container App__cards-container">
 					{this.state.data
 						.filter(card =>

@@ -5,6 +5,13 @@ const withAuthorization = (LogInComponent, MainComponent) =>
 		state = {
 			loggedIn: false
 		};
+		componentDidMount() {
+			if (localStorage.getItem("insta-user")) {
+				this.setState({
+					loggedIn: true
+				});
+			}
+		}
 
 		handleLogin = username => {
 			this.setState({ loggedIn: true }, () =>
