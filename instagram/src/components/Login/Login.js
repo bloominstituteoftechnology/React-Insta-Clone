@@ -1,15 +1,46 @@
 import React from 'react';
-import './Login.css';
+import {Input, Button} from 'reactstrap';
+import styled from 'styled-components';
+
+const LoginPage = styled.div`
+    max-width: 800px;
+    height: 100vh;
+    border: 2px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    text-align: center;
+    justify-content: space-evenly;
+    background: burlywood;
+`;
+
+const LoginTitle = styled.div`
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 8rem;
+`;
+
+const LoginIcon = styled.span`
+    font-size: 16rem;
+`;
+
+const LoginForm = styled.div`
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 0.5rem;
+`;
 
 const Login = props => {
     return(
-        <div className='login'>
-            <span className='login-title'>Instagram</span>
-            <i className="fa fa-instagram login-icon" aria-hidden="true"></i>
-            <input placeholder='Username' onChange={props.username}></input>
-            <input placeholder='Password'></input>
-            <button onClick={props.login}>Login</button>
-        </div>
+        <LoginPage>
+            <LoginTitle>Instagram</LoginTitle>
+            <LoginIcon><i className="fa fa-instagram" aria-hidden="true"></i></LoginIcon>
+            <LoginForm>
+                <Input placeholder='Username' onChange={props.username}></Input>
+                <Input placeholder='Password'></Input>
+                <Button onClick={props.login}>Login</Button>
+            </LoginForm>
+        </LoginPage>
     )
 }
 

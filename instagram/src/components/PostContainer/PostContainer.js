@@ -2,7 +2,7 @@ import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from "prop-types";
-import {Container,Row} from 'reactstrap';
+import {Container,Row, Col} from 'reactstrap';
 import styled from 'styled-components';
 import Span from '../Styles/Styles';
 
@@ -16,6 +16,7 @@ const ContainerPost = styled.div`
     padding: 1rem;
     max-width: 700px;
     margin: 0 auto;
+    border: none;
 `;
 
 const PostContainer = props => {
@@ -24,7 +25,7 @@ const PostContainer = props => {
             {props.post.map((item,i) => {
                 return(
                     <Container key={i}>
-                        <Row className='user'><Image className ='thumbnail' src={item.thumbnailUrl} alt ='user thumbnail img'/><Span> {item.username}</Span></Row>
+                        <Col className='user'><Image className ='thumbnail' src={item.thumbnailUrl} alt ='user thumbnail img'/><Span> {item.username}</Span></Col>
                         <img className = 'post-img' src={item.imageUrl} alt='Post Img'/>
                         <Row className="bottom-section">
                                 <CommentSection comments={item.comments}
