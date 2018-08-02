@@ -39,12 +39,14 @@ class PostsPage extends React.Component {
     }
     render() {
       return (
-        <div className="App">
+        <div>
           <SearchBar searchValue={this.searchBarValue} handleInputChange={this.handleSearchBarChange}/>
+          <div className='posts'>
           {this.state.searchBarValue.length===0 ?
-          this.state.posts.map((e)=><PostContainer data={e} key={e.imageUrl}/>):
-          this.state.filteredPosts.map((e)=><PostContainer data={e} key={e.imageUrl}/>
+          this.state.posts.map((e)=><PostContainer data={e} liked={this.liked.bind(this)} key={e.imageUrl}/>):
+          this.state.filteredPosts.map((e)=><PostContainer liked={this.liked.bind(this)} data={e} key={e.imageUrl}/>
           )}
+          </div>
         </div>
       );
     }

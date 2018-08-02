@@ -3,6 +3,7 @@ import './App.css';
 import Authenticate from './components/Authentication/Authenticate.js';
 import PostPage from './components/PostContainer/PostsPage.js';
 
+const App=Authenticate( 
   class App extends Component {
   constructor() {
     super();
@@ -22,5 +23,6 @@ import PostPage from './components/PostContainer/PostsPage.js';
       </div>
     );
   }
-};
-export default Authenticate(App);
+}
+);
+export default App;
