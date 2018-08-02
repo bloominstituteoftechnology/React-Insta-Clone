@@ -85,45 +85,6 @@
 .post-container .likes {
   margin: 5px;
 }
-.search-main {
-  border: 0.5px solid lightgray;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 5px 0;
-  top: 0px;
-}
-form {
-  margin-right: 15px;
-  padding: 0;
-}
-.search-bar {
-  border: 0.5px solid gray;
-  background-color: snow;
-  width: 100%;
-  height: 25px;
-  margin: 10px;
-  text-align: center;
-}
-.icon {
-  width: 25px;
-  height: 25px;
-  margin: 15px;
-}
-.icon:hover {
-  cursor: pointer;
-}
-.insta-logo-word {
-  height: 20px;
-  margin: 10px;
-  padding-left: 15px;
-  border-left: 1px solid gray;
-}
-.insta-logo-word:hover {
-  cursor: pointer;
-}
 .app {
   width: 100%;
   margin: 0 auto;
