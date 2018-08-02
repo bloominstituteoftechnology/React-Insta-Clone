@@ -8,7 +8,8 @@ class SignUp extends React.Component {
       phoneNumber: '',
       fullName: '',
       username: '',
-      password: ''
+      password: '',
+      error: undefined
     };
   }
 
@@ -20,7 +21,10 @@ class SignUp extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.handleNewProfile(this.state.phoneNumber, this.state.fullName, this.state.username, this.state.password)
+    let error = this.props.handleNewProfile(this.state.phoneNumber, this.state.fullName, this.state.username, this.state.password)
+    if (error) {
+      this.setState({error: error})
+    }
   }
 
 
@@ -68,6 +72,7 @@ class SignUp extends React.Component {
                 onChange={this.handleChange}
               />
             </div>
+            {this.state.error && <p className="error">{this.state.error}</p>}
             <button disabled={!fieldsValid} className="btn" type="submit">
               Sign Up
             </button>

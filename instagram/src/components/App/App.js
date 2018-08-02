@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import dummyData from "../../dummy-data";
 import Fuse from "fuse.js";
 import dataOptions from "../../SearchOptions";
-import SearchBar from "../SearchBar/SearchBar";
+import HeaderContainer from "../Header/Header";
 import PostContainer from "../PostContainer/PostContainer";
 import "./App.css";
 
@@ -137,7 +137,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar
+        <HeaderContainer
           handleChange={this.handleChange}
           searchInput={this.state.searchInput}
           handleSearchSubmit={this.handleSearchSubmit}

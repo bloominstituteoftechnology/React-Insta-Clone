@@ -7,6 +7,7 @@ class Login extends React.Component {
     this.state = {
       username: "",
       password: "",
+      error: undefined
     };
   }
 
@@ -18,9 +19,19 @@ class Login extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.handleLoginSubmit(this.state.username, this.state.password);
+    const error = this.props.handleLoginSubmit(this.state.username, this.state.password);
+    console.log(error)
+
+    if (error) {
+      this.setState(() => ({ 
+        error: error,
+        username: '',
+        password: ''
+       }))
+    }
+    
   };
-  
+
   render() {
     let fieldsValid = this.state.username && this.state.password;
     return (
@@ -46,6 +57,7 @@ class Login extends React.Component {
                 onChange={this.handleChange}
               />
             </div>
+            {this.state.error && <p className="error">{this.state.error}</p>}
             <button disabled={!fieldsValid} className="btn" type="submit">
               Log in
             </button>
