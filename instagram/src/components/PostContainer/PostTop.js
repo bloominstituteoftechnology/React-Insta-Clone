@@ -1,5 +1,6 @@
 import React from 'react';
 import './PostContainer.css';
+import PropTypes from "prop-types"
 
 const PostTop = props => {
   return (
@@ -15,5 +16,12 @@ const PostTop = props => {
     </div>
   );
 };
+
+// idk if i even need to check typeof here.
+PostTop.propTypes = {
+       thumbnailUrl: PropTypes.string,
+      username: PropTypes.string
+};
+
 
 export default PostTop;

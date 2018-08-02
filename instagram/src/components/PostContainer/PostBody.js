@@ -2,38 +2,49 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PostTop from './PostTop';
 import './PostContainer.css';
+import PropTypes from "prop-types"
+import  Likes from './likes'
+import  like from "../../assets/likecons.png";
+import liked from "../../assets/likedcons.png"
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button} from 'reactstrap';
-    import  like from "../../assets/likecons.png";
 
-const PostBody = props => {
+class PostBody extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = { likes: props.post.likes}
+  }
+  incrementLike = () => {
+  let likes = this.state.likes + 1;
+  this.setState({ likes });
+};
+
+render(){
   return (
     <Card >
-      <PostTop  username={props.post.username} thumbnailUrl={props.post.thumbnailUrl} />
-        <img alt="thumbnail"  className="pimage"  src={props.post.imageUrl} />
+      <PostTop  username={this.props.post.username} thumbnailUrl={this.props.post.thumbnailUrl} />
+        <img alt="thumbnail"  className="pimage"  src={this.props.post.imageUrl} />
       <CardBody>
 
-      <div className="pbody">
+        <Likes
+          incrementLike={this.incrementLike}
+          likes={this.state.likes}
+        />
 
-        <img alt="like comment icons"  className="likecons"  src={like} />
-        <div className="likes">{props.post.likes} likes</div>
-      </div>
-
-
-      <CommentSection comments={props.post.comments} />
+      <CommentSection comments={this.props.post.comments} />
     </CardBody>
     </Card>
   );
+}
+};
+PostBody.propTypes = {
+  post: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string
+  })
 };
 
-// idk if i even need to check typeof here.
-// PostBody.propTypes = {
-//   comments: PropTypes.arrayOf(
-//     PropTypes.shape({
-//        text: PropTypes.string,
-//       username: PropTypes.string})
-//   )
-// };
 
 export default PostBody;

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import PostContainer from './components/PostContainer/PostContainer'
-import SearchBar from './components/SearchBar/SearchBar'
-import  dummyData from "./dummy-data";
+import dummyData from './dummy-data';
+import PostPage from "./components/PostContainer/PostPage";
+import Authenticate from "./components/Authentication/Authenticate";
 
 class App extends Component {
   constructor(){
@@ -13,20 +12,29 @@ class App extends Component {
       value: undefined
     }
   }
-  // componentDidMount(){
-  //   console.log("hey there what the hell is going on")
-  //   //this is asynchronous so this allows for rerendering with new data
-  //   //but it's only asynchronous depending on the rendering context.
-  //   this.setState = {
-  //     value: true,
-  // posts: dummyData
-  //   }
-  // }
+  componentDidMount(){
+    //this is asynchronous so this allows for rerendering with new data
+    //but it's only asynchronous depending on the rendering context.
+    if (window.localStorage.getItem("comments")){
+      this.setState({
+        posts: JSON.parse(window.localStorage.getItem("comments"))
+      })
+      //The getItem() method of the Storage interface, when passed a key name, will return that key's value or null if the key does not exist.
+    }
+  //here we are
+    else{
+    this.setState = {
+      value: true,
+  posts: dummyData
+    }
+  }
+  window.localStorage.setItem("comments",  JSON.stringify(dummyData))
+  //stringify
+}
   render() {
     return (
       <div className="container">
-        <SearchBar />
-          <PostContainer posts={this.state.posts}/>
+        <PostPage/>
       </div>
     );
   }
