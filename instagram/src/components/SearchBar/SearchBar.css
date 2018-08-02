@@ -1,17 +1,3 @@
-.search-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 5px solid lightgray;
-    padding: 2rem;
-}
-.title{
-    font-family: 'Cedarville Cursive', cursive;
-    font-size: 2rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-around;
-}
 .search span{
     color: lightgray;
 }
@@ -27,7 +13,6 @@
     font-size: 2.5rem;
     padding: 0 1rem;
 }
-
 input{
     text-align: center;
 }

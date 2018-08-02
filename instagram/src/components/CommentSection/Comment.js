@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Col, Row} from 'reactstrap';
+import styled from 'styled-components';
+import Span from '../Styles/Styles';
 
 const Comment = props => {
     return(
-    <div>
-        <span>{props.comment.username} </span>
+    <Row>
+        <Col><Span>{props.comment.username} </Span></Col>
         {props.comment.text}
-    </div>
+    </Row>
     )
 }
 

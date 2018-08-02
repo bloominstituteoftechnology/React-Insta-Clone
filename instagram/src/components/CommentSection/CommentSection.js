@@ -1,7 +1,12 @@
 import React from 'react';
-import './CommentSection.css';
 import Comment from './Comment';
 import PropTypes from "prop-types";
+import {Row, Col, Form, Input} from 'reactstrap';
+import styled from 'styled-components';
+
+const Span = styled.span`
+    font-weight: bold;
+`;
 
 class CommentSection extends React.Component{
     constructor(props){
@@ -29,28 +34,28 @@ class CommentSection extends React.Component{
     }
     render(){
         return(
-            <div>
-                <div>
+            <Col>
+                <Row>
                     <i onClick={this.incrementLike} className="fa fa-heart-o like-comment" aria-hidden="true"></i>
                     <i className="fa fa-comment-o like-comment" aria-hidden="true"></i>
-                </div>
-                <div className='likes'>{this.state.likes} likes</div>
-                <div>
+                </Row>
+                <Span>{this.state.likes} likes</Span>
+                <Col>
                     {this.state.comments.map((comment, i) => {
                         return (
-                            <div key={i}>
+                            <Row key={i}>
                                 <Comment comment={comment} /> 
-                            </div>
+                            </Row>
                         )})}
-                </div>
-                <div>{this.props.timestamp}</div>
-                <form className='footer' onSubmit={this.addNewComment}>
-                    <input onChange={this.handleNewComment}
+                </Col>
+                <Col sm={{offset: -2}}>{this.props.timestamp}</Col>
+                <Form className='footer' onSubmit={this.addNewComment}>
+                    <Input onChange={this.handleNewComment}
                            className='add-comment' placeholder="Add a comment...">
-                    </input>
+                    </Input>
                     <i className="fa fa-ellipsis-h"></i>
-                </form>
-            </div>
+                </Form>
+            </Col>
         );  
     }
 }

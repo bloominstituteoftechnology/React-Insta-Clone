@@ -1,18 +1,11 @@
-.post-container{
-    border: 1px solid lightgray;
-    padding: 1rem;
-    max-width: 658px;
-    margin: 0 auto;
-}
+
 .user{
     padding: 1rem;
     font-weight: bold;
 }
-.thumbnail {
-    border-radius: 200px;
-    width: 35px;
-    height: 35px;
-}
+/* .thumbnail {
+
+} */
 .likes{
     font-weight: bold;
 }
@@ -22,10 +15,10 @@
 }
 .bottom-section{
     padding: 1rem;
-    border-bottom: 1px solid lightgray;
+
 }
 .footer{
-    border-bottom: 1px solid lightgray;
+
     position: relative;
 }
 .add-comment{

@@ -2,20 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Authenticate from './components/Authentication/Autheticate';
 import PostPage from './components/PostContainer/PostPage';
-// import {
-//   Collapse,
-//   Navbar,
-//   NavbarToggler,
-//   NavbarBrand,
-//   Nav,
-//   NavItem,
-//   NavLink,
-//   Container,
-//   Row,
-//   Col,
-//   Jumbotron,
-//   Button
-// } from 'reactstrap';
+import {Container} from 'reactstrap';
 
 class App extends Component {
   // constructor(props){
@@ -23,9 +10,9 @@ class App extends Component {
   // }
   render() {
     return (
-      <div className="container">
+      <Container>
           <PostPage />
-      </div>
+      </Container>
     );
   }
 }
