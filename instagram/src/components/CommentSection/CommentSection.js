@@ -2,6 +2,16 @@ import React from 'react';
 import Comment from './Comment'
 import './Comment.css'
 import AddComment from './AddComment'
+import styled from 'styled-components';
+
+const CommentContainer = styled.div`
+    padding: 20px 20px 10px 20px;
+`
+const Time = styled.div`
+    color: grey;     
+    font-size: 14px;  
+    padding-bottom: 10px;
+`
 
 class CommentSection extends React.Component{
     constructor(props){
@@ -25,22 +35,22 @@ class CommentSection extends React.Component{
 
     render(){
         return(
-            <div className = "comment-container">
+            <CommentContainer>
                 {this.state.comments.map(data =>
                 <Comment
                     name = {data.username}
                     comment = {data.text}
                 />
                 )}
-                <div className = "time">
+                <Time>
                     {this.state.date}
-                </div>
+                </Time>
                 <AddComment 
                     handleAdd = {this.addNewComment}
                     value = {this.state.newComment}
                     handleUpdate = {this.updateNewComment}
                 />
-            </div>
+            </CommentContainer>
         ) 
     }
           

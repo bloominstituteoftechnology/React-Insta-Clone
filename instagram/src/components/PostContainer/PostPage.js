@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import dummyData from '../../dummy-data'; 
-import PostConatainer from './PostContainer'
-import SearchBar from '../SearchBar/SearchBar'
+import PostConatainer from './PostContainer';
+import SearchBar from '../SearchBar/SearchBar';
+
+
+
 
 class PostPage extends Component {
   constructor(){

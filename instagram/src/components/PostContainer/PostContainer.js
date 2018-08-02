@@ -2,6 +2,17 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection'
 import Post from './Post'
 import './Post.css'
+import styled from 'styled-components';
+
+const PostWrap = styled.div`
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    box-shadow: 5px 7px 5px rgba(131, 131, 131, 0.459);
+    max-width: 640px;
+`
 
 class PostContainer extends React.Component{
     constructor(props){
@@ -18,7 +29,7 @@ class PostContainer extends React.Component{
 
     render(){       
     return(
-        <div className = "post-container">
+        <PostWrap>
             
             <Post 
                 name = {this.state.data.username}
@@ -33,7 +44,7 @@ class PostContainer extends React.Component{
                 data = {this.state.data}
             />
             
-        </div>
+        </PostWrap>
     )}
 }
 

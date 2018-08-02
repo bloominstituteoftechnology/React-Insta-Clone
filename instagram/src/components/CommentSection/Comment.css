@@ -1,17 +1,4 @@
-.comment-container{
-    padding: 20px 20px 10px 20px;
-}
-.comment-content{
-    margin: 10px 0;
-}
-.comment-username{
-    font-weight: bold;
-}
-.time{
-    color: grey;     
-    font-size: 14px;  
-    padding-bottom: 10px;
-}
+
 .add-comment{
     padding: 10px 0;
     border-top: 1px solid lightgray;
@@ -19,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.add-comment input{
+input{
     border:none;
     background-image:none;
     background-color:transparent;
@@ -30,6 +17,6 @@
     height: 30px;
     font-size: 18px;
 }
-.add-comment input:focus{
+input:focus{
     outline: 0;
 }
