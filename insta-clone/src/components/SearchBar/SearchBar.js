@@ -78,7 +78,7 @@ const SearchBar = props => {
     <StyledSearchBar>
       <SearchLeft>
         <i className='fab fa-instagram' />
-        <Logo>Instagram</Logo>
+        <Logo>Rinstagram</Logo>
       </SearchLeft>
       <SearchInput>
           <Search onChange={props.searchHandler} value={props.searchBar} onKeyPress={e => {if (e.charCode === 13){props.searchSubmit()}}} placeholder="Search" />
