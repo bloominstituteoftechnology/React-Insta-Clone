@@ -21,9 +21,9 @@ class SearchBar extends React.Component {
          
     }
 
+        
     handleHover = () => {
         const text = document.querySelector(".tooltiptext");
-        
         text.style.visibility = 'visible';
         const tip = document.querySelector(".tooltip");
         tip.style.background = 'red'; 
