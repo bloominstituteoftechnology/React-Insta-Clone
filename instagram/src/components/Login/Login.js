@@ -10,41 +10,18 @@ class Login extends Component {
     }
   }
 
-  usernameHandler = event => {
+  inputHandler = event => {
     this.setState({
-      username: event.target.value,
-    })
-  }
-
-  passwordHandler = event => {
-    this.setState({
-      password: event.target.value,
+      [event.target.name]: event.target.value,
     })
   }
 
   toStorage = event => {
     event.preventDefault();
-    console.log(event.target.value);
-    console.log("toStorage called")
     localStorage.setItem("Username", `${this.state.username}`)
     localStorage.setItem("Password", `${this.state.password}`)
-    this.setState({
-      username: "",
-      password: "",
-    })
-
-    // let userCheck = '';
-    // userCheck = localStorage.getItem('username');
-    // if (userCheck === null) {
-    //   console.log("usernameEmpty");
-    // } else {
-    //   console.log("usernameLogged:", localStorage.getItem('username'))
-    //   this.setState({
-    //     loggedIn: true,
-    //   })
-    // }
+    this.setState({username: "", password: "",})
     window.location.reload();
-
   }
 
   render(){
@@ -55,14 +32,16 @@ class Login extends Component {
           className="login"
           onSubmit={this.toStorage}>
           <input
+            name="username"
             value={this.state.username}
             placeholder="name"
-            onChange={this.usernameHandler}
+            onChange={this.inputHandler}
             >{this.value}</input>
           <input
+            name="password"
             value={this.state.password}
             placeholder="password"
-            onChange={this.passwordHandler}>{this.value}</input>
+            onChange={this.inputHandler}>{this.value}</input>
           <button
             >Submit</button>
         </form>
