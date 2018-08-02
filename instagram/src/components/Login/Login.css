@@ -1,0 +1,25 @@
+.login-wrap {
+    background-color: lightcoral;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.login-welcome {
+    font-size: 55px;
+    padding-bottom: 22px;
+}
+
+.login-btn {
+    border-radius: 6px;
+    margin-top: 5px;
+}
