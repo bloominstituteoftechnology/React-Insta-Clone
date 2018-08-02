@@ -11,13 +11,18 @@ class CommentSection extends React.Component {
         this.state={
             comments: props.comments,
             timestamp: props.timestamp,
-            newComment: ''
+            newComment: '',
+            username:''
         }
+    }
+    componentDidMount(){
+        const username=localStorage.getItem('username');
+        this.setState({username:username});
     }
     addNewComment=(index)=>{
         const commentsCopy=this.state.comments.slice();
         commentsCopy[index]=({
-            username: 'sonOfCoul',
+            username: this.state.username,
             text: this.state.newComment
         });
         this.setState({comments: commentsCopy,newComment:''});

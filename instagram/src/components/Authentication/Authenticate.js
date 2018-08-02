@@ -3,10 +3,10 @@ import Login from '../Login/login.js';
 
 const Authenticate=App=>
     class extends React.Component {
-        constructor(){
-            super();
+        constructor(props){
+            super(props);
             this.state={
-                loggedIn: ''
+                loggedIn: false
             }
         }
         componentDidMount() {

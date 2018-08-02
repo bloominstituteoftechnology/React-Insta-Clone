@@ -1,12 +1,34 @@
 import React from 'react';
 
-const Login=props=>{
+class Login extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state={
+            username: '',
+            password: ''
+        }
+    }
+handleUserNameChange=(e)=> {
+    this.setState({username:e.target.value});
+}
+handlePassWordChange=(e)=>{
+    this.setState({password:e.target.value});
+}
+logIn=()=>{
+    localStorage.setItem('username',this.state.username);
+}
+render () {
     return (
-        <form onSubmit={props.login}>
-            <input type='text' placeholder='enter a username' value={props.username} onChange={(e)=>props.logInChange(e)}/>
-            <input type='password'/>
+        <form onSubmit={this.logIn}>
+            <input type='text' placeholder='enter a username' value={this.state.username} onChange={(e)=>this.handleUserNameChange(e)}/>
+            <input type='password' placeholder='enter a password' value={this.state.password} onChange={(e)=>this.handlePassWordChange(e)}/>
             <button>Login</button>
         </form>
     )
 }
+}        
+    
+
+
+    
 export default Login;
