@@ -7,8 +7,19 @@ class PostPage extends Component {
     constructor() {
         super();
         this.state = {
-            dummyData: []
+            dummyData: [],
+            input: []
         };
+    }
+
+    searchInput = event => {
+        this.setState ({ input: event.target.value })
+    }
+
+    searchFunction = event => {
+        event.preventDefault();
+        let filterData = this.state.dummyData.filter(element => element.username.includes(this.state.input));
+        this.setState({ dummyData: filterData });
     }
 
     componentDidMount () {
@@ -17,8 +28,8 @@ class PostPage extends Component {
 
     render () {
         return (
-            <div className="App">
-                <SearchBar />
+            <div className="post-page">
+                <SearchBar search={ this.searchFunction } searchPost={ this.searchInput } />
                 <PostContainer posts={this.state.dummyData} />
             </div>
         );
