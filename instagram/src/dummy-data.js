@@ -13,6 +13,7 @@ const dummyData = [
         username: "philzcoffee",
         text:
           "We've got more than just delicious coffees to offer at our shops!"
+       
       },
       {
         username: "biancasaurus",

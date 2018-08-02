@@ -1,0 +1,37 @@
+.search{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 20px;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    font-size: 28px;
+    margin: auto 50px;
+}
+
+.instagram{
+  width: 25%;
+  height: 25%;
+  margin-right: 50px;
+}
+
+.fas{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.fab{
+    font-size: 46px;
+}
+
+.search-bar{
+    margin: auto;
+}
+
+.search-bar span{
+    margin: auto;
+    font-size: 46px;
+}
