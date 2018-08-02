@@ -1,6 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-import './SearchBar.css';
 
 const Header = styled.header`
     height: 77px;
@@ -31,11 +30,21 @@ const SearchInput = styled.input`
     border-radius: 5px;
 `;
 
+const SocialIcons = styled.i`
+    font-size: 24px;
+    padding: 0 15px;
+`;
+
+const Instagram = styled.i`
+    font-size: 30px;
+    padding: 0 15px;
+`;
+
 const SearchBar = (props) => {
     return (
         <Header>
         <LogoHeader>
-        <i className="fab fa-instagram"></i>
+        <Instagram className="fab fa-instagram"></Instagram>
         <LogoImage alt="instagram logo" src="https://raw.githubusercontent.com/LambdaSchool/React-Insta-Clone/4079cf6fb6d11bd3ad7a422cdec35e0aab4e2bfe/instagram/src/assets/iglogo.png" className="logo" />
         </LogoHeader>
         <form onSubmit={props.searchPosts}>
@@ -46,9 +55,9 @@ const SearchBar = (props) => {
                 />
         </form>
         <div>
-        <i className="far fa-compass"></i>
-        <i className="far fa-heart"></i>
-        <i className="far fa-user"></i>
+        <SocialIcons className="far fa-compass"></SocialIcons>
+        <SocialIcons className="far fa-heart"></SocialIcons>
+        <SocialIcons className="far fa-user"></SocialIcons>
         </div>
         </Header>
     )

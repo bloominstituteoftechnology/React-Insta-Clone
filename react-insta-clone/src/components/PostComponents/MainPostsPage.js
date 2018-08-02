@@ -40,7 +40,7 @@ class PostsPage extends Component {
 
   render() {
     return (
-      <div className="main-page">
+      <div>
         <SearchBar
         searchInputHandler = {this.searchInputHandler}
         searchPosts = {this.searchPosts}
