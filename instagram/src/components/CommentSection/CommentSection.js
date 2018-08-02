@@ -52,6 +52,7 @@ class CommentSection extends React.Component {
       liked: !this.state.liked
     });
   };
+
   render() {
     return (
       <div className="commentDiv">
