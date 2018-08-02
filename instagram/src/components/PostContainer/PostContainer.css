@@ -57,6 +57,7 @@
 .post__buttons {
   height: 24px;
   margin: 10px 0;
+  cursor: pointer;
 }
 
 .post__buttons img {
@@ -80,6 +81,10 @@
 @media (max-width: 500px) {
   .post {
     margin-top: 0;
+    border: none;
+  }
+  .post__header {
+    background-color:#fafafa;
   }
   .hide {
     display: none;
