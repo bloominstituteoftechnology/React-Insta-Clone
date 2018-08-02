@@ -4,8 +4,9 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 import Authenticate from './authentication/Authenticate';
+import PostsPage from './components/PostContainer/PostsPage';
 
-const AuthenticateContainer= Authenticate(PostContainer);
+const AuthenticateContainer= Authenticate(PostsPage);
 
 class App extends Component {
   constructor(){

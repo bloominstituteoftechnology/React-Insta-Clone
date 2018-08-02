@@ -6,7 +6,7 @@ const PostContainer = (props) => {
     console.log(props);
     return ( 
         <div>
-    
+    {props.posts.map(dummy_data=><Post data={dummy_data}/>)}
     </div>
      );
 }
