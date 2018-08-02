@@ -3,7 +3,14 @@ import PostContainer from './PostContainer.js';
 import dummyData from '../../dummy-data.js';
 import fuzzy from 'fuzzy';
 import SearchBar from '../SearchBar/SearchBar.js';
+import styled from 'styled-components';
 
+const Posts=styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`
 class PostsPage extends React.Component {
     constructor() {
       super();
@@ -41,12 +48,12 @@ class PostsPage extends React.Component {
       return (
         <div>
           <SearchBar searchValue={this.searchBarValue} handleInputChange={this.handleSearchBarChange}/>
-          <div className='posts'>
+          <Posts>
           {this.state.searchBarValue.length===0 ?
           this.state.posts.map((e)=><PostContainer data={e} liked={this.liked.bind(this)} key={e.imageUrl}/>):
           this.state.filteredPosts.map((e)=><PostContainer liked={this.liked.bind(this)} data={e} key={e.imageUrl}/>
           )}
-          </div>
+          </Posts>
         </div>
       );
     }

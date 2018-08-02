@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
 import Authenticate from './components/Authentication/Authenticate.js';
 import PostPage from './components/PostContainer/PostsPage.js';
+import styled from 'styled-components';
+
+const AppText=styled.div`
+  text-align: center;
+`
 const App=Authenticate(
   class App extends Component {
   constructor() {
@@ -17,9 +21,9 @@ const App=Authenticate(
   
   render() {
     return (
-      <div className="App">
+      <AppText>
         <PostPage/>
-      </div>
+      </AppText>
     );
   }
 }
