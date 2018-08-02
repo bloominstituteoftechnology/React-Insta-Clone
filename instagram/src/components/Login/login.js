@@ -4,14 +4,15 @@ class Login extends React.Component{
     constructor(props) {
         super(props);
         this.state={
-            username: ''
+            username: '',
+            password:''
         }
     }
 handleUserNameChange=(e)=> {
-    this.setState({[e.target.name]:e.target.value});
+    this.setState({[e.target.name]:e.target.value},()=>console.log(this.state.username));
 }
 handlePassWordChange=(e)=>{
-    this.setState({[e.target.name]:e.target.value});
+    this.setState({[e.target.name]:e.target.value},()=>console.log(this.state.password));
 }
 logIn=()=>{
     localStorage.setItem('username',this.state.username);
