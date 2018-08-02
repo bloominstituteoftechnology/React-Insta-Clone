@@ -1,6 +1,5 @@
 import React from "react";
 
-import Login from "../Login/Login";
 import SearchBar from "../SearchBar/SearchBar";
 import PostContainer from "./PostContainer";
 import dummyData from "./dummy-data";

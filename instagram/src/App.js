@@ -1,25 +1,19 @@
-import React, { Component } from 'react';
-import './App.css';
-import PostsPage from './components/PostContainer/PostsPage';
-import Authenticate from './components/Authentication/Authenticate';
-
+import React, { Component } from "react";
+import "./App.css";
+import PostsPage from "./components/PostContainer/PostsPage";
+import Authenticate from "./components/Authentication/Authenticate";
 
 class App extends Component {
-  constructor () {
+  constructor() {
     super();
-    this.state = {
-      
-    }
+    this.state = {};
   }
 
-  
-  componentDidMount () {
-  }
+  componentDidMount() {}
   render() {
     return (
       <div>
-      <PostsPage />
-      
+        <PostsPage />
       </div>
     );
   }

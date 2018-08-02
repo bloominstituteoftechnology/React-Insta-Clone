@@ -16,6 +16,7 @@ const Authenticate = App =>
         username: event.target.value
       });
     };
+
     handleLogin = () => {
       localStorage.setItem("username", this.state.username);
     };

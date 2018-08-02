@@ -8,11 +8,11 @@ class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     let postDate = props.comment.timestamp.split(",")[0];
-    postDate = postDate.replace("th", "").split(" ")
-    postDate = postDate[1] + " " + postDate[0] + " " + postDate[2]
+    postDate = postDate.replace("th", "").split(" ");
+    postDate = postDate[1] + " " + postDate[0] + " " + postDate[2];
     postDate = new Date(postDate).getTime();
     let dateNow = Date.now();
-    this.timeSince = Math.ceil((dateNow - postDate) / (1000 * 3600 * 24))
+    this.timeSince = Math.ceil((dateNow - postDate) / (1000 * 3600 * 24));
 
     this.state = {
       comment: props.comment,
@@ -34,6 +34,7 @@ class CommentSection extends React.Component {
     this.setState({
       comments: arrayOfComments
     });
+    // window.location.reload();
   };
 
   handleInputChange = event => {

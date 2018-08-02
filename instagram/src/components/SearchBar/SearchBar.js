@@ -42,7 +42,11 @@ class SearchBar extends React.Component {
           className="searchBarInputDiv"
           onChange={this.handleSearchBarInputChange}
         >
-          <input placeholder="&#x1F50D; Search" type="text" />
+          <input
+            className="search-input fa fa-input"
+            placeholder="&#xf002; Search"
+            type="search"
+          />
         </form>
 
         {/* start links div */}
@@ -64,4 +68,7 @@ class SearchBar extends React.Component {
   }
 }
 
+// SearchBar.propTypes = {
+//   comments: Proptypes.arrayOf()
+// }
 export default SearchBar;
