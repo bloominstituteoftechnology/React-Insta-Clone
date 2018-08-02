@@ -14,7 +14,7 @@ const Authenticate = Component =>
     render() {
       {console.log(Component )}
       return (
-        <div>
+        <div >
           <Component />
           <h1>Authentication!</h1>
         </div>

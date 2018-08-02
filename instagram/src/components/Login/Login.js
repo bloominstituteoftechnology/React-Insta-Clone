@@ -4,19 +4,29 @@ class Login extends Component {
   constructor(){
     super();
     this.state = {
-      login: true,
+      loggedIn: true,
+      loginValue: "",
     }
+  }
+
+  inputHandler = event => {
+    this.setState({
+      loginValue: event.target.value,
+    })
   }
 
   render(){
     {console.log('hi')}
     return (
-      <div>
+      <div className="login">
         <h1>LOGIN PAGE</h1>
-        <h1>LOGIN PAGE</h1>
-        <h1>LOGIN PAGE</h1>
-        <h1>LOGIN PAGE</h1>
-        <h1>LOGIN PAGE</h1>
+        <form>
+          <input
+            value={this.state.loginValue}
+            placeholder="enter name"
+            onchange={this.inputHandler}>{this.value}</input>
+        </form>
+
       </div>
     )
   }

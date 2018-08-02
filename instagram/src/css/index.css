@@ -86,23 +86,21 @@
   margin: 5px;
 }
 .search-main {
-  border: .5px solid lightgray;
+  border: 0.5px solid lightgray;
   background-color: white;
-  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 5px 0;
   top: 0px;
-  position: fixed;
 }
 form {
   margin-right: 15px;
   padding: 0;
 }
 .search-bar {
-  border: .5px solid gray;
+  border: 0.5px solid gray;
   background-color: snow;
   width: 100%;
   height: 25px;
@@ -136,4 +134,15 @@ form {
 }
 .app .all-posts {
   margin-top: 50px;
+}
+.login {
+  z-index: 20;
+  width: 100%;
+  height: 100vh;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
