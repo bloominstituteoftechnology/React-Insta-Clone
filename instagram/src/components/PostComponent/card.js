@@ -9,7 +9,7 @@ class Card extends Component {
         this.state = {
             comments: props.post.comments,
             currentComment: '',
-            currentUser: 'kamalnrf',
+            currentUser: localStorage.getItem('userName'),
             likes: props.post.likes,
             liked: false
         };
