@@ -36,7 +36,7 @@ this.setState({ username: user });
 }
   render() {
     return (
-      <div className="container">
+      <div className="App container">
         <PostPage/>
       </div>
     );
