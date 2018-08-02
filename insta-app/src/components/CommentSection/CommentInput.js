@@ -2,6 +2,34 @@ import React from "react";
 import PropTypes from "prop-types";
 import CommentSection from "./CommentSection";
 import Comment from "./Comment";
+import styled from "styled-components"; 
+
+const ImgIcons = styled.div`
+display: flex; 
+flex-direction: row; 
+justify-content: space-between;
+width:auto; 
+`
+const ImgIconLeft = styled.div`
+margin: 5px 0; 
+display: flex; 
+align-items: center; 
+`
+const ImgIconRight = styled.div`
+margin: 5px 0; 
+display: flex; 
+align-items: center; 
+`
+const Itag = styled.i`
+margin: 0 10px; 
+cursor: pointer;
+`
+const Likes = styled.div`
+font-size: 12px;
+margin-left: 10px;  
+margin: 10px 0; 
+font-weight: 700; 
+` 
 
 class CommentInput extends React.Component {
   constructor(props) {
@@ -32,17 +60,17 @@ class CommentInput extends React.Component {
   render() {
     return (
       <div>
-        <div className="img-icons">
-        <div className="img-icon-left">
-            <i onClick={this.likeBtn}className="far fa-heart" />
-            <i className="far fa-comment" />
-            <i className="fas fa-paper-plane" />
-        </div>
-        <div className="img-icon-right">
-            <i className="far fa-bookmark" />
-        </div>
-        </div>
-        <div className="comment user likes">{this.state.likes} likes</div>
+        <ImgIcons>
+        <ImgIconLeft>
+            <Itag onClick={this.likeBtn}className="far fa-heart" />
+            <Itag className="far fa-comment" />
+            <Itag className="fas fa-paper-plane" />
+        </ImgIconLeft>
+        <ImgIconRight>
+            <Itag className="far fa-bookmark" />
+        </ImgIconRight>
+        </ImgIcons>
+        <Likes>{this.state.likes} likes</Likes>
         <CommentSection 
         comments={this.state.comments} />
         <Comment

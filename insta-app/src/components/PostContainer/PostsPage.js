@@ -2,6 +2,17 @@ import React, { Component } from "react";
 import dummyData from "../../dummy-data";
 import SearchBar from "../SearchBar/SearchBar";
 import PostContainer from "./PostContainer";
+import styled from "styled-components"; 
+
+const Background = styled.div`
+background: lightgrey; 
+`
+const AppContainer = styled.div`
+width: 500px; 
+height: auto; 
+margin: auto; 
+background: white;
+`
 
 class PostsPage extends Component {
     constructor() {
@@ -16,14 +27,14 @@ class PostsPage extends Component {
     }
     render() {
       return (
-          <div className="background">
+          <Background>
            <SearchBar />
-          <div className="app-container">
+          <AppContainer>
           <PostContainer 
           handleLikeBtn = {this.likeBtn}
           posts={this.state.data} />
-        </div>
-        </div>
+        </AppContainer>
+        </Background>
       );
     }
   }

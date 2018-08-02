@@ -1,5 +1,24 @@
 import React from "react";
-import PropTypes from "prop-types";
+import styled from "styled-components"; 
+
+const CommentContainer = styled.div`
+height: auto; 
+margin: 20px 0; 
+`
+const CommentSec = styled.div`
+display: flex; 
+flex-direction: row; 
+`
+const CommentUser = styled.p`
+font-weight: 700; 
+font-size: 12px;
+margin-left: 10px;  
+`
+const Comment = styled.p`
+font-size: 12px;
+margin-left: 10px;  
+`
+
 
 //what is going on in the code
 //I am creating a object called CommentSection.
@@ -9,10 +28,10 @@ const CommentSection = props => {
     <div className="comment-container">
       {props.comments.map((eachComment, index) => (
         <div key={index}>
-          <div className="comment-section">
-            <p className="comment user">{eachComment.username}</p>
-            <p className="comment">{eachComment.text}</p>
-          </div>
+          <CommentSec>
+            <CommentUser>{eachComment.username}</CommentUser>
+            <Comment>{eachComment.text}</Comment>
+          </CommentSec>
         </div>
       ))}
     </div>
