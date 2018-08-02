@@ -23,6 +23,8 @@
 .search-input {
   width: 300px;
   text-align: center;
+  font-size: 16px;
+  font-weight: light;
 }
 
 .scaled {

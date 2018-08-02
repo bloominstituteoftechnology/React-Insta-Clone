@@ -47,19 +47,21 @@ class CommentContainer extends Component {
   render() {
     return (
       <div className="comment-container">
-        <div className="icons">
+        <div className="iconic">
           <i
-            className={this.state.liked ? "fas fa-heart" : "far fa-heart"}
+            className={
+              this.state.liked ? " ico fas fa-heart" : "ico far fa-heart"
+            }
             onClick={this.likeToggle}
           />
-          <i className="far fa-comment" />
+          <i className="ico fab far fa-comment" />
         </div>
         <div className="likes"> {this.state.likes} likes </div>
-        <div className="time"> {this.state.timestamp} </div>
 
         {this.state.comments.map(item => <Comment eye={item} />)}
-
+        <div className="time"> {this.state.timestamp} </div>
         <input
+          className="comment-box"
           value={this.state.input}
           onChange={this.saveComment}
           onKeyPress={this.addNewComment}
