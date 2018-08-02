@@ -20,28 +20,21 @@ const PostContainer = props => {
               <img className="avatar" src={post.thumbnailUrl} />
               <div className="postUser">{post.username}</div>
             </div>
-
             <img src={post.imageUrl} />
 
-            <div className="postBot">
-              <div className="botIcons">
-                <i class="far fa-heart"></i>
-                <i class="far fa-comment"></i>
-              </div>
-              <div className="postLikes">{post.likes + " likes"} </div>
+            <CommentSection com={post} />
             </div>
-            <CommentSection comments={post.comments} />
-            <div className="postTimestamp">{post.timestamp}</div>
-          </div>
-        )
-      })}
-
+            )
+          })}
+    
     </div>
-  )
-};
-
+    
+    )
+  };
+  
+  
 PostContainer.propTypes = {
-  data: PropTypes.array
-}
-
+        data: PropTypes.array
+    }
+    
 export default PostContainer;

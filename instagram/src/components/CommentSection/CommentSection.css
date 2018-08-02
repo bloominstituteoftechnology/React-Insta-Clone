@@ -1,11 +1,13 @@
 .commentContent {
     padding-left: 15px;
     font-size: 14px;
-    line-height: 6px;
+    
 }
 
 .commentUser {
     font-weight: bold;
+    margin-right: 5px;
+    line-height: 19px;
 }
 
 .commentInput {
@@ -13,4 +15,8 @@
     height: 80px;
     margin-bottom: 20px;
     margin-top: 15px;
+}
+
+.fas {
+    color: rgba(16, 157, 238, 0.794);
 }

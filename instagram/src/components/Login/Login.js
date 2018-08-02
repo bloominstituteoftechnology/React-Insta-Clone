@@ -20,7 +20,7 @@ class Login extends Component {
             <div className="login-containter">
                 <form className="login-form">
                     <input className="username-input" placeholder="Enter Username" onChange={this.save}/>
-                    <input classname="password-input" placeholder="Enter Password" />
+                    <input classname="password-input" placeholder="Enter Password"/>
                     <button onClick={this.login} className="Button-input" />
                 </form>
             </div>

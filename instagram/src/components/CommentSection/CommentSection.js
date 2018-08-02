@@ -1,55 +1,69 @@
 import React from 'react';
 import './CommentSection.css';
 import PropTypes from 'prop-types';
-
+import Comment from "./Comment.js";
 
 
 class CommentSection extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            commentState: [],
-            input: ""
+            commentState: props.com.comments,
+            input: "",
+            likes: props.com.likes,
+            time: props.com.timestamp,
+            liked: false
         }
     }
-    componentDidMount() {
-        this.setState(
-            { commentState: this.props.comments });
+
+    toggleLike = () => {
+        let likesCopy = this.state.likes;
+        if (this.state.liked === false ) {
+            likesCopy++
+            this.setState({likes: likesCopy, liked: true})
+        } else {
+            likesCopy--;
+            this.setState({likes: likesCopy, liked: false})
+        }
     }
 
-    addNewComment(event, indexNumber) {
+    addNewComment = (event) => {
+        if (event.key === "Enter") {
+            const commentSlice = this.state.commentState.slice();
+            commentSlice.push({
+                username: "NaazButtzZzzNToes",
+                text: this.state.input
+            });
 
-        const commentSlice = this.state.commentState.slice();
-        commentSlice.push({
-            newComment: this.state.input,
-        });
+            this.setState({ commentState: commentSlice });
+            this.setState({ input: "" });
+        };
+    }
 
-        this.setState({ commentState: commentSlice });
-        this.setState({ input: "" });
-    };
-
-
+    saveComment = (event) => {
+        this.setState({ input: event.target.value });
+    }
 
     render() {
         return (
             <div>
-                {this.props.comments.map(comment => {
-                    return (
-                        <div className="commentContent"> <p>
-                            <span className="commentUser">{comment.username} </span>
-                            {comment.text}
-                        </p>
-                        </div>
 
-                    )
-                }
+                <div className="postBot">
+                    <div className="botIcons">
+                        <i className={this.state.liked ? "fas fa-heart" : "far fa-heart"} onClick={this.toggleLike}></i>
+                        <i className="far fa-comment"></i>
+                    </div>
+                    <div className="postLikes">{this.state.likes + " likes"} </div>
+                </div>
 
-                )}
-                
-                <form>
-                    <input addNewComment={this.addNewComment} className="commentInput" placeholder="Add a comment..." />
-                </form>
+
+
+                {this.state.commentState.map(item => <Comment com={item} />)}
+                <div className="postTimestamp">{this.state.time}</div>
+                <input value={this.state.input} onChange={this.saveComment} onKeyPress={this.addNewComment} className="commentInput" placeholder="Add a comment..." />
+
             </div>
+
         );
     }
 }
