@@ -1,12 +1,3 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 800px;
-    margin: 20px auto;
-    padding-right: 50px;
-}
-
 .icons{
     width: 150px;
     display: flex;
