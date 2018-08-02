@@ -22,8 +22,9 @@ class CommentSection extends React.Component {
     }
     
     addNewComment = event => {
-        const text = this.state.temp;
-        const comments = this.state.comments; 
+        
+        const text = this.state.temp.slice();
+        const comments = this.state.comments.slice(); 
         if(event.keyCode === 13 ){ 
             comments.push({username: this.props.userIn, text:text})
             event.target.value = ""
@@ -34,6 +35,7 @@ class CommentSection extends React.Component {
             comments.push({username: this.props.userIn, text:text})
             this.setState({comments: comments, temp:""});
         }
+        console.log(text.length);
     }
 
     handleOnSubmit = event => {
@@ -58,7 +60,7 @@ class CommentSection extends React.Component {
             <div >
                 {comments.map((comment, i) => <Comments key={i}userName = {comment.username} text = {comment.text} onDoubleClick = {this.deleteComment}/>)}
                 
-                {/* <h4 className = "timeStamp">{time}</h4> */}
+                
                 <TimeStamp>{time}</TimeStamp>
                 
                 <PostHrLine />
@@ -66,12 +68,18 @@ class CommentSection extends React.Component {
                 <AddComment>
 
                   
-                  <NewComment onSumbit = {this.handleOnSubmit}>    
+                  {/* <NewComment onSumbit = {this.handleOnSubmit}>    
                     <AddCommentInput value = {value} onChange = {this.handleOnChange} onKeyUp = {this.addNewComment} placeholder = "Add a comment..." />
                     <br/>
                     
-                    <SubmitIcon onMouseEnter = {this.handleHover}onClick= {this.addNewComment} className="fas fa-ellipsis-h">Submit </SubmitIcon>
-                  </NewComment> 
+                    <SubmitIcon onClick = {this.addNewComment} className="fas fa-ellipsis-h">Submit </SubmitIcon>
+                    {/* onMouseEnter = {this.handleHover} */}
+                  {/* </NewComment>  */} 
+                  <form className ="newComment" onSubmit ={this.handleOnSubmit}>      
+                    <input className ="addCommentInput"  value = {value} onChange = {this.handleOnChange} onKeyUp = {this.addNewComment} placeholder = "Add a comment..."/>
+                    <br/>
+                    <i onClick= {this.addNewComment} className="fas fa-ellipsis-h">Submit</i>
+                 </form>
                 </AddComment>
             </div>
         );
