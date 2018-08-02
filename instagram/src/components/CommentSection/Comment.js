@@ -1,12 +1,22 @@
 import React from "react";
 import "./Comment.css";
+import styled from "styled-components";
+
+const CommentThread = styled.div`
+  display: flex;
+  margin-top: 12px;
+`;
+
+const CommentName = styled.div`
+  font-weight: bold;
+`;
 
 const Comment = prop => {
   return (
-    <div className="comment-thread">
-      <div className="comment-name"> {prop.eye.username}</div>
+    <CommentThread>
+      <CommentName>{prop.eye.username}</CommentName>
       <div className="comment-text">{prop.eye.text} </div>
-    </div>
+    </CommentThread>
   );
 };
 

@@ -1,4 +1,4 @@
-.container2 {
+/* .container2 {
   height: 100vh;
   justify-content: center;
   background: radial-gradient(ellipse, #bc2a8d, yellow, orange);
@@ -13,9 +13,9 @@
   width: 100px;
   flex-direction: column;
   margin-right: 20px;
-}
+} */
 
-.login-buttn {
-  height: 100%;
-  /* width: 100; */
-}
+/* .login-buttn {
+  height: 100%; */
+/* width: 100; */
+/* } */

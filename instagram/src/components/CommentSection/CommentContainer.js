@@ -1,6 +1,35 @@
 import React, { Component } from "react";
-import "./Comment.css";
+// import "./Comment.css";
 import Comment from "./Comment";
+import styled from "styled-components";
+
+const CommentContain = styled.div`
+  margin: 10px 10px;
+`;
+
+const Iconic = styled.div`
+  display: flex;
+`;
+
+const Ico = styled.div`
+  font-size: 20px;
+  .fas {
+    color: red;
+  }
+  .fab {
+    margin: 0 0 0 10px;
+  }
+`;
+
+const Commentbox = styled.input`
+  width: 90%;
+  height: 50px;
+  font-size: 16px;
+`;
+
+const Like = styled.div`
+  font-weight: bold;
+`;
 
 class CommentContainer extends Component {
   constructor(props) {
@@ -46,29 +75,26 @@ class CommentContainer extends Component {
 
   render() {
     return (
-      <div className="comment-container">
-        <div className="iconic">
-          <i
-            className={
-              this.state.liked ? " ico fas fa-heart" : "ico far fa-heart"
-            }
+      <CommentContain>
+        <Iconic>
+          <Ico
+            className={this.state.liked ? "fas fa-heart" : "far fa-heart"}
             onClick={this.likeToggle}
           />
-          <i className="ico fab far fa-comment" />
-        </div>
-        <div className="likes"> {this.state.likes} likes </div>
+          <Ico className="fab far fa-comment" />
+        </Iconic>
+        <Like>{this.state.likes} likes </Like>
 
         {this.state.comments.map(item => <Comment eye={item} />)}
         <div className="time"> {this.state.timestamp} </div>
-        <input
-          className="comment-box"
+        <Commentbox
           value={this.state.input}
           onChange={this.saveComment}
           onKeyPress={this.addNewComment}
           placeholder="Add a comment..."
         />
         <i className="fa fa-ellipsis-h" aria-hidden="true" />
-      </div>
+      </CommentContain>
     );
   }
 }

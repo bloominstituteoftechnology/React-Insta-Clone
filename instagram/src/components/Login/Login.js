@@ -1,5 +1,27 @@
 import React, { Component } from "react";
-import "./Login.css";
+// import "./Login.css";
+import styled from "styled-components";
+
+const ContainerL = styled.div`
+  height: 100vh;
+  justify-content: center;
+  background: radial-gradient(ellipse, #bc2a8d, yellow, orange);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 900px;
+`;
+
+const Loginst = styled.div`
+  width: 100px;
+  flex-direction: column;
+  margin-right: 20px;
+`;
+
+const LoginButt = styled.button`
+  height: 100%;
+`;
 
 class Login extends Component {
   constructor() {
@@ -19,9 +41,9 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="container2">
+      <ContainerL>
         <h1 className="insta">Instagram</h1>
-        <div className="logins">
+        <Loginst>
           <form className="login-form">
             <input
               className="input"
@@ -29,12 +51,12 @@ class Login extends Component {
               onChange={this.save}
             />
             <input className="password" placeholder="password" />
-            <button onClick={this.login} className="login-buttn">
+            <LoginButt onClick={this.login} className="login-buttn">
               Login
-            </button>
+            </LoginButt>
           </form>
-        </div>
-      </div>
+        </Loginst>
+      </ContainerL>
     );
   }
 }
