@@ -37,7 +37,6 @@ class CommentSection extends React.Component {
                     comment={this.state.comment}
                     submitComment={this.handleCommentSubmit}
                     changeComment={this.commentHandler} />
-
             </Container>
         )
     }
