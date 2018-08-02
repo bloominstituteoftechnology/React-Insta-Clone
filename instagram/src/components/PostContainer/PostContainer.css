@@ -2,30 +2,32 @@
     /* text-align: left; */
     /* display: flex; */
     /* flex-wrap: wrap; */
-    margin: 22px 0;
-    border: 1px solid lightgray;
+    /* margin: 22px 0;
+    border: 1px solid lightgray; */
 }
 
 .post-header-wrap {
-    display: flex; 
-    flex-direction: row; 
+    /* display: flex; 
     align-items: center; 
-    margin: 10px 0; 
+    margin: 10px 0;  */
 }
 
 .post-thumb-wrap {
-    height: 50px;
+    /* height: 50px;
     width: 50px;
-    margin-right: 10px;
+    margin-right: 10px; */
 }
 
 .post-thumb {
-    height: 100%;
-    border-radius: 50%;
+    /* height: 100%; */
+    /* border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 0 10px; */
 }
 
 .comment-section-wrap {
-    text-align: left;
+    /* text-align: left; */
     /* display: flex; */
 }
 

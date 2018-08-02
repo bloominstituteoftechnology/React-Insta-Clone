@@ -1,15 +1,15 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
   /* border: 1px solid salmon; */
   /* max-width: 70%; */
   /* display:flex;
   flex-wrap: wrap;
   border: 1px solid black; */
   /* flex: 0 1 60%; */
-  min-width: 400px;
+  /* min-width: 400px; */
 }
 
-.App-logo {
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
@@ -27,9 +27,9 @@
 
 .App-intro {
   font-size: large;
-}
+} */
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+} */
