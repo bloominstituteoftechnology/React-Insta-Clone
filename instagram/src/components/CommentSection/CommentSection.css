@@ -25,3 +25,9 @@
     border-bottom: none!important;
   box-shadow: none!important;
 }
+.fa-times{
+    opacity:0;
+}
+.fa-times:hover{
+    opacity:1;
+}

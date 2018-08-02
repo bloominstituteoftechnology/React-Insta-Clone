@@ -39,19 +39,15 @@ class CommentSection extends React.Component {
         dynamicDate=new Date(dynamicDate.join(' '));
         return moment(dynamicDate).fromNow();
     }
-    deleteComment=(username,text)=>{
+    deleteComment=(i)=>{
         const comments=this.state.comments.slice();
-        for (let i=0; i<comments.length; i++) {
-            if (comments[i].username===username && comments[i].text===text) {
-                comments.splice(i,1);
-            }
-        }
-        this.setState({comments:comments});
+        comments.splice(i,1);
+        return this.setState({comments:comments});
     }    
     render() {
         return (
             <div>
-                {this.state.comments.map((e,i)=><Comment data={e} username={this.state.username} key={i} commentDelete={this.deleteComment}/>)}
+                {this.state.comments.map((e,i)=><Comment data={e} username={this.state.username} itemNumber={i} key={i} commentDelete={this.deleteComment}/>)}
                 <p className='time-stamp'>{this.dynamicDate(this.state.timestamp)}</p>
                 <div className='rule'></div>
                 <AddCommentBar value={this.state.newComment} inputHelper={this.handleInputChange} handleInputSubmit={this.addNewComment} length={this.state.comments.length}/>
