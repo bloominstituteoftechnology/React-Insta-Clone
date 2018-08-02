@@ -1,6 +1,7 @@
 import React from 'react';
+import './Login.css';
 
-class Login extends Component {
+class Login extends React.Component {
     constructor(props){
     super(props);
     this.state = {
@@ -11,7 +12,7 @@ class Login extends Component {
 
 
     handleInputChange = e => {
-        this.setState({[e.target.name]: e.target});
+        this.setState({[e.target.name]: e.target.value});
     }
 
     handleLoginSubmit = e => {
@@ -25,13 +26,15 @@ class Login extends Component {
         return (  
             <form>
                 <input
+                name="username"
                 type="text" 
                 placeholder="User Name"
                 value={this.state.username}
                 onChange= {this.handleInputChange}
                  />
                 <input 
-                type="password"
+                name="password"
+                type="text"
                 placeholder="Password" 
                 value={this.state.password}
                 onChange={this.handleInputChange}

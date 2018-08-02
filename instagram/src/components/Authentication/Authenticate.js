@@ -11,7 +11,7 @@ const Authenticate = App =>
            };
        }
        componentDidMount() {
-            if (localstorage.getItem('user')) {
+            if (!localStorage.getItem('user')) {
                this.setState({ loggedIn : false});
            } else {
                this.setState({loggedIn: true});
