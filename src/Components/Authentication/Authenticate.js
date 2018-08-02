@@ -9,6 +9,7 @@ const Authenticate = Posts =>
       this.state = {
         isLoggedIn: false,
         username: '',
+        password: '',
       }
     }
 
@@ -30,7 +31,7 @@ const Authenticate = Posts =>
     }
 
     handleUserChange = event =>{
-      this.setState({username: event.target.value})
+      this.setState({[event.target.name]: event.target.value})
     }
 
     handleLogout = () => {
