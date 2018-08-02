@@ -42,11 +42,16 @@ class PostsPage extends Component {
           searchValue: ''
         })
     }
+
+    logOutClickHandler = (event) => {
+      localStorage.removeItem('username'); 
+      window.location.reload();
+    }
   
     render() {
       return (
         <div className="App">
-          <SearchBar change= {this.valueHandler} submit = {this.submitSearchHandler}/>
+          <SearchBar change= {this.valueHandler} submit = {this.submitSearchHandler} logOutClick = {this.logOutClickHandler}/>
           <AllPostContainers 
           data ={
             this.state.filteredData.length > 0 ? this.state.filteredData : this.state.data

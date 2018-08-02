@@ -1,5 +1,7 @@
 import React from 'react'; 
 import "./Login.css"; 
+import {Form, Input, Button} from 'reactstrap'; 
+
 
 class Login extends React.Component {
     constructor(){
@@ -31,15 +33,15 @@ class Login extends React.Component {
     render() {
         return(
             <div className = "login">
-                <form>
-                    
-                    <div className = "form-components">
-                        <img  className = "loginLogo" src = {require("../SearchBar/insta-logo.png")} />
-                        <input className = "loginInput" type = "text" placeholder = "Username"  onChange = {this.changeUserNameHandler} required/>
-                        <input className = "loginInput" type = "password" placeholder = "Password" onChange = {this.changePasswordHandler} required/>
-                        <button onClick = {this.submitDataHandler}>Login</button>
-                    </div>
-                </form>
+                    <Form className = "form-components">
+                        <div className = "loginLogo">
+                            <i className="fab fa-instagram fa-2x"></i>
+                            <img  src = {require("../SearchBar/insta-logo.png")} />
+                        </div>
+                        <Input className = "loginInput" type = "text" placeholder = "Username"  onChange = {this.changeUserNameHandler} required/>
+                        <Input className = "loginInput" type = "password" placeholder = "Password" onChange = {this.changePasswordHandler} required/>
+                        <Button onClick = {this.submitDataHandler}>Login</Button>
+                    </Form>
              </div>
         )
     }
