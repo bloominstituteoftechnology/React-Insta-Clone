@@ -1,6 +1,6 @@
 import React from "react";
-import PostContainer from './PostContainer';
-import SearchBar from '../SearchBar/SearchBar';
+import PostContainer from "./PostContainer";
+import SearchBar from "../SearchBar/SearchBar";
 
 const PostsPage = props => {
   return (
