@@ -1,4 +1,4 @@
-
+/* 
 .search-bar{
     border-bottom: 1px solid #3333;
     height: 80px;
@@ -6,6 +6,11 @@
     display: flex;
     justify-content: space-between;
     background: #ffffff;
+  }
+
+
+  .search-bar h2 {
+    font-family: 'Grand Hotel', cursive;
   }
 
   .image {
@@ -26,6 +31,6 @@
     display: flex;
     justify-content: center;
     align-content: center;
-  }
+  } */
 
   

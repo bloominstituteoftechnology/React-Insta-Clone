@@ -1,7 +1,20 @@
-form{
+
+
+
+
+  .login-container{
     display:flex;
     flex-direction: column;
     width: 100px;
-    justify-content: center;
-    align-content: center;
+    align-items: center;
+    height: 200px;
+ 
 }
+
+
+
+
+
+
+
+

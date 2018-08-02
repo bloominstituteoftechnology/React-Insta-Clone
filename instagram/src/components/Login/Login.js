@@ -1,5 +1,6 @@
 import React from 'react';
 import './Login.css';
+import { Button } from 'reactstrap';
 
 class Login extends React.Component {
     constructor(props){
@@ -24,7 +25,8 @@ class Login extends React.Component {
     
     render(){
         return (  
-            <form>
+            <form className="login-container">
+            <h3> Welcome to RachelGram </h3>
                 <input
                 name="username"
                 type="text" 
@@ -40,9 +42,9 @@ class Login extends React.Component {
                 onChange={this.handleInputChange}
                 />
                 <br />
-                <button onClick={this.handleLoginSubmit}>
+                <Button color="success" onClick={this.handleLoginSubmit}>
                 Log In 
-                </button>
+                </Button>
                 </form>
         );
     }

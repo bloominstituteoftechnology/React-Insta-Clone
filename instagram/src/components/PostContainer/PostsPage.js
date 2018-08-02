@@ -23,11 +23,16 @@ class PostsPage extends React.Component {
         });
         this.setState({filteredPosts: posts});
       };
+      logOut() {
+        localStorage.removeItem('user');
+        window.location.reload();
+      }
     render() { 
         return (  
             <div className="App">
             <SearchBar
-              searchTerm={this.state.searchTerm}
+            logOut = {this.logOut}
+            searchTerm={this.state.searchTerm}
               searchPosts={this.searchPostsHandler}
             />
             <PostContainer
