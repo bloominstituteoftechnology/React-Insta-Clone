@@ -14,30 +14,158 @@ class Home extends Component {
     super();
     this.state = {
       postData: [],
-      input: '',
+      search: '',
+      post: '',
+      user: ''
     }
   }
 
   componentDidMount() {
-    this.setState({ postData: dummyData })
+    let id = 'posts';
+    if (localStorage.getItem(id)) {
+      this.setState({
+        postData: JSON.parse(localStorage.getItem('posts')),
+        user: localStorage.getItem('user')
+      });
+    } else {
+      this.setState({ postData: dummyData, user: localStorage.getItem('user') });
+    }
   }
 
-  handleChange = e => this.setState({ input: e.target.value });
-  /*
-  filterPosts = (e) => {
-    let posts = this.state.postData.slice();
-    let filteredPosts = posts.filter(item => {
-      let input = this.state.input.toLocaleLowerCase();
-      let user = item.username.toLocaleLowerCase();
-      return input === user;
-    });
-    this.setState({ postData: filteredPosts, input: '' });
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
+
+
+
+
+  addNewPost = (e) => {
     e.preventDefault();
+    let posts = this.state.postData.slice();
+    posts.push(
+      {
+        username: this.state.user,
+        thumbnailUrl: "https://tk-assets.lambdaschool.com/ecd33d34-c124-4b75-92d2-e5c52c171ed8_11201517_887808411287357_1307163552_a.jpg",
+        imageUrl: this.state.post,
+        likes: 0,
+        timestamp: "NOW",
+        comments: []
+      }
+    );
+    this.setState({ postData: posts })
+    setTimeout(() => {
+      this.setPosts();
+    }, 500);
   }
-  */
+
+  setPosts = () => {
+    localStorage.setItem(
+      'posts',
+      JSON.stringify(this.state.postData)
+    );
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* 
+  create new post
+  push new obj into postData with inputs
+  persist posts to local storage
+  get posts from local storage
+
+    {
+    username: "user set on login",
+    thumbnailUrl:"setDefaultUser img - anonymous like comments user"
+    imageUrl: "haveUserInputPicLink" - request exact size for img to look good,
+    likes: 0,
+    timestamp: "date.Now()",
+    comments: [{}, {}, {}]
+  }
+  
+  */ 
+
+    /*
+  componentDidMount() {
+    const id = 'likes'
+    if (localStorage.getItem(id)) {
+      this.setState({
+        likes: JSON.parse(localStorage.getItem('likes'))
+      });
+    } else {
+      this.setLikes();
+    }
+  }
+
+  componenetWillUnmount() {
+    this.setLikes();
+  }
+
+  setLikes = () => {
+    localStorage.setItem(
+      'likes',
+      JSON.stringify(this.props.likes)
+    );
+  }
+
+  addLike = () => {
+    this.setState(prevState => {
+      if (!this.state.shouldAddLike) {
+        return {
+          likes: prevState.likes + 1,
+          shouldAddLike: !prevState.shouldAddLike
+        };
+      } else {
+        return {
+          likes: prevState.likes - 1,
+          shouldAddLike: !prevState.shouldAddLike
+        };
+      }
+    });
+    setTimeout(() => {
+      this.setLikes();
+    }, 500);
+  }
+*/
+
+
+/*
+  componentDidMount() {
+    const id = 'comments';
+    if (localStorage.getItem(id)) {
+      this.setState({
+        comments: JSON.parse(localStorage.getItem('comments'))
+      });
+    } else {
+      this.setComments();
+    }
+  }
+
+  componenetWillUnmount() {
+    this.setComments();
+  }
+
+  setComments = () => {
+    localStorage.setItem(
+      'comments',
+      JSON.stringify(this.state.comments)
+    );
+  };
+*/
+
   render() {
+    console.log(this.state.postData)
     let filteredPosts = this.state.postData.filter((post) => {
-        return (post.username.toLocaleLowerCase().includes(this.state.input.toLocaleLowerCase()));
+        return (post.username.toLocaleLowerCase().includes(this.state.search.toLocaleLowerCase()));
     });
     return (
       <div className="main-container">
@@ -51,9 +179,8 @@ class Home extends Component {
             </div>
           </section>
           <SearchBarContainer 
-            input={this.state.input}
+            searchValue={this.state.search}
             onChange={this.handleChange}
-            /*onSubmit={this.filterPosts} - need a form submit for this*/
           />
           <section className="main-header__icons">
             <FontAwesomeIcon icon={faCompass} />
@@ -61,7 +188,32 @@ class Home extends Component {
             <FontAwesomeIcon icon={faUser} />
           </section>
         </header>
-        {filteredPosts.length > 0 ? <PostContainer postData={filteredPosts} /> : <p>No Posts!</p> }
+        <section>
+          <form onSubmit={this.addNewPost} action="submit">
+            <label htmlFor="post"></label>
+            <input 
+              type="text"
+              id="post"
+              name="post"
+              placeholder="Photo URL"
+              value={this.state.post}
+              onChange={this.handleChange}
+            />
+            <button>Add New Post</button>
+          </form>
+        </section>
+
+
+
+        {filteredPosts.length > 0 ? 
+          <PostContainer 
+            postData={filteredPosts} 
+          /> : 
+          <p>No Posts!</p> 
+        }
+
+
+
       </div>
     );
   }

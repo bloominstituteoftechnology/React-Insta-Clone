@@ -7,10 +7,11 @@ const SearchBarContainer = props => {
       <label htmlFor="searchinput"></label>
       <input 
         id="searchinput" 
+        name="search"
         className="main-header__searchbar" 
         type="text" 
         placeholder="Search"
-        value={props.input}
+        value={props.searchValue}
         onChange={props.onChange}
         required
       />

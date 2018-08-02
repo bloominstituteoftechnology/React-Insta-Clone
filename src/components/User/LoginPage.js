@@ -32,7 +32,6 @@ class LoginPage extends React.Component {
             name="username"
             value={this.state.username}
             onChange={this.handleInputChange}
-            required
         />
         <label htmlFor="password"></label>
         <input
@@ -42,7 +41,6 @@ class LoginPage extends React.Component {
             name="password"
             value={this.state.password}
             onChange={this.handleInputChange}
-            required
         />
         <button onClick={this.handleLoginSubmit}>Log In</button>
       </form>

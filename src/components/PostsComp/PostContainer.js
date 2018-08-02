@@ -14,6 +14,7 @@ const PostContainer = (props) => {
         likes={post.likes}
         timestamp={post.timestamp}
         comments={post.comments}
+        postId={post.imageUrl}
       />)}
     </main>
   );
