@@ -1,5 +1,31 @@
 import React from "react";
-import './Login.css';
+import styled from 'styled-components';
+
+const LoginPage = styled.div`
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20%;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+`;
+
+const InputField = styled.input`
+        margin-bottom: 10px;
+        border-radius: 3px;
+        font-size: 16px;
+        width: 200px;
+        line-height: 1.2;
+        box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+`;
+
+const LoginButton = styled.button`
+        font-size: 14px;
+        width: 100px;
+        border-radius: 5px;
+        box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+`;
 
 class Login extends React.Component {
         constructor(props) {
@@ -28,23 +54,23 @@ class Login extends React.Component {
         render(){
                 //both inputs invoke handleInputChange
                 return (
-                <div className="login-page">
-                <input  type="text"
+                <LoginPage>
+                <InputField
+                        type="text"
                         name="username"
-                        className="input-field"
                         placeholder="Username"
                         value={this.state.username}
                         onChange={this.handleInputChange}
-                        />
-                <input  type="password"
-                        placeholder="Password"
+                />
+                <InputField
+                        type="password"
                         name="password"
-                        className="input-field"
+                        placeholder="Password"
                         value={this.state.password}
                         onChange={this.handleInputChange}
-                        />
-                <button className="login-button" onClick={this.handleLoginSubmit}>Login</button>
-                </div>
+                />
+                <LoginButton onClick={this.handleLoginSubmit}>Login</LoginButton>
+                </LoginPage>
                 )
         }
 }

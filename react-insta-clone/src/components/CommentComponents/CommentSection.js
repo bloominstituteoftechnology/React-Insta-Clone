@@ -1,7 +1,6 @@
 import React from "react";
 import Comment from "./Comment";
 import CommentInput from "./CommentInput";
-import './CommentSection.css';
 
 class CommentSection extends React.Component {
   constructor(props) {

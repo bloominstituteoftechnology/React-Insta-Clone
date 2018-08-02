@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import PostsPage from "./components/PostComponents/MainPostsPage";
 import Authenticate from "./Authentication/Authenticate";
+import styled from 'styled-components';
+
+const AppStyles =  styled.div`
+  max-width: 1936px;
+  width: 100%;
+  margin: auto;
+`;
 
 class App extends Component {
   constructor() {
@@ -17,9 +24,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <AppStyles>
         <PostsPage />
-      </div>
+      </AppStyles>
     );
   }
 }

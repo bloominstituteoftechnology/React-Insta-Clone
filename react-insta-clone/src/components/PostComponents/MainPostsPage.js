@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../App.css';
 import dummyData from "../../dummy-data";
 import SearchBar from "../SearchComponents/SearchBar";
 import PostContainer from "./PostContainer";
