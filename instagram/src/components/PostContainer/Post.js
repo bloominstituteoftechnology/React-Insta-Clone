@@ -11,7 +11,7 @@ const Post = prop => {
         <div className="username"> {prop.butt.username} </div>
       </div>
       <img className="image" src={prop.butt.imageUrl} />
-      <CommentContainer butt={prop.butt} fred={prop.butt} />
+      <CommentContainer fred={prop.butt} />
     </div>
   );
 };
