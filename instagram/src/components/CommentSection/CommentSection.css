@@ -1,9 +1,13 @@
 .comment-user {
-    font-weight: bold;
-    margin-left: 20px;
+    /* font-weight: bold;
+    margin-left: 20px; */
 }
 
 .comment-input {
     width: 99.4%;
     line-height: 32px;
+}
+
+.comments-social {
+    margin: 0 20px;
 }

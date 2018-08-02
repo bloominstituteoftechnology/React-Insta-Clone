@@ -1,11 +1,12 @@
 import React from 'react';
 import './CommentSection.css';
 import PropTypes from "prop-types";
+import { UserName } from '../Styling';
 
 const Comment = props => {
     return (
         <div> 
-            <span className="comment-user" >{props.comment.username} </span>
+            <UserName margin >{props.comment.username} </UserName>
             <span> {props.comment.text}</span>
         </div>
     );

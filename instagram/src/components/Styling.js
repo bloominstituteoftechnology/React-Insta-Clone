@@ -53,3 +53,9 @@ export const ThumbImg = styled.img`
     margin: 0 10px;
 `;
 
+// Re-usable components
+
+export const UserName = styled.span`
+    font-weight: bold;
+    margin-left: ${props => (props.margin ? '20px' : 'null')};
+`;

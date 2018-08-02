@@ -1,7 +1,6 @@
 import React from 'react';
-import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
-import { PostWrapper, PostHeader, ThumbImg,  } from '../Styling';
+import { PostWrapper, PostHeader, ThumbImg, UserName } from '../Styling';
 
 const PostContainer = props => {
     return (
@@ -10,9 +9,9 @@ const PostContainer = props => {
                 <div >
                     <ThumbImg src={props.post.thumbnailUrl} alt="" />
                 </div>
-                <div >
+                <UserName >
                     {props.post.username}
-                </div>
+                </UserName>
             </PostHeader>
             <div >
                 <img src={props.post.imageUrl} alt="" />
