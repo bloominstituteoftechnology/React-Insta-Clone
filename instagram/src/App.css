@@ -30,34 +30,6 @@
   justify-content: center;
 }
 
-.search-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 22px;
-  margin: 0 15px;
-}
-
-.search-bar input {
-  width: 30%;
-  height: 30px;
-  border: 1px solid lightgray;
-  border-radius: 4px;
-}
-
-.company-logo {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 20%;
-}
-
-.control-nav {
-  width: 10%;
-  display: flex;
-  justify-content: space-between;
-}
-
 .post-container {
   border: 1px lightgray solid;
   margin: 20px 0;

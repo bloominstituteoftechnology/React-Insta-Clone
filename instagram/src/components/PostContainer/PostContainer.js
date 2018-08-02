@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
-// import dummyData from '../../dummy-data';
-
-// const commentArray = dummyData.map(postObject => {
-//   return postObject['comments'];
-// });
+import User from '../Styles/Reusables/User';
 
 class PostContainer extends Component {
   constructor() {
@@ -28,7 +23,7 @@ class PostContainer extends Component {
   }
 
   componentWillReceiveProps(newProps) {
-    this.setState({ filteredData: newProps.filteredData} );
+    this.setState({ filteredData: newProps.filteredData });
   }
   
   handleLike(e) {
@@ -79,22 +74,6 @@ class PostContainer extends Component {
       </div>
     )
   }
-}
-
-const User = props => {
-  const {username, thumbnailUrl} = props;
-
-  return (
-    <div className="user">
-      <img src={ thumbnailUrl } alt={ username } />
-      <p>{ username }</p>
-    </div>
-  )
-}
-
-User.propTypes = {
-  username: PropTypes.string.isRequired,
-  thumbnailUrl: PropTypes.string.isRequired
 }
 
 const ActionButton = props => {
