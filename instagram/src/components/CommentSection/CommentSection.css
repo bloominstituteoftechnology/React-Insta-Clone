@@ -18,5 +18,13 @@
 }
 
 .fas {
-    color: rgba(16, 157, 238, 0.794);
+    color: rgb(16, 186, 238);
+}
+
+.postTimestamp {
+    margin-top: 10px;
+}
+
+.postBot {
+    margin-bottom: 10px;
 }
