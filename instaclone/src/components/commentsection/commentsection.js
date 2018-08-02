@@ -18,9 +18,10 @@ class CommentSection extends React.Component {
                 comments: JSON.parse(localStorage.getItem(this.props.postID))
             });
         }
-    } else {
-        this.setComments();
-    }
+             else {
+                this.setComments();
+            }
+    }   
 
     setComments = () => {
         localStorage.setItem(
@@ -30,7 +31,7 @@ class CommentSection extends React.Component {
     };
 
 
-    commentHandler = event = =>{
+    commentHandler = event =>{
         this.setState({ comment: event.target.value })
     }
 
@@ -39,7 +40,7 @@ class CommentSection extends React.Component {
         let newComment = { text: this.state.comment, username: 'Parzival'};
         let comments = this.state.comments.slice();
         comments.push(newComment);
-        this.setState({ comment, comment: ''});
+        this.setState({ comments, comment: ''});
         setTimeout(() => {
             this.setComments();
         }, 500);
