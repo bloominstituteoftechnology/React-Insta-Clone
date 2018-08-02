@@ -41,6 +41,16 @@ font-size: 25px;
 text-align: center; 
 color: orange; 
 `
+const InputBar = styled.input`
+margin: 10px 0; 
+width: 200px; 
+height: 20px; 
+`
+const Btn = styled.button`
+width: 75px; 
+height: 15px; 
+margin: 10px 0; 
+`
 
 class Login extends Component {
   constructor(props) {
@@ -69,64 +79,58 @@ class Login extends Component {
         <DivBox>
           <FormLogin>
           <H1>Login</H1>
-            <input
-              className="input-login"
+            <InputBar
               type="text"
               placeholder="                       Username"
               name="username"
               onChange={this.handleLoginInput}
               value={this.state.username}
             />
-            <input
-              className="input-login"
+            <InputBar
               type="text"
               placeholder="                       Password"
               name="password"
               onChange={this.handleLoginInput}
               value={this.state.password}
             />
-            <button onClick={this.handleSubmitInput} className="login-btn">
+            <Btn onClick={this.handleSubmitInput}>
               Log in
-            </button>
+            </Btn>
           </FormLogin>
         </DivBox>
         {/* Only refrence what is above cause that works with the logging into the app */}
         <DivBox>
           <FormSignUp>
           <H1>Sign Up</H1>
-          <input
+          <InputBar
               type="text"
               name="name"
-              className="sign-user"
               placeholder="                        Full Name"
               onChange={this.handleLoginInput}
               value={this.state.name}
             />
-            <input
+            <InputBar
               type="text"
               name="email"
-              className="sign-user"
               placeholder="                        E-mail"
               onChange={this.handleLoginInput}
               value={this.state.email}
             />
-             <input
+             <InputBar
               type="text"
               name="signup"
-              className="sign-user"
               placeholder="                        Username"
               onChange={this.handleLoginInput}
               value={this.state.signup}
             />
-            <input
+            <InputBar
               type="text"
               name="signuppass"
-              className="sign-user"
               placeholder="                        Password"
               onChange={this.handleLoginInput}
               value={this.state.signuppass}
             />
-            <button onClick={this.handleSubmitInput} className="signup-btn">Sign Up</button>
+            <Btn onClick={this.handleSubmitInput}>Sign Up</Btn>
           </FormSignUp>
         </DivBox>
       </Div>
