@@ -34,6 +34,7 @@
 - Now is the time to take a step back and look at what you have accomplished this week. Start from the Day 1 README file and see what the tasks were there? Think about how we asked you to approach this problem. Think about the different components you have built? Did you separate out your Comments array from the rest of the application state? If so, what types of advantages did you gain by doing so? React is a very powerful tool and the next steps in learning about the React Ecosystem will all revolve around other libraries that we will plug into our application for extending it's use.
 
 - Read [this article](https://dev.to/nimmo/state-driven-development-for-user-interfaces-part-1-an-introduction-27f1) about 'State Driven Views' and come up with a short paragraph as to why you feel that `state-driven` views are important to us as software developers today? What are state-driven applications? Why are they powerful? How does React enables those patterns?
+  -- Answer: 'state-driven' views are important to developers because it allows for greater flexibility. The code becomes more reusable and adaptable for different projects or situation with minimal changes. This allows for more code to be written. React wouldn't exist unless it had state.
 
 #### Stretch Problems (Day III)
 

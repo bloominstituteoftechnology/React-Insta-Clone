@@ -53,7 +53,7 @@ class PostsPage extends Component {
     `;
 
     const AllPostsDiv = styled.div`
-        margin-top: 50px;
+        ${'' /* margin-top: 10px; */}
     `;
 
     return (
