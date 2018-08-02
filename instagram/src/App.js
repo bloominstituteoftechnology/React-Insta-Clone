@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar.js'
 import PostContainer from './components/PostContainer/PostContainer.js'
 import Authenticate from './components/Authentication/Authenticate.js'
+import styled from 'styled-components'
+
+const StyledApp = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`
 
 const App = Authenticate(
 
@@ -32,7 +38,7 @@ const App = Authenticate(
 
     render() {
       return (
-        <div className="App">
+        <StyledApp>
           <header>
             <SearchBar searchPosts={this.handlePostSearch}
             />
@@ -43,7 +49,7 @@ const App = Authenticate(
               : this.state.data}
             
           />
-        </div>
+        </StyledApp>
 
       );
     }

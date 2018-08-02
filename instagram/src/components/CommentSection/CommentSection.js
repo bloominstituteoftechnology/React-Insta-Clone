@@ -1,8 +1,45 @@
 import React from 'react';
-import './CommentSection.css';
 import PropTypes from 'prop-types';
 import Comment from "./Comment.js";
 import Moment from "react-moment";
+import styled from "styled-components"
+
+const StyledPostBot = styled.div`
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 15px;
+`;
+
+const StyledBotIcons = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 65px;
+    margin-bottom: 10px;
+    .fas {
+        color: rgb(16, 186, 238);
+    }
+    i {
+        font-size: 25px;
+    }
+    `;
+
+const StyledPostLikes = styled.div`
+    font-weight: bold;
+    font-size: 14px;
+    `;
+
+const StyledPostTimestamp = styled.div`
+    margin-top: 10px;
+    padding-left: 15px;
+    font-size: 12px;
+    `;    
+
+const StyledCommentInput = styled.input`
+    width: 99.6%;
+    height: 80px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    `    ;
 
 
 class CommentSection extends React.Component {
@@ -49,20 +86,20 @@ class CommentSection extends React.Component {
         return (
             <div>
 
-                <div className="postBot">
-                    <div className="botIcons">
+                <StyledPostBot>
+                    <StyledBotIcons>
                         <i className={this.state.liked ? "fas fa-heart" : "far fa-heart"} onClick={this.toggleLike}></i>
                         <i className="far fa-comment"></i>
-                    </div>
-                    <div className="postLikes">{this.state.likes + " likes"} </div>
-                </div>
+                    </StyledBotIcons>
+                    <StyledPostLikes>{this.state.likes + " likes"} </StyledPostLikes>
+                </StyledPostBot>
 
 
 
                 {this.state.commentState.map(item => <Comment com={item} />)}
                 
-                <div className="postTimestamp"><Moment>{this.state.time}</Moment></div>
-                <input value={this.state.input} onChange={this.saveComment} onKeyPress={this.addNewComment} className="commentInput" placeholder="Add a comment..." />
+                <StyledPostTimestamp><Moment>{this.state.time}</Moment></StyledPostTimestamp>
+                <StyledCommentInput value={this.state.input} onChange={this.saveComment} onKeyPress={this.addNewComment} placeholder="Add a comment..." />
 
             </div>
 
