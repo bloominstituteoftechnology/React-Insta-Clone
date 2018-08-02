@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './CommentSection.css';
 import Comment from './Comment';
 import AddComment from './AddComment';
 
@@ -37,7 +36,7 @@ class CommentSection extends Component {
 
     render() { 
         return ( 
-            <div className="comment-container">
+            <div>
                  {this.state.comments.map((comment, index) => 
                     <Comment
                         key={index}

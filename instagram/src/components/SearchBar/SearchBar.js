@@ -7,29 +7,33 @@ const SearchBarHeader = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 30px 20px;
+        padding: 20px 20px;
         border-bottom: 2px solid lightgray;
         top: 0;
         flex-wrap: wrap;
 
         > img {
             max-width: 375px;
+            width: 100%
+            margin-top: 10px;
         }
 
         > input {
-            width: 430px;
+            max-width: 430px;
+            width: 100%;
+            margin-top: 10px;
             height: 55px;
             border: 2px solid lightgray;
             border-radius: 5px;
             text-align: center;
             font-size: 3.2rem;
-            font-family: Arial, FontAwesome;
         }
 
         > icons {
             display: flex;
             justify-content: space-between;
             width: 270px;
+            margin-top: 10px;
         }
     `
    
