@@ -28,15 +28,16 @@
     box-shadow: 0px 0px 8px 2px inset rgba(0, 0, 0, 0.2), 0px 6px 20px 0px  rgba(0, 0, 0, 0.19);
 }
 
-.boop {
-    border-radius: 5px;
+.btnlog:active {
+    /* border-radius: 5px;
     width: 75px;
     height: 30px;
     background: linear-gradient(to bottom right, #FFEE58, palevioletred);
     color: white;
     border: none;
-    outline: none;
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0  rgba(0, 0, 0, 0.19);
+    outline: none; */
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.3);
+    /* 0px 0px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0  rgba(0, 0, 0, 0.19); */
 }
 
 .form {
@@ -60,6 +61,7 @@ align-items: center;
 .usernamelog, .password {
     height: 25px;
     border: none;
+    border-radius: 5px;
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     outline: none;

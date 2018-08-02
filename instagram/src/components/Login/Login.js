@@ -20,15 +20,15 @@ class Login extends React.Component {
         this.setState({username: event.target.value})
     }
 
-    beingClicked = () => {
+    // beingClicked = () => {
         
-    this.setState({clicked:true})
+    // this.setState({clicked:true})
         
-    }
+    // }
 
-    release = () => {
-        this.setState({clicked: false})
-    }
+    // release = () => {
+    //     this.setState({clicked: false})
+    // }
 
 
     
@@ -40,7 +40,7 @@ class Login extends React.Component {
                     <form className="form">
                         <input className="usernamelog" value={this.state.username}onChange={this.save} placeholder=" Username"/>
                         <input className="usernamelog"placeholder=" Password"/>
-                        <button className={this.state.clicked ? "boop":"btnlog"} onMouseMove={this.release} onMouseDown={this.beingClicked} onClick={this.login}>Log in</button>
+                        <button className="btnlog" onClick={this.login}>Log in</button>
                     </form>
                 </div>
             </div>
@@ -49,3 +49,4 @@ class Login extends React.Component {
 }
 
 export default Login;
+// onMouseMove={this.release} onMouseDown={this.beingClicked

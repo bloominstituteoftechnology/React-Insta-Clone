@@ -17,13 +17,18 @@
     display: flex;
     justify-content: space-between;
     width: 150px;
-}
+} 
 
-input {
-    height: 20px;
+.fa-input {
+    box-sizing: border-box;
+    padding-left: 4%;
+    height: 30px;
     border-radius: 5px;
-    width: 150px;
-}
+    width: 170px;
+    outline: none;
+    border: dotted gray 1px;
+    font-size: 110%;
+} 
 /* ::-webkit-input-placeholder {
     font-family: 'Georgia';
   }
@@ -37,20 +42,18 @@ input {
     font-family: 'Georgia';
   } */
 
-.instap {
+ .instap {
     font-family: 'Lobster Two', cursive;
     font-size: 200%;
     padding-left: 8%;
-}
-
-i.fab {
+}  i.fab { 
     font-size: 250%;
     border-right: solid gray 1px;
     padding-right: 15%;
     box-sizing: border-box;
 }
 
-.logo {
+ .logo {
     display:flex;
     align-items: center;
 }
