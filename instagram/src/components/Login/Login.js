@@ -38,9 +38,9 @@ class Login extends React.Component {
                 <p className="instaplog">Instaclone</p>
                 <div className="login">
                     <form className="form">
-                        <input className="usernamelog" value={this.state.username}onChange={this.save} placeholder="Username"/>
-                        <input className="usernamelog"placeholder="Password"/>
-                        <button className={this.state.clicked ? "boop":"btnlog"} onMouseMove={this.release}onMouseDown={this.beingClicked} onClick={this.login}>Log in</button>
+                        <input className="usernamelog" value={this.state.username}onChange={this.save} placeholder=" Username"/>
+                        <input className="usernamelog"placeholder=" Password"/>
+                        <button className={this.state.clicked ? "boop":"btnlog"} onMouseMove={this.release} onMouseDown={this.beingClicked} onClick={this.login}>Log in</button>
                     </form>
                 </div>
             </div>
