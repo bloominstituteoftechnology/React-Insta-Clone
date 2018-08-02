@@ -7,12 +7,6 @@
     height: 100vh;
 }
 
-.login-welcome{
-    padding: 20px;
-    font-size: 45px;
-    font-weight: 100;
-}
-
 .username{
     border-radius: 10px;
 }
@@ -20,24 +14,6 @@
 .password{
     margin-top: 20px;
     border-radius: 10px;
-}
-
-input{
-    padding: 20px;
-    font-size: 20px;
-    width: 470px;
-    border-radius: 6px;
-    border: 1px solid white;
-}
-
-.submit-button{
-    margin-top: 40px;
-    height: 65px;
-    width: 235px;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color:rgb(207, 240, 245);
-    border: 1px solid white;
 }
 
 .submit-button:hover{

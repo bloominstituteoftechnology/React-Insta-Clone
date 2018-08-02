@@ -6,7 +6,6 @@
 }
 
 .all-posts{
-    width: 60%;
     margin: 10px auto;
     display: flex;
     flex-direction: column;

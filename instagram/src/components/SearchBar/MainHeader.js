@@ -1,7 +1,8 @@
 import React from "react"
 import './MainHeader.css'
+import SearchBar from './SearchBar'
 
-const MainHeader = props => {
+const MainHeader = () => {
     return (
       <div className = "main-header"> 
         <div className = "left-icons">
@@ -10,16 +11,17 @@ const MainHeader = props => {
           </div>
           <div class="vl"></div>
           <div className = "instagram">
-            <h3> Instagram </h3>
+            <h2> Instagram </h2>
             {/* <img alt = "instagram logo" src = '/iglogo.png' className = "logo-image" /> */}
           </div>
         </div>
   
-         <div className = "search-field">
-        <input type = "search" placeholder = "search"/>
-        </div>
+        <SearchBar />
       
         <div className = "right-icons">
+
+
+
           <div className = "icons"> 
             <i className="fa fa-compass" />
           </div>

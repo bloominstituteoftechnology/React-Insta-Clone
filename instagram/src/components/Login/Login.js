@@ -6,6 +6,42 @@
 
 import React, { Component } from 'react';
 import './Login.css';
+//first run $ yarn add styled-components in terminal
+import styled from 'styled-components';
+
+//first run $ yarn add bootstrap reactstrap in terminal
+// import { Button } from 'reactstrap';
+// import { Input } from 'reactstrap';
+
+//Using an individually styled component
+const Header = styled.header `
+    height:  100px;
+    font-weight: lighter;
+    font-size: 45px;
+    font-weight: 100;
+`;
+
+const Input = styled.input `
+    padding: 20px;
+    font-size: 20px;
+    width: 390px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    margin: 12px;
+    font-weight: 100;
+`;
+
+const Button = styled.button`
+    margin-top: 40px;
+    height: 65px;
+    width: 275px;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: 100;
+    background-color:rgb(207, 240, 245);
+    border: 1px solid white;
+`;
+
 
 class Login extends Component {
     constructor(props) {
@@ -37,14 +73,14 @@ handleSubmit = event => {
         return (
             <div className = "login-container">
                 <div>
-                <h3 className = "login-welcome">Welcome, Please Login</h3>  
+                <Header className = "login-welcome">Welcome, Please Login</Header>  
                 </div>
 
             {/* spaces for inputting username and password */}
 
                 <div className = "login-credentials">
                     <div className = "username">
-                        <input type="text" 
+                        <Input type="text" 
                         placeholder = "User Name"
                         name = "username" 
                         value = {this.state.username} 
@@ -52,7 +88,7 @@ handleSubmit = event => {
                     </div>
 
                     <div className = "password">
-                        <input type="text" 
+                        <Input type="text" 
                         placeholder = "Password"
                         name = "password" 
                         value = {this.state.password} //password same as username
@@ -62,10 +98,12 @@ handleSubmit = event => {
 
             {/* button for submitting login credentials */}
 
+
+
                 <div>
-                    <button className = "submit-button" onClick = {this.handleSubmit}>
+                    <Button className = "submit-button" onClick = {this.handleSubmit}>
                         submit
-                    </button>
+                    </Button>
                 </div>
             </div>
         );

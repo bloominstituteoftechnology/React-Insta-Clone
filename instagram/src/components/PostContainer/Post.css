@@ -15,5 +15,10 @@
 }
 
 .username{
-    
+    font-weight: 200;
+}
+
+.post-image{
+    border: 1px solid white;
+    border-radius: 12px;
 }

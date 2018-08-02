@@ -13,8 +13,8 @@ const Post = props => {
             <h3 className = "username">  {props.post.username} </h3>
           </div>
           
-          <div className = "post-image">
-            <img src={props.post.imageUrl} />
+          <div>
+            <img className = "post-image"src={props.post.imageUrl} />
           </div>
           
           <div className = "post-footer">

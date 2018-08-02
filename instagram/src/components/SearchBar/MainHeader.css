@@ -3,42 +3,46 @@
 .main-header{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin-right: 2rem;
-    margin-left: 2rem;
-  
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
   
   .vl{
     border-left: 2px solid grey;
     height: 20px;
   }
-  
+
+  .instagram{
+    font-weight: 100;
+    font-family: 'Cookie', cursive;
+    font-size: 44px;
+  }
+
   .left-icons{
-    width: 27%;
+    width: 30%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-right: 1rem;
     margin-left: 1rem;
   }
   
   .right-icons{
-    width: 12%;
+    width: 20%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-right: 1rem;
     margin-left: 1rem;
   }
-
-
 
   .icons{
     height: 20px;
