@@ -4,8 +4,8 @@ import PostContainer from './PostContainer.js';
 import SearchBar from '../SearchBar/SearchBar.js';
 
 class PostsPage extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       data: [],
       displayData: [],
@@ -39,7 +39,9 @@ class PostsPage extends Component {
 
   render(){
     return (
-        <div className="app"><h1>PostPage</h1>
+        <div className="app"><h1
+           // logOut={props.logOut}
+           >LOCK PAGE</h1>
         <SearchBar searchHandler={this.searchHandler}
         searchValue={this.state.searchValue}
         valueHandler={this.valueHandler}

@@ -1,17 +1,22 @@
 import React from 'react';
 // import Login from './components/Login/Login.js';
-// import App from './App';
+import App from '../../App';
 
 
 const Authenticate = Component =>
   class extends React.Component {
-    constructor(){
-      super();
+    constructor(props){
+      super(props);
       this.state = {
         loggedIn: false,
       };
     }
 
+    //checks state for if logged in
+
+    //if so, renders App
+
+    //if not, renders Login
 
     componentDidMount(){
       if (this.state.loggedIn === true) {
@@ -19,12 +24,19 @@ const Authenticate = Component =>
       }
     }
 
+    logOut(){
+      this.setState({
+        loggedIn: false,
+      })
+    }
 
     render() {
       {console.log(Component )}
       return (
         <div >
-          <Component />
+          <App
+            // logOut={this.logOut}
+          />
           <h1>Authentication!</h1>
         </div>
       );

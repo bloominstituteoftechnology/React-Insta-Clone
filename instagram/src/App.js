@@ -3,14 +3,12 @@ import './css/index.css';
 // import DummyData from './dummy-data.js';
 import PostsPage from './components/PostContainer/PostsPage.js';
 import Authentication from './components/Authentication/Authentication.js';
-import Login from './components/Login/Login.js';
 
-const HOCAuthentication = Authentication(App);
-const HOCLogin = Authentication(Login);
+
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       data: [],
       displayData: [],
@@ -21,9 +19,9 @@ class App extends Component {
   render() {
     return (
       <div >
-        <Login />
-        {/* <HOCAuthentication /> */}
-        <PostsPage />
+        <PostsPage
+          // logOut={this.logOut}
+        />
       </div>
     );
   }
