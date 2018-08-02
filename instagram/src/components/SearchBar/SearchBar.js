@@ -10,11 +10,13 @@ const SearchBar = props => {
             <h1>Instagram</h1>
             
             <form onSubmit={props.onSearch}>
-                {props.Empty ? <i className="far fa-search"></i> : <p>looking up</p>}
-                <input 
+                {
+                    props.Empty ? <input 
                     className='search-input' 
                     type='search' 
-                    placeholder='Search'/>
+                    placeholder='Search'/>: 
+                    <p>looking up</p>
+                }
             </form>
                 
             <div className='nav-icons'>

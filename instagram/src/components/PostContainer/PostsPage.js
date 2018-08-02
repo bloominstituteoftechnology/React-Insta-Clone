@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PostContainer from './PostContainer';
 
 const PostsPage = props => {
@@ -15,10 +16,15 @@ const PostsPage = props => {
                     likes={data.likes}
                     comments={data.comments}
                     time={data.timestamp}
-                />)
+                />
+            )
             }
         </div>
-    );
+    )
+}
+
+PropTypes.PostsPage = {
+
 }
 
 export default PostsPage;
