@@ -1,10 +1,11 @@
 import React from 'react';
 import './SearchBar.css';
+import { Container } from "./styled-components";
 
 const SearchBar = props => {
     console.log('imProps', props)
     return (
-        <div className='searchContainer'>
+        <Container>
             <div className='logoLeft'>
                 logo
             </div>
@@ -14,7 +15,7 @@ const SearchBar = props => {
             <div className='logoRight'>
                 logo
             </div>
-        </div>
+        </Container>
     );
 };
 

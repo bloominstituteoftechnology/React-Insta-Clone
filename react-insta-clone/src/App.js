@@ -1,42 +1,30 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
-import dummyData from './dummy-data';
 import PostPage from './components/PostContainer/PostPage';
+import Authenticate from './components/Authenticate/Authenticate';
 
 
-const App = Authenticate(
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: [],
-      filteredPosts: []
+      username: ''
     };
   }
 
   componentDidMount() {
-    this.setState({ posts: dummyData });
+    const user = localStorage.getItem("user");
+    this.setState({ username: user });
   }
-
-  searchPosthandler = e => {
-    const posts = this.state.posts.filter(p => {
-      if (p.username.includes(e.target.value)) {
-        return p;
-      }
-    });
-    this.setState({ filteredPosts: posts });
-  };
   
   render() {
     return (
       <div className="App">
-          <PostPage {...this.state} />
+          <PostPage />
       </div>
     );
   }
 }
-)
 
-export default App;
+
+export default Authenticate(App);
