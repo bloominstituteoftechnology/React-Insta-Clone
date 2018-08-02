@@ -14,7 +14,7 @@ class Login extends Component {
   handleInputChange = e => {
     this.setState({ [e.target.name]: e.target.value });
     //notice both input fields use the name field for password and username and are both calling the same function
-    //changing the state allows us to reuse function handlers. 
+    //changing the state allows us to reuse function handlers.
   };
 
   handleLoginSubmit = e => {
@@ -25,7 +25,7 @@ class Login extends Component {
 
   render() {
     return (
-      <Form className="login-form">
+      <Form className="container login-form">
         <h3>Welcome to React Insta Clone</h3>
         <div>Please Login</div>
         <FormGroup>
