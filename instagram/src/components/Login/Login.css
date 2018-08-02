@@ -1,0 +1,21 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(244, 248, 248);
+    height: 100vh;
+}
+
+.username{
+    border-radius: 10px;
+}
+
+.password{
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.submit-button:hover{
+    background-color: rgb(135, 202, 211);
+}

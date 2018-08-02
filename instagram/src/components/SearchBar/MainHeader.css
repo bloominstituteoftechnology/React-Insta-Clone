@@ -1,0 +1,53 @@
+
+/* styles for main header */
+.main-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .vl{
+    border-left: 2px solid grey;
+    height: 20px;
+  }
+
+  .instagram{
+    font-weight: 100;
+    font-family: 'Cookie', cursive;
+    font-size: 44px;
+  }
+
+  .left-icons{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  
+  .right-icons{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .icons{
+    height: 20px;
+    width: 20px;
+    color: grey;
+  }
+  
+  /* end of styles for main header */
