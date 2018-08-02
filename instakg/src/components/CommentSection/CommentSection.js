@@ -1,5 +1,4 @@
 import React from 'react';
-import './CommentSection.css';
 import PropTypes from 'prop-types';
 import UserName from '../PostContainer/UserName';
 import DeleteButton from './DeleteButton';

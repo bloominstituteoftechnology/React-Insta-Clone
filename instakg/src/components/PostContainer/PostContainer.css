@@ -3,12 +3,6 @@
   align-content: center;
   margin-bottom:10px;
 }
-.userIcon {
-  height: 2em;
-  width: auto;
-  border-radius: 50%;
-  margin-right: 5px;
-}
 
 .iconRow {
   display: flex;
@@ -50,4 +44,66 @@
 
 .liked {
   color: red;
+}
+
+.addPostButton{
+  background-color: white;
+  height:  60px;
+  width: 60px;
+  border-radius: 50%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 5;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2em;
+  -webkit-user-select: none; 
+  -moz-user-select: none;     
+  -ms-user-select: none;      
+  user-select: none;   
+}
+
+.newPostBackground{
+  background-color: black;
+  opacity: .3;
+  position: fixed;
+  width:100vw;
+  height:100vh;
+  z-index: 6;
+  top: 0;
+}
+.newPostBox{
+  position: fixed;
+  z-index: 7;
+  top: 25%;
+  height: 400px;
+  width: 50vw;
+  min-width: 400px;
+  background-color: white;
+  margin: auto;
+ left: 25vw;
+ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+}
+.closeButtonRow{
+  display:flex;
+  justify-content: flex-end;
+  padding: 20px
+}
+
+.inputContainer{
+  margin-top: 70px;
+  font-size: 24px;
+}
+.submitButton{
+  font-size: 24px;
+}
+.URLInput{
+  width: 75%;
+  line-height: 2em;
+}
+.displayNone{
+  display:none;
 }

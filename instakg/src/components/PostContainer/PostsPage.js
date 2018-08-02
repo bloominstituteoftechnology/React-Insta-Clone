@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import PostContainer from "../PostContainer/PostContainer";
 import dummyData from "../../dummy-data";
+import moment from "moment";
+
 class PostsPage extends Component {
   constructor(props) {
     super(props);
@@ -9,7 +11,8 @@ class PostsPage extends Component {
       data: [],
       currentUser: "You",
       display: [],
-      textBoxString: ""
+      textBoxString: "",
+      submitWindowOpen:false
     };
   }
   componentDidMount() {
@@ -140,6 +143,31 @@ class PostsPage extends Component {
       this.writeToLS();
     });
   }
+  submitPost= event =>{
+    const dataImport = this.state.data.slice();
+    event.preventDefault()
+    dataImport.unshift({
+      username:this.state.currentUser,
+      thumbnailUrl: 'https://static-cdn.jtvnw.net/jtv_user_pictures/e91a3dcf-c15a-441a-b369-996922364cdc-profile_image-300x300.png',
+      imageUrl: event.target.childNodes[3].value,
+      likes: 0,
+      timestamp: moment().format('MMMM Do YYYY, h:mm:ss a'),
+      comments: []
+    })
+    this.setState({ data: dataImport, display: dataImport }, () => {
+      this.writeToLS();
+    });
+  }
+  toggleSubmitModal = event =>{
+    const submitImport = this.state.submitWindowOpen;
+
+    if (submitImport){
+      this.setState({ submitWindowOpen: false});
+    }
+    else{
+      this.setState({ submitWindowOpen: true});
+    }
+  }
   logout = () => {
     localStorage.removeItem("userName");
     window.location.reload();
@@ -160,11 +188,30 @@ class PostsPage extends Component {
       );
     });
   };
+
   render() {
     return (
       <div className="App">
         <SearchBar logout={this.logout} methods={this.handleKeyPressSearch} />
         {this.loadPosts()}
+        <div onClick={this.toggleSubmitModal}  className='addPostButton'> + </div>
+        <div className= {this.state.submitWindowOpen ? 'newPostBackground': 'newPostBackground displayNone' } />
+        <div className={this.state.submitWindowOpen ? 'newPostBox': 'newPostBox displayNone' }>
+            <div className='closeButtonRow'>
+            <span onClick={this.toggleSubmitModal} className='closeButton'>X</span>
+            </div>
+            
+            <form onSubmit={this.submitPost} className='inputContainer'>
+              Insert URL of image to upload <br />
+              <br/>
+              
+              <input name='URL' className='URLInput' type='url'></input><br/>
+              <br/>
+              <button className='submitButton'>Submit</button>
+            </form>
+           
+
+          </div>
       </div>
     );
   }
