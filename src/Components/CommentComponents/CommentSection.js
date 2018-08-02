@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './comment.css';
+import { CommentWrapper, IconBar, CommentLikes,
+          CommentForm, DividingLine, CommentTime,
+          CommentTextBox, CommentInput } from './CommentStyle';
 import moment from 'moment';
 
 import CommentDisplay from './CommentDisplay';
@@ -54,19 +57,21 @@ class CommentSection extends React.Component{
   render(){
     let color = this.state.liked ? 'active' : '';
     return(
-      <div className="comment-section">
-        <div className="icon-bar">
-          <i className={`far fa-heart icon ${color}`} onClick={this.handleLiking}></i>
-          <i className="far fa-comment icon icon-flipped"></i>
-        </div>
-        <div className="likes"><strong>{this.state.likes} likes</strong></div>
+      <CommentWrapper>
+        <IconBar>
+          <i className={`far fa-heart icon-bar-icon ${color}`} onClick={this.handleLiking}></i>
+          <i className="far fa-comment icon-bar-icon icon-flipped"></i>
+        </IconBar>
+        <CommentLikes><strong>{this.state.likes} likes</strong></CommentLikes>
         {this.state.comments.map(comment => <CommentDisplay comment={comment} />)}
-        <div className="time">{moment(this.state.time, 'MMM Do YYYY h:mm:ss').fromNow()}</div>
-        <hr className="dividing-line" />
+        <CommentTime>{moment(this.state.time, 'MMM Do YYYY h:mm:ss').fromNow()}</CommentTime>
+        <DividingLine />
         {this.state.addingComment ?
-          <form onSubmit={this.handleSubmit}><input onBlur={()=>this.setState({addingComment: false})} type="text" className="comment-box" name="comment" autoFocus /></form> :
-          <div className="comment-add-text" onClick={()=> this.setState({addingComment: true})}>Add a comment...</div>}
-      </div>
+          <CommentForm onSubmit={this.handleSubmit}>
+            <CommentInput onBlur={()=>this.setState({addingComment: false})} type="text" name="comment" autoFocus />
+          </CommentForm> :
+          <CommentTextBox onClick={()=> this.setState({addingComment: true})}>Add a comment...</CommentTextBox>}
+      </CommentWrapper>
     )
   }
 };

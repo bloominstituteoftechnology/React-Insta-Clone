@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './comment.css';
+import { CommentPara } from './CommentStyle';
 
 const CommentDisplay = props => {
   return(
-    <div className="comment">
-      <p><strong>{props.comment.username}</strong> {props.comment.text}</p>
+    <div>
+      <CommentPara><strong>{props.comment.username}</strong> {props.comment.text}</CommentPara>
     </div>
   );
 };
