@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
 import Fuse from 'fuse.js';
+import styled from 'styled-components';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './Authentication/Authenticate';
+
+const StyledApp = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 15px;
+  width: 100%;
+`;
 
 const App = Authenticate(
   class App extends Component {
@@ -60,14 +69,14 @@ const App = Authenticate(
     render() {
       let data = (this.state.filteredData ? this.state.filteredData : this.state.data)
       return (
-        <div className="App">
+        <StyledApp>
           <SearchBar 
             logOut={this.logOut}
             onSearch={this.onSearch} 
             onChange={this.handleSearchChange} 
             isEmpty={this.state.isEmpty} />
           <PostsPage data={data} />
-        </div>
+        </StyledApp>
       );
     }
   }
