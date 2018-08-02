@@ -3,6 +3,7 @@ import './CommentSection.css';
 import PropTypes from 'prop-types'; 
 import Comments from './Comments'; 
 import * as moment from 'moment'; 
+import {NewComment, TimeStamp, AddCommentInput, PostHrLine, AddComment,SubmitIcon} from './CommentSectionStyled.js';
 
 class CommentSection extends React.Component {
     constructor(props){
@@ -37,7 +38,11 @@ class CommentSection extends React.Component {
 
     handleOnSubmit = event => {
         event.preventDefault(); 
-    }    
+    }  
+    
+    handleHover = event => {
+        event.target.style.cursor = 'pointer';
+    }
 
     render(){
         
@@ -53,15 +58,21 @@ class CommentSection extends React.Component {
             <div >
                 {comments.map((comment, i) => <Comments key={i}userName = {comment.username} text = {comment.text} onDoubleClick = {this.deleteComment}/>)}
                 
-                <h4 className = "timeStamp">{time}</h4>
-                <hr className ="postHrLine"/>
-                <div className = "addComment">
-                  <form className ="newComment" onSubmit ={this.handleOnSubmit}>      
-                    <input className ="addCommentInput"  value = {value} onChange = {this.handleOnChange} onKeyUp = {this.addNewComment} placeholder = "Add a comment..."/>
+                {/* <h4 className = "timeStamp">{time}</h4> */}
+                <TimeStamp>{time}</TimeStamp>
+                
+                <PostHrLine />
+                
+                <AddComment>
+
+                  
+                  <NewComment onSumbit = {this.handleOnSubmit}>    
+                    <AddCommentInput value = {value} onChange = {this.handleOnChange} onKeyUp = {this.addNewComment} placeholder = "Add a comment..." />
                     <br/>
-                    <i onClick= {this.addNewComment} className="fas fa-ellipsis-h">Submit</i>
-                 </form>
-                </div>
+                    
+                    <SubmitIcon onMouseEnter = {this.handleHover}onClick= {this.addNewComment} className="fas fa-ellipsis-h">Submit </SubmitIcon>
+                  </NewComment> 
+                </AddComment>
             </div>
         );
     }

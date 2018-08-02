@@ -14,7 +14,7 @@
   height: 152px;
 } */
 
-.hrLine {
+/* .hrLine {
     margin-bottom:30px;
     margin-top: 15px;
     width:898px;
@@ -23,7 +23,7 @@
     align-items: flex-start;
     margin-left: 0;
     border:4px solid #E1E4e8;
-}
+} */
 
 /* .logoTitle {
     margin-left: 1.94274%;
@@ -42,11 +42,7 @@
  } */
 
 
-.addCommentInput {
-    width: 400px;
-    height: 40px;
-    border: none;
-}
+
 
 /* .verticalLine {
     color: gray;
@@ -92,7 +88,7 @@
     cursor: pointer; 
 } */
 
-@media(max-width: 500px){
+/* @media(max-width: 500px){ */
     /* .searchBar {
         flex-direction: column;
         justify-content: center;
@@ -117,11 +113,11 @@
         margin-top: 30px;
     } */
 
-    .hrLine {
+    /* .hrLine {
         display: none;
     }
 
-}
+} */
 /* 
 .tooltiptext {
     font-size: 3vh;

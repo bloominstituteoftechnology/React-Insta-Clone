@@ -5,7 +5,7 @@ import SearchBar from '../SearchBar/SearchBar.js';
 import PostContainer from './PostContainer.js'; 
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types'; 
-
+import {HRLine} from  './PostStyled.js';
 
 class PostsPage extends React.Component{
     constructor(){
@@ -39,7 +39,7 @@ class PostsPage extends React.Component{
         <div>
             <SearchBar  value ={this.state.searchText} onChange = {this.handleSearchChange} logOut = {this.props.handleLogOut}/>
             {dummyData.map((post, i) => <div key = {i} className = "post">
-            <hr className ="hrLine"/> <div className = "containerPost">
+            <HRLine /> <div className = "containerPost">
             <PostContainer key = {Date.now()} userName = {post.username} thumbNail={post.thumbnailUrl} image={post.imageUrl}
             likes = {post.likes}/> 
             

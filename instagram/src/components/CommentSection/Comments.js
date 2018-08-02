@@ -1,7 +1,7 @@
 import React from 'react';
 import './CommentSection.css'; 
 import PropTypes from 'prop-types'; 
-
+import {CommentsStyled, CommentStyled, UserCommentName, UserCommentText} from './CommentSectionStyled.js';
 
 
 class Comments extends React.Component {
@@ -14,13 +14,14 @@ class Comments extends React.Component {
     render () {
 
         return (
-            <div className ="comments">
-                
-              <div className = "comment">
-                <h3 className= "userCommentName" onDoubleClick={this.props.onDoubleClick}>{this.props.userName}</h3>
-                <p align= "left" className = "userCommentText">{this.props.text}</p>
-              </div>
-            </div> 
+
+            <CommentsStyled>  
+              <CommentStyled>
+                <UserCommentName onDoubleClick={this.props.onDoubleClick}>{this.props.userName}</UserCommentName>
+                <UserCommentText>{this.props.text}</UserCommentText>
+              </CommentStyled>
+              
+            </CommentsStyled>
         ); 
     }
 }

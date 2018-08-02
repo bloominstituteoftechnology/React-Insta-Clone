@@ -1,11 +1,11 @@
-.comments {
+/* .comments {
     display:flex;
     align-items: flex-start;
     width: 898px;
     max-width: 100%; 
 
-}
-.comment{
+} */
+/* .comment{
     margin-top: 15px; 
     display:flex;
     margin-left: 2.04498%;
@@ -13,15 +13,15 @@
     font-size: 2.5vh;
     width: 100%;
     max-width: 100%; 
-}
+} */
 
-.userCommentName {
+/* .userCommentName {
     font-weight: bold;
     margin-right: .61349%;
     line-height: 3.5vh;
-}
+} */
 
-.postHrLine{
+/* .postHrLine{
     margin-bottom:15px;
     width:898px;
     max-width: 100%; 
@@ -29,9 +29,9 @@
     align-items: flex-start;
     margin-left: 0;
     border: .5px solid #e7e7e7;
-}
+} */
 
-.addComment {
+/* .addComment {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,18 +39,24 @@
     margin-left: 2.04498%;
     border: none;
     width:898px;
-}
-.fa-ellipsis-h{
+} */
+
+/* .addCommentInput {
+    width: 400px;
+    height: 40px;
+    border: none;
+} */
+/* .fa-ellipsis-h{
     margin-right: 2.0044vw;
     font-size: 1vw;
     border: 1px inset black;
     margin-top: 10px;
-}
+} */
 
-.fa-ellipsis-h:hover {
+/* .fa-ellipsis-h:hover {
     cursor: pointer;
-}
-.timeStamp {
+} */
+/* .timeStamp {
     display: flex;
     align-items: flex-start;
     margin-left: 2.04498%;
@@ -58,13 +64,13 @@
     margin-bottom: 13px;
     color: gray;
     font-size: 1.5rem;
-}
-.userCommentText {
+} */
+/* .userCommentText {
     line-height: 3.5vh;
-}
-.newComment {
+} */
+/* .newComment {
     margin: 0 auto;
-}
+} */
 
 
 

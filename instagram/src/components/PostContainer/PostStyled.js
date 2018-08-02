@@ -63,5 +63,22 @@ const FlipIcon = styled.i`
     transform: rotateY(180deg); 
 `;
 
+const HRLine = styled.hr`
+    margin-bottom:30px;
+    margin-top: 15px;
+    width:898px;
+    max-width: 100%; 
+    display:flex;
+    align-items: flex-start;
+    margin-left: 0;
+    border:4px solid #E1E4e8;
+    @media(max-width: 500px){
+        display: none;
+    }
+
+`
+
+
+
 export{Posting, Likes, PostIcons, Icon, PostHeader,
-ThumbNail, PostUserName,PostImage, FlipIcon }
+ThumbNail, PostUserName,PostImage, FlipIcon, HRLine}
