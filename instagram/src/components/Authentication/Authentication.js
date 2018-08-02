@@ -8,22 +8,21 @@ const Authenticate = App =>
       super(props);
       this.state = {
         loggedIn: false,
+        username: '',
+        password: '',
       };
     }
 
     componentDidMount(){
       console.log("authentication CDM");
-      console.log(App);
-      console.log("index.js isuser");
-
     }
 
     render() {
       if (this.state.loggedIn === true ) {
-        console.log("user loggedIn")
+        console.log("user loggedIn, returning App")
         return (<App />);
       } else if (this.state.loggedIn === false) {
-        console.log("user not Logged in")
+        console.log("user not Logged in, returning Login")
         return (<Login />);
       };
 

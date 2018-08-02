@@ -5,8 +5,6 @@ class Login extends Component {
     super();
     this.state = {
       loggedIn: false,
-      username: '',
-      password: '',
     }
   }
 
@@ -24,7 +22,8 @@ class Login extends Component {
 
   toStorage = event => {
     event.preventDefault();
-    console.log(event.target.value)
+    console.log(event.target.value);
+    console.log("authenticationDidMount")
     localStorage.setItem("Username", `${this.state.username}`)
     localStorage.setItem("Password", `${this.state.password}`)
     this.setState({
@@ -32,7 +31,6 @@ class Login extends Component {
       password: "",
     })
 
-    console.log("authenticationDidMount")
     let userCheck = '';
     userCheck = localStorage.getItem('username');
     if (userCheck === '') {
@@ -47,7 +45,7 @@ class Login extends Component {
 
   render(){
     return (
-      <div className="login">
+      <div className="login">Login.js
         <h1>LOGIN PAGE</h1>
         <form
           className="login"
