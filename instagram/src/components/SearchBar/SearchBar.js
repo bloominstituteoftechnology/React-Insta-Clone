@@ -1,6 +1,4 @@
 import React from "react";
-import "./SearchBar.css";
-import cam from "../../assets/instagram-brands.svg";
 import textLogo from "../../assets/insta-text-logo.svg";
 import styled from "styled-components"
 
@@ -55,6 +53,8 @@ const SearchInput = styled.input`
 
 const ImageGroup = styled.div`
     height: 40px;
+    display:flex;
+    align-items: center;
 `;
 
 
@@ -67,7 +67,14 @@ const InputGroup = styled.div`
     }
 `;
 
+const LogoImage = styled.img`
+    height: 90%;
+`;
 
+const HeaderIcon = styled.span`
+    font-size: 20px;
+    padding: 0 10px;
+`;
 
 
 // input field should be refactored eventually into its own component
@@ -78,20 +85,18 @@ const SearchBar = props => {
       <Container>
         <SearchBarWrapper>
           <ImageGroup>
-            <img alt="instagram camera" src={cam} className="logo-image" />
-            <img
+            <LogoImage
               alt="instagram logo"
               src={textLogo}
-              className="logo-image text-logo"
             />
           </ImageGroup>
           <InputGroup>
             <SearchInput type="text" placeholder="Search" onKeyDown={props.searchPosts} />
           </InputGroup>
-          <div className="social-group">
-             <span className="header-icon"><i className="far fa-compass icon"></i></span>
-             <span className="header-icon"><i className="far fa-heart"></i></span>
-             <span className="header-icon"><i className="far fa-user-circle"></i></span>
+          <div>
+             <HeaderIcon><i className="far fa-compass icon"></i></HeaderIcon>
+             <HeaderIcon><i className="far fa-heart"></i></HeaderIcon>
+             <HeaderIcon><i className="far fa-user-circle"></i></HeaderIcon>
           </div>
         </SearchBarWrapper>
       </Container>
