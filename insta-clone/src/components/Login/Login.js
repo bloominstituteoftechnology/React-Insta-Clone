@@ -1,13 +1,15 @@
 import React from 'react';
 import './Login.css';
 import styled, { injectGlobal } from 'styled-components';
+import Billabong from '../Billabong.woff';
 
 injectGlobal`
   @font-face {
-    font-family: 'Billabong';
-    src: url('../Billabong.woff');
+    font-family: Billabong;
+    src: url('${Billabong}');
   }
-`
+`;
+
 const LogIn = styled.div`
   display: flex;
   flex-direction: column;
