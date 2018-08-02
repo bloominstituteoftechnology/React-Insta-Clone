@@ -14,7 +14,7 @@ const SearchBarHeader = styled.div`
 
         > img {
             max-width: 375px;
-            width: 100%
+            width: 100%;
             margin-top: 10px;
         }
 
@@ -28,15 +28,15 @@ const SearchBarHeader = styled.div`
             text-align: center;
             font-size: 3.2rem;
         }
-
-        > icons {
-            display: flex;
-            justify-content: space-between;
-            width: 270px;
-            margin-top: 10px;
-        }
     `
-   
+const Icons = styled.div`
+    
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+    margin-top: 10px;
+       
+`
 
 
 
@@ -52,11 +52,11 @@ class SearchBar extends Component {
                     value={this.props.value}
                     onChange={this.props.handleSearch}
                 />
-            <icons>
+            <Icons>
                 <div><i className="far fa-compass fa-5x"></i></div>
                 <div><i className="far fa-heart fa-5x"></i></div>
                 <div><i className="far fa-user fa-5x"></i></div>
-            </icons>    
+            </Icons>    
             </SearchBarHeader>
          );
     }

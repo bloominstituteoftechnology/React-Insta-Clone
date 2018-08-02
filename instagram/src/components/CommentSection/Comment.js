@@ -5,14 +5,14 @@ const CommentWrap = styled.div`
     margin: 5px 0;
     display: flex;
     align-items: baseline;
-    > username {
+`    
+const Username = styled.div`
         font-size: 1.4rem;
         font-weight: bold;
         margin-right: 5px;
-    }
-    > comment {
+`
+const Com = styled.div`
         font-size: 1.2rem;
-    }
 `
 
 class Comment extends Component {
@@ -20,8 +20,8 @@ class Comment extends Component {
     render() { 
         return ( 
             <CommentWrap>
-                <username>{this.props.name}</username>
-                <comment>{this.props.comment}</comment>
+                <Username>{this.props.name}</Username>
+                <Com>{this.props.comment}</Com>
             </CommentWrap>
          );
     }
