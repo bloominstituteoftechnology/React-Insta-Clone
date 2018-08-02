@@ -1,13 +1,10 @@
-.main-body {
-	margin-top: 77px;
-	/* padding-top: 60px; */
+import styled from 'styled-components';
+
+export const MainBody = styled.div`
+  margin-top: 77px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: #fafafa;
 	font-family: 'Roboto', sans-serif;
-}
-
-@media (max-width: 500px) {
-	background-color: white;
-}
+`

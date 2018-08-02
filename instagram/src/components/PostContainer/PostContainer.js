@@ -5,14 +5,27 @@ import unliked from "../../assets/like.png";
 import liked from "../../assets/liked.png";
 import comment from "../../assets/comment.png";
 import moment from "moment";
-import "./PostContainer.css";
+import {
+  Post,
+  PostHeader,
+  UserThumbnailWrapper,
+  UserThumbnail,
+  AddComment,
+  CommentInput,
+  Image,
+  ButtonWrapper,
+  Button,
+  MainText,
+  Timestamp,
+  Bold
+} from "./post-styles";
 
 class PostContainer extends React.Component {
   constructor(props) {
     super(props);
     this.textInput = React.createRef();
     this.state = {
-      comment: "", 
+      comment: "",
       focused: false,
     };
   }
@@ -27,39 +40,38 @@ class PostContainer extends React.Component {
     }
   };
 
-  onBlur = (e) => {
-    this.setState({ focused: false })
-  }
+  onBlur = e => {
+    this.setState({ focused: false });
+  };
 
   focusTextInput = () => {
-    this.setState({ focused: true })
+    this.setState({ focused: true });
     this.textInput.current.focus();
-  }
+  };
 
   render() {
     return (
-      <div className="post">
-        <div className="post__header">
-          <div className="post__header__image">
-            <img src={this.props.post.thumbnailUrl} alt="thumbnail" />
-          </div>
-          <h1> {this.props.post.username} </h1>
-        </div>
-        <img
-          className="post__main-img"
+      <Post>
+        <PostHeader>
+          <UserThumbnailWrapper>
+            <UserThumbnail src={this.props.post.thumbnailUrl} alt="thumbnail" />
+          </UserThumbnailWrapper>
+          <Bold> {this.props.post.username} </Bold>
+        </PostHeader>
+        <Image
           src={this.props.post.imageUrl}
           alt="main"
         />
-        <div className="post__text">
-          <div className="post__buttons">
-            <img
+        <MainText>
+          <ButtonWrapper>
+            <Button
               src={this.props.post.liked ? liked : unliked}
               onClick={() => this.props.handleLikeToggle(this.props.post.id)}
               alt="liked"
             />
-            <img src={comment} alt="comment" onClick={this.focusTextInput} />
-          </div>
-          <h1 className="post__likes"> {this.props.post.likes} likes </h1>
+            <Button src={comment} alt="comment" onClick={this.focusTextInput} />
+          </ButtonWrapper>
+          <Bold> {this.props.post.likes} likes </Bold>
           {this.props.post.comments.map((comment, index) => (
             <CommentSection
               username={this.props.username}
@@ -70,25 +82,25 @@ class PostContainer extends React.Component {
               }
             />
           ))}
-          <p className="post__date">
+          <Timestamp>
             {moment(this.props.post.timestamp, "MMMM Do YYYY, hh:mm:ss")
               .fromNow()
               .toUpperCase()}
-          </p>
-        </div>
-        <div className={this.state.focused ? 'add-comment' : 'add-comment hide'}>
-          <input
+          </Timestamp>
+        </MainText>
+        <AddComment focused={this.state.focused}>
+          <CommentInput
             onFocus={this.onFocus}
             onBlur={this.onBlur}
-            ref={this.textInput}
+            innerRef={this.textInput}
             type="text"
             value={this.state.comment}
             placeholder="Add a comment..."
             onChange={this.handleChange}
             onKeyDown={this.handleAddComment}
           />
-        </div>
-      </div>
+        </AddComment>
+      </Post>
     );
   }
 }

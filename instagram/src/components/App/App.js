@@ -4,7 +4,7 @@ import Fuse from "fuse.js";
 import dataOptions from "../../SearchOptions";
 import HeaderContainer from "../Header/Header";
 import PostContainer from "../PostContainer/PostContainer";
-import "./App.css";
+import { MainBody } from "./app-styles";
 
 class App extends Component {
   constructor() {
@@ -136,7 +136,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <HeaderContainer
           handleChange={this.handleChange}
           searchInput={this.state.searchInput}
@@ -144,31 +144,29 @@ class App extends Component {
           handleLogOut={this.handleLogOut}
           handleShowAll={this.handleShowAll}
         />
-        <div className="main-body">
-          <div className="posts">
-            {!this.state.filteredInput
-              ? this.state.posts.map(post => (
-                  <PostContainer
-                    username={this.state.username}
-                    key={post.id}
-                    post={post}
-                    handleAddComment={this.handleAddComment}
-                    handleLikeToggle={this.handleLikeToggle}
-                    handleDeleteComment={this.handleDeleteComment}
-                  />
-                ))
-              : this.state.filteredInput.map(post => (
-                  <PostContainer
-                    username={this.state.username}
-                    key={post.id}
-                    post={post}
-                    handleAddComment={this.handleAddComment}
-                    handleLikeToggle={this.handleLikeToggle}
-                    handleDeleteComment={this.handleDeleteComment}
-                  />
-                ))}
-          </div>
-        </div>
+        <MainBody>
+          {!this.state.filteredInput
+            ? this.state.posts.map(post => (
+                <PostContainer
+                  username={this.state.username}
+                  key={post.id}
+                  post={post}
+                  handleAddComment={this.handleAddComment}
+                  handleLikeToggle={this.handleLikeToggle}
+                  handleDeleteComment={this.handleDeleteComment}
+                />
+              ))
+            : this.state.filteredInput.map(post => (
+                <PostContainer
+                  username={this.state.username}
+                  key={post.id}
+                  post={post}
+                  handleAddComment={this.handleAddComment}
+                  handleLikeToggle={this.handleLikeToggle}
+                  handleDeleteComment={this.handleDeleteComment}
+                />
+              ))}
+        </MainBody>
       </div>
     );
   }

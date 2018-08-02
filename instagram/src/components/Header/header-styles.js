@@ -25,7 +25,7 @@ export const SearchWrapper = styled.div`
 `
 export const SearchBrandWrapper = styled.div`
   margin: -6px 0;
-  display: inline-block;
+  display: inline;
   
   @media (max-width: 768px) {
     transform: scale(.8);

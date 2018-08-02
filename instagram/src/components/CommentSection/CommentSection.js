@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import deleteImg from "../../assets/delete.png";
-import "./CommentSection.css";
+import {Comment, User, DeleteButton} from "./comment-styles"
 
 class CommentSection extends React.Component {
   state = {
@@ -19,12 +19,12 @@ class CommentSection extends React.Component {
   }
   render() {
     return (
-      <div className="comment" onMouseEnter={this.showDelete} onMouseLeave={this.hideDelete}>
-        <span><span className="comment-user">{this.props.comment.username}</span>
+      <Comment onMouseEnter={this.showDelete} onMouseLeave={this.hideDelete}>
+        <span><User>{this.props.comment.username}</User>
         <span>{this.props.comment.text}</span>
         </span>
-        {this.state.deleteShowing && <img className="deleteImg" src={deleteImg} onClick={this.props.onClick} alt="delete"/>}
-      </div>
+        {this.state.deleteShowing && <DeleteButton src={deleteImg} onClick={this.props.onClick} alt="delete"/>}
+      </Comment>
     );
   }
 }
