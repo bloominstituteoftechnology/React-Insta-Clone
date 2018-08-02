@@ -31,6 +31,7 @@ class PostsPage extends Component {
   }
 
   componentDidMount(){
+    console.log("Posts Page CDM")
     this.setState({
       data: DummyData,
       displayData: DummyData,

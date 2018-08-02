@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
 import App from './App';
@@ -9,6 +9,25 @@ import Login from './components/Login/Login.js';
 const HOCAuthentication = Authentication(App);
 const HOCLogin = Authentication(Login);
 
+
+class Index extends Component {
+
+
+
+
+  componentDidMount() {
+    console.log("index.js CDM")
+  }
+
+  render(){
+    return(
+      <div>
+        <App />
+      </div>
+    )
+  }
+}
+
 //turn authentication into a component and not a function as it is now.
 
 //Authenticaiton runs first
@@ -17,4 +36,4 @@ const HOCLogin = Authentication(Login);
 
 //if so, render te
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Index />, document.getElementById('root'));

@@ -43,19 +43,15 @@ class Login extends Component {
         loggedIn: true,
       })
     }
-
   }
 
-
-
-
-
   render(){
-    {console.log('hi')}
     return (
       <div className="login">
         <h1>LOGIN PAGE</h1>
-        <form className="login" onSubmit={this.toStorage}>
+        <form
+          className="login"
+          onSubmit={this.toStorage}>
           <input
             value={this.state.username}
             placeholder="name"
@@ -64,9 +60,9 @@ class Login extends Component {
             value={this.state.password}
             placeholder="password"
             onChange={this.passwordHandler}>{this.value}</input>
-            <button onClick={this.toStorage}>Submit</button>
+          <button
+            onClick={this.toStorage}>Submit</button>
         </form>
-
       </div>
     )
   }
