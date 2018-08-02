@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from '../src/dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
 

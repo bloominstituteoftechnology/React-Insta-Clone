@@ -3,6 +3,22 @@ import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSectionContainer';
 import PostLikesSection from './PostLikesSection';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const PostsImageWrapper = styled.div`
+    height: 100%;
+    width: 100%;
+`;
+
+const PostBorder = styled.div`
+    border: 1px solid #d3d3d3;
+    margin: 50px 0;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+`;
+
+const PostImage = styled.img`
+    width: 100%;
+`;
 
 class Post extends React.Component {
     constructor(props) {
@@ -19,20 +35,19 @@ class Post extends React.Component {
 
     render() {
         return (
-            <div className="post-border">
+            <PostBorder>
             <PostHeader 
             username={this.props.post.username}
             thumbnailUrl={this.props.post.thumbnailUrl}
             />
-            <div className="post-image-wrapper">
+            <PostsImageWrapper>
            
-            <img 
+            <PostImage 
             src={this.props.post.imageUrl} 
             alt="post-content" 
-            className="post-image" 
             />
             
-            </div>
+            </PostsImageWrapper>
 
             <PostLikesSection 
             likes={this.state.likes}
@@ -42,9 +57,17 @@ class Post extends React.Component {
             <CommentSection 
             comments={this.props.post.comments} 
             />
-        </div>
+        </PostBorder>
         )
     }
-} 
+};
+
+Post.propTypes = {
+    post: PropTypes.shape({
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        imageUrl: PropTypes.string
+    })
+};
 
 export default Post;

@@ -1,12 +1,18 @@
 import React from 'react';
 import Post from './Post';
-import './Posts.css';
+import styled from 'styled-components';
+
+const PostsContainerWrapper = styled.div`
+    width: 50%;
+    height: 500px;
+    margin: 5px auto;
+`;
 
 const PostsContainer = props => {
     return (
-            <div className="posts-container-wrapper">
+            <PostsContainerWrapper>
                 {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
-            </div>
+            </PostsContainerWrapper>
     );
 };
 
