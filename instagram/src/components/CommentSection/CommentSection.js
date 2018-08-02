@@ -17,21 +17,36 @@ class CommentSection extends Component {
     addComment = e => {
         e.preventDefault();
 
-        // ========= comment checking here ???????
-
         let comments = this.state.comments.concat({
             text: this.state.current, 
             username: localStorage.getItem('username')
         });
-        localStorage.setItem(this.state.id, JSON.stringify(comments));
+
+        const isNew = (comments, newComment) => {
+            for (let i = 0; i < comments.length - 1; i++) {
+                if (comments[i].text === newComment.text 
+                && comments[i].username === newComment.username) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        if (isNew(comments, comments[comments.length - 1])) {
+            localStorage.setItem(this.state.id, JSON.stringify(comments));
+            this.setState({comments});
+        } else {
+            alert('You have already commented that.');
+        }
+
         e.target.reset();
-        this.setState({comments});
     };
 
     deleteComment = id => {
         localStorage.removeItem(this.state.id);
         this.setState({
-            comments: this.state.comments.filter(comment => comment.text + comment.user !== id)
+            comments: this.state.comments.filter(comment => 
+                comment.text + comment.username !== id)
         });
     };
 
@@ -60,8 +75,8 @@ class CommentSection extends Component {
                     this.state.comments.map((comment, ind) =>
                     <Comment 
                         key={comment.text + ind} 
-                        id={comment.text + comment.user}
-                        user={comment.username} 
+                        id={comment.text + comment.username}
+                        username={comment.username} 
                         text={comment.text} 
                         delete={this.deleteComment} />)
                 }

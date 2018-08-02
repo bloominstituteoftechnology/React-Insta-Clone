@@ -5,7 +5,7 @@ const Comment = props => {
     return (
         <div>
             <p>
-                <span>{props.user}</span> 
+                <span>{props.username}</span> 
                 &thinsp; {props.text} 
                 <i onClick={() => props.delete(props.id)} className="far fa-times-circle" />
             </p>
