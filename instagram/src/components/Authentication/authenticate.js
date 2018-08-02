@@ -10,14 +10,15 @@ const Authenticate = App =>
           }
      }
 
-     componentDidMount() { // runs after render() 
-        console.log(2); // logs second
-        // check if user exists in localstorage
-        // if it does, set state to true, if it doesnt set state to false 
+     componentDidMount() {
+       if (!localStorage.getItem('user')) {
+           this.setState({ loggedIn: false })
+       } else {
+           this.setState({ loggedIn: true })
+       };
       }
     
-    render() { 
-        console.log(1); 
+    render() {
         if (this.state.loggedIn) return <App />;
         return <Login />;
     }

@@ -16,3 +16,7 @@
 .top-icons {
     font-size: 20px;
 }
+
+.logout-btn {
+    cursor: pointer;
+}

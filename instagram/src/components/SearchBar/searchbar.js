@@ -12,7 +12,7 @@ const SearchBar = (props) => {
             <div className="col-3 d-flex justify-content-around top-icons">
                 <i className="far fa-compass"></i>
                 <i className="far fa-heart"></i>
-                <i className="far fa-user"></i>
+                <i onClick={props.logOut} className="far fa-user logout-btn"></i>               
             </div>
         </div>
 
