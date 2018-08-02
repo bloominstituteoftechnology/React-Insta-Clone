@@ -1,0 +1,3 @@
+State is important because in a single page application of the type most commonly made today you need to know where your app stands. The state is an easy way to keep track of what should and shouldn't be appearing as well as allowing data to be passed around without resorting to methods like an external database. React allows class components which contain a state.
+
+
