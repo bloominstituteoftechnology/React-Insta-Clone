@@ -1,29 +1,9 @@
-.searchBar {
-    display: flex; 
-    justify-content: space-between; 
-    margin-top: 30px; 
-    padding-bottom: 10px;
-    border-bottom: 1px solid lightgrey; 
-}
 
-.logo {
-    display: flex; 
-}
-
-.search {
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-}
 
 .search-input {
     text-align: center; 
-}
+} 
 
-.nav-icons {
-    display: flex; 
-    align-items: center; 
-}
 .nav-icons .far {
     margin-right: 25px; 
 }
