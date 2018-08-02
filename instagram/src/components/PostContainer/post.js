@@ -5,6 +5,10 @@ import styled from 'styled-components';
 const PostImg = styled.img `
     width: 100%;
 `;
+const PostHeader = styled.h2`
+    margin: 15px 15px;
+`
+
 
 class Post extends Component {
     constructor(props) {
@@ -34,7 +38,12 @@ class Post extends Component {
     render() {
         return (
             <div className="d-flex flex-column align-items-start justify-content-start">  
-                <h2 className="header d-flex align-items-center justify-content-center"><img className="thumbnail-img" src={this.state.data.thumbnailUrl} alt=""/><span className="username username-header">{this.state.data.username}</span></h2>
+                <PostHeader className=" d-flex align-items-center justify-content-center">
+                    <img className="thumbnail-img" src={this.state.data.thumbnailUrl} alt=""/>
+                    <span className="username username-header">
+                        {this.state.data.username}
+                    </span>
+                </PostHeader>
                 <PostImg src={this.state.data.imageUrl} alt=""/>
                 <LikesSection incrementLike={this.incrementLike} likes={this.state.likes} liked={this.state.liked}/>
             </div>

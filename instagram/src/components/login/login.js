@@ -18,6 +18,10 @@ const LoginButton = styled.button`
     padding-left: 10px;
 `
 
+const PageLogin = styled.div`
+    height: 100vh;
+`
+
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -38,7 +42,7 @@ class Login extends Component {
 
     render() {
     return ( 
-        <div className="login d-flex justify-content-center col-12">
+        <PageLogin className="d-flex justify-content-center col-12">
             <form autoComplete="off" className="login-container d-flex flex-column justify-content-center">
                 <LoginInput
                     type="text" 
@@ -59,7 +63,7 @@ class Login extends Component {
                     Login
                 </LoginButton>
             </form>
-        </div>
+        </PageLogin>
     )};
 }
  
