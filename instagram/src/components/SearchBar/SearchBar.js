@@ -34,6 +34,7 @@ class SearchBar extends React.Component {
     handleLogOut = () => {
         localStorage.removeItem('username');
         localStorage.removeItem('password');
+        window.location.reload(); 
         
         
     }

@@ -63,7 +63,6 @@ class CommentSection extends React.Component {
                  </form>
                 </div>
             </div>
-            
         );
     }
 }

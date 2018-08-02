@@ -1,6 +1,9 @@
 import React from 'react'; 
 import logo from './instagramlogo.jpg';
 import './Authentication.css';
+import {Logo, NamePassword,LoginBorderDiv, PasswordInput} from './AuthenticatedStyledComponents.js'; 
+
+
 class LoginPage extends React.Component {
     constructor(){
         super();
@@ -16,12 +19,13 @@ class LoginPage extends React.Component {
     };
 
     handleSubmit = event => {
-        //event.preventDefault();
+        event.preventDefault();
         const username = this.state.username.slice(); 
         const password = this.state.password.slice(); 
         localStorage.setItem("username", username);
         localStorage.setItem("password", password);
         this.setState({loggedIn: true}); 
+        window.location.reload(); 
 
     }
 
@@ -29,25 +33,27 @@ class LoginPage extends React.Component {
 
         return (
 
-            <div className = "loginPage">
+            
+            <LoginBorderDiv>
                 <div className = "loginHeader">
-          
-                    {/* <div className ="leftSideSearchBar"><i className="fab fa-instagram"></i> <span className="verticalLine">&#124;</span><span className ="logoTitle">Instagram</span> </div> */}
-                    <img className = "logo" src={logo} alt="Instagram Logo"/>
+                    <Logo src={logo} alt="Instagram Logo"/>
           
                 </div>
                 <div>
                     <form className = "credentials">
-                        <h1>UserName</h1>
+                        
+                        <NamePassword>UserName</NamePassword>
                         <input onChange = {this.handleUsernameChange} type="text" value = {this.state.username}/>
-                        <h1>Password</h1>
-                        <input className="passwordInput" onChange={this.handlePasswordChange} type="text" value = {this.state.password}/>
+                        <NamePassword>Password</NamePassword>
+                        {/* <input className="passwordInput" onChange={this.handlePasswordChange} type="text" value = {this.state.password}/> */}
+                        <PasswordInput onChange={this.handlePasswordChange} type="text" value = {this.state.password} />
                         <br/>
                         <button onClick ={this.handleSubmit}>Login</button>
                     </form>
 
                 </div>
-            </div>
+            
+            </LoginBorderDiv>
 
         );
     }
