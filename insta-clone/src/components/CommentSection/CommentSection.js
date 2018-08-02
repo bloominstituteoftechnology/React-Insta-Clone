@@ -1,16 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './CommentSection.css';
+import styled from 'styled-components';
+
+const CommentContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    .username {
+        margin-right: 10px;
+        font-weight: bold;
+    }
+`
 
 const CommentSection = (props) => {
     return (
         <div className="comment-container">
             {props.comments.map(comment => {
                 return (
-                    <div className="comment" key={comment.text + comment.username} onClick={props.deleteComment} >
+                    <CommentContainer key={comment.text + comment.username} onClick={props.deleteComment} >
                         <p className="username">{comment.username}</p>
                         <p className="text">{comment.text}</p>
-                    </div>
+                    </CommentContainer>
                 )
             })}
         </div>

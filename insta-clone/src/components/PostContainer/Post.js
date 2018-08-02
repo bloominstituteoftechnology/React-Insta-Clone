@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './PostContainer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CommentSection from '../CommentSection/CommentSection';
 import moment from 'moment';
@@ -30,7 +29,7 @@ const Thumbnail = styled.img`
 const BoldText = styled.p`
     font-weight: bold;
     margin: 0;
-    
+
     ${props => props.bottom && css`
         margin-bottom: 10px;
     `}
