@@ -1,5 +1,5 @@
 import React from 'react';
-import LogIn from './components/LogIn/LogIn'
+import Start from './components/Start/Start'
 
 const Authenticate = App =>
   class extends React.Component {
@@ -26,7 +26,7 @@ const Authenticate = App =>
     render() {
         return (this.state.username) 
         ? <App username={this.state.username} handleLogOut={this.handleLogOut}/>
-        : <LogIn handleLogIn={this.handleLogIn}/>
+        : <Start handleLogIn={this.handleLogIn}/>
     }
   }
 
