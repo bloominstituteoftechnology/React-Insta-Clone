@@ -5,8 +5,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faCompass, faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
 import './SearchBar.css';
+import styled from 'styled-components';
 
-
+const Button = styled.button`
+  border-radius: 3px;
+  padding: 0.25em 1em;
+  margin: 0 1em;
+  background: transparent;
+  color: palevioletred;
+  border: 2px solid palevioletred;
+`;
 
 const SearchBar = props => {
     return (
@@ -26,6 +34,7 @@ const SearchBar = props => {
                 <FontAwesomeIcon icon={faCompass} className="custom-icon" />
                 <FontAwesomeIcon icon={faHeart} className="custom-icon" />
                 <FontAwesomeIcon icon={faUser} className="custom-icon" />
+                <Button>button</Button>
             </Col>
         </Row>
     );
