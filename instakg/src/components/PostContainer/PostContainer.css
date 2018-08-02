@@ -1,18 +1,7 @@
-.post {
-  max-width: 600px;
-  margin: 2vh auto;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  padding: 10px;
-  border: 1px lightgray solid;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
 .header {
   display: flex;
   align-content: center;
+  margin-bottom:10px;
 }
 .userIcon {
   height: 2em;
@@ -20,19 +9,7 @@
   border-radius: 50%;
   margin-right: 5px;
 }
-.userName {
-  font-weight: bold;
-  line-height: 2em;
-  text-align: center;
-  margin-right: 5px;
-}
-.postImageContainer {
-  margin: 0 -10px;
-}
 
-img {
-  width: 100%;
-}
 .iconRow {
   display: flex;
   align-content: center;
@@ -42,26 +19,7 @@ img {
 .icon {
   margin-right: 10px;
 }
-.likes {
-  width: 100%;
-  text-align: left;
-  margin: 5px 0;
-}
-.timeStamp {
-  width: 100%;
-  text-align: left;
-  margin: 5px 0;
-  font-size: 12px;
-  font-weight: bold;
-  opacity: 0.5;
-}
-.commentBar {
-  height: 2px;
-  width: 100%;
-  opacity: 0.1;
-  background-color: grey;
-  margin: 15px 0 5px;
-}
+
 .AddComment {
   display: flex;
   justify-content: space-between;

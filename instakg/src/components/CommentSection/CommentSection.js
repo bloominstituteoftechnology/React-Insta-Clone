@@ -1,6 +1,9 @@
 import React from 'react';
 import './CommentSection.css';
 import PropTypes from 'prop-types';
+import UserName from '../PostContainer/UserName';
+import DeleteButton from './DeleteButton';
+import CommentText from './CommentText'
 
  class CommentSection extends React.Component {
   constructor(props){
@@ -25,9 +28,9 @@ import PropTypes from 'prop-types';
     <div className ='commentBox'>
         { this.state.comments.map((e,i) =>{
           return (<div key={i} className='comment'>
-         <span className='userName'> {e.username}</span>
-          <span className='userComment'>{e.text}</span>
-          <span onClick={this.props.methods} className='deleteButton'> ␡ </span>
+         <UserName> {e.username}</UserName>
+          <CommentText className='userComment'>{e.text}</CommentText>
+          <DeleteButton onClick={this.props.methods} > ␡ </DeleteButton>
           </div>)
         })}
     </div> 

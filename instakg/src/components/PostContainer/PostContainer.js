@@ -6,31 +6,32 @@ import moment from "moment";
 import PostHeader from "./PostHeader";
 import IconContainer from "./IconContainer";
 import CommentEnterField from "./CommentEnterField";
+import Post from "./Post";
+import PostImageContainer from "./PostImageContainer";
+import Likes from "./Likes";
+import TimeStamp from "./TimeStamp";
+import CommentBar from "./CommentBar";
 
 const PostContainer = props => {
   return (
-    <div className="post">
+    <Post>
       <PostHeader
         userdisplay={props.data.username}
         thumbnail={props.data.thumbnailUrl}
       />
-
-      <div className="postImageContainer">
-        <img alt="postimage" src={props.data.imageUrl} />{" "}
-      </div>
+      <PostImageContainer imgS={props.data.imageUrl} />
       <IconContainer id={props.id} method={props.methods[1]} />
-      <div className="likes">{props.data.likes} likes</div>
+      <Likes>{props.data.likes} likes</Likes>
       <CommentSection
         methods={props.methods[2].bind(this)}
         data={props.data.comments}
       />
-      <div className="timeStamp">
-        {" "}
+      <TimeStamp>
         {moment(props.data.timestamp, "MMMM Do YYYY, h:mm:ss a").fromNow()}
-      </div>
-      <div className="commentBar" />
+      </TimeStamp>
+      <CommentBar />
       <CommentEnterField id={props.id} method={props.methods[0]} />
-    </div>
+    </Post>
   );
 };
 PostContainer.propTypes = {

@@ -1,15 +1,3 @@
-.deleteButton{
-    font-weight: bolder;
-    opacity: 0;
-    font-size: 30px;
-
-}
-
-.deleteButton:hover{
-    opacity: 1;
-    cursor: pointer;
-
-}
 
 .comment{
     line-height: 18px;

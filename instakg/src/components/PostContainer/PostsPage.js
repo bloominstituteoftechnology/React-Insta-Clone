@@ -164,7 +164,7 @@ class PostsPage extends Component {
     return (
       <div className="App">
         <SearchBar logout={this.logout} methods={this.handleKeyPressSearch} />
-        <div className="postsHolder">{this.loadPosts()}</div>
+        {this.loadPosts()}
       </div>
     );
   }
