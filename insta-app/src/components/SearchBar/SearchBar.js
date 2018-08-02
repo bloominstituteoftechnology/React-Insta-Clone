@@ -1,12 +1,36 @@
 import React from "react";
+import styled from "styled-components"; 
+
+const TopBar = styled.div`
+display: flex; 
+justify-content: space-between; 
+align-items: center; 
+margin: auto; 
+height: 150px;
+background: white; 
+`
+const TopBarLeft = styled.div`
+display: flex;
+align-items: center; 
+width: 150px;
+`
+const InstaImg = styled.img`
+width: 55%;
+margin-left: 10px; 
+`
+const Itag = styled.i`
+margin: 0 10px; 
+cursor: pointer;
+`
+
 
 const SearchBar = props => {
   return (
-    <div className="top-bar">
-      <div className="top-bar-left">
+    <TopBar>
+      <TopBarLeft>
         <i className="fas fa-camera" />
-        <img className="insta-img" src="https://raw.githubusercontent.com/LambdaSchool/React-Insta-Clone/4079cf6fb6d11bd3ad7a422cdec35e0aab4e2bfe/instagram/src/assets/iglogo.png" alt="logo" />
-      </div>
+        <InstaImg src="https://raw.githubusercontent.com/LambdaSchool/React-Insta-Clone/4079cf6fb6d11bd3ad7a422cdec35e0aab4e2bfe/instagram/src/assets/iglogo.png" alt="logo" />
+      </TopBarLeft>
       <form>
         <input
           className="search-bar"
@@ -18,11 +42,11 @@ const SearchBar = props => {
         />
       </form>
       <div className="top-bar-right">
-        <i className="far fa-compass" />
-        <i className="far fa-heart" />
-        <i className="fas fa-user" />
+        <Itag className="far fa-compass" />
+        <Itag className="far fa-heart" />
+        <Itag className="fas fa-user" />
       </div>
-    </div>
+    </TopBar>
   );
 };
 
