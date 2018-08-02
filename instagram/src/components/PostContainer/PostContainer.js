@@ -1,9 +1,7 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection.js';
 import PropTypes from 'prop-types';
-// import SearchBar from '../SearchBar/SearchBar.js';
-
-//recieve props from app.js with comments then pass it to commentSection
+import styled from 'styled-components';
 
 class PostContainer extends React.Component {
   constructor(props) {
@@ -40,28 +38,91 @@ class PostContainer extends React.Component {
   }
 
   render() {
+
+    const MainPostContainer = styled.div`
+      border: 1px solid lightgray;
+      background-color: white;
+      width: 400px;
+      margin: 15px;
+      display: flex;
+      flex-direction: column;
+      filter: drop-shadow(4px 4px 10px gray);
+    `;
+
+    const Row = styled.div`
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 5px;
+    `;
+
+    const PostIcon = styled.img`
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+    `;
+
+    const UserIcon = styled.img`
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+        border-radius: 50px;
+    `;
+
+    const DarkHeart = styled.img`
+      width: 25px;
+      height: 25px;
+      margin: 5px;
+      display: ${(this.state.likeStatus) ? "flex" : "none"};
+      &:hover{
+        cursor: pointer;
+      }
+    `;
+
+    const Heart = styled.img`
+      width: 25px;
+      height: 25px;
+      margin: 5px;
+      display: ${(this.state.likeStatus) ? "none" : "flex"};
+      &:hover{
+        cursor: pointer;
+      }
+    `;
+
+    const MainPhoto = styled.img`
+      width: 100%;
+      height: auto;
+    `;
+
+    const Username = styled.p`
+      font-weight: bold;
+      margin: 10px;
+    `;
+
     return (
-      <div className="post-container" data={this.state.data}>
-        <div className="row">
-          <img className="thumbnail" src={this.state.data.thumbnailUrl} alt="thumbnail"></img>
-          <p className="username">{this.state.data.username}</p>
-        </div>
-        <img className="main-photo" src={this.state.data.imageUrl} alt="main"></img>
-        <div className="row">
-          <img
-            onClick={this.toggleLike} className={(this.state.likeStatus) ? "heart hide" : "heart"}  src="https://www.freepngimg.com/download/instagram/1-2-instagram-heart-transparent.png" alt="heart"></img>
-          <img
-            onClick={this.toggleLike} className={(this.state.likeStatus) ? "dark-heart" : "dark-heart hide"} src={require("./heart.svg")} alt="dark-heart"></img>
-          <img
-            className="bubble"
+      <MainPostContainer data={this.state.data}>
+        <Row>
+          <UserIcon
+            src={this.state.data.thumbnailUrl} alt="thumbnail"></UserIcon>
+          <Username>{this.state.data.username}</Username>
+        </Row>
+        <MainPhoto
+          src={this.state.data.imageUrl} alt="main"></MainPhoto>
+        <Row>
+          <Heart
+            src="https://www.freepngimg.com/download/instagram/1-2-instagram-heart-transparent.png" alt="heart"  onClick={this.toggleLike}></Heart>
+          <DarkHeart
+            onClick={this.toggleLike}  src={require("./heart.svg")} alt="dark-heart"></DarkHeart>
+          <PostIcon
             src="https://image.flaticon.com/icons/png/512/22/22302.png"
-            alt="bubble"></img>
-        </div>
-        <p className="likes"><strong>{this.state.likes} likes</strong> </p>
+            alt="bubble"></PostIcon>
+        </Row>
+        <Username>
+          <strong>{this.state.likes} likes</strong></Username>
         <CommentSection
           comments={this.state.data.comments}
-          time={this.state.data.timestamp}/>
-      </div>
+          time={this.state.data.timestamp}></CommentSection>
+      </MainPostContainer>
     )
   }
 }

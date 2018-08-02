@@ -12,14 +12,14 @@
 
 #### Tasks (Day III)
 
-- Try and replace all of the styles you have previously written. Change everything to be a Styled Component. (Except for where you need to reference your icon classNames.)
+<!-- - Try and replace all of the styles you have previously written. Change everything to be a Styled Component. (Except for where you need to reference your icon classNames.)
 
 - Re-factor `SearchBar` to use `styled-components`.
 - Create a `Header` styled-component.header that wraps your entire SearchBar.
 
   - We recommend working left to right so begin changing out your styles on the instagram logo.
   - Create a `LogoHeader` styled-component.div
-  - Create a `LogoImage` styled-component.img that fills in the background of your
+  - Create a `LogoImage` styled-component.img that fills in the background of your -->
 
 - Re-factor your `PostContainer` component use only styled components
 
