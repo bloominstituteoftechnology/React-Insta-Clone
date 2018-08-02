@@ -45,10 +45,12 @@ const App = Authenticate (
             logOut={this.logOut}
             onSearch={this.onSearch}
             Empty={this.state.Empty}/>
+
             <PostsPage data={data}/>
         </div>
       );
     }
   }
 );
+
 export default Authenticate(App);

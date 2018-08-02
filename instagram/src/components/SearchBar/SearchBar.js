@@ -1,30 +1,32 @@
 import React from 'react';
-import './SearchBar.css'
+import { StyledSearchBarContainer, StyledInstagramText, StyledNavIcons, StyledIcons, StyledSearchInput } from './SearchBarStyle';
 
 const SearchBar = props => {
     return(
-        <div className='search-bar-container'>
-            <a className='icon'><i class="fab fa-instagram fa-4x"></i></a>
+        <StyledSearchBarContainer>
+            <i class="fab fa-instagram fa-4x"></i>
 
-            <div className='horizontal-line'></div>
-            <h1>Instagram</h1>
+            <StyledInstagramText>
+                Instagram
+            </StyledInstagramText>
             
             <form onSubmit={props.onSearch}>
                 {
-                    props.Empty ? <input 
-                    className='search-input' 
-                    type='search' 
-                    placeholder='Search'/>: 
+                    props.Empty ?
+                    <StyledSearchInput
+                        type='search'
+                        placeholder='Search'
+                    ></StyledSearchInput>: 
                     <p>looking up</p>
                 }
             </form>
                 
-            <div className='nav-icons'>
-                <i className="far fa-compass fa-2x"></i>
-                <i className="far fa-heart fa-2x"></i>
-                <i className="far fa-user fa-2x"></i>
-            </div>
-        </div>
+            <StyledNavIcons>
+                <StyledIcons className='far fa-compass fa-2x'></StyledIcons>
+                <StyledIcons className='far fa-heart fa-2x'></StyledIcons>
+                <StyledIcons className='far fa-user fa-2x'></StyledIcons>
+            </StyledNavIcons>    
+        </StyledSearchBarContainer>
     )
 }
 
