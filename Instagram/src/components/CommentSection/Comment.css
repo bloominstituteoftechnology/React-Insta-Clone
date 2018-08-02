@@ -1,16 +1,16 @@
 .comments {
     text-align: left;
-    padding: 2px;
-    margin-left: 4px;
+    padding: .5%;
+    margin-left: 3%;
   }
   
   .comment {
     font-weight: 300;
-    font-size: 14px;
+    font-size: 1em;
   }
   
   .user {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 1em;
   }
   

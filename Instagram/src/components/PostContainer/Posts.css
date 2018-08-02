@@ -19,6 +19,8 @@
   
   .post-header {
     display: flex;
+    align-items: center;
+    padding: 3%;
   }
   
   .post-thumb-wrapper {
@@ -32,11 +34,16 @@
   
   .like-section {
     display: flex;
+    margin-left: 2%;
+  }
+
+    .far{
+      height: 5%;
+      width: 5%;
   }
   
   .like-section-wrapper {
-    height: 10px;
-    width: 10px;
+    
     margin: 10px;
   }
   

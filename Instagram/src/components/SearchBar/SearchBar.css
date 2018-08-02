@@ -10,9 +10,15 @@
   .image-wrapper {
     height: 50px;
   }
+
+  div input{
+    width: 100%;
+    border-style: none;
+  }
   
   .logo-image {
     height: 100%;
+    margin-left: 15%;
   }
   
   .social-wrapper {
