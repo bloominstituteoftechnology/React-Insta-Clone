@@ -22,3 +22,14 @@ h1 {
   width: 80%;
   margin-bottom: 10px;
 }
+
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.buttons i {
+  margin-right: 10px;
+}
