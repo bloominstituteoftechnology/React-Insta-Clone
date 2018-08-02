@@ -7,7 +7,7 @@ import Post from './Post';
 
 const PostContainer = props => {
     return (
-        <div className="posting">
+        <div className="posting" onClick={props.onClick}>
             <PostHeader post={props.post}/>
             <Post post={props.post} />
             <div className="bottom-text">

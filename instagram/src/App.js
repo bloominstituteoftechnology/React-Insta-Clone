@@ -3,8 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
-
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -77,7 +76,12 @@ class App extends Component {
     if (this.state.loggedIn === true) {
       return (
         <div className="App">
-          <PostsPage data={this.state.data} filter={this.filterData} like={this.likeIncrement} input={this.handleInputChange} comment={this.state.comment} clear={this.clearComment} />
+        <Router>
+          <Switch>
+            <Route exact path="/" render={props => (<PostsPage data={this.state.data} filter={this.filterData} like={this.likeIncrement} input={this.handleInputChange} comment={this.state.comment} clear={this.clearComment} />)} />
+            <Route path="/:number" render={props => (<PostsPage data={this.state.data.slice(parseInt(props.match.params.number), parseInt(props.match.params.number)+1)} filter={this.filterData} like={this.likeIncrement} input={this.handleInputChange} comment={this.state.comment} clear={this.clearComment} />)} />
+          </Switch>
+        </Router>
         </div>
       );
     } else {
