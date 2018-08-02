@@ -15,7 +15,7 @@
 
 .search-bar__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100%;
   padding: 26px 40px;
   max-width: 1010px;
@@ -66,6 +66,7 @@
 @media (max-width: 768px) {
   .search-bar__brand {
     transform: scale(.8);
+    padding-left: 0;
   }
 
   .search-bar__search {
@@ -77,7 +78,7 @@
   }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 580px) {
   .search-bar__wrapper{
     padding: 26px 10px;
     justify-content: center;

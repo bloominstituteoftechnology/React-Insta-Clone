@@ -63,6 +63,7 @@
 }
 
 .btn {
+  outline: none;
   font-size: 14px;
   background-color: rgb(56, 151, 240);
   border-radius: 3px;
@@ -75,6 +76,10 @@
 
 .btn:disabled {
   opacity: .3;
+}
+
+.btn:focus {
+  outline: none;
 }
 
 .secondary {
