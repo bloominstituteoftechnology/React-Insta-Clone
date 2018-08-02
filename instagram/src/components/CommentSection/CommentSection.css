@@ -1,40 +1,40 @@
-.userNameDiv {
+/* .userNameDiv {
   width: 40%;
   display: flex;
   align-items: center;
   font-size: 0.6rem;
   margin-bottom: 0.5rem;
   padding: 0.5rem 0.5rem 0 0.7rem;
-}
-.commentDiv {
+} */
+/* .commentDiv {
   width: 100%;
   text-align: start;
   margin-top: 1.5rem;
   box-shadow: 0 0 30px -10px #777;
   border-radius: 4px;
-}
-.commentDiv h4 {
+} */
+/* .commentDiv h4 {
   font-size: 1rem;
   padding: 0 0.5rem 0.2rem 1rem;
   margin-top: 0.5rem;
-}
+} */
 
-.commentImg {
+/* .commentImg {
   width: 100%;
   height: auto;
-}
-.userNameDiv img {
+} */
+/* .userNameDiv img {
   height: 2rem;
   width: auto;
   border-radius: 25px;
   margin-right: 1rem;
-}
+} */
 
-.faPostDiv {
+/* .faPostDiv {
   font-size: 1.5rem;
   width: 100%;
   text-align: start;
-}
+} */
 
 .faPostDiv i {
   padding: 0.7rem 0.5rem 0.3rem 1rem;
@@ -44,7 +44,7 @@
   cursor: pointer;
 }
 
-.timeStamp {
+/* .timeStamp {
   font-size: 0.75rem !important;
   color: #aa9999;
   margin-left: 10px;
@@ -52,26 +52,26 @@
   border-bottom: 1px solid lightgray;
   padding-left: 6px !important;
   margin-bottom: 0 !important;
-}
+} */
 
-.commentsListDiv h4 {
+/* .commentsListDiv h4 {
   padding: 0 0 0 1rem;
   margin-bottom: 0.8rem;
 }
 
 .commentsListDiv span {
   color: #403f44;
-}
+} */
 
-.commentInputForm {
+/* .commentInputForm {
   width: 100%;
   display: flex;
   justify-content: start;
-}
-.commentInput {
+} */
+/* .commentInput {
   padding: 1rem 15rem 1rem 1rem;
   font-size: 0.9rem;
   font-weight: bold;
   border: none;
   color: #aa9999;
-}
+} */

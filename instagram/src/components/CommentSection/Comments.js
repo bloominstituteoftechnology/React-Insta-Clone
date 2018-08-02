@@ -1,15 +1,26 @@
-import React from 'react';
+import React from "react";
 // import PropTypes from 'prop-types';
-import './CommentSection.css';
+import "./CommentSection.css";
+import styled from "styled-components";
 
+const CommentsListDiv = styled.div``;
+const CommentsListH4 = styled.h4`
+  padding: 0 0 0 1rem;
+  margin-bottom: 0.8rem;
+`;
+const CommentsListSpan = styled.span`
+  color: #403f44;
+`;
 
-const Comments= (props) => {
+const Comments = props => {
   return (
-    <div className="commentsListDiv">
-      <h4>{props.comment.username} <span>{props.comment.text}</span></h4>
-    </div>
-  )
-}
-
+    <CommentsListDiv className="commentsListDiv">
+      <CommentsListH4>
+        {props.comment.username}{" "}
+        <CommentsListSpan>{props.comment.text}</CommentsListSpan>
+      </CommentsListH4>
+    </CommentsListDiv>
+  );
+};
 
 export default Comments;

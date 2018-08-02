@@ -3,7 +3,60 @@ import PropTypes from "prop-types";
 import "./CommentSection.css";
 import Comments from "../CommentSection/Comments";
 import CommentInput from "../CommentSection/CommentInput";
+import styled from "styled-components";
 
+const UserNameDiv = styled.div`
+  width: 40%;
+  display: flex;
+  align-items: center;
+  font-size: 0.6rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.5rem 0 0.7rem;
+`;
+const UserNameImg = styled.img`
+  height: 2rem;
+  width: auto;
+  border-radius: 25px;
+  margin-right: 1rem;
+`;
+
+const UserNameH2 = styled.h2`
+  font-size: 1rem;
+`;
+
+const CommentImg = styled.img`
+  width: 100%;
+  height: auto;
+`;
+
+const FaPostDiv = styled.div`
+  font-size: 1.3rem;
+  width: 100%;
+  text-align: start;
+`;
+
+const CommentLikes = styled.h4`
+  padding: 0 0.5rem 0.2rem 1rem;
+  font-size: 1rem;
+`;
+const ListOfCommentsDiv = styled.div``;
+const TimeStampH4 = styled.h4`
+  font-size: 0.75rem !important;
+  color: #aa9999;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom: 1px solid lightgray;
+  padding: 0 0.5rem 0.2rem 0.3rem;
+  margin-bottom: 0 !important;
+  margin-top: 0.5rem;
+`;
+const CommentDiv = styled.div`
+  width: 100%;
+  text-align: start;
+  margin-top: 1.5rem;
+  box-shadow: 0 0 30px -10px #777;
+  border-radius: 4px;
+`;
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
@@ -55,37 +108,39 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <div className="commentDiv">
-        <div className="userNameDiv">
-          <img
+      <CommentDiv className="commentDiv">
+        <UserNameDiv className="userNameDiv">
+          <UserNameImg
             src={this.state.comment.thumbnailUrl}
             alt="thumbnail of username"
           />
-          <h2>{this.state.comment.username}</h2>
-        </div>
+          <UserNameH2>{this.state.comment.username}</UserNameH2>
+        </UserNameDiv>
 
-        <img
+        <CommentImg
           src={this.state.comment.imageUrl}
           className="commentImg"
           alt="subject in post"
         />
 
-        <div className="faPostDiv">
+        <FaPostDiv className="faPostDiv">
           <i className="fa fa-heart-o" onClick={this.handleLike} />
           <i className="fa fa-comment-o fa-flip-horizontal" />
-        </div>
-        <h4>{this.state.likes} likes</h4>
-        <div className="listOfCommentsDiv">
+        </FaPostDiv>
+        <CommentLikes>{this.state.likes} likes</CommentLikes>
+        <ListOfCommentsDiv className="listOfCommentsDiv">
           {this.state.comments.map(comment => <Comments comment={comment} />)}
-        </div>
+        </ListOfCommentsDiv>
         {/* <h4 className="timeStamp">{this.state.comment.timestamp} DAYS AGO</h4> */}
-        <h4 className="timeStamp">{this.timeSince} DAYS AGO</h4>
+        <TimeStampH4 className="timeStamp">
+          {this.timeSince} DAYS AGO
+        </TimeStampH4>
         <CommentInput
           handleSubmit={this.handleSubmit}
           comments={this.state.comment.comments}
           handleInputChange={this.handleInputChange}
         />
-      </div>
+      </CommentDiv>
     );
   }
 }
