@@ -20,6 +20,38 @@ class CommentSectionContainer extends React.Component {
     }
   }
 
+  componentDidMount() {
+    const id = 'comments';
+    if (localStorage.getItem(id)) {
+      this.setState({
+        comments: JSON.parse(localStorage.getItem('comments'))
+      });
+    } else {
+      this.setComments();
+    }
+    this.setLikes();
+  }
+
+  componenetWillUnmount() {
+    this.setComments();
+    this.setLikes();
+  }
+
+  setComments = () => {
+    localStorage.setItem(
+      'comments',
+      JSON.stringify(this.state.comments)
+    );
+  };
+
+  setLikes = () => {
+    localStorage.setItem(
+      'likes',
+      JSON.stringify(this.state.likes)
+    );
+  }
+
+
   handleChange = e => this.setState({ input: e.target.value });
 
   addLike = () => {
@@ -35,7 +67,10 @@ class CommentSectionContainer extends React.Component {
           shouldAddLike: !prevState.shouldAddLike
         };
       }
-    })
+    });
+    setTimeout(() => {
+      this.setLikes();
+    }, 500);
   }
 
   shouldAddComment = () => {
@@ -56,7 +91,10 @@ class CommentSectionContainer extends React.Component {
         comments: comments, 
         input: ''
       };
-    })
+    });
+    setTimeout(() => {
+      this.setComments();
+    }, 500);
     e.preventDefault();
   }
 
@@ -64,22 +102,38 @@ class CommentSectionContainer extends React.Component {
     return (
       <section className="main-post__comment-section">
         <div className="comment-section__top">
+
+          {/*Dynamic Icons and Likes*/}
           <div className="comment-section__icons">
             <div className="comment-section__icon--like">
-              <FontAwesomeIcon onClick={this.addLike} icon={this.state.shouldAddLike ? faSHeart : faHeart} />
+              <FontAwesomeIcon 
+                onClick={this.addLike} 
+                icon={this.state.shouldAddLike ? faSHeart : faHeart} 
+              />
             </div>
             <div className="comment-section__icon--comment">
-              <FontAwesomeIcon onClick={this.shouldAddComment} icon={this.state.shouldAddComment ? faSComment : faComment} />
+              <FontAwesomeIcon 
+                onClick={this.shouldAddComment} 
+                icon={this.state.shouldAddComment ? faSComment : faComment} 
+              />
             </div>
           </div>
           <div className="comment-section__likes">
             <p><strong>{this.state.likes} likes</strong></p>
           </div>
         </div>
-        {this.state.comments.map((comment, index) => <Comment key={index} username={comment.username} text={comment.text} />)}
+
+        {/*Comment Component*/}
+        {this.state.comments.map((comment, index) => 
+          <Comment key={index} username={comment.username} text={comment.text} />
+        )}
+
+        {/*Timestamp*/}
         <div className="comment-section__timestamp">
           <p><strong>{this.state.timestamp}</strong></p>
         </div>
+
+        {/*Dynamic User Comment Input*/}
         {this.state.shouldAddComment ?
           <form className="comment-section__input" onSubmit={this.addComment}>
             <input
