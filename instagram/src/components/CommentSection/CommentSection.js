@@ -62,19 +62,3 @@ class CommentSection extends React.Component {
 
 export default CommentSection;
 
-
-
-
-
-
-
-
-// keeping this, lest i break something 
-//const CommentSection = props => {
-
-//     return(
-//         <div className="commentsection">
-//             {this.state.comments.map(item => <Comment com={item}/>)}
-//         </div>
-//     )
-// }
