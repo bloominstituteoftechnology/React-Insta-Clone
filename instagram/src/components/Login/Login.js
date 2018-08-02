@@ -29,8 +29,8 @@ class Login extends Component {
       <div className="login">Login.js
         <h1>LOGIN PAGE</h1>
         <form
-          className="login"
-          onSubmit={this.toStorage}>
+            className="login"
+            onSubmit={this.toStorage}>
           <input
             name="username"
             value={this.state.username}
@@ -38,12 +38,12 @@ class Login extends Component {
             onChange={this.inputHandler}
             >{this.value}</input>
           <input
+            type="password"
             name="password"
             value={this.state.password}
             placeholder="password"
             onChange={this.inputHandler}>{this.value}</input>
-          <button
-            >Submit</button>
+          <button>Submit</button>
         </form>
       </div>
     )

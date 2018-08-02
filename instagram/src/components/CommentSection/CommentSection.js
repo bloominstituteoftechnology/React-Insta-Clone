@@ -16,7 +16,7 @@ class CommentSection extends React.Component {
   inputChange = event => {
     this.setState({
       inputValue: event.target.value,
-      newComments: {text: event.target.value, username: "mike" }
+      newComments: {text: event.target.value, username: localStorage.getItem("Username") }
     })
   }
 
@@ -35,13 +35,17 @@ class CommentSection extends React.Component {
       <div className="comment-section">
         {this.state.comments.map( (comment, i) => {
           return <Comment
-            key={i}
-            comments={comment} />
-        })}
+                    key={i}
+                    comments={comment}
+                  />
+          })
+        }
         <p className="timestamp">{this.state.time}</p>
         <form onSubmit={this.addNewComment}>
           <input
-            value={this.state.inputValue} onChange={this.inputChange} className="add-comment"
+            value={this.state.inputValue}
+            onChange={this.inputChange}
+            className="add-comment"
             placeholder=" Add a comment..."
           >{this.value}</input>
         </form>
@@ -50,8 +54,6 @@ class CommentSection extends React.Component {
   };
 }
 
-CommentSection.propTypes = {
-  comments: PropTypes.array
-}
+CommentSection.propTypes = {comments: PropTypes.array}
 
 export default CommentSection;
