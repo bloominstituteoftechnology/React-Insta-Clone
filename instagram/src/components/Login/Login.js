@@ -1,5 +1,6 @@
 import React from "react";
 import "./Login.css";
+import logoText from "../SearchBar/instagramLogoText.png";
 
 class Login extends React.Component {
   constructor(props) {
@@ -14,6 +15,9 @@ class Login extends React.Component {
   render() {
     return (
       <div className="loginDiv">
+        <div className="loginImgDiv">
+          <img src={logoText} alt="instagram text" />
+        </div>
         <form className="loginForm">
           <input
             className="usernameInput"
