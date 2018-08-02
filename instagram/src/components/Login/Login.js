@@ -1,6 +1,17 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import "./Login.css";
+import styled from 'styled-components'
+
+const LoginForm = styled.form`
+width: 500px;
+background: orange;
+border-radius: 6px;
+margin: 10px auto;
+padding: 10px 25px;
+`
+
+
 
 class Login extends Component {
   constructor(props) {
@@ -25,7 +36,7 @@ class Login extends Component {
 
   render() {
     return (
-      <Form className="container login-form">
+      <LoginForm>
         <h3>Welcome to React Insta Clone</h3>
         <div>Please Login</div>
         <FormGroup>
@@ -50,7 +61,7 @@ class Login extends Component {
             Log In
           </Button>
         </FormGroup>
-      </Form>
+      </LoginForm>
     );
   }
 }
