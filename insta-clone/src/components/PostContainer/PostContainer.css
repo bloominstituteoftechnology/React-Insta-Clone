@@ -1,11 +1,12 @@
 .post-container {
   border: 1px solid black;
-  width: 75%;
+  width: 50%;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-top: 50px;
+  background-color: white;
 }
 
 .title {

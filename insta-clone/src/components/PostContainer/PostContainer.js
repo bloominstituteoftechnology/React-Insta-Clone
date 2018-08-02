@@ -12,7 +12,7 @@ const PostContainer = props => {
         <p>{props.data.username}</p>
       </div>
       <img src={props.data.imageUrl} className='image' alt='main' />
-      <CommentsSection data={props.data.comments} likes={props.data.likes} />
+      <CommentsSection data={props.data.comments} likes={props.data.likes} user={props.data.username}/>
     </div>
   )
 }

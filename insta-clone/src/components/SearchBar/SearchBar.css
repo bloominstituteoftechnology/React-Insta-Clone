@@ -1,15 +1,16 @@
 @font-face {
   font-family: 'Billabong';
-  src: url(Billabong.woff);
+  src: url('../Billabong.woff');
 }
 
 .search-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 15px;
+  padding: 15px;
   border-bottom: 1px solid black;
   padding-bottom: 20px;
+  background-color: white;
 }
 
 .search-left {
@@ -21,8 +22,8 @@
   font-family: FontAwesome;
   font-size: 16px;
   width: 200px;
-  margin-top: 10px;
   height: 30px;
+  margin: 0 5px 0 0;
 }
 
 .search-right {
@@ -55,5 +56,11 @@
 
 .submit-btn {
   height: 35px;
+  width: 40px;
   border: 1px solid lightgrey;
+  margin: 0;
+}
+
+.submit-btn span {
+  font-size: 18px;
 }

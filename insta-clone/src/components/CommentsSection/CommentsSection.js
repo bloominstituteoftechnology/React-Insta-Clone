@@ -6,7 +6,8 @@ class CommentsSection extends React.Component {
     super(props);
     this.state = {
       comments: props.data,
-      likes: props.likes
+      likes: props.likes,
+      username: props.user
     }
   }
 
@@ -28,22 +29,19 @@ class CommentsSection extends React.Component {
   }
 
   saveState = () => {
-    let comments = JSON.stringify(this.state.comments);
-    let likes = JSON.stringify(this.state.likes);
-
-    localStorage.setItem('comments', comments);
-    localStorage.setItem('likes', likes);
+    let data = JSON.stringify(this.state.comments);
+    data = '{"data":'+data+',"likes":'+this.state.likes+'}';
+    let user = this.state.username;
+    localStorage.setItem(user, data);
   }
 
   componentDidMount() {
-    let comments = JSON.parse(localStorage.getItem('comments'));
-    let likes = JSON.parse(localStorage.getItem('likes'));
-
-    if(comments) {
-      this.setState({ comments: comments });
-    }
-    if(likes) {
-      this.setState({ likes: likes });
+    if (localStorage.getItem(this.state.username)) {
+      let data = JSON.parse(localStorage.getItem(this.state.username));
+      this.setState({
+        comments: data.data,
+        likes: data.likes
+      })
     }
   }
 
