@@ -1,0 +1,18 @@
+.search span{
+    color: lightgray;
+}
+.search{
+    position: relative;
+}
+.search .fa-search{
+    position: absolute;
+    top:10px;
+    left: 20px;
+}
+.search-icons{
+    font-size: 2.5rem;
+    padding: 0 1rem;
+}
+input{
+    text-align: center;
+}
