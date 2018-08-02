@@ -39,6 +39,7 @@
     border-radius: 5px;
     height: 30px;
     width: 200px;
+    background-color: white;
 }
 
 .form input:focus{
