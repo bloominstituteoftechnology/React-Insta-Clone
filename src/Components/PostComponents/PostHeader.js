@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './posts.css';
 import { PostHeading, UserIcon, IconImg, UserName } from './PostStyle';
 
 const PostHeader = props => {

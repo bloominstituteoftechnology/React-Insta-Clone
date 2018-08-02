@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './posts.css';
 import { PostWrapper, PostImageWrapper } from './PostStyle';
 
 import CommentSection from './../CommentComponents/CommentSection';
