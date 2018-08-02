@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer'
+import PostContainer from './components/PostContainer/PostContainer';
+import Authenticate from './authentication/Authenticate';
+
+const AuthenticateContainer= Authenticate(PostContainer);
 
 class App extends Component {
   constructor(){
@@ -14,11 +17,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PostContainer dog={this.state.insta_posts}/>
-        <PostsPage />
+        
+        <AuthenticateContainer />
       </div>
     );
   }
 }
 
 export default App;
+
+

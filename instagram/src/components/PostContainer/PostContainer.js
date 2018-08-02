@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const PostContainer = (props) => {
     return ( 
         <div>
-    {props.dog.map(dummy_data=><Post data={dummy_data}/>)}
+    {props.posts.map(dummy_data=><Post data={dummy_data}/>)}
     </div>
      );
 }

@@ -1,26 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, {Component} from 'react';
+import Login from '../login/Login';
 
-class Authenticate extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
+const Authenticate=(Postsprops)=> 
+class extends Component {
+    constructor() {
+        super();
+        this.state = { variable:true,  }
     }
     render() { 
-        return (  );
+        return (
+            this.state.variable ? <Postsprops /> : <Login />
+          );
     }
 }
  
 export default Authenticate;
 
-function () {
-    return class extends Component {
-        constructor(props) {
-            super(props);
-        }
- 
-        render() {
-            return < {...this.props} />
-        }
-    }
-}
