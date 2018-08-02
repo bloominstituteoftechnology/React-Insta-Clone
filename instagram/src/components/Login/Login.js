@@ -37,9 +37,7 @@ class Login extends Component {
   render() {
     return (
       <LoginForm>
-        <h3>Welcome to React Insta Clone</h3>
-        <div>Please Login</div>
-        <FormGroup>
+        <FormGroup className = "one">
           <Input
             type="text"
             placeholder="User Name"
@@ -56,10 +54,11 @@ class Login extends Component {
             value={this.state.password}
             onChange={this.handleInputChange}
           />
-          <br />
-          <Button color="success" size="large" onClick={this.handleLoginSubmit}>
+        <div className = "button row">
+          <Button  className="butt" onClick={this.handleLoginSubmit}>
             Log In
           </Button>
+        </div>
         </FormGroup>
       </LoginForm>
     );
