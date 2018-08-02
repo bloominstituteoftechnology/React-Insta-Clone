@@ -2,9 +2,9 @@
   width: 40%;
   display: flex;
   align-items: center;
-  font-size: .6rem;
-  margin-bottom: .5rem;
-  padding: .5rem .5rem 0 .7rem;
+  font-size: 0.6rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.5rem 0 0.7rem;
 }
 .commentDiv {
   width: 100%;
@@ -15,8 +15,8 @@
 }
 .commentDiv h4 {
   font-size: 1rem;
-  padding: 0 .5rem .2rem 1rem;
-  margin-top: .5rem;
+  padding: 0 0.5rem 0.2rem 1rem;
+  margin-top: 0.5rem;
 }
 
 .commentImg {
@@ -37,12 +37,16 @@
 }
 
 .faPostDiv i {
-  padding: .7rem .5rem .3rem 1rem;
+  padding: 0.7rem 0.5rem 0.3rem 1rem;
+}
+
+.faPostDiv .fa-heart-o:hover {
+  cursor: pointer;
 }
 
 .timeStamp {
-  font-size: .75rem !important;
-  color: #AA9999;
+  font-size: 0.75rem !important;
+  color: #aa9999;
   margin-left: 10px;
   margin-right: 10px;
   border-bottom: 1px solid lightgray;
@@ -52,23 +56,22 @@
 
 .commentsListDiv h4 {
   padding: 0 0 0 1rem;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 .commentsListDiv span {
-  color: #403F44;
+  color: #403f44;
 }
 
 .commentInputForm {
   width: 100%;
   display: flex;
   justify-content: start;
-  
 }
 .commentInput {
   padding: 1rem 15rem 1rem 1rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: bold;
   border: none;
-  color: #AA9999;
+  color: #aa9999;
 }
