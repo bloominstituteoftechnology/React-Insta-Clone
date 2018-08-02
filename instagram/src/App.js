@@ -1,8 +1,13 @@
 import React, { Component } from "react";
-import "./App.css";
 import PostsPage from "./components/PostContainer/PostsPage";
 import Authenticate from "./components/Authentication/Authenticate";
+import styled from "styled-components";
 
+// styled components
+const AppWrapper = styled.div`
+  text-align: center;
+  height: 900px;
+`;
 class App extends Component {
   constructor() {
     super();
@@ -12,9 +17,9 @@ class App extends Component {
   componentDidMount() {}
   render() {
     return (
-      <div>
+      <AppWrapper>
         <PostsPage />
-      </div>
+      </AppWrapper>
     );
   }
 }
