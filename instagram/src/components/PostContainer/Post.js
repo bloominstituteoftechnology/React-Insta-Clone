@@ -18,6 +18,7 @@ const ProfPic = styled.img `
 
 const PostIcon = styled.img `
   height: 30px;
+  margin: 5px 0;
 `;
 
 class Post extends React.Component {
