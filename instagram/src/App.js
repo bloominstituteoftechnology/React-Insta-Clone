@@ -3,6 +3,7 @@ import "./App.css";
 import PostsPage from "./components/PostContainer/PostsPage"
 import Authenticate from "./components/Authentication/Authenticate"
 
+
 // Searchbar and PostContainer are children of App Component
 // App Component holds the state of the dummyData
 // if this.setState is called then
