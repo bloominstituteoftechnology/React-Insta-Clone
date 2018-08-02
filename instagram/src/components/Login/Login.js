@@ -54,6 +54,9 @@ class Login extends Component {
             />
             <button className="login-button" onClick={this.submitHandler}>Log In</button>
           </form>
+          {/* <div className="no-account">
+          <span>Don't have an account? <span className="sign-up-text">Sign up</span></span>
+          </div> */}
           </div>
     );
   }

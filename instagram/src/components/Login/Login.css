@@ -18,7 +18,7 @@
         height: 22.5em;
         width: 22em;
         margin: 0 auto;
-        border-radius: 8px;
+        border-radius: 4px;
         color: #fff;
         display: flex;
         align-items: center;
@@ -27,6 +27,29 @@
         padding: 0;
         border: 1px solid #eee;
 }
+
+/* .no-account {
+    background-color:white;
+    height: 5em;
+    width: 25.2em;
+    margin: 10px auto;
+    border-radius: 4px;
+    color: #777;
+    font-weight: 300;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    border: 1px solid #eee;
+}
+
+.sign-up-text {
+    color: #ea10e3eb;
+    font-weight: 500;
+} */
+
 
 .login-input {
     background-color: #f9f9f9;
@@ -47,6 +70,7 @@
     background-color: white;
     outline: none;
     color: #555;
+    border: 1px solid #b900b382;
 }
 
 .login-button {

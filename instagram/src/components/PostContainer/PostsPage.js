@@ -35,7 +35,6 @@ class PostsPage extends Component {
     return (
       <div>
         <SearchBar
-          searchTerm={this.state.searchTerm}
           searchPosts={this.searchPostsHandler}
         />
         <PostContainer

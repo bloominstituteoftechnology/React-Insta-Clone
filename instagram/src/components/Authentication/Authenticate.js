@@ -13,11 +13,9 @@ const Authenticate = App =>
       }
       componentDidMount() {
           // if userKey is true (has truthy value)) set isLoggedin to true
-          if (localStorage.getItem('userKey')) {
-              this.setState( {isLoggedIn: true} );
-          } else {
-            this.setState( {isLoggedIn: false} );
-          }
+          localStorage.getItem('userKey') ?  
+          this.setState( {isLoggedIn: true} ) : 
+          this.setState( {isLoggedIn: false} );
       }
       // here we are going check when the component mounts is user
     // set up our state so that we have some conditional logging
