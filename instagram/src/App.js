@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Authenticate from './components/Authentication/Authenticate.js';
 import PostPage from './components/PostContainer/PostsPage.js';
-
-const App=Authenticate( 
+const App=Authenticate(
   class App extends Component {
   constructor() {
     super();
