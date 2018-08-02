@@ -43,7 +43,7 @@ handleCommentSubmit = e => {
     alert("You must provide a comment");
     return;
   }
-  const newComment = { text: this.state.comment, username: "testbot" };
+  const newComment = { text: this.state.comment, username: this.state.username };
   const comments = this.state.comments.slice();
   comments.push(newComment);
   this.setState({ comments, comment: "" });
