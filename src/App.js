@@ -23,21 +23,6 @@ class App extends Component {
     })  
   }
 
-  handleCommentInput = (e) => {
-    this.setState({
-      comment: e.target.value
-    })
-  }
-
-  handleCommentSubmit = (e) => {
-    e.preventDefault();
-    const posts = [...this.state.posts, {username: 'Johnathan Huggett aka Code Jesus', text: this.state.comment}]
-  }
-
-  handleSearchInput() {
-
-  }
-
   render() {
     console.log(this.state.posts)
     return (
@@ -45,7 +30,7 @@ class App extends Component {
       <SearchBar />
 
       {this.state.posts.map((user, i) => {
-        return <PostContainer comment={this.state.comment} handleCommentInput={this.handleCommentInput} user={user} key={i}/>
+        return <PostContainer comment={this.state.comment} user={user} key={i}/>
       })}
 
       </div>
