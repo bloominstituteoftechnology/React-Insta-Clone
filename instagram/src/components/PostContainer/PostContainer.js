@@ -19,7 +19,7 @@ class PostContainer extends React.Component {
     render() {
         return (
             <Container className="custom-container" >
-                <Row className="flex-start">
+                <Row noGutters={true} className="flex-start">
                     <Col sm={1}>
                         <img className="profile-img" alt="profilepic" src={this.props.postProp.thumbnailUrl} />
                     </Col>

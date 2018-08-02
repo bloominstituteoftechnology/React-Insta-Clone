@@ -7,36 +7,32 @@ import { faCompass, faHeart, faUser } from '@fortawesome/free-regular-svg-icons'
 import './SearchBar.css';
 import styled from 'styled-components';
 
-const Button = styled.button`
-  border-radius: 3px;
-  padding: 0.25em 1em;
-  margin: 0 1em;
-  background: transparent;
-  color: palevioletred;
+const Header = styled.header`
   border: 2px solid palevioletred;
 `;
 
 const SearchBar = props => {
     return (
-        <Row>
-            <Col className="flex-evenly">
-                <FontAwesomeIcon icon={faInstagram} className="custom-icon"/>
-                <img src={window.location.origin + '/instagramtext.png'} alt='Instagram logo' height='40px' />
+        <Header>
+            <Row>
+                <Col className="flex-evenly">
+                    <FontAwesomeIcon icon={faInstagram} className="custom-icon" />
+                    <img src={window.location.origin + '/instagramtext.png'} alt='Instagram logo' height='40px' />
                 </Col>
-            <Col>
-                <Form>
-                    <FormGroup >
-                        <Input type="search"  className="fa fa-input" placeholder="&#xf002; Search" onKeyDown={props.searchPosts} />
-                    </FormGroup>
-                </Form>
-            </Col>
-            <Col className="flex-evenly">
-                <FontAwesomeIcon icon={faCompass} className="custom-icon" />
-                <FontAwesomeIcon icon={faHeart} className="custom-icon" />
-                <FontAwesomeIcon icon={faUser} className="custom-icon" />
-                <Button>button</Button>
-            </Col>
-        </Row>
+                <Col>
+                    <Form>
+                        <FormGroup >
+                            <Input type="search" className="fa fa-input" placeholder="&#xf002; Search" onKeyDown={props.searchPosts} />
+                        </FormGroup>
+                    </Form>
+                </Col>
+                <Col className="flex-evenly">
+                    <FontAwesomeIcon icon={faCompass} className="custom-icon" />
+                    <FontAwesomeIcon icon={faHeart} className="custom-icon" />
+                    <FontAwesomeIcon icon={faUser} className="custom-icon" />
+                </Col>
+            </Row>
+        </Header>
     );
 }
 
