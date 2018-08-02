@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import Login from './components/Authentication/Login'
-
+import Authenticate from './components/Authentication/Authenticate'
 
 
 
@@ -11,8 +11,6 @@ class App extends Component {
     super();
     this.state = {
       posts: [],
-
-      loggedin: true,
 
       username:'', 
       
@@ -47,16 +45,20 @@ componentDidMount() {
     console.log('page rendered', this.state)
     return (
       <div className="container">
+      
        <Login 
        addNewLogin={this.addNewLogin}
        handleUsername={this.handleUsername}
        handlePassword={this.handlePassword}
        />
+
+       <Auth username={this.state.username} password={this.state.password} />
+      
       </div>
     );
   }
 }
 
-// const Auth = Authenticate(App)
+const Auth = Authenticate(App)
 
 export default App;
