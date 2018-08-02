@@ -62,7 +62,7 @@ const App = Authenticate(
       return (
         <div className="App">
           <SearchBar 
-          logOut={this.logOut}
+            logOut={this.logOut}
             onSearch={this.onSearch} 
             onChange={this.handleSearchChange} 
             isEmpty={this.state.isEmpty} />

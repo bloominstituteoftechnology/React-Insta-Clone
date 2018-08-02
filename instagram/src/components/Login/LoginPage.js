@@ -9,8 +9,8 @@ class LoginPage extends React.Component {
         };
     }
 
-    handleLogin = e => {
-        localStorage.setItem('username', this.state.username)
+    handleLogin = () => {
+        localStorage.setItem('username', this.state.username);
     };
 
     handleUserInput = e => {

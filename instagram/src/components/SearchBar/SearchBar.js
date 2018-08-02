@@ -1,24 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { StyledSearchBar, 
+    StyledSearchForm, StyledSearchInput, 
+    StyledBtnDiv, StyledLogoutBtn } 
+from './StyledSearchBar';
 
 const SearchBar = props => {
     return (
-        <div className="search-bar">
-            <i className="fab fa-instagram fa-2x"></i>
-            <form onSubmit={props.onSearch}>
-                {props.isEmpty ?  <i className="fas fa-search"></i> : <p>&emsp;</p>}
-                <input 
-                    className="search" 
+        <StyledSearchBar>
+            <i className="fab fa-instagram fa-2x" />
+            <StyledSearchForm onSubmit={props.onSearch}>
+                {props.isEmpty ?  <i className="fas fa-search" /> : <p>&emsp;</p>}
+                <StyledSearchInput 
                     onChange={props.onChange}
                     type="text" 
                     placeholder="              Search" />
-            </form>
-            <div className="btn-container">
+            </StyledSearchForm>
+            <StyledBtnDiv>
                 <form>
-                    <button onClick={props.logOut}>Log Out!</button>
+                    <StyledLogoutBtn onClick={props.logOut}>Log Out!</StyledLogoutBtn>
                 </form>
-            </div>
-        </div>
+            </StyledBtnDiv>
+        </StyledSearchBar>
     );
 };
 

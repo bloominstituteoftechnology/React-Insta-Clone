@@ -88,39 +88,6 @@ body {
   margin-right: 10px;
   width: 30px;
 }
-.search-bar {
-  background: whitesmoke;
-  display: flex;
-  height: 40px;
-  justify-content: center;
-  position: fixed;
-  width: 100%;
-}
-.search-bar .fa-instagram {
+.fa-instagram {
   margin-top: 2px;
-}
-.search-bar form {
-  align-items: center;
-  display: flex;
-  position: relative;
-}
-.search-bar form i {
-  left: 60px;
-  pointer-events: none;
-  position: relative;
-  z-index: 2;
-}
-.search-bar form .search {
-  background: white;
-  border-radius: 5px;
-  width: 80%;
-}
-.search-bar .btn-container {
-  align-items: center;
-  display: flex;
-  left: -10px;
-  position: relative;
-}
-.search-bar .btn-container button {
-  border-radius: 5px;
 }
