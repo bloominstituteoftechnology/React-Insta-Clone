@@ -76,3 +76,12 @@
   outline: none;
   border: none;
 }
+
+@media (max-width: 500px) {
+  .post {
+    margin-top: 0;
+  }
+  .hide {
+    display: none;
+  }
+}

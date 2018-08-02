@@ -12,7 +12,8 @@ class PostContainer extends React.Component {
     super(props);
     this.textInput = React.createRef();
     this.state = {
-      comment: "",  
+      comment: "", 
+      focused: false,
     };
   }
   handleChange = e => {
@@ -26,9 +27,15 @@ class PostContainer extends React.Component {
     }
   };
 
+  onBlur = (e) => {
+    this.setState({ focused: false })
+  }
+
   focusTextInput = () => {
+    this.setState({ focused: true })
     this.textInput.current.focus();
   }
+
   render() {
     return (
       <div className="post">
@@ -69,8 +76,10 @@ class PostContainer extends React.Component {
               .toUpperCase()}
           </p>
         </div>
-        <div className="add-comment">
+        <div className={this.state.focused ? 'add-comment' : 'add-comment hide'}>
           <input
+            onFocus={this.onFocus}
+            onBlur={this.onBlur}
             ref={this.textInput}
             type="text"
             value={this.state.comment}

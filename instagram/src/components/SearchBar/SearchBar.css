@@ -62,4 +62,29 @@
   margin-left: 30px;
 }
 
+@media (max-width: 768px) {
+  /* .search-bar__wrapper {
+    padding: 20px 20px;
+  } */
+  .search-bar__brand {
+    transform: scale(.8);
+  }
+
+  .search-bar__icons img {
+    /* transform: scale(.8); */
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .search-bar__wrapper{
+    padding: 26px 5px;
+  }
+  .search-bar__search{
+    display: none;
+  }
+  .search-bar__icons img {
+    margin-left: 10px;
+  }
+}
 

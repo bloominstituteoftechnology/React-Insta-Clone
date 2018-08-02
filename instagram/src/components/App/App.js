@@ -124,6 +124,10 @@ class App extends Component {
     this.props.handleLogOut();
   }
 
+  handleShowAll = () => {
+    this.setState({filteredInput: ''})
+  }
+
   render() {
     return (
       <div className="App">
@@ -132,6 +136,7 @@ class App extends Component {
           searchInput={this.state.searchInput}
           handleSearchSubmit={this.handleSearchSubmit}
           handleLogOut={this.handleLogOut}
+          handleShowAll={this.handleShowAll}
         />
         <div className="main-body">
           <div className="posts">

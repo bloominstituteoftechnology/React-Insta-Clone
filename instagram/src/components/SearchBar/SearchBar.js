@@ -15,6 +15,8 @@ const SearchBar = props => {
     console.log(e.keyCode)
     if (e.keyCode === 13) {
       props.handleSearchSubmit()
+    } else if (e.keyCode === 8) {
+      props.handleShowAll();
     }
   }
 
