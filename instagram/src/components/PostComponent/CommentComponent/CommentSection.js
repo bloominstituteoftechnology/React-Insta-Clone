@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './CommentSection.css';
+import Styled from 'styled-components'
+
+const UserName = Styled.p`
+    margin-right: 10px;
+    font-weight: bold;
+`
 
 const CommentSection = (props) => {
     return (
@@ -8,7 +14,7 @@ const CommentSection = (props) => {
             {props.comments.map(comment => {
                 return (
                     <div className="comment" key={comment.text + comment.username}>
-                        <p className="username">{comment.username}</p>
+                        <UserName>{comment.username}</UserName>
                         <p className="text">{comment.text}</p>
                     </div>
                 )
