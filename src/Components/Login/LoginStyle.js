@@ -1,11 +1,13 @@
-.login-page{
+import styled from 'styled-components';
+
+export const LoginWrapper = styled.div`
   width: 100vw;
   height: 100vh;
   background: #ddd;
   padding-top: 100px;
-}
+`;
 
-.login-page .login-form{
+export const LoginForm = styled.form`
   width: 50%;
   height: 50%;
   margin: 0px auto;
@@ -16,13 +18,21 @@
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-}
 
-.login-page .login-form label{
+  @media (max-width: 756px){
+    width: 80%;
+  }
+
+  @media (max-width: 430px){
+    width: 95%;
+  }
+`;
+
+export const FormLabel = styled.label`
   margin: 10px 0;
-}
+`;
 
-.login-page .login-form input{
+export const FormInput = styled.input`
   margin: 10px 0;
   width: 40%;
   height: 10%;
@@ -30,24 +40,12 @@
   border-radius: 5px;
   font-weight: bolder;
   font-size: 2rem;
-}
 
-@media (max-width: 756px){
-  .login-page .login-form{
-    width: 80%;
-  }
-
-  .login-page .login-form input{
+  @media (max-width: 756px){
     width: 60%;
   }
-}
 
-@media (max-width: 430px){
-  .login-page .login-form{
-    width: 95%;
-  }
-
-  .login-page .login-form input{
+  @media (max-width: 430px){
     width: 75%;
   }
-}
+`;

@@ -1,17 +1,18 @@
 import React from 'react';
-import './login.css';
+import { LoginWrapper, LoginForm, FormLabel,
+          FormInput } from './LoginStyle';
 
 const Login = props => {
   return(
-    <div className="login-page">
-      <form className="login-form" onSubmit={props.handleLogin} >
-        <label htmlFor="username">Username: </label>
-        <input name="username" type="text" placeholder="Enter Username" onChange={props.handleUserChange} />
-        <label htmlFor="password">Password: </label>
-        <input type="password" name="password" placeholder="Enter Password" onChange={props.handleUserChange} />
-        <input type="submit" value="submit" />
-      </form>
-    </div>
+    <LoginWrapper>
+      <LoginForm onSubmit={props.handleLogin} >
+        <FormLabel htmlFor="username">Username: </FormLabel>
+        <FormInput name="username" type="text" placeholder="Enter Username" onChange={props.handleUserChange} />
+        <FormLabel htmlFor="password">Password: </FormLabel>
+        <FormInput type="password" name="password" placeholder="Enter Password" onChange={props.handleUserChange} />
+        <FormInput type="submit" value="submit" />
+      </LoginForm>
+    </LoginWrapper>
   );
 }
 
