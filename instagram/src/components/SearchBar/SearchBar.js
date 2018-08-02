@@ -1,5 +1,4 @@
 import React from 'react';
-import './SearchBar.css';
 import styled from 'styled-components';
 
 const InstaLogo=styled.img`

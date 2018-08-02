@@ -2,9 +2,20 @@ import React from 'react';
 import Comment from './Comment.js';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import './CommentSection.css';
 import AddCommentBar from './addcommentbar.js';
+import styled from 'styled-components';
 
+const Timestamp=styled.p`
+    text-align: left;
+    margin-left: 3%;
+    color: #9fabb7;
+    font-size: 12px;
+`
+const Rule=styled.div`
+    border: 1px solid #f5f5f5;
+    width: 95%;
+    margin: 0 auto;
+`
 class CommentSection extends React.Component {
     constructor(props) {
         super(props);
@@ -48,8 +59,8 @@ class CommentSection extends React.Component {
         return (
             <div>
                 {this.state.comments.map((e,i)=><Comment data={e} username={this.state.username} itemNumber={i} key={i} commentDelete={this.deleteComment}/>)}
-                <p className='time-stamp'>{this.dynamicDate(this.state.timestamp)}</p>
-                <div className='rule'></div>
+                <Timestamp>{this.dynamicDate(this.state.timestamp)}</Timestamp>
+                <Rule/>
                 <AddCommentBar value={this.state.newComment} inputHelper={this.handleInputChange} handleInputSubmit={this.addNewComment} length={this.state.comments.length}/>
             </div>
         )
