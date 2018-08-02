@@ -18,7 +18,7 @@ const Authenticate = App =>
         }
         render() {
             if (this.state.loggedIn) return <App />;
-            return <loginPage />;
+            return <LoginPage />;
         }
     };
 

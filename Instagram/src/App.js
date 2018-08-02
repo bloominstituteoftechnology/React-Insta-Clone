@@ -15,7 +15,6 @@ class App extends Component {
     const user = localStorage.getItem("user");
     this.setState({ username: user });
   }
-
   render() {
     return (
       <div className="App">

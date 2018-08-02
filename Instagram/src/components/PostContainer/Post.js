@@ -44,7 +44,7 @@ class Post extends React.Component {
     }
 }
 
-Post.PropTypes = {
+Post.propTypes = {
     post: PropTypes.shape({
         username: PropTypes.string,
         thumbnailUrl: PropTypes.string,
