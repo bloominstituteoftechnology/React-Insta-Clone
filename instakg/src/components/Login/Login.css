@@ -1,140 +1,151 @@
-.LoginContainer{
-    width: 100vw;
-    height: 100vh;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.LoginContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.logoLogin{
-    margin-bottom: 20px;
-    font-size: 60px;
-    font-family: 'Press Start 2P', cursive;
-    font-weight: bold;
-    background-color:white;
-    border-radius: 5px;
-    padding: 30px 20px 20px;
-    box-shadow: 0 0 10px 3px #181816;
-    /* https://stackoverflow.com/questions/13607117/css-css3-pixelate-dot-background */
-    background-image: -moz-linear-gradient(45deg, #666 25%, transparent 25%), 
-    -moz-linear-gradient(-45deg, #666 25%, transparent 25%), 
-    -moz-linear-gradient(45deg, transparent 75%, #666 75%), 
+.logoLogin {
+  margin-bottom: 20px;
+  font-size: 60px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 5px;
+  padding: 30px 20px 20px;
+  box-shadow: 0 0 10px 3px #181816;
+  /* https://stackoverflow.com/questions/13607117/css-css3-pixelate-dot-background */
+  background-image: -moz-linear-gradient(45deg, #666 25%, transparent 25%),
+    -moz-linear-gradient(-45deg, #666 25%, transparent 25%),
+    -moz-linear-gradient(45deg, transparent 75%, #666 75%),
     -moz-linear-gradient(-45deg, transparent 75%, #666 75%);
-background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #666), color-stop(.25, transparent)), 
-    -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #666), color-stop(.25, transparent)), 
-    -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #666)), 
-    -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #666));
-background-image: -webkit-linear-gradient(45deg, #666 25%, transparent 25%), 
-    -webkit-linear-gradient(-45deg, #666 25%, transparent 25%), 
-    -webkit-linear-gradient(45deg, transparent 75%, #666 75%), 
+  background-image: -webkit-gradient(
+      linear,
+      0 100%,
+      100% 0,
+      color-stop(0.25, #666),
+      color-stop(0.25, transparent)
+    ),
+    -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #666), color-stop(0.25, transparent)),
+    -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, #666)),
+    -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, #666));
+  background-image: -webkit-linear-gradient(45deg, #666 25%, transparent 25%),
+    -webkit-linear-gradient(-45deg, #666 25%, transparent 25%),
+    -webkit-linear-gradient(45deg, transparent 75%, #666 75%),
     -webkit-linear-gradient(-45deg, transparent 75%, #666 75%);
-background-image: -o-linear-gradient(45deg, #666 25%, transparent 25%), 
-    -o-linear-gradient(-45deg, #666 25%, transparent 25%), 
-    -o-linear-gradient(45deg, transparent 75%, #666 75%), 
+  background-image: -o-linear-gradient(45deg, #666 25%, transparent 25%),
+    -o-linear-gradient(-45deg, #666 25%, transparent 25%),
+    -o-linear-gradient(45deg, transparent 75%, #666 75%),
     -o-linear-gradient(-45deg, transparent 75%, #666 75%);
-background-image: linear-gradient(45deg, #666 25%, transparent 25%), 
-    linear-gradient(-45deg, #666 25%, transparent 25%), 
-    linear-gradient(45deg, transparent 75%, #666 75%), 
+  background-image: linear-gradient(45deg, #666 25%, transparent 25%),
+    linear-gradient(-45deg, #666 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #666 75%),
     linear-gradient(-45deg, transparent 75%, #666 75%);
--moz-background-size: 2px 2px;
-background-size: 2px 2px;
--webkit-background-size: 2px 2.1px; /* override value for webkit */
-background-position: 0 0, 1px 0, 1px -1px, 0px 1px;
+  -moz-background-size: 2px 2px;
+  background-size: 2px 2px;
+  -webkit-background-size: 2px 2.1px; /* override value for webkit */
+  background-position: 0 0, 1px 0, 1px -1px, 0px 1px;
 }
-.formClass{
-    
-    background-color:black;
-    height: 21.5em;
-    width: 21.5em;
-    color:white;
-    border-radius: 50%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 30px;
+.formClass {
+  background-color: black;
+  height: 21.5em;
+  width: 21.5em;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 30px;
 }
-.loginText{
-    font-size: 20px;
+.loginText {
+  font-size: 20px;
 }
-button{
-    background-color: red;
-    border-radius: 50%;
-    width: 5em; 
-    height: 5em;
-    border:none;
-    color:white;
+button {
+  background-color: red;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  border: none;
+  color: white;
 }
-.loginInput{
-    background-color: rgb(50, 50, 50);
-    border: none;
-    height: 2em;
-    color: white;
-    font-size: 20px;
-    padding-left: 20px;
+.loginInput {
+  background-color: rgb(50, 50, 50);
+  border: none;
+  height: 2em;
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
 }
 /* https://codepen.io/laikafusion/pen/BPrOXV */
-.lensContainer{
-    font-size: 15px;
-    width: 38.5em;
-    height: 38.5em;
-    margin: 0 auto;
-    position: relative;
-  }
-  .shutter{
-    width: 21.5em;
-    height: 21.5em;
-    border-radius: 50%;
-    position: absolute;
-    top: 8.625em;
-    left: 8.625em;
-    background: #181816;
-    box-shadow: 0 0 0 0.75em #181816,0 0 0 1.5em #373737;
-    overflow: hidden;
-  }
-.ring{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 50%;
-    border: 0.125em solid #e1e1e1;
-    border-bottom-color: #cdcdcd;
-    background-color: #c7c7c7;
-    background-image: -webkit-linear-gradient(-45deg, #eaeaea 20%,#d4d4d4, #c7c7c7);
-    background-image:    -moz-linear-gradient(-45deg, #eaeaea 20%,#d4d4d4, #c7c7c7);
-    background-image:     -ms-linear-gradient(-45deg, #eaeaea 20%,#d4d4d4, #c7c7c7);
-    background-image:      -o-linear-gradient(-45deg, #eaeaea 20%,#d4d4d4, #c7c7c7);
-    box-shadow: 0 .375em .375em -.375em #727272;
-  }
-  .ring:before,.ring:after{
-    content: "";
-    display: block;
-    border-radius: 50%;
-    position: absolute;
-  }
-  .ring:before{
-    width: 36em;
-    height: 36em;
-    top: 1em;
-    left: 1em;
-    border: 0.25em solid #b2b2b2;
-    border-bottom: .125em solid #959595;
-    border-right: .125em solid #959595;
-    background-color: #d1d1d1;
-    background-image: -webkit-linear-gradient(-45deg, #f2f2f2 15%, #d1d1d1);
-    background-image:    -moz-linear-gradient(-45deg, #f2f2f2 15%, #d1d1d1);
-    background-image:     -ms-linear-gradient(-45deg, #f2f2f2 15%, #d1d1d1);
-    background-image:      -o-linear-gradient(-45deg, #f2f2f2 15%, #d1d1d1);
-    box-shadow: inset .125em .125em .5em .125em #818181;
-  }
-  .ring:after{
-    width: 26.5em;
-    height: 26.5em;
-    top: 6em;
-    left: 6em;
-    background-color: #545454;
-    background-image: -webkit-linear-gradient(-45deg, #7f7f7f 30%, #545454);
-    background-image:    -moz-linear-gradient(-45deg, #7f7f7f 30%, #545454);
-    background-image:     -ms-linear-gradient(-45deg, #7f7f7f 30%, #545454);
-    background-image:      -o-linear-gradient(-45deg, #7f7f7f 30%, #545454);
-  }
+.lensContainer {
+  font-size: 15px;
+  width: 38.5em;
+  height: 38.5em;
+  margin: 0 auto;
+  position: relative;
+}
+.shutter {
+  width: 21.5em;
+  height: 21.5em;
+  border-radius: 50%;
+  position: absolute;
+  top: 8.625em;
+  left: 8.625em;
+  background: #181816;
+  box-shadow: 0 0 0 0.75em #181816, 0 0 0 1.5em #373737;
+  overflow: hidden;
+}
+.ring {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  border: 0.125em solid #e1e1e1;
+  border-bottom-color: #cdcdcd;
+  background-color: #c7c7c7;
+  background-image: -webkit-linear-gradient(
+    -45deg,
+    #eaeaea 20%,
+    #d4d4d4,
+    #c7c7c7
+  );
+  background-image: -moz-linear-gradient(-45deg, #eaeaea 20%, #d4d4d4, #c7c7c7);
+  background-image: -ms-linear-gradient(-45deg, #eaeaea 20%, #d4d4d4, #c7c7c7);
+  background-image: -o-linear-gradient(-45deg, #eaeaea 20%, #d4d4d4, #c7c7c7);
+  box-shadow: 0 0.375em 0.375em -0.375em #727272;
+}
+.ring:before,
+.ring:after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+}
+.ring:before {
+  width: 36em;
+  height: 36em;
+  top: 1em;
+  left: 1em;
+  border: 0.25em solid #b2b2b2;
+  border-bottom: 0.125em solid #959595;
+  border-right: 0.125em solid #959595;
+  background-color: #d1d1d1;
+  background-image: -webkit-linear-gradient(-45deg, #f2f2f2 15%, #d1d1d1);
+  background-image: -moz-linear-gradient(-45deg, #f2f2f2 15%, #d1d1d1);
+  background-image: -ms-linear-gradient(-45deg, #f2f2f2 15%, #d1d1d1);
+  background-image: -o-linear-gradient(-45deg, #f2f2f2 15%, #d1d1d1);
+  box-shadow: inset 0.125em 0.125em 0.5em 0.125em #818181;
+}
+.ring:after {
+  width: 26.5em;
+  height: 26.5em;
+  top: 6em;
+  left: 6em;
+  background-color: #545454;
+  background-image: -webkit-linear-gradient(-45deg, #7f7f7f 30%, #545454);
+  background-image: -moz-linear-gradient(-45deg, #7f7f7f 30%, #545454);
+  background-image: -ms-linear-gradient(-45deg, #7f7f7f 30%, #545454);
+  background-image: -o-linear-gradient(-45deg, #7f7f7f 30%, #545454);
+}

@@ -1,101 +1,95 @@
-.post{
-    max-width: 600px;
-    margin: 2vh auto;
-    background-color:white;
-    display:flex;
-    flex-direction: column;
-    justify-content: left;
-    padding: 10px;
-    border: 1px lightgray solid;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+.post {
+  max-width: 600px;
+  margin: 2vh auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 10px;
+  border: 1px lightgray solid;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-
-
-.header{
-    display:flex;
-    align-content: center;
+.header {
+  display: flex;
+  align-content: center;
 }
-.userIcon{
-    height: 2em;
-    width: auto;
-    border-radius: 50%;
-    margin-right: 5px;
-
+.userIcon {
+  height: 2em;
+  width: auto;
+  border-radius: 50%;
+  margin-right: 5px;
 }
-.userName{
-    font-weight: bold;
-    line-height: 2em;
-    text-align: center;
-    margin-right: 5px;
+.userName {
+  font-weight: bold;
+  line-height: 2em;
+  text-align: center;
+  margin-right: 5px;
 }
-.postImageContainer{
-    margin: 0 -10px;
-
+.postImageContainer {
+  margin: 0 -10px;
 }
 
-img{
-    width: 100%;
+img {
+  width: 100%;
 }
-.iconRow{
-    display:flex;
-    align-content: center;
-    justify-content: flex-start;
-    width: 100%;
+.iconRow {
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  width: 100%;
 }
-.icon{
-    margin-right:  10px;
+.icon {
+  margin-right: 10px;
 }
-.likes{
-    width:100%;
-    text-align: left;
-    margin: 5px 0;
+.likes {
+  width: 100%;
+  text-align: left;
+  margin: 5px 0;
 }
-.timeStamp{
-    width:100%;
-    text-align: left;
-    margin: 5px 0;
-    font-size: 12px;
-    font-weight: bold;
-    opacity: .5;
+.timeStamp {
+  width: 100%;
+  text-align: left;
+  margin: 5px 0;
+  font-size: 12px;
+  font-weight: bold;
+  opacity: 0.5;
 }
-.commentBar{
-    height: 2px;
-    width: 100%;
-    opacity: .1;
-    background-color: grey;
-    margin: 15px 0 5px;
+.commentBar {
+  height: 2px;
+  width: 100%;
+  opacity: 0.1;
+  background-color: grey;
+  margin: 15px 0 5px;
 }
-.AddComment{
-    display:flex;
-    justify-content: space-between;
-    font-weight:bold;
-    margin-top: 20px !important;
-    
+.AddComment {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 20px !important;
 }
-.row{
-    margin: 10px 0;
+.row {
+  margin: 10px 0;
 }
-.moreIcon{
-    font-size: 14px;
+.moreIcon {
+  font-size: 14px;
 }
-.commentSubmitField{
-    opacity: .5;
-    outline: none;
-    border: none;
-    margin-left: 10px;
-
+.commentSubmitField {
+  opacity: 0.5;
+  outline: none;
+  border: none;
+  margin-left: 10px;
 }
-.commentSubmitField:focus{
-    opacity: 1;
+.commentSubmitField:focus {
+  opacity: 1;
 }
 
-.commentBox{
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
+.commentBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.liked{
-   color:red;
+.liked {
+  color: red;
 }
