@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
+import logo from '../../assets/instagramlogin.png';
 
 
 const SearchBar = props => {
@@ -7,7 +8,7 @@ const SearchBar = props => {
         <div className="search-bar-top">
             <div className="logos-wrapper">
                 <i className="fab fa-instagram"></i>
-                <img src = {require("../../assets/insta.png")} alt="logo" className="insta-words" />
+                <img src = {logo} alt="logo" className="insta-words" />
             </div>
             <div className="search-bar-wrapper">
                 <span className="fa fa-search"></span>
