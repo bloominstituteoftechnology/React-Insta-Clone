@@ -26,6 +26,10 @@ class CommentSection extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    let resetFormsVar = document.querySelectorAll(".commentTodoForm");
+    for (let i = 0; i < resetFormsVar.length; i++) {
+      resetFormsVar[i].reset();
+    }
     let arrayOfComments = this.state.comments.slice();
     arrayOfComments.push({
       username: "Frank",
@@ -34,7 +38,6 @@ class CommentSection extends React.Component {
     this.setState({
       comments: arrayOfComments
     });
-    // window.location.reload();
   };
 
   handleInputChange = event => {
