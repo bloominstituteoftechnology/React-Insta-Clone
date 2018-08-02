@@ -1,23 +1,26 @@
 import React from "react";
-import logo from "./logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCompass,
   faHeart,
   faUser
 } from "@fortawesome/free-regular-svg-icons";
-
+import logo from "./logo.png";
 import "./SearchBar.css";
+import LogoText from "./LogoText";
 
 const SearchBar = props => {
   return (
     <div className="borderBox">
       <div className="searchBarContainer">
-        <div className="logo">
+      <div className="logo">
           <img src={logo} alt="logo" />{" "}
         </div>
+        
         <span className="splitBar"> </span>
-        <span className="logoText"> InstaKG </span>
+        <LogoText > InstaKG </LogoText>
+        
+
         <input
           onChange={props.methods}
           id="search"

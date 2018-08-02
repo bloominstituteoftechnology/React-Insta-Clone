@@ -39,11 +39,7 @@ img {
   width: auto;
   height: 100%;
 }
-.logoText {
-  font-size: 2.3vw;
-  font-family: "Press Start 2P", cursive;
-  font-weight: bold;
-}
+
 
 .borderBox {
   padding: 10px;

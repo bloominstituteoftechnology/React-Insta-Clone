@@ -48,7 +48,6 @@ class PostsPage extends Component {
   };
   handleKeyPressSearch = event => {
     const dataImport = this.state.data;
-
     if (event.target.value === "") {
       this.setState({ display: this.setState.data }, () => {});
     }

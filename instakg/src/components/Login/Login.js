@@ -1,10 +1,12 @@
 import React from "react";
 import "./Login.css";
+import LogoText from "../SearchBar/LogoText";
 
 const Login = props => {
   return (
     <div className="LoginContainer">
-      <div className="logoLogin">InstaKG</div>
+      <LogoText size='60px'>InstaKG</LogoText>
+      <br />
       <div className="lensContainer">
         <div className="ring" />
         <div className="shutter">
