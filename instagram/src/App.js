@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import "./App.css";
 import dummyData from "./dummy-data";
 import Authenticate from "./components/Authentication/Authenticate";
-import PostContainer from "./components/PostContainer/PostContainer";
+import PostsPage from "./components/PostContainer/PostsPage";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts:[]
     };
   }
 
@@ -20,7 +20,7 @@ class App extends Component {
     console.log('App Rendering', this.state.posts);
     return (
       <div className="container">
-        <PostContainer posts={this.state.posts}/>      
+        <PostsPage posts={this.state.posts}/>      
       </div>
     );
   }
