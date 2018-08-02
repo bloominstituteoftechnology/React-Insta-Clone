@@ -7,15 +7,16 @@ import PropTypes from 'prop-types';
 const PostContainer = props => {
   return (
     <div>
+      
       {props.data.map(post => {
         return (
           <div className="PostContainer"
-            username={post.username}
-            avatar={post.thumbnailUrl}
-            image={post.imageUrl}
-            likes={post.likes}
-            timestamp={post.timestamp} >
-
+            // username={post.username}
+            // avatar={post.thumbnailUrl}
+            // image={post.imageUrl}
+            // likes={post.likes}
+            // timestamp={post.timestamp} 
+            >
             <div className="postTop">
               <img className="avatar" src={post.thumbnailUrl} />
               <div className="postUser">{post.username}</div>

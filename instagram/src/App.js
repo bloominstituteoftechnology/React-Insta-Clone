@@ -12,27 +12,42 @@ const App = Authenticate(
     constructor() {
       super()
       this.state = {
-        data: []
+        data: [],
+        filteredPosts: []
       }
     }
 
     componentDidMount() {
       this.setState({ data: dummyData });
     }
+
+    handlePostSearch = event => {
+      const posts = this.state.data.filter(post => {
+        if (post.username.includes(event.target.value)) {
+          return post;
+        }
+      });
+      this.setState({ filteredPosts: posts });
+    };
+
     render() {
       return (
         <div className="App">
           <header>
-            <SearchBar />
+            <SearchBar searchPosts={this.handlePostSearch}
+            />
           </header>
-          <PostContainer data = { this.state.data}/>
+          <PostContainer
+            data={this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.data}
+            
+          />
         </div>
 
       );
     }
   }
 )
-//dummyData.map(post => <post )
-
 
 export default App;

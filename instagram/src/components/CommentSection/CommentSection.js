@@ -2,6 +2,7 @@ import React from 'react';
 import './CommentSection.css';
 import PropTypes from 'prop-types';
 import Comment from "./Comment.js";
+import Moment from "react-moment";
 
 
 class CommentSection extends React.Component {
@@ -59,7 +60,8 @@ class CommentSection extends React.Component {
 
 
                 {this.state.commentState.map(item => <Comment com={item} />)}
-                <div className="postTimestamp">{this.state.time}</div>
+                
+                <div className="postTimestamp"><Moment>{this.state.time}</Moment></div>
                 <input value={this.state.input} onChange={this.saveComment} onKeyPress={this.addNewComment} className="commentInput" placeholder="Add a comment..." />
 
             </div>
