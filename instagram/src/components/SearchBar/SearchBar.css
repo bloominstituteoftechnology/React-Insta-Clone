@@ -1,0 +1,28 @@
+/*==================== S E A R C H  B A R    S E C T I O N ================*/
+.search-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #3333;
+    height: 50px;
+    background: #ffffff;
+}
+
+.search-bar .instalogo-container {
+    height: 100%;
+}
+
+.search-bar .instalogo-container .instalogo {
+    height: 50px;;
+}
+
+.search-bar .search-input {
+    width: 220px;
+    text-align: center;
+    background-color: #FAFAFA;
+    height: 30px;
+    border: .5px solid lightgray;
+    border-radius: 5px;
+    font-size: 15px;
+}

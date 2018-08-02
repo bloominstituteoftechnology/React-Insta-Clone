@@ -1,0 +1,17 @@
+/*===================  C O M M E N T   S E C T I O N =============*/
+.comment-section {
+    padding: 5px 15px;
+    font-size: 15px;
+}
+
+.time-stamp {
+    margin: 5px 15px 10px;
+    color: gray;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: .5px;
+}
+
+.comment-section .comment-username {
+    cursor: pointer;
+}
