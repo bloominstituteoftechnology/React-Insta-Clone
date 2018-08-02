@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import PostContainer from './components/PostContainer/PostContainer.js';
-import SearchBar from './components/SearchBar/SearchBar.js';
 import './App.css';
 import PostsPage from './components/PostContainer/PostsPage.js';
 import Authenticate from './components/Authentication/Authenticate.js';
