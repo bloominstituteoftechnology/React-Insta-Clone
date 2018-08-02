@@ -93,7 +93,7 @@
 } */
 
 @media(max-width: 500px){
-    .searchBar {
+    /* .searchBar {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -106,8 +106,8 @@
     .rightSideSearchBar {
         margin-top: 20px;
         margin-right: 10vw;
-    }
-    .leftSideSearchBar {
+    } */
+    /* .leftSideSearchBar {
         margin-top: 20px;
         padding-left:  5vw;
         padding-right: 5vw;
@@ -115,17 +115,17 @@
     .searchInput {
         width:30vw;
         margin-top: 30px;
-    }
+    } */
 
     .hrLine {
         display: none;
     }
 
 }
-
+/* 
 .tooltiptext {
     font-size: 3vh;
-}
+} */
 
 
 

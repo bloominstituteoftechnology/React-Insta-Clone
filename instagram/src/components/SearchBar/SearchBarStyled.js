@@ -15,6 +15,16 @@ const SearchBarDiv = styled.div`
     padding-top: 40px;
     height: 152px;
     background:white;
+    @media(max-width: 500px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+        font-size: 5vh;
+        border-top: 4px solid #E1E4E8;
+        border-bottom: 4px solid #E1E4E8;
+        height: 275px;
+    }
 `;
 
 const PostPageLogo = styled.img `
@@ -31,6 +41,11 @@ const LeftSideDiv = styled.div `
     width: 175vw;
     max-width: 100%; 
     margin-left: 1vw;
+    @media (max-width: 500px){
+        margin-top: 0 auto;
+        padding-left:  5vw;
+        padding-right: 5vw;
+    }
 `;
 
 const VerticalLine = styled.span `
@@ -43,6 +58,11 @@ const SearchInput = styled.input `
     max-width: 100%;
     width: 9vw;
     height: 4vh;
+    @media(max-width: 500px){
+        width:40vw;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 `;
 
 const RightSideDiv = styled.div `
@@ -53,6 +73,9 @@ const RightSideDiv = styled.div `
     max-width: 100%; 
     margin-left: 10.0vw;
     width:200vw;
+    @media(max-width: 500px){
+        margin: 0 auto;
+    }
 `;
 
 // const Tooltipi = styled.i `
@@ -65,6 +88,9 @@ const ToolTipTextDiv = styled.div`
     left:0%;
     position:relative;
     font-size: 1vw;
+    @media(max-width: 500px){
+        font-size:3vh;
+    }
 `
 
 export {SearchBarDiv, PostPageLogo, LeftSideDiv, VerticalLine,
