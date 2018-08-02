@@ -8,7 +8,7 @@ const Comment = props => {
     <div >
 
     <div className="row commenting">
-      <div className="user">{props.comment.username.charAt(0).toUpperCase() + props.comment.username.substr(1)}</div>
+      <div className="user">{props.comment.username}</div>
       <div className="comment">  {props.comment.text}</div>
     </div>
     </div>
