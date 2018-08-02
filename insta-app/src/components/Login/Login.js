@@ -1,5 +1,47 @@
 import React, { Component } from "react";
 import "./Login.css";
+import styled from "styled-components"; 
+
+const Div = styled.div`
+display: flex; 
+flex-direction: row; 
+justify-content: space-around; 
+flex-wrap: wrap; 
+width:100%;
+height:800px;
+background: linear-gradient(-90deg, lightcoral, yellow)
+`
+const DivBox = styled.div`
+margin: 30px 0; 
+`
+const FormLogin = styled.form`
+display: flex; 
+flex-direction: column; 
+justify-content: center;
+align-items: center; 
+margin: auto; 
+width: 350px; 
+height: 350px; 
+border-radius: 30%; 
+background:white;  
+`
+const FormSignUp = styled.form`
+display: flex; 
+justify-content: center; 
+align-items: center; 
+flex-direction: column; 
+margin: auto; 
+width: 350px; 
+height: 350px; 
+border-radius: 30%; 
+background:white; 
+`
+const H1 = styled.h1`
+font-size: 25px; 
+text-align: center; 
+color: orange; 
+`
+
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -23,9 +65,10 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="signup-login-page">
-        <div>
-          <form className="login-box">
+      <Div>
+        <DivBox>
+          <FormLogin>
+          <H1>Login</H1>
             <input
               className="input-login"
               type="text"
@@ -45,11 +88,12 @@ class Login extends Component {
             <button onClick={this.handleSubmitInput} className="login-btn">
               Log in
             </button>
-          </form>
-        </div>
+          </FormLogin>
+        </DivBox>
         {/* Only refrence what is above cause that works with the logging into the app */}
-        <div>
-          <form className="signup-box">
+        <DivBox>
+          <FormSignUp>
+          <H1>Sign Up</H1>
           <input
               type="text"
               name="name"
@@ -83,9 +127,9 @@ class Login extends Component {
               value={this.state.signuppass}
             />
             <button onClick={this.handleSubmitInput} className="signup-btn">Sign Up</button>
-          </form>
-        </div>
-      </div>
+          </FormSignUp>
+        </DivBox>
+      </Div>
     );
   }
 }

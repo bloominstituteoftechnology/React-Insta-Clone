@@ -1,35 +1,4 @@
-.signup-login-page{
-    display: flex; 
-    flex-direction: row; 
-    justify-content: center; 
-    align-items: center; 
-    flex-wrap: wrap; 
-    width:100%; 
-    height: auto; 
-    border: 1px solid lightseagreen; 
-    margin: auto; 
-}
 
-.login-box{
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center; 
-    margin: auto; 
-    width: 350px; 
-    height: 350px; 
-    border: 1px solid black; 
-}
-.signup-box{
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column; 
-    margin: auto; 
-    width: 350px; 
-    height: 350px; 
-    border: 1px solid red; 
-}
 h1{
     font-size: 25px; 
     text-align: center; 
