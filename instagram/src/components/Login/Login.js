@@ -18,7 +18,9 @@ class Login extends Component {
 
 //function to deal with changing username
 handleInputChange = event => {
+    console.log(event.target.name, event.target.value)
     this.setState({ [event.target.name]: event.target.value });
+    //
 };
 
 
@@ -35,7 +37,7 @@ handleSubmit = event => {
         return (
             <div className = "login-container">
                 <div className = "login-welcome">
-                <h3>Please Login to See the Latest Posts</h3>  
+                <h3>Welcome, Please Login</h3>  
                 </div>
 
             {/* spaces for inputting username and password */}
@@ -60,8 +62,8 @@ handleSubmit = event => {
 
             {/* button for submitting login credentials */}
 
-                <div className = "submit-button">
-                    <button onClick = {this.handleSubmit}>
+                <div>
+                    <button className = "submit-button" onClick = {this.handleSubmit}>
                         submit
                     </button>
                 </div>
