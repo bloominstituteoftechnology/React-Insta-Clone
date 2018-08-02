@@ -90,7 +90,11 @@
 .closeButtonRow{
   display:flex;
   justify-content: flex-end;
-  padding: 20px
+  padding: 20px;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */      
 }
 
 .inputContainer{
@@ -106,4 +110,5 @@
 }
 .displayNone{
   display:none;
+  
 }

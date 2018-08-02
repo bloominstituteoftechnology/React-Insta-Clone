@@ -154,6 +154,7 @@ class PostsPage extends Component {
       timestamp: moment().format('MMMM Do YYYY, h:mm:ss a'),
       comments: []
     })
+    this.toggleSubmitModal();
     this.setState({ data: dataImport, display: dataImport }, () => {
       this.writeToLS();
     });
