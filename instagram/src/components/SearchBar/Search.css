@@ -1,0 +1,19 @@
+.container {
+    display: block;
+    padding-left: 5%;
+}
+
+.logo,
+.search,
+.options {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.search {
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+
+
