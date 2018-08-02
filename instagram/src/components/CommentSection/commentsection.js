@@ -4,7 +4,24 @@ import './commentsection.css'
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+const Timestamp = styled.div`
+    color: gray;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: left;
+    margin-left: 15px;
+`
 
+const CommentField = styled.input`
+    margin: 10px 15px;
+    width: 75%;
+    border: none;
+`
+
+const HR = styled.hr`
+    width: 590px;
+    margin: 10px 15px;
+`
 
 class CommentSection extends Component {
     constructor(props) {
@@ -37,12 +54,11 @@ class CommentSection extends Component {
         return ( 
             <div>      
                 {this.state.data.comments.map(item => <Comment username={item.username} text={item.text} key={item.username} likes={item.likes}/>)}
-                <div className="timestamp">{this.state.data.timestamp}</div>
-                <hr/>
+                <Timestamp>{this.state.data.timestamp}</Timestamp>
+                <HR />
                 <form onSubmit={this.addNewComment}>
-                    <input placeholder="Add a comment..." name="input" type="text" className="form-control no-border comment-field" onChange={this.handleCommentChange} value={this.state.input} />
+                    <CommentField placeholder="Add a comment..." name="input" type="text" className="form-control no-border" onChange={this.handleCommentChange} value={this.state.input} />
                 </form>
-                {/* {console.log(this.state.data)} */}
             </div>
         );
     }

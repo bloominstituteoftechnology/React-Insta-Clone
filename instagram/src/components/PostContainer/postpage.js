@@ -18,7 +18,6 @@ class PostPage extends Component {
 
   logOut = () =>{
     localStorage.removeItem('user');
-    // window.location.reload();
     this.props.onLogout();
   }
 

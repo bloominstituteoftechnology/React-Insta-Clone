@@ -4,9 +4,21 @@ import styled from 'styled-components';
 
 const PostImg = styled.img `
     width: 100%;
-`;
+`
+
 const PostHeader = styled.h2`
     margin: 15px 15px;
+`
+
+const UserThumb = styled.img`
+    width: 30px;
+    border-radius: 50%;
+`
+
+const UsernameHeader = styled.span`
+    font-size: 16px;
+    margin-left: 5px;
+    font-weight: bold;
 `
 
 
@@ -39,10 +51,10 @@ class Post extends Component {
         return (
             <div className="d-flex flex-column align-items-start justify-content-start">  
                 <PostHeader className=" d-flex align-items-center justify-content-center">
-                    <img className="thumbnail-img" src={this.state.data.thumbnailUrl} alt=""/>
-                    <span className="username username-header">
+                    <UserThumb src={this.state.data.thumbnailUrl} alt=""/>
+                    <UsernameHeader>
                         {this.state.data.username}
-                    </span>
+                    </UsernameHeader>
                 </PostHeader>
                 <PostImg src={this.state.data.imageUrl} alt=""/>
                 <LikesSection incrementLike={this.incrementLike} likes={this.state.likes} liked={this.state.liked}/>
