@@ -8,9 +8,17 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-
+      username: ""
     };
   }
+
+  componentDidMount() {
+    const user = localStorage.getItem("username");
+    this.setState({username: user});
+
+    localStorage.clear(); // This is so I can reload page and keep testing the login
+  }
+
   render() {
     return (
       <div className="App">

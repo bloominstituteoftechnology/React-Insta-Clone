@@ -30,7 +30,7 @@ class CommentSection extends React.Component {
       <div className='comment-section'>
         {this.state.comments.map((comment, index) => <Comment key={index} comment={comment}/>)}
         <form onSubmit={this.addNewComment}>
-          <input value={this.state.comment} onChange={this.editComment}placeholder="Add a comment..." />
+          <input value={this.state.comment} onChange={this.editComment} placeholder="Add a comment..." />
         </form>
       </div>
     );

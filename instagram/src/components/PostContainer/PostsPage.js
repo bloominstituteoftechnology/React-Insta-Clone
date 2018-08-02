@@ -7,12 +7,14 @@ class PostsPage extends React.Component {
   constructor() {
     super();
     this.state = {
-      users: []
+
     };
   }
+
   componentDidMount() {
     this.setState({users: dummyData});
   }
+
   render() {
     return (
       <div>
