@@ -1,6 +1,24 @@
 import React from 'react';
-import './PostContainer.css';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const PostHeader = styled.p `
+  display: flex;
+  text-align: left;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+`;
+
+const ProfPic = styled.img `
+  width: 50px;
+  border-radius: 25px;
+  margin: 10px;
+`;
+
+const PostIcon = styled.img `
+  height: 30px;
+`;
 
 class Post extends React.Component {
   constructor(props) {
@@ -21,9 +39,9 @@ class Post extends React.Component {
   render() {
     return (
         <div>
-          <p className="post-header"> <img className="profile-pic" src={this.state.profilePic} alt='Profile' /> {this.state.username}</p>
+          <PostHeader> <ProfPic src={this.state.profilePic} alt='Profile' /> {this.state.username}</PostHeader>
           <img src={this.state.postImg} alt='Posted' />
-          <div className="post-icons-container"><img onClick={this.likeHandler} className="post-icon" src="https://d30y9cdsu7xlg0.cloudfront.net/png/682470-200.png"/> <img className="post-icon" src="https://image.freepik.com/free-icon/chat-bubble-ios-7-interface-symbol_318-38832.jpg" /> </div>
+          <div><PostIcon onClick={this.likeHandler} src="https://d30y9cdsu7xlg0.cloudfront.net/png/682470-200.png"/> <PostIcon src="https://image.freepik.com/free-icon/chat-bubble-ios-7-interface-symbol_318-38832.jpg" /> </div>
           <p>{this.state.likes} likes</p>
           <p>Posted {this.state.timestamp}</p>
         </div>

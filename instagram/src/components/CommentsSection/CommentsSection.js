@@ -1,7 +1,15 @@
 import React from 'react';
 import Comment from './Comment';
-import './CommentsSection.css';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const AddComment = styled.input `
+  padding: 20px;
+  width: 93%;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 20px;
+`;
 
 class CommentsSection extends React.Component {
   constructor(props) {
@@ -32,7 +40,7 @@ class CommentsSection extends React.Component {
     return (
       <div className="comments-section">
         {this.state.commentsArr.map(comment => <Comment username={comment.username} text={comment.text} key={comment.text} />)}
-        <form onSubmit={this.newCommentAdder}> <input onChange={this.newCommendHandler} className="add-comment" placeholder="Add a comment..." value={this.state.newComment} /></form>
+        <form onSubmit={this.newCommentAdder}> <AddComment onChange={this.newCommendHandler} placeholder="Add a comment..." value={this.state.newComment} /></form>
       </div>
     )};
 }

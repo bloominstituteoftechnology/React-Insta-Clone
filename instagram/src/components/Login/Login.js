@@ -27,10 +27,10 @@ class Login extends React.Component {
   render() {
     return (
       <form onSubmit={this.handlePWSubmit}>
-        <label for="username">Username:</label>
+        <label >Username:</label>
         <input onChange={this.userChange} type="text" id="username" name="username" value={this.state.username} />
 
-        <label for="password">Password:</label>
+        <label>Password:</label>
         <input onChange={this.pwChange} type="text" id="password" name="password" value={this.state.password} />
 
         <button type="submit">Log In</button>
