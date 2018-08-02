@@ -75,15 +75,17 @@ class CommentSection extends React.Component {
                     <SubmitIcon onClick = {this.addNewComment} className="fas fa-ellipsis-h">Submit </SubmitIcon>
                     {/* onMouseEnter = {this.handleHover} */}
                   {/* </NewComment>  */} 
-                  <form className ="newComment" onSubmit ={this.handleOnSubmit}>
+                  {/* <form className ="newComment" onSubmit ={this.handleOnSubmit}> */}
+                  <NewComment>
                     <AddCommentInput value = {value} onChange = {this.handleOnChange} onKeyUp = {this.addNewComment} placeholder = "Add a comment..." />  
                     {/* <input className ="addCommentInput"  value = {value} onChange = {this.handleOnChange} onKeyUp = {this.addNewComment} placeholder = "Add a comment..."/> */}
                     
                     <br/>
 
-                    {/* <i onClick= {this.addNewComment} className="fas fa-ellipsis-h">Submit</i> */}
-                    <SubmitIcon onClick = {this.addNewComment} className="fas fa-ellipsis-h">Submit </SubmitIcon>
-                 </form>
+                    <i onMouseEnter = {this.handleHover} onClick= {this.addNewComment} className="fas fa-ellipsis-h">Submit</i>
+                    {/* <SubmitIcon onClick = {this.addNewComment} className="fas fa-ellipsis-h">Submit </SubmitIcon> */}
+                 {/* </form> */}
+                 </NewComment>
                 </AddComment>
             </div>
         );
