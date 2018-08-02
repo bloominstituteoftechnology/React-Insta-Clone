@@ -1,6 +1,6 @@
 import React from 'react';
-import './Login.css'
 import logo from '../../assets/instagramlogin.png';
+import { Form, Input, Button } from 'reactstrap';
 
 class Login extends React.Component {
     constructor(props) {
@@ -32,35 +32,33 @@ class Login extends React.Component {
     render() {
         return (
             <div>
-            <form className="login-form">
+            <Form>
                 
-                <img src = {logo} alt="logo" className="insta-logo" />
+                <img src = {logo} alt="logo" />
                 
-                <input 
+                <Input 
                 type="text" 
                 placeholder="Username..." 
-                className="username-field"
                 name="username"
                 value={this.state.username}
                 onChange={this.inputChange}
                 />
 
-                <input 
+                <Input 
                 type="text" 
-                placeholder="Password..." 
-                className="password-field" 
+                placeholder="Password..."  
                 name="password"
                 value={this.state.password}
                 onChange={this.inputChange}
                 />
 
-                <button 
-                className="login-button" 
+                <Button  
+                color="primary"
                 onClick={this.submitLogin}
                 >
                 Login
-                </button>
-            </form>
+                </Button>
+            </Form>
         </div>
         );
     }
