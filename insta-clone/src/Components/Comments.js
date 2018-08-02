@@ -3,7 +3,7 @@ import moment from "moment";
 import PropTypes from "prop-types";
 import "./Card.css";
 
-import {Card__comments, Card__comment, Card__commentUser, Card__lastComment} from ".//CardStyle"
+import {Card__comments, Card__comment, Card__commentUser, Card__lastComment, Card__commentClose} from ".//CardStyle"
 
 const Comments = ({ timestamp, comments, onDeleteComment}) => {
 	return (
@@ -14,7 +14,7 @@ const Comments = ({ timestamp, comments, onDeleteComment}) => {
 						<Card__commentUser> { comment.username } </Card__commentUser>
 						{ comment.text }
 					</p>
-					<span className="Card__comment-close" onClick={() => onDeleteComment(comment)}>&times;</span>
+					<Card__commentClose onClick={() => onDeleteComment(comment)}>&times;</Card__commentClose>
 				</Card__comment>
 			))}
 			<Card__lastComment>

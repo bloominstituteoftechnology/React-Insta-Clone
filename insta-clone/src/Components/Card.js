@@ -3,7 +3,7 @@ import "./Card.css";
 import Comments from "./Comments";
 import PropTypes from "prop-types";
 import {StyledCard, Card__header, Card__thumbnail, Card__username, Card__bannerImg,
-		Card__icons,Card__likes,} from "./CardStyle";
+		Card__icons,Card__likes, Card__inputWrapper, Card__input} from "./CardStyle";
 
 class Card extends Component {
 	constructor(props){
@@ -62,8 +62,8 @@ class Card extends Component {
 					{...{ timestamp, comments }}
 					onDeleteComment={comment => onDeleteComment(id, comment)}
 				/>
-				<div className="Card__input-wrapper">
-					<input
+				<Card__inputWrapper>
+					<Card__input
 						ref={this.bubbleRef}
 						value={this.state.input}
 						onChange={e => this.handleChanges(e.target.value)}
@@ -78,7 +78,7 @@ class Card extends Component {
 						}}
 					/>
 					<i class="fas fa-ellipsis-h" />
-				</div>
+				</Card__inputWrapper>
 			</StyledCard>
 		);
 	}
