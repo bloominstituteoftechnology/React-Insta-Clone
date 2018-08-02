@@ -8,7 +8,7 @@ import './SearchBar.css';
 
 
 
-const SearchBar = () => {
+const SearchBar = props => {
     return (
         <Row>
             <Col className="flex-evenly">
@@ -18,7 +18,7 @@ const SearchBar = () => {
             <Col>
                 <Form>
                     <FormGroup >
-                        <Input type="search"  className="fa fa-input" placeholder="&#xf002; Search" />
+                        <Input type="search"  className="fa fa-input" placeholder="&#xf002; Search" onKeyDown={props.searchPosts} />
                     </FormGroup>
                 </Form>
             </Col>

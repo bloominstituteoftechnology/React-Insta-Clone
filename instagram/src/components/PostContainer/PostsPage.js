@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import dummyData from '../../dummy-data';
-import { Container} from 'reactstrap';
+import { Container } from 'reactstrap';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 
@@ -10,37 +10,31 @@ class PostsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dummyData: [],
+      posts: [],
       filteredPosts: [],
-      searchValue: '',
-      userName: props.userName
+
     };
   }
-  componentDidMount(){
-    this.setState({ dummyData: dummyData });
-  }
-  
-  searchHandler = event => {
-    this.setState({
-      searchValue : event.target.value
-    });
+  componentDidMount() {
+    this.setState({ posts: dummyData });
   }
 
-  handleSearchSubmit = event => {
-    event.preventDefault();
-    const searchArr = this.state.dummyData.slice();
-    const newSearchArr = searchArr.filter(post => post.username.includes(this.state.searchValue));
-    this.setState({
-      filteredPosts: newSearchArr,
-      searchValue:''
-    })
-  }
+  searchPostsHandler = event => {
+    const posts = this.state.posts.filter(post => {
+      if (post.username.includes(event.target.value)) {
+        return post;
+      }
+    });
+    this.setState({ filteredPosts: posts });
+  };
 
   render() {
     return (
       <Container className="App">
-        <SearchBar />
-        {this.state.dummyData.map(post => <PostContainer key={post.timestamp} postProp={post} />)}
+        <SearchBar
+          searchPosts={this.searchPostsHandler}
+        />
+        {this.state.filteredPosts.length > 0 ? this.state.filteredPosts.map(post => <PostContainer key={post.timestamp} postProp={post} />) : this.state.posts.map(post => <PostContainer key={post.timestamp} postProp={post} />)}
       </Container>
     );
   }
