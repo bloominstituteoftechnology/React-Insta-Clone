@@ -1,5 +1,6 @@
 import React from 'react';
 import './Login.css'
+import logo from '../../assets/instagramlogin.png';
 
 class Login extends React.Component {
     constructor(props) {
@@ -32,7 +33,9 @@ class Login extends React.Component {
         return (
             <div>
             <form className="login-form">
-
+                
+                <img src = {logo} alt="logo" className="insta-logo" />
+                
                 <input 
                 type="text" 
                 placeholder="Username..." 
