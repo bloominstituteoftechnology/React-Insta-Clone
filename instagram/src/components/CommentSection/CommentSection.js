@@ -28,6 +28,10 @@ class CommentSection extends React.Component {
     }
     componentDidMount(){
         const username=localStorage.getItem('username');
+        let comments=localStorage.getItem('Comments');
+        if (comments) {
+            this.setState({comments:JSON.parse(comments)});
+        }
         this.setState({username:username});
     }
     addNewComment=(index)=>{
@@ -36,7 +40,7 @@ class CommentSection extends React.Component {
             username: this.state.username,
             text: this.state.newComment
         });
-        this.setState({comments: commentsCopy,newComment:''});
+        this.setState({comments: commentsCopy,newComment:''},localStorage.setItem('Comments',JSON.stringify(commentsCopy)));
     }
     handleInputChange=(e)=>{
         this.setState({newComment:e.target.value});
@@ -53,7 +57,7 @@ class CommentSection extends React.Component {
     deleteComment=(i)=>{
         const comments=this.state.comments.slice();
         comments.splice(i,1);
-        return this.setState({comments:comments});
+        return this.setState({comments:comments},()=>localStorage.setItem('Comments',JSON.stringify(comments)));
     }    
     render() {
         return (
