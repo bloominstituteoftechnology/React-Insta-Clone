@@ -1,4 +1,5 @@
-import moment from '../node_modules/moment';
+import moment from '../../../node_modules/moment';
+
 const dummyData = [
   {
     username: "philzcoffee",
