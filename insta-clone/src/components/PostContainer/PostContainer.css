@@ -1,48 +1,5 @@
-.post {
-    border: 1px solid grey;
-    padding: 20px 0;
-    max-width: 642px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-
-.post-container .header img{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin: 0 20px;
-}
-
-.post-container .header .username {
-    font-weight: bold;
-}
-
-.post-container .bottom {
-    margin: 10px 20px;
-}
-
-.post-container .icons {
-    margin-bottom: 10px;
-}
-
-.post-container .icon {
-    margin-right: 10px;
-    font-size: 24px;
-}
-
-.post-container .red {
-    color: red;
-}
-
 .add-comment {
     border-top: 1px solid grey;
-}
-
-.add-comment input{
-    border: none;
-    background-color: white;
-    width: 100%;
-    margin-top: 10px;
 }
 
 .add-comment input:focus {

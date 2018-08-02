@@ -3,9 +3,70 @@ import './PostContainer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CommentSection from '../CommentSection/CommentSection';
 import moment from 'moment';
+import styled, { css } from 'styled-components';
 
-// let storage = window.localStorage;
-// storage.setItem('posts', '');
+const PostContainer = styled.div`
+    border: 1px solid grey;
+    padding: 20px 0;
+    max-width: 642px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+`
+
+const Header = styled.header`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+`
+
+const Thumbnail = styled.img`
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 20px;
+`
+
+const BoldText = styled.p`
+    font-weight: bold;
+    margin: 0;
+    
+    ${props => props.bottom && css`
+        margin-bottom: 10px;
+    `}
+`
+
+const LighterText = styled.p`
+    font-weight: lighter;
+    color: grey;
+    font-size: 12px;
+`
+
+const PostContent = styled.div`
+    margin: 10px 20px;
+`
+
+const IconContainer = styled.div`
+    margin-bottom: 10px;
+    .icon {
+        margin-right: 10px;
+        font-size: 24px;
+    }
+    .red {
+        color: red;
+    }
+`
+
+const CommentInput = styled.input`
+    border: none;
+    background-color: white;
+    width: 100%;
+    margin-top: 10px;
+    &:focus {
+        outline: none;
+    }
+`
+
 
 class Post extends Component {
     constructor(props){
@@ -13,8 +74,7 @@ class Post extends Component {
         this.state = {comments: props.post.comments, currentComment: '', likes: props.post.likes, liked: false, id: props.id};
     }
 
-    componentDidMount() {
-        // localStorage.getItem(this.state.id) && 
+    componentDidMount() { 
         let comments = JSON.parse(localStorage.getItem(this.state.id));
         if (localStorage.getItem(this.state.id)){
             this.setState({comments});
@@ -63,27 +123,25 @@ class Post extends Component {
 
     render() {
         return (
-            <div className="post" key={this.props.post.timestamp}>
-                <div className="header row">
-                    <div className="col-sm-12 d-flex">
-                        <img src={this.props.post.thumbnailUrl} alt="thumbnail of user" />
-                        <p className="username">{this.props.post.username}</p>
-                    </div>
-                </div>
+            <PostContainer key={this.props.post.timestamp}>
+                <Header>
+                    <Thumbnail src={this.props.post.thumbnailUrl} alt="thumbnail of user" />
+                    <BoldText>{this.props.post.username}</BoldText>
+                </Header>
                 <img src={this.props.post.imageUrl} alt="user's beautiful post" />
-                <div className="bottom">
-                    <div className="icons">
+                <PostContent>
+                    <IconContainer>
                         <FontAwesomeIcon icon={['far', 'heart']} className={`icon ${this.state.liked ? 'red' : ''}`} onClick={this.toggleLike} />
                         <FontAwesomeIcon icon={['far', 'comment']} className="icon" />
-                    </div>
-                    <p className="likes">{this.state.likes} likes</p>
+                    </IconContainer>
+                    <BoldText bottom>{this.state.likes} likes</BoldText>
                     <CommentSection comments={this.state.comments} deleteComment={this.deleteComment} />
-                    <p className="timestamp">{moment(this.props.post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</p>
+                    <LighterText>{moment(this.props.post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</LighterText>
                     <form onSubmit={this.addComment} className="add-comment">
-                        <input type="text" placeholder="Add a comment" onChange={this.commentHolder} value={this.state.currentComment} ></input>
+                        <CommentInput type="text" placeholder="Add a comment" onChange={this.commentHolder} value={this.state.currentComment} ></CommentInput>
                     </form>
-                </div>
-            </div>
+                </PostContent>
+            </PostContainer>
         );
     }
 }
