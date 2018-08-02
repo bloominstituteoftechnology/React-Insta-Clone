@@ -1,5 +1,6 @@
 import React from "react";
 import "./PostContainer.css";
+import CommentContainer from "../CommentSection/CommentContainer";
 
 const Post = prop => {
   return (
@@ -10,8 +11,7 @@ const Post = prop => {
         <div className="username"> {prop.butt.username} </div>
       </div>
       <img className="image" src={prop.butt.imageUrl} />
-      <div className="likes"> {prop.butt.likes} </div>
-      <div className="time"> {prop.butt.timestamp} </div>
+      <CommentContainer butt={prop.butt} fred={prop.butt} />
     </div>
   );
 };

@@ -3,7 +3,7 @@ import "./App.css";
 import dummyData from "./dummy-data";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
-// import CommentSection from "./components/CommentSection/CommentSection";
+// import CommentContainer from "./components/CommentContainer/CommentContainer";
 import Authenticate from "./components/Authentication/Authenticate";
 
 const App = Authenticate(
@@ -22,7 +22,7 @@ const App = Authenticate(
           <PostContainer toes={this.state.data} />
 
           {/* toes gets assigned to data from line 12*/}
-          {/* <CommentSection /> */}
+          {/* <CommentContainer /> */}
         </div>
       );
     }

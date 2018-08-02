@@ -1,17 +1,13 @@
-// import React from "react";
-// import "./CommentSection.css";
+import React from "react";
+import "./Comment.css";
 
-// const Comment = prop => {
-//   return (
-//     <div className="comment-container">
-//       <div className="comment-name"> {prop.eye.username}</div>
-//       <div className="comment-text">{prop.eye.text} </div>
-//       <form>
-//         <input placeholder="Add a comment..." />
-//         <i className="fa fa-ellipsis-h" aria-hidden="true" />
-//       </form>
-//     </div>
-//   );
-// };
+const Comment = prop => {
+  return (
+    <div>
+      <div className="comment-name"> {prop.eye.username}</div>
+      <div className="comment-text">{prop.eye.text} </div>
+    </div>
+  );
+};
 
-// export default Comment;
+export default Comment;
