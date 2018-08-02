@@ -1,0 +1,35 @@
+.search-bar-wrapper {
+  border-bottom: 1px solid #3333;
+  height: 80px;
+  line-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+}
+
+.image-wrapper {
+  height: 40px;
+  width: auto;
+  align-self: center;
+}
+
+.logo-image {
+  height: 100%;
+}
+
+.social-wrapper {
+  display: flex;
+  align-self: center;
+}
+
+.social {
+  width: 50px;
+}
+
+input {
+  width: 150px;
+  height: 15px;
+  align-self: center;
+}
+
+

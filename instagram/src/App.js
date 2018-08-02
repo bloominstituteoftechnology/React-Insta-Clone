@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
+import PostPage from './components/PostContainer/PostPage';
 
-class App extends Component {
+
+class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      dummyData: dummyData
+      posts: dummyData
     };
   }
   
@@ -20,8 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        {this.state.dummyData.map(x => <PostContainer data={x}/>)}
+      <PostPage posts={this.state.posts} />
       </div>
     );
   }
