@@ -12,18 +12,16 @@ class LogIn extends Component{
         };
       }
 
-      handleUsername = e => {
-        this.setState({ username: e.target.value });
+      handleInput = e => {
+        this.setState({ [e.target.name]: e.target.value });
       };
     
-      handlePassword = e => {
-        this.setState({ password: e.target.value });
-      };
-    
+     
       addNewLogin = e => {
+        const user = this.state.username;
 
-        localStorage.setItem("username", this.state.username);
-        localStorage.setItem("password", this.state.password);
+        localStorage.setItem("username", user);
+     
         window.location.reload();
       };
     
@@ -31,8 +29,8 @@ class LogIn extends Component{
         console.log(this.state);
     return(
         <form onSubmit={this.addNewLogin}>
-        <input onChange={this.handleUsername}  placeholder="Username" type="text"></input>
-        <input  onChange={this.handlePassword}  placeholder="Password" type="text"></input>
+        <input onChange={this.handleInput} name="username" value={this.state.username} placeholder="Username" type="text"></input>
+        <input  onChange={this.handleInput}  name="password" value={this.state.password} placeholder="Password" type="password"></input>
         <button>Log-In</button>
         </form>
         

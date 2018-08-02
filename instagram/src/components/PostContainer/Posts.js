@@ -22,6 +22,7 @@ addLike = () => {
 
 
   render(){
+    console.log('posts rendering', this.state.posts);
    return(
     <div>
      <PostHeader 

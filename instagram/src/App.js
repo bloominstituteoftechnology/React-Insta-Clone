@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import dummyData from "./dummy-data";
 import Authenticate from "./components/Authentication/Authenticate";
-import PostsPage from "./components/PostContainer/PostsPage";
+import PostContainer from "./components/PostContainer/PostContainer";
 
 class App extends Component {
   constructor() {
@@ -17,9 +17,10 @@ class App extends Component {
   }
   
   render() {
+    console.log('App Rendering', this.state.posts);
     return (
       <div className="container">
-        <PostsPage  posts={this.state.posts}/>      
+        <PostContainer posts={this.state.posts}/>      
       </div>
     );
   }

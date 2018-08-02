@@ -7,23 +7,29 @@ const Authenticate = App =>
     constructor() {
       super();
       this.state = {
-        loggedin: true        
+        loggedin: false        
       };
     };
 
     
     
-    consultDidMount() {
-      return localStorage.getItem("password") === "password" && 
-      localStorage.getItem("username") === "mboegner" ? 
-      this.setState({ loggedin: !this.state.loggedin }) : null;
+    componentDidMount() {
+      console.log(2)
+      if(!localStorage.getItem("username")) {
+        this.setState({loggedin: false})
+      } else {
+          this.setState({loggedin: true})
+      }
     }
 
 
 
     render() {
-      const isLoggedIn = this.state.loggedin;
+      console.log(1)
 
+     
+      const isLoggedIn = this.state.loggedin;
+      
       return (
         <div>
          {isLoggedIn ? <App /> : <LogIn />}
