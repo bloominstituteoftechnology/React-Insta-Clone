@@ -1,4 +1,7 @@
 import React from 'react';
+import './Post.css'
+import CommentSection from '../CommentSection/CommentSectionContainer'
+
 
 const Post = props => {
     return (
@@ -6,8 +9,8 @@ const Post = props => {
         <div className = "post">
           
           <div className = "post-header">
-            <img src = {props.post.thumbnailUrl} />
-            <h3> {props.post.username} </h3>
+            <img className = "thumbnail" src = {props.post.thumbnailUrl} />
+            <h3 className = "username">  {props.post.username} </h3>
           </div>
           
           <div className = "post-image">
@@ -19,6 +22,11 @@ const Post = props => {
             <p> {props.post.timestamp} </p>
           </div>
         </div>
+
+        <div className = "comments">
+          <CommentSection comments = {props.post.comments} />
+        </div>
+
       </div>
     )
   }

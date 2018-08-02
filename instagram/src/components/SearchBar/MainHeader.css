@@ -37,5 +37,13 @@
     margin-right: 1rem;
     margin-left: 1rem;
   }
+
+
+
+  .icons{
+    height: 20px;
+    width: 20px;
+    color: grey;
+  }
   
   /* end of styles for main header */

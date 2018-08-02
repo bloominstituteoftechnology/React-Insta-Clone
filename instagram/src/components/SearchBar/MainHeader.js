@@ -5,10 +5,13 @@ const MainHeader = props => {
     return (
       <div className = "main-header"> 
         <div className = "left-icons">
-          <div className="fab fa-instagram"></div>
+          <div className = "icons">
+            <i className="fab fa-instagram" />
+          </div>
           <div class="vl"></div>
           <div className = "instagram">
-            <h2> Instagram</h2>
+            <h3> Instagram </h3>
+            {/* <img alt = "instagram logo" src = '/iglogo.png' className = "logo-image" /> */}
           </div>
         </div>
   

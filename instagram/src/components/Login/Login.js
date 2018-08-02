@@ -36,8 +36,8 @@ handleSubmit = event => {
     render () {
         return (
             <div className = "login-container">
-                <div className = "login-welcome">
-                <h3>Welcome, Please Login</h3>  
+                <div>
+                <h3 className = "login-welcome">Welcome, Please Login</h3>  
                 </div>
 
             {/* spaces for inputting username and password */}
