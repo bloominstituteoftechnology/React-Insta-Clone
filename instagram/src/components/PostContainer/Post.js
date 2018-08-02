@@ -3,58 +3,57 @@ import styled from 'styled-components';
 
 
 const PostWrap = styled.div`
+    display: flex;
+    flex-direction: column;
 
-    > postheader {
+`    
+const PostHeader = styled.div`
         display: flex;
         align-items: center;
         padding-top: 5px;
         padding-bottom: 5px;
         font-size: 1.6rem;
         font-weight: bold;
-
-        > thumbnail {
-            > img {
-                width: 30px;
-                margin-left: 15px;
-                margin-right: 15px;
-                border-radius: 50%;
-            }
-        }
-    }
-
-    > postbody {
-        > commenticons {
-        display: flex;
-        max-width: 75px;
-        justify-content: space-between;
-        }
-        > likes {
-            font-size: 1.2rem;
-        }
-    }
-
 `
+const Thumbnail = styled.div`
+    > img {
+        width: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+        border-radius: 50%;
+    }
+`
+const CommentIcons = styled.div`
+    display: flex;
+    max-width: 75px;
+    justify-content: space-between;
+`
+const Likes = styled.div`
+    font-size: 1.2rem;
+        
+`
+
 
 class Post extends Component {
     
     render() { 
         return ( 
             <PostWrap>
-                <postheader>
-                    <thumbnail>
+                <PostHeader>
+                    <Thumbnail>
                     <img src={this.props.thumbnailUrl} alt=""></img>
-                    </thumbnail>
+                    </Thumbnail>
                     {this.props.username}
-                </postheader>
+                </PostHeader>
                 
-                <postbody>
+                <div>
                     <img src={this.props.imageUrl} alt="" />
-                        <commenticons>
+                        <CommentIcons>
                             <i className="far fa-heart fa-3x" onClick={this.props.increaseLike}></i>
                             <i className="far fa-comment fa-flip-horizontal fa-3x"></i>
-                        </commenticons>
-                        <likes>{this.props.likes} likes</likes>
-                </postbody>
+                        </CommentIcons>
+                        <Likes>{this.props.likes} likes</Likes>
+                </div>
                 
             </PostWrap>
          );
