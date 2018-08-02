@@ -13,7 +13,15 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        border: 1px solid lightgray;
     }
+
+    .custom-border {
+        border-left: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+    }
+
 
 
     .post-img {

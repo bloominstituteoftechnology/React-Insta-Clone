@@ -6,7 +6,7 @@ import './PostContainer.css';
 
 const LikeSection = props => {
   return [
-    <Container>
+    <Container className="custom-border">
       <Row key="likes-icons-container">
         <Col sm={2} className="flex-evenly">
           <FontAwesomeIcon icon={faHeart} className="custom-icon" onClick={props.incrementLike} />

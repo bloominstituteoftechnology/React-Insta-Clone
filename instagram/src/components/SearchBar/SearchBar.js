@@ -8,8 +8,13 @@ import './SearchBar.css';
 import styled from 'styled-components';
 
 const Header = styled.header`
-  border: 2px solid palevioletred;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
 `;
+
+// const LogoHeader = styled.header`
+
+// `;
 
 const SearchBar = props => {
     return (

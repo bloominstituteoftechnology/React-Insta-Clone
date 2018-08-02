@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container } from 'reactstrap';
 import CommentInput from './CommentInput';
-import Comment from './Comment'
+import Comment from './Comment';
+import './CommentSection.css'
 
 
 
@@ -31,7 +32,7 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <Container>
+            <Container className="custom-border2">
                 {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
                 <CommentInput
                     comment={this.state.comment}
