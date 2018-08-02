@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 const Comment = props => {
     return (
-        <div className="comment">
+        <div>
             <p>
-                <span className="user">{props.user}</span> 
+                <span>{props.user}</span> 
                 &thinsp; {props.text} 
                 <i onClick={() => props.delete(props.id)} className="far fa-times-circle" />
             </p>

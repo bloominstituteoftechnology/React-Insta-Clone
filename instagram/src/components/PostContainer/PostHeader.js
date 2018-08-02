@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {StyledPostHeader} from './StyledPosts';
 
 const PostHeader = props => {
     return (
-        <div className="post-header">
-            <img className="thumbnail-img" src={props.thumbnail} alt={`${props.user}'s thumbnail.`} />
-            <span className="user">{props.user}</span>
-        </div>
+        <StyledPostHeader>
+            <img src={props.thumbnail} alt={`${props.user}'s thumbnail.`} />
+            <span>{props.user}</span>
+        </StyledPostHeader>
     );
 };
 

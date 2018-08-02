@@ -1,9 +1,10 @@
 import React from 'react';
 import PostContainer from './PostContainer';
+import {StyledPostsDiv} from './StyledPosts';
 
 const PostsPage = props => {
     return (
-        <div className="posts">
+        <StyledPostsDiv>
             {
                 props.data.map((data, ind) =>
                 <PostContainer
@@ -17,7 +18,7 @@ const PostsPage = props => {
                     time={data.timestamp}
                 />)
             }
-        </div>
+        </StyledPostsDiv>
     );
 }
 

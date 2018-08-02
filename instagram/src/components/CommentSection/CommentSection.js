@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
+import {StyledCommentsDiv, StyledCommentInput} from './StyledComments';
 
 class CommentSection extends Component {
     constructor(props) {
@@ -54,7 +55,7 @@ class CommentSection extends Component {
 
     render () {
         return (
-            <div className="comments">
+            <StyledCommentsDiv>
                 {
                     this.state.comments.map((comment, ind) =>
                     <Comment 
@@ -67,13 +68,12 @@ class CommentSection extends Component {
                 <p>{this.state.time}</p>
                 <hr />
                 <form onSubmit={this.addComment}>
-                    <input 
+                    <StyledCommentInput 
                         onChange={this.handleInputChange} 
-                        className="comment-input" 
                         type="text" 
                         placeholder="Add a comment..." />
                 </form>
-            </div>
+            </StyledCommentsDiv>
         );
     }
 };

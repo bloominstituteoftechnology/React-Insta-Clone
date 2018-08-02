@@ -3,6 +3,9 @@ import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import {StyledPost, 
+    StyledPostImg, StyledStats} 
+from './StyledPosts';
 
 class PostContainer extends React.Component {
     constructor(props) {
@@ -32,11 +35,11 @@ class PostContainer extends React.Component {
 
     render() {
         return (
-            <div className="post">
+            <StyledPost>
                 <PostHeader user={this.props.user} thumbnail={this.props.thumbnail} />
-                <img className="post-img" src={this.props.img} alt="" />
-                <div className="stats">
-                    <div className="icons">
+                <StyledPostImg src={this.props.img} alt="" />
+                <StyledStats>
+                    <div>
                         <i className="far fa-heart fa-2x" 
                         onClick={this.incrementLikes} /> 
                         &emsp; 
@@ -44,12 +47,12 @@ class PostContainer extends React.Component {
                             onClick={() => alert(`Sending ${this.props.user} a ping!`)} />
                     </div>
                     <p className="likes">{this.state.likes} likes</p>
-                </div>
+                </StyledStats>
                 <CommentSection
                     id={this.props.id}
                     comments={this.props.comments} 
                     time={moment(this.props.time, 'MMMM Do YYYY, h:mm:ss a').fromNow()} />
-            </div>
+            </StyledPost>
         );
     }
 };
