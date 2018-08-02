@@ -31,3 +31,23 @@
   font-weight: bolder;
   font-size: 2rem;
 }
+
+@media (max-width: 756px){
+  .login-page .login-form{
+    width: 80%;
+  }
+
+  .login-page .login-form input{
+    width: 60%;
+  }
+}
+
+@media (max-width: 430px){
+  .login-page .login-form{
+    width: 95%;
+  }
+
+  .login-page .login-form input{
+    width: 75%;
+  }
+}
