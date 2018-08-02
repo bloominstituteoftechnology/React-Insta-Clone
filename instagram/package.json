@@ -5,6 +5,7 @@
   "dependencies": {
     "fuse.js": "^3.2.1",
     "fuzzysearch": "^1.0.3",
+    "moment": "^2.22.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
