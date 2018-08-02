@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PostContainer from './PostContainer';
-import dummyData from './../../dummy-data';
+import dummyData from '../../dummy-data';
 
-class PostsPage extends Component {
+class PostsPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {  insta_posts:[] }
@@ -13,6 +12,8 @@ class PostsPage extends Component {
 
     }
     render() { 
+        console.log('data', dummyData);
+        console.log('state', this.state);
         return (  
      <PostContainer posts={this.state.insta_posts}/>
         
