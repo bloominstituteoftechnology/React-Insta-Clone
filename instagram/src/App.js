@@ -17,10 +17,6 @@ class App extends Component {
     this.setState({ posts: dummyData });
   }
 
-  addNewComment() {
-    
-  }
-
   render() {
     return (
       <div className="App">

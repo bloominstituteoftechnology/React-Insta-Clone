@@ -15,9 +15,7 @@ const Post = props => {
         <span><img src={require('../../img/ig_comment.png')} alt="comment button"/></span>
       </div>
       <p>{props.like} likes</p>
-      <div>
-        <CommentSection comment={props.comment} />
-      </div>
+      <CommentSection comment={props.comment} />
       <p>{props.time}</p>
       <CommentInput />
     </div>
