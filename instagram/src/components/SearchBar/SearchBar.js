@@ -65,7 +65,7 @@ const HeaderIcons = styled.div`
   transform: scale(1.5);
 `;
 
-const searchBar = () => {
+const searchBar = props => {
   return (
     <ContainHead>
       <Brands>
@@ -78,7 +78,11 @@ const searchBar = () => {
 
       <div>
         <form className="search-container ">
-          <Input className="fa fa-input" placeholder="&#xf002; Search" />
+          <Input
+            className="fa fa-input"
+            placeholder="&#xf002; Search"
+            onKeyDown={props.searchPosts}
+          />
         </form>
       </div>
 

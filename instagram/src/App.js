@@ -11,15 +11,35 @@ const App = Authenticate(
     constructor() {
       super();
       this.state = {
-        data: dummyData
+        data: [],
+        filteredPosts: []
       };
     }
+
+    componentDidMount() {
+      this.setState({ data: dummyData });
+    }
+
+    handlePostSearch = event => {
+      const posts = this.state.data.filter(post => {
+        if (post.username.includes(event.target.value)) {
+          return post;
+        }
+      });
+      this.setState({ filteredPosts: posts });
+    };
 
     render() {
       return (
         <div className="container">
-          <SearchBar />
-          <PostContainer toes={this.state.data} />
+          <SearchBar searchPosts={this.handlePostSearch} />
+          <PostContainer
+            toes={
+              this.state.filteredPosts.length > 0
+                ? this.state.filteredPosts
+                : this.state.data
+            }
+          />
 
           {/* toes gets assigned to data from line 12*/}
           {/* <CommentContainer /> */}
