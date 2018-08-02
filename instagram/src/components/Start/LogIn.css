@@ -16,7 +16,7 @@
 
 .box {
   background-color: white;
-  width: 300px;
+  width: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,7 +103,6 @@
 }
 
 .signUpPage {
-  width: 350px;
   height: 450px;
 }
 
@@ -124,6 +123,3 @@
   text-align: center;
 }
 
-.box__signUp{
-  width: 350px;
-}
