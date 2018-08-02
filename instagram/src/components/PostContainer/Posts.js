@@ -8,10 +8,19 @@ class Posts extends Component {
   constructor(props){
     super(props);
     this.state = {
-       posts: props.posts
+       posts: props.posts,
+
+       likeCount: 0
     };
   }
   
+addLike = () => {
+  this.setState(prevState => ({
+    likeCount: prevState.likeCount + 1
+  }));
+}
+
+
   render(){
    return(
     <div>
@@ -26,9 +35,9 @@ class Posts extends Component {
             src={this.state.posts.imageUrl}
           />
      <div>
-       {/* <LikeButton 
-         addLikes={this.addLikesHandler}> 
-         {this.state.posts.likes}</LikeButton>  */}
+          <i onClick={this.addLike} 
+          likeCount={this.state.likeCount} 
+          class="far fa-heart">{this.state.likeCount}</i>
      </div>
      </div>
         <CommentSection comments={this.state.posts.comments}/>
