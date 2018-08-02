@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import PostPage from './components/PostContainer/PostPage';
+import Authenticate from "./components/Authentication/Authenticate";
 import { library } from '@fortawesome/fontawesome-svg-core'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faComment, faCommentDots } from '@fortawesome/free-solid-svg-icons'
@@ -26,4 +27,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
