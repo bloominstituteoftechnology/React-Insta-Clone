@@ -4,7 +4,7 @@ import dummyData from '../dummy-data.js'
 import SearchBar from '../SearchBar/SearchBar.js'; 
 import PostContainer from './PostContainer.js'; 
 import CommentSection from '../CommentSection/CommentSection';
-
+import PropTypes from 'prop-types'; 
 
 
 class PostsPage extends React.Component{
@@ -37,7 +37,7 @@ class PostsPage extends React.Component{
 
         return(
         <div>
-            <SearchBar  value ={this.state.searchText} onChange = {this.handleSearchChange}/>
+            <SearchBar  value ={this.state.searchText} onChange = {this.handleSearchChange} logOut = {this.props.handleLogOut}/>
             {dummyData.map((post, i) => <div key = {i} className = "post">
             <hr className ="hrLine"/> <div className = "containerPost">
             <PostContainer key = {Date.now()} userName = {post.username} thumbNail={post.thumbnailUrl} image={post.imageUrl}
@@ -52,4 +52,11 @@ class PostsPage extends React.Component{
     }
 }
 
+
+PostsPage.propTypes = {
+    userIn: PropTypes.string, 
+    logOut: PropTypes.func
+}
+
 export default PostsPage; 
+

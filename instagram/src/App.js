@@ -24,12 +24,6 @@ class App extends Component {
     
   }
   
-  
-  componentWillUnmount () {
-    localStorage.removeItem('username')
-    localStorage.removeItem('password')
-}
-
 
   render() {
     

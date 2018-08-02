@@ -35,6 +35,7 @@ class SearchBar extends React.Component {
         localStorage.removeItem('username');
         localStorage.removeItem('password');
         
+        
     }
 
     render () {

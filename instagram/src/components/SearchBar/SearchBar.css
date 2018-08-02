@@ -72,6 +72,24 @@
     margin-left: 1vw;
 }
 
+.tooltip:hover {
+    background: red;
+    cursor: pointer;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    top:0%;
+    left:0%;
+    position:relative;
+    font-size: 1vw;
+}
+
+.tooltiptext:hover{
+    text-decoration: underline;
+    cursor: pointer; 
+}
+
 @media(max-width: 500px){
     .searchBar {
         flex-direction: column;
@@ -103,23 +121,12 @@
 
 }
 
-.tooltip:hover {
-    background: red;
-    cursor: pointer;
-}
-
 .tooltiptext {
-    visibility: hidden;
-    top:0%;
-    left:10%;
-    position:relative;
-    font-size: 1vw;
+    font-size: 3vh;
 }
 
-.tooltiptext:hover{
-    text-decoration: underline;
-    cursor: pointer; 
-}
+
+
 
 
 

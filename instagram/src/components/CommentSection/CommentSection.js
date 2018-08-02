@@ -14,15 +14,11 @@ class CommentSection extends React.Component {
         this.setState({comments:this.props.comments, cmdCalled: true, temp: "", valueSet: false});
       }
 
-    
     handleOnChange = event => {
         this.setState({
             temp: event.target.value
         })
-        // console.log(this.state.temp);
-        //this.state.temp ? this.setState({valueSet: true}): this.setState({valueSet: false}); 
     }
-
     
     addNewComment = event => {
         const text = this.state.temp;
@@ -41,20 +37,7 @@ class CommentSection extends React.Component {
 
     handleOnSubmit = event => {
         event.preventDefault(); 
-    }
-
-    deleteComment = event => {
-        console.log(event.target)
-        // let commentDelete = confirm("Are you sure you want to delete? You cannot take it back...")
-        // if(commentDelete){
-        //     txt = "You have chosen to delete";
-        // } else {
-        //     txt = "Deletion cancelled";
-        // }
-    }
-
-    
-    
+    }    
 
     render(){
         
@@ -67,19 +50,18 @@ class CommentSection extends React.Component {
         this.state.temp ? value = this.state.temp : value = ""; 
         return(
 
-            <div>
-                
+            <div >
                 {comments.map((comment, i) => <Comments key={i}userName = {comment.username} text = {comment.text} onDoubleClick = {this.deleteComment}/>)}
                 
                 <h4 className = "timeStamp">{time}</h4>
                 <hr className ="postHrLine"/>
                 <div className = "addComment">
-                  <form onSubmit ={this.handleOnSubmit}>      
+                  <form className ="newComment" onSubmit ={this.handleOnSubmit}>      
                     <input className ="addCommentInput"  value = {value} onChange = {this.handleOnChange} onKeyUp = {this.addNewComment} placeholder = "Add a comment..."/>
+                    <br/>
                     <i onClick= {this.addNewComment} className="fas fa-ellipsis-h">Submit</i>
                  </form>
                 </div>
-                
             </div>
             
         );

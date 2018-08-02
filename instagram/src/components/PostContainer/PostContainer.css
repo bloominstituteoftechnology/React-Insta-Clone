@@ -43,7 +43,7 @@
     width: 50px; 
 }
 
-.fa-heart:hover{
+.postIcons .fa-heart:hover{
     cursor:pointer;
 }
 .posting .far {

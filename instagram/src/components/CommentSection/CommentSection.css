@@ -43,6 +43,8 @@
 .fa-ellipsis-h{
     margin-right: 2.0044vw;
     font-size: 1vw;
+    border: 1px inset black;
+    margin-top: 10px;
 }
 
 .fa-ellipsis-h:hover {
@@ -59,6 +61,9 @@
 }
 .userCommentText {
     line-height: 3.5vh;
+}
+.newComment {
+    margin: 0 auto;
 }
 
 

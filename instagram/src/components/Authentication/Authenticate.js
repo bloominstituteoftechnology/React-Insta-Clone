@@ -28,12 +28,16 @@ const Authenticate= Page =>
                 //is user logged  ? yes then produce the normal App page content.  no? make them login with the loginPage
                 this.state.loggedIn ? 
                 
-                <PostsPage userIn={this.state.userIn}/>
+                <PostsPage userIn={this.state.userIn} logOut = {this.state.handleLogOut}/>
                 :
                 <LoginPage />
                 
             )
         }
 }
+
+
+
+
 
 export default Authenticate; 
