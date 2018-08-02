@@ -9,7 +9,7 @@ background-color: white;
 border-radius: 5px;
 padding: ${props => props.size ? (parseInt(props.size, 10) / 2) +'px '+ (parseInt(props.size, 10) / 3) +'px '+ (parseInt(props.size, 10) / 3) +'px' : '10px'}
 min-width: 130px;
-box-shadow: 0 0 10px 3px #181816;
+box-shadow: ${props => props.size ? '0 0 10px 3px #181816' : '0 0 3px 1px #181818'} ;
 /* https://stackoverflow.com/questions/13607117/css-css3-pixelate-dot-background */
 background-image: -moz-linear-gradient(45deg, #666 25%, transparent 25%),
   -moz-linear-gradient(-45deg, #666 25%, transparent 25%),

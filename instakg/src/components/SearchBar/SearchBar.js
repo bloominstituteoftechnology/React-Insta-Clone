@@ -5,34 +5,31 @@ import {
   faHeart,
   faUser
 } from "@fortawesome/free-regular-svg-icons";
-import logo from "./logo.png";
 import "./SearchBar.css";
 import LogoText from "./LogoText";
+import Splitbar from "./Splitbar";
+import Logo from "./Logo";
+import SearchBarContainer from "./SearchBarContainer";
+import BorderBox from "./BorderBox";
+import Icon from "./Icon";
+import SearchBox from "./SearchBox";
 
 const SearchBar = props => {
   return (
-    <div className="borderBox">
-      <div className="searchBarContainer">
-      <div className="logo">
-          <img src={logo} alt="logo" />{" "}
-        </div>
-        
-        <span className="splitBar"> </span>
+    <BorderBox>
+      <SearchBarContainer>
+        <Logo />
+        <Splitbar/>
         <LogoText > InstaKG </LogoText>
-        
-
-        <input
+        <SearchBox
           onChange={props.methods}
-          id="search"
-          placeholder="   &#128269; Search"
-          type="text"
         />
-        <div>
+        <Icon>
           <FontAwesomeIcon className="icon" icon={faCompass} />
-        </div>
-        <div>
+        </Icon>
+        <Icon>
           <FontAwesomeIcon className="icon" icon={faHeart} />
-        </div>
+        </Icon>
         <div
           onClick={function(event) {
             event.currentTarget.childNodes[1].classList.toggle("visible");
@@ -44,8 +41,8 @@ const SearchBar = props => {
             Logout
           </div>
         </div>
-      </div>
-    </div>
+      </SearchBarContainer>
+    </BorderBox>
   );
 };
 
