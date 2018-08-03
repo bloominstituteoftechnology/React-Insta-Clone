@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from "./Comment.js";
-import Moment from "react-moment";
+import moment from 'moment';
 import styled from "styled-components"
 
 const StyledPostBot = styled.div`
@@ -82,7 +82,10 @@ class CommentSection extends React.Component {
         this.setState({ input: event.target.value });
     }
 
+    
+
     render() {
+        const time = moment(this.props.time, 'MMMM Do YYYY, h:mm:ss a').fromNow()
         return (
             <div>
 
@@ -98,7 +101,7 @@ class CommentSection extends React.Component {
 
                 {this.state.commentState.map(item => <Comment com={item} />)}
                 
-                <StyledPostTimestamp><Moment>{this.state.time}</Moment></StyledPostTimestamp>
+                <StyledPostTimestamp>{time}</StyledPostTimestamp>
                 <StyledCommentInput value={this.state.input} onChange={this.saveComment} onKeyPress={this.addNewComment} placeholder="Add a comment..." />
 
             </div>

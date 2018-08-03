@@ -30,8 +30,6 @@ const StyledPostuser = styled.div`
 `    
 
 
-
-
 const PostContainer = props => {
   return (
     <div>
@@ -44,7 +42,7 @@ const PostContainer = props => {
               <StyledPostuser>{post.username} </StyledPostuser>
             </StyledPostTop>
             <img src={post.imageUrl} />
-            <CommentSection com={post} />
+            <CommentSection com={post} time={post.timestamp} />
             </StyledPostContainer>
             )
           })}

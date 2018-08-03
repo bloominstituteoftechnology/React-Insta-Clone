@@ -4,25 +4,25 @@ import styled from "styled-components"
 const StyledLoginContainer = styled.div`
     background: linear-gradient(to bottom right, #00bbff, #344146);
     
-`
+`;
 
 const StyledLoginForm = styled.form`
     display: flex;
     justify-content: center;
     
  
-`
+`;
 const StyledLoginAlert = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 40%;
+    margin-top: 380px;
 
-`
+`;
 
 const StyledLoginButton = styled.button`
     display: flex; 
     
-`
+`;
 
 class Login extends Component {
     constructor() {
