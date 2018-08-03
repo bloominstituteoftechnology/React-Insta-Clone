@@ -19,6 +19,8 @@ class PostsPage extends Component {
   componentDidMount() {
     this.setState({data: dummyData})
     this.setState({likes: dummyData.likes})
+    console.log(localStorage.getItem('username'))
+
   }
 
   liked = (e) => {
@@ -37,7 +39,6 @@ class PostsPage extends Component {
   }
 
   render() {
-    
     return (
       <div>
         <SearchContainer search={this.state.search} startSearch={this.startSearch} filterSearch={this.search} />

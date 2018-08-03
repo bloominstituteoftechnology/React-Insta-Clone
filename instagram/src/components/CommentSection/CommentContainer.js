@@ -6,7 +6,7 @@ class CommentContainer extends Component {
         super(props);
         this.state = { 
             comment: props.comments,
-            username: 'Me',
+            username: localStorage.getItem('username'),
             text: '',
             
          }
