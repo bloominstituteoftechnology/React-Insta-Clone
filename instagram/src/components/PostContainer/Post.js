@@ -37,9 +37,19 @@ const Post = prop => {
         <Username>{prop.butt.username} </Username>
       </Cardtitle>
       <img className="image" src={prop.butt.imageUrl} />
-      <CommentContainer fred={prop.butt} />
+      <CommentContainer fred={prop.butt} time={prop.timestamp} />
     </PostCard>
   );
+};
+
+Post.propTypes = {
+  butt: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailurl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    timestamp: PropTypes.string
+  })
 };
 
 export default Post;

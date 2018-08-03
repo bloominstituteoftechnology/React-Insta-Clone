@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import "./Comment.css";
 import Comment from "./Comment";
+import moment from "moment";
 import styled from "styled-components";
 
 const CommentContain = styled.div`
@@ -74,6 +75,8 @@ class CommentContainer extends Component {
   };
 
   render() {
+    const time = moment(this.state.time, "MMMM Do YYYY, h:mm:ss a").fromNow();
+
     return (
       <CommentContain>
         <Iconic>
@@ -83,10 +86,11 @@ class CommentContainer extends Component {
           />
           <Ico className="fab far fa-comment" />
         </Iconic>
-        <Like>{this.state.likes} likes </Like>
-
+        <Like> {this.state.likes} likes </Like>
         {this.state.comments.map(item => <Comment eye={item} />)}
-        <div className="time"> {this.state.timestamp} </div>
+
+        <div className="time"> {time} </div>
+
         <Commentbox
           value={this.state.input}
           onChange={this.saveComment}

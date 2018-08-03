@@ -2,8 +2,8 @@
 import React from "react";
 // import "./PostContainer.css";
 import styled from "styled-components";
-
 import Post from "./Post.js";
+import PropTypes from "prop-types";
 
 const Postcontainer = styled.div`
   display: flex;
@@ -20,6 +20,10 @@ const postContainer = props => {
       each butt prop an item */}
     </div>
   );
+};
+
+Postcontainer.propTypes = {
+  toes: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default postContainer;
