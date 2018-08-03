@@ -6,24 +6,25 @@ class Post extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: props.comment
+            comments: props.comment,
+            newComment: ""
         };
     }
 
-    // componentDidMount() {
-    //   this.setState({ comments: this.props.comment} )
-    // }
+    addNewComment = (event) => {
+      this.setState({ newComment: event.target.value });
+    }
 
-    commentSubmit(event, newInput){
+    commentSubmit = (event) => {
         event.preventDefault();
-        const newComment = { text: newInput, username: "khoaNguyen" };
+        const newPost = { text: this.state.newComment, username: "khoaNguyen" };
         const newComments = this.state.comments.slice();
-        newComments.push(newComment);
-        this.setState({ comments: newComments });
+        console.log(newPost);
+        newComments.push(newPost);
+        this.setState({ comments: newComments, newComment: "" });
     }
 
    render() {
-     console.log(this.state.comments);
     return (
       <div className="App-intro">
         <p>
@@ -45,6 +46,8 @@ class Post extends React.Component {
         <p>{this.props.time}</p>
         <CommentInput 
             commentSubmit={this.commentSubmit}
+            addNewComment={this.addNewComment}
+            newValue={this.state.newComment}
         />
       </div>
     );

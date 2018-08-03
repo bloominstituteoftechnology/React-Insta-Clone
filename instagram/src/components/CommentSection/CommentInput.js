@@ -1,36 +1,19 @@
-import React from 'react';
+import React from "react";
 
-class CommentInput extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            comment: "",
-            comments: this.comments
-        };
-    
-        this.addNewComment = this.addNewComment.bind(this);
-    }
-    
-    addNewComment(event) {
-        this.setState({ comment: event.target.value });
-    }
-
-    
-
-    render() {
-        return (
-            <form onSubmit={(event) => this.props.commentSubmit(event, this.state.comment)
-            }>
-            <input 
-                onChange={this.addNewComment}
-                value={this.state.comment}
-                id="input" 
-                type="text" 
-                placeholder="     Add a comment... " 
-            />
-            </form>
-        );
-    }
+const CommentInput = (props) => {
+  return (
+    <form
+      onSubmit={event => props.commentSubmit(event)}
+    >
+      <input
+        onChange={props.addNewComment}
+        value={props.newValue}
+        id="input"
+        type="text"
+        placeholder="     Add a comment... "
+      />
+    </form>
+  );
 };
 
 export default CommentInput;
