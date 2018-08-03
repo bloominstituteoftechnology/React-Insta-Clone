@@ -28,6 +28,7 @@ logIn=()=>{
 }
 render () {
     return (
+
         <LoginForm onSubmit={this.logIn}>
             <input type='text' name='username' placeholder='enter a username' value={this.state.username} onChange={(e)=>this.handleUserNameChange(e)}/>
             <input type='password' name='password' placeholder='enter a password' value={this.state.password} onChange={(e)=>this.handlePassWordChange(e)}/>
