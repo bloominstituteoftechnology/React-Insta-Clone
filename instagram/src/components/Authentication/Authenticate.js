@@ -16,8 +16,14 @@ const Authenticate = App =>
         } 
     }
 
+    logout = () => {
+        localStorage.removeItem("username");
+        // window.location.reload();
+        this.setState({ loggedIn: false });
+      } 
+
     render() {
-    return this.state.loggedIn ? <App /> : <LoginPage /> ;
+    return this.state.loggedIn ? <App logoutHandler2={this.logout} /> : <LoginPage /> ;
     }
   };
 

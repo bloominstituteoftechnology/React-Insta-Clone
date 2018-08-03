@@ -10,7 +10,7 @@ const SearchBar = props => {
             <IGlogo src="https://raw.githubusercontent.com/LambdaSchool/React-Insta-Clone/4079cf6fb6d11bd3ad7a422cdec35e0aab4e2bfe/instagram/src/assets/iglogo.png" alt="" />
             <SearchInput type="text" placeholder="&#8981; Search" onKeyDown={props.filterPostsHandler} />
             <SearchIcons onClick={props.logoutHandler} >
-                <i class="fas fa-door-closed fa-lg"></i>
+                <i className="fas fa-door-closed fa-lg"></i>
             </SearchIcons>
             <SearchIcons >
                 <i className="far fa-compass fa-lg" />
