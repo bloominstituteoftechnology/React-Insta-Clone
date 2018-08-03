@@ -1,41 +1,63 @@
 import React from "react";
 import logo from "../../assets/instagramlogin.png";
-import {ContentWrapper, Box, SecondaryBox, InnerBox, SecondaryInnerBox, InputWrapper, LogoImg, Input, ErrorMessage, Button, Link, Text, HeadInfoText} from "./start-styles"
+import {
+  ContentWrapper,
+  Box,
+  SecondaryBox,
+  InnerBox,
+  SecondaryInnerBox,
+  InputWrapper,
+  LogoImg,
+  Input,
+  ErrorMessage,
+  Button,
+  Link,
+  Text,
+  HeadInfoText,
+} from "./start-styles";
 
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      phoneNumber: '',
-      fullName: '',
-      username: '',
-      password: '',
-      error: undefined
+      phoneNumber: "",
+      fullName: "",
+      username: "",
+      password: "",
+      error: undefined,
     };
   }
 
   handleChange = e => {
-    this.setState({ 
-      [e.target.name]: e.target.value
-    })
-  }
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
 
-  handleSubmit = (e) => {
-    e.preventDefault()
-    let error = this.props.handleNewProfile(this.state.phoneNumber, this.state.fullName, this.state.username, this.state.password)
+  handleSubmit = e => {
+    e.preventDefault();
+    let error = this.props.handleNewProfile(
+      this.state.phoneNumber,
+      this.state.fullName,
+      this.state.username,
+      this.state.password
+    );
     if (error) {
-      this.setState({error: error})
+      this.setState({ error: error });
     }
-  }
-
+  };
 
   render() {
-    let fieldsValid = this.state.password && this.state.username && this.state.phoneNumber && this.state.fullName;
+    let fieldsValid =
+      this.state.password &&
+      this.state.username &&
+      this.state.phoneNumber &&
+      this.state.fullName;
     return (
       <ContentWrapper>
         <Box>
           <InnerBox onSubmit={this.handleSubmit}>
-            <LogoImg src={logo} alt="logo"/>
+            <LogoImg src={logo} alt="logo" />
             <HeadInfoText>
               Sign up to see photos and videos from your friends.
             </HeadInfoText>
@@ -55,7 +77,7 @@ class SignUp extends React.Component {
                 onChange={this.handleChange}
               />
               <Input
-              name="username"
+                name="username"
                 type="text"
                 placeholder="Username"
                 value={this.state.username}
@@ -69,7 +91,9 @@ class SignUp extends React.Component {
                 onChange={this.handleChange}
               />
             </InputWrapper>
-            {this.state.error && <ErrorMessage>{this.state.error}</ErrorMessage>}
+            {this.state.error && (
+              <ErrorMessage>{this.state.error}</ErrorMessage>
+            )}
             <Button disabled={!fieldsValid} type="submit">
               Sign Up
             </Button>

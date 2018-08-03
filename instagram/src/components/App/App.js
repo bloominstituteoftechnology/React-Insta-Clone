@@ -2,21 +2,22 @@ import React, { Component } from "react";
 import dummyData from "../../dummy-data";
 import Fuse from "fuse.js";
 import dataOptions from "../../SearchOptions";
-import HeaderContainer from "../Header/Header";
+import Header from "../Header/Header";
 import PostContainer from "../PostContainer/PostContainer";
 import { MainBody } from "./app-styles";
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       posts: [],
       searchInput: "",
-      username: "",
+      user: undefined,
       filteredInput: "",
     };
   }
   componentDidMount() {
+    this.setState({ user: this.props.user });
     const storedPosts = JSON.parse(localStorage.getItem("posts"));
     if (storedPosts) {
       this.setState({ posts: storedPosts });
@@ -31,7 +32,7 @@ class App extends Component {
         posts: posts,
       });
     }
-    this.setState({ username: this.props.username });
+    
   }
 
   componentDidUpdate(prevState) {
@@ -50,7 +51,7 @@ class App extends Component {
               comments: [
                 ...currentPost.comments,
                 {
-                  username: this.props.username.toLowerCase(),
+                  username: this.props.user.username.toLowerCase(),
                   text: comment,
                   id: new Date(),
                 },
@@ -64,31 +65,38 @@ class App extends Component {
     });
   };
 
-  handleLikeToggle = id => {
-    this.setState(prevState => {
-      return {
-        posts: prevState.posts.map(currentPost => {
-          if (currentPost.id === id) {
-            if (!currentPost.liked) {
+  handleLike = (liked, id) => {
+    if (liked) {
+      this.setState(prevState => {
+        return{
+          posts: prevState.posts.map(currentPost => {
+            if (currentPost.id === id) {
               return {
                 ...currentPost,
                 likes: currentPost.likes + 1,
-                liked: true,
               };
             } else {
+              return currentPost
+            }
+          }),
+      }}, () => this.handleAddLike(id))
+    } else { 
+      this.setState(prevState => {
+        return {
+          posts: prevState.posts.map(currentPost => {
+            if (currentPost.id === id) {
               return {
                 ...currentPost,
                 likes: currentPost.likes - 1,
-                liked: false,
               };
+            } else {
+              return currentPost
             }
-          } else {
-            return currentPost;
-          }
-        }),
-      };
-    });
-  };
+          }),
+      }
+      }, () => this.handleRemoveLike(id))
+    }
+  }
 
   handleChange = value => {
     this.setState({ searchInput: value.toLowerCase() });
@@ -126,18 +134,61 @@ class App extends Component {
     });
   };
 
+  checkforLike = id => {
+    let liked = false;
+    if (this.state.user.likedPosts) {
+      this.state.user.likedPosts.forEach(like => {
+        if (like === id) {
+          liked = true;
+        }
+      });
+    }
+    return liked;
+  };
+
   handleLogOut = () => {
-    this.props.handleLogOut();
+    this.props.handleLogOut(this.state.user);
   };
 
   handleShowAll = () => {
     this.setState({ filteredInput: "" });
   };
 
+  handleAddLike = id => {
+    this.setState(prevState => {
+      if (prevState.user.likedPosts) {
+        return {
+          user: {
+            ...prevState.user,
+            likedPosts: [...prevState.user.likedPosts, id],
+          },
+        };
+      } else {
+        return {
+          user: {
+            ...prevState.user,
+            likedPosts: [id],
+          },
+        };
+      }
+    });
+  };
+
+  handleRemoveLike = id => {
+    this.setState(prevState => {
+      return {
+        user: {
+          ...prevState.user,
+          likedPosts: prevState.user.likedPosts.filter(like => like !== id),
+        },
+      };
+    });
+  };
+
   render() {
     return (
       <div>
-        <HeaderContainer
+        <Header
           handleChange={this.handleChange}
           searchInput={this.state.searchInput}
           handleSearchSubmit={this.handleSearchSubmit}
@@ -148,17 +199,18 @@ class App extends Component {
           {!this.state.filteredInput
             ? this.state.posts.map(post => (
                 <PostContainer
-                  username={this.state.username}
+                  liked={this.checkforLike}
+                  username={this.state.user.username}
                   key={post.id}
                   post={post}
                   handleAddComment={this.handleAddComment}
-                  handleLikeToggle={this.handleLikeToggle}
+                  handleLike={this.handleLike}
                   handleDeleteComment={this.handleDeleteComment}
                 />
               ))
             : this.state.filteredInput.map(post => (
                 <PostContainer
-                  username={this.state.username}
+                  username={this.state.user.username}
                   key={post.id}
                   post={post}
                   handleAddComment={this.handleAddComment}

@@ -27,8 +27,13 @@ class PostContainer extends React.Component {
     this.state = {
       comment: "",
       focused: false,
+      liked: false
     };
   }
+  componentDidMount() {
+    this.setState({liked: this.props.liked(this.props.post.id)})
+  }
+
   handleChange = e => {
     this.setState({ comment: e.target.value });
   };
@@ -39,6 +44,12 @@ class PostContainer extends React.Component {
       this.setState({ comment: "" });
     }
   };
+
+  handleLikeToggle = () => {
+    this.setState(prevState => (
+      { liked: !prevState.liked}
+    ), () => this.props.handleLike(this.state.liked, this.props.post.id))
+  }
 
   onBlur = e => {
     this.setState({ focused: false });
@@ -65,8 +76,8 @@ class PostContainer extends React.Component {
         <MainText>
           <ButtonWrapper>
             <Button
-              src={this.props.post.liked ? liked : unliked}
-              onClick={() => this.props.handleLikeToggle(this.props.post.id)}
+              src={this.state.liked ? liked : unliked}
+              onClick={this.handleLikeToggle}
               alt="liked"
             />
             <Button src={comment} alt="comment" onClick={this.focusTextInput} />
