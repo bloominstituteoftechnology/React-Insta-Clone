@@ -1,5 +1,4 @@
 import React from 'react';
-// import './SearchBar.css';
 import styled from 'styled-components';
 
 
@@ -41,6 +40,8 @@ const SearchInput = styled.input`
 const Icons = styled.div`
   display: flex;
   width: 300px;
+  font-size: 20px;
+
 `;
 
 const SocialDiv = styled.div`
