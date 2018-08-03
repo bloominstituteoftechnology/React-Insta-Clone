@@ -76,7 +76,7 @@ class CommentSection extends React.Component {
             console.log(event.target.className);
             let check = document.querySelector(".deleteComment");
             console.log(check.className.includes("deleteComment"));
-            comments = comments.map(comment => comment.userName !== event.target.innerHTML && event.target.innerHTML === this.props.userIn && !check.className.includes("deleteComment") )
+            comments = comments.filter(comment =>  comment.username !== this.props.userIn )
             localStorage.setItem(this.props.poster, JSON.stringify(comments));
             localStorage.setItem(this.props.time, JSON.stringify(comments));
             
