@@ -5,32 +5,25 @@ class CommentInput extends React.Component {
         super(props);
         this.state = {
             comment: "",
-            comments: props.comments
+            comments: this.comments
         };
     
         this.addNewComment = this.addNewComment.bind(this);
-        this.commentSubmit = this.commentSubmit.bind(this);
     }
     
     addNewComment(event) {
-        console.log(this.state.comments);
-        this.setState({ comment: event.target.comment });
+        this.setState({ comment: event.target.value });
     }
 
-    commentSubmit(event){
-        event.preventDefault();
-        const newComment = { text: this.state.comment, username: "khoaNguyen" };
-        const comments = this.state.comments.slice();
-        comments.push(newComment);
-        this.setState({ comments, comment: "" });
-    }
+    
 
     render() {
         return (
-            <form onSubmit={this.commentSubmit}>
+            <form onSubmit={(event) => this.props.commentSubmit(event, this.state.comment)
+            }>
             <input 
                 onChange={this.addNewComment}
-                value={this.comment}
+                value={this.state.comment}
                 id="input" 
                 type="text" 
                 placeholder="     Add a comment... " 
