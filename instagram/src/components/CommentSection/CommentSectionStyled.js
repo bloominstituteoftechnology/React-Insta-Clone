@@ -27,7 +27,7 @@ const UserCommentText = styled.p`
     align: left;
 `;
 
-const NewComment = styled.form`
+const NewComment = styled.div`
     margin: 0 auto; 
 `;
 const TimeStamp = styled.h4`
@@ -64,11 +64,12 @@ const PostHrLine = styled.hr`
     margin-left: 0;
     border: .5px solid #e7e7e7;
 `;
-const SubmitIcon = styled.i`
+const SubmitIcon = styled.div`
     margin-right: 2.0044vw;
     font-size: 1vw;
     border: 1px inset black;
     margin-top: 10px;
+    height: 20px;
 `;
 
 export {CommentsStyled, CommentStyled, UserCommentName,

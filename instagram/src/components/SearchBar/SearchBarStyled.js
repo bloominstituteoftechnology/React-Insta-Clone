@@ -78,9 +78,7 @@ const RightSideDiv = styled.div `
     }
 `;
 
-// const Tooltipi = styled.i `
 
-// `;
 
 const ToolTipTextDiv = styled.div`
     visibility: hidden;
