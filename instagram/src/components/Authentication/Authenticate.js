@@ -12,7 +12,6 @@ const Authenticate= Page =>
         componentDidMount () {
             const username = localStorage.getItem('username');
             const password = localStorage.getItem('password');
-            console.log("mounting")
             
             if(username && password && this.state.loggedIn === false) {
                 this.setState({loggedIn: true, userIn: username});

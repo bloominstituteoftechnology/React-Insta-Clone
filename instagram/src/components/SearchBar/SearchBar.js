@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import {SearchBarDiv, PostPageLogo, LeftSideDiv, SearchInput,
 RightSideDiv,ToolTipTextDiv} from './SearchBarStyled.js';
 
-
 class SearchBar extends React.Component {
     constructor(props){
         super(props);

@@ -12,35 +12,36 @@ class CommentSection extends React.Component {
     }
 
     componentDidMount () {
-        let storedComments; 
-        if(localStorage.getItem('comments')){
-            storedComments = JSON.parse(localStorage.getItem('comments'));
+        
+        if(localStorage.getItem(this.props.time) !== null){
+            let data = localStorage.getItem(this.props.time);
+            data = JSON.parse(data);  
+            this.setState({comments: data, cmdCalled: true, temp: ""});
+            
         } else {
-            storedComments = this.props.comments; 
+            this.setState({comments:this.props.comments, cmdCalled: true, temp: ""});
+        
         }
-
-        this.setState({comments:storedComments, cmdCalled: true, temp: "",});
+        
       }
 
     handleOnChange = event => {
         this.setState({
             temp: event.target.value
-        })
+        });
     }
     
     addNewComment = event => {
-        
         const text = this.state.temp.slice();
         const comments = this.state.comments.slice(); 
         if(event.keyCode === 13 ){ 
             comments.push({username: this.props.userIn, text:text})
             
             event.target.value = ""
-            localStorage.setItem("comments", JSON.stringify(comments));
+            localStorage.setItem(this.props.poster, JSON.stringify(comments));
+            localStorage.setItem(this.props.time, JSON.stringify(comments));
             this.setState({comments: comments, temp:""});
         }
-
-        
         
     }
 
@@ -49,10 +50,12 @@ class CommentSection extends React.Component {
         const comments = this.state.comments.slice(); 
         if(text.length > 0){
             comments.push({username: this.props.userIn, text:text})
-            localStorage.setItem("comments", JSON.stringify(comments));
+            localStorage.setItem(this.props.poster, JSON.stringify(comments));
+            localStorage.setItem(this.props.time, JSON.stringify(comments));
+            
             this.setState({comments: comments, temp:""});
         }
-        console.log('clicked');
+        
     }
 
     handleOnSubmit = event => {
@@ -64,10 +67,9 @@ class CommentSection extends React.Component {
     }
 
     render(){
-        
         let comments;
         this.state.cmdCalled ? comments = this.state.comments : comments = [];
-
+        
         const time = moment(this.props.time, 'MMMM Do YYYY, h:mm:ss a').fromNow()
         
         let value;
@@ -90,7 +92,7 @@ class CommentSection extends React.Component {
                     <br/>
                     <SubmitIcon onMouseEnter = {this.handleHover} onClick = {this.addNewCommentClick}><i className="fas fa-ellipsis-h"></i>Submit</SubmitIcon>
                  
-                 </NewComment>
+                  </NewComment>
                 </AddComment>
             </div>
         );

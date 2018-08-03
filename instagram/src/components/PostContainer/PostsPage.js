@@ -43,7 +43,7 @@ class PostsPage extends React.Component{
             <PostContainer key = {Date.now()} userName = {post.username} thumbNail={post.thumbnailUrl} image={post.imageUrl}
             likes = {post.likes}/> 
             
-            <CommentSection key ={i} comments = {post.comments} time = {post.timestamp} userIn = {this.props.userIn}/> 
+            <CommentSection key ={i} comments = {post.comments} time = {post.timestamp} userIn = {this.props.userIn} poster = {post.username}/> 
 
             </div></div>) }
         
