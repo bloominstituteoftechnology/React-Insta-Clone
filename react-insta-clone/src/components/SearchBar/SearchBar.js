@@ -1,21 +1,24 @@
 import React from 'react';
 import './SearchBar.css';
-import { Container } from "./styled-components";
+import { Header, LogoHeader } from "../styled-components/styled-components";
 
 const SearchBar = props => {
     console.log('imProps', props)
     return (
-        <Container>
-            <div className='logoLeft'>
+        <Header>
+            <LogoHeader>
                 logo
-            </div>
-            <div className='input'>
-               <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
-            </div>
+            </LogoHeader>
+          
+               <input type="text" 
+               placeholder="Search" 
+               onKeyDown={props.searchPosts}
+                />
+         
             <div className='logoRight'>
                 logo
             </div>
-        </Container>
+        </Header>
     );
 };
 
