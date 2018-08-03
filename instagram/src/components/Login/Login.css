@@ -1,0 +1,66 @@
+.login{
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;     
+    background-image: url("https://get.pxhere.com/photo/nature-grass-horizon-girl-sunset-field-wheat-sunlight-morning-female-evening-carefree-freedom-hipster-curves-sexy-hippie-scene-wonder-emotion-sexual-grass-family-869420.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-title{
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    margin:-180px 0 100px 0;
+}
+
+.login-card{
+    background-color: rgba(255,255,255,0.7) ;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.form input{
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+    background-color: white;
+}
+
+.form input:focus{
+    outline: 0;
+}
+
+.form-title{
+    margin: 10px 0 10px 0;
+}
+
+.form .btn{
+    margin-top: 20px;
+    background-color: lightblue;
+    border: 0;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    font-family: 'Dancing Script', cursive;
+    color:white;
+    font-size: 18px;
+}
+.form .btn:focus{
+    outline: 0;
+}
