@@ -27,6 +27,8 @@ const SearchContainer = props => {
                 <i className="far fa-compass"></i> <i className="far fa-heart"></i> <i className="fas fa-user"></i>
             </div>
 
+            <button onClick={props.logout}> LOG OUT</button>
+
         </div>
     );
 }

@@ -28,9 +28,14 @@ const Authenticate = Posts =>
         }
 
 
+        logout = e => {
+            this.setState({LoggedIn: false})
+            console.log(this.state.LoggedIn)
+          }
+
         render() {
             if (this.state.LoggedIn) {
-                return <PostsPage />
+                return <PostsPage logged={this.state.LoggedIn} logout={this.logout} />
             }
             else {
                 return (        
