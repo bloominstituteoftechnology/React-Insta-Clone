@@ -8,7 +8,11 @@ import styled from 'styled-components';
 const PostContainerAttrib = styled.div`
     border: 1px solid lightgray;
     margin: 30px auto;
-    box-shadow: 0 0 15px gray;
+    box-shadow: 0 0 15px black;
+    text-align: left;
+    width: 75%;
+    background: white;
+    border-radius: 5px;
 `
 
 const PostContainer = (props) => {

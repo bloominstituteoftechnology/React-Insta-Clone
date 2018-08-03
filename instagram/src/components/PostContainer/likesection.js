@@ -17,14 +17,20 @@ const Icons = styled.div`
 const Icon = styled.i`
     font-size: 25px;
     margin: 10px 10px 0;
-    color: #F64F51;
+    color: darkslategray;
 `
 
 const LikesSection = (props) => {
     return (
         <div>
             <Icons className="d-flex">
-                <Icon  onClick={props.incrementLike} className={props.liked ? "fas fa-heart" : "far fa-heart"}></Icon><Icon className="far fa-comment"></Icon>
+                <Icon  
+                    onClick={props.incrementLike} 
+                    className={props.liked ? "fas fa-heart" : "far fa-heart"}>
+                </Icon>
+                <Icon 
+                    className="far fa-comment">
+                </Icon>
             </Icons>
             <LikeText><Username>{props.likes} likes</Username></LikeText>
         </div>

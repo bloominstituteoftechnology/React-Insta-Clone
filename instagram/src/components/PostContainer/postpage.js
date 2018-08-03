@@ -3,6 +3,7 @@ import PostContainer from '../PostContainer/postcontainer';
 import SearchBar from '../SearchBar/searchbar';
 import dummyData from '../../dummy-data';
 
+
 class PostPage extends Component {
   constructor() {
     super();
