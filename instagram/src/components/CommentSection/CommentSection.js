@@ -28,19 +28,21 @@ class CommentSection extends React.Component {
     }
     componentDidMount(){
         const username=localStorage.getItem('username');
-        let comments=localStorage.getItem('Comments');
-        if (comments) {
-            this.setState({comments:JSON.parse(comments)});
-        }
         this.setState({username:username});
     }
     addNewComment=(index)=>{
         const commentsCopy=this.state.comments.slice();
-        commentsCopy[index]=({
-            username: this.state.username,
-            text: this.state.newComment
-        });
-        this.setState({comments: commentsCopy,newComment:''},localStorage.setItem('Comments',JSON.stringify(commentsCopy)));
+        let comments=JSON.parse(localStorage.getItem('posts'));
+        for (let i=0; i<comments.length; i++) {
+            if ((''+commentsCopy)===(comments[i].comments+'')){
+                commentsCopy[index]=({
+                    username: this.state.username,
+                    text: this.state.newComment
+                });
+                comments[i].comments=commentsCopy;
+            }
+        }
+        this.setState({comments:commentsCopy,newComment:''},()=>localStorage.setItem('posts',JSON.stringify(comments)));
     }
     handleInputChange=(e)=>{
         this.setState({newComment:e.target.value});
@@ -55,9 +57,15 @@ class CommentSection extends React.Component {
         return moment(dynamicDate).fromNow();
     }
     deleteComment=(i)=>{
-        const comments=this.state.comments.slice();
-        comments.splice(i,1);
-        return this.setState({comments:comments},()=>localStorage.setItem('Comments',JSON.stringify(comments)));
+        const commentsCopy=this.state.comments.slice();
+        let comments=JSON.parse(localStorage.getItem('posts'));
+        for (let j=0; j<comments.length; j++) {
+            if ((''+commentsCopy)===(comments[j].comments+'')) {
+                commentsCopy.splice(i,1);
+                comments[j].comments=commentsCopy;
+            }
+        }
+        return this.setState({comments:commentsCopy},()=>localStorage.setItem('posts',JSON.stringify(comments)));
     }    
     render() {
         return (

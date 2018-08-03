@@ -25,8 +25,9 @@ const Comment=prop=><UserComment>
 <DeleteButton onClick={()=>prop.commentDelete(prop.itemNumber)} className="fas fa-eraser"></DeleteButton>:null}
 </UserComment>
 
-Comment.propTypes={
-    data: PropTypes.objectOf(PropTypes.string).isRequired
+Comment.Proptypes={
+    data:PropTypes.object.isRequired,
+    commentDelete:PropTypes.func.isRequired
 }
 
 

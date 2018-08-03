@@ -22,7 +22,13 @@ class PostsPage extends React.Component {
       }
     }
     componentDidMount(){
-      this.setState({posts:dummyData});
+      
+     if (typeof localStorage.getItem('posts')==='object') {
+      localStorage.setItem('posts',JSON.stringify(dummyData));
+      this.setState({posts:dummyData},()=>console.log(this.state.posts));
+     } else {
+       this.setState({posts:JSON.parse(localStorage.getItem('posts'))},()=>console.log(this.state.posts))
+     }
     }
     handleSearchBarChange=(event)=>{
       this.setState({searchBarValue:event.target.value},()=>this.filterPosts());
