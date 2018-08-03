@@ -1,6 +1,17 @@
 import React from 'react';
 import logo from '../../assets/instagramlogin.png';
 import { Form, Input, Button } from 'reactstrap';
+import styled from 'styled-components';
+
+const FormContainer = styled.div`
+    border: 1px solid grey;
+    width: 400px;
+    padding: 20px;
+    border-radius: 2px;
+    margin: auto;
+    background: lightgrey;
+    margin-top: 100px;
+`;
 
 class Login extends React.Component {
     constructor(props) {
@@ -31,7 +42,7 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div>
+            <FormContainer>
             <Form>
                 
                 <img src = {logo} alt="logo" />
@@ -59,7 +70,7 @@ class Login extends React.Component {
                 Login
                 </Button>
             </Form>
-        </div>
+        </FormContainer>
         );
     }
 };
