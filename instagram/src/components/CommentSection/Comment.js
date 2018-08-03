@@ -1,12 +1,17 @@
 import React from 'react';
 import './CommentSection.css';
 import PropTypes from 'prop-types';
+import {StyledUser} from './CommentSectionStyle';
 
 
 const Comment = props => {
     return (
-        <div className='comment'>
-            <p className='outside-user'><span className='user'>{props.user}</span>{props.text}</p>
+        <div>
+            <p className='outside-user'>
+                <StyledUser>
+                    {props.user}
+                </StyledUser>   {props.text} 
+            </p>
         </div>
     );
 };

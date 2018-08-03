@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
+import {StyledLikes, StyledStats} from '../CommentSection/CommentSectionStyle';
+
 
 
 class PostContainer extends Component {
@@ -24,15 +26,17 @@ class PostContainer extends Component {
             <div className='post-container'>
                 <PostHeader thumbnail={this.props.thumbnail} user={this.props.user}/>
                 <img className='ig-post-img' src={this.props.img} alt=''/>
-                <div className='stats'>
+
+                <StyledStats>
                     <div className='icons'>
                         <i className="far fa-heart fa-2x" onClick={this.incrementLikes} /> 
                         &emsp; 
                         <i className="far fa-comment fa-2x" 
                             onClick={() => alert(`Sending ${this.state.user} a ping!`)} />
                     </div>
-                    <p className='likes'>{this.state.likes} likes</p>
-                </div>
+                </StyledStats>
+
+                <StyledLikes>{this.state.likes} likes</StyledLikes>
                 <CommentSection 
                     comments={this.state.comments}
                     time={this.state.time}

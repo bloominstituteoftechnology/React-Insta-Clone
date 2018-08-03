@@ -17,7 +17,7 @@ const PostsPage = props => {
                     comments={data.comments}
                     time={data.timestamp}
                 />
-            )
+              )
             }
         </div>
     )

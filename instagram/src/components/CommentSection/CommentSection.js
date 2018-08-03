@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Comment from './Comment';
 import PropTypes from 'prop-types';
 import './CommentSection.css';
+import {StyledCommentContainer, StyledInput} from './CommentSectionStyle';
 
 
 class CommentSection extends Component {
@@ -20,7 +21,7 @@ class CommentSection extends Component {
         this.setState({
             comments: this.state.comments.concat({
                 text: this.state.current,
-                username: 'Jurgen'
+                username: ''
             })
         })
     }
@@ -34,7 +35,7 @@ class CommentSection extends Component {
     };
     render() {
         return (
-            <div className='comment-section'>
+            <StyledCommentContainer> 
                 {this.state.comments.map((comment, index) => 
                 <Comment 
                     key={index} 
@@ -43,16 +44,15 @@ class CommentSection extends Component {
                 />)}
                 <p>{this.state.time}</p>
                 <form onSubmit={this.addNewComment}>
-                    <input 
+                    <StyledInput
                         onChange={this.handleInputChange}
-                        className='comment-section-input'
                         comment={this.state.comments}
                         type='text'
-                        placeholder='Add Comment'
-                    />
+                        placeholder='Add a comment...'>
+                    </StyledInput>
                 </form>
                 <hr/>
-            </div>
+            </StyledCommentContainer>
         )
     }
 };
