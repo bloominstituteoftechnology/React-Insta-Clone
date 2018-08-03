@@ -3,6 +3,19 @@ import CommentSection from '../CommentSection/CommentSection.js';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+`props => props.primary`
+
+const DarkHeart = styled.img`
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  display: ${(props => props.anything) ? "flex" : "none"};
+  &:hover{
+    cursor: pointer;
+  }
+`;
+
+
 class PostContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -69,15 +82,7 @@ class PostContainer extends React.Component {
         border-radius: 50px;
     `;
 
-    const DarkHeart = styled.img`
-      width: 25px;
-      height: 25px;
-      margin: 5px;
-      display: ${(this.state.likeStatus) ? "flex" : "none"};
-      &:hover{
-        cursor: pointer;
-      }
-    `;
+
 
     const Heart = styled.img`
       width: 25px;
@@ -112,7 +117,7 @@ class PostContainer extends React.Component {
           <Heart
             src="https://www.freepngimg.com/download/instagram/1-2-instagram-heart-transparent.png" alt="heart"  onClick={this.toggleLike}></Heart>
           <DarkHeart
-            onClick={this.toggleLike}  src={require("./heart.svg")} alt="dark-heart"></DarkHeart>
+            onClick={this.toggleLike} anything={this.state.likeStatus} src={require("./heart.svg")} alt="dark-heart"></DarkHeart>
           <PostIcon
             src="https://image.flaticon.com/icons/png/512/22/22302.png"
             alt="bubble"></PostIcon>
