@@ -23,7 +23,7 @@ class App extends Component {
     this.state = {
       posts: [],
       allPosts: [],
-      search: "",
+      search: ""
      
     }
   }

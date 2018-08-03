@@ -9,7 +9,6 @@ class CommentSection extends Component {
             comments: props.posts.comments,
             date: props.posts.timestamp,
             comment: ""
-           
          }
     }
 
@@ -45,7 +44,7 @@ class CommentSection extends Component {
                     />
                 )}
                 
-                <div className="timestamp">
+                <div>
                     {this.state.date}
                 </div>
                 <AddComment 

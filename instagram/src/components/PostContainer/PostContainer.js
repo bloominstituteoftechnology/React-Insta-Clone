@@ -36,7 +36,7 @@ class PostContainer extends Component {
                     likes={this.state.likes}
                     increaseLike={this.likesIncrement}
                 />
-                <CommentSection 
+                <CommentSection
                     posts={this.state.posts}
                 />
             </PostContainerWrap>
