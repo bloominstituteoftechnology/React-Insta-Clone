@@ -20,8 +20,9 @@ const Post = props => {
         comments={props.comments} 
         timestamp={props.timestamp}
         likes={props.likes}
-        postId={props.postId}
+        commentId={props.postId + 'C'}
         likeId={props.postId + 'H'}
+        shouldLikeId={props.postId + 'L'}
       />
     </article>
   );

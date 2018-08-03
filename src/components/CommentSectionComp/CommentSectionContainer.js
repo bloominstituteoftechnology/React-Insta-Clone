@@ -21,28 +21,28 @@ class CommentSectionContainer extends React.Component {
     }
   }
 
-
+  /*Local Storage*/ 
   componentDidMount() {
-    const id = this.props.postId;
+    const commentId = this.props.commentId;
     const likeId = this.props.likeId;
-    if (localStorage.getItem(id)) {
+    const shouldLikeId = this.props.shouldLikeId;
+    this.setState({user: localStorage.getItem('user')});
+
+    if (localStorage.getItem(commentId)) {
       this.setState({
-        comments: JSON.parse(localStorage.getItem(this.props.postId)),
-        user: localStorage.getItem('user')
+        comments: JSON.parse(localStorage.getItem(commentId)),
       });
     } else {
       this.setComments();
-      this.setState({user: localStorage.getItem('user')});
     }
+
     if (localStorage.getItem(likeId)) {
       this.setState({
-        likes: JSON.parse(localStorage.getItem(this.props.likeId)),
-        shouldAddLike: JSON.parse(localStorage.getItem(this.props.likeId + 'L')),
-        user: localStorage.getItem('user')
+        likes: JSON.parse(localStorage.getItem(likeId)),
+        shouldAddLike: JSON.parse(localStorage.getItem(shouldLikeId)),
       });
     } else {
       this.setLikes();
-      this.setState({user: localStorage.getItem('user')});
     }
   }
 
@@ -50,16 +50,9 @@ class CommentSectionContainer extends React.Component {
     this.setComments();
   }
 
-  setComments = () => {
-    localStorage.setItem(
-      this.props.postId,
-      JSON.stringify(this.state.comments)
-    );
-  };
-
-
   handleChange = e => this.setState({ input: e.target.value });
 
+  /*Adding and Setting comments*/
   shouldAddComment = () => {
     this.setState(prevState => {
       return {shouldAddComment: !prevState.shouldAddComment};
@@ -85,19 +78,14 @@ class CommentSectionContainer extends React.Component {
     e.preventDefault();
   }
 
-
-
-  setLikes = () => {
+  setComments = () => {
     localStorage.setItem(
-      this.props.likeId,
-      JSON.stringify(this.state.likes)
+      this.props.commentId,
+      JSON.stringify(this.state.comments)
     );
-    localStorage.setItem(
-      this.props.likeId + 'L',
-      JSON.stringify(this.state.shouldAddLike)
-    );
-  }
+  };
 
+  /*Adding and Setting likes*/
   addLike = () => {
     if (!this.state.shouldAddLike) {
       this.setState(prevState => {
@@ -120,28 +108,18 @@ class CommentSectionContainer extends React.Component {
       this.setLikes();
     }, 500);
     }
-
-    /*
-    this.setState(prevState => {
-      if (!this.state.shouldAddLike) {
-        return {
-          likes: prevState.likes + 1,
-          shouldAddLike: !prevState.shouldAddLike
-        };
-      } else {
-        return {
-          likes: prevState.likes - 1,
-          shouldAddLike: !prevState.shouldAddLike
-        };
-      }
-    });
-    setTimeout(() => {
-      this.setLikes();
-    }, 500);
-    */
-
   }
 
+  setLikes = () => {
+    localStorage.setItem(
+      this.props.likeId,
+      JSON.stringify(this.state.likes)
+    );
+    localStorage.setItem(
+      this.props.shouldLikeId,
+      JSON.stringify(this.state.shouldAddLike)
+    );
+  }
 
   render() {
     return (

@@ -34,10 +34,6 @@ class Home extends Component {
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
-
-
-
-
   addNewPost = (e) => {
     e.preventDefault();
     let posts = this.state.postData.slice();
@@ -63,104 +59,6 @@ class Home extends Component {
       JSON.stringify(this.state.postData)
     );
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* 
-  create new post
-  push new obj into postData with inputs
-  persist posts to local storage
-  get posts from local storage
-
-    {
-    username: "user set on login",
-    thumbnailUrl:"setDefaultUser img - anonymous like comments user"
-    imageUrl: "haveUserInputPicLink" - request exact size for img to look good,
-    likes: 0,
-    timestamp: "date.Now()",
-    comments: [{}, {}, {}]
-  }
-  
-  */ 
-
-    /*
-  componentDidMount() {
-    const id = 'likes'
-    if (localStorage.getItem(id)) {
-      this.setState({
-        likes: JSON.parse(localStorage.getItem('likes'))
-      });
-    } else {
-      this.setLikes();
-    }
-  }
-
-  componenetWillUnmount() {
-    this.setLikes();
-  }
-
-  setLikes = () => {
-    localStorage.setItem(
-      'likes',
-      JSON.stringify(this.props.likes)
-    );
-  }
-
-  addLike = () => {
-    this.setState(prevState => {
-      if (!this.state.shouldAddLike) {
-        return {
-          likes: prevState.likes + 1,
-          shouldAddLike: !prevState.shouldAddLike
-        };
-      } else {
-        return {
-          likes: prevState.likes - 1,
-          shouldAddLike: !prevState.shouldAddLike
-        };
-      }
-    });
-    setTimeout(() => {
-      this.setLikes();
-    }, 500);
-  }
-*/
-
-
-/*
-  componentDidMount() {
-    const id = 'comments';
-    if (localStorage.getItem(id)) {
-      this.setState({
-        comments: JSON.parse(localStorage.getItem('comments'))
-      });
-    } else {
-      this.setComments();
-    }
-  }
-
-  componenetWillUnmount() {
-    this.setComments();
-  }
-
-  setComments = () => {
-    localStorage.setItem(
-      'comments',
-      JSON.stringify(this.state.comments)
-    );
-  };
-*/
 
   render() {
     console.log(this.state.postData)
@@ -202,18 +100,7 @@ class Home extends Component {
             <button>Add New Post</button>
           </form>
         </section>
-
-
-
-        {filteredPosts.length > 0 ? 
-          <PostContainer 
-            postData={filteredPosts} 
-          /> : 
-          <p>No Posts!</p> 
-        }
-
-
-
+        {filteredPosts.length > 0 ? <PostContainer postData={filteredPosts} /> : <p>No Posts!</p>}
       </div>
     );
   }
