@@ -52,10 +52,12 @@ class PostsPage extends Component {
       return (
         <div className="App">
           <SearchBar change= {this.valueHandler} submit = {this.submitSearchHandler} logOutClick = {this.logOutClickHandler}/>
-          <AllPostContainers 
-          data ={
-            this.state.filteredData.length > 0 ? this.state.filteredData : this.state.data
-          } />
+          <div className = "Posts">
+            <AllPostContainers 
+            data ={
+              this.state.filteredData.length > 0 ? this.state.filteredData : this.state.data
+            } />
+          </div>
         </div>
       );
     }

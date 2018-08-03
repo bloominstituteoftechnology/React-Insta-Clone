@@ -7,10 +7,19 @@
     color:  grey; 
     border-bottom: 1px solid lightgrey;
     padding-bottom: 5px; 
+    margin-top: 15px; 
 }
 
 .addComment {
     color: grey; 
-    margin-top: 20px; 
-    margin-bottom: 20px;     
+    margin-top: 7px; 
+    margin-bottom: 10px;     
+}
+
+.commentInput {
+    border: none; 
+}
+
+p {
+    line-height: 15px;
 }

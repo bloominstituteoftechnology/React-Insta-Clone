@@ -8,11 +8,13 @@ const Container = styled.article`
     display: flex; 
     flex-direction: column; 
     margin: 0 auto; 
-    margin-top: 30px; 
+    margin-top: 70px; 
     justify-content: center; 
     align-items: center; 
     width: 72%; 
-    border: 1px solid lightgrey;  
+    border: 1px solid lightgrey; 
+    border-radius: 3px; 
+    
 `
 const User = styled.div`
     display: flex; 
@@ -20,7 +22,7 @@ const User = styled.div`
     justify-content: center; 
     align-items: center; 
     margin-left: 3%; 
-    margin-top: 5px;  
+    margin-top: 10px;  
     margin-bottom: 8px;
 `
 const UserNameImg = styled.img`
@@ -32,7 +34,7 @@ const UserName = styled.h4`
     font-weight: bold; 
 `
 const UserPostImage = styled.img`
-    width: 99%; 
+    width: 100%; 
     margin: 0 auto; 
 `
 

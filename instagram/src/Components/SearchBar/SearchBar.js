@@ -7,10 +7,15 @@ import {Form, Input, Button} from 'reactstrap';
 
 const Header = styled.header`
     display: flex; 
-    justify-content: space-between; 
-    margin-top: 30px; 
+    justify-content: space-around; 
+    padding-top: 10px; 
     padding-bottom: 10px;
     border-bottom: 1px solid lightgrey; 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background-color: white;
+    
 `;
 
 const LogoHeader = styled.div`
@@ -31,13 +36,13 @@ const SearchBar = props => {
                 <img className = "insta-logo" src = {require("./insta-logo.png")} alt = "Instagram logo"/>
             </LogoHeader>
             <Form onSubmit = {props.submit} className = "search">
-                <Input onChange = {props.change} className = "search-input fa fa-input" type = "search" placeholder = "&#xf002; Search"/>
+                <Input color = "primary" onChange = {props.change} className = "search-input fa fa-input" type = "search" placeholder = "&#xf002; Search"/>
             </Form>
             <NavigationIcons className = "nav-icons">
-                <i className="far fa-compass fa-2x"></i>
-                <i className="far fa-heart fa-2x"></i>
-                <i className="far fa-user fa-2x"></i>
-                <Button onClick = {props.logOutClick} size = "small">Log out</Button>
+                <i className="far fa-compass "></i>
+                <i className="far fa-heart"></i>
+                <i className="far fa-user"></i>
+                <Button onClick = {props.logOutClick} size = "sm" className = "btn-light"><i className="fas fa-sign-out-alt"></i></Button>
             </NavigationIcons>
         </Header>
     )

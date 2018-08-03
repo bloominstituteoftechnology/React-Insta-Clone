@@ -49,12 +49,12 @@ class CommentSection extends React.Component {
         return (
             <div className = "commentSection">
                {this.state.comments.map((comment, index) => {
-                  return <NewComment key = {index} commentUser = {comment.username} commentText = {comment.text}/>
+                  return <NewComment  className = "comment" key = {index} commentUser = {comment.username} commentText = {comment.text}/>
                 })}
                 <p className = "timestamp">{this.state.timeStamp}</p>
                 <div className = "addComment">
                     <Form onSubmit = {this.onSubmitHandler}>
-                        <Input value = {this.state.newComment} type = "text" onChange = {this.addNewCommentHandler} placeholder = "Add a comment..." />  
+                        <Input className = "commentInput" value = {this.state.newComment} type = "text" onChange = {this.addNewCommentHandler} placeholder = "Add a comment..." />  
                     </Form>
                 </div>  
             </div>

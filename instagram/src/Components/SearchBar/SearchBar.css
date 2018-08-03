@@ -1,6 +1,7 @@
 
 .search-input {
-    text-align: center; 
+    text-align: center;
+    border: 1px solid lightgrey; 
 } 
 
 .nav-icons .far {
