@@ -8,6 +8,8 @@ import instaLogo from '../../instagram-logo.png';
 import dummyData from '../../dummy-data';
 import SearchBarContainer from '../SearchBarComp/SearchBarContainer';
 import PostContainer from '../PostsComp/PostContainer';
+import { HomeMainContainer as MainContainer, HomeHeader } from './styledMainContainer';
+
 
 class Home extends Component {
   constructor() {
@@ -66,8 +68,8 @@ class Home extends Component {
         return (post.username.toLocaleLowerCase().includes(this.state.search.toLocaleLowerCase()));
     });
     return (
-      <div className="main-container">
-        <header className="main-header">
+      <MainContainer>
+        <HomeHeader className="main-header">
           <section className="main-header__logos">
             <div className="main-header__logo-container">
               <FontAwesomeIcon className="main-header__logo" icon={faInstagram} />
@@ -85,7 +87,7 @@ class Home extends Component {
             <FontAwesomeIcon icon={faHeart} />
             <FontAwesomeIcon icon={faUser} />
           </section>
-        </header>
+        </HomeHeader>
         <section>
           <form onSubmit={this.addNewPost} action="submit">
             <label htmlFor="post"></label>
@@ -101,7 +103,7 @@ class Home extends Component {
           </form>
         </section>
         {filteredPosts.length > 0 ? <PostContainer postData={filteredPosts} /> : <p>No Posts!</p>}
-      </div>
+      </MainContainer>
     );
   }
 }

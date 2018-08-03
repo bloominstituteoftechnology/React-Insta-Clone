@@ -1,4 +1,5 @@
 import React from 'react';
+import { LoginMainContainer as MainContainer, FormHeading, FormText } from './styledMainContainer';
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -21,29 +22,31 @@ class LoginPage extends React.Component {
 
   render() {
     return (
-      <form action="submit">
-        <h2>Welcome</h2>
-        <p>Please Login</p>
-        <label htmlFor="username"></label>
-        <input
-            id="username"
-            type="text"
-            placeholder="User Name"
-            name="username"
-            value={this.state.username}
-            onChange={this.handleInputChange}
-        />
-        <label htmlFor="password"></label>
-        <input
-            id="password"
-            type="password"
-            placeholder="Password"
-            name="password"
-            value={this.state.password}
-            onChange={this.handleInputChange}
-        />
-        <button onClick={this.handleLoginSubmit}>Log In</button>
-      </form>
+      <MainContainer>
+        <form action="submit">
+          <FormHeading>Welcome</FormHeading>
+          <FormText>Please Login</FormText>
+          <label htmlFor="username"></label>
+          <input
+              id="username"
+              type="text"
+              placeholder="User Name"
+              name="username"
+              value={this.state.username}
+              onChange={this.handleInputChange}
+          />
+          <label htmlFor="password"></label>
+          <input
+              id="password"
+              type="password"
+              placeholder="Password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleInputChange}
+          />
+          <button onClick={this.handleLoginSubmit}>Log In</button>
+        </form>
+      </MainContainer>
     );
   }
 }

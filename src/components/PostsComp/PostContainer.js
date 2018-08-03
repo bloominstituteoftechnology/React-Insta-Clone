@@ -1,11 +1,11 @@
 import React from 'react';
-import './posts.css';
 import Post from './Post.js';
+import { Main } from './styledPosts';
 
 
 const PostContainer = (props) => {
   return (
-    <main className="main-body">
+    <Main className="main-body">
       {props.postData.map((post, index) => <Post 
         key={index} 
         username={post.username}
@@ -16,7 +16,7 @@ const PostContainer = (props) => {
         comments={post.comments}
         postId={post.imageUrl}
       />)}
-    </main>
+    </Main>
   );
 }
 

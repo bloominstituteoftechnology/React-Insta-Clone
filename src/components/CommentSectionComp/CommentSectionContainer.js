@@ -1,5 +1,4 @@
 import React from 'react';
-import './comment-section.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons/faHeart'
 import { faHeart as faSHeart } from '@fortawesome/free-solid-svg-icons/faHeart'
