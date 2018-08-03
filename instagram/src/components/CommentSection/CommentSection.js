@@ -19,8 +19,7 @@ class CommentSection extends React.Component{
         this.state = {
             comments: props.data.comments,
             date: props.data.timestamp,
-            newComment: '',
-            username: 'jaymzsocool'
+            newComment: ''            
         }
     }    
 
@@ -29,7 +28,7 @@ class CommentSection extends React.Component{
     addNewComment=event=>{
         event.preventDefault();
         let comments = this.state.comments.slice();
-        comments.push({username : this.state.username, text: this.state.newComment})
+        comments.push({username : localStorage.getItem('username'), text: this.state.newComment})
         this.setState( {comments: comments, newComment: ""})
     }
 
