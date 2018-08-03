@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const InstaLogo=styled.img`
-width: 120px
-height: 150px`;
+width: 120px;
+height: 150px;
+`;
 
 const InstagramTradeMark=styled.div`
     height: 100px;

@@ -17,7 +17,6 @@ const Thumbnail=styled.img`
 `
 const PostImg=styled.img`
     width: 100%;
-    height: 427px;
 `
 const Icons=styled.div`
     margin-top: 10px;
