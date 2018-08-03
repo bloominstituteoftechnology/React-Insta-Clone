@@ -66,6 +66,24 @@ class CommentSection extends React.Component {
         event.target.style.cursor = 'pointer';
     }
 
+    handleDoubleClick = event => {
+        console.log(this.props.userIn);
+        console.log(event.target.innerHTML);
+        console.log(event.target.className);
+        if(this.props.userIn === event.target.innerHTML){
+            let comments = this.state.comments.slice(); 
+            event.target.className += " deleteComment"; 
+            console.log(event.target.className);
+            let check = document.querySelector(".deleteComment");
+            console.log(check.className.includes("deleteComment"));
+            comments = comments.map(comment => comment.userName === event.target.innerHTML && !check.className.includes("deleteComment") )
+            localStorage.setItem(this.props.poster, JSON.stringify(comments));
+            localStorage.setItem(this.props.time, JSON.stringify(comments));
+            
+            this.setState({comments: comments});
+        }
+    }
+
     render(){
         let comments;
         this.state.cmdCalled ? comments = this.state.comments : comments = [];
@@ -77,7 +95,7 @@ class CommentSection extends React.Component {
         return(
 
             <div >
-                {comments.map((comment, i) => <Comments key={i}userName = {comment.username} text = {comment.text} onDoubleClick = {this.deleteComment}/>)}
+                {comments.map((comment, i) => <Comments key={i}userName = {comment.username} text = {comment.text} handleDoubleClick = {this.handleDoubleClick} userIn = {this.props.userIn}/>)}
                 
                 
                 <TimeStamp>{time}</TimeStamp>

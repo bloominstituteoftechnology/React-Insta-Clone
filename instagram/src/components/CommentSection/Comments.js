@@ -62,6 +62,7 @@ class Comments extends React.Component {
         event.target.style.cursor = 'pointer';
     }
 
+   
 
 
     render () {
@@ -70,7 +71,7 @@ class Comments extends React.Component {
 
             <CommentsStyled>  
               <CommentStyled>
-                <UserCommentName onDoubleClick={this.props.onDoubleClick}>{this.props.userName}</UserCommentName>
+                <UserCommentName onDoubleClick={this.props.handleDoubleClick}>{this.props.userName}</UserCommentName>
                 <UserCommentText>{this.props.text}</UserCommentText>
               </CommentStyled>
               
@@ -84,7 +85,8 @@ Comments.propTypes = {
     userName: PropTypes.string,
     text: PropTypes.string,
     time: PropTypes.string,
-    onDoubleClick: PropTypes.func
+    handleDoubleClick: PropTypes.func
+    
 }
 
 export default Comments 

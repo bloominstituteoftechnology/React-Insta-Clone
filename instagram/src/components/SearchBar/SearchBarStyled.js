@@ -31,7 +31,9 @@ const PostPageLogo = styled.img `
     max-width: 100%;
     width: 169px; 
     color: #FAFAFA;
-    padding-Bottom: 5px;
+    padding-Bottom: 8px;
+    Height: 120px;
+
 `;
 const LeftSideDiv = styled.div `
     display: flex;
