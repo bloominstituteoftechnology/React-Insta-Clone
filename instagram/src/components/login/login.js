@@ -39,6 +39,11 @@ const PageLogin = styled.div`
     background: linear-gradient(lightblue, teal, gray);
 `
 
+const PandaImg = styled.img`
+    width: 250px;
+    margin: 15px 0;
+`
+
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -61,6 +66,7 @@ class Login extends Component {
     return ( 
         <PageLogin className="d-flex justify-content-center">
             <form autoComplete="off" className="login-container d-flex flex-column justify-content-center"> 
+                <PandaImg src={require("../img/panda.png")} alt=""/>
                 <LoginTitle>Panda-gram</LoginTitle>
                 <LoginInput
                     type="text" 
