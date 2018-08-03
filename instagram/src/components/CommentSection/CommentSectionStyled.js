@@ -29,6 +29,7 @@ const UserCommentText = styled.p`
 
 const NewComment = styled.div`
     margin: 0 auto; 
+    max-width: 100%;
 `;
 const TimeStamp = styled.h4`
     display: flex;
@@ -44,6 +45,7 @@ const AddCommentInput = styled.input`
     width: 400px;
     height: 40px;
     border: none;
+    max-width: 100%; 
 `;
 const AddComment = styled.div`
     display: flex;
@@ -53,6 +55,7 @@ const AddComment = styled.div`
     margin-left: 2.04498%;
     border: none;
     width:898px;
+    max-width: 100%;
 `;
 
 const PostHrLine = styled.hr`
@@ -67,10 +70,15 @@ const PostHrLine = styled.hr`
 const SubmitIcon = styled.div`
     margin-right: 2.0044vw;
     font-size: 1vw;
+    font-size: 2vh;
     border: 1px inset black;
     margin-top: 10px;
     height: 20px;
+    text-align: center;
+    font-weight: bold;
 `;
+
+
 
 export {CommentsStyled, CommentStyled, UserCommentName,
 UserCommentText, NewComment, TimeStamp, AddCommentInput,

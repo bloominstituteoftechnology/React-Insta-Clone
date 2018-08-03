@@ -12,7 +12,14 @@ class CommentSection extends React.Component {
     }
 
     componentDidMount () {
-        this.setState({comments:this.props.comments, cmdCalled: true, temp: "",});
+        let storedComments; 
+        if(localStorage.getItem('comments')){
+            storedComments = JSON.parse(localStorage.getItem('comments'));
+        } else {
+            storedComments = this.props.comments; 
+        }
+
+        this.setState({comments:storedComments, cmdCalled: true, temp: "",});
       }
 
     handleOnChange = event => {
@@ -29,6 +36,7 @@ class CommentSection extends React.Component {
             comments.push({username: this.props.userIn, text:text})
             
             event.target.value = ""
+            localStorage.setItem("comments", JSON.stringify(comments));
             this.setState({comments: comments, temp:""});
         }
 
@@ -41,6 +49,7 @@ class CommentSection extends React.Component {
         const comments = this.state.comments.slice(); 
         if(text.length > 0){
             comments.push({username: this.props.userIn, text:text})
+            localStorage.setItem("comments", JSON.stringify(comments));
             this.setState({comments: comments, temp:""});
         }
         console.log('clicked');

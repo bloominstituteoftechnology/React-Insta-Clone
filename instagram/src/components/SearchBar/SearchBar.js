@@ -55,6 +55,7 @@ class SearchBar extends React.Component {
     handleLogOut = () => {
         localStorage.removeItem('username');
         localStorage.removeItem('password');
+        localStorage.removeItem('comments');
         window.location.reload(); 
         
     }
@@ -64,10 +65,10 @@ class SearchBar extends React.Component {
         return (
         
         <SearchBarDiv>
-          {/* <div className ="leftSideSearchBar"><i className="fab fa-instagram"></i> <span className="verticalLine">&#124;</span><span className ="logoTitle">Instagram</span> </div> */}
+          
           <LeftSideDiv><PostPageLogo src={logo} alt ="Instagram"/> </LeftSideDiv>
           <div className = "topSearch">
-          {/* <input className = "searchInput" onChange = {this.props.onChange} value ={this.props.value} placeholder="&#128269;Search"/> */}
+          
             <SearchInput onChange = {this.props.onChange} value ={this.props.value} placeholder ="&#128269;Search"/>
           </div>
           
@@ -75,7 +76,7 @@ class SearchBar extends React.Component {
             <i className="far fa-compass"></i>
             <i className="far fa-heart"></i> 
             <i className="far fa-user tooltip" onDoubleClick = {this.handleLogOut} onClick = {this.handleClick} onMouseEnter = {this.handleHover} onMouseLeave = {this.handleOut}></i>
-            {/* <span className ="tooltiptext" >  Log out</span> */}
+    
             <ToolTipTextDiv className = "tooltiptext" onMouseEnter = {this.handleToolTipText} onMouseLeave = {this.handleToolTipTextLeave} onClick = {this.handleLogOut}>Log out</ToolTipTextDiv>
           </RightSideDiv>
         
