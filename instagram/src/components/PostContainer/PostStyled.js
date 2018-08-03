@@ -3,6 +3,12 @@ import styled from 'styled-components';
 const Posting = styled.div`
     max-width: 100%; 
     margin: 0 auto;
+    border: 1px inset #BD3381;
+    background: #FAFAFA;
+    color: black;
+    &:hover {
+        box-shadow: 10px 10px inset #BD3381;
+    }
 `;
 
 const Likes = styled.h3 `

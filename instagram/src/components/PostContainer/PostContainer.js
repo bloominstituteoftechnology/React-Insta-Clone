@@ -7,15 +7,31 @@ import {Posting, Likes, PostIcons, Icon, PostHeader,
 class PostContainer extends React.Component {
     constructor(props){
         super(props)
-        this.state = {likes: this.props.likes, cmdCalled: false}
+        this.state = {likes: this.props.likes, cmdCalled: false, liked: []}
     }
 
     componentDidMount (){
         this.setState({cmdCalled:true});
     }
 
-    handleLikeClick = () => {
-        this.setState({likes: this.state.likes + 1}); 
+    handleLikeClick = event => {
+        
+        if(!this.state.liked.includes(this.props.userIn)){
+            const liked = this.state.liked.slice();
+            liked.push(this.props.userIn);
+            event.target.style.color = 'red';
+            
+            
+            
+            this.setState({likes: this.state.likes + 1, liked:liked}); 
+        } else if (this.state.liked.includes(this.props.userIn)){
+            let liked = this.state.liked.slice();
+            event.target.style.color = 'black';
+            
+            liked = liked.filter(user => user !== this.props.userIn);
+            this.setState({likes:this.state.likes - 1, liked:liked})
+        }
+        
     }
     handleHover = event => {
         event.target.style.cursor = 'pointer';
@@ -27,7 +43,7 @@ class PostContainer extends React.Component {
         this.state.cmdCalled ? likes = this.state.likes : likes = 0; 
         return(
             
-            <Posting>
+            <Posting >
                 
                 <PostHeader>
                 
@@ -47,16 +63,15 @@ class PostContainer extends React.Component {
 
         );
     }
-
 }
-
 
 
 PostContainer.propTypes = {
     userName: PropTypes.string,
     thumbNail: PropTypes.string,
     image: PropTypes.string,
-    likes: PropTypes.number
+    likes: PropTypes.number,
+    
 }
 
 

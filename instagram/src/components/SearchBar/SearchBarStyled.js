@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const SearchBarDiv = styled.div`
-    border-top: 4px solid #E1E4E8;
+    border-top: 8px solid #E1E4E8;
     border-bottom: 1px solid #e7e7e7;
-    margin-top: 15px; 
+    margin-top: 20px; 
     margin-bottom: 50px;
     display: flex;
     flex-direction: row;

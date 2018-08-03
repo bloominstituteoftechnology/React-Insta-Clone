@@ -1,6 +1,6 @@
 import React from 'react'; 
 
-import logo from './instagram.png';
+import logo from './newInstagram.png';
 import PropTypes from 'prop-types'; 
 import {SearchBarDiv, PostPageLogo, LeftSideDiv, SearchInput,
 RightSideDiv,ToolTipTextDiv} from './SearchBarStyled.js';

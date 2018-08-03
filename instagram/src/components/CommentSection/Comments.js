@@ -37,9 +37,7 @@ class Comments extends React.Component {
             event.target.value = ""
             localStorage.setItem("comments", JSON.stringify(comments));
             this.setState({comments: comments, temp:""});
-        }
-
-        
+        }  
         
     }
 
@@ -61,9 +59,6 @@ class Comments extends React.Component {
     handleHover = event => {
         event.target.style.cursor = 'pointer';
     }
-
-   
-
 
     render () {
         

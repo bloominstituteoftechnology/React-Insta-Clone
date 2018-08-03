@@ -30,6 +30,7 @@ class PostsPage extends React.Component{
         }
     
     }
+    
 
     render() {
         let dummyData = this.state.dummyData.slice(); 
@@ -40,8 +41,8 @@ class PostsPage extends React.Component{
             <SearchBar  value ={this.state.searchText} onChange = {this.handleSearchChange} logOut = {this.props.handleLogOut}/>
             {dummyData.map((post, i) => <div key = {i} className = "post">
             <HRLine /> <div className = "containerPost">
-            <PostContainer key = {Date.now()} userName = {post.username} thumbNail={post.thumbnailUrl} image={post.imageUrl}
-            likes = {post.likes}/> 
+            <PostContainer  key = {Date.now()} userName = {post.username} thumbNail={post.thumbnailUrl} image={post.imageUrl}
+            likes = {post.likes} userIn = {this.props.userIn}/> 
             
             <CommentSection key ={i} comments = {post.comments} time = {post.timestamp} userIn = {this.props.userIn} poster = {post.username}/> 
 
