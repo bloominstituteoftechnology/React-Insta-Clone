@@ -12,13 +12,13 @@ class PostsPage extends Component {
       data: [],
       text: '',
       search: '',
-      likes: 0
+      likes: []
     }
   }
 
   componentDidMount() {
     this.setState({data: dummyData})
-    console.log(dummyData[0].likes)
+    this.setState({likes: dummyData.likes})
   }
 
   liked = (e) => {

@@ -1,11 +1,14 @@
 import React from "react";
+import PostsPage from "../components/PostContainer/PostsPage";
 
 const Authenticate = Posts =>
     class extends React.Component {
         constructor() {
             super();
             this.state = {
-                username: ''
+                username: '',
+                password: '',
+                LoggedIn: false
             };
         }
 
@@ -15,27 +18,51 @@ const Authenticate = Posts =>
 
         newUser = e => {
             e.preventDefault();
-            localStorage.setItem({ username: this.state.username })
+            const name = this.state.username
+            console.log(name)
+            localStorage.setItem( 'username', name )
+            if (name.length > 0) {
+                this.setState({ LoggedIn: true})
+            }
+
         }
 
 
         render() {
-            return (
-
-                this.state.username.length() > 0 ? <Posts username={this.state.username}/> :
-
+            if (this.state.LoggedIn) {
+                return <PostsPage />
+            }
+            else {
+                return (        
                     <div>
-                        <form>
+                        <form onSubmit={this.newUser}>
                             username: <input
                                 type='text'
-                                name='usernname'
+                                name='username'
                                 value={this.state.username}
                                 onChange={this.change}
                             />
+
+                            <hr />
+
+                            password: <input
+                                type='text'
+                                name='password'
+                                value={this.state.password}
+                                onChange={this.change}
+                            />
+
+                            <hr />
+
+                            <button
+                            type='submit'>
+                            Log In
+                            </button>
                         </form>
                     </div>
-
             )
+            }
+            
         }
     };
 
