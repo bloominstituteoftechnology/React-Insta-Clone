@@ -71,8 +71,8 @@ class Comments extends React.Component {
 
             <CommentsStyled>  
               <CommentStyled>
-                <UserCommentName onDoubleClick={this.props.handleDoubleClick}>{this.props.userName}</UserCommentName>
-                <UserCommentText>{this.props.text}</UserCommentText>
+                <UserCommentName onDoubleClick={(event) => {this.props.handleDoubleClick(event, this.props.text, this.props.userName)}}>{this.props.userName}</UserCommentName>
+                <UserCommentText userIn={this.props.userIn} onDoubleClick={(event) => {this.props.handleDoubleClick(event, this.props.text, this.props.userName)}}>{this.props.text}</UserCommentText>
               </CommentStyled>
               
             </CommentsStyled>

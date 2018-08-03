@@ -66,17 +66,13 @@ class CommentSection extends React.Component {
         event.target.style.cursor = 'pointer';
     }
 
-    handleDoubleClick = event => {
-        console.log(this.props.userIn);
-        console.log(event.target.innerHTML);
-        console.log(event.target.className);
-        if(this.props.userIn === event.target.innerHTML){
+    handleDoubleClick = (event, text, userName) => {
+        console.log(text, userName,"click");
+        if(this.props.userIn === userName){
             let comments = this.state.comments.slice(); 
-            event.target.className += " deleteComment"; 
-            console.log(event.target.className);
-            let check = document.querySelector(".deleteComment");
-            console.log(check.className.includes("deleteComment"));
-            comments = comments.filter(comment =>  comment.username !== this.props.userIn )
+        
+            comments = comments.filter(comment =>  comment.text !== text);
+            
             localStorage.setItem(this.props.poster, JSON.stringify(comments));
             localStorage.setItem(this.props.time, JSON.stringify(comments));
             
