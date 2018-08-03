@@ -2,6 +2,7 @@ import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
+import CommentInput from '../CommentSection/CommentInput'
 
 const PostContainer = props => {
     return(
@@ -22,7 +23,7 @@ const PostContainer = props => {
                             <p><strong>{dData.likes} likes</strong></p>
                             <CommentSection comments={dData.comments} />
                             <p>{dData.timestamp}</p>
-                            {/* <CommentInput /> */}
+                            <CommentInput />
                         </div>
                     </div>
                 );

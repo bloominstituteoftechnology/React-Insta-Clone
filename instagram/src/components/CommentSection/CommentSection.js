@@ -14,7 +14,6 @@ class CommentSection extends React.Component {
 
     componentDidMount () {
         this.setState({comments: dummyData.comments})
-        console.log(this.state.comments);
     }
     
     // const addNewComment = (e, i) => {
