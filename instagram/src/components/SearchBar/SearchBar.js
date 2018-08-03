@@ -1,5 +1,6 @@
 import React from "react";
-import textLogo from "../../assets/insta-text-logo.svg";
+import textLogo from "../../assets/insta-text-logo.svg"
+import cam from "../../assets/camera.svg"
 import styled from "styled-components"
 
 const Header = styled.header`
@@ -74,12 +75,14 @@ const LogoImage = styled.img`
 const HeaderIcon = styled.span`
     font-size: 20px;
     padding: 0 10px;
+    cursor: pointer;
 `;
 
 
 // input field should be refactored eventually into its own component
 
 const SearchBar = props => {
+
   return (
     <Header>
       <Container>
@@ -96,7 +99,7 @@ const SearchBar = props => {
           <div>
              <HeaderIcon><i className="far fa-compass icon"></i></HeaderIcon>
              <HeaderIcon><i className="far fa-heart"></i></HeaderIcon>
-             <HeaderIcon><i className="far fa-user-circle"></i></HeaderIcon>
+             <HeaderIcon onClick={props.logout}><i className="far fa-user-circle"></i></HeaderIcon>
           </div>
         </SearchBarWrapper>
       </Container>

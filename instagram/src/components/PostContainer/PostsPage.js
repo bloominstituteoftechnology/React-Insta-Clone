@@ -31,11 +31,17 @@ class PostsPage extends Component {
     });
     this.setState({ filteredPosts: posts });
   };
+
+  logoutHandler = () => {
+      localStorage.removeItem("userKey");
+      window.location.reload();
+    };
   render() {
     return (
       <div>
         <SearchBar
           searchPosts={this.searchPostsHandler}
+          logout={this.logoutHandler}
         />
         <PostContainer
           posts={
