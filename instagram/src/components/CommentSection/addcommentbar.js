@@ -10,7 +10,7 @@ const InputComment=styled.input`
     `
 const AddCommentBar=props=>{
     return (
-    <form onSubmit={(e)=>{e.preventDefault(); return props.handleInputSubmit(props.length)}}>
+    <form onSubmit={(e)=>{e.preventDefault(); return props.handleInputSubmit()}}>
         <InputComment value={props.value} onChange={props.inputHelper} className='comment-input' type='text' placeholder='Add a comment...'/><i className="dot fas fa-ellipsis-h"></i>
     </form>
     )

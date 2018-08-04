@@ -30,13 +30,18 @@ class CommentSection extends React.Component {
         const username=localStorage.getItem('username');
         this.setState({username:username});
     }
-    addNewComment=(index)=>{
-        const commentsCopy=this.state.comments.slice();
-        commentsCopy[index]=({
-            username: this.state.username,
-            text: this.state.newComment
-        });
-        this.setState({comments:commentsCopy,newComment:''});
+    addNewComment=()=>{
+        const commentsCopy=JSON.stringify(this.state.comments.slice());
+        const comments=JSON.parse(localStorage.getItem('posts'));
+        for (let i=0; i<comments.length;i++) {
+            if (JSON.stringify(comments[i].comments)===commentsCopy) {
+                comments[i].comments.push({
+                    username: this.state.username,
+                    text: this.state.newComment
+                });
+                this.setState({newComment:'',comments:comments[i].comments},()=>localStorage.setItem('posts',JSON.stringify(comments)));
+            }
+        }
     }
     handleInputChange=(e)=>{
         this.setState({newComment:e.target.value});
@@ -50,10 +55,15 @@ class CommentSection extends React.Component {
         dynamicDate=new Date(dynamicDate.join(' '));
         return moment(dynamicDate).fromNow();
     }
-    deleteComment=(i)=>{
-        const commentsCopy=this.state.comments.slice();
-        commentsCopy.splice(i,1);
-        return this.setState({comments:commentsCopy});
+    deleteComment=(index)=>{
+        const commentsCopy=JSON.stringify(this.state.comments.slice());
+        const comments=JSON.parse(localStorage.getItem('posts'));
+        for (let i=0; i<comments.length;i++) {
+            if (JSON.stringify(comments[i].comments)===commentsCopy) {
+                comments[i].comments.splice(index,1);
+                return this.setState({newComment:'',comments:comments[i].comments},()=>localStorage.setItem('posts',JSON.stringify(comments)));
+            }
+        }
     }    
     render() {
         return (
