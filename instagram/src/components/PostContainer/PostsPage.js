@@ -4,13 +4,20 @@ import dummyData from '../../dummy-data.js';
 import fuzzy from 'fuzzy';
 import SearchBar from '../SearchBar/SearchBar.js';
 import styled from 'styled-components';
+import ImageParser from '../ImageParser/ImageParser.js';
 
 const Posts=styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 200px;
+`
+const ImgInput=styled.div`
+padding-top: 120px;
+width: 290px;
+display: inline-block;
+margin: 0 auto;
+margin-bottom: 30px;
 `
 class PostsPage extends React.Component {
     constructor() {
@@ -60,6 +67,9 @@ class PostsPage extends React.Component {
       return (
         <div>
           <SearchBar searchValue={this.searchBarValue} handleInputChange={this.handleSearchBarChange}/>
+          <ImgInput>
+          <ImageParser/>
+          </ImgInput>
           <Posts>
           {this.state.searchBarValue.length===0 ?
           this.state.posts.map((e)=><PostContainer data={e} liked={this.liked.bind(this)} key={e.imageUrl}/>):
