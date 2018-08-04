@@ -39,7 +39,7 @@ class CommentSection extends React.Component {
                     username: this.state.username,
                     text: this.state.newComment
                 });
-                this.setState({newComment:'',comments:comments[i].comments},()=>localStorage.setItem('posts',JSON.stringify(comments)));
+                return this.setState({newComment:'',comments:comments[i].comments},()=>localStorage.setItem('posts',JSON.stringify(comments)));
             }
         }
     }
