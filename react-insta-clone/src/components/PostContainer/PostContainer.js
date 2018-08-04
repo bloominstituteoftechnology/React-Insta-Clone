@@ -4,7 +4,6 @@ import Post from './Post';
 import { StyledPostContainer } from "../styled-components/styled-components";
 
 const PostContainer = props => {
-    // console.log('containerProps', props.posts);
     return (
         <StyledPostContainer>
             {props.posts.map(p =>

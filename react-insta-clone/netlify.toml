@@ -1,0 +1,62 @@
+<<<<<<< HEAD
+# Global settings applied to the whole site.  
+# 
+# “publish” is the directory to publish (relative to root of your repo),
+# “command” is your build command,
+# “base” is directory to change to before starting build. if you set base:
+#    that is where we will look for package.json/.nvmrc/etc not repo root!
+
+[build]
+  base    = "site"
+  publish = "public"
+  command = "make"
+
+# Production context: All deploys to the main
+# repository branch will inherit these settings.
+[context.production]
+  command = "make production"
+  [context.production.environment]
+    ACCESS_TOKEN = "super secret"
+
+# Deploy Preview context: All Deploy Previews
+# will inherit these settings.
+[context.deploy-preview.environment]
+  ACCESS_TOKEN = "not so secret"
+
+# Branch Deploy context: All deploys that are not in
+# an active Deploy Preview will inherit these settings.
+[context.branch-deploy]
+  command = "make staging"
+
+# Specific branch context: Deploys from this branch
+# will take these settings and override their
+# current ones.
+[context.feature]
+  command = "make feature"
+
+[context."features/branch"]
+  command = "gulp"
+=======
+
+# Global settings applied to the whole site.  
+
+# 
+
+# “publish” is the directory to publish (relative to root of your repo),
+
+# “command” is your build command,
+
+# “base” is directory to change to before starting build. if you set base:
+
+#    that is where we will look for package.json/.nvmrc/etc not repo root!
+
+
+
+[build]
+
+  base    = "./instakg"
+
+  publish = "./instakg/build"
+
+  command = "yarn build"
+>>>>>>> 35a64de1588523d553f24219c900eec5a27e5aae
