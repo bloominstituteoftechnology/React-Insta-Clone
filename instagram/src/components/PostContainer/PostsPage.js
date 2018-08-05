@@ -72,8 +72,8 @@ class PostsPage extends React.Component {
           </ImgInput>
           <Posts>
           {this.state.searchBarValue.length===0 ?
-          this.state.posts.map((e)=><PostContainer data={e} liked={this.liked.bind(this)} key={e.imageUrl}/>):
-          this.state.filteredPosts.map((e)=><PostContainer liked={this.liked.bind(this)} data={e} key={e.imageUrl}/>
+          this.state.posts.map((e,i)=><PostContainer index={i} data={e} liked={this.liked.bind(this)} key={e.imageUrl}/>):
+          this.state.filteredPosts.map((e,i)=><PostContainer index={i} liked={this.liked.bind(this)} data={e} key={e.imageUrl}/>
           )}
           </Posts>
         </div>

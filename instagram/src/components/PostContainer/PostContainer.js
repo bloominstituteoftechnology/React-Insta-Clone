@@ -13,7 +13,7 @@ const PostContainer=prop=>{
     return (
         <Card className="card">
             <Post data={prop.data} liked={prop.liked}/>
-            <CommentSection comments={prop.data.comments} timestamp={prop.data.timestamp}/> 
+            <CommentSection index={prop.index} comments={prop.data.comments} timestamp={prop.data.timestamp}/> 
         </Card>
     )
 }

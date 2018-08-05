@@ -22,7 +22,7 @@ const DeleteButton=styled.i`
 
 const Comment=prop=><UserComment>
 <Username>{prop.data.username}</Username> <Userpost>{prop.data.text}</Userpost> {prop.data.username===prop.username?
-<DeleteButton onClick={()=>prop.commentDelete(prop.itemNumber)} className="fas fa-eraser"></DeleteButton>:null}
+<DeleteButton onClick={()=>prop.commentDelete(prop.index,prop.itemNumber)} className="fas fa-eraser"></DeleteButton>:null}
 </UserComment>
 
 Comment.Proptypes={

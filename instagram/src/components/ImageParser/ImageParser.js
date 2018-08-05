@@ -41,7 +41,7 @@ class ImageParser extends React.Component{
     render() {
         return (
         <form>
-            <input type='url' placeholder='Enter An Image URL' value={this.state.url} name='url' onChange={(e)=>this.handleURLChange(e)}/>
+            <input type='url' placeholder='Enter image url (jpeg/jpg/png/gif) ext' value={this.state.url} name='url' onChange={(e)=>this.handleURLChange(e)}/>
             <button className='btn waves-effect waves-light' onClick={()=>this.processImg()}>Submit</button>
         </form>
         );
