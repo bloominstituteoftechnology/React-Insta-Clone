@@ -19,7 +19,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <PostContainer data={this.state.dummyData} />
+        <PostContainer comments={this.state.dummyData} />
+        {console.log(this.state.dummyData)}
       </div>
     );
   }
