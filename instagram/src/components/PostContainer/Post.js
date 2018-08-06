@@ -4,6 +4,8 @@ import comment from '../../assets/comment.png';
 import options from '../../assets/options.jpg';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
+import PropTypes from 'prop-types';
+
 
 const Post = props => {
     return(
@@ -32,6 +34,16 @@ const Post = props => {
             })}
         </div>
     );
+}
+
+Post.propTypes = {
+    posts: PropTypes.arrayOf(PropTypes.shape({
+        thumbnailUrl: PropTypes.string,
+        username: PropTypes.string,
+        imageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string
+    }))
 }
 
 export default Post;
