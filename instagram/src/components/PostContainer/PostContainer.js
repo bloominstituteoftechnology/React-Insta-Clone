@@ -9,6 +9,9 @@ import {
   Button
 } from "reactstrap";
 import styled from "styled-components";
+import CommentSection from "../CommentSection/CommentSection"
+import CommentForm from "../CommentSection/CommentForm"
+import PropTypes from 'prop-types'
 
 const PostHeader = styled.div`
   display: flex;
@@ -23,14 +26,36 @@ const AvatarImg = styled.img`
 `;
 
 const Likes = styled.h3`
-  font-weight: bold;
-  font-size: 14px;
+  
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-left: 12px;
+  font-family: "Lobster Two", "CRoboto";
 `;
 
 const BottomIcons = styled.div`
     font-size: 30px;
+    margin-top: -20px;
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+    margin-bottom: 10px;
 
 `
+
+const BottomBorder = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  height: 80px;
+  width: 100%;
+  max-width: 800px;
+  background-color: #e0e0e0;
+  padding-top: 50px;
+  box-sizing: border-box;
+`;
+
 const PostContainer = props => {
   return props.data.map(post => {
     return (
@@ -50,29 +75,21 @@ const PostContainer = props => {
           <CardBody>
             <CardTitle>{props.data.username}</CardTitle>
             <BottomIcons>
-            <i class="far fa-heart"></i>
-            <i class="far fa-comment"></i>
+            <i className="far fa-heart"></i>
+            <i className="far fa-comment"></i>
             </BottomIcons>
             <Likes>{post.likes}</Likes>
-            <CardText>
-              {post.comment}
-            </CardText>
+              <CommentSection comments={post.comments} />
+            <CommentForm />
           </CardBody>
         </Card>
+        <BottomBorder></BottomBorder>
       </div>
     );
   });
-  //   <div>
-  //       <Card>
-  //       <CardTitle>Card title</CardTitle>
-  //     <CardImg top width="100%" src={props.data.imageUrl} alt="Card image cap" />
-  //     <CardBody>
-  //       <CardTitle>{props.data.username}</CardTitle>
-  //       <CardSubtitle>Card subtitle</CardSubtitle>
-  //       <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-  //     </CardBody>
-  //   </Card>
-  //   </div>
+
 };
+
+CommentSection.propTypes = {comments: PropTypes.array.isRequired}
 
 export default PostContainer;

@@ -26,3 +26,8 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.submit-btn {
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
