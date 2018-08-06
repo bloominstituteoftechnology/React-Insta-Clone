@@ -9,9 +9,10 @@ import {
   Button
 } from "reactstrap";
 import styled from "styled-components";
-import CommentSection from "../CommentSection/CommentSection"
-import CommentForm from "../CommentSection/CommentForm"
-import PropTypes from 'prop-types'
+import CommentSection from "../CommentSection/CommentSection";
+import CommentForm from "../CommentSection/CommentForm";
+import PropTypes from 'prop-types';
+import moment from "moment";
 
 const PostHeader = styled.div`
   display: flex;
@@ -58,6 +59,7 @@ const BottomBorder = styled.div`
 
 const PostContainer = props => {
   return props.data.map(post => {
+    const fromNow = moment(post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()
     return (
       <div>
         
@@ -79,7 +81,8 @@ const PostContainer = props => {
             <i className="far fa-comment"></i>
             </BottomIcons>
             <Likes>{post.likes}</Likes>
-              <CommentSection comments={post.comments} />
+            <p>{fromNow}</p>
+              <CommentSection date={post.timestamp} comments={post.comments} />
             <CommentForm />
           </CardBody>
         </Card>
