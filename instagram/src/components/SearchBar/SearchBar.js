@@ -10,15 +10,15 @@ const SearchBar = props => {
     return (
         <div className="sbContainer">
             <div className="sbLeft">
-                <img className="sbImage" src={Camera} alt="Camera" />
-                <img className="sbImage" src={instagram} alt="Instagram Word" />
+                <img className="sbImage sbCamera" src={Camera} alt="Camera" />
+                <img className="sbImage sbInsta" src={instagram} alt="Instagram Word" />
             </div>
             <input placeholder="Search">
             </input>
             <div>
-                <img className="sbImage" src={compass} alt="Compass" />
-                <img className="sbImage" src={heart} alt="Heart" />
-                <img className="sbImage" src={person} alt="Person" />
+                <img className="sbImage sbRight" src={compass} alt="Compass" />
+                <img className="sbImage sbRight" src={heart} alt="Heart" />
+                <img className="sbImage sbRight" src={person} alt="Person" />
             </div>
         </div>
     );

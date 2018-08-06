@@ -2,13 +2,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 30px auto;
+    border-bottom: 1px solid lightgray;
 }
 
 .sbImage {
-    width: 60px;
+    width: 45px;
+}
+
+.sbCamera {
+    border-right: 1px solid gray;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+
+.sbInsta {
+    width: 100px;
 }
 
 .sbLeft {
     display: flex;
     align-items: center;
+}
+
+.sbRight {
+    padding-right: 20px;
 }

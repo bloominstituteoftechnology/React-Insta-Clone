@@ -6,28 +6,31 @@ import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 import PropTypes from 'prop-types';
 
-
 const Post = props => {
     return(
-        <div>
+        <div className="postContain">
             {props.posts.map(post => {
                 return (
                     <div key={post.username}>
-                        <div>
-                            <img src={post.thumbnailUrl} alt="User Thumbnail" />
-                            <span>{post.username}</span>
+                        <div className="usernIcon">
+                            <img className="iconThumbnail" src={post.thumbnailUrl} alt="User Thumbnail" />
+                            <span><strong>{post.username}</strong></span>
                         </div>
                         <img src={post.imageUrl} alt="Shared Post" />
-                        <div>
-                            <img className="pcImage" src={heart} alt="Heart" />
-                            <img className="pcImage" src={comment} alt="Comment" />
+                        <div className="bottomPost">
+                            <div className="postIcons">
+                                <img className="pcImage" src={heart} alt="Heart" />
+                                <img className="pcImage" src={comment} alt="Comment" />
+                            </div>
+                            <p className="likes"><strong>{post.likes} likes</strong></p>
+                            <CommentSection comments={post.comments} />
+                            <p className="timeStamp">{post.timestamp}</p>
+                            <div className="bottomInput">
+                                <input placeholder="Add a comment..." />
+                                <img className="optionsImage" src={options} alt="Comment Options" />
+                            </div>
                         </div>
-                        <p>{post.likes}</p>
-                        <CommentSection comments={post.comments} />
-                        <p>{post.timestamp}</p>
-                        <div>
-                            <input placeholder="Add a comment..." />
-                            <img className="pcImage" src={options} alt="Comment Options" />
+                        <div className="bottom">
                         </div>
                     </div>
                 );
