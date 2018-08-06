@@ -4,7 +4,9 @@ import Post from './Post';
 
 const PostsContainer = () => {
     return (
-        <div>PostsContainer</div>
+        <div className="posts-container">
+         Post Container
+        </div>
     );
 };
 

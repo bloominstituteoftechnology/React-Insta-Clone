@@ -3,9 +3,14 @@ import './Posts.css';
 import PostHeader from './PostHeader';
 import CommentContainer from '../CommentSection/CommentSectionContainer';
 
-const Post = () => {
+const Post = props => {
     return (
-        <div>Post</div>
+        <div className="post-wrapper">
+          <PostHeader 
+          username={props.post.username}
+          thumbnailUrl={props.post.thumbnailUrl}
+          />
+        </div>
     );
 };
 
