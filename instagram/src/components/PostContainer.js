@@ -5,13 +5,20 @@ import CommentSection from './CommentSection';
 const PostContainer = props => {
     return (
         <div>
-            {props.comments}
+            {props.posts.map( each => {
+                return (
+                    <div key={each.id}>
+                        <img src={each.imageUrl} alt={`By ${each.username}`} />
+                        <CommentSection comments={each.comments} />
+                    </div>
+                );
+            })}
         </div>
     );
 };
 
 PostContainer.propTypes = {
-    comments: PropTypes.arrayOf(PropTypes.object)
+    posts: PropTypes.arrayOf(PropTypes.object),
 }
 
 export default PostContainer;
