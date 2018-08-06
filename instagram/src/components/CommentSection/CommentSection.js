@@ -13,6 +13,7 @@ const CommentWrapper = styled.div`
   display: flex;
   align-items: baseline;
   line-height: 0px;
+  flex-wrap: wrap;
 p {
     font-size: 14px;
 }
