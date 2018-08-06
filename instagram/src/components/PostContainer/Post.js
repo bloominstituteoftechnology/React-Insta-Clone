@@ -49,7 +49,7 @@ const Post=prop=>{
             </UserTag>
             <PostImg src={prop.data.imageUrl} alt='post-img'/>
             <Icons>
-            <Heart className="far fa-heart fa-2x" onClick={()=>{return prop.liked(prop.data)}}/>
+            <Heart className="far fa-heart fa-2x" onClick={()=>{return prop.liked(prop.index)}}/>
             <Comment className="comment fa fa-flip-horizontal">
             <i className="far fa-comment fa-2x"/>
             </Comment>

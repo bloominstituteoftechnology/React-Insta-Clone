@@ -52,10 +52,10 @@ class PostsPage extends React.Component {
       filteredPosts=filteredPosts.filter((e)=>itemsToBeFiltered.indexOf(e.username)!==-1);
       this.setState({filteredPosts:filteredPosts});
     }
-    liked=(data)=>{
-      const postsCopy=this.state.posts.slice();
-      postsCopy.forEach(e=>{
-        if(e===data){
+    liked=(index)=>{
+      const postsCopy=JSON.parse(localStorage.getItem('posts'));
+      postsCopy.forEach((e,i)=>{
+        if(i===index){
           if (e.liked===undefined||e.liked===false){
             e.likes+=1; e.liked=true;
           } else {

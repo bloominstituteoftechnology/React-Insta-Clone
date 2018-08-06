@@ -12,7 +12,7 @@ const Card=styled.div`
 const PostContainer=prop=>{
     return (
         <Card className="card">
-            <Post data={prop.data} liked={prop.liked}/>
+            <Post data={prop.data} index={prop.index} liked={prop.liked}/>
             <CommentSection index={prop.index} comments={prop.data.comments} timestamp={prop.data.timestamp}/> 
         </Card>
     )
