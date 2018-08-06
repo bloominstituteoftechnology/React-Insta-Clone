@@ -1,0 +1,14 @@
+.sbContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sbImage {
+    width: 60px;
+}
+
+.sbLeft {
+    display: flex;
+    align-items: center;
+}
