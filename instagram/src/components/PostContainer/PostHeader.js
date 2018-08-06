@@ -1,20 +1,14 @@
-
 import React from 'react';
-import './Posts.css';
+
 
 const PostHeader = props => {
-  return (
-    <div className="post-header">
-      <div className="post-thumb-wrapper">
-        <img
-          alt="post header"
-          className="post-thumb"
-          src={props.thumbnailUrl}
-        />
-      </div>
-      <div className="user">{props.username}</div>
+    <div className="header-container">
+        <div className="post-image">    
+            <img src={props.thumbnailUrl} className="little-image"/>
+        </div>
+        <div className="username">{props.username}</div>
+    
     </div>
-  );
-};
+}
 
 export default PostHeader;

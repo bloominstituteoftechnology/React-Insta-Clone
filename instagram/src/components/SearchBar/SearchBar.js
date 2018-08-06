@@ -1,29 +1,29 @@
 import React from 'react';
-import Instagram from './img/instagram.png';
+import Instagram from './instagram.png'
 import './SearchBar.css';
 
 const SearchBar = () => {
-  return (
-    <div className="search-bar-wrapper">
-      <div className="image-wrapper">
-        <img alt="instagram logo" src={Instagram} className="logo-image" />
-      </div>
-      <div>
-        <input type="text" placeholder="Search" />
-      </div>
-      <div className="social-wrapper">
-        <div className="social">
-          <i className="fa fa-compass" />
+    return (
+        <div className="search-container">
+            <div className="image-container">
+                <img src={Instagram} alt="instagram" className="instagram-img" />
+            </div>
+            <div>
+                <input type="text" placeholder="Search" />
+            </div>
+            <div className="icon-container">
+                <div className="icon">
+                    <i className="fa fa-compass" />
+                </div>
+                <div className="icon">
+                    <i className="fa fa-heart" />
+                </div>
+                <div className="icon">
+                    <i className="fa fa-user-circle" />
+                </div>
+            </div>
         </div>
-        <div className="social">
-          <i className="fa fa-heart" />
-        </div>
-        <div className="social">
-          <i className="fa fa-user-circle" />
-        </div>
-      </div>
-    </div>
-  );
-};
+    );
+};   
 
 export default SearchBar;

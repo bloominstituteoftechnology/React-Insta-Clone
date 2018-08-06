@@ -1,28 +1,21 @@
+import React from 'react';
+import PostHeader from './PostHeader';
+import CommentSection from './components/CommentSection/CommentSection';
 
-import React from "react";
-import CommentSection from "../CommentSection/CommentSectionContainer";
-import PostHeader from "./PostHeader";
-
-import "./Posts.css";
 
 const Post = props => {
-  return (
-    <div className="post-border">
-      <PostHeader
-        username={props.post.username}
-        thumbnailUrl={props.post.thumbnailUrl}
-      />
-      <div className="post-image-wrapper">
-        <img
-          alt="post thumbnail"
-          className="post-image"
-          src={props.post.imageUrl}
-        />
-      </div>
-      <div className="likes">{props.post.likes} likes</div>
-      <CommentSection comments={props.post.comments} />
-    </div>
-  );
+    return(
+        <div className="post-header">
+            <PostHeader
+                username={props.post.username}
+                thumbnailUrl={props.post.thumbnailUrl}
+            />
+            <div>
+                <img src={props.post.imageUrl} className="post-image" alt="image" />
+            </div>
+            <CommentSection comments={props.post.comment} />
+        </div>
+    );
 };
 
 export default Post;
