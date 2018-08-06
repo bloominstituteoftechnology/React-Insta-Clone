@@ -61,7 +61,7 @@ class PostsPage extends React.Component {
           } else {
           e.likes-=1; e.liked=false;
         }}});
-      return this.setState({posts:postsCopy});
+      return this.setState({posts:postsCopy},()=>localStorage.setItem('posts',JSON.stringify(postsCopy)));
     }
     render() {
       return (
