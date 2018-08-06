@@ -1,9 +1,12 @@
 import React from 'react';
 import './Comment.css';
 
-const Comment = () => {
+const Comment = props => {
     return (
-        <div>Comment</div>
+        <div className="comment-wrapper">
+          <span className="comment-comment">{props.comment.text}</span>{''}
+          <span className="comment-user">{props.comment.username}</span>
+        </div>
     );
 };
 

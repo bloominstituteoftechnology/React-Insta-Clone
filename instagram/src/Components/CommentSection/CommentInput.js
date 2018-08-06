@@ -3,7 +3,11 @@ import './Comment.css';
 
 const CommentInput = () => {
     return (
-        <div>CommentInput</div>
+        <div className="comment-input">
+          <form>
+             <input type="text" placeholder="Add Comment..." />
+          </form>
+        </div>
     );
 };
 
