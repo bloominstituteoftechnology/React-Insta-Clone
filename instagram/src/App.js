@@ -1,59 +1,21 @@
 import React, { Component } from 'react';
-import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar.js'
-import PostContainer from './components/PostContainer/PostContainer.js'
-import Authenticate from './components/Authentication/Authenticate.js'
-import styled from 'styled-components'
+import logo from './logo.svg';
+import './App.css';
 
-const StyledApp = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-`
-
-const App = Authenticate(
-
-
-  class App extends Component {
-    constructor() {
-      super()
-      this.state = {
-        data: [],
-        filteredPosts: []
-      }
-    }
-
-    componentDidMount() {
-      this.setState({ data: dummyData });
-    }
-
-    handlePostSearch = event => {
-      const posts = this.state.data.filter(post => {
-        if (post.username.includes(event.target.value)) {
-          return post;
-        }
-      });
-      this.setState({ filteredPosts: posts });
-    };
-
-    render() {
-      return (
-        <StyledApp>
-          <header>
-            <SearchBar searchPosts={this.handlePostSearch}
-            />
-          </header>
-          <PostContainer
-            data={this.state.filteredPosts.length > 0
-              ? this.state.filteredPosts
-              : this.state.data}
-            
-          />
-        </StyledApp>
-
-      );
-    }
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+      </div>
+    );
   }
-)
+}
 
 export default App;
