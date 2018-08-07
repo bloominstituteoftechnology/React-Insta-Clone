@@ -1,19 +1,20 @@
 import React from 'react';
 import PostHeader from './PostHeader';
-import CommentSection from './components/CommentSection/CommentSection';
+import CommentSection from '../CommentSection/CommentSection';
 
 
 const Post = props => {
-    return(
+    return (
         <div className="post-header">
             <PostHeader
                 username={props.post.username}
                 thumbnailUrl={props.post.thumbnailUrl}
             />
             <div>
-                <img src={props.post.imageUrl} className="post-image" alt="image" />
+                <img src={props.post.imageUrl} className="post-image" alt="" />
             </div>
-            <CommentSection comments={props.post.comment} />
+            <CommentSection comments={props.post.comments} />
+            
         </div>
     );
 };
