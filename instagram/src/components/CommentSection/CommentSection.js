@@ -12,7 +12,7 @@ class CommentSection extends React.Component {
         };
     }
 
-    handleInput = (event) => {
+    handleInput = event => {
         this.setState({[event.target.name]: event.target.value})
     }    
     

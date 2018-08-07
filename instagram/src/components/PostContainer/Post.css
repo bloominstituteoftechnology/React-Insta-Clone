@@ -1,0 +1,21 @@
+
+/* Post Header CSS */
+
+.header-container {
+    display: flex;
+    height: 50px;
+    align-content: center;
+}
+
+
+.thumbnail {
+    border-radius: 50%;
+    height: 35px;
+}
+
+.username {
+    margin-left: 15px;
+}
+
+
+
