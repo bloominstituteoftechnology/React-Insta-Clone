@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     background: #ffffff;
-    border: 3px dashed red;
+    /* border: 3px dashed red; */
   }
   
   .image-wrapper {
@@ -13,17 +13,23 @@
   }
   
   .logo-image {
-    height: 100%;
+    height: 500%;
+    width: 100%;
+    margin-top: -85px;
+    margin-right: 0px;
   }
   
   .social-wrapper {
     display: flex;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
   }
   
   .social {
     width: 20px;
     height: 20px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
   }
   
+  input {
+    margin-left: -200px;
+  }

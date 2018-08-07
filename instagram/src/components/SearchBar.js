@@ -1,12 +1,13 @@
 import React from 'react';
 import './SearchBar.css';
+import instagram from './instagram.png';
 
 const SearchBar = () => {
     return (
       <div className="search-bar-wrapper">
   
         <div className="image-wrapper">
-          {/* <img alt="instagram" src={IGLogo} className="logo-image" /> */}
+           <img alt="instagram" src={instagram} className="logo-image" />
         </div>
         
         <div>
