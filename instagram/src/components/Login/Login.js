@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import { Button, FormGroup, Input } from "reactstrap";
 import "./Login.css";
 import styled from 'styled-components'
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './SearchBar.css';
 import  iglogo from "../../assets/iglogo.png";
 import  igicons from "../../assets/igicons.png";

@@ -4,11 +4,9 @@ import PostTop from './PostTop';
 import './PostContainer.css';
 import PropTypes from "prop-types"
 import  Likes from './likes'
-import  like from "../../assets/likecons.png";
-import liked from "../../assets/likedcons.png"
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button} from 'reactstrap';
+    Card,   CardBody,
+  }from 'reactstrap';
 
 class PostBody extends React.Component {
   constructor(props){

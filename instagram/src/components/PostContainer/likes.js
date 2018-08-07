@@ -1,6 +1,5 @@
 import React from 'react';
 import  like from "../../assets/likecons.png";
-import liked from "../../assets/likedcons.png"
 import './PostContainer.css';
 
 const Likes = props => {
