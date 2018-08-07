@@ -26,3 +26,31 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+.search {
+  position: relative;
+  width: 200px;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  z-index: 2;
+}
+
+.search .fas {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+.search-input {
+  border: 1px solid #ccc;
+  line-height: 30px;
+  padding-left: 30px;
+  width: 100%;
+  z-index: 1;
+}
