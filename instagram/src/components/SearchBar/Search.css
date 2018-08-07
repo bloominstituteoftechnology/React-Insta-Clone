@@ -1,0 +1,43 @@
+
+/* .search-container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+} */
+
+/* .search-container .logo {
+  width: 201px;
+    height: 48px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+} */
+
+.search-container .input-container {
+  width: 201px;
+    height: 48px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.search-container .input-container input {
+
+}
+
+.search-container .options-container {
+    display: flex;
+    flex-flow: row;
+    width: 201px;
+    height: 48px;
+    border: 1px solid gray;
+}
+
+.search-container .options-container .options-item {
+    width: 67px;
+    height: 48px;
+    border: 1px solid gray;
+}
