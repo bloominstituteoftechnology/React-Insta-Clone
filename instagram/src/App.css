@@ -31,3 +31,9 @@
   margin-top: 5px;
   margin-bottom: 40px;
 }
+
+.commentHeader {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: rgb(149, 149, 149);
+}

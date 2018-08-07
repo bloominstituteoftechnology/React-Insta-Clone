@@ -83,7 +83,6 @@ const PostContainer = props => {
             <Likes>{post.likes}</Likes>
             <p>{fromNow}</p>
               <CommentSection date={post.timestamp} comments={post.comments} />
-            <CommentForm />
           </CardBody>
         </Card>
         <BottomBorder></BottomBorder>

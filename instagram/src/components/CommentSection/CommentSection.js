@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import moment from "moment";
+import CommentForm from "./CommentForm";
+import Comment from "./Comment";
 
 const CommentUser = styled.h5`
   font-size: 16px;
@@ -23,25 +25,43 @@ class CommentSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      commentArray: props,
+      commentArray: props.comments,
       commentInput: ""
     };
   }
-addNewComment = (event, index) => {
- if(event.target.value === true) {
-   console.log("this might work")
- }
-  }
+  handleComment = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
+  addComment = event => {
+    event.preventDefault();
+    const commentArray = this.state.commentArray.slice();
+    commentArray.push({
+      username: "testname",
+      text: this.state.commentInput
+    });
+    this.setState({
+      commentArray: commentArray,
+      commentInput: ""
+    })
+    //const commentArray = {...this.state.commentArray} (Spread Operator)
+  };
 
   render() {
-    return this.state.commentArray.comments.map(comment => {
-      return (
-        <CommentWrapper>
-          <CommentUser>{comment.username}</CommentUser>
-          <p>{comment.text}</p>
-        </CommentWrapper>
-      );
-    });
+    return (
+      <CommentWrapper>
+        {this.state.commentArray.map(comment => (
+          <Comment key={comment.username} comment={comment} />
+        ))}
+        <CommentForm
+          addComment={this.addComment}
+          value={this.state.commentInput}
+          handleComment={this.handleComment}
+        />
+      </CommentWrapper>
+    );
   }
 }
 
