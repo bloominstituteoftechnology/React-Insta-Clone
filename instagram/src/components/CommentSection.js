@@ -8,24 +8,24 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.comments,
-      comment: ""
+      newComment: ""
     };
   }
 
   commentHandler = e => {
-    this.setState({ comment: e.target.value });
+    this.setState({ newComment: e.target.value });
   };
 
   commentSubmit = e => {
     e.preventDefault();
     // build out our comment obj
-    const newComment = { text: this.state.comment, username: "Leeroy Jenkins" };
+    const newComments = { text: this.state.newComment, username: "Leeroy Jenkins" };
     // clone our comments array
     const comments = this.state.comments.slice();
     // push obj into new clone
-    comments.push(newComment);
+    comments.push(newComments);
     // set new clone as state... + reset our comment str
-    this.setState({ comment: "", comments });
+    this.setState({ newComment: "", comments });
   };
 
   render() {
@@ -35,7 +35,7 @@ class CommentSection extends React.Component {
         <CommentInput
           submitHandler={this.commentSubmit}
           changeHandler={this.commentHandler}
-          comment={this.state.comment}
+          newComment={this.state.newComment}
         />
       </div>
     );
