@@ -1,22 +1,42 @@
 import React from '../../node_modules/react';
 import './css/CommentSection.css';
-import PropTypes from '../../node_modules/prop-types';
+// import PropTypes from '../../node_modules/prop-types';
 
 
-const CommentSection = props => {
+class CommentSection extends React.Component {
+  constructor(props){
+    super();
+    this.state = {
+      comments: props.comments
+    };
+  }
+
+  render(){
     return (
-  
       <div>
-      <commenter>{props.comments.username}</commenter> <comment>{props.comments.text}</comment> 
-      
+        <commenter>{this.state.comments.username}</commenter> <comment>{this.state.comments.text}</comment> 
       </div>
-    )
-  };
+    );
+  }
 
-
-CommentSection.propTypes = {
-  username: PropTypes.string,
-  comments: PropTypes.string
 }
+
+// = props => {
+
+
+//     return (
+  
+//       <div>
+//       <commenter>{props.comments.username}</commenter> <comment>{props.comments.text}</comment> 
+      
+//       </div>
+//     )
+//   };
+
+
+// CommentSection.propTypes = {
+//   username: PropTypes.string,
+//   comments: PropTypes.string
+// }
 
 export default CommentSection;
