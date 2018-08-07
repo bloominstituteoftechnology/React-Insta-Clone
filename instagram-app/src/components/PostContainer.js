@@ -2,6 +2,7 @@
 import React from '../../node_modules/react';
 import CommentSection from './CommentSection';
 import './css/PostContainer.css';
+import PropTypes from '../../node_modules/prop-types';
 
 const PostContainer = props => {
     return (
@@ -34,6 +35,17 @@ const PostContainer = props => {
       
     )
   };
+
+PostContainer.propTypes = {
+  thumbNailUrl: PropTypes.string,
+  username: PropTypes.string,
+  imageUrl: PropTypes.string,
+  likes: PropTypes.number,
+  comments: PropTypes.shape({
+    username: PropTypes.string,
+    text: PropTypes.string
+  })
+}
 
 
   export default PostContainer;
