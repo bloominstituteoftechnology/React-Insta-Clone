@@ -1,3 +1,19 @@
+.insta-post-container {
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+}
+
 .post-container {
-    background: red;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    max-width: 594px;
+    box-shadow: 0px 0px 2px black;
+    margin: 3   0px 0;
+}
+
+
+.image-posts{
+    width: 100%;
 }
