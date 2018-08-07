@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Post from './components/Post'
+import Post from './Post';
 
 const PostContainer = props => {
     return (
         <div>
-            {props.posts.map(eachPost => <Post key= {imageURL} post= {eachPost} />)};
+            {props.posts.map(eachPost => <Post key= {eachPost.imageURL} post= {eachPost} />)};
         </div>
     );
 };
