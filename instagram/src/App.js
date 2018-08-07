@@ -14,6 +14,10 @@ class App extends React.Component {
       posts: dummyData
     };
   }
+
+  //componentDidMount() {
+  //  this.setState({ posts: dummyData })
+  //}
   
   
   render() {
@@ -21,8 +25,7 @@ class App extends React.Component {
       <div className="App">
       <SearchBar />
       <PostContainer posts={this.state.posts} />
-      
-      </div>
+    </div>
     );
   }
 }
