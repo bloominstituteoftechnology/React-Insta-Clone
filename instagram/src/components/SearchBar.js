@@ -1,4 +1,5 @@
 import React from 'react';
+// import IGLogo from '../..assets/iglogo.png';
 import './SearchBar.css';
 
 const SearchBar = () => {
@@ -6,7 +7,7 @@ const SearchBar = () => {
       <div className="search-bar-wrapper">
   
         <div className="image-wrapper">
-          
+          {/* <img alt="instagram" src={IGLogo} className="logo-image" /> */}
         </div>
         
         <div>
