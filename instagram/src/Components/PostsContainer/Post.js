@@ -10,6 +10,10 @@ const Post = props => {
           username={props.post.username}
           thumbnailUrl={props.post.thumbnailUrl}
           />
+          <div className="post-img">
+            <img alt="post thumb" className="post-image" src={props.post.imageUrl} />
+          </div>
+          <CommentContainer comments={props.post.comments} />
         </div>
     );
 };
