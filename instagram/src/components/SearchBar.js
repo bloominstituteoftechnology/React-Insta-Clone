@@ -1,5 +1,4 @@
 import React from 'react';
-// import IGLogo from '../..assets/iglogo.png';
 import './SearchBar.css';
 
 const SearchBar = () => {
