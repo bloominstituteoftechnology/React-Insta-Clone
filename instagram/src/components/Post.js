@@ -18,6 +18,10 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
+      <div className="likes">
+          <i class="far fa-heart"></i>
+          <strong>{props.post.likes}{`likes`}</strong>
+      </div>
       <CommentSection comments={props.post.comments} />
     </div>
   );

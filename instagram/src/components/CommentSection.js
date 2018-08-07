@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import addNewComment from "./addNewComment";
+import Comment from "./Comment";
 import CommentInput from "./CommentInput";
 
 class CommentSection extends React.Component {
@@ -8,9 +8,21 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.comments,
-      newComment: ""
+      newComment: "",
+      likes: props.likes,
+      newLikes: "",
     };
   }
+
+  likeHandler = event => {
+    this.setState({ newLikes: event.target.value });
+  };
+
+  likeSubmit = event => {
+    event.preventDefault();
+
+    const newLikes = {}
+  };
 
   commentHandler = e => {
     this.setState({ newComment: e.target.value });
@@ -32,7 +44,7 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div>
-        {this.state.comments.map((c, i) => <addNewComment key={i} comment={c} />)}
+        {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
         <CommentInput
           submitHandler={this.commentSubmit}
           changeHandler={this.commentHandler}

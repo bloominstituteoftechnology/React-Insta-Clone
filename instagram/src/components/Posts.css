@@ -29,4 +29,10 @@
     height: 100%;
     border-radius: 50%;
   }
-  
+
+  .likes {
+    display: flex;
+    flex-direction: column;
+    margin-left: -700px;
+    padding: 10px;
+  }
