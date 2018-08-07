@@ -5,8 +5,8 @@ const CommentSection = props => {
     <React.Fragment>
       {props.comments.map((each, i) => {
         return (
-          <div>
-            <b>{each.username}</b> {each.text}
+          <div className="post-comments">
+            <b>{each.username}</b> <span>{each.text}</span>
           </div>
         );
       })}
