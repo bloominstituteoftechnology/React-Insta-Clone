@@ -9,4 +9,4 @@
 [build]
   base    = "./instagram"
   publish = "./instagram/build"
-  command = "yarn start"
+  command = "yarn build"
