@@ -11,10 +11,19 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: dummyData,
+      posts: [],
       comments: props.comments,
     };
   }
+
+
+  componentDidMount(){
+    console.log("CDM was invoked");
+    // this.setState();
+
+    this.setState({posts: dummyData});
+  }
+
 
   render() {
     return (

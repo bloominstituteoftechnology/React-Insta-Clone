@@ -9,6 +9,7 @@ const SearchBar = props => {
         <span>|</span>
         <img src="../intagram/public/pictures/Instagram_logo.png" alt="instagram-logo"/>
       </div>
+      <input className="search-bar" type="text" placeholder="search"/>
       <div className="social-right">
         <i class="fa fa-compass" aria-hidden="true" />
         <i class="fa fa-heart" aria-hidden="true" />
