@@ -1,32 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import PropTypes from 'prop-types';
-import dummyData from './dummy-data';
+import React, { Component } from "react";
+import "./App.css";
+import PropTypes from "prop-types";
+import dummyData from "./dummy-data";
+import SearchBar from './SearchBar/SearchBar';
+import PostContainer from './PostContainer/PostContainer';
 
 console.log(dummyData);
 
-
 class App extends Component {
-    constructor(){
-      super();
-      this.state = {
-        dummyData: 'dummyData',
-      }
-    }
-
+  constructor() {
+    super();
+    this.state = {
+      posts: dummyData,
+    };
+  }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Instagram</h1>
-        </header>
         <SearchBar />
-        <PostContainer />
+        <PostContainer posts={this.state.posts} />
       </div>
-      
     );
   }
 }
