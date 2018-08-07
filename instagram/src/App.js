@@ -7,16 +7,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: dummyData
+      posts: dummyData
     };
   }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <PostContainer each={this.state.posts} />
+        <PostContainer posts={this.state.posts} />
       </div>
     );
   }

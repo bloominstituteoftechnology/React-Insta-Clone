@@ -5,21 +5,20 @@ import "./PostContainer.css"
 const NewPost = props => {
     return (
         <div className="post-wrapper">
-            <Header
-                username={props.dummyData.username}
-                thumbnailUrl={props.dummyData.thumbnailUrl}
+          <Header
+            username={props.posts.username}
+            thumbnailUrl={props.posts.thumbnailUrl}
+          />
+          <div className="post-image-wrapper">
+            <img
+              alt="post thumbnail"
+              className="post-image"
+              src={props.posts.imageUrl}
             />
-            <div className="img-wrapper">
-            <img 
-            alt="post-image"
-            className='new-post'
-            src={props.dummyData.imageUrl}
-            />
-            </div>
-            <CommentSection comments={props.post.comments} />
+          </div>
         </div>
-    )
-}
+      );
+    };
 
 
 export default NewPost;
