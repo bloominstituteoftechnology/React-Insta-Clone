@@ -1,0 +1,41 @@
+
+header {
+    display: flex;
+    height: 75px;
+    border-bottom: 1px solid #E6E6E6;
+    padding-bottom: 10px;
+    
+}
+
+.fab {
+    padding: 3px 20px 0 20px;
+    margin-top: 30px;
+    border-right: 1px solid gray;
+    font-size: 30px;
+}
+
+.bigInsta {
+    width: 100px;
+    height: 40px;
+    padding: 10px 0 0 20px;
+    margin-top: 20px;
+    
+}
+
+
+.fa-search {
+    font-size: 10px;
+    color: gray;
+}
+
+.far {
+    padding: 20px 10px 0 10px;
+}
+
+header .far {
+    padding-top: 35px;
+}
+
+.search-input {
+    background-color: #FAFAFA;
+}

@@ -1,13 +1,14 @@
 
 import React from '../../node_modules/react';
 import CommentSection from './CommentSection';
+import './css/PostContainer.css';
 
 const PostContainer = props => {
     return (
-        <div>
+        <div class="container">
             <div>
-              <img alt="user logo" className="logo" src={props.content.thumbnailUrl}></img>
-              {props.content.username}
+              <img alt="user logo" class="avatar" src={props.content.thumbnailUrl}></img>
+              <p class="username">{props.content.username}</p>
             </div>
             <br></br>
             <div>
@@ -17,15 +18,17 @@ const PostContainer = props => {
             </div>
   
             <div>
-              <p>{props.content.likes} likes</p>
+              <p class="likes">{props.content.likes} likes</p>
             </div>
   
             <comments>
               <div>{props.content.comments.map(each => <CommentSection comments={each} />)}</div>
             </comments>
+            <replace>2 hours ago</replace>
+            <br></br>
             <br></br>
             <add>
-              <input type="text" placeholder="Add a comment..."></input>
+              <input class="inputComment" type="text" placeholder="Add a comment..."></input>
             </add>
         </div>
       

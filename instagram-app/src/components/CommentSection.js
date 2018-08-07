@@ -1,11 +1,11 @@
 import React from '../../node_modules/react';
-
+import './css/CommentSection.css';
 
 const CommentSection = props => {
     return (
   
       <div>
-      {props.comments.username} {props.comments.text} 
+      <commenter>{props.comments.username}</commenter> <comment>{props.comments.text}</comment> 
       
       </div>
     )
