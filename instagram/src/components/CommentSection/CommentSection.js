@@ -5,13 +5,20 @@ class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: props.comments
-
+            comments: props.comments,
+            comment: ''
         }
     }
 
-    addNewComment = (event, index) => {
-        this.setState({[event.target.name]: event.target.value})
+    changeHandler = e => {
+        this.setState({comment: e.target.value})
+    }
+
+    addNewComment = e => {
+        const newComment = {text: this.state.comment, username: 'Fred'};
+        const comments = this.state.comments.slice();
+        comments.push(newComment);
+        this.setState({comments, comment: ''});
     }
 
     render() {

@@ -15,13 +15,16 @@ const Comment = props => {
                     );
                 })}
             </div>
-            <p className="timeStamp">{props.timestamp}</p>
-            <div className="bottomInput">
-                <form>    
-                    <input placeholder="Add a comment..." />
-                    <img className="optionsImage" src={options} alt="Comment Options" />
-                </form>
-            </div>
+            {/* <p className="timeStamp">{props.timestamp}</p> */}
+            <form className="bottomInput" onSubmit={props.addNewComment}>    
+                <input  
+                    type="text"
+                    onChange={props.changeHandler}
+                    placeholder="Add a comment..." 
+                    name="comment" 
+                />
+                <img className="optionsImage" src={options} alt="Comment Options" />
+            </form>
         </div>
     );
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import heart from '../../assets/heart.png';
 import comment from '../../assets/comment.png';
-import options from '../../assets/options.jpg';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 import PropTypes from 'prop-types';
