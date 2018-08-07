@@ -1,7 +1,8 @@
 import React from 'react';
 
-const CommentSection = () => {
+const CommentSection = (props) => {
     return (
-        <div></div>
+        <div>testing div and component</div>
     )
 }
+export default CommentSection;
