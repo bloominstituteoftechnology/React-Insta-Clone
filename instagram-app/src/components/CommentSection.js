@@ -3,15 +3,11 @@ import React from '../../node_modules/react';
 
 const CommentSection = props => {
     return (
-        <div>
-            {/* {props.comment.username}
-            {props.comment.thumbnailUrl}
-            {props.comment.imageUrl}
-            {props.comment.likes} */}
-            
-
-        </div>
+  
+      <div>
+      {props.comments.username} {props.comments.text} 
+      
+      </div>
     )
-};
-
+  };
 export default CommentSection;
