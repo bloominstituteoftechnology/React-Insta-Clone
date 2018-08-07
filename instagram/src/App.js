@@ -17,6 +17,7 @@ class App extends Component {
         <PostContainer />
         <SearchBar />
         <CommentSection />
+        {this.state.data.map(obj=><PostContainer obj={obj}/>)}
       </div>
     );
   }
