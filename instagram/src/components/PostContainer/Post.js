@@ -24,11 +24,6 @@ const Post = props => {
                             </div>
                             <p className="likes"><strong>{post.likes} likes</strong></p>
                             <CommentSection comments={post.comments} />
-                            <p className="timeStamp">{post.timestamp}</p>
-                            <div className="bottomInput">
-                                <input placeholder="Add a comment..." />
-                                <img className="optionsImage" src={options} alt="Comment Options" />
-                            </div>
                         </div>
                         <div className="bottom">
                         </div>

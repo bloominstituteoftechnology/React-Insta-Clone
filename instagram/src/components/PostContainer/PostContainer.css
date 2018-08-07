@@ -33,22 +33,6 @@
     margin-top: 0;
 }
 
-.timeStamp {
-    border-bottom: 1px solid lightgray;
-    padding-bottom: 15px;   
-}
-
-.bottomInput {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.optionsImage {
-    width: 20px;
-}
-
 .bottom {
     border-bottom: 1px solid lightgray;
 }
