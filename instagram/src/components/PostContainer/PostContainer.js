@@ -85,11 +85,10 @@ class PostContainer extends React.Component {
 }
   
 
+ 
   render() {
-  
   return this.state.data.map(post => {
     const fromNow = moment(post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()
-    
     return (
       <div>
         
