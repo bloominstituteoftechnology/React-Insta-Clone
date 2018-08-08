@@ -1,5 +1,6 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
+import CommentInput from '../CommentSection/CommentInput';
 import "./PostContainer.css";
 //uuid
 
@@ -27,6 +28,7 @@ const PostContainer = props => {
             <div className="comment-container">
               <div>likes {each.likes}</div>
               <CommentSection comments={each.comments} />
+              <CommentInput />
             </div>
           </div>
         );
