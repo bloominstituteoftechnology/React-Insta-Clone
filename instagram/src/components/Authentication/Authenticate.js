@@ -6,10 +6,13 @@ const Authenticate = App =>
     class extends Component {
         constructor(props) {
             super(props);
+            this.state = {
+                authorized: false
+            }
         }
  
         render() {
-            return < Login />
+            return (this.state.authorized ? <App /> : <Login /> )
         }
     }
 
