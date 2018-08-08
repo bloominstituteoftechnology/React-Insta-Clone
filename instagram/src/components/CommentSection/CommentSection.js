@@ -29,7 +29,7 @@ class CommentSection extends Component {
       commentInput: ""
     };
   }
-  handleComment = event => {
+  handleEvent = event => {
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -58,7 +58,7 @@ class CommentSection extends Component {
         <CommentForm
           addComment={this.addComment}
           value={this.state.commentInput}
-          handleComment={this.handleComment}
+          handleEvent={this.handleEvent}
         />
       </CommentWrapper>
     );

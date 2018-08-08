@@ -57,9 +57,39 @@ const BottomBorder = styled.div`
   box-sizing: border-box;
 `;
 
-const PostContainer = props => {
-  return props.data.map(post => {
+class PostContainer extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      likes: props.data.likes ,
+      liked: false,
+      data: props.data
+    }
+  }
+
+  toggleLike = () => {
+    let likeCounter = this.state.likes;
+    if (this.state.liked === false) {
+      likeCounter++
+      this.setState({
+        likes: likeCounter,
+        liked: true
+      })
+    } else {
+      likeCounter--
+      this.setState({
+        likes: likeCounter,
+        liked: false
+    })
+  }
+}
+  
+
+  render() {
+  
+  return this.state.data.map(post => {
     const fromNow = moment(post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()
+    
     return (
       <div>
         
@@ -75,9 +105,9 @@ const PostContainer = props => {
             alt="Card image cap"
           />
           <CardBody>
-            <CardTitle>{props.data.username}</CardTitle>
+            <CardTitle>{this.state.data.username}</CardTitle>
             <BottomIcons>
-            <i className="far fa-heart"></i>
+            <i className="far fa-heart" onClick={this.toggleLike}></i>
             <i className="far fa-comment"></i>
             </BottomIcons>
             <Likes>{post.likes}</Likes>
@@ -89,7 +119,7 @@ const PostContainer = props => {
       </div>
     );
   });
-
+  }
 };
 
 CommentSection.propTypes = {comments: PropTypes.array.isRequired}
