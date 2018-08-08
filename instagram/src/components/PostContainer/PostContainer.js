@@ -1,18 +1,3 @@
-// import React from 'react';
-// import NewPost from  './NewPost';
-
-
-// const PostContainer = props => {
-//     return (
-//         <div className='post-wrapper'>
-//             {props.posts.map(p => <NewPost key={p.imageUrl} posts={p} />)}
-            
-//         </div>
-//     );
-// };
-
-// export default PostContainer;
-
 import React from 'react';
 import Header from './Header';
 // import ‘./Posts.css’;
@@ -35,7 +20,13 @@ const PostContainer = props => {
                src={eachPost.imageUrl}
              />
            </div>
-           <CommentSection comments={eachPost.comments} />
+           <CommentSection 
+           comments={eachPost.comments} 
+           timestamp={eachPost.timestamp}
+           submitNewComment={props.submitNewComment} 
+           updateCommentField={props.updateCommentField}
+           commentField={props.commentField}
+           />
          </div>
        );
      })}

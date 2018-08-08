@@ -1,28 +1,6 @@
-// import React from 'react';
-// // import PropTypes from 'prop-types';
-// import './CommentSection.css';
-
-// const CommentSection = props => {
-//     return (
-//         <div>
-//             <div>likes</div>
-//             <div>{props.comments.map((eachComment, i) => {
-//                 return (
-//                     <div key={i}> <b>{eachComment.username}</b>{eachComment.text}</div>
-//                 )
-//             })}</div>
-//             <div>comment-input</div>
-//         </div>
-
-//     )
-// }
-
-
-// export default CommentSection;
-
 
 import React from 'react';
-
+import './NewComment';
 const CommentSection = props => {
   return (
     <div>
@@ -31,14 +9,25 @@ const CommentSection = props => {
         {props.comments.map((each, i) => {
           return (
             <div key={i}>
-              <b>{each.username}</b> {each.text}
+              <strong>{each.username}</strong> {each.text}
             </div>
           );
         })}
       </div>
-
+      <div>
+        {console.log(props.timestamp)}
+        <form onSubmit={(event) => props.submitNewComment(event, props.timestamp)}>
+          <input onChange={props.updateCommentField}
+            type="text"
+            name='commentField'
+            placeholder='Add a comment'
+            value={props.commentField}
+          />
+        </form>
+      </div>
     </div>
   );
 };
+
 
 export default CommentSection;
