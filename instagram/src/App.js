@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostsContainer from './components/PostsContainer';
 import SearchBar from './components/SearchBar';
+import PostsPage from './components/PostsPage';
 
 class App extends Component {
   constructor() {
@@ -21,6 +22,7 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         <PostsContainer posts={this.state.posts} />
+        <PostsPage />
       </div>
     );
   }
