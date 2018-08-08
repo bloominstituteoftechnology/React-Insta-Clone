@@ -1,8 +1,15 @@
 import React from 'react';
 import CommentSection from "../CommentSection/CommentSection";
+import styled from 'styled-components';
+
+const DataWrapper= styled.div`
+margin:auto 0;
+
+`;
 
 const PostContainer = obj => {
   return (
+    <DataWrapper>
     <div className='style'>
       <div className='username'>{obj.obj.username} </div>
       <img src={obj.obj.thumbnailUrl} alt='img' className='thumbnail' />
@@ -11,6 +18,7 @@ const PostContainer = obj => {
       <CommentSection comments={obj.obj.comments} />
     <div className='timestamp'>{obj.obj.timestamp}</div>
     </div>
+    </DataWrapper>
   );
 };
 
