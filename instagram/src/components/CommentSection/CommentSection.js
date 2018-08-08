@@ -1,19 +1,23 @@
 import React from 'react';
 
 
+    
+    const CommentSection = props => {
+      return (
+        <div>
+          <div>likes</div>
+          <div>
+            {props.comments.map((p, i) => {
+              return (
+                <div key={i}>
+                  <b>{p.username}</b> {p.text}
+                </div>
+              );
+            })}
+          </div>
+          <div>input</div>
+        </div>
+      );
+     };
 
-const Comment = props => {
-  return (
-    <div> 
-    {props.posts.map((username,i) =>  {key={i} username=username )}
-     
-      <span>{props.comments.text}</span>
-      <span>-{props.comments.username}</span>
-    </div>
-  
-  );
-};
-
-
-
-export default Comment;
+export default CommentSection;

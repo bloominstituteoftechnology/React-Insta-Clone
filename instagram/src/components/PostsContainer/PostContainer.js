@@ -1,27 +1,34 @@
-import React from "react";
-import Post from "./Post.js";
+import React, { Component } from "react";
+import CommentSection from "../../components/CommentSection/CommentSection";
+import "./post.css";
 
-const PostsContainer = props => {
+const PostContainer = props => {
   return (
-    <div className="posts-container-wrapper">
-      {props.posts.map((post, i) => {
+    <div className="container">
+      {props.posts.map((eachPost, i) => {
+        console.log(eachPost);
         return (
-          <div>
-            <div>{post.username}</div>
-            <img src={post.imageUrl} alt="post"/>
-            <Post key={i} post={post} />{" "}
+          <div key={i} className="post-border">
+            {/* <PostHeader */}
+
+            <div class="postHeader">
+              <img src={eachPost.thumbnailUrl} />
+              <div class="user">{eachPost.username}</div>
+            </div>
+            {/* /> */}
+            <div className="postPic">
+              <img
+                alt="post thumbnail"
+                className="post-image"
+                src={eachPost.imageUrl}
+              />
+            </div>
+            <CommentSection comments={eachPost.comments} />
           </div>
         );
       })}
-
-      {/* const list = {Object.keys(props.posts)} */}
-      {/* {(props.posts).map((p,i) =>  {if (typeof(p) != ('object')) */}
-      {/* } return p; }  */}
-
-      {console.log(props.posts[0])}
-      {console.log()}
     </div>
   );
 };
 
-export default PostsContainer;
+export default PostContainer;

@@ -1,4 +1,10 @@
-.App {
+.App  {
+  
+  height: 100%;
+  width: 800px;
+  border: 1px solid lightgray;
+  align-items: center;
+  margin-left: 200px;
   text-align: center;
 }
 
