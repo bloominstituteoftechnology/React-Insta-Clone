@@ -31,11 +31,12 @@ class App extends Component {
           searchItem={this.state.searchItem}
           searchPosts={this.SearchPostHandler}
         />
-        <PostsContainer posts={
-          this.state.filteredPosts.length > 0
-            ? this.state.filteredPosts
-            : this.state.posts
-        }
+        <PostsContainer
+          posts={
+            this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.posts
+          }
         />
       </div>
     );
