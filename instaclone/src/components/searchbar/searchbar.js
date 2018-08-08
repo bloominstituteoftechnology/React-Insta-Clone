@@ -11,6 +11,8 @@ let SearchBar = () => {
             <div>
                 <input type="text" placeholder="Search" />
             </div>
+            onClick={function(event) {
+            event.currentTarget.childNodes[1].classList.toggle("visible");}}
             <div className="social-wrapper">
                 <div classname="social">
                 <i classname="fa fa-compass" />
