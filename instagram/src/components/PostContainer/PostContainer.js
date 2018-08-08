@@ -2,15 +2,11 @@ import React from "react";
 import {
   Card,
   CardImg,
-  CardText,
   CardBody,
   CardTitle,
-  CardSubtitle,
-  Button
 } from "reactstrap";
 import styled from "styled-components";
 import CommentSection from "../CommentSection/CommentSection";
-import CommentForm from "../CommentSection/CommentForm";
 import PropTypes from 'prop-types';
 import moment from "moment";
 

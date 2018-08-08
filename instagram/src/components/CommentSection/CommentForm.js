@@ -1,7 +1,7 @@
 import React from "react";
 import { FormGroup, Label, Input, Button } from "reactstrap";
 import styled from "styled-components";
-import CommentSection from './CommentSection'
+
 
 const StyledForm = styled.div`
   margin-top: 30px;
@@ -14,7 +14,7 @@ const CommentForm = props => {
     <form onSubmit={props.addComment}>
       <FormGroup >
         <Label className="commentHeader"for="exampleText">Share your thoughts</Label>
-        <Input type="text" name="text" id="exampleText" name="commentInput" value={props.value} onChange={props.handleComment}/>
+        <Input type="text"  id="exampleText" name="commentInput" value={props.value} onChange={props.handleComment}/>
         <Button color="info" className="float-right submit-btn">
           Submit
         </Button>

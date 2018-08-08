@@ -1,15 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import moment from "moment";
 import CommentForm from "./CommentForm";
 import Comment from "./Comment";
 
-const CommentUser = styled.h5`
-  font-size: 16px;
-  font-weight: bold;
-  margin-right: 6px;
-`;
 
 const CommentWrapper = styled.div`
   display: flex;
