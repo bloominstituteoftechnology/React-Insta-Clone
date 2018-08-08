@@ -1,31 +1,23 @@
 import React from "react";
 import dummyData from "../dummy-data";
 
-
-
-
 // const Authenticate = App => {
-    class Authenticate extends React.Component{
-        constructor(props){
-            super(props);
-            this.state = {
-                username: props.username,
-            }
-        }
-        
-        authUser = () => {
-            
 
-            
-        }
+const Authenticate = Component => {
+  return class extends React.Component {
+    constructor(props) {
+      super(props);
+        this.state = {
 
-
-        render(){
-            return <App /> 
-        }
-    
+        };
+      
     }
+    authUser = () => {};
 
-
+    render() {
+      return <div>Hello</div>
+    }
+  };
+};
 
 export default Authenticate;

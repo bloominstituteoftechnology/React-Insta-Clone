@@ -40,7 +40,6 @@ class PostsPage extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
         <PostContainer posts={this.state.posts} />
         {/* <Authenticate /> */}
       </div>
