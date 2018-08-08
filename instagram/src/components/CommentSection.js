@@ -8,24 +8,24 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.comments,
-      newComment: "",
+      comment: "",
     };
   }
 
   commentHandler = e => {
-    this.setState({ newComment: e.target.value });
+    this.setState({ comment: e.target.value });
   };
 
   commentSubmit = e => {
     e.preventDefault();
     // build out our comment obj
-    const newComments = { text: this.state.newComment, username: "Leeroy Jenkins" };
+    const newComment = { text: this.state.comment, username: "Leeroy Jenkins" };
     // clone our comments array
     const comments = this.state.comments.slice();
     // push obj into new clone
-    comments.push(newComments);
+    comments.push(newComment);
     // set new clone as state... + reset our comment str
-    this.setState({ newComment: "", comments });
+    this.setState({ comment: "", comments});
   };
 
 

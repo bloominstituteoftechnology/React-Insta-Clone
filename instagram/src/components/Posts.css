@@ -35,7 +35,8 @@
   }
   
   .like-section-wrapper {
-    height: 10px;
-    width: 10px;
+    height: 20px;
+    width: 20px;
     margin: 10px;
+    border: 2px dashed red;
   }
