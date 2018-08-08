@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import PostsPage from "./components/PostContainer/PostsPage"
+import Authenticate from "./components/Authentication/Authenticate";
 /* import CommentSection from "./components/CommentSection/CommentSection";
 import SearchBar from "./components/SearchBar/SearchBar";
  */
@@ -14,7 +15,7 @@ class App extends Component {
 
   componentDidMount() {
     const user = localStorage.getItem("user");
-    this,this.setState({username: user});
+    this.setState({username: user});
   }
 
   render() {
@@ -25,4 +26,4 @@ class App extends Component {
     )
   }
 };
-export default App;
+export default Authenticate(App);
