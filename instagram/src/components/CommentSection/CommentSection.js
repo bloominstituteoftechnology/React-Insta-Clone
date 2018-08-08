@@ -33,6 +33,7 @@ class CommentSection extends Component {
                     <CommentInput 
                         addNewComment={this.addNewComment}
                         changeHandler={this.changeHandler}
+                        comment={this.state.comment}
                     />
                     <img className="optionsImage" src={options} alt="Comment Options" />
                 </div>

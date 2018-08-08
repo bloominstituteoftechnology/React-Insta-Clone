@@ -10,7 +10,7 @@ const Post = props => {
         <div className="postContain">
             {props.posts.map(post => {
                 return (
-                    <div key={post.username}>
+                    <div className="eachPost" key={post.username}>
                         <div className="usernIcon">
                             <img className="iconThumbnail" src={post.thumbnailUrl} alt="User Thumbnail" />
                             <span><strong>{post.username}</strong></span>
@@ -23,8 +23,6 @@ const Post = props => {
                             </div>
                             <p className="likes"><strong>{post.likes} likes</strong></p>
                             <CommentSection comments={post.comments} />
-                        </div>
-                        <div className="bottom">
                         </div>
                     </div>
                 );

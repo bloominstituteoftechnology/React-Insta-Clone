@@ -1,7 +1,11 @@
 .postContain {
-    border: 1px solid lightgray;
     width: 640px;
     margin: 0 auto;
+}
+
+.eachPost {
+    margin-bottom: 20px;
+    border: 1px solid lightgray;
 }
 
 .pcImage {
@@ -31,8 +35,4 @@
 
 .likes {
     margin-top: 0;
-}
-
-.bottom {
-    border-bottom: 1px solid lightgray;
 }
