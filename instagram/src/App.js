@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import dummyData from "./dummy-data.js";
-import PostContainer from "./components/PostContainer/PostContainer";
-import SearchBar from "./components/SearchBar/SearchBar.js";
+import PostsPage from "./components/PostContainer/PostsPage"
 /* import CommentSection from "./components/CommentSection/CommentSection";
 import SearchBar from "./components/SearchBar/SearchBar";
  */
@@ -10,22 +8,21 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: [],
-      filteredData: []
+      username: ""
     };
   }
 
   componentDidMount() {
-    this.setState({ data: dummyData });
+    const user = localStorage.getItem("user");
+    this,this.setState({username: user});
   }
+
   render() {
     return (
-      <div>
-        <SearchBar />
-        <PostContainer posts={this.state.data} />
+      <div className="App">
+        <PostsPage/>
       </div>
-    );
+    )
   }
-}
-
+};
 export default App;
