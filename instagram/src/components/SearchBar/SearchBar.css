@@ -3,22 +3,24 @@
     height: 60px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     border: 1px solid red;
+    align-items: center;
 }
 
-.image-container {
-    height: 25px;
-}
 
 .instagram-img {
+    display: flex;
     height: 40px;
+    border: 1px solid green;
+    height: 40px;
+    align-self: center;
+    
 }
 
 .icon-container {
     display: flex;
     justify-content: space-between;
-    border: 1px solid green;
+    margin-right: 20px;
     width: 125px;
     height: 25px;
 }

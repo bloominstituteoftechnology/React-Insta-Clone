@@ -11,7 +11,8 @@ const Likes = props => {
                     <i className="far fa-comment" />
                 </div>
             </div>
-            <div className="likes-number">{props.likes}</div>
+            <div className="likes-number">{props.likes} Likes</div>
+            
         </div>
 
     );

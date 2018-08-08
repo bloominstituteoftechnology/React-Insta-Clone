@@ -2,6 +2,7 @@ import React from 'react';
 import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
 import Likes from './Likes';
+import './Post.css';
 
 
 class Post extends React.Component {
@@ -17,7 +18,7 @@ class Post extends React.Component {
                if(this.state.likeFlag === false) {
                 let likes = this.state.likes + 1;
                 this.setState({ likes, likeFlag: true });
-                }else {
+                }else{
                   let likes = this.state.likes - 1;
                 this.setState({ likes, likeFlag: false})  
                 }
