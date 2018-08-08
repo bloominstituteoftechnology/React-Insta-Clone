@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchBar from "./components/SearchBar/SearchBar"
-import PostContainer from "./components/PostContainer/PostContainer"
-import dummyData from './dummy-data'
-import styled from 'styled-components'
+import SearchBar from "./components/SearchBar/SearchBar";
+import PostContainer from "./components/PostContainer/PostContainer";
+import dummyData from './dummy-data';
+import styled from 'styled-components';
+import Authenticate from './components/Authentication/Authenticate';
 
 const StyledApp = styled.div`
   max-width: 800px;
