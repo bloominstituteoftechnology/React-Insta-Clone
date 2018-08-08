@@ -5,6 +5,7 @@ import CommentSection from "../CommentSection/CommentSection";
 import PropTypes from "prop-types";
 import moment from "moment";
 
+
 const PostHeader = styled.div`
   display: flex;
   align-items: center;
@@ -79,7 +80,7 @@ class PostContainer extends React.Component {
     ).fromNow();
     return (
       <div>
-        <Card>
+        <Card className={this.props.className}>
           <PostHeader>
             <AvatarImg src={this.props.post.thumbnailUrl} alt="avatar_img" />
             {this.props.post.username}

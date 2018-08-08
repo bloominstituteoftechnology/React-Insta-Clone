@@ -1,33 +1,40 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
-import dummyData from './dummy-data';
-import styled from 'styled-components';
-import Authenticate from './components/Authentication/Authenticate';
+import dummyData from "./dummy-data";
+import styled from "styled-components";
+import Authenticate from "./components/Authentication/Authenticate";
+
 
 const StyledApp = styled.div`
   max-width: 800px;
   margin: 1.5% auto;
-`
+`;
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
-      data : []
-    }
+      data: []
+    };
   }
 
   componentDidMount() {
     this.setState({
-      data : dummyData
+      data: dummyData
     });
   }
   render() {
     return (
       <StyledApp>
-      <SearchBar />
-      {this.state.data.map(post => <PostContainer key={post.username} post={post}/>)}
+        <SearchBar />
+        {this.state.data.map(post => (
+          <PostContainer
+            className={post.username}
+            key={post.username}
+            post={post}
+          />
+        ))}
       </StyledApp>
     );
   }

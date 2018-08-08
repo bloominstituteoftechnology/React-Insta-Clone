@@ -41,3 +41,30 @@
 .red {
   color: red;
 }
+
+ .philzcoffee{
+  margin-top: 55px;
+  
+}
+
+.searchBar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgba(219, 219, 219, 0.925);
+  align-items: center;
+  max-width: 800px;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.178);
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.sContainer {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  max-width: 800px;
+  width: 100%;
+  margin-right: -10px;
+  
+}
