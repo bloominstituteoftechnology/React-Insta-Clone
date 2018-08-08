@@ -24,6 +24,7 @@ class CommentSection extends Component {
     };
   }
   handleEvent = event => {
+    console.log(event.target.value)
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -44,6 +45,7 @@ class CommentSection extends Component {
   };
 
   render() {
+    console.log(this.state)
     return (
       <CommentWrapper>
         {this.state.commentArray.map(comment => (

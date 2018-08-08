@@ -28,7 +28,7 @@
 }
 
 .submit-btn {
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 40px;
 }
 
@@ -36,4 +36,8 @@
   margin-bottom: 10px;
   font-size: 12px;
   color: rgb(149, 149, 149);
+}
+
+.red {
+  color: red;
 }

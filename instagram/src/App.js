@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <StyledApp>
       <SearchBar />
-      <PostContainer data={this.state.data}/>
+      {this.state.data.map(post => <PostContainer key={post.username} post={post}/>)}
       </StyledApp>
     );
   }

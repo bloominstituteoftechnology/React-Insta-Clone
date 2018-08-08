@@ -4,7 +4,8 @@ import styled from "styled-components";
 
 
 const StyledForm = styled.div`
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: -50px;
   width: 100%;
 `;
 
@@ -14,7 +15,7 @@ const CommentForm = props => {
     <form onSubmit={props.addComment}>
       <FormGroup >
         <Label className="commentHeader"for="exampleText">Share your thoughts</Label>
-        <Input type="text"  id="exampleText" name="commentInput" value={props.value} onChange={props.handleComment}/>
+        <Input type="text"  id="exampleText" name="commentInput" value={props.value} onChange={props.handleEvent}/>
         <Button color="info" className="float-right submit-btn">
           Submit
         </Button>
