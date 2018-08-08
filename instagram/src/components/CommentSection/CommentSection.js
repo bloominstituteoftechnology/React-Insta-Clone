@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
 import PropTypes from 'prop-types';
@@ -19,16 +19,16 @@ class CommentSection extends React.Component {
     submitNewComment = event => {
         event.preventDefault();
 
-        const newComment = { text: this.state.comment, username: "dennis_futbol" };
+        const newComment = { text: this.state.comment, username: 'dennis_futbol' };
         const comments = this.state.comments.slice();
         comments.push(newComment);
-        this.setState({ comment: "", comments });
+        this.setState({ comments, comment: '' });
     };
 
     render() {
         return (
           <div>
-            {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
+            {this.state.comments.map((comment, i) => <Comment key={i} comment={comment} />)}
             <CommentInput
               submitHandler={this.commentSubmit}
               changeHandler={this.commentHandler}

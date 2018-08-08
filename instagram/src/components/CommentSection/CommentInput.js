@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const CommentInput = props => {
   return (
@@ -6,8 +6,8 @@ const CommentInput = props => {
         <input
             onChange={props.changeHandler}
             value={props.comment}
-            type="text"
-            placeholder="Add comment... "
+            type='text'
+            placeholder='Add comment... '
          />
     </form>
   );

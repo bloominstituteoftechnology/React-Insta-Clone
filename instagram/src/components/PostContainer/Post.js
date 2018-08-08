@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
 
@@ -7,12 +7,12 @@ const Post = props => {
         <div>
             <PostHeader
                 username= {props.post.username}
-                thumbnailURL= {props.post.thumbnailURL}
+                thumbnailUrl= {props.post.thumbnailUrl}
              />
             <div>
                 <img 
-                    src= {props.post.imageURL} 
-                    alt= "post-main-image"
+                    src= {props.post.imageUrl} 
+                    alt= "post-main"
                  />
             </div>
             <CommentSection comments= {props.post.comments} />

@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const PostHeader = props => {
     return (
         <div>
             <div>
                 <img 
-                    src= {props.thumbnailURL} 
-                    alt= "post-header-image"
+                    src= {props.thumbnailUrl} 
+                    alt= "post-header"
                  />
             </div>
             <div>{props.username}</div> 

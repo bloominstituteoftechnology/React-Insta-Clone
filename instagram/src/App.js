@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import dummyData from './dummy-data.js'
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 
-class App extends Component {
+class App extends React.Component {
   constructor() {
     super();
     this.state = {
