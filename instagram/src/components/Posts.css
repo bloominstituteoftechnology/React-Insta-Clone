@@ -30,9 +30,12 @@
     border-radius: 50%;
   }
 
-  .likes {
+  .like-section {
     display: flex;
-    flex-direction: column;
-    margin-left: -700px;
-    padding: 10px;
+  }
+  
+  .like-section-wrapper {
+    height: 10px;
+    width: 10px;
+    margin: 10px;
   }

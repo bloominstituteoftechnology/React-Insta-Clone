@@ -9,20 +9,8 @@ class CommentSection extends React.Component {
     this.state = {
       comments: props.comments,
       newComment: "",
-      likes: props.likes,
-      newLikes: "",
     };
   }
-
-  likeHandler = event => {
-    this.setState({ newLikes: event.target.value });
-  };
-
-  likeSubmit = event => {
-    event.preventDefault();
-
-    const newLikes = {}
-  };
 
   commentHandler = e => {
     this.setState({ newComment: e.target.value });
