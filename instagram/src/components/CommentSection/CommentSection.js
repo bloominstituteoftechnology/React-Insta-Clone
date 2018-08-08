@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import Comment from "./Comment";
+import CommentInput from './CommentInput'
+import options from '../../assets/options.jpg';
 
 class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
             comments: props.comments,
-            comment: ''
+            comment: '',
         }
     }
 
-    changeHandler = e => {
-        this.setState({comment: e.target.value})
+    changeHandler = event => {
+        this.setState({comment: event.target.value})
     }
 
-    addNewComment = e => {
+    addNewComment = event => {
+        event.preventDefault();
         const newComment = {text: this.state.comment, username: 'Fred'};
         const comments = this.state.comments.slice();
         comments.push(newComment);
@@ -25,6 +28,14 @@ class CommentSection extends Component {
         return(
             <div>
                 <Comment comments={this.state.comments} />
+                {/* <p className="timeStamp">{this.comments.timestamp}</p> */}
+                <div className="bottomInput">
+                    <CommentInput 
+                        addNewComment={this.addNewComment}
+                        changeHandler={this.changeHandler}
+                    />
+                    <img className="optionsImage" src={options} alt="Comment Options" />
+                </div>
             </div>
         );
     }

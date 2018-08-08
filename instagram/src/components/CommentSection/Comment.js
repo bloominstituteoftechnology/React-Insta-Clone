@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import options from '../../assets/options.jpg';
 import './CommentSection.css'
 
 const Comment = props => {
@@ -15,16 +14,6 @@ const Comment = props => {
                     );
                 })}
             </div>
-            {/* <p className="timeStamp">{props.timestamp}</p> */}
-            <form className="bottomInput" onSubmit={props.addNewComment}>    
-                <input  
-                    type="text"
-                    onChange={props.changeHandler}
-                    placeholder="Add a comment..." 
-                    name="comment" 
-                />
-                <img className="optionsImage" src={options} alt="Comment Options" />
-            </form>
         </div>
     );
 }
