@@ -1,11 +1,16 @@
 import React from "react";
+import dummyData from "../../dummy-data";
+import PostContainer from "./PostContainer.js";
+import SearchBar from '../SearchBar/SearchBar';
 
-class PostsPage extends Component {
+class PostsPage extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      postList: [],
+      commentField: ''
+    };
   }
-
   componentDidMount() {
     this.setState({ postList: dummyData });
   }
@@ -27,8 +32,19 @@ class PostsPage extends Component {
     });
     this.setState({ postList: newPostList, commentField: "" });
   };
+
   render() {
-    return <div>Test</div>;
+    return (
+      <div className="App">
+      <SearchBar />
+      <PostContainer
+        postList={this.state.postList}
+        submitNewComment={this.submitNewComment}
+        updateCommentField={this.updateCommentField}
+        commentField={this.props.commentField}
+      />
+    </div>
+    );
   }
 }
 

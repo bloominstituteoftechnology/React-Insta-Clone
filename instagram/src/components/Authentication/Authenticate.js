@@ -1,10 +1,24 @@
-import React from 'react';
+import React from "react";
+import  Login  from "../Login/Login";
 
-const Authenticate = App =>
-  class extends React.Component {
+const Authenticate = PassedComponent => {
+  let timer = "5";
+  return class AuthenticationClass extends React.Component {
+    state = {
+      loggedIn: false,
+      credentials: localStorage.getItem('credentials')
+    };
+
     render() {
-      return <App />;
+      return this.state.loggedIn ? (
+        <PassedComponent />
+      ) : (
+          <Login />
+        );
     }
   };
+};
 
-  export default Authenticate;
+
+export default Authenticate;
+

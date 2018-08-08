@@ -1,6 +1,5 @@
 
 import React from 'react';
-import './NewComment';
 const CommentSection = props => {
   return (
     <div>
