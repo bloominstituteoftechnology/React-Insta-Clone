@@ -1,6 +1,7 @@
 import React from 'react';
 import Post from './Post';
 import './Posts.css';
+
 const PostsContainer = props => {
     return (
         <div className="posts-container-wrapper">

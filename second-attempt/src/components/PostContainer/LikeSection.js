@@ -15,8 +15,9 @@ const LikeSection = props => {
             </div>
         </div> ,
         <div className="like-section" key="likes-container">
-            <div className="like-section-wrapper">{props.likes}</div>
+            <div className="like-section-wrapper">{props.likes}{'likes'}</div>
         </div>
     );
 };
+
 export default LikeSection; 
