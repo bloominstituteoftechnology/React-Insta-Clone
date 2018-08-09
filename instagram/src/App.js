@@ -34,7 +34,6 @@ class App extends Component {
 
   handleSearchState = event => {
     this.setState({searchState: event.target.value})
-    console.log
     const filteredUser = this.state.data.filter(user => user.username.includes(this.state.searchState) 
   ) 
    

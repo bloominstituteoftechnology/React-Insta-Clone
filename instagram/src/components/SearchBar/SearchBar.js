@@ -76,7 +76,7 @@ class SearchBar extends Component {
             <SearchInput
               className="fa fa-input"
               placeholder="&#xf002; Search"
-              onChange={this.props.handleSearchState}
+              onKeyUp={this.props.handleSearchState}
             />
           </Col>
           <Col sm="4" xs="12">
