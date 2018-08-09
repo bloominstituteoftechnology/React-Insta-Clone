@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from 'react';
 import styled from "styled-components";
 import { Container, Row, Col } from "reactstrap";
 import PropTypes from "prop-types";
@@ -50,7 +50,18 @@ const RightNav = styled.div`
   justify-content: flex-end;
 `;
 
-const SearchBar = (props) => {
+class SearchBar extends Component {
+  constructor(props) {
+  super(props)
+  this.state = { 
+    searchState: ""
+}
+  }
+  handleSearchState = event => {
+    this.setState({searchState: event.target.value})
+  } 
+
+  render() {
   return (
     <SearchContainer>
       <Container className="sContainer">
@@ -65,6 +76,7 @@ const SearchBar = (props) => {
             <SearchInput
               className="fa fa-input"
               placeholder="&#xf002; Search"
+              onChange={this.handleSearchState}
             />
           </Col>
           <Col sm="4" xs="12">
@@ -72,7 +84,7 @@ const SearchBar = (props) => {
               <i className="far fa-compass" />
               <i className="far fa-heart" />
               <i className="far fa-user" />
-              <i className="fas fa-sign-out-alt logout" onClick={props.handleLogout} />
+              <i className="fas fa-sign-out-alt logout" onClick={this.props.handleLogout} />
             </RightNav>
           </Col>
         </Row>
@@ -80,6 +92,7 @@ const SearchBar = (props) => {
     </SearchContainer>
   );
 };
+}
 
 Container.propTypes = {
   fluid:  PropTypes.bool

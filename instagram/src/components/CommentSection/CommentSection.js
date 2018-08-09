@@ -6,17 +6,7 @@ import Comment from "./Comment";
 import PostContainer from '../PostContainer/PostContainer'
 
 
-const CommentWrapper = styled.div`
-  display: flex;
-  align-items: baseline;
-  line-height: 0px;
-  flex-wrap: wrap;
-  p {
-    font-size: 14px;
-    line-height: 16px;
-    margin-bottom: 20px;
-  }
-`;
+
 
 class CommentSection extends Component {
   constructor(props) {
@@ -54,7 +44,7 @@ class CommentSection extends Component {
   render() {
     console.log(this.state)
     return (
-      <CommentWrapper>
+      <div>
         {this.state.commentArray.map(comment => (
           <Comment key={comment.username} comment={comment} />
         ))}
@@ -64,7 +54,7 @@ class CommentSection extends Component {
           value={this.state.commentInput}
           handleEvent={this.handleEvent}
         />
-      </CommentWrapper>
+      </div>
     );
   }
 }

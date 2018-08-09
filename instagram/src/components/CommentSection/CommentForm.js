@@ -12,6 +12,7 @@ const StyledForm = styled.div`
 const Styledh4 = styled.h4`
   font-size: 10px;
   color: #969696;
+  padding-top: 20px;
 `;
 
 const CommentForm = props => {
