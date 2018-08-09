@@ -1,7 +1,7 @@
 import React from "react";
 import PostHeader from "./PostHeader";
-// import './Posts.css';
-import CommentSection from '../CommentSection/CommentSection';
+import "./Post.css";
+import CommentSection from "../CommentSection/CommentSection";
 
 const PostContainer = props => {
   return (
@@ -20,7 +20,13 @@ const PostContainer = props => {
                 src={eachPost.imageUrl}
               />
             </div>
-            <CommentSection comments={eachPost.comments} />
+            <CommentSection
+              comments={eachPost.comments}
+              timestamp={eachPost.timestamp}
+              updateCommentField={props.updateCommentField}
+              submitNewComment={props.submitNewComment}
+              commentField={props.commentField}
+            />
           </div>
         );
       })}

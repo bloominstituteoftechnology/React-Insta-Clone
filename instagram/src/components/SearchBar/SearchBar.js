@@ -1,8 +1,8 @@
-import React from 'react';
-import IGLogo from '../../assets/iglogo.png';
-import './SearchBar.css';
+import React from "react";
+import IGLogo from "../../assets/IG-Logo.png";
+import "./SearchBar.css";
 
-const SearchBar = () => {
+const SearchBar = props => {
   return (
     <div className="search-bar-wrapper">
       <div className="image-wrapper">
@@ -22,6 +22,7 @@ const SearchBar = () => {
           <i className="fa fa-user-circle" />
         </div>
       </div>
+      <button onClick={() => props.handleCreds(null)}>LOGOUT!!!</button>
     </div>
   );
 };

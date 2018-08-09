@@ -8,12 +8,22 @@ const CommentSection = props => {
         {props.comments.map((each, i) => {
           return (
             <div key={i}>
-              <b>{each.username}</b> {each.text}
+              <strong>{each.username}</strong> {each.text}
             </div>
           );
         })}
       </div>
-      <div>input</div>
+      <div>
+        <form onSubmit={(event) => props.submitNewComment(event, props.timestamp)} className="commentBar">
+          <input
+            onChange={props.updateCommentField}
+            type="text"
+            placeholder="Add comment... "
+            name='commentField'
+            value={props.commentField}
+          />
+        </form>
+      </div>
     </div>
   );
 };
