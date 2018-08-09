@@ -25,8 +25,12 @@ class PostsPage extends React.Component {
     this.setState({posts: dummyData});
   }
 
-  searchPostsHandler () {
-
+  searchPostsHandler = event => {
+    const post = this.state.posts.filter(props => {
+      if (props.username.includes(event.target.value)) {
+        return 
+      }
+    })
   }
 
 
