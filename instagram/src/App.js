@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./App.css";
 import PostsPage from "./components/PostContainer/PostsPage"
 import Authenticate from "./components/Authentication/Authenticate";
 /* import CommentSection from "./components/CommentSection/CommentSection";
 import SearchBar from "./components/SearchBar/SearchBar";
  */
+ 
 class App extends Component {
   constructor() {
     super();

@@ -2,39 +2,43 @@ import React, { Component } from "react";
 import dummyData from "../../dummy-data.js";
 import PostContainer from "./PostContainer";
 import SearchBar from "../SearchBar/SearchBar.js";
+import styled from 'styled-components';
+
+const Page = styled.div``
 
 class PostsPage extends Component {
     constructor() {
         super();
         this.state = {
-            data: [],
-            filteredData: []
+            posts: [],
+            filteredposts: []
           };
         }
       
         componentDidMount() {
-          this.setState({ data: dummyData });
+          this.setState({ posts: dummyData });
         }
-        searchDataHandler = e => {
-          const data = this.state.data.filter(posts => {
+
+        searchpostsHandler = e => {
+          const posts = this.state.posts.filter(posts => {
             if (posts.username.includes(e.target.value)) {
               return posts;
             }
           });
-          this.setState({ filteredData: data });
+          this.setState({ filteredposts: posts });
         };
         render() {
           return (
-            <div>
-              <SearchBar searchPosts={this.searchDataHandler} />
+            <Page>
+              <SearchBar searchPosts={this.searchpostsHandler} />
               <PostContainer
                 posts={
-                  this.state.filteredData.length > 0
-                    ? this.state.filteredData
-                    : this.state.data
+                  this.state.filteredposts.length > 0
+                    ? this.state.filteredposts
+                    : this.state.posts
                 }
               />
-            </div>
+            </Page>
           );
         }
       }
