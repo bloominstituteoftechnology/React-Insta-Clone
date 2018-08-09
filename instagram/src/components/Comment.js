@@ -1,18 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './CommentSection.css';
+import { UserName } from './PostsContainer/PostHeader';
+import styled, { css } from 'styled-components';
+
+export const FlexWrapper = styled.div`
+  display: flex;
+  ${props =>
+    props &&
+    css`
+      line-height: 8px;
+    `};
+`;
+
+const CommentParagraph = styled.p`
+  font-weight: 400;
+  font-size: 0.8em;
+  padding: 0 5px;
+`;
 
 const Comment = props => {
   return (
-    <div className="comment-text">
-      {/* <span className="comment">{props.comment.text}</span>{' '}
-      <span className="user">-{props.comment.username}</span> */}
-      <div>
-        <b>{props.comment.username}</b>
-        {'-'}
-        {props.comment.text}
-      </div>
-    </div>
+    <FlexWrapper>
+      <UserName>{props.comment.username}</UserName>
+      <CommentParagraph>{props.comment.text}</CommentParagraph>
+    </FlexWrapper>
   );
 };
 
@@ -22,6 +33,5 @@ Comment.propTypes = {
     username: PropTypes.string
   })
 };
-
 
 export default Comment;

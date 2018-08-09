@@ -1,49 +1,46 @@
-import React from "react";
-import dummyData from "../dummy-data";
-import PostContainer from "./PostsContainer";
+import React, { Component } from 'react';
+import dummyData from '../../dummy-data';
+import PostsContainer from './PostsContainer';
+import SearchBar from './SearchBar';
 
-class PostPage extends React.Component {
+class PostsPage extends Component {
   constructor() {
     super();
     this.state = {
-      postList: [],
-      commentField: ""
+      posts: [],
+      filteredPosts: []
     };
   }
   componentDidMount() {
-    this.setState({ postList: dummyData });
+    this.setState({ posts: dummyData });
   }
 
-  updateCommentField = event => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
-
-  submitNewComment = (event, timestamp) => {
-    event.preventDefault();
-    const newPostList = this.state.postList.map(eachPost => {
-      if (eachPost.timestamp === timestamp) {
-        eachPost.comments.push({
-          username: "Clark Kent",
-          text: this.state.commentField
-        });
+  searchPostsHandler = e => {
+    // eslint-disable-next-line
+    const posts = this.state.posts.filter(p => {
+      if (p.username.includes(e.target.value)) {
+        return p;
       }
-      return eachPost;
     });
-    this.setState({ postList: newPostList, commentField: "" });
+    this.setState({ filteredPosts: posts });
   };
-
   render() {
     return (
       <div className="App">
-        <PostContainer
-          postList={this.state.postList}
-          updateCommentField={this.updateCommentField}
-          submitNewComment={this.submitNewComment}
-          commentField={this.state.commentField}
+        <SearchBar
+          searchTerm={this.state.searchTerm}
+          searchPosts={this.searchPostsHandler}
+        />
+        <PostsContainer
+          posts={
+            this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.posts
+          }
         />
       </div>
     );
   }
 }
 
-export default PostPage;
+export default PostsPage;

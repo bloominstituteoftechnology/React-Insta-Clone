@@ -1,20 +1,25 @@
-import React from "react";
-import Login from "../Login/Login";
+import React from 'react';
+import LoginPage from '../Login/Login';
 
-export default PassedComponent => {
-  return class AuthenticationClass extends React.Component {
-    componentDidUpdate() {
-      if (!this.props.credentials && localStorage.getItem("credentials")) {
-        this.props.handleCreds(localStorage.getItem("credentials"));
+const Authenticate = App =>
+  class extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        loggedIn: false
+      };
+    }
+    componentDidMount() {
+      if (!localStorage.getItem('user')) {
+        this.setState({ loggedIn: false });
+      } else {
+        this.setState({ loggedIn: true });
       }
     }
-
     render() {
-      return this.props.credentials ? (
-        <PassedComponent />
-      ) : (
-        <Login {...this.props} />
-      );
+      if (this.state.loggedIn) return <App />;
+      return <LoginPage />;
     }
   };
-};
+
+export default Authenticate;
