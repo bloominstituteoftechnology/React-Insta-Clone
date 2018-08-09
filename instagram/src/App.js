@@ -1,10 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 // import PropTypes from "prop-types";
 import dummyData from "./dummy-data";
 import PostsPage from "./PostContainer/PostsPage";
-import Authenticate from './Authentication/Authentication';
-import Login from './Login/Login';
 import SearchBar from "./SearchBar/SearchBar";
 
 
@@ -14,7 +12,7 @@ console.log(dummyData);
 // const  = Authenticate(SearchBar);
 
 
-class App extends Component {
+class App extends React.Component {
   constructor(){
     super();
     this.state= {
@@ -49,7 +47,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
+        <SearchBar handleCreds={this.handleCreds}/>
         {/* <HOCAuthSearch /> */}
         <PostsPage /> 
       </div>

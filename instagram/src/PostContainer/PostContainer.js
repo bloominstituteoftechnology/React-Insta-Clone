@@ -5,7 +5,6 @@ import "./PostContainer.css";
 //uuid
 
 const PostContainer = props => {
-  console.log("in post container", props.posts);
   return (
     <div className="insta-post-container">
       {props.posts.map((each, i) => {

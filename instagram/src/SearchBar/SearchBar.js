@@ -6,16 +6,16 @@ const SearchBar = props => {
   return (
     <div className="search-bar-container">
       <div className="social-left">
-        <i class="fa fa-instagram" aria-hidden="true" /> 
+        <i className="fa fa-instagram" aria-hidden="true" /> 
         <span>|</span>
-        <img src="../intagram/public/pictures/Instagram_logo.png" alt="instagram-logo"/>
+        <img src="../assets/Instagram_logo.png" alt="instagram-logo"/>
       </div>
       <input className="search-bar" type="text" placeholder="search"/>
       <div className="social-right">
-        <i class="fa fa-compass" aria-hidden="true" />
-        <i class="fa fa-heart" aria-hidden="true" />
-        <i onClick={() => <Login />} class="fa fa-user" aria-hidden="true" />
-        
+        <i className="fa fa-compass" aria-hidden="true" />
+        <i className="fa fa-heart" aria-hidden="true" />
+        <i  className="fa fa-user" aria-hidden="true" />
+        <Login />
         {/* <button onClick= */}
       </div>
     </div>
