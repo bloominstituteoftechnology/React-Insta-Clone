@@ -50,7 +50,6 @@
 .searchBar {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   background-color: rgba(219, 219, 219, 0.925);
   align-items: center;
   max-width: 800px;
@@ -73,3 +72,19 @@
  cursor: pointer;
  color: rgba(0, 0, 0, 0.589);
 }
+
+@media(max-width: 576px) {
+  .sContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: blue;
+    
+  }
+    .philzcoffee{
+      margin-top: 105px;
+      
+    }
+  
+}
+

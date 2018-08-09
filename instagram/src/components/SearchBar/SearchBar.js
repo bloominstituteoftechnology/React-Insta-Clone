@@ -52,19 +52,19 @@ const SearchBar = (props) => {
     <SearchContainer>
       <Container className="sContainer">
         <Row className="searchBar">
-          <Col xs="auto">
+          <Col sm="4" xs="12">
             <LeftNav>
               <i className="fab fa-instagram" />
               <LogoText>Instagram</LogoText>
             </LeftNav>
           </Col>
-          <Col xs="auto">
+          <Col sm="4" xs="12">
             <SearchInput
               className="fa fa-input"
               placeholder="&#xf002; Search"
             />
           </Col>
-          <Col xs="auto">
+          <Col sm="4" xs="12">
             <RightNav>
               <i className="far fa-compass" />
               <i className="far fa-heart" />

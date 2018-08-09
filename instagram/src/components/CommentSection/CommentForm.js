@@ -10,10 +10,12 @@ const StyledForm = styled.div`
 `;
 
 const CommentForm = props => {
+  if (props.commentClicked === true) {
   return (
-    <StyledForm>
-    <form onSubmit={props.addComment}>
-      <FormGroup >
+    
+        <StyledForm>
+        <form onSubmit={props.addComment}>
+        <FormGroup >
         <Label className="commentHeader"for="exampleText">Share your thoughts</Label>
         <Input type="text"  id="exampleText" name="commentInput" value={props.value} onChange={props.handleEvent}/>
         <Button color="info" className="float-right submit-btn">
@@ -22,8 +24,14 @@ const CommentForm = props => {
       </FormGroup>
       </form>
     </StyledForm>
+      );
+    } else {
+      return (
+        <p>Click comment icon to display comments </p>
+      )};
+    
+  
+    }
 
-  );
-};
 
 export default CommentForm;

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import CommentForm from "./CommentForm";
 import Comment from "./Comment";
+import PostContainer from '../PostContainer/PostContainer'
 
 
 const CommentWrapper = styled.div`
@@ -12,6 +13,8 @@ const CommentWrapper = styled.div`
   flex-wrap: wrap;
   p {
     font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -43,7 +46,7 @@ class CommentSection extends Component {
     })
     //const commentArray = {...this.state.commentArray} (Spread Operator)
   };
-  
+
    // JSON.parse / stringify 
    // ComponentDidMount var that captures from local storage (getItem) & save to var if exsists set state if not then dummy data
   // set data to local storage
@@ -56,6 +59,7 @@ class CommentSection extends Component {
           <Comment key={comment.username} comment={comment} />
         ))}
         <CommentForm
+          commentClicked={this.props.commentClicked}
           addComment={this.addComment}
           value={this.state.commentInput}
           handleEvent={this.handleEvent}

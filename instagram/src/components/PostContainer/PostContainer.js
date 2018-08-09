@@ -23,6 +23,7 @@ const Likes = styled.h3`
   margin-bottom: 15px;
   font-weight: bold;
   margin-left: 3px;
+  
 
 `;
 
@@ -32,6 +33,13 @@ const BottomIcons = styled.div`
   justify-content: space-between;
   width: 70px;
   margin-bottom: 10px;
+  
+  .fa-heart {
+    cursor: pointer;
+  }
+  .fa-comment {
+    cursor: pointer;
+  }
 `;
 
 const BottomBorder = styled.div`
@@ -52,7 +60,8 @@ class PostContainer extends React.Component {
     super(props);
     this.state = {
       likes: props.post.likes,
-      liked: false
+      liked: false,
+      commentClicked: false
     };
   }
 
@@ -72,6 +81,14 @@ class PostContainer extends React.Component {
       });
     }
   };
+
+  toggleComment = () => {
+    if(this.state.commentClicked === false) {
+      this.setState({ commentClicked: true})
+    } else {
+      this.setState({ commentClicked: false })
+    }
+  }
 
   render() {
     const fromNow = moment(
@@ -94,13 +111,14 @@ class PostContainer extends React.Component {
           <CardBody>
             <BottomIcons>
               <i className={this.state.liked ? "fas fa-heart red" : "far fa-heart"} onClick={this.toggleLike} />
-              <i className="far fa-comment" />
+              <i className={this.state.commentClicked ? "fas fa-comment" : "far fa-comment"} onClick={this.toggleComment}  />
             </BottomIcons>
             <Likes>{this.state.likes}</Likes>
             <p>{fromNow}</p>
             <CommentSection
               date={this.props.post.timestamp}
               comments={this.props.post.comments}
+              commentClicked={this.state.commentClicked}
             />
           </CardBody>
         </Card>
