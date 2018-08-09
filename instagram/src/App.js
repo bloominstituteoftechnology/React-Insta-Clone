@@ -4,7 +4,7 @@ import PostsPage from "./components/PostContainer/PostsPage";
 import SearchBar from "./components/SearchBar/SearchBar";
 import Authenticate from "./components/Authentication/Authenticate";
 
-const PostsPageAuth = Authenticate(PostsPage);
+const PostPageAuth = Authenticate(PostsPage);
 
 class App extends Component {
   state = {
@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar handleCreds={this.handleCreds} />
-        <PostPageAuthed
+        <PostPageAuth
           credentials={this.state.credentials}
           username={this.state.username}
           password={this.state.password}
