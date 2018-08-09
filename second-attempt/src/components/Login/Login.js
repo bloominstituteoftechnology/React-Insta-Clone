@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import "./Login.css";
+
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -9,14 +10,17 @@ class Login extends Component {
             password: ""
         };
     }
+
     handleInputChange = e => {
         this.setState({ [e.target.name]: e.target.value });
     };
+
     handleLoginSubmit = e => {
         const user = this.state.username;
         localStorage.setItem("user", user);
         window.location.reload();
     };
+
     render() {
         return (
             <Form className="login-form">
@@ -48,4 +52,5 @@ class Login extends Component {
         );
     }
 }
+
 export default Login;

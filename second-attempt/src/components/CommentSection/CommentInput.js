@@ -13,4 +13,4 @@ const CommentInput = props => {
     );
 };
 
-export default CommentInput; 
+export default CommentInput;

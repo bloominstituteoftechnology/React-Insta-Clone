@@ -26,15 +26,18 @@ class CommentSection extends React.Component {
     componentWillMount() {
         this.setComments();
     }
+
     setComments = () => {
         localStorage.setItem(
             this.props.postId,
             JSON.stringify(this.state.comments)
         );
     };
+
     commentHandler = e => {
         this.setState({ comment: e.target.value });
     };
+
     handleCommentSubmit = e => {
         e.preventDefault();
         const newComment = { text: this.state.comment, username: 'Alias_AJ' };
@@ -44,6 +47,7 @@ class CommentSection extends React.Component {
         setTimeout(() => {
             this.setComments();
         }, 500);
+
     };
 
     render() {
@@ -59,9 +63,11 @@ class CommentSection extends React.Component {
         );
     }
 }
+
 CommentSection.propTypes = {
     comments: PropTypes.arrayOf(
         PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
     )
 };
-export default CommentSection; 
+
+export default CommentSection;

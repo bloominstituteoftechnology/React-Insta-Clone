@@ -21,4 +21,5 @@ const Authenticate = App =>
             return <LoginPage />;
         }
     };
+
 export default Authenticate;

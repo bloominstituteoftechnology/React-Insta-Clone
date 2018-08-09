@@ -1,5 +1,6 @@
 import React from 'react';
 import './Posts.css';
+
 const PostHeader = props => {
     return (
         <div className="post-header">
@@ -14,4 +15,5 @@ const PostHeader = props => {
         </div>
     );
 };
-export default PostHeader; 
+
+export default PostHeader;

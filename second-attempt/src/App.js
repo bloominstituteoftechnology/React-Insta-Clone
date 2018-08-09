@@ -15,16 +15,6 @@ class App extends Component {
     const user = localStorage.getItem("user");
     this.setState({ username: user });
   }
-  SearchPostHandler = e => {
-    const posts = this.state.posts.filter(p => {
-      if (p.username.includes(e.target.value)) {
-        return p;
-      }
-    });
-
-    this.setState({ filteredPosts: posts });
-  };
-
   render() {
     return (
       <div className="App">

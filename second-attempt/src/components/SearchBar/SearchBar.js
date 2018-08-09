@@ -1,7 +1,7 @@
 import React from 'react';
 import IGLogo from '../../assets/iglogo.png';
 import './SearchBar.css';
-import Post from '../PostContainer/Post';
+
 const SearchBar = props => {
     return (
         <div className="search-bar-wrapper">
@@ -25,4 +25,5 @@ const SearchBar = props => {
         </div>
     );
 };
-export default SearchBar; 
+
+export default SearchBar;
