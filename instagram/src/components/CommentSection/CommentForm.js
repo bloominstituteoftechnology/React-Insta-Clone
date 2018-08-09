@@ -9,6 +9,11 @@ const StyledForm = styled.div`
   width: 100%;
 `;
 
+const Styledh4 = styled.h4`
+  font-size: 10px;
+  color: #969696;
+`;
+
 const CommentForm = props => {
   if (props.commentClicked === true) {
   return (
@@ -27,7 +32,7 @@ const CommentForm = props => {
       );
     } else {
       return (
-        <p>Click comment icon to display comments </p>
+        <Styledh4>Click the comment bubble to share your opinion </Styledh4>
       )};
     
   

@@ -37,7 +37,10 @@ const LogoText = styled.h1`
 const SearchInput = styled.input`
   text-align: center;
   display: flex;
-  
+  margin-left: 20%;
+  margin-right: 15%;
+  max-width: 300px;
+  width: 100%;
 `;
 
 const RightNav = styled.div`
@@ -53,19 +56,19 @@ const SearchBar = (props) => {
       <Container className="sContainer">
         <Row className="searchBar">
           <Col sm="4" xs="12">
-            <LeftNav>
+            <LeftNav className="leftNavMedia">
               <i className="fab fa-instagram" />
               <LogoText>Instagram</LogoText>
             </LeftNav>
           </Col>
-          <Col sm="4" xs="12">
+          <Col sm="3" xs="12" className="searchMedia">
             <SearchInput
               className="fa fa-input"
               placeholder="&#xf002; Search"
             />
           </Col>
           <Col sm="4" xs="12">
-            <RightNav>
+            <RightNav className="rightNavMedia">
               <i className="far fa-compass" />
               <i className="far fa-heart" />
               <i className="far fa-user" />
