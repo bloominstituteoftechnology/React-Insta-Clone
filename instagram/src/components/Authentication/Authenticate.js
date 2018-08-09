@@ -2,18 +2,18 @@ import React from "react";
 import  Login  from "../Login/Login";
 
 const Authenticate = PassedComponent => {
-  let timer = "5";
   return class AuthenticationClass extends React.Component {
-    state = {
-      loggedIn: false,
-      credentials: localStorage.getItem('credentials')
-    };
+    componentDidUpdate() {
+      if (!this.props.credentials && localStorage.getItem("credentials")) {
+        this.props.handleCreds(localStorage.getItem("credentials"));
+      }
+    }
 
     render() {
-      return this.state.loggedIn ? (
+      return this.props.credentials ? (
         <PassedComponent />
       ) : (
-          <Login />
+          <Login {...this.props} />
         );
     }
   };
