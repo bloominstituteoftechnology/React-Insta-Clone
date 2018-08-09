@@ -54,12 +54,12 @@ class SearchBar extends Component {
   constructor(props) {
   super(props)
   this.state = { 
-    searchState: ""
-}
+    searchState: []
+}   
   }
-  handleSearchState = event => {
-    this.setState({searchState: event.target.value})
-  } 
+
+  
+
 
   render() {
   return (
@@ -76,7 +76,7 @@ class SearchBar extends Component {
             <SearchInput
               className="fa fa-input"
               placeholder="&#xf002; Search"
-              onChange={this.handleSearchState}
+              onChange={this.props.handleSearchState}
             />
           </Col>
           <Col sm="4" xs="12">
@@ -94,8 +94,5 @@ class SearchBar extends Component {
 };
 }
 
-Container.propTypes = {
-  fluid:  PropTypes.bool
-  // applies .container-fluid class
-}
+
 export default SearchBar;

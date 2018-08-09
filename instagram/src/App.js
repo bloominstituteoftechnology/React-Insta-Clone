@@ -21,7 +21,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      searchState: []
     };
   }
 
@@ -31,6 +32,14 @@ class App extends Component {
     });
   }
 
+  handleSearchState = event => {
+    this.setState({searchState: event.target.value})
+    console.log
+    const filteredUser = this.state.data.filter(user => user.username.includes(this.state.searchState) 
+  ) 
+   
+};
+
   handleLogout = event => {
     console.log("hi")
     localStorage.removeItem('user')
@@ -38,16 +47,21 @@ class App extends Component {
 }
 
   render() {
-    
+    let p
     return (
         <StyledApp>
-          <SearchBar handleLogout={this.handleLogout}/>
+          
           {this.state.data.map(post => (
+            
+            <div>
             <PostContainer
               className={post.username}
               key={post.username}
               post={post}
             />
+            
+            <SearchBar user={this.state.data} handleLogout={this.handleLogout} />
+            </div>
           ))}
         </StyledApp>
       

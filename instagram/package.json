@@ -2,6 +2,7 @@
   "name": "instagram",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://instaclone-7bf6d0.netlify.com",
   "dependencies": {
     "bootstrap": "^4.1.3",
     "moment": "^2.22.2",
