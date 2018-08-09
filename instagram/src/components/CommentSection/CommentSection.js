@@ -21,7 +21,7 @@ class CommentSection extends React.Component {
         const stateCopy = this.state.comments.slice()
         stateCopy.push({username: 'dave', text: this.state.comment })
         this.setState({comments: stateCopy, comment: ""})
-        console.log(stateCopy)
+      
     }
     
     render () {

@@ -1,18 +1,6 @@
 /* Comment Section */
 
-.comments {
-    display: flex;
-    margin-left: 15px;
-    line-height: 25px;
-}
 
-.user-comment {
-    font-weight: 700;
-}
-
-.text-comment {
-    margin-left: 5px;
-}
 
 form input {
     max-width: 639px;

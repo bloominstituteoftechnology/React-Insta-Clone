@@ -1,6 +1,11 @@
 import React from 'react';
 
 
+
+
+
+
+
 const CommentInput = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
@@ -8,7 +13,8 @@ const CommentInput = (props) => {
             type="text"
             placeholder="Add Comment...." 
             onChange={props.handleInput} 
-            value={props.value} name="comment" />
+            value={props.value} 
+            name="comment" />
         </form>
     );
 
