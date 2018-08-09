@@ -14,6 +14,7 @@ class Login extends Component {
   handleSubmit = event => {
     const user = this.state.username;
     localStorage.setItem("user", user);
+    window.location.reload();
   };
 
   handleInput = event => {

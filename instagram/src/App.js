@@ -15,7 +15,7 @@ const StyledApp = styled.div`
   margin: 1.5% auto;
 `;
 
-const Auth = Authenticate(App);
+
 
 class App extends Component {
   constructor() {
@@ -30,11 +30,18 @@ class App extends Component {
       data: dummyData
     });
   }
+
+  handleLogout = event => {
+    console.log("hi")
+    localStorage.removeItem('user')
+    window.location.reload();
+}
+
   render() {
     
     return (
         <StyledApp>
-          <SearchBar />
+          <SearchBar handleLogout={this.handleLogout}/>
           {this.state.data.map(post => (
             <PostContainer
               className={post.username}
@@ -49,4 +56,4 @@ class App extends Component {
 }
     
 
-export default Auth(App);
+export default Authenticate(App);

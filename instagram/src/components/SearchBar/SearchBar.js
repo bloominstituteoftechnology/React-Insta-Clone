@@ -42,12 +42,12 @@ const SearchInput = styled.input`
 
 const RightNav = styled.div`
   display: flex;
-  font-size: 32px;
+  font-size: 28px;
   letter-spacing: 10px;
   justify-content: flex-end;
 `;
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   return (
     <SearchContainer>
       <Container className="sContainer">
@@ -69,6 +69,7 @@ const SearchBar = () => {
               <i className="far fa-compass" />
               <i className="far fa-heart" />
               <i className="far fa-user" />
+              <i className="fas fa-sign-out-alt logout" onClick={props.handleLogout} />
             </RightNav>
           </Col>
         </Row>

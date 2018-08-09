@@ -34,7 +34,7 @@ class CommentSection extends Component {
     event.preventDefault();
     const commentArray = this.state.commentArray.slice();
     commentArray.push({
-      username: "testname",
+      username: localStorage.getItem('user'),
       text: this.state.commentInput
     });
     this.setState({
@@ -43,6 +43,10 @@ class CommentSection extends Component {
     })
     //const commentArray = {...this.state.commentArray} (Spread Operator)
   };
+  
+   // JSON.parse / stringify 
+   // ComponentDidMount var that captures from local storage (getItem) & save to var if exsists set state if not then dummy data
+  // set data to local storage
 
   render() {
     console.log(this.state)
