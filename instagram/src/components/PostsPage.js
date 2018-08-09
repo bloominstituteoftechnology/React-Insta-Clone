@@ -1,6 +1,6 @@
 import React from "react";
-import dummyData from "../../dummy-data";
-import PostContainer from "./PostContainer";
+import dummyData from "../dummy-data";
+import PostContainer from "./PostsContainer";
 
 class PostPage extends React.Component {
   constructor() {

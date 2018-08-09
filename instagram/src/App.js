@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar';
 import PostsPage from './components/PostsPage';
-import Authenticate from '../Authenticate/Authenticate';
+import Authenticate from './components/Authentication/Authenticate';
 
 const PostPageAuthed = Authenticate(PostsPage);
 
