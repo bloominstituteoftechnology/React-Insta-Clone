@@ -1,0 +1,16 @@
+/* Comment Section */
+
+
+
+form input {
+    max-width: 639px;
+    width: 100%;;
+    height: 40px;
+    border: 0px;
+    border-top: 1px solid lightgray;
+}
+
+form input ::placeholder {
+    font-size: 20px;
+    
+}

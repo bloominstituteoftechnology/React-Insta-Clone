@@ -1,0 +1,59 @@
+
+/* Post Header CSS */
+
+.header-container {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    
+}
+
+
+.thumbnail {
+    border-radius: 50%;
+    height: 35px;
+    margin-left: 10px;
+}
+
+.username {
+    margin-left: 15px;
+}
+
+
+
+/* Post Container CSS */
+
+.post-container {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 5px;
+    box-shadow: 1px 1px 1px 0.5px;
+}
+
+/*  Likes Section */
+
+
+
+.icons-section {
+    
+    display: flex;
+    
+}
+
+.symbols {
+    margin-left: 15px;
+}
+
+.likes-number {
+    display: flex;
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+
