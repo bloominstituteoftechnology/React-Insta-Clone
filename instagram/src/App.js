@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import dummyData from './dummy-data.js'
+import Authenticate from './components/Authentication/Authenticate';
 import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends React.Component {
@@ -12,7 +12,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ posts: dummyData });
+    const user = localStorage.getItem('user');
+    this.setState({ username: user });
   }
 
   render() {
@@ -24,4 +25,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
