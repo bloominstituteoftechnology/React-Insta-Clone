@@ -1,11 +1,20 @@
-import React from 'react';
+import React from "react";
+import Login from "../Login/Login";
 
-const Authenticate = App => 
-    class extends React.Component {
-        render() {
+export default PassedComponent => {
+  return class AuthenticationClass extends React.Component {
+    componentDidUpdate() {
+      if (!this.props.credentials && localStorage.getItem("credentials")) {
+        this.props.handleCreds(localStorage.getItem("credentials"));
+      }
+    }
 
-            return <App />;
-        }
-    };
-
-export default Authenticate;
+    render() {
+      return this.props.credentials ? (
+        <PassedComponent />
+      ) : (
+        <Login {...this.props} />
+      );
+    }
+  };
+};

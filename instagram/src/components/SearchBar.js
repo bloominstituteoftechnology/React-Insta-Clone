@@ -2,7 +2,7 @@ import React from 'react';
 import './SearchBar.css';
 import instagram from './instagram.png';
 
-const SearchBar = () => {
+const SearchBar = props => {
     return (
       <div className="search-bar-wrapper">
   
@@ -29,7 +29,7 @@ const SearchBar = () => {
           </div>
   
         </div>
-  
+        <button onClick={() => props.handleCreds(null)}>Logout!!</button>
       </div>
     );
   };
