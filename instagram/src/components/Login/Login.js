@@ -11,6 +11,8 @@ class Login extends Component {
     this.setState({ [event.target.name]: event.target.value })
   }
   handleSubmit = event => {
+    event.preventDefault();
+    const authKey = `username: ($this.state.username`
     console.log(Event.target);
     localStorage.setItem("credentials", "JoCatherine");
   };

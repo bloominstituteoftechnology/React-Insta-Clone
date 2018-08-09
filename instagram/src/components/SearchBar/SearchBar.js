@@ -1,7 +1,15 @@
 import React from "react";
 import './SearchBar.css';
 
-const SearchBar = () => {
+
+class SearchBar extends React.Component {
+    logout = () => {
+        localStorage.removeItem('credentials');
+        this.rerender();
+    }
+}
+
+const SearchBar = (props) => {
     return (
         <div className="searchbar-wrapper">
             <div className="img-wrapper">
@@ -21,6 +29,7 @@ const SearchBar = () => {
                 <i className="fa fa-user-circle"></i>
                 </div>
             </div>
+            <button onCLick={props.logout}>logOut</button>
         </div>
     );
 };

@@ -20,10 +20,10 @@ const PostContainer = props => {
                src={eachPost.imageUrl}
              />
            </div>
-           <CommentSection 
-           comments={eachPost.comments} 
+           <CommentSection
+           comments={eachPost.comments}
            timestamp={eachPost.timestamp}
-           submitNewComment={props.submitNewComment} 
+           submitNewComment={props.submitNewComment}
            updateCommentField={props.updateCommentField}
            commentField={props.commentField}
            />
