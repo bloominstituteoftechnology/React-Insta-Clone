@@ -1,13 +1,9 @@
-.sbContainer {
+/* .sbContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 30px auto;
     border-bottom: 1px solid lightgray;
-}
-
-.sbImage {
-    width: 45px;
 }
 
 .sbCamera {
@@ -26,5 +22,6 @@
 }
 
 .sbRight {
+    width: 45px;
     padding-right: 20px;
-}
+} */

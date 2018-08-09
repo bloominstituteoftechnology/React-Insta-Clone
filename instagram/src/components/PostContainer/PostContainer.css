@@ -1,4 +1,4 @@
-.postContain {
+/* .postContain {
     width: 640px;
     margin: 0 auto;
 }
@@ -27,6 +27,7 @@
 .bottomPost {
     padding-left: 25px;
     padding-right: 25px;
+    margin-bottom: 20px;
 }
 
 .postIcons {
@@ -35,4 +36,4 @@
 
 .likes {
     margin-top: 0;
-}
+} */

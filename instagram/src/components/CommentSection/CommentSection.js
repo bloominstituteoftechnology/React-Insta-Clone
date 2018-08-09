@@ -2,6 +2,18 @@ import React, { Component } from 'react';
 import Comment from "./Comment";
 import CommentInput from './CommentInput'
 import options from '../../assets/options.jpg';
+import styled from 'styled-components';
+
+const BottomInput = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+`;
+
+const OptionsImage = styled.img`
+    width: 20px;
+`;
 
 class CommentSection extends Component {
     constructor(props) {
@@ -29,14 +41,14 @@ class CommentSection extends Component {
             <div>
                 <Comment comments={this.state.comments} />
                 {/* <p className="timeStamp">{this.comments.timestamp}</p> */}
-                <div className="bottomInput">
+                <BottomInput>
                     <CommentInput 
                         addNewComment={this.addNewComment}
                         changeHandler={this.changeHandler}
                         comment={this.state.comment}
                     />
-                    <img className="optionsImage" src={options} alt="Comment Options" />
-                </div>
+                    <OptionsImage src={options} alt="Comment Options" />
+                </BottomInput>
             </div>
         );
     }
