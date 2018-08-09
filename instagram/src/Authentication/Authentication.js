@@ -3,21 +3,25 @@ import dummyData from "../dummy-data";
 
 // const Authenticate = App => {
 
-const Authenticate = Component => {
-  return class extends React.Component {
-    constructor(props) {
-      super(props);
-        this.state = {
-
-        };
-      
+const Authenticate = PassedComponent =>
+  class Foo extends React.Component {
+    constructor() {
+      super();
+      this.state = {};
     }
     authUser = () => {};
 
     render() {
-      return <div>Hello</div>
-    }
+      return (
+       <PassedComponent />
+      );
+   
+    
   };
-};
+}
+
+  
+
+
 
 export default Authenticate;
