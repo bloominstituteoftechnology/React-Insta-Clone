@@ -14,15 +14,26 @@ const CommentSection = props => {
         })}
       </div>
       <div>
-        <form onSubmit={(event) => props.submitNewComment(event, props.timestamp)} className="commentBar">
+        <form
+          onSubmit={event => props.submitNewComment(event, props.timestamp)}
+          className="commentBar"
+        >
           <input
             onChange={props.updateCommentField}
             type="text"
             placeholder="Add comment... "
-            name='commentField'
+            name="commentField"
             value={props.commentField}
           />
         </form>
+      </div>
+      <div className="social-wrapper">
+        <div className="social">
+          <i className="far fa-heart" />
+        </div>
+        <div className="social">
+            <i className="far fa-comments" />
+          </div>
       </div>
     </div>
   );

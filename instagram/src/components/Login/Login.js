@@ -19,7 +19,7 @@ const Login = props => {
           type="password"
           onChange={props.handleChange}
         />
-        <button>Summmbit</button>
+        <button>Submit</button>
       </form>
     </div>
   );
