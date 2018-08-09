@@ -1,23 +1,54 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
+import LikeSection from './LikeSection';
+import PropTypes from 'prop-types';
 
-const Post = props => {
-    return (
-        <div>
-            <PostHeader
-                username= {props.post.username}
-                thumbnailUrl= {props.post.thumbnailUrl}
-             />
+class Post extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            count: 0
+        };
+    }
+
+    incrementCount = () => {
+        this.setState(prevState => {
+            return {
+                count: prevState + 1
+            };
+        });
+    };
+
+    render() {
+        return (
             <div>
-                <img 
-                    src= {props.post.imageUrl} 
-                    alt= "post-main"
-                 />
+                <PostHeader
+                    username= {this.props.post.username}
+                    thumbnailUrl= {this.props.post.thumbnailUrl}
+                />
+                <div>
+                    <img 
+                        src= {this.props.post.imageUrl} 
+                        alt= "post-main"
+                    />
+                </div>
+                <LikeSection
+                incrementLike={this.incrementLike}
+                likes={this.state.likes}
+                />
+                <CommentSection comments= {this.props.post.comments} />
             </div>
-            <CommentSection comments= {props.post.comments} />
-        </div>
-    );
-};
+        );    
+    };
+}
+
+Post.propTypes = {
+    post: PropTypes.shape({
+      username: PropTypes.string,
+      thumbnailUrl: PropTypes.string,
+      imageUrl: PropTypes.string
+    })
+};  
 
 export default Post;
