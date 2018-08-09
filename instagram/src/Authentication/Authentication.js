@@ -1,27 +1,25 @@
 import React from "react";
-import dummyData from "../dummy-data";
-
+import Login from "../Login/Login";
 // const Authenticate = App => {
 
-const Authenticate = PassedComponent =>
-  class Foo extends React.Component {
-    constructor() {
-      super();
-      this.state = {};
+
+
+export default PassedComponent => { 
+  return class AuthenticationClass extends React.Component {
+    componentDidUpdate() {
+      if(!this.props.credentials && localStorage.getItem("credentials")) {
+          this.props.handleCreds(localStorage.getItem("creditionals"));
+
+      }
     }
-    authUser = () => {};
 
     render() {
-      return (
-       <PassedComponent />
+      return this.props.credentials ? (
+        <PassedComponent />
+      ) : (
+          <Login {...this.props} />
+
       );
-   
-    
+    }
   };
-}
-
-  
-
-
-
-export default Authenticate;
+};

@@ -1,5 +1,6 @@
 import React from "react";
 import './SearchBar.css';
+import Login from "../Login/Login";
 
 const SearchBar = props => {
   return (
@@ -13,7 +14,9 @@ const SearchBar = props => {
       <div className="social-right">
         <i class="fa fa-compass" aria-hidden="true" />
         <i class="fa fa-heart" aria-hidden="true" />
-        <i class="fa fa-user" aria-hidden="true" />
+        <i onClick={() => <Login />} class="fa fa-user" aria-hidden="true" />
+        
+        {/* <button onClick= */}
       </div>
     </div>
   );

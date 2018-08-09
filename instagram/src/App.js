@@ -11,16 +11,46 @@ import SearchBar from "./SearchBar/SearchBar";
 
 console.log(dummyData);
 
-const HOCAuthSearch = Authenticate(SearchBar);
+// const  = Authenticate(SearchBar);
 
 
 class App extends Component {
-  // AuthHoc = 
+  constructor(){
+    super();
+    this.state= {
+      username: "",
+      password: "",
+      credentials: localStorage.getItem("creditionals")
+    }
+  };
+
+
+  handleCreds = credentials => {
+    if (!credentials) localStorage.removeItem("creditionals");
+    this.setState({credentials})
+  };
+
+
+  handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value});
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    const authKey = `${this.state.username} logged in`;
+    localStorage.setItem("credentials", authKey);
+    this.setState({username: "", password: ""});
+
+  };
+
+
+
+
   render() {
     return (
       <div className="App">
-        <Login />
-        <HOCAuthSearch />
+        
+        {/* <HOCAuthSearch /> */}
         <PostsPage /> 
       </div>
     );
@@ -28,3 +58,17 @@ class App extends Component {
 }
 
 export default App;
+
+
+
+
+
+// handleChange = event => {
+//   this.setStatew({[event.target.name]: event.target.value})
+// }
+
+// handleSubmit = event => {
+//   event.preventDefault();
+//   const authKey = `username: ${this.state.username} `
+//   localStorage.setItem("credentials", `${this.state} and ${this.state.password}`)
+// }
