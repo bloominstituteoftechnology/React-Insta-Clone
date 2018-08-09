@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FlexWrapper } from './CommentSection/Comment';
+import { FlexWrapper } from './Comment';
 
 const LikeSectionDiv = styled.div`
   height: 10px;

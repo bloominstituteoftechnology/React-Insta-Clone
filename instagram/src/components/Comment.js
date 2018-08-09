@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { UserName } from './PostsContainer/PostHeader';
-import styled, { css } from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import { UserName } from "./PostHeader";
+import styled, { css } from "styled-components";
 
 export const FlexWrapper = styled.div`
   display: flex;
