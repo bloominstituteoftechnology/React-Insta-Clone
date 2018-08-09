@@ -1,5 +1,5 @@
 import React from "react";
-import  Login  from "../Login/Login";
+import Login from "../Login/Login";
 
 const Authenticate = PassedComponent => {
   return class AuthenticationClass extends React.Component {
@@ -13,12 +13,10 @@ const Authenticate = PassedComponent => {
       return this.props.credentials ? (
         <PassedComponent />
       ) : (
-          <Login {...this.props} />
-        );
+        <Login {...this.props} />
+      );
     }
   };
 };
 
-
 export default Authenticate;
-

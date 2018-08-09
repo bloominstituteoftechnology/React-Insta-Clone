@@ -1,4 +1,5 @@
 import React from "react";
+import IGLogo from "../../assets/IGLogo.png";
 import './SearchBar.css';
 
 
@@ -13,7 +14,7 @@ const SearchBar = (props) => {
     return (
         <div className="searchbar-wrapper">
             <div className="img-wrapper">
-
+            <img src={IGLogo} alt="Instagram logo" className="IG Logo"/>
             </div>
             <div>
                 <input type="text" placeholder="Search" />
@@ -29,7 +30,7 @@ const SearchBar = (props) => {
                 <i className="fa fa-user-circle"></i>
                 </div>
             </div>
-            <button onCLick={props.logout}>logOut</button>
+            <button onClick={() =>props.handleCreds(null)}>Log Out</button>
         </div>
     );
 };

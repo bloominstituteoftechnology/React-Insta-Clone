@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import './App.css';
+import "./App.css";
 import PostsPage from "./components/PostContainer/PostsPage";
 import SearchBar from "./components/SearchBar/SearchBar";
 import Authenticate from "./components/Authentication/Authenticate";
 
 const PostsPageAuth = Authenticate(PostsPage);
-
 
 class App extends Component {
   state = {
@@ -13,14 +12,14 @@ class App extends Component {
     password: "",
     credentials: localStorage.getItem("credentials")
   };
-   handleCreds = credentials => {
+  handleCreds = credentials => {
     if (!credentials) localStorage.removeItem("credentials");
     this.setState({ credentials });
   };
-   handleChange = event => {
+  handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
-   handleSubmit = event => {
+  handleSubmit = event => {
     event.preventDefault();
     const authKey = `${this.state.username} is logged in`;
     localStorage.setItem("credentials", authKey);
@@ -30,7 +29,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <SearchBar handleCreds={this.handleCreds} />
+        <SearchBar handleCreds={this.handleCreds} />
         <PostPageAuthed
           credentials={this.state.credentials}
           username={this.state.username}
@@ -39,8 +38,8 @@ class App extends Component {
           handleSubmit={this.handleSubmit}
           handleCreds={this.handleCreds}
         />
-    </div>
-    )
+      </div>
+    );
   }
 }
 

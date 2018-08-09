@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React from "react";
 const CommentSection = props => {
   return (
     <div>
@@ -14,12 +13,15 @@ const CommentSection = props => {
         })}
       </div>
       <div>
-        <form onSubmit={(event) => props.submitNewComment(event, props.timestamp)} className='addComment'>
+        <form
+          onSubmit={event => props.submitNewComment(event, props.timestamp)}
+          className="addComment"
+        >
           <input
-          onChange={props.updateCommentField}
+            onChange={props.updateCommentField}
             type="text"
-            name='commentField'
-            placeholder='Add a comment'
+            name="commentField"
+            placeholder="Add a comment"
             value={props.commentField}
           />
         </form>
@@ -27,6 +29,5 @@ const CommentSection = props => {
     </div>
   );
 };
-
 
 export default CommentSection;

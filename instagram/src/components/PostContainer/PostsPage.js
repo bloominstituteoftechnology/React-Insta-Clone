@@ -1,7 +1,7 @@
 import React from "react";
 import dummyData from "../../dummy-data";
 import PostContainer from "./PostContainer.js";
-import SearchBar from '../SearchBar/SearchBar';
+
 
 class PostsPage extends React.Component {
   constructor() {
@@ -36,7 +36,6 @@ class PostsPage extends React.Component {
   render() {
     return (
       <div className="App">
-      <SearchBar />
       <PostContainer
         postList={this.state.postList}
         submitNewComment={this.submitNewComment}
