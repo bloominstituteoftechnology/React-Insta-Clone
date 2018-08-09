@@ -32,11 +32,12 @@
 
   .like-section {
     display: flex;
+    border: 2px dashed red;
   }
   
   .like-section-wrapper {
     height: 20px;
     width: 20px;
     margin: 10px;
-    border: 2px dashed red;
+    border: 5px dashed red;
   }

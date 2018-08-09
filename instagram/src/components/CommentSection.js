@@ -1,8 +1,10 @@
 import React from "react";
+import LikeSection from './LikeSection';
 
 const CommentSection = props => {
   return (
     <div>
+      <LikeSection />
       <div>likes</div>
       <div>
         {props.comments.map((each, i) => {

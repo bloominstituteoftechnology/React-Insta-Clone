@@ -4,6 +4,9 @@ import SearchBar from './components/SearchBar';
 import PostsPage from './components/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
 
+{/*import { Button, Container } from 'reactstrap;*/}
+{/*import styled from 'styled-components;*/}
+
 const PostPageAuthed = Authenticate(PostsPage);
 
 class App extends Component {
