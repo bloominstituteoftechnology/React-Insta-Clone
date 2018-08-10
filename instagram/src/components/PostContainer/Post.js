@@ -59,7 +59,11 @@ const Post = props => {
                         <img src={post.imageUrl} alt="Shared Post" />
                         <BottomPost>
                             <PostIcons>
-                                <PcImage src={heart} alt="Heart" />
+                                <PcImage 
+                                    onClick={props.incrementLike} 
+                                    src={heart} 
+                                    alt="Heart" 
+                                />
                                 <PcImage src={comment} alt="Comment" />
                             </PostIcons>
                             <Likes>
