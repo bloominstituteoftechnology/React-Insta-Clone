@@ -12,7 +12,14 @@ class CommentSection extends React.Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    const id = this.props.postID;
+    if (localStorage.getItem(id)){
+      this.setState({
+        comments: localStorage.getItem(this.props.postID)
+      })
+    }
+  }
 
   componentWillMount() {}
 
@@ -39,6 +46,19 @@ class CommentSection extends React.Component {
   }
 }
 
+
+
+CommentSection.propTypes = {
+  comment: PropTypes.shape({
+    text: PropTypes.string,
+    username: PropTypes.string
+  })
+};
+
+export default CommentSection;
+
+
+
 // const CommentSection = props => {
 //   return (
 //     <React.Fragment>
@@ -52,12 +72,3 @@ class CommentSection extends React.Component {
 //     </React.Fragment>
 //   );
 // };
-
-CommentSection.propTypes = {
-  comment: PropTypes.shape({
-    text: PropTypes.string,
-    username: PropTypes.string
-  })
-};
-
-export default CommentSection;

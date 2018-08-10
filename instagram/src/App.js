@@ -3,9 +3,7 @@ import "./App.css";
 // import PropTypes from "prop-types";
 import dummyData from "./dummy-data";
 import PostsPage from "./PostContainer/PostsPage";
-import SearchBar from "./SearchBar/SearchBar";
 
-console.log(dummyData);
 
 // const  = Authenticate(SearchBar);
 
@@ -18,7 +16,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <SearchBar handleCreds={this.handleCreds} />
         {/* <HOCAuthSearch /> */}
         <PostsPage />
       </div>

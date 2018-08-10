@@ -17,8 +17,7 @@ class PostsPage extends React.Component {
       filteredPosts: [],
 
     };
-  }
-
+  } 
 
   componentDidMount(){
     this.setState({posts: dummyData});

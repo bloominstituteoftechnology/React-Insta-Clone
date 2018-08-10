@@ -1,24 +1,25 @@
-import React from "react";
-import PropTypes from "prop-types";
-import CommentSection from "CommentSection";
+// import React from "react";
+// import PropTypes from "prop-types";
 
-const CommentInput = props => {
-  return (
-    <form onSubmit={props.changingComment}>
-      <input 
-        type="text"
-        value={props.comment}
-        onchange={props.changingComment}/>
-      <p>{props.comment.text}</p>
-    </form>
-  );
-};
 
-CommentInput.propTypes = {
-  comment: PropTypes.shape({
-    text: PropTypes.string,
-    username: PropTypes.string
-  })
-};
+// const CommentInput = props => {
+//   return (
+//     <form onSubmit={props.changingComment}>
+//       <input 
+//         type="text"
+//         value={props.comment}
+//         onchange={props.changingComment}/>
+//       <p>{props.comment.text}</p>
+//     </form>
+//   );
+// };
+// {console.log(CommentInput)};
 
-export default CommentInput;
+// CommentInput.propTypes = {
+//   comment: PropTypes.shape({
+//     text: PropTypes.string,
+//     username: PropTypes.string
+//   })
+// };
+
+// export default CommentInput;
