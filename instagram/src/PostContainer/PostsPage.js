@@ -2,6 +2,7 @@ import React from "react";
 // import PropTypes from "prop-types";
 import dummyData from "../dummy-data";
 import PostContainer from './PostContainer';
+import SearchBar from "../SearchBar/SearchBar";
 
 
 
@@ -13,7 +14,6 @@ class PostsPage extends React.Component {
     super(props);
     this.state = {
       posts: [],
-      comments: props.comments,
       filteredPosts: [],
 
     };
@@ -21,25 +21,36 @@ class PostsPage extends React.Component {
 
 
   componentDidMount(){
-    console.log("CDM was invoked");
     this.setState({posts: dummyData});
   }
 
+
+  //Search posts function
   searchPostsHandler = event => {
-    const post = this.state.posts.filter(props => {
-      if (props.username.includes(event.target.value)) {
-        return 
+    const posts = this.state.posts.filter(prop => {
+      if (prop.username.includes(event.target.value)) {
+        return prop;
       }
-    })
-  }
+    });
+    this.setState({filteredPosts: posts});
+  };
 
 
-  // searchPo
-
+  
   render() {
     return (
       <div className="App">
-        <PostContainer posts={this.state.posts} />
+        <SearchBar
+          searchTerm={this.state.searchTerm}
+          postSearch={this.state.postSearch}
+          />
+        <PostContainer 
+        posts={
+          this.state.filteredPosts.length > 0 
+          ? this.state.filteredPosts
+          : this.state.posts
+          } 
+          />
         {/* <Authenticate /> */}
       </div>
     );
