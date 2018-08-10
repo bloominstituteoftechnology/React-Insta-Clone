@@ -95,8 +95,10 @@ class PostContainer extends React.Component {
       this.props.post.timestamp,
       "MMMM Do YYYY, h:mm:ss a"
     ).fromNow();
+    
     return (
       <div>
+      
         <Card className={this.props.className}>
           <PostHeader>
             <AvatarImg src={this.props.post.thumbnailUrl} alt="avatar_img" />

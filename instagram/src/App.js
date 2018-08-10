@@ -8,14 +8,10 @@ import Authenticate from "./components/Authentication/Authenticate";
 import styled from "styled-components";
 import "./App.css";
 
-
-
 const StyledApp = styled.div`
   max-width: 800px;
   margin: 1.5% auto;
 `;
-
-
 
 class App extends Component {
   constructor() {
@@ -28,45 +24,47 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      data: dummyData
+      data: dummyData,
+      searchState: dummyData
     });
   }
 
-  handleSearchState = event => {
-    this.setState({searchState: event.target.value})
-    const filteredUser = this.state.data.filter(user => user.username.includes(this.state.searchState) 
-  ) 
-   
-};
+
+  handleSearchState = event => { 
+    const filteredUser = this.state.data.filter(user => {
+      if (user.username.toLowerCase().includes(event.target.value)) {
+        return user;
+      }
+    });
+    this.setState({ searchState: filteredUser });
+  }
 
   handleLogout = event => {
-    console.log("hi")
-    localStorage.removeItem('user')
+    console.log("hi");
+    localStorage.removeItem("user");
     window.location.reload();
-}
+  };
 
   render() {
-    let p
+    
     return (
-        <StyledApp>
-          
-          {this.state.data.map(post => (
-            
-            <div>
+      <StyledApp>
+        <SearchBar
+          handleSearchState={this.handleSearchState}
+          handleLogout={this.handleLogout}
+        />
+        {this.state.searchState.map(post => (
+          <div>
             <PostContainer
               className={post.username}
               key={post.username}
               post={post}
             />
-            
-            <SearchBar user={this.state.data} handleLogout={this.handleLogout} />
-            </div>
-          ))}
-        </StyledApp>
-      
-      );
+          </div>
+        ))}
+      </StyledApp>
+    );
   }
 }
-    
 
 export default Authenticate(App);

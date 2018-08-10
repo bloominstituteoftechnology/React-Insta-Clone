@@ -54,12 +54,8 @@ class SearchBar extends Component {
   constructor(props) {
   super(props)
   this.state = { 
-    searchState: []
 }   
   }
-
-  
-
 
   render() {
   return (
@@ -76,7 +72,7 @@ class SearchBar extends Component {
             <SearchInput
               className="fa fa-input"
               placeholder="&#xf002; Search"
-              onKeyUp={this.props.handleSearchState}
+              onChange={this.props.handleSearchState}
             />
           </Col>
           <Col sm="4" xs="12">
