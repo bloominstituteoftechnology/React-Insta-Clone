@@ -5,61 +5,28 @@ import dummyData from "./dummy-data";
 import PostsPage from "./PostContainer/PostsPage";
 import SearchBar from "./SearchBar/SearchBar";
 
-
-
 console.log(dummyData);
 
 // const  = Authenticate(SearchBar);
 
-
 class App extends React.Component {
-  constructor(){
+  constructor() {
     super();
-    this.state= {
-      username: "",
-      password: "",
-      credentials: localStorage.getItem("creditionals")
-    }
-  };
-
-
-  handleCreds = credentials => {
-    if (!credentials) localStorage.removeItem("creditionals");
-    this.setState({credentials})
-  };
-
-
-  handleChange = event => {
-    this.setState({ [event.target.name]: event.target.value});
-  };
-
-  handleSubmit = event => {
-    event.preventDefault();
-    const authKey = `${this.state.username} logged in`;
-    localStorage.setItem("credentials", authKey);
-    this.setState({username: "", password: ""});
-
-  };
-
-
-
+    this.state = {};
+  }
 
   render() {
     return (
       <div className="App">
-        <SearchBar handleCreds={this.handleCreds}/>
+        <SearchBar handleCreds={this.handleCreds} />
         {/* <HOCAuthSearch /> */}
-        <PostsPage /> 
+        <PostsPage />
       </div>
     );
   }
 }
 
 export default App;
-
-
-
-
 
 // handleChange = event => {
 //   this.setStatew({[event.target.name]: event.target.value})

@@ -3,23 +3,27 @@ import Login from "../Login/Login";
 // const Authenticate = App => {
 
 
+const Authenticate = App => 
+  class extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        signedIn: false,
+      };
+    }
 
-export default PassedComponent => { 
-  return class AuthenticationClass extends React.Component {
-    componentDidUpdate() {
-      if(!this.props.credentials && localStorage.getItem("credentials")) {
-          this.props.handleCreds(localStorage.getItem("creditionals"));
-
+    componentDidMount() {
+      if(localStorage.getItem('username')) {
+        this.setState({siginIn: true});
+      } else {
+        this.setState({signedIn: false});
       }
     }
 
     render() {
-      return this.props.credentials ? (
-        <PassedComponent />
-      ) : (
-          <Login {...this.props} />
-
-      );
+      if(this.props.credentials) return <App />;
+        return <Login {...this.props} />
     }
   };
-};
+
+  export default Authenticate;

@@ -6,7 +6,7 @@ class Login extends React.Component {
     this.state = {
       username: "",
       password: "",
-      credentials: localStorage.getItem("creditionals")
+    
     };
   }
 
@@ -24,8 +24,8 @@ class Login extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const authKey = `${this.state.username} logged in`;
-    localStorage.setItem("credentials", authKey);
+    const currentUser = this.state.username;
+    localStorage.setItem('username', currentUser);
     this.setState({username: "", password: ""});
 
   };
@@ -38,16 +38,16 @@ class Login extends React.Component {
           <input
             type="username"
             placeholder="Enter Username"
-            value={this.username}
+            value={this.state.username}
             onChange={this.handleChange}
           />
           <input
             type="password"
             placeholder="Enter Password"
-            value={this.password}
+            value={this.state.password}
             onChange={this.handleChange}
           />
-          <button>Submit</button>
+          <button onClick={this.handleChange}>Log In</button>
         </form>
       </div>
     );
