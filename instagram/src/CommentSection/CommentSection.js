@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Comments from "Comments";
+import CommentInput from "CommentInput";
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -10,11 +12,29 @@ class CommentSection extends React.Component {
     };
   }
 
+  componentDidMount() {}
+
+  componentWillMount() {}
+
+  newComments = () => {};
+
+  commentHandler = event => {};
+
+  handleCommentSubmit = event => {};
+
   render(props) {
     return (
-      <div className="post-comments">
-        <strong>{props.username}</strong> <span>{props.text}</span>
-      </div>
+      <React.Fragment>
+        {this.state.comments.map((each, i) => (
+          <Comments key={i} comment={each} />
+        ))}
+
+        <CommentInput
+          comment={this.state.comment}
+          newComments={this.handleCommentSubmit}
+          changingComment={this.commentHandler}
+        />
+      </React.Fragment>
     );
   }
 }
