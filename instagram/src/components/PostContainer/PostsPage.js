@@ -1,14 +1,14 @@
 import React from "react";
 import dummyData from "../../dummy-data";
-import PostContainer from "./PostContainer.js";
-
+import PostContainer from "./Post.js";
 
 class PostsPage extends React.Component {
   constructor() {
     super();
     this.state = {
       postList: [],
-      commentField: ''
+      commentField: "",
+      liked: false
     };
   }
   componentDidMount() {
@@ -17,6 +17,24 @@ class PostsPage extends React.Component {
 
   updateCommentField = event => {
     this.setState({ [event.target.name]: event.target.value });
+  };
+
+  toggleLikes = user => {
+    let newLike = [user.likes];
+
+    if (this.state.liked === false) {
+      newLike++;
+      this.setState({ [user.likes]: newLike});
+      this.setState({ liked: true });
+
+
+    } else {
+      newLike--;
+      this.setState({ [user.likes]: newLike});
+      this.setState({ liked: false });
+
+    }
+    console.log(newLike)
   };
 
   submitNewComment = (event, timestamp) => {
@@ -36,13 +54,14 @@ class PostsPage extends React.Component {
   render() {
     return (
       <div className="App">
-      <PostContainer
-        postList={this.state.postList}
-        submitNewComment={this.submitNewComment}
-        updateCommentField={this.updateCommentField}
-        commentField={this.props.commentField}
-      />
-    </div>
+        <PostContainer
+          addLike={this.toggleLikes}
+          postList={this.state.postList}
+          submitNewComment={this.submitNewComment}
+          updateCommentField={this.updateCommentField}
+          commentField={this.props.commentField}
+        />
+      </div>
     );
   }
 }

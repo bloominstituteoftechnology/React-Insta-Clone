@@ -2,7 +2,6 @@ import React from "react";
 const CommentSection = props => {
   return (
     <div>
-      <div>likes</div>
       <div>
         {props.comments.map((each, i) => {
           return (
