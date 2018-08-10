@@ -1,34 +1,28 @@
-import React, { Component } from 'react';
-
-import './App.css';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostsContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
+import React, { Component } from "react";
+import "./App.css";
+import PostsPage from "./components/PostsContainer/PostPage";
+import Authenticate from "./components/Authenticate/Authenticate";
 
 class App extends Component {
-
   constructor() {
     super();
     this.state = {
-      posts: [],
-      filteredPosts: []
+      username: ""
     };
   }
 
   componentDidMount() {
-    this.setState({ posts: dummyData });
+    const user = localStorage.getItem("user");
+    this.setState({ username: user });
   }
-
-searchPosts
 
   render() {
     return (
       <div className="App">
-      <SearchBar />
-        <PostContainer posts={this.state.posts} />
+        <PostsPage />
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
