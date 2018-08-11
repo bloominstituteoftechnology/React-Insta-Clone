@@ -24,21 +24,20 @@ class Login extends React.Component{
             password:''
         }
     }
-handleUserNameChange=(e)=> {
-    this.setState({[e.target.name]:e.target.value});
-}
-handlePassWordChange=(e)=>{
+handleInputChange=(e)=>{
     this.setState({[e.target.name]:e.target.value});
 }
 logIn=()=>{
+    if (this.state.username.length>=1 && this.state.password.length>=1) {
     localStorage.setItem('username',this.state.username);
+    }
 }
 render () {
     return (
         <LoginForm onSubmit={this.logIn}>
             <ImgContainer></ImgContainer>
-            <input type='text' name='username' placeholder='enter a username' value={this.state.username} onChange={(e)=>this.handleUserNameChange(e)}/>
-            <input type='password' name='password' placeholder='enter a password' value={this.state.password} onChange={(e)=>this.handlePassWordChange(e)}/>
+            <input type='text' name='username' placeholder='enter a username' value={this.state.username} onChange={this.handleInputChange}/>
+            <input type='password' name='password' placeholder='enter a password' value={this.state.password} onChange={this.handleInputChange}/>
             <LoginBtn className='btn waves-effect waves-light'>Login</LoginBtn>
         </LoginForm>
     )
