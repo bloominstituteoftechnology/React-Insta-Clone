@@ -25,7 +25,7 @@
     font-size: 16px;
 }
 
-replace {
+.timestamp {
     padding-left: 12px;
     font-size: 12px;
     color: gray;
@@ -42,5 +42,4 @@ add {
     margin: 0 0 5px 0;
     border: none;
     border-top: 1px solid#E6E6E6;
-    
 }

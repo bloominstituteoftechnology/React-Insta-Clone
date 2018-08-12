@@ -11,7 +11,7 @@ const Body = props => {
 
  Body.propTypes = {
    posts: PropTypes.shape({
-     username: PropTypes.string,
+     username: PropTypes.number,
      thumbNailURL: PropTypes.string,
      imageUrl: PropTypes.string,
      likes: PropTypes.number,
@@ -19,8 +19,6 @@ const Body = props => {
 
    })
  }
-
-
 
 
   export default Body;
