@@ -1,38 +1,26 @@
 import React from 'react';
-import Header from './Header';
 import CommentSection from '../CommentSection/CommentSection';
+import Header from './Header';
 
-const PostContainer = props => {
- return (
-   <div className='posts-container-wrapper'>
-     {props.postList.map((Post, i) => {
-       return (
-         <div key={i} className='post-border'>
-           <Header
-             username={Post.username}
-             thumbnailUrl={Post.thumbnailUrl}
-           />
-           <div className='post-image-wrapper'>
-             <img
-               alt='post thumbnail'
-               className='post-image'
-               src={Post.imageUrl}
-             />
-           </div>
-           <i onClick={()=>props.addLike(Post)} className="far fa-heart"></i>
-           {Post.likes}
-           <CommentSection
-           comments={Post.comments}
-           timestamp={Post.timestamp}
-           submitNewComment={props.submitNewComment}
-           updateCommentField={props.updateCommentField}
-           commentField={props.commentField}
-           />
-         </div>
-       );
-     })}
-   </div>
- );
-};
+const Post = props => {
+    return (
+        <div className='post-border'>
+          <Header
+            username={props.post.username}
+            thumbnailUrl={props.post.thumbnailUrl}
+          />
+          <div className='post-image-wrapper'>
+            <img
+              alt='post thumbnail'
+              className='post-image'
+              src={props.post.imageUrl}
+            />
+          </div>
+          <CommentSection
+          comm={props.post}
+          />
+        </div>
+      );
+}
 
-export default PostContainer;
+export default Post;
