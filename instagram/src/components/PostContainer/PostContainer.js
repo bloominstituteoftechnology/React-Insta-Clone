@@ -1,6 +1,9 @@
 import React from "react";
-import CommentSection from "../CommentSection/CommentSection";
+import PropTypes from "prop-types";
+// styles
 import "./PostContainer.css";
+// components
+import CommentSection from "../CommentSection/CommentSection";
 import { Card, CardImg, CardBody, CardTitle } from "reactstrap";
 
 const PostContainer = props => {
@@ -32,6 +35,10 @@ const PostContainer = props => {
 			))}
 		</div>
 	);
+};
+
+PostContainer.propTypes = {
+	dummy: PropTypes.array.isRequired
 };
 
 export default PostContainer;
