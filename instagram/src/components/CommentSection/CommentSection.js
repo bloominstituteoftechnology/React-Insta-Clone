@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class CommentSection extends React.Component {
 	constructor(props) {
@@ -56,5 +57,9 @@ class CommentSection extends React.Component {
 		);
 	}
 }
+
+CommentSection.propTypes = {
+	commentList: PropTypes.array.isRequired
+};
 
 export default CommentSection;
