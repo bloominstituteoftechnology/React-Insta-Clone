@@ -24,9 +24,8 @@ const dummyData = [
     {
         username: "twitch",
         thumbnailUrl:
-            "https://instagram.fbna1-1.fna.fbcdn.net/vp/81f608ddb76a034e06c0d1669e7e2b48/5B35C840/t51.2885-19/10684037_1512272482349821_444823433_a.jpg",
-        imageUrl:
-            "https://instagram.fbna1-1.fna.fbcdn.net/vp/830c01ad7ceb325547fd1d4d1a1e6897/5B465520/t51.2885-15/e35/25006313_192089151354555_3374696275667582976_n.jpg",
+            "https://scontent-lax3-1.cdninstagram.com/vp/8e4d5751a9757258bf4082eadf9b45e9/5BFB8940/t51.2885-19/10684037_1512272482349821_444823433_a.jpg?_nc_eui2=AeF2FJP_Ix-7FL2MpffxgiS_McvWO7x67X8Yezr4DNmjFI1bL1qMwCbFsT9YqBxD0I3nf1ju0P74omQ7BPMYtR_7",
+        imageUrl: "https://www.instagram.com/p/Bj_A97xnvwe/media/?size=l",
         likes: 4307,
         timestamp: "July 15th 2017, 03:12:09 pm",
         comments: [
