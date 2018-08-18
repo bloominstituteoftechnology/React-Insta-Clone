@@ -10,8 +10,8 @@ import App from "../App";
 Enzyme.configure({ adapter: new Adapter() });
 
 describe("<App />", () => {
+	const tree = renderer.create(<App />);
 	it("renders correctly", () => {
-		const tree = renderer.create(<App />);
 		expect(tree).toMatchSnapshot();
 	});
 
@@ -19,5 +19,15 @@ describe("<App />", () => {
 		const spy = jest.spyOn(App.prototype, "componentDidMount");
 		const component = mount(<App />);
 		expect(spy).toHaveBeenCalled();
+	});
+
+	it("should store data in a list", () => {
+		const data = tree.getInstance().state.dummyList;
+		expect(data).toBeInstanceOf(Array);
+	});
+
+	it("should store profiles in state", () => {
+		const profile = postData[0];
+		expect(profile).toBeInstanceOf(Object);
 	});
 });
