@@ -14,9 +14,9 @@ class App extends Component {
     };
   }
 
-  componentDidMount = () => {
+  componentDidMount() {
     this.setState({ dummyList: dummyData });
-  };
+  }
 
   search = (username, event) => {
     // returns posts of usernames that user searched for
