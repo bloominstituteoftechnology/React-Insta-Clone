@@ -12,12 +12,12 @@
 }
 
 .brand {
-	/*border: 1px solid red;*/
 	display: inline-block;
 	align-items: center;
 }
 
-.brand a, .brand p {
+.brand a,
+.brand p {
 	display: inline-block;
 }
 
@@ -31,13 +31,19 @@
 }
 
 form {
-	margin: auto;
+	width: 75%;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .SearchBar input {
 	border-radius: 5px;
 	padding: 5px;
 	text-align: center;
+}
+
+input:focus {
+	outline: none;
 }
 
 .accentLogo {
