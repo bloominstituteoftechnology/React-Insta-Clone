@@ -55,9 +55,8 @@ const dummyData = [
     {
         username: "playhearthstone",
         thumbnailUrl:
-            "https://instagram.fbna1-1.fna.fbcdn.net/vp/51d5b37438ae3a47df37b7ed3fda141f/5B4ABAA7/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg",
-        imageUrl:
-            "https://instagram.fbna1-1.fna.fbcdn.net/vp/22618be7ee2a2b676d13e8d70d7d5e08/5B40BF6B/t51.2885-15/e35/25038917_1978298569058775_6081161469041311744_n.jpg",
+            "https://scontent-lax3-1.cdninstagram.com/vp/19e6a25a00cc1eea07dc4b79d7438661/5C06F201/t51.2885-19/s320x320/13398400_140638743023210_310840336_a.jpg?_nc_eui2=AeHaTO7isTOyfHGJnQjzXCirCt-m-Ba5MJj_DaTodZDkykxamGEIwMYnraO_UMF0DVCclr8cw7Do55gan_zEir_R",
+        imageUrl: "https://www.instagram.com/p/BjNCjjfFe7z/media/?size=l",
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
         comments: [
