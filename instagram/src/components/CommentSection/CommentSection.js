@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 import PropTypes from "prop-types";
 
 class CommentSection extends React.Component {
@@ -37,7 +38,8 @@ class CommentSection extends React.Component {
 				))}
 				<div>
 					<p className="timeStamp">
-						<span>2 hours ago</span>
+						{/* render timestamp of most recent comment made */}
+						<span>{moment().calendar()}</span>
 					</p>
 					<form>
 						<input
