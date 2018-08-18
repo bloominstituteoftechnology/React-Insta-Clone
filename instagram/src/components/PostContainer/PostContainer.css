@@ -6,6 +6,7 @@
 
 .card {
 	margin: 75px 0;
+	box-shadow: 10px 10px 6px -6px #777, 0px 15px 6px -15px #777;
 }
 
 .cardHeader {
@@ -33,7 +34,7 @@
 	margin: 0 auto;
 }
 
-.timeStamp{
+.timeStamp {
 	color: gray;
 	font-size: 12px;
 }
