@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+// styles
 import "./App.css";
+// components
 import dummyData from "./dummy-data";
-// import SearchBar from './SearchBar/SearchBar.js';
 import PostContainer from "./components/PostContainer/PostContainer";
 import SearchBar from "./components/SearchBar/SearchBar";
 
