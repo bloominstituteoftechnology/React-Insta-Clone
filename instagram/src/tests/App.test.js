@@ -1,5 +1,5 @@
 import React from "react";
-import Enzyme, { shallow, mount } from "enzyme";
+import Enzyme, { mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import renderer from "react-test-renderer";
 // data
@@ -29,5 +29,10 @@ describe("<App />", () => {
 	it("should store profiles in state", () => {
 		const profile = postData[0];
 		expect(profile).toBeInstanceOf(Object);
+	});
+
+	it("has a search function", () => {
+		const func = tree.getInstance().search;
+		expect(func).toBeInstanceOf(Function);
 	});
 });
