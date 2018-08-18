@@ -38,14 +38,3 @@
 	color: gray;
 	font-size: 12px;
 }
-
-form {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-}
-
-input {
-	border: 0.5px solid gray;
-	width: 100%;
-}

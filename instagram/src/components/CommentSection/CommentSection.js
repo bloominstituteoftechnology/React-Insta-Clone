@@ -1,6 +1,8 @@
 import React from "react";
 import moment from "moment";
 import PropTypes from "prop-types";
+// styles
+import "./CommentSection.css";
 
 class CommentSection extends React.Component {
 	constructor(props) {
@@ -41,18 +43,17 @@ class CommentSection extends React.Component {
 						{/* render timestamp of most recent comment made */}
 						<span>{moment().calendar()}</span>
 					</p>
-					<form>
+					<hr />
+					<form className="CommentSection_form">
 						<input
-							className="border-right-0 border-left-0 border-bottom-0 py-4"
+							className="CommentSection_input border-top-0 border-right-0 border-left-0 border-bottom-0 py-4"
 							type="text"
 							name="newComment"
 							value={this.state.newComment}
 							onChange={this.handleNewComment}
+							onClick={this.addNewComment}
 							placeholder="Add a comment..."
 						/>
-						<div type="button" onClick={this.addNewComment}>
-							...
-						</div>
 					</form>
 				</div>
 			</div>
