@@ -68,7 +68,16 @@ describe("<CommentSection />", () => {
         expect(newComment).toBeFalsy();
     });
 
-    it("should have an input field that changes value", () => {});
+    it("should have an input field that changes value", () => {
+        const component = shallow(<CommentSection commentList={postData} />);
+        const input = component.find(".CommentSection_input");
+        const newComment = "hey, this a new comment";
+        expect(input.value).toBe(undefined);
+        input.value = newComment;
+        expect(input.value).toBeTruthy();
+        expect(typeof input.value).toBe("string");
+        expect(input.value).toEqual("hey, this a new comment");
+    });
 
     it("should handle a new comment", () => {});
 
