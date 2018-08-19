@@ -9,15 +9,30 @@ import postData from "../dummy-data";
 
 Enzyme.configure({ adapter: new Adapter() });
 
-const commentData = describe("<CommentSection />", () => {
+describe("<CommentSection />", () => {
     it("should render correctly", () => {
         const tree = renderer.create(<CommentSection commentList={postData} />);
         expect(tree).toMatchSnapshot();
     });
 
-    it("should render a comment's author", () => {});
+    it("should render a comment's author and text", () => {
+        const component = shallow(<CommentSection commentList={postData} />);
+        const username = component.find("strong");
 
-    it("should render a comment's text", () => {});
+        username.forEach((node, index) => {
+            const user = node.props().children;
+            expect(typeof user).toBe("string");
+
+            for (let i = 0; i < postData[index].comments.length; i++) {
+                const comment = postData[index].comments[i];
+                expect(typeof comment).toBe("object");
+                expect(typeof comment.username).toBe("string");
+                expect(typeof comment.text).toBe("string");
+                expect(comment.username).toBeTruthy();
+                expect(comment.text).toBeTruthy();
+            }
+        });
+    });
 
     it("should render a timestamp", () => {});
 
