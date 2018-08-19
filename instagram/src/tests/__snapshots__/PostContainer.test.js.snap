@@ -1,0 +1,297 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PostContainer /> renders correctly 1`] = `
+<div
+  className="postWrapper"
+>
+  <div
+    className="card card"
+  >
+    <div
+      className="cardHeader"
+    >
+      <img
+        alt="thumbnail logo"
+        src="https://instagram.com/p/BkIOT12B87B/media/?size=m"
+      />
+      <h5
+        className="card-title"
+      >
+        philzcoffee
+      </h5>
+    </div>
+    <img
+      className="cardImg card-img"
+      placeholder="philzcoffee"
+      src="https://instagram.com/p/Bl8TDqYBhNW/media/?size=l"
+    />
+    <div
+      className="cardBody card-body"
+    >
+      <div>
+         
+        <i
+          className="far fa-heart"
+        />
+        <i
+          className="far fa-comment"
+        />
+      </div>
+      <div>
+        <strong>
+          400
+           likes
+        </strong>
+      </div>
+      <div>
+        <div>
+          <strong>
+            philzcoffee
+          </strong>
+           
+          We've got more than just delicious coffees to offer at our shops!
+        </div>
+        <div>
+          <strong>
+            biancasaurus
+          </strong>
+           
+          Looks delicious!
+        </div>
+        <div>
+          <strong>
+            martinseludo
+          </strong>
+           
+          Can't wait to try it!
+        </div>
+        <div>
+          <p
+            className="timeStamp"
+          >
+            <span>
+              Today at 5:44 PM
+            </span>
+          </p>
+          <hr />
+          <form
+            className="CommentSection_form"
+          >
+            <input
+              className="CommentSection_input border-top-0 border-right-0 border-left-0 border-bottom-0 py-4"
+              name="newComment"
+              onChange={[Function]}
+              onClick={[Function]}
+              placeholder="Add a comment..."
+              type="text"
+              value=""
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="card card"
+  >
+    <div
+      className="cardHeader"
+    >
+      <img
+        alt="thumbnail logo"
+        src="https://scontent-lax3-1.cdninstagram.com/vp/8e4d5751a9757258bf4082eadf9b45e9/5BFB8940/t51.2885-19/10684037_1512272482349821_444823433_a.jpg?_nc_eui2=AeF2FJP_Ix-7FL2MpffxgiS_McvWO7x67X8Yezr4DNmjFI1bL1qMwCbFsT9YqBxD0I3nf1ju0P74omQ7BPMYtR_7"
+      />
+      <h5
+        className="card-title"
+      >
+        twitch
+      </h5>
+    </div>
+    <img
+      className="cardImg card-img"
+      placeholder="twitch"
+      src="https://www.instagram.com/p/Bj_A97xnvwe/media/?size=l"
+    />
+    <div
+      className="cardBody card-body"
+    >
+      <div>
+         
+        <i
+          className="far fa-heart"
+        />
+        <i
+          className="far fa-comment"
+        />
+      </div>
+      <div>
+        <strong>
+          4307
+           likes
+        </strong>
+      </div>
+      <div>
+        <div>
+          <strong>
+            twitch
+          </strong>
+           
+          Epic Street Fighter action here in Las Vegas at #EVO2017!
+        </div>
+        <div>
+          <strong>
+            michaelmarzetta
+          </strong>
+           
+          Omg that match was crazy
+        </div>
+        <div>
+          <strong>
+            themexican_leprechaun
+          </strong>
+           
+          What a setup
+        </div>
+        <div>
+          <strong>
+            dennis_futbol
+          </strong>
+           
+          It that injustice
+        </div>
+        <div>
+          <strong>
+            dennis_futbol
+          </strong>
+           
+          Is
+        </div>
+        <div>
+          <p
+            className="timeStamp"
+          >
+            <span>
+              Today at 5:44 PM
+            </span>
+          </p>
+          <hr />
+          <form
+            className="CommentSection_form"
+          >
+            <input
+              className="CommentSection_input border-top-0 border-right-0 border-left-0 border-bottom-0 py-4"
+              name="newComment"
+              onChange={[Function]}
+              onClick={[Function]}
+              placeholder="Add a comment..."
+              type="text"
+              value=""
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="card card"
+  >
+    <div
+      className="cardHeader"
+    >
+      <img
+        alt="thumbnail logo"
+        src="https://scontent-lax3-1.cdninstagram.com/vp/19e6a25a00cc1eea07dc4b79d7438661/5C06F201/t51.2885-19/s320x320/13398400_140638743023210_310840336_a.jpg?_nc_eui2=AeHaTO7isTOyfHGJnQjzXCirCt-m-Ba5MJj_DaTodZDkykxamGEIwMYnraO_UMF0DVCclr8cw7Do55gan_zEir_R"
+      />
+      <h5
+        className="card-title"
+      >
+        playhearthstone
+      </h5>
+    </div>
+    <img
+      className="cardImg card-img"
+      placeholder="playhearthstone"
+      src="https://www.instagram.com/p/BjNCjjfFe7z/media/?size=l"
+    />
+    <div
+      className="cardBody card-body"
+    >
+      <div>
+         
+        <i
+          className="far fa-heart"
+        />
+        <i
+          className="far fa-comment"
+        />
+      </div>
+      <div>
+        <strong>
+          5306
+           likes
+        </strong>
+      </div>
+      <div>
+        <div>
+          <strong>
+            playhearthstone
+          </strong>
+           
+          Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights
+        </div>
+        <div>
+          <strong>
+            tapmelon
+          </strong>
+           
+          Wish that death knight could be added as a new playable class in this expansion.
+        </div>
+        <div>
+          <strong>
+            micpetboudreau
+          </strong>
+           
+          Can't wait
+        </div>
+        <div>
+          <strong>
+            awaywetravel
+          </strong>
+           
+          I &lt;3 Hearthstone.
+        </div>
+        <div>
+          <strong>
+            awesomebt28
+          </strong>
+           
+          I like how gul'dan looks so old and useless
+        </div>
+        <div>
+          <p
+            className="timeStamp"
+          >
+            <span>
+              Today at 5:44 PM
+            </span>
+          </p>
+          <hr />
+          <form
+            className="CommentSection_form"
+          >
+            <input
+              className="CommentSection_input border-top-0 border-right-0 border-left-0 border-bottom-0 py-4"
+              name="newComment"
+              onChange={[Function]}
+              onClick={[Function]}
+              placeholder="Add a comment..."
+              type="text"
+              value=""
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
