@@ -19,6 +19,8 @@ describe("<SearchBar />", () => {
 	it("should render an input tag", () => {
 		const component = shallow(<SearchBar search={search} />);
 		expect(component.find("input").length).toBe(1);
+		expect(component.find("input").props().name).toEqual("user");
+		expect(component.find("input").props().type).toEqual("text");
 	});
 
 	it("should have an input that changes", () => {
