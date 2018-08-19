@@ -48,7 +48,14 @@ describe("<CommentSection />", () => {
         });
     });
 
-    it("should render an input tag", () => {});
+    it("should render an input tag", () => {
+        const component = shallow(<CommentSection commentList={postData} />);
+        const input = component.find(".CommentSection_input");
+
+        expect(input.length).toBe(1);
+        expect(input.props().name).toEqual("newComment");
+        expect(input.props().type).toEqual("text");
+    });
 
     it("should have initial state", () => {});
 
