@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CommentSection /> should render correctly 1`] = `
+<div>
+  <div>
+    <strong>
+      philzcoffee
+    </strong>
+     
+  </div>
+  <div>
+    <strong>
+      twitch
+    </strong>
+     
+  </div>
+  <div>
+    <strong>
+      playhearthstone
+    </strong>
+     
+  </div>
+  <div>
+    <p
+      className="timeStamp"
+    >
+      <span>
+        Today at 11:22 PM
+      </span>
+    </p>
+    <hr />
+    <form
+      className="CommentSection_form"
+    >
+      <input
+        className="CommentSection_input border-top-0 border-right-0 border-left-0 border-bottom-0 py-4"
+        name="newComment"
+        onChange={[Function]}
+        onClick={[Function]}
+        placeholder="Add a comment..."
+        type="text"
+        value=""
+      />
+    </form>
+  </div>
+</div>
+`;
