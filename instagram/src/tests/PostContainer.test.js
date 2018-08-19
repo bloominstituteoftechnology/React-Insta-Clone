@@ -14,4 +14,15 @@ describe("<PostContainer />", () => {
 		const tree = renderer.create(<PostContainer dummy={postData} />);
 		expect(tree).toMatchSnapshot();
 	});
+
+	it("should render a post's thumbnail", () => {
+		const component = shallow(<PostContainer dummy={postData} />);
+
+		const thumbnails = component.find("img");
+		thumbnails.forEach((node, index) => {
+			expect(typeof node.props().src).toBe("string");
+			expect(typeof node.props().alt).toBe("string");
+			expect(node.props().src).toEqual(postData[index].thumbnailUrl);
+		});
+	});
 });
