@@ -24,7 +24,7 @@ class SearchBar extends React.Component {
 						<i className="fab fa-instagram fa-3x" />
 					</a>
 					{/* brand title goes here */}
-					<p>instagram</p>
+					<p>Instagram</p>
 				</div>
 				{/* search bar goes here */}
 				<form
