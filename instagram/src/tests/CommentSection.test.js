@@ -11,8 +11,8 @@ import postData from "../dummy-data";
 Enzyme.configure({ adapter: new Adapter() });
 
 describe("<CommentSection />", () => {
+    const tree = renderer.create(<CommentSection commentList={postData} />);
     it("should render correctly", () => {
-        const tree = renderer.create(<CommentSection commentList={postData} />);
         expect(tree).toMatchSnapshot();
     });
 
@@ -57,7 +57,16 @@ describe("<CommentSection />", () => {
         expect(input.props().type).toEqual("text");
     });
 
-    it("should have initial state", () => {});
+    it("should have initial state", () => {
+        const data = tree.getInstance().state;
+        const { comments, username, newComment } = data;
+
+        expect(comments).toBeInstanceOf(Array);
+        expect(typeof username).toBe("string");
+        expect(username).toBeTruthy();
+        expect(typeof newComment).toBe("string");
+        expect(newComment).toBeFalsy();
+    });
 
     it("should have an input field that changes value", () => {});
 

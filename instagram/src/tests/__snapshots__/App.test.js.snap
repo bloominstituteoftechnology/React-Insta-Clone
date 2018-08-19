@@ -128,7 +128,7 @@ exports[`<App /> renders correctly 1`] = `
               className="timeStamp"
             >
               <span>
-                Today at 11:30 AM
+                Today at 11:43 AM
               </span>
             </p>
             <hr />
@@ -229,7 +229,7 @@ exports[`<App /> renders correctly 1`] = `
               className="timeStamp"
             >
               <span>
-                Today at 11:30 AM
+                Today at 11:43 AM
               </span>
             </p>
             <hr />
@@ -330,7 +330,7 @@ exports[`<App /> renders correctly 1`] = `
               className="timeStamp"
             >
               <span>
-                Today at 11:30 AM
+                Today at 11:43 AM
               </span>
             </p>
             <hr />

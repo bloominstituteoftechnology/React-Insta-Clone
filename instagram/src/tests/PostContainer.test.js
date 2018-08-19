@@ -10,8 +10,8 @@ import postData from "../dummy-data";
 Enzyme.configure({ adapter: new Adapter() });
 
 describe("<PostContainer />", () => {
+	const tree = renderer.create(<PostContainer dummy={postData} />);
 	it("renders correctly", () => {
-		const tree = renderer.create(<PostContainer dummy={postData} />);
 		expect(tree).toMatchSnapshot();
 	});
 
