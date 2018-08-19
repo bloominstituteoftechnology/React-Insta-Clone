@@ -9,9 +9,25 @@ import postData from "../dummy-data";
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe("<CommentSection />", () => {
+const commentData = describe("<CommentSection />", () => {
     it("should render correctly", () => {
         const tree = renderer.create(<CommentSection commentList={postData} />);
         expect(tree).toMatchSnapshot();
     });
+
+    it("should render a comment's author", () => {});
+
+    it("should render a comment's text", () => {});
+
+    it("should render a timestamp", () => {});
+
+    it("should render an input tag", () => {});
+
+    it("should have initial state", () => {});
+
+    it("should have an input field that changes value", () => {});
+
+    it("should handle a new comment", () => {});
+
+    it("should handle adding a new comment", () => {});
 });
