@@ -42,11 +42,27 @@ describe("<PostContainer />", () => {
 		const likes = component.find("strong");
 
 		likes.forEach((node, index) => {
-			console.log(node.props());
 			const likeCount = node.props().children[0];
 
 			expect(typeof likeCount).toBe("number");
 			expect(likeCount).toEqual(postData[index].likes);
+		});
+	});
+
+	it("should render a posts' comments", () => {
+		const component = shallow(<PostContainer dummy={postData} />);
+		const comments = component.find("CommentSection");
+
+		comments.forEach((node, index) => {
+			const postComments = node.props().commentList;
+			for (let i = 0; i < postComments.length; i++) {
+				const c = postComments[i];
+
+				expect(typeof c).toBe("object");
+				expect(typeof c.username).toBe("string");
+				expect(typeof c.text).toBe("string");
+				expect(c.text).toEqual(postData[index].comments[i].text);
+			}
 		});
 	});
 });
