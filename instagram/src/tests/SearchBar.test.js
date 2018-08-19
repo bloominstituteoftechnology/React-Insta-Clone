@@ -40,4 +40,12 @@ describe("<SearchBar />", () => {
 		component.instance().handleSearch(event);
 		expect(component.state("user")).toEqual("abc");
 	});
+
+	it("should render a links to instagram.com", () => {
+		const component = shallow(<SearchBar search={search} />);
+		const links = component.find("a");
+		links.forEach((node, index) => {
+			expect(node.props().href).toBe("https://www.instagram.com/?hl=en");
+		});
+	});
 });
