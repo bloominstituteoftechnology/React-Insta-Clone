@@ -36,4 +36,17 @@ describe("<PostContainer />", () => {
 			expect(node.props().src).toEqual(postData[index].imageUrl);
 		});
 	});
+
+	it("should render a post's likes", () => {
+		const component = shallow(<PostContainer dummy={postData} />);
+		const likes = component.find("strong");
+
+		likes.forEach((node, index) => {
+			console.log(node.props());
+			const likeCount = node.props().children[0];
+
+			expect(typeof likeCount).toBe("number");
+			expect(likeCount).toEqual(postData[index].likes);
+		});
+	});
 });
