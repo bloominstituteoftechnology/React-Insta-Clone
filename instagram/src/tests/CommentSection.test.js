@@ -90,6 +90,4 @@ describe("<CommentSection />", () => {
         component.instance().handleNewComment(event);
         expect(component.state("newComment")).toEqual("I should be in state");
     });
-
-    it("should handle adding a new comment", () => {});
 });
