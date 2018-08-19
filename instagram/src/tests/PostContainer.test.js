@@ -15,7 +15,7 @@ describe("<PostContainer />", () => {
 		expect(tree).toMatchSnapshot();
 	});
 
-	it("should render a post's thumbnail", () => {
+	it("should render a post's thumbnail with the thumbnail url", () => {
 		const component = shallow(<PostContainer dummy={postData} />);
 
 		const thumbnails = component.find("img");
@@ -23,6 +23,17 @@ describe("<PostContainer />", () => {
 			expect(typeof node.props().src).toBe("string");
 			expect(typeof node.props().alt).toBe("string");
 			expect(node.props().src).toEqual(postData[index].thumbnailUrl);
+		});
+	});
+
+	it("should render a post's image with the image url", () => {
+		const component = shallow(<PostContainer dummy={postData} />);
+		const images = component.find(".cardImg");
+
+		images.forEach((node, index) => {
+			expect(typeof node.props().src).toBe("string");
+			expect(typeof node.props().tag).toBe("string");
+			expect(node.props().src).toEqual(postData[index].imageUrl);
 		});
 	});
 });
