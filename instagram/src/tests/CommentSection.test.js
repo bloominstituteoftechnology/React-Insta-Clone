@@ -79,7 +79,17 @@ describe("<CommentSection />", () => {
         expect(input.value).toEqual("hey, this a new comment");
     });
 
-    it("should handle a new comment", () => {});
+    it("should call handleNewComment to change state", () => {
+        const handleNewComment = jest.fn();
+        const component = shallow(<CommentSection commentList={postData} />);
+        const newComment = "I should be in state";
+        const input = component.find(".CommentSection_input");
+        const event = { target: { name: "newComment", value: newComment } };
+
+        expect(component.state("newComment").length).toBe(0);
+        component.instance().handleNewComment(event);
+        expect(component.state("newComment")).toEqual("I should be in state");
+    });
 
     it("should handle adding a new comment", () => {});
 });
