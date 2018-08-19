@@ -2,6 +2,7 @@ import React from "react";
 import Enzyme, { shallow, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import renderer from "react-test-renderer";
+import moment from "moment";
 // component
 import CommentSection from "../components/CommentSection/CommentSection";
 // data
@@ -34,7 +35,18 @@ describe("<CommentSection />", () => {
         });
     });
 
-    it("should render a timestamp", () => {});
+    it("should render a timestamp", () => {
+        const component = shallow(<CommentSection commentList={postData} />);
+        const timestamp = component.find("span");
+
+        timestamp.forEach((node, index) => {
+            const time = node.props().children;
+
+            expect(typeof time).toBe("string");
+            expect(typeof time).toBeTruthy();
+            expect(time).toEqual(moment().calendar());
+        });
+    });
 
     it("should render an input tag", () => {});
 
