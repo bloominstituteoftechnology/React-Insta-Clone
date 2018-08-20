@@ -9,7 +9,7 @@ const SearchBar = (props) => {
             <img src={IGLogo} alt="Instagram logo" className="IG-Logo"/>
             </div>
             <div>
-                <input type="text" placeholder="Search" />
+                <input className="searchbar" onChange={props.search} type="text" placeholder="Search" />
             </div>
             <div className="social-wrapper">
                 <div className="social">
@@ -22,7 +22,9 @@ const SearchBar = (props) => {
                 <i className="fa fa-user-circle"></i>
                 </div>
             </div>
-            <button onClick={() =>props.handleCreds(null)}>Log Out</button>
+            <form>
+                <button onClick={() =>props.handleCreds(null)}>Log Out</button>
+            </form>
         </div>
     );
 };

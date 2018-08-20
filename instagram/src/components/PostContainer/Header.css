@@ -1,0 +1,16 @@
+.post-header {
+    background: palevioletred;
+    width: 640px;
+    margin: auto;
+}
+
+.post-thumb {
+    border-radius: 100px;
+    height: 80px;
+}
+
+.post-image {
+    width: 640px;
+    height: 640px;
+    object-fit: cover;
+}

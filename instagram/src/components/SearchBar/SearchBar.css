@@ -1,3 +1,21 @@
 img.IG-Logo {
     width: 100px;
 }
+
+.searchbar-wrapper {
+    display: flex;
+    margin: 0 5%;
+    justify-content: space-between;
+}
+
+.searchbar {
+    margin-left: 85%;
+    border: 1px solid pink;
+    border-radius: 5px 10px;
+}
+
+.social-wrapper {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+}

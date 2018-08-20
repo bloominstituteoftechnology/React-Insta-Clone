@@ -12,10 +12,10 @@ class App extends Component {
     password: "",
     credentials: localStorage.getItem("credentials")
   };
-  handleCreds = credentials => {
-    if (!credentials) localStorage.removeItem("credentials");
-    this.setState({ credentials });
-  };
+  // handleCreds = credentials => {
+  //   if (!credentials) localStorage.removeItem("credentials");
+  //   this.setState({ credentials });
+  // };
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
@@ -26,10 +26,11 @@ class App extends Component {
     this.setState({ username: "", password: "" });
   };
 
+
   render() {
     return (
       <div className="App">
-        <SearchBar handleCreds={this.handleCreds} />
+        {/* <SearchBar search={} handleCreds={this.handleCreds} /> */}
         <PostPageAuth
           credentials={this.state.credentials}
           username={this.state.username}

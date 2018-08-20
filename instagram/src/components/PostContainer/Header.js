@@ -1,25 +1,6 @@
-// import React from 'react';
-// import './PostContainer.css';
-
-// const Header = props => {
-//     return (
-//         <div className='post-header'>
-//             <div className='thumb-wrapper'>
-//                 <img
-//                     alt='post header'
-//                     className='thumbnail-img'
-//                     src={props.thumbnailUrl}
-//                 />
-//             </div>
-//             <div>{props.username}</div>
-//         </div>
-//     );
-// };
-
-// export default Header;
 
 import React from 'react';
-// import ‘./Posts.css’;
+import './Header.css'
 
 const Header = props => {
  return (
@@ -36,4 +17,4 @@ const Header = props => {
  );
 };
 
-export default Header
+export default Header;
