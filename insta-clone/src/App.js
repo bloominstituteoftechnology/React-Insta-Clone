@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
 import SearchBar from './components/SearchBar/SearchBar';
+import PostList from './components/PostContainer/PostList';
 
 class App extends Component {
   constructor() {
@@ -20,7 +21,7 @@ class App extends Component {
 
         </header>
 
-
+       <PostList postData={this.state.postData} />
       </div>
     );
   }
