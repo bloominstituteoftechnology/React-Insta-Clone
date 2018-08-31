@@ -11,8 +11,12 @@ const PostList = props => {
         <PostContainer
         key={index}
         username={post.username}
-        thumbnailUrl={post.thumbnailUrl} />
-      ))};
+        thumbnailUrl={post.thumbnailUrl}
+        imageUrl={post.imageUrl}
+        commentData={post.comments}
+         />
+      )
+    )}
     </div>
   );
 };

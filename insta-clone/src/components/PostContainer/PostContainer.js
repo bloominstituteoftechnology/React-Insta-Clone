@@ -9,6 +9,11 @@ const PostContainer = props => {
         <img src={props.thumbnailUrl} />
         <h2>{props.username}</h2>
       </div>
+      <img src={props.imageUrl} />
+      <CommentSection
+        commentData{...props.commentData}
+
+      />
     </div>
   );
 };
