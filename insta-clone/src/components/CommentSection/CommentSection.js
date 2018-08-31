@@ -6,10 +6,16 @@ const CommentSection = props => {
   return (
     <div className="commentSection">
     {props.commentData.map((comment, index) => (
-      <Comment />
+      <Comment
+        key={index}
+        username={comment.username}
+        text={comment.text}
+      />
 
-    )}
-  )
+    )
+  )}
+  </div>
+  
 )}
 
 export default CommentSection;

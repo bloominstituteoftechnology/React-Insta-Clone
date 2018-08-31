@@ -11,7 +11,7 @@ const PostContainer = props => {
       </div>
       <img src={props.imageUrl} />
       <CommentSection
-        commentData{...props.commentData}
+        commentData={props.commentData}
 
       />
     </div>
