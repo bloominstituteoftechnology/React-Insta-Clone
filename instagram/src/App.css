@@ -58,14 +58,11 @@ html, body {
 }
 
 .App {
-	font-size: 1.6rem;
-}
-
-.container {
-	max-width: 1010px;
-  margin: 0 auto;
+	font-size: 1.4rem;
 }
 
 .posts {
 	padding-top: 77px;
+	max-width: 1010px;
+  margin: 0 auto;
 }

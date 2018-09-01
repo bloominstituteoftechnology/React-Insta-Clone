@@ -1,9 +1,30 @@
 .PostContainer {
-
+  width: 100%;
+  max-width: 935px;
+  margin: 0 auto;
 }
 
-.PostContainer {
-  
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.thumbnail {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.thumbnail img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.author-name {
+  font-weight: 500;
+  text-decoration: inherit;
+  color: inherit;
 }
 
 .sprite-glyph {
@@ -23,4 +44,14 @@
 	width: 24px;
   height: 24px;
   cursor: pointer;
+}
+
+.likes {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.time {
+  text-decoration: inherit;
+  color: inherit;
 }

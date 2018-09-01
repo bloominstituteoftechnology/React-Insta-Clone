@@ -1,33 +1,57 @@
 import React from 'react';
 import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = (props) => {
   return (
-    <div  className="PostContainer"
+    <article  className="PostContainer"
           id={props.post.username + ': ' + props.post.timestamp}>
 
-      <div className="post-author">
-        <img  src={props.post.thumbnailUrl}
-              alt={props.post.username}
-              className="thumbnail"/>
-        {props.post.username}
-      </div>
+      <section className="author">
+        <a href="/" className="thumbnail">
+          <img  src={props.post.thumbnailUrl}
+                alt={props.post.username}/>
+        </a>
+        <a href="/" className="author-name">
+          {props.post.username}
+        </a>
+      </section>
 
-      <img  src={props.post.imageUrl} alt="image"
+      <img  src={props.post.imageUrl}
+            alt={props.post.username + ': ' + props.post.timestamp}
             className="post-image"/>
 
-      <div className="actions">
+      <section className="actions">
         <div  id="like"
               className="sprite-glyph">
         </div>
         <div  id="comment"
               className="sprite-glyph">
         </div>
-      </div>
+      </section>
 
-      <div className="likes">{props.post.likes + ' likes'}</div>
+      <a href="/" className="likes">
+      {props.post.likes + ' likes'}
+      </a>
 
-    </div>
+      <section className="comments">
+        {props.post.comments.map(comment =>
+          <CommentSection key={comment.username + ': ' + Date.now() + Math.round(Math.random()*1000)}
+                          comment={comment} />
+          )}
+      </section>
+
+      <a href="/" className="time">
+        {props.post.timestamp}
+      </a>
+
+      <section className="add-comment">
+          <form action="/" className="add-comment">
+            <textarea name="comment-text"></textarea>
+          </form>
+      </section>
+
+    </article>
   );
 }
 
