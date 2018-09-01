@@ -1,0 +1,26 @@
+.PostContainer {
+
+}
+
+.PostContainer {
+  
+}
+
+.sprite-glyph {
+  display: inline-block;
+  background: url('https://www.instagram.com/static/bundles/base/sprite_glyphs.png/5bc02fa85667.png');
+}
+
+#like {
+  background-position: -26px -92px;
+	width: 24px;
+  height: 22px;
+  cursor: pointer;
+}
+
+#comment {
+  background-position: -26px -65px;
+	width: 24px;
+  height: 24px;
+  cursor: pointer;
+}

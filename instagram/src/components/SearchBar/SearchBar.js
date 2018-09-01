@@ -10,7 +10,8 @@ const SearchBar = (props) => {
         <a  href="/"
             id="glyph"
             className="sprite"></a>
-        <a  href="/" id="logotype"
+        <a  href="/"
+            id="logotype"
             className="sprite"></a>
       </div>
       
