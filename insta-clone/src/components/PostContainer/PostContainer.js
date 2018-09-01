@@ -22,7 +22,9 @@ const PostContainer = props => {
 };
 
 PostContainer.propTypes = {
-  commentData: PropTypes.array
+  commentData: PropTypes.array,
+  username: PropTypes.string,
+  imageUrl: PropTypes.string
 }
 
 export default PostContainer;
