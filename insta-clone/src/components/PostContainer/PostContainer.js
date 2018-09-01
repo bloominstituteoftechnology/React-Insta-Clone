@@ -1,8 +1,10 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import CommentSection from "../CommentSection/CommentSection";
 //This will contain the post, including images, content, and comments
 
 const PostContainer = props => {
+
   return (
     <div className="post">
       <div className="postHeader">
@@ -16,6 +18,11 @@ const PostContainer = props => {
       />
     </div>
   );
+
 };
+
+PostContainer.propTypes = {
+  commentData: PropTypes.array
+}
 
 export default PostContainer;

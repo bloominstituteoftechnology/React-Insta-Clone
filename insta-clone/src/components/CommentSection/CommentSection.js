@@ -18,10 +18,10 @@ const CommentSection = props => {
   </div>
 
 )
+}
 
 CommentSection.propTypes = {
   commentData: PropTypes.array
-}
 }
 
 export default CommentSection;

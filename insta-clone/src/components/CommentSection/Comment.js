@@ -8,11 +8,11 @@ const Comment = props => {
    <p className="comment-text">{props.text}</p>
   </div>
 )
+}
+
 Comment.propTypes = {
   username: PropTypes.string,
   text: PropTypes.string
-}
-
 }
 
 export default Comment;
