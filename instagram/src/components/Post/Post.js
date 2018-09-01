@@ -44,9 +44,13 @@ const Post = (props) => {
         <div className="respond">
           <form action="/"
                 className="add-comment">
-            <textarea name="comment-text"
+            {/* <textarea name="comment-text"
                       placeholder="Add a comment...">
-            </textarea>
+            </textarea> */}
+            <div  className="fake-textarea"
+                  contentEditable
+                  placeholder="Add a comment...">
+            </div>
           </form>
           <div  id="options"
                 className="sprite-glyph">

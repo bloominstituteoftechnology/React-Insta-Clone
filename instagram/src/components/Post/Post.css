@@ -78,23 +78,40 @@
 
 .respond {
   display: flex;
+  justify-content: space-between;
   border-top: 1px solid #EFEFEF;
   margin-top: 10px;
   padding: 16px 0;
 }
 
-.add-comment textarea {
+/* .add-comment textarea {
   width: 530px;
   height: 18px;
   max-height: 80px;
+  color: inherit;
   border: none;
   resize: none;
   outline: none;
+  padding: 0;
+} */
+
+.fake-textarea {
+  width: 544px;
+  min-height: 18px;
+  max-height: 80px;
+  outline: none;
+  overflow: auto;
+}
+
+[contenteditable=true]:empty::before {
+  content: attr(placeholder);
+  color: #999999;
 }
 
 #options {
   align-self: center;
   background-position: 1px -116px;
 	width: 25px;
-	height: 25px;
+  height: 25px;
+  margin-right: -5px;
 }
