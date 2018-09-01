@@ -6,16 +6,14 @@ import PostContainer from './components/PostContainer/PostContainer';
 class App extends Component {
   constructor() {
     super();
-    this.state = dummyData 
+    this.state = {data:dummyData} 
   }
-
-
   
   render() {
     
     return (
       <div className="container">
-        {this.state.map(data => <PostContainer post={data}/>)} 
+        {this.state.data.map(data => <PostContainer post={data} />)} 
       </div>
     );
   }

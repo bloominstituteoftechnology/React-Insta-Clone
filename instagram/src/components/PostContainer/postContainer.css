@@ -1,0 +1,16 @@
+.post {
+    border: 1px solid grey; 
+    max-width: 600px; 
+}
+
+.header {
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header .thumbnail {
+    width: 30px;
+    height: 30px; 
+    border-radius: 50%;
+}
