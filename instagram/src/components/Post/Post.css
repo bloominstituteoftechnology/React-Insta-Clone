@@ -1,0 +1,100 @@
+.Post {
+  width: 100%;
+  max-width: 602px;
+  background: white;
+  border: 1px solid #E6E6E6;
+  border-radius: 3px;
+  margin-bottom: 60px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 16px;
+}
+
+.thumbnail {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.thumbnail img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.author .username {
+  margin-left: 10px;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.engagement {
+  padding: 0 16px;
+}
+
+.actions {
+  margin-left: -8px;
+}
+
+.sprite-glyph {
+  display: inline-block;
+  background: url('https://www.instagram.com/static/bundles/base/sprite_glyphs.png/5bc02fa85667.png');
+  cursor: pointer;
+}
+
+.actions .sprite-glyph {
+  margin: 8px;
+}
+
+#like {
+  background-position: -26px -92px;
+	width: 24px;
+  height: 22px;
+}
+
+#comment {
+  background-position: -26px -65px;
+	width: 24px;
+  height: 24px;
+}
+
+.likes {
+  font-weight: 500;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.time {
+  font-size: 1rem;
+  text-decoration: inherit;
+  color: #999999;
+}
+
+.respond {
+  display: flex;
+  border-top: 1px solid #EFEFEF;
+  margin-top: 10px;
+  padding: 16px 0;
+}
+
+.add-comment textarea {
+  width: 530px;
+  height: 18px;
+  max-height: 80px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+#options {
+  align-self: center;
+  background-position: 1px -116px;
+	width: 25px;
+	height: 25px;
+}

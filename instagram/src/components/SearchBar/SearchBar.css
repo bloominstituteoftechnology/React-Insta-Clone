@@ -11,7 +11,7 @@
   align-items: center;
   width: 100%;
   max-width: 1010px;
-  height: 77px;
+  height: 76px;
   padding: 0 40px;
   margin: 0 auto;
 }
@@ -59,11 +59,6 @@
   padding: 3px 10px 3px 26px;
   border: 1px solid #DBDBDB;
   border-radius: 3px;
-}
-
-::placeholder {
-  color: #999999;
-  opacity: 1;
 }
 
 .navigation {
