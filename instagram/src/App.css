@@ -52,9 +52,19 @@ table {
 }
 
 html, body {
-  font-size: 62.5%;
+	font-size: 62.5%;
+	background: #FAFAFA;
 }
 
 .App {
-  
+	font-size: 1.6rem;
+}
+
+.container {
+	max-width: 1010px;
+  margin: 0 auto;
+}
+
+.posts {
+	padding-top: 77px;
 }

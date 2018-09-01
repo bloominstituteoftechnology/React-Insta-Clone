@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './CommentSection.css';
 
 const CommentSection = (props) => {
