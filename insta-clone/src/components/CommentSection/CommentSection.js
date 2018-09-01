@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Comment from './Comment';
 // this component contains all comments in a given post
 
@@ -15,7 +16,12 @@ const CommentSection = props => {
     )
   )}
   </div>
-  
-)}
+
+)
+
+CommentSection.propTypes = {
+  commentData: PropTypes.array
+}
+}
 
 export default CommentSection;
