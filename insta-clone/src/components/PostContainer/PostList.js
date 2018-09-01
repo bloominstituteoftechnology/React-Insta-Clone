@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import PostContainer from "./PostContainer";
 
 //this component will receive data from the state and feed it into
@@ -20,5 +21,10 @@ const PostList = props => {
     </div>
   );
 };
+
+PostList.propTypes = {
+  postData: PropTypes.array,
+  comments: PropTypes.array
+}
 
 export default PostList;
