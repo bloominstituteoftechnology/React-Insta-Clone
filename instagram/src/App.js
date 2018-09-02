@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import dummyData from './dummy-data';
-import PostList from './components/PostContainer/PostList'
+import PostList from './components/PostContainer/PostList';
+import './index.css';
 
 console.log(dummyData);
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <PostList dataList={dummyData} />
       </div>
     );

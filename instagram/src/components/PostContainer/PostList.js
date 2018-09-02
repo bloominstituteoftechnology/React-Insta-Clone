@@ -2,11 +2,10 @@ import React from 'react';
 import Post from './Post';
 import PropTypes from 'prop-types';
 
+
 const PostList = (props) => {
 	return (
-		<div>
-			<div>{props.dataList.map((post) => <Post post={post} key={post.id}/>)}</div>
-		</div>
+		<div>{props.dataList.map((post) => <Post post={post} key={post.id}/>)}</div>
 	)
 }
 

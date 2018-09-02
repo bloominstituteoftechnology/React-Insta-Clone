@@ -1,26 +1,34 @@
 import React from 'react';
 import CommentList from '../CommentSection/CommentList';
 import PropTypes from 'prop-types';
-
-// import PostList from './components/PostContainer/PostList'
+import './posts.css';
+import h from './h.png';
+import c from './c.png';
 
 
 const Post = (props) => {
 	return (
-		<div>
-			<ul>
-				<li>User Name: {props.post.username}</li>
-				<li>ThumbnailURL: {props.post.thumbnailUrl}</li>
-				<li>ImageURL: {props.post.imageUrl}</li>
-				<li>Likes: {props.post.likes}</li>
-				<li>timestamp: {props.post.timestamp}</li>
-			</ul>
-			<div>
-				<CommentList comments={props.post.comments} />
-				<input type='text-area'/><br />
-				<button>click here to comment</button>
+		<section className="post-section">
+			<div className="post-section-1">
+				<img src={props.post.thumbnailUrl} className="thumb" alt={"thumb"}/>
+				<p>{props.post.username}</p>
 			</div>
-		</div>
+			<img src={props.post.imageUrl} className="post-img" alt={"post-img"}/>
+			<div className="post-section-2">
+				<img src={h} className="status-img" alt={"heart"}/>
+				<img src={c} className="status-img" alt={"comment"}/>
+				<p>{props.post.likes} Likes</p>
+			</div>
+			<div className="post-section-3">
+				<CommentList comments={props.post.comments} />
+				<p className="time-stamp">{props.post.timestamp}</p>
+				<hr className="hr-comment" />
+				<div className="flex">
+					<input type='text-area' className="make-comment" value="Add a Comment..." />
+					<p>...</p>
+				</div>
+			</div>
+		</section>
 	)
 }
 
