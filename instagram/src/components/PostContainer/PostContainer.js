@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Post from '../Post/Post';
 import './PostContainer.css';
 
@@ -11,6 +12,10 @@ const PostContainer = (props) => {
       )}
     </div>
   );
-}
+};
+
+PostContainer.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.object).isRequired
+};
 
 export default PostContainer;

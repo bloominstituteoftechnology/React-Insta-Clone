@@ -59,6 +59,7 @@
   padding: 3px 10px 3px 26px;
   border: 1px solid #DBDBDB;
   border-radius: 3px;
+  outline: none;
 }
 
 .navigation {
