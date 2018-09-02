@@ -7,7 +7,7 @@ import './posts.css';
 const PostList = (props) => {
 	return (
 		<div>														
-			<div>{props.dataList.map((post) => <Post post={post} key={post.id} handleComment={props.handleComment}/>)}</div>
+			<div>{props.dataList.map((post) => <Post post={post} key={post.id} handleInput={props.handleInput}/>)}</div>
 		</div>
 
 	)

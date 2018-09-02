@@ -15,7 +15,7 @@ class App extends Component {
 		};
 	}
 
-	handleComment = event => {
+	handleInput = event => {
     this.setState({
       inputText: event.target.value,
     });
@@ -28,7 +28,7 @@ class App extends Component {
       	<SearchBar handleInput={this.handleInput} />
         <PostList 
         	dataList={this.state.posts} 
-        	handleComment={this.handleComment} 
+        	handleInput={this.handleInput} 
 	      />
       </div>
     );
