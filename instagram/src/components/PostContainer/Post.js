@@ -24,7 +24,7 @@ const Post = (props) => {
 				<p className="time-stamp">{props.post.timestamp}</p>
 				<hr className="hr-comment" />
 				<div className="flex">
-					<input type='text-area' className="make-comment" value="Add a Comment..." />
+					<input type='text-area' className="make-comment" placeholder="Add a comment..." onChange={props.handleComment} />
 					<p>...</p>
 				</div>
 			</div>

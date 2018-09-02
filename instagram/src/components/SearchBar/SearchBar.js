@@ -16,17 +16,16 @@ const SearchBar = (props) => {
 					<hr className="logo-hr"/>
 					<img src={insta} alt={"instagram"} className="main-logo"/>
 				</div>
-				<input type="text" value="Search"/>
+				<input type="text" onChange={props.handleComment} placeholder="Search" />
 				<div className="flex-logos2">
-					<img src={compas} className="logo-images"/>
-					<img src={h} className="logo-images"/>
-					<img src={person} className="logo-images"/>
+					<img src={compas} className="logo-images" alt="compas"/>
+					<img src={h} className="logo-images" alt="heart"/>
+					<img src={person} className="logo-images" alt="person"/>
 				</div>
 			</div>
 			<hr className="hr-search-1"/>
 			<hr className="hr-search-2"/>
 		</div>
-
 	)
 }
 

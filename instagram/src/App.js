@@ -5,14 +5,31 @@ import SearchBar from './components/SearchBar/SearchBar';
 
 import './index.css';
 
-console.log(dummyData);
-
 class App extends Component {
+	constructor(){
+	super();
+		this.state = {
+			posts: dummyData,
+			filteredPosts: [],
+			inputText: "",
+		};
+	}
+
+	handleComment = event => {
+    this.setState({
+      inputText: event.target.value,
+    });
+  };
+
+
   render() {
     return (
       <div className="container">
-      	<SearchBar />
-        <PostList dataList={dummyData} />
+      	<SearchBar handleInput={this.handleInput} />
+        <PostList 
+        	dataList={this.state.posts} 
+        	handleComment={this.handleComment} 
+	      />
       </div>
     );
   }
