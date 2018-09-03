@@ -14,6 +14,8 @@ function Post(props) {
             </div>
             <div className='post-body'>
                 <img className='post-img' src={props.imageUrl} alt={`Posted by ${props.username} on ${props.timestamp}`} />
+            </div>
+            <div className='post-footer'>
                 <div>
                     <img src={heart} alt='Heart' />
                     <img src={commentbubble} alt='Comment' />

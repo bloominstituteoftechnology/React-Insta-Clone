@@ -11,20 +11,25 @@ import usericon from '../../assets/user.png';
 function SearchBar(props) {
     return (
         <div className='search-bar'>
-            <img src={camera} alt='Camera' />
-            <div> | </div>
-            <img src={lambdagram} alt='Lambdagram' />
+            <div className='logo' >
+                <img className='search-img' src={camera} alt='Camera' />
+                <div className='search-breaker'></div>
+                <img className='search-img' src={lambdagram} alt='Lambdagram' />
+            </div>
             <input 
+                className='search-box' 
                 name='searchInput' 
                 type='text' 
-                placeholder='(i) Search' 
+                placeholder='Search' 
                 value={props.searchInput} 
                 onChange={props.handleSearchInput} 
                 onSubmit={props.handleSearch} 
             ></input>
-            <img src={compass} alt='Compass' />
-            <img src={heart} alt='Heart' />
-            <img src={usericon} alt='User' />
+            <div>
+                <img className='search-img' src={compass} alt='Compass' />
+                <img className='search-img' src={heart} alt='Heart' />
+                <img className='search-img' src={usericon} alt='User' />
+            </div>
         </div>
     );
 }

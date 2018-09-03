@@ -2,11 +2,28 @@
     background-color: #ffffff;
     border: 1px solid lightgray;
     border-radius: 3px;
-    width: 80%;
-    max-width: 600px;
-    margin: 0px auto 50px auto;
+    margin-bottom: 50px;
+}
+
+.post-head {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+
+.user-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    margin: 5px;
 }
 
 .post-img {
     width: 100%;
+}
+
+.post-footer {
+    width: 95%;
+    margin: auto;
 }
