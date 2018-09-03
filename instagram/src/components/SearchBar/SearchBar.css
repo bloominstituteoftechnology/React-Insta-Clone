@@ -2,7 +2,7 @@
   position: fixed;
   width: 100%;
   background: white;
-  border-bottom: 1px solid #E6E6E6;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .SearchBar .container {
@@ -18,22 +18,21 @@
 
 .sprite {
   display: inline-block;
-  background: url('https://www.instagram.com/static/bundles/base/sprite_core.png/3243a2788e25.png');
+  background: url("https://www.instagram.com/static/bundles/base/sprite_core.png/3243a2788e25.png");
 }
 
 #glyph {
   position: absolute;
   background-position: -98px -205px;
-	width: 30px;
+  width: 30px;
   height: 30px;
   opacity: 0;
   margin: 2px 0 0;
 }
 
-
 #logotype {
   background-position: -98px -203px;
-	width: 176px;
+  width: 176px;
   height: 35px;
 }
 
@@ -42,13 +41,12 @@
 }
 
 .search-button {
-
 }
 
 #search {
   position: absolute;
   background-position: -445px -409px;
-	width: 10px;
+  width: 10px;
   height: 10px;
   margin: 9px 0 0 11px;
 }
@@ -57,7 +55,7 @@
   width: 215px;
   height: 28px;
   padding: 3px 10px 3px 26px;
-  border: 1px solid #DBDBDB;
+  border: 1px solid #dbdbdb;
   border-radius: 3px;
   outline: none;
 }
@@ -71,18 +69,18 @@
 
 #explore {
   background-position: -262px -358px;
-	width: 22px;
-	height: 22px;
+  width: 22px;
+  height: 22px;
 }
 
 #activity {
   background-position: -184px -359px;
-	width: 22px;
-	height: 22px;
+  width: 22px;
+  height: 22px;
 }
 
 #profile {
   background-position: -433px -318px;
-	width: 22px;
-	height: 22px;
+  width: 22px;
+  height: 22px;
 }

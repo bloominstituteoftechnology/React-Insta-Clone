@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 602px;
   background: white;
-  border: 1px solid #E6E6E6;
+  border: 1px solid #e6e6e6;
   border-radius: 3px;
   margin-bottom: 60px;
 }
@@ -44,7 +44,7 @@
 
 .sprite-glyph {
   display: inline-block;
-  background: url('https://www.instagram.com/static/bundles/base/sprite_glyphs.png/5bc02fa85667.png');
+  background: url("https://www.instagram.com/static/bundles/base/sprite_glyphs.png/5bc02fa85667.png");
   cursor: pointer;
 }
 
@@ -54,13 +54,13 @@
 
 #like {
   background-position: -26px -92px;
-	width: 24px;
+  width: 24px;
   height: 22px;
 }
 
 #comment {
   background-position: -26px -65px;
-	width: 24px;
+  width: 24px;
   height: 24px;
 }
 
@@ -79,7 +79,7 @@
 .respond {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #EFEFEF;
+  border-top: 1px solid #efefef;
   margin-top: 10px;
   padding: 16px 0;
 }
@@ -103,7 +103,7 @@
   overflow: auto;
 }
 
-[contenteditable=true]:empty::before {
+[contenteditable="true"]:empty::before {
   content: attr(placeholder);
   color: #999999;
 }
@@ -111,7 +111,7 @@
 #options {
   align-self: center;
   background-position: 1px -116px;
-	width: 25px;
+  width: 25px;
   height: 25px;
   margin-right: -5px;
 }
