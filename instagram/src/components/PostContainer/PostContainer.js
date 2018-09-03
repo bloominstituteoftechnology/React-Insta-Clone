@@ -1,12 +1,14 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
-// import moment from 'moment';
+import moment from 'moment';
 
 import './PostContainer.css';
 
 import PropTypes from 'prop-types';
 
 const PostContainer = props => {
+    const timestamp = props.data.timestamp.substring(0, props.data.timestamp.indexOf(',') - 7) + props.data.timestamp.substring(props.data.timestamp.indexOf(',') - 5);
+    
     return (
         <section className = 'post-container-section'>
             <div className = 'post-container-div'>
@@ -26,8 +28,7 @@ const PostContainer = props => {
                 { props.data.comments.map((comment, index) => <CommentSection className = 'comment-section-div' key = { index } comment = { comment } />) }
 
                 <div className = 'timestamp-div'>
-                    {/* <span>{ props.data.timestamp }</span> */}
-                    <span>2 HOURS AGO</span>
+                    <span>{ moment(timestamp).fromNow().toLocaleUpperCase() }</span>
                 </div>
 
                 <div className = 'add-a-comment-div'>

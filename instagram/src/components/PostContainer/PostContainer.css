@@ -4,7 +4,7 @@
     justify-content: center;
 }
 .post-container-div {
-    border: 1px solid black;
+    border: 1px solid gray;
     width: 45%;
     display: flex;
     justify-content: center;
