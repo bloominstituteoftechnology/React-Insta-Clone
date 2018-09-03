@@ -1,6 +1,7 @@
 .post-wrapper {
   width: 600px;
-  margin: 20px 0;
+  margin: 30px auto;
+  border: 1px solid #ccc;
 }
 .post-header-wrapper {
   display: flex;
@@ -31,16 +32,18 @@
   max-width: 600px;
 }
 
-.post-icons-and-comments-wrapper {
+.post-icon-and-comments-wrapper {
   padding: 10px 20px;
 }
 
-.post-icons-and-comments-wrapper p {
+.post-icon-and-comments-wrapper p {
   margin: 5px 0 10px 0;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 .post-icons-wrapper {
-  font-size: 25px;
+  font-size: 20px;
   display: flex;
 }
 
