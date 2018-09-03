@@ -8,13 +8,18 @@ class Post extends React.Component {
   // TODO: some logic for adding likes
   like = () => {};
 
-  render() { 
-    return(
-      <div>
-        <h1>{this.props.post.username}'s Post has {this.state.likes} likes.</h1>
+  render() {
+    return (
+      <div className="post-wrapper">
+        <div className="post-header-wrapper">
+          <img src={this.props.post.thumbnailUrl} alt={"Profile thumb."} />
+          <div className="username">{this.props.post.username}</div>
+        </div>
+        <img src={this.props.post.imageUrl} alt={"post"} />
+        <p>{this.state.likes} likes</p>
       </div>
     );
-  }; // TODO: render sometiong
-}
+  }
+};
 
 export default Post;
