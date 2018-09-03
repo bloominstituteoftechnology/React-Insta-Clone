@@ -1,11 +1,18 @@
 import React from 'react'
 import './App.css'
-import './dummy-data'
+import dummyData from './dummy-data'
 import Search from './components/SearchBar/Search.js'
 import Post from './components/PostContainer/Post.js'
 import Comment from './components/CommentSection/Comment.js'
 
 class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      data: dummyData
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -13,8 +20,14 @@ class App extends React.Component {
           <h1 className="App-title">Instagram Clone</h1>
         </header>
         <Search />
-        <Post />
-        <Comment />
+        {this.state.data.map( item => {
+          return (
+            <div className="Item" key={item.timestamp}>
+              <Post post={item} />
+              <Comment comment={item.comments} />
+            </div>
+          )
+        })}
       </div>
     )
   }
