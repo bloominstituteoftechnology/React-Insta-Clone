@@ -18,7 +18,8 @@ class CommentList extends React.Component {
 			comments: [...this.state.comments, {
 				username: 'marshall',
 				text: this.state.commentText,
-			}]
+			}],
+			commentText: "",
 		})
 	}
 
