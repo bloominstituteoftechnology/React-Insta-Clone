@@ -1,6 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
 import Logo from './Logo';
+import SearchInput from './SearchInput';
 
 
 const SearchBar = () => {
@@ -8,6 +9,7 @@ const SearchBar = () => {
       <div>
 
        <Logo />
+       <SearchInput />
 
       </div> 
     );
