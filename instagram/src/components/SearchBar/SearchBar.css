@@ -1,0 +1,56 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 23px 34px 12px 17px;
+    border-bottom: 1px solid gray;
+}
+
+.instagram-icon {
+    max-width: 50px;
+    max-height: 50px;
+    border-right: 1px solid black;
+    padding-right: 25px;
+    padding-bottom: 5px;
+}
+
+.instagram-logo {
+    max-height: 57px;
+    padding-left: 19px;
+    padding-top: 5px;
+}
+
+.header-input-div {
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 14px;
+    margin-right: 65px;
+    padding-left: 10px;
+    padding-right: 20px;
+    height: 36px;
+    font-size: 17px;
+    color: gray;
+    display: flex;
+    align-items: center;
+    width: 267px;
+}
+
+.header-input-div .fa-search {
+    margin-left: 86px;
+}
+
+.header-input-div .header-input-field {
+    border: 0;
+    font-size: 21px;
+    width: 150px;
+    padding-left: 4px;
+}
+
+.header-icons-div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 32px;
+    width: 181px;
+    padding: 20px 0px;
+    margin-right: 12px;
+}
