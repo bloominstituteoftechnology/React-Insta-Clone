@@ -1,0 +1,32 @@
+.thumbnailPic {
+
+    border-radius: 200px;
+
+}
+
+.userInfo {
+    display: flex;
+    text-align: left;
+    margin: 10px 0 10px 30px;
+}
+
+
+.mainPostPhoto {
+    text-align: left;
+}
+
+.userName {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    font-weight: 700;
+}
+
+.likeCounter {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.likesDiv {
+    padding: 10px 0 10px 30px;
+}

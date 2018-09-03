@@ -1,0 +1,24 @@
+.comments {
+    text-align: left;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.commentUserName {
+    font-weight: 700;
+}
+
+.commentContainer {
+    margin-bottom: 50px;
+}
+
+.footer {
+    padding: 30px;
+    text-align: left;
+}
+
+.footer input {
+    border: 0 solid;
+    text-align: left;
+    
+}
