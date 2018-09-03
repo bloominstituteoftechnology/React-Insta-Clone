@@ -126,15 +126,3 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-* {
-  box-sizing: border-box;
-}
-body {
-  font-size: 62.5%;
-}
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 62.5%;
-}
