@@ -18,6 +18,9 @@ class App extends Component {
     this.setState({ posts: dummyData });
   }
 
+  // TODO: searchHandler method
+  searchHandler = event => {};
+
   render() {
     return (
       /*  TODO: setup some logic for day 1
@@ -59,7 +62,7 @@ class App extends Component {
               <i className="fab fa-instagram" />
               <p>Instagram</p>
             </div>
-            <SearchBar />
+            <SearchBar searchHandler={this.searchHandler} />
             <div className="social-icons">
               <i className="far fa-compass" />
               <i className="far fa-heart" />
