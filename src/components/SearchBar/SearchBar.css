@@ -1,0 +1,30 @@
+.vl{
+  border-left: 6px solid white;
+   height: 50px;
+   margin-top: 5px;
+}
+.SearchBar{
+  display: flex;
+  flex-wrap: nowrap;
+  height: 60px;
+}
+.logo{
+  color: white;
+  margin-top: 5px;
+  margin-left: 20px;
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+}
+.HeartLikeButtton{
+  color: white;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.SearchBar input{
+  width: 200px;
+height: 20px;
+margin-top: 20px;
+margin-left: 20px;
+
+}
