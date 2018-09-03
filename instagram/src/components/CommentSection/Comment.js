@@ -2,13 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import "./comment.css";
 
-
-
-
 const Comment = (props) => {
 	return (
 		<div>
-		<p><span className="make-bold">{props.comment.username}</span> {props.comment.text}</p>
+		<p postid={props.comment.postid}><span className="make-bold">{props.comment.username}</span> {props.comment.text}</p>
 		</div>
 	)
 }

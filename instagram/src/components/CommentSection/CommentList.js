@@ -1,17 +1,41 @@
 import React from 'react';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
+import InputCom from './InputCom';
 
 class CommentList extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			comments: props.comments
+			comments: props.comments,
+			commentText: "",
 		};
 	}
+
+	addNew = (event) => {
+		event.preventDefault();
+		this.setState({
+			comments: [...this.state.comments, {
+				username: 'marshall',
+				text: this.state.commentText,
+			}]
+		})
+	}
+
+	commentText = event => {
+    this.setState({
+      commentText: event.target.value,
+    });
+  };
+
 	render(){
+		console.log(this.state.comments)
 		return (
-			<div>{this.state.comments.map((comment) => <Comment comment={comment} key={comment.id} />)}</div>
+			<div>
+				<div>{this.state.comments.map((comment) => <Comment comment={comment} key={comment.id}/>)}</div>
+				<hr className="hr-comment" />
+				<InputCom addNew={this.addNew} commentText={this.commentText}/>
+			</div>
 		)
 	}
 }

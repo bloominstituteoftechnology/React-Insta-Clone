@@ -5,7 +5,6 @@ import './posts.css';
 import h from './h.png';
 import c from './c.png';
 
-
 const Post = (props) => {
 	return (
 		<section className="post-section">
@@ -21,17 +20,10 @@ const Post = (props) => {
 			</div>
 			<div className="post-section-3">
 				<CommentList comments={props.post.comments} />
-				<p className="time-stamp">{props.post.timestamp}</p>
-				<hr className="hr-comment" />
-				<div className="flex">
-					<input type='text-area' className="make-comment" placeholder="Add a comment..." onChange={props.handleInput} />
-					<p>...</p>
-				</div>
 			</div>
 		</section>
 	)
 }
-
 
 Post.propTypes = {
 	post: PropTypes.shape({
