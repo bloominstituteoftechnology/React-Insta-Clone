@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import dummyData from "./dummy-data";
-import PostContainer from './components/PostContainer/PostContainer';
+import PostContainer from "./components/PostContainer/PostContainer";
 import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBar";
 
@@ -56,12 +56,17 @@ class App extends Component {
         <div className="wrapper">
           <header>
             <div className="instaclone-logo">
-              <i className="logo-ig" />
+              <i className="fab fa-instagram" />
               <p>Instagram</p>
             </div>
+            <SearchBar />
+            <div className="social-icons">
+              <i className="far fa-compass" />
+              <i className="far fa-heart" />
+              <i className="far fa-user" />
+            </div>
+            <PostContainer data={this.state.posts} />
           </header>
-          <SearchBar />
-          <PostContainer data={this.state.posts} />
         </div>
       </div>
     );
