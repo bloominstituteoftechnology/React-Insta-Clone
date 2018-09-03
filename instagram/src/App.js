@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import dummyData from "./dummy-data";
 import PostContainer from './components/PostContainer/PostContainer';
 import "./App.css";
+import SearchBar from "./components/SearchBar/SearchBar";
 
 class App extends Component {
   constructor() {
@@ -59,6 +60,7 @@ class App extends Component {
               <p>Instagram</p>
             </div>
           </header>
+          <SearchBar />
           <PostContainer data={this.state.posts} />
         </div>
       </div>
