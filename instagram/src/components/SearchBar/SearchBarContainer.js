@@ -13,7 +13,7 @@ const SearchBarContainer = () => {
             <div className="search-input">
                 <SearchInput />
             </div>
-            <div className="icons">
+            <div>
                 <SearchIcons />
             </div>
         </div>

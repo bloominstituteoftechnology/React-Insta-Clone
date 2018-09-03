@@ -5,8 +5,8 @@ import CommentInput from './CommentInput';
 
 const CommentContainer = (props) => {
     return (
-        <div>
-            {props.comments.map(comment => <Comment key={comment.username} data={comment}/>)}
+        <div className="comment-container">
+            {props.comments.map(comment => <Comment key={comment.username + Math.floor(Math.random() * 100) + 1} data={comment}/>)}
             <CommentInput />
         </div>
     )

@@ -1,5 +1,23 @@
+.comment-container {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.comment-input {
+    display: flex;
+    border-top: 1px solid #efefef;
+}
 .comment-input input {
     width: 100%;
+    height: 57px;
+    border: 0;
+    padding-left: 2%;
+    background: #ffffff;
+}
+
+.comment-input img {
+    margin-top: 5px;
+    height: 100%;
+    cursor: pointer;
 }
 
 .comment {

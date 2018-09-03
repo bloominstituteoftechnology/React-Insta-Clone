@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import dummyData from './dummy-data';
 import './App.css';
 import SearchBarContainer from './components/SearchBar/SearchBarContainer';
@@ -16,7 +15,10 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBarContainer />
-        {this.state.dummydata.map(dummy => <PostWrapper key={dummy.username} data={dummy}/>)}
+        <div className="content">
+          {this.state.dummydata.map(dummy => <PostWrapper key={dummy.username} data={dummy}/>)}
+        </div>
+        
       </div>
     );
   }

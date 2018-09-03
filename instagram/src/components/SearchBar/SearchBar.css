@@ -2,18 +2,42 @@
     width: 100%;
     height: 100px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background: #ffffff;
+    border-bottom: 1px solid #efefef;
 }
 
 .logo {
     margin-right: 10%;
 }
 
+.logo img {
+    width: 100%;
+}
+
 .search-input {
+    width: 100%;
     margin-right: 10%;
+}
+
+.search-input input {
+    width: 20%;
 }
 
 .icons {
     display: flex;
     margin-left: 10%;
+}
+
+.search-icons {
+    width: 100%;
+    display: flex;
+}
+
+.search-icons img {
+    margin-right: 5%;
 }

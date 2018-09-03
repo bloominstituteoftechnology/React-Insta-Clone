@@ -27,8 +27,19 @@
     display: flex;
 }
 
+.post-actions-img img {
+    margin: 5%;
+    cursor: pointer;
+}
+
+.likes {
+    width: 100%;
+    
+}
+
 .footer {
     display: flex;
     justify-content: flex-start;
     padding: 1%;
+    margin-left: 3%;
 }
