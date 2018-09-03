@@ -23,7 +23,7 @@ class CommentList extends React.Component {
 		})
 	}
 
-	commentText = event => {
+	commentHandler = event => {
     this.setState({
       commentText: event.target.value,
     });
@@ -34,7 +34,7 @@ class CommentList extends React.Component {
 			<div>
 				<div>{this.state.comments.map((comment) => <Comment comment={comment} key={comment.id}/>)}</div>
 				<hr className="hr-comment" />
-				<InputCom addNew={this.addNew} commentText={this.commentText}/>
+				<InputCom addNew={this.addNew} commentHandle={this.commentHandler} comment={this.state.commentText}/>
 			</div>
 		)
 	}
