@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import dummyData from './dummy-data';
-import './App.css';
+import React, { Component } from "react";
+import dummyData from "./dummy-data";
+import PostContainer from './components/PostContainer/PostContainer';
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -9,9 +10,8 @@ class App extends Component {
     this.state = {
       posts: []
     };
-
   }
-  
+
   // on mounting the component load in the state data
   componentDidMount() {
     this.setState({ posts: dummyData });
@@ -52,6 +52,15 @@ class App extends Component {
 
       */
       <div className="App">
+        <div className="wrapper">
+          <header>
+            <div className="instaclone-logo">
+              <i className="logo-ig" />
+              <p>Instagram</p>
+            </div>
+          </header>
+          <PostContainer data={this.state.posts} />
+        </div>
       </div>
     );
   }
