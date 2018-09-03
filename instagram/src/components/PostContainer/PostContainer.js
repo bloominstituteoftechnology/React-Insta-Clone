@@ -1,17 +1,25 @@
 import React from "react";
+import CommentSection from "../CommentSection/CommentSection.js";
 import "./PostContainer.css";
+import Post from "../Post/Post";
 
-class PostContainer extends React.Component {
+class PostsContainer extends React.Component {
   constructor(props) {
     super();
   }
 
   render() {
     {
-      console.log(this.props);
+      console.log(this.props.post);
     }
-    return <h2>{this.props.post.username}</h2>;
+    return (
+      <div className="posts-container">
+        {this.props.posts.map(post => (
+          <Post post={post} />
+        ))}
+      </div>
+    );
   }
 }
 
-export default PostContainer;
+export default PostsContainer;

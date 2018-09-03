@@ -1,0 +1,8 @@
+.post-container {
+  border: 1px solid blue;
+  margin: 20px 0;
+}
+
+.post-container h1 {
+  text-align: left;
+}
