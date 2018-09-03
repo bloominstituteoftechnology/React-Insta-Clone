@@ -69,10 +69,10 @@ class App extends Component {
               <i className="far fa-heart" />
               <i className="far fa-user" />
             </div>
+          </header>
             <div className="posts-wrapper">
               <PostContainer data={this.state.posts} />
             </div>
-          </header>
         </div>
       </div>
     );
