@@ -8,7 +8,7 @@ const Post = (props) => {
       <p>Post</p>
       {props.post.comments.map( item => {
         return (
-          <Comment comment={item.comments} />
+          <Comment key={item.text} comment={item} />
         )
       })}
     </div>
