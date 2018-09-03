@@ -13,6 +13,10 @@ const SearchBar = props => {
 				<div className="search-box">
 					<input type="text" className="search-input" placeholder="Search" />
 					<span className="sprite" id="search" />
+					<button className="search-lid">
+						<span id="search" className="sprite" />
+						<span className="search-lid-text">Search</span>
+					</button>
 				</div>
 
 				<div className="navigation">

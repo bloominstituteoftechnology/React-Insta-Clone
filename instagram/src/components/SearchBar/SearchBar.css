@@ -21,6 +21,10 @@
 	background: url('https://www.instagram.com/static/bundles/base/sprite_core.png/3243a2788e25.png');
 }
 
+.logo {
+	margin-bottom: 2px;
+}
+
 #glyph {
 	position: absolute;
 	background-position: -98px -205px;
@@ -38,9 +42,21 @@
 
 .search-box {
 	display: flex;
+	margin-top: 2px;
 }
 
-.search-button {
+.search-lid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 215px;
+	height: 28px;
+	background: #fafafa;
+	border: 1px solid #dbdbdb;
+	border-radius: 3px;
+	outline: none;
+	cursor: text;
 }
 
 #search {
@@ -49,6 +65,16 @@
 	width: 10px;
 	height: 10px;
 	margin: 9px 0 0 11px;
+}
+
+.search-lid #search {
+	position: relative;
+	margin: 0 6px 0 0;
+}
+
+.search-lid-text {
+	font-weight: 300;
+	margin: 0 10px 1px 0;
 }
 
 .search-input {
@@ -63,24 +89,27 @@
 .navigation {
 	display: flex;
 	justify-content: space-between;
-	width: 156px;
-	padding-left: 24px;
+	width: 176px;
+	padding-left: 46px;
+	margin-top: 3px;
 }
 
 #explore {
 	background-position: -262px -358px;
 	width: 22px;
 	height: 22px;
+	margin-left: -1px;
 }
 
 #activity {
-	background-position: -184px -359px;
-	width: 22px;
-	height: 22px;
+	background-position: -183px -358px;
+	width: 24px;
+	height: 24px;
+	margin-left: 1px;
 }
 
 #profile {
-	background-position: -433px -318px;
-	width: 22px;
-	height: 22px;
+	background-position: -432px -317px;
+	width: 24px;
+	height: 24px;
 }
