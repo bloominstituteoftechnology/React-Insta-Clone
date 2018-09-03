@@ -15,10 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Instagram Clone</h1>
-        </header>
-        <Search />
+        <Search className="Search" />
         <div className="Posts" >
           {this.state.data.map( item => {
             return (
