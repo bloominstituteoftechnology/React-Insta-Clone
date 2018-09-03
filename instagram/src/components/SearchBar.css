@@ -1,0 +1,35 @@
+.search-bar-wrapper {
+    border-bottom: 1px solid #3333;
+    height: 80px;
+    line-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    /* border: 3px dashed red; */
+  }
+  
+  .image-wrapper {
+    height: 50px;
+  }
+  
+  .logo-image {
+    height: 500%;
+    width: 100%;
+    margin-top: -85px;
+    margin-right: 0px;
+  }
+  
+  .social-wrapper {
+    display: flex;
+    /* border: 1px solid blue; */
+  }
+  
+  .social {
+    width: 20px;
+    height: 20px;
+    /* border: 2px solid black; */
+  }
+  
+  input {
+    margin-left: -200px;
+  }
