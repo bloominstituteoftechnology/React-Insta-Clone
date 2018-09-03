@@ -1,8 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import dummyData from './dummy-data';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      posts: []
+    };
+
+  }
+  
+  // on mounting the component load in the state data
+  componentDidMount() {
+    this.setState({ posts: dummyData });
+  }
+
   render() {
     return (
       /*  TODO: setup some logic for day 1
@@ -13,7 +27,7 @@ class App extends Component {
 
           At the end of Day I there will be a single instance of the Search Bar being rendered at the top of the page, 
           as well as a Post Container and a Comment Section for every piece of mock data in the dummy-data.js file.
-          
+
           The root App component of your application should import the dummy data from the dummy-data.js file with 
           import dummyData from './dummy-data'; and iterate over said data, passing each individual object as a prop 
           to an instance of PostContainer.
