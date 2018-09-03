@@ -1,0 +1,8 @@
+.SearchBar {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  background: gray;
+  justify-content: space-around;
+  align-items: center;
+}
