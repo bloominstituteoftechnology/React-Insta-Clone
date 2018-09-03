@@ -1,8 +1,9 @@
 header {
     display: flex;
     justify-content: space-between;
-    padding: 23px 34px 12px 17px;
+    padding: 23px 28px 12px 22px;
     border-bottom: 1px solid gray;
+    width: 100%;
 }
 
 .instagram-icon {
