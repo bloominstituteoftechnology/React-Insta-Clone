@@ -1,0 +1,44 @@
+.Search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3.6rem;
+  margin: 2% 0;
+}
+
+.cookieFont {
+  font-family: 'Cookie', cursive;
+}
+
+.navLogo,
+.navIcons {
+  display: flex;
+}
+
+.navLogo1 {
+  margin: 0 10%;
+  padding: 0 12%;
+  border-right: 1px solid black;
+}
+
+.navSearch {
+  display: flex;
+}
+
+.navSearch-input {
+  align-self: flex-start;
+  font-size: 1.4rem;
+  padding: 2% 16%;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #FAFAFA; 
+}
+
+.navIcons {
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+  margin-right: 5%;
+}
+
