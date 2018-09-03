@@ -8,7 +8,9 @@ class Post extends React.Component {
   };
 
   // TODO: some logic for adding likes
-  like = () => {};
+  like = () => {
+    alert("You clicked like!");
+  };
 
   render() {
     return (
@@ -18,8 +20,14 @@ class Post extends React.Component {
           <div className="username">{this.props.post.username}</div>
         </div>
         <img src={this.props.post.imageUrl} alt={"post"} />
-        <p>{this.state.likes} likes</p>
-        <CommentSection post={this.props.post} />
+        <div className="post-icon-and-comments-wrapper">
+          <div className="post-icons-wrapper">
+            <i className="far fa-heart" onClick={this.like} />
+            <i className="far fa-comment" />
+          </div>
+          <p>{this.state.likes} likes</p>
+          <CommentSection post={this.props.post} />
+        </div>
       </div>
     );
   }
