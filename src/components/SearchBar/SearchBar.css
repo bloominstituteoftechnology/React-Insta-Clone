@@ -22,9 +22,13 @@
   margin-left: 20px;
 }
 .SearchBar input{
-  width: 200px;
+width: 200px;
 height: 20px;
 margin-top: 20px;
-margin-left: 20px;
+margin-left: 200px;
 
+}
+.SearchBar img{
+  height: 50px;
+  margin-top: 5px;
 }
