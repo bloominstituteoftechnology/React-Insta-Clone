@@ -9,9 +9,22 @@ class CommentSection extends React.Component {
     comment: ""
   };
 
-  commentHandler = event => {};
+  commentHandler = event => {
+    this.setState({ comment: event.target.value });
+  };
 
-  submitComment = event => {};
+  submitComment = event => {
+    // prevent the default operation
+    event.preventDefault();
+    // build the next comment to add
+    const nextComment = { text: this.state.comment, username: 'tomtarpey' };
+    // grab the state as slice
+    const comments = this.state.comments.slice();
+    // push the next comment to the comments array
+    comments.push(nextComment);
+    // set the state with the next comment and clear the comment value
+    this.setState({ comments: comments, comment: '' });
+  };
 
   render() {
     return (
