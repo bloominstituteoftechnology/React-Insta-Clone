@@ -16,26 +16,6 @@ class App extends Component {
 		}; 
 	}
 
-//example filter
-// const myArr = [1,2,3];
-// const oddItems = myArr.filter((number) => number % 2 !== 0);
-// console.log(oddItems);
-// string includes maybe regex
-// take new array and set on state
-// pass regular posts or filtered posts
-
-//example turnary operator
-// const age = 21;
-// condition, if condition, else other condition
-
-//this.state {
-// someValue: false, p will not mount, true will mount
-//}
-
-// age < 21 ? console.log('sorry not old enough') : console.log("drink up!");
-// {this.state.someValue ? <p>heres the value</p> : null}
-
-
 	handleInput = event => {
     this.setState({
       inputText: event.target.value,
@@ -43,16 +23,45 @@ class App extends Component {
   };
 
   componentDidMount(){
-    // console.log("CDM invoked");
-    //only invoked once ever 
-    //after the render method mounts the jsx to the dom
-    //used for any Asylnc operations
-    //adding any Dom event listners needed
-    //setState();
     this.setState({
       posts: dummyData,
     })
   }
+
+  upLikes = event => {
+    event.preventDefault();
+
+    let newState = {...this.state};
+
+    for (let i = 0; i < newState.posts.length; i++){
+      if (newState.posts[i].id == event.target.id){
+        newState.posts[i].likes = newState.posts[i].likes + 1;
+      }
+    }
+
+    this.setState({...newState});
+  }
+
+  // toggle = event => {
+  //   event.preventDefault();
+
+  //   let newState = {...this.state};
+
+
+  //   for (let i = 0; i < newState.todos.length; i++) {
+  //     if (newState.todos[i].id === event.target.id) {
+  //       if (newState.todos[i].classes.includes("completed")) {
+  //         newState.todos[i].classes = newState.todos[i].classes.filter(classItem => classItem !== "completed");
+  //       } else {
+  //         newState.todos[i].classes.push("completed");
+  //       }
+  //       newState.todos[i].completed = !newState.todos[i].completed;
+  //     }
+  //   }
+
+  //   // console.log(event.target.id)
+  //   this.setState({...newState});
+  // };
 
   render() {
     // console.log("render invoked", this.state);
@@ -61,6 +70,7 @@ class App extends Component {
       	<SearchBar handleInput={this.handleInput} />
         <PostList 
         	dataList={this.state.posts} 
+          upLikes={this.upLikes}
 	      />
       </div>
     );

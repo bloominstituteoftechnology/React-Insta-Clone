@@ -14,7 +14,7 @@ const Post = (props) => {
 			</div>
 			<img src={props.post.imageUrl} className="post-img" alt={"post-img"}/>
 			<div className="post-section-2">
-				<img src={h} className="status-img" alt={"heart"}/>
+				<img src={h} className="status-img" alt={"heart"} onClick={props.UP} id={props.id}/>
 				<img src={c} className="status-img" alt={"comment"}/>
 				<p>{props.post.likes} Likes</p>
 			</div>

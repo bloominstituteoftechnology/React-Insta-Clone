@@ -7,7 +7,7 @@ import './posts.css';
 const PostList = (props) => {
 	return (
 		<div>														
-			<div>{props.dataList.map((post) => <Post post={post} key={post.id} />)}</div>
+			<div>{props.dataList.map((post) => <Post post={post} key={post.id} id={post.id} UP={props.upLikes} />)}</div>
 		</div>
 
 	)
