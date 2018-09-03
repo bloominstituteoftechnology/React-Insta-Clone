@@ -108,3 +108,14 @@ h4 {
     width: 100%;
     height: 100%;
 }
+
+.add-a-comment-div .fa-ellipsis-h {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.add-a-comment-div .fa-ellipsis-h:hover {
+    color: white;
+    background: black;
+    border-radius: 50%;
+}

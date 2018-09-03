@@ -6,11 +6,47 @@ import data from './dummy-data';
 import './App.css';
 
 class App extends Component {
+  constructor () {
+    super ();
+    this.state = {
+      inputText: '',
+      data: data,
+    }
+  }
+
+  handleChange = (e) => {
+    this.setState({inputText: e.target.value});
+  }
+
+  handleClick = (e) => {
+    let newData = this.state.data;
+
+    newData[e.target.id].comments.push({
+      username: 'philzcoffee',
+      text: this.state.inputText,
+    });
+
+    this.setState({
+      data: newData,
+      inputText: '',
+    });
+  }
+
   render() {
     return (
       <div className = 'App'>
         <SearchBar />
-        { data.map((data, index) => <PostContainer key = { index } data = { data } />) }
+        { this.state.data.map((data, index) => {
+            return <PostContainer 
+              key = { index } 
+              submitIndex = { index } 
+              data = { data } 
+              state = { this.state } 
+              handleChange = { this.handleChange } 
+              handleClick = { this.handleClick } 
+            />
+          }) 
+        }
       </div>
     );
   }

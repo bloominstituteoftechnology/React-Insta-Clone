@@ -8,16 +8,23 @@ import PropTypes from 'prop-types';
 
 const PostContainer = props => {
     const timestamp = props.data.timestamp.substring(0, props.data.timestamp.indexOf(',') - 7) + props.data.timestamp.substring(props.data.timestamp.indexOf(',') - 5);
-    
+
     return (
         <section className = 'post-container-section'>
             <div className = 'post-container-div'>
                 <div className = 'title-div'>
-                    <img className = 'thumbnail-url' src = { props.data.thumbnailUrl } alt = 'thumbnail url' />
+                    <img 
+                        className = 'thumbnail-url' 
+                        src = { props.data.thumbnailUrl } 
+                        alt = 'thumbnail url' 
+                    />
                     <h4>{ props.data.username }</h4>
                 </div>
 
-                <img className = 'image-url' src = { props.data.imageUrl } alt = 'main url' />
+                <img 
+                    className = 'image-url' 
+                    src = { props.data.imageUrl } 
+                    alt = 'main url' />
 
                 <div className = 'likes-div'>
                     <i className = 'far fa-heart'></i>
@@ -25,15 +32,31 @@ const PostContainer = props => {
                     <h4>{ props.data.likes } likes</h4>
                 </div>
 
-                { props.data.comments.map((comment, index) => <CommentSection className = 'comment-section-div' key = { index } comment = { comment } />) }
+                { props.data.comments.map((comment, index) => {
+                        return <CommentSection 
+                            className = 'comment-section-div' 
+                            key = { index } 
+                            comment = { comment } 
+                        />
+                    }) 
+                }
 
                 <div className = 'timestamp-div'>
                     <span>{ moment(timestamp).fromNow().toLocaleUpperCase() }</span>
                 </div>
 
                 <div className = 'add-a-comment-div'>
-                    <input className = 'add-a-comment-input' placeholder = 'Add a comment...' />
-                    <i className = 'fas fa-ellipsis-h'></i>
+                    <input 
+                        value = { props.state.inputText } 
+                        onChange = { props.handleChange } 
+                        className = 'add-a-comment-input' 
+                        placeholder = 'Add a comment...' 
+                    />
+                    <i 
+                        className = 'fas fa-ellipsis-h' 
+                        id = { props.submitIndex }
+                        onClick = { props.handleClick } 
+                    ></i>
                 </div>
             </div>
         </section>
