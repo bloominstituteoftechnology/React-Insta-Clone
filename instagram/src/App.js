@@ -55,12 +55,14 @@ class App extends Component {
     if (newState.boolVal === false){
       this.setState({
         posts: dummyData,
+        inputText: "",
       })
     } 
 
     if (newState.boolVal === true) {
       this.setState({
         posts: filter,
+        inputText: "",
       })
     }
 
@@ -69,7 +71,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-      	<SearchBar handleInput={this.handleInput} searchPosts={this.searchPosts} />
+      	<SearchBar handleInput={this.handleInput} searchPosts={this.searchPosts} input={this.state.inputText} />
         <PostList 
         	dataList={this.state.posts} 
           upLikes={this.upLikes}
