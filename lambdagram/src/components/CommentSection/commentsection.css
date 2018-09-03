@@ -1,0 +1,37 @@
+.comment-section {
+    margin: auto;
+}
+
+.comment-user {
+    font-weight: bold;
+}
+
+.comment {
+    width: 98%;
+    margin: auto;
+}
+
+hr {
+    width: 90%;
+    height: 1px;
+    border: 0;
+    background-color: lightgray;
+}
+
+.comment-box {
+    display: block;
+    width: 95%;
+    height: 50px;
+    border: none;
+    outline: none;
+    margin: 10px auto 10px auto;
+}
+
+.commenting-stuff {
+    width: 98%;
+    display: flex;
+}
+
+.commenting-stuff p {
+    font-weight: bolder;
+}

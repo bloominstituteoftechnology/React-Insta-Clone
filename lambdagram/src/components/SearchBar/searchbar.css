@@ -1,0 +1,11 @@
+.search-bar {
+    width: 100%;
+    height: 50px;
+    top: 0;
+    position: fixed;
+    z-index: 99;
+    background-color: #ffffff;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}

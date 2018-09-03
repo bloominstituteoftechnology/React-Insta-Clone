@@ -15,7 +15,7 @@ Comment.propTypes = {
     comment: PropTypes.shape({
         username: PropTypes.string,
         text: PropTypes.string
-    })
+    }).isRequired
 }
 
 export default Comment;

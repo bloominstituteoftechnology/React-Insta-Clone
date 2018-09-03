@@ -2,42 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './postcontainer.css';
 
+import Post from './post';
 import CommentSection from '../CommentSection/commentsection';
 
 function PostContainer(props) {
     return (
-        <div className='post'>
-            <div className='post-head'>
-                <img src={props.postData.thumbnailUrl} alt={`${props.postData.username} profile`} />
-                <h4>{props.postData.username}</h4>
-            </div>
-            <div className='post-body'>
-                <img src={props.postData.imageUrl} alt={`Posted by ${props.postData.username} on ${props.postData.timestamp}`} />
-            </div>
-            <div className='post-footer'>
-                <p>{`${props.postData.likes} likes`}</p>
-                <CommentSection 
-                    comments={props.postData.comments} 
-                    commentData={props.commentInput} 
-                    commentHandler={props.handleInput} 
-                />
-                <p>{props.postData.timestamp}</p>
-            </div>
+        <div className='post-container'>
+            <Post 
+                username={props.postData.username} 
+                thumbnailUrl={props.postData.thumbnailUrl} 
+                imageUrl={props.postData.imageUrl} 
+                likes={props.postData.likes} 
+                timestamp={props.postData.timestamp} 
+            />
+            <CommentSection 
+                timestamp={props.postData.timestamp} 
+                comments={props.postData.comments} 
+                commentInput={props.commentInput} 
+                handleCommentInput={props.handleCommentInput} 
+                handleComment={props.handleComment} 
+            />
         </div>
     );
 }
 
 PostContainer.propTypes = {
-    postData: PropTypes.shape({
-        username: PropTypes.string,
-        thumbnailUrl: PropTypes.string,
-        imageUrl: PropTypes.string,
-        likes: PropTypes.number,
-        timestamp: PropTypes.string,
-        comments: PropTypes.arrayOf(PropTypes.object)
-    }),
-    commentData: PropTypes.string,
-    commentHandler: PropTypes.func
+    postData: PropTypes.object,
+    commentInput: PropTypes.string,
+    handleCommentInput: PropTypes.func,
+    handleComment: PropTypes.func
 }
 
 export default PostContainer;

@@ -15,22 +15,23 @@ class App extends Component {
     }
   }
 
-  searchInsta = (event) => {
+  handleSearch = (event) => {
+    event.preventDefault();
     this.setState({
-
+      searchInput: 'IM A LITTLE TEA POT'
     });
   }
 
-  addComment = (event) => {
+  handleComment = (event) => {
+    event.preventDefault();
     this.setState({
-
+      commentInput: 'SHORT AND STOUT'
     });
   }
 
   handleInput = (event) => {
-    const inputTarget = event.target.name;
     this.setState({
-      [inputTarget]: event.target.value
+      [event.target.name]: event.target.value
     });
   }
 
@@ -38,17 +39,21 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar 
-          searchData={this.state.searchInput} 
-          searchHandler={this.handleInput} 
+          searchInput={this.state.searchInput} 
+          handleSearchInput={this.handleInput} 
+          handleSearch={this.handleSearch} 
         />
-        {this.state.instaData.map( (postData) => 
-          <PostContainer 
-            postData={postData} 
-            commentData={this.state.commentInput} 
-            commentHandler={this.handleInput} 
-            key={postData.timestamp + '-' + postData.username} 
-          /> 
-        )}
+        <div className='posts-container'>
+          {this.state.instaData.map( (postData) => 
+            <PostContainer 
+              postData={postData} 
+              commentInput={this.state.commentInput} 
+              handleCommentInput={this.handleInput} 
+              handleComment={this.handleComment} 
+              key={postData.timestamp + '-' + postData.username} 
+            /> 
+          )}
+        </div>
       </div>
     );
   }

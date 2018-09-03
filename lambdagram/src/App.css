@@ -1,5 +1,7 @@
 .App {
-  width: 80%;
-  max-width: 800px;
   margin: auto;
+}
+
+.posts-container {
+  margin-top: 100px;
 }

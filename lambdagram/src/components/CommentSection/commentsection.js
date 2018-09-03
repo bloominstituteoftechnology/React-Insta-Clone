@@ -15,15 +15,31 @@ function CommentSection(props) {
                     />
                 );
             })}
-            <input name='commentInput' type='text' value={props.commentData} onChange={props.commentHandler} />
+            <p>{props.timestamp}</p>
+            <hr />
+            <div className='commenting-stuff'>
+                <input 
+                    className='comment-box' 
+                    name='commentInput' 
+                    type='text' 
+                    placeholder='Add a comment...' 
+                    value={props.commentInput} 
+                    onChange={props.handleCommentInput} 
+                    onFocus={props.handleCommentInput} 
+                    onSubmit={props.handleComment}
+                ></input>
+                <p>...</p>
+            </div>
         </div>
     );
 }
 
 CommentSection.propTypes = {
+    timestamp: PropTypes.string.isRequired,
     comments: PropTypes.arrayOf(PropTypes.object),
-    commentData: PropTypes.string, 
-    commentHandler: PropTypes.func
+    commentInput: PropTypes.string.isRequired, 
+    handleCommentInput: PropTypes.func.isRequired,
+    handleComment: PropTypes.func.isRequired
 }
 
 export default CommentSection;

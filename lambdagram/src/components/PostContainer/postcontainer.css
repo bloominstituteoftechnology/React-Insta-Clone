@@ -1,0 +1,12 @@
+.post-container {
+    background-color: #ffffff;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    width: 80%;
+    max-width: 600px;
+    margin: 0px auto 50px auto;
+}
+
+.post-img {
+    width: 100%;
+}
