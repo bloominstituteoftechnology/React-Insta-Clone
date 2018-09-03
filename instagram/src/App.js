@@ -3,6 +3,7 @@ import dummyData from "./dummy-data";
 import PostContainer from "./components/PostContainer/PostContainer";
 import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBar";
+import CommentSection from "./components/CommentSection/CommentSection";
 
 class App extends Component {
   constructor() {

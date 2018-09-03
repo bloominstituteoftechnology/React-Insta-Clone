@@ -1,4 +1,5 @@
 import React from 'react';
+import Comment from './Comment';
 
 class CommentSection extends React.Component {
   state= {
@@ -9,7 +10,7 @@ class CommentSection extends React.Component {
   render() {
     return(
       <div className="comment-wrapper">
-        <h3>Comment placeholder</h3>
+         {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
       </div>
     );
   }
