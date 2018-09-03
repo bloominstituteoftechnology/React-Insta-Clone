@@ -4,14 +4,9 @@ import './SearchBar.css';
 const SearchBar = props => {
 	let searchInput = React.createRef();
 
-	function clickHandler() {
+	function focusSearchInput() {
 		searchInput.current.focus();
 	}
-
-	// This breaks the site
-	// function onBlurHandler() {
-	// 	props.toggleSearchLid();
-	// }
 
 	return (
 		<nav className="SearchBar">
@@ -27,14 +22,14 @@ const SearchBar = props => {
 						className="search-input"
 						placeholder="Search"
 						ref={searchInput}
-						// onBlur={onBlurHandler()}
+						onBlur={props.toggleSearchLid}
 					/>
 					<span className="sprite" id="search" />
 					<button
 						className={'search-lid' + (props.searchLid ? '' : ' hidden')}
 						onClick={() => {
 							props.toggleSearchLid();
-							clickHandler();
+							focusSearchInput();
 						}}
 					>
 						<span id="search" className="sprite" />
