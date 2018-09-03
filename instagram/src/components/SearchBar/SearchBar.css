@@ -80,10 +80,14 @@
 .search-input {
 	width: 215px;
 	height: 28px;
-	padding: 3px 10px 3px 26px;
+	padding: 3px 10px 0px 26px;
 	border: 1px solid #dbdbdb;
 	border-radius: 3px;
 	outline: none;
+}
+
+.search-input::placeholder {
+	font-weight: 300;
 }
 
 .navigation {

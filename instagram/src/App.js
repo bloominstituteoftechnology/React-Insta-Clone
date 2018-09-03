@@ -9,15 +9,25 @@ class App extends React.Component {
 		super();
 		this.state = {
 			data: dummyData,
+			searchLid: true,
 			searchText: '',
 			commentText: []
 		};
 	}
 
+	toggleSearchLid = () => {
+		this.setState({
+			searchLid: !this.state.searchLid
+		});
+	};
+
 	render() {
 		return (
 			<div className="App">
-				<SearchBar />
+				<SearchBar
+					searchLid={this.state.searchLid}
+					toggleSearchLid={this.toggleSearchLid}
+				/>
 
 				<PostContainer posts={this.state.data} />
 			</div>

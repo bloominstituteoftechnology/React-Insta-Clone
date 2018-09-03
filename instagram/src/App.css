@@ -145,7 +145,7 @@ body {
 }
 
 .username {
-	font-weight: 500;
+	font-weight: 600;
 	text-decoration: inherit;
 	color: inherit;
 }
@@ -158,4 +158,8 @@ button {
 	font-size: 1.4rem;
 	color: #999999;
 	opacity: 1;
+}
+
+.hidden {
+	display: none;
 }
