@@ -1,0 +1,26 @@
+.PostContainer{
+  background-color: white;
+
+}
+.likeArea{
+display:flex;
+}
+.thumbnail{
+  border-radius: 50%;
+  height: 50px;
+}
+.image{
+  display: block;
+}
+.title h4{
+  height: 30px;
+  margin-left: 10px;
+}
+.title{
+display: flex;
+  margin-right: 500px;
+  padding-top: 10px;
+}
+.HeartLikeButtton2{
+  font-size: 30px;
+}
