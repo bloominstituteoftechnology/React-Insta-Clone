@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './Comments.css'
 import Comment from './Comment'
 
@@ -17,6 +18,10 @@ const Comments = (props) => {
       <input placeholder="Add a comment" />
     </div>
   )
+}
+
+Comments.propTypes = {
+  comments: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default Comments
