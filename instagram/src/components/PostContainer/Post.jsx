@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentSection from '../CommentSection/CommentSection';
 
 class Post extends React.Component {
   state = {
@@ -17,6 +18,7 @@ class Post extends React.Component {
         </div>
         <img src={this.props.post.imageUrl} alt={"post"} />
         <p>{this.state.likes} likes</p>
+        <CommentSection post={this.props.post} />
       </div>
     );
   }
