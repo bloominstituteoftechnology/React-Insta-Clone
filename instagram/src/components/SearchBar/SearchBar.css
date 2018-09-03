@@ -1,86 +1,86 @@
 .SearchBar {
-  position: fixed;
-  width: 100%;
-  background: white;
-  border-bottom: 1px solid #e6e6e6;
+	position: fixed;
+	width: 100%;
+	background: white;
+	border-bottom: 1px solid #e6e6e6;
 }
 
 .SearchBar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1010px;
-  height: 76px;
-  padding: 0 40px;
-  margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 1010px;
+	height: 76px;
+	padding: 0 40px;
+	margin: 0 auto;
 }
 
 .sprite {
-  display: inline-block;
-  background: url("https://www.instagram.com/static/bundles/base/sprite_core.png/3243a2788e25.png");
+	display: inline-block;
+	background: url('https://www.instagram.com/static/bundles/base/sprite_core.png/3243a2788e25.png');
 }
 
 #glyph {
-  position: absolute;
-  background-position: -98px -205px;
-  width: 30px;
-  height: 30px;
-  opacity: 0;
-  margin: 2px 0 0;
+	position: absolute;
+	background-position: -98px -205px;
+	width: 30px;
+	height: 30px;
+	opacity: 0;
+	margin: 2px 0 0;
 }
 
 #logotype {
-  background-position: -98px -203px;
-  width: 176px;
-  height: 35px;
+	background-position: -98px -203px;
+	width: 176px;
+	height: 35px;
 }
 
 .search-box {
-  display: flex;
+	display: flex;
 }
 
 .search-button {
 }
 
 #search {
-  position: absolute;
-  background-position: -445px -409px;
-  width: 10px;
-  height: 10px;
-  margin: 9px 0 0 11px;
+	position: absolute;
+	background-position: -445px -409px;
+	width: 10px;
+	height: 10px;
+	margin: 9px 0 0 11px;
 }
 
 .search-input {
-  width: 215px;
-  height: 28px;
-  padding: 3px 10px 3px 26px;
-  border: 1px solid #dbdbdb;
-  border-radius: 3px;
-  outline: none;
+	width: 215px;
+	height: 28px;
+	padding: 3px 10px 3px 26px;
+	border: 1px solid #dbdbdb;
+	border-radius: 3px;
+	outline: none;
 }
 
 .navigation {
-  display: flex;
-  justify-content: space-between;
-  width: 156px;
-  padding-left: 24px;
+	display: flex;
+	justify-content: space-between;
+	width: 156px;
+	padding-left: 24px;
 }
 
 #explore {
-  background-position: -262px -358px;
-  width: 22px;
-  height: 22px;
+	background-position: -262px -358px;
+	width: 22px;
+	height: 22px;
 }
 
 #activity {
-  background-position: -184px -359px;
-  width: 22px;
-  height: 22px;
+	background-position: -184px -359px;
+	width: 22px;
+	height: 22px;
 }
 
 #profile {
-  background-position: -433px -318px;
-  width: 22px;
-  height: 22px;
+	background-position: -433px -318px;
+	width: 22px;
+	height: 22px;
 }
