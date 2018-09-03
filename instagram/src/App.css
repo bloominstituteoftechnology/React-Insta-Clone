@@ -21,6 +21,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 100%;
+  font-family: 'Grand Hotel', cursive;
   font-size: 32px;
   margin-left: 20px;
 }
