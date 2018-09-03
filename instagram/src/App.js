@@ -8,11 +8,10 @@ import './index.css';
 class App extends Component {
 	constructor(){
 	super();
-    // console.log("constructor invoked", this);
 		this.state = {
 			posts: [],
-			filteredPosts: [],
 			inputText: "",
+      boolVal: false,
 		}; 
 	}
 
@@ -42,32 +41,35 @@ class App extends Component {
     this.setState({...newState});
   }
 
-  // toggle = event => {
-  //   event.preventDefault();
+  searchPosts = event => {
+    event.preventDefault();
+    let newState = {...this.state};
+    const filter = newState.posts.filter((post) => post.username === newState.inputText);
 
-  //   let newState = {...this.state};
+    for (let i = 0; i < newState.posts.length; i++){
+      if (newState.inputText === newState.posts[i].username){
+        newState.boolVal = true;
+      } 
+    }
 
+    if (newState.boolVal === false){
+      this.setState({
+        posts: dummyData,
+      })
+    } 
 
-  //   for (let i = 0; i < newState.todos.length; i++) {
-  //     if (newState.todos[i].id === event.target.id) {
-  //       if (newState.todos[i].classes.includes("completed")) {
-  //         newState.todos[i].classes = newState.todos[i].classes.filter(classItem => classItem !== "completed");
-  //       } else {
-  //         newState.todos[i].classes.push("completed");
-  //       }
-  //       newState.todos[i].completed = !newState.todos[i].completed;
-  //     }
-  //   }
+    if (newState.boolVal === true) {
+      this.setState({
+        posts: filter,
+      })
+    }
 
-  //   // console.log(event.target.id)
-  //   this.setState({...newState});
-  // };
+  }
 
   render() {
-    // console.log("render invoked", this.state);
     return (
       <div className="container">
-      	<SearchBar handleInput={this.handleInput} />
+      	<SearchBar handleInput={this.handleInput} searchPosts={this.searchPosts} />
         <PostList 
         	dataList={this.state.posts} 
           upLikes={this.upLikes}

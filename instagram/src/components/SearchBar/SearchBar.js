@@ -16,7 +16,9 @@ const SearchBar = (props) => {
 					<hr className="logo-hr"/>
 					<img src={insta} alt={"instagram"} className="main-logo"/>
 				</div>
-				<input type="text" onChange={props.handleInput} placeholder="Search" />
+				<form onSubmit={props.searchPosts}>
+					<input type="text" onChange={props.handleInput} placeholder="Search" />
+				</form>
 				<div className="flex-logos2">
 					<img src={compas} className="logo-images" alt="compas"/>
 					<img src={h} className="logo-images" alt="heart"/>
