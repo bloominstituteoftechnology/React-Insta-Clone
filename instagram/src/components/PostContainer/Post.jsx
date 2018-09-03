@@ -1,10 +1,11 @@
-import React from 'react';
-import CommentSection from '../CommentSection/CommentSection';
+import React from "react";
+import PropTypes from "prop-types";
+import CommentSection from "../CommentSection/CommentSection";
 
 class Post extends React.Component {
   state = {
     likes: this.props.post.likes
-  }
+  };
 
   // TODO: some logic for adding likes
   like = () => {};
@@ -22,6 +23,17 @@ class Post extends React.Component {
       </div>
     );
   }
+}
+// done some proptypes https://reactjs.org/docs/typechecking-with-proptypes.html
+Post.propTypes = {
+  post: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    timestamp: PropTypes.string,
+    comments: PropTypes.arrayOf(PropTypes.object)
+  })
 };
 
 export default Post;
