@@ -1,17 +1,13 @@
 import React from 'react'
 import './Post.css'
-import Comment from '../CommentSection/Comment.js'
+import Comments from '../CommentSection/Comments'
 
 const Post = (props) => {
   return (
-    <div className="Post">
-      <p>Post</p>
-      {props.post.comments.map( item => {
-        return (
-          <Comment key={item.text} comment={item} />
-        )
-      })}
-    </div>
+    <React.Fragment>
+      <p>post by {props.post.username}</p>
+      <Comments className="Comments" comments={props.post.comments} />
+    </React.Fragment>
   )
 }
 

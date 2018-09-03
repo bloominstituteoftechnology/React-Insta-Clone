@@ -1,11 +1,11 @@
 import React from 'react'
-import './Comment.css'
+import './Comments.css'
 
 const Comment = (props) => {
   return (
-    <div className="Comment">
+    <React.Fragment>
       <p>{props.comment.username}: {props.comment.text}</p>
-    </div>
+    </React.Fragment>
   )
 }
 

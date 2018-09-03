@@ -19,13 +19,13 @@ class App extends React.Component {
           <h1 className="App-title">Instagram Clone</h1>
         </header>
         <Search />
-        {this.state.data.map( item => {
-          return (
-            <div className="Item" key={item.timestamp}>
-              <Post post={item} />
-            </div>
-          )
-        })}
+        <div className="Posts" >
+          {this.state.data.map( item => {
+            return (
+              <Post className="Post" key={item.timestamp} post={item} />
+            )
+          })}
+        </div>
       </div>
     )
   }
