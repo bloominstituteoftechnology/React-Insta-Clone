@@ -1,0 +1,51 @@
+.insta-post-container {
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    
+    box-shadow: 0px 0px 1px black;
+    margin: 30px 0;
+    border-radius: 2px;
+
+}
+
+.post-header-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.post-logo{
+    border-radius: 50%;
+    width: 60px;
+    order: -1;
+    margin: 0 15px;
+    
+}
+
+
+.image-posts{
+    width: 100%;
+}
+
+
+.comment-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.post-comments{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 5px 0;
+}
