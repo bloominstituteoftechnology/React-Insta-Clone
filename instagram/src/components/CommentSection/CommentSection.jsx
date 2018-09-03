@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import moment from 'moment';
 import Comment from "./Comment";
 import "./CommentSection.css";
 
@@ -32,6 +33,9 @@ class CommentSection extends React.Component {
         {this.state.comments.map((comment, index) => (
           <Comment key={index} comment={comment} />
         ))}
+        <div className="timestamp">
+          {moment().startOf('day').fromNow(this.props.post.timestamp).toUpperCase()} AGO
+        </div>
         <form onSubmit={this.submitComment}>
           <input
             placeholder="Add a comment..."
@@ -47,7 +51,8 @@ class CommentSection extends React.Component {
 
 CommentSection.propTypes = {
   postData: PropTypes.shape({
-    comments: PropTypes.array
+    comments: PropTypes.array,
+    timestamp: PropTypes.string
   })
 };
 

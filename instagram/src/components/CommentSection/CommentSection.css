@@ -26,3 +26,9 @@
   text-align: left;
   font-size: 14px;
 }
+
+.timestamp {
+  color: #ccc;
+  font-size: 12px;
+  margin: 15px 0;
+}
