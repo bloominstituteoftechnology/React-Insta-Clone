@@ -1,0 +1,19 @@
+.search-bar-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 10%;
+}
+
+.search-input {
+    margin-right: 10%;
+}
+
+.icons {
+    display: flex;
+    margin-left: 10%;
+}

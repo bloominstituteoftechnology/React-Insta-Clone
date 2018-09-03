@@ -1,0 +1,12 @@
+.comment-input input {
+    width: 100%;
+}
+
+.comment {
+    display: flex;
+    padding: 1%;
+}
+
+.comment p {
+    padding-left: 1%;
+}
