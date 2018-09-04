@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import PropTypes from 'prop-types';
-import Avengers from './Avengers';
+import dummyData from './dummy-data';
+import SearchBar from './components/SearchBar/SearchBar'
+import PostContainer from './components/PostContainer/PostContainer'
 
 class App extends Component {
   constructor() {
@@ -63,13 +65,22 @@ class App extends Component {
     }
   }
   render() {
+    // dummyData.forEach(item =>
+    // console.log(item))
+    // dummyData.forEach(item =>
+    // console.log(typeof item))
+    console.log(dummyData);
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Animals: by Luisan</h1>
         </header>
-        <Avengers list={this.state.animals} />
+        <SearchBar />
+          {dummyData.map(entry =>
+          <PostContainer entry={entry}/>
+        )}
+
       </div>
 
 
@@ -77,8 +88,15 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  name: PropTypes.number
-}
+// App.propTypes = {
+//   entry: PropTypes.shape({
+//     comments: PropTypes.array.isRequired,
+//     imageUrl: PropTypes.number.isRequired,
+//     likes: PropTypes.number.isRequired,
+//     thumbnailUrl: PropTypes.string.isRequired,
+//     timestamp: PropTypes.string.isRequired,
+//     username: PropTypes.string.isRequired,
+//   }).isRequired
+// }
 
 export default App;
