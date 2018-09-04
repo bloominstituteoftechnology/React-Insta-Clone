@@ -34,7 +34,7 @@ class CommentList extends React.Component {
 	render(){
 		return (
 			<div>
-				<div>{this.state.comments.map((comment) => <Comment comment={comment} key={comment.id}/>)}</div>
+				<div>{this.state.comments.map((comment, i) => <Comment comment={comment} key={i}/>)}</div>
 				<hr className="hr-comment" />
 				<InputCom addNew={this.addNew} commentHandle={this.commentHandler} comment={this.state.commentText}/>
 			</div>

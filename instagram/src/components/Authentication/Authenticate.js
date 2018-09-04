@@ -1,6 +1,7 @@
 import React from "react";
 import Login from "../Login/Login";
 import PostsPage from '../PostContainer/PostsPage';
+import userData from './UserData';
 
 
 const Authenticate = App =>
@@ -10,20 +11,11 @@ const Authenticate = App =>
 			super();
 			this.state = {
 				loginSuccess: false,
-				possibleUsers: [
-          {name: 'philzcoffee', login: '1234'},
-					{name: 'marshall', login: '1234'},
-					{name: 'biancasaurus', login: 'roar'},
-					{name: 'fortnite', login: 'pwned'},
-					{name: 'playhearthstone', login: 'pizza'}
-				]
+				possibleUsers: userData,
 			};
 		}
 
-    // if user is logged in.. render app
-    // else render a login component
     render() {
-
     	const name = Object.keys(localStorage);
     	const login = Object.values(localStorage);
       const userList = this.state.possibleUsers.map(item => item.name);
