@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
-import PostsContainer from '../components/PostsContainer/PostsContainer';
+import PostsContainer from './components/PostContainer/PostsContainer';
 import SearchBar from './components/SearchBar/SearchBarContainer';
 
 
