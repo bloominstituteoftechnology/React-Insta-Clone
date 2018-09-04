@@ -1,15 +1,13 @@
 import React from 'react';
-import CommentSection from '../CommentSection/comment-section';
 import PropTypes from 'prop-types';
+import Post from './post';
 
-const PostContainer = props => {
+function PostContainer(props) {
   return(
-    <div>
-      {props.posts.map(post => <CommentSection key={post.username} comment={post} />)}
+    <div className='post-container'>
+      {props.posts.map(post => <Post key={post.imageUrl} post={post} />)}
     </div>
   );
-
-  
 };
 
 PostContainer.PropTypes = {

@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Comments from './comments';
 
-const CommentSection = props => {
+function CommentSection(props) {
   return(
     <div>
-
+      {props.comments.map(comment => <Comments key={comment.username} comment={comment} />)}
     </div>
   );
 
