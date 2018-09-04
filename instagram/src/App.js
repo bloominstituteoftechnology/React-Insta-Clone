@@ -19,6 +19,8 @@ class App extends Component {
   }
 
   render() {
+    console.log('App render');
+    console.log('----------------');
     return (
       // console.log(this.state.dummyData),
       <div className="App">

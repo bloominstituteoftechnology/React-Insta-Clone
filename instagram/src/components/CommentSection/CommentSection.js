@@ -44,6 +44,7 @@ class CommentSection extends React.Component {
     console.log('comment section render()');
     console.log(this.state.comments);
     console.log('render', this.state.commentInput);
+    console.log('----------------');
     return (
       <div className="comment-section">
         {this.state.comments.map((comment) => (
@@ -51,7 +52,7 @@ class CommentSection extends React.Component {
         ))}
         <form onSubmit={this.addNewComment}>
           <input
-            value={this.state.comment}
+            value={this.state.commentInput}
             onChange={this.handleCommentInput}
             placeholder="Add a comment..."
           />
