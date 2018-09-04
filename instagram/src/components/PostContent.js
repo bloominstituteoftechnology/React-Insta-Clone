@@ -17,4 +17,8 @@ const PostContent = props => {
     );
 };
 
+// PostContainer.propTypes = {
+//     posts: PropTypes.arrayOf(PropTypes.object)
+//   };
+
 export default PostContent;

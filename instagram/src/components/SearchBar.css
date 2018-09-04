@@ -20,16 +20,22 @@
     
 }
 
-.searchBarMain .logoName .instaName{
+/* .searchBarMain .logoName .vl {
+        background: url('/Users/josephbradley/Desktop/practice-dir/React-Insta-Clone/assets/imgs/3243a2788e25.png') no-repeat -98px -203px;
+        width: 176px;
+        height: 35px;
+    } */
+
+    .searchBarMain .logoName .instaName{
     padding-left: 10%;
     padding-right: 5%;
     font-size: 1rem;
-}
+} 
 
 .searchBarMain .logoName .vl {
     border-left: 1px solid gray;
     height: 30px;
-}
+} 
 
 .searchBarMain .logoName .instaLogo{
     padding-left: 10%;
