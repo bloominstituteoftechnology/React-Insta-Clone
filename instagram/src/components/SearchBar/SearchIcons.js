@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchBar.css'
 
-const SearchIcons = () => {
+function SearchIcons() {
     return (
         <div className="search-icons">
             <img src={require("./Icon1.png")} alt="Icon1"/>

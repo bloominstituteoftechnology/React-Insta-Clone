@@ -1,7 +1,7 @@
 import React from 'react';
 import './PostContainer.css'
 
-const PostBanner = (props) => {
+function PostBanner(props) {
     return (
         <div className="post-banner">
             <img src={props.bannerImg} alt="banner"/>

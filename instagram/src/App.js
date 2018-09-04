@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
-import './App.css';
 import SearchBarContainer from './components/SearchBar/SearchBarContainer';
-import PostWrapper from './components/PostWrapper/PostWrapper';
+import Posts from './components/PostContainer/Posts';
+import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummydata: dummyData
+      dummydata: []
     };
   }
+
+  // Set the dummyData when the component mounts
+  componentDidMount() {
+    this.setState({dummydata: dummyData});
+  };
+
   render() {
     return (
       <div className="App">
         <SearchBarContainer />
         <div className="content">
-          {this.state.dummydata.map(dummy => <PostWrapper key={dummy.username} data={dummy}/>)}
+          <Posts data={this.state.dummydata}/>
         </div>
         
       </div>

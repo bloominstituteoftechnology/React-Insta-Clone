@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchBar.css'
 
-const SearchInput = () => {
+function SearchInput() {
     return (
         <div>
             <input type="input" placeholder="Search" />

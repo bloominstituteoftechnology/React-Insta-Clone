@@ -4,7 +4,7 @@ import './SearchBar.css'
 import SearchInput from './SearchInput';
 import SearchIcons from './SearchIcons';
 
-const SearchBarContainer = () => {
+function SearchBarContainer() {
     return (
         <div className="search-bar-container">
             <div className="logo">

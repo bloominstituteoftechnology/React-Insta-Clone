@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchBar.css'
 
-const SearchLogo = () => {
+function SearchLogo() {
     return (
         <div>
             <img src={require("./InstagramLogo.png")} alt="Instagram Logo" />

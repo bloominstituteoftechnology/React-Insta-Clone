@@ -1,7 +1,7 @@
 import React from 'react';
 import './PostContainer.css'
 
-const PostHeader = (props) => {
+function PostHeader(props) {
     return (
         <div className="post-header">
             <img src={props.thumbImg} alt="user thumbnail" />
