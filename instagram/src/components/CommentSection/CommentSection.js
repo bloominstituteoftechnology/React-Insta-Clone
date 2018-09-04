@@ -19,14 +19,14 @@ class CommentSection extends React.Component {
       { username: "alejandrok", text: this.state.inputText }
     ];
     console.log(comments);
-    this.setState({ comments: comments });
+    this.setState({ comments: comments, inputText: "" });
   }
   handleChange(event) {
     //set value of comment input to Comment state obj
     this.setState({ inputText: event.target.value });
 
     //Clear comment input box
-    // this.setState({ value: "" });
+    //this.setState({ inputText: "" });
   }
 
   addLike() {
@@ -55,7 +55,7 @@ class CommentSection extends React.Component {
           <input
             type="text"
             placeholder="add a comment"
-            value={this.state.value}
+            value={this.state.inputText}
             onChange={this.handleChange.bind(this)}
           />
           <button>Submit</button>
