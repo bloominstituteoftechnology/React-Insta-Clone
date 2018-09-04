@@ -14,6 +14,9 @@ const PostContainer = props => {
       <img src={props.imageUrl} />
       <CommentSection
         commentData={props.commentData}
+        commentText={props.commentText}
+        addComment={props.addComment}
+        handleComment={props.handleComment}
 
       />
     </div>

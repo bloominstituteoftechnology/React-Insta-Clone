@@ -16,7 +16,10 @@ const CommentSection = props => {
 
     )
   )}
-  <CommentBar />
+  <CommentBar
+    addComment={props.addComment}
+    handleComment={props.handleComment}
+    commentText={props.commentText}/>
   </div>
 
 )
