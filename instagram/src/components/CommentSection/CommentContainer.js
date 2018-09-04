@@ -10,11 +10,10 @@ function CommentContainer(props) {
         <div>
             <CommentIcons />
             
-            {props.posts.map(post => {
+            {props.posts.map((post, index) => {
                 console.log(post.comments);
                 return(
-
-                    <div>
+                    <div key={index}>
                         <CommentLikes 
                             likes = {post.likes}
                         />

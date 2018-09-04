@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PostImg(props) {
+function CommentLikes(props) {
     return(
         <div>
             <p>{props.likes}</p>
@@ -8,4 +8,4 @@ function PostImg(props) {
     )
 }
 
-export default PostImg;
+export default CommentLikes;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PostImg(props) {
+function CommentIcons(props) {
     return(
         <div>
             <button>
@@ -22,4 +22,4 @@ function PostImg(props) {
     )
 }
 
-export default PostImg;
+export default CommentIcons;

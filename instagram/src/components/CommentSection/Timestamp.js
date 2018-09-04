@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PostImg(props) {
+function Timestamp(props) {
     return(
         <div>
             <p>{props.timestamp}</p>
@@ -8,4 +8,4 @@ function PostImg(props) {
     )
 }
 
-export default PostImg;
+export default Timestamp;

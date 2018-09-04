@@ -1,14 +1,14 @@
 import React from 'react';
 import PostAvatar from './PostAvatar';
 import PostImg from './PostImg';
+import CommentContainer from '../CommentSection/CommentContainer';
 
 function PostContainer(props) {
     return(
         <div>
-            {props.posts.map(post => {
-                console.log(post);
+            {props.posts.map((post, index) => {
                 return(
-                    <div>
+                    <div key={index}>
                         <PostAvatar
                             posterName = {post.username}
                             posterAvatar = {post.thumbnailUrl}
@@ -20,6 +20,10 @@ function PostContainer(props) {
                     </div>
                 )
             })}
+
+            <CommentContainer  
+                posts = {props.posts} 
+            />
         </div>
     )
 }

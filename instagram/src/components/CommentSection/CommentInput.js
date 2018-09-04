@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PostImg(props) {
+function CommentInput(props) {
     return (
         <form>
             <input
@@ -12,4 +12,4 @@ function PostImg(props) {
       );
 }
 
-export default PostImg;
+export default CommentInput;
