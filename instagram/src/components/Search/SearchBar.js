@@ -4,7 +4,7 @@ import './SearchBar.css'
 const SearchBar = () => {
     return (
         <div className="SearchBar">
-            <div className="logo-brand">
+            <div className="LogoBand">
                 <p>Icon l Instagram</p>
             </div>
 
@@ -18,7 +18,7 @@ const SearchBar = () => {
                 <i className="User">user</i>
             </div>
         </div>
-    )
+    )   
 }
 
 export default SearchBar

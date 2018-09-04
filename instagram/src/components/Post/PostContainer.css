@@ -1,14 +1,22 @@
 .Post {
-    widht: 500px;
+    width: 650px;
+    border: 1px solid #ECECEC;
+    text-align: center;
 }
 
 .PostHeader {
     display: flex;
-    align-items: flex-end;
+    margin-top: 20px;
+    margin-left: 30px;
 }
 
 .PostHeader img {
     border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    display: inline;
+    height: 30px;
+    width: 30px;
+}
+
+.PostImage {
+    width: 100%;
 }

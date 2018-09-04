@@ -7,7 +7,7 @@ const PostContainer = (props) => {
         <div className="Post">
             <div className="PostHeader">
                 <img src={props.post.thumbnailUrl} alt="" />
-                <h2>{props.post.username}</h2>
+                <p>{props.post.username}</p>
             </div>
             <div className="PostImage">
                 <img src={props.post.imageUrl} alt="" />

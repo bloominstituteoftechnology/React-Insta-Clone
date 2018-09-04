@@ -1,7 +1,19 @@
 .SearchBar {
+    max-width: 800px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    height: 40px;
+    height: 80px;
 }
 
+.Search input{
+    border-radius: 3px;
+    background-color: #FAFAFA;
+    color: #9a9a9a;
+    border: 1px solid #DBDBDB;
+    text-align: center;
+    width: 150px;
+    height: 22px;
+    font-size: 1.3rem;
+}

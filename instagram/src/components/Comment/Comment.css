@@ -1,0 +1,12 @@
+.Comment {
+    display: flex;
+    margin-bottom: -10px;
+}
+.User {
+    display: inline;
+    font-weight: bold;
+}
+
+.Comment p {
+    display: inline;
+}
