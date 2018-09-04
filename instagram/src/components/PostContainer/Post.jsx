@@ -28,7 +28,7 @@ class Post extends React.Component {
   };
 
   render() {
-    // TODO: apply some changes to the heart if the liked state property is set to true
+    
     return (
       <div className="post-wrapper">
         <div className="post-header-wrapper">
@@ -38,7 +38,14 @@ class Post extends React.Component {
         <img src={this.props.post.imageUrl} alt={"post"} />
         <div className="post-icon-and-comments-wrapper">
           <div className="post-icons-wrapper">
-            <i className="far fa-heart" onClick={this.like} />
+            <i
+              className="far fa-heart"
+              onClick={this.like}
+              style={this.state.liked ? { color: "rgba(211, 88, 170, 0.8)" } : null}
+              className={
+                "fa-heart likes-heart " + (this.state.liked ? "fas" : "far")
+              }
+            />
             <i className="far fa-comment" />
           </div>
           <p>{this.state.likes} likes</p>
