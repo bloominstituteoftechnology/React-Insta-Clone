@@ -3,15 +3,21 @@ import React from 'react';
 function PostImg(props) {
     return(
         <div>
-            <img 
-                src="instagram-letters.png" 
-                alt="post image">
-            </img>
+            <button>
+                <img 
+                    className="icon"
+                    src="instagram-new.png" 
+                    alt="comment heart icon">
+                </img>
+            </button>
 
-            <img 
-                src="instagram-letters.png" 
-                alt="post image">
-            </img>
+            <button>
+                <img 
+                    className="icon"
+                    src="instagram-new.png" 
+                    alt="comment post icon">
+                </img>
+            </button>
         </div>
     )
 }

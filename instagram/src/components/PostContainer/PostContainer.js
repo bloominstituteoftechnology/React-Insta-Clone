@@ -5,8 +5,18 @@ import PostImg from './PostImg';
 function PostContainer(props) {
     return(
         <div>
-            <PostAvatar />
-            <PostImg />
+            {props.posts.map(post => (
+                <PostAvatar
+                    posterName = {post.username}
+                    posterAvatar = {post.thumbnailUrl}
+                />
+            ))}
+
+            {props.posts.map(post => (
+                <PostImg
+                    postImg = {post.imageUrl}
+                />
+            ))}
         </div>
     )
 }

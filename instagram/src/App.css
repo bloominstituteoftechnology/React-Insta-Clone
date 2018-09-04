@@ -26,3 +26,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.icon {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.postImg {
+  max-width: 100%;
+}

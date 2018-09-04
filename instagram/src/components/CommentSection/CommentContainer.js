@@ -9,12 +9,29 @@ function CommentContainer(props) {
     return(
         <div>
             <CommentIcons />
-            <CommentLikes />
-            <Comment />
-            <Timestamp />
+
+            {props.posts.map(post => (
+                <CommentLikes 
+                    likes = {post.likes}
+                />
+            ))}
+
+            {props.posts.map(post => (
+                <Comment 
+                    commentName = {post.comments.username}
+                    commentText = {post.comments.text}
+                />
+            ))}
+
+            {props.posts.map(post => (
+                <Timestamp 
+                    timestamp = {post.timestamp}
+                />
+            ))}
+
             <CommentInput />
         </div>
-    )
+    );
 }
 
 export default CommentContainer;

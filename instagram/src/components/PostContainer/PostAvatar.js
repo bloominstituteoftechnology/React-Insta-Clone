@@ -4,13 +4,14 @@ function PostAvatar(props) {
     return(
         <div>
             <h4>
-                Name
+                {props.post.posterName}
             </h4>
 
             <img 
-                src="instagram-letters.png" 
-                alt="profile picture">
-            </img>
+                className="icon"
+                src={props.post.posterAvatar}
+                alt="OP's profile picture"
+            />
         </div>
     )
 }

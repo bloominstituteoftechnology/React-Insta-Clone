@@ -5,6 +5,7 @@ function SearchBarMenu(props) {
         <div>
             <button>
                 <img
+                    className="icon"
                     src="instagram-new.png"
                     alt="instagram compass icon">
                 </img>
@@ -12,6 +13,7 @@ function SearchBarMenu(props) {
 
             <button>
                 <img
+                    className="icon"
                     src="instagram-new.png"
                     alt="instagram heart icon">
                 </img>
@@ -19,6 +21,7 @@ function SearchBarMenu(props) {
 
             <button>
                 <img
+                    className="icon"
                     src="instagram-new.png"
                     alt="instagram profile icon">
                 </img>

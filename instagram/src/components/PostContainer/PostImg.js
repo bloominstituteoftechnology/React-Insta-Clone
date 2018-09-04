@@ -4,9 +4,10 @@ function PostImg(props) {
     return(
         <div>
             <img 
-                src="instagram-letters.png" 
-                alt="post image">
-            </img>
+                className="postImg"
+                src={props.post.postImg}
+                alt="image content"
+            />
         </div>
     )
 }
