@@ -1,0 +1,21 @@
+.iptctnr {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+}
+
+.iptctnr:not(:first-child) {
+  width: 60%;
+  margin: 13px 0px 5px -30px;
+}
+
+.ipt {
+  width: 80%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.iptctnr:focus,
+.ipt:focus {
+  outline: none;
+}

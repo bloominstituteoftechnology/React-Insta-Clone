@@ -1,0 +1,67 @@
+.ipt {
+  width: 80%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.iptctnr:focus,
+.ipt:focus {
+  outline: none;
+}
+
+.itractns {
+  width: 80px;
+  height: 50px;
+  margin-left: 10px;
+  display: flex;
+}
+
+.itractns img {
+  width: 100%;
+  height: 100%;
+}
+
+.itractns:hover {
+  cursor: pointer;
+}
+
+.lkct {
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 1.6rem;
+}
+
+.pfimg {
+  width: 45px;
+  height: 40px;
+  margin: 10px 0px 10px 10px;
+  display: inline-block;
+}
+
+.pfimg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.postcontent-container {
+  width: 80%;
+  margin: 0 auto 25px auto;
+}
+
+.pstimg {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.pstimg img {
+  width: 100%;
+  height: 100%;
+}
+
+.unt {
+  position: relative;
+  top: -13px;
+  left: 20px;
+  margin: 5px;
+}

@@ -23,6 +23,10 @@
   height: 100%;
 }
 
+.btn-img:hover {
+  cursor: pointer;
+}
+
 .left-header {
   width: 33%;
   margin-top: 10px;
@@ -51,6 +55,10 @@
 .logo-img img {
   width: 100%;
   height: 100%;
+}
+
+.logo-img:hover {
+  cursor: pointer;
 }
 
 .right-header {
