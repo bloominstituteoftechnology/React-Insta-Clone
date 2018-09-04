@@ -1,15 +1,18 @@
 import React from 'react';
  
-function CommentFeedback(props) {
+function PostLikesSection(props) {
     return (
         <div className="feedback-container">
             <div className="feedback-items">
                 <div className="left-icons">
-                    <i className="far fa-heart"></i>
-                    <i className="far fa-comment"></i>
+                    <i className="far fa-heart"
+                    onClick={props.incrementLike}
+                    />
+                    <i className="far fa-comment" />
+                    <i className="far fa-paper-plane" />
                 </div>
                 <div className="right-icons">
-                    <i className="far fa-bookmark"></i>
+                    <i className="far fa-bookmark"/>
                 </div>
             </div>
             <div className="like">
@@ -19,4 +22,4 @@ function CommentFeedback(props) {
     );
 };
 
- export default CommentFeedback;
+ export default PostLikesSection;

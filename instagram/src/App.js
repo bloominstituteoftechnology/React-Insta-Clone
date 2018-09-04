@@ -26,6 +26,7 @@ class App extends Component {
         <SearchBar />
         <PostsContainer 
         posts={this.state.posts}
+        clickLike = {this.increaseLikeHandler}
         />
       </div>
     );
