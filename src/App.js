@@ -16,10 +16,19 @@ class App extends React.Component {
     this.setState({ data: dummyData })
   }
 
+  search = (searchStr) => {
+    let data = [...this.state.data].filter(post => post.username.includes(searchStr))
+    this.setState({ data })
+  }
+
   render() {
     return (
       <div className="App">
-        <Search className="Search" />
+        <Search
+          className="Search"
+          data={this.state.data}
+          search={this.search}
+        />
         <div className="Posts" >
           {this.state.data.map( item => {
             return (
