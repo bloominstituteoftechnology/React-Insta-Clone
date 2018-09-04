@@ -1,0 +1,9 @@
+.Comments p {
+  text-align: left;
+  margin: 2% 3%;
+}
+
+.timeFromNow {
+  font-size: 1.4rem;
+  color: lightgray;
+}
