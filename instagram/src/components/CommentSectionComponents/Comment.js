@@ -1,7 +1,8 @@
 import React from 'react';
 import './CommentSection.css';
+import PropTypes from 'prop-types';
 
-const CommentComment=(props)=> {
+const Comment= (props) => {
     return (
         <div className='comment'>
            <span className='comment-body'>{props.comment.text}</span>{''}
@@ -10,4 +11,11 @@ const CommentComment=(props)=> {
     );
 };
 
-export default CommentComment;
+Comment.propTypes = {
+    comment: PropTypes.shape({
+        text: PropTypes.string,
+        username: PropTypes.string
+    })
+};
+
+export default Comment;
