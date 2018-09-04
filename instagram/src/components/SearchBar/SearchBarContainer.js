@@ -4,14 +4,14 @@ import './SearchBar.css'
 import SearchInput from './SearchInput';
 import SearchIcons from './SearchIcons';
 
-function SearchBarContainer() {
+function SearchBarContainer(props) {
     return (
         <div className="search-bar-container">
             <div className="logo">
                 <SearchLogo />
             </div>
             <div className="search-input">
-                <SearchInput />
+                <SearchInput hdlSearch={props.hdlSearch}/>
             </div>
             <div>
                 <SearchIcons />
