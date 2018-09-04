@@ -12,3 +12,15 @@
   margin-top: 22px;
   margin-left: 15px;
 }
+
+.posted-image-logo {
+  display: flex;
+}
+
+.two-icons {
+  display: flex;
+}
+
+.likes {
+  display:  flex;
+}

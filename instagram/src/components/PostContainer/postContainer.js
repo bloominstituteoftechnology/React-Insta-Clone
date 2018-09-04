@@ -1,6 +1,7 @@
 import React from 'react';
 import './PostContainer.css';
 import UserPicAndName from  './UserPicAndName';
+import PostedImage from  './PostedImage';
 
 
 
@@ -9,6 +10,7 @@ const PostContainer = () => {
     <div>
 
       <UserPicAndName />
+      <PostedImage />
 
     </div>
    );
