@@ -23,10 +23,14 @@
 
 .commentBox {
   border: none;
-  margin: 0 3%;
+  padding: 2% 1% 2% 3%;
   font-size: 1.4rem;
-  padding: 2% 1% 2% 0;
   opacity: 0.5;
+  width: 100%;
+}
+
+.commentBox:focus {
+  outline-width: 0;
 }
 
 .fa-ellipsis-h {
