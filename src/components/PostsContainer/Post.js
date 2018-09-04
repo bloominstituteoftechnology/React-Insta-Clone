@@ -19,11 +19,11 @@ const Post = props => {
         />
       </div>
       <div class="feedback-buttons">
-        <img src="http://www.pngonly.com/wp-content/uploads/2017/06/Instagram-Heart-PNG-Transparent-210x210.png" />
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO1lu3jW04eocmGDkdSeUalJOYvdShSIWPinb3UeIoH6wnIsb8" />
+        <img src="https://png.icons8.com/metro/1600/like.png" />
+        <img src="https://cdn2.iconfinder.com/data/icons/instagram-ui/48/jee-69-512.png" />
       </div>
-      <p>{props.post.likes}</p>
-      <CommentSection post={props.post} addNewComment={props.addNewComment} />
+      <p class="likes">{props.post.likes}</p>
+      <CommentSection comments={props.post.comments} />
     </div>
   );
 };

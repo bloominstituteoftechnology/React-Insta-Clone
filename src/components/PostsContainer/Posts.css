@@ -30,18 +30,15 @@
   border-radius: 50%;
 }
 
+.feedback-buttons {
+  display: flex;
+}
+
 .feedback-buttons img {
   height: 30px;
   width: 30px;
 }
 
-.feedback-buttons {
-  display: flex;
-  margin-left: 6px;
-}
-
 .likes {
   display: flex;
-  margin: 5px 0px 5px 6px;
-  font-size: 0.8rem;
 }
