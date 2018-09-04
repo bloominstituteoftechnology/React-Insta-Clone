@@ -8,13 +8,13 @@ import SearchBar from "./components/SearchBar/SearchBar.js";
 class App extends Component {
   constructor() {
     super();
-    this.state = { dummyData };
+    this.state = { posts: dummyData };
   }
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostsContainer posts={dummyData} />
+        <PostsContainer posts={this.state.posts} />
       </div>
     );
   }

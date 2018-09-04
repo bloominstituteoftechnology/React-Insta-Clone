@@ -1,6 +1,8 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection.js";
 import "./Post.css";
+import PropTypes from "prop-types";
+import moment from "moment";
 
 class Post extends React.Component {
   constructor(props) {
@@ -9,7 +11,10 @@ class Post extends React.Component {
 
   render() {
     {
-      console.log(this.props.post.imageUrl);
+      let timestamp = this.props.post.timestamp;
+      console.log(this.props.post.timestamp);
+      let postDate = moment("now").fromNow();
+      console.log(postDate);
     }
     return (
       <div className="post">
