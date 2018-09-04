@@ -1,6 +1,8 @@
 import React from 'react';
 import './CommentSection.css';
 
+
+
 const CommentSection = props =>{
     
     return (
@@ -14,7 +16,12 @@ const CommentSection = props =>{
                     </div>
                 );
             })}
-           
+            <form onSubmit={
+
+                props.handleInputComment
+                props.addNewComment}>
+                <input value="Add a comment"></input>
+            </form>
         </div>
     );
 }
