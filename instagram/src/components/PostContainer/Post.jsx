@@ -5,12 +5,14 @@ import CommentSection from "../CommentSection/CommentSection";
 class Post extends React.Component {
   state = {
     likes: this.props.post.likes
+    // TODO: add more to state
   };
 
   // DAY 2 MVP goal
   like = () => {
     // create a variable to hold likes + 1
     let likes = this.state.likes + 1;
+    // TODO: refactor likes so that i can change heart if liked
 
     // set the state to the new likes count
     this.setState({ likes });
