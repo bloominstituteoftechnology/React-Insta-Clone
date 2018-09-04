@@ -17,19 +17,17 @@ class PostContainer extends React.Component {
 
     componentDidMount() {
         if (typeof(Storage) !== 'undefined') {
-            if (localStorage.getItem('postContainerStateData') !== null) {
-                let newData = JSON.parse(localStorage.getItem('postContainerStateData'));
-                
-                this.setState({
-                    data: newData,
-                });
+            if (localStorage.getItem(`postContainerState-${ this.props.index }`) !== null) {
+                let newState = JSON.parse(localStorage.getItem(`postContainerState-${ this.props.index }`));
+
+                this.setState(newState);
             }
         }
     }
 
     componentDidUpdate() {
         if (typeof(Storage) !== 'undefined') {
-            localStorage.setItem('postContainerStateData', JSON.stringify(this.state.data));
+            localStorage.setItem(`postContainerState-${ this.props.index }`, JSON.stringify(this.state));
         }
     }
 
@@ -48,6 +46,14 @@ class PostContainer extends React.Component {
         })
 
         e.target[0].value = "";
+    }
+
+    deleteComment = index => e => {
+        e.preventDefault();
+        let newState = this.state;
+        newState.data.comments.splice(index, 1);
+
+        this.setState(newState);
     }
 
     render() {
@@ -89,7 +95,9 @@ class PostContainer extends React.Component {
                                 return <CommentSection 
                                     className = 'comment-section-div' 
                                     key = { index } 
+                                    index = { index } 
                                     comment = { comment } 
+                                    deleteComment = { this.deleteComment } 
                                 />
                             }) 
                         }
