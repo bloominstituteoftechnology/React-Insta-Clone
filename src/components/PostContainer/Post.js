@@ -3,30 +3,47 @@ import PropTypes from 'prop-types'
 import './Post.css'
 import Comments from '../CommentSection/Comments'
 
-const Post = (props) => {
-  return (
-    <React.Fragment>
-      <div className="postUser">
-        <img className="postUserIcon" src={props.post.thumbnailUrl} alt="User Thumbnail" />
-        <span className="bold">{props.post.username}</span>
-      </div>
+class Post extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      likes: props.post.likes
+    }
+  }
 
-      <div className="postPicture">
-        <img src={props.post.imageUrl} alt="User Thumbnail" />
-      </div>
+  increaseLike = () => {
+    this.setState({ likes: this.state.likes + 1 })
+  }
 
-      <div className="postIcons"> 
-        <i className="far fa-heart"></i>
-        <i className="far fa-comment"></i>
-      </div>
-
-      <div className="postLikes">
-        <p className="bold">{props.post.likes} likes</p>
-      </div>
-
-      <Comments className="Comments" comments={props.post.comments} />
-    </React.Fragment>
-  )
+  render() {
+    return (
+      <React.Fragment>
+        <div className="postUser">
+          <img className="postUserIcon" src={this.props.post.thumbnailUrl} alt="User Thumbnail" />
+          <span className="bold">{this.props.post.username}</span>
+        </div>
+  
+        <div className="postPicture">
+          <img src={this.props.post.imageUrl} alt="User Thumbnail" />
+        </div>
+  
+        <div className="postIcons"> 
+          <span className="heartIcon" onClick={this.increaseLike}>
+            <i className="far fa-heart"></i>
+          </span>
+          <span>
+            <i className="far fa-comment"></i>
+          </span>
+        </div>
+  
+        <div className="postLikes">
+          <p className="bold">{this.state.likes} likes</p>
+        </div>
+  
+        <Comments className="Comments" comments={this.props.post.comments} />
+      </React.Fragment>
+    )
+  }
 }
 
 Post.propTypes = {

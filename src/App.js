@@ -23,7 +23,11 @@ class App extends React.Component {
         <div className="Posts" >
           {this.state.data.map( item => {
             return (
-              <Post className="Post" key={item.timestamp} post={item} />
+              <Post
+                className="Post"
+                key={item.timestamp}
+                post={item}
+              />
             )
           })}
         </div>
