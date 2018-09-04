@@ -1,0 +1,14 @@
+.Post {
+    widht: 500px;
+}
+
+.PostHeader {
+    display: flex;
+    align-items: flex-end;
+}
+
+.PostHeader img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
