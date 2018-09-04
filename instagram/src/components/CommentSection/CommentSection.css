@@ -19,6 +19,11 @@
   font-size: 1rem;
   margin-left: 10px;
 }
+.comment-section form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .comment-section input {
   border-style: none;
   width: 95%;

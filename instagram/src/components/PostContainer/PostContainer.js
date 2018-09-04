@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './PostContainer.css';
 
 function PostContainer(props) {
-  // console.log(props.post.thumbnailUrl);
+  console.log('post container', props.post);
   return (
     <div className="post-container">
       <div className="post-header">

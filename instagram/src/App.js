@@ -9,16 +9,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData,
+      posts: [],
       inputText: '',
     };
+  }
+
+  componentDidMount() {
+    this.setState({ posts: dummyData });
   }
 
   render() {
     return (
       // console.log(this.state.dummyData),
       <div className="App">
-        {/* <SearchBar /> */}
+        <SearchBar />
         {this.state.posts.map((post) => (
           <PostContainer post={post} key={post.timestamp} />
         ))}

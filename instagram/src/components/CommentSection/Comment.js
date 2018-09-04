@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Comment(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <div className="comment">
       <h3>{props.comment.username}</h3>
