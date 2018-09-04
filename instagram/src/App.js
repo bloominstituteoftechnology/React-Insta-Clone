@@ -12,16 +12,22 @@ import PostContainer from './components/PostContainer/PostContainer';
       inputText: '',
     };
   }
-   render() {
-    return (
-      <div className="appContainer">
-        <SearchBar />
-        {this.state.posts.map((post) => (
-          <PostContainer post={post} key={post.timestamp} />
-        ))}
-      </div>
-    );
-  }
+
+  // componentDidMount() {
+    
+  // }
+
+      render() {
+        return (
+          <div className="appContainer">
+            <SearchBar />
+            {this.state.posts.map(post => { return (
+              <PostContainer post={post} key={post.timestamp}/>)
+            })}
+          </div>
+        );
+      }
+
 }
 
  export default App;
