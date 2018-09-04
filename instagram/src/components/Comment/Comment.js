@@ -11,8 +11,8 @@ class Comment extends React.Component {
       <div className="comment">
         <p>
           <span className="comment-username">
-            {this.props.comment.username}{" "}
-          </span>
+            {this.props.comment.username}
+          </span>{" "}
           {this.props.comment.text}
         </p>
         <p />

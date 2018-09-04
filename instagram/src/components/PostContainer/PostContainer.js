@@ -14,8 +14,8 @@ class PostsContainer extends React.Component {
     }
     return (
       <div className="posts-container">
-        {this.props.posts.map(post => (
-          <Post post={post} />
+        {this.props.posts.map((post, index) => (
+          <Post post={post} key={index} />
         ))}
       </div>
     );

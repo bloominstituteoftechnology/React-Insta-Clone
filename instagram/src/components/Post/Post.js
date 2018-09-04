@@ -10,12 +10,12 @@ class Post extends React.Component {
   }
 
   render() {
-    {
-      let timestamp = this.props.post.timestamp;
-      console.log(this.props.post.timestamp);
-      let postDate = moment("now").fromNow();
-      console.log(postDate);
-    }
+    // {
+    //   let timestamp = this.props.post.timestamp;
+    //   console.log(this.props.post.timestamp);
+    //   let postDate = moment("now").fromNow();
+    //   console.log(postDate);
+    // }
     return (
       <div className="post">
         <div className="username-container">

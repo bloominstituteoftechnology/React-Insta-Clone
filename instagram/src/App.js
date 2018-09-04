@@ -8,7 +8,15 @@ import SearchBar from "./components/SearchBar/SearchBar.js";
 class App extends Component {
   constructor() {
     super();
-    this.state = { posts: dummyData };
+    this.state = { posts: [] };
+    console.log("constructor ran");
+    console.log(this.state);
+  }
+
+  componentDidMount() {
+    console.log("component did mount");
+    this.setState({ posts: dummyData });
+    console.log("added data to App state");
   }
   render() {
     return (
