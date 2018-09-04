@@ -1,21 +1,35 @@
-.userpic-n-name {
+.post-container-wrapper {
+  height: 500px;
+  width: 50%;
+  margin: 5px auto;
+}
+.post-border {
+  border: 1px solid #d3d3d3;
+  margin: 5px 0;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+} 
+.post-image-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.post-header {
   display: flex;
 }
 
-.philzcoffee-logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50px;
+.post-thumb-wrapper {
+  height: 50px;
+  width: 50px;
+}
+.post-thumb {
+  height: 100%;
+  border-radius: 50%;
 }
 
-.user-name {
-  margin-top: 22px;
-  margin-left: 15px;
-}
-
-.posted-image-logo {
-  display: flex;
-}
 
 .two-icons {
   display: flex;
@@ -23,4 +37,9 @@
 
 .likes {
   display:  flex;
+}
+
+.time-stamp {
+  display: flex;
+  color: gray;
 }

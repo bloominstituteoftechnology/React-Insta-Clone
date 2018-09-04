@@ -2,7 +2,7 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
 
-// import './Posts.css';
+import './PostContainer.css';
 
 const Post = props => {
   return (
@@ -18,7 +18,21 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
+      <div className="two-icons">
+        <section>
+          <i className="far fa-heart"></i>
+        </section>
+        <section>
+          <i className="far fa-comment"></i>
+        </section>
+      </div>
+
+      <div className="likes">
+        <div>373 likes</div>
+      </div>
       <CommentSection comments={props.post.comments} />
+
+      <div className="time-stamp">2 HOURS AGO</div>
     </div>
   );
 };

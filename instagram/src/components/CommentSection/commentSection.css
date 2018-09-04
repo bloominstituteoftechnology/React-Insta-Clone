@@ -1,16 +1,16 @@
-.username-n-comment {
-  display: flex;
+.comment-text {
+  text-align: left;
+  padding: 2px;
+  margin-left: 4px;
 }
 
-.username {
-  font-weight: bold;
+.comment {
+  font-weight: 300;
+  font-size: 14px;
 }
 
-.user-comment {
-  margin-left: 5px;
+.user {
+  font-weight: 500;
+  font-size: 12px;
 }
 
-.time-stamp {
-  display: flex;
-  color: gray;
-}
