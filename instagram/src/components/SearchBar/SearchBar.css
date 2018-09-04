@@ -1,0 +1,43 @@
+.header-search-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  border-bottom: 1px solid #D3D3D3;
+}
+.fa-instagram {
+  margin-left: 10px;
+  font-size: 3rem;
+}
+
+.vertical-line{
+  border-right: 1px solid  #D3D3D3;
+  height: 50px;
+}
+
+.search-bar-wrapper {
+  position: relative;
+}
+
+.fa-search {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  font-size: 1.5rem;
+  color: gray;
+  z-index: 1;
+}
+
+.search-bar {
+  height: 50px;
+  text-align: center;
+  font-size: 25px;
+  color: grey;
+}
+
+.far {
+  margin: 0 25px;
+  font-size: 3rem;
+  font-weight: 100;
+  -webkit-text-stroke: 3px white;
+} 
