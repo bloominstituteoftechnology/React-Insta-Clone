@@ -7,4 +7,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
 }
