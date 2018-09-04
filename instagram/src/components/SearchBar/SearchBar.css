@@ -29,10 +29,11 @@
 }
 
 .search-bar {
-  height: 50px;
+  height: 40px;
   text-align: center;
   font-size: 25px;
   color: grey;
+  border-radius: 5px;
 }
 
 .far {
