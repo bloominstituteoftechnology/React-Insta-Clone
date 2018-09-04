@@ -4,21 +4,31 @@ import CommentSection from "../CommentSection/CommentSection";
 
 class Post extends React.Component {
   state = {
-    likes: this.props.post.likes
-    // TODO: add more to state
+    likes: this.props.post.likes,
+    liked: false
   };
 
   // DAY 2 MVP goal
   like = () => {
-    // create a variable to hold likes + 1
-    let likes = this.state.likes + 1;
-    // TODO: refactor likes so that i can change heart if liked
+    // grab the likes and liked state properties
+    let likes = this.state.likes;
+    let liked = this.state.liked;
 
-    // set the state to the new likes count
-    this.setState({ likes });
+    // toggle the likes and liked status
+    if (liked) {
+      likes--;
+      liked = false;
+    } else {
+      likes++;
+      liked = true;
+    }
+
+    // set the new likes and liked status
+    this.setState({ liked, likes });
   };
 
   render() {
+    // TODO: apply some changes to the heart if the liked state property is set to true
     return (
       <div className="post-wrapper">
         <div className="post-header-wrapper">
