@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PostContent from './components/PostContent';
 import SearchBar from './components/SearchBar';
 import CommentSection from './components/CommentSection';
-import dummyData from '/components/dummy-data.js';
+import dummyData from './components/dummy-data';
 import './App.css';
 
 class App extends Component {
@@ -29,11 +29,13 @@ class App extends Component {
       <div className='instaContainer'>
         <div className='searchBar'>
           <SearchBar />
-      <div> {this.state.dummyData.map(item => <PostContent item={item} comments ={item.comments} username={it} />)} </div>
         </div>
         <div className='PostContent'>
           <PostContent />
-          <CommentSection />
+          </div>
+        <div className='Comment'>
+          < CommentSection />
+          <div> {this.state.dummyData.map(item => <CommentSection item={item} comments ={item.comments} />)} </div>
         </div>
       </div>
     </div>
