@@ -13,8 +13,10 @@ class CommentSectionContainer extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='comment-section'>
+                <div className='comments'>
                 {this.state.comment.map((comment)=> <Comment comment={comment}/>)}
+                </div>
                 <CommentBar />
             </div>
         );

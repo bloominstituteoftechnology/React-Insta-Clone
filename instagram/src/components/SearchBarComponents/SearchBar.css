@@ -1,0 +1,44 @@
+.searchbar {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+
+
+.logo-img {
+    width: 50%;
+}
+
+.icons-div {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+.compass-img {
+    width: 40px;
+    height: 40px;
+}
+
+.heart-img {
+    width: 25px;
+    height: 25px;
+    padding-top: 8px;
+}
+
+.person-img {
+    width: 25px;
+    height: 25px;
+    padding-top: 8px;
+}
+
+.search-input {
+   margin-top: 80px;
+   border-radius: 5px;
+   height: 16px;
+   padding-left: 10px;
+   color: gray;
+   background: #f4f6f9;
+   margin-bottom: 0px;
+}

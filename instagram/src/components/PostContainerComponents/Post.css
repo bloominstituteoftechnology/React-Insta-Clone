@@ -1,0 +1,15 @@
+.post {
+    margin-left: 8%;
+}
+
+.post-header {
+    font-weight: bold;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-left: 20px;
+    text-align: left;
+    margin-left: 6.5%;
+    width: 84%;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
