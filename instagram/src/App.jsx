@@ -12,7 +12,8 @@ class App extends Component {
     this.state = {
       posts: [],
       searchText: "",
-      filteredPosts: []
+      filteredPosts: [],
+      username: "tomtarpey"
     };
   }
 

@@ -8,7 +8,7 @@ class CommentSection extends React.Component {
   state = {
     comments: this.props.post.comments,
     comment: "",
-    username: "charlettabullard"
+    username: "tomtarpey"
   };
 
   componentDidMount() {
