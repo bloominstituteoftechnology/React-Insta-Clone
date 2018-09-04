@@ -28,8 +28,7 @@ export default class AddComment extends Component {
   render() {
     return (
       <form onSubmit={this.addComment} className="add-comment-container">
-        <input ref={this.inputRef} name="inputText" onChange={this.input} className="input" type="text" placeholder="Comment Here" />
-        <button onClick={this.addComment} className="submit" type="submit">Submit</button>
+        <input ref={this.inputRef} name="inputText" onChange={this.input} className="inputComment" type="text" placeholder="Type comment here..." />
       </form>
     )
   }

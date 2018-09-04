@@ -10,14 +10,17 @@ class PostContainer extends Component {
   constructor() {
     super();
     this.state = {
-      comments: []
+      comments: [],
+      likes: 0,
+      clickedLike: false,
     }
   }
 
   componentDidMount() {
     console.log('PostContainer - componentDidMount()');
     const copyOfComments = this.props.postData.comments;
-    this.setState({comments: copyOfComments});
+    const copyOfLikes = this.props.postData.likes;
+    this.setState({comments: copyOfComments, likes: copyOfLikes});
   }
 
   componentDidUpdate() {
@@ -29,6 +32,15 @@ class PostContainer extends Component {
     this.setState({
       comments: [...this.state.comments, newCommentObj]
     })
+  }
+
+  toggleLike = () => {
+    let copyOfLikes = this.state.likes;
+    if(this.state.clickedLike){
+      this.setState({likes: copyOfLikes -= 1, clickedLike: false})
+    } else {
+      this.setState({likes: copyOfLikes += 1, clickedLike: true})
+    }
   }
 
   render() {
@@ -43,10 +55,10 @@ class PostContainer extends Component {
         <img className="main-img" src={imageUrl} alt="User Post"/>
         <div className="comment-section">
           <div className="icons">
-            <FontAwesomeIcon className="heart-icon" icon={faHeart} size="2x" />
+            <FontAwesomeIcon onClick={this.toggleLike} className="heart-icon" icon={faHeart} size="2x" />
             <FontAwesomeIcon className="comment-icon" icon={faComment} size="2x" />
           </div>
-          <p className="likes">{likes} Likes</p>
+          <p className="likes">{this.state.likes} Likes</p>
           <CommentSection addComment={this.addComment} comments={this.state.comments} />
           <p className="timestamp">{timestamp}</p>
         </div>

@@ -4,16 +4,16 @@
   width: 100%;
 }
 
-.input {
-  flex-grow: 4;
-  height: 50px;
+.inputComment {
+  border: 1px solid rgba(0,0,0,0.2);
   border-radius: 3px;
-  margin: 20px 0px 20px 10px;
+  margin: 0px 20px;
+  height: 50px;
+  width: 100%;
+  padding: 20px;
 }
 
-.submit {
-  flex-grow: 1;
-  background: lightgreen;
-  margin: 20px 10px 20px 0px;
-  cursor: pointer;
+.inputComment::placeholder {
+  text-align: center;
+  font-size: 1.2rem;
 }
