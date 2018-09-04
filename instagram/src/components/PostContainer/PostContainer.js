@@ -21,7 +21,7 @@ function PostContainer(props) {
             <div className='message-bubble'></div>
           </div>          
           <h4 className='like-counter'>{props.profileObject.likes + 'likes'}</h4>
-          <CommentList comment={props.profileObject.comments}/>
+          <CommentList comments={props.profileObject.comments} />
       </div>
 
       </div>      

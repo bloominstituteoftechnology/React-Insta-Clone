@@ -1,0 +1,16 @@
+.commet-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.single-comment {
+  display: flex;
+  align-items: center;
+}
+
+.user-comment {
+  padding-right: 10px;
+  margin: 0;
+}
