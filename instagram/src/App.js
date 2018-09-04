@@ -13,20 +13,22 @@ import PostContainer from './components/PostContainer/PostContainer';
     };
   }
 
-  // componentDidMount() {
-    
-  // }
+  componentDidMount() {
+    fetch(dummyData)
+      .then(response => response.json())
+      .then(data => this.setState({ data }));
+  }
 
-      render() {
-        return (
-          <div className="appContainer">
-            <SearchBar />
-            {this.state.posts.map(post => { return (
-              <PostContainer post={post} key={post.timestamp}/>)
-            })}
-          </div>
-        );
-      }
+  render() {
+    return (
+      <div className="appContainer">
+        <SearchBar />
+        {this.state.posts.map(post => { return (
+          <PostContainer post={post} key={post.timestamp}/>)
+        })}
+      </div>
+    );
+  }
 
 }
 
