@@ -1,10 +1,10 @@
 import React from "react";
-import './SearchBar.css';
+import "./SearchBar.css";
 
 const SearchBar = props => {
   return (
     <div className="search-bar">
-      <input placeholder="Search" type="text" onChange={props.searchHandler} />
+        <input className="search" placeholder="&#x1f50d; &nbsp; Search" type="text" onChange={props.searchHandler}></input>
     </div>
   );
 };
