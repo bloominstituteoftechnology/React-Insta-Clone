@@ -1,0 +1,35 @@
+.post-container {
+  margin: 0 20%;
+  padding: 80px 0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.image-post {
+  width: 100%;
+}
+
+.post {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.like-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 15px;
+}
