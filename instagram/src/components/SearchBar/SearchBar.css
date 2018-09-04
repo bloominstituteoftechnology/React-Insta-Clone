@@ -1,9 +1,12 @@
 header {
     display: flex;
     justify-content: space-between;
-    padding: 23px 28px 12px 22px;
+    padding: 23px 0 12px 0;
     border-bottom: 1px solid gray;
     width: 100%;
+    position: fixed;
+    background: white;
+    z-index: 1;
 }
 
 .instagram-icon {

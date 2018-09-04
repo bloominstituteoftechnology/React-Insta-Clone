@@ -8,8 +8,8 @@ const SearchBar = () => {
     return (
         <header>
             <div className = 'icon-logo-div'>
-                <img className = 'instagram-icon' src = { icon } alt='instagram icon' />
-                <img className = 'instagram-logo' src = { logo } alt='instagram logo' />
+                <a href='https://www.instagram.com'><img className = 'instagram-icon' src = { icon } alt='instagram icon' /></a>
+                <a href='https://www.instagram.com'><img className = 'instagram-logo' src = { logo } alt='instagram logo' /></a>
             </div>
 
             <div className = 'header-input-div'>

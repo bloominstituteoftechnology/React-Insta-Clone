@@ -2,7 +2,9 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 147px;
 }
+
 .post-container-div {
     border: 1px solid gray;
     width: 45%;
