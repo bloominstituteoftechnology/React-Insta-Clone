@@ -22,7 +22,10 @@ const PostContainer = props => {
 };
 
 PostContainer.propTypes = {
-  commentData: PropTypes.array,
+  commentData: PropTypes.arrayOf(PropTypes.shape({
+    username: PropTypes.string,
+    text: PropTypes.string,
+  })),
   username: PropTypes.string,
   imageUrl: PropTypes.string
 }
