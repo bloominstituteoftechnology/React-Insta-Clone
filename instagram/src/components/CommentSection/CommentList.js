@@ -14,9 +14,11 @@ class CommentList extends React.Component {
 
 	addNew = (event) => {
 		event.preventDefault();
+		let name = Object.keys(localStorage);
+		name = name[0];
 		this.setState({
 			comments: [...this.state.comments, {
-				username: 'marshall',
+				username: name,
 				text: this.state.commentText,
 			}],
 			commentText: "",
