@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CommentSection from '/Users/caitlingiguere/web/instagram/src/components/CommentSection/CommentSection.js'
+import CommentSection from '../CommentSection/CommentSection.js'
 
 function PostContainer(props) {
     return (
