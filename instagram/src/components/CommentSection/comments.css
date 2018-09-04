@@ -1,6 +1,5 @@
 .comments {
     text-align: left;
-    display: flex;
     margin-bottom: 5px;
 }
 
@@ -9,7 +8,7 @@
 }
 
 .commentContainer {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .footer {
@@ -21,4 +20,8 @@
     border: 0 solid;
     text-align: left;
     
+}
+
+.likeButton {
+    text-align: left;
 }

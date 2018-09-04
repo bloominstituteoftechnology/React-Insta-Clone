@@ -3,6 +3,7 @@ import Photo from './Photo';
 import UserName from './UserName';
 import Comments from '../PostContainer/Comments';
 import Clickables from './Clickables';
+import CommentContainer from '../CommentSection/CommentContainer';
 
 function PostContainer(props) {
 
@@ -12,20 +13,17 @@ function PostContainer(props) {
                 <div>
                     <UserName thumbnail={data.thumbnailUrl} name={data.username} />
                     <Photo mainPost={data.imageUrl} />
-                    <div className="likesDiv"><Clickables likes={data.likes}/>
-                    {data.comments.map(userComments => {
-            return (
-                <div>
-                    <Comments comments={userComments} />
-                </div>
-            )
-        })}
-        </div>
+                    <div className="likesDiv">
+                        <Clickables likes={data.likes} />
+                        <div>
+                            <Comments userComments={data.comments} />
+                        </div>
+                    </div>
+                    <CommentContainer />
                 </div>
             )
         })}
     </div>
-
 }
 
 export default PostContainer;
