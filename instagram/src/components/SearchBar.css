@@ -1,15 +1,58 @@
 .searchBarMain {
+    width: 90%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* border-top: 4px solid lightgray; */
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 2%;
+    margin-bottom: 8%;
+    margin-left: 2%;
+}
+
+.searchBarMain .logoName {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid black;
+    
 }
 
-.searchBarMain .profilePic {
-    padding-left: 2%;
+.searchBarMain .logoName .instaName{
+    padding-left: 30%;
+    font-size: 1rem;
 }
 
-.searchBarMain .profileName {
-    padding-left: 2%;
+.searchBarMain .logoName .instaLogo{
+    padding-left: 30%;
+}
+
+.searchBarMain .searchField {
+    padding-bottom: 1%;
+}
+
+.searchBarMain .searchField .topInput {
+    height: 20px;
+    width: 200px;
+    font-size: .8rem;
+    background: #eff1f4;
+    color: #c7c8c9;
+    border: 1px solid #c7c8c9;
+
+}
+.searchBarMain .searchField .topInput::placeholder {
+    color: #c7c8c9;
+    padding-left: 40%;
+
+}
+
+.searchBarMain .socialIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 1%;
+
 }
