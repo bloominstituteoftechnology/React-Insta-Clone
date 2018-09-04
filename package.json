@@ -1,0 +1,21 @@
+{
+  "name": "instagram",
+  "version": "1.0.0",
+  "description": "## Introduction",
+  "main": "App.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshay-gadkari/React-Insta-Clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshay-gadkari/React-Insta-Clone/issues"
+  },
+  "homepage": "https://github.com/akshay-gadkari/React-Insta-Clone#readme"
+}
