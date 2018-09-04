@@ -7,7 +7,8 @@ import "./CommentSection.css";
 class CommentSection extends React.Component {
   state = {
     comments: this.props.post.comments,
-    comment: ""
+    comment: "",
+    username: "charlettabullard"
   };
 
   componentDidMount() {
@@ -38,7 +39,7 @@ class CommentSection extends React.Component {
     // prevent the default operation
     event.preventDefault();
     // build the next comment to add
-    const nextComment = { text: this.state.comment, username: 'tomtarpey' };
+    const nextComment = { text: this.state.comment, username: this.state.username };
     // grab the state as slice
     const comments = this.state.comments.slice();
     // push the next comment to the comments array
