@@ -11,12 +11,12 @@ const CommentSection = props => {
                 <img className = 'commentBubble' src='#' alt='Comment Img'/>
             </div>
             <div className ='likesBox'>
-            <h1 className = 'instaLikes'>props.Likes</h1>
+            <h1 className = 'instaLikes'>props.Likes}</h1>
             </div>
             <div className = 'commentField'>
-                <p className ='com1'>props.Comments</p>
-                <p className ='com2'>props.Comments</p>
-                <p className ='com3'>props.Comments</p>
+                <p className ='com1'>props.item.Comments}</p>
+                <p className ='com2'>props.item.Comments}</p>
+                <p className ='com3'>props.item.Comments}</p>
                 <p className = 'commentTimestamp'>props.Timestamp</p>
             </div>
 

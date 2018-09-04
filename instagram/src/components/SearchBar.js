@@ -5,10 +5,9 @@ const SearchBar = props => {
     return (
         <div className = 'searchBarMain'>
             <div className ='logoName'>
-                <img className = 'instaLogo' src='#' alt='Instagram Logo'/>
-                <div className = 'vl'/>
+                <img className = 'instaLogo' src='1200px-Instagram_logo.svg.png' alt='Instagram Logo'/>
+                {/* <div className = 'vl'/> */}
                 {/* </div> */}
-
                 <h1 className = 'instaName'>Instagram</h1>
             </div>
             <div className = 'searchField'>
@@ -16,8 +15,8 @@ const SearchBar = props => {
             </div>
             <div className = 'socialIcons'>
                 <img src='#' className='compass' alt='compass'/>
-                <img src='#' className='compass' alt='heart'/>
-                <img src='#' className='compass' alt='person'/>
+                <img src='#' className='heart' alt='heart'/>
+                <img src='#' className='person' alt='person'/>
             </div>
         </div>
 
