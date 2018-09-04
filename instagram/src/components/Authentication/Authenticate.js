@@ -3,6 +3,13 @@ import Login from "../Login/Login";
 import PostsPage from '../PostContainer/PostsPage';
 import userData from './UserData';
 
+import styled from 'styled-components';
+
+const Containerz = styled.div`
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+`;
 
 const Authenticate = App =>
   // set up our state so that we have some conditional logging
@@ -33,16 +40,16 @@ const Authenticate = App =>
 
     	if (newState.loginSuccess === true){
     		return (
-    			<div className="container">
+    			<Containerz>
     				<PostsPage />
-    			</div>
+    			</Containerz>
     		)
     	} else {
     		localStorage.clear();
     		return (
-    			<div className="container">
+    			<Containerz>
     				<Login />
-    			</div>
+    			</Containerz>
     		)
     	}
 

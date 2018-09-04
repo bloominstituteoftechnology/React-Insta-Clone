@@ -3,6 +3,12 @@ import Comment from './Comment';
 import PropTypes from 'prop-types';
 import InputCom from './InputCom';
 
+import styled from 'styled-components';
+
+const HRComment = styled.hr`
+	border-top: none;
+`;
+
 class CommentList extends React.Component {
 	constructor(props){
 		super(props);
@@ -35,7 +41,7 @@ class CommentList extends React.Component {
 		return (
 			<div>
 				<div>{this.state.comments.map((comment, i) => <Comment comment={comment} key={i}/>)}</div>
-				<hr className="hr-comment" />
+				<HRComment />
 				<InputCom addNew={this.addNew} commentHandle={this.commentHandler} comment={this.state.commentText}/>
 			</div>
 		)

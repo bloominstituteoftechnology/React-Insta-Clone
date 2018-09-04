@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import "./comment.css";
+
+
+import styled from 'styled-components';
+
+const SBold = styled.span`
+	font-weight: bold;
+`;
 
 const Comment = (props) => {
 	return (
 		<div>
-		<p postid={props.comment.postid}><span className="make-bold">{props.comment.username}</span> {props.comment.text}</p>
+		<p postid={props.comment.postid}><SBold >{props.comment.username}</SBold> {props.comment.text}</p>
 		</div>
 	)
 }
