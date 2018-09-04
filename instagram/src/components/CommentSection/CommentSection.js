@@ -12,7 +12,7 @@ class CommentSection extends Component {
       };
     }
   
-    // Set the dummyData when the component mounts
+    // Adds a new comment
     addNewComment = (event, index) => {
         console.log(event, index);
         let comm = {
