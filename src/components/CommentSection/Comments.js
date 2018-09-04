@@ -8,11 +8,33 @@ class Comments extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      comments: props.comments
+      comments: props.comments,
+      newComment: ""
     }
+  }
+  
+  addNewComment = (e, i) => {
+    e.preventDefault()
+    let comments = [...this.state.comments]
+    const commentObject = {
+      text: this.state.newComment,
+      key: i,
+      username: "tim"
+    }
+    comments.push(commentObject)
+    
+    this.setState({ comments, newComment: "" })
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      newComment: e.target.value
+    })
   }
 
   render() {
+    const nextIndex = this.state.comments.length +1
+
     return (
       <div className="Comments">
         {this.state.comments.map(comment => {
@@ -29,10 +51,16 @@ class Comments extends React.Component {
         
         <hr className="divider" />
   
-        <div className="commentSection">
-          <input className="commentBox bold" placeholder="Add a comment..." />
-          <i className="fas fa-ellipsis-h"></i>
-        </div>
+        <form className="commentSection" onSubmit={e => this.addNewComment(e, nextIndex)}>
+          <input
+            type="text"
+            className="commentBox bold"
+            placeholder="Add a comment..."
+            value={this.state.newComment}
+            onChange={this.handleChange}
+          />
+          <button type="submit"><i className="fas fa-ellipsis-h"></i></button>
+        </form>
       </div>
     )
   }
