@@ -1,32 +1,31 @@
 import React from 'react';
 import './postcontainer.css';
 import PropTypes from "prop-types";
-import CommentSection from '../CommentSection/comment-section.js';
 import CommentSectionList from '../CommentSection/comment-section-list.js';
-import SearchBar from '../SearchBar/search-bar.js';
 
-const PostContainer = (props) => {
+function PostContainer(props) {
     return (
-	<div class="postcontainer">
-          <section class="topbar">
-            <img class="thumbnail" alt="thumbnail" src={props.posts.thumbnailUrl}/>
-            <p class="username">{props.posts.username}</p>
+	<div className="postcontainer">
+          <section className="topbar">
+            <img className="thumbnail" alt="thumbnail" src={props.posts.thumbnailUrl}/>
+            <p className="username">{props.posts.username}</p>
 	  </section>
-          <section class="image">
-            <img class="mainimage" alt="mainimage" src="{props.posts.imageUrl}"/>
+          <section className="image">
+            <img className="mainimage" alt="mainimage" src={props.posts.imageUrl}/>
           </section>
-          <section class="icons">
+          <section className="icons">
           </section>
-          <section class="likes">
-            <p class="likes">{props.posts.likes} likes</p>
+          <section className="likes">
+            <p className="likes">{props.posts.likes} likes</p>
           </section>
-          <section class="comments">
+          <section className="comments">
 	    <CommentSectionList comments={props.posts.comments}/>
           </section>
-	  <p class="timeago">2 HOURS AGO</p>
-          <section class="addcomment">
-            <div class="bar"></div>
-            <input class="addcommentinput" name="" type="text" value="" placeholder="Add a comment..."/>
+	  <p className="timeago">2 HOURS AGO</p>
+          <section className="addcomment">
+            <div className="bar"></div>
+            <input className="addcommentinput" name="" type="text" value={props.inputText} onChange={props.handleInput} placeholder="Add a comment..."/>
+	    <button onClick={props.addUser}>Add</button>
           </section>
 	</div>
     );
@@ -39,7 +38,7 @@ PostContainer.propTypes = {
 	imageUrl: PropTypes.string,
 	likes: PropTypes.number,
 	timestamp: PropTypes.string,
-	comments: PropTypes.array
+	comments: PropTypes.arrayOf(PropTypes.string)
     })
 };
 

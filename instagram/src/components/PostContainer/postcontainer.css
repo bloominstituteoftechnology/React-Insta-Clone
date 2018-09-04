@@ -1,10 +1,11 @@
 .postcontainer {
     width: 90%;
-    max-width: 800px;
+    max-width: 640px;
     margin-left: 5%;
     border: 2px solid #EEEEEF;
     display: flex;
     flex-flow: column wrap;
+    margin-bottom: 15px;
 }
 
 .topbar {
@@ -12,14 +13,14 @@
     justify-content: left;
     height: 60px;
     align-items: center;
-    margin-left: 15px;
+    /* margin-left: 15px; */
 }
 
 .thumbnail {
     border-radius: 100px;
     width: 35px;
     height: 35px;
-    margin-left: 10px;
+    margin: 0 10px;
 }
 
 .username {
@@ -27,7 +28,7 @@
 }
 
 .mainimage {
-    margin-left: 15px;
+    /* margin-left: 15px; */
 }
 
 section {

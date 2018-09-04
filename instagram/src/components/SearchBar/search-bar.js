@@ -3,18 +3,19 @@ import './search-bar.css';
 
 const SearchBar = () => {
     return (
-        <div class="header">
-          <section class="sec">
-            <img class="logo" alt="logo" src="../../../assets/logo.svg"/>
-            <img alt="insta" src="../../../assets/insta.svg"/>
+        <div className="header">
+          <section className="sec">
+            <img className="logo" alt="logo" src="./logo.png"/>
+            <img alt="insta" src="./insta.svg"/>
           </section>
-          <section class="sec">
-            <input class="search" placeholder="Search"/>
+          <section className="sec">
+            <input className="search" placeholder="Search"/>
 	  </section>
           <section>
-            <div class="topbutton nav">🧭</div>
-            <div class="topbutton heart">🖤</div>
-            <div class="topbutton account">👱</div>
+            <div className="topbutton nav"><span role="img" aria-label="compass">🧭</span></div>
+            <span></span>
+            <div className="topbutton heart"><span role="img" aria-label="heart">🖤</span></div>
+            <div className="topbutton account"><span role="img" aria-label="account">👱</span></div>
           </section>
 	</div>
     );

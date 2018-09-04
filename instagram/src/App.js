@@ -1,26 +1,46 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 
-import PropTypes from 'prop-types';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/search-bar.js';
 import PostContainer from './components/PostContainer/post-container.js';
-import PostContainerList from './components/PostContainer/post-container-list.js';
-import CommentSectionList from './components/CommentSection/comment-section-list.js';
-import CommentSection from './components/CommentSection/comment-section.js';
+import PostComment from './components/CommentSection/post-comments.js';
 
 class App extends Component {
-    constructor(props) {
-	super(props);
-    }    
+    constructor() {
+    	super();
+	this.state = {
+	    comments: [],
+	    inputText: ''
+	};
+    }
+
+    addComment = event => {
+	event.preventDefault();
+	if (this.state.inputText) {
+	    this.setState({
+		comments: [...this.state.comments, this.state.inputText],
+		inputText: ''
+	    });
+	}
+    }
+
+    handleInput = event => {
+	this.setState({
+	    inputText: event.target.value
+	});
+    };
 
     render() {
 	return (
 	    <div className="App">
 	      <SearchBar />
 	      {dummyData.map(posts => (
-		  <PostContainer posts={posts} />
+                  <div>
+		    <PostContainer
+		    posts={posts}
+		      />
+		  </div>
 	      ))}
 	    </div>
 	);
