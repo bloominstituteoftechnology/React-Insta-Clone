@@ -24,14 +24,13 @@ function PostContainer(props) {
           <CommentList comments={props.profileObject.comments} />
       </div>
 
-      </div>      
-      
-
       <div className='add-comment'>
         <form>
-          <input placeholder='Add a comment...'></input>
+          <input className='input-comment' placeholder='Add a comment...'></input>
         </form>        
       </div>
+
+      </div>      
 
     </div>
   );
