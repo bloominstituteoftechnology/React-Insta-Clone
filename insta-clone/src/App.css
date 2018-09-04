@@ -59,9 +59,10 @@ img {
 }
 
 .post .postHeader img {
-  border-radius: 100px;
+  border-radius: 10rem;
 }
 
 .commentSection {
   background-color: beige;
+  padding: 1rem;
 }
