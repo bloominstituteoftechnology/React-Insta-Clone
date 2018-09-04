@@ -58,6 +58,11 @@ h4 {
     font-size: 24px;
 }
 
+.post-container-div .likes-div i:hover {
+    cursor: pointer;
+    filter:opacity(30%);
+}
+
 .post-container-div .likes-div .fa-comment {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);

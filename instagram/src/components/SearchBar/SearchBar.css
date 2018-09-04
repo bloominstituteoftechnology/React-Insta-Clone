@@ -23,6 +23,10 @@ header {
     padding-top: 5px;
 }
 
+.instagram-icon:hover, .instagram-logo:hover {
+    filter:opacity(30%);
+}
+
 .header-input-div {
     border: 1px solid gray;
     border-radius: 5px;
@@ -57,4 +61,9 @@ header {
     width: 181px;
     padding: 20px 0px;
     margin-right: 12px;
+}
+
+.header-icons-div *:hover {
+    cursor: pointer;
+    color:gray;
 }
