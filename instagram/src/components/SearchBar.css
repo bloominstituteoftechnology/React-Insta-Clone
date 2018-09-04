@@ -21,12 +21,18 @@
 }
 
 .searchBarMain .logoName .instaName{
-    padding-left: 30%;
+    padding-left: 10%;
+    padding-right: 5%;
     font-size: 1rem;
 }
 
+.searchBarMain .logoName .vl {
+    border-left: 1px solid gray;
+    height: 30px;
+}
+
 .searchBarMain .logoName .instaLogo{
-    padding-left: 30%;
+    padding-left: 10%;
 }
 
 .searchBarMain .searchField {

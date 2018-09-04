@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PostContent from './components/PostContent';
 import SearchBar from './components/SearchBar';
+import CommentSection from './components/CommentSection';
 import logo from './logo.svg';
 import './App.css';
 
@@ -19,15 +20,16 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       <div className='instaContainer'>
-      <div className='searchBar'>
-      <SearchBar />
-      </div>
+        <div className='searchBar'>
+          <SearchBar />
+        </div>
         <div className='PostContent'>
           <PostContent />
-        </div>
-      
+          <CommentSection />
         </div>
       </div>
+    </div>
+
     );
   }
 }
