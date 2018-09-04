@@ -8,21 +8,27 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData
+      posts: [],
+      comments: []
     };
+  }
+  componentDidMount() {
+    this.setState({
+      posts: dummyData,
+      comments: [dummyData.comments]
+    });
+    console.log('comments', this.state.comments);
   }
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostsContainer posts={this.state.posts} />
+        <PostsContainer
+          posts={this.state.posts}
+          comments={this.state.comments}
+        />
       </div>
     );
-  }
-  componentDidMount() {
-    this.state = {
-      dummyData
-    };
   }
 }
 
