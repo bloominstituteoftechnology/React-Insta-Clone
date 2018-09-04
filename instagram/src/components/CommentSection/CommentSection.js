@@ -13,7 +13,7 @@ class CommentSection extends React.Component {
 		};
 	}
 
-	toggleLike = () => {
+	toggleLiked = () => {
 		let likes = this.state.likes;
 		this.state.youLiked === false
 			? this.setState({
@@ -26,6 +26,10 @@ class CommentSection extends React.Component {
 			youLiked: !this.state.youLiked
 		});
 	};
+
+	// focusCommentInput = () => {
+
+	// }
 
 	addNewComment = event => {
 		event.preventDefault();
@@ -57,7 +61,7 @@ class CommentSection extends React.Component {
 					<button
 						id="like"
 						className="sprite-glyph"
-						onClick={this.toggleLike}
+						onClick={this.toggleLiked}
 					/>
 					<button id="comment" className="sprite-glyph" />
 				</div>
