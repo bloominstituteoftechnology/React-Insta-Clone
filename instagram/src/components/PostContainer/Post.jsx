@@ -7,9 +7,13 @@ class Post extends React.Component {
     likes: this.props.post.likes
   };
 
-  // TODO: some logic for adding likes
+  // DAY 2 MVP goal
   like = () => {
-    alert("You clicked like!");
+    // create a variable to hold likes + 1
+    let likes = this.state.likes + 1;
+
+    // set the state to the new likes count
+    this.setState({ likes });
   };
 
   render() {
@@ -32,7 +36,7 @@ class Post extends React.Component {
     );
   }
 }
-// done some proptypes https://reactjs.org/docs/typechecking-with-proptypes.html
+
 Post.propTypes = {
   post: PropTypes.shape({
     username: PropTypes.string,
