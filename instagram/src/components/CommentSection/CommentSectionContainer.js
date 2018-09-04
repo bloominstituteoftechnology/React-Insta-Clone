@@ -10,14 +10,39 @@ class CommentSection extends React.Component {
         super(props);
         this.state = {
             comments: props.comments,
+            comment: ''
         };
     }
+
+    commentHandler = event => {
+        this.setState({ comment: event.target.value });
+    }
+
+    commentSubmit = event => {
+        // prevent page refresh
+        event.preventDefault();
+        // build out the comment object
+        const newComment = { text: this.state.comment, username: 'Hello_World' };
+        // clone comments array
+        const comments = this.state.comments.slice();
+        // push object into new clone
+        comments.push(newComment);
+        // set new clone as state... and reset comment string
+        this.setState({ comments, comment: '' });
+    };
+
      render() {
         return (
             <div>
-                <CommentFeedback />
+                <CommentFeedback 
+                likes={this.props.likes}
+                />
                 {this.state.comments.map((comment, i) => <Comment key={i} comment={comment} />)}
-                <CommentInput />
+                <CommentInput 
+                submitHandler={this.commentSubmit}
+                changeHandler={this.commentHandler}
+                comment={this.state.comment}
+                />
             </div>
         );
     }

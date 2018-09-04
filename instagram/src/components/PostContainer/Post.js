@@ -13,7 +13,10 @@ function Post(props) {
             <img src={props.post.imageUrl} alt="post-content" className="post-img" />
             </div>
         
-            <CommentSection comments={props.post.comments} />
+            <CommentSection 
+            comments={props.post.comments}
+            likes={props.post.likes} 
+            />
         </div>
     );
 };

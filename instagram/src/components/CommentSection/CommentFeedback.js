@@ -13,7 +13,7 @@ function CommentFeedback(props) {
                 </div>
             </div>
             <div className="like">
-                <p>likes</p>
+                <p>{props.likes} likes</p>
             </div>
         </div>
     );

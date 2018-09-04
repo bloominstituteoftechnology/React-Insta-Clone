@@ -42,9 +42,9 @@
 .comment-input {
   border: 1px solid white;
   border-top: 1px solid lightgrey;
-  width: 94%;
+  width: 95%;
   height: 50px;
   text-align: left;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: grey;
 } 
