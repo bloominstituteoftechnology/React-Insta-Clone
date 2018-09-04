@@ -10,16 +10,8 @@ class Login extends React.Component {
 		};
 	}
 
-	loginNameHandler = event => {
-		this.setState({
-			name: event.target.value,
-		})
-	}
-
-	loginPassHandler = event => {
-		this.setState({
-			login: event.target.value,
-		})
+	loginHandler = event => {
+		this.setState({[event.target.name]: event.target.value})
 	}
 
 	login = event => {
@@ -30,8 +22,8 @@ class Login extends React.Component {
 		return (
 		<div className="login-div">
 			<form>
-				<input placeholder="user name" value={this.state.name} onChange={this.loginNameHandler} />
-				<input placeholder="password" value={this.state.login} onChange={this.loginPassHandler} />
+				<input placeholder="user name" value={this.state.name} onChange={this.loginHandler} name="name" />
+				<input placeholder="password" value={this.state.login} onChange={this.loginHandler} name="login"/>
 				<button onClick={this.login}>Login</button>
 			</form>
 		</div>
