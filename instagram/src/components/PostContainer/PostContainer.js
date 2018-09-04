@@ -45,7 +45,7 @@ class PostContainer extends Component {
 
   render() {
     console.log('PostContainer - render()')
-    const {imageUrl, likes, thumbnailUrl, timestamp, username} = this.props.postData;
+    const {imageUrl, thumbnailUrl, timestamp, username} = this.props.postData;
     return (
       <div className="post-container">
         <div className="thumbnail-container">
