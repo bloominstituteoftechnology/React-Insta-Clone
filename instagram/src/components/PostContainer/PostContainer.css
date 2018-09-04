@@ -3,20 +3,22 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .thumbnail-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   font-size: 2rem;
 }
 
 .thumbnail {
   border-radius: 50%;
-  width: 10%;
   padding: 20px;
+  width: 100px;
 }
 
 .main-img {
@@ -27,6 +29,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
   flex-direction: column;
   font-size: 2rem;
   width: 100%;
@@ -40,6 +43,7 @@
 
 .icons {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .heart-icon, .comment-icon {
@@ -51,5 +55,4 @@
   color: gray;
   font-size: 1.6rem;
   margin:  20px 0px 20px 20px;
-  line-height: 0;
 }

@@ -12,6 +12,7 @@
   align-items: center;
   align-self: flex-start;
   /* width: 100%; */
+  flex-grow: 1;
 }
 
 .logo-container {
@@ -27,6 +28,7 @@
 .middle {
   margin: 0 auto;
   width: 100%;
+  flex-grow: 2;
 }
 
 .input {
@@ -36,7 +38,8 @@
   color: rgba(0,0,0,0.2);
   text-align: center;
   background: #f9f9f9;
-  /* margin: 0 auto; */
+  /* width: 100%;*/
+  flex-grow: 2;
 }
 
 .search-icon {
@@ -47,7 +50,7 @@
 
 .right-icons {
   font-size: 1.6rem;
-  width: 100%;
+  flex-grow: 1;
 }
 
 .icon {

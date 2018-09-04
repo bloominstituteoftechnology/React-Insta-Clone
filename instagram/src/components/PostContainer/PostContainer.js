@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
-
 import CommentSection from '../CommentSection/CommentSection';
-
 import './PostContainer.css';
 
 class PostContainer extends Component {
@@ -29,6 +28,18 @@ class PostContainer extends Component {
       </div>
     )
   }
+}
+
+PostContainer.propTypes = {
+  postData: PropTypes.object.isRequired,
+  postData: PropTypes.shape({
+    comments: PropTypes.arrayOf(PropTypes.object).isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    thumbnailUrl: PropTypes.string.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired
+  })
 }
 
 export default PostContainer;
