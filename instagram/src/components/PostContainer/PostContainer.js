@@ -12,7 +12,7 @@ function PostContainer(props) {
         <h3>{props.post.username}</h3>
       </div>
       <img src={props.post.imageUrl} alt="" />
-      <CommentSection comments={props.post.comments} />
+      <CommentSection post={props.post} />
     </div>
   );
 }
