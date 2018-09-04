@@ -52,11 +52,14 @@ class CommentSection extends React.Component {
     }, 600);
   };
 
+  // TODO: might add a way to delete comment if i get time
+  deleteComment = event => { console.log("TODO: fill in some logic for this event method");
+};
   render() {
     return (
       <div className="comment-wrapper">
         {this.state.comments.map((comment, index) => (
-          <Comment key={index} comment={comment} />
+          <Comment key={index} comment={comment} delComment={this.deleteComment} />
         ))}
         <div className="timestamp">
           {moment().startOf('day').fromNow(this.props.post.timestamp).toUpperCase()} AGO

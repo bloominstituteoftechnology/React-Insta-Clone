@@ -35,15 +35,18 @@ const dummyData = [
     timestamp: "July 17th 2017, 12:42:40 pm",
     comments: [
       {
+        index: 0,
         username: "philzcoffee",
         text:
           "We've got more than just delicious coffees to offer at our shops!"
       },
       {
+        index: 1,
         username: "biancasaurus",
         text: "Looks delicious!"
       },
       {
+        index: 2,
         username: "martinseludo",
         text: "Can't wait to try it!"
       }
