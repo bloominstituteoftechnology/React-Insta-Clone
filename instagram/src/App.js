@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       instacloneData: dummyData
+      
   }
   }
 
@@ -17,7 +18,8 @@ class App extends Component {
       <div className="App">
         
         <SearchBar />
-        <PostContainer />
+        <PostContainer anything={this.state.instacloneData}/>
+
         
 
       </div>

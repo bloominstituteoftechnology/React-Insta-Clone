@@ -1,0 +1,16 @@
+.username-n-comment {
+  display: flex;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.user-comment {
+  margin-left: 5px;
+}
+
+.time-stamp {
+  display: flex;
+  color: gray;
+}

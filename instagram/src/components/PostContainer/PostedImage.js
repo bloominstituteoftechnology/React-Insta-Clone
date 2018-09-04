@@ -13,7 +13,7 @@ const PostedImage = () => {
           <i className="far fa-heart"></i>
         </section>
         <section>
-          <i class="far fa-comment"></i>
+          <i className="far fa-comment"></i>
         </section>
       </div>
 
