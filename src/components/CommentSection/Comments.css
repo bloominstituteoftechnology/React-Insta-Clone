@@ -7,3 +7,28 @@
   font-size: 1.4rem;
   color: lightgray;
 }
+
+.divider {
+  width: 95%;
+  opacity: 0.2;
+  margin: 2% auto;
+}
+
+.commentSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 97%;
+}
+
+.commentBox {
+  border: none;
+  margin: 0 3%;
+  font-size: 1.4rem;
+  padding: 2% 1% 2% 0;
+  opacity: 0.5;
+}
+
+.fa-ellipsis-h {
+  opacity: 0.5;
+}

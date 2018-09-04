@@ -19,7 +19,12 @@ const Comments = (props) => {
 
       <p className="timeFromNow">{moment().startOf('hour').fromNow()}</p>
       
-      <input placeholder="Add a comment" />
+      <hr className="divider" />
+
+      <div className="commentSection">
+        <input className="commentBox bold" placeholder="Add a comment..." />
+        <i class="fas fa-ellipsis-h"></i>
+      </div>
     </div>
   )
 }
