@@ -3,8 +3,8 @@ import React from 'react';
 const Comment = props => {
     return (
         <div>
-            <h1>{props.comment.username}</h1>
-            <h2>{props.comment.text}</h2>
+            <h3>{props.comment.username}</h3>
+            <p>{props.comment.text}</p>
         </div>
     )
 }

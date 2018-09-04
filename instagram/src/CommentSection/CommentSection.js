@@ -9,10 +9,13 @@ const CommentSection = props => {
     that allows users to submit a new comment for any post. 
     We'll work on posting new comments tomorrow.
     */
-   console.log(props.comments);
+  
    let commentID = -1;
     return (
         <div>
+            <div className = 'comment-likes'>
+            <h2>{props.data.likes} likes</h2>
+            </div>
             {props.comments.map(comment => (
                 <Comment comment={comment} key={commentID += 1} />
             ))}

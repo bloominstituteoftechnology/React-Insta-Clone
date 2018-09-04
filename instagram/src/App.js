@@ -3,6 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './PostContainer/PostContainer';
+import PropTypes from 'prop-types';
+
+dummyData.propTypes = {
+  username: PropTypes.string,
+  likes: PropTypes.number,
+  comments: PropTypes.arrayOf(PropTypes.string)
+}
 
 class App extends Component {
   constructor(props){
@@ -21,16 +28,21 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+      <header>
+        <div class = 'header-bar'>
+          <h1>Instagram</h1>
+          <input type='search' placeholder = 'Search...'></input>
+          </div>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      {dummyData.map(data => (
-        <PostContainer data={data} key={data.timestamp} />
-      ))}
+
+        <main>
+          <div className = 'full-post'>
+       
+          {dummyData.map(data => (
+            <PostContainer data={data} key={data.timestamp} />
+          ))}
+        </div>
+      </main>
 
       </div>
     );
