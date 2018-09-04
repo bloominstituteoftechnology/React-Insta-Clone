@@ -19,6 +19,11 @@ class App extends Component {
       </div>
     );
   }
+  componentDidMount() {
+    this.state = {
+      dummyData
+    };
+  }
 }
 
 export default App;
