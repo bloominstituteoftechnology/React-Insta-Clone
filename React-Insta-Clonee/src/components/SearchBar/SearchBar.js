@@ -1,0 +1,23 @@
+import React from 'react';
+import './SearchBar.css';
+
+ const SearchBar=()=>{
+    return (
+        <div className='searchbar'>
+            <div className='instagramTrademark'>
+            <i className="fab fa-instagram fa-3x"></i>
+            <div className='vr'></div>
+            <img className='instalogo' src='http://assets.stickpng.com/thumbs/5a4e432a2da5ad73df7efe7a.png' alt='instagram logo'/>
+        </div>    
+        <div className='searchBarInput'>
+            <input type='text' placeholder='Search'/>
+        </div>
+        <div className='searchBarIcons'>
+            <i className="far fa-compass"></i>
+            <i className="far fa-heart"></i>
+            <i className="far fa-user"></i>
+        </div>
+        </div>
+    )
+}
+export default SearchBar; 
