@@ -1,0 +1,24 @@
+.header {
+    width: 90%;
+    margin: auto;
+    height: 60px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    border-right: 1px solid black;
+}
+
+.search-main {
+    border-radius: 3px;
+    height: 20px;
+}
+
+ .searchbutton {
+    height: 40px;
+    width: 40px;
+    margin-top: 20px;
+}

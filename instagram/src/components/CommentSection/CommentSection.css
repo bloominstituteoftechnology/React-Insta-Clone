@@ -1,0 +1,8 @@
+.comment {
+    display: flex;
+}
+
+ .comment-data {
+    font-weight: 600;
+    margin: 0px;
+}
