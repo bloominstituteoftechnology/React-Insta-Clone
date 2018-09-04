@@ -45,3 +45,8 @@
   padding-right: 17px;
   cursor: pointer;
 }
+
+.search-button {
+  text-align: center;
+  padding: 7px 20px;
+}
