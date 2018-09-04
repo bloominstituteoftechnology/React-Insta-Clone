@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import './Post.css';
+import Moment from 'moment';
 
 const Post = props => {
 	return (
@@ -37,7 +38,9 @@ const Post = props => {
 				<CommentSection comments={props.post.comments} />
 
 				<a href="/" className="time">
-					{props.post.timestamp.toUpperCase()}
+					{Moment(props.post.timestamp, 'MMM Do YYYY, hh:mm:ss a')
+						.fromNow()
+						.toUpperCase()}
 				</a>
 
 				<div className="response">
