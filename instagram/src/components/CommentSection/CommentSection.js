@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
+import CommentLikes from './CommentLikes';
+import './Comment.css';
 
 class CommentSection extends React.Component {
     constructor(props){
@@ -13,6 +15,8 @@ class CommentSection extends React.Component {
     render() {
         return (
             <div className = 'comment-section'>
+
+            <CommentLikes likes={this.props.likes}/>
 
                 {this.state.comments.map((comment, index) => 
                 <Comment key={index} comment ={comment} />

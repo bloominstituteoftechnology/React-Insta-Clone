@@ -10,8 +10,8 @@ class PostFooter extends React.Component {
 
     render(){
         return (
-            <div className = 'post-footer'>
-            <span>HEART COMMENT</span>
+            <div className = 'comment-likes'>
+            <span className = 'likes-icons'>HEART COMMENT</span>
             <span className = 'likes'>{this.state.likes} likes</span>   
             </div>
         )

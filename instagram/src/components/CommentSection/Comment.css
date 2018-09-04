@@ -1,0 +1,35 @@
+
+.comment-section {
+    max-width: 100%;
+    padding: 0px 10px;
+    margin: 10px auto;
+    
+}
+
+.comment-likes {
+    display: flex;
+    flex-flow: column nowrap;
+    font-weight: bold;
+    text-align: left;
+}
+
+.comment-likes .likes {
+    margin: 5px 0px;
+}
+
+.comment-container {
+    text-align: left;
+    margin: 5px 0px;
+}
+
+.comment-container .user {
+    font-weight: bold;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 20px 0px;
+    border: none;
+    border-top: 1px solid lightgray;
+    outline: none;
+}

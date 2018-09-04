@@ -1,22 +1,27 @@
 .posts-container {
     width: 70%;
     margin: 0 auto;
+    
 }
 
 .full-post {
     margin: 20px 0px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
 }
 
 .post-header {
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
+    padding: 10px 10px;
 }
 
 .post-header-thumbnail img {
     max-width: 50px;
     border-radius: 50px;
     align-self: center;
+    
 }
 
 .post-header-username {
@@ -31,31 +36,4 @@
 
 .post-image img {
     max-width: 100%;
-}
-
-.post-footer {
-    display: flex;
-    flex-flow: column nowrap;
-    text-align: left;
-}
-
-.post-footer .likes {
-    font-weight: bold;
-}
-
-.comment-section {
-    width: 100%;
-}
-
-.comment-container {
-    text-align: left;
-}
-
-.comment-container .user {
-    font-weight: bold;
-}
-
-.comment-input {
-    width: 100%;
-    padding: 10px;
 }
