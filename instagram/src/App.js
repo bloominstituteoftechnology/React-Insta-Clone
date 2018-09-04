@@ -32,6 +32,18 @@ class App extends Component {
     });
   }
 
+  handleLike = (e) => {
+    let id = e.target.id.substring(e.target.id.indexOf('-') + 1);
+
+    let newData = this.state.data;
+
+    newData[id].likes++;
+
+    this.setState({
+      data: newData,
+    });
+  }
+
   render() {
     return (
       <div className = 'App'>
@@ -44,6 +56,7 @@ class App extends Component {
               state = { this.state } 
               handleChange = { this.handleChange } 
               handleClick = { this.handleClick } 
+              handleLike = { this.handleLike } 
             />
           }) 
         }

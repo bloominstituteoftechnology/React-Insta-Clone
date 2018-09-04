@@ -27,7 +27,11 @@ const PostContainer = props => {
                     alt = 'main url' />
 
                 <div className = 'likes-div'>
-                    <i className = 'far fa-heart'></i>
+                    <i 
+                        className = 'far fa-heart' 
+                        onClick = { props.handleLike } 
+                        id = { `like-${props.submitIndex}` } 
+                    ></i>
                     <i className="far fa-comment"></i>
                     <h4>{ props.data.likes } likes</h4>
                 </div>
