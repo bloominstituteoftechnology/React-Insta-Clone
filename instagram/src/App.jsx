@@ -18,7 +18,15 @@ class App extends Component {
 
   // on mounting the component load in the state data for day 2 mvp goal
   componentDidMount() {
-    this.setState({ posts: dummyData });
+    //this.setState({ posts: dummyData });
+    if (window.localStorage.getItem("comments")) {
+      this.setState({
+        posts: JSON.parse(window.localStorage.getItem("comments"))
+      });
+    } else {
+      this.setState({ posts: dummyData });
+    }
+    window.localStorage.setItem("comments", JSON.stringify(dummyData));
   }
 
   // searchHandler method DAY 2 MVP Goal

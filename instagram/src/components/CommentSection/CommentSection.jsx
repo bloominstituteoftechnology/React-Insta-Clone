@@ -10,10 +10,19 @@ class CommentSection extends React.Component {
     comment: ""
   };
 
+  componentDidMount() {
+    // TODO: add some logic to sort the local storage
+  }
+
+  setComments = () => {
+    // TODO: add some logic to set comments in local storage
+  };
+
   commentHandler = event => {
     this.setState({ comment: event.target.value });
   };
 
+  // TODO: add a set comment call in a loop inside the submit comment handler
   submitComment = event => {
     // prevent the default operation
     event.preventDefault();
@@ -48,6 +57,7 @@ class CommentSection extends React.Component {
     );
   }
 }
+
 
 CommentSection.propTypes = {
   postData: PropTypes.shape({
