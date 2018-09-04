@@ -1,21 +1,53 @@
 import React from 'react';
 
-class PostFooter extends React.Component {
+class CommentLikes extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            likes : props.likes
+            likes : props.likes,
+            isLiked : false
         }
     }
 
+    addLike = event => {
+        event.preventDefault();
+        let newLikes = this.state.likes;
+        newLikes += 1;
+        this.setState({
+            likes: newLikes,
+            isLiked: true
+        })
+    }
+
+    subtractLike = event => {
+        event.preventDefault();
+        let newLikes = this.state.likes;
+        newLikes -= 1;
+        this.setState({
+            likes: newLikes,
+            isLiked: false
+        })
+    }
+
     render(){
+        const isLiked = this.state.isLiked;
+        let likeIcon;
+
+        if(isLiked === true) {
+            likeIcon = <span className = 'like-icon-true' onClick = {this.subtractLike}><i className = 'fa fa-heart'></i></span>
+        } else if (isLiked === false){
+            likeIcon = <span className = 'like-icon-false' onClick = {this.addLike}><i className="fa fa-heart"></i></span>
+        }
         return (
             <div className = 'comment-likes'>
-            <span className = 'likes-icons'>LIKE COMMENT</span>
+            <div className = 'like-icons'>
+            {likeIcon}
+            <span className = 'comment-icon'>COMMENT</span>
+            </div>
             <span className = 'likes'>{this.state.likes} likes</span>   
             </div>
         )
     }
 }
 
-export default PostFooter;
+export default CommentLikes;
