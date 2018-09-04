@@ -9,29 +9,31 @@ function Post(props) {
     return (
         <div className='post'>
             <div className='post-head'>
-                <img className='user-img' src={props.thumbnailUrl} alt={`${props.username}'s profile`} />
-                <h4>{props.username}</h4>
+                <img className='user-img' src={props.postData.thumbnailUrl} alt={`${props.postData.username}'s profile`} />
+                <h4>{props.postData.username}</h4>
             </div>
             <div className='post-body'>
-                <img className='post-img' src={props.imageUrl} alt={`Posted by ${props.username} on ${props.timestamp}`} />
+                <img className='post-img' src={props.postData.imageUrl} alt={`Posted by ${props.postData.username} on ${props.postData.timestamp}`} />
             </div>
             <div className='post-footer'>
                 <div>
                     <img src={heart} alt='Heart' />
                     <img src={commentbubble} alt='Comment' />
                 </div>
-                <p>{`${props.likes} likes`}</p>
+                <p>{`${props.postData.likes} likes`}</p>
             </div>
         </div>
     );
 }
 
 Post.propTypes = {
-    username: PropTypes.string.isRequired,
-    thumbnailUrl: PropTypes.string.isRequired,
-    imageUrl: PropTypes.string.isRequired,
-    likes: PropTypes.number.isRequired,
-    timestamp: PropTypes.string.isRequired
+    postData: PropTypes.shape({
+        username: PropTypes.string.isRequired,
+        thumbnailUrl: PropTypes.string.isRequired,
+        imageUrl: PropTypes.string.isRequired,
+        likes: PropTypes.number.isRequired,
+        timestamp: PropTypes.string.isRequired
+    }).isRequired
 }
 
 export default Post;

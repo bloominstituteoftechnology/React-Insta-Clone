@@ -43,17 +43,12 @@ class App extends Component {
           handleSearchInput={this.handleInput} 
           handleSearch={this.handleSearch} 
         />
-        <div className='posts-container'>
-          {this.state.instaData.map( (postData) => 
-            <PostContainer 
-              postData={postData} 
-              commentInput={this.state.commentInput} 
-              handleCommentInput={this.handleInput} 
-              handleComment={this.handleComment} 
-              key={postData.timestamp + '-' + postData.username} 
-            /> 
-          )}
-        </div>
+        <PostContainer 
+          posts={this.state.instaData} 
+          commentInput={this.state.commentInput} 
+          handleCommentInput={this.handleComment} 
+          handleComment={this.handleInput} 
+        />
       </div>
     );
   }

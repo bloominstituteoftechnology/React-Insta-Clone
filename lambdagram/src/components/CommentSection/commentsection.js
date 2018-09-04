@@ -36,7 +36,12 @@ function CommentSection(props) {
 
 CommentSection.propTypes = {
     timestamp: PropTypes.string.isRequired,
-    comments: PropTypes.arrayOf(PropTypes.object),
+    comments: PropTypes.arrayOf(
+        PropTypes.shape({
+            username: PropTypes.string,
+            text: PropTypes.string
+        })
+    ),
     commentInput: PropTypes.string.isRequired, 
     handleCommentInput: PropTypes.func.isRequired,
     handleComment: PropTypes.func.isRequired

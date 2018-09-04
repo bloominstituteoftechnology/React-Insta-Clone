@@ -7,27 +7,43 @@ import CommentSection from '../CommentSection/commentsection';
 
 function PostContainer(props) {
     return (
-        <div className='post-container'>
-            <Post 
-                username={props.postData.username} 
-                thumbnailUrl={props.postData.thumbnailUrl} 
-                imageUrl={props.postData.imageUrl} 
-                likes={props.postData.likes} 
-                timestamp={props.postData.timestamp} 
-            />
-            <CommentSection 
-                timestamp={props.postData.timestamp} 
-                comments={props.postData.comments} 
-                commentInput={props.commentInput} 
-                handleCommentInput={props.handleCommentInput} 
-                handleComment={props.handleComment} 
-            />
+        <div className='posts-container'>
+            {props.posts.map( (postData) => {
+                return (
+                    <div className='post-container' key={postData.timestamp + '-' + postData.username} >
+                        <Post 
+                            postData={postData} 
+                        /> 
+                        <CommentSection 
+                            timestamp={postData.timestamp} 
+                            comments={postData.comments} 
+                            commentInput={props.commentInput} 
+                            handleCommentInput={props.handleCommentInput} 
+                            handleComment={props.handleComment} 
+                        />
+                    </div>
+                );
+            })}
         </div>
     );
 }
 
 PostContainer.propTypes = {
-    postData: PropTypes.object,
+    posts: PropTypes.arrayOf(
+        PropTypes.shape({
+            username: PropTypes.string.isRequired,
+            thumbnailUrl: PropTypes.string,
+            imageUrl: PropTypes.string,
+            likes: PropTypes.number,
+            timestamp: PropTypes.string.isRequired,
+            comments: PropTypes.arrayOf(
+                PropTypes.shape({
+                    username: PropTypes.string,
+                    text: PropTypes.string
+                })
+            )
+        })
+    ),
     commentInput: PropTypes.string,
     handleCommentInput: PropTypes.func,
     handleComment: PropTypes.func
