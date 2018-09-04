@@ -31,6 +31,17 @@ class PostContainer extends React.Component {
         }
     }
 
+    static getDerivedStateFromProps(props, state) {
+        if (props.data.hidden !== state.data.hidden) {
+            let newState = state;
+            newState.data.hidden = props.data.hidden;
+
+            return newState;
+        }
+
+        return null;
+    }
+
     addNewComment = e => {
         e.preventDefault();
 
