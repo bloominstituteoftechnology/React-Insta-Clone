@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
-import instaLogo from '../../assets/insta-logo.jpg';
 import './SearchBar.css';
+import InstaLogo from '../../assets/insta-logo.jpeg';
+import InstaText from '../../assets/instagram_text.png';
+import NavIcon from '../../assets/nav-icon.png';
+import UserIcon from '../../assets/user-icon.jpeg';
+import HeartIcon from '../../assets/heart-icon.png';
 
 
 const SearchBar = () => {
     return (
         <div className="header-container">
             <div className="instagram-logos">
-                <img alt="instagram logo" src= {instaLogo} className="insta-logo" />
-                <img alt="instagram logo text" src="" className="text-logo" />
+                <img src={InstaLogo} alt="instagram logo" className="insta-logo" />
+                <img src={InstaText} alt="instagram text" className="insta-text" />
             </div>
             <div className="search-box">
                 <input type="text" placeholder="Search" />
             </div>
             <div className="icon-container">
-                <img src= "" className="nav-icon" />
-                <img src= "" className="heart-icon" />
-                <img src= "" className="user-icon" />
+                <img src={NavIcon} alt="Navigation Icon" className="icon" />
+                <img src={HeartIcon} alt="Heart Icon" className="icon" />
+                <img src={UserIcon} alt="User Icon" className="user-icon" />
             </div>
         </div>
     );

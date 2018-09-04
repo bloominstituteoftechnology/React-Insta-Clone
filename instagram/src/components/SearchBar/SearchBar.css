@@ -1,0 +1,62 @@
+.header-container {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 20px;
+    padding: 10px 0px 20px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.instagram-logos {
+    display: flex;
+    height: 54px;
+    width: 25%;
+    padding-bottom: 10px;
+}
+
+.insta-logo {
+    width: 23%;
+    margin: 10px 5px 0 15px;
+    padding-top: 10px;
+}
+
+.insta-text {
+    width: 68%;
+    border-left: 1px solid lightgray;
+    padding: 15px 15px 0 15px;
+    margin: 10px 15px 0 15px;
+}
+
+.search-box {
+   width: 32%; 
+   margin-left: 5%;
+   display: flex;
+}
+
+.search-box input {
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    background: #f7f5f5;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    font-size: .9rem;
+
+}
+
+.icon-container {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    height: 27px;
+
+}
+
+.icon {
+    width: 26%;
+}
+
+.user-icon {
+    width: 24%;
+}

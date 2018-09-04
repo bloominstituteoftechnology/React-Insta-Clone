@@ -20,7 +20,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       Instagram
        <SearchBar />
        <PostContainer 
           dummyData= {this.state.dummyData}
