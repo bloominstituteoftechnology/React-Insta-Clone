@@ -77,6 +77,31 @@ const dummyData = [
         text: "I like how Half Dome looks so old and useless"
       }
     ]
+  },
+  {
+    username: "tomtarpey",
+    thumbnailUrl:
+      "https://images-na.ssl-images-amazon.com/images/I/7176SRs4%2BsL.png",
+
+    imageUrl:
+      "https://i.imgur.com/gSvLLhB.jpg",
+    likes: 9000,
+    timestamp: "July 17th 2018, 12:42:40 pm",
+    comments: [
+      {
+        username: "tomtarpey",
+        text:
+          "UNIX FTW!!"
+      },
+      {
+        username: "biancasaurus",
+        text: "Looks AMAZING!"
+      },
+      {
+        username: "martinseludo",
+        text: "Can't wait to try UNIX!"
+      }
+    ]
   }
 ];
 
