@@ -1,5 +1,6 @@
 import React from 'react';
-import './PostContainer.css'
+import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection.js'
 const Post = (props) => {
   console.log(props);
    return(
@@ -12,9 +13,9 @@ const Post = (props) => {
 <div className="likeArea">
 
   <div className="HeartLikeButtton2">♡</div>
-  <div>💬</div>
+  <div className="CommentButtton">💬</div>
 </div>
-
+<CommentSection userData = {props.userData} />
      </div>
    )
 }
