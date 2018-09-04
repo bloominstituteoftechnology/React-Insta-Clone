@@ -1,0 +1,22 @@
+.post-container .post{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-content {
+    width: 80%;
+}
+
+.avatar {
+    border-radius: 100%;
+    width: 4%;
+    height: 4%;
+    margin: 0 3% 3% 3%;
+
+}
+
+.username {
+    font-weight: 700;
+    width: 80%;
+    margin-top: 9px;
+}
