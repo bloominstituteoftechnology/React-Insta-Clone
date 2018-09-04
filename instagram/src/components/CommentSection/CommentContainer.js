@@ -11,7 +11,6 @@ function CommentContainer(props) {
             <CommentIcons />
             
             {props.posts.map((post, index) => {
-                console.log(post.comments);
                 return(
                     <div key={index}>
                         <CommentLikes 

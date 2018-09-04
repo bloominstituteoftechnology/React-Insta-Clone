@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function PostAvatar(props) {
-    console.log(`hi this is PostAvatar `, props.post);
     return(
         <div>
             <h4>
@@ -16,5 +16,12 @@ function PostAvatar(props) {
         </div>
     )
 }
+
+PostAvatar.propTypes = {
+    post: PropTypes.shape({
+      posterName: PropTypes.string.isRequired,
+      posterAvatar: PropTypes.string.isRequired,
+    })
+  };
 
 export default PostAvatar;

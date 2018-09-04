@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PostAvatar from './PostAvatar';
 import PostImg from './PostImg';
 import CommentContainer from '../CommentSection/CommentContainer';
@@ -27,5 +28,9 @@ function PostContainer(props) {
         </div>
     )
 }
+
+PostContainer.propTypes = {
+    posts: PropTypes.arrayOf(PropTypes.object).isRequired
+  };
 
 export default PostContainer;
