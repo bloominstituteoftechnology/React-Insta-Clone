@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
+import CommentBar from './CommentBar';
 // this component contains all comments in a given post
 
 const CommentSection = props => {
@@ -15,6 +16,7 @@ const CommentSection = props => {
 
     )
   )}
+  <CommentBar />
   </div>
 
 )

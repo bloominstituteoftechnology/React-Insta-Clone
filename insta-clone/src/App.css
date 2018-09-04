@@ -30,9 +30,8 @@
 .allPosts {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  width: 500px;
-  margin: auto;
+  width: 800px;
+  margin: 1rem auto;
   max-width: 100%;
 }
 
@@ -44,9 +43,25 @@ img {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
+  margin: 1rem;
 }
 
 .allPosts .post .postHeader {
   display: flex;
+  height: 8rem;
   padding: 1rem;
+  border: 1px solid darkgray;
+}
+
+.allPosts .post .postHeader h2 {
+  display: flex;
+  padding: 1rem;
+}
+
+.post .postHeader img {
+  border-radius: 100px;
+}
+
+.commentSection {
+  background-color: beige;
 }
