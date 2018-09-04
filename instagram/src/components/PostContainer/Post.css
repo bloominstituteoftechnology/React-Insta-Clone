@@ -32,4 +32,30 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding-left: 15px;
+  margin-top: 15px;
+}
+
+.post-logos {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-heart {
+  background: url(../SearchBar/Logos/download.png) no-repeat -184px -359px;
+  width: 22px;
+  height: 20px;
+  padding-right: 11px;  
+  cursor: pointer;
+}
+
+.message-bubble {
+  background: url('../SearchBar/Logos/download.png') no-repeat -459px -394px;
+	width: 22px;
+  height: 19px;
+  cursor: pointer;
+}
+
+.like-counter {
+  margin-top: 20px;
+  margin-bottom: 12px;
 }

@@ -7,8 +7,7 @@ function Search(props) {
     <div className='search-bar'>
 
       <div className='left-header'>
-        <div className='art-logo'> |</div>
-        <div className='word-logo'></div>
+        <div className='art-logo'></div>        
       </div>
 
       <div className='middle-header'>

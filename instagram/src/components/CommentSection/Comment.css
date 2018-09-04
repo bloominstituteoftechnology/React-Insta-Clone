@@ -1,4 +1,4 @@
-.commet-section {
+.comment-section {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -8,6 +8,7 @@
 .single-comment {
   display: flex;
   align-items: center;
+  height: 35px;
 }
 
 .user-comment {

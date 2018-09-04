@@ -17,7 +17,7 @@ function PostContainer(props) {
 
         <div className='like-section'>
           <div className='post-logos'>
-            <div className='heart'></div>
+            <div className='left-heart'></div>
             <div className='message-bubble'></div>
           </div>          
           <h4 className='like-counter'>{props.profileObject.likes + 'likes'}</h4>
