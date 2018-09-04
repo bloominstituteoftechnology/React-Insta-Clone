@@ -12,6 +12,17 @@ class App extends React.Component {
 		};
 	}
 
+	search = event => {
+		if (event.key === 'Enter') {
+			const data = [...this.state.data].filter(post =>
+				post.username.includes(event.target.value)
+			);
+			this.setState({
+				data
+			});
+		}
+	};
+
 	componentDidMount() {
 		this.setState({
 			data: dummyData
@@ -21,10 +32,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="App">
-				<SearchBar
-					searchLid={this.state.searchLid}
-					toggleSearchLid={this.toggleSearchLid}
-				/>
+				<SearchBar search={this.search} />
 
 				<PostContainer posts={this.state.data} />
 			</div>

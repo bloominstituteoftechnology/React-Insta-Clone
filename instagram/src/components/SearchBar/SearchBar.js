@@ -36,6 +36,7 @@ class SearchBar extends React.Component {
 							className="search-input"
 							placeholder="Search"
 							ref={this.searchInput}
+							onKeyPress={this.props.search}
 							onBlur={this.toggleSearchLid}
 						/>
 						<span className="sprite" id="search" />
