@@ -2,17 +2,21 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostsContainer from './components/PostsContainer/PostsContainer';
-import SearchBar from './SearchBar/SearchBar';
+import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends Component {
   constructor(props){
     super(props);
 
     this.state = {
-      posts: dummyData
+      posts: []
     }
   }
 
+  componentDidMount() {
+    this.setState({posts : dummyData});
+    console.log('componentDidMount');
+  }
   
 
   render() {

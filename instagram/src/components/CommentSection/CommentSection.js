@@ -12,7 +12,23 @@ class CommentSection extends React.Component {
             comments: props.comments
         };
     }
+
+    /*Create a function in CommentSection.js called addNewComment that 
+    takes in an event and an index number. The function will add the comment 
+    that is on the event object to the post that is at that index number.
+    */
+
+    
+
+    addNewComment = (commentText) => {
+        const newComments = this.state.comments;
+        newComments.push({username: 'Dudeman', text: commentText});
+        this.setState({comments: newComments});
+    }
+
+
     render() {
+        
         return (
             <div className = 'comment-section'>
 
@@ -22,7 +38,7 @@ class CommentSection extends React.Component {
                 <Comment key={index} comment ={comment} />
                 )}
 
-                <CommentInput />
+                <CommentInput addNewComment={this.addNewComment}/>
 
             </div>
         )
