@@ -1,0 +1,49 @@
+.menu-icon {
+    height: 30px;
+    width: 30px;
+    margin-right: 15px;
+    align-self: center;
+}
+
+.searchbar {
+    display: flex;
+}
+
+.searchbar input {
+    align-self: center;
+}
+
+.header-container {
+    display: flex;
+}
+
+.logo-container {
+    display: flex;
+}
+
+.logo-image {
+    padding-right: 10px;
+    border-right: 1px solid black;
+    height: 40px;
+    width: 40px;
+    align-self: center;
+}
+
+.logo-text {
+    padding-left: 10px;
+    height: 60px;
+    width: 100px;
+    align-self: center;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.header-container {
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-container {
+    display: flex;
+}
