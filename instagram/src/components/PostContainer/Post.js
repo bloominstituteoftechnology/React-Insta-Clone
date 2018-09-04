@@ -13,7 +13,7 @@ function Post(props) {
             <img src={props.post.imageUrl} alt="post-content" className="post-img" />
             </div>
         
-            <CommentSection comment={props.post.comments} />
+            <CommentSection comments={props.post.comments} />
         </div>
     );
 };
