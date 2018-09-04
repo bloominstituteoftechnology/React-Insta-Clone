@@ -19,21 +19,18 @@ class App extends Component {
   }
 
   mapData() {
-    dummyData.map(data => {
-      this.setState({ dummyData: data });
-    })
+    this.setState({ postInfo: [...dummyData] });
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="App">
-        <SearchBarContainer 
-          posts = {this.state.postInfo} 
-        />
+        <SearchBarContainer />
         <PostContainer 
           posts = {this.state.postInfo} 
         />
-        <CommentContainer 
+        <CommentContainer  
           posts = {this.state.postInfo} 
         />
       </div>

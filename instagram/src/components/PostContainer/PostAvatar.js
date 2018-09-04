@@ -1,15 +1,16 @@
 import React from 'react';
 
 function PostAvatar(props) {
+    console.log(`hi this is PostAvatar `, props.post);
     return(
         <div>
             <h4>
-                {props.post.posterName}
+                {props.posterName}
             </h4>
 
             <img 
                 className="icon"
-                src={props.post.posterAvatar}
+                src={props.posterAvatar}
                 alt="OP's profile picture"
             />
         </div>

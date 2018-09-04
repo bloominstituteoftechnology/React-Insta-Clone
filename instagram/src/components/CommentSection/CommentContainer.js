@@ -9,25 +9,26 @@ function CommentContainer(props) {
     return(
         <div>
             <CommentIcons />
+            
+            {props.posts.map(post => {
+                console.log(post.comments);
+                return(
 
-            {props.posts.map(post => (
-                <CommentLikes 
-                    likes = {post.likes}
-                />
-            ))}
+                    <div>
+                        <CommentLikes 
+                            likes = {post.likes}
+                        />
 
-            {props.posts.map(post => (
-                <Comment 
-                    commentName = {post.comments.username}
-                    commentText = {post.comments.text}
-                />
-            ))}
+                        <Comment 
+                            comments = {post.comments}
+                        />
 
-            {props.posts.map(post => (
-                <Timestamp 
-                    timestamp = {post.timestamp}
-                />
-            ))}
+                        <Timestamp 
+                            timestamp = {post.timestamp}
+                        />
+                    </div>
+                )
+            })}
 
             <CommentInput />
         </div>

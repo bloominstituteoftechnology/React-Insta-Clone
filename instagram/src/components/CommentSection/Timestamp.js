@@ -3,7 +3,7 @@ import React from 'react';
 function PostImg(props) {
     return(
         <div>
-            <p>{props.post.timestamp}</p>
+            <p>{props.timestamp}</p>
         </div>
     )
 }

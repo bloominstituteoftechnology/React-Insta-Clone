@@ -1,12 +1,17 @@
 import React from 'react';
 
-function PostImg(props) {
+function Comment(props) {
     return(
         <div>
-            <h4>{props.post.comments.username}</h4>
-            <p>{props.post.comments.text}</p>
+            {props.comments.map((comment, index) => {
+                return(
+                    <div key={index}>
+                        <h4>{comment.username}</h4>
+                        <p>{comment.text}</p>
+                    </div>
+                    )
+                })}
         </div>
-    )
-}
+    )};
 
-export default PostImg;
+export default Comment;

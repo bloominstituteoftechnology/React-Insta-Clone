@@ -5,7 +5,7 @@ function PostImg(props) {
         <div>
             <img 
                 className="postImg"
-                src={props.post.postImg}
+                src={props.postImg}
                 alt="image content"
             />
         </div>
