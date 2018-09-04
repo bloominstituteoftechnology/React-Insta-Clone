@@ -26,3 +26,27 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.allPosts {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 500px;
+  margin: auto;
+  max-width: 100%;
+}
+
+img {
+  display: flex;
+}
+
+.allPosts .post {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.allPosts .post .postHeader {
+  display: flex;
+  padding: 1rem;
+}
