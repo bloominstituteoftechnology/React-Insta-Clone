@@ -7,7 +7,7 @@ const LikingPost = props =>{
         onClick={props.incrementLike}
         > </div>
             <div className="like-s-wrapper">
-                <i className="far fa-heart"/> //AWESOME!!
+                <i className="far fa-heart"/> 
         </div>
 
         <div className="like-s-wrapper">
