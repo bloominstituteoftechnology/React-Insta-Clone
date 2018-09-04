@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
+// import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 
  class App extends Component {
@@ -14,15 +14,13 @@ import PostContainer from './components/PostContainer/PostContainer';
   }
 
   componentDidMount() {
-    fetch(dummyData)
-      .then(response => response.json())
-      .then(data => this.setState({ data }));
+    this.setState({ posts: dummyData });
   }
 
   render() {
     return (
       <div className="appContainer">
-        <SearchBar />
+        {/* <SearchBar /> */}
         {this.state.posts.map(post => { return (
           <PostContainer post={post} key={post.timestamp}/>)
         })}
