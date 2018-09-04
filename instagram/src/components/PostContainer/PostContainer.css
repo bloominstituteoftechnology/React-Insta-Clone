@@ -1,0 +1,49 @@
+.post-container {
+    height: 500px;
+    width: 50%;
+    margin: 5px auto;
+    border:1px solid red;
+  }
+  .post {
+    border: 1px solid #d3d3d3;
+    margin: 5px 0;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .post-header {
+    display: flex;
+    align-items:center;
+  }
+
+  .post-thumbnail{
+    border-radius: 30px;
+    width: 10%;
+    height: 50px;
+    margin-left:3%;
+  }
+
+  .post-username{
+      padding-left:3%;
+      font-weight:bold;
+  }
+
+  .post-image{
+      width:100%;
+  }
+
+  .like-icons{
+      display:flex;
+      padding:5px 0;
+  }
+
+  .like-icon-divider{
+      padding:0 2%;
+  }
+  
+  .likes{
+      padding:0 1.5%;
+  }
+
+  
+  
+  
