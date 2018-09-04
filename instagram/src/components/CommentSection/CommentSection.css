@@ -9,3 +9,7 @@
   justify-content: space-evenly;
   /* border: 1px solid blue; */
 }
+
+.likes {
+  font-weight: bold;
+}

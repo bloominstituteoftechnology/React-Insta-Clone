@@ -5,7 +5,7 @@ import Comment from "../Comment/Comment.js";
 class CommentSection extends React.Component {
   constructor() {
     super();
-    this.state = { comments: [], inputText: "" };
+    this.state = { comments: [], inputText: "", numberOfLikes: 0 };
   }
   componentDidMount() {
     this.setState({ comments: this.props.comments });
@@ -28,13 +28,21 @@ class CommentSection extends React.Component {
     //Clear comment input box
     // this.setState({ value: "" });
   }
+
+  addLike() {
+    console.log("post was liked");
+    let likes = this.state.numberOfLikes + 1;
+    console.log(likes);
+    this.setState({ numberOfLikes: likes });
+  }
   render() {
     return (
       <div className="comment-section">
         <div className="comment-icons">
-          <i class="far fa-heart" />
+          <i class="far fa-heart" onClick={() => this.addLike()} />
           <i class="far fa-comment" />
         </div>
+        <p className="likes">{this.state.numberOfLikes} likes</p>
         {this.state.comments.map(comment => (
           <Comment comment={comment} />
         ))}
