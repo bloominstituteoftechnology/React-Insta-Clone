@@ -1,0 +1,15 @@
+.searchBarMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.searchBarMain .profilePic {
+    padding-left: 2%;
+}
+
+.searchBarMain .profileName {
+    padding-left: 2%;
+}
