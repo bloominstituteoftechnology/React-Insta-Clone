@@ -10,7 +10,9 @@ class App extends Component {
     super();
 
     this.state = {
-      posts: []
+      posts: [],
+      searchText: "",
+      filteredPosts: []
     };
   }
 
@@ -19,8 +21,26 @@ class App extends Component {
     this.setState({ posts: dummyData });
   }
 
-  // TODO: searchHandler method
-  searchHandler = event => {};
+  // searchHandler method DAY 2 MVP Goal
+  searchHandler = event => {
+    // set the searchText to the current input value
+    this.setState({ searchText: event.target.value });
+
+    // loop every 30ms
+    setTimeout(() => {
+      // filter the posts using the searchText for username
+      const posts = this.state.posts.filter(post => {
+        return post.username.includes(this.state.searchText) ? post : null;
+      });
+
+      // only render the posts if there are any
+      if (posts.length > 0) {
+        this.setState({ filteredPosts: posts });
+      } else {
+        return;
+      }
+    }, 30);
+  };
 
   render() {
     return (
@@ -39,7 +59,7 @@ class App extends Component {
             </div>
           </header>
             <div className="posts-wrapper">
-              <PostContainer data={this.state.posts} />
+            <PostContainer data={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} />
             </div>
         </div>
       </div>
