@@ -6,7 +6,24 @@ import Comments from '../CommentSection/Comments'
 const Post = (props) => {
   return (
     <React.Fragment>
-      <p>post by {props.post.username}</p>
+      <div className="postUser">
+        <img className="postUserIcon" src={props.post.thumbnailUrl} alt="User Thumbnail" />
+        <span className="bold">{props.post.username}</span>
+      </div>
+
+      <div className="postPicture">
+        <img src={props.post.imageUrl} alt="User Thumbnail" />
+      </div>
+
+      <div className="postIcons"> 
+        <i className="far fa-heart"></i>
+        <i class="far fa-comment"></i>
+      </div>
+
+      <div className="postLikes">
+        <p className="bold">{props.post.likes} likes</p>
+      </div>
+
       <Comments className="Comments" comments={props.post.comments} />
     </React.Fragment>
   )

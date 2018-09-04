@@ -1,0 +1,25 @@
+.postUser {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 3% 0;
+}
+
+.postUserIcon {
+  margin: 0 3%;
+  border-radius: 50%;
+  width: 30px;
+}
+
+.fa-heart {
+  margin-right: 2%;
+}
+
+.postLikes {
+  text-align: left;
+  margin: 0 3%;
+}
+
+.bold {
+  font-weight: bold;
+}

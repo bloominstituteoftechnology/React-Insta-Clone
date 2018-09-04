@@ -15,6 +15,9 @@ const Comments = (props) => {
           />
         )
       })}
+
+      <p>Time Stamp</p>
+      
       <input placeholder="Add a comment" />
     </div>
   )
