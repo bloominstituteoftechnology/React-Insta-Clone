@@ -1,7 +1,7 @@
 import React from 'react';
-import CommentSection from './CommentSection';
-import './CommentSection.css';
+import CommentSection from '../CommentSection/CommentSection';
+import './Post.css';
 function PostContainer(props) {
-  return <div className="PostContainer" />;
+  return <CommentSection comments={props.post.comments} />;
 }
 export default PostContainer;
