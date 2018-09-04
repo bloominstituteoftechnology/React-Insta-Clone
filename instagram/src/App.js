@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
-import PostContainer from './PostContainer/PostContainer';
-import PropTypes from 'prop-types';
-
-dummyData.propTypes = {
-  username: PropTypes.string,
-  likes: PropTypes.number,
-  comments: PropTypes.arrayOf(PropTypes.string)
-}
+import PostsContainer from './components/PostsContainer/PostsContainer';
+import SearchBar from './SearchBar/SearchBar';
 
 class App extends Component {
   constructor(props){
     super(props);
+
+    this.state = {
+      posts: dummyData
+    }
   }
 
+  
 
   render() {
     
@@ -25,23 +23,14 @@ class App extends Component {
     passing each individual object as a prop to an instance of PostContainer.
     */
 
-
     return (
       <div className="App">
       <header>
-        <div class = 'header-bar'>
-          <h1>Instagram</h1>
-          <input type='search' placeholder = 'Search...'></input>
-          </div>
+        <SearchBar />
         </header>
 
         <main>
-          <div className = 'full-post'>
-       
-          {dummyData.map(data => (
-            <PostContainer data={data} key={data.timestamp} />
-          ))}
-        </div>
+          <PostsContainer posts={this.state.posts} />
       </main>
 
       </div>
