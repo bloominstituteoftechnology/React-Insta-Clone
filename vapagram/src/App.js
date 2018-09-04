@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 import dummyData from './dummy-data';
@@ -15,12 +16,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1 className="Header">Vapegram</h1>
+        <h1 className="Header">Header</h1>
         <SearchBar />
         <PostContainer posts={this.state.data} />
       </div>
     );
   }
 }
-
+dummyData.PropType = {
+  username: PropTypes.array.isRequired
+};
 export default App;
