@@ -1,5 +1,30 @@
 const dummyData = [
   {
+    username: "tomtarpey",
+    thumbnailUrl:
+      "https://images-na.ssl-images-amazon.com/images/I/7176SRs4%2BsL.png",
+
+    imageUrl:
+      "https://i.imgur.com/gSvLLhB.jpg",
+    likes: 9000,
+    timestamp: "July 17th 2018, 12:42:40 pm",
+    comments: [
+      {
+        username: "tomtarpey",
+        text:
+          "UNIX FTW!!"
+      },
+      {
+        username: "biancasaurus",
+        text: "Looks AMAZING!"
+      },
+      {
+        username: "martinseludo",
+        text: "Can't wait to try UNIX!"
+      }
+    ]
+  },
+  {
     username: "philzcoffee",
     thumbnailUrl:
       "https://tk-assets.lambdaschool.com/ecd33d34-c124-4b75-92d2-e5c52c171ed8_11201517_887808411287357_1307163552_a.jpg",
@@ -75,31 +100,6 @@ const dummyData = [
       {
         username: "awesomebt28",
         text: "I like how Half Dome looks so old and useless"
-      }
-    ]
-  },
-  {
-    username: "tomtarpey",
-    thumbnailUrl:
-      "https://images-na.ssl-images-amazon.com/images/I/7176SRs4%2BsL.png",
-
-    imageUrl:
-      "https://i.imgur.com/gSvLLhB.jpg",
-    likes: 9000,
-    timestamp: "July 17th 2018, 12:42:40 pm",
-    comments: [
-      {
-        username: "tomtarpey",
-        text:
-          "UNIX FTW!!"
-      },
-      {
-        username: "biancasaurus",
-        text: "Looks AMAZING!"
-      },
-      {
-        username: "martinseludo",
-        text: "Can't wait to try UNIX!"
       }
     ]
   }

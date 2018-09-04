@@ -22,15 +22,18 @@ class CommentSection extends React.Component {
   }
 
   setComments = () => {
-    // TODO: add some logic to set comments in local storage
-    alert("DEBUG MESSAGE: Setting Comments");
+    // Set the local storage items to keep the comments intact
+    window.localStorage.setItem(
+      this.props.post.imageUrl,
+      JSON.stringify(this.state.comments)
+    );
+
   };
 
   commentHandler = event => {
     this.setState({ comment: event.target.value });
   };
 
-  // TODO: add a set comment call in a loop inside the submit comment handler
   submitComment = event => {
     // prevent the default operation
     event.preventDefault();
@@ -42,6 +45,10 @@ class CommentSection extends React.Component {
     comments.push(nextComment);
     // set the state with the next comment and clear the comment value
     this.setState({ comments: comments, comment: '' });
+    // add a loop to update the local storage
+    setTimeout(() => {
+      this.setComments();
+    }, 600);
   };
 
   render() {
