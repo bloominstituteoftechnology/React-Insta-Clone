@@ -29,3 +29,13 @@
     height: 100%;
     border-radius: 50%;
   }
+
+  .post-border .like-img {
+    width: 30px;
+    height: 30px; 
+  }
+
+  .post-border h5 {
+    text-align: left;
+    margin: 5px; 
+  }
