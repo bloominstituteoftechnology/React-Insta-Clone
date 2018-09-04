@@ -12,12 +12,19 @@ class CommentSection extends React.Component {
 		};
 	}
 
-	addNewComment = (event, index) => {
-		let comments = [...this.state.comments];
-
+	addNewComment = event => {
+		event.preventDefault();
+		const comments = [
+			...this.state.comments,
+			{
+				username: 'You',
+				text: event.target.children[0].value
+			}
+		];
 		this.setState({
 			comments
 		});
+		event.target.reset();
 	};
 
 	componentDidMount() {
@@ -49,6 +56,7 @@ class CommentSection extends React.Component {
 								Math.round(Math.random() * 1000)
 							}
 							comment={comment}
+							addNewComment={this.addNewComment}
 						/>
 					))}
 				</div>
@@ -60,10 +68,16 @@ class CommentSection extends React.Component {
 				</a>
 
 				<div className="response">
-					<form action="/" className="add-comment">
-						<div
+					<form onSubmit={this.addNewComment} className="add-comment">
+						{/* Expands like Instagram's textarea
+							<div
 							className="fake-textarea"
 							contentEditable
+							placeholder="Add a comment..."
+						/> */}
+						<input
+							className="comment-input"
+							type="text"
 							placeholder="Add a comment..."
 						/>
 					</form>

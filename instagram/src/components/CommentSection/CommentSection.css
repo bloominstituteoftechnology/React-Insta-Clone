@@ -56,7 +56,7 @@
 }
 
 /* .add-comment textarea {
-width: 530px;
+width: 544px;
 height: 18px;
 max-height: 80px;
 color: inherit;
@@ -66,10 +66,20 @@ outline: none;
 padding: 0;
 } */
 
-.fake-textarea {
+/* .fake-textarea {
 	width: 544px;
 	min-height: 18px;
 	max-height: 80px;
+	outline: none;
+	overflow: auto;
+} */
+
+.comment-input {
+	width: 544px;
+	height: 18px;
+	max-height: 80px;
+	padding: none;
+	border: none;
 	outline: none;
 	overflow: auto;
 }
