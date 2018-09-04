@@ -1,5 +1,5 @@
 .comment-text {
-    text-align: left;
+    text-align: center;
     padding: 2px;
     margin-left: 4px;
 }
@@ -10,5 +10,5 @@
 }
 .user{
     font-weight: 500;
-    font-size: 12px;
+    font-size: 13px;
 }
