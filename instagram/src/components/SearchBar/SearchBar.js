@@ -5,6 +5,7 @@ import InstaText from '../../assets/instagram_text.png';
 import NavIcon from '../../assets/nav-icon.png';
 import UserIcon from '../../assets/user-icon.jpeg';
 import HeartIcon from '../../assets/heart-icon.png';
+import PropTypes from 'prop-types';
 
 
 const SearchBar = () => {
@@ -24,6 +25,10 @@ const SearchBar = () => {
             </div>
         </div>
     );
+};
+
+SearchBar.propTypes = {
+    input: PropTypes.string
 };
 
 export default SearchBar;
