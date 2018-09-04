@@ -5,8 +5,17 @@ class SearchBar extends React.Component {
 	constructor(props) {
 		super(props);
 		this.searchInput = React.createRef();
-		this.state = {};
+		this.state = {
+			searchLid: true,
+			searchText: ''
+		};
 	}
+
+	toggleSearchLid = () => {
+		this.setState({
+			searchLid: !this.state.searchLid
+		});
+	};
 
 	focusSearchInput = () => {
 		this.searchInput.current.focus();
@@ -27,13 +36,13 @@ class SearchBar extends React.Component {
 							className="search-input"
 							placeholder="Search"
 							ref={this.searchInput}
-							onBlur={this.props.toggleSearchLid}
+							onBlur={this.toggleSearchLid}
 						/>
 						<span className="sprite" id="search" />
 						<button
-							className={'search-lid' + (this.props.searchLid ? '' : ' hidden')}
+							className={'search-lid' + (this.state.searchLid ? '' : ' hidden')}
 							onClick={() => {
-								this.props.toggleSearchLid();
+								this.toggleSearchLid();
 								this.focusSearchInput();
 							}}
 						>

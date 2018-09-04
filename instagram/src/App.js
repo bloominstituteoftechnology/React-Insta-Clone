@@ -8,18 +8,9 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			data: [],
-			searchLid: true,
-			searchText: '',
-			commentText: []
+			data: []
 		};
 	}
-
-	toggleSearchLid = () => {
-		this.setState({
-			searchLid: !this.state.searchLid
-		});
-	};
 
 	componentDidMount() {
 		this.setState({
