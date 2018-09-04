@@ -3,6 +3,29 @@
   height: 100px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  border: 2px solid pink;
+  border-bottom: 2px solid lightgray;
+}
+
+.logo {
+  background-image: url("./instagram-logo.png");
+  background-size: 200px;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
+}
+
+.search-bar {
+  width: 150px;
+  height: 20px;
+  text-align: center;
+}
+
+.account-stuff {
+  background-image: url("./account.png");
+  background-size: 200px;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
 }
