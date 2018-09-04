@@ -10,7 +10,9 @@ class App extends Component {
     super();
 
     this.state = {
-      posts: []
+      posts: [],
+      searchText: '',
+      filteredPosts: []
     };
   }
 
@@ -18,7 +20,21 @@ class App extends Component {
     this.setState({ posts: dummyData });
   }
 
-  searchHandler = event => {};
+  searchHandler = event => {
+    this.setState({ searchText: event.target.value });
+
+    setTimeout(() => {
+      const posts = this.state.posts.filter(post => {
+        return post.username.includes(this.state.searchText) ? post : null;
+      });
+
+      if (posts.length > 0) {
+        this.setState({ filteredPosts: posts });
+      } else {
+        return;
+      }
+    }, 20);
+  };
 
   render() {
     return (
@@ -37,7 +53,13 @@ class App extends Component {
             </div>
           </header>
           <div className="posts-wrapper">
-            <PostContainer data={this.state.posts} />
+            <PostContainer
+              data={
+                this.state.filteredPosts.length > 0
+                  ? this.state.filteredPosts
+                  : this.state.posts
+              }
+            />
           </div>
         </div>
       </div>
