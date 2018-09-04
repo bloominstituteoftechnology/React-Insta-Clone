@@ -4,29 +4,38 @@ import moment from 'moment'
 import './Comments.css'
 import Comment from './Comment'
 
-const Comments = (props) => {
-  return (
-    <div className="Comments">
-      {props.comments.map(comment => {
-        return (
-          <Comment 
-            className="Comment"
-            key={comment.text}
-            comment={comment} 
-          />
-        )
-      })}
+class Comments extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      comments: props.comments
+    }
+  }
 
-      <p className="timeFromNow">{moment().startOf('hour').fromNow()}</p>
-      
-      <hr className="divider" />
-
-      <div className="commentSection">
-        <input className="commentBox bold" placeholder="Add a comment..." />
-        <i className="fas fa-ellipsis-h"></i>
+  render() {
+    return (
+      <div className="Comments">
+        {this.state.comments.map(comment => {
+          return (
+            <Comment 
+              className="Comment"
+              key={comment.text}
+              comment={comment} 
+            />
+          )
+        })}
+  
+        <p className="timeFromNow">{moment().startOf('hour').fromNow()}</p>
+        
+        <hr className="divider" />
+  
+        <div className="commentSection">
+          <input className="commentBox bold" placeholder="Add a comment..." />
+          <i className="fas fa-ellipsis-h"></i>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 Comments.propTypes = {
