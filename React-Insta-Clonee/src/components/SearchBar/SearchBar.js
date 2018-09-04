@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
 
- const SearchBar=()=>{
+ const SearchBar=props=>{
     return (
         <div className='searchbar'>
             <div className='instagramTrademark'>
@@ -10,7 +10,7 @@ import './SearchBar.css';
             <img className='instalogo' src='http://assets.stickpng.com/thumbs/5a4e432a2da5ad73df7efe7a.png' alt='instagram logo'/>
         </div>    
         <div className='searchBarInput'>
-            <input type='text' placeholder='Search'/>
+            <input type='text' placeholder='Enter a username' value={props.searchValue} onChange={(e)=>{return props.handleInputChange(e)}}/>
         </div>
         <div className='searchBarIcons'>
             <i className="far fa-compass"></i>
