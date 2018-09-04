@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 function CommentSection(props) {
     return (
         <div>
-            CommentSection
+            {props.dummyData.text}
         </div>
     )
 }

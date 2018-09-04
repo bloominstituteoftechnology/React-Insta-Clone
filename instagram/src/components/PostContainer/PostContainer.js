@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import CommentSection from '../CommentSection/CommentSection.js'
+import Post from './Post.js'
 
-function PostContainer(props) {
+const PostContainer = props => {
     return (
-    <div>
-        Post Container
-        <CommentSection />
-    </div>);
+        <div className="post-container">
+            {props.dummyData.map(data => (
+                <Post
+                    dummyData={data}
+                    key={data.timestamp}
+                />
+                
+            ))}
+        </div>);
 }
 
 export default PostContainer;
