@@ -1,0 +1,17 @@
+/* .login-form {
+  width: 500px;
+  background: gray;
+  border-radius: 6px;
+  margin: 10px auto;
+  padding: 10px 25px;
+} */
+.one{
+  margin: 20px 0 0 0;
+}
+
+.button{
+  text-align: center;
+  margin: 20px 0 0 20px;
+  display: flex;
+  justify-content: center;
+}
