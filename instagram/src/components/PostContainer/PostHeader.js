@@ -2,7 +2,11 @@ import React from 'react';
 
 const PostHeader = props => {
     return (
-        <div>Post Header</div>
+        <div class="post-header">
+            <img class="user-thumbnail" src={props.thumbnail} />
+            <p class="username">{props.username}</p>
+        
+        </div>
     );
 }
 

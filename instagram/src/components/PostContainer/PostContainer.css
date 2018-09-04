@@ -7,4 +7,23 @@
 
 .post-container .post {
     margin-bottom: 30px;
+    background-color: #FFF;
+    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+}
+
+.post-container .post .content-img img {
+    width: 100%;
+}
+
+.post-container .post-header {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.post-container .post-header img {
+    border-radius: 50%;
+    width: 30px;
+    margin: 20px;
 }

@@ -5,9 +5,19 @@ import './CommentSection.css';
 const CommentSection = props => {
     return (
 
-        <div>Comment Section
+        <div className="comment-section">
+            <div className="likes">
+                <p>{props.likes} likes</p>
+            </div>
 
-            <Comment />
+            {props.comments.map(comment => {
+                return <Comment 
+                username={comment.username} 
+                text={comment.text}
+                />
+            }
+            )}
+
         </div>
         
     )
