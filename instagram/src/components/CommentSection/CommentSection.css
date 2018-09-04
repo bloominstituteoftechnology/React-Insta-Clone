@@ -3,3 +3,15 @@
     justify-content: left;
     width: 100%;
 }
+
+.delete-btn {
+    background: lightcoral;
+    padding: 5px 7px;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background: black;
+    color: lightcoral;
+    cursor: pointer;
+}
