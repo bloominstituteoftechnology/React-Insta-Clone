@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import HeaderContainer from "./components/SearchBar/HeaderContainer";
-import PostContainer from "./components/PostContainer/PostContainer";
-import dummyData from "./dummy-data";
 import "./App.css";
+import dummyData from "./dummy-data";
+import PostsContainer from "./components/PostsContainer/PostsContainer";
+import SearchBar from "./components/SearchBar/SearchBarContainer";
 
 class App extends Component {
   constructor() {
@@ -13,15 +12,33 @@ class App extends Component {
     };
   }
 
+  addNewComment = event => {
+    event.preventDefault();
+    if (this.state.inputText) {
+      this.setState({
+        comments: [
+          ...this.state.comments,
+          { username: this.state.userName, text: this.state.inputText }
+        ],
+        inputText: ""
+      });
+    }
+  };
+
   componentDidMount() {
-    this.setState({ posts: dummyData });
+    this.setState({
+      posts: dummyData
+    });
   }
 
   render() {
     return (
       <div className="App">
-        <HeaderContainer />
-        <PostContainer posts={this.state.posts} />
+        <SearchBar />
+        <PostsContainer
+          posts={this.state.posts}
+          addNewComment={this.addNewComment}
+        />
       </div>
     );
   }

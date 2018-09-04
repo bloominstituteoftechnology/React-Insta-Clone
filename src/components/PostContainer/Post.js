@@ -16,7 +16,7 @@ const Post = props => {
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO1lu3jW04eocmGDkdSeUalJOYvdShSIWPinb3UeIoH6wnIsb8" />
       </div>
       <p>{props.post.likes}</p>
-      <CommentSection post={this.props.post} />
+      <CommentSection post={props.post} addNewComment={props.addNewComment} />
     </div>
   );
 };

@@ -1,19 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Comment.css';
 
 const Comment = props => {
   return (
-    <div className="comment">
-      <span className="comment-user">{props.comment.username}</span>
-      {props.comment.text}
+    <div className="comment-text">
+      <span className="comment">{props.comment.text}</span>{' '}
+      <span className="user">-{props.comment.username}</span>
     </div>
   );
 };
 
 Comment.propTypes = {
   comment: PropTypes.shape({
-    username: PropTypes.string,
-    text: PropTypes.string
+    text: PropTypes.string,
+    username: PropTypes.string
   })
 };
 
