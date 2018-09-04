@@ -9,7 +9,6 @@ class Comment extends Component {
 
   render() {
     console.log('Comment - return statement');
-    console.log(this.props.comment);
     const {username, text} = this.props.comment;
     return (
       <div className="comment">

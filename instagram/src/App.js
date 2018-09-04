@@ -26,10 +26,6 @@ class App extends Component {
     console.log('App - componentDidUpdate()', prevProps, prevState);
   }
 
-  addComment = (newComment) => {
-    
-  }
-
   render() {
     console.log('App - render()');
     const {dummyData} = this.state;
@@ -40,7 +36,7 @@ class App extends Component {
         {
           dummyData.map(post => {
             return (
-              <PostContainer addComment={this.addComment} key={uuidv4()} postData={post} />
+              <PostContainer key={uuidv4()} postData={post} />
             )
           })
         }

@@ -7,14 +7,33 @@ import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 
 class PostContainer extends Component {
+  constructor() {
+    super();
+    this.state = {
+      comments: []
+    }
+  }
+
+  componentDidMount() {
+    console.log('PostContainer - componentDidMount()');
+    const copyOfComments = this.props.postData.comments;
+    this.setState({comments: copyOfComments});
+  }
 
   componentDidUpdate() {
     console.log('PostContainer - componentDidUpdate()');
   }
 
+  addComment = (newCommentObj) => {
+    console.log(this.props.postData.comments);
+    this.setState({
+      comments: [...this.state.comments, newCommentObj]
+    })
+  }
+
   render() {
     console.log('PostContainer - render()')
-    const {comments, imageUrl, likes, thumbnailUrl, timestamp, username} = this.props.postData;
+    const {imageUrl, likes, thumbnailUrl, timestamp, username} = this.props.postData;
     return (
       <div className="post-container">
         <div className="thumbnail-container">
@@ -28,7 +47,7 @@ class PostContainer extends Component {
             <FontAwesomeIcon className="comment-icon" icon={faComment} size="2x" />
           </div>
           <p className="likes">{likes} Likes</p>
-          <CommentSection addComment={this.props.addComment} comments={comments} />
+          <CommentSection addComment={this.addComment} comments={this.state.comments} />
           <p className="timestamp">{timestamp}</p>
         </div>
       </div>
