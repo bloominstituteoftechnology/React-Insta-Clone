@@ -5,7 +5,7 @@ const SearchBar = props => {
     return (
         <div className = 'searchBarMain'>
             <div className ='logoName'>
-                <img className = 'instaLogo' src='#'/>
+                <img className = 'instaLogo' src='#' alt='Instagram Logo'/>
                 <h1 className = 'instaName'>props.Insta</h1>
             </div>
             <div className = 'searchField'>
