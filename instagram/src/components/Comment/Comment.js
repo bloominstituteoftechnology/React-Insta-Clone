@@ -4,7 +4,16 @@ import './Comment.css';
 
 const Comment = props => {
 	return (
-		<div className="Comment">
+		<div
+			className="Comment"
+			id={
+				props.comment.username +
+				'/' +
+				Date.now() +
+				'/' +
+				Math.round(Math.random() * 1000)
+			}
+		>
 			<a href="/" className="username">
 				{props.comment.username}
 			</a>

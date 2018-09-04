@@ -2,13 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import './Post.css';
-import Moment from 'moment';
 
 const Post = props => {
 	return (
 		<article
 			className="Post"
-			id={props.post.username + ': ' + props.post.timestamp}
+			id={props.post.username + '/' + props.post.timestamp}
 		>
 			<section className="author">
 				<a href="/" className="thumbnail">
@@ -25,35 +24,11 @@ const Post = props => {
 				className="post-image"
 			/>
 
-			<section className="engagement">
-				<div className="actions">
-					<button id="like" className="sprite-glyph" />
-					<button id="comment" className="sprite-glyph" />
-				</div>
-
-				<a href="/" className="likes">
-					{props.post.likes + ' likes'}
-				</a>
-
-				<CommentSection comments={props.post.comments} />
-
-				<a href="/" className="time">
-					{Moment(props.post.timestamp, 'MMM Do YYYY, hh:mm:ss a')
-						.fromNow()
-						.toUpperCase()}
-				</a>
-
-				<div className="response">
-					<form action="/" className="add-comment">
-						<div
-							className="fake-textarea"
-							contentEditable
-							placeholder="Add a comment..."
-						/>
-					</form>
-					<button id="options" className="sprite-glyph" />
-				</div>
-			</section>
+			<CommentSection
+				likes={props.post.likes}
+				comments={props.post.comments}
+				timestamp={props.post.timestamp}
+			/>
 		</article>
 	);
 };

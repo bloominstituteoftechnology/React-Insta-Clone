@@ -8,7 +8,7 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			data: dummyData,
+			data: [],
 			searchLid: true,
 			searchText: '',
 			commentText: []
@@ -20,6 +20,12 @@ class App extends React.Component {
 			searchLid: !this.state.searchLid
 		});
 	};
+
+	componentDidMount() {
+		this.setState({
+			data: dummyData
+		});
+	}
 
 	render() {
 		return (
