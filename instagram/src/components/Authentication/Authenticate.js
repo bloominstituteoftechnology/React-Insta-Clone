@@ -11,8 +11,8 @@ const Authenticate = App =>
 			this.state = {
 				loginSuccess: false,
 				possibleUsers: [
+          {name: 'philzcoffee', login: '1234'},
 					{name: 'marshall', login: '1234'},
-					{name: 'philzcoffee', login: 'buzz'},
 					{name: 'biancasaurus', login: 'roar'},
 					{name: 'fortnite', login: 'pwned'},
 					{name: 'playhearthstone', login: 'pizza'}
@@ -24,16 +24,20 @@ const Authenticate = App =>
     // else render a login component
     render() {
 
-    	const names = Object.keys(localStorage);
-    	const logins = Object.values(localStorage);
+    	const name = Object.keys(localStorage);
+    	const login = Object.values(localStorage);
+      const userList = this.state.possibleUsers.map(item => item.name);
+      const logs = this.state.possibleUsers.map(item => item.login);
+
+      console.log(userList)
+      console.log(logs)
+      // console.log(name[0], login[0])
 
     	const newState = {...this.state};
     	
-    	for (let i = 0; i < newState.possibleUsers.length; i++){
-    		if (newState.possibleUsers[i].name === names[i] && newState.possibleUsers[i].login === logins[i]){
-  				newState.loginSuccess = true;
-    		}
-    	}
+      if(userList.includes(name[0]) && logs.includes(login[0])){
+        newState.loginSuccess = true;
+      }
 
     	if (newState.loginSuccess === true){
     		return (

@@ -10,6 +10,10 @@ import './search.css';
 const SearchBar = (props) => {
 	return (
 		<div>
+			<div className="logOut">
+				<div>Welcome - {Object.keys(localStorage)}</div>
+				<div className="logoutBTN" onClick={()=>{localStorage.clear();window.location.reload()}}>Log Out</div>
+			</div>
 			<div className="flex-logos-main">
 				<div className="flex-logos">
 					<img src={square} alt={"logo-icon"} className="square"/>

@@ -1,3 +1,22 @@
+.logOut {
+	margin-top: 15px;
+}
+
+.logoutBTN {
+	border: solid black 1px;
+	display: inline block;
+	width:50px;
+	text-align: center;
+	margin-top: 15px;
+	padding: .5%;
+}
+
+.logoutBTN:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
 .square {
 	width: 10%;
 }
