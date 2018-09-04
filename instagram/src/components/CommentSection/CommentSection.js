@@ -8,9 +8,24 @@ class CommentSection extends React.Component {
 		super(props);
 		this.state = {
 			comments: [],
-			likes: 0
+			likes: 0,
+			youLiked: false
 		};
 	}
+
+	toggleLike = () => {
+		let likes = this.state.likes;
+		this.state.youLiked === false
+			? this.setState({
+					likes: likes + 1
+			  })
+			: this.setState({
+					likes: likes - 1
+			  });
+		this.setState({
+			youLiked: !this.state.youLiked
+		});
+	};
 
 	addNewComment = event => {
 		event.preventDefault();
@@ -25,6 +40,7 @@ class CommentSection extends React.Component {
 			comments
 		});
 		event.target.reset();
+		event.target.children[0].blur();
 	};
 
 	componentDidMount() {
@@ -38,7 +54,11 @@ class CommentSection extends React.Component {
 		return (
 			<section className="CommentSection">
 				<div className="actions">
-					<button id="like" className="sprite-glyph" />
+					<button
+						id="like"
+						className="sprite-glyph"
+						onClick={this.toggleLike}
+					/>
 					<button id="comment" className="sprite-glyph" />
 				</div>
 
