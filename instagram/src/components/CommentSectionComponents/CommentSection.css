@@ -9,7 +9,9 @@
 }
 
 .comment-section {
-    border: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     border-radius: 3px;
     padding-left: 20px;
     padding-bottom: 20px;
