@@ -23,7 +23,7 @@ const Comments = (props) => {
 
       <div className="commentSection">
         <input className="commentBox bold" placeholder="Add a comment..." />
-        <i class="fas fa-ellipsis-h"></i>
+        <i className="fas fa-ellipsis-h"></i>
       </div>
     </div>
   )
