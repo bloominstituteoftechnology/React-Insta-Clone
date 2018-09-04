@@ -1,0 +1,14 @@
+.userpic-n-name {
+  display: flex;
+}
+
+.philzcoffee-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.user-name {
+  margin-top: 22px;
+  margin-left: 15px;
+}

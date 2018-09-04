@@ -8,11 +8,11 @@ const TreeIcons = () => {
       </section>
 
       <section>
-      <i class="far fa-heart"></i>
+      <i className="far fa-heart"></i>
       </section>
 
       <section>
-      <i class="far fa-user"></i>
+      <i className="far fa-user"></i>
       </section>
 
     </div>
