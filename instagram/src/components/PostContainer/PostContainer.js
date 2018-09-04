@@ -15,6 +15,24 @@ class PostContainer extends React.Component {
         };
     }
 
+    componentDidMount() {
+        if (typeof(Storage) !== 'undefined') {
+            if (localStorage.getItem('postContainerStateData') !== null) {
+                let newData = JSON.parse(localStorage.getItem('postContainerStateData'));
+                
+                this.setState({
+                    data: newData,
+                });
+            }
+        }
+    }
+
+    componentDidUpdate() {
+        if (typeof(Storage) !== 'undefined') {
+            localStorage.setItem('postContainerStateData', JSON.stringify(this.state.data));
+        }
+    }
+
     addNewComment = e => {
         e.preventDefault();
 
@@ -33,7 +51,7 @@ class PostContainer extends React.Component {
     }
 
     render() {
-        const timestamp = this.props.data.timestamp.substring(0, this.props.data.timestamp.indexOf(',') - 7) + this.props.data.timestamp.substring(this.props.data.timestamp.indexOf(',') - 5);
+        const timestamp = this.state.data.timestamp.substring(0, this.state.data.timestamp.indexOf(',') - 7) + this.state.data.timestamp.substring(this.state.data.timestamp.indexOf(',') - 5);
 
         if (this.state.data.hidden === true) {
             return (
@@ -46,28 +64,28 @@ class PostContainer extends React.Component {
                         <div className = 'title-div'>
                             <img 
                                 className = 'thumbnail-url' 
-                                src = { this.props.data.thumbnailUrl } 
+                                src = { this.state.data.thumbnailUrl } 
                                 alt = 'thumbnail url' 
                             />
-                            <h4>{ this.props.data.username }</h4>
+                            <h4>{ this.state.data.username }</h4>
                         </div>
 
                         <img 
                             className = 'image-url' 
-                            src = { this.props.data.imageUrl } 
+                            src = { this.state.data.imageUrl } 
                             alt = 'main url' />
 
                         <div className = 'likes-div'>
                             <i 
                                 className = 'far fa-heart' 
-                                onClick = { this.props.handleLike } 
-                                id = { `like-${this.props.index}` } 
+                                onClick = { this.state.handleLike } 
+                                id = { `like-${this.state.index}` } 
                             ></i>
                             <i className="far fa-comment"></i>
-                            <h4>{ this.props.data.likes } likes</h4>
+                            <h4>{ this.state.data.likes } likes</h4>
                         </div>
 
-                        { this.props.data.comments.map((comment, index) => {
+                        { this.state.data.comments.map((comment, index) => {
                                 return <CommentSection 
                                     className = 'comment-section-div' 
                                     key = { index } 

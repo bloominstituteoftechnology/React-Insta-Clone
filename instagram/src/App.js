@@ -20,6 +20,21 @@ class App extends Component {
       newData[i].hidden = false;
     }
 
+
+    // if (typeof(Storage) !== "undefined") {
+    //   // Store
+    // //   console.log("yes")
+    // //   localStorage.setItem("lastname", JSON.stringify({'name1': 'first name',
+    // // 'name2': [1, 2]}));
+    // //   console.log(JSON.parse(localStorage.getItem("lastname")))
+    //   // localStorage.setItem("lastname", "Smith");
+    //   // Retrieve
+    //   // document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+    // }
+
+
+
+
     this.setState({
       data: newData,
     })
