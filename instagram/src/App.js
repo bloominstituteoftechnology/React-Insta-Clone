@@ -9,27 +9,20 @@ class App extends Component {
   constructor () {
     super ();
     this.state = {
-      inputText: '',
-      data: data,
+      data: [],
     }
   }
 
-  handleChange = (e) => {
-    this.setState({inputText: e.target.value});
-  }
+  componentDidMount() {
+    let newData = data;
 
-  handleClick = (e) => {
-    let newData = this.state.data;
-
-    newData[e.target.id].comments.push({
-      username: 'philzcoffee',
-      text: this.state.inputText,
-    });
+    for (let i = 0; i < newData.length; i++) {
+      newData[i].hidden = false;
+    }
 
     this.setState({
       data: newData,
-      inputText: '',
-    });
+    })
   }
 
   handleLike = (e) => {
@@ -44,18 +37,31 @@ class App extends Component {
     });
   }
 
+  handleSearch = (e) => {
+    let newData = this.state.data;
+
+    for (let i = 0; i < newData.length; i++) {
+      if (!newData[i].username.includes(e.target.value)) {
+        newData[i].hidden = true;
+      } else {
+        newData[i].hidden = false;
+      }
+    }
+    
+    this.setState({
+      data: newData,
+    });
+  }
+
   render() {
     return (
       <div className = 'App'>
-        <SearchBar />
+        <SearchBar handleSearch = { this.handleSearch } />
         { this.state.data.map((data, index) => {
             return <PostContainer 
               key = { index } 
-              submitIndex = { index } 
+              index = { index } 
               data = { data } 
-              state = { this.state } 
-              handleChange = { this.handleChange } 
-              handleClick = { this.handleClick } 
               handleLike = { this.handleLike } 
             />
           }) 

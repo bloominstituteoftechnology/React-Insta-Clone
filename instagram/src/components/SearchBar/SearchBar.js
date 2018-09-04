@@ -4,7 +4,7 @@ import logo from '../../assets/instagram-logo.png';
 
 import './SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <header>
             <div className = 'icon-logo-div'>
@@ -14,7 +14,12 @@ const SearchBar = () => {
 
             <div className = 'header-input-div'>
                 <i className = 'fas fa-search'></i>
-                <input className = 'header-input-field' type = 'search' placeholder = 'Search' />
+                <input 
+                    className = 'header-input-field' 
+                    type = 'search' 
+                    placeholder = 'Search' 
+                    onChange = { props.handleSearch } 
+                />
             </div>
 
             <div className = 'header-icons-div'>
