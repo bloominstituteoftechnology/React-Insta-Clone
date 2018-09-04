@@ -25,7 +25,7 @@ function PostContainer(props) {
           <section className="addcomment">
             <div className="bar"></div>
             <input className="addcommentinput" name="" type="text" value={props.inputText} onChange={props.handleInput} placeholder="Add a comment..."/>
-	    <button onClick={props.addUser}>Add</button>
+	    <button onClick={() => props.addComment(props.posts.timestamp)}>Add</button>
           </section>
 	</div>
     );
