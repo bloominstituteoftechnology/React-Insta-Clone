@@ -1,3 +1,11 @@
 .comment-section {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+}
+
+.comment-icons {
+  width: 100px;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid blue; */
 }

@@ -7,12 +7,12 @@ class CommentSection extends React.Component {
     super();
   }
   render() {
-    {
-      console.log(this.props);
-    }
     return (
       <div className="comment-section">
-        <h2>comments:</h2>
+        <div className="comment-icons">
+          <i class="far fa-heart" />
+          <i class="far fa-comment" />
+        </div>
         {this.props.comments.map(comment => (
           <Comment comment={comment} />
         ))}

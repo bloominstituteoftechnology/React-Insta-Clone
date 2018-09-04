@@ -6,13 +6,15 @@ class Comment extends React.Component {
     super();
   }
   render() {
-    {
-      console.log(this.props);
-    }
     return (
       <div className="comment">
-        <p>username: {this.props.comment.username}</p>
-        <p>text: {this.props.comment.text}</p>
+        <p>
+          <span className="comment-username">
+            {this.props.comment.username}{" "}
+          </span>
+          {this.props.comment.text}
+        </p>
+        <p />
       </div>
     );
   }

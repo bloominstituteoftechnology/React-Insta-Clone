@@ -1,3 +1,7 @@
 .comment {
-  border: 1px solid green;
+  /* border: 1px solid green; */
+}
+
+.comment-username {
+  font-weight: bold;
 }
