@@ -1,0 +1,28 @@
+.navbar{
+    display:flex;
+    justify-content: space-evenly;
+    max-width: 1000px;
+    margin:0 auto;
+    
+}
+.bar{
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.0975);
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    height: 77px;
+    z-index: 1;
+}
+
+.nav-items{
+    display:flex;
+    justify-content: space-around;
+}
+
+a{
+    width:100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    
+}

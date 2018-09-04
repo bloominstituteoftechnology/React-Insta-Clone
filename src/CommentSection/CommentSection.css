@@ -1,0 +1,13 @@
+.user-comment{
+    display: flex;
+    height:25px;
+}
+.user{
+    font-weight: 600;
+    font-size: 15px;
+    padding-right: 5px;
+}
+.body{
+    font-size: 14px;
+    height: 10px;
+}
