@@ -12,11 +12,18 @@ const Post = props => {
 }
 
 Post.propTypes = {
-  comments: PropTypes.shape({
-    text: PropTypes.number.isRequired,
+  entry: PropTypes.shape({
+    comments: PropTypes.array.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    thumbnailUrl: PropTypes.string.isRequired,
+    timestamp: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
-  }).isRequired
+  })
 }
+
+
+
 
 
 export default Post
