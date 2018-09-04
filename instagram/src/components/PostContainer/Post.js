@@ -22,6 +22,7 @@ const Post = props => {
 
                 ))}
         </div> 
+        <input className="comment-input" type="text" placeholder="Add a comment..." />
         </div>
     );
 };

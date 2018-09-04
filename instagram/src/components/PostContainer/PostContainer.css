@@ -1,6 +1,5 @@
 .post-container {
     width: 100%;
-
 }
 
 .post-container .post{
@@ -31,6 +30,7 @@
 
 .bold {
     font-weight: 700;
+    padding-right: 1%;
 }
 
 .likes {
