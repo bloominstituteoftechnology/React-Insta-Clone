@@ -1,7 +1,49 @@
 .comment-section {
-    padding: 20px 0 0 20px;
+    padding: 10px 20px 0px 20px;
+    font-size: 14px;
+}
+.comment-section .comment-section-icons {
+    height: 24px;
+}
+
+.comment-section .comment-section-icons a{
+    display: inline-block;
+    margin-right: 20px;
+    height: 24px;
+}
+
+.comment-section .comment-section-icons svg{
+    width: 24px;
+}
+
+
+.comment-section .likes {
+    font-weight: bold;
 }
 
 .comment-section .comment-user {
     font-weight: bold;
+}
+
+.comment-section .comment-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #efefef;
+    padding: 16px 0;
+    margin-top: 4px;
+}
+
+.comment-section .comment-input input {
+width: 95%;
+border: 0px;
+color: #999;
+font-weight: bold;
+outline: none;
+height: 18px;
+}
+
+.comment-section .comment-input .ellipsis {
+    font-weight: bold;
+    font-size: 18px;
 }
