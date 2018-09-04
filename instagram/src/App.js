@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import dummyData from './dummy-data';
+import dummy_data from './dummy-data';
 import uuidv4 from 'uuid/v4';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from  './components/PostContainer/PostContainer';
@@ -18,11 +18,18 @@ class App extends Component {
   componentDidMount() {
     console.log('App - componentDidMount()');
     this.setState({
-      dummyData: dummyData /* could be shortened to just "dummyData since key and value are the same characters" */
+      dummyData: dummy_data
+    })
+  }
+
+  filterSearch = (term) => {
+    this.setState({
+      dummyData: dummy_data.filter(post => post.username.includes(term))
     })
   }
 
   componentDidUpdate(prevProps, prevState){
+    console.log('Filter', this.state.dummyData.filter(post => post.username.includes('philz')));
     console.log('App - componentDidUpdate()', prevProps, prevState);
   }
 
@@ -32,7 +39,7 @@ class App extends Component {
     console.log(dummyData);
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar filterSearch={this.filterSearch} />
         {
           dummyData.map(post => {
             return (

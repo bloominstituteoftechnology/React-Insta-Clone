@@ -7,6 +7,24 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import './SearchBar.css';
 
 class SearchBar extends Component {
+  constructor() {
+    super();
+    this.state = {
+      term: ''
+    }
+  }
+
+  inputSearch = (e) => {
+    this.setState({
+      term: e.target.value
+    })
+  }
+
+  filterSearch = (e) => {
+    e.preventDefault();
+    this.props.filterSearch(this.state.term);
+  }
+
   render() {
     return (
       <div className="search-bar-container">
@@ -16,7 +34,9 @@ class SearchBar extends Component {
         </div>
         <h1 className="title">Instagram</h1>
         </div>
-        <input className="input" type="search" placeholder="search" />
+        <form onSubmit={this.filterSearch}>
+          <input onChange={this.inputSearch} className="input" type="search" placeholder="search" />
+        </form>
          <div className="right-icons">
            <FontAwesomeIcon className="icon" icon={faKey} />
            <FontAwesomeIcon className="icon" icon={faHeart} />
