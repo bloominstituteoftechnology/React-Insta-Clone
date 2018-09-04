@@ -11,16 +11,16 @@ const PostContainer = props => {
   )
 }
 
-// PostContainer.propTypes = {
-//   entry: PropTypes.shape({
-//     comments: PropTypes.array.isRequired,
-//     imageUrl: PropTypes.string.isRequired,
-//     likes: PropTypes.number.isRequired,
-//     thumbnailUrl: PropTypes.string.isRequired,
-//     timestamp: PropTypes.string.isRequired,
-//     username: PropTypes.string.isRequired,
-//   })
-// }
+PostContainer.propTypes = {
+  entry: PropTypes.shape({
+    comments: PropTypes.array.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    thumbnailUrl: PropTypes.string.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+  })
+}
 
 
 

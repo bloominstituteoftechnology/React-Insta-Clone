@@ -19,6 +19,12 @@ const CommentSection = props => {
   )
 }
 
+CommentSection.propTypes = {
+  comments: PropTypes.shape({
+    text: PropTypes.number.isRequired,
+    username: PropTypes.string.isRequired,
+  }).isRequired
+}
 
 
 

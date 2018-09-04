@@ -78,7 +78,7 @@ class App extends Component {
         </header>
         <SearchBar />
           {dummyData.map(entry =>
-          <PostContainer entry={entry}/>
+          <PostContainer entry={entry} key={entry.timestamp}/>
         )}
 
       </div>
@@ -88,15 +88,15 @@ class App extends Component {
   }
 }
 
-// App.propTypes = {
-//   entry: PropTypes.shape({
-//     comments: PropTypes.array.isRequired,
-//     imageUrl: PropTypes.number.isRequired,
-//     likes: PropTypes.number.isRequired,
-//     thumbnailUrl: PropTypes.string.isRequired,
-//     timestamp: PropTypes.string.isRequired,
-//     username: PropTypes.string.isRequired,
-//   }).isRequired
-// }
+App.propTypes = {
+  entry: PropTypes.shape({
+    comments: PropTypes.array.isRequired,
+    imageUrl: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+    thumbnailUrl: PropTypes.string.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+  }).isRequired
+}
 
 export default App;

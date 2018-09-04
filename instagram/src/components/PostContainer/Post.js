@@ -11,12 +11,12 @@ const Post = props => {
   )
 }
 
-// Post.propTypes = {
-//   comments: PropTypes.shape({
-//     text: PropTypes.number.isRequired,
-//     username: PropTypes.string.isRequired,
-//   }).isRequired
-// }
+Post.propTypes = {
+  comments: PropTypes.shape({
+    text: PropTypes.number.isRequired,
+    username: PropTypes.string.isRequired,
+  }).isRequired
+}
 
 
 export default Post
