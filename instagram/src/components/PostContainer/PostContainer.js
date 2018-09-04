@@ -7,7 +7,13 @@ import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 
 class PostContainer extends Component {
+
+  componentDidUpdate() {
+    console.log('PostContainer - componentDidUpdate()');
+  }
+
   render() {
+    console.log('PostContainer - render()')
     const {comments, imageUrl, likes, thumbnailUrl, timestamp, username} = this.props.postData;
     return (
       <div className="post-container">
@@ -22,7 +28,7 @@ class PostContainer extends Component {
             <FontAwesomeIcon className="comment-icon" icon={faComment} size="2x" />
           </div>
           <p className="likes">{likes} Likes</p>
-          <CommentSection comments={comments} />
+          <CommentSection addComment={this.props.addComment} comments={comments} />
           <p className="timestamp">{timestamp}</p>
         </div>
       </div>
@@ -31,7 +37,6 @@ class PostContainer extends Component {
 }
 
 PostContainer.propTypes = {
-  postData: PropTypes.object.isRequired,
   postData: PropTypes.shape({
     comments: PropTypes.arrayOf(PropTypes.object).isRequired,
     imageUrl: PropTypes.string.isRequired,

@@ -9,19 +9,38 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
+    console.log('App - constructor()');
     this.state = {
-      dummy_data: dummyData
+      dummyData: []
     }
   }
+
+  componentDidMount() {
+    console.log('App - componentDidMount()');
+    this.setState({
+      dummyData: dummyData /* could be shortened to just "dummyData since key and value are the same characters" */
+    })
+  }
+
+  componentDidUpdate(prevProps, prevState){
+    console.log('App - componentDidUpdate()', prevProps, prevState);
+  }
+
+  addComment = (newComment) => {
+    
+  }
+
   render() {
-    const {dummy_data} = this.state;
+    console.log('App - render()');
+    const {dummyData} = this.state;
+    console.log(dummyData);
     return (
       <div className="App">
         <SearchBar />
         {
-          dummy_data.map(post => {
+          dummyData.map(post => {
             return (
-              <PostContainer key={uuidv4()} postData={post} />
+              <PostContainer addComment={this.addComment} key={uuidv4()} postData={post} />
             )
           })
         }

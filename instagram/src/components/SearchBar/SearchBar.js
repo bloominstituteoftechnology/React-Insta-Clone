@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import logo from './ig.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faKey, fas } from '@fortawesome/free-solid-svg-icons';
+import { faKey } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import './SearchBar.css';

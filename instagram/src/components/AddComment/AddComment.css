@@ -1,0 +1,19 @@
+.add-comment-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.input {
+  flex-grow: 4;
+  height: 50px;
+  border-radius: 3px;
+  margin: 20px 0px 20px 10px;
+}
+
+.submit {
+  flex-grow: 1;
+  background: lightgreen;
+  margin: 20px 10px 20px 0px;
+  cursor: pointer;
+}
