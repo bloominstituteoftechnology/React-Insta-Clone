@@ -26,6 +26,14 @@ class CommentSection extends Component {
     }
     }
 
+    removeComment = (e) => {
+        let comments = this.state.comments;
+        comments.splice(e.currentTarget.parentElement.id, 1);
+        this.setState({
+            comments: [...comments]
+        })
+    }
+
     commentChange = (e) => {
         this.setState({
             currentComment: e.currentTarget.value
@@ -69,7 +77,9 @@ class CommentSection extends Component {
                 return <Comment 
                 username={comment.username} 
                 text={comment.text}
-                key={id}
+                key={id} 
+                id={id} 
+                removeComment={this.removeComment} 
                 />
             }
             )}

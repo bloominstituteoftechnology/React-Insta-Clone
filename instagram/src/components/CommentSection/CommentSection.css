@@ -36,8 +36,33 @@
     font-weight: bold;
 }
 
+.comment-section .comment-text {
+    width: 95%;
+}
+
 .comment-section .comment-user {
     font-weight: bold;
+}
+
+.comment-section .comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+.comment-section .comment .remove-comment {
+    display: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: #ED4956;
+
+}
+
+.comment-section .comment:hover .remove-comment {
+    display: inline-block;
 }
 
 .comment-section .timestamp {

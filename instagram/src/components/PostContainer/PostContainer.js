@@ -11,10 +11,9 @@ const PostContainer = props => {
             if(props.currentSearch === null || 
                 props.currentSearch.trim() === "" || 
                     (post.username.includes(props.currentSearch.trim()) && 
-                        props.currentSearch.trim().length >= 3
-                )) {
+                        props.currentSearch.trim().length >= 3 )) {
             return (
-            <div key={'contain' + id} className="post">
+            <div key={'container-' + id} id={id} className="post">
                 <PostHeader 
                 username={post.username} 
                 thumbnail={post.thumbnailUrl} 
@@ -26,15 +25,14 @@ const PostContainer = props => {
                 </div>
 
                 <CommentSection 
-                key={'comments' + id} 
+                key={'comments-' + id} 
                 likes={post.likes} 
                 comments={post.comments} 
                 timestamp={post.timestamp}
                 />
-
             </div>
             )
-        }}
+          }}
         )}
       </div>
 
