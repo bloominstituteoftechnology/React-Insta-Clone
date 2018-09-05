@@ -8,7 +8,9 @@ class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.comments
+      comments: props.comments,
+      newComment: "",
+      likes: 0
     };
   }
 
@@ -28,14 +30,30 @@ class CommentSection extends React.Component {
     // SAME AS this.setState({newComment: event.target.value});
   };
 
+  increaseLikes = event => {
+    event.preventDefault();
+    this.setState({likes: this.state.likes + 1});
+  };
+
   render() {
     return (
       <div>
-        {this.state.comments.map((item, index) => <Comment key={index} comment={item} />)}
-        <CommentInput 
-          addNewComment={this.addNewComment} 
-          handleChange={this.handleChange}
-        />
+        <div className="two-icons">
+        <section>
+          {this.state.likes}
+          <i className="far fa-heart" onClick={this.increaseLikes}></i>
+        </section>
+        <section>
+          <i className="far fa-comment"></i>
+        </section>
+        </div>
+        <div>
+          {this.state.comments.map((item, index) => <Comment key={index} comment={item} />)}
+          <CommentInput 
+            addNewComment={this.addNewComment} 
+            handleChange={this.handleChange}
+           />
+        </div>
       </div>
     );
   }
