@@ -21,8 +21,8 @@ class PostFooterActions extends Component {
         return (
             <div className="post-footer-actions">
                 <div className="post-actions-img">
-                    <img src={require("./heart-icon.png")} alt="like" onClick={this.updateLikes}/>
-                    <img src={require("./comment-icon.png")} alt="comment" />
+                    <img src={require("./img/heart-icon.png")} alt="like" onClick={this.updateLikes}/>
+                    <img src={require("./img/comment-icon.png")} alt="comment" />
                 </div>
                 
                 <p className="likes">{this.state.likes} likes</p>

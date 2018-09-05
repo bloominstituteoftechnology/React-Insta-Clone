@@ -5,9 +5,9 @@ import './SearchBar.css'
 function SearchIcons() {
     return (
         <div className="search-icons">
-            <img src={require("./Icon1.png")} alt="Icon1"/>
-            <img src={require("./Icon2.png")} alt="Like"/>
-            <img src={require("./Icon3.png")} alt="People"/>
+            <img src={require("./img/Icon1.png")} alt="Icon1"/>
+            <img src={require("./img/Icon2.png")} alt="Like"/>
+            <img src={require("./img/Icon3.png")} alt="People"/>
         </div>
     )
 }

@@ -27,7 +27,7 @@ class CommentInput extends Component {
             <form className="comment-input" onSubmit={this.handleSubmit}>
                 <input type="input" value={this.state.inputValue} onChange={e => this.updateInputValue(e)} name="comInput" placeholder="Add a comment..." />
     
-                <img src={require("./comment-dots.png")} alt="comment dots"/>
+                <img src={require("./img/comment-dots.png")} alt="comment dots"/>
             </form>
         )
     }

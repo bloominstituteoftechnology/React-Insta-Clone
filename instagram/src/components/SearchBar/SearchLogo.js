@@ -5,7 +5,7 @@ import './SearchBar.css'
 function SearchLogo() {
     return (
         <div>
-            <img src={require("./InstagramLogo.png")} alt="Instagram Logo" />
+            <img src={require("./img/InstagramLogo.png")} alt="Instagram Logo" />
         </div>
     )
 }

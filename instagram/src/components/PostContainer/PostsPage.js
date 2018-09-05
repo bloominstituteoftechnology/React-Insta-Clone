@@ -28,6 +28,7 @@ class PostsPage extends Component {
         e.toLowerCase()
       ) !== -1;
     });
+    
     this.setState({filteredState: updatedList});
   }
 
