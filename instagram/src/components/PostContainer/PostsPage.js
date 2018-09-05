@@ -59,8 +59,8 @@ class PostsPage extends React.Component {
         return (
             <div>
                 <SearchBar handleSearch = { this.handleSearch } />
-                <div className = 'welcome-div'>Hello { this.props.username }</div>
-                <button onClick = { this.logOut } >Log Out</button>
+                <div className = 'welcome-div'>Welcome back, { this.props.username }.</div>
+                <button className = 'log-out-btn' onClick = { this.logOut } >Log Out</button>
                 { this.state.data.map((data, index) => {
                     return <PostContainer 
                         key = { index } 

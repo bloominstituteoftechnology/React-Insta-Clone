@@ -1,3 +1,16 @@
 .welcome-div {
     margin-top: 140px;
+    margin-bottom: 20px;
+}
+
+.log-out-btn {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.log-out-btn:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
 }

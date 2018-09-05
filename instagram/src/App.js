@@ -5,35 +5,14 @@ import Authenticate from './components/Authentication/Authenticate';
 
 import './App.css';
 
-// const AuthenticatedComponent = Authenticate(PostsPage);
 const AuthenticatedComponent = Authenticate(PostsPage)(Login);
 
-class App extends React.Component {
-  
-
-
-
-
-  // make func comp
-
-
-
-
-
-
-
-
-
-
-
-
-  render() {
-    return (
-      <div className = 'App'>
-        <AuthenticatedComponent />
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <div className = 'App'>
+      <AuthenticatedComponent />
+    </div>
+  );
 }
 
 export default App;

@@ -1,0 +1,31 @@
+.login-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.login-div .login-form .login-input-div {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.login-div .login-form .login-input-div .login-username-input {
+    font-size: 18px;
+}
+
+.login-div .login-form .login-button {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.login-div .login-form .login-button:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
