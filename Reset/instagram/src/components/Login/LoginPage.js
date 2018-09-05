@@ -10,6 +10,7 @@ const LoginPage = props => {
                 <div className="login-fields">
                 <p>Username:</p><input type="text"></input>
                 <p>Password:</p><input type="text"></input>
+                <button>Login</button>
                 </div>
         </div>
     </div>
