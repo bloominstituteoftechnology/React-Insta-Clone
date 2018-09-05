@@ -21,7 +21,6 @@ class SearchBar extends Component {
   }
 
   filterSearch = (e) => {
-    e.preventDefault();
     this.props.filterSearch(this.state.term);
   }
 
@@ -34,9 +33,7 @@ class SearchBar extends Component {
         </div>
         <h1 className="title">Instagram</h1>
         </div>
-        <form onSubmit={this.filterSearch}>
-          <input onChange={this.inputSearch} className="input" type="search" placeholder="search" />
-        </form>
+          <input onKeyDown={this.filterSearch} onChange={this.inputSearch} className="input" type="search" placeholder="search" />
          <div className="right-icons">
            <FontAwesomeIcon className="icon" icon={faKey} />
            <FontAwesomeIcon className="icon" icon={faHeart} />
