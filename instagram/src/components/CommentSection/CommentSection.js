@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
-import './CommentSection.css';
+// import './CommentSection.css';
 
 class CommentSection extends React.Component {
   state = {
@@ -51,7 +51,6 @@ class CommentSection extends React.Component {
     );
   }
 }
-export default CommentSection;
 
 CommentSection.propTypes = {
   postData: PropTypes.shape({
@@ -59,3 +58,6 @@ CommentSection.propTypes = {
     timestamp: PropTypes.string,
   }),
 };
+
+export default CommentSection;
+

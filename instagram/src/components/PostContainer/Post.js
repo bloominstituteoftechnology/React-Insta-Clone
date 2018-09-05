@@ -1,31 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CommentSection from '../CommentSection/CommentSectionContainer';
-import LikeSection from './LikeSection';
-import PostHeader from './PostHeader';
+import CommentSection from '../CommentSection/CommentSection';
+// import LikeSection from './LikeSection';
+// import PostHeader from './PostHeader';
 // import './Posts.css';
 
 class Post extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: [],
-      filteredPosts: []
+      likes: props.post.likes
     };
   }
+
   incrementLike = () => {
     let likes = this.state.likes + 1;
     this.setState({ likes });
   };
+
   render() {
     return (
       <div className="postContainer">
         <div className="postHeader">
-          <img src={props.post.thumbnailUrl} alt="" />
-          <h3>{props.post.username}</h3>
+          <img src={this.props.post.thumbnailUrl} alt="" />
+          <h3>{this.props.post.username}</h3>
         </div>
-        <img src={props.post.imageUrl} alt="" />
-        <CommentSection comments={props.post.comments} />
+        <img src={this.props.post.imageUrl} alt="" />
+        <CommentSection comments={this.props.post.comments} />
       </div>
     );
   }
