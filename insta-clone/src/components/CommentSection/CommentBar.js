@@ -4,15 +4,14 @@ import React from 'react';
 
 const CommentBar = (props) => {
   return (
-    <form>
+    <form onSubmit={props.addNewComment} onChange={props.handleChange}>
     <input
     type="text"
-    value={props.commentText}
-    onChange={props.handleComment}
-    onSubmit={props.addComment}
+    value={props.newComment}
+    name="newComment"
     placeholder="Add a comment..."
     />
-    <button onClick={props.addComment}>Comment</button>
+
     </form>
   );
 }

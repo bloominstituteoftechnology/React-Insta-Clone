@@ -9,35 +9,25 @@ class App extends Component {
     super();
     this.state = {
       postData: [],
-      commentText: '',
-      searchText: '',
+      search: '',
     };
   }
 
-  handleComment = (event) => {
-    this.setState({
-      commentText: event.target.value
-    })
-  }
-  handleSearch = (event) => {
-    this.setState({
-      searchText: event.target.value
-    })
+
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value })
   }
 
-  addNewComment = (event, index) => {
+  searchPosts = (event) => {
     event.preventDefault();
-    if (this.state.commentText) {
-      this.setState({
+    let newPosts = [...this.state.postData];
+    newPosts = newPosts.filter(post=> {
+      return post.username === this.state.search;
+    })
+    this.setState({ postData: newPosts })
 
-        comments: [...this.state.comments, { username: 'THE_USER', text: this.state.commentText }],
-        commentText: '',
-      }
-    
-      )
+    }
 
-  }
-}
   componentDidMount = () => {
      this.setState({ postData: dummyData })
   }
@@ -48,11 +38,12 @@ class App extends Component {
         <header className="App-header">
           <h1>NOT Instagram</h1>
           <SearchBar
-          handleSearch={this.handleSearch}/>
+          searchPosts={this.searchPosts}
+          handleChange={this.handleChange}/>
 
         </header>
 
-       <PostList postData={this.state.postData} addComment={this.addComment} commentText={this.state.commentText} handleComment={this.handleComment}/>
+       <PostList postData={this.state.postData}  />
       </div>
     );
   }

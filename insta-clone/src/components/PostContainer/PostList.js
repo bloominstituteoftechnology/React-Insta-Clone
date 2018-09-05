@@ -14,8 +14,8 @@ const PostList = props => {
         username={post.username}
         thumbnailUrl={post.thumbnailUrl}
         imageUrl={post.imageUrl}
-        commentData={post.comments}
-        
+        comments={post.comments}
+
          />
       )
     )}

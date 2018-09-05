@@ -13,10 +13,9 @@ const PostContainer = props => {
       </div>
       <img src={props.imageUrl} />
       <CommentSection
-        commentData={props.commentData}
-        commentText={props.commentText}
-        addComment={props.addComment}
-        handleComment={props.handleComment}
+
+        comments={props.comments}
+
 
       />
     </div>
@@ -25,7 +24,7 @@ const PostContainer = props => {
 };
 
 PostContainer.propTypes = {
-  commentData: PropTypes.arrayOf(PropTypes.shape({
+  comments: PropTypes.arrayOf(PropTypes.shape({
     username: PropTypes.string,
     text: PropTypes.string,
   })),
