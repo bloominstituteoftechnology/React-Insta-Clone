@@ -10,4 +10,8 @@ const PostsContainer = props => {
   );
 };
 
+
+// const dummyData =[ {0} , {1} , {2} ]
+//                    {p} , {p} , {p}
+
 export default PostsContainer;
