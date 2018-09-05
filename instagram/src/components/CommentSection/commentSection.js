@@ -11,11 +11,31 @@ class CommentSection extends React.Component {
       comments: props.comments
     };
   }
+
+  addNewComment = event => {
+    event.preventDefault();
+      this.setState({
+        comments: [
+          ...this.state.comments,
+          { text: this.state.newComment, username: "Luisan"}
+          ],
+        newComment: ""
+      });
+  };
+
+  handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+    // SAME AS this.setState({newComment: event.target.value});
+  };
+
   render() {
     return (
       <div>
         {this.state.comments.map((item, index) => <Comment key={index} comment={item} />)}
-        <CommentInput />
+        <CommentInput 
+          addNewComment={this.addNewComment} 
+          handleChange={this.handleChange}
+        />
       </div>
     );
   }
