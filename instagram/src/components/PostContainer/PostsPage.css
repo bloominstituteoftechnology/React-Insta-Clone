@@ -1,10 +1,11 @@
 .staticbar {
   position: fixed;
+  height: 80px;
+  z-index: 5;
 }
 
 .postcontainer-wrapper {
   position: relative;
   top: 100px;
-  z-index: -1000;
 
 }
