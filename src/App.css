@@ -5,16 +5,3 @@
   margin: 0 auto;
   font-size: 1.6rem;
 }
-
-.Posts {
-  width: 640px;
-  margin: 0 auto;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.postIcons {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 3rem;
-  margin: 1% 3%;
-}
