@@ -16,8 +16,8 @@ class App extends React.Component {
     this.setState({ data: dummyData })
   }
 
-  search = (searchStr) => {
-    let data = [...this.state.data].filter(post => post.username.includes(searchStr))
+  search = (term) => {
+    let data = dummyData.filter(post => post.username.includes(term))
     this.setState({ data })
   }
 

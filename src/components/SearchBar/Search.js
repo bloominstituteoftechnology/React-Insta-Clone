@@ -5,13 +5,17 @@ class Search extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      searchStr: ""
+      term: ""
     }
   }
 
-  handleSearch = (e) => {
-    this.setState({ searchStr: e.target.value })
-    this.props.search(this.state.searchStr)
+  updateTerm = (e) => {
+    this.setState({ term: e.target.value })
+  }
+
+  search = (e) => {
+    e.preventDefault()
+    this.props.search(this.state.term)
   }
 
   render() {
@@ -23,13 +27,13 @@ class Search extends React.Component {
         </div>
   
   
-        <div className="navSearch">
+        <form className="navSearch" onSubmit={this.search}>
           <input
             className="navSearch-input"
             placeholder={this.state.searchStr || "🔍 Search"}
-            onChange={(e) => this.handleSearch(e)}
+            onChange={this.updateTerm}
           />
-        </div>
+        </form>
   
         <div className="navIcons">
           <i className="far fa-compass"></i>
