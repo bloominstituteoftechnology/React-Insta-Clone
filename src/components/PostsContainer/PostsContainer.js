@@ -1,13 +1,13 @@
-import React from "react";
-import Post from "./Post";
-import "./Posts.css";
+import React from 'react';
+import Post from './Post';
+import './Posts.css';
 
 const PostsContainer = props => {
   return (
     <div className="posts-container-wrapper">
-      {props.posts.map(p => (
-        <Post key={p.imageUrl} post={p} addNewComment={this.addNewComment} />
-      ))}
+      {props.posts.filter(post => {
+        return post.username.includes(props.searchTerm);
+      }).map(p => <Post key={p.imageUrl} post={p} />)}
     </div>
   );
 };

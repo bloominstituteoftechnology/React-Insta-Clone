@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
 
 const CommentInput = props => {
   return (
-    <form onSubmit={props.addNewComment}>
-      <input type="text" placeholder="Add comment... " />
+    <form onSubmit={props.addComment} onChange={props.handleInput}>
+      <input type="text" placeholder="Add comment... " name='comment' value={props.commentValue} />
+      <input type='submit' value='clicky' />
     </form>
   );
 };

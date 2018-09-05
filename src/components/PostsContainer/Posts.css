@@ -29,16 +29,3 @@
   height: 100%;
   border-radius: 50%;
 }
-
-.feedback-buttons {
-  display: flex;
-}
-
-.feedback-buttons img {
-  height: 30px;
-  width: 30px;
-}
-
-.likes {
-  display: flex;
-}

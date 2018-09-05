@@ -1,44 +1,35 @@
-import React, { Component } from "react";
-import "./App.css";
-import dummyData from "./dummy-data";
-import PostsContainer from "./components/PostsContainer/PostsContainer";
-import SearchBar from "./components/SearchBar/SearchBarContainer";
+import React, { Component } from 'react';
+import './App.css';
+import dummyData from './dummy-data';
+import PostsContainer from './components/PostsContainer/PostsContainer';
+import SearchBar from './components/SearchBar/SearchBarContainer';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: [],
+      search: ''
     };
   }
-
-  addNewComment = event => {
-    event.preventDefault();
-    if (this.state.inputText) {
-      this.setState({
-        comments: [
-          ...this.state.comments,
-          { username: this.state.userName, text: this.state.inputText }
-        ],
-        inputText: ""
-      });
-    }
-  };
 
   componentDidMount() {
     this.setState({
       posts: dummyData
+    })
+  }
+
+  handleInput = e => {
+    this.setState({
+      [e.target.name]: e.target.value
     });
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostsContainer
-          posts={this.state.posts}
-          addNewComment={this.addNewComment}
-        />
+        <SearchBar handleInput={this.handleInput} />
+        <PostsContainer posts={this.state.posts} searchTerm={this.state.search} />
       </div>
     );
   }

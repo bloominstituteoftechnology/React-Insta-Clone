@@ -1,8 +1,8 @@
-import React from "react";
-import CommentSection from "../CommentSection/CommentSectionContainer";
-import PostHeader from "./PostHeader";
+import React from 'react';
+import CommentSection from '../CommentSection/CommentSectionContainer';
+import PostHeader from './PostHeader';
 
-import "./Posts.css";
+import './Posts.css';
 
 const Post = props => {
   return (
@@ -18,12 +18,7 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <div class="feedback-buttons">
-        <img src="https://png.icons8.com/metro/1600/like.png" />
-        <img src="https://cdn2.iconfinder.com/data/icons/instagram-ui/48/jee-69-512.png" />
-      </div>
-      <p class="likes">{props.post.likes}</p>
-      <CommentSection comments={props.post.comments} />
+      <CommentSection likes={props.post.likes} id={props.post.imageUrl} comments={props.post.comments} />
     </div>
   );
 };
