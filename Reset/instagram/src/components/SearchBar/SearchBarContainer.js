@@ -1,11 +1,14 @@
 import React from 'react';
 import IGLogo from '../../assets/iglogo.png';
+import Camera from '../../assets/camera-logo.svg';
 import './SearchBar.css';
 
 const SearchBar = () => {
   return (
     <div className="search-bar-wrapper">
       <div className="image-wrapper">
+        <img alt="camera logo" src={Camera} className="camera-image" />
+        <div class="vl"></div>
         <img alt="instagram logo" src={IGLogo} className="logo-image" />
       </div>
       <div>
