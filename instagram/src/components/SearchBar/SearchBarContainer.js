@@ -7,7 +7,13 @@ function SearchBarContainer(props) {
     return(
         <div>
             <SearchBarLogo />
-            <SearchBarInput />
+            <form onSubmit={props.search} onChange={props.handleChanging}>
+                <input
+                    type = "text"
+                    name = "search"
+                    placeholder = "search"
+                />
+            </form>
             <SearchBarMenu />
         </div>
     )

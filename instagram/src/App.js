@@ -40,7 +40,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBarContainer />
+        <SearchBarContainer 
+          search = {this.search}
+          handleChanging = {this.handleChanging}
+        />
         <PostContainer 
           posts = {this.state.postInfo} 
         />

@@ -2,7 +2,7 @@ import React from 'react';
 
 function SearchBarInput(props) {
     return (
-      <form>
+      <form onSubmit={props.search} onChange={props.handleChanging}>
           <input
             type = "text"
             name = "search"
