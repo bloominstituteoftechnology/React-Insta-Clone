@@ -1,12 +1,19 @@
-.Comment {
-    display: flex;
-    margin-bottom: -10px;
-}
-.User {
-    display: inline;
-    font-weight: bold;
-}
-
-.Comment p {
-    display: inline;
-}
+.comment-text {
+    text-align: left;
+    padding: 2px;
+    margin-left: 4px;
+  }
+  
+  .comment {
+    font-weight: 300;
+    font-size: 14px;
+  }
+  
+  .user {
+    font-weight: 500;
+    font-size: 12px;
+  }
+  
+  .heart {
+    width: 25px;
+  }

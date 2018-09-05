@@ -1,29 +1,46 @@
-import React, { Component } from 'react'
-// import logo from './logo.svg'
-import dummyData from './dummy-data'
-import PostContainer from './components/Post/PostContainer'
-import SearchBar from './components/Search/SearchBar'
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import dummyData from "./dummy-data";
+import PostsPage from "./components/PostsContainer/PostsPage.js";
 
-
- class App extends Component {
+class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData,
+      posts: [],
+      search: ""
     };
+  }
+
+  search = event => {
+    event.preventDefault();
+    let newPosts = [...this.state.posts];
+    newPosts = newPosts.filter(post => {
+      if (post.username === this.state.search) {
+        return post;
+      }
+    });
+    this.setState({ posts: newPosts });
+  };
+
+  handleChange = event => {
+    event.preventDefault();
+    this.setState({ [event.target.name]: event.target.value });
+  };
+  componentDidMount() {
+    this.setState({ posts: dummyData });
   }
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        {this.state.data.map((element) => {
-          return(
-            <PostContainer key={element.timestamp} post={element}/>
-          )
-        })}
+        <PostsPage
+          search={this.search}
+          handleChange={this.handleChange}
+          posts={this.state.posts}
+        />
       </div>
-    )
+    );
   }
 }
- export default App
+
+export default App;

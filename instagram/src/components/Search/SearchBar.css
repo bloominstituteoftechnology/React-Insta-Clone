@@ -1,19 +1,26 @@
-.SearchBar {
-    max-width: 800px;
-    width: 100%;
+.search-bar-wrapper {
+    border-bottom: 1px solid #3333;
+    height: 80px;
+    line-height: 70px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    height: 80px;
-}
-
-.Search input{
-    border-radius: 3px;
-    background-color: #FAFAFA;
-    color: #9a9a9a;
-    border: 1px solid #DBDBDB;
-    text-align: center;
-    width: 150px;
-    height: 22px;
-    font-size: 1.3rem;
-}
+    background: #ffffff;
+  }
+  
+  .image-wrapper {
+    height: 50px;
+  }
+  
+  .logo-image {
+    height: 100%;
+  }
+  
+  .social-wrapper {
+    display: flex;
+  }
+  
+  .social {
+    width: 20px;
+    height: 20px;
+  }
+  
