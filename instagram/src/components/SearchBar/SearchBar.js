@@ -8,7 +8,7 @@ import HeartIcon from '../../assets/heart-icon.png';
 import PropTypes from 'prop-types';
 
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <div className="header-container">
             <div className="instagram-logos">
@@ -16,11 +16,13 @@ const SearchBar = () => {
                 <img src={InstaText} alt="instagram text" className="insta-text" />
             </div>
             <div className="search-box">
-            <form>
+            <form
+                onChange={props.handleChange} 
+                onSubmit={props.searchPosts}>
                 <input 
                 type="text" 
                 placeholder="Search"
-                name="search" 
+                name="searchPosts" 
                 />
             </form>
             </div>

@@ -17,13 +17,18 @@ class App extends Component {
 
   searchPosts = e => {
     e.preventDefault();
+    let newPosts = [...this.state.posts];
+    newPosts = newPosts.filter(post => {
+      return post.username === this.state.searchPosts;
+    });
+    this.setState({posts: newPosts});
   }
 
 
-  handleChange = event => {
+  handleChange = e => {
+    e.preventDefault();
     this.setState({
-      [event.target.neme]: event.target.value
-    });
+      [e.target.name]: e.target.value});
   };
 
   componentDidMount() {
