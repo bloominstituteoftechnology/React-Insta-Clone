@@ -37,7 +37,8 @@ class CommentSection extends React.Component {
 			...this.state.comments,
 			{
 				username: 'You',
-				text: event.target.children[0].value
+				text: event.target.children[0].value,
+				id: 'You' + '/' + Date.now()
 			}
 		];
 		this.setState({
@@ -47,15 +48,14 @@ class CommentSection extends React.Component {
 		event.target.children[0].blur();
 	};
 
-	// removeComment = id => {
-	// 	const comments = [...this.state.comments];
-	// 	const index = comments.findIndex(comment => comment.id === id);
-	// 	todos[index].completed = !todos[index].completed;
-
-	// 	this.setState({
-	// 		comments
-	// 	});
-	// };
+	deleteComment = id => {
+		let comments = [...this.state.comments];
+		const index = comments.findIndex(comment => comment.id === id);
+		comments.splice(index, 1);
+		this.setState({
+			comments
+		});
+	};
 
 	componentDidMount() {
 		this.setState({
@@ -82,9 +82,12 @@ class CommentSection extends React.Component {
 				<div className="comments">
 					{this.state.comments.map(comment => (
 						<Comment
-							key={comment.username + '/' + Date.now()}
+							key={
+								comment.username + '/' + +Math.round(Math.random() * 1000000)
+							}
 							comment={comment}
 							addNewComment={this.addNewComment}
+							deleteComment={this.deleteComment}
 						/>
 					))}
 				</div>

@@ -1,4 +1,6 @@
 .Comment {
+	display: flex;
+	justify-content: space-between;
 	margin-bottom: 10px;
 }
 
@@ -7,8 +9,8 @@
 }
 
 #delete-comment {
-	background-position: -260px -438px;
-	width: 10px;
-	height: 10px;
+	background-position: -258px -436px;
+	width: 14px;
+	height: 14px;
 	padding: 0;
 }
