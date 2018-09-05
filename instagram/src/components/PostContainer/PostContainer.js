@@ -1,8 +1,7 @@
 import dummyData from "../../dummy-data";
 import React, { Component } from 'react';
 import './PostContainer.css';
-function PostContainer (props){
-    
+function PostContainer (props){    
     return (
         <div className= "comment-text">
             <h4>{props.comment.username}: </h4>
