@@ -37,6 +37,7 @@ class CommentContainer extends React.Component {
         return(
             <div>
                 {this.state.likes}
+
                 <button>
                     <img onClick={this.addLikes}
                         className="icon"
@@ -52,7 +53,17 @@ class CommentContainer extends React.Component {
                         alt="comment post icon">
                     </img>
                 </button>
+
+                   {this.state.comments.map((comment, index) => {
+                    return(
+                        <div key={index}>
+                            <Comment comment={comment} />
+                        </div>
+                    )
+                })}
+
                 <Timestamp />
+
                 <CommentInput 
                     addNewComment = {this.addNewComment}
                     handleChanges = {this.handleChanges}

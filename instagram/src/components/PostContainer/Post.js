@@ -17,6 +17,7 @@ function Post(props) {
 
             <CommentContainer 
                 comments = {props.post.comments}
+                timestamp = {props.post.timestamp}
             />
         </div>
     )
