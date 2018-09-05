@@ -12,7 +12,6 @@ class CommentInput extends Component {
     // Set the dummyData when the component mounts
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state.inputValue);
         this.props.addNewCom(this.state.inputValue, this.state.index);
     }
 

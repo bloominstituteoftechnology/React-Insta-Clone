@@ -1,6 +1,7 @@
 import React from 'react';
 import './SearchBar.css'
 
+// Handles the user's tabs
 function SearchIcons() {
     return (
         <div className="search-icons">

@@ -3,6 +3,7 @@ import dummyData from '../../dummy-data';
 import SearchBarContainer from '../../components/SearchBar/SearchBarContainer';
 import Posts from '../../components/PostContainer/Posts';
 
+// Index page of Posts
 class PostsPage extends Component {
   constructor() {
     super();
@@ -18,6 +19,7 @@ class PostsPage extends Component {
     this.setState({filteredState: dummyData})
   };
 
+  // Filter out the results based on the user's input
   handleSearch = (e) => {
     let updatedList = this.state.dummydata;
 

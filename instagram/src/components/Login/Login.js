@@ -15,13 +15,14 @@ class Login extends Component {
       };
     }
   
-    // Set the dummyData when the component mounts
+    /**
+     *  Check if the username and password is valid and login the user
+     *  and if invalid, display text stating username or password is
+     *  incorrect
+     */
     handleSubmit = (e) => {
         e.preventDefault();
-        // console.log('handlesubmit');
-        // localStorage.setItem('InstaUser', this.state.userValue);
-        // localStorage.setItem('InstaPass', this.state.passValue);
-        // console.log('handlesubmit');
+
         if (this.props.check(this.state.userValue, this.state.passValue)) {
             this.setState({rejected: false})
         } else {
@@ -30,6 +31,7 @@ class Login extends Component {
         
     }
 
+    // Update username value for Login
     updateInputValue(e) {
         this.setState({
             userValue: e.target.value,
@@ -37,6 +39,7 @@ class Login extends Component {
         });
     }
 
+    // Update password value for Login
     updatePassValue(e) {
         this.setState({
             passValue: e.target.value,
@@ -44,28 +47,28 @@ class Login extends Component {
         });
     }
 
+    // Creates an account by setting localstorage
     createAccount = (e) => {
         localStorage.setItem(this.state.userCreate, this.state.passCreate);
         this.setState({loginShow: true})
     }
 
+    // Update username value for Create Account
     updateCreateInputValue(e) {
         this.setState({
             userCreate: e.target.value
         });
     }
 
+    // Update password value for Create Account
     updateCreatePassValue(e) {
         this.setState({
             passCreate: e.target.value
         });
     }
 
+    // Toggles between Login and Creating an account
     updateCreate = (e) => {
-        // this.setState(prevState => ({
-        //     loginShow: !prevState.loginShow
-        // }));
-
         if (this.state.loginShow) {
             this.setState({loginShow: false})
         }

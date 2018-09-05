@@ -5,6 +5,7 @@ import SearchInput from './SearchInput';
 import SearchIcons from './SearchIcons';
 import Logout from './Logout';
 
+// handles the search bar
 function SearchBarContainer(props) {
     return (
         <div className="search-bar-container">

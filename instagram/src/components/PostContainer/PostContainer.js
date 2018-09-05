@@ -5,6 +5,7 @@ import PostFooter from './PostFooter';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css'
 
+// Handles the entire post component
 class PostContainer extends Component {
     constructor(props) {
       super(props);

@@ -1,6 +1,7 @@
 import React from 'react';
 import './SearchBar.css'
 
+// Header Logo
 function SearchLogo() {
     return (
         <div>

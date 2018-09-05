@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './PostContainer.css'
 
+// Handles the actions and likes for the Post.
 class PostFooterActions extends Component {
     constructor(props) {
       super(props);
@@ -9,8 +10,8 @@ class PostFooterActions extends Component {
       };
     }
 
+    // Updates the likes on the Post
     updateLikes = (event) => {
-        console.log('updateLikes');
         this.setState(prevState => ({
             likes: prevState.likes + 1
         }));
