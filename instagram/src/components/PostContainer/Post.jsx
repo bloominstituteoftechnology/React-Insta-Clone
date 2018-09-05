@@ -28,7 +28,6 @@ class Post extends React.Component {
   };
 
   render() {
-    
     return (
       <div className="post-wrapper">
         <div className="post-header-wrapper">
@@ -41,14 +40,20 @@ class Post extends React.Component {
             <i
               className="far fa-heart"
               onClick={this.like}
-              style={this.state.liked ? { color: "rgba(211, 88, 170, 0.8)" } : null}
+              style={
+                this.state.liked ? { color: "rgba(211, 88, 170, 0.8)" } : null
+              }
               className={
                 "fa-heart likes-heart " + (this.state.liked ? "fas" : "far")
               }
             />
             <i className="far fa-comment" />
           </div>
-          <p>{this.state.likes} likes</p>
+          <p style={this.state.likes > 9000 ? { color: "red" } : null}>
+            {this.state.likes > 9000
+              ? "IT'S OVER 9000!"
+              : this.state.likes + " likes"}
+          </p>
           <CommentSection post={this.props.post} />
         </div>
       </div>

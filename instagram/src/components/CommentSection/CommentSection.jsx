@@ -53,7 +53,9 @@ class CommentSection extends React.Component {
   };
 
   // TODO: might add a way to delete comment if i get time
-  deleteComment = event => { console.log("TODO: fill in some logic for this event method");
+  deleteComment = event => { console.log("TODO: fill in some logic for this event method", event.target.name);
+  // TODO: refactor this to be done in a react way and actually deal with the data
+  event.currentTarget.style.display = 'none'; // not the way to do it but it is visually correct just not in any way the actual feature that was requested. just using that as a placeholder for now
 };
   render() {
     return (
