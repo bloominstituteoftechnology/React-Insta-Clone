@@ -1,9 +1,8 @@
 {
-  "name": "instagram",
+  "name": "insurgram",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "moment": "^2.22.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts": "1.1.5"

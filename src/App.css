@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-  background: #fafafa;
-  height: 100%;
 }
 
 .App-logo {
@@ -25,14 +23,10 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.posts{
-  width:100%;
-  margin:0 auto;
-  max-width: 600px;
-  padding-top: 130px;
-  
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
