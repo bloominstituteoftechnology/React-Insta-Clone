@@ -23,7 +23,7 @@ class CommentSection extends React.Component {
         }
     }
     
-    componenetWillUnmount() {
+    componentWillUnmount() {
         this.setComments();
     }
 
