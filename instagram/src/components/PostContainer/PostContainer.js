@@ -1,30 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PostAvatar from './PostAvatar';
-import PostImg from './PostImg';
-import CommentContainer from '../CommentSection/CommentContainer';
+import Post from './Post';
 
 function PostContainer(props) {
+    //console.log(props.posts);
     return(
         <div>
             {props.posts.map((post, index) => {
                 return(
                     <div key={index}>
-                        <PostAvatar
-                            posterName = {post.username}
-                            posterAvatar = {post.thumbnailUrl}
-                        />
-
-                        <PostImg
-                            postImg = {post.imageUrl}
+                        <Post
+                            post = {post}
                         />
                     </div>
                 )
             })}
-
-            <CommentContainer  
-                posts = {props.posts} 
-            />
         </div>
     )
 }
