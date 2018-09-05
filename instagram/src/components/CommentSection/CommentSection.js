@@ -31,9 +31,9 @@ class CommentSection extends React.Component {
 			const comments = [
 				...this.state.comments,
 				{
-					username: 'You',
+					username: localStorage.getItem('username'),
 					text: event.target.children[0].value,
-					id: 'You' + '/' + Date.now()
+					id: localStorage.getItem('username') + '/' + Date.now()
 				}
 			];
 			this.setState({

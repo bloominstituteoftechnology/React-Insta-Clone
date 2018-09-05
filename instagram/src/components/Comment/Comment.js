@@ -18,7 +18,7 @@ const Comment = props => {
 				<span className="comment-text">{props.comment.text}</span>
 			</div>
 
-			{props.comment.username === 'You' && (
+			{props.comment.username === localStorage.getItem('username') && (
 				<button
 					id="delete-comment"
 					title="Delete Comment"
