@@ -11,8 +11,8 @@ const SearchBar = props => {
                 <a href="#"><img src={logo} /></a>
             </div>
             <div className="search">
-                <input value="Search" />
-                <div class="search-icon" style={{transform: 'rotate(-45deg)', fontWeight:'bold'}}>&#9906;</div>
+                <input placeholder="Search" />
+                <div className="search-icon" style={{transform: 'rotate(-45deg)', fontWeight:'bold'}}>&#9906;</div>
             </div>
 
             <Navigation />

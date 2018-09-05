@@ -1,9 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Comment from './Comment'
 import './CommentSection.css';
 
-const CommentSection = props => {
-    return (
+class CommentSection extends Component {
+
+    constructor(props) {
+        super();
+        this.state={
+            comments:props.comments,
+            likes:props.likes,
+            timestamp: props.timestamp, 
+            currentComment: ""
+        }
+    }
+
+    addNewComment = (e) => {
+        if (this.state.currentComment){
+        this.setState({
+            comments:[...this.state.comments, {username: "TheBrockstar", text:this.state.currentComment}],
+        }
+        )
+
+        e.currentTarget.value=null;
+    }
+    }
+
+    commentChange = (e) => {
+        this.setState({
+            currentComment: e.currentTarget.value
+        })
+    }
+
+    onEnterPress = (e) => {
+        if(e.keyCode === 13 && e.shiftKey === false) {
+            console.log("Hmm");
+            e.preventDefault();      
+            this.addNewComment(e);
+        }
+    }
+
+    render() { return (
           <div className="comment-section">
             <div className="comment-section-icons">
 
@@ -13,22 +49,27 @@ const CommentSection = props => {
 
             </div>
             <div className="likes">
-                <p>{props.likes} likes</p>
+                <p>{this.state.likes} likes</p>
             </div>
 
-            {props.comments.map(comment => {
+            {this.state.comments.map(comment => {
                 return <Comment 
                 username={comment.username} 
                 text={comment.text}
                 />
             }
             )}
+            <div className="timestamp"><p>{this.state.timestamp}</p></div>
             <div className= "comment-input">
-                <input value="Add a comment..." /><span class="ellipsis">···</span>
+                <form onSubmit={this.addNewComment}>
+                    <textarea placeholder="Add a comment..."
+                    onChange={this.commentChange} 
+                    onKeyDown={this.onEnterPress}></textarea>
+                </form>
+                <span className="ellipsis">···</span>
             </div>
-        </div>
-        
-    )
+        </div>  
+    )}
 }
 
 export default CommentSection;

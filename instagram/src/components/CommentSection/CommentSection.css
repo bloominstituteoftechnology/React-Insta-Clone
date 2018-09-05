@@ -25,6 +25,16 @@
     font-weight: bold;
 }
 
+.comment-section .timestamp {
+    font-size: 10px;
+    letter-spacing: .2px;
+    color: #999;
+}
+
+.comment-section .timestamp p {
+    margin-top: -5px;
+}
+
 .comment-section .comment-input {
     display: flex;
     justify-content: space-between;
@@ -34,13 +44,22 @@
     margin-top: 4px;
 }
 
-.comment-section .comment-input input {
-width: 95%;
-border: 0px;
-color: #999;
-outline: none;
-height: 18px;
+.comment-section .comment-input form {
+    width: 95%;
+    height: 18px;
 }
+
+.comment-section .comment-input textarea {
+    width: 100%;
+    border: 0px;
+    outline: none;
+    resize: none;
+}
+
+.comment-section .comment-input textarea::placeholder {
+    color: #999;
+    font-family: sans-serif;
+} 
 
 .comment-section .comment-input .ellipsis {
     font-weight: bold;
