@@ -33,3 +33,7 @@
     border: 1px solid lightgray;
     outline: none;
 }
+
+.search-box:focus {
+    background-color: white;
+}

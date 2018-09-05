@@ -9,9 +9,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      instaData: dummyData,
-      searchInput: '',
-      commentInput: ''
+      instaData: [],
+      searchInput: ''
     }
   }
 
@@ -22,17 +21,16 @@ class App extends Component {
     });
   }
 
-  handleComment = (event) => {
-    event.preventDefault();
-    this.setState({
-      commentInput: 'SHORT AND STOUT'
-    });
-  }
-
   handleInput = (event) => {
     this.setState({
       [event.target.name]: event.target.value
     });
+  }
+
+  componentDidMount() {
+    this.setState({
+      instaData: dummyData
+    })
   }
 
   render() {
@@ -45,9 +43,6 @@ class App extends Component {
         />
         <PostContainer 
           posts={this.state.instaData} 
-          commentInput={this.state.commentInput} 
-          handleCommentInput={this.handleComment} 
-          handleComment={this.handleInput} 
         />
       </div>
     );

@@ -17,9 +17,6 @@ function PostContainer(props) {
                         <CommentSection 
                             timestamp={postData.timestamp} 
                             comments={postData.comments} 
-                            commentInput={props.commentInput} 
-                            handleCommentInput={props.handleCommentInput} 
-                            handleComment={props.handleComment} 
                         />
                     </div>
                 );
@@ -43,10 +40,7 @@ PostContainer.propTypes = {
                 })
             )
         })
-    ),
-    commentInput: PropTypes.string,
-    handleCommentInput: PropTypes.func,
-    handleComment: PropTypes.func
+    )
 }
 
 export default PostContainer;
