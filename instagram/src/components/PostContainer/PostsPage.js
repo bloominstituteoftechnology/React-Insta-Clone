@@ -1,9 +1,9 @@
-import React from 'react';
-import dummyData from '../..dummy-data';
+import React, { Component } from "react";
+import dummyData from '../../dummy-data';
 import SearchBar from "../SearchBar/SearchBarContainer";
 import PostsContainer from "./PostsContainer";
-import ReactDOM from "react-dom";
-import App from "./App";
+
+
 
 class PostsPage extends Component {
     constructor(){
