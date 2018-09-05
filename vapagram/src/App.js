@@ -14,8 +14,7 @@ class App extends Component {
   }
   componentDidMount() {
     this.setState({
-      posts: dummyData,
-      comments: [dummyData.comments]
+      posts: dummyData
     });
     console.log('comments', this.state.comments);
   }
