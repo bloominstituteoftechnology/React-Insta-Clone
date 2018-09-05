@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 // import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostContainer';
 
  class App extends Component {
   constructor() {
@@ -21,9 +22,7 @@ import PostContainer from './components/PostContainer/PostContainer';
     return (
       <div className="appContainer">
         {/* <SearchBar /> */}
-        {this.state.posts.map(post => { return (
-          <PostContainer post={post} key={post.timestamp}/>)
-        })}
+        <PostsPage/>
       </div>
     );
   }

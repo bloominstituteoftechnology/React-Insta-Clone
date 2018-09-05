@@ -3,6 +3,17 @@ import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 import './PostContainer.css';
 
+
+const PostsPage = props => 
+  // return (
+    <div> 
+      {this.state.posts.map(post => { return (<PostContainer post={post} key={post.timestamp}/>)})}
+    </div>
+  // );
+
+
+
+
  function PostContainer(props) {
 
   return (
@@ -29,3 +40,4 @@ import './PostContainer.css';
 };
 
  export default PostContainer;
+ export default PostsPage;
