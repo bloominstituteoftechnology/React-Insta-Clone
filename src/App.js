@@ -4,6 +4,7 @@ import dummyData from './dummy-data'
 import Search from './components/SearchBar/Search'
 import PostsPage from './components/PostContainer/PostsPage'
 import Authenticate from './components/Authentication/Authentication'
+import Login from './components/Login/Login'
 
 class App extends React.Component {
   constructor() {
@@ -22,10 +23,16 @@ class App extends React.Component {
     this.setState({ data })
   }
 
+  login = (username) => {
+    let user = localStorage.getItem('user')
+    if (!user) localStorage.setItem('user', username)
+  }
+
   render() {
     const App = () => {
       return (
         <div className="App">
+          <Login login={this.login} />
           <Search
             className="Search"
             search={this.search}
