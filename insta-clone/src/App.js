@@ -4,6 +4,9 @@ import dummyData from './dummy-data.js';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostList from './components/PostContainer/PostList';
 import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './components/Authentication/Authenticate';
+
+Authenticate(App);
 
 class App extends Component {
   constructor() {
@@ -47,5 +50,7 @@ class App extends Component {
 
 
 }
+
+
 
 export default App;
