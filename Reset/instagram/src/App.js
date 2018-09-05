@@ -4,6 +4,7 @@ import dummyData from './dummy-data';
 import PostsContainer from './components/PostsContainer/PostsContainer';
 import SearchBar from './components/SearchBar/SearchBarContainer';
 import PostsPage from './components/PostsContainer/PostsPage';
+import Authenticate from './components/Authentication/Authenticate';
 
 class App extends Component {
   constructor() {
@@ -12,12 +13,14 @@ class App extends Component {
       posts: dummyData
     };
   }
+
   render() {
     return (
       <div className="App">
         <SearchBar />
         <PostsContainer posts={this.state.posts}/>
         <PostsPage/>
+        <Authenticate />
       </div>
     );
   }
