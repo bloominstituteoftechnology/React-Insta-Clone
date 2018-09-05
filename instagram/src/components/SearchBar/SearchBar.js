@@ -34,6 +34,14 @@ class SearchBar extends React.Component {
 		}
 	};
 
+	clearLocalStorage = () => {
+		localStorage.clear();
+	};
+
+	logout = () => {
+		localStorage.removeItem('username');
+	};
+
 	render() {
 		return (
 			<nav className="SearchBar">
@@ -71,9 +79,21 @@ class SearchBar extends React.Component {
 					</div>
 
 					<div className="navigation">
-						<a href="/" id="explore" className="sprite" />
+						<a
+							href="/"
+							id="explore"
+							className="sprite"
+							onClick={this.clearLocalStorage}
+							title="Clear Local Storage"
+						/>
 						<a href="/" id="activity" className="sprite" />
-						<a href="/" id="profile" className="sprite" />
+						<a
+							href="/"
+							id="profile"
+							className="sprite"
+							onClick={this.logout}
+							title="Log Out"
+						/>
 					</div>
 				</div>
 			</nav>
