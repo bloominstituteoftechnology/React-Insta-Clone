@@ -38,10 +38,11 @@ class App extends Component {
     return (
       <div className="App">
         <PostsPage />
+        
       </div>
     );
   }
 }
-const UserApp = Authenticate(App);
-export default App;
+
+export default Authenticate(App);
 

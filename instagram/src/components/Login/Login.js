@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 
 
+
+
 class Login extends Component {
     constructor(){
         super();
@@ -13,9 +15,7 @@ class Login extends Component {
         event.preventDefault();
         if(this.state.loginInput){
           localStorage.setItem('username', this.state.loginInput);
-          this.setState({
-            loginInput: ''
-          });
+         window.location.reload();
         }
         
       }
