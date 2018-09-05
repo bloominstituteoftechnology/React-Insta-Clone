@@ -53,6 +53,14 @@ Post.propTypes = {
   timestamp: PropTypes.string,
   username: PropTypes.string,
   likes: PropTypes.number,
+  comments: PropTypes.arrayOf(
+    PropTypes.shape(
+      {
+        text: PropTypes.string,
+        username: PropTypes.string
+      }
+    )
+  )
 }
 
 export default Post

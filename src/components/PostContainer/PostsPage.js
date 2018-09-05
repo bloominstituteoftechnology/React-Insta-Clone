@@ -21,12 +21,24 @@ const PostsPage = (props) => {
 
 
 PostsPage.propTypes = {
-  post: PropTypes.object,
-  imageUrl: PropTypes.string,
-  thumbnailUrl: PropTypes.string,
-  timestamp: PropTypes.string,
-  username: PropTypes.string,
-  likes: PropTypes.number,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({ 
+      post: PropTypes.object,
+      imageUrl: PropTypes.string,
+      thumbnailUrl: PropTypes.string,
+      timestamp: PropTypes.string,
+      username: PropTypes.string,
+      likes: PropTypes.number,
+      comments: PropTypes.arrayOf(
+        PropTypes.shape(
+          {
+            text: PropTypes.string,
+            username: PropTypes.string
+          }
+        )
+      )
+    })
+  )
 }
 
 export default PostsPage
