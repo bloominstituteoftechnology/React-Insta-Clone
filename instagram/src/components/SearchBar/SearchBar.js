@@ -3,7 +3,7 @@ import './SearchBar.css';
 
 function SearchBar(props) {
   return (
-    <form>
+    <form onSubmit={props.search} onChange={props.handleSearchInput}>
       <input type="text" placeholder="&#xf002; Search" />
     </form>
   );
