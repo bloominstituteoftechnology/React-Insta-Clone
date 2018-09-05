@@ -1,0 +1,50 @@
+.sprite-post {
+  display: inline-block;
+  background: url('https://www.instagram.com/static/bundles/base/sprite_glyphs.png/5bc02fa85667.png'); 
+}
+
+#heart {
+ background-position: -26px -92px;
+ width: 24px;
+ height: 22px;
+}
+
+#bubble {
+  margin-left: 15px;
+	background-position:  -26px -65px;
+	width: 24px;
+	height: 24px;
+}
+
+.comment-container {
+  max-width: 640px;
+  width: 100%;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-start;
+  margin: 5px 0;
+}
+
+.data-comments {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.data-comments span {
+  font-weight: bold;
+}
+
+.data-comments p {
+  line-height: 0px;
+}
+
+.time-stamp p {
+  color: gray;
+}

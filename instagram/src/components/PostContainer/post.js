@@ -13,13 +13,7 @@ function Post(props) {
       <div className='post-image'>
         <img src={props.post.imageUrl} alt='Post image' />
       </div>
-      <div className='like-comment'>
-        <p>{props.post.likes} likes</p>
-      </div>
-        <CommentSection comments={props.post.comments} />
-      <div className='time-stamp'>
-        <p>{props.post.timestamp}</p>
-      </div>
+      <CommentSection comments={props.post.comments} likes={props.post.likes} id={props.post.imageUrl} timestamp={props.post.timestamp} />
     </div>
   );
 }

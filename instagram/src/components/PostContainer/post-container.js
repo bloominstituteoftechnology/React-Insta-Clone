@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Post from './post';
+import './post-container.css';
 
 function PostContainer(props) {
   return(
@@ -11,7 +12,7 @@ function PostContainer(props) {
 };
 
 PostContainer.PropTypes = {
-  post: PropTypes.arrayOf(PropTypes.object)
+  post: PropTypes.array
 };
 
 

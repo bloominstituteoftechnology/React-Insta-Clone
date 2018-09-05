@@ -1,0 +1,25 @@
+.post-container {
+  max-width: 640px;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.post-header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.post-header img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: auto 2%;
+}
+
+.post-image img {
+  max-width: 640px;
+  width: 100%;
+  height: auto;
+}
