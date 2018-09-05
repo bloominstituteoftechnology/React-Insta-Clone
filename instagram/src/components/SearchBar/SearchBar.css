@@ -1,8 +1,10 @@
 .search-bar-wrapper {
-    /* border: 1px solid black; */
+    border-bottom: 1px solid gray;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 1040px;
+    margin: 0 auto;
 }
 
 .image-wrapper {
@@ -24,11 +26,11 @@
 
 .search-bar {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
-input {
+.search-control {
     width: 150px;
     height: 20px;
 }
