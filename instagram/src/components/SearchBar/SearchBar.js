@@ -2,7 +2,7 @@ import React from 'react';
 import './SearchBar.css';
 import instagram from '../img/instagram.png';
  
-function SearchBar() {
+function SearchBar(props) {
     return (
         <div className="header-search-bar">
             <div className="camera-icon">
@@ -14,7 +14,7 @@ function SearchBar() {
             </div>
             <div className="search-bar-wrapper">
                 <span className="fa fa-search"></span>
-                <input type="text" placeholder="Search" className="search-bar" />
+                <input type="text" placeholder="Search" className="search-bar" onKeyDown={props.searchPosts} />
             </div>
             <div className="social-wrapper">
                 <i className="far fa-compass"></i>
