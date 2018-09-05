@@ -2,10 +2,10 @@
   position: fixed;
   height: 80px;
   z-index: 5;
+  background-color: rgba(255, 255, 255, 0.4)
 }
 
 .postcontainer-wrapper {
   position: relative;
   top: 100px;
-
 }

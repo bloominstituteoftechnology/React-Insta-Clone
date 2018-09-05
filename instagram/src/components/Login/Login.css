@@ -10,7 +10,7 @@
 .login-logo {
   max-height: 50px;
   margin-bottom: 10px;
-  font-family: 'Grand Hotel', cursive;
+  font-family: "Grand Hotel", cursive;
   font-size: 32px;
 }
 
@@ -23,6 +23,9 @@
   height: 350px;
   border: 1px solid #ccc;
   background: #fff;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(173, 173, 173, 0.66);
+  -moz-box-shadow: 2px 4px 10px 1px rgba(173, 173, 173, 0.66);
+  box-shadow: 2px 4px 10px 1px rgba(173, 173, 173, 0.66);
 }
 
 .login-wrapper form input {
