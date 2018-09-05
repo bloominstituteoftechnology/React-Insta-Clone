@@ -22,9 +22,10 @@ class SearchBar extends React.Component {
           {/* <img src="./instagram-log.png" alt="instagram logo" /> */}
         </div>
         <form
-          onSubmit={event =>
-            this.props.searchPosts(event, this.state.inputText)
-          }
+          onSubmit={event => {
+            this.props.searchPosts(event, this.state.inputText);
+            console.log(this.state);
+          }}
         >
           <input
             value={this.state.inputText}
