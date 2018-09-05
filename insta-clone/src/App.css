@@ -66,3 +66,10 @@ img {
   background-color: beige;
   padding: 1rem;
 }
+
+.heart {
+  display: flex;
+  align-self: center;
+  margin: auto;
+  width: 2rem;
+}
