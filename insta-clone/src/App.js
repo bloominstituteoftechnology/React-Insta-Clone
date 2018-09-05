@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostList from './components/PostContainer/PostList';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
+import Login from './components/Login/Login';
 
-Authenticate(App);
+
 
 class App extends Component {
   constructor() {
@@ -20,6 +19,10 @@ class App extends Component {
 
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value })
+  }
+
+  login = (event) => {
+    localStorage.setItem('username', '{event.target.value}');
   }
 
   searchPosts = (event) => {
@@ -38,6 +41,7 @@ class App extends Component {
 
   render() {
     return (
+
       <div className="App">
         <PostsPage
         handleChange={this.handleChange}
@@ -45,12 +49,11 @@ class App extends Component {
         postData={this.state.postData}
         />
       </div>
-    );
-  }
-
+    )}
 
 }
 
 
 
-export default App;
+
+export default Authenticate(App);
