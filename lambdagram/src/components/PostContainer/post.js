@@ -17,7 +17,7 @@ function Post(props) {
             </div>
             <div className='post-footer'>
                 <div>
-                    <img src={heart} alt='Heart' />
+                    <img src={heart} alt='Heart' onClick={ (e) => props.handleLikes(e, props.index) } />
                     <img src={commentbubble} alt='Comment' />
                 </div>
                 <p>{`${props.postData.likes} likes`}</p>
@@ -33,7 +33,9 @@ Post.propTypes = {
         imageUrl: PropTypes.string.isRequired,
         likes: PropTypes.number.isRequired,
         timestamp: PropTypes.string.isRequired
-    }).isRequired
+    }).isRequired,
+    handleLikes: PropTypes.func.isRequired,
+    index: PropTypes.number
 }
 
 export default Post;

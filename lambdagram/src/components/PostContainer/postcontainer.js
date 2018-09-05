@@ -8,11 +8,13 @@ import CommentSection from '../CommentSection/commentsection';
 function PostContainer(props) {
     return (
         <div className='posts-container'>
-            {props.posts.map( (postData) => {
+            {props.posts.map( (postData, index) => {
                 return (
                     <div className='post-container' key={postData.timestamp + '-' + postData.username} >
                         <Post 
                             postData={postData} 
+                            handleLikes={props.handleLikes} 
+                            index={index} 
                         /> 
                         <CommentSection 
                             timestamp={postData.timestamp} 
@@ -40,7 +42,8 @@ PostContainer.propTypes = {
                 })
             )
         })
-    )
+    ),
+    handleLikes: PropTypes.func
 }
 
 export default PostContainer;
