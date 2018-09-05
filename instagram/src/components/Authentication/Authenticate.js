@@ -10,7 +10,11 @@ const Authenticate = App =>
       };
     }
     componentDidMount() {
-        this.setState({ loggedIn: true });
+        if (!localStorage.getItem('user')) {
+            this.setState({ loggedIn: false });
+        } else {
+            this.setState({ loggedIn: true });
+        }
     }
     render() {
       if (this.state.loggedIn) {
