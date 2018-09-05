@@ -8,7 +8,8 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.comments,
-      newComment: ''
+      newComment: '',
+      heartCount: 0
     };
   }
 
@@ -24,6 +25,14 @@ class CommentSection extends React.Component {
       });
     }
   };
+  heartCount = () => {
+    console.log(this.state.heartCount);
+    this.setState(prevState => {
+      return {
+        heartCount: prevState.heartCount + 1
+      };
+    });
+  };
 
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value }, () => {
@@ -36,7 +45,9 @@ class CommentSection extends React.Component {
         {this.state.comments.map((c, i) => (
           <Comment key={i} comment={c} />
         ))}
-        <div className="heart">♥</div>
+        <div className="heart" onClick={this.heartCount}>
+          ♥<span>{this.state.heartCount}</span>
+        </div>
         <CommentInput
           addComment={this.addNewComment}
           handleChange={this.handleChange}

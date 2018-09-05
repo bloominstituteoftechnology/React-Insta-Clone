@@ -8,19 +8,36 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: [],
+      search: ''
     };
   }
+  search = event => {
+    event.preventDefault();
+    let posts = [...this.state.posts];
+    posts = posts.filter(post => {
+      if (post.username === this.state.search) {
+        return post;
+      } else {
+        return null;
+      }
+    });
+    this.setState({ posts });
+  };
+  handleChange = event => {
+    event.preventDefault();
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
   componentDidMount() {
     this.setState({
       posts: dummyData
     });
-    console.log('comments', this.state.comments);
   }
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar search={this.search} handleChange={this.handleChange} />
         <PostsContainer
           posts={this.state.posts}
           comments={this.state.comments}
