@@ -5,7 +5,7 @@ const SearchBar = props => {
         <div>
             <div className = 'header-bar'>
           <h1>Instagram</h1>
-          <input type='search' placeholder = 'Search...'></input>
+          <input type='search' placeholder = 'Search...' onKeyDown={props.search}></input>
           </div>
         </div>
     )

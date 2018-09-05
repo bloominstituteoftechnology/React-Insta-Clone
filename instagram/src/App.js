@@ -3,26 +3,8 @@ import './App.css';
 import PostsPage from './components/PostsContainer/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
 
-class App extends Component {
-  constructor(props){
-    super(props);
+// if App is returned from Authenticate, render the PostsPage
+const App = () => <PostsPage />
 
-    this.state = {}
-  }
-
-
-  render() {
-    
-    /*The root App component of your application should 
-    import the dummy data from the dummy-data.js file with import 
-    dummyData from './dummy-data'; and iterate over said data, 
-    passing each individual object as a prop to an instance of PostContainer.
-    */
-
-    return (
-      <PostsPage />
-    );
-  }
-}
-
-export default App;
+// Runs App through Authenticate before anything renders
+export default Authenticate(App);
