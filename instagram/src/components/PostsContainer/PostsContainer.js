@@ -5,7 +5,9 @@ import './Posts.css';
 function PostsContainer(props) {
     return (
             <div className="posts-container">
-                {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
+                {props.posts.filter(post => {
+                return post.username.includes(props.searchTerm);
+                 }).map(p => <Post key={p.imageUrl} post={p} />)}
             </div>
     );
 };

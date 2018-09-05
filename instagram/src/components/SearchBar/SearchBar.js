@@ -14,7 +14,7 @@ function SearchBar(props) {
             </div>
             <div className="search-bar-wrapper">
                 <span className="fa fa-search"></span>
-                <input type="text" placeholder="Search" className="search-bar" onKeyDown={props.searchPosts} />
+                <input type="text" placeholder="Search" className="search-bar" name='search'  onChange={props.handleInput}/>
             </div>
             <div className="social-wrapper">
                 <i className="far fa-compass"></i>
