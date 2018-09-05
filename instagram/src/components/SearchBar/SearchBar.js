@@ -21,6 +21,18 @@ class SearchBar extends React.Component {
 		this.searchInput.current.focus();
 	};
 
+	updateSearchInput = event => {
+		this.setState({
+			searchText: event.target.value
+		});
+	};
+
+	keyPress = event => {
+		if (event.key === 'Enter' && this.state.searchText) {
+			this.props.search(this.state.searchText);
+		}
+	};
+
 	render() {
 		return (
 			<nav className="SearchBar">
@@ -36,7 +48,8 @@ class SearchBar extends React.Component {
 							className="search-input"
 							placeholder="Search"
 							ref={this.searchInput}
-							onKeyPress={this.props.search}
+							onChange={this.updateSearchInput}
+							onKeyPress={this.keyPress}
 							onBlur={this.toggleSearchLid}
 						/>
 						<span className="sprite" id="search" />
@@ -49,7 +62,9 @@ class SearchBar extends React.Component {
 								}}
 							>
 								<span id="search" className="sprite" />
-								<span className="search-lid-text">Search</span>
+								<span className="search-lid-text">
+									{this.state.searchText || 'Search'}
+								</span>
 							</button>
 						)}
 					</div>

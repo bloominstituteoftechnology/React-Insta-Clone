@@ -12,15 +12,13 @@ class App extends React.Component {
 		};
 	}
 
-	search = event => {
-		if (event.key === 'Enter' && event.target.value) {
-			const posts = [...this.state.posts].filter(post =>
-				post.username.includes(event.target.value)
-			);
-			this.setState({
-				posts
-			});
-		}
+	search = string => {
+		const posts = [...this.state.posts].filter(post =>
+			post.username.includes(string)
+		);
+		this.setState({
+			posts
+		});
 	};
 
 	componentDidMount() {
