@@ -23,6 +23,7 @@ class CommentContainer extends React.Component {
             ],
             newComment: ""
         });
+        event.target.reset();
         console.log(this.state.comments);
     }
 
