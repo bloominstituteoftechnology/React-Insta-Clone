@@ -9,7 +9,8 @@ class CommentSection extends React.Component {
         super(props);
         this.state = {
             comments: props.comments,
-            newComment: ''
+            newComment: '',
+            likes: 0
         };
     }
 
@@ -28,10 +29,16 @@ class CommentSection extends React.Component {
         this.setState({ [event.target.name]: event.target.value });
     }
 
+    increaseLikes = event => {
+        event.preventDefault();
+        this.setState({ likes: this.state.likes + 1 });
+    }
+
     render() {
         return (
             <div className='comment-section'>
-                <img className='heart' src={Heart} />
+                {this.state.likes}
+                <img onClick={this.increaseLikes} className='heart' src={Heart} />
                 {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
                 <CommentInput 
                     addNewComment={this.addNewComment} 
