@@ -19,7 +19,7 @@ class PostContainer extends Component {
                 <PostHeader thumbImg={this.props.data.thumbnailUrl} userN={this.props.data.username}/>
                 <PostBanner bannerImg={this.props.data.imageUrl}/>
                 <PostFooter likes={this.props.data.likes} />
-                <CommentSection comments={this.props.data.comments}/>
+                <CommentSection comments={this.props.data.comments} username={this.props.username}/>
             </div>
         );
     }

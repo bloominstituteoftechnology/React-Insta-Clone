@@ -5,10 +5,12 @@ const Authenticate = App => class extends Component {
     constructor() {
         super();
         this.state = {
-            loggedIn: false
+            loggedIn: false,
+            username: '',
         }
     }
 
+    // Check if the user is already logged in and set the state appropriatly
     componentDidMount() {
         if (localStorage.getItem('InstaLogged')) {
             this.setState({loggedIn: true});
@@ -18,15 +20,20 @@ const Authenticate = App => class extends Component {
         }
     }
 
+    // Checks if the creditials are correct.
     checkLogin = (user, pass) => {
         if (localStorage.getItem(user) === pass) {
-            this.setState({loggedIn: true});
+            this.setState({loggedIn: true, username: user});
             localStorage.setItem('InstaLogged', true);
+            return true;
         }
+
+        return false;
 
 
     }
 
+    // Removes the localstorage for automatic login
     forceUpd = (e) => {
         localStorage.removeItem('InstaLogged');
         this.setState({loggedIn: false});
@@ -34,7 +41,7 @@ const Authenticate = App => class extends Component {
 
     render() {
         if (this.state.loggedIn) {
-            return <App forceUpd={this.forceUpd}/>
+            return <App forceUpd={this.forceUpd} username={this.state.username}/>
         }
 
         return <Login check={this.checkLogin}/>

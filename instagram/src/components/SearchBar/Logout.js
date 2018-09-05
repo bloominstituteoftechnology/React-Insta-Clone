@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import './SearchBar.css'
 
 class Logout extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     logout = (e) => {
         this.props.forceUpd();

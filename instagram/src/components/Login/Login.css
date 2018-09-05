@@ -6,6 +6,10 @@
     align-items: center; */
 }
 
+.login-title {
+    padding-left: 2%;
+}
+
 .login-form {
     margin: 5%;
     display: flex;
@@ -33,6 +37,15 @@
     cursor: pointer;
 }
 
+.login-reject {
+    color: red;
+    padding: 2%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
 .create-form {
     margin: 5%;
     display: flex;
@@ -46,6 +59,7 @@
 
 .create-buttons {
     display: flex;
+    width: 100%;
     justify-content: space-between;
+    margin-left: 1%;
 }
-

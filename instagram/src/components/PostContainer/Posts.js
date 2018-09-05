@@ -12,7 +12,7 @@ Posts.propTypes = {
 // Map the array and create a new Post for each post in the array
 function Posts(props) {
     return (
-        props.data.map(data => <PostContainer key={data.username} data={data}/>)
+        props.data.map(data => <PostContainer key={data.username} data={data} username={props.username}/>)
     )
 };
 

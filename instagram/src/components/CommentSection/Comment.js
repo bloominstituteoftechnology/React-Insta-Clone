@@ -1,6 +1,7 @@
 import React from 'react';
 import './CommentSection.css'
 
+// Outputs a comment
 function Comment(props) {
     return (
         <div className="comment">

@@ -4,14 +4,11 @@ import './App.css';
 import Authenticate from './components/Authentication/Authenticate';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
       <div className="App">
-        <PostsPage forceUpd={this.props.forceUpd}/>
+        <PostsPage forceUpd={this.props.forceUpd} username={this.props.username}/>
         
       </div>
     );

@@ -34,7 +34,7 @@ class PostsPage extends Component {
       <div className="App">
         <SearchBarContainer hdlSearch={this.handleSearch} forceUpd={this.props.forceUpd} />
         <div className="content">
-          <Posts data={this.state.dummydata} />
+          <Posts data={this.state.dummydata} username={this.props.username} />
         </div>
         
       </div>

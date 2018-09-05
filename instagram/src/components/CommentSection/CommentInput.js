@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './CommentSection.css'
-
 class CommentInput extends Component {
     constructor(props) {
       super(props);
@@ -17,6 +16,7 @@ class CommentInput extends Component {
         this.props.addNewCom(this.state.inputValue, this.state.index);
     }
 
+    // Update the input's value when entering a keystroke
     updateInputValue(e) {
         this.setState({
           inputValue: e.target.value
