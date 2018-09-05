@@ -14,7 +14,7 @@ class PostContainer extends Component {
       likes: 0,
       clickedLike: false,
     }
-  }
+  } 
 
   componentDidMount() {
     console.log('PostContainer - componentDidMount()');
