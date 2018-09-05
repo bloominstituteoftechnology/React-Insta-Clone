@@ -1,4 +1,5 @@
 import React from 'react';
+import Authenticate from './components/Authentication/Authenticate';
 import PostsPage from './components/PostContainer/PostsPage';
 import './App.css';
 
@@ -9,8 +10,12 @@ class App extends React.Component {
 	}
 
 	render() {
-		return <PostsPage />;
+		return (
+			<div className="App">
+				<PostsPage />
+			</div>
+		);
 	}
 }
 
-export default App;
+export default Authenticate(App);
