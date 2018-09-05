@@ -4,10 +4,11 @@ import dummyData from './dummy-data.js';
 import PostsPage from './components/PostContainer/PostsPage.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import Authenticate from './components/Authentication/Authenticate';
+import PostPage from './components/PostContainer/PostsPage.js';
 
 
 
-const App=Authenticate(
+const App=Authenticate( 
   class App extends Component {
   constructor() {
     super();
@@ -15,41 +16,24 @@ const App=Authenticate(
       posts:[],
       filteredPosts:[],
       searchBarValue:'',
+      username:''
 
     }
   }
   componentDidMount(){
-    this.setState({posts:dummyData});
+    const user=localStorage.getItem('username');
+    this.setState({username: user});
   }
   
-  handleSearchBarChange=(event)=>{
-    this.setState({searchBarValue:event.target.value},()=>this.filterPosts());
-    }
-  filterPosts=()=>{
-    let filteredPosts=this.state.posts.slice();
-    filteredPosts=filteredPosts.filter((e)=>e.username.includes(this.state.searchBarValue));
-    this.setState({filteredPosts:filteredPosts});
-  }
-  liked=(data)=>{
-    const postsCopy=this.state.posts.slice();
-    postsCopy.forEach(e=>{
-      if(e===data){
-        if (e.liked===undefined||e.liked===false){
-          e.likes+=1; e.liked=true;
-        } else {
-        e.likes-=1; e.liked=false;
-      }}});
-    return this.setState({posts:postsCopy});
-  }
+  
   render() {
     return (
       <div className="App">
-    <SearchBar searchValue={this.searchBarValue} handleInputChange={this.handleSearchBarChange}/>
-        <PostsPage searchBarValue={this.state.searchBarValue} posts={this.state.posts} filteredPosts={this.state.filteredPosts} 
-        liked={this.liked} handleInputChange={this.handleSearchBarChange}/>
+    <PostPage />
       </div>
     );
   }
-});
+}
+);
 
 export default App;
