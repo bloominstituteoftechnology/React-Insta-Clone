@@ -2,8 +2,8 @@ import React from 'react'
 import Login from '../Login/Login'
 
 const Authenticate = (App) => class extends React.Component {
-  constructor(App) {
-    super(App)
+  constructor() {
+    super()
     this.state = {
       loggedIn: false
     }
@@ -11,12 +11,9 @@ const Authenticate = (App) => class extends React.Component {
 
   componentDidMount() {
     let user = localStorage.getItem('user')
-    if (!user) {
-      this.setState({ loggedIn: false })
-    }
-    else if (user) {
-      this.setState({ loggedIn: true })
-    }
+    
+    if (!user) this.setState({ loggedIn: false })
+    else if (user) this.setState({ loggedIn: true })
   }
 
   render() {
