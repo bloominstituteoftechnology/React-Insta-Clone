@@ -19,13 +19,16 @@ class CommentContainer extends React.Component {
         this.setState({
             comments: [
                 ...this.state.comments,
-                {userName: "User", text: this.state.newComment}
-            ]
+                {username: "User", text: this.state.newComment}
+            ],
+            newComment: ""
         });
+        console.log(this.state.comments);
     }
 
     handleChanges = event => {
         this.setState({[event.target.name]: event.target.value})
+        this.setState({newComment: event.target.value});
     }
 
     addLikes = event => {
@@ -54,7 +57,7 @@ class CommentContainer extends React.Component {
                     </img>
                 </button>
 
-                   {this.state.comments.map((comment, index) => {
+                {this.state.comments.map((comment, index) => {
                     return(
                         <div key={index}>
                             <Comment comment={comment} />
