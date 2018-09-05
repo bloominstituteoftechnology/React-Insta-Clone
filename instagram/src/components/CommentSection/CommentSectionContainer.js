@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Comment from "./Comment";
 import CommentInput from "./CommentInput";
-import Heart from "../../assets/heart.svg";
+import Heart from "./heart.svg";
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class CommentSection extends React.Component {
     return (
       <div>
         {this.state.likes}
-        <img onClick={this.increaseLikes} className="heart" src={Heart} />
+        <img onClick={this.increaseLikes} className="heart" src={Heart} alt=""/>
         {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
         <CommentInput
           addNewComment={this.addNewComment}
