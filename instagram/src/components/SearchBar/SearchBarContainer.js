@@ -3,6 +3,7 @@ import SearchLogo from './SearchLogo';
 import './SearchBar.css'
 import SearchInput from './SearchInput';
 import SearchIcons from './SearchIcons';
+import Logout from './Logout';
 
 function SearchBarContainer(props) {
     return (
@@ -12,6 +13,7 @@ function SearchBarContainer(props) {
             </div>
             <div className="search-input">
                 <SearchInput hdlSearch={props.hdlSearch}/>
+                <Logout />
             </div>
             <div>
                 <SearchIcons />
