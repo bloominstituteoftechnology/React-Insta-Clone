@@ -4,21 +4,19 @@ import PostsPage from "./components/PostContainer/PostsPage";
 import Authenticate from "./components/Authentication/Authenticate";
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {};
-     
   }
 
-  render(){
+  render() {
     return (
       <div className="App">
-        <PostsPage/>
+        <PostsPage />
       </div>
     );
   }
-  
- }
+}
  
  
  
