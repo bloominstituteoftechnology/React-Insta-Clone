@@ -1,9 +1,18 @@
 import React from 'react';
+import Login from '../Login/Login';
 
-const Authenticate = (App) =>
+const Authenticate = (App, cb) =>
   class extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        loggedIn: false,
+      };
+    }
+
     render() {
-      return <App />;
+      console.log('authenticate', cb);
+      return this.state.loggedIn ? <App /> : <Login />;
     }
   };
 

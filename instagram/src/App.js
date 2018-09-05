@@ -12,4 +12,4 @@ class App extends Component {
     );
   }
 }
-export default Authenticate(App);
+export default Authenticate(App, this.login);
