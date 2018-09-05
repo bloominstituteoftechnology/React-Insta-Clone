@@ -16,11 +16,6 @@
 	margin: 0 auto;
 }
 
-.sprite {
-	display: inline-block;
-	background: url('https://www.instagram.com/static/bundles/base/sprite_core.png/3243a2788e25.png');
-}
-
 .logo {
 	margin-bottom: 2px;
 }

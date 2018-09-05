@@ -47,6 +47,16 @@ class CommentSection extends React.Component {
 		event.target.children[0].blur();
 	};
 
+	// removeComment = id => {
+	// 	const comments = [...this.state.comments];
+	// 	const index = comments.findIndex(comment => comment.id === id);
+	// 	todos[index].completed = !todos[index].completed;
+
+	// 	this.setState({
+	// 		comments
+	// 	});
+	// };
+
 	componentDidMount() {
 		this.setState({
 			comments: this.props.comments,
@@ -72,13 +82,7 @@ class CommentSection extends React.Component {
 				<div className="comments">
 					{this.state.comments.map(comment => (
 						<Comment
-							key={
-								comment.username +
-								'/' +
-								Date.now() +
-								'/' +
-								Math.round(Math.random() * 1000)
-							}
+							key={comment.username + '/' + Date.now()}
 							comment={comment}
 							addNewComment={this.addNewComment}
 						/>

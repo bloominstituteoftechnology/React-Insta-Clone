@@ -5,3 +5,10 @@
 .Comment .username {
 	margin-right: 4px;
 }
+
+#delete-comment {
+	background-position: -260px -438px;
+	width: 10px;
+	height: 10px;
+	padding: 0;
+}

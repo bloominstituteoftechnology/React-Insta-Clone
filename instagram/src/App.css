@@ -160,6 +160,18 @@ button {
 	opacity: 1;
 }
 
-.hidden {
-	display: none;
+.sprite {
+	display: inline-block;
+	background: url('https://www.instagram.com/static/bundles/base/sprite_core.png/3243a2788e25.png');
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.sprite-glyph {
+	display: inline-block;
+	background: url('https://www.instagram.com/static/bundles/base/sprite_glyphs.png/5bc02fa85667.png');
+	border: none;
+	outline: none;
+	cursor: pointer;
 }

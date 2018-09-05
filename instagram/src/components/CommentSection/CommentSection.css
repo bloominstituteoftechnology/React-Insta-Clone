@@ -6,14 +6,6 @@
 	margin-left: -8px;
 }
 
-.sprite-glyph {
-	display: inline-block;
-	background: url('https://www.instagram.com/static/bundles/base/sprite_glyphs.png/5bc02fa85667.png');
-	border: none;
-	outline: none;
-	cursor: pointer;
-}
-
 .actions .sprite-glyph {
 	padding: 0;
 	margin: 8px;

@@ -4,20 +4,14 @@ import './Comment.css';
 
 const Comment = props => {
 	return (
-		<div
-			className="Comment"
-			id={
-				props.comment.username +
-				'/' +
-				Date.now() +
-				'/' +
-				Math.round(Math.random() * 1000)
-			}
-		>
+		<div className="Comment" id={props.comment.username + '/' + Date.now()}>
 			<a href="/" className="username">
 				{props.comment.username}
 			</a>
 			<span className="comment-text">{props.comment.text}</span>
+			{props.comment.username === 'You' && (
+				<button id="delete-comment" title="Delete Comment" className="sprite" />
+			)}
 		</div>
 	);
 };

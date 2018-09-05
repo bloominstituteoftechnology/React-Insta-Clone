@@ -40,16 +40,18 @@ class SearchBar extends React.Component {
 							onBlur={this.toggleSearchLid}
 						/>
 						<span className="sprite" id="search" />
-						<button
-							className={'search-lid' + (this.state.searchLid ? '' : ' hidden')}
-							onClick={() => {
-								this.toggleSearchLid();
-								this.focusSearchInput();
-							}}
-						>
-							<span id="search" className="sprite" />
-							<span className="search-lid-text">Search</span>
-						</button>
+						{this.state.searchLid && (
+							<button
+								className="search-lid"
+								onClick={() => {
+									this.toggleSearchLid();
+									this.focusSearchInput();
+								}}
+							>
+								<span id="search" className="sprite" />
+								<span className="search-lid-text">Search</span>
+							</button>
+						)}
 					</div>
 
 					<div className="navigation">
