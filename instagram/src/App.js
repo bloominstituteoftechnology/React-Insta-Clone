@@ -4,29 +4,14 @@ import './components/PostContainer/PostContainer.css';
 import './components/CommentSection/CommentSection.css';
 import PostsPage from './components/PostContainer/PostsPage';
 import dummyData from './dummy-data';
+import Authenticate from './components/Authentication/Authentication'
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      posts: [],
-      searchPosts: ""
-    };
-  }
 
-  componentDidMount() {
-    this.setState({posts: dummyData});
-  }
+const App = () => 
+  <div>
+    <PostsPage/>
+  </div>
 
-  render() {
-    return (
-      <div>
-        PostPage
-        <PostsPage 
-        />
-      </div>
-    );
-  }
-}
 
-export default App;
+
+export default Authenticate(App);
