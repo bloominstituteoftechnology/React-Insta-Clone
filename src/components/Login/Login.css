@@ -24,6 +24,7 @@
     border-radius: 3px;
     border-style: solid;
     border-width: 1px;
+    cursor: pointer;
     font-size: 14px;
     font-weight: 600;
     line-height: 26px;
@@ -36,7 +37,7 @@
     user-select: none;
     white-space: nowrap;
     width: 50%;
-    margin: 0px 0 30px 91px;
+    margin: 10px 0 30px 91px;
 }
 .Username{
     background:#fafafa;
@@ -51,7 +52,7 @@
 .bar-div{
     margin: 0 auto;
     padding-left: 55px;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 .user-form{
     color: #999;
@@ -71,7 +72,7 @@
     margin: 0px auto 30px;
 }
 .center{
-    margin: 0 auto;
+    margin: 50px auto 0;
     max-width: 380px;
     background: white;
     border: 1px solid #e6e6e6;
