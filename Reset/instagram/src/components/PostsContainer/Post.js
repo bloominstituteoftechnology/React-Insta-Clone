@@ -5,6 +5,7 @@ import PostHeader from './PostHeader';
 import './Posts.css';
 
 const Post = props => {
+  console.log(props.post.username);
   return (
     <div className="post-border">
       <PostHeader

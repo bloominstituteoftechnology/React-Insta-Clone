@@ -1,8 +1,8 @@
 const dummyData = [
     {
         username: "philzcoffee",
-        thumbnailUrl:  'https://instagram.fbna1-1.fna.fbcdn.net/vp/31c45306e6ca815b8c59940aed10cedc/5B2D3C88/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
-        imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/557a29d3526bc7f813c2a784d82de7d3/5B4E3E05/t51.2885-15/e35/26065916_2007800899433580_5879937492399947776_n.jpg',
+        thumbnailUrl:  'https://www.featuredcustomers.com/media/Company.logo/Philz_Coffee.png',
+        imageUrl: 'https://www.comunicaffe.com/wp-content/uploads/2018/08/Philz-Coffee.jpg',
         likes: 400,
         timestamp: "July 17th 2017, 12:42:40 pm",
         comments: [
@@ -22,8 +22,8 @@ const dummyData = [
     },
     {
         username: "twitch",
-        thumbnailUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/81f608ddb76a034e06c0d1669e7e2b48/5B35C840/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
-        imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/830c01ad7ceb325547fd1d4d1a1e6897/5B465520/t51.2885-15/e35/25006313_192089151354555_3374696275667582976_n.jpg',
+        thumbnailUrl: 'https://i.warosu.org/data/g/img/0488/82/1436268496494.png',
+        imageUrl: 'http://www.cynopsis.com/wp-content/uploads/2017/04/eleagueceleb.jpg',
         likes: 4307,
         timestamp: "July 15th 2017, 03:12:09 pm",
         comments: [
@@ -51,8 +51,8 @@ const dummyData = [
     },
     {
         username: "playhearthstone",
-        thumbnailUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/51d5b37438ae3a47df37b7ed3fda141f/5B4ABAA7/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
-        imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/22618be7ee2a2b676d13e8d70d7d5e08/5B40BF6B/t51.2885-15/e35/25038917_1978298569058775_6081161469041311744_n.jpg',
+        thumbnailUrl: 'https://d2vkoy1na2a6o6.cloudfront.net/images/logos/logo-c66376ed06cce60a01849443a90be276dfcf2cebfda477fff2b90bd66397210229adf8c9ba9243fb30bf4299ec267633d17a14fb73e80177a0a8109b15cf74c3.png',
+        imageUrl: 'https://www.iphonefaq.org/images/archives/heartstone_iphone1.jpg',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
         comments: [

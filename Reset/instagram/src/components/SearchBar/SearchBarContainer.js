@@ -8,10 +8,10 @@ const SearchBar = () => {
     <div className="search-bar-wrapper">
       <div className="image-wrapper">
         <img alt="camera logo" src={Camera} className="camera-image" />
-        <div class="vl"></div>
+        <div className="vl"></div>
         <img alt="instagram logo" src={IGLogo} className="logo-image" />
       </div>
-      <div>
+      <div className ="search">
         <input type="text" placeholder="Search" />
       </div>
       <div className="social-wrapper">

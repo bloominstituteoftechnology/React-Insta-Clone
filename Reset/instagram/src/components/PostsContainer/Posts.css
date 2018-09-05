@@ -19,9 +19,13 @@
 
 .post-header {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
 }
 
 .post-thumb-wrapper {
+  display: flex;
   height: 50px;
   width: 50px;
 }
