@@ -10,8 +10,16 @@ class Auth extends React.Component {
     }
   }
 
-  // TODO: component did mount
-  componentDidMount() {}; // TODO: add some conditional logic to deal with local storage
+  // component did mount
+  componentDidMount() {
+    if(window.localStorage.getItem("authenticated")) {
+      this.setState({
+        authenticated: JSON.parse(window.localStorage.getItem("authenticated"))
+      });
+    } else {
+      window.localStorage.setItem("authenticated", JSON.stringify(this.state.authenticated));
+    }
+  };
 
   render() { return <div>auth</div>; }; // TODO: add some conditional render logic for the return
 };
