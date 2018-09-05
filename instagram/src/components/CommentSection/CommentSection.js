@@ -18,7 +18,7 @@ class CommentSection extends Component {
     addNewComment = (e) => {
         if (this.state.currentComment){
         this.setState({
-            comments:[...this.state.comments, {username: "TheBrockstar", text:this.state.currentComment}],
+            comments:[...this.state.comments, {username: JSON.parse(localStorage.user1).username, text:this.state.currentComment}],
         }
         )
 

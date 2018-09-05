@@ -86,7 +86,7 @@
 
 .comment-section .comment-input form {
     width: 95%;
-    height: 18px;
+    height: 22px;
 }
 
 .comment-section .comment-input textarea {
@@ -94,6 +94,8 @@
     border: 0px;
     outline: none;
     resize: none;
+    font-size: 14px;
+    font-family: sans-serif;
 }
 
 .comment-section .comment-input textarea::placeholder {

@@ -15,7 +15,7 @@ const SearchBar = props => {
                 <div className="search-icon" style={{transform: 'rotate(-45deg)', fontWeight:'bold'}}>&#9906;</div>
             </div>
 
-            <Navigation />
+            <Navigation logout={props.logout}/>
         </div>
         </div>
 

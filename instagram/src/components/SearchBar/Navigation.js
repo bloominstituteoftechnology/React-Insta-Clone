@@ -15,7 +15,7 @@ const Navigation = props => {
             </div>
 
             <div className="user">
-                <button><img src={user} alt="user"/></button>
+                <button><img src={user} alt="user" onClick={props.logout}/></button>
             </div>
         </div>
     );
