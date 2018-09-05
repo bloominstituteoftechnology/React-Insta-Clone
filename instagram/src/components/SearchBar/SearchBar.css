@@ -47,6 +47,7 @@
 	position: absolute;
 	width: 215px;
 	height: 28px;
+	color: #999999;
 	background: #fafafa;
 	border: 1px solid #dbdbdb;
 	border-radius: 3px;
@@ -75,7 +76,7 @@
 .search-input {
 	width: 215px;
 	height: 28px;
-	padding: 3px 10px 0px 26px;
+	padding: 0px 10px 2px 26px;
 	border: 1px solid #dbdbdb;
 	border-radius: 3px;
 	outline: none;
