@@ -6,4 +6,41 @@
   flex-direction: column;
   align-items: center;
   font-size: 62.5%;
+
+  .title-bar {
+    display: flex;
+    width: 640px;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      width: 25%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo-image {
+        width: 60%;
+        margin-top: 10px;
+      }
+
+      i {
+        font-size: 2rem;
+        border-right: 1px solid darkgray;
+        padding-right: 20px;
+      }
+    }
+
+    .other-icons {
+      width: 25%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      i {
+        font-size: 1.5rem;
+        color: darkgray;
+      }
+    }
+  }
 }

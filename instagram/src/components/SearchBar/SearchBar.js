@@ -1,9 +1,10 @@
 import React from 'react';
+import './SearchBar.css';
 
 function SearchBar(props) {
   return (
     <form>
-      <input placeholder="Search..." />
+      <input type="text" placeholder="&#xf002; Search" />
     </form>
   );
 }

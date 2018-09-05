@@ -129,12 +129,40 @@ table {
 * {
   box-sizing: border-box;
 }
-body {
-  font-size: 62.5%;
-}
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 62.5%;
+}
+.App .title-bar {
+  display: flex;
+  width: 640px;
+  align-items: center;
+  justify-content: space-between;
+}
+.App .title-bar .logo {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.App .title-bar .logo .logo-image {
+  width: 60%;
+  margin-top: 10px;
+}
+.App .title-bar .logo i {
+  font-size: 2rem;
+  border-right: 1px solid darkgray;
+  padding-right: 20px;
+}
+.App .title-bar .other-icons {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.App .title-bar .other-icons i {
+  font-size: 1.5rem;
+  color: darkgray;
 }
