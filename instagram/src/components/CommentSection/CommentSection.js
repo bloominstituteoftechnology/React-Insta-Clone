@@ -33,19 +33,21 @@ class CommentSection extends React.Component {
 
 	addNewComment = event => {
 		event.preventDefault();
-		const comments = [
-			...this.state.comments,
-			{
-				username: 'You',
-				text: event.target.children[0].value,
-				id: 'You' + '/' + Date.now()
-			}
-		];
-		this.setState({
-			comments
-		});
-		event.target.reset();
-		event.target.children[0].blur();
+		if (event.target.children[0].value) {
+			const comments = [
+				...this.state.comments,
+				{
+					username: 'You',
+					text: event.target.children[0].value,
+					id: 'You' + '/' + Date.now()
+				}
+			];
+			this.setState({
+				comments
+			});
+			event.target.reset();
+			event.target.children[0].blur();
+		}
 	};
 
 	deleteComment = id => {

@@ -8,24 +8,24 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			data: []
+			posts: []
 		};
 	}
 
 	search = event => {
-		if (event.key === 'Enter') {
-			const data = [...this.state.data].filter(post =>
+		if (event.key === 'Enter' && event.target.value) {
+			const posts = [...this.state.posts].filter(post =>
 				post.username.includes(event.target.value)
 			);
 			this.setState({
-				data
+				posts
 			});
 		}
 	};
 
 	componentDidMount() {
 		this.setState({
-			data: dummyData
+			posts: dummyData
 		});
 	}
 
@@ -34,7 +34,7 @@ class App extends React.Component {
 			<div className="App">
 				<SearchBar search={this.search} />
 
-				<PostContainer posts={this.state.data} />
+				<PostContainer posts={this.state.posts} />
 			</div>
 		);
 	}
