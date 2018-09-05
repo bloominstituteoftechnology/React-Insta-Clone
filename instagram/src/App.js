@@ -8,8 +8,25 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: [],
+      search: ''
     };
+  }
+
+  search = event => {
+    event.preventDefault();
+    let newPosts = [...this.state.posts];
+    newPosts = newPosts.filter(post => {
+      if (post.username === this.state.search) {
+        return post;
+      }
+    });
+    this.setState({ posts: newPosts });
+  };
+  
+  handleChange = event => {
+    event.preventDefault();
+    this.setState({ [event.target.name]: event.target.value });
   }
 
   componentDidMount() {
@@ -19,7 +36,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar search={this.search} handleChange={this.handleChange} />
         <PostsContainer posts={this.state.posts} />
       </div>
     );
