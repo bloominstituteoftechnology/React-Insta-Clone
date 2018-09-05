@@ -37,8 +37,10 @@ class CommentSection extends React.Component {
     render() {
         return (
             <div className='comment-section'>
-                {this.state.likes}
-                <img onClick={this.increaseLikes} className='heart' src={Heart} />
+                <div className='likes'>
+                    {this.state.likes}
+                    <img onClick={this.increaseLikes} className='heart' src={Heart} />
+                </div>
                 {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
                 <CommentInput 
                     addNewComment={this.addNewComment} 
