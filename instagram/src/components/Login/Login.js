@@ -8,6 +8,11 @@ export default class Login extends React.Component {
     this.state = {
       username: ''
     }
+    this.usernameRef = React.createRef();
+  }
+
+  componentDidMount() {
+    this.usernameRef.current.focus();
   }
 
   usernameText = (e) => {
@@ -29,7 +34,7 @@ export default class Login extends React.Component {
         <form className="box" onSubmit={this.setStorage}>
           <img src={headerLogo} alt="Instagram Logo Text"/>
           <p>Sign up to see photos and videos from your friends.</p>
-          <input onChange={this.usernameText} className="username-input" type="text" placeholder="Username" />
+          <input ref={this.usernameRef} onChange={this.usernameText} className="username-input" type="text" placeholder="Username" />
           <input className="password-input" placeholder="Password" type="password"/>
           <button onClick={this.setStorage} className="login-button">Login</button>
         </form>
