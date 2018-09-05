@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Comment from './Comment.js'
 import App from '../../App.js'
@@ -47,3 +48,5 @@ return(
 }
 
 export default CommentSection
+=======
+>>>>>>> parent of 7a75442... add coments section and a bit of a form
