@@ -8,13 +8,30 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData
+      posts: []
     };
   }
+  
+  componentDidMount(){
+    this.setState({posts: dummyData});
+    
+   }
+search = event => {
+  event.preventDefault();
+  let newPosts = [...this.state.posts];
+  newPosts=newPosts.filter(post=>{
+    
+  })
+};
+
+handleChange = event => {
+  event.preventDefault ();
+
+}
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar search={this.search} handleChange={this.handleChange}/>
         <PostsContainer posts={this.state.posts} />
       </div>
     );
