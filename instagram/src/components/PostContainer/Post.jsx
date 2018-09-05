@@ -38,7 +38,6 @@ class Post extends React.Component {
         <div className="post-icon-and-comments-wrapper">
           <div className="post-icons-wrapper">
             <i
-              className="far fa-heart"
               onClick={this.like}
               style={
                 this.state.liked ? { color: "rgba(211, 88, 170, 0.8)" } : null

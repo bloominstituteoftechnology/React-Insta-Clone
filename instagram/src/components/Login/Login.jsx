@@ -1,23 +1,51 @@
-import React from 'react';
+import React from "react";
+import "./Login.css";
 
 // TODO: do some form here and link up this and the Auth page etc to make this show if user is not authenticated
 class Login extends React.Component {
-  constructor() {
-    super();
-  }
+  state = {
+    username: "",
+    password: ""
+  };
 
-  login() {
-    // set the authenticated prop to true for now
-    this.props.authenticated = true;
-  }
+  handleUsername = event => {
+    this.setState({ username: event.target.value });
+  };
+
+  handlePassword = event => {
+    this.setState({ password: event.target.value });
+  };
+
+  login = () => {
+    localStorage.setItem("username", this.state.username);
+    localStorage.setItem("password", this.state.password);
+    window.location.reload();
+  };
 
   render() {
-    return(
+    return (
       <div>
-        this is the login page!
+        <div className="login-wrapper">
+          <form onSubmit={this.login}>
+            <img src="instagramLogo" alt="Logo." className="login-logo" />
+            <input
+              type="text"
+              placeholder="Username"
+              value={this.state.username}
+              onChange={this.handleUsername}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.handlePassword}
+            />
+            <button type="submit">Login</button>
+          </form>
+        </div>
       </div>
     );
   }
-};
+}
 
 export default Login;

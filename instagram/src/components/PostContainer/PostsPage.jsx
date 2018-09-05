@@ -20,7 +20,7 @@ class PostsPage extends Component {
     //this.setState({ posts: dummyData });
     if (window.localStorage.getItem("comments")) {
       this.setState({
-        posts: JSON.parse(window.localStorage.getItem("comments"))
+        posts: JSON.parse(window.localStorage.getItem("comments")), username: localStorage.getItem('username')
       });
     } else {
       this.setState({ posts: dummyData });
@@ -28,6 +28,11 @@ class PostsPage extends Component {
     window.localStorage.setItem("comments", JSON.stringify(dummyData));
   }
 
+  logout = () => {
+    localStorage.removeItem("username");
+    localStorage.removeItem("password");
+    window.location.reload();
+  }
   // searchHandler method DAY 2 MVP Goal
   searchHandler = event => {
     // set the searchText to the current input value
@@ -62,7 +67,7 @@ class PostsPage extends Component {
             <div className="social-icons">
               <i className="far fa-compass" />
               <i className="far fa-heart" />
-              <i className="far fa-user" />
+              <i onClick={this.logout}className="far fa-user" />
             </div>
           </header>
             <div className="posts-wrPostsPageer">
