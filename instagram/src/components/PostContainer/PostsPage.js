@@ -5,9 +5,11 @@ import PostContainer from './PostContainer';
 import data from '../../dummy-data';
 import fuzzysearch from 'fuzzysearch';
 
+import './PostsPage.css';
+
 class PostsPage extends React.Component {
-    constructor () {
-        super ();
+    constructor (props) {
+        super (props);
         
         this.state = {
             data: [],
@@ -47,15 +49,24 @@ class PostsPage extends React.Component {
         });
     }
 
+    logOut = (e) => {
+        e.preventDefault();
+        localStorage.removeItem('username');
+        window.location.reload();
+    }
+
     render() {
         return (
             <div>
                 <SearchBar handleSearch = { this.handleSearch } />
+                <div className = 'welcome-div'>Hello { this.props.username }</div>
+                <button onClick = { this.logOut } >Log Out</button>
                 { this.state.data.map((data, index) => {
                     return <PostContainer 
                         key = { index } 
                         index = { index } 
                         data = { data } 
+                        username = { this.props.username } 
                     />
                 })}
             </div>

@@ -63,7 +63,7 @@ class PostContainer extends React.Component {
         let newComments = this.state.data;
 
         newComments.comments.push({
-            username: 'philzcoffee',
+            username: this.props.username,
             text: e.target[0].value,
         });
 
