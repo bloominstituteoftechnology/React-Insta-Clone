@@ -9,6 +9,4 @@ class App extends Component {
   }
 }
 
-const authent = Authenticate(App);
-
 export default Authenticate(App);

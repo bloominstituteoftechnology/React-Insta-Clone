@@ -2,7 +2,10 @@ import React from "react";
 import Login from "../Login/Login";
 import PostsPage from "../PostsContainer/PostsPage";
 
-const data = [{ name: "billy", login: "bob" }, { name: "fort", login: "nite" }];
+const data = [
+  { username: "billy", login: "bob" },
+  { username: "fort", login: "nite" }
+];
 
 const Authenticate = App =>
   class extends React.Component {
@@ -14,13 +17,13 @@ const Authenticate = App =>
       };
     }
     render() {
-      const name = Object.keys(localStorage);
+      const username = Object.keys(localStorage);
       const login = Object.values(localStorage);
-      const userList = this.state.Users.map(item => item.name);
+      const userList = this.state.Users.map(item => item.username);
       const logs = this.state.Users.map(item => item.login);
       const newState = { ...this.state };
 
-      if (userList.includes(name[0]) && logs.includes(login[1])) {
+      if (userList.includes(username[0]) && logs.includes(login[1])) {
         newState.login = true;
       }
       if (newState.login === true) {
