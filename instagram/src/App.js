@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 
 import dummyData from './dummy-data';
-import Comment from './components/CommentSection/CommentList';
 import PostContainer from './components/PostContainer/PostContainer';
 import Search from './components/SearchBar/Search';
 
@@ -12,14 +10,29 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData
+      posts: [],
+      search: ''
     }
   }
+
+  componentDidMount() {
+    this.setState({
+      posts: dummyData
+    })
+  }
+
+  handleSearchInput = event => {
+    console.log(event.target.value);
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
   render() {
     return (
       <div className="App"> 
-        <Search />        
-        {this.state.data.map((eachElement) => {
+        <Search handleSearchInput={this.handleSearchInput}/>        
+        {this.state.posts.map((eachElement) => {
           return <PostContainer key={eachElement.username} profileObject={eachElement} />;
         })}           
       </div>

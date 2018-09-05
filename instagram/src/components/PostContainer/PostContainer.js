@@ -8,12 +8,12 @@ function PostContainer(props) {
     <div className='post-container'>
 
       <div className='user-info'>
-        <img className='profile-pic' src={props.profileObject.thumbnailUrl} alt='Profile Picture'/>
+        <img className='profile-pic' src={props.profileObject.thumbnailUrl} alt='Profile'/>
         <h4 className='username'>{props.profileObject.username}</h4>
       </div>
 
       <div className='post'>
-        <img className='image-post' src={props.profileObject.imageUrl} alt='Image Post'/>  
+        <img className='image-post' src={props.profileObject.imageUrl} alt='Post'/>  
 
         <div className='like-section'>
           <div className='post-logos'>
@@ -22,13 +22,7 @@ function PostContainer(props) {
           </div>          
           <h4 className='like-counter'>{props.profileObject.likes + 'likes'}</h4>
           <CommentList comments={props.profileObject.comments} />
-      </div>
-
-      <div className='add-comment'>
-        <form>
-          <input className='input-comment' placeholder='Add a comment...'></input>
-        </form>        
-      </div>
+      </div>      
 
       </div>      
 

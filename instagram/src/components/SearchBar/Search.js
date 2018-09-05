@@ -11,7 +11,7 @@ function Search(props) {
       </div>
 
       <div className='middle-header'>
-        <input type='text' className='search-button' placeholder='Search'></input>
+        <input type='text' className='search-button' placeholder='Search' onChange={props.handleSearchInput}></input>
       </div>
 
       <div className='right-header'>

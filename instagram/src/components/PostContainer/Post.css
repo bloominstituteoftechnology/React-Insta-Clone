@@ -9,6 +9,7 @@
   border: 1px solid lightgrey;
   border-radius: 5px;
   padding-left: 15px;
+  background-color: white;
 }
 
 .profile-pic {
@@ -24,6 +25,7 @@
 .post {
   border: 1px solid lightgrey;
   border-radius: 5px;
+  background-color: white;
 }
 
 .like-section {
