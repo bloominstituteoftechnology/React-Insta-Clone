@@ -9,9 +9,27 @@ class App extends Component {
     super();
     this.state = {
       posts: [],
+      search: ""
       
   };
   }
+
+  search = event => {
+    event.preventDefault();
+    let newPosts = [...this.state.posts];
+    newPosts = newPosts.filter(post => {
+      if (post.username === this.state.search) {
+        return post;
+      }
+    });
+    this.setState({ posts: newPosts });
+
+  };
+
+  handleChange = event => {
+    event.preventDefault();
+    this.setState({ [event.target.name]: event.target.value });
+  };
 
   componentDidMount() {
      this.setState({posts: dummyData}); 
@@ -21,7 +39,7 @@ class App extends Component {
     return (
       <div className="App">
         
-        <SearchBar />
+        <SearchBar search={this.search} handleChange={this.handleChange}/>
         <PostContainer posts={this.state.posts}/>
 
         
