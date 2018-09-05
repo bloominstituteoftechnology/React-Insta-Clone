@@ -15,15 +15,8 @@ class CommentSection extends React.Component {
 	}
 
 	toggleLiked = () => {
-		let likes = this.state.likes;
-		this.state.youLiked === false
-			? this.setState({
-					likes: likes + 1
-			  })
-			: this.setState({
-					likes: likes - 1
-			  });
 		this.setState({
+			likes: this.state.likes + (this.state.youLiked ? -1 : 1),
 			youLiked: !this.state.youLiked
 		});
 	};
