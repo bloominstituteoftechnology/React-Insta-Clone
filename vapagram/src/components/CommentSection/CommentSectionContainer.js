@@ -36,6 +36,7 @@ class CommentSection extends React.Component {
         {this.state.comments.map((c, i) => (
           <Comment key={i} comment={c} />
         ))}
+        <div className="heart">♥</div>
         <CommentInput
           addComment={this.addNewComment}
           handleChange={this.handleChange}
