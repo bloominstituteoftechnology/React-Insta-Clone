@@ -6,6 +6,7 @@ import './CommentSection.css';
 class CommentSection extends React.Component {
 	constructor(props) {
 		super(props);
+		this.commentInput = React.createRef();
 		this.state = {
 			comments: [],
 			likes: 0,
@@ -27,9 +28,9 @@ class CommentSection extends React.Component {
 		});
 	};
 
-	// focusCommentInput = () => {
-
-	// }
+	focusCommentInput = () => {
+		this.commentInput.current.focus();
+	};
 
 	addNewComment = event => {
 		event.preventDefault();
@@ -75,7 +76,11 @@ class CommentSection extends React.Component {
 						className="sprite-glyph"
 						onClick={this.toggleLiked}
 					/>
-					<button id="comment" className="sprite-glyph" />
+					<button
+						id="comment"
+						className="sprite-glyph"
+						onClick={this.focusCommentInput}
+					/>
 				</div>
 
 				<a href="/" className="likes">
@@ -112,6 +117,7 @@ class CommentSection extends React.Component {
 							className="comment-input"
 							type="text"
 							placeholder="Add a comment..."
+							ref={this.commentInput}
 						/>
 					</form>
 					<button id="options" className="sprite-glyph" />
