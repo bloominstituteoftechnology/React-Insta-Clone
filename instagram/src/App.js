@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
 import data from './dummy-data';
 import fuzzysearch from 'fuzzysearch';
 
@@ -29,20 +28,6 @@ class App extends Component {
     })
   }
 
-  handleLike = (e) => {
-    // every heart will have an id = "like-0", where 0 is some index, so
-    // let id = that index, then increase the likes on the data element with that
-    // specific index
-    let id = e.target.id.substring(e.target.id.indexOf('-') + 1);
-    let newData = this.state.data;
-
-    newData[id].likes++;
-
-    this.setState({
-      data: newData,
-    });
-  }
-
   handleSearch = (e) => {
     // if fuzzysearch returns false, then hide that data element, else 
     // show it
@@ -64,16 +49,10 @@ class App extends Component {
   render() {
     return (
       <div className = 'App'>
-        <SearchBar handleSearch = { this.handleSearch } />
-        { this.state.data.map((data, index) => {
-            return <PostContainer 
-              key = { index } 
-              index = { index } 
-              data = { data } 
-              handleLike = { this.handleLike } 
-            />
-          }) 
-        }
+        <PostsPage 
+          handleSearch = { this.handleSearch } 
+          data = { this.state.data } 
+        />
       </div>
     );
   }

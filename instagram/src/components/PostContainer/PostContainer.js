@@ -84,6 +84,16 @@ class PostContainer extends React.Component {
         this.setState(newState);
     }
 
+    handleLike = () => {
+        // handleLike will increase by 1 the likes number stored in this.state.data
+        let newData = this.state.data;
+        newData.likes++;
+    
+        this.setState({
+          data: newData,
+        });
+    }
+
     render() {
         // This timestamp variable was used because the dummy-data.js file has the timestamp on it 
         // written in a non-standard format and the moment library wouldn't accept it.
@@ -116,8 +126,7 @@ class PostContainer extends React.Component {
                         <div className = 'likes-div'>
                             <i 
                                 className = 'far fa-heart' 
-                                onClick = { this.state.handleLike } 
-                                id = { `like-${this.state.index}` } 
+                                onClick = { this.handleLike } 
                             ></i>
                             <i className="far fa-comment"></i>
                             <h4>{ this.state.data.likes } likes</h4>
