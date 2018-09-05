@@ -1,27 +1,33 @@
-.ipt {
-  width: 80%;
+.frm {
+  margin-top: 15px;
+}
+
+.frm-ipt {
+  width: 60%;
   padding: 5px;
   border-radius: 5px;
 }
 
-.iptctnr:focus,
-.ipt:focus {
+.frm-ipt:focus {
   outline: none;
 }
 
 .itractns {
-  width: 80px;
+  /* width: 80px;
   height: 50px;
-  margin-left: 10px;
+  margin-left: 10px; */
   display: flex;
 }
 
-.itractns img {
-  width: 100%;
-  height: 100%;
+.itractns .lkbtn {
+  /* background: url("https://cdn2.iconfinder.com/data/icons/instagram-ui/48/jee-68-512.png"); */
+  margin: 10px;
+  cursor: pointer;
 }
 
-.itractns:hover {
+.itractns .cmtbtn {
+  /* background: url("https://cdn2.iconfinder.com/data/icons/instagram-ui/48/jee-69-512.png"); */
+  margin: 10px;
   cursor: pointer;
 }
 
