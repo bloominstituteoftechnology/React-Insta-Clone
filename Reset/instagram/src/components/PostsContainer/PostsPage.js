@@ -1,11 +1,14 @@
 import React from 'react';
 import './Posts.css';
 
-const PostsPage = props => {
-  return (
-    <div className="posts-page-container">
-    </div>
-  );
-};
+class PostsPage extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        posts: dummyData
+      };
+    }
+ render()
+}
 
 export default PostsPage;
