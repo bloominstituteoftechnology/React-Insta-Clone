@@ -25,7 +25,7 @@ class SearchInput extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input type="input" value={this.state.inputValue} onChange={e => this.updateInputValue(e)} name="searchInput" placeholder="Search" />
+                <input className="search-inputbar" type="input" value={this.state.inputValue} onChange={e => this.updateInputValue(e)} name="searchInput" placeholder="Search" />
             </form>
         )
     }

@@ -29,16 +29,10 @@ class PostsPage extends Component {
     this.setState({filteredState: updatedList});
   }
 
-  updateData = (e) => {
-    this.setState({
-      
-    })
-  }
-
   render() {
     return (
       <div className="App">
-        <SearchBarContainer hdlSearch={this.handleSearch} />
+        <SearchBarContainer hdlSearch={this.handleSearch} forceUpd={this.props.forceUpd} />
         <div className="content">
           <Posts data={this.state.dummydata} />
         </div>

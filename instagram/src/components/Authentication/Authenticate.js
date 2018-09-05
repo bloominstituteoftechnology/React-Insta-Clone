@@ -27,9 +27,14 @@ const Authenticate = App => class extends Component {
 
     }
 
+    forceUpd = (e) => {
+        localStorage.removeItem('InstaLogged');
+        this.setState({loggedIn: false});
+    }
+
     render() {
         if (this.state.loggedIn) {
-            return <App />
+            return <App forceUpd={this.forceUpd}/>
         }
 
         return <Login check={this.checkLogin}/>

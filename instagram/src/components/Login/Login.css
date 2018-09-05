@@ -1,7 +1,7 @@
 .login {
     max-width: 640px;
     width: 100%;
-    margin: 0 auto;
+    margin: 10% auto;
     /* display: flex;
     align-items: center; */
 }
@@ -42,11 +42,6 @@
 
 .create-form input {
     margin: 2% 0 0 2%;
-    width: 100%;
-    height: 57px;
-    border: 1px solid #e2e2e2;
-    padding-left: 2%;
-    background-color: #ffffff;
 }
 
 .create-buttons {
@@ -54,10 +49,3 @@
     justify-content: space-between;
 }
 
-input[type="button"] {
-    cursor: pointer;
-}
-
-input[type="button"]:hover {
-    background-color: #1495fa;
-}

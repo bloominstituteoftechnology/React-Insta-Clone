@@ -71,7 +71,7 @@ class Login extends Component {
                     <form className="login-form" onSubmit={this.handleSubmit}>
                         <label>Login</label><br /><br />
                         <input type="input" value={this.state.userValue} onChange={e => this.updateInputValue(e)} name="userInput" placeholder="Username" />
-                        <input type="input" value={this.state.passValue} onChange={e => this.updatePassValue(e)} name="passInput" placeholder="Password" />
+                        <input type="password" value={this.state.passValue} onChange={e => this.updatePassValue(e)} name="passInput" placeholder="Password" />
                         <input type="button" onClick={e => this.handleSubmit(e)} value="Login" />
                         <label className="login-register">Don't have one? <label className="register" onClick={this.updateCreate}>Register</label> for one!</label>
                     </form>
@@ -84,7 +84,7 @@ class Login extends Component {
                     <form className="create-form" onSubmit={this.createAccount}>
                         <label>Create Account</label><br /><br />
                         <input type="input" value={this.state.userCreate} onChange={e => this.updateCreateInputValue(e)} placeholder="Username" />
-                        <input type="input" value={this.state.passCreate} onChange={e => this.updateCreatePassValue(e)} placeholder="Password" />
+                        <input type="password" value={this.state.passCreate} onChange={e => this.updateCreatePassValue(e)} placeholder="Password" />
                         <div className="create-buttons">
                             <input type="button" onClick={e => this.createAccount(e)} value="Create" />
                             <input type="button" onClick={e => this.updateCreate(e)} value="Close" />

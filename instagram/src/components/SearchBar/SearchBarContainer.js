@@ -13,7 +13,9 @@ function SearchBarContainer(props) {
             </div>
             <div className="search-input">
                 <SearchInput hdlSearch={props.hdlSearch}/>
-                <Logout />
+            </div>
+            <div className="logout-btn">
+                <Logout forceUpd={props.forceUpd}/>
             </div>
             <div>
                 <SearchIcons />
