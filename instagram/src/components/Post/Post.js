@@ -28,6 +28,7 @@ const Post = props => {
 				likes={props.post.likes}
 				comments={props.post.comments}
 				timestamp={props.post.timestamp}
+				id={props.post.username + '/' + props.post.timestamp}
 			/>
 		</article>
 	);
