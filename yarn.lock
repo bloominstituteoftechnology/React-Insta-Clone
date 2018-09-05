@@ -2,6 +2,35 @@
 # yarn lockfile v1
 
 
+"@fortawesome/fontawesome-common-types@^0.2.0-9", "@fortawesome/fontawesome-common-types@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.4.tgz#7c560ff732c6c7c7c179ae25227ce5449e6f6d65"
+
+"@fortawesome/fontawesome-svg-core@^1.2.0-14":
+  version "1.2.0-14"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.0-14.tgz#48100da29b39658fad374ebd1386161ab35af564"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.0-9"
+
+"@fortawesome/free-regular-svg-icons@^5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-5.3.1.tgz#edd019dc61a991c7e3cb9d862a6efd971675e3ba"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.4"
+
+"@fortawesome/free-solid-svg-icons@^5.1.0-11":
+  version "5.1.0-11"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.1.0-11.tgz#4a346eaada93276edb133b140492e8d7cfa2aa47"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.0-9"
+
+"@fortawesome/react-fontawesome@^0.1.0-11":
+  version "0.1.0-11"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.0-11.tgz#83299a5c09bec79522abba33e93bff796f2f6d4e"
+  dependencies:
+    humps "^2.0.1"
+    prop-types "^15.5.10"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -3248,6 +3277,10 @@ http-signature@~1.2.0:
 https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
+
+humps@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/humps/-/humps-2.0.1.tgz#dd02ea6081bd0568dc5d073184463957ba9ef9aa"
 
 iconv-lite@0.4.19:
   version "0.4.19"

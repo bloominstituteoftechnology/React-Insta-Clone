@@ -1,8 +1,8 @@
-import React from 'react';
-import CommentSection from '../CommentSection/CommentSectionContainer';
-import PostHeader from './PostHeader';
+import React from "react";
+import CommentSection from "../CommentSection/CommentSectionContainer";
+import PostHeader from "./PostHeader";
 
-import './Posts.css';
+import "./Posts.css";
 
 const Post = props => {
   return (
@@ -18,7 +18,11 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <CommentSection likes={props.post.likes} id={props.post.imageUrl} comments={props.post.comments} />
+      <CommentSection
+        likes={props.post.likes}
+        id={props.post.imageUrl}
+        comments={props.post.comments}
+      />
     </div>
   );
 };

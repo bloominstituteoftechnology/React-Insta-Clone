@@ -1,6 +1,6 @@
-import React from 'react';
-import IGLogo from '../../assets/iglogo.png';
-import './SearchBar.css';
+import React from "react";
+import IGLogo from "../../assets/iglogo.png";
+import "./SearchBar.css";
 
 const SearchBar = props => {
   return (
@@ -9,7 +9,12 @@ const SearchBar = props => {
         <img alt="instagram logo" src={IGLogo} className="logo-image" />
       </div>
       <div>
-        <input type="text" placeholder="Search" name='search'  onChange={props.handleInput}/>
+        <input
+          type="text"
+          placeholder="Search"
+          name="search"
+          onChange={props.handleInput}
+        />
       </div>
       <div className="social-wrapper">
         <div className="social">
