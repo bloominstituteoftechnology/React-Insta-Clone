@@ -21,7 +21,6 @@ import PostsPage from './components/PostContainer/PostContainer';
   render() {
     return (
       <div className="appContainer">
-        {/* <SearchBar /> */}
         <PostsPage/>
       </div>
     );
