@@ -14,12 +14,13 @@ class Comments extends React.Component {
   }
   
   addNewComment = (e, i) => {
+    let user = localStorage.getItem('user')
     e.preventDefault()
     let comments = [...this.state.comments]
     const commentObject = {
       text: this.state.newComment,
       key: i,
-      username: "tim"
+      username: user
     }
     comments.push(commentObject)
     
