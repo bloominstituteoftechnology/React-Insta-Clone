@@ -20,7 +20,6 @@ class Login extends React.Component {
                     <input type = 'text' placeholder = 'Enter username...' />
                     {/* <input type = 'text' placeholder = 'Enter password...' /> */}
                     <button type = 'submit' >Log In</button>
-                    Error
                 </form>
             </div>
         );
