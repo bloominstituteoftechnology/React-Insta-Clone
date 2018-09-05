@@ -4,10 +4,10 @@ import Post from './Post.js'
 const PostContainer = props => {
     return (
         <div className="post-container">
-            {props.dummyData.map(data => (
+            {props.posts.map(post => (
                 <Post
-                    dummyData={data}
-                    key={data.timestamp}
+                    post={post}
+                    key={post.timestamp}
                 />
                 
             ))}

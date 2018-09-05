@@ -1,31 +1,77 @@
 import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import HeartIcon from '../../assets/heart-icon.png';
 
-const Post = props => {
+class Post extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            comments: props.post.comments,
+            newComment: "",
+            likes: 0
+        };
+    }
+
+    addNewComment = (e) => {
+        e.preventDefault();
+        this.setState({
+            comments: [...this.state.comments, { text: this.state.newComment, username: "Person" }],
+        });
+    }
+
+
+    handleChange = event => {
+        this.setState({
+            newComment: event.target.value
+        });
+    };
+
+    addLikes = event => {
+        event.preventDefault();
+        this.setState({ likes: this.state.likes + 1 });
+
+
+render() {
     return (
         <div className="post">
-            <img className="avatar" src={props.dummyData.thumbnailUrl} />
+            <img className="avatar" src={this.props.post.thumbnailUrl} />
             <div className= "username bold">
-                { props.dummyData.username }
+                { this.props.post.username }
             </div>
-            <img className= "img-content" src={props.dummyData.imageUrl}/>
+            <img className= "img-content" src={this.props.post.imageUrl}/>
             <div className="bold likes">
-                {props.dummyData.likes} likes
+                {this.props.post.likes} likes
             </div>
+            <img src={HeartIcon} alt="Heart Icon" className="like-icon" />
             <div className="comment-container">
-                {props.dummyData.comments.map((data,i) => (
+                {this.state.comments.map((comment,i) => (
                     <CommentSection
-                        dummyData={data}
+                        comment={comment}
                         key= {i}
-                        text= {data.text}
+                        text= {comment.text}
                     />
 
                 ))}
-        </div> 
-        <input className="comment-input" type="text" placeholder="Add a comment..." />
         </div>
-    );
+         
+        <form
+            onSubmit = {this.addNewComment}
+        >  
+            <input
+                onChange={this.handleChange}
+                className="comment-input"
+                type="text"
+                placeholder="Add a comment..."
+                name = "newComment"
+                value = {this.state.newComment}
+            />
+            <button>Submit</button>
+        </form>
+        </div>
+        );
+    };
 };
+
 
 export default Post;
 

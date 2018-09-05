@@ -34,8 +34,14 @@
 }
 
 .likes {
-    margin: 10px 80% 0 2%;
+    margin: 10px 0 0 2%;
 
+}
+
+.like-icon {
+    width: 6%;
+    height: 30px;
+    padding-top: 5px;
 }
 
 .comment-container {
