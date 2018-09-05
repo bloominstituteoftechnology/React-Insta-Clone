@@ -4,7 +4,6 @@ import PostAvatar from './PostAvatar';
 import PostImg from './PostImg';
 
 function Post(props) {
-    console.log(props);
     return(
         <div>
             <PostAvatar

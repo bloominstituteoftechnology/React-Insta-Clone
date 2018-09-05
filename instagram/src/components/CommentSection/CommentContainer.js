@@ -1,6 +1,4 @@
 import React from 'react';
-import CommentIcons from './CommentIcons';
-import CommentLikes from './CommentLikes';
 import Comment from './Comment';
 import Timestamp from './Timestamp';
 import CommentInput from './CommentInput';
@@ -9,69 +7,59 @@ class CommentContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: props.comments
+            comments: props.comments,
+            newComment: "",
+            likes: 0
         };
     }
 
+    addNewComment = event => {
+        event.preventDefault();
+            
+        this.setState({
+            comments: [
+                ...this.state.comments,
+                {userName: "User", text: this.state.newComment}
+            ]
+        });
+    }
+
+    handleChanges = event => {
+        this.setState({[event.target.name]: event.target.value})
+    }
+
+    addLikes = event => {
+        event.preventDefault();
+        this.setState({likes: this.state.likes + 1})
+    }
+
     render() {
-        //console.log(this.state.comments);
         return(
             <div>
-            <CommentIcons />
-            <CommentLikes />
-                {this.state.comments.map((comment, index) => {
-                    return(
-                        <div key={index}>
-                            <Comment comment={comment} />
-                        </div>
-                    )
-                })}
+                {this.state.likes}
+                <button>
+                    <img onClick={this.addLikes}
+                        className="icon"
+                        src="instagram-new.png" 
+                        alt="comment heart icon">
+                    </img>
+                </button>
+
+                <button>
+                    <img 
+                        className="icon"
+                        src="instagram-new.png" 
+                        alt="comment post icon">
+                    </img>
+                </button>
                 <Timestamp />
-                <CommentInput />
+                <CommentInput 
+                    addNewComment = {this.addNewComment}
+                    handleChanges = {this.handleChanges}
+                />
             </div>
         )
-
-        // return(
-        //     <div>
-        //         <CommentIcons />
-        //         <CommentLikes />
-
-        //         {this.state.comments.map((comment, index) => 
-        //         <Comment key={index} comment={comment} />)};
-
-        //         <Timestamp />
-        //         <CommentInput />
-        //     </div>
-        // )
     }
 }
-
-{/* function CommentContainer(props) {
-    return(
-        <div>
-            <CommentIcons />
-            
-            {props.posts.map((post, index) => {
-                return(
-                    <div key={index}>
-                        <CommentLikes 
-                            likes = {post.likes}
-                        />
-
-                        <Comment 
-                            comments = {post.comments}
-                        />
-
-                        <Timestamp 
-                            timestamp = {post.timestamp}
-                        />
-                    </div>
-                )
-            })}
-
-            <CommentInput />
-        </div>
-    );
-} */}
 
 export default CommentContainer;

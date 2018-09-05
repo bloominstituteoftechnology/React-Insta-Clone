@@ -8,8 +8,25 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      postInfo: []
+      postInfo: [],
+      search: ""
     };
+  }
+
+  search = event => {
+    event.preventDefault();
+    let additionalPosts = [...this.state.postInfo];
+    additionalPosts = additionalPosts.filter(post => {
+      if(post.username === this.state.search) {
+        return post;
+      }
+    })
+    this.setState({postInfo: additionalPosts})
+  }
+
+  handleChanging = event => {
+    event.preventDefault();
+    this.setState({[event.target.name]: event.target.value})
   }
 
   componentDidMount() {
