@@ -9,8 +9,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      searchText: '',
-      posts: []
+      posts: [],
+      filteredPosts: []
     };
   }
 
@@ -18,11 +18,20 @@ class App extends Component {
     this.setState({ posts: dummyData });
   }
 
+  searchForPosts = event => {
+    const posts = this.state.posts.filter(post =>{
+      if (post.username.includes(event.target.value)) {
+        return post;
+      }
+    });
+    this.setState({filteredPosts: posts});
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <Timeline posts={this.state.posts} />
+        <SearchBar searchForPosts={this.searchForPosts}/>
+        <Timeline posts={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} />
       </div>
     );
   }

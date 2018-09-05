@@ -8,7 +8,9 @@ const SearchBar = props => {
             <div className='camera-logo'>
                 <img src={GlyphLogo} />
             </div>
-            <input type='text' placeholder='Search' />
+            <div className='search-form'>
+                <input type='text' placeholder='Search' onKeyDown={props.searchForPosts} />
+            </div>
         </div>
     );
 }
