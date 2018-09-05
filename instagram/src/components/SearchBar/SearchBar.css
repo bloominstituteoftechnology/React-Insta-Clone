@@ -1,11 +1,31 @@
 .search-bar-wrapper {
-    border-bottom: 1 px #3333;
+    border-bottom: 1 px solid #3333;
     height: 80px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     background: white;
-    line-height:70px;
+    line-height: 70px;
+    
 }
+
 .iglogo {
-    height:100%;
+    height: 50%;
+}
+
+.camLogo {
+    height: 50%;
+}
+
+.social {
+    width: 50px;
+    height: 50px;
+}
+
+.social-wrapper {
+    display: flex;
+}
+
+.img-wrapper {
+    height: 50px;
+
 }
