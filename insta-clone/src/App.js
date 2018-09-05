@@ -22,6 +22,7 @@ class App extends Component {
   }
 
   login = (event) => {
+    event.preventDefault;
     localStorage.setItem('username', '{event.target.value}');
   }
 
