@@ -1,50 +1,70 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
+import Authenticate from './components/Authentication/Authenticate';  
+import PostsPage from './components/PostContainer/PostsPage';
+import Login from './components/Login/Login';
 
 class App extends Component {
   constructor (){
     super();
     this.state={
-      posts: [],
-      inputComment: ""
+      username: '',
+      password: '' 
     };
-  }
-
-  handleInput = event =>{
-    this.setState({inputComment:event.target.value
-    })
   } 
 
-  addNewComment = (event, index) =>{
-    // let currentPosts = this.state.posts.slice();
-    // currentPosts.push([...currentPosts, {
+  handleInput = event => {
+    event.preventDefault();
+    this.setState({ [event.target.classList]: event.target.value });
+  };
 
-    // }])
-    // this.setState()
-    console.log(event.target);
-  }
+  login = event => {
+    // this.setState(username: )
+    localStorage.setItem('username', this.state.username);
+    localStorage.setItem('password', this.state.password);
 
-  componentDidMount(){
-    // updatedPosts=this.state.posts.slice();
-    // updatedPost
-    this.setState({posts:dummyData});
-  }
 
-  render() {
-    // console.log(this.state.posts);
-    return (
-      <div className="App">
-        <SearchBar />{
-        this.state.posts.map( postObject => {
-          return <PostContainer key={postObject.username} postObject={postObject} addNewComment={this.addNewComment}/>
-        })
-      }</div>
+  };
+
+  render(){
+    const AuthenticateApp = Authenticate(App);
+    return(
+      <div>
+
+        <PostsPage />
+        <Login  login={this.login} 
+                handleInput={this.handleInput}
+                username={this.state.username}
+                password={this.state.password}/>
+
+      </div>
+      
     );
+
   }
+
+  
+
+  // componentDidMount(){
+
+  //   this.setState({posts:dummyData});
+  // }
+
+  // render() {
+  //   // console.log(this.state.posts);
+  //   return (
+  //     <div className="App">
+  //       <SearchBar search={this.search} handleChange={this.handleChange} />
+  //       <PostContainer 
+  //         posts={this.state.posts}
+  //         addNewComment={this.addNewComment}
+  //         handleInputComment={this.handleInputComment}/>
+  //     </div>
+  //   );
+  // }
 }
 
 export default App;
+
+ 

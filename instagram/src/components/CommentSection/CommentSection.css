@@ -1,21 +1,48 @@
-.commentSection{
+.comment-section{
     height: 100px;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-/* .commentObject{
-    
-
-} */
-
-.username{
+.comment-class{
+    flex-direction: row;
     font-size: 15px;
-    font-weight: bold;
-    display:inline-block;
 }
 
-.comment{
-    display:inline-block;
+.comment-username{
+   display:inline-block;
+    font-weight: bold;
+    font-size: 15px;
 }
+
+.comment-comment{
+    display: inline-block;
+    font-size: 15px;
+    font-weight: none;
+}
+
+.comment-input{
+
+}
+
+.comment-text {
+    text-align: left;
+    padding: 2px;
+    margin-left: 4px;
+  }
+  
+  .comment {
+    font-weight: 300;
+    font-size: 14px;
+  }
+  
+  .user {
+    font-weight: 500;
+    font-size: 12px;
+  }
+  
+  .heart {
+    width: 25px;
+  }
+  
