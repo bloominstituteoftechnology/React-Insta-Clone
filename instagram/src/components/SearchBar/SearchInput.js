@@ -22,6 +22,7 @@ class SearchInput extends Component {
         this.setState({
           inputValue: e.target.value
         });
+        this.handleSubmit(e);
     }
   
     render() {

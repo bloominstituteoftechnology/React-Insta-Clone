@@ -9,7 +9,8 @@ class PostsPage extends Component {
     super();
     this.state = {
       dummydata: [],
-      filteredState: []
+      filteredState: [],
+      filtered: false
     };
   }
 
@@ -21,6 +22,7 @@ class PostsPage extends Component {
 
   // Filter out the results based on the user's input
   handleSearch = (e) => {
+    if (e === '') {this.setState({filtered: false})}
     let updatedList = this.state.dummydata;
 
     updatedList = updatedList.filter(function(item) {
@@ -28,8 +30,8 @@ class PostsPage extends Component {
         e.toLowerCase()
       ) !== -1;
     });
-    
-    this.setState({filteredState: updatedList});
+
+    this.setState({filteredState: updatedList, filtered: true});
   }
 
   render() {
@@ -37,7 +39,7 @@ class PostsPage extends Component {
       <div className="App">
         <SearchBarContainer hdlSearch={this.handleSearch} forceUpd={this.props.forceUpd} />
         <div className="content">
-          <Posts data={this.state.dummydata} username={this.props.username} />
+          <Posts data={this.state.filtered ? this.state.filteredState : this.state.dummydata} username={this.props.username} />
         </div>
         
       </div>

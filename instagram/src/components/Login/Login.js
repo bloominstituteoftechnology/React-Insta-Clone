@@ -98,8 +98,8 @@ class Login extends Component {
                         <input type="input" value={this.state.userCreate} onChange={e => this.updateCreateInputValue(e)} placeholder="Username" />
                         <input type="password" value={this.state.passCreate} onChange={e => this.updateCreatePassValue(e)} placeholder="Password" />
                         <div className="create-buttons">
-                            <input type="button" onClick={e => this.createAccount(e)} value="Create" />
-                            <input type="button" onClick={e => this.updateCreate(e)} value="Close" />
+                            <input type="button" onClick={e => this.createAccount(e)} value="Register" />
+                            <input type="button" onClick={e => this.updateCreate(e)} value="Cancel" />
                         </div>
                     </form>
                 </div>

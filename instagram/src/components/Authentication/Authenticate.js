@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Login from '../Login/Login';
 
+// Displays the Login page and authenticates to allow user's to login
 const Authenticate = App => class extends Component {
     constructor() {
         super();
@@ -29,8 +30,6 @@ const Authenticate = App => class extends Component {
         }
 
         return false;
-
-
     }
 
     // Removes the localstorage for automatic login
