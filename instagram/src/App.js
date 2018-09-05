@@ -11,8 +11,18 @@ class App extends Component {
     super();
     this.state = {
       postInfo: [],
-      search: ""
+      search: "",
+      username: "",
+      password: ""
     };
+  }
+
+  componentDidMount() {
+    this.mapData();
+  }
+
+  mapData() {
+    this.setState({ postInfo: [...dummyData] });
   }
 
   search = event => {
@@ -31,12 +41,12 @@ class App extends Component {
     this.setState({[event.target.name]: event.target.value})
   }
 
-  componentDidMount() {
-    this.mapData();
-  }
+  login = event => {
+    event.preventDefault();
+    // let 
 
-  mapData() {
-    this.setState({ postInfo: [...dummyData] });
+    // this.setState({})
+    // this.setState({})
   }
 
   render() {
