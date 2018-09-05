@@ -1,0 +1,34 @@
+.login-section {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-img {
+    width: 200px;
+    height: 200px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.input {
+    width: 30%;
+    margin-bottom: 20px;
+    height: 20px;
+    border-radius: 3px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.submit-button {
+    width: 15%;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 3px;
+    background: #F7F8F7;
+    color: gray;
+    box-shadow: 2px 2px;
+}

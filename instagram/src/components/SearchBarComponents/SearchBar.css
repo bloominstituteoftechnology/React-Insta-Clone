@@ -35,10 +35,11 @@
 
 .search-input {
    margin-top: 80px;
-   border-radius: 5px;
-   height: 16px;
+   border-radius: 3px;
+   height: 20px;
+   font-size: 14px;
    padding-left: 10px;
    color: gray;
-   background: #f4f6f9;
+   background: #F7F8F7;
    margin-bottom: 0px;
 }
