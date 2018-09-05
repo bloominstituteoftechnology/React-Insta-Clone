@@ -23,14 +23,17 @@ class CommentSection extends React.Component {
     addNewComment = event => {
         event.preventDefault();
         if (this.state.commentInputText) {
-            // const newComment = { text: this.state.commentInputText, username: 'comment_troll' };
-            this.setState ({
-                comments: [...this.state.comments, 
-                            {text: this.state.commentInputText, 
-                            username: 'comment_troll'}],
-                commentInputText: ''
-            });
-            this.setComments;
+            // this.setState ({
+            //     comments: [...this.state.comments, 
+            //                 {text: this.state.commentInputText, 
+            //                 username: 'comment_troll'}],
+            //     commentInputText: ''
+            // });
+            // this.setComments;
+            const newComment = { text: this.state.commentInputText, username: 'comment_troll' };
+            const comments = [...this.state.comments];
+            comments.push(newComment);
+            this.setState({ comments, commentInputText: '' });
         }
     }
     
