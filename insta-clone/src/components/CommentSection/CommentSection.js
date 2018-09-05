@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentBar from './CommentBar';
+import './darkheart.jpg';
 // this component contains all comments in a given post
 
 class CommentSection extends React.Component {
@@ -34,6 +35,8 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div className="commentSection">
+      {this.state.likes}
+      <img onClick={this.increaseLikes} className="heart" src='./darkheart.jpg' />
       {this.state.comments.map((comment, index) => (
         <Comment
           key={index}
