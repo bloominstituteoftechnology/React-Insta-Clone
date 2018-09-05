@@ -16,15 +16,16 @@ function SearchBar(props) {
                 <div className='search-breaker'></div>
                 <img className='search-img' src={lambdagram} alt='Lambdagram' />
             </div>
-            <input 
-                className='search-box' 
-                name='searchInput' 
-                type='text' 
-                placeholder='Search' 
-                value={props.searchInput} 
-                onChange={props.handleSearchInput} 
-                onSubmit={props.handleSearch} 
-            ></input>
+            <form onSubmit={props.handleSearch} >
+                <input 
+                    className='search-box' 
+                    name='searchInput' 
+                    type='text' 
+                    placeholder='Search' 
+                    value={props.searchInput} 
+                    onChange={props.handleSearchInput} 
+                ></input>
+            </form>
             <div>
                 <img className='search-img' src={compass} alt='Compass' />
                 <img className='search-img' src={heart} alt='Heart' />

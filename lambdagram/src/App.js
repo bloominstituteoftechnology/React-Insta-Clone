@@ -19,9 +19,15 @@ class App extends Component {
 
   handleSearch = (event) => {
     event.preventDefault();
-    this.setState({
-      searchInput: 'IM A LITTLE TEA POT'
+    let tmpData = [...this.state.instaData];
+    tmpData = tmpData.filter( (post) => {
+      if (post.username === this.state.searchInput) {
+      // const match = RegExp(`^*${this.state.searchInput}*$`);
+      // if(match.test(post.username)) {
+        return post;
+      }
     });
+    this.setState({ instaData: tmpData });
   }
 
   handleInput = (event) => {
@@ -34,13 +40,13 @@ class App extends Component {
     const tmpData = this.state.instaData;
     if(event.target.src === heart) {
       event.target.src = heartFilled;
-      this.setState(prevState => (
+      this.setState( (prevState) => (
         tmpData[i].likes = prevState.instaData[i].likes + 1,
         {instaData: tmpData}
       ));
     } else {
       event.target.src = heart;
-      this.setState(prevState => (
+      this.setState( (prevState) => (
         tmpData[i].likes = prevState.instaData[i].likes - 1,
         {instaData: tmpData}
       ));
