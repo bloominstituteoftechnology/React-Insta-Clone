@@ -1,4 +1,5 @@
 import React from 'react'
+import './Login.css'
 
 class Login extends React.Component {
   constructor() {
@@ -24,21 +25,23 @@ class Login extends React.Component {
   render() {
     return (
       <form className="Login" onSubmit={this.login}>
+        <i className="fab fa-instagram navLogo1"></i>
+        <h1 className="cookieFont">Instagram</h1>
         <input 
           name="username"
           type="text"
           placeholder="username"
           value={this.state.username}
           onChange={this.handleSubmit}
-        />
+          />
         <input
           name="password"
           type="password"
           placeholder="password"
           value={this.state.password}
           onChange={this.handleSubmit}
-        />
-        <button type="submit">Login</button>
+          />
+        <button className="cookieFont" type="submit">Login</button>
       </form>
     )
   }
