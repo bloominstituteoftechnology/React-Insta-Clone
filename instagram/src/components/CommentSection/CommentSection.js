@@ -14,10 +14,18 @@ class CommentSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.comments,
-      comment: ""
+      comments: [],
+      comment: "",
+      likes: 0
     }
     console.log(this.state.comments);
+  }
+
+  componentDidMount(){
+    this.setState({
+      comments: this.props.comments,
+      likes: this.props.likes
+    })
   }
 
   updateComment = e => {
@@ -28,10 +36,19 @@ class CommentSection extends Component {
 
   addNewComment = event => {
     event.preventDefault();
-    let new_comments = [...this.state.comments, {username: 'ryan_hamblin', text: this.state.comment}]// text: e.target.innerText(o lo que sea), username: 'ryan hamblin'
+    if (this.state.comment) {
+      let new_comments = [...this.state.comments, {username: 'ryan_hamblin', text: this.state.comment}]// text: e.target.innerText(o lo que sea), username: 'ryan hamblin'
+      this.setState({
+        comments: new_comments,
+        comment: ""
+      })
+    }
+  }
+
+  addLikes = () => {
+    let new_likes = this.state.likes +1
     this.setState({
-      comments: new_comments,
-      comment: ""
+      likes: new_likes
     })
   }
 
@@ -45,12 +62,12 @@ render() {
     <div className="comment-section">
 
       <div className="interactions">
-        <img className="likes" src={likes} />
+        <img className="likes" src={likes} onClick={this.addLikes}/>
         <img className="comment" src={comment}/>
         <img className="message" src={message} />
         <img className="save" src={save} />
       </div>
-      <p className="likes-counter">{this.props.likes} likes</p>
+      <p className="likes-counter">{this.state.likes} likes</p>
 
       <div className="comments" >
       {this.state.comments.map(comment =>
