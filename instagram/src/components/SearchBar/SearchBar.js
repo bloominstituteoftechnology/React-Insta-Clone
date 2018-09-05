@@ -11,20 +11,20 @@ const SearchBar = () => {
             </div>
 
             <div className='search-bar'>
-                <input type='text' class='form-control' placeholder='Search' />
+                <input type='text' class='search-control' placeholder='Search' />
             </div>
 
             <div className='social-wrapper'>
                 <div className='social'>
-                    <i class='far fa-compass'></i>
+                    <i class='far fa-compass fa-2x'></i>
                 </div>
 
                 <div className='social'>
-                    <i class='far fa-heart'></i>
+                    <i class='far fa-heart fa-2x'></i>
                 </div>
 
                 <div className='social'>
-                    <i class='far fa-user'></i>
+                    <i class='far fa-user fa-2x'></i>
                 </div>
             </div>
         </div>
