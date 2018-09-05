@@ -27,7 +27,7 @@ class Login extends React.Component {
       <div>
         <div className="login-wrapper">
           <form onSubmit={this.login}>
-            <img src="instagramLogo" alt="Logo." className="login-logo" />
+            <div className="login-logo" >Instaclone</div>
             <input
               type="text"
               placeholder="Username"

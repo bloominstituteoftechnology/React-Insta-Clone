@@ -1,0 +1,51 @@
+.login-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 150px 0;
+  display: flex;
+  justify-content: center;
+  background: #f9f9f9;
+}
+
+.login-logo {
+  max-height: 50px;
+  margin-bottom: 10px;
+  font-family: 'Grand Hotel', cursive;
+  font-size: 32px;
+}
+
+.login-wrapper form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.login-wrapper form input {
+  width: 220px;
+  height: 55px;
+  margin: 10px 0;
+  padding: 0 15px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-wrapper form button {
+  width: 220px;
+  height: 55px;
+  margin: 10px 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3182ee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

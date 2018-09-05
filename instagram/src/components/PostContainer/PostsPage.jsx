@@ -57,11 +57,11 @@ class PostsPage extends Component {
   render() {
     return (
       <div className="PostsPage">
-        <div className="wrPostsPageer">
-          <header>
+        <div className="header-wrapper">
+          <header className="staticbar">
             <div className="instaclone-logo">
               <i className="fab fa-instagram" />
-              <p>Instagram</p>
+              <p>Instaclone</p>
             </div>
             <SearchBar searchHandler={this.searchHandler} />
             <div className="social-icons">
@@ -70,7 +70,7 @@ class PostsPage extends Component {
               <i onClick={this.logout}className="far fa-user" />
             </div>
           </header>
-            <div className="posts-wrPostsPageer">
+            <div className="postcontainer-wrapper">
             <PostContainer data={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} />
             </div>
         </div>
