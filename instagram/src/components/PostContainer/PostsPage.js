@@ -1,7 +1,7 @@
 import React from 'react';
 import dummyData from '../../dummy-data';
-import SearchBar from '../../components/SearchBar/SearchBar';
-import PostContainer from '../../components/PostContainer/PostContainer';
+import SearchBar from '../SearchBar/SearchBar';
+import PostContainer from '../PostContainer/PostContainer';
 import IGLogo from '../../assets/iglogo.png';
 
 class PostsPage extends React.Component {
@@ -59,7 +59,7 @@ class PostsPage extends React.Component {
           </div>
         </div>
         {this.state.posts.map((post, index) => (
-          <PostContainer post={post} key={index} />
+          <PostContainer post={post} key={post.imageUrl} />
         ))}
       </div>
     );
