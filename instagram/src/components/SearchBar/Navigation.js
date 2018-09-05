@@ -7,15 +7,15 @@ const Navigation = props => {
     return (
         <div className="navigation">
             <div className="compass">
-                <a href="#"><img src={compass} /></a>
+                <button><img src={compass} alt="compass"/></button>
             </div>
 
             <div className="heart">
-                <a href="#"><img src={heart} /></a>
+                <button><img src={heart} alt="heart"/></button>
             </div>
 
             <div className="user">
-                <a href="#"><img src={user} /></a>
+                <button><img src={user} alt="user"/></button>
             </div>
         </div>
     );

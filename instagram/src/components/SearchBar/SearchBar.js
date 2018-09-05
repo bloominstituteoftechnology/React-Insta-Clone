@@ -8,10 +8,10 @@ const SearchBar = props => {
         <div className="search-container">
         <div className="search-bar">
             <div className="logo">
-                <a href="#"><img src={logo} /></a>
+                <button><img src={logo} alt="instagram"/></button>
             </div>
             <div className="search">
-                <input placeholder="Search" />
+                <input placeholder="Search" onFocus={props.focusSearch} onBlur={props.focusSearch} onChange={props.updateSearch}/>
                 <div className="search-icon" style={{transform: 'rotate(-45deg)', fontWeight:'bold'}}>&#9906;</div>
             </div>
 

@@ -17,7 +17,7 @@
     height: 77px;
 }
 
-.search-bar .logo img{
+.search-bar .logo img {
     width: 176px;
 }
 
@@ -26,6 +26,15 @@
     width: 215px;
     height: 28px;
     font-size: 20px;
+}
+
+.search-bar .search.active input {
+    text-align: left;
+    padding-left: 30px;
+}
+
+.search-bar .search.active .search-icon {
+    left: 4%;
 }
 
 .search-bar .search-icon {
