@@ -1,4 +1,5 @@
 import React from "react";
+import { Alert } from "reactstrap";
 import "./Login.css";
 
 // TODO: do some form here and link up this and the Auth page etc to make this show if user is not authenticated
@@ -27,7 +28,7 @@ class Login extends React.Component {
       <div>
         <div className="login-wrapper">
           <form onSubmit={this.login}>
-            <div className="login-logo" >Instaclone</div>
+            <div className="login-logo">Instaclone</div>
             <input
               type="text"
               placeholder="Username"
@@ -43,6 +44,7 @@ class Login extends React.Component {
             <button type="submit">Login</button>
           </form>
         </div>
+        <Alert color="primary">&nbsp;</Alert>
       </div>
     );
   }
