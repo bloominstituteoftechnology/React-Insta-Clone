@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from './dummy-data';
-import PostsContainer from './components/PostsContainer/PostsContainer';
-import SearchBar from './components/SearchBar/SearchBar';
+import PostsPage from './components/PostsContainer/PostsPage';
 
 class App extends Component {
   constructor(props){
     super(props);
 
-    this.state = {
-      posts: []
-    }
+    this.state = {}
   }
 
-  componentDidMount() {
-    this.setState({posts : dummyData});
-    console.log('componentDidMount');
-  }
-  
 
   render() {
     
@@ -28,16 +19,7 @@ class App extends Component {
     */
 
     return (
-      <div className="App">
-      <header>
-        <SearchBar />
-        </header>
-
-        <main>
-          <PostsContainer posts={this.state.posts} />
-      </main>
-
-      </div>
+      <PostsPage />
     );
   }
 }
