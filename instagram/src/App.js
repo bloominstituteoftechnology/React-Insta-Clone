@@ -1,5 +1,5 @@
 import React from 'react';
-import Authenticate from './components/Authentication/Authenticate';
+import Authenticate from './HOC/Authentication/Authenticate.js';
 import PostsPage from './components/PostContainer/PostsPage';
 import './App.css';
 
