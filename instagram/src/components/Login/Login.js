@@ -1,4 +1,6 @@
 import React from 'react';
+import headerLogo from '../../igtext.png';
+import './Login.css';
 
 export default class Login extends React.Component {
   constructor() {
@@ -24,8 +26,11 @@ export default class Login extends React.Component {
   render() {
     return (
       <div className="login-container">
-        <form onSubmit={this.setStorage}>
+        <form className="box" onSubmit={this.setStorage}>
+          <img src={headerLogo} alt="Instagram Logo Text"/>
+          <p>Sign up to see photos and videos from your friends.</p>
           <input onChange={this.usernameText} className="username-input" type="text" placeholder="Username" />
+          <input className="password-input" placeholder="Password" type="password"/>
           <button onClick={this.setStorage} className="login-button">Login</button>
         </form>
       </div>

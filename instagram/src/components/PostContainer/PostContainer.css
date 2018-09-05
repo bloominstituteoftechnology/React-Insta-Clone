@@ -4,7 +4,6 @@
   align-items: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
-  border: 1px solid rgba(0,0,0,0.2);
 }
 
 .thumbnail-container {
@@ -21,6 +20,10 @@
   border-radius: 50%;
   padding: 20px;
   width: 100px;
+}
+
+.username {
+  margin: 0 20px 20px;
 }
 
 .main-img {
@@ -43,6 +46,7 @@
   padding: 0 0 0 20px;
   margin: 20px 0 0;
   font-size: 2rem;
+  text-align: left;
 }
 
 .icons {
@@ -52,11 +56,13 @@
 
 .heart-icon, .comment-icon {
   margin: 20px 0px 0 20px;
+  cursor: pointer;
 }
 
 .timestamp {
   font-weight: bold;
   color: gray;
-  font-size: 1.6rem;
+  font-size: .8rem;
   margin:  20px 0px 20px 20px;
+  text-align: left;
 }
