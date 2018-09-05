@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import SearchBarContainer from './components/SearchBar/SearchBarContainer';
 import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
   constructor() {
@@ -44,6 +45,7 @@ class App extends Component {
           search = {this.search}
           handleChanging = {this.handleChanging}
         />
+        <PostsPage />
         <PostContainer 
           posts = {this.state.postInfo} 
         />
