@@ -74,9 +74,10 @@ render() {
         <Comment comment={comment} />)}
       </div>
       <TimeStamp time={this.props.time}/>
-      <CommentInput addNewComment={this.addNewComment}
+      <CommentInput
         comment={this.state.comment}
         updateComment={this.updateComment}
+        addNewComment={this.addNewComment}
         />
 
 

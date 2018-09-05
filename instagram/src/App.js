@@ -11,6 +11,7 @@ class App extends Component {
     super();
     this.state = {
       entries: [],
+      filter: ""
     }
     console.log('hola super')
   }
@@ -21,6 +22,22 @@ class App extends Component {
     )
     console.log('hola did mount');
   }
+
+  updateFilter = e => {
+    console.log(e);
+    this.setState({
+      filter: e.target.value
+    })
+  }
+
+  filterEntries = e => {
+    e.preventDefault();
+    let new_entries = this.state.entries.filter(entry => JSON.stringify(entry).includes(this.state.filter))
+    this.setState({
+      entries: new_entries
+    })
+  }
+
   render() {
     // dummyData.forEach(item =>
     // console.log(item))
@@ -33,7 +50,11 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Animals: by Luisan</h1>
         </header>
-        <SearchBar />
+        <SearchBar
+          value={this.state.filter}
+          updateFilter={this.updateFilter}
+          filterEntries={this.filterEntries}
+        />
           {this.state.entries.map(entry =>
           <PostContainer entry={entry} key={entry.timestamp}/>
         )}
