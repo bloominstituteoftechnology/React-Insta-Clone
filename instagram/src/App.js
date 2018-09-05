@@ -11,9 +11,20 @@ class App extends Component {
     super();
     this.state = {
       posts: [],
-      inputText: ""
+      searchPosts: ""
     };
   }
+
+  searchPosts = e => {
+    e.preventDefault();
+  }
+
+
+  handleChange = event => {
+    this.setState({
+      [event.target.neme]: event.target.value
+    });
+  };
 
   componentDidMount() {
     this.setState({posts: dummyData});
@@ -22,9 +33,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       <SearchBar />
+       <SearchBar 
+        searchPosts={this.searchPosts}
+        handleChange={this.handleChange}
+       />
        <PostContainer 
-          posts= {this.state.dummyData}
+          posts= {this.state.posts}
           inputText={this.state.inputText}
 
         />

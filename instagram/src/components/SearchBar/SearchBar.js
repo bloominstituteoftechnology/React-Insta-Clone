@@ -16,7 +16,13 @@ const SearchBar = () => {
                 <img src={InstaText} alt="instagram text" className="insta-text" />
             </div>
             <div className="search-box">
-                <input type="text" placeholder="Search" />
+            <form>
+                <input 
+                type="text" 
+                placeholder="Search"
+                name="search" 
+                />
+            </form>
             </div>
             <div className="icon-container">
                 <img src={NavIcon} alt="Navigation Icon" className="icon" />

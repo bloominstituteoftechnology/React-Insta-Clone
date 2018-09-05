@@ -28,8 +28,9 @@ class Post extends Component {
 
     addLikes = event => {
         event.preventDefault();
-        this.setState({ likes: this.state.likes + 1 });
-
+        this.setState({ likes: this.state.likes + 1 
+        });
+    };
 
 render() {
     return (
@@ -40,9 +41,9 @@ render() {
             </div>
             <img className= "img-content" src={this.props.post.imageUrl}/>
             <div className="bold likes">
-                {this.props.post.likes} likes
+                {this.state.likes} likes
             </div>
-            <img src={HeartIcon} alt="Heart Icon" className="like-icon" />
+            <img onClick={this.addLikes} src={HeartIcon} alt="Heart Icon" className="like-icon" />
             <div className="comment-container">
                 {this.state.comments.map((comment,i) => (
                     <CommentSection
@@ -52,26 +53,25 @@ render() {
                     />
 
                 ))}
-        </div>
+         </div>
          
-        <form
-            onSubmit = {this.addNewComment}
-        >  
-            <input
-                onChange={this.handleChange}
-                className="comment-input"
-                type="text"
-                placeholder="Add a comment..."
-                name = "newComment"
-                value = {this.state.newComment}
-            />
-            <button>Submit</button>
-        </form>
-        </div>
-        );
+            <form
+                onSubmit = {this.addNewComment}
+            >  
+                <input
+                    onChange={this.handleChange}
+                    className="comment-input"
+                    type="text"
+                    placeholder="Add a comment..."
+                    name = "newComment"
+                    value = {this.state.newComment}
+                />
+                <button>Submit</button>
+            </form>
+            </div>
+            );
+        };
     };
-};
-
 
 export default Post;
 
