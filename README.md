@@ -1,1 +1,1 @@
-Day 1 & 2 Preview: https://codesandbox.io/s/jz74813o2w
+Preview: https://codesandbox.io/s/github/BrianARuff/React-Insta-Clone/tree/master/instagram
