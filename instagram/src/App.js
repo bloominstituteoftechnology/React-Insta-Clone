@@ -1,28 +1,51 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import dummyData from './assets/dummy-data';
-import PostContainer from './components/PostContainer';
+import dummyData from './dummy-data';
+import PostsContainer from './components/PostsContainer/PostsContainer';
+import SearchBar from './components/SearchBar/SearchBarContainer';
+import PostsPage from './components/PostsPage';
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      data: dummyData,
-    }
+      posts: [],
+      filteredPosts: []
+    };
   }
-
+  componentDidMount() {
+    this.setState({ posts: dummyData });
+  }
+  searchPostsHandler = e => {
+    const posts = this.state.posts.filter(p => {
+      if (p.username.includes(e.target.value)) {
+        return p;
+      }
+    });
+    this.setState({ filteredPosts: posts });
+  };
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Instagram</h1>
-        </header>
-        {this.state.data.map((post, index)=>{
-          return(
-            <PostContainer post={post} key={index} />
-        )})}
+        {
+          <PostsPage
+            searchTerm={this.state.searchTerm}
+            searchPosts={this.searchPostsHandler}
+            filteredPosts={this.state.filteredPosts}
+            posts={this.state.posts}
+          />
+          /* <SearchBar
+          searchTerm={this.state.searchTerm}
+          searchPosts={this.searchPostsHandler}
+        />
+        <PostsContainer
+          posts={
+            this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.posts
+          }
+        /> */
+        }
       </div>
     );
   }
