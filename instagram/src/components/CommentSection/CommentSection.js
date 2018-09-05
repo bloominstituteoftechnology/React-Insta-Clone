@@ -18,7 +18,6 @@ class CommentSection extends Component {
       comment: "",
       likes: 0
     }
-    console.log(this.state.comments);
   }
 
   componentDidMount(){
@@ -55,9 +54,6 @@ class CommentSection extends Component {
 
 
 render() {
-  console.log('comment');
-  console.log(this.props);
-
   return (
     <div className="comment-section">
 

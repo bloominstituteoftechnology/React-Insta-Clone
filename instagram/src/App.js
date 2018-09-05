@@ -13,18 +13,16 @@ class App extends Component {
       entries: [],
       filter: ""
     }
-    console.log('hola super')
   }
 
   componentDidMount(){
     this.setState(
       {entries: dummyData}
     )
-    console.log('hola did mount');
+    console.log(dummyData);
   }
 
   updateFilter = e => {
-    console.log(e);
     this.setState({
       filter: e.target.value
     })
@@ -32,9 +30,10 @@ class App extends Component {
 
   filterEntries = e => {
     e.preventDefault();
-    let new_entries = this.state.entries.filter(entry => JSON.stringify(entry).includes(this.state.filter))
+    let new_entries = dummyData.filter(entry => JSON.stringify(entry).includes(this.state.filter))
     this.setState({
-      entries: new_entries
+      entries: new_entries,
+      filter: ""
     })
   }
 
@@ -43,7 +42,7 @@ class App extends Component {
     // console.log(item))
     // dummyData.forEach(item =>
     // console.log(typeof item))
-    console.log(this.state.entries);
+    // console.log(this.state.entries);
     return (
       <div className="App">
         <header className="App-header">
