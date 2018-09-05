@@ -9,11 +9,13 @@ class App extends Component {
     super();
     this.state = {
       searchText: '',
-      posts: dummyData
+      posts: []
     };
   }
 
-  
+  componentDidMount() {
+    this.setState({ posts: dummyData });
+  }
 
   render() {
     return (

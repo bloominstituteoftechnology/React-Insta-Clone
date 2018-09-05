@@ -10,17 +10,27 @@ class CommentSection extends React.Component {
             comments: props.comments,
             commentInputText: ''
         };
+        this.setcomments();
     }
 
-    addComment = event => {
+    setcomments = () => {
+        localStorage.setItem(
+            this.props.postId,
+            JSON.stringify(this.state.comments)
+        );
+    } 
+
+    addNewComment = event => {
         event.preventDefault();
         if (this.state.commentInputText) {
+            // const newComment = { text: this.state.commentInputText, username: 'comment_troll' };
             this.setState ({
                 comments: [...this.state.comments, 
                             {text: this.state.commentInputText, 
                             username: 'comment_troll'}],
                 commentInputText: ''
             });
+            this.setComments;
         }
     }
     
@@ -33,7 +43,7 @@ class CommentSection extends React.Component {
             <div>
                 {this.state.comments.map((comment, i) => <Comment key={i} comment={comment} />)}
                 <CommentInput commentInputText={this.state.commentInputText}
-                addComment={this.addComment}
+                addNewComment={this.addNewComment}
                 handleCommentInput={this.handleCommentInput}/>
             </div>
         )
