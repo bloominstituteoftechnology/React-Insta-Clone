@@ -15,6 +15,7 @@ const PostList = props => {
         thumbnailUrl={post.thumbnailUrl}
         imageUrl={post.imageUrl}
         comments={post.comments}
+        likes={post.likes}
 
          />
       )
