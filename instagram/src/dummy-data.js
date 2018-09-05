@@ -1,5 +1,34 @@
 const dummyData = [
   {
+    username: "aReJayWebMeister",
+    thumbnailUrl:
+      "https://pbs.twimg.com/profile_images/590822965140422656/TYggBrpG_400x400.jpg",
+
+    imageUrl:
+      "https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    likes: 9000,
+    timestamp: "August 9th 2018, 11:43:00 am",
+    comments: [
+      {
+        username: "aReJayWebMeister",
+        text:
+          "I can't believe I made this instagram clone now I can relax and post cool images!"
+      },
+      {
+        username: "Lefty",
+        text: "That like is like Amazing"
+      },
+      {
+        username: "CoolGuy",
+        text: "AY YO RJ THAT IMAGE IS CRAZYYYYYYY!"
+      },
+      {
+        username: "RandomStranger",
+        text: "Where was this image captured?"
+      }
+    ]
+  },
+  {
     username: "philzcoffee",
     thumbnailUrl:
       "https://tk-assets.lambdaschool.com/ecd33d34-c124-4b75-92d2-e5c52c171ed8_11201517_887808411287357_1307163552_a.jpg",

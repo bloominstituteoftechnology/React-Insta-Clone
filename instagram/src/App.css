@@ -1,0 +1,111 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.submit-btn {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.commentHeader {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: rgb(149, 149, 149);
+}
+
+.red {
+  color: red;
+}
+
+ .aReJayWebMeister{
+  margin-top: 55px;
+  
+}
+
+.searchBar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(219, 219, 219, 0.925);
+  align-items: center;
+  max-width: 800px;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.178);
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.sContainer {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  max-width: 800px;
+  width: 100%;
+  margin-right: -10px;
+  
+}
+
+.logout {
+ cursor: pointer;
+ color: rgba(0, 0, 0, 0.589);
+}
+
+@media(max-width: 576px) {
+  .sContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    
+  }
+    .aReJayWebMeister{
+      margin-top: 120px;
+      
+    }
+
+    .searchMedia {
+      display: flex;
+     justify-content: center;
+      margin-bottom: 15px;
+      
+      
+    }
+
+    .rightNavMedia {
+      display: flex;
+     justify-content: center;
+     margin-left: 21px;
+      
+    }
+
+    .leftNavMedia {
+      display: flex;
+     justify-content: center;
+     
+    }
+  
+}
+
