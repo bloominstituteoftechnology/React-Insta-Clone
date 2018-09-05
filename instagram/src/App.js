@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 import Search from './components/SearchBar/Search';
+import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './components/Authentication/Authenticate';
 
 import './App.css';
 
@@ -34,7 +36,8 @@ class App extends Component {
         <Search handleSearchInput={this.handleSearchInput}/>        
         {this.state.posts.map((eachElement) => {
           return <PostContainer key={eachElement.username} profileObject={eachElement} />;
-        })}           
+        })} 
+        <PostsPage />          
       </div>
     );
   }
