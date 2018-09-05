@@ -1,19 +1,49 @@
 import React from 'react';
 import Comment from './Comment.js'
-const CommentSection = (props) => {
-  console.log(props);
-   return(
-     <div className="CommentSection">
+import App from '../../App.js'
+import PropTypes from "prop-types";
 
-<p>{props.userData.likes} likes </p>
-<Comment userData = {props.userData.comments} />
-<p>{props.userData.timestamp}</p>
-<form >
-  <input id = "addComment" placeholder ="Add Comment" ></input>
-<button className ="addCommentButton"  >Submit!</button>
-</form>
-     </div>
-   )
+class CommentSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: props.comments,
+      newComment: "",
+      likes: 0
+    };
+}
+addNewComment = event => {
+  event.preventDefault();
+  this.setState({
+    comments: [
+      ...this.state.comments,
+      { text: this.state.newComment, username: "anonymous" }
+    ],
+    newComment: ""
+  });
+};
+handleChange = event => {
+    event.preventDefault();
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
+   render(){
+return(
+  <div className="CommentSection">
+
+
+<CommentInput input={this.state.comments.text}
+          handleChange={this.handleChange} />
+
+
+  </div>
+
+
+)
+
+   }
+
+
 }
 
 export default CommentSection

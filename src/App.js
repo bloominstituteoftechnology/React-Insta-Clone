@@ -3,19 +3,23 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import dummyData from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer.js'
-import CommentSection from './components/CommentSection/CommentSection.js'
+import Comment from './components/CommentSection/Comment.js'
+import CommentInput from './components/CommentSection/CommentInput.js'
 class App extends Component {
   constructor(props){
     super();
-    this.state = dummyData;
+    this.state =  dummyData
 
-  }
+  };
+
+
   render() {
     return (
       <div className="App">
       <SearchBar />
-      <PostContainer userData = {this.state}/>
-
+      <PostContainer NewComment ={this.NewComment} userData = {this.state}/>
+<Comment userData = {this.state}/>
+         <CommentInput  userData = {this.state.comments} />
       </div>
     );
   }

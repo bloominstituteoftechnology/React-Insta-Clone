@@ -1,6 +1,7 @@
 import React from 'react';
 import './PostContainer.css';
-import CommentSection from '../CommentSection/CommentSection.js'
+import Comment from '../CommentSection/Comment.js'
+
 const Post = (props) => {
   console.log(props);
    return(
@@ -15,7 +16,8 @@ const Post = (props) => {
   <div className="HeartLikeButtton2">♡</div>
   <div className="CommentButtton">💬</div>
 </div>
-<CommentSection userData = {props.userData} />
+<Comment userData = {props.userData} />
+
      </div>
    )
 }
