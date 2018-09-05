@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types';
+import './PostContainer.css';
 
 import Post from './Post'
 
 const PostContainer = props => {
   return (
-    <div>
+    <div className='post-container'>
       <Post data={props.entry} />
   </div>
   )
