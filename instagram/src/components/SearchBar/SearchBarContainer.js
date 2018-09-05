@@ -11,6 +11,7 @@ const SearchBar = (props) => {
         <div>
           <input type="text" placeholder="Search" onKeyUp={props.searchPosts} />
         </div>
+        <button onClick={props.logout}>log out</button>
         <div className="social-wrapper">
           <div className="social">
             <i className="fa fa-compass" />

@@ -18,7 +18,7 @@ class CommentSection extends React.Component {
         event.preventDefault();
         if(this.state.inputText) {
             this.setState({
-                comments: [...this.state.comments, {text: this.state.inputText, username:"New Guy"}],
+                comments: [...this.state.comments, {text: this.state.inputText, username:localStorage.getItem("Username")}],
                 inputText: ''
             })
         }

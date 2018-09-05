@@ -17,6 +17,12 @@ class PostsPage extends Component {
       componentDidMount() {
         this.setState({posts: dummyData})
       }
+
+      logout = () => {
+        localStorage.removeItem("Password");
+        localStorage.removeItem("Username");
+        window.location.reload();
+      };
       
       searchPostsHandler = e => {
         const posts = this.state.posts.filter(p => {
@@ -33,6 +39,7 @@ class PostsPage extends Component {
                 <SearchBar 
                 searchTerm={this.state.searchTerm} 
                 searchPosts={this.searchPostsHandler}
+                logout={this.logout}
                 />
                 <PostsContainer posts={
                 this.state.filteredPosts.length > 0 
