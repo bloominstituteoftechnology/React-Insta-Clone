@@ -1,8 +1,9 @@
 import React from 'react'
 import './App.css'
 import dummyData from './dummy-data'
-import Search from './components/SearchBar/Search.js'
-import PostsPage from './components/PostContainer/PostsPage.js'
+import Search from './components/SearchBar/Search'
+import PostsPage from './components/PostContainer/PostsPage'
+import Authenticate from './components/Authentication/Authentication'
 
 class App extends React.Component {
   constructor() {
@@ -22,14 +23,22 @@ class App extends React.Component {
   }
 
   render() {
+    const App = () => {
+      return (
+        <div className="App">
+          <Search
+            className="Search"
+            search={this.search}
+          />
+          <PostsPage {...this.state} />
+        </div>
+      )
+    }
+
+    const HOCApp = Authenticate(App)
+
     return (
-      <div className="App">
-        <Search
-          className="Search"
-          search={this.search}
-        />
-        <PostsPage {...this.state} />
-      </div>
+      <HOCApp App={App} />
     )
   }
 }
