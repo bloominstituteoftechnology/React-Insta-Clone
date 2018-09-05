@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Login from '../Login/Login';
 
 const Authenticate = App =>
     class extends Component {
@@ -8,8 +9,16 @@ const Authenticate = App =>
                 loggedIn: false
             }
         }
+
+        componentDidMount() {
+            if (localStorage.getItem("username") !== null) {
+                this.setState({ loggedIn: true });
+            }
+        }
+
     render() {
-        return <App />;
+        let screen = this.state.loggedIn ? <App/> : <Login />;
+        return screen;
     }
 };
 
