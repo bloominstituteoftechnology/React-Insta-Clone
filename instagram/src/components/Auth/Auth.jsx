@@ -21,5 +21,11 @@ class Auth extends React.Component {
     }
   };
 
-  render() { return <div>auth</div>; }; // TODO: add some conditional render logic for the return
+  render() { 
+    if(this.state.authenticated) {
+      return <App />;
+    } else {
+      return <Login authenticated={this.state.authenticated} />
+    }
+  };
 };
