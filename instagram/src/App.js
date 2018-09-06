@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import PostsPage from './components/PostsContainer/PostsPage';
-//import Authenticate from './Authentication/Authenticate';
+import Authenticate from './Authentication/Authenticate';
 
 // import dummyData from './dummy-data';
 // import PostsContainer from './components/PostsContainer/PostsContainer';
@@ -13,9 +13,12 @@ class App extends Component {
     this.state = [];
   }
 
-  logIn = e => {
+  // logIn = e => {
+  //   //set a username on localStorage
+  //   //check localStorage to see if user is logged in
+  //   //force page to reload when user logs in -- unmount/mount component
 
-  }
+  // }
  
   render() {
     return (
@@ -28,4 +31,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
