@@ -19,7 +19,6 @@
     background: #3897f0;
     border-color: #3897f0;
     color: #fff;
-    -webkit-appearance: none;
     border-radius: 3px;
     border-style: solid;
     border-width: 1px;
@@ -30,9 +29,6 @@
     outline: 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     white-space: nowrap;
     width: 60%;
@@ -59,11 +55,10 @@
     height: 36px;
     left: 8px;
     line-height: 36px;
-    overflow: hidden;
     pointer-events: none;
     
     right: 0;
-     text-overflow: ellipsis;
+    
 }
 .username-form{
     border: 1px solid #efefef;

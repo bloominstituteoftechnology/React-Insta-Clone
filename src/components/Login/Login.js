@@ -5,15 +5,16 @@ import bar from '../../logos/bar.png';
 import appstore from '../../logos/appstore.png';
 
 class Login extends Component {
-    constructor(props){
-        super(props);
+    constructor() {
+        super();
         this.state = {
             username:""
-        }
+        };
     }
 
     handleInputChange = event => {
-       this.setState({ [event.target.name]: event.target.value}); 
+        
+        this.setState({ [event.target.name]: event.target.value}); 
     }
 
     handleLogin = event => {
@@ -45,14 +46,14 @@ class Login extends Component {
                         <div>
                             
                             
-                            <div >
-                                
+                            <div>
+                                <form>
                                     <h2 className="h2-word">Username</h2>
                                     <input className="Username username-form" name="username" type="text" onChange={this.handleInputChange} value={this.state.username}></input>
                                     <h2 className="h2-word">Password</h2>
                                     <input className="Username username-form" name="password" type="text"></input>
                                     <button onClick={this.handleLogin}  className="signin-button">Sign up</button>
-                                
+                                </form>
                                 
                             </div>
                             
@@ -72,6 +73,6 @@ class Login extends Component {
     }
     
 
-}
+};
 
 export default Login;

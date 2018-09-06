@@ -17,10 +17,10 @@ class PostsPage extends Component {
    search = event => {
     event.preventDefault();
     let newPosts = [...this.state.posts];
-    newPosts = newPosts.filter(post =>{
+    newPosts = newPosts.filter(post => {
       if(post.username === this.state.search){
         return post;
-      }
+      };
     });
     this.setState({ posts: newPosts });
   }

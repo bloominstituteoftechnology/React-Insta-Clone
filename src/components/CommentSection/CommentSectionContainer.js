@@ -13,10 +13,11 @@ class CommentSection extends React.Component {
   }
   addNewComment = event => {
     event.preventDefault();
+    const user = localStorage.getItem('user')
     this.setState({
       comments: [
         ...this.state.comments,
-        { text:this.state.newComment, username:"Shrek" }
+        { text:this.state.newComment, username:user}
       ],
       newComment:""
     });

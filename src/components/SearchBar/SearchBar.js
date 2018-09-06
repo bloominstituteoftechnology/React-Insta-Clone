@@ -41,8 +41,8 @@ export default class SearchBar extends React.Component {
           </div>
           <div className="navicons" >
             <nav className="nav-items" >
-              <a href="#"><img src={compass}  alt={"none"}></img></a>
-              <a href="#"><img src={heart} alt={"none"}></img></a>
+              <a href="none"><img src={compass}  alt={"none"}></img></a>
+              <a href="none"><img src={heart} alt={"none"}></img></a>
               <a href="Shrek.js"><img src={person} alt={"none"}></img></a>
             </nav>
            </div>

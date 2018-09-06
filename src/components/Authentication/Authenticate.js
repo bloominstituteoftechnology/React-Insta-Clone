@@ -1,33 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Login from '../Login/Login';
 
 const Authenticate = App =>
   class extends React.Component {
-      constructor(props){
-         super(props);
-         this.state = {
+      constructor(){
+         super();
+         this.state= {
              loggedIn: false  
-         }
-      }
+         };
+      };
 
     
         componentDidMount(){
             if(!localStorage.getItem('user')){
-                
-              this.setState= ({
+                this.setState({
                   loggedIn: false
                 });
             }
             else {
-                
-                this.setState = ({
+                 this.setState({
                     loggedIn: true
-                },() => {console.log(this.state)})
-            }
-        }
+                });
+            };
+        };
 
         render() {
-            if(this.state.loggedIn){
+            if(this.state.loggedIn === true){
                 console.log("im logged in")
                 return (
                 <div>
