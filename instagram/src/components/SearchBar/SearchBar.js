@@ -10,7 +10,7 @@ const SearchBar = () => {
       </div>
 
       <div>
-        <input type = 'text' placeholder 'Search' />
+        <input type = 'text' placeholder = 'Search' />
       </div>
 
       <div className = 'social-wrap'>
