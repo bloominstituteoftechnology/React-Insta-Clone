@@ -1,6 +1,6 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import './Post.css'
 import Comments from '../CommentSection/Comments'
 
 class Post extends React.Component {
@@ -18,33 +18,70 @@ class Post extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="postUser">
-          <img className="postUserIcon" src={this.props.post.thumbnailUrl} alt="User Thumbnail" />
-          <span className="bold">{this.props.post.username}</span>
-        </div>
+        <Div>
+          <Img src={this.props.post.thumbnailUrl} alt="User Thumbnail" />
+          <Span>{this.props.post.username}</Span>
+        </Div>
   
-        <div className="postPicture">
-          <img src={this.props.post.imageUrl} alt="User Thumbnail" />
-        </div>
+        <Div2>
+          <Img2 src={this.props.post.imageUrl} alt="User Thumbnail" />
+        </Div2>
   
-        <div className="postIcons"> 
-          <span className="heartIcon" onClick={this.increaseLike}>
+        <Div3> 
+          <Span2 onClick={this.increaseLike}>
             <i className="far fa-heart"></i>
-          </span>
-          <span>
+          </Span2>
+          <Span3>
             <i className="far fa-comment"></i>
-          </span>
-        </div>
+          </Span3>
+        </Div3>
   
-        <div className="postLikes">
-          <p className="bold">{this.state.likes} likes</p>
-        </div>
+        <Div4>
+          <P>{this.state.likes} likes</P>
+        </Div4>
   
         <Comments className="Comments" comments={this.props.post.comments} />
       </React.Fragment>
     )
   }
 }
+
+const Div = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 3% 0;
+`
+const Div2 = styled.div``
+const Div3 = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  font-size: 3rem;
+  margin: 1% 3%;
+`
+const Div4 = styled.div`
+  text-align: left;
+  margin: 0 3%;
+`
+
+const Span = styled.span`
+  font-weight: bold;
+`
+const Span2 = styled.span`
+  margin-right: 2%;
+`
+const Span3 = styled.span``
+
+const Img = styled.img`
+  margin: 0 3%;
+  border-radius: 50%;
+  width: 30px;
+`
+const Img2 = styled.img``
+
+const P = styled.p`
+  font-weight: bold;
+`
 
 Post.propTypes = {
   post: PropTypes.object,

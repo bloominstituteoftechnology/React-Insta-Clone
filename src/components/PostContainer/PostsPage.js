@@ -1,11 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import './Post.css'
 import Post from './Post.js'
 
 const PostsPage = (props) => {
   return (
-    <div className="PostsPage" >
+    <Div>
       {props.data.map( item => {
         return (
           <Post
@@ -15,10 +15,15 @@ const PostsPage = (props) => {
           />
         )
       })}
-    </div>
+    </Div>
   )
 }
 
+const Div = styled.div`
+  width: 640px;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+`
 
 PostsPage.propTypes = {
   data: PropTypes.arrayOf(
