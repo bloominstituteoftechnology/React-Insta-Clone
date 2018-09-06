@@ -38,8 +38,9 @@ const SearchBar = (props) => {
                 <i className = 'far fa-user'></i>
             </HeaderIconsDiv>
 
-            <WelcomeDiv>Welcome back, { props.username }.</WelcomeDiv>
+            
             <BtnDiv>
+                <div>Welcome back, { props.username }.</div>
                 <LogOutBtn onClick = { props.logOut } >Log Out</LogOutBtn>
             </BtnDiv>
         </Header>

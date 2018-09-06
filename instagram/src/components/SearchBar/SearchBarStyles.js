@@ -3,7 +3,6 @@ import { css } from 'styled-components';
 
 const BtnDiv = styled.div``;
 const LogOutBtn = styled.button``;
-const WelcomeDiv = styled.div``;
 const HeaderIconsDiv = styled.div``;
 const HeaderInputField = styled.input``;
 const HeaderInputDiv = styled.div``;
@@ -60,15 +59,12 @@ const Header = styled.header`
         }
     }
 
-    & > ${ WelcomeDiv } {
-        margin-bottom: 20px;
-        width: 100%;
-    }
-
     & > ${ BtnDiv } {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         width: 100%;
+        align-items: center;
+
         & > ${ LogOutBtn } {
             border: 1px solid black;
             border-radius: 5px;
@@ -109,4 +105,4 @@ const Img = styled.img`
     }
 `; // Img
 
-export { Header, Img, HeaderInputDiv, HeaderInputField, HeaderIconsDiv, WelcomeDiv, LogOutBtn, BtnDiv };
+export { Header, Img, HeaderInputDiv, HeaderInputField, HeaderIconsDiv, LogOutBtn, BtnDiv };
