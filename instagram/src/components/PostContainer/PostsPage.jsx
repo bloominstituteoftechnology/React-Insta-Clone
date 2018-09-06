@@ -2,9 +2,37 @@ import React, { Component } from "react";
 import dummyData from "../../dummy-data";
 import PostContainer from "./PostContainer";
 import ReactTooltip from 'react-tooltip';
+import styled from 'styled-components';
 import "./PostsPage.css";
 import SearchBar from "../SearchBar/SearchBar";
 
+const Header = styled.header`
+  position: fixed;
+  height: 80px;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.4)
+`;
+
+const InstacloneLogo = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: 'Grand Hotel', cursive;
+  font-size: 36px;
+  margin-left: 20px;
+`;
+
+const SocialIcons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+  font-size: 25px;
+  margin-right: 20px;
+  color: #ccc;
+`;
 
 class PostsPage extends Component {
 
@@ -55,23 +83,25 @@ class PostsPage extends Component {
     }, 30);
   };
 
+
+
   render() {
     return (
       <div className="PostsPage">
         <div className="header-wrapper">
-          <header className="staticbar">
-            <div className="instaclone-logo">
+          <Header>
+            <InstacloneLogo className="instaclone-logo">
               <i className="fab fa-instagram" />
               <p>Instaclone</p>
-            </div>
+            </InstacloneLogo>
             <SearchBar searchHandler={this.searchHandler} />
-            <div className="social-icons">
+            <SocialIcons>
               <i className="far fa-compass" />
               <i className="far fa-heart" />
               <ReactTooltip />
               <i data-tip="Logout" onClick={this.logout}className="far fa-user" />
-            </div>
-          </header>
+            </SocialIcons>
+          </Header>
             <div className="postcontainer-wrapper">
             <PostContainer data={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} />
             </div>
