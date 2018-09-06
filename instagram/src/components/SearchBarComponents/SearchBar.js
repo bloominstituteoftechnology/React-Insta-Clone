@@ -6,7 +6,7 @@ const SearchBar = (props)=> {
     return (
         <div className='searchbar'>
             <div className='logo-div'>
-                <img src='https://images.vexels.com/media/users/3/137201/isolated/preview/83b5f2a86fa0ec9f938664da94a9bc55-instagram-silhouette-stroke-logo-by-vexels.png' className='logo-img' />
+                <img onClick={props.logOut} src='https://images.vexels.com/media/users/3/137201/isolated/preview/83b5f2a86fa0ec9f938664da94a9bc55-instagram-silhouette-stroke-logo-by-vexels.png' className='logo-img' />
             </div>
             <div className='search'>
                 <input className='search-input' type='text' placeholder='Search' onKeyDown={props.searchedPost} />

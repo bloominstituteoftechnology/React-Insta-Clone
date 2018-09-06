@@ -10,15 +10,23 @@ class Login extends React.Component {
         };
     }
 
-    handleInput = (event)=> {
+    handleUsername = (event)=> {
         this.setState({
-           [ event.target.name ] : event.target.value
+           username : event.target.value
         });
     };
 
+    handlePassword = (event)=> {
+        this.setState({
+            password: event.target.value
+        });
+    }
+
     handleSubmit = (event)=> {
         const user = this.state.username;
+        const password = this.state.password;
         localStorage.setItem('user', user);
+        localStorage.setItem('password', password)
         window.location.reload();
     };
 
@@ -32,7 +40,7 @@ class Login extends React.Component {
                     placeholder='Username'
                     name='username'
                     value={this.state.username}
-                    onChange={this.handleInput}
+                    onChange={this.handleUsername}
                 />
                 <input 
                     className='input'
@@ -40,7 +48,7 @@ class Login extends React.Component {
                     placeholder='Password'
                     name='password'
                     value={this.state.password}
-                    onChange={this.state.handleInput}
+                    onChange={this.state.handlePassword}
                 />
                 <button className='submit-button' onClick={this.handleSubmit}>
                     Submit

@@ -25,12 +25,19 @@ class Posts extends React.Component {
         this.setState({postFilter: post});
     };
 
+    logOut = (event)=> {
+        localStorage.removeItem('user');
+        localStorage.removeItem('password');
+        window.location.reload();
+    }
+
     render() {
         return (
             <div className='App'>
                 <SearchBar 
                     searchedKeyword={this.state.searchedKeyword}
                     searchedPost={this.searchHandler}
+                    logOut={this.logOut}
                 />
                 <PostContainer post={this.state.postFilter.length > 0 ? this.state.postFilter: this.state.post} />
             </div>
