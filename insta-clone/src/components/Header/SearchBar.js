@@ -9,8 +9,6 @@ const SearchBar = props => {
     <form onSubmit={props.searchPosts} onChange={props.handleChange}>
     <input
   type="text"
-
-  
   name="search"
   placeholder="Search..."
    />

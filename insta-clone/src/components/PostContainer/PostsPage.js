@@ -9,6 +9,7 @@ class PostsPage extends Component {
     super(props);
     this.state = {
       postData: [],
+      search: '',
     };
   }
   handleChange = (event) => {
@@ -17,11 +18,22 @@ class PostsPage extends Component {
   componentDidMount = () => {
      this.setState({ postData: dummyData })
   }
+  searchPosts = (event) => {
+    event.preventDefault();
+    let newPosts = [...this.state.postData];
+    newPosts = newPosts.filter(post=> {
+      return post.username === this.state.search;
+    })
+    this.setState({ postData: newPosts });
+
+    }
 render() {
   return (
     <div>
 <header className="posts-page-header">
-<HeaderContainer postData={this.state.postData} />
+<HeaderContainer
+  searchPosts={this.searchPosts}
+  handleChange={this.handleChange}/>
   </header>
 
   <PostList postData={this.state.postData}  />

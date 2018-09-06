@@ -2,31 +2,13 @@ import React, { Component } from 'react';
 import SearchBar from './SearchBar.js';
 import styled from 'styled-components';
 
-class HeaderContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      search: '',
-      postData: [{props}],
-    };
-  }
+const HeaderContainer = props => {
+const HeaderWrapper = styled.div`
+  background: red;
+`;
 
-  handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value })
-  }
-
-  searchPosts = (event) => {
-    event.preventDefault();
-    let newPosts = [...this.state.postData];
-    newPosts = newPosts.filter(post=> {
-      return post.username === this.state.search;
-    })
-    this.setState({ postData: newPosts });
-    
-    }
-
-  render() {
     return (
+      <HeaderWrapper>
       <div className="header">
       <div className="user-dashboard">
       <h2>Welcome, {localStorage.username}!</h2>
@@ -40,12 +22,13 @@ class HeaderContainer extends Component {
       <div className="searchbar">
         <h1 className="title-headline">NOT Instagram</h1>
         <SearchBar
-        searchPosts={this.searchPosts}
-        handleChange={this.handleChange}/>
+        searchPosts={props.searchPosts}
+        handleChange={props.handleChange}/>
         </div>
         </div>
+        </HeaderWrapper>
     )
-  }
+
 }
 
 export default HeaderContainer;
