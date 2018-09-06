@@ -10,7 +10,7 @@ import Authenticate from './Authentication/Authenticate';
 class App extends Component {
   constructor() {
     super();
-    this.state = [];
+    this.state = {};
   }
 
   // logIn = e => {

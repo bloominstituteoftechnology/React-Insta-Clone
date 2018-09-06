@@ -1,36 +1,28 @@
 import React from 'react';
 import App from '../App.js';
-import Login from '../components/Login/Login.js';
+import LoginPage from '../components/Login/Login.js';
 
 const Authenticate = App =>
     class extends React.Component {
-        constructor() {
-            super();
+        constructor(props) {
+            super(props);
             this.state = {
                 loggedIn: false
             }
         }
         
         componentDidMount() {
-         if (localStorage.getItem('user')) {
-             this.setState({ loggedIn: true });
-         } else {
+         if (!localStorage.getItem('user')) {
              this.setState({ loggedIn: false });
+         } else {
+             this.setState({ loggedIn: true });
             }
         }
 
         render() {
-          //  return <App />;
-            //check if a user is logged in
-            //if loggedIn: true, return <App />
-            //if loggedIn: false, return <LoginPage>
-
-        
-            if (this.state.loggedIn) {
-                return <App />;
-            } else {
-            return <Login />;
-            }
+         if (this.state.loggedIn) return <App />;
+            return <LoginPage />;
+            
         }
               
         
