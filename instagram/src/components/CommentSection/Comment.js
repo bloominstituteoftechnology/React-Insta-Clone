@@ -1,9 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+
+const CommentContainerDiv = styled.div `
+    text-align: left;
+    margin: 5px 0px;
+
+    .user {
+        font-weight: bold;
+    }
+`
 
 const Comment = props => {
     return (
-        <div className = 'comment-container'>
+        <CommentContainerDiv>
 
             <span className = 'user'>
                 {props.comment.username}
@@ -15,8 +26,7 @@ const Comment = props => {
                 {props.comment.text}
             </span>
             
-            
-        </div>
+            </CommentContainerDiv>
     )
 }
 
