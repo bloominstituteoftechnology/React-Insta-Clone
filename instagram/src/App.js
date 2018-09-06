@@ -12,10 +12,6 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-    this.getPosts('./dummy-data.js');
-  }
-
   render() {
   	return (
   	    <div className = 'App'>
