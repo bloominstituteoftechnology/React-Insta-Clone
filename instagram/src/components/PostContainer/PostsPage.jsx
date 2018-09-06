@@ -35,7 +35,21 @@ const SocialIcons = styled.div`
 `;
 
 class PostsPage extends Component {
-
+  // tested writing a simple server to send the dummy data. was annoying to get around the cors issue.
+  // getData = URL => {
+  //   fetch(URL, { credentials: "same-origin", mode: 'no-cors' })
+  //     .then(res => {
+  //       return res.json();
+  //     })
+  //     .then(data => {
+  //       console.log(data.message); 
+  //       this.setState({ posts: data.message });
+  //     })
+  //     .catch(err => {
+  //       console.log("did not work");
+  //       //throw new Error(err);
+  //     });
+  // };
 
   state = {
       posts: [],
@@ -52,6 +66,7 @@ class PostsPage extends Component {
         posts: JSON.parse(window.localStorage.getItem("comments")), username: localStorage.getItem('username')
       });
     } else {
+      //this.getData('http://127.0.0.1:3020')
       this.setState({ posts: dummyData });
     }
     window.localStorage.setItem("comments", JSON.stringify(dummyData));
