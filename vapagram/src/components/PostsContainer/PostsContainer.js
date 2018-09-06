@@ -10,11 +10,11 @@ const PostsContainerWrapper = styled.div`
 `;
 const PostsContainer = props => {
   return (
-    <div className="posts-container-wrapper">
+    <PostsContainerWrapper>
       {props.posts.map(p => (
         <Post key={p.imageUrl} post={p} />
       ))}
-    </div>
+    </PostsContainerWrapper>
   );
 };
 

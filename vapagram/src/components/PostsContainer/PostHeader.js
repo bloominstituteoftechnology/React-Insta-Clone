@@ -9,12 +9,16 @@ const PostThumbWrapper = styled.div`
   height: 50px;
   width: 50px;
 `;
+const PostThumb = styled.img`
+  height: 100%;
+  border-radius: 50%;
+`;
 
 const PostHeader = props => {
   return (
     <PostHeaderClass>
       <PostThumbWrapper>
-        <img
+        <PostThumb
           alt="post header"
           className="post-thumb"
           src={props.thumbnailUrl}
