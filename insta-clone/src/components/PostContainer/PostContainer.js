@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import CommentSection from "../CommentSection/CommentSection";
+import styled from 'styled-components';
 //This will contain the post, including images, content, and comments
 
 const PostContainer = props => {
