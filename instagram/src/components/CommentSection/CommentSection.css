@@ -1,8 +1,15 @@
-.comment {
-    display: flex;
+.comment-text {
+  text-align: left;
+  padding: 2px;
+  margin-left: 4px;
 }
 
- .comment-data {
-    font-weight: 600;
-    margin: 0px;
+.comment {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.user {
+  font-weight: 500;
+  font-size: 12px;
 }

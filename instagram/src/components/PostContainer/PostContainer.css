@@ -1,68 +1,33 @@
-.post-container {
-    width: 90%;
-    max-width: 800px;
-    margin-left: 5%;
-    border: 2px solid #EEEEEF;
-    display: flex;
-    flex-flow: column wrap;
+.posts-container-wrapper {
+  height: 500px;
+  width: 50%;
+  margin: 5px auto;
 }
 
-.top-bar {
+.post-border {
+  border: 1px solid #d3d3d3;
+  margin: 5px 0;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.post-img-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.post-img {
+  width: 100%;
+}
+
+.post-header {
   display: flex;
-  justify-content: left;
-  height: 60px;
-  align-items: center;
-  margin-left: 15px;
 }
 
-.thumbnail {
-    border-radius: 100px;
-    width: 35px;
-    height: 35px;
-    margin-left: 10px;
+.post-thumbnail-wrap {
+  height: 50px;
+  width: 50px;
 }
-
-.username {
-    font-weight: 800;
+.post-thumbnail {
+  height: 100%;
+  border-radius: 50%;
 }
-
-.img-main {
-   margin-left: 15px;
-}
-
- section {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-  .likes {
-     font-weight: 600;
-     margin-bottom: 2px;
-}
-
-  p {
-     margin: 5px;
-     margin-left: 25px;
- }
-
-  .timeago {
-     font-size: .7em;
-     color: grey;
-     text-align: left;
- }
-
-  .addcomment {
-     width: 95%;
-     margin: auto;
- }
-
-  .comment-bar {
-     width: 100%;
-     border-bottom: 2px solid #EEEEEE;
- }
-
- .comment-input {
-     width: 100%;
-     height: 40px;
-     border: none;
- }
