@@ -1,33 +1,39 @@
 import React from 'react';
 import icon from '../../assets/instagram-icon.png';
 import logo from '../../assets/instagram-logo.png';
-import { Header } from './SearchBarStyles';
+import { 
+    Header, 
+    Img, 
+    HeaderInputDiv, 
+    HeaderInputField, 
+    HeaderIconsDiv
+} from './SearchBarStyles';
 
-import './SearchBar.css';
+const instagramUrl = 'http://www.instagram.com';
 
 const SearchBar = (props) => {
     return (
         <Header>
-            <div className = 'icon-logo-div'>
-                <a href='https://www.instagram.com'><img className = 'instagram-icon' src = { icon } alt='instagram icon' /></a>
-                <a href='https://www.instagram.com'><img className = 'instagram-logo' src = { logo } alt='instagram logo' /></a>
+            <div>
+                <a href = { instagramUrl }><Img instagramIcon src = { icon } /></a>
+                <a href = { instagramUrl }><Img instagramLogo src = { logo } /></a>
             </div>
 
-            <div className = 'header-input-div'>
+            <HeaderInputDiv>
                 <i className = 'fas fa-search'></i>
-                <input 
-                    className = 'header-input-field' 
+
+                <HeaderInputField 
                     type = 'search' 
                     placeholder = 'Search' 
                     onChange = { props.handleSearch } 
                 />
-            </div>
+            </HeaderInputDiv>
 
-            <div className = 'header-icons-div'>
+            <HeaderIconsDiv>
                 <i className = 'far fa-compass'></i>
                 <i className = 'far fa-heart'></i>
                 <i className = 'far fa-user'></i>
-            </div>
+            </HeaderIconsDiv>
         </Header>
     );
 }
