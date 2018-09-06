@@ -1,6 +1,5 @@
 import React from 'react';
 import Post from './Post';
-import './Posts.css';
 import styled from 'styled-components';
 
 const PostsContainerWrapper = styled.div`
