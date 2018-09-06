@@ -6,24 +6,24 @@ import Heart from '../../assets/heart.svg';
 
 class CommentSection extends React.Component {
     constructor(props) {
-        super(props);
-        this.state = {
-            comments: props.comments,
-            newComment: '',
-            likes: 0
-        };
+      super(props);
+      this.state = {
+        comments: props.comments,
+        newComment: '',
+        likes: 0
+      };
     }
 
-    addNewComment(event) {
+    addNewComment = event => {
         event.preventDefault();
         this.setState({
-            comments: [
-                ...this.state.comments,
-                {text: this.state.newComment, username: 'SomeUser'}
-            ],
-            newComment: ''
-        })
-    }
+          comments: [
+            ...this.state.comments,
+            { username: 'SomeUser', text: this.state.newComment }
+          ],
+          newComment: ''
+        });
+    };
 
     handleChange = event => {
         this.setState({ [event.target.name]: event.target.value });
@@ -43,8 +43,8 @@ class CommentSection extends React.Component {
                 </div>
                 {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
                 <CommentInput 
-                    addNewComment={this.addNewComment} 
-                    handleChange={this.addNewComment}
+                    addNewComment={this.addNewComment}
+                    handleChange={this.handleChange}
                 />
             </div>
         );
