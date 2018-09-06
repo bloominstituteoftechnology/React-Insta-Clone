@@ -1,5 +1,4 @@
 import React from 'react';
-import './Posts.css';
 import styled from 'styled-components';
 
 const PostHeaderClass = styled.div`

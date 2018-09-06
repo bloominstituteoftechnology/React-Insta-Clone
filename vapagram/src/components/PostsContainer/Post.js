@@ -3,7 +3,6 @@ import CommentSection from '../CommentSection/CommentSectionContainer';
 import PostHeader from './PostHeader';
 import styled from 'styled-components';
 
-import './Posts.css';
 const PostBorder = styled.div`
   border: 1px solid #d3d3d3;
   margin: 5px 0;
@@ -13,6 +12,7 @@ const PostImageWrapper = styled.div`
   height: 100%;
   width: 100%;
 `;
+
 const Post = props => {
   return (
     <PostBorder>
