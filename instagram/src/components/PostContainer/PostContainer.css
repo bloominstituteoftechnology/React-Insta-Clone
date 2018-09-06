@@ -25,6 +25,7 @@
 
 .post-header-container .post-header-thumbnail img {
     width: 100%;
+    border-radius: 25px;
 }
 
 .comment-container {
