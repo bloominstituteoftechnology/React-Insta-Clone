@@ -32,25 +32,29 @@
     cursor: pointer;
 }
 
-@keyframes show-err-msg-anim {
-    from {color: white;}
-    to {color: black;}
+.login-div p {
+    opacity: 0;
 }
 
-.show-error-msg {
-    animation-name: show-err-msg-anim;
+@keyframes show-anim {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.show {
+    animation-name: show-anim;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
-@keyframes hide-err-msg-anim {
-    from {color: black;}
-    to {color: white;}
+@keyframes hide-anim {
+    from {opacity: 1;}
+    to {opacity: 0;}
     
 }
 
-.hide-error-msg {
-    animation-name: hide-err-msg-anim;
+.hide {
+    animation-name: hide-anim;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }

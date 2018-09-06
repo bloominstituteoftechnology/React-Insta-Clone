@@ -21,7 +21,7 @@ const Authenticate = PostsPageComp => LoginComp => class extends React.Component
 
     render () {
         if (this.state.loggedIn) {
-            return <PostsPageComp username = {this.state.username} />;
+            return <PostsPageComp username = { this.state.username } />;
         } else {
             return <LoginComp />;
         }

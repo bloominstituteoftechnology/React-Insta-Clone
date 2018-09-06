@@ -8,7 +8,8 @@ class Login extends React.Component {
         super();
 
         this.state = {
-            errorMsgClass: 'hide-error-msg',
+            displayClass: '',
+            loginDivClass: 'show',
         };
     }
 
@@ -33,21 +34,26 @@ class Login extends React.Component {
                 if (e.target[1].value === usernamesAndPasswords[key]) {
                     // give loggedIn the value of the username (key) that is logged in
                     localStorage.setItem('loggedIn', key);
-                    return window.location.reload();
+
+                    return this.setState({
+                        loginDivClass: 'hide',
+                    }, () => {
+                        setTimeout(() => window.location.reload(), 1500);
+                    });
                 }
             }
         }
 
         this.setState({
-            errorMsgClass: 'show-error-msg',
+            displayClass: 'show',
         }, () => {
-            return setTimeout(() => this.setState({errorMsgClass: 'hide-error-msg'}), 2000);
+            return setTimeout(() => this.setState({displayClass: 'hide'}), 2000);
         });
     }
 
     render() {
         return (
-            <div className = 'login-div'>
+            <div className = { `login-div ${this.state.loginDivClass}` }>
                 <a href='https://www.instagram.com'><img className = 'instagram-logo' src = { logo } alt='instagram logo' /></a>
 
                 <form className = 'login-form' onSubmit = { this.logIn } >
@@ -59,7 +65,7 @@ class Login extends React.Component {
                     <button className = 'login-button' type = 'submit' >Log In</button>
 
                     <div>
-                        <p className = { this.state.errorMsgClass }>Wrong username / password. Try again.</p>
+                        <p className = { this.state.displayClass }>Wrong username / password. Try again.</p>
                     </div>
                 </form>
             </div>
