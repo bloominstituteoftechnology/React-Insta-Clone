@@ -43,7 +43,7 @@ class Post extends React.Component {
           <CardBody>
             <div className="post-header-wrapper">
               <img src={this.props.post.thumbnailUrl} alt={"Profile thumb."} />
-              <CardTitle>{this.props.post.username}</CardTitle>
+              <CardTitle className="post-title">{this.props.post.username}</CardTitle>
             </div>
           </CardBody>
           <img

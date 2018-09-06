@@ -8,17 +8,26 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 20px;
+  padding: 10px;
+}
+
+.post-header-wrapper .post-title {
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: #444;
+  font-family: "Roboto", sans-serif;
 }
 
 .post-header-wrapper img {
   height: auto;
   width: auto;
-  max-width: 30px;
-  max-height: 30px;
+  max-width: 50px;
+  max-height: 50px;
   border-radius: 50%;
   margin-right: 20px;
 }
+
 
 .post-header-wrapper .username {
   display: flex;
