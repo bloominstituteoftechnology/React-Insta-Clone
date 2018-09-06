@@ -33,6 +33,7 @@ class Login extends React.Component {
           value={this.state.password}
           onChange={this.loginHandler}
           name="password"
+          type="password"
         />
         <button onClick={this.login}>Login</button>
       </form>
