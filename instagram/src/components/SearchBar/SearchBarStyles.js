@@ -42,10 +42,17 @@ const SearchBox = styled.div`
 	margin-top: 2px;
 `;
 
-const Component = styled.div`
-	display: none;
+const SearchInput = styled.input`
+	width: 215px;
+	height: 28px;
+	padding: 0px 10px 2px 26px;
+	border: 1px solid #dbdbdb;
+	border-radius: 3px;
+	outline: none;
+
+	&::placeholder {
+		font-weight: 300;
+	}
 `;
 
-const SearchBarStyles = { Header, Container, LogoHeader, LogoImage, SearchBox };
-
-export default SearchBarStyles;
+export { Header, Container, LogoHeader, LogoImage, SearchBox, SearchInput };
