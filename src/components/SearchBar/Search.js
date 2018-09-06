@@ -20,11 +20,11 @@ class Search extends React.Component {
 
   render() {
     return (
-      <Div1>
-        <Div2>
-          <I className="fab fa-instagram navLogo1"></I>
+      <Header>
+        <LogoHeader>
+          <LogoImage className="fab fa-instagram navLogo1"></LogoImage>
           <Span>Instagram</Span>
-        </Div2>
+        </LogoHeader>
   
   
         <Form onSubmit={this.search}>
@@ -39,12 +39,12 @@ class Search extends React.Component {
           <i className="far fa-heart"></i>
           <i className="far fa-user"></i>
         </Div3>
-      </Div1>
+      </Header>
     )
   }
 }
 
-const Div1 = styled.div`
+const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,7 +52,7 @@ const Div1 = styled.div`
   margin: 2% 0;
 `
 
-const Div2 = styled.div`
+const LogoHeader = styled.div`
   display: flex;
   align-items: center;
 `
@@ -83,7 +83,7 @@ const Input = styled.input`
   background-color: #FAFAFA; 
 `
 
-const I = styled.i`
+const LogoImage = styled.i`
   margin: 0 10%;
   padding: 0 12%;
   border-right: 1px solid black;
