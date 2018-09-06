@@ -1,6 +1,5 @@
 import React from 'react';
 import IGLogo from '../../assets/iglogo.png';
-import './SearchBar.css';
 import styled from 'styled-components';
 
 const SearchBarWrapper = styled.div`
