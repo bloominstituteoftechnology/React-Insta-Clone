@@ -13,7 +13,6 @@ const Authenticate = App =>
 
 
     componentDidMount() {
-      console.log(localStorage.getItem('username'));
       if(localStorage.getItem('username') !== null) {
         this.setState({loggedIn: true})
       }

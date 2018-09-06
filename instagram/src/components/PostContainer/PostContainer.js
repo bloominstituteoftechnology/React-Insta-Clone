@@ -9,7 +9,9 @@ import InteractPost from "./InteractPost";
 const PostContainer = props => {
   return(
     <div>
-      {props.posts.map((post, index) => {
+      {props.posts.filter(post => {
+        return post.username.toLowerCase().includes(props.searchTerm.toLowerCase());
+      }).map((post, index) => {
         return (
           <div className="posts container" key={post.timestamp}>
             <Post 
