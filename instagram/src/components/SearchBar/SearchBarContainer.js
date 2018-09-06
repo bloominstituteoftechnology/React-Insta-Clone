@@ -36,7 +36,7 @@ const SearchInput = styled.input`
 
 const IconsContainer = styled.div`
   display: flex;
-  width: 10rem;
+  width: 300px;
 `;
 
 const SearchIcon = styled.i`
