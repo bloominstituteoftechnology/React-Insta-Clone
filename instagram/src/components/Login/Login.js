@@ -12,7 +12,7 @@ class Login extends React.Component {
             loginSectionClass: ['show'],
             registerSectionClass: ['display-none'],
             deleteSectionClass: ['display-none'],
-            message: 'Error goes here.',
+            message: '',
             messageClass: '',
             timeoutInterval: 2000,
         };
@@ -297,17 +297,17 @@ class Login extends React.Component {
                 </section>
 
                 <section className = { `delete-section ${ this.state.deleteSectionClass.join(' ') }` }>
-                    <h3>This is the delete section. It is a work in progress.</h3>
+                    <form className = 'login-form' onSubmit = { this.handleDeleteuser }>
+                        <div className = 'login-input-div'>
+                            <select>
+                                { usernames.map((user, i) => <option key = { i } value = { user }>{ user }</option>) }
+                            </select>
 
-                    <form onSubmit = { this.handleDeleteuser }>
-                        <select>
-                            { usernames.map((user, i) => <option key = { i } value = { user }>{ user }</option>) }
-                        </select>
+                            <span>Password:</span>
+                            <input type='password' />
 
-                        <span>Password:</span>
-                        <input type='password' />
-
-                        <button className = 'form-btn delete-btn' type = 'submit'>Delete Account</button>
+                            <button className = 'form-btn delete-btn' type = 'submit'>Delete Account</button>
+                        </div>
                     </form>
 
                     <button className = 'form-btn login-btn' onClick = { this.handleBackToLogIn }>Go to Log in</button>
