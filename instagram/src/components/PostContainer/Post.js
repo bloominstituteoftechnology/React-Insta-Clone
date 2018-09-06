@@ -3,7 +3,19 @@ import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSectionContainer';
 import LikeSection from './LikeSection';
 import PostHeader from './PostHeader';
-// import './Posts.css';
+import styled from 'styled-components';
+import './Posts.css';
+
+const PostContainer = styled.div `
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+`;
+
+const PostHeaderContainer = styled.div`
+  width: 640px;
+`;
 
 class Post extends React.Component {
   constructor(props) {
@@ -16,13 +28,16 @@ class Post extends React.Component {
     let likes = this.state.likes + 1;
     this.setState({ likes });
   };
+
   render() {
     return (
-      <div className="post-border">
-        <PostHeader
-          username={this.props.post.username}
-          thumbnailUrl={this.props.post.thumbnailUrl}
-        />
+      <PostContainer>
+        <PostHeaderContainer>
+          <PostHeader
+            username={this.props.post.username}
+            thumbnailUrl={this.props.post.thumbnailUrl}
+          />
+        </PostHeaderContainer>
         <div className="post-image-wrapper">
           <img
             alt="post thumbnail"
@@ -38,7 +53,7 @@ class Post extends React.Component {
           postId={this.props.post.imageUrl}
           comments={this.props.post.comments}
         />
-      </div>
+      </PostContainer>
     );
   }
 }

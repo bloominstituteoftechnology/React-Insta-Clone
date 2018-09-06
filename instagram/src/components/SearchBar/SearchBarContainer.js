@@ -1,7 +1,6 @@
 import React from 'react';
-// import CameraLogo from '../../assets/igcameralogo.png';
-// import IGLogo from '../../assets/iglogo.png';
 import styled from 'styled-components';
+import '../SearchBar/SearchBar.css'
 
 
 const Header = styled.header`
@@ -53,8 +52,8 @@ const SearchBar = props => {
   return (
     <Header>
       <LogoHeader>
-        <LogoImage alt="" src={../../assets/igcameralogo.png} />
-        <LogoImage alt="" src="../../assets/iglogo.png"/>
+        <img alt="" src='../../assets/igcameralogo.png' />
+        <img alt="" src='../../assets/iglogo.png'/>
       </LogoHeader>
       <InputContainer>
         <SearchIcon className="fas fa-search" />
