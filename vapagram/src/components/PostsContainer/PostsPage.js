@@ -26,12 +26,14 @@ class PostsPage extends Component {
       if (post.username === this.state.search) {
         return post;
       }
+      return null;
     });
     this.setState({ posts: newPosts });
   };
+
   // sets the state of event.target.name to event target value
   handleChange = event => {
-    event.preventDefault();
+    // event.preventDefault();
     // ? I'm not entirely sure what to call these. Are the props?
     this.setState({ [event.target.name]: event.target.value });
   };
@@ -45,7 +47,11 @@ class PostsPage extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar search={this.search} handleChange={this.handleChange} />
+        <SearchBar
+          search={this.state.search}
+          handleChange={this.handleChange}
+          handleSubmit={this.search}
+        />
         <PostsContainer posts={this.state.posts} />
       </div>
     );
