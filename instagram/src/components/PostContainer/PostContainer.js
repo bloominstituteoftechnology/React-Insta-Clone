@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import styled from "styled-components";
 import Post from './Post.js'
+
+const PostsContainer = styled.div`
+  width: 100%;
+`;
+
 
 const PostContainer = props => {
     return (
-        <div className="post-container">
+        <PostsContainer>
             {props.posts.map(post => (
                 <Post
                     post={post}
@@ -11,7 +17,7 @@ const PostContainer = props => {
                 />
                 
             ))}
-        </div>);
+        </PostsContainer>);
 }
 
 export default PostContainer;
