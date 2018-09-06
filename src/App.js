@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+import styled from 'styled-components'
 import dummyData from './dummy-data'
 import Search from './components/SearchBar/Search'
 import PostsPage from './components/PostContainer/PostsPage'
@@ -25,13 +25,13 @@ class App extends React.Component {
   render() {
     const App = () => {
       return (
-        <div className="App">
+        <Div>
           <Search
             className="Search"
             search={this.search}
           />
           <PostsPage {...this.state} />
-        </div>
+        </Div>
       )
     }
 
@@ -42,5 +42,13 @@ class App extends React.Component {
     )
   }
 }
+
+const Div = styled.div`
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.6rem;
+`
 
 export default App
