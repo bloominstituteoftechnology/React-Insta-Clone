@@ -18,6 +18,4 @@ Comment.propTypes = {
   })
 };
 
-
-
 export default Comment;
