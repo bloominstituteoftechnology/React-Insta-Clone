@@ -10,7 +10,7 @@ class Login extends React.Component {
         this.state = {
             loginDivClass: 'show',
             loginSectionClass: ['show'],
-            registerSectionClass: [''],
+            registerSectionClass: ['display-none'],
             message: 'Error goes here.',
             messageClass: '',
             timeoutInterval: 2000,
