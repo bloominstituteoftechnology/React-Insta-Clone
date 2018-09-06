@@ -6,8 +6,7 @@ import {
     Img, 
     HeaderInputDiv, 
     HeaderInputField, 
-    HeaderIconsDiv,
-    WelcomeDiv,
+    HeaderIconsDiv, 
     LogOutBtn, 
     BtnDiv
 } from './SearchBarStyles';

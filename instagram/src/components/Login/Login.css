@@ -8,6 +8,16 @@
     flex-direction: column;
 }
 
+.login-div .instagram-logo {
+    max-height: 57px;
+    padding-left: 19px;
+    padding-top: 5px;
+}
+
+.login-div .instagram-logo:hover {
+    filter:opacity(30%);
+}
+
 .login-div .login-form .login-input-div {
     border: 2px solid black;
     border-radius: 5px;
@@ -25,6 +35,7 @@
     border-radius: 5px;
     padding: 10px;
     margin: 20px;
+    background: white;
 }
 
 .login-div .login-btn:hover {
@@ -39,12 +50,25 @@
     cursor: pointer;
 }
 
+.login-div .delete-btn:hover {
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
 .login-div p, .register-section {
     opacity: 0;
 }
 
-.delete-section ul {
-    list-style: none;
+.delete-section select {
+    margin-right: 10px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.delete-section input {
+    padding: 5px;
+    font-size: 16px;
 }
 
 .display-none {

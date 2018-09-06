@@ -195,8 +195,68 @@ class Login extends React.Component {
     handleDeleteuser = (e) => {
         e.preventDefault();
 
-        console.log(e.target[0].value)
-        console.log(e.target[1].value)
+        const usernamesAndPasswords = JSON.parse(localStorage.getItem('usernamesAndPasswords'));
+
+        // console.log(e.target[0].value)
+        // console.log(e.target[1].value)
+        // console.log(usernamesAndPasswords)
+
+        if (!e.target[1].value) {
+            let newState = this.state;
+
+            newState.message = 'Please enter a password.';
+            newState.messageClass = 'show';
+
+            return this.setState(newState, () => {
+                setTimeout(() => {
+                    newState.messageClass = 'hide';
+
+                    this.setState(newState);
+                }, this.state.timeoutInterval);
+            });
+        } else {
+            for (let user in usernamesAndPasswords) {
+                if (e.target[0].value === user) {
+                    if (e.target[1].value !== usernamesAndPasswords[user]) {
+                        let newState = this.state;
+
+                        newState.message = 'Sorry, wrong password.';
+                        newState.messageClass = 'show';
+
+                        return this.setState(newState, () => {
+                            setTimeout(() => {
+                                newState.messageClass = 'hide';
+
+                                this.setState(newState);
+                            }, this.state.timeoutInterval);
+                        });
+                    } else {
+                        delete usernamesAndPasswords[user];
+
+                        localStorage.setItem('usernamesAndPasswords', JSON.stringify(usernamesAndPasswords));
+
+                        let newState = this.state;
+
+                        newState.message = 'User successfully deleted. Redirecting to Log In.';
+                        newState.messageClass = 'show';
+
+                        return this.setState(newState, () => {
+                            setTimeout(() => {
+                                newState.messageClass = 'hide';
+
+                                this.setState(newState, () => {
+                                    setTimeout(() => {
+                                        window.location.reload();
+                                    }, this.state.timeoutInterval)
+                                });
+                            }, this.state.timeoutInterval);
+                        });
+                    }
+                }
+            }
+        }
+
+        
     }
 
     render() {
