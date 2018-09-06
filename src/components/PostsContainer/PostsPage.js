@@ -1,8 +1,12 @@
 import React, { Component } from "react";
-import "../../App.css";
 import dummyData from "../../dummy-data";
 import PostsContainer from "../PostsContainer/PostsContainer";
 import SearchBar from "../SearchBar/SearchBarContainer";
+import styled, { css } from "styled-components";
+
+const App = styled.div`
+  text-align: center;
+`;
 
 class PostsPage extends Component {
   constructor() {
@@ -27,13 +31,15 @@ class PostsPage extends Component {
 
   render() {
     return (
-      <div className="App">
-        <SearchBar handleInput={this.handleInput} />
-        <PostsContainer
-          posts={this.state.posts}
-          searchTerm={this.state.search}
-        />
-      </div>
+      <App>
+        <div className="App">
+          <SearchBar handleInput={this.handleInput} />
+          <PostsContainer
+            posts={this.state.posts}
+            searchTerm={this.state.search}
+          />
+        </div>
+      </App>
     );
   }
 }

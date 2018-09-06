@@ -1,4 +1,21 @@
 import React from "react";
+import styled, { css } from "styled-components";
+import { Button } from "reactstrap";
+
+const LoginBox = styled.div`
+  background-color: grey;
+  width: 300px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  margin: 200px auto;
+  border-radius: 10px;
+`;
+
+const LoginText = styled.div`
+  margin: 20px auto;
+  border-radius: 50px;
+`;
 
 class Login extends React.Component {
   constructor(props) {
@@ -21,22 +38,30 @@ class Login extends React.Component {
 
   render() {
     return (
-      <form>
-        <input
-          placeholder="Username"
-          value={this.state.username}
-          onChange={this.loginHandler}
-          name="username"
-        />
-        <input
-          placeholder="Password"
-          value={this.state.password}
-          onChange={this.loginHandler}
-          name="password"
-          type="password"
-        />
-        <button onClick={this.login}>Login</button>
-      </form>
+      <LoginBox>
+        <form>
+          <LoginText>
+            <input
+              placeholder="Username"
+              value={this.state.username}
+              onChange={this.loginHandler}
+              name="username"
+            />
+          </LoginText>
+          <LoginText>
+            <input
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.loginHandler}
+              name="password"
+              type="password"
+            />
+          </LoginText>
+          <Button color="success" onClick={this.login}>
+            Login
+          </Button>
+        </form>
+      </LoginBox>
     );
   }
 }
