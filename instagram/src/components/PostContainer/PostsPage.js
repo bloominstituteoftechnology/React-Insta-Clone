@@ -18,8 +18,8 @@ class PostsPage extends React.Component {
     this.setState({ posts: dummyData });
   }
 
-  handleSearchInput = (event) => {
-    this.setState({ searchInput: event.target.value });
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
   };
 
   search = (event) => {
@@ -27,10 +27,13 @@ class PostsPage extends React.Component {
     console.log('test search');
     let newPosts = [...this.state.allPosts];
     if (this.state.searchInput === '') {
+      newPosts = [...this.state.allPosts];
     } else
       newPosts = newPosts.filter((post) => {
         if (post.username === this.state.searchInput) {
           return post;
+        } else {
+          return;
         }
       });
     this.setState({ posts: newPosts });
@@ -48,10 +51,7 @@ class PostsPage extends React.Component {
             <i className="fab fa-instagram" />{' '}
             <img src={IGLogo} className="logo-image" alt="logo" />
           </div>
-          <SearchBar
-            search={this.search}
-            handleSearchInput={this.handleSearchInput}
-          />
+          <SearchBar search={this.search} handleChange={this.handleChange} />
           <div className="other-icons">
             <i className="far fa-compass" />
             <i className="far fa-heart" />

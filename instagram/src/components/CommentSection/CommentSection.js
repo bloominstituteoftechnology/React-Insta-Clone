@@ -20,9 +20,8 @@ class CommentSection extends React.Component {
     });
   }
 
-  handleCommentInput = (event) => {
-    this.setState({ commentInput: event.target.value });
-    // console.log(this.state.commentInput);
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
   };
 
   increaseLikes = (event) => {
@@ -73,8 +72,9 @@ class CommentSection extends React.Component {
         <form onSubmit={this.addNewComment}>
           <input
             value={this.state.commentInput}
-            onChange={this.handleCommentInput}
+            onChange={this.handleChange}
             placeholder="Add a comment..."
+            name="commentInput"
           />
         </form>
       </div>
