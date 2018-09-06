@@ -1,5 +1,20 @@
 import React, { Component } from 'react';
+import styled from "styled-components";
 import './CommentSection.css'
+
+const Form = styled.form`
+    display: flex;
+    border-top: 1px solid #efefef;
+`;
+
+const Input = styled.input`
+    width: 100%;
+    height: 57px;
+    border: 0;
+    padding-left: 2%;
+    background: #ffffff;
+`;
+
 class CommentInput extends Component {
     constructor(props) {
       super(props);
@@ -24,11 +39,11 @@ class CommentInput extends Component {
   
     render() {
         return (
-            <form className="comment-input" onSubmit={this.handleSubmit}>
-                <input type="input" value={this.state.inputValue} onChange={e => this.updateInputValue(e)} name="comInput" placeholder="Add a comment..." />
+            <Form onSubmit={this.handleSubmit}>
+                <Input placeholder="Add a comment..." value={this.state.inputValue} onChange={e => this.updateInputValue(e)} name="comInput" />
     
                 <img src={require("./img/comment-dots.png")} alt="comment dots"/>
-            </form>
+            </Form>
         )
     }
 }

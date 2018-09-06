@@ -1,13 +1,21 @@
 import React from 'react';
-import './PostContainer.css'
+import styled from "styled-components";
 import PostFooterActions from './PostFooterActions';
+import './PostContainer.css'
+
+const Footer = styled.footer`
+    display: flex;
+    justify-content: flex-start;
+    padding: 1%;
+    margin-left: 3%;
+`;
 
 // Footer of the post - shows the likes
 function PostFooter(props) {
     return (
-        <div className="footer">
+        <Footer>
             <PostFooterActions likes={props.likes} />
-        </div>
+        </Footer>
     )
 }
 

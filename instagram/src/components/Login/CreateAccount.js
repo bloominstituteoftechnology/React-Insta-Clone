@@ -58,6 +58,7 @@ class CreateAccount extends Component {
     render() {
         return (
             <div className="login">
+                <img src={require("./img/InstagramLogo.png")} alt="Instagram Logo" />
                 <form className="create-form" onSubmit={this.createAccount}>
                     <label className="login-title">Create Account</label><br /><br />
                     <input type="input" value={this.state.userValue} onChange={e => this.updateCreateInputValue(e)} placeholder="Username" />

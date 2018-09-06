@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
-import './CommentSection.css'
+import styled from "styled-components";
 import Comment from './Comment';
 import CommentInput from './CommentInput';
+
+const Container = styled.div`
+    margin-left: 3%;
+    margin-right: 3%;
+`;
+
 class CommentSection extends Component {
     constructor(props) {
       super(props);
@@ -36,11 +42,11 @@ class CommentSection extends Component {
   
     render() {
         return (
-            <div className="comment-container">
+            <Container>
                 {this.state.comments.map((comment) => <Comment key={comment.username + Math.floor(Math.random() * 1000) + 1} data={comment} />)}
     
                 <CommentInput addNewCom={this.addNewComment} ind={this.state.index} />
-            </div>
+            </Container>
         );
     }
 }

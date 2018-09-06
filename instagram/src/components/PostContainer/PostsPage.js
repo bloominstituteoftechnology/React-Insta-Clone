@@ -37,7 +37,7 @@ class PostsPage extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <SearchBarContainer hdlSearch={this.handleSearch} forceUpd={this.props.forceUpd} />
         <div className="content">
           <Posts data={this.state.filtered ? this.state.filteredState : this.state.dummydata} username={this.props.username} />

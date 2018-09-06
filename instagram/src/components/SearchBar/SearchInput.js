@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
+import styled from "styled-components";
+import {Input} from 'mdbreact';
 import './SearchBar.css'
+
+const Form = styled.form`
+    width: 50%;
+    margin-left: 30%;
+`;
 
 // Handles and displays the user's search
 class SearchInput extends Component {
@@ -27,9 +34,9 @@ class SearchInput extends Component {
   
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <input className="search-inputbar" type="input" value={this.state.inputValue} onChange={e => this.updateInputValue(e)} name="searchInput" placeholder="Search" />
-            </form>
+            <Form onSubmit={this.handleSubmit}>
+                <Input value={this.state.inputValue} onChange={e => this.updateInputValue(e)} name="searchInput" label="Search" />
+            </Form>
         )
     }
 }

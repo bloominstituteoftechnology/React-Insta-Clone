@@ -1,31 +1,5 @@
-.post-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 640px;
-    width: 100%;
-    margin: 0 auto;
-    border: 1px solid #e6e6e6;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
-}
-
-.post-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 3%;
-}
-
 .post-banner img {
     width: 100%;
-}
-
-.post-header img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 2%;
 }
 
 .post-actions-img {
@@ -40,11 +14,4 @@
 .likes {
     width: 100%;
     
-}
-
-.footer {
-    display: flex;
-    justify-content: flex-start;
-    padding: 1%;
-    margin-left: 3%;
 }

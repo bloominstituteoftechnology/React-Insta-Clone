@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Button} from 'mdbreact';
 import './SearchBar.css'
 
 // Logs the user out and refreshes the page
@@ -12,7 +13,7 @@ class Logout extends Component {
     render() {
         return (
             <div>
-                <input type="button" value="Logout" onClick={this.logout} />
+                <Button color="primary" onClick={this.logout}>Logout</Button>
             </div>
         )
     }
