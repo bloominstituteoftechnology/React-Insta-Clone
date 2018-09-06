@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { css } from 'styled-components';
 
+const BtnDiv = styled.div``;
+const LogOutBtn = styled.button``;
+const WelcomeDiv = styled.div``;
 const HeaderIconsDiv = styled.div``;
 const HeaderInputField = styled.input``;
 const HeaderInputDiv = styled.div``;
@@ -8,6 +11,7 @@ const HeaderInputDiv = styled.div``;
 const Header = styled.header`
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 23px 0 12px 0;
     border-bottom: 1px solid gray;
     width: 100%;
@@ -55,6 +59,29 @@ const Header = styled.header`
             color:gray;
         }
     }
+
+    & > ${ WelcomeDiv } {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    & > ${ BtnDiv } {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        & > ${ LogOutBtn } {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            background-color:white;
+    
+            &:hover {
+                background: black;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
 `; // Header
 
 const Img = styled.img`
@@ -82,4 +109,4 @@ const Img = styled.img`
     }
 `; // Img
 
-export { Header, Img, HeaderInputDiv, HeaderInputField, HeaderIconsDiv };
+export { Header, Img, HeaderInputDiv, HeaderInputField, HeaderIconsDiv, WelcomeDiv, LogOutBtn, BtnDiv };

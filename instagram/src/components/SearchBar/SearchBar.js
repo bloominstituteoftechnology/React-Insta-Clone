@@ -6,7 +6,10 @@ import {
     Img, 
     HeaderInputDiv, 
     HeaderInputField, 
-    HeaderIconsDiv
+    HeaderIconsDiv,
+    WelcomeDiv,
+    LogOutBtn, 
+    BtnDiv
 } from './SearchBarStyles';
 
 const instagramUrl = 'http://www.instagram.com';
@@ -34,6 +37,11 @@ const SearchBar = (props) => {
                 <i className = 'far fa-heart'></i>
                 <i className = 'far fa-user'></i>
             </HeaderIconsDiv>
+
+            <WelcomeDiv>Welcome back, { props.username }.</WelcomeDiv>
+            <BtnDiv>
+                <LogOutBtn onClick = { props.logOut } >Log Out</LogOutBtn>
+            </BtnDiv>
         </Header>
     );
 }

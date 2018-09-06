@@ -2,7 +2,15 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import moment from 'moment';
 
-import './PostContainer.css';
+import { 
+    PostContainerSection, 
+    PostContainerDiv, 
+    TitleDiv, 
+    ImageUrlImg, 
+    LikesDiv, 
+    TimeStampDiv, 
+    AddAComentDiv
+} from './PostContainerStyles';
 
 import PropTypes from 'prop-types';
 
@@ -107,34 +115,31 @@ class PostContainer extends React.Component {
             )
         } else {
             return (
-                <section className = 'post-container-section'>
-                    <div className = 'post-container-div'>
-                        <div className = 'title-div'>
+                <PostContainerSection>
+                    <PostContainerDiv>
+                        <TitleDiv>
                             <img 
-                                className = 'thumbnail-url' 
                                 src = { this.state.data.thumbnailUrl } 
                                 alt = 'thumbnail url' 
                             />
                             <h4>{ this.state.data.username }</h4>
-                        </div>
+                        </TitleDiv>
 
-                        <img 
-                            className = 'image-url' 
+                        <ImageUrlImg 
                             src = { this.state.data.imageUrl } 
                             alt = 'main url' />
 
-                        <div className = 'likes-div'>
+                        <LikesDiv>
                             <i 
                                 className = 'far fa-heart' 
                                 onClick = { this.handleLike } 
                             ></i>
                             <i className="far fa-comment"></i>
                             <h4>{ this.state.data.likes } likes</h4>
-                        </div>
+                        </LikesDiv>
 
                         { this.state.data.comments.map((comment, index) => {
                                 return <CommentSection 
-                                    className = 'comment-section-div' 
                                     key = { index } 
                                     index = { index } 
                                     comment = { comment } 
@@ -143,11 +148,11 @@ class PostContainer extends React.Component {
                             }) 
                         }
 
-                        <div className = 'timestamp-div'>
+                        <TimeStampDiv>
                             <span>{ moment(timestamp).fromNow().toLocaleUpperCase() }</span>
-                        </div>
+                        </TimeStampDiv>
 
-                        <div className = 'add-a-comment-div'>
+                        <AddAComentDiv>
                             <form onSubmit = { this.addNewComment }>
                                 <input 
                                     type = 'text' 
@@ -158,9 +163,9 @@ class PostContainer extends React.Component {
                                     className = 'fas fa-ellipsis-h' 
                                 ></i></button>
                             </form>
-                        </div>
-                    </div>
-                </section>
+                        </AddAComentDiv>
+                    </PostContainerDiv>
+                </PostContainerSection>
             );
         }
     }

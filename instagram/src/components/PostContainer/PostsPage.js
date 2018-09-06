@@ -64,17 +64,21 @@ class PostsPage extends React.Component {
     render() {
         return (
             <div className = { this.state.displayClass }>
-                <SearchBar handleSearch = { this.handleSearch } />
-                <div className = 'welcome-div'>Welcome back, { this.props.username }.</div>
-                <button className = 'log-out-btn' onClick = { this.logOut } >Log Out</button>
-                { this.state.data.map((data, index) => {
-                    return <PostContainer 
-                        key = { index } 
-                        index = { index } 
-                        data = { data } 
-                        username = { this.props.username } 
-                    />
-                })}
+                <SearchBar 
+                    handleSearch = { this.handleSearch } 
+                    username = { this.props.username } 
+                    logOut = { this.logOut } 
+                />
+                <div className = 'post-container-div'>
+                    { this.state.data.map((data, index) => {
+                        return <PostContainer 
+                            key = { index } 
+                            index = { index } 
+                            data = { data } 
+                            username = { this.props.username } 
+                        />
+                    })}
+                </div>
             </div>
         );
     }
