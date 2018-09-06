@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 class Login extends Component {
   constructor() {
@@ -23,8 +24,9 @@ class Login extends Component {
 render() {
 
   return (
-    <div className="loginPage">
+    <LoginPage>
     <form>
+    <LoginTitle>Welcome to NOT Instagram!</LoginTitle>
     <p>Username</p><input
       label="Username"
       name="username"
@@ -42,9 +44,19 @@ render() {
         onClick={ this.login }>Login</button>
         </form>
 
-      </div>
+      </LoginPage>
   )
 }
 }
+const LoginTitle = styled.h1`
+  font-size: 3rem;
+  `;
+const LoginPage = styled.div`
+  display: flex;
+  margin: auto;
+  padding: 1rem;
+  background: lightblue;
+  width: 50%;
+  `;
 
 export default Login;
