@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import reactstrap, { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Input } from 'reactstrap';
 import './Login.css';
 
 class Login extends Component {
@@ -23,11 +23,9 @@ class Login extends Component {
 
   render() {
     return (
-      <Form className="user-login">
-        <h2>Instagram</h2>
-        <h3>Login or Sign-up</h3>
-        <div className="please">Please Login</div>
-        <div className="login-form">
+      <Form className="login-form">
+        <h3>Welcome to React Insta Clone</h3>
+        <div>Please Login</div>
         <FormGroup>
           <Input
             type="text"
@@ -46,11 +44,10 @@ class Login extends Component {
             onChange={this.handleInputChange}
           />
           <br />
-        </FormGroup>
-        </div>
-        <Button color="success" size="large" onClick={this.handleLoginSubmit}>
+          <Button color="success" size="large" onClick={this.handleLoginSubmit}>
             Log In
           </Button>
+        </FormGroup>
       </Form>
     );
   }

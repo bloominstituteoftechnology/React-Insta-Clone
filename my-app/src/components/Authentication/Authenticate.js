@@ -1,7 +1,7 @@
 import React from 'react';
-import Login from '../LoginSection/Login';
+import LoginPage from '../Login/Login';
 
-const UserLogin = App =>
+const Authenticate = App =>
   class extends React.Component {
     constructor(props) {
       super(props);
@@ -18,8 +18,8 @@ const UserLogin = App =>
     }
     render() {
       if (this.state.loggedIn) return <App />;
-      return <Login />;
+      return <LoginPage />;
     }
   };
 
-export default UserLogin;
+export default Authenticate;
