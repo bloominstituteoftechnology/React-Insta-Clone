@@ -2,7 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
+import styled from 'styled-components';
 
+const Heart = styled.div`
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+  &:hover {
+    cursor: default;
+  }
+`;
 class CommentSection extends React.Component {
   // Sets up constructor to pass through props to the state settings.
   constructor(props) {
