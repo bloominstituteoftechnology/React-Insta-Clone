@@ -1,27 +1,3 @@
-.search-bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;  
-  position: fixed;
-  border-bottom: 1px solid lightgrey;  
-  background-color: white;
-  height: 60px;
-}
-
-.art-logo {
-  background: url('./Logos/download.png') no-repeat -98px -203px;
-  width: 176px;
-  height: 35px; 
-  cursor: pointer; 
-}
-
-.right-header {
-  display: flex;
-  flex-direction: row;
-}
-
 .compass {
   background: url('./Logos/download.png') no-repeat -262px -358px;
   width: 22px;
@@ -46,7 +22,9 @@
   cursor: pointer;
 }
 
-.search-button {
-  text-align: center;
-  padding: 7px 20px;
+.art-logo {
+  background: url('./Logos/download.png') no-repeat -98px -203px;
+  width: 176px;
+  height: 35px; 
+  cursor: pointer; 
 }

@@ -2,17 +2,6 @@ import React from 'react';
 
 
 import './Login.css';
-// const Login = props => {
-//   return (
-//     <div className='login-page'>
-//       <form className='login-form'>
-//         <input type='text' placeholder='Username' name='username'></input>
-//         <input type='text' placeholder='Password' name='password'></input>
-//         <input type='submit' value='Log In'></input>
-//       </form>
-//     </div>
-//   );
-// }
 
 class Login extends React.Component {
   constructor(props) {
@@ -30,6 +19,8 @@ class Login extends React.Component {
   handleLoginSubmit = e => {
     const user = this.state.username;
     localStorage.setItem('user', user);
+    const userPassword = this.state.password;
+    localStorage.setItem('password', userPassword);
     window.location.reload();
   };
 

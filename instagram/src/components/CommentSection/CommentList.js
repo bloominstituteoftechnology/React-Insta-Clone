@@ -1,8 +1,19 @@
 import React from 'react';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
+import styled from 'styled-components';
 
 import './Comment.css';
+
+// ------------------- STYLED COMPONENTS ---------------
+
+const CommentSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+// ------------------- STYLED COMPONENTS ---------------
 
 class CommentList extends React.Component {
   constructor(props) {
@@ -34,12 +45,12 @@ class CommentList extends React.Component {
 
   render() {
     return (
-      <div className='comment-section'>
+      <CommentSection>
         {this.state.comments.map((comment) => (
           <Comment profileObject={comment} key={comment.text} />
         ))} 
         <CommentInput handleTextInput={this.handleTextInput} addComment={this.addComment} commentValue={this.state.comment} />   
-      </div>
+      </CommentSection>
     );
   }
 } // class brace

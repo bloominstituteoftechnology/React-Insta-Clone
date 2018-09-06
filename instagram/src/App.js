@@ -3,10 +3,19 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 import Search from './components/SearchBar/Search';
-import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
+import styled from 'styled-components';
 
 import './App.css';
+
+// ------------------- STYLED COMPONENTS ---------------
+
+const AppDiv = styled.div`
+  text-align: center;
+  background-color: #FAFAFA;
+`;
+
+// ------------------- STYLED COMPONENTS ---------------
 
 class App extends Component {
   constructor() {
@@ -32,13 +41,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App"> 
+      <AppDiv> 
         <Search handleSearchInput={this.handleSearchInput}/>        
         {this.state.posts.map((eachElement) => {
           return <PostContainer key={eachElement.username} profileObject={eachElement} />;
-        })} 
-        <PostsPage />          
-      </div>
+        })}                  
+      </AppDiv>
     );
   }
 }
