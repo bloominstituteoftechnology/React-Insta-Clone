@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Login.css';
 import CreateAccount from './CreateAccount';
+import LoginAccount from './LoginAccount';
 
 class Login extends Component {
     constructor(props) {
@@ -72,16 +73,7 @@ class Login extends Component {
     render() {
         if (this.state.loginShow) {
             return (
-                <div className="login">
-                    <form className="login-form" onSubmit={this.handleSubmit}>
-                        <label className="login-title">Login</label><br /><br />
-                        <input type="input" value={this.state.userValue} onChange={e => this.updateInputValue(e)} name="userInput" placeholder="Username" />
-                        <input type="password" value={this.state.passValue} onChange={e => this.updatePassValue(e)} name="passInput" placeholder="Password" />
-                        <label className={this.state.rejected ? 'login-reject' : 'login-rejected hidden'}>Username or password is incorrect</label>
-                        <input type="button" onClick={e => this.handleSubmit(e)} value="Login" />
-                        <label className="login-register">Don't have one? <label className="register" onClick={this.updateCreate}>Register</label> for one!</label>
-                    </form>
-                </div>
+                <LoginAccount check={this.props.check} toggle={this.updateCreate}/>
             )
         }
         else {

@@ -23,7 +23,7 @@ class CreateAccount extends Component {
         if (this.state.userValue === '') {this.setState({createText: 'Username is invalid', rejected2: true});return;}
         this.setState({rejected: false})
         
-        localStorage.setItem(this.state.userCreate, this.state.passValue);
+        localStorage.setItem(this.state.userValue, this.state.passValue);
         this.props.updateCreate(e)
     }
 
@@ -36,9 +36,6 @@ class CreateAccount extends Component {
 
     // Update password value for Create Account
     updateCreatePassValue(e) {
-        if (e.which === 13) {
-            alert(e);
-        }
         this.setState({
             passValue: e.target.value
         });
