@@ -3,6 +3,7 @@ import './postContainer.css';
 import PostsContainer from './PostsContainer';
 import SearchBar from '../SearchBar/SearchBarContainer';
 import dummyData from '/Users/clintkunz/React Intermediate/React-Insta-Clone/instagram/src/dummy-data.js';
+import styled from 'styled-components';
 
 class PostsPage extends Component {
 
@@ -32,20 +33,20 @@ class PostsPage extends Component {
         });
         this.setState({ filteredPosts: posts})
       };
-        
+
     render() {
-        return (
-            <div className="post-page">
-                <SearchBar 
-                searchTerm={this.state.searchTerm} 
-                searchPosts={this.searchPostsHandler}
-                logout={this.logout}
-                />
-                <PostsContainer posts={
-                this.state.filteredPosts.length > 0 
-                ? this.state.filteredPosts 
-                : this.state.posts
-                } />
+      return (
+        <div>
+          <SearchBar 
+          searchTerm={this.state.searchTerm} 
+          searchPosts={this.searchPostsHandler}
+          logout={this.logout}
+          />
+          <PostsContainer posts={
+          this.state.filteredPosts.length > 0 
+          ? this.state.filteredPosts 
+          : this.state.posts
+          } />
         </div>
         )
     }

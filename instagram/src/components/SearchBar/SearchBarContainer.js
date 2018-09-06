@@ -1,30 +1,54 @@
 import React from 'react';
 import IGLogo from '../../assets/iglogo.png';
 import './searchBar.css';
+import styled from 'styled-components';
 
 const SearchBar = (props) => {
     return (
-      <div className="search-bar-wrapper">
-        <div className="image-wrapper">
-          <img alt="instagram logo" src={IGLogo} className="logo-image" />
-        </div>
-        <div>
-          <input type="text" placeholder="Search" onKeyUp={props.searchPosts} />
-        </div>
-        <button onClick={props.logout}>log out</button>
-        <div className="social-wrapper">
-          <div className="social">
-            <i className="fa fa-compass" />
-          </div>
-          <div className="social">
-            <i className="fa fa-heart" />
-          </div>
-          <div className="social">
-            <i className="fa fa-user-circle" />
-          </div>
-        </div>
-      </div>
+      <Wrapper>
+        <SubWrapper>
+          <Image alt="instagram logo" src={IGLogo} />
+        </SubWrapper>
+        <Input type="text" placeholder="search by username" onKeyUp={props.searchPosts} />
+        <Button onClick={props.logout}>log out</Button>
+      </Wrapper>
     );
   };
   
   export default SearchBar;
+
+const Wrapper = styled.div`
+  border-bottom: 1px solid #3333;
+  height: 80px;
+  line-height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffffff;
+`;
+
+const SubWrapper = styled.div`
+  height: 50px; 
+`;
+
+const Image = styled.img`
+  height: 100%; 
+`;
+
+const Input = styled.input`
+  height: 30px;
+  border-radius: 5px; 
+`;
+
+const Button = styled.button`
+  font-size: 14px; 
+  border-radius: 5px; 
+  background-color: lightgrey;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; 
+
+  &:hover {
+    cursor: pointer;
+  }
+`;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
-
+import styled from 'styled-components';
 
 
 class CommentSection extends React.Component {
@@ -32,19 +32,22 @@ class CommentSection extends React.Component {
  
     render() {
         return (
-            <div>
+            <Wrapper>
                 {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
                 <CommentInput addNewComment={this.addNewComment} handleChange={this.handleChange} inputText={this.state.inputText}/>
-            </div>
+            </Wrapper>
         )
     }
 }
-
 
 CommentSection.propTypes = {
     comments:PropTypes.arrayOf(
         PropTypes.shape({ text: PropTypes.string, username: PropTypes.string})
     )
 };
+
+const Wrapper = styled.div`
+
+`;
 
 export default CommentSection;
