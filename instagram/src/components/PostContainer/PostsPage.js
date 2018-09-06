@@ -13,6 +13,7 @@ class PostsPage extends React.Component {
         
         this.state = {
             data: [],
+            displayClass: 'show',
         }
     }
 
@@ -52,12 +53,17 @@ class PostsPage extends React.Component {
     logOut = (e) => {
         e.preventDefault();
         localStorage.removeItem('loggedIn');
-        return window.location.reload();
+
+        return this.setState({
+            displayClass: 'hide',
+        }, () => {
+            setTimeout(() => window.location.reload(), 2000);
+        });
     }
 
     render() {
         return (
-            <div>
+            <div className = { this.state.displayClass }>
                 <SearchBar handleSearch = { this.handleSearch } />
                 <div className = 'welcome-div'>Welcome back, { this.props.username }.</div>
                 <button className = 'log-out-btn' onClick = { this.logOut } >Log Out</button>

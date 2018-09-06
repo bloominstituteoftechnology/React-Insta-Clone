@@ -36,6 +36,9 @@
     opacity: 0;
 }
 
+
+/* Animations */
+
 @keyframes show-anim {
     from {opacity: 0;}
     to {opacity: 1;}

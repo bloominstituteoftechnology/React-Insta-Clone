@@ -5,12 +5,12 @@ import Authenticate from './components/Authentication/Authenticate';
 
 import './App.css';
 
-const AuthenticatedComponent = Authenticate(PostsPage)(Login);
+const AuthComponent = Authenticate(PostsPage)(Login);
 
 const App = () => {
   return (
     <div className = 'App'>
-      <AuthenticatedComponent />
+      <AuthComponent />
     </div>
   );
 }

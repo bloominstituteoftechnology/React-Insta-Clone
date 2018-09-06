@@ -18,7 +18,7 @@ class Login extends React.Component {
         const usernamesAndPasswords = {
             'Alice': 'AlicePass',
             'Bob': 'BobPass',
-            'Carol': 'Carolpass',
+            'Carol': 'CarolPass',
         }
 
         // store the username and password object in local storage
