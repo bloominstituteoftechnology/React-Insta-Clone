@@ -5,6 +5,24 @@ import bar from '../../logos/bar.png';
 import appstore from '../../logos/appstore.png';
 
 class Login extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            username:""
+        }
+    }
+
+    handleInputChange = event => {
+       this.setState({ [event.target.name]: event.target.value}); 
+    }
+
+    handleLogin = event => {
+        event.preventDefault();
+        const user = this.state.username;
+        localStorage.setItem('user', user);
+        window.location.reload();
+    }
+
     render(){
         return(
             <div className="page">
@@ -25,25 +43,19 @@ class Login extends Component {
                         </div>
                         
                         <div>
-                            <h2 className="h2-word">Username</h2>
                             
-                            <div className="username-form">
-                                <form>
-                                    <input className="Username" name="username" type="text"></input>
-                                </form>
+                            
+                            <div >
+                                
+                                    <h2 className="h2-word">Username</h2>
+                                    <input className="Username username-form" name="username" type="text" onChange={this.handleInputChange} value={this.state.username}></input>
+                                    <h2 className="h2-word">Password</h2>
+                                    <input className="Username username-form" name="password" type="text"></input>
+                                    <button onClick={this.handleLogin}  className="signin-button">Sign up</button>
+                                
                                 
                             </div>
                             
-                        </div>
-                        <div>
-                            <h2 className="h2-word">Password</h2>   
-                            <div className="username-form">
-                                <input className="Username" name="username" type="text"></input>
-                            </div>  
-                        </div>
-                        
-                        <div className="sign-in">
-                             <button className="signin-button">Sign up</button>
                         </div>
                     </div>
                 </div>

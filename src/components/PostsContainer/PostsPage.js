@@ -23,7 +23,7 @@ class PostsPage extends Component {
       }
     });
     this.setState({ posts: newPosts });
-}
+  }
 
   handleChange = event => {
     event.preventDefault();
