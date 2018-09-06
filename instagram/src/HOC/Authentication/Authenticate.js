@@ -17,11 +17,7 @@ const Authenticate = Component =>
 		}
 
 		render() {
-			return (
-				<div className="Authenticate">
-					{this.state.loggedIn ? <Component /> : <Login />}
-				</div>
-			);
+			return this.state.loggedIn ? <Component /> : <Login />;
 		}
 	};
 

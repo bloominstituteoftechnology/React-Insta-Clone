@@ -144,7 +144,8 @@ body {
 	background: #fafafa;
 }
 
-.Authenticate {
+.App,
+.Login {
 	font-size: 1.4rem;
 }
 
