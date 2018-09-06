@@ -1,5 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardLink,
+  CardTitle,
+  CardSubtitle
+} from "reactstrap";
 import CommentSection from "../CommentSection/CommentSection";
 
 class Post extends React.Component {
@@ -30,31 +39,44 @@ class Post extends React.Component {
   render() {
     return (
       <div className="post-wrapper">
-        <div className="post-header-wrapper">
-          <img src={this.props.post.thumbnailUrl} alt={"Profile thumb."} />
-          <div className="username">{this.props.post.username}</div>
-        </div>
-        <img src={this.props.post.imageUrl} alt={"post"} />
-        <div className="post-icon-and-comments-wrapper">
-          <div className="post-icons-wrapper">
-            <i
-              onClick={this.like}
-              style={
-                this.state.liked ? { color: "rgba(211, 88, 170, 0.8)" } : null
-              }
-              className={
-                "fa-heart likes-heart " + (this.state.liked ? "fas" : "far")
-              }
-            />
-            <i className="far fa-comment" />
-          </div>
-          <p style={this.state.likes > 9000 ? { color: "red" } : null}>
-            {this.state.likes > 9000
-              ? "IT'S OVER 9000!"
-              : this.state.likes + " likes"}
-          </p>
-          <CommentSection post={this.props.post} />
-        </div>
+        <Card>
+          <CardBody>
+            <div className="post-header-wrapper">
+              <img src={this.props.post.thumbnailUrl} alt={"Profile thumb."} />
+              <CardTitle>{this.props.post.username}</CardTitle>
+            </div>
+          </CardBody>
+          <img
+            width="100%"
+            src={this.props.post.imageUrl}
+            alt="Card image cap"
+          />
+          <CardBody>
+            <CardText>
+              <div className="post-icons-wrapper">
+                <i
+                  onClick={this.like}
+                  style={
+                    this.state.liked
+                      ? { color: "rgba(211, 88, 170, 0.8)" }
+                      : null
+                  }
+                  className={
+                    "fa-heart likes-heart " + (this.state.liked ? "fas" : "far")
+                  }
+                />
+                <i className="far fa-comment" />
+              </div>
+              <p style={this.state.likes > 9000 ? { color: "red" } : null}>
+                {this.state.likes > 9000
+                  ? "IT'S OVER 9000!"
+                  : this.state.likes + " likes"}
+              </p>
+            </CardText>
+
+            <CommentSection post={this.props.post} />
+          </CardBody>
+        </Card>
       </div>
     );
   }

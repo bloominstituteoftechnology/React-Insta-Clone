@@ -1,10 +1,18 @@
 import React from "react";
+import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
 import "./SearchBar.css";
 
 const SearchBar = props => {
   return (
     <div className="search-bar">
-        <input className="search" placeholder="&#x1f50d; &nbsp; Search" type="text" onChange={props.searchHandler}></input>
+       <InputGroup>
+      <input
+        className="search"
+        placeholder="Search"
+        type="text"
+        onChange={props.searchHandler}
+      />
+      </InputGroup>
     </div>
   );
 };
