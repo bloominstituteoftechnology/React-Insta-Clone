@@ -192,6 +192,13 @@ class Login extends React.Component {
         });
     }
 
+    handleDeleteuser = (e) => {
+        e.preventDefault();
+
+        console.log(e.target[0].value)
+        console.log(e.target[1].value)
+    }
+
     render() {
         const usernames = [];
         const usernamesAndPasswords = JSON.parse(localStorage.getItem('usernamesAndPasswords'));
@@ -208,12 +215,12 @@ class Login extends React.Component {
                     <form className = 'login-form' onSubmit = { this.handleLogIn } >
                         <div className = 'login-input-div'>
                             <input className = 'login-input' type = 'text' placeholder = 'Enter username...' />
-                            <input className = 'login-input' type = 'text' placeholder = 'Enter password...' />
+                            <input className = 'login-input' type = 'password' placeholder = 'Enter password...' />
                         </div>
 
                         <button className = 'form-btn login-btn' type = 'submit' >Log In</button>
-                        <button className = 'form-btn register-btn' onClick = { this.handleRegister } >Register</button>
-                        <button className = 'form-btn delete-btn' onClick = { this.handleDelete }>Delete Account</button>
+                        <button className = 'form-btn register-btn' onClick = { this.handleRegister } >Go to Register</button>
+                        <button className = 'form-btn delete-btn' onClick = { this.handleDelete }>Go to Delete Account</button>
                     </form>
                 </section>
 
@@ -221,10 +228,10 @@ class Login extends React.Component {
                     <form className = 'login-form' onSubmit = { this.handleNewUser }>
                         <div className = 'login-input-div'>
                             <input className = 'login-input' type = 'text' placeholder = 'Enter new username...' />
-                            <input className = 'login-input' type = 'text' placeholder = 'Enter new password...' />
+                            <input className = 'login-input' type = 'password' placeholder = 'Enter new password...' />
                         </div>
 
-                        <button className = 'form-btn login-btn' onClick = { this.handleBackToLogIn }>Back to Log in</button>
+                        <button className = 'form-btn login-btn' onClick = { this.handleBackToLogIn }>Go to Log in</button>
                         <button className = 'form-btn register-btn' type = 'submit' >Register New User</button>
                     </form>
                 </section>
@@ -232,10 +239,19 @@ class Login extends React.Component {
                 <section className = { `delete-section ${ this.state.deleteSectionClass.join(' ') }` }>
                     <h3>This is the delete section. It is a work in progress.</h3>
 
-                    <ul>{ usernames.map(user => <li>{ user }</li>) }</ul>
+                    <form onSubmit = { this.handleDeleteuser }>
+                        <select>
+                            { usernames.map((user, i) => <option key = { i } value = { user }>{ user }</option>) }
+                        </select>
 
-                    <button className = 'form-btn login-btn' onClick = { this.handleBackToLogIn }>Back to Log in</button>
-                    <button className = 'form-btn register-btn' onClick = { this.handleRegister } >Register</button>
+                        <span>Password:</span>
+                        <input type='password' />
+
+                        <button className = 'form-btn delete-btn' type = 'submit'>Delete Account</button>
+                    </form>
+
+                    <button className = 'form-btn login-btn' onClick = { this.handleBackToLogIn }>Go to Log in</button>
+                    <button className = 'form-btn register-btn' onClick = { this.handleRegister } >Go to Register</button>
                 </section>
 
                 <p className = { this.state.messageClass }>{ this.state.message }</p>
