@@ -5,9 +5,10 @@ import './CommentSection.css';
 class CommentSection extends Component {
 
     constructor(props) {
+        if(!localStorage[props.id]){localStorage[props.id] = JSON.stringify(props.comments)}
         super();
         this.state={
-            comments:props.comments,
+            comments: JSON.parse(localStorage[props.id]),
             likes:props.likes,
             timestamp: props.timestamp, 
             currentComment: "",
@@ -18,9 +19,11 @@ class CommentSection extends Component {
     addNewComment = (e) => {
         if (this.state.currentComment){
         this.setState({
-            comments:[...this.state.comments, {username: JSON.parse(localStorage.user1).username, text:this.state.currentComment}],
+            comments:[...this.state.comments, {username: JSON.parse(localStorage.currentUser).username.toLowerCase(), text:this.state.currentComment}]
         }
         )
+        localStorage[this.props.id] = JSON.stringify([...JSON.parse(localStorage[this.props.id]), 
+        {username: JSON.parse(localStorage.user1).username, text:this.state.currentComment}]);
 
         e.currentTarget.value=null;
     }
@@ -31,7 +34,9 @@ class CommentSection extends Component {
         comments.splice(e.currentTarget.parentElement.id, 1);
         this.setState({
             comments: [...comments]
-        })
+        });
+
+        localStorage[this.props.id] = JSON.stringify([...comments]);
     }
 
     commentChange = (e) => {

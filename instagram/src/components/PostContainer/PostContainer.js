@@ -26,13 +26,16 @@ const PostContainer = props => {
 
                 <CommentSection 
                 key={'comments-' + id} 
+                id={'comments-' + id} 
                 likes={post.likes} 
                 comments={post.comments} 
                 timestamp={post.timestamp}
                 />
             </div>
             )
-          }}
+          }
+        return null;
+        }
         )}
       </div>
 
