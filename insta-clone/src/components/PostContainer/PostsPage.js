@@ -1,30 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import SearchBar from '../Header/SearchBar';
 import PostList from './PostList';
 import HeaderContainer from '../Header/HeaderContainer';
+import dummyData from '../../dummy-data.js';
 
-const PostsPage = (props) => {
+class PostsPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      postData: [],
+    };
+  }
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
+  componentDidMount = () => {
+     this.setState({ postData: dummyData })
+  }
+render() {
   return (
     <div>
 <header className="posts-page-header">
-<div className="user-dashboard">
-<h2>Welcome, {localStorage.username}!</h2>
-<button
-  onClick={() => {
-    localStorage.clear();
-    window.location.reload();
-  }
-}>Logout</button>
-</div>
-  <h1 className="title-headline">NOT Instagram</h1>
-  <SearchBar
-  searchPosts={props.searchPosts}
-  handleChange={props.handleChange}/>
-
+<HeaderContainer postData={this.state.postData} />
   </header>
 
-  <PostList postData={props.postData}  />
+  <PostList postData={this.state.postData}  />
     </div>
 )};
+}
 
 export default PostsPage;

@@ -7,6 +7,7 @@ class HeaderContainer extends Component {
     super(props);
     this.state = {
       search: '',
+      postData: [{props}],
     };
   }
 
@@ -21,7 +22,7 @@ class HeaderContainer extends Component {
       return post.username === this.state.search;
     })
     this.setState({ postData: newPosts });
-    event.target.reset();
+    
     }
 
   render() {
@@ -46,3 +47,5 @@ class HeaderContainer extends Component {
     )
   }
 }
+
+export default HeaderContainer;
