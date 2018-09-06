@@ -13,6 +13,7 @@
   flex-wrap: wrap;
   width: 100%;
   font-size: 2rem;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
 .thumbnail {
@@ -21,8 +22,14 @@
   width: 100px;
 }
 
+.username {
+  margin: 0 20px 20px;
+}
+
 .main-img {
-  width: 100%;
+  border-radius: 3px;
+  width: 300px;
+  margin: 20px;
 }
 
 .comment-section {
@@ -39,6 +46,7 @@
   padding: 0 0 0 20px;
   margin: 20px 0 0;
   font-size: 2rem;
+  text-align: left;
 }
 
 .icons {
@@ -48,11 +56,13 @@
 
 .heart-icon, .comment-icon {
   margin: 20px 0px 0 20px;
+  cursor: pointer;
 }
 
 .timestamp {
   font-weight: bold;
   color: gray;
-  font-size: 1.6rem;
+  font-size: .8rem;
   margin:  20px 0px 20px 20px;
+  text-align: left;
 }

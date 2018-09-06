@@ -3,6 +3,7 @@ import dummy_data from '../../dummy-data';
 import uuidv4 from 'uuid/v4';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from  '../PostContainer/PostContainer';
+import './PostPage.css';
 
 class PostPage extends React.Component {
   constructor() {
@@ -34,7 +35,7 @@ class PostPage extends React.Component {
     const {dummyData} = this.state;
     return (
       <div className="App">
-        <button onClick={this.logout}>Logout</button>
+        <button className="logout-button" onClick={this.logout}>Logout</button>
         <SearchBar filterSearch={this.filterSearch} />
         {
           dummyData.map(post => {

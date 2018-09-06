@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// generates random name from the 1990s census (not sure which country, though... https://www.npmjs.com/package/node-random-name)
 import random_name from 'node-random-name';
 import './AddComment.css';
 
