@@ -1,7 +1,7 @@
 import React from "react";
 import { InputGroup } from "reactstrap";
 import styled from "styled-components";
-import "./SearchBar.css";
+
 const SearchBarComponent = styled.input`
   height: 50px;
   width: 220px;
