@@ -3,7 +3,7 @@ import dummyData from '../../dummy-data'
 import PostContainer from "../PostContainer/PostContainer"
 import CommentSection from "../CommentSection/CommentSection"
 
-import '../../App.css';
+//import '../../App.css';
 import SearchBar from '../SearchBar/SearchBar';
 
 class PostPage extends Component {
@@ -11,8 +11,7 @@ class PostPage extends Component {
     super(props)
     this.state = {     
      commentInput: '',
-     searchInput: '',
-     personalUser: ''
+     searchInput: '',     
     }
   }
 
@@ -45,7 +44,8 @@ class PostPage extends Component {
 
 
   addComment = (event) => {    
-    let username = this.state.personalUser ? this.state.personalUser:prompt('username?')
+    console.log(localStorage.getItem('username'));
+    let username = localStorage.getItem('username')
     
     const tempData = this.state.dataArray.map(
       data =>{if(data.id == event.target.id){                    

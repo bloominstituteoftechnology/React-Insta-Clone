@@ -1,28 +1,43 @@
 import PostContainer from "../PostContainer/PostContainer";
 import React, { Component } from 'react';
 import PropTypes from "prop-types"
-import './CommentSection.css';
+import styled from "styled-components"
+
 
 CommentSection.propTypes = {
     username: PropTypes.string,
-    likes: PropTypes.number,
-    
+    likes: PropTypes.number,    
 }
+
+const CommentSectionDiv = styled.section`  
+    
+` 
+
+
+
+const UsernameThumbnail = styled.img `
+    max-width: 30px;
+    max-height:30px
+`
+const Header = styled.header `
+ display:flex;
+    align-self: baseline
+`
 
 function CommentSection (props) {     
     
     return (
-        <section className="comment-section">
-            <header>
-                <div>
-                    <img src = {props.data.thumbnailUrl}/>
-                </div>
+        <CommentSectionDiv>
+            <Header>
+                
+                    <UsernameThumbnail src = {props.data.thumbnailUrl}/>
+                
                 <div>
                     <h4>{props.data.username}:</h4>
                 </div>
                 
                 
-            </header>
+            </Header>
             <img src={props.data.imageUrl}/>
             <p className= 'likes'>{props.data.likes + ' likes'}</p>
 
@@ -37,7 +52,7 @@ function CommentSection (props) {
                 <input onChange = {props.handleInput}/>    
                 <button onClick = {props.addComment} type = 'button'>Sumbit Comment</button>
             </div>     */}
-        </section>
+        </CommentSectionDiv>
     )
 }
     
