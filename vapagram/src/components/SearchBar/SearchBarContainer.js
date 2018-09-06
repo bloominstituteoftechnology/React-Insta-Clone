@@ -1,29 +1,60 @@
 import React from 'react';
 import IGLogo from '../../assets/iglogo.png';
 import './SearchBar.css';
+import styled from 'styled-components';
+
+const SearchBarWrapper = styled.div`
+  border-bottom: 1px solid #3333;
+  height: 80px;
+  line-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+`;
+
+const ImageWrapper = styled.div`
+  height: 50px;
+`;
+
+const LogoImage = styled.img`
+  height: 100%;
+`;
+
+const SocialWrapper = styled.div`
+  display: flex;
+`;
+
+const Social = styled.div`
+  width: 20px;
+  height: 20px;
+`;
 
 const SearchBar = props => {
   return (
-    <div className="search-bar-wrapper">
-      <div className="image-wrapper">
-        <img alt="instagram logo" src={IGLogo} className="logo-image" />
-      </div>
-      {/* Source from  */}
-      <form onSubmit={props.search} onChange={props.handleChange}>
-        <input name="search" type="text" placeholder="Search" />
+    <SearchBarWrapper>
+      <ImageWrapper>
+        <LogoImage alt="instagram logo" src={IGLogo} />
+      </ImageWrapper>
+      <form onSubmit={props.handleSubmit}>
+        <input
+          onChange={props.handleChange}
+          name="search"
+          type="text"
+          placeholder="Search"
+        />
       </form>
-      <div className="social-wrapper">
-        <div className="social">
+      <SocialWrapper>
+        <Social>
           <i className="fa fa-compass" />
-        </div>
-        <div className="social">
+        </Social>
+        <Social>
           <i className="fa fa-heart" />
-        </div>
-        <div className="social">
+        </Social>
+        <Social>
           <i className="fa fa-user-circle" />
-        </div>
-      </div>
-    </div>
+        </Social>
+      </SocialWrapper>
+    </SearchBarWrapper>
   );
 };
 
