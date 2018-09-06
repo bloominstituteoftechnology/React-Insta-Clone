@@ -2,13 +2,14 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    height: 100vh;
 }
+
 
 .login-container form {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    height: 100vh;
     text-align: center;
 }
 
@@ -29,5 +30,3 @@
     margin: 20px;
     width: 300px;
 }
-
-/* Lucas Beemer, Casey Baker */

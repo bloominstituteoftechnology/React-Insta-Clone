@@ -4,6 +4,14 @@ import Comment from './Comment';
 import CommentInput from './CommentInput';
 import CommentLikes from './CommentLikes';
 import './Comment.css';
+import styled from 'styled-components';
+
+const CommentSectionDiv = styled.div `
+max-width: 100%;
+padding: 0px 10px;
+margin: 10px auto;
+
+`
 
 class CommentSection extends React.Component {
     constructor(props){
@@ -31,7 +39,7 @@ class CommentSection extends React.Component {
     render() {
         
         return (
-            <div className = 'comment-section'>
+            <CommentSectionDiv>
 
             <CommentLikes likes={this.props.likes}/>
 
@@ -41,7 +49,7 @@ class CommentSection extends React.Component {
 
                 <CommentInput addNewComment={this.addNewComment}/>
 
-            </div>
+            </CommentSectionDiv>
         )
     }
 }

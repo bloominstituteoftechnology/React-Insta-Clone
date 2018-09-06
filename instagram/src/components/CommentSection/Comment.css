@@ -1,11 +1,4 @@
 
-.comment-section {
-    max-width: 100%;
-    padding: 0px 10px;
-    margin: 10px auto;
-    
-}
-
 .comment-likes {
     display: flex;
     flex-flow: column nowrap;

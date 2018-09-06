@@ -81,7 +81,7 @@ const SearchBar = props => {
                <i className = 'far fa-compass'></i>
                <i className = 'far fa-heart'></i>
                <i className = 'far fa-user'></i>
-               <LogOutButton onClick={this.logout}>Logout</LogOutButton>
+               <LogOutButton onClick={props.logout}>Logout</LogOutButton>
                </SocialIcons>
            
             </FlexColumnCenter>

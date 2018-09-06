@@ -1,5 +1,7 @@
 import React from 'react';
 import './Login.css';
+import styled from 'styled-components';
+
 
 class Login extends React.Component {
     constructor(props){
@@ -24,18 +26,23 @@ class Login extends React.Component {
         window.location.reload();
     }
 
+    
+
     render(){
 
-        return(
-            <div className = 'login-container'>
+        
 
+        return(
+<div>
+            <div className = 'login-container'>
             <form onSubmit={this.loginAttempt}>
-                <h1>Instagram</h1>
-                <input type='text' value={this.state.username} onChange={this.setUsername} placeholder='Username'></input>
+            <h1>Instagram Clone</h1>
+            <input type='text' value={this.state.username} onChange={this.setUsername} placeholder='Username'></input>
                 <input type='password' value={this.state.password} onChange = {this.setPassword} placeholder='Password'></input>
                 <button type='submit'>Login</button>
             </form>
 
+            </div>
             </div>
         )
     }
