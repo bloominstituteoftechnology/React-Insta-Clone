@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentBar from './CommentBar';
 import './darkheart.jpg';
+import styled from 'styled-components';
 // this component contains all comments in a given post
 
 class CommentSection extends React.Component {
@@ -37,11 +38,12 @@ class CommentSection extends React.Component {
     this.setState({ likes: this.state.likes + 1 });
   }
 
+
   render() {
     return (
-      <div className="commentSection">
+      <CommentField>
       {this.state.likes}
-      <img onClick={this.increaseLikes} className="heart" alt="Heart Icon" src="https://clip2art.com/images/love-clipart-2.png" />
+      <HeartImage onClick={this.increaseLikes} className="heart" alt="Heart Icon" src="https://clip2art.com/images/love-clipart-2.png" />
       {this.state.comments.map((comment, index) => (
         <Comment
           key={index}
@@ -56,11 +58,20 @@ class CommentSection extends React.Component {
       handleChange={this.handleChange}
       comments={this.comments}
       />
-    </div>
+    </CommentField>
     )
   }
 }
-
+const CommentField = styled.div`
+background-color: beige;
+padding: 1rem
+`;
+const HeartImage = styled.img`
+  display: flex;
+  align-self: center;
+  margin: auto;
+  width: 2rem
+  `;
 CommentSection.propTypes = {
   commentData: PropTypes.arrayOf(PropTypes.shape({
     username: PropTypes.string,

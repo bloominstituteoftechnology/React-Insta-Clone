@@ -25,16 +25,17 @@ class App extends Component {
   render() {
     return (
 
-      <div className="App">
-        <PostsPage
-
-        />
-      </div>
+      <AppWrapper>
+        <PostsPage />
+      </AppWrapper>
     )}
 
 }
 
-
+const AppWrapper = styled.div`
+  text-align: center;
+  className: "App";
+  `;
 
 
 export default Authenticate(App);
