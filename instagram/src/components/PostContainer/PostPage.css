@@ -1,0 +1,68 @@
+ .btn-img {
+    width: 70px;
+    height: 50px;
+  }
+  
+  .btn-img img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .btn-img:hover {
+    cursor: pointer;
+  }
+  
+  .left-header {
+    width: 33%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .line-img {
+    width: 30px;
+    height: 70px;
+    margin-top: 15px;
+    margin-right: 0px;
+  }
+  
+  .line-img img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .logo-img {
+    width: 50px;
+    height: 35px;
+    margin-top: 17px;
+  }
+  
+  .logo-img img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .logo-img:hover {
+    cursor: pointer;
+  }
+
+  .pstpg-header {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pstpg-title {
+    font-family: "Oleo Script", cursive;
+    font-size: 2rem;
+    padding: 10px 10px 10px 0px;
+    margin: 5px 5px 5px 0px;
+  }
+  
+  .right-header {
+    width: 33%;
+    display: flex;
+    justify-content: space-around;
+  }

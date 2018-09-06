@@ -13,26 +13,62 @@
 }
 
 .itractns {
-  /* width: 80px;
+  width: 80px;
   height: 50px;
-  margin-left: 10px; */
+  margin-left: 10px;
   display: flex;
 }
 
 .itractns .lkbtn {
-  /* background: url("https://cdn2.iconfinder.com/data/icons/instagram-ui/48/jee-68-512.png"); */
-  margin: 10px;
+  width: 80px;
+  height: 50px;
+  margin: 10px 0px;
+  background-color: rgba(255,255,255,1);
+  border: none;
   cursor: pointer;
+}
+
+.itractns .lkbtn:focus {
+  outline: none;
 }
 
 .itractns .cmtbtn {
-  /* background: url("https://cdn2.iconfinder.com/data/icons/instagram-ui/48/jee-69-512.png"); */
-  margin: 10px;
+  width: 80px;
+  height: 50px;
+  margin: 10px 0px;
+  background-color: rgba(255,255,255,1);
+  border: none;
   cursor: pointer;
 }
 
+.itractns .cmtbtn:focus {
+  outline: none;
+}
+
+.itractns .lkbtn .lkbtn-container {
+  width: 80px;
+  height: 45px;
+  text-align: center;
+}
+
+.itractns .cmtbtn .cmtbtn-container {
+  width: 80px;
+  height: 45px;
+  text-align: center;
+}
+
+.itractns .lkbtn .lkbtn-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.itractns .cmtbtn .cmtbtn-container img {
+  width: 100%;
+  height: 100%;
+}
+
 .lkct {
-  margin-top: 5px;
+  margin-top: 15px;
   margin-left: 20px;
   font-size: 1.6rem;
 }
