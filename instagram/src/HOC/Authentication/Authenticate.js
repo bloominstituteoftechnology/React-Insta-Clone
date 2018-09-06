@@ -11,8 +11,10 @@ const Authenticate = Component =>
 		}
 
 		submit = event => {
+			event.preventDefault();
 			localStorage.setItem('username', event.target.children[1].value);
 			localStorage.setItem('password', event.target.children[2].value);
+			window.location.reload();
 		};
 
 		componentDidMount() {
