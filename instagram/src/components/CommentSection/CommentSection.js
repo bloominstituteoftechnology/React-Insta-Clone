@@ -1,13 +1,13 @@
 import React from 'react';
 
-import './CommentSection.css';
+import { CommentSectionDiv, DeleteBtn } from './CommentSectionStyles';
 
 const CommentSection = props => {
     return (
-        <div className = 'comment-section-div'>
+        <CommentSectionDiv>
             <h5>{ props.comment.username }</h5>
-            <p>{ props.comment.text }<span onClick = { props.deleteComment(props.index) } className = 'delete-btn'>X</span></p>
-        </div>
+            <p>{ props.comment.text }<DeleteBtn onClick = { props.deleteComment(props.index) } className = 'delete-btn'>X</DeleteBtn></p>
+        </CommentSectionDiv>
     );
 }
 
