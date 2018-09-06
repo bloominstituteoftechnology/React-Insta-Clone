@@ -1,13 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Comment.css';
+import styled, { css } from "styled-components";
+
+const CommentText = styled.div`
+  text-align: left;
+  padding: 2px;
+  margin-left: 4px;
+`;
 
 const Comment = props => {
   return (
-    <div className="comment-text">
+    < CommentText>
       <span className="comment">{props.comment.text}</span>{' '}
       <span className="user">-{props.comment.username}</span>
-    </div>
+    </ CommentText>
   );
 };
 
