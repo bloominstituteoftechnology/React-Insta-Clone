@@ -135,34 +135,3 @@ table {
   align-items: center;
   font-size: 62.5%;
 }
-.App .search-bar {
-  display: flex;
-  width: 640px;
-  align-items: center;
-  justify-content: space-between;
-}
-.App .search-bar .logo {
-  width: 25%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.App .search-bar .logo .logo-image {
-  width: 60%;
-  margin-top: 10px;
-}
-.App .search-bar .logo i {
-  font-size: 2rem;
-  border-right: 1px solid darkgray;
-  padding-right: 20px;
-}
-.App .search-bar .other-icons {
-  width: 25%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.App .search-bar .other-icons i {
-  font-size: 1.5rem;
-  color: darkgray;
-}
