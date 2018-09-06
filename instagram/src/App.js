@@ -49,13 +49,10 @@ class App extends Component {
         {/* <SearchBar search={this.search} handleChange={this.handleChange}/>
         <PostContainer posts={this.state.posts}/> */}
         <PostsPage />
-        <Authenticate />
-
-        
 
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
