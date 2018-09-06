@@ -22,6 +22,7 @@ class PostsPage extends Component {
 
   // Filter out the results based on the user's input
   handleSearch = (e) => {
+    // If the string is empty, don't filter
     if (e === '') {this.setState({filtered: false})}
     let updatedList = this.state.dummydata;
 
