@@ -38,3 +38,10 @@ form {
   border: none;
   height: 50px;
 }
+
+.likes {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 2%;
+  padding-bottom: 2%;
+}

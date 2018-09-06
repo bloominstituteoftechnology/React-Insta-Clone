@@ -5,7 +5,7 @@ import './Posts.css';
 const PostsContainer = props => {
   return (
     <div className="posts-container-wrapper">
-      {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
+      {props.posts.map(p => <Post key={p.imageUrl} post={p} likes={props.posts.likes} />)}
     </div>
   );
 };

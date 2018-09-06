@@ -5,7 +5,7 @@ import PostHeader from './PostHeader';
 import './Posts.css';
 
 const Post = props => {
-  console.log(props.post.username);
+  console.log(props.post.likes);
   return (
     <div className="post-border">
       <PostHeader
@@ -19,7 +19,7 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <CommentSection comments={props.post.comments} />
+      <CommentSection comments={props.post.comments} likes ={props.post.likes} />
     </div>
   );
 };

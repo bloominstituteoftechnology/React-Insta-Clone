@@ -10,6 +10,7 @@ class CommentSection extends React.Component {
       comments: props.comments
     };
   }
+ 
 
   addNewComment = event => {
     event.preventDefault();
@@ -24,9 +25,10 @@ class CommentSection extends React.Component {
 
 
   render() {
+    console.log(this.state.likes);
     return (
       <div className="commentarea">
-        <div>{this.state.likes}</div>
+        <div className="likes">{this.props.likes} likes</div>
         {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
         <CommentInput handleaddNewComment= {this.addNewComment}/>
       </div>

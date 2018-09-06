@@ -7,8 +7,8 @@ import SearchBar from './components/SearchBar/SearchBarContainer';
 import Authenticate from './components/Authentication/Authenticate';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       posts: []
     };
@@ -28,7 +28,7 @@ class App extends Component {
 
   render() {
 
-    
+    console.log(this.state.posts);
     return (
       <div className="App">
         <SearchBar />
