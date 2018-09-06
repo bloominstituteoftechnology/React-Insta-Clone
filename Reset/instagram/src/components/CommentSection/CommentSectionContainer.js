@@ -26,7 +26,7 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div className="commentarea">
-        {this.state.likes}
+        <div>{this.state.likes}</div>
         {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
         <CommentInput handleaddNewComment= {this.addNewComment}/>
       </div>
