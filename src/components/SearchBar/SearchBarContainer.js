@@ -8,7 +8,7 @@ const SearchBar = props => {
       <div className="image-wrapper">
         <img alt="instagram logo" src={IGLogo} className="logo-image" />
       </div>
-      <form onSubmit={props.search}>
+      <form onSubmit={props.search} onChange={props.handleChange}>
       <input type="text" placeholder="Search" />
       </form>
       <div className="social-wrapper">

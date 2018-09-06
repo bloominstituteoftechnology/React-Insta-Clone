@@ -12,22 +12,27 @@ class App extends Component {
     };
   }
   
-  componentDidMount(){
-    this.setState({posts: dummyData});
-    
-   }
 search = event => {
   event.preventDefault();
   let newPosts = [...this.state.posts];
   newPosts=newPosts.filter(post=>{
-    
-  })
+    console.log(post)
+    return post.username === this.state.search;
+  }
+  );
+  this.setState({posts: newPosts});
 };
 
 handleChange = event => {
   event.preventDefault ();
+  this.setState({[event.target.name]: event.target.value});
+};
 
-}
+componentDidMount(){
+  this.setState({posts: dummyData});
+  
+ }
+
   render() {
     return (
       <div className="App">
