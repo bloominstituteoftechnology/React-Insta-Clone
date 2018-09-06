@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Login from '../Login/Login';
+import App from '../../App';
 // import './Authenticate.css';
 // import PostsPage from './components/PostsContainer/PostsPage';
 
@@ -12,16 +13,7 @@ const Authenticate = App =>
       };
     }
     // set up our state so that we have some conditional logging
-    render() {
-      // if user is logged in... render app
-      if (this.state.loggedIn) {
-        return (
-          <div>
-            <App />
-          </div>
-        );
-      }
-    }
+    render() 
   };
 
 export default Authenticate;
