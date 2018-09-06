@@ -7,9 +7,7 @@ import Authenticate from './components/Authentication/authenticate';
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      loggedInUser: ''
-    }
+    this.state = {};
   }
 
   render() {

@@ -1,16 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
+import Login from '../Login/login';
 
 const Authenticate = (App) => 
     class extends React.Component {
+        constructor() {
+            super();
+            this.state = {
+                loggedIn: false
+            };
+        }
+
+        componentDidMount() {
+            if (localStorage.getItem("InstagramUsername") !== null) {
+              this.setState({ loggedIn: true });
+            }
+        }
+
         render() {
-            return <App />;
+            let output = this.state.loggedIn ? <App /> : <Login />;
+            return output;
         }
     };
-
-
-Authenticate.propTypes = {
-
-}
 
 export default Authenticate;

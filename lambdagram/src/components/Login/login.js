@@ -1,31 +1,34 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './login.css';
 
-class Login extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
+import camera from '../../assets/camera.png';
+import lambdagram from '../../assets/lambdagram.png';
 
+class Login extends React.Component {
     handleLogin = (event) => {
-        event.preventDefault();
-        
+        localStorage.setItem("InstagramUsername", event.target.user.value);
     }
 
     render() {
         return (
-            <form>
-                <input name='user' type='text'></input>
-                <input name='pw' type='password'></input>
-                <button>Login</button>
-            </form>
+            <div className='login-container'>
+                <div className='login-header'>
+                    <div className='login-logo'>
+                        <img src={camera} alt='Camera' />
+                        <div className='divider'></div>
+                        <img src={lambdagram} alt='Lambdagram' />
+                    </div>
+                </div>
+                <form className='login-form' onSubmit={this.handleLogin}>
+                    <label htmlFor='user'>Username:</label>
+                    <input name='user' type='text'></input>
+                    <label htmlFor='pw'>Password:</label>
+                    <input name='pw' type='password'></input>
+                    <input type='submit' value='Login'></input>
+                </form>
+            </div>
         );
     }
-}
-
-Login.propTypes = {
-
 }
 
 export default Login;

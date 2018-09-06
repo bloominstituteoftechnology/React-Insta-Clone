@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './postcontainer.css';
 
 import dummyData from '../../dummy-data';
@@ -77,9 +76,5 @@ class PostPage extends React.Component {
         );
     }
 } 
-
-PostPage.propTypes = {
-
-}
 
 export default PostPage;
