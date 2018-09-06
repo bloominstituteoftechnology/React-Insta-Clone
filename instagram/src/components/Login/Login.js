@@ -33,6 +33,21 @@ class Login extends React.Component {
         }
     }
 
+    handleErrormsg = (errorMsg) => {
+        let newState = this.state;
+
+        newState.message = errorMsg;
+        newState.messageClass = 'show';
+
+        return this.setState(newState, () => {
+            setTimeout(() => {
+                newState.messageClass = 'hide';
+
+                this.setState(newState);
+            }, this.state.timeoutInterval);
+        });
+    }
+
     handleLogIn = (e) => {
         e.preventDefault();
         // get the usernames and passwords from localStorage
@@ -60,18 +75,7 @@ class Login extends React.Component {
 
         // else if user or password doesn't match with those stored in localStorage,
         // display the wrong user/pass message.
-        let newState = this.state;
-        
-        newState.message = 'Wrong username / password. Try again or register a new user.';
-        newState.messageClass = 'show';
-
-        return this.setState(newState, () => {
-            setTimeout(() => {
-                newState.messageClass = 'hide';
-
-                this.setState(newState);
-            }, this.state.timeoutInterval);
-        });
+        return this.handleErrormsg('Wrong username / password. Try again or register a new user.');
     }
 
     handleRegister = (e) => {
@@ -104,32 +108,10 @@ class Login extends React.Component {
 
         // if username input is left blank, display the enter username message
         if (e.target[0].value === '') {
-            let newState = this.state;
-
-            newState.message = 'Please enter a username.';
-            newState.messageClass = 'show';
-
-            return this.setState(newState, () => {
-                setTimeout(() => {
-                    newState.messageClass = 'hide';
-
-                    this.setState(newState);
-                }, this.state.timeoutInterval);
-            });
+            return this.handleErrormsg('Please enter a username.');
         // else if password input is left blank, display the enter password message
         } else if (e.target[1].value === '') {
-            let newState = this.state;
-
-            newState.message = 'Please enter a password.';
-            newState.messageClass = 'show';
-
-            return this.setState(newState, () => {
-                setTimeout(() => {
-                    newState.messageClass = 'hide';
-
-                    this.setState(newState);
-                }, this.state.timeoutInterval);
-            });
+            return this.handleErrormsg('Please enter a password.');
         }
 
         // if username and password are NOT left blank, then take the username that
@@ -137,18 +119,7 @@ class Login extends React.Component {
         // the user exists message.
         for (let key in usernamesAndPasswords) {
             if (e.target[0].value === key) {
-                let newState = this.state;
-
-                newState.message = 'User already exists. Please go back to log in.';
-                newState.messageClass = 'show';
-
-                return this.setState(newState, () => {
-                    setTimeout(() => {
-                        newState.messageClass = 'hide';
-
-                        this.setState(newState);
-                    }, this.state.timeoutInterval);
-                });
+                return this.handleErrormsg('User already exists. Please go back to log in.');
             }
         }
 
@@ -194,42 +165,15 @@ class Login extends React.Component {
 
     handleDeleteuser = (e) => {
         e.preventDefault();
-
         const usernamesAndPasswords = JSON.parse(localStorage.getItem('usernamesAndPasswords'));
 
-        // console.log(e.target[0].value)
-        // console.log(e.target[1].value)
-        // console.log(usernamesAndPasswords)
-
         if (!e.target[1].value) {
-            let newState = this.state;
-
-            newState.message = 'Please enter a password.';
-            newState.messageClass = 'show';
-
-            return this.setState(newState, () => {
-                setTimeout(() => {
-                    newState.messageClass = 'hide';
-
-                    this.setState(newState);
-                }, this.state.timeoutInterval);
-            });
+            return this.handleErrormsg('Please enter a password');
         } else {
             for (let user in usernamesAndPasswords) {
                 if (e.target[0].value === user) {
                     if (e.target[1].value !== usernamesAndPasswords[user]) {
-                        let newState = this.state;
-
-                        newState.message = 'Sorry, wrong password.';
-                        newState.messageClass = 'show';
-
-                        return this.setState(newState, () => {
-                            setTimeout(() => {
-                                newState.messageClass = 'hide';
-
-                                this.setState(newState);
-                            }, this.state.timeoutInterval);
-                        });
+                        return this.handleErrormsg('Sorry, wrong password');
                     } else {
                         delete usernamesAndPasswords[user];
 
