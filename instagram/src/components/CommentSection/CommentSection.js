@@ -34,12 +34,15 @@ class CommentSection extends React.Component {
     this.setState({ comment: e.target.value });
   }
 
-  addNewComment = e => {
+  handleCommentSubmit = e => {
     e.preventDefault();
     const newComment = { text: this.state.comment, username: 'user' };
-    const comments = [...this.state.comments]
+    const comments = this.state.comments.slice();
     comments.push(newComment);
     this.setState({ comments, comment: '' });
+    setTimeout(() => {
+      this.setComments();
+    }, 500);
   };
 
   render() {
