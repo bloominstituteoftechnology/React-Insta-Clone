@@ -2,6 +2,27 @@ import React from 'react';
 import Comment from './Comment';
 import CommentBar from './CommentBar';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const CommentSectionWrapper = styled.div`
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-radius: 3px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    width: 87%;
+    margin-left: 6.5%;
+    margin-top: -5px;
+    margin-bottom: 40px;
+`;
+
+const Comments = styled.div`
+    border-bottom: 1px solid lightgray;
+    margin-right: 4%;
+    padding-bottom: 20px;
+    padding-top: 10px;
+`;
 
 class CommentSectionContainer extends React.Component {
     constructor(props) {
@@ -45,16 +66,16 @@ class CommentSectionContainer extends React.Component {
 
     render() {
         return (
-            <div className='comment-section'>
-                <div className='comments'>
+            <CommentSectionWrapper>
+                <Comments>
                 {this.state.comment.map((comment)=> <Comment comment={comment}/>)}
-                </div>
+                </Comments>
                 <CommentBar 
                     commentText={this.state.commentText}
                     writeComment={this.handleWriteComment}
                     submitComment={this.handleSubmitComment}
                 />
-            </div>
+            </CommentSectionWrapper>
         );
     }
 }
