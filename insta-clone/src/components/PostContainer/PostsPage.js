@@ -6,10 +6,20 @@ const PostsPage = (props) => {
   return (
     <div>
 <header className="posts-page-header">
-  <h1>NOT Instagram</h1>
+<div className="user-dashboard">
+<h2>Welcome, {localStorage.username}!</h2>
+<button
+  onClick={() => {
+    localStorage.clear();
+    window.location.reload();
+  }
+}>Logout</button>
+</div>
+  <h1 className="title-headline">NOT Instagram</h1>
   <SearchBar
   searchPosts={props.searchPosts}
   handleChange={props.handleChange}/>
+
   </header>
 
   <PostList postData={props.postData}  />

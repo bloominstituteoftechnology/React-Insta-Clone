@@ -4,7 +4,7 @@
 
 .posts-page-header {
   background-color: #222;
-  height: 150px;
+  height: 200px;
   padding: 20px;
   color: white;
 }
@@ -67,4 +67,24 @@ img {
   align-self: center;
   margin: auto;
   width: 2rem;
+}
+
+.user-dashboard {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.user-dashboard h2 {
+ display: flex;
+ font-size: 1rem;
+}
+
+.user-dashboard button {
+  display: flex;
+  justify-content: center;
+  align-self: baseline;
+  height: 2rem;
+  width: 30%;
+  font-size: .7rem;
 }
