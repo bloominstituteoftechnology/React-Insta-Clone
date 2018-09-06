@@ -1,30 +1,22 @@
-import React from 'react';
-class Login extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      // Sets the state's username and password to an empty string.
-      username: '',
-      password: ''
-    };
-  }
+import React, { Component } from 'react';
+
+class Login extends Component {
   // Assigns an anonmyous function to the variable login.
   login = event => {
-    // Stops the page refresh event from happening.
-    event.preventDefault();
+    localStorage.setItem('InstagramUsername', event.target.username.value);
     // Sets username into the web browser's storage.
     // ? event.target.username.value
-    localStorage.setItem('Password', event.target.username.value);
   };
 
   render() {
     return (
-      <div className="Login">
-        <form className="loginForm">
-          <input type="text" className="username" />
-          <input type="text" className="password" />
-        </form>
-      </div>
+      <form onSubmit={this.login}>
+        <h1>Username</h1>
+        <input name="username" type="text" />
+        <h1>Password</h1>
+        <input type="password" />
+        <button>Login</button>
+      </form>
     );
   }
 }
