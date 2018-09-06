@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
 import dummyData from './dummy-data.js';
 import PostsPage from './components/PostContainer/PostsPage.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import Authenticate from './components/Authentication/Authenticate';
 import PostPage from './components/PostContainer/PostsPage.js';
+import styled from 'styled-components';
 
+const AppText=styled.div`
+  text-align: center;
+`
 
 
 const App=Authenticate( 
@@ -28,9 +31,9 @@ const App=Authenticate(
   
   render() {
     return (
-      <div className="App">
+      <AppText>
     <PostPage />
-      </div>
+      </AppText>
     );
   }
 }

@@ -1,5 +1,17 @@
 import React from 'react';
 import './login.css';
+import styled from 'styled-components';
+
+const LoginForm=styled.form`
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 100px;
+`
+const LoginBtn=styled.button`
+    margin-top: 10px;
+    background-color:white;
+    color: lightgray;
+`
 
 class Login extends React.Component{
     constructor(props) {
@@ -22,11 +34,11 @@ logIn=()=>{
 }
 render () {
     return (
-        <form className='login' onSubmit={this.login}>
+        <LoginForm onSubmit={this.login}>
             <input type='text' name ='username' placeholder='enter a username' value={this.state.username} onChange={(e)=>this.handleUserNameChange(e)}/>
             <input type='password' name = 'password' placeholder='enter a password' value={this.state.password} onChange={(e)=>this.handlePassWordChange(e)}/>
-            <button className='btn'>Login</button>
-        </form>
+            <LoginBtn className='btn'>Login</LoginBtn>
+        </LoginForm>
     )
 }
 }

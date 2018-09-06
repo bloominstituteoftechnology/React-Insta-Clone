@@ -5,6 +5,7 @@ import AddCommentBar from './AddCommentBar.js';
 import moment from 'moment';
 import styled from 'styled-components';
 
+
 const Timestamp=styled.p`
     text-align: left;
     margin-left: 3%;
@@ -30,6 +31,10 @@ class CommentSection extends React.Component {
     componentDidMount(){
         const username=localStorage.getItem('username');
         this.setState({username:username});
+        let comments=localStorage.getItem('Comments');
+        if (comments) {
+            this.setState({comments:JSON.parse(comments)});
+        }
     }
 
     addNewComment=(index)=>{
@@ -38,7 +43,7 @@ class CommentSection extends React.Component {
             username: this.state.username,
             text: this.state.newComment
         });
-        this.setState({comments: commentsCopy,newComment:''});
+        this.setState({comments: commentsCopy,newComment:''},localStorage.setItem('Comments',JSON.stringify(commentsCopy)));
     }
     handleInputChange=(e)=>{
         this.setState({newComment:e.target.value});
