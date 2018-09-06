@@ -1,0 +1,19 @@
+.comment-section-container {
+    padding: 2px;
+    margin-left: 4px;
+  }
+  
+  .comment-text {
+    font-weight: 300;
+    font-size: 14px;
+  }
+  
+  .comment-username{
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  .comment-input{
+      border:none;
+      margin: 15px 0;
+  }
