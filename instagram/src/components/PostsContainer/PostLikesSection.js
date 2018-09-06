@@ -1,9 +1,26 @@
 import React from 'react';
+import styled, {css} from "styled-components";
  
+const FeedbackContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const FeedbackItems = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
+
+const LikePost = styled.div`
+    text-align: left;
+    font-weight: bold;
+    padding-left: 15px;
+`;
+
 function PostLikesSection(props) {
     return (
-        <div className="feedback-container">
-            <div className="feedback-items">
+        <FeedbackContainer>
+            <FeedbackItems>
                 <div className="left-icons">
                     <i className="far fa-heart"
                     onClick={props.incrementLike}
@@ -14,11 +31,11 @@ function PostLikesSection(props) {
                 <div className="right-icons">
                     <i className="far fa-bookmark"/>
                 </div>
-            </div>
-            <div className="like">
+            </FeedbackItems>
+            <LikePost>
                 <p>{props.likes} likes</p>
-            </div>
-        </div>
+            </LikePost>
+        </FeedbackContainer>
     );
 };
 

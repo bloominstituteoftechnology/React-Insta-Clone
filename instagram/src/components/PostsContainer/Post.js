@@ -2,7 +2,24 @@ import React from 'react';
 import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSectionContainer';
 import PostLikesSection from './PostLikesSection';
+import styled, {css} from "styled-components";
  
+
+const PostBorder = styled.div`
+    border: 1px solid #d3d3d3;
+    margin: 50px 0;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+`;
+const PostImg = styled.img`
+  width: 100%;
+`;
+
+const PostImgWrapper = styled.div`
+    height: 100%;
+    width: 100%;
+`;
+
+
 class Post extends React.Component {
     constructor(props) {
         super(props);
@@ -18,28 +35,27 @@ class Post extends React.Component {
 
     render() {
         return (
-            <div className="post-border">
-            <PostHeader 
-            username={this.props.post.username}
-            thumbnailUrl={this.props.post.thumbnailUrl}
-            />
-            <div className="post-img-wrapper">
-            <img 
-            src={this.props.post.imageUrl} 
-            alt="post-content" 
-            className="post-img" 
-            />
-            
-            </div>
-             <PostLikesSection 
-            likes={this.state.likes}
-            incrementLike={this.incrementLike}
-            />
+            <PostBorder>
+                <PostHeader 
+                username={this.props.post.username}
+                thumbnailUrl={this.props.post.thumbnailUrl}
+                />
+                <PostImgWrapper>
+                    <PostImg
+                    src={this.props.post.imageUrl} 
+                    alt="post-content"  
+                    />
+                
+                </PostImgWrapper>
+                <PostLikesSection 
+                likes={this.state.likes}
+                incrementLike={this.incrementLike}
+                />
 
-            <CommentSection
-            comments={this.props.post.comments}
-            />
-            </div>
+                <CommentSection
+                comments={this.props.post.comments}
+                />
+            </PostBorder>
         )
     }
 }

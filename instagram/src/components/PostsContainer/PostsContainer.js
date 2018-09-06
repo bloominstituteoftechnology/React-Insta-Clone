@@ -1,14 +1,19 @@
 import React from 'react';
 import Post from './Post';
-import './Posts.css';
+import styled, {css} from "styled-components";
  
+const PostContainer = styled.div`
+    width: 40%;
+    margin: 5px auto;
+`;
+
 function PostsContainer(props) {
     return (
-            <div className="posts-container">
+            <PostContainer>
                 {props.posts.filter(post => {
                 return post.username.includes(props.searchTerm);
                  }).map(p => <Post key={p.imageUrl} post={p} />)}
-            </div>
+            </PostContainer>
     );
 };
 

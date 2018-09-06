@@ -1,27 +1,12 @@
-.header-search-bar {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 10vh;
-  border-bottom: 1px solid #D3D3D3;
-  width: 100%;
-}
 .fa-instagram {
   margin-left: 10px;
   font-size: 3rem;
   padding-right: 20px;
 }
 
-.logo-text{
-  padding-right: 20%;
-}
 .vertical-line{
   border-right: 1px solid  #D3D3D3;
   height: 50px;
-}
-
-.search-bar-wrapper {
-  position: relative;
 }
 
 .fa-search {

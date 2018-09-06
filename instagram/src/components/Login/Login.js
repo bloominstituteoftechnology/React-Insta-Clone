@@ -2,6 +2,17 @@ import React from 'react';
 import { Form, Input, Button } from 'reactstrap';
 import logo from '../../assets/iglogo.png';
 import './Login.css';
+import styled, {css} from "styled-components";
+
+const LoginForm = styled.div`
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+`;
+
+
+
 
 class Login extends React.Component {
   constructor(props) {
@@ -34,7 +45,7 @@ class Login extends React.Component {
 
   render() {
     return (
-        <div className="login-form text-center">
+        <LoginForm>
           <Form>
           <img src = {logo} alt="logo" height="100"/>
 
@@ -61,7 +72,7 @@ class Login extends React.Component {
           Login
           </Button>
           </Form>
-        </div>
+        </LoginForm>
     );
   
   }

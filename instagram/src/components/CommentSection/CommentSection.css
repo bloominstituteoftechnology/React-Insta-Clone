@@ -1,50 +1,6 @@
-.feedback-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.feedback-items {
-  display: flex;
-  justify-content: space-between;
-}
-
 .far {
   font-size: 30px;
   font-weight: 100;
   margin: 5px 10px;
   -webkit-text-stroke: 1px white;
 }
-
-.like p {
-  text-align: left;
-  font-weight: bold;
-  padding-left: 15px;
-}
-
-.comment-text {
-  display: flex;
-  padding: 5px 0;
-  height: auto;
-}
-
-.user {
-  font-weight: bold;
-  padding-left: 15px;
-  width: auto;
-  text-align: left;
-}
-
-.comment {
-  text-align: left;
-  padding-left: 5px;
-}
-
-.comment-input {
-  border: 1px solid white;
-  border-top: 1px solid lightgrey;
-  width: 95%;
-  height: 50px;
-  text-align: left;
-  font-size: 1rem;
-  color: grey;
-} 
