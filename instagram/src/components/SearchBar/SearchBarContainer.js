@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import '../SearchBar/SearchBar.css'
 
 
 const Header = styled.header`

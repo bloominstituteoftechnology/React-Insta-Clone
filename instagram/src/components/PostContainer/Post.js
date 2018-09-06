@@ -4,7 +4,6 @@ import CommentSection from '../CommentSection/CommentSectionContainer';
 import LikeSection from './LikeSection';
 import PostHeader from './PostHeader';
 import styled from 'styled-components';
-import './Posts.css';
 
 const PostContainer = styled.div `
   width: 640px;
