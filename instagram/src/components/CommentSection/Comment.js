@@ -1,13 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import './Comment.css';
+import styled from 'styled-components';
+
+const CommentContent = styled.div`
+  display: flex;
+`;
+
+const UserNameBlock = styled.div`
+  margin-right: 1rem;
+  font-weight: bold;
+`;
+
+const UsersComment = styled.div`
+
+`;
 
 const Comment = props => {
   return (
-    <div className="comment-text">
-      <span className="comment">{props.comment.text}</span>{' '}
-      <span className="user">-{props.comment.username}</span>
-    </div>
+    <CommentContent>
+      <UserNameBlock>{props.comment.username}</UserNameBlock>
+      <UsersComment>{props.comment.text}</UsersComment>{' '}
+    </CommentContent>
   );
 };
 

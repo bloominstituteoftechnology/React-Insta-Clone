@@ -7,14 +7,21 @@ import styled from 'styled-components';
 import './Posts.css';
 
 const PostContainer = styled.div `
+  width: 640px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 5rem;
+  border: 1px solid lightgray;
+  border-radius: 5px;
 `;
 
 const PostHeaderContainer = styled.div`
   width: 640px;
+`;
+
+const PostImageWrapper = styled.div`
+
 `;
 
 class Post extends React.Component {
@@ -38,13 +45,13 @@ class Post extends React.Component {
             thumbnailUrl={this.props.post.thumbnailUrl}
           />
         </PostHeaderContainer>
-        <div className="post-image-wrapper">
+        <PostImageWrapper>
           <img
             alt="post thumbnail"
             className="post-image"
             src={this.props.post.imageUrl}
           />
-        </div>
+        </PostImageWrapper>
         <LikeSection
           incrementLike={this.incrementLike}
           likes={this.state.likes}

@@ -2,6 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
+import styled from 'styled-components';
+
+const CommentSectionContainer = styled.div`
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+`;
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -51,14 +59,14 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <div>
+      <CommentSectionContainer>
         {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
         <CommentInput
           comment={this.state.comment}
           submitComment={this.handleCommentSubmit}
           changeComment={this.commentHandler}
         />
-      </div>
+      </CommentSectionContainer>
     );
   }
 }
