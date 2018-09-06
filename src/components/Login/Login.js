@@ -7,7 +7,6 @@ class Login extends React.Component {
     this.state = {
       username: "",
       password: ""
-      
     }
   }
 
@@ -20,6 +19,7 @@ class Login extends React.Component {
   login = () => {
     let user = localStorage.getItem('user')
     if (!user) localStorage.setItem('user', this.state.username)
+    window.location.reload()
   }
 
   render() {

@@ -44,15 +44,3 @@ class App extends React.Component {
 }
 
 export default App
-
-// rcc
-// rccp
-
-// rsc
-// rscp
-
-// con
-// est
-
-// conc
-
