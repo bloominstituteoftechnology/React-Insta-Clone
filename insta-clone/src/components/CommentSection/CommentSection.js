@@ -41,7 +41,7 @@ class CommentSection extends React.Component {
     return (
       <div className="commentSection">
       {this.state.likes}
-      <img onClick={this.increaseLikes} className="heart" src="https://clip2art.com/images/love-clipart-2.png" />
+      <img onClick={this.increaseLikes} className="heart" alt="Heart Icon" src="https://clip2art.com/images/love-clipart-2.png" />
       {this.state.comments.map((comment, index) => (
         <Comment
           key={index}

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Login from '../Login/Login';
-import App from '../../App';
+
 
 const Authenticate = App =>
   class extends Component {
     constructor() {
       super();
       this.state = {
-        loggedIn: null
+        loggedIn: false
       };
     }
     componentDidMount = () => {
@@ -24,6 +24,6 @@ const Authenticate = App =>
       )
       }
     }
-  
+
 
   export default Authenticate;

@@ -8,10 +8,14 @@ const PostContainer = props => {
   return (
     <div className="post">
       <div className="postHeader">
-        <img src={props.thumbnailUrl} />
+        <img src={props.thumbnailUrl}
+          alt="Thumbnail"
+         />
         <h2>{props.username}</h2>
       </div>
-      <img src={props.imageUrl} />
+      <img src={props.imageUrl}
+        alt="Post"
+         />
       <CommentSection
         likes={props.likes}
         comments={props.comments}
