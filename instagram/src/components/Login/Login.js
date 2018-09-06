@@ -11,6 +11,7 @@ class Login extends React.Component {
             loginDivClass: 'show',
             loginSectionClass: ['show'],
             registerSectionClass: ['display-none'],
+            deleteSectionClass: ['display-none'],
             message: 'Error goes here.',
             messageClass: '',
             timeoutInterval: 2000,
@@ -81,6 +82,7 @@ class Login extends React.Component {
         return this.setState({
             loginSectionClass: ['hide', 'display-none'],
             registerSectionClass: ['show'],
+            deleteSectionClass: ['hide', 'display-none'],
         })
     }
 
@@ -92,6 +94,7 @@ class Login extends React.Component {
         return this.setState({
             loginSectionClass: ['show'],
             registerSectionClass: ['hide', 'display-none'],
+            deleteSectionClass: ['hide', 'display-none'],
         })
     }
 
@@ -171,6 +174,7 @@ class Login extends React.Component {
                         return this.setState({
                             loginSectionClass: ['show'],
                             registerSectionClass: ['hide', 'display-none'],
+                            deleteSectionClass: ['hide', 'display-none'],
                         });
                     }, this.state.timeoutInterval);
                 });
@@ -178,7 +182,24 @@ class Login extends React.Component {
         });
     } // handleNewUser()
 
+    handleDelete = (e) => {
+        e.preventDefault();
+        
+        return this.setState({
+            loginSectionClass: ['hide', 'display-none'],
+            registerSectionClass: ['hide', 'display-none'],
+            deleteSectionClass: ['show'],
+        });
+    }
+
     render() {
+        const usernames = [];
+        const usernamesAndPasswords = JSON.parse(localStorage.getItem('usernamesAndPasswords'));
+
+        for (let key in usernamesAndPasswords) {
+            usernames.push(key);
+        }
+
         return (
             <div className = { `login-div ${ this.state.loginDivClass }` }>
                 <a href='https://www.instagram.com'><img className = 'instagram-logo' src = { logo } alt='instagram logo' /></a>
@@ -192,6 +213,7 @@ class Login extends React.Component {
 
                         <button className = 'form-btn login-btn' type = 'submit' >Log In</button>
                         <button className = 'form-btn register-btn' onClick = { this.handleRegister } >Register</button>
+                        <button className = 'form-btn delete-btn' onClick = { this.handleDelete }>Delete Account</button>
                     </form>
                 </section>
 
@@ -205,6 +227,15 @@ class Login extends React.Component {
                         <button className = 'form-btn login-btn' onClick = { this.handleBackToLogIn }>Back to Log in</button>
                         <button className = 'form-btn register-btn' type = 'submit' >Register New User</button>
                     </form>
+                </section>
+
+                <section className = { `delete-section ${ this.state.deleteSectionClass.join(' ') }` }>
+                    <h3>This is the delete section. It is a work in progress.</h3>
+
+                    <ul>{ usernames.map(user => <li>{ user }</li>) }</ul>
+
+                    <button className = 'form-btn login-btn' onClick = { this.handleBackToLogIn }>Back to Log in</button>
+                    <button className = 'form-btn register-btn' onClick = { this.handleRegister } >Register</button>
                 </section>
 
                 <p className = { this.state.messageClass }>{ this.state.message }</p>

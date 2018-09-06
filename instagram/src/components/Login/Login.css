@@ -20,20 +20,20 @@
     margin: 5px;
 }
 
-.login-div .login-form .form-btn {
+.login-div .form-btn {
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px;
     margin: 20px;
 }
 
-.login-div .login-form .login-btn:hover {
+.login-div .login-btn:hover {
     background: green;
     color: white;
     cursor: pointer;
 }
 
-.login-div .login-form .register-btn:hover {
+.login-div .register-btn:hover {
     background: blue;
     color: white;
     cursor: pointer;
@@ -41,6 +41,10 @@
 
 .login-div p, .register-section {
     opacity: 0;
+}
+
+.delete-section ul {
+    list-style: none;
 }
 
 .display-none {
