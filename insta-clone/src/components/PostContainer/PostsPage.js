@@ -30,11 +30,11 @@ class PostsPage extends Component {
 render() {
   return (
     <div>
-<header className="posts-page-header">
+
 <HeaderContainer
   searchPosts={this.searchPosts}
   handleChange={this.handleChange}/>
-  </header>
+
 
   <PostList postData={this.state.postData}  />
     </div>

@@ -1,13 +1,21 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import PostContainer from "./PostContainer";
+import styled from 'styled-components'
 
 //this component will receive data from the state and feed it into
 //Post container
 
 const PostList = props => {
+  const PostsStyling = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 1rem auto;
+    max-width: 800px;
+  `;
   return (
-    <div className="allPosts">
+    <PostsStyling>
       {props.postData.map((post, index) => (
         <PostContainer
         key={index}
@@ -20,7 +28,7 @@ const PostList = props => {
          />
       )
     )}
-    </div>
+    </PostsStyling>
   );
 };
 

@@ -4,12 +4,15 @@ import styled from 'styled-components';
 
 const HeaderContainer = props => {
 const HeaderWrapper = styled.div`
-  background: red;
+  background: #222;
+  height: 200px;
+  padding: 20px;
+  color: white;
 `;
 
     return (
       <HeaderWrapper>
-      <div className="header">
+      <header className="header">
       <div className="user-dashboard">
       <h2>Welcome, {localStorage.username}!</h2>
       <button
@@ -25,7 +28,7 @@ const HeaderWrapper = styled.div`
         searchPosts={props.searchPosts}
         handleChange={props.handleChange}/>
         </div>
-        </div>
+        </header>
         </HeaderWrapper>
     )
 
