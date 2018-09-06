@@ -1,8 +1,8 @@
-.App {
+/* .App {
     margin: auto;
-  }
+} */
 
-.posts-container {
+/* .posts-container {
     margin: 100px auto 0 auto;
     max-width: 600px;
 }
@@ -12,9 +12,9 @@
     border: 1px solid lightgray;
     border-radius: 3px;
     margin-bottom: 50px;
-}
+} */
 
-.post-head {
+/* .post-head {
     display: flex;
     align-items: center;
     width: 95%;
@@ -35,4 +35,4 @@
 .post-footer {
     width: 95%;
     margin: auto;
-}
+} */

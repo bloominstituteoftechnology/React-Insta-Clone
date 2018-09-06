@@ -1,16 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './postcontainer.css';
+// import './postcontainer.css';
+import Styled from 'styled-components';
 
 import Post from './post';
 import CommentSection from '../CommentSection/commentsection';
 
+const PostsContainer = Styled.div`
+    margin: 100px auto 0 auto;
+    max-width: 600px;
+`;
+const APostContainer = Styled.div`
+    background-color: #ffffff;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    margin-bottom: 50px;
+`;
+
 function PostContainer(props) {
     return (
-        <div className='posts-container'>
+        <PostsContainer>
             {props.posts.map( (postData, index) => {
                 return (
-                    <div className='post-container' key={postData.timestamp + '-' + postData.username} >
+                    <APostContainer key={postData.timestamp + '-' + postData.username} >
                         <Post 
                             postData={postData} 
                             handleLikes={props.handleLikes} 
@@ -20,10 +32,10 @@ function PostContainer(props) {
                             timestamp={postData.timestamp} 
                             comments={postData.comments} 
                         />
-                    </div>
+                    </APostContainer>
                 );
             })}
-        </div>
+        </PostsContainer>
     );
 }
 

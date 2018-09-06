@@ -1,13 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './commentsection.css';
+// import './commentsection.css';
+import Styled from 'styled-components';
+
+const AComment = Styled.div`
+    margin: 0 auto 5px auto;
+`;
+const CommentUser = Styled.span`
+    font-weight: bold;
+`;
 
 function Comment(props) {
     return (
-        <div className='comment'>
-            <span className='comment-user'>{`${props.comment.username} `}</span>
+        <AComment>
+            <CommentUser>{`${props.comment.username} `}</CommentUser>
             <span>{props.comment.text}</span>
-        </div>
+        </AComment>
     );
 }
 

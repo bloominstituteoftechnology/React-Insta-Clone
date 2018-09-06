@@ -1,5 +1,6 @@
 import React from 'react';
-import './postcontainer.css';
+// import './postcontainer.css';
+import Styled from 'styled-components';
 
 import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBar/searchbar';
@@ -7,6 +8,10 @@ import PostContainer from './postcontainer';
 
 import heart from '../../assets/heart.png';
 import heartFilled from '../../assets/heart-filled.png';
+
+const AppContainer = Styled.div`
+    margin: auto;
+`;
 
 class PostPage extends React.Component {
     constructor(props) {
@@ -62,7 +67,7 @@ class PostPage extends React.Component {
 
     render() {
         return (
-            <div className="App">
+            <AppContainer>
                 <SearchBar 
                     searchInput={this.state.searchInput} 
                     handleSearchInput={this.handleInput} 
@@ -72,7 +77,7 @@ class PostPage extends React.Component {
                     posts={this.state.instaData} 
                     handleLikes={this.handleLikes} 
                 />
-            </div>
+            </AppContainer>
         );
     }
 } 
