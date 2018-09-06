@@ -1,0 +1,21 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  width: 100%;
+  background-color: #fafafa;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: none;
+  border: 0px;
+  cursor: pointer;
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
