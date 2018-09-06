@@ -2,34 +2,25 @@ import React from "react";
 import Login from "../Login/Login";
 import PostsPage from "../PostsContainer/PostsPage";
 
-const data = [
-  { username: "billy", login: "bob" },
-  { username: "fort", login: "nite" }
-];
-
 const Authenticate = App =>
   class extends React.Component {
     constructor() {
       super();
       this.state = {
-        login: false,
-        Users: data
+        loggedIn: false
       };
     }
-    render() {
-      const username = Object.keys(localStorage);
-      const login = Object.values(localStorage);
-      const userList = this.state.Users.map(item => item.username);
-      const logs = this.state.Users.map(item => item.login);
-      const newState = { ...this.state };
-
-      if (userList.includes(username[0]) && logs.includes(login[1])) {
-        newState.login = true;
-      }
-      if (newState.login === true) {
-        return <PostsPage />;
+    componentDidMount() {
+      if (localStorage.getItem("user")) {
+        this.setState({ loggedIn: false });
       } else {
-        localStorage.clear();
+        this.setState({ loggedIn: true });
+      }
+    }
+    render() {
+      if (this.state.loggedIn) {
+        return <App />;
+      } else {
         return <Login />;
       }
     }

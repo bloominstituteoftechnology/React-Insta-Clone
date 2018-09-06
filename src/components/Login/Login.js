@@ -5,29 +5,34 @@ class Login extends React.Component {
     super(props);
     this.state = {
       username: "",
-      login: ""
+      password: ""
     };
   }
+
   loginHandler = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
+
   login = event => {
-    localStorage.setItem(this.state.name, this.state.login);
+    const user = this.state.username;
+    localStorage.setItem("user", user);
+    window.location.reload();
   };
+
   render() {
     return (
       <form>
         <input
           placeholder="Username"
-          value={this.state.name}
+          value={this.state.username}
           onChange={this.loginHandler}
           name="username"
         />
         <input
           placeholder="Password"
-          value={this.state.login}
+          value={this.state.password}
           onChange={this.loginHandler}
-          name="login"
+          name="password"
         />
         <button onClick={this.login}>Login</button>
       </form>
