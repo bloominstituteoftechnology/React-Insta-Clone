@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 // import './Login.css';
 
 class Login extends Component {
@@ -10,11 +11,11 @@ class Login extends Component {
     };
   }
 
-  handleInputChange = event => {
-    this.setState({ [event.target.name]: event.target.value });
+  handleInputChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleLoginSubmit = event => {
+  handleLoginSubmit = e => {
     const user = this.state.username;
     localStorage.setItem('user', user);
     window.location.reload();
@@ -22,17 +23,20 @@ class Login extends Component {
 
   render() {
     return (
-      <form>
+      <Form className="login-form">
         <h3>Welcome to React Insta Clone</h3>
         <div>Please Login</div>
-          <input
+        <FormGroup>
+          <Input
             type="text"
             placeholder="User Name"
             name="username"
             value={this.state.username}
             onChange={this.handleInputChange}
           />
-          <input
+        </FormGroup>
+        <FormGroup>
+          <Input
             type="password"
             placeholder="Password"
             name="password"
@@ -40,10 +44,11 @@ class Login extends Component {
             onChange={this.handleInputChange}
           />
           <br />
-          <button onClick={this.handleLoginSubmit}>
+          <Button color="success" size="large" onClick={this.handleLoginSubmit}>
             Log In
-          </button>
-      </form>
+          </Button>
+        </FormGroup>
+      </Form>
     );
   }
 }

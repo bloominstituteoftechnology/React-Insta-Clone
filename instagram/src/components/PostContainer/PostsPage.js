@@ -16,6 +16,7 @@ class PostsPage extends Component {
   }
 
   searchPostsHandler = e => {
+    // eslint-disable-next-line
     const posts = this.state.posts.filter(p => {
       if (p.username.includes(e.target.value)) {
         return p;
@@ -23,10 +24,9 @@ class PostsPage extends Component {
     });
     this.setState({ filteredPosts: posts });
   };
-  
   render() {
     return (
-      <div className="postsPageContainer">
+      <div className="App">
         <SearchBar
           searchTerm={this.state.searchTerm}
           searchPosts={this.searchPostsHandler}

@@ -10,19 +10,15 @@ const Authenticate = App =>
       };
     }
     componentDidMount() {
-        if (!localStorage.getItem('user')) {
-            this.setState({ loggedIn: false });
-        } else {
-            this.setState({ loggedIn: true });
-        }
+      if (!localStorage.getItem('user')) {
+        this.setState({ loggedIn: false });
+      } else {
+        this.setState({ loggedIn: true });
+      }
     }
     render() {
-      if (this.state.loggedIn) {
-          return <App />
-      }
-      else {
-        return <LoginPage />
-      }
+      if (this.state.loggedIn) return <App />;
+      return <LoginPage />;
     }
   };
 

@@ -4,8 +4,8 @@ import Post from './Post';
 
 const PostsContainer = props => {
   return (
-    <div> 
-      {props.posts.map(post => { return (<Post post={post} key={post.timestamp}/>)})}
+    <div className="posts-container-wrapper">
+      {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
     </div>
   );
 };
