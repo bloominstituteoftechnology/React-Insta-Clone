@@ -4,7 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faKey } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import './SearchBar.css';
+import Wrapper from'./SBwapper';
+// import { wrap } from 'module';
+// import styled from 'styled-components';
 
 class SearchBar extends Component {
   constructor() {
@@ -26,7 +28,9 @@ class SearchBar extends Component {
 
   render() {
     return (
+    <Wrapper>
       <div className="search-bar-container">
+     
         <div className="flex-start">
         <div className="logo-container">
           <img src={logo} alt="Instagram Icon" width="30"/>
@@ -40,6 +44,8 @@ class SearchBar extends Component {
            <FontAwesomeIcon className="icon" icon={faUser} />
          </div>
       </div>
+    </Wrapper>
+  
     )
   }
 }

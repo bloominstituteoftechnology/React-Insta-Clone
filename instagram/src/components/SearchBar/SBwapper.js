@@ -1,3 +1,8 @@
+import styled from 'styled-components';
+
+
+
+export default Wrapper = styled.div`
 .search-bar-container {
   display: flex;
   align-items: center;
@@ -57,4 +62,4 @@
 
 .icon {
   margin: 0 0 0 20px;
-}
+}`
