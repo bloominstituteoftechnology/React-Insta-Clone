@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
+import Styled from './SearchBarStyles';
 
 class SearchBar extends React.Component {
 	constructor(props) {
@@ -44,14 +45,14 @@ class SearchBar extends React.Component {
 
 	render() {
 		return (
-			<nav className="SearchBar">
-				<div className="container">
-					<div className="logo">
-						<a href="/" id="glyph" className="sprite" />
-						<a href="/" id="logotype" className="sprite" />
-					</div>
+			<Styled.Header>
+				<Styled.Container>
+					<Styled.LogoHeader>
+						{/* <LogoImageSmall as="a" href="/" /> */}
+						<Styled.LogoImage as="a" href="/" />
+					</Styled.LogoHeader>
 
-					<div className="search-box">
+					<Styled.SearchBox>
 						<input
 							type="text"
 							className="search-input"
@@ -76,9 +77,9 @@ class SearchBar extends React.Component {
 								</span>
 							</button>
 						)}
-					</div>
+					</Styled.SearchBox>
 
-					<div className="navigation">
+					<nav className="navigation">
 						<a
 							href="/"
 							id="explore"
@@ -94,9 +95,9 @@ class SearchBar extends React.Component {
 							onClick={this.logout}
 							title="Log Out"
 						/>
-					</div>
-				</div>
-			</nav>
+					</nav>
+				</Styled.Container>
+			</Styled.Header>
 		);
 	}
 }

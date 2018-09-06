@@ -1,6 +1,6 @@
 import React from 'react';
 import Authenticate from './HOC/Authentication/Authenticate.js';
-import PostsPage from './components/PostContainer/PostsPage';
+import PostsPage from './components/PostsPage/PostsPage.js';
 import './App.css';
 
 const App = () => {
