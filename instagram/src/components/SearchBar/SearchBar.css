@@ -1,0 +1,35 @@
+.fa-instagram {
+  margin-left: 10px;
+  font-size: 3rem;
+  padding-right: 20px;
+}
+
+.vertical-line{
+  border-right: 1px solid  #D3D3D3;
+  height: 50px;
+}
+
+.fa-search {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  font-size: 1.1rem;
+  color: lightgrey;
+  z-index: 1;
+}
+
+.search-bar {
+  height: 35px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: grey;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+.far {
+  margin: 0 25px;
+  font-size: 3rem;
+  font-weight: 100;
+  -webkit-text-stroke: 3px white;
+} 
