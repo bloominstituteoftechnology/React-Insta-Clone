@@ -1,0 +1,43 @@
+.login {
+    max-width: 640px;
+    width: 100%;
+    margin: 10% auto;
+    /* display: flex;
+    align-items: center; */
+}
+
+.login-title {
+    padding-left: 2%;
+}
+
+.login-register {
+    font-size: 16px;
+    padding: 2%;
+    color: #4b4a4a;
+
+}
+
+.register {
+    color: #1495fa;
+    cursor: pointer;
+}
+
+.login-reject {
+    color: red;
+    padding: 2%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.create-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 1%;
+}
+
+.login img {
+    margin-left: 19%;
+}

@@ -1,0 +1,17 @@
+.post-banner img {
+    width: 100%;
+}
+
+.post-actions-img {
+    display: flex;
+}
+
+.post-actions-img img {
+    margin: 5%;
+    cursor: pointer;
+}
+
+.likes {
+    width: 100%;
+    
+}

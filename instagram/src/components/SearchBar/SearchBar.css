@@ -1,0 +1,29 @@
+
+.logo img {
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    margin-right: 10%;
+}
+
+.icons {
+    display: flex;
+    margin-left: 10%;
+}
+
+.search-icons {
+    width: 100%;
+    display: flex;
+}
+
+.search-icons img {
+    margin-right: 5%;
+}
+
+.logout-btn {
+    width: 10%;
+    text-align: center;
+    margin-right: 5%;
+}
