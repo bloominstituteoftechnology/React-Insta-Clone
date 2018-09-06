@@ -16,9 +16,7 @@ class PostsPage extends Component {
         event.preventDefault();
         let newPosts = [...this.state.posts];
         newPosts = newPosts.filter(post => {
-          if (post.username === this.state.search) {
-            return post;
-          }
+          return post.username === this.state.search; 
         });
         this.setState({ posts: newPosts });
     };

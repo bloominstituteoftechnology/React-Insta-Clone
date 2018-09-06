@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Authenticate from './components/Authentication/Authenticate';  
 import PostsPage from './components/PostContainer/PostsPage';
-import Login from './components/Login/Login';
+// import Login from './components/Login/Login';
 
 class App extends Component {
   constructor (){
@@ -14,57 +14,36 @@ class App extends Component {
     };
   } 
 
-  handleInput = event => {
-    event.preventDefault();
-    this.setState({ [event.target.classList]: event.target.value });
-  };
+  // handleInput = event => {
+  //   event.preventDefault();
+  //   console.log("hello");
+  //   this.setState({ [event.target.classList]: event.target.value });
+  // };
 
-  login = event => {
-    // this.setState(username: )
-    localStorage.setItem('username', this.state.username);
-    localStorage.setItem('password', this.state.password);
-
-
-  };
+  // login = event => {
+  //   // this.setState(username: )
+  //   localStorage.setItem('username', this.state.username);
+  //   localStorage.setItem('password', this.state.password);
+  //   console.log("hi");
+  //   event.preventDefault(); 
+  // };
 
   render(){
-    const AuthenticateApp = Authenticate(App);
+    // const AuthenticateApp = Authenticate(App);
     return(
       <div>
-
-        <PostsPage />
-        <Login  login={this.login} 
+        {/* <AuthenticateApp /> */}
+        {/* <Login  login={this.login} 
                 handleInput={this.handleInput}
                 username={this.state.username}
-                password={this.state.password}/>
-
+                password={this.state.password}/> */}
+        <PostsPage />
       </div>
-      
     );
-
   }
 
-  
-
-  // componentDidMount(){
-
-  //   this.setState({posts:dummyData});
-  // }
-
-  // render() {
-  //   // console.log(this.state.posts);
-  //   return (
-  //     <div className="App">
-  //       <SearchBar search={this.search} handleChange={this.handleChange} />
-  //       <PostContainer 
-  //         posts={this.state.posts}
-  //         addNewComment={this.addNewComment}
-  //         handleInputComment={this.handleInputComment}/>
-  //     </div>
-  //   );
-  // }
 }
 
-export default App;
+export default Authenticate(App);
 
  

@@ -1,28 +1,31 @@
-// import React from 'react';
-// // import PropTypes from 'prop-types';
-// import './SearchBar.css';
-
-
-
-// const SearchBar = props => {
-//     return(
-//         <div className="header">
-//             <img className="instagram-img" src="" alt="instagram-logo"/>
-//         </div>
-//     );
-
-// }
-
-// export default SearchBar;
-
-import React from "react";
-// import IGLogo from "";
 import "./SearchBar.css";
+import React from 'react';
+import  styled from 'styled-components';
+
+const SearchBarWrapper = styled.header`
+    border-bottom: 1px solid #3333;
+    height: 80px;
+    line-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+`;
+
+// const ImageWrapper = styled.div`
+//     height: 50px;
+// `;
+
+// const LogoImage = styled.img`
+//     height: 100%; 
+//     alt: "instagram logo"
+//     src: "https://rawgit.com/LambdaSchool/React-Insta-Clone/4079cf6fb6d11bd3ad7a422cdec35e0aab4e2bfe/instagram/src/assets/iglogo.png"
+// `;
+
 
 const SearchBar = props => {
   return (
-    <div className="search-bar-wrapper">
-      <div className="image-wrapper">
+    <SearchBarWrapper>
+      <div>
         <img alt="instagram logo" src="https://rawgit.com/LambdaSchool/React-Insta-Clone/4079cf6fb6d11bd3ad7a422cdec35e0aab4e2bfe/instagram/src/assets/iglogo.png" className="logo-image" />
       </div>
       <form onSubmit={props.search} onChange={props.handleChange}>
@@ -39,8 +42,8 @@ const SearchBar = props => {
           <i className="fa fa-user-circle" />
         </div>
       </div>
-    </div>
+    </SearchBarWrapper>
   );
-};
+}
 
 export default SearchBar;
