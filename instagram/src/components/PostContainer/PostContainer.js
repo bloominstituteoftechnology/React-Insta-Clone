@@ -1,9 +1,15 @@
 import React from "react";
 import PostContent from "../PostContent/PostContent";
+import styled from 'styled-components';
+
+const Pstctnr = styled.div`
+  width: 80%;
+  margin: 0 auto;
+`;
 
 const PostContainer = ({ adcmt, icrmtv, list }) => {
   return (
-    <div className="post-container">
+    <Pstctnr>
       {list.map((item, i) => {
         return (
           <PostContent
@@ -20,7 +26,7 @@ const PostContainer = ({ adcmt, icrmtv, list }) => {
           />
         );
       })}
-    </div>
+    </Pstctnr>
   );
 };
 

@@ -1,5 +1,116 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
+import styled from 'styled-components';
+
+const Pstcnttctnr = styled.div`
+  width: 80%;
+  margin: 0 auto 25px auto;
+`;
+
+const Pfimg = styled.div`
+  width: 45px;
+  height: 40px;
+  margin: 10px 0px 10px 10px;
+  display: inline-block;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+`;
+
+const Unt = styled.span`
+  position: relative;
+  top: -13px;
+  left: 20px;
+  margin: 5px;
+`;
+
+const Pstimg = styled.div`
+  width: 100%;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+const Itractns = styled.div`
+  width: 80px;
+  height: 50px;
+  margin-left: 10px;
+  display: flex;
+`;
+
+const Lkbtn = styled.button`
+  width: 80px;
+  height: 50px;
+  margin: 10px 0px;
+  background-color: rgba(255,255,255,1);
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+const Lkbtnctnr = styled.div`
+  width: 80px;
+  height: 45px;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+const Cmtbtn = styled.button`
+  width: 80px;
+  height: 50px;
+  margin: 10px 0px;
+  background-color: rgba(255,255,255,1);
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+const Cmtbtnctnr = styled.div`
+  width: 80px;
+  height: 45px;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+const Lkct = styled.h4`
+  margin-top: 15px;
+  margin-left: 20px;
+  font-size: 1.6rem;
+`;
+
+const Cmtfrm = styled.form`
+  margin-top: 15px
+`;
+
+const Cmtfrmipt = styled.input`
+  width: 60%;
+  padding: 5px;
+  border-radius: 5px;
+
+  &:focus {
+    outline: none;
+  }
+`;
 
 const PostContent = props => {
   const click = (event) => {
@@ -11,44 +122,44 @@ const PostContent = props => {
     event.target.firstChild.value = "";
 }
   return (
-    <div className="postcontent-container">
-      <div className="pfimg">
+    <Pstcnttctnr>
+      <Pfimg>
         <img src={props.thumbnailUrl} alt="user" />
-      </div>
-      <span className="unt">
+      </Pfimg>
+      <Unt>
         <strong>{props.username}</strong>
-      </span>
-      <div className="pstimg">
+      </Unt>
+      <Pstimg>
         <img src={props.imageUrl} alt="image" />
-      </div>
-      <div className="itractns">
-        <button className="lkbtn" onClick={click}
+      </Pstimg>
+      <Itractns>
+        <Lkbtn onClick={click}
           value={props.ixct}>
-          <div className="lkbtn-container">
+          <Lkbtnctnr>
             <img
               src="https://cdn2.iconfinder.com/data/icons/instagram-ui/48/jee-68-512.png"
               alt="like"
             />
-            </div>
-          </button>
-          <button className="cmtbtn">
-          <div className="cmtbtn-container">
+            </Lkbtnctnr>
+          </Lkbtn>
+          <Cmtbtn>
+          <Cmtbtnctnr>
             <img
               src="https://cdn2.iconfinder.com/data/icons/instagram-ui/48/jee-69-512.png"
               alt="comment"
             />
-            </div>
-           </button>
-      </div>
-      <h4 className="lkct">{props.likes} likes</h4>
+            </Cmtbtnctnr>
+           </Cmtbtn>
+      </Itractns>
+      <Lkct>{props.likes} likes</Lkct>
       <CommentSection comments={props.comments} />
       <div className="tmstp">
         <span>{props.timestamp}</span>
       </div>
-      <form className="frm" onSubmit={commentSubmit} id={props.ixct}>
-        <input className="frm-ipt" placeholder="Add a comment..." />
-      </form>
-    </div>
+      <Cmtfrm onSubmit={commentSubmit} id={props.ixct}>
+        <Cmtfrmipt placeholder="Add a comment..." />
+      </Cmtfrm>
+    </Pstcnttctnr>
   );
 };
 
