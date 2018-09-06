@@ -11,32 +11,6 @@
   padding: 10px;
 }
 
-.post-header-wrapper .post-title {
-  margin-top: 10px;
-  font-weight: 300;
-  font-size: 1.6rem;
-  color: #444;
-  font-family: "Roboto", sans-serif;
-}
-
-.post-header-wrapper img {
-  height: auto;
-  width: auto;
-  max-width: 50px;
-  max-height: 50px;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-
-
-.post-header-wrapper .username {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-}
-
 .post-wrapper img {
   height: auto;
   width: auto;

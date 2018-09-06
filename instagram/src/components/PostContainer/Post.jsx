@@ -9,6 +9,7 @@ import {
   CardTitle,
   CardSubtitle
 } from "reactstrap";
+import PostContainerWrapper from "../Styles/Reusables/PostContainerWrapper";
 import CommentSection from "../CommentSection/CommentSection";
 
 class Post extends React.Component {
@@ -41,10 +42,10 @@ class Post extends React.Component {
       <div className="post-wrapper">
         <Card>
           <CardBody>
-            <div className="post-header-wrapper">
+            <PostContainerWrapper>
               <img src={this.props.post.thumbnailUrl} alt={"Profile thumb."} />
               <CardTitle className="post-title">{this.props.post.username}</CardTitle>
-            </div>
+            </PostContainerWrapper>
           </CardBody>
           <img
             width="100%"

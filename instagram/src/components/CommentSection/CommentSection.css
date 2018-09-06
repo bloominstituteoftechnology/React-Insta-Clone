@@ -6,29 +6,3 @@
   font-weight: bold;
   margin-right: 5px;
 }
-
-.comment-wrapper input {
-  width: 100%;
-  padding: 15px 0;
-  border-top: 1px solid #ccc;
-  border-bottom: none;
-  border-left: 0;
-  border-right: 0;
-  border-radius: 0;
-}
-
-.comment-wrapper input:focus {
-  outline: none;
-}
-
-.comment-wrapper input::placeholder {
-  color: #ccc;
-  text-align: left;
-  font-size: 14px;
-}
-
-.timestamp {
-  color: #ccc;
-  font-size: 12px;
-  margin: 15px 0;
-}
