@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import dummyData from "../../dummy-data";
 import PostContainer from "./PostContainer";
+import ReactTooltip from 'react-tooltip';
 import "./PostsPage.css";
 import SearchBar from "../SearchBar/SearchBar";
 
@@ -67,7 +68,8 @@ class PostsPage extends Component {
             <div className="social-icons">
               <i className="far fa-compass" />
               <i className="far fa-heart" />
-              <i onClick={this.logout}className="far fa-user" />
+              <ReactTooltip />
+              <i data-tip="Logout" onClick={this.logout}className="far fa-user" />
             </div>
           </header>
             <div className="postcontainer-wrapper">
