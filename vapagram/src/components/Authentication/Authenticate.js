@@ -1,6 +1,6 @@
 // ? Could we go over why we are importing React, { Component } instead
 // of just React here?
-import React, { Component } from 'react';
+import React from 'react';
 import Login from '../Login/Login';
 
 // Class component that sets the state for loggedIn to false
