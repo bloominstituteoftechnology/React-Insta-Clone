@@ -3,11 +3,11 @@
   flex-direction: column;
   width: 500px;
   height: 300px;
-  margin: 20px auto;
+  margin: 50px auto;
 
   border: 1px solid black;
 }
 
 input {
-  width: 60%;
+  width: 80%;
 }

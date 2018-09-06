@@ -1,7 +1,17 @@
 import React from "react";
 import "./CommentSection.css";
 import Comment from "../Comment/Comment.js";
+import styled from "styled-components";
 
+//Define and style components
+
+const CommentBox = styled.input`
+  width: 100%;
+  height: 35px;
+  border: none;
+  font-size: 14px;
+  border-top: 1px solid lightgray;
+`;
 class CommentSection extends React.Component {
   constructor() {
     super();
@@ -52,13 +62,12 @@ class CommentSection extends React.Component {
             this.addNewComment(event, 0);
           }}
         >
-          <input
+          <CommentBox
             type="text"
-            placeholder="add a comment"
+            placeholder="Add a comment..."
             value={this.state.inputText}
             onChange={this.handleChange.bind(this)}
           />
-          <button>Submit</button>
         </form>
       </div>
     );

@@ -1,5 +1,35 @@
 import React from "react";
 import "./SearchBar.css";
+import styled from "styled-components";
+
+//Declare search bar components styling
+const Header = styled.header`
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 2px solid lightgray;
+`;
+
+const LogoImg = styled.div`
+  background-size: 200px;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
+`;
+
+const SearchButton = styled.button`
+  display: inline;
+  width: 50px;
+  height: 30px;
+  color: lightgray;
+
+  box-shadow: gray;
+
+  border: 1px solid lightgray;
+`;
 
 class SearchBar extends React.Component {
   constructor() {
@@ -9,7 +39,10 @@ class SearchBar extends React.Component {
 
   handleChange(event) {
     //set value of comment input to Comment state obj
-    this.setState({ inputText: event.target.value });
+    this.setState(
+      { inputText: event.target.value },
+      this.props.searchPosts(event, this.state.inputText)
+    );
 
     //Clear comment input box
     // this.setState({ value: "" });
@@ -17,14 +50,11 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="search-bar-header">
-        <div className="logo">
-          {/* <img src="./instagram-log.png" alt="instagram logo" /> */}
-        </div>
+      <Header>
+        <LogoImg className="logo" />
         <form
           onSubmit={event => {
             this.props.searchPosts(event, this.state.inputText);
-            console.log(this.state);
           }}
         >
           <input
@@ -34,9 +64,13 @@ class SearchBar extends React.Component {
             placeholder="Search"
             className="search-bar"
           />
+          <SearchButton>
+            <i class="fas fa-search" />
+          </SearchButton>
         </form>
         <div className="account-stuff" />
-      </div>
+        <i class="fal fa-sign-out" />
+      </Header>
     );
   }
 }

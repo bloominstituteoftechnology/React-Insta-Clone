@@ -14,8 +14,11 @@ class PostsPage extends React.Component {
   }
 
   searchPosts(event, value) {
-    event.preventDefault();
-    let posts = this.state.posts.filter(post => post.username === value);
+    // event.preventDefault();
+    let posts = this.state.posts.filter(post => post.username.includes(value));
+    console.log(event);
+    console.log(value);
+    console.log(posts);
     this.setState({ posts: posts }, console.log(this.state));
   }
   render() {

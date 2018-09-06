@@ -1,31 +1,8 @@
-.post {
-  /* border: 1px solid blue; */
-  margin: 20px 0;
-}
-
-.post .post-image {
-  width: 615px;
-  height: 450px;
-
-  /* border: 2px solid yellow; */
-}
-
-.post .username-container {
+.username-container {
   width: 250px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 
   /* border: 1px solid red; */
-}
-
-.post .username {
-  font-size: 16px;
-  margin-left: 10px;
-  font-weight: bold;
-}
-.post .username-thumbnail {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
 }

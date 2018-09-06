@@ -1,24 +1,24 @@
 .search-bar-header {
-  width: 100%;
+  /* width: 100%;
   height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  border-bottom: 2px solid lightgray;
+  border-bottom: 2px solid lightgray; */
 }
 
 .logo {
   background-image: url("./instagram-logo.png");
-  background-size: 200px;
+  /* background-size: 200px;
   background-repeat: no-repeat;
   width: 200px;
-  height: 100px;
+  height: 100px; */
 }
 
 .search-bar {
   width: 150px;
-  height: 20px;
+  height: 30px;
   text-align: center;
 }
 

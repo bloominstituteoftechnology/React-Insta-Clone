@@ -1,6 +1,11 @@
 import React from "react";
 import "./Login.css";
 import { Alert, Button } from "reactstrap";
+import SearchBar from "../SearchBar/SearchBar";
+
+//Define and style components
+
+//const LogoImg = SearchBar.LogoImg;
 
 class LoginPage extends React.Component {
   constructor() {
@@ -28,7 +33,8 @@ class LoginPage extends React.Component {
         }}
         className="login-form"
       >
-        <h2>Please log in:</h2>
+        {/* <LogoImg /> */}
+        <h2>Instagram Clone</h2>
         <input
           value={this.state.inputText}
           type="text"
