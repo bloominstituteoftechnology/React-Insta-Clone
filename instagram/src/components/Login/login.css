@@ -1,0 +1,9 @@
+.login-page {
+  max-width: 640px;
+  width: 100%;
+  margin: 200px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
