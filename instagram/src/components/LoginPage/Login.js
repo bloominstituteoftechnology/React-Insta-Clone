@@ -1,4 +1,6 @@
 import React from "react";
+import "./Login.css";
+import { Alert, Button } from "reactstrap";
 
 class LoginPage extends React.Component {
   constructor() {
@@ -9,8 +11,8 @@ class LoginPage extends React.Component {
   login(event) {
     event.preventDefault();
     let username = this.state.inputText;
-    localStorage.setItem("username", username);
-    //location.reload();
+    localStorage.setItem("user", username);
+    window.location.reload();
   }
 
   handleChange(event) {
@@ -26,6 +28,7 @@ class LoginPage extends React.Component {
         }}
         className="login-form"
       >
+        <h2>Please log in:</h2>
         <input
           value={this.state.inputText}
           type="text"
@@ -34,8 +37,8 @@ class LoginPage extends React.Component {
             this.handleChange(event);
           }}
         />
-        <input type="text" placeholder="password" />
-        <button>Login</button>
+        <input name="password" type="password" placeholder="password" />
+        <Button color="primary">Login</Button>
       </form>
     );
   }

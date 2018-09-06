@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Alert, Button } from "reactstrap";
 import logo from "./logo.svg";
 import "./App.css";
 import PostsPage from "./components/PostsPage/PostsPage.js";
@@ -13,14 +14,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {/* Need to call PostsPage before modifiying the component aith Authenticate HOC!!! */}
         <PostsPage />
       </div>
     );
   }
 }
 
-const HOCApp = Authenticate(App);
-
-return <HOCApp />;
-
-export default App;
+export default Authenticate(App);
