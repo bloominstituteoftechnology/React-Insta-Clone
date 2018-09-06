@@ -51,8 +51,8 @@ class PostsPage extends React.Component {
 
     logOut = (e) => {
         e.preventDefault();
-        localStorage.removeItem('username');
-        window.location.reload();
+        localStorage.removeItem('loggedIn');
+        return window.location.reload();
     }
 
     render() {

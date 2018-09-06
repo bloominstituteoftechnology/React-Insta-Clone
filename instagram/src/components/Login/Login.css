@@ -14,8 +14,9 @@
     margin-bottom: 20px;
 }
 
-.login-div .login-form .login-input-div .login-username-input {
+.login-div .login-form .login-input-div .login-input {
     font-size: 18px;
+    margin: 5px;
 }
 
 .login-div .login-form .login-button {

@@ -11,9 +11,9 @@ const Authenticate = PostsPageComp => LoginComp => class extends React.Component
     }
 
     componentDidMount() {
-        if (localStorage.getItem('username')) {
+        if (localStorage.getItem('loggedIn')) {
             this.setState({
-                username: localStorage.getItem('username'),
+                username: localStorage.getItem('loggedIn'),
                 loggedIn: true,
             });
         }

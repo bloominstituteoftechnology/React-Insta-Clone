@@ -9,10 +9,31 @@ class Login extends React.Component {
         this.state = {};
     }
 
+    componentDidMount() {
+        const usernamesAndPasswords = {
+            'Alice': 'AlicePass',
+            'Bob': 'BobPass',
+            'Carol': 'Carolpass',
+        }
+
+        localStorage.setItem('usernamesAndPasswords', JSON.stringify(usernamesAndPasswords));
+    }
+
     logIn = (e) => {
         e.preventDefault();
-        localStorage.setItem('username', e.target[0].value);
-        window.location.reload();
+        const usernamesAndPasswords = JSON.parse(localStorage.getItem('usernamesAndPasswords'));
+
+        for (let key in usernamesAndPasswords) {
+            if (e.target[0].value === key) {
+                if (e.target[1].value === usernamesAndPasswords[key]) {
+                    // give loggedIn the value of the username (key) that is logged in
+                    localStorage.setItem('loggedIn', key);
+                    return window.location.reload();
+                }
+            }
+        }
+
+        return console.log("wrong username/password.");
     }
 
     render() {
@@ -20,9 +41,9 @@ class Login extends React.Component {
             <div className = 'login-div'>
                 <form className = 'login-form' onSubmit = { this.logIn } >
                     <div className = 'login-input-div'>
-                        <input className = 'login-username-input' type = 'text' placeholder = 'Enter username...' />
+                        <input className = 'login-input' type = 'text' placeholder = 'Enter username...' />
+                        <input className = 'login-input' type = 'text' placeholder = 'Enter password...' />
                     </div>
-                    {/* <input type = 'text' placeholder = 'Enter password...' /> */}
                     <button className = 'login-button' type = 'submit' >Log In</button>
                 </form>
             </div>
