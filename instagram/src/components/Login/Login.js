@@ -1,4 +1,5 @@
 import React from 'react';
+import './Login.css';
 
 class Login extends React.Component {
     constructor(props){
@@ -29,6 +30,7 @@ class Login extends React.Component {
             <div className = 'login-container'>
 
             <form onSubmit={this.loginAttempt}>
+                <h1>Instagram</h1>
                 <input type='text' value={this.state.username} onChange={this.setUsername} placeholder='Username'></input>
                 <input type='password' value={this.state.password} onChange = {this.setPassword} placeholder='Password'></input>
                 <button type='submit'>Login</button>

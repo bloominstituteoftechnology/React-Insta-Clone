@@ -1,4 +1,5 @@
 import React from 'react';
+import 'font-awesome/css/font-awesome.min.css';
 
 class CommentLikes extends React.Component {
     constructor(props){
@@ -42,7 +43,8 @@ class CommentLikes extends React.Component {
             <div className = 'comment-likes'>
             <div className = 'like-icons'>
             {likeIcon}
-            <span className = 'comment-icon'>COMMENT</span>
+            <span className = 'comment-icon'><i class="fa fa-comment"></i>
+</span>
             </div>
             <span className = 'likes'>{this.state.likes} likes</span>   
             </div>

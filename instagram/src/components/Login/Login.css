@@ -1,0 +1,33 @@
+.login-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.login-container form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.login-container form input{
+    padding: 10px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 5px;
+    margin: 20px;
+    max-width: 300px;
+}
+
+.login-container form button {
+    padding: 10px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 5px;
+    margin: 20px;
+    width: 300px;
+}
+
+/* Lucas Beemer, Casey Baker */

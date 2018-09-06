@@ -1,11 +1,23 @@
 import React from 'react';
+import './SearchBar.css';
 
 const SearchBar = props => {
     return (
-        <div>
+        <div className = 'search-container'>
+        
             <div className = 'header-bar'>
-          <h1>Instagram</h1>
-          <input type='search' placeholder = 'Search...' onKeyDown={props.search}></input>
+            <div className = 'header-column'>
+            <h1>Instagram</h1>
+            </div>
+            <div className = 'header-column'>
+            <input type='search' placeholder = 'Search...' className='header-search' onKeyDown={props.search}></input>
+            </div>
+            <div className = 'header-column'>
+            <button onClick={this.logout}>LOGOUT</button>
+            </div>
+          
+          
+          
           </div>
         </div>
     )

@@ -47,8 +47,8 @@ class PostsPage extends React.Component {
       return(
           <div className="App">
       <header>
-          <button onClick={this.logout}>LOGOUT</button>
-        <SearchBar search={this.search} />
+          
+        <SearchBar search={this.search} logout={this.logout}/>
         </header>
 
         <main>

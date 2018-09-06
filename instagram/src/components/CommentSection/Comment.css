@@ -33,3 +33,17 @@
     border-top: 1px solid lightgray;
     outline: none;
 }
+
+.comment-icon {
+    margin: 10px;
+}
+
+.like-icon-true {
+    color: red;
+    cursor: pointer;
+}
+
+.like-icon-false {
+    color: lightgray;
+    cursor: pointer;
+}
