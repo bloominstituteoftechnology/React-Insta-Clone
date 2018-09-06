@@ -79,9 +79,6 @@ padding: 0;
 [contenteditable='true']:empty::before {
 	content: attr(placeholder);
 }
-.comment-input::placeholder {
-	color: #999999;
-}
 
 #options {
 	align-self: center;

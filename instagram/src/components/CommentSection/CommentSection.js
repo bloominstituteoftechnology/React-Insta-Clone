@@ -19,7 +19,9 @@ class CommentSection extends React.Component {
 			likes: this.state.likes + (this.state.youLiked ? -1 : 1),
 			youLiked: !this.state.youLiked
 		});
-		localStorage.setItem(this.props.id + '/' + 'Liked', !this.state.youLiked);
+		!this.state.youLiked
+			? localStorage.setItem(this.props.id + ' Liked', true)
+			: localStorage.removeItem(this.props.id + ' Liked');
 	};
 
 	focusCommentInput = () => {
@@ -59,13 +61,8 @@ class CommentSection extends React.Component {
 			comments: this.props.comments,
 			likes:
 				this.props.likes +
-				(localStorage.getItem(this.props.id + '/' + 'Liked') === 'true'
-					? 1
-					: 0),
-			youLiked:
-				localStorage.getItem(this.props.id + '/' + 'Liked') === 'true'
-					? true
-					: false
+				(localStorage.getItem(this.props.id + ' Liked') ? 1 : 0),
+			youLiked: localStorage.getItem(this.props.id + ' Liked') ? true : false
 		});
 	}
 
