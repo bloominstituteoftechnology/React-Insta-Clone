@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PostsPage = props => {
-  return 'Hello';
+  return '';
 }
 
 export default PostsPage;
