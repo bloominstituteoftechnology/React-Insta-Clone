@@ -8,9 +8,22 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.comments
+      comment: ''
     };
   }
 
+  commentHandler = e => {
+    this.setState({ comment: e.target.value });
+  }
+
+  addNewComment = e => {
+    e.preventDefault();
+    const newComment = { text: this.state.comment, username: 'user' };
+    const comments = [...this.state.comments]
+    comments.push(newComment);
+    this.setState({ comments, comment: '' });
+  };
+  
   render() {
     return (
       <div>
