@@ -1,6 +1,5 @@
 import React from 'react';
 import SearchBarLogo from './SearchBarLogo';
-import SearchBarInput from './SearchBarInput';
 import SearchBarMenu from './SearchBarMenu';
 
 function SearchBarContainer(props) {
