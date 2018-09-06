@@ -10,22 +10,7 @@
     padding-left: 2%;
 }
 
-.login-form {
-    margin: 5%;
-    display: flex;
-    flex-direction: column;
-}
-
-.login-form input {
-    margin: 2% 0 0 2%;
-    width: 100%;
-    height: 57px;
-    border: 1px solid #e2e2e2;
-    padding-left: 2%;
-    background: #ffffff;
-}
-
-.login-form .login-register {
+.login-register {
     font-size: 16px;
     padding: 2%;
     color: #4b4a4a;
@@ -44,17 +29,6 @@
 
 .hidden {
     visibility: hidden;
-}
-
-.create-form {
-    margin: 5%;
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.create-form input {
-    margin: 2% 0 0 2%;
 }
 
 .create-buttons {
