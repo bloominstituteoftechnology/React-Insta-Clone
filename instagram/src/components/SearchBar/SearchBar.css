@@ -1,24 +1,3 @@
 .search-container {
     width: 100%;
 }
-
-.header-bar {
-    display: flex;
-    flex-flow: row nowrap;
-    max-width: 100%;
-    margin: 20px 40px;
-}
-
-.header-column {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.header-search {
-    padding: 10px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    width: 200px;
-}

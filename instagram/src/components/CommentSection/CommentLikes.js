@@ -37,13 +37,13 @@ class CommentLikes extends React.Component {
         if(isLiked === true) {
             likeIcon = <span className = 'like-icon-true' onClick = {this.subtractLike}><i className = 'fa fa-heart'></i></span>
         } else if (isLiked === false){
-            likeIcon = <span className = 'like-icon-false' onClick = {this.addLike}><i className="fa fa-heart"></i></span>
+            likeIcon = <span className = 'like-icon-false' onClick = {this.addLike}><i className="far fa-heart"></i></span>
         }
         return (
             <div className = 'comment-likes'>
             <div className = 'like-icons'>
             {likeIcon}
-            <span className = 'comment-icon'><i class="fa fa-comment"></i>
+            <span className = 'comment-icon'><i class="far fa-comment-alt"></i>
 </span>
             </div>
             <span className = 'likes'>{this.state.likes} likes</span>   

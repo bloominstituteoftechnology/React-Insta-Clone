@@ -36,6 +36,7 @@
 
 .comment-icon {
     margin: 10px;
+    cursor: pointer;
 }
 
 .like-icon-true {
@@ -44,6 +45,6 @@
 }
 
 .like-icon-false {
-    color: lightgray;
+    color: black;
     cursor: pointer;
 }
