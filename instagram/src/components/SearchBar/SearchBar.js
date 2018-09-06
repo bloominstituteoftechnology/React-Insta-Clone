@@ -1,12 +1,13 @@
 import React from 'react';
 import icon from '../../assets/instagram-icon.png';
 import logo from '../../assets/instagram-logo.png';
+import { Header } from './SearchBarStyles';
 
 import './SearchBar.css';
 
 const SearchBar = (props) => {
     return (
-        <header>
+        <Header>
             <div className = 'icon-logo-div'>
                 <a href='https://www.instagram.com'><img className = 'instagram-icon' src = { icon } alt='instagram icon' /></a>
                 <a href='https://www.instagram.com'><img className = 'instagram-logo' src = { logo } alt='instagram logo' /></a>
@@ -27,7 +28,7 @@ const SearchBar = (props) => {
                 <i className = 'far fa-heart'></i>
                 <i className = 'far fa-user'></i>
             </div>
-        </header>
+        </Header>
     );
 }
 
