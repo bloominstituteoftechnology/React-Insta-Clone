@@ -1,24 +1,32 @@
 import React from 'react';
+import IGLogo from '../../assets/iglogo.png';
 import './SearchBar.css';
-import PropTypes from 'prop-types';
 
 const SearchBar = () => {
   return (
-    <div class = 'header'>
-      <section class = 'search-section'>
-        <img class = 'logo' alt = 'Logo' src = '../../../assets/logo.svg'/>
-      </section>
+    <div className = 'search-wrapper'>
+      <div className = 'img-wrapper'>
+        <img alt = 'Instagram logo' src = {IGLogo} className = 'logo' />
+      </div>
 
-      <section class = 'search-section'>
-        <input class = 'search-main' placeholder = 'Search here'/>
-      </section>
+      <div>
+        <input type = 'text' placeholder 'Search' />
+      </div>
 
-      <section>
-        <div class = 'searchbutton nav'>🧭</div>
-        <div class = 'searchbutton heart'>🖤</div>
-        <div class = 'searchbutton account'>👱</div>
-      </section>
-    </div>
+      <div className = 'social-wrap'>
+        <div className = 'social'>
+          <i className = 'fa fa-compass' />
+        </div>
+
+        <div className = 'social'>
+          <i className = 'fa fa-heart' />
+        </div>
+
+        <div className = 'social'>
+          <i className = 'fa fa-user-circle' />
+        </div>
+      </div>
+    </div> // search wrapper
   );
 };
 
