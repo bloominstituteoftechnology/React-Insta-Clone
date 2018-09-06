@@ -1,14 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import './Comments.css'
 
 const Comment = (props) => {
   return (
     <React.Fragment>
-      <p><span className="bold">{props.comment.username}</span> {props.comment.text}</p>
+      <P><Span>{props.comment.username}</Span> {props.comment.text}</P>
     </React.Fragment>
   )
 }
+
+const P = styled.p``
+const Span = styled.span`
+  font-weight: bold;
+`
 
 Comment.propTypes = {
   text: PropTypes.string,

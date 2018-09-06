@@ -63,7 +63,6 @@ const Div4 = styled.div`
   text-align: left;
   margin: 0 3%;
 `
-
 const Span = styled.span`
   font-weight: bold;
 `
@@ -71,14 +70,12 @@ const Span2 = styled.span`
   margin-right: 2%;
 `
 const Span3 = styled.span``
-
 const Img = styled.img`
   margin: 0 3%;
   border-radius: 50%;
   width: 30px;
 `
 const Img2 = styled.img``
-
 const P = styled.p`
   font-weight: bold;
 `
