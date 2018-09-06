@@ -1,25 +1,35 @@
-.search-bar-wrapper {
-    border-bottom: 1px solid #3333;
-    height: 80px;
-    line-height: 70px;
-    display: flex;
-    justify-content: space-between;
-    background: #ffffff;
-  }
+
   
-  .image-wrapper {
-    height: 50px;
-  }
+  
   
   .logo-image {
-    height: 100%;
+  background: url('../SearchBar/imgs/download.png') no-repeat -98px -203px;
+	width: 176px;
+  height: 35px;
+  
   }
   
   .social-wrapper {
     display: flex;
+    padding: 0 5%;
   }
   
-  .social {
-    width: 20px;
-    height: 20px;
+ 
+
+  .orb{
+    background: url('../SearchBar/imgs/download.png') no-repeat -262px -358px;
+	width: 22px;
+	height: 22px;
   }
+
+  .icon-heart{
+    background: url('../SearchBar/imgs/download.png') no-repeat -184px -359px;
+	width: 22px;
+	height: 20px;
+  }
+
+ .little-guy{
+  background: url('../SearchBar/imgs/download.png') no-repeat -433px -318px;
+	width: 22px;
+	height: 21px;
+ }

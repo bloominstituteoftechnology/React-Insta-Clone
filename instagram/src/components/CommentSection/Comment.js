@@ -1,13 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Comment.css';
+import styled, {css} from 'styled-components';
+
+const CommentText = styled.section`
+    text-align: left;
+    padding: 2px;
+    margin-left: 4px;
+    font-size: 1.2rem;
+
+`;
+
+const UserText = styled.span`
+  font-weight: 300;
+  font-size: 14px;
+`;
 
 const Comment = props => {
   return (
-    <div className="comment-text">
-      <span className="comment">{props.comment.text}</span>{' '}
-      <span className="user">-{props.comment.username}</span>
-    </div>
+    <CommentText >
+      <UserText ><strong>{props.comment.username}</strong></UserText>{' '}
+      <UserText >{props.comment.text}</UserText>
+    </CommentText>
   );
 };
 
@@ -17,5 +31,6 @@ Comment.propTypes = {
     username: PropTypes.string
   })
 };
+
 
 export default Comment;

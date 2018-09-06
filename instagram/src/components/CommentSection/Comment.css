@@ -1,16 +1,8 @@
-.comment-text {
-    text-align: left;
-    padding: 2px;
-    margin-left: 4px;
-  }
-  
-  .comment {
-    font-weight: 300;
-    font-size: 14px;
-  }
-  
-  .user {
-    font-weight: 500;
-    font-size: 12px;
-  }
 
+  .options{
+  background: url('../SearchBar/imgs/download.png') no-repeat -77px -444px;
+	width: 14px;
+  height: 4px;
+  margin-top: 2%;
+  cursor: pointer;
+  }

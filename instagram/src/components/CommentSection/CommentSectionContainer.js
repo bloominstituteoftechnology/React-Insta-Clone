@@ -2,7 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
+import styled from 'styled-components';
 import like from '../../assets/heart.svg';
+
+
+const CommentArea = styled.div`
+    padding: 3% 3% 0 3%;
+`;
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -35,13 +41,14 @@ class CommentSection extends React.Component {
       inputText: event.target.value
     });
   };
-  
+
+
   render() {
     return (
-      <div>
+      <CommentArea>
         {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
         <CommentInput inputText={this.state.inputText} handleInput={this.handleInput} addNewComment= {this.addNewComment}/>
-      </div>
+      </CommentArea>
     );
   }
 }
