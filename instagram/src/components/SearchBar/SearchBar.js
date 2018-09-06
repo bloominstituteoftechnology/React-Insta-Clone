@@ -1,5 +1,5 @@
 import React from 'react';
-import icon from '../../assets/instagram-icon.png'
+import icon from '../../assets/instagram-icon.png';
 import logo from '../../assets/instagram-logo.png';
 
 import './SearchBar.css';

@@ -1,8 +1,9 @@
 .login-div {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
+    position: relative;
+    top: 25vh;
     flex-wrap: wrap;
     flex-direction: column;
 }
@@ -29,4 +30,27 @@
     background: black;
     color: white;
     cursor: pointer;
+}
+
+@keyframes show-err-msg-anim {
+    from {color: white;}
+    to {color: black;}
+}
+
+.show-error-msg {
+    animation-name: show-err-msg-anim;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide-err-msg-anim {
+    from {color: black;}
+    to {color: white;}
+    
+}
+
+.hide-error-msg {
+    animation-name: hide-err-msg-anim;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }

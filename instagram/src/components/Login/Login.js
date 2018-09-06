@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../../assets/instagram-logo.png';
 
 import './Login.css';
 
@@ -6,16 +7,20 @@ class Login extends React.Component {
     constructor() {
         super();
 
-        this.state = {};
+        this.state = {
+            errorMsgClass: 'hide-error-msg',
+        };
     }
 
     componentDidMount() {
+        // create 3 username and password combinations in an object
         const usernamesAndPasswords = {
             'Alice': 'AlicePass',
             'Bob': 'BobPass',
             'Carol': 'Carolpass',
         }
 
+        // store the username and password object in local storage
         localStorage.setItem('usernamesAndPasswords', JSON.stringify(usernamesAndPasswords));
     }
 
@@ -33,18 +38,29 @@ class Login extends React.Component {
             }
         }
 
-        return console.log("wrong username/password.");
+        this.setState({
+            errorMsgClass: 'show-error-msg',
+        }, () => {
+            return setTimeout(() => this.setState({errorMsgClass: 'hide-error-msg'}), 2000);
+        });
     }
 
     render() {
         return (
             <div className = 'login-div'>
+                <a href='https://www.instagram.com'><img className = 'instagram-logo' src = { logo } alt='instagram logo' /></a>
+
                 <form className = 'login-form' onSubmit = { this.logIn } >
                     <div className = 'login-input-div'>
                         <input className = 'login-input' type = 'text' placeholder = 'Enter username...' />
                         <input className = 'login-input' type = 'text' placeholder = 'Enter password...' />
                     </div>
+
                     <button className = 'login-button' type = 'submit' >Log In</button>
+
+                    <div>
+                        <p className = { this.state.errorMsgClass }>Wrong username / password. Try again.</p>
+                    </div>
                 </form>
             </div>
         );
