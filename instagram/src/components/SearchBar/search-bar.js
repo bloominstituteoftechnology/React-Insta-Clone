@@ -6,7 +6,7 @@ const SearchBar = props => {
     <div className='search-container'>
       <div className='sprite-search' id='logo' />
       <form>
-      <input placeholder='search' value={props.inputText} onChange={props.handleInput} />
+      <input type="text" placeholder='Search' onKeyDown={props.searchHandler} />
       </form>
       <div className='sprite-search' id='explore' />
       <div className='sprite-search' id='liked' />

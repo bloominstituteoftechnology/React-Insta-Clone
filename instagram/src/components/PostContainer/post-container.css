@@ -1,7 +1,13 @@
 .post-container {
   max-width: 640px;
   width: 100%;
-  margin: 10px auto;
+  margin: 50px auto;
+  background-color: #ffffff;
+}
+
+.post-content {
+  border: 1px solid gray;
+  margin-bottom: 60px;
 }
 
 .post-header {
@@ -9,11 +15,12 @@
   height: 50px;
   display: flex;
   align-items: center;
+  font-weight: bold;
 }
 
 .post-header img {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   margin: auto 2%;
 }

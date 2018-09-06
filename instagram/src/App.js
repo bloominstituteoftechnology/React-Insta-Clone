@@ -1,32 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/post-container'
-import SearchBar from './components/SearchBar/search-bar';
+import PostsPage from './components/PostContainer/postspage';
+import Authenticate from './components/Authentication/authenticate';
+
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      searchInput: '',
-      data: []
-    };
-  }
-
-  componentDidMount() {
-    this.setState({
-      data: dummyData
-    })
+    this.state = {};
   }
 
   render() {
     return (
       <div className="App">
-      <SearchBar />
-      <PostContainer posts={this.state.data} />
+      <PostsPage />
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);

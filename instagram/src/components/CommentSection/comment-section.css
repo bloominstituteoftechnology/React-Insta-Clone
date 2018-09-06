@@ -23,7 +23,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 100px;
+  margin-bottom: 15px;
+}
+
+.comment-container hr {
+  max-width: 640px;
+  width: 95%;
+  margin: 10px 0 10px 1%;
+  opacity: 0.5;
 }
 
 .icons {
@@ -36,16 +43,45 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .data-comments span {
   font-weight: bold;
+  font-size: 14px;
 }
 
 .data-comments p {
-  line-height: 0px;
+  flex-wrap: wrap;
+  line-height: 15px;
+  font-size: 14px;
+  margin: 5px auto;
+  text-align: left;
 }
 
 .time-stamp p {
   color: gray;
+  font-size: 14px;
 }
+
+.like-comment {
+  font-weight: bold;
+}
+
+.comment-input {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  max-width: 640px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.comment-input input[type=text] {
+  margin-left: 1%;
+  width: 85%;
+  height: 30px;
+  font-size: 14px;
+  border: none;
+}
+

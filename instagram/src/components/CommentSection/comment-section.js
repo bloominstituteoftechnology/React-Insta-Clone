@@ -22,7 +22,7 @@ class CommentSection extends React.Component {
 
   addComment = event => {
     let newComment = {
-      username: 'OwenWilson',
+      username: 'evali',
       text: this.state.comment
     }
     this.setState({
@@ -55,6 +55,7 @@ class CommentSection extends React.Component {
         <div className='time-stamp'>
           <p>{this.state.timestamp}</p>
         </div>
+        <hr />
         <CommentInput handleInput={this.handleInput} addComment={this.addComment} commentValue={this.state.comment} />
       </div>
     );
@@ -64,9 +65,12 @@ class CommentSection extends React.Component {
 };
 
 CommentSection.propTypes = {
-  like: PropTypes.number,
-  timestamp: PropTypes.string,
-  comments: PropTypes.string
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string, 
+      text: PropTypes.string 
+    })
+  )
 };
 
 export default CommentSection;
