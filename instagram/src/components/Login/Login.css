@@ -39,7 +39,7 @@
     cursor: pointer;
 }
 
-.login-div p, .register-section, .user-exists-p, .enter-username-p, .enter-password-p, .register-success-p {
+.login-div p, .register-section {
     opacity: 0;
 }
 

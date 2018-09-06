@@ -8,14 +8,12 @@ class Login extends React.Component {
         super();
 
         this.state = {
-            wrongUserOrPasswordClass: '',
             loginDivClass: 'show',
             loginSectionClass: ['show'],
             registerSectionClass: [''],
-            userExistsClass: [''],
-            enterUsernameClass: [''],
-            enterPasswordClass: [''],
-            registerSuccessClass: [''],
+            message: 'Error goes here.',
+            messageClass: '',
+            timeoutInterval: 2000,
         };
     }
 
@@ -61,10 +59,17 @@ class Login extends React.Component {
 
         // else if user or password doesn't match with those stored in localStorage,
         // display the wrong user/pass message.
-        this.setState({
-            wrongUserOrPasswordClass: 'show',
-        }, () => {
-            return setTimeout(() => this.setState({wrongUserOrPasswordClass: 'hide'}), 2000);
+        let newState = this.state;
+        
+        newState.message = 'Wrong username / password. Try again or register a new user.';
+        newState.messageClass = 'show';
+
+        return this.setState(newState, () => {
+            setTimeout(() => {
+                newState.messageClass = 'hide';
+
+                this.setState(newState);
+            }, this.state.timeoutInterval);
         });
     }
 
@@ -98,75 +103,29 @@ class Login extends React.Component {
         if (e.target[0].value === '') {
             let newState = this.state;
 
-            if (newState.enterUsernameClass.includes('hide')) {
-                newState.enterUsernameClass.splice(newState.enterUsernameClass.indexOf('hide'), 1);
-            }
-
-            if (newState.enterUsernameClass.includes('display-none')) {
-                newState.enterUsernameClass.splice(newState.enterUsernameClass.indexOf('display-none'), 1);
-            }
-
-            if (!newState.enterPasswordClass.includes('display-none')) {
-                newState.enterPasswordClass.push('display-none');
-            }
-
-            if (!newState.userExistsClass.includes('display-none')) {
-                newState.userExistsClass.push('display-none');
-            }
-
-            if (!newState.registerSuccessClass.includes('display-none')) {
-                newState.registerSuccessClass.push('display-none');
-            }
-
-            newState.enterUsernameClass.push('show');
+            newState.message = 'Please enter a username.';
+            newState.messageClass = 'show';
 
             return this.setState(newState, () => {
                 setTimeout(() => {
-                    if (newState.enterUsernameClass.includes('show')) {
-                        newState.enterUsernameClass.splice(newState.enterUsernameClass.indexOf('show'), 1);
-                    }
-
-                    newState.enterUsernameClass.push('hide');
+                    newState.messageClass = 'hide';
 
                     this.setState(newState);
-                }, 1500);
+                }, this.state.timeoutInterval);
             });
-            // else if password input is left blank, display the enter password message
+        // else if password input is left blank, display the enter password message
         } else if (e.target[1].value === '') {
             let newState = this.state;
 
-            if (newState.enterPasswordClass.includes('hide')) {
-                newState.enterPasswordClass.splice(newState.enterPasswordClass.indexOf('hide'), 1);
-            }
-
-            if (newState.enterPasswordClass.includes('display-none')) {
-                newState.enterPasswordClass.splice(newState.enterPasswordClass.indexOf('display-none'), 1);
-            }
-
-            if (!newState.userExistsClass.includes('display-none')) {
-                newState.userExistsClass.push('display-none');
-            }
-
-            if (!newState.enterUsernameClass.includes('display-none')) {
-                newState.enterUsernameClass.push('display-none');
-            }
-
-            if (!newState.registerSuccessClass.includes('display-none')) {
-                newState.registerSuccessClass.push('display-none');
-            }
-
-            newState.enterPasswordClass.push('show');
+            newState.message = 'Please enter a password.';
+            newState.messageClass = 'show';
 
             return this.setState(newState, () => {
                 setTimeout(() => {
-                    if (newState.enterPasswordClass.includes('show')) {
-                        newState.enterPasswordClass.splice(newState.enterPasswordClass.indexOf('show'), 1);
-                    }
-
-                    newState.enterPasswordClass.push('hide');
+                    newState.messageClass = 'hide';
 
                     this.setState(newState);
-                }, 1500);
+                }, this.state.timeoutInterval);
             });
         }
 
@@ -177,38 +136,15 @@ class Login extends React.Component {
             if (e.target[0].value === key) {
                 let newState = this.state;
 
-                if (newState.userExistsClass.includes('hide')) {
-                    newState.userExistsClass.splice(newState.userExistsClass.indexOf('hide'), 1);
-                }
-
-                if (newState.userExistsClass.includes('display-none')) {
-                    newState.userExistsClass.splice(newState.userExistsClass.indexOf('display-none'), 1);
-                }
-
-                if (!newState.enterUsernameClass.includes('display-none')) {
-                    newState.enterUsernameClass.push('display-none');
-                }
-
-                if (!newState.enterPasswordClass.includes('display-none')) {
-                    newState.enterPasswordClass.push('display-none');
-                }
-
-                if (!newState.registerSuccessClass.includes('display-none')) {
-                    newState.registerSuccessClass.push('display-none');
-                }
-
-                newState.userExistsClass.push('show');
+                newState.message = 'User already exists. Please go back to log in.';
+                newState.messageClass = 'show';
 
                 return this.setState(newState, () => {
                     setTimeout(() => {
-                        if (newState.userExistsClass.includes('show')) {
-                            newState.userExistsClass.splice(newState.userExistsClass.indexOf('show'), 1);
-                        }
-        
-                        newState.userExistsClass.push('hide');
+                        newState.messageClass = 'hide';
 
-                        this.setState(newState)
-                    }, 1500);
+                        this.setState(newState);
+                    }, this.state.timeoutInterval);
                 });
             }
         }
@@ -223,35 +159,12 @@ class Login extends React.Component {
 
         let newState = this.state;
 
-        if (newState.registerSuccessClass.includes('hide')) {
-            newState.registerSuccessClass.splice(newState.registerSuccessClass.indexOf('hide'), 1);
-        }
-
-        if (newState.registerSuccessClass.includes('display-none')) {
-            newState.registerSuccessClass.splice(newState.registerSuccessClass.indexOf('display-none'), 1);
-        }
-
-        if (!newState.enterUsernameClass.includes('display-none')) {
-            newState.enterUsernameClass.push('display-none');
-        }
-
-        if (!newState.enterPasswordClass.includes('display-none')) {
-            newState.enterPasswordClass.push('display-none');
-        }
-
-        if (!newState.userExistsClass.includes('display-none')) {
-            newState.userExistsClass.push('display-none');
-        }
-
-        newState.registerSuccessClass.push('show');
+        newState.message = 'Registration successful! Redirecting to log in page.';
+        newState.messageClass = 'show';
 
         return this.setState(newState, () => {
             setTimeout(() => {
-                if (newState.registerSuccessClass.includes('show')) {
-                    newState.registerSuccessClass.splice(newState.registerSuccessClass.indexOf('show'), 1);
-                }
-
-                newState.registerSuccessClass.push('hide');
+                newState.messageClass = 'hide';
 
                 this.setState(newState, () => {
                     setTimeout(() => {
@@ -259,9 +172,9 @@ class Login extends React.Component {
                             loginSectionClass: ['show'],
                             registerSectionClass: ['hide', 'display-none'],
                         });
-                    }, 1750);
+                    }, this.state.timeoutInterval);
                 });
-            }, 2000);
+            }, this.state.timeoutInterval);
         });
     } // handleNewUser()
 
@@ -280,8 +193,6 @@ class Login extends React.Component {
                         <button className = 'form-btn login-btn' type = 'submit' >Log In</button>
                         <button className = 'form-btn register-btn' onClick = { this.handleRegister } >Register</button>
                     </form>
-                    
-                    <p className = { this.state.wrongUserOrPasswordClass }>Wrong username / password. Try again or register a new user.</p>
                 </section>
 
                 <section className = { `register-section ${ this.state.registerSectionClass.join(' ') }` }>
@@ -294,12 +205,9 @@ class Login extends React.Component {
                         <button className = 'form-btn login-btn' onClick = { this.handleBackToLogIn }>Back to Log in</button>
                         <button className = 'form-btn register-btn' type = 'submit' >Register New User</button>
                     </form>
-
-                    <p className = { `user-exists-p ${ this.state.userExistsClass.join(' ') }` }>User already exists. Please go back to log in.</p>
-                    <p className = { `enter-username-p ${ this.state.enterUsernameClass.join(' ') }` }>Please enter a username.</p>
-                    <p className = { `enter-password-p ${ this.state.enterPasswordClass.join(' ') }` }>Please enter a password.</p>
-                    <p className = { `register-success-p ${ this.state.registerSuccessClass.join(' ') }` }>Registration successful! Redirecting to log in page.</p>
                 </section>
+
+                <p className = { this.state.messageClass }>{ this.state.message }</p>
 
             </div>
         );
