@@ -17,18 +17,12 @@ class PostContainer extends Component {
   } 
 
   componentDidMount() {
-    console.log('PostContainer - componentDidMount()');
     const copyOfComments = this.props.postData.comments;
     const copyOfLikes = this.props.postData.likes;
     this.setState({comments: copyOfComments, likes: copyOfLikes});
   }
 
-  componentDidUpdate() {
-    console.log('PostContainer - componentDidUpdate()');
-  }
-
   addComment = (newCommentObj) => {
-    console.log(this.props.postData.comments);
     this.setState({
       comments: [...this.state.comments, newCommentObj]
     })
@@ -44,7 +38,6 @@ class PostContainer extends Component {
   }
 
   render() {
-    console.log('PostContainer - render()')
     const {imageUrl, thumbnailUrl, timestamp, username} = this.props.postData;
     return (
       <div className="post-container">

@@ -15,14 +15,13 @@ export default class AddComment extends Component {
 
   input = (e) => {
     this.setState({[e.target.name]: e.target.value});
-    console.log(this.state.inputText);
   }
 
   addComment = (e) => {
     e.preventDefault();
     this.props.addComment({username: random_name(), text: this.state.inputText});
     this.setState({inputText: ''});
-    console.log('INPUT REF', this.inputRef.current.value = '');
+    this.inputRef.current.value = '';
   }
 
   render() {

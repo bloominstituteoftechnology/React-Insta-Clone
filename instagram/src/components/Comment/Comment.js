@@ -3,12 +3,8 @@ import PropTypes from 'prop-types';
 import './Comment.css';
 
 class Comment extends Component {
-  componentDidUpdate(prevProps, prevState) {
-    console.log('Comment - componentDidUpdate', prevProps, prevState);
-  }
 
   render() {
-    console.log('Comment - return statement');
     const {username, text} = this.props.comment;
     return (
       <div className="comment">

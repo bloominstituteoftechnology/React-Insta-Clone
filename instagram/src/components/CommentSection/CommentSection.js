@@ -6,12 +6,7 @@ import AddComment from '../AddComment/AddComment';
 import './CommentSection.css';
 class CommentSection extends Component {
 
-  componentDidUpdate() {
-    console.log('CommentSection - componentDidUpdate')
-  }
-
   render() {
-    console.log('CommentSection - render()')
     return (
       <div className="comment-section">
         {
