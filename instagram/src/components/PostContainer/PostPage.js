@@ -2,6 +2,12 @@ import React from 'react';
 import dummyData from '../../dummy-data';
 import PostContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
+import styled from 'styled-components';
+
+const PostsPage=styled.section`
+    max-width: 900px;
+    margin:2% 1.5%;
+`;
 
 class PostPage extends React.Component{
     constructor(){
@@ -17,6 +23,7 @@ class PostPage extends React.Component{
       }
     
     searchHandle = e => {
+        // eslint-disable-next-line 
         const posts = this.state.posts.filter(p => {
           if (p.username.includes(e.target.value)) {
             return p;
@@ -27,7 +34,7 @@ class PostPage extends React.Component{
 
     render() {
         return (
-            <div className="post-page">
+            <PostsPage>
                 <SearchBar 
                     searchTerm={this.state.searchTerm}
                     searchPosts={this.searchHandle}
@@ -39,7 +46,7 @@ class PostPage extends React.Component{
                           : this.state.posts
                     }
                 />
-            </div>
+            </PostsPage>
         )
     }
 }
