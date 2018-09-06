@@ -23,8 +23,9 @@ class CommentSection extends React.Component {
         {text: this.state.newComment, username: localStorage.username}
       ],
       newComment: "",
-    });
 
+    });
+    event.target.reset();
   }
 
   handleChange = (event) => {

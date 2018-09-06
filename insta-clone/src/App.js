@@ -21,19 +21,14 @@ class App extends Component {
     this.setState({ [event.target.name]: event.target.value })
   }
 
-  login = (event) => {
-    event.preventDefault;
-    localStorage.setItem('username', '{event.target.value}');
-  }
-
   searchPosts = (event) => {
     event.preventDefault();
     let newPosts = [...this.state.postData];
     newPosts = newPosts.filter(post=> {
       return post.username === this.state.search;
     })
-    this.setState({ postData: newPosts })
-
+    this.setState({ postData: newPosts });
+    event.target.reset();
     }
 
   componentDidMount = () => {

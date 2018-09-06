@@ -23,12 +23,13 @@ render() {
   return (
     <div className="loginPage">
     <form>
-    <input
+    <p>Username</p><input
       label="Username"
       name="username"
       placeholder="Username"
       onChange={this.handleChange}
       />
+      <p>Password</p>
     <input
       label="Password"
       name="password"
