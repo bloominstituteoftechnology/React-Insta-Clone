@@ -1,8 +1,6 @@
+import { classBody } from '@babel/types/lib';
 import React from "react";
-import { Alert } from "reactstrap";
-import "./Login.css";
-
-// TODO: do some form here and link up this and the Auth page etc to make this show if user is not authenticated
+import './Login.css';
 class Login extends React.Component {
   state = {
     username: "",
@@ -44,10 +42,10 @@ class Login extends React.Component {
             <button type="submit">Login</button>
           </form>
         </div>
-        <Alert color="primary">&nbsp;</Alert>
       </div>
     );
   }
 }
 
 export default Login;
+
