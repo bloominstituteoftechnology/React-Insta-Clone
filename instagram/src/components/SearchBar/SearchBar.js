@@ -1,6 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
-import instagram from '../img/instagram.png';
+import instagram from '../../assets/instagram.png';
+import { Button } from 'reactstrap';
  
 function SearchBar(props) {
     return (
@@ -20,6 +21,7 @@ function SearchBar(props) {
                 <i className="far fa-compass"></i>
                 <i className="far fa-heart"></i>
                 <i className="far fa-user"></i>
+                <Button onClick = {props.logOutClick} size = "small">Log out</Button>
             </div>
         </div>
     );
