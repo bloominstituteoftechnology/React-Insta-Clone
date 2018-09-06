@@ -62,7 +62,7 @@ class CommentSection extends React.Component {
           ♥<span>{this.state.heartCount}</span>
         </div>
         {/* This displays the comment input field and passes the */}
-        {/* props addComment and handleChange */}
+        {/* props addComment and handleChange to the CommentInput component. */}
         <CommentInput
           addComment={this.addNewComment}
           handleChange={this.handleChange}
