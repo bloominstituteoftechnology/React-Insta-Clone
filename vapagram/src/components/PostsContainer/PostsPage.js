@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import dummyData from '../../dummy-data';
 import PostsContainer from './PostsContainer';
 import SearchBar from '../SearchBar/SearchBarContainer';
+import styled from 'styled-components';
 // Class component that passes the props from ? to the following functions
 // search(), componentDidMout(), render()
 // this.state.posts holds all the posts in state once componentDidMount() runs
 // this.state.search holds the search data from the components SearchBar
+
+const AppWrapper = styled.div`
+  text-align: center;
+`;
 class PostsPage extends Component {
   constructor(props) {
     super(props);
@@ -46,14 +51,14 @@ class PostsPage extends Component {
   // component PostsContainer is rendered passing posts props
   render() {
     return (
-      <div className="App">
+      <AppWrapper>
         <SearchBar
           search={this.state.search}
           handleChange={this.handleChange}
           handleSubmit={this.search}
         />
         <PostsContainer posts={this.state.posts} />
-      </div>
+      </AppWrapper>
     );
   }
 }
