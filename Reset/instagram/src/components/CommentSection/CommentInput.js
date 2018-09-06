@@ -1,9 +1,11 @@
 import React from 'react';
+import './Comment.css';
 
 const CommentInput = props => {
+  console.log(props.handleaddNewComment);
   return (
     <form>
-      <input type="text" placeholder="Add comment... " />
+      <input class= "commentbox" type="text" placeholder="Add comment... " onSubmit ={props.handleaddNewComment}/>
     </form>
   );
 };

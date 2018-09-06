@@ -10,26 +10,33 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData
+      posts: []
     };
   }
 
-  render() {
+  componentDidMount() {
+    this.setState({posts: dummyData
 
-    if (loggedIn === true) {
+    });
+  };
+
+// loggedIn = event => {
+//   event.preventDefault();
+//   let loggedIn = localStorage.getItem('Joseph', 'sentientrobosally');
+  
+// };
+
+  render() {
 
     
     return (
       <div className="App">
         <SearchBar />
-        <PostsContainer posts={this.state.posts}/>
+        <PostsContainer posts={this.state.posts} />
+        {/* <Authenticate loggedIn = {this.loggedIn} /> */}
       </div>
     );
   }
-  else {
-    return <Authenticate />
-  }
-  }
 }
 
-export default App;
+  export default App;

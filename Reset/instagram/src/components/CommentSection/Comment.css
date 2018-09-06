@@ -2,14 +2,38 @@
   text-align: left;
   padding: 2px;
   margin-left: 4px;
+  padding-top: 1%;
+  padding-bottom: 2%;
 }
 
 .comment {
   font-weight: 300;
   font-size: 14px;
+  padding: 1%;
 }
 
 .user {
-  font-weight: 500;
+  font-weight: 800;
   font-size: 12px;
+}
+
+.commentarea {
+  /* height: 10%; */
+  padding-top: 5%;
+}
+
+form {
+  padding-top: 0%;
+  border-top: 1px solid lightgray;
+  width: 98%;
+  padding-left: 2%;
+}
+.commentbox {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0%;
+  font-size: 12px;
+  background: #fafafa;
+  border: none;
+  height: 50px;
 }

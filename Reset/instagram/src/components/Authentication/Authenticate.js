@@ -1,15 +1,15 @@
-import React from 'react';
-import './Authenticate.css';
+// import React from 'react';
+// import './Authenticate.css';
 
 
-const Authenticate = App =>
-    class extends React.Component {
-      render(){
+// const Authenticate = App =>
+//     class extends React.Component {
+//       render(){
 
 
-        return <App />;
+//         return <App />;
 
-    }
-  };
+//     }
+//   };
 
-export default Authenticate;
+// export default Authenticate;

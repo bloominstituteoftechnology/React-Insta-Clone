@@ -10,15 +10,30 @@ class CommentSection extends React.Component {
       comments: props.comments
     };
   }
+
+  addNewComment = event => {
+    event.preventDefault();
+    const comments = this.state.comments.slice();
+    comments.push({event: this.state.comments});
+    this.setState({comments});
+  };
+
+    // return this.state.comments.map((c, i) => <Comment key={i} comment={c}/>)};
+
+  
+
+
   render() {
     return (
-      <div>
+      <div className="commentarea">
+        {this.state.likes}
         {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-        <CommentInput />
+        <CommentInput handleaddNewComment= {this.addNewComment}/>
       </div>
     );
   }
-}
+};
+
 
 CommentSection.propTypes = {
   comments: PropTypes.arrayOf(
