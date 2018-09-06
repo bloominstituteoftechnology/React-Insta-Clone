@@ -1,6 +1,7 @@
 .posts-container-wrapper {
-  height: 500px;
-  width: 30%;
+  height: 50%;
+  width: 33%;
+  min-width: 400px;
   margin: 5px auto;
 }
 .post-border {
