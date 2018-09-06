@@ -5,15 +5,34 @@ import styled from 'styled-components';
 //This will contain the post, including images, content, and comments
 
 const PostContainer = props => {
-
+const PostStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 1rem;
+`;
+const PostHeader = styled.div`
+  display: flex;
+  height: 8rem;
+  padding: 1rem;
+  border: 1px solid darkgray;
+  `;
+  const PostUser = styled.h2`
+    display: flex;
+    padding: 1rem;
+    `;
+    const RoundImage = styled.img`
+    display: flex;
+    border-radius: 10rem;
+    `;
   return (
-    <div className="post">
-      <div className="postHeader">
-        <img src={props.thumbnailUrl}
+    <PostStyle>
+      <PostHeader>
+        <RoundImage src={props.thumbnailUrl}
           alt="Thumbnail"
          />
-        <h2>{props.username}</h2>
-      </div>
+        <PostUser>{props.username}</PostUser>
+      </PostHeader>
       <img src={props.imageUrl}
         alt="Post"
          />
@@ -23,7 +42,7 @@ const PostContainer = props => {
 
 
       />
-    </div>
+    </PostStyle>
   );
 
 };

@@ -17,39 +17,10 @@
   to { transform: rotate(360deg); }
 }
 
-.allPosts {
-  display: flex;
-  flex-direction: column;
-  width: 800px;
-  margin: 1rem auto;
-  max-width: 100%;
-}
+
 
 img {
   display: flex;
-}
-
-.allPosts .post {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  margin: 1rem;
-}
-
-.allPosts .post .postHeader {
-  display: flex;
-  height: 8rem;
-  padding: 1rem;
-  border: 1px solid darkgray;
-}
-
-.allPosts .post .postHeader h2 {
-  display: flex;
-  padding: 1rem;
-}
-
-.post .postHeader img {
-  border-radius: 10rem;
 }
 
 .commentSection {
