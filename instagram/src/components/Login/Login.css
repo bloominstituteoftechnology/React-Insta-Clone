@@ -20,20 +20,31 @@
     margin: 5px;
 }
 
-.login-div .login-form .login-button {
+.login-div .login-form .form-btn {
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px;
+    margin: 20px;
 }
 
-.login-div .login-form .login-button:hover {
-    background: black;
+.login-div .login-form .login-btn:hover {
+    background: green;
     color: white;
     cursor: pointer;
 }
 
-.login-div p {
+.login-div .login-form .register-btn:hover {
+    background: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.login-div p, .register-section, .user-exists-p, .enter-username-p, .enter-password-p, .register-success-p {
     opacity: 0;
+}
+
+.display-none {
+    display: none;
 }
 
 
