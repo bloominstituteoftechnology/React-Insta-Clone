@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import PostsPage from "./components/PostContainer/PostsPage";
 import Authenticate from "./components/Authentication/Authenticate";
 
-class App extends Component {
+
+
+
+const App =()=> <PostsPage/>
+/*class App extends Component {
   constructor() {
     super();
     this.state = {};
@@ -16,10 +20,10 @@ class App extends Component {
       </div>
     );
   }
-}
+}*/
  
  
  
  
   
-export default App;
+export default Authenticate(App);

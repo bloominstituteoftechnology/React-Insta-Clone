@@ -13,9 +13,9 @@ class CommentSection extends React.Component {
     }
     componentDidMount() {
         const id=this.props.postId;
-        if (localStorage.getItem(id)) {
+        if (window.localStorage.getItem(id)) {
             this.setState({
-              comments: JSON.parse(localStorage.getItem(this.props.postID))
+              comments: JSON.parse(window.localStorage.getItem(this.props.postID))
             });
         }else{
             this.setComments();
@@ -27,7 +27,7 @@ class CommentSection extends React.Component {
     }
 
     setComments = () => {
-        localStorage.setItem(
+       window.localStorage.setItem(
             this.props.postId,
             JSON.stringify(this.state.comments)
         );
@@ -38,18 +38,20 @@ class CommentSection extends React.Component {
     
     handleCommentSubmit=event=>{
         event.preventDefault();
-        const newComment ={ text: this.state.comment, username: "Csillag"};
+        const newComment = { text: this.state.comment, username: localStorage.getItem('user')};
+       
         const comments=this.state.comments.slice();
         comments.push(newComment);
         this.setState({comments, comment: ""});
         setTimeout(()=>{
             this.setComments();
-        }, 400);
+        }, 600);
     };
     render(){
         return(
             <div>
-                {this.state.comments.map((c, i)=> <Comment key={i} comment={c}/>)}
+                {this.state.comments.map((comment, index)=> <Comment key={index} comment={comment}/>
+                )}
                 <CommentInput
                     comment={this.state.comment}
                     submitComment={this.handleCommentSubmit}
