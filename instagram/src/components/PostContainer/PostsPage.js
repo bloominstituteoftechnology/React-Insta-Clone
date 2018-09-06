@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from '../PostContainer/PostContainer';
@@ -39,7 +39,7 @@ class PostsPage extends Component {
     <div className="App">
 
       <SearchBar
-        search={this.state.search} 
+        search={this.search} 
         handleChange={this.handleChange}
       />
 

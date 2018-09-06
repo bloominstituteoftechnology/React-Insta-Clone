@@ -6,6 +6,10 @@ import './App.css';
 import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
   // constructor() {
   //   super();
   //   this.state = {
