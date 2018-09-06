@@ -2,13 +2,14 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
 import LikeSection from './LikeSection';
+import PropTypes from 'prop-types';
 import './PostContainer.css';
 
-const Post extends React.Component {
+class Post extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      likes: props.post.likes;
+      likes: props.post.likes
     };
   }
 
