@@ -13,6 +13,7 @@ class CommentSection extends React.Component {
       comments: props.comments,
       newComment: "",
       likes: props.likes,
+      hasLiked: false,
     };
   }
 
@@ -35,7 +36,10 @@ class CommentSection extends React.Component {
 
   increaseLikes = (event) => {
     event.preventDefault();
+    if (this.state.hasLiked === false) {
     this.setState({ likes: this.state.likes + 1 });
+    this.setState({ hasLiked: true });
+  }
   }
 
 
@@ -56,7 +60,7 @@ class CommentSection extends React.Component {
     <CommentBar
       addNewComment={this.addNewComment}
       handleChange={this.handleChange}
-      comments={this.comments}
+
       />
     </CommentField>
     )
