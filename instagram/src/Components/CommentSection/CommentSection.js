@@ -2,7 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import Comment from './Comment';
-import './CommentSection.css';
+import styled from 'styled-components';
+
+const CommentWrapperInput = styled.input`
+  width: 100%;
+  padding: 15px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: none;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #ccc;
+    text-align: left;
+    font-size: 14px;
+  }
+`;
+
+const Timestamp = styled.div`
+  color: #ccc;
+  font-size: 12px;
+  margin: 15px 0;
+`;
 
 class CommentSection extends React.Component {
   state = {
@@ -65,15 +91,15 @@ class CommentSection extends React.Component {
             delComment={this.deleteComment}
           />
         ))}
-        <div className="timestamp">
+        <Timestamp>
           {moment()
             .startOf('day')
             .fromNow(this.props.post.timestamp)
             .toUpperCase()}{' '}
           AGO
-        </div>
+        </Timestamp>
         <form onSubmit={this.submitComment}>
-          <input
+          <CommentWrapperInput
             placeholder="Add a comment..."
             type="text"
             value={this.state.comment}

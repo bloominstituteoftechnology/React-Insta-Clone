@@ -1,12 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const Comments = styled.div`
+  margin: 5px 0;
+`;
+
+const CommentUser = styled.span`
+  font-weight: bold;
+  margin-right: 5px;
+`;
 
 const Comment = props => {
   return (
-    <div className="comment" onClick={props.delComment}>
-      <span className="comment-user">{props.comment.username}</span>
+    <Comments onClick={props.delComment}>
+      <CommentUser>{props.comment.username}</CommentUser>
       {props.comment.text}
-    </div>
+    </Comments>
   );
 };
 
