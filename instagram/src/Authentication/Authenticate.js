@@ -26,7 +26,11 @@ const Authenticate = App =>
             //if loggedIn: false, return <LoginPage>
 
         
-            this.state.loggedIn ? <App /> : <Login />;
+            if (this.state.loggedIn) {
+                return <App />;
+            } else {
+            return <Login />;
+            }
         }
               
         

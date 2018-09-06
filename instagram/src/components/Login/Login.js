@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Button, Form, FormGroup, Input } from 'reactstrap';
 
 
 class Login extends React.Component {
@@ -24,29 +24,37 @@ class Login extends React.Component {
 
     
     render() {
+        const disableButton = !(this.state.username && this.state.password);
+        
         return (
             <div>
-    <form className="login" onSubmit={this.logIn}>
-        <input 
+    <Form className="login">
+    <h3>Welcome to React Insta Clone</h3>
+    <div>Please Login</div>
+    <FormGroup>
+        <Input 
         type="text"
         name="username"
         value={this.state.username}
         placeholder="Enter username"
         onChange={this.handleInput}
         />
-        <input
+        <Input
         type="text"
         name="password"
         value={this.state.password}
         placeholder="Enter password"
         onChange={this.handleInput}
         />
-        <button onClick={this.logIn}>Login</button>
-    </form>
+        <Button color="success" size="large" onClick={this.logIn} disabled={disableButton}>Login</Button>
+        </FormGroup>
+    </Form>
     </div>
         )
     }
 
 }
+
+
 
 export default Login;
