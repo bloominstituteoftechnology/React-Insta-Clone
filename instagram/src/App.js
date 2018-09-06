@@ -5,6 +5,8 @@ import './App.css';
 // import PostContainer from './components/PostContainer/PostContainer';
 import PostsPage from './components/PostContainer/PostsPage';
 
+import Authenticate from './components/Authenticate/Authenticate';
+
 class App extends Component {
   constructor() {
     super();
@@ -47,6 +49,7 @@ class App extends Component {
         {/* <SearchBar search={this.search} handleChange={this.handleChange}/>
         <PostContainer posts={this.state.posts}/> */}
         <PostsPage />
+        <Authenticate />
 
         
 
