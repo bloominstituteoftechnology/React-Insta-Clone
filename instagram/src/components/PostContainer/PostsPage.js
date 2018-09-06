@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar'
 import PostContainer from './PostContainer'
+import Logout from '../Login/Logout'
 
 
 class PostsPage extends Component {
@@ -45,6 +46,7 @@ class PostsPage extends Component {
     // console.log(this.state.entries);
     return (
       <div className="posts-page">
+        <Logout />
         <SearchBar
           value={this.state.filter}
           updateFilter={this.updateFilter}

@@ -16,14 +16,16 @@ class CommentSection extends Component {
     this.state = {
       comments: [],
       comment: "",
-      likes: 0
+      likes: 0,
+      user: ""
     }
   }
 
   componentDidMount(){
     this.setState({
       comments: this.props.comments,
-      likes: this.props.likes
+      likes: this.props.likes,
+      user: Object.keys(localStorage)[0]
     })
   }
 
@@ -36,7 +38,7 @@ class CommentSection extends Component {
   addNewComment = event => {
     event.preventDefault();
     if (this.state.comment) {
-      let new_comments = [...this.state.comments, {username: 'ryan_hamblin', text: this.state.comment}]// text: e.target.innerText(o lo que sea), username: 'ryan hamblin'
+      let new_comments = [...this.state.comments, {username: this.state.user, text: this.state.comment}]// text: e.target.innerText(o lo que sea), username: 'ryan hamblin'
       this.setState({
         comments: new_comments,
         comment: ""
