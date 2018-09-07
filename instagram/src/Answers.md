@@ -1,0 +1,3 @@
+State driven views are important to software developers today because it lets us think in components.
+Thinking in coomponents gives us a clear conceptual separation that make things feel easier to work on.
+We can work more efficiently with less mistakes and redundancy. We are able to reduced cognitive load. Testing is easier. It is eaiser to right manual/documentation. I also ha close ties with Behaviour Driven Development techniques. Facebook and Instagram are examples of state-driven applications. They are powerful because they can process constantly changing and updating information in efficiently without lag.
