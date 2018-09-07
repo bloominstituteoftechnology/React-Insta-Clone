@@ -12,7 +12,7 @@ const Header = styled.header `
         margin: 0 auto;
     `;
 
-const ImageWrapper = styled.div `
+const LogoHeader = styled.div `
         margin: 15px;
         width: 130px;
         height: 35px;
@@ -53,10 +53,10 @@ const Social = styled.div `
 const SearchBar = props => {
     return (
         <Header>
-            <ImageWrapper>
+            <LogoHeader>
                 <i class='fab fa-instagram fa-2x'></i>
                 <LogoImage src={IGLogo} alt='instagram logo' />
-            </ImageWrapper>
+            </LogoHeader>
 
             <SearchForm onSubmit={props.search} onChange={props.handleChange}>
                 <SearchControl name='search' type='text' placeholder='Search' />
