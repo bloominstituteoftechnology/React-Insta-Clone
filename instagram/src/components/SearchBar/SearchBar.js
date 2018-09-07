@@ -1,33 +1,81 @@
 import React from 'react';
 import IGLogo from '../../assets/iglogo.png';
 import './SearchBar.css';
+import styled from 'styled-components';
+
+const Header = styled.header `
+        border-bottom: 1px solid gray;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 1040px;
+        margin: 0 auto;
+    `;
+
+const ImageWrapper = styled.div `
+        margin: 15px;
+        width: 130px;
+        height: 35px;
+        display: flex;
+        flex-direction: row;
+    `;
+
+const LogoImage = styled.img `
+        width: 80px;
+        height: 30px;
+        margin-left: 15px;
+        margin-top: 5px;
+    `;
+
+const SearchForm = styled.form `
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    `;
+
+const SearchControl = styled.input `
+        width: 150px;
+        height: 20px;
+    `;
+
+const SocialWrapper = styled.div `
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+    `;
+
+const Social = styled.div `
+        margin-right: 30px;
+    `;
 
 const SearchBar = props => {
     return (
-        <div className='search-bar-wrapper'>
-            <div className='image-wrapper'>
+        <Header>
+            <ImageWrapper>
                 <i class='fab fa-instagram fa-2x'></i>
-                <img alt='instagram logo' src={IGLogo} className='logo-image' />
-            </div>
+                <LogoImage src={IGLogo} alt='instagram logo' />
+            </ImageWrapper>
 
-            <form className='search-bar' onSubmit={props.search} onChange={props.handleChange}>
-                <input name='search' type='text' class='search-control' placeholder='Search' />
-            </form>
+            <SearchForm onSubmit={props.search} onChange={props.handleChange}>
+                <SearchControl name='search' type='text' placeholder='Search' />
+            </SearchForm>
 
-            <div className='social-wrapper'>
-                <div className='social'>
+            <SocialWrapper>
+                <Social>
                     <i class='far fa-compass fa-2x'></i>
-                </div>
+                </Social>
 
-                <div className='social'>
+                <Social>
                     <i class='far fa-heart fa-2x'></i>
-                </div>
+                </Social>
 
-                <div className='social'>
+                <Social>
                     <i class='far fa-user fa-2x'></i>
-                </div>
-            </div>
-        </div>
+                </Social>
+            </SocialWrapper>
+        </Header>
     );
 };
 
