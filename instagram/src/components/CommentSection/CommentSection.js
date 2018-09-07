@@ -9,6 +9,10 @@ import Comment from './Comment'
 import TimeStamp from './TimeStamp'
 import CommentInput from './CommentInput'
 
+import styled from 'styled-components';
+
+// const 
+
 
 class CommentSection extends Component {
   constructor(props) {

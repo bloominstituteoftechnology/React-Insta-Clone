@@ -1,17 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './PostContainer.css';
-
+// import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection'
+import styled from 'styled-components';
+import {Username} from '../Styles/Reusable'
+
+const UserThumbnail = styled.img`
+  border-radius: 50%;
+  height: 30px;
+  margin-left: 16px;
+`
+
+const PostImage = styled.img`
+  width: 100%;
+`
 
 const Post = props => {
   return (
     <div className="post">
       <div className="post-header">
-        <img className="post-header-img" src={props.data.thumbnailUrl} />
-        <h3 className="post-header-username">{props.data.username}</h3>
+        <UserThumbnail src={props.data.thumbnailUrl} />
+        <Username>{props.data.username}</Username>
       </div>
-      <img className="post-img" src={props.data.imageUrl} />
+      <PostImage src={props.data.imageUrl} />
       <CommentSection
         comments={props.data.comments}
         likes={props.data.likes}

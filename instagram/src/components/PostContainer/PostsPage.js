@@ -4,7 +4,15 @@ import PropTypes from 'prop-types';
 import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar'
 import PostContainer from './PostContainer'
-import Logout from '../Login/Logout'
+import {Logout} from '../Login/Logout'
+
+import styled from 'styled-components';
+
+// const no se que = styled``
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
 
 
 class PostsPage extends Component {

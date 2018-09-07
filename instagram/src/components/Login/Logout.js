@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-class Logout extends React.Component {
+export class Logout extends React.Component {
   constructor(){
     super();
   }
@@ -19,4 +19,4 @@ class Logout extends React.Component {
 }
 
 
-export default Logout
+// export default Logout

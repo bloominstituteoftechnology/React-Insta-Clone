@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import {Username} from '../Styles/Reusable'
 
 const Comment = props => {
   return (
 
   <div className='comment'>
-    <p> <b>{props.comment.username}</b> {props.comment.text}</p>
+    <p> <Username>{props.comment.username}</Username> {props.comment.text}</p>
   </div>
   )
 }

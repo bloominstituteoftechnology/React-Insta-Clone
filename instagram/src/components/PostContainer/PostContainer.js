@@ -1,14 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './PostContainer.css';
+// import './PostContainer.css';
+
+import styled from 'styled-components';
 
 import Post from './Post'
 
+const PostWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  border: 1px solid black;
+`
+
 const PostContainer = props => {
   return (
-    <div className='post-container'>
+    <PostWrapper>
       <Post data={props.entry} />
-  </div>
+  </PostWrapper>
   )
 }
 
