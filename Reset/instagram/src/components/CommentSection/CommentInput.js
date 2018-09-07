@@ -2,10 +2,10 @@ import React from 'react';
 import './Comment.css';
 
 const CommentInput = props => {
-  console.log(props.handleaddNewComment);
+  console.log(props.comment);
   return (
-    <form>
-      <input className= "commentbox" type="text" placeholder="Add comment... " onSubmit ={props.handleaddNewComment}/>
+    <form onSubmit={props.handleaddNewComment} >
+      <input className= "commentbox" type="text" placeholder="Add comment... " onChange={props.inputText} />
     </form>
   );
 };

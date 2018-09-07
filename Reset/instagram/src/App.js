@@ -4,7 +4,8 @@ import dummyData from './dummy-data';
 import PostsContainer from './components/PostsContainer/PostsContainer';
 import SearchBar from './components/SearchBar/SearchBarContainer';
 // import PostsPage from './components/PostsContainer/PostsPage';
-import Authenticate from './components/Authentication/Authenticate';
+// import Authenticate from './components/Authentication/Authenticate';
+import PostsPage from './components/PostsContainer/PostsPage';
 
 class App extends Component {
   constructor(props) {
@@ -28,11 +29,12 @@ class App extends Component {
 
   render() {
 
-    console.log(this.state.posts);
+    // console.log(this.state.posts);
     return (
       <div className="App">
         <SearchBar />
         <PostsContainer posts={this.state.posts} />
+        {/* <PostsPage /> */}
         {/* <Authenticate loggedIn = {this.loggedIn} /> */}
       </div>
     );

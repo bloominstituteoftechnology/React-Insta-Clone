@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import './Comment.css';
 
 const Comment = props => {
-  console.log(props.likes);
+  // console.log(props.likes);
   return (
     <div className="comment-text">
-      {/* <span className="likes">{props.likes}</span> */}
       <span className="comment">{props.comment.text}</span>{' '}
       <span className="user">-{props.comment.username}</span>
     </div>

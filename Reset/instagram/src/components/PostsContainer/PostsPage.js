@@ -1,4 +1,5 @@
 // import React from 'react';
+// import dummyData from '../../dummy-data';
 // import './Posts.css';
 
 // class PostsPage extends React.Component {
@@ -8,7 +9,12 @@
 //         posts: dummyData
 //       };
 //     }
-//  render()
+//  render(){
+//      return (
+//      <div>
+//      </div>
+//      );
+//  }
 // }
 
 // export default PostsPage;

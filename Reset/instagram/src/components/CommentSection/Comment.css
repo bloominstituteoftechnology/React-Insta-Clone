@@ -45,3 +45,30 @@ form {
   padding-left: 2%;
   padding-bottom: 2%;
 }
+
+.commenticons {
+  padding-right: 83%;
+  padding-bottom: 2%;
+}
+
+.small1 {
+  width: 40%;
+  padding: 2%;
+ 
+
+}
+
+.small1:hover {
+  color:rgb(255, 0, 0);
+  background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/mCz7hqj/videoblocks-love-hearts-background-loop-valentines-day-pink_ssyws2msx_thumbnail-full01.png");
+  border-radius: 0;
+  background-repeat: round;
+  background-size: 40px;
+  cursor: grab;
+}
+
+.small2 {
+  width: 40%;
+  padding: 2%;
+
+}

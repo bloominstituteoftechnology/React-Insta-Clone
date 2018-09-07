@@ -1,0 +1,7 @@
+State driven development seems to an important turning point in the evolution of front end design, architecture, building and maintenance.
+As I think through some of the concept that I have struggled with as a new developer, I always come back to data flow and the architecture
+that enables and guides it. It makes sense that instead of concentration on the pages based on behavior (or as one website put it the "why?"
+behind the code) that we would focus on the potential states that are necessary to exist for us to have an app that achieves a certain desired outcome.
+Focusing on behavior is challenging because it seems that many aspects are based on best practice and probable outcomes rather than the technological
+necessity for the product to work as intended. Once we have the product working as intended then it seems logical to layer in some BDD to make the app
+more human. State is a powerful concept because it applied elegantly can define the structure for our apps. React empowers this idea by enabling super modularity.
