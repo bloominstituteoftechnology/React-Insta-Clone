@@ -3,13 +3,28 @@ import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
 import Heart from '../../assets/heart.svg';
+import styled from 'styled-components';
+
+const HeartImage = styled.img `
+        width: 25px;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 10px;
+        margin-top: 5px;
+    `;
+
+const Likes = styled.div `
+        display: flex;
+        flex-direction: column-reverse;
+        width: 40px;
+    `;
 
 class CommentSection extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
         comments: props.comments,
-        newComment: '',
+        newComment: "",
         likes: 0
       };
     }
@@ -19,15 +34,15 @@ class CommentSection extends React.Component {
         this.setState({
           comments: [
             ...this.state.comments,
-            { username: 'SomeUser', text: this.state.newComment }
+            { text: this.state.newComment, username: "SomeUser" }
           ],
-          newComment: ''
+          newComment: ""
         });
     };
 
     handleChange = event => {
         this.setState({ [event.target.name]: event.target.value });
-    }
+    };
 
     increaseLikes = event => {
         event.preventDefault();
@@ -37,12 +52,12 @@ class CommentSection extends React.Component {
     render() {
         return (
             <div className='comment-section'>
-                <div className='likes'>
+                <Likes>
                     {this.state.likes}
-                    <img onClick={this.increaseLikes} className='heart' src={Heart} />
-                </div>
+                    <HeartImage onClick={this.increaseLikes} src={Heart} />
+                </Likes>
                 {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-                <CommentInput 
+                <CommentInput
                     addNewComment={this.addNewComment}
                     handleChange={this.handleChange}
                 />
@@ -51,10 +66,10 @@ class CommentSection extends React.Component {
     }
 }
 
-CommentSection.PropTypes = {
+CommentSection.propTypes = {
     comments: PropTypes.arrayOf(
-        PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
+      PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
     )
-};
+  };
 
 export default CommentSection;
