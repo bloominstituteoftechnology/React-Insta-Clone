@@ -4,6 +4,14 @@ import Comment from './Comment';
 import CommentInput from './CommentInput';
 import './CommentSection.css';
 
+import styled from 'styled-components';
+
+const TwoIcons = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  width: 64px;
+`
+
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
@@ -38,7 +46,7 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div>
-        <div className="two-icons">
+        <TwoIcons>
         <section>
           {this.state.likes}
           <i className="far fa-heart" onClick={this.increaseLikes}></i>
@@ -46,7 +54,7 @@ class CommentSection extends React.Component {
         <section>
           <i className="far fa-comment"></i>
         </section>
-        </div>
+        </TwoIcons>
         <div>
           {this.state.comments.map((item, index) => <Comment key={index} comment={item} />)}
           <CommentInput 

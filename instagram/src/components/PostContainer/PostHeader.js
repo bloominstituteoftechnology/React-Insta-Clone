@@ -30,7 +30,7 @@ const PostHeader = props => {
           src={props.thumbnailUrl}
         />
       </PostThumbWrapper>
-      <Username>{props.username}</Username>
+      <Username primary>{props.username}</Username>
       </Header>
   );
 };
