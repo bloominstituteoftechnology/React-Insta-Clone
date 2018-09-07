@@ -1,0 +1,55 @@
+.login-page{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.login-container{
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    font: inherit;
+    vertical-align: baseline;
+    color: #262626;
+    justify-content: center;
+    margin-top: 12px;
+    max-width: 350px;
+    align-items: stretch;
+    border: 0 solid #000;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    align-items: center;
+    width:30%;
+
+}
+
+/* .IGLogo{
+    margin: 22px auto 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://rawgit.com/LambdaSchool/React-Insta-Clone/4079cf6fb6d11bd3ad7a422cdec35e0aab4e2bfe/instagram/src/assets/iglogo.png);
+    background-repeat: no-repeat;
+    height: 51px;
+    width: 175px;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    color: #262626;
+    font-size: 30px;
+} */
+
+.login-button{
+    height: 30px;
+    width: 100px;
+    color: #3897F0;
+}
