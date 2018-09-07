@@ -29,9 +29,7 @@ function CommentSection (props) {
     return (
         <CommentSectionDiv>
             <Header>
-                
-                    <UsernameThumbnail src = {props.data.thumbnailUrl}/>
-                
+                <UsernameThumbnail src = {props.data.thumbnailUrl}/>                
                 <div>
                     <h4>{props.data.username}:</h4>
                 </div>

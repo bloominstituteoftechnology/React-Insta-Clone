@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import App from "../../App";
 import Login from "../Login/Login";
+import styled from "styled-components"
+import { ThemeProvider } from 'styled-components'
+import theme from '../../styles/theme'
 
 const Authenticate = Component =>
   class extends React.Component {
@@ -18,8 +21,11 @@ const Authenticate = Component =>
         this.state.loggedin ? (
         <Component />
       ) : (
-        <Login       
+        <ThemeProvider theme={theme}>
+          <Login    
         />
+        </ThemeProvider>
+        
       );
     }
 

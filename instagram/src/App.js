@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-//import './App.css';
+import './App.css';
 import PostPage from './components/PostContainer/PostPage';
 import Authenticate from './components/Authenticate/Authenticate';
+import { ThemeProvider } from 'styled-components'
+import theme from './styles/theme'
 
 
-
-
-function App (){  
+function App (props){  
  return (
-   <div className="App">    
-    <PostPage/>
+   <div className="App">
+    <ThemeProvider theme={theme}>
+      <PostPage/>
+    </ThemeProvider>        
    </div>
             
     )    
