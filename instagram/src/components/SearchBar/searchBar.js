@@ -4,14 +4,25 @@ import logo from './instagram-logo.png';
 // import SearchInput from './SearchInput';
 import ThreeIcons from './ThreeIcons';
 
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid lightgray;
+  `
+
+const Image = styled.img`
+  width: 223px;
+  `  
 
 const SearchBar = props => {
   return ( 
-      <div className="search-bar">
+      <Wrapper>
 
        {/* <Logo /> */}
          <div>
-           <img src={logo} className="App-logo" alt="instagram-logo" />
+           <Image src={logo} className="App-logo" alt="instagram-logo" />
          </div>
 
          <div>
@@ -22,7 +33,7 @@ const SearchBar = props => {
        {/* <SearchInput onSubmit={props.search} onChange={props.handleChange}/> */}
        <ThreeIcons />
 
-      </div> 
+      </Wrapper>
     );
 }
  
