@@ -1,5 +1,4 @@
 import React from 'react';
-import './SearchBar.css';
 import IGLogo from '../../assets/iglogo.png';
 import SearchForm from './SearchForm';
 import styled from 'styled-components';

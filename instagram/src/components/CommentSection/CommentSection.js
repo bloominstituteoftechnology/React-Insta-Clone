@@ -49,11 +49,11 @@ class CommentSection extends React.Component {
   };
 
   render() {
-    console.log('comment section render()');
-    console.log(this.props);
+    // console.log('comment section render()');
+    // console.log(this.props);
     // console.log(this.state.comments);
     // console.log('render', this.state.commentInput);
-    console.log('----------------');
+    // console.log('----------------');
     return (
       <div className="comment-section">
         <div className="icon-buttons">

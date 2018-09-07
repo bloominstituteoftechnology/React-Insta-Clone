@@ -1,19 +1,16 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
-import './PostContainer.css';
+import Post from './Post';
+import styled from 'styled-components';
 
 function PostContainer(props) {
   // console.log('post container', props.post);
   return (
-    <div className="post-container">
-      <div className="post-header">
-        <img src={props.post.thumbnailUrl} alt="" />
-        <h3>{props.post.username}</h3>
-      </div>
-      <img src={props.post.imageUrl} alt="" />
+    <ContainerPost>
+      <Post post={props.post} />
       <CommentSection post={props.post} />
-    </div>
+    </ContainerPost>
   );
 }
 
@@ -29,3 +26,9 @@ PostContainer.propTypes = {
 };
 
 export default PostContainer;
+
+const ContainerPost = styled.div`
+  width: 642px;
+  border: 1px solid lightgray;
+  margin: 10px 0;
+`;
