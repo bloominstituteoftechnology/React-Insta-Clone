@@ -1,0 +1,44 @@
+.posts-container-wrapper {
+  height: 500px;
+  width: 50%;
+  margin: 5px auto;
+}
+.post-border {
+  border: 1px solid #d3d3d3;
+  margin: 5px 0;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  /* height: 115%; */
+  margin-top: 8%;
+}
+.post-image-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.post-thumb-wrapper {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  padding: 2%;
+}
+.post-thumb {
+  height: 100%;
+  border-radius: 50%;
+}
+
+.accountname {
+  width: 35%;
+  padding-top: 5%;
+  font-weight: 600;
+}

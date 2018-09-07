@@ -1,0 +1,55 @@
+
+.commentBarMain {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; 
+        /* margin-left: 4%; */
+        border: 1px solid black;
+        margin-left: 27.9%;
+    
+}
+
+.commentBarMain .commentIcons {
+        width: 15%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 3%;
+
+}
+
+.commentBarMain .likesBox {
+        padding-left: 3%;
+        font-size: .4rem;
+
+}
+
+.commentBarMain .commentField {
+        padding-left: 3%;
+        font-size: .7rem;
+}
+
+.commentBarMain .commentField .commentTimestamp {
+    padding-left: 3%;
+    font-size: .7rem;
+    color: #c7c8c9;
+}
+
+.commentBarMain .addComment {
+    width: 88%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding: 4% 4% 4% 1%;
+    border-top: 1px solid black;
+    margin: 0% 0% 2% 2%;
+}
+
+/* .commentBarMain .addComment .bottomInput input {
+        outline-style: none;
+
+} */
