@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "bootstrap": "^4.1.1",
-    "reactstrap": "^6.4.0"
+    "reactstrap": "^6.4.0",
+    "styled-components": "^3.4.5"
   }
 }
