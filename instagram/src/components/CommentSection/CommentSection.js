@@ -17,9 +17,14 @@ class CommentSection extends React.Component {
   }
 
   componentDidMount() {
+    console.log(this.props.post);
+    const { comments, likes } = this.props.post;
+    console.log('c', comments, 'l', likes);
     this.setState({
-      comments: this.props.post.comments,
-      likes: this.props.post.likes,
+      // comments: this.props.post.comments,
+      // likes: this.props.post.likes,
+      comments,
+      likes,
     });
   }
 
