@@ -12,7 +12,7 @@ const Header = styled.div`
   border-bottom: 2px solid lightgray;
   `
 
-const Image = styled.img`
+const LogoImage = styled.img`
   width: 223px;
   `  
 
@@ -22,7 +22,7 @@ const SearchBar = props => {
 
        {/* <Logo /> */}
          <div>
-           <Image src={logo} className="App-logo" alt="instagram-logo" />
+           <LogoImage src={logo} className="App-logo" alt="instagram-logo" />
          </div>
 
          <div>
