@@ -1,0 +1,11 @@
+.post-image {
+  width: 100%;
+}
+.post-thumb-wrapper {
+  height: 50px;
+  width: 50px;
+}
+.post-thumb {
+  height: 100%;
+  border-radius: 50%;
+}
