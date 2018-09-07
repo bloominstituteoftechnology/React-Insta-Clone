@@ -1,5 +1,4 @@
-.comment-text {
-    /* border: 1px solid black; */
+/* .comment-text {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
@@ -31,13 +30,13 @@
     margin-top: 20px;
     width: 200px;
     height: 20px;
-}
+} */
 
 ::placeholder {
     padding-left: 50px;
 }
 
-.heart {
+/* .heart {
     width: 25px;
     display: flex;
     justify-content: flex-start;
@@ -46,8 +45,7 @@
 }
 
 .likes {
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column-reverse;
     width: 40px;
-}
+} */
