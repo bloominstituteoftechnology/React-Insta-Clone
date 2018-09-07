@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
+import Username from '../../Styles/Reusables';
 
 const Header = styled.div`
   display: flex;  
@@ -15,6 +16,10 @@ const PostThumbImg = styled.img`
   height: 100%;
   border-radius: 50%;
 `
+// const Username = styled.div`
+//   font-weight: 500;
+//   font-size: 14px;
+// `
 
 const PostHeader = props => {
   return (
@@ -25,7 +30,7 @@ const PostHeader = props => {
           src={props.thumbnailUrl}
         />
       </PostThumbWrapper>
-      <div>{props.username}</div>
+      <Username>{props.username}</Username>
       </Header>
   );
 };
