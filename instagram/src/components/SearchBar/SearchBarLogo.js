@@ -1,24 +1,40 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const SearchBarLogoContainer = styled.div`
+    display: flex;
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 25%;
+`;
+
+const Divider = styled.span`
+    width: 5px;
+`;
+
+const LogoText = styled.p`
+    width: 50px;
+    margin-left: 5%;
+    font-weight: bold;
+`;
+
+const SocialDiv = styled.div`
+    width: 50px;
+`;
 
 function SearchBarLogo(props) {
     return(
-        <div>
-            <img 
-                className="icon"
-                src="instagram-new.png" 
-                alt="Instagram Logo">
-            </img>
+        <SearchBarLogoContainer>
+            <SocialDiv>
+                <i class="fab fa-instagram"></i>
+            </SocialDiv>
 
-            <div>
-                
-            </div>
+            <Divider>|</Divider>
 
-            <img 
-                className="icon"
-                src="instagram-letters.png" 
-                alt="Instagram">
-            </img>
-        </div>
+            <LogoText> 
+                Instagram
+            </LogoText>
+        </SearchBarLogoContainer>
     )
 }
 

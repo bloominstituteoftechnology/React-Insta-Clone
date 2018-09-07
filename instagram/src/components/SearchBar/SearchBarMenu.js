@@ -1,32 +1,29 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const SearchBarMenuContainer = styled.div`
+    display: flex;
+    margin-top: 20px;
+    margin-right: 5%;
+`;
+
+const SocialDiv = styled.div`
+    width: 50px;
+`;
 
 function SearchBarMenu(props) {
-    return(
-        <div>
-            <button>
-                <img
-                    className="icon"
-                    src="instagram-new.png"
-                    alt="instagram compass icon">
-                </img>
-            </button>
-
-            <button>
-                <img
-                    className="icon"
-                    src="instagram-new.png"
-                    alt="instagram heart icon">
-                </img>
-            </button>
-
-            <button>
-                <img
-                    className="icon"
-                    src="instagram-new.png"
-                    alt="instagram profile icon">
-                </img>
-            </button>
-        </div>
+    return (
+        <SearchBarMenuContainer>
+            <SocialDiv>
+                <i className="far fa-compass" />
+            </SocialDiv>
+            <SocialDiv>
+                <i className="far fa-heart" />
+            </SocialDiv>
+            <SocialDiv>
+                <i className="far fa-user-circle" />
+            </SocialDiv>
+        </SearchBarMenuContainer>
     );
 }
 

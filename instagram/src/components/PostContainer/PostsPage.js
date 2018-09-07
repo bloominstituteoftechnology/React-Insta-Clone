@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import SearchBarContainer from '../SearchBar/SearchBarContainer';
 import PostContainer from './PostContainer';
 import dummyData from '../../dummy-data';
+import styled from 'styled-components';
+
+const PostsPageContainer = styled.div`
+    display: block;
+    max-width: 880px;
+    margin: auto;
+    width: 100%;
+`;
 
 class PostsPage extends Component {
     constructor() {
@@ -27,6 +35,7 @@ class PostsPage extends Component {
             if (post.username === this.state.search) {
                 return post;
             }
+            return null;
         })
         this.setState({ postInfo: additionalPosts })
     }
@@ -38,7 +47,7 @@ class PostsPage extends Component {
 
     render() {
         return (
-            <div>
+            <PostsPageContainer>
                 <SearchBarContainer
                     search={this.search}
                     handleChanging={this.handleChanging}
@@ -46,7 +55,7 @@ class PostsPage extends Component {
                 <PostContainer
                     posts={this.state.postInfo}
                 />
-            </div>
+            </PostsPageContainer>
         )
     }
 }

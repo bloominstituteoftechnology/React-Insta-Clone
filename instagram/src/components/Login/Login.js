@@ -1,4 +1,21 @@
 import React, { Component } from 'react';
+import {Button, Form, Input} from 'reactstrap';
+import styled from 'styled-components';
+
+const LoginContainer = styled.div`
+    display: block;
+    text-align: center;
+    max-width: 880px;
+    width: 100%;
+`;
+
+const LoginH4 = styled.h4`
+    margin-top: 20px;
+`;
+
+const LoginP = styled.p`
+    margin-top: 20px;
+`;
 
 class Login extends Component {
     constructor(props) {
@@ -25,35 +42,40 @@ class Login extends Component {
         // localStorage.setItem('password', password);
         // const LSPassword = localStorage.getItem('password');
 
-        
-
         window.location.reload();
     }
 
     render() {
         return (
-            <div>
-                <form>
-                    <input
+            <LoginContainer>
+                <LoginH4>
+                    Welcome to Fake-stagram!
+                </LoginH4>
+
+                <LoginP>
+                    Please login.
+                </LoginP>
+                <Form>
+                    <Input 
                         type="text"
                         name="username"
                         placeholder="username"
                         value={this.state.username}
                         onChange={this.handleChanges}
                     />
-                    <input
+                    <Input
                         type="text"
                         name="password"
                         placeholder="password"
                         // value={this.state.password}
                         // onChange={this.handleChanges}
                     />
-                </form>
 
-                <button onClick={this.login}>
-                    Login
-                </button>
-            </div>
+                    <Button onClick={this.login}>
+                        Login
+                    </Button>
+                </Form>
+            </LoginContainer>
         )
     }
 }

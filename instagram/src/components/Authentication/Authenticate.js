@@ -19,7 +19,6 @@ const Authenticate = App =>
         }
 
         render() {
-            console.log(this.state.loggedIn);
                 if(this.state.loggedIn === true) {
                     return <App />;
                 } else return <Login />;
