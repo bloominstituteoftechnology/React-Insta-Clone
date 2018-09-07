@@ -6,7 +6,7 @@ import ThreeIcons from './ThreeIcons';
 
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const Header = styled.div`
   display: flex;
   justify-content: space-around;
   border-bottom: 2px solid lightgray;
@@ -18,7 +18,7 @@ const Image = styled.img`
 
 const SearchBar = props => {
   return ( 
-      <Wrapper>
+      <Header>
 
        {/* <Logo /> */}
          <div>
@@ -33,7 +33,7 @@ const SearchBar = props => {
        {/* <SearchInput onSubmit={props.search} onChange={props.handleChange}/> */}
        <ThreeIcons />
 
-      </Wrapper>
+      </Header>
     );
 }
  
