@@ -1,6 +1,9 @@
 import React from 'react';
 import Comment from './Comment';
-import './CommentSection.css';
+// import './CommentSection.css';
+import AddComment from './AddComment';
+import SocialButtons from './SocialButtons';
+import styled from 'styled-components';
 
 class CommentSection extends React.Component {
   constructor() {
@@ -31,9 +34,6 @@ class CommentSection extends React.Component {
 
   addNewComment = (event) => {
     event.preventDefault();
-    // console.log('test add new comment');
-    // console.log(...this.state.comments);
-    // console.log(this.state.commentInput);
     if (this.state.commentInput) {
       this.setState({
         comments: [
@@ -55,31 +55,30 @@ class CommentSection extends React.Component {
     // console.log('render', this.state.commentInput);
     // console.log('----------------');
     return (
-      <div className="comment-section">
-        <div className="icon-buttons">
-          <div className="like-button" onClick={this.increaseLikes}>
-            <i className="far fa-heart" />
-          </div>
-          <div className="comment-button">
-            <i className="far fa-comment" />
-          </div>
-          <h4>{this.state.likes} likes</h4>
-        </div>
-
+      <CommentContainer>
+        <SocialButtons
+          increaseLikes={this.increaseLikes}
+          likes={this.state.likes}
+        />
         {this.state.comments.map((comment) => (
           <Comment comment={comment} key={comment.text} />
         ))}
-        <form onSubmit={this.addNewComment}>
-          <input
-            value={this.state.commentInput}
-            onChange={this.handleChange}
-            placeholder="Add a comment..."
-            name="commentInput"
-          />
-        </form>
-      </div>
+        <AddComment
+          addNewComment={this.addNewComment}
+          commentInput={this.state.commentInput}
+          handleChange={this.handleChange}
+        />
+      </CommentContainer>
     );
   }
 }
 
 export default CommentSection;
+
+const CommentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+`;
