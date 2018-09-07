@@ -9,9 +9,7 @@ const HeaderContainer = styled.div`
     padding-left: 20px;
     text-align: left;
     margin-left: 6.5%;
-    width: 87%;
-    border: 1px solid lightgray;
-    border-radius: 3px;
+    width: 100%;
 `;
 
 

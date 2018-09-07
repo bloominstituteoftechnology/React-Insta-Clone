@@ -5,10 +5,8 @@ import styled from 'styled-components';
 const LikesSectionWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    border-left: 1px solid lightgray;
-    border-right: 1px solid lightgray;
-    width: 87%;
-    margin-left: 6.5%;
+    width: 100%;
+    margin-left: 2%;
     margin-top: -5px;
 `;
 
@@ -47,10 +45,10 @@ const Likes = (props)=> {
         <LikesSectionWrapper onClick={props.addLike}>
             <LikesIcons>
             <div className='icon heart'>
-                <HeartImg src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_LktPZC6w-ymgFFTzKvQn7LXQyyZs5mlIm9zgjOiHzyBkvEFD'/>
+                <HeartImg src='https://image.flaticon.com/icons/svg/1082/1082134.svg'/>
             </div>
             <div className='icon bubble'>
-                <BubbleImg src='https://cdn2.iconfinder.com/data/icons/web-and-mobile-ui-volume-11/48/517-512.png' />
+                <BubbleImg src='https://image.flaticon.com/icons/svg/118/118712.svg' />
             </div>
             </LikesIcons>
             <LikesNumber>

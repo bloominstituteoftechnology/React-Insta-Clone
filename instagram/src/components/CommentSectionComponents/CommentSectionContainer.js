@@ -5,20 +5,15 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const CommentSectionWrapper = styled.div`
-    border-left: 1px solid lightgray;
-    border-right: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
-    border-radius: 3px;
     padding-left: 20px;
     padding-bottom: 20px;
-    width: 87%;
-    margin-left: 6.5%;
+    width: 100%;
+    margin-left: 2%;
     margin-top: -5px;
     margin-bottom: 40px;
 `;
 
 const Comments = styled.div`
-    border-bottom: 1px solid lightgray;
     margin-right: 4%;
     padding-bottom: 20px;
     padding-top: 10px;

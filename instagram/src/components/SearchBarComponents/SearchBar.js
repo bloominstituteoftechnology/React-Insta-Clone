@@ -16,11 +16,10 @@ const LogoImg = styled.img`
 const SearchInput = styled.input`
     margin-top: 80px;
     border-radius: 3px;
-    height: 20px;
+    height: 25px;
     font-size: 14px;
     padding-left: 10px;
     color: gray;
-    background: #F7F8F7;
     margin-bottom: 0px;
 `;
 
@@ -32,8 +31,9 @@ const IconsWrapper = styled.div`
 `;
 
 const CompassImg = styled.img`
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
+    padding-top: 8px;
 `;
 
 const HeartImg = styled.img`
@@ -44,8 +44,8 @@ const HeartImg = styled.img`
 
 const PersonImg = styled.img`
     width: 30px;
-    height: 37px;
-    padding-top: 8px;
+    height: 35px;
+    padding-top: 10px;
 `;
 
 const SearchBar = (props)=> {
@@ -59,13 +59,13 @@ const SearchBar = (props)=> {
             </div>
             <IconsWrapper>
                 <div>
-                    <CompassImg src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5EGMr2m-B9HnZjVtAvKbpZMOw8sn3CiKb1Nex3gFvKIZ0vjosTA'/>
+                    <CompassImg src='https://image.flaticon.com/icons/svg/732/732130.svg'/>
                 </div>
                 <div className='icons heart'>
-                    <HeartImg src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_LktPZC6w-ymgFFTzKvQn7LXQyyZs5mlIm9zgjOiHzyBkvEFD'/>
+                    <HeartImg src='https://image.flaticon.com/icons/svg/1082/1082134.svg'/>
                 </div>
                 <div>
-                    <PersonImg src='http://www.iconarchive.com/download/i93784/custom-icon-design/silky-line-user/user.ico'/>
+                    <PersonImg src='https://image.flaticon.com/icons/svg/118/118781.svg'/>
                 </div>
             </IconsWrapper>
         </SearchBarWrapper>

@@ -2,13 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CommentInput = styled.input`
-    height: 30px;
     text-align: left;
-    border: none;
-    font-size: 16px;
+    border-top: 1px solid lightgray;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    font-size: 18px;
     margin-top: 10px;
-    margin-left: 0%;
-    width: 99%;
+    margin-right: 10%;
+    padding-top: 25px;
+    width: 90%;
 `;
 
 const CommentBar=(props)=> {
