@@ -58,3 +58,7 @@
 .icon {
   margin: 0 0 0 20px;
 }
+
+.wrapper{
+  position: relative;
+}
