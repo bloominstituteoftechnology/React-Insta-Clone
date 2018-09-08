@@ -9,18 +9,26 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData
+      posts: [],
+      filteredPosts: []
     };
   }
-  handleInput = e =  
+ 
   componentDidMount() {
-    posts => this.setState({ posts: posts.PostContainer })
+    this.setState({ posts: dummyData});
+  }
+  handleInput = e => {
+    const posts = this.state.posts.filter(p => 
+      p.username.includes(e.target.value));  
+      this.setState({ filteredPosts: posts });
   };
+ 
   render() {
     return (
       <div className="App">
-      <SearchBar />
-      <PostContainer posts={this.state.posts} />
+      
+      <SearchBar handleInput={this.handleInput} />
+      <PostContainer posts={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} />
       </div>
     );
   }
