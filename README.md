@@ -1,1 +1,1 @@
-https://codesandbox.io/s/github/BrianARuff/React-Insta-Clone/tree/master/instagram
+https://codesandbox.io/s/jz74813o2w
