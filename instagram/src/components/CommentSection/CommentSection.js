@@ -1,6 +1,20 @@
 import React from "react";
 import Comment from "./Comment";
 
+import styled from 'styled-components';
+
+const CommentForm = styled.form`
+  border-top: 1px solid lightgray;
+`;
+
+const CommentInput = styled.input`
+  width: 100%
+  padding: 10px 5%;
+  border: none;
+  outline: none;
+  font-size: 1.7rem;
+`;
+
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +35,13 @@ class CommentSection extends React.Component {
     this.props.addNewComment(this.state.inputComment, this.props.postIndex)
   }
 
+  timePass = () => {
+    const postDate = Date.parse(this.props.post.timestamp);
+    const today = new Date();
+    return postDate.toString(); 
+  
+  }
+
   render() {
     return(
       <div>
@@ -31,12 +52,13 @@ class CommentSection extends React.Component {
 
           />
         ))}
-        <form onSubmit={this.onSubmit}>
-          <input 
+        <p>{this.timePass()} hours</p>
+        <CommentForm onSubmit={this.onSubmit}>
+          <CommentInput 
             placeholder="Add a comment..."
             onChange={this.changeInput} 
           />
-        </form>
+        </CommentForm>
       </div>
     )
   }

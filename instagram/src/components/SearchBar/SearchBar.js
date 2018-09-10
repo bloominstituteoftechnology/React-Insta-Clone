@@ -2,14 +2,32 @@ import React from 'react';
 import '../../index.css';
 import './Search.css';
 
-import styled from "style-components";
+import styled from "styled-components";
 
 const Wrapper = styled.section`
+  position: fixed;
+  z-index: 10;
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px auto;
+  padding: 10px 2%;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+`;
+
+const Icons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10%;
+`;
+
+const Search = styled.input`
+  border-radius: 5px;
+  padding: 5px 5%;
+  font-weight: bold;
 `;
 
 class SearchBar extends React.Component {
@@ -23,18 +41,18 @@ class SearchBar extends React.Component {
 
   render() {
     return(
-      <section className="search">
-        <div className="logo">
-        </div>
+      <Wrapper>
+        <span className="logo">
+        </span>
         <form>
-          <input placeholder="Search" onChange={this.props.search} />
+          <Search placeholder="Search" onChange={this.props.search} />
         </form>
-        <div className="icons">
-          <div className="compass"></div>
-          <div className="heart"></div>
-          <div className="person"></div>
-        </div>
-      </section>
+        <Icons>
+          <span className="compass"></span>
+          <span className="heart"></span>
+          <span className="person"></span>
+        </Icons>
+      </Wrapper>
     )
   }
 }

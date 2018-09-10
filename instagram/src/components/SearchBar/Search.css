@@ -21,14 +21,3 @@
 	width: 22px;
 	height: 24px;
 }
-
-.search {
-	
-}
-
-.search .icons {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 10%;
-}
