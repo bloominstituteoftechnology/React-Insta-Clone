@@ -9,7 +9,7 @@ const CommentSection = props => {
     return(
         <React.Fragment className='Post-display'>
 
-            <div className='thumbnail'>{props.displayedComments.thumbnailUrl}</div>  
+            {/* <div>{props.displayedComments.thumbnailUrl}</div>   */}
             <strong>{props.displayedComments.username}</strong>
             <div>{props.displayedComments.imageUrl}</div>
             <span>{props.displayedComments.likes}</span>
