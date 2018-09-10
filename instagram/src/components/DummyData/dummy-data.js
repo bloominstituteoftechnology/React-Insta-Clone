@@ -1,4 +1,6 @@
-const dummyData = [
+import React from 'react';
+
+const dummyData = [ 
   {
     username: "philzcoffee",
     thumbnailUrl:
