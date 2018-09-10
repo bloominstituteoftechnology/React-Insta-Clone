@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data'
 import SearchBar from './components/SearchBar'
@@ -21,15 +20,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="search-bar">
+        {/* <header className="search-bar">
           <SearchBar />
-        </header>
+        </header> */}
         <p className="post-container">
-          <PostContainer comments='dummyDataList'/>
+          <PostContainer comments={this.state.dummyDataList}/>
         </p>
-        <footer className='comment-section'>
+        {/* <footer className='comment-section'>
         <CommentSection />
-        </footer>
+        </footer> */}
       </div>
     );
   }

@@ -6,13 +6,16 @@ import PropTypes from 'prop-types'
 
 const PostContainer = props => {
 
-    return (props.comments.map(comment => <CommentSection key={comment.timestamp} displayedComments={comment} />));
-}
+    return(
+        <div className=''>
+     {props.comments.map(comment => <CommentSection key={comment.timestamp} displayedComments={comment} />)}
+     </div>
 
+)};
 
-PostContainer.propTypes = {
-    comments: PropTypes.arrayOf(PropTypes.object)
-}
+// PostContainer.propTypes = {
+//     comments: PropTypes.arrayOf(PropTypes.string)
+// }
 
 
 
