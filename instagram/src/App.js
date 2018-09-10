@@ -1,18 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import dummyData from './dummy-data'
+import SearchBar from './components/SearchBar'
+import PostContainer from './components/PostContainer'
+import CommentSection from './components/CommentSection'
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      dummyDataList: dummyData
+    }
+  }
+
+
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+        <header className="search-bar">
+          <SearchBar />
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+        <p className="post-container">
+          <PostContainer comments='dummyDataList'/>
         </p>
+        <footer className='comment-section'>
+        <CommentSection />
+        </footer>
       </div>
     );
   }
