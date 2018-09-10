@@ -1,0 +1,40 @@
+.main {
+  border-bottom: 1px solid #3333;
+  height: 80px;
+  line-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+}
+
+.cam {
+    height: 50px;
+    width: 50px;
+}
+
+.inst {
+    height: 50px;
+    width: 250px;
+}
+
+.center {
+    
+}
+
+
+
+
+.right img {
+    height: 40px;
+    width: 40px;
+}
+
+
+
+
+
+
+
+
+
+
