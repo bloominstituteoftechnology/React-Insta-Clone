@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './Components/SearchBar/SearchBar';
 import PostContainer from './Components/PostContainer/PostContainer';
-import CommentSection from './Components/CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 import dummyData from './dummy-data';
 // import heart from './images/instaheart.png';
