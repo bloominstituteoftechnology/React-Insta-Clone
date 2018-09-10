@@ -1,18 +1,19 @@
 import React from 'react';
 import './SearchBar.css';
-import InstagramLogo from './images/InstagramLogo';
+import CameraLogo from './images/CameraLogo.png';
+import InstagramLogo from './images/InstagramLogo.png';
 import line from './images/line.png';
 import compass from './images/compass.jpg';
-import heart from './images/heart.jpg';
+import heart from './images/instaheart.png';
 import person from './images/person.png';
 
 const SearchBar = () => {
   return (
     <div>
       <div className="header-left">
-        <img src={InstagramLogo} className="logo" alt="logo" />
+        <img src={CameraLogo} className="logo" alt="logo" />
         <img src={line} className="line" alt="line" />
-        <div className="instagram">Instagram</div>
+        <img src={InstagramLogo} className="instagram" />
       </div>
       <input className="search-bar" />
       <div>

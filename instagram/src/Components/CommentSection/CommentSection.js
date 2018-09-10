@@ -1,5 +1,5 @@
-import React from 'react';
+// import React from 'react';
 
-import './CommentSection.css';
+// import './CommentSection.css';
 
-export default CommentSection;
+// export default CommentSection;
