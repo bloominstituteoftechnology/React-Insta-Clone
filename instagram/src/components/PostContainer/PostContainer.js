@@ -6,9 +6,8 @@ function PostContainer(props) {
     return (
 
 
-        props.postProps.map((element) => {
+        props.postsProps.map((element) => {
             return <Post postProps={element} key={element.timestamp} />
-                    // <CommentSection commentsProps={element.comments} />
         })
     )
 }

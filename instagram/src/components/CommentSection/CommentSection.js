@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
+import './CommentSection.css';
 
 function CommentSection(props) {
     return (
@@ -8,17 +9,14 @@ function CommentSection(props) {
             {props.comments.map((element, index) => {
             return <Comment comment={element} key={index}/>
             })}
-            <input type="text" placeholder="Leave a comment.." />
+            <input type="text" placeholder="Add a Comment" />
         </div>
         
     )
 }
 
 CommentSection.propTypes = {
-    comments: PropTypes.shape({
-        username: PropTypes.string,
-        text:PropTypes.string,
-    })
+    comments: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default CommentSection;

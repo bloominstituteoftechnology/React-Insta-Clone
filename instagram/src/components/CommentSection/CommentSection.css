@@ -1,0 +1,23 @@
+.CommentSectionDiv {
+    margin: 10px 0;
+    margin-bottom: 5px;
+}
+
+.CommentSectionDiv input {
+    margin: 10px 0;
+    height: 30px;
+    border: none;
+    width: 100%;
+    max-width: 635px;
+    font-size: 16px;
+    border-top: 1px solid lightgray;
+
+}
+
+.Comment {
+    margin: 8px 0;
+}
+
+.Comment span {
+    font-weight: bold;
+}
