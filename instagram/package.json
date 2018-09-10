@@ -4,12 +4,13 @@
   "private": true,
   "dependencies": {
     "font-awesome": "^4.7.0",
+    "moment": "^2.22.2",
     "prop-types": "^15.6.1",
-    "react-fontawesome": "^1.6.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-fontawesome": "^1.6.1",
     "react-scripts": "1.1.5",
-    "moment": "^2.22.2"
+    "reactstrap": "^6.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
