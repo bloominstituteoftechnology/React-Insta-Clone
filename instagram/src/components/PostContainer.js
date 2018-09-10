@@ -7,9 +7,9 @@ import PropTypes from 'prop-types'
 const PostContainer = props => {
 
     return(
-        <div className=''>
+        <React.Fragment className=''>
      {props.comments.map(comment => <CommentSection key={comment.timestamp} displayedComments={comment} />)}
-     </div>
+     </React.Fragment>
 
 )};
 

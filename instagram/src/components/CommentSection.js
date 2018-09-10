@@ -12,6 +12,8 @@ const CommentSection = props => {
             <div className='thumbnail'>{props.displayedComments.thumbnailUrl}</div>  
             <strong>{props.displayedComments.username}</strong>
             <div>{props.displayedComments.imageUrl}</div>
+            <span>{props.displayedComments.likes}</span>
+            <span>{props.displayedComments.timestamp}</span>
 
             <React.Fragment>
                 <span>{props.displayedComments.username}</span>
@@ -23,9 +25,22 @@ const CommentSection = props => {
 
 )};
 
-// PostContainer.propTypes = {
-//     comments: PropTypes.arrayOf(PropTypes.string)
-// }
+
+
+CommentSection.propTypes = {
+    username: PropTypes.string.isRequired,
+    thumbnailUrl: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    comments : {
+        username: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired
+    }
+
+}
+
+
 
 
 
