@@ -9,6 +9,7 @@ import InteractPost from "./InteractPost";
 
 const WrapperPost = styled.div`
   margin-top: 40px;
+  margin-bottom: 20px;
   border: 1px solid lightgray;
   border-radius: 3px;
   box-shadow: 0px 0px 4px 2px lightgrey;

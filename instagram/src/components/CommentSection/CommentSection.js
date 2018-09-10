@@ -36,10 +36,24 @@ class CommentSection extends React.Component {
   }
 
   timePass = () => {
-    const postDate = Date.parse(this.props.post.timestamp);
-    const today = new Date();
-    return postDate.toString(); 
-  
+      let time =this.props.post.timestamp;	    
+      time = time.split(' ');
+      time.pop();
+      for(let i = 0; i < time.length; i++) {	    
+        if(time[i].includes('th')) {	       
+          time[i] = time[i].replace('th','');	       
+        } else if(time[i].includes(',')) {	     
+          time[i] = time[i].replace(',', '');	       
+        }	       
+      }
+      let mili = Date.parse(new Date(time));
+      let now = Date.parse(new Date());	    
+      let long = (now-mili);	    
+      if (long < 3600000*24) {	     
+        return `${Math.floor(long/3600000)} hours`
+     } else {	
+       return `${Math.floor(long/86400000)} days`
+    }
   }
 
   render() {
