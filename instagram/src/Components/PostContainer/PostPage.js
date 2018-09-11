@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import dummyData from '../../dummy-data';
 import PostContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
+import './Post.css';
 
 
 class PostPage extends Component {
@@ -11,6 +12,11 @@ class PostPage extends Component {
             posts: dummyData
         }
     }
+
+    componentDidMount() {
+
+    }
+
     render() {
         return (
             <div className="post-container">
