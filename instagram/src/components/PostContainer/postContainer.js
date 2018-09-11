@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './postContainer.css';
+import Posts from './Posts';
 
 
 
-const PostContainer = props => {
-    return (
-        <div>{props.data.map(data => <dummyData key={data.value} dummyData={data} />)}
-    {console.log("I work?")}
+const PostContainer = (props) => {
+    return <div>{props.data.map((each) => <Posts key={each.username} post={each} />)}
     </div>
-    );
 }
+
 PostContainer.propTypes = {
     dummyData: PropTypes.arrayOf(PropTypes.shape({
         username: PropTypes.string,

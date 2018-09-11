@@ -4,7 +4,7 @@ import './commentSection.css';
 
 
  function CommentSection(props) {
-     return (<div>      
+     return (<div>     
                 <form>
                     <input value={props.commentInput} onChange={props.handleInput} placeholder="Add a comment..." />
                     <button onClick={props.addComment}>comment</button>

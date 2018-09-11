@@ -8,17 +8,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData,
+      data: dummyData, //we can just pull the array of obj in like so
       commentInput: ""
     };
   }
   
   render() {
+    console.log(this.state);
     return (
       <div className="App">
-        <h1>InstaClone</h1>
-        <PostContainer data={this.state.data} />
-        <CommentSection />
+        <div className="instagramBanner">
+            <img className="banner" alt="instaBanner" src="/React-Insta-Clone/assets/insta.png" />
+        </div>
+        <PostContainer data={this.state.data} /> {/*here we are naming the component(Postcontainer) and making the first key/value pair, data/{this.state.data} which will be wrapped in the object we call props*/}
+        <CommentSection comments={this.state.commentInput} />
       </div>
     );
   }
