@@ -13,7 +13,7 @@ import CommentSection from '../CommentSection/CommentSection';
 				/>
 			</div>
 			<div className="post-img">
-				<img src={props.post.imageUrl} alt="Image from Post" />
+				<img src={props.post.imageUrl} alt="Post Visual" />
 			</div>
 			<div className="likes-post">
 				<p>{props.post.likes} likes</p>
