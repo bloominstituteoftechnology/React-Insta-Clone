@@ -10,7 +10,7 @@ const PostHeader = (props) => {
 	);
 };
 
-PostHeader.PropTypes = {
+PostHeader.propTypes = {
 	username: PropTypes.string,
 	thumbnailUrl: PropTypes.string,
 };

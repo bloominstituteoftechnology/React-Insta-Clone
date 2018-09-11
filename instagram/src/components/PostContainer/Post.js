@@ -26,7 +26,7 @@ function Post(props) {
 	);
 }
 
-Post.PropTypes = {
+Post.propTypes = {
 	imageUrl: PropTypes.string,
 };
 
