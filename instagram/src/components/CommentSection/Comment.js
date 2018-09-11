@@ -3,7 +3,7 @@ import React from 'react';
 function Comment(props) {
     return (
         <div className="Comment">
-        <span>{props.comment.username}</span>- {props.comment.text}
+            <span>{props.comment.username}</span>- {props.comment.text}
         </div>
     )
 }

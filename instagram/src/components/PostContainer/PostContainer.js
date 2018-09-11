@@ -4,9 +4,7 @@ import Post from './Post';
 
 function PostContainer(props) {
     return (
-
-
-        props.postsProps.map((element) => {
+        props.postProps.map((element) => {
             return <Post postProps={element} key={element.timestamp} />
         })
     )

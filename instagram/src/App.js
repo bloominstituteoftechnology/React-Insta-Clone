@@ -9,13 +9,18 @@ class App extends Component {
     super();
     this.state = {
       data: dummyData,
+      
     }
   }
+  componentDidMount() {
+    this.setState({ posts: dummyData })
+  }
+
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer postsProps={this.state.data}/>
+        <PostContainer postProps={this.state.data}/>
       </div>
     );
   }

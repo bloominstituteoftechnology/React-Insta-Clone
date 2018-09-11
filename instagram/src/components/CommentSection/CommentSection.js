@@ -3,16 +3,24 @@ import PropTypes from 'prop-types';
 import Comment from './Comment';
 import './CommentSection.css';
 
-function CommentSection(props) {
-    return (
-        <div className="CommentSectionDiv">
-            {props.comments.map((element, index) => {
-            return <Comment comment={element} key={index}/>
-            })}
+class CommentSection extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            comments: props.comments
+        }
+    }
+
+    addNewComment = event => console.log('This is a comment');
+
+    render() {
+        return (
+            <div className="CommentSectionDiv">
+            {this.state.comments.map((element, index) => <Comment comment={element} key={index}/>)}
             <input type="text" placeholder="Add a Comment" />
-        </div>
-        
-    )
+            </div>
+        )
+    }
 }
 
 CommentSection.propTypes = {
