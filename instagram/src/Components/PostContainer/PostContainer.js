@@ -34,6 +34,9 @@ const PostContainer = props => {
             <div className="like-tally">{p.likes} likes</div>
           </div>
           <CommentSection c={p.comments} />
+
+          <input className="add-comment" placeholder="Add a comment" />
+
           <div className="time-stamp">{p.timestamp}</div>
         </div>
       ))}

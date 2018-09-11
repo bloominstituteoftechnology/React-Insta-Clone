@@ -2,6 +2,15 @@ import React from 'react';
 import './CommentSection.css';
 
 const CommentSection = props => {
+  addComment = event => {
+    event.preventDefault();
+    if (this.state.inpuText) {
+      this.setState({
+        users: [...this.state.username, this.state.inputText]
+      });
+    }
+  };
+
   return (
     <div>
       {props.c.map(c => (
@@ -13,7 +22,6 @@ const CommentSection = props => {
             <div className="post-text" key={c.username}>
               {c.text}
             </div>
-            <input className="add-comment" placeholder="Add a comment" />
           </div>
         </div>
       ))}
