@@ -23,9 +23,11 @@ const PostContainer = props => {
           <div className="social-bar">
             <img className="social-likes" src={instaheart} />
             <img className="social-comments" src={comment} />
+            <div className="like-tally">{p.likes} likes</div>
           </div>
           <CommentSection c={p.comments} />
-          <div>{p.timestamp}</div>
+          <div className="time-stamp">{p.timestamp}</div>
+          <input className="add-comment" placeholder="Add a comment" />
         </div>
       ))}
     </div>

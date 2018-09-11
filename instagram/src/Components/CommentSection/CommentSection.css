@@ -1,0 +1,15 @@
+.comments-container {
+  padding-right: 180px;
+  padding-left: 190px;
+}
+
+.post-comments {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+}
+
+.poster-id {
+  font-weight: bold;
+  padding-right: 5px;
+}

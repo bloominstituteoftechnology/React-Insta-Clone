@@ -50,3 +50,24 @@
   height: 30px;
   padding-left: 10px;
 }
+
+.like-tally {
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.time-stamp {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-left: 190px;
+}
+
+.add-comment {
+  display: flex;
+  align-items: center;
+  padding-left: 190px;
+  height: 40px;
+  width: auto;
+}
