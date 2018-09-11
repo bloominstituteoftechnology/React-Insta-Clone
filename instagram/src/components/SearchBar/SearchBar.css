@@ -1,0 +1,56 @@
+/** SearchBar CSS Styles ***/
+
+.search-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #fafafa;
+	height: 77px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+}
+
+.sprite {
+	display: inline-block;
+	background: url('https://www.instagram.com/static/bundles/base/sprite_core.png/ce64a883f1ac.png');
+}
+
+ #logo {
+	background-position: -98px -203px;
+	margin-left: 20px;
+	width: 176px;
+	height: 35px;
+}
+
+ #explore {
+	background-position: -262px -358px;
+	margin-left: 42%; /** Addt'l margin to bring sprites closer together **/
+	width: 22px;
+	height: 22px;
+}
+
+ #likes {
+	background-position: -184px -359px;
+	width: 22px;
+	height: 20px;
+}
+
+ #user {
+	background-position: -433px -318px;
+	width: 24px;
+	height: 19px;
+}
+
+ #search-input {
+	width: 215px;
+	border: solid 1px #dbdbdb;
+	border-radius: 3px;
+	height: 28px;
+	margin-top: 20px; /** Allows search bar to better center with above margin changes **/
+	margin-left: 105%; /** ^^ **/
+	font-size: 14px;
+	text-align: center;
+	cursor: text;
+	font-size: 14px;
+	color: #999;
+}
