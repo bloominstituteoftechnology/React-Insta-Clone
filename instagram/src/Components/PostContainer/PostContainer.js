@@ -35,7 +35,6 @@ const PostContainer = props => {
           </div>
           <CommentSection c={p.comments} />
           <div className="time-stamp">{p.timestamp}</div>
-          <input className="add-comment" placeholder="Add a comment" />
         </div>
       ))}
     </div>

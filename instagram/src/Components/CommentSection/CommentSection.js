@@ -13,6 +13,7 @@ const CommentSection = props => {
             <div className="post-text" key={c.username}>
               {c.text}
             </div>
+            <input className="add-comment" placeholder="Add a comment" />
           </div>
         </div>
       ))}
