@@ -1,0 +1,17 @@
+/* .contiainer {
+    width: 200px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 250px;
+} */
+
+.container p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.container form {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+}

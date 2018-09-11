@@ -1,0 +1,14 @@
+
+.App {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.6rem;
+  }
+  
+  /* .postIcons {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 3rem;
+    margin: 1% 3%;
+  } */
