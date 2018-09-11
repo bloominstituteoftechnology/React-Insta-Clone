@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data'
-import SearchBar from './components/SearchBar'
-import PostContainer from './components/PostContainer'
+import Search from './components/SearchBar'
+import Posts from './components/PostContainer'
 
 
 class App extends Component {
@@ -20,15 +20,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="search-bar">
-          <SearchBar />
+        <header className="search">
+          <Search />
         </header>
-        <p className="post-container">
-          <PostContainer comments={this.state.dummyDataList}/>
+        <p className="post">
+          <Posts comments={this.state.dummyDataList}/>
         </p>
-        {/* <footer className='comment-section'>
-        <CommentSection />
-        </footer> */}
       </div>
     );
   }

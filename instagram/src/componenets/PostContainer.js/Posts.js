@@ -1,10 +1,10 @@
 import React from 'react'
-import CommentSection from './CommentSection'
+import Comments from './CommentSection/Comments'
 import PropTypes from 'prop-types'
 
 
 
-const PostContainer = props => {
+const Posts = props => {
 
     return(
         <React.Fragment className=''>
@@ -13,10 +13,10 @@ const PostContainer = props => {
 
 )};
 
-PostContainer.propTypes = {
+Posts.propTypes = {
     comments: PropTypes.arrayOf(PropTypes.string)
 }
 
 
 
-export default PostContainer;
+export default Posts;
