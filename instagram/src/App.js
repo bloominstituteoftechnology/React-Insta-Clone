@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
-import PostContainer from './components/PostContainer/postContainer.js';
-
+import dummyData from './dummy-data';
+import PostContainer from './components/PostContainer/PostContainer';
+import CommentSection from './components/CommentSection/CommentSection';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-
-    }
+      data: dummyData,
+      commentInput: ""
+    };
   }
+  
   render() {
     return (
       <div className="App">
-        <PostContainer />
-       
+        <h1>InstaClone</h1>
+        <PostContainer data={this.state.data} />
+        <CommentSection />
       </div>
     );
   }

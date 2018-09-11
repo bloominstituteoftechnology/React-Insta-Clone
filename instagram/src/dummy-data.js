@@ -1,6 +1,6 @@
-import React from 'react';
 
-const dummyData = [ 
+
+const dummyData = [
   {
     username: "philzcoffee",
     thumbnailUrl:
@@ -81,5 +81,6 @@ const dummyData = [
     ]
   }
 ];
+
 
 export default dummyData;
