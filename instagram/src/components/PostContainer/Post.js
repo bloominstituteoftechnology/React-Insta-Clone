@@ -25,9 +25,13 @@ function Post(props) {
 }
 
 Post.propTypes = {
-    comments: PropTypes.shape({
+    postProps: PropTypes.shape({
         username: PropTypes.string,
-        text: PropTypes.string
+        thumbnailUrl: PropTypes.string,
+        imageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        comments: PropTypes.arrayOf(PropTypes.object),
     })
 }
+
 export default Post;

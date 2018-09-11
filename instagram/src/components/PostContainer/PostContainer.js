@@ -4,20 +4,16 @@ import Post from './Post';
 
 function PostContainer(props) {
     return (
-        props.postProps.map((element) => {
+        props.postsProps.map((element) => {
             return <Post postProps={element} key={element.timestamp} />
         })
     )
 }
 
 PostContainer.propTypes = {
-    postProps: PropTypes.shape({
-        username: PropTypes.string,
-        thumbnailUrl: PropTypes.string,
-        imageUrl: PropTypes.string,
-        likes: PropTypes.number,
-        comments: PropTypes.arrayOf(PropTypes.objects),
-    })
+    postsProps: PropTypes.arrayOf(PropTypes.object)
 }
+
+
 
 export default PostContainer;

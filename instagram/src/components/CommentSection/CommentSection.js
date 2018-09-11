@@ -11,16 +11,29 @@ class CommentSection extends React.Component {
         }
     }
 
-    addNewComment = event => console.log('This is a comment');
+    addNewComment = event => {
+        event.preventDefault();
+        console.log('This is a comment')
+    }
 
     render() {
         return (
             <div className="CommentSectionDiv">
             {this.state.comments.map((element, index) => <Comment comment={element} key={index}/>)}
-            <input type="text" placeholder="Add a Comment" />
+            <form onSubmit={this.addNewComment} >
+                 <input type="text" placeholder="Add a Comment" />
+            </form>
+
             </div>
         )
     }
+}
+
+CommentSection.propTypes = {
+    comments: PropTypes.shape({
+        username: PropTypes.string,
+        text: PropTypes.string
+    })
 }
 
 CommentSection.propTypes = {
