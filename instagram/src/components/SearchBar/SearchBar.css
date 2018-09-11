@@ -17,8 +17,22 @@
     width: 250px;
 }
 
+.left {
+    width: 30%;
+}
+
 .center {
-    
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 
@@ -27,6 +41,9 @@
 .right img {
     height: 40px;
     width: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 

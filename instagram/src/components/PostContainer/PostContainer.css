@@ -1,0 +1,22 @@
+.postHeader {
+    display: flex;
+}
+
+
+
+.postHeader img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.postMain {
+    border: 1px solid gray;
+    width: 60%;
+    margin: 10px auto;
+}
+
+.postImg {
+    width: 100%;
+}
+
