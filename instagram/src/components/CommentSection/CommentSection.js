@@ -33,7 +33,7 @@ class CommentSection extends Component {
         return (
                 <div>
                     {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
-                    <NewComment addComment={this.addNewComment} handleChange={this.handleChange} newComment={this.state.newComment}/>
+                    <NewComment addNewComment={this.addNewComment} handleChange={this.handleChange}/>
                 </div>
             );
     }

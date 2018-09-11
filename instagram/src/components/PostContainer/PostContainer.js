@@ -5,7 +5,7 @@ import "./PostContainer.css";
 const PostContainer = props => {
     return (
         <div>
-            {props.posts.map(post => <Post key={post.imageUrl} post={post} />)}
+            {props.posts.map(post => <Post key={Math.random()} post={post} />)}
         </div>
     );
 };
