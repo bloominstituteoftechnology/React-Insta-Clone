@@ -10,12 +10,12 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: []
+      posts: []
     };
   }
 
   componentDidMount() {
-    this.setState({ p: dummyData });
+    this.setState({ posts: dummyData });
   }
 
   render() {
@@ -27,7 +27,7 @@ class App extends Component {
           </header>
         </div>
         <div>
-          <PostContainer p={this.state.dummyData} />
+          <PostContainer p={this.state.posts} />
         </div>
       </div>
     );
