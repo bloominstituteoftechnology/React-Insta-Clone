@@ -14,7 +14,7 @@ const PostContainer = props => {
 )};
 
 PostContainer.propTypes = {
-    comments: PropTypes.arrayOfType(PropTypes.string)
+    comments: PropTypes.arrayOf(PropTypes.string)
 }
 
 
