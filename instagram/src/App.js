@@ -3,6 +3,7 @@ import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBar";
 // import PostContainer from "components/PostContainer";
 import dummyData from "./dummy-data";
+import Post from "./components/PostContainer/Post";
 
 class App extends Component {
   constructor() {
@@ -16,6 +17,7 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         {/* <PostContainer /> */}
+        <Post />
       </div>
     );
   }
