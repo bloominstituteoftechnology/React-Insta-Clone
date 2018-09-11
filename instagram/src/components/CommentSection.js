@@ -1,13 +1,13 @@
 import React from 'react'
-import Posts from './PostContainer/Posts'
+import PostContainer from './PostContainer'
 import PropTypes from 'prop-types'
 
 
 
-const Comments = props => {
+const CommentSection = props => {
 
     return(
-        <React.Fragment className='Comments-display'>
+        <React.Fragment className='CommentSection-display'>
 
             <img src={props.displayedComments.thumbnailUrl} />
             <strong>{props.displayedComments.username}</strong>
@@ -27,7 +27,7 @@ const Comments = props => {
 
 
 
-Comments.propTypes = {
+CommentSection.propTypes = {
     username: PropTypes.string.isRequired,
     thumbnailUrl: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
@@ -47,4 +47,4 @@ Comments.propTypes = {
 
 
 
-export default Comments;
+export default CommentSection;
