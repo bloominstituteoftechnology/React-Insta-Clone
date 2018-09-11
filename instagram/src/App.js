@@ -26,7 +26,6 @@ class App extends Component {
         <div>
           <PostContainer p={this.state.dummyData} />
         </div>
-        ))}
       </div>
     );
   }

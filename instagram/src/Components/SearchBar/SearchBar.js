@@ -9,14 +9,14 @@ import person from './images/person.png';
 
 const SearchBar = () => {
   return (
-    <div>
+    <div className="search-bar">
       <div className="header-left">
         <img src={CameraLogo} className="logo" alt="logo" />
         <img src={line} className="line" alt="line" />
         <img src={InstagramLogo} className="instagram" />
       </div>
-      <input className="search-bar" />
-      <div>
+      <input className="search-bar-input" />
+      <div className="social-search-bar">
         <img src={compass} className="compass" alt="compass" />
         <img src={heart} className="heart" alt="heart" />
         <img src={person} className="person" alt="person" />

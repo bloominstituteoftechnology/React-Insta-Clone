@@ -1,3 +1,27 @@
+.search-bar {
+  max-width: 800px;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.search-bar-input {
+}
+
+.social-search-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .logo {
   width: 30px;
   height: 30px;
@@ -15,6 +39,7 @@
 .compass {
   width: 30px;
   height: 30px;
+  padding-right: 20px;
 }
 
 .heart {
