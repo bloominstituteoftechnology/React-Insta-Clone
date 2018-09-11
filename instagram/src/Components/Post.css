@@ -1,0 +1,10 @@
+.post-container {
+    display: flex;
+}
+.post-header {
+   text-align: justify;
+}
+.logo {
+    height: 50px;
+    border-radius: 50%;
+}
