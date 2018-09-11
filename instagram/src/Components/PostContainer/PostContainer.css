@@ -7,6 +7,7 @@
   padding-top: 30px;
   padding-left: 180px;
   padding-right: 180px;
+  border: 1px solid lightgray;
 }
 
 .poster {
@@ -67,7 +68,11 @@
 .add-comment {
   display: flex;
   align-items: center;
-  padding-left: 190px;
+  margin-left: 180px;
+
   height: 40px;
-  width: auto;
+  width: 60%;
+  border-right: transparent;
+  border-bottom: transparent;
+  border-left: transparent;
 }

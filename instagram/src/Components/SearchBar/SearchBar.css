@@ -14,12 +14,14 @@
 }
 
 .search-bar-input {
+  width: 180px;
+  text-align: center;
 }
 
 .social-search-bar {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  padding-left: 60px;
 }
 
 .logo {

@@ -13,9 +13,9 @@ const SearchBar = () => {
       <div className="header-left">
         <img src={CameraLogo} className="logo" alt="logo" />
         <img src={line} className="line" alt="line" />
-        <img src={InstagramLogo} className="instagram" />
+        <img src={InstagramLogo} className="instagram" alt="Instagram" />
       </div>
-      <input className="search-bar-input" />
+      <input className="search-bar-input" placeholder="Search" />
       <div className="social-search-bar">
         <img src={compass} className="compass" alt="compass" />
         <img src={heart} className="heart" alt="heart" />

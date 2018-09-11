@@ -14,15 +14,23 @@ const PostContainer = props => {
           <div className="post-header">
             <div className="poster">
               <div key={p.username}>
-                <img className="thumbnail" src={p.thumbnailUrl} />
+                <img
+                  className="thumbnail"
+                  src={p.thumbnailUrl}
+                  alt="user-thumbnail"
+                />
               </div>
               <div className="username">{p.username}</div>
             </div>
-            <img className="img-post" src={p.imageUrl} />
+            <img className="img-post" src={p.imageUrl} alt="image-post" />
           </div>
           <div className="social-bar">
-            <img className="social-likes" src={instaheart} />
-            <img className="social-comments" src={comment} />
+            <img className="social-likes" src={instaheart} alt="heart" />
+            <img
+              className="social-comments"
+              src={comment}
+              alt="comment-balloon"
+            />
             <div className="like-tally">{p.likes} likes</div>
           </div>
           <CommentSection c={p.comments} />
