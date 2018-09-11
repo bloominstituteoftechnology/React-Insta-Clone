@@ -14,10 +14,21 @@ class SearchBar extends React.Component {
                 "https://instagram-brand.com/wp-content/themes/ig-branding/assets/images/ig-logo-email.png"
               }
             />
+            <img
+              className="Nav-Brand-Words"
+              src={"http://jonathanjeter.com/images/Instagram_Logo_Large.png"}
+            />
+
             <InputGroup>
               <InputGroupAddon addonType="prepend" />
               <Input placeholder="search" />
             </InputGroup>
+            <img
+              className="right-logo"
+              src={
+                "https://pixel.nymag.com/imgs/daily/selectall/2016/12/29/inst1.nocrop.w710.h2147483647.png"
+              }
+            />
           </div>
         </div>
       </nav>
