@@ -3,7 +3,6 @@ import SearchBar from './Components/SearchBar/SearchBar';
 import PostContainer from './Components/PostContainer/PostContainer';
 import PropTypes from 'prop-types';
 import dummyData from './dummy-data';
-// import heart from './images/instaheart.png';
 
 import './App.css';
 
@@ -16,7 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({ dummyData: dummyData.data });
+    this.setState({ p: dummyData });
   }
 
   render() {
