@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 	);
 }
 
- Comments.PropTypes = {
+ Comments.propTypes = {
 	username: PropTypes.string,
 	text: PropTypes.string,
 };

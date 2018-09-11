@@ -26,7 +26,7 @@ import CommentSection from '../CommentSection/CommentSection';
 	);
 }
 
- Post.PropTypes = {
+ Post.propTypes = {
 	imageUrl: PropTypes.string,
 };
 

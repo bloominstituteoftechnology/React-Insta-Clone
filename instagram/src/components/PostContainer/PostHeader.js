@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 	);
 };
 
- PostHeader.PropTypes = {
+ PostHeader.propTypes = {
 	username: PropTypes.string,
 	thumbnailUrl: PropTypes.string,
 };
