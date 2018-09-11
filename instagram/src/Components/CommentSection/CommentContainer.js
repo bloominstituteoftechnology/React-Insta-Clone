@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
+import CommentInput from './CommentInput';
 
 class CommentContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            comment: props.dummyData
+            comments: props.comments
         }
     }
     
     render() {
         return (
             <div>
-                {this.state.comment.map(comment => <Comment comment = {comment} /> )} 
+                {this.state.comments.map((comment, i) => <Comment key={i} comments={comment} /> )} <CommentInput />
             </div>
         );
     }

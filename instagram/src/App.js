@@ -1,19 +1,12 @@
-import React, { Component } from 'react';
-import './App.css';
-import SearchBar from './Components/SearchBar/SearchBar';
-import PostContainer from './Components/PostContainer/PostContainer';
-import CommentContainer from './Components/CommentSection/CommentContainer';
+import React from 'react';
+import PostPage from './Components/PostContainer/PostPage';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <SearchBar />
-        <PostContainer />
-        <CommentContainer />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div>
+      <PostPage />
+    </div>
+  );
+};
 
 export default App;
