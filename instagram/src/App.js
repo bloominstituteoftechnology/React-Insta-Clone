@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data'
-import Search from './components/SearchBar'
-import Posts from './components/PostContainer'
+import Search from './components/SearchBar/Search'
+import Posts from './components/PostContainer/Posts'
 
 
 class App extends Component {

@@ -8,13 +8,13 @@ const Posts = props => {
 
     return(
         <React.Fragment className=''>
-     {props.comments.map(comment => <CommentSection key={comment.timestamp} displayedComments={comment} />)}
+     {props.comments.map(comment => <Comments key={comment.timestamp} displayedComments={comment} />)}
      </React.Fragment>
 
 )};
 
 Posts.propTypes = {
-    comments: PropTypes.arrayOf(PropTypes.string)
+    comments: PropTypes.arrayOfType(PropTypes.string)
 }
 
 
