@@ -30,16 +30,27 @@ class CommentSection extends React.Component {
 		event.prevendDefault();
 	};
 
-	addLikes = () => {
+	addLikes = (event) => {
+		event.preventDefaul();
 		let likes = this.state.likes + 1;
+		this.setState({ likes });
 	};
 
 	render() {
 		return (
-			<div>
-				{this.state.comments.map((comment) => (
-					<Comments key={comment.username} comment={comment} />
-				))}
+			<div className="comment-wrapper">
+				<div className="comment-icons">
+					<div className="comment-sprite" id="heart" onClick={this.addLikes} />
+					<div className="comment-sprite" id="comment-blob" />
+				</div>
+				<div className="comment-likes">
+					<p>{this.state.likes}</p>
+				</div>
+				<div>
+					{this.state.comments.map((comment) => (
+						<Comments key={comment.username} comment={comment} />
+					))}
+				</div>
 			</div>
 		);
 	}

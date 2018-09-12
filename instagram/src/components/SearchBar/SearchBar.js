@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './SearchBar.css';
 
 const SearchBar = (props) => {
 	return (
 		<div className="search-container">
 			<div className="sprite" id="logo" />
-			<form>
+			<form onSubmit={props.handleSearch}>
 				<input
 					id="search-input"
 					placeholder="Search"
@@ -19,6 +20,12 @@ const SearchBar = (props) => {
 			<div className="sprite" id="user" />
 		</div>
 	);
+};
+
+SearchBar.propTypes = {
+	searchInput: PropTypes.string,
+	handleInputChange: PropTypes.func,
+	handleSearch: PropTypes.func,
 };
 
 export default SearchBar;
