@@ -10,6 +10,10 @@ class Login extends React.Component {
     };
   }
 
+  loginAttempt = event => {
+    this.setState({});
+  };
+
   render() {
     return (
       <form className="loginInput">
