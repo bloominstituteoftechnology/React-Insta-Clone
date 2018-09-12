@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import PostHeader from './PostHeader';
-import CommentSection from '../CommentSection/CommentSection';
+import CommentSection from '../CommentSection/CommentSectionContainer';
 
- function Post(props) {
+ const Post = props => {
 	return (
 		<div className="post-content">
 			<div className="post-header">
@@ -12,22 +11,16 @@ import CommentSection from '../CommentSection/CommentSection';
 					username={props.post.username}
 				/>
 			</div>
-			<div className="post-img">
-				<img src={props.post.imageUrl} alt="Post Visual" />
+			<div className="post-image-wrapper">
+				<img
+				alt="post thumbnail"
+				className="post-image"
+				src= {props.post.imageUrl}
+			/>
 			</div>
-			<div className="likes-post">
-				<p>{props.post.likes} likes</p>
-			</div>
-			<CommentSection comments={props.post.comments} />
-			<div className="time-stamp">
-				<p>{props.post.timestamp}</p>
-			</div>
+			<CommentSection comments = {props.post.comments} />
 		</div>
 	);
 }
-
- Post.propTypes = {
-	imageUrl: PropTypes.string,
-};
 
  export default Post;
