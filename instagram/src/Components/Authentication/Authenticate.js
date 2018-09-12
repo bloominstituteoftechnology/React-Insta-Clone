@@ -1,6 +1,6 @@
 import React from 'react';
 
-const authenticate = PassedComponent =>
+const Authenticate = PassedComponent =>
   class extends React.Component {
     constructor(props) {
       super(props);
@@ -11,4 +11,4 @@ const authenticate = PassedComponent =>
     }
   };
 
-export default authenticate;
+export default Authenticate;
