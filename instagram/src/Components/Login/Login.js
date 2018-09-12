@@ -6,16 +6,18 @@ class Login extends Component {
     }
 
     login = e => {
-        localStorage.setItem(Username, 'Emily')
-    }
+        localStorage.setItem('Username', e.target.username.value);
+    };
 
+    render() {
     return (
-       <form onSubmit={this.login} >
+        <form onSubmit={this.login}>
            <input type='text' placeholder='Username'></input>
            <input type='text' placeholder='Password'></input>
            <button>Login</button>
        </form>
-    );
-};
+        );
+    };
+}
 
 export default Login;
