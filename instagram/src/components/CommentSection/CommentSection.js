@@ -3,21 +3,52 @@ import PropTypes from 'prop-types';
 import Comments from './Comments';
 import './CommentSection.css';
 
-function CommentSection(props) {
-	return (
-		<div>
-			{props.comments.map((comment) => (
-				<Comments key={comment.username} comment={comment} />
-			))}
-		</div>
-	);
+class CommentSection extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			timestamp: props.timestamp,
+			comments: props.comments,
+			likes: props.likes,
+			comment: '',
+		};
+	}
+
+	handleInput = (event) => {
+		this.setState({ [event.target.name]: event.target.value });
+	};
+
+	addNewComment = (event) => {
+		const newComment = {
+			username: 'MicahShrak',
+			text: this.state.comment,
+		};
+		this.setState({
+			comments: [...this.state.comments, newComment],
+			comment: '',
+		});
+		event.prevendDefault();
+	};
+
+	addLikes = () => {
+		let likes = this.state.likes + 1;
+	};
+
+	render() {
+		return (
+			<div>
+				{this.state.comments.map((comment) => (
+					<Comments key={comment.username} comment={comment} />
+				))}
+			</div>
+		);
+	}
 }
 
 CommentSection.propTypes = {
-	comment: PropTypes.shape({
-		username: PropTypes.string,
-		text: PropTypes.string,
-	}),
+	timestamp: PropTypes.string,
+	comments: PropTypes.string,
+	like: PropTypes.number,
 };
 
 export default CommentSection;
