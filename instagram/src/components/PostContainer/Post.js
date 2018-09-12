@@ -1,5 +1,6 @@
 import React from 'react'
 import PostContainer from './PostContainer'
+import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types'
 
 
@@ -7,13 +8,18 @@ import PropTypes from 'prop-types'
 const Post = props => {
 
     return(
-        <React.Fragment className='post-display'>
+        <React.Fragment className='post-container'>
+            <div className='user'>
+                <img src={props.displayedComments.thumbnailUrl} />
+                <strong>{props.displayedComments.username}</strong>
+            </div>
 
-            <img src={props.displayedComments.thumbnailUrl} />
-            <strong>{props.displayedComments.username}</strong>
-            <img src={props.displayedComments.imageUrl} />
-            <span>{props.displayedComments.likes}</span>
-            <span>{props.displayedComments.timestamp}</span>
+            <img id='post-image' src={props.displayedComments.imageUrl} />
+            
+            
+            <div className='likes'>{props.displayedComments.likes} likes</div>
+            <div>{props.displayedComments.timestamp}</div>
+            
 
             <React.Fragment>
                 <span>{props.displayedComments.username}</span>

@@ -1,0 +1,39 @@
+.post-container {
+    border-bottom: 1px solid lightgray;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+}
+
+.user {
+    display: flex;
+    margin: 10px;
+}
+
+.user img {
+    width: 7%;
+    height: 7%;
+    border-radius: 50%;
+}
+
+.user h2 {
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+#post-image {
+    width: 100%;
+}
+
+.buttons {
+    margin-top: 8px;
+    width: 30px;
+    height: 30px;
+}
+
+.Likes {
+    margin-top: 3px;
+    font-weight: bold;
+}
