@@ -1,35 +1,45 @@
 import React, { Component } from "react";
 import "./Post.css";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+  Row
+} from "reactstrap";
 
-class Post extends Component {
-  render() {
-    return (
-      <article className="Post" ref="Post">
-        <header>
-          <div className="Post-user-avatar">
-            <img
-              src="https://www.laravelnigeria.com/img/chris.jpg"
-              alt="Chris"
-            />
-          </div>
-          <div className="Post-user-nickname">
-            <span>Chris</span>
-          </div>
-        </header>
-        <div className="Post-image">
-          <div className="Post-image-bg">
-            <img
-              alt="Icon Living"
-              src="https://pbs.twimg.com/media/DOXI0IEXkAAkokm.jpg"
-            />
-          </div>
-        </div>
-        <div className="Post-caption">
-          <strong>Chris</strong> Moving the community!
-        </div>
-      </article>
-    );
-  }
-}
+const Post = props => {
+  console.log(`PROPS ${props.post}`);
+  return (
+    <Card>
+      <CardBody>
+        <Row>
+          <img
+            style={{ borderRadius: 90 }}
+            className="img-thumbnail"
+            src={props.post.thumbnailUrl}
+            alt=""
+          />
+          <CardSubtitle className="cardSubtitle">
+            {props.post.username}
+          </CardSubtitle>
+        </Row>
+      </CardBody>
+
+      <CardImg className="Post_image" src={props.post.imageUrl} alt="" />
+      <CardBody>
+        <CardText>
+          <div>{props.post.likes} likes</div>
+        </CardText>
+        <CardText>
+          <div>{props.post.timestamp}</div>
+        </CardText>
+      </CardBody>
+    </Card>
+  );
+};
 
 export default Post;
