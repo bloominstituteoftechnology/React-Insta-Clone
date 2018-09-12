@@ -2,13 +2,15 @@ import React, {Component} from "react";
 import Comment from "./Comment";
 import NewComment from "./NewComment";
 import PropTypes from "prop-types";
+import './CommentSection.css';
 
 class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
             comments: props.comments,
-            newComment: ""
+            newComment: "",
+            likes: 0
         }    
     }
 
@@ -29,12 +31,24 @@ class CommentSection extends Component {
         }); 
     };
 
+    increaseLikes = event => {
+        event.preventDefault();
+        let newLikes = this.state.likes + 1;
+        this.setState({likes: newLikes});
+      }
+
+    
+
     render() {
         return (
+
                 <div>
                     {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
                     <NewComment addNewComment={this.addNewComment} handleChange={this.handleChange}/>
+                    <img  src={require('./h.png')} className='likes' onClick={this.increaseLikes} />
+                    <span>{this.state.likes}</span>
                 </div>
+                
             );
     }
 }
