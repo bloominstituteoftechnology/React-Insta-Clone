@@ -1,37 +1,33 @@
 import React from "react";
 import "./SearchBar.css";
-import { InputGroup, Input, InputGroupAddon } from "reactstrap";
+import { Navbar, NavbarBrand, NavItem, NavLink, Nav } from "reactstrap";
+import InstaCam from "../../assets/Instacam.png";
+import InstaImage from "../../assets/insta.png";
 
 class SearchBar extends React.Component {
   render() {
     return (
-      <nav className="Nav">
-        <div className="Nav-menus">
-          <div className="Nav-brand">
-            <img
-              className="Nav-Brand-logo"
-              src={
-                "https://instagram-brand.com/wp-content/themes/ig-branding/assets/images/ig-logo-email.png"
-              }
-            />
-            <img
-              className="Nav-Brand-Words"
-              src={"http://jonathanjeter.com/images/Instagram_Logo_Large.png"}
-            />
-
-            <InputGroup>
-              <InputGroupAddon addonType="prepend" />
-              <Input placeholder="search" />
-            </InputGroup>
-            <img
-              className="right-logo"
-              src={
-                "https://pixel.nymag.com/imgs/daily/selectall/2016/12/29/inst1.nocrop.w710.h2147483647.png"
-              }
-            />
+      <Navbar className="nav-wrapper">
+        <NavbarBrand>
+          <div className="logo-layout">
+            <div className="insta-cam-logo-wrapper">
+              <img className="logo" src={InstaCam} />
+            </div>
+            |
+            <div className="insta-logo-wrapper">
+              <img src={InstaImage} className="logo" />
+            </div>
           </div>
-        </div>
-      </nav>
+        </NavbarBrand>
+        <nav>
+          <input type="text" className="fancy-search" placeholder="search" />
+        </nav>
+        <Nav>
+          <NavItem>
+            <NavLink href="/">Icon</NavLink>
+          </NavItem>
+        </Nav>
+      </Navbar>
     );
   }
 }

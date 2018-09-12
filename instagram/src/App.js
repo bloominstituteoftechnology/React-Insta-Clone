@@ -1,7 +1,8 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component } from "react";
 import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBar";
-// import dummyData from "./dummy-data";
+import dummyData from "./dummy-data";
 import PostContainer from "./components/PostContainer/PostContainer";
 
 class App extends Component {
