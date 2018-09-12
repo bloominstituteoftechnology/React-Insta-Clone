@@ -1,12 +1,34 @@
 import React from 'react';
-import LoginInput from './LoginPage';
 
-const Login = PassedComponent => props => {
-  if (isLoggedIn) {
-    return <App />;
-  } else {
-    return <LoginInput />;
+class Login extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: '',
+      isLoggedIn: false
+    };
   }
-};
+
+  render() {
+    return (
+      <form className="loginInput">
+        <input
+          className="login-user"
+          type="text"
+          name="loginUser"
+          placeholder="Username"
+        />
+        <input
+          className="login-password"
+          type="text"
+          name="loginPassword"
+          placeholder="Password"
+        />
+        <button className="login-button" />
+      </form>
+    );
+  }
+}
 
 export default Login;

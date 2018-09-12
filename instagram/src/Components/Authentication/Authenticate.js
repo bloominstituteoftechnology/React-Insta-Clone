@@ -6,6 +6,7 @@ const Authenticate = PassedComponent =>
       super(props);
       this.state = {};
     }
+
     render() {
       return <PassedComponent />;
     }
