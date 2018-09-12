@@ -1,7 +1,26 @@
 import React from 'react';
 import './SearchBar.css';
 
-function SearchBar() {
+class SearchBar extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      term: ""
+    }
+  }
+
+  updateTerm = (e) => {
+    this.setState({ term: e.target.value })
+  }
+
+  search = (e) => {
+    e.preventDefault()
+    this.props.search(this.state.term)
+  }
+
+
+  render(){
     return (
         <div className="SearchBarDiv">
             <div className="InstagramLogo">
@@ -16,6 +35,7 @@ function SearchBar() {
             </div>
         </div>
     )
+  }
 }
 
 export default SearchBar;

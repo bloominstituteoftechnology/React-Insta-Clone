@@ -18,28 +18,32 @@ class Post extends React.Component {
         this.setState({ likes: this.state.likes + 1 })
       }
 
+
+    render(){
     return(
         <React.Fragment>
             <div className='user'>
-                <img src={props.displayedComments.thumbnailUrl} alt=''/>
-                <strong>{props.displayedComments.username}</strong>
+                <img src={this.props.displayedComments.thumbnailUrl} alt=''/>
+                <strong>{this.props.displayedComments.username}</strong>
             </div>
 
-            <img id='post-image' src={props.displayedComments.imageUrl} alt=''/>
+            <img id='post-image' src={this.props.displayedComments.imageUrl} alt=''/>
             
             <div className="Buttons">
                 <img  onClick={this.increaseLike}src="https://static.thenounproject.com/png/682470-200.png" alt="" />
                 <img src="https://static.thenounproject.com/png/682476-200.png" alt="" />
             </div>
             
-            <div className='likes'>{props.displayedComments.likes} likes</div>
+            <div className='likes'>{this.props.displayedComments.likes} likes</div>
  
-            <CommentSection comments={props.displayedComments.comments} />
+            <CommentSection comments={this.props.displayedComments.comments} />
             
             
      </React.Fragment>
 
-)};
+)
+    }
+};
 
 
 

@@ -20,7 +20,10 @@ class App extends Component {
       this.setState({ dummyDataList: dummyData })
     }
 
-
+    search = (term) => {
+      let dummyDataList = dummyData.filter(post => post.username.includes(term))
+      this.setState({ dummyDataList })
+    }
 
 
   render() {
