@@ -6,7 +6,7 @@ import Posts from './Posts';
 
 
 const PostContainer = (props) => {
-    return <div>{props.data.map((each) => <Posts key={each.username} post={each} />)}
+    return <div>{props.data.map((each) => <Posts key={each.username} post={each} /> )}
     </div>
 }
 
