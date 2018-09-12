@@ -1,13 +1,20 @@
 .post-container {
+  padding-left: 100px;
+  padding-right: 59px;
+}
+
+.post-border {
   border: 1px solid lightgray;
 }
 
 .post-header {
   max-width: 800px;
   padding-top: 30px;
-  padding-left: 180px;
-  padding-right: 180px;
-  border: 1px solid lightgray;
+  padding-bottom: 15px;
+  padding-left: 30px;
+
+  display: flex;
+  align-items: center;
 }
 
 .poster {
@@ -17,7 +24,7 @@
   padding-left: 10px;
 }
 
-.thumbnail {
+.post-thumb {
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -39,24 +46,28 @@
   padding-left: 180px;
 }
 
-.social-likes {
+.heart {
+  width: 30px;
+  height: 30px;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+.comment-like {
+  padding-top: 15px;
+}
+.comment-balloon {
   width: 30px;
   height: 30px;
   padding-left: 10px;
   padding-right: 10px;
 }
 
-.social-comments {
-  width: 30px;
-  height: 30px;
-  padding-left: 10px;
-}
-
-.like-tally {
+.like-counter {
   font-weight: bold;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 10px;
+  padding-left: 15px;
 }
 
 .time-stamp {
@@ -72,7 +83,4 @@
 
   height: 40px;
   width: 60%;
-  border-right: transparent;
-  border-bottom: transparent;
-  border-left: transparent;
 }

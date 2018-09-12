@@ -1,3 +1,7 @@
+.App {
+  position: relative;
+}
+
 .App-header {
   background-color: white;
   height: 45px;

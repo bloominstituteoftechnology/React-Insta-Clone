@@ -1,5 +1,5 @@
 .search-bar {
-  max-width: 800px;
+  width: 100%;
   padding-left: 100px;
   padding-right: 100px;
   display: flex;
@@ -11,6 +11,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-left: -70px;
 }
 
 .search-bar-input {

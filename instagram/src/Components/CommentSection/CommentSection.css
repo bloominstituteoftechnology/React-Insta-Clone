@@ -1,15 +1,27 @@
-.comments-container {
-  padding-right: 180px;
-  padding-left: 190px;
+.comment-input {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
 }
 
-.post-comments {
+.comments-container {
+  /* padding-right: 180px;
+  padding-left: 190px; */
+  width: 95%;
+  height: 50px;
+  border-right: transparent;
+  border-bottom: transparent;
+  border-left: transparent;
+}
+
+.comment-text {
   padding-top: 5px;
   padding-bottom: 5px;
-  display: flex;
+  padding-left: 15px;
 }
 
-.poster-id {
+.user {
   font-weight: bold;
+
   padding-right: 5px;
 }

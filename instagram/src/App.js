@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './Components/SearchBar/SearchBar';
 import PostContainer from './Components/PostContainer/PostContainer';
-import PropTypes from 'prop-types';
 import dummyData from './dummy-data';
 
 import './App.css';
@@ -11,8 +10,7 @@ class App extends Component {
     super();
     this.state = {
       posts: [],
-      username: 'macdaddy',
-      inputText: ''
+      search: ''
     };
   }
 
@@ -22,25 +20,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div className="App">
-          <header className="App-header">
-            <SearchBar />
-          </header>
-        </div>
-        <div>
-          <PostContainer p={this.state.posts} />
-        </div>
+      <div className="App">
+        <SearchBar />
+        <PostContainer posts={this.state.posts} />
       </div>
     );
   }
 }
-
-PostContainer.propTypes = {
-  p: PropTypes.oneOf({
-    username: PropTypes.string,
-    imageUrl: PropTypes.string
-  })
-};
 
 export default App;
