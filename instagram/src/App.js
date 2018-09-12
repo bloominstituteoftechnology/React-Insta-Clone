@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data'
-import PostPage from './components/PostContainer/PostPage'
-
+import PostContainer from './components/PostContainer/PostContainer'
+import SearchBar from './components/SearchBar/SearchBar'
+import Authenticate from './components/Authentication/Authenticate'
 
 class App extends Component {
 
@@ -28,8 +29,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <header className="search-bar">
+                <SearchBar search={this.search}/>
+            </header> 
+
+             <React.Fragment className="App-renderer">
+                <PostContainer posts={this.state.dummyDataList}/>
+             </React.Fragment>
         
-        <PostPage />
+       
       
       </div>
     );
