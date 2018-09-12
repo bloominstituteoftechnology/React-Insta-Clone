@@ -21,20 +21,24 @@ class App extends Component {
 componentDidMount(){
   this.setState({
     posts: dummyData,
+    comments:'',
   })
   console.log(this.state);
 }
 
 
-  addNewComment = event => {
-       event.preventDefault();
-       if (this.props.comment) {
-         this.setState({
-           comments: [...this.props.comments, {text:this.state.text, username: ''}],
-           comments: ""
-         });
-       }
-     };
+addNewComment = e => {
+     e.preventDefault();
+     if (this.state.text) {
+       this.setState({
+         posts: {
+         comments: [this.state.posts.comments.map(comment => comment ),
+            {text: this.state.text,
+              username:''}]},
+       });
+     }
+   };
+
   handleChange = event => {
       event.preventDefault();
       this.setState({ [event.target.name]: event.target.value });
@@ -44,7 +48,7 @@ componentDidMount(){
       <div className="App">
       <SearchBar />
 
-      <PostContainer handleChange ={this.handleChange} addNewComment={this.addNewComment}  posts = {this.state.posts}/>
+      <PostContainer handleChange ={this.handleChange} addNewComment={this.addNewComment} comments = {this.state.comments} posts = {this.state.posts}/>
 
 
 
