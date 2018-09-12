@@ -5,7 +5,18 @@ import PropTypes from 'prop-types'
 
 
 
-const Post = props => {
+class Post extends React.Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+          likes: props.displayedComments.likes
+        }
+      }
+    
+      increaseLike = () => {
+        this.setState({ likes: this.state.likes + 1 })
+      }
 
     return(
         <React.Fragment>
@@ -17,7 +28,7 @@ const Post = props => {
             <img id='post-image' src={props.displayedComments.imageUrl} alt=''/>
             
             <div className="Buttons">
-                <img src="https://static.thenounproject.com/png/682470-200.png" alt="" />
+                <img  onClick={this.increaseLike}src="https://static.thenounproject.com/png/682470-200.png" alt="" />
                 <img src="https://static.thenounproject.com/png/682476-200.png" alt="" />
             </div>
             

@@ -33,6 +33,7 @@ class App extends Component {
         <React.Fragment className="post-container">
           <PostContainer posts={this.state.dummyDataList}/>
         </React.Fragment>
+      
       </div>
     );
   }

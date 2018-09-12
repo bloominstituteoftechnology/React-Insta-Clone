@@ -14,28 +14,31 @@ class CommentSection extends Component {
     }
  
  
-addNewComment = event => {
+addNewComment = (event,index) => {
   event.preventDefault();
 
     if(this.state.newComment){
-    this.setState({comments: [...this.state.comments, this.state.newComment], newComment: ''});  
+    this.setState({comments: [...this.state.comments, this.state.newComment], newComment: '', comment:''});  
     } 
 };
 
 handleInput = event =>{ this.setState({newComment: event.target.value});
-console.log(this.state.newComment)}
+console.log(this.state.input)}
 
 
     render() { 
        
         return (  
                 <div className='commnet-section-instances'>
-                {this.state.comments.map(comment => <Comment key={comment.username} comment={comment}/>)}
+                {this.state.comments.map(comment => 
+                <Comment 
+                    key={comment.username} comment={comment}
+                />)}
                 
                 <form onSubmit={this.addNewComment}>
        
                         <input onChange={this.handleInput} type="text" placeholder='Add a comment' value={this.commentInput}  />
-    
+                        
                 </form>
                 </div>
 
