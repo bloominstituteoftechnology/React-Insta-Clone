@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import dummyData from '../../dummy-data';
+import PropTypes from 'prop-types'
 
 class CommentSection extends Component {
     constructor(props){
         super(props);
         this.state={
-            comments: dummyData.comments,
+            comments: props.comments,
             commentInput: ''
         }
+        console.log(this.state.comments)
     }
 
 
@@ -16,7 +17,7 @@ class CommentSection extends Component {
        
         return (  
 
-            console.log(this.state.comments)
+            <div>hello</div>
 
         );
     }

@@ -8,13 +8,13 @@ import PropTypes from 'prop-types'
 const Post = props => {
 
     return(
-        <React.Fragment className='post-container'>
+        <React.Fragment>
             <div className='user'>
-                <img src={props.displayedComments.thumbnailUrl} />
+                <img src={props.displayedComments.thumbnailUrl} alt=''/>
                 <strong>{props.displayedComments.username}</strong>
             </div>
 
-            <img id='post-image' src={props.displayedComments.imageUrl} />
+            <img id='post-image' src={props.displayedComments.imageUrl} alt=''/>
             
             <div className="Buttons">
                 <img src="https://static.thenounproject.com/png/682470-200.png" alt="" />
@@ -22,12 +22,8 @@ const Post = props => {
             </div>
             
             <div className='likes'>{props.displayedComments.likes} likes</div>
-           
-            
-            <React.Fragment className=''>
-     {props.comments.map(comment => <Post key={comment.timestamp} displayedComments={comment} />)}
-     </React.Fragment>
-          
+ 
+            <CommentSection comments={props.displayedComments.comments} />
             
             
      </React.Fragment>
