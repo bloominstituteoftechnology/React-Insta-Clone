@@ -9,9 +9,16 @@ class App extends Component {
 		super();
 		this.state = {
 			searchInput: '',
-			data: dummyData,
+			data: [],
 		};
 	}
+
+	componentDidMount() {
+		this.setState({
+			data: dummyData,
+		});
+	}
+
 	render() {
 		return (
 			<div className="App">
