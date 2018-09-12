@@ -1,9 +1,6 @@
 .PostContainerDiv {
     border-bottom: 1px solid lightgray;
-    margin-left: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
+    margin: 20px 15px;
 
 }
 
@@ -13,8 +10,8 @@
 }
 
 .PostUser img {
-    width: 7%;
-    height: 7%;
+    width: 9%;
+    height: 9%;
     border-radius: 50%;
 }
 
@@ -23,18 +20,5 @@
     margin-left: 10px;
 }
 
-#PostImage {
-    width: 100%;
-}
 
-.Buttons img {
-    margin-top: 8px;
-    width: 30px;
-    height: 30px;
-}
-
-.Likes {
-    margin-top: 3px;
-    font-weight: bold;
-}
 

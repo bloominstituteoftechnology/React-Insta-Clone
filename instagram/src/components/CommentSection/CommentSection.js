@@ -8,7 +8,8 @@ class CommentSection extends React.Component {
         super(props);
         this.state = {
             comments: props.comments,
-            commentInput: ""
+            commentInput: "",
+            likes: props.likes
         }
     }
 
@@ -17,9 +18,9 @@ class CommentSection extends React.Component {
         this.setState({ 
             comments: [
                 ...this.state.comments,
-                { text: this.state.commentInput, username: "Sunflower" }
+                { username: "Sunflower", text: this.state.commentInput,  }
             ],
-            commentInput: " "
+            commentInput: ""
          })
     }
 
@@ -28,10 +29,22 @@ class CommentSection extends React.Component {
         console.log(this.state.input)
     }
 
+    increaseLikes = event => {
+        event.preventDefault();
+        this.setState({ likes: this.state.likes + 1 })
+        console.log('Like button Count:', this.state.likes);
+    }
+
     render() {
         return (
             <div className="CommentSectionDiv">
+            <div className="Buttons">
+                <img onClick={this.increaseLikes} src="https://static.thenounproject.com/png/682470-200.png" alt="" />
+                <img src="https://static.thenounproject.com/png/682476-200.png" alt="" />
+            </div>
+            <div className="Likes">{this.state.likes} likes</div>
                 {this.state.comments.map((element, index) => <Comment comment={element} key={index}/>)}
+
                 <form onSubmit={this.addNewComment} >
                     <input onChange={this.handleChange} name='commentInput' type="text" placeholder="Add a Comment" />
                 </form>

@@ -9,7 +9,23 @@ class App extends Component {
     super();
     this.state = {
       data: [],
+      searchInput: ""
     }
+  }
+
+  searchSubmit = event => {
+    console.log('searching!');
+    event.preventDefault();
+    let filteredData = this.state.data;
+    filteredData.filter((element) => 
+      {if(element.username === this.state.searchInput) {
+        this.setState({ data: element })
+      }}
+    );
+  }
+
+  searchInput = event => {
+    this.setState({ [event.target.name] : event.target.value })  
   }
 
   componentDidMount() {
@@ -19,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar searchInput={this.searchInput} searchSubmit={this.searchSubmit} />
         <PostContainer postsProps={this.state.data}/>
       </div>
     );
