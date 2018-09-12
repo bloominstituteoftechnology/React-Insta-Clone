@@ -8,7 +8,7 @@ class CommentSection extends Component {
         super(props);
         this.state={
             comments: props.comments,
-            commentInput: ''
+            newComment: ''
         }
         
     }
@@ -17,12 +17,13 @@ class CommentSection extends Component {
 addNewComment = event => {
   event.preventDefault();
 
-    if(this.state.commentInput){
-    this.setState({comments: [...this.state.comments, this.state.commentInput], commentInput: ''});  
+    if(this.state.newComment){
+    this.setState({comments: [...this.state.comments, this.state.newComment], newComment: ''});  
     } 
 };
 
-handleInput = event =>{ this.setState({commentInput: event.target.value});}
+handleInput = event =>{ this.setState({newComment: event.target.value});
+console.log(this.state.newComment)}
 
 
     render() { 
@@ -33,10 +34,9 @@ handleInput = event =>{ this.setState({commentInput: event.target.value});}
                 
                 <form onSubmit={this.addNewComment}>
        
-        <input onChange={this.handleInput} type="text" placeholder='Add a comment' value={this.inputText}  />
+                        <input onChange={this.handleInput} type="text" placeholder='Add a comment' value={this.commentInput}  />
     
-        
-            </form>
+                </form>
                 </div>
 
         );
