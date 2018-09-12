@@ -14,6 +14,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    console.log('Component did mount!')
     this.setState({ data: dummyData })
   }
 
@@ -24,10 +25,11 @@ class App extends Component {
   searchSubmit = event => {
     console.log('searching!');
     event.preventDefault();
-
-    // or let filteredData = filteredData.slice()
-
-    let filteredData = [...this.state.data];
+    // || let filteredData = filteredData.slice()
+    // Making a new copy of the array because State is immutable, we should never be manipulating data on the state directly
+    // So a copy is made to re-set the state using setState() instead of mutating old data... 
+    // Maybe because we're requesting data that is not ours
+    let filteredData = [...this.state.data]; 
     filteredData = filteredData.filter(element => {
       if (element.username === this.state.searchInput) {
         return element;
@@ -37,6 +39,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('Rendering!')
     return (
       <div className="App">
         <SearchBar searchInput={this.searchInput} searchSubmit={this.searchSubmit} />

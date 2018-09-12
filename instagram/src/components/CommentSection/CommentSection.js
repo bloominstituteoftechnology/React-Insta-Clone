@@ -15,20 +15,20 @@ class CommentSection extends React.Component {
         }
     }
 
+    handleChange = event => {
+        this.setState({ [event.target.name]: event.target.value })
+        console.log(this.state.input)
+    }
+
     addNewComment = event => {
         event.preventDefault();
         this.setState({ 
             comments: [
-                ...this.state.comments,
-                { username: "Sunflower", text: this.state.commentInput,  }
+                ...this.state.comments, // A copy of the previously listed comments 
+                { username: "Sunflower", text: this.state.commentInput,  } // Adding on top of those comments, we add the new comment 
             ],
-            commentInput: ""
+            commentInput: "" // This is supposed to clear the comment input, but it's not
          })
-    }
-
-    handleChange = event => {
-        this.setState({ [event.target.name]: event.target.value })
-        console.log(this.state.input)
     }
 
     increaseLikes = event => {
@@ -45,7 +45,7 @@ class CommentSection extends React.Component {
 
             {this.state.comments.map((element, index) => <Comment comment={element} key={index}/>)}
             
-            <CommentInput updateComment={this.handleChange} submitComment={this.addNewComment}/>
+            <CommentInput commentInput={this.state.commentInput} updateComment={this.handleChange} submitComment={this.addNewComment}/>
             </div>
         )
     }
