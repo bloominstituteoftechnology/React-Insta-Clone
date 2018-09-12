@@ -4,7 +4,11 @@ import React from 'react';
 const Comment = props => {
     return (
         <div>
+             {/* <img alt='heart' src= {Heart} className="logo" /> */}
+            {/* great way to do the hearts at the end of each comment. */}
+            <div>
             {props.comments.username}: {props.comments.text}
+            </div>
         </div>
     );
 };

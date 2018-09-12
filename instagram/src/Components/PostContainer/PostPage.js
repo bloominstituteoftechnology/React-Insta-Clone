@@ -13,10 +13,6 @@ class PostPage extends Component {
         }
     }
 
-    componentDidMount() {
-
-    }
-
     render() {
         return (
             <div className="post-container">

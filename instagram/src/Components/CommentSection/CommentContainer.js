@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import Comment from './Comment';
 //import PropTypes from 'prop-types';
 import CommentInput from './CommentInput';
+import Heart from '../../photos/heart.svg';
+import './Comment.css';
 
 class CommentContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
             comments: props.comments,
-            newComment: ''
+            newComment: '',
+            likes:0
         }
     }
     
@@ -30,11 +33,18 @@ class CommentContainer extends Component {
         this.setState({[e.target.name]:e.target.value
         });
       };
+
+      increaseLikes = e => {
+          e.preventDefault();   
+          this.setState({likes: this.state.likes + 1});
+      }
     
     render() {
         console.log(this.state);
         return (
             <div>
+                {this.state.likes}
+                <img onClick={this.increaseLikes} alt='heart' src= {Heart} className="logo-likes" />
                 {this.state.comments.map((comment, i) => <Comment key={i} comments={comment} /> )}  <CommentInput
                     addNewComment={this.addNewComment}
                     handleInput={this.handleInput}
