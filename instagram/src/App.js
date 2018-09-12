@@ -14,6 +14,22 @@ class App extends Component {
     };
   }
 
+  search = event => {
+    event.preventDefault();
+    let newPosts = [...this.state.posts];
+    newPosts = newPosts.filter(post => {
+      if (post.username === this.state.search) {
+        return post;
+      }
+    });
+    this.setState({ posts: newPosts });
+  };
+
+  handleChange = event => {
+    event.preventDefault();
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
   componentDidMount() {
     this.setState({ posts: dummyData });
   }
