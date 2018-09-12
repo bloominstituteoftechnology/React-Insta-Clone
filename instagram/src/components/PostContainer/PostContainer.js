@@ -7,13 +7,13 @@ const PostContainer = props => {
 
     return(
         <React.Fragment className=''>
-     {props.comments.map(comment => <Post key={comment.timestamp} displayedComments={comment} />)}
+     {props.posts.map(post => <Post key={post.timestamp} displayedComments={post} />)}
      </React.Fragment>
 
 )};
 
 PostContainer.propTypes = {
-    comments: PropTypes.arrayOf(PropTypes.string)
+    posts: PropTypes.arrayOf(PropTypes.string)
 }
 
 

@@ -16,15 +16,18 @@ const Post = props => {
 
             <img id='post-image' src={props.displayedComments.imageUrl} />
             
+            <div className="Buttons">
+                <img src="https://static.thenounproject.com/png/682470-200.png" alt="" />
+                <img src="https://static.thenounproject.com/png/682476-200.png" alt="" />
+            </div>
             
             <div className='likes'>{props.displayedComments.likes} likes</div>
-            <div>{props.displayedComments.timestamp}</div>
+           
             
-
-            <React.Fragment>
-                <span>{props.displayedComments.username}</span>
-                <span>{props.displayedComments.text}</span>
-            </React.Fragment>
+            <React.Fragment className=''>
+     {props.comments.map(comment => <Post key={comment.timestamp} displayedComments={comment} />)}
+     </React.Fragment>
+          
             
             
      </React.Fragment>

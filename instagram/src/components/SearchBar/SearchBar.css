@@ -1,0 +1,57 @@
+.SearchBarDiv {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1.5px solid lightgray;
+    align-items: flex-end;
+
+}
+
+.InstagramLogo {
+    display: flex;
+    margin: 8px;
+}
+
+#InstagramCam {
+    width: 45px;
+    height: 45px;
+}
+
+#InstagramBrand {
+    width: 90px;
+    height: 30px;
+    margin-left: 8px;
+    margin-top: 10px;
+
+}
+
+.SearchBarDiv input {
+    width: 160px;
+    height: 25px;
+    color: grey;
+    margin: 8px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background: #FAFAFA;
+}
+
+.InstagramIcon {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+#Explore {
+    width:30px;
+    height: 30px;
+}
+
+#Likes {
+    width:30px;
+    height: 30px;
+}
+
+#User {
+    width:30px;
+    height: 30px;
+}

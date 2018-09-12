@@ -29,9 +29,10 @@ class App extends Component {
         <header className="search-bar">
           <SearchBar />
         </header>
-        <p className="post-container">
-          <PostContainer comments={this.state.dummyDataList}/>
-        </p>
+
+        <React.Fragment className="post-container">
+          <PostContainer posts={this.state.dummyDataList}/>
+        </React.Fragment>
       </div>
     );
   }
