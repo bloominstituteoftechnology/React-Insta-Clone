@@ -14,30 +14,27 @@ class CommentContainer extends Component {
             likes:0
         }
     }
+
+    handleInput = e => {
+        e.preventDefault();
+        console.log('handleInput');
+      this.setState({[e.target.name]:e.target.value});
+    };
     
     
     addNewComment = e => {
-        console.log('addComment');
         e.preventDefault();
           this.setState({
-            comments: [...this.state.comments, { text: this.state.newComment, username: "User" }],
+            comments: [...this.state.comments, { text: this.state.newComment, username: "Mack" }],
             newComment: ""
-          },()=> console.log("newstate",this.state));
-         
-        };
+          },()=> console.log("newstate",this.state));  
+    };
         
 
-      handleInput = e => {
-          e.preventDefault();
-          console.log('handleInput');
-        this.setState({[e.target.name]:e.target.value
-        });
-      };
-
-      increaseLikes = e => {
+    increaseLikes = e => {
           e.preventDefault();   
           this.setState({likes: this.state.likes + 1});
-      }
+    }
     
     render() {
         console.log(this.state);
@@ -48,6 +45,7 @@ class CommentContainer extends Component {
                 {this.state.comments.map((comment, i) => <Comment key={i} comments={comment} /> )}  <CommentInput
                     addNewComment={this.addNewComment}
                     handleInput={this.handleInput}
+                    comment = {this.state.newComment}
                     />
             </div>
         );
