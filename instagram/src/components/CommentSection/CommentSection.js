@@ -12,11 +12,17 @@ class CommentSection extends Component {
         }
         
     }
+ 
+ 
+addNewComment = event => {
+  event.preventDefault();
 
-    // componentDidMount(){
-    //     this.setState({comments: props.comments});
-    // }
+    if(this.state.commentInput){
+    this.setState({comments: [...this.state.comments, this.state.commentInput], commentInput: ''});  
+    } 
+};
 
+handleInput = event =>{ this.setState({commentInput: event.target.value});}
 
 
     render() { 
@@ -25,6 +31,12 @@ class CommentSection extends Component {
                 <div className='commnet-section-instances'>
                 {this.state.comments.map(comment => <Comment key={comment.username} comment={comment}/>)}
                 
+                <form onSubmit={this.addNewComment}>
+       
+        <input onChange={this.handleInput} type="text" placeholder='Add a comment' value={this.inputText}  />
+    
+        
+            </form>
                 </div>
 
         );
