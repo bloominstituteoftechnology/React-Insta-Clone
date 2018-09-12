@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 import './CommentSection.css';
+import CommentInput from './CommentInput';
+import LikeSection from './LikeSection';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -38,16 +40,12 @@ class CommentSection extends React.Component {
     render() {
         return (
             <div className="CommentSectionDiv">
-            <div className="Buttons">
-                <img onClick={this.increaseLikes} src="https://static.thenounproject.com/png/682470-200.png" alt="" />
-                <img src="https://static.thenounproject.com/png/682476-200.png" alt="" />
-            </div>
-            <div className="Likes">{this.state.likes} likes</div>
-                {this.state.comments.map((element, index) => <Comment comment={element} key={index}/>)}
 
-                <form onSubmit={this.addNewComment} >
-                    <input onChange={this.handleChange} name='commentInput' type="text" placeholder="Add a Comment" />
-                </form>
+            <LikeSection likes={this.state.likes} increaseLikes={this.increaseLikes}/>
+
+            {this.state.comments.map((element, index) => <Comment comment={element} key={index}/>)}
+            
+            <CommentInput updateComment={this.handleChange} submitComment={this.addNewComment}/>
             </div>
         )
     }

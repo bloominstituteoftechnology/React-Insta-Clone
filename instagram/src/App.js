@@ -13,9 +13,20 @@ class App extends Component {
     }
   }
 
+  componentDidMount() {
+    this.setState({ data: dummyData })
+  }
+
+  searchInput = event => {
+    this.setState({ [event.target.name] : event.target.value })  
+  }
+
   searchSubmit = event => {
     console.log('searching!');
     event.preventDefault();
+
+    // or let filteredData = filteredData.slice()
+
     let filteredData = [...this.state.data];
     filteredData = filteredData.filter(element => {
       if (element.username === this.state.searchInput) {
@@ -23,20 +34,6 @@ class App extends Component {
       }
     })
     this.setState({data: filteredData})
-
-    // filteredData.filter((element) => 
-    //   {if(element.username === this.state.searchInput) {
-    //     this.setState({ data: element })
-    //   }}
-    // );
-  }
-
-  searchInput = event => {
-    this.setState({ [event.target.name] : event.target.value })  
-  }
-
-  componentDidMount() {
-    this.setState({ data: dummyData })
   }
 
   render() {
