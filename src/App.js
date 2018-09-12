@@ -11,15 +11,26 @@ import CommentInput from './components/CommentSection/CommentInput.js'
 class App extends Component {
   constructor(props){
     super();
-    this.state =  dummyData
+    this.state = {
+      posts:[]
+    }
 
   };
+
+
+componentDidMount(){
+  this.setState({
+    posts: dummyData,
+  })
+  console.log(this.state);
+}
+
 
   addNewComment = event => {
        event.preventDefault();
        if (this.props.comment) {
          this.setState({
-           comments: [...this.props.comments, {text:this.props.comments, username: ''}],
+           comments: [...this.props.comments, {text:this.state.text, username: ''}],
            comments: ""
          });
        }
@@ -33,7 +44,7 @@ class App extends Component {
       <div className="App">
       <SearchBar />
 
-      <PostContainer handleChange ={this.handleChange} addNewComment={this.addNewComment}  userData = {this.state}/>
+      <PostContainer handleChange ={this.handleChange} addNewComment={this.addNewComment}  posts = {this.state.posts}/>
 
 
 
