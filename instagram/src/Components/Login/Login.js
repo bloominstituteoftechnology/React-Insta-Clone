@@ -1,6 +1,9 @@
 import React from 'react';
 
-const Login = (PassedComponent) => => (props) => {
+const Login = PassedComponent => props => {
+  if (isLoggedIn) {
+    return <App />;
+  } else {
     return (
       <div className="login">
         <input
@@ -18,6 +21,7 @@ const Login = (PassedComponent) => => (props) => {
         <button className="login-button">Login</button>
       </div>
     );
+  }
 };
 
 export default Login;
