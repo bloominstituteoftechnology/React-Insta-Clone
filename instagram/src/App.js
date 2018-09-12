@@ -16,12 +16,19 @@ class App extends Component {
   searchSubmit = event => {
     console.log('searching!');
     event.preventDefault();
-    let filteredData = this.state.data;
-    filteredData.filter((element) => 
-      {if(element.username === this.state.searchInput) {
-        this.setState({ data: element })
-      }}
-    );
+    let filteredData = [...this.state.data];
+    filteredData = filteredData.filter(element => {
+      if (element.username === this.state.searchInput) {
+        return element;
+      }
+    })
+    this.setState({data: filteredData})
+
+    // filteredData.filter((element) => 
+    //   {if(element.username === this.state.searchInput) {
+    //     this.setState({ data: element })
+    //   }}
+    // );
   }
 
   searchInput = event => {
