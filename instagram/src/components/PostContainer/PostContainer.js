@@ -1,14 +1,13 @@
 import React from 'react'
-import CommentSection from './CommentSection'
 import PropTypes from 'prop-types'
-
+import Post from './Post'
 
 
 const PostContainer = props => {
 
     return(
         <React.Fragment className=''>
-     {props.comments.map(comment => <CommentSection key={comment.timestamp} displayedComments={comment} />)}
+     {props.comments.map(comment => <Post key={comment.timestamp} displayedComments={comment} />)}
      </React.Fragment>
 
 )};

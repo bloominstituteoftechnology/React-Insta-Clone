@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 
 
 
-const CommentSection = props => {
+const Post = props => {
 
     return(
-        <React.Fragment className='CommentSection-display'>
+        <React.Fragment className='post-display'>
 
             <img src={props.displayedComments.thumbnailUrl} />
             <strong>{props.displayedComments.username}</strong>
@@ -27,7 +27,7 @@ const CommentSection = props => {
 
 
 
-CommentSection.propTypes = {
+Post.propTypes = {
     username: PropTypes.string.isRequired,
     thumbnailUrl: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
@@ -47,4 +47,4 @@ CommentSection.propTypes = {
 
 
 
-export default CommentSection;
+export default Post;
