@@ -26,14 +26,15 @@ class CommentContainer extends Component {
         e.preventDefault();
           this.setState({
             comments: [...this.state.comments, { text: this.state.newComment, username: "Mack" }],
-            newComment: ""
-          },()=> console.log("newstate",this.state));  
+            newComment: ""});  
     };
         
 
     increaseLikes = e => {
           e.preventDefault();   
-          this.setState({likes: this.state.likes + 1});
+          this.setState(prevState =>{
+              return {likes: prevState.likes + 1}
+            });
     }
     
     render() {
