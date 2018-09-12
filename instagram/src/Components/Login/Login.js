@@ -11,7 +11,11 @@ class Login extends React.Component {
   }
 
   loginAttempt = event => {
-    this.setState({});
+    event.preventDefault();
+    this.setState({
+      username: '',
+      password: ''
+    });
   };
 
   render() {
@@ -29,7 +33,7 @@ class Login extends React.Component {
           name="loginPassword"
           placeholder="Password"
         />
-        <button className="login-button" />
+        <button onClick={this.loginAttempt} className="login-button" />
       </form>
     );
   }
