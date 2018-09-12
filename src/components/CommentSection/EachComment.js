@@ -8,7 +8,7 @@ const EachComment = (props) => {
      <div className="Comment">
 
 
-<p className = 'commentText'><span>{props.userData.username}: </span> {props.userData.text}</p>
+<p><span>{props.userData.username}: </span> {props.userData.text}</p>
 
      </div>
 )}

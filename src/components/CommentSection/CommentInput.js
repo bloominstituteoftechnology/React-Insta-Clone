@@ -3,11 +3,12 @@ import EachComment from './EachComment.js';
 import './CommentSection.css';
 
 const CommentInput = (props) => {
-  console.log();
+  console.log(props);
    return(
      <div className="Comment">
-       <input type='text' name="newComment"  onChange={props.input.addNewComment}/>
-       <button onClick={props.input.addNewComment}>Submit</button>
+{props.userData.map(userData => <EachComment userData={userData} />)}
+       <input type='text' name="text" onChange={props.handleChange} />
+       <button onClick={props.addNewComment}>Submit</button>
 
 </div>
 )}

@@ -1,13 +1,12 @@
 import React from 'react';
 import EachComment from './EachComment.js';
 import './CommentSection.css';
-
+import CommentInput from './CommentInput.js'
 const Comment = (props) => {
-  console.log();
+  console.log(props);
    return(
      <div className="Comment">
-{props.userData.map(comment=> <EachComment userData = {comment}/>)}
-
+<CommentInput userData = {props.userData.comments} handleChange = {props.handleChange} addNewComment={props.addNewComment} />
 </div>
 )}
 export default Comment

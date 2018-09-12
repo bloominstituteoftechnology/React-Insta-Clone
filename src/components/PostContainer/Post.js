@@ -1,11 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
+
 import './PostContainer.css';
+import handleChange from '../CommentSection/CommentSection.js'
 import Comment from '../CommentSection/Comment.js'
 
-=======
-import './PostContainer.css'
->>>>>>> parent of 7a75442... add coments section and a bit of a form
 const Post = (props) => {
   console.log(props);
    return(
@@ -20,13 +18,17 @@ const Post = (props) => {
   <div className="HeartLikeButtton2">♡</div>
   <div>💬</div>
 </div>
-<<<<<<< HEAD
-<Comment userData = {props.userData} />
-=======
->>>>>>> parent of 7a75442... add coments section and a bit of a form
+
+
+<Comment  handleChange ={props.handleChange} addNewComment={props.addNewComment}  userData = {props.userData}/>
+
+
+
+
+
 
      </div>
-   )
+   );
 }
 
 export default Post

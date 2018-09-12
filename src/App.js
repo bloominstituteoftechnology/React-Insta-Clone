@@ -3,12 +3,11 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import dummyData from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer.js'
-<<<<<<< HEAD
+
 import Comment from './components/CommentSection/Comment.js'
 import CommentInput from './components/CommentSection/CommentInput.js'
-=======
 
->>>>>>> parent of 7a75442... add coments section and a bit of a form
+
 class App extends Component {
   constructor(props){
     super();
@@ -16,18 +15,29 @@ class App extends Component {
 
   };
 
-
+  addNewComment = event => {
+       event.preventDefault();
+       if (this.props.comment) {
+         this.setState({
+           comments: [...this.props.comments, {text:this.props.comments, username: ''}],
+           comments: ""
+         });
+       }
+     };
+  handleChange = event => {
+      event.preventDefault();
+      this.setState({ [event.target.name]: event.target.value });
+    };
   render() {
     return (
       <div className="App">
       <SearchBar />
-<<<<<<< HEAD
-      <PostContainer NewComment ={this.NewComment} userData = {this.state}/>
-<Comment userData = {this.state}/>
-         <CommentInput  userData = {this.state.comments} />
-=======
-      <PostContainer userData = {this.state}/>
->>>>>>> parent of 7a75442... add coments section and a bit of a form
+
+      <PostContainer handleChange ={this.handleChange} addNewComment={this.addNewComment}  userData = {this.state}/>
+
+
+
+
       </div>
     );
   }
