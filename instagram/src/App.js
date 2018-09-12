@@ -21,7 +21,7 @@ class App extends Component {
     }
 
     search = (term) => {
-      let dummyDataList = dummyData.filter(post => post.username.includes(term))
+      let dummyDataList = dummyData.filter(post  => post.username.includes(term))
       this.setState({ dummyDataList })
     }
 
@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="search-bar">
-          <SearchBar />
+          <SearchBar search={this.search}/>
         </header>
 
         <React.Fragment className="post-container">
