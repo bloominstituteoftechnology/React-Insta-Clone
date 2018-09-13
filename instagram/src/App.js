@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+// import SearchBar from './components/SearchBar/SearchBar';
+// import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
 import './App.css';
 
 class App extends Component {
@@ -43,8 +44,7 @@ class App extends Component {
     console.log('Rendering!')
     return (
       <div className="App">
-        <SearchBar searchInput={this.searchInput} searchSubmit={this.searchSubmit} />
-        <PostContainer postsProps={this.state.data}/>
+        <PostsPage searchInput={this.searchInput} searchSubmit={this.searchSubmit} postsProps={this.state.data} />
       </div>
     );
   }

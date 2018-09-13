@@ -8,7 +8,7 @@ function SearchBar(props) {
                 <img id="InstagramCam" src="https://i1.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Instagram-Logo.png?w=600&ssl=1" alt="1" />
                 <img id="InstagramBrand" src="https://www.edigitalagency.com.au/wp-content/uploads/instagram-logo-text-black-png.png" alt="3" />
             </div>
-            <form onSubmit={props.searchSubmit} onChange={props.searchInput} >
+            <form onChange={props.searchInput} onSubmit={props.searchSubmit}>
                 <input name="searchInput" type="text" placeholder="search.." />    
             </form>
             <div className="InstagramIcon">
