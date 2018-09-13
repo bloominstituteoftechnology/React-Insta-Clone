@@ -17,7 +17,6 @@ class LoginPage extends React.Component {
 
     logIn = event => {
         localStorage.setItem('username', this.state.usernameInput);
-        // window.location.reload();
     }
 
     render() {

@@ -4,7 +4,19 @@ import dummyData from './dummy-data';
 // import PostContainer from './components/PostContainer/PostContainer';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authentication from './components/Authentication/Authentication';
-import './App.css';
+
+import styled from 'styled-components';
+
+const AppDiv = styled.div `
+  margin: 0 auto;
+  width: 100%;
+  max-width: 650px;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  padding: 10px;
+
+  ${props => (props.type === 'primary' ? `background: #2196f3;` : null)}
+`
 
 class App extends Component {
   constructor() {
@@ -44,12 +56,12 @@ class App extends Component {
   render() {
     console.log('Rendering!')
     return (
-      <div className="App">
+      <AppDiv type="primary">
         <PostsPage 
         searchInput={this.searchInput} 
         searchSubmit={this.searchSubmit} 
         postsProps={this.state.data} />
-      </div>
+      </AppDiv>
     );
   }
 }

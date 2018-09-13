@@ -14,7 +14,7 @@ const Authentication = App =>
         }
 
         componentDidMount() {
-            localStorage.getItem("username") ? this.setState({ logged: true }) : null
+            localStorage.getItem("username") ? this.setState({ logged: true }) : null;
         }
         render() {
             return (
