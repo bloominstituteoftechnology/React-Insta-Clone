@@ -31,7 +31,7 @@
   to { transform: rotate(360deg); }
 }
 .instaCloneBanner {
-  color: white;
+  color:grey;
   font-size: 5rem;
   font-weight: bold;
   font-family: Brush Script MT;
@@ -39,5 +39,4 @@
   padding: 2px;
   border: 3px solid purple;
   text-decoration: underline;
-  background-color: magenta;
 }
