@@ -7,7 +7,7 @@ import compass from './images/compass.jpg';
 import heart from './images/instaheart.png';
 import person from './images/person.png';
 
-const SearchBar = () => {
+const SearchBar = props => {
   return (
     <div className="search-bar">
       <div className="header-left">
