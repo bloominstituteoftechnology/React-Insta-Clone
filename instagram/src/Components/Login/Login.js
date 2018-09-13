@@ -4,6 +4,8 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            username: '',
+            password: ''
         }
     }
 
@@ -28,7 +30,9 @@ class Login extends Component {
            placeholder='Username'></input>
 
            <input 
-           type="text"  
+           onChange={this.login}
+           value={this.state.password} 
+           type='text' name='password'  
            placeholder='Password'></input>
 
            <button onClick={this.handleSubmit}>Login</button>

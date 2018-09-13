@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
-//import PropTypes from 'prop-types';
 import CommentInput from './CommentInput';
 import Heart from '../../photos/heart.svg';
 import './Comment.css';
