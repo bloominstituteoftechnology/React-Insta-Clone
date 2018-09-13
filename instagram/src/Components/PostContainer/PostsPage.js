@@ -8,19 +8,23 @@ class PostsPage extends Component {
     super();
     this.state = {
       posts: [],
-      search: ''
+      search: []
     };
+  }
+
+  componentDidMount() {
+    this.setState({ posts: dummyData });
   }
 
   search = event => {
     event.preventDefault();
     let newPosts = [...this.state.posts];
     newPosts = newPosts.filter(post => {
-      if (post.username === this.state.search) {
+      if (post.username.includes(event.target.value)) {
         return post;
       }
     });
-    this.setState({ posts: newPosts });
+    this.setState({ search: newPosts });
   };
 
   handleChange = event => {
@@ -28,15 +32,18 @@ class PostsPage extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  componentDidMount() {
-    this.setState({ posts: dummyData });
-  }
-
   render() {
     return (
       <div className="PostsPage">
-        <SearchBar />
-        <PostContainer posts={this.state.posts} />
+        <SearchBar
+          searchTerm={this.state.searchTerm}
+          searchPosts={this.search}
+        />
+        <PostContainer
+          posts={
+            this.state.search.length > 0 ? this.state.search : this.state.posts
+          }
+        />
       </div>
     );
   }

@@ -5,13 +5,12 @@ class Login extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: '',
-      isLoggedIn: false
+      password: ''
     };
   }
 
   handleInputChange = event => {
-    this.setState({ [event.targetname]: event.target.value });
+    this.setState({ [event.target.name]: event.target.value });
   };
 
   loginAttempt = event => {
@@ -26,7 +25,7 @@ class Login extends React.Component {
         <input
           className="login-user"
           type="text"
-          name="loginUser"
+          name="username"
           placeholder="Username"
           value={this.state.username}
           onChange={this.handleInputChange}
@@ -34,7 +33,7 @@ class Login extends React.Component {
         <input
           className="login-password"
           type="text"
-          name="loginPassword"
+          name="password"
           placeholder="Password"
           value={this.state.password}
           onChange={this.handleInputChange}

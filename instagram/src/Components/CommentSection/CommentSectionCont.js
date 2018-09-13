@@ -40,10 +40,17 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div className="comment-like">
-        <img onClick={this.incrementLikes} className="heart" src={instaheart} />
-        <img className="comment-balloon" src={comment} />
+        <img
+          onClick={this.incrementLikes}
+          className="heart"
+          src={instaheart}
+          alt="heart"
+        />
+        <img className="comment-balloon" src={comment} alt="bubble" />
 
-        <div className="like-counter">{this.state.likes} likes</div>
+        <div className="like-counter" alt="bubble">
+          {this.state.likes} likes
+        </div>
 
         <div>
           {this.state.comments.map((c, i) => (
