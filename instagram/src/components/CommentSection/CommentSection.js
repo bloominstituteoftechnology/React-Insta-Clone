@@ -23,11 +23,13 @@ class CommentSection extends Component {
                 newComment: ""
             }
         );
+        event.target.reset();
     };
 
     handleChange = event => {
         this.setState({ [event.target.name]: event.target.value }, () => {
             console.log(this.state.newComment);
+            
         }); 
     };
 
