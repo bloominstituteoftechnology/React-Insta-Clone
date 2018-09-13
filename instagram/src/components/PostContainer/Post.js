@@ -16,7 +16,7 @@ const Post = props => {
   console.log(`PROPS ${props.post}`);
   return (
     <Card>
-      <CardBody>
+      <CardBody class="posts-container-wrapper">
         <Row>
           <img
             style={{ borderRadius: 90 }}
