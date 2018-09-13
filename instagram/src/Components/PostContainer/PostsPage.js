@@ -17,9 +17,7 @@ class PostsPage extends Component {
   }
 
   search = event => {
-    event.preventDefault();
-    let newPosts = [...this.state.posts];
-    newPosts = newPosts.filter(post => {
+    const newPosts = this.state.posts.filter(post => {
       if (post.username.includes(event.target.value)) {
         return post;
       }
