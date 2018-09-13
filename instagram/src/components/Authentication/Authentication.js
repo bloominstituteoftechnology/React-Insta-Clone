@@ -9,7 +9,12 @@ const Authentication = App =>
             super();
             this.state = {
                 logged: false,
+
             }
+        }
+
+        componentDidMount() {
+            localStorage.getItem("username") ? this.setState({ logged: true }) : null
         }
         render() {
             return (
