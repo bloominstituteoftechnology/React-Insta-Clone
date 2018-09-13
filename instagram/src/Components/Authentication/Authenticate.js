@@ -1,14 +1,26 @@
 import React from 'react';
+import Login from '../Login/Login';
 
-const Authenticate = PassedComponent =>
+const Authenticate = App =>
   class extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {};
+      this.state = {
+        isLoggedIn: false
+      };
+    }
+
+    componentDidMount() {
+      if (!localStorage.getItem('username')) {
+        this.setState({ isLoggedIn: false });
+      } else {
+        this.setState({ isLoggedIn: true });
+      }
     }
 
     render() {
-      return <PassedComponent />;
+      if (this.state.isLoggedIn) return <App />;
+      return <Login />;
     }
   };
 
