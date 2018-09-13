@@ -8,22 +8,14 @@ const Authenticate = App =>
       this.state = {
         loggedIn: false
       };
-      console.log(this.state)
     }
     
-    componentDidMount() {
-      if (!localStorage.getItem('user')) {
-        this.setState({ loggedIn: false });
-      } else {
+
+    componentDidMount () {
+      if (localStorage.getItem("user") !== null) {
         this.setState({ loggedIn: true });
       }
     }
-
-    // componentDidMount () {
-    //   if(localStorage.getItem('user' !== !null)) {
-    //     this.setState({loggedIn: true});
-    //   } my code
-    // }
 
     render () {
       if (this.state.loggedIn) return <App />;

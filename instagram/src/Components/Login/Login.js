@@ -4,17 +4,12 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: '',
-            password: ''
         }
     }
 
-    handleLoginSubmit = e => {
-    //     const user = this.state.username;
-    //     localStorage.setItem('user', user);
+    handleSubmit = e => {
         window.location.reload();
-    
-      };
+    };
 
     login = e => {
         const user = this.state.username;
@@ -36,7 +31,7 @@ class Login extends Component {
            type="text"  
            placeholder='Password'></input>
 
-           <button onClick={this.handleLoginSubmit}>Login</button>
+           <button onClick={this.handleSubmit}>Login</button>
        </form>
         );
     };
