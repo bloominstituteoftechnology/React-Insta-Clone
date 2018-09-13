@@ -27,22 +27,7 @@ componentDidMount(){
 }
 
 
-addNewComment = e => {
-     e.preventDefault();
-     if (this.state.text) {
-       this.setState({
-         posts: {
-         comments: [this.state.posts.comments.map(comment => comment ),
-            {text: this.state.text,
-              username:''}]},
-       });
-     }
-   };
 
-  handleChange = event => {
-      event.preventDefault();
-      this.setState({ [event.target.name]: event.target.value });
-    };
   render() {
     return (
       <div className="App">
