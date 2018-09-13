@@ -1,9 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
-import './CommentSection.css';
+import styled from 'styled-components';
 import CommentInput from './CommentInput';
 import LikeSection from './LikeSection';
+
+const CommentSectionDiv = styled.div `
+    margin: 10px 0;
+    margin-bottom: 5px;
+    margin-left: 10px;
+`
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -39,14 +45,14 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <div className="CommentSectionDiv">
+            <CommentSectionDiv>
 
-            <LikeSection likes={this.state.likes} increaseLikes={this.increaseLikes}/>
+                <LikeSection likes={this.state.likes} increaseLikes={this.increaseLikes}/>
 
-            {this.state.comments.map((element, index) => <Comment comment={element} key={index}/>)}
+                {this.state.comments.map((element, index) => <Comment comment={element} key={index}/>)}
             
-            <CommentInput commentInput={this.state.commentInput} handleChange={this.handleChange} addNewComment={this.addNewComment}/>
-            </div>
+                <CommentInput commentInput={this.state.commentInput} handleChange={this.handleChange} addNewComment={this.addNewComment}/>
+            </CommentSectionDiv>
         )
     }
 }
