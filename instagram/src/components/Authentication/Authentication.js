@@ -1,4 +1,6 @@
 import React from 'react';
+import LoginPage from '../LoginPage/LoginPage';
+
 // import App from '../../App';
 
 const Authentication = App => 
@@ -11,8 +13,7 @@ const Authentication = App =>
         }
         render() {
             return (
-                this.state.logged ? <App /> : null
-                // this.state.logged ? <App /> : <Login />
+                this.state.logged ? <App /> : <LoginPage />
             )
         }
     }
