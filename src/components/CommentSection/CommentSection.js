@@ -41,22 +41,24 @@ class CommentSection extends React.Component {
 
   handleCommentSubmit = e => {
     e.preventDefault();
-    if (this.state) {
-
+  let user = localStorage.getItem('user');
+    if (this.state.comment) {
+      const newComment = { text: this.state.comment, username: user}
+      const comments = this.state.comments.slice();
+      comments.push(newComment);
+      this.setState({ comments, comment: '' });
+      setTimeout(() => {
+        this.setComments();
+      }, 500);
     }
-    const newComment = { text: this.state.comment, username: 'Anonymous' };
-    const comments = this.state.comments.slice();
-    comments.push(newComment);
-    this.setState({ comments, comment: '' });
-    setTimeout(() => {
-      this.setComments();
-    }, 500);
+
   };
   render(){
     return(<div className="Comment">
 {this.state.comments.map(comment => <EachComment comments={comment} />)}
 <input type='text' name="text" onChange={this.commentHandler } />
 <button onClick={this.handleCommentSubmit}>Submit</button>
+<button ></button>
 </div>)
 
 };
