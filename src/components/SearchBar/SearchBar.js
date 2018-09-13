@@ -1,6 +1,7 @@
 import React from 'react';
 import './SearchBar.css'
-const SearchBar = () => {
+
+const SearchBar = (props) => {
 
   return (
     <div>
@@ -9,6 +10,7 @@ const SearchBar = () => {
         <div className= "vl"></div>
         <label className= "logo" >Instagram</label>
         <input id="search" placeholder="Search"/>
+        <button onClick={props.logout}>Logout</button>
         <div className="HeartLikeButtton">♡</div>
       </nav>
     </div>

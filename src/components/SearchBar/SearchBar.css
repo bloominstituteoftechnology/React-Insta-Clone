@@ -26,10 +26,16 @@
 width: 200px;
 height: 20px;
 margin-top: 20px;
-margin-left: 200px;
+margin-left: 100px;
 
 }
 .SearchBar img{
   height: 50px;
   margin-top: 5px;
+}
+.SearchBar button{
+width: 116px;
+height: 36px;
+margin-top: 15px;
+margin-left: 15px;
 }

@@ -58,7 +58,7 @@ class CommentSection extends React.Component {
 {this.state.comments.map(comment => <EachComment comments={comment} />)}
 <input type='text' name="text" onChange={this.commentHandler } />
 <button onClick={this.handleCommentSubmit}>Submit</button>
-<button ></button>
+
 </div>)
 
 };

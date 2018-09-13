@@ -26,12 +26,18 @@ componentDidMount(){
   console.log(this.state);
 }
 
+logout(){
+localStorage.removeItem('user')
+window.top.location.reload();
+
+}
+
 
 
   render() {
     return (
       <div className="App">
-      <SearchBar />
+      <SearchBar logout= {this.logout}/>
 
       <PostContainer handleChange ={this.handleChange} addNewComment={this.addNewComment} comments = {this.state.comments} posts = {this.state.posts}/>
 
