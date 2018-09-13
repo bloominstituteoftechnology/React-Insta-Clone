@@ -45,7 +45,7 @@ class CommentSection extends React.Component {
 
             {this.state.comments.map((element, index) => <Comment comment={element} key={index}/>)}
             
-            <CommentInput commentInput={this.state.commentInput} updateComment={this.handleChange} submitComment={this.addNewComment}/>
+            <CommentInput commentValue={this.state.commentInput} updateComment={this.handleChange} submitComment={this.addNewComment}/>
             </div>
         )
     }

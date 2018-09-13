@@ -30,6 +30,7 @@ class App extends Component {
     // So a copy is made to re-set the state using setState() instead of mutating old data... 
     // Maybe because we're requesting data that is not ours
     let filteredData = [...this.state.data]; 
+    
     filteredData = filteredData.filter(element => {
       if (element.username === this.state.searchInput) {
         return element;
