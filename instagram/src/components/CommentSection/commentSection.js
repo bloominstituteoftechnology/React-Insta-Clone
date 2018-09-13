@@ -15,7 +15,7 @@ class CommentSection extends React.Component {
     }
     render() {
         return (
-            <div>{this.state.comments.map((each) => <Comments key={each.username} comments={each} />)}
+            <div>{this.state.comments.map((each) => <Comments key={each.text} comments={each} />)}
                 <CommentInput />
             </div> 
         );  

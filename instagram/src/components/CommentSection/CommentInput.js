@@ -1,12 +1,11 @@
 import React from 'react';
 
 const CommentInput = (props) => {
-    return (<div>   
+    return (  
                <form>
-                   <input value={props.commentInput} onChange={props.handleInput} placeholder="Add a comment..." />
+                   <input value={props.typedComment} onChange={props.handleInput} placeholder="Add a comment..." />
                    <button onClick={props.addComment}>comment</button>
                </form>
-           </div>
-    );
-   };
+            );
+        }
    export default CommentInput;
