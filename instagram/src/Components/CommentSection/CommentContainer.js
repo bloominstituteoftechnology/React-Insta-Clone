@@ -35,7 +35,7 @@ class CommentContainer extends Component {
           this.setState(prevState =>{
               return {likes: prevState.likes + 1}
             });
-    }
+    } 
     
     render() {
         console.log(this.state);
