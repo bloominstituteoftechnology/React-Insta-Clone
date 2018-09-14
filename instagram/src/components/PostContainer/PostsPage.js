@@ -5,7 +5,10 @@ import PostContainer from './PostContainer';
 const PostsPage = props => {
     return (
         <div className="PostsPage">
-            <SearchBar searchInput={props.searchInput} searchSubmit={props.searchSubmit}/>
+            <SearchBar 
+            searchInput={props.searchInput} 
+            searchSubmit={props.searchSubmit}
+            searchLogout={props.searchLogout}/>
             <PostContainer postsProps={props.postsProps}/>        
         </div>
     )

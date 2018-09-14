@@ -71,7 +71,7 @@ function SearchBar(props) {
             <InstagramIconDiv>
                 <ExploreImg src="https://static.thenounproject.com/png/682472-200.png" alt="1" />
                 <LikesImg src="https://static.thenounproject.com/png/682470-200.png" alt="2" />
-                <UserImg src="https://static.thenounproject.com/png/682480-200.png" alt="3" />
+                <UserImg onClick={props.searchLogout}src="https://static.thenounproject.com/png/682480-200.png" alt="3" />
             </InstagramIconDiv>
         </SearchBarDiv>
     )
