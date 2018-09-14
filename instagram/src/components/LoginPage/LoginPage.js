@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
-
-const LoginPagediv = styled.div`
+const LoginPageDiv = styled.div`
     background: offwhite;
     width: 100%;
     max-width: 300px;
@@ -52,25 +50,39 @@ class LoginPage extends React.Component {
     }
 
     handleChange = event => {
-        this.setState({ [event.target.name]: event.target.value })
-        console.log('setting state', event.target.name)
+        this.setState({ [event.target.name]: event.target.value });
+        // console.log(this.state.usernameInput)
     }
 
-    logIn = event => {
-        localStorage.setItem('username', this.state.usernameInput);
+    userSubmit = event => {
+        event.preventDefault();
+        console.log('submitting');
+        localStorage.setItem("username", this.state.usernameInput);
+        window.location.reload();
+
     }
 
     render() {
+        // localStorage.setItem('test', 'testValue');
+        // console.log(localStorage.getItem('test'))
         return (
-            <LoginPagediv>
+            <LoginPageDiv>
                 <LoginForm>
                     <LoginHeader>Instagram</LoginHeader>
-                    <LoginInput onChange={this.handleChange} placeholder="username.." name="usernameInput"/>
-                    <LoginInput onChange={this.handleChange} placeholder="password.." name="passwordInput"/>
-                    <LoginButton onClick={this.logIn}>Log in</LoginButton>
-                    <LoginButton onClick={this.logIn}>Sign up</LoginButton>
+                    <LoginInput 
+                    onChange={this.handleChange} 
+                    type="text" placeholder="username.." 
+                    name="usernameInput" 
+                    value={this.state.usernameInput}/>
+                    <LoginInput 
+                    onChange={this.handleChange} 
+                    type="text" 
+                    placeholder="password.." 
+                    name="passwordInput"/>
+                    <LoginButton onClick={this.userSubmit}>Log in</LoginButton>
+                    <LoginButton >Sign up</LoginButton>
                 </LoginForm>
-            </LoginPagediv>
+            </LoginPageDiv>
         )
     }
 }

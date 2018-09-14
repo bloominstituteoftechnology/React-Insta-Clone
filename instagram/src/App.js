@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
-// import SearchBar from './components/SearchBar/SearchBar';
-// import PostContainer from './components/PostContainer/PostContainer';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authentication from './components/Authentication/Authentication';
 
@@ -14,9 +12,11 @@ const AppDiv = styled.div `
   border: 2px solid lightgrey;
   border-radius: 5px;
   padding: 10px;
+  
+  ${props => (props.type === 'primary' ? `background: #FAFAFA;` : null)}
 
-  ${props => (props.type === 'primary' ? `background: #2196f3;` : null)}
 `
+
 
 class App extends Component {
   constructor() {
@@ -47,7 +47,7 @@ class App extends Component {
     
     filteredData = filteredData.filter(element => {
       if (element.username === this.state.searchInput) {
-        return element;
+        return element; 
       }
     })
     this.setState({data: filteredData})
