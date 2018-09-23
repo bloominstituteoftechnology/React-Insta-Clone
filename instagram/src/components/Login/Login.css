@@ -1,0 +1,29 @@
+.login-form {
+  /* border: 1px solid black; */
+  width: 260px;
+  margin: 50px auto;
+}
+
+h3 {
+  font-size: 30px;
+  color: purple;
+}
+
+p {
+  text-align: center;
+  color: violet;
+}
+
+Input {
+  margin-left: 70px;
+  margin-bottom: 15px;
+}
+
+button {
+  border-radius: 5px;
+  background: green;
+  color: white;
+  width: 100px;
+  height: 30px;
+  margin-left: 80px;
+}
