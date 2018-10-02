@@ -1,0 +1,15 @@
+.post-header {
+  align-items: center;
+  display: flex;
+  padding: 0 0 0 14px;
+}
+
+.post-header img {
+  border: 1px solid transparent;
+  border-radius: 50%;
+  width: 30px;
+}
+.post-header h2 {
+  font-size: 14px;
+  padding: 0 10px;
+}

@@ -1,9 +1,12 @@
 import React from 'react';
+import './CommentSection.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const CommentSection = (props) =>  {
+const CommentSection = (props) => {
   return (
     <section className='comment-section'>
-      Comment Section
+        <input placeholder='Add a comment...'></input>
+      <FontAwesomeIcon icon='ellipsis-h'/>
     </section>
   );
 }
