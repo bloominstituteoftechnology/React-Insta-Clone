@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Comments = (props) =>  {
+const CommentSection = (props) =>  {
   return (
     <section className='comments'>
         {props.comments.map(comment => {
@@ -15,4 +15,4 @@ const Comments = (props) =>  {
   );
 }
 
-export default Comments;
+export default CommentSection;

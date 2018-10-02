@@ -1,12 +1,12 @@
 import React from 'react';
 import PostIcons from './PostIcons/PostIcons';
-import Comments from './Comments/Comments';
+import CommentSection from './CmentSection/CommentSection';
 
 const PostContent = (props) => {
   return (
     <section className='post-content'>
       <PostIcons likes={props.likes}/>
-      <Comments  comments={props.comments}/>
+      <CommentSection comments={props.comments}/>
     </section>
   );
 }

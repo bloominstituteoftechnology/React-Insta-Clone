@@ -2,7 +2,7 @@ import React from 'react';
 import './PostContainer.css';
 import PostHeader from './PostHeader/PostHeader';
 import PostContent from './PostContent/PostContent';
-import CommentSection from '../CommentSection/CommentSection';
+import NewComment from '../NewComment/NewComment';
 
 const PostContainer = (props) => {
   return (
@@ -16,7 +16,7 @@ const PostContainer = (props) => {
       <section className="post-time">
        {props.data.timestamp}
       </section>
-      <CommentSection />
+      <NewComment />
     </section>
   );
 }
