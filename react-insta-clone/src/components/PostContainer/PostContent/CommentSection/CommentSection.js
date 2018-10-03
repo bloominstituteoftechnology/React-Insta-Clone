@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
 import NewComment from '../NewComment/NewComment';
+import './CommentSection.css';
 
 class CommentSection extends Component {
   constructor(props) {
@@ -46,7 +47,10 @@ class CommentSection extends Component {
           {this.state.comments.map((comment, index) => {
             return (
               <p className='comment' key={Math.random()}>
+                <p>
                 <strong>{comment.username}</strong> {comment.text}
+                </p>
+                <span className='close' onClick={this.props.close}>X</span>
               </p>
             );
           })}
