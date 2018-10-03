@@ -14,11 +14,7 @@ class App extends Component {
     return (
       <>
         <SearchBar />
-        {this.state.dummyData.map(post => {
-          return (
-            <PostContainer key={post.username} post={post} />
-          )})
-        }
+        <PostContainer dummyData={this.state.dummyData} />
       </>
     );
   }

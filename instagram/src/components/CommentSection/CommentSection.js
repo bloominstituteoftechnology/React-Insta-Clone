@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from '../Comment/Comment';
+import '../CommentSection/CommentSection.css'
 
 class CommentSection extends React.Component {
     render() {
@@ -10,6 +11,10 @@ class CommentSection extends React.Component {
                         <Comment key={comment.text} comment={comment} />
                     )
                 })}
+                <div>{this.props.post.timestamp}</div>
+                <form>
+                    <input className={'commentInput'} placeholder={'Add a comment...'} />
+                </form>
             </div>
         )
     }
