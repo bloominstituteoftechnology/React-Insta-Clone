@@ -1,5 +1,7 @@
 # React-Insta-Clone
 
+https://github.com/kyleteeter/React-Insta-Clone
+
 ## Introduction
 
 - The purpose of this project is to continue building on your knowledge of React that you have gained thus far.
