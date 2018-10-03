@@ -3,8 +3,9 @@ import React from "react";
 //comment component displays comments under each post
 const Comment = (props) => {
     return (
-        <>
-            {props.comment.username} {props.comment.text}
+        <>  
+            <span className="username">{props.comment.username}</span>
+            {props.comment.text}
         </>
     )
 }

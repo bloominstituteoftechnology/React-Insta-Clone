@@ -1,0 +1,22 @@
+.header{
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    width: 100%;
+}
+.thumbnail{
+    display: flex;
+    border-radius: 50%;
+    height: 40px;
+    padding: 5px 20px;
+}
+
+.username{
+    display: inline-flex;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.post-img{
+    display: flex;
+    width: 100%;
+}
