@@ -23,6 +23,10 @@
   padding: 0 15px 0 0;
   font-size: 23px;
 }
+.post-icons svg:hover {
+  cursor: pointer;
+  color: navy;
+}
 .post-likes {
   font-size: 14px;
   padding: 5px 0;
