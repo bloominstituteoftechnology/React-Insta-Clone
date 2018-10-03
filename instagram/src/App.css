@@ -3,12 +3,20 @@
   display: flex; 
   flex-wrap: wrap; 
   width: 100%; 
-  justify-content: space-evenly; 
+  justify-content: space-between; 
 }
 
 .post-container {
   display: flex; 
   flex-wrap: wrap; 
+  flex-direction: column;  
   justify-content: center; 
   width: 100%; 
+  align-items: center; 
+}
+
+.App{
+  width: 100%; 
+  display: flex; 
+  flex-wrap: wrap; 
 }

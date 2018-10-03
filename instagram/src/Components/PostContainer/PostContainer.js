@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import CommentSection from '../CommentSection/CommentSection.js';
 
 const PostContainer = props => {
   return (
       <div className="post-container">
-          Container Area
+          <CommentSection />
+          <p>Container Area</p> 
       </div> 
   )
 }

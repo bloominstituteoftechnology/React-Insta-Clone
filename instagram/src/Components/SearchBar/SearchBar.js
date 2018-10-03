@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 const SearchBar = props =>{
   return (
     <div className="searchBar">
-        <div> left portion of search bar </div>
+      <div> left portion </div>
+      <form>
         <input></input> 
-        <div> right portion</div> 
+      </form> 
+      <div> right portion</div> 
     </div>
   )
 }
