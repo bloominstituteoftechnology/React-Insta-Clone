@@ -27,9 +27,9 @@ class App extends Component {
     e.preventDefault();
     const searchKey = e.target.value;
     const posts = []
-    this.state.dummyData.map(post => {
-    return post.username.includes(searchKey) ? posts.push(post) : null;
-      })
+    this.state.dummyData.filter(post => {
+      post.username.includes(searchKey) ? posts.push(post) : null;
+    })
     this.setState({
       posts : posts
     })
