@@ -7,15 +7,15 @@ class App extends Component {
     
     return (
       <div className="App">
-        <div className="cardInfo">
+        <>
           {dummydata.map(obj => {
             return (
 
-              <PostContainer 
+              <PostContainer key={obj.timestamp} InstaData={obj} CommentArray={obj.comments} />
 
             );
           })}
-        </div>
+        </>
        
            
       </div>
