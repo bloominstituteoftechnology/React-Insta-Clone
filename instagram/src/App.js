@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         {dummyData.map(data => (
-          <div key={data.username}>
+          <div className="post-container" key={data.username}>
             <Post post={data}/>
           </div>
         ))}

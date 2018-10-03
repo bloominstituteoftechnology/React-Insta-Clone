@@ -5,11 +5,11 @@ import Comments from "../CommentSection/comment";
 const Post = (props) => {
     return (
         <>
-            <div>
+            <div className="header">
                 <img src={props.post.thumbnailUrl} alt="user thumbnail"/>{props.post.username} 
             </div>
                 <img src={props.post.imageUrl} alt="user post"/>
-            <Comments comment={props.post.comments}/>
+                <Comments comment={props.post.comments}/>
         </>
     )
 }
