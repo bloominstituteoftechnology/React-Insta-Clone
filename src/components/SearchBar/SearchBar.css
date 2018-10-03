@@ -12,6 +12,19 @@
     background-color: white;
 }
 
+.search {
+    width: 150px;
+    border: 1px solid gray;
+    background: lightgrey url(../../assets/search.jpg) no-repeat;
+    background-size: 18px;
+    background-position: 40px 5px;
+    text-align: center;
+}
+
+.search:focus {
+    background-image: none;
+}
+
 /* Logo Styling */
 .logo {
     display: flex;
