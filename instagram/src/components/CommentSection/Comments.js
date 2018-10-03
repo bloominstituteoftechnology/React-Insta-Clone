@@ -5,9 +5,16 @@ import './Comment.css';
 class Comments extends Component {
   state = {  }
   render() { 
+    console.log(this.props.comments);
     return ( 
-      <> 
-      <h3>i'm the Commment components</h3>
+      <>
+      {this.props.comments.map(comment =>{
+        return[ 
+        <p>{comment.username}</p>,
+        <p>{comment.text}</p>
+        ]
+      })
+      }
       </>
     );
   }

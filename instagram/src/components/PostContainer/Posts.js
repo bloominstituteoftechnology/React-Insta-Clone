@@ -9,10 +9,15 @@ class Posts extends Component {
     return (  
       <>
       {this.props.posts.map(post => {
-        return <h1 key={post.username}>{post.username}</h1>
+        return[
+          <h1 key={post.username}>{post.username}</h1>,
+          <>
+            <Comments comments={post.comments}/>
+          </>,
+        ] 
       })}
       <h2>i'm the post Component</h2>
-      <Comments/>
+      
       </>
     );
   }
