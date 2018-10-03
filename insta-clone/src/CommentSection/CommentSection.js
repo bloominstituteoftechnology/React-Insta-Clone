@@ -1,18 +1,18 @@
 import React from 'react'
+import Comment from './Comment'
 
 
 
 const CommentSection = props => {
 
     return (
-        <> {props.dummyData.map((data, index) =>
-            <div key={index}>
-                {data.username}
-
-            </div>
-        )}
-       </>
-
+        <div className='comment-section'>
+        <div className='section likes'>
+                {props.likes} # likes</div>
+        {props.comments.map((comment, index) => {
+            return <Comment username={comment.username} comments={comment.comments} key={index + 1} />
+        })}
+        </div>
     )
 }
 
