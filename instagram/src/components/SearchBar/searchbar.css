@@ -1,0 +1,21 @@
+.fa-instagram {
+    margin: 40px 0 40px 40px;
+    padding-right: 40px;
+    font-size: 70px;
+    border-right: 1px solid grey;
+}
+
+.fa-compass, .fa-heart {
+    margin: 0 25px;
+    font-size: 50px;
+    font-weight: 100;
+    -webkit-text-stroke: 3px white;
+}
+
+.fa-user {
+    margin: 0 25px;
+    font-size: 50px;
+    font-weight: 100;
+    -webkit-text-stroke: 3px white;
+    padding-right: 20px;
+}
