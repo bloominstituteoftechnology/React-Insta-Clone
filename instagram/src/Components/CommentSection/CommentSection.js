@@ -3,7 +3,8 @@ import React from 'react';
 const CommentSection = props => {
   return (
       <div>
-        <p>Comments Section</p>
+        <p>{props.username}</p>
+        <img src={props.imageUrl}></img> 
       </div> 
   )
 }

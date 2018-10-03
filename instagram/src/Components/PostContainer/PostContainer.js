@@ -4,10 +4,16 @@ import CommentSection from '../CommentSection/CommentSection.js';
 const PostContainer = props => {
   return (
       <div className="post-container">
-          <CommentSection />
-          <p>Container Area</p> 
+        {props.dummyData.map((data) => 
+          <div>
+            <CommentSection username={data.username}
+                            imageUrl={data.imageUrl}
+            />
+            
+          </div> 
+        )}
       </div> 
-  )
+    )
 }
 
 
