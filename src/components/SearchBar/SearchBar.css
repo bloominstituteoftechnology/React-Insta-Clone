@@ -9,8 +9,10 @@
     width: 800px;
     margin: auto;
     padding: 0px 15px;
+    background-color: white;
 }
 
+/* Logo Styling */
 .logo {
     display: flex;
     align-items: center;
@@ -28,4 +30,24 @@
     align-self: flex-end;
     border-left: 2px solid gray;
     padding-left: 15px;
+}
+
+/* Menu Icon Styling */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 110px;
+}
+
+.compass {
+    height: 15px;
+}
+
+.heart {
+    height: 24px;
+}
+
+.profile {
+    height: 15px;
 }
