@@ -1,0 +1,31 @@
+/* Search bar styling */
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    height: 50px;
+    width: 800px;
+    margin: auto;
+    padding: 0px 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logoIcon {
+    height: 29px;
+    width: 29px;
+    padding-right: 15px;
+}
+
+.logoName {
+    height: 29px;
+    align-self: flex-end;
+    border-left: 2px solid gray;
+    padding-left: 15px;
+}

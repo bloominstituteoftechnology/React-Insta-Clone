@@ -1,11 +1,18 @@
 import React from 'react';
+import Logo from './Logo';
+import Search from './Search';
+import Menu from './Menu';
 import './SearchBar.css';
 
-// Header containing the search bar.
+// Main container for the header/search bar.
 
 const SearchBar = (props) => {
     return (
-        <div>SearchBar.js</div>
+        <div className='searchBar'>
+            <Logo />
+            <Search />
+            <Menu />
+        </div>
     );
 }
 
