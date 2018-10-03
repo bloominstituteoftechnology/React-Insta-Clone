@@ -25,7 +25,9 @@ const SearchBar = () => {
                 <FontAwesomeIcon className='heart' icon={['far','heart']} /> {" "}
                <FontAwesomeIcon className='user' icon={['far', 'user']} />
                 </div>
-            </div>
+        </div>
+
+            <hr></hr>
         </div>
     )
 }
