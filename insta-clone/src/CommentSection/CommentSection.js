@@ -10,7 +10,7 @@ const CommentSection = props => {
         <div className='section likes'>
                 {props.likes} # likes</div>
         {props.comments.map((comment, index) => {
-            return <Comment username={comment.username} comments={comment.comments} key={index + 1} />
+            return <Comment username={comment.username} comments={comment.comments} key={index} />
         })}
         </div>
     )
