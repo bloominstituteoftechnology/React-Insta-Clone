@@ -1,6 +1,7 @@
 import React from 'react';
 import PostIcons from './PostIcons/PostIcons';
-import CommentSection from './CmentSection/CommentSection';
+import CommentSection from './CommentSection/CommentSection';
+import propTypes from 'prop-types';
 
 const PostContent = (props) => {
   return (
@@ -9,6 +10,11 @@ const PostContent = (props) => {
       <CommentSection comments={props.comments}/>
     </section>
   );
+}
+
+PostContent.propTypes = {
+  likes: propTypes.number,
+  comments: propTypes.array
 }
 
 export default PostContent;

@@ -3,6 +3,7 @@ import './PostContainer.css';
 import PostHeader from './PostHeader/PostHeader';
 import PostContent from './PostContent/PostContent';
 import NewComment from '../NewComment/NewComment';
+import propTypes from 'prop-types';
 
 const PostContainer = (props) => {
   return (
@@ -19,6 +20,10 @@ const PostContainer = (props) => {
       <NewComment />
     </section>
   );
+}
+
+PostContainer.propTypes = {
+  username: propTypes.object
 }
 
 export default PostContainer;
