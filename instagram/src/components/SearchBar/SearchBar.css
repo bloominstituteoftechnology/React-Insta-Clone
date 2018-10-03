@@ -35,6 +35,7 @@
     border-radius: 5px;
     background-color: whitesmoke;
     padding-left: 34%;
+    border: 1px solid gainsboro;
 }
 
 .searchBox {
