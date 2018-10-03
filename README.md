@@ -1,4 +1,5 @@
 # React-Insta-Clone
+# Clone-Insta-React
 
 ## Introduction
 
