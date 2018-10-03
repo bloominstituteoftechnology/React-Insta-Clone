@@ -1,5 +1,6 @@
-# React-Insta-Clone
-# Clone-Insta-React
+React-Insta-Clone
+
+# See project being built at https://github.com/tommycollison/instagram2. 
 
 ## Introduction
 
