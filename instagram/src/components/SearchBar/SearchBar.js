@@ -42,6 +42,9 @@ const SearchInput = styled.input`
     color: grey;
 `;
 
+const RightItems = styled.div`
+`;
+
 const SearchBar = () => {
     return ( 
         <Header>
@@ -51,14 +54,14 @@ const SearchBar = () => {
             </LeftItems>
             <MiddleItems>
                 <SearchInput type="text" placeholder="&#128269; Search" />
-            </MiddleItems> 
-            <div className="right-items">
+            </MiddleItems>
+            <RightItems>
                 <i class="far fa-compass"></i>
                 <i class="far fa-heart"></i>
                 <i class="far fa-user"></i>
-            </div>
+            </RightItems>
         </Header>
-     );
+    );
 }
- 
+
 export default SearchBar;
