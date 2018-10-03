@@ -12,7 +12,7 @@ const SearchBar = (props) => {
         <h1>Instagram</h1>
       </section>
       <section className='search-input'>
-          <input placeholder='Search'></input>
+          <input placeholder='Search' onChange={props.search}></input>
       </section>
       <section className='nav-icons'>
         <FontAwesomeIcon icon='compass'/>

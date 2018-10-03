@@ -12,16 +12,35 @@ class App extends Component {
     super();
 
     this.state = {
-      dummyData : dummyData
+      dummyData : [],
+      searchKeyWord : '',
+      posts: []
     }
+  }
+  componentDidMount() {
+    this.setState({
+    dummyData:dummyData,
+    posts: dummyData
+    });
+  }
+  searchKey = (e) => {
+    e.preventDefault();
+    const searchKey = e.target.value;
+    const posts = []
+    this.state.dummyData.map(post => {
+    return post.username.includes(searchKey) ? posts.push(post) : null;
+      })
+    this.setState({
+      posts : posts
+    })
   }
   render() {
     return (
       <div className="App">
-        <SearchBar />
-      {this.state.dummyData.map(username => {
+        <SearchBar search={this.searchKey}/>
+      {this.state.posts.map(post => {
         return (
-          <PostContainer data={username} key={username.timestamp}></PostContainer>
+          <PostContainer data={post} key={post.timestamp}></PostContainer>
         )
       })}
       <a href="https://fontawesome.com/license">Icons by FontAwesome</a>
