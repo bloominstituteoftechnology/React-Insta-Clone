@@ -1,0 +1,25 @@
+.search-container {
+   margin-top:100px;
+    width:100%;
+
+}
+
+.search-content {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+
+}
+img {
+    display:flex;
+    width: 25px;
+    height: 25px;
+}
+
+h1 {
+
+    font-family: "Charmonman";
+    font-weight: 700;
+    font-size:30px;
+}
+
