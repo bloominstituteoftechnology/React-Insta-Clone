@@ -1,11 +1,15 @@
 import React from 'react';
 import Comment from './Comment';
-import PropTypes from "prop-types";
 
 const CommentSection = (props) => {
     return (
         <>
-            <Comment />
+        {props.comments.map(comment => (
+            <div>
+                <Comment user={comment.username}
+                        text={comment.text}/>
+            </div>
+        ))}
             <input placeholder="Add a comment..."/>
         </>
     )
