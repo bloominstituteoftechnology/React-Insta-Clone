@@ -18,8 +18,8 @@ const PostContainer = (props) => {
 PostContainer.propTypes = {
     username: PropTypes.string.isRequired,
     likes: PropTypes.number,
-    image: PropTypes.img,
-    thumbnail: PropTypes.img,
+    image: PropTypes.image,
+    thumbnail: PropTypes.image,
     comments: PropTypes.arrayOf(PropTypes.shape({
         username: PropTypes.string,
         text: PropTypes.string
