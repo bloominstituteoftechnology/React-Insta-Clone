@@ -1,9 +1,21 @@
 import React from "react";
 
 const CommentBox = props =>{
+    console.log(props)
     return (
         <div className="comment-box">
-            <input className="input" placeholder="Add A Comment..."></input>
+            <input  value={props.text}
+                    className="input" 
+                    placeholder="Add A Comment..."
+                    maxLength="100"
+                    onChange={props.input}
+                    onKeyDown={(event) => {
+                        if (event.keyCode === 13) {
+                            props.add()
+                        }
+                    }} 
+            >
+            </input>
             <span className="dots">...</span>
         </div>
     );

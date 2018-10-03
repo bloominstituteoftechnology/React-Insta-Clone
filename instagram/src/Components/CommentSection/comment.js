@@ -20,7 +20,10 @@ const Comments = (props) => {
                 </div>
                 )
             })}
-            <CommentBox />
+            <CommentBox 
+                input={props.input}
+                text={props.text}
+            />
         </>
     )
 }

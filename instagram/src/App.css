@@ -10,7 +10,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  height: 924px;
+  /* height: 924px; */
   max-width: 604px;
   width: 100%;
 }

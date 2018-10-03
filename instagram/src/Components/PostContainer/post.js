@@ -15,7 +15,12 @@ const Post = (props) => {
             </div>
             <Img img={props.post}/>
             <div className="comments">
-                <Comments comment={props.post.comments} likes={props.post.likes}/>
+                <Comments 
+                    comment={props.post.comments} 
+                    likes={props.post.likes} 
+                    input={props.input}
+                    text={props.text}
+                />
             </div>
         </>
     )
