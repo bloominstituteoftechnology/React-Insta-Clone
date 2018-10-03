@@ -1,0 +1,24 @@
+.App{
+	max-width:1200px;
+	margin:0 auto;
+}
+
+.SearchBarContent{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	border:1px solid green;
+}
+
+input{
+	padding-left:10px;
+	padding-right:10px;
+}
+
+h1{border:1px solid blue;}
+
+img{
+	height:60px;
+	width:60px;
+	border:1px solid yellow;
+}
