@@ -6,12 +6,12 @@ const CommentSection = props => {
 
     return (
         <> {props.dummyData.map((data, index) =>
-            <><div key={index}>
-                    {data.username}
-                </div>
-            </>
+            <div key={index}>
+                {data.username}
+
+            </div>
         )}
-        </>
+       </>
 
     )
 }
