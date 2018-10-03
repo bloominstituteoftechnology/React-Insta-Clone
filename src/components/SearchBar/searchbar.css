@@ -1,0 +1,92 @@
+.searchbarContainer{
+    width: 100%;
+    max-height: 75px;
+    height: 60px;
+    border-bottom: 1px solid lightgrey;
+    z-index: +1;
+}
+.iconsContent{
+    display: flex;
+    flex-direction: row;
+    z-index: +1;
+}
+.instaLogoIcon{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background-image: url(https://i1.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Instagram-Logo.png?resize=300%2C300);
+    background-size: cover;
+    margin-top: 15px;
+    z-index: +1;
+    cursor: pointer;
+}
+.seperator {
+    position: fixed;
+    top: 15px;
+    left: 245px;
+    width: 1px;
+    height: 30px;
+    border-right: 1px solid grey;
+    z-index: +1;
+}
+.instaLogoFont{
+    position: fixed;
+    width: 120px;
+    height: 40px;
+    background-image: url(https://www.edigitalagency.com.au/wp-content/uploads/instagram-logo-only-font.png);
+    background-size: cover;
+    left: 258px;
+    top: 8px;
+    z-index: +1;
+
+}
+
+.searchbar{
+    background-color: ghostwhite;
+    width: 300px;
+    height: 18px;
+    position: fixed;
+    left: 505px;
+    top: 21px;
+    text-align: center;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    color: black;
+    z-index: +1;
+}
+
+.exploreIcon{
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    background-image: url(https://static.thenounproject.com/png/782776-200.png);
+    background-size: cover;
+    z-index: +1;
+    left: 950px;
+    top: 18px;
+    cursor: pointer;
+}
+
+.heartIcon{
+    position: fixed;
+    width: 28px;
+    height: 28px;
+    background-image: url(https://images.vexels.com/media/users/3/147092/isolated/preview/c35ccbb5fe122c777314c1849ee1ba50-instagram-heart-line-icon-by-vexels.png);
+    background-size: cover;
+    z-index: +1;
+    left: 995px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.profileIcon{
+    position: fixed;
+    width: 33px;
+    height: 33px;
+    background-image: url(https://images.vexels.com/media/users/3/147103/isolated/lists/e9bf9a44d83e00b1535324b0fda6e91a-instagram-profile-line-icon.png);
+    background-size: cover;
+    z-index: +1;
+    left: 1040px;
+    top: 18px;
+    cursor: pointer;
+}
