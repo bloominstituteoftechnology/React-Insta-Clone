@@ -58,6 +58,7 @@
     border-bottom: 1px solid gainsboro;
     position: fixed;
     z-index: 1;
+    background-color: white;
 }
 
 .topButtonBox {
