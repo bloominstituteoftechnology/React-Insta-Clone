@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentSection from '../CommentSection/CommentSection'
 
 const PostContainer = (props) =>{
     return(
@@ -16,7 +17,11 @@ const PostContainer = (props) =>{
                     <i className="far fa-comment"></i>
                 </div>
                 <p>{props.post.likes}</p>
-                Map in comments here
+                {props.post.comments.map(item =>{
+                    return(
+                    <CommentSection comments={item.text} user={item.username} />
+                    )
+                })}
                 <p>{props.post.timestamp}</p>
             </div>
             <div className='addComment'>

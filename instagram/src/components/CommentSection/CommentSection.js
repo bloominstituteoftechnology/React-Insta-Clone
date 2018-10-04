@@ -1,9 +1,11 @@
 import React from 'react';
 
-const CommentSection = () =>{
+
+const CommentSection = (props) =>{
     return(
         <div>
-            These are comments
+            <span>{props.user}</span>
+            <span>{props.comments}</span>
         </div>
     )
 }
