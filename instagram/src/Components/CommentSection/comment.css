@@ -1,7 +1,10 @@
 .comments{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    justify-content: center;
+    width: 95%;
+    margin: 20px;
+    margin-right: 0;
 }
 
 i{
