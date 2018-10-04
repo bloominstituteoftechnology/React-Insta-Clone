@@ -14,12 +14,12 @@
 }
 
 .post-container p.likes{
-  margin-left:10px;
+  margin-left:20px;
   font-size: 1.4rem;
   font-weight: bold;
   letter-spacing: 1px;
   font-family: Helvetica,Arial, sans-serif;
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 
 .post-header{
@@ -29,12 +29,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding:8px 10px;
+  padding:12px 10px;
 }
 
 .post-header img{
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   margin-right: 8px;
 }
 
@@ -72,4 +72,39 @@
   width:24px;
   height:24px;
   margin-left:15px;
+}
+
+.post-container form{
+  margin-left:5px 20px 2px 20px;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.form-container form {
+  width: 93%;
+  margin-top:20px;
+  border-top:1px solid #efefef;
+}
+
+.form-container form input[type="text"]{
+  margin-top: 10px;
+  width: 93%;
+  border-top: 1px solid;
+  height: 35px;
+  border:none;
+}
+
+.form-container input[type=text]::placeholder{
+  text-align:left;
+  font-size:1.5rem;
+  text-transform: capitalize;
+  font-family:Helvetica,Arial,sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
 }

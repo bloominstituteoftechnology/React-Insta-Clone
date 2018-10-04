@@ -11,10 +11,10 @@ class Posts extends Component {
     console.log(this.props)
     return (  
       <div className="container">
-        <div class="post-lists">
+        <div className="post-lists">
           {this.props.posts.map(post => {
               return[
-                <div className="post-container">,
+                <div className="post-container">
                 <div className="post-header">
                   <img  className ="round" src={post.thumbnailUrl} alt="thumbnail"/>
                   <h3>{post.username}</h3>
@@ -30,6 +30,12 @@ class Posts extends Component {
                 <>
                   <Comments comments={post.comments} />
                 </>
+                  <div className="form-container">
+                    <p className="timestamps">{post.timestamp}</p>
+                    <form>
+                      <input type="text" placeholder="add comment ..."/>
+                    </form>
+                  </div>
                 </div>
               ] 
             })}
