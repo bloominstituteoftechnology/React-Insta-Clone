@@ -1,26 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
+import SearchBar from './components/SearchBar';
+import PostContainer from './components/PostContainer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <SearchBar /> //Inserted search bar component
+        {dummyData.map((post) => { //Mapping over each post object in dummy data and ...
+            return <PostContainer username={post.username} thumbnailUrl={post.thumbnailUrl} imageUrl={post.imageUrl} likes={post.likes} timestamp={post.timestamp} comments={post.comments}/> //Creating a PostContainer component that passes each value to PostContainer as props
+        })} //end post creation map
       </div>
     );
   }
