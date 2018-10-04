@@ -61,7 +61,7 @@ border-bottom:1px solid rgba(128, 128, 128, 0.199);
 
 }
 .more-icon {
-    z-index:2;
+z-index:-1;
     color:gray;
     position: relative;
     font-size:18px;
