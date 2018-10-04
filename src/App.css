@@ -3,17 +3,17 @@
 	margin:0 auto;
 }
 
-.SearchBarContent{
+.Search-Bar{
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
-	border:1px solid green;
 }
 
-input{
-	padding-left:10px;
-	padding-right:10px;
+.Search-Left{
+	display:flex;
+	flex-direction:row;
 }
+
 
 h1{border:1px solid blue;}
 

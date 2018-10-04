@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
 import './App.css';
-import './dummy-data.js'
+import './dummy-data.js';
+import {CommentSection} from './components/CommentSection/CommentSection.js';
+import './components/PostContainer/PostContainer.js';
+import {SearchBar} from './components/SearchBar/SearchBar.js';
 
 class App extends Component {
-  render() {
+ 
+	constructor(){
+		super();
+		this.state = {
+			//users:[...dummy-data]
+		};
+	}
+
+
+ render() {
     return (
       <div className="App">
-		<div className="SearchBarContent">
-			<img src="" alt="Logo"></img>
-			<h1>InstaClone</h1>
 
-			<div className="search">
-				<input/>
-			</div>
-
-			<div className="Buttons">
-				<img src="" alt="button1"></img>
-				<img src="img/heart.png" alt="button2"></img>
-				<img src="" alt="button3"></img>
-			</div>
-		</div>
+		<h1>InstaClone</h1>
+		<SearchBar/>
+		<CommentSection/>
       </div>
     );
   }

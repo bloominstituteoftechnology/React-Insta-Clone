@@ -43,7 +43,7 @@ const dummyData = [
       },
       {
         username: "themexican_leprechaun",
-        text: "What a setup"
+        text: "cs1.6 ftw"
       },
       {
         username: "dennis_futbol",
