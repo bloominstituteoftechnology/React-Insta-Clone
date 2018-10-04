@@ -1,0 +1,25 @@
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 155px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 33%;
+}
+
+.logo-container img {
+    height: 100%;
+}
+
+.icon-container {
+    display: flex;
+    height: 33%;
+}
+
+.icon-container img {
+    height: 100%;
+}
