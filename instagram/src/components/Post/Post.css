@@ -1,0 +1,34 @@
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile img {
+    border-radius: 50%;
+    height: 40px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.picture img {
+    width: 100%;
+}
+
+.likes {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.icons i {
+    font-size: 20px;
+}

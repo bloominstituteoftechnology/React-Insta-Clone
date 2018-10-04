@@ -6,7 +6,7 @@ import Post from "../Post/Post.js";
 class PostContainer extends Component {
   render() {
     return (
-      <>
+      <div className="card">
         <Post
           thumbnail={this.props.thumbnail}
           username={this.props.username}
@@ -14,9 +14,9 @@ class PostContainer extends Component {
           likes={this.props.likes}
         />
         {/* <CommentSection comments={this.props.comments} /> */}
-        <div>{this.props.time}</div>
+        <div className="time">{this.props.time}</div>
         <div className="add-comment">Add a comment...</div>
-      </>
+      </div>
     );
   }
 }
