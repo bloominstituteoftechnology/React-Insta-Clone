@@ -7,7 +7,6 @@ import "./post.css";
 
 //post component creates the header for the user post and passes the comment data to the comments component
 const Post = (props) => {
-    console.log(props)
     return (
         <>
             <div className="header">
@@ -20,6 +19,7 @@ const Post = (props) => {
                     likes={props.post.likes} 
                     input={props.input}
                     text={props.text}
+                    add={props.add}
                 />
             </div>
         </>

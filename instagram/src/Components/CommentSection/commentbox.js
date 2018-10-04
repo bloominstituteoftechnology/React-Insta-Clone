@@ -1,7 +1,6 @@
 import React from "react";
 
 const CommentBox = props =>{
-    console.log(props)
     return (
         <div className="comment-box">
             <input  value={props.text}

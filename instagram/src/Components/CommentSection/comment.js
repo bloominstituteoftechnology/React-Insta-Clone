@@ -23,6 +23,7 @@ const Comments = (props) => {
             <CommentBox 
                 input={props.input}
                 text={props.text}
+                add={props.add}
             />
         </>
     )
