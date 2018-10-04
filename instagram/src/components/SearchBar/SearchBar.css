@@ -5,6 +5,8 @@
     justify-content: space-between;
     align-items: center;
     padding-left: 45px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
 }
 
 .search{

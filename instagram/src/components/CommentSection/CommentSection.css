@@ -1,0 +1,12 @@
+.commentSection{
+    font-size: 14px;
+    margin-left: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.commentInput{
+    margin-top: 10px;
+    padding-left: 10px;
+    border: none;
+    font-size: 16px;
+}
