@@ -1,11 +1,14 @@
-* {
-  border:1px solid black !important;
+body {
+display: flex ;
+justify-content: center ;
 }
 
 html {
-  font-size: 62.5%
+  font-size: 62.5% ;
+  
 }
 
 #root {
-  font-size: 1.6rem 
+  font-size: 1.6rem ;
+  
 }
