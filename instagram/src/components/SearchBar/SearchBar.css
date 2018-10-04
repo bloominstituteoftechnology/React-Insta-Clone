@@ -1,10 +1,9 @@
 .search-bar {
-    border: 2px solid blue;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 40%;
-    height: 80px;
+    height: 60px;
     margin: 0 auto;
 
 }
@@ -13,14 +12,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 25%;
-    border: 2px solid green;
+    width: 30%;
+}
+
+input {
+    text-align: center;
 }
 
 .divider {
-    font-size: 35px;
+    font-size: 25px;
+    height: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .instagram {
     height: 35px;
+}
+
+.buttons {
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
 }

@@ -1,11 +1,19 @@
 import React from 'react';
 import './PostContainer.css';
+import Post from './Post.js'
 
 const PostContainer = (props) => {
     return (
-        <>
-            I am PostContainer
-        </>
+        <div>
+            {props.dummyData.map((data) => {
+                return (
+                    <Post
+                        postData={data}
+                        key={Math.random()}
+                    />
+                )
+            })}
+        </div>
     )
 }
 

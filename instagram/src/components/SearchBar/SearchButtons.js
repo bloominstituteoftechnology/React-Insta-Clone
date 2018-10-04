@@ -3,11 +3,11 @@ import './SearchBar.css';
 
 const SearchButton = (props) => {
     return (
-        <>
-            <i class="far fa-compass" aria-hidden='false'></i>
-            <i class="far fa-heart" aria-hidden='false'></i>
-            <i class="far fa-user" aria-hidden='false'></i>
-        </>
+        <div className='buttons'>
+            <i className="far fa-compass"></i>
+            <i className="far fa-heart"></i>
+            <i className="far fa-user"></i>
+        </div>
     )
 }
 

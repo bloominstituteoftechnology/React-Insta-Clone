@@ -4,7 +4,7 @@ import './SearchBar.css';
 const SearchInput = (props) => {
     return (
         <>
-            <input placeholder='search' />
+            <input placeholder='🔍 search' />
         </>
     )
 }
