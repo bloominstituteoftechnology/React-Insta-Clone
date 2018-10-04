@@ -7,7 +7,11 @@ const PostContainer = props => {
     return ( 
         <div>
             {props.posts.map(post => 
-                <Post key={post.timestamp} post={post} />)}
+                <Post 
+                key={post.timestamp} 
+                post={post} 
+                />
+                )}
             <h1>I am a Post Container!</h1>
             <CommentSection />
         </div>

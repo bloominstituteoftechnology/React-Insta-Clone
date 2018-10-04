@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Post = () => {
+const Post = props => {
     return ( 
         <div>
-            I'm a post!  
+            <img src={props.post.imageUrl} alt="post-image"/>
         </div>
     );
 }
