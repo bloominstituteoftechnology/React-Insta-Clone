@@ -11,6 +11,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
+  import './searchbar.css';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -30,9 +31,15 @@ class SearchBar extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Instagram</NavbarBrand>
+        <div className={'logo'}><i class="fab fa-instagram"></i></div>
+          <NavbarBrand href="/" className={'title'}>Instagram</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+          <NavLink><i class="far fa-compass"></i></NavLink>
+          <NavLink><i class="far fa-heart"></i></NavLink>
+          <NavLink><i class="far fa-user"></i></NavLink>
+          </Nav>
            
 
           </Collapse>
