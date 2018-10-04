@@ -1,28 +1,82 @@
-comments{
+.commentInput {
+    background-image: url(https://png.icons8.com/windows/48/000000/more.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position-x: 98%;
+    background-position-y: 50%;
+    border: 0;
+    border-top: 1px solid gainsboro;
+    width: 100%;
+}
+
+.commentsContainer {
+    border: 1px solid gainsboro;
+    background-color: white;
+    font-family: 'Niramit', sans-serif;
+    font-size: 1.5rem;
+    margin-top: -2px;
+    padding: 0 2.5%;
+    
+}
+
+.commentsContainer form {
+    height: 56px;
+}
+
+.commentsContainer form input {
+    height: 56px;
+    font-size: 1.6rem;
+    font-family: 'Niramit', sans-serif;
+}
+
+.buttonBar {
     display: flex;
-    flex-direction: column;
-    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
-.comment-img {
-    width: 5%;
-    margin-right: 10px;
+
+.buttonBar img {
+    height: 28px;
+    width: 28px;
 }
- .comment-text {
-    margin: 5px 0;
+
+.buttonBar img:hover {
+    cursor: pointer;
 }
- .comment-box{
-    border-top: 2px solid lightgrey;
-    margin-top: 15px;
+
+.commentsButtonBox {
+    display: flex;
+    align-items: center;
+    height: 46px;
+    width: 20%;
+    justify-content: space-between;
 }
- .input{
-    display: inline-flex;
-    width: 94%;
-    border: none;
-    height: 35px;
+
+.likesCount {
+    font-weight: bold;
+    margin-bottom: 10px;
+
 }
-.dots {
-    display: inline-flex;
-    font-size: 30px;
-    width: 5%;
-    height: 20px;
-} 
+
+.moreButton {
+    
+    position: absolute;
+    height: 56px;
+    width: 45px;
+    left: 41%;
+}
+
+.moreButton:hover {
+    cursor: pointer;
+}
+
+.commentBubble {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.dateStamp {
+    color: gray;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}

@@ -7,13 +7,13 @@
 .searchBarBreak {
   font-size: 3.2rem;
   font-weight: 100;
-  padding-left: 5.5%;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 .logoBox {
   display: flex;
   align-items: center;
   width: 165px;
+  justify-content: space-between;
 }
 .logoBox img {
   height: 32px;
@@ -29,6 +29,7 @@
   border-radius: 5px;
   background-color: whitesmoke;
   padding-left: 34%;
+  border: 1px solid gainsboro;
 }
 .searchBox {
   display: flex;
