@@ -11,6 +11,7 @@ class PostContainer extends React.Component {
                 
                 <PostHeader dummyData={this.props.dummyData}/>
                 
+                
             </div>
         )
     }

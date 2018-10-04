@@ -8,12 +8,15 @@ class PostHeader extends React.Component {
             <div key={this.props.timestamp}>
                 {this.props.dummyData.map(postProps => {
                     return (
-                        <div className={"postWrap"}>
-                            <div>
-                            <img className={"thumbImg"} src={postProps.thumbnailUrl} alt={"profile pic"}/>
+                        <>
+                            <div className={"postHeader"}>
+                            <img className={"profileThumbImg"} src={postProps.thumbnailUrl} alt={"profile pic"}/>
                             <h4>{postProps.username}</h4>
                             </div>
-                        </div>
+                            <div className={"contentImgWrap"}>
+                            <img className={"imgContent"} src={postProps.imageUrl} />
+                            </div>
+                        </>
                     )
                 })}
             </div>
