@@ -22,6 +22,7 @@ class App extends React.Component {
 
               <SearchContainer />
               <PostContainer dummyData={dummyData} />
+              
 
       </div>
     );

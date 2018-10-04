@@ -1,5 +1,19 @@
 .postWrap {
-    margin: 0 auto;
-    width: 880px;
+    margin: 50px auto;
+    width: 640px;    
+}
 
+.postHeader {
+    display: flex;
+}
+
+.profileThumbImg {
+    border-radius: 100%;
+    margin: auto 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.imgContent {
+    margin: 10px 0px;
 }
