@@ -7,10 +7,12 @@ import CommentSection from './components/CommentSection/CommentSection';
 
 const appData = dummyData;
 
+console.log(appData);
+
 class App extends Component {
 	render() {
 		return (
-			<div>
+			<div className='appContainer'>
 				<SearchBar />
         <PostContainer appData={appData} />
         <CommentSection/>

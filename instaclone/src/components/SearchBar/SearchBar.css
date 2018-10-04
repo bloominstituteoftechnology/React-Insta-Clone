@@ -8,7 +8,7 @@
   width:100%;
 }
 
-img {
+#instagram {
 margin-left:10px;
 height:50px;
 width:50px;
@@ -36,7 +36,7 @@ font-size:15px;
 display:flex;
 width:175px;
 height:30px;
-border:1px solid black;
+
 justify-content: space-around;
 margin-left:175px;
 align-items: center;
