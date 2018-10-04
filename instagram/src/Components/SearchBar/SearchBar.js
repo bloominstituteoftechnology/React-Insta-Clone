@@ -1,5 +1,5 @@
 import React from "react";
-
+import './SearchBar.css';
 
 class SearchBar extends React.Component {
     constructor(){
@@ -13,16 +13,22 @@ class SearchBar extends React.Component {
         return (
             <div className="searchbar-container">
                 {/*Instagram Icon*/}
-                <i className="fa fa-instagram"></i>
+                <i className="instagram-logo fa fa-instagram fa-2x"></i>
                 {/*Instagram logo font: Billabong*/}
                 <p className="instagram-letter-logo">Instagram</p>
                 {/*Search bar*/}
-                <input type="text" placeholder="f002; Search" className="search-input" onChange={this.inputHandler} value={this.state.searchValue}/>
+                <div className="search-area">
+                    <input type="text" placeholder=" Search" className="search-input" onChange={this.inputHandler} value={this.state.searchValue}/>
+                    <i className="fa fa-search"></i>
+                </div>
+                
                 {/*3 icons on the right*/}
-                <div className="rigth-icon-container">
-                    <i className="far fa-compass"></i>
-                    <i className="far fa-heart"></i>
-                    <i className="far fa-user"></i>
+                <div className="rigth-container">
+                    <div className="rigth-icon-container">
+                        <i className="far fa-compass fa-1x"></i>
+                        <i className="far fa-heart fa-1x"></i>
+                        <i className="far fa-user fa-1x"></i>
+                    </div> 
                 </div>
             </div>
         )
