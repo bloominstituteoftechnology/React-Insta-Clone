@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faHeart, faCommentAlt, faEllipsisH, faCompass, faUser, faCameraRetro } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
+
+library.add(faHeart, faCommentAlt, faEllipsisH, faCompass, faUser, faCameraRetro);
 
 class App extends Component {
   constructor () {
@@ -15,7 +19,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app-container">
         <SearchBar />
         {this.state.dummyData.map(data => (
           <div key={data.timestamp}>

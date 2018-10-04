@@ -1,17 +1,22 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import PostHeader from './PostHeader'
 import PropTypes from "prop-types";
+import './post.css';
 
 const PostContainer = (props) => {
     return (
-        <div>
-            <p>{props.username}</p>
-            <p>{props.timestamp}</p>
-            <p>{props.likes}</p>
-            <img src={props.image} alt="instagram" />
-            <img src={props.thumbnail} alt="profile" />
-            <CommentSection comments={props.comments}/>
-        </div>
+        <section className="post-container">
+            <section className="post-header">
+                <PostHeader thumbnail={props.thumbnail} username={props.username}/>
+            </section>
+            <section>
+                <img src={props.image} alt="instagram" />
+            </section>
+            <section className="comment-container">
+                <CommentSection timestamp={props.timestamp} likes={props.likes} comments={props.comments}/>
+            </section>
+        </section>
     )
 }
 

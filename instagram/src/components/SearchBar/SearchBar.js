@@ -8,7 +8,7 @@ const SearchBar = (props) => {
     return (
         <section className="search-bar">
             <section className="insta-logo">
-                <img src={ Instagram } alt="instagram logo" heigh="50px" width="50px"></img>
+                <img src={ Instagram } alt="instagram logo"></img>
                 <p>|</p>
                 <h1>Instagram</h1>
             </section>
