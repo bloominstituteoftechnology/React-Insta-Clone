@@ -1,0 +1,16 @@
+.searchBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 20px;
+}
+
+.logo i{
+    border-right: 1px solid black;
+    margin: 10px;
+    padding-right: 5px;
+}
+
+.buttons i{
+    margin: 10px 5px;
+}
