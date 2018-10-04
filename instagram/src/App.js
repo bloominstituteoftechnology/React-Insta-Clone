@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import logo from './D2rdroid1.png';
 import './App.css';
-import './dummy-data';
+import data from './dummy-data';
+
+
 
 class App extends Component {
   constructor() {
@@ -9,8 +11,8 @@ class App extends Component {
     this.state = {
       instaClonePosts: [],
     };
+    this.setState({instaClonePosts: data});
   }
-
 
   render() {
     return (
