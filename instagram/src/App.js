@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import SearchBar from '../src/components/SearchBar/SearchBar.js';
-import PostContainerList from '../src/components/PostContainerList/PostContainerList.js'
+import SearchBar from './components/SearchBar/SearchBar.js';
+import PostListContainer from './components/PostListContainer/PostListContainer.js';
 
 
 class App extends Component {
@@ -17,9 +17,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Instagram App</h1>
+        {/* <h1>Instagram App</h1> */}
         <SearchBar />
-        <PostContainerList />
+        <PostListContainer />
       </div>
     );
   }
