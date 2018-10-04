@@ -1,5 +1,8 @@
 .post-container {
     width:100%;
+    border-top:1px solid rgba(128, 128, 128, 0.199);
+    border-right:1px solid rgba(128, 128, 128, 0.199);
+    border-left:1px solid rgba(128, 128, 128, 0.199);
 
 }
 .post-header{
@@ -12,8 +15,8 @@
  width: 35px;
  height:35px;
  border-radius: 50px;
- margin-top:20px;
- margin-bottom:20px;
+ margin-top:10px;
+ margin-bottom:10px;
 
 }
 
