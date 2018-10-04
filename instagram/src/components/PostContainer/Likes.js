@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 
 const Likes = props => {
   return (
-    <div>
-      <img src='https://image.flaticon.com/icons/svg/149/149217.svg' alt='likes'/>
-      <img src='https://image.flaticon.com/icons/svg/25/25663.svg' alt='comment icon'/>
+    <div className='likesSection'>
+      <div className='actionIcons'>
+        <img className='likeIcon' src='https://image.flaticon.com/icons/svg/149/149217.svg' alt='likes'/>
+        <img className='commentIcon' src='https://image.flaticon.com/icons/svg/25/25663.svg' alt='comment icon'/>
+      </div>
       <p>{props.likes}</p>
     </div>
   )

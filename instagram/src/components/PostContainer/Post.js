@@ -5,7 +5,9 @@ const Post = props => {
   return (
     <div>
       <div className='userDetails'>
-        <img src={props.userData.thumbnailUrl} alt='post images'/>
+        <div className='profileImgContainer'>
+          <img src={props.userData.thumbnailUrl} alt='post images'/>
+        </div>
         <p>{props.userData.username}</p>
       </div>
       <div className='postImage'>

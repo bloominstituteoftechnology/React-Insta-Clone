@@ -9,12 +9,12 @@ const PostList = props => {
     <div>
       {props.data.map((post) => {
         return (
-          <div>
+          <div className='postContainer'>
             <Post userData={post}/>
             <Likes likes={post.likes}/>
             <CommentList comments={post.comments}/>
-            <p>{post.timestamp}</p>
-            <input type='text' placeholder='Add a comment...' />
+            <p className='timeStamp'>{post.timestamp}</p>
+            <input className='addComment' type='text' placeholder='Add a comment...' />
           </div>
         )})}
     </div>
