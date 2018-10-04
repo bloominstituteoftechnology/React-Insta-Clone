@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
+import PostContainer from './components/PostContainer/PostContainer';
+import dummyData from './dummy-data';
 import './App.css';
 
 class App extends Component {
@@ -7,6 +9,11 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
+        {dummyData.map(post => 
+          <>
+          <PostContainer post={post} />
+          </>
+          )}
       </div>
     );
   }

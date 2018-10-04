@@ -2,9 +2,11 @@ import React from 'react';
 
 const SearchBarActions = props => {
   return (
-    <>
-      Search Bar Actions here
-    </>
+    <div className="search-bar-actions">
+      <i className="far fa-compass" />
+      <i className="far fa-heart" />
+      <i className="far fa-user" />
+    </div>
   );
 }
 
