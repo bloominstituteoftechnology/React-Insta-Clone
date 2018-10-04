@@ -10,7 +10,7 @@ const PostContainer = (props) => {
             <section className="post-header">
                 <PostHeader thumbnail={props.thumbnail} username={props.username}/>
             </section>
-            <section>
+            <section className="post">
                 <img src={props.image} alt="instagram" />
             </section>
             <section className="comment-container">

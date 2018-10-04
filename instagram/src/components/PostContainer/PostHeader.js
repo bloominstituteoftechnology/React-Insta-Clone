@@ -4,7 +4,7 @@ const PostContainer = (props) => {
     return (
         <>
             <img src={props.thumbnail} alt="user thumbnail" />
-            <strong>{props.username}</strong>
+            <strong className="username">{props.username}</strong>
         </>
     )
 }

@@ -1,0 +1,29 @@
+.post-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+}
+
+.post-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 10px;
+}
+
+.post-header img {
+    height: 30px;
+    border-radius: 50%;
+}
+
+.post-header .username {
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.post img {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
