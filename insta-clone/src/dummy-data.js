@@ -77,6 +77,29 @@ const dummyData = [
         text: "I like how Half Dome looks so old and useless"
       }
     ]
+  },
+  {
+    username: "venom",
+    thumbnailUrl:
+      "https://vignette.wikia.nocookie.net/marvelcrossroads/images/a/a9/We_Are_Venom.jpg/revision/latest?cb=20150628225905",
+    imageUrl:
+      "https://jovemnerd.com.br/wp-content/uploads/2018/08/v-venom-760x428.jpg",
+    likes: 5306,
+    timestamp: "July 14th 2017, 10:04:08 am",
+    comments: [
+      {
+        username: "venom",
+        text: "We Are VENOM!"
+      },
+      {
+        username: "p_parker",
+        text: "I will battle you anywhere."
+      },
+      {
+        username: "t_stark",
+        text: "Make Sure you wear the new suit."
+      }
+    ]
   }
 ];
 
