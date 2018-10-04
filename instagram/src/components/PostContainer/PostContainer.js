@@ -14,7 +14,9 @@ const PostContainer = (props) =>{
         return (
             
             <Container className={'maincontainer'}>
-                <h1 className={'posttitle'}><img className={'avatar'} src={props.postData.thumbnailUrl}/>{props.postData.username}</h1>
+            <div className={'user'}>
+                <h1 className={'posttitle'}><img className={'avatar'} src={props.postData.thumbnailUrl}/> {props.postData.username}</h1>
+                </div>
                 <img src={props.postData.imageUrl}/>
                 
                 

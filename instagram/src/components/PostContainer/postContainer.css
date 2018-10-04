@@ -20,3 +20,10 @@ img {
     border-radius: 50%;
     width: 3rem;
 }
+
+.user{
+    display: flex;
+    height: 50px;
+    
+    align-items: center;
+}

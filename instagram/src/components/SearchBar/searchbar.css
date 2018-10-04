@@ -2,16 +2,16 @@
 
 .title {
     font-family: 'Pacifico', cursive;
+    font-size: 2rem;
 }
 
 .search {
     font-family: FontAwesome, "Open Sans";
     font-size: 1.5rem;
     margin: 0 auto;
+    background-color: #FAFAFA;
 }
-.searchcontainer{
 
-}
 
 input.search{
     display: flex;
@@ -20,4 +20,8 @@ input.search{
     width: 15rem;
     
     
+}
+
+Navbar{
+    height: 100px;
 }

@@ -32,7 +32,7 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="searchcontainer">
-        <Navbar color="light" light expand="md">
+        <Navbar color="#E1E4E8" light expand="md">
         <div className={'logo'}><i class="fab fa-instagram"></i></div>
           <NavbarBrand href="/" className={'title'}>Instagram</NavbarBrand>
           <Container>
