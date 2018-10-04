@@ -46,7 +46,7 @@
 .searchbar{
     background-image: url(/src/img/searchbarassets/searchbaricon.png);
     background-size: cover;
-    background-color: ghostwhite;
+    background-color: #F8F8F8;
     width: 300px;
     height: 25px;
     position: relative;

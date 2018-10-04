@@ -5,6 +5,7 @@ const UserHeaderInfo = props => {
     return(
         <div className={'userNameData'}>
             {props.usernamesdata.username}
+            
         </div>
     )
 };

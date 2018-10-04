@@ -1,0 +1,7 @@
+.commentSectionContainer{
+    display: flex;
+    position: relative;
+    width: 525px;
+    height: 500px;
+    border: 1px solid black;
+}
