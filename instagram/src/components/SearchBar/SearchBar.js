@@ -7,7 +7,7 @@ class SearchBar extends React.Component {
         <div className={'searchContainer'}>
             <div className={'searchBox'}>
                 <div className={'logoBox'}>
-                    <img src="https://png.icons8.com/windows/48/000000/instagram-new.png" />
+                    <img src="https://png.icons8.com/windows/48/000000/instagram-new.png" alt="" />
                     <div className={'searchBarBreak'}>|</div>
                     <div className={'logoTitle'}>Instagram</div>
                 </div>
@@ -15,9 +15,9 @@ class SearchBar extends React.Component {
                     <input className={'search'} placeholder={'Search'} />
                 </form>
                 <div className={'topButtonBox'}>
-                    <img src="https://png.icons8.com/ios/48/000000/compass.png" />
-                    <img src="https://png.icons8.com/ios/48/000000/hearts.png" />
-                    <img src="https://png.icons8.com/ios/48/000000/gender-neutral-user.png" />
+                    <img src="https://png.icons8.com/ios/48/000000/compass.png" alt="" />
+                    <img src="https://png.icons8.com/ios/48/000000/hearts.png" alt="" />
+                    <img src="https://png.icons8.com/ios/48/000000/gender-neutral-user.png" alt="" />
                 </div>
             </div>
         </div>

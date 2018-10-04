@@ -1,0 +1,33 @@
+.postContainer {
+    max-width: 614px;
+    width: 96%;
+    margin-bottom: 50px;
+}
+
+.postTop {
+    display: flex;
+    font-size: 1.7rem;
+    font-weight: 600;
+    align-items: center;
+    font-family: 'Tinos', serif;
+    height: 60px;
+    padding-left: 1.3%;
+    width: 100%;
+    border: 1px solid gainsboro;
+    background-color: white;
+}
+
+.postTop img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.postTop .topUsername {
+    padding-left: 1.6%;
+}
+
+.mainImage {
+    max-width: 614px;
+    width: 100%;
+}

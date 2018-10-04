@@ -1,4 +1,13 @@
-.postContainer {
+.container {
     position: relative;
-    top: 77px;
+    top: 76px;
+    background-color: #FAFAFA;
+    padding-top: 65px;
+    width: 100%;
+}
+
+.contentContainer {
+    max-width: 935px;
+    width: 100%;
+    margin: 0 auto;
 }

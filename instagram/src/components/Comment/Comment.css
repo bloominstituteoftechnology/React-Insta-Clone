@@ -1,0 +1,12 @@
+.boldName {
+    font-weight: bold;
+    margin-right: 0.2%;
+}
+
+.commentText {
+    padding-left: 1%;
+}
+
+.commentItem {
+    margin-bottom: 5px;
+}

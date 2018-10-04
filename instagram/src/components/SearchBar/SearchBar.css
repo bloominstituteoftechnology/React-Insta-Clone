@@ -18,6 +18,10 @@
 
 }
 
+.logoBox:hover {
+    cursor: pointer;
+}
+
 .logoBox img {
     height: 32px;
     width: 32px;
@@ -73,4 +77,8 @@
 .topButtonBox img {
     height: 25px;
     width: 25px;
+}
+
+.topButtonBox img:hover {
+    cursor: pointer;
 }
