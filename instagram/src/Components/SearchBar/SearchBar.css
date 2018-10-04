@@ -1,0 +1,23 @@
+.searchContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.instaLogo {
+    height: 25px; ;
+    width: 25px; ;
+}
+.logoContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.searchBar {
+
+}
+
+.searchNav {
+
+}
+
+
