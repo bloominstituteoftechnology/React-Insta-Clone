@@ -23,7 +23,8 @@ class CommentSection extends React.Component {
                 <div className={'dateStamp'}>{this.props.post.timestamp}</div>
                 <form>
                     <div className={'moreButton'}></div>
-                    <input className={'commentInput'} placeholder={'Add a comment...'} />
+                    <input value={this.props.comment} className={'commentInput'} placeholder={'Add a comment...'} onChange={this.props.commentInput} />
+                    <button className={'invisible'} type="submit" onClick={this.props.addComment} />
                 </form>
             </div>
         )

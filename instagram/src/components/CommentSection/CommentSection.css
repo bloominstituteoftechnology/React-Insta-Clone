@@ -63,7 +63,7 @@
     position: absolute;
     height: 56px;
     width: 45px;
-    left: 41%;
+    left: 56.4%;
 }
 
 .moreButton:hover {
@@ -79,4 +79,10 @@
     color: gray;
     font-size: 1.3rem;
     margin-bottom: 15px;
+}
+
+.invisible {
+    background: transparent;
+    border: none;
+    font-size: 0;
 }
