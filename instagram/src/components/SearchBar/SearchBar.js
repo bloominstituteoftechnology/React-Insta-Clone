@@ -4,8 +4,11 @@ import "./SearchBar.css";
 const SearchBar = () => {
   return (
     <div>
-    SearchBar
+{/* ☞ 8f646e2b-8849-477c-a200-080dd79c22a9 */}
     <form >
+    <label>
+      Search Bar:   
+      </label>
       <input 
       className="searchInput"
       name="search"
@@ -13,22 +16,14 @@ const SearchBar = () => {
       placeholder="Search"
       // onChange={this.handleInputChange}
       />
+      <input type="submit" value="Find this!" />
     </form>
+    {/* <label>New Task: 
+    <input type="text" name="newTask" placeholder="Enter new task"/>
+    <input type="text" name="newTaskContent" placeholder="Enter task description"/>
+    </label>
+  <input type="submit" value="Add this task" /> */}
     
-    {/* <form className="column-Layout"> // change to `row-layout`
-        <input
-        className="Input"
-        value={this.instaClonePosts.text}
-        name="search"
-        type="text"
-        placeholder="Search"
-        onChange={this.handleInputChange}
-        />
-        
-        <button className="btn-Search" onClick={() => this.handleAddNote()} type="button">
-        Find this!
-        </button>
-      </form> */}
   </div>
   )
 }
