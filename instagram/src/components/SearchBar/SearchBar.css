@@ -4,16 +4,38 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 75px;
     border: 1px solid green;
+}
+
+.instagram{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
 }
 .instagramTitle {
     display: block;
     width: 200px;
-    height: 80px;
-    border: 1px solid red;
+    height: 50px;
+    padding-left: 10px;
+}
 
+.fa-instagram {
+    font-size: 32px;
+    border-right: 1px solid grey;
+    padding-right: 15px;
 }
 
 .search {
     height: 30px;
+    width: 250px;
 }
+
+.icons {
+    font-size: 32px;
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+

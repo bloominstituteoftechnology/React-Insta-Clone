@@ -6,8 +6,13 @@ class SearchBar extends React.Component {
     render() {
         return (
             <div className="searchBar">
-                <img src="https://images.vexels.com/media/users/3/137201/isolated/preview/83b5f2a86fa0ec9f938664da94a9bc55-instagram-silhouette-stroke-logo-by-vexels.png" className="instagramTitle"></img>
-                <input type="text" placeholder="Search" className="search"></input>
+                <div className="instagram">
+                    <i class="fab fa-instagram"></i>
+                    <img className="instagramTitle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" />
+                </div>
+
+                <input type="text" placeholder="search" className="search"></input>
+
                 <div className="icons">
                 <i class="far fa-compass"></i>
                 <i class="far fa-heart"></i>
