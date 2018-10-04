@@ -1,0 +1,33 @@
+.searchBar {
+    max-width: 1900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+
+input {
+    width: 432px;
+    height: 50px;
+    font-size: 28px;
+    color: grey;
+    border-radius: 5px;
+    border: 2px solid lightgrey;
+    margin-right: 340px;
+    text-align: center;
+}
+
+.logo {
+    width: 400px;
+}
+.icon-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+    margin-right: 20px;
+}
+
+.social {
+    font-size: 40px;
+    color: lightgrey;
+}
