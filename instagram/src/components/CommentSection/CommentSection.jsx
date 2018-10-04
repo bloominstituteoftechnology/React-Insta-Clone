@@ -6,16 +6,31 @@ import "./commentsection.css";
 const CommentSection = props => {
   return (
     <div>
-      {console.log(props.data.comments)}
       {props.data.comments.map(item => (
         <Comment
           username={item.username}
           text={item.text}
           key={item.username}
+          likes={item.likes}
         />
       ))}
+      <div className="timestamp">{props.data.timestamp}</div>
+      <hr />
+      <form>
+        <input
+          placeholder="Add a comment..."
+          type="text"
+          className="form-control no-border comment-field"
+        />
+      </form>
     </div>
   );
+};
+
+CommentSection.propTypes = {
+  data: PropTypes.shape({
+    comments: PropTypes.arrayOf(PropTypes.object)
+  })
 };
 
 export default CommentSection;

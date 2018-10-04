@@ -1,3 +1,26 @@
 .username {
   font-weight: bold;
 }
+
+.comment {
+  margin: 2px 15px;
+}
+
+.timestamp {
+  color: gray;
+  font-weight: bold;
+  font-size: 10px;
+  text-align: left;
+  margin-left: 15px;
+}
+
+hr {
+  width: 590px;
+  margin: 10px 15px;
+}
+
+.comment-field {
+  margin: 10px 15px;
+  width: 75%;
+  border: none;
+}

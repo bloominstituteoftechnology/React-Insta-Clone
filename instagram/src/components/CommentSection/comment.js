@@ -4,13 +4,18 @@ import "./commentsection.css";
 
 const Comment = props => {
   return (
-    <div>
-      <p className="comment">
+    <div className="d-flex align-items-center">
+      <div className="comment">
         <span className="username">{props.username}</span>
         {props.text}
-      </p>
+      </div>
     </div>
   );
+};
+
+Comment.propTypes = {
+  username: PropTypes.string,
+  text: PropTypes.string
 };
 
 export default Comment;

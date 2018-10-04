@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import dummyData from "./dummy-data";
 import PostContainer from "./components/PostContainer/postcontainer";
+import SearchBar from "./components/SearchBar/searchbar";
+import PropTypes from "prop-types";
 
 class App extends Component {
   constructor() {
@@ -12,9 +14,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* {console.log(this.state.data)} */}
+        <SearchBar />
         {this.state.data.map(item => (
-          <PostContainer data={item} />
+          <PostContainer data={item} key={item.timestamp} />
         ))}
       </div>
     );
