@@ -8,7 +8,7 @@ const SearchBar = () => {
                 <i className="fab fa-instagram"/>
             </div>
             <img src="https://fontmeme.com/images/instagram-new-logo.png" alt="instgram logo"></img>
-            <input type='text' placeholder='search'></input>
+            <input type='text' placeholder='Search'></input>
             <div className="icons">
                 <i className="far fa-compass"/>
                 <i className="far fa-heart"/>

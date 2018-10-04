@@ -1,5 +1,5 @@
 .search-bar {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid lightgray;
     height: 50px;
     width: 100%;
     display: flex;
@@ -11,7 +11,7 @@
 .header-icon {
     height: 30px;
     width: 50px;
-    border-right: 1px solid gray;
+    border-right: 1px solid lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,6 +25,9 @@
 }
 input {
     margin: 0 auto;
+}
+input::placeholder {
+    align-self: center;
 }
 img {
     padding-left: 10px;
