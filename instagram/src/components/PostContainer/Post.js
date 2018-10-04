@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentSection from '../components/CommentSection/CommentSection.js';
+import CommentSection from '../CommentSection/CommentSection.js';
 
 const Post = props => {
   return (
