@@ -6,6 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faCompass,faHeart,faUser } from '@fortawesome/free-solid-svg-icons'
 import SearchBarContainer from './components/SearchBar/SearchBarContainer';
+import PostContainer from './components/PostContainer/PostContainer';
 
 library.add(faSearch, faCompass,faHeart,faUser)
 
@@ -14,6 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBarContainer  />
+        <PostContainer />
       </div>
     );
   }
