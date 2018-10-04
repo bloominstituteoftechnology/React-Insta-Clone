@@ -3,8 +3,8 @@ import CommentSection from '../CommentSection/CommentSection.js';
 import './PostContainer.css'
 
 
-const PostContainer = () => {
-
+const PostContainer = (props) => {
+    console.log(props);
     return (
 
         //receives individual post of postData array from

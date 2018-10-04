@@ -19,7 +19,7 @@ class App extends Component {
       <div className="App">
         {/* <h1>Instagram App</h1> */}
         <SearchBar />
-        <PostListContainer />
+        <PostListContainer postData={this.state.postData}/>
       </div>
     );
   }
