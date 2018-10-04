@@ -1,5 +1,17 @@
+.main-container {
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .App-logo {

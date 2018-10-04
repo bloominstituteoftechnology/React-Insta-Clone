@@ -1,6 +1,7 @@
 import React from 'react';
 // import React, { Component } from 'react';
 
+
 const CommentSection = props => {
     return (
 		<div className='comment-section'>

@@ -1,0 +1,44 @@
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1024px;
+    position: fixed;
+    top: 0px;
+    padding: 20px;
+    height: 50px;
+}
+
+.search-bar-left-icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.search-bar-left-icons img {
+    height: 50px;
+}
+
+.instagram-camera-logo {
+    padding-right: 25px;
+    border-right: 1px solid grey;
+    margin-right: 25px;
+}
+
+input {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 8px;
+}
+
+.search-bar-right-icons {
+    display: flex;
+    align-items: flex-end;
+}
+
+.search-bar-right-icons img {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
