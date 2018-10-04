@@ -1,0 +1,35 @@
+.searchBar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.searchBar-title {
+    display: flex;
+    align-items: center;
+}
+
+.searchBar-title p {
+    font-size: 2rem;
+    transform: scale(.5, 1);
+    padding: 0 10px;
+}
+
+.instagram-title {
+    height: 40px;
+}
+
+.searchBar-text-form {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.searchBar-icons img {
+    padding: 0 10px;
+}
+
+/* .search-textbar {
+    height: 40px;
+    width: 150px;
+} */

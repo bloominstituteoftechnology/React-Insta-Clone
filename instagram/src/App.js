@@ -8,12 +8,12 @@ import CommentSection from "./components/CommentSection/CommentSection";
 class App extends React.Component {
   constructor() {
     super();
-    this.state = dummyData;
+    this.state = {dummyData};
   }
 
   render() {
     return (
-      <div>
+      <div className='main-container'>
         <SearchBar />
         <PostContainer />
         <CommentSection />
