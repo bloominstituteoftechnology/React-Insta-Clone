@@ -11,7 +11,7 @@ class App extends Component {
 
     return (
       <>
-      <SearchBar />
+        <SearchBar />
       <PostContainer dummyData={dummyData} />
      </>
     );
