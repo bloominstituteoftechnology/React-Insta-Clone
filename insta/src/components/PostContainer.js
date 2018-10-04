@@ -11,6 +11,7 @@ const PostContainer = props => {
                     <CommentSection comments={post.comments} likes={post.likes}/>
                 </div>
             ))}
+            <input type='text' placeholder='Comment' />
         </div>
     );
 }
