@@ -5,7 +5,7 @@ class PostHeader extends Component {
 	render() {
 		return (
 			<div className="postHeader">
-				<img src={this.props.profileImage} alt={'photo'} />
+				<img src={this.props.profileImage} alt={this.props.userName} />
 				<p>{this.props.userName}</p>
 			</div>
 		);

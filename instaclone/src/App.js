@@ -3,7 +3,7 @@ import './App.css';
 import PostContainer from './components/PostContainer/PostContainer';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
-import CommentSection from './components/CommentSection/CommentSection';
+
 
 const appData = dummyData;
 
@@ -12,10 +12,9 @@ console.log(appData);
 class App extends Component {
 	render() {
 		return (
-			<div className='appContainer'>
+			<div className="appContainer">
 				<SearchBar />
-        <PostContainer appData={appData} />
-        <CommentSection/>
+				<PostContainer appData={appData} />
 			</div>
 		);
 	}
