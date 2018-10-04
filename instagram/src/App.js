@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import logo from './D2rdroid1.png';
+// import logo from './D2rdroid1.png';
+import logo from './d2rdDroidEmoji.png';
 import './App.css';
 import data from './dummy-data';
 
@@ -46,21 +47,26 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            <h1>Welcome to D2rd-O-Gram</h1>
-          </p>
+          <img src={logo} className="App-logo" alt="logo" height="72px" width="72px" align="left" />
+          <div>
+            <h1>D2rd-O-Gram</h1>
+          </div>
+          <div>
+
           <a
             className="App-link"
             href="https://linkedin.com/in/gddaniel"
             target="_blank"
             rel="noopener noreferrer"
-          >
+            >
             About Me
           </a>
-          <SearchBar />
+            </div>
         </header>
         <div>
+          <b>
+          <SearchBar />
+          </b>
           <PostContainer />
 
         </div>
