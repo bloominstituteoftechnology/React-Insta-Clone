@@ -8,11 +8,11 @@ class PostContainer extends React.Component {
     render() {
         return (
             <div className="postContainer">
-                <div><img className="thumb" src={this.props.InstaData.thumbnailUrl} alt='thumbnail' />{this.props.InstaData.username}</div>
+                <div className="iconHeader"><div ><img className="thumb" src={this.props.InstaData.thumbnailUrl} alt='thumbnail' /></div><div className="usernameText">{this.props.InstaData.username}</div></div>
                 <div><img className="main" src={this.props.InstaData.imageUrl} alt='MainPic' /></div>
                 <div><img className="likeIcons" src={rainbowheart} alt="rainbowheart" /><img className="likeIcons" src={combubble} alt="commentBubble" /></div>
-                <div>{this.props.InstaData.likes} likes</div>
-                <CommentSection key={this.props.key} CommentArray={this.props.CommentArray}/>
+                <div className="likes">{this.props.InstaData.likes} likes</div>
+                <CommentSection key={this.props.InstaData.key} CommentArray={this.props.CommentArray}/>
             </div>
         );
     }

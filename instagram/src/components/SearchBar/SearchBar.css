@@ -3,11 +3,10 @@
     width:100%;
     display: flex;
     justify-content: space-between;
-    margin-left:5px;
-    margin-right: 5px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid lightgray;
     height:175px;
     margin-bottom: 50px;
+   margin-top:-80px;
 }
 .icons{
     width:50px;

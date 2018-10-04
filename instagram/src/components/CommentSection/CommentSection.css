@@ -1,0 +1,25 @@
+.addComment{
+    display:flex;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    text-align: center;
+    margin-top:10px;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.addCommentText{
+    color:#CACACA
+}
+.dots{
+    font-weight: bolder;
+    font-size: 20px;
+     
+}
+.commentUser{
+    font-weight:bold;
+}
+.commentArea{
+    padding-left:10px;
+}

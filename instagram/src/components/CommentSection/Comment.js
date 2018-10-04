@@ -1,11 +1,11 @@
 import React from 'react'
-
+import './commentSection.css';
 class Comment extends React.Component {
 
     render() {
         return (
-            <p>
-             <strong>{this.props.commentUsername}</strong> {this.props.commentText}  
+            <p className="commentArea">
+             <span className='commentUser'>{this.props.commentUsername}</span> {this.props.commentText}  
             </p>
         );
     }
