@@ -1,6 +1,7 @@
 import React from 'react'
 import Comment from './Comment';
 import PropTypes from 'prop-types';
+import './Comment.css'
 
 const CommentList = props => {
   return (
