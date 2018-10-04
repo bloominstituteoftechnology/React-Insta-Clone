@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-import "./CommentSection.css";
-
+// import "./CommentSection.css";
 
 class CommentSection extends Component {
-    render() {
-        return (
-
-        )
-    }
+  render() {
+    return null;
+  }
 }
 
 export default CommentSection;

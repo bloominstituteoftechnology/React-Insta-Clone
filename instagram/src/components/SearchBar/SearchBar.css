@@ -1,0 +1,52 @@
+.logo-name {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+i {
+    font-size: 24px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.logo-img {
+    font-size: 28px;
+    border-right: 1px solid black;
+    padding-left: 0px;
+    height: 28px;
+}
+
+.logo {
+    display: flex;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.icons {
+    display: flex;
+}
+
+.icon {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+input {
+    padding-right: 25px;
+    padding-left: 30px;
+    text-align: center;
+    border: 1px solid #f5f5f5;
+    font-size: 13px;
+    color: silver;
+    background-image: url('./search-img.png');
+    background-repeat: no-repeat;
+    background-position-x: 30%;
+    background-position-y: center;
+}
