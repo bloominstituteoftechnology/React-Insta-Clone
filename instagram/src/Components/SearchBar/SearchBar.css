@@ -31,6 +31,8 @@
 }
 
 .search-input{
+    text-align: center;
+    margin: auto 0;
 }
 
 .fa-search{
@@ -46,7 +48,7 @@
 }
 .rigth-icon-container{
     display: flex;
-    width: 50%;
+    width: 55%;
     border: 1px solid yellow;
-    justify-content: space-between;
+    justify-content: space-around;
 }

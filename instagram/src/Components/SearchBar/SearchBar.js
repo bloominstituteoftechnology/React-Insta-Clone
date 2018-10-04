@@ -18,7 +18,7 @@ class SearchBar extends React.Component {
                 <p className="instagram-letter-logo">Instagram</p>
                 {/*Search bar*/}
                 <div className="search-area">
-                    <input type="text" placeholder=" Search" className="search-input" onChange={this.inputHandler} value={this.state.searchValue}/>
+                    <input type="text" placeholder="Search" className="search-input" onChange={this.inputHandler} value={this.state.searchValue}/>
                     <i className="fa fa-search"></i>
                 </div>
                 
