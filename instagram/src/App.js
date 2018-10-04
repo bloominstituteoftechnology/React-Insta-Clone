@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
+import PostContainer from '../src/components/PostContainer/PostContainer.js';
 
 class App extends Component {
   constructor() {
@@ -12,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Instagram</h1>
+      <PostContainer posts={this.state.posts} />
       </div>
     );
   }
