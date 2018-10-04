@@ -43,6 +43,7 @@
 
 .postContainer {
     display: flex;
+    flex-direction: column;
     border: 2px solid green;
 }
 
@@ -111,4 +112,70 @@
 
 .cameraIcon:hover {
     cursor: pointer;
+}
+
+.header {
+  border: 2px solid orange;
+display: flex;
+flex-direction: row;
+height: 64px;
+}
+       
+.thumbNail {
+background-image: url('./icons/icon1.png');
+width: 50px;
+height: 50px;
+}
+
+.userName {
+
+}
+
+.image {
+  display: flex;
+  width: 100%;
+height: 200px;
+background-image: url('./icons/Yoda.jpg');
+  border: 2px solid gray;
+
+}
+
+.iconContainer2 {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  border: 2px solid purple;
+}
+  
+.postIcon1 {
+
+}
+
+.postIcon2 {
+
+}
+
+.commentContainer {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  border: 2px solid red;
+}
+
+.timeStamp {
+
+} 
+
+.addCommentContainer {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid yellow;
+}
+
+.addComment {
+
+}
+
+.dots {
+
 }
