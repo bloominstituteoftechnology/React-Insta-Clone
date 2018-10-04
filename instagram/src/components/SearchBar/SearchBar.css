@@ -1,0 +1,18 @@
+img{
+    width:200px;
+    height: 40px; 
+}
+.search{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+input{
+    height:10px;
+}
+i{
+    width:50px;
+    height:50px;
+}

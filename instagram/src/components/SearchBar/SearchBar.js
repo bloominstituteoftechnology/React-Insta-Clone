@@ -1,10 +1,10 @@
 import React from 'react';
-
+import css from './SearchBar.css';
 const SearchBar = (props) =>{
     return(
-        <div>
-            <img src ='./components/SearchBar/instagram_new_logo.jpg' alt="logo"></img>
-            <img src ='./components/SearchBar/instagram.png' alt ="Instagram"></img>
+        <div className="search">
+            <i class="fab fa-instagram"></i>
+            <img src ="https://vignette.wikia.nocookie.net/logopedia/images/a/aa/Instagram_wordmark.svg/revision/latest?cb=20140110161419" alt ="Instagram"/>
             <input></input>
             icons
         </div>
