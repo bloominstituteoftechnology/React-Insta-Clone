@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import './App.css'
 import PostContainer from './Components/PostContainer/PostContainer'
 import dummyData from './dummy-data'
+import CommentSection from './Components/CommentSection/CommentSection'
 
 class App extends Component {
-	constructor() {
-		super()
+	constructor(props) {
+		super(props)
 		this.state = {
 			posts: []
 		}

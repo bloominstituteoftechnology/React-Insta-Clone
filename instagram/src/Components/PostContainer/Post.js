@@ -1,6 +1,7 @@
 import React from 'react'
 import PostHeader from './PostHeader'
 import styled from 'styled-components'
+import CommentSection from '../CommentSection/CommentSection'
 
 const PostImageWrapper = styled.div`
 	max-width: 100%;
@@ -28,6 +29,7 @@ const post = props => {
 			<PostImageWrapper>
 				<img src={props.post.imageUrl} alt="insta images" />
 			</PostImageWrapper>
+			<CommentSection comments={props.post.comments} />
 		</PostWrapper>
 	)
 }

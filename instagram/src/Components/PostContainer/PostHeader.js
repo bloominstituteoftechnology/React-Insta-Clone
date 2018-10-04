@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const PostHeader = styled.header`
 	width: 100%;
 	display: flex;
-	padding: 3rem 3rem;
+	padding: 2rem 2rem;
 `
 
 const PostHeaderImage = styled.div`
