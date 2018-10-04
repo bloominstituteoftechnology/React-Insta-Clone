@@ -42,6 +42,7 @@ const PostContainer = (props) => {
                 )
             })}
             </>
+            <input defaultValue='Add a comment.' />
         </div>
     )
 }
