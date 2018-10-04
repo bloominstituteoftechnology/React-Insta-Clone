@@ -1,0 +1,19 @@
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid green;
+}
+.instagramTitle {
+    display: block;
+    width: 200px;
+    height: 80px;
+    border: 1px solid red;
+
+}
+
+.search {
+    height: 30px;
+}
