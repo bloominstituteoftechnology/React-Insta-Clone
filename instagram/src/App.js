@@ -3,6 +3,7 @@ import './App.css';
 import dummydata from './dummy-data'
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
+import PropTypes from 'prop-types';
 class App extends Component {
   render() {
     
@@ -24,5 +25,19 @@ class App extends Component {
     );
   }
 }
-
+App.propTypes = {
+dummydata: PropTypes.arrayOf(
+  PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    timestamp: PropTypes.string,
+    comments: PropTypes.arrayOf(
+      PropTypes.shape({
+        username: PropTypes.string,
+        text: PropTypes.string,
+      })
+    )}).isRequired)
+}
 export default App;

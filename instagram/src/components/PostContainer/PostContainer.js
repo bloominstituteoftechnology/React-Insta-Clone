@@ -2,7 +2,8 @@ import React from 'react'
 import CommentSection from '../CommentSection/CommentSection';
 import rainbowheart from '../../img/rainbowheart.png';
 import combubble from '../../img/combubble.png';
-import './postContainer.css'
+import './postContainer.css';
+import PropTypes from 'prop-types';
 class PostContainer extends React.Component {
 
     render() {
@@ -16,6 +17,22 @@ class PostContainer extends React.Component {
             </div>
         );
     }
+}
+PostContainer.propTypes = {
+    InstaData: 
+        PropTypes.shape({
+            username: PropTypes.string,
+            thumbnailUrl: PropTypes.string,
+            imageUrl: PropTypes.string,
+            likes: PropTypes.number,
+            timestamp: PropTypes.string,
+            comments: PropTypes.arrayOf(
+                PropTypes.shape({
+                    username: PropTypes.string,
+                    text: PropTypes.string,
+                })
+            )
+        }).isRequired
 }
 
 export default PostContainer
