@@ -1,5 +1,5 @@
 import React from 'react';
-import 'instagram/src/components/Searchbar/SearchBar.css';
+import './SearchBar.css';
 
 class SearchBar extends React.Component {
 
@@ -16,9 +16,9 @@ class SearchBar extends React.Component {
         </div>
 
         <div className = 'littleIcons'>
-          <img className = 'compassIMG icons'/>
-          <img className = 'hearrtIMG icons'/>
-          <img className = 'personIMG icons'/>
+          <img className = 'compassIMG icons' alt = 'compass'/>
+          <img className = 'hearrtIMG icons' alt = 'heart'/>
+          <img className = 'personIMG icons'  alt = 'person' />
         </div>
 
       </div> /* searchBar-container   */
