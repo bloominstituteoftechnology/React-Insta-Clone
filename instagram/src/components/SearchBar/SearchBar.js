@@ -1,11 +1,16 @@
 import React from 'react';
 import './SearchBar.css';
+import SearchButtons from './SearchButtons.js';
+import SearchInput from './SearchInput.js';
+import SearchLogo from './SearchLogo.js';
 
 const SearchBar = (props) => {
     return (
-        <>
-            I am SearchBar
-        </>
+        <div className='search-bar'>
+            <SearchLogo />
+            <SearchInput />
+            <SearchButtons />
+        </div>
     )
 }
 
