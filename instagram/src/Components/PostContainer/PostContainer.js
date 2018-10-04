@@ -3,7 +3,7 @@ import Post from './Post'
 import styled from 'styled-components'
 
 const Test = styled.div`
-	width: 80%;
+	max-width: 55rem;
 	margin: 0 auto;
 `
 

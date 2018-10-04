@@ -16,19 +16,17 @@ const CommentContainer = styled.div`
 
 	.user-comment {
 		font-size: 1.5rem;
-		display: inline-block;
 	}
 `
+const SpanContainer = styled.div``
 
 const comments = props => {
 	return (
 		<CommentContainer>
-			<div>
+			<SpanContainer>
 				<span className="username">{props.comment.username}</span>
-			</div>
-			<div>
 				<span className="user-comment">{props.comment.text}</span>
-			</div>
+			</SpanContainer>
 		</CommentContainer>
 	)
 }

@@ -3,6 +3,7 @@ import './App.css'
 import PostContainer from './Components/PostContainer/PostContainer'
 import dummyData from './dummy-data'
 import CommentSection from './Components/CommentSection/CommentSection'
+import SearchBar from './Components/SearchBar/SearchBar'
 
 class App extends Component {
 	constructor(props) {
@@ -26,6 +27,7 @@ class App extends Component {
 		return (
 			<div className="App">
 				<h1>Insta Clone</h1>
+				<SearchBar />
 				<PostContainer posts={this.state.posts} />
 			</div>
 		)
