@@ -3,6 +3,8 @@ import logo from './D2rdroid1.png';
 import './App.css';
 import data from './dummy-data';
 
+import SearchBar from'./components/SearchBar/SearchBar';
+import PostContainer from'./components/PostContainer/PostContainer';
 
 
 class App extends Component {
@@ -31,6 +33,11 @@ class App extends Component {
             About Me
           </a>
         </header>
+        <div>
+          <SearchBar />
+          <PostContainer />
+
+        </div>
       </div>
     );
   }
