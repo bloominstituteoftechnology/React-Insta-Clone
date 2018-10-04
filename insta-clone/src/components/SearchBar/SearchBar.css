@@ -58,6 +58,7 @@ input {
 .search {
     z-index:1;
     text-align: center;
+    margin-top:15px;
     position: relative;
     font-size:10px;
     left:75px;

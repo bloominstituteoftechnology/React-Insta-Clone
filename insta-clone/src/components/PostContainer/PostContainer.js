@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 const PostContainer = props =>{
 
     return (
-        <div>
+        <div className='post-content'>
  {props.dummyData.map((data) =>
         <div className= "post-container" key={Math.random().toString() * 2}>
                     <PostHeader key={data.username} username={data.username} thumbnail={data.thumbnailUrl}  />

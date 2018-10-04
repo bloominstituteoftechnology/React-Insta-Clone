@@ -30,7 +30,7 @@ const CommentSection = props => {
     <p className='time-moment'>{now}</p>
     <form className="form-comment">
       <FontAwesomeIcon className='more-icon' icon={["fas", "ellipsis-h"]} />
-      <input className='add-comment' type="text" placeholder="Add comment..." />
+      <textarea className='add-comment' type="text" placeholder="Add comment..." />
     </form>
   </div>
 

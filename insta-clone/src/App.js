@@ -11,8 +11,12 @@ class App extends Component {
 
     return (
       <>
-        <SearchBar />
-      <PostContainer dummyData={dummyData} />
+        <div className="SearchBar">
+          <SearchBar />
+        </div>
+        <div className="PostContainer">
+          <PostContainer dummyData={dummyData} />
+        </div>
      </>
     );
   }

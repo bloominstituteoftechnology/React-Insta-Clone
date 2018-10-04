@@ -1,3 +1,6 @@
+.post-content {
+    margin-top:100px;
+}
 .post-container {
     width:100%;
     border-top:1px solid rgba(128, 128, 128, 0.199);
