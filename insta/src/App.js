@@ -13,12 +13,12 @@ library.add(faComment);
 class App extends Component {
   constructor() {
     super();
-    this.state = dummyData;
+    this.state = {dummyData};
   }
   render() {
     return (
       <>
-        <PostContainer posts={this.state}/>
+        <PostContainer posts={this.state.dummyData}/>
       </>
     );
   }

@@ -14,7 +14,9 @@ const CommentSection = props => {
                 <p>{props.likes} likes</p>
             </div>
             {props.comments.map(comment => (
-                <Comment comment={comment} />
+                <div key={comment.id}>
+                    <Comment comment={comment} />
+                </div>
             ))}
         </div>
         <input type='text' placeholder='Comment' />
