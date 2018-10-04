@@ -1,0 +1,25 @@
+.searchBar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand > img {
+    padding: 0px 10px;
+    border-right: 1px solid grey;
+    margin-right: 10px;
+}
+
+input {
+    width: 30%;
+}
+
+.searchNav > img {
+    margin: 5px;
+}

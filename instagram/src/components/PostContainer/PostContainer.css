@@ -1,0 +1,13 @@
+.postContainer {
+    width: 100%;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+}
+
+.userInfo > img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
