@@ -14,7 +14,7 @@ class App extends Component {
     this.state = {
       dummyData : [],
       searchKeyWord : '',
-      posts: []
+      posts: [],
     }
   }
   componentDidMount() {
@@ -23,17 +23,19 @@ class App extends Component {
     posts: dummyData
     });
   }
+
   searchKey = (e) => {
     e.preventDefault();
     const searchKey = e.target.value;
     const posts = []
     this.state.dummyData.filter(post => {
-      post.username.includes(searchKey) ? posts.push(post) : null;
+      return post.username.includes(searchKey) ? posts.push(post) : null;
     })
     this.setState({
       posts : posts
     })
   }
+
   render() {
     return (
       <div className="App">
