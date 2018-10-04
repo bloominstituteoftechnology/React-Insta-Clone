@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 12%;
+  width: 11%;
 }
 
 .searchBarInput {
@@ -26,6 +26,15 @@
   border-radius: 2px;
   border: 1px solid rgb(182, 182, 182);
   outline: none;
+}
+
+.searchBarIcons {
+  display: flex;
+  justify-content: space-between;
+  width: 11%;
+  font-size: 1.6rem;
+  font-weight: lighter;
+  padding-right: 1rem;
 }
 
 .sbLogo hr {
