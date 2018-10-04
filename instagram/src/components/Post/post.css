@@ -1,11 +1,18 @@
-.postHeader {
-  border: 1px solid rgb(202, 202, 202);
-  display: flex;
-  align-items: center;
+.post {
   width: 60%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 25px auto;
+  border: 1px solid rgb(202, 202, 202);
   box-sizing: border-box;
+}
+
+.postHeader {
+  /* border: 1px solid rgb(202, 202, 202); */
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 0.8rem;
 }
 
 .postHeader img {
@@ -15,7 +22,26 @@
 }
 
 .postImage {
-  width: 60%;
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.postFooter {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.4rem;
+}
+
+.postFooter .far {
+  padding: 5px 0.4rem;
+  font-size: 1.3rem;
+}
+
+.postFooter p {
+  margin: 0px 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
