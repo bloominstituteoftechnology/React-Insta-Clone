@@ -6,12 +6,17 @@ const PostContainer = props => {
       <div className="post-container">
         {props.dummyData.map((data) => 
           <div>
-            <p>{data.username}</p>
+            <div>
+              <img src={data.thumbnailUrl}/>
+              <p>{data.username}</p>
+            </div>
             <img src={data.imageUrl}></img> 
             <CommentSection username={data.username}
                             imageUrl={data.imageUrl}
+                            likes={data.likes}
+                            comments={data.comments}
+                            timestamp={data.timestamp}
             />
-            
           </div> 
         )}
       </div> 
