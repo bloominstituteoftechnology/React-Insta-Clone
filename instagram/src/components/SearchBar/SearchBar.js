@@ -10,7 +10,8 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  DropdownItem, 
+  Container} from 'reactstrap';
   import './searchbar.css';
 
 class SearchBar extends React.Component {
@@ -19,7 +20,8 @@ class SearchBar extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      
     };
   }
   toggle() {
@@ -29,10 +31,13 @@ class SearchBar extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="searchcontainer">
         <Navbar color="light" light expand="md">
         <div className={'logo'}><i class="fab fa-instagram"></i></div>
           <NavbarBrand href="/" className={'title'}>Instagram</NavbarBrand>
+          <Container>
+    <input className={'search'} type="text" placeholder='&#xf002; Search'/>
+    </Container>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>

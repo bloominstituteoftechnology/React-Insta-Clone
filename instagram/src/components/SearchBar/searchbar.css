@@ -3,3 +3,21 @@
 .title {
     font-family: 'Pacifico', cursive;
 }
+
+.search {
+    font-family: FontAwesome, "Open Sans";
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+.searchcontainer{
+
+}
+
+input.search{
+    display: flex;
+    text-align: center;
+    height: 2.5rem;
+    width: 15rem;
+    
+    
+}

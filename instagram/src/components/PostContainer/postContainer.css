@@ -1,0 +1,22 @@
+
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid gray;
+    font-size: 1.5rem;
+}
+
+img {
+    width: 100%;
+}
+
+.posttitle{
+    font-size: 1.5rem;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 3rem;
+}
