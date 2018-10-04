@@ -7,6 +7,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 
 const appData = dummyData;
 
+
 console.log(appData);
 
 class App extends Component {
