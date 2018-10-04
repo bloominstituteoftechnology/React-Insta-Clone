@@ -16,4 +16,6 @@ const SearchBar = props => (
     </div> 
 );
 
+{/*SEARCH BAR HAS NO PROPS TO VALIDATE, NO PROP TYPE CHECK*/}
+
 export default SearchBar;

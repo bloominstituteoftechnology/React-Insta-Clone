@@ -21,4 +21,14 @@ const CommentSection = props => (
     </div>
 );
 
+{/*VALIDATING PASSED PROP TYPES*/}
+CommentSection.propTypes = {
+    likes: PropTypes.number,
+    timestamp: PropTypes.string,
+    comments: PropTypes.shape({
+        username: PropTypes.string,
+        text: PropTypes.string,
+    })
+};
+
 export default CommentSection;

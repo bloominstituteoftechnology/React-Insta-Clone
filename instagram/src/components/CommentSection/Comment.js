@@ -7,4 +7,10 @@ const Comment = props => (
     </div>
 );
 
+{/*VALIDATING PASSED PROP TYPES*/}
+Comment.propTypes = {
+        username: PropTypes.string,
+        text: PropTypes.string
+};
+
 export default Comment
