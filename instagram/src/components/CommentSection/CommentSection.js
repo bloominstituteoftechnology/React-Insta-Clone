@@ -8,7 +8,11 @@ class CommentSection extends Component {
       <>
         {this.props.comments.map(comment => {
           return (
-            <Comment commentUser={comment.username} comment={comment.text} />
+            <Comment
+              key={Math.random()}
+              commentUser={comment.username}
+              comment={comment.text}
+            />
           );
         })}
       </>

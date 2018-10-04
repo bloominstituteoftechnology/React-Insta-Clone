@@ -1,7 +1,3 @@
-p {
-    font-family: 'Montserrat', sans-serif;
-}
-
 .post {
     display: flex;
     flex-direction: column;
@@ -27,8 +23,14 @@ p {
 .likes {
     font-weight: bold;
     margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .icons i {
     font-size: 20px;
+}
+
+.icons {
+    margin-top: 10px;
 }

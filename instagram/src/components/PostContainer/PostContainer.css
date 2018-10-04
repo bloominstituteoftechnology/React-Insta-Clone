@@ -3,6 +3,7 @@
     margin: 0 auto;
     border: 1px solid whitesmoke;
     margin-bottom: 40px;
+    border-radius: 3px;
 }
 
 .add-comment {
@@ -16,4 +17,5 @@
 
 .time {
     margin-left: 10px;
+    color: silver;
 }

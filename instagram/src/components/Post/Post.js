@@ -13,8 +13,8 @@ class Post extends Component {
           <img src={this.props.imageUrl} alt="" />
         </div>
         <div className="icons">
-          <i class="far fa-heart" />
-          <i class="far fa-comment" />
+          <i className="far fa-heart" />
+          <i className="far fa-comment" />
         </div>
         <p className="likes">{this.props.likes} likes</p>
       </div>

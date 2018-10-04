@@ -24,7 +24,8 @@ class App extends Component {
               likes={post.likes}
               time={post.timestamp}
               data={this.state.data}
-              comments={this.state.data.comments}
+              comments={post.comments}
+              key={Math.random()}
             />
           );
         })}

@@ -1,0 +1,11 @@
+.comment {
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 2px;
+    margin-top: 0px;
+}
+
+.user {
+    font-weight: bold;
+    margin-right: 5px;
+}
