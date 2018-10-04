@@ -3,9 +3,9 @@ import {
     CardImg,
     Card,
     CardTitle,
-    Media,
    
   } from 'reactstrap';
+import CommentSection from '../CommentSection/CommentSection';
 
 
 
@@ -13,15 +13,16 @@ import {
 const PostContainer = props => {
     return (
         <Card>
-        {props.dummyData.map((data) => 
-          <div>
+            {props.dummyData.map((data) =>
+            <div>
             <CardTitle>
-              <img src={data.thumbnailUrl}/><p>{data.username}</p>
+                    <img src={data.thumbnailUrl}/><p>{data.username}</p>
             </CardTitle>
             <CardImg top width="100%" src={data.imageUrl} alt="Card image"/>
-          </div> 
-        )}
-      </Card> 
+            <CommentSection dummyData={props.dummyData} data={data}/>
+            </div> )}
+            
+        </Card> 
     ) 
          
 };

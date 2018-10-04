@@ -22,7 +22,7 @@ class App extends Component {
       <>
       <SearchBar />
       <PostContainer instaData={this.state.instaData} dummyData={dummyData} />
-      <CommentSection />
+      
       
       </>
     );

@@ -1,10 +1,18 @@
 import React from 'react';
+// import {
+//     CardImg,
+//     Card,
+//     CardTitle,
+   
+//   } from 'reactstrap';
 
 const CommentSection = props => {
     return (
-        <>
-        {props.dummyData}
-        </>
+        
+            <div>
+                <p>{props.data.likes} likes</p>
+            </div>
+            
     )
 }
 
