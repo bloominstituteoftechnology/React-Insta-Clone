@@ -1,0 +1,40 @@
+.searchBar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.imgs-left{
+    height: 100px;
+    width: 33%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+}
+.imgs-right{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25%;
+}
+.logo{
+    width: 10%;
+   
+}
+.name-logo{
+    width:200px;
+    margin-left: 20px;
+    padding:10px;
+    border-left: 2px solid lightgrey;
+    margin-top: 15px;
+}
+input{
+    text-align: center;
+    width:175px;
+    height:20px;
+    border-radius:5px;
+    border-style: none;
+    border:1px solid black;
+}
+.icon{
+    color:black;
+}
