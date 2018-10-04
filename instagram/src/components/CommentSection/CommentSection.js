@@ -1,9 +1,18 @@
 import React, { Component } from "react";
-// import "./CommentSection.css";
+import "./CommentSection.css";
+import Comment from "./Comment.js";
 
 class CommentSection extends Component {
   render() {
-    return null;
+    return (
+      <>
+        {this.props.comments.map(comment => {
+          return (
+            <Comment commentUser={comment.username} comment={comment.text} />
+          );
+        })}
+      </>
+    );
   }
 }
 
