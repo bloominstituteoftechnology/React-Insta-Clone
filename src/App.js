@@ -16,6 +16,9 @@ class App extends Component {
   }
 
   render() {
+    // Setup a default key
+    let i = 0;
+
     return (
       <div className="App">
         <SearchBar />
@@ -27,8 +30,10 @@ class App extends Component {
             // likes: 400,
             // timestamp: "July 17th 2017, 12:42:40 pm",
             // comments: 
+          
           return (
-            <PostContainer 
+            <PostContainer
+              key={i++} 
               username={data.username}
               thumbnailUrl={data.thumbnailUrl}
               imageUrl={data.imageUrl}
@@ -38,8 +43,6 @@ class App extends Component {
             />
           );
         })}
-        <PostContainer />
-        <CommentSection />
       </div>
     );
   }
