@@ -14,10 +14,7 @@ return (
     <li
       onClick={() => props.toggleComplete(item.id)}
       key={id}
-      id={id}
-      style={{
-        textDecoration: item.completed ? 'line-through' : 'none'
-      }}
+     
     >
       {item.task}
     </li>

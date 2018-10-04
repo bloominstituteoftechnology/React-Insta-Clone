@@ -36,7 +36,7 @@ class App extends Component {
     this.setState({
       dummyData })
 
-      console.log("here is the data dummy: " + dummyData)
+      console.log("here is the dummy: " + dummyData)
   }
   
     
@@ -44,7 +44,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="searchBar">SearchBar<SearchBar /></div>
+        <div className="searchBar"><SearchBar /></div>
         <div className="postContainer">PostContainer<PostContainer /></div>
                
       </div>

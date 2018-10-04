@@ -1,32 +1,114 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.searchBarContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid blue;
+    height: 64px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.postContainer {
+    display: flex;
+    border: 2px solid green;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 604px;
+    border: 2px solid red;
+}
+
+.iconContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 2px solid green; */
+    width: 150px;
+}
+
+.searchBarInput {
+    width: 200px;
+    height: 36px;
+}
+
+.titleText {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.icon1 {
+    background-image: url('./icons/icon1.png');
+    width: 30px;
+    height: 30px;
+}
+
+.icon1:hover {
+    cursor: pointer;
+}
+
+.icon2 {
+    background-image: url('./icons/icon2.png');
+    width: 30px;
+    height: 30px;
+}
+
+.icon2:hover {
+    cursor: pointer;
+}
+
+.icon3 {
+    background-image: url('./icons/icon3.png');
+    width: 30px;
+    height: 30px;
+}
+
+.icon3:hover {
+    cursor: pointer;
+}
+
+.cameraIcon {
+    background-image: url('./icons/icon4.png');
+    width: 35px;
+    height: 38px;
+}
+
+.cameraIcon:hover {
+    cursor: pointer;
 }
