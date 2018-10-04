@@ -3,7 +3,7 @@ import React from 'react';
 const CommentSection = () => {
     return ( 
         <div>
-            <h3>I am a comment section!</h3>
+            <h3>I am the comments section!</h3>
         </div>
     );
 }
