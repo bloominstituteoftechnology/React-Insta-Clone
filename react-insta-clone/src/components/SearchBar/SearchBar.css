@@ -1,0 +1,37 @@
+.search-bar {
+    border-bottom: 1px solid gray;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.header-icon {
+    height: 30px;
+    width: 50px;
+    border-right: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons{
+    display: flex;
+    width: 10%;
+    justify-content: space-around;
+    margin-right: 10px;
+}
+input {
+    margin: 0 auto;
+}
+img {
+    padding-left: 10px;
+    height: 50px;
+    width: 15%;
+}
+
+i {
+    size: 10px;
+}
