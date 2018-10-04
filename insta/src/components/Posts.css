@@ -1,0 +1,47 @@
+.post-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.flex-column-container {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.post-tunnel {
+    margin: 30px 0;
+    border: 2px solid #ecf0f1;
+}
+
+.thumbnail {
+    border-radius: 50%;
+    width: 5%;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.img {
+    width: 100%;
+}
+
+input {
+    border: 2px solid #ecf0f1;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.comment-container {
+    margin-left: 20px;
+}
+
+.icons {
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.comment {
+    margin-left: 25px;
+}

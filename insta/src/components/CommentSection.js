@@ -1,19 +1,23 @@
 import React from 'react';
 import Comment from './Comment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const CommentSection = props => {
     return (
       <>
-        <div>
-            <h5>Heart</h5>
-            <h5>Comment</h5>
+        <div className='comment-container'>
+            <div className='flex-column-container'>
+                <FontAwesomeIcon className='icons' icon='heart' />
+                <FontAwesomeIcon className='icons comment' icon='comment' />
+            </div>
+            <div>
+                <p>{props.likes} likes</p>
+            </div>
+            {props.comments.map(comment => (
+                <Comment comment={comment} />
+            ))}
         </div>
-        <div>
-            <h3>{props.likes}</h3>
-        </div>
-        {props.comments.map(comment => (
-            <Comment comment={comment} />
-        ))}
+        <input type='text' placeholder='Comment' />
       </>  
     );
 }
