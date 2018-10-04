@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchBar.css';
 
 
 class SearchLogo extends React.Component {
@@ -7,7 +8,7 @@ class SearchLogo extends React.Component {
         return (
             <div className={"logoContainer"}>
                 <img className={"instaLogo"} src='https://image.flaticon.com/icons/svg/1077/1077042.svg' alt='instagram logo'/>
-                <p>Instagram</p>
+                <p className={"insta"}>Instagram</p>
             </div>
         )
     }

@@ -1,8 +1,8 @@
 import React from 'react';
+import './SearchBar.css';
 import SearchBar from './SearchBar';
 import SearchLogo from './SearchLogo';
 import SearchNav from './SearchNav';
-import './SearchBar.css';
 
 
 
@@ -13,7 +13,8 @@ class SearchContainer extends React.Component {
             <div className={"searchContainer"}>
                 <SearchLogo />
                 <SearchBar />
-                <SearchNav />
+                <SearchNav/>
+                
                 
             </div>
         )
