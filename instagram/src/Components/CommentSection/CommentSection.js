@@ -2,20 +2,20 @@ import React from 'react';
 
 const CommentSection = props => {
   return (
-      <div>
-        <div>
+      <div className="commentContainer">
+        <div className="likeTab">
           <i class="far fa-heart"></i>
           <i class="far fa-comment"></i>
         </div>
-        <p>{props.likes}</p>
+        <p className="userLikes">{props.likes} likes</p>
         <div>
           {props.comments.map( (comment, index) =>{
-            return <p key={index}>
-                     <span>{comment.username}</span>
-                    {comment.text}</p>
+            return <p className="userComments" key={index}>
+                    <span>{comment.username}</span>
+                   {comment.text}</p>  
             })}
         </div> 
-        <p>{props.timestamp}</p>
+        <p className="timeStamp">{props.timestamp}</p> 
       </div> 
   )
 }

@@ -4,18 +4,18 @@ const SearchBar = props =>{
   return (
     <div className="searchBar">
       <div className="logo">
-        <i class="fab fa-instagram"></i>
-        <p> | </p>
+        <i id="icon-logo" class="fab fa-instagram"></i>
+        <p className="split"> | </p>
         <h1>Instagram</h1> 
       </div> 
       <form>
-        <input placeholder = "text here"></input> 
+        <input placeholder = "search"></input> 
       </form> 
       <div> 
-      <i class="far fa-compass"></i>
-      <i class="far fa-heart"></i>
-      <i class="fas fa-user-alt"></i>
-      </div> 
+      <i id="icon" class="far fa-compass"></i>
+      <i id="icon"class="far fa-heart"></i>
+      <i id="icon"class="fas fa-user-alt"></i>
+      </div>  
     </div>
   )
 }

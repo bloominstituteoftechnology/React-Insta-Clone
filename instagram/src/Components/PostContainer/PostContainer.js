@@ -6,8 +6,8 @@ const PostContainer = props => {
       <div className="post-container">
         {props.dummyData.map((data) => 
           <div>
-            <div>
-              <img src={data.thumbnailUrl}/>
+            <div className="usernameThumb">
+              <img className="thumbnail" src={data.thumbnailUrl}/>
               <p>{data.username}</p>
             </div>
             <img src={data.imageUrl}></img> 
