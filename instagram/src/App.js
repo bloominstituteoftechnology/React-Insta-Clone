@@ -26,7 +26,7 @@ class App extends React.Component {
       
       
       )}
-      <SearchBar />
+      <SearchBar dummyData={dummyData} />
       <PostContainer dummyData={dummyData} />
       </>
       // <div className="App">
