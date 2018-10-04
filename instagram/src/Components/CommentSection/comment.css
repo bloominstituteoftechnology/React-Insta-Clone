@@ -3,8 +3,10 @@
     flex-direction: column;
     padding: 20px;
 }
-.comment-img {
-    width: 5%;
+
+i{
+    margin: 0;
+    margin-bottom: 5px;
     margin-right: 10px;
 }
 

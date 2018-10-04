@@ -40,7 +40,7 @@ Post.propTypes = {
                 text: PropTypes.string,
             })
         )
-})
-    
+    }).isRequired 
 }
+
 export default Post;
