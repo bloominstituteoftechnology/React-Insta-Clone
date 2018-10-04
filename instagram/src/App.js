@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
-
+import PostContainer from './components/PostContainer';
 import './App.css';
 import dummyData from './dummy-data';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <h1>instagram</h1>
-        {dummyData.map(post=> <div key={post.username}>
-          {post.thumbnailUrl}{post.imageUrl}{post.username}
-        </div>)}
+        <span>
+          {dummyData.map((post,i)=><div key={i}><PostContainer container={post}/></div>)}
+        </span>
+        <div><PostContainer/></div>
       </div>
     )
+  }
+}
+        
+      
+   
       
       
    
-  }
-}
+  
+
 
 export default App;
