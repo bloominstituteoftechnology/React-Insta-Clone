@@ -1,7 +1,24 @@
 .search-bar {
     border: 2px solid blue;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    height: 80px;
+    margin: 0 auto;
+
+}
+
+.search-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    border: 2px solid green;
+}
+
+.divider {
+    font-size: 35px;
 }
 
 .instagram {
