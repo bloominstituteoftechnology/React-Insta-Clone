@@ -26,7 +26,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<h1>Insta Clone</h1>
+				<h1 style={{ 'font-size': '50px', 'font-weight': '400' }}>Instagram</h1>
 				<SearchBar />
 				<PostContainer posts={this.state.posts} />
 			</div>

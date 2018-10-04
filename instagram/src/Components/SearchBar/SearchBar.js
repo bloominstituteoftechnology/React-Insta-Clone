@@ -58,11 +58,7 @@ const InputWrapper = styled.div`
 	}
 
 	.search-button {
-		${'' /* padding: 0.5rem;
-		font-size: 1.8rem;
-		position: absolute;
-		left: 2rem;
-		top: 0.5rem; */} background: #ddd;
+		background: #ddd;
 		font-size: 1.5rem;
 		border: none;
 		cursor: pointer;
