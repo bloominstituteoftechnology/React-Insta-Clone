@@ -29,7 +29,7 @@ const post = props => {
 			<PostImageWrapper>
 				<img src={props.post.imageUrl} alt="insta images" />
 			</PostImageWrapper>
-			<CommentSection comments={props.post.comments} />
+			<CommentSection comments={props.post.comments} likes={props.post.likes} />
 		</PostWrapper>
 	)
 }

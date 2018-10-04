@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Comments from './Comments'
 import styled from 'styled-components'
+import Likes from './Likes'
 
 const CommentSectionWrapper = styled.section`
 	max-width: 100%;
@@ -19,6 +20,7 @@ class CommentSection extends Component {
 	render() {
 		return (
 			<CommentSectionWrapper>
+				<Likes likes={this.props.likes} />
 				{this.state.comments.map(comment => (
 					<Comments comment={comment} />
 				))}
