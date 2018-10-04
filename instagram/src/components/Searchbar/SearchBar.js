@@ -1,5 +1,5 @@
 import React from 'react';
-import 'SearchBar.css';
+import 'instagram/src/components/Searchbar/SearchBar.css';
 
 class SearchBar extends React.Component {
 
