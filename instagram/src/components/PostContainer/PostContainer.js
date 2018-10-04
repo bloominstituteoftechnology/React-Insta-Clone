@@ -1,6 +1,5 @@
 import React from 'react';
 
-import CommentSection from '../CommentSection/CommentSection';
 import Post from './Post';
 
 const PostContainer = props => {
@@ -12,8 +11,6 @@ const PostContainer = props => {
                 post={post} 
                 />
                 )}
-            <h1>I am a Post Container!</h1>
-            <CommentSection />
         </div>
     );
 }
