@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection.js';
+import './PostContainer.css'
 
 class PostContainer extends React.Component{
     render(){
         return(
-            <div>
-                <div>
+            <div className="post-container">
+                <div className="img-name">
                     <img src={this.props.post.thumbnailUrl} alt={`${this.props.post.username} Icon`}></img>
                     <p>{this.props.post.username}</p>
                 </div>

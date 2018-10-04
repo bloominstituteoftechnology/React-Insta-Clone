@@ -1,0 +1,53 @@
+.comments-container{
+    display: flex;
+    flex-direction: column;
+    width: 93%;
+    margin: 0 auto;
+}
+
+.comments-icon-container{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+}
+
+.comments-icon{
+    margin: 20px 20px 15px 0px;
+}
+
+p.likes{
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+p.time-stamp{
+    color: #999999;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.add-comment{
+    border: none;
+    height: 50px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-top: 1px solid #e7e7e7;
+}
+
+.comments{
+    margin-bottom: 8px;
+}
+
+.comment{
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-bottom: 8px;
+}
+
+strong{
+    font-weight: bold;
+}
