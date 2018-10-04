@@ -1,0 +1,15 @@
+.search-bar-container{
+    width:100%;
+    display:flex;
+    align-items:flex-start;
+    border-bottom: 2px solid lightgray;
+}
+.logo{
+    width:33%;
+}
+.search-input{
+    width:33%;
+}
+.nav-icons{
+    width:33%;
+}
