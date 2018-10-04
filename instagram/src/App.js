@@ -9,9 +9,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <SearchBar/> 
-      <PostContainer dummyData={dummyData} 
-      /> 
+        <SearchBar/> 
+        <PostContainer dummyData={dummyData} /> 
       </div>
     );
   }

@@ -12,9 +12,9 @@ const SearchBar = props =>{
         <input placeholder = "search"></input> 
       </form> 
       <div> 
-      <i id="icon" class="far fa-compass"></i>
-      <i id="icon"class="far fa-heart"></i>
-      <i id="icon"class="fas fa-user-alt"></i>
+        <i id="icon" class="far fa-compass"></i>
+        <i id="icon"class="far fa-heart"></i>
+        <i id="icon"class="fas fa-user-alt"></i>
       </div>  
     </div>
   )
