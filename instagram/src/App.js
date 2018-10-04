@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
 import logo from './D2rdroid1.png';
 import './App.css';
+import './dummy-data';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      instaClonePosts: [],
+    };
+  }
+
+
   render() {
     return (
       <div className="App">
