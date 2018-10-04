@@ -1,5 +1,5 @@
 .header-container {
-    border: 1px solid wheat;
+    border: 1px solid orange;
     display: flex;
     justify-content: space-around;
 }

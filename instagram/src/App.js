@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
-import PostContainer from './Components/PostContainer';
-import Header from './Components/Header';
+import PostContainer from './Components/PostContainer/PostContainer';
+import Header from './Components/SearchBar/Header';
+import './Reset.css';
 
 import './App.css';
 
