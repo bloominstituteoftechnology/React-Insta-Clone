@@ -1,4 +1,30 @@
+.searchContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.insta {
+    display: flex;
+    justify-content: space-between;
+}
+.search {
+    margin-top: 2%;
+}
+.logo {
+    width: 30px;
+    height: 30px;
+    margin: 10% 15%;
+    padding-right: 30%;
+    border-right: 2px solid grey;
+}
+.logo-text {
+    margin: 5% 15%;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 2rem;
+}
 img {
     width: 25px;
     height: 25px;
+}
+.icons {
+    margin-top: 2%;
 }
