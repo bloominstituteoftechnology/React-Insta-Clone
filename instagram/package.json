@@ -24,8 +24,13 @@
     "not op_mini all"
   ],
   "devDependencies": {
-  "presets": ["env", "react"],
-  "plugins": ["styled-components"],
+    "presets": [
+      "env",
+      "react"
+    ],
+    "plugins": [
+      "styled-components"
+    ],
     "babel-cli": "^6.26.0",
     "babel-plugin-styled-components": "^1.8.0"
   }
