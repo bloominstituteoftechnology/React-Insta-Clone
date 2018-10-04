@@ -1,11 +1,11 @@
 import React from 'react';
-import CommentSection from '../CommentSection/CommentSection.js'
-
+import Comment from '../CommentSection/CommentSection.js'
+import './Post.css'
 const PostContainer = props => {
 	return (
 		<div>
 		<h1>{props.post.username}</h1>
-	 	<CommentSection />
+	 	<Comment comment={props.post.comments} />
 		</div>
 	);
 }
