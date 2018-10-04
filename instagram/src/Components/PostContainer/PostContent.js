@@ -24,7 +24,7 @@ class PostContent extends React.Component {
                             </div>
                             <section>
                             <CommentContainer dummyData={this.props.dummyData}/>
-                                
+
                             </section>
                         </>
                     )

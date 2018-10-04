@@ -4,10 +4,21 @@ class CommentContainer extends Component {
     render() {
         return (
             <div>
-                {this.props.dummyData.map(comment => {
+                {this.props.dummyData.map((data) => {
                     return (
-                        <div key={comment.timestamp}>
-                            <h4>{comment.comments}</h4>
+                        <div>
+                            {(typeof (data.comments) === 'object') ?
+                                <div>{
+                                    data.comments.map((newData  ) => {
+                                        return (
+                                            <>
+                                            <h4>{newData.username}</h4>
+                                                <p>{newData.text}</p>
+                                            </>
+                                        )
+                                    })
+                                }</div> : null
+                            }
                         </div>
                     )
                 })}
