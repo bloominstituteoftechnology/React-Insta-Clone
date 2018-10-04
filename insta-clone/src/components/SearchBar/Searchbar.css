@@ -1,0 +1,14 @@
+.search-bar-container {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-search-bar {
+    display:flex;
+}
+.icon {
+    color:lightgray;
+    font-size:20px;
+    margin-left:15px;
+}
