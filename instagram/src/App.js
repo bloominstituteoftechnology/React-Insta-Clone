@@ -8,18 +8,28 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
-
-    this.state = dummyData;
-    console.log(this.state);
+    this.state = {
+      data: dummyData
+    };
   }
-
   render() {
     return (
-      <div className="App">
+      <>
         <SearchBar />
-        <PostContainer />
-        <CommentSection />
-      </div>
+        {this.state.data.map(post => {
+          return (
+            <PostContainer
+              thumbnail={post.thumbnailUrl}
+              username={post.username}
+              imageUrl={post.imageUrl}
+              likes={post.likes}
+              time={post.timestamp}
+              data={this.state.data}
+              comments={this.state.data.comments}
+            />
+          );
+        })}
+      </>
     );
   }
 }

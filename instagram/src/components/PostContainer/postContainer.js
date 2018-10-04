@@ -1,10 +1,20 @@
-import React from 'react';
-import './postcontainer.css';
+import React, { Component } from "react";
+import "./postcontainer.css";
+import Post from "../Post/Post.js";
 
-const PostContainer = (props) => {
-    return (
-        <div>Post Section Placeholder</div>
-    );
-};
-
-export default PostContainer;
+class PostContainer extends Component {
+    render() {
+      return (
+        <div>
+          <Post
+            thumbnail={this.props.thumbnail}
+            username={this.props.username}
+            imageUrl={this.props.imageUrl}
+            likes={this.props.likes}
+          />
+        </div>
+      );
+    }
+  }
+  
+  export default PostContainer;
