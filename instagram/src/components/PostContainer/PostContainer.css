@@ -1,4 +1,6 @@
 .post-content {
+    border: 1px solid lightgrey;
+    border-radius: 3px;
     width: 100%;
     margin: 0 auto;
     margin-top: 50px;
@@ -15,6 +17,10 @@
     margin: 10px 2%;
 }
 
+.username {
+    font-weight: bold;
+}
+
 .action-buttons {
     display: flex;
 }
@@ -27,4 +33,19 @@
     display: flex;
     margin: 0 2%;
     font-weight: bold;
+}
+
+.add-comment {
+    border-top: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    margin: 0 2%;
+}
+
+.comment-input {
+    border: grey;
+    width: 100%;
+    text-align: left;
 }

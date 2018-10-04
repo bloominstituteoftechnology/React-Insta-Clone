@@ -7,7 +7,7 @@ const Post = (props) => {
         <div className='post-content'>
             <div className='header'>
                 <img src={props.postData.thumbnailUrl} alt='thumbnail' />
-                <div>{props.postData.username}</div>
+                <div className='username'>{props.postData.username}</div>
             </div>
             <img src={props.postData.imageUrl} alt='post content' />
             <div className='action-buttons'>
@@ -16,6 +16,10 @@ const Post = (props) => {
             </div>
             <div className='likes'>{props.postData.likes} likes</div>
             <CommentSection comments={props.postData.comments} />
+            <div className='add-comment'>
+                <input className='comment-input' placeholder='Add a comment...' />
+                <i className="fas fa-ellipsis-h"></i>
+            </div>
         </div>
     )
 }
