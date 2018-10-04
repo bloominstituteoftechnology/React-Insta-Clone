@@ -1,0 +1,21 @@
+.searchBar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	height: 35px;
+}
+
+.left-items {
+	align-items: center;
+	display: flex;
+	width: 50%;
+}
+
+.vertical {
+	margin: 10px 2% 10px 2%;
+	border-left: 1px solid black;
+	height: 35px;
+}
