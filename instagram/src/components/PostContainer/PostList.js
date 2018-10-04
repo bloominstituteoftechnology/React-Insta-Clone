@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Post from './Post';
 import Likes from './Likes';
-import Comments from '../CommentSection/CommentList';
+import CommentList from '../CommentSection/CommentList';
 
-export default (props) => {
+const PostList = props => {
   return (
     <div>
       {props.data.map((post) => {
@@ -11,7 +12,7 @@ export default (props) => {
           <div>
             <Post userData={post}/>
             <Likes likes={post.likes}/>
-            <Comments comments={post.comments}/>
+            <CommentList comments={post.comments}/>
             <p>{post.timestamp}</p>
             <input type='text' placeholder='Add a comment...' />
           </div>
@@ -19,3 +20,8 @@ export default (props) => {
     </div>
   )
 }
+
+PostList.propTypes = {
+ timestamp: PropTypes.string, 
+}
+export default PostList;
