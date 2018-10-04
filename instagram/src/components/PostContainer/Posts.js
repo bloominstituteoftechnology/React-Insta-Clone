@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from"prop-types";
 import Comments from "../CommentSection/Comments";
+import heartOutline from"../../images/heartOutline.png";
+import comment from"../../images/comment.png";
 import'./Post.css';
 
 class Posts extends Component {
@@ -9,23 +11,29 @@ class Posts extends Component {
     console.log(this.props)
     return (  
       <div className="container">
-        <div className="post-container">
+        <div class="post-lists">
           {this.props.posts.map(post => {
               return[
+                <div className="post-container">,
                 <div className="post-header">
-                  <img src={post.thumbnailUrl} alt="thumbnail"/>
+                  <img  className ="round" src={post.thumbnailUrl} alt="thumbnail"/>
                   <h3>{post.username}</h3>
-                </div>,
+                </div>
                 <div className="post-body">
                   <img src={post.imageUrl} alt="post"/>
-                </div>,
-                <p>{post.likes}</p>,
+                </div>
+                <div className="post-icon">
+                  <img src={heartOutline} alt="heart"/>
+                  <img src={comment} alt="comment"/>
+                </div>
+                <p className="likes">{post.likes} likes</p>
                 <>
-                  <Comments comments={post.comments}/>
-                </> 
+                  <Comments comments={post.comments} />
+                </>
+                </div>
               ] 
             })}
-          </div>
+        </div>
       </div>
     );
   }

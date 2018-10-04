@@ -1,0 +1,26 @@
+.comment{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:flex-start;
+  width:100%;
+}
+
+.comment p{
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  font-family: Helvetica,Arial, sans-serif;
+  margin-top:3px;
+  margin-left:10px;
+}
+
+.comment p span{
+  font-size: 1.4rem;
+  font-weight: normal;
+  color:rgba(0,0,0,.0,5);
+  letter-spacing: 1px;
+  font-family: Helvetica,Arial, sans-serif;
+  margin-left:10px;
+}
