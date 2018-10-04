@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <PostContainer comments={this.state}/>
+        <PostContainer posts={this.state}/>
       </>
     );
   }
