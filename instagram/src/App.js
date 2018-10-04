@@ -13,7 +13,19 @@ class App extends React.Component {
 
     this.state = {
 
+      text: '',
+
     }
+  }
+
+  // todo: add buttons, synthetic click for search
+
+  inputText = (event) => {
+    this.setState({
+      text: event.target.value
+      // prope
+    })
+
   }
   render(){
     return(
@@ -24,7 +36,9 @@ class App extends React.Component {
         <div key={item.timestamp} > {item.username}</div>
         
         )}
-      <SearchBar dummyData={dummyData} />
+      <SearchBar inputText={this.inputText} dummyData={dummyData} text={this.state.text} />
+
+      {/* check to see if these props are being passed, use console. */}
 
  
 
@@ -34,6 +48,7 @@ class App extends React.Component {
     )
   }
 }
+
 
 
 // class App extends React.Component {
