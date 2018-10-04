@@ -1,0 +1,30 @@
+.post-content {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    border-radius: 50%;
+    width: 5%;
+    margin: 10px 2%;
+}
+
+.action-buttons {
+    display: flex;
+}
+
+.action-buttons i {
+    margin: 10px 2%;
+}
+
+.likes {
+    display: flex;
+    margin: 0 2%;
+    font-weight: bold;
+}
