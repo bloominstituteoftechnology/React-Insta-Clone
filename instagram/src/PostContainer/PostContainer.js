@@ -2,15 +2,13 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = (props) => {
-    render () {
         return (
-            <>
+            <div>
             Name
             Photo
             <CommentSection />
-            </>
+            </div>
         )
-    }
 }
 
 export default PostContainer;

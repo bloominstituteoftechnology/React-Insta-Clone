@@ -1,0 +1,29 @@
+
+.icon {
+    height: 5vh;
+    width: auto;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    border: 1px solid green;
+}
+
+.grey {
+    color: lightgrey;
+    font-size: 25px;
+}
+
+.search {
+    height: 4vh;
+    width: auto;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
