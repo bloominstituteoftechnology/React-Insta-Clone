@@ -1,5 +1,6 @@
+
 .search-container {
-    margin-top: 30px;
+    margin-top: 40px;
     width: 100%;
     margin-bottom: 40px;
 }
@@ -10,21 +11,21 @@
     align-items: flex-end;
 }
 
-img {
-    display: flex;
+.img-clone {
     width: 25px;
     height: 25px;
 }
 
 h1 {
-    font-family: "Charmonman";
-    font-weight: bold;
-    font-size: 30px;
-    margin-right: 20px;
+
+   font-family: 'Siry';
+ line-height: 100%;
+    font-size: 25px;
+    margin-right: 70px;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 30px;
     margin: 0px 10px;
 }
 
@@ -35,7 +36,7 @@ h2 {
 .heart,
 .user {
     margin-right: 15px;
-    font-size: 25px;
+    font-size: 15px;
     color: gray;
 }
 
@@ -43,7 +44,7 @@ input {
     position: relative;
     border: 1px solid transparent;
     height: 30px;
-    padding: 1px 10px 1px 15px;
+    padding: 1px 5px 1px 15px;
     text-align: center;
     font-size:15px;
     background-color:whitesmoke;

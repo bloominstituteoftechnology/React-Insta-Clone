@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -137,6 +137,14 @@ table {
 
 
 /* My code below - Stefan */
+
+@font-face {
+    font-family: 'Siry';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Siry'),
+        url('./fonts/Siry.otf') format('opentype');
+}
 
 body {
     margin: 0 auto;

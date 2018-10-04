@@ -14,8 +14,8 @@ const SearchBar = () => {
     return (
         <div className="search-container">
             <div className= "search-content">
-            <img className="img insta-clone"src={instacloneimg} alt="insta-clone" /><h2>|</h2>
-            <h1>Instaclone</h1>
+            <img className="img-clone"src={instacloneimg} alt="insta-clone" /><h2>|</h2>
+            <h1>Instagram</h1>
                 <form>
                  <FontAwesomeIcon className="search" icon="search" />
                  <input type='search' placeholder='Search'></input>

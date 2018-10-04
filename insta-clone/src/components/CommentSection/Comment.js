@@ -1,14 +1,16 @@
 import React from 'react'
+import './CommentSection.css'
 
 
 const Comment = props => {
 
     return (
         <div className="section comment">
-        {props.user} {''}
-        {props.comments}
+            <span className='post-user'>{props.user}</span> {''}
+            <span className='post-comments'>{props.comments}</span>
         </div>
-        
+
+
     )
 }
 
