@@ -1,0 +1,46 @@
+.SearchBar {
+  display: flex;
+  margin: 0 auto;
+  padding: 10px 2%;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #E6E6E6;
+  position: fixed;
+  top: 0;
+}
+
+.left-corner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 160px;
+}
+
+.logo {
+  height: 35px;
+}
+
+div.vertical-line {
+  width: 1px; 
+  background-color: black; 
+  height: 100%; 
+  height: 30px;
+}
+
+input {
+  height: 25px;
+  width: 200px;
+  text-align: center;
+}
+
+.right-corner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+}
+
+
+
