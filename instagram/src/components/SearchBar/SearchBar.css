@@ -1,0 +1,53 @@
+.searchBar{
+    width: 968px;
+    margin: 38px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 45px;
+}
+
+.search{
+    height: 24px;
+    width: 210px;
+    margin-left: -25px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.searchLogo{
+    display: flex;
+    /* justify-content: space-between; */
+    /* width: 30%; */
+}
+
+.separator    {
+    font-size: 24px;
+    padding: 0 18px;
+}
+
+.fa-instagram{
+    /* transform: scale(2.2, 2.2); */
+    /* margin-top: 20px; */
+}
+
+.fa-search{
+    position: absolute;
+    margin-left: -147px;
+    margin-top: 7px;
+    transform: scale(.6, .6);
+}
+
+.searchBar img{
+    height: 32px;
+    /* margin-top: -190px; */
+}
+
+.searchButtons{
+    display: flex;
+    justify-content: space-around;
+    width: 16%;
+    padding-right: 30px;
+}
