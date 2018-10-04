@@ -9,7 +9,7 @@ class App extends Component {
     super();
     this.state = {
       comments:[],
-      search: '',
+      search: '🔍 Search',
     } 
   }
 
@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <SearchBar />
+      <SearchBar value={this.state.search} inputHandler={this.inputHandler} />
       </div>
     );
   }
