@@ -1,8 +1,7 @@
-
 .search-container {
     position: fixed;
-    width:100%;
-    height:46px;
+    width: 100%;
+    height: 46px;
     margin-bottom: 40px;
     background-color: white;
 }
@@ -11,7 +10,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
-margin-right:400px;
+    margin-right: 400px;
 
 }
 
@@ -22,8 +21,8 @@ margin-right:400px;
 
 h1 {
 
-   font-family: 'Siry';
- line-height: 100%;
+    font-family: 'Siry';
+    line-height: 100%;
     font-size: 25px;
     margin-right: 70px;
 }
@@ -33,13 +32,14 @@ h2 {
     margin: 0px 10px;
 }
 
-.icon-content{
+.icon-content {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin-right: 10px;
-    margin-top:20px;
+    margin-top: 20px;
 }
+
 .compass,
 .heart,
 .user {
@@ -51,29 +51,29 @@ h2 {
 
 input {
     position: relative;
-    top:3px;
+    top: 3px;
     border: 1px solid transparent;
     height: 30px;
     padding: 1px 5px 1px 15px;
     text-align: center;
-    font-size:15px;
-    background-color:whitesmoke;
+    font-size: 15px;
+    background-color: whitesmoke;
 }
 
 .search {
-    z-index:1;
-    top:3px;
+    z-index: 1;
+    top: 3px;
     text-align: center;
     position: relative;
-    font-size:10px;
-    left:70px;
+    font-size: 10px;
+    left: 70px;
     margin-bottom: 1px;
     color: gray;
 }
 
 hr {
     position: relative;
-    right:550px;
-     width:300%;
-    border:1px solid rgba(220, 220, 220, 0.5);
+    right: 550px;
+    width: 300%;
+    border: 1px solid rgba(220, 220, 220, 0.5);
 }
