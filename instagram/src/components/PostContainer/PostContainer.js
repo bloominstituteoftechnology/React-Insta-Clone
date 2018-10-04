@@ -3,7 +3,8 @@ import React from 'react';
 const PostContainer = (props) =>{
     return(
         <div>
-            {props.item}
+            {props.post.username}
+            <img src={props.post.imageUrl}/>
         </div>
     )
 }
