@@ -14,8 +14,8 @@
 }
 
 .search-bar-logo img {
-  margin-top: 10px;
   height: 80px;
+  margin-top: 10px;
 }
 
 .search-bar-input {
@@ -29,6 +29,9 @@
   font-size: 25px;
 }
 
+.search-bar-actions i {
+  margin-left: 20px;
+}
 .vertical-line {
   border-left: 1px solid black;
   height: 62px;

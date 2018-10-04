@@ -1,11 +1,11 @@
 import React from 'react';
 
-const PostContainerImg = props => {
+const PostContent = props => {
   return (
-    <div className="post-photo">
+    <div className="post-content">
       <img src={props.image} alt="postphoto" />
     </div>
   );
 }
 
-export default PostContainerImg;
+export default PostContent;

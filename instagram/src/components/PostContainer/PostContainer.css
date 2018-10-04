@@ -1,3 +1,18 @@
-.post-photo {
-  width: 100%;
+.post-container {
+  border: 1px solid #e6e6e6;
+  margin: 0 auto 20px auto;
+  width: 642px;
+}
+
+.post-header {
+  align-items: center;
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.post-header img {
+  border-radius: 50%;
+  height: 33px;
+  margin: 15px;
 }
