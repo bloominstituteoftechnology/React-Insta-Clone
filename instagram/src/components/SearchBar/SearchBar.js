@@ -1,13 +1,9 @@
 import React from 'react';
 import './SearchBar.css';
 import {
-    Collapse,
+    
     Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
+    
   } from 'reactstrap';
 
 const SearchBar = props => {
