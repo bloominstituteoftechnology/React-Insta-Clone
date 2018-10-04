@@ -1,0 +1,28 @@
+comments{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.comment-img {
+    width: 5%;
+    margin-right: 10px;
+}
+ .comment-text {
+    margin: 5px 0;
+}
+ .comment-box{
+    border-top: 2px solid lightgrey;
+    margin-top: 15px;
+}
+ .input{
+    display: inline-flex;
+    width: 94%;
+    border: none;
+    height: 35px;
+}
+.dots {
+    display: inline-flex;
+    font-size: 30px;
+    width: 5%;
+    height: 20px;
+} 
