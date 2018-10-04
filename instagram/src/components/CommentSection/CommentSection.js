@@ -8,6 +8,7 @@ const CommentSection = (props)  =>  {
                 {props.content.map(comment    =>  {
                     return <p><strong>{comment.username}</strong> {comment.text}</p>
                 })}
+                <div className="timestamp">{props.timestamp}</div>
             </div>
             <input className="commentInput" placeholder="Add a comment..."></input>
         </div>
