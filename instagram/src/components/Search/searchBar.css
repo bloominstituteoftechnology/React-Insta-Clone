@@ -8,3 +8,37 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.sbLogo {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 12%;
+}
+
+.searchBarInput {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 15%;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid rgb(182, 182, 182);
+  outline: none;
+}
+
+.sbLogo hr {
+  height: 30px;
+  width: 1px;
+}
+
+.fa-instagram {
+  font-size: 2.4rem;
+  padding: 0 1rem;
+}
+
+.fa-hooli {
+  font-size: 3.2rem;
+  padding: 0 1rem;
+}
