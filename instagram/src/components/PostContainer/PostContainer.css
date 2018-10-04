@@ -1,1 +1,8 @@
-
+.postContainer{
+    max-width: 605px;
+    width:100%;
+    border:1px solid lightgray;
+}
+.main{
+    width:100%;
+}
