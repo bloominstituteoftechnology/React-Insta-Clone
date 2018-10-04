@@ -7,6 +7,13 @@ const Post = props => {
         username={props.post.username}
         thumbnailUrl={props.post.thumbnailUrl}
       />
+      <div>
+        <img
+          className='post-img'
+          src={props.post.imageUrl}
+          alt='post img'
+        />
+      </div>
     </div>
   )
 }
