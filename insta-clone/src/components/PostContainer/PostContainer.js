@@ -19,7 +19,7 @@ const PostContainer = (props) => {
             <div className="PostContainer-main">
             <div className="PostContainer-header"><img className="PostContainer-logo" src={props.data.thumbnailUrl} alt=""></img> {props.data.username} </div>
             <img className="PostContainer-image" src={props.data.imageUrl} alt=""></img>
-            <div className="PostContainer-icons"><button className="PostContainer-icons-icon" value={props.i} onClick={click}><i className="far" class="far fa-heart fa-lg"></i></button> <button className="PostContainer-icons-icon"><i class="far fa-comment fa-lg"></i></button></div>
+            <div className="PostContainer-icons"><button className="PostContainer-icons-icon" value={props.i} onClick={click}><i className="far" class="fa fa-heart fa-lg"></i></button> <button className="PostContainer-icons-icon"><i class="fa fa-comment fa-lg"></i></button></div>
             <div className="PostContainer-comment-content">{props.data.likes} likes</div>
             <CommentSection comments={props.data.comments}/>
             <div className="PostContainer-timestamp PostContainer-comment-content">{props.data.timestamp}</div>

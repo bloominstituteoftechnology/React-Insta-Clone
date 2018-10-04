@@ -39,7 +39,7 @@
     padding-right: 3%;
     z-index: 1;
     border: none;
-    background-color: none;
+    background-color: #fff;
 }
 .PostContainer-icons-icon:focus {
     outline: none;
