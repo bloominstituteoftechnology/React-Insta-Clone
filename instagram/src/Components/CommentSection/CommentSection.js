@@ -15,7 +15,12 @@ const CommentSection = props => {
                    {comment.text}</p>  
             })}
         </div> 
-        <p className="timeStamp">{props.timestamp}</p> 
+        <p className="timeStamp">{props.timestamp}</p>
+        <hr/> 
+        <div className="pageFooter">
+          <p>Add a Comment...</p>
+          <p id="footerTab">...</p>  
+        </div> 
       </div> 
   )
 }
