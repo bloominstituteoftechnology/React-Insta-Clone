@@ -4,7 +4,7 @@ import './searchbar.css';
 const Searchbar = props => {
     return(
         <>
-            <input className={"searchbar"} type="text" placeholder="&#128269; Search"></input>
+            <input className={"searchbar"} type="text" placeholder="Search"></input>
         </>
         )
 }

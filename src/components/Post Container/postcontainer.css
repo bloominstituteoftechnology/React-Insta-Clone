@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+.postContainer  {
+    display: flex;
+    border: 1px solid grey;
+    width: 525px;
+    height: 675px;
+    margin: 25px auto;
+}
+.userInfo{
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+}
+.userNameData{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    display: flex;
+    font-size: 18px;
+    position: relative;
+    left: 90px;
+    bottom: 10px;
+    width: 150px;
+    height: 30px;
+    padding-top: 5px;
+}
