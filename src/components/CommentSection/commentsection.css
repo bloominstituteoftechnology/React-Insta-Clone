@@ -5,3 +5,22 @@
     height: 500px;
     border: 1px solid black;
 }
+
+.CommentandUsernames{
+    display: flex;
+    position: relative;
+    width: 525px;
+    height: 250px;
+    border: 1px solid red;
+}
+
+.comments{
+    font-size: 18px;
+    font-weight: 200px;
+    color: black;
+}
+.commentUsernames{
+    font-size: 24px;
+    font-weight: 600px;
+    color: black;
+}
