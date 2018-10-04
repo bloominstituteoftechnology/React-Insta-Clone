@@ -1,6 +1,8 @@
 import React from 'react';
-import CommentSection from '../CommentSection/CommentSection';
 
+import CommentSection from '../CommentSection/CommentSection';
+//import './PostContainer.css';
+import PropTypes from 'prop-types';
 
 class PostContainer extends React.Component {
     constructor(props) {
@@ -29,12 +31,24 @@ class PostContainer extends React.Component {
                         <i className="fa">&#xf0e5;</i>
                     </div>
                     <p className="custom-likes" align="left"><strong>{this.state.likes} likes</strong></p>
+                    <CommentSection dummyData={this.state.dummyData.comments} />
                 </div>            
             </div>
         )
     }
     
 }
+
+PostContainer.propTypes = {
+    comments: PropTypes.arrayOf(
+        PropTypes.shape({
+            thumnailUrl: PropTypes.string,
+            username: PropTypes.string,
+            imageURL: PropTypes.string,
+            likes: PropTypes.number
+        })
+    )
+};
 
  
 export default PostContainer;
