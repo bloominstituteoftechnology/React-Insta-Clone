@@ -20,6 +20,7 @@ const Post = (props) => {
                     input={props.input}
                     text={props.text}
                     add={props.add}
+                    time={props.post.timestamp}
                 />
             </div>
         </>

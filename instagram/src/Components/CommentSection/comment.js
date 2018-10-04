@@ -6,6 +6,7 @@ import "./comment.css";
 
 //comments component maps over the comment array and passes that data to comment component
 const Comments = (props) => {
+    console.log(props)
     return (
         <>
             <div className="images">
@@ -20,6 +21,9 @@ const Comments = (props) => {
                 </div>
                 )
             })}
+            <div className="timestamp">
+                {props.time}
+            </div>
             <CommentBox 
                 input={props.input}
                 text={props.text}

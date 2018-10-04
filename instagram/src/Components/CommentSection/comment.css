@@ -12,6 +12,10 @@
     margin: 5px 0;
 }
 
+.timestamp{
+    font-size: 11px;
+    color: grey;
+}
 .comment-box{
     border-top: 2px solid lightgrey;
     margin-top: 15px;
