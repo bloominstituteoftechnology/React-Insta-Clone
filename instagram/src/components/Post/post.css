@@ -1,0 +1,21 @@
+.postHeader {
+  border: 1px solid rgb(202, 202, 202);
+  display: flex;
+  align-items: center;
+  width: 60%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.postHeader img {
+  border-radius: 50%;
+  height: 40px;
+  padding: 5px 2%;
+}
+
+.postImage {
+  width: 60%;
+  max-width: 600px;
+  margin: 0 auto;
+}
