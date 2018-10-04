@@ -10,7 +10,7 @@ class SearchBar extends Component {
 					src={require('./images/instagram.png')}
 					alt="instagram"
 				/>
-				<h2>ColeyBearGram</h2>
+				<h2>Instagram</h2>
 				<input className="search" placeholder="Search" />
 				<div className="icons">
 					<i class="far fa-compass" />
