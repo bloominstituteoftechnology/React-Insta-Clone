@@ -18,6 +18,16 @@ class CommentSection extends Component {
 		}
 	}
 
+	addComment = newcomment => {
+		const commentAdded = this.state.comments
+		localStorage.setItem('username', 'rhcprocker')
+		const instagramUser = localStorage.getItem('username')
+		commentAdded.push({ username: instagramUser, text: newcomment })
+		this.setState({
+			comments: commentAdded
+		})
+	}
+
 	render() {
 		return (
 			<CommentSectionWrapper>
@@ -25,7 +35,7 @@ class CommentSection extends Component {
 				{this.state.comments.map(comment => (
 					<Comments comment={comment} />
 				))}
-				<Input />
+				<Input addComment={this.addComment} />
 			</CommentSectionWrapper>
 		)
 	}

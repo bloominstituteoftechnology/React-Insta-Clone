@@ -8,13 +8,17 @@ class App extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			posts: []
+			posts: [],
+			username: ''
 		}
 	}
 
 	componentDidMount() {
+		localStorage.setItem('username', JSON.stringify(this.state.username))
+		const instagramUser = localStorage.getItem('username')
 		this.setState({
-			posts: dummyData
+			posts: dummyData,
+			username: instagramUser
 		})
 	}
 

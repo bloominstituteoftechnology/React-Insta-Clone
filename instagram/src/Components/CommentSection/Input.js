@@ -12,23 +12,39 @@ const Form = styled.form`
 		border-top: 1px solid #d6d4d2;
 		font-size: 1.6rem;
 		font-weight: 500;
-		color: #dddddd;
+		color: #000;
 	}
 `
 
 class Input extends Component {
-	constructor() {
-		super()
+	constructor(props) {
+		super(props)
 		this.state = {
-			text: ''
+			input: ''
 		}
+	}
+
+	handleInput = event => {
+		event.preventDefault()
+		this.setState({
+			input: event.target.value
+		})
+	}
+
+	handleSubmit = event => {
+		event.preventDefault()
+		this.props.addComment(this.state.input)
+		this.setState({
+			input: ''
+		})
 	}
 
 	render() {
 		return (
-			<Form>
+			<Form onSubmit={this.handleSubmit}>
 				<input
-					value={this.state.text}
+					onChange={this.handleInput}
+					value={this.state.input}
 					type="text"
 					placeholder="Add a comment..."
 				/>
