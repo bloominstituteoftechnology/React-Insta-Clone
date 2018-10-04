@@ -1,0 +1,14 @@
+header {
+    display:flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+header div {
+    display:flex;
+}
+img {
+    width:50px;
+    height: 50px;
+    margin: 10px;
+}
