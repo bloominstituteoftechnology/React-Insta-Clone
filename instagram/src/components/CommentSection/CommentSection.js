@@ -10,4 +10,17 @@ const CommentSection = props => {
   )
 }
 
+const Comment = props => {
+  return (
+    <div className='comment'>
+      <div>
+        {props.comment.username}
+      </div>
+      <div>
+        <p>{props.comment.text}</p>
+      </div>
+    </div>
+  )
+}
+
 export default CommentSection;
