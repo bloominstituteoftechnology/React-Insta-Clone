@@ -53,6 +53,11 @@ html{
   background: #FAFAFA;
 }
 
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
 .container{
   display:flex;
   justify-content:row;

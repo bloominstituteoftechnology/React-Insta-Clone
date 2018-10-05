@@ -110,9 +110,9 @@
 }
 
 .timestamps{
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   letter-spacing: 2px;
   text-transform:uppercase;
-  font-family:'Helvetica Neue', sans-serif;
+  font-family:'Helvetica', sans-serif;
   font-weight: lighter;
 }

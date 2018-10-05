@@ -4,6 +4,7 @@ import instagram from"../../images/instagram.png";
 import explore from"../../images/explore.png";
 import heart from"../../images/heart.png";
 import user from"../../images/user.png";
+import search from"../../images/search.png";
 import'./Search.css';
 
 class Search extends Component {
@@ -21,6 +22,7 @@ class Search extends Component {
             </div>
           </div>
           <div className="search-bar">
+           <img src={search} alt="search"/>
            <input type="text" placeholder="search"/>
           </div>
           <div className="search-menu">
