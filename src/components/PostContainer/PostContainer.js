@@ -21,7 +21,7 @@ const PostContainer = (props) => {
             <PostHeader username={props.username} thumbnailUrl={props.thumbnailUrl} />
             <img className='postContainerImg' src={props.imageUrl} alt='' />
             <LikesContainer likes={props.likes} />
-            <CommentSection comments={props.comments} />
+            <CommentSection comments={props.comments} timestamp={props.timestamp} />
         </div>
     );
 };

@@ -5,11 +5,11 @@ import CommentSection from './components/CommentSection/CommentSection';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faUser, faCompass, faHeart, faComment } from "@fortawesome/free-regular-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import dummyData from './dummy-data';
 import './App.css';
 
-library.add(faUser, faCompass, faHeart, faInstagram, faSearch, faComment);
+library.add(faUser, faCompass, faHeart, faInstagram, faSearch, faComment, faEllipsisH);
 
 class App extends Component {
   constructor() {

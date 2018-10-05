@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './CommentSection.css';
 
 const CommentSection = (props) => {
@@ -9,18 +10,23 @@ const CommentSection = (props) => {
     //       username: "philzcoffee",
     //       text:
     // ]
+    // timestamp:
     return (
-        <div>
+        <div className='commentSection'>
             {props.comments.map( comment => {
                 return(
-                    <div>
-                    <h3>{comment.username}</h3>
-                    <p>{comment.text}</p>
+                    <div className='comment'>
+                        <b>{comment.username}</b> {comment.text}
                     </div>
                 );
             }
 
             )}
+            <div className='postedAt'>{props.timestamp}</div>
+            <div className='newComment'>
+                <input className='commentInput' placeholder='Add a comment...' />
+                <FontAwesomeIcon icon={['fas', 'ellipses-h']} />
+            </div>
         </div>
     );
 };

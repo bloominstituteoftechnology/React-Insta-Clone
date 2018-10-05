@@ -1,0 +1,35 @@
+/* CommentSection styles */
+
+.commentSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 10px;
+}
+
+.comment {
+    padding-bottom: 10px;
+}
+
+.postedAt {
+    font-size: 11px;
+    color: gray;
+}
+
+.newComment {
+    height: 40px;
+    margin-top: 10px;
+    border-top: 1px solid purple;
+    width: 780px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.commentInput {
+    width: 730px;
+    height: 25px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
