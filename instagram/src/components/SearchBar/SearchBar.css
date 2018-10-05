@@ -15,8 +15,12 @@
     width: 30%;
 }
 
-input {
-    text-align: center;
+.instagram {
+    height: 35px;
+}
+
+.instagram:hover {
+    cursor: pointer;
 }
 
 .divider {
@@ -26,12 +30,21 @@ input {
     align-items: center;
 }
 
-.instagram {
-    height: 35px;
+.fa-instagram:hover {
+    cursor: pointer;
+}
+
+input {
+    text-align: center;
+    border-radius: 3px
 }
 
 .buttons {
     width: 25%;
     display: flex;
     justify-content: space-around;
+}
+
+.buttons i:hover {
+    cursor: pointer;
 }

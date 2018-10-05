@@ -17,8 +17,20 @@
     margin: 10px 2%;
 }
 
+.header img:hover {
+    cursor: pointer;
+}
+
 .username {
     font-weight: bold;
+}
+
+.username:hover {
+    cursor: pointer;
+}
+
+.main-image {
+    width: 100%;
 }
 
 .action-buttons {
@@ -29,10 +41,21 @@
     margin: 10px 2%;
 }
 
+.action-buttons i:hover {
+    cursor: pointer;
+}
+
+
 .likes {
     display: flex;
     margin: 0 2%;
     font-weight: bold;
+}
+
+.timestamp {
+    display: flex;
+    margin: 10px 2%;
+    color: grey;
 }
 
 .add-comment {
@@ -48,4 +71,8 @@
     border: grey;
     width: 100%;
     text-align: left;
+}
+
+.fa-ellipsis-h:hover {
+    cursor: pointer;
 }
