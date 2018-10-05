@@ -15,24 +15,24 @@ class CommentSection extends Component {
 	};
 	preventDefault = event => {
 		event.preventDefault();
-  };
-  
-  clearForm = () => {
-    this.setState({
-    newComment: ''
-    })
-  }
+	};
+
+	clearForm = () => {
+		this.setState({
+			newComment: ''
+		});
+	};
 	addNewComment = event => {
-    event.preventDefault();
-    const empty = '';
+		event.preventDefault();
+		const empty = '';
 		const userName = 'Michael';
 		const nComment = { text: this.state.newComment, username: userName };
 		const commentList = this.state.comments.slice();
 		commentList.push(nComment);
 		this.setState({
 			comments: commentList
-    });
-    this.clearForm()
+		});
+		this.clearForm();
 	};
 	render() {
 		return (
@@ -51,15 +51,13 @@ class CommentSection extends Component {
 				<p className="postTime">Posted: {this.props.time}</p>
 
 				<div className="addCommentContainer">
-				
-						<input
-              onChange={this.commentInput}
-              onKeyPress={this.addNewComment}
-							type="text"
-							placeholder="Add Comment..."
-							className="addComment"
-						/>
-				
+					<input
+						onChange={this.commentInput}
+						onKeyPress={this.addNewComment}
+						type="text"
+						placeholder="Add Comment..."
+						className="addComment"
+					/>
 
 					<i class="fas fa-ellipsis-h" />
 				</div>
