@@ -3,10 +3,10 @@
 }
 
 h3 {
-    margin-left: 10px;
+    margin: 0 auto;
     color: grey;
     font-size: 12px;
-    width: 95%;
+    width: 97%;
     border-bottom: 1px solid lightgrey;
     padding-bottom: 5px;
 }
