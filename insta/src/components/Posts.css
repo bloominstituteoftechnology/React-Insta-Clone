@@ -27,7 +27,7 @@
     width: 100%;
 }
 
-input {
+.comment-input {
     border: 2px solid #ecf0f1;
     padding: 20px 0;
     width: 100%;
