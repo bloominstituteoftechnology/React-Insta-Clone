@@ -1,15 +1,19 @@
 import React from "react";
 import Comment from "../Comment/Comment";
 import "../CommentSection/CommentSection.css";
+import moment from 'moment';
 
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       comment: "",
-      comments: props.comments
+      comments: props.comments,
     };
+    
   }
+
+  // let date = moment(this.props.post.timestamp);
 
   addComment = event => {
     console.log("addComment");
@@ -33,6 +37,8 @@ class CommentSection extends React.Component {
   };
 
   render() {
+    let date = moment(this.props.post.timestamp, 'MMMM Do YYYY, hh:mm:ss a').format('YYYY-MM-DD HH:mm:ss');
+    console.log(date);
     return (
       <div className={"commentsContainer"}>
         <div className={"buttonBar"}>
@@ -60,7 +66,7 @@ class CommentSection extends React.Component {
             />
           );
         })}
-        <div className={"dateStamp"}>{this.props.post.timestamp}</div>
+        <div className={"dateStamp"}>{moment(date).fromNow()}</div>
         <form>
           <div className={"moreButton"} />
           <input
