@@ -1,4 +1,5 @@
 import React from 'react'; 
+import PropTypes from 'prop-types'
 
 const CommentSection = props => {
   return (
@@ -12,7 +13,7 @@ const CommentSection = props => {
         {props.comments.map( (comment, index) =>{
           return <p className="userComments" key={index}>
                    <span>{comment.username}</span>
-                   {comment.text}</p>  
+                 {comment.text}</p>  
         })}
       </div> 
       <p className="timeStamp">{props.timestamp}</p>
@@ -25,5 +26,13 @@ const CommentSection = props => {
   )
 }
 
-
+CommentSection.propTypes = {
+  comments: PropTypes.arrayOf(PropTypes.shape({
+    key: PropTypes.number,
+    username: PropTypes.string,
+    text: PropTypes.string, 
+     }))
+    .isRequired
+  }
+  
 export default CommentSection;

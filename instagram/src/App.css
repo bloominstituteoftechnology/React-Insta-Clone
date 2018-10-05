@@ -56,6 +56,8 @@ i{
   margin-right: 10px; 
 }
 
+/*-----move to search bar css----------------------------------*/
+
 .post-container {
   display: flex; 
   flex-wrap: wrap; 
@@ -68,7 +70,7 @@ i{
 img{
   max-width: 800px; 
 }
-
+/*-------------------move to post container css------------*/
 .App{
   width: 100%; 
   max-width: 900px; 
@@ -150,3 +152,4 @@ hr{
   letter-spacing: 2px; 
 }
 
+/*-----------------move to comment section css -----------*/
