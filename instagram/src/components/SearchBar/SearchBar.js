@@ -9,12 +9,12 @@ import {
 const SearchBar = props => {
     return (
         <Navbar>
-            <i class="fab fa-instagram"></i>
+            <i class="fab fa-instagram fa-2x"></i>
             <h1>Instagram</h1>
             <input defaultValue="Search" />
-            <i class="far fa-compass"></i>
-            <i class="far fa-heart"></i>
-            <i class="far fa-user"></i>
+            <i class="far fa-compass fa-2x lt"></i>
+            <i class="far fa-heart fa-2x lt"></i>
+            <i class="far fa-user fa-2x lt"></i>
         </Navbar>
 
     )

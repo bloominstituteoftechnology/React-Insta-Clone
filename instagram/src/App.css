@@ -30,3 +30,9 @@
     transform: rotate(360deg);
   }
 }
+
+/* My Style */
+.insta_app {
+  width: 600px;
+  margin: 0 auto;
+}

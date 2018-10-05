@@ -19,12 +19,12 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div className="insta_app">
       <SearchBar />
       <PostContainer instaData={this.state.instaData} dummyData={dummyData} />
       
       
-      </>
+      </div>
     );
   }
 }

@@ -1,3 +1,10 @@
-.search_bar {
-    
+.navbar h1 {
+    font-size: 20px;
+    font-style: italic;
+    border-left: 2px solid lightgray;
+    padding-left: 20px;
+}
+
+.lt{
+    color: lightgray;
 }

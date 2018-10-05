@@ -1,0 +1,10 @@
+.like_comment {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    padding-bottom: 10px;
+}
+
+.comments {
+    margin: 20px;
+}

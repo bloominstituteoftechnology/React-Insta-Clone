@@ -6,7 +6,7 @@ import {
    
   } from 'reactstrap';
 import CommentSection from '../CommentSection/CommentSection';
-
+import './PostContainer.css';
 
 
 
