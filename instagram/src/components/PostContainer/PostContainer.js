@@ -1,6 +1,7 @@
 import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
+import AddComment from '../AddComment/AddComment';
 
 class PostContainer extends React.Component {
 
@@ -21,7 +22,6 @@ class PostContainer extends React.Component {
                 </div>  
             </div>
             
-            <div className="comments">
             <div className="commentContainer">
                 {this.props.comments.map(comment => {
                     return (
@@ -35,7 +35,11 @@ class PostContainer extends React.Component {
                 })}
             
             </div>
+
+            <div className="addCommentContainer">
+                <AddComment />
             </div>
+            
         </div>
         )
 
