@@ -13,15 +13,30 @@ library.add(faComment, faHeart, faSearch, faEllipsisH);
 
 class CommentSection extends React.Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       comments: props.comments,
       images: props.image,
       likes: props.likes,
       text: ''
     };
-    console.log(this.state);
+
   }
+componentDidMount =() =>{
+  this.hydrateStateWithLocalStorage()
+}
+  
+  componentWillUnmount = () =>{
+    window.removeEventListener(
+      "beforeunload",
+  
+    );
+    this.saveStateToLocalStorage();
+    }
+    
+    addALike = e =>{
+      this.setState({ likes: this.state.likes + 1})
+    }
   addNewComment = e => {
     console.log(e);
     if (this.state.text) {
@@ -36,9 +51,12 @@ class CommentSection extends React.Component {
       });
       e.currentTarget.value = null;
     }
+    localStorage.setItem("text", "");
+    localStorage.setItem("username", "");
   };
-  handleChange = e => {
-    this.setState({ text: e.target.value });
+  handleChange = (key, value)=> {
+  this.setState({ [key]: value });
+  localStorage.setItem(key, value);
   };
 
   handleSubmit = e => {
@@ -48,13 +66,39 @@ class CommentSection extends React.Component {
       this.addNewComment(e);
     }
   };
+
+hydrateStateWithLocalStorage= () => {
+
+  for(let key in this.state) {
+    if(localStorage.hasOwnProperty(key)) {
+      let value = localStorage.getItem(key)
+
+      try {
+        value = ''
+        this.setState({key: value})
+      }
+      catch (e) {
+        this.setState({key: value})
+      }
+    }
+  }
+  }
+
+  saveStateToLocalStorage = () => {
+    // for every item in React state
+    for (let key in this.state) {
+      // save to localStorage
+      localStorage.setItem(key, this.state.text);
+    }
+  }
+
   render() {
     return (
       // Created comment section for each post
       <div className="comment-section">
         <img className="post-img" src={this.state.images} alt=" " />
         <div className="icons-likes">
-          <FontAwesomeIcon icon={["far", "heart"]} />{" "}
+          <FontAwesomeIcon icon={["far", "heart"]} onClick={this.addALike} />{" "}
           <FontAwesomeIcon icon={["far", "comment"]} />
         </div>
         <div className="section likes">{this.state.likes} likes</div>
@@ -76,7 +120,8 @@ class CommentSection extends React.Component {
           <FontAwesomeIcon className="more-icon" icon={["fas", "ellipsis-h"]} />
           <textarea
             className="add-comment"
-            onChange={this.handleChange}
+            value={this.state.text}
+            onChange={e=> this.handleChange("text", e.target.value)}
             onKeyDown={this.handleSubmit}
             placeholder="Add comment..."
           />
