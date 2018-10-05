@@ -1,32 +1,29 @@
-
-
-.commentcontainer{
-    display: flex;
-    width: 100%;
-    align-items: center;
+.commentcontainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
 }
 
-.comments{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 1.5rem;
-    
-    
-    width: 100%;
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.5rem;
+
+  width: 100%;
 }
 
 input {
-    width: 95%;
-    border: none;
-    height: 50px;
+  width: 95%;
+  border: none;
+  height: 50px;
 }
 
 .commentusername {
-    font-weight: bold;
-    margin-right: 5px;
+  font-weight: bold;
+  margin-right: 5px;
 }
 
-.comment{
-    display: flex;
+.comment {
+  display: flex;
 }
