@@ -4,7 +4,7 @@ import "../../App.css"
 const Comment = props => {
     return (
        <div className="commentUser">
-       {props.user} {props.comments}
+      <div className="user"> {props.user}</div> <div className="comment">{props.comments}</div><a className='button' id='commentIcon'></a>
         
               </div>
 
