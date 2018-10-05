@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 
@@ -15,8 +16,9 @@ const PostContainer = (props) => {
     // comments: []
           
     return (
-        <div><h1>{props.username}</h1>
-        <CommentSection comments={props.comments} />
+        <div className='postContainer'>
+            <PostHeader username={props.username} thumbnailUrl={props.thumbnailUrl} />
+            <CommentSection comments={props.comments} />
         </div>
     );
 };
@@ -36,5 +38,5 @@ PostContainer.defaultProps = {
     likes: 0,
 //    timestamp: Date.now()
   };
-  
+
 export default PostContainer;
