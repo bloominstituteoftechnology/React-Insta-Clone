@@ -35,9 +35,9 @@ class SearchBar extends React.Component {
         <Navbar color="#E1E4E8" light expand="md">
         <div className={'logo'}><i class="fab fa-instagram"></i></div>
           <NavbarBrand href="/" className={'title'}>Instagram</NavbarBrand>
-          <Container>
+         <div className={'searchfield'}>
     <input className={'search'} type="text" placeholder='&#xf002; Search'/>
-    </Container>
+    </div>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>

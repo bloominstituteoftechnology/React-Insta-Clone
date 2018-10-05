@@ -6,24 +6,53 @@
     align-items: flex-start;
     border: 1px solid gray;
     font-size: 1.5rem;
+    margin: 20px 0 20px 0;
+    
+
 }
+
+.maincontainer.container{
+    max-width: 880px;
+    width: 90%;
+}
+
+.posticons {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.likes{
+    font-weight: bold;
+    
+}
+
+.timeposted{
+    font-size: 1.2rem;
+    margin: 5px 0 5px 0;
+    color: #A9A49C;
+}
+
 
 img {
     width: 100%;
 }
 
 .posttitle{
+    display: flex;
     font-size: 1.5rem;
+    height: 50px;
+    align-items: center;
 }
 
 .avatar {
     border-radius: 50%;
     width: 3rem;
+    margin-right: 5px;
 }
 
 .user{
     display: flex;
-    height: 50px;
+
     
     align-items: center;
 }

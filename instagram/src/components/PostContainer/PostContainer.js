@@ -15,12 +15,27 @@ const PostContainer = (props) =>{
             
             <Container className={'maincontainer'}>
             <div className={'user'}>
-                <h1 className={'posttitle'}><img className={'avatar'} src={props.postData.thumbnailUrl}/> {props.postData.username}</h1>
+                <h1 className={'posttitle'}><img className={'avatar'} src={props.postData.thumbnailUrl}/>  {props.postData.username}</h1>
                 </div>
-                <img src={props.postData.imageUrl}/>
                 
+                <img src={props.postData.imageUrl}/>
+                <div className ={'posticons'}>
+                <i class="far fa-heart"></i> <i class="far fa-comment"></i>
+                </div>
+                <div className={'likes'}>
+                {props.postData.likes} likes
+                </div>
+
                 
                 <CommentSection comments={props.postData.comments}/>
+                <div className={'timeposted'}>
+                {props.postData.timestamp}
+                </div>
+                <div className={'commentcontainer'}>
+            <input className={'commenttext'} type="text" placeholder='Add a comment...'/>
+            <i class="fas fa-ellipsis-h"></i>
+            </div>
+
             </Container>
                 
         )

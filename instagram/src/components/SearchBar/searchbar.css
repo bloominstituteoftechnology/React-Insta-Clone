@@ -12,16 +12,24 @@
     background-color: #FAFAFA;
 }
 
-
+.searchfield {
+    display: flex;
+    width: 100%;
+    align-self: center;
+    
+    
+}
 input.search{
     display: flex;
     text-align: center;
     height: 2.5rem;
-    width: 15rem;
+    width: 100%;
+    max-width: 25%;
     
     
 }
 
-Navbar{
-    height: 100px;
+.navbar{
+    height: 50px;
+    font-size: 2rem;
 }
