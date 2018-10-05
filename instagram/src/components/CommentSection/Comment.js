@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const CommentText = styled.div`
     display: flex;
@@ -27,6 +28,13 @@ const Comment = props => {
             <CommentTextInputted>{props.comment.text}</CommentTextInputted>
         </CommentText>
     );
+}
+
+Comment.propTypes = {
+    comment: PropTypes.shape({
+        text: PropTypes.string,
+        username: PropTypes.string,
+    })
 }
 
 export default Comment;

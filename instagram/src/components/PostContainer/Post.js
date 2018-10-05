@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
@@ -44,5 +45,13 @@ const Post = props => {
         </PostBorder>
     );
 }
+
+Post.propTypes = {
+    post: PropTypes.shape({
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        imageURL: PropTypes.string,
+    })
+};
 
 export default Post;
