@@ -6,6 +6,7 @@ import PostComments from '../PostComments/PostComments';
 import PostActions from '../PostBody/PostActions';
 import PostLikes from '../PostBody/PostLikes';
 import PostCommentForm from '../PostComments/PostCommentForm';
+import PostTimeStamps from '../PostBody/PostTimeStamps';
 
 const Post = props => {
     return(
@@ -17,7 +18,8 @@ const Post = props => {
                     <PostUser usernames={data} usericons={data} />
                     <PostImg postimg={data} />
                     <PostActions />
-                    <PostLikes postlikes={data}/>
+                    <PostLikes postlikes={data}/>   
+                  
                 </>
 
                 <>
@@ -29,7 +31,8 @@ const Post = props => {
                         </>
                     )
                     })}
-                  <PostCommentForm />      
+                    <PostTimeStamps posttime={data} />
+                    <PostCommentForm />      
                 </>
         </div>
 

@@ -16,6 +16,7 @@
     border: 1px solid transparent;
     border-radius: 100%;
     margin: 2px 10px;
+    cursor: pointer;
 }
 .postUser h2 {
     font-family: 'Source Sans Pro', sans-serif;
@@ -77,6 +78,13 @@
     font-weight: 650;
     margin-right: 10px;
     margin-left: 5px;
+    cursor: pointer;
+}
+.postTimeStamp{
+    position: relative;
+    right: 235px;
+    font-size: 12px;
+    color: darkgrey;
 }
 .commentInputForm{
     position: relative;
