@@ -1,0 +1,29 @@
+.post-container {
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #E6E6E6;
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.thumbnail {
+    height: 40px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.username, .likes {
+    font-weight: bold;
+}
+
+.post-options {
+    padding: 20px;
+}
+
+.far.fa-heart.fa-2x.post {
+    margin-right: 20px;
+}
