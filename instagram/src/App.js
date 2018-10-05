@@ -14,7 +14,9 @@ class App extends Component {
 			<div className="main-container">
 				<div className="App">
 					<SearchBar /> <br/>
-					<PostContainer data={this.state.data} /> <br/>
+						<div className='positioning-container'>
+							<PostContainer data={this.state.data} /> <br/>
+						</div>
 				</div>
 			</div>
 		);

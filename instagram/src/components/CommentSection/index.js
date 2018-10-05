@@ -1,6 +1,6 @@
 import React from 'react';
-// import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import './index.css';
 
 
 const CommentSection = props => {
@@ -16,6 +16,8 @@ const CommentSection = props => {
 			</div>
 
 			<div className='user-comment-section'>
+				{/* <span className='username'>{props.comment.username}</span>
+				<span>{props.comment.text}</span> */}
 			Username CommentSection
 			</div>
 
@@ -36,29 +38,3 @@ const CommentSection = props => {
 // }
 
 export default CommentSection;
-
-// class CommentSection extends Component {
-// 	render() {
-// 		return (
-// 			<div className='comment-section'>
-// 				<header>
-// 					Heart Icon  Speech Bubble
-// 				</header>
-// 				<div className='likes'>
-// 					x likes
-// 				</div>
-// 				<div className='user-comment-section'>
-// 				Username CommentSection
-// 				</div>
-// 				<div className='post-time'>
-// 					x time ago
-// 				</div>
-// 				<div className='comment-bar'>
-// 					Form box 3 dots
-// 				</div>
-// 			</div>
-// 		);
-// 	}
-// }
-
-// export default CommentSection;
