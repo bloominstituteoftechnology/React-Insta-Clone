@@ -11,9 +11,11 @@ class App extends Component {
     super();
     this.state = {
       dummyData: this.dummyData,
-      currentCard: null,
+      currentDummy: null,
+      newDummy: null,
       nextCard: null,
-      prevCard: null
+      prevCard: null,
+     
     };
   
   }
@@ -23,29 +25,48 @@ class App extends Component {
   }
 
   getDummyData() {
-    dummyData.map(dummyData => ({
-      username: `${dummyData.username}`,
+    dummyData.map((item,index) => ({
+      name: `${dummyData[index].username}`,
       email: `${dummyData.email}`,
       thumbnailUrl: `${dummyData.thumbnailUrl}`,
       imageUrl: `${dummyData.imageUrl}`,
       likes: `${dummyData.likes}`,
       timestamp: `${dummyData.timestamp}`,
-      commentUserName: `${dummyData.comments.username},`,
-      commentText: `${dummyData.comments.text},`
-    }))
+     
+    
+    })
+   
+  )
     this.setState({
       dummyData })
+     
+      const newDummy = dummyData[0].timestamp
+      console.log(newDummy)
+    
+dummyData.map((Chars,index) => ({
 
-      console.log("here is the dummy: " + dummyData)
+}))
+
+      this.setState({ newDummy: newDummy});
+      console.log(this.currentDummy)
+     // dummyData.forEach(showCurrentChar);
   }
   
     
-  
+  /* {props.comments.map((comment, index) => {
+    return <Comment user={comment.username} comments={comment.text} key={index} />;
+  })} */
+ 
   render() {
-    return (
+      return (
+  
       <div className="App">
         <div className="searchBar"><SearchBar /></div>
-        <div className="postContainer">PostContainer<PostContainer /></div>
+        <div className="postContainer">{dummyData.map((chars,index) => {
+         return <PostContainer key={index} char={chars.username} name={chars.name} thumb={chars.thumbnailUrl} time={chars.timestamp}
+         likes={chars.likes} image={chars.imageUrl} />
+        })}
+       </div>
                
       </div>
     );

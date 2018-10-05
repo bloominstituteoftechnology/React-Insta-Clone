@@ -35,7 +35,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 2px solid blue;
+   /*  border: 2px solid blue; */
     height: 64px;
     width: 100%;
     padding-top: 10px;
@@ -44,7 +44,7 @@
 .postContainer {
     display: flex;
     flex-direction: column;
-    border: 2px solid green;
+    border: 1px solid gray; 
 }
 
 .App {
@@ -60,7 +60,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    /* border: 2px solid green; */
+    /*  border: 2px solid green;  */
     width: 150px;
 }
 
@@ -108,6 +108,7 @@
     background-image: url('./icons/icon4.png');
     width: 35px;
     height: 38px;
+    margin-left: 10px;
 }
 
 .cameraIcon:hover {
@@ -115,7 +116,7 @@
 }
 
 .header {
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
 display: flex;
 flex-direction: row;
 height: 64px;
@@ -123,19 +124,31 @@ height: 64px;
        
 .thumbNail {
 background-image: url('./icons/icon1.png');
+background: no-repeat;
 width: 50px;
 height: 50px;
+border-radius: 50%;
+margin-top: 5px;
+margin-right: 5px;
+/* border: 2px solid red; */
 }
 
 .userName {
-
+    display: block;
+    height: 40px;
+    padding-top: 20px;
+    font-family: arial;
+    font-weight: bold;
+    
+    /* border: 2px solid green; */
 }
 
 .image {
   display: flex;
   width: 100%;
-height: 200px;
+
 background-image: url('./icons/Yoda.jpg');
+background: no-repeat;
   border: 2px solid gray;
 
 }
@@ -144,32 +157,48 @@ background-image: url('./icons/Yoda.jpg');
   display: flex;
   flex-direction: row;
   height: 35px;
-  border: 2px solid purple;
+ /*  border: 2px solid purple; */
 }
   
 .postIcon1 {
-
+background: no-repeat;
+background-image: url('./icons/icon2.png');
+width: 30px;
+height: 30px;
+margin-right: 10px;
+margin-left: 20px;
 }
 
 .postIcon2 {
-
+    background-image: url('./icons/icon2.png');
+    width: 30px;
+    height: 30px;
 }
 
 .commentContainer {
   display: flex;
   flex-direction: column;
   height: 60px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .timeStamp {
-
+    margin-right: auto;
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
 } 
+
+.likes {
+    margin-right: auto;
+    margin-left: 20px;
+}
 
 .addCommentContainer {
   display: flex;
   flex-direction: row;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
 }
 
 .addComment {
