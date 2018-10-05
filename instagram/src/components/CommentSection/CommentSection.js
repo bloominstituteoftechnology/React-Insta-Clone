@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
+import AddComment from './AddComment';
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './comment.css';
@@ -21,6 +22,10 @@ class CommentSection extends Component {
         })
     }
 
+    addNewComment = (event, index) => {
+        event.preventDefault();
+    }
+
     render () {
         return (
             <section className="comment-container">
@@ -38,8 +43,7 @@ class CommentSection extends Component {
                     ))}
                 </section>
                 <section className="add-comment">
-                    <input placeholder=" Add a comment..."/>
-                    <FontAwesomeIcon icon='ellipsis-h'/>
+                    <AddComment value={this.props.commentInput} onSubmit={this.props.onSubmit} onChange={this.props.onChange} />
                 </section>
             </section>
         )
