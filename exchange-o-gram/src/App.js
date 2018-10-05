@@ -18,18 +18,35 @@ class App extends Component {
     });
   }
 
-  addNewComment(comment, index){
-    console.log("Add comment: ", comment);
+  addNewComment = (comment, index)=>{
+    const data = this.state.posts;
+    // Add hard coded user
+    const commentObj = {
+      username: "soda_popinski",
+      text: comment
+    }
+    data[index].comments.push(commentObj);
+    this.setState({
+      posts: data
+    });
+  }
+
+  addLike = (index)=>{
+    const data = this.state.posts;
+    data[index].likes++;
+    this.setState({
+      posts: data
+    })
   }
 
   render() {
     return (
       <div className="App">
         <SearchBar/>
-        {this.state.posts.map((post)=>{
+        {this.state.posts.map((post, index)=>{
           return(
             <div key={post.timestamp} className="containers">
-              <PostContainer post={post} addNewComment={this.addNewComment}/>
+              <PostContainer index={index} post={post} addLike={this.addLike} addNewComment={this.addNewComment}/>
             </div>
           )
         })}

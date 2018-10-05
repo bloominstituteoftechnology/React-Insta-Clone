@@ -29,12 +29,17 @@ p.time-stamp{
     margin-bottom: 8px;
 }
 
+.add-comment-form{
+    width: 100%;
+    border-top: 1px solid #e7e7e7;
+}
+
 .add-comment{
     border: none;
     height: 50px;
     font-size: 1.8rem;
     font-weight: bold;
-    border-top: 1px solid #e7e7e7;
+    outline: none;
 }
 
 .comments{

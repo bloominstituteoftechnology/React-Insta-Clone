@@ -7,7 +7,7 @@ class PostContainer extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            comments: this.props.post.comments
+            comments: props.post.comments
         }
     }
 
@@ -19,7 +19,7 @@ class PostContainer extends React.Component{
                     <p>{this.props.post.username}</p>
                 </div>
                 <img src={this.props.post.imageUrl} alt={`${this.props.post.username} Post`}></img>
-                <CommentSection comments={this.state.comments} addNewComment={this.props.addNewComment}/>
+                <CommentSection index={this.props.index} likes={this.props.post.likes} comments={this.state.comments} addLike={this.props.addLike} addNewComment={this.props.addNewComment}/>
             </div>
         )
     }
