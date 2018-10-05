@@ -28,14 +28,9 @@ class SearchBar extends React.Component{
             <div className="search-bar">
                 <div className="icon-cam"><i className="fas fa-camera-retro fa-3x"></i></div>
                 <div className="name"><span className="app-name">Exchange-O-Gram</span></div>
-                <div className="search-con">
-                    <span className="input-icon">
-                        {this.state.searchText === '' ? <i className="fas fa-search fa-lg"></i> : <i className="fas fa-search fa-lg hide-icon"></i>}
-                    </span>
                     <form onSubmit={this.searchPosts}>
-                        <input className="search-input" onChange={this.storeSearchText} placeholder="Search" value={this.state.searchText}></input>
+                        <input className="search-input" onChange={this.storeSearchText} placeholder={'\ud83d\udd0d Search'} value={this.state.searchText}></input>
                     </form>
-                </div>
                 <div className="icons"><i className="far fa-compass fa-2x"></i><i className="far fa-heart fa-2x"></i><i className="far fa-user fa-2x"></i></div>
             </div>
         )
