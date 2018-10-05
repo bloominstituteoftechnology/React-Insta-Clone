@@ -1,0 +1,37 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 450px;
+  margin-bottom: 20px;
+  border: 1px solid lightgrey;
+}
+
+.post .postTitle {
+  display: flex;
+  align-items: center;
+}
+
+.post .postTitle img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.post .postImage {
+  width: 100%;
+}
+
+.post .postIcons {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.post .postIcons i {
+  margin-left: 10px;
+}
+
+.post .likes {
+  margin: 0 0 5px 10px;
+}
