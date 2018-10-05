@@ -10,6 +10,8 @@
     height:50px;
 }
 .add-commment{
-    width:85%;
+    width:100%;
+    height:50px;
+    background-color:red;
    
 }

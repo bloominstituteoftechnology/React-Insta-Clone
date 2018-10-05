@@ -8,7 +8,9 @@ const CommentSection = (props) =>{
         <div className = "comment-section">
             {props.comments.map(comment =>{
                 return(
-                    <Comment key = {comment.key} username = {comment.username} text = {comment.text} />
+                    <div >
+                        <Comment username = {comment.username} text = {comment.text} />
+                    </div> 
                 )
             })}
             <div className = "add-comment-section">
