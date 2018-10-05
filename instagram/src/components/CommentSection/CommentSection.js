@@ -3,6 +3,7 @@ import Comment from './Comment';
 import CommentActions from './CommentActions';
 import CommentLikes from './CommentLikes';
 import './CommentSection.css';
+import PropTypes from 'prop-types';
 
 const CommentSection = props => {
   return (
@@ -14,6 +15,16 @@ const CommentSection = props => {
       )}
     </div>
   );
+}
+
+CommentSection.propTypes = {
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string.isRequired,
+      text: PropTypes.isRequired,
+    })
+  ).isRequired,
+  likes: PropTypes.number.isRequired,
 }
 
 export default CommentSection;

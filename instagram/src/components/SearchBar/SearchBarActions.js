@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBarActions = props => {
+const SearchBarActions = () => {
   return (
     <div className="search-bar-actions">
       <i className="far fa-compass" />

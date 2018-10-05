@@ -1,7 +1,7 @@
 import React from 'react';
 import instaLogo from './Instagram_logo.png';
 
-const SearchBarLogo = props => {
+const SearchBarLogo = () => {
   return (
     <div className="search-bar-logo">
       <i className="fab fa-instagram" />

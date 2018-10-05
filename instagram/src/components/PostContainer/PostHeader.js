@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const PostHeader = props => {
   return (
@@ -7,6 +8,11 @@ const PostHeader = props => {
       {props.username}
     </div>
   );
+}
+
+PostHeader.propTypes = {
+  username: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string.isRequired,
 }
 
 export default PostHeader;

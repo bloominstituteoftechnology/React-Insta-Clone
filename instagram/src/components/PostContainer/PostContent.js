@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const PostContent = props => {
   return (
@@ -6,6 +7,10 @@ const PostContent = props => {
       <img src={props.image} alt="postphoto" />
     </div>
   );
+}
+
+PostContent.propTypes = {
+  image: PropTypes.string.isRequired,
 }
 
 export default PostContent;

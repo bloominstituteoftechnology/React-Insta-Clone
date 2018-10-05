@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBarInput = props => {
+const SearchBarInput = () => {
   return (
     <div className="search-bar-input">
       <i className="fas fa-search" />

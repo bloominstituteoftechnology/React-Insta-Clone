@@ -4,7 +4,7 @@ import SearchBarInput from './SearchBarInput';
 import SearchBarActions from './SearchBarActions';
 import './SearchBar.css'
 
-const SearchBar = props => {
+const SearchBar = () => {
   return (
     <div className="search-bar-container">
       <SearchBarLogo />
