@@ -59,7 +59,7 @@ class CommentSection extends Component {
 						className="addComment"
 					/>
 
-					<i class="fas fa-ellipsis-h" />
+					<i className="fas fa-ellipsis-h" />
 				</div>
 			</div>
 		);

@@ -7,7 +7,7 @@ class PostContainer extends Component {
 	render() {
 		return this.props.appData.map(post => {
 			return (
-				<div key={post.username}>
+				<div key={Math.random()}>
 					<div className="postContainer">
 						<PostHeader
 							profileImage={post.thumbnailUrl}
@@ -19,7 +19,7 @@ class PostContainer extends Component {
 							alt={post.username + 'image'}
 						/>
             <CommentSection
-              key={post.username}
+              
 							likes={post.likes}
 							comment={post.comments}
 							time={post.timestamp}
