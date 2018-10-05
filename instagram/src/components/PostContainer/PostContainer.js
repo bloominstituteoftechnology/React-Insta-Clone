@@ -13,12 +13,12 @@ class PostContainer extends React.Component {
                     <img src={this.props.icon} /> {this.props.username}
                 </div>
 
-                <div className="postImage">
-                    <img src={this.props.image} />
+                <div>
+                    <img src={this.props.image} className="postImage"/>
                 </div>
 
                 <div className="likes">
-                    {this.props.likes}
+                    {this.props.likes} Likes
                 </div>  
             </div>
             

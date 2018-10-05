@@ -1,8 +1,6 @@
 .comment {
-    font-size: 20px;
-    width: 630px;
-    /* padding: 0 15px; */
-    margin: 15px 0;
+    font-size: 16px;
+    margin: 5px 0;
 }
 
 .commentUser {

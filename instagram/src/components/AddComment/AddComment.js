@@ -9,8 +9,8 @@ class AddComments extends React.Component {
 
     render() {
         return (
-            <div type="input" placeholder="type here">
-                
+            <div>
+                <input type="input" placeholder="Add Comment" className="commentInput"></input>
             </div>
         )
     }
