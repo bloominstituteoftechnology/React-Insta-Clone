@@ -1,12 +1,14 @@
 import React from 'react';
 // import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
 
 
 const CommentSection = props => {
     return (
 		<div className='comment-section'>
 			<header>
-				Heart Icon  Speech Bubble
+			<img src='https://techflourish.com/images/instagram-icon-clipart-panda-18.jpg' alt='Heart Icon' />
+			<img src='https://static.thenounproject.com/png/10342-200.png' alt='Speech Bubble' />
 			</header>
 
 			<div className='likes'>
@@ -27,6 +29,11 @@ const CommentSection = props => {
 		</div>
     )
 }
+
+// CommentSection.propTypes = {
+// 	username: PropTypes.string,
+// 	text
+// }
 
 export default CommentSection;
 

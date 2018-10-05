@@ -1,6 +1,7 @@
 import React from 'react';
 // import React, { Component } from 'react';
 import './index.css';
+
 const SearchBar = props => {
     return (
 		<div className='search-bar'>
