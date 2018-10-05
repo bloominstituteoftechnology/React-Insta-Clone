@@ -31,3 +31,15 @@
   }
 } */
 
+/* .App {
+  border: 1px solid;
+} */
+.search-bar-container {
+  border: 1px solid;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}

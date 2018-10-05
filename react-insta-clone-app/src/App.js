@@ -2,11 +2,6 @@ import React from "react";
 // import logo from "./logo.svg";
 import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBar"
-import logo from "./img/Instagram-Logo.png";
-import title from "./img/Instagram-Title.png";
-import compass from "./img/compass-05.svg";
-import heart from "./img/heart-2.svg";
-import person from "./img/single-01.svg";
 
 // class App extends React.Component {
 //   render() {

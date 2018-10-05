@@ -10,13 +10,19 @@ import InputComponent from "./SearchBar-Input"
 
 export default function SearchBar(props){
     return (
-        <div className={props.displayStyle}>
-            <ImagesComponent src={logo} alt='instagram-logo' className='logo' />
-            <ImagesComponent src={title} alt='instagram-title' className='title' />
-            <InputComponent placeholder='Search' className='search-input' />
-            <ImagesComponent src={compass} alt='compass-icon' />
-            <ImagesComponent src={heart} alt='heart-icon' />
-            <ImagesComponent src={person} alt='person-icon' />
+        <div className={props.className}>
+            <div className='title-images'>
+                <ImagesComponent src={logo} alt='instagram-logo' className='logo' />
+                <ImagesComponent src={title} alt='instagram-title' className='title' />
+            </div>
+            <div>
+                <InputComponent placeholder='Search' className='search-input' />
+            </div>
+            <div className='title-icons'>
+                <ImagesComponent src={compass} alt='compass-icon' />
+                <ImagesComponent src={heart} alt='heart-icon' />
+                <ImagesComponent src={person} alt='person-icon' />
+            </div>
         </div>
     );
 }
