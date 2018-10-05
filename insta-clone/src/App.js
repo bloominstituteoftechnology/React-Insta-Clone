@@ -7,15 +7,32 @@ import SearchBar from './components/SearchBar/SearchBar';
 
 
 class App extends Component {
-  render() {
+  constructor() {
+    super()
+    this.state = {
+      data: []
+    }
+  }
+  componentDidMount() {
 
+    // setTimeout(() => {
+
+    // }, 3000)
+
+    this.setState({data: dummyData})
+  }
+
+  render() {
+    if (!this.state.data.length) {
+           return <h4>Loading Post....</h4>
+         }
     return (
       <>
         <div className="SearchBar">
           <SearchBar />
         </div>
         <div className="PostContainer">
-          <PostContainer dummyData={dummyData} />
+          <PostContainer dummyData={this.state.data} />
         </div>
      </>
     );

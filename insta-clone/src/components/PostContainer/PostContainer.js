@@ -25,6 +25,7 @@ const PostContainer = props => {
             likes={data.likes}
             image={data.imageUrl}
           />
+
         </div>
       ))}
     </div>
