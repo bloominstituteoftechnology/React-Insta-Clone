@@ -18,7 +18,8 @@ class PostContainer extends Component {
 							src={post.imageUrl}
 							alt={post.username + 'image'}
 						/>
-						<CommentSection
+            <CommentSection
+              key={post.username}
 							likes={post.likes}
 							comment={post.comments}
 							time={post.timestamp}
