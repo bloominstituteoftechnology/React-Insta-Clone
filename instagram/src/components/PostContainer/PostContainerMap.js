@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import PostContainer from './index.js';
 
 const PostContainerList = props => {
@@ -15,9 +14,5 @@ const PostContainerList = props => {
 		</div>
 	)
 }
-
-// PostContainerList.propTypes = {
-	
-// }
 
 export default PostContainerList;

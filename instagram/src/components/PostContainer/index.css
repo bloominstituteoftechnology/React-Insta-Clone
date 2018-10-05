@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    margin-bottom: 10px;
+}
+
+header img {
+    border-radius: 50%;
+    height: 40px;
+    margin-right: 25px;
+    margin-left: 10%;
+}
+
+header p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    align-self: flex-start
+}
+
+.post-container-main-img {
+    margin-bottom: 20px;
+}
+.post-container-main-img img {
+    width: 100%;
+    max-width: 1024px;
+}

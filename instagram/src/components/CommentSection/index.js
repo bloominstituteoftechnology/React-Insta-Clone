@@ -8,7 +8,7 @@ const CommentSection = props => {
 		<div className='comment-section'>
 			<header>
 			<img src='https://techflourish.com/images/instagram-icon-clipart-panda-18.jpg' alt='Heart Icon' />
-			<img src='https://static.thenounproject.com/png/10342-200.png' alt='Speech Bubble' />
+			<img src='https://static.thenounproject.com/png/9654-200.png' alt='Speech Bubble' />
 			</header>
 
 			<div className='likes'>

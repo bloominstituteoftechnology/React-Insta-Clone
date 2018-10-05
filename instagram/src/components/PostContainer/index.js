@@ -1,6 +1,5 @@
 import React from 'react';
 import CommentSection from '../CommentSection';
-import PropTypes from 'prop-types';
 import SinglePost from './SinglePost.js';
 
 const PostContainer = props => {
