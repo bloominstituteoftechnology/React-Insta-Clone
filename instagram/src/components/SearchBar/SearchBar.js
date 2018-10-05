@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
                     <img src={logo} alt='Instagram logo' className='logo'/> 
                 </div>
                 <form>
-                    <input type='text' placeholder='Search'></input>
+                    <input className='search-bar' type='text' placeholder='Search'></input>
                 </form>
                 <div className='right-corner'>
                     <i class="far fa-compass fa-2x"></i>

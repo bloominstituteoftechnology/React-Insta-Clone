@@ -36,12 +36,8 @@ class PostContainer extends React.Component {
                         <i class="far fa-comment fa-2x"></i>
                     </div>
                     {this.checkLikes()}
-                    {/* comment section */}
-                    {data.comments.map(comment => {
-                        return (
-                            <CommentSection comment={comment}/>
-                        )
-                    })}
+                    {/* {data.comments.map(comment => { */}
+                    <CommentSection data={this.props.postInfo}/>
                 </div>
             </div>
         )

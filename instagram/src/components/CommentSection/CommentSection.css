@@ -1,3 +1,32 @@
 .comment {
     margin-bottom: 5px;
 }
+
+.comment-input-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #E6E6E6;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.comment-input {
+    height: 35px; 
+    border: 0px;
+    width: 565px;
+    font-size: 14px;
+}
+
+.comment-input:focus {
+    outline-width: 0;
+}
+
+.dot {
+    height: 5px;
+    width: 5px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1px;
+  }
