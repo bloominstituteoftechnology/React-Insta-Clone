@@ -1,10 +1,10 @@
 import React from 'react';
-import './postcontainer.css';
+import '../post.css';
 
 const PostImg = props => {
     return(
         <div>
-            <img className={"postImg"}src={props.postimg.imageUrl} alt="Post Content"></img>
+        <img className={'postImg'} src={props.postimg.imageUrl} alt="Post Content"></img>
         </div>
     )
 }
