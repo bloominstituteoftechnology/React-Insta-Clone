@@ -4,6 +4,13 @@ import CommentSection from '../CommentSection/CommentSection.js';
 import './PostContainer.css'
 
 class PostContainer extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            comments: this.props.post.comments
+        }
+    }
+
     render(){
         return(
             <div className="post-container">
@@ -12,7 +19,7 @@ class PostContainer extends React.Component{
                     <p>{this.props.post.username}</p>
                 </div>
                 <img src={this.props.post.imageUrl} alt={`${this.props.post.username} Post`}></img>
-                <CommentSection comments={this.props.post.comments}/>
+                <CommentSection comments={this.state.comments} addNewComment={this.props.addNewComment}/>
             </div>
         )
     }

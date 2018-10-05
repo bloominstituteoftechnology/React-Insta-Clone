@@ -5,14 +5,31 @@ import PostContainer from './components/PostContainer/PostContainer.js';
 import './App.css';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      posts: []
+    }
+  }
+
+  componentDidMount(){
+    this.setState({
+      posts: dummyData
+    });
+  }
+
+  addNewComment(comment, index){
+    console.log("Add comment: ", comment);
+  }
+
   render() {
     return (
       <div className="App">
         <SearchBar/>
-        {dummyData.map((post)=>{
+        {this.state.posts.map((post)=>{
           return(
             <div key={post.timestamp} className="containers">
-              <PostContainer post={post}/>
+              <PostContainer post={post} addNewComment={this.addNewComment}/>
             </div>
           )
         })}
