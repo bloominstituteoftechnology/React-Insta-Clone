@@ -17,7 +17,7 @@ const PostContainer = props => {
         <i className="far fa-comment"></i>
       </div>
       <p className="likes">{props.data.likes} likes</p>
-      <CommentSection comments={props.data.comments} comment={props.comment} onInputChange={props.onInputChange} />
+      <CommentSection comments={props.data.comments} comment={props.comment} />
     </div>
   )
 }

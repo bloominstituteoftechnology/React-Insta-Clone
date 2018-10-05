@@ -9,8 +9,7 @@ class App extends Component {
     super();
     this.state = {
       dummyData: dummyData,
-      search: '',
-      comment: ''
+      search: ''
     }
   }
   onInputChange = e => {
@@ -21,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar search={this.state.search} onInputChange={this.onInputChange}/>
-        {filteredData.map((data,i) => <PostContainer key={i} data={data} comment={this.comment} onInputChange={this.onInputChange} />)}
+        {filteredData.map((data,i) => <PostContainer key={i} data={data} comment={this.state.comment} />)}
       </div>
     );
   }

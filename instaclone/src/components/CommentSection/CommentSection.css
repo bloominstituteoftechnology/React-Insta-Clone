@@ -1,3 +1,8 @@
 .comment {
   margin: 0 0 5px 10px;
 }
+
+.moment {
+  margin: 0 0 10px 10px;
+  color: grey;
+}

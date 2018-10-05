@@ -5,6 +5,7 @@
   width: 450px;
   margin-bottom: 20px;
   border: 1px solid lightgrey;
+  box-shadow: 1px 1px 2px lightgrey;
 }
 
 .post .postTitle {
