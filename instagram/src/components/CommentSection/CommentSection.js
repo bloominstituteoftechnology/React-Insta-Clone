@@ -18,7 +18,7 @@ const CommentSection = props => (
         <div className="timestamp timestamp-font">{props.timestamp}</div> {/*Contains the timestamp indicating how long ago post was made*/}
         <div className="add-comment-container"> {/*Contains section where you can add a comment*/}
             <img className="add-comment-options" src="./img/options_icon_comments.png"></img> {/*The three dot options icon on the add comments bar*/}
-            <textarea className="add-comment" placeholder="Add a comment..."></textarea> {/*Bar where you can type in comment*/}
+            <input type="text" className="add-comment" placeholder="Add a comment..."></input> {/*Bar where you can type in comment*/}
         </div> {/*End add comments*/}
     </div>
 );

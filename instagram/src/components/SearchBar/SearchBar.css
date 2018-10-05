@@ -1,0 +1,40 @@
+.search-bar{
+    width: 100%;
+    height: 100px;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo-container{
+    width: 357px;
+    height: 85px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dividing-bar{
+    width: 0px;
+    height: 60%;
+    border: 1px solid black;
+}
+
+.search-bar{
+    width: 430px;
+    height: 55px;
+    border: 2px solid rgb(219,219,219);
+    border-radius: 3px;
+
+}
+
+.menu-navigation{
+    width: 262px;
+    height: 47px;
+    display: flex;
+    justify-content: space-between;
+}
