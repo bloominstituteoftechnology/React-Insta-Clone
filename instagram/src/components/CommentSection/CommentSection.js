@@ -11,6 +11,7 @@ class CommentSection extends React.Component {
                         <Comment comment={comment}/>
                 )
                 })}
+                <p className='timestamp'>{this.props.data.timestamp.toUpperCase()}</p>
                 <div className='comment-input-section'>
                     <form>
                         <input className='comment-input' type='text' placeholder='Add a comment...'></input>
