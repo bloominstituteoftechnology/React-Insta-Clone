@@ -1,16 +1,26 @@
 import React, { Component } from "react";
+import Posts from "./Posts";
+import CommentSection from "../CommentSection/CommentSection";
 
-class Posts extends Component {
+class PostContainer extends Component {
   render() {
     return (
       <div>
-        <img src={this.props.thumbnailUrl} alt="thumbnail" />
-        <h3>{this.props.username}</h3>
-        <img alt="post" src={this.props.imageUrl} />
-        <p>{this.props.likes} likes</p>
+        {this.props.dummyData.map(x => (
+          <div>
+            <Posts
+              key={x.timestamp}
+              username={x.username}
+              imageUrl={x.imageUrl}
+              thumbnailUrl={x.thumbnailUrl}
+              likes={x.likes}
+            />
+            <CommentSection key={x.timestamp} comments={x.comments} />
+          </div>
+        ))}
       </div>
     );
   }
 }
 
-export default Posts;
+export default PostContainer;

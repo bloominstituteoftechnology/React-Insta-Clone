@@ -1,28 +1,33 @@
 import React, { Component } from "react";
 import "./App.css";
+import logo from "./img/ig-logo.png";
 import dummyData from "./dummy-data";
-import Posts from "./components/PostContainer/PostContainer";
+import PostContainer from "./components/PostContainer/PostContainer";
 import SearchBar from "./components/Search Bar/SearchBar";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      dummyData: dummyData
+    };
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Fake Instagram</h1>
+        <header className="header">
+          <div className="logo-container">
+            <img src={logo} className="logo" />
+            <p className="title">Fake Instagram</p>
+          </div>
           <SearchBar />
         </header>
-        <p className="dummyData">
-          {dummyData.map(x => (
-            <Posts
-              key={x.timestamp}
-              username={x.username}
-              imageUrl={x.imageUrl}
-              thumbnailUrl={x.thumbnailUrl}
-              likes={x.likes}
-            />
-          ))}
-        </p>
+        <div>
+          <div className="post-container">
+            <PostContainer dummyData={this.state.dummyData} />
+          </div>
+        </div>
       </div>
     );
   }

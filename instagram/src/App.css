@@ -1,28 +1,72 @@
+@font-face {
+  font-family: 'Billabong';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Billabong'), url('./font/Billabong.woff') format('woff');
+}
+h3,
+h4,
+p {
+  font-size: 1rem;
+}
 .App {
   text-align: center;
+  width: 800px;
+  margin: auto;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
+.header {
+  height: 50px;
   padding: 20px;
-  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Billabong';
 }
-
-.App-title {
-  font-size: 1.5em;
+.header .logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
 }
-
-.App-intro {
-  font-size: large;
+.header .logo-container .logo {
+  width: 30px;
+  height: 30px;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.header .logo-container .title {
+  font-size: 2rem;
+  padding-top: 8px;
+}
+.post-container {
+  display: flex;
+  flex-direction: column;
+}
+.post-container .user {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border: 1px solid silver;
+}
+.post-container .user .thumbnail {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  margin-left: 50px;
+}
+.post-container .user .username {
+  margin-left: 10px;
+}
+.post-container .likes {
+  text-align: left;
+}
+.post-container .comment-section {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.post-container .comment-section h3,
+.post-container .comment-section p {
+  display: inline-block;
+  line-height: 0;
+}
+.post-container .comment-section .text {
+  margin-left: 10px;
 }

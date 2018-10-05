@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Billabong';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Billabong'), url('./font/Billabong.woff') format('woff');
+}
+
+h3, h4, p {
+    font-size: 1rem;
+}
+
+.App {
+    text-align: center;
+    width: 800px;
+    margin: auto;
+}
+
+.header {
+    height: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Billabong';
+    .logo-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 200px;
+        .logo {
+            width: 30px;
+            height: 30px;
+        }
+        .title {
+            font-size: 2rem;
+            padding-top: 8px;
+        }
+    }
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    .user {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        border: 1px solid silver;
+        .thumbnail {
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            margin-left: 50px;
+        }
+        .username{
+            // font-size: 1rem;
+            margin-left: 10px;
+        }
+    }
+    .likes {
+        text-align: left;
+    }
+    .comment-section {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        h3, p{
+            display: inline-block;
+            line-height: 0;
+        }
+        .text {
+            margin-left: 10px;
+        }
+    }
+}
