@@ -8,7 +8,7 @@ class CommentSection extends Component {
     super(props);
 
     this.state = {
-      comments: [],
+      comments: this.props.comments,
       commentText: '',
       container : 0
     }

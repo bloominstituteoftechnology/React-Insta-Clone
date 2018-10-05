@@ -7,10 +7,12 @@ import propTypes from 'prop-types';
 class PostContainer extends Component {
   constructor(props) {
     super(props);
-    const id = this.props.id
-    let comments = JSON.parse(localStorage.getItem(id));
 
+    const id = this.props.id;
+    let comments = JSON.parse(localStorage.getItem(id));
+    comments === null ? comments = this.props.data.comments : comments
     this.state = {
+      id: id,
       user: this.props.data,
       comments: comments,
       username: 'BigBen102912',
@@ -49,11 +51,12 @@ class PostContainer extends Component {
   close = (e) => {
     const comments = Object.assign([],this.state.comments);
     comments.splice(e.target.parentNode.id, 1)
-
-    this.setState({
-      comments : comments
+    localStorage.setItem(this.state.id, JSON.stringify(comments));
+    return this.setState((state, props) => {
+      return {
+          comments: comments
+      }
     })
-    console.log('close: ', this.state.comments)
   }
 
   render() {
