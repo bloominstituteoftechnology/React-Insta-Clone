@@ -24,6 +24,7 @@
 
 ## Day I
 
+
 ### Focus (Day I)
 
 - Demonstrate the the ability to use create-react-app to boilerplate a react application
