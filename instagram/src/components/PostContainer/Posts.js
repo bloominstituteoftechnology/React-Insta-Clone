@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from"prop-types";
+import Moment from 'react-moment';
+import PropTypes from 'prop-types';
 import Comments from "../CommentSection/Comments";
 import heartOutline from"../../images/heartOutline.png";
 import comment from"../../images/comment.png";
@@ -31,7 +32,7 @@ class Posts extends Component {
                   <Comments comments={post.comments} />
                 </>
                   <div className="form-container">
-                    <p className="timestamps">{post.timestamp}</p>
+                    <Moment className="timestamps"fromNow ago>2018-09-20</Moment>
                     <form>
                       <input type="text" placeholder="add comment ..."/>
                     </form>

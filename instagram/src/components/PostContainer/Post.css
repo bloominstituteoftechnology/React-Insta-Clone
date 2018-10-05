@@ -108,3 +108,11 @@
   letter-spacing: 1px;
   font-weight: bold;
 }
+
+.timestamps{
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform:uppercase;
+  font-family:'Helvetica Neue', sans-serif;
+  font-weight: lighter;
+}
