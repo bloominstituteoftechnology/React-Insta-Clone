@@ -5,11 +5,24 @@ import Posts from "./components/PostContainer/Posts";
 import './App.css';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state ={
+      data:[],
+    }
+  }
+
+  componentDidMount(){
+    setTimeout(() => {
+      this.setState({ data :dummyData})
+    },60000) 
+  }
+
   render() {
     return (
       <div className="Header-section">
         <Search/>
-        <Posts posts ={dummyData}/>
+        <Posts posts = {this.state.data}/>
       </div>
     );
   }

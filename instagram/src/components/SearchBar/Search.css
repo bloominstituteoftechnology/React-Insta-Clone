@@ -32,6 +32,19 @@
   height:40px;
 }
 
+.search-bar{
+  display:flex;
+  flex-direction:row;
+}
+
+.search-bar img{
+  width: 12px;
+  height: 12px;
+  position: relative;
+  left: 76px;
+  top: 8px;
+}
+
 .search-bar input[type=text]{
   width:200px;
   height: 23px;
