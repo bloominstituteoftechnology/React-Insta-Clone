@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection.js';
 
 class PostContainer extends React.Component {
 
@@ -27,6 +28,11 @@ class PostContainer extends React.Component {
                 <i class="far fa-heart fa-2x"></i>
                 <i class="far fa-share-square fa-2x"></i>
                 {this.checkLikes()}
+                {data.comments.map(comment => {
+                    return (
+                        <CommentSection comment={comment}/>
+                    )
+                })}
             </div>
         )
     }
