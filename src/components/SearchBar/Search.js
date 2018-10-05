@@ -1,8 +1,10 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Search = () => {
     return (
-        <input className='search' placeholder='Search'/>
+        <input type='search' className='search' placeholder='Search'/>
+        
     );
 };
 

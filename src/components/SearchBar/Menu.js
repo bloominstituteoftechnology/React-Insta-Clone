@@ -1,14 +1,15 @@
 import React from 'react';
-import compass from '../../assets/compass.jpg';
-import heart from '../../assets/heart.jpg';
-import profile from '../../assets/profile.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+
+
 
 const Menu = () => {
     return (
         <div className='menu'>
-            <img className='compass' src={compass} alt=''/>
-            <img className='heart' src={heart} alt=''/>
-            <img className='profile' src={profile} alt=''/>
+            <FontAwesomeIcon icon={['far','compass']} />
+            <FontAwesomeIcon icon={['far','heart']} />
+            <FontAwesomeIcon icon={['far', 'user']} />
         </div>
     );
 };

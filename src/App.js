@@ -2,8 +2,14 @@ import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 import CommentSection from './components/CommentSection/CommentSection';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faUser, faCompass, faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import dummyData from './dummy-data';
 import './App.css';
+
+library.add(faUser, faCompass, faHeart, faInstagram, faSearch);
 
 class App extends Component {
   constructor() {

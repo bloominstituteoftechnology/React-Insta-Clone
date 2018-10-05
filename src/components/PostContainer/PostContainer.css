@@ -6,6 +6,11 @@
     margin: auto;
 }
 
+.postContainerImg {
+    width: 800px;
+    height: 800px;
+}
+
 /* PostContainer Header */
 .postHeader {
     display: flex;

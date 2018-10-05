@@ -18,6 +18,7 @@ const PostContainer = (props) => {
     return (
         <div className='postContainer'>
             <PostHeader username={props.username} thumbnailUrl={props.thumbnailUrl} />
+            <img className='postContainerImg' src={props.imageUrl} alt='' />
             <CommentSection comments={props.comments} />
         </div>
     );

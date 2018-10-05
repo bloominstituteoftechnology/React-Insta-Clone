@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from '../../assets/logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logoName from '../../assets/instagram.png';
 
 const Logo = () => {
     // 29x29 halfwidth on all sides
     return(
         <div className='logo'>
-            <img className='logoIcon' src={logo} alt=''/>
+            <FontAwesomeIcon icon={['fab','instagram']} size='2x' />
             <img className='logoName' src={logoName} alt=''/>
         </div>
     );
