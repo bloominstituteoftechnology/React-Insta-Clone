@@ -1,9 +1,16 @@
 import React from 'react';
+import Comment from './Comment';
+import './CommentSection.css';
+import CommentInput from './CommentInput';
 
-const CommentSection = () => {
+const CommentSection = props => {
   return (
-    <div>
-      <h1>Hello</h1>
+    <div className="CommentSection">
+      {props.comments.comments.map(comment => {
+        return <Comment comment={comment} />;
+      })}
+      <div className="TimeStamp">2 Hours Ago</div>
+      <CommentInput />
     </div>
   );
 };

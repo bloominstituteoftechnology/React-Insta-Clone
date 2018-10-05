@@ -5,6 +5,10 @@
   color: #262626;
   border-bottom: 1px solid #dbdbdb;
   background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .container {

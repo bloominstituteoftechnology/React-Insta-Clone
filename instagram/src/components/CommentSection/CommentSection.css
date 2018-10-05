@@ -1,0 +1,27 @@
+.CommentSection {
+  padding: 1.5rem;
+}
+
+.Comment {
+  margin-bottom: 1rem;
+}
+
+.TimeStamp {
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 1.5rem;
+  color: #8e8e8e;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.Comment-User {
+  font-weight: bold;
+}
+
+.CommentInput {
+  border: none;
+  outline: 0;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  width: 100%;
+}
