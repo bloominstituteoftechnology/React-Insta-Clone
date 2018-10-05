@@ -26,6 +26,7 @@ const PostHeader = props => {
       <img
         className='thumbnail'
         src={props.thumbnailUrl}
+        alt='user thumbnail'
       />
       <div>
         <div>{props.username}</div>
