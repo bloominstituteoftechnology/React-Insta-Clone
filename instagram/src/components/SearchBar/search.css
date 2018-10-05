@@ -1,8 +1,66 @@
 
-.svg-inline--fa.fontIcon {
-    display: inline-block;
-    font-size: 50px;
-    height: 1em;
-    overflow: visible;
-    vertical-align: -.125em;
+img.imglogo{
+    height:30px;
+    border-left: 3px solid #555;
+    padding-left: 3px
+}
+
+svg{
+    width: 15px;
+    height: 15px;  
+    margin-right: 10px;  
+    
+}
+svg.SearchBar{
+    width: 35px;
+    height: 35px; 
+    margin-right: 10px;
+    margin-left: 10px; 
+    border: none;
+}
+svg.Fasearch{
+    margin-right: 2px; 
+}
+.SearchBar{
+    height: 60px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0;
+/*background: #e9ebee;*/
+border-bottom: 1px solid #C0C0C0
+
+}
+
+.logobox{
+    display: flex;
+    align-items: center;
+}
+
+
+.inputSeachBox{
+    display: flex;
+    align-items: center;  
+}
+
+.searchBtnBox{
+    display: flex;
+    align-items: center;
+    outline: none;
+    flex: 0 0 50px;
+    border: none;
+    padding: 0;
+    background: transparent;
+    transform: translateX(-120%);
+}
+
+input{
+    width: 300px;
+    height:25px;
+    background: #f1f3f4;
+    /*border: 1px solid #C0C0C0;*/
+    outline: none;
+    border: 0;
+    border-radius: 30px; 
+    margin-left: 30px
 }

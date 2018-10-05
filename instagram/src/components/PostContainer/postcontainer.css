@@ -1,0 +1,55 @@
+ul{
+    align-self: flex-start;
+    width: 500px;
+    display: flex;
+    padding: 50px 15px;
+    margin: 30px auto;
+   justify-content: space-between;
+    background: #f6f6f6;
+    
+    
+}
+
+
+
+li{
+    list-style: none;
+    width: 140px;
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.05),0 2px 3px 0 rgba(0,0,0,.1)
+    
+}
+.authorsPost{
+    display: flex;
+    align-items: center;
+    border: 0;
+    margin-bottom: 10px;
+}
+PostImage{
+    height: 100px;
+}
+.PostImage--image{
+    height: 150px;
+    width: 140px;
+}
+.LikeCommentsIcon{
+    display: flex;
+}
+
+.authorsPost--thumbnailUrl{
+    height: 30px;
+    border-radius: 50px;
+    margin: 5px 5px;
+}
+h2{
+    font-size: 10px;
+}
+span{
+    font-size: 10px;
+}
+
+.LikeCommentsIcon{
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
