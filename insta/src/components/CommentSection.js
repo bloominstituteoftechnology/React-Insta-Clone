@@ -1,6 +1,7 @@
 import React from 'react';
 import Comment from './Comment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
 
 const CommentSection = props => {
     return (
@@ -23,5 +24,10 @@ const CommentSection = props => {
       </>  
     );
 }
+
+CommentSection.propTypes = {
+    comments: PropTypes.arrayOf(PropTypes.object),
+    likes: PropTypes.number
+};
 
 export default CommentSection;

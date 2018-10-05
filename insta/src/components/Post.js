@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Post = props => {
     return (
@@ -13,5 +14,9 @@ const Post = props => {
         </>
     );
 };
+
+Post.propTypes = {
+    post: PropTypes.object
+}
 
 export default Post;
