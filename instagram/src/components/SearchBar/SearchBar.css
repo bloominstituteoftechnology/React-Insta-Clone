@@ -1,13 +1,14 @@
 .SearchBar {
   display: flex;
   margin: 0 auto;
-  padding: 10px 2%;
+  padding: 20px 2%;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   border-bottom: 1px solid #E6E6E6;
   position: fixed;
   top: 0;
+  background-color: white;
 }
 
 .left-corner {
@@ -32,6 +33,9 @@ input {
   height: 25px;
   width: 200px;
   text-align: center;
+  border-radius: 2px;
+  border: 1px solid #E6E6E6;
+  background-color: #FAFAFA;
 }
 
 .right-corner {
