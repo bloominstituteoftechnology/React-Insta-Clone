@@ -15,14 +15,22 @@ class App extends Component {
   componentDidMount(){
     setTimeout(() => {
       this.setState({ data :dummyData})
-    },60000) 
+    },30000) 
+  }
+
+  handleCount = (event) =>{
+    event.preventDefault();
+    this.setState(prevState =>({likes:prevState.likes + 1}));
   }
 
   render() {
+    if(this.state.data.length === 0){
+      return <h3>loading...</h3>
+    }
     return (
       <div className="Header-section">
         <Search/>
-        <Posts posts = {this.state.data}/>
+        <Posts posts = {this.state.data} like={this.handleCount}/>
       </div>
     );
   }

@@ -8,7 +8,7 @@ import'./Post.css';
 
 class Posts extends Component {
   state = {  }
-  render() { 
+  render() {
     console.log(this.props)
     return (  
       <div className="container">
@@ -24,7 +24,7 @@ class Posts extends Component {
                   <img src={post.imageUrl} alt="post"/>
                 </div>
                 <div className="post-icon">
-                  <img src={heartOutline} alt="heart"/>
+                  <img src={heartOutline} alt="heart" />
                   <img src={comment} alt="comment"/>
                 </div>
                 <p className="likes">{post.likes} likes</p>
