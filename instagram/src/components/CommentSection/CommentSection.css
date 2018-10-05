@@ -1,0 +1,16 @@
+.comment {
+    font-size: 20px;
+    width: 630px;
+    /* padding: 0 15px; */
+    margin: 15px 0;
+}
+
+.commentUser {
+    display: inline;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.commentText {
+    display: inline;
+}

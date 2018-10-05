@@ -5,9 +5,9 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <div>
-                {this.props.username}
-                {this.props.text}
+            <div className="comment">
+                <span className="commentUser">{this.props.username}</span>
+                <span className="commentText">{this.props.text}</span>
             </div>
         )
 
