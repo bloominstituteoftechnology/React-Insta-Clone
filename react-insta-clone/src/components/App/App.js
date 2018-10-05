@@ -19,7 +19,6 @@ class App extends Component {
   }
   componentDidMount() {
     this.setState({
-    dummyData:dummyData,
     posts: dummyData
     });
   }
@@ -28,7 +27,7 @@ class App extends Component {
     e.preventDefault();
     const searchKey = e.target.value;
     const posts = []
-    this.state.dummyData.filter(post => {
+    this.state.posts.filter(post => {
       return post.username.includes(searchKey) ? posts.push(post) : null;
     })
     this.setState({
@@ -40,9 +39,9 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar search={this.searchKey}/>
-      {this.state.posts.map(post => {
+      {this.state.posts.map((post,index) => {
         return (
-          <PostContainer data={post} key={post.timestamp}></PostContainer>
+          <PostContainer data={post} id={index} key={post.timestamp} id={post.timestamp}></PostContainer>
         )
       })}
       <a href="https://fontawesome.com/license">Icons by FontAwesome</a>
