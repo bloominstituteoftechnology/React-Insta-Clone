@@ -1,9 +1,13 @@
+/* entire post container */
+
 .post-container {
     background-color: white;
     border-radius: 3px;
     border: 1px solid #E6E6E6;
     margin-bottom: 20px;
 }
+
+/* header containing thumbnail and username of poster */
 
 .post-header {
     display: flex;
@@ -19,6 +23,8 @@
 .username, .likes {
     font-weight: bold;
 }
+
+/* like and comment buttons */
 
 .post-options {
     padding: 20px;
