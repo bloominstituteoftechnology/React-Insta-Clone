@@ -13,11 +13,10 @@ export default function SearchBar(props){
         <div className={props.className}>
             <div className='title-images'>
                 <ImagesComponent src={logo} alt='instagram-logo' className='logo' />
+                <div className='line-break'></div>
                 <ImagesComponent src={title} alt='instagram-title' className='title' />
-            </div>
-            <div>
-                <InputComponent placeholder='Search' className='search-input' />
-            </div>
+            </div>          
+            <InputComponent placeholder='Search' className='search-input' />            
             <div className='title-icons'>
                 <ImagesComponent src={compass} alt='compass-icon' />
                 <ImagesComponent src={heart} alt='heart-icon' />
