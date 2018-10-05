@@ -3,10 +3,18 @@ import PostContainer from '../PostContainer/PostContainer.js'
 import './PostListContainer.css'
 
 const PostListContainer = ({postData}) => {
-    console.log(postData);
-    const postList = postData.map(post =>{
-        console.log(post);
-        return <PostContainer post={post} />
+
+
+
+    const postList = (!postData.length)
+    ? <h3>Loading Posts...</h3>
+
+    :postData.map(post =>{
+        return (
+            <div key={post.username}>
+                <PostContainer post={post} />
+            </div>
+        )
     })
 
     return (

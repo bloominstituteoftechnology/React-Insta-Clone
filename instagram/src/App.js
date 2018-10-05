@@ -10,8 +10,16 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      postData: dummyData
+      postData: []
     }
+  }
+
+  componentDidMount(){
+    setTimeout(() => {
+      this.setState({postData: dummyData});
+
+    }, 500);
+
   }
 
   render() {
