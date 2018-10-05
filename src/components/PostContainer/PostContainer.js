@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import PostHeader from './PostHeader';
+import LikesContainer from './LikesContainer';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 
@@ -19,6 +20,7 @@ const PostContainer = (props) => {
         <div className='postContainer'>
             <PostHeader username={props.username} thumbnailUrl={props.thumbnailUrl} />
             <img className='postContainerImg' src={props.imageUrl} alt='' />
+            <LikesContainer likes={props.likes} />
             <CommentSection comments={props.comments} />
         </div>
     );
