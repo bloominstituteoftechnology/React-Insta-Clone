@@ -8,7 +8,27 @@
     display:flex;
 }
 .icon {
-    color:lightgray;
-    font-size:20px;
+    color:darkgray;
+    font-size:25px;
     margin-left:30px;
+}
+
+.instacam {
+    margin-top:33px;
+    width:50px;
+    height:50px;
+}
+
+.instaname {
+    margin-top:32px;
+    width:100px;
+    height:50px;
+}
+.icon-container {
+    display: flex;
+}
+.line {
+    font-size: 30px;
+    transform: scale(.5, 1);
+    padding: 0 10px;
 }

@@ -3,7 +3,10 @@ import './PostContainer.css';
 
 const Header = (props) => {
     return (
-        <div>I am the header</div>
+        <div>
+            <img />
+            <p>username</p>
+        </div>
     );
 };
 
