@@ -8,11 +8,15 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      posts: []
+      posts: [],
     }
   }
 
   componentDidMount(){
+    const data = dummyData;
+    data.forEach(obj=>{
+      obj.isHidden = false;
+    })
     this.setState({
       posts: dummyData
     });
@@ -39,10 +43,25 @@ class App extends Component {
     })
   }
 
+  searchPosts = (username)=>{
+    const data = this.state.posts;
+    data.forEach(obj=>{
+      if(obj.username === username || username === 'all'){
+        obj.isHidden = false;
+      }
+      else{
+        obj.isHidden = true;
+      }
+    });
+    this.setState({
+      posts: data
+    });
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar/>
+        <SearchBar searchPosts={this.searchPosts}/>
         {this.state.posts.map((post, index)=>{
           return(
             <div key={post.timestamp} className="containers">

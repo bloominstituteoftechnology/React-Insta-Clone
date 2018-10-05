@@ -6,6 +6,10 @@
     border: 1px solid #e7e7e7;
 }
 
+.hide-container{
+    display: none;
+}
+
 .img-name{
     display: flex;
     align-items: center;

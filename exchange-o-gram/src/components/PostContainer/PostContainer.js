@@ -12,6 +12,11 @@ class PostContainer extends React.Component{
     }
 
     render(){
+        if(this.props.post.isHidden){
+            return (
+                <div className="hide-container"></div>
+            )
+        }
         return(
             <div className="post-container">
                 <div className="img-name">
