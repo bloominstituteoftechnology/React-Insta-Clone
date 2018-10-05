@@ -14,8 +14,8 @@ class PostContainer extends React.Component {
                 post={post}
                 dummyData={this.props.dummyData}
                 commentInput={this.props.commentInput}
-                addComment={this.props.addComment}
                 comment={this.props.comment}
+                user={this.props.user}
               />
             );
           })}
