@@ -1,4 +1,5 @@
 import React from "react";
+import "./SearchBar.css"
 
 const SearchBar = props => (
     <div className="search-bar"> {/*Container which contains the entire search bar content*/}

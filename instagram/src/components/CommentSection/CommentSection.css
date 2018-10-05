@@ -1,0 +1,65 @@
+.comment-section-container{
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /*Prevents you from changing size of box when you add in padding*/
+}
+
+.icon-container{
+    width: 95%;
+    height: 23px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+
+.icon-heart{
+    margin-right:12px;
+}
+
+.likes{
+    width: 95%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+
+.comments-section{
+    width: 95%;
+    height: 110px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.timestamp{
+    width: 95%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.add-comment-container{
+    width: 93%;
+    height: 33px;
+}
+
+.add-comment{
+    width: 100%;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rbga(0,0,0,0);
+    color: rgb(146,142,142);
+    font-family: arial;
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+.add-comment-options{
+    position: absolute;
+    bottom: 10px;
+}
+

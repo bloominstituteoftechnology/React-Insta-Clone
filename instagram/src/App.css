@@ -30,3 +30,21 @@
     transform: rotate(360deg);
   }
 }
+
+/*FONTS*/
+
+.title-font{
+  font-size: 1.0rem;
+  font-weight: bold;
+}
+
+.body-font{
+  font-size: 0.9rem;
+}
+
+.timestamp-font{
+  font-size: 0.8rem;
+  color: rgb(146,142,142);
+  font-weight: italics;
+}
+
