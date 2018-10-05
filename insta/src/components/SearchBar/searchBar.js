@@ -1,14 +1,12 @@
 import React from 'react';
 import './search.css';
 
-const FontAwesome = require("react-fontawesome");
-
 const SearchBar = props => {
     return (
         <div className='searchBar'>
             <div className="imgs-left" >
             <i class="fab fa-instagram fa-4x"></i>
-                <img src="https://buxton.com.au/static/img/instagram.svg" className="name-logo" />
+                <img src="https://buxton.com.au/static/img/instagram.svg" className="name-logo" alt="insta Logo" />
             </div>
             <div className="center-content">
                 <input type='text' placeholder=" &#x1F50D;search" />
