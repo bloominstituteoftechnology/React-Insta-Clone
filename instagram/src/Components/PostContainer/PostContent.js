@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentContainer from './../CommentSection/CommentContainer';
+// import CommentContainer from './../CommentSection/CommentContainer';
 import './post.css';
 
 
@@ -20,13 +20,24 @@ class PostContent extends React.Component {
                             <img className={"imgContent"} src={postProps.imageUrl} alt={"instagramImg"} />
                             </div>
                             <div className="likes">
-                                <h3>{postProps.likes}</h3>
+                                <h3>{postProps.likes}{" likes"}</h3>
                             </div>
-                            <section>
-                            <CommentContainer dummyData={this.props.dummyData}/>
-
-                            </section>
-                        </>
+                            <div>
+                            {(typeof (postProps.comments) === 'object') ?
+                                <div>{
+                                    postProps.comments.map((newData) => {
+                                        return (
+                                            <div className={"commentWrap"} key={postProps.username.toString()}>
+                                            <h4>{newData.username}</h4>
+                                                <p className={"comment"}>{newData.text}</p>
+                                            </div>
+                                        )
+                                    })
+                                    }</div> : null
+                            }
+                        </div>
+               
+                    </>
                     )
                 })}
             </div>

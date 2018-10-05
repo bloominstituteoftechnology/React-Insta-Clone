@@ -17,3 +17,20 @@
 .imgContent {
     margin: 10px 0px;
 }
+
+.commentWrap {
+    display: flex;
+    
+}
+
+.comment {
+    margin: auto 5px;
+}
+
+
+
+.likes h3{
+    display: flex;
+    justify-content: left;
+    font-weight: normal;
+}

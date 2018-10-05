@@ -8,22 +8,16 @@ class App extends React.Component {
 
   state = {
     data: [{dummyData}],
+ comment: '',
   }
-
-
-
-
 
 
 
   render() {
     return (
       <div className="App">
-
               <SearchContainer />
               <PostContainer dummyData={dummyData} />
-              
-
       </div>
     );
   }
