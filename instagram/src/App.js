@@ -64,7 +64,7 @@ dummyData.map((Chars,index) => ({
         <div className="searchBar"><SearchBar /></div>
         <div className="postContainer">{dummyData.map((chars,index) => {
          return <PostContainer key={index} char={chars.username} name={chars.name} thumb={chars.thumbnailUrl} time={chars.timestamp}
-         likes={chars.likes} image={chars.imageUrl} />
+         likes={chars.likes} image={chars.imageUrl} comments={chars.comments}/>
         })}
        </div>
                

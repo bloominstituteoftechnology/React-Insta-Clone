@@ -1,5 +1,6 @@
 .App {
     text-align: center;
+    height: auto;
 }
 
 .App-logo {
@@ -35,7 +36,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-   /*  border: 2px solid blue; */
+    /*  border: 2px solid blue; */
     height: 64px;
     width: 100%;
     padding-top: 10px;
@@ -44,7 +45,8 @@
 .postContainer {
     display: flex;
     flex-direction: column;
-    border: 1px solid gray; 
+    border: 1px solid gray;
+    height: auto;
 }
 
 .App {
@@ -53,6 +55,7 @@
     width: 100%;
     max-width: 604px;
     border: 2px solid red;
+    height: auto;
 }
 
 .iconContainer {
@@ -69,10 +72,10 @@
     height: 36px;
 }
 
-.titleText {
+/* .titleText {
     font-size: 20px;
     font-weight: bold;
-}
+} */
 
 .icon1 {
     background-image: url('./icons/icon1.png');
@@ -94,11 +97,11 @@
     cursor: pointer;
 }
 
-.icon3 {
+/* .icon3 {
     background-image: url('./icons/icon3.png');
     width: 30px;
     height: 30px;
-}
+} */
 
 .icon3:hover {
     cursor: pointer;
@@ -116,21 +119,21 @@
 }
 
 .header {
-  /* border: 2px solid orange; */
-display: flex;
-flex-direction: row;
-height: 64px;
+    /* border: 2px solid orange; */
+    display: flex;
+    flex-direction: row;
+    height: 64px;
 }
-       
+
 .thumbNail {
-background-image: url('./icons/icon1.png');
-background: no-repeat;
-width: 50px;
-height: 50px;
-border-radius: 50%;
-margin-top: 5px;
-margin-right: 5px;
-/* border: 2px solid red; */
+    background-image: url('./icons/icon1.png');
+    background: no-repeat;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-right: 5px;
+    /* border: 2px solid red; */
 }
 
 .userName {
@@ -139,35 +142,32 @@ margin-right: 5px;
     padding-top: 20px;
     font-family: arial;
     font-weight: bold;
-    
     /* border: 2px solid green; */
 }
 
 .image {
-  display: flex;
-  width: 100%;
-
-background-image: url('./icons/Yoda.jpg');
-background: no-repeat;
-  border: 2px solid gray;
-
+    display: flex;
+    width: 100%;
+    background-image: url('./icons/Yoda.jpg');
+    background: no-repeat;
+    border: 2px solid gray;
 }
 
 .iconContainer2 {
-  display: flex;
-  flex-direction: row;
-  height: 35px;
- /*  border: 2px solid purple; */
+    display: flex;
+    flex-direction: row;
+    height: 35px;
+    /*  border: 2px solid purple; */
 }
-  
-.postIcon1 {
-background: no-repeat;
-background-image: url('./icons/icon2.png');
-width: 30px;
-height: 30px;
-margin-right: 10px;
-margin-left: 20px;
-}
+
+/* .postIcon1 {
+    background: no-repeat;
+    background-image: url('./icons/icon2.png');
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 20px;
+} */
 
 .postIcon2 {
     background-image: url('./icons/icon2.png');
@@ -176,10 +176,38 @@ margin-left: 20px;
 }
 
 .commentContainer {
-  display: flex;
-  flex-direction: column;
-  height: 60px;
-  /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    border: 2px solid red;
+}
+
+.userCommentContainer {
+    display: flex;
+    flex-direction: row;
+    /* text-overflow: unset; */
+    flex-wrap: wrap;
+    border: 4px solid pink;
+    height: auto;
+}
+
+/* .userComment {
+ width: 100%;
+    border: 12px solid purple; 
+} */
+
+.commentUser {
+    width: 100%;
+    height: auto;
+    border: 1px solid gray;
+}
+
+.otherContainer {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid blue;
+    width: 100%;
+    height: auto;
 }
 
 .timeStamp {
@@ -188,7 +216,7 @@ margin-left: 20px;
     font-size: 12px;
     font-weight: bold;
     color: gray;
-} 
+}
 
 .likes {
     margin-right: auto;
@@ -196,15 +224,50 @@ margin-left: 20px;
 }
 
 .addCommentContainer {
-  display: flex;
-  flex-direction: row;
-  /* border: 2px solid yellow; */
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid yellow; */
 }
 
-.addComment {
+.addComment {}
 
+.dots {}
+
+a.button {
+    height: 30px;
+    background-image: url("./icons/sprites.png");
+    text-indent: -9999px;
+    display: inline-block;
 }
 
-.dots {
+a#postIcon1 {
+    width: 30px;
+    background-position: -456px 440px; 
+}
 
+a#postIcon2 {
+    width: 32px;
+    background-position: 214px 44px;
+}
+
+a#icon1 {
+    width: 32px;
+    background-position: -456px 362px;
+}
+
+a#icon2 {
+    width: 24px;
+    background-position: -457px 284px;
+}
+
+a#icon3 {
+    width: 24px;
+    background-position: -457px 182px;
+}
+
+a#titleText {
+    width: 178px;
+    height: 52px;
+    background-position: 386px 323px;
+    /* border: 2px solid green; */
 }

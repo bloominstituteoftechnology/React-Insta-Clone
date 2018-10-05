@@ -1,14 +1,13 @@
 import React from 'react';
-import "../../App.css"
+import Comment from "./Comment";
+import "../../App.css";
 
 const CommentSection = props => {
  	return (
-		 <div></div>
-	/* 	<form>
-			<input className="inputField" value={props.inputText} onChange={props.updateUserInput} />
-			<button className="inputButton" disabled={props.inputLength === 0}onClick={props.addToList}>Add Item</button>
-			
-		</form> */
+		 <div className="userCommentContainer"> {props.comments.map((comment, index) => {
+			return <Comment user={comment.username} comments={comment.text} key={index} />;
+		  })} </div>
+
 	); 
 };
 export default CommentSection;

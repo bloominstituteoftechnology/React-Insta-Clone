@@ -5,12 +5,12 @@ const SearchBar = props => {
 	return (
 		<div className='searchBarContainer'>
 			<div className='cameraIcon' onClick={props.camera}></div>
-			<div className='titleText'>Instagram</div>
+			<a className='button' id='titleText'>Instagram</a>
 			<input className="searchBarInput" type="text" value={props.value} />
 			<div className='iconContainer'>
-				<div className='icon1' onClick={props.compass}></div>
-				<div className='icon2' onClick={props.heart}></div>
-				<div className='icon3' onClick={props.person}></div>
+				<a className='button' id='icon1'  href="#" onClick={props.compass}></a>
+				<a className='button' id='icon2'  href="#" onClick={props.heart}></a>
+				<a className='button' id='icon3'  href="#" onClick={props.person}></a>
 			</div>
 		</div>
 
