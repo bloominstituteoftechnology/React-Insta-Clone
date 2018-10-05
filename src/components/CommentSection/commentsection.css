@@ -1,26 +1,42 @@
 .commentSectionContainer{
     display: flex;
+    flex-direction: column;
     position: relative;
     width: 525px;
     height: 500px;
     border: 1px solid black;
+    bottom: 500px;
 }
 
-.CommentandUsernames{
+.Comments{
     display: flex;
     position: relative;
-    width: 525px;
-    height: 250px;
+    width: 526px;
+    height: 50px;
     border: 1px solid red;
+    left: 176px;
+    bottom: 275px;
+}
+
+.Usernames{
+    display: flex;
+    position: relative;
+    width: 526px;
+    height: 50px;
+    border: 1px solid blue;
+    left: 176px;
+    bottom: 275px;
 }
 
 .comments{
-    font-size: 18px;
+    width: 200px;
+    height: 200px;
+    font-size: 12px;
     font-weight: 200px;
     color: black;
 }
 .commentUsernames{
-    font-size: 24px;
+    font-size: 14px;
     font-weight: 600px;
     color: black;
 }

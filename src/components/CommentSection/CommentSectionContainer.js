@@ -6,10 +6,10 @@ const CommentSectionContainer = props => {
     return(
         <div className={"commentSectionContainer"}>
 
-            {props.comments.map((username, comment) => {
+            {props.comments.map((username, comment, index) => {
                 return(
-                    <div>
-                        <commentLoad comments={comment} commentusers={username} />
+                    <div key={index++}>
+                        <CommentLoad comments={comment} commentusers={username} />
                     </div>
                 )
 

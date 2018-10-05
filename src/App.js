@@ -18,12 +18,10 @@ class App extends Component {
         <SearchbarContainer />
         <>
         <PostContainer usernames={this.state.data[0]} thumbnail={this.state.data[0]} ids={this.state.data[0]} postimg={this.state.data[0]}  />
-        <CommentSectionContainer comments={this.state.data[0][0].comments[0]}  commentusers={this.state.data[0][0].comments[0]} / >
+        <CommentSectionContainer comments={this.state.data[0][0].comments}  commentusers={this.state.data[0][0].comments} />
 
-        <div>
-          {this.state.data[0][0].comments[1].text}
-        </div>
         </>
+        <div>{this.state.data[0][0].comments[0].text}</div>
       </div>
     );
   }

@@ -3,10 +3,13 @@ import './commentsection.css';
 
 const CommentLoad = props => {
     return(
-        <div className={"CommentandUsernames"}>
-            <p className={"comments"}>{props.comments.text}</p>
-
-            <h2 classname={"commentUsernames"}>{props.commentusers.username}</h2>
+        <div>
+            <div className={"Comments"}>
+                <p className={"comments"}>{props.comments.texts}</p>
+            </div>>
+            <div className={"Usernames"}>
+                <h2 className={"commentUsernames"}>{props.commentusers.username}</h2>
+            </div>
         </div>
     )
 }
