@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import Comment from './Comment.js';
 import './CommentSection.css';
@@ -6,10 +7,14 @@ import './CommentSection.css';
 class CommentSection extends React.Component{
     constructor(props){
         super(props);
+
+        const format = 'MMMM DD YYYY hh:mm:ss';
+
         this.state = {
             index: props.index,
             comments: props.comments,
-            newComment: ''
+            newComment: '',
+            timeStamp: moment(props.timeStamp, format).fromNow().toUpperCase()
         }
     }
 
@@ -44,7 +49,7 @@ class CommentSection extends React.Component{
                         </div>
                     )
                 })}</div>
-                <p className="time-stamp">2 HOURS AGO</p>
+                <p className="time-stamp">{this.state.timeStamp}</p>
                 <form className="add-comment-form" onSubmit={this.addNewComment}>
                     <input className="add-comment" onChange={this.storeNewComment} placeholder="Add a comment..." value={this.state.newComment}></input>
                 </form>

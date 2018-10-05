@@ -7,7 +7,7 @@ const dummyData = [
     imageUrl:
       "https://tk-assets.lambdaschool.com/69cf901b-f96d-466e-a745-ff2a01effac9_philz-image.jpg",
     likes: 400,
-    timestamp: "July 17th 2017, 12:42:40 pm",
+    timestamp: "October 6th 2018, 9:42:40 am",
     comments: [
       {
         username: "philzcoffee",
@@ -31,7 +31,7 @@ const dummyData = [
     imageUrl:
       "https://tk-assets.lambdaschool.com/89d13918-b7a2-4b40-9658-f376ea3f6b59_37131538_213683546146400_1083714364399157248_n.jpg",
     likes: 4307,
-    timestamp: "July 15th 2017, 03:12:09 pm",
+    timestamp: "July 15th 2018, 03:12:09 pm",
     comments: [
       {
         username: "twitch",
