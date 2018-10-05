@@ -4,9 +4,9 @@ class SearchBarLogo extends React.Component {
   render() {
     return (
       <div className="sbLogo">
-        <i class="fab fa-instagram" />
+        <i className="fab fa-instagram" />
         <hr />
-        <i class="fab fa-hooli" />
+        <i className="fab fa-hooli" />
       </div>
     );
   }

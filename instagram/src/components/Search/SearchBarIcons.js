@@ -4,9 +4,9 @@ class SearchBarIcons extends React.Component {
   render() {
     return (
       <div className="searchBarIcons">
-        <i class="far fa-compass" />
-        <i class="far fa-heart" />
-        <i class="far fa-user" />
+        <i className="far fa-compass" />
+        <i className="far fa-heart" />
+        <i className="far fa-user" />
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class PostHeader extends React.Component {
   render() {
@@ -10,5 +11,10 @@ class PostHeader extends React.Component {
     );
   }
 }
+
+PostHeader.propTypes = {
+  headerImage: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
+};
 
 export default PostHeader;

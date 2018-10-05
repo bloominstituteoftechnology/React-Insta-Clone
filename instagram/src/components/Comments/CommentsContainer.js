@@ -1,6 +1,7 @@
 import React from 'react';
 import AddComment from './AddComment';
 import Comment from './Comment';
+import PropTypes from 'prop-types';
 import './comments.css';
 
 class CommentsContainer extends React.Component {
@@ -15,5 +16,9 @@ class CommentsContainer extends React.Component {
     );
   }
 }
+
+CommentsContainer.propTypes = {
+  comments: PropTypes.arrayOf(PropTypes.object)
+};
 
 export default CommentsContainer;
