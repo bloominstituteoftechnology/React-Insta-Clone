@@ -15,10 +15,21 @@
 }
 
 
-h1{border:1px solid blue;}
+h1{
+	position:relative;
+	bottom:10px;
+	border:1px solid blue;
+}
 
 img{
 	height:60px;
 	width:60px;
 	border:1px solid yellow;
+	margin-left:20px;
+}
+
+input{
+	position:relative;
+	height:30px;
+	top:15px;
 }

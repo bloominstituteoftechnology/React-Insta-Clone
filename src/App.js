@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import './dummy-data.js';
-import {CommentSection} from './components/CommentSection/CommentSection.js';
-import './components/PostContainer/PostContainer.js';
+import dummyData from './dummy-data.js';
+import CommentSection from './components/CommentSection/CommentSection.js';
+import PostContainer from './components/PostContainer/PostContainer.js';
 import {SearchBar} from './components/SearchBar/SearchBar.js';
 
 class App extends Component {
@@ -10,7 +10,8 @@ class App extends Component {
 	constructor(){
 		super();
 		this.state = {
-			//users:[...dummy-data]
+			dummyData: dummyData,
+			inputText:""
 		};
 	}
 
@@ -18,10 +19,11 @@ class App extends Component {
  render() {
     return (
       <div className="App">
-
-		<h1>InstaClone</h1>
-		<SearchBar/>
-		<CommentSection/>
+			<SearchBar/>
+			<CommentSection/>
+			{dummyData.map( (post, index) => (<PostContainer userPost={post} key={post.username + index} />))}
+			<div>{console.log(dummyData)}</div>
+			<PostContainer/>
       </div>
     );
   }
