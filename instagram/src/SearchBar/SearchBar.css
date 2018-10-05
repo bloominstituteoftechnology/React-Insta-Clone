@@ -38,3 +38,8 @@
     align-items: center;
     border: 1px solid green;
 }
+
+.word-logo {
+    height: 7vh;
+    margin-top: 5px;
+}

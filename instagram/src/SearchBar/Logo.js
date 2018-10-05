@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Instagram from '../icons/Instagram Word Logo.png';
 
 const Logo = () => {
         return (
@@ -9,7 +10,7 @@ const Logo = () => {
             
                 <p className='grey'>|</p>
 
-                <p>Instagram</p>
+                <img src={Instagram} className='word-logo'></img>
 
             </div>
         )
