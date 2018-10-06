@@ -9,8 +9,11 @@ const CommentSection = (props) => {
                     <a href="#"><i className="far fa-heart"></i></a>
                     <a href="#"><i className="far fa-comment"></i></a>
                 </div>
-                <p className="likes">{props.obj.likes} likes</p>
 
+                { props.obj.likes === 1 ? 
+                    ( <p className="like">1 like</p> ) :
+                    ( <p className="likes">{props.obj.likes} likes</p> )
+                }
                 <div className="commentsContainer">
                     {props.obj.comments.map(item => {
                         return (

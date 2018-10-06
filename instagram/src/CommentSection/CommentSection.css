@@ -41,6 +41,7 @@ i {
     justify-content: space-between;
     align-self: center;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .addComment input {

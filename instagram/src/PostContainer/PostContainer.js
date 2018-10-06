@@ -26,6 +26,13 @@ const PostContainer = (props) => {
         )
 }
 
+PostContainer.default = {
+    likes: 0,
+    comments: {
+        text: "Be the first to comment!"
+    }
+}
+
 PostContainer.propTypes = {
     data: PropTypes.arrayOf(
         PropTypes.shape({

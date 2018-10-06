@@ -3,5 +3,9 @@
     font-size: 14px;
     margin-left: 3%;
     text-align: left;
-    line-height: 20px;
+}
+
+.comment p {
+    line-height: 22px;
+    margin: 2px 0;
 }
