@@ -48,7 +48,8 @@ PostContainer.propTypes = {
                 })
             )
         })
-    )
+    ),
+    postComments: PropTypes.array
 }
 
 export default PostContainer;

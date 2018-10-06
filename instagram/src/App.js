@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       data: [],
+      postComments: []
     }
   }
 

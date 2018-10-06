@@ -23,10 +23,10 @@ const CommentSection = (props) => {
                 </div>
                 <p className="timestamp">{props.obj.timestamp}</p>
 
-                <div className="addComment">
+                <form className="addComment">
                 <input placeholder="Add a comment..."></input>
                 <p>...</p>
-                </div>
+                </form>
 
             </div>
         )
