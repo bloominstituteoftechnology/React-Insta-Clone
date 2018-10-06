@@ -30,6 +30,7 @@
 .search-header .logo img{
   width:106px;
   height:40px;
+  cursor: pointer;
 }
 
 .search-bar{
@@ -51,6 +52,10 @@
   background: #fafafa;
   border:1px solid rgba(0,0,0,.0975);
   border-radius: 3px;
+  padding-left:4px;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-family:Helvetica,Arial, sans-serif;
 }
 
 .search-bar input[type=text]::placeholder{
@@ -75,5 +80,22 @@
 
 .search-menu img:last-child{
   padding-right:0px;
- 
+}
+
+.notice{
+  display:flex;
+  flex-direction: row;
+  max-width: 380px;
+  width:100%;
+  justify-content: center;
+  align-items:center;
+  margin:320px auto;
+}
+
+.notice p{
+  font-family:'Helvetica', Arial, sans-serif;
+  font-size:3.5rem;
+  color:#e5e5e5;
+  text-transform:capitalize;
+
 }

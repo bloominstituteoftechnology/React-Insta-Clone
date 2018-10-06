@@ -21,7 +21,7 @@ class Posts extends Component {
                 </div>
                 <PostIcon likes ={post.likes}/>
                 <>
-                  <Comments comments={post.comments} likes={post.likes} />
+                  <Comments comments={post.comments} />
                 </>
                 </div>
               ] 

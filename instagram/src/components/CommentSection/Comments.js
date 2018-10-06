@@ -20,7 +20,8 @@ class Comments extends Component {
     })
   }
 
-  handleSubmit = () => {
+  handleSubmit = (event) => {
+    event.preventDefault()
     const comment ={
       username:"doobee46",
       text:this.state.value
@@ -31,7 +32,6 @@ class Comments extends Component {
     })
   }
 
- 
   render() { 
     console.log(this.state.comments)
     return (
