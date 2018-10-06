@@ -53,4 +53,15 @@ PostContainer.propTypes = {
     }),
 }
 
+// ????????
+
+PostContainer.defaultProps = {
+    postInfo: PropTypes.shape({
+        username: 'username',
+        thumbnailUrl: '',
+        imageUrl: '',
+        likes: 0
+    }),
+}
+
 export default PostContainer;
