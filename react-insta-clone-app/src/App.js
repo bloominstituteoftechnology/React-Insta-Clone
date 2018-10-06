@@ -1,7 +1,8 @@
 import React from "react";
 // import logo from "./logo.svg";
 import "./App.css";
-import SearchBar from "./components/SearchBar/SearchBar"
+import dummyData from "./dummy-data";
+import SearchBar from "./components/SearchBar/SearchBar";
 
 // class App extends React.Component {
 //   render() {
@@ -31,8 +32,21 @@ class App extends React.Component {
     return (
       <div className='App'>
         <SearchBar className='search-bar-container'/>
-        <div className='post-container'>
-
+        <div>
+          {dummyData.map(function(item){
+            return (
+              <div>
+                <div>
+                  <img src={item.thumbnailUrl} alt={item.username} />
+                  {item.username}
+                </div>
+                <img src={item.imageUrl} alt={item.username}/>
+                <div>
+                  {item.comments.map(comment)}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     );
