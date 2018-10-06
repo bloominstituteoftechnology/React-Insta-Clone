@@ -16,9 +16,7 @@ class PostContainer extends Component {
 
   clickHandler = event => {
     event.preventDefault();
-    this.setState({
-      likes: this.state.likes + 1
-    });
+    this.setState(prevState => ({ likes: prevState.likes + 1 }));
   };
   render() {
     return (

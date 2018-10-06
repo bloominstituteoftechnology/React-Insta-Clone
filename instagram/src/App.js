@@ -8,19 +8,41 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      input: ""
     };
   }
-
+  searchInputHandler = event => {
+    const value = event.target.value;
+    this.setState({
+      input: value
+    });
+  };
   componentDidMount() {
     this.setState({
       data: dummyData
     });
   }
+  searchHandler = event => {
+    if (event.key === "Enter") {
+      this.setState({
+        data: this.state.data.filter(post => {
+          return post.username === this.state.input;
+        })
+      });
+      event.target.value = "Search";
+      event.target.classList.remove("no-background");
+    }
+  };
+
   render() {
     return (
       <>
-        <SearchBar />
+        <SearchBar
+          posts={this.state.data}
+          searchHandler={this.searchHandler}
+          searchInputHandler={this.searchInputHandler}
+        />
         {this.state.data.map(post => {
           return (
             <PostContainer

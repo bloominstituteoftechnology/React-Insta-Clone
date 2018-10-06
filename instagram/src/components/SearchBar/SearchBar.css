@@ -51,3 +51,7 @@ i {
     background-position-x: 30%;
     background-position-y: center;
 }
+
+.no-background {
+    background-image: none;
+}
