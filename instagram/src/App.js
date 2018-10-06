@@ -19,9 +19,11 @@ class App extends Component {
     this.postNumber = 0;
     this.state = {
       data: dummyData,
+      searchTerm: '',
     }
     this.username = "C137";
     this.commentText = "Add a comment...";
+    this.searchTerm = '';
   
   }
 
@@ -63,28 +65,35 @@ class App extends Component {
     })
   }
 
+  changeSearchTerm = (event) => {
+    this.searchTerm = event.target.value;
+    this.setState({
+      searchTerm: this.searchTerm
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <Header />
-      {this.state.data.map(data => {
-        
-        return (
-          <PostContainer 
-          likeClickHandler={this.likeClickHandler}
-          username={data.username} 
-          thumbnailUrl={data.thumbnailUrl}
-          imageUrl={data.imageUrl}
-          likes={data.likes}
-          comments={data.comments}
-          timestamp={data.timestamp}
-          clickHandler={this.likeClickHandler}
-          commentTextOnChange={this.commentTextOnChange}
-          addCommentClickHandler={this.addCommentClickHandler}
-          commentText={this.commentText}
-          />
-        )
-      })}
+        <Header changeSearchTerm={this.changeSearchTerm} />
+        {this.state.data.map(data => {
+          return (
+            <PostContainer 
+            likeClickHandler={this.likeClickHandler}
+            username={data.username} 
+            thumbnailUrl={data.thumbnailUrl}
+            imageUrl={data.imageUrl}
+            likes={data.likes}
+            comments={data.comments}
+            timestamp={data.timestamp}
+            clickHandler={this.likeClickHandler}
+            commentTextOnChange={this.commentTextOnChange}
+            addCommentClickHandler={this.addCommentClickHandler}
+            commentText={this.commentText}
+            searchTerm={this.searchTerm}
+            />
+          )
+        })}
       
       </div>
     );

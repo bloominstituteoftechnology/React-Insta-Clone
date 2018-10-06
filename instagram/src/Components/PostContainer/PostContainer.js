@@ -20,6 +20,11 @@ comments: [
 */
 
 const PostContainer = (props) => {
+    let hideMe = props.searchTerm !== '' ? true : false;
+    if (props.username.includes(props.searchTerm)) {
+        hideMe = false;
+    }
+
     function clickHandler() {
         props.clickHandler(props.timestamp);
     }
@@ -34,35 +39,40 @@ const PostContainer = (props) => {
         }
     }
 
-    return (
-        <div className='post-container'>
-            <div className='post-header'>
-                <img className='thumbnail' src={props.thumbnailUrl} alt={props.username} />
-                <p>{props.username}</p>
+    if (hideMe) {
+        return <> </>
+    }
+    else {
+        return (
+            <div className='post-container'>
+                <div className='post-header'>
+                    <img className='thumbnail' src={props.thumbnailUrl} alt={props.username} />
+                    <p>{props.username}</p>
+                </div>
+                <img src={props.imageUrl} alt={props.username}/>
+                <div className='likes-section'>
+                    {/*Get images for the likes*/}
+                    <i className="far fa-heart fa-2x" onClick={clickHandler}></i>
+                    <i className="far fa-comment fa-2x"></i>
+                    <p>{props.likes}</p>
+                </div>
+                <>
+                {props.comments.map(item => {
+                    return (
+                        <Comment 
+                        username={item.username} 
+                        text={item.text}
+                        />
+                    )
+                })}
+                </>
+                <div className='add-comment-form'>
+                    <input onClick={clearInput} onChange={props.commentTextOnChange} className='add-comment-text' defaultValue='Add a comment.' />
+                    <button className='add-comment-button' onClick={addComment}>:</button>
+                </div>
             </div>
-            <img src={props.imageUrl} alt={props.username}/>
-            <div className='likes-section'>
-                {/*Get images for the likes*/}
-                <i className="far fa-heart fa-2x" onClick={clickHandler}></i>
-                <i className="far fa-comment fa-2x"></i>
-                <p>{props.likes}</p>
-            </div>
-            <>
-            {props.comments.map(item => {
-                return (
-                    <Comment 
-                    username={item.username} 
-                    text={item.text}
-                    />
-                )
-            })}
-            </>
-            <div className='add-comment-form'>
-                <input onClick={clearInput} onChange={props.commentTextOnChange} className='add-comment-text' defaultValue='Add a comment.' />
-                <button className='add-comment-button' onClick={addComment}>:</button>
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
 /* PropTypes data type enforcement */

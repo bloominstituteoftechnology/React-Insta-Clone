@@ -8,7 +8,7 @@ const Header = (props) => {
         <div className='header-container'>
             <i className="icon fab fa-instagram fa-3x"></i> |
             <div className='instaham'>Instaham</div>
-            <SearchBar />
+            <SearchBar changeSearchTerm={props.changeSearchTerm}/>
 
             <i className="icon far fa-compass fa-3x"></i>
             <i className="icon far fa-heart fa-3x"></i>
