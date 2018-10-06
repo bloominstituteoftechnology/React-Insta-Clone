@@ -16,7 +16,7 @@ class App extends Component {
     }
   }
   componentDidMount() {
-
+     //Mounting the data after it renders.
     // setTimeout(() => {
 
     // }, 3000)

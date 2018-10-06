@@ -26,14 +26,6 @@ class SearchBar extends React.Component {
     })
     this.props.handleSearch(val)
   }
-  onFocus = event => {
-    event.target.value = "";
-
-  };
-  onBlur = event => {
-    event.target.value = "Search";
-
-  };
 
   render() {
     return (
@@ -47,8 +39,6 @@ class SearchBar extends React.Component {
             <FontAwesomeIcon className="search" icon="search" />
             <input
               value={this.state.search}
-              onFocus={this.onFocus}
-              onBlur={this.onBlur}
               onChange={this.handleInputChange}
               placeholder="Search" />
           </form>
