@@ -5,7 +5,7 @@ import InstaCommentButt from '../../img/comment.png';
 const CommentButton = () => {
     return (
         <div>
-            <img src= {InstaCommentButt} />
+            <img className = "commentButt" src= {InstaCommentButt} />
         </div>
     )
 }

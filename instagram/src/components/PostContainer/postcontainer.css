@@ -1,0 +1,46 @@
+.profilePick {
+    border-radius: 50%;
+    height: 40px;
+}
+
+.profileHead {
+    display: flex;
+    margin: 10px 0px 0px 10px
+}
+
+.profileHead h2 {
+    margin: 0px 0px 20px 10px;
+}
+
+.postImg {
+    width: 100%;
+}
+
+.postBody {
+    margin-left: 20px;
+    border: 1px solid lightgrey;
+}
+
+.commentButt {
+    height: 40px;
+    margin: 0px;
+}
+
+.postIcons {
+    display: flex;
+    margin: 5px 0px 5px 20px;
+}
+
+.postIcons .Like-Button {
+    margin: 5px 0px;
+    height: 27px;
+}
+
+.likeContainer {
+    display: flex;
+    margin: 0px 0px 0px 20px;
+}
+
+.likeContainer h3 {
+    margin: 0px;
+}

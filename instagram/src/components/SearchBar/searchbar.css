@@ -1,11 +1,13 @@
 #root {
-    max-width: 500px;
+    max-width: 540px;
 }
 
 .header {
     display: flex;
     width: 100%;
     max-width: 500px;
+    justify-content: space-between;
+    margin: 30px;
 }
 
 .Insta-Logo-Cam{
@@ -19,6 +21,7 @@
 input {
     height: 15px;
     border-radius: 5px;
+    margin-top: 3px;
 }
 
 .GPS-Button {

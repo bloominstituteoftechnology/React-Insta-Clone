@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import CommentButton from './CommentButton';
 import LikeButton from '../SearchBar/LikeButton';
-
+import './postcontainer.css'
 
 class PostContainer extends Component {
     constructor(){
@@ -11,25 +11,25 @@ class PostContainer extends Component {
 
     render() {
       return (
-        <ul>{this.props.posts.map((post, index) =>{
+        <div className = "postBody">
+        {this.props.posts.map((post, index) =>{
             return(<div key={index}>
-                <div>
-                    <img src={post.thumbnailUrl} ></img>
+                <div className = "profileHead">
+                    <img className = "profilePick" src={post.thumbnailUrl} ></img>
                     <h2>{post.username}</h2>
                 </div>
            
                 <div>
-                    <img src={post.imageUrl} />
+                    <img className = "postImg" src={post.imageUrl} />
                 </div>
                 
-                <div>
+                <div className = "postIcons">
                     <LikeButton />
                     <CommentButton />
                 </div>
 
-                <div>       
-                    <span>{post.likes} <strong>Likes</strong></span>
-                    <span>{post.comments.length} <strong>Comments ...</strong></span>
+                <div className = "likeContainer">       
+                    <h3>{post.likes} Likes</h3>  
                 </div>
                     <CommentSection 
                     Comments={post.comments}
@@ -37,7 +37,7 @@ class PostContainer extends Component {
                     />
                 </div>)  
         })}
-        </ul>
+        </div>
       );
     }
   }

@@ -1,0 +1,20 @@
+.commentBody {
+    display: flex;
+    text-align: justify;
+    margin: 10px 10px 10px 20px;
+}
+
+.commentText {
+    margin-left: 5px;
+}
+
+.timeStamp {
+    display: flex;
+    margin-left: 20px;
+}
+
+.commentInput {
+    width: 93%;
+    margin: 10px 0px;
+    height: 25px;
+}

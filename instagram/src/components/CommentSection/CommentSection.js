@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import './commentsection.css';
 
 
 
@@ -9,15 +10,15 @@ const CommentSection = (props) => {
     return (
       <div>{props.Comments.map(comment =>{
           return (
-            <div>
-                <strong><span>{comment.username}</span></strong> <span>{comment.text}</span>
+            <div className = "commentBody">
+                <strong>{comment.username}</strong><span className = "commentText">{comment.text}</span>
             </div>
           )
       })}
-      <div>{props.timestring}</div>
+      <div className = "timeStamp">{props.timestring}</div>
     
       <div>
-          <input type = 'text' />
+          <input className = "commentInput" type = 'text' />
       </div>
       </div>
     );
