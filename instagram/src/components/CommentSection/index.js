@@ -16,8 +16,8 @@ const CommentSection = props => {
 }
 
 CommentSection.propTypes = {
-	username: PropTypes.string,
-	text: PropTypes.string,
+	username: PropTypes.string.isRequired,
+	text: PropTypes.string.isRequired,
 }
 
 export default CommentSection;

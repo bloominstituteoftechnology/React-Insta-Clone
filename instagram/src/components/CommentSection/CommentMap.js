@@ -12,7 +12,7 @@ const CommentMap = props => {
 }
 
 CommentMap.proptypes = {
-    comment: PropTypes.object
+    comment: PropTypes.object.isRequired,
 }
 
 export default CommentMap;

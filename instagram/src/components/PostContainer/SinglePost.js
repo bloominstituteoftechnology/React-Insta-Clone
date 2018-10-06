@@ -28,8 +28,13 @@ const SinglePost = props => {
 
 SinglePost.PropTypes = {
 	thumbnailUrl: PropTypes.img,
-	username: PropTypes.string,
+	username: PropTypes.string.isRequired,
 	imageUrl: PropTypes.img,
+}
+
+SinglePost.defaultProps = {
+	thumbnailUrl: <img src='http://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg' alt='grey box' />,
+	imageUrl: <img src='http://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg' alt='grey box' />,
 }
 
 export default SinglePost;
