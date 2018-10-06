@@ -26,19 +26,23 @@ class CommentSection extends Component {
         this.setState({ likes : ++this.state.likes})
     }
 
-    changeHandler = (key, value) => {
-        this.setState({ [key] : value })
+    changeHandler = (event) => {
+        this.setState({
+            text : event.target.value
+        })
     }
 
     submitHandler = (event) => {
-        if (event.keyCode === 13 && event.shiftKey === false) {
-            if (this.state.text.length >= 1)
-              event.preventDefault();
+        console.log('Submitted.')
+
+        if (this.state.text.length > 0) {
             this.addNewComment(event);
-          }
-        };
+        }
+    };
 
     addNewComment = (event) => {
+        event.preventDefault();
+
         if (this.state.text) {
             this.setState({
                 comments : [
@@ -49,7 +53,6 @@ class CommentSection extends Component {
                     }
                 ]
             });
-            event.currentTarget.value = null;
         }
     }
 
@@ -62,7 +65,7 @@ class CommentSection extends Component {
                 </section>
                 <p><strong>{this.state.likes} likes</strong></p>
                 <section className="comments">
-                    {this.props.comments.map(comment => (
+                    {this.state.comments.map(comment => (
                         <div>
                             <Comment user={comment.username}
                                     text={comment.text}/>
@@ -71,7 +74,7 @@ class CommentSection extends Component {
                 </section>
                 <section>
                     <AddComment value={this.state.newInput} onSubmit={this.submitHandler} 
-                                onChange={(event) => this.changeHandler("text", event.target.value)}  />
+                                onChange={this.changeHandler}  />
                 </section>
             </section>
         )
