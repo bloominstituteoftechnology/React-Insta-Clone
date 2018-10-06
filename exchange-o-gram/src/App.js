@@ -10,15 +10,33 @@ class App extends Component {
     this.state = {
       posts: [],
     }
+
+    window.onbeforeunload = this.saveData;
+  }
+
+  saveData = ()=>{
+    localStorage.setItem("data", JSON.stringify(this.state.posts));
   }
 
   componentDidMount(){
-    const data = dummyData;
+
+    const loadedData = JSON.parse(localStorage.getItem("data"));
+    let data;
+    if(loadedData === null){
+      data = dummyData;
+    }
+
+    else{
+      data = loadedData;
+    }
+
+    // On first run and refresh show all containers
     data.forEach(obj=>{
       obj.isHidden = false;
     })
+
     this.setState({
-      posts: dummyData
+      posts: data
     });
   }
 

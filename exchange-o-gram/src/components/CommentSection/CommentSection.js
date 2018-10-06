@@ -59,10 +59,15 @@ class CommentSection extends React.Component{
 }
 
 CommentSection.propTypes = {
+    index: PropTypes.number,
+    likes: PropTypes.number,
     comments: PropTypes.arrayOf(PropTypes.shape({
         username: PropTypes.string,
         text: PropTypes.string
-    }))
+    })),
+    timeStamp: PropTypes.string,
+    addLike: PropTypes.func.isRequired,
+    addNewComment: PropTypes.func.isRequired
 }
 
 export default CommentSection;

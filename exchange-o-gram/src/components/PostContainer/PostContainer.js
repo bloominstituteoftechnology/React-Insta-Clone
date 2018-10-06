@@ -31,6 +31,7 @@ class PostContainer extends React.Component{
 }
 
 PostContainer.propTypes = {
+    index: PropTypes.number,
     post: PropTypes.shape({
         username: PropTypes.string,
         thumbnailUrl: PropTypes.string,
@@ -41,7 +42,9 @@ PostContainer.propTypes = {
             username: PropTypes.string,
             text: PropTypes.string
         }))
-    })
+    }),
+    addLike: PropTypes.func.isRequired,
+    addNewComment: PropTypes.func.isRequired
 }
 
 export default PostContainer;
