@@ -11,7 +11,7 @@ class SearchBar extends React.Component {
                     <h1>Instagram</h1>
                 </div>
                 <div class="search-field">
-                    <input />
+                    <input placeholder="Search" />
                 </div>
                 <div class="links">
                     <i class="far fa-compass"></i>
