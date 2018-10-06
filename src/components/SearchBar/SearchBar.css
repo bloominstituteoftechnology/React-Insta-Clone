@@ -5,6 +5,16 @@
     height: 70px;
 }
 
+.search-box{
+    height: 40px;
+    display: flex;
+}
+
+.search-icon {
+
+border: 1px solid red;
+}
+
 input {
     width: 200px;
     height: 20px;
@@ -30,4 +40,7 @@ input {
     font-size: 22px;
     color: black;
     padding: 15px;
+}
+.search {
+
 }

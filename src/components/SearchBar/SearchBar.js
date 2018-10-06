@@ -9,13 +9,12 @@ import './SearchBar.css';
                     <div class = "logo-wrapper">
                         <img class= "logo" src="https://vignette.wikia.nocookie.net/logopedia/images/a/aa/Instagram_wordmark.svg/revision/latest?cb=20140110161419" alt="instagram wordmark" />
                     </div>
-                    <div>
+                    <div className="search-box">
                          <input type="text" placeholder= "Search" name= "search" />
-                         
-                         <div className="search">
-                         <i class="fa fa-search"></i>
-                         </div>
-                     </div>
+                            <div className="search-icon">
+                                <i class="fa fa-search"></i> 
+                            </div>
+                    </div>
 
                 <div class="icon-wrapper">
                      <div className="social">
