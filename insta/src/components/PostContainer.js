@@ -10,7 +10,7 @@ const PostContainer = props => {
             {props.posts.map(post => (
                 <div className='post-tunnel' key={post.timestamp}>
                     <Post post={post} />
-                    <CommentSection comments={post.comments} likes={post.likes}/>
+                    <CommentSection comments={props.comments[post.index]} likes={post.likes} index={post.index} commentInput={props.commentInput} handleSubmit={props.handleSubmit} addNewComment={props.addNewComment}/>
                 </div>
             ))}
         </div>

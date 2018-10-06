@@ -20,7 +20,7 @@ const CommentSection = props => {
                 </div>
             ))}
         </div>
-        <input className='comment-input' type='text' placeholder='Comment' />
+        <input className='comment-input' type='text' placeholder='Comment' value={props.commentInput} onChange={props.handleSubmit} onKeyPress={(e) => props.addNewComment(props.index, e)}/>   
       </>  
     );
 }

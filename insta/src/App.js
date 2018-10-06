@@ -22,19 +22,50 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      comments: [],
+      commentInput: ''
     };
   }
 
   componentDidMount() {
-    this.setState({data: dummyData});
+    const comments = [];
+
+    dummyData.map(data => {
+      return comments.push(data.comments);  
+    })
+
+    this.setState({
+      data: dummyData,
+      comments: comments
+    });
+  }
+
+  addNewComment = (index, event) => {
+    if(event.which === 13) {
+      this.setState({
+        commentInput: '',
+        comments: this.state.comments[index].push({
+          username: 'Cyanide6033',
+          text: event.target.value,
+          id: Date.now()
+        })
+      })
+      console.log(this.state.comments);
+    }
+  }
+
+  handleSubmit = event => {
+      this.setState({
+        commentInput: event.target.value
+      });
   }
 
   render() {
     return (
       <>
         <SearchBar />
-        <PostContainer posts={this.state.data}/>
+        <PostContainer posts={this.state.data} comments={this.state.comments} commentInput={this.state.commentInput} handleSubmit={this.handleSubmit} addNewComment={this.addNewComment} />
       </>
     );
   }
