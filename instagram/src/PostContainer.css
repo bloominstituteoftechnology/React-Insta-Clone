@@ -35,3 +35,22 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
 }
+
+.posterID {
+    display: flex;
+    align-items: center;
+}
+
+h4 {
+    margin-right:10px;
+}
+
+.commentSection {
+    
+    display:flex;
+    margin:0px;
+    flex-direction:column;
+    align-items:flex-start;
+    text-align:left;
+    
+}

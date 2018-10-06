@@ -11,7 +11,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      comments:[],
+      posts:dummyData,
     } 
   }
 
@@ -45,7 +45,7 @@ class App extends Component {
     return (
       <div className="App">
       <SearchBar value={this.state.search} inputHandler={this.inputHandler} searchClickHandler={this.searchClickHandler}/>
-      <PostContainer posts={dummyData}/>
+      <PostContainer posts={this.state.posts}/>
       </div>
     );
   }
