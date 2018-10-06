@@ -2,6 +2,7 @@ import React from 'react';
 import Comment from '../CommentSection/Comment';
 import './post.css';
 
+
 import PropTypes from 'prop-types';
 
 
@@ -19,18 +20,32 @@ comments: [
 */
 
 const PostContainer = (props) => {
+    function clickHandler() {
+        props.clickHandler(props.timestamp);
+    }
+
+    function addComment() {
+        props.addCommentClickHandler(props.timestamp);
+    }
+
+    function clearInput(event) {
+        if (event.target.value === 'Add a comment.') {
+            event.target.value = '';
+        }
+    }
+
     return (
         <div className='post-container'>
             <div className='post-header'>
                 <img className='thumbnail' src={props.thumbnailUrl} alt={props.username} />
                 <p>{props.username}</p>
             </div>
-            <img src={props.imageUrl} />
+            <img src={props.imageUrl} alt={props.username}/>
             <div className='likes-section'>
                 {/*Get images for the likes*/}
-                <img />
-                <img />
-                <p>{props.likes} likes</p>
+                <i className="far fa-heart fa-2x" onClick={clickHandler}></i>
+                <i className="far fa-comment fa-2x"></i>
+                <p>{props.likes}</p>
             </div>
             <>
             {props.comments.map(item => {
@@ -42,7 +57,10 @@ const PostContainer = (props) => {
                 )
             })}
             </>
-            <input defaultValue='Add a comment.' />
+            <div className='add-comment-form'>
+                <input onClick={clearInput} onChange={props.commentTextOnChange} className='add-comment-text' defaultValue='Add a comment.' />
+                <button className='add-comment-button' onClick={addComment}>:</button>
+            </div>
         </div>
     )
 }

@@ -1,9 +1,38 @@
 .post-container {
     display: flex;
     flex-direction: column;
-
-    border: 2px solid brown;
+    /*border: 2px solid brown;*/
     margin: 5% auto;
+}
+
+.likes-section {
+    margin: 1% 0;
+}
+
+.likes {
+    margin: 5px;
+    padding-left: 10px;
+    cursor: default;
+    width: 20%;
+    border: none;
+}
+
+.add-comment-form {
+    margin: 2% 0;
+    display: flex;
+    opacity: 0.5;
+    border: 1px solid black;
+}
+
+.add-comment-text {
+    display: inline;
+    width: 90%;
+    height: 25px;
+}
+
+.add-comment-button {
+    width: 10%;
+    display: inline;
 }
 
 .post-header {
@@ -19,3 +48,4 @@
     border-radius: 25px;
     margin: 10px;
 }
+

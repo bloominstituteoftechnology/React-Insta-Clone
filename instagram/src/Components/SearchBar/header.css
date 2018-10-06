@@ -1,5 +1,22 @@
 .header-container {
-    border: 1px solid orange;
+    /*border: 1px solid orange;*/
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    margin: 1%;
+}
+
+.search {
+    width: 200px;
+    height: 25px;
+    margin: 5px;
+}
+
+.instaham {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.8rem;
+    margin: 1%;
 }
