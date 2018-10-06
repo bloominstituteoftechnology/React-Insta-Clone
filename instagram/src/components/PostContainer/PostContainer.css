@@ -1,11 +1,30 @@
 .post {
     border: 2px solid red;
     text-align: left;
+
+
+}
+
+.post p {
+    display: flex;
+    align-items: center;
+
+
 }
 
 .like-icons {
-    /* display: flex;
-    justify-content: flex-start; */
+    opacity: .6;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.like-icons a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.like-icons .fa-comment{
+    margin: 0 15px;
 }
 
 .likes {
