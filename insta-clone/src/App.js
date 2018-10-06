@@ -10,7 +10,9 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      data: []
+      data: [],
+      search: ''
+
     }
   }
   componentDidMount() {
@@ -22,14 +24,29 @@ class App extends Component {
     this.setState({data: dummyData})
   }
 
+
+  handleSearch = str => {
+    const filteredPost = dummyData.filter(post => {
+      return post.username.includes(str)
+    })
+    this.setState({data: filteredPost})
+
+}
+
   render() {
     if (!this.state.data.length) {
            return <h4>Loading Post....</h4>
-         }
+    }
+
+
     return (
       <>
         <div className="SearchBar">
-          <SearchBar />
+          <SearchBar dummyData={this.state.data}
+            handleSearch={this.handleSearch}
+            handleInputChange={this.handleInputChange}
+
+          />
         </div>
         <div className="PostContainer">
           <PostContainer dummyData={this.state.data} />

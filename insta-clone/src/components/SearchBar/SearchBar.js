@@ -12,30 +12,59 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faUser, faCompass, faHeart, faSearch);
 
-const SearchBar = () => {
-  return (
-    <div className="search-container">
-      <div className="search-content">
-        <img className="img-clone" src={instacloneimg} alt="insta-clone" />
-        <h2>|</h2>
-        <h1>Instagram</h1>
+class SearchBar extends React.Component {
+  constructor(props) {
+    super()
+    this.state = {
+      search: ''
+    }
+  }
+  handleInputChange = e => {
+    const val = e.target.value;
+    this.setState({
+      search: val
+    })
+    this.props.handleSearch(val)
+  }
+  onFocus = event => {
+    event.target.value = "";
 
-        <form>
-          <FontAwesomeIcon className="search" icon="search" />
-          <input type="search" placeholder="Search" />
-        </form>
+  };
+  onBlur = event => {
+    event.target.value = "Search";
 
-        <div className="search icon-content">
-          <FontAwesomeIcon className="compass" icon={["far", "compass"]} />{" "}
-          <FontAwesomeIcon className="heart" icon={["far", "heart"]} />{" "}
-          <FontAwesomeIcon className="user" icon={["far", "user"]} />
+  };
+
+  render() {
+    return (
+      <div className="search-container">
+        <div className="search-content">
+          <img className="img-clone" src={instacloneimg} alt="insta-clone" />
+          <h2>|</h2>
+          <h1>Instagram</h1>
+
+          <form>
+            <FontAwesomeIcon className="search" icon="search" />
+            <input
+              value={this.state.search}
+              onFocus={this.onFocus}
+              onBlur={this.onBlur}
+              onChange={this.handleInputChange}
+              placeholder="Search" />
+          </form>
+
+          <div className="search icon-content">
+            <FontAwesomeIcon className="compass" icon={["far", "compass"]} />{" "}
+            <FontAwesomeIcon className="heart" icon={["far", "heart"]} />{" "}
+            <FontAwesomeIcon className="user" icon={["far", "user"]} />
+          </div>
+        </div>
+        <div>
+          <hr />
         </div>
       </div>
-      <div>
-        <hr />
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default SearchBar;

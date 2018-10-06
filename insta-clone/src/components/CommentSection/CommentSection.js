@@ -22,21 +22,12 @@ class CommentSection extends React.Component {
     };
 
   }
-componentDidMount =() =>{
-  this.hydrateStateWithLocalStorage()
-}
-  
-  componentWillUnmount = () =>{
-    window.removeEventListener(
-      "beforeunload",
-  
-    );
-    this.saveStateToLocalStorage();
-    }
-    
+
+
     addALike = e =>{
       this.setState({ likes: this.state.likes + 1})
-    }
+  }
+
   addNewComment = e => {
     console.log(e);
     if (this.state.text) {
@@ -51,12 +42,11 @@ componentDidMount =() =>{
       });
       e.currentTarget.value = null;
     }
-    localStorage.setItem("text", "");
-    localStorage.setItem("username", "");
+
   };
-  handleChange = (key, value)=> {
-  this.setState({ [key]: value });
-  localStorage.setItem(key, value);
+  handleChange = (e)=> {
+  this.setState({text: e.target.value});
+
   };
 
   handleSubmit = e => {
@@ -64,32 +54,15 @@ componentDidMount =() =>{
       if (this.state.text.length >= 1)
         e.preventDefault();
       this.addNewComment(e);
+      this.setState({text:''})
     }
+
   };
 
-hydrateStateWithLocalStorage= () => {
 
-  for(let key in this.state) {
-    if(localStorage.hasOwnProperty(key)) {
-      let value = localStorage.getItem(key)
-
-      try {
-        value = ''
-        this.setState({key: value})
-      }
-      catch (e) {
-        this.setState({key: value})
-      }
-    }
-  }
-  }
 
   saveStateToLocalStorage = () => {
-    // for every item in React state
-    for (let key in this.state) {
-      // save to localStorage
-      localStorage.setItem(key, this.state.text);
-    }
+
   }
 
   render() {
@@ -121,7 +94,7 @@ hydrateStateWithLocalStorage= () => {
           <textarea
             className="add-comment"
             value={this.state.text}
-            onChange={e=> this.handleChange("text", e.target.value)}
+            onChange={this.handleChange}
             onKeyDown={this.handleSubmit}
             placeholder="Add comment..."
           />
