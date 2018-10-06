@@ -10,7 +10,8 @@ class App extends Component {
     super();
     this.state = {
       comments:[],
-      search: '🔍 Search',
+
+      search: '⚲ Search',
     } 
   }
 
@@ -22,11 +23,33 @@ class App extends Component {
     );
     }
 
+    searchClickHandler = event => {
+      this.setState (
+        {search:''}
+      )
+    }
+
+    submitHandler = event => {
+      event.preventDefault();
+  
+        const obj = {
+          task: this.state.task,
+          id: Date.now(),
+          completed: false,
+          important:false,
+        }
+  
+        this.setState({
+          comments: [...this.state.todo, obj],
+          task: "",
+        });
+    }
+
 
   render() {
     return (
       <div className="App">
-      <SearchBar value={this.state.search} inputHandler={this.inputHandler} />
+      <SearchBar value={this.state.search} inputHandler={this.inputHandler} searchClickHandler={this.searchClickHandler}/>
       <PostContainer />
       </div>
     );

@@ -1,5 +1,7 @@
 import React from 'react';
 import './PostContainer.css';
+import CommentSection from './CommentSection';
+
 const PostContainer = (props) => {
     return (
     <section>
@@ -16,8 +18,8 @@ const PostContainer = (props) => {
     <img src="https://www.tryviews.com/wp-content/uploads/2017/09/Buy-Instagram-Custom-Comments.png" alt=""/>
 
     </div>
-    <h2> 0 Likes </h2>    
-    <span> <h2>CrazyOne</h2> This is awesome!</span>
+    <h2> 0 Likes </h2> 
+    <CommentSection />
     <form>
         <input value={props.value} onChange={props.inputHandler}></input>
     </form>
