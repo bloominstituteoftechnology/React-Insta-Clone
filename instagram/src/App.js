@@ -12,22 +12,55 @@ class App extends Component {
     super();
     this.state = {
       data: [],
+      searchValue: ''
     }
   }
 
   componentDidMount() {
     this.setState({ data: dummyData });
   }
+
+  searchInputHandler = (event) => {
+    event.preventDefault();
+    this.setState({
+      searchValue: event.target.value
+    })
+    console.log(this.state.searchValue)
+  }
+
+  searchSubmitHandler = (event) => {
+    event.preventDefault();
+    let searchValue = this.state.searchValue
+    this.setState({
+      data: this.state.data.filter(post => post.username === searchValue)
+    })
+    
+    // this.state.data.map(post => {
+    //   if (searchValue === post.username) {
+        
+    //   } else {
+    //     this.setState({
+    //       data: this.state.data
+    //     })
+    //   }
+    // })
+
+  }
   
   render() {
 
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar 
+          searchValue={this.state.value} 
+          searchInputHandler={this.searchInputHandler} 
+          searchSubmitHandler={this.searchSubmitHandler} 
+          />
+
         <div className="posts">
           {this.state.data.map(user => {
             return (
-              <div key={user.timestamp}>
+              <div>
               <PostContainer
                 key={user.timestamp}
                 username={user.username}

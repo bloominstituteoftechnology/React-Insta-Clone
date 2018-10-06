@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 import AddComment from '../AddComment/AddComment';
@@ -29,6 +30,14 @@ class PostContainer extends React.Component {
         })
       }
 
+      likeHandler = () => {
+          let addLike = this.state.likes
+          this.setState({
+            likes: ++addLike
+          })
+          
+      }
+
     render() {
         return (
         <div className="postContainer">
@@ -42,6 +51,10 @@ class PostContainer extends React.Component {
                 </div>
 
                 <div className="likes">
+                    <div className="likesIcons">
+                    <i className="far fa-heart" onClick={this.likeHandler}></i>
+                    <i class="far fa-comment"></i>
+                    </div>
                     {this.state.likes} Likes
                 </div>  
             </div>
@@ -74,5 +87,17 @@ class PostContainer extends React.Component {
 
     }
 };
+
+PostContainer.propTypes ={
+    key: PropTypes.string,
+    username: PropTypes.string,
+    icon: PropTypes.string,
+    image: PropTypes.string,
+    likes: PropTypes.number,
+    timestamp: PropTypes.string,
+    comments: PropTypes.string,
+    inputHandler: PropTypes.func,
+    submitHandler: PropTypes.func,
+}
 
 export default PostContainer;
