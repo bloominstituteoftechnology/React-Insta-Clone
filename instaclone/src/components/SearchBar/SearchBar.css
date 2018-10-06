@@ -1,0 +1,47 @@
+
+
+.container{
+  margin-top:10px;
+  font-family: 'Grand Hotel', cursive;
+  display:flex;
+  align-items: center;
+  width:100%;
+}
+
+#instagram {
+margin-left:10px;
+height:50px;
+width:50px;
+padding-right:50px;
+padding:5px 30px 0 20px;
+border-right: 1px solid black;
+}
+
+h2{
+margin-left:20px;
+}
+
+.search{
+margin-left:175px;
+height:20px;
+width:200px;
+display:flex;
+justify-content: center;
+background-color: rgb(249,249,249);
+text-align: center;
+font-size:15px;
+}
+
+.icons{
+display:flex;
+width:175px;
+height:30px;
+
+justify-content: space-around;
+margin-left:175px;
+align-items: center;
+}
+
+
+
+

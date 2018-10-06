@@ -1,0 +1,12 @@
+.postContainer{
+height:100%;
+width:600px;
+border:1px solid black;
+margin-bottom:50px;
+}
+
+#mainPost{
+  height:500px;
+  width:100%;
+
+}
