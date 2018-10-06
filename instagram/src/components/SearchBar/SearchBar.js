@@ -11,7 +11,10 @@ class SearchBar extends React.Component {
         return (
             <div className="searchBar">
                 <div><img className="header" src={logos} alt="logo" /></div>
-                <div><img className="search" src={search} alt="rainbowheart" /></div>
+                <div>
+                    <form className="form"><input onChange={this.props.handler} type="text" placeholder=" Search 🔍"/>
+                    </form>
+                </div>
                 <div className="compheartfriend">
                     <img className="icons" src={compass} alt="compass" />
                     <img className="icons" src={heart} alt="heart" />

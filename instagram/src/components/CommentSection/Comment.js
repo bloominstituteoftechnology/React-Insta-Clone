@@ -10,5 +10,8 @@ class Comment extends React.Component {
         );
     }
 }
-
+Comment.defaultProps = {
+    commentUsername: 'no username supplied',
+    commentText: 'no text supplied',
+}
 export default Comment

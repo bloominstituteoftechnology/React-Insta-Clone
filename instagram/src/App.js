@@ -3,15 +3,43 @@ import './App.css';
 import dummydata from './dummy-data'
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
-import PropTypes from 'prop-types';
+
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      allUserData: [],
+      searchInput:'',
+      }
+  }
+  searchHandler = (event) => {
+    this.setState({
+      searchInput: event.target.value
+    },
+      console.log(this.state.searchInput)
+    )
+  }
+  filter = (event) => {
+    event.preventDefault();
+    this.setState({
+      allUserData: this.state.allUserData.filter((obj) => {
+        return obj.username === this.state.searchInput;
+      })
+    })
+      console.log(this.state.textInput)
+    
+
+  }
+  componentDidMount(){
+    this.setState({allUserData:dummydata})
+  }
   render() {
     
     return (
       <div className="App">
-      <SearchBar/>
+      <SearchBar handler={this.searchHandler}/>
         <>
-          {dummydata.map(obj => {
+          {this.state.allUserData.map(obj => {
             return (
 
               <PostContainer key={obj.timestamp} InstaData={obj} CommentArray={obj.comments} />
@@ -25,19 +53,5 @@ class App extends Component {
     );
   }
 }
-App.propTypes = {
-dummydata: PropTypes.arrayOf(
-  PropTypes.shape({
-    username: PropTypes.string,
-    thumbnailUrl: PropTypes.string,
-    imageUrl: PropTypes.string,
-    likes: PropTypes.number,
-    timestamp: PropTypes.string,
-    comments: PropTypes.arrayOf(
-      PropTypes.shape({
-        username: PropTypes.string,
-        text: PropTypes.string,
-      })
-    )}).isRequired)
-}
+
 export default App;

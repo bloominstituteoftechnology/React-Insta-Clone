@@ -6,7 +6,7 @@
     border-bottom: 1px solid lightgray;
     height:175px;
     margin-bottom: 50px;
-   margin-top:-80px;
+   
 }
 .icons{
     width:50px;
@@ -16,4 +16,7 @@
 .compheartfriend{
     display:flex;
     align-items:center;
+}
+.form{
+    margin-top:120px;
 }
