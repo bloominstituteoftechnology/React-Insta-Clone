@@ -8,7 +8,7 @@ const SearchBar = (props) => {
         return (
             <div className='searchBar'>
                 <Logo />
-                <Search />
+                <Search data={props.data}/>
                 <Icons />
             </div>
         )

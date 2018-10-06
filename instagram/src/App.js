@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <SearchBar />
+          <SearchBar data={this.state.data}/>
           { this.state.data === 0 ? 
               ( <h2>Loading...</h2> ) : 
               ( <PostContainer data={this.state.data} /> ) 
