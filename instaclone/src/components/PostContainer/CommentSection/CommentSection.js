@@ -7,7 +7,8 @@ class CommentSection extends Component {
     super(props);
     this.state = {
       comments: this.props.comment,
-      newComment: ""
+      newComment: "",
+      likes: 0
     };
   }
   commentInput = e => {
@@ -28,15 +29,24 @@ class CommentSection extends Component {
     this.setState({
       comments: commentList
     });
-	event.target.reset();
+    event.target.reset();
   };
-  handleSubmit(e){
-    e.preventDefault();
-    e.target.reset();
-}
+
+addLike = (event) => {
+   let newLikes = this.state.likes
+   ++newLikes;
+    this.setState({ likes: newLikes });
+  };
   render() {
     return (
       <div>
+        <div className="likeSection">
+			<div className="heartIcons">
+          <i class="far fa-heart" onClick={this.addLike} />
+          <i className="far fa-comment" />
+		  </div>
+          <p>Likes:{this.state.likes}</p>
+        </div>
         {this.state.comments.map(item => {
           return (
             <div>

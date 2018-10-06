@@ -34,3 +34,18 @@ color:gray;
 width:100%;
 }
 
+.heartIcons{
+display:flex;
+flex-direction: row;
+width:60px;
+justify-content: space-around;
+font-size:20px;
+}
+
+.likeSection{
+  display:flex;
+  flex-direction: column;
+}
+
+
+
