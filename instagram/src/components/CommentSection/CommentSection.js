@@ -27,7 +27,7 @@ class CommentSection extends Component {
         });
       };
 
-      submitHandler = (event) => {
+      addNewComment = (event) => {
         if (this.state.input) {
             this.setState({
                 comments: [
@@ -42,11 +42,11 @@ class CommentSection extends Component {
         }
       };
 
-      handleSubmit = event => {
+      enterHandler = event => {
         if (event.keyCode === 13 && event.shiftKey === false) {
-          if (this.state.text.length >= 1)
+          if (this.state.input.length >= 1)
             event.preventDefault();
-          this.submitHandler(event);
+          this.addNewComment(event);
         }
       };
 
@@ -64,8 +64,16 @@ class CommentSection extends Component {
                     </div>
                     ))}
                 <p>{this.props.data.timestamp}</p>
-                <input value={this.state.input} onChange={this.commentHandler} onKeyDown={this.enterHandler} defaultValue="Add a comment..."></input>
-                <button onClick={this.submitHandler}>Submit</button>
+                
+                <form onSubmit={this.addNewComment}>
+                    <textarea
+                        value={this.state.input} 
+                        onChange={this.commentHandler} 
+                        onKeyDown={this.enterHandler} 
+                        placeholder="Add a comment..."
+                         />
+                </form>
+                
             </div>
             
     )
