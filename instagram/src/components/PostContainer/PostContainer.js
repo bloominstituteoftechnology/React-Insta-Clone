@@ -7,8 +7,14 @@ class PostContainer extends React.Component {
 
     render() {
         return (
-            <div>PostContainer
-                <CommentSection />
+            <div>
+                <img src={this.props.post.thumbnailUrl} alt="Thumbnail" />
+                <h2>{this.props.post.username}</h2>
+                <img src={this.props.post.imageUrl} alt="Post" />
+                <p>{this.props.post.likes} likes</p>
+                {this.props.post.comments.map(comment => (
+                    <CommentSection comment={comment} />
+                ))}
             </div>
         )
     }
