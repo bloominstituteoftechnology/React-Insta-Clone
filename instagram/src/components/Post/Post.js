@@ -1,22 +1,23 @@
-import React, { Component } from "react";
+import React from 'react';
 import "./Post.css";
+import PropTypes from 'prop-types';
 
-class Post extends Component {
-  render() {
-    return (
-      <div>
-        <div>
-          <img src={this.props.thumbnail} alt="" />
-          <p>{this.props.username}</p>
-        </div>
-        <div>
-          <img src={this.props.imageUrl} alt="" />
-        </div>
-       
-        <p>{this.props.likes} likes</p>
-      </div>
-    );
-  }
+const Post = props => {
+  return (
+      <>
+          <div className='flex-column-container'>
+              <img className='thumbnail' src={props.post.thumbnailUrl} alt={'user'}></img>
+              <p>{props.post.username}</p>
+          </div>
+          <div>
+              <img className='img' src={props.post.imageUrl} alt={'post-img'}></img>
+          </div>
+      </>
+  );
+};
+
+Post.propTypes = {
+  post: PropTypes.object
 }
 
 export default Post;

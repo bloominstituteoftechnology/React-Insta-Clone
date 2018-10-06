@@ -1,13 +1,13 @@
-import React from 'react';
-import logo from '../assets/logo.png';
-import logoName from '../assets/instagram.png';
+import React from 'react'
+import './searchbar.css';
+
 
 const Logo = () => {
     
     return(
         <div className='logo'>
-            <img className='logoIcon' src={logo} alt=''/>
-            <img className='logoName' src={logoName} alt=''/>
+           <img className = 'logoIcon' src={require('../assets/logo.png')} alt={'insta-camera'}></img>
+           <img className = 'logoName' src={require('../assets/instagram.png')} alt={'insta-logo'}></img>
         </div>
     );
 };
