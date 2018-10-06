@@ -5,10 +5,19 @@ import PropTypes from 'prop-types';
 import './comments.css';
 
 class CommentsContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { comments: this.props.comments };
+    console.log(this.props);
+  }
+
   render() {
+    if (!this.state.comments) {
+      return <div>Loading Data...</div>;
+    }
     return (
       <div className="comments">
-        {this.props.comments.map(x => {
+        {this.state.comments.map(x => {
           return <Comment username={x.username} text={x.text} />;
         })}
         <AddComment />

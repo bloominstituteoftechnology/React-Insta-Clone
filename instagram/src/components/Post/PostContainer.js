@@ -8,7 +8,7 @@ import './post.css';
 
 class PostContainer extends React.Component {
   render() {
-    console.log(this.props.data);
+    // console.log(this.props.data);
     return (
       <div>
         {this.props.data.map(x => {

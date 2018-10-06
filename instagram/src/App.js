@@ -10,11 +10,23 @@ class App extends Component {
     super();
     this.state = {};
   }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ dummyData });
+    }, 1000);
+  }
+
   render() {
+    // console.log(this.state);
+    if (!this.state.dummyData) {
+      return <div>Loading Data...</div>;
+    }
+
     return (
       <div className="App">
         <SearchBarContainer />
-        <PostContainer data={dummyData} />
+        <PostContainer data={this.state.dummyData} />
       </div>
     );
   }
