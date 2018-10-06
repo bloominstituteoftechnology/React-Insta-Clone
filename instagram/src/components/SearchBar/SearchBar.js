@@ -1,22 +1,21 @@
-import React from 'react'
+import React from 'react';
 import './SearchBar.css';
 
 class SearchBar extends React.Component {
 
     render() {
         return (
-            <div class="search-bar">
-                <div class="company-logo">
-                    <div><i class="fab fa-instagram"></i></div>
-                    <h1>Instagram</h1>
+            <div className="search-bar">
+                <div className="company">
+                    <h1><i className="fab fa-instagram">&nbsp;|&nbsp;</i>instagram</h1>
                 </div>
-                <div class="search-field">
-                    <input placeholder="Search" />
+                <div className="search">
+                    <input placeholder="&#8981;&nbsp;Search" />
                 </div>
-                <div class="links">
-                    <i class="far fa-compass"></i>
-                    <i class="far fa-heart"></i>
-                    <i class="far fa-user"></i>
+                <div className="links">
+                    <i className="far fa-compass"></i>
+                    <i className="far fa-heart"></i>
+                    <i className="far fa-user"></i>
                 </div>
             </div>
         )

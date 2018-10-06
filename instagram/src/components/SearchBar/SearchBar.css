@@ -1,0 +1,9 @@
+.search-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    text-align: center;
+}
