@@ -1,31 +1,40 @@
 .Container {
-  
+  display: flex;
+
 }
 
-.Post-user-row{
+.Post-user-row {
 
 }
 
 .Post-thumbnail {
-
-}
+  width: 20px;
+  height: 20px;
+} 
 
 .Post-image {
-
-}
+  width:  200px; 
+  height:  200px;
+justify-content: center;
+} 
 
 .Icon-row {
 
+} 
+
+.Stats-row {
+
 }
 
-.Comments{
+.Comments {
 
 }
 
 .Timestamp {
 
-}
+} 
 
 .AddComment {
+
+} 
   
-}

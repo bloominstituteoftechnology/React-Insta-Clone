@@ -5,15 +5,15 @@ import CommentSection from "../CommentSection/CommentSection";
 const PostContainer = props => {
   console.log(props);
   return (
-    <div>
+    <div className="Container">
       <h2>Current Posts</h2>
       <div className="Post-user-row">
         <span>
           <img className="Post-thumbnail"
             src={props.thumbnailUrl}
             alt="user thumbnail"
-            width={30}
-            height={30}
+            // width={30}
+            // height={30}
           />
         </span>
         <span>{props.username}</span>
@@ -24,6 +24,9 @@ const PostContainer = props => {
       </div>
       <div className="Icon-row">
 
+      </div>
+      <div className="Stats-row">
+        
       </div>
       <div className="Comments">
         <CommentSection commentProps={props.comments}  />
