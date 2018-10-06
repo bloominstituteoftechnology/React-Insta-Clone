@@ -41,7 +41,7 @@ class CommentSection extends React.Component {
          this.addNewComment(event);
      }
    };
-   
+
 
 render(){
   return (
@@ -62,7 +62,7 @@ render(){
       <hr/> 
       <div className="pageFooter">
 
-      <form onSubmit={this.addNewComment}>
+      <form className="comment-form" onSubmit={this.addNewComment}>
         <textarea
           value={this.state.input} 
           onChange={this.commentHandler} 
