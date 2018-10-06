@@ -10,9 +10,9 @@ class CommentSection extends Component {
         super(props);
 
         this.state = {
-            comments: [],
-            commentInput: '',
-
+            comments: props.comments,
+            likes: props.likes,
+            text: '',
         }
     }
 
@@ -22,18 +22,44 @@ class CommentSection extends Component {
         })
     }
 
-    addNewComment = (event, index) => {
-        event.preventDefault();
+    addLike = () => {
+        this.setState({ likes : ++this.state.likes})
+    }
+
+    changeHandler = (key, value) => {
+        this.setState({ [key] : value })
+    }
+
+    submitHandler = (event) => {
+        if (this.state.text.length >= 1) {
+            event.preventDefault();
+            this.addNewComment();
+        }
+    }
+
+    addNewComment = (event) => {
+        if (this.state.text) {
+            this.setState({
+                comments : [
+                    ...this.state.comments,
+                    {
+                        username : 'cpdis',
+                        text: this.state.text,
+                    }
+                ]
+            });
+            event.currentTarget.value = null;
+        }
     }
 
     render () {
         return (
             <section className="comment-container">
                 <section className="comment-icons">
-                    <FontAwesomeIcon icon='heart' />
+                    <FontAwesomeIcon icon='heart' onClick={this.addLike} />
                     <FontAwesomeIcon icon='comment-alt' />
                 </section>
-                <p><strong>{this.props.comments.likes} likes</strong></p>
+                <p><strong>{this.state.likes} likes</strong></p>
                 <section className="comments">
                     {this.props.comments.map(comment => (
                         <div>
@@ -43,7 +69,7 @@ class CommentSection extends Component {
                     ))}
                 </section>
                 <section className="add-comment">
-                    <AddComment value={this.props.commentInput} onSubmit={this.props.onSubmit} onChange={this.props.onChange} />
+                    <AddComment value={this.props.newInput} onSubmit={this.props.addNewComment} onChange={this.props.newInput} />
                 </section>
             </section>
         )
