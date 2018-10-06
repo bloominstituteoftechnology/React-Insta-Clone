@@ -44,3 +44,7 @@
     width: 90%;
     border: 0px;
 }
+
+input:focus {
+    outline: none;
+}
