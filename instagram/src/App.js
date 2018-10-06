@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
-import CommentSection from './components/CommentSection/CommentSection';
+
 
 import './App.css';
 
@@ -11,7 +11,16 @@ class App extends Component {
     super();
     this.state={
       dummyData: dummyData,
+      comments: dummyData.comments,
     };
+  }
+
+  componentDidMount(){
+    this.setState({
+      dummyData: dummyData,
+      comments: dummyData.comments,
+    })
+  
   }
 
   render() {
@@ -20,12 +29,13 @@ class App extends Component {
         <SearchBar />
         {this.state.dummyData.map(item => {
           return(
-            <PostContainer key={item.timestamp} post={item} /> 
+            <PostContainer key={item.timestamp} post={item} comments={item.comments}  /> 
           )}) 
         }
       </div>
     );
   }
 }
+
 
 export default App;
