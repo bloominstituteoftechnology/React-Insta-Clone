@@ -7,9 +7,9 @@ import instaname from './instaname.png'
 const IconSearchBar = (props) => {
     return (
         <div className="icon-container">
-            <a href="#"><img className="instacam" src={instacam} alt="instagram camera picture" /></a>
+            <img className="instacam" src={instacam} alt="instagram camera logo" />
             <p className="search line">|</p>
-            <a href="#"><img className="instaname" src={instaname} alt="instagram name pic" /></a>
+            <img className="instaname" src={instaname} alt="instagram name" />
         </div>
     )
 };

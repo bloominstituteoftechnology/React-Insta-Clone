@@ -6,7 +6,7 @@ const CommentSection = (props) => {
     return(
         <>
         <i class="far fa-heart icon"></i>
-        <i class="far fa-comment icon comment" id="comment"></i>
+        <i class="far fa-comment icon comment"></i>
         <p className="likes"><strong>{props.likes}</strong></p>
         
         {props.comArray.map(item =>{
@@ -15,7 +15,7 @@ const CommentSection = (props) => {
             )
         })}
         <p>{moment().startOf('hour').fromNow() }</p>
-        <input placeholder="Add Comment..."></input>
+        <input className="comment-input" placeholder="Add Comment..."></input>
         <i class="fas fa-ellipsis-h icon"></i>
         </>
     )
