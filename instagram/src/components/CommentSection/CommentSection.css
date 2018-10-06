@@ -29,3 +29,10 @@ button {
     border: none;
     cursor: pointer;
 }
+
+.underPic {
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    margin: 0 auto;
+}

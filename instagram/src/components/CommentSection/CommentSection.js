@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import heart from '../../heart.svg';
+import convo from '../../convo.svg';
 import './CommentSection.css'
 
 
@@ -8,7 +10,8 @@ class CommentSection extends React.Component {
         super(props);
         
         this.state = {
-            comment: this.props.comment
+            comment: this.props.comment,
+            likes: this.props.likes
         }
     }
 
@@ -40,9 +43,21 @@ class CommentSection extends React.Component {
   }
 }
 
+    addLike = (e) => {
+        this.setState({ likes: this.state.likes + 1 })
+    }
+
     render(){
     return (
         <div>
+            <div className="underPic">
+                <div className="icons">
+                    <img src={heart} width="25px" onClick={this.addLike}/>
+                    <img src={convo} width="25px"/>
+                </div>
+                <p>{this.props.time}</p>
+            </div>
+            <h2 id="likes">{this.state.likes} likes</h2>
           {this.state.comment.map(comment => (
               <div className="commentContainer">
                   <h2>{comment.username}</h2>
