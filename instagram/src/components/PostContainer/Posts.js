@@ -2,20 +2,17 @@ import React, { Component } from 'react';
 import Moment from 'react-moment';
 import PropTypes from 'prop-types';
 import Comments from "../CommentSection/Comments";
-import heartOutline from"../../images/heartOutline.png";
-import comment from"../../images/comment.png";
 import'./Post.css';
+import PostIcon from './PostIcon';
 
 class Posts extends Component {
-  state = {  }
   render() {
-    console.log(this.props)
     return (  
-      <div className="container">
+      <div  className="container">
         <div className="post-lists">
           {this.props.posts.map(post => {
               return[
-                <div className="post-container">
+                <div key={post.username} className="post-container">
                 <div className="post-header">
                   <img  className ="round" src={post.thumbnailUrl} alt="thumbnail"/>
                   <h3>{post.username}</h3>
@@ -23,13 +20,9 @@ class Posts extends Component {
                 <div className="post-body">
                   <img src={post.imageUrl} alt="post"/>
                 </div>
-                <div className="post-icon">
-                  <img src={heartOutline} alt="heart" />
-                  <img src={comment} alt="comment"/>
-                </div>
-                <p className="likes">{post.likes} likes</p>
+                <PostIcon likes ={post.likes}/>
                 <>
-                  <Comments comments={post.comments} />
+                  <Comments comments={post.comments} likes={post.likes} />
                 </>
                   <div className="form-container">
                     <Moment className="timestamps"fromNow ago>2018-09-20</Moment>
@@ -51,7 +44,7 @@ Posts.PropTypes ={
     username:PropTypes.string,
     thumbnailUrl:PropTypes.string,
     imageUrl:PropTypes.string,
-    comments :PropTypes.array
+    comments:PropTypes.array
   }))
 }
 

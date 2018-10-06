@@ -10,12 +10,13 @@ class Comments extends Component {
     return (
       <div className="comment">
       {this.props.comments.map(comment =>{
-        return[ 
+        return[
         <p key={comment.username}>{comment.username}<span>{comment.text}</span></p>
         ]
       })
       }
       </div>
+
     );
   }
 }

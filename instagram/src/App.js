@@ -7,20 +7,14 @@ import './App.css';
 class App extends Component {
   constructor(){
     super();
-    this.state ={
-      data:[],
+    this.state = {
+      data :[]
     }
   }
 
   componentDidMount(){
     setTimeout(() => {
-      this.setState({ data :dummyData})
-    },30000) 
-  }
-
-  handleCount = (event) =>{
-    event.preventDefault();
-    this.setState(prevState =>({likes:prevState.likes + 1}));
+      this.setState({ data :dummyData})},500) 
   }
 
   render() {
@@ -28,9 +22,9 @@ class App extends Component {
       return <h3>loading...</h3>
     }
     return (
-      <div className="Header-section">
+      <div className ="Header-section">
         <Search/>
-        <Posts posts = {this.state.data} like={this.handleCount}/>
+        <Posts posts = {this.state.data}/>
       </div>
     );
   }
