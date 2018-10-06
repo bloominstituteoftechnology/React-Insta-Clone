@@ -10,4 +10,5 @@
 .comment-section .comment-username {
     margin-right: 10px;
     font-weight: bold;
+    cursor: pointer;
 }

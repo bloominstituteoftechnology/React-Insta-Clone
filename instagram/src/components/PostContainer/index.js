@@ -17,7 +17,7 @@ const PostContainer = props => {
 
 						<div className='comment-bar'>
 							<input type='text' placeholder='Add a comment' />
-							<button>&#8230; </button>
+							<button>&#8230;</button>
 						</div>
 					</div>
 				)})}

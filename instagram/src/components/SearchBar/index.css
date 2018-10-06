@@ -19,12 +19,14 @@
 
 .search-bar-left-icons img {
     height: 45px;
+    cursor: pointer;
 }
 
 .instagram-camera-logo {
     padding-right: 25px;
     border-right: 1px solid grey;
     margin-right: 25px;
+    cursor: pointer;
 }
 
 input {
@@ -42,4 +44,5 @@ input {
     width: 35px;
     height: 35px;
     margin-left: 25px;
+    cursor: pointer;
 }
