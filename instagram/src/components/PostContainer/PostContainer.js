@@ -8,15 +8,15 @@ import PropTypes from 'prop-types';
 const PostContainer = props => {
   return (
     <div className="post-container">
-      <PostHeader username={props.post.username} thumbnail={props.post.thumbnailUrl} />
-      <PostContent image={props.post.imageUrl} />
-      <CommentSection comments={props.post.comments} likes={props.post.likes} />
+      <PostHeader username={props.posts.username} thumbnail={props.posts.thumbnailUrl} />
+      <PostContent image={props.posts.imageUrl} />
+      <CommentSection comments={props.posts.comments} likes={props.posts.likes} />
     </div>
   );
 }
 
 PostContainer.propTypes = {
-  post: PropTypes.shape({
+  posts: PropTypes.shape({
     username: PropTypes.string.isRequired,
     thumbnailUrl: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
