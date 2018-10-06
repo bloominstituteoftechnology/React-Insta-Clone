@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import logo from './D2rdroid1.png';
-import logo from './d2rdDroidEmoji.png';
-import './App.css';
-import data from './dummy-data';
+import logo from "./d2rdDroidEmoji.png";
+import "./App.css";
+import data from "./dummy-data";
 
-import SearchBar from'./components/SearchBar/SearchBar';
-import PostContainer from'./components/PostContainer/PostContainer';
-
+import SearchBar from "./components/SearchBar/SearchBar";
+import PostContainer from "./components/PostContainer/PostContainer";
 
 class App extends Component {
   constructor() {
@@ -14,9 +13,9 @@ class App extends Component {
     this.state = {
       instaClonePosts: [],
     };
-    this.setState({instaClonePosts: data});
+    this.setState({ instaClonePosts: data });
   }
-/* DATA MODEL
+  /* DATA MODEL
 {
     username: "philzcoffee",
     thumbnailUrl:
@@ -47,28 +46,20 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" height="72px" width="72px" align="left" />
-          <div>
-            <h1>D2rd-O-Gram</h1>
-          </div>
-          <div>
-
-          <a
-            className="App-link"
-            href="https://linkedin.com/in/gddaniel"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            About Me
-          </a>
-            </div>
+          <SearchBar />
         </header>
         <div>
-          <b>
-          <SearchBar />
-          </b>
           <PostContainer />
-
+          <h2>Recent Posts</h2>
+          {this.state.instaClonePosts.map((post, i) => {
+            return (
+              <instaClonePosts
+                post={post.username}
+                content={post.imageUrl}
+                key={i}
+              />
+            );
+          })}
         </div>
       </div>
     );
