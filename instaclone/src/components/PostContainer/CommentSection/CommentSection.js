@@ -13,10 +13,6 @@ class CommentSection extends Component {
   commentInput = e => {
     this.setState({ newComment: e.target.value });
   };
-  preventDefault = event => {
-    event.preventDefault();
-  };
-
   clearForm = () => {
     this.setState({
       newComment: ""
@@ -32,8 +28,12 @@ class CommentSection extends Component {
     this.setState({
       comments: commentList
     });
-    this.clearForm();
+	event.target.reset();
   };
+  handleSubmit(e){
+    e.preventDefault();
+    e.target.reset();
+}
   render() {
     return (
       <div>
@@ -51,7 +51,7 @@ class CommentSection extends Component {
         <p className="postTime">Posted: {this.props.time}</p>
 
         <div className="addCommentContainer">
-          <form onSubmit={this.addNewComment}>
+          <form onSubmit={this.addNewComment} className="commentForm">
             <input
               onChange={this.commentInput}
               type="text"
