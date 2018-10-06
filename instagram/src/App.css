@@ -1,2 +1,6 @@
 
 
+.posts {
+    display: flex;
+    justify-content: center;
+}

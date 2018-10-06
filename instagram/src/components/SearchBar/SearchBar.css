@@ -8,16 +8,17 @@
 }
 .search {
     margin-top: 2%;
+    margin-left: 10%;
 }
 .logo {
     width: 30px;
     height: 30px;
     margin: 10% 15%;
-    padding-right: 30%;
-    border-right: 2px solid grey;
+    padding-right: 15%;
+    border-right: 1px solid grey;
 }
 .logo-text {
-    margin: 5% 15%;
+    margin: auto;
     font-family: 'Grand Hotel', cursive;
     font-size: 2rem;
 }
@@ -27,4 +28,9 @@ img {
 }
 .icons {
     margin-top: 2%;
+    width: 100%;
+    max-width: 250px;
+}
+.icon {
+    margin: 0 7%;
 }

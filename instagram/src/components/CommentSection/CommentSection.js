@@ -1,8 +1,10 @@
 import React from 'react';
 
-const CommentSection = () => {
+const CommentSection = (props) => {
    return (
-       <div></div>
+       <div>
+           
+       </div>
    ) 
 }
 

@@ -1,28 +1,13 @@
 import React from 'react';
-import Posts from './Posts';
-import CommentSection from '../CommentSection/CommentSection';
+import './PostContainer.css';
+import Posts from './Posts'
 
 const PostContainer = props => {
+
     return (
-        <div>
-            {props.dummyData.map(data => (
-                <div key={Math.random().toString() * 2}>
-                    <Posts
-                        key={data.username}
-                        username={data.username}
-                        thumbnail={data.thumbnailUrl}
-                    />
-                    <CommentSection
-                        key={data.likes.toString()}
-                        user={data.username}
-                        comments={data.comments}
-                        likes={data.likes}
-                        image={data.imageUrl}
-                    />
-                </div>
-            ))}
+        <div className={"postContainer"}>
+            <Posts dummyData={props.dummyData}/>
         </div>
     );
-};
-
+}
 export default PostContainer;
