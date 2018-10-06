@@ -9,6 +9,7 @@ class CommentSection extends React.Component {
     this.state = {
       comment: "",
       comments: props.comments,
+      likes: props.likes,
     };
     
   }
@@ -16,7 +17,7 @@ class CommentSection extends React.Component {
   // let date = moment(this.props.post.timestamp);
 
   addComment = event => {
-    console.log("addComment");
+
     event.preventDefault();
     this.setState(
       {
@@ -26,7 +27,6 @@ class CommentSection extends React.Component {
         ],
         comment: ""
       },
-      () => console.log("newstate", this.state)
     );
   };
 
@@ -36,14 +36,20 @@ class CommentSection extends React.Component {
     });
   };
 
+  addLike = () => {
+    let likeCounter = this.state.likes;
+    this.setState({
+      likes: ++likeCounter,
+    });
+  }
+
   render() {
     let date = moment(this.props.post.timestamp, 'MMMM Do YYYY, hh:mm:ss a').format('YYYY-MM-DD HH:mm:ss');
-    console.log(date);
     return (
       <div className={"commentsContainer"}>
         <div className={"buttonBar"}>
           <div className={"commentsButtonBox"}>
-            <img src="https://png.icons8.com/ios/48/000000/hearts.png" alt="" />
+            <img src="https://png.icons8.com/ios/48/000000/hearts.png" alt="" onClick={this.addLike} />
             <img
               src="https://png.icons8.com/ios/48/000000/speech-bubble.png"
               className={"commentBubble"}
@@ -56,7 +62,7 @@ class CommentSection extends React.Component {
             alt=""
           />
         </div>
-        <div className={"likesCount"}>{this.props.post.likes} likes</div>
+        <div className={"likesCount"}>{this.state.likes} likes</div>
         {this.state.comments.map(comment => {
           return (
             <Comment

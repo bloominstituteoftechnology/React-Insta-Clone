@@ -19,6 +19,7 @@ class Post extends React.Component {
           commentInput={this.props.commentInput}
           comment={this.props.comment}
           user={this.props.user}
+          likes={this.props.post.likes}
         />
       </div>
     );

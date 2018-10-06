@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
                     <div className={'logoTitle'}>Instagram</div>
                 </div>
                 <form>
-                    <input className={'search'} placeholder={'Search'} />
+                    <input className={'search'} placeholder={'Search'} onChange={this.props.searchFilter} />
                 </form>
                 <div className={'topButtonBox'}>
                     <img src="https://png.icons8.com/ios/48/000000/compass.png" alt="" />
