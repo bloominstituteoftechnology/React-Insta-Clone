@@ -8,7 +8,7 @@ const CommentSection = props => {
       <>
         <div className='comment-container'>
             <div className='flex-column-container'>
-                <FontAwesomeIcon className='icons' icon='heart' />
+                <FontAwesomeIcon className='icons' icon='heart' onClick={() => props.newLike(props.index)} />
                 <FontAwesomeIcon className='icons comment' icon='comment' />
             </div>
             <div>

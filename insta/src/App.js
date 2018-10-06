@@ -24,20 +24,23 @@ class App extends Component {
     this.state = {
       data: [],
       comments: [],
-      commentInput: ''
+      commentInput: '',
+      likes: []
     };
   }
 
   componentDidMount() {
     const comments = [];
+    const likes = [];
 
     dummyData.map(data => {
-      return comments.push(data.comments);  
+      return [comments.push(data.comments), likes.push(data.likes)];  
     })
 
     this.setState({
       data: dummyData,
-      comments: comments
+      comments: comments,
+      likes: likes
     });
   }
 
@@ -57,8 +60,16 @@ class App extends Component {
         commentInput: '',
         comments: newComments
       })
-      console.log(this.state.comments);
     }
+  }
+
+  newLike = (index) => {
+    const newLike = this.state.likes;
+    newLike[index] += 1;
+
+    this.setState({
+      likes: newLike
+    })
   }
 
   handleSubmit = event => {
@@ -70,9 +81,8 @@ class App extends Component {
   render() {
     return (
       <>
-        {console.log(this.state.comments)}
         <SearchBar />
-        <PostContainer posts={this.state.data} comments={this.state.comments} commentInput={this.state.commentInput} handleSubmit={this.handleSubmit} addNewComment={this.addNewComment} />
+        <PostContainer posts={this.state.data} likes={this.state.likes} commentInput={this.state.commentInput} handleSubmit={this.handleSubmit} addNewComment={this.addNewComment} newLike={this.newLike} />
       </>
     );
   }
