@@ -1,0 +1,21 @@
+.post-container {
+    border:1px solid lightgray;
+    width:70%;
+    margin:0 auto;
+    margin-bottom:15px;
+}
+
+.header-container {
+    display:flex;
+    height:60px;
+}
+.header-img {
+    border-radius:50%;
+    height:auto;
+    width:10%;
+    padding:5px;
+}
+
+.post-pic{
+    width:100%;
+}

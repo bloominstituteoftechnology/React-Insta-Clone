@@ -4,8 +4,8 @@ import './PostContainer.css';
 const Header = (props) => {
     return (
         <div className="header-container">
-            <img src={props.thumbnail} alt="Profile Header"/>
-            <p>{props.username}</p>
+            <img className="header-img" src={props.thumbnail} alt="Profile Header"/>
+            <p><strong>{props.username}</strong></p>
         </div>
     );
 };

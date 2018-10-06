@@ -5,7 +5,7 @@ import './PostContainer.css';
 const Body = (props) =>{
     return (
        <div className="body-container">
-        <img src={props.postPic} alt="user post"/>
+        <img className="post-pic" src={props.postPic} alt="user post"/>
        
        </div>
     );
