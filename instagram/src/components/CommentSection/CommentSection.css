@@ -6,8 +6,11 @@
     width: 92%;
     margin-left: .5%;
     border: 1px solid #E6E6E6;
+    outline-color: inherit;
     padding: 1px;
 }
+
+
 
 .input-comment button {
     width: 4%;

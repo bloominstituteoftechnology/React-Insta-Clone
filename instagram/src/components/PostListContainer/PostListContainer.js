@@ -3,10 +3,10 @@ import PostContainer from '../PostContainer/PostContainer.js'
 import './PostListContainer.css'
 import PropTypes from 'prop-types';
 
-
+//Receives Post Data array from App.js
 const PostListContainer = ({postData}) => {
 
-
+    console.log(postData);
     const postList = (!postData.length)
     ? <h3>Loading Posts...</h3>
 
@@ -22,7 +22,6 @@ const PostListContainer = ({postData}) => {
         //receives postData from App as Array
         //for each post in postData array send to PostContainer
         <div className="list-container">
-            <h3>PostListContainer</h3>
             {postList}
         </div>
     )

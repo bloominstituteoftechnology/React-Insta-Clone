@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import CommentSection from '../CommentSection/CommentSection.js';
 import './PostContainer.css'
 
-
+//Receives individual post from PostListContainer
 class PostContainer extends Component{
 
 
@@ -25,6 +25,9 @@ class PostContainer extends Component{
 
     }
 
+
+
+
     render(){
 
         return (
@@ -36,7 +39,7 @@ class PostContainer extends Component{
                     <i className="far fa-comment"></i>
                 </div>
                 <p className="likes">{this.state.likes} likes</p>
-                <CommentSection comments={this.state.post.comments}/>
+                <CommentSection comments={this.state.comments} />
             </div>
         )
     }

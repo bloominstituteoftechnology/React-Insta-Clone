@@ -1,6 +1,7 @@
 import React from 'react';
 import './Comment.css';
 
+//receives individual comment from CommentSection
 const Comment = ({comment}) =>{
     return (
 

@@ -11,6 +11,7 @@ class App extends Component {
     super();
     this.state = {
       postData: []
+
     }
   }
 
@@ -19,8 +20,15 @@ class App extends Component {
       this.setState({postData: dummyData});
 
     }, 500);
+    console.log(this.state.postData);
 
   }
+
+  // addComment(commentList){
+  //   this.setState({
+  //      commentList
+  //   })
+  // }
 
   render() {
     return (
