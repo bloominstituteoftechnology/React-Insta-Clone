@@ -14,11 +14,7 @@ class CommentSection extends Component {
 	commentInput = e => {
 		this.setState({ newComment: e.target.value });
 	};
-	clearForm = () => {
-		this.setState({
-			newComment: ''
-		});
-	};
+
 	addNewComment = event => {
 		event.preventDefault();
 		const userName = 'Michael';
@@ -33,7 +29,7 @@ class CommentSection extends Component {
 
 	addLike = event => {
 		let newLikes = this.state.likes;
-		++newLikes; 
+		++newLikes;
 		this.setState({ likes: newLikes });
 	};
 	render() {
@@ -42,7 +38,12 @@ class CommentSection extends Component {
 				<div className="likeSection">
 					<div className="heartIcons">
 						<i className="far fa-heart" onClick={this.addLike} />
-						<i className="far fa-comment" onClick={()=> {this.myInp.focus()}} />
+						<i
+							className="far fa-comment"
+							onClick={() => {
+								this.myInp.focus();
+							}}
+						/>
 					</div>
 					<p>Likes: {this.props.likes + this.state.likes}</p>
 				</div>
@@ -61,11 +62,10 @@ class CommentSection extends Component {
 							onChange={this.commentInput}
 							type="text"
 							placeholder="Add Comment..."
-              className="addComment"
-              ref= {(ip) => this.myInp = ip}
+							className="addComment"
+							ref={ip => (this.myInp = ip)}
 						/>
 					</form>
-
 					<i className="fas fa-ellipsis-h" />
 				</div>
 			</div>
