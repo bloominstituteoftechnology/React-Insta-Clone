@@ -6,7 +6,7 @@ const PostCommentForm = props => {
     return(
         
         <div className={"commentInputForm"}>
-        <input className={"addACommentInput"} type="text" placeholder="Add a omment..."></input>
+        <input className={"addACommentInput"} type="text" placeholder="Add a comment..."></input>
 
         <div className={"addCommentActionMenu"}>
         &bull;&bull;&bull; 

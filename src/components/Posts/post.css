@@ -29,6 +29,7 @@
 
 .postImg{
     position: relative;
+    right: 1px;
     width: 650px;
     bottom: 3px;
 }
