@@ -12,7 +12,7 @@ const SearchBar = (props) => {
            </div>
 
            <form>
-           <input value={props.value} onChange={props.inputHandler} onClick={props.searchClickHandler}></input>
+           <input value={props.value} placeholder="⚲ Search" onChange={props.inputHandler}></input>
             </form>
             
             <div>

@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import PostContainer from './PostContainer';
-
+import dummyData from './dummy-data'
 import SearchBar from './SearchBar'
+
+
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
       comments:[],
-
-      search: '⚲ Search',
     } 
   }
 
@@ -23,11 +23,6 @@ class App extends Component {
     );
     }
 
-    searchClickHandler = event => {
-      this.setState (
-        {search:''}
-      )
-    }
 
     submitHandler = event => {
       event.preventDefault();
@@ -50,7 +45,7 @@ class App extends Component {
     return (
       <div className="App">
       <SearchBar value={this.state.search} inputHandler={this.inputHandler} searchClickHandler={this.searchClickHandler}/>
-      <PostContainer />
+      <PostContainer posts={dummyData}/>
       </div>
     );
   }

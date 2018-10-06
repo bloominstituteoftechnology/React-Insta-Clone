@@ -1,7 +1,6 @@
 import React from 'react';
 import './PostContainer.css';
 import CommentSection from './CommentSection';
-
 const PostContainer = (props) => {
     return (
     <section>
@@ -14,12 +13,14 @@ const PostContainer = (props) => {
 
     <div className='comment'>
     <div>
-    <img src="https://images.vexels.com/media/users/3/147091/isolated/preview/5f8a1ea9c90ceed8d92999bc824417eb-instagram-heart-icon-by-vexels.png" alt=""/>
+    <img src="https://www.shareicon.net/download/2015/09/26/107494_favorite.ico" alt=""/>
     <img src="https://www.tryviews.com/wp-content/uploads/2017/09/Buy-Instagram-Custom-Comments.png" alt=""/>
 
     </div>
     <h2> 0 Likes </h2> 
-    <CommentSection />
+    <div>
+    {props.posts.map(item => <CommentSection key={item.timestamp} obj={item} />)}
+    </div>
     <form>
         <input value={props.value} onChange={props.inputHandler}></input>
     </form>
