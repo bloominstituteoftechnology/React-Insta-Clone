@@ -11,14 +11,14 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
     }
   }
 
   componentDidMount() {
     this.setState({ data: dummyData });
   }
-
+  
   render() {
 
     return (
@@ -27,14 +27,17 @@ class App extends Component {
         <div className="posts">
           {this.state.data.map(user => {
             return (
-              <div>
+              <div key={user.timestamp}>
               <PostContainer
+                key={user.timestamp}
                 username={user.username}
                 icon={user.thumbnailUrl}
                 image={user.imageUrl}
                 likes={user.likes}
-                timeStamp={user.timestamp}
+                timestamp={user.timestamp}
                 comments={user.comments}
+                inputHandler={this.inputHandler}
+                submitHandler={this.submitHandler}
                   />
                 </div>
             )

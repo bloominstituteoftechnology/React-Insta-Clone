@@ -2,15 +2,23 @@ import React from 'react';
 import './AddComments.css';
 
 class AddComments extends React.Component {
-    constructor() {
-        super();
-
-    }
-
+   
     render() {
+
         return (
             <div>
-                <input type="input" placeholder="Add Comment" className="commentInput"></input>
+                <form onSubmit={this.props.submitHandler} id={this.props.id}>
+                <input 
+                    type="input" 
+                    placeholder="Add a comment..." 
+                    className="commentInput" 
+                    onChange={this.props.inputHandler}
+                    value={this.props.commentInputValue}
+                >
+                    
+                    
+                    </input>
+                    </form>
             </div>
         )
     }
