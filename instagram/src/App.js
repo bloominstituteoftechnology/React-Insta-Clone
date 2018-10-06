@@ -36,22 +36,19 @@ class App extends Component {
     this.setState({
       dummyData })
      
-      const newDummy = dummyData[0].timestamp
-      console.log(newDummy)
-      console.log(this.state)
-dummyData.map((Chars,index) => ({
+     /*  const newDummy = dummyData[0].timestamp */
+     
+/* dummyData.map((Chars,index) => ({
 
-}))
+})) */
 
-      this.setState({ newDummy: newDummy});
-      console.log("newDummy: " + newDummy)
-     // dummyData.forEach(showCurrentChar);
+     /*  this.setState({ newDummy: newDummy}); */
+    
+  
   }
   
     
-  /* {props.comments.map((comment, index) => {
-    return <Comment user={comment.username} comments={comment.text} key={index} />;
-  })} */
+ 
  
   render() {
       return (

@@ -36,7 +36,7 @@ const SearchBar = props => {
 
 	);
 };
-SearchBar.PropTypes = {
+SearchBar.propTypes = {
 	value: PropTypes.string
 }
 export default SearchBar;

@@ -44,8 +44,6 @@ import PropTypes from 'prop-types';
           <a className="button" id="commentDots" href="./index.html" onClick={props.postIcon1}></a>
         </footer>
 
-
-
       </div>
 
     )

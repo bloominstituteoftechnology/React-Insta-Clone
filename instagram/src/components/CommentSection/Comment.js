@@ -16,7 +16,7 @@ const Comment = props => {
 
 Comment.propTypes = {
     user: PropTypes.string.isRequired,
-    comment: PropTypes.string.isRequired
+    comments: PropTypes.string.isRequired
 }
 
 export default Comment;
