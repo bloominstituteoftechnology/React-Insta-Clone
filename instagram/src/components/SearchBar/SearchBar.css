@@ -33,9 +33,9 @@
 }
 .searchBox {
   display: flex;
-  height: 76px;
+  height: 46px;
   margin: 0 auto;
-  max-width: 935px;
+  max-width: 635px;
   width: 100%;
   justify-content: space-between;
   align-items: center;

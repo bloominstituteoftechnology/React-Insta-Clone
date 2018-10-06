@@ -1,10 +1,13 @@
-.boldName {
-    font-weight: bold;
-    margin-right: 0.2%;
+.addCommentContainer {
+    width: 100%;
+    height: 40px;
+    border: none;
 }
- .commentText {
-    padding-left: 1%;
-}
- .commentItem {
-    margin-bottom: 5px;
+
+.commentInput {
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 20px;
+    border: none;
 }

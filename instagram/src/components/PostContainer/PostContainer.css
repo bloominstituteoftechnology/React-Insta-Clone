@@ -1,4 +1,42 @@
 .postContainer {
-  position: relative;
-  top: 77px;
+    width: 604px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid lightgray;
+    margin: 20px auto;
+
+}
+
+.postHeader {
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 24px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    
+}
+
+.postHeader img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.postImage {
+    width: 100%;
+}
+
+.likes {
+    margin-left: 10px;
+}
+
+.commentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 584px;
+    border-bottom: 1px solid lightgray;
 }
