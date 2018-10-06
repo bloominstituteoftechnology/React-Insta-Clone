@@ -86,11 +86,15 @@ h1, h2, h3, h4, h5 {
     margin-left:10px;
     
 }
-.likeIcons{
+.Icons{
 margin-top:5px;
 margin-bottom:5px;
 width:30px;
 padding-left:10px;
+
+}
+.likeIcon{
+ cursor: pointer;   
 }
 .likes{
     font-weight: bold;

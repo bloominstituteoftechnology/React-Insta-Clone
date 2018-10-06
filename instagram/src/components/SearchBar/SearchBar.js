@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
             <div className="searchBar">
                 <div><img className="header" src={logos} alt="logo" /></div>
                 <div>
-                    <form className="form"><input onChange={this.props.handler} type="text" placeholder=" Search 🔍"/>
+                    <form className="form" onSubmit={(event) => {this.props.filter(event)}}><input onChange={this.props.searchHandler} type="text" placeholder=" Search 🔍"/>
                     </form>
                 </div>
                 <div className="compheartfriend">

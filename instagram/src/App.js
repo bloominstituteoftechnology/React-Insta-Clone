@@ -19,25 +19,28 @@ class App extends Component {
       console.log(this.state.searchInput)
     )
   }
+  
+  componentDidMount(){
+    this.setState({allUserData:dummydata})
+  }
   filter = (event) => {
     event.preventDefault();
     this.setState({
       allUserData: this.state.allUserData.filter((obj) => {
-        return obj.username === this.state.searchInput;
+        if (obj.username === this.state.searchInput){
+        return obj.username;
+      }
       })
     })
-      console.log(this.state.textInput)
-    
+   
+
 
   }
-  componentDidMount(){
-    this.setState({allUserData:dummydata})
-  }
   render() {
-    
+    console.log('2nd:', this.state.searchInput)
     return (
       <div className="App">
-      <SearchBar handler={this.searchHandler}/>
+      <SearchBar searchHandler={this.searchHandler} filter={this.filter}/>
         <>
           {this.state.allUserData.map(obj => {
             return (
