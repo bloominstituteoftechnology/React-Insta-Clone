@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./CommentSection.css";
-import ActualComment from "./Comment";
+import ActualComment from "./ActualComment";
 
 class CommentSection extends Component {
   constructor(props) {
@@ -21,7 +21,6 @@ class CommentSection extends Component {
   };
   addNewComment = event => {
     event.preventDefault();
-    const empty = "";
     const userName = "Michael";
     const nComment = { text: this.state.newComment, username: userName };
     const commentList = this.state.comments.slice();
@@ -32,29 +31,28 @@ class CommentSection extends Component {
     event.target.reset();
   };
 
-addLike = (event) => {
-   let newLikes = this.state.likes
-   ++newLikes;
+  addLike = event => {
+    let newLikes = this.state.likes;
+    ++newLikes;
     this.setState({ likes: newLikes });
   };
   render() {
     return (
       <div>
         <div className="likeSection">
-			<div className="heartIcons">
-          <i class="far fa-heart" onClick={this.addLike} />
-          <i className="far fa-comment" />
-		  </div>
-          <p>Likes:{this.state.likes}</p>
+          <div className="heartIcons">
+            <i className="far fa-heart" onClick={this.addLike} />
+            <i className="far fa-comment" />
+          </div>
+          <p>
+        	Likes: {this.props.likes + this.state.likes}
+           
+          </p>
         </div>
-        {this.state.comments.map(item => {
+        {this.state.comments.map((item, index) => {
           return (
-            <div>
-              <ActualComment
-                key={Math.random()}
-                commentData={item}
-                username={"Michael"}
-              />
+            <div key={index}>
+              <ActualComment commentData={item} username={"Michael"} />
             </div>
           );
         })}
