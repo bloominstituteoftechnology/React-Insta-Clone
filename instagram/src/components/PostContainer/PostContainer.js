@@ -1,36 +1,28 @@
 import React from 'react';
-import CommentSection from '../CommentSection/CommentSection'
+import CommentSection from '../CommentSection/CommentSection';
+import './PostContainer.css';
 
 const PostContainer = (props) =>{
     return(
         <div className='wholePost'>
             <div className='titleBar'>
-                <img src={props.post.thumbnailUrl} />
+                <img src={props.post.thumbnailUrl} alt='' />
                 <span>{props.post.username}</span>   
             </div>
             <div className='image'>
-                <img src={props.post.imageUrl}/>    
+                <img src={props.post.imageUrl} alt=''/>    
             </div>
-            <div className='Comments'>
+            <div className='comments'>
                 <div>
                     <i className="far fa-heart"></i>
                     <i className="far fa-comment"></i>
                 </div>
-                <p>{props.post.likes}</p>
-                {props.post.comments.map(item =>{
-                    return(
-                    <CommentSection comments={item.text} user={item.username} />
-                    )
-                })}
-                <p>{props.post.timestamp}</p>
+                <p>{props.post.likes} likes</p>
+                <CommentSection comments={props.post.comments} timestamp={props.post.timestamp} />
             </div>
-            <div className='addComment'>
-                <p>Add a comment...</p>
-                <i className="fas fa-ellipsis-h"></i>
-            </div>
-            
         </div>
     )
 }
 
 export default PostContainer
+

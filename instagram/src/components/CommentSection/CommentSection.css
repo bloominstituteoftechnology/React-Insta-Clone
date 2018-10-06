@@ -1,0 +1,14 @@
+.commentSec span{
+    margin-bottom: 10px;
+    display: inline-block;
+    
+}
+
+.userName{
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.userComment{
+    margin-left: 5px;
+}

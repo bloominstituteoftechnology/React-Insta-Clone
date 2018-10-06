@@ -1,0 +1,46 @@
+.wholePost{
+    margin: 5px auto;
+    border: solid 1px lightgray
+}
+
+.titleBar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px auto;
+}
+
+img{
+    width: 100%;
+}
+.titleBar img{
+    border-radius: 50%;
+    width: 50px;
+    margin: 0px 10px;
+}
+
+.comments i{
+    margin: 10px 15px;
+    font-size: 20px;
+}
+
+.comments p{
+    margin: 10px 15px
+}
+
+.addComment{
+    width: 95%;
+    margin: 10px auto;
+    padding: 20px 0px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+}
+
+.timestamp{
+    color: lightgray;
+    font-size: 10px;
+}
+
+

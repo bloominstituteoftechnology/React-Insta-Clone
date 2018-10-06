@@ -20,7 +20,7 @@ class App extends Component {
         <SearchBar />
         {this.state.dummyData.map(item => {
           return(
-            <PostContainer post={item} /> 
+            <PostContainer key={item.timestamp} post={item} /> 
           )}) 
         }
         <CommentSection />

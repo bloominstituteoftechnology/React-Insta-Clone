@@ -3,6 +3,16 @@
     justify-content: space-between;
     align-items: center;
     margin: 50px 20px;
+    font-size: 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 140px;
 }
 
 .logo i{
@@ -12,5 +22,10 @@
 }
 
 .buttons i{
+    margin: 10px 5px;
+}
+
+
+.comments p{
     margin: 10px 5px;
 }
