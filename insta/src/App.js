@@ -88,12 +88,9 @@ class App extends Component {
   searchUp = event => {
     if(event.which === 13) {
       const posts = this.state.data;
-      console.log(event.target.value);
       const newPost = posts.filter(post => {
         return post.username.includes(event.target.value);
       });
-
-      console.log(newPost);
 
       this.setState({
         data: newPost,
