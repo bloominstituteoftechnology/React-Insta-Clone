@@ -3,6 +3,7 @@ import React from "react";
 import "./App.css";
 import dummyData from "./dummy-data";
 import SearchBar from "./components/SearchBar/SearchBar";
+import PostConainer from "./components/PostContainer/PostContainer"
 
 // class App extends React.Component {
 //   render() {
@@ -35,14 +36,22 @@ class App extends React.Component {
         <div>
           {dummyData.map(function(item){
             return (
-              <div>
-                <div>
-                  <img src={item.thumbnailUrl} alt={item.username} />
-                  {item.username}
+              <div className='post-container'>
+                {/* <PostConainer src={item.thumbnailUrl} alt={item.username} text={item.username} /> */}
+                <div className='post-title'>
+                  <img className='post-title-thumbnail' src={item.thumbnailUrl} alt={item.username} />
+                  <span className='post-title-username'>{item.username}</span>
                 </div>
-                <img src={item.imageUrl} alt={item.username}/>
-                <div>
-                  {item.comments.map(comment)}
+                <img className='post-image' src={item.imageUrl} alt={item.username}/>
+                <div className='comment-box'>
+                  {item.comments.map(function(comment){
+                    return (
+                      <div className='individual-comment'>
+                        <span className='comment-username'>{comment.username}</span>
+                        <span className='comment-text'>{comment.text}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             );
