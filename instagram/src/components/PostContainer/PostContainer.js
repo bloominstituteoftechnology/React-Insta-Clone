@@ -7,15 +7,19 @@ class PostContainer extends Component {
     return (
       <div>
         {this.props.dummyData.map(x => (
-          <div>
+          <div className="posts">
             <Posts
               key={x.timestamp}
               username={x.username}
               imageUrl={x.imageUrl}
               thumbnailUrl={x.thumbnailUrl}
-              likes={x.likes}
             />
-            <CommentSection key={x.timestamp} comments={x.comments} />
+            <CommentSection
+              key={x.timestamp}
+              comments={x.comments}
+              likes={x.likes}
+              timestamp={x.timestamp}
+            />
           </div>
         ))}
       </div>

@@ -18,55 +18,123 @@ p {
   height: 50px;
   padding: 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
   font-family: 'Billabong';
 }
 .header .logo-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 200px;
+  width: 220px;
 }
 .header .logo-container .logo {
   width: 30px;
   height: 30px;
+  border-right: 0.1px solid black;
+  padding-right: 20px;
 }
 .header .logo-container .title {
   font-size: 2rem;
   padding-top: 8px;
 }
+.header .search-bar {
+  border: 0.1px solid Gainsboro;
+  height: 26px;
+  width: 200px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .search-bar .search-icon {
+  color: gray;
+  width: 10px;
+  height: 10px;
+  margin-left: 40px;
+}
+.header .search-bar input {
+  border: none;
+  width: 45%;
+  font-size: 0.8rem;
+  padding-left: 10px;
+  background-color: whitesmoke;
+}
+.header .search-bar input:focus {
+  outline: none;
+}
+.header .icon-container {
+  width: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .icon-container .icon {
+  height: 18px;
+  width: 18px;
+  color: grey;
+  background: none;
+}
 .post-container {
   display: flex;
   flex-direction: column;
+  width: 600px;
+  margin: auto;
 }
-.post-container .user {
+.post-container .posts {
+  border: 0.1px solid Gainsboro;
+  margin: 50px 0;
+}
+.post-container .posts .user {
+  width: 100%;
   height: 50px;
   display: flex;
   align-items: center;
-  border: 1px solid silver;
 }
-.post-container .user .thumbnail {
-  width: 30px;
-  height: 30px;
+.post-container .posts .user .thumbnail {
+  width: 28px;
+  height: 28px;
   border-radius: 30px;
-  margin-left: 50px;
+  margin-left: 20px;
 }
-.post-container .user .username {
+.post-container .posts .user .username {
   margin-left: 10px;
 }
-.post-container .likes {
+.post-container .posts .post-image {
+  width: 100%;
+}
+.post-container .posts .likes {
   text-align: left;
 }
-.post-container .comment-section {
+.post-container .posts .comment-section {
   display: flex;
   flex-direction: column;
   text-align: left;
+  width: 560px;
+  margin: auto;
 }
-.post-container .comment-section h3,
-.post-container .comment-section p {
+.post-container .posts .comment-section h3,
+.post-container .posts .comment-section p {
   display: inline-block;
   line-height: 0;
 }
-.post-container .comment-section .text {
+.post-container .posts .comment-section .text {
   margin-left: 10px;
+}
+.post-container .posts .comment-section .timestamp {
+  color: gray;
+  font-size: 0.8rem;
+  padding-bottom: 20px;
+  border-bottom: 1px solid whitesmoke;
+}
+.post-container .posts .comment-section .add-comment {
+  width: 500px;
+  height: 20px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border: none;
+  margin-bottom: 20px;
+}
+.post-container .posts .comment-section .add-comment:focus {
+  outline: none;
 }

@@ -8,7 +8,6 @@ const Posts = props => {
         <h3 className="username">{props.username}</h3>
       </div>
       <img alt="post" src={props.imageUrl} className="post-image"/>
-      <h3 className="likes">{props.likes} likes</h3>
     </div>
   );
 };
