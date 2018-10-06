@@ -5,7 +5,7 @@ const CommentSection = (props) => {
   console.log(props);
   return <div>
     Comments: 
-    <div>
+    <div className="Comments">
      {props.commentProps.map((comment,i)=> {
        return(
          <div>

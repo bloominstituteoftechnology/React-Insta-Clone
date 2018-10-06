@@ -6,7 +6,7 @@ const PostContainer = props => {
   console.log(props);
   return (
     <div className="Container">
-      <h2>Current Posts</h2>
+      <h4>____________</h4>
       <div className="Post-user-row">
         <span>
           <img className="Post-thumbnail"
@@ -18,8 +18,8 @@ const PostContainer = props => {
         </span>
         <span>{props.username}</span>
       </div>
-      <div className="Post-image">
-        <img src={props.imageUrl} alt="Post image" width={200} height={200} />
+      <div className="Post-image-container">
+        <img className="Post-image"src={props.imageUrl} alt="Post image" />
         {/* or use class name in css */}
       </div>
       <div className="Icon-row">
