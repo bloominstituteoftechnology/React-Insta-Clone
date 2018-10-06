@@ -25,6 +25,7 @@ class App extends Component {
       data: [],
       comments: [],
       commentInput: '',
+      searchInput: '',
       likes: []
     };
   }
@@ -78,10 +79,33 @@ class App extends Component {
       });
   }
 
+  handleSearch = event => {
+    this.setState({
+      searchInput: event.target.value
+    });
+  }
+
+  searchUp = event => {
+    if(event.which === 13) {
+      const posts = this.state.data;
+      console.log(event.target.value);
+      const newPost = posts.filter(post => {
+        return post.username.includes(event.target.value);
+      });
+
+      console.log(newPost);
+
+      this.setState({
+        data: newPost,
+        searchInput: ''
+      });
+    }
+  }
+
   render() {
     return (
       <>
-        <SearchBar />
+        <SearchBar searchInput={this.state.searchInput} handleSearch={this.handleSearch} searchUp={this.searchUp} />
         <PostContainer posts={this.state.data} likes={this.state.likes} commentInput={this.state.commentInput} handleSubmit={this.handleSubmit} addNewComment={this.addNewComment} newLike={this.newLike} />
       </>
     );

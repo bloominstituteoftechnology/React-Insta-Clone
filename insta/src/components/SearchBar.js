@@ -2,7 +2,7 @@ import React from 'react';
 import './SearchBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <div className='search-well'>
             <div className='search-container'>
@@ -11,7 +11,7 @@ const SearchBar = () => {
                 <img className='logo' src={require('./img/insta-logo.png')} alt={'insta-logo'}></img>
             </div>
             <div className='search-container'>
-                <input className='search' type='text' placeholder='Search' />
+                <input className='search' type='text' placeholder='Search' value={props.searchInput} onChange={props.handleSearch} onKeyPress={props.searchUp} />
             </div>
             <div className='search-container'>
                 <FontAwesomeIcon className='icons' icon='compass' />
