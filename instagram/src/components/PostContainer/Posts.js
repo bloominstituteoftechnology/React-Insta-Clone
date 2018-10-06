@@ -1,5 +1,6 @@
 import React from 'react';
 import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection';
 
 class Posts extends React.Component {
     render() {
@@ -14,6 +15,9 @@ class Posts extends React.Component {
                             </div>
                             <div className="pic">
                                 <img className="postPic" src={postProps.imageUrl} alt={"post pic"} />
+                            </div>
+                            <div className="commentSection">
+                                <CommentSection dummyData={postProps}/>
                             </div>
                         </>
                     )
