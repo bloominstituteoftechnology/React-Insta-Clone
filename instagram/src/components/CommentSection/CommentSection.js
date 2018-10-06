@@ -13,8 +13,8 @@ class CommentSection extends Component {
         super(props);
         this.state = {
           comments: props.data.comments,
-          images: props.image,
-          likes: props.likes,
+          images: props.data.image,
+          likes: props.data.likes,
           input: '',
         }
       }
@@ -50,21 +50,29 @@ class CommentSection extends Component {
         }
       };
 
+      addLike = event => {
+        this.setState({ 
+            likes: this.state.likes + 1
+        });
+      }
+
+
     render() {
     return (
         
             <div className="comments">
                 <div className="like_comment">
-                <i class="far fa-heart fa-2x"></i><i class="far fa-comment fa-2x"></i>
+                <i onClick={this.addLike} class="far fa-heart fa-2x"></i>
+                <i class="far fa-comment fa-2x"></i>
                 </div>
-                <p><strong>{this.props.data.likes} likes</strong></p>
+                <p><strong>{this.state.likes} likes</strong></p>
                 {this.state.comments.map((comment =>
                     <div>
                         <p><strong>{comment.username}</strong><span> {comment.text}</span></p>
                     </div>
                     ))}
                 <p>{this.props.data.timestamp}</p>
-                
+
                 <form onSubmit={this.addNewComment}>
                     <textarea
                         value={this.state.input} 
