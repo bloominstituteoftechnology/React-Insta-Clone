@@ -11,8 +11,15 @@ class SearchBar extends React.Component {
                     <div className='vertical-line'></div>
                     <img src={logo} alt='Instagram logo' className='logo'/> 
                 </div>
-                <form>
-                    <input className='search-bar' type='text' placeholder='Search'></input>
+                <form onSubmit={this.props.onSubmit}>
+                    <input 
+                        className='search-bar' 
+                        type='text' 
+                        placeholder='Search'
+                        value={this.props.value}
+                        onChange={this.props.onChange}
+                    >
+                    </input>
                 </form>
                 <div className='right-corner'>
                     <i className="far fa-compass fa-2x"></i>

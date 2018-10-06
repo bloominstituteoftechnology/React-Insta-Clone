@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: [],
+      searchInput: ''
     }
   };
 
@@ -19,10 +20,33 @@ class App extends Component {
     })
   };
 
+  //track changes in search input
+
+  typeInSearch = (e) => {
+    this.setState({
+      searchInput: e.target.value
+    }, console.log(this.state.searchInput))
+  }
+
+  //submit changes to search input
+
+  submitSearch = (e) => {
+    e.preventDefault();
+    let posts = this.state.posts.slice();
+    posts = posts.filter(post => post.username === this.state.searchInput);
+    this.setState({
+      posts: posts
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar 
+          value={this.state.searchInput}
+          onChange={this.typeInSearch}
+          onSubmit={this.submitSearch}
+        />
         <div className='PostsContainer'>
           {this.state.posts.map(post => {
             return (
