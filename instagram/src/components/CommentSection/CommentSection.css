@@ -14,3 +14,19 @@
 .timestamp{
     padding: 10px 0;
 }
+
+.addComment{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.addComment input{
+    width: 90%;
+    height: 30px;
+}
+
+.addComment input:focus{
+    outline: none;
+}
