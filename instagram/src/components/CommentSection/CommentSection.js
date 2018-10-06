@@ -1,13 +1,21 @@
 import React from 'react';
 
-const CommentSection = props => {
-  return (
-    <div className='comment-section'>
-      {props.comments.map(comment => {
-        return <Comment key={comment.username} comment={comment.text} />
-      })}
-    </div>
-  )
+class CommentSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: props.comments
+    };
+  }
+  render() {
+    return (
+      <div className='comment-section'>
+        {this.state.comments.map((comment, i) => {
+          return <Comment key={i} comment={comment} />
+        })}
+      </div>
+    );
+  }
 }
 
 const Comment = props => {
