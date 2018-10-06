@@ -10,13 +10,19 @@
 
 .search-logo {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 30%;
 }
 
+.fa-instagram {
+    margin-right: 8%;
+    margin-left: 5%;
+}
+
 .instagram {
-    height: 35px;
+    width: 55%;
+    border-left: 1px solid grey;
+    padding-left: 8%;
 }
 
 .instagram:hover {
