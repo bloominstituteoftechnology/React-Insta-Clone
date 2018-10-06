@@ -12,8 +12,8 @@ const Post = props => {
         <img src={props.imageUrl} alt="" />
       </div>
       <div className="icons">
-        <i className="far fa-heart" onClick={props.clickHandler} />
-        <i className="far fa-comment" />
+        <i className="far fa-heart" onClick={props.likeClickHandler} />
+        <i className="far fa-comment" onClick={props.commentClickHandler} />
       </div>
       <p className="likes">{props.likes} likes</p>
     </div>
