@@ -6,7 +6,12 @@ const NewComment = (props) => {
         <div>
             <div className='add-comment'>
                 <form onSubmit={props.newComment}>
-                    <input type='text' className='comment-input' placeholder='Add a comment...' />
+                    <input
+                        onChange={props.textInput}
+                        type='text'
+                        className='comment-input'
+                        placeholder='Add a comment...'
+                    />
                 </form>
                 <i className="fas fa-ellipsis-h"></i>
             </div>
