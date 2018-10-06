@@ -1,19 +1,20 @@
 import React from 'react';
+import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from "prop-types";
 
 
 const PostContainer = (props) => {
         return (
-            <div>
+            <div className="postContainer">
                 {props.data.map(item=>{
                     return (
-                        <div>
+                        <div key={item.timestamp+'jzk'}>
                             <div className='username-header'>
-                                <p>{item.username}</p>
                                 <img src={item.thumbnailUrl} alt='user thumbnail' />
+                                <p>{item.username}</p>
                             </div>
-                            <img src={item.imageUrl} alt='' />
+                            <img className="postImage" src={item.imageUrl} alt='' />
                             <CommentSection
                                 key={item.timestamp}
                                 obj={item}

@@ -1,0 +1,7 @@
+.comment {
+    display: flex;
+    font-size: 14px;
+    margin-left: 3%;
+    text-align: left;
+    line-height: 20px;
+}

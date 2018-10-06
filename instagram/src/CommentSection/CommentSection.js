@@ -1,29 +1,32 @@
 import React from 'react';
 import Comment from './Comment';
+import './CommentSection.css';
 
 const CommentSection = (props) => {
         return (
-            <div>
-                <p>{props.obj.likes}</p>
-                <p>{props.obj.timestamp}</p>
+            <div className="commentSection">
+                <div className="comment-icons">
+                    <a href="#"><i className="far fa-heart"></i></a>
+                    <a href="#"><i className="far fa-comment"></i></a>
+                </div>
+                <p className="likes">{props.obj.likes} likes</p>
 
-                {props.obj.comments.map(item => {
-                    return (
-                        <Comment key={item.text} username={item.username} text={item.text} />
-                    )
-                })}
+                <div className="commentsContainer">
+                    {props.obj.comments.map(item => {
+                        return (
+                            <Comment key={item.text} username={item.username} text={item.text} />
+                        )
+                    })}
+                </div>
+                <p className="timestamp">{props.obj.timestamp}</p>
 
-                <input></input>
+                <div className="addComment">
+                <input placeholder="Add a comment..."></input>
+                <p>...</p>
+                </div>
 
             </div>
         )
 }
 
 export default CommentSection;
-
-
-// Icons heart and CommentSection
-// Likes
-// Comments name and comment 
-// Time 
-// Add a comment input
