@@ -21,13 +21,20 @@ library.add(faSearch);
 class App extends Component {
   constructor() {
     super();
-    this.state = {dummyData};
+    this.state = {
+      data: []
+    };
   }
+
+  componentDidMount() {
+    this.setState({data: dummyData});
+  }
+
   render() {
     return (
       <>
         <SearchBar />
-        <PostContainer posts={this.state.dummyData}/>
+        <PostContainer posts={this.state.data}/>
       </>
     );
   }
