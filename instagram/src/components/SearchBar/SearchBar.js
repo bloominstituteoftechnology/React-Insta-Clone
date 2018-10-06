@@ -10,7 +10,12 @@ const SearchBar = props => {
 				<div className="vertical"></div>
 				<img src={logo} alt="instagram logo" className="logo" />
 			</div>
-			<input className="inputBar" type="text" placeholder="search"></input>
+			<input className="inputBar" type="text" placeholder="Search"></input>
+			<div className="right-items">
+				<i class="far fa-compass fa-2x"></i>
+				<i class="far fa-heart fa-2x"></i>
+				<i class="far fa-user fa-2x"></i>
+			</div>
 		</div>
 	)
 };

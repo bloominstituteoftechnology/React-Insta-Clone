@@ -18,7 +18,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-		<h1>INSTAGRAM APP BOIIIII</h1>
         <SearchBar />
 		{this.state.data.map(data =>(
 			<div key={Math.random()}>
