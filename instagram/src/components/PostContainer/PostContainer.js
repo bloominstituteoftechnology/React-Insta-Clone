@@ -20,19 +20,21 @@ const PostContainer = props => {
 }
 
 PostContainer.propTypes = {
-  posts: PropTypes.shape({
-    username: PropTypes.string.isRequired,
-    thumbnailUrl: PropTypes.string.isRequired,
-    imageUrl: PropTypes.string.isRequired,
-    likes: PropTypes.number.isRequired,
-    timestamp: PropTypes.string.isRequired,
-    comments: PropTypes.arrayOf(
-      PropTypes.shape({
-        username: PropTypes.string.isRequired,
-        text: PropTypes.string.isRequired,
-      })
-    ).isRequired,
-  }).isRequired,
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string.isRequired,
+      thumbnailUrl: PropTypes.string.isRequired,
+      imageUrl: PropTypes.string.isRequired,
+      likes: PropTypes.number.isRequired,
+      timestamp: PropTypes.string.isRequired,
+      comments: PropTypes.arrayOf(
+        PropTypes.shape({
+          username: PropTypes.string.isRequired,
+          text: PropTypes.string.isRequired,
+        })
+      ).isRequired,
+    })
+  ).isRequired,
 }
 
 export default PostContainer;
