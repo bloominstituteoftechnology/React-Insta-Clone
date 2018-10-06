@@ -13,8 +13,12 @@ class App extends Component {
     this.state = {
       instaClonePosts: [],
     };
+    
+  }
+  componentDidMount() {
     this.setState({ instaClonePosts: data });
   }
+  
   /* DATA MODEL
 {
     username: "philzcoffee",
@@ -49,17 +53,13 @@ class App extends Component {
           <SearchBar />
         </header>
         <div>
-          <PostContainer />
-          <h2>Recent Posts</h2>
           {this.state.instaClonePosts.map((post, i) => {
             return (
-              <instaClonePosts
-                post={post.username}
-                content={post.imageUrl}
-                key={i}
+              <PostContainer
+            {...post} // spread operator `...` passes all elements in the `post` to `PostContainer`
               />
-            );
-          })}
+              );
+            })}
         </div>
       </div>
     );
