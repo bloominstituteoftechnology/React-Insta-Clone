@@ -29,7 +29,6 @@ class PostContainer extends Component{
 
 
     render(){
-
         return (
             <div className="post">
                 <p><img src={this.state.post.thumbnailUrl} alt="thumbnail" width="30px" height="30px"/> {this.state.post.username}</p>

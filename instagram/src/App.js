@@ -20,7 +20,6 @@ class App extends Component {
       this.setState({postData: dummyData});
 
     }, 500);
-    console.log(this.state.postData);
 
   }
 

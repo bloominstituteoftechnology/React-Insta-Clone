@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 //Receives Post Data array from App.js
 const PostListContainer = ({postData}) => {
 
-    console.log(postData);
     const postList = (!postData.length)
     ? <h3>Loading Posts...</h3>
 
