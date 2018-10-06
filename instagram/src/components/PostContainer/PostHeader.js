@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PostContainer = (props) => {
+const PostHeader = (props) => {
     return (
         <>
             <img src={props.thumbnail} alt="user thumbnail" />
@@ -9,4 +9,4 @@ const PostContainer = (props) => {
     )
 }
 
-export default PostContainer;
+export default PostHeader;

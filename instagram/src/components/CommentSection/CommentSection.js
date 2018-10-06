@@ -10,7 +10,7 @@ class CommentSection extends Component {
         super(props);
 
         this.state = {
-            comments: props.comments,
+            comments: [],
             likes: props.likes,
             text: '',
         }
@@ -18,7 +18,7 @@ class CommentSection extends Component {
 
     componentDidMount() {
         this.setState({
-            comments: this.props.comments
+            comments: this.props.comments,
         })
     }
 
@@ -31,13 +31,14 @@ class CommentSection extends Component {
     }
 
     submitHandler = (event) => {
-        if (this.state.text.length >= 1) {
-            event.preventDefault();
-            this.addNewComment();
-        }
-    }
+        if (event.keyCode === 13 && event.shiftKey === false) {
+            if (this.state.text.length >= 1)
+              event.preventDefault();
+            this.addNewComment(event);
+          }
+        };
 
-    addNewComment = () => {
+    addNewComment = (event) => {
         if (this.state.text) {
             this.setState({
                 comments : [
@@ -48,12 +49,11 @@ class CommentSection extends Component {
                     }
                 ]
             });
+            event.currentTarget.value = null;
         }
     }
 
     render () {
-        console.log(this.state.comments)
-
         return (
             <section className="comment-container">
                 <section className="comment-icons">
@@ -69,8 +69,8 @@ class CommentSection extends Component {
                         </div>
                     ))}
                 </section>
-                <section className="add-comment">
-                    <AddComment value={this.props.newInput} onSubmit={this.props.addNewComment} 
+                <section>
+                    <AddComment value={this.state.newInput} onSubmit={this.submitHandler} 
                                 onChange={(event) => this.changeHandler("text", event.target.value)}  />
                 </section>
             </section>

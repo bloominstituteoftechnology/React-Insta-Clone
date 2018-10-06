@@ -1,7 +1,7 @@
 .comment-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 98%;
     margin: 10px auto;
     padding: 0px 5px;
 }
