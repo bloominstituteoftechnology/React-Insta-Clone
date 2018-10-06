@@ -43,13 +43,19 @@ class App extends Component {
 
   addNewComment = (index, event) => {
     if(event.which === 13) {
+
+      const comment = {
+        username: 'Cyanide6033',
+        text: event.target.value,
+        id: Date.now()
+      };
+
+      const newComments = this.state.comments;
+      newComments[index].push(comment);
+
       this.setState({
         commentInput: '',
-        comments: this.state.comments[index].push({
-          username: 'Cyanide6033',
-          text: event.target.value,
-          id: Date.now()
-        })
+        comments: newComments
       })
       console.log(this.state.comments);
     }
@@ -64,6 +70,7 @@ class App extends Component {
   render() {
     return (
       <>
+        {console.log(this.state.comments)}
         <SearchBar />
         <PostContainer posts={this.state.data} comments={this.state.comments} commentInput={this.state.commentInput} handleSubmit={this.handleSubmit} addNewComment={this.addNewComment} />
       </>
