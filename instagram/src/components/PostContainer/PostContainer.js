@@ -8,9 +8,13 @@ import PropTypes from 'prop-types';
 const PostContainer = props => {
   return (
     <div className="post-container">
-      <PostHeader username={props.posts.username} thumbnail={props.posts.thumbnailUrl} />
-      <PostContent image={props.posts.imageUrl} />
-      <CommentSection comments={props.posts.comments} likes={props.posts.likes} />
+      {props.posts.map(post =>
+        <>
+          <PostHeader username={post.username} thumbnail={post.thumbnailUrl} />
+          <PostContent image={post.imageUrl} />
+          <CommentSection comments={post.comments} likes={post.likes} />
+        </>
+      )}
     </div>
   );
 }
