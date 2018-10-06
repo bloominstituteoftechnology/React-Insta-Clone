@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar'
@@ -14,7 +13,9 @@ class App extends React.Component {
 
     this.state = {
 
-      text: ''
+      text: '',
+      // empty array, should be able to link existing comments here and push user object.
+      newComment: []
     }
   }
 
@@ -45,7 +46,7 @@ class App extends React.Component {
  
 
        
- <PostContainer dummyData={dummyData} /> 
+ <PostContainer newComment={this.state.newComment} dummyData={dummyData} /> 
       </div>
     )
   }
