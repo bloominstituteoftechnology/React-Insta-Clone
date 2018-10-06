@@ -1,6 +1,7 @@
 body {
 display: flex ;
 justify-content: center ;
+
 }
 
 html {
@@ -10,5 +11,5 @@ html {
 
 #root {
   font-size: 1.6rem ;
-  
+  width: 800px ;
 }

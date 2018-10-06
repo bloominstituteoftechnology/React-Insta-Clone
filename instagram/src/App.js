@@ -7,14 +7,14 @@ import PostContainer from './components/PostContainer/PostContainer'
 
 
 
+
 class App extends React.Component {
   constructor(){
     super();
 
     this.state = {
 
-      text: '',
-
+      text: ''
     }
   }
 
@@ -30,13 +30,15 @@ class App extends React.Component {
   render(){
     return(
 
-      <div>
+      <div> 
+     
+      <SearchBar inputText={this.inputText} dummyData={dummyData} text={this.state.text} />
        {dummyData.map(item =>
         
-        <div key={item.timestamp} > {item.username}</div>
+        <div key={item.timestamp} ></div>
         
         )}
-      <SearchBar inputText={this.inputText} dummyData={dummyData} text={this.state.text} />
+     
 
       {/* check to see if these props are being passed, use console. */}
 

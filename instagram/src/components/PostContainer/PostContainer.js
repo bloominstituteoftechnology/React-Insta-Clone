@@ -4,9 +4,10 @@ import CommentSection from '../CommentSection/CommentSection'
 import './PostContainer.css'
 
 class PostContainer extends React.Component{
-    render(){
+    render(props){
         return(
             <div className="postContDiv">
+            <div>{this.props.dummyData.username}</div>
                <CommentSection dummyData={this.props.dummyData} />  
             </div>
            

@@ -8,7 +8,6 @@ const SearchBar = props => {
     props.inputText()
     // typerror: props.inputText is ! a func
     }
-
     // try calling the inputText function on it's own again
     return(
 
