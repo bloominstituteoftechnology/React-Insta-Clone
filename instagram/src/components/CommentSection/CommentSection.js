@@ -37,7 +37,7 @@ class CommentSection extends Component {
         }
     }
 
-    addNewComment = (event) => {
+    addNewComment = () => {
         if (this.state.text) {
             this.setState({
                 comments : [
@@ -48,11 +48,12 @@ class CommentSection extends Component {
                     }
                 ]
             });
-            event.currentTarget.value = null;
         }
     }
 
     render () {
+        console.log(this.state.comments)
+
         return (
             <section className="comment-container">
                 <section className="comment-icons">
@@ -69,7 +70,8 @@ class CommentSection extends Component {
                     ))}
                 </section>
                 <section className="add-comment">
-                    <AddComment value={this.props.newInput} onSubmit={this.props.addNewComment} onChange={this.props.newInput} />
+                    <AddComment value={this.props.newInput} onSubmit={this.props.addNewComment} 
+                                onChange={(event) => this.changeHandler("text", event.target.value)}  />
                 </section>
             </section>
         )
