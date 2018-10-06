@@ -12,7 +12,9 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBarContainer  />
-        <PostContainer />
+        {dummyData.map(item => {
+          return <PostContainer key={item.text} obj={item} />
+        })}
       </div>
     );
   }

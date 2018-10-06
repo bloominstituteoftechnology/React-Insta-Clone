@@ -4,10 +4,10 @@ import './PostContainer.css';
 
 const Body = (props) =>{
     return (
-        <>
-            <img />
-            <div>I am the body</div>
-        </>
+       <div className="body-container">
+        <img src={props.postPic} />
+       
+       </div>
     );
 };
 
