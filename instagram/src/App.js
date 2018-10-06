@@ -18,7 +18,8 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer userpost={this.state.data.dummyData} /> 
+        <PostContainer userpost={this.state.data.dummyData} 
+        a/> 
       </div>
     );
   }

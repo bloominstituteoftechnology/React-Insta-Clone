@@ -7,7 +7,13 @@ import PropTypes from "prop-types";
 
 
 class PostContainer extends React.Component {
-
+    constructor(props) {
+        super(props);
+    }
+    
+    addLike = (likes) => {
+       console.log(likes);
+    }
 
     render(){
       return (
@@ -20,14 +26,16 @@ class PostContainer extends React.Component {
                         <h2>{user.username}</h2>
                     </div>
                     <img src={user.imageUrl} id="instaImg"/>
+                    <div className="underPic">
                     <div className="icons">
-                        <img src={heart} width="25px"/>
+                        <img src={heart} width="25px" onClick={this.addLike(user.likes)}/>
                         <img src={convo} width="25px"/>
+                    </div>
+                    <p>{user.timestamp}</p>
                     </div>
                     <h2 id="likes">{user.likes} likes</h2>
                     <CommentSection 
-                    comment={user.comments}
-                    time={user.timestamp} />
+                    comment={user.comments} />
                 </div>
                 )
             })}
