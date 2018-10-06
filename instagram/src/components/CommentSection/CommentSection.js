@@ -7,9 +7,18 @@ class CommentSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: this.props.data.comments
+            comments: [],
+            input: ''
         }
     }
+    
+    componentDidMount() {
+        this.setState({
+            comments: this.props.data.comments
+        })
+    }
+
+    updateInput //START HERE
 
     render() {
         return (
@@ -25,7 +34,11 @@ class CommentSection extends React.Component {
                 {/* comment input field */}
                 <div className='comment-input-section'>
                     <form>
-                        <input className='comment-input' type='text' placeholder='Add a comment...'></input>
+                        <input 
+                            className='comment-input' 
+                            type='text' 
+                            placeholder='Add a comment...'>
+                        </input>
                     </form>
                     {/* comment option button */}
                     <div>

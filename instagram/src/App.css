@@ -5,7 +5,7 @@
 .PostsContainer {
   display: flex;
   flex-direction: column;
+  margin: auto;
   padding-top: 90px;
-  padding-left: 20px;
 }
 
