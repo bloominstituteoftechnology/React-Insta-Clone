@@ -1,0 +1,51 @@
+.icons {
+  width: 30px;
+  height: 30px;
+}
+
+.searchBar-container {
+  display: flex;
+  border: 1px solid purple;
+  justify-content: space-between;
+}
+
+.imageLOGO-container {
+  border: 5px solid pink;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 15%;
+
+}
+
+.cameraIMG {
+  border: 1px solid purple;
+}
+
+.instagramLOGO{
+  border: 1px solid cornflowerblue;
+
+}
+
+.searchInput-container {
+  display: flex;
+  border: 1px solid green;
+  align-items: center;
+  width: 30%;
+  justify-content: center;
+
+}
+
+.searchInput {
+  border: 1px solid blue;
+  height: 80%;
+  width: 60%;
+}
+
+.littleIcons {
+  border: 1px solid deeppink;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 15%;
+}
