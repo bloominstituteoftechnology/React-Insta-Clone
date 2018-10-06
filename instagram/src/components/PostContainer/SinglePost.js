@@ -26,6 +26,12 @@ const SinglePost = props => {
 	)
 }
 
+// increment = event => {
+// 	event.preventDefault();
+// 	let isLiked = this.state.props.userData.likes;
+// 	this.setState({ like: prevState.props.userData.likes + 1})
+// }
+
 SinglePost.PropTypes = {
 	thumbnailUrl: PropTypes.img,
 	username: PropTypes.string.isRequired,

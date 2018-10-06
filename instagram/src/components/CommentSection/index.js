@@ -10,10 +10,15 @@ const CommentSection = props => {
 				<span className='comment-username'>{props.comment.username}</span>
 				<span>{props.comment.text}</span>
 			</div>
-
 		</div>
     )
 }
+
+// 	addNewComment = (event, id, comment) => {
+// 		if (event.)
+
+// 	)
+// }
 
 CommentSection.propTypes = {
 	username: PropTypes.string.isRequired,
@@ -21,3 +26,4 @@ CommentSection.propTypes = {
 }
 
 export default CommentSection;
+// export default addNewComment;

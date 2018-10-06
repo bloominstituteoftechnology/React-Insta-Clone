@@ -5,10 +5,19 @@ import PostContainer from './components/PostContainer';
 import data from './dummy-data.js';
 
 class App extends Component {
-
-	state = {
-		data: data
+	constructor() {
+		super();
+		this.state = {
+			data: []
+		};
 	}
+	
+	componentDidMount() {
+		setTimeout(() => {
+			this.setState({ data: data});
+		})
+	}
+	
 	render() {
 		return (
 			<div className="main-container">
@@ -22,5 +31,5 @@ class App extends Component {
 		);
 	}
 }
-
+	
 export default App;

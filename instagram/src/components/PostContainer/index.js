@@ -10,15 +10,7 @@ const PostContainer = props => {
 				return (
 					<div className='post-container'>
 						<SinglePost userData={userPost} />
-						<CommentMap comments = {userPost.comments} />
-						<div className='post-time'>
-							<p>{userPost.timestamp}</p>
-						</div>
-
-						<div className='comment-bar'>
-							<input type='text' placeholder='Add a comment' />
-							<button>&#8230;</button>
-						</div>
+						<CommentMap comments = {userPost.comments} userData={userPost}/>
 					</div>
 				)})}
 		</div>
