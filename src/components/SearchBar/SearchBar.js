@@ -7,10 +7,14 @@ import './SearchBar.css';
                 <div className="searchBar">
                
                     <div class = "logo-wrapper">
-                        <img class= "logo" src="http://i67.tinypic.com/mk7hg2.jpg" alt="instagram wordmark" />
+                        <img class= "logo" src="https://vignette.wikia.nocookie.net/logopedia/images/a/aa/Instagram_wordmark.svg/revision/latest?cb=20140110161419" alt="instagram wordmark" />
                     </div>
                     <div>
                          <input type="text" placeholder= "Search" name= "search" />
+                         
+                         <div className="search">
+                         <i class="fa fa-search"></i>
+                         </div>
                      </div>
 
                 <div class="icon-wrapper">

@@ -1,33 +1,33 @@
 .searchBar {
-    max-width: 1900px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 150px;
+    height: 70px;
 }
 
 input {
-    width: 432px;
-    height: 50px;
-    font-size: 28px;
+    width: 200px;
+    height: 20px;
+    font-size: 14px;
     color: grey;
     border-radius: 5px;
-    border: 2px solid lightgrey;
-    margin-right: 340px;
+    border: 1px solid lightgrey;
     text-align: center;
+    margin-right: 50px;
 }
 
 .logo {
-    width: 400px;
+    width: 100px;
+    margin-left: 75px;
 }
+
 .icon-wrapper {
     display: flex;
-    justify-content: space-between;
-    width: 260px;
-    margin-right: 20px;
+    justify-content: space-around;
 }
 
 .social {
-    font-size: 40px;
-    color: lightgrey;
+    font-size: 22px;
+    color: black;
+    padding: 15px;
 }

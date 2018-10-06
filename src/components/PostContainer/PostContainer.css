@@ -1,0 +1,39 @@
+.postContainer {
+    margin-top: 50px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.postImage {
+    width: 600px;
+    height: 600px;
+}
+
+.postHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.thumbnail {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.postButtons {
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+}
+
+.username {
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-left: 10px;
+}
+
