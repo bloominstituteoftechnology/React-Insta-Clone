@@ -7,7 +7,7 @@ const PostContainer = (props) => {
 
 
     if (!props.dummyData.length) {
-        console.log('dummy data is rending');
+        console.log('dummy data is rendering');
         return <h3>Loadinating...</h3>
     }
 
