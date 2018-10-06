@@ -20,10 +20,6 @@ class App extends Component {
 
   render() {
 
-    if (!this.state.data.length) {
-      return <h3>Loadinating...</h3>
-    }
-
     return (
       <div className="App">
         <SearchBar />

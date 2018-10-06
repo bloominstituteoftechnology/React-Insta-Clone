@@ -4,6 +4,13 @@ import Post from './Post.js'
 import PropTypes from 'prop-types';
 
 const PostContainer = (props) => {
+
+
+    if (!props.dummyData.length) {
+        console.log('dummy data is rending');
+        return <h3>Loadinating...</h3>
+    }
+
     return (
         <div>
             {props.dummyData.map((data) => {

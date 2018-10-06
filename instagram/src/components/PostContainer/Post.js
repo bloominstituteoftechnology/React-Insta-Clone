@@ -1,6 +1,6 @@
 import React from 'react';
 import './PostContainer.css';
-import CommentSection from './../CommentSection/CommentSection';
+import CommentSection from '../CommentSection/CommentSection';
 
 const Post = (props) => {
     return (
@@ -15,12 +15,7 @@ const Post = (props) => {
                 <i className="far fa-comment fa-2x"></i>
             </div>
             <div className='likes'>{props.postData.likes} likes</div>
-            <CommentSection comments={props.postData.comments} />
-            <div className='timestamp'>{props.postData.timestamp}</div>
-            <div className='add-comment'>
-                <input className='comment-input' placeholder='Add a comment...' />
-                <i className="fas fa-ellipsis-h"></i>
-            </div>
+            <CommentSection postData={props.postData} />
         </div>
     )
 }
