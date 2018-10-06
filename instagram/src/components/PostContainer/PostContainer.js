@@ -28,6 +28,7 @@ class PostContainer extends Component{
 
 
 
+
     render(){
         return (
             <div className="post">

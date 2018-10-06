@@ -23,7 +23,9 @@ class App extends Component {
 
   }
 
-  // addComment(commentList){
+  // addComment(commentObj, user){
+
+
   //   this.setState({
   //      commentList
   //   })
@@ -34,7 +36,7 @@ class App extends Component {
       <div className="App">
         {/* <h1>Instagram App</h1> */}
         <SearchBar />
-        <PostListContainer postData={this.state.postData}/>
+        <PostListContainer postData={this.state.postData} />
       </div>
     );
   }
