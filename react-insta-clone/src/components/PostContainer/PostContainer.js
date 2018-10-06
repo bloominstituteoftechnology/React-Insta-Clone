@@ -17,17 +17,12 @@ class PostContainer extends Component {
       comments: comments,
       username: 'BigBen102912',
       commentText: ''
-  }
+    }
   }
   componentDidMount() {
     this.setState({
       user: this.props.data
     })
-  }
-  saveStateToStorage = () => {
-    for(let key in this.state) {
-      localStorage.setItem(key, JSON.stringify(this.state[key]));
-    }
   }
   addNewComment = (e) => {
     e.preventDefault();
@@ -50,12 +45,12 @@ class PostContainer extends Component {
 
   close = (e) => {
     const comments = Object.assign([],this.state.comments);
+    console.log(e.target.parentNode.id)
     comments.splice(e.target.parentNode.id, 1)
     localStorage.setItem(this.state.id, JSON.stringify(comments));
-    return this.setState((state, props) => {
-      return {
-          comments: comments
-      }
+    console.log(comments)
+    this.setState({
+      comments: comments
     })
   }
 

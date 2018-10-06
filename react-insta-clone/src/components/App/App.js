@@ -30,9 +30,9 @@ class App extends Component {
     this.state.posts.filter(post => {
       return post.username.includes(searchKey) ? posts.push(post) : null;
     })
-    this.setState({
-      posts : posts
-    })
+    // check if serachkey is blank
+    searchKey === '' ? this.setState({posts: dummyData}) : this.setState({posts : posts})
+
   }
 
   render() {
@@ -41,7 +41,7 @@ class App extends Component {
         <SearchBar search={this.searchKey}/>
       {this.state.posts.map((post,index) => {
         return (
-          <PostContainer data={post} id={index} key={post.timestamp} id={post.timestamp}></PostContainer>
+          <PostContainer data={post} key={post.timestamp} id={post.timestamp}></PostContainer>
         )
       })}
       <a href="https://fontawesome.com/license">Icons by FontAwesome</a>
