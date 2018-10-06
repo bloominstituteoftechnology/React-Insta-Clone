@@ -17,7 +17,7 @@ const CommentSection = () => {
     // addNewComment
     return(
         <div className="cmntSectDiv">
-        {dummyData.map(item => <div key={item.username}>
+        {dummyData.map(item => <div key={item.timestamp}>
             {item.username}
 
             <img alt="" src={item.thumbnailUrl} />
@@ -30,7 +30,7 @@ const CommentSection = () => {
             
             <div>{item.comments.map(item =>
             
-            <div key={item.timestamp}>
+            <div key={item.text}>
                 {item.username}
                 {item.text}
             </div>
