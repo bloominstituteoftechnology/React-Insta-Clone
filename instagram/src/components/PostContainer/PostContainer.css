@@ -1,3 +1,13 @@
 .post {
-    border: 1px solid red;
+    border: 2px solid red;
+    text-align: left;
+}
+
+.like-icons {
+    /* display: flex;
+    justify-content: flex-start; */
+}
+
+.likes {
+    /* text-align: left; */
 }
