@@ -12,8 +12,8 @@ const CommentSection = props => (
         </div> {/*End Icon Container*/}
         <div className="likes title-font">{props.likes} likes</div> {/*Contains the amount of likes the post has*/}
         <div className="comments-section"> {/*Contains the main comments section*/}
-            {props.comments.map((comment) => { 
-                return <Comment username={comment.username} text={comment.text}/>; {/*Creating a PostContainer component that passes each value to PostContainer as props*/}
+            {props.comments.map((comment, index) => { 
+                return <Comment username={comment.username} text={comment.text} key={index}/>; {/*Creating a PostContainer component that passes each value to PostContainer as props*/}
             })} {/*end post creation map*/}
         </div> {/*End comments section*/}
         <div className="timestamp timestamp-font">{props.timestamp}</div> {/*Contains the timestamp indicating how long ago post was made*/}
@@ -28,10 +28,11 @@ const CommentSection = props => (
 CommentSection.propTypes = {
     likes: PropTypes.number,
     timestamp: PropTypes.string,
-    comments: PropTypes.arrayOf({
+    comments: PropTypes.arrayOf(PropTypes.shape({
         username: PropTypes.string,
         text: PropTypes.string,
-    })
+        })
+    )
 };
 
 export default CommentSection;
