@@ -1,0 +1,33 @@
+.commentsection{
+    margin: 20px 0;
+}
+li.comment{
+    display: flex;
+    flex-direction: initial;
+    margin-bottom: 0 ;
+    background: #fff;
+    box-shadow: none;
+}
+.timestring{
+    margin: 10px 15px; 
+    padding-bottom: 5px;
+    color:#888;
+    text-transform: uppercase;
+    border-bottom: 1px solid #C0C0C0;
+    
+}
+
+.addcomment{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 15px; 
+    color:#888;
+}
+.comment{
+
+}
+.dot{
+    color:#000;
+    font-weight: 800;
+    letter-spacing: 2px;
+}

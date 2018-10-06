@@ -18,14 +18,18 @@ svg.SearchBar{
     margin-left: 10px; 
     border: none;
 }
+
 svg.Fasearch{
     margin-right: 2px; 
 }
 .SearchBar{
-    height: 60px;
+    max-width: 800px;
+    width: 100%;
+height: 60px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+background: #fff;
 padding: 0;
 /*background: #e9ebee;*/
 border-bottom: 1px solid #C0C0C0
@@ -62,5 +66,7 @@ input{
     outline: none;
     border: 0;
     border-radius: 30px; 
-    margin-left: 30px
+    margin-left: 30px;
+    padding-right: 20px;
+    padding-left: 15px;
 }
