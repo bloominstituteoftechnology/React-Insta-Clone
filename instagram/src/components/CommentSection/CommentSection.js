@@ -29,6 +29,7 @@ class CommentSection extends Component  {
         newContent.push({username: "Ryntak", text: this.state.input})
         this.setState((state)   =>  ({
             content: newContent,
+            input: "",
         }))
     }
 
@@ -43,7 +44,7 @@ class CommentSection extends Component  {
                 </div>
                 <div className="addComment">
                     <form onSubmit={event => this.addComment(event)}>
-                        <input onChange={this.inputChangeHandler} className="commentInput" placeholder="Add a comment..."></input>
+                        <input value={this.state.input} onChange={this.inputChangeHandler} className="commentInput" placeholder="Add a comment..."></input>
                     </form>
                     <i className="fas fa-ellipsis-h fa-lg"></i>
                 </div>

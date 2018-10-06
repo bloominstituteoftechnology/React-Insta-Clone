@@ -4,12 +4,33 @@ import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection.js'
 
 class PostContainer extends Component  {
-    componentDidMount() {
-        let heart1 = document.querySelector(".heart1");
-        let heart2 = document.querySelector(".heart2");
-        heart2.style.display = "none";
-        // document.addEventListener()
+    state = {
+        heart1: "far fa-heart",
+        heart2: "fas fa-heart hide",
+        likes: 0,
     }
+    componentDidMount() {
+        this.setState((state)   =>  ({
+            likes: this.props.likes
+        }))
+    }
+
+    likePost = ()   =>  {
+        this.setState((state)   =>  ({
+            likes: this.state.likes + 1,
+            heart1: "far fa-heart hide",
+            heart2: "fas fa-heart",
+        }))
+    }
+
+    unlikePost = () =>    {
+        this.setState((state)   =>  ({
+            likes: this.state.likes - 1,
+            heart1: "far fa-heart",
+            heart2: "fas fa-heart hide",
+        }))
+    }
+
     render()    {
         return(
             <div className="postContainer">
@@ -19,12 +40,12 @@ class PostContainer extends Component  {
                 </div>
                 <img className="postImage" src={this.props.image} alt="Post"/>
                 <div className="postButtons">
-                    <i className="far fa-heart heart1"></i>
-                    <i className="fas fa-heart heart2"></i>
+                    <i className={this.state.heart1} onClick={this.likePost}></i>
+                    <i className={this.state.heart2} onClick={this.unlikePost}></i>
                     <i className="far fa-comment"></i>
                 </div>
                 <div className="likes">
-                    {this.props.likes} likes
+                    {this.state.likes} likes
                 </div>
                 <CommentSection timestamp={this.props.timestamp} content={this.props.comments}/>
             </div>

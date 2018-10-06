@@ -30,3 +30,7 @@
 .addComment input:focus{
     outline: none;
 }
+
+.hide{
+    display: none;
+}
