@@ -10,12 +10,9 @@ class App extends Component {
     super(props);
     this.state = {
       dummyData: this.dummyData,
-      currentDummy: null,
-      newDummy: null,
       comments: null,
-     
     };
-  
+
   }
 
   componentDidMount() {
@@ -23,44 +20,35 @@ class App extends Component {
   }
 
   getDummyData() {
-    dummyData.map((item,index) => ({
+    dummyData.map((item, index) => ({
       name: `${dummyData[index].username}`,
       email: `${dummyData.email}`,
       thumbnailUrl: `${dummyData.thumbnailUrl}`,
       imageUrl: `${dummyData.imageUrl}`,
       likes: `${dummyData.likes}`,
-      timestamp: `${dummyData.timestamp}`,   
+      timestamp: `${dummyData.timestamp}`,
     })
-   
-  )
+
+    )
     this.setState({
-      dummyData })
-     
-     /*  const newDummy = dummyData[0].timestamp */
-     
-/* dummyData.map((Chars,index) => ({
+      dummyData
+    })
 
-})) */
-
-     /*  this.setState({ newDummy: newDummy}); */
-    
-  
   }
-  
-    
- 
- 
+
   render() {
-      return (
-  
+    return (
+
       <div className="App">
-        <div className="searchBar"><SearchBar /></div>
-        <div className="postContainer">{dummyData.map((chars,index) => {
-         return <PostContainer key={index} char={chars.username} name={chars.name} thumb={chars.thumbnailUrl} time={chars.timestamp}
-         likes={chars.likes} image={chars.imageUrl} comments={chars.comments}/>
+        <div className="searchBar">
+          <SearchBar />
+        </div>
+        <div className="postContainer">{dummyData.map((chars, index) => {
+          return <PostContainer key={index} char={chars.username} name={chars.name} thumb={chars.thumbnailUrl} time={chars.timestamp}
+            likes={chars.likes} image={chars.imageUrl} comments={chars.comments} />
         })}
-       </div>
-               
+        </div>
+
       </div>
     );
   }

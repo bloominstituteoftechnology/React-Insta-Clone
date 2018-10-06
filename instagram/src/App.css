@@ -39,20 +39,26 @@
     height: 64px;
     width: 100%;
     padding-top: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.281);
 }
 
 .postContainer {
     display: flex;
     flex-direction: column;
     height: auto;
+    width: 604px;
     margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+
 }
 
 .App {
     display: flex;
     flex-direction: column;
+    
     width: 100%;
-    max-width: 604px;
+    max-width: 1036px;
     height: auto;
 }
 
@@ -68,13 +74,14 @@
     width: 200px;
     height: 36px;
     border: 1px solid white;
+    border-radius: 15px;
 }
 
-.searchBarInput {
+/* .searchBarInput {
     height: 36px;
     width: 220px;
     font-size: 16px;
-}
+} */
 
 .cameraIcon {
     background-image: url('./icons/icon4.png');
@@ -186,7 +193,8 @@
     flex-direction: row;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-top: 1px solid gray;
+    border-top: 1px solid rgba(128, 128, 128, 0.705);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.705);
 }
 
 .addComment {

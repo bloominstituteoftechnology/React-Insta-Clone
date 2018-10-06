@@ -3,6 +3,10 @@ import Comment from "./Comment";
 import "../../App.css";
 import PropTypes from 'prop-types';
 
+
+
+
+
 const CommentSection = props => {
 	return (
 		<div className="userCommentContainer"> {props.comments.map((comment, index) => {

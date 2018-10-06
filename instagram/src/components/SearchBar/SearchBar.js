@@ -1,21 +1,23 @@
 import React from 'react'
 import "../../App.css"
 import PropTypes from 'prop-types';
+/* import Search from './Search'; */
 
 const SearchBar = props => {
 
 	const clickHandler = (e) => {
-		console.log("clickHandler")
+			console.log("clickHandler")
 	}
 	const submitHandler = () => {
 		alert("wait")
 	}
 
-
 	return (
-		<div className='searchBarContainer'>
+		
+		 <div className='searchBarContainer'>
 			<div className='cameraIcon' onClick={props.camera}></div>
 			<a className='button' href="./index.html" id='titleText'>Instagram</a>
+			 
 			<form className="searchForm" onSubmit={submitHandler} value={props.value}>
 				<input
 					className="searchBarInput"
