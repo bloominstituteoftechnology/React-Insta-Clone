@@ -1,15 +1,19 @@
 
 .icon {
-    height: 5vh;
-    width: auto;
     color: lightgray;
+    font-size: 24px;
 }
 
 .logo {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 30%;
+    width: 40%;
+}
+
+.camera{
+    color: lightgray;
+    font-size: 24px;
 }
 
 .grey {
@@ -30,14 +34,12 @@
     justify-content: space-around;
     width: 20%;
     color: lightgray;
-    border: 1px solid pink;
 }
 
 .searchBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid green;
 }
 
 .word-logo {

@@ -6,7 +6,14 @@ const PostContainer = (props) => {
             <div>
             Name
             Photo
-            <CommentSection />
+            {props.data.map(item => {
+                return (
+                    <CommentSection
+                    key={item.timestamp}
+                    obj={item}
+                    />
+                )
+            })}
             </div>
         )
 }

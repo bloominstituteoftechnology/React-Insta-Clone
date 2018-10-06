@@ -6,7 +6,7 @@ const Logo = () => {
         return (
             <div className='logo'>
 
-                <a href="#"> <i class="fab fa-instagram icon"></i> </a>
+                <a href="#"> <i className="fab fa-instagram camera"></i> </a>
 
                 <p className='grey'>|</p>
 
