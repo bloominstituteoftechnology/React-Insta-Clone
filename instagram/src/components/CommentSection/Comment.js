@@ -7,6 +7,10 @@ const Comment = (props) =>  {
     )
 }
 
+Comment.defaultProps    =   {
+    username: "Default User",
+}
+
 Comment.propTypes   =   {
     username: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired
