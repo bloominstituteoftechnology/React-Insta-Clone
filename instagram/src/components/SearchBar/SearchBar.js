@@ -6,7 +6,7 @@ const SearchBar = () =>{
         <div className='searchBar'>
             <div className='logo'>
                 <i className="fab fa-instagram"></i>
-                <img src='http://www.stickpng.com/assets/images/5a4e432a2da5ad73df7efe7a.png' />
+                <img src='http://www.stickpng.com/assets/images/5a4e432a2da5ad73df7efe7a.png' alt='Instagram logo text'/>
             </div>
             <div className='search'>
                 <input/>

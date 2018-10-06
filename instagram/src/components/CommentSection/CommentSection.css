@@ -12,3 +12,7 @@
 .userComment{
     margin-left: 5px;
 }
+
+input{
+    border: 0px;
+}

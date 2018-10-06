@@ -23,7 +23,6 @@ class App extends Component {
             <PostContainer key={item.timestamp} post={item} /> 
           )}) 
         }
-        <CommentSection />
       </div>
     );
   }
