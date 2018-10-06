@@ -42,7 +42,7 @@ class CommentSection extends Component {
 				<div className="likeSection">
 					<div className="heartIcons">
 						<i className="far fa-heart" onClick={this.addLike} />
-						<i className="far fa-comment" />
+						<i className="far fa-comment" onClick={()=> {this.myInp.focus()}} />
 					</div>
 					<p>Likes: {this.props.likes + this.state.likes}</p>
 				</div>
@@ -61,7 +61,8 @@ class CommentSection extends Component {
 							onChange={this.commentInput}
 							type="text"
 							placeholder="Add Comment..."
-							className="addComment"
+              className="addComment"
+              ref= {(ip) => this.myInp = ip}
 						/>
 					</form>
 
