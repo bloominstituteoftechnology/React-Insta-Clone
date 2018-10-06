@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const PostFeedbackContain = styled.div`
@@ -24,26 +24,41 @@ const LikeAmount = styled.div`
     padding-left: 15px;
 `;
 
-const LikesSection = props => {
-    return ( 
-        <PostFeedbackContain>
-            <FeedbackItems>
-                <div className="right-feedback">
-                    <Far className="far fa-heart" />
-                    <Far className="far fa-comment" />
-                    <Far className="far fa-paper-plane" />
-                </div>
-                <div className="left-feedback">
-                    <Far className="far fa-bookmark" />
-                </div>
-            </FeedbackItems>
-            
-            <LikeAmount>
-                <p>{props.likes} likes</p>
-            </LikeAmount>
-        </PostFeedbackContain>
-    );
+class LikesSection extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            likes: props.likes,
+        }
+    };
 
+    incrementLike = () => {
+        let likes = this.state.likes + 1;
+        this.setState({ likes });
+    };
+
+    render() {
+        return ( 
+            <PostFeedbackContain>
+                <FeedbackItems>
+                    <div className="right-feedback">
+                        <Far className="far fa-heart" 
+                        onClick={this.incrementLike} 
+                        />
+                        <Far className="far fa-comment" />
+                        <Far className="far fa-paper-plane" />
+                    </div>
+                    <div className="left-feedback">
+                        <Far className="far fa-bookmark" />
+                    </div>
+                </FeedbackItems>
+                
+                <LikeAmount>
+                    <p>{this.state.likes} likes</p>
+                </LikeAmount>
+            </PostFeedbackContain>
+        );  
+    }
 }
 
 export default LikesSection;
