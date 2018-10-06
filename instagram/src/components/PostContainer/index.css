@@ -1,4 +1,4 @@
-header {
+.user-info {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -6,14 +6,14 @@ header {
     margin-bottom: 10px;
 }
 
-header img {
+.user-info img {
     border-radius: 50%;
     height: 40px;
     margin-right: 25px;
     margin-left: 10%;
 }
 
-header p {
+.user-info p {
     font-weight: bold;
     font-size: 1.2rem;
     align-self: flex-start
@@ -25,4 +25,63 @@ header p {
 .post-container-main-img img {
     width: 100%;
     max-width: 1024px;
+}
+
+.interactive-action-buttons {
+    margin-left: 2%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.interactive-action-buttons img {
+    width: 40px;
+    height: 40px;
+    margin-right: 3%;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.likes {
+    font-weight: bold;
+    font-size: 1.0rem;
+    text-align: left;
+    margin-left: 2%;
+}
+
+.post-time {
+    font-size: .8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 2%;
+    color: grey;
+}
+
+.comment-bar {
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    margin-bottom: 20px;
+}
+
+.comment-bar input {
+    font-size: 1.0rem;
+    height: 30px;
+    border: 0px solid;
+    margin-left: 2%;
+    border-top: 1px solid lightgrey;
+}
+
+button {
+    height: 30px;
+    background-color: white;
+    border: 0px solid;
+    font-weight: bold;
+    padding-right: 3%;
+    font-size: 1.5rem;
+    border-top: 1px solid lightgrey;
 }

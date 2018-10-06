@@ -1,6 +1,6 @@
 import React from 'react';
-import CommentSection from '../CommentSection';
-import PropTypes from '.prop-types';
+import CommentSection from './index.js';
+import PropTypes from 'prop-types';
 import './index.css';
 
 const CommentMap = props => {

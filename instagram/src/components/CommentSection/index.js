@@ -6,35 +6,18 @@ import './index.css';
 const CommentSection = props => {
     return (
 		<div className='comment-section'>
-			<header>
-			<img src='https://techflourish.com/images/instagram-icon-clipart-panda-18.jpg' alt='Heart Icon' />
-			<img src='https://static.thenounproject.com/png/9654-200.png' alt='Speech Bubble' />
-			</header>
-
-			<div className='likes'>
-				x likes
-			</div>
-
 			<div className='user-comment-section'>
-				{/* <span className='username'>{props.comment.username}</span>
-				<span>{props.comment.text}</span> */}
-			Username CommentSection
+				<span className='comment-username'>{props.comment.username}</span>
+				<span>{props.comment.text}</span>
 			</div>
 
-			<div className='post-time'>
-				x time ago
-			</div>
-
-			<div className='comment-bar'>
-				Form box 3 dots
-			</div>
 		</div>
     )
 }
 
-// CommentSection.propTypes = {
-// 	username: PropTypes.string,
-// 	text
-// }
+CommentSection.propTypes = {
+	username: PropTypes.string,
+	text: PropTypes.string,
+}
 
 export default CommentSection;
