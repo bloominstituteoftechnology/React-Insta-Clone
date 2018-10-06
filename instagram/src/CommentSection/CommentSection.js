@@ -31,8 +31,12 @@ class CommentSection extends React.Component {
         })
     }
 
-    addNewLike(event){
+    addNewLike = (event) => {
         event.preventDefault();
+        const hearts = this.state.counter;
+        this.setState({
+            counter: hearts+1
+        })
     }
 
     render() {
@@ -43,9 +47,9 @@ class CommentSection extends React.Component {
                     <a href="#"><i className="far fa-comment"></i></a>
                 </div>
 
-                { this.props.obj.likes === 1 ? 
+                { this.state.counter === 1 ? 
                     ( <p className="like">1 like</p> ) :
-                    ( <p className="likes">{this.props.obj.likes} likes</p> )
+                    ( <p className="likes">{this.state.counter} likes</p> )
                 }
 
                 <div className="commentsContainer">
