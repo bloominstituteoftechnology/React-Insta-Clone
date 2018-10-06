@@ -26,7 +26,10 @@ class App extends Component {
         <div className='PostsContainer'>
           {this.state.posts.map(post => {
             return (
-              <PostContainer key={Math.random()} postInfo={post}/>
+              <PostContainer 
+                key={Math.random()} 
+                postInfo={post}
+              />
             )
           })}
         </div>

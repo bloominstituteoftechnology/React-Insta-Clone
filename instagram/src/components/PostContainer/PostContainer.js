@@ -4,36 +4,63 @@ import CommentSection from '../CommentSection/CommentSection.js';
 import PropTypes from 'prop-types';
 
 class PostContainer extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            post: {},
+            likes: 0
+        }
+    }
+
+    componentDidMount() {
+        this.setState({
+            post: this.props.postInfo,
+            likes: this.props.postInfo.likes
+        })
+    }
+
+    //determine whether there are multiples "likes" or a single "like"
 
     checkLikes () {
-        if (this.props.postInfo.likes === 1) {
+        if (this.state.likes === 1) {
             return (
                 <p className='likes'>1 like</p>
             )
         }
         else {
             return (
-                <p className='likes'>{this.props.postInfo.likes} likes</p>
+                <p className='likes'>{this.state.likes} likes</p>
             )
         }
     }
 
-    render () {
-        let data = this.props.postInfo; 
+    //like a post
 
+    likePost = (e) => {
+        e.preventDefault();
+        let likes = this.state.post.likes;
+        this.setState({
+            likes: likes + 1
+        })
+    }
+
+    render () {
         return (
             <div className='post-container'>
                 {/* post header */}
                 <div className='post-header'>
-                    <img src={data.thumbnailUrl} className='thumbnail'/>
-                    <p className='username'>{data.username}</p>
+                    <img src={this.state.post.thumbnailUrl} className='thumbnail'/>
+                    <p className='username'>{this.state.post.username}</p>
                 </div>
                 {/* image */}
-                <img src={data.imageUrl}/>
+                <img src={this.state.post.imageUrl}/>
                 {/* like and comment buttons */}
                 <div className='post-options'>
                     <div>
-                        <i className="far fa-heart fa-2x post"></i>
+                        <i 
+                            className="far fa-heart fa-2x post"
+                            onClick={this.likePost}>
+                        </i>
                         <i className="far fa-comment fa-2x"></i>
                     </div>
                     {this.checkLikes()}
@@ -50,17 +77,6 @@ PostContainer.propTypes = {
         thumbnailUrl: PropTypes.string,
         imageUrl: PropTypes.string,
         likes: PropTypes.number
-    }),
-}
-
-// ????????
-
-PostContainer.defaultProps = {
-    postInfo: PropTypes.shape({
-        username: 'username',
-        thumbnailUrl: '',
-        imageUrl: '',
-        likes: 0
     }),
 }
 

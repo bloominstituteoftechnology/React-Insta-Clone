@@ -4,21 +4,47 @@ import Comment from './Comment.js';
 import PropTypes from 'prop-types';
 
 class CommentSection extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             comments: [],
             input: ''
         }
     }
     
+    // setting comments as data on state object
+
     componentDidMount() {
         this.setState({
             comments: this.props.data.comments
         })
     }
 
-    updateInput //START HERE
+    // setting input of comment field on state object
+
+    updateInput = (e) => {
+        e.preventDefault();
+        this.setState({
+            input: e.target.value
+        }, console.log(this.state.input))
+    }
+
+    //function for submitting comment
+
+    addNewComment = (e) => {
+        e.preventDefault();
+        if (this.state.input !== '') {
+            this.setState({
+                comments: [...this.state.comments, {
+                    username: 'commenter',
+                    text: this.state.input
+                }],
+                input: ''
+            })
+        }
+    }
+
+    //rendering comment section
 
     render() {
         return (
@@ -26,18 +52,23 @@ class CommentSection extends React.Component {
                 {/* list of comments */}
                 {this.state.comments.map(comment => {
                     return (
-                        <Comment key={Math.random()} comment={comment}/>
-                )
+                        <Comment 
+                            key={Math.random()} 
+                            comment={comment}
+                        />
+                    )
                 })}
                 {/* time stamp */}
                 <p className='timestamp'>{this.props.data.timestamp.toUpperCase()}</p>
                 {/* comment input field */}
                 <div className='comment-input-section'>
-                    <form>
+                    <form onSubmit={this.addNewComment}>
                         <input 
                             className='comment-input' 
                             type='text' 
-                            placeholder='Add a comment...'>
+                            placeholder='Add a comment...'
+                            value={this.state.input}
+                            onChange={this.updateInput}>
                         </input>
                     </form>
                     {/* comment option button */}

@@ -33,3 +33,7 @@
 .far.fa-heart.fa-2x.post {
     margin-right: 20px;
 }
+
+.far.fa-heart.fa-2x.post:click {
+    color:red;
+}
