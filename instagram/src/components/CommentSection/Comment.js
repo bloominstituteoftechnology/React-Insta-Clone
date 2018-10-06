@@ -5,7 +5,7 @@ import "./Comment.css"
 const Comment = props => (
     <div className="comment-container"> {/*Container which contains the entire post content*/}
         <div className="comment-username title-font">{props.username}</div>
-        <div className="comment-text">{props.text}</div>
+        <div className="body-font">{props.text}</div>
     </div>
 );
 

@@ -5,6 +5,7 @@ import "./CommentSection.css"
 
 const CommentSection = props => (
     <div className="comment-section-container"> {/*Contains the entire section underneath the picture*/}
+        <img className="add-comment-options" src="./img/options_icon_comments.png"></img> {/*The three dot options icon on the add comments bar*/}
         <div className="icon-container"> {/*Contains the heart and comment bubble icons*/}
             <img className="icon-heart" src="./img/heart_icon_comments.png"></img>
             <img className="icon-bubble" src="./img/bubble_icon_comments.png"></img>
@@ -16,8 +17,8 @@ const CommentSection = props => (
             })} {/*end post creation map*/}
         </div> {/*End comments section*/}
         <div className="timestamp timestamp-font">{props.timestamp}</div> {/*Contains the timestamp indicating how long ago post was made*/}
+        <div className="break"></div> {/*Line break between timestamp and add comment*/}
         <div className="add-comment-container"> {/*Contains section where you can add a comment*/}
-            <img className="add-comment-options" src="./img/options_icon_comments.png"></img> {/*The three dot options icon on the add comments bar*/}
             <input type="text" className="add-comment" placeholder="Add a comment..."></input> {/*Bar where you can type in comment*/}
         </div> {/*End add comments*/}
     </div>

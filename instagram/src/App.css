@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(250,250,250);
 }
 
 .App-logo {
@@ -34,17 +38,23 @@
 /*FONTS*/
 
 .title-font{
-  font-size: 1.0rem;
+  font-size: 0.8rem;
   font-weight: bold;
+  font-family: arial;
 }
 
 .body-font{
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .timestamp-font{
   font-size: 0.8rem;
   color: rgb(146,142,142);
+  font-family: arial;
   font-weight: italics;
+}
+
+.montserrat{
+  font-family: 'Montserrat', sans-serif;
 }
 
