@@ -7,7 +7,7 @@ class SearchBar extends React.Component {
     return (
       <div className = 'searchBar-container'>
         <div className = 'imageLOGO-container'>
-          <img className = 'cameraIMG icons'  src = 'https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1909558/300/200/m1/fpnw/wm0/camera-thin-line-icon-01-.jpg?1479381787&s=6df90e9016794e8c8181458f469d3e83' alt = 'instagramIMAGE'  />
+          <img className = 'cameraIMG icons'  src = 'https://us.123rf.com/450wm/sanek13744/sanek137441608/sanek13744160800077/60838911-stock-vector-instagram-icon-hipster-camera-social-media-vector-flat-illustration-black-icons-on-white-background-.jpg?ver=6' alt = 'instagramIMAGE'  />
           <p className = 'instagramLOGO'> Instagram</p>
         </div>
 

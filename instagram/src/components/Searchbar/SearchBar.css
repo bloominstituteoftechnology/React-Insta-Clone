@@ -14,16 +14,20 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 15%;
+  width: 25%;
 
 }
 
 .cameraIMG {
   border: 1px solid purple;
+  width: 4rem;
+  height: 4rem;
 }
 
 .instagramLOGO{
   border: 1px solid cornflowerblue;
+  font-family: 'Billabong', cursive;
+  font-size: 1.5rem;
 
 }
 
@@ -47,5 +51,5 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 15%;
+  width: 25%;
 }
