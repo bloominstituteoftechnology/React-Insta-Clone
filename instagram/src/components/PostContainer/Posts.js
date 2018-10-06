@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Moment from 'react-moment';
 import PropTypes from 'prop-types';
 import Comments from "../CommentSection/Comments";
 import'./Post.css';
@@ -24,12 +23,6 @@ class Posts extends Component {
                 <>
                   <Comments comments={post.comments} likes={post.likes} />
                 </>
-                  <div className="form-container">
-                    <Moment className="timestamps"fromNow ago>2018-09-20</Moment>
-                    <form>
-                      <input type="text" placeholder="add comment ..."/>
-                    </form>
-                  </div>
                 </div>
               ] 
             })}
