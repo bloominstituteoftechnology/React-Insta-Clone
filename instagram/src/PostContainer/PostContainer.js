@@ -6,14 +6,21 @@ import PropTypes from "prop-types";
 const PostContainer = (props) => {
         return (
             <div>
-            {props.data.map(item => {
-                return (
-                    <CommentSection
-                    key={item.timestamp}
-                    obj={item}
-                    />
-                )
-            })}
+                {props.data.map(item=>{
+                    return (
+                        <div>
+                            <div className='username-header'>
+                                <p>{item.username}</p>
+                                <img src={item.thumbnailUrl} alt='user thumbnail' />
+                            </div>
+                            <img src={item.imageUrl} alt='' />
+                            <CommentSection
+                                key={item.timestamp}
+                                obj={item}
+                            />
+                        </div>
+                    )
+                })}
             </div>
         )
 }
