@@ -35,13 +35,14 @@
 
 
 
-/* .App {
-  border: 1px solid;
-} */
-.search-bar-container {
+.App {
   border: 1px solid;
   width: 90%;
   margin: auto;
+}
+/* Search Bar CSS start */
+.search-bar-container {
+  border: 1px solid;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,10 +65,10 @@
   background-color: black;
 }
 .search-bar-container .title-images .title{
-  width: 60%;
-  height: 100%;
+  max-width: 60%;
+  max-height: 75px;
 }
-input{
+.search-input{
   height: 25px;
   width: 25%;
   text-align: center;
@@ -81,11 +82,65 @@ input{
   display: flex;
   justify-content: space-evenly;
 }
+/* Search Bar CSS end */
 
+/*Post CSS start */
+.post-title{
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  height: 75px;
+}
+.post-title .post-title-thumbnail{
+  border-radius: 50%;
+  width: 5%;
+  height: 50%;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+.post-title .post-username{
+  font-size: 18px;
+}
+.post-image{
+  width: 100%;
+}
+.icons-likes-section{
+  width: 94%;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-weight: bold;
+}
+.icons-likes-section .post-icons{
+  display: inline-flex;
+  justify-content: space-between;
+  width: 10%;
+}
+/*Post CSS end */
 
-.post-container{
-  border: 1px solid;
+/*Comment Section CSS start */
+.comment-section{
+  width: 94%;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  line-height: 25px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around; */
 }
-.comment-box{
-  border: 1px solid;
+.comment-section .individual-comment .comment-username{
+  font-weight: bold;
+  margin-right: 1%;
 }
+.comment-input{
+  width: 100%;
+  height: 25px;
+  font-size: 20px;
+  border: white;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+}
+
+/*Comment Section CSS end */
+

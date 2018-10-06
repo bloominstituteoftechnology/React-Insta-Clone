@@ -1,57 +1,38 @@
 import React from "react";
-// import logo from "./logo.svg";
 import "./App.css";
 import dummyData from "./dummy-data";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostConainer from "./components/PostContainer/PostContainer"
-
-// class App extends React.Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <header className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <p>
-//             Edit <code>src/App.js</code> and save to reload.
-//           </p>
-//           <a
-//             className="App-link"
-//             href="https://reactjs.org"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             Learn React
-//           </a>
-//         </header>
-//       </div>
-//     );
-//   }
-// }
+import CommentSection from "./components/CommentSection/CommentSection"
+import heart from "./img/heart-2.svg";
+import chat from "./img/chat-46.svg";
 
 class App extends React.Component {
   render() {
     return (
       <div className='App'>
         <SearchBar className='search-bar-container'/>
-        <div>
+        <div className='all-posts'>
           {dummyData.map(function(item){
             return (
               <div className='post-container'>
-                {/* <PostConainer src={item.thumbnailUrl} alt={item.username} text={item.username} /> */}
-                <div className='post-title'>
+                <PostConainer src2={item.imageUrl} src1={item.thumbnailUrl} alt={item.username} title={item.username} srcIcon1={heart} srcIcon2={chat} altIcon1='heart-icon' altIcon2='chat-icon' likesCounter={item.likes}/>
+                {/* <div className='post-title'>
                   <img className='post-title-thumbnail' src={item.thumbnailUrl} alt={item.username} />
                   <span className='post-title-username'>{item.username}</span>
-                </div>
-                <img className='post-image' src={item.imageUrl} alt={item.username}/>
-                <div className='comment-box'>
+                </div> */}
+                {/* <img className='post-image' src={item.imageUrl} alt={item.username}/> */}
+                <div className='comment-section'>
                   {item.comments.map(function(comment){
                     return (
-                      <div className='individual-comment'>
-                        <span className='comment-username'>{comment.username}</span>
-                        <span className='comment-text'>{comment.text}</span>
-                      </div>
+                      // <div className='individual-comment'>
+                      //   <span className='comment-username'>{comment.username}</span>
+                      //   <span className='comment-text'>{comment.text}</span>
+                      // </div>
+                      <CommentSection commentUsername={comment.username} commentText={comment.text} />
                     );
                   })}
+                  <input placeholder='Add a comment...' className='comment-input'></input>
                 </div>
               </div>
             );
@@ -61,6 +42,8 @@ class App extends React.Component {
     );
   }
 }
+
+//Unrefactored (partial):
 
 // class App extends React.Component {
 //   render() {
