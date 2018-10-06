@@ -1,21 +1,25 @@
 import React from 'react';
+import './PostContainer.css';
+
 import PostHeader from './PostHeader';
 import PostContent from './PostContent';
 import CommentSection from '../CommentSection/CommentSection';
-import './PostContainer.css';
+
 import PropTypes from 'prop-types';
 
-const PostContainer = props => {
+const PostContainer = ({ posts }) => {
   return (
-    <div className="post-container">
-      {props.posts.map(post =>
-        <>
-          <PostHeader username={post.username} thumbnail={post.thumbnailUrl} />
-          <PostContent image={post.imageUrl} />
-          <CommentSection comments={post.comments} likes={post.likes} />
-        </>
-      )}
-    </div>
+    <>
+      {posts.map(post => {
+        return (
+          <div key={post.username + post.timestamp}>
+            <PostHeader username={post.username} thumbnail={post.thumbnailUrl} />
+            <PostContent image={post.imageUrl} />
+            <CommentSection comments={post.comments} likes={post.likes} />
+          </div>
+        );
+      })}
+    </>
   );
 }
 
