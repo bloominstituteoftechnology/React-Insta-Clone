@@ -28,7 +28,7 @@ class App extends Component {
     }, console.log(this.state.searchInput))
   }
 
-  //submit changes to search input
+  //perform search
 
   submitSearch = (e) => {
     e.preventDefault();

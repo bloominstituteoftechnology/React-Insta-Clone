@@ -8,14 +8,15 @@ class PostContainer extends React.Component {
         super();
         this.state = {
             post: {},
-            likes: 0
+            likes: 0,
+            liked: false
         }
     }
 
     componentDidMount() {
         this.setState({
             post: this.props.postInfo,
-            likes: this.props.postInfo.likes
+            likes: this.props.postInfo.likes,
         })
     }
 
@@ -36,12 +37,23 @@ class PostContainer extends React.Component {
 
     //like a post
 
-    likePost = (e) => {
+    likePost = (e, prevState) => {
         e.preventDefault();
         let likes = this.state.post.likes;
-        this.setState({
-            likes: likes + 1
-        })
+        if (this.state.liked === false) {
+            this.setState(prevState => ({
+                likes: likes + 1,
+                liked: !prevState.liked
+            }))
+            e.target.className = 'far fa-heart fa-2x post liked'
+        }
+        else {
+            this.setState(prevState => ({
+                likes: likes,
+                liked: !prevState.liked
+            }))
+            e.target.className = 'far fa-heart fa-2x post'
+        }
     }
 
     render () {

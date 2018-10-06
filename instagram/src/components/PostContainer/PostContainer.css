@@ -34,6 +34,7 @@
     margin-right: 20px;
 }
 
-.far.fa-heart.fa-2x.post:click {
-    color:red;
+.far.fa-heart.fa-2x.post.liked {
+    margin-right: 20px;
+    color: red
 }
