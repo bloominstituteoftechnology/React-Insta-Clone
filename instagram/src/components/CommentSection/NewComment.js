@@ -5,7 +5,7 @@ const NewComment = (props) => {
     return (
         <div>
             <div className='add-comment'>
-                <form>
+                <form onSubmit={props.newComment}>
                     <input type='text' className='comment-input' placeholder='Add a comment...' />
                 </form>
                 <i className="fas fa-ellipsis-h"></i>
