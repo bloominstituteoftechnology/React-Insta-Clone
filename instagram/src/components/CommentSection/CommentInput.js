@@ -12,10 +12,6 @@ const InputForm = styled.form`
     margin: 5px 10px;
 `;
 
-const InputDisplay = styled.div`
-
-`;
-
 const CommentInputForm = styled.input`
     width: 96%;
     height: 40px;
@@ -30,14 +26,12 @@ const Ellipsis = styled.i`
     color: black;
 `;
 
-const CommentInput = () => {
+const CommentInput = props => {
     return ( 
         <div>
-            <InputForm>
-            <InputDisplay>
-                <CommentInputForm type="text" placeholder="Add a comment..." />
+            <InputForm onSubmit={props.submitHandler}>           
+                <CommentInputForm type="text" placeholder="Add a comment..." value={props.comment} onChange={props.handleChange} />
                 <Ellipsis className="fas fa-ellipsis-h"></Ellipsis>
-            </InputDisplay>
             </InputForm>
         </div>
     );
