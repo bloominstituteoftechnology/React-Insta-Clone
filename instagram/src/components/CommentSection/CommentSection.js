@@ -28,7 +28,7 @@ const CommentSection = () => {
             
             <div>{item.comments.map(item =>
             
-            <div key={item.comments}>
+            <div key={item.comments[0]}>
             </div>
             )}</div>
 
