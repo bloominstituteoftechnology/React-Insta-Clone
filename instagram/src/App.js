@@ -13,7 +13,7 @@ class App extends Component {
         <div className='PostsContainer'>
           {dummyData.map(post => {
             return (
-              <PostContainer postInfo={post}/>
+              <PostContainer key={Math.random()} postInfo={post}/>
             )
           })}
         </div>

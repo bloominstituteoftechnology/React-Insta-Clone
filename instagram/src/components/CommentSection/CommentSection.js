@@ -8,7 +8,7 @@ class CommentSection extends React.Component {
             <div>
                 {this.props.data.comments.map(comment => {
                     return (
-                        <Comment comment={comment}/>
+                        <Comment key={Math.random()} comment={comment}/>
                 )
                 })}
                 <p className='timestamp'>{this.props.data.timestamp.toUpperCase()}</p>
@@ -17,9 +17,9 @@ class CommentSection extends React.Component {
                         <input className='comment-input' type='text' placeholder='Add a comment...'></input>
                     </form>
                     <div>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
+                        <span className="dot"></span>
+                        <span className="dot"></span>
+                        <span className="dot"></span>
                     </div>
                 </div>
             </div>

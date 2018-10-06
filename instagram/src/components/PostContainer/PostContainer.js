@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection.js';
+import PropTypes from 'prop-types';
 
 class PostContainer extends React.Component {
 
@@ -31,17 +32,20 @@ class PostContainer extends React.Component {
                 <img src={data.imageUrl}/>
                 {/* like and comment buttons */}
                 <div className='post-options'>
-                    <div className>
-                        <i class="far fa-heart fa-2x post"></i>
-                        <i class="far fa-comment fa-2x"></i>
+                    <div>
+                        <i className="far fa-heart fa-2x post"></i>
+                        <i className="far fa-comment fa-2x"></i>
                     </div>
                     {this.checkLikes()}
-                    {/* {data.comments.map(comment => { */}
                     <CommentSection data={this.props.postInfo}/>
                 </div>
             </div>
         )
     }
+}
+
+PostContainer.propTypes = {
+    likes: PropTypes.number
 }
 
 export default PostContainer;

@@ -15,9 +15,9 @@ class SearchBar extends React.Component {
                     <input className='search-bar' type='text' placeholder='Search'></input>
                 </form>
                 <div className='right-corner'>
-                    <i class="far fa-compass fa-2x"></i>
-                    <i class="far fa-heart fa-2x"></i>
-                    <i class="far fa-user fa-2x"></i>
+                    <i className="far fa-compass fa-2x"></i>
+                    <i className="far fa-heart fa-2x"></i>
+                    <i className="far fa-user fa-2x"></i>
                 </div>
             </div>
         )
