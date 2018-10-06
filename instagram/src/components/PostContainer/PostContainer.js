@@ -16,7 +16,7 @@ class PostContainer extends Component {
 
   clickHandler = event => {
     event.preventDefault();
-    this.setState(prevState => ({ likes: prevState.likes + 1 }));
+    this.setState({ likes: this.state.likes + 1 });
   };
   render() {
     return (
@@ -26,7 +26,7 @@ class PostContainer extends Component {
           username={this.state.username}
           imageUrl={this.state.imageUrl}
           likes={this.state.likes}
-          clickHandler={this.state.clickHandler}
+          clickHandler={this.clickHandler}
         />
         <CommentSection comments={this.props.comments} time={this.props.time} />
       </div>
