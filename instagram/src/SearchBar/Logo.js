@@ -10,7 +10,7 @@ const Logo = () => {
 
                 <p className='grey'>|</p>
 
-                <img src={Instagram} className='word-logo'></img>
+                <img src={Instagram} alt='logo' className='word-logo'></img>
 
             </div>
         )

@@ -5,8 +5,8 @@ const CommentSection = (props) => {
         return (
             <div>
                 <p>{props.obj.username}</p>
-                <img src={props.obj.thumbnailUrl} />
-                <img src={props.obj.imageUrl} />
+                <img src={props.obj.thumbnailUrl} alt='user thumbnail' />
+                <img src={props.obj.imageUrl} alt=''/>
                 <p>{props.obj.likes}</p>
                 <p>{props.obj.timestamp}</p>
 
