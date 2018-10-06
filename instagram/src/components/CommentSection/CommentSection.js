@@ -14,8 +14,6 @@ class CommentSection extends React.Component {
     
   }
 
-  // let date = moment(this.props.post.timestamp);
-
   addComment = event => {
 
     event.preventDefault();
