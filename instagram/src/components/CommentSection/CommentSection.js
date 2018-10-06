@@ -1,11 +1,26 @@
 import React from 'react';
+import Comment from '../Comment/Comment.js'
 import './CommentSection.css'
 
 const CommentSection = ({comments}) =>{
-    console.log(comments);
+
+    const commentList = (!comments.length === 0)
+    ? null
+    : comments.map(comment =>{
+        return (
+            <div key={comment.username + Math.random()}>
+                <Comment comment={comment}/>
+            </div>
+        )
+    })
     return (
         <div className="comments">
-            <h4>CommentSection</h4>
+            {commentList}
+            <p>timestamp goes here</p>
+            <div className="input-comment">
+                <input type="text" placeholder="Add a comment..."/>
+                <button>...</button>
+            </div>
         </div>
     )
 }

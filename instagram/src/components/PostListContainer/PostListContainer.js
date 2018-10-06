@@ -1,9 +1,10 @@
 import React from 'react';
 import PostContainer from '../PostContainer/PostContainer.js'
 import './PostListContainer.css'
+import PropTypes from 'prop-types';
+
 
 const PostListContainer = ({postData}) => {
-
 
 
     const postList = (!postData.length)
@@ -26,5 +27,21 @@ const PostListContainer = ({postData}) => {
         </div>
     )
 }
+
+PostListContainer.propTypes = {
+    postData : PropTypes.arrayOf(
+        PropTypes.shape({
+            comments: PropTypes.array.isRequired,
+            imageUrl: PropTypes.string.isRequired,
+            likes: PropTypes.number.isRequired,
+            thumbnailUrl: PropTypes.string.isRequired,
+            timestamp: PropTypes.string.isRequired,
+            username: PropTypes.string.isRequired
+        })
+    )
+}
+
+
+
 
 export default PostListContainer;

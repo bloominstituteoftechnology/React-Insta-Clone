@@ -1,5 +1,6 @@
 .post {
-    border: 2px solid red;
+    border-top: 1px solid #2d2d2d;
+    border-bottom: 1px solid #2d2d2d;
     text-align: left;
 
 
@@ -27,6 +28,3 @@
     margin: 0 15px;
 }
 
-.likes {
-    /* text-align: left; */
-}
