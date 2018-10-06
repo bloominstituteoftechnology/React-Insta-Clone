@@ -18,13 +18,12 @@ class App extends Component {
     super();
     this.postNumber = 0;
     this.state = {
-      data: dummyData,
+      data: {},
       searchTerm: '',
     }
     this.username = "C137";
     this.commentText = "Add a comment...";
     this.searchTerm = '';
-  
   }
 
   addCommentClickHandler = (postID) => {
@@ -72,7 +71,23 @@ class App extends Component {
     })
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        data: dummyData
+      });
+    }, 500);
+  }
+
   render() {
+    if (!this.state.data.length) {
+      return (
+        <div className="App">
+        <Header changeSearchTerm={this.changeSearchTerm} />
+        <h1>Loading posts...</h1>
+        </div>
+      )
+    }
     return (
       <div className="App">
         <Header changeSearchTerm={this.changeSearchTerm} />

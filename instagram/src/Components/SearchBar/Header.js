@@ -1,5 +1,4 @@
 import React from 'react';
-import HeaderImages from './HeaderImages';
 import SearchBar from './SearchBar';
 import './header.css';
 
