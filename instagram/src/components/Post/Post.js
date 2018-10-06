@@ -1,25 +1,23 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Post.css";
 
-class Post extends Component {
-  render() {
-    return (
-      <div className="post">
-        <div className="profile">
-          <img src={this.props.thumbnail} alt="" />
-          <p>{this.props.username}</p>
-        </div>
-        <div className="picture">
-          <img src={this.props.imageUrl} alt="" />
-        </div>
-        <div className="icons">
-          <i className="far fa-heart" />
-          <i className="far fa-comment" />
-        </div>
-        <p className="likes">{this.props.likes} likes</p>
+const Post = props => {
+  return (
+    <div className="post">
+      <div className="profile">
+        <img src={props.thumbnail} alt="" />
+        <p>{props.username}</p>
       </div>
-    );
-  }
-}
+      <div className="picture">
+        <img src={props.imageUrl} alt="" />
+      </div>
+      <div className="icons">
+        <i className="far fa-heart" onClick={props.clickHandler} />
+        <i className="far fa-comment" />
+      </div>
+      <p className="likes">{props.likes} likes</p>
+    </div>
+  );
+};
 
 export default Post;

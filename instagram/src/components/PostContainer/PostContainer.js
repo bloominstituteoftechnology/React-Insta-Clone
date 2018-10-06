@@ -3,21 +3,34 @@ import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection.js";
 import Post from "../Post/Post.js";
 
-var moment = require("moment");
-
 class PostContainer extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      thumbnailUrl: props.thumbnail,
+      username: props.username,
+      imageUrl: props.imageUrl,
+      likes: props.likes
+    };
+  }
+
+  clickHandler = event => {
+    event.preventDefault();
+    this.setState({
+      likes: this.state.likes + 1
+    });
+  };
   render() {
     return (
       <div className="card">
         <Post
-          thumbnail={this.props.thumbnail}
-          username={this.props.username}
-          imageUrl={this.props.imageUrl}
-          likes={this.props.likes}
+          thumbnail={this.state.thumbnailUrl}
+          username={this.state.username}
+          imageUrl={this.state.imageUrl}
+          likes={this.state.likes}
+          clickHandler={this.state.clickHandler}
         />
-        <CommentSection comments={this.props.comments} />
-        <div className="time">{moment(this.props.time).fromNow()}</div>
-        <div className="add-comment">Add a comment...</div>
+        <CommentSection comments={this.props.comments} time={this.props.time} />
       </div>
     );
   }

@@ -6,16 +6,6 @@
     border-radius: 3px;
 }
 
-.add-comment {
-    padding: 10px 0px;
-    border-top: 1px solid silver;
-    margin-left: 2%;
-    margin-right: 2%;
-    color: silver;
-    margin-top: 10px;
-}
-
-.time {
-    margin-left: 10px;
-    color: silver;
+i {
+    cursor: pointer;
 }
