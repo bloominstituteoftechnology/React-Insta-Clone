@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import CommentButton from './CommentButton';
+import LikeButton from '../SearchBar/LikeButton';
+
 
 class PostContainer extends Component {
     constructor(){
         super()
     }
+
     render() {
-        console.log(this.props.posts)
       return (
         <ul>{this.props.posts.map((post, index) =>{
             return(<div key={index}>
@@ -18,7 +21,12 @@ class PostContainer extends Component {
                 <div>
                     <img src={post.imageUrl} />
                 </div>
-           
+                
+                <div>
+                    <LikeButton />
+                    <CommentButton />
+                </div>
+
                 <div>       
                     <span>{post.likes} <strong>Likes</strong></span>
                     <span>{post.comments.length} <strong>Comments ...</strong></span>

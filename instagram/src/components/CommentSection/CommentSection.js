@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 
 
@@ -16,11 +17,20 @@ const CommentSection = (props) => {
       <div>{props.timestring}</div>
     
       <div>
-          <h4>Add a comment...</h4>
+          <input type = 'text' />
       </div>
       </div>
     );
   
 }
+
+CommentSection.PropTypes = {
+    Comments: PropTypes.arrayOf(
+        PropTypes.shape({
+            username: PropTypes.string,
+            text: PropTypes.string
+        })
+    ).isRequired    
+};
 
 export default CommentSection ;
