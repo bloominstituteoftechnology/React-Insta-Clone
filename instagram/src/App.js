@@ -20,19 +20,29 @@ class App extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
       this.setState({ posts: dummyData });
-    }, 10);
+  }
+
+  searchTerm = (event) => {
+    const query = event.target.value;
+    const posts = [];
+
+    this.state.posts.filter(post => {
+      return post.username.includes(query) ? posts.push(post) : null;
+    })
+
+    // If blank...
+    query === '' ? this.setState({ posts : dummyData }) : this.setState({ posts : posts });
   }
 
   render() {
     if (!this.state.posts.length) {
-      return <h4 className="app-container">⏰</h4>;
+      return <h1 className="app-container">⏰ Loading... ⏰</h1>;
     }
 
     return (
       <div className="app-container">
-        <SearchBar />
+        <SearchBar search={this.searchTerm} />
         {this.state.posts.map(post => (
           <div key={post.timestamp}>
               <PostContainer username={post.username}

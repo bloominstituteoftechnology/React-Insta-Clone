@@ -13,7 +13,7 @@ const SearchBar = (props) => {
                 <h1>Instagram</h1>
             </section>
             <section className="search-box">
-                <input placeholder="🔍 Search"></input>
+                <input placeholder="🔍 Search" onChange={props.search}></input>
             </section>
             <section className="search-icons">
                 <FontAwesomeIcon icon="compass" />
