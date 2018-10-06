@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
-import CommentInput from '../CommentSection/CommentInput';
 import LikesSection from '../CommentSection/LikesSection';
 
 const PostsWrapper = styled.div`
@@ -39,8 +38,6 @@ const Post = props => {
             <LikesSection likes={props.post.likes} />
             
             <CommentSection comments={props.post.comments} />
-
-            <CommentInput />
 
         </PostBorder>
     );

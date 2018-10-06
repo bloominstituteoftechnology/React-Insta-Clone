@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Comment from './Comment';
+import CommentInput from './CommentInput';
 
 class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: props.comments
+            comments: props.comments,
+            comment: '',
         };
     }
 
@@ -20,6 +22,7 @@ class CommentSection extends Component {
                     comment={comment}
                     />
                     )}
+                    <CommentInput />
             </div>
         ); 
     }

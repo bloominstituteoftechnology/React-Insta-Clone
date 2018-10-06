@@ -27,6 +27,7 @@ const Comment = props => {
             {' '}
             <CommentTextInputted>{props.comment.text}</CommentTextInputted>
         </CommentText>
+
     );
 }
 
