@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './CommentSection.css';
+import moment from 'moment';
 
 const CommentSection = (props) => {
     console.log("commentsection", props);
@@ -11,6 +12,10 @@ const CommentSection = (props) => {
     //       text:
     // ]
     // timestamp:
+
+    // Format the timestamp using moment:
+    const postedAt = moment(props.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow();
+
     return (
         <div className='commentSection'>
             {props.comments.map( comment => {
@@ -22,10 +27,10 @@ const CommentSection = (props) => {
             }
 
             )}
-            <div className='postedAt'>{props.timestamp}</div>
+            <div className='postedAt'>{postedAt}</div>
             <div className='newComment'>
                 <input className='commentInput' placeholder='Add a comment...' />
-                <FontAwesomeIcon icon={['fas', 'ellipses-h']} />
+                <FontAwesomeIcon icon={['far', 'ellipses-h']} />
             </div>
         </div>
     );

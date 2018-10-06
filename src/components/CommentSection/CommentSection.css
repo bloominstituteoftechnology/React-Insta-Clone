@@ -20,7 +20,7 @@
 .newComment {
     height: 40px;
     margin-top: 10px;
-    border-top: 1px solid purple;
+    border-top: 1px solid gray;
     width: 780px;
     display: flex;
     align-items: center;
@@ -30,6 +30,6 @@
 .commentInput {
     width: 730px;
     height: 25px;
-    border: 1px solid black;
+    border: 0px solid black;
     margin-top: 10px;
 }
