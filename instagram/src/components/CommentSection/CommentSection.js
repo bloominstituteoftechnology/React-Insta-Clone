@@ -28,7 +28,9 @@ const CommentSection = () => {
             
             <div>{item.comments.map(item =>
             
-            <div key={item.comments[0]}>
+            <div key={item.username}>
+                {item.username}
+                {item.text}
             </div>
             )}</div>
 
