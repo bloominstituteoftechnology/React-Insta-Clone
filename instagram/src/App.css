@@ -36,7 +36,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /*  border: 2px solid blue; */
     height: 64px;
     width: 100%;
     padding-top: 10px;
@@ -45,7 +44,6 @@
 .postContainer {
     display: flex;
     flex-direction: column;
-   /*  border: 1px solid gray; */
     height: auto;
     margin-bottom: 40px;
 }
@@ -55,7 +53,6 @@
     flex-direction: column;
     width: 100%;
     max-width: 604px;
-   /*  border: 2px solid red; */
     height: auto;
 }
 
@@ -64,50 +61,19 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    /*  border: 2px solid green;  */
     width: 150px;
 }
-
-
 
 .searchBarInput {
     width: 200px;
     height: 36px;
+    border: 1px solid white;
 }
 
-/* .titleText {
-    font-size: 20px;
-    font-weight: bold;
-} */
-
-.icon1 {
-    background-image: url('./icons/icon1.png');
-    width: 30px;
-    height: 30px;
-}
-
-.icon1:hover {
-    cursor: pointer;
-}
-
-.icon2 {
-    background-image: url('./icons/icon2.png');
-    width: 30px;
-    height: 30px;
-}
-
-.icon2:hover {
-    cursor: pointer;
-}
-
-/* .icon3 {
-    background-image: url('./icons/icon3.png');
-    width: 30px;
-    height: 30px;
-} */
-
-.icon3:hover {
-    cursor: pointer;
+.searchBarInput {
+    height: 36px;
+    width: 220px;
+    font-size: 16px;
 }
 
 .cameraIcon {
@@ -122,21 +88,19 @@
 }
 
 .header {
-    /* border: 2px solid orange; */
     display: flex;
     flex-direction: row;
     height: 64px;
 }
 
 .thumbNail {
-    background-image: url('./icons/icon1.png');
+    /* background-image: url('./icons/icon1.png'); */
     background: no-repeat;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-top: 5px;
     margin-right: 5px;
-    /* border: 2px solid red; */
 }
 
 .userName {
@@ -145,68 +109,46 @@
     padding-top: 20px;
     font-family: arial;
     font-weight: bold;
-    /* border: 2px solid green; */
 }
 
 .image {
     display: flex;
     width: 100%;
-    background-image: url('./icons/Yoda.jpg');
     background: no-repeat;
-   /*  border: 2px solid gray; */
 }
 
 .iconContainer2 {
     display: flex;
     flex-direction: row;
     height: 35px;
-    /*  border: 2px solid purple; */
 }
-
-/* .postIcon1 {
-    background: no-repeat;
-    background-image: url('./icons/icon2.png');
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    margin-left: 20px;
-} */
-
-/* .postIcon2 {
-    background-image: url('./icons/icon2.png');
-    width: 30px;
-    height: 30px;
-} */
 
 .commentContainer {
     display: flex;
     flex-direction: row;
     height: auto;
-   /*  border: 2px solid red; */
 }
 
 .userCommentContainer {
     display: flex;
     flex-direction: row;
-    /* text-overflow: unset; */
     flex-wrap: wrap;
-   
     height: auto;
 }
 
- .user {
-     display: inline-block;
-     justify-content: left;
- width: auto;
- font-weight: bold;
-   
-} 
+.user {
+    display: inline-block;
+    justify-content: left;
+    width: auto;
+    font-weight: bold;
+}
+
 .comment {
     display: inline-block;
-width: auto;
-padding-left: 5px;
-  
-} 
+    width: auto;
+    padding-left: 5px;
+}
+
 .commentUser {
     display: flex;
     width: 100%;
@@ -214,13 +156,11 @@ padding-left: 5px;
     justify-content: left;
     padding-left: 10px;
     padding-bottom: 4px;
-   
 }
 
 .otherContainer {
     display: flex;
     flex-direction: column;
-    border: 2px solid blue;
     width: 100%;
     height: auto;
 }
@@ -247,15 +187,15 @@ padding-left: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
     border-top: 1px solid gray;
-    /* border: 2px solid yellow; */
 }
 
 .addComment {
-    display: flex;
+    display: none;
     margin-left: 10px;
     width: 300px;
     z-index: 2;
     color: gray;
+    border: 1px solid white;
 }
 
 .hide {
@@ -263,18 +203,16 @@ padding-left: 5px;
 }
 
 .addComment2 {
-    display: none;
+    display: flex;
     margin-left: 10px;
     width: 300px;
     z-index: 2;
-
+    border: 1px solid white;
 }
 
 .visible {
     display: flex;
 }
-
-.dots {}
 
 a.button {
     height: 30px;
@@ -286,7 +224,7 @@ a.button {
 a#postIcon1 {
     width: 28px;
     margin-left: 10px;
-    background-position: -456px 441px; 
+    background-position: -456px 441px;
 }
 
 a#postIcon2 {
@@ -314,15 +252,12 @@ a#titleText {
     width: 178px;
     height: 52px;
     background-position: 386px 323px;
-    /* border: 2px solid green; */
 }
 
 a#commentIcon {
     width: 24px;
     background-position: -34px 40px;
     height: auto;
-    /* border: 1px solid green; */
-
 }
 
 a#commentDots {
@@ -331,6 +266,4 @@ a#commentDots {
     width: 18px;
     background-position: 190px 68px;
     height: 20px;
-     /* border: 1px solid green; */
-
 }

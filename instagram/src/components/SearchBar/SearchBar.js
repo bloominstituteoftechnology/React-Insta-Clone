@@ -1,12 +1,31 @@
 import React from 'react'
 import "../../App.css"
+import PropTypes from 'prop-types';
 
 const SearchBar = props => {
+
+	const clickHandler = (e) => {
+		console.log("clickHandler")
+	}
+	const submitHandler = () => {
+		alert("wait")
+	}
+
+
 	return (
 		<div className='searchBarContainer'>
 			<div className='cameraIcon' onClick={props.camera}></div>
 			<a className='button' href="./index.html" id='titleText'>Instagram</a>
-			<input className="searchBarInput" type="text" value={props.value} />
+			<form className="searchForm" onSubmit={submitHandler} value={props.value}>
+				<input
+					className="searchBarInput"
+					placeholder="Search..."
+					type="text"
+					value={props.value}
+					onChange={clickHandler}
+					placeholder={'Search...'}
+				/>
+			</form>
 			<div className='iconContainer'>
 				<a className='button' id='icon1' href="./index.html" onClick={props.compass}></a>
 				<a className='button' id='icon2' href="./index.html" onClick={props.heart}></a>
@@ -17,5 +36,7 @@ const SearchBar = props => {
 
 	);
 };
-
+SearchBar.PropTypes = {
+	value: PropTypes.string
+}
 export default SearchBar;

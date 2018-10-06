@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar'
@@ -7,14 +6,13 @@ import PostContainer from './components/PostContainer/PostContainer'
 
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       dummyData: this.dummyData,
       currentDummy: null,
       newDummy: null,
-      nextCard: null,
-      prevCard: null,
+      comments: null,
      
     };
   
@@ -31,9 +29,7 @@ class App extends Component {
       thumbnailUrl: `${dummyData.thumbnailUrl}`,
       imageUrl: `${dummyData.imageUrl}`,
       likes: `${dummyData.likes}`,
-      timestamp: `${dummyData.timestamp}`,
-     
-    
+      timestamp: `${dummyData.timestamp}`,   
     })
    
   )
@@ -42,13 +38,13 @@ class App extends Component {
      
       const newDummy = dummyData[0].timestamp
       console.log(newDummy)
-    
+      console.log(this.state)
 dummyData.map((Chars,index) => ({
 
 }))
 
       this.setState({ newDummy: newDummy});
-      console.log(this.currentDummy)
+      console.log("newDummy: " + newDummy)
      // dummyData.forEach(showCurrentChar);
   }
   
