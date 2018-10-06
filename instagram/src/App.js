@@ -6,6 +6,7 @@ import dummyData from './dummy-data.js';
 class App extends Component {
     state   =   {
         data: [],
+        searchValue: ""
     };
     componentDidMount() {
         this.setState((state)   =>  ({
@@ -13,11 +14,20 @@ class App extends Component {
         }))
     }
 
+    searchFilter    =   (value)  =>  {
+        let filtered = dummyData.filter((data)  =>  {
+            return data.username.includes(value);
+        })
+        this.setState((state)   =>  ({
+            data: filtered,
+            searchValue: value,
+        }))
+    }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar filter={this.searchFilter}/>
         {this.state.data.map((obj, index)   =>  {
             return  <PostContainer timestamp={obj.timestamp} thumbnail={obj.thumbnailUrl} image={obj.imageUrl} username={obj.username} likes={obj.likes} comments={obj.comments} key={index}/>
         })}
