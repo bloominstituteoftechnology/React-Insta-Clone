@@ -9,15 +9,19 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: [dummyData]
+      data: []
     };
+}
+
+componentDidMount() {
+  this.setState({data: dummyData})
 }
 
   render() {
     return (
       <div>
         <SearchBar />
-        <PostContainer dummyData={this.state.dummyData} />
+        <PostContainer dummyData={this.state.data} />
       </div>
     );
   }
