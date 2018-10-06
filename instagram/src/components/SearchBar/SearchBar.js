@@ -1,5 +1,5 @@
 import React from 'react';
-//import './SearchBar.css';
+import './SearchBar.css';
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -12,6 +12,12 @@ class SearchBar extends React.Component {
     }
 
     changeSearch = event => this.setState({input: event.target.value});
+
+    logout = (event => {
+        localStorage.removeItem('user');
+        localStorage.removeItem('password');
+        document.location.reload();
+    })
 
     render() {
         return (
@@ -31,6 +37,7 @@ class SearchBar extends React.Component {
                 <div className="div2">
                     <i className="fa fa-size">&#xf14e;</i>
                     <i className="fa fa-size">&#xf08a;</i>
+                    <i className="fa fa-size" onClick={this.logout}>&#xf00d;</i> 
                 </div> 
             </div>
         )  

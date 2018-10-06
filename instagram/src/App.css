@@ -3,10 +3,10 @@
   width: 100%;
 }
 .App p {
-  font-size: .7rem;
+  font-size: .9rem;
 }
 .App span {
-  font-size: .7rem;
+  font-size: .9rem;
 }
 
 .App-logo {
@@ -16,8 +16,8 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
-  padding: 20px;
+  height: 155px;
+  padding: 25px;
   color: white;
 }
 

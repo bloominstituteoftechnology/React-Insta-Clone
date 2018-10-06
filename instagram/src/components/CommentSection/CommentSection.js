@@ -2,15 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './CommentSection.css';
 
-//
-
 class CommentSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             comments: props.dummyData,
             input: '',
-            placeholder: 'Add a comment...'
+            placeholder: 'Share a comment...'
         };
     }
 

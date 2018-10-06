@@ -1,7 +1,6 @@
 import React from 'react';
-
 import CommentSection from '../CommentSection/CommentSection';
-//import './PostContainer.css';
+import './PostContainer.css';
 import PropTypes from 'prop-types';
 
 class PostContainer extends React.Component {
@@ -11,6 +10,16 @@ class PostContainer extends React.Component {
             dummyData: props.dummyData,
             likes: props.dummyData.likes
         }
+    }
+
+    addLikes = event => {
+        event.preventDefault();
+        let likes = this.state.likes +1;
+        this.setState({likes});
+
+        let element = event.target;
+        // elements = Array.from(buttons).map( => )
+        element.classList.add('red-heart');
     }
 
     render() {
@@ -52,4 +61,3 @@ PostContainer.propTypes = {
 
  
 export default PostContainer;
-  

@@ -4,19 +4,20 @@
 
 .custom-comment {
     display: flex;
-    margin: 0.5rem 0;
+    margin: 0.4rem 0;
 }
 .custom-comment p {
     margin: 0 0;
 }
 .comment-section .comment-form {
-    height: 3rem;
+    height: 2.5rem;
     display: flex;
     align-items: center;
-    border-top: 2px solid rgb(155, 152, 152);
+    border-top: 1px solid lightgray;
 }
 .comment-section .comment-input {
     height: 75%;
     width: 100%;
     border: none;
 }
+
