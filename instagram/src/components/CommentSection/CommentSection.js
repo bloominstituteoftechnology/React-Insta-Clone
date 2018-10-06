@@ -11,6 +11,7 @@ const CommentSection = props => {
 }
 
 const Comment = props => {
+  console.log('props', props);
   return (
     <div className='comment'>
       <div>
