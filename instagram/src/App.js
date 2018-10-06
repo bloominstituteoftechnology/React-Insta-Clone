@@ -2,27 +2,32 @@ import React, { Component } from 'react';
 import PostContainer from './components/PostContainer';
 import './App.css';
 import dummyData from './dummy-data';
+import SearchBar from './components/SearchBar';
+
 
 class App extends Component {
-  render() {
+  constructor(){
+        super();
+        this.state={
+          dummyData:{dummyData}
+        }
+    }
+    componentDidMount(){
+      this.setState({dummyData:dummyData})
+    }
+  render(){
     return (
-      <div>
-        <h1>instagram</h1>
-        <span>
-          {dummyData.map((post,i)=><div key={i}><PostContainer container={post}/></div>)}
+      <div className="whole-app">
+        <span><SearchBar/></span>
+        <span className="post">
+       {dummyData.map((post,index)=>{
+         return(
+           <PostContainer id={index}key={index}post={post}/>
+         )
+       })}
         </span>
-        <div><PostContainer/></div>
       </div>
     )
   }
 }
-        
-      
-   
-      
-      
-   
-  
-
-
-export default App;
+export default App;    
