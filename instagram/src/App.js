@@ -7,12 +7,24 @@ import PostContainer from './components/PostContainer/postcontainer';
 import PropTypes from 'prop-types';
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      data : [],
+    }
+  }
+  componentDidMount(){
+    this.setState({
+      data: dummyData ///????
+    })
+  }
+  
   render() {
     return (
       <div className ="app-container">
         <SearchBar />
         <div>
-          {dummyData.map(dummyObj =>{
+          {this.state.data.map(dummyObj =>{
             return(
               <PostContainer dummyObj = {dummyObj} key = {dummyObj.timestamp}/>
             );

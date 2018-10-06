@@ -5,13 +5,17 @@
     margin:10px 0px;
 }
 .add-comment-section{
+    display:flex;
+    align-items:center;
     width:100%;
     margin-top:40px;
     height:50px;
 }
-.add-commment{
-    width:100%;
+.comment-input{
+    width:72%;
     height:50px;
-    background-color:red;
-   
+}
+.three-dot{
+    width:10%;
+    height:45px;
 }
