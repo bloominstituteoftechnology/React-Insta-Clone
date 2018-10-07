@@ -3,11 +3,8 @@ import React from 'react';
 const PostContainer = props => {
     return (
         <div>
-            {props.dummyData.map(item => {
-                return (
-                    <h2>{item.username}</h2>
-                );
-            })}
+            <h2>{props.item.username}</h2>
+            <h2>{props.item.likes}</h2>
         </div>
     );
 }
