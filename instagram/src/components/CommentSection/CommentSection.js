@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import heart from '../../heart.svg';
 import convo from '../../convo.svg';
 import './CommentSection.css'
+import Moment from 'react-moment';
+
+
 
 
 class CommentSection extends React.Component {
@@ -55,7 +58,7 @@ class CommentSection extends React.Component {
                     <img src={heart} width="25px" onClick={this.addLike}/>
                     <img src={convo} width="25px"/>
                 </div>
-                <p>{this.props.time}</p>
+                <Moment parse="MMM D YYYY" className="timestamp" fromNow AGO>{this.props.time}</Moment>
             </div>
             <h2 id="likes">{this.state.likes} likes</h2>
           {this.state.comment.map(comment => (
