@@ -1,0 +1,44 @@
+header {
+    display: flex;
+    margin: 25px 0;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+header i {
+    color: gray
+}
+
+.logo-image {
+    width:200px;
+    height: 60px;
+    padding-left: 25px;    
+    border-left: 2px solid lightgrey;
+    align-self: flex-end;
+    padding-top: 20px;
+}
+
+.fa-instagram {
+    margin-right: 25px;
+    color: black
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.search {
+    width: 250px;
+    height: 25px;
+    text-align: center;
+}
+
+.icons {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
