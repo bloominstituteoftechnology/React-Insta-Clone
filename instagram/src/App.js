@@ -7,9 +7,9 @@ import SearchHeader from './components/SearchBar/SearchHeader.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faInstagram, faBandcamp } from '@fortawesome/free-brands-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
+import { faHeart, faUser, faComment } from '@fortawesome/free-regular-svg-icons';
 
-library.add(faInstagram, faSearch, faBandcamp, faHeart, faUser);
+library.add(faInstagram, faSearch, faBandcamp, faHeart, faUser, faComment);
 
 class App extends Component {
   constructor(props) {
