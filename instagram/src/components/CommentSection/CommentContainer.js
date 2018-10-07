@@ -1,5 +1,7 @@
 import React from 'react';
+import NewComment from './NewComment.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import './CommentContainer.css';
 
 const CommentContainer = props => {
     return (
@@ -19,6 +21,7 @@ const CommentContainer = props => {
                 </h4>
                 <h4>{props.item.timestamp}</h4>
             </div>
+            <NewComment />
         </div>
     );
 }
