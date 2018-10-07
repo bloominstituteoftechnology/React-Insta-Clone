@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from "prop-types";
 
-const PostContainer = props => {
+const CommentSection = props => {
   return (
     <>
       {props.dummyData.map(data => (
@@ -18,4 +17,4 @@ const PostContainer = props => {
 
 
 
-export default PostContainer;
+export default CommentSection;

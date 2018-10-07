@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import insta from'./insta.png';
 
 class Search extends Component {
  state = {
@@ -13,14 +14,23 @@ class Search extends Component {
 
  render() {
    return (
+     <div>
+
      <form>
+       <i class="fab fa-instagram"></i> |
+          <img src={insta} alt='logo'/>
+
        <input
-         placeholder="Search for..."
+         placeholder=" Search for..."
          ref={input => this.search = input}
          onChange={this.handleInputChange}
        />
-       <p>{this.state.query}</p>
+<i class="far fa-compass"></i>
+<i class="far fa-heart"></i>
+<i class="far fa-user"></i>
+
      </form>
+   </div>
    )
  }
 }
