@@ -1,31 +1,22 @@
 import React from "react";
 import instacloneimg from "./../../imgs/instacloneimg.png";
 import "./SearchBar.css";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faCompass,
-  faHeart
-} from "@fortawesome/free-regular-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-
-library.add(faUser, faCompass, faHeart, faSearch);
 
 class SearchBar extends React.Component {
   constructor(props) {
-    super()
+    super();
     this.state = {
-      search: ''
-    }
+      search: ""
+    };
   }
   handleInputChange = e => {
     const val = e.target.value;
     this.setState({
       search: val
-    })
-    this.props.handleSearch(val)
-  }
+    });
+    this.props.handleSearch(val);
+  };
 
   render() {
     return (
@@ -40,7 +31,8 @@ class SearchBar extends React.Component {
             <input
               value={this.state.search}
               onChange={this.handleInputChange}
-              placeholder="Search" />
+              placeholder="Search"
+            />
           </form>
 
           <div className="search icon-content">

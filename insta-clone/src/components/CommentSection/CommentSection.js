@@ -2,15 +2,10 @@ import React from "react";
 import Comment from "./Comment";
 import "./CommentSection.css";
 import PropTypes from "prop-types";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faComment, faHeart } from "@fortawesome/free-regular-svg-icons";
-import { faSearch, faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import * as moment from "moment";
+
 let now = moment().fromNow();
-
-library.add(faComment, faHeart, faSearch, faEllipsisH);
-
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
@@ -18,15 +13,13 @@ class CommentSection extends React.Component {
       comments: props.comments,
       images: props.image,
       likes: props.likes,
-      text: ''
+      text: ""
     };
-
   }
 
-
-    addALike = e =>{
-      this.setState({ likes: this.state.likes + 1})
-  }
+  addALike = e => {
+    this.setState({ likes: this.state.likes + 1 });
+  };
 
   addNewComment = e => {
     console.log(e);
@@ -42,28 +35,20 @@ class CommentSection extends React.Component {
       });
       e.currentTarget.value = null;
     }
-
   };
-  handleChange = (e)=> {
-  this.setState({text: e.target.value});
-
+  handleChange = e => {
+    this.setState({ text: e.target.value });
   };
 
   handleSubmit = e => {
     if (e.keyCode === 13 && e.shiftKey === false) {
-      if (this.state.text.length >= 1)
-        e.preventDefault();
+      if (this.state.text.length >= 1) e.preventDefault();
       this.addNewComment(e);
-      this.setState({text:''})
+      this.setState({ text: "" });
     }
-
   };
 
-
-
-  saveStateToLocalStorage = () => {
-
-  }
+  saveStateToLocalStorage = () => {};
 
   render() {
     return (
