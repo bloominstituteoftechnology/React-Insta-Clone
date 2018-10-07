@@ -61,3 +61,9 @@ header{
   background-repeat: no-repeat;
   box-sizing: border-box;
 }
+
+.icon{
+  padding: 15px;
+  display: inline-block;
+  transform: translateY(3px)
+}
