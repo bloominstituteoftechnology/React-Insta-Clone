@@ -20,6 +20,7 @@
 
 .commentWrap {
     display: flex;
+    padding-left: 20px;
     
 }
 
@@ -29,8 +30,9 @@
 
 
 
-.likes h3{
+.likes h3 {
     display: flex;
     justify-content: left;
+    padding-left: 20px;
     font-weight: normal;
 }

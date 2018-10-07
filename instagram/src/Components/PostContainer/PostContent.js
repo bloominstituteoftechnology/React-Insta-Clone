@@ -1,5 +1,5 @@
 import React from 'react';
-// import CommentContainer from './../CommentSection/CommentContainer';
+import CommentFooter from './../CommentSection/CommentFooter';
 import './post.css';
 
 
@@ -23,29 +23,28 @@ class PostContent extends React.Component {
                                 <h3>{postProps.likes}{" likes"}</h3>
                             </div>
                             <div>
-                            {(typeof (postProps.comments) === 'object') ?
-                                <div>{
+                            {
+                             <div> {
                                     postProps.comments.map((newData) => {
                                         return (
                                             <div className={"commentWrap"} key={postProps.username.toString()}>
-                                            <h4>{newData.username}</h4>
+                                                <h4>{newData.username}</h4>
                                                 <p className={"comment"}>{newData.text}</p>
                                             </div>
                                         )
                                     })
-                                    }</div> : null
+                              }</div> //end comments 
                             }
-                        </div>
-               
-                    </>
+                    <div>
+                    <CommentFooter />
+                    </div>
+                        </div> 
+                    </> //end comments wrap
                     )
                 })}
             </div>
         )
     }
-
-
-
 }
 
 
