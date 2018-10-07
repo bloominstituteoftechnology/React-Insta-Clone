@@ -1,0 +1,47 @@
+.SearchBar-container {
+  /* min-height: 15vh; */
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 10rem;
+}
+
+.SearchBar-row {
+  /* min-height: 15vh; */
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+
+  margin-left: 10rem;
+}
+
+.SearchBar-icons {
+    width: 2rem;
+    /* max-width: 150px; */
+    height: 2rem;
+    max-height: 2rem;
+}
+
+.Wordmark{
+  font-family:"Damion";
+  font-style: italic;
+  font-size: 2rem;
+}
+/* Instagram Fonts
+Damion
+Billabong
+Freight Sans
+Neue Helvetica
+Roboto
+Proxima Nova
+Chunk
+timeout
+cookie cutter
+Handelson
+The Busher
+Hokyaa
+*/

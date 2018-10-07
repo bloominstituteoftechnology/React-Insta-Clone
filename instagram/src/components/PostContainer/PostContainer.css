@@ -1,8 +1,4 @@
-.Header {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
+
 
 .Container {
   display: flex;

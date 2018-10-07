@@ -50,7 +50,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <SearchBar />
+   <SearchBar />
+
         </header>
         <div>
           {this.state.instaClonePosts.map((post, i) => {

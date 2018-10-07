@@ -1,3 +1,4 @@
+/* DEFAULT STYLES */
 .App {
   text-align: center;
 }
@@ -8,16 +9,25 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 15vh;
   display: flex;
-  /* flex-direction: column;  */
   flex-direction: row; 
-  /* align-items: center; */
-  align-items: left;
+    /* flex-direction: column;  */
+
+  /* align-items: center;
+  align-items: left; */
+  justify-content: flex-start;
+  background-color: hsl(0, 15%, 95%);
+  font-size: 30pt;
+  color: black;
+}
+
+.App-header-row {
+  /* min-height: 15vh; */
+  display: flex;
+  flex-direction: row; 
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
 .App-link {
@@ -31,4 +41,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* MY STYLES */
+.Search-bar {
+  margin: 10px 20px 20px 20px;
+}
+
+.Search-nav {
+
+}
+
+.Search-input {
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 16pts;
+}
+
+.Logo-type {
+  font-size: 2rem;
+  margin: 0;
+  border-left: 1px solid grey;
+  padding-left: 5px;
+}
+
+.Logo-container {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Grand-Hotel', cursive;
 }
