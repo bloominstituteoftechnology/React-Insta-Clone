@@ -9,6 +9,10 @@ class SearchBar extends Component{
         this.props.searchPosts(searchText)
     }
 
+    handleFocus = () =>{
+        document.querySelector('.fa-search').style.display = 'none'
+    }
+
     render(){
 
         return (
@@ -19,7 +23,7 @@ class SearchBar extends Component{
                 </div>
                 <div className="middle">
                     <i className="fas fa-search"></i>
-                    <input onChange={this.handleChange} className="input" type="text" placeholder="                Search"/>
+                    <input onFocus={this.handleFocus} onChange={this.handleChange} className="input" type="text" placeholder="                Search"/>
                 </div>
                 <div className="right">
                     <i className="far fa-compass"></i>

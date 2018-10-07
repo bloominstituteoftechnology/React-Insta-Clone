@@ -64,3 +64,8 @@
     opacity: .6;
     cursor: pointer;
 }
+
+input {
+    border: 1px solid #E6E6E6;
+    outline-color: inherit;
+}

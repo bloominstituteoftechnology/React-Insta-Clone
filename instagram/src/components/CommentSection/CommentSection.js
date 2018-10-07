@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Comment from '../Comment/Comment.js'
 import './CommentSection.css'
-// var moment = require("moment");
+// import moment from 'moment';
 
 //Receives an individual post's comments array from PostContainer
 class CommentSection extends Component{
@@ -51,7 +51,7 @@ class CommentSection extends Component{
     }
 
     render(){
-
+        // console.log(moment.format());
 
         const commentList = (!this.state.comments.length === 0)
         ? null
