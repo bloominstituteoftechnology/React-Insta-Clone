@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import NewComment from './NewComment.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './CommentContainer.css';
@@ -24,6 +25,14 @@ const CommentContainer = props => {
             <NewComment />
         </div>
     );
+}
+
+CommentContainer.propTypes = {
+    item: PropTypes.shape({
+        username: PropTypes.string.isRequired,
+        comments: PropTypes.arrayOf.isRequired,
+        timestamp: PropTypes.string.isRequired,
+    })
 }
 
 export default CommentContainer;

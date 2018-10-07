@@ -24,12 +24,16 @@ class App extends Component {
         <SearchHeader />
         {this.state.dummyData.map(item => {
                 return (
-                  <PostContainer item={item}/>
+                  <PostContainer item={item} key={item.username}/>
                 );
             })}
       </div>
     );
   }
+}
+
+PostContainer.propTypes = {
+  
 }
 
 export default App;
