@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './CommentSection.css';
 
-import Comment from './Comment';
 import CommentActions from './CommentActions';
 import CommentLikes from './CommentLikes';
+import Comment from './Comment';
 import CommentForm from './CommentForm';
 
 import PropTypes from 'prop-types';
@@ -19,9 +19,10 @@ export default class CommentSection extends Component {
   }
 
   componentDidMount() {
-    this.setState({ 
-      comments: this.props.comments, 
-      likes: this.props.likes });
+    this.setState({
+      comments: this.props.comments,
+      likes: this.props.likes,
+    });
   }
 
   handleSubmit = e => {
@@ -37,10 +38,15 @@ export default class CommentSection extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
+  handleClick = e => {
+    this.setState({ likes: this.state.likes + 1 });
+    e.preventDefault();
+  }
+
   render() {
     return (
       <div className="post-comments">
-        <CommentActions />
+        <CommentActions onClick={this.handleClick} />
         <CommentLikes likes={this.state.likes} />
         {this.state.comments.map((user, index) =>
           <Comment key={index} username={user.username} text={user.text} />
