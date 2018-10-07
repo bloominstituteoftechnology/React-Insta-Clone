@@ -15,9 +15,12 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 62.5%;
-	font: inherit;
-	vertical-align: baseline;
+	font-family: 'Roboto Condensed', sans-serif;
+  vertical-align: baseline;
+  
 }
+
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -41,4 +44,20 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+header{
+  position: fixed;
+  z-index: 5;
+  background: white;
+  box-sizing: border-box;
+  width: 100vw;
+  border-bottom: #DBDBDB 1px solid;
+}
+
+.container{
+  background: #FAFAFA ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
 }

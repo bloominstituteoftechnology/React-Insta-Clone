@@ -1,0 +1,39 @@
+.post-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 77px;
+}
+
+.card{
+    max-width: 614px;
+    margin: 30px auto;
+    background: white;
+}
+
+.card-header{
+    border: #DBDBDB 1px solid;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    letter-spacing: .4px;
+}
+
+.post-img{
+    width: 100%;
+}
+
+.card-comments{
+    border: #DBDBDB 1px solid;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.thumbnail{
+    height: 30px;
+    width: auto;
+    border-radius: 50%;
+    margin: 15px;
+}
