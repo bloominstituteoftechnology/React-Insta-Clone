@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  border: 2px solid palevioletred;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.thumbnail {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  align-self: flex-start;
+  margin-left: 40px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.images {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.username {
+  border: 1px solid pink;
+  position: relative;
+  right: 190px;
+  bottom: 50px;
+  font-weight: bold;
+}
