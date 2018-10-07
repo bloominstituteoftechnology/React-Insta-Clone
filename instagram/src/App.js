@@ -22,7 +22,7 @@ class App extends Component {
       username: "ult1m4t3_H4CK3RR", /*hard-coded username*/
       text: this.state.newComment /*Setting the text of the new comment to the comment text that's been saved in the state*/
     });
-    this.setState({posts: postsCopy}, () => {console.log(this.state.posts)});
+    this.setState({posts: postsCopy}, () => {console.log(this.state.posts)}); /*Sets the  post array on state to be equal to the copy I edited*/
   };
   handleInput = event => {
     this.setState({newComment: event.target.value}); /*Every single time anything is typed in the comment box, the value for the new comment is updated in the state to reflect that.*/
