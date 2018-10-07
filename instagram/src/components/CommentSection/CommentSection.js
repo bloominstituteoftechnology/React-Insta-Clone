@@ -25,7 +25,7 @@ export default class CommentSection extends Component {
     });
   }
 
-  handleSubmit = e => {
+  addNewComment = e => {
     const newComment = this.state.comment;
     this.setState({
       comments: [...this.state.comments, { username: 'Andres', text: newComment }],
@@ -51,7 +51,7 @@ export default class CommentSection extends Component {
         {this.state.comments.map((user, index) =>
           <Comment key={index} username={user.username} text={user.text} />
         )}
-        <CommentForm comment={this.state.comment} onSubmit={this.handleSubmit} onChange={this.handleChange} />
+        <CommentForm comment={this.state.comment} onSubmit={this.addNewComment} onChange={this.handleChange} />
       </div>
     );
   }
