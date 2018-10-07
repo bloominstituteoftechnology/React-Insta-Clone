@@ -34,9 +34,9 @@ class App extends Component {
   handleAddClickLike = event => { /*Function adding like when inactive heart is clicked*/
     const inactiveHeart = document.getElementsByClassName('icon-heart'); /*Selecting the gray heart icon*/
     const activeHeart = document.getElementsByClassName('icon-heart-liked'); /*Selecting the red heart icon*/
-    inactiveHeart[0].classList.toggle('display-none'); /*Making the gray heart dissapear when clicked on*/
-    activeHeart[0].classList.toggle('display-none'); /*Making the red heart appear when the gray heart dissapears*/
     const postIndex = event.target.dataset.postnumber; /*Setting the current post index to be the specific unique post of the event's target*/
+    inactiveHeart[postIndex].classList.toggle('display-none'); /*Making the gray heart dissapear when clicked on*/
+    activeHeart[postIndex].classList.toggle('display-none'); /*Making the red heart appear when the gray heart dissapears*/
     let postsCopy = this.state.posts; /*Making a copy of the posts array so it's easier to edit*/
     postsCopy[postIndex].likes++; /*Incrementing the number of likes up when like button is clicked*/
     this.setState({posts: postsCopy}); /*Sets the actual version of posts equal to the copy that was edited*/
@@ -44,9 +44,9 @@ class App extends Component {
   handleRemoveClickLike = event => { /*Function removing like and inactivating heart icon*/
     const inactiveHeart = document.getElementsByClassName('icon-heart');
     const activeHeart = document.getElementsByClassName('icon-heart-liked');
-    activeHeart[0].classList.toggle('display-none');
-    inactiveHeart[0].classList.toggle('display-none');
     const postIndex = event.target.dataset.postnumber;
+    activeHeart[postIndex].classList.toggle('display-none');
+    inactiveHeart[postIndex].classList.toggle('display-none');
     let postsCopy = this.state.posts;
     postsCopy[postIndex].likes--; 
     this.setState({posts: postsCopy}); 
