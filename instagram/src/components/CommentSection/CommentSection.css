@@ -35,7 +35,7 @@
     width: 95%;
     height: 100px;
     margin-bottom: 5px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .timestamp{

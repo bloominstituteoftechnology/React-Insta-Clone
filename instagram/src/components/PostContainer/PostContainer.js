@@ -11,7 +11,7 @@ const PostContainer = props => (
             <div className="username title-font">{props.username}</div>
         </div> {/*End Header*/}
         <img className="post-picture-container" src={props.imageUrl}></img> {/*Contains the picture displayed in the post*/}
-        <CommentSection likes={props.likes} timestamp={props.timestamp} comments={props.comments}/> {/*Creating a comments section in each PostContainer that takes the props of the comments values from info passed from dummydata*/}
+        <CommentSection handleInput={props.handleInput} handleAddComment={props.handleAddComment} postNumber={props.postNumber} likes={props.likes} timestamp={props.timestamp} comments={props.comments}/> {/*Creating a comments section in each PostContainer that takes the props of the comments values from info passed from dummydata*/}
     </div>
 );
 
