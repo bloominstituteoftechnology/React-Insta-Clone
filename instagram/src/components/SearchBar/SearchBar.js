@@ -12,8 +12,10 @@ class SearchBar extends React.Component {
             <div className="searchBar">
                 <div><img className="header" src={logos} alt="logo" /></div>
                 <div>
-                    <form className="form" onSubmit={(event) => {this.props.filter(event)}}><input onChange={this.props.searchHandler} type="text" placeholder=" Search 🔍"/>
-                    </form>
+                    <form className="form" onSubmit={(event) => { this.props.filter(event) }}>
+                        <input onChange={this.props.searchHandler} type="text" value={this.props.searchInput} placeholder=" Search 🔍" />
+                    </form>    
+                    <button onClick={(event) => { this.props.reset(event) }}>Reset</button>
                 </div>
                 <div className="compheartfriend">
                     <img className="icons" src={compass} alt="compass" />
