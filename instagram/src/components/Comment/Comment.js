@@ -6,7 +6,7 @@ const Comment = ({comment}) =>{
     return (
 
         <div>
-            <p><span className="username">{comment.username}</span>&#160;{comment.text}</p>
+            <p className="comment-text"><span className="username">{comment.username}</span>&#160;{comment.text}</p>
         </div>
     )
 

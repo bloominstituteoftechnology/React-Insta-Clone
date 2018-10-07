@@ -4,15 +4,14 @@ import './PostListContainer.css'
 import PropTypes from 'prop-types';
 
 //Receives Post Data array from App.js
-const PostListContainer = ({postData}) => {
-
+const PostListContainer = ({postData, addComment}) => {
     const postList = (!postData.length)
     ? <h3>Loading Posts...</h3>
 
     :postData.map(post =>{
         return (
             <div key={post.username}>
-                <PostContainer post={post} />
+                <PostContainer post={post} addComment={addComment} />
             </div>
         )
     })

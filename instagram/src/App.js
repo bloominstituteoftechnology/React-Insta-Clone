@@ -23,20 +23,33 @@ class App extends Component {
 
   }
 
-  // addComment(commentObj, user){
+  addComment = (commentObj, user) =>{
+    console.log(commentObj);
+    console.log(user);
 
 
-  //   this.setState({
-  //      commentList
-  //   })
-  // }
+    let newPostData = this.state.postData;
+    console.log(newPostData);
+    for(let i=0; i < newPostData.length; i++){
+      if(newPostData[i].username === user){
+        let newCommentList = newPostData[i].comments;
+        newCommentList.push(commentObj);
+      }
+    }
+
+    this.setState({
+      postData: newPostData
+    })
+
+
+  }
 
   render() {
     return (
       <div className="App">
         {/* <h1>Instagram App</h1> */}
         <SearchBar />
-        <PostListContainer postData={this.state.postData} />
+        <PostListContainer postData={this.state.postData} addComment={this.addComment} />
       </div>
     );
   }
