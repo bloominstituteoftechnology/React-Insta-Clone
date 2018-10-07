@@ -18,10 +18,16 @@ export default class App extends Component {
     this.setState({ posts: dummyData });
   }
 
+  filterPosts = e => {
+    const filteredPosts = dummyData.filter(post =>
+      post.username.includes(e.target.value));
+    this.setState({ posts: filteredPosts });
+  }
+
   render() {
     return (
       <div className="app-container">
-        <SearchBar />
+        <SearchBar onChange={this.filterPosts} />
         <PostContainer posts={this.state.posts} />
       </div>
     );
