@@ -5,10 +5,10 @@ const PostComments = props => {
     return(
         <div className={"commentBox"}>
         <>
-        <div className={"commentUser"}>{props.postcommentsusers.username}</div>
+        <div className={"commentUser"}>{props.username}</div>
         </>
         <>
-        {props.postcomments.text}
+        {props.text}
         </>
         </div>
     )

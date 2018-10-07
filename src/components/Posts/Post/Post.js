@@ -7,39 +7,26 @@ import PostActions from '../PostBody/PostActions';
 import PostLikes from '../PostBody/PostLikes';
 import PostCommentForm from '../PostComments/PostCommentForm';
 import PostTimeStamps from '../PostBody/PostTimeStamps';
+import Comments from "../PostComments/Comments";
 
 const Post = props => {
     return(
         <div>
-        {props.data.map(data => {
-            return(
+
                 <div className={'containerPost'}>
-                <>
-                    <PostUser usernames={data} usericons={data} />
-                    <PostImg postimg={data} />
-                    <PostActions />
-                    <PostLikes postlikes={data}/>   
-                  
-                </>
-
-                <>
-                {props.comments.map(commentdata => {
-                    return(
-                        <>
-                            <PostComments postcomments={commentdata} postcommentsusers={commentdata} />
-                            
-                        </>
-                    )
-                    })}
-                    <PostTimeStamps posttime={data} />
-                    <PostCommentForm />      
-                </>
-        </div>
-
-            )
-        })};
-        
-
+                    <>
+                        <PostUser usernames={props.obj} usericons={props.obj} />
+                        <PostImg postimg={props.obj} />
+                        <PostActions />
+                        <PostLikes postlikes={props.obj}/>   
+                    
+                    </>
+                        <Comments key={props.obj.timestamp} obj={props.obj} />
+                    <>
+                        <PostTimeStamps posttime={props.obj} />
+                        <PostCommentForm />      
+                    </>
+                </div>      
         </div>
     )
 }

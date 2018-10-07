@@ -44,8 +44,10 @@
 }
 
 .searchbar{
-    background-image: url(/src/img/searchbarassets/searchbaricon.png);
-    background-size: cover;
+    background-image: url(../../img/searchbarassets/searchbaricon.png);
+    background-repeat: no-repeat;
+    background-size: 5% 50%;
+    background-position: 101px 7px;
     background-color: #fcfcfc;
     width: 300px;
     height: 25px;
@@ -59,38 +61,47 @@
     z-index: +1;
 }
 
+.searchbar:focus {
+    background-image: none;
+    outline-color: transparent;
+    outline-style: none;
+  }
+
 .exploreIcon{
     position: relative;
-    width: 35px;
-    height: 35px;
-    background-image: url(https://static.thenounproject.com/png/782776-200.png);
-    background-size: cover;
+    width: 28px;
+    height: 28px;
+    background-image: url(../../img/searchbarassets/sprite.png);
+    background-size: fill;
+    background-position: -455px 363.5px;
     z-index: +1;
     left: 560px;
-    top: 18px;
+    top: 21px;
     cursor: pointer;
 }
 
 .heartIcon{
     position: relative;
-    width: 40px;
-    height: 40px;
-    background-image: url(https://us.123rf.com/450wm/tanyastock/tanyastock1508/tanyastock150801313/43179012-icono-del-coraz%C3%B3n-muestra-del-amor-s%C3%ADmbolo-de-la-vida-icono-de-contorno-lineal-sobre-fondo-blanco-vector.jpg?ver=6);
-    background-size: cover;
+    width: 28px;
+    height: 28px;
+    background-image: url(../../img/searchbarassets/sprite.png);
+    background-position: -455px 283.5px;
+    background-size: fill;
     z-index: +1;
     left: 580px;
-    top: 15px;
+    top: 23px;
     cursor: pointer;
 }
 
 .profileIcon{
     position: relative;
-    width: 33px;
-    height: 33px;
-    background-image: url(https://images.vexels.com/media/users/3/147103/isolated/lists/e9bf9a44d83e00b1535324b0fda6e91a-instagram-profile-line-icon.png);
-    background-size: cover;
+    width: 28px;
+    height: 28px;
+    background-image: url(../../img/searchbarassets/sprite.png);
+    background-position: -455px 181px;
+    background-size: fill;
     z-index: +1;
     left: 600px;
-    top: 18px;
+    top: 20px;
     cursor: pointer;
 }
