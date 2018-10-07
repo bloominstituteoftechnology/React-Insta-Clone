@@ -1,14 +1,12 @@
-.comment {
-    font-size: 16px;
-    margin: 5px 0;
-}
+.comments-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
 
-.commentUser {
-    display: inline;
-    font-weight: bold;
-    margin-right: 5px;
-}
-
-.commentText {
-    display: inline;
+.commentInput {
+    height: 40px;
+    padding-left: 0px;
+    font-size: 50px;
+    border: none;
 }

@@ -2,23 +2,33 @@
   font-family: 'Grand Hotel', cursive;
   font-size: 3.4rem;
   font-weight: 600;
-  padding-left: 6%;
 }
+
 .searchBarBreak {
   font-size: 3.2rem;
   font-weight: 100;
   padding-bottom: 5px;
 }
+
 .logoBox {
   display: flex;
   align-items: center;
   width: 165px;
   justify-content: space-between;
+  padding-top: 0px;
+
 }
+
+.logoBox:hover {
+  cursor: pointer;
+}
+
 .logoBox img {
   height: 32px;
   width: 32px;
+
 }
+
 .search {
   background-image: url(https://png.icons8.com/ios-glyphs/48/000000/search.png);
   background-repeat: no-repeat;
@@ -31,18 +41,21 @@
   padding-left: 34%;
   border: 1px solid gainsboro;
 }
+
 .searchBox {
   display: flex;
-  height: 46px;
+  height: 76px;
   margin: 0 auto;
-  max-width: 635px;
+  max-width: 935px;
   width: 100%;
   justify-content: space-between;
   align-items: center;
 }
+
 .searchBox form {
   width: 26%
 }
+
 .searchContainer {
   width: 100%;
   max-width: 1400px;
@@ -52,6 +65,7 @@
   z-index: 1;
   background-color: white;
 }
+
 .topButtonBox {
   display: flex;
   align-items: center;
@@ -60,7 +74,12 @@
   justify-content: space-between;
   min-width: 100px;
 }
+
 .topButtonBox img {
   height: 25px;
   width: 25px;
+}
+
+.topButtonBox img:hover {
+  cursor: pointer;
 }

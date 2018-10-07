@@ -31,7 +31,14 @@
 }
 
 .likes {
+    font-weight: bold;
     margin-left: 10px;
+}
+
+.likesIcons .far{
+    font-size: 26px;
+    margin-right: 5px;
+    cursor: pointer;
 }
 
 .commentContainer {
