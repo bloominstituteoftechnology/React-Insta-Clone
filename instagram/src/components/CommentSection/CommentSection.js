@@ -47,16 +47,18 @@ class CommentSection extends React.Component {
             );
             })}
             <div>
-            <input
-                placeholder="Add a comment..."
-                value={this.state.newCommentText}
-                onChange={this.onChange}
-                onKeyDown={(event) => {
-                    if (event.keyCode === 13) {
-                        this.addComment()
-                    }
-                }} 
-            />
+            <form>
+                <input
+                    placeholder="Add a comment..."
+                    value={this.state.newCommentText}
+                    onChange={this.onChange}
+                    onKeyDown={(event) => {
+                        if (event.keyCode === 13) {
+                            this.addComment()
+                        }
+                    }} 
+                />
+            </form>
             </div>
         </div>
         );
