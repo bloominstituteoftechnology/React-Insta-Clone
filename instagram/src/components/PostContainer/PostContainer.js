@@ -35,7 +35,7 @@ class PostContainer extends React.Component {
         }
     }
 
-    //like a post
+    //toggle post liking
 
     likePost = (e, prevState) => {
         e.preventDefault();
@@ -82,6 +82,8 @@ class PostContainer extends React.Component {
         )
     }
 }
+
+// check proptypes for post container
 
 PostContainer.propTypes = {
     postInfo: PropTypes.shape({

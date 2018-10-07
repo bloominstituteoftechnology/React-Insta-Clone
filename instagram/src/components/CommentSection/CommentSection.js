@@ -26,7 +26,7 @@ class CommentSection extends React.Component {
         e.preventDefault();
         this.setState({
             input: e.target.value
-        }, console.log(this.state.input))
+        })
     }
 
     //function for submitting comment
@@ -82,6 +82,8 @@ class CommentSection extends React.Component {
         )
     }
 }
+
+// checking proptypes for comment section
 
 CommentSection.propTypes = {
     data: PropTypes.shape({
