@@ -1,9 +1,49 @@
 .search-bar {
     width: 100%;
+    padding: 30px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-input {
+.search-bar .company {
+    margin-left: 1.5%;
+}
+
+.search-bar h1 {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 4.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar h1 i {
+    border-right: 1px solid black;
+    font-size: 4.8rem;
+    padding-right: 13%;
+    margin-right: 10%;
+}
+
+.search-bar .search {
+    width: 25%;
+}
+
+.search-bar input {
+    width: 88%;
     text-align: center;
+    background: #fafafa;
+    color: #999999;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.search-bar .links {
+    font-size: 3rem;
+    margin-right: 3.5%;
+    width: 13%;
+    display: flex;
+    justify-content: space-between;
+    color: #999999;
 }
