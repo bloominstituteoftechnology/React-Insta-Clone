@@ -7,6 +7,7 @@ import CommentsContainer from "../CommentsContainer/CommentsContainer";
 import dummyData from '../dummy-data'
 import './PostContainer.css';
 
+
 class PostContainer extends React.Component {
   render() {
 

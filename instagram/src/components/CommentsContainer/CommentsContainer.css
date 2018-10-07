@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.comments-container {
+  border: 1px solid firebrick;
+  padding:  0 1rem;
+}

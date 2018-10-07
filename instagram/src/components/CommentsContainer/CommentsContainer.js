@@ -18,7 +18,7 @@ class CommentsContainer extends React.Component {
         {this.state.comments.map (el => {
           return <CommentSection username = {el.username} text = {el.text}/>
         }
-        )})
+        )}
 
       </div>
 

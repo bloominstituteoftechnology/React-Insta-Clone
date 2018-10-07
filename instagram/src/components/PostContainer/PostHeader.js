@@ -8,7 +8,7 @@ class PostHeader extends React.Component {
   render () {
     return (
       <div className = 'header-container'>
-        <img src = {this.props.thumbNail} />
+        <img  className = 'headerIMG' src = {this.props.thumbNail} />
         <p className = 'userName'>{this.props.name}</p>
 
       </div>
