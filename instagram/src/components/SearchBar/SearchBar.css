@@ -36,6 +36,19 @@
   padding-left: 2rem;
 }
 
+.SearchBar-Container {
+  position: relative;
+}
+
+.Search-Icon {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  font-size: 1.6rem;
+  transform: translateY(-20%);
+  color: #262626;
+}
+
 .SearchBar-Input {
   padding: 8px 0;
   /* display: flex;
@@ -46,6 +59,11 @@
   border: 1px solid #dbdbdb;
   border-radius: 5px;
   text-align: center;
+}
+
+.SearchBar-Input:focus {
+  text-align: left;
+  padding-left: 2rem;
 }
 
 .SearchBar-Icons ion-icon {

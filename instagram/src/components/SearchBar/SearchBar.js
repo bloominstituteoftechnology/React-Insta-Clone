@@ -11,7 +11,18 @@ const SearchBar = () => {
           </span>
           <span className="Brand">Instagram</span>
         </h1>
-        <input type="text" placeholder="Search" className="SearchBar-Input" />
+        <div className="SearchBar-Container">
+          <input
+            type="text"
+            placeholder="Search"
+            className="SearchBar-Input"
+            id="search"
+          />
+          <label htmlFor="search" className="Search-Icon">
+            <ion-icon name="search" />
+          </label>
+        </div>
+
         <div className="SearchBar-Icons">
           <ion-icon name="compass" />
           <ion-icon name="heart-empty" />
