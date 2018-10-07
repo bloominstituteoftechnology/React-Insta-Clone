@@ -124,3 +124,9 @@
     outline-color: transparent;
     outline-style: none;
   }
+
+
+.commentInputForm form {
+    display: flex;
+    
+  }

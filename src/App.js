@@ -9,8 +9,15 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      data: []
+      data: [],
+      userInput: []
     };
+}
+
+changeUserInput(input){
+  this.setState({
+    userInput: input
+  })
 }
 
 componentDidMount() {

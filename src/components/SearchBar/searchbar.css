@@ -46,8 +46,8 @@
 .searchbar{
     background-image: url(../../img/searchbarassets/searchbaricon.png);
     background-repeat: no-repeat;
-    background-size: 5% 50%;
-    background-position: 101px 7px;
+    background-size: 4% 50%;
+    background-position: 110px 8px;
     background-color: #fcfcfc;
     width: 300px;
     height: 25px;
@@ -65,6 +65,7 @@
     background-image: none;
     outline-color: transparent;
     outline-style: none;
+    
   }
 
 .exploreIcon{
