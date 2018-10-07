@@ -4,10 +4,11 @@ import './App.css';
 import PostContainer from './components/PostContainer/PostContainer.js';
 import SearchHeader from './components/SearchBar/SearchHeader.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faBandcamp } from '@fortawesome/free-brands-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
 
-library.add(faInstagram, faSearch);
+library.add(faInstagram, faSearch, faBandcamp, faHeart, faUser);
 
 class App extends Component {
   constructor(props) {

@@ -1,12 +1,14 @@
 .logo {
     display: flex;
     align-items: center;
+    margin-top: 23px;
+    margin-left: 14px;
 }
 
 .svg-inline--fa.fa-w-14 {
     width: 43px;
     height: auto;
-    margin-right: 15px;
+    margin-right: 32px;
     margin-left: 12px;
 }
 
@@ -17,13 +19,15 @@
 } */
 
 .divider {
-    font-size: 40px;
+    font-size: 47px;
     position: relative;
-    bottom: 5px;
-    margin-right: 15px;
+    bottom: 8px;
+    margin-right: 23px;
+    font-weight: 100;
 }
 
 .linkH2 {
-    font-size: 40px;
+    font-weight: 100;
+    font-size: 44px;
     font-family: Billabong;
 }

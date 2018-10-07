@@ -1,4 +1,10 @@
 .icons {
     display: flex;
     align-items: center;
+    margin-right: 3.5%;
+    margin-top: 31px;
+}
+
+.linkIcon {
+    padding-right: 14%;
 }

@@ -1,19 +1,21 @@
 .searchDiv {
     display: flex;
     align-items: center;
-    margin-right: 9%;
+    margin-right: 6%;
+    margin-top: 28px;
 }
 
 .searchIcon {
     height: 15px;
     position: relative;
-    left: 115px;
+    left: 128px;
     bottom: 1px;
 }
 .search {
-    font-size: 16px;
-    height: 30px;
-    width: 284px;
+    font-size: 23px;
+    height: 37px;
+    width: 341px;
     background-color: #FAFAFA;
     text-align: center;
+    border-radius: 4px;
 }
