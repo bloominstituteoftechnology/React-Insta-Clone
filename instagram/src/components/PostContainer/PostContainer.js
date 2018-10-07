@@ -1,10 +1,11 @@
 import React from 'react';
+import PostHeader from './PostHeader';
+import './PostContainer.css';
 
 const PostContainer = props => {
     return (
-        <div>
-            <h2>{props.item.username}</h2>
-            <h2>{props.item.likes}</h2>
+        <div className="postContainer">
+            <PostHeader item={props.item}/>
         </div>
     );
 }

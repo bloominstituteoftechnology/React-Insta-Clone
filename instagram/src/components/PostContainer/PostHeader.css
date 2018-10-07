@@ -1,0 +1,10 @@
+.postHeader {
+    display: flex;
+    align-items: baseline;
+    height: 62px;
+}
+
+.postimg {
+    background-color: brown;
+    height: 400px;
+}
