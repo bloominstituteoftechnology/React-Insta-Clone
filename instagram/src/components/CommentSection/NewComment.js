@@ -7,9 +7,10 @@ const NewComment = (props) => {
             <div className='add-comment'>
                 <form onSubmit={props.newComment}>
                     <input
-                        onChange={props.textInput}
-                        type='text'
                         className='comment-input'
+                        value={props.text}
+                        onChange={props.textInput}
+                        
                         placeholder='Add a comment...'
                     />
                 </form>

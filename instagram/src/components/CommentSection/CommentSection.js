@@ -18,7 +18,7 @@ class CommentSection extends Component {
     componentDidMount() {
         setTimeout(() => {
             this.setState({ comment: this.props.postData.comments })
-        }, 500)
+        }, 5)
     }
 
     textInput = (event) => {
@@ -27,14 +27,14 @@ class CommentSection extends Component {
         })
     }
 
-    addNewComment = (event, index) => {
+    addNewComment = (event) => {
         event.preventDefault();
         const newComment = {
             username: 'buttmunch85',
             text: this.state.text,
         }
         this.setState({
-            comment: [...this.props.postData.comments, newComment],
+            comment: [...this.state.comment, newComment],
             text: '',
         })
     }
@@ -60,6 +60,7 @@ class CommentSection extends Component {
                 })}
                 <div className='timestamp'>{this.props.postData.timestamp}</div>
                 <NewComment
+                    text={this.state.text}    
                     newComment={this.addNewComment}
                     textInput={this.textInput}
                 />

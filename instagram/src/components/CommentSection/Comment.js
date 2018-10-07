@@ -6,7 +6,7 @@ const Comment = (props) => {
     if (!props.comment.lenght) {
         console.log('comments are rendering')
     }
-    
+
     return (
         <div>
             <div className='comments'>
