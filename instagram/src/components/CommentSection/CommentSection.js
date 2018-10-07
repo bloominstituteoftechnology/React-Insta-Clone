@@ -7,7 +7,18 @@ const CommentSection = props => (
     <div className="comment-section-container"> {/*Contains the entire section underneath the picture*/}
         <img className="add-comment-options" src="./img/options_icon_comments.png"></img> {/*The three dot options icon on the add comments bar*/}
         <div className="icon-container"> {/*Contains the heart and comment bubble icons*/}
-            <img className="icon-heart" src="./img/heart_icon_comments.png"></img>
+            <img /*Heart Icon for adding likes*/
+                data-postnumber={props.postNumber} /*Saving the index of the post as a data attribute on the heart icon so that only the likes of the individual post can be effected*/
+                onClick={props.handleAddClickLike} /*On click run the function handleAddLike to add a like*/
+                className="icon-heart" 
+                src="./img/heart_icon_comments.png">
+            </img>
+            <img /*Active liked heart icon*/
+                data-postnumber={props.postNumber} /*Saving the index of the post as a data attribute on the heart icon so that only the likes of the individual post can be effected*/
+                onClick={props.handleRemoveClickLike} /*On click run the function handleAddLike to add a like*/
+                className="icon-heart-liked display-none" 
+                src="./img/heart_icon_comments_liked.png">
+            </img>
             <img className="icon-bubble" src="./img/bubble_icon_comments.png"></img>
         </div> {/*End Icon Container*/}
         <div className="likes title-font">{props.likes} likes</div> {/*Contains the amount of likes the post has*/}

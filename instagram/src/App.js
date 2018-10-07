@@ -7,13 +7,15 @@ import PostContainer from './components/PostContainer';
 class App extends Component {
   state = { /*state is a special object that re-renders the component every time a value held within state changes changes*/
     posts: [], /*Establishing posts as a property of state*/
-    newComment: '' /*Holds the new comment as it's created in state*/
+    newComment: '', /*Holds the new comment as it's created in state*/
+    likes: 0 /*Establishing likes as a property within state*/
   };
 
   componentDidMount() { /*componentDidMount runs when the component is loaded to the page, or "mounted"*/
     this.setState({posts: dummyData}, () => {console.log(this.state.posts)}); /*Setting the value of posts within state to equal the array of dummyData*/
   }
 
+  /*Handle add comment*/
   handleAddComment = event => { /*An event handler that takes text entered in add comment bar and adds it into the comment array within the post object*/
     event.preventDefault(); /*By default a submit button tries to submit info and reload page, but I am preventing it from doing that*/
     const postIndex = event.target.dataset.postnumber; /*Saving the index that is the unique number of the post that is being commented on so that the comment is not saved to all posts*/
@@ -28,12 +30,38 @@ class App extends Component {
     this.setState({newComment: event.target.value}); /*Every single time anything is typed in the comment box, the value for the new comment is updated in the state to reflect that.*/
   };
 
+  /*Adding and removing likes*/
+  handleAddClickLike = event => { /*Function adding like when inactive heart is clicked*/
+    const inactiveHeart = document.getElementsByClassName('icon-heart'); /*Selecting the gray heart icon*/
+    const activeHeart = document.getElementsByClassName('icon-heart-liked'); /*Selecting the red heart icon*/
+    inactiveHeart[0].classList.toggle('display-none'); /*Making the gray heart dissapear when clicked on*/
+    activeHeart[0].classList.toggle('display-none'); /*Making the red heart appear when the gray heart dissapears*/
+    const postIndex = event.target.dataset.postnumber; /*Setting the current post index to be the specific unique post of the event's target*/
+    let postsCopy = this.state.posts; /*Making a copy of the posts array so it's easier to edit*/
+    postsCopy[postIndex].likes++; /*Incrementing the number of likes up when like button is clicked*/
+    this.setState({posts: postsCopy}); /*Sets the actual version of posts equal to the copy that was edited*/
+  };
+  handleRemoveClickLike = event => { /*Function removing like and inactivating heart icon*/
+    const inactiveHeart = document.getElementsByClassName('icon-heart');
+    const activeHeart = document.getElementsByClassName('icon-heart-liked');
+    activeHeart[0].classList.toggle('display-none');
+    inactiveHeart[0].classList.toggle('display-none');
+    const postIndex = event.target.dataset.postnumber;
+    let postsCopy = this.state.posts;
+    postsCopy[postIndex].likes--; 
+    this.setState({posts: postsCopy}); 
+  };
+
+
+  /*Rending the app*/
   render() {
     return (
       <div className="App">
         <SearchBar /> {/*Inserted search bar component*/}
         {dummyData.map((post, index) => { {/*Mapping over each post object in dummy data and ...*/}
             return <PostContainer /*Creating a PostContainer component that passes each value to PostContainer as props. First passes handleAddComment on this component.*/
+                                  handleRemoveClickLike={this.handleRemoveClickLike}
+                                  handleAddClickLike={this.handleAddClickLike} /*Passing the click like funcion down to the comments section to attach to the like button*/
                                   handleInput={this.handleInput} /*Passing the handleImput function to PostContainer*/
                                   handleAddComment={this.handleAddComment}  /*Passing the handleAddComment function to PostContainer*/
                                   username={post.username} 

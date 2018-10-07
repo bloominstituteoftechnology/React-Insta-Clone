@@ -22,7 +22,15 @@
     margin-right:12px;
 }
 
+.icon-heart-liked{
+    margin-right:12px;
+}
+
 /*LIKE COUNT*/
+.display-none{
+    display: none;
+}
+
 .likes{
     width: 95%;
     display: flex;
