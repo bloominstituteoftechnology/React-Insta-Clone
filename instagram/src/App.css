@@ -77,6 +77,22 @@
     border-radius: 15px;
 }
 
+.menu {
+    display: none;
+    position: fixed;
+    
+    top: 175px;
+    left: auto;
+    right: auto;
+    margin-left: 140px;
+    width: 300px;
+    height: 32vh; /* This give the height 100% of the screen or, '100% of View Height' */
+    background-color: rgba(230, 232, 233, 0.548);
+  /*   border: 1px solid #004D40; */
+    border-left: none;
+    border-bottom: none;
+    z-index: 2; /* This set the layer level of the element, it has precendence over initial level of 1*/
+  }
 /* .searchBarInput {
     height: 36px;
     width: 220px;
@@ -203,6 +219,7 @@
     width: 300px;
     z-index: 2;
     color: gray;
+    border-radius: 15px;
     border: 1px solid white;
 }
 
@@ -213,8 +230,9 @@
 .addComment2 {
     display: flex;
     margin-left: 10px;
-    width: 300px;
+    width: 400px;
     z-index: 2;
+    border-radius: 20px;
     border: 1px solid white;
 }
 
@@ -274,4 +292,13 @@ a#commentDots {
     width: 18px;
     background-position: 190px 68px;
     height: 20px;
+}
+
+a#camera {
+    width: 28px;
+    background-position: -456px 388px;
+    height: 28px;
+    margin-left: 10px;
+    margin-top: 8px;
+   /*  border: 2px solid green; */
 }

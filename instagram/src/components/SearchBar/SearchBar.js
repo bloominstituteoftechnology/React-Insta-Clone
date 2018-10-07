@@ -15,7 +15,7 @@ const SearchBar = props => {
 	return (
 		
 		 <div className='searchBarContainer'>
-			<div className='cameraIcon' onClick={props.camera}></div>
+			<a className='button' id="camera" onClick={props.camera}></a>
 			<a className='button' href="./index.html" id='titleText'>Instagram</a>
 			 
 			<form className="searchForm" onSubmit={submitHandler} value={props.value}>
