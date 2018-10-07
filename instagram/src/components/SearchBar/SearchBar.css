@@ -12,6 +12,10 @@
     align-items: center;
 }
 
+.fab {
+    font-size: 1.8rem;
+}
+
 .searchBar-title p {
     font-size: 2rem;
     transform: scale(.5, 1);
@@ -28,6 +32,8 @@
     text-align: center;
 }
 
-.searchBar-icons img {
+.far {
     padding: 0 10px;
+    font-size: 1.4rem;
+    color: #333333;
 }

@@ -1,8 +1,7 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
-import heart from "../img/heart.png";
-import person from "../img/person.png";
 import "./PostContainer.css";
+import PropTypes from "prop-types";
 
 const PostContainer = props => {
   return (
@@ -22,8 +21,8 @@ const PostContainer = props => {
       />
       <div className="like-bar">
         <div className="like-bar-images">
-          <img src={heart} alt="Like Button" />
-          <img src={person} alt="Comment Button" />
+          <i className="far fa-heart like-bar-far" />
+          <i className="far fa-comment like-bar-far" />
         </div>
         <p className="">{props.posts.likes} likes</p>
       </div>
@@ -40,6 +39,17 @@ const PostContainer = props => {
       </div>
     </div>
   );
+};
+
+PostContainer.propTypes = {
+  posts: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    thumbnailUrl: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    comments: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired
+  })
 };
 
 export default PostContainer;

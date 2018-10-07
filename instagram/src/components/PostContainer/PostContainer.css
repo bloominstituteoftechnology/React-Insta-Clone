@@ -32,17 +32,17 @@
 }
 
 .like-bar {
-  width: 10%;
+  width: 20%;
   padding: 10px;
 }
 
 .like-bar-images {
   display: flex;
-  justify-content: space-between;
 }
 
-.like-bar p {
-  padding: 5px 2px;
+.like-bar-far {
+  font-size: 1.4rem;
+  padding: 10px 20px 5px 0;
 }
 
 .comments-container {

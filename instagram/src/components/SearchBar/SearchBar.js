@@ -1,16 +1,12 @@
 import React from "react";
 import title from "./title.png";
-import heart from "./heart.png";
-import person from "./person.png";
-import compass from "./compass.png";
-import mainicon from "./mainicon.png";
 import "./SearchBar.css";
 
 const SearchBar = () => {
   return (
     <div className="searchBar-container">
       <div className="searchBar-title">
-        <img className="instagram-icom" src={mainicon} alt="Instagram icon" />
+        <i className="fab fa-instagram" />
         <p>|</p>
         <img className="instagram-title" src={title} alt="Instagram title" />
       </div>
@@ -22,9 +18,9 @@ const SearchBar = () => {
         />
       </form>
       <div className="searchBar-icons">
-        <img src={compass} alt="Instagram compass icon" />
-        <img src={heart} alt="Instagram heart icon" />
-        <img src={person} alt="Instagram person icon" />
+        <i className="far fa-compass" />
+        <i className="far fa-heart" />
+        <i className="far fa-user" />
       </div>
     </div>
   );
