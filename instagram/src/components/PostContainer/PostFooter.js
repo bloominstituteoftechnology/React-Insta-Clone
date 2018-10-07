@@ -12,7 +12,7 @@ class PostFooter extends React.Component {
           <img className = 'talkBubbleIMG icons'  src = 'https://cdn2.iconfinder.com/data/icons/round-speech-bubbles-outline/64/comment-bubble-outline-01-512.png' alt = 'talkBubble'/>
         </div>
 
-        <p className = 'likesCount'> {this.prop.likes} likes </p>
+        <p className = 'likesCount'> {this.props.likes} likes </p>
 
       </div>
 
