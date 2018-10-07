@@ -40,6 +40,16 @@ class App extends Component {
     this.setState({
       postData: newPostData
     })
+  }
+
+  searchPosts = (searchText) =>{
+    let newPostData = dummyData.filter(post =>{
+      return (post.username.includes(searchText))
+    })
+
+    this.setState({
+      postData: newPostData
+    })
 
 
   }
@@ -48,7 +58,7 @@ class App extends Component {
     return (
       <div className="App">
         {/* <h1>Instagram App</h1> */}
-        <SearchBar />
+        <SearchBar searchPosts={this.searchPosts}/>
         <PostListContainer postData={this.state.postData} addComment={this.addComment} />
       </div>
     );

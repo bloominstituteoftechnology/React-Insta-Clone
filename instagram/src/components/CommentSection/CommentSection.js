@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Comment from '../Comment/Comment.js'
 import './CommentSection.css'
+// var moment = require("moment");
 
 //Receives an individual post's comments array from PostContainer
 class CommentSection extends Component{
@@ -51,6 +52,7 @@ class CommentSection extends Component{
 
     render(){
 
+
         const commentList = (!this.state.comments.length === 0)
         ? null
         : this.state.comments.map(comment =>{
@@ -63,7 +65,7 @@ class CommentSection extends Component{
         return (
             <div className="comments">
                 {commentList}
-                <p>timestamp goes here</p>
+                {/* <p>{moment.format()}</p> */}
                 <div className="input-comment">
                     <form onSubmit={this.handleSubmit}>
                         <input onChange={this.handleChange} className="comment-input" type="text" placeholder="Add a comment..." value={this.state.newComment}/>
