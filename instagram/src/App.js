@@ -11,7 +11,6 @@ export default class App extends Component {
       posts: [],
       search: "",
       displayedPosts: [],
-      likesCounter: 0
     }
   }
 
@@ -38,19 +37,16 @@ export default class App extends Component {
         }
       })
     })
-  }
-  handleChange = e => {
-    this.setState({ search: e.target.value });
   }   
   searchInputHandler = e => {
-    const { value } = e.target;
+    const value = e.target.value;
+    console.log(value);
     this.setState({
       search: value
     },() => {
       this.searchHandler(e);
     });      
-  }
-  
+  }  
   searchHandler = e => {
     e.preventDefault();     
   this.setState({
@@ -60,8 +56,9 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        {this.state.posts.map(post => <PostContainer key={post.timestamp} post={post} incrementHandler={this.incrementHandler} />)}
+        <SearchBar searchInputHandler={this.searchInputHandler} value={this.state.search} />
+        {this.state.displayedPosts.length ? (this.state.displayedPosts.map(post => <PostContainer key={post.timestamp} post={post} incrementHandler={this.incrementHandler} />))
+        : (this.state.posts.map(post => <PostContainer key={post.timestamp} post={post} incrementHandler={this.incrementHandler} />))}
       </div>
     );
   }

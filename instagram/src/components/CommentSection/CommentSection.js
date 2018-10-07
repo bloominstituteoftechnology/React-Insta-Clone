@@ -41,7 +41,7 @@ export default class CommentSection extends React.Component {
     
     render() {
         return  <div className="comment-section">
-                    {this.state.comments.map(comment => <Comment key={comment.text} username={comment.username} text={comment.text} />)}
+                    {this.state.comments.map(comment => <Comment key={Math.floor(Math.random()*100)} username={comment.username} text={comment.text} />)}
                     <span>{moment(this.props.date, "MMMM Do YYYY, hh:mm:ss a").fromNow()}</span>
                     <form onSubmit={this.submitHandler}>
                         <input type="text" onChange={this.inputHandler} placeholder="Add a comment..." className="add-comments" value={this.state.holder}></input>
