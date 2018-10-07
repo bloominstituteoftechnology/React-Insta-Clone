@@ -1,10 +1,13 @@
-// import the library
-// import { library } from '@fortawesome/fontawesome-svg-core';
 
-// import your icons
+import { library } from '@fortawesome/fontawesome-svg-core';
 
-// import {faSearch} from '@fortawesome/free-regular-svg-icons';
 
-// library.add(
-//  faSearch
-// );
+
+import {faComment,
+        faHeart,
+        faUser,
+        faCompass} from '@fortawesome/free-regular-svg-icons';
+
+import {faSearch, faEllipsisH} from '@fortawesome/free-solid-svg-icons'        
+
+library.add(faComment, faHeart, faSearch, faEllipsisH, faUser, faCompass);

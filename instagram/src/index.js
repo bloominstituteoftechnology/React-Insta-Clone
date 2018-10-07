@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 // import your fontawesome library
-// import './fontawesome.js';
+import './fontawesome.js';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

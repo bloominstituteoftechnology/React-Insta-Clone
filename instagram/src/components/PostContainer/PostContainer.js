@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import Card from './Card.js';
+import CommentSection from '../CommentSection/Comment.js';
 
 class PostContainer extends Component {
     render() {
         
         return(
             <div className='post-container'>
-             {this.props.cards.map((card,index) => {
-                 return(
-                     <Card key={index} card={card} className="card" />
-                 );
-             } )}
+               <Card key={this.props.card.timestamp} card={this.props.card} />
+               <CommentSection key={this.props.card.timestamp} comments={this.props.card.comments} likes={this.props.card.likes}  />
             </div>
         );
     }

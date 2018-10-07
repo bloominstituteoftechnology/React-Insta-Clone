@@ -23,7 +23,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Search  />
-        <PostContainer cards = {this.state.data} />
+        {this.state.data.map(postObject=> <PostContainer key={postObject.timestamp} card={postObject} />)}
       </div>
     );
   }
