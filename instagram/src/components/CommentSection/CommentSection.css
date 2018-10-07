@@ -70,9 +70,13 @@
     font-size: 0.9rem;
 }
 
+
+.hidden-submit{
+    display: none;
+}
+
 .add-comment-options{
     position: relative;
     top: 210px;
     left: 275px;
 }
-
