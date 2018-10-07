@@ -9,7 +9,7 @@ const SearchBar = props => (
                 <img className="dividing-bar" src="./img/divider.png"></img> {/*Dividing bar between logo elements*/}
                 <img className="instagram-text-logo" src="./img/text_logo.png"></img> {/*Text logo of Instagram*/}
             </div> {/*End logo container*/}
-            <div className="search-bar-container"><input type="text" className="search-bar montserrat" placeholder="Search"></input></div> {/*Search bar*/}
+            <div className="search-bar-container"><input onChange={props.handleSearchInput} type="text" className="search-bar montserrat" placeholder="Search"></input></div> {/*Search bar*/}
             <nav className="menu-navigation"> {/*Contains navigation icon buttons*/}
                 <img className="navigation-compass" src="./img/compass_icon.png"></img> {/*Compass menu icon*/}
                 <img className="navigation-heart" src="./img/heart_icon.png"></img> {/*Heart menu icon*/}

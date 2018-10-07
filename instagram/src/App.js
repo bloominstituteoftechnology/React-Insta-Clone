@@ -7,12 +7,13 @@ import PostContainer from './components/PostContainer';
 class App extends Component {
   state = { /*state is a special object that re-renders the component every time a value held within state changes changes*/
     posts: [], /*Establishing posts as a property of state*/
+    originalPosts: [], 
     newComment: '', /*Holds the new comment as it's created in state*/
     likes: 0 /*Establishing likes as a property within state*/
   };
 
   componentDidMount() { /*componentDidMount runs when the component is loaded to the page, or "mounted"*/
-    this.setState({posts: dummyData}, () => {console.log(this.state.posts)}); /*Setting the value of posts within state to equal the array of dummyData*/
+    this.setState({posts: dummyData, originalPosts: dummyData}, () => {console.log(this.state.posts)}); /*Setting the value of posts within state to equal the array of dummyData*/
   }
 
   /*Handle add comment*/
@@ -52,13 +53,23 @@ class App extends Component {
     this.setState({posts: postsCopy}); 
   };
 
+  /*Search bar functionality*/
+  handleSearchInput = event => { /*Handle text input into the search bar*/
+    this.setState({handleSearch: event.target.value}, () => { /*Creates a new state property that is equal to what is typed in the search bar*/
+      const newArr = this.state.originalPosts.filter((post) => { /*Filtering through the posts array*/
+        return post.username.includes(this.state.handleSearch) /*To only return posts whose username matches the term searched*/
+      });
+      this.setState({posts: newArr}); /*Setting posts in the state to equal the new array created from the filtered search results*/
+    });
+  };
+
 
   /*Rending the app*/
   render() {
     return (
       <div className="App">
-        <SearchBar /> {/*Inserted search bar component*/}
-        {dummyData.map((post, index) => { {/*Mapping over each post object in dummy data and ...*/}
+        <SearchBar handleSearchInput={this.handleSearchInput}/> {/*Inserted search bar component, passes handling for search input*/}
+        {this.state.posts.map((post, index) => { {/*Mapping over each post object in dummy data and ...*/}
             return <PostContainer /*Creating a PostContainer component that passes each value to PostContainer as props. First passes handleAddComment on this component.*/
                                   handleRemoveClickLike={this.handleRemoveClickLike}
                                   handleAddClickLike={this.handleAddClickLike} /*Passing the click like funcion down to the comments section to attach to the like button*/
