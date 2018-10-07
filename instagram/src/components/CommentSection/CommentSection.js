@@ -18,7 +18,7 @@ const CommentSection = (props) => {
       <div className = "timeStamp">{props.timestring}</div>
     
       <div>
-          <input className = "commentInput" type = 'text' />
+          <input className = "commentInput" type = 'text' placeholder = " Add a comment... " />
       </div>
       </div>
     );

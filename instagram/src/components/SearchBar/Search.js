@@ -3,7 +3,7 @@ import './searchbar.css';
 
 const Search = () => {
     return (
-        <input type="text" />
+        <input type="text" placeholder = " Search... " />
     )
 }
 

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import CommentButton from './CommentButton';
 import LikeButton from '../SearchBar/LikeButton';
-import './postcontainer.css'
+import './postcontainer.css';
+import PropTypes from "prop-types";
 
 class PostContainer extends Component {
     constructor(){
@@ -40,6 +41,23 @@ class PostContainer extends Component {
         </div>
       );
     }
+  }
+
+  PostContainer.propTypes = {
+    dummyObj : 
+      PropTypes.shape({
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        imageUrl:PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string,
+        comments:PropTypes.arrayOf(
+          PropTypes.shape({
+            username:PropTypes.string,
+            text: PropTypes.string,
+          })
+        )
+      }).isRequired
   }
   
   export default PostContainer ;
