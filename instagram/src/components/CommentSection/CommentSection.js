@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./CommentSection.css";
 import Comment from "./Comment.js";
 import PropTypes from "prop-types";
-var moment = require("moment");
+import moment from "moment";
 
 class CommentSection extends Component {
   constructor(props) {
@@ -15,7 +15,8 @@ class CommentSection extends Component {
   submitHandler = event => {
     const newComment = {
       username: "dummyUser",
-      text: this.state.input
+      text: this.state.input,
+      timestamp: moment()
     };
     if (event.key === "Enter") {
       this.setState({
@@ -45,7 +46,7 @@ class CommentSection extends Component {
         {this.state.comments.map(comment => {
           return (
             <Comment
-              key={Math.random()}
+              key={this.state.timestamp}
               commentUser={comment.username}
               comment={comment.text}
             />

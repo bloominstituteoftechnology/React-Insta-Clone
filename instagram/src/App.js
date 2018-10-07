@@ -53,7 +53,7 @@ class App extends Component {
               time={post.timestamp}
               data={this.state.data}
               comments={post.comments}
-              key={Math.random()}
+              key={post.timestamp}
             />
           );
         })}
