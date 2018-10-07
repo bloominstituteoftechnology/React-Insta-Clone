@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
 
-class SearchBar extends React.Component {
+export default class SearchBar extends React.Component {
 
   render () {
     return (
@@ -23,18 +23,9 @@ class SearchBar extends React.Component {
 
       </div> /* searchBar-container   */
 
-
-
-
-
       )
 
-
-
   }
-
-
-
 }
 
-export default SearchBar
+

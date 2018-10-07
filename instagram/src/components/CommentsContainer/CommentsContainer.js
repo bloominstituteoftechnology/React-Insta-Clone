@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from './CommentSection';
+import AddNewComment from './AddNewComment'
 import './CommentsContainer.css';
 
 
-class CommentsContainer extends React.Component {
+export default class CommentsContainer extends React.Component {
   constructor (props) {
       super(props);
       this.state = {comments: this.props.comments}
@@ -20,6 +21,8 @@ class CommentsContainer extends React.Component {
         }
         )}
 
+        <AddNewComment/>
+
       </div>
 
     )
@@ -32,4 +35,3 @@ CommentsContainer.propTypes = {
   comments: PropTypes.arrayOf(PropTypes.object)
 };
 
-export default CommentsContainer

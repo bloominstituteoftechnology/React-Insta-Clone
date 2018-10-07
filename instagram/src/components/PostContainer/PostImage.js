@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './PostContainer.css';
 
 
-class PostImage extends React.Component {
+export default class PostImage extends React.Component {
 
   render () {
     return (
@@ -18,5 +18,3 @@ class PostImage extends React.Component {
 PostImage.propTypes = {
   image: PropTypes.string.isRequired
 };
-
-export default PostImage;

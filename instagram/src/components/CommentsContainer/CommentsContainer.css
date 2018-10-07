@@ -7,3 +7,12 @@
   border: 1px solid firebrick;
   padding:  0 1rem;
 }
+
+.addNewCommentINPUT {
+  padding: 1rem 0;
+}
+
+.commentINPUT {
+  width: 100%;
+  border: 1px solid lightgrey;
+}

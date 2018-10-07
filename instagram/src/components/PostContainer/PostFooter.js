@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-class PostFooter extends React.Component {
+export default class PostFooter extends React.Component {
 
   render () {
     return (
@@ -26,4 +26,3 @@ PostFooter.propTypes = {
   likes: PropTypes.number.isRequired
 };
 
-export default PostFooter;

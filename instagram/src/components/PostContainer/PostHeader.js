@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './PostContainer.css';
 
 
-class PostHeader extends React.Component {
+export default class PostHeader extends React.Component {
 
   render () {
     return (
@@ -25,4 +25,3 @@ PostHeader.propTypes = {
 
 
 
-export default PostHeader;

@@ -31,11 +31,12 @@
 .postIMG {
   border: 1px solid green;
   width: 100%;
+  display: flex;
 }
 
 .actualPostIMG{
   width: 47rem;
-  display: flex;
+  margin: 0 auto;
 }
 
 .footer-container {

@@ -8,7 +8,7 @@ import dummyData from '../dummy-data'
 import './PostContainer.css';
 
 
-class PostContainer extends React.Component {
+export default class PostContainer extends React.Component {
   render() {
 
     return (
@@ -29,5 +29,3 @@ class PostContainer extends React.Component {
     )
   }
 }
-
-export default PostContainer;

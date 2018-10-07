@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './CommentSection';
 
-class CommentSection extends React.Component {
+export default class CommentSection extends React.Component {
 
   render() {
     return (
@@ -20,4 +20,3 @@ CommentSection.propTypes = {
   username: PropTypes.string.isRequired
 };
 
-export default CommentSection
