@@ -1,0 +1,8 @@
+.comments {
+    padding: 5px 0;
+    line-height: 1.2rem;
+}
+
+.comments span {
+    font-weight: 600;
+}

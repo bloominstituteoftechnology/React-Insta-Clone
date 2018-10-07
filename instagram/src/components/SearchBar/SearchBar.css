@@ -1,7 +1,10 @@
 .searchBar-container {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 15px;
+    background-color: white
 }
 
 .searchBar-title {
@@ -28,8 +31,3 @@
 .searchBar-icons img {
     padding: 0 10px;
 }
-
-/* .search-textbar {
-    height: 40px;
-    width: 150px;
-} */
