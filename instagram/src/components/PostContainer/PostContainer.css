@@ -35,4 +35,7 @@
     max-width: 604px;
     width: 100%;
     display: flex;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
 }

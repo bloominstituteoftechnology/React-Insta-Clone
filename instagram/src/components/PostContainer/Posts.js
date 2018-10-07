@@ -6,7 +6,7 @@ class Posts extends React.Component {
     render() {
         return(
             <div key={this.props.timestamp} className="post">
-                {this.props.dummyData.map(postProps => {
+                {this.props.data.map(postProps => {
                     return (
                         <>
                             <div className="postTop">
@@ -17,7 +17,7 @@ class Posts extends React.Component {
                                 <img className="postPic" src={postProps.imageUrl} alt={"post pic"} />
                             </div>
                             <div className="commentSection">
-                                <CommentSection dummyData={postProps}/>
+                                <CommentSection likes={postProps.likes} comments={postProps.comments} />
                             </div>
                         </>
                     )

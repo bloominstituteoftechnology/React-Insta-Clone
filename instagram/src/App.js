@@ -8,7 +8,11 @@ import dummyData from './dummy-data'
 class App extends Component {
 
   state = {
-    data: [{dummyData}]
+    data: []
+  }
+
+  componentDidMount() {
+    this.setState({ data: dummyData });
   }
 
   render() {
@@ -16,7 +20,7 @@ class App extends Component {
       <>
         <SearchBar />
         <div className="posts">
-          <PostContainer dummyData={dummyData} />
+          <PostContainer data={this.state.data} />
         </div>
       </>
     );

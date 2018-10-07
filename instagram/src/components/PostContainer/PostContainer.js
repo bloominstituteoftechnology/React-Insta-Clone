@@ -3,11 +3,11 @@ import './PostContainer.css';
 import Posts from './Posts'
 
 
-const PostContainer = props => {
+const PostContainer = data => {
 
     return (
         <div className={"postContainer"}>
-            <Posts dummyData={props.dummyData}/>
+            <Posts data={data.data}/>
         </div>
     );
 }
