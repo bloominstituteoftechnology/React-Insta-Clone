@@ -15,10 +15,6 @@ class App extends Component {
   }
   componentDidMount() {
     //Mounting the data after it renders.
-    // setTimeout(() => {
-
-    // }, 3000)
-
     this.setState({ data: dummyData });
   }
 
@@ -30,9 +26,7 @@ class App extends Component {
   };
 
   render() {
-    if (!this.state.data.length) {
-      return <h4>Loading Post....</h4>;
-    }
+
 
     return (
       <>

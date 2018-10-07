@@ -2,7 +2,7 @@ import React from "react";
 import Comment from "./Comment";
 import "./CommentSection.css";
 import PropTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as moment from "moment";
 
 let now = moment().fromNow();
