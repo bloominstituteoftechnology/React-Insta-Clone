@@ -1,0 +1,31 @@
+.post-container {
+    width: 40%;
+    margin: 0 auto;
+
+    display:felx;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.header img {
+    width: 30px;
+    height:30px;
+    border-radius: 80%;
+    margin:0px 20px;
+}
+
+.main-img {
+    width:100%;
+    height:450px;
+}
+
+.card {
+    padding: 5px;
+    margin: 15px 0px;
+    border: 1px solid lightgray;
+}

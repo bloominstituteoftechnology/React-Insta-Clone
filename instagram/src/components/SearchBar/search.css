@@ -45,7 +45,13 @@ div.line {
 	left: 11px;
     position: absolute;
     top: 9px;
-    z-index: 2;
+	z-index: 2;
+	
+}
+
+.search-icon img {
+	width:20px;
+	height:20px;
 }
 .fa-search {
 	height: 10px;
@@ -54,7 +60,7 @@ div.line {
 	margin-top:279px;
 }
 
-img {
+.image-icon img, .search-head img {
 	width:24px;
 	height:24px;
 }
