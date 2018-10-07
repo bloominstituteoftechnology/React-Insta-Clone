@@ -1,6 +1,13 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 .Container {
   display: flex;
   flex-direction: column;
+  margin-left: 2rem;
 
 }
 
@@ -9,7 +16,8 @@
   flex-direction: row;
   align-items: flex-start;
   font: size 10pt;
-  margin: 2rem;
+  font-weight: bold;
+  margin-left: 2rem;
   
 }
 
@@ -34,7 +42,7 @@
   justify-content: center;
   width:  399px; 
   height: 399px;
-  margin: 2rem;
+  margin-left: 2rem;
 } 
 .Icon-row {
   display: flex;
@@ -58,7 +66,9 @@
   font: size 16pt;
   /* align-content: left; */
   text-align: left;
-  margin: 1rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  margin-bottom:
 }
 
 .Timestamp {
@@ -69,7 +79,8 @@
   /* font-family: ; */
   font-size: 8pt;
   text-align: left;
-  margin: 2rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
 }
 
 .AddComment {

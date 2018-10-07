@@ -3,13 +3,16 @@ import "./CommentSection.css";
 
 const CommentSection = (props) => {
   console.log(props);
-  return <div>
-    Comments: 
+  return <div><strong>COMMENTS </strong>
+    
     <div className="Comments">
      {props.commentProps.map((comment,i)=> {
        return(
-         <div>
+         <div><strong>
+
+
           <span>{comment.username}: </span>
+          </strong>
           <span>
             {comment.text}
           </span>

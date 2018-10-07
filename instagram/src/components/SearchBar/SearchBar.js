@@ -6,9 +6,9 @@ const SearchBar = () => {
     <div>
 {/* ☞ 8f646e2b-8849-477c-a200-080dd79c22a9 */}
     <form >
-    <label>
+    {/* <label>
       Search Bar:   
-      </label>
+      </label> */}
       <input 
       className="searchInput"
       name="search"
