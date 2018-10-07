@@ -7,9 +7,9 @@ import './SearchHeader.css';
 const SearchHeader = () => {
     return (
         <div className="searchHeader">
-          <Links logo="Hello" titleLogo="Instagram" />
+          <Links logo="" titleLogo="Instagram" />
           <Search />
-          <Icons logo="Hello" titleLogo="Instagram" />
+          <Icons icon="Hello" />
         </div>
     );
 }

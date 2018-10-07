@@ -4,9 +4,9 @@ import './Icons.css';
 const Icons = props => {
     return (
         <div className="icons">
-            <img src={props.logo} alt='Logo'/>
-            <img src={props.logo} alt='Logo'/>
-            <img src={props.logo} alt='Logo'/>
+            <img src={props.icon} alt='icon'/>
+            <img src={props.icon} alt='icon'/>
+            <img src={props.icon} alt='icon'/>
         </div>
     );
 }

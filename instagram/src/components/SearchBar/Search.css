@@ -1,0 +1,19 @@
+.searchDiv {
+    display: flex;
+    align-items: center;
+    margin-right: 9%;
+}
+
+.searchIcon {
+    height: 15px;
+    position: relative;
+    left: 115px;
+    bottom: 1px;
+}
+.search {
+    font-size: 16px;
+    height: 30px;
+    width: 284px;
+    background-color: #FAFAFA;
+    text-align: center;
+}
