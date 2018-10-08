@@ -6,10 +6,12 @@ import "./CommentSection.css";
 
 const CommentSection = props => {
   return (
-    <div>
-      {props.comments.map(comment => {
+    <div className="comment-section">
+      {props.user.comments.map(comment => {
         return <Comment key={comment.id} comment={comment} />;
       })}
+      <p className="timestamp">{props.user.timestamp}</p>
+      <hr className="break" />
     </div>
   );
 };
