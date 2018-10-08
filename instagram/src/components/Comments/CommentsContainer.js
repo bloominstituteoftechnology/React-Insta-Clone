@@ -7,9 +7,30 @@ import './comments.css';
 class CommentsContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { comments: this.props.comments };
+    this.state = {
+      comments: this.props.comments,
+      inputValue: ''
+    };
     console.log(this.props);
   }
+
+  addNewComment = event => {
+    event.preventDefault();
+    this.setState({
+      comments: [
+        ...this.state.comments,
+        {
+          username: 'jander9009',
+          text: this.state.inputValue
+        }
+      ],
+      inputValue: ''
+    });
+  };
+
+  handleInput = event => {
+    this.setState({ inputValue: event.target.value });
+  };
 
   render() {
     if (!this.state.comments) {
@@ -20,7 +41,11 @@ class CommentsContainer extends React.Component {
         {this.state.comments.map(x => {
           return <Comment username={x.username} text={x.text} />;
         })}
-        <AddComment />
+        <AddComment
+          addComment={this.addNewComment}
+          handleInput={this.handleInput}
+          inputValue={this.state.inputValue}
+        />
       </div>
     );
   }
