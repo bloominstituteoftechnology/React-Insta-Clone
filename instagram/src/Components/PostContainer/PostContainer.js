@@ -8,7 +8,9 @@ class PostContainer extends React.Component {
     render () {
         return (
             <div className={"postWrap"}>
-                <PostContent dummyData={this.props.dummyData}/>
+                <PostContent 
+                commentHandler={this.props.commentHandler}
+                dummyData={this.props.dummyData}/>
             </div>
         )
     }

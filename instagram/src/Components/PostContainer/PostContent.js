@@ -40,7 +40,9 @@ class PostContent extends React.Component {
                               }</div> //end comments 
                             }
                     <div>
-                    <CommentFooter />
+                    <CommentFooter 
+                    dummyData={this.props.dummyData}
+                    commentHandler={this.props.commentHandler} />
                     </div>
                         </div> 
                     </> //end comments wrap

@@ -18,6 +18,22 @@ commentHandler = (e) => {
       });
 }
 
+subComment = (e) => {
+    this.setState({
+        data: 
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
  
   render() {
     return (

@@ -1,6 +1,5 @@
 import React from 'react';
 import  './Comment.css';
-import CommentContainer from './CommentContainer';
 class CommentFooter extends React.Component {
 
     
