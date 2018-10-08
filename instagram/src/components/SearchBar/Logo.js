@@ -5,7 +5,7 @@ import './searchbar.css';
 const Logo = () => {
     return (
         <div>
-            <img className="Insta-Logo-Cam" src= {InstagramLogo} />
+            <img className="Insta-Logo-Cam" alt="''" src= {InstagramLogo} />
         </div>
     )
 }

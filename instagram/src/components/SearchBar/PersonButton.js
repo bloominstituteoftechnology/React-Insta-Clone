@@ -5,7 +5,7 @@ import './searchbar.css';
 const PersonButton = () => {
     return (
         <div>
-            <img className="Person-Button" src= {PersonButt} />
+            <img className="Person-Button" alt="''" src= {PersonButt} />
         </div>
     )
 }

@@ -5,7 +5,7 @@ import './searchbar.css';
 const WordLogo = () => {
     return (
         <div>
-            <img className="Insta-Logo-Word" src= {Word} />
+            <img className="Insta-Logo-Word" alt="''" src= {Word} />
         </div>
     )
 }

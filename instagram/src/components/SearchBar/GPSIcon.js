@@ -5,7 +5,7 @@ import './searchbar.css';
 const GPSIcon = () => {
     return (
         <div>
-            <img className="GPS-Button" src= {GPSButton} />
+            <img className="GPS-Button" alt="''" src= {GPSButton} />
         </div>
     )
 }

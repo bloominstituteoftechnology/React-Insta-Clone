@@ -5,7 +5,7 @@ import './searchbar.css';
 const LikeButton = () => {
     return (
         <div>
-            <img className="Like-Button" src= {LikeButt} />
+            <img className="Like-Button" alt="''" src= {LikeButt} />
         </div>
     )
 }
