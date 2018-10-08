@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import Post from './Post';
 import CommentSection from '../CommentSection/CommentSection';
 import CommentForm from '../CommentSection/CommentForm';
@@ -12,7 +13,7 @@ const PostContainer = props => {
         <div key={post.timestamp} className="Post-card">
           <Post post={post} />
           <CommentSection comments={post.comments} />
-          <p className="time">{post.timestamp}</p>
+          <p className="time">{moment(post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</p>
           <CommentForm />
         </div>
       )}
