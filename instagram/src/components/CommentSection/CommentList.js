@@ -35,14 +35,6 @@ class CommentList extends React.Component {
   }
 }
 
-// const CommentList = props => {
-//   return (
-//     <div>
-//       {props.comments.map((comment) => <Comment comment={comment}/>)}
-//     </div>
-//   )
-// }
-
 CommentList.proptypes = {
   comment: PropTypes.object
 }
