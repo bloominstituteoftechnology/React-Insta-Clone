@@ -2,31 +2,60 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchBarContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  margin: 20px;
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 30px;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.line {
+  padding: 0px 20px;
+  margin: 0px;
+  width: 10px;
+  height: 45px
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.instaLogo{
+  height: 40px;
+ }
+
+ .textLogo {
+   width: 125px;
+ }
+
+.searchBar {
+  padding: 10px;
 }
+input {
+  text-align: center;
+}
+
+ .compass {
+  width:25px;
+  height: 25px;
+  padding: 15px;
+ }
+
+ .heart{
+   width:25px;
+   height: 25px;
+   padding: 15px;
+ }
+
+ .person {
+  width:25px;
+   height: 25px;
+   padding: 15px;
+ }
+
