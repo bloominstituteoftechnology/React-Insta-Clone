@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import PostsPage from '../components/PostContainer/PostsPage';
+import dummyData from '../../dummy-data';
+import SearchBar from '../components/SearchBar/SearchBar';
+import PostContainer from '../components/PostContainer/PostContainer';
 
 import './App.css';
 
@@ -15,7 +17,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PostsPage />
+        <div className="search-bar">
+          <SearchBar />
+        </div>
+        <PostContainer />
       </div>
     );
   }
