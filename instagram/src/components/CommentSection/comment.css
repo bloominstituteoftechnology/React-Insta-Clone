@@ -39,3 +39,17 @@ span {
 .fontawesome {
     margin-right:10px;
 }
+
+.input-holder {
+    width:100%;
+    background:transparent;
+    position: relative;
+}
+.fonta {
+    position: absolute;
+    right:13px;
+    top:14px;
+    margin:0px;
+    padding:0px;
+    color:gray;
+}
