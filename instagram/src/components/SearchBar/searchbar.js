@@ -1,17 +1,19 @@
 import React from 'react';
+import './searchbar.css';
 
-import Search from './search'
 
 
-const SearchBar = props => {
+
+
+const SearchBar = () => {
     return (
-        <div>
+        <div classname= 'main-header'>
             <div classname= 'left-icons'>
                 <i class="fab fa-instagram"></i>
                 <p>|</p>
-                <h1>Instagram</h1>
+                <h1 classname= 'instagram'>Instagram</h1>
             </div>
-            <Search />
+            <input className= 'search'  placeHolder= 'Search'></input>
             <div classname= 'right-icons'>
                 <i class="far fa-compass"></i>
                 <i class="far fa-heart"></i>
