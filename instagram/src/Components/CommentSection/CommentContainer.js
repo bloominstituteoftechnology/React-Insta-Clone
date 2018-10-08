@@ -2,10 +2,10 @@ import React from 'react';
 import './CommentSection.css';
 import Comment from './Comment';
 
-const CommentContainer = () => {
+const CommentContainer = ({comments}) => {
     return (
         <div className="comment-container">
-            <Comment />
+            {comments.map((comment, i) => <Comment info={comment} key={i}/>)}
         </div>
     );
 }

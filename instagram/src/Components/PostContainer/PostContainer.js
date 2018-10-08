@@ -2,10 +2,10 @@ import React from 'react';
 import Post from './Post';
 import './PostContainer.css';
 
-const PostContainer = () => {
+const PostContainer = ({posts}) => {
     return (
         <div className="post-container" >
-            <Post />
+            {posts.map((post, i) => <Post content={post} key={i}/>)}
         </div>
     );
 }

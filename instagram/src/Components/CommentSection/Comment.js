@@ -1,10 +1,10 @@
 import React from 'react';
 import './CommentSection.css';
-const Comment = () => {
+const Comment = ({info}) => {
     return (
         <div className="comment">
-            <h2>philzcoffee</h2>
-            <p>We've got more than just delicious coffees to offer at our shops!</p>
+            <h2>{info.username}</h2>
+            <p>{info.text}</p>
         </div>
     );
 }

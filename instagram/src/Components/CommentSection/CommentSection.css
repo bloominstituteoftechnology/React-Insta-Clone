@@ -54,9 +54,10 @@
     margin-bottom: 8px;
 }
 
-.post-info .likes {
+.likes {
     font-weight: 600;
     color: #262626;
+    margin-bottom: 8px;
 }
 
 .comment-container {
