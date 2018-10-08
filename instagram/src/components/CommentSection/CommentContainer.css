@@ -1,3 +1,33 @@
-.commentContainer {
 
+.commentSection {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    /* align-items: flex-start; */
+}
+
+.commentIcons {
+    display: flex;
+    margin-left: 15px;
+    padding-top: 10px;
+}
+
+.commentIcon {
+    padding-right: 15px;
+}
+
+.newComment {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.messages {
+    display: flex;
+    align-items: baseline;
+}
+
+.messages p {
+    margin-left: 10px;
 }

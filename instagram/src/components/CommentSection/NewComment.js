@@ -5,7 +5,7 @@ const NewComment = props => {
     return (
         <div className="newComment">
             <input id="newCmt" type="text" placeholder="Add a comment..."/>
-            <label htmlFor="newCmt">...</label>
+            <label className="commentLabel" htmlFor="newCmt">...</label>
         </div>
     );
 }

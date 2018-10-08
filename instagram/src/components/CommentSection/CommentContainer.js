@@ -7,19 +7,28 @@ import './CommentContainer.css';
 const CommentContainer = props => {
     return (
         <div className="commentContainer">
-            <div>
-                <FontAwesomeIcon className="linkIcon" icon={['far', 'heart']} size="3x" />
-                <FontAwesomeIcon className="linkIcon" icon={['far', 'comment']} size="3x" />
+            <div className="commentIcons">
+                <FontAwesomeIcon className="commentIcon" icon={['far', 'heart']} size="2x" />
+                <FontAwesomeIcon className="commentIcon" icon={['far', 'comment']} size="2x" />
+            </div>
+            <div className="commentSection">
                 <h4>{props.item.likes} likes</h4>
-                <h4>{props.item.comments[0].username}
+                    
+                <div className="messages">
+                    <h4>{props.item.comments[0].username}</h4>
                     <p>{props.item.comments[0].text}</p>
-                </h4>
-                <h4>{props.item.comments[1].username}
+                </div>
+
+                <div className="messages">
+                    <h4>{props.item.comments[1].username}</h4>
                     <p>{props.item.comments[1].text}</p>
-                </h4>
-                <h4>{props.item.comments[2].username}
+                </div>
+
+                <div className="messages">
+                    <h4>{props.item.comments[2].username}</h4>
                     <p>{props.item.comments[2].text}</p>
-                </h4>
+                </div>
+
                 <h4>{props.item.timestamp}</h4>
             </div>
             <NewComment />
