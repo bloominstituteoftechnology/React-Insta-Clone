@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './PostContainer.css';
 
 const Post = props => {
   const { username, thumbnailUrl, imageUrl, likes } = props.post;
@@ -11,6 +12,10 @@ const Post = props => {
       </header>
       <section className="Post-body">
         <img src={imageUrl} alt="post img" />
+        <div className="Post-action">
+          <i className="far fa-heart fa-2x icon"></i>
+          <i className="far fa-comment fa-2x icon"></i>
+        </div>
         <p>{likes} likes</p>
       </section>
     </div>

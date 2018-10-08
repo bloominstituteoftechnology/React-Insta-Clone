@@ -10,8 +10,6 @@ const CommentSection = props => {
           <Comment comment={comment} />
         </div>
       )}
-
-      <input type="text" placeholder="Add a comment" />
     </div>
   );
 };
