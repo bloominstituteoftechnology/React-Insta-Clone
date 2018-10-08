@@ -5,7 +5,9 @@
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.4"
+    "react-prop-types": "^0.4.0",
+    "react-scripts": "2.0.4",
+    "stylint": "^1.5.9"
   },
   "scripts": {
     "start": "react-scripts start",
