@@ -1,0 +1,88 @@
+.searchBarDiv {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+}
+.searchInput {
+  height: 10px;
+  height: 25px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  background-color: #FAFAFA;
+}
+.iconContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 11%;
+}
+.logoContainer {
+  display: flex;
+  width: 12%;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoContainer .IGLogo {
+  background-image: url('../img/instagram-logo.png');
+  width: 100%;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.logoContainer .lineSpacer {
+  border: 0.5px solid lightgrey;
+  width: 0;
+  height: 40px;
+  margin-left: 15px;
+}
+.App {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.postContainerDiv {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  align-items: flex-start;
+}
+.postContainerDiv p {
+  margin-left: 2%;
+}
+.postContainerDiv .userHeading {
+  display: flex;
+  align-items: center;
+}
+.postContainerDiv .userHeading .userImage {
+  border-radius: 50%;
+  height: 30px;
+  margin-right: 15%;
+}
+.postContainerDiv .userHeading p {
+  font-weight: bold;
+}
+.postContainerDiv .imageURL {
+  width: 100%;
+  height: 640px;
+  margin-bottom: 10px;
+}
+.postContainerDiv .timeStamp {
+  color: lightgrey;
+}
+.postContainerDiv .newCommentDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.postContainerDiv .newCommentDiv .commentInput {
+  border: none;
+  height: 50px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
