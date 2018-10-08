@@ -6,10 +6,15 @@ import PostContainer from './components/PostContainer/PostContainer'
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="app">
       {
         dummyData.map((element,index) => {
-          return(<PostContainer key={index} data={element}/>)
+          return(
+            <div>
+              <PostContainer key={index} data={element}/>
+              <div className='spacer'>&nbsp;</div>
+            </div>
+              )
         })
       }
       </div>

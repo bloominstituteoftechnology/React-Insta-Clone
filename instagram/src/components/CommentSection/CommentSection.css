@@ -1,0 +1,15 @@
+.comment-container{
+    display: flex;
+    margin-top:9px;
+    margin-left:15px;
+}
+
+.comment-container-text{
+    font-size:1.1rem;
+}
+.comment-username{
+    font-weight: bold;
+}
+.comment-more{
+    color:grey;
+}

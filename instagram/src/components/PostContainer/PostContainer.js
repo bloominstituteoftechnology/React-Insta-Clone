@@ -1,4 +1,5 @@
 import React from 'react';
+import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from '../PostHeader/PostHeader';
 import LikesBar from '../LikesBar/LikesBar';
@@ -10,7 +11,7 @@ const PostContainer = props =>{
     return(
         <div className='post-container'>
             <PostHeader data={props.data}/>
-            <img src={props.data.imageUrl}></img>
+            <img className='post-container-image' src={props.data.imageUrl}></img>
             <LikesBar data={props.data} />
             {
                 props.data.comments.map(element =>{
@@ -19,7 +20,10 @@ const PostContainer = props =>{
                     )
                 })
             }
+            <p className='post-time-stamp'>{props.data.timestamp}</p>
             <NewCommentSection />
+            <br />
+            <br />
         </div>
 
     )

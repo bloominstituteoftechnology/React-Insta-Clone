@@ -53,3 +53,10 @@ body{
 *{
   box-sizing: border-box;
 }
+.app{
+	max-width: 600px;
+	margin:0 auto;
+}
+.spacer{
+	height:30px;
+}

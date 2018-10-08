@@ -12,11 +12,11 @@ export const dummyData = [
       {
         username: "philzcoffee",
         text:
-          "We've got more than just delicious coffees to offer at our shops!"
+          "We've got more than just delicious coffees to offer at our shops! don't for get to check out our selection of locally sou"
       },
       {
         username: "biancasaurus",
-        text: "Looks delicious!"
+        text: "T-minus a month until Big/little/GLil coffee dates!!! @tiffany_monroy @msafransky"
       },
       {
         username: "martinseludo",

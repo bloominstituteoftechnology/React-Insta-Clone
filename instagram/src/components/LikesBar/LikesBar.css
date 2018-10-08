@@ -1,0 +1,19 @@
+.likes-bar-images{
+    margin-top:15px;
+    margin-left:15px;
+}
+
+.likes-bar-heart, .likes-bar-comment{
+    height:25px;
+    width: 25px;
+}
+
+.likes-bar-comment{
+    margin-left:20px;
+}
+.likes-bar-likes{
+    font-size:1.1rem;
+    margin-top:5px;
+    margin-left:15px;
+
+}

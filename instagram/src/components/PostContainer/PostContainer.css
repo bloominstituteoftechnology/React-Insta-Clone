@@ -1,0 +1,15 @@
+
+.post-container{
+    border:1px solid #ccc; 
+}
+.post-container-image{
+    max-width: 600px;
+    height:auto;
+}
+.post-time-stamp{
+    margin-left:15px;
+    margin-top:10px;
+    font-size:.8rem;
+    color:gray;
+    margin-bottom:5px;
+}
