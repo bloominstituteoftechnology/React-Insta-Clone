@@ -25,10 +25,12 @@ class CommentSection extends Component {
         const newCommentObj = {
             timestamp: "July 17th 2017, 12:42:40 pm",
             username: 'FreeKeyBoy',
-            text: 'this.state.newComment'
+            text: this.state.newComment
         }
+
         this.setState({
-            comments: [...this.state.comments, newCommentObj]
+            comments: [...this.state.comments, newCommentObj], 
+            newComment: ''
         })
     }
 
@@ -41,7 +43,7 @@ class CommentSection extends Component {
     render(){
         return (
             <div>
-                {this.props.Comments.map(comment =>{
+                {this.state.comments.map(comment =>{
                     return (
                         <div key={comment.text} className = "commentBody"> 
                         {/* apparently this needed a unique key */}
@@ -51,9 +53,10 @@ class CommentSection extends Component {
         })}
 
         <form onSubmit = {(e) => {this.addNewComment(e)}}>    
-            <div className = "timeStamp">{this.props.timestring}</div>
-                <div>
-                    <input className = "commentInput" type = 'text' placeholder = " Add a comment... " onChange = {this.textHandler} />
+            <div className = "timeStamp">
+                <input className = "commentInput" 
+                    type = 'text' placeholder = " Add a comment... " value = {this.state.newComment}  onChange = {this.textHandler} />
+                    {/* value = {this.state.newComment} reset the comment bar after use by calling the origional state */}
             </div>
         </form>
         </div>

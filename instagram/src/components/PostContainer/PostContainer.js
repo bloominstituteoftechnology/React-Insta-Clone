@@ -44,7 +44,7 @@ class PostContainer extends Component {
                     <h3>{post.likes} Likes</h3>  
                 </div>
                     <CommentSection 
-                    Comments={post.comments}
+                    comments={post.comments}
                     timestring={post.timestamp}
                     />
                 </div>)  
