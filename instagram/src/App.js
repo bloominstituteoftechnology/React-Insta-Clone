@@ -15,9 +15,10 @@ class App extends Component {
   }
   componentDidMount(){
     this.setState({
-      data: dummyData ///????
+      data: dummyData 
     })
   }
+  
   
   render() {
     return (
@@ -26,7 +27,7 @@ class App extends Component {
         <div>
           {this.state.data.map(dummyObj =>{
             return(
-              <PostContainer dummyObj = {dummyObj} key = {dummyObj.timestamp}/>
+              <PostContainer addLike = {this.addLike} dummyObj = {dummyObj} key = {dummyObj.timestamp}/>
             );
           })}
         </div>

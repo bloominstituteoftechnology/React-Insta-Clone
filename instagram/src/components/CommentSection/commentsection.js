@@ -19,11 +19,12 @@ class CommentSection extends React.Component{
     addNewComment = (event) => {
         event.preventDefault();
         const newCommentObj = {
-            username: 'Bobby',
-            text: 'this.state.newComment'
+            username: 'Bobby' + ' ' ,
+            text: this.state.newComment
         }
         this.setState({
-            comments: [...this.state.comments, newCommentObj]
+            comments: [...this.state.comments, newCommentObj],
+            newComment : ''
         })
     }
     inputTextHandler = (event) =>{
@@ -34,7 +35,7 @@ class CommentSection extends React.Component{
     render(){    
         return(
             <div className = "comment-section">
-                {this.props.comments.map(comment =>{
+                {this.state.comments.map(comment =>{
                     return(
                         <div >
                             <Comment username = {comment.username} text = {comment.text} key = {Math.random()}/>
@@ -48,7 +49,7 @@ class CommentSection extends React.Component{
                         }>
                     <input 
                         onChange = {this.inputTextHandler}
-                        
+                        value = {this.state.newComment}
                         className = "comment-input"
                         type ="text"
                         placeholder ="Add a comment..."
