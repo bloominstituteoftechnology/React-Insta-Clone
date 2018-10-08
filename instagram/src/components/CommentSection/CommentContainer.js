@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import NewComment from './NewComment.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './CommentContainer.css';
+import Moment from 'react-moment';
+import 'moment-timezone';
 
 const CommentContainer = props => {
     return (
