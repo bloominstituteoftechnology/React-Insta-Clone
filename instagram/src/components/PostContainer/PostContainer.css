@@ -45,12 +45,15 @@
   flex-direction: row;
   align-items: flex-start;
 
+  margin-left: 2rem;
 } 
 
 .Stats-row {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+
+  margin-left: 2rem;
 }
 
 .Comments {

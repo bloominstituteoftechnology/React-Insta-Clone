@@ -23,10 +23,16 @@ const PostContainer = props => {
         {/* or use class name in css */}
       </div>
       <div className="Icon-row">
-
+      {/* <img
+          className="SearchBar-icons"
+          src="https://www.flaticon.com/free-icon/like_149217"
+          alt="heart icon"
+        />{/* designed by Smashicons
+        https://smashicons.com/ from Flaticon */}
+     <img className="Icon" src="../assets/like-heart.png" alt="Heart icon" />
       </div>
       <div className="Stats-row">
-        
+        {props.likes} likes 
       </div>
       <div className="Comments">
         <CommentSection commentProps={props.comments}  />
