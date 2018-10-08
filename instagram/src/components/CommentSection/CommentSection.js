@@ -4,18 +4,14 @@ import React from 'react';
 const CommentSection = (props) => {
   return (
     <div>
-      <input 
-        type="text"
-        name="comments"
-        placeholder="add new comment"
-      />
+
 
       <div>
       {props.dummyData.map((comment) => {
         return (
           <div>
-            <p key={comment.username}>{props.comment.username}</p>
-            <p key={comment.text}>{props.comment.text}</p>
+            <p>{props.comment.username}</p>
+            <p>{props.comment.text}</p>
           </div>
         )
       })} 
