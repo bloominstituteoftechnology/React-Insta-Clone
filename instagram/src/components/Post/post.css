@@ -35,13 +35,20 @@
   padding: 0.4rem;
 }
 
-.postFooter .far {
+.postFooter .far,
+.postFooter .fas {
   padding: 5px 0.4rem;
   font-size: 1.3rem;
+  transition: 0.1s;
+  cursor: pointer;
 }
 
 .postFooter p {
   margin: 0px 0.4rem;
   font-size: 0.8rem;
   font-weight: 700;
+}
+
+.liked {
+  color: rgb(231, 47, 47);
 }

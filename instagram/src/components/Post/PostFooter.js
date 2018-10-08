@@ -16,7 +16,6 @@ class PostFooter extends React.Component {
         likes: this.state.likes + 1,
         liked: true
       });
-      this.style = { color: red };
     } else {
       this.setState({
         likes: this.state.likes - 1,
@@ -28,10 +27,14 @@ class PostFooter extends React.Component {
   toggleLiked = () => {};
 
   render() {
+    let liked = 'liked fas';
+    if (!this.state.liked) {
+      liked = 'far';
+    }
     return (
       <div className="postFooter">
         <div>
-          <i className="far fa-heart" onClick={this.likePost} />
+          <i className={`${liked} fa-heart`} onClick={this.likePost} />
           <i className="far fa-comment" />
         </div>
         <p>{this.state.likes} likes</p>
