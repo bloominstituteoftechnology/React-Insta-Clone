@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "./App.css";
 import dummyData from "./dummy-data";
 import PostContainer from "./components/PostContainer/PostContainer";
-
+import SearchBar from "./components/SearchBar/SearchBar";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -15,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <SearchBar />
         <div className="PostContainerList">
           {this.state.dummyData.map(user => {
             return <PostContainer key={user.timestamp} userData={user} />;

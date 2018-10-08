@@ -1,0 +1,43 @@
+.searchbar {
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.logos {
+  width: 30%;
+}
+.logo {
+  width: 30px;
+  height: 30px;
+  border-right: 1px solid lightgrey;
+  padding: 0 3%;
+}
+
+.logo-instagram {
+  width: 100px;
+  height: 30px;
+  padding: 0 3%;
+}
+
+.searchbar input {
+  color: lightgrey;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  background: #fafafa;
+}
+
+.searchbar .sprites {
+  width: 30%;
+  opacity: 0.6;
+  padding-top: 0;
+}
+
+.sprites i {
+  padding: 0 6% 0px;
+}
