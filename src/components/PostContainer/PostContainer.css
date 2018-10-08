@@ -1,0 +1,45 @@
+/* PostContainer styles go here */
+
+.post-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+.post-container .post {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.post p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.post-thumb {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.post-img {
+  width: 100%;
+}
+
+.like-symbol span {
+  margin: 10px 0 10px 10px;
+  color: rgb(90,90,90);
+  font-size: 2rem;
+}
+
+.like-count {
+  margin-left: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}

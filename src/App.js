@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
+import SearchBar from './components/SearchBar/SearchBar';
+import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
   constructor() {
@@ -17,37 +19,19 @@ class App extends Component {
 
   render() {
     if (!this.state.posts.length) {
-      return <h2>Loading ...</h2>;
+      return (
+        <div className="App">
+          <h2>Loading ...</h2>
+        </div>
+      );
     }
  
     return (
       <div className="App">
-        <div className="container">
-          <h1>Insta-message</h1>
-
-            {this.state.posts.map(post => {
-              return (
-              <div key={post.timestamp} className="post">
-                <p>
-                  <img className="post-thumb" src={post.thumbnailUrl} alt="thumbnail" />
-                  {post.username}
-                </p>
-                <img className="post-img" src={post.imageUrl} alt="image" />
-                <div className='like-symbol'>
-                  <span className="far fa-heart"></span>
-                  <span className="far fa-comment fa-flip-horizontal"></span>
-                </div>
-                <div className='like-count'>
-                  {post.likes} likes
-                </div>
-              </div>
-              );
-            })}
-          
-        </div>
+          <SearchBar />
+          {this.state.posts.map(post => <PostContainer key={post.timestamp} post={post} />)}
       </div>
-    )
-    ;
+    );
   }
 }
 

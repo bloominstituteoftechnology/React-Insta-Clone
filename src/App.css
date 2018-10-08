@@ -1,56 +1,16 @@
 /* App styles go here */
 
-.container {
-  max-width: 600px;
+.App {
+  max-width: 800px;
   margin: 2px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: white;
-  border: 1px solid black;
 }
 
-.container h1 {
-  font-size: 4rem;
+.App h2 {
+  font-size: 2.6rem;
   margin: 10px;
-}
-
-.container .post {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.post p {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-
-.post-thumb {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  margin-left: 20px;
-  margin-right: 10px;
-}
-
-.post-img {
-  width: 100%;
-}
-
-.like-symbol span {
-  margin: 10px 0 10px 10px;
-  color: rgb(90,90,90);
-  font-size: 2rem;
-}
-
-.like-count {
-  margin-left: 10px;
-  font-size: 1.4rem;
-  font-weight: bold;
 }

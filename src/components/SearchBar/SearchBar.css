@@ -1,0 +1,58 @@
+/* SearchBar styles go here */
+
+.search-bar {
+  width: 100%;
+  height: 60px;
+  padding: 0px 10px 0px 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid gray;
+}
+
+.fa-instagram {
+  font-size: 2.4rem;
+  margin-right: 10px;
+}
+
+.divider {
+  font-size: 2.2rem;
+  border-left: 1px solid black;
+}
+
+.search-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.2rem;
+  margin-left: 10px;
+}
+
+.search-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: gray;
+  width: 30%;
+  height: 24px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  background-color: rgb(250,250,250);
+}
+
+.search-string {
+  font-size: 1.6rem;
+  margin-left: 10px;
+}
+
+.search-icons {
+  color: gray;
+  font-size: 2rem;
+}
+
+.search-icons span {
+  padding: 5px;
+}
