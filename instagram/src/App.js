@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import dummyData from '../../dummy-data';
-import SearchBar from '../components/SearchBar/SearchBar';
-import PostContainer from '../components/PostContainer/PostContainer';
+import dummyData from './dummy-data';
+import SearchBar from './components/SearchBar/SearchBar';
+import PostContainer from './components/PostContainer/PostContainer';
 
 import './App.css';
 
@@ -9,8 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: [],
-      search: ''
+      dummyData
     };
   }
 
@@ -20,7 +19,9 @@ class App extends Component {
         <div className="search-bar">
           <SearchBar />
         </div>
-        <PostContainer />
+        <div className="post-container">
+          <PostContainer post={this.state.dummyData} />
+        </div>
       </div>
     );
   }
