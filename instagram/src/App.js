@@ -4,17 +4,34 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 import CommentSection from './components/CommentSection/CommentSection';
+//importing dummy-data.js
+import dummyData from './dummy-data';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data : dummyData,
+    };
+
+  } //constructor ends
+
   render() {
     return (
       <div className="App">
-         <h1>WELCOME ************************************* </h1>
-         <SearchBar />
+        <h1>WELCOME ************************************* </h1>
 
-         <PostContainer />
+        <header className="App-header">
+            <SearchBar />
+        </header>
 
-         <CommentSection />
+        <div>         
+          <PostContainer />
+        </div>
+
+        <div>         
+          <CommentSection />
+        </div>
       </div>
     );
   }
