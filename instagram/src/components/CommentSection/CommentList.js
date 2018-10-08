@@ -27,7 +27,7 @@ class CommentList extends React.Component {
   render() {
     return(
       <div>
-        {this.state.comments.map((comment) => <Comment comment={comment}/>)}
+        {this.state.comments.map((comment) => <Comment key={comment.text} comment={comment}/>)}
         <p className='timeStamp'>{this.props.timeStamp}</p>
         <CommentInput inputHandler ={this.inputHandler} submitHandler={this.submitHandler} value={this.state.comment}/>
       </div>

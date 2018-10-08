@@ -5,7 +5,7 @@ import './Post.css'
 export default (props) => {
   return (
     <div>
-      {props.data.map( post => <PostList post={post} />)}
+      {props.data.map( post => <PostList key={post.imageUrl} post={post} />)}
     </div>
   )
 }
