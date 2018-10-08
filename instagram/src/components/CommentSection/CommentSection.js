@@ -15,6 +15,7 @@ export default class CommentSection extends Component {
       comments: [],
       likes: 0,
       comment: '',
+      liked: false,
     }
   }
 
@@ -26,12 +27,12 @@ export default class CommentSection extends Component {
   }
 
   addNewComment = e => {
-    const newComment = this.state.comment;
-    this.setState({
-      comments: [...this.state.comments, { username: 'Andres', text: newComment }],
-      comment: '',
-    });
     e.preventDefault();
+    const newComment = this.state.comment;
+    this.setState(prevState => ({
+      comments: [...prevState.comments, { username: 'Andres', text: newComment }],
+      comment: '',
+    }));
   }
 
   handleChange = e => {
@@ -39,14 +40,24 @@ export default class CommentSection extends Component {
   }
 
   handleClick = e => {
-    this.setState({ likes: this.state.likes + 1 });
     e.preventDefault();
+    if(this.state.liked) {
+      this.setState(prevState => ({
+        likes: prevState.likes - 1,
+        liked: false,
+      }));
+    } else {
+      this.setState(prevState => ({
+        likes: prevState.likes + 1,
+        liked: true
+      }));
+    }
   }
 
   render() {
     return (
       <div className="post-comments">
-        <CommentActions onClick={this.handleClick} />
+        <CommentActions onClick={this.handleClick} liked={this.state.liked} />
         <CommentLikes likes={this.state.likes} />
         {this.state.comments.map((user, index) =>
           <Comment key={index} username={user.username} text={user.text} />
