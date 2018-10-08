@@ -1,19 +1,22 @@
 import React, { Component } from "react";
 
 
-class CommentContainer extends Component {
+class CommentSection extends Component {
      constructor(props){
          super(props);
      }
    render() {
+       const caption = this.props.caption;
+       console.log(caption)
+
 
 
         return(
-          <div>{this.props.caption}</div>
+          <div>{caption}</div>
         )
         }
     }
 
 
 
-export default CommentContainer;
+export default CommentSection;

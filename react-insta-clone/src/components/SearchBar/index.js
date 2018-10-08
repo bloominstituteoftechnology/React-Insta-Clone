@@ -12,12 +12,21 @@ import React from "react";
                     </a>
 
                   </div>
-                  <form>
 
-      <input placeholder=" Search for..." ref={input => this.search = input} onChange={this.handleInputChange}/>
-      <i class="far fa-compass"></i>
-      <i class="far fa-heart"></i>
-      <i class="far fa-user"></i>
+                  <form>
+                       <div class="inner-addon left-addon">
+                    <i class="fas fa-search"></i>
+
+      <input type="text" placeholder=" search"  ref={input => this.search = input} onChange={this.handleInputChange}/>
+
+      <i class="far fa-compass fa-lg"></i>
+      <i class="far fa-heart fa-lg"></i>
+      <i class="far fa-user fa-lg"></i>
+
+</div>
+
+
+
     </form>
                 </div>
               </nav>
