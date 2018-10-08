@@ -1,0 +1,47 @@
+.posts {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.post {
+    text-align: left;
+    margin-top: 22px;
+    border: 1px solid lightgray;
+}
+
+.postHeader {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.thumbnail {
+    display: inline-block;
+    height: 30px;
+    width: auto;
+    border-radius: 50px;
+    margin: 10px 0 0 15px;
+}
+
+.username {
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 19px;
+    margin-left: 9px;
+}
+
+.postImage {
+    width: 597px;
+    margin: 10px .5px;
+}
+
+.likes img {
+    max-width: 24px;
+    height: auto;
+    margin-left: 15px;
+}
+
+.likeCount {
+    margin: 3px 15px;
+    font-size: 14.5px;
+}

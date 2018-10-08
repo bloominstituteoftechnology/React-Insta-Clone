@@ -3,7 +3,7 @@ import React from 'react';
 let Search = props => {
     return (
            <div>
-                <i class="fas fa-search" />
+                <i className="fas fa-search" />
                 <input type="text" placeholder="Search" />
            </div>
     )
