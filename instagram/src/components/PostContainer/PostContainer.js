@@ -1,9 +1,15 @@
 import React from "react";
+import CommentSection from "./../CommentSection/CommentSection";
 
 const PostContainer = props => {
   return (
     <div>
-      <h1>{props.userData.username}</h1>
+      <p>Hi</p>
+      {props.userData.comments.map(user => {
+        return (
+          <CommentSection key={props.userData.id} comments={user.comments} />
+        );
+      })}
     </div>
   );
 };
