@@ -7,9 +7,12 @@ class Comment extends Component {
        
         return (
             <div className='comment'>
-              <Likes />  
-              <p>{this.props.likes} likes</p>
-              <UserComments notes={this.props.comments} />
+              <div className="comment-container">
+                <Likes />  
+                <p>{this.props.likes} likes</p>
+                <UserComments notes={this.props.comments} />
+              </div>
+              <input type='text' placeholder='Add a Comment' className="comment-input" />
             </div>
         );
     }

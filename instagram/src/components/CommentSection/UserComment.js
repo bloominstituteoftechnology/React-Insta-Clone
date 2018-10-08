@@ -7,7 +7,7 @@ class UserComment
             <div>
               {this.props.notes.map( note => {
                   return(
-                    <p>{note.username} {note.text}</p>
+                    <p><span>{note.username}{"  "}</span> {note.text}</p>
                   );
               })}    
             </div>

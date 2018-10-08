@@ -1,16 +1,35 @@
 .comment {
-    padding:5px 20px;
-
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 }
-
+.comment-container {
+    padding:15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 .comment p {
     margin:0px;
+    display:flex;
+    justify-content: flex-start;
+    
 }
-
+span {
+    font-weight: bold;    
+}
 .likes {
     margin-bottom: 7px;
+}
+
+.comment-input {
+    width:100%;
+    padding: 15px 50px 15px 20px;
+    border-radius: 0px;
+    border: none;
+    border-top: 1px solid lightgrey;
+    color: lightgray;
+    font-size:18px;
 }

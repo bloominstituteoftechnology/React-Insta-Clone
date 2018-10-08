@@ -1,10 +1,16 @@
+* {
+    box-sizing: border-box;
+}
 .post-container {
     width: 40%;
     margin: 0 auto;
 
     display:felx;
+   }
+.container {
+     border: 1px solid lightgray;
+     margin: 25px 0px;
 }
-
 .header {
     display: flex;
     justify-content: flex-start;
@@ -26,6 +32,6 @@
 
 .card {
     padding: 5px;
-    margin: 15px 0px 5px 0px;
-    border: 1px solid lightgray;
+    margin: 0px 0px 5px 0px;
+    /* border: 1px solid lightgray; */
 }

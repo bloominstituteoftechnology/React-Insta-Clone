@@ -7,8 +7,10 @@ class PostContainer extends Component {
         
         return(
             <div className='post-container'>
-               <Card key={this.props.card.timestamp} card={this.props.card} />
-               <CommentSection key={this.props.card.timestamp} comments={this.props.card.comments} likes={this.props.card.likes}  />
+              <div className='container'>
+                <Card key={this.props.card.timestamp} card={this.props.card} />
+                <CommentSection key={this.props.card.timestamp} comments={this.props.card.comments} likes={this.props.card.likes}  />
+               </div>
             </div>
         );
     }
