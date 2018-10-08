@@ -22,3 +22,8 @@ form {
     height: 30px;
     margin-right: .5%;
 }
+
+.timestamp {
+    font-size: 13px;
+    opacity: .5;
+}

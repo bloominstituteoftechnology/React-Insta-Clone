@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Comment from '../Comment/Comment.js'
 import './CommentSection.css'
-// import moment from 'moment';
+import moment from 'moment';
 
 //Receives an individual post's comments array from PostContainer
 class CommentSection extends Component{
@@ -65,7 +65,7 @@ class CommentSection extends Component{
         return (
             <div className="comments">
                 {commentList}
-                {/* <p>{moment.format()}</p> */}
+                <p className="timestamp">{moment().startOf('day').fromNow()}</p>
                 <div className="input-comment">
                     <form onSubmit={this.handleSubmit}>
                         <input onChange={this.handleChange} className="comment-input" type="text" placeholder="Add a comment..." value={this.state.newComment}/>
@@ -76,53 +76,6 @@ class CommentSection extends Component{
         )
     }
 }
-// //Receives an individual post's comments array from PostContainer
-// const CommentSection = ({comments, user, addComment}) =>{
-//     const commentList = (!comments.length === 0)
-//     ? null
-//     : comments.map(comment =>{
-//         return (
-//             <div key={comment.username + Math.random()}>
-//                 <Comment comment={comment}/>
-//             </div>
-//         )
-//     })
 
-//     function handleSubmit(event){
-//         debugger
-//         event.preventDefault();
-//         const commentInputBox = document.querySelector('.comment-input');
-//         let commentText = commentInputBox.value;
-//         const newComment = (commentText)
-//             ? {
-//                 text: commentText,
-//                 username: 'critter73'
-//             }
-//             : null;
-
-//         if(newComment){
-//             // debugger;
-//             addComment(newComment, user);
-//             commentInputBox.value = '';
-//         }
-
-
-
-
-//     }
-
-//     return (
-//         <div className="comments">
-//             {commentList}
-//             <p>timestamp goes here</p>
-//             <div className="input-comment">
-//                 <form onSubmit={handleSubmit}>
-//                     <input className="comment-input" type="text" placeholder="Add a comment..."/>
-//                     <button>...</button>
-//                 </form>
-//             </div>
-//         </div>
-//     )
-// }
 
 export default CommentSection;
