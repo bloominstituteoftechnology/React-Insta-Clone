@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => {
-    return(
-        <div/>
-    )
+    return <CommentSection comments={props.obj.comments} />
 }
 
 PostContainer.propTypes = {
@@ -15,7 +14,7 @@ PostContainer.propTypes = {
         imageUrl: PropTypes.string.isRequired,
         likes: PropTypes.number.isRequired,
         timestamp: PropTypes.string.isRequired,
-        posts: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
+        comments: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
 
     })
 }
