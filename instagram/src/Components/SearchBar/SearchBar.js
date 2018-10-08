@@ -14,12 +14,13 @@ class SearchBar extends React.Component {
             <div className="searchbar-container">
                 {/*Instagram Icon*/}
                 <i className="instagram-logo fa fa-instagram fa-2x"></i>
+                <div className="divider"></div>
                 {/*Instagram logo font: Billabong*/}
                 <p className="instagram-letter-logo">Instagram</p>
                 {/*Search bar*/}
                 <div className="search-area">
-                    <input type="text" placeholder="Search" className="search-input" onChange={this.inputHandler} value={this.state.searchValue}/>
-                    <i className="fa fa-search"></i>
+                    <input type="text" placeholder="&#x1F50D; Search" className="search-input" onChange={this.inputHandler} value={this.state.searchValue}/>
+                    {/* <i className="fa fa-search"></i> */}
                 </div>
                 
                 {/*3 icons on the right*/}

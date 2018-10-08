@@ -2,53 +2,68 @@
 
 
 .searchbar-container {
-    border: 1px solid black;
+    background-color: whitesmoke;   border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
     display: flex;
     max-width: 800px;
     margin: 0 auto;
 }
 .far{
+    cursor: pointer;
     display: flex;
     align-items: center;
-    border: 1px solid black;
+    color: gray;
 }
 .instagram-logo{
+    cursor: pointer;
     width: 10%;
-    border: 1px solid blue;
+}
+
+.divider{
+    border-left: 1px solid black;
+    height: 28px;
+    margin: auto 0;
+    padding-right: 5px;
 }
 
 .instagram-letter-logo{
+    cursor: pointer;
     font-family: 'Grand Hotel', cursive;
     font-size: 25px;
     width: 15%;
-    border: 1px solid green;
-    margin: auto 0;
+    margin: 0 auto;    
 }
 
 .search-area{
-    border: 1px solid red;
     width: 50%;
+    align-items: center;
+    height: 20px;
+    margin-top: 8px;
 }
 
 .search-input{
+    height: 15px;;
+    width: 60%;
+    border-radius: 5px;
+    background-color: aliceblue;
     text-align: center;
     margin: auto 0;
 }
 
 .fa-search{
+    color: gray;
     position: absolute;
-    margin-left: -130px;
+    margin-left: -160px;
 }
 
 .rigth-container{
     display: flex;
     justify-content: flex-end;
     width: 25%;
-    border: 1px solid black;
 }
 .rigth-icon-container{
     display: flex;
     width: 55%;
-    border: 1px solid yellow;
     justify-content: space-around;
 }
