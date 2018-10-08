@@ -1,0 +1,22 @@
+.line-between {
+  background-color: #262626;
+  height: 28px;
+  margin: 0 16px;
+  width: 1px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  margin-top: 5px;
+  height: 40px;
+  width: 105px;
+}
+
+.nav-logo .fab {
+  color: black;
+  font-size: 26px;
+}
