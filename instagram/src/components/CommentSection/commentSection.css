@@ -1,0 +1,14 @@
+.addComment {
+    width: 95%;
+    color: grey;
+    border: none;
+    margin-top: 15px;
+}
+.commentFieldContainer {
+    margin: 2% 0%;
+    border-top: 1px solid grey;
+    width: 98%;
+}
+.comments {
+    padding-left: 2%;
+}

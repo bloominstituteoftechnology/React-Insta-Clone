@@ -1,0 +1,18 @@
+.containerDiv {
+    margin: 7% 0%;
+}
+.masterDivContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.image {
+    width: 99%;
+    padding-left: .5%;
+}
+.header {
+    padding-left: 2%;
+}
+.likeandcommentIcons {
+    padding-left: 2%;
+}
