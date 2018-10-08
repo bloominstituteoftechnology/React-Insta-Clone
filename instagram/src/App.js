@@ -7,8 +7,13 @@ import data from './dummy-data'
 class App extends Component {
 
   state = {
-    data: data
+    data: []
   }
+
+  componentDidMount() {
+    this.setState({data: data})
+  }
+
   render() {
     return (
       <div className="App">

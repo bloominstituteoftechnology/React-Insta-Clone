@@ -12,9 +12,7 @@ const PostList = props => {
           <div className='postContainer'>
             <Post userData={post}/>
             <Likes likes={post.likes}/>
-            <CommentList comments={post.comments}/>
-            <p className='timeStamp'>{post.timestamp}</p>
-            <input className='addComment' type='text' placeholder='Add a comment...' />
+            <CommentList comments={post.comments} timeStamp={post.timestamp}/>
           </div>
         )})}
     </div>
