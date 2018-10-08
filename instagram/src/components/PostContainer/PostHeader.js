@@ -6,7 +6,7 @@ const PostHeader = props => {
     return (
         <div>
             <div className="postHeader">
-                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="profile"/>
+                <img src={props.item.thumbnailUrl} alt="profile"/>
                 <h4>{props.item.username}</h4>
             </div>
             <img className="postimg" src={props.item.imageUrl} alt="post"/>
