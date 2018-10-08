@@ -14,14 +14,6 @@ class Comments extends Component {
     }
 }
 
-// changeUserInput(input){
-//     this.setState({
-//         userInput: input
-//     })
-
-    
-// }
-
 usersInput = (event) => {
     const {value} = event.target;
     this.setState({
@@ -32,7 +24,7 @@ usersInput = (event) => {
 addComment = (event) => {
     event.preventDefault();
     const newComment = {
-        username: "basicCoderHal9000",
+        username: "basicCoder45",
         text: this.state.userInput
     }
     this.setState({
@@ -58,7 +50,6 @@ render(){
                 <form onSubmit={this.addComment}>
                     <input 
                     onChange={this.usersInput}
-                    // onChange={(el)=>this.changeUserInput(el.target.value)}
                     value={this.state.userInput}
                     className={"addACommentInput"} 
                     type="text" placeholder="Add a comment..."
