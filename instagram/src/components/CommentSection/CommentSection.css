@@ -24,3 +24,11 @@
   color: grey;
   font-size: 12px;
 }
+
+.add-comment {
+  width: 100%;
+  border: none;
+  border-top: 1px solid lightgrey;
+  padding: 15px 0;
+  font-size: 16px;
+}

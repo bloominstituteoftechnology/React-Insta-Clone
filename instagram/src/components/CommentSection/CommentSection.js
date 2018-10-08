@@ -11,7 +11,7 @@ const CommentSection = props => {
         return <Comment key={comment.id} comment={comment} />;
       })}
       <p className="timestamp">{props.user.timestamp}</p>
-      <hr className="break" />
+      <input className="add-comment" placeholder="Add a comment..." />
     </div>
   );
 };
