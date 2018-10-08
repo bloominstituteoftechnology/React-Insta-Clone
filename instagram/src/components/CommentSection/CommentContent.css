@@ -1,0 +1,17 @@
+.comment-content {
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+}
+
+.comment-content > p:first-child {
+    font-weight: bold;
+    padding-right: 2%;
+    height: 16px;
+    margin-left: 3%;
+}
+
+.comment-content p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
