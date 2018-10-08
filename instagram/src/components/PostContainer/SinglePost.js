@@ -13,24 +13,9 @@ const SinglePost = props => {
 			<div className='post-container-main-img'>
 				<img src={props.userData.imageUrl} alt='user posted img' />
 			</div>
-
-			<div className='interactive-action-buttons'>
-				<img src='https://techflourish.com/images/instagram-icon-clipart-panda-18.jpg' alt='Heart Icon' />
-				<img src='https://static.thenounproject.com/png/9654-200.png' alt='Speech Bubble' />
-			</div>
-
-			<div className='likes'>
-				<p>{props.userData.likes} likes</p>
-			</div>
 		</div>
 	)
 }
-
-// increment = event => {
-// 	event.preventDefault();
-// 	let isLiked = this.state.props.userData.likes;
-// 	this.setState({ like: prevState.props.userData.likes + 1})
-// }
 
 SinglePost.PropTypes = {
 	thumbnailUrl: PropTypes.img,

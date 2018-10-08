@@ -20,30 +20,34 @@
     align-items: center;
     margin-left: 2%;
     color: grey;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .comment-bar {
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
     margin-bottom: 30px;
 }
 
-.comment-bar input {
+.comment-bar form {
+    width: 100%;
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    height: 50px;
+}
+
+.comment-bar form input {
     font-size: 1.0rem;
-    height: 30px;
     border: 0px solid;
     margin-left: 2%;
     border-top: 1px solid lightgrey;
     outline: none;
+    height: 32px;
 }
 
 button {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 48px;
     background-color: white;
     border: 0px solid;
     font-weight: bold;
@@ -52,4 +56,5 @@ button {
     border-top: 1px solid lightgrey;
     outline: none;
     cursor: pointer;
+    height: 100%;
 }

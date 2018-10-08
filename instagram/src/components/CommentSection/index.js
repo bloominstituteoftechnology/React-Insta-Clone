@@ -14,16 +14,9 @@ const CommentSection = props => {
     )
 }
 
-// 	addNewComment = (event, id, comment) => {
-// 		if (event.)
-
-// 	)
-// }
-
 CommentSection.propTypes = {
 	username: PropTypes.string.isRequired,
 	text: PropTypes.string.isRequired,
 }
 
 export default CommentSection;
-// export default addNewComment;
