@@ -1,3 +1,8 @@
+/* added box-sizing and root font size */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
