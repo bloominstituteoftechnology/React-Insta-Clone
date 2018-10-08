@@ -55,12 +55,21 @@
     margin: 7px 15px 0;
     border-bottom: .5px solid gray;
     padding-bottom: 11px;
+} 
+
+.fa-ellipsis-h {
+    position: absolute;
+    right: 500px;
+    font-size: 14px;
+    right: 477.5px;
+    padding-top: 22.5px;
 }
 
 .post input {
     margin: 0 15px;
     border: none;
     height: 55px;
-    width: 95%;
+    width: 91%;
     outline: none;
+    font-size: 14.7px;
 }

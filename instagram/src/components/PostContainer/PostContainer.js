@@ -12,7 +12,10 @@ let PostContainer = props => {
             <Likes post={props.post}/>
             <CommentSection comments={props.post.comments} />
             <p className='timestamp'>{moment(props.post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}</p>
-            <input type='text' placeholder="Add a comment..."></input>
+            <div>
+                <i class="fas fa-ellipsis-h"></i>
+                <input type='text' placeholder="Add a comment..."></input>
+            </div>
         </div>
     )
 }
