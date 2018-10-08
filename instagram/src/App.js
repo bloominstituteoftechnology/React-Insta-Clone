@@ -1,23 +1,31 @@
 import React  from 'react';
 import './App.css';
-import SearchContainer from './Components/SearchBar/SearchContainer';
 import dummyData from './dummy-data';
+import SearchContainer from './Components/SearchBar/SearchContainer';
 import PostContainer from './Components/PostContainer/PostContainer';
 
 class App extends React.Component {
 
   state = {
+    newComment: "",
     data: [{dummyData}],
- comment: '',
   }
+  
 
+commentHandler = (e) => {
+      this.setState({
+        newComment: e.target.value,
+      });
+}
 
  
   render() {
     return (
       <div className="App">
-              <SearchContainer />
-              <PostContainer dummyData={dummyData} />
+              <SearchContainer  />
+              <PostContainer 
+              commentHandler={this.commentHandler}
+              dummyData={dummyData} />
       </div>
     );
   }

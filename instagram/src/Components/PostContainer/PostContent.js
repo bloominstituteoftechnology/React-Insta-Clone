@@ -7,7 +7,7 @@ class PostContent extends React.Component {
 
     render() {
 
-        return(
+        return (
             <div key={this.props.timestamp}>
                 {this.props.dummyData.map(postProps => {
                     return (
@@ -20,6 +20,10 @@ class PostContent extends React.Component {
                             <img className={"imgContent"} src={postProps.imageUrl} alt={"instagramImg"} />
                             </div>
                             <div className="likes">
+                                <div className="comIconWrap">
+                                <i class = "far fa-heart" > </i>
+                                < i class = "far fa-comment" > </i>
+                                </div>
                                 <h3>{postProps.likes}{" likes"}</h3>
                             </div>
                             <div>

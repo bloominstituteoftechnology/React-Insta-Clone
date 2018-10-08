@@ -5,6 +5,7 @@
 
 .postHeader {
     display: flex;
+    font-size: 1rem;
 }
 
 .profileThumbImg {
@@ -19,6 +20,7 @@
 }
 
 .commentWrap {
+    font-size: 1rem;
     display: flex;
     padding-left: 20px;
     
@@ -28,11 +30,32 @@
     margin: auto 5px;
 }
 
-
-
 .likes h3 {
+    font-size: 1rem;
     display: flex;
     justify-content: left;
     padding-left: 20px;
     font-weight: normal;
+    margin: 5px 0;
 }
+.comIconWrap {
+    display: flex;
+ 
+}
+
+.fa-heart {
+    display: flex;
+    font-size: 1.3rem;
+    padding-left: 20px;
+    justify-content: left;
+}
+.fa-comment {
+    display: flex;
+    font-size: 1.3rem;
+    padding-left: 20px;
+    justify-content: left;
+}
+.color {
+    color: red;
+}
+

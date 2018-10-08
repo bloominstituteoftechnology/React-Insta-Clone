@@ -5,7 +5,9 @@ class CommentContainer extends React.Component {
     render() {
         return (
             <div>
-               <CommentFooter/>
+               <CommentFooter
+                commentHandler={this.props.commentHandler}
+               />
             </div>
         );
     }
