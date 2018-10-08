@@ -9,9 +9,11 @@ const Post= props => {
                 return (
                 <div>
                     <div>
-                        <img src = {info.thumbnailUrl}/>
+                        <img src = {info.thumbnailUrl} alt = 'thumbnail'/>
                         <p>{info.username}</p>
                     </div>
+                    <img src = {info.imageUrl} alt = 'post-image'/>
+                    <p>{info.likes} likes</p>
                     <div>
                         <Comment comments={info.comments}/>
                     </div> 
