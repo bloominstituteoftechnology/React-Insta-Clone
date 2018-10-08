@@ -1,0 +1,29 @@
+.post-container{
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    z-index: ;
+}
+
+.header-container{
+    margin-top: 20px;
+    border: 1px solid black;
+    height: 60px; 
+    display: flex;
+    padding-left: 3%;
+}
+
+.user-img{
+    margin: auto 0;
+    border: 1px solid red;
+    border-radius: 100%;
+    height: 30px;
+}
+.username{
+    margin: auto 0 auto 2%;
+    font-weight: bold;
+}
+
+.post-img{
+    width: 100%;
+}
