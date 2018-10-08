@@ -5,7 +5,7 @@ import './Post.css'
 export default (props) => {
   return (
     <div>
-      <PostList data ={props.data}/>
+      {props.data.map( post => <PostList post={post} />)}
     </div>
   )
 }
