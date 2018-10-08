@@ -1,4 +1,4 @@
-const dummyData = [
+export const dummyData = [
   {
     username: "philzcoffee",
     thumbnailUrl:
