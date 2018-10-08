@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import PostContainer from './PostContainer';
 import dummyData from './dummy-data'
 import SearchBar from './SearchBar'
-
+import PropTypes from "prop-types"
 
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      posts:dummyData,
+      posts:[],
+      search:'',
     } 
   }
+
+  componentDidMount() {
+    this.setState({posts: dummyData}) 
+
+    }
 
   inputHandler = event => {
     const value = event.target.value;
@@ -22,6 +27,8 @@ class App extends Component {
       {search:value}
     );
     }
+
+
 
 
     submitHandler = event => {
@@ -49,6 +56,23 @@ class App extends Component {
       </div>
     );
   }
+}
+
+PostContainer.propTypes = {
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string,
+      thumbnailUrl: PropTypes.string,
+      imageURL: PropTypes.string,
+      likes: PropTypes.number,
+      timestamp: PropTypes.string,
+      comments: PropTypes.arrayOf(
+        PropTypes.shape({
+          username: PropTypes.string,
+        text: PropTypes.string,
+        }
+      ))
+    }))
 }
 
 export default App;

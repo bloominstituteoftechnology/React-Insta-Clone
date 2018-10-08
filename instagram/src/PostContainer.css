@@ -41,7 +41,10 @@ h2 {
     align-items: center;
 }
 
-
+h3 {
+    margin:0px;
+    margin-bottom: 40px;
+}
 h4 {
     margin:0;
     margin-right:10px;
@@ -67,6 +70,11 @@ p {
     margin: 20px;
 }
 
+.poster .time {
+    color:gray;
+    margin-bottom: 20px;
+}
+
 .icons {
     display:flex;
     flex-direction: row;
@@ -75,7 +83,8 @@ p {
 
 .icons .commentIcon {
     width:100px;
-    height:100%
+    height:100%;
+    margin: 0px;
 }
 .like {
     display:flex;
@@ -93,4 +102,10 @@ form input {
     margin:20px 0px 20px 10px;
     width:300px;
     height: 30px;
+}
+
+.iconFull {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
 }
