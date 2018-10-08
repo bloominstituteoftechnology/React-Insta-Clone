@@ -26,9 +26,9 @@ class SearchBar extends React.Component {
                 {/*3 icons on the right*/}
                 <div className="rigth-container">
                     <div className="rigth-icon-container">
-                        <i className="far fa-compass fa-1x"></i>
-                        <i className="far fa-heart fa-1x"></i>
-                        <i className="far fa-user fa-1x"></i>
+                        <i className="far fa-compass"></i>
+                        <i className="far fa-heart"></i>
+                        <i className="far fa-user"></i>
                     </div> 
                 </div>
             </div>

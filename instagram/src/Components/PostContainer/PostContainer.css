@@ -2,21 +2,22 @@
     width: 100%;
     max-width: 650px;
     margin: 0 auto;
-    z-index: ;
+    display: flex;
+    flex-direction: column;
 }
 
 .header-container{
-    margin-top: 20px;
-    border: 1px solid black;
+    border: 1px solid whitesmoke;
     height: 60px; 
     display: flex;
     padding-left: 3%;
 }
 
 .user-img{
+    max-width: 650px;;
     margin: auto 0;
-    border: 1px solid red;
-    border-radius: 100%;
+    border: 2px solid orange;
+    border-radius: 90%;
     height: 30px;
 }
 .username{
@@ -27,3 +28,33 @@
 .post-img{
     width: 100%;
 }
+
+.post-interaction{
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.post-icons{
+    border: 1px solid blue;
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -15px;
+}
+
+.post-icons i {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.likes{
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid green;
+    width: 15%;
+}
+
+

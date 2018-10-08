@@ -2,18 +2,20 @@
 
 
 .searchbar-container {
-    background-color: whitesmoke;  border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-bottom: 1px solid whitesmoke;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
     display: flex;
     max-width: 650px;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
+    height: 60px;
 }
 .far{
     cursor: pointer;
     display: flex;
     align-items: center;
-    color: gray;
+    color: black;
+    font-size: 25px;
 }
 .instagram-logo{
     margin: auto 0;
@@ -32,20 +34,19 @@
     padding-right: 1%;
     cursor: pointer;
     font-family: 'Grand Hotel', cursive;
-    font-size: 25px;
-    width: 15%;
-    margin: 0 auto;    
-}
+    font-size: 35px;
+    width: 20%;
+    margin: auto 0;}
 
 .search-area{
-    width: 80%;
+    width: 60%;
     align-items: center;
-    height: 20px;
     margin-top: 8px;
+    margin: auto 0;
 }
 
 .search-input{
-    height: 15px;;
+    height: 25px;;
     width: 65%;
     border-radius: 5px;
     background-color: aliceblue;
@@ -57,7 +58,7 @@
 .rigth-container{
     display: flex;
     justify-content: flex-end;
-    width: 15%;
+    width: 25%;
 }
 .rigth-icon-container{
     display: flex;
