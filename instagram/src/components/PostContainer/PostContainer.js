@@ -8,12 +8,14 @@ const PostContainer = props => {
     return (
         props.posts.map(post => {
             return (
-                <PostContent 
-                post={post} 
-                />
-                <CommentSection
-                post={post}
-                />
+                <div>
+                    <PostContent 
+                    post={post} 
+                    />
+                    <CommentSection
+                    post={post}
+                    />
+                </div>
             );
         })
     )
