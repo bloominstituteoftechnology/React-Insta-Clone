@@ -4,14 +4,16 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 import CommentSection from './components/CommentSection/CommentSection';
-//importing dummy-data.js
 import dummyData from './dummy-data';
+
+
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      data : dummyData,
+      posts : dummyData,
     };
 
   } //constructor ends
@@ -19,22 +21,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>WELCOME ************************************* </h1>
-
-        <header className="App-header">
+        <header>
             <SearchBar />
         </header>
 
         <div>         
-          <PostContainer />
+          <PostContainer props = {this.state.posts}/>
         </div>
 
         <div>         
           <CommentSection />
         </div>
       </div>
-    );
-  }
-}
+    ); //return end
+  } //render() end
+} //App class component end.
 
 export default App;

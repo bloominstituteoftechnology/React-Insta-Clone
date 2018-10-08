@@ -1,22 +1,30 @@
 import React from 'react';
 import './searchBar.css';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+ 
+
 
 const SearchBar = () => {
+    
     return (
-        <div className = "main-div">
+        <div className = "search-main-div">
             <div>
-                <img src = " "/>
-                <label>Instagram</label>
+                <img src = "./instagram-logo.png"/>
             </div>
 
             <div>
-                <input type="search" placeholder="Search..."  autocomplete="off" />
+                <input type="search" placeholder="Search..."  />
             </div>
-
-            <div>
-                <img src = " "/>
-                <img src = " "/>
-                <img src = " "/>                
+            
+            <div className = "social-div">
+                <img src = {./img/compass.png }/>
+                <img src = "./img/heart.png"/>
+                <img src = "./img/user-circle.png"/>
+              
+              {/*} <i className="fa fa-compass"></i>
+                <i class="fa fa-heart"></i>
+                <i class="fal fa-user-circle"></i>  */}
             </div>
         </div>
     )

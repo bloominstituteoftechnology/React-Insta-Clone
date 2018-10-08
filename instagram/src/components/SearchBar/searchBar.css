@@ -1,8 +1,10 @@
-.main-div {
+.search-main-div {
     display: flex;
     justify-content: space-between;
-    border : 2px solid green;
-    width : 60%;
+    border : 1px solid black;
+    height : 3.1rem;
+    background: white;
+    width : 70%;
 }
 
 input {
@@ -16,4 +18,9 @@ input {
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+img {
+    margin : 0.3rem;
+    
 }
