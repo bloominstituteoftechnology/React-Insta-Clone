@@ -7,8 +7,8 @@ class Likes
     render() {
         return (
             <div className='likes'>
-               <FontAwesomeIcon icon={["far", "heart"]} />{" "}
-               <FontAwesomeIcon icon={["far", "comment"]} />
+               <FontAwesomeIcon className="fontawesome" icon={["far", "heart"]} />{" "}{" "}
+               <FontAwesomeIcon className="fontawesome" icon={["far", "comment"]} />
             </div>
         );
     }
