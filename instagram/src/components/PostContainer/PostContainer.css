@@ -2,3 +2,12 @@
   margin: 50px;
   background: grey;
 }
+.post-header {
+  display: flex;
+}
+
+.post-header img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
