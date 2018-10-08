@@ -45,7 +45,7 @@ const SearchInput = styled.input`
 const RightItems = styled.div`
 `;
 
-const SearchBar = () => {
+const SearchBar = props => {
     return ( 
         <Header>
             <LeftItems>
@@ -53,7 +53,7 @@ const SearchBar = () => {
                 <InstaImage src={logo} alt="logo" />
             </LeftItems>
             <MiddleItems>
-                <SearchInput type="text" placeholder="&#128269; Search" />
+                <SearchInput type="text" placeholder="&#128269; Search" onKeyDown={props.searchPosts} />
             </MiddleItems>
             <RightItems>
                 <i className="far fa-compass"></i>
