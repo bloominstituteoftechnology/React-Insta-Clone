@@ -6,6 +6,11 @@
     /* align-items: flex-start; */
 }
 
+.commentSection h4 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
 .commentIcons {
     display: flex;
     margin-left: 15px;
@@ -24,8 +29,13 @@
 }
 
 .messages {
+    height: 30px;
     display: flex;
     align-items: baseline;
+}
+
+.messages h4 {
+    margin-top: 0;
 }
 
 .messages p {
