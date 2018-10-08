@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import PropTypes from 'prop-types';
 
 
 import './App.css';
@@ -10,8 +11,8 @@ class App extends Component {
   constructor(){
     super();
     this.state={
-      dummyData: dummyData,
-      comments: dummyData.comments,
+      dummyData: [],
+      comments: [],
     };
   }
 
@@ -35,6 +36,25 @@ class App extends Component {
       </div>
     );
   }
+}
+
+App.propTypes ={
+  dummyData: PropTypes.shape(
+    {
+      username: PropTypes.string,
+      thumbnailUrl: PropTypes.string,
+      imgUrl: PropTypes.string,
+      likes: PropTypes.number,
+      timestamp: PropTypes.string,
+      comments: PropTypes.shape(
+        {
+          username: PropTypes.string,
+          text: PropTypes.string,
+        }
+      )
+    }
+  )
+  
 }
 
 

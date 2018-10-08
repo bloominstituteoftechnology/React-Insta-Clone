@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
-import PropTypes from 'prop-types';
+
 
 
 const PostContainer = (props) =>{
@@ -25,10 +25,7 @@ const PostContainer = (props) =>{
         </div>
     )
 }
-CommentSection.propTypes ={
-    comments: PropTypes.arrayOf(PropTypes.object),
-    timeStamp: PropTypes.string,
-}
+
 
 
 export default PostContainer
