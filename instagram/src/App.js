@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
         <div className="PostContainerList">
           {this.state.dummyData.map(user => {
-            return <PostContainer userData={user} />;
+            return <PostContainer key={user.timestamp} userData={user} />;
           })}
         </div>
       </div>

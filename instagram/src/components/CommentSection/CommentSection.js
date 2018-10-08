@@ -1,8 +1,14 @@
 import React from "react";
+import Comment from "./Comment";
 
 const CommentSection = props => {
-  console.log(props);
-  return <div>{/* <p>{props}</p> */}</div>;
+  return (
+    <div>
+      {props.comments.map(comment => {
+        return <Comment key={comment.id} comment={comment} />;
+      })}
+    </div>
+  );
 };
 
 export default CommentSection;

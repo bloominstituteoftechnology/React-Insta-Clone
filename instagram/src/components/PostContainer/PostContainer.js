@@ -1,15 +1,15 @@
 import React from "react";
 import CommentSection from "./../CommentSection/CommentSection";
+import "./PostContainer.css";
 
 const PostContainer = props => {
   return (
-    <div>
-      <p>Hi</p>
-      {props.userData.comments.map(user => {
-        return (
-          <CommentSection key={props.userData.id} comments={user.comments} />
-        );
-      })}
+    <div className="post-container">
+      <div className="post-header">
+        <img src={props.userData.thumbnailUrl} alt="" />
+        <p>{props.userData.username}</p>
+      </div>
+      <CommentSection comments={props.userData.comments} />;
     </div>
   );
 };
