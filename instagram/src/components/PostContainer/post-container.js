@@ -2,7 +2,9 @@ import React from 'react';
 import dummyData from '../../dummyData.js';
 import heart from '../../images/Instagram-Heart.png';
 import comment from'../../images/comment.png';
-import Moment from 'react-moment';
+import CommentSection from '../../components/CommentSection/comment-section';
+// import moment from 'moment';
+import '../PostContainer/PostContainer.css'
 
 
 
@@ -13,13 +15,13 @@ const PostContainer = (props) => {
                 return (
                     <div className = 'postContainer'  key ={item.timestamp}>
                         <div className = 'userName'>
-                            <img src = {item.thumbnailURL}  alt ='user-thumbnail' />
+                            <img src = {item.thumbnailUrl}  alt ='user-thumbnail' />
                             <h4> {item.username} </h4>
 
                         </div>
 
                         <div className ='imageContainer'>
-                            <img src ={item.imageURL} alt ='user post image' />
+                            <img src ={item.imageUrl} alt ='user post image' />
                         </div>
 
                         <div className ='userInteraction'>
@@ -28,20 +30,26 @@ const PostContainer = (props) => {
                         </div>
 
                         <div className ='likes-comments'>
-                            <h4> {item.likes} Likes</h4>
+                            <h4 className = 'likes'> {item.likes} Likes</h4>
                             {item.comments.map ((index) => {
                                 return (
-                                    <div className = 'commentContainer'>
-                                        <h4 key = {item.timestamp}>
-                                        {index.username}</h4>
-                                        <p className ='comment'> {index.text}</p>
+                                    <div >
+                                        <h4 className = 'commentContainer' key = {item.timestamp}>
+                                        {index.username}
+                                        <span className = 'comment'>{index.text}</span></h4>         
                                     </div>
                                 )
                             })}
 
                             <div className ='timeSincePost'>
-                                <p> {Moment().startOf('day').fromNow()}</p>
+                               <p> Posted on {item.timestamp} </p> 
+                                {/* {moment().fromNow()} */}
                             </div>
+
+                            <div className = 'inputComment'>
+                                <CommentSection />
+                            </div>
+
                         </div>
                     
                     </div>
