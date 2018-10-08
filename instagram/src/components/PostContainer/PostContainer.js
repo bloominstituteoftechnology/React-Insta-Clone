@@ -19,24 +19,19 @@ const PostContainer = props => {
         alt={props.posts.timestamp}
         className="post-image"
       />
-      <div className="like-bar">
+      {/* <div className="like-bar">
         <div className="like-bar-images">
-          <i className="far fa-heart like-bar-far" />
+          <i className="far fa-heart like-bar-far" onClick={props.addLike}/>
           <i className="far fa-comment like-bar-far" />
         </div>
         <p className="">{props.posts.likes} likes</p>
-      </div>
-      <div className="comments-container">
-        {props.posts.comments.map((item, index) => (
-          <CommentSection key={index} comments={item} />
-        ))}
-        <p className="timestamp">{props.posts.timestamp}</p>
-        <input
-          type="text"
-          placeholder="Add a comment..."
-          className="comment-input"
-        />
-      </div>
+      </div> */}
+      <CommentSection
+        className="comments-container"
+        comments={props.posts.comments}
+        timestamp={props.posts.timestamp}
+        likes={props.posts.likes}
+      />
     </div>
   );
 };
@@ -48,7 +43,7 @@ PostContainer.propTypes = {
     imageUrl: PropTypes.string.isRequired,
     likes: PropTypes.number.isRequired,
     timestamp: PropTypes.string.isRequired,
-    comments: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired
+    // comments: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired
   })
 };
 

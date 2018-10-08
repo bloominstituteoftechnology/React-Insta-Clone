@@ -1,3 +1,22 @@
+
+.comments-container {
+    width: 98%;
+    padding-left: 2%;
+}
+
+.timestamp {
+    color: gray;
+    padding: 10px 0;
+}
+
+.comment-input {
+    width: 98%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-top: 1px solid lightgray;
+}
+
 .comments {
     padding: 5px 0;
     line-height: 1.2rem;
@@ -5,4 +24,9 @@
 
 .comments span {
     font-weight: 600;
+    padding-right: 5px;
+}
+
+.button {
+    display:none;
 }

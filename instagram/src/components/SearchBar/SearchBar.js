@@ -2,7 +2,7 @@ import React from "react";
 import title from "./title.png";
 import "./SearchBar.css";
 
-const SearchBar = () => {
+const SearchBar = props => {
   return (
     <div className="searchBar-container">
       <div className="searchBar-title">
@@ -15,7 +15,9 @@ const SearchBar = () => {
           className="search-textbar"
           type="text"
           placeholder="&#x1F50D; Search"
+          onChange={props.searchChange}
         />
+        <input type='submit' onClick={props.search}/>
       </form>
       <div className="searchBar-icons">
         <i className="far fa-compass" />
