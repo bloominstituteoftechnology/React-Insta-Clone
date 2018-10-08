@@ -1,0 +1,115 @@
+.comment-section {
+    width: 100%;
+    padding: 0px 16px;
+}
+
+.comment-section time {
+    width: 100%;
+    font-size: 12px;
+    letter-spacing: .2px;
+    line-height: 18px;
+    color: rgb(153, 153, 153);
+    margin-bottom: 4px;
+    height: 19px;
+}
+
+.post-actions {
+    width: 100%;
+    height: 40px;
+    margin-top: 4px;
+    display: flex;
+    position: relative;
+}
+
+.action-icons {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.action-icon {
+    width: 24px;
+    height: 24px;
+}
+.action-icons .heart {
+    background-position: -136px -102px;
+}
+.action-icons .comment-icon {
+    background-position: -75px -189px;
+    margin-left: 16px;
+}
+.action-icons .share {
+    background-position: -50px -189px;
+    margin-left: 16px;
+}
+
+.post-actions .bookmark {
+    background-position: -192px -100px;
+    position: absolute;
+    right: 0;
+    top: 9px;
+}
+
+.post-info {
+    margin-bottom: 8px;
+}
+
+.post-info .likes {
+    font-weight: 600;
+    color: #262626;
+}
+
+.comment-container {
+    width: 100%;
+}
+
+.comment {
+    width: 100%;
+    display: flex;
+    word-wrap: break-word;
+    overflow: hidden;
+    padding: 5px 0px;
+    height: 29px;
+    align-items: center;
+}
+
+.comment h2 {
+    font-weight: 700;
+    color: #262626;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.comment p {
+    font-weight: 400;
+    color: #262626;
+    font-size: 14px;
+}
+
+.comment-input {
+    width: 100%;
+    margin-top: 4px;
+    border-top: solid 1px rgb(239, 239, 239);
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment-input textarea {
+    height: 18px;
+    width: 556px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    resize: none;
+    max-height: 80px;
+    color: #262626;
+    overflow: hidden;
+}
+
+.comment-input .options-icon {
+    background-position: -25px -164px;
+    height: 24px;
+    width: 24px;
+}

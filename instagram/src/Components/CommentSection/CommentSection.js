@@ -1,9 +1,19 @@
 import React from 'react';
+import './CommentSection.css';
+import PostActions from './PostActions';
+import PostInfo from './PostInfo';
+import CommentContainer from './CommentContainer';
+import CommentInput from './CommentInput';
+
 
 const TM_FILENAME_BASE = () => {
     return (
-        <div>
-            <span>CommentSection</span>
+        <div className="comment-section">
+            <PostActions />
+            <PostInfo />
+            <CommentContainer />
+            <time>21 minutes ago</time>
+            <CommentInput />
         </div>
     );
 }

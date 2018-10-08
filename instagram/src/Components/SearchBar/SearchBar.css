@@ -4,7 +4,10 @@
     padding: 26px 0px;
     position: fixed;
     left: 0px;
+    top: 0px;
     border-bottom: 1px solid rgba(0,0,0,.0975);
+    z-index: 2;
+    background: white;
 }
 
 .searchbar-container .container {

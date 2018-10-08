@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="container">
         <SearchBar />
-        {/* <PostContainer /> */}
+        <PostContainer />
       </div>
       // <div className="App">
       //   <header className="App-header">

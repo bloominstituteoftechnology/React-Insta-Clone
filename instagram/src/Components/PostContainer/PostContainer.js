@@ -1,11 +1,11 @@
 import React from 'react';
-import CommentSection from '../CommentSection/CommentSection';
+import Post from './Post';
+import './PostContainer.css';
 
 const PostContainer = () => {
     return (
-        <div>
-            <span>PostContainer</span>
-            <CommentSection />
+        <div className="post-container" >
+            <Post />
         </div>
     );
 }
