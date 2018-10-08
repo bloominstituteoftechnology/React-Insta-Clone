@@ -1,10 +1,19 @@
 import React from 'react';
+import PostHeader from 'PostHeader.js';
+import PostDetails from 'PostDetails.js';
 
-const PostContainer = () => {
+const PostContainer = (props) => {
     return (
         <div>
-            <h3>PostContainer</h3>
-        </div>
+            <PostHeader />
+            {props.postPassedAhead.map((post, i) => (
+                <div>
+                     <h2> Name :  {post.username} </h2>  
+                </div>         
+
+            ))
+            }
+        </div> 
     )
 };
 

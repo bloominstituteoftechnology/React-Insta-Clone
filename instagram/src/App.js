@@ -19,18 +19,19 @@ class App extends Component {
   } //constructor ends
 
   render() {
+    console.log(this.state.posts);
     return (
       <div className="App">
         <header>
             <SearchBar />
         </header>
 
-        <div>         
-          <PostContainer props = {this.state.posts}/>
+        <div> 
+            <PostContainer postPassedAhead = {this.state.posts}/>
         </div>
 
         <div>         
-          <CommentSection />
+            <CommentSection />
         </div>
       </div>
     ); //return end
