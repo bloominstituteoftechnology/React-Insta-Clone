@@ -43,20 +43,22 @@
     width: 20%;
     display: flex;
     justify-content: space-around;
-    margin-bottom: -15px;
+    margin-top: 10px;
+    margin-bottom: -5px;
 }
 
 .post-icons i {
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 30px;
     color: black;
 }
 
 .likes{
     font-weight: bold;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     width: 20%;
+    margin-left: 3%;
     font-size: 15px;
 }
 
