@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Comment from '../CommentSection/Comment';
 
 
 const CommentSection = props => {
-    return(
-        <div/>
-    )
+    return <Comment username={props.comments.username} text={props.comments.text} />
+        
 }
 
 CommentSection.propTypes = {

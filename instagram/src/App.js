@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
+import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends Component {
   constructor(props) {
@@ -13,13 +14,13 @@ class App extends Component {
 
 
   render() {
-      const dataSet = this.state.data;
+    const dataSet = this.state.data;
     return (
-      <div className="App">
-        {dataSet.map(obj => <PostContainer key={obj.id} obj={obj} />)}
-
+        <div className="app">
+            <SearchBar />
+            {dataSet.map(obj => <PostContainer key={obj.id} obj={obj} />)}
       </div>
-    );
+    )
   }
 }
 
