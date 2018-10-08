@@ -32,6 +32,10 @@
     text-align: center;
 }
 
+.search-button {
+    display: none;
+}
+
 .far {
     padding: 0 10px;
     font-size: 1.4rem;

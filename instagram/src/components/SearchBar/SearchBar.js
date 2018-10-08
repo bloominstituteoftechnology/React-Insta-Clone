@@ -17,7 +17,7 @@ const SearchBar = props => {
           placeholder="&#x1F50D; Search"
           onChange={props.searchChange}
         />
-        <input type='submit' onClick={props.search}/>
+        <input className='search-button' type='submit' onClick={props.search}/>
       </form>
       <div className="searchBar-icons">
         <i className="far fa-compass" />
