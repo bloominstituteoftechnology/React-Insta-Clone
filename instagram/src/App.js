@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
-import CommentSection from './components/CommentSection/CommentSection';
 import dummyData from './dummy-data';
 
 
@@ -28,10 +27,6 @@ class App extends Component {
 
         <div> 
             <PostContainer postPassedAhead = {this.state.posts}/>
-        </div>
-
-        <div>         
-            <CommentSection />
         </div>
       </div>
     ); //return end
