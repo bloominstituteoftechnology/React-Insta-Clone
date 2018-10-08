@@ -1,0 +1,115 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+}
+
+.App .App-header{
+  display:flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid rgba(122, 122, 122, 0.226);
+  position: fixed;
+  z-index: 2;
+  overflow: hidden;
+  top: 0;
+  background-color: #ffffff;
+}
+
+.App .App-header .rowOne {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.App .App-header .rowOne h2 {
+  font-family: 'Norican', cursive;
+  font-size: 24px;
+}
+
+.App .App-header .instagramlogo {
+  height: 30px;
+  margin-right: 20px;
+  border-right: 1px solid rgba(122, 122, 122, 0.575);
+  padding-right: 15px;
+  padding-left: 10px;
+  width: 20%;
+}
+
+.App .App-header form {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
+
+.App .App-header form input {
+  text-align: center;
+  width: 12em;
+  background: rgb(255, 255, 255) url('./Img/search-solid.svg') content-box no-repeat;
+  padding: 4px 2% 4px 2%;
+  border: 1px solid rgba(146, 146, 146, 0.431);
+  border-radius: 5px;
+}
+
+.App .App-header .rowTwo {
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+}
+
+.App .App-header .compass {
+  height: 30px;
+}
+
+.App .App-header .heart {
+  height: 30px;
+}
+
+.App .App-header .user {
+  height: 30px;
+}
+
+.App .mainContent {
+  margin-top: 7em;
+}
+
+.App .mainContent .postContainer {
+  display: flex;
+  width: 640px;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  border: 1px solid rgba(122, 122, 122, 0.226);
+  border-radius: 5px;
+}
+
+.App .mainContent .userName {
+  display: flex;
+  align-items: center;
+  width: 623px;
+  padding: 5px 0 5px 15px;
+}
+
+.App .mainContent .userName img{
+  border-radius: 50%;
+  width: 40px;
+  margin-right: 15px;
+}
+
+.App .mainContent .postStats img{
+  width: 30px;
+  margin-right: 15px;
+  padding: 10px;
+  transform: rotateY(180deg);
+}
+
+.App .mainContent .likes h4 {
+  margin: 0;
+  padding: 0 0 2% 2%;
+}
+
+.App .mainContent .likes .comment {
+  font-weight: normal;
+}
