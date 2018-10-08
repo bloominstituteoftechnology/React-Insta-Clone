@@ -7,10 +7,9 @@ import PostContainer from './Components/PostContainer/PostContainer';
 class App extends Component {
   render() {
     return (
-      <div>
-        <span>App.js</span>
+      <div className="container">
         <SearchBar />
-        <PostContainer />
+        {/* <PostContainer /> */}
       </div>
       // <div className="App">
       //   <header className="App-header">
