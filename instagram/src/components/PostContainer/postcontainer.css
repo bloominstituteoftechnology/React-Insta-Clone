@@ -1,12 +1,14 @@
 .posts {
     margin: 0 auto;
     max-width: 600px;
+    margin-bottom: 50px;
 }
 
 .post {
     text-align: left;
     margin-top: 22px;
     border: 1px solid lightgray;
+    border-radius: 3px;
 }
 
 .postHeader {
@@ -31,8 +33,8 @@
 }
 
 .postImage {
-    width: 597px;
-    margin: 10px .5px;
+    width: 597.3px;
+    margin: 10px .3px;
 }
 
 .likes img {
@@ -44,4 +46,21 @@
 .likeCount {
     margin: 3px 15px;
     font-size: 14.5px;
+}
+
+.timestamp {
+    text-transform: uppercase;
+    color: gray;
+    font-size: 10px;
+    margin: 7px 15px 0;
+    border-bottom: .5px solid gray;
+    padding-bottom: 11px;
+}
+
+.post input {
+    margin: 0 15px;
+    border: none;
+    height: 55px;
+    width: 95%;
+    outline: none;
 }
