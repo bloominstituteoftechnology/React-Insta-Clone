@@ -7,10 +7,17 @@ class CommentSection extends React.Component {
     constructor(props) {
     super(props);
     this.state = {
-        comments: props.comments,
-        posts: props.post,
+        comments: [],
+        posts: [],
         newComment: ""
     };
+  }
+
+  componentDidMount() {
+    this.setState({
+        comments: this.props.post.comments,
+        posts: this.props.post,
+    });
   }
 
   addNewComment = event => {
@@ -28,7 +35,6 @@ class CommentSection extends React.Component {
 
   textInputHandler = event => {
       this.setState({ [event.target.name]: event.target.value });
-      console.log(event.target.value);
   }
     
     render(){

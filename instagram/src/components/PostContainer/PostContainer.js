@@ -14,7 +14,6 @@ const PostContainer = props => {
                     post={post} 
                     />
                     <CommentSection
-                    comments={post.comments}
                     post={post}
                     />
                 </div>

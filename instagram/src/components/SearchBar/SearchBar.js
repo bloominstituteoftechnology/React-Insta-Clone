@@ -10,12 +10,16 @@ const SearchBar = props => {
                 <img src={logo} alt="logo"></img>
             </div>
             <div className="center">
+            <form onSubmit={props.searchPosts}>
             <input 
                 className="fa fa-search"
                 name= "search" 
                 placeholder="&#xF002; Search" 
+                value={props.search}
+                onChange={props.searchInputHandler}
                 type="text"
                 />
+            </form>
             </div>
             <div className="right">
                 <i className="fa fa-2x fa-compass" aria-hidden="true"></i>
