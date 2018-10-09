@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import Comment from "./Comment";
 import moment from "moment";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart, faComment } from "@fortawesome/free-solid-svg-icons";
+library.add(faHeart, faComment);
 
 class CommentSection extends Component {
   constructor() {
@@ -8,6 +12,10 @@ class CommentSection extends Component {
     this.state = {
       input: ""
     };
+  }
+
+  componentDidMount () {
+    this.setState({likes: this.props.likes})
   }
 
   handleInput = e => {
@@ -24,8 +32,16 @@ class CommentSection extends Component {
     };
     if (this.state.input !== "") {
       this.props.comments.push(newObj);
+      this.setState({
+        input: ""
+      });
     }
   };
+
+
+  handleLike = () => {
+    this.setState({likes: this.props.likes +1 })
+  }
 
   render() {
     const timestamp = moment(
@@ -37,19 +53,22 @@ class CommentSection extends Component {
       .fromNow();
     return (
       <div className="comment-section">
-        <h3 className="likes">{this.props.likes} likes</h3>
+        <div className="icon-container">
+          <FontAwesomeIcon icon="heart" className="icon" onClick={this.handleLike}/>
+          <FontAwesomeIcon icon="comment" className="icon" />
+        </div>
+        <h3 className="likes">{this.state.likes} likes</h3>
         {this.props.comments.map(x => (
           <Comment username={x.username} text={x.text} />
         ))}
         <p className="timestamp">{timestamp}</p>
-        <form>
+        <form onSubmit={this.handleSubmit.bind(this)}>
           <input
             type="text"
             value={this.state.input}
             placeholder="Add a comment..."
             className="add-comment"
-            onChange={this.handleInput}
-            onSubmit={this.handleSubmit}
+            onChange={this.handleInput.bind(this)}
           />
         </form>
       </div>

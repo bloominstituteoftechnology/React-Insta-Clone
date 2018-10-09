@@ -113,6 +113,20 @@ p {
   width: 560px;
   margin: auto;
 }
+.post-container .posts .comment-section .icon-container {
+  display: flex;
+  margin: 5px 0;
+  justify-content: space-between;
+  width: 60px;
+}
+.post-container .posts .comment-section .icon-container .icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.post-container .posts .comment-section .icon-container .icon:hover {
+  color: maroon;
+}
 .post-container .posts .comment-section h3,
 .post-container .posts .comment-section p {
   display: inline-block;

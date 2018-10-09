@@ -114,6 +114,20 @@ p {
             text-align: left;
             width: 560px;
             margin: auto;
+            .icon-container {
+                display: flex;
+                margin: 5px 0;
+                justify-content: space-between;
+                width: 60px;
+                .icon {
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                    &:hover {
+                        color: maroon;
+                    }
+                }
+            }
             h3,
             p {
                 display: inline-block;
@@ -134,7 +148,6 @@ p {
                 margin: 10px 0;
                 font-size: 1rem;
                 border: none;
-                // margin:10px 0;
                 margin-bottom: 20px;
                 &:focus {
                     outline:none;
