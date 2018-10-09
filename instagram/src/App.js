@@ -12,33 +12,36 @@ class App extends Component {
     super(props);
     this.state ={ 
       dummyData:[],
-      searchTerm: ''
+      filteredPosts: []
     };
   }
+
   componentDidMount() {
     this.setState({ dummyData: dummyData });
   }
 
   searchFunction = event => {
-    event.preventDefault();
-    console.log('Nice Search');
-  }
+    const posts = this.state.dummyData.filter(searched => {
+      if (searched.username.includes(event.target.value)) {
+        return searched;      
+      }
+    });
+    this.setState({ dummyData: posts });
+  };
 
   render() {
-    console.log(this.state);
     if (!this.state.dummyData.length) {
       return <h4>Loading Posts...</h4>;
     }    return (
       <div className="App">
         <div className='top-header'>
-          <SearchBar 
-            term={this.state.searchTerm} 
+          <SearchBar
             search = {this.searchFunction} 
             handleSearchChange = {this.handleInputChange} 
             content= {this.state.dummyData} />
         </div> 
         {this.state.dummyData.map((items, i) => 
-          <div className='posty' key = {i}>
+          <div key = {i}>
             <PostContainer content= {items} />
             <CommentSection 
               comments= {items.comments}

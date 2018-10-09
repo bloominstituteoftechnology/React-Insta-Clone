@@ -13,15 +13,12 @@ const SearchBar = props => {
                 <p>|</p>
                 <h1 id= 'instagram'>Instagram</h1>
             </div>
-            <form className= 'search-form' onSubmit={props.search}>
-                <input 
-                    value={props.term}
-                    onChange= {props.handleSearchChange} 
-                    className= 'search'  
-                    placeholder= '⚲ Search'
-                    type="text">
-                    </input>
-            </form>            
+            <input 
+                onKeyDown={props.search} 
+                className= 'search'  
+                placeholder= '⚲ Search'
+                type="text">
+            </input>          
             <div id= 'right-icons'>
                 <i className="far fa-compass"></i>
                 <i className="far fa-heart"></i>

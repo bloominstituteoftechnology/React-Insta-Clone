@@ -56,14 +56,10 @@
     
 }
 
-.main-header .search-form {
-    height: 30px;
-    width: 30%; 
-}
 
 .main-header .search {
+    width: 30%;
     height: 30px;
-    width: 100%;
     font-size: 1rem;
     border-radius: 5px;
     border: 1px solid lightgrey;
