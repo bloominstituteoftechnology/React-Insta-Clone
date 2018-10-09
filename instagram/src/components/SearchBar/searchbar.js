@@ -5,7 +5,7 @@ import './searchbar.css';
 
 
 
-const SearchBar = () => {
+const SearchBar = props => {
     return (
         <div className= 'main-header'>
             <div id= 'left-icons'>
@@ -13,7 +13,10 @@ const SearchBar = () => {
                 <p>|</p>
                 <h1 id= 'instagram'>Instagram</h1>
             </div>
-            <input className= 'search'  placeholder= '⚲ Search'></input>
+            <form className= 'search-form' onSubmit={props.searchFunction}>
+                <input onChange= {props.handleCommentChange} className= 'search'  placeholder= '⚲ Search'></input>
+            </form>
+            
             <div id= 'right-icons'>
                 <i className="far fa-compass"></i>
                 <i className="far fa-heart"></i>

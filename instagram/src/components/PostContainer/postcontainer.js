@@ -14,7 +14,8 @@ const PostContainer = props => {
             
             <img className= 'post-image' src= {props.content.imageUrl} alt={props.content.username}/>
         </div>
-    );
+    );   
+    
 } 
 
 PostContainer.propTypes = {

@@ -8,16 +8,31 @@ import SearchBar from './components/SearchBar/searchbar'
 
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state ={ dummyData };
+    this.state ={ dummyData:[] };
   }
-  componentDidMount(){
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ dummyData: dummyData });
+    }, 800);
+  }
+
+  searchFunction() {
 
   }
+
+  addComment() {
+
+  }
+
+  handleInputChange = event => this.setState({ [event.target.name]: event.target.value });
+
   render() {
     console.log(this.state);
-    return (
+    if (!this.state.dummyData.length) {
+      return <h4>Loading Posts...</h4>;
+    }    return (
       <div className="App">
         <div className='top-header'>
           <SearchBar />
@@ -25,10 +40,16 @@ class App extends Component {
         {this.state.dummyData.map((items, i) => 
           <div className='posty' key = {i}>
             <PostContainer content= {items} />
-            <CommentSection content= {items} />
-          </div>)}
+            <CommentSection 
+              handleCommentChange = {this.handleCommentChange} 
+              addComment = {this.addComment}
+              content= {items} 
+              />
+          </div>
+          )}
       </div>
     );
+
   }
 }
 

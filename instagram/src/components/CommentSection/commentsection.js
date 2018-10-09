@@ -13,7 +13,9 @@ const CommentSection = props => {
                     <p className= 'comment-text'>{comments.text}</p>
                 </div>)} 
             <p className= 'timestamp'>{props.content.timestamp}</p>   
-            <input className='add-comment' placeholder='Add a comment...'></input>              
+            <form onSubmit={props.addComment}>
+                <input onChange={props.handleCommentChange} className='add-comment' placeholder='Add a comment...'></input> 
+            </form>             
         </div>
     );
 }

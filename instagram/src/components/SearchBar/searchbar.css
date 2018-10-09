@@ -52,11 +52,18 @@
 
 #right-icons i:hover {
     color: black;
+    cursor: pointer;
     
 }
+
+.main-header .search-form {
+    height: 30px;
+    width: 30%; 
+}
+
 .main-header .search {
     height: 30px;
-    width: 30%;
+    width: 100%;
     font-size: 1rem;
     border-radius: 5px;
     border: 1px solid lightgrey;
