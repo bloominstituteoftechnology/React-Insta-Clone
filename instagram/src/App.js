@@ -9,20 +9,28 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData
+      posts: []
     }
+  }
+
+  //once component is mounted, set state of App
+  componentDidMount() {
+    this.setState({
+      posts: dummyData
+    })
   }
 
   render() {
     return (
       <div className="App">
         <SearchBar />
-        {this.state.posts.map((post) => <PostContainer post={post} />)}
+        {this.state.posts.map((post, index) => <PostContainer post={post} id={index} key={index} />)}
       </div>
     );
   }
 }
 
+//validate data
 App.propTypes = {
   posts: PropTypes.arrayOf(
     PropTypes.shape({

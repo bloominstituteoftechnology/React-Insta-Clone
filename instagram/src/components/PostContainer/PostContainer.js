@@ -12,7 +12,7 @@ const PostContainer = props => {
         <div className="post-container">
                 <PostHeader username={props.post.username} thumbnail={props.post.thumbnailUrl} />
                 <PostImage image={props.post.imageUrl} />
-                <CommentSection likes={props.post.likes} comments={props.post.comments} timestamp={props.post.timestamp} />
+                <CommentSection likes={props.post.likes} comments={props.post.comments} timestamp={props.post.timestamp} id={props.id} />
         </div>
     );
 }
@@ -24,6 +24,7 @@ PostContainer.propTypes = {
             text: PropTypes.string
         })),
     imageUrl: PropTypes.string,
+    id: PropTypes.number,
     likes: PropTypes.number,
     timestamp: PropTypes.string,
     thumbnailUrl: PropTypes.string,
