@@ -5,3 +5,32 @@
 .singlepost {
   border: solid black;
 }
+
+.singlepost-header {
+  border: solid blue;
+  display: flex;
+}
+
+.sp-header-img {
+  border-radius: 50%;
+  width: auto; 
+  height:50px;
+  align-self: center;
+}
+
+.header-username {
+  border: solid crimson;
+  align-self: center;
+}
+
+.singlepost-main-img-container {
+  display:flex;
+  border: solid orange;
+}
+
+.singlepost-main-img {
+  border: solid purple;
+  width:100%;
+  height:auto;
+  align-self:center;
+}

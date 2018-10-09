@@ -4,16 +4,16 @@ import CommentSection from "../CommentSection/CommentSection";
 
 const PostContainer = props => {
   console.log("Post Container props are:", { props });
-  // console.log('Post Container posts are:',{props.posts});
   const posts = props.posts;
-  console.log(posts.dummyData[0]);
   return (
     <div className="PostContainer">
       <div>
         {posts.dummyData.map((post, index) => (
-          <div className='singlepost' key={index} post={post}>
-            {post.username}
-            <CommentSection />
+          <div className="singlepost" key={index} post={post}>
+            <div className='singlepost-header'><img className='sp-header-img' src={post.thumbnailUrl} alt="Phils Coffee Logo"/><h1 className='header-username'>{post.username}</h1></div>
+            <div className='singlepost-main-img-container'><img className='singlepost-main-img' src={post.imageUrl} alt="Toast and coffee"/>
+            </div>
+            <CommentSection comments={post.comments}/>
           </div>
         ))}
       </div>
@@ -22,3 +22,4 @@ const PostContainer = props => {
 };
 
 export default PostContainer;
+
