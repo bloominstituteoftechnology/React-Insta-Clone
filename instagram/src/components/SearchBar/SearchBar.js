@@ -4,13 +4,11 @@ import './SearchBar.css';
 
 
 
-const SearchBar = function (props) {
-    return (
-        <div className='searchbar'>
-            SearchBar!!
-    </div>
-    )
-};
+const SearchBar = props => (
+  <div className='searchbar'>
+    SearchBar!!
+  </div>
+);
 
 
 

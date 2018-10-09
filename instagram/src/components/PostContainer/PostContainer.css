@@ -1,1 +1,23 @@
-﻿
+﻿.post-container {
+  border: 1px solid orange;
+  padding: 3px;
+  max-width: 600px;
+}
+
+.user-information {
+  padding: 0 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-thumbnail {
+  border-radius: 50%;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.post-image {
+  width: 100%;
+}
