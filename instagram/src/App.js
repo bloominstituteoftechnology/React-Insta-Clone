@@ -38,7 +38,9 @@ class App extends Component {
         searchInputHandler={this.searchInputHandler}
         searchPosts={this.searchPosts}
         />
-        <PostContainer posts={this.state.dummyData} />
+        <PostContainer 
+        posts={this.state.dummyData}
+        />
       </div>
     );
   }

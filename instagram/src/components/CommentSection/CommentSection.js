@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import LikesComponent from "./Likes"
 import CommentContent from "./CommentContent";
 import AddComment from "../CommentSection/AddComment";
 
@@ -36,10 +37,22 @@ class CommentSection extends React.Component {
   textInputHandler = event => {
       this.setState({ [event.target.name]: event.target.value });
   }
+
+  addLikes = event => {
+    event.preventDefault();
+    this.setState({
+        likes: this.props.post.likes += 1
+      })
+    }
+  
     
     render(){
         return (
             <div>
+                <LikesComponent
+                post={this.state.posts}
+                addLikes={this.addLikes}
+                />
                 <CommentContent 
                 comments={this.state.comments}
                 />

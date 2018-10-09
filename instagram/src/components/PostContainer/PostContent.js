@@ -11,11 +11,6 @@ const PostContent = props => {
             </div>
             <div className="post-content">
                 <img src={props.post.imageUrl} alt="insert machine learning generated description"></img>
-                <i className="first fa fa-2x fa-heart-o" aria-hidden="true"></i>
-                <i className="fa fa-2x fa-flip-horizontal fa-comment-o" aria-hidden="true"></i>
-            </div>
-            <div className="post-footer">
-                <p>{props.post.likes} likes</p>
             </div>
         </div>
     );

@@ -11,7 +11,8 @@ const PostContainer = props => {
             return (
                 <div>
                     <PostContent 
-                    post={post} 
+                    post={post}
+                    addLikes={props.addLikes} 
                     />
                     <CommentSection
                     post={post}
