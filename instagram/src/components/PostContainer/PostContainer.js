@@ -21,7 +21,7 @@ class PostContainer extends React.Component {
         id: id,
         user: this.props.data,
         comments: comments,
-        username: 'BigBen102912',
+        username: 'hsmith430',
         commentText: ''
       }
     }
