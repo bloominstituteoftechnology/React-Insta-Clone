@@ -12,21 +12,20 @@ const PostContainer = props => {
             <div>
                 {props.data.map(data => {
                     return (
+                        <div>
                         <Post thumbnail={data.thumbnailUrl} image={data.imageUrl} username={data.username}/>
+                        <Icons />
+                        <p className="likes">377 likes</p>
+                        <div className="comments-container">
+                        <CommentSection comments={data.comments} key={data.username}/>
+                        </div>
+                        <p className="time">2 HOURS AGO</p>
+                        <Input />
+                        </div>
                     )
                 })}
             </div>
-           <Icons />
-           <p className="likes">377 likes</p>
-           <div className="comments-container">
-            {props.data.map(data => {
-                return (
-                    <CommentSection comments={data.comments} key={data.username}/>
-                )
-            })}
-            </div>
-            <p className="time">2 HOURS AGO</p>
-            <Input />
+          
         </div>
     )
 }
