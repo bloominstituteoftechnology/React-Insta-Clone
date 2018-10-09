@@ -1,9 +1,9 @@
 import React from "react";
-import Comments from "../CommentSection/comments";
+import Comments from "../CommentSection/CommentSection";
 import "./PostContainer.css";
+import PropTypes from "prop-types";
 
 const Container = props => {
-  console.log(props.data);
   return (
     <div className="container">
       {props.data.map(thing => {
@@ -11,6 +11,10 @@ const Container = props => {
       })}
     </div>
   );
+};
+
+Container.propTypes = {
+  comments: PropTypes.bool
 };
 
 export default Container;
