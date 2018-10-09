@@ -75,11 +75,11 @@
 }
 
 .input-box {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px auto;
+  margin: 10px 0;
 }
 
 .inputs {
