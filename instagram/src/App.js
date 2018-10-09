@@ -27,6 +27,7 @@ import dummyData from './dummyData'
       </div>
       <div className = 'mainContent'>
         <PostContainer />
+        <CommentSection />
       </div>
     </div>
     );

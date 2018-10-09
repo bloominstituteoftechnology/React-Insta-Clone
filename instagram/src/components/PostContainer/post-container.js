@@ -25,26 +25,7 @@ import PropTypes from 'prop-types';
                             <img src ={heart} alt ='heart' />
                             <img src={comment} alt ='comment' />
                         </div>
-                         <div className ='likes-comments'>
-                            <h4 className = 'likes'> {item.likes} Likes</h4>
-                            {item.comments.map ((index) => {
-                                return (
-                                    <div >
-                                        <h4 className = 'commentContainer' key = {item.timestamp}>
-                                        {index.username}
-                                        <span className = 'comment'>{index.text}</span></h4>         
-                                    </div>
-                                )
-                            })}
-                             <div className ='timeSincePost'>
-                               <p> Posted on {item.timestamp} </p> 
-                                {/* {moment().fromNow()} */}
-                            </div>
-                             <div className = 'inputComment'>
-                                <CommentSection />
-                            </div>
-                         </div>
-                    
+                                            
                     </div>
                 )
             })

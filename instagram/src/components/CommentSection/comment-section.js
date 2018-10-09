@@ -32,11 +32,27 @@ class CommentSection extends Component {
     // }
     render() {
     return (
+        <div className ='likes-comments'>
+            <h4 className = 'likes'> {item.likes} Likes</h4>
+            {item.comments.map ((index) => {
+                return (
+                    <div >
+                        <h4 className = 'commentContainer' key = {item.timestamp}>
+                        {index.username}
+                        <span className = 'comment'>{index.text}</span></h4>         
+                    </div>
+                )
+            })}
+                <div className ='timeSincePost'>
+                <p> Posted on {item.timestamp} </p> 
+                {/* {moment().fromNow()} */}
+            </div>
         <div className ='addComment'>
             <form action = 'submit'>
                 <input type = 'text' placeholder = 'Add a comment...' /> 
             </form>
             <img src={dots} alt = 'options for commenting' />
+         </div>
          </div>
     )
 }
