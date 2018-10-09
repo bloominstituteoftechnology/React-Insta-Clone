@@ -7,22 +7,20 @@ import Authentication from '../../Authentication/Authentication';
 library.add(faHeart, faCommentAlt, faEllipsisH, faCompass, faUser, faCameraRetro);
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-
     }
   }
 
-
   render() {
-    return (
-      <div className="App">
-        <PostsPage />
-      <a href="https://fontawesome.com/license">Icons by FontAwesome</a>
-      </div>
-    );
+      return (
+        <div className="App">
+          <PostsPage />
+        <a href="https://fontawesome.com/license">Icons by FontAwesome</a>
+        </div>
+      );
   }
 }
 
