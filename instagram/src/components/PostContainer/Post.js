@@ -3,6 +3,7 @@ import CommentSection from "../CommentSection/CommentSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
+import moment from "moment";
 class Post extends Component {
   constructor(props) {
     super(props);
@@ -39,7 +40,12 @@ class Post extends Component {
         </div>
         <p className="likes">{this.state.likes} likes</p>
         <CommentSection comments={this.props.post.comments} />
-        <p className="timestamp">{this.props.post.timestamp}</p>
+        <p className="timestamp">
+          {moment(
+            this.props.post.timestamp,
+            "MMMM Do YYYY, h:mm:ss a"
+          ).fromNow()}
+        </p>
       </div>
     );
   }
