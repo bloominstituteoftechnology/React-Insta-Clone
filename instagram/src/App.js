@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       postData: [],
+      searchString: '',
     }
   }
 
@@ -17,8 +18,22 @@ class App extends Component {
       this.setState({
         postData: dummyData,
       })
-    })
+    }, 300)
   }  
+
+  searchHandler = event => {
+    event.preventDefault();
+    if (event.target.value !== '') {
+      this.setState({
+        [event.target.name]:event.target.value,
+      })
+    }
+    else {
+      this.setState({
+        [event.target.name]: '',
+      })
+    }
+  }
 
   render() {
     if (!this.state.postData.length) {
@@ -26,8 +41,8 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <SearchBar />
-        <Posts postData={this.state.postData}/>
+        <SearchBar searchHandler={this.searchHandler}/>
+        <Posts searchString={this.state.searchString} postData={this.state.postData}/>
       </div>
     );
   }

@@ -38,6 +38,7 @@ nav input {
     width: 172px;
     padding-left: 25px;
     margin-right: 35px;
+    outline: none;
 }
 
 .fa-search {

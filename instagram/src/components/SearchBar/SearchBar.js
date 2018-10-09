@@ -4,12 +4,12 @@ import Search from './Search';
 import AccountManagement from './AccountManagement';
 import './searchbar.css'
 
-let SearchBar = () => {
+let SearchBar = props => {
     return (
         <header>
             <nav>
                 <Logo />
-                <Search />
+                <Search searchHandler={props.searchHandler}/>
                 <AccountManagement />
             </nav>
         </header>
