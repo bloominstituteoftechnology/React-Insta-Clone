@@ -22,7 +22,7 @@
 }
 
 .nav-logo .fab {
-  color: black;
+  color: #2a2a2a;
   font-size: 26px;
   cursor: pointer;
 }
@@ -43,11 +43,13 @@
   padding: 7px;
   font-size: 12px;
   color: #999;
+  margin-bottom: 5px;
 }
 
 .search-bar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 930px;
   margin: 0 auto;
   height: 25px;
@@ -65,4 +67,5 @@
 .nav-icons .far {
   font-size: 24px;
   cursor: pointer;
+  color: #6a6a6a;
 }
