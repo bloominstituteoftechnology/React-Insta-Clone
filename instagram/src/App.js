@@ -19,6 +19,7 @@ class App extends Component {
       dummyData: dummyData
     })
   }
+  
   render() {
     return (
       <div className="App">
