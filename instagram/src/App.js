@@ -8,7 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      likes: 370
      
     }
   }
@@ -16,12 +17,16 @@ class App extends Component {
   componentDidMount() {
     setTimeout(() => {this.setState({data: dummyData})}, 2000)
   }
+  increment = (prevState) => {
+    this.setState(prevState => ({likes: prevState.likes + 1}))
+
+  }
 
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer data={this.state.data} />
+        <PostContainer data={this.state.data} likes={this.state.likes} increment={this.increment}/>
       </div>
     );
   }
