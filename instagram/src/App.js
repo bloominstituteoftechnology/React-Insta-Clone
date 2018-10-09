@@ -11,8 +11,8 @@ class App extends Component {
     };
   };
 
-  componentWillMount() {
-    this.setState({posts: dummyData})
+  componentDidMount() {
+    setTimeout(() => this.setState({posts: dummyData}), 2000);
   }
 
   render() {

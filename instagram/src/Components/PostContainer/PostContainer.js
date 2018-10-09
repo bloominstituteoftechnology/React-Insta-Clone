@@ -6,7 +6,11 @@ import './PostContainer.css';
 const PostContainer = ({posts}) => {
     return (
         <div className="post-container" >
-            {posts.map((post, i) => <Post content={post} key={i}/>)}
+            {
+                !posts.length 
+                ? <h2>Loading Posts...</h2>
+                : posts.map((post, i) => <Post content={post} key={i}/>)
+            }
         </div>
     );
 }
