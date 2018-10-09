@@ -20,6 +20,7 @@ class CommentSection extends Component {
             </p>
           </div>
         ))}
+        <input type="text" name="comment" placeholder="Add a comment..."/>
       </div>
     );
   }
