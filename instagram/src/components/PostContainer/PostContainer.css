@@ -1,5 +1,6 @@
 .post-header {
-    width: 100%;
+    width: 97%;
+    margin: 10px 1.5% 0 1.5%;    
     height: 60px;
     display: flex;
     align-items: center;
@@ -13,8 +14,8 @@
 }
 
 .post-image {
-    width: 100%;
-    margin-top: 10px;
+    width: 97%;
+    margin:0 1.5%;    
 }
 
 .counter {
@@ -23,7 +24,7 @@
 
 .post-container {
     border: 1px solid lightgray;
-    margin: 60px 0;
-    padding: 15px;
-    padding-bottom: 0
+    margin: 60px auto;
+    padding-bottom: 0;
+    width: 70%
 }

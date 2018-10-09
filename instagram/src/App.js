@@ -19,36 +19,17 @@ export default class App extends Component {
       posts: dummyData
     })
   }
-
-  incrementHandler = name => {
-    this.setState({
-      posts: this.state.posts.map(post => {
-        if(post.username===name) {
-          return {
-            username: post.username,
-            thumbnailUrl: post.thumbnailUrl,
-            imageUrl: post.imageUrl,
-            likes: post.likes+1,
-            timestamp: post.timestamp,
-            comments: post.comments
-          }          
-          }else {
-            return post
-        }
-      })
-    })
-  }   
+  componentWillUpdate(nextProps, state) {
+    localStorage.setItem('posts', JSON.stringify(state.posts))
+  }  
   searchInputHandler = e => {
-    const value = e.target.value;
-    console.log(value);
     this.setState({
-      search: value
+      search: e.target.value
     },() => {
-      this.searchHandler(e);
+      this.searchHandler();
     });      
   }  
-  searchHandler = e => {
-    e.preventDefault();     
+  searchHandler = () => {    
   this.setState({
     displayedPosts: this.state.posts.filter(post => {return post.username.toLowerCase().includes(this.state.search.toLowerCase())})
   })
@@ -57,8 +38,11 @@ export default class App extends Component {
     return (
       <div className="App">
         <SearchBar searchInputHandler={this.searchInputHandler} value={this.state.search} />
-        {this.state.displayedPosts.length ? (this.state.displayedPosts.map(post => <PostContainer key={post.timestamp} post={post} incrementHandler={this.incrementHandler} />))
-        : (this.state.posts.map(post => <PostContainer key={post.timestamp} post={post} incrementHandler={this.incrementHandler} />))}
+        <div className="container">
+            {this.state.search.length ? (this.state.displayedPosts.map(post => <PostContainer key={post.timestamp} post={post} incrementHandler={this.incrementHandler} />))
+            : (this.state.posts.map(post => <PostContainer key={post.timestamp} post={post} incrementHandler={this.incrementHandler} />))}
+        </div>
+        
       </div>
     );
   }

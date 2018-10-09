@@ -1,4 +1,8 @@
 
+.likes-section {    
+    width: 97%;
+    margin: 0 1.5%;  
+}
 
 .likes {
     margin: 10px 30px;
@@ -17,9 +21,37 @@
 }
 
 span {
-    color: #abaeb2
+    color: #abaeb2;
+    margin: 15px 1.5%; 
 }
 
 p {
-    margin: 5px 0
+    margin: 5px 1.5%
+}
+
+.fas {
+    color: red
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid lightgray;
+    margin-top: 15px
+}
+
+form input {
+    border: none;
+    height: 100%;
+    padding-left: 1.5%
+}
+
+.fa-ellipsis-h {
+    color: black;
+    margin-top: 14px;
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
