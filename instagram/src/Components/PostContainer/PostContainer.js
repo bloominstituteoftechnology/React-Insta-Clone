@@ -5,9 +5,9 @@ import CommentSection from '../CommentSection/CommentSection'
 const PostContainer = props => {
     return (
         <div>
-            {props.postData.map(item => {
+            {props.postData.map((item, index) => {
                 return (
-                    <div>
+                    <div key={index}>
                         <Post 
                             post={item}
                         />
