@@ -1,6 +1,8 @@
 .search-bar {
   display: flex;
   align-items: center;
+  max-width: 751px;
+  margin: 0 auto;
 }
 
 .insta-logo {
@@ -10,7 +12,7 @@
 
 .search {
   position: relative;
-  padding-left: 140px;
+  padding-left: 120px;
 }
 
 .search input {
@@ -26,8 +28,8 @@
 .search .fa-search {
   position: absolute;
   z-index: 1;
-  top: 6px;
-  left: 190px;
+  top: 4px;
+  left: 180px;
   font-size: 10px;
   color: rgb(201, 200, 200);
 }
@@ -46,7 +48,7 @@
 }
 
 .navigation {
-  padding-left: 300px;
+  padding-left: 270px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

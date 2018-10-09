@@ -9,10 +9,14 @@ const PostContainer = props => {
       {props.data.map(info => (
         <div className="post-box">
           <div className="user-container">
-            <img className="thumb" src={info.thumbnailUrl} />
+            <img
+              className="thumb"
+              alt="thumbnail for user"
+              src={info.thumbnailUrl}
+            />
             <h2 className="user">{info.username}</h2>
           </div>
-          <img className="main-image" src={info.imageUrl} />
+          <img className="main-image" alt="users post" src={info.imageUrl} />
           <div className="buttons">
             <i className="far fa-heart" />
             <i className="far fa-comment" />
