@@ -12,7 +12,7 @@ const SearchBar = props => {
           <img src={logo} alt="Instagram logo" />
         </header>
 
-        <input type="text" placeholder="&#61442; Search" />
+        <input type="text" placeholder="&#61442; Search" onChange={props.searchPosts} />
 
         <div className="Menu">
           <i className="far fa-compass fa-lg icon"></i>

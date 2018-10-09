@@ -8,7 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: [],
+      filteredPosts: []
     };
   }
 
@@ -18,11 +19,22 @@ class App extends Component {
     })
   }
 
+  searchPosts = (event) => {
+    event.preventDefault();
+
+    let filteredPosts = this.state.posts;
+    filteredPosts = filteredPosts.filter(post => {
+      return post.username.toLowerCase() === event.target.value
+    });
+
+    this.setState({ filteredPosts });
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostsContainer posts={this.state.posts} />
+        <SearchBar searchPosts={this.searchPosts} />
+        <PostsContainer posts={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} />
       </div>
     );
   }
