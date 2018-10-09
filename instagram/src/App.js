@@ -8,7 +8,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dummyData: []
+      dummyData: [],
+      newSearch: ""
     };
   }
 
@@ -18,6 +19,26 @@ class App extends Component {
     }, 2000);
   }
 
+  startSearch = event => {
+    event.preventDefault();
+    if (this.state.newSearch !== "") {
+      let newData = this.state.dummyData;
+      let filteredArr = newData.filter(
+        post => post.username === this.state.newSearch
+      );
+      this.setState({
+        dummyData: filteredArr,
+        newSearch: ""
+      });
+    }
+  };
+
+  changeHandler = (key, value) => {
+    this.setState({
+      [key]: value
+    });
+  };
+
   render() {
     return (
       <div className="App">
@@ -25,7 +46,10 @@ class App extends Component {
           <h2>Loading, please wait...</h2>
         ) : (
           <div>
-            <SearchBar />
+            <SearchBar
+              changeHandler={this.changeHandler}
+              startSearch={this.startSearch}
+            />
             <div className="post-container-list">
               {this.state.dummyData.map(user => {
                 return <PostContainer key={user.timestamp} userData={user} />;

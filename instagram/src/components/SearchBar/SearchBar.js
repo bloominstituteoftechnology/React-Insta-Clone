@@ -15,8 +15,16 @@ const SearchBar = props => {
           alt="instagram"
         />
       </div>
-
-      <input placeholder="Search" />
+      <form onSubmit={props.startSearch}>
+        <input
+          placeholder="Search"
+          className="search input"
+          type="text"
+          onChange={event =>
+            props.changeHandler("newSearch", event.target.value)
+          }
+        />
+      </form>
       <div className="sprites">
         <i className="far fa-compass" />
         <i className="far fa-heart" />
