@@ -1,0 +1,32 @@
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.icon {
+    width: 40px;
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.logo {
+    width: 120px;
+    border-left: 1px solid black;
+    padding: 0 20px;
+    margin: 0 10px;
+}
+
+.searchbar {
+    height: 20px;
+    text-align: center;
+    padding: 0 20px 0 16px;
+}
+
+.side-btn {
+    width: 40px;
+    cursor: pointer;
+    margin: 0 10px;
+}
