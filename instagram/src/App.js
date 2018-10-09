@@ -8,7 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      searchResults: []
     };
   }
 
@@ -16,11 +17,25 @@ class App extends Component {
     this.setState({ data: dummyData });
   }
 
+  handleSearch = event => {
+    this.setState({
+      searchResults: this.state.data.filter(post =>
+        post.username.includes(event.target.value)
+      )
+    });
+  };
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer data={this.state.data} />
+        <SearchBar handleSearch={this.handleSearch} />
+        <PostContainer
+          data={
+            !this.state.searchResults.length
+              ? this.state.data
+              : this.state.searchResults
+          }
+        />
       </div>
     );
   }

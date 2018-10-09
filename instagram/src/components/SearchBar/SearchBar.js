@@ -6,7 +6,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-const SearchBar = () => (
+const SearchBar = props => (
   <div className="search-bar">
     <div className="logos">
       <img
@@ -22,7 +22,12 @@ const SearchBar = () => (
     </div>
     <div className="search-text">
       <FontAwesomeIcon icon={faSearch} />
-      <input type="text" name="search bar" placeholder="Search" />
+      <input
+        type="text"
+        name="search bar"
+        placeholder="Search"
+        onKeyDown={props.handleSearch}
+      />
     </div>
     <div className="icons">
       <FontAwesomeIcon
