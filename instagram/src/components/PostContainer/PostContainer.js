@@ -27,9 +27,16 @@ const PostContainer = (props) => {
                             <FontAwesomeIcon icon="heart" />
                             <FontAwesomeIcon icon="comment-alt" />
                         </div>
-                        <div className='bold-txt'>{profile.likes} likes </div>
+                        <div className='bold-txt'>
+                            {profile.likes} likes 
+                        </div>
+                        <CommentSection comments={profile.comments} 
+                                        stateComments={props.stateComments}
+                                        inputHandler={props.inputHandler}
+                                        addNewComment={props.addNewComment}
+                                        commentInput={props.commentInput}/>
                     </div>
-                    <CommentSection comments={profile.comments}/>
+                    
 
                 </div>
                 
