@@ -33,10 +33,14 @@
     justify-content: space-between;
 }
 
+.form-holder{
+    width:85%;
+}
+
 .input-comment{
     background: none;
     border-style: none;
-    width:85%;
+    width:100%;
     padding: 15px;
     font-size: 15px;
 }

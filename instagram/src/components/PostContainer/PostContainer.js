@@ -1,12 +1,11 @@
 import React from "react";
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
+import { Heart, Bookmark, Message, Share } from "../../assets/assets";
 import PropTypes from "prop-types";
 
 const PostContainer = props => {
-  console.log(props.data.length);
   if (!props.data.length) {
-    console.log("made it");
     return (
       <div className="post-container">
         <div className="fill-in-card">
@@ -14,7 +13,20 @@ const PostContainer = props => {
             <div className="fill-in-thumbnail" />
           </div>
           <div className="post-img-fill-in" />
-          <div className="card-comments-fill-in" />
+          <div className="card-comments-fill-in">
+            {" "}
+            <div className="icon-bar">
+              <div className="icons">
+                <Heart />
+
+                <Message />
+
+                <Share />
+              </div>
+
+              <Bookmark />
+            </div>
+          </div>
         </div>
       </div>
     );
