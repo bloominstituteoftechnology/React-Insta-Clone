@@ -6,3 +6,10 @@
   margin: 0 0 10px 10px;
   color: grey;
 }
+
+#commentInput {
+  outline: none;
+  height: 30px;
+  font-size: 0.9rem;
+  padding-left: 10px;
+}
