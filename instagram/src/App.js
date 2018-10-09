@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
+import Authentication from './components/Authentication/Authentication';
 import PostsPage from './components/PostContainer/PostsPage';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHeart, faCommentAlt, faEllipsisH, faCompass, faUser, faCameraRetro } from '@fortawesome/free-solid-svg-icons';
@@ -36,6 +37,7 @@ class App extends Component {
   render() {
     return (
       <div className="app-container">
+        <Authentication />
         <PostsPage search={this.searchTerm} posts={this.state.posts}/>
       </div>
     );
