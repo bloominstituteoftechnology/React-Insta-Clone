@@ -1,5 +1,5 @@
 import React from "react";
-// import PropStyles from "prop-styles";
+import PropTypes from "prop-types";
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
 
@@ -34,14 +34,10 @@ const PostContainer = props => {
                 <i className="far fa-bookmark" />
               </div>
               <div className="like-count">{post.likes} likes</div>
-              <CommentSection comments={post.comments} />
-              <div className="timestamp">{post.timestamp}</div>
-              <div className="add-comment">
-                <form>
-                  <input type="text" placeholder="Add a comment..." />
-                </form>
-                <i className="fas fa-ellipsis-h" />
-              </div>
+              <CommentSection
+                comments={post.comments}
+                timestamp={post.timestamp}
+              />
             </div>
             {/* comments section */}
           </div> // post-container
