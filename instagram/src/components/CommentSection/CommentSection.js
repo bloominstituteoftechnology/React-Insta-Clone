@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const CommentSection = props => {
     const {
@@ -12,6 +13,11 @@ const CommentSection = props => {
             <p className="commentText">{text}</p>
         </div>
     )
+}
+
+CommentSection.propTypes = {
+    username: PropTypes.string,
+    text: PropTypes.string
 }
 
 export default CommentSection;

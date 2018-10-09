@@ -1,3 +1,8 @@
+body {
+  background: rgb(233, 233, 233);
+  margin: 0;
+}
+
 .searchBarDiv {
   width: 100%;
   height: 50px;
