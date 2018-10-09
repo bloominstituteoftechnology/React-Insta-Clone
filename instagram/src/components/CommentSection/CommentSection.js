@@ -1,18 +1,56 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import './CommentSection.css'
 
-const CommentSection = ({ comments }) => (
-  <div className="comment-section">
-    {comments.map(({ username, text }, i) => (
-      <div key={i} className="comment">
-        <p className="comment-username">{username}</p>
-        <p className="comment-text">{text}</p>
+class CommentSection extends Component {
+  constructor({ comments }) {
+    super()
+    this.state = {
+      comments,
+      newComment: ''
+    }
+  }
+
+  addNewComment = event => {
+    event.preventDefault()
+    this.setState({
+      comments: [
+        ...this.state.comments,
+        { username: 'Jane Doe', text: this.state.newComment }
+      ],
+      newComment: ''
+    })
+  }
+
+  handleCommentChange = event => {
+    this.setState({ newComment: event.target.value })
+  }
+
+  render() {
+    const { comments, newComment } = this.state
+    const { addNewComment, handleCommentChange } = this
+
+    return (
+      <div className="comment-section">
+        {comments.map(({ username, text }, i) => (
+          <div key={i} className="comment">
+            <p className="comment-username">{username}</p>
+            <p className="comment-text">{text}</p>
+          </div>
+        ))}
+        <form onSubmit={addNewComment}>
+          <input
+            type="text"
+            onChange={handleCommentChange}
+            placeholder="Add a comment ..."
+            value={newComment}
+          />
+        </form>
       </div>
-    ))}
-  </div>
-)
+    )
+  }
+}
 
 CommentSection.propTypes = {
   comments: PropTypes.arrayOf(
