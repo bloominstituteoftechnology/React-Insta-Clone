@@ -1,3 +1,44 @@
 .post-box {
-  border: 1px solid red;
+  border: 1px solid rgb(202, 200, 200);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 620px;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  box-shadow: 2px 5px 10px lightgray;
+}
+.main-image {
+  object-fit: contain;
+}
+
+.user-container {
+  display: flex;
+  align-items: center;
+}
+
+.thumb {
+  border-radius: 50px;
+  width: 40px;
+  margin: 15px;
+}
+
+.buttons {
+  padding: 1% 78% 1% 0%;
+  font-size: 30px;
+}
+
+.fa-heart {
+  padding-right: 20px;
+}
+
+.likes {
+  padding-right: 80%;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.time-stamp {
+  padding: 2% 60% 2% 0%;
+  color: grey;
 }

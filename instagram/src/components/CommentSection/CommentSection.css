@@ -1,0 +1,15 @@
+.comment-container {
+  display: flex;
+  align-items: center;
+  max-height: 25px;
+}
+
+.username {
+  font-size: 15px;
+  padding: 0px 10px 0px 25px;
+}
+
+.text {
+  font-size: 15px;
+  flex-wrap: wrap;
+}

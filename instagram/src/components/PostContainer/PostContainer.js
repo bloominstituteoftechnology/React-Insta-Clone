@@ -1,5 +1,6 @@
 import React from "react";
-
+import PropTypes from "prop-types";
+import CommentSection from "../CommentSection/CommentSection";
 import "./PostContainer.css";
 
 const PostContainer = props => {
@@ -9,24 +10,35 @@ const PostContainer = props => {
         <div className="post-box">
           <div className="user-container">
             <img className="thumb" src={info.thumbnailUrl} />
-            <h2 className="user-name">{info.username}</h2>
+            <h2 className="user">{info.username}</h2>
           </div>
-          <img src={info.imageUrl} />
+          <img className="main-image" src={info.imageUrl} />
           <div className="buttons">
             <i className="far fa-heart" />
             <i className="far fa-comment" />
           </div>
-          <span className="likes">{info.likes}</span>
-          <div className="comments">
-            <h1>{info.comments}</h1>
-          </div>
+          <span className="likes">{info.likes} likes</span>
+          <CommentSection comments={info.comments} />
           <div>
-            <span className="time-stamp">{info.timestamp}</span>
+            <div className="time-stamp">
+              <span>{info.timestamp}</span>
+            </div>
           </div>
         </div>
       ))}
     </div>
   );
+};
+
+PostContainer.propTypes = {
+  info: PropTypes.shape({
+    imageUrl: PropTypes.string.isRequired,
+    thumbnailUrl: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    comments: PropTypes.array.isRequired
+  })
 };
 
 export default PostContainer;
