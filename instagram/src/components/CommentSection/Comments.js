@@ -27,7 +27,7 @@ class Comments extends Component {
       text:this.state.value
     }
     this.setState({
-      comment:'',
+      value:'',
       comments: [...this.state.comments, comment]
     })
   }
