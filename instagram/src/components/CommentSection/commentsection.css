@@ -49,3 +49,21 @@
     outline: none;
     font-size: 14.7px;
 }
+
+
+.deleteComment {
+    position: absolute;
+    right: 500px;
+    font-size: 14px;
+    right: 477.5px;
+    color: grey;
+    cursor: pointer;
+}
+
+.deleteComment:hover {
+    color: crimson;
+}
+
+.hidden {
+    display: none;
+}

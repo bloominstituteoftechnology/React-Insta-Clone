@@ -40,11 +40,16 @@ class CommentSection extends React.Component {
         event.target.reset();
     }
 
+    deleteComment = (event) => {
+        event.preventDefault();
+        event.target.parentNode.classList.add('hidden');
+    }
+
     render() {
         return (
             <div>
                 <div className="comments">
-                    {this.state.comments.map((comment, i) => <Comment key={i} comment={comment}/>)}
+                    {this.state.comments.map((comment, i) => <Comment key={i} deleteComment={this.deleteComment} comment={comment}/>)}
                 </div>
                 <p className='timestamp'>{moment(this.state.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}</p>
                 <CommentForm changeHandler={this.changeHandler} addNewComment={this.addNewComment}/>

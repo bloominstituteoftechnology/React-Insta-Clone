@@ -6,6 +6,7 @@ let Comment = props => {
         <div className="comment">
             <h2>{props.comment.username}</h2>
             <p>{props.comment.text}</p>
+            <span className="deleteComment" onClick={props.deleteComment}>✕</span>
         </div>
     )
 }
