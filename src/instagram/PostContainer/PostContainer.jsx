@@ -1,18 +1,29 @@
 import React, { Component } from "react";
-import "./Post.css";
+import "./PostContainer.css";
 
-class Post extends Component {
+class PostContainer extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      likes: this.props.data.likes
+    };
   }
+
+  handleLikes = (event, index) => {
+    this.setState(preState => {
+      return { likes: preState.likes + 1 };
+    });
+  };
+
   render() {
-    const nickname = this.props.nickname;
-    const avatar = this.props.avatar;
-    const image = this.props.image;
-    const caption = this.props.caption;
+    const nickname = this.props.data.nickname;
+    const avatar = this.props.data.avatar;
+    const image = this.props.data.image;
+    const caption = this.props.data.caption;
+    const likes = this.props.data.likes;
 
     return (
-      <article className="Post" ref="Post">
+      <section className="Post" ref="Post">
         <header>
           <div className="Post-user">
             <div className="Post-user-avatar">
@@ -31,8 +42,8 @@ class Post extends Component {
         <div className="Post-caption">
           <strong>{nickname}</strong> {caption}
         </div>
-      </article>
+      </section>
     );
   }
 }
-export default Post;
+export default PostContainer;
