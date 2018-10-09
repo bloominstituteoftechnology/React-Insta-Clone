@@ -9,7 +9,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      dummyData: [],
+      dummyData: dummyData,
     }
     console.log(dummyData);
   }
@@ -18,7 +18,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <PostContainer dummyData={this.state.dummyData} />
+        <PostContainer 
+          dummyData={this.state.dummyData}/>
       </div>
     );
   }

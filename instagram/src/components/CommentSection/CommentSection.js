@@ -5,11 +5,11 @@ const CommentSection = (props) => {
 
   return(
     <div>
-      {props.dummyData.map((postObj) => {
+      {props.comments.map((commentObj) => {
         return (
           <div>
             <Comment 
-              comment={postObj.comments}/>
+              comment={commentObj}/>
           </div>
         )
       })}
