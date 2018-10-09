@@ -1,3 +1,5 @@
+
+
 .main-header {
     width: 90%;
     margin: 0 auto;
@@ -18,8 +20,9 @@
 }
 
 #left-icons i {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     margin-right: 15px;
+    font-weight: bold;
 }
 
 #left-icons p {
@@ -29,24 +32,36 @@
 
 .main-header #left-icons #instagram {
     font-family: Billabong;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    font-weight: lighter;
 }
 
 #right-icons {
     width: 30%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end;    
 }
 
 #right-icons i {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-weight: lighter;
     margin-right: 15px;
+    color: grey;
+    
+}
+
+#right-icons i:hover {
+    color: black;
     
 }
 .main-header .search {
     height: 30px;
-    width: 30%
+    width: 30%;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    text-align: center;
+    background-color: whitesmoke;
 }
 
 

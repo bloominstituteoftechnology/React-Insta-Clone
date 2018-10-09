@@ -1,7 +1,16 @@
 .comment-container {
-    width: 86%;
+    width: 90.25%;
+    height: auto;
     margin: 0 auto;
+    box-sizing:border-box;
     margin-bottom: 30px;
+    border-bottom: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-left: 2%;
+    padding-bottom: 20px;
 }
 
 .comment-container i {
@@ -27,16 +36,17 @@
 }
 .timestamp {
     font-size: .8rem;
+    width: 97%;
     color: grey;
     padding-bottom: 15px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid lightgrey;
 }
 
 .add-comment {
-    width: 100%;
+    width: 95%;
     height: 30px;
     background-color: white;
     border: white;
-    font-size: .8rem;
+    font-size: 1rem;
 }
 

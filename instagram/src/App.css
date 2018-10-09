@@ -1,3 +1,7 @@
+html {
+  background-color: white;
+}
+
 .App {
   font-family: 'Roboto', sans-serif;
   max-width: 900px;

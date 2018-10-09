@@ -8,17 +8,22 @@ import SearchBar from './components/SearchBar/searchbar'
 
 
 class App extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state ={ dummyData };
+  }
+  componentDidMount(){
+
   }
   render() {
     console.log(this.state);
     return (
       <div className="App">
-        <SearchBar />
+        <div className='top-header'>
+          <SearchBar />
+        </div> 
         {this.state.dummyData.map((items, i) => 
-          <div key = {i}>
+          <div className='posty' key = {i}>
             <PostContainer content= {items} />
             <CommentSection content= {items} />
           </div>)}
