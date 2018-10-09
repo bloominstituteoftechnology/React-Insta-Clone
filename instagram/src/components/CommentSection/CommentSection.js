@@ -8,7 +8,7 @@ import moment from 'moment';
 const CommentSection = props => {
   return (
     <div className="CommentSection">
-      {props.comments.comments.map((comment, i) => {
+      {props.comments.map((comment, i) => {
         return <Comment comment={comment} key={i} />;
       })}
       <div className="TimeStamp">
@@ -22,7 +22,12 @@ const CommentSection = props => {
 };
 
 CommentSection.propTypes = {
-  comments: PropTypes.object
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string,
+      text: PropTypes.string
+    })
+  )
 };
 
 export default CommentSection;
