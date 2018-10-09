@@ -13,7 +13,7 @@ const PostContainer = props => {
             <div className='singlepost-header'><img className='sp-header-img' src={post.thumbnailUrl} alt="Phils Coffee Logo"/><h1 className='header-username'>{post.username}</h1></div>
             <div className='singlepost-main-img-container'><img className='singlepost-main-img' src={post.imageUrl} alt="Toast and coffee"/>
             </div>
-            <CommentSection comments={post.comments}/>
+            <CommentSection  className = "comment-container" comments={post.comments}/>
           </div>
         ))}
       </div>

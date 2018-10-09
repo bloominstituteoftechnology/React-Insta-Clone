@@ -9,7 +9,7 @@ const CommentSection = props => {
   console.log('All Comments are: {comments[0]}');
   return (<div className="CommentContainer">
     {comments.map((comment, index) => (
-          <div className="singlecomment" key={index} comment={comment}><p>'{comment.username}: {comment.text}'</p></div>))}
+          <div className="singlecomment" key={index} comment={comment}><p>'<span className="username">{comment.username}</span>: {comment.text}'</p></div>))}
     </div>
   );
 
