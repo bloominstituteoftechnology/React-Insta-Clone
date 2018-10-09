@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        {/* <SearchBar /> */}
         <PostContainer data={this.state.data} />
       </div>
     );

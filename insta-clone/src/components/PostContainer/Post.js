@@ -1,30 +1,38 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome/index';
+import faHeart from '@fortawesome/free-solid-svg-icons/faHeart';
 import PropTypes from 'prop-types';
+import './PostContainer.css';
+
 
 const Post = props => {
     // console.log(props.postdata)
     return (
-        <div>
-            <header>
+        <div className='post'>
+            <header className='postHeader'>
                 <img className='thumbnail' src={props.postdata.thumbnailUrl} alt='' />
                 <p>{props.postdata.username}</p>
             </header>
-            <img src={props.postdata.imageUrl} alt='' />
-            <div>
-                <p>like button</p>
-                <p>comment button</p>
+            <img className='postImage' src={props.postdata.imageUrl} alt='' />
+            <div className='likeSection'>
+                <div className='likeCommentIcons'>
+                    <p className='heart'>like button</p>
+                    <p className='commentBubble'>comment button</p>
+                </div>
+                <div className='likeCount'>{props.postdata.likes} likes</div>
             </div>
             <CommentSection comments={props.postdata.comments}/>
+            <p>{props.postdata.timestamp}</p>
         </div>
     )
 }
 
 Post.propTypes = {
-    comments: PropTypes.arrayOf({
+    comments: PropTypes.arrayOf(PropTypes.shape({
         username: PropTypes.string,
         text: PropTypes.string,
-    }),
+    })),
     imageUrl: PropTypes.string,
     likes: PropTypes.number,
     timestamp: PropTypes.string,

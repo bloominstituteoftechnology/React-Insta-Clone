@@ -6,7 +6,7 @@ const PostContainer = props => {
     return (
         props.data.map((post, index) => {
             return (
-                <div key={index + 1}>
+                <div key={index + 1} className='postContainer'>
                     <Post postdata={post}/>
                 </div>
             )

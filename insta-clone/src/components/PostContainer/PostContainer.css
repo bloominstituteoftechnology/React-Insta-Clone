@@ -1,0 +1,49 @@
+.postHeader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.postHeader img {
+    max-width: 3rem;
+    margin-top: 0.75rem;
+    margin-left: 1.75rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.postHeader p {
+    padding-top: 0.25rem;
+    margin-left: 1rem;
+}
+
+.post {
+    width: 100%;
+    padding: 0 0.25;
+}
+
+.postImage {
+    padding: 0.5rem 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.likeSection {
+    padding: 0 1.8rem;
+}
+
+.likeCommentSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.likeCommentIcons {
+    display: flex;
+    font-size: 2.2rem;
+    padding-top: 1.5rem;
+}
+
+.likeCount {
+    padding-top: 0.25rem;
+    text-align: left;
+}
