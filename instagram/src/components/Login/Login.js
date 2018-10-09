@@ -14,7 +14,10 @@ class Login extends React.Component {
     render() {
         return (
             <div className='login-container'>
-                <img src={loginLogo}/>
+                <img 
+                    src={loginLogo}
+                    className='login-logo'
+                />
                 <form>
                     <input 
                         className='login-input' 
@@ -32,7 +35,7 @@ class Login extends React.Component {
                         // onChange={this.props.onChange}
                     />
                     <br/>
-                    <button>Log in</button>
+                    <button className='login-button'>Log in</button>
                 </form>
             </div>
         )
