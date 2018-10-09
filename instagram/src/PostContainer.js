@@ -6,7 +6,7 @@ const PostContainer = (props) => {
     return (
     <section>
 
-    {props.posts.map(item => <CommentSection count={props.count}submitHandler={props.submitHandler} key={item.timestamp} obj={item} />)}
+    {props.posts.map(item => <CommentSection count={props.count} submitHandler={props.submitHandler} key={item.timestamp} obj={item} />)}
     </section>
     )
 }

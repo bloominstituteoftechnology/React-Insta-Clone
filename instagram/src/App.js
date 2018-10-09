@@ -33,17 +33,19 @@ class App extends Component {
 
     submitHandler = event => {
       event.preventDefault();
-  
-        const obj = {
-          task: this.state.task,
-          id: Date.now(),
-          completed: false,
-          important:false,
-        }
+          const timestamp = event.target.getAttribute('data-id');
+
+          const posts=this.state.posts.map(post => {
+            if (timestamp===post.timestamp) {
+              return {...post, likes: post.likes + 1};
+            }
+          
+            else {return post;}
+          })
+      
   
         this.setState({
-          comments: [...this.state.todo, obj],
-          task: "",
+            posts: posts,
         });
     }
 
@@ -52,7 +54,7 @@ class App extends Component {
     return (
       <div className="App">
       <SearchBar value={this.state.search} inputHandler={this.inputHandler} searchClickHandler={this.searchClickHandler}/>
-      <PostContainer posts={this.state.posts}/>
+      <PostContainer posts={this.state.posts} submitHandler={this.submitHandler}/>
       </div>
     );
   }
