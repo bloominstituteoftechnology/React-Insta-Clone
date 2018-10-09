@@ -13,10 +13,7 @@ const PostContainer = () => {
       <PostImage />
       <div className="comments-container">
         <Likes />
-        {/* <PostCaption />
-      <CommentSection />
-      <TimeStamp />
-      <CommentArea /> */}
+        <CommentSection />
         <div className="timestamp">2 hours ago</div>
         <AddComment />
       </div>

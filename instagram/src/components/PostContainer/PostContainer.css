@@ -2,7 +2,7 @@
   background: #fff;
   border: 1px solid #e6e6e6;
   max-width: 614px;
-  margin: 150px auto 20px;
+  margin: 125px auto 20px;
 }
 
 .thumbnail-img {
@@ -43,7 +43,7 @@
 .post-icons .far {
   cursor: pointer;
   font-size: 27px;
-  color: #262626;
+  color: #505050;
 }
 
 .post-icons .fa-heart,
@@ -72,7 +72,7 @@
   border-top: 1px solid #e6e6e6;
 }
 
-input[type="text"] {
+.add-comment input[type="text"] {
   width: 556px;
   height: 18px;
   border: none;

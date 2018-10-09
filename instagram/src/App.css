@@ -2,6 +2,10 @@ body {
   background: #fafafa;
 }
 
+strong {
+  color: #505050;
+}
+
 .App {
   background: #fafafa;
   color: #505050;
@@ -10,6 +14,10 @@ body {
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
+}
+
+.App-header {
+  position: relative;
 }
 
 /* .App-header {

@@ -13,6 +13,10 @@ const Likes = () => {
         <i className="far fa-bookmark" />
       </div>
       <div className="like-count">400 likes</div>
+      <div>
+        <strong>philzcoffee</strong> We've got more than just delicious coffees
+        to offer at our shops!
+      </div>
     </div>
   );
 };
