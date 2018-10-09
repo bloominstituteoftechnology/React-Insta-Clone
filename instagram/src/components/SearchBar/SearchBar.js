@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = ({ filterUsers, updateValue }) => {
   return (
     <div className="SearchBar">
       <div className="container">
@@ -14,12 +14,16 @@ const SearchBar = () => {
           </span>
         </h1>
         <div className="SearchBar-Container">
-          <input
-            type="text"
-            placeholder="Search"
-            className="SearchBar-Input"
-            id="search"
-          />
+          <form onSubmit={e => filterUsers(e)}>
+            <input
+              type="text"
+              placeholder="Search"
+              className="SearchBar-Input"
+              id="search"
+              onChange={updateValue}
+            />
+          </form>
+
           <label htmlFor="search" className="Search-Icon">
             <ion-icon name="search" />
           </label>

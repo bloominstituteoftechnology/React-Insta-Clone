@@ -5,7 +5,7 @@ import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = ({ data, likePost, id }) => {
   return (
-    <div className="PostContainer" onClick={e => likePost(e, id)}>
+    <div className="PostContainer">
       <header className="PostContainer-Header">
         <img src={data.thumbnailUrl} alt="User" />
         {data.username}
@@ -15,7 +15,11 @@ const PostContainer = ({ data, likePost, id }) => {
       </div>
       <div className="PostContainer-Icons">
         <div className="Icon">
-          <i className={'far fa-heart'} />
+          <i
+            className={'far fa-heart'}
+            onClick={e => likePost(e, id)}
+            style={{ color: '#ED4956' }}
+          />
         </div>
         <div className="Icon">
           <ion-icon name="chatbubbles" />
