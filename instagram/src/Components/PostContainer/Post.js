@@ -3,6 +3,7 @@ import './PostContainer.css'
 import PropTypes from 'prop-types'
 
 const Post = props => {
+    console.log('posts props', props)
     return (
         <div className="post">
             <div className="user">
@@ -18,7 +19,10 @@ const Post = props => {
             </div>
             <div className="post-actions">
                 <div className="left-actions">
-                    <i className="far fa-heart"></i>
+                    <i 
+                        className="far fa-heart"
+                        onClick={props.addLike}
+                    ></i>
                     <i className="far fa-comment"></i>
                     {/* <i class="far fa-share-square"></i> */}
                 </div>

@@ -1,0 +1,41 @@
+.comments {
+    display: flex;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.comments p {
+    margin: 0;
+}
+
+.comments .text {
+    margin-left: 4px;
+    font-weight: 400;
+}
+
+.comment-section {
+    margin: 0 10px;
+}
+
+.comment-section .top {
+    margin: 5px 0;
+}
+
+hr {
+    border: .2px solid lightgray;
+}
+
+.comment-section .bottom {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9px;
+}
+
+.comment-section .comment-input {
+    width: 90%;
+    font-size: 9px;
+    padding: 5px;
+    border: none;
+}

@@ -12,8 +12,27 @@ class App extends Component {
     super()
     this.state = {
       dummyData: dummyData
+      
     }
   }
+
+  componentDidMount() {
+    this.setState({ dummyData: dummyData })
+  }
+
+  // updateLikes = () => {
+  //   this.setState(prevState => {
+  //     return { likes: prevState.likes + 1 }
+  //   })
+  // }
+
+  newComment = (message, index) => {
+    
+    this.setState({
+      dummyData: dummyData
+    })
+  }
+
 
   render() {
     return (
@@ -22,6 +41,8 @@ class App extends Component {
           <SearchBar />
           <PostContainer 
             postData={this.state.dummyData}
+            updateLikes={this.updateLikes}
+            commentSubmit={this.newcomment}
           />
       </div>
     );
