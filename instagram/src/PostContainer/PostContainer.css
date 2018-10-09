@@ -1,12 +1,19 @@
 .post-container{
-    color:hotpink;
     width: 100%;
     border: blue solid 1px;
 }
 .post-header{
     display:flex;
+    
 }
 .main-image{
     width:100%;
+    height:auto;
+}
+.post-header p{
+    font-weight: bold;
+}
+.post-header img{
+    width: 10%;
     height:auto;
 }
