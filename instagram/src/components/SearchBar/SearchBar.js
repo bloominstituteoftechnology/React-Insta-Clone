@@ -25,6 +25,7 @@ const SearchBar = props => {
             props.changeHandler("newSearch", event.target.value)
           }
         />
+        <button className={props.filtered}>Reset</button>
       </form>
       <div className="sprites">
         <i className="far fa-compass" />
