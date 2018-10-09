@@ -1,14 +1,19 @@
 import React from 'react';
-import './CommentSection.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const CommentSection = (props) => {
-    return(
-        <section className = 'comment-section'>
-            <input placeholder='Add a comment...'></input>
-            <FontAwesomeIcon icon='ellipsis-h'/>
+
+
+ const CommentSection = (props) =>  {
+  return (
+    <section className='comments'>
+        {props.comments.map(comment => {
+          return (
+            <p className='comment'>
+              <strong>{comment.username}</strong> {comment.text}
+            </p>
+          );
+        })}
         
-        </section>
-    );
+    </section>
+  );
 }
-export default CommentSection;
+ export default CommentSection;
