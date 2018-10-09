@@ -1,3 +1,38 @@
+.comment-section {
+    text-align: left;  
+    width:100%;  
+}
+
 .comment{
     transform: scaleX(-1)
+}
+
+.post-pic {
+    margin-bottom:10px;
+}
+
+.likes {
+    margin-left:30px;
+}
+.comment-text{
+    margin-left:30px;
+}
+
+.timestamp {
+    margin-left:30px;
+
+}
+
+.comment-input {
+    width:85%;
+    height:45px;
+    border-top:1px solid lightgray;
+    border-right:1px solid white;
+    border-left:1px solid white;
+    margin-right:30px;
+}
+
+.ellipise {
+    display:inline-block;
+    text-align: left;
 }

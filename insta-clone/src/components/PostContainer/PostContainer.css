@@ -11,11 +11,13 @@
 }
 .header-img {
     border-radius:50%;
-    height:auto;
-    width:10%;
+    height:50px;
+    width:50px;
     padding:5px;
 }
 
 .post-pic{
     width:100%;
 }
+
+
