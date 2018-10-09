@@ -10,6 +10,20 @@
     background: white;
 }
 
+.fill-in-card{
+    width: 614px;
+    margin: 30px auto;
+    background: white;
+}
+
+.fill-in-thumbnail{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 15px;
+    background: radial-gradient(gray,white,gray) ;
+}
+
 .card-header{
     border: #DBDBDB 1px solid;
     border-bottom: none;
@@ -29,6 +43,20 @@
     border: #DBDBDB 1px solid;
     border-top: none;
     border-radius: 0 0 5px 5px;
+}
+
+.card-comments-fill-in{
+    border: #DBDBDB 1px solid;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    height:225px;
+    width: 100%;
+}
+
+.post-img-fill-in{
+    background: linear-gradient(to bottom right, gray, white, gray);
+    height: 600px;
+    width: 100%;
 }
 
 .thumbnail{

@@ -36,7 +36,7 @@ const CommentSection = props => {
         <input
           type="text"
           className="input-comment"
-          placeholder="add a comment..."
+          placeholder="Add a comment..."
         />
 
         <More />

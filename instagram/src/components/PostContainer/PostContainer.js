@@ -1,13 +1,27 @@
 import React from "react";
 import "./PostContainer.css";
-import CommentSection from '../CommentSection/CommentSection'
-import PropTypes from 'prop-types';
+import CommentSection from "../CommentSection/CommentSection";
+import PropTypes from "prop-types";
 
 const PostContainer = props => {
+  console.log(props.data.length);
+  if (!props.data.length) {
+    console.log("made it");
+    return (
+      <div className="post-container">
+        <div className="fill-in-card">
+          <div className="card-header">
+            <div className="fill-in-thumbnail" />
+          </div>
+          <div className="post-img-fill-in" />
+          <div className="card-comments-fill-in" />
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="post-container">
-      {props.data.map((post, i) => 
-          
+      {props.data.map((post, i) => (
         <div key={i} className="card">
           <div className="card-header">
             <img
@@ -17,12 +31,12 @@ const PostContainer = props => {
             />
             <h3>{post.username}</h3>
           </div>
-          <img src={post.imageUrl} alt="post" className='post-img' />
-          <div className='card-comments'>
-            <CommentSection post={post}/>
+          <img src={post.imageUrl} alt="post" className="post-img" />
+          <div className="card-comments">
+            <CommentSection post={post} />
           </div>
         </div>
-      )}
+      ))}
     </div>
   );
 };
