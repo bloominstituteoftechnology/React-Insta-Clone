@@ -60,3 +60,9 @@ body{
 .spacer{
 	height:30px;
 }
+.app-search-container{
+	margin-top:50px;
+}
+.app-post-container{
+	padding-top:80px;
+}

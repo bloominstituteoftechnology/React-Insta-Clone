@@ -1,0 +1,18 @@
+.logo-container{
+    display: flex;
+
+}
+
+.logo-logo{
+    height:28px;
+    width: 28px;
+    margin-right:23px;
+}
+.logo-lettering{
+    margin-left:23px;
+    height:29px;
+    width: auto;
+}
+.logo-divider{
+    border-right: 1px solid black;
+}
