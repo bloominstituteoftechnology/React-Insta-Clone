@@ -71,7 +71,7 @@ class App extends Component {
 
     return (
       <div className="app-container">
-        <Authenticate />
+        {/* <Authenticate /> */}
         <PostsPage search={this.searchTerm} posts={this.state.posts}/>
       </div>
     );

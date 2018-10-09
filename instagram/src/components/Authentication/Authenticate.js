@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import Login from '../Login/Login';
-import './login.css';
 
 const Authenticate = (App) => class extends Component {
     constructor() {
         super();
 
         this.state = {
-            loggedIn: false,
+            loggedIn: true,
         }
     }
 
     componentDidMount() {
-        let user = localStorage.getItem('user')
+        let user = localStorage.getItem('user');
 
         if (!user) {
             this.setState({ loggedIn : false })
