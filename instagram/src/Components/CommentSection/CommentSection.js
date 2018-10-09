@@ -8,7 +8,7 @@ class CommentSection extends React.Component {
         this.state = {
             content: [],
             timestamp: '',
-            input: ''
+            commentValue: '',
         }
     }
     componentDidMount() {
@@ -18,12 +18,25 @@ class CommentSection extends React.Component {
         }))
     }
 
-    inputChangeHandler = e => {
-        this.setState(state => ({
-            input: e.target.value
+    inputChangeHandler = ({target}) =>  {
+        this.setState(state   =>  ({
+            commentValue: target.value,
         }))
     }
     
+    addNewComment = e => {
+        e.preventDefault();
+        let contentCopy = this.state.content;
+        contentCopy.push({
+            username: "Marguelgtz",
+            text: this.state.commentValue})
+        this.setState(state => ({
+            content: contentCopy,
+            commentValue: '',
+        }))
+
+
+    }
 
     render() {
         return (
@@ -37,8 +50,8 @@ class CommentSection extends React.Component {
                     {/* Divider (border-bottom)*/}
                 </div>  
                 {/* Add Comment section*/}
-                <form className="comment-input">
-                    <input type="text" placeholder="Add a comment..."/>
+                <form className="comment-input" onSubmit={this.addNewComment}>
+                    <input type="text" placeholder="Add a comment..." value={this.state.commentValue} onChange={this.inputChangeHandler}/>
                     <i className="fas fa-ellipsis-h"></i>
                 </form>
             </div>
