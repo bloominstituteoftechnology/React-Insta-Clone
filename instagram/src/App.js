@@ -9,7 +9,8 @@ class App extends Component {
   constructor(){
     super(); 
     this.state = {
-    data: []
+    data: [],
+    input: ''
     }
   }
 
@@ -19,6 +20,13 @@ class App extends Component {
     });
   }
 
+  searchHandler = str => {
+    const filterPost = dummyData.filter(post => {
+      return post.username.includes(str)
+    })
+    this.setState({data: filterPost})
+ }
+
   render() {
     if(!this.state.data.length){
       return <h3>"Loading..."</h3> 
@@ -26,7 +34,10 @@ class App extends Component {
 
     return (
       <div className="App">
-        <SearchBar/> 
+        <SearchBar searchHandler={this.searchHandler} 
+                   inputHandler={this.inputHandler}
+                   dummyData={this.state.data}
+                   /> 
         <PostContainer dummyData={this.state.data} /> 
       </div>
     );

@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 
-const SearchBar = props =>{
+class SearchBar extends Component {
+    constructor(props){
+    super(); 
+      this.state = {
+          search: ''
+      }
+    }
+
+    inputHandler = event => {
+      this.setState({
+        search: event.target.value
+      })
+      this.props.searchHandler(event.target.value);
+    };
+
+  render(){
   return (
     <div className="searchBar">
       <div className="logo">
@@ -9,7 +24,11 @@ const SearchBar = props =>{
         <h1>Instagram</h1> 
       </div> 
       <form>
-        <input placeholder = "search"></input> 
+        <input
+        value={this.state.search}
+        onChange={this.inputHandler}
+        placeholder = "search">
+        </input> 
       </form> 
       <div> 
         <i id="icon" class="far fa-compass"></i>
@@ -18,7 +37,7 @@ const SearchBar = props =>{
       </div>  
     </div>
   )
+ }
 }
-
 
 export default SearchBar; 
