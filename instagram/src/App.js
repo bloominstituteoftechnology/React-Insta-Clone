@@ -8,11 +8,22 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      postData: dummyData,
+      postData: [],
     }
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        postData: dummyData,
+      })
+    })
+  }  
+
   render() {
+    if (!this.state.postData.length) {
+      return <h4 id="loader">Loading your feed...</h4>;
+    }
     return (
       <div className="App">
         <SearchBar />
