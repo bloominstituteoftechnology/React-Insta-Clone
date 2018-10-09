@@ -1,0 +1,72 @@
+.post-header {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+
+.post {
+    text-align: left;
+    margin-top: 10px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+
+.thumbnail {
+    border-radius: 50px;
+    margin: 10px 0 0 15px;
+    display: inline-block;
+    height: 25px;
+    width: auto;
+    
+}
+
+.username {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 9px;
+    font-size: 14px;
+}
+
+.postImage {
+    width: 599px;
+    margin: 10px .3px;
+}
+
+.likes img {
+    max-width: 23px;
+    height: auto;
+    margin-left: 13px;
+}
+
+.like-count {
+    margin: 3px 15px;
+    font-size: 14.5px;
+}
+
+.timestamp {
+    text-transform: uppercase;
+    color: gray;
+    font-size: 10px;
+    margin: 7px 15px 0;
+    border-bottom: .5px solid gray;
+    padding-bottom: 11px;
+} 
+
+.fa-ellipsis-h {
+    position: absolute;
+    right: 500px;
+    font-size: 14px;
+    right: 477.5px;
+    padding-top: 22.5px;
+}
+
+.post input {
+    margin: 0 15px;
+    border: none;
+    height: 55px;
+    width: 91%;
+    outline: none;
+    font-size: 14.7px;
+}
