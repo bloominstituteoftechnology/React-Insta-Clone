@@ -1,12 +1,16 @@
 import React from 'react';
 
-const CommentInput = () => {
+const CommentInput = ({ addNewComment, commentText, updateText }) => {
   return (
-    <input
-      type="text"
-      className="CommentInput"
-      placeholder="Add a comment..."
-    />
+    <form onSubmit={addNewComment}>
+      <input
+        type="text"
+        className="CommentInput"
+        placeholder="Add a comment..."
+        value={commentText}
+        onChange={updateText}
+      />
+    </form>
   );
 };
 
