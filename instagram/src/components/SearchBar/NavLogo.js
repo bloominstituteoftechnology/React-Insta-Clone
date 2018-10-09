@@ -5,7 +5,7 @@ import "./SearchBar.css";
 const NavLogo = () => {
   return (
     <div className="nav-logo">
-      <i class="fab fa-instagram" />
+      <i className="fab fa-instagram" />
       <div className="line-between" />
       <img src={igTextLogo} alt="Instagram Text Logo" />
     </div>

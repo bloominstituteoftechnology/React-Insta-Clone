@@ -1,3 +1,7 @@
+* {
+  color: black;
+}
+
 .line-between {
   background-color: #262626;
   height: 28px;
@@ -19,4 +23,15 @@
 .nav-logo .fab {
   color: black;
   font-size: 26px;
+}
+
+.search {
+  background: #fafafa;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 930px;
+  height: 25px;
 }
