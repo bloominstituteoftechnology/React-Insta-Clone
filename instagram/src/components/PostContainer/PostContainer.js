@@ -1,13 +1,11 @@
 import React from 'react';
 import Post from './Post';
 
-const PostContainer = (props, index) => {
-  
+const PostContainer = props => {
   return (
     <div>
       {props.posts.map(post => 
-        <Post key={index} post={post} />)}
-      
+        <Post key={post.imageUrl} post={post} />)}
     </div>
   )
 }
