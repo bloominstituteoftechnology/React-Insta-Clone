@@ -3,7 +3,7 @@ import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
 // import UserThumbnail from "./UserThumbnail";
 // import PostImage from "./PostImage";
-import Likes from "./Likes";
+// import Likes from "./Likes";
 import AddComment from "./AddComment";
 
 const PostContainer = props => {
@@ -32,6 +32,8 @@ const PostContainer = props => {
                 <i className="far fa-bookmark" />
               </div>
               <div className="like-count">{post.likes} likes</div>
+              <CommentSection comments={post.comments} />
+              <div className="timestamp">{post.timestamp}</div>
             </div>
           </div> // post-container
         );
