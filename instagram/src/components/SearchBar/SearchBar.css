@@ -25,7 +25,7 @@
 .search-bar .search-line {
   border-left: 1px solid #262626;
   margin: 0 5px;
-  height: 28px;
+  height: 33px;
   color: #262626;
 }
 .search-bar .search-logo {
@@ -37,6 +37,10 @@
 .search-bar .search-logo span,
 .search-bar .search-logo h1 {
   margin: 0 10px;
+}
+.search-bar .search-logo span {
+  display: flex;
+  align-self: center;
 }
 .search-bar form input {
   padding: 8px 25px;

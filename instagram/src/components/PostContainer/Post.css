@@ -1,0 +1,44 @@
+.post-wrapper {
+  max-width: 1010px;
+  margin: auto;
+}
+.post-container {
+  margin: 20px 0;
+  max-width: 616px;
+  border: 1px solid lightgrey;
+}
+.post-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.post-header {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+.post-header h2 {
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+.post-body {
+  max-width: 616px;
+}
+.post-body img {
+  max-width: 614px;
+}
+.post-comment-container {
+  padding: 5px 10px;
+}
+.post-comment-container i {
+  margin-right: 10px;
+  font-size: 24px;
+}
+.post-title span:first-of-type {
+  margin-top: 5px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.post-title {
+  margin-top: 10px;
+}
