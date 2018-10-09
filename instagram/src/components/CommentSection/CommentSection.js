@@ -38,6 +38,9 @@ class CommentSection extends Component {
     }
   };
 
+  handleClickComment = () => {
+    document.getElementsByClassName("add-comment")[0].focus();
+  }
 
   handleLike = () => {
     this.setState({likes: this.props.likes +1 })
@@ -55,7 +58,7 @@ class CommentSection extends Component {
       <div className="comment-section">
         <div className="icon-container">
           <FontAwesomeIcon icon="heart" className="icon" onClick={this.handleLike}/>
-          <FontAwesomeIcon icon="comment" className="icon" />
+          <FontAwesomeIcon icon="comment" className="icon" onClick={this.handleClickComment}/>
         </div>
         <h3 className="likes">{this.state.likes} likes</h3>
         {this.props.comments.map(x => (
@@ -68,6 +71,7 @@ class CommentSection extends Component {
             value={this.state.input}
             placeholder="Add a comment..."
             className="add-comment"
+            id='add-comment'
             onChange={this.handleInput.bind(this)}
           />
         </form>
