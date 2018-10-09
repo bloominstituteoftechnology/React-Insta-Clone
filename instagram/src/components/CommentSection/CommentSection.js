@@ -1,23 +1,22 @@
 import React from 'react';
-//import Comment from './Comment'
+import Comment from './Comment'
 
 const CommentSection = (props) => {
-  return (
-    <div>
-
-
+  return(
       <div>
-      {props.dummyData.map((comment) => {
+      {props.dummyData.map((commentObj) => {
         return (
           <div>
-            <p>{props.comment.username}</p>
-            <p>{props.comment.text}</p>
+            <Comment comment={commentObj.comment}/>
           </div>
         )
       })} 
       </div>
-    </div>
   )
+}
+
+CommentSection.propTypes = {
+
 }
 
 export default CommentSection
