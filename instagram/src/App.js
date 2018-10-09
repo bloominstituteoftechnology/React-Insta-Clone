@@ -12,10 +12,18 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts : dummyData,
+      posts : [],
     };
 
   } //constructor ends
+
+  componentDidMount() {
+    console.log('CDM is running', this.state.posts);
+    
+    setTimeout(() => {
+      this.setState({ posts : dummyData });
+    }, 8000);
+  }
 
   render() {
     console.log(this.state.posts);

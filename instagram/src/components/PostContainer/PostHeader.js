@@ -3,6 +3,7 @@ import './post.css';
 
 
 const PostHeader = (props) => {
+    
     return (
         <div className = "postHeader-div">
             <div>

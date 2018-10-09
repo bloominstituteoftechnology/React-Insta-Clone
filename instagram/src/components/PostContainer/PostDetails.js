@@ -4,6 +4,7 @@ import CommentSection from '../CommentSection/CommentSection.js';
 
 
 const PostDetails = (props) => {
+    
     return (
         <div>
             
