@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PostContainer = (props) => {
+const PostContainer = () => {
     return(
         <div></div>
     );
