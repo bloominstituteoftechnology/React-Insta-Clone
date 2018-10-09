@@ -9,7 +9,8 @@ class CommentSection extends React.Component {
     this.state = {
       comments: [],
       dummy: "",
-      likes: 0
+      likes: 0,
+      likeToggle: true
     };
   }
 
@@ -36,9 +37,21 @@ class CommentSection extends React.Component {
   };
 
   addLike = () => {
-    let newLikes = this.state.likes;
-    newLikes++;
-    this.setState({likes: newLikes})
+    if (this.state.likeToggle) {
+      this.setState(prevState => {
+        return {
+          likes: prevState.likes+1,
+          likeToggle: !prevState.likeToggle
+        };
+      });
+    } else {
+      this.setState(prevState => {
+        return {
+          likes: prevState.likes-1,
+          likeToggle: !prevState.likeToggle
+        };
+      });
+    }
   };
 
   render() {
