@@ -3,7 +3,6 @@ import './Post.css'
 import CommentSection from './CommentSection/CommentSection';
 
 const Post= props => { 
-    console.log(props.dummyData);
     return (
         <div>
             {props.dummyData.map(info => {

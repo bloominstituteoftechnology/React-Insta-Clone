@@ -6,7 +6,9 @@ const Search= props => {
         <div className = 'searchbar'>
             <img className ='logo' src = 'https://i1.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Instagram-Logo.png?resize=300%2C300&ssl=1'/>
             <img className = 'wordlogo' src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png'/>
-            <input placeholder = 'Search'/>
+            <form onSubmit = {props.filtered}>
+                <input placeholder = 'Search' name = 'filterFor' onChange = {props.inputChange}/>
+            </form>    
         </div>
     );
 }
