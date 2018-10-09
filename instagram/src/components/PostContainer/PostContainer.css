@@ -4,6 +4,8 @@
     width: 650px;
     margin: 30px auto 0;
     text-align: start;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
 }
 
 .user-info {
@@ -37,22 +39,4 @@
     font-size: 1.6rem;
     font-weight: 600;
     padding: 0 10px;
-}
-
-.timestamp {
-    padding: 0 10px 10px;
-    font-size: 1.4rem;
-    color: grey;
-}
-
-.add-comment {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 10px;
-    padding: 20px 0;
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: grey;
-    border-top: 1px solid lightgrey;
 }

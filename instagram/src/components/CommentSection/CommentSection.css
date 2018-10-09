@@ -10,3 +10,24 @@
 .user {
     font-weight: 600;
 }
+
+.timestamp {
+    padding-bottom: 12px;
+    font-size: 1.4rem;
+    color: grey;
+}
+
+.add-comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
+    color: grey;
+    border-top: 1px solid lightgrey;
+}
+
+.comment-input {
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
