@@ -6,11 +6,11 @@ import './index.css';
 const PostContainer = props => {
     return (
 		<div>
-			{props.data.map((userPost) => {
+			{props.data.map((userPost, i) => {
 				return (
 					<div className='post-container'>
 						<SinglePost userData={userPost} />
-						<CommentMap comments = {userPost.comments} userData={userPost}/>
+						<CommentMap comments = {userPost.comments} userData={userPost} postIndex={i} />
 					</div>
 				)})}
 		</div>
