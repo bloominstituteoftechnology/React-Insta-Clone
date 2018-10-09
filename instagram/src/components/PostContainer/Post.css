@@ -1,0 +1,52 @@
+.postContainer {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	margin: 20px auto;
+	border: 2px solid #EBEBEB;
+	background-color: white;
+}
+
+.postHeader {
+	display: flex;
+	width: 90%;
+	height: 60px;
+	align-items: center;
+	font-size: .5rem;
+}
+
+.headerImg {
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	margin: 0 2% 0 1%;
+}
+
+.postImg {
+	height: 650px;
+}
+
+.bottomIcons {
+	display: flex;
+	justify-content: space-between;
+	width: 12%;
+	margin: 10px 4% 0px 2%;
+}
+
+.commentContainer {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	line-height: 25px;
+	font-weight: 400;
+	margin-left: 15px;
+}
+
+.addComment {
+	border: none;
+	border-top: 1px solid #EBEBEB;
+	padding: 30px 0;
+	margin: 20px 0 0 15px;
+	width: 95%; 
+	font-size: 1.0rem;
+}

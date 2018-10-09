@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer.js'
 import SearchBar from './components/SearchBar/SearchBar.js'
 
@@ -9,9 +8,8 @@ class App extends Component {
 	constructor() {
 		super()
 		this.state = {
-			data: dummyData
 		}
-	};
+	}
 	
 	
 	
@@ -19,11 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-		{this.state.data.map(data =>(
-			<div key={Math.random()}>
-			<PostContainer post={data} />	
-			</div>
-		))}
+			<PostContainer />	
       </div>
     );
   }
