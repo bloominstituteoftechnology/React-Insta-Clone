@@ -27,3 +27,19 @@
 .post-content .content-image {
     width: 100%;
 }
+
+.post-content .social-buttons {
+    margin: 10px 15px;
+}
+
+.post-content .social-buttons a {
+    font-size: 2.4rem;
+    margin-right: 15px;
+}
+
+.post-content .likes-count {
+    margin-left: 15px;
+    font-size: 1.4rem;
+    letter-spacing: 0.02rem;
+    font-weight: bold;
+}
