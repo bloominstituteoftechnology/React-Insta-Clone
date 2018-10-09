@@ -8,8 +8,13 @@ import PropTypes from 'prop-types';
 class App extends Component {
   constructor() {
     super();
-    this.state = {data: data}
+    this.state = {data: []}
   }
+
+  componentDidMount() {
+    this.setState({data: data})
+  }
+
   render() {
     return (
       <div className="App">

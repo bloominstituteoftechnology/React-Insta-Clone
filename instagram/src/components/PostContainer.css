@@ -7,3 +7,12 @@
 .posterImg {
     width: 100%
 }
+
+.actionIcons {
+    width: 100%;
+}
+
+.actionIcon {
+    height: 30px;
+    width: auto;
+}
