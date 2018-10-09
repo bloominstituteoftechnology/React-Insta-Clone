@@ -7,7 +7,7 @@ import './PostList.css';
 
 const PostList = props => (
   <div className='post-list'>
-    {props.posts.map(post => <PostContainer post={post} key={post.timestamp} />)}
+    {props.posts.map(post => <PostContainer post={post} key={post.timestamp} addCommentHandler={props.addCommentHandler} addLikeHandler={props.addLikeHandler} />)}
   </div>
 );
 

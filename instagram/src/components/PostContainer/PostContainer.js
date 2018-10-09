@@ -14,8 +14,8 @@ const PostContainer = props => (
     <img src={props.post.imageUrl} alt="Post" className="post-image" />
     <div className='interactivity-area'>
       <div className="interactive-buttons">
-        <div className="interactive-button like-icon"></div>
-        <div className="interactive-button comment-icon"></div>
+        <div onClick={() => props.addLikeHandler(props.post.timestamp)} className="interactive-button like-icon"></div>
+        <div onClick={() => props.addCommentHandler(props.post.timestamp)} className="interactive-button comment-icon"></div>
       </div>
       <p className='like-count'>{props.post.likes} likes</p>
     </div>
