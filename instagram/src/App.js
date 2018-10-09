@@ -10,23 +10,19 @@ import SearchBar from './components/SearchBar/searchbar'
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state ={ dummyData:[] };
+    this.state ={ 
+      dummyData:[],
+      searchTerm: ''
+    };
   }
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({ dummyData: dummyData });
-    }, 800);
+    this.setState({ dummyData: dummyData });
   }
 
-  searchFunction() {
-
+  searchFunction = event => {
+    event.preventDefault();
+    console.log('Nice Search');
   }
-
-  addComment() {
-
-  }
-
-  handleInputChange = event => this.setState({ [event.target.name]: event.target.value });
 
   render() {
     console.log(this.state);
@@ -35,15 +31,18 @@ class App extends Component {
     }    return (
       <div className="App">
         <div className='top-header'>
-          <SearchBar />
+          <SearchBar 
+            term={this.state.searchTerm} 
+            search = {this.searchFunction} 
+            handleSearchChange = {this.handleInputChange} 
+            content= {this.state.dummyData} />
         </div> 
         {this.state.dummyData.map((items, i) => 
           <div className='posty' key = {i}>
             <PostContainer content= {items} />
             <CommentSection 
-              handleCommentChange = {this.handleCommentChange} 
-              addComment = {this.addComment}
-              content= {items} 
+              comments= {items.comments}
+              extras= {items} 
               />
           </div>
           )}
