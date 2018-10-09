@@ -6,7 +6,7 @@ const PostContainer = (props, index) => {
   return (
     <div>
       {props.posts.map(post => 
-        <Post {post.likes} />)}
+        <Post key={index} post={post} />)}
       
     </div>
   )
