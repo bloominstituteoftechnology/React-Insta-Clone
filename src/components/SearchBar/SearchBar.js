@@ -2,18 +2,30 @@ import React, {Component} from 'react';
 import './SearchBar.css';
 
     class SearchBar extends Component {
+
+        state = {
+            value: ""
+        }
+
+        componentDidMount() {
+            this.setState((state)   =>  ({
+                value: this.props.value
+            }))
+        }
+        
+        onChangeHandler =   ({ target })  =>  {
+            this.props.filter(target.value)
+        }
+
         render()    {
             return(
                 <div className="searchBar">
                
                     <div class = "logo-wrapper">
-                        <img class= "logo" src="https://vignette.wikia.nocookie.net/logopedia/images/a/aa/Instagram_wordmark.svg/revision/latest?cb=20140110161419" alt="instagram wordmark" />
+                        <img class= "logo" src="http://i68.tinypic.com/ossryc.jpg" alt="instagram wordmark" />
                     </div>
                     <div className="search-box">
-                         <input type="text" placeholder= "Search" name= "search" />
-                            <div className="search-icon">
-                                <i class="fa fa-search"></i> 
-                            </div>
+                         <input value={this.state.value} onChange={this.onChangeHandler} className="search" placeholder="Search"/>
                     </div>
 
                 <div class="icon-wrapper">

@@ -5,10 +5,7 @@ html {
 .App {
   display: flex;
   flex-direction: column;
-  max-width: 950px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
-p, h1 h2 {
-  font-family: 'Source Sans Pro', sans-serif;
-}
