@@ -9,16 +9,37 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      posts: dummyData
+      posts:[]
     };
   }
+
+  componentDidMount(){
+    this.setState({posts: dummyData})
+  }
+
+
+  increment = event =>{
+    let {posts} = this.state;
+    event.preventDefault();
+
+   let likes = event.target.likes;
+   console.log(likes);
+ 
+   this.setState({posts});
+
+   
+
+
+  }
+
+
   render() {
     return (
       <div className="App">
       <SearchBar />
       {console.log(this.state.posts)}
       {this.state.posts.map(data =>(
-      <PostContainer postData={data} />
+      <PostContainer value={data.likes} postData={data} increment={this.increment}/>
       
       ))
     }
@@ -26,5 +47,8 @@ class App extends Component {
     );
   }
 }
+
+
+
 
 export default App;

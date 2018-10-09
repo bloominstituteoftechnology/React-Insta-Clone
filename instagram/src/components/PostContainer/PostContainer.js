@@ -7,6 +7,8 @@ import './postContainer.css';
 
 
 const PostContainer = (props) =>{
+    
+
 
 
 
@@ -15,12 +17,12 @@ const PostContainer = (props) =>{
             
             <Container className={'maincontainer'}>
             <div className={'user'}>
-                <h1 className={'posttitle'}><img className={'avatar'} src={props.postData.thumbnailUrl}/>  {props.postData.username}</h1>
+                <h1 className={'posttitle'}><img className={'avatar'} src={props.postData.thumbnailUrl}/>  {props.postData.username}{props.value}</h1>
                 </div>
                 
                 <img src={props.postData.imageUrl}/>
                 <div className ={'posticons'}>
-                <i class="far fa-heart"></i> <i class="far fa-comment"></i>
+                <i class="far fa-heart" onClick={((e) => props.increment(e))} likes={'one'}></i> <i class="far fa-comment"></i>
                 </div>
                 <div className={'likes'}>
                 {props.postData.likes} likes
