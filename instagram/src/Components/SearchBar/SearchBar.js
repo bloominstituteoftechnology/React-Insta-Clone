@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = ({searchPost, value}) => {
     return (
         <div className="searchbar-container">
             <div className="container">
@@ -11,7 +11,7 @@ const SearchBar = () => {
                     <span className="logo-name-sprite sprite"></span> 
                 </div>
                 <div className="searchbar-input">
-                    <input type="text" placeholder="Search"/>
+                    <input type="text" placeholder="Search" name="search" value={value} onChange={searchPost}/>
                 </div>
                 <div className="searchbar-icons">
                     <span className="icons-navigate sprite-core" ></span> 
@@ -22,5 +22,7 @@ const SearchBar = () => {
         </div>
     );
 }
+
+
 
 export default SearchBar;

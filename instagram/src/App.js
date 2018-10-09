@@ -8,6 +8,7 @@ class App extends Component {
     super(props);
     this.state = {
       posts: [],
+      search: '',
     };
   };
 
@@ -15,11 +16,26 @@ class App extends Component {
     setTimeout(() => this.setState({posts: dummyData}), 2000);
   }
 
+  searchPost = (event) => {
+  }
+
+  filteredPosts = () => {
+    return this.state.posts.filter(post => post.username.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1)
+  }
+
+  changeHandler = (event) => {
+    event.preventDefault();
+    this.setState({[event.target.name]: event.target.value});
+}
+
   render() {
     return (
       <div className="container">
-        <SearchBar />
-        <PostContainer posts={this.state.posts}/>
+        <SearchBar 
+          searchPost={this.changeHandler}
+          value={this.state.search}
+        />
+        <PostContainer posts={this.filteredPosts()}/>
       </div>
     );
   }
