@@ -48,7 +48,13 @@
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+  cursor: pointer;
 }
+
+.Post-body .Post-action .like-btn {
+  display: inline;
+}
+
 
 .Post-body .likes {
   width: 95%;
