@@ -12,8 +12,8 @@ class PostContainer extends React.Component{
     render(props){
         return(
             <div className="postContDiv">
-            <div>{this.props.dummyData.username}</div>
-               <CommentSection dummyData={this.props.dummyData} />  
+            <div>{this.props.data.username}</div>
+               <CommentSection data={this.props.data} />  
             </div>
            
         )

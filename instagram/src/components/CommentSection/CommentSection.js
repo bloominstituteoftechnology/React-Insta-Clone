@@ -2,15 +2,16 @@ import React from 'react';
 import dummyData from '../../dummy-data';
 import PropTypes from 'prop-types';
 import './CommentSection.css';
+import addComment from './addComment';
 
 class CommentSection extends React.Component {
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.state = {
 
-            data: dummyData
+            data: props.data
 
         }
     }
@@ -20,15 +21,15 @@ class CommentSection extends React.Component {
 
     addNewComment = (event, index) => {
 
-       const newComment = this.data.comments.slice() ;
+       const newComment = this.state.data.comments.slice() ;
 
        this.setState({
-            data: this.data.comment.concat([newComment])
+            data: this.state.data.comment.concat([newComment])
        })
-       if (newComment.index !== this.data.comments.index){
+       if (newComment.index !== this.state.data.comments.index){
            newComment.map(() => {
                
-           return {username: this.data.comments.username,
+           return {username: "LorenzoEvans",
             text: event.target.value }})
        }
 
@@ -58,7 +59,7 @@ this.addNewComment();
 
     return(
         <div className="cmntSectDiv">
-        {dummyData.map(item => <div key={item.timestamp}>
+        {this.props.data.map(item => <div key={item.timestamp}>
             {item.username}
 
             <img alt="" src={item.thumbnailUrl} />
@@ -67,7 +68,6 @@ this.addNewComment();
             <div>{item.timestamp}</div>
             <LikeButton />
             <Comment />
-            <form ></form>
             <input />
             
             <div>{item.comments.map(item =>
@@ -84,7 +84,7 @@ this.addNewComment();
              */}
 
         </div>)}
-        <input />
+        <addComment data={this.state.data} />
         </div>
     )
     }

@@ -13,6 +13,8 @@ class App extends React.Component {
 
     this.state = {
 
+      data: dummyData,
+
       text: '',
       // empty array, should be able to link existing comments here and push user object.
       newComment: [],
@@ -49,8 +51,8 @@ class App extends React.Component {
 
       <div> 
      
-      <SearchBar inputText={this.inputText} dummyData={dummyData} text={this.state.text} />
-       {dummyData.map(item =>
+      <SearchBar inputText={this.inputText} data={this.state.data} text={this.state.text} />
+       {this.state.data.map(item =>
         
         <div key={item.timestamp} ></div>
         
@@ -62,7 +64,7 @@ class App extends React.Component {
  
 
        
- <PostContainer newComment={this.state.newComment} dummyData={dummyData} /> 
+ <PostContainer newComment={this.state.newComment} data={this.state.data} /> 
       </div>
     )
   }
