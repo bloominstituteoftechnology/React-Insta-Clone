@@ -1,9 +1,10 @@
 import React from 'react';
+import "./SearchBar.css";
 
 const SearchBar = props => {
   return (
-    <div>
-      <input name="SearchBar" 
+    <div className="SearchBar">
+      <input 
       type="text" 
       value={props.searchText} 
       onChange={props.updateSearchText} 
