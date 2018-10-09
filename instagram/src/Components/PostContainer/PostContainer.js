@@ -1,12 +1,12 @@
 import React from "react";
 import './PostContainer.css';
-// import CommentSection from "../CommentSection";
+import CommentSection from "../CommentSection/CommentSection";
 
 class PostContainer extends React.Component {
     constructor() {
         super();
         this.state = {
-
+            likes: 0,
         }
     }
 
@@ -17,7 +17,7 @@ class PostContainer extends React.Component {
                 <div className="header-container">
                     {/* User image and username */}
                     <img src={this.props.userImg} alt="User" className="user-img"/>
-                    <p className="username">{this.props.userName}</p>
+                    <p className="username">{this.props.username}</p>
                 </div>
                 {/* Post image*/}
                 <img src={this.props.postImg} alt="Post" className="post-img"/>
@@ -33,6 +33,7 @@ class PostContainer extends React.Component {
                         {this.props.likes} Likes
                     </p>
                 </div>
+                <CommentSection content={this.props.comments} timestamp={this.props.timestamp}/>
             </div>    
         )
     }

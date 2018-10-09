@@ -13,6 +13,7 @@ class CommentSection extends React.Component {
     componentDidMount() {
         this.setState(state => ({
             content: this.props.content,
+            timestamp: this.props.timestamp,
         }))
     }
 
@@ -20,8 +21,9 @@ class CommentSection extends React.Component {
         return (
             <div className="comments-main-container">
                 <div className="comments-container">
-                    {/* Map over comments in dummy data */}
-                    {this.state.content.map(comment => <Comment username={comment.username} text={comment.text}/>)}
+                    {this.state.content.map(comment => {
+                        return <Comment username={comment.username} text={comment.text}/>
+                    })}
                 </div>
                 {/* Time stamp*/}
                 <div className="timestamp">{this.state.timestamp}</div>

@@ -28,9 +28,12 @@ class App extends React.Component {
         {this.state.data.map(post => {
           return <PostContainer 
           userImg={post.thumbnailUrl}
-          userName={post.username}
+          username={post.username}
           postImg={post.imageUrl}
-          likes={post.likes} />
+          likes={post.likes} 
+          comments={post.comments}
+          timestamp={post.timestamp}
+          />
         })} 
       </div>
     );
