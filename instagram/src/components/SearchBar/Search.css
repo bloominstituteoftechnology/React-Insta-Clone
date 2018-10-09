@@ -1,0 +1,32 @@
+.logo {
+    width: 3rem;
+    height: 3rem;
+    padding-right: 2.1rem;
+    border-right: 1px solid black;
+}
+
+.wordlogo {
+    width: 11.3rem;
+    height: 4rem;
+    padding-left: 1.5rem;
+    padding-right: 17.9rem;
+    
+}
+
+.searchbar {
+    display: flex;
+    padding: 1.9rem 1.5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    box-shadow: 0px 1px 1px 0px #ccc;
+}
+
+.searchbar input {
+    height: 2.5rem;
+    width: 21.2rem;
+    text-align: center;
+    border: 1px solid gray;
+    font-size: 1.5rem;
+    border-radius: .3rem;
+    background: lightgray;
+}

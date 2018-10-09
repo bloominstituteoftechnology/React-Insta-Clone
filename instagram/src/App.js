@@ -18,7 +18,9 @@ class App extends Component {
       
       <div className="App">
         <Search/>
-        <Post dummyData ={this.state.dummyData}/>
+        <div className = "content-container">
+          <Post dummyData ={this.state.dummyData}/>
+        </div>
       </div>
     );
   }
