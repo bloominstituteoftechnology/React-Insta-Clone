@@ -34,6 +34,9 @@
 .action-icons .heart {
     background-position: -136px -102px;
 }
+.action-icons .heart-fill {
+    background-position: -132px -31px;
+}
 .action-icons .comment-icon {
     background-position: -75px -189px;
     margin-left: 16px;

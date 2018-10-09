@@ -13,7 +13,8 @@ class CommentSection extends Component {
             timestamp,
             comments,
             commentValue: '',
-            username: 'chris'
+            username: 'chris',
+            postLiked: false,
         }
     }
 
@@ -32,6 +33,17 @@ class CommentSection extends Component {
         });
     }
 
+    onLikePost = (event) => {
+        event.preventDefault();
+        this.setState(prevState => {
+            
+            return {
+                likes: prevState.postLiked ? prevState.likes - 1 : prevState.likes + 1,
+                postLiked: !prevState.postLiked
+            }
+        });
+    }
+
     changeHandler = (event) => {
         this.setState({[event.target.name]: event.target.value});
     }
@@ -39,7 +51,10 @@ class CommentSection extends Component {
     render() {
         return (
             <div className="comment-section">
-            <PostActions />
+            <PostActions 
+                likePost={this.onLikePost}
+                postLiked={this.state.postLiked}
+            />
             <div className="likes">{this.state.likes} likes</div>
             <CommentContainer comments={this.state.comments} />
             <time>21 minutes ago</time>
