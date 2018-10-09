@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
-import CommentSection from './components/CommentSection/CommentSection';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faUser, faCompass, faHeart, faComment } from "@fortawesome/free-regular-svg-icons";
@@ -18,34 +17,67 @@ class App extends Component {
     this.state = {
       data: dummyData
     }
-    console.log(this.state.data);
+    // console.log(this.state.data);
   }
 
-  render() {
-    // Setup a default key
-    let i = 0;
+  componentDidMount() {
+    console.log("Mounted");
+    this.setState({
+      data: dummyData,
+    });
 
+  }
+
+  likesHandler = (postId) => {
+    console.log("likeshandler clicked:", this.state.data[postId] );
+    //event.preventDefault();
+    //this.setState({ likes: event.target.likes +1 });
+    this.setState({
+      data: this.state.data.map( (data, index) => {
+        if( index === postId ){
+          return {
+            ...data,
+            likes: data.likes +1
+          }
+        }
+        else {
+          return data;
+        }
+      })
+    })
+
+  };
+//  likesHandler = event => {
+//    console.log("likesHandler clicked");
+//    event.preventDefault();
+//    this.setState( this.state.data.likes = this.state.data.likes + 1 );
+//  };
+
+  render() {
     return (
       <div className="App">
         <SearchBar />
-        {this.state.data.map( (data) => {
+        {this.state.data.map( (data, index) => {
           // Pass each element to PostContainer:
+            // id: 0
             // username: "philzcoffee",
             // thumbnailUrl:
             // imageUrl:
             // likes: 400,
             // timestamp: "July 17th 2017, 12:42:40 pm",
-            // comments: 
+            // comments: []
           
           return (
             <PostContainer
-              key={i++} 
+              key={index} 
+              id={index}
               username={data.username}
               thumbnailUrl={data.thumbnailUrl}
               imageUrl={data.imageUrl}
               likes={data.likes}
               timestamp={data.timestamp}
               comments={data.comments}
+              likesHandler={this.likesHandler}
             />
           );
         })}

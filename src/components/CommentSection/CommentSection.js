@@ -5,7 +5,7 @@ import './CommentSection.css';
 import moment from 'moment';
 
 const CommentSection = (props) => {
-    console.log("commentsection", props);
+    // console.log("commentsection", props);
     // Takes in props:
     // comments: [
     //       username: "philzcoffee",
@@ -16,11 +16,13 @@ const CommentSection = (props) => {
     // Format the timestamp using moment:
     const postedAt = moment(props.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow();
 
+    let i = 0;
+
     return (
         <div className='commentSection'>
             {props.comments.map( comment => {
                 return(
-                    <div className='comment'>
+                    <div className='comment' key={i++}>
                         <b>{comment.username}</b> {comment.text}
                     </div>
                 );
@@ -30,7 +32,7 @@ const CommentSection = (props) => {
             <div className='postedAt'>{postedAt}</div>
             <div className='newComment'>
                 <input className='commentInput' placeholder='Add a comment...' />
-                <FontAwesomeIcon icon={['far', 'ellipses-h']} />
+                <FontAwesomeIcon icon="ellipsis-h" />
             </div>
         </div>
     );

@@ -9,18 +9,20 @@ import './PostContainer.css';
 
 const PostContainer = (props) => {
     // Props taken in:
+    // key: 0
     // username: "philzcoffee",
     // thumbnailUrl:
     // imageUrl:
     // likes: 400,
     // timestamp: "July 17th 2017, 12:42:40 pm",
     // comments: []
+    // likesHandler: ()
           
     return (
         <div className='postContainer'>
             <PostHeader username={props.username} thumbnailUrl={props.thumbnailUrl} />
             <img className='postContainerImg' src={props.imageUrl} alt='' />
-            <LikesContainer likes={props.likes} />
+            <LikesContainer likes={props.likes} postId={props.id} likesHandler={props.likesHandler} />
             <CommentSection comments={props.comments} timestamp={props.timestamp} />
         </div>
     );
