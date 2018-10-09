@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 import './App.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHeart, faCommentAlt, faEllipsisH, faCompass, faUser, faCameraRetro } from '@fortawesome/free-solid-svg-icons';
-import dummyData from '../../dummy-data';
-import SearchBar from '../SearchBar/SearchBar';
-import PostContainer from '../PostContainer/PostContainer';
+import dummyData from './dummyData';
+import SearchBar from './components/SearchBar/SearchBar';
+import PostContainer from './components/PostContainer/PostContainer.js';
 
+library.add(faHeart, faCommentAlt, faEllipsisH, faCompass, faUser, faCameraRetro)
 class App extends Component {
   constructor(){
     super();

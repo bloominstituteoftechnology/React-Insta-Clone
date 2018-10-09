@@ -1,7 +1,7 @@
 import React from 'react';
 import './PostContainer.css';
-import PostHeader from './PostHeader/PostHeader';
-import PostContent from './PostContent/PostContent';
+import PostHeader from './PostHeader';
+import PostContent from './PostContent';
 import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = (props) => {
