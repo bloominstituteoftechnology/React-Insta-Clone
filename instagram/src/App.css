@@ -3,3 +3,8 @@
   flex-direction: column;
   align-items: center;
 }
+
+.posts {
+  max-width: 600px;
+  width: 100%;
+}

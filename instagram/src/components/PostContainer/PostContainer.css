@@ -1,0 +1,27 @@
+.post {
+    width: 100%;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.post-header .header-thumbnail {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 15px 10px 10px 15px;
+}
+
+.post-header .header-username {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.post .content-image {
+    width: 100%;
+}

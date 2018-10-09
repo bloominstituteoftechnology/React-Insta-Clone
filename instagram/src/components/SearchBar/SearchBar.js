@@ -7,7 +7,7 @@ class SearchBar extends React.Component {
         return (
             <div className="search-bar">
                 <div className="company">
-                    <h1><i className="fab fa-instagram"></i>Instagram</h1>
+                    <i className="fab fa-instagram"></i><h1>Instagram</h1>
                 </div>
                 <div className="search">
                     <input placeholder="&#8981;&nbsp;Search" />

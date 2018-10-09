@@ -8,27 +8,27 @@
 
 .search-bar .company {
     margin-left: 1.5%;
-}
-
-.search-bar h1 {
-    font-family: 'Grand Hotel', cursive;
     font-size: 4.6rem;
     display: flex;
     align-items: center;
 }
 
-.search-bar h1 i {
-    border-right: 1px solid black;
+.search-bar .company i {
     font-size: 4.8rem;
-    padding-right: 13%;
-    margin-right: 10%;
+}
+
+.search-bar .company h1 {
+    font-family: 'Grand Hotel', cursive;
+    border-left: 1px solid black;
+    margin-left: 14%;
+    padding-left: 10%;
 }
 
 .search-bar .search {
     width: 25%;
 }
 
-.search-bar input {
+.search-bar .search input {
     width: 88%;
     text-align: center;
     background: #fafafa;
@@ -45,5 +45,6 @@
     width: 13%;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     color: #999999;
 }
