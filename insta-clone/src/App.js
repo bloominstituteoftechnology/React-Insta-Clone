@@ -11,7 +11,7 @@ class App extends Component {
     super();
     this.state = {
       newArray: [],
-      searchInput: "",
+      searchedInput: "",
       copyArray: []
     }
   }
@@ -25,23 +25,23 @@ class App extends Component {
 
   changeHandler = event =>{
     this.setState({
-      searchInput:event.targert.value
-    })
+      searchedInput:event.target.value,
+      
+    }, this.searchPost())
   }
   searchPost = event => {
-    event.preventDefault();
-    const toFilter = this.state.newArray.filter(filtered => filtered.username === this.state.searchInput );
-    this.setState({copyArray: toFilter, searchInput: ""});
+    const toFilter = this.state.newArray.filter(filtered => filtered.username.toLowerCase().includes(this.state.searchedInput.toLowerCase()) );
+    this.setState({copyArray: toFilter, searchedInput: ""});
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBarContainer onChange={this.changeHandler} onSubmit={this.searchPost}  />
-        {this.state.searchInput ? this.state.copyArray.map(item => {
+        <SearchBarContainer onChange={this.changeHandler} value={this.searchedInput}  />
+        {this.state.searchedInput.length ? this.state.copyArray.map(item => {
           return <PostContainer  key={item.text} obj={item} />
         }) : this.state.newArray.map(item => {
-          return <PostContainer  key={item.text} obj={item} />
+          return <PostContainer  key={item.timestamp} obj={item} />
         })}
       </div>
     );

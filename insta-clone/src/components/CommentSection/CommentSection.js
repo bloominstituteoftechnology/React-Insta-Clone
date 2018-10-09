@@ -50,8 +50,8 @@ class CommentSection extends React.Component {
     render(){
         return(
             <div className="comment-section">
-            <i onClick={this.miLikey} class="far fa-heart icon"></i>
-            <i class="far fa-comment icon comment"></i>
+            <i onClick={this.miLikey} className="far fa-heart icon"></i>
+            <i className="far fa-comment icon comment"></i>
             <p className="likes"><strong>{this.state.likes} likes</strong></p>
             
             {this.state.comments.map(item =>{
@@ -61,7 +61,7 @@ class CommentSection extends React.Component {
             })}
             <p className="timestamp">{moment().startOf('hour').fromNow() }</p>
             <form onSubmit={this.addNewComment}><input onChange={this.changeHandler}  className="comment-input" placeholder=" &nbsp; Add Comment..."></input></form>
-            <p className="ellipise"> <i class="fas fa-ellipsis-h icon"></i></p>
+            <p className="ellipise"> <i className="fas fa-ellipsis-h icon"></i></p>
             </div>
         )
     }

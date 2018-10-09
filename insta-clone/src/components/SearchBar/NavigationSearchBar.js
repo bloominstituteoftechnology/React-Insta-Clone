@@ -5,9 +5,9 @@ import './Searchbar.css';
 const NavigationSearchBar = (props) => {
     return (
         <div className="nav-search-bar">
-         <i class="far fa-compass icon"></i>
-         <i class="far fa-heart icon"></i>
-         <i class="far fa-user icon"></i>
+         <i className="far fa-compass icon"></i>
+         <i className="far fa-heart icon"></i>
+         <i className="far fa-user icon"></i>
         </div>
     );
 };

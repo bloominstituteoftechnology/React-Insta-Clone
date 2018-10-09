@@ -9,7 +9,7 @@ const SearchBarContainer = (props) => {
     return(
         <div className="search-bar-container">
             <IconSearchBar />
-            <SearchInput />
+            <SearchInput onChange={props.onChange} value={props.value} />
             <NavigationSearchBar />
         </div>
     )
