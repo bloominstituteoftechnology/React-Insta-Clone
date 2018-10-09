@@ -59,6 +59,10 @@
   outline: none;
 }
 
+.Search-bar-container input:focus::placeholder {
+  color: transparent;
+}
+
 .Search-bar-container .Menu {
   width: 15%;
   display: flex;
