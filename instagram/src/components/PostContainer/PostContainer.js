@@ -3,7 +3,6 @@ import propTypes from 'prop-types';
 
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from '../PostHeader/PostHeader';
-import PostInteraction from '../PostInteraction/PostInteraction';
 
 import { Card, CardImg } from 'reactstrap';
 
@@ -23,7 +22,7 @@ const PostContainer = props => {
       <Card className="customCard">
         <PostHeader username={username} thumbnailUrl={thumbnailUrl} />
         <CardImg src={imageUrl} alt="post" className="cardImg" />
-        <PostInteraction likes={likes} />
+        {/* <PostInteraction likes={likes} /> */}
         <CommentSection
           comments={comments}
           likes={likes}
