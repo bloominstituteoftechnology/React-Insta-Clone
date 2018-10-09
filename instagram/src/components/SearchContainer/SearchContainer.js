@@ -8,7 +8,7 @@ const SearchContainer = props => {
     return(
         <div className='search-container'>
             <LogoContainer />
-            <SearchBar handleSearchChange={props.handleSearchChange} handleSearchSubmit={props.handleSearchSubmit} />
+            <SearchBar searchText={props.searchText} handleSearchChange={props.handleSearchChange} handleSearchSubmit={props.handleSearchSubmit} />
             <ActionsContainer />
         </div>
         

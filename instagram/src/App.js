@@ -37,6 +37,7 @@ class App extends Component {
                         className='app-search-container' 
                         handleSearchSubmit={this.handleSearchSubmit}
                         handleSearchChange={this.handleSearchChange}
+                        searchText={this.state.searchText}
         />
         <div className='app-post-container'>
         {
