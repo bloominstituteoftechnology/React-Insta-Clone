@@ -44,7 +44,9 @@ class PostContainer extends React.Component {
   
     }
     onChange = (e) => {
+        e.preventDefault();
       this.setState({
+          
         commentText : e.target.value
       })
     }

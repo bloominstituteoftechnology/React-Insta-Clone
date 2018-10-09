@@ -11,7 +11,7 @@ import propTypes from 'prop-types';
 
     <section className='post-content'>
       <PostIcons likes={props.likes}/>
-      <CommentSection  comments={props.comments}/>
+      <CommentSection comments={props.comments} onSubmit={props.onSubmit} commentText={props.commentText} onChange={props.onChange} close={props.close}/>
     </section>
   );
 }

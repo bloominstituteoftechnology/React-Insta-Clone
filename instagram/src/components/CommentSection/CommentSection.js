@@ -9,13 +9,17 @@ class CommentSection extends React.Component {
     super(props);
 
     this.state = {
-      comments: [],
-      username: 'bigben223',
-      newComment: {
-        'username': '',
-        'text': ''
-      },
-      commentText: ''
+
+      comments: this.props.comments,
+      commentText: '',
+      container : 0
+      // comments: [],
+      // username: 'bigben223',
+      // newComment: {
+      //   'username': '',
+      //   'text': ''
+      // },
+      // commentText: ''
     }
   }
   componentDidMount() {
@@ -38,6 +42,7 @@ class CommentSection extends React.Component {
     })
   }
   onChange = (e) => {
+    e.preventDefault();
     this.setState({
       commentText : e.target.value
     })
