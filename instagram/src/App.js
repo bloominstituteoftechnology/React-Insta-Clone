@@ -8,12 +8,14 @@ class App extends Component {
   constructor(props){
     super();
     this.state = {
-      data : []
+      data : [],
+      comments : [],
     }
   }
 
 componentDidMount(props){
   this.setState({data : dummyData})
+  this.setState({comments : dummyData.map(comment =>{return(comment.comments)})})
 }
 
   render() {
@@ -22,7 +24,7 @@ componentDidMount(props){
         <div className="top-header">
           <SearchBar />
         </div>
-        <PostContainer data={this.state.data} />
+        <PostContainer data={this.state.data} commentsState={this.state.comments} />
       </div>
     );
   }

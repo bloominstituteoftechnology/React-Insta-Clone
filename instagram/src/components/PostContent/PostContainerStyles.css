@@ -33,6 +33,7 @@
 }
 .post-container .comment-form{
     box-sizing: border-box;
+    width:100%;
     border:none;
     padding:10px;
     border-top:1px solid rgb(207, 207, 207);
