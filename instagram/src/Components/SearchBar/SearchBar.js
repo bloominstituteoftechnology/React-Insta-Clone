@@ -9,6 +9,16 @@ class SearchBar extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.setState(state => ({
+            searchValue: this.props.value,
+        }))
+    }
+
+    inputChangeHandler = e => {
+        this.props.filter(e.target.value)
+    }
+
     render(){
         return (
             <div className="searchbar-container">
@@ -20,7 +30,7 @@ class SearchBar extends React.Component {
                 {/*Search bar*/}
                 <div className="search-area">
                 <form>
-                    <input type="text" placeholder="&#x1F50D; Search" className="search-input" />
+                    <input type="text" placeholder="&#x1F50D; Search" className="search-input" onChange={this.inputChangeHandler} value={this.state.value}/>
                 </form>
                     
                     {/* <i className="fa fa-search"></i> */}

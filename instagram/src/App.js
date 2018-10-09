@@ -20,11 +20,20 @@ class App extends React.Component {
       data: dummyData,
     }))
   }
+  filterHandler = e =>  {
+    let filterData = dummyData.filter((data)  => data.username.includes(e))
+    this.setState((state)   =>  ({
+        data: filterData,
+        searchValue: e,
+    }))
+}
 
+
+  
   render() {
     return (
       <div className="main-container">
-        <SearchBar/>
+        <SearchBar filter={this.filterHandler}/>
         {this.state.data.map(post => {
           return <PostContainer 
           userImg={post.thumbnailUrl}
