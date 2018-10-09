@@ -10,6 +10,14 @@
   }
   
   .user {
-    font-weight: 500;
+    font-weight: bold;
     font-size: 12px;
+  }
+
+  .add-comment {
+    display: flex;  
+    align-items: left;
+    margin-left: 8px;
+    margin-top: 6px;
+    margin-bottom: 20px;
   }
