@@ -9,44 +9,84 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 library.add(faHeart);
 library.add(faCommentAlt);
 
-const PostContainer = (props) => { 
+class PostContainer extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            stateComments: [],
+            commentInput: {},
+            likes: this.props.dummyData.likes
+          }
+          this.inputHandler = this.inputHandler.bind(this);
+          this.addNewComment = this.addNewComment.bind(this);
+          this.addLike = this.addLike.bind(this);
+    } 
 
+     
+  addLike(){
+      this.setState({likes: this.state.likes += 1})
+  }
+
+  inputHandler(event){
+    let username = 'JoeSCMHOE126';  
+    this.setState({
+        commentInput: {
+            text: event.target.value,
+            id: Date.now(),
+            username: username
+
+      }
+    })
+  }
+  addNewComment(event) {
+    event.preventDefault();
+    this.setState({
+      stateComments: [...this.state.stateComments, this.state.commentInput],
+      commentInput: {text: ''}
+    });
+    
+  }
+
+
+
+render(){
     return (
-        <div>
         
-            {props.dummyData.map(profile => {
-                return (
+        
+            
+                
                 <div className="post-container">
                     <div className = 'post-header'>
-                        <img className="post-profile-img" src={`${profile.thumbnailUrl}`}/>
-                        <p className='username bold-txt'>{profile.username}</p>
+                        <img className="post-profile-img" src={`${this.props.dummyData.thumbnailUrl}`}/>
+                        <p className='username bold-txt'>{this.props.dummyData.username}</p>
                     </div>
-                    <img className="post-img"src={`${profile.imageUrl}`}/>
+                    <img className="post-img"src={`${this.props.dummyData.imageUrl}`}/>
                     <div className='like-container'>
                         <div className="icon-cont">
-                            <FontAwesomeIcon icon="heart" />
+                            <FontAwesomeIcon onClick={this.addLike}icon="heart" />
                             <FontAwesomeIcon icon="comment-alt" />
                         </div>
                         <div className='bold-txt'>
-                            {profile.likes} likes 
+                            {this.state.likes} likes 
                         </div>
-                        <CommentSection comments={profile.comments} 
-                                        stateComments={props.stateComments}
-                                        inputHandler={props.inputHandler}
-                                        addNewComment={props.addNewComment}
-                                        commentInput={props.commentInput}/>
+                        <CommentSection comments={this.props.dummyData.comments} 
+                                        stateComments={this.state.stateComments}
+                                        inputHandler={this.inputHandler}
+                                        addNewComment={this.addNewComment}
+                                        commentInput={this.state.commentInput}/>
                     </div>
                     
 
                 </div>
                 
-                )})}
+                )
+                
         
-        </div>
-    )
+        
+    
 
+        }
 }
-
 
 
 export default PostContainer;

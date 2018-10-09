@@ -18,11 +18,20 @@ class App extends Component {
     super(props);
     this.state = {
       stateComments: [],
-      commentInput: {}
+      commentInput: {},
+      dummyData: [],
+      searchInput: ''
     }
 
     this.inputHandler = this.inputHandler.bind(this);
     this.addNewComment = this.addNewComment.bind(this); 
+    this.searchInputHandler = this.searchInputHandler.bind(this);
+  }
+
+  searchInputHandler(event){
+
+    let filteredList = this.state.dummyData.filter(profile => profile.username.includes(event.target.value))
+    this.setState({searchInput: event.target.value, dummyData: filteredList});
   }
 
   inputHandler(event){
@@ -45,23 +54,28 @@ class App extends Component {
     })
   }
 
+  componentDidMount(){
+      setTimeout(() => this.setState({dummyData: dummyData}), 800);
+  }
 
   render() {
     return (
       <div>
-      <SearchBar />
+      <SearchBar searchInput={this.state.searchInput} filter={this.searchInputHandler}/>
       <div className="container">
         
+        {this.state.dummyData === [] ? <p>Loading Data..</p> : this.state.dummyData.map(post => {return <PostContainer dummyData={post} /> })}
         
-        <PostContainer dummyData={dummyData} 
-                       stateComments={this.state.stateComments}
-                       inputHandler={this.inputHandler}
-                       addNewComment={this.addNewComment}
-                       commentInput={this.state.commentInput} />
       </div>
+
+
       </div>
     );
   }
 }
 
 export default App;
+/* stateComments={this.state.stateComments}
+                       inputHandler={this.inputHandler}
+                       addNewComment={this.addNewComment}
+                       commentInput={this.state.commentInput} */

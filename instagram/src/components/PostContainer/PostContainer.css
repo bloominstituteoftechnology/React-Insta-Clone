@@ -28,5 +28,10 @@ img{
 
 .bold-txt{
     font-weight: bold;
+    user-select: none;
+}
+
+.icon-cont{
+    user-select: none;
 }
 

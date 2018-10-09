@@ -23,7 +23,10 @@ const SearchBar = (props) => {
             <img className='instaword' src='https://cdn.worldvectorlogo.com/logos/instagram-1.svg'  />
         </div>
 
-        <input type='text' placeholder="Search" />
+        <input type='text' 
+               placeholder="Search" 
+               value={props.searchInput}
+               onChange={props.filter} />
         <div className='icon-div'>
         <FontAwesomeIcon className="icon" icon="compass" />
         <FontAwesomeIcon icon="heart" />
