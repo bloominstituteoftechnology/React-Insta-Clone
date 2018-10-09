@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
-import PostsPage from './components/PostContainer/PostsPage.js'
+import PostsPage from './components/PostContainer/PostsPage';
 import './App.css';
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
     const loadedData = JSON.parse(localStorage.getItem("exchange_o_gram"));
     
     let data;
-    if(loadedData === null){
+    if(loadedData === null || loadedData.length === 0){
       data = dummyData;
     }
 
@@ -34,8 +34,6 @@ class App extends Component {
     data.forEach(obj=>{
       obj.isHidden = false;
     })
-
-    console.log(data);
 
     this.setState({
       posts: data
