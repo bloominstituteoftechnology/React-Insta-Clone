@@ -1,0 +1,54 @@
+.PostContainer {
+  max-width: 604px;
+  width: 100%;
+  margin: 0 auto 6rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.PostContainer-Header {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  font-weight: bold;
+}
+
+.PostContainer-Img-Container {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.PostContainer-Img-Container img {
+  width: 100%;
+  display: block;
+}
+
+.PostContainer-Header img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.PostContainer-Icons,
+.PostContainer-Likes {
+  padding: 0 1.5rem;
+}
+
+.PostContainer-Icons {
+  font-size: 2.5rem;
+  display: flex;
+}
+
+.Icon {
+  cursor: pointer;
+}
+
+.PostContainer-Icons ion-icon {
+  margin-right: 1.5rem;
+}
+
+.PostContainer-Likes {
+  font-weight: bold;
+}

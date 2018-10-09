@@ -1,0 +1,81 @@
+.SearchBar {
+  height: 77px;
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  color: #262626;
+  border-bottom: 1px solid #dbdbdb;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.SearchBar-Logo {
+  display: flex;
+  align-items: center;
+}
+
+.Logo {
+  margin-right: 1.8rem;
+  display: flex;
+  align-items: center;
+  font-size: 3.1rem;
+}
+
+.Brand {
+  border-left: 1px solid #262626;
+  padding-left: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.Brand img {
+  width: 105px;
+  height: 39px;
+}
+
+.SearchBar-Container {
+  position: relative;
+}
+
+.Search-Icon {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  font-size: 1.6rem;
+  transform: translateY(-20%);
+  color: #262626;
+}
+
+.SearchBar-Input {
+  padding: 8px 0;
+  /* display: flex;
+  justify-content: center; */
+  width: 215px;
+  height: 28px;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  text-align: center;
+  outline: 0;
+}
+
+.SearchBar-Input:focus {
+  text-align: left;
+  padding-left: 2rem;
+  background: #fff;
+}
+
+.SearchBar-Icons ion-icon {
+  margin-left: 3rem;
+}
