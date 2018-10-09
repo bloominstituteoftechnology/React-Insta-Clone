@@ -8,6 +8,7 @@ const PostContainer = (props) => {
             {props.data.map(data => {
                 return(
                     <Post thumbnail={data.thumbnailUrl} username={data.username} image={data.imageUrl} />
+                    
                 );
             })}
 

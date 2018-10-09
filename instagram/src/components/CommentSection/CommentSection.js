@@ -6,7 +6,7 @@ const CommentSection = (props) => {
         <div>
             {props.comments.map(comment => {
                 return(
-                    <Comment comment={comment} />
+                    <Comment comment={comment.text} username={comment.username}/>
                 );
             })}
         </div>
