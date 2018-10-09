@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import '../PostContainer/PostContainer.css';
@@ -7,27 +7,14 @@ import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from '../PostContainer/PostHeader';
 import PostImage from '../PostContainer/PostImage';
 
-class PostContainer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            comments: props.post.comments,
-            image: props.post.imageUrl,
-            likes: props.post.likes,
-            thumbnail: props.post.thumbnailUrl,
-            username: props.post.username
-        }
-    }
-
-    render() {
-        return (
-            <div className="post-container">
-                <PostHeader username={this.state.username} thumbnail={this.state.thumbnail} />
-                <PostImage image={this.state.image} />
-                <CommentSection likes={this.state.likes} comments={this.state.comments} />
-            </div>
-        );
-    }
+const PostContainer = props => {
+    return (
+        <div className="post-container">
+                <PostHeader username={props.post.username} thumbnail={props.post.thumbnailUrl} />
+                <PostImage image={props.post.imageUrl} />
+                <CommentSection likes={props.post.likes} comments={props.post.comments} timestamp={props.post.timestamp} />
+        </div>
+    );
 }
 
 PostContainer.propTypes = {
@@ -38,6 +25,7 @@ PostContainer.propTypes = {
         })),
     imageUrl: PropTypes.string,
     likes: PropTypes.number,
+    timestamp: PropTypes.string,
     thumbnailUrl: PropTypes.string,
     username: PropTypes.string
 }

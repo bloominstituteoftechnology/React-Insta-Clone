@@ -1,20 +1,25 @@
 .post-container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
 }
 
 .post-container .post-header {
+    height: 60px;
     width: 100%;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .post-container .post-header .thumbnail {
-    width: 50px;
+    width: 30px;
     height: auto;
     border-radius: 50%;
+    margin: 0 10px 0 15px;
 }
 
 .post-container .post-image {
