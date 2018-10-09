@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.comments-main-container{
+    width: 95%;
+    margin: 5px auto 0 auto;
+
+}
+.comment-container{
+    display: flex; 
+    text-align: start;
+    font-family: 'Roboto', sans-serif;
+}
+
+.comment-username{
+    margin: 0 5px 0 0;
+    font-weight: bold;
+}
+.comment{
+    margin: 0 0;
+    color: gray;
+}
+
+.timestamp{
+    margin-top: 5px;
+    text-align: start;
+    color: darkgray;
+    font-size: 13px;
+}
