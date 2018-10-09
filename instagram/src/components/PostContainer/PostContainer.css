@@ -1,0 +1,27 @@
+.postContainer {
+    width: 640px;
+    
+}
+
+.post {
+    width: 100%;
+    border: 1px solid grey;
+    margin-bottom: 50px;
+}
+
+.header {
+    display: flex;
+    margin: 20px 0;
+}
+
+.thumbnail {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+.username {
+    font-weight: bold;
+    margin-left: 10px;
+}

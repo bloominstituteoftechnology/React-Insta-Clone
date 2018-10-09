@@ -1,0 +1,23 @@
+.commentSection {
+    max-width: 600px;
+}
+
+.comments {
+    width: 100%;
+    margin: 10px;
+}
+
+.commentUsername {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.commentForm {
+    margin-left: 10px;
+}
+
+.commentForm input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid lightgray;
+}

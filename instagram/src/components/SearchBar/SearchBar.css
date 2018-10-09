@@ -1,0 +1,12 @@
+.searchBar {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.searchFormDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
