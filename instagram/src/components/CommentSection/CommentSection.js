@@ -20,10 +20,12 @@ class CommentSection extends Component {
         this.setState({
             comments: this.props.comments,
         })
+        this.hydrateStateWithLocalStorage();
     }
 
     addLike = () => {
         this.setState({ likes : this.state.likes + 1 })
+        localStorage.setItem("likes", JSON.stringify(this.state.likes));
     }
 
     changeHandler = (event) => {
@@ -54,7 +56,28 @@ class CommentSection extends Component {
                 ]
             });
         }
+
+        localStorage.setItem("comments", JSON.stringify(this.state.comments));
     }
+
+hydrateStateWithLocalStorage() {
+    // Iterate through all items in state
+    // This was extremely helpful: https://hackernoon.com/how-to-take-advantage-of-local-storage-in-your-react-projects-a895f2b2d3f2
+    for (let key in this.state) {
+      // Check to see if the key exists in localStorage. See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
+      if (localStorage.hasOwnProperty(key)) {
+        let value = localStorage.getItem(key);
+  
+        // Parse the localStorage string and setState
+        try {
+          value = JSON.parse(value);
+          this.setState({ [key]: value })
+        } catch (e) {
+          this.setState({ [key]: value })
+        }
+      }
+    }
+  }
 
     render () {
         return (
