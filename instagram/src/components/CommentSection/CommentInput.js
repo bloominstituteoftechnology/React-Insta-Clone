@@ -1,4 +1,5 @@
 import React from 'react';
+import './Comment.css';
 
 const CommentInput = props => {
     return (
