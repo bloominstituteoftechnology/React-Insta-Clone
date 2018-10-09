@@ -47,12 +47,13 @@ class CommentSection extends React.Component {
           className="heart"
         />
         <img src={comment} alt="comment bubble" className="comment-balloon" />
-        <div className="like-coutner">{this.state.likes} likes</div>
+        <div className="like-counter">{this.state.likes} likes</div>
         <div>
           {this.state.comments.map((c, i) => (
             <Comment key={i} comment={c} />
           ))}
           <CommentInput
+            newComment={this.state.newComment}
             addNewComment={this.addNewComment}
             handleChange={this.handleChange}
           />

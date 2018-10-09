@@ -12,6 +12,7 @@ const CommentInput = props => {
         type="text"
         name="newComment"
         placeholder="Add comment..."
+        value={props.newComment}
       />
     </form>
   );

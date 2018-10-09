@@ -1,0 +1,25 @@
+.comment-input {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.comments-container {
+  width: 95%;
+  height: 50px;
+  border-right: transparent;
+  border-bottom: transparent;
+  border-left: transparent;
+  font-size: 16px;
+}
+
+.comment-text {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+}
+
+.user {
+  font-weight: bold;
+  padding-right: 5px;
+}

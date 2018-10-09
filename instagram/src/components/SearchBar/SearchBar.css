@@ -1,10 +1,10 @@
 .search-bar {
   width: 100%;
+  max-width: 1250px;
   padding-left: 100px;
-  padding-right: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .header-left {
