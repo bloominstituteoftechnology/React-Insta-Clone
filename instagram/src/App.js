@@ -8,19 +8,31 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dummyData: dummyData
+      dummyData: []
     };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ dummyData: dummyData });
+    }, 2000);
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <div className="post-container-list">
-          {this.state.dummyData.map(user => {
-            return <PostContainer key={user.timestamp} userData={user} />;
-          })}
-        </div>
+        {!this.state.dummyData.length ? (
+          <h2>Loading, please wait...</h2>
+        ) : (
+          <div>
+            <SearchBar />
+            <div className="post-container-list">
+              {this.state.dummyData.map(user => {
+                return <PostContainer key={user.timestamp} userData={user} />;
+              })}
+            </div>
+          </div>
+        )}
       </div>
     );
   }
