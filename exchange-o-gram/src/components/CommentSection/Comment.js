@@ -6,22 +6,14 @@ class Comment extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            displayDeleteComment: false,
-            displayDeleteCommentstyle: {}
+            displayDeleteComment: false
         }
     }
     
     askForDelete = (event)=>{
         event.preventDefault();
-
-        const style = {
-            position: 'relative',
-            top: '0px',
-            left: '20px'
-        }
         this.setState({
-            displayDeleteComment: true,
-            displayDeleteCommentstyle: style
+            displayDeleteComment: true
         })
     }
 
@@ -32,8 +24,10 @@ class Comment extends React.Component{
     render(){
         return(
             <div className="comment">
-                <p onClick={this.askForDelete}><strong>{this.props.comment.username}</strong> {this.props.comment.text}</p>
-                {this.state.displayDeleteComment ? <div className="delete-comment" onClick={this.deleteComment} style={this.state.displayDeleteCommentstyle}>Click To Delete Comment</div> : <span></span>}
+                <p><strong>{this.props.comment.username}</strong> {this.props.comment.text}</p>
+                <div className="comment-options" onClick={this.askForDelete}>···
+                    {this.state.displayDeleteComment ? <div className="delete-comment" onClick={this.deleteComment}>Delete?</div> : null}
+                </div>
             </div>
         )
     }

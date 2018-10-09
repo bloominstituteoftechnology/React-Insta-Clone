@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
-import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './authenticate/Authenticate.js';
 import './App.css';
 
 class App extends Component {
@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       posts: [],
+      user: ''
     }
 
     window.onbeforeunload = this.saveData;
@@ -40,11 +41,17 @@ class App extends Component {
     });
   }
 
+  setUser = (username)=>{
+    this.setState({
+      user: username
+    })
+  }
+
   addNewComment = (comment, index)=>{
     const data = this.state.posts;
     // Add hard coded user
     const commentObj = {
-      username: "soda_popinski",
+      username: this.state.user,
       text: comment
     }
     data[index].comments.push(commentObj);
@@ -88,7 +95,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar searchPosts={this.searchPosts}/>
-        <PostsPage posts={this.state.posts} addNewComment={this.addNewComment} addLike={this.addLike} searchPosts={this.searchPosts} deleteComment={this.deleteComment}/>
+        <Authenticate posts={this.state.posts} addNewComment={this.addNewComment} addLike={this.addLike} searchPosts={this.searchPosts} deleteComment={this.deleteComment} setUser={this.setUser}/>
       </div>
     );
   }

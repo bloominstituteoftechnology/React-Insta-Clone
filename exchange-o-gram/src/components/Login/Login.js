@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchBar from '../SearchBar/SearchBar.js';
 
 class Login extends React.Component{
     constructor(props){
@@ -7,23 +6,24 @@ class Login extends React.Component{
         this.state = {
             usernameInput: '',
             passwordInput: '',
-            username: '',
-            password: ''
+            users: []
         }
 
-        window.onbeforeunload = this.saveData;
-    }
-
-    saveData = ()=>{
-        localStorage.setItem('userData', JSON.stringify({'username': 'user111', 'password': 'password'}));
+        // Create user for testing
+        localStorage.setItem('userData', JSON.stringify(
+            [
+                {'username': 'user111', 'password': 'password'},
+                {'username': 'soda_popinski', 'password': 'lovesoda'},
+                {'username': 'thor', 'password': 'stormbreaker'}
+            ]
+        ));
     }
 
     componentDidMount(){
         const loadedData = JSON.parse(localStorage.getItem('userData'))
-        console.log(loadedData); // Leave in for testing, NO SIGN UP PAGE
+        // TODO: NO SIGN UP PAGE
         this.setState({
-            username: loadedData.username,
-            password: loadedData.password
+            users: loadedData
         })
     }
 
@@ -47,9 +47,11 @@ class Login extends React.Component{
     }
 
     login = (event)=>{
-        if(this.state.username === this.state.usernameInput &&
-           this.state.password === this.state.passwordInput){
-            this.props.setLoggedIn(true);
+        for(let i = 0; i < this.state.users.length; i++){
+            if(this.state.users[i].username === this.state.usernameInput &&
+               this.state.users[i].password === this.state.passwordInput){
+                this.props.loginUser(this.state.users[i].username);
+             }
         }
 
         this.setState({
@@ -61,7 +63,6 @@ class Login extends React.Component{
     render(){
         return(
             <div>
-                <SearchBar searchPosts={this.searchPost}/>
                 <h2>Please Sign In</h2>
                 <div>
                     UserName:<input onChange={this.usernameInput} placeholder="Enter username" value={this.state.usernameInput}></input>

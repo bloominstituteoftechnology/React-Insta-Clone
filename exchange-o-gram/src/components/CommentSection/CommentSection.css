@@ -47,10 +47,20 @@ p.time-stamp{
 }
 
 .comment{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     font-size: 1.8rem;
     letter-spacing: 1px;
     line-height: 22px;
     margin-bottom: 8px;
+}
+
+.comment-options{
+    position: relative;
+    padding: 0 5px;
+    background-color: lightgray;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -59,7 +69,10 @@ strong{
 }
 
 .delete-comment{
-    padding: 10px;
+    position: absolute;
+    top: 0px;
+    left: -85px;
+    padding: 0px 10px;
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
