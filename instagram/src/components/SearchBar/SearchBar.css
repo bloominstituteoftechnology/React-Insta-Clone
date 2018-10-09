@@ -1,8 +1,8 @@
 .searchbar {
-  width: 100vw;
-  left: 0;
+  width: 80vw;
+  left: 10vw;
   top: 0;
-  border-bottom: 1px solid lightgrey;
+  border: 1px solid lightgrey;
   padding: 20px 0;
   display: flex;
   flex-wrap: nowrap;
