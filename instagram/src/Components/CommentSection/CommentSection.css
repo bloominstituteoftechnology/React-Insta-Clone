@@ -114,3 +114,15 @@
     height: 24px;
     width: 24px;
 }
+
+.post-text {
+    color: #3897f0;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+
+.post-text:hover {
+    cursor: pointer;
+}
