@@ -9,17 +9,16 @@ class App extends Component {
     super(props);
 
     this.state = {
-      dummyData
+      dummyData: [],
     }
     console.log(dummyData);
   }
 
   render() {
+
     return (
       <div className="App">
-        <PostContainer 
-          dummyData={this.state.dummyData}
-        />
+        <PostContainer dummyData={this.state.dummyData} />
       </div>
     );
   }
