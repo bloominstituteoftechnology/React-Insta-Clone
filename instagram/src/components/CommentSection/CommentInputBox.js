@@ -4,8 +4,13 @@ import './comment.css';
 const CommentInputBox = (props) => {
     return (
         <div className = "comment-input">
-            <form> {/* need to accept comment thro' form method and action */}
-                <input type = "text" placeholder = "comment... " />
+            <form onSubmit={props.addNewComment} > {/* need to accept comment thro' form method and action */}
+                <input 
+                    onChange = {props.changeComment}
+                    type = "text"
+                    name = "comment"
+                    value = {props.value}
+                    placeholder = "comment... " />
             </form>
         </div>
     )

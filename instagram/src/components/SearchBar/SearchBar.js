@@ -9,7 +9,7 @@ import compass from './compass.png';
 import userCircle from './userCircle.png';
 
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     
     return (
         <div className = "search-main-div">
@@ -18,7 +18,11 @@ const SearchBar = () => {
             </div>
 
             <div>
-                <input type="search" placeholder="Search..."  />
+                <input 
+                    type="search" 
+                    placeholder="Search..." 
+                    onKeyDown = {props.searchPosts}
+                />
             </div>
             
             <div className = "social-div">
