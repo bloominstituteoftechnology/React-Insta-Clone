@@ -1,0 +1,32 @@
+.post-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px gray solid;
+}
+.like-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+img.post-profile-img{
+    width: 40px;
+    height: auto;
+    border-radius: 50px;
+    
+}
+
+.post-header{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    
+}
+img{
+    padding: unset;}
+
+.bold-txt{
+    font-weight: bold;
+}
+
