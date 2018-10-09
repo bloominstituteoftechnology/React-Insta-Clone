@@ -11,3 +11,24 @@
     font-weight: bold;
     letter-spacing: 0.02rem;
 }
+
+.comment-form {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-form .input-text {
+    width: 95%;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: #bbbbbb;
+}
+
+.comment-form .submit-button {
+    border: none;
+    background-color: #ffffff;
+    color: #bbbbbb;
+}

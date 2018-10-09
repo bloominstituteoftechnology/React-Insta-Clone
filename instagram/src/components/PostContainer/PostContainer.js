@@ -1,6 +1,7 @@
 import React from 'react'
 import './PostContainer.css';
 
+import CommentForm from '../CommentSection/CommentForm';
 import CommentSection from '../CommentSection/CommentSection';
 
 class PostContainer extends React.Component {
@@ -24,6 +25,12 @@ class PostContainer extends React.Component {
                     {this.props.post.comments.map(comment => (
                         <CommentSection comment={comment} />
                     ))}
+                </div>
+                <div className="post-timestamp">
+                    <p>{this.props.post.timestamp}</p>
+                </div>
+                <div className="post-comment-form">
+                    <CommentForm />
                 </div>
             </div>
         )
