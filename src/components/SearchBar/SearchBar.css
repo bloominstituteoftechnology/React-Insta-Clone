@@ -1,16 +1,27 @@
 /* SearchBar styles go here */
 
+.search-container {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+}
+
 .search-bar {
   width: 100%;
-  height: 60px;
+  max-width: 800px;
+  height: 50px;
   padding: 0px 10px 0px 10px;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
-  border-bottom: 1px solid gray;
 }
 
 .fa-instagram {
@@ -36,7 +47,7 @@
   justify-content: center;
   font-size: 1.2rem;
   color: gray;
-  width: 30%;
+  width: 25%;
   height: 24px;
   border: 1px solid gray;
   border-radius: 3px;

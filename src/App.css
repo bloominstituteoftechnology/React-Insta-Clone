@@ -1,8 +1,9 @@
 /* App styles go here */
 
 .App {
-  max-width: 800px;
-  margin: 2px auto;
+  position: absolute;
+  top: 70px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
