@@ -9,10 +9,10 @@ const Post = props => {
       </div>
       <img className="post-image" src={props.user.imageUrl} alt="" />
       <div className="sprites">
-        <i className="far fa-heart" />
+        <i className="far fa-heart" onClick={props.addLike} />
         <i className="far fa-comment" />
       </div>
-      <p className="bold likes">{props.user.likes} likes</p>
+      <p className="bold likes">{props.likes} likes</p>
     </div>
   );
 };
