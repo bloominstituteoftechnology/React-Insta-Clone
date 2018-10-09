@@ -1,0 +1,12 @@
+.comments-container {
+    padding: 5px 10px 0;
+}
+
+.comment {
+    margin: 8px 0;
+    font-size: 1.6rem;
+}
+
+.user {
+    font-weight: 600;
+}

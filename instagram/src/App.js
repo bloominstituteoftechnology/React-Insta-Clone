@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <Header />
         {dummyData.map(data => {
-          return <PostContainer />
+          return <PostContainer data={data}/>
         })}
       </div>
     );

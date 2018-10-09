@@ -1,0 +1,58 @@
+.post-container {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    margin: 50px auto;
+    text-align: start;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-thumbnail {
+    width: 50px;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.username {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.image-reaction {
+    text-align: start;
+    padding: 5px 5px 0;
+}
+
+.reaction-icon {
+    width: 40px;
+    margin-right: 8px;
+}
+
+.likes {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.timestamp {
+    padding: 0 10px 10px;
+    font-size: 1.4rem;
+    color: grey;
+}
+
+.add-comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10px;
+    padding: 20px 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: grey;
+    border-top: 1px solid lightgrey;
+}

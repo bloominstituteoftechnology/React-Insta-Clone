@@ -9,9 +9,9 @@ const Header = () => (
         </div>
         <input className='searchbar' type='text' placeholder='🔍 Search'/>
         <div className='header-right'>
-            <img className='side-btn' src={require('../../icons/insta_plus.png')} alt='Send Button'/>
-            <img className='side-btn' src={require('../../icons/insta_heart.png')} alt='Heart Button'/>
-            <img className='side-btn' src={require('../../icons/insta_profile.png')} alt='Profile Button'/>
+            <img className='side-btn' src={require('../../icons/insta_plus.png')} alt='send Button'/>
+            <img className='side-btn' src={require('../../icons/insta_heart.png')} alt='heart Button'/>
+            <img className='side-btn' src={require('../../icons/insta_profile.png')} alt='profile Button'/>
         </div>
     </div>
 );
