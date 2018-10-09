@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-const Logo =(prop)=>{
+const Comment= prop =>{
     return (
         <div>
-            Logo goes here 
+            {prop.username}: {prop.text}
         </div>
     )
 }
-export default Logo;
+export default Comment;
