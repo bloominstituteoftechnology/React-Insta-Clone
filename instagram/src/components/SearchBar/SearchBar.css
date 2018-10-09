@@ -1,0 +1,56 @@
+.search-bar {
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -70px;
+}
+
+.search-bar-input {
+  width: 180px;
+  text-align: center;
+}
+
+.social-search-bar {
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+.line {
+  height: 40px;
+}
+
+.instagram {
+  width: 90px;
+  height: 30px;
+}
+
+.compass {
+  width: 30px;
+  height: 30px;
+  padding-right: 20px;
+}
+
+.heart {
+  width: 30px;
+  height: 30px;
+}
+
+.person {
+  width: 60px;
+  height: 60px;
+}
