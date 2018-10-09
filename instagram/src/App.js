@@ -5,22 +5,27 @@ import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
 
 class App extends Component {
-  // constructor(props){
-  //   super(props);
-  //   this.state = {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    };
+  }
 
-  //   }
-  // }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ data: dummyData });
+    }, 800);
+  }
 
   render() {
-    console.log(dummyData.username);
     return (
       <div className="App">
         <header className="App-header">
           <SearchBar />
         </header>
         {/* {dummyData.map(data => ( */}
-        <PostContainer data={dummyData} key={Math.random()} />
+        <PostContainer data={this.state.data} key={Math.random()} />
         {/* ))} */}
       </div>
     );

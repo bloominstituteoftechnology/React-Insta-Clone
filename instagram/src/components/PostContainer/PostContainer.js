@@ -1,17 +1,19 @@
 import React from "react";
+// import PropStyles from "prop-styles";
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
+
 // import UserThumbnail from "./UserThumbnail";
 // import PostImage from "./PostImage";
 // import Likes from "./Likes";
-import AddComment from "./AddComment";
+// import AddComment from "./AddComment";
 
 const PostContainer = props => {
   return (
     <div>
       {props.data.map(post => {
         return (
-          <div className="post-container">
+          <div className="post-container" key={Math.random()}>
             <div className="thumbnail">
               <img
                 className="thumbnail-img"
