@@ -46,13 +46,13 @@ class CommentSection extends Component {
                 
                 <h4 className='likes'>{this.props.post.likes} likes</h4>
                 
-                {this.state.comments.map((post) => {
+                {this.state.comments.map((comment, index) => {
                     return (
-                        <div className="commentSection">
+                        <div className="commentSection" key={index}>
                                 
                             <div className="messages">
-                                <h4>{this.props.post.comments[0].username}</h4>
-                                <p>{this.state.comments[0].text}</p>
+                                <h4>{comment.username}</h4>
+                                <p>{comment.text}</p>
                             </div>
             
                             <h4>{this.state.timestamp}</h4>
