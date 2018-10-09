@@ -12,6 +12,7 @@ const CommentSection = (props) => {
     //       text:
     // ]
     // timestamp:
+    // handleComment: fn
 
     // Format the timestamp using moment:
     const postedAt = moment(props.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow();
@@ -31,7 +32,7 @@ const CommentSection = (props) => {
             )}
             <div className='postedAt'>{postedAt}</div>
             <div className='newComment'>
-                <input className='commentInput' placeholder='Add a comment...' />
+                <input className='commentInput' onKeyUp={props.handleComment} placeholder='Add a comment...' />
                 <FontAwesomeIcon icon="ellipsis-h" />
             </div>
         </div>

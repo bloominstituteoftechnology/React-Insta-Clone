@@ -28,31 +28,24 @@ class App extends Component {
 
   }
 
-  likesHandler = (postId) => {
-    console.log("likeshandler clicked:", this.state.data[postId] );
-    //event.preventDefault();
-    //this.setState({ likes: event.target.likes +1 });
-    this.setState({
-      data: this.state.data.map( (data, index) => {
-        if( index === postId ){
-          return {
-            ...data,
-            likes: data.likes +1
-          }
-        }
-        else {
-          return data;
-        }
-      })
-    })
+  /* Increment likes for the selected comment */
+  // likesHandler = (postId) => {
+  //   this.setState({
+  //     data: this.state.data.map( (data, index) => {
+  //       if( index === postId ){
+  //         return {
+  //           ...data,
+  //           likes: data.likes +1
+  //         }
+  //       }
+  //       else {
+  //         return data;
+  //       }
+  //     })
+  //   })
+  // };
 
-  };
-//  likesHandler = event => {
-//    console.log("likesHandler clicked");
-//    event.preventDefault();
-//    this.setState( this.state.data.likes = this.state.data.likes + 1 );
-//  };
-
+  
   render() {
     return (
       <div className="App">
@@ -77,7 +70,7 @@ class App extends Component {
               likes={data.likes}
               timestamp={data.timestamp}
               comments={data.comments}
-              likesHandler={this.likesHandler}
+              // likesHandler={this.likesHandler}
             />
           );
         })}
