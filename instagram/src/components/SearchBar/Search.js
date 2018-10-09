@@ -1,6 +1,6 @@
 import React from 'react';
 
-let Search = props => {
+let Search = () => {
     return (
            <div>
                 <i className="fas fa-search" />

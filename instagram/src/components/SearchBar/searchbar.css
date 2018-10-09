@@ -1,5 +1,8 @@
 header {
     border-bottom: 0.5px solid lightgrey;
+    background: white;
+    z-index: 2000;
+    position: fixed;
 
 }
 
@@ -10,6 +13,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 19px 392px 13px;
+    width: 1536px;
 }
 
 .logo {

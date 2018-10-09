@@ -1,6 +1,6 @@
 import React from 'react';
 
-let Logo = props => {
+let Logo = () => {
     return (
         <div className="logoBox">
             <img alt="logo" className="logo" src={require('./assets/logo.png')}/>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-let AccountManagement = props => {
+let AccountManagement = () => {
     return (
         <div className='icons'>
             <img alt="Discover" className="compass" src={require('./assets/compass.png')}/>

@@ -4,7 +4,7 @@ import Search from './Search';
 import AccountManagement from './AccountManagement';
 import './searchbar.css'
 
-let SearchBar = props => {
+let SearchBar = () => {
     return (
         <header>
             <nav>
