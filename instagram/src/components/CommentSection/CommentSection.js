@@ -55,8 +55,7 @@ class CommentSection extends React.Component {
       this.setState({
       likes: --likeCounter,
       liked: false,
-    },
-    () => {this.props.updateLikes(this.state.likes);})
+    })
     }
   };
 
