@@ -1,10 +1,12 @@
 import React from 'react'
 import './commentSection.css'
+// import like from './likeandcomment.PNG'
 
 const CommentSection = props => {
     return (
-        <div className='comments'>{props.username}{props.text}{props.newInput}
-        <form className='commentFieldContainer' onSubmit={props.newComment}>
+        
+        <div className='comments'><h4>{props.text}</h4>{props.newInput}
+        <form className='commentFieldContainer' onSubmit={props.newComment} >
             <input 
                  className='addComment' 
                  type='text'
@@ -15,6 +17,7 @@ const CommentSection = props => {
                   />
         </form>
         </div>
+        
     )
 }
 

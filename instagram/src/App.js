@@ -11,8 +11,11 @@ class App extends Component {
     this.state = {
       dummyData: [],
       newComment: '',
+      count: 0,
+      username: '',
     }
   }
+
 
 componentDidMount() {
   setTimeout(() => {
@@ -21,14 +24,17 @@ componentDidMount() {
 }
 
 addNewComment = event => {
-  event.preventDefault();
   this.setState({
-    disneyData: [
+    dummyData: [
       ...this.state.dummyData,
-      { comment: this.state.newComment }
+      { 
+        username: 'Conner',
+        text: this.state.newComment
+       }
     ],
-    newComment: ""
+    newComment: "",
   });
+  event.preventDefault();
 };
 
 changeHandler = event => {
@@ -36,17 +42,26 @@ changeHandler = event => {
   this.setState({ [event.target.name]: event.target.value });
 };
 
+clickToIncrease = () => {
+  this.setState({ count: this.state.count + 1 })
+}
+
+
 
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar
+        username={this.state.username}
+        />
         <PostContainer 
         data={this.state.dummyData}
         newComment={this.addNewComment}
         changeHandler={this.changeHandler}
         newInput={this.state.newComment}
+        count={this.state.count}
+        increaseLike={this.clickToIncrease}
         />
       </div>
     );

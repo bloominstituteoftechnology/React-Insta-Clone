@@ -8,7 +8,7 @@ const SearchBar = props => {
         <div className='searchBarDiv'>
             <img className='instaLogo' src={logo} alt='instagram logo' />
             <form>
-                <input className='searchField' type='text' value='Search'></input>
+                <input className='searchField' type='text' value={props.username} placeholder='username' ></input>
             </form>
             <img className='instaLinks' src={links} alt='instagram links' />
 

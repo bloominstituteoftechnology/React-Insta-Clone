@@ -21,6 +21,9 @@
     border-radius: 50%;
     width: 5%;
 }
+.likes {
+    padding-left: 2%;
+}
 .sk-cube-grid {
     width: 40px;
     height: 40px;
