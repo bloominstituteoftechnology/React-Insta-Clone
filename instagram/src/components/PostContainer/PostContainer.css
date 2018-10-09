@@ -1,13 +1,11 @@
 .PostContainer {
-  border: solid red;
 }
 
 .singlepost {
-  border: solid black;
+  border: 1px solid black;
 }
 
 .singlepost-header {
-  border: solid blue;
   display: flex;
 }
 
@@ -20,18 +18,16 @@
 }
 
 .header-username {
-  border: solid crimson;
   align-self: center;
   margin-left:20px;
 }
 
 .singlepost-main-img-container {
   display:flex;
-  border: solid orange;
+  padding: 10px;
 }
 
 .singlepost-main-img {
-  border: solid purple;
   width:100%;
   height:auto;
   align-self:center;

@@ -8,19 +8,42 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: {dummyData}
-      };
+      posts: [],
+      newComment: ""
+    }
   }
+
+  componentDidMount() {
+    console.log('CDM is running', this.state.posts);
+    // we will add any other data to state (async fetch calls)
+    setTimeout(() => {
+      this.setState({ posts: dummyData });
+    }, 800);
+  }
+
+  updateInput = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+  
+
+  createComment = event => {
+    event.preventDefault();
+    console.log('target name is', [event.target.name]);
+    console.log('target value is', event.target.value);
+    // let username = "bart"
+    // const comments = this.state.posts.slice();
+    // comments.push({username:username}, )
+    // console.log(comments);
+  };
 
   render() {
     console.log(this.state);
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Start of Instagram Clone</h1>
         </header>
         <SearchBar/>
-        <PostContainer posts={this.state.posts}/>
+        <PostContainer updateInput={this.updateInput} posts={this.state.posts} createComment={this.createComment}/>
       </div>
     );
   }

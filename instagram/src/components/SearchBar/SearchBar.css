@@ -1,8 +1,17 @@
 .SearchBar {
-  border: solid greenyellow;
+  display: flex;
+  justify-content: space-around;
+  padding-top:20px;
+  padding-bottom:20px;
+  border: 1px solid black;
 }
 
 .IG-logo {
-  border: solid red;
 }
+
+.search-bar {
+  margin-left:20px;
+  margin-right:20px
+}
+
 

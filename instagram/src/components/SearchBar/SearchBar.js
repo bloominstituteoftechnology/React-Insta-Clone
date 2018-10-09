@@ -7,7 +7,12 @@ const SearchBar = props => {
   return (
     <div className="SearchBar">
       <img className="IG-logo" src='./images/instagramlogo.svg' alt="IG logo Test"/>
-      <h1>I am a Search Bar</h1>
+      <img className="IG-logo" src='./images/ig_search_bar.png' alt="IG Written Logo"/>
+      <input className="search-bar" type="text" placeholder='Search...'/>
+      <img className="compass" src='./images/compass.svg' alt="compass"/>
+      <img className="heart" src='./images/heart.svg' alt="heart"/>
+      <img className="user" src='./images/user.svg'  alt="user"/>
+
     </div>
   );
 };

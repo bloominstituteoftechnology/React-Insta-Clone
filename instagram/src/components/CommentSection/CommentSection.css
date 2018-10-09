@@ -1,8 +1,8 @@
 .CommentContainer {
-  border: solid purple;
   display:flex;
   flex-direction:column;
   text-align:left;
+  border: 1px solid black;
 }
 
 .singlecomment {
