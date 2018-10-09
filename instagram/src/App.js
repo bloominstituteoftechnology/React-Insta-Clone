@@ -16,7 +16,7 @@ class App extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ data: dummyData })
-    }, 2000)
+    }, 200)
   }
 
   updateSearchText = e => {
