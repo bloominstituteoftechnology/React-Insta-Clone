@@ -11,6 +11,10 @@
     margin-top: 15px;
 }
 
+.likes {
+    margin-left: 20px;
+}
+
 .commentIcons {
     display: flex;
     margin-left: 15px;

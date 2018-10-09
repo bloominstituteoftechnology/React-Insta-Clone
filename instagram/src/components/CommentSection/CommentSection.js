@@ -7,20 +7,33 @@ import './CommentSection.css';
 class CommentSection extends Component {
     constructor(props) {
         super(props);
-        this.state = props.item;
+        this.state = {
+            comments: props.post.comments,
+            newComment: '',
+        };
+        this.addNewComment = this.addNewComment.bind(this);
+        this.changeHandler = this.changeHandler.bind(this);
     }
 
+    changeHandler = event => {
+        console.log(event.target.name);
+        this.setState({ [event.target.name]: event.target.value });
+      };
+
     addNewComment = (event, index) => {
+        console.log('before new comment')
         event.preventDefault();
         this.setState({ 
-            item: [
-                ...this.state.item,
+            comments: [
+                ...this.state.comments,
                 {
-                    comment: this.state.newComment
+                    username: 'Shawn',
+                    text: this.state.newComment,
                 }
             ],
             newComment: ''
         });
+        console.log('after new comment')
     };
 
     render() {
@@ -30,27 +43,23 @@ class CommentSection extends Component {
                     <FontAwesomeIcon className="commentIcon" icon={['far', 'heart']} size="2x" />
                     <FontAwesomeIcon className="commentIcon" icon={['far', 'comment']} size="2x" />
                 </div>
-                <div className="commentSection">
-                    <h4>{this.state.likes} likes</h4>
-                        
-                    <div className="messages">
-                        <h4>{this.state.comments[0].username}</h4>
-                        <p>{this.state.comments[0].text}</p>
-                    </div>
-    
-                    <div className="messages">
-                        <h4>{this.state.comments[1].username}</h4>
-                        <p>{this.state.comments[1].text}</p>
-                    </div>
-    
-                    <div className="messages">
-                        <h4>{this.state.comments[2].username}</h4>
-                        <p>{this.state.comments[2].text}</p>
-                    </div>
-    
-                    <h4>{this.state.timestamp}</h4>
-                </div>
-                <NewComment newComment={this.state.newComment} addNewComment={this.addNewComment}/>
+                
+                <h4 className='likes'>{this.props.post.likes} likes</h4>
+                
+                {this.state.comments.map((post) => {
+                    return (
+                        <div className="commentSection">
+                                
+                            <div className="messages">
+                                <h4>{this.props.post.comments[0].username}</h4>
+                                <p>{this.state.comments[0].text}</p>
+                            </div>
+            
+                            <h4>{this.state.timestamp}</h4>
+                        </div>
+                    );
+                })}
+                <NewComment newComment={this.state.newComment} addNewComment={this.addNewComment} changeHandler={this.changeHandler}/>
             </div>
         );
     }

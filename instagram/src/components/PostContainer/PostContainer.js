@@ -6,8 +6,8 @@ import CommentSection from '../CommentSection/CommentSection.js';
 const PostContainer = props => {
     return (
         <div className="postContainer">
-            <PostHeader item={props.item}/>
-            <CommentSection newComment={props.newComment} item={props.item} index={props.index}/>
+            <PostHeader post={props.post}/>
+            <CommentSection post={props.post} index={props.index}/>
         </div>
     );
 }

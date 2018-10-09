@@ -15,7 +15,6 @@ class App extends Component {
     super(props)
     this.state = {
       dummyData: [],
-      newComment: '',
     }
   }
 
@@ -29,7 +28,7 @@ class App extends Component {
         <SearchHeader />
         {this.state.dummyData.map((item, index) => {
                 return (
-                  <PostContainer newComment={this.state.newComment} item={item} key={index}/>
+                  <PostContainer post={item} key={index}/>
                 );
             })}
       </div>
