@@ -35,41 +35,47 @@ class CommentSection extends React.Component {
   };
 
   changeHandler = (key, value) => {
+    //"key" here is NewComment, it and the value are pulled from the onSubmit in Comment.js
     this.setState({
       [key]: value
     });
-    localStorage.setItem(key, value);
+    // saves currently typed comment in storage. uncomment when storage bug is figured out
+    // localStorage.setItem(key, value);
   };
 
-  saveState() {
-    for (let key in this.state) {
-      localStorage.setItem(key, JSON.stringify(this.state[key]));
-    }
-  }
+  // next methods are all related to localStorage persistence,
+  // but I encountered a bug I haven't fixed yet where it will set
+  // ALL posts' comments to the last post's
 
-  hydrateState() {
-    for (let key in this.state) {
-      if (localStorage.hasOwnProperty(key)) {
-        let value = localStorage.getItem(key);
-        try {
-          value = JSON.parse(value);
-          this.setState({ [key]: value });
-        } catch (error) {
-          this.setState({ [key]: value });
-        }
-      }
-    }
-  }
+  // saveState() {
+  //   for (let key in this.state) {
+  //     localStorage.setItem(key, JSON.stringify(this.state[key]));
+  //   }
+  // }
 
-  componentDidMount() {
-    this.hydrateState();
-    window.addEventListener("beforeunload", this.saveState.bind(this));
-  }
+  // hydrateState() {
+  //   for (let key in this.state) {
+  //     if (localStorage.hasOwnProperty(key)) {
+  //       let value = localStorage.getItem(key);
+  //       try {
+  //         value = JSON.parse(value);
+  //         this.setState({ [key]: value });
+  //       } catch (error) {
+  //         this.setState({ [key]: value });
+  //       }
+  //     }
+  //   }
+  // }
 
-  componentWillUnmount() {
-    window.removeEventListener("beforeunload", this.saveState.bind(this));
-    this.saveState();
-  }
+  // componentDidMount() {
+  //   this.hydrateState();
+  //   window.addEventListener("beforeunload", this.saveState.bind(this));
+  // }
+
+  // componentWillUnmount() {
+  //   window.removeEventListener("beforeunload", this.saveState.bind(this));
+  //   this.saveState();
+  // }
 
   render() {
     return (
