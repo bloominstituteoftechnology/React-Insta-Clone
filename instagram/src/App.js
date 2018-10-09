@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import dummyData from './dummy-data.js';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
+  state = {
+    posts: [],
+  };
+
+  componentDidMount() {
+    this.setState({ posts: dummyData });
+  }
+
   render() {
     return (
       <div className="App">
@@ -13,16 +21,6 @@ class App extends Component {
         {dummyData.map((post) => {
           return <PostContainer post={post} key={post.timestamp} />;
         })}
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
       </div>
     );
   }
