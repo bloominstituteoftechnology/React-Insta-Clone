@@ -6,13 +6,19 @@ import './App.css';
 
 class App extends Component {
   constructor() {
+    console.log("constructor invoked")
     super()
     this.state = {
       postData: dummyData,
 
     }
   }
+  componentDidMount() {
+    console.log("CDM invoked")
+
+  }
   render() {
+    console.log("render invoked")
     return (
       <div className="App">
         <header className="App-header">
