@@ -18,20 +18,51 @@
   margin-top: 5px;
   height: 40px;
   width: 105px;
+  cursor: pointer;
 }
 
 .nav-logo .fab {
   color: black;
   font-size: 26px;
+  cursor: pointer;
+}
+
+.nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .search {
   background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  width: 199px;
+  height: 12px;
+  padding: 7px;
+  font-size: 12px;
+  color: #999;
 }
 
 .search-bar {
   display: flex;
   justify-content: space-between;
-  width: 930px;
+  max-width: 930px;
+  margin: 0 auto;
   height: 25px;
+  padding: 26px 40px;
+  background: #fff;
+}
+
+.nav-icons {
+  width: 132px;
+  padding-left: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-icons .far {
+  font-size: 24px;
+  cursor: pointer;
 }
