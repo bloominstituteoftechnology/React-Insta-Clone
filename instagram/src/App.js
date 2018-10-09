@@ -11,7 +11,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      posts: []
+      posts: [],
+      searchParam: ''
     }
   }
 
@@ -19,12 +20,34 @@ class App extends Component {
     this.setState({ posts: dummyData })
   }
 
+  search = event => {
+    event.preventDefault()
+    console.log(this.state.searchParam)
+  }
+
+  handleSearchInputChange = event => {
+    this.setState({ searchParam: event.target.value })
+  }
+
   render() {
-    const { posts } = this.state
+    let { posts, searchParam } = this.state
+    const { search, handleSearchInputChange } = this
+
+    console.log('posts')
+    console.log(posts)
+    // console.log(posts.filter(({ username }) => username.match(searchParam)))
+
+    posts = posts.filter(({ username }) => username.match(searchParam))
+
+    console.log(posts)
 
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar
+          searchParam={searchParam}
+          search={search}
+          handleSearchInputChange={handleSearchInputChange}
+        />
         <div className="posts-container">
           {posts.length > 0 &&
             posts.map((post, i) => <PostContainer key={i} post={post} />)}
