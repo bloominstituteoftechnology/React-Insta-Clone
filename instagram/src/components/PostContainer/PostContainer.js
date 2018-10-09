@@ -22,7 +22,6 @@ const PostContainer = props => {
       <Card className="customCard">
         <PostHeader username={username} thumbnailUrl={thumbnailUrl} />
         <CardImg src={imageUrl} alt="post" className="cardImg" />
-        {/* <PostInteraction likes={likes} /> */}
         <CommentSection
           comments={comments}
           likes={likes}

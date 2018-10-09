@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
+import SearchBar from './components/SearchBar/SearchBar';
 import './App.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
@@ -30,9 +31,12 @@ class App extends Component {
         {!this.state.postData.length ? (
           <h1 className="loadingScreen">Loading...</h1>
         ) : (
-          this.state.postData.map(postInfo => (
-            <PostContainer postInfo={postInfo} key={postInfo.timestamp} />
-          ))
+          <div>
+            <SearchBar />
+            {this.state.postData.map(postInfo => (
+              <PostContainer postInfo={postInfo} key={postInfo.timestamp} />
+            ))}
+          </div>
         )}
       </div>
     );

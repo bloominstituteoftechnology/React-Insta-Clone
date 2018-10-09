@@ -10,22 +10,43 @@ class CommentSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.comments
+      comments: props.comments,
+      newComment: ''
     };
   }
 
+  addNewComment = event => {
+    event.preventDefault();
+    this.setState({
+      comments: [
+        ...this.state.comments,
+        { text: this.state.newComment, username: 'Brandon' }
+      ],
+      newComment: ''
+    });
+  };
+
+  onChangeHandler = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
   render() {
+    const { likes } = this.props;
     return (
       <div className="commentSection">
-        <PostInteraction likes={this.props.likes} />
+        <PostInteraction likes={likes} />
         {this.state.comments.map((comment, index) => {
           return <Comment key={index} comment={comment} />;
         })}
-        <form>
+        <form onSubmit={event => this.addNewComment(event)}>
           <input
             type="text"
             className="commentAdd"
             placeholder="Add a Comment..."
+            onChange={this.onChangeHandler}
+            name="newComment"
+            value={this.state.newComment}
+            autoComplete="off"
           />
           <FontAwesomeIcon icon="ellipsis-h" className="tripleDot" />
         </form>
