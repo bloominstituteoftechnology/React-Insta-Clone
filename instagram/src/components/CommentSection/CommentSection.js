@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import './CommentSection.css'
+
 const CommentSection = ({ comments }) => (
-  <div>
+  <div className="comment-section">
     {comments.map(({ username, text }, i) => (
-      <div key={i}>
-        <p>{username}</p>
-        <p>{text}</p>
+      <div key={i} className="comment">
+        <p className="comment-username">{username}</p>
+        <p className="comment-text">{text}</p>
       </div>
     ))}
   </div>

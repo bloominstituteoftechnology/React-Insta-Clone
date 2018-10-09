@@ -1,0 +1,32 @@
+.post-header {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.user-thumbnail {
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-size: 1.6rem;
+}
+
+.post-image {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.likes-text {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.timestamp {
+  font-size: 1.4rem;
+  margin: 5px 0;
+  color: grey;
+}

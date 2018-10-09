@@ -6,3 +6,7 @@ html {
   box-sizing: border-box;
 }
 
+.posts-container {
+  width: 600px;
+  margin: 0 auto;
+}

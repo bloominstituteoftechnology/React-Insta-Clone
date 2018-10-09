@@ -21,7 +21,9 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        {posts.map((post, i) => <PostContainer key={i} post={post} />)}
+        <div className="posts-container">
+          {posts.map((post, i) => <PostContainer key={i} post={post} />)}
+        </div>
       </div>
     )
   }
