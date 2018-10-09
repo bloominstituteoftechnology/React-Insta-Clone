@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar search={this.state.search} onInputChange={this.onInputChange}/>
-        {filteredData.map((data,i) => <PostContainer key={i} data={data} comment={this.state.comment} />)}
+        {filteredData.map((data,i) => <PostContainer key={i} data={data} />)}
       </div>
     );
   }
