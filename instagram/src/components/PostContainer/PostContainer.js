@@ -1,15 +1,43 @@
 import React from "react";
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
-import UserThumbnail from "./UserThumbnail";
-import PostImage from "./PostImage";
+// import UserThumbnail from "./UserThumbnail";
+// import PostImage from "./PostImage";
 import Likes from "./Likes";
 import AddComment from "./AddComment";
 
 const PostContainer = props => {
   return (
-    <div className="post-container">
-      <UserThumbnail
+    <div>
+      {props.data.map(post => {
+        return (
+          <div className="post-container">
+            <div className="thumbnail">
+              <img
+                className="thumbnail-img"
+                src={post.thumbnailUrl}
+                alt={post.username}
+              />
+              <p>{post.username}</p>
+            </div>
+            {/* user thumbnail */}
+            <img className="post-img" src={post.imageUrl} alt="post" />
+            <div className="comments-container">
+              <div className="post-icons">
+                <div>
+                  <i className="far fa-heart" />
+                  <i className="far fa-comment" />
+                  <i className="far fa-share-square" />
+                </div>
+                <i className="far fa-bookmark" />
+              </div>
+              <div className="like-count">{post.likes} likes</div>
+            </div>
+          </div> // post-container
+        );
+      })}
+
+      {/* <UserThumbnail
         thumb={props.data.thumbnailUrl}
         username={props.data.username}
       />
@@ -19,7 +47,7 @@ const PostContainer = props => {
         <CommentSection data={props.data} />
         <div className="timestamp">2 hours ago</div>
         <AddComment />
-      </div>
+      </div> */}
     </div>
   );
 };

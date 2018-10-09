@@ -19,9 +19,9 @@ class App extends Component {
         <header className="App-header">
           <SearchBar />
         </header>
-        {dummyData.map(data => (
-          <PostContainer data={dummyData} key={Math.random()} />
-        ))}
+        {/* {dummyData.map(data => ( */}
+        <PostContainer data={dummyData} key={Math.random()} />
+        {/* ))} */}
       </div>
     );
   }
