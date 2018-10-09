@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchBar from "./components/SearchBarContent/SearchBar"
+import SearchBar from "./components/SearchBarContent/SearchBar";
+import PostContainer from "./components/PostContent/PostContainer";
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
         <div className="top-header">
           <SearchBar />
         </div>
+        <PostContainer />
       </div>
     );
   }
