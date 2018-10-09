@@ -1,0 +1,15 @@
+.post{
+    border: 1px solid blue;
+    margin: 0 5%;
+}
+
+.postheader{
+    display: flex;
+    align-items: center;
+    
+}
+
+.profile-pic{
+    border-radius: 50%;
+    width: 10%
+}

@@ -1,6 +1,7 @@
 import React from 'react';
-
 import Comments from './comments';
+import './CommentSection.css';
+
 
 
 class CommentSection extends React.Component{
@@ -17,7 +18,7 @@ class CommentSection extends React.Component{
         return(
             <div>
                 {this.state.allComments.map((comment, index) => <Comments key= {index} comments={comment} />)}
-            <form>
+            <form className = 'comment-form'>
                 <input 
                 placeholder= 'Add a comment...'>
                 </input>
