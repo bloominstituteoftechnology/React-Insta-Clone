@@ -1,5 +1,5 @@
 import React from 'react'
-import '../App.css';
+import './SearchBar.css'
 
 const SearchBar = props => {
     return (

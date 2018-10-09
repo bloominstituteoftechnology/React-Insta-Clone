@@ -1,0 +1,45 @@
+.post-container {
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .post-container .user {
+    display: flex;
+    align-items: center;
+  }
+  
+  .post-container .user .user-name {
+    font-size: 10px;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+  
+  .post-container .user .user-photo img {
+    width: 20px;
+    border-radius: 10px;
+  }
+  
+  
+  
+  .post-container div img {
+    width: 300px;
+  }
+  
+  .post-container .post-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .post-container .post-actions .left-actions {
+    width: 40px;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;  
+  }
+  
+  .post-container .likes {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 10px;
+    font-weight: 600;
+  }
