@@ -1,0 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
+.username {
+    font-weight: bold;
+}
