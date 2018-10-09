@@ -3,18 +3,59 @@ import dummyData from '../../dummy-data';
 import PropTypes from 'prop-types';
 import './CommentSection.css';
 
-const CommentSection = () => {
+class CommentSection extends React.Component {
+
+    constructor(){
+        super();
+
+        this.state = {
+
+            data: dummyData
+
+        }
+    }
 
     // const {username, timestamp} = props.Data;
-    const LikeButton = () => (
-        <i className="fa fa-heart like-button" />
-    )
+ 
 
-    const Comment = () => (
-        <i className="fa fa-comment comment "/>
-    )
+    addNewComment = (event, index) => {
+
+       const newComment = this.data.comments.slice() ;
+
+       this.setState({
+            data: this.data.comment.concat([newComment])
+       })
+       if (newComment.index !== this.data.comments.index){
+           newComment.map(() => {
+               
+           return {username: this.data.comments.username,
+            text: event.target.value }})
+       }
+
+        
+
+      //  index ??? event.target.value
+
+    }
+
+    commentUpdater = () => {
+this.addNewComment();
+
+
+    }
+
+    //c
 
     // addNewComment
+    render(){
+        const LikeButton = () => (
+        <i className="fa fa-heart like-button" />
+    );
+
+        const Comment = () => (
+        <i className="fa fa-comment comment "/>
+    );
+
     return(
         <div className="cmntSectDiv">
         {dummyData.map(item => <div key={item.timestamp}>
@@ -26,6 +67,7 @@ const CommentSection = () => {
             <div>{item.timestamp}</div>
             <LikeButton />
             <Comment />
+            <form ></form>
             <input />
             
             <div>{item.comments.map(item =>
@@ -45,6 +87,7 @@ const CommentSection = () => {
         <input />
         </div>
     )
+    }
 }
 
 dummyData.propTypes = {

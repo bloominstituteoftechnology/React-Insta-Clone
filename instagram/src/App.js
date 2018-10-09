@@ -15,10 +15,26 @@ class App extends React.Component {
 
       text: '',
       // empty array, should be able to link existing comments here and push user object.
-      newComment: []
-    }
+      newComment: [],
+
+      asyncMessage: ''
+    };
   }
 
+  // componentDidMount(){
+  //   setTimeout(() => {
+  //     this.setState({
+  //       LoadingText: 'Page has loaded'});
+  //   }, 3000)
+  // }
+
+
+  // componentDidMount(){
+
+  //   setTimeout(() => {
+  //     this.setState({asyncMessage: 'Loading..'});
+  //   }, 4000);
+  // }
   // todo: add buttons, synthetic click for search
 
   inputText = (event) => {

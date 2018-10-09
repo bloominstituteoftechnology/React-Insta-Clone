@@ -4,6 +4,11 @@ import CommentSection from '../CommentSection/CommentSection'
 import './PostContainer.css'
 
 class PostContainer extends React.Component{
+    constructor(props){
+        super();
+
+        this.state = {}
+    }
     render(props){
         return(
             <div className="postContDiv">
