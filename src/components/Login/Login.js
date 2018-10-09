@@ -1,7 +1,7 @@
-import React, { component } from 'react';
+import React, { Component } from 'react';
 import './login.css';
 
-class Login extends component {
+class Login extends Component {
     constructor() {
         super();
 

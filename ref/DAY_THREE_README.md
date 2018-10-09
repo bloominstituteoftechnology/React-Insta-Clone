@@ -48,9 +48,9 @@ const Authenticate = App =>
 
 [x] In your `components` directory, create a directory called `Login` and add a new file called `Login.js`.
 [x] There should be a `username` input, a `password` input, and a `Login` button.
-[] The component should invoke the `login` function in `app.js` when a user logs in.
-[] This login function should set a `username` on `localStorage`. You'll need to check local storage to see if a user is logged in.
-[] Be sure to force the page to reload when a user logs in so that our component un-mounts and mounts again.
+[x] The component should invoke the `login` function in `app.js` when a user logs in.
+[x] This login function should set a `username` on `localStorage`. You'll need to check local storage to see if a user is logged in.
+[x] Be sure to force the page to reload when a user logs in so that our component un-mounts and mounts again.
 
 [x] Extending the functionality of the HOC to conditionally render the `LoginPage` or the `App`
 
