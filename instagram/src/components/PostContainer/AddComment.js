@@ -1,15 +1,15 @@
-import React from "react";
-import "./PostContainer.css";
+// import React from "react";
+// import "./PostContainer.css";
 
-const AddComment = () => {
-  return (
-    <div className="add-comment">
-      <form>
-        <input type="text" placeholder="Add a comment..." />
-      </form>
-      <i className="fas fa-ellipsis-h" />
-    </div>
-  );
-};
+// const AddComment = () => {
+//   return (
+//     <div className="add-comment">
+//       <form>
+//         <input type="text" placeholder="Add a comment..." />
+//       </form>
+//       <i className="fas fa-ellipsis-h" />
+//     </div>
+//   );
+// };
 
-export default AddComment;
+// export default AddComment;
