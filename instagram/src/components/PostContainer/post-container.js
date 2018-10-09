@@ -5,10 +5,10 @@ import comment from'../../images/comment.png';
 import CommentSection from '../../components/CommentSection/comment-section';
 // import moment from 'moment';
 import '../PostContainer/PostContainer.css'
+import PropTypes from 'prop-types';
 
 
-
-const PostContainer = (props) => {
+ const PostContainer = (props) => {
     return (
         <React.Fragment>
             {dummyData.map ((item) => {
@@ -17,19 +17,15 @@ const PostContainer = (props) => {
                         <div className = 'userName'>
                             <img src = {item.thumbnailUrl}  alt ='user-thumbnail' />
                             <h4> {item.username} </h4>
-
-                        </div>
-
-                        <div className ='imageContainer'>
+                         </div>
+                         <div className ='imageContainer'>
                             <img src ={item.imageUrl} alt ='user post image' />
                         </div>
-
-                        <div className ='userInteraction'>
+                         <div className ='userInteraction'>
                             <img src ={heart} alt ='heart' />
                             <img src={comment} alt ='comment' />
                         </div>
-
-                        <div className ='likes-comments'>
+                         <div className ='likes-comments'>
                             <h4 className = 'likes'> {item.likes} Likes</h4>
                             {item.comments.map ((index) => {
                                 return (
@@ -40,17 +36,14 @@ const PostContainer = (props) => {
                                     </div>
                                 )
                             })}
-
-                            <div className ='timeSincePost'>
+                             <div className ='timeSincePost'>
                                <p> Posted on {item.timestamp} </p> 
                                 {/* {moment().fromNow()} */}
                             </div>
-
-                            <div className = 'inputComment'>
+                             <div className = 'inputComment'>
                                 <CommentSection />
                             </div>
-
-                        </div>
+                         </div>
                     
                     </div>
                 )
@@ -60,4 +53,18 @@ const PostContainer = (props) => {
     )
 }
 
-export default PostContainer;
+PostContainer.propTypes = {
+	key: PropTypes.oneOfType([
+         PropTypes.string, PropTypes.number 
+        ]),
+	thumbnailUrl: PropTypes.string,
+	username: PropTypes.string,
+	imageUrl: PropTypes.string,
+	likes: PropTypes.number,
+	timestamp: PropTypes.string,
+	comments: PropTypes.shape({
+		username: PropTypes.string,
+		text: PropTypes.string
+	})
+};
+ export default PostContainer;
