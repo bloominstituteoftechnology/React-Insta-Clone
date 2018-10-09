@@ -1,0 +1,25 @@
+.post {
+  max-width: 640px;
+  border: 1px solid black;
+  backgroun-color: white;
+  margin: 0 auto;
+  margin-top: 10%;
+
+}
+
+.post-header {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+}
+
+.post-header img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 2%;
+}
+
+.post-header p {
+
+}

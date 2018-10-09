@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import Comment from './Comment'
+import './CommentSection.css'
 
 class CommentSection extends Component {
   constructor(props) {
@@ -28,13 +29,16 @@ class CommentSection extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        {this.state.comments.map((comment, i) =>
-          <Comment key={i} comment={comment} />
-        )}
-        <p className='moment'>{moment(`${this.state.comments[this.state.comments.length-1].timestamp}`).fromNow()}</p>
-        <input type='text' name='comment' placeholder='Add a comment...' onChange={this.handleComment} value={this.state.comment} onKeyPress={this.handleInput} />
-      </React.Fragment>
+      <div className='comment-section'>
+          <React.Fragment>
+            {this.state.comments.map((comment, i) =>
+              <Comment key={i} comment={comment} />
+            )}
+            <p className='moment'>{moment(`${this.state.comments[this.state.comments.length-1].timestamp}`).fromNow()}</p>
+            <input type='text' name='comment' placeholder='Add a comment...' onChange={this.handleComment} value={this.state.comment} onKeyPress={this.handleInput} />
+          </React.Fragment>
+      </div>
+
     )
   }
 }
