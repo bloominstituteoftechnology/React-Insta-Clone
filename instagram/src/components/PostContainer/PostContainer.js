@@ -3,9 +3,9 @@ import './PostContainer.css';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 
-const PostContainer = ({ data }) => {
+const PostContainer = ({ data, likePost, id }) => {
   return (
-    <div className="PostContainer">
+    <div className="PostContainer" onClick={e => likePost(e, id)}>
       <header className="PostContainer-Header">
         <img src={data.thumbnailUrl} alt="User" />
         {data.username}
@@ -14,8 +14,12 @@ const PostContainer = ({ data }) => {
         <img src={data.imageUrl} alt="Image" />
       </div>
       <div className="PostContainer-Icons">
-        <ion-icon name="heart-empty" />
-        <ion-icon name="chatbubbles" />
+        <div className="Icon">
+          <i className={'far fa-heart'} />
+        </div>
+        <div className="Icon">
+          <ion-icon name="chatbubbles" />
+        </div>
       </div>
       <div className="PostContainer-Likes">{data.likes} likes</div>
       <CommentSection comments={data.comments} />

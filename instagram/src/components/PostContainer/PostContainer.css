@@ -38,6 +38,11 @@
 
 .PostContainer-Icons {
   font-size: 2.5rem;
+  display: flex;
+}
+
+.Icon {
+  cursor: pointer;
 }
 
 .PostContainer-Icons ion-icon {
