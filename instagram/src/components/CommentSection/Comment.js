@@ -11,7 +11,7 @@ const Comment = props => {
   );
 };
 
-Comment.protoTypes = {
+Comment.propTypes = {
   comment: PropTypes.shape({
     text: PropTypes.string,
     username: PropTypes.string

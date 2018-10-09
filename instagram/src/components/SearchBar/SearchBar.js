@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchBar.Css";
 
-const SearchBar = () => {
+const SearchBar = props => {
   return (
     <div className="searchBarContainer">
       <div className="imageContainer">
@@ -9,7 +9,7 @@ const SearchBar = () => {
       </div>
 
       <div>
-        <input type="text" placeholder="Search" />
+        <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
       </div>
     </div>
   );
