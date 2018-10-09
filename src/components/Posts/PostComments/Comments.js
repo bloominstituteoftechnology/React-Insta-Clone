@@ -10,7 +10,8 @@ class Comments extends Component {
     this.state = {
     userInput: '',
     comments: this.props.obj.comments,
-    timestamps: this.props.obj
+    timestamps: this.props.obj,
+    counter: this.props.obj.likes
     }
 }
 
@@ -33,9 +34,21 @@ addComment = (event) => {
     })
 }
 
+addLike = (event) => {
+    event.preventDefault();
+    const likesCounter = this.state.counter;
+    this.setState({
+        counter: likesCounter+1
+    })
+}
+
 render(){
     return(
         <div className="commentsContainer">
+        { this.state.counter === 1 ? ( <p className="like">1 like</p> ) : ( <p className="likes">{this.state.counter} likes</p> )}
+        <div className={"action"} id="likeAction" onClick={this.addLike}></div>
+        <div className={"action"} id="commentAction"></div>
+        }
         
             {this.state.comments.map(instance => {
                 return (
@@ -56,7 +69,7 @@ render(){
                     >
                     
                     </input>
-
+    
                     <div className={"addCommentActionMenu"}>
                         &bull;&bull;&bull; 
                     </div>

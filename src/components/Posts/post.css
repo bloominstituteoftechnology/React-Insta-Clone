@@ -47,8 +47,10 @@
 #likeAction {
     position: relative;
     width: 26px;
-    background-position: -458px 439px;
+    background-position: -457px 439px;
     cursor: pointer;
+    left: -280px;
+    margin-top: 12px;
 }
 #commentAction {
     position: relative;
@@ -56,6 +58,7 @@
     width: 26px;
     background-position: 212px 42px;
     cursor: pointer;
+    top: 0.5px;
 }
 
 .postLikes{
@@ -90,6 +93,15 @@
 .footerContainer{
     display: inline-flex;
 }
+.likes{
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    padding-left: 16px;
+    margin: -1px;
+}
+
+
 .addCommentActionMenu{
     align-self: center;
     width: 30px;
