@@ -1,0 +1,50 @@
+@font-face {
+  font-family: OilBat;
+  src: url("./OilBats.ttf");
+}
+
+.search-bar-container {
+  padding: 20px 0;
+  background: #fff;
+  height: 85px;
+}
+.search-bar {
+  display: flex;
+  max-width: 1010px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.search-bar h1 {
+  font-family: OilBat;
+}
+.search-bar i {
+  font-size: 28px;
+  background: #fff;
+}
+.search-bar .search-line {
+  border-left: 1px solid #262626;
+  margin: 0 5px;
+  height: 28px;
+  color: #262626;
+}
+.search-bar .search-logo {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+}
+.search-bar .search-logo i,
+.search-bar .search-logo span,
+.search-bar .search-logo h1 {
+  margin: 0 10px;
+}
+.search-bar form input {
+  padding: 8px 25px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  text-align: center;
+}
+.search-bar .search-icons i {
+  margin: 0 10px;
+  cursor: pointer;
+}
