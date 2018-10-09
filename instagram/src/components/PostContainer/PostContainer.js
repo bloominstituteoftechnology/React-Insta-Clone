@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from "prop-types";
 import './PostContainer.css';
 
-import CommentForm from '../CommentSection/CommentForm';
 import CommentSection from '../CommentSection/CommentSection';
 
 class PostContainer extends React.Component {
@@ -22,17 +21,7 @@ class PostContainer extends React.Component {
                     </p>
                     <p className="likes-count">{this.props.post.likes} likes</p>
                 </div>
-                <div className="post-comments">
-                    {this.props.post.comments.map(comment => (
-                        <CommentSection comment={comment} />
-                    ))}
-                </div>
-                <div className="post-timestamp">
-                    <p>{this.props.post.timestamp}</p>
-                </div>
-                <div className="post-comment-form">
-                    <CommentForm />
-                </div>
+                <CommentSection comments={this.props.post.comments} timestamp={this.props.post.timestamp} />
             </div>
         )
     }
