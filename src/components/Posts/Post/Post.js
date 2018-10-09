@@ -2,8 +2,6 @@ import React from 'react';
 import './postcontainer.css';
 import PostUser from '../PostHeader/PostUser';
 import PostImg from '../PostBody/PostImg';
-
-import PostLikes from '../PostBody/PostLikes';
 import Comments from "../PostComments/Comments";
 
 const Post = props => {

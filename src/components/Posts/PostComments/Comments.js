@@ -37,16 +37,23 @@ addComment = (event) => {
 addLike = (event) => {
     event.preventDefault();
     const likesCounter = this.state.counter;
+    var likeButton = document.getElementById("likeAction");
+    console.log(likeButton)
     this.setState({
         counter: likesCounter+1
     })
 }
 
+removeLike = () =>{
+    var likeButton = document.getElementById('likeAction');
+    likeButton.style.display = "invisible"
+}
+
 render(){
     return(
         <div className="commentsContainer">
-        { this.state.counter === 1 ? ( <p className="like">1 like</p> ) : ( <p className="likes">{this.state.counter} likes</p> )}
-        <div className={"action"} id="likeAction" onClick={this.addLike}></div>
+        { this.state.counter === 1 ? ( <p className="like"></p> ) : ( <p onChange={this.removeLike} className="likes">{this.state.counter} likes</p> )}
+        <div className={"action"} id="likeAction" ref="likeAction" onClick={this.addLike}> </div>
         <div className={"action"} id="commentAction"></div>
         
             {this.state.comments.map(instance => {
