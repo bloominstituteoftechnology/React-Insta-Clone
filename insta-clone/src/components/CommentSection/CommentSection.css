@@ -23,16 +23,23 @@
 
 }
 
+
 .comment-input {
-    width:85%;
     height:45px;
-    border-top:1px solid lightgray;
-    border-right:1px solid white;
-    border-left:1px solid white;
+    border:none;
     margin-right:30px;
 }
 
-.ellipise {
-    display:inline-block;
-    text-align: left;
+
+.add-comment {
+    display:flex;
+    width:100%;
+    border-top:1px solid lightgray;
+}
+
+.add-comment form {
+    width:90%;
+}
+.fas {
+    color:red;
 }

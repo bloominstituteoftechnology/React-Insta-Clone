@@ -10,7 +10,8 @@ class CommentSection extends React.Component {
         this.state = {
             comments:[],
             newComment: "",
-            likes:0
+            likes:0,
+            liked: false
         }
     }
     componentDidMount(){
@@ -24,7 +25,6 @@ class CommentSection extends React.Component {
         this.setState({
             newComment: event.target.value
         })
-        console.log(this.state.newComment)
     }
     addNewComment = event => {
         event.preventDefault();
@@ -38,15 +38,15 @@ class CommentSection extends React.Component {
     }
 
     miLikey = event => {
-        this.setState({likes: this.state.likes +1})
+        this.setState({liked: !this.state.liked})
     }
 
     render(){
         return(
             <div className="comment-section">
-            <i onClick={this.miLikey} className="far fa-heart icon"></i>
+            <i onClick={this.miLikey} className={this.state.liked ? "fas fa-heart icon" : "far fa-heart icon"}></i>
             <i className="far fa-comment icon comment"></i>
-            <p className="likes"><strong>{this.state.likes} likes</strong></p>
+            <p className="likes"><strong>{this.state.liked ? this.state.likes + 1 : this.state.likes} likes</strong></p>
             
             {this.state.comments.map(item =>{
                 return(
@@ -54,8 +54,10 @@ class CommentSection extends React.Component {
                 )
             })}
             <p className="timestamp">{moment().startOf('hour').fromNow() }</p>
-            <form onSubmit={this.addNewComment}><input onChange={this.changeHandler}  className="comment-input" placeholder=" &nbsp; Add Comment..."></input></form>
+            <div className="add-comment">
+            <form onSubmit={this.addNewComment}><input onChange={this.changeHandler} value={this.state.newComment} className="comment-input" placeholder=" &nbsp; Add Comment..."></input></form>
             <p className="ellipise"> <i className="fas fa-ellipsis-h icon"></i></p>
+            </div>
             </div>
         )
     }
