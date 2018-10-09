@@ -1,42 +1,52 @@
 .main-header {
-    border: 1px solid springgreen;
     width: 90%;
     margin: 0 auto;
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px; 
 }
 
 #left-icons {
     width: 30%;
     display: flex;
     align-items: center;
-    border: 1px solid blueviolet;
-    height: 100%
+    height: 100%;
+    
 }
 
 #left-icons i {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin-right: 15px;
 }
 
 #left-icons p {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin-right: 15px;
 }
 
 .main-header #left-icons #instagram {
     font-family: Billabong;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 
 #right-icons {
     width: 30%;
-    border: 1px solid red;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#right-icons i {
+    font-size: 2.2rem;
+    font-weight: lighter;
+    margin-right: 15px;
+    
 }
 .main-header .search {
     height: 30px;
+    width: 30%
 }
-i {
-    font-size: 1.4rem;
-}
+
 

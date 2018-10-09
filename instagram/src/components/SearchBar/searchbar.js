@@ -13,7 +13,7 @@ const SearchBar = () => {
                 <p>|</p>
                 <h1 id= 'instagram'>Instagram</h1>
             </div>
-            <input className= 'search'  placeHolder= 'Search'></input>
+            <input className= 'search'  placeholder= '⚲    Search'></input>
             <div id= 'right-icons'>
                 <i className="far fa-compass"></i>
                 <i className="far fa-heart"></i>

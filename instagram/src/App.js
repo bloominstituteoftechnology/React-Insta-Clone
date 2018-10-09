@@ -17,8 +17,8 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        {this.state.dummyData.map(items => 
-          <div>
+        {this.state.dummyData.map((items, i) => 
+          <div key = {i}>
             <PostContainer content= {items} />
             <CommentSection content= {items} />
           </div>)}
