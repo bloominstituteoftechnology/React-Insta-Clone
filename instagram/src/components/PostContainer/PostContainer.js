@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from "prop-types";
 import './PostContainer.css';
 
 import CommentForm from '../CommentSection/CommentForm';
@@ -36,5 +37,16 @@ class PostContainer extends React.Component {
         )
     }
 }
+
+PostContainer.propTypes = {
+    post: PropTypes.shape({
+        thumbnailUrl: PropTypes.string,
+        username: PropTypes.string,
+        imageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string,
+        comments: PropTypes.array
+      }).isRequired
+  };
 
 export default PostContainer;
