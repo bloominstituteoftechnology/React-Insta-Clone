@@ -4,10 +4,22 @@ import PropTypes from "prop-types";
 const Comment = (props) => {
   return (
     <div>
-      <div>{props.comment.username}</div>
-      <div>{props.comment.text}</div>
+      {props.dummyData.map((comments) => {
+        return (
+          <div>
+            <div>{props.comments.username}</div>
+            <div>{props.comments.text}</div>
+          </div>
+        )
+      })}
     </div>
   )
+  // return (
+  //   <div>
+  //     
+  //     
+  //   </div>
+  // )
 }
 
 Comment.propTypes = {

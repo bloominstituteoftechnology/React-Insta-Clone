@@ -3,15 +3,17 @@ import Comment from './Comment'
 
 const CommentSection = (props) => {
   return(
-      <div>
-      {props.dummyData.map((commentObj) => {
+    <div>
+      {props.dummyData.map((postObj) => {
         return (
           <div>
-            <Comment comment={commentObj.comment}/>
+            <Comment
+              dummyData={props.dummyData} 
+              comments={postObj.comments} />
           </div>
         )
-      })} 
-      </div>
+      })}
+    </div>
   )
 }
 
