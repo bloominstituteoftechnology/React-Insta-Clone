@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const PostContent = ({url}) => {
     return (
@@ -6,6 +7,10 @@ const PostContent = ({url}) => {
             <img src={url} alt="post-content" />
         </div>
     );
+}
+
+PostContent.protoTypes = {
+    url: PropTypes.string.isRequired,
 }
 
 export default PostContent;

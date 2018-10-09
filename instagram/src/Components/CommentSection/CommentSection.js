@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './CommentSection.css';
 import PostActions from './PostActions';
 import CommentContainer from './CommentContainer';
@@ -21,3 +22,12 @@ const CommentSection = ({likes, timestamp, comments}) => {
 }
 
 export default CommentSection;
+
+CommentSection.propTypes = {
+    likes: PropTypes.number.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    comments: PropTypes.arrayOf(PropTypes.shape({
+        username: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired,
+    })),
+}
