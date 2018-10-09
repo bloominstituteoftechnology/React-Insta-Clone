@@ -1,5 +1,6 @@
 import React from 'react';
 import Comments from './comments';
+import CommentForm from './commentForm';
 import './CommentSection.css';
 
 
@@ -9,21 +10,37 @@ class CommentSection extends React.Component{
         super(props)
         this.state={
             allComments: props.comments,
-        }
-        console.log(this.state);
+
+            comment:''
+        };
     }
+    
+      
+      addNewComment = event =>{
+        event.preventDefault();
+        const allComments = this.state.allComments.slice();
+        allComments.push({ username: 'bg1234', text: this.state.comment});
+        this.setState({allComments, comment: '' });
+      };
+
+      changeHandler = event =>{
+        this.setState({ comment: event.target.value});
+      };
+
 
 
     render(){
+        console.log(this.state);
         return(
             <div>
                 {this.state.allComments.map((comment, index) => <Comments key= {index} comments={comment} />)}
-            <form className = 'comment-form'>
-                <input 
-                placeholder= 'Add a comment...'>
-                </input>
-        </form>
-            
+        
+            <CommentForm 
+            newComment={this.state.comment}
+            handleAddNewComment= {this.addNewComment} 
+            handleChangeHandler={this.changeHandler}
+            newComment={this.newComment}
+            />
             </div>
         );
     }

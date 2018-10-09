@@ -12,13 +12,19 @@ class App extends Component {
   constructor(){
     super()
     this.state={
-      userData: dummyData,
+      userData: [],
     };
   console.log(this.state);
   
   }
 
- 
+  componentDidMount() {
+        setTimeout(() => {
+      this.setState({ userData: dummyData });
+    }, 800);
+  }
+  
+
  
   render() {
     return (

@@ -12,10 +12,7 @@
     font-weight: bold;
     font-size: 1.8rem;
     padding-right: 3%;
-}
-
-.postcomment{
-
+    height: 50%;
 }
 
 input {

@@ -1,7 +1,7 @@
 .post{
-    border: 1px solid blue;
     margin: 0 5%;
     padding-bottom: 30px;
+    border-bottom: 1px solid lightgray;
 }
 
 .postheader{
