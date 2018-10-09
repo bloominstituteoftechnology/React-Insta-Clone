@@ -1,8 +1,33 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {dummyData} from '../dummy-data';
+
+const dummy = props => { 
+  return <h1>bruh</h1>
+}
+
+// const CharacterList = (props) => {
+//   return (
+//     <div className='characterList'>
+//       {props.characters.map(character => {
+//         return <CharacterCard
+//           key={character.created}
+//           character={character} />
+//       })}
+//     </div>
+//   )
+// }
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      posts: 
+    }
+  }
+  
+  
   render() {
     return (
       <div className="App">
