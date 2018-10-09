@@ -9,7 +9,7 @@ const SearchBar = () => {
       </div>
 
       <div>
-        <input type="text" placeholder="Search" />
+        <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
       </div>
     </div>
   );
