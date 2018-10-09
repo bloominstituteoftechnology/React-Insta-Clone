@@ -2,24 +2,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 155px;
+    height: 40px;
+}
+
+.search-bar input {
+    height: 20px;
+    margin-right: 111px;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    height: 33%;
+    height: 100%;
 }
 
 .logo-container img {
     height: 100%;
+    width: 19%;
+}
+
+.logo-container p {
+    margin-right: 113px;
 }
 
 .icon-container {
     display: flex;
-    height: 33%;
+    height: 100%;
+    margin-right: -249px;
 }
 
 .icon-container img {
     height: 100%;
+    width: 14%;
 }
