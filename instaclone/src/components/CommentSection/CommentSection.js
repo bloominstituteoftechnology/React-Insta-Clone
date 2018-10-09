@@ -11,7 +11,7 @@ class CommentSection extends React.Component {
       comment: ''
     }
   }
-  handleKeyPress = e => {
+  addNewComment = e => {
     if (e.key === 'Enter') {
       this.setState({ 
         comments: [...this.state.comments, {username: 'dummy', text: this.state.comment, timestamp: new Date(Date.now())}],
@@ -27,7 +27,7 @@ class CommentSection extends React.Component {
       <React.Fragment>
         {this.state.comments.map((comment,i) => <Comment comment={comment} key={i} />)}
         <p className="moment">{moment(`${this.state.comments[this.state.comments.length - 1].timestamp}`).fromNow()}</p>
-        <input type="text" name="comment" placeholder="Add a comment" onChange={this.onCommentChange} value={this.state.comment} onKeyPress={this.handleKeyPress}/>
+        <input type="text" name="comment" placeholder="Add a comment" onChange={this.onCommentChange} value={this.state.comment} onKeyPress={this.addNewComment}/>
       </React.Fragment>
     )
   }

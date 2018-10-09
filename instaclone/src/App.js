@@ -8,9 +8,12 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: dummyData,
+      dummyData: [],
       search: ''
     }
+  }
+  componentDidMount() {
+    this.setState({ dummyData: dummyData });
   }
   onInputChange = e => {
     this.setState({ [e.target.name]: e.target.value })
