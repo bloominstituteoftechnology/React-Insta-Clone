@@ -1,0 +1,51 @@
+.search-bar {
+    border-bottom: 1px solid black;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.logos {
+    height: 50px;
+}
+
+.logos img {
+    height: 100%;
+}
+
+.camera-logo {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid gray;
+}
+.search-text {
+    display: flex;
+    align-items: center;
+}
+.search-icon {
+    position: relative;
+    z-index: 3;
+    color: gray;
+    right: -160px;
+}
+
+input {
+    height: 50px;
+    width: 420px;
+    text-align: center;
+    font-size: 30px;
+    background: rgba(211, 211, 211, 0.15);
+    border-radius: 5px;
+}
+
+.icons {
+    display: flex;
+}
+
+.right {
+    margin: 30px;
+    
+}

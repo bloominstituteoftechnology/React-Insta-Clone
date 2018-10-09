@@ -29,13 +29,15 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar handleSearch={this.handleSearch} />
-        <PostContainer
-          data={
-            !this.state.searchResults.length
-              ? this.state.data
-              : this.state.searchResults
-          }
-        />
+        <div className="main-content">
+          <PostContainer
+            data={
+              !this.state.searchResults.length
+                ? this.state.data
+                : this.state.searchResults
+            }
+          />
+        </div>
       </div>
     );
   }
