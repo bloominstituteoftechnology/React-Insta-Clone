@@ -62,7 +62,6 @@ class CommentSection extends Component {
 
 hydrateStateWithLocalStorage() {
     // Iterate through all items in state
-    // This was extremely helpful: https://hackernoon.com/how-to-take-advantage-of-local-storage-in-your-react-projects-a895f2b2d3f2
     for (let key in this.state) {
       // Check to see if the key exists in localStorage. See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
       if (localStorage.hasOwnProperty(key)) {
