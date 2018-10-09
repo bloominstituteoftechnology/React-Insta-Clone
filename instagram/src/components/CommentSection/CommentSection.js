@@ -67,10 +67,10 @@ class CommentSection extends React.Component {
   //   }
   // }
 
-  // componentDidMount() {
-  //   this.hydrateState();
-  //   window.addEventListener("beforeunload", this.saveState.bind(this));
-  // }
+  // // componentDidMount() {
+  // //   this.hydrateState();
+  // //   window.addEventListener("beforeunload", this.saveState.bind(this));
+  // // }
 
   // componentWillUnmount() {
   //   window.removeEventListener("beforeunload", this.saveState.bind(this));

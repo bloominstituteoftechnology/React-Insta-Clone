@@ -29,7 +29,10 @@ class PostContainer extends React.Component {
           addLike={this.addLike}
           likes={this.state.likes}
         />
-        <CommentSection user={this.state.userData} />
+        <CommentSection
+          user={this.state.userData}
+          // saveState={this.props.saveState}
+        />
       </div>
     );
   }

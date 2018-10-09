@@ -20,23 +20,34 @@ class App extends Component {
     }, 2000);
   }
 
+  // saveState() {
+  //   for (let key in this.state) {
+  //     localStorage.setItem(key, JSON.stringify(this.state[key]));
+  //   }
+  // }
+
   startSearch = event => {
     event.preventDefault();
-    if (this.state.newSearch !== "") {
-      let newData = dummyData;
-      let filteredArr = newData.filter(
-        post => post.username === this.state.newSearch
-      );
+    let newData = dummyData;
+    let filteredArr = newData.filter(
+      post => post.username === this.state.newSearch
+    );
+    if (filteredArr.length) {
       this.setState({
         postData: filteredArr,
         newSearch: "",
         filtered: true
       });
-    } else {
+    } else if (this.state.filtered === true) {
       this.setState({
         postData: dummyData,
         newSearch: "",
         filtered: false
+      });
+    } else {
+      alert("Sorry, but we couldn't find any matches with that username");
+      this.setState({
+        newSearch: ""
       });
     }
   };
@@ -62,7 +73,13 @@ class App extends Component {
             />
             <div className="post-container-list">
               {this.state.postData.map(user => {
-                return <PostContainer key={user.timestamp} userData={user} />;
+                return (
+                  <PostContainer
+                    key={user.timestamp}
+                    userData={user}
+                    // saveState={this.saveState}
+                  />
+                );
               })}
             </div>
           </div>
