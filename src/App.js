@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Header from "./instagram/PostContainer/Header";
+import Header from "./instagram/SearchBar/Header";
 import Post from "./instagram/PostContainer/Post";
 
 class App extends Component {

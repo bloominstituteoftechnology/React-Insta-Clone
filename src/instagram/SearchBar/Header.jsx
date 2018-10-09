@@ -6,6 +6,8 @@ class Header extends React.Component {
     return (
       <nav className="Nav">
         <div className="Nav-menus">
+          <input className="Search" type="text" placeholder="Search" />
+
           <div className="Nav-brand">
             <a className="Nav-brand-logo" href="/">
               Instagram

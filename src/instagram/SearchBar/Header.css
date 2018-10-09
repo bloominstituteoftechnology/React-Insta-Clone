@@ -12,13 +12,20 @@ i.Nav {
 .Nav-menus {
   display: flex;
   flex-direction: row;
+
   height: 77px;
   width: 70%;
   margin: 0 auto;
   padding: 26px 40px;
 }
+.Search {
+  height: 30px;
+  border-radius: 5px;
+  order: 2;
+}
 .Nav-brand-logo {
   display: block;
+  order: 1;
   background-position: -176px 0px;
   background-image: url(../../sprite.png);
   background-size: 405px 379px;
