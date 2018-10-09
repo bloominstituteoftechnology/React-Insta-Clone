@@ -28,7 +28,7 @@ const PostContainer = props => {
                 <i className="far fa-heart"></i>
                 <i className="far fa-comment"></i>
             </div>
-        <p>{likes} likes</p>
+        <p className="likes">{likes} likes</p>
             {comments.map((item, index) => {
                 return <CommentSection commentInfo={item} key={index}/>
             })}
