@@ -28,17 +28,11 @@ class CommentSection extends React.Component {
     }
     addNewComment = event => {
         event.preventDefault();
-        console.log("this shit")
-        // const username="Berto";
-        // const text= this.state.newComment;
-        this.setState( prevState => {
-            return {
-                comments:prevState.comments.concat({
-                    username:"Berto",                    
-                    text:this.state.newComment,
-                }),
-                newComment: "",
-            }
+        const username="Berto";
+        const text= this.state.newComment;
+        this.setState( {
+            comments:[...this.state.comments, {username, text}],
+            newComment:""
         },
         )
     }
