@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header onClick={console.log(this.state)}>
+        <header>
           <SearchBar />
 
         </header>

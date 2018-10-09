@@ -14,7 +14,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 62.5%;
+	
 	font-family: 'Roboto Condensed', sans-serif;
   vertical-align: baseline;
   
@@ -65,5 +65,5 @@ header{
 .icon{
   padding: 15px;
   display: inline-block;
-  transform: translateY(3px)
+  transform: translateY(-1px)
 }

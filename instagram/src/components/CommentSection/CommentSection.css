@@ -3,20 +3,25 @@
     justify-content: space-between;
 }
 
+
+
 .comment-text{
-    font-size: 2.2rem;
     margin: 0 16px;
+    font-size: 15px;
+}
+
+.comment-text h5{
+    font-size: 15px;
 }
 
 .comments{
-    font-size: 33px;
     padding: 5px 0;
     border-bottom: 1px solid #DBDBDB;
 }
 
 .commenter{
-    font-size: 14px;
     font-weight: bold;
+    margin-right: 5px;
 }
 
 .comment{
@@ -31,4 +36,23 @@
 .input-comment{
     background: none;
     border-style: none;
+    width:85%;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.fill-red{
+    fill:red;
+    stroke:red;
+}
+
+.svg-flip{
+    transform:scale(-1.1, 1.1) translate(-22px,-1px);
+    
+}
+
+.timestamp{
+    font-size: 12px;
+    color: #999999;
+    padding: 5px 0;
 }

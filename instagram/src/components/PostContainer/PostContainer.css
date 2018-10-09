@@ -17,7 +17,7 @@
     height: 59px;
     display: flex;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 12px;
     letter-spacing: .4px;
 }
 
@@ -36,4 +36,13 @@
     width: auto;
     border-radius: 50%;
     margin: 15px;
+}
+
+.icon-bar .icon{
+    transform: scale(1.35);
+    padding: 15px 9px;
+}
+
+.icon-bar{
+    padding: 0 6px;
 }

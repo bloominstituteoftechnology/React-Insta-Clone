@@ -11,36 +11,51 @@ font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 77px;
+    height: 76px;
     box-sizing: border-box;
     align-items: center;
-    
 }
 
 .title {
-    font-family: 'Lobster Two', cursive;
     border-left: solid 1px black;
     padding-left: 15px;
-    font-size: 4rem;
     display: inline-block;
+    padding-top: 1px;
     
 }
 
-.insta-box{
+.title h1{
+    font-family: 'Lobster Two', cursive;
+    font-weight: 100;
+    font-size: 24px;
+}
+
+.fixed-header .instabox{
     display: flex;
-    flex-direction: row;
-    width: 30%;    
     align-items: center;
     
 }
 
-input{
+.search input{
     background: #FAFAFA ;
     border-style: inset;
     border: 1px solid #DBDBDB;
     border-radius: 5px;
     font-size: 2rem;
     width: 213px;
-    margin-top: 7px;
+    height: 26px;
+    margin-top: 1px;
+    text-align: center;
+    font-size: 12px;
 }
 
+.search{
+    position: relative;
+}
+
+.feather-search{
+    position: absolute;
+    width: 15px;
+    top: -10px;
+    left: 50px;
+}
