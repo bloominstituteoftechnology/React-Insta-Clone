@@ -5,6 +5,25 @@ import Comment from '../Comment/Comment';
 
 class CommentSection extends React.Component {
   state = { comments: this.props.comments, newComment: '' };
+
+  addNewComment = (event) => {
+    event.preventDefault();
+    console.log('before function', this.state.comments);
+    if (this.state.newComment.length > 0) {
+      this.setState({
+        comments: [
+          ...this.state.comments,
+          {
+            username: 'arneyz',
+            text: this.state.newComment,
+          },
+        ],
+        newComment: '',
+      });
+    }
+    console.log('after function', this.state.comments);
+  };
+
   changeHandler = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
