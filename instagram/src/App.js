@@ -13,9 +13,29 @@ class App extends Component {
 
   componentDidMount() {
     setTimeout(() => {
-      this.setState({ dummyData });
+      this.setState({ dummyData, searchInput: '' });
     }, 1000);
+    // this.setState({ dummyData, searchInput: '' });
   }
+
+  handleSearchInput = event => {
+    this.setState({ searchInput: event.target.value });
+  };
+
+  searchPosts = event => {
+    event.preventDefault();
+    if (this.state.searchInput) {
+      this.setState({
+        dummyData: this.state.dummyData.filter(post => {
+          if (post.username.includes(this.state.searchInput)) {
+            return post;
+          }
+        })
+      });
+    } else {
+      this.componentDidMount();
+    }
+  };
 
   render() {
     // console.log(this.state);
@@ -25,7 +45,11 @@ class App extends Component {
 
     return (
       <div className="App">
-        <SearchBarContainer />
+        <SearchBarContainer
+          handleSearchInput={this.handleSearchInput}
+          searchPosts={this.searchPosts}
+          searchInput={this.state.searchInput}
+        />
         <PostContainer data={this.state.dummyData} />
       </div>
     );

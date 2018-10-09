@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   text-align: center;
-  width: 15%;
+  /* width: 15%; */
   height: 20px;
   border-radius: 2px;
   border: 1px solid rgb(182, 182, 182);

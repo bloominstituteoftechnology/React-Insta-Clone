@@ -9,7 +9,11 @@ class SearchBarContainer extends React.Component {
     return (
       <div className="searchBar">
         <SearchBarLogo />
-        <SearchBar />
+        <SearchBar
+          handleSearchInput={this.props.handleSearchInput}
+          searchPosts={this.props.searchPosts}
+          searchInput={this.props.searchInput}
+        />
         <SearchBarIcons />
       </div>
     );
