@@ -2,15 +2,23 @@ import React from 'react';
 import Comment from "./Comment";
 import PropTypes from 'prop-types';
 
-const CommentSection = props => {
+class CommentSection extends React.Component { 
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: props.comments,
+    }
+  }
+  render() {
   return (
     <div>
-      {props.comments.map((com, idx) => (
+      {this.state.comments.map((com, idx) => (
         <Comment key={idx} comment={com} />
       ))}
       <input type="text" name="addComment" placeholder="Add a comment..."/>
     </div>
   )
+}
 }
 
 CommentSection.propTypes = {

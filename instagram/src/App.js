@@ -8,14 +8,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData,
+      data: [],
       searchText: ""
     };
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ data: dummyData })
+    }, 2000)
+  }
+
   updateSearchText = e => {
     this.setState({ searchText: e.target.value });
-  };
+}
 
   render() {
     return (

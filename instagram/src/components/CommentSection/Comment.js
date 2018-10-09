@@ -15,4 +15,5 @@ Comment.propTypes = {
   username: PropTypes.string,
   text: PropTypes.string,
 }))}
+
 export default Comment;
