@@ -46,7 +46,7 @@ PostContainer.propTypes = {
         likes: PropTypes.number,
         timestamp: PropTypes.string,
         comments: PropTypes.array
-      }).isRequired
-  };
+    }).isRequired
+};
 
 export default PostContainer;
