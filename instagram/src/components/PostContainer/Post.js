@@ -32,6 +32,10 @@ const PostImg = (props) => {
 const PostFooter = (props) => {
   return (
     <div className="post-footer">
+      <div className="buttons">
+        <div className="like-button">like-button</div>
+        <div className="comment-button">comment-button</div>
+      </div>
       <div className="likes">
         {props.likes} likes
       </div>
@@ -60,7 +64,8 @@ class Post extends React.Component {
           likes={this.props.postData.likes}
         />
         <CommentSection 
-          comments={this.props.postData.comments}/>
+          comments={this.props.postData.comments}
+          timestamp={this.props.postData.timestamp}/>
       </div>
     )
   }

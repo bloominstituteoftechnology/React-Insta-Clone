@@ -13,9 +13,17 @@ const Comment = (props) => {
 class CommentSection extends React.Component {
   constructor(props) {
     super(props) 
-
+    this.state = {
+      commentValue: ''
+    }
+    this.handleComment = this.handleComment.bind(this)
   }
 
+  handleComment(e) {
+    this.setState({
+      commentValue: e.target.value
+    })
+  }
   render() {
     return (
       <div className="comment-section">
@@ -31,10 +39,16 @@ class CommentSection extends React.Component {
             </div>
           )
         })}
+        <div className="timestamp">
+          {this.props.timestamp}
+        </div>
         <div className="divider-top"></div>
         <div className="comment-section-footer">
           <input 
-            placeholder="Add a comment..."/>
+            placeholder="Add a comment..."
+            value={this.state.commentValue}
+            onChange={this.handleComment}
+            />
           <div className="three-dots"></div>
         </div>
       </div>
