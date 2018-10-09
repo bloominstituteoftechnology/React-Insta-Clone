@@ -1,0 +1,59 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.insta-logo {
+  font-family: "Grand Hotel", sans-serif;
+  padding-top: 10px;
+}
+
+.search {
+  position: relative;
+  padding-left: 140px;
+}
+
+.search input {
+  text-indent: 65px;
+  border-radius: 2px;
+  border-style: none;
+  border: 1px solid rgb(202, 202, 202);
+  position: absolute;
+  padding: 0px 10px;
+  background-color: rgb(245, 245, 245);
+}
+
+.search .fa-search {
+  position: absolute;
+  z-index: 1;
+  top: 6px;
+  left: 190px;
+  font-size: 10px;
+  color: rgb(201, 200, 200);
+}
+
+.fa-instagram {
+  height: 50%;
+  padding: 3% 1% 2% 2%;
+  font-size: 35px;
+}
+
+.line {
+  font-size: 35px;
+  padding: 10px;
+  font-weight: none;
+  color: lightgrey;
+}
+
+.navigation {
+  padding-left: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.navigation .far {
+  padding: 20px 10px 0px;
+  font-size: 20px;
+  color: grey;
+}
