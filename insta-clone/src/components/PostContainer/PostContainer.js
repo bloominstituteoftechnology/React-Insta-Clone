@@ -3,29 +3,31 @@ import "./PostContainer.css"
 
 const PostContainer = props => {
     return(
-        props.post.map (post => {
+        <section className= "postContainer">
+        {props.post.map (post => {
             return (
-            <div className= "postContainer">
-                <section>
+            <div className= "card">
+                <section className="userInfo">
                   <img src={post.thumbnailUrl} alt="postimage"></img>
                   <h2>{post.username}</h2>
                 </section>
                 <img src={post.imageUrl} alt="postimage"></img>
                 <h2>likes: {post.likes}</h2>
-                <section className="comments">
+                <div>
                   {post.comments.map(element => {
                       return(
-                          <div>
-                              {element.username}
-                              {element.text}
-                          </div>
+                          <section className="commentSection">
+                              <span>{element.username}</span>
+                              {" " + element.text}
+                          </section>
                       )
                   })}
-
-                </section>
+                </div>
+                <p>{post.timestamp}</p>
             </div>
             )
-        })
+        })}
+        </section>
     )
 
 }

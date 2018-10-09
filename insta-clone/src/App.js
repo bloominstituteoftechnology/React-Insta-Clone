@@ -17,10 +17,13 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
         <SearchBar />
-        <PostContainer post={this.state.postData} />
-
-
         </header>
+        <section >
+          <PostContainer post={this.state.postData} />
+        </section>
+
+
+
       </div>
     );
   }
