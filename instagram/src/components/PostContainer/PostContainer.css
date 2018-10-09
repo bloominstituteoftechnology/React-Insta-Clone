@@ -2,6 +2,7 @@
     width: 100%;
     border: 1px solid #eeeeee;
     border-radius: 5px;
+    color: #333333;
 }
 
 .post-header {
@@ -42,4 +43,8 @@
     font-size: 1.4rem;
     letter-spacing: 0.02rem;
     font-weight: bold;
+}
+
+.post-comments {
+    margin: 10px 15px;
 }

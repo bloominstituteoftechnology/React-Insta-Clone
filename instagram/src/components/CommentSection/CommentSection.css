@@ -1,0 +1,13 @@
+.comment {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.comment p {
+    line-height: 2rem;
+}
+
+.comment .comment-username {
+    font-weight: bold;
+    letter-spacing: 0.02rem;
+}
