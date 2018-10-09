@@ -1,0 +1,39 @@
+.post-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 600px;
+  }
+   .post-cta-image {
+    padding: 10px 0;
+    width: 600px;
+  }
+  .post-content {
+    padding: 5px 0 0 18px;
+  }
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .post-icons {
+   }
+  .post-icons svg{
+    padding: 0 15px 0 0;
+    font-size: 23px;
+  }
+  .post-likes {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+  .comment {
+    font-size: 13px;
+    margin: 5px 0;
+  }
+  .comment strong {
+    font-size: 14px;
+  }
+   .post-time {
+    color: gray;
+    font-size: 12px;
+    padding: 10px 0 15px 15px;
+  }
