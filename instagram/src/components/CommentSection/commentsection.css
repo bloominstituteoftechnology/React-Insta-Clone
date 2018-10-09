@@ -4,11 +4,11 @@
 
 .comment {
     padding-top: 2px;
-    margin-bottom: 19px;
+    margin-top: 19px;
 }
 
-.comment:last-child {
-    margin-bottom: 0;
+.comment:first-child {
+    margin-top: 0;
 }
 
 .comment h2 {
@@ -22,4 +22,48 @@
     font-size: 15px;
     margin: 0;
     margin-left: 5px;
+}
+
+.timestamp {
+    text-transform: uppercase;
+    color: gray;
+    font-size: 10px;
+    margin: 8px 15px 0;
+    border-bottom: .5px solid gray;
+    padding-bottom: 11px;
+} 
+
+.fa-ellipsis-h {
+    position: absolute;
+    right: 500px;
+    font-size: 14px;
+    right: 477.5px;
+    padding-top: 22.5px;
+}
+
+.post input {
+    margin: 0 15px;
+    border: none;
+    height: 55px;
+    width: 91%;
+    outline: none;
+    font-size: 14.7px;
+}
+
+
+.deleteComment {
+    position: absolute;
+    right: 500px;
+    font-size: 14px;
+    right: 477.5px;
+    color: grey;
+    cursor: pointer;
+}
+
+.deleteComment:hover {
+    color: crimson;
+}
+
+.hidden {
+    display: none;
 }

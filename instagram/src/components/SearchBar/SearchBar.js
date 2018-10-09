@@ -9,7 +9,7 @@ let SearchBar = props => {
         <header>
             <nav>
                 <Logo />
-                <Search />
+                <Search searchHandler={props.searchHandler}/>
                 <Account />
             </nav>
         </header>

@@ -4,7 +4,7 @@ let Search = props => {
     return (
            <div>
                 <i className="fas fa-search" />
-                <input type="text" placeholder="Search" />
+        <input className="search" placeholder="&#x1f50d; &nbsp; Search" type="text" onChange={props.searchHandler}></input>
            </div>
     )
 }

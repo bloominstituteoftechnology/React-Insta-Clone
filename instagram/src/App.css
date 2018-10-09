@@ -2,7 +2,12 @@
   text-align: center;
 }
 
+#loader {
+  text-align: center;
+}
+
 .App-logo {
+  animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }
 
@@ -19,13 +24,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

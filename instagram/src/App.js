@@ -8,19 +8,41 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: dummyData,
+      postData: [],
+      searchString: '',
     }
   }
 
   componentDidMount() {
-    this.setState({ dummyData: dummyData });
+    setTimeout(() => {
+      this.setState({
+        postData: dummyData,
+      })
+    }, 300)
+  }  
+
+  searchHandler = event => {
+    event.preventDefault();
+    if (event.target.value !== '') {
+      this.setState({
+        [event.target.name]:event.target.value,
+      })
+    }
+    else {
+      this.setState({
+        [event.target.name]: '',
+      })
+    }
   }
 
   render() {
+    if (!this.state.postData.length) {
+      return <h4 id="loader">Loading your feed...</h4>;
+    }
     return (
       <div className="App">
-        <SearchBar />
-        <Posts dummyData={this.state.dummyData}/>
+        <SearchBar searchHandler={this.searchHandler}/>
+        <Posts searchString={this.state.searchString} postData={this.state.postData}/>
       </div>
     );
   }
