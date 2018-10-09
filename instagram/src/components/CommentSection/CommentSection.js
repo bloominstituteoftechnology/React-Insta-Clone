@@ -11,11 +11,16 @@ class CommentSection extends React.Component {
   }
   render(){
     return (
-      <div>
-        {this.state.comments.map((comment, index) => 
-          <Comment key={index} comment={comment} />)}
+        <div>
+          {this.state.comments.map((comment, index) => 
+          {
+            return(
+              <Comment key={index} comment={comment} />
+            )
+          }
+          )}
           <CommentInput />
-      </div>
+        </div>
     )
   }
 }
