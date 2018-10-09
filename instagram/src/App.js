@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
-import CommentSection from './components/CommentSection/CommentSection';
+import PostList from './components/PostList/PostList'
 
 import dummyData from './dummy-data';
 
@@ -16,8 +15,7 @@ class App extends Component {
     return (
       <div className="App">
             <SearchBar />
-            <PostContainer />
-            <CommentSection />
+            <PostList />
       </div>
     );
   }
