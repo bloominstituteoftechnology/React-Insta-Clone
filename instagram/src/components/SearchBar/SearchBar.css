@@ -52,10 +52,11 @@
 }
 
 .right-items {
+  border: 1px solid orange;
   margin-left: 5px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  justify-items: end;
+  justify-items: flex-end;
   align-items: center;
 }
 

@@ -10,9 +10,40 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData,
+      posts: [],
       searchText: '',
+      currentUser: ''
     };
+  }
+
+  componentDidMount() {
+    this.setState({
+      posts: dummyData,
+      currentUser: 'BobBelcher'
+    });
+  }
+
+  handleCommentClick() {
+    // method adds a comment to selected post
+    // gets current post
+    console.log('handle comment');
+    // gets current user
+
+    // gets comment
+
+    // adds username and comment to the post
+    
+
+  }
+
+  handleLikeClick() {
+    // method adds a like to selected post
+    // gets current post
+    console.log('handle like');
+
+    // adds a like to current likes
+
+
   }
 
 
