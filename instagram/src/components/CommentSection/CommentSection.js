@@ -1,17 +1,15 @@
 import React from 'react';
 import './CommentSection.css';
+import PropTypes from 'prop-types';
 
 class CommentSection extends React.Component{
     constructor(props){
         super(props)
-
         this.more=''
         if(props.data.text.length > 90){
            this.more =' more' 
         }
-
     }
-
     render(){
         return (
             <div>
@@ -26,6 +24,13 @@ class CommentSection extends React.Component{
             </div>
         )
     }
+}
+
+CommentSection.propTypes = {
+    data: PropTypes.shape({
+        text:PropTypes.string,
+        username:PropTypes.string
+    })
 }
 
 export default CommentSection;

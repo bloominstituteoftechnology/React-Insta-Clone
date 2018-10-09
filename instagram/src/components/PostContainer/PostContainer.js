@@ -4,29 +4,65 @@ import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from '../PostHeader/PostHeader';
 import LikesBar from '../LikesBar/LikesBar';
 import NewCommentSection from '../NewCommentSection/NewCommentSection';
+import PropTypes from 'prop-types';
 
 
-const PostContainer = props =>{
-    console.log(props)
-    return(
-        <div className='post-container'>
-            <PostHeader data={props.data}/>
-            <img className='post-container-image' src={props.data.imageUrl}></img>
-            <LikesBar data={props.data} />
-            {
-                props.data.comments.map(element =>{
-                    return (
-                        <CommentSection data={element}/>
-                    )
-                })
-            }
-            <p className='post-time-stamp'>{props.data.timestamp}</p>
-            <NewCommentSection />
-            <br />
-            <br />
-        </div>
 
-    )
+class PostContainer extends React.Component{
+    constructor(props){
+        super(props)
+        this.state={
+            newComment:'',
+            comments:props.data.comments
+        }
+    }
+    addNewComment = (event) =>{
+        event.preventDefault();
+        this.setState({comments:[...this.state.comments,{
+            username:'Frank-E-B',
+            text:this.state.newComment
+        }]},this.setState({newComment:''}))
+
+        
+    }
+    handleCommentChange = event =>{
+        this.setState({newComment:event.target.value},console.log('set the new comment to ', this.state.newComment))
+    }
+
+    render(){
+        console.log(this.props)
+        return(
+            <div className='post-container'>
+                <PostHeader data={this.props.data}/>
+                <img className='post-container-image' src={this.props.data.imageUrl}></img>
+                <LikesBar data={this.props.data} />
+                {
+                    this.state.comments.map(element =>{
+                        return (
+                            <CommentSection data={element}/>
+                        )
+                    })
+                }
+                <p className='post-time-stamp'>{this.props.data.timestamp}</p>
+                <NewCommentSection 
+                                addNewComment={this.addNewComment}
+                                postId = {this.props.postId}
+                                handleCommentChange={this.handleCommentChange}
+                                newComment={this.state.newComment}
+                />
+                <br />
+                <br />
+            </div>
+    
+        )
+            
+    }
 }
+
+
+PostContainer.propTypes={
+    data:PropTypes.object,
+}
+
 export default PostContainer;
 

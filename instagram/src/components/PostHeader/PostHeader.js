@@ -1,5 +1,7 @@
 import React from 'react';
 import './PostHeader.css';
+import PropTypes from 'prop-types';
+
 
 const PostHeader = props =>{
     return (
@@ -8,6 +10,11 @@ const PostHeader = props =>{
             <p className='post-header-username'>{props.data.username}</p>
         </div>
     )
+}
+
+PostHeader.propTypes = {
+    thumbnailUrl:PropTypes.string,
+    username:PropTypes.string
 }
 
 export default PostHeader;

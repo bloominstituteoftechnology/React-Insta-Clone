@@ -1,5 +1,6 @@
 import React from 'react';
 import './LikesBar.css';
+import PropTypes from 'prop-types';
 
 const LikesBar = props =>{
     return(
@@ -11,6 +12,10 @@ const LikesBar = props =>{
             <div><p className='likes-bar-likes'>{props.data.likes} likes</p></div>
         </div>
     )
+}
+
+LikesBar.propTypes = {
+    likes: PropTypes.string
 }
 
 export default LikesBar;
