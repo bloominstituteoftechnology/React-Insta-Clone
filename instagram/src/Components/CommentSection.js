@@ -2,8 +2,14 @@ import React from 'react'
 
 const CommentSection = props => {
     return (
-        <div>
-            
+        <div className="comment-section">
+            {props.postData.map(item => {
+                return (
+                    <div>
+                        
+                    </div>
+                )
+            })}
         </div>
     )
 }
