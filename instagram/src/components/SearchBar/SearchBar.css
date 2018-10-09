@@ -1,0 +1,84 @@
+.searchbar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 55px;
+  background: #fff;
+}
+
+.left-items {
+  margin-left: 5px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: start;
+  align-items: center;
+}
+
+.logo {
+  background-image: url(../../img/instagram-spritesheet.png);
+  background-repeat: no-repeat;
+  background-position: -78px -168px;
+  height: 24px;
+  width: 24px;
+  margin: 0 auto;
+}
+
+.vertical-divider {
+  height: 35px;
+  margin-left: 15px;
+  border-right: 1px solid #888;
+}
+
+.text-logo {
+  background-image: url(../../img/instagram-spritesheet.png);
+  background-repeat: no-repeat;
+  background-position: -58px 0;
+  height: 29px;
+  width: 103px;
+  margin: 0 auto;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+}
+
+.right-items {
+  margin-left: 5px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: end;
+  align-items: center;
+}
+
+.explore {
+  background-image: url(../../img/real-spritesheet.png);
+  background-repeat: no-repeat;
+  background-position: -458px -112px;
+  height: 24px;
+  width: 24px;
+}
+
+.activity {
+  background-image: url(../../img/real-spritesheet.png);
+  background-repeat: no-repeat;
+  background-position: -458px -190px;
+  height: 24px;
+  width: 24px;
+}
+
+.profile {
+  background-image: url(../../img/real-spritesheet.png);
+  background-repeat: no-repeat;
+  background-position: -458px -294px;
+  height: 24px;
+  width: 24px;
+}

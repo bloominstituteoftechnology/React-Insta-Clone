@@ -12,6 +12,13 @@ const PostContainer = props => (
       <p>{props.post.username}</p>
     </div>
     <img src={props.post.imageUrl} alt="Post" className="post-image" />
+    <div className='interactivity-area'>
+      <div className="interactive-buttons">
+        <div className="interactive-button like-icon"></div>
+        <div className="interactive-button comment-icon"></div>
+      </div>
+      <p className='like-count'>{props.post.likes} likes</p>
+    </div>
     <CommentSection comments={props.post.comments} />
   </div>
 );
@@ -22,6 +29,7 @@ PostContainer.propTypes = {
     thumbnailUrl: PropTypes.string,
     imageUrl: PropTypes.string,
     likes: PropTypes.number,
+    timestamp: PropTypes.string,
     comments: PropTypes.arrayOf(PropTypes.object)
   })
 };

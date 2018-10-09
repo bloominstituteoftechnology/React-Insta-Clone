@@ -6,11 +6,10 @@ import './CommentSection.css';
 
 const CommentSection = props => (
   <div className='comment-section'>
-    Comment Section!!
-    {props.comments.map(comment => (
-      <div>
-        <p>{comment.username}</p>
-        <p>{comment.text}</p>
+    {props.comments.map((comment, idx) => (
+      <div className='comment' key={idx}>
+        <p className='comment-username'>{comment.username}:</p>
+        <p className='comment-text'>{comment.text}</p>
       </div>
     ))}
   </div>
