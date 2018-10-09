@@ -7,11 +7,20 @@ import PostContainer from './components/PostContainer/PostContainer'
 import dummyData from './dummy-data.js'
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      posts: dummyData
+    }
+  }
+
   render() {
+    const { posts } = this.state
+
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer />
+        {posts.map((post, i) => <PostContainer key={i} post={post} />)}
       </div>
     )
   }
