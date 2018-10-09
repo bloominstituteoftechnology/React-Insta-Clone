@@ -1,13 +1,13 @@
 import React from 'react';
 import PostHeader from './PostHeader';
 import './PostContainer.css';
-import CommentContainer from '../CommentSection/CommentContainer.js';
+import CommentSection from '../CommentSection/CommentSection.js';
 
 const PostContainer = props => {
     return (
         <div className="postContainer">
             <PostHeader item={props.item}/>
-            <CommentContainer item={props.item}/>
+            <CommentSection newComment={props.newComment} item={props.item} index={props.index}/>
         </div>
     );
 }

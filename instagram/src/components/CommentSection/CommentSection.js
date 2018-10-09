@@ -2,9 +2,21 @@ import React from 'react';
 import PropTypes from "prop-types";
 import NewComment from './NewComment.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './CommentContainer.css';
+import './CommentSection.css';
 
-const CommentContainer = props => {
+addNewComment = (event, index) => {
+    this.setState({ 
+        dummyData: [
+            ...this.props.dummyData,
+            {
+                comment: this.props.newComment
+            }
+        ],
+        newComment: ''
+    });
+};
+
+const CommentSection = props => {
     return (
         <div className="commentContainer">
             <div className="commentIcons">
@@ -31,12 +43,12 @@ const CommentContainer = props => {
 
                 <h4>{props.item.timestamp}</h4>
             </div>
-            <NewComment />
+            <NewComment newComment={props.newComment} addNewComment={this.addNewComment}/>
         </div>
     );
 }
 
-CommentContainer.propTypes = {
+CommentSection.propTypes = {
     item: PropTypes.shape({
         username: PropTypes.string.isRequired,
         comments: PropTypes.arrayOf.isRequired,
@@ -44,4 +56,4 @@ CommentContainer.propTypes = {
     })
 }
 
-export default CommentContainer;
+export default CommentSection;
