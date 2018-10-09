@@ -8,7 +8,11 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {dummyData};
+    this.state = {dummyData: []};
+  }
+
+  componentDidMount() {
+    this.setState({dummyData: dummyData});
   }
 
   render() {

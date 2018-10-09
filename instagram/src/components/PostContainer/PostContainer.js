@@ -17,10 +17,6 @@ const PostContainer = props => {
                     comments={post.comments}
                     post={post}
                     />
-                    <div className="post-container-footer">
-                        <p>{post.timestamp}</p>
-                        <input name="addComment" placeholder="Add a comment..."></input>
-                    </div>
                 </div>
             );
         })

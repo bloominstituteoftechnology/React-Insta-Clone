@@ -4,10 +4,15 @@ import "./CommentContent.css";
 
 const CommentContent = props => {
     return (
-        <div className="comment-content">
-            <p>{props.comment.username}</p>
-            <p>{props.comment.text}</p>
-        </div>
+        props.comments.map(comment => {
+            return (
+                <div className="comment-content">
+                    <p>{comment.username}</p>
+                    <p>{comment.text}</p>
+                </div>
+            );
+        })
+        
     );
 }
 
