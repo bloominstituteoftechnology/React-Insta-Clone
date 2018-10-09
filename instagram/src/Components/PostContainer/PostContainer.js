@@ -7,7 +7,30 @@ class PostContainer extends React.Component {
         super();
         this.state = {
             likes: 0,
+            noLike: 'far fa-heart',
+            like: 'hidden',
         }
+    }
+    componentDidMount() {
+        this.setState(state => ({
+            likes: this.props.likes,
+        }))
+    }
+
+    likeHandler = () => {
+        this.setState(state => ({
+            likes: this.state.likes + 1,
+            noLike: 'hidden',
+            like: 'fas fa-heart',
+        }))
+    }
+
+    dislikeHandler = () => {
+        this.setState(state => ({
+            likes: this.state.likes - 1,
+            noLike: 'far fa-heart',
+            like: 'hidden',
+        }))
     }
 
     render() {
@@ -25,12 +48,13 @@ class PostContainer extends React.Component {
                 <div className="post-interaction">
                     {/* Icons */}
                     <div className="post-icons">
-                        <i className="far fa-heart"></i>
+                        <i className={this.state.noLike} onClick={this.likeHandler}></i>
+                        <i className={this.state.like} onClick={this.dislikeHandler}></i>
                         <i className="far fa-comment"></i>
                     </div>
                     {/* Like Counter */}
                     <p className="likes">
-                        {this.props.likes} Likes
+                        {this.state.likes} Likes
                     </p>
                 </div>
                 <CommentSection content={this.props.comments} timestamp={this.props.timestamp}/>

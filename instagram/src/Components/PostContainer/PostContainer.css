@@ -55,8 +55,17 @@
     color: black;
 }
 
-.fa-heart{
+.post-icons i:nth-child(1) {
     margin-right: 2px;
+}
+
+.post-icons i:nth-child(2) {
+    margin-right: 2px;
+    color: red;
+}
+
+.hidden{
+    display: none;
 }
 
 .likes{
