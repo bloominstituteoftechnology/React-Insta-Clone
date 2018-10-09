@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data.js';
+import PostContainer from './components/PostContainer/PostContainer.js';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      dummyData:[]
-    };
+      dummyData: dummyData,
   }
-
+  };
 
   render() {
-    console.log(dummyData);
-    return (
-      <div className="App">
-      </div>
-    );
+
+  return (
+   <div>
+     <PostContainer dummyData={this.state.dummyData} ></PostContainer>
+   </div>
+      );
+   }
   }
-}
 
 export default App;
