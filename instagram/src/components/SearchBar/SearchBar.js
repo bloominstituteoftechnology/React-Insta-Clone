@@ -15,6 +15,7 @@ const SearchBar = props => {
           className="search-textbar"
           type="text"
           placeholder="&#x1F50D; Search"
+          value={props.searchValue}
           onChange={props.searchChange}
         />
         <input className='search-button' type='submit' onClick={props.search}/>

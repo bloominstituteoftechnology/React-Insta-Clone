@@ -11,8 +11,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ dummyData: dummyData });
-    this.setState({ searchList: dummyData });
+    this.setState({ dummyData: dummyData, searchList: dummyData });
   }
 
   filterChangeHandler = e => {
@@ -24,7 +23,9 @@ class App extends React.Component {
     const list = this.state.dummyData.filter(
       item => item.username === this.state.search
     );
-    this.setState({ searchList: list });
+    this.setState({ 
+      searchList: list
+    });
   };
 
   render() {
@@ -37,8 +38,11 @@ class App extends React.Component {
         <SearchBar
           searchChange={this.filterChangeHandler}
           search={this.filterClickHandler}
+          searchValue={this.state.search}
         />
-        {this.state.searchList.map(item => (
+        {this.state.search ? this.state.searchList.map(item => (
+          <PostContainer key={item.timestamp} posts={item} />
+        )) : this.state.dummyData.map(item => (
           <PostContainer key={item.timestamp} posts={item} />
         ))}
       </div>
