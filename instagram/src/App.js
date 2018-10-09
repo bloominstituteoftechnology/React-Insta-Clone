@@ -1,42 +1,72 @@
-import React, { Component } from 'react';
-import './App.css';
-import dummyData from './dummy-data';
-import PostsContainer from './components/PostsContainer/PostsContainer';
-import SearchBar from './components/SearchBar/SearchBarContainer';
+import React, { Component } from "react";
 
+import "./App.css";
+import dummyData from "./dummy-data";
+import PostContainer from "./components/PostContainer/PostContainer";
+import SearchBar from "./components/SearchBar/SearchBar";
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      posts: [],
-      filteredPosts: []
+      postData: [],
+      newSearch: "",
+      filtered: false
     };
   }
+
   componentDidMount() {
-    this.setState({ posts: dummyData });
+    setTimeout(() => {
+      this.setState({ postData: dummyData });
+    }, 2000);
   }
-  searchPostsHandler = e => {
-    const posts = this.state.posts.filter(p => {
-      if (p.username.includes(e.target.value)) {
-        return p;
-      }
-    });
-    this.setState({ filteredPosts: posts });
+
+  startSearch = event => {
+    event.preventDefault();
+    if (this.state.newSearch !== "") {
+      let newData = dummyData;
+      let filteredArr = newData.filter(
+        post => post.username === this.state.newSearch
+      );
+      this.setState({
+        postData: filteredArr,
+        newSearch: "",
+        filtered: true
+      });
+    } else {
+      this.setState({
+        postData: dummyData,
+        newSearch: "",
+        filtered: false
+      });
+    }
   };
+
+  changeHandler = (key, value) => {
+    this.setState({
+      [key]: value
+    });
+  };
+
   render() {
     return (
       <div className="App">
-        <SearchBar
-          searchTerm={this.state.searchTerm}
-          searchPosts={this.searchPostsHandler}
-        />
-        <PostsContainer
-          posts={
-            this.state.filteredPosts.length > 0
-              ? this.state.filteredPosts
-              : this.state.posts
-          }
-        />
+        {!this.state.postData.length ? (
+          <h2>Loading, please wait...</h2>
+        ) : (
+          <div>
+            <SearchBar
+              changeHandler={this.changeHandler}
+              startSearch={this.startSearch}
+              value={this.state.newSearch}
+              filtered={this.state.filtered ? "filtered" : "not-filtered"}
+            />
+            <div className="post-container-list">
+              {this.state.postData.map(user => {
+                return <PostContainer key={user.timestamp} userData={user} />;
+              })}
+            </div>
+          </div>
+        )}
       </div>
     );
   }

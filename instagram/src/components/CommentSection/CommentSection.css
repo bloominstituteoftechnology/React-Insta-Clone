@@ -1,0 +1,36 @@
+.comment-section {
+  width: 94%;
+  margin: 0 auto;
+}
+
+.comment {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.comment-section .bold {
+  margin-right: 1%;
+}
+
+.comment p {
+  margin: 0;
+  padding: 0 0 10px 0;
+  width: 100%;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.timestamp {
+  color: grey;
+  font-size: 12px;
+}
+
+.add-comment {
+  width: 100%;
+  border: none;
+  border-top: 1px solid lightgrey;
+  padding: 15px 0;
+  text-indent: 2%;
+  font-size: 16px;
+}
