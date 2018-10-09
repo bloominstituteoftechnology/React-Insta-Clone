@@ -12,6 +12,7 @@ class PostContainer extends React.Component{
     constructor(props){
         super(props)
         this.state={
+            likes:props.data.likes,
             newComment:'',
             comments:props.data.comments
         }
@@ -26,16 +27,20 @@ class PostContainer extends React.Component{
         
     }
     handleCommentChange = event =>{
-        this.setState({newComment:event.target.value},console.log('set the new comment to ', this.state.newComment))
+        this.setState({newComment:event.target.value})
+    }
+    handleLikeClick = event =>{
+        this.setState({likes: (this.state.likes+1)})
     }
 
     render(){
-        console.log(this.props)
         return(
             <div className='post-container'>
                 <PostHeader data={this.props.data}/>
                 <img className='post-container-image' src={this.props.data.imageUrl}></img>
-                <LikesBar data={this.props.data} />
+                <LikesBar 
+                    handleLikeClick={this.handleLikeClick}
+                    likes={this.state.likes} />
                 {
                     this.state.comments.map(element =>{
                         return (
