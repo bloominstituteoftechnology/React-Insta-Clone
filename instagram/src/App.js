@@ -15,7 +15,7 @@ class App extends Component {
 
   return (
    <div>
-     <PostContainer dummyData={this.state.dummyData} ></PostContainer>
+     <PostContainer dummyData={this.state.dummyData}></PostContainer>
    </div>
       );
    }
