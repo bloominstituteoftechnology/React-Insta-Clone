@@ -32,6 +32,7 @@
   position: fixed;
   top: 0;
   border-bottom: 1px solid #e6e6e6;
+  background: #fff;
 }
 
 .search {
@@ -54,7 +55,6 @@
   margin: 0 auto;
   height: 25px;
   padding: 26px 40px;
-  background: #fff;
 }
 
 .nav-icons {

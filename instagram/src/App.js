@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 
 import SearchBar from "./components/SearchBar/SearchBar";
+import PostContainer from "./components/PostContainer/PostContainer";
 
 class App extends Component {
   render() {
@@ -10,6 +11,9 @@ class App extends Component {
         <header className="App-header">
           <SearchBar />
         </header>
+        <body>
+          <PostContainer />
+        </body>
       </div>
     );
   }

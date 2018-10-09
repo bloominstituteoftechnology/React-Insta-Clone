@@ -1,0 +1,24 @@
+.post-container {
+  margin-top: 150px;
+}
+
+.thumbnail-img {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.thumbnail {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px;
+  height: 27px;
+}
+
+.thumbnail p {
+  font-weight: bold;
+  padding-left: 10px;
+  cursor: pointer;
+}
