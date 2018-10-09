@@ -34,3 +34,54 @@ i.Nav {
   width: 176px;
   text-indent: -1000%;
 }
+.Nav-icon-feed {
+  color: #003569;
+
+  background-image: url(../../sprite.png);
+  background-size: 405px 379px;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: -275px -353px;
+  height: 25px;
+  width: 25px;
+}
+
+.Nav-icon-heart {
+  color: #003569;
+
+  background-image: url(../../sprite.png);
+  background-size: 405px 379px;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+
+  background-repeat: no-repeat;
+  background-position: -325px -328px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.Nav-icon-profile {
+  color: #003569;
+
+  background-image: url(../../sprite.png);
+  background-size: 405px 379px;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: -308px -173px;
+  height: 25px;
+  width: 25px;
+}
