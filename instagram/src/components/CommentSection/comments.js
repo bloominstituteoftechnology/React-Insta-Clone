@@ -7,7 +7,7 @@ import './CommentSection.css';
 
 const Comments = props =>{
     return(
-        <div>
+        <div className='comments'>
         <h3 className='usercomment'>{props.comments.username} </h3> 
         <p className='postcomment'>{props.comments.text}</p>
         
