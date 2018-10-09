@@ -3,7 +3,7 @@ import './PostContainer.css'
 
 const Post = props => {
     return (
-        <div>
+        <div className="post">
             <div className="user">
                 <div className="user-photo">
                     <img src={props.post.thumbnailUrl} alt=""/>
