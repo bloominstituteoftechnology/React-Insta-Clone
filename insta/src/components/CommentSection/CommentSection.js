@@ -1,5 +1,6 @@
 import React from 'react';
 import AddComment from './addComment'
+import "./CommentSection.css"
 
 
 class Comments extends React.Component{
@@ -15,7 +16,7 @@ class Comments extends React.Component{
     componentDidMount(){
         this.setState({
             comments: this.props.commentArray,
-            like: this.props.likes})
+            likes: this.props.likes})
     }
     addNewComment = e =>{
         if (this.state.newComment) {
@@ -23,11 +24,10 @@ class Comments extends React.Component{
                 comments: [...this.state.comments,
                     {
                         username: "EpikIsKaos",
-                       text: "stuff"
+                       text: this.state.newComment
                     }
                 ]
             })
-        e.currentTarget.value=null;
         }
     }
     changeHandler= e =>{
@@ -35,17 +35,23 @@ class Comments extends React.Component{
     }
     submitHandler = e =>{
         e.preventDefault();
-        if (e.keyCode=== 13 && e.shiftKey === false){
-            if(this.state.newComment.length >=1)
-            e.preventDefault();
             this.addNewComment(e);
             this.setState({newComment:''})
-        }
+    }
+    likeMore =()=>{
+        this.setState(prevState=>{return {likes: prevState.likes +1}})
     }
    render(){
     return(
         <div>
-            {this.props.commentArray.map(item =>{
+             <>
+                 <i className="far fa-heart fa-2x like-icon" onClick={this.likeMore}></i>
+                 <i className="far fa-comment fa-2x fa-flip-horizontal"></i>
+             </>
+             <>
+             <h1>{this.state.likes} likes</h1>
+             </>
+            {this.state.comments.map(item =>{
                 return(
                     <div key={item.text}>
                         <div>
@@ -55,7 +61,7 @@ class Comments extends React.Component{
                     </div>
                 )
             })}
-            <AddComment submit={this.submitHandler} change={this.changeHandler} value={this.state.newComment} />
+            <AddComment submit={this.submitHandler} change={this.changeHandler} val={this.state.newComment}/>
         </div>
     )}
 }

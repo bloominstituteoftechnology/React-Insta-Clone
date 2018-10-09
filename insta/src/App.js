@@ -16,14 +16,11 @@ class App extends Component {
  
 
   componentDidMount = () =>{
-    this.setState=({
+    this.setState({
       posts: dummyData
     })
   }
-  submitHandler = e =>{
-    e.preventDefault();
-    console.log(e.target)
-}
+ 
   render() {
     return (
       <div className="App">
