@@ -9,6 +9,15 @@
   
   .image-wrapper {
     height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin-top: 15px;
+  }
+
+  .line {
+      height: 100%;
+      margin: 15px 15px;
   }
   
   .logo-image {

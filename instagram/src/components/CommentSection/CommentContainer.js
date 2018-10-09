@@ -22,7 +22,7 @@ class CommentSectionContainer extends React.Component {
     }
 }
 
-CommentSection.propTypes = {
+CommentSectionContainer.propTypes = {
     comments: PropTypes.arrayOf(
       PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
     )

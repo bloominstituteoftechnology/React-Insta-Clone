@@ -1,4 +1,4 @@
-.posts-container-wrapper {
+.post-container {
   height: 500px;
   width: 50%;
   margin: 5px auto;
@@ -21,11 +21,11 @@
   display: flex;
 }
 
-.post-thumb-wrapper {
+.thumbnail-wrapper {
   height: 50px;
   width: 50px;
 }
-.post-thumb {
+.post-thumbnail {
   height: 100%;
   border-radius: 50%;
 }
