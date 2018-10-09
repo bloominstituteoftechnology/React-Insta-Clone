@@ -3,7 +3,7 @@
     border:1px solid #ccc; 
 }
 .post-container-image{
-    max-width: 600px;
+    width: 100%;
     height:auto;
 }
 .post-time-stamp{
