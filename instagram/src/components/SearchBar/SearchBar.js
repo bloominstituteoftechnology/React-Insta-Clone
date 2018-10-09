@@ -6,7 +6,7 @@ const SearchBar = () => {
     return (
         <div className="searchBarDiv">
             <div className="logoContainer">
-                <i className="fab fa-instagram"></i>
+                <div className="IGWidget"></div>
                 <div className="lineSpacer"></div>
                 <div className="IGLogo"></div>
             </div>

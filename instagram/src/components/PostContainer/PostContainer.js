@@ -25,16 +25,16 @@ const PostContainer = props => {
         <div style={userImageStyle} className="imageURL"></div>
             <div className="iconContainer">
                 <i className="far fa-heart"></i>
-                <i class="far fa-comment"></i>
+                <i className="far fa-comment"></i>
             </div>
         <p>{likes} likes</p>
-            {comments.map(item => {
-                return <CommentSection commentInfo={item}/>
+            {comments.map((item, index) => {
+                return <CommentSection commentInfo={item} key={index}/>
             })}
         <div className="timeStamp">{timestamp}</div>
                 <div className="newCommentDiv">
                     <input className="commentInput" placeholder="Add a comment..."></input>
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i className="fas fa-ellipsis-h"></i>
                 </div>
         </div>
     )
