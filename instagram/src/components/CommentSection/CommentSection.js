@@ -1,9 +1,12 @@
 import React from 'react';
+import Comment from "./Comment";
 
 const CommentSection = props => {
   return (
     <div>
-      <h2>CommentSection Component</h2>
+      {props.comments.map((com, idx) => (
+        <Comment comment={com} />
+      ))}
     </div>
   )
 }
