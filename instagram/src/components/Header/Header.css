@@ -7,8 +7,8 @@
 }
 
 .icon {
-    width: 40px;
-    padding: 0 10px;
+    width: 35px;
+    padding: 5px 8px;
     margin: 0 10px;
 }
 
@@ -20,14 +20,28 @@
 }
 
 .searchbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: 20px;
-    text-align: center;
-    padding: 0 20px 0 16px;
+    padding: 4px 0 4px 20px;
+    font-size: 1.4rem;
+    background-color: #f2f2f2;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+
+.search-input {
+    border: none;
+    width: 40%;
+    background-color: #f2f2f2;
+    padding: 0 4px;
+    color: grey;
     font-size: 1.4rem;
 }
 
-.side-btn {
-    width: 40px;
+.end-btn {
     cursor: pointer;
-    margin: 0 10px;
+    margin: 0 12px;
 }
