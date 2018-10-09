@@ -2,10 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import CommentSection from '../CommentSection/CommentSection'
 
-const PostContainer = (props) => (
+const PostContainer = ({
+  post: { username, thumbnailUrl, imageUrl, likes, timestamp, comments }
+}) => (
   <div>
-    <p>post container</p>
-    <CommentSection />
+    <img src={thumbnailUrl} alt="user thumbnail" />
+    <p>{username}</p>
+    <img src={imageUrl} alt="post" />
+    <p>Likes: {likes}</p>
+    <CommentSection comments={comments} />
+    <p>{timestamp}</p>
   </div>
 )
 
