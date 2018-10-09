@@ -1,0 +1,12 @@
+.post-container{
+    color:hotpink;
+    width: 100%;
+    border: blue solid 1px;
+}
+.post-header{
+    display:flex;
+}
+.main-image{
+    width:100%;
+    height:auto;
+}
