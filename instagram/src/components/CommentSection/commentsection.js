@@ -17,6 +17,12 @@ class CommentSection extends React.Component{
         return(
             <div>
                 {this.state.allComments.map((comment, index) => <Comments key= {index} comments={comment} />)}
+            <form>
+                <input 
+                placeholder= 'Add a comment...'>
+                </input>
+        </form>
+            
             </div>
         );
     }
