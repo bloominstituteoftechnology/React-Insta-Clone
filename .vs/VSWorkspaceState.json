@@ -7,8 +7,8 @@
     "\\instagram\\src\\components",
     "\\instagram\\src\\components\\CommentSection",
     "\\instagram\\src\\components\\PostContainer",
+    "\\instagram\\src\\components\\PostList",
     "\\instagram\\src\\components\\SearchBar"
   ],
-  "SelectedNode": "\\instagram\\src\\logo.svg",
   "PreviewInSolutionExplorer": false
 }
