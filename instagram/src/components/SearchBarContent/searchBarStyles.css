@@ -1,0 +1,29 @@
+.search-bar-section{
+    width:100%;
+}
+.search-bar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-section{
+    display:flex;
+    align-items: center;
+}
+.search-bar-logo{
+    height:25px;
+    border-right:1px solid black;
+}
+.search-box{
+    border-radius:5px;
+    height:20px;
+    width:200px;
+    text-align: center;
+    background:rgb(247, 247, 247);
+}
+.icon-section{
+    display:flex;
+    justify-content: space-between;
+    width:15%;
+}
+
