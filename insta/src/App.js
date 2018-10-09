@@ -19,31 +19,34 @@ class App extends Component {
 
   componentDidMount = () =>{
     this.setState({
-      posts: dummyData
+      posts: dummyData,
+      searchReturn: dummyData
     })
   }
- changeHandler=()=>{
-  this.setState({searchInput: e.target.value})
- }
+ changeHandler=(e)=>{
+// e.preventDefault();
+  this.setState({searchInput: e.target.value},this.searchPostforUser()
+  );}
 
-  searchPostforUser=(e)=>{
-    e.preventDefault();
-   const searchList = this.state.posts.filter(item =>item.username === this.state.searchInput);
-   this.setState({searchReturn: searchList, searchInput: ''})
+  searchPostforUser=()=>{
+   this.setState({searchReturn: this.state.posts.filter(item =>{return item.username.toLowerCase().includes(this.state.searchInput.toLocaleLowerCase())}), searchInput: ''})
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar change={this.changeHandler} value={this.state.searchInput}/>
         <div className="post-container">
-        {this.state.posts.map(item =>{
-          return(
-          <PostContainer key={item.timestamp} obj={item} />
-       )})}
-       </div>
-      </div>
-    );
+          {this.state.searchInput.length?this.state.searchReturn.map(item =>{
+            return(
+            <PostContainer key={item.timestamp} obj={item} />
+            )}):this.state.posts.map(item =>{
+            return(
+            <PostContainer key={item.timestamp} obj={item} />
+            )})}
+        </div>
+        </div>
+      );
   }
 }
 

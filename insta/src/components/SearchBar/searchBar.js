@@ -8,9 +8,9 @@ const SearchBar = props => {
                 <i className="fab fa-instagram fa-4x"></i>
                 <img src="https://buxton.com.au/static/img/instagram.svg" className="name-logo" alt="insta Logo" />
             </div>
-            <form className="center-content">
-                <input type='text' placeholder=" &#x1F50D;search" className="search-bar-input" />
-            </form>
+            <div className="center-content" >
+                <input type='text' placeholder=" &#x1F50D;search" className="search-bar-input" onChange={props.change} value={props.value} />
+            </div>
             <div className="imgs-right" >
                 <a href="#"> <i className="far fa-compass fa-2x icon"></i> </a>
                 <a href="#"> <i className="far fa-heart fa-2x icon"></i> </a>
