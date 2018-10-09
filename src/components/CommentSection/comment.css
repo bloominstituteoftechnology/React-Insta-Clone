@@ -1,0 +1,50 @@
+.comment-container {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    margin: 10px auto;
+    padding: 0px 5px;
+}
+
+.comment-container p, strong, input {
+    font-size: 14px;
+}
+
+.comment-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 7%;
+    font-size: 18px;
+}
+
+.comments {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(239, 239, 239);
+}
+
+.comments .comment {
+    font-family: "proxima-nova",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.add-comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-comment input {
+    font-family: "proxima-nova",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    padding: 10px 0px;
+    width: 90%;
+    border: 0px;
+}
+
+input:focus {
+    outline: none;
+}

@@ -1,0 +1,18 @@
+.app-container {
+  width: 640px;
+  margin: 0 auto;
+}
+
+p {
+  font-family: "proxima-nova",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+h1 {
+  font-family: "milk-script",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+}

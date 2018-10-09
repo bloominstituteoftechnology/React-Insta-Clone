@@ -1,0 +1,42 @@
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    height: 50px;
+}
+
+.insta-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
+    height: 50px;
+}
+
+.insta-logo img {
+    fill: black;
+    height: 25px;
+}
+
+.insta-logo p {
+    padding: 0px 10px;
+}
+
+.search-box input{
+    font-family: "proxima-nova",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    border: 1px solid lightgray;
+    background-color: rgb(250, 250, 250);
+    border-radius: 2px;
+    text-align: center;
+    height: 18px;
+}
+
+.search-icons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 15%;
+}
