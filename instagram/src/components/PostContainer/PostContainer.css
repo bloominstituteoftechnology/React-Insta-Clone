@@ -1,5 +1,8 @@
 .post-container {
-  margin-top: 150px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  max-width: 614px;
+  margin: 150px auto 20px;
 }
 
 .thumbnail-img {
@@ -21,4 +24,8 @@
   font-weight: bold;
   padding-left: 10px;
   cursor: pointer;
+}
+
+.post-img {
+  width: 100%;
 }
