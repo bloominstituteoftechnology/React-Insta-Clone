@@ -15,6 +15,8 @@ const PostContainer = props =>
       <img src={post.imageUrl} alt={post.comments[0].text} />
       <p className="likes">{post.likes} likes</p>
       <CommentSection comments={post.comments} />
+      <p className="timestamp">{post.timestamp}</p>
+      <input type="text" name="comment" placeholder="Add a comment.."/>
     </div>
   ));
 
