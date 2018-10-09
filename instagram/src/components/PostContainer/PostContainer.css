@@ -1,0 +1,22 @@
+
+.post {
+    width: 640px;
+    margin: 20px;
+    border: 1px solid lightgray;
+}
+
+.post header {
+    display: flex;
+    align-items: center;
+}
+
+.thumb {
+    width: 32px;
+    height: 32px;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+.post > p {
+    font-weight: bold;
+}
