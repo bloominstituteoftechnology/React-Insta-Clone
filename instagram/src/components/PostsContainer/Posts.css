@@ -50,16 +50,9 @@
   -ms-filter: "FlipH";
 }
 
-.Post-body p {
+.Post-body .likes {
   width: 95%;
   margin: 10px auto;
   font-weight: 700;
   font-size: 1.5rem;
-}
-
-.Post-card .time {
-  width: 95%;
-  margin: 0 auto;
-  color: #b6b6b6;
-  font-size: 1.2rem;
 }

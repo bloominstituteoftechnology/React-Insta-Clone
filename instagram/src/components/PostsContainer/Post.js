@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Posts.css';
-import moment from 'moment';
 import CommentSection from '../CommentSection/CommentSectionContainer';
-import CommentForm from '../CommentSection/CommentForm';
+// import CommentForm from '../CommentSection/CommentForm';
 
 const Post = props => {
   const { username, thumbnailUrl, imageUrl, likes, comments, timestamp } = props.post;
@@ -22,14 +21,10 @@ const Post = props => {
           <i className="far fa-comment fa-2x icon"></i>
         </div>
 
-        <p>{likes} likes</p>
+        <p className="likes">{likes} likes</p>
       </section>
 
-      <CommentSection comments={comments} />
-
-      <p className="time">{moment(timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</p>
-
-      <CommentForm />
+      <CommentSection comments={comments} timestamp={timestamp} />
     </div>
   );
 };
