@@ -29,12 +29,12 @@ class PostContainer extends Component {
         this.setState((prevState) => ({ likes: prevState.likes + 1}));
     };
 
-    /* Log the keypress */
+    /* Add to post comments or log key entry */
     handleComment = event => {
         //debugger;
         // Was it the return key that was hit?
         event.preventDefault();
-        if( event.keyCode === 13 ) {
+        if( event.keyCode === 13 && event.target.value.length > 0 ) {
             let updatedComments = this.state.comments;
             updatedComments.push({
                 username: "Guest",

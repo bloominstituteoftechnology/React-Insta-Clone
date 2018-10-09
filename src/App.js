@@ -28,28 +28,25 @@ class App extends Component {
 
   }
 
-  /* Increment likes for the selected comment */
-  // likesHandler = (postId) => {
-  //   this.setState({
-  //     data: this.state.data.map( (data, index) => {
-  //       if( index === postId ){
-  //         return {
-  //           ...data,
-  //           likes: data.likes +1
-  //         }
-  //       }
-  //       else {
-  //         return data;
-  //       }
-  //     })
-  //   })
-  // };
-
+  
+  /* Handle Searchbar input */
+  searchHandler = event => {
+    event.preventDefault();
+    
+    if( event.keyCode === 13 && event.target.value.length > 0 ){
+      //debugger;
+      let newData = this.state.data.filter( (data) => {
+        return data.username === event.target.value;
+      });
+      this.setState({ data: newData });
+        event.target.value="";
+    }
+  };
   
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar searchHandler={this.searchHandler} />
         {this.state.data.map( (data, index) => {
           // Pass each element to PostContainer:
             // id: 0
@@ -70,7 +67,6 @@ class App extends Component {
               likes={data.likes}
               timestamp={data.timestamp}
               comments={data.comments}
-              // likesHandler={this.likesHandler}
             />
           );
         })}

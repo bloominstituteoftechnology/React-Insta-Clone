@@ -7,10 +7,12 @@ import './SearchBar.css';
 // Main container for the header/search bar.
 
 const SearchBar = (props) => {
+    // Gets props:
+        // searchHandler: ()
     return (
         <div className='searchBar'>
             <Logo />
-            <Search />
+            <Search searchHandler={props.searchHandler} />
             <Menu />
         </div>
     );
