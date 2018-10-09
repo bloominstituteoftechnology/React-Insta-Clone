@@ -38,7 +38,38 @@ class CommentSection extends React.Component {
     this.setState({
       [key]: value
     });
+    localStorage.setItem(key, value);
   };
+
+  saveState() {
+    for (let key in this.state) {
+      localStorage.setItem(key, JSON.stringify(this.state[key]));
+    }
+  }
+
+  hydrateState() {
+    for (let key in this.state) {
+      if (localStorage.hasOwnProperty(key)) {
+        let value = localStorage.getItem(key);
+        try {
+          value = JSON.parse(value);
+          this.setState({ [key]: value });
+        } catch (error) {
+          this.setState({ [key]: value });
+        }
+      }
+    }
+  }
+
+  componentDidMount() {
+    this.hydrateState();
+    window.addEventListener("beforeunload", this.saveState.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("beforeunload", this.saveState.bind(this));
+    this.saveState();
+  }
 
   render() {
     return (
