@@ -24,17 +24,18 @@ class CommentSection extends React.Component {
                     {this.state.content.map(comment => {
                         return <Comment username={comment.username} text={comment.text}/>
                     })}
+                    <div className="timestamp">{this.state.timestamp}</div>
                 </div>
                 {/* Time stamp*/}
-                <div className="timestamp">{this.state.timestamp}</div>
+                
                 {/* Divider (border-bottom)*/}
                 {/* Add Comment section*/}
-                <div className="comment-input">
-                    <form>
+
+                    <form className="comment-input">
                         <input type="text" placeholder="Add a comment..."/>
+                        <i className="fas fa-ellipsis-h"></i>
                     </form>
-                    <i className="fas fa-ellipsis-h"></i>
-                </div>
+
             </div>
         )
     }

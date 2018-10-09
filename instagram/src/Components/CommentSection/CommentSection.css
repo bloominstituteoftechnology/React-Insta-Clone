@@ -3,7 +3,10 @@
 .comments-main-container{
     width: 95%;
     margin: 5px auto 0 auto;
-
+    
+}
+.comments-container{
+    border-bottom: 1px solid lightgray;
 }
 .comment-container{
     display: flex; 
@@ -22,7 +25,34 @@
 
 .timestamp{
     margin-top: 5px;
+    margin-bottom: 5px;
     text-align: start;
     color: darkgray;
     font-size: 13px;
+}
+
+.comment-input{
+    display: flex;
+    width: 100%;
+}
+
+input{
+    max-width: 600px;
+    font-size: 17px;
+    color: gray;
+    border: none;
+    height: 50px;
+    width: 90%;
+    overflow: auto;
+}
+
+input.break {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 80px;
+}
+.comment-input i{
+    margin: auto 0 ;
+    font-size: 20px;
+    width: 10%;
 }
