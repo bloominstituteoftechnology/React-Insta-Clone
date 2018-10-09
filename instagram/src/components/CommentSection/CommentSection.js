@@ -23,7 +23,7 @@ class CommentSection extends Component {
     }
 
     addLike = () => {
-        this.setState({ likes : ++this.state.likes})
+        this.setState({ likes : this.state.likes + 1 })
     }
 
     changeHandler = (event) => {

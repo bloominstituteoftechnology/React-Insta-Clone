@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
-
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
+import PostsPage from './components/PostContainer/PostsPage';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHeart, faCommentAlt, faEllipsisH, faCompass, faUser, faCameraRetro } from '@fortawesome/free-solid-svg-icons';
 
@@ -36,23 +34,9 @@ class App extends Component {
   }
 
   render() {
-    if (!this.state.posts.length) {
-      return <h1 className="app-container">⏰ Loading... ⏰</h1>;
-    }
-
     return (
       <div className="app-container">
-        <SearchBar search={this.searchTerm} />
-        {this.state.posts.map(post => (
-          <div key={post.timestamp}>
-              <PostContainer username={post.username}
-                             thumbnail={post.thumbnailUrl}
-                             image={post.imageUrl}
-                             likes={post.likes}
-                             timestamp={post.timestamp}
-                             comments={post.comments} />
-          </div>
-        ))}
+        <PostsPage search={this.searchTerm} posts={this.state.posts}/>
       </div>
     );
   }
