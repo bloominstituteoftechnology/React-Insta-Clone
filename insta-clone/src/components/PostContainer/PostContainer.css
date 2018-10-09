@@ -22,6 +22,10 @@
     padding: 0 0.25;
 }
 
+.postHeader {
+    padding: 1rem 0;
+}
+
 .postImage {
     padding: 0.5rem 0;
     max-width: 100%;
@@ -40,10 +44,9 @@
 .likeCommentIcons {
     display: flex;
     font-size: 2.2rem;
-    padding-top: 1.5rem;
 }
 
 .likeCount {
-    padding-top: 0.25rem;
+    margin-top: 0.25rem;
     text-align: left;
 }
