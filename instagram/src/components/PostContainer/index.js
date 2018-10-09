@@ -8,7 +8,7 @@ const PostContainer = props => {
 		<div>
 			{props.data.map((userPost, i) => {
 				return (
-					<div className='post-container'>
+					<div className='post-container' key={ userPost.username + userPost.timestamp }>
 						<SinglePost userData={userPost} />
 						<CommentMap comments = {userPost.comments} userData={userPost} postIndex={i} />
 					</div>

@@ -4,7 +4,7 @@ import './index.css';
 
 const SinglePost = props => {
 	return (
-		<div>
+		<div key = {props.userData.username + props.userData.timestamp}>
 			<header className='user-info'>
 				<img src={props.userData.thumbnailUrl} alt='user thumbnail' />
 				<p>{props.userData.username}</p>
@@ -17,15 +17,16 @@ const SinglePost = props => {
 	)
 }
 
-SinglePost.PropTypes = {
+SinglePost.propTypes = {
 	thumbnailUrl: PropTypes.img,
-	username: PropTypes.string.isRequired,
+	username: PropTypes.string,
 	imageUrl: PropTypes.img,
 }
 
 SinglePost.defaultProps = {
 	thumbnailUrl: <img src='http://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg' alt='grey box' />,
 	imageUrl: <img src='http://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg' alt='grey box' />,
+	username: 'default User',
 }
 
 export default SinglePost;
