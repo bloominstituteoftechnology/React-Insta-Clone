@@ -1,0 +1,85 @@
+
+
+/*============================================================================*/
+
+.post-container{
+    font-family: sans-serif;
+}
+.post-container a:any-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*============================================================================*/
+
+.post-container {
+    width: 600px;
+    border: solid #ccc 1px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+.post-username {
+    font-weight: bold;
+}
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+.post-header img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.post-photo {
+    width: 600px;
+}
+.post-photo img {
+    width: 100%;
+    height: auto;
+}
+.post-interaction {
+    margin-top: 8px;
+    margin-left : 16px;
+    margin-right: 16px;
+}
+.post-interaction img {
+    margin-right: 16px;
+}
+.post-likes-count {
+    margin-top: 8px;
+    font-weight: bold;
+}
+.post-comments {
+    margin-left : 16px;
+    margin-right: 16px;
+}
+.post-time {
+    margin-left : 16px;
+    margin-right: 16px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    padding-bottom: 1ex;
+    color: #888;
+    text-transform: uppercase;
+}
+.post-add-comment {
+    margin: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.post-add-comment a {
+    font-weight: bold;
+    color: #888;
+}
+.post-unknown-dots {
+    font-weight: bold;
+}
+.post-comment {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+}
