@@ -6,7 +6,15 @@ const SearchBar = () => {
             <div className="left">
                 <i class="fab fa-instagram fa-2x"></i>
                 <span></span>
-                <div className="instagram-logo"></div>
+                <h1 className="instagram-logo">instagram</h1>
+            </div>
+
+            <input type="text" placeholder="Search" className="search-input"/>
+
+            <div className="right">
+                <i class="far fa-compass fa-2x"></i>
+                <i class="far fa-heart fa-2x"></i>
+                <i class="far fa-user fa-2x"></i>
             </div>
         </div>
     );
