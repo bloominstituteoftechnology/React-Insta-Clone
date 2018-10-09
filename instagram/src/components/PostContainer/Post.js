@@ -1,6 +1,6 @@
 import React from 'react';
-import Comment from './CommentSection/Comment';
 import './Post.css' 
+import CommentSection from './CommentSection/CommentSection';
 
 const Post= props => { 
     console.log(props.dummyData);
@@ -20,7 +20,7 @@ const Post= props => {
                             <div className = "cl-buttons"></div>
                             <p>{info.likes} likes</p>
                         </div>
-                        <Comment comments={info.comments}/>
+                        <CommentSection comments={info.comments}/> 
                     </div> 
                 </div>
                 );

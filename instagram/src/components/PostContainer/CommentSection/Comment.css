@@ -27,3 +27,8 @@
     margin-bottom: .5rem;
     margin-top: .2rem;
 }
+
+.comments-all {
+    height: 5rem;
+    overflow-y: scroll;
+}

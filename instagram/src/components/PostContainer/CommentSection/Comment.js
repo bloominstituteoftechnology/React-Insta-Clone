@@ -1,9 +1,9 @@
 import React from 'react';
 import './Comment.css' 
 
-const Comment= props => { 
+const CommentDisplay = props => { 
     return (
-        <div>
+        <div className = 'comments-all'>
             {props.comments.map(comments => {
                 return (
                     
@@ -16,9 +16,8 @@ const Comment= props => {
                 );
             })}
             <p className = 'time'>2 HOURS AGO</p>
-            <input className = 'comment-input' type='text' placeholder ='Add a comment...'></input>
         </div>
     );
 }
 
-export default Comment;
+export default CommentDisplay;
