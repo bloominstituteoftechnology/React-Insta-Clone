@@ -6,6 +6,7 @@ import CommentSection from '../CommentSection/CommentSection.js';
 const PostDetails = (props) => {
     return (
         <div>
+            
             <PostHeader
                 username={props.postDetail.username}
                 thumbnailUrl={props.postDetail.thumbnailUrl}
@@ -17,7 +18,7 @@ const PostDetails = (props) => {
                     src={props.postDetail.imageUrl}
                 />
             </div>
-        
+            
             <CommentSection comments = {props.postDetail.comments} />
         </div>
     )

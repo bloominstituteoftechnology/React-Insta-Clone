@@ -1,11 +1,12 @@
 import React from 'react';
+import './post.css';
 
 
 const PostHeader = (props) => {
     return (
-        <div>
+        <div className = "postHeader-div">
             <div>
-                <img src = {props.thumbnailUrl} alt = "post-header" />
+                <img className = "img-postHeader" src = {props.thumbnailUrl} alt = "post-header" />
             </div>
 
             <div>
