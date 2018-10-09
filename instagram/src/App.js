@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import SearchBar from "../src/components/SearchBar/SearchBar";
 import PostContainer from "../src/components/PostContainer/PostContainer";
 import dummyData from "./dummy-data";
+import likes from "./likes";
 import "./App.css";
 
 class App extends Component {
@@ -18,7 +19,7 @@ class App extends Component {
     setTimeout(() => {this.setState({
       dummyData: dummyData,
       search: '',
-    })}, 3000);
+    })}, 300);
   }
 
   searchFilter = event => {
@@ -38,6 +39,7 @@ class App extends Component {
           dummyData={this.state.dummyData}
           commentInput={this.commentInput}
           comment={this.state.comment}
+          likes={likes}
         />
       </>
     );

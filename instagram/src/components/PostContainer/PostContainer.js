@@ -8,7 +8,8 @@ class PostContainer extends React.Component {
     this.state = {
       comments: this.props.dummyData.map(log => {
         return log.comments;
-      })
+      }),
+      likes: props.likes,
     };
   }
   componentDidMount() {
@@ -35,15 +36,14 @@ class PostContainer extends React.Component {
       {
         comments: this.state.comments
       },
-      () => console.log(this.state.comments)
     );
     localStorage.setItem("comments", JSON.stringify(this.state.comments));
   };
 
   render() {
     return (
-      <div className={"container"}>
-        <div className={"contentContainer"}>
+      <div className="container">
+        <div className="contentContainer">
           {this.props.dummyData.map(post => {
             return (
               <Post
@@ -53,6 +53,7 @@ class PostContainer extends React.Component {
                 comment={this.props.comment}
                 updateComments={this.updateComments}
                 commentEntries={this.state.comments}
+                likes={this.state.likes}
               />
             );
           })}

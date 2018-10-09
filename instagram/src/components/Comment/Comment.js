@@ -5,8 +5,8 @@ import '../Comment/Comment.css';
 class Comment extends React.Component {
   render() {
     return (
-      <div className={'commentItem'}>
-        <span className={'boldName'}>{this.props.comment.username}</span><span className={'commentText'}>{this.props.comment.text}</span>
+      <div className='commentItem'>
+        <span className='boldName'>{this.props.comment.username}</span><span className='commentText'>{this.props.comment.text}</span>
       </div>
     );
   }

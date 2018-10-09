@@ -9,13 +9,14 @@ class CommentSection extends React.Component {
     
     this.state = {
       comment: "",
-      likes: props.post.likes,
+      likes: props.likes.filter((entry, i) => i + 1 === props.post.id),
       id: props.post.id,
+      liked: false,
       comments: [
         ...props.comments,
         ...props.commentEntries.filter(entry => entry.id === props.post.id),
-        
-      ]};
+      ]
+    };
   }
 
   
@@ -43,11 +44,20 @@ class CommentSection extends React.Component {
     });
   };
 
-  addLike = () => {
+  liker = () => {
     let likeCounter = this.state.likes;
-    this.setState({
-      likes: ++likeCounter
+    if(this.state.liked === false) {
+      this.setState({
+      likes: ++likeCounter,
+      liked: true,
     });
+    } else {
+      this.setState({
+      likes: --likeCounter,
+      liked: false,
+    },
+    () => {this.props.updateLikes(this.state.likes);})
+    }
   };
 
   render() {
@@ -55,20 +65,18 @@ class CommentSection extends React.Component {
       this.props.post.timestamp,
       "MMMM Do YYYY, hh:mm:ss a"
     ).format("YYYY-MM-DD HH:mm:ss");
-    
-    // console.log(entries)
     return (
-      <div className={"commentsContainer"}>
-        <div className={"buttonBar"}>
-          <div className={"commentsButtonBox"}>
+      <div className="commentsContainer">
+        <div className="buttonBar">
+          <div className="commentsButtonBox">
             <img
               src="https://png.icons8.com/ios/48/000000/hearts.png"
               alt=""
-              onClick={this.addLike}
+              onClick={this.liker}
             />
             <img
               src="https://png.icons8.com/ios/48/000000/speech-bubble.png"
-              className={"commentBubble"}
+              className="commentBubble"
               alt=""
             />
             <img src="https://png.icons8.com/ios/48/000000/upload.png" alt="" />
@@ -78,7 +86,7 @@ class CommentSection extends React.Component {
             alt=""
           />
         </div>
-        <div className={"likesCount"}>{this.state.likes} likes</div>
+        <div className="likesCount">{this.state.likes} likes</div>
         {this.state.comments.map(comment => {
           return (
             <Comment
@@ -88,17 +96,17 @@ class CommentSection extends React.Component {
             />
           );
         })}
-        <div className={"dateStamp"}>{moment(date).fromNow()}</div>
+        <div className="dateStamp">{moment(date).fromNow()}</div>
         <form>
-          <div className={"moreButton"} />
+          <div className="moreButton" />
           <input
             value={this.state.comment}
-            className={"commentInput"}
+            className="commentInput"
             placeholder={"Add a comment..."}
             onChange={this.commentInput}
           />
           <button
-            className={"invisible"}
+            className="invisible"
             type="submit"
             onClick={this.addComment}
           />
