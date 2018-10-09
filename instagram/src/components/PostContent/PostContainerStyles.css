@@ -1,0 +1,17 @@
+.post-container{
+    width:50%;
+}
+
+/* header styles */
+.user-header{
+    display:flex;
+}
+.user-header .thumbnail-img{
+    height:50px;
+    border-radius:50%;
+}
+.user-header p{
+    font-weight:bold;
+    margin-left:10px;
+}
+/* User Image */
