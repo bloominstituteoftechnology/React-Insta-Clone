@@ -14,4 +14,21 @@
     font-weight:bold;
     margin-left:10px;
 }
-/* User Image */
+/* icon and likes section */
+
+.post-container .post-icon{
+    width:15%;
+    font-size:1.6rem;
+    display:flex;
+    justify-content: space-between;
+}
+.post-container p{
+    text-align: left;
+}
+.post-container .num-of-likes{
+    font-weight:bold;
+}
+.post-container .post-timestamp{
+    color:lightgray;
+    font-size:12px;
+}

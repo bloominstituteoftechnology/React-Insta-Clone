@@ -12,9 +12,13 @@ const PostContainer = props =>{
                         <p>{post.username}</p>
                     </div>
                     <img alt="user" src={post.imageUrl} />
-                    <i className="fas fa-compass"></i>
+                    <div className="post-icon">
+                        <i className="far fa-heart"></i>
+                        <i className="far fa-comment"></i>
+                    </div>
+                    <p className="num-of-likes">{post.likes} likes</p>
                     <CommentSection comments={post.comments}/>
-                    <p>{post.timestamp}</p>
+                    <p className="post-timestamp">{post.timestamp}</p>
                     <input type="text" placeholder="add a comment" />
                 </div>
             );
