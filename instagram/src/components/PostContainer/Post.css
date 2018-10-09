@@ -3,7 +3,7 @@
   margin: auto;
 }
 .post-container {
-  margin: 20px 0;
+  margin: 40px 0;
   max-width: 616px;
   border: 1px solid lightgrey;
 }
@@ -34,11 +34,24 @@
   margin-right: 10px;
   font-size: 24px;
 }
-.post-title span:first-of-type {
-  margin-top: 5px;
-  font-weight: 700;
+.post-comments span:first-of-type {
+  margin-top: 10px;
+  font-weight: 600;
   margin-right: 10px;
+}
+.post-comments .comment-username {
+  font-weight: 600;
+  margin-bottom: 100px;
 }
 .post-title {
   margin-top: 10px;
+}
+.comments .likes {
+  margin: 5px 0 10px;
+}
+.post-comments {
+  padding-bottom: 30px;
+}
+.post-comments div {
+  margin-bottom: 7px;
 }
