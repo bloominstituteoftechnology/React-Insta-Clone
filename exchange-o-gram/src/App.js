@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
-import PostContainer from './components/PostContainer/PostContainer.js';
+import PostsPage from './components/PostContainer/PostsPage.js'
 import './App.css';
 
 class App extends Component {
@@ -15,12 +15,12 @@ class App extends Component {
   }
 
   saveData = ()=>{
-    localStorage.setItem("data", JSON.stringify(this.state.posts));
+    localStorage.setItem("exchange_o_gram", JSON.stringify(this.state.posts));
   }
 
   componentDidMount(){
-
-    const loadedData = JSON.parse(localStorage.getItem("data"));
+    const loadedData = JSON.parse(localStorage.getItem("exchange_o_gram"));
+    
     let data;
     if(loadedData === null){
       data = dummyData;
@@ -34,6 +34,8 @@ class App extends Component {
     data.forEach(obj=>{
       obj.isHidden = false;
     })
+
+    console.log(data);
 
     this.setState({
       posts: data
@@ -76,17 +78,19 @@ class App extends Component {
     });
   }
 
+  deleteComment = (postIndex, commentIndex)=>{
+    const data = this.state.posts;
+    data[postIndex].comments.splice(commentIndex, 1);
+    this.setState({
+      posts: data
+    });
+  }
+
   render() {
     return (
       <div className="App">
         <SearchBar searchPosts={this.searchPosts}/>
-        {this.state.posts.map((post, index)=>{
-          return(
-            <div key={post.timestamp} className="containers">
-              <PostContainer index={index} post={post} addLike={this.addLike} addNewComment={this.addNewComment}/>
-            </div>
-          )
-        })}
+        <PostsPage posts={this.state.posts} addNewComment={this.addNewComment} addLike={this.addLike} searchPosts={this.searchPosts} deleteComment={this.deleteComment}/>
       </div>
     );
   }

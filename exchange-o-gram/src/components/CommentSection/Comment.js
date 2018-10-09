@@ -13,10 +13,11 @@ class Comment extends React.Component{
     
     askForDelete = (event)=>{
         event.preventDefault();
+
         const style = {
-            position: 'absolute',
-            top: event.clientY,
-            left: event.clientX
+            position: 'relative',
+            top: '0px',
+            left: '20px'
         }
         this.setState({
             displayDeleteComment: true,
@@ -26,8 +27,7 @@ class Comment extends React.Component{
 
     deleteComment = (event)=>{
         event.preventDefault();
-        // Pass in from App to delete comment from data
-        console.log("delete comment");
+        this.props.deleteComment(this.props.postIndex, this.props.commentIndex);
     }
     render(){
         return(

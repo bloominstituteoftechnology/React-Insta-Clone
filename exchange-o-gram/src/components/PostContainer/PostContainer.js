@@ -24,7 +24,7 @@ class PostContainer extends React.Component{
                     <p>{this.props.post.username}</p>
                 </div>
                 <img src={this.props.post.imageUrl} alt={`${this.props.post.username} Post`}></img>
-                <CommentSection index={this.props.index} likes={this.props.post.likes} comments={this.state.comments} timeStamp={this.props.post.timestamp} addLike={this.props.addLike} addNewComment={this.props.addNewComment}/>
+                <CommentSection postIndex={this.props.index} likes={this.props.post.likes} comments={this.state.comments} timeStamp={this.props.post.timestamp} addLike={this.props.addLike} addNewComment={this.props.addNewComment} deleteComment={this.props.deleteComment}/>
             </div>
         )
     }

@@ -11,7 +11,7 @@ class CommentSection extends React.Component{
         const format = 'MMMM DD YYYY hh:mm:ss';
 
         this.state = {
-            index: props.index,
+            postIndex: props.postIndex,
             comments: props.comments,
             newComment: '',
             timeStamp: moment(props.timeStamp, format).fromNow().toUpperCase()
@@ -20,7 +20,7 @@ class CommentSection extends React.Component{
 
     addNewComment = (event)=>{
         event.preventDefault();
-        this.props.addNewComment(this.state.newComment, this.state.index);
+        this.props.addNewComment(this.state.newComment, this.state.postIndex);
         this.setState({
             newComment: ''
         })
@@ -34,7 +34,7 @@ class CommentSection extends React.Component{
 
     addLike = (event)=>{
         event.preventDefault();
-        this.props.addLike(this.state.index);
+        this.props.addLike(this.state.postIndex);
     }
 
     render(){
@@ -42,10 +42,10 @@ class CommentSection extends React.Component{
             <div className="comments-container">
                 <div className="comments-icon-container"><i onClick={this.addLike} className="comments-icon far fa-heart fa-2x"></i><i className="comments-icon far fa-comment fa-2x"></i></div>
                 <p className="likes">{this.props.likes} likes</p>
-                <div className="comments">{this.state.comments.map((comment)=>{
+                <div className="comments">{this.state.comments.map((comment, index)=>{
                     return(
                         <div key={comment.text}>
-                            <Comment comment={comment}/>
+                            <Comment postIndex={this.state.postIndex} commentIndex={index} comment={comment} deleteComment={this.props.deleteComment}/>
                         </div>
                     )
                 })}</div>
@@ -59,7 +59,7 @@ class CommentSection extends React.Component{
 }
 
 CommentSection.propTypes = {
-    index: PropTypes.number,
+    postIndex: PropTypes.number,
     likes: PropTypes.number,
     comments: PropTypes.arrayOf(PropTypes.shape({
         username: PropTypes.string,
