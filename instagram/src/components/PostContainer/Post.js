@@ -1,6 +1,6 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
-
+import PropTypes from 'prop-types';
 
 const Post = props => {
 console.log(props.post);
@@ -25,5 +25,12 @@ console.log(props.post);
 
     );
 }
+
+Post.propTypes = {
+    post: PropTypes.shape({
+      username: PropTypes.string,
+      thumbnailUrl: PropTypes.string,
+    })
+  };
 
 export default Post;

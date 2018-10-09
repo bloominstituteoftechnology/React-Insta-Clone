@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import PropTypes from 'prop-types';
 
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
@@ -38,5 +39,11 @@ class App extends Component {
     );
   }
 }
+
+PostContainer.propTypes = {
+  username: PropTypes.string,
+    thumbnailUrl:PropTypes.string,
+ };
+
 
 export default App;

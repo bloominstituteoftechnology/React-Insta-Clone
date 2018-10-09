@@ -9,11 +9,11 @@ const CommentSection = props => {
                     <p> <strong>{comment.username}</strong> {comment.text}</p>
                 )
                 })}
-             <form onSubmit="">
+             <form >
                 <input
                 type="text"
                 name="newComment"
-                onChange=""
+
                 value="Add a Comment"
                 />
             </form>
