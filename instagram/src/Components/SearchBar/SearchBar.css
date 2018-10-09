@@ -9,6 +9,14 @@
     max-width: 650px;
     margin: 0 auto 30px auto;
     height: 60px;
+    background-color: white;
+    width: 100%;
+  position: sticky;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    top: -1px;
 }
 .far{
     cursor: pointer;

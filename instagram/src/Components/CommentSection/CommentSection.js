@@ -8,12 +8,19 @@ class CommentSection extends React.Component {
         this.state = {
             content: [],
             timestamp: '',
+            input: ''
         }
     }
     componentDidMount() {
         this.setState(state => ({
             content: this.props.content,
             timestamp: this.props.timestamp,
+        }))
+    }
+
+    inputChangeHandler = e => {
+        this.setState(state => ({
+            input: e.target.value
         }))
     }
     
