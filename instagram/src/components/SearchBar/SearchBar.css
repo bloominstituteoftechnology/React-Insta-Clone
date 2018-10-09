@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  max-width: 968px;
+  max-width: 940px;
   margin: 0 auto;
 }
 
@@ -26,14 +26,22 @@
 }
 
 .Logo {
-  margin-right: 2rem;
+  margin-right: 1.8rem;
   display: flex;
   align-items: center;
+  font-size: 3.1rem;
 }
 
 .Brand {
   border-left: 1px solid #262626;
-  padding-left: 2rem;
+  padding-left: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.Brand img {
+  width: 105px;
+  height: 39px;
 }
 
 .SearchBar-Container {
@@ -59,11 +67,13 @@
   border: 1px solid #dbdbdb;
   border-radius: 5px;
   text-align: center;
+  outline: 0;
 }
 
 .SearchBar-Input:focus {
   text-align: left;
   padding-left: 2rem;
+  background: #fff;
 }
 
 .SearchBar-Icons ion-icon {

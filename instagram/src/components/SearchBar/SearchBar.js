@@ -9,7 +9,9 @@ const SearchBar = () => {
           <span className="Logo">
             <ion-icon name="logo-instagram" />
           </span>
-          <span className="Brand">Instagram</span>
+          <span className="Brand">
+            <img src="logo.png" alt="Instagram" />
+          </span>
         </h1>
         <div className="SearchBar-Container">
           <input

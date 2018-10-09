@@ -3,6 +3,7 @@ import Comment from './Comment';
 import PropTypes from 'prop-types';
 import './CommentSection.css';
 import CommentInput from './CommentInput';
+import moment from 'moment';
 
 const CommentSection = props => {
   return (
@@ -10,7 +11,11 @@ const CommentSection = props => {
       {props.comments.comments.map((comment, i) => {
         return <Comment comment={comment} key={i} />;
       })}
-      <div className="TimeStamp">2 Hours Ago</div>
+      <div className="TimeStamp">
+        {moment()
+          .startOf('day')
+          .fromNow()}
+      </div>
       <CommentInput />
     </div>
   );
