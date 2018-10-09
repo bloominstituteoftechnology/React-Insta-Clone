@@ -11,9 +11,7 @@ class App extends Component {
         <header className="App-header">
           <SearchBar />
         </header>
-        <body>
-          <PostContainer />
-        </body>
+        <PostContainer />
       </div>
     );
   }

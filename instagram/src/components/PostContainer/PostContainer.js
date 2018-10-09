@@ -4,6 +4,7 @@ import CommentSection from "../CommentSection/CommentSection";
 import UserThumbnail from "./UserThumbnail";
 import PostImage from "./PostImage";
 import Likes from "./Likes";
+import AddComment from "./AddComment";
 
 const PostContainer = () => {
   return (
@@ -16,6 +17,8 @@ const PostContainer = () => {
       <CommentSection />
       <TimeStamp />
       <CommentArea /> */}
+        <div className="timestamp">2 hours ago</div>
+        <AddComment />
       </div>
     </div>
   );

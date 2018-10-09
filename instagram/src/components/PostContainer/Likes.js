@@ -6,11 +6,11 @@ const Likes = () => {
     <div>
       <div className="post-icons">
         <div>
-          <i class="far fa-heart" />
-          <i class="far fa-comment" />
-          <i class="far fa-share-square" />
+          <i className="far fa-heart" />
+          <i className="far fa-comment" />
+          <i className="far fa-share-square" />
         </div>
-        <i class="far fa-bookmark" />
+        <i className="far fa-bookmark" />
       </div>
       <div className="like-count">400 likes</div>
     </div>
