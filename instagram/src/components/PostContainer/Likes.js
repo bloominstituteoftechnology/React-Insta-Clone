@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 let Likes = props => {
     return(
@@ -10,6 +11,12 @@ let Likes = props => {
             <h2 className="likeCount">{props.post.likes} likes</h2>
         </div>
     )
+}
+
+Likes.propTypes = {
+    post: PropTypes.shape({
+        likes: PropTypes.number.isRequired,
+      })
 }
 
 export default Likes;
