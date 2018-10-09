@@ -16,41 +16,46 @@ class CommentSection extends React.Component {
       text: ""
     };
   }
+  componentDidMount () { 
+   const post = JSON.parse(localStorage.getItem("comments"))
+   this.setState({
+     comments: post
+   })
+  }
 
   addALike = e => {
     this.setState({ likes: this.state.likes + 1 });
   };
 
   addNewComment = e => {
-    console.log(e);
-    if (this.state.text) {
-      this.setState({
-        comments: [
-          ...this.state.comments,
-          {
-            username: "iepoch",
-            text: this.state.text
-          }
-        ]
-      });
-      e.currentTarget.value = null;
-    }
-  };
-  handleChange = e => {
-    this.setState({ text: e.target.value });
+   
+  const newPost = {
+     username: 'iepoch',
+     text: this.state.text
+   }
+
+   const comments = [...this.state.comments]
+
+   comments.push(newPost)
+
+   this.setState({
+     comments, 
+     text: "",
+     username: ""
+   })
+   
+  localStorage.setItem("comments", JSON.stringify(comments))
+  localStorage.setItem("newPost", "")
   };
 
-  handleSubmit = e => {
-    if (e.keyCode === 13 && e.shiftKey === false) {
-      if (this.state.text.length >= 1) e.preventDefault();
-      this.addNewComment(e);
-      this.setState({ text: "" });
-    }
+  handleChange = (key, value) => {
+    this.setState({[key] : value});
+
   };
 
-  saveStateToLocalStorage = () => {};
 
   render() {
+
     return (
       // Created comment section for each post
       <div className="comment-section">
@@ -74,13 +79,12 @@ class CommentSection extends React.Component {
 
         {/* The footer of each post will have a time associated with the */}
         <p className="time-moment">{now}</p>
-        <form className="form-comment" onSubmit={this.addNewComment}>
+        <form className="form-comment" onSubmit={e => {e.preventDefault(); this.addNewComment()}}>
           <FontAwesomeIcon className="more-icon" icon={["fas", "ellipsis-h"]} />
-          <textarea
+          <input
             className="add-comment"
             value={this.state.text}
-            onChange={this.handleChange}
-            onKeyDown={this.handleSubmit}
+            onChange={e => this.handleChange("text", e.target.value)}
             placeholder="Add comment..."
           />
         </form>

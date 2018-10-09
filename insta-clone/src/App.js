@@ -16,6 +16,7 @@ class App extends Component {
   componentDidMount() {
     //Mounting the data after it renders.
     this.setState({ data: dummyData });
+    
   }
 
   handleSearch = str => {
