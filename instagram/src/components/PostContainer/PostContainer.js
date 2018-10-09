@@ -21,13 +21,18 @@ class PostContainer extends React.Component {
                     </p>
                     <p className="likes-count">{this.props.post.likes} likes</p>
                 </div>
-                <CommentSection comments={this.props.post.comments} timestamp={this.props.post.timestamp} />
+                <CommentSection 
+                    postKey={this.props.key} 
+                    timestamp={this.props.post.timestamp} 
+                    addNewComment={this.props.addNewComment} 
+                    comments={this.props.post.comments} />
             </div>
         )
     }
 }
 
 PostContainer.propTypes = {
+    key: PropTypes.number.isRequired,
     post: PropTypes.shape({
         thumbnailUrl: PropTypes.string,
         username: PropTypes.string,
@@ -35,10 +40,12 @@ PostContainer.propTypes = {
         likes: PropTypes.number,
         timestamp: PropTypes.string,
         comments: PropTypes.array
-    }).isRequired
+    }).isRequired,
+    addNewComment: PropTypes.func,
 };
 
 PostContainer.defaultProps = {
+    key: 0,
     post: {
         username: "username",
         thumbnailUrl: "https://virtual-strategy.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png",

@@ -7,11 +7,17 @@ import CommentForm from '../CommentSection/CommentForm';
 class CommentSection extends React.Component {
 
     state = {
+        postKey: 0,
+        timestamp: Date.now(),
         comments: [],
     }
 
     componentDidMount() {
-        this.setState({ comments: this.props.comments, timestamp: this.props.timestamp });
+        this.setState({ 
+            postKey: this.props.postKey,
+            timestamp: this.props.timestamp, 
+            comments: this.props.comments, 
+        });
     }
 
     render() {
@@ -28,7 +34,7 @@ class CommentSection extends React.Component {
                     <p>{this.state.timestamp}</p>
                 </div>
                 <div className="post-comment-form">
-                    <CommentForm />
+                    <CommentForm postKey={this.state.postKey} addNewComment={this.props.addNewComment} />
                 </div>
             </>
         )
@@ -36,11 +42,15 @@ class CommentSection extends React.Component {
 }
 
 CommentSection.propTypes = {
-    comments: PropTypes.shape({
-        username: PropTypes.string,
-        text: PropTypes.string,
-    }).isRequired,
+    postKey: PropTypes.number.isRequired,
     timestamp: PropTypes.string.isRequired,
+    addNewComment: PropTypes.func,
+    comments: PropTypes.array,
 };
+
+CommentSection.defaultProps = {
+    postKey: 0,
+    timestamp: Date.now(),
+}
 
 export default CommentSection;

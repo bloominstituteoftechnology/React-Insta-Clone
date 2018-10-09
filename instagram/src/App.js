@@ -11,6 +11,13 @@ class App extends Component {
 
   state = {
     posts: [],
+    user: 'edub',
+  }
+
+  addNewComment = comment => {
+    let posts = [...this.state.posts];
+    posts[comment.key].comments.push({username: this.state.user, text: comment.text });
+    this.setState({ posts: posts});
   }
   
   componentDidMount() {
@@ -24,8 +31,8 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         <div className="posts">
-          {this.state.posts.map(post => (
-            <PostContainer key={post.timestamp} post={post} />
+          {this.state.posts.map((post, index) => (
+            <PostContainer key={index} post={post} addNewComment={this.addNewComment} />
           ))}
         </div>
       </div>
