@@ -49,4 +49,15 @@ PostContainer.propTypes = {
     }).isRequired
 };
 
+PostContainer.defaultProps = {
+    post: {
+        username: "username",
+        thumbnailUrl: "https://virtual-strategy.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png",
+        imageUrl: "http://wbomusic.com/image/cache/data/icon/No%20Image-1024x1024.png",
+        likes: 0,
+        timestame: Date.now(),
+        comments: [],
+    }
+};
+
 export default PostContainer;
