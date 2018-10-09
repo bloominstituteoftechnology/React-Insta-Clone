@@ -7,17 +7,17 @@ import './searchbar.css';
 
 const SearchBar = () => {
     return (
-        <div classname= 'main-header'>
-            <div classname= 'left-icons'>
-                <i class="fab fa-instagram"></i>
+        <div className= 'main-header'>
+            <div id= 'left-icons'>
+                <i className="fab fa-instagram"></i>
                 <p>|</p>
-                <h1 classname= 'instagram'>Instagram</h1>
+                <h1 id= 'instagram'>Instagram</h1>
             </div>
             <input className= 'search'  placeHolder= 'Search'></input>
-            <div classname= 'right-icons'>
-                <i class="far fa-compass"></i>
-                <i class="far fa-heart"></i>
-                <i class="far fa-user"></i>
+            <div id= 'right-icons'>
+                <i className="far fa-compass"></i>
+                <i className="far fa-heart"></i>
+                <i className="far fa-user"></i>
             </div>
         </div>
     );

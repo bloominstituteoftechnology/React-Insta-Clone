@@ -1,3 +1,42 @@
 .main-header {
-    border: 1px solid peru;
+    border: 1px solid springgreen;
+    width: 90%;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+#left-icons {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    border: 1px solid blueviolet;
+    height: 100%
+}
+
+#left-icons i {
+    font-size: 2.5rem;
+}
+
+#left-icons p {
+    font-size: 2.5rem;
+}
+
+.main-header #left-icons #instagram {
+    font-family: Billabong;
+    font-size: 2.5rem;
+}
+
+#right-icons {
+    width: 30%;
+    border: 1px solid red;
+}
+.main-header .search {
+    height: 30px;
+}
+i {
+    font-size: 1.4rem;
+}
+
