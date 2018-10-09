@@ -13,5 +13,8 @@ const CommentSection = props => {
         </div>
     )
 }
+CommentSection.propTypes = {
+    comments: PropTypes.string.isRequired
+}
 
 export default CommentSection;

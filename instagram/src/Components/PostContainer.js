@@ -31,6 +31,8 @@ const PostContainer = props => {
     )
 }
 
-
+PostContainer.propTypes = {
+    data: PropTypes.array.isRequired
+}
 
 export default PostContainer;
