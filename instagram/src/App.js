@@ -49,6 +49,7 @@ class App extends Component {
             <SearchBar
               changeHandler={this.changeHandler}
               startSearch={this.startSearch}
+              value={this.state.newSearch}
             />
             <div className="post-container-list">
               {this.state.dummyData.map(user => {

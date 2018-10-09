@@ -20,6 +20,7 @@ const SearchBar = props => {
           placeholder="Search"
           className="search input"
           type="text"
+          value={props.value}
           onChange={event =>
             props.changeHandler("newSearch", event.target.value)
           }

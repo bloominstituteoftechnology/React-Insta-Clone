@@ -8,7 +8,6 @@ class PostContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: props.key,
       userData: props.userData,
       likes: props.userData.likes
     };
