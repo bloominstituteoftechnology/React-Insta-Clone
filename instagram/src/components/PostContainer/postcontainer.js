@@ -1,15 +1,15 @@
 import React from 'react';
-
+import Post from './post';
 
 
 const PostContainer = props =>{
     return(
         <div>
-        {/* {props.data.map(comment => <CommentSection data={comment}/>)} */}
+        {props.userData.map(posts => < Post key = {posts.imgUrl} post={posts} />)}
         </div>
-    )
+    );
     
-}
+};
 
 
 

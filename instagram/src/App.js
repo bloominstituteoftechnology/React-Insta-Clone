@@ -10,19 +10,18 @@ class App extends Component {
     this.state={
       userData: dummyData,
     };
-  
+  console.log(this.state);
   
   }
 
  
-
+ 
   render() {
     return (
       <div className="App">
 
       <SearchBar />
-        {/* {this.state.userData.map(data => 
-            <div>{data.username}</div>)} */}
+      <PostContainer userData={this.state.userData}/>
           
         
         
