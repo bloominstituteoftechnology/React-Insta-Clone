@@ -31,8 +31,11 @@
   }
   .comment {
     font-size: 13px;
+    display: flex;
+    justify-content: space-between;
     margin: 5px 0;
   }
+  
   .comment strong {
     font-size: 14px;
   }

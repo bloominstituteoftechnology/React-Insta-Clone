@@ -6,13 +6,13 @@ import Instagram from './instagram-brands.svg';
 const SearchBar = (props) => {
     return(
         <section className='search-bar'>
-      Search Bar	      <section className='search-logo'>
+       <section className='search-logo'>
         <img src={Instagram} alt ='logo'></img>
         <p>|</p>
         <h1>Instagram</h1>
       </section>
       <section className='search-input'>
-          <input placeholder='Search'></input>
+          <input placeholder='Search' onChange={props.search}></input>
       </section>
       <section className='nav-icons'>
         <FontAwesomeIcon icon='compass'/>
