@@ -12,6 +12,12 @@ class CommentSection extends React.Component {
    }
   }
 
+  likesHandler = () =>{
+    this.setState({
+        likes: ++this.state.likes
+    })
+  }
+
   commentHandler = (event) => {
     const {value} = event.target;
     this.setState({
@@ -47,10 +53,10 @@ render(){
   return (
     <div className="commentContainer">
       <div className="likeTab">
-        <i class="far fa-heart"></i>
+        <i class="far fa-heart" onClick={this.likesHandler}></i>
         <i class="far fa-comment"></i>
       </div>
-      <p className="userLikes">{this.state.likes} likes</p>
+      <p className="userLikes"><span>{this.state.likes}</span>likes</p>
       <div>
         {this.state.comments.map( (comment, index) =>{
           return <p className="userComments" key={index}>
@@ -80,6 +86,7 @@ render(){
 CommentSection.propTypes = {
   comments: PropTypes.arrayOf(PropTypes.shape({
     key: PropTypes.number,
+    likes: PropTypes.number,
     username: PropTypes.string,
     text: PropTypes.string, 
      }))
