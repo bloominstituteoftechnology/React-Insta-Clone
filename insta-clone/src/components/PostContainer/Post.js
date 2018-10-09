@@ -17,13 +17,12 @@ const Post = props => {
             <img className='postImage' src={props.postdata.imageUrl} alt='' />
             <div className='likeSection'>
                 <div className='likeCommentIcons'>
-                    <p className='heart'>like button</p>
-                    <p className='commentBubble'>comment button</p>
+                    <p className='heart'>like</p>
+                    <p className='commentBubble'>cmnt</p>
                 </div>
                 <div className='likeCount'>{props.postdata.likes} likes</div>
             </div>
-            <CommentSection comments={props.postdata.comments}/>
-            <p>{props.postdata.timestamp}</p>
+            <CommentSection comments={props.postdata.comments} timestamp={props.postdata.timestamp}/>
         </div>
     )
 }

@@ -5,4 +5,14 @@
 
 .comment {
     font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+.commentUser {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.commentText {
+    padding-left: 0.5rem;
 }

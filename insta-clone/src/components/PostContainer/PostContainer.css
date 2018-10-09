@@ -1,3 +1,9 @@
+.postContainer {
+    margin: 1.5rem auto;
+    width: 60.5rem;
+    border: 0.01rem solid lightgray;
+}
+
 .postHeader {
     display: flex;
     justify-content: flex-start;
@@ -27,13 +33,14 @@
 }
 
 .postImage {
-    padding: 0.5rem 0;
+    padding: 0.25rem;
     max-width: 100%;
     height: auto;
 }
 
 .likeSection {
     padding: 0 1.8rem;
+    margin-bottom: 0.5rem;
 }
 
 .likeCommentSection {
@@ -43,10 +50,20 @@
 
 .likeCommentIcons {
     display: flex;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
 }
 
 .likeCount {
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
     text-align: left;
+}
+
+.timeStamp {
+    width: calc(100% - 3.6rem);
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: left;
+    padding: 1rem 0;
+    margin: 0 auto;
+    border-bottom: 1px solid lightgray;
 }
