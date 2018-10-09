@@ -11,7 +11,8 @@ class CommentSection extends Component {
     super(props);
     this.state = {
       comments: props.comments,
-      newComment: ''
+      newComment: '',
+      likes: this.props.likes
     };
   }
 
@@ -30,11 +31,15 @@ class CommentSection extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  addLikes = () => {
+    this.setState({ likes: this.state.likes + 1 });
+  };
+
   render() {
-    const { likes } = this.props;
+    // const { likes } = this.props;
     return (
       <div className="commentSection">
-        <PostInteraction likes={likes} />
+        <PostInteraction likes={this.state.likes} addLikes={this.addLikes} />
         {this.state.comments.map((comment, index) => {
           return <Comment key={index} comment={comment} />;
         })}
