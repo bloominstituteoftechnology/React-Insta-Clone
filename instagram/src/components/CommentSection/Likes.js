@@ -5,7 +5,7 @@ import Bubble from '../../img/message-circle.svg';
 const Likes = props => {
     return (
         <div className="post-likes">
-            <img src={Heart} />
+            <img src={Heart} onClick={props.likeClicked} />
             <img src={Bubble} />
             <h4>{props.likes} likes</h4>
         </div>

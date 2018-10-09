@@ -27,6 +27,10 @@
     width: 100%;
 }
 
+.comment-section .liked {
+    background: #E7414D;
+}
+
 .comment-section .add-comment {
     display: flex;
     align-items: center;

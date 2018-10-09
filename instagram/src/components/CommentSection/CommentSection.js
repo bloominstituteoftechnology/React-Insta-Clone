@@ -40,17 +40,32 @@ class CommentSection extends React.Component {
         }
     }
 
+    likeClicked = (event) => {
+        let likesHolder = this.state.likes;
+
+        if(event.target.classList.contains("liked")) {
+            this.setState({
+                likes: --likesHolder
+            });
+            event.target.classList.remove("liked");
+        } else {
+            this.setState({
+                likes: ++likesHolder
+            })
+            event.target.classList.add("liked");
+        }
+    }
+
     render() {
         return (
             <div className="comment-section">
-                <Likes likes={this.state.likes} />
-                <Comments comments={this.state.comments} id={this.state.id} />
+                <Likes likes={this.state.likes} likeClicked={this.likeClicked} />
+                <Comments comments={this.state.comments} />
                 <Timestamp timestamp={this.state.timestamp} />
                 <AddComment
                     addNewComment={this.addNewComment}
                     changeHandler={this.changeHandler}
                     comments={this.state.comments}
-                    id={this.state.id}
                     newComment={this.state.newComment}
                 />
             </div>
