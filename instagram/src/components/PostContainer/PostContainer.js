@@ -45,7 +45,7 @@ class PostContainer extends React.Component {
                 likes: likes + 1,
                 liked: !prevState.liked
             }))
-            e.target.className = 'far fa-heart fa-2x post liked'
+            e.target.className = 'fas fa-heart fa-2x post liked'
         }
         else {
             this.setState(prevState => ({
