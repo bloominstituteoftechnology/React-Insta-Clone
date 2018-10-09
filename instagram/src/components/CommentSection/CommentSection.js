@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import Comment from './Comment'
+import CommentEntry from './CommentEntry'
 import './CommentSection.css'
 
 class CommentSection extends Component {
@@ -8,20 +9,28 @@ class CommentSection extends Component {
     super(props);
     this.state = {
       comments: this.props.comments,
-      comment: '',
+      newComment: '',
+      timestamp: props.timestamp,
     }
   }
 
-  handleInput = event => {
-    if (event.key === 'Enter') {
+
+
+  addNewComment = event => {
+    event.preventDefault();
+    if (this.state.newComment.length > 0) {
       this.setState({
-        comments: [...this.state.comments, {username: 'testname', text:this.state.comment, timestamp: new Date(Date.now())}],
-        comment: '',
+        comments: [...this.state.comments, {
+          username: 'testname',
+          text:this.state.newComment,
+          }],
+        newComment: '',
       })
     }
   }
 
-  handleComment = event => {
+
+  handleCommentChange = event => {
     this.setState({
       [event.target.name]: event.target.value,
     })
@@ -35,7 +44,7 @@ class CommentSection extends Component {
               <Comment key={i} comment={comment} />
             )}
             <p className='moment'>{moment(`${this.state.comments[this.state.comments.length-1].timestamp}`).fromNow()}</p>
-            <input type='text' name='comment' placeholder='Add a comment...' onChange={this.handleComment} value={this.state.comment} onKeyPress={this.handleInput} />
+            <CommentEntry addNewComment={this.addNewComment} handleCommentChange={this.handleCommentChange} newComment={this.state.newComment} />
           </React.Fragment>
       </div>
 

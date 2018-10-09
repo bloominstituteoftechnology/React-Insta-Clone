@@ -5,13 +5,14 @@ const SearchBar = props => {
   return (
     <div className='search-bar'>
       <div className='logo'>
-        <p>logo holder</p>
+        <i class="fas fa-camera-retro"/>
+        <p>Instagram</p>
       </div>
       <input type='text' name='search' value={props.input} onChange={props.handleSearch} placeholder='Search' />
       <div className='icons'>
-        <p>icon</p>
-        <p>icon</p>
-        <p>icon</p>
+        <i className="far fa-compass"/>
+        <i className="far fa-heart"/>
+        <i className="far fa-user"/>
       </div>
     </div>
   )

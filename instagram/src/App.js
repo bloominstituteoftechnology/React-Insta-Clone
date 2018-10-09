@@ -8,13 +8,19 @@ class App extends Component {
   constructor (){
     super();
     this.state = {
-      dummyData: dummyData,
+      dummyData: [],
       search: '',
     }
   }
+
+  componentDidMount() {
+    this.setState({ dummyData: dummyData});
+  }
+
   handleSearch = event => {
     this.setState({[event.target.name]: event.target.value})
   }
+
   render() {
     let data = this.state.dummyData.filter(data => data.username.indexOf(this.state.search) !== -1)
     return (
