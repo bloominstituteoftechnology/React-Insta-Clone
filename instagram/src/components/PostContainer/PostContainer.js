@@ -16,14 +16,8 @@ const PostContainer = props =>
       </div>
       <img src={post.imageUrl} alt={post.comments[0].text} />
       <div className="icons">
-        <FontAwesomeIcon
-          icon={faHeart}
-          style={{ height: "25px", width: "25px" }}
-        />
-        <FontAwesomeIcon
-          icon={faComment}
-          style={{ height: "25px", width: "25px" }}
-        />
+        <FontAwesomeIcon icon={faHeart} style={{ height: "25px", width: "25px" }}/>
+        <FontAwesomeIcon icon={faComment} style={{ height: "25px", width: "25px" }}/>
       </div>
       <p className="likes">{post.likes} likes</p>
       <CommentSection comments={post.comments} />

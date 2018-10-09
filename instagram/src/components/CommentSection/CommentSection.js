@@ -5,22 +5,42 @@ class CommentSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.comments
+      comments: props.comments,
+      newComment: ""
     };
   }
-
+  handleSubmit = event => {
+    event.preventDefault();
+    this.setState({
+      comments: [
+        ...this.state.comments,
+        {
+          username: "johndoe",
+          text: this.state.newComment
+        }
+      ]
+    });
+  };
+  handleChange = event => this.setState({ newComment: event.target.value });
   render() {
     return (
       <div>
         {this.state.comments.map((comment, index) => (
           <div key={index} className="comment">
             <p>
-              <span className="username">{comment.username}</span>
+              <span className="username" style={{marginRight: "5px"}}>{comment.username}</span>
               {comment.text}
             </p>
           </div>
         ))}
-        <input type="text" name="comment" placeholder="Add a comment..."/>
+        <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            name="comment"
+            placeholder="Add a comment..."
+            onChange={this.handleChange}
+          />
+        </form>
       </div>
     );
   }
