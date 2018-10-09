@@ -25,3 +25,14 @@
   margin-top: 2rem;
   width: 100%;
 }
+
+.Comment-Form {
+  position: relative;
+}
+
+.Comment-Options {
+  position: absolute;
+  top: 53%;
+  left: 97%;
+  font-size: 1.4rem;
+}

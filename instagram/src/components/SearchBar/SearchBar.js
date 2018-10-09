@@ -7,7 +7,7 @@ const SearchBar = ({ filterUsers, updateValue }) => {
       <div className="container">
         <h1 className="SearchBar-Logo">
           <span className="Logo">
-            <ion-icon name="logo-instagram" />
+            <i className="fab fa-instagram" />
           </span>
           <span className="Brand">
             <img src="logo.png" alt="Instagram" />
@@ -25,14 +25,14 @@ const SearchBar = ({ filterUsers, updateValue }) => {
           </form>
 
           <label htmlFor="search" className="Search-Icon">
-            <ion-icon name="search" />
+            <i className="fas fa-search" />
           </label>
         </div>
 
         <div className="SearchBar-Icons">
-          <ion-icon name="compass" />
-          <ion-icon name="heart-empty" />
-          <ion-icon name="person" />
+          <i className="far fa-compass" />
+          <i className="far fa-heart" />
+          <i className="far fa-user" />
         </div>
       </div>
     </div>

@@ -14,16 +14,13 @@ const PostContainer = ({ data, likePost, id }) => {
         <img src={data.imageUrl} alt="Image" />
       </div>
       <div className="PostContainer-Icons">
-        <div className="Icon">
-          <i
-            className={'far fa-heart'}
-            onClick={e => likePost(e, id)}
-            style={{ color: '#ED4956' }}
-          />
-        </div>
-        <div className="Icon">
-          <ion-icon name="chatbubbles" />
-        </div>
+        <i
+          className={'far fa-heart'}
+          onClick={e => likePost(e, id)}
+          style={{ color: '#ED4956' }}
+        />
+
+        <i className="far fa-comment" />
       </div>
       <div className="PostContainer-Likes">{data.likes} likes</div>
       <CommentSection comments={data.comments} />

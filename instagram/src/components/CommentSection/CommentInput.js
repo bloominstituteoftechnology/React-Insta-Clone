@@ -2,7 +2,7 @@ import React from 'react';
 
 const CommentInput = ({ addNewComment, commentText, updateText }) => {
   return (
-    <form onSubmit={addNewComment}>
+    <form className="Comment-Form" onSubmit={addNewComment}>
       <input
         type="text"
         className="CommentInput"
@@ -10,6 +10,9 @@ const CommentInput = ({ addNewComment, commentText, updateText }) => {
         value={commentText}
         onChange={updateText}
       />
+      <div className="Comment-Options">
+        <i className="fas fa-ellipsis-h" />
+      </div>
     </form>
   );
 };

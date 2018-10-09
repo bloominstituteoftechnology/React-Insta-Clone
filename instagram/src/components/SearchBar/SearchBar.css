@@ -52,8 +52,8 @@
   position: absolute;
   top: 50%;
   left: 5px;
-  font-size: 1.6rem;
-  transform: translateY(-20%);
+  font-size: 1.4rem;
+  transform: translateY(-25%);
   color: #262626;
 }
 
@@ -76,6 +76,6 @@
   background: #fff;
 }
 
-.SearchBar-Icons ion-icon {
+.SearchBar-Icons i {
   margin-left: 3rem;
 }

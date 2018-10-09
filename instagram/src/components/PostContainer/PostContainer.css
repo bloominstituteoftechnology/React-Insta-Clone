@@ -41,12 +41,9 @@
   display: flex;
 }
 
-.Icon {
-  cursor: pointer;
-}
-
-.PostContainer-Icons ion-icon {
+.PostContainer-Icons i {
   margin-right: 1.5rem;
+  cursor: pointer;
 }
 
 .PostContainer-Likes {
