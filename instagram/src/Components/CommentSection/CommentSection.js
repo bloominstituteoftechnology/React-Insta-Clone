@@ -1,4 +1,5 @@
 import React from 'react';
+import Comment from "./Comment";
 import './CommentSection.css';
 
 class CommentSection extends React.Component {
@@ -6,6 +7,7 @@ class CommentSection extends React.Component {
         super();
         this.state = {
             content: [],
+            timestamp: '',
         }
     }
     componentDidMount() {
@@ -16,11 +18,21 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <div className="comments-container">
-                {/* Map over comments in dummy data */}
+            <div className="comments-main-container">
+                <div className="comments-container">
+                    {/* Map over comments in dummy data */}
+                    {this.state.content.map(comment => <Comment username={comment.username} text={comment.text}/>)}
+                </div>
                 {/* Time stamp*/}
-                {/* Divider */}
+                <div className="timestamp">{this.state.timestamp}</div>
+                {/* Divider (border-bottom)*/}
                 {/* Add Comment section*/}
+                <div className="comment-input">
+                    <form>
+                        <input type="text" placeholder="Add a comment..."/>
+                    </form>
+                    <i className="fas fa-ellipsis-h"></i>
+                </div>
             </div>
         )
     }
