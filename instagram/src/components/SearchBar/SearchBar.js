@@ -1,20 +1,31 @@
 import React from 'react';
-import Search from './search'
-
-
+import './searchbar.css';
 
 
 const SearchBar = props => {
-    return(
-        <div>
-        <div classname= 'left-icons'>
-        <i class="fab fa-instagram"></i>
-        <p>|</p>
-        <h1>Instagram</h1>
+    return (
+        <div className= 'main-header'>
+            <div id= 'left-icons'>
+                <i className="fab fa-instagram"></i>
+                <p>|</p>
+                <h1 id= 'instagram'>Instagram</h1>
+            </div>
+            <form className= 'search-form' onSubmit={props.search}>
+                <input 
+                    value={props.term}
+                    onChange= {props.handleSearchChange} 
+                    className= 'search'  
+                    placeholder= '⚲ Search'
+                    type="text">
+                    </input>
+            </form>            
+            <div id= 'right-icons'>
+                <i className="far fa-compass"></i>
+                <i className="far fa-heart"></i>
+                <i className="far fa-user"></i>
+            </div>
         </div>
-        </div>);
+    );
 }
-
-
 
 export default SearchBar;

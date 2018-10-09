@@ -1,0 +1,70 @@
+.main-header {
+    width: 90%;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px; 
+}
+
+#left-icons {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+}
+
+#left-icons i {
+    font-size: 2.4rem;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+#left-icons p {
+    font-size: 2.2rem;
+    margin-right: 15px;
+}
+
+.main-header #left-icons #instagram {
+    font-family: Billabong;
+    font-size: 2.5rem;
+    font-weight: lighter;
+}
+
+#right-icons {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;    
+}
+
+#right-icons i {
+    font-size: 2.1rem;
+    font-weight: lighter;
+    margin-right: 15px;
+    color: grey;
+    
+}
+
+#right-icons i:hover {
+    color: black;
+    cursor: pointer;
+    
+}
+
+.main-header .search-form {
+    height: 30px;
+    width: 30%; 
+}
+
+.main-header .search {
+    height: 30px;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    text-align: center;
+    background-color: whitesmoke;
+}
