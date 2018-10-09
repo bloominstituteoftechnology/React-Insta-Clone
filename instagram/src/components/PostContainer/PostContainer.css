@@ -26,6 +26,33 @@
   cursor: pointer;
 }
 
+.comments-container {
+  padding: 0 16px;
+}
+
 .post-img {
   width: 100%;
+}
+
+.post-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-icons .far {
+  cursor: pointer;
+  font-size: 27px;
+  color: #262626;
+}
+
+.fa-heart,
+.fa-comment {
+  margin-right: 16px;
+}
+
+.like-count {
+  margin: 8px 0;
+  font-weight: bold;
+  color: #505050;
 }
