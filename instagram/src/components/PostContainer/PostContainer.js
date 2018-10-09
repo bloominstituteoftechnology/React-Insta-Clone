@@ -14,7 +14,11 @@ class PostContainer extends React.Component {
                 </div>
                 <div className="post-content">
                     <img className="content-image" src={this.props.post.imageUrl} alt="Post" />
-                    <p>{this.props.post.likes} likes</p>
+                    <p className="social-buttons">
+                        <a><i class="far fa-heart"></i></a>
+                        <a><i class="far fa-comment fa-flip-horizontal"></i></a>
+                    </p>
+                    <p className="likes-count">{this.props.post.likes} likes</p>
                 </div>
                 <div className="post-comments">
                     {this.props.post.comments.map(comment => (
