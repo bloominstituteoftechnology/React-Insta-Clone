@@ -1,13 +1,13 @@
 import React from 'react';
-
+import propTypes from 'prop-types';
 
 
  const CommentSection = (props) =>  {
   return (
     <section className='comments'>
-        {props.comments.map(comment => {
+        {props.comments.map((comment, index) => {
           return (
-            <p className='comment'>
+            <p className='comment' key ={Math.random()}>
               <strong>{comment.username}</strong> {comment.text}
             </p>
           );
@@ -16,4 +16,8 @@ import React from 'react';
     </section>
   );
 }
+CommentSection.propTypes = {
+  comments: propTypes.array
+}
+
  export default CommentSection;

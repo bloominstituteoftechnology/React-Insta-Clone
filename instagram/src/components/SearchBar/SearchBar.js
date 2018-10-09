@@ -7,7 +7,7 @@ const SearchBar = (props) => {
     return(
         <section className='search-bar'>
       Search Bar	      <section className='search-logo'>
-        <img src={Instagram}></img>
+        <img src={Instagram} alt ='logo'></img>
         <p>|</p>
         <h1>Instagram</h1>
       </section>
