@@ -16,10 +16,10 @@ class Post extends React.Component {
           comments={this.props.post.comments}
           post={this.props.post}
           dummyData={this.props.dummyData}
-          commentInput={this.props.commentInput}
           comment={this.props.comment}
-          user={this.props.user}
           likes={this.props.post.likes}
+          updateComments={this.props.updateComments}
+          commentEntries={this.props.commentEntries}
         />
       </div>
     );

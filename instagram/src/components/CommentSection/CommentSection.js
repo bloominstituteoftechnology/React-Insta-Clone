@@ -1,30 +1,39 @@
 import React from "react";
 import Comment from "../Comment/Comment";
 import "../CommentSection/CommentSection.css";
-import moment from 'moment';
+import moment from "moment";
 
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
+    
     this.state = {
       comment: "",
-      comments: props.comments,
-      likes: props.likes,
-    };
-    
+      likes: props.post.likes,
+      id: props.post.id,
+      comments: [
+        ...props.comments,
+        ...props.commentEntries.filter(entry => entry.id === props.post.id),
+        
+      ]};
   }
 
-  addComment = event => {
+  
 
+  addComment = event => {
     event.preventDefault();
     this.setState(
       {
         comments: [
           ...this.state.comments,
-          { text: this.state.comment, username: "dummyUser" }
+          { id: this.state.id, text: this.state.comment, username: "dummyUser" }
         ],
         comment: ""
       },
+      () =>
+        this.props.updateComments(
+          this.state.comments[this.state.comments.length - 1]
+        )
     );
   };
 
@@ -37,17 +46,26 @@ class CommentSection extends React.Component {
   addLike = () => {
     let likeCounter = this.state.likes;
     this.setState({
-      likes: ++likeCounter,
+      likes: ++likeCounter
     });
-  }
+  };
 
   render() {
-    let date = moment(this.props.post.timestamp, 'MMMM Do YYYY, hh:mm:ss a').format('YYYY-MM-DD HH:mm:ss');
+    let date = moment(
+      this.props.post.timestamp,
+      "MMMM Do YYYY, hh:mm:ss a"
+    ).format("YYYY-MM-DD HH:mm:ss");
+    
+    // console.log(entries)
     return (
       <div className={"commentsContainer"}>
         <div className={"buttonBar"}>
           <div className={"commentsButtonBox"}>
-            <img src="https://png.icons8.com/ios/48/000000/hearts.png" alt="" onClick={this.addLike} />
+            <img
+              src="https://png.icons8.com/ios/48/000000/hearts.png"
+              alt=""
+              onClick={this.addLike}
+            />
             <img
               src="https://png.icons8.com/ios/48/000000/speech-bubble.png"
               className={"commentBubble"}
@@ -64,7 +82,7 @@ class CommentSection extends React.Component {
         {this.state.comments.map(comment => {
           return (
             <Comment
-              key={comment.text}
+              key={Math.random()}
               comment={comment}
               dummyData={this.props.dummyData}
             />

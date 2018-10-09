@@ -13,6 +13,7 @@ class App extends Component {
     };
   }
 
+
   componentDidMount() {
     setTimeout(() => {this.setState({
       dummyData: dummyData,
