@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import moment from "moment";
+import "./CommentSection.css";
 
 class CommentSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
       comments: props.comments,
-      newComment: ""
+      newComment: "",
+      timestamp: props.timestamp
     };
   }
   handleSubmit = event => {
@@ -28,11 +31,14 @@ class CommentSection extends Component {
         {this.state.comments.map((comment, index) => (
           <div key={index} className="comment">
             <p>
-              <span className="username" style={{marginRight: "5px"}}>{comment.username}</span>
+              <span className="username">{comment.username}</span>
               {comment.text}
             </p>
           </div>
         ))}
+        <p className="timestamp">
+          {moment(this.state.timestamp, "MMMM Do YYYY, h:mm:ss a").fromNow()}
+        </p>
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"

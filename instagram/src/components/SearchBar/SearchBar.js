@@ -23,7 +23,7 @@ const SearchBar = props => (
     <div className="search-text">
       <FontAwesomeIcon
         icon={faSearch}
-        style={{ height: "20px", width: "20px" }}
+        style={{ height: "10px", width: "10px" }}
         className="search-icon"
       />
       <input
@@ -36,17 +36,17 @@ const SearchBar = props => (
     <div className="icons">
       <FontAwesomeIcon
         icon={faCompass}
-        style={{ height: "40px", width: "40px" }}
+        style={{ height: "30px", width: "30px" }}
         className="right"
       />
       <FontAwesomeIcon
         icon={faHeart}
-        style={{ height: "40px", width: "40px" }}
+        style={{ height: "30px", width: "30px" }}
         className="right"
       />
       <FontAwesomeIcon
         icon={faUser}
-        style={{ height: "40px", width: "40px" }}
+        style={{ height: "30px", width: "30px" }}
         className="right"
       />
     </div>

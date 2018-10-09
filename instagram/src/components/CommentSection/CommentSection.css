@@ -1,0 +1,10 @@
+  .comment {
+    font-weight: 300;
+    font-size: 14px;
+  }
+  
+  .username {
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 5px;
+  }

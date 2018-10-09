@@ -1,10 +1,11 @@
 .search-bar {
     border-bottom: 1px solid black;
-    height: 120px;
+    height: 77px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 1010px;
     margin: 20px auto;
 }
 
@@ -29,16 +30,18 @@
     position: relative;
     z-index: 3;
     color: gray;
-    right: -160px;
+    right: -85px;
 }
 
-input {
-    height: 50px;
-    width: 420px;
+.search-text input {
+    height: 28px;
+    width: 215px;
+    border-radius: 3px;
+    color: #999;
+    cursor: text;
+    font-size: 14px;
+    font-weight: 300;
     text-align: center;
-    font-size: 30px;
-    background: rgba(211, 211, 211, 0.15);
-    border-radius: 5px;
 }
 
 .icons {
