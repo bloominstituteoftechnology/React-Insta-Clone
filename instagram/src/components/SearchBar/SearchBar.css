@@ -1,0 +1,29 @@
+.search-bar {
+    height: 60px;
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 30px auto;
+}
+
+.search-bar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar .logo .instagram-logo {
+    min-width: 29px;
+    min-height: 29px;
+    height: 60px;
+    margin-right: 30px;
+    padding-right: 30px;
+    border-right: 1px solid black;
+    width: auto;
+}
+
+.search-bar .logo .instagram-logo-font {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 4.8rem;
+}

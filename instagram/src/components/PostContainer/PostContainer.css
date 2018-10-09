@@ -1,0 +1,23 @@
+.post-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-container .post-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.post-container .post-header .thumbnail {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.post-container .post-image {
+    width: 100%;
+    height: auto;
+}
