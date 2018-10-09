@@ -9,6 +9,7 @@ class CommentSection extends Component {
         super(props);
         this.state = {
             comments: props.post.comments,
+            count: props.post.likes,
             newComment: '',
         };
         this.addNewComment = this.addNewComment.bind(this);
@@ -36,15 +37,20 @@ class CommentSection extends Component {
         console.log('after new comment')
     };
 
+    increment(amount) {
+        let ourCount = this.state.count;
+        this.setState({ count: ourCount + amount });
+      }
+
     render() {
         return (
             <div className="commentContainer">
                 <div className="commentIcons">
-                    <FontAwesomeIcon className="commentIcon" icon={['far', 'heart']} size="2x" />
+                    <FontAwesomeIcon className="commentIcon" icon={['far', 'heart']} size="2x" onClick={() => this.increment(1)} value={this.state.count} count={this.state.count}/>
                     <FontAwesomeIcon className="commentIcon" icon={['far', 'comment']} size="2x" />
                 </div>
                 
-                <h4 className='likes'>{this.props.post.likes} likes</h4>
+                <h4 className='likes'>{this.state.count} likes</h4>
                 
                 {this.state.comments.map((comment, index) => {
                     return (
@@ -59,7 +65,7 @@ class CommentSection extends Component {
                         </div>
                     );
                 })}
-                <NewComment newComment={this.state.newComment} addNewComment={this.addNewComment} changeHandler={this.changeHandler}/>
+                <NewComment newComment={this.state.newComment} increment={this.state.increment} addNewComment={this.addNewComment} changeHandler={this.changeHandler}/>
             </div>
         );
     }
