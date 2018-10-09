@@ -1,0 +1,9 @@
+.postContainer {
+    border: 1px solid black;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.posterImg {
+    width: 100%
+}

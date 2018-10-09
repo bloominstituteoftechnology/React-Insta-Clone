@@ -1,0 +1,11 @@
+.searchBar {
+    height: 60px;
+    width: 400px;
+    display: flex;
+}
+
+.searchBarImg {
+    height: 60px;
+    width: auto;
+}
+
