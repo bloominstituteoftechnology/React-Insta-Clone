@@ -9,7 +9,9 @@ class App extends Component {
   constructor(){
     super();
     this.state ={
-      posts: []
+      posts: [],
+      searchReturn: [],
+      searchInput: ''
     }
   }
 
@@ -20,13 +22,22 @@ class App extends Component {
       posts: dummyData
     })
   }
- 
+ changeHandler=()=>{
+  this.setState({searchInput: e.target.value})
+ }
+
+  searchPostforUser=(e)=>{
+    e.preventDefault();
+   const searchList = this.state.posts.filter(item =>item.username === this.state.searchInput);
+   this.setState({searchReturn: searchList, searchInput: ''})
+  }
+
   render() {
     return (
       <div className="App">
         <SearchBar />
         <div className="post-container">
-        {dummyData.map(item =>{
+        {this.state.posts.map(item =>{
           return(
           <PostContainer key={item.timestamp} obj={item} />
        )})}

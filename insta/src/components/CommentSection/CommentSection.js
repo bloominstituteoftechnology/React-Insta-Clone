@@ -9,7 +9,8 @@ class Comments extends React.Component{
         this.state={
             comments:[],
             newComment:'',
-            likes:0
+            likes:0,
+            liked: false
         }
     
     }
@@ -38,18 +39,19 @@ class Comments extends React.Component{
             this.addNewComment(e);
             this.setState({newComment:''})
     }
-    likeMore =()=>{
-        this.setState(prevState=>{return {likes: prevState.likes +1}})
+    likeMore =(e)=>{
+        this.setState({liked:!this.state.liked})
+        
     }
    render(){
     return(
         <div>
              <>
-                 <i className="far fa-heart fa-2x like-icon" onClick={this.likeMore}></i>
+                 <i className="far fa-heart fa-2x like-icon" onClick={this.likeMore} ></i>
                  <i className="far fa-comment fa-2x fa-flip-horizontal"></i>
              </>
              <>
-             <h1>{this.state.likes} likes</h1>
+             <h1>{this.state.liked?this.state.likes+1:this.state.likes} likes</h1>
              </>
             {this.state.comments.map(item =>{
                 return(
