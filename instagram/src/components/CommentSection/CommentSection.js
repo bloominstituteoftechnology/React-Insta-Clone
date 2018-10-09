@@ -13,8 +13,15 @@ const CommentSection = (props) => {
           </div>
         )
       })}
+      <input
+        type="text"
+        name="new comment"
+        placeholder="enter new comment..."
+      />
+
     </div>
   )
 }
+
 
 export default CommentSection

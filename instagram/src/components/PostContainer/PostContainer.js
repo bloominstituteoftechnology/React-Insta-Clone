@@ -8,13 +8,19 @@ const PostContainer = (props) => {
       {props.dummyData.map( postObj => {
         return (
           <div>
-            <div>{postObj.username}</div>
-            <img src={postObj.thumbnailUrl} alt="avatar" width="100"></img>
-            <img src={postObj.imageUrl} alt="imageURL" width="300"></img>
-            <div>{postObj.likes}</div>
-            <div>{postObj.timestamp}</div>
+            <div className="postheader">
+              <img src={postObj.thumbnailUrl} alt="avatar" width="50"></img>
+              <div>{postObj.username}</div>
+            </div>
 
-            <CommentSection comments={postObj.comments}/>
+            <img src={postObj.imageUrl} alt="imageURL" width="300"></img>
+            
+            <div className="postBottom">
+              <div>{postObj.likes}</div>
+              <CommentSection comments={postObj.comments}/>
+              <div>{postObj.timestamp}</div>
+            </div>
+            
           </div>
         )
       })}
