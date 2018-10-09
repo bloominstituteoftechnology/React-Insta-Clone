@@ -1,5 +1,6 @@
 import React from 'react';
-import Logo from '../IG-assets/IGLogo.svg';
+import Logo from '../IG-assets/iglogo.png';
+import './SearchBar.css'
 
 const SearchBarContainer = () => {
     return (
