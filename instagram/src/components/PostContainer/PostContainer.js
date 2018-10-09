@@ -1,15 +1,33 @@
 import React from 'react';
-import dummyData from '../../dummy-data.js';
-import heart from '../../Img/likes.svg';
-import comment from '../../Img/comment-regular.svg';
+// import dummyData from '../../dummy-data.js';
+import Likes from '../Images/Likes.js';
+import Comment from '../Images/Comment.js';
 import CommentSection from '../CommentSection/CommentSection';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 
 const PostContainer = (props) => {
+	if (!props.dummyData.length) {
+		return (
+			<div className="sk-circle">
+				<div className="sk-circle1 sk-child" />
+				<div className="sk-circle2 sk-child" />
+				<div className="sk-circle3 sk-child" />
+				<div className="sk-circle4 sk-child" />
+				<div className="sk-circle5 sk-child" />
+				<div className="sk-circle6 sk-child" />
+				<div className="sk-circle7 sk-child" />
+				<div className="sk-circle8 sk-child" />
+				<div className="sk-circle9 sk-child" />
+				<div className="sk-circle10 sk-child" />
+				<div className="sk-circle11 sk-child" />
+				<div className="sk-circle12 sk-child" />
+			</div>
+		);
+	}
 	return (
 		<React.Fragment>
-			{dummyData.map((item) => {
+			{props.dummyData.map((item) => {
 				return (
 					<div className="postContainer" key={item.timestamp}>
 						<div className="userName">
@@ -21,17 +39,16 @@ const PostContainer = (props) => {
 								<img src={item.imageUrl} alt="User post" />
 							</div>
 							<div className="postStats">
-								<img src={heart} alt="likes" className="heart" />
-								<img src={comment} alt="" className="comment" />
+								<Likes />
+								<Comment />
 							</div>
 							<div className="likes">
 								<h4>{item.likes} likes</h4>
-
 								{item.comments.map((index) => {
 									return (
 										<h4 key={Math.floor(Math.random() * Math.floor(1000000))}>
 											{index.username}
-											<span className="comment"> {index.text}</span>
+											<span className="comments"> {index.text}</span>
 										</h4>
 									);
 								})}
@@ -40,7 +57,7 @@ const PostContainer = (props) => {
 								</div>
 							</div>
 						</div>
-						<CommentSection />
+						<CommentSection changeHander={props.addNewComment} name="comment" value={props.value} />
 					</div>
 				);
 			})}
