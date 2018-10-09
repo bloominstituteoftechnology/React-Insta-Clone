@@ -8,7 +8,11 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      commentData: [
+        {username: 'senior_one_more'},
+        {text: ''}
+      ]
     }
   }
 
@@ -22,7 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         {/* <SearchBar /> */}
-        <PostContainer data={this.state.data} />
+        <PostContainer data={this.state.data} commentdata={this.state.commentData}/>
       </div>
     );
   }

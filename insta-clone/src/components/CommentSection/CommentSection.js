@@ -6,19 +6,15 @@ import './CommentSection.css'
 
 const CommentSection = props => {
     // console.log(props.comments)
-    return (
-        <div>
-            {props.comments.map((comment, index) => {
-                return (
-                    <div key={index + 1} className='commentSection'>
-                        <Comment comment={comment} />
-                    </div>
-                )
-            })}
-            <p className='timeStamp'>{props.timestamp}</p>
-            <NewComment />
-        </div>
-    )
+    return <div>
+        {props.comments.map((comment, index) => {
+          return <div key={index + 1} className="commentSection">
+              <Comment comment={comment} />
+            </div>;
+        })}
+        <p className="timeStamp">{props.timestamp}</p>
+        <NewComment commentdata={props.commentdata} />
+      </div>;
 }
 
 CommentSection.propTypes = {

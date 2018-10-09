@@ -5,11 +5,9 @@ import PropTypes from 'prop-types';
 const PostContainer = props => {
     return (
         props.data.map((post, index) => {
-            return (
-                <div key={index + 1} className='postContainer'>
-                    <Post postdata={post}/>
-                </div>
-            )
+            return <div key={index + 1} className="postContainer">
+                <Post postdata={post} commentdata={props.commentdata} />
+              </div>;
         })
     )
 };

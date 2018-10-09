@@ -8,23 +8,21 @@ import './PostContainer.css';
 
 const Post = props => {
     // console.log(props.postdata)
-    return (
-        <div className='post'>
-            <header className='postHeader'>
-                <img className='thumbnail' src={props.postdata.thumbnailUrl} alt='' />
-                <p>{props.postdata.username}</p>
-            </header>
-            <img className='postImage' src={props.postdata.imageUrl} alt='' />
-            <div className='likeSection'>
-                <div className='likeCommentIcons'>
-                    <p className='heart'>like</p>
-                    <p className='commentBubble'>cmnt</p>
-                </div>
-                <div className='likeCount'>{props.postdata.likes} likes</div>
-            </div>
-            <CommentSection comments={props.postdata.comments} timestamp={props.postdata.timestamp}/>
+    return <div className="post">
+        <header className="postHeader">
+          <img className="thumbnail" src={props.postdata.thumbnailUrl} alt="" />
+          <p>{props.postdata.username}</p>
+        </header>
+        <img className="postImage" src={props.postdata.imageUrl} alt="" />
+        <div className="likeSection">
+          <div className="likeCommentIcons">
+            <p className="heart">like</p>
+            <p className="commentBubble">cmnt</p>
+          </div>
+          <div className="likeCount">{props.postdata.likes} likes</div>
         </div>
-    )
+        <CommentSection comments={props.postdata.comments} timestamp={props.postdata.timestamp} commentdata={props.commentdata} />
+      </div>;
 }
 
 Post.propTypes = {
