@@ -67,7 +67,7 @@ class CommentSection extends Component {
 
 
     CommentSection.propTypes = {
-        Comments: PropTypes.arrayOf(
+        comments: PropTypes.arrayOf(
             PropTypes.shape({
                 username: PropTypes.string,
                 text: PropTypes.string,
