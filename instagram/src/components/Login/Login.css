@@ -1,0 +1,23 @@
+.form {
+        background: #13232f;
+        padding: 40px;
+        max-width:600px;
+        margin:40px auto;
+        border-radius: 6px;
+        box-shadow:0 4px 10px 4px #13232f;
+        font-family: 'Titillium Web', sans-serif;
+}
+
+.button-block {
+        border: 0;      
+        padding:15px 0;
+        font-size:2rem;
+        font-weight: bold;
+        text-transform:uppercase;
+        letter-spacing : .1em;
+        background : #1ab188;
+        color : white;
+        transition:all.5s ease;
+        display : block;
+        width : 40%;
+}
