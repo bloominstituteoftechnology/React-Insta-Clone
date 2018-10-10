@@ -1,5 +1,5 @@
 import React from 'react';
-import PostPage from './PostPage';
+import Post from './Post';
 import './PostContainer.css';
 
 
@@ -7,7 +7,14 @@ const PostContainer = props => {
     console.log('postcontainer',props)
     return (
         <div className='main-post'>
-        <PostPage props={props}/>
+
+        {props.posts.map((post, index) =>
+        <Post
+        key={index}
+        post={post}
+        />
+        )}  
+
         </div>
     )
 }
