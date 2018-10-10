@@ -1,0 +1,48 @@
+.insta-logo {
+  width:35px;
+  height:35px;
+  padding-right:15px;
+  border-right: solid black 0.5px;
+}
+
+.insta-text {
+  width:115px;
+  height:35px;
+  padding-left:15px;
+}
+
+.nav-icon {
+  height:35px;
+  width:35px;
+}
+
+.heart-icon {
+  width:35px;
+  height:35px;
+}
+
+.user-icon {
+  width:40px;
+  height:40px;
+}
+
+.header {
+  max-width:700px;
+  padding:20px;
+  border:solid black 0.5px;
+  display:flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.right-logo {
+  width:125px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.search {
+  display:flex;
+  align-items:center;
+}
