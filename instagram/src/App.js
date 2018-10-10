@@ -10,7 +10,7 @@ class App extends React.Component {
     super();
     this.state = {
       posts: [],
-      likes: 370,
+      likes: Math.floor(Math.random() * 1000),
       filteredPosts: [],
       filterTarget: ""
     };
@@ -21,8 +21,8 @@ class App extends React.Component {
       this.setState({ posts: dummyData });
  
   }
-  increment = prevState => {
-    this.setState(prevState => ({ likes: prevState.likes + 1 }));
+  increment = () => {
+    this.setState({ likes: this.state.likes + 1 });
   };
 
   handleInput = event => {
