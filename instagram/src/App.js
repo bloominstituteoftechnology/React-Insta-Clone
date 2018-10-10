@@ -10,7 +10,7 @@ class App extends Component {
     super(props)
     this.state = {
       dummyData: dummyData,
-      newComment: '',
+      newInput: '',
       count: 0,
       username: '',
     }
@@ -59,7 +59,7 @@ clickToIncrease = () => {
         data={this.state.dummyData}
         newComment={this.addNewComment}
         changeHandler={this.changeHandler}
-        newInput={this.state.newComment}
+        newInput={this.state.newInput}
         count={this.state.count}
         increaseLike={this.clickToIncrease}
         comments={this.state.dummyData.map(comments => {return comments.comments}) }
