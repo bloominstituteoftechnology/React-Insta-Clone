@@ -10,6 +10,7 @@ import {faUserCircle} from '@fortawesome/free-solid-svg-icons';
 import PropType from 'prop-types';
 import PostsPage from './components/PostContainer/PostsPage.js';
 import Authenticate from './components/Authentication/Authenticate.js';
+import Login from './components/Login/Login.js';
 
 
 library.add(faHeart);
@@ -32,14 +33,10 @@ class App extends Component {
     this.inputHandler = this.inputHandler.bind(this);
     this.addNewComment = this.addNewComment.bind(this); 
     this.searchInputHandler = this.searchInputHandler.bind(this);
+    
   }
 
-  login(){
-    if(!window.localStorage.getItem('loggedIn')){
-    window.localStorage.setItem('username', this.state.username);
-    window.localStorage.setItem('loggedIn', 'true');
-    }
-  }
+  
 
   searchInputHandler(event){
 
@@ -90,7 +87,7 @@ class App extends Component {
   }
 }
 
-App = Authenticate(App);
+App = Authenticate(App, Login);
 
 export default App;
 /* stateComments={this.state.stateComments}
