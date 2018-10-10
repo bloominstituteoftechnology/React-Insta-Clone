@@ -23,7 +23,7 @@ const PostContainer = ({ data, likePost, id }) => {
         <i className="far fa-comment" />
       </div>
       <div className="PostContainer-Likes">{data.likes} likes</div>
-      <CommentSection comments={data.comments} />
+      <CommentSection comments={data.comments} id={id} />
     </div>
   );
 };

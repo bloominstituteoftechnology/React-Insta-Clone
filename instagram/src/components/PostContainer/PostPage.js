@@ -72,7 +72,12 @@ class PostPage extends Component {
         />
         {this.state.data.map((d, i) => {
           return (
-            <PostContainer data={d} key={i} id={i} likePost={this.likePost} />
+            <PostContainer
+              data={d}
+              key={i}
+              id={d.timestamp}
+              likePost={this.likePost}
+            />
           );
         })}
       </React.Fragment>

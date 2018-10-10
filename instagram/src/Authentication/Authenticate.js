@@ -19,7 +19,7 @@ const Authenticate = App => Login =>
     };
 
     validateUser = e => {
-      e.preventDefault();
+      // e.preventDefault();
       if (this.state.username === localStorage.getItem('username')) {
         this.setState({ loggedIn: true });
       }

@@ -11,11 +11,22 @@ class CommentSection extends React.Component {
     this.state = {
       comments: this.props.comments,
       username: 'hardlyreal',
-      commentText: ''
+      commentText: '',
+      id: this.props.id
     };
   }
 
-  addNewComment = e => {
+  componentDidMount() {
+    if (localStorage.getItem(!this.state.id)) {
+      localStorage.setItem(this.state.id, JSON.stringify(this.state.comments));
+    } else {
+      let value = localStorage.getItem(this.state.id);
+      value = JSON.parse(value);
+      this.setState({ comments: value });
+    }
+  }
+
+  addNewComment = (e, index) => {
     e.preventDefault();
 
     const comment = {
@@ -31,7 +42,7 @@ class CommentSection extends React.Component {
         commentText: ''
       };
     });
-
+    localStorage.setItem(index, JSON.stringify(comments));
     // Need to figure out why state isn't updating this
     e.target.firstChild.value = '';
   };
@@ -55,6 +66,7 @@ class CommentSection extends React.Component {
           addNewComment={this.addNewComment}
           commentText={this.commentText}
           updateText={this.updateText}
+          id={this.state.id}
         />
       </div>
     );
