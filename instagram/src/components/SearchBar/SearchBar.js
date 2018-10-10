@@ -1,8 +1,12 @@
 import React from 'react';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   return <div>
-      <input placeholder="search" />
+      <input 
+        type="text" 
+        placeholder="Search"
+        onKeyDown={props.search}
+        />
       
     </div>;
 }

@@ -16,7 +16,7 @@ class App extends Component {
     event.preventDefault();
     this.setState({
       filtered: this.state.posts.filter(post => {
-        if (post.username === post.username) {
+        if (post.username.includes(event.target.value)) {
           return post;
         } 
       })
@@ -27,6 +27,7 @@ class App extends Component {
       <div className="App">
           <SearchBar 
             search={this.searchHandler}
+            term={this.state.searchTerm}
           />
           <PostContainer posts={this.state.posts} />
       </div>
