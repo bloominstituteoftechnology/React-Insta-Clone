@@ -15,12 +15,8 @@ const Post = (props) => {
                 <i className="far fa-comment fa-2x"></i>
             </div>
             <div className='likes'>{props.postData.likes} likes</div>
-            <CommentSection comments={props.postData.comments} />
-            <div className='timestamp'>{props.postData.timestamp}</div>
-            <div className='add-comment'>
-                <input className='comment-input' placeholder='Add a comment...' />
-                <i className="fas fa-ellipsis-h"></i>
-            </div>
+            <CommentSection comments={props.postData.comments} timestamp={props.postData.timestamp}/>
+            
         </div>
     )
 }
