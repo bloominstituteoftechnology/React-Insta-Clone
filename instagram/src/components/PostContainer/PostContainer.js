@@ -19,12 +19,39 @@ class PostContainer extends Component {
     }
   }
 
+  static getDerivedStateFromProps(
+    {
+      post: { username, thumbnailUrl, imageUrl, likes, timestamp, comments }
+    },
+    prevState
+  ) {
+    if (username !== prevState.username) {
+      return {
+        username,
+        thumbnailUrl,
+        imageUrl,
+        likes,
+        timestamp,
+        comments
+      }
+    }
+
+    return null
+  }
+
   addLike = () => {
     this.setState({ likes: this.state.likes + 1 })
   }
 
   render() {
-    const { username, thumbnailUrl, imageUrl, likes, timestamp, comments } = this.state
+    const {
+      username,
+      thumbnailUrl,
+      imageUrl,
+      likes,
+      timestamp,
+      comments
+    } = this.state
     const { addLike } = this
 
     return (
@@ -39,7 +66,9 @@ class PostContainer extends Component {
         </div>
 
         <img className="post-image" src={imageUrl} alt="post" />
-        <p onClick={addLike} className="likes-text">{likes} likes</p>
+        <p onClick={addLike} className="likes-text">
+          {likes} likes
+        </p>
         <CommentSection comments={comments} />
         <p className="timestamp">{timestamp}</p>
       </div>
