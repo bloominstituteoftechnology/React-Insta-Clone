@@ -6,7 +6,7 @@ function CommentSection(props) {
     return (
         <div className='commentSection'>
              {props.postComments.map(comment => { 
-                 return <Comment commentData={comment}/>
+                 return <Comment key={`${comment.input} ${comment.text}`} commentData={comment}/>
             })}
         </div>
     )
