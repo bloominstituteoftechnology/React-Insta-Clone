@@ -14,13 +14,29 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: []
+      dummyData: [],
+      holder: ''
     };
   }
 
   componentDidMount() {
     this.setState({ dummyData: dummyData });
   }
+
+  handleInput = e => {
+    this.setState({
+      holder: e.target.value
+    });
+  };
+
+  handleSearch = e => {
+    e.preventDefault();
+    this.setState({
+      dummyData: dummyData.filter(x => {
+        return x.username.includes(this.state.holder);
+      })
+    });
+  };
 
   render() {
     return (
@@ -30,7 +46,12 @@ class App extends Component {
             <img src={logo} className="logo" alt="logo" />
             <p className="title">Fake Instagram</p>
           </div>
-          <SearchBar />
+          <SearchBar 
+            dummyData={this.state.dummyData} 
+            input={this.state.holder}
+            handleInput={this.handleInput}
+            handleSearch={this.handleSearch}
+          />
           <div className="icon-container">
             <FontAwesomeIcon icon="compass" className="icon" />
             <FontAwesomeIcon icon="heart" className="icon" />

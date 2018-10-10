@@ -51,16 +51,20 @@ p {
   color: gray;
   width: 10px;
   height: 10px;
-  margin-left: 40px;
+  margin-left: 30px;
 }
-.header .search-bar input {
-  border: none;
+.header .search-bar form {
   width: 45%;
-  font-size: 0.8rem;
-  padding-left: 10px;
-  background-color: whitesmoke;
+  padding-left: 8px;
+  padding-top: 2px;
 }
-.header .search-bar input:focus {
+.header .search-bar form input {
+  width: 100%;
+  font-size: 0.8rem;
+  background-color: whitesmoke;
+  border: none;
+}
+.header .search-bar form input:focus {
   outline: none;
 }
 .header .icon-container {
