@@ -1,5 +1,6 @@
 import React from "react";
 
+//comment box presents the "add comment" section for each post
 const CommentBox = props =>{
     return (
         <form className="comment-box">
@@ -8,20 +9,21 @@ const CommentBox = props =>{
                     placeholder="Add A Comment..."
                     maxLength="100"
                     onChange={props.input}
-                    // onKeyDown={(event) => {
-                    //     if (event.keyCode === 13) {
-                    //         props.add(props.postId)
-                    //     }
-                    // }}
-                    onSubmit={(event) => {
-                        console.log(event)
-                        event.preventDefault()
-                        if (event.keyCode === 13){
-                            props.add(event, props.postId)
+                    onKeyDown={(event) => {
+                        if (event.keyCode === 13) {
                             event.preventDefault()
-                            }
-                        } 
-                    }
+                            props.add()
+                        }
+                    }}
+                    // onSubmit={(event) => {
+                    //     props.add()
+                    //     console.log(event)
+                    //     if (event.keyCode === 13){
+                    //         props.add()
+                    //         }
+                    
+                    //     }
+                    // }
             >
             </input>
             <span className="dots">...</span>

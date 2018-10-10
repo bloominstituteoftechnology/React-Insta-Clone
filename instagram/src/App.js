@@ -31,22 +31,25 @@ class App extends Component {
   /*adds comment to any post
   if the username of the current post matches the comment box we are adding the comment to, the new comment is pushed as an addition to the comment section. Otherwise the orginal post is returned
   */
-  addComment = (postID) => {
-    //event.preventDefault()
-    let data = {
-      username: "hotdamnirock",
-      text: this.state.input,
-    }
-    this.setState({
-      input: "",
-      instagram: this.state.instagram.map(post => {
-        if(postID === post.username){
-          post.comments.push(data)
-        }
-        return post
-      })
-    })
-  }
+  // addNewComment = (event, postID) => {
+  //   console.log(event)
+  //   event.preventDefault()
+  //   let data = {
+  //     username: "hotdamnirock",
+  //     text: this.state.input,
+  //   }
+  //   this.setState({
+  //     input: "",
+  //     instagram: this.state.instagram.map(post => {
+  //       if(postID === post.username){
+  //         alert("New comment!")
+  //         post.comments.push(data)
+  //       }
+  //       alert("not found")
+  //       return post
+  //     })
+  //   })
+  // }
 
   /*increases likes for heart click
   if the username on the current post matches the username of the heart we are clicking the number of likes increases
@@ -101,7 +104,7 @@ class App extends Component {
               post={data}
               text={this.state.input}
               input={this.handleInput}
-              add={this.addComment}
+              // add={this.addNewComment}
               increment={this.increment}
             />
           </div>

@@ -20,7 +20,7 @@ const Post = (props) => {
                     likes={props.post.likes} 
                     input={props.input}
                     text={props.text}
-                    add={props.add}
+                    // add={props.add}
                     time={props.post.timestamp}
                     increment={props.increment}
                 />
