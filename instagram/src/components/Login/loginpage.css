@@ -1,0 +1,42 @@
+.login-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.login-stuff {
+  max-width: 30%;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  border: 1px solid lightgrey;
+  padding-left: 40px;
+  padding-bottom: 30px;
+  background-color: whitesmoke;
+}
+
+
+.login-stuff .login-username {
+  width: 75%;
+  height: 30px;
+  margin-top:5px;  
+}
+
+.login-stuff h2 {
+  width: 25%;
+}
+
+.login-stuff .login-password {
+  width: 75%;
+  height: 30px;
+  margin-top:5px;
+}
+
+.login-stuff .login-button {
+  width: 50%;
+  height: 40px;
+  font-size: 1rem;
+  margin-top:25px;
+  background-color: white;
+}
