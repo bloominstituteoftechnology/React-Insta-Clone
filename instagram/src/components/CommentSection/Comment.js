@@ -2,9 +2,11 @@ import React from 'react';
 
 const Comment = props =>{
     return(
-        <div>
-            <p className="user">{props.username}</p>
-            <p>{props.comment}</p>
+        <div className="comments-section">
+            <div className="comments">
+                <p className="user">{props.username}</p>
+                <p className="comment">{props.comment}</p>
+            </div>
         </div>
     );
 }
