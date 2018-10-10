@@ -7,47 +7,37 @@ class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.comments
-      // user: '',
-      // text: '',
+      comments: props.comments,
+      user: '',
+      comment: '',
     }
   }
 
-//   componentDidMount() {
-//     setTimeout(() => {this.setState({comments: this.state.comments})}, 800)
-//   }
+  componentDidMount() {
+    setTimeout(() => {this.setState({comments: this.state.comments})}, 800)
+  }
 
-//   addNewComment = (event) => {
-//     event.preventDefault();
-//     const comments = this.state.comments.slice();
-//     comments.push({username: this.state.user, text: this.state.text});
-//     this.setState({comments: comments, text: ""})
-// }
+  addNewComment = event => {
+    event.preventDefault();
+    const comments = this.state.comments.slice();
+    comments.push({username: this.state.user, comment: this.state.comment});
+    this.setState({comments: comments, comment: ''})
+}
 
-//   changeComment = event => {
-//     event.preventDefault();
-//     this.setState({ text: event.target.value });
-//   };
+  commentHandler = event => { // commentHandler using comment instead of text
+    event.preventDefault();
+    this.setState({ comment: event.target.value });
+  };
 
   render() {
     return (
       <div className='comment-wrapper'>
-        {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-        <CommentInput />
+        {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
+        <CommentInput commentHandler={this.commentHandler}/>
       </div>
     );
   }
 }
-
-// render() {
-//   return (
-//     <div>
-//       {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-//       <CommentInput />
-//     </div>
-//   );
-// }
-// }
 
 
 
@@ -58,21 +48,3 @@ CommentSection.propTypes = {
 };
 
 export default CommentSection;
-
-
-// import React from "react";
-
-// const Input = props => {
-//     return (
-//         <form onSubmit={props.add}>
-//         <div className="input-box">
-//             <div className="inputs">
-//         <input type="text" placeholder="Add a comment ..."  name="user" onChange={props.change} value={props.value}/>
-//         <i className="fas fa-ellipsis-h"></i>
-//         </div>
-//         </div>
-//         </form>
-//     )
-// }
-
-// export default Input;
