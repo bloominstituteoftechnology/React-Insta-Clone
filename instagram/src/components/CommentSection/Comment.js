@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 const Comment = props => {
     return (
         <div className = 'comment-text'>
-        <div>
-            <span className = 'user'> {props.comment.username}</span>
-            {' '}
-            <span className= 'comment'>{props.comment.text}</span>
-            </div>
+            <div>
+                <span className = 'user'> {props.comment.username}</span>
+                {' '}
+                <span className= 'comment'>{props.comment.text}</span>
+                {props.comment.timestamp}
+                </div>
         </div>
     );
 };

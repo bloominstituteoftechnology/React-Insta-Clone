@@ -8,7 +8,8 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.comments,
-      comment: ''
+      comment: '',
+      
     };
   }
 
@@ -53,6 +54,7 @@ class CommentSection extends React.Component {
     return (
       <div className = 'theContainer'>
         {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
+        
         <CommentInput
           comment={this.state.comment}
           submitComment={this.handleCommentSubmit}
