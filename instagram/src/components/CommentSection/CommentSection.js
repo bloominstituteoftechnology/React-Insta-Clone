@@ -15,6 +15,19 @@ class CommentSection extends React.Component {
   comHandler = event => {
     this.setState({ comment: event.target.value });
   }
+
+  submitHandler = event => {
+    event.preventDefault();
+    this.setState({
+      comments: [
+        ...this.state.comments,
+        {text: this.state.comment,
+        username: 'MindySueasaurus'}
+      ],
+      comment: ''
+    })
+
+  }
   render(){
     return (
         <div>
@@ -25,7 +38,11 @@ class CommentSection extends React.Component {
             )
           }
           )}
-          <CommentInput changeHandler={this.comHandler} comment={this.state.comment}/>
+          <CommentInput 
+            changeHandler={this.comHandler} 
+            comment={this.state.comment}
+            submitHandler={this.submitHandler}
+          />
         </div>
     )
   }

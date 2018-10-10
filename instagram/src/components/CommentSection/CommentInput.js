@@ -2,9 +2,9 @@ import React from 'react';
 
 const CommentInput = props => {
   return (
-    <div>
+    <form onSubmit={props.submitHandler}>
       <input placeholder="Add a comment..." value={props.comment} onChange={props.changeHandler}/>
-    </div>
+    </form>
   )
 }
 export default CommentInput;
