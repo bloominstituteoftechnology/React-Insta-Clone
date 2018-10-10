@@ -43,7 +43,7 @@ class Post extends Component {
         </div>
         <section className="Post-icons">
           <div className="left-icons">
-            <div className="Post-icon-heart" />
+            <div className="Post-icon-heart" onClick={this.addLikes} />
             <div className="Post-icon-comment" />
             <div className="Post-icon-share" />
           </div>
