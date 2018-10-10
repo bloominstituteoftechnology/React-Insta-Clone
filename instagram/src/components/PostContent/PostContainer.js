@@ -18,7 +18,7 @@ const PostContainer = props =>{
                         <i className="far fa-comment"></i>
                     </div>
                     <p className="num-of-likes">{post.likes} likes</p>
-                    <CommentSection comments={post.comments}/>
+                    <CommentSection comments={post.comments} commentsState={props.commentsState}/>
                     <p className="post-timestamp">{post.timestamp}</p>
                     
                 </div>
