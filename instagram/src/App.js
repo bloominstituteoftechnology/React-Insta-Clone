@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
-import PostContainer from './Components/PostContainer/PostContainer';
 import Header from './Components/SearchBar/Header';
 import PostsPage from './Components/PostContainer/PostsPage';
+import Authenticate from './Components/Authentication/Authenticate';
+
 
 /* Come back to this later.
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -20,6 +21,7 @@ class App extends Component {
     this.postNumber = 0;
     this.state = {
       data: {},
+      username: localStorage.getItem('username'),
       searchTerm: '',
     }
     this.username = "C137";
@@ -80,6 +82,10 @@ class App extends Component {
     }, 500);
   }
 
+  login = (event) => {
+    event.preventDefault();
+  }
+
   render() {
     if (!this.state.data.length) {
       return (
@@ -107,5 +113,7 @@ class App extends Component {
     );
   }
 }
+
+
 
 export default App;
