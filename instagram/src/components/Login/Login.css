@@ -1,25 +1,17 @@
 .login-container {
     align-items: center;
-    background-color: papayawhip;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    position: absolute;
-    bottom: 100px;
-    left: 0;
-    right: 0;
-    top: 100px;
-    width: 500px;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
   }
    .login-form {
-    background-color: darkseagreen;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 3%;
     margin: 0 auto;
-    width: 100%;
     min-height: 300px;
   }
    .login-form label {
@@ -33,11 +25,26 @@
     height: 40px;
   }
    .login-btn {
-    background-color: rgb(49, 230, 57);
-    font-size: 24px;
-    padding: 1% 2%;
-    margin: 10px auto;
-    width: 200px;
+    flex: 1 1 auto;
+    background: none;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #f7f7f7;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow:hidden;
+  transition: .3s;
+  }
+  .login-btn::after{
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #f7f7f7;
   }
    .login-error {
     color: red;

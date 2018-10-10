@@ -10,7 +10,7 @@ const Authenticate = (PassedComponent) =>
               loggedIn: false,
               loginCredentials: [
                 {
-                  username: 'User1',
+                  username: 'User5',
                   password: '1234'
                 },
                 {
@@ -70,7 +70,7 @@ const Authenticate = (PassedComponent) =>
 
 
         render() {
-        
+            console.log(this.state.loggedIn);
             if(!this.state.loggedIn) {
               return (
                 <Login submit={this.login}
