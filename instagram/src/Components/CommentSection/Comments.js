@@ -3,7 +3,6 @@ import './CommentSection.css'
 import PropTypes from 'prop-types'
 
 const Comments = props => {
-    console.log('comments props', props)
     return (
         <div className="comments">
             <p>

@@ -10,7 +10,11 @@ const SearchBar = props => {
                 </p>
             </div>
             <div className="middle">
-                <input type="text" placeholder="Search"/>
+                <input
+                    type="text"
+                    placeholder="Search"
+                    onKeyDown={props.searchPosts}
+                />
             </div>
             <div className="right">
                 <i className="far fa-compass"></i>

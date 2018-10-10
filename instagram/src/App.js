@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data'
-
 import PostContainer from './Components/PostContainer/PostContainer'
 import SearchBar from './Components/SearchBar/SearchBar'
 
@@ -11,7 +9,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      dummyData: dummyData
+      dummyData: [],
+      postResults: []
       
     }
   }
@@ -20,29 +19,27 @@ class App extends Component {
     this.setState({ dummyData: dummyData })
   }
 
-  // updateLikes = () => {
-  //   this.setState(prevState => {
-  //     return { likes: prevState.likes + 1 }
-  //   })
-  // }
-
-  newComment = (message, index) => {
-    
-    this.setState({
-      dummyData: dummyData
+  searchPosts = event => {
+    const postResults = this.state.dummyData.filter(item => {
+      if (item.username.includes(event.target.value)) {
+        return item
+      }
     })
+    this.setState({ postResults: postResults })
   }
-
 
   render() {
     return (
       <div className="App">
-          <img src={logo} className="App-logo" alt="logo" />
-          <SearchBar />
+          <SearchBar 
+            searchPosts={this.searchPosts}
+          />
           <PostContainer 
-            postData={this.state.dummyData}
-            updateLikes={this.updateLikes}
-            commentSubmit={this.newcomment}
+            dummyData={
+              this.state.postResults.length > 0
+                ? this.state.postResults
+                : this.state.dummyData
+            }
           />
       </div>
     );

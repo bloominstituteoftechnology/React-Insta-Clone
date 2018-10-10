@@ -1,41 +1,49 @@
 import React from 'react'
 import './PostContainer.css'
+import Likes from '../PostContainer/Likes'
+import CommentSection from '../CommentSection/CommentSection'
 import PropTypes from 'prop-types'
 
-const Post = props => {
-    console.log('posts props', props)
-    return (
-        <div className="post">
-            <div className="user">
-                <div className="user-photo">
-                    <img src={props.post.thumbnailUrl} alt=""/>
+class Post extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            likes: props.post.likes
+        }
+    }
+
+    addLike = () => {
+        let likes = this.state.likes + 1;
+        this.setState({ likes })
+    }
+    
+    render() {
+        return (
+            <div className="post">
+                <div className="user">
+                    <div className="user-photo">
+                        <img src={this.props.post.thumbnailUrl} alt=""/>
+                    </div>
+                    <div className="user-name">
+                        {this.props.post.username}
+                    </div>
                 </div>
-                <div className="user-name">
-                    {props.post.username}
+                <div className="image">
+                    <img src={this.props.post.imageUrl} alt=""/>
                 </div>
+                <Likes 
+                    addLike={this.addLike}
+                    likes={this.state.likes}
+                />
+                <CommentSection 
+                    postId={this.props.post.imageUrl}
+                    comments={this.props.post.comments}
+                />
             </div>
-            <div className="image">
-                <img src={props.post.imageUrl} alt=""/>
-            </div>
-            <div className="post-actions">
-                <div className="left-actions">
-                    <i 
-                        className="far fa-heart"
-                        onClick={props.addLike}
-                    ></i>
-                    <i className="far fa-comment"></i>
-                    {/* <i class="far fa-share-square"></i> */}
-                </div>
-                <div className="right-actions">
-                    <i className="far fa-bookmark"></i>
-                </div>
-            </div>
-            <div className="likes">
-                {props.post.likes} likes
-            </div>
-        </div>
-    )
+        )
+    }
 }
+
 
 // Post.propTypes = {
 //     post: PropTypes.arrayOf(
