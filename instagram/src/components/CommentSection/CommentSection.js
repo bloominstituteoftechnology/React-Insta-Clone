@@ -1,11 +1,9 @@
 import React from 'react';
-import moment from 'moment';
-import PropTypes from 'prop-types';
-
-import Coment from './Coment';
-import CommentForm from './CommentForm';
-
+import Comment from './Comment';
 import './commentsection.css';
+import moment from 'moment';
+import CommentForm from './CommentForm'
+import PropTypes from 'prop-types';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -51,7 +49,7 @@ class CommentSection extends React.Component {
         return (
             <div>
                 <div className="comments">
-                    {this.state.comments.map((comment, i) => <Coment key={i} deleteComment={this.deleteComment} comment={comment} username={this.state.username}/>)}
+                    {this.state.comments.map((comment, i) => <Comment key={i} deleteComment={this.deleteComment} comment={comment} username={this.state.username}/>)}
                 </div>
                 <p className='timestamp'>{moment(this.state.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}</p>
                 <CommentForm changeHandler={this.changeHandler} addNewComment={this.addNewComment}/>
