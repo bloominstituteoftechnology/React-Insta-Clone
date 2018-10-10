@@ -37,6 +37,7 @@ h2{
     height: 30px;
     font-size: 2.4rem;
     border-radius: 5px;
+    outline: none;
 }
 
 .submit-button{
