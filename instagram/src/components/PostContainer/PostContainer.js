@@ -30,7 +30,7 @@ const PostContainer = props => {
           alt="heart icon"
         />{/* designed by Smashicons
         https://smashicons.com/ from Flaticon */}
-        <img className="Icon" src="../assets/like-heart.png" alt="Heart icon" />
+        <img className="Icon" src="../../assets/like-heart.png" alt="Heart icon" />
       </div>
       <div className="Stats-row">{props.likes} likes</div>
       <div className="Comments">
@@ -48,6 +48,8 @@ const PostContainer = props => {
           />
           <input type="submit" value="Add" />
         </form>
+{/* ☞ 8856f45d-bf37-455b-8549-b7a5ef4cecf2 */}
+
       </div>
     </div>
   );
