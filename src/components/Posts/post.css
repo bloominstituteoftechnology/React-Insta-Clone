@@ -51,6 +51,19 @@
     cursor: pointer;
     left: -280px;
     margin-top: 12px;
+    
+}
+
+#redLikeAction {
+    position: relative;
+    width: 36px;
+    background-size: 2600% 3100%;
+    background-position: -67px 60px;
+    cursor: pointer;
+    left: -280px;
+    margin-top: 12px;
+    margin-right: -9px;
+    display: none;
 }
 #commentAction {
     position: relative;

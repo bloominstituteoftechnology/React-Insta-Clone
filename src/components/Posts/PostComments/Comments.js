@@ -38,27 +38,42 @@ addLike = (event) => {
     event.preventDefault();
     const likesCounter = this.state.counter;
     var likeButton = document.getElementById("likeAction");
-    console.log(likeButton)
+    var redLikeButton = document.getElementById("redLikeAction");
+    likeButton.style.display = "none";
+    redLikeButton.style.display = "inline-flex";
+
     this.setState({
-        counter: likesCounter+1
+        counter: likesCounter + 1
     })
 }
 
-removeLike = () =>{
-    var likeButton = document.getElementById('likeAction');
-    likeButton.style.display = "invisible"
+removeLike = (event) =>{
+    event.preventDefault();
+    const likesCounter = this.state.counter;
+    var likeButton = document.getElementById("likeAction");
+    var redLikeButton = document.getElementById("redLikeAction");
+    likeButton.style.display = "inline-flex";
+    redLikeButton.style.display = "none";
+
+    this.setState({
+        counter: likesCounter - 1
+    })
 }
 
 render(){
     return(
         <div className="commentsContainer">
-        { this.state.counter === 1 ? ( <p className="like"></p> ) : ( <p onChange={this.removeLike} className="likes">{this.state.counter} likes</p> )}
-        <div className={"action"} id="likeAction" ref="likeAction" onClick={this.addLike}> </div>
-        <div className={"action"} id="commentAction"></div>
+        { this.state.counter === 1 ? ( <p className={"like"}></p> ) : ( <p className={"likes"}>{this.state.counter} likes</p> )}
+        <div className={"action"} id={"likeAction"} ref={"likeAction"} onClick={this.addLike}></div>
+        <div className={"action"} id={"redLikeAction"} ref={"redLikeAction"} onClick={this.removeLike}></div>
+        <div className={"action"} id={"commentAction"}></div>
         
             {this.state.comments.map(instance => {
                 return (
+                    <div>
                     <PostComments key={instance.username + instance.timestamps + instance.text}username={instance.username} text={instance.text} />
+
+                    </div>
                         )
             
             })}

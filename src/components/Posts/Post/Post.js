@@ -14,7 +14,7 @@ const Post = props => {
                         <PostImg postimg={props.obj} />
                         
                     </>
-                        <Comments key={props.obj.timestamp} obj={props.obj} />
+                        <Comments key={props.obj.timestamp + props.obj.username} obj={props.obj} />
                     <>
                         
       
