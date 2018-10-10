@@ -24,7 +24,7 @@ const SearchBar = props => {
             <div className="right">
                 <i className="fa fa-2x fa-compass" aria-hidden="true"></i>
                 <i className="fa fa-2x fa-heart-o" aria-hidden="true"></i>
-                <i className="fa fa-2x fa-user-o" aria-hidden="true"></i>
+                <i className="fa fa-2x fa-user-o" aria-hidden="true" onClick={props.logout}></i>
             </div>
             
         </div>

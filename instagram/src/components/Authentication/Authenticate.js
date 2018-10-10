@@ -7,7 +7,7 @@ const Authenticate = App =>
         super();
         this.state = {
           loggedIn: false,
-          username: '',
+          username: "",
         };
       }
 
@@ -19,7 +19,7 @@ const Authenticate = App =>
           },
           () => {
             localStorage.setItem("loggedIn", this.state.loggedIn);
-            localStorage.setItem('username', this.state.username);
+            localStorage.setItem("username", this.state.username);
             
           }
         )
@@ -33,7 +33,7 @@ const Authenticate = App =>
         return this.state.loggedIn === false ? (
           <Login  triggerOnLogin={this.triggerOnLogin}/>
         ) : (
-          <App loggedIn={this.state.loggedIn}/>
+          <App />
         );
       }
   };

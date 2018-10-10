@@ -41,14 +41,13 @@ class PostPage extends React.Component {
           this.setState({dummyData: searchedPosts});
             }
     }
-          // else {
-          //   this.setState({
-          //     dummyData: dummyData,
-          //     dummyData: filtered,
-          //   })
-          // }
-        
-    
+
+    logout = event => {
+        event.preventDefault();
+        localStorage.removeItem("loggedIn");
+        localStorage.removeItem("username");
+        window.location.reload();
+    }
     
       render() {
         return (
@@ -57,6 +56,7 @@ class PostPage extends React.Component {
             search={this.state.search}
             searchInputHandler={this.searchInputHandler}
             searchPosts={this.searchPosts}
+            logout={this.logout}
             />
             <PostContainer 
             posts={this.state.dummyData}
