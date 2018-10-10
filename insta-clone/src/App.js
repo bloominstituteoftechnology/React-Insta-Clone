@@ -27,6 +27,16 @@ class App extends Component {
     })
   }
 
+  addComment = (event, index) => {
+    event.preventDefault()
+    let currentComments = this.state.data[index].comments
+    currentComments.push({username: 'seanOne', text: this.state.newComment})
+    this.setState({
+      [this.state.data[index].comments]: currentComments,
+      newComment: '',
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -37,6 +47,7 @@ class App extends Component {
           commenttext={this.state.commentText}
           changeHandler={this.changeHandler}
           newComment={this.state.newComment}
+          addComment={this.addComment}
         />
       </div>
     );

@@ -18,6 +18,8 @@ const CommentSection = props => {
             commenttext={props.commenttext}
             changeHandler={props.changeHandler}
             newComment={props.newComment}
+            addComment={props.addComment}
+            postIndex={props.postIndex}
         />
       </div>;
 }

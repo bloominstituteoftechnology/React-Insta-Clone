@@ -12,6 +12,8 @@ const PostContainer = props => {
                     commenttext={props.commenttext}
                     changeHandler={props.changeHandler}
                     newComment={props.newComment}
+                    addComment={props.addComment}
+                    postIndex={index}
                 />
               </div>;
         })

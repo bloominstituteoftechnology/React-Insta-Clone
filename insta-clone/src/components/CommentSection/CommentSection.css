@@ -35,6 +35,10 @@
     justify-content: space-between;
 }
 
+.newCommentSection form {
+    width: 100%;
+}
+
 .newCommentSection input {
     padding-left: 1rem;
     width: 100%;
