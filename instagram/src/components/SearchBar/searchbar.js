@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './searchbar.css'
 
-const SearchBar = () =>{
+const SearchBar = (props) =>{
     return(
         <div className = "search-bar-container">
             <div className = "logo-section">
@@ -10,9 +10,11 @@ const SearchBar = () =>{
             </div>
             <div className = "search-input">
                 <input 
+                    
                     type = "text"
                     placeholder = " Search... 🔍"
                     className = "search"
+                    onChange = {props.filter}
                 />    
             </div>
             <div className = "nav-icons">   

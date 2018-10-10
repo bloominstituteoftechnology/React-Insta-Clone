@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import dummyData from './Dummy';
-import SearchBar from './components/SearchBar/searchbar';
-import PostContainer from './components/PostContainer/postcontainer';
+import dummyData from './Dummy'
+import PostPage from './components/PostContainer/PostPage';
 import PropTypes from 'prop-types';
 
 class App extends Component {
@@ -11,6 +10,7 @@ class App extends Component {
     super()
     this.state = {
       data : [],
+      
     }
   }
   componentDidMount(){
@@ -18,19 +18,21 @@ class App extends Component {
       data: dummyData 
     })
   }
+  searchFilter = (event) => {
+    const search = event.target.value;
+    const data = [];
+
+    this.state.data.filter(post =>{
+      return post.username.includes(search) ? data.push(post) : null;
+    })
+    search === '' ? this.setState({data: dummyData}) : this.setState({data:data})
+  }
   
   
   render() {
     return (
-      <div className ="app-container">
-        <SearchBar />
-        <div>
-          {this.state.data.map(dummyObj =>{
-            return(
-              <PostContainer addLike = {this.addLike} dummyObj = {dummyObj} key = {dummyObj.timestamp}/>
-            );
-          })}
-        </div>
+      <div>
+        <PostPage data = {this.state.data} />
       </div>
     );
   }
