@@ -13,7 +13,7 @@ export default class PostContainer extends React.Component {
 
     return (
       <div className = 'post-container' >
-        {dummyData.map( el => {
+        {this.props.data.map( el => {
           return (
             <div className="each-post-container" key={el.timestamp}>
               <PostHeader name={el.username} thumbNail={el.thumbnailUrl} />
@@ -29,3 +29,7 @@ export default class PostContainer extends React.Component {
     )
   }
 }
+
+PostContainer.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object)
+};

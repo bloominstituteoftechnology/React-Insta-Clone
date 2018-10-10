@@ -10,7 +10,6 @@
 }
 
 .header-container {
-  border: 12px pink;
   display: flex;
   padding:  0 2rem;
 }
@@ -29,7 +28,6 @@
 }
 
 .postIMG {
-  border: 1px solid green;
   width: 100%;
   display: flex;
 }
@@ -40,11 +38,10 @@
 }
 
 .footer-container {
-  border: 1px solid deeppink;
+
 }
 
 .likesCount {
-  border: 1px solid rebeccapurple;
   font-family: "Thonburi";
   font-size: 1rem;
   font-weight: bold;
@@ -52,7 +49,6 @@
 }
 
 .littleIcons {
-  border: 1px solid deeppink;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
