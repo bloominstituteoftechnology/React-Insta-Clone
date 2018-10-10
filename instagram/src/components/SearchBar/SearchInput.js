@@ -3,9 +3,9 @@ import './SearchBar.css';
 
 const SearchInput = (props) => {
     return (
-        <>
-            <input type='text' placeholder='🔍 search' />
-        </>
+        <form>    
+            <input type='text' placeholder='🔍 search' onChange={props.search} />
+        </form>
     )
 }
 
