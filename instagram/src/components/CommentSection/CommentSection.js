@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 
-class Comments extends Component {
+class CommentsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      newComment: "",
       comments: props.comments
     };
   }
 
-  render(props) {
+  render() {
+    console.log(this.state.comments);
     return (
       <div>
         {this.state.comments.map(data => {
@@ -27,4 +29,4 @@ class Comments extends Component {
   }
 }
 
-export default Comments;
+export default CommentsContainer;

@@ -1,3 +1,38 @@
-.container {
-  border: 1px solid blue;
+.post-container {
+  border: 1px solid red;
+}
+
+.thumbnail {
+  border-radius: 50%;
+  height: 17px;
+  width: 17px;
+  margin-top: 11px;
+  margin-left: 10px;
+}
+
+.post-top-section {
+  display: flex;
+}
+
+.username {
+  margin-left: 5px;
+  padding-top: 5px;
+  font-size: 0.9rem;
+}
+
+.post-img {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.likes {
+  margin-left: 10px;
+  padding-bottom: 2px;
+  font-size: 0.8rem;
+}
+
+.heart-plus {
+  height: 20px;
+  width: 20px;
+  margin-left: 4px;
 }

@@ -18,15 +18,24 @@ class App extends Component {
     }, 800);
   }
 
+  // addNewComment(event, index) {
+  //   event.preventDefault();
+  //   const copyState = this.state.data.map((post, idx) => {
+  //     if (idx.toString() === event.target.id) {
+  //     }
+  //   });
+  //   this.setState({});
+  // }
+
   render() {
     return (
-      <div>
-        <SearchBar />
-        <Container
-          data={this.state.data.map(obj => {
-            return obj;
-          })}
-        />
+      <div className="container">
+        {/* <header>
+          <SearchBar />
+        </header> */}
+        {this.state.data.map(post => {
+          return <Container post={post} />;
+        })}
       </div>
     );
   }
