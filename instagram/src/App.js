@@ -4,6 +4,7 @@ import SearchBar from './SearchBar/SearchBar';
 import PostContainer from './PostContainer/PostContainer';
 import dummyData from './dummy-data';
 import PropTypes from "prop-types";
+import PostsPage from './PostContainer/PostsPage';
 
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
             <PostContainer obj={item} key={item.timestamp} />
             )
           })}
+          <PostsPage />
       </div>
     );
   }
