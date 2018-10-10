@@ -25,6 +25,12 @@ class App extends Component {
     });
     this.setState({ filteredPosts: posts });
   };
+  login (username) {
+    setItem()	
+    //find syntax for adding item to localstorage
+
+  }
+
   render() {
     return (
       <div className="App">
@@ -38,7 +44,7 @@ class App extends Component {
   }
 }
 
-export default App;
+export default  Authenticate(App);
 
 
 
