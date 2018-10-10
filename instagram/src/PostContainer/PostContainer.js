@@ -13,7 +13,7 @@ const PostContainer = prop => {
         thumbnailUrl={prop.data.thumbnailUrl}
       />
       <Image  ImageUrl={prop.data.imageUrl} />
-      <Icons like={prop.data.like} timestamp={prop.data.timestamp} />
+      <Icons like={prop.data.likes} timestamp={prop.data.timestamp} />
       {prop.data.comments.map(item => {
         return <CommentContainer item={item} />;
       })}
