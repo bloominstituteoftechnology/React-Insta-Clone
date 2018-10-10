@@ -1,33 +1,13 @@
 import React, { Component } from 'react';
+// import dummyData from './dummy-data.js';
 
-import dummyData from './dummy-data.js';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
   state = {
-    posts: [],
     searchQuery: '',
-  };
-
-  componentDidMount() {
-    this.setState({ posts: dummyData });
-  }
-
-  changeHandler = (event) => {
-    this.setState({ searchQuery: event.target.value });
-  };
-
-  addLike = (timestamp) => {
-    this.setState({
-      posts: this.state.posts.map((post) => {
-        if (post.timestamp === timestamp) {
-          post.likes += 1;
-        }
-        return post;
-      }),
-    });
   };
 
   search = () => {};
@@ -40,15 +20,7 @@ class App extends Component {
           changeHandler={this.changeHandler}
           text={this.state.searchQuery}
         />
-        {dummyData.map((post) => {
-          return (
-            <PostContainer
-              post={post}
-              addLike={this.addLike}
-              key={post.timestamp}
-            />
-          );
-        })}
+        <PostsPage />
       </div>
     );
   }
