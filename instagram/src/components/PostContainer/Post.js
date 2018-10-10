@@ -10,6 +10,13 @@ class Post extends React.Component {
       likes: props.post.likes
     }
   }
+
+  increment = props => {
+    this.setState({
+      likes: this.state.likes + 1
+    })
+
+  }
   render() {
     return (
       <div>
@@ -20,6 +27,7 @@ class Post extends React.Component {
 
         <img src={this.props.post.imageUrl} alt="main pic" />
         <Likes
+          increment={this.increment}
           likes={this.state.likes}
         />
         
