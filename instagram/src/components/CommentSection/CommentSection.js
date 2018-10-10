@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import Comment from './Comment'
 import CommentEntry from './CommentEntry'
+import Timestamp from './Timestamp'
 import './CommentSection.css'
 
 class CommentSection extends Component {
@@ -10,7 +11,6 @@ class CommentSection extends Component {
     this.state = {
       comments: this.props.comments,
       newComment: '',
-      timestamp: props.timestamp,
     }
   }
 
@@ -43,7 +43,8 @@ class CommentSection extends Component {
             {this.state.comments.map((comment, i) =>
               <Comment key={i} comment={comment} />
             )}
-            <p className='moment'>{moment(`${this.state.comments[this.state.comments.length-1].timestamp}`).fromNow()}</p>
+            {/* <p className='moment'>{moment(`${this.state.comments[this.state.comments.length-1].timestamp}`).fromNow()}</p> */}
+            <Timestamp timestamp={this.props.timestamp} />
             <CommentEntry addNewComment={this.addNewComment} handleCommentChange={this.handleCommentChange} newComment={this.state.newComment} />
           </React.Fragment>
       </div>

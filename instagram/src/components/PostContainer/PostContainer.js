@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import CommentIcon from '../Icons/CommentIcon'
+import HeartIcon from '../Icons/HeartIcon'
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 
@@ -29,8 +31,9 @@ render() {
         </div>
 
         <div className='post-icons'>
-          <i className="far fa-heart" onClick={this.handleLikes}/>
-          <i className="far fa-comment"/>
+          <HeartIcon onClick={this.handleLikes} />
+          <CommentIcon />
+
         </div>
         <p className='likes'><strong>{this.state.likes} likes</strong></p>
         <CommentSection comments={this.props.data.comments} comment={this.props.comment} />
