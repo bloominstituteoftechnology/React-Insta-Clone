@@ -38,7 +38,7 @@ class PostContainer extends React.Component {
                 <PostHeader post={this.state.post}/>
                 <img className="postImage" alt="post" src={this.state.post.imageUrl}></img>
                 <Likes likes={this.state.likes} classList={this.state.classList} likeHandler={this.likeHandler}/>
-                <CommentSection post={this.state.post} />
+                <CommentSection post={this.state.post} username={this.props.username}/>
             </div>
         )
     }

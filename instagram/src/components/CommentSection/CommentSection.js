@@ -11,7 +11,7 @@ class CommentSection extends React.Component {
         this.state = {
             timestamp: this.props.post.timestamp,
             comments: this.props.post.comments,
-            hardcodedUser: 'kevin',
+            username: this.props.username,
             newComment: '',  
         }
     }
@@ -29,7 +29,7 @@ class CommentSection extends React.Component {
             let comments = this.state.comments;
             let commentToAdd = {
                 text: this.state.newComment,
-                username: this.state.hardcodedUser,
+                username: this.state.username,
             }
             comments.push(commentToAdd);
             this.setState({
@@ -49,7 +49,7 @@ class CommentSection extends React.Component {
         return (
             <div>
                 <div className="comments">
-                    {this.state.comments.map((comment, i) => <Comment key={i} deleteComment={this.deleteComment} comment={comment}/>)}
+                    {this.state.comments.map((comment, i) => <Comment key={i} deleteComment={this.deleteComment} comment={comment} username={this.state.username}/>)}
                 </div>
                 <p className='timestamp'>{moment(this.state.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}</p>
                 <CommentForm changeHandler={this.changeHandler} addNewComment={this.addNewComment}/>

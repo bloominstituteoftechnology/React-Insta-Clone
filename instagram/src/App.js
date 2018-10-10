@@ -1,51 +1,49 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
-import Posts from './components/PostContainer/Posts';
+import PostsPage from './components/PostContainer/PostsPage';
+import Login from './components/Login/Login'
+import Authenticate from './authentication/Authenticate';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      postData: [],
-      searchString: '',
+      isLoggedIn: false,
+      username: window.localStorage.getItem('username'),
     }
   }
 
   componentDidMount() {
-    setTimeout(() => {
+    let username = window.localStorage.getItem('username');
+    console.log(username);
+    if (username === '' || username === null) {
       this.setState({
-        postData: dummyData,
-      })
-    }, 300)
-  }  
-
-  searchHandler = event => {
-    event.preventDefault();
-    if (event.target.value !== '') {
-      this.setState({
-        [event.target.name]:event.target.value,
+        isLoggedIn: false,
       })
     }
     else {
       this.setState({
-        [event.target.name]: '',
+        isLoggedIn: true,
       })
     }
   }
 
-  render() {
-    if (!this.state.postData.length) {
-      return <h4 id="loader">Loading your feed...</h4>;
+  login = event => {
+    let username = event.target.parentNode.firstChild.value;
+    if (username !== '') {
+      window.localStorage.setItem('username', `${username}`);
     }
+  }
+
+  render() {
     return (
       <div className="App">
-        <SearchBar searchHandler={this.searchHandler}/>
-        <Posts searchString={this.state.searchString} postData={this.state.postData}/>
+        <ShowConditionally isLoggedIn={this.state.isLoggedIn} login={this.login} username={this.state.username}/>
       </div>
     );
   }
 }
+
+const ShowConditionally = Authenticate(PostsPage)(Login);
 
 export default App;
