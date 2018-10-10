@@ -1,44 +1,44 @@
 import React, { Component } from 'react';
-// import './App.css';
-import PostContainer from './components/PostContainer/PostContainer'
+// import PostContainer from './components/PostContainer/PostContainer'
 import SearchBar from './components/SearchBar/SearchBar';
-import DummyData from '../src/dummy-data';
+import data from '../src/dummy-data';
+import PostList from './components/PostContainer/PostList';
 
-console.log(DummyData);
+console.log(data);
 
-// const CharacterList = (props) => {
-//   return (
-//     <div className='characterList'>
-//       {props.characters.map(character => {
-//         return <CharacterCard
-//           key={character.created}
-//           character={character} />
-//       })}
-//     </div>
-//   )
-// }
 
 class App extends Component {
   constructor(){
     super();
     this.state = {
-      posts: [],
-      users: DummyData
+      posts: []
     };
+  }
+
+  componentDidMount() {
+    console.log('CDM: Component Did Mount');
+    this.setState({posts: data});
+    console.log(data);
   }
   
   
   render() {
     return (
-      <div className="App">
-        {this.state.users.map(user => (
-          <div>{user.username}</div>
-        ))}
+      <div className="App">        
         <SearchBar />
-        <PostContainer />
+        <PostList posts = {this.state.posts} />
       </div>
     );
   }
 }
 
 export default App;
+
+
+
+
+
+
+// {this.state.users.map(user => (
+//   <div>{user.username}</div>
+// ))}

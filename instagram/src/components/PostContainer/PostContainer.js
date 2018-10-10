@@ -13,7 +13,7 @@ const PostContainer = props => {
             src="https://placekitten.com/g/50/50"
             alt="bruh"
           />
-          <h3 className="post__header--username">Username</h3>
+          <h3 className="post__header--username">{props.user.username}</h3>
         </div>
 
         <div className="post__content">
