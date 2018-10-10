@@ -35,4 +35,11 @@ button {
   outline: none;
   font-size: 1rem;
   color: #555555;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  background-color: rgb(240, 156, 0);
+  color: snow;
 }
