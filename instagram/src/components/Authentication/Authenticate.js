@@ -9,10 +9,11 @@ const Authenticate = App =>
     constructor(props) {
       super(props);
       this.state = {
+        // On state we need a user loggedIn boolean flag.
         loggedIn: false
       };
     }
-
+    // On componentDidMount we need to check localStorage to see if a user is logged in.
     componentDidMount() {
       if (!localStorage.getItem("user")) {
         this.setState({ loggedIn: false });
@@ -20,6 +21,8 @@ const Authenticate = App =>
         this.setState({ loggedIn: true });
       }
     }
+    // Inside of the render function we will check if a user is logged in
+    // If a user is logged in we will return the <App />, else we will return the <LoginPage>
     render() {
       if (this.state.loggedIn) return <App />;
       return <LogIn />;

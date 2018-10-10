@@ -19,4 +19,5 @@ class App extends React.Component {
   }
 }
 
-export default App;
+// Need to invoke Authenticate page and passing in App as the component
+export default Authenticate(App);

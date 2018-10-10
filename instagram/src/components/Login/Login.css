@@ -1,0 +1,30 @@
+.login-page {
+  background-image: url("./bart.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  margin: 250px auto;
+}
+
+.login button {
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  width: 20%;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  background-color: #4897b1;
+}
+
+input {
+  margin-bottom: 15px;
+}
