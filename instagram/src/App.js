@@ -3,7 +3,8 @@ import PostsPage from './components/PostContainer/PostsPage';
 import './App.css';
 import Authenticate from './components/Authentication/Authenticate';
 
-class App extends Component {
+const App = Authenticate (
+  class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +12,7 @@ class App extends Component {
     }
   }
   render() {
-    Authenticate(App);
+    // Authenticate(App);
     return (
       <div className="insta_app">
       <PostsPage />
@@ -19,6 +20,7 @@ class App extends Component {
     );
   }
 }
+)
 
 
 export default App;
