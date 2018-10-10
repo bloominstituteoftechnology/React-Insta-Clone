@@ -9,7 +9,8 @@ class App extends Component {
     super();
     this.state = {
       posts: [],
-      user: ''
+      user: '',
+      displayLoginWarning: false
     }
 
     window.onbeforeunload = this.saveData;
@@ -49,7 +50,6 @@ class App extends Component {
 
   addNewComment = (comment, index)=>{
     const data = this.state.posts;
-    // Add hard coded user
     const commentObj = {
       username: this.state.user,
       text: comment
@@ -69,6 +69,12 @@ class App extends Component {
   }
 
   searchPosts = (username)=>{
+    if(!this.state.user){
+      this.setState({
+        displayLoginWarning: true
+      })
+      return;
+    }
     const data = this.state.posts;
     data.forEach(obj=>{
       if(obj.username === username || username === 'all'){
@@ -95,7 +101,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar searchPosts={this.searchPosts}/>
-        <Authenticate posts={this.state.posts} addNewComment={this.addNewComment} addLike={this.addLike} searchPosts={this.searchPosts} deleteComment={this.deleteComment} setUser={this.setUser}/>
+        <Authenticate posts={this.state.posts} displayInfo={this.state.displayLoginWarning} addNewComment={this.addNewComment} addLike={this.addLike} searchPosts={this.searchPosts} deleteComment={this.deleteComment} setUser={this.setUser}/>
       </div>
     );
   }

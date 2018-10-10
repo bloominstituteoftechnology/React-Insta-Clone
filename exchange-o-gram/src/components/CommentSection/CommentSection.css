@@ -36,6 +36,7 @@ p.time-stamp{
 
 .add-comment{
     border: none;
+    width: 100%;
     height: 50px;
     font-size: 1.8rem;
     font-weight: bold;
@@ -49,11 +50,18 @@ p.time-stamp{
 .comment{
     display: flex;
     justify-content: space-between;
-    width: 100%;
     font-size: 1.8rem;
     letter-spacing: 1px;
     line-height: 22px;
     margin-bottom: 8px;
+    
+
+    
+}
+
+.comment p{
+    width: 93%;
+    overflow-wrap: break-word;
 }
 
 .comment-options{

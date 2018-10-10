@@ -1,4 +1,5 @@
 import React from 'react';
+import './Login.css';
 
 class Login extends React.Component{
     constructor(props){
@@ -25,11 +26,6 @@ class Login extends React.Component{
         this.setState({
             users: loadedData
         })
-    }
-
-    searchPost = (event)=>{
-        // TODO: highlight code to enter name and password
-        console.log("Please Sign In");
     }
 
     usernameInput = (event)=>{
@@ -62,12 +58,13 @@ class Login extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="login">
                 <h2>Please Sign In</h2>
-                <div>
-                    UserName:<input onChange={this.usernameInput} placeholder="Enter username" value={this.state.usernameInput}></input>
-                    Password:<input onChange={this.passwordInput} placeholder="Enter password" value={this.state.passwordInput}></input>
-                    <input onClick={this.login} type="submit" value="Submit"></input>
+                <div className="login-form">
+                    <div className="login-input"><p className="input-label">UserName:</p><input className="input-box" onChange={this.usernameInput} placeholder="Enter username" value={this.state.usernameInput}></input></div>
+                    <div className="login-input"><p className="input-label">Password:</p><input className="input-box" onChange={this.passwordInput} placeholder="Enter password" value={this.state.passwordInput}></input></div>
+                    <input className="submit-button" onClick={this.login} type="submit" value="Submit"></input>
+                    {this.props.displayInfo ? <p className="input-info">Please log in to search posts</p> : null}
                 </div>
             </div>
         )

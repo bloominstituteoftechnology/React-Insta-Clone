@@ -12,9 +12,16 @@ class Comment extends React.Component{
     
     askForDelete = (event)=>{
         event.preventDefault();
-        this.setState({
-            displayDeleteComment: true
-        })
+        if(this.state.displayDeleteComment){
+            this.setState({
+                displayDeleteComment: false
+            })
+        }
+        else{
+            this.setState({
+                displayDeleteComment: true
+            })
+        }
     }
 
     deleteComment = (event)=>{

@@ -34,7 +34,7 @@ const authenticate = SignIn => Posts =>{
                 return (
                     this.state.loggedIn ? 
                     <Posts {...this.props}/> : 
-                    <SignIn loginUser={this.setLoggedIn}/>      
+                    <SignIn {...this.props} loginUser={this.setLoggedIn}/>      
                 )
             }
         }
