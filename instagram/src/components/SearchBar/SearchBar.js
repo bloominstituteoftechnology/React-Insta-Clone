@@ -29,7 +29,7 @@ const SearchBar = props => {
           onFocus={props.searchFocusHandler}
           onChange={props.searchHandler}
           value={props.searchInput}
-          onBlur={props.searchBlur}
+          
         />
       </div>
       <div className="icons">

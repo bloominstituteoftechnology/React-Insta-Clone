@@ -22,6 +22,7 @@
     border-radius: 50%;
     margin: 15px;
     background: radial-gradient(gray,white,gray) ;
+    
 }
 
 .card-header{
@@ -54,10 +55,12 @@
 }
 
 .post-img-fill-in{
-    background: linear-gradient(to bottom right, gray, white, gray);
+    background-image: linear-gradient(to bottom right, gray , white 50%, gray );
     height: 600px;
     width: 100%;
 }
+
+
 
 .thumbnail{
     height: 30px;

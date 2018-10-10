@@ -1,34 +1,13 @@
 import React from "react";
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
-import { Heart, Bookmark, Message, Share } from "../../assets/assets";
+import DummyPost from './DummyPost'
 import PropTypes from "prop-types";
 
 const PostContainer = props => {
   if (!props.data.length) {
     return (
-      <div className="post-container">
-        <div className="fill-in-card">
-          <div className="card-header">
-            <div className="fill-in-thumbnail" />
-          </div>
-          <div className="post-img-fill-in" />
-          <div className="card-comments-fill-in">
-            {" "}
-            <div className="icon-bar">
-              <div className="icons">
-                <Heart />
-
-                <Message />
-
-                <Share />
-              </div>
-
-              <Bookmark />
-            </div>
-          </div>
-        </div>
-      </div>
+     <DummyPost/>
     );
   }
   return (

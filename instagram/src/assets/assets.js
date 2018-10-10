@@ -28,7 +28,7 @@ export const Bookmark = props => (
     strokeWidth="1"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className={props.bookmarked ? "icon feather-bookmark":"icon feather-bookmark"}
+    className={props.bookmarked ? "icon feather-bookmark fill-black":"icon feather-bookmark"}
     onClick={props.bookmarkHandler}
   >
     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />

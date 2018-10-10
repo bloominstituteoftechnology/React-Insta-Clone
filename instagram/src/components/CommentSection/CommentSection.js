@@ -8,7 +8,7 @@ class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;
-    this.state = { likes: null, comments: null, timestamp: null,  };
+    this.state = { likes: null};
   }
 
   componentDidMount() {
