@@ -10,6 +10,10 @@ import Authenticate from './components/Authentication/Authenticate';
 
 class App extends Component {
 
+  // ******* NEED LOGIN FUNCTION THAT WILL BE INVOKED BY LOGIN.JS WHEN USER LOGS IN
+  // set username to localStorage
+  // force page to reload
+
   render() {
     return (
       <PostsPage />
