@@ -1,48 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchBar from './components/SearchBar/SearchBar'
-import dummyData from './dummy-data'
-import PostContainer from './components/PostContainer/PostContainer'
+import PostsPage from './components/PostContainer/PostsPage.js'
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      data: {dummyData}
-    }
-  }
-
-  allResults() {
-    this.setState({
-      data: {dummyData}
-    })
-  }
-
-  search = (e) => {
-    if (e.charCode === 13) {
-    let dummyData = this.state.data.dummyData.filter(function(key) {
-      return key.username == e.target.value
-    })
-
-    if (dummyData.length > 0){
-      this.setState({
-      data: {dummyData}
-    })
-  } else {
-    this.allResults();
-  } 
-  }
-  }
 
 
   render() {
     return (
-      <div className="App">
-        <SearchBar search={this.search}/>
-        <PostContainer userpost={this.state.data.dummyData} 
-        a/> 
+      <div>
+      <PostsPage />
       </div>
     );
   }
