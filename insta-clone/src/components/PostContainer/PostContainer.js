@@ -6,7 +6,7 @@ const PostContainer = props => {
     return (
         props.data.map((post, index) => {
             return <div key={index + 1} className="postContainer">
-                <Post postdata={post} commentdata={props.commentdata} />
+                <Post postdata={post} username={props.username} commenttext={props.commenttext} />
               </div>;
         })
     )

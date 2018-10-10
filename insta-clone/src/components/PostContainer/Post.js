@@ -21,7 +21,7 @@ const Post = props => {
           </div>
           <div className="likeCount">{props.postdata.likes} likes</div>
         </div>
-        <CommentSection comments={props.postdata.comments} timestamp={props.postdata.timestamp} commentdata={props.commentdata} />
+        <CommentSection comments={props.postdata.comments} timestamp={props.postdata.timestamp} username={props.username} commenttext={props.commenttext} />
       </div>;
 }
 

@@ -26,3 +26,24 @@
     margin: 0 auto;
     border-bottom: 1px solid lightgray;
 }
+.newCommentSection {
+    width: calc(100% - 3.6rem);
+    padding: 0.5rem 0;
+    margin: 0 auto;
+    line-height: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    width: 100%;
+    border: none;
+    line-height: 4rem;
+}
+
+.newCommentSection button {
+    font-weight: bold;
+    line-height: 4rem;
+    background-color: white;
+    border: none;
+}

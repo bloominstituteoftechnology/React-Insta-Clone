@@ -1,9 +1,13 @@
 import React from 'react';
+import './CommentSection.css';
 
 function NewComment(props) {
-    return <p>
-        {props.commentdata.username} {props.commentdata.text}
-      </p>;
+    return (
+        <div className='newCommentSection'>
+            <input className='newcomment' placeholder='add a comment...'/>
+            <button>...</button>
+        </div>
+    );
 }
 
 export default NewComment;

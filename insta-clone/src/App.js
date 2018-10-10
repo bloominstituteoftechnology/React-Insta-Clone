@@ -9,10 +9,8 @@ class App extends Component {
     super();
     this.state = {
       data: [],
-      commentData: [
-        {username: 'senior_one_more'},
-        {text: ''}
-      ]
+      username: 'senior_one_more',
+      commentText: 'tester text',
     }
   }
 
@@ -26,7 +24,7 @@ class App extends Component {
     return (
       <div className="App">
         {/* <SearchBar /> */}
-        <PostContainer data={this.state.data} commentdata={this.state.commentData}/>
+        <PostContainer data={this.state.data} username={this.state.username} commenttext={this.state.commentText}/>
       </div>
     );
   }
