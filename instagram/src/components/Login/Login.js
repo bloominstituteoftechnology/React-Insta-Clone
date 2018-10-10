@@ -14,8 +14,10 @@ class Login extends React.Component {
 
     usernameInput = event => {
     this.setState({
-      input: event.target.value
+      input: event.target.value,
+      username: event.target.value,
     });
+    
   };
 
   passwordInput = event => {
@@ -27,16 +29,18 @@ class Login extends React.Component {
   login = (event) => {
       event.preventDefault();
       this.props.updateLogin(this.state.username);
+      window.location.reload();
+
   }
 
 
 render() {
     return (
         <div className="loginContainer">
-            <form onSubmit={this.login}>
+            <form>
                 <span>username</span><input value={this.state.input} onChange={this.usernameInput}></input>
-                <span>password</span><input value={this.state.password} onChange={this.passwordInput}></input>
-                <button type="submit">Submit</button>
+                <span>password</span><input type="password" value={this.state.password} onChange={this.passwordInput}></input>
+                <button type="submit" onClick={this.login}>Submit</button>
             </form>
         </div>
     )

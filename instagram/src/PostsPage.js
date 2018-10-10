@@ -10,31 +10,41 @@ class PostsPage extends Component {
     super();
     this.state = {
       dummyData: [],
-      search: '',
+      search: ""
     };
   }
 
+  onUnload = () => {
+    localStorage.removeItem("username")
+  }
 
   componentDidMount() {
-    setTimeout(() => {this.setState({
-      dummyData: dummyData,
-      search: '',
-    })});
+    setTimeout(() => {
+      this.setState({
+        dummyData: dummyData,
+        search: ""
+      });
+    }, 300);
   }
 
   searchFilter = event => {
-    const match = this.state.dummyData.filter(post => post.username.includes(this.state.search) ? post : null);
+    const match = this.state.dummyData.filter(
+      post => (post.username.includes(this.state.search) ? post : null)
+    );
     this.setState({
       search: event.target.value,
       dummyData: match
-    })
-  }
+    });
+  };
 
-  
   render() {
     return (
       <>
-        <SearchBar dummyData={this.state.dummyData} search={this.state.search} searchFilter={this.searchFilter}/>
+        <SearchBar
+          dummyData={this.state.dummyData}
+          search={this.state.search}
+          searchFilter={this.searchFilter}
+        />
         <PostContainer
           dummyData={this.state.dummyData}
           commentInput={this.commentInput}

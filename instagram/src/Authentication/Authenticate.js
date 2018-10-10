@@ -6,25 +6,32 @@ const Authenticate = App =>
     constructor() {
       super();
       this.state = {
-        loggedIn: false
+        loggedIn: false,
+        username: '',
       };
     }
 
-    updateLogin = v => {
-      if (v.length > 1) {
-        this.setState({
-          loggedIn: true
-        }, () => {
-            localStorage.setItem("loggedIn", this.state.loggedIn);
-            window.location.reload()
-        });
-        
-      }
+    updateLogin = id => {
+      this.setState(
+        {
+          loggedIn: true,
+          username: id,
+        },
+        () => {
+          localStorage.setItem("loggedIn", JSON.stringify(this.state.loggedIn));
+          localStorage.setItem('username', this.state.username);
+          
+        }
+      );
     };
+
+    
 
     componentDidMount() {
       this.hydrateStateWithLocalStorage();
     }
+
+
 
     hydrateStateWithLocalStorage() {
       for (let key in this.state) {
@@ -42,7 +49,7 @@ const Authenticate = App =>
 
     render() {
       return this.state.loggedIn === false ? (
-        <Login updateLogin={this.updateLogin} loggedIn={this.state.loggedIn} />
+        <Login updateUserId={this.updateUserId} updateLogin={this.updateLogin} loggedIn={this.state.loggedIn} />
       ) : (
         <App loggedIn={this.state.loggedIn} />
       );

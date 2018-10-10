@@ -8,6 +8,7 @@ class CommentSection extends React.Component {
     super(props);
     
     this.state = {
+      username: localStorage.getItem("username"),
       comment: "",
       likes: props.likes.filter((entry, i) => i + 1 === props.post.id),
       id: props.post.id,
@@ -27,7 +28,7 @@ class CommentSection extends React.Component {
       {
         comments: [
           ...this.state.comments,
-          { id: this.state.id, text: this.state.comment, username: "dummyUser" }
+          { id: this.state.id, text: this.state.comment, username: this.state.username }
         ],
         comment: ""
       },

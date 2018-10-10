@@ -2,7 +2,14 @@ import React from "react";
 import '../SearchBar/SearchBar.css';
 
 class SearchBar extends React.Component {
+    logout = () => {
+        localStorage.removeItem("username");
+        localStorage.removeItem("loggedIn");
+        window.location.reload();
+    }
   render() {
+
+    
     return (
         <div className={'searchContainer'}>
             <div className={'searchBox'}>
@@ -17,7 +24,7 @@ class SearchBar extends React.Component {
                 <div className={'topButtonBox'}>
                     <img src="https://png.icons8.com/ios/48/000000/compass.png" alt="" />
                     <img src="https://png.icons8.com/ios/48/000000/hearts.png" alt="" />
-                    <img src="https://png.icons8.com/ios/48/000000/gender-neutral-user.png" alt="" />
+                    <img src="https://png.icons8.com/ios/48/000000/gender-neutral-user.png" onClick={this.logout} alt="" />
                 </div>
             </div>
         </div>
