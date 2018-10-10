@@ -3,9 +3,14 @@ import './Comment.css';
 
 const CommentInput = props => {
     return (
-        <form className="add-comment">
-            <input type="text" placeholder="Add comment.." />
-        </form>
+        <form onSubmit={props.submitComment} className="add-comment">
+        <input
+          type="text"
+          value={props.comment}
+          placeholder="Add comment... "
+          onChange={props.changeComment}
+        />
+      </form>
     );
 }
 
