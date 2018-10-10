@@ -36,7 +36,7 @@ class CommentSection extends React.Component {
         if (this.state.input !== '') {
             this.setState({
                 comments: [...this.state.comments, {
-                    username: 'commenter',
+                    username: localStorage.getItem('username'),
                     text: this.state.input
                 }],
                 input: ''
