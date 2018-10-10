@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import Header from './components/Header/Header';
 import PostContainer from './components/PostContainer/PostContainer'
+import PostsPage from './components/PostsPage/PostsPage'
 import { EventEmitter } from './events.js';
 
 class App extends Component {
@@ -67,20 +68,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Header 
+      <div className='App'>
+        <PostsPage 
+          data={this.state.data}
+          commentInput={this.state.commentInput}
           searchInput={this.state.searchInput}
         />
-        {this.state.data.map((data, index) => {
-          return (
-            <PostContainer 
-              data={data} 
-              index={index}
-              commentInput={this.state.commentInput}
-              searchInput={this.state.searchInput}
-            />
-          )
-        })}
       </div>
     );
   }
