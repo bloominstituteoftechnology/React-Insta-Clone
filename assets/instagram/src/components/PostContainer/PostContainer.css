@@ -1,0 +1,43 @@
+.post-container{
+    /* display: flex; */
+    margin-left: 20px;
+}
+
+.straighten{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.profile-img{
+    height: 30px;
+    width:30px;
+    border-radius: 15px;
+}
+
+.username-comment{
+    font-size: 16px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.image-cont{
+    margin-bottom: 15px;
+}
+
+.likes{
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.time-stamp{
+    margin-left: 10px;
+}
+
+.input-comment{
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
