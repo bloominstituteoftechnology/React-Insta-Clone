@@ -5,9 +5,6 @@ import CommentSection from '../CommentSection/CommentSection.js';
 class PostContainer extends React.Component {
     constructor(props) {
         super(...arguments);
-        this.state = {
-            comments: props.comments
-        };
     }
     render() {
         return (
@@ -25,16 +22,12 @@ class PostContainer extends React.Component {
                     </a>
                 </div>
                 <div className="post-photo">
-                    <img src={this.props.imageUrl} alt="This should be provided as data from the API" />
-                </div>
-                <div className="post-interaction">
-                    <img src="img/interact-like.png" alt="like button" />
-                    <img src="img/interact-comment.png" alt="comment button" />
-                    <div className="post-likes-count">{this.props.likes} likes</div>
+                    <img src={this.props.imageUrl} alt="Alt text should be provided by the API" />
                 </div>
                 <CommentSection
                     lastActivity={this.props.timestamp}
-                    comments={this.state.comments}
+                    comments={this.props.comments}
+                    likes={this.props.likes}
                 />
             </div>
         )

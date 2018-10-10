@@ -41,15 +41,3 @@
     width: 100%;
     height: auto;
 }
-.post-interaction {
-    margin-top: 8px;
-    margin-left : 16px;
-    margin-right: 16px;
-}
-.post-interaction img {
-    margin-right: 16px;
-}
-.post-likes-count {
-    margin-top: 8px;
-    font-weight: bold;
-}

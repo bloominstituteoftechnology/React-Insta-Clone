@@ -9,10 +9,11 @@ class CommentSection extends React.Component {
         this.state = {
             commentList: props.comments || [],
             lastActivity: this.props.lastActivity,
+            likes: this.props.likes,
             commentBody: ''
         }
     }
-    addComment = (submitEvent) => {
+    addNewComment = (submitEvent) => {
         submitEvent.preventDefault();
         let newCommentBody = this.state.commentBody;
         if(newCommentBody.length <= 0){ return;}
@@ -26,16 +27,18 @@ class CommentSection extends React.Component {
             commentBody: ''
         })
     }
-    typeComment = (changeEvent) => {
-        let newValue = changeEvent.target.value;
-        console.log(newValue)
-        this.setState({
-            commentBody: newValue
-        });
-    }
     render() {
         return (
             <div className="comments">
+                <div className="comments-interaction">
+                    <img
+                        src="img/interact-like.png"
+                        alt="like button"
+                        onClick={this.addLike}
+                    />
+                    <img src="img/interact-comment.png" alt="comment button" />
+                    <div className="comments-likes-count">{this.state.likes} likes</div>
+                </div>
                 <div className="comments-list">
                 {
                     this.state.commentList.map((comment, commentIndex) => (
@@ -48,7 +51,7 @@ class CommentSection extends React.Component {
                 }
                 </div>
                 <div className="post-time">{this.state.lastActivity}</div>
-                <form className="comments-add" onSubmit={this.addComment}>
+                <form className="comments-add" onSubmit={this.addNewComment}>
                     <input
                         type="text"
                         placeholder="Add a comment..."
@@ -59,6 +62,20 @@ class CommentSection extends React.Component {
                 </form>
             </div>
         )
+    }
+
+    //--------------------------------------------
+    typeComment = (changeEvent) => {
+        let newValue = changeEvent.target.value;
+        this.setState({
+            commentBody: newValue
+        });
+    }
+    addLike = (clickEvent) => {
+        console.log("ASDF")
+        this.setState(function(prevState, props){
+            return {likes: prevState.likes+1}
+        });
     }
 }
 

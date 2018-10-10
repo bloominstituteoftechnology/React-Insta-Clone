@@ -6,6 +6,16 @@
     margin-left : 16px;
     margin-right: 16px;
 }
+.comments-interaction {
+    margin-top: 8px;
+}
+.comments-interaction img {
+    margin-right: 16px;
+}
+.comments-likes-count {
+    margin-top: 8px;
+    font-weight: bold;
+}
 .post-time {
     border-bottom: 1px solid #ccc;
     font-size: 14px;
