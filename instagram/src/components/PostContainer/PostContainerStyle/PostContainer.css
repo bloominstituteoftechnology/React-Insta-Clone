@@ -1,6 +1,7 @@
 .post-container {
   padding-left: 100px;
   padding-right: 59px;
+  max-width: 800px;
 }
 
 .post-border {
