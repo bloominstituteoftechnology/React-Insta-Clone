@@ -1,5 +1,16 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styled from 'styled-components';
+
+const Icons = styled.section`
+    display: flex;
+    flex-direction: column;
+`;
+
+const PostLikes = styled.section`
+    font-size: 14px;
+    padding: 5px 0;
+`;
 
 class PostIcons extends Component {
   constructor(props) {
@@ -21,15 +32,15 @@ class PostIcons extends Component {
   }
   render() {
     return (
-      <section className='icon-container'>
+      <Icons>
         <section className='post-icons'>
           <FontAwesomeIcon icon='heart' onClick={this.updateLikes}/>
           <FontAwesomeIcon icon='comment-alt' />
         </section>
-        <section className='post-likes'>
+        <PostLikes>
         {this.state.likes} <span>likes</span>
-        </section>
-      </section>
+    </PostLikes>
+      </Icons>
     );
   }
 }

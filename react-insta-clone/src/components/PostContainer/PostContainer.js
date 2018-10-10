@@ -3,6 +3,16 @@ import './PostContainer.css';
 import PostHeader from './PostHeader/PostHeader';
 import PostContent from './PostContent/PostContent';
 import propTypes from 'prop-types';
+import styled from 'styled-components';
+
+const Section = styled.section`
+
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  width: 600px;
+
+`;
 
 class PostContainer extends Component {
   constructor(props) {
@@ -55,7 +65,7 @@ class PostContainer extends Component {
 
   render() {
     return (
-      <section className='post-container' id={this.props.id}>
+      <Section id={this.props.id}>
         <PostHeader  username={this.state.user.username}
                      thumbnailUrl={this.state.user.thumbnailUrl}/>
                    <img className='post-cta-image' src={this.state.user.imageUrl}
@@ -69,7 +79,7 @@ class PostContainer extends Component {
         <section className="post-time">
          {this.state.user.timestamp}
         </section>
-      </section>
+      </Section>
     );
   }
 }
