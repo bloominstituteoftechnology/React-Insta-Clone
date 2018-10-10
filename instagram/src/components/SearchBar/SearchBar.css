@@ -49,14 +49,15 @@
   border-radius: 5px;
   border: 1px solid #ddd;
   background: #f8f8f8;
+  padding: 10px;
 }
 
 .right-items {
-  border: 1px solid orange;
   margin-left: 5px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: flex-end;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: end;
+  justify-items: end;
   align-items: center;
 }
 
@@ -77,6 +78,7 @@
 }
 
 .profile {
+  border: 1px solid orange;
   background-image: url(../../img/real-spritesheet.png);
   background-repeat: no-repeat;
   background-position: -458px -294px;

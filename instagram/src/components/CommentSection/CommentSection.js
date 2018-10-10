@@ -41,10 +41,8 @@ const CommentSection = props => {
 
 
 CommentSection.propTypes = {
-  comments: PropTypes.shape({
-    username: PropTypes.string,
-    text: PropTypes.string
-  })
+  comments: PropTypes.arrayOf(PropTypes.object)
 };
+
 
 export default CommentSection;

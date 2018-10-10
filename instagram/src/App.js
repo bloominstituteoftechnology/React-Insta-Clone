@@ -11,22 +11,32 @@ class App extends Component {
     super();
     this.state = {
       posts: [],
+      currentUser: '',
+      newComment: '',
       searchText: '',
-      currentUser: ''
+      filteredPosts: []
     };
   }
 
   componentDidMount() {
-    this.setState({
+    setTimeout(this.setState({
       posts: dummyData,
       currentUser: 'BobBelcher'
-    });
+    }), 2000);
   }
 
+  searchPostHandler = event => {
+    const posts = this.state.posts.filter(post => {
+      if(post.username.includes(event.target.value)) {
+        return post;
+      } else {
+        return null;
+      }
+    });
+    this.setState({ filteredPosts: posts });
+}
+
   addCommentHandler = timestamp => {
-    // event.preventDefault();
-    // method adds a comment to selected post
-    // gets current post
     console.log('handle comment');
     // gets comment - have to add an input field onClick
     let newComment = 'this is a new comment';
@@ -50,12 +60,8 @@ class App extends Component {
 
   addLikeHandler = timestamp => {
     // method adds a like to selected post
-    // gets current post
-    console.log('handle like - ' + timestamp);
-
-    // adds a like to current likes
     const updatedLikes = [...this.state.posts.map(post => {
-      if(post.timestamp === timestamp) {
+      if (post.timestamp === timestamp) {
         post.likes += 1;
         return post
       }
@@ -66,14 +72,25 @@ class App extends Component {
     this.setState({
       posts: updatedLikes
     })
-}
+  }
 
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostList posts={this.state.posts} addCommentHandler={this.addCommentHandler} addLikeHandler={this.addLikeHandler} />
+        <SearchBar 
+          searchPosts={this.searchPostHandler} 
+          searchText={this.state.searchText}
+        />
+        <PostList 
+          posts={
+            this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts 
+              : this.state.posts
+          } 
+          addCommentHandler={this.addCommentHandler} 
+          addLikeHandler={this.addLikeHandler}
+        />
       </div>
     );
   }

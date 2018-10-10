@@ -12,7 +12,12 @@ const SearchBar = props => (
       <div className="text-logo"></div>
     </div>
     <div className='search'>
-      <input type="text" className="search-input"/>
+      <input 
+        type='text' 
+        className='search-input'
+        placeholder='search' 
+        onKeyUp={props.searchPosts}
+      />
     </div>
     <div className='right-items'>
     <div className='explore'></div>
