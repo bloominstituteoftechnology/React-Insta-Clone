@@ -9,7 +9,9 @@ const Comment = props => {
     </div>
   )
 }
-
+Comment.defaultProps = {
+  comment: []
+}
 Comment.propTypes = {
   comment: PropTypes.shape({
     text: PropTypes.string,

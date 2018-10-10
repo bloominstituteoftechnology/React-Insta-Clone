@@ -26,6 +26,9 @@ class CommentSection extends React.Component {
   }
 }
 
+CommentSection.defaultProps = {
+  comments: []
+}
 CommentSection.proptypes = {
   comments: PropTypes.arrayOf(
     PropTypes.shape({
