@@ -12,7 +12,7 @@ const PostContainer = ({ posts }) => {
     <>
       {posts.map(post => {
         return (
-          <div key={post.username + post.timestamp}>
+          <div className="post" key={post.username + post.timestamp}>
             <PostHeader username={post.username} thumbnail={post.thumbnailUrl} />
             <PostContent image={post.imageUrl} />
             <CommentSection comments={post.comments} likes={post.likes} />

@@ -41,15 +41,15 @@ export default class CommentSection extends Component {
 
   handleClick = e => {
     e.preventDefault();
-    if(this.state.liked) {
+    if(!this.state.liked) {
       this.setState(prevState => ({
-        likes: prevState.likes - 1,
-        liked: false,
+        likes: prevState.likes + 1,
+        liked: true,
       }));
     } else {
       this.setState(prevState => ({
-        likes: prevState.likes + 1,
-        liked: true
+        likes: prevState.likes - 1,
+        liked: false,
       }));
     }
   }

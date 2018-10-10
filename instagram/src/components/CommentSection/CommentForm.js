@@ -10,7 +10,8 @@ const CommentForm = ({ comment, onSubmit, onChange }) => {
         name="comment"
         placeholder="Add a comment..."
         value={comment}
-        onChange={onChange} />
+        onChange={onChange}
+        style={{ border: 'none' }} />
     </form>
   );
 }
