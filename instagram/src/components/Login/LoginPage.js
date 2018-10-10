@@ -9,7 +9,7 @@ class LoginPage extends React.Component {
     };
   }
 
-  login() {
+  login = () => {
     //save username and password to state
     localStorage.setItem("username", this.state.username);
     //change state
@@ -17,7 +17,7 @@ class LoginPage extends React.Component {
       username: "",
       password: ""
     });
-  }
+  };
 
   changeHandler = (key, value) => {
     this.setState({
@@ -33,14 +33,18 @@ class LoginPage extends React.Component {
             type="text"
             className="login-username"
             placeholder="Username"
-            onChange={this.changeHandler("username", event.target.value)}
+            onChange={event =>
+              this.changeHandler("username", event.target.value)
+            }
             value={this.state.username}
           />
           <input
             type="text"
             className="login-password"
             placeholder="Password"
-            onChange={this.changeHandler("password", event.target.value)}
+            onChange={event =>
+              this.changeHandler("password", event.target.value)
+            }
             value={this.state.password}
           />
           <button className="login-button">Login</button>
