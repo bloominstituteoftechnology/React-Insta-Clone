@@ -13,26 +13,16 @@ class CommentSection extends React.Component {
       comments: props.comments,
       images: props.image,
       likes: props.likes,
+      timestamp: props.timestamp,
       text: ""
     };
   }
-  componentDidMount() {
-
-    // if (localStorage.getItem("comments")) {
-    //   this.setState({
-
-    //     comments: JSON.parse(localStorage.getItem("comments"))
-    //   })
-    // }
-  }
-
-  componentWillUnmount() {}
 
   addALike = e => {
     this.setState({ likes: this.state.likes + 1 });
   };
 
-  addNewComment = e => {
+  addNewComment = index => {
     const newPost = {
       username: "iepoch",
       text: this.state.text
@@ -46,7 +36,6 @@ class CommentSection extends React.Component {
       comments,
       text: ""
     });
-    localStorage.setItem("comments", JSON.stringify(comments));
   };
 
   handleChange = (key, value) => {
@@ -71,6 +60,7 @@ class CommentSection extends React.Component {
               user={comment.username}
               comments={comment.text}
               key={index}
+              name={this.state.timestamp}
             />
           );
         })}
@@ -79,14 +69,12 @@ class CommentSection extends React.Component {
         <p className="time-moment">{now}</p>
         <form
           className="form-comment"
-          onSubmit={e => {
-            e.preventDefault();
-            this.addNewComment();
-          }}
+          onSubmit={e => { e.preventDefault(); this.addNewComment();}}
         >
           <FontAwesomeIcon className="more-icon" icon={["fas", "ellipsis-h"]} />
           <input
             className="add-comment"
+            index = {this.state.timestamp}
             value={this.state.text}
             onChange={e => this.handleChange("text", e.target.value)}
             placeholder="Add comment..."
