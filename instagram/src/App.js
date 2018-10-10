@@ -106,9 +106,7 @@ class App extends Component {
         addCommentClickHandler={this.addCommentClickHandler}
         commentText={this.commentText}
         searchTerm={this.searchTerm}
-        />
-        })}
-      
+        />      
       </div>
     );
   }

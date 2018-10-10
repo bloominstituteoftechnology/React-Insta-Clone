@@ -6,10 +6,31 @@ const Authenticate = (App, Login) => {
         constructor(props) {
             super(props);
             this.state = {
-                loggedIn: false,
+                loggedIn: localStorage.getItem('loggedIn'),
+                username: localStorage.getItem('username'),
             };
+
+            this.username = this.state.username;
         }
 
+        updateLocal() {
+            localStorage.setItem('loggedIn', this.state.loggedIn);
+            localStorage.setItem('username', this.state.username)
+        }
+
+        login = event => {
+            event.preventDefault();
+            if (this.username !== '') {
+                this.setState({
+                    username: this.username,
+                    loggedIn: true
+                }, this.updateLocal)
+            }
+        }
+
+        updateUsername = event => {
+            this.username = event.target.value;
+        }
 
         render() {
             if (this.state.loggedIn) {
@@ -22,7 +43,7 @@ const Authenticate = (App, Login) => {
             else {
                 return (
                     <div className='authenticate'>
-                        <Login />
+                        <Login loginUsernameHandler={this.updateUsername} loginHandler={this.login} />
                     </div>
                 )
             }
