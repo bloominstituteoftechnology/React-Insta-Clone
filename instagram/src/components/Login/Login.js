@@ -7,7 +7,8 @@ class Login extends React.Component {
     constructor() {
         super();
         this.state = {
-            usernameInput: ''
+            usernameInput: '',
+            loggedIn: false
         }
     }
 
@@ -25,10 +26,14 @@ class Login extends React.Component {
         e.preventDefault();
         if (localStorage.getItem('username') === null) {
             localStorage.setItem('username', this.state.usernameInput);
+            this.setState({
+                loggedIn: true
+            })
         }
         this.setState({
-            usernameInput: ''
+            usernameInput: '',
         });
+        window.location.reload();
     }
 
     render() {
@@ -51,8 +56,6 @@ class Login extends React.Component {
                         className='login-input' 
                         type='text' 
                         placeholder='Password'
-                        value={this.props.value}
-                        // onChange={this.props.onChange}
                     />
                     <br/>
                     <button className='login-button'>Log in</button>
