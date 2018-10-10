@@ -13,3 +13,12 @@
   font-weight: 500;
   font-size: 12px;
 }
+
+form input[type="text"] {
+  width: 407px;
+  display: inline-block;
+  margin-bottom: 10px;
+  /* background-color: yellow; */
+  padding: 10px;
+  border-bottom: 0;
+}
