@@ -7,8 +7,7 @@ const higherOrderComponent = (WrappedComponent) => class extends React.Component
   constructor(props) {
     super(props);
     this.state = {
-      counter: 0,
-      text: "Hello World!"
+      
     }
   }
 
