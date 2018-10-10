@@ -9,7 +9,7 @@ const SearchHeader = props => {
         <div className="searchHeader">
           <Links logo="" titleLogo="Instagram" />
           <Search          
-          postHandler={props.postHandler}
+          searchPostsHandler={props.searchPostsHandler}
           filterTarget={props.filterTarget}
           />
           <Icons icon="Hello" />
