@@ -39,22 +39,23 @@ class App extends Component {
 }
 
 App.propTypes ={
-  dummyData: PropTypes.shape(
-    {
-      username: PropTypes.string,
-      thumbnailUrl: PropTypes.string,
-      imgUrl: PropTypes.string,
-      likes: PropTypes.number,
-      timestamp: PropTypes.string,
-      comments: PropTypes.shape(
-        {
-          username: PropTypes.string,
-          text: PropTypes.string,
-        }
-      )
-    }
+  dummyData: PropTypes.arrayOf(
+    PropTypes.shape(
+      {
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        imgUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string,
+        comments: PropTypes.shape(
+          {
+            username: PropTypes.string,
+            text: PropTypes.string,
+          }
+        )
+      }
+    )
   )
-  
 }
 
 
