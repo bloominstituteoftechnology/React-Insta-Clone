@@ -24,14 +24,15 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "presets": [
-      "env",
-      "react"
-    ],
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-styled-components": "^1.8.0",
     "plugins": [
       "styled-components"
     ],
-    "babel-cli": "^6.26.0",
-    "babel-plugin-styled-components": "^1.8.0"
+    "presets": [
+      "env",
+      "react"
+    ]
   }
 }

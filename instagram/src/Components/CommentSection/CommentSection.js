@@ -32,8 +32,8 @@ class CommentSection extends Component {
 		return (
 			<CommentSectionWrapper>
 				<Likes likes={this.props.likes} />
-				{this.state.comments.map(comment => (
-					<Comments comment={comment} />
+				{this.state.comments.map((comment,index) => (
+					<Comments key={index} comment={comment} />
 				))}
 				<Input addComment={this.addComment} />
 			</CommentSectionWrapper>
