@@ -3,6 +3,7 @@ import './App.css';
 import SearchBar from './Components/SearchBar/SearchBar';
 import PostContainer from './Components/PostContainer/PostContainer';
 import dummyData from './dummy-data';
+import authRequired from './auth/authRequired';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -16,9 +17,6 @@ class App extends Component {
     setTimeout(() => this.setState({posts: dummyData}), 2000);
   }
 
-  searchPost = (event) => {
-  }
-
   filteredPosts = () => {
     return this.state.posts.filter(post => post.username.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1)
   }
@@ -26,7 +24,7 @@ class App extends Component {
   changeHandler = (event) => {
     event.preventDefault();
     this.setState({[event.target.name]: event.target.value});
-}
+  }
 
   render() {
     return (
@@ -41,4 +39,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default authRequired(App);
