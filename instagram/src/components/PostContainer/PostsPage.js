@@ -1,9 +1,14 @@
 import React from 'react';
+import SearchBar from '../SearchBar/SearchBar.js'
+import PostListContainer from '../PostListContainer/PostListContainer.js'
 
-const PostsPage = () =>{
+const PostsPage = (props) =>{
 
     return (
-        <div></div>
+        <div>
+            <SearchBar searchPosts={props.searchPosts} />
+            <PostListContainer postData={props.postData} addComment={props.addComment} />
+        </div>
     )
 }
 

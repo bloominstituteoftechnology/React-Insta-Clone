@@ -46,7 +46,10 @@ class CommentSection extends Component{
             // debugger;
             this.state.addComment(newCommentObj, this.state.user);
             // commentInputBox.value = '';
-            this.state.newComment = '';
+            // this.state.newComment = '';
+            this.setState({
+                newComment: ''
+            })
         }
     }
 

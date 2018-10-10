@@ -4,7 +4,9 @@ import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import PostListContainer from './components/PostListContainer/PostListContainer.js';
 import PostsPage from './components/PostContainer/PostsPage.js';
+import Authenticate from './components/Authentication/Authenticate.js';
 
+Authenticate(App);
 
 class App extends Component {
 
@@ -58,9 +60,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PostsPage />
-        <SearchBar searchPosts={this.searchPosts}/>
-        <PostListContainer postData={this.state.postData} addComment={this.addComment} />
+        <PostsPage searchPosts={this.searchPosts} postData={this.state.postData} addComment={this.addComment} />
+        {/* <SearchBar searchPosts={this.searchPosts}/>
+        <PostListContainer postData={this.state.postData} addComment={this.addComment} /> */}
       </div>
     );
   }
