@@ -4,25 +4,17 @@ import "./App.css";
 import PostContainer from "./PostContainer/PostContainer";
 import SearchBarContainer from "./SearchBar/SearchBarContainer";
 import dummyData from "./dummy-data";
+import PostPage from './PostContainer/PostPage'
 class App extends Component {
   constructor(props) {
     super();
-    this.state = {
-      data:[]
-    };
   }
-  componentDidMount(){
-    setTimeout(()=>{
-      this.setState({data:dummyData})
-    },2000)
-  }
+
+  
   render() {
     return (
       <div className="App">
-        <SearchBarContainer />
-        {this.state.data.map(post => {
-          return <PostContainer data={post} />;
-        })}
+          <PostPage />
       </div>
     );
   }
