@@ -1,29 +1,33 @@
 import React from 'react';
 import './Login.css';
+import logo from '../img/instagram.png';
 
 const Login = props => {
   return (
     <div className="Login-wrapper">
+
+      <div className="ig-logo">
+        <img src={logo} alt="ig logo" />
+      </div>
+
       <form onSubmit={props.loginSubmit} className="Form-group">
-        <label>Username</label>
         <input
           type="text"
-          placeholder="Enter Username"
+          placeholder="Username"
           value={props.username}
           onChange={props.usernameHandler}
           required
         />
 
-        <label>Password</label>
         <input
           type="password"
-          placeholder="Enter Password"
+          placeholder="Password"
           value={props.password}
           onChange={props.passwordHandler}
           required
         />
 
-        <button onClick={props.loginSubmit} type="submit">Login</button>
+        <button onClick={props.loginSubmit} type="submit">Log in</button>
       </form>
     </div>
   );

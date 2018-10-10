@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './img/instagram.png';
+import logo from '../img/instagram.png';
 import './SearchBar.css';
 
 const SearchBar = props => {
