@@ -1,4 +1,5 @@
 const dummyData = [
+  
   {
     username: "philzcoffee",
     thumbnailUrl:
@@ -24,6 +25,7 @@ const dummyData = [
       }
     ]
   },
+
   {
     username: "fortnite",
     thumbnailUrl:
@@ -55,6 +57,7 @@ const dummyData = [
       }
     ]
   },
+
   {
     username: "playhearthstone",
     thumbnailUrl:

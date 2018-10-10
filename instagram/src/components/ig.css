@@ -1,0 +1,11 @@
+.inputform {
+    width: 300px;
+    height: 50px;
+    border: 2px solid green;
+}
+
+.postCard {
+    width:100%;
+    min-height:300px;
+    border: 2px solid blue;
+}
