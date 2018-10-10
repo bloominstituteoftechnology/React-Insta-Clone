@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
-import './CommentSection.css'
+import { Comment, Text, Username } from './CommentSectionStyles'
 
 class CommentSection extends Component {
   constructor({ comments }) {
@@ -18,10 +17,7 @@ class CommentSection extends Component {
     const { comments, username, newComment } = this.state
 
     this.setState({
-      comments: [
-        ...comments,
-        { username, text: newComment }
-      ],
+      comments: [...comments, { username, text: newComment }],
       newComment: ''
     })
   }
@@ -35,12 +31,12 @@ class CommentSection extends Component {
     const { addNewComment, handleCommentChange } = this
 
     return (
-      <div className="comment-section">
+      <div>
         {comments.map(({ username, text }, i) => (
-          <div key={i} className="comment">
-            <p className="comment-username">{username}</p>
-            <p className="comment-text">{text}</p>
-          </div>
+          <Comment key={i}>
+            <Username>{username}</Username>
+            <Text>{text}</Text>
+          </Comment>
         ))}
         <form onSubmit={addNewComment}>
           <input

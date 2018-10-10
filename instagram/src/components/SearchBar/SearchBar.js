@@ -1,12 +1,11 @@
 import React from 'react'
 import logo from '../../img/glyph-logo_May2016.png'
-
-import './SearchBar.css'
+import { Container, Logo, Text } from './SearchBarStyles'
 
 const SearchBar = ({ searchParam, search, handleSearchInputChange }) => (
-  <div className="search-bar">
-    <img className="logo" src={logo} alt="instagram" />
-    <p>Instagram</p>
+  <Container>
+    <Logo src={logo} alt="instagram" />
+    <Text>Instagram</Text>
     <form onSubmit={search}>
       <input
         type="text"
@@ -15,7 +14,7 @@ const SearchBar = ({ searchParam, search, handleSearchInputChange }) => (
         onChange={handleSearchInputChange}
       />
     </form>
-  </div>
+  </Container>
 )
 
 export default SearchBar

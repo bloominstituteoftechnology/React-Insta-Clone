@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import CommentSection from '../CommentSection/CommentSection'
-
-import './PostContainer.css'
+import {
+  Container,
+  Header,
+  Thumbnail,
+  Username,
+  PostImage,
+  LikesText,
+  Timestamp
+} from './PostContainerStyles'
 
 class PostContainer extends Component {
   constructor({
@@ -55,23 +62,17 @@ class PostContainer extends Component {
     const { addLike } = this
 
     return (
-      <div className="post-container">
-        <div className="post-header">
-          <img
-            className="user-thumbnail"
-            src={thumbnailUrl}
-            alt="user thumbnail"
-          />
-          <p className="username">{username}</p>
-        </div>
+      <Container>
+        <Header>
+          <Thumbnail src={thumbnailUrl} alt="user thumbnail" />
+          <Username>{username}</Username>
+        </Header>
 
-        <img className="post-image" src={imageUrl} alt="post" />
-        <p onClick={addLike} className="likes-text">
-          {likes} likes
-        </p>
+        <PostImage src={imageUrl} alt="post" />
+        <LikesText onClick={addLike}>{likes} likes</LikesText>
         <CommentSection comments={comments} />
-        <p className="timestamp">{timestamp}</p>
-      </div>
+        <Timestamp>{timestamp}</Timestamp>
+      </Container>
     )
   }
 }
