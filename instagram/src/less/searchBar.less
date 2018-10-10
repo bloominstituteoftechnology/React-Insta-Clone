@@ -5,9 +5,10 @@
     align-items: center;
     justify-content: space-between;
     background: white;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid lightgray;
 }
-
-
 
 .searchInput {
     height: 10px;
@@ -29,12 +30,12 @@
 .logoContainer {
     display: flex;
     width: 19%;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 
     .IGWidget {
         background-image: url(../img/instagram-widget.png);
-        width: 28%;
+        width: 19%;
         height: 50px;
         background-position: center;
         background-size: cover;
@@ -44,14 +45,14 @@
 
     .IGLogo {
         background-image: url('../img/instagram-logo.png');
-        width: 100%;
+        width: 45%;
         height: 50px;
         background-position: center;
         background-repeat: no-repeat;
     }
 
     .lineSpacer {
-        border: 0.5px solid lightgrey;
+        border-left: 0.5px solid lightgrey;
         width: 0;
         height: 40px;
         margin-left: 26px;

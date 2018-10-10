@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: space-between;
   background: white;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid lightgray;
 }
 .searchInput {
   height: 10px;
@@ -23,25 +26,25 @@
 .logoContainer {
   display: flex;
   width: 19%;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 .logoContainer .IGWidget {
   background-image: url(../img/instagram-widget.png);
-  width: 28%;
+  width: 19%;
   height: 50px;
   background-position: center;
   background-size: cover;
 }
 .logoContainer .IGLogo {
   background-image: url('../img/instagram-logo.png');
-  width: 100%;
+  width: 45%;
   height: 50px;
   background-position: center;
   background-repeat: no-repeat;
 }
 .logoContainer .lineSpacer {
-  border: 0.5px solid lightgrey;
+  border-left: 0.5px solid lightgrey;
   width: 0;
   height: 40px;
   margin-left: 26px;
@@ -92,32 +95,40 @@ body {
   margin-top: 8px;
   font-weight: bold;
 }
-.postContainerDiv .newCommentDiv {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 96%;
-  margin: 0 auto;
-}
-.postContainerDiv .newCommentDiv .commentInput {
-  border: none;
-  height: 50px;
-  font-weight: bold;
-}
 .postContainerDiv .likes {
   color: #4b4b4b;
   font-weight: bold;
 }
-.postedCommentContainer {
-  width: 96%;
+.commentDiv {
+  width: 100%;
+  margin: 0 2%;
+}
+.commentDiv .postedCommentContainer {
+  width: 100%;
   display: flex;
   margin: 0 auto;
+  text-align: start;
 }
-.postedCommentContainer .userName {
-  font-size: 95%;
+.commentDiv .postedCommentContainer .userName {
+  font-size: 100%;
   margin: 2.5px 1% 2.5px 0;
 }
-.postedCommentContainer .commentText {
-  font-size: 95%;
+.commentDiv .postedCommentContainer .commentText {
+  font-size: 100%;
   margin: 2.5px 0 2.5px 0;
+}
+.commentDiv .newCommentDiv {
+  width: 96%;
+  margin: 0 auto;
+}
+.commentDiv .newCommentDiv .commentInputField {
+  border: none;
+  height: 50px;
+  font-weight: bold;
+}
+.commentDiv .newCommentDiv form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
 }

@@ -1,45 +1,44 @@
 import React from 'react'
-import CommentSection from '../CommentSection/CommentSection'
 import PropTypes from 'prop-types'
+import CommentSection from '../CommentSection/CommentSection'
 
 const PostContainer = props => {
-    const {
-        comments,
-        imageUrl,
-        username,
-        likes,
-        thumbnailUrl,
-        timestamp
-      } = props.postItems;
-
-      let userImageStyle = {
-          backgroundImage: `url(${imageUrl})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover'
-      }
+     
     return (
-        <div className="postContainerDiv">
-            <div className="userHeading">
-                <img className="userImage" src={thumbnailUrl} alt="userlogo"/> 
-                <p>{username}</p>
-            </div>
-        <div style={userImageStyle} className="imageURL"></div>
-            <div className="iconContainer">
-                <i className="far fa-heart"></i>
-                <i className="far fa-comment"></i>
-            </div>
-        <p className="likes">{likes} likes</p>
-            {comments.map((item, index) => {
-                return <CommentSection commentInfo={item} key={index}/>
-            })}
-        <div className="timeStamp">{timestamp}</div>
-                <div className="newCommentDiv">
-                    <input className="commentInput" placeholder="Add a comment..."></input>
-                    <i className="fas fa-ellipsis-h"></i>
+     <div>
+        {props.postItems.map(post => {
+          return (  
+        <div>   
+            <div className="postContainerDiv">
+                <div className="userHeading">
+                    <img className="userImage" src={post.thumbnailUrl} alt="userlogo"/> 
+                    <p>{post.username}</p>
                 </div>
+            
+                <img src={post.imageUrl} alt="usersPostedImage"/>
+
+                <div className="iconContainer">
+                    <i className="far fa-heart"></i>
+                    <i className="far fa-comment"></i>
+                </div>
+            <p className="likes">{post.likes} likes</p>
+            
+            <CommentSection commentInfo={post.comments} key={Math.random()}/>
+                
+            <div className="timeStamp">{post.timestamp}</div>
+ 
+            </div>
         </div>
+        ) 
+    })}
+       
+
+
+    </div>
     )
 }
+
+
 
 PostContainer.propTypes = {
     comments: PropTypes.shape({
