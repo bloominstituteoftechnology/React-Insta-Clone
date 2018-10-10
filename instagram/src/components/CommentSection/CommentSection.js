@@ -10,7 +10,7 @@ class CommentSection extends React.Component {
 
     this.state = {
 
-      comments: this.props.comments,
+      // comments: this.props.comments,
       commentText: '',
       container : 0
       
@@ -24,7 +24,9 @@ class CommentSection extends React.Component {
 
   }
   addNewComment = (e) => {
-    this.e.preventDefault();
+    console.log(e.isDefaultPrevented());
+   e.preventDefault();
+   console.log(e.isDefaultPrevented());
     const text = e.target.children[0].value;
     const comments = this.state.comments;
     const username = this.state.username;
@@ -36,15 +38,18 @@ class CommentSection extends React.Component {
     })
   }
   onChange = (e) => {
-    this.e.preventDefault();
+    console.log(e.isDefaultPrevented());
+    e.preventDefault();
+    console.log(e.isDefaultPrevented());
     this.setState({
       commentText : e.target.value
     })
+    
   }
   render() {
     return (
       <section className='comments'>
-          {this.state.comments.map((comment, index) => {
+          {this.props.comments.map((comment, index) => {
             return (
               <section className='comment' key={Math.random()} id={index}>
                 <p>

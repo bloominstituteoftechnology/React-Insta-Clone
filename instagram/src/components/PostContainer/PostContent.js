@@ -5,19 +5,21 @@ import propTypes from 'prop-types';
 
 
 
- const PostContent = (props) => {
+class PostContent extends React.Component {
 
-  return (
-
-    <section className='post-content'>
-      <PostIcons likes={props.likes}/>
-      <CommentSection comments={props.comments} onSubmit={props.onSubmit} commentText={props.commentText} onChange={props.onChange} close={props.close}/>
-    </section>
-  );
-}
-PostContent.propTypes = {
-    likes: propTypes.number,
-    comments: propTypes.array
+  render() {
+    return (
+      <section className='post-content'>
+        <PostIcons likes={this.props.likes}/>
+      <CommentSection comments={this.props.comments} onSubmit={this.props.onSubmit} commentText={this.props.commentText} onChange={this.props.onChange} close={this.props.close}/>
+      </section>
+    );
   }
-  
- export default PostContent;
+}
+
+PostContent.propTypes = {
+  likes: propTypes.number,
+  comments: propTypes.array
+}
+
+export default PostContent;

@@ -26,9 +26,16 @@ const Authenticate = (PassedComponent) =>
             }
           }
           componentDidMount() {
+            if(localStorage.getItem('loggedIn') === null) {
+                this.setState({
+                  loggedIn: false
+                })
+              }
+              else {
             this.setState({
               loggedIn: JSON.parse(localStorage.getItem('loggedIn'))
             })
+            }
           }//end comp did mount
 
            login = (e) => {

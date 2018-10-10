@@ -24,17 +24,18 @@ class PostContainer extends React.Component {
         id: id,
         user: this.props.data,
         comments: comments,
-        username: 'hsmith430',
+        username: '',
         commentText: ''
       }
     }
     componentDidMount() {
       this.setState({
-        user: this.props.data
+        user: this.props.data,
+        username: localStorage.getItem('username')
       })
     }
     addNewComment = (e) => {
-      // e.preventDefault();
+      e.preventDefault();
       const text = e.target.children[0].value;
       const comments = this.state.comments;
       const username = this.state.username;
