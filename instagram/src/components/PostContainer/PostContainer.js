@@ -4,7 +4,7 @@ import CommentButton from './CommentButton';
 import LikeButton from '../SearchBar/LikeButton';
 import './postcontainer.css';
 import PropTypes from "prop-types";
-import dummyData from './dummy-data';
+// import dummyData from './dummy-data';
 
 class PostContainer extends Component {
     constructor(){
@@ -18,7 +18,7 @@ class PostContainer extends Component {
 
       return (
         <div className = "postBody">
-        {dummyData.map((post, index) => {
+        {this.props.posts.map((post, index) => {
             return(<div key={index}>
                 <div className = "profileHead">
                     <img className = "profilePick" alt="''" src={post.thumbnailUrl} ></img>

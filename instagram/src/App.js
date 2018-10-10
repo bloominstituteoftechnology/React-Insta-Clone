@@ -21,11 +21,12 @@ class App extends Component {
 
   searchHandler = (event) => {
     event.preventDefault();
-
+    // console.log(event.target.value, event.keyCode)
     if ( event.keyCode === 13 && event.target.value.length > 0 ) {
           let newData = this.state.posts.filter( (posts) => {
             return posts.username === event.target.value;
           })
+          // console.log(newData)
           this.setState({ posts: newData });
           event.target.value = "";
         }
@@ -34,6 +35,7 @@ class App extends Component {
   
 
   render() {
+    // console.log(this.state)
     return (
       <div className="App">
         <SearchBar searchHandler = {this.searchHandler} />

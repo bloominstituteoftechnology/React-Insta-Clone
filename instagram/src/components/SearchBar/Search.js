@@ -5,7 +5,7 @@ import './searchbar.css';
 const Search = (props) => {
 
     return (
-        <input type="search" placeholder = " Search... " onKeyDown = {props.searchHandler} />
+        <input type="search" placeholder = " Search... " onKeyUp = {props.searchHandler} />
     )
 }
 
