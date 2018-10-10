@@ -25,9 +25,16 @@ const Authentication = (WrappedComponent) => class extends Component {
     }
   }
   componentDidMount() {
+    if(localStorage.getItem('loggedIn') === null) {
+      this.setState({
+        loggedIn: false
+      })
+    }
+    else {
     this.setState({
       loggedIn: JSON.parse(localStorage.getItem('loggedIn'))
     })
+  }
   }
 
   login = (e) => {

@@ -15,13 +15,14 @@ class PostContainer extends Component {
       id: id,
       user: this.props.data,
       comments: comments,
-      username: 'BigBen102912',
+      username: '',
       commentText: ''
     }
   }
   componentDidMount() {
     this.setState({
-      user: this.props.data
+      user: this.props.data,
+      username: localStorage.getItem('username')
     })
   }
   addNewComment = (e) => {
@@ -45,13 +46,11 @@ class PostContainer extends Component {
 
   close = (e) => {
     const comments = Object.assign([],this.state.comments);
-    console.log(e.target.parentNode.id)
     comments.splice(e.target.parentNode.id, 1)
     localStorage.setItem(this.state.id, JSON.stringify(comments));
-    console.log(comments)
     this.setState({
       comments: comments
-    })
+    });
   }
 
   render() {

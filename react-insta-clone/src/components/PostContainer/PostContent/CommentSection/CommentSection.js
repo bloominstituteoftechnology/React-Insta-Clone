@@ -8,21 +8,16 @@ class CommentSection extends Component {
     super(props);
 
     this.state = {
-      comments: this.props.comments,
       commentText: '',
       container : 0
     }
   }
-  componentDidMount() {
-    this.setState({
-      comments: this.props.comments
-    })
-  }
 
   render() {
+    console.log(this.props.comments)
     return (
       <section className='comments'>
-          {this.state.comments.map((comment, index) => {
+          {this.props.comments.map((comment, index) => {
             return (
               <section className='comment' key={Math.random()} id={index}>
                 <p>
