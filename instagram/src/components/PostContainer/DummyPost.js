@@ -3,7 +3,7 @@ import React from "react";
 import "./PostContainer.css";
 import { Heart, Bookmark, Message, Share } from "../../assets/assets";
 
-
+ 
 const DummyPost = () =>{
 
     return (
