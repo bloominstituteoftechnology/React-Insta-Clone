@@ -1,0 +1,9 @@
+.comment {
+    margin: 2px 15px;
+}
+
+.CommentSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
