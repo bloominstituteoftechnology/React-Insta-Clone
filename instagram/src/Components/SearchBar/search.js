@@ -10,13 +10,24 @@ const Search = props =>{
             </div>
 
             <div className="middle">
-                <input className="search-box" placeholder="search"></input>
+                <input 
+                    className="search-box" 
+                    placeholder="search"
+                    value={props.text}
+                    onChange={props.input}
+                    onKeyDown={(event) => {
+                        if (event.keyCode === 13) {
+                            props.search(props.text)
+                        }
+                    }} 
+                >
+                </input>
             </div>
 
             <div className="right">
-                <i class="far fa-compass fa-2x"></i>
-                <i class="far fa-heart fa-2x"></i>
-                <i class="fas fa-user fa-2x"></i>
+                <i className="far fa-compass fa-2x"></i>
+                <i className="far fa-heart fa-2x"></i>
+                <i className="fas fa-user fa-2x"></i>
             </div>
         </div>
     )
