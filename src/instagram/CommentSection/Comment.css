@@ -1,0 +1,12 @@
+.Comment-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.Comment-nickname {
+  text-weight: bold;
+}
+
+.Comment-text {
+  padding-left: 10px;
+}
