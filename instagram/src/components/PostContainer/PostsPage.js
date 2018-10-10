@@ -11,7 +11,9 @@ const PostsPage = (props) => {
 
     return (
         <div>
-            <SearchBar searchInput={props.searchInput} filter={props.searchInputHandler}/>
+            <SearchBar searchInput={props.searchInput} 
+                       filter={props.searchInputHandler}
+                       logOut={props.logOut}/>
       <div className="container">
         
         {props.filteredList.length > 0 ? props.filteredList.map(post => {return <PostContainer dummyData={post}/> }) : 

@@ -30,7 +30,7 @@ const SearchBar = (props) => {
         <div className='icon-div'>
         <FontAwesomeIcon className="icon" icon="compass" />
         <FontAwesomeIcon icon="heart" />
-        <FontAwesomeIcon icon="user-circle" />
+        <FontAwesomeIcon icon="user-circle" onClick={props.logOut}/>
         </div>
         
         </div>

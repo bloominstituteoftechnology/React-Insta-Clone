@@ -12,6 +12,7 @@ class extends React.Component {
 
         this.login = this.login.bind(this);
         this.inputHandler = this.inputHandler.bind(this);
+        this.logOut = this.logOut.bind(this);
     }
 
     login(event){
@@ -23,6 +24,10 @@ class extends React.Component {
             this.setState({loggedIn: true});
         }
         
+      }
+
+      logOut(){
+            window.localStorage.removeItem('loggedIn');
       }
 
       inputHandler(event){
@@ -41,6 +46,9 @@ class extends React.Component {
         if (loggedIn){
             let usernameCheck = window.localStorage.getItem('username');
             this.setState({loggedIn: true, currentUser: usernameCheck});
+        }
+        else {
+            this.setState({loggedIn: false, currentUser: ''});
         } 
         
             
@@ -50,7 +58,7 @@ class extends React.Component {
     render(){
         return (
         <div>
-        {window.localStorage.getItem('loggedIn') ? <App /> : <Login login={this.login} onKeyDown={this.inputHandler}/>}
+        {window.localStorage.getItem('loggedIn') ? <App username={this.state.username} logOut={this.logOut} /> : <Login login={this.login} onKeyDown={this.inputHandler}/>}
         </div>
             
             )

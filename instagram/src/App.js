@@ -26,7 +26,7 @@ class App extends Component {
       dummyData: [],
       searchInput: '',
       filteredList: [],
-      username: '',
+      username: this.props.username,
       loggedIn: false
     }
 
@@ -47,8 +47,8 @@ class App extends Component {
   }
 
   inputHandler(event){
-    let username = 'JoeSCMHOE126';  
-    
+      
+    let username = this.state.username;
     this.setState({
         commentInput: {
             text: event.target.value,
@@ -79,7 +79,8 @@ class App extends Component {
            filter={this.searchInputHandler}
            filteredList={this.state.filteredList}
            dummyData={this.state.dummyData}
-/>
+           logOut={this.props.logOut}
+      />
 
 
       </div>
