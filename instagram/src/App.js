@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
-
+import PostsPage from './components/PostContainer/PostsPage';
 import dummyData from './dummy-data';
 
 export default class App extends Component {
@@ -27,8 +25,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="app-container">
-        <SearchBar onChange={this.filterPosts} />
-        <PostContainer posts={this.state.posts} />
+        <PostsPage onChange={this.filterPosts} posts={this.state.posts}/>
       </div>
     );
   }
