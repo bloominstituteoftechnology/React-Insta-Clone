@@ -7,4 +7,4 @@ const Authenticate = App =>
     }
   };
 
-  export default Authenticate;
+export default Authenticate;
