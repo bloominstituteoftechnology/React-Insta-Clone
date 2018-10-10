@@ -1,4 +1,5 @@
 import React from "react";
+import LogIn from "../Login/Login";
 
 // This component should be able to take in a component as an argument,
 // and it will return a class component.
@@ -12,8 +13,16 @@ const Authenticate = App =>
       };
     }
 
+    componentDidMount() {
+      if (!localStorage.getItem("user")) {
+        this.setState({ loggedIn: false });
+      } else {
+        this.setState({ loggedIn: true });
+      }
+    }
     render() {
-      return <App />;
+      if (this.state.loggedIn) return <App />;
+      return <LogIn />;
     }
   };
 
