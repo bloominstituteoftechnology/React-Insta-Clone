@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import './App.css';
-import PostsPage from './components/PostsPage';
-import SearchBar from './components/SearchBar';
+import PostsPage from './components/Posts/PostsPage';
+import SearchBar from './components/Search/SearchBar';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
