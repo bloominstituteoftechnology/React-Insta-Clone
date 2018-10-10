@@ -7,7 +7,8 @@ class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.comments
+      comments: props.comments,
+      comment: " "
     };
   }
 
@@ -33,6 +34,10 @@ class CommentSection extends React.Component {
     );
   };
 
+  commentHandler = event => {
+    this.setState({ comment: event.target.value });
+  };
+
   handleCommentSubmit = event => {
     event.preventDefault();
     const newComment = { text: this.state.comment, username: "AgentSmith" };
@@ -50,13 +55,17 @@ class CommentSection extends React.Component {
         {this.state.comments.map((comment, input) => (
           <Comment key={input} comment={comment} />
         ))}
-        <CommentInput />
+        <CommentInput
+          comment={this.state.comment}
+          submitComment={this.handleCommentSubmit}
+          changeComment={this.commentHandler}
+        />
       </div>
     );
   }
 }
 
-CommentSection.PropTypes = {
+CommentSection.propTypes = {
   comments: PropTypes.arrayOf(
     PropTypes.shape({ text: PropTypes.string, username: PropTypes.sting })
   )
