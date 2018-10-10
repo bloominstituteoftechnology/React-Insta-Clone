@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 import dummyData from './dummy-data';
+import PostsPage from './components/PostContainer/PostsPage';
 
 
 
