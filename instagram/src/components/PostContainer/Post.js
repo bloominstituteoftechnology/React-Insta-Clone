@@ -1,6 +1,8 @@
 import React from "react";
 import "../../../src/index.css";
 
+import "./PostContainer.css";
+
 const Post = props => {
     return (
         <div className="images">

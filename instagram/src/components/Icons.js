@@ -1,5 +1,8 @@
 import React from "react";
-import "../../src/App.styl";
+import "../App.css";
+import "../components/CommentSection/CommentSection.css";
+import "../components/PostContainer/PostContainer.css";
+import "../components/SearchBar/SearchBar.css";
 
 const Icons = props => {
     return (

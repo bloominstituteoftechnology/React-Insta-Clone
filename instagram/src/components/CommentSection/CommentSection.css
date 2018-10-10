@@ -1,0 +1,66 @@
+.username {
+    align-self: center;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  .top {
+    display: flex;
+    width: 90%;
+  }
+  .comments-container {
+    width: 80%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .icons {
+    width: 80%;
+    margin: 10px 75px;
+    display: flex;
+  }
+  .comments {
+    margin: 10px 10px 0;
+  }
+  .likes {
+    width: 80%;
+    margin: 10px 90px;
+    display: flex;
+    font-weight: bold;
+  }
+  .icons-small {
+    width: 13%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .input-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  input {
+    border: none;
+    font-size: 16px;
+  }
+  .time {
+    width: 80%;
+    margin: 0 83px;
+    text-align: left;
+    margin-top: 5px;
+    padding: 10px;
+    color: #a9a9a9;
+    font-size: 12px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #d3d3d3;
+  }
+  

@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.thumbnail {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  align-self: flex-start;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.images {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  margin: 0 auto;
+  
+}
+
+.line {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+i {
+  margin: 0 10px;
+  cursor: pointer;
+}

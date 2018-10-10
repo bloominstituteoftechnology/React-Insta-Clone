@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../App.css";
+
 const Input = props => {
     return (
         <form onSubmit={props.add}>

@@ -4,6 +4,8 @@ import CommentSection from "../CommentSection/CommentSection";
 import Post from "../PostContainer/Post";
 import Icons from "../Icons";
 
+import "./PostContainer.css";
+
 const PostContainer = props => {
  
   return (
