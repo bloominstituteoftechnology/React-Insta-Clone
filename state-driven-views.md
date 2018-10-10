@@ -1,0 +1,11 @@
+Read [this article](https://dev.to/nimmo/state-driven-development-for-user-interfaces-part-1-an-introduction-27f1)  about 'State Driven Views' and come up with a short paragraph as to why you feel that state-driven views are important to us as software developers today? What are state-driven applications? Why are they powerful? How does React enables those patterns?
+
+As the paradigm of User Interface design shifts more towards component-based architecture, utilization of state-driven views helps to simplify the data-flows of applications, which becomes increasingly important at scale when multiple developers are working on application maintenance for thousands or potentially millions of users.
+
+State-driven applications orient themselves around conditional state, making applications reactive to various state declarations that give greater complexity and functionality than static applications, as well as faster runtime and lower resource usage than traditional dynamic applications. For example, allowing various states for different 'levels' of users (e.g. guest, free user, premium user, moderator, administrator) permits the increased functionality of user permissions without necessitating multiple instances of an application for each hierarchy. By utilizing conditional state in state-driven applications, we can more easily manage feature additions, account upgrades, and content moderation.
+
+React enables this pattern of state-driven applications by allowing us to compartmentalize various features into their own components. The passing of data to and from these components allows us to render state conditionally in response to user input, external APIs, and database queries. This creates a 'living' application that is able to update and manage itself in real time, and even allows the automation of tasks traditionally found in Content Management Systems. 
+
+The replicability of components also prevents development fatigue, allowing developers to build simple architectures that can be recycled and modified as needed without beginning from scratch.
+
+In this way, state-driven applications allow for greater velocity of iteration, which accelerates innovation and evolution, while at the same time making development more concise and specific.

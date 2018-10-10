@@ -1,0 +1,23 @@
+
+.comment-input {
+    width: 100%;
+    padding: 20px 0px;
+    border: none;
+    border-top: 1px solid lightgray;
+    outline: none;
+}
+
+.comment-icon {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.like-icon-true {
+    color: red;
+    cursor: pointer;
+}
+
+.like-icon-false {
+    color: black;
+    cursor: pointer;
+}
