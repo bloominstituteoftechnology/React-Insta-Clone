@@ -13,6 +13,12 @@ class App extends Component {
     }
   }
 
+  componentDidMount() {
+    if(localStorage.getItem('username') === null) {
+      localStorage.setItem('username', '');
+    }
+  }
+
   login = event => {
     localStorage.setItem('username', this.state.username)
   }
