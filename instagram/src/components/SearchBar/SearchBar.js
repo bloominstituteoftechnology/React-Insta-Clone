@@ -42,11 +42,11 @@ class SearchBar extends Component {
 
 
     render() {
-        let filteredUsers = this.props.comments.filter(
-            (user) => {
-                return user.username.indexOf(this.state.search) !== -1;
-            }
-        )
+        // let filteredUsers = this.props.comments.filter(
+        //     (user) => {
+        //         return user.username.indexOf(this.state.search) !== -1;
+        //     }
+        // )
     return (
         <Navbar>
 
@@ -60,11 +60,11 @@ class SearchBar extends Component {
                 onKeyDown={this.enterHandler}
                 />
             </form>
-            <li>
+            {/* <li>
                 {filteredUsers.map((user) => {
                     return <dummyData username={user} key = {user.id} />
                 })}
-            </li> 
+            </li>  */}
             <i class="far fa-compass fa-2x lt"></i>
             <i class="far fa-heart fa-2x lt"></i>
             <i class="far fa-user fa-2x lt"></i>
