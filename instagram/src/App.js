@@ -10,7 +10,8 @@ class App extends Component {
     super();
     this.state = {
       data: [],
-      commentInput: ''
+      commentInput: '',
+      searchText: ''
     }
   }
 
@@ -20,6 +21,10 @@ class App extends Component {
 
   commentInputHandler = (event) => {
     this.setState({commentInput: event.target.value})
+  }
+
+  searchBarHandler = event => {
+    this.setState({searchText: event.target.value})
   }
 
   addNewComment = (event) => {
@@ -38,7 +43,7 @@ class App extends Component {
 
     this.setState({
       data: newData,
-      commentInput: ''
+      commentInput: '',
     })
   }
 
@@ -58,10 +63,22 @@ class App extends Component {
     })
   }
 
+  search = event => {
+    event.preventDefault();
+    const newData = this.state.data.filter(post => {
+      return post.username.includes(this.state.searchText)
+      
+    })
+
+    this.setState({data: newData})
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar search={this.search} 
+                    searchBarHandler={this.searchBarHandler}
+                    searchText={this.state.searchText}/>
         {this.state.data.map(post => {
           return <div className='post' key={post.timestamp}>
             <PostContainer postData={post} 

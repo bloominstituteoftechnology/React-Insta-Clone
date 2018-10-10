@@ -17,12 +17,9 @@ function PostContainer(props) {
             </div>
                 <div className='likeNumber'>{props.postData.likes} likes</div>
             <div className='likes'></div>
-
-
             <CommentSection postComments={props.postData.comments} />
-
-
             <div className='timestamp'>{props.postData.timestamp}</div>
+
             <form onSubmit={props.addNewComment} id={props.postData.timestamp}>
                 <input placeholder='Add a comment...' 
                         value={props.commentInput} 
