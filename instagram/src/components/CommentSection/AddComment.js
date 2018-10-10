@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 const AddComment = props => {
     return (
@@ -17,10 +17,10 @@ const AddComment = props => {
     );
 }
 
-AddComment.propTypes = {
-    post: PropTypes.shape({
-      timestamp: PropTypes.string.isRequired
-    })
-  };
+// AddComment.propTypes = {
+//     post: PropTypes.shape({
+//         timestamp: PropTypes.string.isRequired
+//     })
+//   };
 
 export default AddComment;

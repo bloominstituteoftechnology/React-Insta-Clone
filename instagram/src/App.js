@@ -5,6 +5,7 @@ import dummyData from "./dummy-data.js";
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import './App.css';
 let data = dummyData;
+
 class App extends Component {
   constructor(props) {
     super(props);

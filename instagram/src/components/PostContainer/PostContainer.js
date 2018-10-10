@@ -9,7 +9,7 @@ const PostContainer = props => {
     return (
         props.posts.map(post => {
             return (
-                <div>
+                <div key={post.timestamp}>
                     <PostContent 
                     post={post}
                     addLikes={props.addLikes} 

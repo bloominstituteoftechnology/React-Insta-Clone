@@ -6,7 +6,7 @@ const CommentContent = props => {
     return (
         props.comments.map(comment => {
             return (
-                <div className="comment-content">
+                <div className="comment-content" key={Math.random()}>
                     <p>{comment.username}</p>
                     <p>{comment.text}</p>
                 </div>
