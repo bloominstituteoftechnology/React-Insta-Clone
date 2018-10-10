@@ -2,31 +2,48 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 
-const Post = props => {
-console.log(props.post);
+
+class Post extends React.Component {
+    constructor(props) {
+      super(props);
+        this.state = {
+            post : props.post,
+            likes: props.post.likes,
+        }
+
+    }
+
+    increaseLikes = () => {
+console.log("increase");
+        this.setState(prevState => {
+            return {likes: prevState.likes + 1};
+          })
+    }
+
+
+    render(){
     return(
     
         <div className='post'>
     
             <div className='header'>
-                 <img src={props.post.thumbnailUrl}></img>
-                <h3>{props.post.username}</h3>
+                 <img src={this.state.post.thumbnailUrl} alt="User thumbNail"></img>
+                <h3>{this.state.post.username}</h3>
             </div>
-            <img src={props.post.imageUrl}></img>
+            <img src={this.state.post.imageUrl} alt="Posting Image" onClick={this.increaseLikes}></img>
             <div className='emoji'>
-             <i className="far fa-heart" ></i>
+             <i  className="far fa-heart" onClick={this.increaseLikes}></i>
              <i className="far fa-comment"></i>
             </div>
-            <p>{props.post.likes} likes</p>
-            
-            <CommentSection index={props.index} comments={props.post.comments}
-            newComment={props.newComment}  onCommentChange={props.onCommentChange} 
-            addNewComment={props.addNewComment}/>
+            <p onClick={this.increaseLikes}>{this.state.likes} likes</p>
+
+            <CommentSection  comments={this.state.post.comments}/>
                   
             
         </div>
 
     );
+    }
 }
 
 Post.propTypes = {

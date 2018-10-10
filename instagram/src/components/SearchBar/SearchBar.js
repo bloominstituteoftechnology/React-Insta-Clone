@@ -15,10 +15,10 @@ const SearchBar = props => {
                 onChange={props.onInputChange} placeholder="Search"/>
            
             <div className='icons'>
-                <i class="far fa-compass"></i>
+                <i className="far fa-compass"></i>
                 <i className="far fa-heart" ></i>
     
-                <i class="far fa-user"></i>
+                <i className="far fa-user"></i>
              </div>
         </div>
 
