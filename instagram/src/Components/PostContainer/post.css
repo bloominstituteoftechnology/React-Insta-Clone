@@ -9,6 +9,9 @@
     margin: 1% 0;
 }
 
+.like {
+    cursor: pointer;
+}
 .likes {
     margin: 5px;
     padding-left: 10px;

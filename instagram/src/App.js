@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import PostContainer from './Components/PostContainer/PostContainer';
 import Header from './Components/SearchBar/Header';
+import PostsPage from './Components/PostContainer/PostsPage';
 
 /* Come back to this later.
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -90,24 +91,16 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <Header changeSearchTerm={this.changeSearchTerm} />
-        {this.state.data.map(data => {
-          return (
-            <PostContainer 
-            likeClickHandler={this.likeClickHandler}
-            username={data.username} 
-            thumbnailUrl={data.thumbnailUrl}
-            imageUrl={data.imageUrl}
-            likes={data.likes}
-            comments={data.comments}
-            timestamp={data.timestamp}
-            clickHandler={this.likeClickHandler}
-            commentTextOnChange={this.commentTextOnChange}
-            addCommentClickHandler={this.addCommentClickHandler}
-            commentText={this.commentText}
-            searchTerm={this.searchTerm}
-            />
-          )
+        <PostsPage 
+        changeSearchTerm={this.changeSearchTerm}
+        likeClickHandler={this.likeClickHandler}
+        data={this.state.data}
+        clickHandler={this.clickHandler}
+        commentTextOnChange={this.commentTextOnChange}
+        addCommentClickHandler={this.addCommentClickHandler}
+        commentText={this.commentText}
+        searchTerm={this.searchTerm}
+        />
         })}
       
       </div>
