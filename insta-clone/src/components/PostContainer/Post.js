@@ -21,14 +21,8 @@ const Post = props => {
           <div className="likeCount">{props.postdata.likes} likes</div>
         </div>
         <CommentSection
-          comments={props.postdata.comments}
-          timestamp={props.postdata.timestamp}
-          username={props.username}
-          changeHandler={props.changeHandler}
-          newComment={props.newComment}
-          addComment={props.addComment}
-          postIndex={props.postIndex}
-          addLike={props.addLike}
+          {...props}
+          {...props.postdata}
         />
       </div>;
 }

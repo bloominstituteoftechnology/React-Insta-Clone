@@ -12,7 +12,7 @@ function NewComment(props) {
                 onChange={props.changeHandler}
             />
         </form>
-        <button onClick={props.addComment}>&#xb7;&#xb7;&#xb7;</button>
+        <button onClick={(event) => {props.addComment(event, props.postIndex)}}>&#xb7;&#xb7;&#xb7;</button>
       </div>;
 }
 
