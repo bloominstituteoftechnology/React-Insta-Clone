@@ -1,25 +1,50 @@
-import React, { Component } from 'react';
-
+import React from 'react';
 import './App.css';
+import dummyData from './dummy-data';
+import PostContainer from '../src/components/PostContainer/PostContainer';
+import SearchBar from './components/SearchBar/SearchBar'
 
-class App extends Component {
+document.body.classList.add('background-snow');
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state= { 
+      posts: [],
+      postFilter: [],
+    };
+  }
+
+  componentDidMount() {
+    console.log('CDM is running', this.state.posts);
+    setTimeout(() => {
+      this.setState({
+        posts: dummyData,
+      });
+    }, 800);
+  }
+
+  handleFilter = search => {
+    const postFilter = this.state.posts.filter(item => item.username.includes(search))
+    this.setState({
+      postFilter
+    })
+  }
+
+
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+      <div>
+      <SearchBar
+      posts={this.state.posts}
+      handleFilter={this.handleFilter}
+      />
 
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+    <PostContainer posts={this.state.postFilter.length > 0 ? this.state.postFilter : this.state.posts}/> 
+
+      </div>
       </div>
     );
   }
