@@ -2,7 +2,7 @@ import React from "react";
 import Comment from "./Comment";
 import "./CommentSection.css";
 import PropTypes from "prop-types";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as moment from "moment";
 
 let now = moment().fromNow();
@@ -16,46 +16,44 @@ class CommentSection extends React.Component {
       text: ""
     };
   }
-  componentDidMount () { 
-   const post = JSON.parse(localStorage.getItem("comments"))
-   this.setState({
-     comments: post
-   })
+  componentDidMount() {
+
+    // if (localStorage.getItem("comments")) {
+    //   this.setState({
+
+    //     comments: JSON.parse(localStorage.getItem("comments"))
+    //   })
+    // }
   }
+
+  componentWillUnmount() {}
 
   addALike = e => {
     this.setState({ likes: this.state.likes + 1 });
   };
 
   addNewComment = e => {
-   
-  const newPost = {
-     username: 'iepoch',
-     text: this.state.text
-   }
+    const newPost = {
+      username: "iepoch",
+      text: this.state.text
+    };
 
-   const comments = [...this.state.comments]
+    const comments = [...this.state.comments];
 
-   comments.push(newPost)
+    comments.push(newPost);
 
-   this.setState({
-     comments, 
-     text: "",
-     username: ""
-   })
-   
-  localStorage.setItem("comments", JSON.stringify(comments))
-  localStorage.setItem("newPost", "")
+    this.setState({
+      comments,
+      text: ""
+    });
+    localStorage.setItem("comments", JSON.stringify(comments));
   };
 
   handleChange = (key, value) => {
-    this.setState({[key] : value});
-
+    this.setState({ [key]: value });
   };
 
-
   render() {
-
     return (
       // Created comment section for each post
       <div className="comment-section">
@@ -79,7 +77,13 @@ class CommentSection extends React.Component {
 
         {/* The footer of each post will have a time associated with the */}
         <p className="time-moment">{now}</p>
-        <form className="form-comment" onSubmit={e => {e.preventDefault(); this.addNewComment()}}>
+        <form
+          className="form-comment"
+          onSubmit={e => {
+            e.preventDefault();
+            this.addNewComment();
+          }}
+        >
           <FontAwesomeIcon className="more-icon" icon={["fas", "ellipsis-h"]} />
           <input
             className="add-comment"
