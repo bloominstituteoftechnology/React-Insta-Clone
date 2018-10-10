@@ -8,6 +8,7 @@ import PostContainer from './components/PostContainer/PostContainer';
 class App extends Component {
   state = {
     posts: [],
+    searchQuery: '',
   };
 
   componentDidMount() {
@@ -34,9 +35,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar
+          search={this.search}
+          changeHandler={this.changeHandler}
+          text={this.state.searchQuery}
+        />
         {dummyData.map((post) => {
-          return <PostContainer post={post} key={post.timestamp} />;
+          return (
+            <PostContainer
+              post={post}
+              addLike={this.addLike}
+              key={post.timestamp}
+            />
+          );
         })}
       </div>
     );
