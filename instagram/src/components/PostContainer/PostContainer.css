@@ -1,0 +1,31 @@
+.container {
+  padding: 0 30vw;
+}
+
+.post {
+  border: 2px solid #000;
+}
+
+.post__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  padding: 10px 20px;
+}
+
+.post__header--avatar {
+  border-radius: 50px;
+}
+
+.post__header--username {
+  margin-left: 15px;
+}
+
+.post__content {
+  width: 100%;
+}
+
+.post__content--img {
+  width: 100%;
+}

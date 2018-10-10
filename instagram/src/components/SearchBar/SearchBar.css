@@ -1,0 +1,16 @@
+.searchBarContainer {
+  border: 10px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 50px;
+}
+
+.searchBarContainer .searchBar {
+  width: 400px;
+  height: 40px;
+  background: #FAFAFA;
+  text-align: center;
+  font-size: 18px;
+}

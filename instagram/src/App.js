@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {dummyData} from '../dummy-data';
+// import './App.css';
+import PostContainer from './components/PostContainer/PostContainer'
+import SearchBar from './components/SearchBar/SearchBar';
+import DummyData from '../src/dummy-data';
 
-const dummy = props => { 
-  return <h1>bruh</h1>
-}
+console.log(DummyData);
 
 // const CharacterList = (props) => {
 //   return (
@@ -23,28 +22,20 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      posts: 
-    }
+      posts: [],
+      users: DummyData
+    };
   }
   
   
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        {this.state.users.map(user => (
+          <div>{user.username}</div>
+        ))}
+        <SearchBar />
+        <PostContainer />
       </div>
     );
   }
