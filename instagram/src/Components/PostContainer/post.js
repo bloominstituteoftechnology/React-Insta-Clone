@@ -18,9 +18,7 @@ const Post = (props) => {
                     postId={props.post.username}
                     comment={props.post.comments} 
                     likes={props.post.likes} 
-                    input={props.input}
                     text={props.text}
-                    // add={props.add}
                     time={props.post.timestamp}
                     increment={props.increment}
                 />

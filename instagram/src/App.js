@@ -23,49 +23,12 @@ class App extends Component {
     }, 500)
   }
 
-  //tracks user input for the comment section and search bar
+  //tracks user input search bar
   handleInput = (event) => {
     this.setState({input: event.target.value})
   }
 
-  /*adds comment to any post
-  if the username of the current post matches the comment box we are adding the comment to, the new comment is pushed as an addition to the comment section. Otherwise the orginal post is returned
-  */
-  // addNewComment = (event, postID) => {
-  //   console.log(event)
-  //   event.preventDefault()
-  //   let data = {
-  //     username: "hotdamnirock",
-  //     text: this.state.input,
-  //   }
-  //   this.setState({
-  //     input: "",
-  //     instagram: this.state.instagram.map(post => {
-  //       if(postID === post.username){
-  //         alert("New comment!")
-  //         post.comments.push(data)
-  //       }
-  //       alert("not found")
-  //       return post
-  //     })
-  //   })
-  // }
-
-  /*increases likes for heart click
-  if the username on the current post matches the username of the heart we are clicking the number of likes increases
-  */
-  increment = (postID) => {
-    this.setState({
-      instagram: this.state.instagram.map(post => {
-        if(postID === post.username){
-          ++post.likes
-        }
-        return post
-      })
-    })
-  }
-
-  //filter post based on post username
+  //filter post based on post username entered
   filterPost = (searchText) => {
     let instaDisplay = document.querySelectorAll(".post-container")
     let matchFound = false;
@@ -103,8 +66,6 @@ class App extends Component {
             <Post 
               post={data}
               text={this.state.input}
-              input={this.handleInput}
-              // add={this.addNewComment}
               increment={this.increment}
             />
           </div>
