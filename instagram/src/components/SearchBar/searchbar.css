@@ -1,0 +1,55 @@
+.searchBar {
+  border: 1px solid gray;
+}
+
+.searchBar form {
+  width: 35%;
+}
+
+.searchBarInput {
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  width: 100%;
+}
+
+.searchBarInput:focus {
+  outline: none;
+}
+
+header nav {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.leftIcons {
+  margin-left: 20px;
+}
+
+.rightIcons {
+  margin-right: 20px;
+}
+
+.instagramLogo {
+  margin-right: 10px;
+}
+
+.instagramTextLogo {
+  width: 100px;
+  margin-bottom: 10px;
+  border-radius: 0;
+}
+
+.line {
+  margin-bottom: 20px;
+}
+
+.rightIcons {
+  width: 125px;
+  display: flex;
+  justify-content: space-between;
+}

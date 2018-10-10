@@ -36,14 +36,15 @@ class CommentSection extends Component {
   };
 
   render() {
-    // const { likes } = this.props;
     return (
       <div className="commentSection">
         <PostInteraction likes={this.state.likes} addLikes={this.addLikes} />
         {this.state.comments.map((comment, index) => {
           return <Comment key={index} comment={comment} />;
         })}
-        <form onSubmit={event => this.addNewComment(event)}>
+        <form
+          onSubmit={event => this.addNewComment(event)}
+          className="commentForm">
           <input
             type="text"
             className="commentAdd"
