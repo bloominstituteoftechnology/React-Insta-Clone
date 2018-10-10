@@ -5,14 +5,6 @@ import dummyData from "./dummy-data";
 import PostContainer from "./components/PostContainer";
 import SearchBar from "./components/SearchBar";
 
-// import { library } from '../@fortawesome/fontawesome-svg-core'
-// import { FontAwesomeIcon } from './@fortawesome/react-fontawesome'
-// import { faInstagram, faCompass, faHeart, faUser } from './@fortawesome/free-solid-svg-icons'
-
-
-//library.add(faInstagram, faComment);
-
-
 
 
 class App extends Component {
