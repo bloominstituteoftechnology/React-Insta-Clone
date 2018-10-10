@@ -11,7 +11,7 @@ class CommentSection extends React.Component {
     }
   }
   addNewComment = e => {
-    let newComments = [...this.state.comments, {username: 'dummy', text: this.state.comment}]
+    let newComments = [...this.state.comments, {username: localStorage.getItem('user'), text: this.state.comment}]
     if (e.key === 'Enter') {
       this.setState({ 
         comments: newComments,
