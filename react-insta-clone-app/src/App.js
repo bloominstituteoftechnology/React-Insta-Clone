@@ -1,83 +1,26 @@
 import React from "react";
-import "./App.css";
+import ReactDOM from "react-dom";
 import dummyData from "./dummy-data";
+
 import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer"
-import CommentSection from "./components/CommentSection/CommentSection"
-import heart from "./img/heart-2.svg";
-import chat from "./img/chat-46.svg";
+import PostContainer from "./components/PostContainer/PostContainer";
+import "./App.css";
 
-class App extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-      data: [],
-      dataComments: [],
-    }
-  }
+export default class App extends React.Component {
+  state = {
+    data: []
+  };
+
   componentDidMount() {
-    let newData = this.state.data;
-    newData.push(dummyData);
-    // console.log(this.state.data[0].map(function(object){
-    //   return (
-    //     object.comments.map(function(comment){
-    //       return (
-    //         comment
-    //       )
-    //     })
-    //   )
-    // }))
-    let newCommentData = this.state.dataComments;
-   newCommentData.push(this.state.data[0].map(function(object){
-      return (
-        object.comments.map(function(comment){
-          return (
-            comment
-          )
-        })
-      )
-    }));
-    this.setState({
-      data: newData,
-      dataComments: newCommentData,
-    });
-    // console.log(this.state.data)
-    console.log(this.state.data[0])
+    this.setState({ data: dummyData });
   }
 
-  addNewComment = (event, index) => {
-    event.preventDefault();
-    if (event.key === 'Enter'){
-        let commentsArr = this.state.dataComments[0];
-        let commentsList = commentsArr.map(function(commentGrp){
-          return (
-            commentGrp.map(function(comment){
-              return (
-                comment
-              )
-            })
-          )
-        })
-        commentsList.push({
-          username: "CJuelfs15",
-          text: event.target.value
-        });
-        this.setState({
-            dataComments: commentsList,
-        });
-        event.target.value = '';
-        console.log('works inside')
-    } 
-    console.log('works')
-  }
-  handleLikesIncrement = (event, index) => {
-    event.preventDefault();
-    this.state.data[0].map(function(post){
-      
-    })
-  }
+  filterPosts = str => {
+    const filteredPosts = dummyData.filter(post => post.username.includes(str));
+    this.setState({ data: filteredPosts });
+  };
 
-  // Day 1 refactored:
+   // Day 1 refactored:
   // render() {
   //   return (
   //     <div className='App'>
@@ -112,64 +55,12 @@ class App extends React.Component {
   //   );
   // }
 
-  //Day 2 (data thru state):
   render() {
     return (
-      <div className='App'>
-        <SearchBar className='search-bar-container'/>
-        <div className='all-posts'>
-          {this.state.data.map(function(item){
-            return (
-              item.map(function(object){
-                return (
-                  <div key={object.timestamp} className='post-container'>
-                    <PostContainer src1={object.thumbnailUrl} src2={object.imageUrl} alt={object.username} title={object.username} srcIcon1={heart} srcIcon2={chat} altIcon1='heart-icon' altIcon2='chat-icon' likesCounter={object.likes} />
-                    <div className='comment-section'>
-                      {object.comments.map(function(comment){
-                        return (
-                          <CommentSection commentUsername={comment.username} commentText={comment.text} />
-                        );
-                      })}
-                      <form onSubmit = {(index) => this.addNewComment}>
-                        <input placeholder='Add a comment...' className='comment-input'></input>
-                      </form>
-                    </div>
-                  </div>
-                )
-              })
-            );
-          })}
-        </div>
+      <div className="App">
+        <SearchBar className='search-bar-container' filterPosts={this.filterPosts} />
+        <PostContainer className='post-container' posts={this.state.data} />
       </div>
     );
   }
 }
-
-//Unrefactored (partial):
-
-// class App extends React.Component {
-//   render() {
-//     return (
-//       <div className='App'>
-//         <div className="search-bar">
-//           <div className="logo-imgages">
-//             <img src={logo} alt="Instagram-Logo" />
-//             <img src={title} alt="Instagram-Title" />
-//           </div>
-//           <input placeholder="search" className="search" />
-//           <div className="icons">
-//             <img src={compass} alt='compass-icon' />
-//             <img src={heart} alt='heart-icon' />
-//             <img src={person} alt='person-icon' />
-//           </div>
-//         </div>
-//         <div className='post-container'>
-
-//         </div>
-//       </div>
-//     );
-//   }
-// }
-
-
-export default App;

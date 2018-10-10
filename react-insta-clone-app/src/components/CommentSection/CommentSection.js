@@ -1,51 +1,79 @@
 import React from 'react';
 import './CommentSection.css';
+import Comment from "../Comment/Comment";
+import heart from "../../img/heart-2.svg"
+import chat from "../../img/chat-46.svg"
 
-
-export default class CommentSection extends React.Component{
-    constructor(props){
-        super(props);
+class CommentSection extends React.Component {
+    state = {
+      comments: [],
+      newCommentText: "",
+      likes: 0
+    };
+  
+    componentDidMount() {
+      this.setState({ comments: this.props.comments, likes: this.props.likes });
     }
-    // addNewComment = event => {
-    //     if (event.key === 'Enter'){
-    //         let commentsArr = this.props.dataComments[0];
-    //         commentsArr.push({username: "CJuelfs15", text: event.target.value});
-    //         this.setState({
-    //             dataComments: commentsArr,
-    //         });
-    //         event.target.value = '';
-    //     }
-    // }
-    addNewComment = (event, index) => {
-        event.preventDefault();
-        if (event.key === 'Enter'){
-            let commentsArr = this.props.dataComments[0];
-            let commentsList = commentsArr.map(function(commentGrp){
-              return (
-                commentGrp.map(function(comment){
-                  return (
-                    comment
-                  )
-                })
-              )
-            })
-            commentsList.push({
-              username: "CJuelfs15",
-              text: event.target.value
-            });
-            this.setState({
-                dataComments: commentsList,
-            });
-            event.target.value = '';
-        } 
-        console.log('works')
+  
+    onChange = e => {
+      this.setState({ newCommentText: e.target.value });
+    };
+  
+    addComment = (event) => {
+      console.log(event)
+      const username = "CRJuelfs15";
+      const text = this.state.newCommentText;
+      this.setState({
+        comments: [...this.state.comments, { username, text }],
+        newCommentText: ""
+      });
+    };
+    addCommentEnter = (event) => {
+      console.log(event)
+      if (event.key === 'Enter'){
+        const username = "CRJuelfs15";
+        const text = this.state.newCommentText;
+        this.setState({
+          comments: [...this.state.comments, { username, text }],
+          newCommentText: ""
+        });
       }
-    render(){
-        return (
-            <div className='individual-comment'>
-                <span className='comment-username'>{this.props.commentUsername}</span>
-                <span className='comment-text'>{this.props.commentText}</span>
-            </div>
-        );
     }
-}
+  
+    likePost = () => {
+      this.setState({ likes: this.state.likes + 1 });
+    };
+    render() {
+      return (
+        <div className="comments-section">
+          <div className = 'post-icons'>
+            <img src = {heart} alt = 'heart-icon' onClick = {this.likePost} />
+            <img src = {chat} alt = 'chat-icon' onClick = {this.addComment} />
+          </div>
+          <strong style={{ paddingBottom: "5px" }}>
+            {this.state.likes} likes
+          </strong>
+          {this.state.comments.map(comment => {
+            return (
+              <>
+                <Comment comment={comment} />
+              </>
+            );
+          })}
+          <div>
+            <form onKeyDown = {this.addCommentEnter}>
+              <input
+                className = 'comment-input'
+                placeholder="Add a comment..."
+                value={this.state.newCommentText}
+                onChange={this.onChange}
+              />
+            </form>
+          </div>
+        </div>
+      );
+    }
+  }
+  
+  export default CommentSection;
+  

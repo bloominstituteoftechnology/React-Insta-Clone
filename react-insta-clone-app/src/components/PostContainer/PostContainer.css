@@ -1,0 +1,31 @@
+.post-title{
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    height: 75px;
+  }
+  .post-title .post-title-thumbnail{
+    border-radius: 50%;
+    width: 5%;
+    height: 50%;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+  .post-title .post-username{
+    font-size: 18px;
+  }
+  .post-image{
+    width: 100%;
+  }
+  .icons-likes-section{
+    width: 94%;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-weight: bold;
+  }
+  .icons-likes-section .post-icons{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 10%;
+  }

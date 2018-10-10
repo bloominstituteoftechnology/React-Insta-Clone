@@ -5,23 +5,37 @@ import title from "../../img/Instagram-Title.png";
 import compass from "../../img/compass-05.svg";
 import heart from "../../img/heart-2.svg";
 import person from "../../img/single-01.svg";
-import ImagesComponent from "./SearchBar-TitleImages"
-import InputComponent from "./SearchBar-Input"
 
-export default function SearchBar(props){
+function ImagesComponent(props){
     return (
-        <div className={props.className}>
-            <div className='title-images'>
-                <ImagesComponent src={logo} alt='instagram-logo' className='logo' />
-                <div className='line-break'></div>
-                <ImagesComponent src={title} alt='instagram-title' className='title' />
-            </div>          
-            <InputComponent placeholder='Search' className='search-input' />            
-            <div className='title-icons'>
-                <ImagesComponent src={compass} alt='compass-icon' />
-                <ImagesComponent src={heart} alt='heart-icon' />
-                <ImagesComponent src={person} alt='person-icon' />
-            </div>
-        </div>
+        <img src = {props.src} alt={props.alt} className={props.className} />
     );
+}
+function InputComponent(props){
+    return (
+        <input placeholder='search' className={props.className}></input>
+    );
+}
+
+export default class SearchBar extends React.Component {
+    handleChange = event => {
+        this.props.filterPosts(event.target.value);
+    };
+    render(){
+        return (
+            <div className={this.props.className}>
+                <div className='title-images'>
+                    <ImagesComponent src={logo} alt='instagram-logo' className='logo' />
+                    <div className='line-break'></div>
+                    <ImagesComponent src={title} alt='instagram-title' className='title' />
+                </div>          
+                <InputComponent onChange={this.handleChange} className='search-input' />            
+                <div className='title-icons'>
+                    <ImagesComponent src={compass} alt='compass-icon' />
+                    <ImagesComponent src={heart} alt='heart-icon' />
+                    <ImagesComponent src={person} alt='person-icon' />
+                </div>
+            </div>
+        );
+    }
 }
