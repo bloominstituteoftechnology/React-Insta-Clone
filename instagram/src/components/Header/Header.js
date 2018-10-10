@@ -3,6 +3,7 @@ import styles from './Header.css';
 import EndButtons from './EndButtons';
 import Search from './Search';
 
+
 const Header = () => (
     <div className='header-container'>
         <div className='header-left'>

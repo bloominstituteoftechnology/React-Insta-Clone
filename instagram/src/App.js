@@ -14,6 +14,7 @@ class App extends Component {
     }
     EventEmitter.subscribe('addComment', (event) => this.addComment(event))
     EventEmitter.subscribe('handleChange', (event) => this.handleChange(event))
+    EventEmitter.subscribe('likePost', (event) => this.likePost(event))
   }
 
   componentDidMount() {
@@ -29,7 +30,7 @@ class App extends Component {
   addComment = event => {
     event.preventDefault();
     const copyState = this.state.data.map((post, i) => {
-      if (i.toString() === event.target.id) {
+      if (event.target.id === i.toString()) {
         post.comments.push({username: 'user', text: this.state.value});
         return post;
       } else {
@@ -38,6 +39,20 @@ class App extends Component {
     })  
     this.setState({
       data: copyState
+    })
+  }
+
+  likePost = event => {
+    this.setState({
+      data: this.state.data.map((post, i) => {
+        if (event.target.id === i.toString()) {
+          Object.assign(post, { liked: !post.liked });
+          post.liked ? Object.assign(post, {likes: post.likes+1}) : Object.assign(post, {likes: post.likes-1})
+          return post;
+        } else {
+          return post;
+        }
+      })
     })
   }
 

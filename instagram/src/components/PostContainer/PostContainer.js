@@ -1,6 +1,8 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import HeartButton from './HeartButton.js';
 import styles from './PostContainer.css';
+
 
 const PostContainer = ({data, index}) => (
     <div className='post-container'>
@@ -10,7 +12,10 @@ const PostContainer = ({data, index}) => (
         </div>
         <img src={data.imageUrl} alt='image posted by user' />
         <div className='image-reaction'>
-            <img className='reaction-icon' src={require('../../icons/insta_heart.png')} alt='heart button'/>
+                <HeartButton 
+                    index={index}
+                    liked={data.liked}
+                />
             <img className='reaction-icon' src={require('../../icons/insta_comment.png')} alt='comment button'/>
         </div>
         <div className='likes'>{data.likes} likes</div>

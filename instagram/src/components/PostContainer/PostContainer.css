@@ -26,14 +26,26 @@
 }
 
 .image-reaction {
-    text-align: start;
-    padding: 5px 5px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 10px 0;
 }
 
 .reaction-icon {
     width: 40px;
-    margin-right: 8px;
 }
+
+.heart-container {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    fill: transparent;
+}
+
+/* .heart-button {
+    
+} */
 
 .likes {
     font-size: 1.6rem;
