@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: #FAFAFA
 }
 
 .App-logo {
@@ -29,4 +30,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  text-align: center;
 }
