@@ -5,10 +5,10 @@ import "./PostsContainer.css";
 const LikeSection = props => {
   return [
     <div className="like-section" key="likes-icons-container">
-      <div className="like-section-wrapper" onClick={props.incrementLike}>
+      <div onClick={props.incrementLike}>
         <i className="far fa-heart" />
       </div>
-      <div className="like-section-wrapper">
+      <div>
         <i className="far fa-comment" />
       </div>
     </div>,

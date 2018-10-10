@@ -1,15 +1,21 @@
 import React from "react";
 
+import "./CommentSection.css";
+
 const CommentInput = props => {
   return (
-    <form onSubmit={props.submitComment}>
-      <input
-        type="text"
-        value={props.comment}
-        placeholder="Add comment..."
-        onChange={props.changeComment}
-      />
-    </form>
+    <div className="add-comment-wrapper">
+      <form onSubmit={props.submitComment}>
+        <input
+          className="input"
+          type="text"
+          value={props.comment}
+          placeholder="Add a comment..."
+          onChange={props.changeComment}
+        />
+      </form>
+      <i className="fas fa-ellipsis-h" />
+    </div>
   );
 };
 

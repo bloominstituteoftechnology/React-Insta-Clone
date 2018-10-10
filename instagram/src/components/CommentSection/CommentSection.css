@@ -1,15 +1,35 @@
-.comment-container {
+.comment-text {
   display: flex;
-  align-items: center;
-  max-height: 25px;
+  justify-content: flex-start;
+  margin-left: 20px;
 }
 
-.username {
+.user {
   font-size: 15px;
-  padding: 0px 10px 0px 25px;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
-.text {
+.comment {
   font-size: 15px;
   flex-wrap: wrap;
+}
+
+.add-comment-wrapper {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgb(233, 230, 230);
+  width: 570px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.input {
+  border-style: none;
+  font-size: 15px;
+  margin: 15px 368px 15px 5px;
+}
+
+.fa-ellipsis-h {
+  font-size: 18px;
 }

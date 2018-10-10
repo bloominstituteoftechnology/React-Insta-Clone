@@ -29,21 +29,26 @@
   margin: 15px;
 }
 
+/* Like Section */
+
+.like-section {
+  display: flex;
+  margin-left: 20px;
+  padding-bottom: 5px;
+  font-size: 20px;
+}
 .fa-heart {
-  padding-right: 20px;
+  padding: 8px 0px 0px 0px;
 }
 
 .fa-comment {
   transform: scaleX(-1);
+  padding: 8px 15px 0px 0px;
 }
 
-.likes {
-  padding-right: 80%;
+.like-section-wrapper {
+  display: flex;
   font-weight: bold;
-  padding-bottom: 10px;
-}
-
-.time-stamp {
-  padding: 2% 60% 2% 0%;
-  color: grey;
+  padding-bottom: 5px;
+  font-size: 15px;
 }
