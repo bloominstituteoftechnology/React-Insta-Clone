@@ -42,7 +42,7 @@ class CommentSection extends React.Component {
       [key]: value
     });
     // saves currently typed comment in storage. uncomment when storage bug is figured out
-    localStorage.setItem(key, value);
+    // localStorage.setItem(key, value);
   };
 
   // next methods are all related to localStorage persistence,
@@ -69,15 +69,15 @@ class CommentSection extends React.Component {
   //   }
   // }
 
-  componentDidMount() {
-    this.props.hydrateState();
-    // window.addEventListener("beforeunload", this.saveState.bind(this));
-  }
+  // componentDidMount() {
+  //   this.props.hydrateState();
+  //   // window.addEventListener("beforeunload", this.saveState.bind(this));
+  // }
 
-  componentWillUnmount() {
-    // window.removeEventListener("beforeunload", this.saveState.bind(this));
-    this.props.saveState();
-  }
+  // componentWillUnmount() {
+  //   // window.removeEventListener("beforeunload", this.saveState.bind(this));
+  //   this.props.saveState();
+  // }
 
   render() {
     return (

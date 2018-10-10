@@ -12,42 +12,42 @@ class App extends Component {
       newSearch: "",
       filtered: false
     };
-    this.saveState = this.saveState.bind(this);
-    this.hydrateState = this.hydrateState.bind(this);
+    // this.saveState = this.saveState.bind(this);
+    // this.hydrateState = this.hydrateState.bind(this);
   }
 
   componentDidMount() {
     setTimeout(() => {
       this.setState({ postData: dummyData });
     }, 500);
-    window.addEventListener("beforeunload", this.saveState);
+    // window.addEventListener("beforeunload", this.saveState);
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("beforeunload", this.saveState);
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener("beforeunload", this.saveState);
+  // }
 
-  saveState() {
-    console.log(this.state);
-    for (let key in this.state) {
-      console.log(this.state[key]);
-      // localStorage.setItem(key, JSON.stringify(this.state[key]));
-    }
-  }
+  // saveState() {
+  //   console.log(this.state);
+  //   for (let key in this.state) {
+  //     console.log(this.state[key]);
+  //     // localStorage.setItem(key, JSON.stringify(this.state[key]));
+  //   }
+  // }
 
-  hydrateState() {
-    for (let key in this.state) {
-      if (localStorage.hasOwnProperty(key)) {
-        let value = localStorage.getItem(key);
-        try {
-          value = JSON.parse(value);
-          this.setState({ [key]: value });
-        } catch (error) {
-          this.setState({ [key]: value });
-        }
-      }
-    }
-  }
+  // hydrateState() {
+  //   for (let key in this.state) {
+  //     if (localStorage.hasOwnProperty(key)) {
+  //       let value = localStorage.getItem(key);
+  //       try {
+  //         value = JSON.parse(value);
+  //         this.setState({ [key]: value });
+  //       } catch (error) {
+  //         this.setState({ [key]: value });
+  //       }
+  //     }
+  //   }
+  // }
 
   startSearch = event => {
     event.preventDefault();
@@ -100,8 +100,8 @@ class App extends Component {
                   <PostContainer
                     key={user.timestamp}
                     userData={user}
-                    saveState={this.saveState}
-                    hydrateState={this.hydrateState}
+                    // saveState={this.saveState}
+                    // hydrateState={this.hydrateState}
                   />
                 );
               })}

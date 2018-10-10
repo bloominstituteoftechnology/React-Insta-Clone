@@ -32,8 +32,8 @@ class PostContainer extends React.Component {
         />
         <CommentSection
           user={this.state.userData}
-          saveState={this.props.saveState}
-          hydrateState={this.props.hydrateState}
+          // saveState={this.props.saveState}
+          // hydrateState={this.props.hydrateState}
         />
       </div>
     );
