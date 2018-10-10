@@ -48,7 +48,9 @@ render() {
 
         </div>
         <p className='likes'><strong>{this.state.likes} likes</strong></p>
-        <CommentSection comments={this.props.data.comments} comment={this.props.comment} timestamp={this.props.data.timestamp}/>
+        <CommentSection comments={this.props.data.comments} comment={this.props.comment}
+       timestamp={this.props.data.timestamp}
+        username={this.props.username}/>
       </div>
     )
 }

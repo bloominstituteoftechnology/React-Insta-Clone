@@ -1,0 +1,33 @@
+.login{
+  max-width: 400px;
+  width: 100%;
+  margin: 10% auto;
+  display: flex;
+  flex-direction: column;
+  jusify-content: space-between;
+  align-items: center;
+}
+
+.login .login-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%; 
+
+}
+
+.login input{
+  border: 1px solid gray;
+  text-align: center;
+}
+
+.login button {
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin: 2%;
+  width: 100px;
+  padding: 2%;
+  cursor: pointer;
+
+}

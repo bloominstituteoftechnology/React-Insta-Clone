@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import CameraIcon from '../Icons/CameraIcon'
 import CompassIcon from '../Icons/CompassIcon'
 import HeartIcon from '../Icons/HeartIcon'

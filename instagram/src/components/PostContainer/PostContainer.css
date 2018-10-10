@@ -1,6 +1,6 @@
 .post {
   max-width: 640px;
-  border: 1px solid black;
+  border: 1px solid lightgray;
   background-color: white;
   margin: 0 auto;
   margin-top: 10%;
@@ -40,7 +40,6 @@
 }
 
 .liked{
-  /* color: red; */
   fill: red;
 }
 

@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
-import moment from 'moment';
+import React from 'react';
 import Comment from './Comment'
 import CommentEntry from './CommentEntry'
 import Timestamp from './Timestamp'
 import './CommentSection.css'
 
-class CommentSection extends Component {
+class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       comments: this.props.comments,
       newComment: '',
+      username: this.props.username,
     }
   }
+
+
 
 
 
@@ -21,12 +23,13 @@ class CommentSection extends Component {
     if (this.state.newComment.length > 0) {
       this.setState({
         comments: [...this.state.comments, {
-          username: 'testname',
+          username: this.state.username,
           text:this.state.newComment,
           }],
         newComment: '',
       })
     }
+
   }
 
 
@@ -37,7 +40,7 @@ class CommentSection extends Component {
   }
 
   render() {
-    console.log(this.props.timestamp)
+    // console.log(this.props.timestamp)
     return (
       <div className='comment-section'>
             {this.state.comments.map((comment, i) =>
@@ -51,15 +54,5 @@ class CommentSection extends Component {
   }
 }
 
-// PostContainer.propTypes = {
-//   post: PropTypes.shape({
-//     username: PropTypes.string.isRequired,
-//     thumbnailUrl: PropTypes.string.isRequired,
-//     imageUrl: PropTypes.string.isRequired,
-//     likes: PropTypes.number.isRequired,
-//     timestamp: PropTypes.string.isRequired,
-//     comments: PropTypes.array.isRequired
-//   })
-// };
 
 export default CommentSection;
