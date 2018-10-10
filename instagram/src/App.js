@@ -4,6 +4,7 @@ import dummyData from './dummy-data';
 import PostsContainer from './components/PostsContainer/PostsContainer';
 import SearchBar from './components/SearchBar/SearchBarContainer';
 
+// Creating the overall app. This sets the state and creates the searchPostsHandler which matches and returns the filtered posts. IF there are no matches it returns all the posts. This only searches the username titles. 
 class App extends Component {
   constructor() {
     super();
@@ -42,4 +43,5 @@ class App extends Component {
   }
 }
 
+          // If there are filtered posts then display those but otherwise set the state to all the posts.
 export default App;

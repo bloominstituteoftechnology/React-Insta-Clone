@@ -6,6 +6,7 @@ import PostHeader from './PostHeader';
 
 import './Posts.css';
 
+// Create a class component Post and set state for the number of likes. This post will create a PostHeader functional componen, a LikeSection functional component and a comment section functional component. 
 class Post extends React.Component {
   constructor(props) {
     super(props);
@@ -13,6 +14,8 @@ class Post extends React.Component {
       likes: props.post.likes
     };
   }
+
+  // Increments the number of likes on a post by 1 each time it is called. 
   incrementLike = () => {
     let likes = this.state.likes + 1;
     this.setState({ likes });

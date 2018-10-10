@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Comment.css';
 
+// A functional component with prop checking and the text and username from the constructor. 
 const Comment = props => {
   return (
     <div className="comment-text">
