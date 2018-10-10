@@ -8,7 +8,7 @@ class App extends Component {
 
   state = {
     data: [],
-    filter: []
+    filter: [],
   }
 
   componentDidMount() {
@@ -16,13 +16,15 @@ class App extends Component {
   }
 
   filteredSearchHandler = e => {
-    const posts = this.state.data.filter(post => {
+    const posts = this.state.data.filter( post => {
     if (post.username.includes(e.target.value)) {
         return post;
-      }
+      } 
+      return post;
     });
-    this.setState({filter: posts})
-  }
+    this.setState({filter: posts});
+  };
+
   render() {
     return (
       <div className="App">
