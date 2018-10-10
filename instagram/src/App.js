@@ -1,30 +1,42 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchBar from "./components/SearchBarContent/SearchBar";
-import PostContainer from "./components/PostContent/PostContainer";
 import dummyData from './dummy-data';
+import PostsContainer from './components/PostsContainer/PostsContainer';
+import SearchBar from './components/SearchBar/SearchBarContainer';
 
 class App extends Component {
-  constructor(props){
+  constructor() {
     super();
     this.state = {
-      data : [],
-      comments : [],
-    }
+      posts: [],
+      filteredPosts: []
+    };
   }
-
-componentDidMount(props){
-  this.setState({data : dummyData})
-  this.setState({comments : dummyData.map(comment =>{return(comment.comments)})})
-}
-
+  componentDidMount() {
+    this.setState({ posts: dummyData });
+  }
+  searchPostsHandler = e => {
+    const posts = this.state.posts.filter(p => {
+      if (p.username.includes(e.target.value)) {
+        return p;
+      }
+    });
+    this.setState({ filteredPosts: posts });
+  };
   render() {
     return (
       <div className="App">
-        <div className="top-header">
-          <SearchBar />
-        </div>
-        <PostContainer data={this.state.data} commentsState={this.state.comments} />
+        <SearchBar
+          searchTerm={this.state.searchTerm}
+          searchPosts={this.searchPostsHandler}
+        />
+        <PostsContainer
+          posts={
+            this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.posts
+          }
+        />
       </div>
     );
   }
