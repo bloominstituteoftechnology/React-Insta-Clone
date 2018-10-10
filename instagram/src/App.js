@@ -3,14 +3,15 @@ import './App.css';
 import dummydata from './dummy-data'
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
+import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       allUserData: [],
-      searchInput:'',
-      }
+      searchInput: '',
+    }
   }
   searchHandler = (event) => {
     this.setState({
@@ -19,48 +20,44 @@ class App extends Component {
       console.log(this.state.searchInput)
     )
   }
-  
-  componentDidMount(){
-    this.setState({allUserData:dummydata})
+
+  componentDidMount() {
+    this.setState({ allUserData: dummydata })
   }
   filter = (event) => {
     event.preventDefault();
-    
+
     this.setState({
-      allUserData: this.state.allUserData.filter((obj,i,arr) => {
-        if(obj.username === this.state.searchInput){
-        return obj
-        }else if(obj.username !== this.state.searchInput ){
-          return arr
+      allUserData: this.state.allUserData.filter((obj, i, arr) => {
+        if (obj.username === this.state.searchInput) {
+          return obj
         }
       }
-    )
+      )
     })
-   
+
   }
   reset = (event) => {
     event.preventDefault();
-    this.setState({ 
+    this.setState({
       allUserData: dummydata,
-      searchInput:"" 
+      searchInput: ""
     })
   }
   render() {
-    console.log('2nd:', this.state.searchInput)
+
     return (
       <div className="App">
-      <SearchBar searchInput={this.state.searchInput} searchHandler={this.searchHandler} filter={this.filter} reset={this.reset}/>
-        <>
-          {this.state.allUserData.map(obj => {
-            return (
 
-              <PostContainer key={obj.timestamp} InstaData={obj} CommentArray={obj.comments} />
+        <PostsPage
+          searchInput={this.state.searchInput}
+          searchHandler={this.searchHandler}
+          filter={this.filter}
+          reset={this.reset}
+          allUserData={this.state.allUserData}
+        />
 
-            );
-          })}
-        </>
-       
-           
+
       </div>
     );
   }
