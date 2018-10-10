@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Authenticate = App => {
+const Authenticate = Component => {
     return class WrappedComponent extends React.Component {
         render() {
-            return ( <App /> );
+            return ( <Component /> );
         }
     }
 };

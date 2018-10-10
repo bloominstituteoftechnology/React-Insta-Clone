@@ -3,6 +3,7 @@ import './App.css';
 
 import dummyData from './dummy-data';
 
+import Authenticate from './components/Authentication/Authenticate';
 import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
@@ -16,4 +17,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
