@@ -5,7 +5,7 @@ import './SearchBar.css'
 import "@fortawesome/fontawesome-free";
 
 
-const SearchBarContainer = () => {
+const SearchBarContainer = (props) => {
     return (
         <div className="search-bar-wrapper">
           <div className="image-wrapper">
@@ -14,7 +14,7 @@ const SearchBarContainer = () => {
             <img alt="instagram logo" src={Logo} className="logo-image" />
           </div>
           <div>
-            <input type="text" placeholder="Search" />
+            <input type="text" placeholder="Search" onKeyDown={props.searchPost} />
           </div>
           <div className="social-wrapper">
             <div className="social">
