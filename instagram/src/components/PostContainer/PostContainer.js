@@ -3,11 +3,6 @@ import PropTypes from "prop-types";
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
 
-// import UserThumbnail from "./UserThumbnail";
-// import PostImage from "./PostImage";
-// import Likes from "./Likes";
-// import AddComment from "./AddComment";
-
 const PostContainer = props => {
   return (
     <div>
@@ -22,10 +17,9 @@ const PostContainer = props => {
               />
               <p>{post.username}</p>
             </div>
-            {/* user thumbnail */}
+            <img className="post-img" src={post.imageUrl} alt="post" />
 
             <CommentSection
-              image={post.imageUrl}
               likes={post.likes}
               comments={post.comments}
               timestamp={post.timestamp}
