@@ -15,16 +15,7 @@ class App extends Component {
   // component did mount set state
   componentDidMount() {}
   render() {
-    if (this.state.loggedIn === false) {
-      return <Auth />;
-    } else {
-      return (
-        <div>
-          <SearchBar />
-          <PostsPage />
-        </div>
-      );
-    }
+    return <Auth />;
   }
 }
 

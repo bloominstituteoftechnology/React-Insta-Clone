@@ -3,10 +3,12 @@ import dummyData from "../../dummy-data";
 import PostContainer from "./PostContainer";
 
 class PostsPage extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      posts: []
+      posts: [],
+      filteredPosts: [],
+      filterTarget: ""
     };
   }
 

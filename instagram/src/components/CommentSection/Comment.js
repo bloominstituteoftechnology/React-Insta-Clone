@@ -1,4 +1,5 @@
 import React from "react";
+import "./Comments.css";
 
 class Comment extends React.Component {
   constructor(props) {
