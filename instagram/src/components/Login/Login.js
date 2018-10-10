@@ -12,7 +12,7 @@ const Login = props => {
                 <button>Login</button>
         </form>
 
-                <h3>Hint: user: Shawn</h3>
+                <h3>Hint: user: shawn</h3>
                 <h3>Hint: password: cat</h3>
         </div>
     );
