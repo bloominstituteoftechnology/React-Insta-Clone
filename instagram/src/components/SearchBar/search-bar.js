@@ -5,6 +5,8 @@ import compass from '../../images/compass.png';
 import heart from '../../images/Instagram-Heart.png';
 import person from '../../images/Instagram-Person.png';
 import line from'../../images/line.png';
+
+
  const SearchBar = (props) => {
     return (
     <div className = 'searchBarContainer'>
@@ -14,9 +16,9 @@ import line from'../../images/line.png';
             <img className = 'textLogo' src={instagramTextLogo} alt = 'text logo'/>
         </div>
          <div className = 'searchBarFunction'>
-            <form  className ='searchBar' action ='submit'>
-            <input className = 'search' placeholder='Search' type ='text'/>
-            </form>
+           
+            <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
+            
         </div>
          <div className ='rightContent'>
             <img className ='compass' src={compass} alt ='compass' />

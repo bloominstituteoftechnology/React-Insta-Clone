@@ -1,60 +1,72 @@
-import React, {Component} from 'react';
-import dots from '../../images/dots.svg'
-import '../CommentSection/CommentSection.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Comment from './Comment';
+import CommentInput from './CommentInput';
 
-class CommentSection extends Component {
-    constructor (props) {
-        super(props);
-        this.state = {
-            comments: this.state.comments,
-            newComment: '',
-            timeStamp: props.timeStamp,
-        }
+class CommentSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: props.comments,
+      comment: ''
+    };
+  }
+
+  componentDidMount() {
+    const id = this.props.postId;
+    if (localStorage.getItem(id)) {
+      this.setState({
+        comments: JSON.parse(localStorage.getItem(this.props.postId))
+      });
+    } else {
+      this.setComments();
     }
+  }
 
-    // addNewComment = event => {
-    //     event.preventDefault();
-    //     if (this.state.newComment.length > 0) {
-    //         this.setState ({
-    //             comments: [...this.state.comments, {
-    //                 username: 'username',
-    //                 text: this.state.newComment,
-    //             }],
-    //             newComment: '',
-    //         })
-    //     }
-    // }
+  componenetWillUnmount() {
+    this.setComments();
+  }
 
-    // handleChange = event => {
-    //     this.setState ({
-    //         [event.target.name]: event.target.value,
-    //     })
-    // }
-    render() {
+  setComments = () => {
+    localStorage.setItem(
+      this.props.postId,
+      JSON.stringify(this.state.comments)
+    );
+  };
+
+  commentHandler = e => {
+    this.setState({ comment: e.target.value });
+  };
+
+  handleCommentSubmit = e => {
+    e.preventDefault();
+    const newComment = { text: this.state.comment, username: 'SavannahG' };
+    const comments = this.state.comments.slice();
+    comments.push(newComment);
+    this.setState({ comments, comment: '' });
+    setTimeout(() => {
+      this.setComments();
+    }, 500);
+  };
+
+  render() {
     return (
-        <div className ='likes-comments'>
-            <h4 className = 'likes'> {item.likes} Likes</h4>
-            {item.comments.map ((index) => {
-                return (
-                    <div >
-                        <h4 className = 'commentContainer' key = {item.timestamp}>
-                        {index.username}
-                        <span className = 'comment'>{index.text}</span></h4>         
-                    </div>
-                )
-            })}
-                <div className ='timeSincePost'>
-                <p> Posted on {item.timestamp} </p> 
-                {/* {moment().fromNow()} */}
-            </div>
-        <div className ='addComment'>
-            <form action = 'submit'>
-                <input type = 'text' placeholder = 'Add a comment...' /> 
-            </form>
-            <img src={dots} alt = 'options for commenting' />
-         </div>
-         </div>
-    )
+      <div>
+        {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
+        <CommentInput
+          comment={this.state.comment}
+          submitComment={this.handleCommentSubmit}
+          changeComment={this.commentHandler}
+        />
+      </div>
+    );
+  }
 }
-}
- export default CommentSection;
+
+CommentSection.propTypes = {
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
+  )
+};
+
+export default CommentSection;

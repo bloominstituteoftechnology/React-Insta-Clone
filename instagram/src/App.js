@@ -9,14 +9,23 @@ import dummyData from './dummyData'
    constructor (props) {
      super(props);
      this.state = {
-       dummyData: []
+       posts : [],
+      filteredPosts: []
      };
    }
   
    componentDidMount () {
-     this.setState ({dummyData: dummyData});
+     this.setState ({posts: dummyData});
    }
 
+   searchPostsHandler = event => {
+     const posts - this.state.posts.filter(p => {
+       if(p.username.includes(event.target.calue)) {
+         return p;
+       }
+     });
+     this.setState({ filteredPosts: posts});
+   }
   render() {
     return (
       
@@ -27,7 +36,7 @@ import dummyData from './dummyData'
       </div>
       <div className = 'mainContent'>
         <PostContainer />
-        <CommentSection />
+        
       </div>
     </div>
     );
