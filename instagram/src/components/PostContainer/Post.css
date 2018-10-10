@@ -37,3 +37,15 @@
     margin: 20px 10px;
     font-weight: bold;
 }
+
+.like-section {
+    display: flex;
+    width: 10%;
+  }
+  
+.like-wrapper {
+    height: 10px;
+    width: 15px;
+    margin: 10px;
+  }
+  

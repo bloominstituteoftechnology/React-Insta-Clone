@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
 import './Comment.css';
-import { faThList } from '@fortawesome/free-solid-svg-icons';
 
 class CommentSectionContainer extends React.Component {
     constructor(props) {
