@@ -11,17 +11,19 @@ library.add(fas, far, fab);
 const SearchBar = props => {
   return (
     <div className="searchBar">
-      <FontAwesomeIcon icon="" />
-      <h1>Instagram</h1>
-      <div className="searchFormDiv">
-        <form>
-          <input type="text" placeholder="Search" />
-        </form>
-      </div>
-      <div className="searchBarIcons">
-        <FontAwesomeIcon icon="compass" />
-        <FontAwesomeIcon icon="heart" />
-        <FontAwesomeIcon icon="user" />
+      <div className="searchBarContainer">
+        <FontAwesomeIcon icon="" />
+        <h1>Instagram</h1>
+        <div className="searchFormDiv">
+          <form>
+            <input type="text" placeholder="Search" />
+          </form>
+        </div>
+        <div className="searchBarIcons">
+          <FontAwesomeIcon icon="compass" />
+          <FontAwesomeIcon icon="heart" />
+          <FontAwesomeIcon icon="user" />
+        </div>
       </div>
     </div>
   );

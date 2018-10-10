@@ -1,31 +1,30 @@
-import React, { Component } from 'react';
-import './App.css';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
-import dummyData from '../src/dummy-data';
+import React, { Component } from "react";
+import "./App.css";
+import SearchBar from "./components/SearchBar/SearchBar";
+import PostContainer from "./components/PostContainer/PostContainer";
+import dummyData from "../src/dummy-data";
 
 class App extends Component {
-  constructor(){
-    super();   
+  constructor() {
+    super();
     this.state = {
       data: []
-    }
+    };
   }
-  
+
   componentDidMount() {
     setTimeout(() => {
-      console.dir(this)
-      this.setState({data: dummyData})
-    }, 800)
+      this.setState({ data: dummyData });
+    }, 800);
   }
 
   render() {
     return (
-      <div className="App">
+      <div className="wholePage">
         <SearchBar />
-        <PostContainer 
-        data = {this.state.data}
-        />
+        <div className="App">
+          <PostContainer data={this.state.data} />
+        </div>
       </div>
     );
   }

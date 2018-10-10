@@ -6,8 +6,8 @@
 .post {
     width: 100%;
     border: 1px solid lightgrey;
-    margin-bottom: 50px;
     border-radius: 5px;
+    margin: 100px 0;
 }
 
 .header {
