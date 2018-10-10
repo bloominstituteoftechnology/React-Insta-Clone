@@ -14,10 +14,11 @@ const PostContainer = prop => {
       />
       <Image  ImageUrl={prop.data.imageUrl} />
       <Icons like={prop.data.likes} timestamp={prop.data.timestamp} />
-      {prop.data.comments.map(item => {
+      {/* {prop.data.comments.map(item => {
         return <CommentContainer item={item} />;
-      })}
-      <NewComment />
+      })} */}
+      <CommentContainer item={prop.data.comments} />
+      
     </div>
   );
 };
