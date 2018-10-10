@@ -25,8 +25,8 @@ const SearchBar = (props) => {
 
         <input type='text' 
                placeholder="Search" 
-               value={props.searchInput}
-               onChange={props.filter} />
+               
+               onKeyDown={props.filter} />
         <div className='icon-div'>
         <FontAwesomeIcon className="icon" icon="compass" />
         <FontAwesomeIcon icon="heart" />

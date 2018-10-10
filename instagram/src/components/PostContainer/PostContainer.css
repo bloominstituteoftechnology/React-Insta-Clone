@@ -35,3 +35,12 @@ img{
     user-select: none;
 }
 
+.post-container.hidden{
+    display: none;
+}
+
+/* let filteredList = document.querySelectorAll('.post-container');
+    console.log(Array.from(filteredList));
+    filteredList = Array.from(filteredList).map(profile => profile.classList.remove('hidden'));
+    console.log(filteredList);
+ */

@@ -55,7 +55,7 @@ render(){
         
             
                 
-                <div className="post-container">
+                <div className={`post-container ${this.props.dummyData.username}`}>
                     <div className = 'post-header'>
                         <img className="post-profile-img" src={`${this.props.dummyData.thumbnailUrl}`}/>
                         <p className='username bold-txt'>{this.props.dummyData.username}</p>
