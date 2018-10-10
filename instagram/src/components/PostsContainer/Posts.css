@@ -38,11 +38,11 @@
 .Post-body .Post-action {
   width: 95%;
   margin: 0 auto;
+  display: flex;
 }
 
 .Post-body .Post-action .icon {
   margin-top: 10px;
-  margin-right: 3%;
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -52,10 +52,13 @@
   cursor: pointer;
 }
 
-.Post-body .Post-action .like-btn {
-  display: inline;
+.Post-body .Post-action .btn {
+  margin-right: 3%;
 }
 
+.Post-body .Post-action .liked {
+  color: #f05a7d;
+}
 
 .Post-body .likes {
   width: 95%;

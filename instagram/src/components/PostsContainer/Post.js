@@ -7,7 +7,8 @@ class Post extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      post: props.post
+      post: props.post,
+      liked: false
     }
   }
 
@@ -15,9 +16,13 @@ class Post extends React.Component {
     event.preventDefault();
 
     const post = JSON.parse(JSON.stringify(this.state.post))
-    post.likes = post.likes + 1;
-
-    this.setState({ post });
+    if (this.state.liked) {
+      post.likes -= 1;
+      this.setState({ post, liked: false });
+    } else {
+      post.likes += 1;
+      this.setState({ post, liked: true });
+    }
   }
 
   render() {
@@ -33,11 +38,14 @@ class Post extends React.Component {
         <section className="Post-body">
           <img src={imageUrl} alt="post img" />
           <div className="Post-action">
-            <div className="like-btn" onClick={this.incrementLike}>
-              <i className="far fa-heart fa-2x icon"></i>
+            <div className="like-btn btn" onClick={this.incrementLike}>
+              {this.state.liked ? <i className="fas fa-heart fa-2x icon liked"></i> : <i className="far fa-heart fa-2x icon"></i>}
             </div>
-            {/* <i class="fas fa-heart fa-2x liked-btn icon show"></i> */}
-            <i className="far fa-comment fa-2x icon comment-btn"></i>
+
+            <div className="comment-btn btn">
+              <i className="far fa-comment fa-2x icon comment-btn"></i>
+            </div>
+
           </div>
 
           <p className="likes">{likes} likes</p>
