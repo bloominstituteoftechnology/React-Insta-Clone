@@ -8,7 +8,7 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      posts: dummyData,
+      posts: [],
       filtered: []
   };
 }
@@ -21,6 +21,11 @@ class App extends Component {
         } 
       })
     })
+  }
+  componentDidMount() {
+    this.setState({
+      posts: dummyData
+    });
   }
   render() {
     return (
