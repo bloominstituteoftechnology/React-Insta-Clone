@@ -33,7 +33,7 @@ class CommentSection extends React.Component {
     return (
       <div className='comment-wrapper'>
         {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
-        <CommentInput commentHandler={this.commentHandler}/>
+        <CommentInput commentHandler={this.commentHandler} comment={this.state.comment}/>
       </div>
     );
   }
