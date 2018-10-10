@@ -6,9 +6,17 @@ class CommentSection extends React.Component{
     constructor(props){
         super(props)
         this.more=''
+        this.delete=''
+
         if(props.data.text.length > 90){
-           this.more =' more' 
+           this.more =' ...more' 
         }
+
+        if(props.data.username === 'Frank-E-B')
+        {
+            this.delete = ' ...remove'
+        }
+
     }
     render(){
         return (
@@ -18,6 +26,7 @@ class CommentSection extends React.Component{
                         <span className='comment-username'>{this.props.data.username} </span>
                         {this.props.data.text} 
                         <span className='comment-more'>{this.more}</span>
+                        <span onClick={this.props.removeComment(1)} className='delete-comment'>{this.delete}</span>
                     </p>
                 </div>
     

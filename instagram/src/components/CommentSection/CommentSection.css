@@ -12,4 +12,9 @@
 }
 .comment-more{
     color:grey;
+    font-size:.8rem;
+}
+.delete-comment{
+    color:grey;
+    font-size:.8rem;
 }

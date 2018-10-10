@@ -11,7 +11,6 @@ import PropTypes from 'prop-types';
 class PostContainer extends React.Component{
     constructor(props){
         super(props)
-      
         this.state={
             likes:props.data.likes,
             comments:props.data.comments
@@ -28,7 +27,10 @@ class PostContainer extends React.Component{
                 {
                     this.state.comments.map(element =>{
                         return (
-                            <CommentSection data={element}/>
+                            <CommentSection 
+                                    data={element}
+                                    removeComment = {this.props.removeComment}
+                            />
                         )
                     })
                 }

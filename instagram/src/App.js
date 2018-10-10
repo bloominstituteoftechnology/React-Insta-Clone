@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import { dummyData } from './data/dummy-data'
-import PostContainer from './components/PostContainer/PostContainer'
-import SearchContainer from './components/SearchContainer/SearchContainer'
+import { dummyData } from './data/dummy-data';
+import PostsPage from './components/PostContainer/PostsPage';
+import SearchContainer from './components/SearchContainer/SearchContainer';
 
 class App extends Component {
   constructor(){
     super();
+    this.removeComment = this.removeComment.bind(this, 'Parameter');
     this.state = {
       searchText:'',
       data:[],
@@ -40,7 +41,10 @@ class App extends Component {
       }
     })},this.setState({searchText:''}))
   }
-
+  removeComment = (event,args) => {
+    console.log('here. ', event)
+    console.log('args', args)
+  }
   addNewComment = (event) =>{
       event.preventDefault();
       let postId = event.target[0].id;
@@ -71,10 +75,9 @@ class App extends Component {
         <div className='app-post-container'>
         {
           this.state.data.map((element,index) => {
-            console.log('element- ', element)
             return(
               <div>
-                <PostContainer 
+                <PostsPage  
                               saveData={this.saveData} 
                               key={index} 
                               id={index} 
@@ -84,6 +87,7 @@ class App extends Component {
                               handleLikeClick = {this.handleLikeClick}
                               addNewComment = {this.addNewComment}
                               newComment = {this.state.newComment}
+                              removeComment = {this.removeComment}
 
                 />
                 <div className='spacer'>&nbsp;</div>
