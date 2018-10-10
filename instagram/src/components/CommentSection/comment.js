@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Comment = props => {
+const Coment = props => {
     return (
         <div className="comment">
             <h2>{props.comment.username}</h2>
@@ -11,11 +11,11 @@ const Comment = props => {
     )
 }
 
-Comment.propTypes = {
+Coment.propTypes = {
     comment: PropTypes.shape({
         username: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired
       })
 }
 
-export default Comment;
+export default Coment;
