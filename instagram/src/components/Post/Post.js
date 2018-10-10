@@ -1,8 +1,8 @@
 import React from 'react';
-import './PostContainer.css';
-import CommentSection from '../CommentSection/CommentSection.js';
+import './Post.css';
+import CommentSection from '../CommentSection/CommentSection';
 
-class PostContainer extends React.Component {
+class Post extends React.Component {
     constructor(props) {
         super(...arguments);
     }
@@ -34,4 +34,4 @@ class PostContainer extends React.Component {
     }
 }
 
-export default PostContainer;
+export default Post;
