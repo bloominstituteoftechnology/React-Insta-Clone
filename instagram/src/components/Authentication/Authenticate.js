@@ -1,11 +1,17 @@
 import React from 'react';
 
+import Login from '../Login/Login';
+
 const Authenticate = PassedComponent =>
     class extends React.Component {
         render() {
-            return <PassedComponent />;
-        }
-    };
+            if (window.localStorage.getItem('username')) {
+                return <PassedComponent />
+            } else {
+                return <Login />
+            }
+        };
+    }
 
 export default Authenticate;
 

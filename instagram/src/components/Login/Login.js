@@ -1,21 +1,29 @@
 import React from 'react';
-import App from '../../App';
 
 class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: "",
-            password: ""
+            username: ""
         }
+    }
+
+    usernameChangeHandler = (event) => {
+        this.setState({
+             username: event.target.value
+        })
+    }
+    
+    submitLogin = () => {
+        window.localStorage.setItem('username', this.state.username);
     }
 
     render() {
         return (
             <div className="login">
-                <form className="login-form">
-                    <input type="text" placeholder="Username" />
-                    <input type="text" placeholder="Password" />
+                <form className="login-form" onSubmit={this.submitLogin}>
+                    <input type="text" placeholder="Username" value={this.state.username} onChange={this.usernameChangeHandler} />
+                    <input type="password" placeholder="Password" />
                     <button type="submit">Login</button>
                 </form>
             </div>
