@@ -21,7 +21,8 @@
 
   .line {
       height: 100%;
-      margin: 12px 12px;
+      margin-left: 15px;
+      padding-top: 13px;
   }
   
   .logo-image {
@@ -31,10 +32,16 @@
   
   .social-wrapper {
     display: flex;
-    margin-right: 20px;
+    margin-right: 35px;
   }
   
   .social {
     width: 50px;
     height: 50px;
+  }
+
+  .search-input {
+    height: 30px;
+    width: 300px;
+    margin-top: 25px;
   }

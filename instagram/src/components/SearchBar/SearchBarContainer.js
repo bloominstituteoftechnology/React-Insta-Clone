@@ -14,7 +14,7 @@ const SearchBarContainer = (props) => {
             <img alt="instagram logo" src={Logo} className="logo-image" />
           </div>
           <div>
-            <input type="text" placeholder="Search" onKeyDown={props.searchPost} />
+            <input type="text" placeholder="Search" onKeyDown={props.searchPost} className="search-input"/>
           </div>
           <div className="social-wrapper">
             <div className="social">
