@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import PostContainer from '../src/components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar'
+import PostPage from './components/PostContainer/PostPage';
 
 document.body.classList.add('background-snow');
 
@@ -37,12 +36,10 @@ class App extends React.Component {
     return (
       <div className="App">
       <div>
-      <SearchBar
-      posts={this.state.posts}
-      handleFilter={this.handleFilter}
-      />
 
-    <PostContainer posts={this.state.postFilter.length > 0 ? this.state.postFilter : this.state.posts}/> 
+    <PostPage 
+    handleFilter={this.handleFilter}
+    posts={this.state.postFilter.length > 0 ? this.state.postFilter : this.state.posts}/> 
 
       </div>
       </div>

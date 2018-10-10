@@ -19,6 +19,7 @@ class SearchBar extends React.Component {
     super(props);
     this.toggle = this.toggle.bind(this);
     this.state = {
+      props: props,
       isOpen: false,
       posts: this.props.posts
           };
