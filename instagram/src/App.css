@@ -54,3 +54,7 @@ html {
 html, body {
   font-family: 'Roboto', sans-serif;
 }
+
+.App{
+	max-width: 900px; 
+}

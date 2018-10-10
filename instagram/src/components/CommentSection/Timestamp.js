@@ -1,14 +1,20 @@
-import React from 'react';
-import moment from 'moment';
+import React from 'react'
+import moment from 'moment'
 
 const Timestamp = props => {
-  let date = props.Timestamp;
-  let formatted = moment(date, 'MMMM Do YYYY, h:mm:ss a')
+ var moment = require('moment')
+ let date = props.timestamp;
+ let momentDate = moment(date).format('MMMM DD YYYY, h:mm:ss a')
 
   return (
-    <React.Fragment>
-      <p className='moment'>{moment(`${props.timestamp}`).fromNow()}</p>
-    </React.Fragment>
+    <div className='date-stamp'>
+      {/* {' '}
+      <Moment fromNow>{fortmatDate}</Moment> (<small>
+        {moment(fortmatDate).format('LL')}
+      </small>) */}
+      <p>{momentDate}</p>
+
+    </div>
   )
 }
 

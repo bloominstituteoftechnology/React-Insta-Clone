@@ -1,5 +1,21 @@
 .comment-section {
+  padding: 0% 2%;
   display: flex;
   flex-direction: column;
-  text-align: left; 
+  text-align: left;
+  font-size: 1.6rem;
+}
+
+.comment {
+  line-height: 1.7;
+}
+
+
+form input {
+  margin-top: 1%;
+  width: 100%;
+  border: none;
+  border-top: 1px solid gray;
+  font-size: 1.6rem;
+  padding: 3% 0;
 }

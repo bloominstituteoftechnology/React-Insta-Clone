@@ -37,20 +37,29 @@ class CommentSection extends Component {
   }
 
   render() {
+    console.log(this.props.timestamp)
     return (
       <div className='comment-section'>
-          <React.Fragment>
             {this.state.comments.map((comment, i) =>
               <Comment key={i} comment={comment} />
             )}
-            {/* <p className='moment'>{moment(`${this.state.comments[this.state.comments.length-1].timestamp}`).fromNow()}</p> */}
             <Timestamp timestamp={this.props.timestamp} />
             <CommentEntry addNewComment={this.addNewComment} handleCommentChange={this.handleCommentChange} newComment={this.state.newComment} />
-          </React.Fragment>
       </div>
 
     )
   }
 }
+
+// PostContainer.propTypes = {
+//   post: PropTypes.shape({
+//     username: PropTypes.string.isRequired,
+//     thumbnailUrl: PropTypes.string.isRequired,
+//     imageUrl: PropTypes.string.isRequired,
+//     likes: PropTypes.number.isRequired,
+//     timestamp: PropTypes.string.isRequired,
+//     comments: PropTypes.array.isRequired
+//   })
+// };
 
 export default CommentSection;
