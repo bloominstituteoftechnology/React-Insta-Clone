@@ -19,6 +19,13 @@ class App extends Component {
     posts[comment.key].comments.push({username: this.state.user, text: comment.text });
     this.setState({ posts: posts});
   }
+
+  addLike = key => {
+    let posts = [...this.state.posts];
+    console.log(key);
+    posts[key].likes++;
+    this.setState({ posts: posts});
+  }
   
   componentDidMount() {
     setTimeout(() => {
@@ -32,7 +39,12 @@ class App extends Component {
         <SearchBar />
         <div className="posts">
           {this.state.posts.map((post, index) => (
-            <PostContainer key={index} post={post} addNewComment={this.addNewComment} />
+            <PostContainer 
+              postKey={index} 
+              post={post} 
+              addNewComment={this.addNewComment} 
+              addLike={this.addLike}
+             />
           ))}
         </div>
       </div>

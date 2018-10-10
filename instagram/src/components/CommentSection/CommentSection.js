@@ -7,17 +7,9 @@ import CommentForm from '../CommentSection/CommentForm';
 class CommentSection extends React.Component {
 
     state = {
-        postKey: 0,
-        timestamp: Date.now(),
-        comments: [],
-    }
-
-    componentDidMount() {
-        this.setState({ 
-            postKey: this.props.postKey,
-            timestamp: this.props.timestamp, 
-            comments: this.props.comments, 
-        });
+        postKey: this.props.postKey,
+        timestamp: this.props.timestamp,
+        comments: this.props.comments,
     }
 
     render() {

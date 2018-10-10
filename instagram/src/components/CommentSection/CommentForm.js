@@ -30,7 +30,7 @@ class CommentForm extends React.Component {
                 <button 
                     className="submit-button"
                     type="submit">
-                        <i class="fas fa-ellipsis-h"></i>
+                        <i className="fas fa-ellipsis-h"></i>
                 </button>
             </form>
         )

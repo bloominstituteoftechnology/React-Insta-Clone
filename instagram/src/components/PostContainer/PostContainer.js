@@ -6,6 +6,11 @@ import CommentSection from '../CommentSection/CommentSection';
 
 class PostContainer extends React.Component {
 
+    handleLike = event => {
+        event.preventDefault();
+        this.props.addLike(this.props.postKey);
+    }
+
     render() {
         return (
             <div className="post">
@@ -16,13 +21,13 @@ class PostContainer extends React.Component {
                 <div className="post-content">
                     <img className="content-image" src={this.props.post.imageUrl} alt="Post" />
                     <p className="social-buttons">
-                        <a><i class="far fa-heart"></i></a>
-                        <a><i class="far fa-comment fa-flip-horizontal"></i></a>
+                        <a onClick={this.handleLike}><i className="far fa-heart"></i></a>
+                        <a><i className="far fa-comment fa-flip-horizontal"></i></a>
                     </p>
                     <p className="likes-count">{this.props.post.likes} likes</p>
                 </div>
                 <CommentSection 
-                    postKey={this.props.key} 
+                    postKey={this.props.postKey} 
                     timestamp={this.props.post.timestamp} 
                     addNewComment={this.props.addNewComment} 
                     comments={this.props.post.comments} />
@@ -32,7 +37,7 @@ class PostContainer extends React.Component {
 }
 
 PostContainer.propTypes = {
-    key: PropTypes.number.isRequired,
+    postKey: PropTypes.number.isRequired,
     post: PropTypes.shape({
         thumbnailUrl: PropTypes.string,
         username: PropTypes.string,
@@ -45,7 +50,7 @@ PostContainer.propTypes = {
 };
 
 PostContainer.defaultProps = {
-    key: 0,
+    postKey: 0,
     post: {
         username: "username",
         thumbnailUrl: "https://virtual-strategy.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png",
