@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import Header from './components/Header/Header';
-import PostContainer from './components/PostContainer/PostContainer'
-import PostsPage from './components/PostsPage/PostsPage'
+import PostsPage from './components/PostsPage/PostsPage';
+import Authenticate from './components/Authentication/Authenticate';
 import { EventEmitter } from './events.js';
 
 class App extends Component {
@@ -40,7 +39,7 @@ class App extends Component {
     event.preventDefault();
     const copyState = this.state.data.map((post, i) => {
       if (event.target.id === i.toString() && this.state.commentInput.trim()) {
-        post.comments.push({username: 'user', text: this.state.commentInput});
+        post.comments.push({username: localStorage.getItem('username'), text: this.state.commentInput});
         return post;
       } else {
         return post;
@@ -79,4 +78,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);

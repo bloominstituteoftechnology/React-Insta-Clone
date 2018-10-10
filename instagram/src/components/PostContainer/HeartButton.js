@@ -14,6 +14,7 @@ const HeartButton = ({index, liked}) => (
       strokeWidth="1"
       strokeLinecap="round"
       strokeLinejoin="round"
+      cursor='pointer'
     >
     <path 
       id={index} 
