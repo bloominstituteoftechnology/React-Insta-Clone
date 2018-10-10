@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import PostPage from './components/PostContainer/PostsPage';
+import PostsPage from './components/PostContainer/PostsPage';
 import './App.css';
+import Authenticate from './components/Authentication/Authenticate';
 
 class App extends Component {
   constructor(props) {
@@ -10,12 +11,14 @@ class App extends Component {
     }
   }
   render() {
+    Authenticate(App);
     return (
       <div className="insta_app">
-      <PostPage />
+      <PostsPage />
       </div>
     );
   }
 }
+
 
 export default App;

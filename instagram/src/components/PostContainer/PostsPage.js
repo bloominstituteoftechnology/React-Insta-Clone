@@ -4,7 +4,7 @@ import PostContainer from './PostContainer';
 import dummyData from '../dummy-data';
 import PropTypes from 'prop-types';
 
-class PostPage extends Component {
+class PostsPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -29,7 +29,7 @@ class PostPage extends Component {
     }
   }
   
-  PostPage.propTypes = {
+  PostsPage.propTypes = {
     dummydata: PropTypes.arrayOf(
       PropTypes.shape({
         username: PropTypes.string,
@@ -49,5 +49,5 @@ class PostPage extends Component {
   }
 
   
-  export default PostPage;
+  export default PostsPage;
   
