@@ -7,8 +7,26 @@ class Login extends React.Component {
     constructor() {
         super();
         this.state = {
-
+            usernameInput: ''
         }
+    }
+
+    //track username field change in input
+
+    usernameChange = (e) => {
+        this.setState({
+            usernameInput: e.target.value
+        });
+    }
+    
+    //store username in local storage
+
+    login = (e) => {
+        e.preventDefault();
+        localStorage.setItem('username', this.state.usernameInput);
+        this.setState({
+            usernameInput: ''
+        });
     }
 
     render() {
@@ -18,13 +36,13 @@ class Login extends React.Component {
                     src={loginLogo}
                     className='login-logo'
                 />
-                <form>
+                <form onSubmit={this.login}>
                     <input 
                         className='login-input' 
                         type='text' 
                         placeholder='Username'
-                        value={this.props.value}
-                        // onChange={this.props.onChange}
+                        value={this.state.usernameInput}
+                        onChange={this.usernameChange}
                     />
                     <br/>
                     <input 
