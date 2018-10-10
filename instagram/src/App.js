@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import dummyData from './Dummy'
 import PostPage from './components/PostContainer/PostPage';
+import Authenticate from './components/Authentication/Authenticate';
 import PropTypes from 'prop-types';
 
 class App extends Component {
@@ -30,13 +31,24 @@ class App extends Component {
   
   
   render() {
-    return (
-      <div>
-        <PostPage data = {this.state.data} />
-      </div>
-    );
-  }
+    
+    const App = () =>{
+      return (
+        <div>
+          <PostPage data = {this.state.data} />
+        </div>
+      );
+    }
+    
+    const HOComponent = Authenticate(App);
+      return(
+       <HOComponent />
+    )
+  }  
 }
+
+
+
 App.propTypes = {
   dummyData : PropTypes.arrayOf(
     PropTypes.shape({
