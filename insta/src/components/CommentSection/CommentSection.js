@@ -48,7 +48,7 @@ class Comments extends React.Component{
         <div>
              <>
 
-                 <i className="far fa-heart fa-2x like-icon" onClick={this.likeMore} ></i>
+                 <i className={this.state.liked?"fas fa-heart fa-2x liked-icon":"far fa-heart fa-2x like-icon"} onClick={this.likeMore} ></i>
                  <i className="far fa-comment fa-2x fa-flip-horizontal"></i>
              </>
              <>

@@ -1,18 +1,51 @@
 import React from 'react'
-import moduleName from './PostContainer.css'
-import PostContainer from ''
+import './PostContainer.css'
+import dummyData from '../../dummy-data'
+import SearchBar from "../SearchBar/searchBar";
+import PostContainer from './PostContainer'
 
-const PostsPage = props =>{
-    return(
-<div className="post-container">
-          {{props.searchInput}.length?{props.searchReturn}.map(item =>{
-            return(
-            <PostContainer key={item.timestamp} obj={item} />
-            )}):{props.posts.map(item =>{
-            return(
-            <PostContainer key={item.timestamp} obj={item} />
-            )})}
-        </div>
-    )
-}
-export default PostsPage;
+
+class PostsPage extends React.Component {
+    constructor(){
+      super();
+      this.state ={
+        posts: [],
+        searchReturn: [],
+        searchInput: ''
+      }
+    }
+  
+   
+  
+    componentDidMount = () =>{
+      this.setState({
+        posts: dummyData,
+        searchReturn: dummyData
+      })
+    }
+   changeHandler=(e)=>{
+    this.setState({searchInput: e.target.value}, this.searchPostforUser()
+    );}
+  
+    searchPostforUser=()=>{
+     this.setState({searchReturn: this.state.posts.filter(item =>{return item.username.toLowerCase().includes(this.state.searchInput.toLocaleLowerCase())}), searchInput: ''})
+    }
+  
+    render() {
+      return (
+        <div className="App">
+          <SearchBar change={this.changeHandler} value={this.state.searchInput}/>
+          <div className="post-container">
+            {this.state.searchInput.length?this.state.searchReturn.map(item =>{
+              return(
+              <PostContainer key={item.timestamp} obj={item} />
+              )}):this.state.posts.map(item =>{
+              return(
+              <PostContainer key={item.timestamp} obj={item} />
+              )})}
+          </div>
+          </div>
+        );
+    }
+  }
+  export default PostsPage;
