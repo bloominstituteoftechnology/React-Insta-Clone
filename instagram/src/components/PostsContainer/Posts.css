@@ -66,3 +66,13 @@
   font-weight: 700;
   font-size: 1.5rem;
 }
+
+@media (max-width: 500px) {
+  .Post-container {
+    margin-top: 110px;
+  }
+
+  .Post-container .Post-card {
+    border-radius: 0;
+  }
+}
