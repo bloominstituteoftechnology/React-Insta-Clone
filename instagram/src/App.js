@@ -36,17 +36,19 @@ class App extends Component {
     this.setState({ filteredPosts: posts });
 }
 
-  addCommentHandler = timestamp => {
+  addCommentHandler = (event, timestamp) => {
     console.log('handle comment');
     // gets comment - have to add an input field onClick
-    let newComment = 'this is a new comment';
+    this.setState({
+      newComment: event.target.value
+    });
 
     // adds username and comment to the post
     const updatedComments = [...this.state.posts.map(post => {
       if (post.timestamp === timestamp) {
         const addComment = {
           username: this.state.currentUser,
-          text: newComment
+          text: this.state.newComment
         }
         return { ...post, comments: [...post.comments, addComment] };
       } else {
@@ -54,7 +56,8 @@ class App extends Component {
       }
     })]
     this.setState({
-      posts: updatedComments
+      posts: updatedComments,
+      newComment: ''
     })
   }
 
@@ -89,6 +92,7 @@ class App extends Component {
               : this.state.posts
           } 
           addCommentHandler={this.addCommentHandler} 
+          newComment={this.state.newComment}
           addLikeHandler={this.addLikeHandler}
         />
       </div>
