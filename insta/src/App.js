@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import './App.css';
+import Authenticate from './components/Authentication/Authenticate';
 import PostsPage from './components/Posts/PostsPage';
 import SearchBar from './components/Search/SearchBar';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -116,4 +117,6 @@ class App extends Component {
   }
 }
 
-export default App;
+const AuthApp = Authenticate(App);
+
+export default AuthApp;
