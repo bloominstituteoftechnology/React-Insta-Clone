@@ -18,7 +18,7 @@
       max-width: 600px;
   }
 
-  .comment form input {
+  .comment-input {
       width: 560px;
       border: none;
       height: 50px;

@@ -25,10 +25,15 @@ class PostsPage extends Component {
     });
   };
 
+  handleLogOut = () => {
+    localStorage.removeItem('username');
+    window.location.reload();
+  }
+  
   render() {
     return (
       <div className="container posts">
-        <SearchBar handleSearch={this.handleSearch} />
+        <SearchBar handleSearch={this.handleSearch}/>
         <div className="main-content">
           <PostContainer
             data={
@@ -38,6 +43,7 @@ class PostsPage extends Component {
             }
           />
         </div>
+        <button onClick={this.handleLogOut} className={'logout-button'}>Log Out</button>
       </div>
     );
   }
