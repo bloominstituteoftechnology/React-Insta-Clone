@@ -11,28 +11,12 @@ import PropTypes from 'prop-types';
 class PostContainer extends React.Component{
     constructor(props){
         super(props)
+      
         this.state={
             likes:props.data.likes,
-            newComment:'',
             comments:props.data.comments
         }
     }
-    addNewComment = (event) =>{
-        event.preventDefault();
-        this.setState({comments:[...this.state.comments,{
-            username:'Frank-E-B',
-            text:this.state.newComment
-        }]},this.setState({newComment:''}))
-
-        
-    }
-    handleCommentChange = event =>{
-        this.setState({newComment:event.target.value})
-    }
-    handleLikeClick = event =>{
-        this.setState({likes: (this.state.likes+1)})
-    }
-
     render(){
         return(
             <div className='post-container'>
@@ -50,10 +34,12 @@ class PostContainer extends React.Component{
                 }
                 <p className='post-time-stamp'>{this.props.data.timestamp}</p>
                 <NewCommentSection 
-                                addNewComment={this.addNewComment}
                                 postId = {this.props.postId}
-                                handleCommentChange={this.handleCommentChange}
-                                newComment={this.state.newComment}
+                                addNewComment={this.props.addNewComment}
+                                handleCommentChange={this.props.handleCommentChange}
+                                handleLikeClick = {this.props.handleLikeClick}
+                                newComment={this.props.newComment}
+                                
                 />
                 <br />
                 <br />
