@@ -6,13 +6,22 @@ class Post extends Component {
     super(props);
     this.state = {
       data: props.data,
-      likes: props.data.likes
+      likes: props.data.likes,
+      liked: false
     };
   }
 
   incrementLike = () => {
-    let likes = this.state.likes + 1;
-    this.setState({ likes });
+    let likes = this.state.likes;
+    let checked = this.state.liked;
+    checked = !checked;
+    if (checked === false) {
+      likes = likes - 1;
+    } else {
+      likes = likes + 1;
+    }
+
+    this.setState({ liked: checked, likes: likes });
   };
 
   render() {
@@ -32,6 +41,7 @@ class Post extends Component {
         <LikesSection
           incrementLike={this.incrementLike}
           likes={this.state.likes}
+          liked={this.state.liked}
         />
       </div>
     );
