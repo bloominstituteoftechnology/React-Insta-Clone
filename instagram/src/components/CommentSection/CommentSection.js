@@ -8,16 +8,19 @@ class CommentSection extends Component {
     super()
     this.state = {
       comments,
+      username: localStorage.getItem('username'),
       newComment: ''
     }
   }
 
   addNewComment = event => {
     event.preventDefault()
+    const { comments, username, newComment } = this.state
+
     this.setState({
       comments: [
-        ...this.state.comments,
-        { username: 'Jane Doe', text: this.state.newComment }
+        ...comments,
+        { username, text: newComment }
       ],
       newComment: ''
     })
