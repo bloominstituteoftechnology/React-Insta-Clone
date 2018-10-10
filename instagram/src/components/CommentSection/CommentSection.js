@@ -30,7 +30,7 @@ class CommentSection extends React.Component {
 
   }
   addNewComment = (e) => {
-    // e.preventDefault();
+    this.e.preventDefault();
     const text = e.target.children[0].value;
     const comments = this.state.comments;
     const username = this.state.username;
@@ -42,7 +42,7 @@ class CommentSection extends React.Component {
     })
   }
   onChange = (e) => {
-    // e.preventDefault();
+    this.e.preventDefault();
     this.setState({
       commentText : e.target.value
     })

@@ -10,14 +10,16 @@ class PostContainer extends React.Component {
       super(props);
   
       const id = this.props.id;
-     let comments = JSON.parse(localStorage.getItem(id));
-    //  || this.props.data.comments;
-      if (comments === null){
-          comments = this.props.data.comments;
-      } else {
-           return comments;
-      } 
+     let comments = JSON.parse(localStorage.getItem(id)) || this.props.data.comments;
+      // if (comments === null){
+      //     comments = this.props.data.comments;
+      // } else {
+      //      return comments;
+      // } 
     //  comments === null ? comments = this.props.data.comments : comments
+
+
+    //the above  commentedcode is bad. dont ever return anything in the constructor.
       this.state = {
         id: id,
         user: this.props.data,
