@@ -1,48 +1,42 @@
 import React from 'react';
-import CommentSection from '../CommentSection'
+import PropTypes from 'prop-types';
+import CommentSection from './CommentSection';
+import Post from './Post';
+import Icons from "./Icons"
 
-
-import PropTypes from 'prop-types'
 
 const PostContainer = (props) => {
+  if (!props.dummyData.length) {
+    return <h1>Loading...</h1>
+  }
+  
   return (
-    <div>
-      {props.dummyData.map( postObj => {
-        return (
-          <div>
-            <div className="postheader">
-              <img src={postObj.thumbnailUrl} alt="avatar" width="50"></img>
-              <div>{postObj.username}</div>
+    <div className="post">
+      <div>
+        {props.dummyData.map((postObj, index) => {
+          return (
+            <div key={index}>
+              <Post
+                thumbnail={postObj.thumbnailUrl}
+                image={postObj.imageUrl}
+                username={postObj.username}
+                />
+              <Icons increment={props.increment}/>
+              <p className="likes"> {props.likes} likes</p>
+              <div className="comments-container">
+                <CommentSection comments={postObj.comments} />
+              </div>
+              <p className="time">2 HOURS AGO</p>
             </div>
-
-            <img src={postObj.imageUrl} alt="imageURL" width="300"></img>
-            
-            <div className="postBottom">
-              <div>{postObj.likes}</div>
-              <CommentSection comments={postObj.comments}/>
-              <div>{postObj.timestamp}</div>
-            </div>
-            
-          </div>
-        )
-      })}
+          )
+        })}
+      </div>
     </div>
   ) 
 }
 
 PostContainer.propTypes = {
-  dummyData: PropTypes.arrayOf(PropTypes.shape({
-    thumbnailURL: PropTypes.string,
-    imageURL: PropTypes.string,
-    likes: PropTypes.number,
-    timestamp: PropTypes.string,
-    comments: PropTypes.arrayOf(PropTypes.shape({
-      username: PropTypes.string,
-      comment: PropTypes.string,
-    })),
-    username: PropTypes.string,
-  })),
+  dummyData: PropTypes.array.isRequired
 }
-
 
 export default PostContainer;

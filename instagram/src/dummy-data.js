@@ -1,4 +1,4 @@
-export default [
+const dummyData = [
   {
     username: "philzcoffee",
     thumbnailUrl:
@@ -79,3 +79,5 @@ export default [
     ]
   }
 ];
+
+export default dummyData;
