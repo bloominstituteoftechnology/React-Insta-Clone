@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
+import PostContainer from './components/PostContainer';
+
+
 
 
 
@@ -13,8 +16,8 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
-       
+      <div className = "App">
+        <PostContainer dummyData = {this.state.dummyData} />
       </div>
     );
   }
