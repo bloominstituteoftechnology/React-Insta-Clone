@@ -25,7 +25,7 @@ class CommentSection extends React.Component {
     const comments = this.state.comments.slice();
     if (this.state.newComment !== '') {
       comments.push({
-        username: 'jajawockee',
+        username: localStorage.getItem('username'),
         text: this.state.newComment
       })
     }
