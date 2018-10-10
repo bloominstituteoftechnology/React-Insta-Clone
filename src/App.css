@@ -1,0 +1,17 @@
+/* App styles go here */
+
+.App {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.App h2 {
+  font-size: 2.6rem;
+  margin: 10px;
+}

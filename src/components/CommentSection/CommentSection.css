@@ -1,0 +1,20 @@
+/* CommentSection styles go here */
+
+.comment-section {
+  margin: 10px 10px 30px 10px;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.comment-item {
+  margin-bottom: 5px;
+}
+
+.comment-user {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.comment-text {
+  font-weight: normal;
+}
