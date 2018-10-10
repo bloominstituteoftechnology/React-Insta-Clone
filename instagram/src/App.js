@@ -27,7 +27,6 @@ class App extends Component {
   }
 
   search = text => {
-    console.log(text);
     let posts = this.state.posts.filter(post => post.username === text);
     this.setState({ posts: posts });
   }
