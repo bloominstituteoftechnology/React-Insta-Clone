@@ -12,7 +12,7 @@ const CommentInput = props => {
                     onChange = {props.changeComment}
                     />
             </form>
-            <img src={dots} alt = 'options for commenting' />
+            <img className = 'dots' src={dots} alt = 'options for commenting' />
             </div>
         );
 };

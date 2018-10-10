@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/search-bar'
-import PostContainer from './components/PostContainer/post-container'
+import PostsContainer from './components/PostContainer/post-container'
 import './App.css';
 import dummyData from './dummyData'
 //import CommentSection from './components/CommentSection/comment-section';
@@ -19,8 +19,8 @@ import dummyData from './dummyData'
    }
 
    searchPostsHandler = event => {
-     const posts - this.state.posts.filter(p => {
-       if(p.username.includes(event.target.calue)) {
+     const posts = this.state.posts.filter(p => {
+       if(p.username.includes(event.target.value)) {
          return p;
        }
      });
@@ -28,17 +28,20 @@ import dummyData from './dummyData'
    }
   render() {
     return (
-      
+
       <div className="App">
-        
-        <div className ='searchBarInput'>
-        <SearchBar />
+        <SearchBar
+          searchTerm={this.state.searchTerm}
+          searchPosts={this.searchPostsHandler}
+        />
+        <PostsContainer
+          posts={
+            this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.posts
+          }
+        />
       </div>
-      <div className = 'mainContent'>
-        <PostContainer />
-        
-      </div>
-    </div>
     );
   }
 }
