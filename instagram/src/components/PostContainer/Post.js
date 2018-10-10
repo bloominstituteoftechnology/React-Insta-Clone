@@ -14,9 +14,8 @@ class Post extends Component {
   }
   addLike = () =>
     this.setState({ likes: this.state.likes + 1, liked: !this.state.liked });
-  removeLike = () => {
+  removeLike = () =>
     this.setState({ likes: this.state.likes - 1, liked: !this.state.liked });
-  };
   render() {
     return (
       <div className="post">

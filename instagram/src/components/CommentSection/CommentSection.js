@@ -9,11 +9,12 @@ class CommentSection extends Component {
     this.state = {
       comments: props.comments,
       newComment: "",
-      timestamp: props.timestamp
+      timestamp: props.timestamp,
     };
   }
   handleSubmit = event => {
     event.preventDefault();
+    
     this.setState({
       comments: [
         ...this.state.comments,
@@ -21,7 +22,7 @@ class CommentSection extends Component {
           username: "johndoe",
           text: this.state.newComment
         }
-      ]
+      ],
     });
   };
   handleChange = event => this.setState({ newComment: event.target.value });
@@ -45,6 +46,7 @@ class CommentSection extends Component {
             name="comment"
             placeholder="Add a comment..."
             onChange={this.handleChange}
+            className={"comment-input"}
           />
         </form>
       </div>
