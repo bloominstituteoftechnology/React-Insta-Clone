@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data'
 import SearchBar from "./components/SearchBar/searchBar";
-import PostContainer from './components/PostContainer/PostContainer'
-
+// import PostContainer from './components/PostContainer/PostContainer'
+import PostsPage from './components/PostContainer/PostContainer.js'
 
 class App extends Component {
   constructor(){
@@ -36,15 +36,11 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar change={this.changeHandler} value={this.state.searchInput}/>
-        <div className="post-container">
-          {this.state.searchInput.length?this.state.searchReturn.map(item =>{
-            return(
-            <PostContainer key={item.timestamp} obj={item} />
-            )}):this.state.posts.map(item =>{
-            return(
-            <PostContainer key={item.timestamp} obj={item} />
-            )})}
-        </div>
+        <PostsPage 
+        searchInput={this.state.searchInput} 
+        searchReturn={this.state.searchReturn} 
+          
+        />
         </div>
       );
   }
