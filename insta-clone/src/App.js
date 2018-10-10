@@ -10,7 +10,6 @@ class App extends Component {
     this.state = {
       data: [],
       username: 'senior_one_more',
-      commentText: 'tester text',
       newComment: '',
     }
   }
@@ -30,10 +29,18 @@ class App extends Component {
   addComment = (event, index) => {
     event.preventDefault()
     let currentComments = this.state.data[index].comments
-    currentComments.push({username: 'seanOne', text: this.state.newComment})
+    currentComments.push({username: 'senior_one_more', text: this.state.newComment})
     this.setState({
       [this.state.data[index].comments]: currentComments,
       newComment: '',
+    })
+  }
+
+  addLike = (event, index) => {
+    event.preventDefault()
+    let currentCount = this.state.data[index].likes + 1
+    this.setState({
+      [this.state.data[index].likes]: currentCount,
     })
   }
 
@@ -44,10 +51,10 @@ class App extends Component {
         <PostContainer
           data={this.state.data}
           username={this.state.username}
-          commenttext={this.state.commentText}
           changeHandler={this.changeHandler}
           newComment={this.state.newComment}
           addComment={this.addComment}
+          addLike={this.addLike}
         />
       </div>
     );

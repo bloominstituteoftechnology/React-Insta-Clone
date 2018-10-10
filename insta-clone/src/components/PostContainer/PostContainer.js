@@ -9,11 +9,11 @@ const PostContainer = props => {
                 <Post
                     postdata={post}
                     username={props.username}
-                    commenttext={props.commenttext}
                     changeHandler={props.changeHandler}
                     newComment={props.newComment}
                     addComment={props.addComment}
                     postIndex={index}
+                    addLike={props.addLike}
                 />
               </div>;
         })

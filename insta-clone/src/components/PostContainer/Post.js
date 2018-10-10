@@ -7,7 +7,6 @@ import './PostContainer.css';
 
 
 const Post = props => {
-    // console.log(props.postdata)
     return <div className="post">
         <div className="postHeader">
           <img className="thumbnail" src={props.postdata.thumbnailUrl} alt="" />
@@ -16,7 +15,7 @@ const Post = props => {
         <img className="postImage" src={props.postdata.imageUrl} alt="" />
         <div className="likeSection">
           <div className="likeCommentIcons">
-            <img className="instaLike" src={InstaLike} alt='' />
+            <img onClick={(event) => props.addLike(event, props.postIndex)} className="instaLike" src={InstaLike} alt='' />
             <img className="instaComment" src={InstaComment} alt='' />
           </div>
           <div className="likeCount">{props.postdata.likes} likes</div>
@@ -25,11 +24,11 @@ const Post = props => {
           comments={props.postdata.comments}
           timestamp={props.postdata.timestamp}
           username={props.username}
-          commenttext={props.commenttext}
           changeHandler={props.changeHandler}
           newComment={props.newComment}
           addComment={props.addComment}
           postIndex={props.postIndex}
+          addLike={props.addLike}
         />
       </div>;
 }
