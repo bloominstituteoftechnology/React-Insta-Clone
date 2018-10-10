@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 
-import Coment from './Comment';
+import Coment from './Coment';
 import CommentForm from './CommentForm';
 
 import './commentsection.css';
