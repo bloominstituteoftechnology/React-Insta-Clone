@@ -48,7 +48,7 @@ class Login extends Component {
             />
           </FormGroup>
           <Button
-            bsSize="large"
+            size="large"
             onClick={this.handleLoginSubmit}
           >
             Login
