@@ -20,7 +20,7 @@ class App extends Component {
     if (post.username.includes(e.target.value)) {
         return post;
       } 
-      return post;
+      return posts;
     });
     this.setState({filter: posts});
   };
