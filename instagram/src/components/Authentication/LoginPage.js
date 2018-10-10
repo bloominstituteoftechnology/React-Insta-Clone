@@ -8,7 +8,7 @@ const LoginPage = props => {
           <img src="https://i.imgur.com/K0GVTfd.png" alt="" />
         </div>
         <div className="log-in-form-container">
-          <form action="">
+          <form onSubmit={props.handleSignupState}>
             <h1>Instagram</h1>
             <div className="facebook-login">
               <h2>
@@ -17,16 +17,11 @@ const LoginPage = props => {
               </h2>
             </div>
 
-            <input type="text" placeholder="Mobile Number or Email" />
-            <input type="text" placeholder="Full Name" />
-            <input type="text" placeholder="username" />
-            <input type="password" placeholder="Password" />
-            <input
-              type="submit"
-              id="sign-up-btn"
-              value="Sign Up"
-              onClick={props.handleSignupState}
-            />
+            <input type="text" placeholder="Mobile Number or Email" required />
+            <input type="text" placeholder="Full Name" required />
+            <input type="text" placeholder="username" required />
+            <input type="password" placeholder="Password" required />
+            <input type="submit" id="sign-up-btn" value="Sign Up" />
             <p>
               By signing up, you agree to our Terms, Data Policy and Cookies
               Policy.

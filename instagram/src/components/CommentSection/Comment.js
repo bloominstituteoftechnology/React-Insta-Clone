@@ -5,15 +5,23 @@ class Comment extends React.Component {
     super(props);
     this.state = {
       comments: [],
-      commentInput: ""
+      commentInput: "",
+      likes: ""
     };
   }
 
   componentDidMount() {
     this.setState({
-      comments: this.props.comments
+      comments: this.props.comments,
+      likes: this.props.likes
     });
   }
+
+  handleLikes = e => {
+    this.setState(prevState => ({
+      likes: prevState.likes + 1
+    }));
+  };
 
   // comment form handle change
   formChange = e => {
@@ -41,13 +49,13 @@ class Comment extends React.Component {
     return (
       <div className="post-comment-container">
         <div className="comment-icons">
-          <i className="far fa-heart" />
+          <i className="far fa-heart" onClick={this.handleLikes} />
           <i className="far fa-comment" />
           <i className="far fa-share-square" />
         </div>
         <div className="comments">
           <div className="likes">
-            {this.props.likes} <span>likes</span>
+            {this.state.likes} <span>likes</span>
           </div>
           <div className="post-comments">
             {this.state.comments.map((comment, i) => (
