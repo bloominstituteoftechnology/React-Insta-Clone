@@ -6,7 +6,7 @@ const SearchBar = props => {
         <div className= "header">
         <h1>Instagram (clone)</h1>
         <form>
-            <input value="Search"></input>
+            <input value="Search" onKeyDown={props.searchPosts} />
         </form>
         </div>
     )

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar.js';
-import PostContainer from './components/PostContainer/PostContainer.js'
-import dummyData from './dummy-data'
+import PostsPage from './components/PostContainer/PostsPage.js'
+import Authenticate from './Authentication/Authenticate'
+
 import './App.css';
 
 class App extends Component {
@@ -9,23 +10,29 @@ class App extends Component {
     console.log("constructor invoked")
     super()
     this.state = {
-      postData: dummyData,
+      postData: [],
+      filteredPosts: []
 
     }
   }
-  componentDidMount() {
-    console.log("CDM invoked")
 
+  searchPostsHandler = e => {
+    const postData =this.state.postData.filter(p => {
+      if(p.username.includes(e.target.value)) {
+        return p
+      }
+    })
+    this.setState({filteredPosts: postData})
   }
   render() {
     console.log("render invoked")
     return (
       <div className="App">
         <header className="App-header">
-        <SearchBar />
+        <SearchBar searchTerm={this.state.searchTerm} searchPosts={this.searchPostsHandler} />
         </header>
         <section >
-          <PostContainer post={this.state.postData} />
+          <PostsPage post={this.state.postData} />
         </section>
 
 
