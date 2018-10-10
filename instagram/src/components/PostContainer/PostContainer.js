@@ -9,7 +9,8 @@ const PostContainer = props => {
       <h4>____________</h4>
       <div className="Post-user-row">
         <span>
-          <img className="Post-thumbnail"
+          <img
+            className="Post-thumbnail"
             src={props.thumbnailUrl}
             alt="user thumbnail"
             // width={30}
@@ -19,38 +20,34 @@ const PostContainer = props => {
         <span>{props.username}</span>
       </div>
       <div className="Post-image-container">
-        <img className="Post-image"src={props.imageUrl} alt="Post image" />
+        <img className="Post-image" src={props.imageUrl} alt="Post image" />
         {/* or use class name in css */}
       </div>
       <div className="Icon-row">
-      {/* <img
+        {/* <img
           className="SearchBar-icons"
           src="https://www.flaticon.com/free-icon/like_149217"
           alt="heart icon"
         />{/* designed by Smashicons
         https://smashicons.com/ from Flaticon */}
-     <img className="Icon" src="../assets/like-heart.png" alt="Heart icon" />
+        <img className="Icon" src="../assets/like-heart.png" alt="Heart icon" />
       </div>
-      <div className="Stats-row">
-        {props.likes} likes 
-      </div>
+      <div className="Stats-row">{props.likes} likes</div>
       <div className="Comments">
-        <CommentSection commentProps={props.comments}  />
+        <CommentSection commentProps={props.comments} />
       </div>
-      <div className="Timestamp">
-       {props.timestamp}
-      </div>
-      <div >
-   <form className="AddComment">
-      <input 
-      className="commentInput"
-      name="addComment"
-      type="text"
-      placeholder="Add a comment..."
-      // onChange={this.handleInputChange}
-      />
-      <input type="submit" value="Add" />
-    </form>
+      <div className="Timestamp">{props.timestamp}</div>
+      <div>
+        <form className="AddComment">
+          <input
+            className="commentInput"
+            name="addComment"
+            type="text"
+            placeholder="Add a comment..."
+            // onChange={this.handleInputChange}
+          />
+          <input type="submit" value="Add" />
+        </form>
       </div>
     </div>
   );
