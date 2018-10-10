@@ -4,7 +4,7 @@ import PostContainer from "./components/PostContainer/PostContainer";
 import dummyData from "./dummy-data.js";
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import './App.css';
-
+let data = dummyData;
 class App extends Component {
   constructor(props) {
     super(props);
@@ -13,9 +13,9 @@ class App extends Component {
       search: "",
     };
   }
-
+  
   componentDidMount() {
-    this.setState({dummyData: dummyData});
+    this.setState({dummyData: data});
   }
 
   searchInputHandler = event => {
@@ -24,11 +24,30 @@ class App extends Component {
 
   searchPosts = event => {
     event.preventDefault();
-    this.setState({ 
-      dummyData: this.state.dummyData.filter(post => post.username === this.state.search),
-      search: ""
-    });
-  }
+    let searchInput = this.state.search;
+
+    if (!searchInput) {
+        this.setState({
+          dummyData: data, 
+          search: ""
+        });
+      }
+    else {
+        let posts = dummyData;
+        let searchedPosts = posts.filter(post => {
+          return post.username.includes(searchInput);
+    })
+      this.setState({dummyData: searchedPosts});
+        }
+}
+      // else {
+      //   this.setState({
+      //     dummyData: dummyData,
+      //     dummyData: filtered,
+      //   })
+      // }
+    
+
 
   render() {
     return (
