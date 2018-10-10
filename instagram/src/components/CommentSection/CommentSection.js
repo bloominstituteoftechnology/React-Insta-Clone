@@ -1,23 +1,67 @@
 import React from 'react';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
+import CommentInput from './CommentInput';
 
 class CommentSection extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+
+        super(props);
+        console.log("comment section props", this.props);
         this.state = {
-            comments: props.comments,
+            comments: this.props.comments,
             comment: ''
         }
     }
-    render(){
+
+    componentDidMount() {
+        console.log("comment section props", this.props);
+        const id = this.props.postId;
+        if (localStorage.getItem(id)) {
+            this.setState({
+                comments: JSON.parse(localStorage.getItem(this.props.postId))
+            });
+        } else {
+            this.addComments();
+        }
+    }
+
+    componenetWillUnmount() {
+        this.addComments();
+    }
+
+    addComments = () => {
+        JSON.stringify(this.state.comments)
+    };
+
+    commentHandler = event => {
+        this.setState({ comment: event.target.value });
+    };
+
+    submitComment = event => {
+        event.preventDefault();
+        const newComment = { 
+            text: this.state.comment, username: 'Pedro Montesinos' 
+        };
+        const comments = this.state.comments.slice();
+        comments.push(newComment);
+        this.setState(
+            { comments, comment: '' }
+        );
+        setTimeout(() => {
+            this.addComments();
+        }, 300);
+    };
+
+    render() {
         return (
             <div>
-                {props.comments.map(comment => {
-                    return (
-                        <Comment comment={comment.text} username={comment.username} />
-                    );
-                })}
+                {this.props.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
+                <CommentInput
+                    comment={this.state.comment}
+                    submitComment={this.submitComment}
+                    changeComment={this.commentHandler}
+                />
             </div>
         );
     }

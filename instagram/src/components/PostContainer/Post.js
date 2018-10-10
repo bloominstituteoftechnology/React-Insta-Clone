@@ -5,12 +5,12 @@ const Post = props => {
     return(
         <div className="post"> 
             <div className="thumbnail-profile">
-                <img src={props.thumbnail} alt="post"/>
+                <img src={props.thumbnail} alt="thumbnail"/>
                 <p>{props.username}</p>
             </div>
 
             <div className="image">
-                <img src={props.image} />
+                <img src={props.image} alt="user-pic" />
             </div>
         </div>
     );
