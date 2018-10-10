@@ -8,7 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      filteredposts: []
     };
   }
 
@@ -18,23 +19,23 @@ class App extends Component {
     }, 800);
   }
 
-  // addNewComment = (event, idx) => {
-  //   event.preventDefault();
-  //   const copyState = this.state.data.map((post, idx) => {
-  //     if (idx.toString() === event.target.id) {
-  //     }
-  //   });
-  //   this.setState({});
-  // }
+  searchFilter = event => {
+    console.log(event.target.value);
+    const post = this.state.data.filter(p => {
+      if (p.username.includes(event.target.value)) {
+        return p;
+      }
+    });
+    this.setState({ filteredposts: post });
+    console.log("search filter fired");
+  };
 
   render() {
     return (
       <div className="container">
-        <header>
-          <SearchBar />
-        </header>
+        <SearchBar searchFilter={this.searchFilter} />
         {this.state.data.map(post => {
-          return <PostContainer post={post} newComment={this.addNewComment} />;
+          return <PostContainer post={post} />;
         })}
       </div>
     );

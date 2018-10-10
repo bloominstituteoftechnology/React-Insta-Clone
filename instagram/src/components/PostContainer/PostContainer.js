@@ -7,9 +7,26 @@ class PostContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      comments: props.post.comments,
       newComment: ""
     };
+    console.log(props.post.comments);
   }
+
+  changeHandler = event => {
+    console.log(" changehandler fired");
+    this.setState({ newComment: event.target.value });
+  };
+
+  addNewComment = event => {
+    console.log("add comment fired");
+    event.preventDefault();
+    const newComment = { username: "AdamHinkley", text: this.state.newComment };
+    const comments = this.state.comments.slice();
+    comments.push(newComment);
+    this.setState({ comments, newComment: "" });
+    console.log("add comment:", comments);
+  };
 
   render() {
     return (
@@ -27,11 +44,11 @@ class PostContainer extends Component {
         </div>
         <p className="likes">{this.props.post.likes} likes</p>
 
-        {this.props.post.comments.map((comment, index) => {
+        {this.state.comments.map((comment, index) => {
           return <CommentsContainer comments={comment} key={index} />;
         })}
-        <form>
-          <input type="text" placeholder="add new comment" />
+        <form onSubmit={this.addNewComment}>
+          <input onChange={this.changeHandler} value={this.newComment} type="text" placeholder="add new comment" />
         </form>
       </div>
     );

@@ -1,14 +1,14 @@
 import React from "react";
 import "./SearchBar.css";
 
-const Searchbar = props => {
+const SearchBar = props => {
   return (
     <div className="search-bar-container">
       <img className="camera" src={require("../PostContainer/img/insta_icon.png")} alt="logo" />
       <img className="instagram" src={require("../PostContainer/img/insta_logo.png")} alt="logo" />
       <div className="search-form">
         <form>
-          <input className="search-input" type="text" placeholder="Search" />
+          <input className="search-input" type="text" placeholder="Search" onKeyDown={props.searchFilter} />
         </form>
       </div>
       <div className="search-bar-left-icons-container">
@@ -20,4 +20,4 @@ const Searchbar = props => {
   );
 };
 
-export default Searchbar;
+export default SearchBar;
