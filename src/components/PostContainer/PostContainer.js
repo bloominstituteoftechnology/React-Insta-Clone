@@ -11,17 +11,18 @@ import './PostContainer.css';
 class PostContainer extends Component {
     // Props taken in:
     // key: 0
-    // username: "philzcoffee",
-    // thumbnailUrl:
-    // imageUrl:
-    // likes: 400,
+    // username: "",
+    // thumbnailUrl:"",
+    // imageUrl:"",
+    // likes: 0,
     // timestamp: "July 17th 2017, 12:42:40 pm",
     // comments: []
-    // likesHandler: ()
+    // mergeData: fn
+    
     constructor(props) {
         super(props);
         this.state = {...props, input: ""};
-        console.log("PostContainer: ", this.state );
+        //console.log("PostContainer: ", this.state );
     };
 
     /* Increment number of likes for this post */    
@@ -40,20 +41,22 @@ class PostContainer extends Component {
                 username: "Guest",
                 text: event.target.value
             });
-            console.log("updatedComments", updatedComments);
+            //console.log("updatedComments", updatedComments);
             this.setState({
                 comments: updatedComments,
                 input: ""
-            }, console.log(this.state.comments));
+            });
+
+            // Merge with all data to set local storage
+            this.props.mergeData(this.state.id, this.state.comments);
+
             /* Clear the form entry */
             event.target.value = "";
         }
         else {
-            console.log(event.target.value);
             // Keep recording
-            this.setState({ input: event.target.value }, console.log(this.state.input));
+            this.setState({ input: event.target.value });
         }
-        console.log("input", this.state);
     };
 
 
