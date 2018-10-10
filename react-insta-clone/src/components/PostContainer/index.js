@@ -7,10 +7,15 @@ class PostContainer extends Component {
   constructor(props) {
     super(props);
   }
+
+
   render() {
     const nickname = this.props.username;
     const avatar = this.props.avatar;
     const image = this.props.image;
+    const caption = this.props.caption;
+
+
 
 
     return <article className="Post" ref="Post">
@@ -30,11 +35,7 @@ class PostContainer extends Component {
         </div>
       </div>
       <div className="Post-caption">
-        <strong>Chris</strong>
-        !
-
-
-        <CommentSection />
+        <CommentSection caption={caption}/>
       </div>
     </article>;
 
