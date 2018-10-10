@@ -2,7 +2,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 100px;
     width: 90%;
     position: fixed;
     left: 50%;

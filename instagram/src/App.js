@@ -18,9 +18,6 @@ export default class App extends Component {
     this.setState({
       posts: dummyData
     })
-  }
-  componentWillUpdate(nextProps, state) {
-    localStorage.setItem('posts', JSON.stringify(state.posts))
   }  
   searchInputHandler = e => {
     this.setState({

@@ -14,19 +14,20 @@ export default class CommentSection extends React.Component {
             holder: "",
             bool: false
         }
+        //window.unbeforeunload = this.savingComments;
     }
     componentDidMount() {
         this.setState({
             comments: this.props.comments,
             likes: this.props.likes
         })
-        // localStorage.getItem('comments') && this.setState({
-        //     comments: JSON.parse(localStorage.getItem('comments')),                
-        // })
+        localStorage.getItem('comments') && this.setState({
+            comments: JSON.parse(localStorage.getItem('comments')),                
+        })
     }
-    // componentWillUpdate(nextProps, state) {
-    //     localStorage.setItem('comments', JSON.stringify(state.comments))
-    // }
+    savingComments = () => {
+        localStorage.setItem('comments', JSON.stringify(this.state.comments))
+    }
     inputHandler = e => {
         const { value } = e.target;
         this.setState({
@@ -38,6 +39,7 @@ export default class CommentSection extends React.Component {
         this.setState({
             comments: [...this.state.comments, {text: this.state.holder}], holder: ""
         })
+        this.savingComments()      
     }
     likeHandler = (e) => {        
         this.setState({
