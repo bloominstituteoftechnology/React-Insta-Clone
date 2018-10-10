@@ -14,6 +14,7 @@ class PostContainer extends React.Component {
         }
     }
 
+    //set commentInputValue in state to what the user types in comment bar
     inputHandler = (event) => {
         event.preventDefault();
         this.setState({
@@ -21,6 +22,7 @@ class PostContainer extends React.Component {
         })
       }
     
+    //concat the new comment with the username to the comments value in state
       submitHandler = (event) => {
         event.preventDefault();
         let newComment = this.state.commentInputValue;
@@ -30,6 +32,7 @@ class PostContainer extends React.Component {
         })
       }
 
+    //increment likes in state
       likeHandler = () => {
           let addLike = this.state.likes
           this.setState({

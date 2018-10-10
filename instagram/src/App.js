@@ -16,6 +16,7 @@ class App extends Component {
     }
   }
 
+    //setup the username/password on localStorage
   componentDidMount() {
     localStorage.setItem('username', 'Brandon');
     localStorage.setItem('password', 'qwerty');

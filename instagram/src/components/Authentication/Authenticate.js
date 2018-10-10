@@ -1,6 +1,4 @@
 import React from 'react';
-import PostsPage from '../PostContainer/PostsPage';
-import Login from '../Login/Login'
 
 const Authenticate = PostComponent => LoginComponent => {
     return class WrappedComponent extends React.Component {
@@ -13,18 +11,21 @@ const Authenticate = PostComponent => LoginComponent => {
             }
         }
 
+        //set loginValue in state as user types in Username input field
         loginValueHandler = (event) => {
             this.setState({
               loginValue: event.target.value
             })
           }
         
+          //same as above, just for the password input field
           passwordValueHandler = (event) => {
             this.setState({
               passwordValue: event.target.value
             })
           };
 
+          // submit button function, checks if username/password in state matches whats on local storage
           submitHandler = () => {
               const username = localStorage.getItem('username');
               const password = localStorage.getItem('password');

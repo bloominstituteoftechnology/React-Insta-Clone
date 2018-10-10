@@ -15,10 +15,12 @@ class PostsPage extends Component {
     }
   }
 
+  //set data to dummyData
   componentDidMount() {
     this.setState({ data: dummyData });
   }
 
+  //set searchValue in state to what the user types into search bar
   searchInputHandler = (event) => {
     event.preventDefault();
     this.setState({
@@ -26,6 +28,8 @@ class PostsPage extends Component {
     })
   }
 
+  //grab the value of searchValue and filter the data to only show matches (needs to work better)
+  //includes() probably isnt what i should be using.  will circle back around at the end if i have time
   searchSubmitHandler = (event) => {
     event.preventDefault();
     let searchValue = this.state.searchValue
