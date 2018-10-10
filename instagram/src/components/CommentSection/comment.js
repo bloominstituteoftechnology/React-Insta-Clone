@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-let Comment = props => {
+const Comment = props => {
     return (
         <div className="comment">
             <h2>{props.comment.username}</h2>
