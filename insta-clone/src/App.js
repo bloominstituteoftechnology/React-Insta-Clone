@@ -11,6 +11,7 @@ class App extends Component {
       data: [],
       username: 'senior_one_more',
       commentText: 'tester text',
+      newComment: '',
     }
   }
 
@@ -20,11 +21,23 @@ class App extends Component {
     })
   }
 
+  changeHandler = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer data={this.state.data} username={this.state.username} commenttext={this.state.commentText}/>
+        <PostContainer
+          data={this.state.data}
+          username={this.state.username}
+          commenttext={this.state.commentText}
+          changeHandler={this.changeHandler}
+          newComment={this.state.newComment}
+        />
       </div>
     );
   }

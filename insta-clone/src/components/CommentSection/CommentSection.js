@@ -13,7 +13,12 @@ const CommentSection = props => {
             </div>;
         })}
         <p className="timeStamp">{props.timestamp}</p>
-        <NewComment username={props.username} commenttext={props.commenttext} />
+        <NewComment
+            username={props.username}
+            commenttext={props.commenttext}
+            changeHandler={props.changeHandler}
+            newComment={props.newComment}
+        />
       </div>;
 }
 

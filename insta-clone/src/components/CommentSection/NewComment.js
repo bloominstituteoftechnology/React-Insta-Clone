@@ -3,7 +3,13 @@ import './CommentSection.css';
 
 function NewComment(props) {
     return <div className="newCommentSection">
-        <input className="newcomment" placeholder="Add a comment..." />
+        <input
+            className="newcomment"
+            name='newComment'
+            placeholder="Add a comment..."
+            value={props.newComment}
+            onChange={props.changeHandler}
+        />
         <button>&#xb7;&#xb7;&#xb7;</button>
       </div>;
 }

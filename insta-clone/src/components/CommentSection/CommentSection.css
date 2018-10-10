@@ -36,9 +36,16 @@
 }
 
 .newCommentSection input {
+    padding-left: 1rem;
     width: 100%;
     border: none;
     line-height: 4rem;
+}
+
+.newCommentSection input:focus {
+    background-color: white;
+    border: none;
+
 }
 
 .newCommentSection button {
