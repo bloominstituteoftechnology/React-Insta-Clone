@@ -38,7 +38,7 @@ class Login extends Component {
 					/>
 					<input
 						onChange={this.userPassword}
-						type="text"
+						type="password"
 						value={this.state.password}
 					/>
 					<button>Login</button>
