@@ -1,38 +1,30 @@
 import React, { Component } from "react";
 import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBar";
-import dummyData from "./dummy-data";
-import PostContainer from "./components/PostContainer/PostContainer";
+import PostsPage from "./components/PostContainer/PostsPage";
+import Auth from "./components/Authentication/Authenticate";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      loggedIn: false
     };
   }
 
-  componentDidMount() {
-    this.setState({
-      posts: dummyData
-      // comments: dummyData.map(comment => comment.comments)
-    });
-    // console.log(dummyData.map(comment => comment.comments));
-  }
+  // component did mount set state
+  componentDidMount() {}
   render() {
-    const posts = this.state.posts;
-    return (
-      <div>
-        <SearchBar />
-        {posts.map((post, i) => (
-          <PostContainer
-            key={i}
-            // posts={this.state.posts}
-            post={post}
-          />
-        ))}
-      </div>
-    );
+    if (this.state.loggedIn === false) {
+      return <Auth />;
+    } else {
+      return (
+        <div>
+          <SearchBar />
+          <PostsPage />
+        </div>
+      );
+    }
   }
 }
 

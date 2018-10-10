@@ -1,0 +1,106 @@
+@font-face {
+  font-family: OilBat;
+  src: url("../../components/SearchBar/OilBats.ttf");
+}
+
+.log-in-container {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 50px;
+  background: #fafafa;
+}
+
+.log-in-phone-container {
+  width: 50%;
+  background-color: #fafafa;
+}
+
+.log-in-wrapper {
+  max-width: 935px;
+  margin: auto;
+  display: flex;
+}
+
+.log-in-form-container {
+  /* border: 1px solid lightgray; */
+  width: 40%;
+}
+.log-in-form-container h1 {
+  font-family: OilBat;
+  text-align: center;
+  margin: 10px auto;
+}
+.log-in-form-container h2 {
+  background: #3897f0;
+  border-color: #3897f0;
+  border-radius: 5px;
+  width: 80%;
+  margin: auto;
+  color: white;
+  font-size: 1rem;
+  padding: 6px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.log-in-form-container h2 i {
+  background: white;
+  color: #3897f0;
+  padding: 2px 4px;
+  margin-right: 5px;
+}
+.log-in-form-container form {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid lightgrey;
+  padding-bottom: 20px;
+}
+
+.log-in-form-container input {
+  width: 80%;
+  margin: 3px auto;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+}
+.log-in-form-container #sign-up-btn {
+  background: #3897f0;
+  border-color: #3897f0;
+  border: none;
+  border-radius: 5px;
+  width: 80%;
+  margin: 10px auto;
+  color: white;
+  font-size: 1rem;
+  padding: 6px;
+  text-align: center;
+}
+
+.log-in-form-container p {
+  max-width: 200px;
+  text-align: center;
+  margin: auto;
+  opacity: 0.7;
+}
+.log-in-form-container .get-the-app h6 {
+  text-align: center;
+  margin: 10px auto;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.log-in-form-container .get-the-app img {
+  max-width: 120px;
+  height: 40px;
+  margin: 5px 3px;
+}
+
+.log-in-form-container .log-in {
+  border: 1px solid lightgrey;
+  margin: 20px auto 10px;
+  padding: 20px;
+  width: 100%;
+  background: #fff;
+}
+.get-the-app {
+}

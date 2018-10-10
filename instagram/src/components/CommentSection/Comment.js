@@ -13,9 +13,9 @@ class Comment extends React.Component {
     this.setState({
       comments: this.props.comments
     });
-    console.log(this.state.comment);
   }
 
+  // comment form handle change
   formChange = e => {
     this.setState({
       commentInput: e.target.value
@@ -38,7 +38,6 @@ class Comment extends React.Component {
   };
 
   render() {
-    console.log(this.props.comments);
     return (
       <div className="post-comment-container">
         <div className="comment-icons">
