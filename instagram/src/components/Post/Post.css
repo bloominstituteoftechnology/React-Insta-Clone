@@ -1,17 +1,17 @@
 .flex-column-container {
-    width: 400px;
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
+	width: 400px;
+	max-width: 100%;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
 }
 .thumbnail {
-    border-radius: 50%;
-    width: 5%;
-    height: 40px;
-    margin: 0 10px;
+	border-radius: 50%;
+	width: 5%;
+	height: 40px;
+	margin: 0 10px;
 }
 .img {
-    margin-left: 110px;
-    width: 60%;
+	margin-left: 110px;
+	width: 60%;
 }

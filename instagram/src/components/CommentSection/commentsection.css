@@ -1,15 +1,19 @@
 .comment {
     height: 29px;
-    align-self: flex-end;
-    border-left: 2px solid gray;
     padding-left: 15px;
 }
-.likeheart {
+.loveheart {
     height: 50px;
+    margin-left: 100px;
     }
-.comment-container {
+.comment-section {
+    padding-bottom: 5px;
     margin-left: 100px;
 }
 .comment-input {
     margin-left: 100px;
+}
+.likes {
+    margin-left: 100px;
+    font-weight: bold;
 }

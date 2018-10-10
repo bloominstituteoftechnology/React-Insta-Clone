@@ -1,18 +1,28 @@
 import React from 'react';
 import Logo from './Logo';
-import Search from './Search';
 import Menu from './Menu';
 import './searchbar.css';
 
-
-const SearchBar = (props) => {
-    return (
-        <div className='searchBar'>
-            <Logo />
-            <Search />
-            <Menu />
-        </div>
-    );
+class SearchBar extends React.Component {
+	handleChange = e => {
+		this.props.filterPosts(e.target.value);
+	};
+	render() {
+		return (
+			<>
+				<div className="searchBar">
+					<Logo />
+					<input
+						className="search"
+						type="text"
+						placeholder="Search"
+						onChange={this.handleChange}
+					/>
+					<Menu />
+				</div>
+			</>
+		);
+	}
 }
 
 export default SearchBar;
