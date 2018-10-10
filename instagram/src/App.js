@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import PostsPage from "./components/PostsPage";
+import PostsPage from "./components/PostsContainer/PostsPage";
 import "./App.css";
+import Authenticate from "./components/Authentication/Authenticate";
 
-class App extends Component {
+class App extends React.Component {
   constructor() {
     super();
     this.state = {};
