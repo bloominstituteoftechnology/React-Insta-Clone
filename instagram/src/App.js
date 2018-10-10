@@ -8,8 +8,8 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      posts : [],
-      userinput: ''
+      posts : dummyData,
+      userinput: '',
     }
   }
 
@@ -19,27 +19,24 @@ class App extends Component {
     })
   }
 
-  filter = (event) => {
+  searchHandler = (event) => {
     event.preventDefault();
-    
-    this.setState({
-      posts: this.state.posts.filter((obj,i,arr) => {
-        if (obj.username === this.state.userinput) {
-          return obj.username
-        } else if (obj.username !== this.state.userinput){
-          return arr.posts
+
+    if ( event.keyCode === 13 && event.target.value.length > 0 ) {
+          let newData = this.state.posts.filter( (posts) => {
+            return posts.username === event.target.value;
+          })
+          this.setState({ posts: newData });
+          event.target.value = "";
         }
       }
-    )
-    })
-  }
+    
+  
 
   render() {
     return (
       <div className="App">
-        <SearchBar searchInput={this.state.searchData} 
-          searchHandler={this.searchHandler} 
-          filter={this.filter} />
+        <SearchBar searchHandler = {this.searchHandler} />
         <PostContainer posts={this.state.posts}/>
       </div>
     );

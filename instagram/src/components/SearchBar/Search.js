@@ -1,34 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './searchbar.css';
 
-class Search extends Component {
-    constructor() {
-        super();
-        this.state = {
-            userinput: '',
-            searchData: []
-        }
-    }
 
-    searchHandler = (e) => {
-        this.setState({
-            userinput: e.target.value
-        })
-    }
+const Search = (props) => {
 
-    
-
-    render() {
-        return (
-            <form onSubmit = {(e) => {this.state.filter(e)}}>
-                <input type="text" 
-                    placeholder = " Search... "  
-                    value = {this.state.userinput}  
-                    onChange = {this.searchHandler} />
-            </form>
-        )
-    }
+    return (
+        <input type="search" placeholder = " Search... " onKeyDown = {props.searchHandler} />
+    )
 }
+
 
 
 export default Search;

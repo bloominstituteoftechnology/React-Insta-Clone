@@ -13,12 +13,6 @@ class PostContainer extends Component {
           posts : []
         }
       }
-    
-      componentDidMount() {
-        this.setState ({
-            posts : dummyData
-        })
-      }
 
       render() {
 

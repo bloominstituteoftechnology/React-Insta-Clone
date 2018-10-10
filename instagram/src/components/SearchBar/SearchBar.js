@@ -7,12 +7,12 @@ import LikeButton from './LikeButton';
 import PersonButton from './PersonButton';
 import './searchbar.css';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <div className = 'header'>
             <Logo />
             <WordLogo />
-            <Search />
+            <Search searchHandler = {props.searchHandler} />
             <GPSIcon />
             <LikeButton />
             <PersonButton />
