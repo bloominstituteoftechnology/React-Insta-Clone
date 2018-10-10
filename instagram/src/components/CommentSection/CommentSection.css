@@ -18,9 +18,11 @@
     display: flex;
     justify-content: space-between;
 }
-.comments-add a {
+.comments-add input {
     font-weight: bold;
-    color: #888;
+    border: none;
+    font-size: 1rem;
+    width: 100%;
 }
 .comments-unknown-dots {
     font-weight: bold;
