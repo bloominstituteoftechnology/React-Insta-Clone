@@ -1,5 +1,6 @@
 import React from "react";
- class LoginPage extends React.Component {
+
+class LoginPage extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -7,7 +8,8 @@ import React from "react";
       password: ""
     };
   }
-   login() {
+
+  login = () => {
     //save username and password to state
     localStorage.setItem("username", this.state.username);
     //change state
@@ -15,13 +17,15 @@ import React from "react";
       username: "",
       password: ""
     });
-  }
-   changeHandler = (key, value) => {
+  };
+
+  changeHandler = (key, value) => {
     this.setState({
       [key]: value
     });
   };
-   render() {
+
+  render() {
     return (
       <div>
         <form onSubmit={this.login}>
@@ -29,14 +33,18 @@ import React from "react";
             type="text"
             className="login-username"
             placeholder="Username"
-            onChange={this.changeHandler("username", event.target.value)}
+            onChange={event =>
+              this.changeHandler("username", event.target.value)
+            }
             value={this.state.username}
           />
           <input
             type="text"
             className="login-password"
             placeholder="Password"
-            onChange={this.changeHandler("password", event.target.value)}
+            onChange={event =>
+              this.changeHandler("password", event.target.value)
+            }
             value={this.state.password}
           />
           <button className="login-button">Login</button>
@@ -45,4 +53,5 @@ import React from "react";
     );
   }
 }
- export default LoginPage;
+
+export default LoginPage;
