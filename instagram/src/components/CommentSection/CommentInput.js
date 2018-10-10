@@ -3,7 +3,7 @@ import React from 'react';
 const CommentInput = props => {
   return (
     <div>
-      <input placeholder="add a comment" />
+      <input placeholder="Add a comment..." />
     </div>
   )
 }
