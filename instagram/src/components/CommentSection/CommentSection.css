@@ -1,0 +1,12 @@
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  height: 25px;
+}
+
+.comments-username {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  margin-bottom: -5px;
+}

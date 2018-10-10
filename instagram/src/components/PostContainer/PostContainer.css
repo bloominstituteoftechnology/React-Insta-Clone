@@ -35,4 +35,9 @@
   height: 20px;
   width: 20px;
   margin-left: 4px;
+  margin-bottom: -8px;
+}
+
+form {
+  margin-left: 10px;
 }

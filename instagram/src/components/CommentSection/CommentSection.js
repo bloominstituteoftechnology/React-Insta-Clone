@@ -1,30 +1,10 @@
 import React, { Component } from "react";
-
-// class CommentsContainer extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       newComment: "",
-//       comments: this.props.comments
-//     };
-//   }
-
-//   render() {
-//     console.log(this.props.comments);
-//     return (
-//       <div className="comment-container">
-//         <h3>{this.props.comments.username}</h3>
-//         <p>{this.props.comments.text}</p>
-//       </div>
-//     );
-//   }
-// }
+import "./CommentSection.css";
 
 const CommentsContainer = props => {
-  console.log(props.comments);
   return (
     <div className="comment-container">
-      <h3>{props.comments.username}</h3>
+      <p className="comments-username">{props.comments.username}</p>
       <p>{props.comments.text}</p>
     </div>
   );
