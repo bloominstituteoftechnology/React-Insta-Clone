@@ -1,0 +1,28 @@
+.comment-text {
+	text-align: left;
+	padding: 2px;
+	margin-left: 4px;
+}
+
+.comment {
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.user {
+	font-weight: bold;
+	font-size: 14px;
+	padding-left: 2%;
+}
+
+.inputContainer {
+	padding: 2%;
+}
+.inputComment {
+	width: 80%;
+	display: flex;
+	padding: 1%;
+	margin-left: 1%;
+	margin-bottom: 2%;
+	border: 0;
+}
