@@ -1,26 +1,30 @@
 import React from "react";
 import "./Header.css";
 
-class Header extends React.Component {
-  render() {
-    return (
-      <nav className="Nav">
-        <div className="Nav-menus">
-          <div className="Nav-brand">
-            <a className="Nav-brand-logo" href="/">
-              Instagram
-            </a>
-          </div>
-          <div className="Nav-search">
-            <input className="Search" type="text" placeholder="Search" />
-          </div>
-
-          <div className="Nav-icon-feed" />
-          <div className="Nav-icon-heart" />
-          <div className="Nav-icon-profile" />
+const Header = props => {
+  return (
+    <nav className="Nav">
+      <div className="Nav-menus">
+        <div className="Nav-brand">
+          <a className="Nav-brand-logo" href="/">
+            Instagram
+          </a>
         </div>
-      </nav>
-    );
-  }
-}
+        <div className="Nav-search">
+          <input
+            className="Search"
+            type="text"
+            placeholder="Search"
+            onKeyDown={props.searchPosts}
+          />
+        </div>
+
+        <div className="Nav-icon-feed" />
+        <div className="Nav-icon-heart" />
+        <div className="Nav-icon-profile" />
+      </div>
+    </nav>
+  );
+};
+
 export default Header;
