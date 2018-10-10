@@ -1,15 +1,26 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import Login from '../components/Login/Login.js';
 
-const Authenticate = NewComponent => class extends Component {
-    constructor() {
-        super();
-    }
+const Authenticate = PassedComponent =>
+    class extends Component {
+        constructor() {
+            super();
 
-    render() {
-        return (
-            <NewComponent />
-        )
-    }
-};
+            this.state = {
+                loggedIn: false,
+            }
+        }
+
+        
+
+        render() {
+            if (this.state.loggedIn === false) {
+                return <Login />
+            } else {
+                return <PassedComponent />
+            }
+
+        }
+    };
 
 export default Authenticate;

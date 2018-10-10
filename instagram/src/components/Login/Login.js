@@ -1,10 +1,11 @@
 import React from 'react';
+import './Login.css';
 
 const Login = (props) => {
     return (
-        <div className='login-info'>
+        <form className='login-info'>    
             <input
-                className='username'
+                className='user-login'
                 placeholder='Username...'
             />
             <input
@@ -12,7 +13,7 @@ const Login = (props) => {
                 placeholder='Password...'
             />
             <button >Login</button>
-        </div>
+        </form>
     )
 }
 
