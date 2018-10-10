@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../IG-assets/iglogo.png';
 import Camera from '../IG-assets/IGLogo.svg'
 import './SearchBar.css'
+import "@fortawesome/fontawesome-free";
 
 
 const SearchBarContainer = () => {

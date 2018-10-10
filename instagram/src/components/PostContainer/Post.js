@@ -6,10 +6,10 @@ import './Post.css';
 const Post = props => {
     return (
         <div className="post-border">
-      <PostHeader
-        username={props.post.username}
-        thumbnailUrl={props.post.thumbnailUrl}
-      />
+          <PostHeader
+            username={props.post.username}
+            thumbnailUrl={props.post.thumbnailUrl}
+        />
       <div className="post-img-wrapper">
         <img
           alt="post thumbnail"
