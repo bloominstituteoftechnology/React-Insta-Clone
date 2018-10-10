@@ -18,13 +18,13 @@ class CommentSection extends React.Component {
   addNewComment = (event, index) => {
     //function needs to add the comment that is on the event object to the post at the index number
     event.preventDefault();
-    this.saveState();
+
     if (this.state.newComment !== "") {
       let newCommentList = [
         ...this.state.comments,
         {
           id: index + 1,
-          username: "BillyEveryTeen",
+          username: localStorage.getItem("username"),
           text: this.state.newComment
         }
       ];
