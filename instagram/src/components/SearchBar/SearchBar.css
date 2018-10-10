@@ -1,5 +1,13 @@
-.SearchBar {
-  width: 100%;
+.SearchBarContainer {
+  max-width: 80%;
   background-color: gray;
   border: 1px solid blue;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+  margin: 0 auto;
+}
+
+.searchbar {
+  width: 30%;
 }

@@ -1,5 +1,19 @@
 .Post {
-  max-width: 80%;
+  max-width: 40%;
   margin: 0 auto;
   border: 1px solid black;
+}
+
+.Post>img {
+  margin: 0 auto;
+}
+
+.icon-bar {
+  margin: 10px 60px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.icon-bar img {
+  padding: 10px;
 }

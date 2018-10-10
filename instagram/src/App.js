@@ -4,6 +4,12 @@ import dummyData from "./dummy-data";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
 
+// fontAwesome imports
+// import { library } from '@fortawesome/fontawesome-svg-core';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faStroopwafel } from '@fortawesome/free-solid-svg-icons';
+
+
 class App extends Component {
   constructor() {
     super();
@@ -21,7 +27,7 @@ class App extends Component {
 
   updateSearchText = e => {
     this.setState({ searchText: e.target.value });
-}
+  }
 
   render() {
     return (
