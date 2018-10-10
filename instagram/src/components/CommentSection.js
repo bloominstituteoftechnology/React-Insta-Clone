@@ -9,7 +9,7 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: [...props.comments],
-      user: '',
+      username: '',
       text: '',
     };
     console.log(props);
@@ -19,7 +19,7 @@ class CommentSection extends React.Component {
     e.preventDefault();
     const comments = this.state.comments.slice();
     comments.push({ username: 'derpWanda', text: this.state.text })
-    this.setState({ comment: comments, text: ""})
+    this.setState({ comments: comments, text: ""})
   }
 
   changeComment = e => {

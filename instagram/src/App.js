@@ -6,7 +6,6 @@ import PostContainer from "./components/PostContainer";
 import SearchBar from "./components/SearchBar";
 
 
-
 class App extends Component {
   constructor(props) {
     super(props);

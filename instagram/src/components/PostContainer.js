@@ -13,9 +13,9 @@ const PostContainer = (props) => {
   return (
     <div className="post">
       <div>
-        {props.dummyData.map((postObj, index) => {
+        {props.dummyData.map( postObj => {
           return (
-            <div key={index}>
+            <div key={postObj.timestamp}>
               <Post
                 thumbnail={postObj.thumbnailUrl}
                 image={postObj.imageUrl}
