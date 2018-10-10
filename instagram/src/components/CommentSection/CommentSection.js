@@ -21,7 +21,7 @@ class CommentSection extends React.Component {
       let newCommentList = [
         ...this.state.comments,
         {
-          id: index,
+          id: index + 1,
           username: "BillyEveryTeen",
           text: this.state.newComment
         }
@@ -78,6 +78,7 @@ class CommentSection extends React.Component {
   // }
 
   render() {
+    console.log(this.state.comments);
     return (
       <div className="comment-section">
         {this.state.comments.map(comment => {
