@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar'
-import PostContainer from './components/PostContainer/PostContainer'
-
+import SearchBar from './components/SearchBar/SearchBar';
+import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage' ;
 
 
 
@@ -35,6 +35,7 @@ class App extends React.Component {
     <i className="fa fa-comment comment "/>
 );
 
+
   // componentDidMount(){
   //   setTimeout(() => {
   //     this.setState({
@@ -43,12 +44,15 @@ class App extends React.Component {
   // }
 
 
-  // componentDidMount(){
+  componentDidMount = () => {
 
-  //   setTimeout(() => {
-  //     this.setState({asyncMessage: 'Loading..'});
-  //   }, 4000);
-  // }
+    setTimeout(() => {
+      this.setState({asyncMessage: 'Loading..'});
+    }, 4000);
+  }
+
+
+  
   // todo: add buttons, synthetic click for search
 
   inputText = (event) => {
@@ -60,6 +64,15 @@ class App extends React.Component {
     })
 
   }
+
+  commentUpdater = (event) => {
+
+    this.setState({
+        newData: this.newData.push({username: 'LorenzoEvans', text: event.target.value  })
+    })
+
+
+}
   render(){
     return(
 
@@ -88,9 +101,29 @@ class App extends React.Component {
       {/* check to see if these props are being passed, use console. */}
 
  
+  <PostsPage 
 
+  commentUpdater={this.commentUpdater}
+
+inputText={this.inputText}
+
+
+   LikeButton={this.LikeButton}
+
+   Comment={this.Comment}
+
+   newComment={this.state.newComment} 
+
+   data={this.state.data}
+  
+   />
        
  <PostContainer 
+
+ commentUpdater={this.commentUpdater}
+
+ inputText={this.inputText}
+
 
     LikeButton={this.LikeButton}
 
@@ -99,6 +132,8 @@ class App extends React.Component {
     newComment={this.state.newComment} 
  
     data={this.state.data} /> 
+
+  
  
       </div>
     )

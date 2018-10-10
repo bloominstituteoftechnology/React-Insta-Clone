@@ -11,37 +11,80 @@ class CommentSection extends React.Component {
 
         this.state = {
 
-            data: props.data
+            data: props.data,
+
+            newData: [],
+
+            comment: ''
 
         }
     }
 
  
 
-    addNewComment = (event, index) => {
+//     addNewComment = (event, index) => {
 
-       const newComment = this.state.data.comments.slice() ;
+//        const newData = this.state.data.comments.slice() ;
+// D: this.state.data.comment.concat([this.newData])
+//        this.setState({
+            
+//        })
 
-       this.setState({
-            data: this.state.data.comment.concat([newComment])
-       })
-       if (newComment.index !== this.state.data.comments.index){
-           newComment.map(() => {
-               
-           return {username: "LorenzoEvans",
-            text: event.target.value }})
-       }
+//        }
 
         
+    addComment = (event) => {
+        const dataCopy = this.state.data.comments.slice() ;
 
+        dataCopy.push({username: 'LorenzoEvans', text: this.state.newComment })
 
+        this.setState({
+            data: dataCopy 
+        })
     }
 
-    commentUpdater = () => {
-this.addNewComment();
-
-
+    handleAdd = (event) => {
+        this.state({
+            comment: event.target.value 
+        })
     }
+
+    submitComment = () => {
+        this.setState({
+        data: this.state.data.comments.map( comment => {
+            if (comment.text === this.text){
+                return {
+                    username: comment.username,
+                    text: comment.text
+                }
+            }
+
+            else {
+                return comment 
+            }
+        })
+
+        })
+    }
+
+    // }
+
+    // addNewComment = (event, index) => {
+    //     const newComment = this.state.data.comments.slice();
+
+    //     this.setState({
+    //         data: this.state.comments.concat([newComment]),
+    //     })
+    // }
+
+    // commentUpdater = (event) => {
+
+    //     this.setState({
+    //         newData: this.newData.push({username: 'LorenzoEvans', text: event.target.value  })
+    //     })
+
+
+    // }
 
 
     render(){
@@ -51,21 +94,21 @@ this.addNewComment();
         <div className="cmntSectDiv">
         {this.props.data.map(item => <div key={item.timestamp}>
             {item.username}
-
+<addComment addComment={this.addComment} commentUpdater={this.commentUpdater} data={this.state.data} />
             <img alt="" src={item.thumbnailUrl} />
             <img alt="" src={item.imageUrl} />
             <div>{item.likes}</div>
             <div>{item.timestamp}</div>
             {this.props.LikeButton()}
             {this.props.Comment()}
-          
+           
             <div>{item.comments.map(item =>
             
             <div key={item.text}>
                 {item.username}
                 {item.text}
             </div>, 
-             <addComment data={this.state.data} />
+            
             )}</div>
 
             {/* In theory I feel like I should be able to nest a map method
