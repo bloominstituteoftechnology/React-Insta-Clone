@@ -33,8 +33,8 @@ const PostContainer = props => {
   }
   return (
     <div className="post-container">
-      {props.data.map((post, i) => (
-        <div key={i} className="card">
+      {props.data.map((post) => (
+        <div key={post.timestamp} className="card">
           <div className="card-header">
             <img
               src={post.thumbnailUrl}
