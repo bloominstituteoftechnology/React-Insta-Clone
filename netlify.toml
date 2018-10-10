@@ -6,6 +6,5 @@
 #    that is where we will look for package.json/.nvmrc/etc not repo root!
 
 [build]
-  base    = "./instagram"
-  publish = "./instagram/build"
-  command = "yarn build"
+  base    = "instagram/"
+  publish = "instagram/build"
