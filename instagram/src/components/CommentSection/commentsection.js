@@ -11,8 +11,8 @@ class CommentSection extends React.Component{
         this.state={
             allComments: props.comments,
 
-            comment:'',
-            username:''
+            comment:""
+           
         };
         console.log(this.state);
     }
@@ -41,7 +41,6 @@ class CommentSection extends React.Component{
             newComment={this.state.comment}
             handleAddNewComment= {this.addNewComment} 
             handleChangeHandler={this.changeHandler}
-            newComment={this.newComment}
             />
             </div>
         );

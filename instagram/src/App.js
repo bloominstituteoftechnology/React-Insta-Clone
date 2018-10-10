@@ -14,7 +14,8 @@ class App extends Component {
     this.state={
       userData: [],
       searchedPost:[],
-      searchResult:''
+      searchResult:'',
+      comment:""
     };
   console.log(this.state);
   
@@ -50,7 +51,7 @@ this.setState(prevState =>{
       changeHandle={this.searchResults}
       searchPost={this.state.searchResult}
       />
-      
+
       <PostContainer 
       userData={
         this.state.searchedPost.length >0
