@@ -1,19 +1,25 @@
-import React, {Component} from 'react';
-
+import React from 'react';
+import dummyData from '../dummy-data.js';
 
 const CommentSection = (props) => {
 	return(
 		<div>
-
+			<div className = "commentsContainer">
+				{dummyData.map((com, index) => (
+					<div key={`${com.username}s comment ${index}`}>
+						<p>
+							<span>{com.username.comments}</span> {com.text}
+						</p>
+					</div>
+				))}
+			</div>
+			<div>
+				<input type="text" placeholder="Add a comment..."/>
+			</div>
 		</div>
-	)
+	);
 }
 
 export default CommentSection;
 
-/*
-			<div className="Comment-Section">
-				{props.content.map(comment => {
-					return <p><strong>{comment.username}</strong>{comment.text}</p>
-				})}
-*/
+

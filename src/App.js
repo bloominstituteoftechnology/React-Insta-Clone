@@ -10,9 +10,12 @@ class App extends Component {
 	constructor(){
 		super();
 		this.state = {
-			dummyData: dummyData,
-			inputText:""
-		};
+			post:[]
+		}
+	}
+	
+	componentDidMount = () => {
+		this.setState({ post: dummyData});
 	}
 
 
@@ -20,10 +23,8 @@ class App extends Component {
     return (
       <div className="App">
 			<SearchBar/>
-			<CommentSection/>
-			{dummyData.map( (post, index) => (<PostContainer userPost={post} key={post.username + index} />))}
-			<div>{console.log(dummyData)}</div>
-			<PostContainer/>
+			<PostContainer userData = {this.state.post}/>
+			<CommentSection commentData = {this.state.comments}/>
       </div>
     );
   }
