@@ -1,0 +1,40 @@
+.transparent-cover{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: .8;
+    z-index: 10;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-in-form{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 5px;
+    padding: 25px;
+    justify-content: space-around;
+}
+
+.log-in-form h4{
+    font-size: 28px;
+    font-family: 'Lobster Two', cursive;
+}
+
+.log-in-form .instabox{
+    height: 38px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.log-in-form .instabox>*{
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+}
