@@ -8,14 +8,26 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      posts: dummyData
+      posts: dummyData,
+      filtered: []
   };
 }
-  
+  searchHandler = event => {
+    event.preventDefault();
+    this.setState({
+      filtered: this.state.posts.filter(post => {
+        if (post.username === post.username) {
+          return post;
+        } 
+      })
+    })
+  }
   render() {
     return (
       <div className="App">
-          <SearchBar />
+          <SearchBar 
+            search={this.searchHandler}
+          />
           <PostContainer posts={this.state.posts} />
       </div>
     );

@@ -16,7 +16,7 @@ class CommentSection extends React.Component {
     this.setState({ comment: event.target.value });
   }
 
-  submitHandler = event => {
+  addNewComment = event => {
     event.preventDefault();
     this.setState({
       comments: [
@@ -28,6 +28,8 @@ class CommentSection extends React.Component {
     })
 
   }
+
+  
   render(){
     return (
         <div>
@@ -41,7 +43,7 @@ class CommentSection extends React.Component {
           <CommentInput 
             changeHandler={this.comHandler} 
             comment={this.state.comment}
-            submitHandler={this.submitHandler}
+            submitHandler={this.addNewComment}
           />
         </div>
     )
