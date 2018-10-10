@@ -12,16 +12,17 @@ class App extends Component {
       filtered: []
   };
 }
-  searchHandler = event => {
-    event.preventDefault();
-    this.setState({
-      filtered: this.state.posts.filter(post => {
-        if (post.username.includes(event.target.value)) {
-          return post;
-        } 
-      })
-    })
-  }
+  // searchHandler = event => {
+  //   event.preventDefault();
+  //   this.setState({
+  //   //   filtered: this.state.posts.filter(post => {
+  //   //     if (post.username.includes(event.target.value)) {
+  //   //       return post;
+  //   //     } 
+  //   //   })
+  //   // })
+  // }
+
   componentDidMount() {
     this.setState({
       posts: dummyData
@@ -32,7 +33,6 @@ class App extends Component {
       <div className="App">
           <SearchBar 
             search={this.searchHandler}
-            term={this.state.searchTerm}
           />
           <PostContainer posts={this.state.posts} />
       </div>

@@ -5,7 +5,7 @@ const SearchBar = (props) => {
       <input 
         type="text" 
         placeholder="Search"
-        onKeyDown={props.search}
+        
         />
       
     </div>;
