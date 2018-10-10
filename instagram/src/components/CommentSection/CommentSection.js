@@ -22,7 +22,11 @@ class CommentSection extends React.Component {
         />
         ))} 
 
-        <CommentInputBox />
+        <CommentInputBox
+            comment = {this.state.comm}
+            submitComment = {this.addNewComment}
+            changeComment = {this.commentHandler}
+        />
       </div>
     );
   }

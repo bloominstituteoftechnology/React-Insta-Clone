@@ -4,9 +4,17 @@
     margin : 0 auto;
     display : flex;
     margin-top : 2rem;
+    margin-left : 40rem;
 }
 
 .img-postHeader{
     width : 50px;
     height : 50px;
+    border-radius: 50px;
+}
+
+.userName{
+    font-weight: bold;
+    font-size: 20px;
+    padding : 10px;
 }

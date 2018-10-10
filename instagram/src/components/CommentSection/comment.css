@@ -1,5 +1,6 @@
 .comment-div{
     text-align: left;
+
     width : 50%;
     margin : 0 auto;
 }
@@ -7,5 +8,5 @@
 .comment-input {
     width : 50%;
     margin : 0 auto;
-    border : 2px solid green;
+    
 }

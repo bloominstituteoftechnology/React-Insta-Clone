@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
+
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
@@ -14,17 +14,19 @@ class App extends Component {
     this.state = {
       posts : [],
 
+      filteredPosts : [],
+
       comm : ''
     };
 
   } //constructor ends
 
   componentDidMount() {
-    console.log('CDM is running', this.state.posts);
+   // console.log('CDM is running', this.state.posts);
     
     setTimeout(() => {
       this.setState({ posts : dummyData });
-    }, 80);
+    }, 800);
   }
 
   //Create a function in app.js called addNewComment that takes in an event and an index number. 
@@ -33,33 +35,35 @@ class App extends Component {
     console.log(event.target);
     console.log(event.target.value);
     event.preventDefault();
+    const newComment = { text: this.state.posts.comments, username: 'ryanhamblin' };
     const comments = this.state.posts.comments.slice();
     comments.push( {
         text : this.state.posts.comments.text
-
+        
     });
     this.setState({comments, comm : ''});
   };
 
-  changeComment = (event) => this.setState ({ [event.target.name] : event.target.value
-                              });
+  commentHandler = (event) => {
+    this.setState ({ [event.target.name] : event.target.value});
+  };
 
   searchPostsHandler = event => {
-    console.log(event);
-    console.log(event.target.value);
+    console.log(event.target);
+    console.log("In SEARCH .... ", event.target.value);
     const posts = this.state.posts.filter(postToSearch => {
       if (postToSearch.username.includes(event.target.value)) {
           return postToSearch;
       }
     });
-    this.setState({ filteredPosts: posts });
+    this.setState({ filteredPosts : posts });
   };
               
   render() {
-    console.log(this.state.posts);
+   // console.log(this.state.posts);
     return (
       <div className="App">
-        <header>
+        <header className = "header-div">
             <SearchBar 
                 searchTerm = {this.state.searchTerm}
                 searchPosts = {this.searchPostsHandler}
@@ -67,7 +71,10 @@ class App extends Component {
         </header>
 
         <div> 
-            <PostContainer postPassedAhead = {this.state.posts}/>
+            <PostContainer 
+                postPassedAhead = {
+                    this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts
+          }/>
         </div>
       </div>
     ); //return end
