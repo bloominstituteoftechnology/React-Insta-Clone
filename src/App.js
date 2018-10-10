@@ -1,31 +1,23 @@
 import React, { Component } from 'react';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faUser, faCompass, faHeart, faComment } from "@fortawesome/free-regular-svg-icons";
-import { faSearch, faEllipsisH } from "@fortawesome/free-solid-svg-icons";
-import dummyData from './dummy-data';
+import PostsPage from './components/PostContainer/PostsPage';
 import './App.css';
-
-library.add(faUser, faCompass, faHeart, faInstagram, faSearch, faComment, faEllipsisH);
 
 class App extends Component {
   constructor() {
     super();
 
     // Load in locally saved data
-    const localSaved = localStorage.getItem('data');
-    if( localSaved ) {
-      //this.setState({ data: JSON.parse(localSaved) });
-      this.state = { data: JSON.parse(localSaved) }
-      console.log("readlocal:",this.state.data);
-      return;
-    } else {
-      this.state = {
-        data: dummyData
-      }  
-    }
+    // const localSaved = localStorage.getItem('data');
+    // if( localSaved ) {
+    //   //this.setState({ data: JSON.parse(localSaved) });
+    //   this.state = { data: JSON.parse(localSaved) }
+    //   console.log("readlocal:",this.state.data);
+    //   return;
+    // } else {
+    //   this.state = {
+    //     data: dummyData
+    //   }  
+    // }
     // console.log(this.state.data);
   }
 
@@ -76,50 +68,38 @@ class App extends Component {
   };
 
   
-  /* Handle Searchbar input */
-  searchHandler = event => {
-    event.preventDefault();
-    
-    if( event.keyCode === 13 && event.target.value.length > 0 ){
-      //debugger;
-      let newData = this.state.data.filter( (data) => {
-        return data.username === event.target.value;
-      });
-      this.setState({ data: newData });
-        event.target.value="";
-    }
-  };
   
   render() {
     return (
-      <div className="App">
-        <SearchBar searchHandler={this.searchHandler} />
-        {this.state.data.map( (data, index) => {
-          // Pass each element to PostContainer:
-            // id: 0
-            // username: "",
-            // thumbnailUrl: "",
-            // imageUrl: "",
-            // likes: 0,
-            // timestamp: "July 17th 2017, 12:42:40 pm",
-            // comments: []
-            // mergeData: fn
+      <PostsPage />
+      // <div className="App">
+      //   <SearchBar searchHandler={this.searchHandler} />
+      //   {this.state.data.map( (data, index) => {
+      //     // Pass each element to PostContainer:
+      //       // id: 0
+      //       // username: "",
+      //       // thumbnailUrl: "",
+      //       // imageUrl: "",
+      //       // likes: 0,
+      //       // timestamp: "July 17th 2017, 12:42:40 pm",
+      //       // comments: []
+      //       // mergeData: fn
           
-          return (
-            <PostContainer
-              key={index} 
-              id={index}
-              username={data.username}
-              thumbnailUrl={data.thumbnailUrl}
-              imageUrl={data.imageUrl}
-              likes={data.likes}
-              timestamp={data.timestamp}
-              comments={data.comments}
-              mergeData={this.mergeData}
-            />
-          );
-        })}
-      </div>
+      //     return (
+      //       <PostContainer
+      //         key={index} 
+      //         id={index}
+      //         username={data.username}
+      //         thumbnailUrl={data.thumbnailUrl}
+      //         imageUrl={data.imageUrl}
+      //         likes={data.likes}
+      //         timestamp={data.timestamp}
+      //         comments={data.comments}
+      //         mergeData={this.mergeData}
+      //       />
+      //     );
+      //   })}
+      // </div>
     );
   }
 }
