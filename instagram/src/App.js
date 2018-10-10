@@ -22,9 +22,14 @@ class App extends Component {
 
   addLike = key => {
     let posts = [...this.state.posts];
-    console.log(key);
     posts[key].likes++;
-    this.setState({ posts: posts});
+    this.setState({ posts: posts });
+  }
+
+  search = text => {
+    console.log(text);
+    let posts = this.state.posts.filter(post => post.username === text);
+    this.setState({ posts: posts });
   }
   
   componentDidMount() {
@@ -36,7 +41,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar search={this.search} />
         <div className="posts">
           {this.state.posts.map((post, index) => (
             <PostContainer 

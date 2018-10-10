@@ -15,7 +15,7 @@ class CommentForm extends React.Component {
     handleSubmit = event => {
         event.preventDefault();
         this.props.addNewComment({ key: this.props.postKey, text: this.state.text, });
-        this.setState({ comment: "" });
+        this.setState({ text: "" });
     };
 
     render() {
@@ -24,7 +24,7 @@ class CommentForm extends React.Component {
                 <input 
                     className="input-text" 
                     placeholder="Add a comment..." 
-                    value={this.state.comment} 
+                    value={this.state.text} 
                     onChange={this.handleChange}
                 />
                 <button 
