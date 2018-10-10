@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import PostContainer from "./PostContainer.js";
 import SearchBar from "../SearchBar/SearchBar.js";
 import dummyData from "./dummy-data.js";
+
 class PostsPage extends Component {
   constructor() {
     super();
     this.state = {
       data: dummyData,
-      input: ""
+      input: "",
+      loggedIn: true
     };
   }
   searchInputHandler = event => {
@@ -21,6 +23,7 @@ class PostsPage extends Component {
       data: dummyData
     });
   }
+
   searchHandler = event => {
     if (event.key === "Enter") {
       this.setState({
@@ -39,6 +42,7 @@ class PostsPage extends Component {
           posts={this.state.data}
           searchHandler={this.searchHandler}
           searchInputHandler={this.searchInputHandler}
+          logoutHandler={this.props.logoutHandler}
         />
         {this.state.data.map(post => {
           return (

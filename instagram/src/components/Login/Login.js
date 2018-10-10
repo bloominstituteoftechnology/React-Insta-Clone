@@ -1,7 +1,15 @@
 import React from "react";
 
-const Login = () => {
-  return <h1>This is the login page</h1>;
+const Login = props => {
+  return (
+    <>
+      <p>Username</p>
+      <input type="text" defaultValue="" onChange={props.userChange} />
+      <p>Password</p>
+      <input type="text" defaultValue="" onChange={props.passwordChange} />
+      <div onClick={props.submitHandler}>Submit</div>
+    </>
+  );
 };
 
 export default Login;

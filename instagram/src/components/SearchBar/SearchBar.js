@@ -40,6 +40,10 @@ class SearchBar extends Component {
           <i className="far fa-compass" />
           <i className="far fa-heart" />
           <i className="far fa-user" />
+          <i
+            className="fas fa-sign-out-alt"
+            onClick={this.props.logoutHandler}
+          />
         </div>
       </div>
     );

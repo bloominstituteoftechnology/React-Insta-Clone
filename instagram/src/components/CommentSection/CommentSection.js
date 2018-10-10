@@ -14,7 +14,7 @@ class CommentSection extends Component {
   }
   submitHandler = event => {
     const newComment = {
-      username: "dummyUser",
+      username: `${localStorage.getItem("username")}`,
       text: this.state.input,
       timestamp: moment()
     };
@@ -46,7 +46,7 @@ class CommentSection extends Component {
         {this.state.comments.map(comment => {
           return (
             <Comment
-              key={this.state.timestamp}
+              key={Math.random()}
               commentUser={comment.username}
               comment={comment.text}
             />
