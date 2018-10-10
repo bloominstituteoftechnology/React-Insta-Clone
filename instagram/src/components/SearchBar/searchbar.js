@@ -14,7 +14,8 @@ const SearchBar = props => {
                 <h1 id= 'instagram'>Instagram</h1>
             </div>
             <input 
-                onKeyDown={props.search} 
+                onKeyDown={props.searching} 
+                onClick={console.log(props.searching)}
                 className= 'search'  
                 placeholder= '⚲ Search'
                 type="text">

@@ -11,20 +11,11 @@ class App extends Component {
       filteredPosts: []
     };
   }
-
   componentDidMount() {
     this.setState({ dummyData: dummyData });
   }
 
-  searchFunction = event => {
-    console.log(event.target.value);
-    const posts = this.state.dummyData.filter(search => {
-      if (search.username.includes(event.target.value)) {
-        return search;      
-      }
-    });
-    this.setState({ dummyData: posts });
-  };
+
   render() {
     return <PostsPage search = {this.state.searchFunction} content = {this.state.dummyData} />
   }
