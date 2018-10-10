@@ -23,6 +23,9 @@ const Container = props => {
       {props.post.comments.map((comment, index) => {
         return <CommentsContainer comments={comment} key={index} />;
       })}
+      <form>
+        <input type="text" placeholder="add new comment" />
+      </form>
     </div>
   );
 };
