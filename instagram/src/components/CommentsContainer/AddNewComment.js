@@ -7,9 +7,12 @@ export default class AddNewComment extends React.Component {
   render () {
     return (
 
-      <div className = 'addNewCommentINPUT'>
-        <input className = 'commentINPUT' placeholder  = "Add a comment! "/>
-      </div>
+      <form className = 'addNewCommentINPUT' onSubmit = {this.props.addComment}>
+        <input className = 'commentINPUT' placeholder  = "Add a comment! "
+               value = {this.props.commentText} onChange = {this.props.handleInput}
+        />
+      </form>
+
     )
   }
 }

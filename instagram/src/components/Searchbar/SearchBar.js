@@ -11,9 +11,13 @@ export default class SearchBar extends React.Component {
           <p className = 'instagramLOGO'> Instagram</p>
         </div>
 
-        <div className = 'searchInput-container'>
-          <input name = 'search' className = 'searchInput' />
-        </div>
+        <form className = 'searchInput-container' onSubmit = {this.props.searchDemPosts}>
+          <input name = 'search' className = 'searchInput'
+                         placeholder = '&#x1F50D; search'
+                 value = {this.props.searchInfo}
+                 onChange = {this.props.handleSearch}
+          />
+        </form>
 
         <div className = 'littleIcons'>
           <img className = 'compassIMG icons'src = 'http://simpleicon.com/wp-content/uploads/compass-1.png'   alt = 'compass'/>

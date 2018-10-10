@@ -4,7 +4,7 @@ import PostHeader from './PostHeader';
 import PostImage from './PostImage';
 import PostFooter from './PostFooter';
 import CommentsContainer from "../CommentsContainer/CommentsContainer";
-import dummyData from '../dummy-data'
+
 import './PostContainer.css';
 
 

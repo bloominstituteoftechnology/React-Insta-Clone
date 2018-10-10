@@ -8,9 +8,30 @@ import './CommentsContainer.css';
 export default class CommentsContainer extends React.Component {
   constructor (props) {
       super(props);
-      this.state = {comments: this.props.comments}
-
+      this.state = {
+        comments: this.props.comments,
+        inputText: ''
+      }
   }
+
+  addComment = event => {
+    event.preventDefault();
+    this.setState({
+      comments: [
+        ...this.state.comments,
+        {
+          username: 'WebDude2834',
+          text: this.state.commentText
+        }
+      ]
+
+
+    })
+  };
+
+  handleInput = event => {
+    this.setState({commentText: event.target.value});
+  };
 
   render () {
 
@@ -21,7 +42,12 @@ export default class CommentsContainer extends React.Component {
         }
         )}
 
-        <AddNewComment/>
+        <AddNewComment
+         addComment = {this.addComment}
+         handleInput = {this.handleInput}
+         commentText = {this.state.commentText}
+
+        />
 
       </div>
 
