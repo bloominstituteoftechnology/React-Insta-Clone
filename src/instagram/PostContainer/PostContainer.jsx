@@ -25,11 +25,11 @@ class PostContainer extends Component {
     return (
       <section className="Post" ref="Post">
         <header>
-          <div className="Post-user">
-            <div className="Post-user-avatar">
+          <div className="Post-head">
+            <div className="Post-head-avatar">
               <img src={avatar} alt={nickname} />
             </div>
-            <div className="Post-user-nickname">
+            <div className="Post-nickname">
               <span>{nickname}</span>
             </div>
           </div>
@@ -39,9 +39,17 @@ class PostContainer extends Component {
             <img alt={caption} src={image} />
           </div>
         </div>
-        <div className="Post-caption">
-          <strong>{nickname}</strong> {caption}
-        </div>
+        <section className="Post-icons">
+          <div className="left-icons">
+            <div className="Post-icon-heart" />
+            <div className="Post-icon-comment" />
+            <div className="Post-icon-share" />
+          </div>
+          <div className="right-icons">
+            <div className="Post-icon-save" />
+          </div>
+        </section>
+        <section className="Post-likes">{likes} Likes </section>
       </section>
     );
   }

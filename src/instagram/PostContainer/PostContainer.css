@@ -6,21 +6,21 @@
   margin-left: 20%;
   margin-right: 20%;
 }
-.Post-user {
+.Post-head {
   display: flex;
   padding: 16px;
   align-items: center;
 }
-.Post-user-avatar {
+.Post-head-avatar {
   width: 30px;
   height: 30px;
 }
-.Post-user-avatar img {
+.Post-head-avatar img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-.Post-user-nickname {
+.Post-nickname {
   margin-left: 12px;
   font-family: "PT Sans", sans-serif;
   font-weight: bold;
@@ -31,13 +31,75 @@
 .Post-image img {
   display: block;
   width: 100%;
+  height: 100%;
 }
-.Post-caption {
-  padding: 16px 16px;
+.Post-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.Post-caption strong {
-  font-family: "PT Sans", sans-serif;
-  font-weight: bold;
+.left-icons {
+  display: flex;
+}
+.Post-icon-heart {
+  color: #003569;
+  background-image: url(../../sprite.png);
+  background-size: 405px 379px;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-position: -325px -328px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+.Post-icon-comment {
+  color: #003569;
+  background-image: url(../../sprite.png);
+  background-size: 405px 379px;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-position: -258px -174px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+.Post-icon-share {
+  fill: #003569;
+  background-image: url(../../sprite.png);
+  background-size: 405px 379px;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-position: -174px -328px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+.Post-icon-save {
+  color: #003569;
+  background-image: url(../../sprite.png);
+  background-size: 405px 379px;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-position: -75px -328px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
 }
 .vjs-fade-out {
   display: none;
