@@ -3,11 +3,12 @@ import React, { Component } from 'react';
 class UserComment
  extends Component {
     render() {
+        console.log('check this: ', this.props.notes);
         return (
             <div>
-              {this.props.notes.map( note => {
+              {this.props.notes.map( (note,index) => {
                   return(
-                    <p><span>{note.username}{"  "}</span> {note.text}</p>
+                    <p key={index}><span>{note.username}{"  "}</span> {note.text}</p>
                   );
               })}    
             </div>
@@ -15,5 +16,6 @@ class UserComment
     }
 }
 
-export default UserComment
-;
+
+
+export default UserComment;

@@ -8,7 +8,7 @@ class Card extends Component {
         return (
             <div className="card">
                <CardHeader username={this.props.card.username} thumbnail ={this.props.card.thumbnailUrl} />
-               <img className='main-img' src={this.props.card.imageUrl} alt="main-image" />
+               <img className='main-img' src={this.props.card.imageUrl} alt="main-theme"/>
 
             </div>
         );

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Likes from './likes';
 import UserComments from './UserComment.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
 
 class Comment extends Component {
     render() {
@@ -22,6 +23,15 @@ class Comment extends Component {
             </div>
         );
     }
+}
+
+Comment.propTypes = {
+    comments: PropTypes.arrayOf(
+        PropTypes.shape({
+            username: PropTypes.string,
+            text:PropTypes.string
+        }).isRequired
+    )
 }
 
 export default Comment;
