@@ -19,8 +19,11 @@ class LogIn extends React.Component {
 
 
     logInHandler = event => {
-        let user = this.state.username;
-        localStorage.setItem('user', user);
+        event.preventDefault();
+        let username = this.state.username;
+        localStorage.setItem('username', username);
+        let password = this.state.password;
+        localStorage.setItem('password', password);
         window.location.reload();
     };
 
@@ -52,12 +55,12 @@ class LogIn extends React.Component {
           type="password"
           name="password"
           placeholder="Your Password"
-          value={this.state.username}
+          value={this.state.password}
           onChange={this.changeHandler}
           />
         </FormGroup>
 
-        <Button>Submit onClick={this.logInHandler}</Button>
+        <Button onClick={this.logInHandler}> Submit</Button>
 
       </Form>
             </div>
