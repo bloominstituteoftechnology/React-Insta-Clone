@@ -11,7 +11,8 @@ class CommentSection extends React.Component{
         this.state={
             allComments: props.comments,
 
-            comment:''
+            comment:'',
+            username:''
         };
     }
     

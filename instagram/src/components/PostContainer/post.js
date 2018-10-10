@@ -1,6 +1,7 @@
 import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/commentsection';
+import PostLikes from './PostLikes';
 
 
 const Post = props =>{
@@ -15,16 +16,9 @@ const Post = props =>{
                 <img className='large-img-post' src={props.post.imageUrl} />
             </div>
             <div className='icons-likes-comments'>
-                <div className='icons-comment'>
-                    <div className="icons-c">
-                        <i className="fa fa-heart" />
-                    </div>
-                    <div className="icons-c">
-                        <i className="fa fa-comment" />
-                    </div>
-                </div>
+                
             <div className ='likes'>
-                <p>{props.post.likes} likes</p>
+                <PostLikes likes= {props.post.likes} />
             </div>
             <div className='comment-section'>
                 <CommentSection comments={props.post.comments}/>

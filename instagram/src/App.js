@@ -24,6 +24,8 @@ class App extends Component {
     }, 800);
   }
   
+  
+
 
  
   render() {
