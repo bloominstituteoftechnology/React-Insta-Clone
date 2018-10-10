@@ -11,8 +11,8 @@ const Search = props => {
             id="searchInput" 
             type="text" 
             placeholder="Search"         
-            value={props.filterTarget}
-            onChange={props.changeHandler}
+            // value={props.filterTarget}
+            onChange={props.postHandler}
             name="filterTarget"
             />
         </div>

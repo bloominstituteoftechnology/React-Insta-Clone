@@ -16,7 +16,7 @@ class App extends Component {
     this.state = {
       posts: [],
       filteredPosts: [],
-      filterTarget: ''
+      // filterTarget: ''
     }
   }
 
@@ -28,26 +28,37 @@ class App extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  filter = event => {
-    this.handleInput(event);
-    this.setState(prevState => {
-      const filteredPosts = prevState.posts.filter(post => {
-        console.log(post);
-        return post.username.includes(prevState.filterTarget);
-      });
-      return { filteredPosts: filteredPosts };
-      // this could be just { filteredPosts }
+  // filter = event => {
+  //   this.handleInput(event);
+  //   this.setState(prevState => {
+  //     const filteredPosts = prevState.posts.filter(post => {
+  //       console.log(post);
+  //       return post.username.includes(prevState.filterTarget);
+  //     });
+  //     return { filteredPosts: filteredPosts };
+  //     // this could be just { filteredPosts }
+  //   });
+  // };
+
+  searchPostsHandler = e => {
+    const posts = this.state.posts.filter(p => {
+      if (p.username.includes(e.target.value)) {
+        return p;
+      }
     });
+    this.setState({ filteredPosts: posts });
   };
 
   render() {
     return (
       <div className="App">
         <SearchHeader           
-          changeHandler={this.filter}
-          filterTarget={this.state.filterTarget}
+          postHandler={this.searchPostsHandler}
+          // filterTarget={this.state.filterTarget}
           />
-        <PostContainer data={            
+        <PostContainer 
+        postHandler={this.searchPostsHandler}
+        data={            
           this.state.filteredPosts.length > 0
               ? this.state.filteredPosts
               : this.state.posts}/>
