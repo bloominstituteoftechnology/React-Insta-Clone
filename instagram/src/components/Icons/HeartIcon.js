@@ -11,4 +11,6 @@ const HeartIcon = (props) => {
     <Heart className={classes} onClick={props.handleLikes}/>
   )
 }
+
+
 export default HeartIcon;

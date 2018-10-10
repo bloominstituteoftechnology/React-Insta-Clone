@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import moment from 'moment'
 
 const Timestamp = props => {
@@ -17,5 +18,6 @@ const Timestamp = props => {
     </div>
   )
 }
+
 
 export default Timestamp;
