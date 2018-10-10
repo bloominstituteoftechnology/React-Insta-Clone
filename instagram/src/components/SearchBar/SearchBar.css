@@ -1,0 +1,43 @@
+.logo-left img {
+  height: 35px;
+}
+
+.search-container {
+  background-color: white;
+  border: 1px solid lightgray;
+  height: 50px;
+  line-height: 37.5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 2%;
+
+}
+
+.insta-icon {
+  padding-right: 1rem;
+  border-right: 1px solid grey;
+  opacity: .8;
+}
+
+.insta-logo {
+  padding-left: 0.5rem;
+  border-left: 1px solid grey;
+}
+
+.search-center input {
+  padding: 5px 15%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.icons-right {
+  display: flex;
+  flex-wrap: nowrap;
+  opacity: .5;
+}
+
+.icons-right img {
+  height: 25px;
+  padding: 0 10%;
+}
