@@ -5,18 +5,21 @@ class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: ""
+            username: "",
+            password:""
         }
     }
 
     usernameChangeHandler = (event) => {
         this.setState({
-             username: event.target.value
+             username: event.target.value,
+          
         })
     }
-    
+
     submitLogin = () => {
         window.localStorage.setItem('username', this.state.username);
+
     }
 
     render() {
