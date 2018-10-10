@@ -1,27 +1,18 @@
 import React, { Component } from "react";
-import Authenticate from "../src/Authentication/Authenticate";
-import PostsPage from "./PostsPage";
+import Authenticate from '../src/Authentication/Authenticate';
+import PostsPage from "../src/PostsPage";
 import "./App.css";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-    };
-  }
-
-
-  componentDidMount() {
-    setTimeout(() => {this.setState({
-      loggedIn: false,
-    })}, 300);
+  constructor(props) {
+    super(props);
   }
 
   
   render() {
     return (
       <>
-        <PostsPage />
+        <PostsPage loggedIn={this.props.loggedIn} />
       </>
     );
   }
