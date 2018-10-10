@@ -12,7 +12,9 @@ const PostContainer = props => {
             {props.posts.map((post, index) => {
                 if(post.username.indexOf(props.search) !== -1)
                 return(
-                    <Post key={index} post={post}/>
+                    <Post key={index} post={post}  index={index}
+                    newComment={props.newComment}  onCommentChange={props.onCommentChange} 
+                    addNewComment={props.addNewComment}/>
                 );
             })}
             

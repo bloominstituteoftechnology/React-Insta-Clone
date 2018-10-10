@@ -14,6 +14,7 @@ class App extends Component {
     this.state = {
       posts: [],
       search : '',
+      // newComment : [],
     };
   }
 
@@ -21,6 +22,17 @@ class App extends Component {
     e.preventDefault();
     this.setState({[e.target.name]: e.target.value})
   }
+
+//   onCommentChange = e => {
+//     e.preventDefault();
+//     this.setState({newComment[{e.target.index}] : e.target.value})
+//   }
+
+//   addNewComment = e => {
+//     e.preventDefault();
+//     // this.setState({: e.target.value})
+// console.log(e.target.value);
+//   }
   componentDidMount() {
     this.setState( {posts: dummyData} );
   }
@@ -32,7 +44,9 @@ class App extends Component {
       <div className="App">
           <SearchBar search={this.state.search} 
                 onInputChange={this.onInputChange}/>
-          <PostContainer posts={this.state.posts} search={this.state.search}/>
+          <PostContainer posts={this.state.posts} search={this.state.search}
+          newComment={this.state.newComment}  onCommentChange={this.onCommentChange}
+          addNewComment={this.addNewComment}/>
 
       </div>
     );

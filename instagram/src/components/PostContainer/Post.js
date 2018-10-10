@@ -18,7 +18,10 @@ console.log(props.post);
              <i className="far fa-comment"></i>
             </div>
             <p>{props.post.likes} likes</p>
-            <CommentSection comments={props.post.comments}/>
+            
+            <CommentSection index={props.index} comments={props.post.comments}
+            newComment={props.newComment}  onCommentChange={props.onCommentChange} 
+            addNewComment={props.addNewComment}/>
                   
             
         </div>

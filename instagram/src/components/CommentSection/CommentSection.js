@@ -1,25 +1,52 @@
 import React from 'react';
 
 
-const CommentSection = props => {
+class CommentSection extends React.Component {
+    constructor(props) {
+      super(props);
+        this.state = {
+            comments : props.comments,
+            newComment: '',
+        }
+
+    }
+
+
+    onCommentChange = e => {
+            e.preventDefault();
+            this.setState({newComment : e.target.value})
+          }
+        
+    addNewComment = e => {
+            e.preventDefault();
+            this.setState({ comments: [...this.state.comments, {
+                username: 'newUser',
+                text: this.state.newComment}],
+              newComment: '', });
+            };
+          
+
+    render(){
        return(
         <div className='comment'>
-             {props.comments.map((comment, index) => {
+         
+             {this.state.comments.map((comment, index) => {
                 return( 
                     <p> <strong>{comment.username}</strong> {comment.text}</p>
                 )
                 })}
-             <form >
+            <form onSubmit={this.addNewComment}>
                 <input
                 type="text"
                 name="newComment"
-
-                value="Add a Comment"
+                value={this.state.newComment}
+                onChange={this.onCommentChange}
                 />
-            </form>
+             </form>
         </div>
 
     )
+            }
 }
 
 export default CommentSection;
