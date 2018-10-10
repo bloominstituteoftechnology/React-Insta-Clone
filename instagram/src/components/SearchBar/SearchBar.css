@@ -10,3 +10,17 @@
     display: flex;
     justify-content: center;
 }
+
+.searchBarIcons {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+
+input {
+    height: 20px;
+    text-align: center;
+    width: 200px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}

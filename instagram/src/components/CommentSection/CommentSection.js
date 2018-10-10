@@ -47,6 +47,7 @@ class CommentSection extends React.Component {
             );
           })}
         </div>
+        <hr />
         <form
           onSubmit={e => {
             this.addNewComment(e);
@@ -58,7 +59,6 @@ class CommentSection extends React.Component {
             type="text"
             placeholder="Add a comment..."
           />
-          <button type="submit">Submit</button>
         </form>
       </div>
     );

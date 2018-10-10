@@ -19,5 +19,12 @@
 .commentForm input {
     width: 100%;
     height: 40px;
-    border: 1px solid lightgray;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+}
+
+hr {
+    margin-left: 30px;
+    border-color: white;
 }
