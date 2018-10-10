@@ -1,6 +1,6 @@
 import React from 'react';
-import Comment from './Comment.js';
 import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection.js';
 
 class PostContainer extends React.Component {
     constructor(props) {
@@ -10,15 +10,6 @@ class PostContainer extends React.Component {
         };
     }
     render() {
-        /*
-            key={post.username + post.timestamp}
-            username={post.username}
-            thumbnailUrl={post.thumbnailUrl}
-            imageUrl={post.imageUrl}
-            likes={post.likes}
-            timestamp={post.timestamp}
-            comments={post.comments}
-        */
         return (
             <div className="post-container">
                 <div className="post-header">
@@ -34,27 +25,17 @@ class PostContainer extends React.Component {
                     </a>
                 </div>
                 <div className="post-photo">
-                    <img src={this.props.imageUrl} />
+                    <img src={this.props.imageUrl} alt="This should be provided as data from the API" />
                 </div>
                 <div className="post-interaction">
                     <img src="img/interact-like.png" alt="like button" />
                     <img src="img/interact-comment.png" alt="comment button" />
                     <div className="post-likes-count">{this.props.likes} likes</div>
                 </div>
-                <div className="post-comments">
-                    {
-                        this.state.comments.map(comment => (
-                            <Comment username={comment.username}>
-                                {comment.text}
-                            </Comment>
-                        ))
-                    }
-                </div>
-                <div className="post-time">{this.props.timestamp}</div>
-                <div className="post-add-comment">
-                    <a>Add a comment...</a>
-                    <span className="post-unknown-dots">...</span>
-                </div>
+                <CommentSection
+                    lastActivity={this.props.timestamp}
+                    comments={this.state.comments}
+                />
             </div>
         )
     }

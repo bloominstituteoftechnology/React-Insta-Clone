@@ -1,0 +1,31 @@
+
+
+/*============================================================================*/
+
+.comments {
+    margin-left : 16px;
+    margin-right: 16px;
+}
+.post-time {
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    padding-bottom: 1ex;
+    color: #888;
+    text-transform: uppercase;
+}
+.comments-add {
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.comments-add a {
+    font-weight: bold;
+    color: #888;
+}
+.comments-unknown-dots {
+    font-weight: bold;
+}
+.comments-comment {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+}
