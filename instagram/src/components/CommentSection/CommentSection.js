@@ -22,9 +22,9 @@ class CommentSection extends Component{
         event.preventDefault();
         const newObj = {
             username: 'DenE',
-            text: this.state.input
+            text: this.state.tempComment
         };
-        if (this.state.input !==''){
+        if (this.state.tempComment !==''){
             this.setState({
                 comments: [...this.state.comments, newObj]
             })
@@ -43,8 +43,8 @@ class CommentSection extends Component{
                 </div>
                 <p className='timestamp'>{this.props.timestamp}</p>
                 <div className='addComment'>
-                    <form onSubmit='addNewComment()'>
-                        <input type='text' value={this.tempComment} onChange={this.inputHandler} onSubmit={this.addNewComment}/>
+                    <form onSubmit={this.addNewComment}>
+                        <input type='text' value={this.tempComment} onChange={this.inputHandler}/>
                     </form>
                 <i className="fas fa-ellipsis-h"></i>
                 </div>
