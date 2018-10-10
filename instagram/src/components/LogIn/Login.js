@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../App.css'
 
 class Login extends React.Component {
     constructor (props) {
@@ -21,6 +22,7 @@ class Login extends React.Component {
     render () {
         return (
             <form className = 'loginInput'>
+                <h2> Log In </h2>
                 <input 
                     className = 'login-user'
                     type= 'text'
