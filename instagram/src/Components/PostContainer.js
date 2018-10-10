@@ -14,7 +14,7 @@ const PostContainer = props => {
             <div>
                 {props.data.map((data, index) => {
                     return (
-                        <div key={index}>
+                        <div key={data.timestamp}>
                         <Post thumbnail={data.thumbnailUrl} image={data.imageUrl} username={data.username}/>
                         <Icons increment={props.increment}/>
                         <p className="likes"> {props.likes} likes</p>

@@ -1,32 +1,60 @@
-import React, { Component } from 'react';
-import './App.css';
-import dummyData from './dummy-data'
-import PostContainer from './Components/PostContainer';
-import SearchBar from './Components/SearchBar';
+import React, { Component } from "react";
+import "./App.css";
+import dummyData from "./dummy-data";
+import PostContainer from "./Components/PostContainer";
+import SearchBar from "./Components/SearchBar";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: [],
-      likes: 370
-     
-    }
+      posts: [],
+      likes: 370,
+      filteredPosts: [],
+      filterTarget: ""
+    };
   }
 
   componentDidMount() {
-    setTimeout(() => {this.setState({data: dummyData})}, 2000)
+    setTimeout(() => {
+      this.setState({ posts: dummyData });
+    }, 500);
   }
-  increment = (prevState) => {
-    this.setState(prevState => ({likes: prevState.likes + 1}))
+  increment = prevState => {
+    this.setState(prevState => ({ likes: prevState.likes + 1 }));
+  };
 
-  }
+  handleInput = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
+  filter = event => {
+    this.handleInput(event); // SET STATE CALL HERE DETERMINES this.state.filterTarget go off and do this, and finish when you can
+    this.setState(prevState => {
+      const filteredPosts = prevState.posts.filter(post => {
+        return post.username.includes(prevState.filterTarget);
+      });
+      return { filteredPosts: filteredPosts };
+      // this could be just { filteredPosts }
+    });
+  };
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer data={this.state.data} likes={this.state.likes} increment={this.increment}/>
+        <SearchBar
+          changeHandler={this.filter}
+          filterTarget={this.state.filterTarget}
+        />
+        <PostContainer
+          data={
+            this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.posts
+          }
+          likes={this.state.likes}
+          increment={this.increment}
+        />
       </div>
     );
   }
@@ -34,4 +62,3 @@ class App extends Component {
 
 export default App;
 
-// work on header, format CSS, look over current code and make things easier to read if possible.
