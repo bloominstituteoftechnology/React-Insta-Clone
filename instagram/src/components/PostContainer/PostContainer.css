@@ -1,3 +1,14 @@
+.posts-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.posts {
+    max-width: 600px;
+    width: 100%;
+}
+
 .post {
     margin-bottom: 50px;
     width: 100%;
