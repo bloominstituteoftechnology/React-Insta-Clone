@@ -57,7 +57,7 @@ class LogIn extends React.Component {
           />
         </FormGroup>
 
-        <Button>Submit</Button>
+        <Button>Submit onClick={this.logInHandler}</Button>
 
       </Form>
             </div>
