@@ -1,5 +1,5 @@
 import React from "react";
-import "./searchbar.css";
+import "./SearchBar.css";
 
 const SearchBar = props => {
   return (
@@ -17,12 +17,13 @@ const SearchBar = props => {
           onChange={props.onChange}
           name="input"
           value={props.input}
+          className="input-search"
         />
       </form>
       <div className="col-3 d-flex justify-content-around top-icons">
-        <i class="far fa-compass" />
-        <i class="far fa-heart" />
-        <i class="far fa-user" />
+        <i className="far fa-compass" />
+        <i className="far fa-heart" />
+        <i onClick={props.logOut} className="far fa-user logout-btn" />
       </div>
     </div>
   );
