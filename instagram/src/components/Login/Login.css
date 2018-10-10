@@ -1,0 +1,10 @@
+.Login-wrapper {
+  border: 1px solid blue;
+  width: 15%;
+  margin: 100px auto;
+}
+
+.Login-wrapper .Form-group {
+  display: flex;
+  flex-wrap: wrap;
+}
