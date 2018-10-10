@@ -5,6 +5,7 @@ import dummyData from './Dummy'
 import PostPage from './components/PostContainer/PostPage';
 import Authenticate from './components/Authentication/Authenticate';
 import PropTypes from 'prop-types';
+import Login from './components/Login/Login';
 
 class App extends Component {
   constructor(){
@@ -35,6 +36,7 @@ class App extends Component {
     const App = () =>{
       return (
         <div>
+          <Login />
           <PostPage data = {this.state.data} />
         </div>
       );
@@ -43,6 +45,7 @@ class App extends Component {
     const HOComponent = Authenticate(App);
       return(
        <HOComponent />
+
     )
   }  
 }
