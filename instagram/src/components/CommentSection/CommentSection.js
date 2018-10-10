@@ -26,7 +26,7 @@ class CommentSection extends React.Component {
     this.setState({
       comments: [
         ...this.state.comments,
-        { username: "AndyM",
+        { username: localStorage.getItem("username"),
           text: this.state.newComment,
         }
       ],

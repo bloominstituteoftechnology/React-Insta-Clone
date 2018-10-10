@@ -1,10 +1,41 @@
-import React from "react"
+import React from "react";
+import Login from "../Login/Login"
 
-const Authenticate = Component =>
+const Authenticate = App =>
   class extends React.Component {
-    render() {
-      return <Component />;
-    }
+    constructor() {
+        super();
+        this.state = {
+          loggedIn: false,
+          username: '',
+        };
+      }
+
+      triggerOnLogin = username => {
+        this.setState(
+          {
+            loggedIn: true,
+            username: username,
+          },
+          () => {
+            localStorage.setItem("loggedIn", this.state.loggedIn);
+            localStorage.setItem('username', this.state.username);
+            
+          }
+        )
+      }
+
+      componentDidMount() {
+        localStorage.getItem("loggedIn") !== null ? this.setState({loggedIn: true}) : this.setState({loggedIn: false});
+     }
+
+      render() {
+        return this.state.loggedIn === false ? (
+          <Login  triggerOnLogin={this.triggerOnLogin}/>
+        ) : (
+          <App loggedIn={this.state.loggedIn}/>
+        );
+      }
   };
 
 export default Authenticate;
