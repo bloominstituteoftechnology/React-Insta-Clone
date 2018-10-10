@@ -1,0 +1,37 @@
+.whole-post{
+    width:100%;
+    margin-left: 5%;
+    border: .5px solid lightgrey;
+    max-width: 641px;
+    margin-bottom: 10px;
+}
+.username-thumbnail{
+   display: flex;
+   margin-top: 7px;
+   margin-bottom: 7px;
+   margin-left: 3%;
+
+}
+.thumbnail{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.username{
+    align-self: center;
+    margin-left: 2%;
+    font-weight: bold;
+}
+.bottom{
+    margin-left:1%;
+}
+button{
+    height: 25px;
+    width:25px;
+    margin-right: 3%;
+    margin-top: 3px;
+    margin-left: 3%;
+}
+.likes{
+    font-weight: bold;
+}

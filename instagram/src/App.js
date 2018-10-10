@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PostContainer from './components/PostContainer';
-import './App.css';
+
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar';
 
@@ -9,12 +9,10 @@ class App extends Component {
   constructor(){
         super();
         this.state={
-          dummyData:{dummyData}
+          postData:{dummyData}
         }
     }
-    componentDidMount(){
-      this.setState({dummyData:dummyData})
-    }
+   
   render(){
     return (
       <div className="whole-app">

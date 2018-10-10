@@ -1,5 +1,6 @@
 import React from 'react';
-
+import './SearchBar.css';
+import PropTypes from'prop-types';
 class SearchBar extends React.Component{
     constructor(){
         super();
@@ -19,19 +20,28 @@ Input=event=>{
 }
     render(){ 
         return(
-            <container>
-            <navbar>
-                 <div>
-                
-                <span>instagram</span>
+            <div className="search-bar">
+                    
+                <div className="logo">
+                    <p>L</p>
+                    <p>|</p>
+                    <p>instagram</p>
                 </div>
-                <form>
-                    <input placeHolder="Search"value={this.state.searchInput}onChange={this.Input}/>
+                <form >
+                    <input className="search" placeholder="Search"value={this.state.searchInput}onChange={this.Input}/>
                 </form>
-                <nav></nav>
-            </navbar>
-            </container>
+                <div className="icons">
+                    <ul>a</ul>
+                    <ul>b</ul>
+                    <ul>c</ul>
+                </div>
+                
+            
+            </div>
     )
     }
+}
+SearchBar.propTypes={
+    searchInput: PropTypes.string,
 }
 export default SearchBar;

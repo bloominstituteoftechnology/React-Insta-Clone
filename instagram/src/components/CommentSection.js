@@ -1,4 +1,6 @@
 import React from 'react';
+import './CommentSection.css';
+import PropTypes from 'prop-types';
 
 
 class CommentSection extends React.Component{
@@ -36,13 +38,14 @@ class CommentSection extends React.Component{
            newCommentInput:event.target.value
        });
    }
+
    
     render(){
         return(
         <div className="comments">
             <div className="list">{this.state.comments.map((comment,index)=>{
                 return(
-                    <div key={index}>
+                    <div className="comment" key={index}>
                         <span className="user">{comment.username}</span>
                         <span className="text">{comment.text}</span>
                     </div>
@@ -53,10 +56,17 @@ class CommentSection extends React.Component{
             <span><moment parse="MMMM do YYYY, hh:mm:ss A" fromNow>{this.state.timestamp}</moment></span>
            </div>
            <div className="add-comment">
-            <input id={`CommentSection__${this.state.id}`} type="text"placeholder="Add a comment..."value={this.state.newCommentInput} onChange={this.handleComment}onKeyDown={this.addComment}/>
+            <input className="comment-input" id={`CommentSection__${this.state.id}`} type="text"placeholder="Add a comment..."value={this.state.newCommentInput} onChange={this.handleComment}onKeyDown={this.addComment} />
+              <p className="dots">...</p>      
             </div>
         </div>
         );
     }
 };
+
+CommentSection.propTypes={
+    id: PropTypes.number,
+    newComment: PropTypes.string,
+    timestamp: PropTypes.string
+}
 export default CommentSection;

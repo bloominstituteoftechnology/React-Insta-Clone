@@ -1,8 +1,7 @@
 import React from 'react';
 import CommentSection from './CommentSection';
-
-
-
+import './PostContainer.css';
+import PropTypes from 'prop-types';
 
 class PostContainer extends React.Component{
     constructor(){
@@ -44,15 +43,15 @@ class PostContainer extends React.Component{
         this.setState({bookmarked:!bookmarkedPost})
     }
     commentInput=event=>{
-        document.getElementById(`commentSection__${this.state.id}`).focus();
+        document.getElementById(`CommentSection__${this.state.id}`).focus();
     }
 
     render(){
         return(
-            <div className="WholePost">
+            <div className="whole-post">
                 <div className="username-thumbnail">
-                    <div className="Thumbnail">
-                        <img src ={this.state.thumbnailUrl}/>
+                    <div >
+                        <img className="thumbnail" src ={this.state.thumbnailUrl}/>
                     </div>
                     <div className="username">
                         {this.state.username}
@@ -62,9 +61,9 @@ class PostContainer extends React.Component{
                     <img src = {this.state.imageUrl}/>
                 </div>
                 <div className="bottom">
-                    <button className="like-post" onClick={this.likeToggle}></button>
-                    <button className="comment" onClick={this.commentInput}></button>
-                    <button className="bookmark" onClick={this.bookmarkToggle}></button>
+                    <button className="like-post" onClick={this.likeToggle}>Like</button>
+                    <button className="comment" onClick={this.commentInput}>Add Comment</button>
+                    <button className="bookmark" onClick={this.bookmarkToggle}>Bookmark</button>
                     <div className="likes">
                         <p>{this.state.likes} likes </p>
                     </div>
@@ -79,5 +78,13 @@ class PostContainer extends React.Component{
         )
     }
 } 
+PostContainer.propTypes={
+    timestamp: PropTypes.string,
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    id: PropTypes.number
+};
 
 export default PostContainer;
