@@ -11,10 +11,9 @@ class Post extends React.Component {
     }
   }
 
-  increment = props => {
-    this.setState({
-      likes: this.state.likes + 1
-    })
+  increment = () => {
+    let likes = this.state.likes + 1;
+    this.setState({ likes })
 
   }
   render() {

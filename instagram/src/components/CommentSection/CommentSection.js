@@ -12,7 +12,7 @@ class CommentSection extends React.Component {
     }
   }
 
-  comHandler = event => {
+  comHandler = (event) => {
     this.setState({ comment: event.target.value });
   }
 
