@@ -11,6 +11,9 @@ const Login = props => {
                 <input type="password" placeholder="Password" onChange={props.handlePassword} />
                 <button>Login</button>
         </form>
+
+                <h3>Hint: user: Shawn</h3>
+                <h3>Hint: password: cat</h3>
         </div>
     );
 }
