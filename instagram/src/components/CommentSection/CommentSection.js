@@ -1,17 +1,23 @@
 import React from "react";
-
 import "./CommentSection.css";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+
+library.add(fas, far, fab);
 
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       comments: [...this.props.comments],
-      inputText: ""
+      inputText: "",
+      likes: this.props.likes
     };
   }
-
-
 
   changeHandler(event) {
     this.setState({
@@ -23,11 +29,10 @@ class CommentSection extends React.Component {
   addNewComment(e) {
     e.preventDefault();
     let newComment = {
-        username: "User",
-        text: this.state.inputText
-    }
+      username: localStorage.getItem("username"),
+      text: this.state.inputText
+    };
     this.setState({
-       
       comments: [...this.state.comments, newComment],
       inputText: ""
     });
@@ -37,6 +42,25 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div className="commentSection">
+        <div className="footer">
+          <div className="footerIcons">
+            <button
+              onClick={() => {
+                console.log(this.state);
+                this.setState({
+                  comments: [...this.props.comments],
+                  inputText: "",
+                  likes: this.state.likes + 1
+                })
+              }}
+              className="likeButton"
+            >
+              <FontAwesomeIcon icon="heart" />
+            </button>
+            <FontAwesomeIcon icon="comment" />
+          </div>
+          <div className="likes">{this.state.likes} likes</div>
+        </div>
         <div className="comments">
           {this.state.comments.map(comment => {
             return (
@@ -56,6 +80,7 @@ class CommentSection extends React.Component {
         >
           <input
             onChange={event => this.changeHandler(event)}
+            value={this.state.inputText}
             type="text"
             placeholder="Add a comment..."
           />

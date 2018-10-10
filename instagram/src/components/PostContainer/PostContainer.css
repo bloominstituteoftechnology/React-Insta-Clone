@@ -1,6 +1,10 @@
 .postContainer {
     width: 640px;
-    
+}
+
+.outerPostContainer {
+    width: 950px;
+    margin: 0 auto;
 }
 
 .post {
@@ -8,17 +12,17 @@
     border: 1px solid lightgrey;
     border-radius: 5px;
     margin: 100px 0;
+    background-color: white;
 }
 
 .header {
     display: flex;
-    margin: 20px;
+    margin-left: 20px;
     align-items: center;
 }
 
 .thumbnail {
-    width: 35px;
-    height: 35px;
+    width: 30px;
     border: 1px solid white;
     border-radius: 17px;
 }
@@ -38,4 +42,9 @@
     width: 8%;
     display: flex;
     justify-content: space-between;
+}
+
+.likeButton {
+    border: none;
+    background-color: white;
 }

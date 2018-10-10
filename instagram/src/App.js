@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer";
 import dummyData from "../src/dummy-data";
+import PostsPage from "./components/PostContainer/PostsPage"
+import Authenticate from "./components/Authentication/Authenticate"
 
 class App extends Component {
   constructor() {
@@ -15,19 +15,17 @@ class App extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ data: dummyData });
-    }, 800);
+    }, 84);
   }
+
 
   render() {
     return (
-      <div className="wholePage">
-        <SearchBar />
-        <div className="App">
-          <PostContainer data={this.state.data} />
-        </div>
-      </div>
+      <PostsPage 
+      data={this.state.data}
+      />
     );
   }
 }
 
-export default App;
+export default Authenticate(App);

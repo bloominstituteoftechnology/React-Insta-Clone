@@ -13,7 +13,7 @@ const SearchBar = props => {
     <div className="searchBar">
       <div className="searchBarContainer">
         <FontAwesomeIcon icon="" />
-        <h1>Instagram</h1>
+        <h1>Instaclone</h1>
         <div className="searchFormDiv">
           <form>
             <input type="text" placeholder="Search" />
