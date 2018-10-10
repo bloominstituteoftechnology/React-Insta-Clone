@@ -2,9 +2,6 @@ import React from 'react';
 import Post from '../Post/Post';
 
 class PostPage extends React.Component {
-    constructor(props) {
-        super(...arguments);
-    }
     render() {
         return (
             <div className="posts">

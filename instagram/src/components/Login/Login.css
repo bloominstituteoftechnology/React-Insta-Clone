@@ -1,0 +1,27 @@
+.login-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+.login-container form label {
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.login-container form input {
+    width: 100%;
+}
+.login-container form button {
+    margin-top: 0.5em;
+    width: 100%;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import Comment from './Comment.js';
 import './CommentSection.css';
-import Auth from '../Auth/Auth.js';
+import Authenticate from '../Authenticate/Authenticate.js';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -12,20 +12,6 @@ class CommentSection extends React.Component {
             likes: this.props.likes,
             commentBody: ''
         }
-    }
-    addNewComment = (submitEvent) => {
-        submitEvent.preventDefault();
-        let newCommentBody = this.state.commentBody;
-        if(newCommentBody.length <= 0){ return;}
-        let newComment = {
-            username: Auth.userName,
-            text: newCommentBody
-        };
-        this.setState({
-            commentList: [...this.state.commentList, newComment],
-            lastActivity: Date.now(),
-            commentBody: ''
-        })
     }
     render() {
         return (
@@ -65,17 +51,31 @@ class CommentSection extends React.Component {
     }
 
     //--------------------------------------------
+    addLike = (clickEvent) => {
+        console.log("ASDF")
+        this.setState(function(prevState, props){
+            return {likes: prevState.likes+1}
+        });
+    }
     typeComment = (changeEvent) => {
         let newValue = changeEvent.target.value;
         this.setState({
             commentBody: newValue
         });
     }
-    addLike = (clickEvent) => {
-        console.log("ASDF")
-        this.setState(function(prevState, props){
-            return {likes: prevState.likes+1}
-        });
+    addNewComment = (submitEvent) => {
+        submitEvent.preventDefault();
+        let newCommentBody = this.state.commentBody;
+        if(newCommentBody.length <= 0){ return;}
+        let newComment = {
+            username: Authenticate.userName,
+            text: newCommentBody
+        };
+        this.setState({
+            commentList: [...this.state.commentList, newComment],
+            lastActivity: Date.now(),
+            commentBody: ''
+        })
     }
 }
 

@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import PostPage from './components/PostPage/PostPage';
+import Authenticate from './components/Authenticate/Authenticate.js';
 
 class App extends Component {
 
@@ -20,10 +21,11 @@ class App extends Component {
     }, 200);
   }
   render() {
+    let AuthPostPage = Authenticate(PostPage);
     return (
       <div className="instagram">
         <SearchBar onSubmit={this.search} />
-        <PostPage
+        <AuthPostPage
           authorQuery={this.state.searchQuery}
           posts={this.state.posts}
         />
@@ -37,6 +39,9 @@ class App extends Component {
     this.setState({
       searchQuery: searchText
     });
+  }
+  login = () => {
+    
   }
 }
 

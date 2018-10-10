@@ -3,9 +3,6 @@ import './Post.css';
 import CommentSection from '../CommentSection/CommentSection';
 
 class Post extends React.Component {
-    constructor(props) {
-        super(...arguments);
-    }
     render() {
         return (
             <div className="post-container">
