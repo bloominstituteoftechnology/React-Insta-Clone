@@ -1,8 +1,11 @@
 import React from 'react';
 import SearchBar from './components/SearchBar';
-import PostContainer from './components/PostContainer';
+import PostsPage from './components/PostContainer/index.js';
+// import PostContainer from './components/PostContainer';
+import Authenticate from './components/Authentication';
 import data from './dummy-data.js';
 import './App.css';
+
 
 class App extends React.Component {
 	constructor() {
@@ -15,7 +18,7 @@ class App extends React.Component {
 	componentDidMount() {
 		this.setState({ data: data});
 	}
-
+	
 	filterPosts = (str) => {
 		const filteredPosts = data.filter(post => post.username.includes(str));
 		this.setState({ data: filteredPosts });
@@ -28,12 +31,14 @@ class App extends React.Component {
 					<SearchBar filterPosts={this.filterPosts} />
 					
 						<div className='positioning-container'>
-							<PostContainer data={this.state.data} />
+							<PostsPage data={this.state.data} />
+							{/* <PostContainer data={this.state.data} /> */}
 						</div>
 				</div>
 			</div>
 		);
 	}
 }
-	
+Authenticate(App);
+
 export default App;
