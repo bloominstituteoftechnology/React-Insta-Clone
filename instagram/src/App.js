@@ -2,6 +2,7 @@ import React from 'react';
 import "../src/index.css";
 import dummyData from "../src/dummy-data";
 import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './Authentication/Authenticate';
 
 
 class App extends React.Component {
@@ -68,5 +69,5 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
 
