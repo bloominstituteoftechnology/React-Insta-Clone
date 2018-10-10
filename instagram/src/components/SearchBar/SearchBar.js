@@ -5,14 +5,14 @@ import compass from '../../compass.svg';
 import heart from '../../heart.svg';
 import './SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <div className="searchBar">
             <div className="brand">
                 <img src={insta} width="40px" />
                 <h1>Instagram</h1>
             </div>
-            <input placeholder= "&#128269; Search" />
+            <input placeholder= "&#128269; Search" onKeyPress={props.search}/>
             <div className="searchNav">
                 <img src={compass} width="25px"/>
                 <img src={heart} width="25px"/>

@@ -6,6 +6,7 @@
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.21",
     "react": "^16.5.2",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2",
     "react-moment": "^0.8.1",
     "react-scripts": "2.0.3"

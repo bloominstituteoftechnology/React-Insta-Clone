@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar/SearchBar'
 import dummyData from './dummy-data'
 import PostContainer from './components/PostContainer/PostContainer'
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -13,11 +14,33 @@ class App extends Component {
     }
   }
 
+  allResults() {
+    this.setState({
+      data: {dummyData}
+    })
+  }
+
+  search = (e) => {
+    if (e.charCode === 13) {
+    let dummyData = this.state.data.dummyData.filter(function(key) {
+      return key.username == e.target.value
+    })
+
+    if (dummyData.length > 0){
+      this.setState({
+      data: {dummyData}
+    })
+  } else {
+    this.allResults();
+  } 
+  }
+  }
+
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar search={this.search}/>
         <PostContainer userpost={this.state.data.dummyData} 
         a/> 
       </div>
