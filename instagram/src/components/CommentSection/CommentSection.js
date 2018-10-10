@@ -7,8 +7,13 @@ class CommentSection extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      comments: props.comments
+      comments: props.comments,
+      comment: ''
     }
+  }
+
+  comHandler = event => {
+    this.setState({ comment: event.target.value });
   }
   render(){
     return (
@@ -20,7 +25,7 @@ class CommentSection extends React.Component {
             )
           }
           )}
-          <CommentInput />
+          <CommentInput changeHandler={this.comHandler} comment={this.state.comment}/>
         </div>
     )
   }
