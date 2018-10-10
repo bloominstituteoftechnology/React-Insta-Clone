@@ -9,7 +9,7 @@ const SearchBar = props => {
       <h1 className="insta-logo">Instagram</h1>
       <div className="search">
         <span className="fas fa-search" />
-        <input type="text" placeholder="Search" />
+        <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
       </div>
       <div className="navigation">
         <i className="far fa-compass" />
