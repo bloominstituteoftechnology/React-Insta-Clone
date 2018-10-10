@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar.js';
-import PostListContainer from './components/PostListContainer/PostListContainer.js';
+import usernames from './local-storage';
 import PostsPage from './components/PostContainer/PostsPage.js';
 import Authenticate from './components/Authentication/Authenticate.js';
 
-Authenticate(App);
+
 
 class App extends Component {
 
   constructor(){
     super();
     this.state = {
-      postData: []
+      postData: [],
+      usernames: usernames
 
     }
   }
 
   componentDidMount(){
     setTimeout(() => {
-      this.setState({postData: dummyData});
+      this.setState({postData: dummyData, usernames: usernames});
 
     }, 500);
 
@@ -53,8 +53,13 @@ class App extends Component {
     this.setState({
       postData: newPostData
     })
+  }
 
-
+  login = (username) =>{
+    const newUserList = [...this.usernames, username];
+    this.setState({
+      usernames: newUserList
+    })
   }
 
   render() {
@@ -68,4 +73,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
