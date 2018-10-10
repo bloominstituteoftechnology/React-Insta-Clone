@@ -1,8 +1,7 @@
 import React from 'react';
 import "../src/index.css";
 import dummyData from "../src/dummy-data";
-import PostContainer from "./components/PostContainer/PostContainer";
-import SearchBar from "./components/SearchBar/SearchBar";
+import PostsPage from './components/PostContainer/PostsPage';
 
 
 class App extends React.Component {
@@ -65,24 +64,7 @@ class App extends React.Component {
   };
 
   render() {
-    return (
-      <div className="App">
-        <SearchBar
-          changeHandler={this.filter}
-          filterTarget={this.state.filterTarget}
-        />
-        <PostContainer
-          data={
-            this.state.filteredPosts.length > 0
-              ? this.state.filteredPosts
-              : this.state.posts
-          }
-          likes={this.state.likes}
-          increment={this.increment}
-          target={this.state.likesTarget}
-        />
-      </div>
-    );
+    return <PostsPage changeHandler={this.filter} filterTarget={this.state.filterTarget} data={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} likes={this.state.likes} increment={this.increment} />
   }
 }
 
