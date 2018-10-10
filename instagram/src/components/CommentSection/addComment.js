@@ -1,21 +1,21 @@
 import React from 'react';
 
-const addComment = () => {
+const AddComment = (props) => {
         
         return(
         <div>
-            <form type>
+            <form type="submit">
 
                 <input 
-                value={this.props.newComment}
-                onChange={this.props.addComment}
+                value={props.newComment}
+                onChange={props.addComment}
                 type="text"
                 placeholder="Comment here!"
-                /><button onClick={this.props.commentUpdater} ></button>
+                /><button onClick={props.commentUpdater} ></button>
             </form>
         </div>
         )    
 }
 
 
-export default addComment;
+export default AddComment;

@@ -12,7 +12,9 @@ class Authenticate extends React.Component{
 
 render(){
     return(
-        
+        <div></div>
     )
 }
 }
+
+export default Authenticate 

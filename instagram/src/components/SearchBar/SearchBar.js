@@ -12,14 +12,11 @@ const SearchBar = props => {
     return(
 
 <div className="sBarDiv">
-<img alt="*" src={dummyData.map(item =>{
-
-   return item.imageUrl
-})}/>
+<img alt="*" src={props.data.map(item => <div key={item.username}>item.thumbnailUrl</div>)} />
 <h4>{props.text}</h4>
 {/* this could be a kink in the event chain if it's not recieving props prop-erly */}
 <input onChange={textInput}/> 
-<div>{props.LikeButton}</div>
+<div>{props.LikeButton()}</div>
 {/* maybe onChange isnt the best choice */}
 {/* if we add a search button and an onClick we can interpolate code from the todo list with ease */}
 </div> )

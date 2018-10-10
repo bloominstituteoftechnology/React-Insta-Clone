@@ -2,7 +2,7 @@ import React from 'react';
 import dummyData from '../../dummy-data';
 import PropTypes from 'prop-types';
 import './CommentSection.css';
-import addComment from './addComment';
+import AddComment from './addComment';
 
 class CommentSection extends React.Component {
 
@@ -33,7 +33,7 @@ class CommentSection extends React.Component {
 //        }
 
         
-    addComment = (event) => {
+    AddComment = (event) => {
         const dataCopy = this.state.data.comments.slice() ;
 
         dataCopy.push({username: 'LorenzoEvans', text: this.state.newComment })
@@ -43,13 +43,13 @@ class CommentSection extends React.Component {
         })
     }
 
-    handleAdd = (event) => {
+    HandleAdd = (event) => {
         this.state({
             comment: event.target.value 
         })
     }
 
-    submitComment = () => {
+    SubmitComment = () => {
         this.setState({
         data: this.state.data.comments.map( comment => {
             if (comment.text === this.text){
@@ -94,7 +94,7 @@ class CommentSection extends React.Component {
         <div className="cmntSectDiv">
         {this.props.data.map(item => <div key={item.timestamp}>
             {item.username}
-<addComment addComment={this.addComment} commentUpdater={this.commentUpdater} data={this.state.data} />
+<AddComment addComment={this.AddComment} commentUpdater={this.CommentUpdater} data={this.state.data} />
             <img alt="" src={item.thumbnailUrl} />
             <img alt="" src={item.imageUrl} />
             <div>{item.likes}</div>
