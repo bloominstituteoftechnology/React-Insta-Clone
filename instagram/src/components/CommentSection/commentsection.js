@@ -14,6 +14,7 @@ class CommentSection extends React.Component{
             comment:'',
             username:''
         };
+        console.log(this.state);
     }
     
       

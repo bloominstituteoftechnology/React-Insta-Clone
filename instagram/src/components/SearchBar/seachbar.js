@@ -14,17 +14,22 @@ const SearchBar = props=>{
         <img className= 'instalogo' alt= 'instagram logo' src = {iglogo}/>
         </div>
         <input
-        placeholder= 'search'>
-        </input>
+        placeholder = 'search'
+        type ='text'
+        className = 'search-bar'
+        name ='searchTarget'
+        onChange = {props.changeHandle}
+        value = {props.searchPost}
+        />
         <div className="all-icons">
         <div className="icons">
           <i className="fa fa-compass" />
         </div>
         <div className="icons">
-          <i className="fa fa-heart" />
+          <i className="fa fa-heart-o" />
         </div>
         <div className="icons">
-          <i className="fa fa-user-circle" />
+          <i className="fa fa-user-o" />
         </div>
         </div>
         

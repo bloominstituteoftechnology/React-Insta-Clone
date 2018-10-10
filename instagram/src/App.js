@@ -13,6 +13,8 @@ class App extends Component {
     super()
     this.state={
       userData: [],
+      searchedPost:[],
+      searchResult:''
     };
   console.log(this.state);
   
@@ -21,10 +23,22 @@ class App extends Component {
   componentDidMount() {
         setTimeout(() => {
       this.setState({ userData: dummyData });
-    }, 800);
+    }, 500);
+  }
+
+  handleInput= event =>{
+    this.setState({ searchResult: event.target.value});
   }
   
-  
+  searchResults= event =>{
+this.handleInput(event);
+this.setState(prevState =>{
+  const searchedPost = prevState.userData.filter(result =>{
+    return result.username.includes(prevState.searchResult);
+  });
+  return{searchedPost: searchedPost};
+});
+  }
 
 
  
@@ -32,9 +46,17 @@ class App extends Component {
     return (
       <div className="App">
 
-      <SearchBar />
-      <PostContainer userData={this.state.userData}/>
-          
+      <SearchBar 
+      changeHandle={this.searchResults}
+      searchPost={this.state.searchResult}
+      />
+      
+      <PostContainer 
+      userData={
+        this.state.searchedPost.length >0
+        ? this.state.searchedPost
+      :this.state.userData
+      }/>    
         
         
       </div>
