@@ -1,6 +1,7 @@
 import React from 'react';
 import './login.css'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import './login-phones.png';
 
 
 class LogIn extends React.Component {
@@ -30,6 +31,16 @@ class LogIn extends React.Component {
     render() {
         return (
             <div>
+        <div className='login-content'>
+
+        <div className='column-one'>
+        <div className='phone-pic' />
+        </div>
+
+        <div className='column-two'>
+        <div className='login-logo'/>
+        <h2 className='login-text'>Sign up to see photos and videos from your friends.</h2>
+
       <Form>
 
         <FormGroup>
@@ -63,7 +74,9 @@ class LogIn extends React.Component {
         <Button onClick={this.logInHandler}> Submit</Button>
 
       </Form>
-            </div>
+      </div>
+      </div>
+    </div>
 
             )
         }

@@ -1,0 +1,14 @@
+.login-content {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin: 50px auto;
+}
+
+
+.phone-pic {
+    height: 800px;
+    width: 400px;
+    background: url('login-phones.png') no-repeat 0 0;
+    background-size: 400px auto;
+}
