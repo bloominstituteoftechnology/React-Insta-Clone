@@ -16,7 +16,10 @@ const PostContainer = props => {
             <div className="icons">
             </div>
             <p>{props.item.likes} likes</p>
-            <CommentSection arr={props.item.comments} />
+            <CommentSection 
+                arr={props.item.comments} 
+                id={props.id}
+            />
         </div>
     );
 };

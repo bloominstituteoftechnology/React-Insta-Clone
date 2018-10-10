@@ -7,15 +7,24 @@ import PostContainer from "./components/PostContainer/PostContainer";
 class App extends Component {
   constructor() {
     super();
-    this.state = { data: [] };
+    this.state = { 
+      data: []
+    };
+  }
+
+  componentDidMount() {
+    this.setState({ data: dummyData });
   }
 
   render() {
     return (
       <div className="App">
         <SearchBar />
-        {dummyData.map(item => 
-          <PostContainer item={item} />
+        {this.state.data.map((item, idx) => 
+          <PostContainer 
+            item={item} 
+            id={idx}
+          />
         )}
       </div>
     );
