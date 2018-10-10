@@ -2,16 +2,25 @@ import React from 'react';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
 
-const CommentSection = (props) => {
-    return(
-        <div>
-            {props.comments.map(comment => {
-                return(
-                    <Comment comment={comment.text} username={comment.username}/>
-                );
-            })}
-        </div>
-    );
+class CommentSection extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+            comments: props.comments,
+            comment: ''
+        }
+    }
+    render(){
+        return (
+            <div>
+                {props.comments.map(comment => {
+                    return (
+                        <Comment comment={comment.text} username={comment.username} />
+                    );
+                })}
+            </div>
+        );
+    }
 }
 
 
