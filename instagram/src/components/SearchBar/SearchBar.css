@@ -77,7 +77,7 @@
 @media (max-width: 500px) {
   .Search-bar-container .Menu,
   .Search-bar-container header .divider,
-  .Search-bar-container header .icon {
+  .Search-bar-container header img {
     display: none;
   }
 
@@ -87,10 +87,6 @@
 
   .Search-bar-container header {
     width: 30%;
-  }
-
-  .Search-bar-container header img {
-    width: 95%;
   }
 
   .Search-bar-container input {
