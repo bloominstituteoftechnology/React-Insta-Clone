@@ -11,12 +11,13 @@ class PostContainer extends React.Component {
   
       const id = this.props.id;
      let comments = JSON.parse(localStorage.getItem(id));
+    //  || this.props.data.comments;
       if (comments === null){
           comments = this.props.data.comments;
       } else {
            return comments;
       } 
-    //   ? comments = this.props.data.comments : comments
+    //  comments === null ? comments = this.props.data.comments : comments
       this.state = {
         id: id,
         user: this.props.data,
@@ -31,7 +32,7 @@ class PostContainer extends React.Component {
       })
     }
     addNewComment = (e) => {
-      e.preventDefault();
+      // e.preventDefault();
       const text = e.target.children[0].value;
       const comments = this.state.comments;
       const username = this.state.username;
@@ -44,7 +45,7 @@ class PostContainer extends React.Component {
   
     }
     onChange = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
       this.setState({
           
         commentText : e.target.value
