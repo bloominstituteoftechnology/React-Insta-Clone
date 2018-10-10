@@ -19,7 +19,7 @@ class CommentSection extends Component {
       comments: [
         ...this.state.comments,
         {
-          username: "johndoe",
+          username: localStorage.getItem("username"),
           text: this.state.newComment
         }
       ],
