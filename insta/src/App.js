@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import './App.css';
-import PostContainer from './components/PostContainer';
+import PostsPage from './components/PostsPage';
 import SearchBar from './components/SearchBar';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -103,7 +103,14 @@ class App extends Component {
     return (
       <>
         <SearchBar searchInput={this.state.searchInput} handleSearch={this.handleSearch} searchUp={this.searchUp} />
-        <PostContainer posts={this.state.data} likes={this.state.likes} commentInput={this.state.commentInput} handleSubmit={this.handleSubmit} addNewComment={this.addNewComment} newLike={this.newLike} />
+        <PostsPage 
+          posts={this.state.data} 
+          likes={this.state.likes} 
+          commentInput={this.state.commentInput} 
+          handleSubmit={this.handleSubmit} 
+          addNewComment={this.addNewComment} 
+          newLike={this.newLike} 
+        />
       </>
     );
   }
