@@ -4,7 +4,15 @@ import CommentSection from './CommentSection';
 class CommentContainer extends React.Component {
     render(){
         return(
-            <><CommentContainer /></>
+            <><CommentSection 
+            
+            data={this.props.data}
+            
+            Comment={this.props.Comment}
+               
+            LikeButton={this.props.LikeButton} 
+            
+             /></>
             )
     }
 }

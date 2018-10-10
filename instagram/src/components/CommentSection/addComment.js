@@ -1,14 +1,18 @@
 import React from 'react';
 
-const addComment = () => {
-    return(
+const addComment = props => {
+        
+        return(
         <div>
-            <form>
+            <form type>
 
-                <input />
+                <input 
+                type="text"
+                placeholder="Comment here!"
+                />
             </form>
         </div>
-    )
+        )    
 }
 
 

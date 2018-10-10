@@ -16,7 +16,6 @@ class CommentSection extends React.Component {
         }
     }
 
-    // const {username, timestamp} = props.Data;
  
 
     addNewComment = (event, index) => {
@@ -35,7 +34,6 @@ class CommentSection extends React.Component {
 
         
 
-      //  index ??? event.target.value
 
     }
 
@@ -45,17 +43,9 @@ this.addNewComment();
 
     }
 
-    //c
 
-    // addNewComment
     render(){
-        const LikeButton = () => (
-        <i className="fa fa-heart like-button" />
-    );
-
-        const Comment = () => (
-        <i className="fa fa-comment comment "/>
-    );
+       
 
     return(
         <div className="cmntSectDiv">
@@ -66,16 +56,16 @@ this.addNewComment();
             <img alt="" src={item.imageUrl} />
             <div>{item.likes}</div>
             <div>{item.timestamp}</div>
-            <LikeButton />
-            <Comment />
-            <input />
-            
+            {this.props.LikeButton()}
+            {this.props.Comment()}
+          
             <div>{item.comments.map(item =>
             
             <div key={item.text}>
                 {item.username}
                 {item.text}
-            </div>
+            </div>, 
+             <addComment data={this.state.data} />
             )}</div>
 
             {/* In theory I feel like I should be able to nest a map method
@@ -84,7 +74,7 @@ this.addNewComment();
              */}
 
         </div>)}
-        <addComment data={this.state.data} />
+     
         </div>
     )
     }
@@ -105,14 +95,4 @@ dummyData.propTypes = {
     )
 }
 
-// CommentSection.propTypes = {
-
-//     dummyData: PropTypes.shape({
-//                         username: PropTypes.string.isRequired,
-//                         likes: PropTypes.number.isRequired,
-//                         comments: PropTypes.array.isRequired,
-                        
-//                     })
-
-// }
 export default CommentSection

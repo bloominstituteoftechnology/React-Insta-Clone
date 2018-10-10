@@ -8,7 +8,9 @@ import PostContainer from './components/PostContainer/PostContainer'
 
 
 class App extends React.Component {
+ 
   constructor(){
+ 
     super();
 
     this.state = {
@@ -20,8 +22,18 @@ class App extends React.Component {
       newComment: [],
 
       asyncMessage: ''
+   
     };
+  
   }
+
+  LikeButton = () => (
+    <i className="fa fa-heart like-button" />
+);
+
+    Comment = () => (
+    <i className="fa fa-comment comment "/>
+);
 
   // componentDidMount(){
   //   setTimeout(() => {
@@ -40,7 +52,9 @@ class App extends React.Component {
   // todo: add buttons, synthetic click for search
 
   inputText = (event) => {
+
     this.setState({
+    
       text: event.target.value
       // prope
     })
@@ -51,8 +65,20 @@ class App extends React.Component {
 
       <div> 
      
-      <SearchBar inputText={this.inputText} data={this.state.data} text={this.state.text} />
-       {this.state.data.map(item =>
+      <SearchBar 
+        inputText={this.inputText} 
+
+        data={this.state.data} 
+      
+        text={this.state.text}
+        
+        LikeButton={this.LikeButton}
+
+        Comment={this.Comment}
+        
+         />
+      
+        {this.state.data.map(item =>
         
         <div key={item.timestamp} ></div>
         
@@ -64,7 +90,16 @@ class App extends React.Component {
  
 
        
- <PostContainer newComment={this.state.newComment} data={this.state.data} /> 
+ <PostContainer 
+
+    LikeButton={this.LikeButton}
+
+    Comment={this.Comment}
+ 
+    newComment={this.state.newComment} 
+ 
+    data={this.state.data} /> 
+ 
       </div>
     )
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CommentSection from '../CommentSection/CommentSection'
+import CommentContainer from '../CommentSection/CommentContainer';
 import './PostContainer.css'
 
 class PostContainer extends React.Component{
@@ -13,7 +13,13 @@ class PostContainer extends React.Component{
         return(
             <div className="postContDiv">
             <div>{this.props.data.username}</div>
-               <CommentSection data={this.props.data} />  
+               <CommentContainer 
+
+               Comment={this.props.Comment}
+               
+               LikeButton={this.props.LikeButton} 
+               
+               data={this.props.data} />  
             </div>
            
         )

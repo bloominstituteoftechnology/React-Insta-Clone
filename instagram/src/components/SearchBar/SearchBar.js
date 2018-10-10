@@ -18,9 +18,10 @@ const SearchBar = props => {
 })}/>
 <h4>{props.text}</h4>
 {/* this could be a kink in the event chain if it's not recieving props prop-erly */}
-<input onChange={textInput}/>
+<input onChange={textInput}/> 
+<div>{props.LikeButton}</div>
 {/* maybe onChange isnt the best choice */}
-{/* if we add a search button and an onClick we can interpolat0e code from the todo list with ease */}
+{/* if we add a search button and an onClick we can interpolate code from the todo list with ease */}
 </div> )
 }
 
