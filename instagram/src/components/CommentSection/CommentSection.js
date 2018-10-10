@@ -13,7 +13,6 @@ class CommentSection extends React.Component {
 
         this.state = {
             comments: props.comments,
-            id: props.id,
             likes: props.likes,
             newComment: "",
             timestamp: props.timestamp

@@ -8,7 +8,7 @@ const SearchBar = props => {
     return (
         <div className="search-bar">
             <Logo />
-            <SearchInput searchValue={props.searchValue} searchChangeHandler={props.searchChangeHandler} searchUsername={props.searchUsername} />
+            <SearchInput submitSearch={props.submitSearch} />
             <Navigation />
         </div>
     );

@@ -9,39 +9,53 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: [],
-      searchValue: ""
+      posts: []
     }
   }
 
   //once component is mounted, set state of App
   componentDidMount() {
     this.setState({
-      posts: dummyData
+      posts: dummyData.map((post, index) => {
+        post.id = index + 1;
+        return post;
+      })
     });
   }
 
-  searchChangeHandler = (event) => {
+  submitSearch = (event, value) => {
     event.preventDefault();
-    this.setState({ searchValue: event.target.value }, console.log(this.state.searchValue));
-  }
-
-  searchUsername = (event, value) => {
-    event.preventDefault();
-    if(!this.state.searchValue){
+    if (!value) {
       this.setState({
         posts: dummyData
       });
     } else {
-      console.log("set posts to regex")
+      const regex = RegExp(value, 'i');
+      const filteredDummyData = dummyData.filter((post) => regex.test(post.username));
+      if (filteredDummyData.length) {
+        this.setState({
+          posts: filteredDummyData
+        });
+      }
+      else {
+        this.setState({
+          posts: []
+        });
+      }
     }
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBar searchValue={this.state.searchValue} searchChangeHandler={this.searchChangeHandler} searchUsername={this.searchUsername} />
-        {this.state.posts.map((post, index) => <PostContainer post={post} id={index} key={index} />)}
+        <SearchBar submitSearch={this.submitSearch} />
+        {(this.state.posts || []).map((post, index) => <PostContainer post={post} key={post.id} />)}
+        {/* {this.state.posts.map((post, index) => {
+        if(post.username.contains(searchValue)){
+          return <PostContainer post={post} key={index} />
+        }
+      }) */}
+
       </div>
     );
   }
