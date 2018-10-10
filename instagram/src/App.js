@@ -14,6 +14,23 @@ class App extends Component {
     this.setState({ posts: dummyData });
   }
 
+  changeHandler = (event) => {
+    this.setState({ searchQuery: event.target.value });
+  };
+
+  addLike = (timestamp) => {
+    this.setState({
+      posts: this.state.posts.map((post) => {
+        if (post.timestamp === timestamp) {
+          post.likes += 1;
+        }
+        return post;
+      }),
+    });
+  };
+
+  search = () => {};
+
   render() {
     return (
       <div className="App">

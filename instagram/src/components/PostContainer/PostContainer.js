@@ -15,6 +15,11 @@ const PostContainer = (props) => {
       </div>
       <img src={props.post.imageUrl} alt="probably toast" />
       <div className="post-data">
+        <button
+          className="heart-icon"
+          onClick={() => props.addLike(props.post.timestamp)}
+        />
+        <img className="comment-icon" src="" alt="" />
         <p>{props.post.likes} likes</p>
       </div>
       <CommentSection
