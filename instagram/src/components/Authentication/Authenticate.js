@@ -1,9 +1,17 @@
 import React from 'react';
+import LoginPage from './../Login/LoginPage.js';
 
 const Authenticate = PassedComponent =>
   class extends React.Component {
+    constructor() {
+      super();
+      this.state = { loggedIn: false };
+    }
     render() {
-      return <PassedComponent />;
+      if (this.state.loggedIn) {
+        return <PassedComponent />;
+      }
+      return <LoginPage />;
     }
   };
 
