@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './CommentSection.css'
 import { EventEmitter } from '../../events.js'
 
-const CommentSection = ({data, index}) => (
+const CommentSection = ({data, index, commentInput}) => (
     <div className='comments-container'>
         {data.comments.map(comment => {
             return <div className='comment'>
@@ -16,8 +16,9 @@ const CommentSection = ({data, index}) => (
                 <input 
                     className='comment-input' 
                     type='text' 
-                    placeholder='Add a comment...' 
-                    onChange={(event) => EventEmitter.dispatch('handleChange', event)}
+                    placeholder='Add a comment...'
+                    value={commentInput}
+                    onChange={(event) => EventEmitter.dispatch('commentChange', event)}
                 />
             </form>
             <img className='elipses' src={require('../../icons/insta_dots.png')} alt='more options button'/>
