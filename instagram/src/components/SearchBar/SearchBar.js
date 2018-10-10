@@ -29,6 +29,7 @@ const SearchBar = props => {
             onChange={props.search}
             value={props.stateSearch}
             name="search"
+            autoComplete="off"
           />
         </form>
         <div className="rightIcons">

@@ -32,6 +32,7 @@ header nav {
 
 .rightIcons {
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .instagramLogo {
