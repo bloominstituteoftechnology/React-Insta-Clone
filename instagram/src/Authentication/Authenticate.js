@@ -1,6 +1,7 @@
 import React from "react";
+import Login from "../components/Login/Login.js";
 
-const Authenticate = PassedComponent => SecondComponent => {
+const Authenticate = App => {
   return class extends React.Component {
     constructor() {
       super();
@@ -17,8 +18,8 @@ const Authenticate = PassedComponent => SecondComponent => {
     }
     render() {
       if (this.state.loggedIn) {
-        return <PassedComponent />;
-      } else return <SecondComponent />;
+        return <App />;
+      } else return <Login />;
     }
   };
 };
