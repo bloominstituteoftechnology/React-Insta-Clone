@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+    position: relative;
+    top: 203px;
+}
+
+.loginFrom {
+    margin: 0 auto;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 14%;
+    background-color: grey;
+    justify-content: center;
+    width: 400px;
+}
+
+.loginFrom input {
+    margin: 5px;
+}
+
+.loginFrom button {
+    margin-top: 20px;
+    width: 100px;
+    background-color: white;
+}
