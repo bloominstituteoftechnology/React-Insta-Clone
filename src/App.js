@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Authenticate from './components/Authentication/Authenticate';
 import PostsPage from './components/PostContainer/PostsPage';
 import './App.css';
 
@@ -71,35 +72,10 @@ class App extends Component {
   
   render() {
     return (
+      <>
+      <Authenticate comp={App} />
       <PostsPage />
-      // <div className="App">
-      //   <SearchBar searchHandler={this.searchHandler} />
-      //   {this.state.data.map( (data, index) => {
-      //     // Pass each element to PostContainer:
-      //       // id: 0
-      //       // username: "",
-      //       // thumbnailUrl: "",
-      //       // imageUrl: "",
-      //       // likes: 0,
-      //       // timestamp: "July 17th 2017, 12:42:40 pm",
-      //       // comments: []
-      //       // mergeData: fn
-          
-      //     return (
-      //       <PostContainer
-      //         key={index} 
-      //         id={index}
-      //         username={data.username}
-      //         thumbnailUrl={data.thumbnailUrl}
-      //         imageUrl={data.imageUrl}
-      //         likes={data.likes}
-      //         timestamp={data.timestamp}
-      //         comments={data.comments}
-      //         mergeData={this.mergeData}
-      //       />
-      //     );
-      //   })}
-      // </div>
+      </>
     );
   }
 }
