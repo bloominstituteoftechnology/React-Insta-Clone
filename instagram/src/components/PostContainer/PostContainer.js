@@ -10,14 +10,25 @@ class PostContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      liked: false,
       likes: this.props.data.likes,
     }
 }
 
 handleLikes = (event, index) => {
-  this.setState(prevState => {
-    return {likes: prevState.likes + 1}
-  })
+  let likes = this.state.likes;
+  if (this.state.liked){
+    this.setState({
+      liked: false,
+      likes: likes - 1,
+    })
+  } else {
+      this.setState({
+        liked: true,
+        likes: likes + 1,
+      })
+  }
+
 }
 render() {
     return (
@@ -31,7 +42,8 @@ render() {
         </div>
 
         <div className='post-icons'>
-          <HeartIcon onClick={this.handleLikes} />
+          <HeartIcon
+            isLiked={this.state.liked} handleLikes={this.handleLikes} />
           <CommentIcon />
 
         </div>

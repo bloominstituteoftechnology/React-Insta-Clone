@@ -36,6 +36,12 @@
 .post-icons .heart-icon{
   width: 30px;
   height: 30px;
+  cursor: pointer;
+}
+
+.liked{
+  /* color: red; */
+  fill: red;
 }
 
 .post-icons .comment-icon{
