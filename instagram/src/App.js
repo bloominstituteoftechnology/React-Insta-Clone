@@ -7,11 +7,21 @@ import dummyData from './dummy-data.js';
 class App extends Component {
   constructor() {
     super();
+    
     this.state = {
-      dummyData: dummyData,
+      dummyData:[],
+      
     };
   }
+  componentDidMount(){
+   setTimeout(()=>{
 
+   
+    this.setState({
+      dummyData:dummyData,
+    })
+  },500)
+  }
 
   render() {
     return (

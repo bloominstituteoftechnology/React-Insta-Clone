@@ -10,7 +10,7 @@ const PostContainer = (props) => {
                 return (
                     <Post
                         postData={data}
-                        key={Math.random()}
+                        key={props.timestamp}
                     />
                 )
             })}
