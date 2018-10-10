@@ -5,8 +5,11 @@ const Likes = props => {
     <div 
       onCLick={props.increment}
     >
-      <div>placeholder</div>
-      <div>placeholder</div>
+      <div>
+      <i className="far fa-heart" />
+      <i className="far fa-comment" />
+      </div>
+      
       <div>{props.likes}</div>
     </div>
     );
