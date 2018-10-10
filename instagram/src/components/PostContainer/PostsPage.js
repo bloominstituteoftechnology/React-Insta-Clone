@@ -11,10 +11,6 @@ export class PostsPage extends Component {
     this.setState({ posts: dummyData });
   }
 
-  changeHandler = (event) => {
-    this.setState({ searchQuery: event.target.value });
-  };
-
   addLike = (timestamp) => {
     this.setState({
       posts: this.state.posts.map((post) => {

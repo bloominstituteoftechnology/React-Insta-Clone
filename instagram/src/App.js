@@ -10,6 +10,10 @@ class App extends Component {
     searchQuery: '',
   };
 
+  changeHandler = (event) => {
+    this.setState({ searchQuery: event.target.value });
+  };
+
   search = () => {};
 
   render() {
