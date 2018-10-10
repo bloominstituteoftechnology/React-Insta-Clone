@@ -12,13 +12,9 @@ class App extends Component {
       data:[],
       newComment:''
     }
-    this.saveData = this.saveData.bind(this)
   }
   componentDidMount(){
     let data = JSON.parse(localStorage.getItem('igData'))
-
-
-    
      if(data){
        this.setState({'data':data})
      } 
@@ -27,11 +23,8 @@ class App extends Component {
       this.setState({'data':dummyData})    
      }
 
- 
   }
   saveData(){
-    console.log('wtf is this', this)
-    console.log('setting local storage',this.state.data)
     localStorage.setItem('igData',JSON.stringify(this.state.data))
   }
 
