@@ -6,7 +6,8 @@ class SearchBarLogo extends React.Component {
       <div className="sbLogo">
         <i className="fab fa-instagram" />
         <hr />
-        <i className="fab fa-hooli" />
+        <i className="fab fa-aviato" />
+        {/* <i className="fab fa-hooli" /> */}
       </div>
     );
   }

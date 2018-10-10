@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   text-align: center;
-  /* width: 15%; */
+  width: 150%;
   height: 20px;
   border-radius: 2px;
   border: 1px solid rgb(182, 182, 182);
@@ -31,10 +31,23 @@
 .searchBarIcons {
   display: flex;
   justify-content: space-between;
-  width: 11%;
+  width: 15%;
   font-size: 1.6rem;
   font-weight: lighter;
   padding-right: 1rem;
+}
+
+.searchBarIcons li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.searchBarIcons li:hover {
+  color: rgb(179, 37, 37);
+  text-decoration: underline;
 }
 
 .sbLogo hr {
@@ -48,6 +61,10 @@
 }
 
 .fa-hooli {
+  font-size: 3.2rem;
+  padding: 0 1rem;
+}
+.fa-aviato {
   font-size: 3.2rem;
   padding: 0 1rem;
 }
