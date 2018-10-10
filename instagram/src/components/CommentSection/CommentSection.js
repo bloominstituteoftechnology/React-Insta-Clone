@@ -26,6 +26,7 @@ class CommentSection extends React.Component {
     this.addComment = this.addComment.bind(this)
   }
   componentDidUpdate() {
+    // got an error saying something was calling this too much
     // this.setState({
     //   comments: this.props.comments
     // })
@@ -64,7 +65,11 @@ class CommentSection extends React.Component {
             value={this.state.commentValue}
             onChange={this.handleComment}
             />
-          <div className="submit" onClick={this.addComment}>submit</div>
+          <div 
+            className="submit" 
+            onClick={this.addComment}>
+            submit
+          </div>
           <div className="three-dots"></div>
         </div>
       </div>
