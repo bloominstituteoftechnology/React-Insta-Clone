@@ -29,7 +29,7 @@ class PostContainer extends React.Component {
           <i className="far fa-comment"></i>
         </div>
         <p className="likes">{this.state.likes} likes</p>
-        <CommentSection comments={this.props.data.comments} comment={this.props.comment} />
+        <CommentSection comments={this.props.data.comments} />
       </div>
     )
   }
