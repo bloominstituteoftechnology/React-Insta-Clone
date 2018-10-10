@@ -6,13 +6,15 @@ import SearchBar from "./components/SearchBar/SearchBar";
 
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       posts: [],
       likes: Math.floor(Math.random() * 1000),
       filteredPosts: [],
-      filterTarget: ""
+      filterTarget: "",
+      index: null
+
     };
   }
 
@@ -21,9 +23,32 @@ class App extends React.Component {
       this.setState({ posts: dummyData });
  
   }
-  increment = () => {
-    this.setState({ likes: this.state.likes + 1 });
-  };
+  increment = (e) => {
+    if (this.state.index === null) {
+    this.setState({ 
+      likes: this.state.likes + 1,
+      index: 0
+    })
+  }
+  
+  if (this.state.index < 2 && this.state.index >= 0 ) {
+    this.setState({ 
+      likes: this.state.likes + 1,
+      index: this.state.index + 1
+    })
+  }
+
+  if (this.state.index === 2) {
+    this.setState({
+      likes: this.state.likes + 1,
+      index: 0
+    })
+  }
+
+
+}
+    
+  
 
   handleInput = event => {
     this.setState({ [event.target.name]: event.target.value });
@@ -54,6 +79,7 @@ class App extends React.Component {
           }
           likes={this.state.likes}
           increment={this.increment}
+          target={this.state.likesTarget}
         />
       </div>
     );

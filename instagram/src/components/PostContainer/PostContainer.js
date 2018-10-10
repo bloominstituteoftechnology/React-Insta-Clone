@@ -19,7 +19,7 @@ const PostContainer = props => {
                 image={data.imageUrl}
                 username={data.username}
               />
-              <Icons increment={props.increment} />
+              <Icons increment={props.increment} index={props.index} />
               <p className="likes"> {props.likes} likes</p>
               <div className="comments-container">
                 <CommentSection comments={data.comments} />
