@@ -22,7 +22,7 @@ const Authenticate = (App, Login) => (
     loginSubmit = event => {
       event.preventDefault();
 
-      const loginCredentials = { username: 'jajawockee', password: 'admin' };
+      const loginCredentials = { username: this.state.username, password: this.state.password };
       const tryUsername = this.state.username;
       const tryPassword = this.state.password;
 
