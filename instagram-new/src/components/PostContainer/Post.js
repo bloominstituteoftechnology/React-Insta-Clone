@@ -5,7 +5,7 @@ import CommentSection from './CommentSection/CommentSection';
 const Post= props => { 
     return (
         <div>
-            {props.dummyData.map(info => {
+            {props.dummyData.map((info,index) => {
                 return (
                 <div className = 'post'>
                     <div className = 'post-header'>
@@ -16,7 +16,11 @@ const Post= props => {
 
                     <div className = 'comments'>
                         <div className = 'likes'>
-                            <div className = "cl-buttons"></div>
+                            <div className = "cl-buttons">
+                                <i onClick = {event => {
+                                    props.counter(event,index);
+                                }} class="far fa-heart"></i>
+                            </div>
                             <p>{info.likes} likes</p>
                         </div>
                         <CommentSection comments={info.comments}/> 

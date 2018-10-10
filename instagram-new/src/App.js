@@ -38,13 +38,20 @@ class App extends Component {
     this.setState({filteredData: filterData});
   }
 
+  counter = (event, index) => {
+    event.preventDefault();
+    const hold = this.state.filteredData;
+    hold[index].likes++;
+    this.setState({filteredData:hold})
+  }
+
   render() {
     return (
       
       <div className="App">
         <Search inputChange = {this.inputChange} filtered = {this.filtered}/>
         <div className = "content-container">
-          <Post dummyData ={this.state.filteredData}/>
+          <Post dummyData ={this.state.filteredData} counter = {this.counter}/>
         </div>
       </div>
     );
