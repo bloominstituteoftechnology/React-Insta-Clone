@@ -67,6 +67,8 @@ class App extends React.Component {
   }
 
   commentUpdater = (event) => {
+    event.stopPropagation();
+    // event.preventDefault();
 
     this.setState({
         newData: this.newData.push({username: 'LorenzoEvans', text: event.target.value  })
@@ -78,7 +80,7 @@ class App extends React.Component {
     return(
 
       <div> 
-     
+     <Authenticate />
       <SearchBar 
         inputText={this.inputText} 
 
