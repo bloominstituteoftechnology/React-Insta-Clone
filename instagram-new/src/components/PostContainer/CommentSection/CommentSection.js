@@ -17,7 +17,7 @@ class CommentSection extends Component {
         event.preventDefault();
         this.setState({
             comments: [...this.state.comments, {text: this.state.newComment,
-                                                username: 'NewGuy'}],
+                                                username: localStorage.getItem('username')}],
                                                 newComment: '',
         });
     };
