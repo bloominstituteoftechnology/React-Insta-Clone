@@ -1,8 +1,24 @@
-.logo {
+.Searchbar{
+    display: flex;
+    align-items: center;
+    border: 3px solid red;
+}
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Billabong';
     font-style: normal;
-    font-weight: normal;
+    font-weight: 100;
+    font-size: 2.5rem;
     src: local('Billabong'), url('Billabong.woff') format('woff');
+    max-width: 800px;
+    width: 80%;
+    padding-left: 40px;
+
+}
+.icons{
+    display: flex;
 
 }

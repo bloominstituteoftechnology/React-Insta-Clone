@@ -7,33 +7,31 @@ const SearchBarDiv = styled.div`
 `;
 const SearchBarWrapper = styled.div`
   /* border: 3px solid blue; */
-  display: flex;`
-
+  display: flex;
+`;
 
 const SearchBar = props => {
   return (
     <SearchBarDiv>
       <SearchBarWrapper>
         <div className="logo">
-          <h1>Instagram</h1>
+          <i class="fab fa-instagram " />
+          Instagram{" "}
         </div>
-        </SearchBarWrapper>
         <div>
-          <input type="text" placeholder="Search" />
+          {" "}
+          <input type="text" placeholder="Search" />{" "}
         </div>
-        <div className="social-wrapper">
-          <div className="social">
+        <div className="icons">
+          <div className="social-wrapper">
             <i className="far fa-compass" />
-          </div>
-          <div className="social">
             <i className="far fa-heart" />
-          </div>
-          <div className="social">
             <i className="far fa-user-circle" />
           </div>
         </div>
-        <button onClick={() => props.handleCreds(null)}>LOGOUT!!!</button>
+      </SearchBarWrapper>
 
+      <button onClick={() => props.handleCreds(null)}>LOGOUT!!!</button>
     </SearchBarDiv>
   );
 };
