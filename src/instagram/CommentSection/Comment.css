@@ -1,6 +1,13 @@
 .Comment-section {
   display: flex;
   flex-direction: row;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 5px 5px;
 }
 
 .Comment-nickname {
@@ -9,4 +16,13 @@
 
 .Comment-text {
   padding-left: 10px;
+  text-align: left;
+}
+
+.Comment-add-input {
+  width: 95%;
+  margin: 5px auto;
+  border: none;
+  border-top: 1px solid lightgrey;
+  height: 40px;
 }
