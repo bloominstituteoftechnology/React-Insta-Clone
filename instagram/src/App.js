@@ -1,21 +1,23 @@
 import React from 'react';
 import './App.css';
 
-import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './components/Authentication/Authenticate';
+import PostsPage from './components/PostContainer/PostsPage'
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      login: false
+  constructor() {
+    super()
+
     }
-  }
+
 
   render() {
     return (
-      <PostsPage />
-    );
+      <div>
+        <PostsPage />
+      </div>
+    )
   }
-}
+};
 
-export default App;
+export default Authenticate(App);
