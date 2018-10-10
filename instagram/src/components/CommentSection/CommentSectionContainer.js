@@ -17,23 +17,28 @@ class CommentSection extends React.Component {
     setTimeout(() => {this.setState({comments: this.state.comments})}, 800)
   }
 
-  addNewComment = event => {
-    event.preventDefault();
-    const comments = this.state.comments.slice();
-    comments.push({username: this.state.user, comment: this.state.comment});
-    this.setState({comments: comments, comment: ''})
-}
 
   commentHandler = event => { // commentHandler using comment instead of text
-    event.preventDefault();
     this.setState({ comment: event.target.value });
   };
+
+  commentSubmit = event => {
+    event.preventDefault();
+    const NewComment = {text: this.state.comment, username: 'Gemma FP'};
+    const comments = this.state.comments.slice();
+    comments.push(NewComment);
+    this.setState({ comments, comment: '' })
+  }
 
   render() {
     return (
       <div className='comment-wrapper'>
         {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
-        <CommentInput commentHandler={this.commentHandler} comment={this.state.comment}/>
+        <CommentInput 
+        submitHandler={this.commentSubmit}
+        commentHandler={this.commentHandler} 
+        comment={this.state.comment}
+        />
       </div>
     );
   }

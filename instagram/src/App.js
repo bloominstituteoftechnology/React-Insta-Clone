@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostsContainer from './components/PostsContainer/PostsContainer';
-import SearchBar from './components/SearchBar/SearchBar'
+import SearchBar from './components/SearchBar/SearchBar';
+
 class App extends Component {
   constructor() {
     super();
@@ -47,4 +48,17 @@ class App extends Component {
   }
 }
 
+// render() {
+//   return (
+//     <div className="App">
+//       <SPostsPage />
+//     </div>
+//   );
+// }
+// }
+
+// const authenticateApp = Authenticate(App)
+
 export default App;
+
+// export default Authenticate(App);
