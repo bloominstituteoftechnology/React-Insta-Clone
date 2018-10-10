@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import './App.css';
 import CommentSection from './components/CommentSection/commentSection';
 import dummyData from './dummy-data';
