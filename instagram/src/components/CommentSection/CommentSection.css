@@ -1,0 +1,94 @@
+.comment-container {
+    padding: 15px;
+    /* padding-top: 15pxpx; */
+}
+
+
+.comment-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comment-username {
+    color: black;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.comment-text {
+    padding-left: 10px;
+}
+
+.time-stamp {
+    font-size: 11px;
+    color: gray;
+    text-transform: uppercase;
+    padding: 2px 0px 8px 0px;
+    border-bottom: 1px solid lightgray;
+    margin: 0px;
+}
+
+.add-comment-bar {
+display: flex;
+justify-content: space-between;
+padding-top: 13px;
+}
+
+.add-comment {
+    background-color: white;
+    border: none;
+    text-align: left;
+    height: 18px;
+    width: 556px;
+}
+
+.add-comment::placeholder {
+    text-align: left;
+}
+
+
+#three-dots {
+    background: url('750ca40ab535.png') no-repeat -56px -178px;
+	width: 15px;
+    height: 3px;
+}
+
+.post-extras {
+    padding-top: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#love {
+        width: 24px;
+        height: 22px;
+}
+
+.heart {
+    background: url('750ca40ab535.png') no-repeat 0 -143px;
+}
+
+.red-heart {
+	background: url('750ca40ab535.png') no-repeat -136px -32px;
+}
+
+#bubble {
+    background: url('750ca40ab535.png') no-repeat -104px -194px;
+	width: 24px;
+	height: 24px;
+}
+
+#upload {
+    background: url('750ca40ab535.png') no-repeat -79px -194px;
+	width: 21px;
+	height: 24px;
+}
+
+#save {
+    background: url('750ca40ab535.png') no-repeat -198px -130px;
+	width: 19px;
+	height: 24px;
+}
+

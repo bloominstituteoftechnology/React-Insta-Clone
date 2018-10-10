@@ -1,0 +1,98 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+input {
+    width: 220px;
+    height: 30px;
+    box-shadow: none;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    background-color: #fafafa;
+}
+input::placeholder {
+    color: gray;
+    text-align: center;
+    font-size: 15px;
+}
+
+.search {
+    background-image: url(search.png);
+    background-repeat: no-repeat;
+}
+
+input:focus {
+    outline: none;
+    background-image: none;
+}
+
+.searchbar {
+    border-bottom: 1px solid lightgray;
+}
+
+.navitems {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 10%;
+    align-items: center;
+}
+
+.navitems-left {
+    display: flex;
+    flex-direction: row;
+    width: 160px;
+    justify-content: space-between;
+}
+
+.navitems-right {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.icon {
+    width: auto;
+    height: auto;
+}
+
+#camera {
+	background: url('750ca40ab535.png') no-repeat -79px -169px;
+	width: 22px;
+    height: 22px;
+}
+
+.line {
+    height: 30px;
+    width: 1px;
+    border-right: 0.5px  solid lightgrey;
+}
+
+#logo {
+	background: url('750ca40ab535.png') no-repeat -58px 0;
+	width: 103px;
+	height: 29px;
+}
+
+#compass {
+	background: url('750ca40ab535.png') no-repeat -195px -156px;
+	width: 23px;
+	height: 23px;
+}
+
+#heart {
+    background: url('750ca40ab535.png') no-repeat 0 -143px;
+	width: 24px;
+	height: 22px;
+}
+
+
+#profile {
+	background: url('750ca40ab535.png') no-repeat -222px -104px;
+	width: 22px;
+	height: 24px;
+}
