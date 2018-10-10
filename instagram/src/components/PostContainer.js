@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentSection from '../CommentSection/CommentSection'
+import CommentSection from '../CommentSection'
 
 
 import PropTypes from 'prop-types'
