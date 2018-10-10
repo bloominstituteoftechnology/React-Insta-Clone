@@ -12,8 +12,33 @@ class CommentSection extends React.Component {
       timestamp: props.user.timestamp,
       newComment: ""
     };
-    // this.hydrateState = props.hydrateState;
   }
+
+  //on mounting, checks local storage for previously stored comments. if it finds them,
+  //set them on state. otherwise updates comments to current state
+  componentDidMount() {
+    const id = this.props.postId;
+    if (localStorage.getItem(id)) {
+      this.setState({
+        comments: JSON.parse(localStorage.getItem(this.props.postId))
+      });
+    } else {
+      this.setComments();
+    }
+  }
+
+  //saves currently displayed comments on unmount
+  componentWillUnmount() {
+    this.setComments();
+  }
+
+  //the function for saving comments to storage
+  setComments = () => {
+    localStorage.setItem(
+      this.props.postId,
+      JSON.stringify(this.state.comments)
+    );
+  };
 
   addNewComment = (event, index) => {
     //function needs to add the comment that is on the event object to the post at the index number
@@ -33,6 +58,10 @@ class CommentSection extends React.Component {
         comments: newCommentList,
         newComment: ""
       });
+      //after delay, updates comment list to storage
+      setTimeout(() => {
+        this.setComments();
+      }, 500);
     }
   };
 
@@ -41,43 +70,7 @@ class CommentSection extends React.Component {
     this.setState({
       [key]: value
     });
-    // saves currently typed comment in storage. uncomment when storage bug is figured out
-    // localStorage.setItem(key, value);
   };
-
-  // next methods are all related to localStorage persistence,
-  // but I encountered a bug I haven't fixed yet where it will set
-  // ALL posts' comments to the last post's
-
-  // saveState() {
-  //   for (let key in this.state) {
-  //     localStorage.setItem(key, JSON.stringify(this.state[key]));
-  //   }
-  // }
-
-  // hydrateState() {
-  //   for (let key in this.state) {
-  //     if (localStorage.hasOwnProperty(key)) {
-  //       let value = localStorage.getItem(key);
-  //       try {
-  //         value = JSON.parse(value);
-  //         this.setState({ [key]: value });
-  //       } catch (error) {
-  //         this.setState({ [key]: value });
-  //       }
-  //     }
-  //   }
-  // }
-
-  // componentDidMount() {
-  //   this.props.hydrateState();
-  //   // window.addEventListener("beforeunload", this.saveState.bind(this));
-  // }
-
-  // componentWillUnmount() {
-  //   // window.removeEventListener("beforeunload", this.saveState.bind(this));
-  //   this.props.saveState();
-  // }
 
   render() {
     return (

@@ -11,7 +11,6 @@ class PostContainer extends React.Component {
       userData: props.userData,
       likes: props.userData.likes
     };
-    // this.hydrateState = props.hydrateState;
   }
 
   addLike = event => {
@@ -32,8 +31,7 @@ class PostContainer extends React.Component {
         />
         <CommentSection
           user={this.state.userData}
-          // saveState={this.props.saveState}
-          // hydrateState={this.props.hydrateState}
+          postId={this.state.userData.imageUrl}
         />
       </div>
     );
