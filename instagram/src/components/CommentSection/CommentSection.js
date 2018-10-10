@@ -16,7 +16,9 @@ class CommentSection extends React.Component {
       likes: this.props.post.likes,
       comments: this.props.post.comments,
       timestamp: this.props.post.timestamp,
-      inputText: ''
+      inputText: '',
+      liked:false,
+      bookmarked:false
     });
   }
 
@@ -31,6 +33,22 @@ class CommentSection extends React.Component {
     this.setState({ inputText: e.target.value });
   };
 
+  likeHandler = () =>{
+    if(!this.state.liked){
+      this.setState({liked:true, likes:this.state.likes +1})
+    }else{
+      this.setState({liked:false,likes:this.state.likes -1})
+    }
+  }
+
+  bookmarkHandler = () =>{
+    if(!this.state.bookmarked){
+      this.setState({bookmarked:true})
+    }else{
+      this.setState({bookmarked:false})
+    }
+  }
+
 
   render() {
     if (!this.state.likes) {
@@ -40,14 +58,14 @@ class CommentSection extends React.Component {
       <div>
         <div className="icon-bar">
           <div className="icons">
-            <Heart />
+            <Heart likeHandler={this.likeHandler} liked={this.state.liked}/>
 
             <Message />
 
             <Share />
           </div>
 
-          <Bookmark />
+          <Bookmark bookmarked={this.state.bookmarked} bookmarkHandler={this.bookmarkHandler}/>
         </div>
         <div className="comment-text">
           <h5>{this.state.likes} likes</h5>

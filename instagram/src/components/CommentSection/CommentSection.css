@@ -49,6 +49,15 @@
     outline:none;
     
 }
+
+.feather-heart, .feather-bookmark{
+    cursor: pointer;
+}
+
+.fill-black{
+    fill:black;
+}
+
 .fill-red{
     fill:red;
     stroke:red;

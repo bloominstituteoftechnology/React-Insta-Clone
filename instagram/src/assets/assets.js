@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Heart = () => (
+export const Heart = props => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -11,12 +11,13 @@ export const Heart = () => (
     strokeWidth="1"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="icon feather-heart"
+    onClick={props.likeHandler}
+    className={(props.liked) ? "icon feather-heart fill-red": 'icon feather-heart '}
   >
     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
   </svg>
 );
-export const Bookmark = () => (
+export const Bookmark = props => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -27,7 +28,8 @@ export const Bookmark = () => (
     strokeWidth="1"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="icon feather-bookmark"
+    className={props.bookmarked ? "icon feather-bookmark fill-black":"icon feather-bookmark"}
+    onClick={props.bookmarkHandler}
   >
     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
   </svg>
