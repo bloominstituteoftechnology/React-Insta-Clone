@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage'
 import PropTypes from 'prop-types';
-
-
 import './App.css';
 
 class App extends Component {
@@ -27,12 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        {this.state.dummyData.map(item => {
-          return(
-            <PostContainer key={item.timestamp} post={item} comments={item.comments}  /> 
-          )}) 
-        }
+        <PostsPage dummyData={this.state.dummyData} />
       </div>
     );
   }

@@ -26,7 +26,8 @@ class CommentSection extends Component{
         };
         if (this.state.tempComment !==''){
             this.setState({
-                comments: [...this.state.comments, newObj]
+                comments: [...this.state.comments, newObj],
+                tempComment: ''
             })
         }
     }
@@ -44,7 +45,7 @@ class CommentSection extends Component{
                 <p className='timestamp'>{this.props.timestamp}</p>
                 <div className='addComment'>
                     <form onSubmit={this.addNewComment}>
-                        <input type='text' value={this.tempComment} onChange={this.inputHandler}/>
+                        <input type='text' value={this.tempComment} onChange={this.inputHandler} placeholder='Add a comment...'/>
                     </form>
                 <i className="fas fa-ellipsis-h"></i>
                 </div>
