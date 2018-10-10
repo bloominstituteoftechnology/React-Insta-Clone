@@ -18,7 +18,6 @@ library.add(faUser);
 library.add(faSearch);
 
 
-
 class App extends Component {
   constructor() {
     super();
