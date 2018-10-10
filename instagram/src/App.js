@@ -1,39 +1,30 @@
 import React, { Component } from 'react';
-import SearchBar from './components/SearchBar/SearchBar'
-import dummyData from './dummy-data'
-import PostContainer from './components/PostContainer/PostContainer'
-// import CommentSection from './components/CommentSection/CommentSection'
+import PostPage from './components/PostContainer/PostPage'
+import Authenticate from './components/Authentication/Authenticate'
+import Login from './components/Login/Login'
 
 
 
 class App extends Component {
   constructor (props) {
     super(props)
-    this.state = {
-      postData: [],
-    }  
+    this.state = {}  
+    
   }
 
 
-componentDidMount() {
-  setTimeout(() => {
-    this.setState({postData: dummyData })
-  }, 800)
-  
-}
+
+
+
+
 
 
   render() {
     
-    return (
-      <div className="App">
-          <SearchBar />
-          <PostContainer postItems={this.state.postData} key={Math.random()} />
-          
-         
-      </div>
-    );
+    return <div className="App">{this.props.loggedIn ? <PostPage /> : <Login />}</div>
+     
+    
   }
 }
 
-export default App;
+export default Authenticate(App)

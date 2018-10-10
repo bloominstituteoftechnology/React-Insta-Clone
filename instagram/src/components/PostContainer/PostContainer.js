@@ -3,10 +3,12 @@ import PropTypes from 'prop-types'
 import CommentSection from '../CommentSection/CommentSection'
 
 const PostContainer = props => {
-     
+   
     return (
      <div>
+
         {props.postItems.map(post => {
+          
           return (  
         <div>   
             <div className="postContainerDiv">
@@ -23,7 +25,7 @@ const PostContainer = props => {
                 </div>
             <p className="likes">{post.likes} likes</p>
             
-            <CommentSection commentInfo={post.comments} key={Math.random()}/>
+            <CommentSection commentInfo={post.comments} key={post.username}/>
                 
             <div className="timeStamp">{post.timestamp}</div>
  

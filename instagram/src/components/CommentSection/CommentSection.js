@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import dummyData from '../../dummy-data';
+
 
 
 class CommentSection extends React.Component {
@@ -19,7 +19,7 @@ class CommentSection extends React.Component {
       }
 
       addNewComment = (event, index) => {
-          console.log(this.state)
+          
         event.preventDefault();
         if (this.state.commentInput === '') {
           return null
