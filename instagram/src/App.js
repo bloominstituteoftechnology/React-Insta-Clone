@@ -14,30 +14,46 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      dummyData: [],
+      posts: [],
+      filteredPosts: [],
+      filterTarget: ''
     }
   }
 
   componentDidMount() {
-    this.setState({ dummyData: dummyData });
+    this.setState({ posts: dummyData });
   }
+
+  handleInput = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
+  filter = event => {
+    this.handleInput(event);
+    this.setState(prevState => {
+      const filteredPosts = prevState.posts.filter(post => {
+        console.log(post);
+        return post.username.includes(prevState.filterTarget);
+      });
+      return { filteredPosts: filteredPosts };
+      // this could be just { filteredPosts }
+    });
+  };
 
   render() {
     return (
       <div className="App">
-        <SearchHeader />
-        {this.state.dummyData.map((item, index) => {
-                return (
-                  <PostContainer post={item} key={index}/>
-                );
-            })}
+        <SearchHeader           
+          changeHandler={this.filter}
+          filterTarget={this.state.filterTarget}
+          />
+        <PostContainer data={            
+          this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.posts}/>
       </div>
     );
   }
-}
-
-PostContainer.propTypes = {
-  
 }
 
 export default App;

@@ -4,11 +4,14 @@ import Search from './Search.js';
 import Icons from './Icons.js';
 import './SearchHeader.css';
 
-const SearchHeader = () => {
+const SearchHeader = props => {
     return (
         <div className="searchHeader">
           <Links logo="" titleLogo="Instagram" />
-          <Search />
+          <Search          
+          changeHandler={props.changeHandler}
+          filterTarget={props.filterTarget}
+          />
           <Icons icon="Hello" />
         </div>
     );
