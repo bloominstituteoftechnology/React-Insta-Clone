@@ -10,9 +10,9 @@ const PostContainer = props => {
         <div className='posts'>
     
             {props.posts.map((post, index) => {
+                if(post.username.indexOf(props.search) !== -1)
                 return(
                     <Post key={index} post={post}/>
-                  
                 );
             })}
             

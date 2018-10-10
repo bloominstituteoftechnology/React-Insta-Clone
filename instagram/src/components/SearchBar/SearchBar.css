@@ -1,0 +1,22 @@
+
+.searchBar{
+    width : 100%;
+    margin : 10px 0 ;
+
+    display : flex;
+    justify-content: space-between;
+    align-content: center;
+
+}
+
+.searchBar img{
+    height : 30px;    
+    margin-left : 10px;
+}
+
+.searchBar input{
+    border : none;
+}
+.icons svg{
+    margin : 10px 10px;
+}
