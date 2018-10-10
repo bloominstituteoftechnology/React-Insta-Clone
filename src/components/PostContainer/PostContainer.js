@@ -27,7 +27,11 @@ class PostContainer extends Component {
 
     /* Increment number of likes for this post */    
     likesHandler = event => {
-        this.setState((prevState) => ({ likes: prevState.likes + 1}));
+        this.setState((prevState) => ({ likes: prevState.likes + 1}),
+
+            // Merge with main data to set local storage - using cb function to pass state immediately
+            this.props.mergeData( this.state.id, {likes: this.state.likes} )
+        );
     };
 
     /* Add to post comments or log key entry */
@@ -65,7 +69,7 @@ class PostContainer extends Component {
             <div className='postContainer'>
                 <PostHeader username={this.state.username} thumbnailUrl={this.state.thumbnailUrl} />
                 <img className='postContainerImg' src={this.state.imageUrl} alt='' />
-                <LikesContainer likes={this.state.likes} postId={this.state.id} likesHandler={this.likesHandler} />
+                <LikesContainer likes={this.state.likes} postId={this.state.id} likesHandler={this.likesHandler} mergeData={this.props.mergeData} />
                 <CommentSection 
                     comments={this.state.comments} 
                     timestamp={this.state.timestamp}

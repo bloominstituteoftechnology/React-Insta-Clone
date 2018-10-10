@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const LikesContainer = (props) => {
     // Takes in props:
     // likes: 200
-    // likesHandler: ()
+    // likesHandler: fn()
     
     const likeHandler = () => {
         props.likesHandler(props.postId)

@@ -43,9 +43,10 @@ class App extends Component {
 
   /* Merge Data function
    * This will allow us to take individual posts, and merge them into the main
-   * data state
+   * data state. Allows for reuse by multiple items if needed.
    */
   mergeData = (id, merge) => {
+    console.log("id, merge:", id, merge);
     this.setState({
       data: this.state.data.map( (data, index) => {
         if( index === id ){
@@ -58,8 +59,9 @@ class App extends Component {
           return data;
         }
       })
-    }); // End of setState
-    this.saveLocal(this.state.data);
+    },
+      this.saveLocal(this.state.data)
+    );
   }
   
 
