@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection.js';
+import '../../App.css'; 
 
 const PostContainer = props => {
   return (
