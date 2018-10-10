@@ -25,7 +25,15 @@ class CommentSection extends React.Component {
 
     const comments = [...this.state.comments, comment];
 
-    this.setState({ comments: comments, commentText: '' });
+    this.setState(() => {
+      return {
+        comments: comments,
+        commentText: ''
+      };
+    });
+
+    // Need to figure out why state isn't updating this
+    e.target.firstChild.value = '';
   };
 
   updateText = e => {
