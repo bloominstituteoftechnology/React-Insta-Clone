@@ -3,7 +3,7 @@ import PostsPage from './components/PostContainer/PostsPage';
 import './App.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHeart, faCommentAlt, faEllipsisH, faCompass, faUser, faCameraRetro } from '@fortawesome/free-solid-svg-icons';
-
+import Authenticate from './Authentication/Authenticate';
 
 
 library.add(faHeart, faCommentAlt, faEllipsisH, faCompass, faUser, faCameraRetro)
@@ -29,4 +29,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);

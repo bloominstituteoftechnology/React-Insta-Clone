@@ -13,13 +13,7 @@ class CommentSection extends React.Component {
       comments: this.props.comments,
       commentText: '',
       container : 0
-      // comments: [],
-      // username: 'bigben223',
-      // newComment: {
-      //   'username': '',
-      //   'text': ''
-      // },
-      // commentText: ''
+      
     }
   }
   componentDidMount() {
