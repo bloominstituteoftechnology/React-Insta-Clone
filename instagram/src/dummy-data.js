@@ -37,27 +37,27 @@ const dummyData = [
     timestamp: "July 15th 2017, 03:12:09 pm",
     comments: [
       {
-        id: 4,
+        id: 1,
         username: "twitch",
         text: "Epic Street Fighter action here in Las Vegas at #EVO2017!"
       },
       {
-        id: 5,
+        id: 2,
         username: "michaelmarzetta",
         text: "Omg that match was crazy"
       },
       {
-        id: 6,
+        id: 3,
         username: "themexican_leprechaun",
         text: "What a setup"
       },
       {
-        id: 7,
+        id: 4,
         username: "dennis_futbol",
         text: "It that injustice"
       },
       {
-        id: 8,
+        id: 5,
         username: "dennis_futbol",
         text: "Is"
       }
@@ -73,17 +73,17 @@ const dummyData = [
     timestamp: "July 14th 2017, 10:04:08 am",
     comments: [
       {
-        id: 9,
+        id: 1,
         username: "playhearthstone",
         text: "Love this shot!"
       },
       {
-        id: 10,
+        id: 2,
         username: "awaywetravel",
         text: "Yosemite is my most favorite place in the universe"
       },
       {
-        id: 11,
+        id: 3,
         username: "awesomebt28",
         text: "I like how Half Dome looks so old and useless"
       }

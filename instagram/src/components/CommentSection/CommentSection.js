@@ -12,11 +12,13 @@ class CommentSection extends React.Component {
       timestamp: props.user.timestamp,
       newComment: ""
     };
+    // this.hydrateState = props.hydrateState;
   }
 
   addNewComment = (event, index) => {
     //function needs to add the comment that is on the event object to the post at the index number
     event.preventDefault();
+    this.saveState();
     if (this.state.newComment !== "") {
       let newCommentList = [
         ...this.state.comments,
@@ -40,7 +42,7 @@ class CommentSection extends React.Component {
       [key]: value
     });
     // saves currently typed comment in storage. uncomment when storage bug is figured out
-    // localStorage.setItem(key, value);
+    localStorage.setItem(key, value);
   };
 
   // next methods are all related to localStorage persistence,
@@ -67,18 +69,17 @@ class CommentSection extends React.Component {
   //   }
   // }
 
-  // // componentDidMount() {
-  // //   this.hydrateState();
-  // //   window.addEventListener("beforeunload", this.saveState.bind(this));
-  // // }
+  componentDidMount() {
+    this.props.hydrateState();
+    // window.addEventListener("beforeunload", this.saveState.bind(this));
+  }
 
-  // componentWillUnmount() {
-  //   window.removeEventListener("beforeunload", this.saveState.bind(this));
-  //   this.saveState();
-  // }
+  componentWillUnmount() {
+    // window.removeEventListener("beforeunload", this.saveState.bind(this));
+    this.props.saveState();
+  }
 
   render() {
-    console.log(this.state.comments);
     return (
       <div className="comment-section">
         {this.state.comments.map(comment => {
