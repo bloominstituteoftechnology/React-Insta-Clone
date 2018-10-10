@@ -6,10 +6,10 @@ import './post.css';
 const PostsPage = (props) => {
     return (
         <div className="app-container">
-            <SearchBar search={props.searchTerm} />
+            <SearchBar search={props.search} />
             {props.posts.map(post => (
             <div key={post.timestamp}>
-                <PostContainer username={post.username}
+                <PostContainer  username={post.username}
                                 thumbnail={post.thumbnailUrl}
                                 image={post.imageUrl}
                                 likes={post.likes}

@@ -15,7 +15,6 @@ class App extends Component {
 
     this.state = {
       posts: [],
-      username: '',
     }
   }
 
@@ -39,7 +38,8 @@ class App extends Component {
     const App = () => {
       return (
         <>
-          <PostsPage search={this.searchTerm} posts={this.state.posts}/>
+          {/* FIXME: search is no longer working as expected. */}
+          <PostsPage {...this.state} search={this.searchTerm} />
         </>
       )
     }
@@ -49,13 +49,6 @@ class App extends Component {
     return (
       <HOCApp />
     )
-
-    // return (
-    //   <div className="app-container">
-    //     {/* <Authenticate /> */}
-    //     <PostsPage search={this.searchTerm} posts={this.state.posts}/>
-    //   </div>
-    // );
   }
 }
 

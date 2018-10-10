@@ -10,22 +10,34 @@ const Authenticate = (App) => class extends Component {
         }
     }
 
-    componentDidMount() {
-        let user = localStorage.getItem('user');
-
-        if (!user) {
-            this.setState({ loggedIn : false })
-        } else {
-            this.setState({ loggedIn : true })
-        }
+    login = () => {
+        this.setState({
+            loggedIn: true,
+        })
     }
 
-    render () {
-        const loggedIn = this.state;
+    // componentDidMount() {
+    //    console.log(localStorage.getItem('loggedIn'))
+    //    console.log(this.state)
+    //     if(localStorage.getItem('loggedIn') === null) {
+    //       this.setState({
+    //         loggedIn: false
+    //       })
+    //     } else {
+    //     this.setState({
+    //       loggedIn: JSON.parse(localStorage.getItem('loggedIn'))
+    //     })
+    //   }
+    // }
 
-        return (
-            loggedIn ? <App /> : <Login />
-        )
+    render () {
+        if (this.state.loggedIn === false ) {
+            return (
+                <Login login={this.login} />
+            )
+        } else {
+            return <App />
+        }
     }
 };
 
