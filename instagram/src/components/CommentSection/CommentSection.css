@@ -45,6 +45,10 @@
     font-size: 15px;
 }
 
+.input-comment:focus{
+    outline:none;
+    
+}
 .fill-red{
     fill:red;
     stroke:red;

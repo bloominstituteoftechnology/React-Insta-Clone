@@ -49,13 +49,34 @@ font-family: 'Roboto Condensed', sans-serif;
     font-size: 12px;
 }
 
+.search .search-selected{
+    text-align: left;
+    background: white;
+    padding-left: 26px;
+}
+
 .search{
     position: relative;
 }
 
 .feather-search{
     position: absolute;
-    width: 15px;
-    top: -10px;
-    left: 50px;
+    top: 9px;
+    left: 75px;
+}
+
+.search-selected-icon{
+    left:5px;
+}
+
+.feather-x-circle{
+    position: absolute;
+    width: 20px;
+    top: 4px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.none{
+    display: none;
 }

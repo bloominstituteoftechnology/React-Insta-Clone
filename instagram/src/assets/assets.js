@@ -49,18 +49,22 @@ export const User = () => (
     <circle cx="12" cy="7" r="4" />
   </svg>
 );
-export const Search = () => (
+export const Search = props => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="10"
+    height="12"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="currentColor"
-    strokeWidth="1"
+    stroke="#C7C7C7"
+    strokeWidth="4"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="icon feather-search"
+    className={
+      props.searchFocus
+        ? "feather-search search-selected-icon"
+        : "feather-search"
+    }
   >
     <circle cx="11" cy="11" r="8" />
     <line x1="21" y1="21" x2="16.65" y2="16.65" />
@@ -114,7 +118,10 @@ export const Message = () => (
     strokeLinejoin="round"
     className="icon feather-message-circle"
   >
-    <path className='svg-flip' d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"   />
+    <path
+      className="svg-flip"
+      d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+    />
   </svg>
 );
 export const More = () => (
@@ -151,5 +158,25 @@ export const Share = () => (
     <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
     <polyline points="16 6 12 2 8 6" />
     <line x1="12" y1="2" x2="12" y2="15" />
+  </svg>
+);
+
+export const Xcircle = props => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="#C7C7C7"
+    stroke="white"
+    strokeWidth="1"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={props.searchFocus ? "feather-x-circle" : "none"}
+    onClick={props.searchBlur}
+  >
+    <circle cx="12" cy="12" r="10" />
+    <line x1="15" y1="9" x2="9" y2="15" />
+    <line x1="9" y1="9" x2="15" y2="15" />
   </svg>
 );

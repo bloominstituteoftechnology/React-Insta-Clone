@@ -1,31 +1,59 @@
 import React, { Component } from "react";
 import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from './components/PostContainer/PostContainer';
-import dummyData from './dummy-data';
+import PostContainer from "./components/PostContainer/PostContainer";
+import dummyData from "./dummy-data";
 import "./App.css";
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state ={
+    this.state = {
       data: [],
+      searchFocus: false,
+      searchInput: ""
+    };
+  }
+
+  searchFocusHandler = () => {
+    this.setState({ searchFocus: true });
+  };
+
+  searchBlur = e => {
+    this.setState({ data:dummyData, searchFocus: false, searchInput: "" });
+    
+  };
+
+  searchHandler = e => {
+    e.preventDefault()
+    let input = e.target.value;
+    if (!input){
+      this.setState({data:dummyData, searchInput:''})
+    }else{
+      let cloned = Object.assign([],dummyData);
+      let re = new RegExp(input,'i')
+      cloned= cloned.filter(post => re.test(post.username))
+      this.setState({searchInput:input, data:cloned})
     }
   }
 
-  componentDidMount(){
-    setTimeout(()=> this.setState({data:dummyData}),800)
+  componentDidMount() {
+    setTimeout(() => this.setState({ data: dummyData }), 800);
   }
 
   render() {
     return (
       <div>
         <header>
-          <SearchBar />
-
+          <SearchBar
+            searchFocusHandler={this.searchFocusHandler}
+            searchFocus={this.state.searchFocus}
+            searchBlur={this.searchBlur}
+            searchHandler={this.searchHandler}
+            searchInput={this.state.searchInput}
+          />
         </header>
         <div className="container">
-        <PostContainer data={this.state.data}/>  
-        
+          <PostContainer data={this.state.data} />
         </div>
       </div>
     );

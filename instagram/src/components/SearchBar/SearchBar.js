@@ -1,6 +1,13 @@
 import React from "react";
 import "./SearchBar.css";
-import { Heart, Compass, Instagram, User, Search } from "../../assets/assets";
+import {
+  Heart,
+  Compass,
+  Instagram,
+  User,
+  Search,
+  Xcircle
+} from "../../assets/assets";
 
 const SearchBar = props => {
   return (
@@ -12,9 +19,18 @@ const SearchBar = props => {
           <h1>Instagram</h1>
         </div>
       </div>
-      <div className='search'>
-      <Search />
-        <input type="text" placeholder="Search" />
+      <div className="search">
+        <Search searchFocus={props.searchFocus} />
+        <Xcircle searchFocus={props.searchFocus} searchBlur={props.searchBlur} />
+        <input
+          type="text"
+          placeholder="Search"
+          className={props.searchFocus ? "search-selected" : ""}
+          onFocus={props.searchFocusHandler}
+          onChange={props.searchHandler}
+          value={props.searchInput}
+          onBlur={props.searchBlur}
+        />
       </div>
       <div className="icons">
         <Compass />
