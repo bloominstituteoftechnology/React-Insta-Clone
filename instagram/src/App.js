@@ -9,13 +9,28 @@ import Authenticate from './Authentication/Authenticate';
 library.add(faHeart, faCommentAlt, faEllipsisH, faCompass, faUser, faCameraRetro)
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state= {
-      
+  constructor(props){
+    super(props);
+    this.state = {
+      loggedIn: false,
+      loginCredentials: [
+        {
+          username: 'User1',
+          password: '1234'
+        },
+        {
+          username: 'User2',
+          password: '1234'
+        },
+        {
+          username: 'User3',
+          password: '1234'
+        }
+      ],
+      loginError: ''
     }
   }
-
+  
   
 
   render() {
