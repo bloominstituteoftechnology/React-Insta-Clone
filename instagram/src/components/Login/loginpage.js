@@ -12,7 +12,13 @@ class LoginPage extends Component{
     }
   }
   handleInputChange = event => this.setState({ [event.target.name]: event.target.value });
-
+  
+  loginSubmit = () => {
+    const user = this.state.username;
+    localStorage.setItem('user', user);
+    window.location.reload();
+  };
+  
   render(){  
     return (
       <div className='login-stuff'>
@@ -33,7 +39,7 @@ class LoginPage extends Component{
           name="password"
           value={this.state.password}
           onChange={this.handleInputChange}></input>
-        <button className='login-button'>Log In</button>
+        <button onClick={this.loginSubmit} className='login-button'>Log In</button>
       </div>
     );
   }

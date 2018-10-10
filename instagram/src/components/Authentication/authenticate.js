@@ -15,7 +15,14 @@ const Authenticate = App =>
         logIn(event) {
             event.preventDefault();
             console.log(this.state.loggedIn)
-        }   
+        }
+        componentDidMount() {
+            if (!localStorage.getItem('user')) {
+                this.setState({ loggedIn: false });
+            } else {
+                this.setState({ loggedIn: true });
+            } 
+        }      
         render() { 
             if (this.state.loggedIn){ return <App />};
             return (    

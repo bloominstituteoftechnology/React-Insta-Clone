@@ -24,9 +24,6 @@ class CommentSection extends Component {
             console.log(this.state.comment)
         }
     };
-
-    handleInputChange = event => this.setState({ [event.target.name]: event.target.value });
-       
     render() {
         return (
             <div className = 'comment-container'>
