@@ -1,0 +1,41 @@
+.logo{
+    padding: 0 10px;
+    border-right: black solid 1px;
+    margin-right: 5px;
+}
+.searchbar-container{
+    margin: 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.search-bar input{
+    padding: 7px;
+    text-align: center;
+    border-radius: 4px;
+    border: black solid 1px;
+    width: 100%;
+    color: black;
+}
+.search-bar{
+    width: 20%;
+    position: relative;
+}
+.search-icon{
+    position: absolute;
+    top:5px;
+    left: 5px;
+    width: 10%;
+    height: auto;
+}
+.navigation{
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.heart{
+    width: 25%;
+    height: auto;
+}

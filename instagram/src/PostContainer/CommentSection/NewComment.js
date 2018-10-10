@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 const NewComment= prop =>{
     return (
-        <div>
-            <input type='text' placeholder='add new comment'></input>
-            <button>submit</button>
+        <div className='new-comment'>
+            <input type='text' placeholder='add a comment'></input>
         </div>
     )
 }

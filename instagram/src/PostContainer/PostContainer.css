@@ -1,9 +1,13 @@
 .post-container{
-    width: 100%;
-    border: blue solid 1px;
+    width: 50%;
+    margin: 30px auto;
+    border: #E6E6E6 solid 1px;
+    text-align: left;
 }
 .post-header{
     display:flex;
+    align-items: center;
+    padding: 5px 10px;
     
 }
 .main-image{
@@ -14,6 +18,28 @@
     font-weight: bold;
 }
 .post-header img{
-    width: 10%;
+    width: 5%;
     height:auto;
+    border-radius: 50%;
+    margin-right:2%;
+}
+.comment-section{
+    padding-left: 4%;
+    margin-bottom: 5px;
+}
+.icon{
+    padding-left:4%;
+}
+.username{
+    font-weight:bold;
+}
+.new-comment input{
+    border: none;
+    width: 100%;
+}
+.new-comment {
+    margin-left: 4%;
+    margin-right:4%;
+    border-top: 1px solid #E6E6E6;
+    margin-bottom: 10px;
 }
