@@ -9,23 +9,24 @@
   box-shadow: 2px 5px 10px lightgray;
 }
 .main-image {
-  object-fit: contain;
+  width: 621px;
+  margin-left: -0.05%;
+  object-fit: cover;
 }
 
-.user-container {
+.post-header {
   display: flex;
   align-items: center;
 }
 
-.thumb {
-  border-radius: 50px;
-  width: 40px;
-  margin: 15px;
+.post-header div {
+  font-weight: bold;
 }
 
-.buttons {
-  padding: 1% 78% 1% 0%;
-  font-size: 30px;
+.post-thumb {
+  border-radius: 50%;
+  width: 40px;
+  margin: 15px;
 }
 
 .fa-heart {
