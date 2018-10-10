@@ -1,6 +1,6 @@
 import React from "react";
 
-//HOC magic
+//HOC
 const Authenticate = (App, Login) =>
   class extends React.Component {
     constructor() {
