@@ -23,38 +23,16 @@ const PostContainer = props => {
               <p>{post.username}</p>
             </div>
             {/* user thumbnail */}
-            <img className="post-img" src={post.imageUrl} alt="post" />
-            <div className="comments-container">
-              <div className="post-icons">
-                <div>
-                  <i className="far fa-heart" />
-                  <i className="far fa-comment" />
-                  <i className="far fa-share-square" />
-                </div>
-                <i className="far fa-bookmark" />
-              </div>
-              <div className="like-count">{post.likes} likes</div>
-              <CommentSection
-                comments={post.comments}
-                timestamp={post.timestamp}
-              />
-            </div>
-            {/* comments section */}
+
+            <CommentSection
+              image={post.imageUrl}
+              likes={post.likes}
+              comments={post.comments}
+              timestamp={post.timestamp}
+            />
           </div> // post-container
         );
       })}
-
-      {/* <UserThumbnail
-        thumb={props.data.thumbnailUrl}
-        username={props.data.username}
-      />
-      <PostImage />
-      <div className="comments-container">
-        <Likes />
-        <CommentSection data={props.data} />
-        <div className="timestamp">2 hours ago</div>
-        <AddComment />
-      </div> */}
     </div>
   );
 };
