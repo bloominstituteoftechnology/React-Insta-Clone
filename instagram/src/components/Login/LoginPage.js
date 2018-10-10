@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./LoginPage.css";
+
 class LoginPage extends React.Component {
   constructor() {
     super();
@@ -27,8 +29,10 @@ class LoginPage extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.login}>
+      <div className="login-page">
+        <h1>Instaclone</h1>
+        <p>Login to see fake posts from fake people.</p>
+        <form className="login-form" onSubmit={this.login}>
           <input
             type="text"
             className="login-username"
