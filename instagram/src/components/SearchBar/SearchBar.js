@@ -2,6 +2,12 @@ import React from 'react';
 import './SearchBar.css';
 
 class SearchBar extends React.Component {
+    constructor() {
+        super(...arguments);
+        this.state = {
+            searchText: ''
+        }
+    }
     render() {
         return (
             <div className="search">
@@ -9,7 +15,13 @@ class SearchBar extends React.Component {
                     <img src="img/logo.png" alt="logo" />
                     <img src="img/wordmark.png" alt="Instagram" />
                 </div>
-                <input type="text"></input>
+                <form onSubmit={this.submit}>
+                    <input
+                        type="text"
+                        onChange={this.typeValue}
+                        value={this.state.searchText}
+                    />
+                </form>
                 <div className="profile-container">
                     <img src="img/compass.png" alt="compass" />
                     <img src="img/heart.png" alt="heart" />
@@ -17,6 +29,20 @@ class SearchBar extends React.Component {
                 </div>
             </div>
         )
+    }
+    //--------------------------------------------
+    typeValue = (changeEvent) => {
+        let newValue = changeEvent.target.value;
+        this.setState({
+            searchText: newValue
+        });
+    }
+    submit = submitEvent => {
+        submitEvent.preventDefault();
+        this.props.onSubmit(this.state.searchText);
+        this.setState({
+            searchText: ''
+        });
     }
 }
 

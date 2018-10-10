@@ -8,7 +8,8 @@ class App extends Component {
   constructor(props) {
     super(...arguments);
     this.state = {
-      posts: []
+      posts: [],
+      searchQuery: null
     }
   }
   componentDidMount() {
@@ -19,9 +20,9 @@ class App extends Component {
   render() {
     return (
       <div className="instagram">
-        <SearchBar />
+        <SearchBar onSubmit={this.search} />
         {
-          this.state.posts.map(post => (
+          this.renderFilterSearch(this.state.posts).map(post => (
             <PostContainer
               key={post.username + post.timestamp}
               username={post.username}
@@ -35,6 +36,20 @@ class App extends Component {
         }
       </div>
     );
+  }
+  renderFilterSearch(postArray) {
+    return postArray.filter(post => {
+      if(!this.state.searchQuery){ return true;}
+      return (post.username === this.state.searchQuery);
+    })
+  }
+
+  //----------------------------------------------
+  search = (searchText) => {
+    if(!searchText.length){ searchText = null;}
+    this.setState({
+      searchQuery: searchText
+    });
   }
 }
 
