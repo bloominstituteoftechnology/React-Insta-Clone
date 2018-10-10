@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      dummyData: [],
+      dummyData: dummyData,
       newComment: '',
       count: 0,
       username: '',
@@ -24,6 +24,7 @@ componentDidMount() {
 }
 
 addNewComment = event => {
+  event.preventDefault();
   this.setState({
     dummyData: [
       ...this.state.dummyData,
@@ -32,12 +33,11 @@ addNewComment = event => {
         text: this.state.newComment
        }
     ],
-    newComment: "",
   });
-  event.preventDefault();
 };
 
 changeHandler = event => {
+  console.log(event.target)
   event.preventDefault();
   this.setState({ [event.target.name]: event.target.value });
 };
@@ -62,6 +62,7 @@ clickToIncrease = () => {
         newInput={this.state.newComment}
         count={this.state.count}
         increaseLike={this.clickToIncrease}
+        comments={this.state.dummyData.map(comments => {return comments.comments}) }
         />
       </div>
     );

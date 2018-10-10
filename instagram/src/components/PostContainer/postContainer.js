@@ -29,14 +29,11 @@ const PostContainer = props => {
                 <p className='likes' >{props.count} likes</p>
                 <CommentSection 
                 text={user.comments.map(comments => {
-                    return `${comments.username}: ${comments.text}`
+                return comments 
                 })} 
-                // username={user.comments.map(comments => {
-                //     return comments.username
-                // })} 
                 newComment={user.newComment}
-                changeHandler={user.changeHandler}
-                newInput={user.newInput}
+                changeHandler={props.changeHandler}
+                newInput={props.newInput}
                 />
             </div>
             })}
@@ -68,3 +65,15 @@ export default PostContainer;
     // text={user.comments.map(comments => {
     //     return `${comments.username}: ${comments.text}`
     // })} 
+
+    // <CommentSection 
+    // text={user.comments.map(comments => {
+    //     return comments.text
+    // })} 
+    // username={user.comments.map(comments => {
+    //     return comments.username
+    // })} 
+    // newComment={user.newComment}
+    // changeHandler={user.changeHandler}
+    // newInput={user.newInput}
+    // />
