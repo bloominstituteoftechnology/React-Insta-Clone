@@ -53,6 +53,10 @@
     font-size: 2.4rem;
 }
 
+.likeCommentIcons img {
+    margin-right: 1.5rem;
+}
+
 .likeCount {
     margin-top: 0.5rem;
     text-align: left;

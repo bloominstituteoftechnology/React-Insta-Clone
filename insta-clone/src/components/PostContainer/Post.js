@@ -1,23 +1,23 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome/index';
-import faHeart from '@fortawesome/free-solid-svg-icons/faHeart';
 import PropTypes from 'prop-types';
+import InstaComment from "../../img/insta_comment.png";
+import InstaLike from "../../img/insta_strokeHeart.png";
 import './PostContainer.css';
 
 
 const Post = props => {
     // console.log(props.postdata)
     return <div className="post">
-        <header className="postHeader">
+        <div className="postHeader">
           <img className="thumbnail" src={props.postdata.thumbnailUrl} alt="" />
           <p>{props.postdata.username}</p>
-        </header>
+        </div>
         <img className="postImage" src={props.postdata.imageUrl} alt="" />
         <div className="likeSection">
           <div className="likeCommentIcons">
-            <p className="heart">like</p>
-            <p className="commentBubble">cmnt</p>
+            <img className="instaLike" src={InstaLike} alt='' />
+            <img className="instaComment" src={InstaComment} alt='' />
           </div>
           <div className="likeCount">{props.postdata.likes} likes</div>
         </div>

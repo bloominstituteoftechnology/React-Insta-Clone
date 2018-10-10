@@ -35,15 +35,19 @@
     justify-content: space-between;
 }
 
-input {
+.newCommentSection input {
     width: 100%;
     border: none;
     line-height: 4rem;
 }
 
 .newCommentSection button {
+    text-align: right;
     font-weight: bold;
+    font-size: 2rem;
     line-height: 4rem;
     background-color: white;
+    padding: 0;
+    margin: 0;
     border: none;
 }
