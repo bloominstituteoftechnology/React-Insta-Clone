@@ -99,10 +99,19 @@ class App extends Component {
     }
   }
 
+  clearStorage = () => {
+    localStorage.clear();
+  }
+
   render() {
     return (
       <>
-        <SearchBar searchInput={this.state.searchInput} handleSearch={this.handleSearch} searchUp={this.searchUp} />
+        <SearchBar 
+          searchInput={this.state.searchInput} 
+          handleSearch={this.handleSearch} 
+          searchUp={this.searchUp} 
+          clearStorage={this.clearStorage} 
+        />
         <PostsPage 
           posts={this.state.data} 
           likes={this.state.likes} 

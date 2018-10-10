@@ -16,7 +16,7 @@ const SearchBar = (props) => {
             <div className='search-container'>
                 <FontAwesomeIcon className='icons' icon='compass' />
                 <FontAwesomeIcon className='icons' icon='heart' />
-                <FontAwesomeIcon className='icons' icon='user' />
+                <FontAwesomeIcon className='icons' icon='user' onClick={props.clearStorage} />
             </div>
         </div>
     );
