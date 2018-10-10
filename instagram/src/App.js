@@ -17,10 +17,16 @@ class App extends Component {
     this.setState({ data: dummyData });
   }
 
+  logout() {
+    window.localStorage.removeItem("username");
+    window.localStorage.removeItem("password");
+    window.location.reload();
+  }
+
   render() {
     return (
       <div className="App">
-        <PostsPage data={this.state.data} />
+        <PostsPage data={this.state.data} logout={this.logout} />
       </div>
     );
   }

@@ -18,9 +18,9 @@ class CommentSection  extends React.Component {
 
     submitNewComment = ev => {
         ev.preventDefault();
-        const hardCodedUsername = "CptJackSparrow";
+        // const hardCodedUsername = "CptJackSparrow";
         this.setState({
-            arr: [...this.state.arr, { username: hardCodedUsername, text: this.state.newCommentText }],
+            arr: [...this.state.arr, { username: window.localStorage.getItem("username"), text: this.state.newCommentText }],
             newCommentText: "" 
         });
     }

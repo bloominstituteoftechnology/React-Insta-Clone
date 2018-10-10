@@ -1,4 +1,5 @@
 import React from "react";
+import { User } from "react-feather";
 
 import "./SearchBar.css";
 
@@ -12,7 +13,7 @@ const SearchBar = props => {
                 <input type="text" />
             </form>
             <div className="icons">
-            
+                <User onClick={props.logout} />
             </div>
         </header>
     );

@@ -6,7 +6,7 @@ import PostContainer from "./PostContainer";
 const PostsPage = props => {
     return (
         <div className="loggedIn">
-            <SearchBar />
+            <SearchBar logout={props.logout} />
             {props.data.map((item, idx) => 
             <PostContainer item={item} id={idx} />
             )}
