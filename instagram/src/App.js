@@ -11,16 +11,26 @@ class App extends Component {
       posts: []
     };
   }
+
   componentDidMount() {
     this.setState({
       posts: dummyData
+      // comments: dummyData.map(comment => comment.comments)
     });
+    // console.log(dummyData.map(comment => comment.comments));
   }
   render() {
+    const posts = this.state.posts;
     return (
       <div>
         <SearchBar />
-        <PostContainer posts={this.state.posts} />
+        {posts.map((post, i) => (
+          <PostContainer
+            key={i}
+            // posts={this.state.posts}
+            post={post}
+          />
+        ))}
       </div>
     );
   }

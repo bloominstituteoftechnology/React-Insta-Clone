@@ -6,6 +6,7 @@
   margin: 40px 0;
   max-width: 616px;
   border: 1px solid lightgrey;
+  background: #fff;
 }
 .post-header img {
   width: 40px;
@@ -50,8 +51,17 @@
   margin: 5px 0 10px;
 }
 .post-comments {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 .post-comments div {
   margin-bottom: 7px;
+}
+
+.comment-form form input {
+  border: none;
+  border-top: 1px solid lightgrey;
+  padding: 20px;
+  width: 100%;
+  font-size: 1rem;
+  opacity: 0.8;
 }
