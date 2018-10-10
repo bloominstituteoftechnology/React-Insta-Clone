@@ -1,9 +1,24 @@
-import React from 'react'
+import React from 'react';
+import PostsPage from '../PostContainer/PostsPage';
+import Login
 
-class Authenticate extends React.Component{
-    constructor(){
+
+const Authenticate = PassedComponent => {
+    class /* ??? */ extends React.Component{
+        constructor(){
         super();
+        }
+    
+        render(){
+            return(
+                <div className="HOC">
+                <PassedComponent />
+                </div>
+            )
+        }
 
-    }
+  }
+
 }
+const Loggedin = Authenticate()
 export default Authenticate;
