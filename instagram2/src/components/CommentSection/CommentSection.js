@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 
 
 const CommentSection = (props) => {
+    console.log('commentsection props', props);
     return (
         <div>
             {props.comments.map((comment, index) => <Comment key={index} comment={comment}/>)}

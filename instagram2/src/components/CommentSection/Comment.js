@@ -3,10 +3,11 @@ import './CommentSection.css';
 import PropTypes from 'prop-types';
 
 const Comment = props => {
+    console.log('comment props', props);
     return (
         <div className="commentary">
-            <span className="user-name">{props.comments.username}</span>
-            <span className="comment">{props.comments.text}</span>
+            <span className="user-name">{props.comment.username}</span>
+            <span className="comment">{props.comment.text}</span>
         </div>
     )
 };
@@ -20,3 +21,4 @@ export default Comment;
 
 //not this in function??
 //comments is array name.  text is actual commment.  dummyData.
+//props.comment singular  from commentsection
