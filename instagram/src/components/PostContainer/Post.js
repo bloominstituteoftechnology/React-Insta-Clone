@@ -8,10 +8,15 @@ class Post extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      likes: props.post.likes
+      likes: props.post.likes,
+      liked: false
     };
   }
-  addLike = () => this.setState({ likes: this.state.likes + 1 });
+  addLike = () =>
+    this.setState({ likes: this.state.likes + 1, liked: !this.state.liked });
+  removeLike = () => {
+    this.setState({ likes: this.state.likes - 1, liked: !this.state.liked });
+  };
   render() {
     return (
       <div className="post">
@@ -32,7 +37,8 @@ class Post extends Component {
           <FontAwesomeIcon
             icon={faHeart}
             style={{ height: "25px", width: "25px", cursor: "pointer" }}
-            onClick={this.addLike}
+            onClick={!this.state.liked ? this.addLike : this.removeLike}
+            id={this.state.liked ? "red" : null}
           />
           <FontAwesomeIcon
             icon={faComment}
@@ -40,7 +46,10 @@ class Post extends Component {
           />
         </div>
         <p className="likes">{this.state.likes} likes</p>
-        <CommentSection comments={this.props.post.comments} timestamp={this.props.post.timestamp}/>
+        <CommentSection
+          comments={this.props.post.comments}
+          timestamp={this.props.post.timestamp}
+        />
       </div>
     );
   }

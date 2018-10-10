@@ -29,5 +29,9 @@
   padding: 0 20px;
 }
 .icons svg {
-  margin: 7.5px;
+  margin-right: 15px;
+}
+
+#red {
+  color: red;
 }
