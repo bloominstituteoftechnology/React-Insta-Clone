@@ -30,9 +30,9 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        {/* <header>
+        <header>
           <SearchBar />
-        </header> */}
+        </header>
         {this.state.data.map(post => {
           return <PostContainer post={post} newComment={this.addNewComment} />;
         })}
