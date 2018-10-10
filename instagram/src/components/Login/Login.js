@@ -23,7 +23,9 @@ class Login extends React.Component {
 
     login = (e) => {
         e.preventDefault();
-        localStorage.setItem('username', this.state.usernameInput);
+        if (localStorage.getItem('username') === null) {
+            localStorage.setItem('username', this.state.usernameInput);
+        }
         this.setState({
             usernameInput: ''
         });
