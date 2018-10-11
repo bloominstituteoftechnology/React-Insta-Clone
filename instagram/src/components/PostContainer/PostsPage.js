@@ -49,7 +49,7 @@ class PostsPage extends Component {
   render() {
 
     return (
-      <div className="App">
+      <div>
         <SearchBar 
           searchValue={this.state.value} 
           searchInputHandler={this.searchInputHandler} 
