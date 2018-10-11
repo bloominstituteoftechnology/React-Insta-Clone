@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Comment from './Comment';
+import Comment from './Comment'; // grab comments from Comment.js to pass to state here
 
+
+// set constructor to grab props so as to simplify the render/add
 class CommentContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -10,6 +12,8 @@ class CommentContainer extends React.Component {
       likes: props.likes
     };
   }
+
+  
 
   render() {
     return (
