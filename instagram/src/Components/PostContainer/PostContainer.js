@@ -9,7 +9,7 @@ const PostContainer = ({posts}) => {
             {
                 !posts.length 
                 ? <h2>Loading Posts...</h2>
-                : posts.map((post, i) => <Post content={post} key={i}/>)
+                : posts.map((post, i) => <Post content={post} key={i} index={i}/>)
             }
         </div>
     );

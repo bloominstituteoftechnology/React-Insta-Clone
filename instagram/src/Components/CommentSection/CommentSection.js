@@ -7,15 +7,32 @@ import CommentContainer from './CommentContainer';
 class CommentSection extends Component {
     constructor(props) {
         super(props);
-        const { likes, timestamp, comments} = props;
+        const {likes, timestamp, comments, index} = props;
         this.state = {
             likes,
             timestamp,
             comments,
+            index,
             commentValue: '',
             username: 'chris',
             postLiked: false,
         }
+    }
+
+    componentDidMount() {
+        const keyname = `post-${this.state.index}`
+        const activeKey = localStorage.getItem(keyname);
+
+        
+        activeKey !== null 
+        ? this.setState(JSON.parse(activeKey))
+        : localStorage.setItem(keyname, JSON.stringify(this.state))
+
+    }
+
+    componentDidUpdate() {
+        const keyname = `post-${this.state.index}`
+        localStorage.setItem(keyname, JSON.stringify(this.state));
     }
 
     addNewComment = (event) => {

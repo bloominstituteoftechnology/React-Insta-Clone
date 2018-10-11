@@ -25,7 +25,7 @@ const Login = ({login, username, password, change, attempted}) => {
                     type="password"
                 />
                 <button>Login</button>
-                <div class="error" style={{ display : `${attempted?'block':'none'}`}}>
+                <div className="error" style={{ display : `${attempted?'block':'none'}`}}>
                     <h2>Incorrect Login</h2>
                     <h2>Hint: [username:password]</h2>
                 </div>

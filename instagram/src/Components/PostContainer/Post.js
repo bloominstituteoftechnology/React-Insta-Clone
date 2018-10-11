@@ -5,7 +5,7 @@ import './PostContainer.css';
 import PostHeader from './PostHeader';
 import PostContent from './PostContent';
 
-const Post = ({content}) => {
+const Post = ({content, index}) => {
     return (
         <div className="post">
             <PostHeader 
@@ -17,6 +17,7 @@ const Post = ({content}) => {
                 likes={content.likes}
                 timestamp={content.timestamp}
                 comments={content.comments}
+                index={index}
             />
         </div>
     );
