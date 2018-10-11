@@ -35,7 +35,7 @@ class CommentSection extends React.Component {
           return <Comment comment={comment} key={comment.text} />;
         })}
         <div className="timestamp">{this.props.timestamp}</div>
-        <form onSubmit={this.addNewComment}>
+        <form autocomplete="off" onSubmit={this.addNewComment}>
           <input
             type="text"
             name="newComment"
