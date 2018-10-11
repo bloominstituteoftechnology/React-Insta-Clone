@@ -1,19 +1,42 @@
 import React from 'react';
-import './searchBar.css';
 import logo from './instagramLogo.PNG'
 import links from './instagramSearchBarLinks.PNG'
+import styled from 'styled-components'
+
+const SearchBarDiv = styled.div`
+     display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    background: white;
+    z-index: 2;
+    width: 100%;
+    border-bottom: 1px solid grey;
+
+`;
+const InstaLinks = styled.img`
+    margin-right: 18%;
+`
+const SearchField = styled.input`
+    color: grey;
+    text-align: center;
+    height: 50%;
+    margin-top: 3%;
+`
+const InstaLogo = styled.img`
+    margin-left: 18%;
+`
 
 const SearchBar = props => {
     return (
-        <div className='searchBarDiv'>
-            <img className='instaLogo' src={logo} alt='instagram logo' />
+        <SearchBarDiv>
+            <InstaLogo  src={logo} alt='instagram logo' />
             <form>
-                <input className='searchField' type='text' value={props.username} placeholder='username' ></input>
+                <SearchField type='text' value={props.username} placeholder='username'></SearchField>
             </form>
-            <img className='instaLinks' src={links} alt='instagram links' />
+            <InstaLinks src={links} alt='instagram links' />
 
-
-        </div>
+        </SearchBarDiv>
     )
 }
 

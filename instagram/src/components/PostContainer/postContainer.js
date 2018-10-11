@@ -27,14 +27,15 @@ const PostContainer = props => {
                 <img className='image' src={user.imageUrl} alt='user post' />
                 <img onClick={props.increaseLike} className='likeandcommentIcons' src={like} alt='like button' />
                 <p className='likes' >{props.count} likes</p>
-                <CommentSection 
-                text={user.comments.map(comments => {
-                return comments 
-                })} 
-                newComment={user.newComment}
-                changeHandler={props.changeHandler}
-                newInput={props.newInput}
-                />
+                
+                    <CommentSection 
+                    text={user.comments.map(comments => {
+                    return comments 
+                    })} 
+                    newComment={user.newComment}
+                    changeHandler={props.changeHandler}
+                    newInput={props.newInput}
+                    />
             </div>
             })}
         </div>
