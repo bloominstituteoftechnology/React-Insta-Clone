@@ -1,6 +1,6 @@
 import React from 'react';
-import Heart from '../../img/heart.svg';
-import Bubble from '../../img/message-circle.svg';
+import Heart from '../../img/heart.png';
+import Bubble from '../../img/message-circle.png';
 
 const Likes = props => {
     return (

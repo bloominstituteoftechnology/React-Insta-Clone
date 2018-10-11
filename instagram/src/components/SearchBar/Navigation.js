@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Compass from '../../img/compass.svg';
-import Heart from '../../img/heart.svg';
-import User from '../../img/user.svg';
+import Compass from '../../img/compass.png';
+import Heart from '../../img/heart.png';
+import User from '../../img/user.png';
 
 const Navigation = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import More from '../../img/more-horizontal.svg';
+import More from '../../img/more-horizontal.png';
 
 const AddComment = props => {
     return (
