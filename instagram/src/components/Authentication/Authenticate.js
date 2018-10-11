@@ -35,19 +35,10 @@ const Authenticate = (PassedComponent)  =>  {
         }
 
         render()    {
-            if(this.state.loggedIn) {
-                return(
-                    <div>
-                        <PassedComponent />
-                    </div>
-                )
-            }   else {
-                return(
-                    <div>
-                        <LoginPage login={this.login} inputChangeHandler={this.inputChangeHandler}/>
-                    </div>
-                )
-            }
+            return(
+                this.state.loggedIn ?   <PassedComponent /> :
+                <LoginPage login={this.login} inputChangeHandler={this.inputChangeHandler}/>
+            )
         }
     }
 }
