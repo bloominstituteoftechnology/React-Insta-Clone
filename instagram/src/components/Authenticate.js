@@ -8,14 +8,16 @@ const Authenticate = (App, NotApp) =>
         this.state={loggedIn:false}
     }
 
-    componentDidMount(){
-        if(!localStorage.getItem('history')){
-            this.setState({userpairs:[]})
+    componentDidMount() {
+        if (localStorage.getItem('user')) {
+          this.setState({ loggedIn: false });
+        } else {
+          this.setState({ loggedIn: true });
         }
-    }
+      }
     render() {
       // if user is logged in... render app
-      if (!"logged in") {
+      if (!this.state.loggedIn) {
         return <App />;
       } else {
         return <NotApp />;

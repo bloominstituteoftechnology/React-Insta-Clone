@@ -18,7 +18,7 @@ class PostsPage extends Component {
     this.setState({ searchFocus: true });
   };
 
-  searchBlur = e => {
+  searchBlur = () => {
     this.setState({ data:dummyData, searchFocus: false, searchInput: "" });
     
   };

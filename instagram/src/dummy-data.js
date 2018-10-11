@@ -1,4 +1,29 @@
+
+
 const dummyData = [
+  {
+    username: "internetguy404",
+    thumbnailUrl:
+      "http://pngimg.com/uploads/michael_jackson/michael_jackson_PNG49.png",
+    imageUrl:
+      "https://www.stock-free.org/images/baby-animal-photo-05032016-image-101.jpg",
+    likes: 5306,
+    timestamp: "October 9th 2018, 12:42:40 pm",
+    comments: [
+      {
+        username: "spammer8019999999999999",
+        text: "fOlLoW mE fOr TeN ThOuSaNd NEW followers"
+      },
+      {
+        username: "creep",
+        text: "meoww"
+      },
+      {
+        username: "badjokester",
+        text: "what kind of dog is that lolololol"
+      }
+    ]
+  },
   {
     username: "philzcoffee",
     thumbnailUrl:

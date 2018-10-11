@@ -1,33 +1,41 @@
 import React from "react";
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
-import DummyPost from './DummyPost'
+import DummyPost from "./DummyPost";
 import PropTypes from "prop-types";
 
 const PostContainer = props => {
   if (!props.data.length) {
-    return (
-     <DummyPost/>
-    );
+    return <DummyPost />;
   }
   return (
     <div className="post-container">
-      {props.data.map((post) => (
-        <div key={post.timestamp} className="card">
-          <div className="card-header">
-            <img
-              src={post.thumbnailUrl}
-              className="thumbnail"
-              alt={post.username}
-            />
-            <h3>{post.username}</h3>
+      {props.data.map(post => {
+        let historyObj = {
+          likes: post.likes,
+          comments: post.comments,
+          timestamp: post.timestamp
+        };
+        if (!localStorage.getItem(post.timestamp)) {
+          localStorage.setItem(post.timestamp, JSON.stringify(historyObj));
+        }
+        return (
+          <div key={post.timestamp} className="card">
+            <div className="card-header">
+              <img
+                src={post.thumbnailUrl}
+                className="thumbnail"
+                alt={post.username}
+              />
+              <h3>{post.username}</h3>
+            </div>
+            <img src={post.imageUrl} alt="post" className="post-img" />
+            <div className="card-comments">
+              <CommentSection timestamp={post.timestamp} />
+            </div>
           </div>
-          <img src={post.imageUrl} alt="post" className="post-img" />
-          <div className="card-comments">
-            <CommentSection post={post} />
-          </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };
