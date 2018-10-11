@@ -7,7 +7,7 @@ import SearchBar from '../SearchBar/SearchBar';
 class PostsPage extends React.Component {
     state = {
         posts: [],
-        user: 'edub',
+        user: '',
       }
     
       addNewComment = comment => {
@@ -29,7 +29,7 @@ class PostsPage extends React.Component {
       
       componentDidMount() {
         setTimeout(() => {
-          this.setState({ posts: this.props.data });
+          this.setState({ posts: this.props.data, user: localStorage.getItem('username'), });
         }, 500);
       }
     
