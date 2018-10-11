@@ -1,5 +1,5 @@
 import React from 'react';
-import './AddComments.css';
+import styled from 'styled-components';
 
 class AddComments extends React.Component {
    
@@ -8,20 +8,25 @@ class AddComments extends React.Component {
         return (
             <div>
                 <form onSubmit={this.props.submitHandler} id={this.props.id}>
-                <input 
+                <CommentInput 
                     type="input" 
                     placeholder="Add a comment..." 
-                    className="commentInput" 
                     onChange={this.props.inputHandler}
                     value={this.props.commentInputValue}
                 >
-                    
-                    
-                    </input>
+                    </CommentInput>
                     </form>
             </div>
         )
     }
 }
+
+const CommentInput = styled.input`
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 20px;
+    border: none;
+`
 
 export default AddComments;

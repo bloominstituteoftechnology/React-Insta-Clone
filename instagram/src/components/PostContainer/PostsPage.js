@@ -56,7 +56,7 @@ class PostsPage extends Component {
           searchSubmitHandler={this.searchSubmitHandler} 
           />
 
-        <div className="posts">
+        <div>
           {this.state.data.map(user => {
             return (
               <div>
