@@ -40,15 +40,7 @@
   width: 90%;
 }
 
-.comments-container {
-  width: 80%;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: 0 auto;
-  text-align: left;
-}
+
 
 .icons {
   width: 80%;
@@ -94,7 +86,7 @@ input {
   font-size: 16px;
 }
 
-.time {
+/* .time {
   width: 80%;
   margin: 0 83px;
   text-align: left;
@@ -104,7 +96,7 @@ input {
   font-size: 12px;
   margin-bottom: 15px;
   border-bottom: 1px solid lightgray;
-}
+} */
 
 /* .search {
   border-bottom: 1px solid lightgray;
