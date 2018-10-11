@@ -23,7 +23,10 @@ class PostsPage extends Component {
       data: dummyData
     });
   }
-
+  logoutHandler = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
   searchHandler = event => {
     if (event.key === "Enter") {
       this.setState({
@@ -42,7 +45,7 @@ class PostsPage extends Component {
           posts={this.state.data}
           searchHandler={this.searchHandler}
           searchInputHandler={this.searchInputHandler}
-          logoutHandler={this.props.logoutHandler}
+          logoutHandler={this.logoutHandler}
         />
         {this.state.data.map(post => {
           return (
