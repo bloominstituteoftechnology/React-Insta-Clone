@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import PostsPage from './components/PostContainer/PostsPage';
 import Login from './components/Login/Login'
 import Authenticate from './authentication/Authenticate';
@@ -29,7 +28,7 @@ class App extends Component {
   }
 
   login = event => {
-    let username = event.target.parentNode.firstChild.value;
+    let username = event.target.parentNode.childNodes[2].value;
     if (username !== '') {
       window.localStorage.setItem('username', `${username}`);
     }

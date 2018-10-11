@@ -68,7 +68,7 @@ let Login = props => {
             <StyledForm>
                 <Wordmark src={require('./assets/wordmark.svg')} alt='wordmark' />
                 <StyledHeader>Log in to see photos and videos from your friends.</StyledHeader>
-                <Input type="text" name="username" value={props.value} placeholder="Username"/>
+                <Input type="text" name="username" value={props.value} placeholder="Username" autoComplete="off"/>
                 <Input type="password" name="password" value={props.value} placeholder="Password"/>
                 <Button onClick={props.login}>Log In</Button>
                 <StyledHeader>By logging in, you agree to our Terms, Data Policy and Cookies Policy.</StyledHeader>
