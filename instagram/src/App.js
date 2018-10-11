@@ -30,7 +30,14 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar postSearched={this.state.postSearched} searchPosts={this.searchPostsHandler}/>
-        <PostContainer data={this.state.data} />
+        <PostContainer 
+          data ={
+            this.state.filtered.length > 0
+              ? this.state.filtered
+              : this.state.data
+          } 
+        />
+        
       </div>
     );
   }
