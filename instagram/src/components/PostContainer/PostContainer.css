@@ -1,35 +1,33 @@
-.post-header{
+/* .post-header{
     width:615px;
     display: flex;
     align-items:center;
     padding-top:5px;
     padding-bottom:5px;
     background: white;
-}
-.thumbnail img{
+} */
+/* .thumbnail{
   width:30px;
   height:30px;
   border-radius: 100%;
   margin-left:20px;
-}
-.post-header p{
+} */
+/* .thumbnail-username{
   font-weight: bold;
   margin-left:10px;
-}
+} */
 
 /*icons*/
-.like-section{
-  padding-left:20px;
-}
-.like-section .icons-container i{ 
+
+/* .like-section .icons-container i{ 
   padding: 5px 15px 0 0;
   font-size:25px;
-}
-.like-section .likes{
+} */
+/* .likes{
   font-weight: 600;
   font-size:14px;
-  padding:10px 0;
-}
+  padding:10px 0 10px 20px;
+} */
 
 /*post image*/
 
@@ -41,43 +39,21 @@
 }
 
 /*comment section*/
-.comments-section{
-  width:700px;
-  margin:0 auto;
-}
-.comments{
-  display: flex;
-  margin:0;
-  padding:5px;
-  
-}
-.comments p{
-  font-size:14px;
-}
-.comments .user{
+
+
+/* .user{
   font-weight: 600;
   padding-left:15px;
   margin: 0;
+  font-size:14px;
 }
-.comments .comment{
+.comment{
   padding-left:5px;
   margin: 0;
-}
-
-/*comment input */
-/* .add-comment{
-  border:1px solid black;
-  margin-top:10px;
- 
+  font-size:14px;
 } */
+
 .fa-ellipsis-h{
   font-size:20px;
   margin-left:30px;
 }
-/* .commentInputomg{
-  border: none;
-  padding:20px 0;
-  width:90%;
-  margin:0 auto;
-  font-size:15px;
-} */

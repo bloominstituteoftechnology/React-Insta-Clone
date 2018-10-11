@@ -3,43 +3,11 @@
   width:100%;
   margin: 0 auto;
 }
-/*search bar*/
-/* .search-bar{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding:20px 0;
-  border-bottom: 1px solid rgba(0,0,0,.0975);
-} */
-/* .left{
-  display: flex;
-  align-items: center;
-
-} */
-/* .left span{
-  border:1px solid black;
-  height:20px;
-  margin-left:10px;
-  margin-right:10px;
-
-} */
 .fa-instagram{
   font-size:25px;
 
 }
-/* .search-bar .search-input{
-  text-align: center;
-  padding:3px 10px;
-  width:170px;
-  background: #fafafa;
-  border: solid 1px #dbdbdb;
-} */
-/* .search-bar .left .instagram-logo{
-  padding-left:10px;
-  margin:0;
-  font-size:25px;
-} */
-.fa-compass, .fa-user, .fa-heart{
+.fa-compass, .fa-user, .fa-heart, .fa-comment{
   padding-left:20px;
   font-size:25px;
 }
@@ -48,91 +16,4 @@
 .post-container{
   margin-top:60px;
   
-}
-.post-container-border{
-  border: solid 1px #dbdbdb;
-  width:700px;
-  margin:0 auto;
-  margin-bottom:20px;
-}
-
-.post .thumbnail-profile{
-  display: flex;
-  align-items:center;
-  padding: 5px 20px;
-  background: white;
-}
-
-.post .thumbnail-profile p{
-  font-weight: bold;
-  margin-left:10px;
-}
-.post .thumbnail-profile img{
-  width:30px;
-  height:30px;
-  border-radius: 100%;
-}
-
-.image img{
-  width:100%;
-}
-
-/*comment section*/
-.comments-section{
-  width:700px;
-  margin:0 auto;
-}
-.comments{
-  display: flex;
-  margin:0;
-    
-    padding:5px;
-}
-.comments p{
-  font-size:14px;
-}
-.comments .user{
-  font-weight: 600;
-  padding-left:15px;
-    
-    margin: 0;
-}
-.comments .comment{
-  padding-left:5px;
-
-    margin: 0;
-}
-.like-comment-icons{
-  padding-left:20px;
-}
-.like-comment-icons .icons i{
-  
-  padding: 5px 15px 0 0;
-  font-size:25px;
-}
-.like-comment-icons .likes{
-  font-weight: 600;
-  font-size:14px;
-}
-
-/* .post-container-border .comments-input{
-  border-top: solid 1px #dbdbdb;
-  width:660px;
-  padding:20px 0;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-} */
-
-.post-container-border .comments-input input[type="text"]{
-  outline: 0;
-  width:100%;
-  border:none;
-  font-size:14px;
-}
-
-.time-stamp{
-  font-size:12px;
-  padding:10px 0 10px 20px;
-  color:#999;
 }

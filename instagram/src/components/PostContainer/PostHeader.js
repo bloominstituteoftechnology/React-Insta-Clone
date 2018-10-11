@@ -1,17 +1,16 @@
 import React from 'react';
-import './PostContainer.css'
+import './PostContainer.css';
+import { PostHeaderStyle, Thumbnail, ThumbnailUsername} from '../../Styles';
 
 const PostHeader = (props) => { 
     return(
-        <div className="post-header">
-            <div className="thumbnail">
-                <img
-                    alt="thumnail"
-                    src={props.thumbnail}
-                />
-            </div>
-            <p>{props.username}</p>
-        </div>
+        <PostHeaderStyle>
+            <Thumbnail
+                alt="thumnail"
+                src={props.thumbnail}
+            />
+            <ThumbnailUsername>{props.username}</ThumbnailUsername>
+        </PostHeaderStyle>
     );
 }
 

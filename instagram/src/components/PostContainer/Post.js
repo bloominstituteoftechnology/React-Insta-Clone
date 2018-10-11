@@ -25,7 +25,7 @@ class Post extends React.Component {
                 <PostHeader
                     username={this.props.post.username}
                     thumbnail={this.props.post.thumbnailUrl}
-                />
+                /> 
                 <div className="post-image-wrapper">
                     <img
                         alt="post pic"
