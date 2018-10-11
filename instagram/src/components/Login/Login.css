@@ -1,0 +1,72 @@
+.container {
+	width: 500px;
+	height: 550px;
+	background: white;
+	display: flex;
+	margin: auto auto;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 25px;
+	margin-top: 5em;
+	border: 1px solid silver;
+	border-radius: 5px;
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.container .welcomeHeader img {
+	width: 200px;
+	margin-bottom: 20%;
+	border-radius: 25px;
+}
+
+.container .userAuth {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+}
+
+.container .userAuth p {
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.container .userAuth input.userName {
+	padding-left: 10%;
+	height: 20px;
+	margin-bottom: 5%;
+	border: 1px solid rgb(226, 226, 226);
+	border-radius: 5px;
+	background: url('../../assets/key-solid.svg') no-repeat;
+}
+
+.container .userAuth input.password {
+	padding-left: 10%;
+	height: 20px;
+	margin-bottom: 5%;
+	border: 1px solid rgb(226, 226, 226);
+	border-radius: 5px;
+	background: url('../../assets/lock-solid.svg') no-repeat;
+	font-family: small-caption;
+	font-size: 16px;
+}
+
+/* .container .userAuth input.password[type="password"] {
+	-webkit-text-security: disc;
+} */
+.container .userAuth button {
+	height: 50px;
+	padding: 2%;
+	color: white;
+	font-size: 24px;
+	letter-spacing: 0.2em;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+	background: linear-gradient(to right, #fb6c42, #f91d8b); /* Standard syntax (must be last) */
+}
+
+.container .signUpToday {
+	margin-top: 5%;
+}

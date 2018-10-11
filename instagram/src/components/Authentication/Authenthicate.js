@@ -6,36 +6,22 @@ const Authenticate = (App) =>
 		constructor() {
 			super();
 			this.state = {
-				loggedIn: false,
-				username: '',
-				password: ''
+				loggedIn: false
 			};
 		}
 
-		// componentWillMount() {
-		// 	this.setState({});
-		// }
-
-		recordAuth = (event) => {
-			const userName = localStorage.setItem('username', username.value);
-			const userPW = localStorage.setItem('password', password.value);
-			this.setState({ [this.state.username]: userName }, ([ this.state.password ]: userPW));
-		};
-
-		changeHandler = (event) => {
-			this.setState({ [event.target.name]: event.target.value });
-		};
 		componentDidMount() {
-			const user = localStorage.getItem('username');
-			if (user) {
+			if (localStorage.getItem('username') && localStorage.getItem('password')) {
 				this.setState({ loggedIn: true });
+			} else {
+				this.setState({ loggedIn: false });
 			}
 		}
 		render() {
-			if (this.state.loggedIn === true) {
+			if (this.state.loggedIn) {
 				return <App />;
 			} else {
-				return <Login changeHandler={this.changeHandler} recordAuth={this.recordAuth} />;
+				return <Login />;
 			}
 		}
 	};
