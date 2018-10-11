@@ -9,8 +9,8 @@ class PostContainer extends Component {
         return(
             <div className='post-container'>
               <div className='container'>
-                <Card key={this.props.card.likes} card={this.props.card} />
-                <CommentSection key={Date.now()} comments={this.props.card.comments} likes={this.props.card.likes}  />
+                <Card  card={this.props.card} />
+                <CommentSection comments={this.props.card.comments} likes={this.props.card.likes}  />
                </div>
             </div>
         );
@@ -20,7 +20,7 @@ PostContainer.propTypes = {
     card:PropTypes.shape({
         likes:PropTypes.number.isRequired,
         comments:PropTypes.array.isRequired,
-        key:PropTypes.number.isRequired
+        // key:PropTypes.number.isRequired
     })
 }
 export default PostContainer;

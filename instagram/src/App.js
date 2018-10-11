@@ -13,7 +13,7 @@ class App extends React.Component {
 
     this.state = {
        data: [],
-       newData:[]
+       search: ''
     }
    }
    componentDidMount() {
@@ -21,28 +21,38 @@ class App extends React.Component {
          data: dummyData
       })
    }
-   addLikes = () => {
-     this.setState({
-         
-     })
-   }
+   
+  displaySearch = (value) => {
+    const filteredData= this.state.data.filter(item => {
+        return item.username.indexOf(value) > -1;
+    });
+    this.setState({
+         data:filteredData
+    });
+     console.log('working');
+  }
   render() {
     let data = this.state.data;
-    // console.log(data);
+    console.log(data);
+    if(!data.length) {
+      return <h2>Please wait. Loading data....</h2>
+    }
+    // console.log(this.displaySearch);
     return (
      
       <div className="App">
-        <Search  />
-        {data.map(postObject=> <PostContainer key={postObject.likes} card={postObject} />)}
+        <Search display={this.displaySearch} />
+        {data.map(postObject=> <PostContainer key={Date.now()} card={postObject} />)}
       </div>
     );
   }
 }
 
-PostContainer.propTypes = {
-    card:PropTypes.arrayOf({
-        key: PropTypes.number.isRequired
-    })
-}
+// App.propTypes = {
+//     data:PropTypes.array
+// }
+App.propTpes = {
+  data: PropTypes.arrayOf(PropTypes.object),
+ }
 
 export default App;

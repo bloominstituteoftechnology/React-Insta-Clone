@@ -8,10 +8,11 @@ import './search.css';
 class Search extends Component {
 
 	render() {
+		// console.log(this.props.display);
 	   return(
 			<div className='search-bar'>
 	           <SearchHeader content='instagram' class='search-head'/>
-			   <SearchInput  class='search-input' />
+			   <SearchInput  class='search-input' display={this.props.display}/>
 			   <SearchImages class='search-image' />
 			</div>
 	    );	

@@ -3,9 +3,9 @@ import './comment.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Likes  extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
     render() {
         return (
             <div className='likes'>
