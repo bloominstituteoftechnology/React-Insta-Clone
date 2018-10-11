@@ -5,14 +5,15 @@ import Compass from '../../assets/001-compass.png';
 import Heart from '../../assets/005-heart.png';
 import Profile from '../../assets/002-profile.png';
 import './SearchBar.css';
+import { Image35 } from '../../Styles';
 
 const SearchBar = props => {
   console.log(props)
   return (
     <div className='search-container'>
       <div className='logo-left'>
-        <img className='insta-icon' src={InstagramIcon} alt='Instagram Icon' />
-        <img className='insta-logo' src={InstagramLogo} alt='Instagram Logo' />
+        <Image35 src={InstagramIcon} alt='Instagram Icon' />
+        <Image35 src={InstagramLogo} alt='Instagram Logo' />
       </div>
       <div className='search-center'>
         <input 

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './Login.css';
+import { StyledButton } from '../../Styles';
+
 
 class Login extends Component {
   constructor(props) {
@@ -25,7 +27,7 @@ class Login extends Component {
       <div className='login-form'>
       <div className='login-border'>
         <h3>Welcome to React Insta Clone</h3>
-        <div>Please Login</div>
+        <p>Please Login</p>
         <div>
           <input
             type="text"
@@ -44,9 +46,9 @@ class Login extends Component {
             onChange={this.handleInputChange}
           />
           <br />
-          <button color="success" size="large" onClick={this.handleLoginSubmit}>
+          <StyledButton onClick={this.handleLoginSubmit}>
             Log In
-          </button>
+          </StyledButton>
         </div>
       </div>
       </div>
