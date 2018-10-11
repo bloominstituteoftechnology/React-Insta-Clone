@@ -5,11 +5,10 @@ import CommentInput from './CommentInput';
 
 class CommentSection extends React.Component {
     constructor(props){
-
         super(props);
         console.log("comment section props", this.props);
         this.state = {
-            comments: this.props.comments,
+            comments: props.comments,
             comment: ''
         }
     }
@@ -38,7 +37,7 @@ class CommentSection extends React.Component {
         this.setState({ comment: event.target.value });
     };
 
-    submitComment = event => {
+    submitCommentHandle = event => {
         event.preventDefault();
         const newComment = { 
             text: this.state.comment, username: 'Pedro Montesinos' 
@@ -56,7 +55,8 @@ class CommentSection extends React.Component {
     render() {
         return (
             <div>
-                {this.props.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
+                {/*this.props.comments.map*/}
+                {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
                 <CommentInput
                     comment={this.state.comment}
                     submitComment={this.submitComment}
