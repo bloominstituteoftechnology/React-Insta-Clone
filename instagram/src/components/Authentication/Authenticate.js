@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Authenticate = (App, Login) => (
+const Authenticate = (PostPage, LoginPage) => (
   class extends React.Component {
     constructor() {
       super();
@@ -45,8 +45,8 @@ const Authenticate = (App, Login) => (
     }
 
     render() {
-      return this.state.loggedIn ? <App /> :
-        <Login
+      return this.state.loggedIn ? <PostPage /> :
+        <LoginPage
           username={this.state.username}
           usernameHandler={this.usernameHandler}
 
