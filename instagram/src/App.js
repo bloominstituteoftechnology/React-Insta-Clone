@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Component } from 'react';
 import "./App.css";
 import dummyData from "./dummy-data";
 import PostPage from "./components/PostContainer/PostPage";
-import Authenticate from "./components/Authentication/Authenticate";
+import Authenticate from "./Authentication/Authenticate";
 
-class App extends Authenticate {
+class App extends Component {
   constructor() {
     super();
     this.state = {
@@ -46,4 +46,4 @@ class App extends Authenticate {
   }
 }
 
-export default App;
+export default Authenticate(App);
