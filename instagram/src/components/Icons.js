@@ -10,6 +10,7 @@ const Icons = props => {
         </div>
         </div>
     )
+
 }
 
 export default Icons;

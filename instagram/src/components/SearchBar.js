@@ -1,10 +1,28 @@
-import React from 'react'
-// import { library } from '@fortawesome/fontawesome-svg-core'
-// import { faInstagram, faCompass, faHeart, faUser} from '@fortawesome/free-solid-svg-icons'
-// import { FontAwesomeIcon } from './@fortawesome/react-fontawesome'
+import React from 'react';
+import styled from 'styled-components';
+
+// import { library } from '@fortawesome/fontawesome-svg-core';
+// import { FontAwesomeIcon } from './@fortawesome/react-fontawesome';
+// import { faInstagram, faCompass, faHeart, faUser} from '@fortawesome/free-solid-svg-icons';
 
 // library.add(faInstagram, faCompass, faHeart, faUser)
+const Header = styled.div` 
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  height: 75px;
+  justify-content: space-between;
+`;
 
+const SearchInput = styled.div` 
+  width: 23%;
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid lightgray;
+  margin-top: 25px;
+  background: whitesmoke;
+  font-size: 14px;
+`;
 
 const SearchBar = props => {
   return(

@@ -1,16 +1,23 @@
 import React, { Component } from "react";
-import "./App.css";
+import styled from 'styled-components'
+//import "./App.css";
 
 import dummyData from "./dummy-data";
 import PostContainer from "./components/PostContainer";
 import SearchBar from "./components/SearchBar";
 
+const WrapperDiv = styled.div` 
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+`;
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      //posts: dummyData
       posts: [],
       likes: 1006,
       filteredPosts: [],
@@ -28,12 +35,12 @@ class App extends Component {
     this.setState(prevState => ({ likes: prevState.likes + 1 }))
   }
 
-  handleInput = event => {
+  changeHandler = event => {
     this.setState({ [event.target.name]: event.target.value })
   }
 
   filter = event => {
-    this.handleInput(event);
+    this.changeHandler(event);
     this.setState(prevState => {
       const filteredPosts = prevState.posts.filter( post => {
         return post.username.includes(prevState.filterTarget)
@@ -44,20 +51,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <WrapperDiv>
         <SearchBar 
           changeHandler={this.filter}
           filterTarget={this.state.filterTarget}
         />
         <PostContainer 
-          dummyData={
-            this.state.filteredPosts.length > 0
-              ? this.state.filteredPosts
-              : this.state.posts
+          dummyData={ this.state.posts
+            // this.state.filteredPosts.length > 0
+            //   ? this.state.filteredPosts
+            //   : this.state.posts
           } 
           likes={this.state.likes}
           increment={this.increment}/>
-      </div>
+      </WrapperDiv>
     );
   }
 }
