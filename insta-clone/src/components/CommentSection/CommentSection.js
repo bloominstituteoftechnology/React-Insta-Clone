@@ -17,7 +17,7 @@ class CommentSection extends React.Component {
       text: ""
     };
   }
-
+// Add a like function to counter each click
   addALike = e => {
     this.setState({ likes: this.state.likes + 1 });
   };

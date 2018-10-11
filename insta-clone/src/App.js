@@ -4,19 +4,15 @@ import PostPage from "./components/PostContainer/PostPage"
 import Authenticate from "./components/Authenticate/Authenticate"
 
 
-const App = Authenticate(
+const App = (
   class App extends Component {
-    constructor() {
-      super()
-      this.state = {
-        username: '',
-      }
-    }
-    componentDidMount = () => {
-      const user = localStorage.getItem('username')
-      this.setState({ username: user })
+    // constructor() {
+    //   super()
+    //   this.state = {
+    //     username: '',
+    //   }
+    // }
 
-   }
 
     render() {
 
@@ -32,4 +28,4 @@ const App = Authenticate(
   }
 );
 
-export default App;
+export default Authenticate(App);
