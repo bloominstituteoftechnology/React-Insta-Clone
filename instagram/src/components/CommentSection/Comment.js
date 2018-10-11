@@ -4,13 +4,10 @@ import "./CommentSection.css";
 import styled, { css } from "styled-components";
 import { UserName } from "../PostContainer/PostHeader";
 
-const commentSectionContainer = styled.div`
-  padding-bottom: 4%;
-`;
-
 const commentContainer = styled.div`
   display: flex;
   line-height: 5px;
+  ${props => props};
 `;
 
 const CommentParagraph = styled.p`
@@ -19,12 +16,10 @@ const CommentParagraph = styled.p`
 
 const Comment = props => {
   return (
-    <commentSectionContainer>
-      <commentContainer>
-        <UserName>{props.comment.username}</UserName>
-        <CommentParagraph>{props.comment.text}</CommentParagraph>
-      </commentContainer>
-    </commentSectionContainer>
+    <commentContainer>
+      <UserName>{props.comment.username}</UserName>
+      <CommentParagraph>{props.comment.text}</CommentParagraph>
+    </commentContainer>
   );
 };
 
