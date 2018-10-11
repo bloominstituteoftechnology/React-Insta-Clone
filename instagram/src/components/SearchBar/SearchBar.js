@@ -3,23 +3,13 @@ import ReactDOM from 'react-dom'
 import './SearchBar.css'
 import dummyData from '../../dummy-data';
 
-const SearchBar = props => {
-   let textInput = (props) => {
-    props.inputText()
-    // typerror: props.inputText is ! a func
-    }
-    // try calling the inputText function on it's own again
+const SearchBar = (props) => {
     return(
-
-<div className="sBarDiv">
-<img alt="*" src={props.data.map(item => <div key={item.username}>item.thumbnailUrl</div>)} />
-<h4>{props.text}</h4>
-{/* this could be a kink in the event chain if it's not recieving props prop-erly */}
-<input onChange={textInput}/> 
-<div>{props.LikeButton()}</div>
-{/* maybe onChange isnt the best choice */}
-{/* if we add a search button and an onClick we can interpolate code from the todo list with ease */}
-</div> )
+        <div className="sBarDiv">
+        <img alt="" src={props.data.map(item => <div key={item.username}>item.thumbnailUrl</div>)} />
+        <h4>{props.LikeButton}</h4>
+        </div>
+    )
 }
 
 export default SearchBar 

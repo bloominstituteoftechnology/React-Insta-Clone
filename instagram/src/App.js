@@ -7,81 +7,46 @@ import PostsPage from './components/PostContainer/PostsPage' ;
 import Authenticate from './components/Authentication/Authenticate';
 
 
-
 class App extends React.Component {
- 
   constructor(){
- 
-    super();
-
+    super()
     this.state = {
-
       data: dummyData,
-
       text: '',
-      // empty array, should be able to link existing comments here and push user object.
       newComment: [],
+      asyncMessage: '',
+      searchedComment: []
 
-      asyncMessage: ''
-   
-    };
-  
+
+    }
   }
 
-  LikeButton = () => (
-    <i className="fa fa-heart like-button" />
-);
-
-    Comment = () => (
-    <i className="fa fa-comment comment "/>
-);
+componentDidMount = () => {
+  setTimeout(() => {
+    this.setState({posts: dummyData})
+  })
+};
 
 
-  // componentDidMount(){
-  //   setTimeout(() => {
-  //     this.setState({
-  //       LoadingText: 'Page has loaded'});
-  //   }, 3000)
-  // }
+inputText = event => {
+  this.setState({
+    text: event.target.value 
+  })
+};
 
 
-  componentDidMount = () => {
-
-    setTimeout(() => {
-      this.setState({asyncMessage: 'Loading..'});
-    }, 4000);
-  }
-
-
-  
-  // todo: add buttons, synthetic click for search
-
-  inputText = (event) => {
-
-    this.setState({
-    
-      text: event.target.value
-      // prope
-    })
-
-  }
-
-  commentUpdater = (event) => {
-    event.stopPropagation();
-    // event.preventDefault();
-
-    this.setState({
-        newData: this.newData.push({username: 'LorenzoEvans', text: event.target.value  })
-    })
-
-
+commentUpdater = (event) => {
+  this.setState({
+    newData: this.newData.push({username: 'LorenzoEvans', text: event.target.value})
+  })
 }
-  render(){
-    return(
 
-      <div> 
-     <Authenticate />
-      <SearchBar 
+render(){
+  return(
+    <div>
+    <Authenticate />
+    <SearchBar 
+
         inputText={this.inputText} 
 
         data={this.state.data} 
@@ -92,21 +57,16 @@ class App extends React.Component {
 
         Comment={this.Comment}
         
-         />
       
-        {this.state.data.map(item =>
+        {...this.state.data.map(item =>
         
         <div key={item.timestamp} ></div>
         
         )}
-     
-
-      {/* check to see if these props are being passed, use console. */}
-
- 
-  <PostsPage 
-
-  commentUpdater={this.commentUpdater}
+    />
+    <PostContainer />
+    <PostsPage 
+        commentUpdater={this.commentUpdater}
 
 inputText={this.inputText}
 
@@ -118,29 +78,15 @@ inputText={this.inputText}
    newComment={this.state.newComment} 
 
    data={this.state.data}
-  
-   />
-       
- <PostContainer 
-
- commentUpdater={this.commentUpdater}
-
- inputText={this.inputText}
+    />
 
 
-    LikeButton={this.LikeButton}
 
-    Comment={this.Comment}
- 
-    newComment={this.state.newComment} 
- 
-    data={this.state.data} /> 
 
-  
- 
-      </div>
-    )
-  }
+    </div>
+  )
+}
+
 }
 
 
@@ -165,4 +111,7 @@ inputText={this.inputText}
 //   }
 // }
 
-export default App;
+
+
+
+export default App 

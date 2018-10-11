@@ -12,9 +12,9 @@ class Authenticate extends React.Component{
         }
     }
 
-    componentDidMount() {
-        if
-    }
+    // componentDidMount() {
+    //     if
+    // }
     
 
 render(){
