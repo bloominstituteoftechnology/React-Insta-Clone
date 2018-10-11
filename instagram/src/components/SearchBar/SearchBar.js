@@ -2,7 +2,7 @@ import React from 'react';
 
 const SearchBar = props => {
     return (
-        <div className = 'searchbar-wrapper'>
+        <div className = 'search-bar-wrapper'>
             <input placeholer= 'search' />
         </div>
     )
