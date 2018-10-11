@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostPage from './components/PostContainer/PostPage';
+import Authenticate from './components/Authenticate/Authenticate'
 
 class App extends Component {
   constructor(props) {
@@ -10,8 +11,6 @@ class App extends Component {
 
     }
   }
-
-
 
   render() {
     return (
@@ -23,4 +22,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);

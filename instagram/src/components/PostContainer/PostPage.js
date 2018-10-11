@@ -21,7 +21,7 @@ class PostPage extends React.Component {
       <div className="PostPage">
         <PostContainer posts={this.state.dummyData} />
       </div>
-     );
+    );
   }
 }
  
