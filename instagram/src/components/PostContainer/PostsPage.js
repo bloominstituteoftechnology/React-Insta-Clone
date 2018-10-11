@@ -2,7 +2,8 @@ import React  from 'react';
 import './post.css';
 import dummyData from './dummy-data.js';
 import SearchBar from '../SearchBar/SearchBar.js';
-import PostContainer from './PostContainer.js'
+import PostContainer from './PostContainer.js';
+import Logout from '../Logout/Logout';
 
 
 
@@ -26,24 +27,10 @@ class PostsPage extends React.Component {
     }, 800);
   }
 
-  //Create a function in app.js called addNewComment that takes in an event and an index number. 
-  //The function will add the comment that is on the event object to the post that is at that index number.
-  addNewComment = (event, index) => {
-    console.log(event.target);
-    console.log(event.target.value);
-    event.preventDefault();
-    const newComment = { text: this.state.posts.comments, username: 'ryanhamblin' };
-    const comments = this.state.posts.comments.slice();
-    comments.push( {
-        text : this.state.posts.comments.text
-        
-    });
-    this.setState({comments, comm : ''});
-  };
-
-  commentHandler = (event) => {
-    this.setState ({ [event.target.name] : event.target.value});
-  };
+  LogoutHandler = (event) => {
+    localStorage.removeItem('user')
+    window.location.reload();
+  } 
 
   searchPostsHandler = event => {
     console.log(event.target);
@@ -67,13 +54,15 @@ class PostsPage extends React.Component {
                 />
             </header>
 
-        <   div> 
-            <   PostContainer 
+          <Logout status = {this.LogoutHandler}/> 
+
+          <div> 
+            <PostContainer 
                     postPassedAhead = {
                         this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts
                     }
-                />
-            </div>
+            />
+          </div>
       </div>
     ); //return end
   } //render() end

@@ -6,7 +6,7 @@ const CommentInputBox = (props) => {
         <div className = "comment-input">
             <form onSubmit={props.addNewComment} > {/* need to accept comment thro' form method and action */}
                 <input 
-                    onChange = {props.changeComment}
+                    onChange = {props.commentHandler}
                     type = "text"
                     name = "comment"
                     value = {props.value}

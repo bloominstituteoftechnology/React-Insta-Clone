@@ -1,8 +1,41 @@
 import React from 'react';
-import './Login.css';
+//import './Login.css';
+import {Button, Formdiv} from '../Styled-components/Styled-components.js'
+import Styled from 'styled-components';
 
+const Fieldwrap = Styled.div`
+    margin-top : 20px;
+`;
+/* h1 {
+    text-align: center;
+    color : #1ab188;
+    
+}
+
+.button-block {
+        border: 0;      
+        padding:15px 0;
+        font-size:2rem;
+        font-weight: bold;
+        text-transform:uppercase;
+        letter-spacing : .1em;
+        background : #1ab188;
+        color : white;
+        transition:all.5s ease;
+        display : block;
+        width : 40%;
+        margin-top: 40px;
+        margin-left: 160px;
+        border-radius: 5px;
+}
+
+ .field-wrap {
+     margin-top : 20px;
+ } */
 class Login extends React.Component {
+    
     constructor (props) {
+        //console.log("In Login " , props);
         super(props);
         this.state = {
             username : '',
@@ -11,7 +44,7 @@ class Login extends React.Component {
     }
 
     handleInputChange = event => {
-        this.setState({ [event.target.name] : event.taeget.value });
+        this.setState({ [event.target.name] : event.target.value });
     };
 
     handleLoginSubmit = (event) => {
@@ -21,13 +54,15 @@ class Login extends React.Component {
     }
 
     render() {
+        
         return (
-            <div className = "form">
+            <Formdiv>
+                <h1>Welcome to Instagram Clone</h1>
                 <h3> Login Page...</h3>
 
                 <form>
                     
-                    <div className = "field-wrap">
+                    <Fieldwrap>
                         <label>Username : </label>
                         <input 
                             type = "text"
@@ -35,9 +70,9 @@ class Login extends React.Component {
                             value = {this.state.username}
                             onChange = {this.handleInputChange}
                         />
-                    </div>
-    
-                    <div className = "field-wrap">
+                    </Fieldwrap>
+     
+                    <Fieldwrap>
                         <label>Password : </label>
                         <input 
                             type = "password"
@@ -45,13 +80,13 @@ class Login extends React.Component {
                             value = {this.state.password}
                             onChange = {this.handleInputChange}
                         />
-                    </div>
+                    </Fieldwrap>
                    
-                    <button className = "button-block" onClick = {this.handleLoginSubmit}> 
+                    <Button onClick = {this.handleLoginSubmit}> 
                         Login 
-                    </button>
+                    </Button>
                 </form>
-            </div>
+            </Formdiv>
         )
     }
 }

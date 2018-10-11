@@ -6,6 +6,13 @@
         border-radius: 6px;
         box-shadow:0 4px 10px 4px #13232f;
         font-family: 'Titillium Web', sans-serif;
+        color : white;
+}
+
+h1 {
+    text-align: center;
+    color : #1ab188;
+    
 }
 
 .button-block {
@@ -20,4 +27,11 @@
         transition:all.5s ease;
         display : block;
         width : 40%;
+        margin-top: 40px;
+        margin-left: 160px;
+        border-radius: 5px;
 }
+
+ .field-wrap {
+     margin-top : 20px;
+ }

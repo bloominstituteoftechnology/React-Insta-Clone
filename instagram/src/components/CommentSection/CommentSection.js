@@ -8,9 +8,25 @@ class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.comments
+      comments: props.comments,
+      newComment : ''
     };
   }
+
+  addNewComment = (event) => {
+    console.log(event.target);
+    console.log(event.target.value);
+    event.preventDefault();
+    const newComment = { text: this.state.posts.comments, username: 'user' };
+    this.setState({
+                  comments : [...this.state.comments, newComment]
+    });
+  };
+
+  commentHandler = (event) => {
+    this.setState ({ newComment : event.target.value});
+  };
+
   render() {
       console.log(this.state.comments);
     return (
@@ -23,7 +39,7 @@ class CommentSection extends React.Component {
         ))} 
 
         <CommentInputBox
-            comment = {this.state.comm}
+            comment = {this.state.newComment}
             submitComment = {this.addNewComment}
             changeComment = {this.commentHandler}
         />
