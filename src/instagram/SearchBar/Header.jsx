@@ -21,7 +21,7 @@ const Header = props => {
 
         <div className="Nav-icon-feed" />
         <div className="Nav-icon-heart" />
-        <div className="Nav-icon-profile" />
+        <div className="Nav-icon-profile" onClick={props.logoutHandler} />
       </div>
     </nav>
   );

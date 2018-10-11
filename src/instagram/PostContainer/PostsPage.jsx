@@ -31,6 +31,7 @@ class PostsPage extends Component {
         <Header
           searchTerm={this.state.searchTerm}
           searchPosts={this.searchPostsHandler}
+          logoutHandler={this.props.logoutHandler}
         />
         <PostContainer
           posts={

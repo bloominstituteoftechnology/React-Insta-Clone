@@ -1,17 +1,29 @@
 import React, { Component } from "react";
+import Authenticate from "./Authentication/Authenticate";
 
-import Header from "./instagram/SearchBar/Header";
-import PostContainer from "./instagram/PostContainer/PostContainer";
-import Post from "./instagram/PostContainer/Post";
-import Comments from "./instagram/CommentSection/Comments";
-import dummyData from "./instagram/PostContainer/dummy-data";
 import PostsPage from "./instagram/PostContainer/PostsPage";
 
 class App extends Component {
-  state = {};
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  logoutHandler = event => {
+    // event.preventDefault();
+    console.log("logoutHandlerFired");
+    window.localStorage.setItem("login", "");
+    window.localStorage.setItem("password", "");
+    window.location.reload();
+  };
+
   render() {
-    return <PostsPage />;
+    return (
+      <div className="App">
+        <PostsPage logoutHandler={this.logoutHandler} />
+      </div>
+    );
   }
 }
 
-export default App;
+export default Authenticate(App);
