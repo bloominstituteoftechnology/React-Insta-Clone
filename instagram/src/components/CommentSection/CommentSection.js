@@ -18,6 +18,7 @@ class CommentSection extends React.Component{
         }
 
     }
+    
     render(){
         return (
             <div>
@@ -26,10 +27,9 @@ class CommentSection extends React.Component{
                         <span className='comment-username'>{this.props.data.username} </span>
                         {this.props.data.text} 
                         <span className='comment-more'>{this.more}</span>
-                        <span onClick={this.props.removeComment(1)} className='delete-comment'>{this.delete}</span>
+                        <span className='delete-comment'>{this.delete}</span>
                     </p>
                 </div>
-    
             </div>
         )
     }
