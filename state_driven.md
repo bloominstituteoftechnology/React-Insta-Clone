@@ -1,0 +1,3 @@
+## Why do you feel that state-driven views are important to us as software developers today? What are state-driven applications? Why are they powerful? How does React enables those patterns?
+
+Based on the article, state-driven views are important because they actually solve some of the major problems that a developer team might be having on a project. State-driven applications are applications driven by state (lol). These applications are powerful because they encapsulate everything your user is going to need to be able to interact with your product. React enables those patterns by the React State —the `state` object will be the driver to the decisions we make when we build and layout our application.
