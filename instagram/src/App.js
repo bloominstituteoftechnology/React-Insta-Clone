@@ -3,6 +3,9 @@ import './App.css';
 import dummyData from './dummy-data';
 import Search from "./Components/SearchBar/search";
 import Post from "./Components/PostContainer/post";
+import PostPage from "./Components/PostContainer/postpage";
+import Authenticate from "./Components/Authentication/authenticate"
+import ls from 'local-storage'
 
 //App renders the header for IG
 //Also renders post component to the screen via mapping the state
@@ -14,13 +17,19 @@ class App extends Component {
       instagram: [],
     }
   }
-
   //fetches and sets state
   //pretend API call takes half a second to render
   componentDidMount() {
     setTimeout(() => {
       this.setState({instagram: dummyData});
     }, 500)
+  }
+
+  //login sets username on local storage
+  login () {
+    this.setState({
+
+    })
   }
 
   //tracks user input search bar
@@ -63,7 +72,7 @@ class App extends Component {
         />
         {this.state.instagram.map(data => (
           <div className="post-container" key={data.username}>
-            <Post 
+            <PostPage 
               post={data}
               text={this.state.input}
               increment={this.increment}
@@ -75,4 +84,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);

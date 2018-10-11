@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import CommentBox from "./commentbox";
 import "./comment.css";
+import ls from 'local-storage'
 
 //comments component maps over the comment array and passes that data to comment component
 class Comments extends React.Component {
