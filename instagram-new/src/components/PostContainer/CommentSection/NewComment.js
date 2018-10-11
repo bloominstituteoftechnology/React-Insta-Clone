@@ -1,12 +1,12 @@
 
 import React from 'react';
-import './Comment.css' 
+import { InputComment } from './CommentStyle';
 
 const CommentAdd = props => { 
     return (
         <div>
             <form onSubmit = {props.addNewComment}>
-                <input name = 'newComment' onChange = {props.inputChange} className = 'comment-input' type='text' placeholder ='Add a comment...'></input>
+                <InputComment name = 'newComment' onChange = {props.inputChange} className = 'comment-input' type='text' placeholder ='Add a comment...'></InputComment>
             </form>
         </div>
     );

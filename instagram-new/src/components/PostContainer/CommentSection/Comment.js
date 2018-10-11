@@ -1,21 +1,25 @@
 import React from 'react';
-import './Comment.css' 
+import { CommentHolder, CommentContent, CommentText, Time } from './CommentStyle';
+import { PostUserName } from '../../StylesReusable';
 
 const CommentDisplay = props => { 
     return (
-        <div className = 'comments-all'>
+        <div>
+        <CommentHolder>
             {props.comments.map(comments => {
                 return (
                     
-                    <div className ='comments-content'>
-                        <h5>{comments.username}</h5>
-                        <p>{comments.text}</p>
-                    </div>
+                    <CommentContent>
+                        <PostUserName comment>{comments.username}</PostUserName>
+                        <CommentText>{comments.text}</CommentText>
+                    </CommentContent>
                     
                 
                 );
             })}
-            <p className = 'time'>2 HOURS AGO</p>
+            
+        </CommentHolder>
+        <Time>2 HOURS AGO</Time>
         </div>
     );
 }

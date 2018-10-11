@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Comment.css';
 import CommentDisplay from './Comment';
 import CommentAdd from './NewComment';
  
