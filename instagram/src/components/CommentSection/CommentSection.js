@@ -20,8 +20,8 @@ class CommentSection extends React.Component {
       let newCommentList = [
         ...this.state.comments,
         {
-          id: index,
-          username: "YanrongXu",
+          id: index + 1,
+          username: localStorage.getItem("username"),
           text: this.state.newComment
         }
       ];

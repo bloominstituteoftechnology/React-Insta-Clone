@@ -6,7 +6,8 @@ const Authenticate = (App, Login) =>
     constructor() {
       super();
       this.state = {
-        loggedIn: false
+        loggedIn: false,
+        username: localStorage.getItem("username")
       };
     }
 
