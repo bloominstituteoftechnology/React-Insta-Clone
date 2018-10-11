@@ -10,7 +10,7 @@ const SearchBar = props => {
     return (
         <header className='searchHeader'>
             <div className='branding'>
-                <img className='instaCam' src={InstaCam} alt='Instagram Camera' />
+                <img onClick={props.signOut} className='instaCam' src={InstaCam} alt='Instagram Camera' />
                 <img className='instaScript' src={InstaScript} alt='Instagram Script' />
             </div>
             <input className='searchInput' name='searchBar' type='text' placeholder='Search' />

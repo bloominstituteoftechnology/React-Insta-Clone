@@ -19,14 +19,10 @@ const Authenticate =  App =>
             if(this.state.userpass === 'password') {
                 window.localStorage.setItem('password', true)
                 this.setState({
-                    username: '',
+                    // username: '',
                     userpass: '',
                 })
             }
-        }
-
-        componentWillUnmount() {
-            window.localStorage.removeItem('password')
         }
 
         changeHandler = event => {
@@ -39,7 +35,7 @@ const Authenticate =  App =>
             return (
                 <div>
                     <AuthCheck
-                        value={this.state.input}
+                        username={this.state.username}
                         onchange={this.changeHandler}
                         userpass={this.state.userpass}
                         toggle={this.toggleTrueFalse}

@@ -6,15 +6,15 @@ import './PostContainer.css';
 
 class PostPage extends React.Component {
     constructor(props) {
+        console.log(props.username)
         super(props);
         this.state = {
             data: [],
-            username: 'senior_one_more',
+            username: props.username,
             newComment: '',
         }
 
     }
-
 
     componentDidMount() {
         this.setState({
@@ -46,10 +46,15 @@ class PostPage extends React.Component {
         })
     }
 
+    signOut = event => {
+        window.localStorage.removeItem('password')
+        
+    }
+
     render() {
         return (
             <div className='postPage'>
-                <SearchBar />
+                <SearchBar signOut={this.signOut}/>
                 <PostContainer
                     {...this.state}
                     changeHandler={this.changeHandler}
