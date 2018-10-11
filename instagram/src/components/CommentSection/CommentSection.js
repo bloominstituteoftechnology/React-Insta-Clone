@@ -1,5 +1,6 @@
 import React from 'react';
 import './CommentSection.css';
+import {Username} from '../PostContainer/PostContainer.js';
 
 const CommentSection = (props) => {
 
@@ -10,7 +11,7 @@ const CommentSection = (props) => {
                return(
                    <div >
                        <p>
-                       <span className='username bold-txt'>{comment.username}</span> 
+                       <Username comment >{comment.username}</Username> 
                        <span>{comment.text}</span>
                        </p>
                    </div>
@@ -23,7 +24,7 @@ const CommentSection = (props) => {
                 return (
                     <div id={comment.id}>
                        <p>
-                       <span className='username bold-txt'>{comment.username}</span> 
+                       <Username comment >{comment.username}</Username> 
                        <span>{comment.text}</span>
                        </p>
                    </div>

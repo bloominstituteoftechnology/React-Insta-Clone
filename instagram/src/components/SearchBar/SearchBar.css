@@ -7,9 +7,10 @@
     background: lightgray;
 }
 
-input {
+input.search {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 

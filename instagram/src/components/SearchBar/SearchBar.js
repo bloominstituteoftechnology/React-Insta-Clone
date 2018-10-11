@@ -53,8 +53,8 @@ const SearchBar = (props) => {
             <img className='instaword' src='https://cdn.worldvectorlogo.com/logos/instagram-1.svg'  />
         </SearchDiv>
 
-        <input type='text' 
-               placeholder="Search" 
+        <input className="search"type='text' 
+               placeholder=" &#120164;&#120150;&#120146;&#120163;&#120148;&#120153;" 
                
                onKeyDown={props.filter} />
         <div className='icon-div'>

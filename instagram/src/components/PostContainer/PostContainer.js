@@ -6,8 +6,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faCommentAlt } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import styled, {css} from "styled-components";
 library.add(faHeart);
 library.add(faCommentAlt);
+
+const PostProfImg = styled.img`
+    width: 40px;
+    height: auto;
+    content: url('${props => props.src}');
+    border-radius: 50%;
+    padding: 0 5px;
+`;
+
+export const Username = styled.span`
+    font-weight: 700;
+    user-select: none;
+    ${props => props.comment ? css`
+    font-weight: 620;
+    padding-right: 5px;
+    ` : null}
+
+`;
+
+
 
 class PostContainer extends React.Component {
     constructor(props){
@@ -28,7 +49,7 @@ class PostContainer extends React.Component {
   }
 
   inputHandler(event){
-    let username = 'JoeSCMHOE126';  
+    let username = localStorage.getItem('username');  
     this.setState({
         commentInput: {
             text: event.target.value,
@@ -46,6 +67,7 @@ class PostContainer extends React.Component {
     });
     
   }
+  
 
 
 
@@ -57,8 +79,8 @@ render(){
                 
                 <div className={`post-container ${this.props.dummyData.username}`}>
                     <div className = 'post-header'>
-                        <img className="post-profile-img" src={`${this.props.dummyData.thumbnailUrl}`}/>
-                        <p className='username bold-txt'>{this.props.dummyData.username}</p>
+                        <PostProfImg src={this.props.dummyData.thumbnailUrl}/>
+                        <Username>{this.props.dummyData.username}</Username>
                     </div>
                     <img className="post-img"src={`${this.props.dummyData.imageUrl}`}/>
                     <div className='like-container'>
