@@ -1,24 +1,27 @@
 import React from 'react';
+import Login from '../Login/Login'
 
 const Authenticate = PassedComponent =>
     class App extends React.Component {
         constructor(){
             super();
             this.state={
-                loggedIn : false,
+                loggedIn:false,
             };
         }
-
         componentDidMount(){
             if(!localStorage.getItem('user')){
                 this.setState({loggedIn : false});
-            }
-            this.setState({loggedIn : true});
+            }else{
+            this.setState({loggedIn : true});}
         }
-
         render() {
-            if(this.state.loggedIn === true){//I just put the true here for clarity for myself
+            //I just put the true here for clarity for myself
+            if(this.state.loggedIn){
                 return <PassedComponent />;
+            }
+            else{
+                return <Login />
             }
         }
     };

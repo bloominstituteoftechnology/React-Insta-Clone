@@ -1,19 +1,5 @@
 import React from 'react';
 
-// const Login = props => {
-//     return ( 
-//         <div className="login-container">
-//             <h1>Please Login to See Posts:</h1>
-//             <form>
-//                 <input type="text" placeholder="Username:" />
-//                 <input type="password" placeholder="Password:" />
-//                 <input type="submit">Login</input>
-//             </form>
-
-//         </div>
-//     );
-// }
-
 class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -35,11 +21,10 @@ class Login extends React.Component {
             <div className="login-container">
                 <h1>Please Login to See Posts:</h1>
                 <form>
-                    <input type="text" placeholder="Username:" />
-                    <input type="password" placeholder="Password:" />
-                    <input type="submit">Login</input>
+                    <input type="text" placeholder="Username:" onChange={this.handleInputChange}/>
+                    <input type="password" placeholder="Password:" onChange={this.handleInputChange}/>
+                    <button onClick={this.handleLoginSubmit} type="button" >Submit</button>
                 </form>
-
             </div>
         );
     }
