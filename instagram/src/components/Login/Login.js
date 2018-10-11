@@ -38,10 +38,12 @@ class Login extends React.Component {
   render() {
     return (
       <div className="login-page">
-        <h1 className="title">Welcome To React Insta-Clone</h1>
+        <h1 className="title">Welcome</h1>
         <div>
+          <h3>Please Log In</h3>
           <form className="login">
             <input
+              className="login-input"
               type="text"
               placeholder="Username"
               name="username"
@@ -49,6 +51,7 @@ class Login extends React.Component {
               onChange={this.handleInputChange}
             />
             <input
+              className="login-input"
               type="password"
               placeholder="Password"
               name="password"
@@ -56,8 +59,9 @@ class Login extends React.Component {
               onChange={this.handleInputChange}
             />
             <button className="login-button" onClick={this.handleSubmit}>
-              Log In
+              GO
             </button>
+            <i className="fas fa-chevron-down" />
           </form>
         </div>
       </div>

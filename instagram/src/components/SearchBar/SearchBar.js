@@ -1,21 +1,34 @@
 import React from "react";
-import "./SearchBar.css";
+import {
+  Header,
+  Logo,
+  Line,
+  Navigation,
+  Search,
+  Input
+} from "./StyledSearchBar";
 
 const SearchBar = props => {
   return (
-    <div className="search-bar">
-      <i className="fab fa-instagram" />
-      <span className="line">|</span>
-      <h1 className="insta-logo">Instagram</h1>
-      <div className="search">
-        <span className="fas fa-search" />
-        <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
-      </div>
-      <div className="navigation">
-        <i className="far fa-compass" />
-        <i className="far fa-heart" />
-        <i className="far fa-user" />
-      </div>
+    <div>
+      <Header>
+        <i className="fab fa-instagram" />
+        <Line>|</Line>
+        <Logo>Instagram</Logo>
+        <Search>
+          <i className="fas fa-search" />
+          <Input
+            type="text"
+            placeholder="Search"
+            onKeyDown={props.searchPosts}
+          />
+        </Search>
+        <Navigation>
+          <i className="far fa-compass" />
+          <i className="far fa-heart" />
+          <i className="far fa-user" />
+        </Navigation>
+      </Header>
     </div>
   );
 };

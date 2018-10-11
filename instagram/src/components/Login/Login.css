@@ -5,16 +5,25 @@
 }
 
 .login-page h1 {
-  color: white;
+  color: black;
   text-align: center;
-  margin: 60px 0px;
   font-family: "Unica One", sans-serif;
-  font-size: 40px;
+  font-size: 45px;
+  font-weight: bold;
+  background-color: #ffffff;
+  padding: 50px;
+  margin-top: 0px;
+  box-shadow: 0px 5px 20px rgb(175, 175, 175);
+}
+
+.login-page h3 {
+  text-align: center;
+  padding-top: 40px;
 }
 
 body {
   height: 100%;
-  background-image: url("./Calvin.jpg");
+  background: #f7f7f7;
 }
 
 .login {
@@ -22,32 +31,59 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 270px;
+  background-size: cover;
   margin: 20px auto;
-  background: rgb(206, 206, 206);
+  background: #f7f7f7;
   border-radius: 10px;
   padding: 25px 20px 10px;
+  border-radius: 1px solid red;
 }
 
 .login button {
   text-decoration: none;
   border: none;
-  margin: 20px auto;
-  padding: 10px 25px;
-  border-radius: 5px;
+  margin: 35px auto;
+  padding: 10px 10px;
+  border-radius: 50px;
   color: white;
   background-color: #4897b1;
   white-space: nowrap;
   box-shadow: 2px 2px 2px rgb(175, 175, 175);
   font-family: "Unica One", sans-serif;
+  width: 40%;
+  font-size: 25px;
 }
 
 .login button:active {
   background-color: #000000;
 }
 
-input {
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border-style: none;
-  padding: 20px 10px;
+.login-input {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  color: rgba(0, 0, 0, 0.9);
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 10px;
+  padding: 25px 0 20px;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  margin: 10px 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.fa-chevron-down {
+  font-size: 30px;
+  width: 11%;
+  height: 10%;
+  padding: 10px;
+  margin: 10px 0 10px 110px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 7px rgb(175, 175, 175);
 }
