@@ -1,0 +1,20 @@
+.commentBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 700px;
+    width: 80%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.commentUsername {
+    font-weight: bold;
+    margin: 5px;
+}
+.addCommentBoxButton {
+    margin: 10px;
+}
