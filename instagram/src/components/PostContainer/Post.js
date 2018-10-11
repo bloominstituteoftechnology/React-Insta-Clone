@@ -30,11 +30,14 @@ console.log("increase");
                  <img src={this.state.post.thumbnailUrl} alt="User thumbNail"></img>
                 <h3>{this.state.post.username}</h3>
             </div>
+          
             <img src={this.state.post.imageUrl} alt="Posting Image" onClick={this.increaseLikes}></img>
+          
             <div className='emoji'>
-             <i  className="far fa-heart" onClick={this.increaseLikes}></i>
-             <i className="far fa-comment"></i>
+                <i  className="far fa-heart" onClick={this.increaseLikes}></i>
+                <i className="far fa-comment"></i>
             </div>
+          
             <p onClick={this.increaseLikes}>{this.state.likes} likes</p>
 
             <CommentSection  comments={this.state.post.comments}/>

@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import PropTypes from 'prop-types';
 
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
+import PostPage from './components/PostPage/PostPage'
+import Authenticate from './components/Authentication/Authenticate';
+import Login from './components/Login/Login';
 
 class App extends Component {
   constructor() {
@@ -12,29 +12,14 @@ class App extends Component {
     // responsible for setting up the component's initial state - with available data
     super();
     this.state = {
-      posts: [],
-      search : '',
-      // newComment : [],
+      username: ''
+    
     };
   }
 
-  onInputChange = e => {
-    e.preventDefault();
-    this.setState({[e.target.name]: e.target.value})
-  }
-
-//   onCommentChange = e => {
-//     e.preventDefault();
-//     this.setState({newComment[{e.target.index}] : e.target.value})
-//   }
-
-//   addNewComment = e => {
-//     e.preventDefault();
-//     // this.setState({: e.target.value})
-// console.log(e.target.value);
-//   }
   componentDidMount() {
-    this.setState( {posts: dummyData} );
+    const user = localStorage.getItem('user');
+    this.setState({ username: user })
   }
 
   render() {
@@ -42,21 +27,17 @@ class App extends Component {
 
     return (
       <div className="App">
-          <SearchBar search={this.state.search} 
-                onInputChange={this.onInputChange}/>
-          <PostContainer posts={this.state.posts} search={this.state.search}
-          newComment={this.state.newComment}  onCommentChange={this.onCommentChange}
-          addNewComment={this.addNewComment}/>
 
+      <ShowCorrectComponent username={this.state.username} />
+                
       </div>
     );
   }
 }
+  const ShowCorrectComponent = Authenticate(PostPage)(Login);
 
-PostContainer.propTypes = {
-  username: PropTypes.string,
-    thumbnailUrl:PropTypes.string,
- };
+
+
 
 
 export default App;
