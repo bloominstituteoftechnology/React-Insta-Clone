@@ -1,24 +1,30 @@
 import React from 'react';
-import PostsPage from '../PostContainer/PostsPage';
-import Login
+import App from '../../App'
+import LoginPage from '../Login/LoginPage';
 
 
-const Authenticate = PassedComponent => {
-    class /* ??? */ extends React.Component{
-        constructor(){
+const Authenticate = App => {
+   return class extends React.Component{
+        constructor(props){
         super();
+        this.state = {
+            loggedIn: false
+         };
+        }
+        componentDidMount(){
+            if(!localStorage.getItem('user')) {
+                this.setState({ loggedIn: false});
+            } else {
+                this.setState({ loggedIn: true });
+            }
         }
     
         render(){
-            return(
-                <div className="HOC">
-                <PassedComponent />
-                </div>
-            )
+          if (this.state.loggedIn) return <App />;
+          return <LoginPage />
         }
-
   }
-
 }
-const Loggedin = Authenticate()
+
+
 export default Authenticate;
