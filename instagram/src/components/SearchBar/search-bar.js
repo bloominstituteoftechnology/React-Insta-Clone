@@ -6,6 +6,7 @@ import heart from '../../images/Instagram-Heart.png';
 import person from '../../images/Instagram-Person.png';
 import line from'../../images/line.png';
 import styled from 'styled-components';
+import { Alert } from 'reactstrap';
 
 const Header = styled.header`
     display: flex;
@@ -15,7 +16,7 @@ const Header = styled.header`
     margin: 20px;
 `;
 
-const logoheader = styled.logoheader`
+const Logoheader = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -27,32 +28,58 @@ const Img = styled.img`
     margin: 0px;
 
     ${props => (props.type === 'instaLogo' ? `height: 40px;` : null)}
+    ${props => (props.type === 'line' ?
+    `
+    width: 20px;
+    height: 45px;
+    margin: 0px 10px;
+    `: null)}
 
+    ${props => (props.type === 'textLogo' ? `width: 125px;` : null)}   
+
+    ${props => (props.type === 'compass' ? `
+    height: 35px;
+    margin: 0px 5px;
+` : null)} 
+    ${props => (props.type === 'heart' ? `
+    height: 35px;
+    margin: 0px 5px;
+    ` : null)} 
+
+    ${props => (props.type === 'person' ? `
+    height: 35px;
+    margin: 0px 5px;
+    ` : null)} 
+    
 
 `;
+const Input = styled.input`
+    padding: 5px 10px;
+    text-align: center;
 
-const Logoimage = styled.Logoimage`
+`
 
+const Logoimage = styled.div`
+ width: 200px;
 
+    
 `
  const SearchBar = (props) => {
     return (
-    <header className = 'searchBarContainer'>
-        <logoheader className  = 'leftContent'>
-            <img type='instaLogo' src={insta_logo} alt = 'logo' />
-            <img className = 'line' src ={line} alt = 'line' />
-            <img className = 'textLogo' src={instagramTextLogo} alt = 'text logo'/>
-        </logoheader>
+    <Header className = 'searchBarContainer'>
+        <Logoheader className  = 'leftContent'>
+            <Img type='instaLogo' src={insta_logo} alt = 'logo' />
+            <Img type = 'line' src ={line} alt = 'line' />
+            <Img type = 'textLogo' src={instagramTextLogo} alt = 'text logo'/>
+        </Logoheader>
          <form className = 'searchBarFunction'>
-           
-            <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
-            
-        </form>
-         <logoimage className ='rightContent'>
-            <img className ='compass' src={compass} alt ='compass' />
-            <img className = 'heart' src = {heart} alt ='heart'/>
-            <img className ='person' src ={person} alt = 'person'/>
-        </logoimage>
-    </header>
+           <Input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
+         </form>
+         <Logoimage  >
+            <Img type ='compass' src={compass} alt ='compass' />
+            <Img type = 'heart' src = {heart} alt ='heart'/>
+            <Img type ='person' src ={person} alt = 'person'/>
+        </Logoimage>
+    </Header>
     )}
  export default SearchBar;

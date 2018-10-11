@@ -19,35 +19,35 @@
   padding: 20px;
 } */
 
-.line {
+/* .line {
   padding: 0px 20px;
   margin: 0px;
   width: 10px;
   height: 45px
-}
+} */
 
-.instaLogo{
+/* .instaLogo{
   height: 40px;
- }
+ } */
 
- .textLogo {
+ /* .textLogo {
    width: 125px;
- }
+ } */
 
-.searchBar {
+ /* .searchBar {
   padding: 10px;
-}
+} */
 input {
   text-align: center;
-}
+} */
 
- .compass {
+ /* .compass {
   width:25px;
   height: 25px;
   padding: 15px;
- }
+ } */
 
- .heart{
+ /* .heart{
    width:25px;
    height: 25px;
    padding: 15px;
@@ -57,7 +57,7 @@ input {
   width:25px;
    height: 25px;
    padding: 15px;
- }
+ } */
 
  .loginInput {
    display: flex;
