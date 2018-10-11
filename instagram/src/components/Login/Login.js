@@ -27,10 +27,8 @@ class Login extends React.Component {
     };
     
     handleLoginSubmit = event => {
-        const user = this.state.username;
-        const pass = this.state.password;
-        localStorage.setItem('user', user);
-        localStorage.setItem('password', pass);//I feel like we would never do this 
+        localStorage.setItem('user', this.state.username);
+        localStorage.setItem('password', this.state.password);//I feel like we would never do this 
     };
     render() { 
         return ( 

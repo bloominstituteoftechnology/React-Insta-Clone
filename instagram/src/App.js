@@ -16,17 +16,7 @@ class App extends Component {
     // set a username on local storage
     // force update the page
   }
-  // componentDidMount() {
-  //   this.setState({ posts: dummyData });
-  // }
-  // searchPostsHandler = e => {
-  //   const posts = this.state.posts.filter(p => {
-  //     if (p.username.includes(e.target.value)) {
-  //       return p;
-  //     }
-  //   });
-  //   this.setState({ filteredPosts: posts });
-  // };
+
   render() {
     return (
       <div className="App">
