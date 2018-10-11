@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
-import './SearchBar.css';
+// import './SearchBar.css';
 import {
     
     Navbar,
     
   } from 'reactstrap';
-import dummyData from '../dummy-data';
+import styled from 'styled-components';
 
+const Title = styled.h1 `
+    font-size: 20px;
+    font-style: italic;
+    border-left: 2px solid lightgray;
+    padding-left: 20px;
+`
+const Icons = styled.div`
+        
+`
 class SearchBar extends Component {
     constructor(props) {
         super(props);
@@ -56,7 +65,7 @@ class SearchBar extends Component {
         <Navbar>
 
             <i class="fab fa-instagram fa-2x"></i>
-            <h1>Instagram</h1>
+            <Title>Instagram</Title>
             <form>
                 <textarea 
                 placeholder="&#x1F50D; Search"
@@ -70,9 +79,11 @@ class SearchBar extends Component {
                     return <dummyData username={user} key = {user.id} />
                 })}
             </li>  */}
-            <i class="far fa-compass fa-2x lt"></i>
-            <i class="far fa-heart fa-2x lt"></i>
-            <i onClick={this.handleLogOut} class="far fa-user fa-2x lt"></i>
+            <Icons>
+            <i class="far fa-compass fa-x"></i>
+            <i class="far fa-heart fa-x"></i>
+            <i onClick={this.handleLogOut} class="far fa-user fa-x"></i>
+            </Icons>
         </Navbar>
 
     )
