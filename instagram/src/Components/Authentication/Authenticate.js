@@ -6,13 +6,18 @@ const Authenticate = (App, Login) => {
         constructor(props) {
             super(props);
             this.state = {
-                loggedIn: localStorage.getItem('loggedIn'),
-                username: localStorage.getItem('username'),
+                loggedIn: false,
+                username: '',
             };
 
             this.username = this.state.username;
         }
-
+        componentDidMount() {
+            this.setState( {
+                loggedIn: localStorage.getItem('loggedIn'),
+                username: localStorage.getItem('username'),
+            });
+        }
         updateLocal() {
             localStorage.setItem('loggedIn', this.state.loggedIn);
             localStorage.setItem('username', this.state.username)
