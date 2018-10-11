@@ -8,7 +8,8 @@ const CommentInput = (props) => {
         type='text'
         className='comment-input'
         value={props.value}
-        onChange={props.onChange}
+        required
+        onChange={props.handleChange}
       />
     </form>
   )

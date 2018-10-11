@@ -22,7 +22,6 @@
   display: flex;
   justify-content: space-between;
   width: 55px;
-  padding: 1%;
 }
 
 .heart-icon {
@@ -57,5 +56,6 @@
   /* border-radius: 9px; */
 }
 
-input:focus {
+.comment {
+  margin: 4px 0;
 }

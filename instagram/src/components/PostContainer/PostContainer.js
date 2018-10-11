@@ -8,7 +8,7 @@ class PostContainer extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      likes: props.posts.likes
+      likes: props.post.likes
     }
   }
 
@@ -27,49 +27,34 @@ class PostContainer extends Component {
   }
 
   render () {
+    const { post, index } = this.props
     return (
       <div className='Post-Container'>
-        <Card key={this.props.posts.username + this.props.index}>
+        <Card key={post.username + index}>
           <div className='top-container'>
             <img
-              src={this.props.posts.thumbnailUrl}
+              src={post.thumbnailUrl}
               alt='profile-pic'
               className='rounded-circle'
               id='thumbnail'
             />
-            <span className='username'>
-              <strong>{this.props.posts.username}</strong>
-            </span>
+            <strong className='username'>{post.username}</strong>
           </div>
           <img
             width='100%'
-            src={this.props.posts.imageUrl}
+            src={post.imageUrl}
             alt='Card cap'
             className='img-fluid'
           />
-          <div className='post-cta'>
-            <div className='icons'>
-              <div className='heart-icon'>
-                <i
-                  className='far fa-heart fa-lg'
-                  onClick={(e) => {
-                    this.handleLikes(e, this.index)
-                    e.target.classList.toggle('heart-red')
-                  }}
-                />
-              </div>
-              <div className='comment-icon'>
-                <i className='far fa-comment fa-lg' />
-              </div>
-            </div>
-
-            <span>
-              <strong>{this.state.likes} likes</strong>
-            </span>
+          <div>
             <CommentSection
-              comments={this.props.posts.comments}
-              keyId={this.props.posts.imageUrl}
-              timeStamp={this.props.posts.timestamp}
+              handleLikes={this.handleLikes}
+              likes={this.state.likes}
+              comments={post.comments}
+              keyId={post.imageUrl}
+              timeStamp={post.timestamp}
+              commentInput={this.props.commentInput}
+              handleChange={this.props.handleChange}
             />
           </div>
         </Card>

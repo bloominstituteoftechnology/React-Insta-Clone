@@ -35,9 +35,11 @@ class TheSearchBar extends Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <input
+              onChange={this.props.handleChange}
               className='form-control mr-sm-2'
               type='search'
               placeholder='Search'
+              name='search'
               aria-label='Search'
             />
             <Nav className='ml-auto' navbar>
