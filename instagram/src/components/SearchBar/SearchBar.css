@@ -1,0 +1,71 @@
+.Fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fff;
+    z-index: 1;
+  }
+  
+  .Search-bar-container {
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .Search-bar-container header {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .Search-bar-container header .icon {
+    filter: invert(20%);
+  }
+  
+  .Search-bar-container header .divider {
+    border-left: 1px solid #aaa;
+    height: 30px;
+    margin-left: 3%;
+  }
+  
+  .Search-bar-container header img {
+    width: 70%;
+    height: auto;
+  }
+  
+  .Search-bar-container input {
+    width: 26%;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    padding: 5px;
+    text-align: center;
+    background-color: #fafafa;
+    font-size: 1.4rem;
+  }
+  
+  .Search-bar-container input::placeholder {
+    font-family: 'FontAwesome', sans-serif;
+    color: #b6b6b6;
+  }
+  
+  .Search-bar-container input:focus {
+    outline: none;
+  }
+  
+  .Search-bar-container .Menu {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .Search-bar-container .Menu .icon {
+    filter: invert(40%);
+  }
