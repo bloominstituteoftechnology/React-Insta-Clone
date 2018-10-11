@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 //import './Login.css';
 
 const LoginContainer = styled.div`
@@ -138,6 +139,31 @@ class Login extends React.Component{
             </LoginContainer>
         )
     }
+}
+
+DisplayInfo.propTypes = {
+    isDisplayed: PropTypes.bool
+}
+
+Login.propTypes = {
+    posts: PropTypes.arrayOf(PropTypes.shape({
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        imageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string,
+        comments: PropTypes.arrayOf(PropTypes.shape({
+            username: PropTypes.string,
+            text: PropTypes.string
+        }))
+    })).isRequired,
+    displayInfo: PropTypes.bool,
+    addLike: PropTypes.func.isRequired,
+    addNewComment: PropTypes.func.isRequired,
+    searchPosts: PropTypes.func.isRequired,
+    deleteComment: PropTypes.func.isRequired,
+    setUser: PropTypes.func.isRequired,
+    loginUser: PropTypes.func.isRequired
 }
 
 export default Login;

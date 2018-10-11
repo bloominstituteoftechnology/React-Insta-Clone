@@ -1,6 +1,7 @@
 import React from 'react';
 import Login from '../components/Login/Login.js';
 import PostsPage from '../components/PostContainer/PostsPage.js';
+import PropTypes from 'prop-types'
 
 const authenticate = SignIn => Posts =>{
     return (
@@ -42,5 +43,25 @@ const authenticate = SignIn => Posts =>{
 }
 
 const Authenticate = authenticate(Login)(PostsPage);
+
+Authenticate.propTypes = {
+    posts: PropTypes.arrayOf(PropTypes.shape({
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        imageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string,
+        comments: PropTypes.arrayOf(PropTypes.shape({
+            username: PropTypes.string,
+            text: PropTypes.string
+        }))
+    })),
+    displayInfo: PropTypes.bool,
+    addLike: PropTypes.func.isRequired,
+    addNewComment: PropTypes.func.isRequired,
+    searchPosts: PropTypes.func.isRequired,
+    deleteComment: PropTypes.func.isRequired,
+    setUser: PropTypes.func.isRequired
+}
 
 export default Authenticate;

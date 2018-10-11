@@ -5,7 +5,7 @@ import Authenticate from './authenticate/Authenticate.js';
 import styled from 'styled-components';
 //import './App.css';
 
-const Div = styled.div`
+const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,10 +108,10 @@ class App extends Component {
 
   render() {
     return (
-      <Div>
+      <AppContainer>
         <SearchBar searchPosts={this.searchPosts}/>
         <Authenticate posts={this.state.posts} displayInfo={this.state.displayLoginWarning} addNewComment={this.addNewComment} addLike={this.addLike} searchPosts={this.searchPosts} deleteComment={this.deleteComment} setUser={this.setUser}/>
-      </Div>
+      </AppContainer>
     );
   }
 }

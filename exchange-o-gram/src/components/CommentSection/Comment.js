@@ -1,6 +1,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './CommentSection.css';
+import styled from 'styled-components';
+//import './CommentSection.css';
+
+const CommentContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-bottom: 8px;
+
+    p{
+        width: 93%;
+        overflow-wrap: break-word;
+
+        strong{
+            font-weight: bold;
+        }
+    }
+`;
+
+const CommentMenu = styled.div`
+    position: relative;
+    padding: 0 5px;
+    background-color: lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+`;
+
+const DeleteComment = styled.div`
+    position: absolute;
+    top: 0px;
+    left: -85px;
+    padding: 0px 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+
+    ${props => props.displayDeleteComment ? null : `display: none;`}
+`;
 
 class Comment extends React.Component{
     constructor(props){
@@ -30,12 +70,12 @@ class Comment extends React.Component{
     }
     render(){
         return(
-            <div className="comment">
+            <CommentContainer>
                 <p><strong>{this.props.comment.username}</strong> {this.props.comment.text}</p>
-                <div className="comment-options" onClick={this.askForDelete}>···
-                    {this.state.displayDeleteComment ? <div className="delete-comment" onClick={this.deleteComment}>Delete?</div> : null}
-                </div>
-            </div>
+                <CommentMenu onClick={this.askForDelete}>···
+                    <DeleteComment displayDeleteComment={this.state.displayDeleteComment}onClick={this.deleteComment}>Delete?</DeleteComment>
+                </CommentMenu>
+            </CommentContainer>
         )
     }
 }
