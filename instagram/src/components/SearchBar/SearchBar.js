@@ -7,6 +7,7 @@ import Profile from '../../assets/002-profile.png';
 import './SearchBar.css';
 
 const SearchBar = props => {
+  console.log(props)
   return (
     <div className='search-container'>
       <div className='logo-left'>

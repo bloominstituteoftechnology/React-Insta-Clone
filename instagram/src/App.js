@@ -1,64 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from './dummy-data';
-import PostsContainer from './components/PostsContainer/PostsContainer';
-import SearchBar from './components/SearchBar/SearchBar';
+import PostsPage from './components/PostsContainer/PostsPage';
+import Authenticate from './components/Authentication/Authenticate';
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      posts: dummyData,
-
-    };
+    this.state = {};
   }
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({ posts: dummyData });
-    }, 500);
-  }
-  increment = prevState => {
-    this.setState(prevState => ({ likes: prevState.likes + 1 }));
-  };
-
-  handleInput = event => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
-
-  filter = event => {
-    this.handleInput(event);
-    this.setState(prevState => {
-      const filteredPosts = prevState.posts.filter(post => {
-        return post.username.includes(prevState.filterTarget);
-      });
-      return { filteredPosts };
-    });
-  };
-
-
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostsContainer posts={this.state.posts} />
+        <PostsPage />
       </div>
     );
   }
 }
 
-// render() {
-//   return (
-//     <div className="App">
-//       <SPostsPage />
-//     </div>
-//   );
-// }
-// }
-
-// const authenticateApp = Authenticate(App)
-
-export default App;
-
-// export default Authenticate(App);
+export default Authenticate(App);

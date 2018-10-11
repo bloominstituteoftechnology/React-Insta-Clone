@@ -7,30 +7,34 @@
 .comment-wrapper form{
   background-color: white;
   text-align: left;
-  padding: 10px 0;
-  width: 100%;
+  padding: 10px 1rem;
+  width: calc(100% - 2rem);
   border: none;
 }
 
 .comment-wrapper form input{
   background-color: white;
   text-align: left;
-  padding: 0 5px 0 0;
-  width: 98%;
+  padding: 10px 0 0 0;
+  width: 100%;
   border: none;
   border-top: 0.5px solid lightgray;
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px;
 }
 
 .comment-text {
-  padding-left: 10px;
+  background-color: white;
+  padding-left: 1rem;
 }
 
-.comment-text .user{
+.comment-text .user {
   font-weight: bold;
+  font-size: 13px;
+}
+
+.comment-text .comment {
+  font-size: 13px;
 }
 
 

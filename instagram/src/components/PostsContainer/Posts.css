@@ -2,7 +2,7 @@
   background-color: #FAFAFA;
   display: flex;
   flex-direction: column;
-  padding: 0px 5%;
+  padding: 20px 5%;
   width: 90%;
 }
 
@@ -28,13 +28,35 @@
   padding: 10px 0;
 }
 
-.post-header img{
+.post-thumb {
   border: .1px solid white;
   border-radius: 50%;
-  margin-right: 20px;
+  margin: 0 20px;
 }
 
 .post-image-wrapper img {
   width: 100%;
   height: 100%;
+}
+
+.like-section-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  background-color: white;
+  padding-left: 1rem;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.like-section-wrapper .insta-heart {
+  height: 25px;
+  opacity: .5;
+  padding: 10px;
+}
+
+.like-section-wrapper .speech-bubbles {
+  height: 25px;
+  margin: 0;
+  padding: 10px;
 }

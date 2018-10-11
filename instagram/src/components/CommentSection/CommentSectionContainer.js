@@ -8,17 +8,33 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.comments,
-      user: '',
       comment: '',
     }
   }
 
   componentDidMount() {
-    setTimeout(() => {this.setState({comments: this.state.comments})}, 800)
+    const id = this.props.postId;
+    if (localStorage.getItem(id)) {
+      this.setState({
+        comments: JSON.parse(localStorage.getItem(this.props.postId))
+      })
+    } else {
+      this.setComments();
+    }
   }
 
+  componenetWillUnmount() {
+    this.setComments();
+  }
 
-  commentHandler = event => { // commentHandler using comment instead of text
+  setComments = () => {
+    localStorage.setItem(
+      this.props.postId,
+      JSON.stringify(this.state.comments)
+    );
+  };
+
+  commentHandler = event => { 
     this.setState({ comment: event.target.value });
   };
 
@@ -27,7 +43,10 @@ class CommentSection extends React.Component {
     const NewComment = {text: this.state.comment, username: 'Gemma FP'};
     const comments = this.state.comments.slice();
     comments.push(NewComment);
-    this.setState({ comments, comment: '' })
+    this.setState({ comments, comment: '' });
+    setTimeout(() => {
+      this.setComments();
+    }, 500)
   }
 
   render() {
@@ -35,16 +54,14 @@ class CommentSection extends React.Component {
       <div className='comment-wrapper'>
         {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
         <CommentInput 
+        comment={this.state.comment}
         submitHandler={this.commentSubmit}
         commentHandler={this.commentHandler} 
-        comment={this.state.comment}
         />
       </div>
     );
   }
 }
-
-
 
 CommentSection.propTypes = {
   comments: PropTypes.arrayOf(
