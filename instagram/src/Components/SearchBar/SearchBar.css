@@ -1,0 +1,27 @@
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Billabong';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 2.5rem;
+    src: local('Billabong'), url('Billabong.woff') format('woff');
+    max-width: 800px;
+    width: 65%;
+
+
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+
+}
+.logoutButton {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 200px;
+
+}
