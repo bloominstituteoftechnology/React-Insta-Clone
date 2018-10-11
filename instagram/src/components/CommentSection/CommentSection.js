@@ -1,6 +1,17 @@
 import React from 'react';
-import './CommentSection.css';
 import PropTypes from 'prop-types';
+import { CommentActions } from '../Styled/Styled'
+import Styled from 'styled-components';
+
+const WrapperDiv = Styled.div`
+display: flex;
+margin-top:9px;
+margin-left:15px;
+font-size:1.1rem;
+`
+const UserName = Styled.span`
+    font-weight: bold;
+`
 
 class CommentSection extends React.Component{
     constructor(props){
@@ -18,18 +29,16 @@ class CommentSection extends React.Component{
         }
 
     }
-    
     render(){
         return (
             <div>
-                <div className='comment-container comment-container-text'>
+                <WrapperDiv>
                     <p>
-                        <span className='comment-username'>{this.props.data.username} </span>
-                        {this.props.data.text} 
-                        <span className='comment-more'>{this.more}</span>
-                        <span className='delete-comment'>{this.delete}</span>
+                        <UserName>{this.props.data.username} </UserName>{this.props.data.text}
+                        <CommentActions>{this.more}</CommentActions>
+                        <CommentActions>{this.delete}</CommentActions>
                     </p>
-                </div>
+                </WrapperDiv>
             </div>
         )
     }

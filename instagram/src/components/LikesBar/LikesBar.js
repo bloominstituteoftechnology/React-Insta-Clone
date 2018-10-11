@@ -1,16 +1,27 @@
 import React from 'react';
 import './LikesBar.css';
 import PropTypes from 'prop-types';
+import {Image} from '../Styled/Styled';
+import Styled from 'styled-components';
+
+const WrapperDiv = Styled.div`
+    margin-top:15px;
+    margin-left:15px;
+`
+const LikeBarLikes = Styled.p`
+    font-size:1.1rem;
+    margin-top:5px;
+    margin-left:15px;
+`
 
 const LikesBar = props =>{
-    console.log('props....',props)
     return(
         <div>
-            <div className='likes-bar-images'>
-                <img alt='like' onClick={props.handleLikeClick} className='likes-bar-heart' src={require('../../static/img/heart.png')}></img>
-                <img alt='comment' className='likes-bar-comment' src={require('../../static/img/comment.png')}></img>
-            </div>
-            <div><p className='likes-bar-likes'>{props.likes} likes</p></div>
+            <WrapperDiv>
+                <Image alt='like' onClick={props.handleLikeClick} src={require('../../static/img/heart.png')}></Image>
+                <Image alt='comment' marginL20 src={require('../../static/img/comment.png')}></Image>
+            </WrapperDiv>
+            <div><LikeBarLikes>{props.likes} likes</LikeBarLikes></div>
         </div>
     )
 }

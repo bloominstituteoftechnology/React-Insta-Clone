@@ -1,11 +1,16 @@
 import React from 'react';
 import './SearchBar.css';
+import Styled from 'styled-components'
 
+const Input = Styled.input`
+`
 
 const SearchBar = props =>{
     return(
         <div>
-            <form onSubmit={props.handleSearchSubmit}><input placeholder='Search' onChange={props.handleSearchChange} value={props.searchText}  type='text'className='search-bar-input'></input></form>
+            <form onSubmit={props.handleSearchSubmit}>
+                <Input placeholder='Search' onChange={props.handleSearchChange} value={props.searchText}  type='text'></Input>
+            </form>
         </div>   
     )
 }

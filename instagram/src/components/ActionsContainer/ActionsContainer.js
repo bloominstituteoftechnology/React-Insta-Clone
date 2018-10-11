@@ -1,12 +1,12 @@
 import React from 'react';
-import './ActionsContainer.css';
+import {Image} from '../Styled/Styled'
 
 const ActionsContainer = props => {
     return (
         <div>
-            <img alt='circle' className='action-icons' src={require('../../static/img/circle.png')}></img>
-            <img alt='like' className='action-icons action-heart' src={require('../../static/img/heart.png')}></img>
-            <img alt='person' onClick={props.logout} className='action-icons action-person' src={require('../../static/img/person.png')}></img>
+            <Image alt='circle' src={require('../../static/img/circle.png')}></Image>
+            <Image alt='like' marginL30 src={require('../../static/img/heart.png')}></Image>
+            <Image alt='person' marginL30 onClick={props.logout} src={require('../../static/img/person.png')}></Image>
         </div>
     )
 }
