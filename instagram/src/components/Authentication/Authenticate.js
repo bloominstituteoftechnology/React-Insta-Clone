@@ -9,9 +9,9 @@ const Authenticate = App =>
       };
     }
     componentDidMount() {
-      !localStorage.getItem("username")
-        ? this.setState({ loggedIn: false })
-        : this.setState({ loggedIn: true });
+      localStorage.getItem("username")
+        ? this.setState({ loggedIn: true })
+        : this.setState({ loggedIn: false });
     }
 
     render() {

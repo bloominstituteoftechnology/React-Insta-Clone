@@ -1,7 +1,28 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import moment from "moment";
-import "./CommentSection.css";
+import UserName from "../PostContainer/Post.js";
+import styled, { css } from "styled-components";
+
+const CommentContainer = styled.div`
+  font-weight: 300;
+  font-size: 14px;
+  padding: 0 20px;
+  form {
+    max-width: 600px;
+  }
+`;
+
+const Timestamp = styled.p`
+  padding: 0 20px;
+`;
+
+const CommentInput = styled.input`
+  width: 560px;
+  border: none;
+  height: 50px;
+  padding: 0 20px;
+`;
 
 class CommentSection extends Component {
   constructor(props) {
@@ -9,12 +30,12 @@ class CommentSection extends Component {
     this.state = {
       comments: props.comments,
       newComment: "",
-      timestamp: props.timestamp,
+      timestamp: props.timestamp
     };
   }
   handleSubmit = event => {
     event.preventDefault();
-    
+
     this.setState({
       comments: [
         ...this.state.comments,
@@ -22,7 +43,7 @@ class CommentSection extends Component {
           username: localStorage.getItem("username"),
           text: this.state.newComment
         }
-      ],
+      ]
     });
   };
   handleChange = event => this.setState({ newComment: event.target.value });
@@ -30,23 +51,22 @@ class CommentSection extends Component {
     return (
       <div>
         {this.state.comments.map((comment, index) => (
-          <div key={index} className="comment">
+          <CommentContainer key={index}>
             <p>
-              <span className="username">{comment.username}</span>
+              <UserName>{comment.username}</UserName>
               {comment.text}
             </p>
-          </div>
+          </CommentContainer>
         ))}
-        <p className="timestamp">
+        <Timestamp>
           {moment(this.state.timestamp, "MMMM Do YYYY, h:mm:ss a").fromNow()}
-        </p>
+        </Timestamp>
         <form onSubmit={this.handleSubmit}>
-          <input
+          <CommentInput
             type="text"
             name="comment"
             placeholder="Add a comment..."
             onChange={this.handleChange}
-            className={"comment-input"}
           />
         </form>
       </div>

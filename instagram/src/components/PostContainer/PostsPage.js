@@ -1,8 +1,33 @@
 import React, { Component } from "react";
-import "../../App.css";
 import dummyData from "./dummy-data";
 import SearchBar from "../SearchBar/SearchBar";
 import PostContainer from "./PostContainer";
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const MainContent = styled.div`
+  max-width: 600px;
+  margin: 0 auto;
+`;
+
+const LogoutButton = styled.button`
+  width: 200px;
+  height: 50px;
+  background: #fff;
+  cursor: pointer;
+  color: #666666;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 110px;
+  right: 400px;
+`;
 
 class PostsPage extends Component {
   constructor() {
@@ -30,18 +55,28 @@ class PostsPage extends Component {
     localStorage.removeItem("username");
     window.location.reload();
   };
-  showLogout = () => this.setState({logoutVisible: !this.state.logoutVisible});
+  showLogout = () =>
+    this.setState({ logoutVisible: !this.state.logoutVisible });
   render() {
     return (
-      <div className="container posts">
+      <Container>
         <SearchBar
           handleSearch={this.handleSearch}
           showLogout={this.showLogout}
         />
-        <button onClick={this.handleLogOut} className={"logout-button"} style={this.state.logoutVisible ? {display: "block"} : {display: "none"}}>
+
+        <LogoutButton
+          onClick={this.handleLogOut}
+          className={"logout-button"}
+          style={
+            this.state.logoutVisible
+              ? { display: "block" }
+              : { display: "none" }
+          }
+        >
           Log Out
-        </button>
-        <div className="main-content">
+        </LogoutButton>
+        <MainContent>
           <PostContainer
             data={
               !this.state.searchResults.length
@@ -49,8 +84,8 @@ class PostsPage extends Component {
                 : this.state.searchResults
             }
           />
-        </div>
-      </div>
+        </MainContent>
+      </Container>
     );
   }
 }

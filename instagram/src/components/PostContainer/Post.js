@@ -3,6 +3,53 @@ import CommentSection from "../CommentSection/CommentSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
+import styled, { css } from "styled-components";
+
+
+const StyledPost = styled.div`
+  margin: 60px 0;
+  border-radius: 3px;
+  border: 1px solid #e6e6e6;
+`;
+const MainImg = styled.img`
+  height: 100%;
+  width: 100%;
+  margin: 10px 0;
+`;
+const Profile = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 10px;
+`;
+
+const ProfilePicture = styled.img`
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+`;
+
+export const UserName = styled.span`
+  font-weight: 500;
+  font-size: 12px;
+  margin-right: 5px;
+  ${props =>
+    props.bold &&
+    css`
+      font-weight: 600;
+    `};
+`;
+
+const Icons = styled.div`
+  padding: 0 20px;
+  svg {
+    margin-right: 15px;
+  }
+`;
+
+const Likes = styled.p`
+  padding: 0 20px;
+`;
 
 class Post extends Component {
   constructor(props) {
@@ -18,21 +65,20 @@ class Post extends Component {
     this.setState({ likes: this.state.likes - 1, liked: !this.state.liked });
   render() {
     return (
-      <div className="post">
-        <div className="profile">
-          <img
+      <StyledPost>
+        <Profile>
+          <ProfilePicture
             src={this.props.post.thumbnailUrl}
             alt={this.props.post.username}
             className="profile-picture"
           />
-          <span className="username">{this.props.post.username}</span>
-        </div>
-        <img
+        <UserName bold>{this.props.post.username}</UserName>
+        </Profile>
+        <MainImg
           src={this.props.post.imageUrl}
           alt={this.props.post.comments[0].text}
-          className="main-img"
         />
-        <div className="icons">
+        <Icons>
           <FontAwesomeIcon
             icon={faHeart}
             style={{ height: "25px", width: "25px", cursor: "pointer" }}
@@ -43,13 +89,13 @@ class Post extends Component {
             icon={faComment}
             style={{ height: "25px", width: "25px" }}
           />
-        </div>
-        <p className="likes">{this.state.likes} likes</p>
+        </Icons>
+        <Likes>{this.state.likes} likes</Likes>
         <CommentSection
           comments={this.props.post.comments}
           timestamp={this.props.post.timestamp}
         />
-      </div>
+      </StyledPost>
     );
   }
 }

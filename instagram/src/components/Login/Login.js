@@ -1,5 +1,41 @@
 import React, { Component } from "react";
-import "./Login.css";
+import styled from "styled-components";
+
+const ContainerLogin = styled.div`
+  margin: 0 auto;
+  height: 200px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: 30px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      width: 200px;
+      height: 50px;
+      background: #fff;
+      cursor: pointer;
+      color: #666666;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    input {
+      width: 195px;
+      height: 50px;
+      border-radius: 5px;
+      padding-left: 5px;
+      margin: 5px 0;
+    }
+  }
+`;
 
 class Login extends Component {
   constructor(props) {
@@ -18,9 +54,9 @@ class Login extends Component {
   };
   render() {
     return (
-      <div className="container authenticate">
+      <ContainerLogin>
         <h2>Log in</h2>
-        <form className="authenticate-form">
+        <form>
           <input
             type="text"
             name="username"
@@ -43,7 +79,7 @@ class Login extends Component {
             Log In
           </button>
         </form>
-      </div>
+      </ContainerLogin>
     );
   }
 }
