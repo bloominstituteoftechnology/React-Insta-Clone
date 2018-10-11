@@ -1,47 +1,9 @@
 import React from 'react'
 import './PostContainer.css'
 import CommentSection from '../CommentSection/CommentSection'
+import PropType from 'prop-types';
+import { PostHeader, PostFooter, PostImg} from './PostParts';
 
-const PostHeader = (props) => {
-  return (
-    <div className="post-header">
-      <div className="thumbnail">
-        <img 
-          src={props.thumbnailUrl} 
-          alt={props.username}
-        />
-      </div>
-      <div className="name">
-        {props.username}
-      </div> 
-    </div>
-  )
-}
-
-const PostImg = (props) => {
-  return (
-    <div className="post-img">
-      <img 
-        src={props.imgUrl}
-        alt={props.username}
-      />
-    </div>
-  )
-}
-
-const PostFooter = (props) => {
-  return (
-    <div className="post-footer">
-      <div className="buttons">
-        <div className="like-button">like-button</div>
-        <div className="comment-button">comment-button</div>
-      </div>
-      <div className="likes">
-        {props.likes} likes
-      </div>
-    </div>
-  )
-}
 
 class Post extends React.Component {
   constructor(props) {
@@ -70,5 +32,19 @@ class Post extends React.Component {
       </div>
     )
   }
+}
+
+Post.PropType = {
+  postData: PropType.shape({
+    username: PropType.string,
+    likes: PropType.number,
+    timestamp: PropType.string,
+    thumbnailUrl: PropType.string,
+    imageUrl: PropType.string,
+    comments: PropType.arrayOf(PropType.shape({
+      text: PropType.string,
+      username: PropType.string
+    }))
+  })
 }
 export default Post;
