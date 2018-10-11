@@ -75,6 +75,7 @@ class PostPage extends Component {
             <PostContainer
               data={d}
               key={i}
+              index={i}
               id={d.timestamp}
               likePost={this.likePost}
             />

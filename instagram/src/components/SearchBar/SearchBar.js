@@ -1,41 +1,112 @@
 import React from 'react';
-import './SearchBar.css';
+import styled from 'styled-components';
+import Container from '../../Styles/Container';
+
+const Header = styled.header`
+  height: 77px;
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  color: #262626;
+  border-bottom: 1px solid #dbdbdb;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+`;
+
+const LogoHeader = styled.h1`
+  display: flex;
+  align-items: center;
+`;
+
+const Logo = styled.span`
+  margin-right: 1.8rem;
+  display: flex;
+  align-items: center;
+  font-size: 3.1rem;
+`;
+
+const Brand = styled.span`
+  border-left: 1px solid #262626;
+  padding-left: 1.8rem;
+  display: flex;
+  align-items: center;
+`;
+
+const BrandImg = styled.img`
+  width: 105px;
+  height: 39px;
+`;
+
+const InputContainer = styled.form`
+  position: relative;
+`;
+
+const SearchInput = styled.input`
+  padding: 8px 0;
+  width: 215px;
+  height: 28px;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  text-align: center;
+  outline: 0;
+
+  &:focus {
+    text-align: left;
+    padding-left: 2rem;
+    background: #fff;
+  }
+`;
+
+const SearchIcon = styled.label`
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  font-size: 1.4rem;
+  transform: translateY(-25%);
+  color: #262626;
+`;
+
+const SearchBarIcons = styled.div`
+  i {
+    margin-left: 3rem;
+  }
+`;
 
 const SearchBar = ({ filterUsers, updateValue }) => {
   return (
-    <div className="SearchBar">
-      <div className="container">
-        <h1 className="SearchBar-Logo">
-          <span className="Logo">
+    <Header>
+      <Container>
+        <LogoHeader>
+          <Logo>
             <i className="fab fa-instagram" />
-          </span>
-          <span className="Brand">
-            <img src="logo.png" alt="Instagram" />
-          </span>
-        </h1>
-        <div className="SearchBar-Container">
-          <form onSubmit={e => filterUsers(e)}>
-            <input
-              type="text"
-              placeholder="Search"
-              className="SearchBar-Input"
-              id="search"
-              onChange={updateValue}
-            />
-          </form>
-
-          <label htmlFor="search" className="Search-Icon">
+          </Logo>
+          <Brand>
+            <BrandImg src="logo.png" alt="Instagram" />
+          </Brand>
+        </LogoHeader>
+        <InputContainer onSubmit={e => filterUsers(e)}>
+          <SearchInput
+            type="text"
+            placeholder="Search"
+            className="SearchBar-Input"
+            id="search"
+            onChange={updateValue}
+          />
+          <SearchIcon htmlFor="search">
             <i className="fas fa-search" />
-          </label>
-        </div>
+          </SearchIcon>
+        </InputContainer>
 
-        <div className="SearchBar-Icons">
+        <SearchBarIcons>
           <i className="far fa-compass" />
           <i className="far fa-heart" />
           <i className="far fa-user" />
-        </div>
-      </div>
-    </div>
+        </SearchBarIcons>
+      </Container>
+    </Header>
   );
 };
 

@@ -10,6 +10,4 @@ const App = () => (
   </div>
 );
 
-const hocRender = Authenticate(App)(Login);
-
-export default hocRender;
+export default Authenticate(App, Login);

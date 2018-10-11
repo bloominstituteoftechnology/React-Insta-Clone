@@ -1,9 +1,9 @@
 import React from 'react';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
-import './CommentSection.css';
 import CommentInput from './CommentInput';
 import moment from 'moment';
+import styled from 'styled-components';
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -52,23 +52,35 @@ class CommentSection extends React.Component {
   };
 
   render() {
+    const CommentSection = styled.div`
+      padding: 1.5rem;
+    `;
+
+    const TimeStamp = styled.div`
+      border-bottom: 1px solid #ededed;
+      padding-bottom: 1.5rem;
+      color: #8e8e8e;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    `;
+
     return (
-      <div className="CommentSection">
+      <CommentSection>
         {this.state.comments.map((comment, i) => {
           return <Comment comment={comment} key={i} />;
         })}
-        <div className="TimeStamp">
+        <TimeStamp>
           {moment()
             .startOf('day')
             .fromNow()}
-        </div>
+        </TimeStamp>
         <CommentInput
           addNewComment={this.addNewComment}
           commentText={this.commentText}
           updateText={this.updateText}
           id={this.state.id}
         />
-      </div>
+      </CommentSection>
     );
   }
 }

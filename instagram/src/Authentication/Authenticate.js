@@ -1,26 +1,32 @@
 import React from 'react';
 
-const Authenticate = App => Login =>
+const Authenticate = (App, Login) =>
   class extends React.Component {
     constructor() {
       super();
       this.state = {
         loggedIn: false,
-        username: ''
+        username: '',
+        password: ''
       };
     }
 
     componentDidMount() {
       localStorage.setItem('username', 'hardlyreal');
+      localStorage.setItem('password', 'password');
     }
 
-    usernameInput = e => {
-      this.setState({ username: e.target.value });
+    loginInput = e => {
+      this.setState({ [e.target.name]: e.target.value });
     };
 
     validateUser = e => {
-      // e.preventDefault();
-      if (this.state.username === localStorage.getItem('username')) {
+      e.preventDefault();
+      const { username, password } = this.state;
+      if (
+        username === localStorage.getItem('username') &&
+        password === localStorage.getItem('password')
+      ) {
         this.setState({ loggedIn: true });
       }
     };
