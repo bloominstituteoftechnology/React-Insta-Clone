@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import {StyledApp} from './components/Styles/Styles';
 import PostPage from './components/PostContainer/PostPage';
 import Authenticate from './components/Authenticate/Authenticate';
 
@@ -15,12 +16,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <StyledApp>
       
       <PostPage 
       />
 
-      </div>
+      </StyledApp>
     );
   }
 }

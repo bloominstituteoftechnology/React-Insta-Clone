@@ -1,5 +1,6 @@
 import React from 'react';
 import PostHeader from './PostHeader';
+import {IndvPost, StyledImg} from '../IndvPost';
 import CommentSection from '../CommentSection/CommentSection';
 
 import './PostContainer.css';
@@ -7,17 +8,16 @@ import './PostContainer.css';
 const Post = props => {
     return (
 
-        <div className='post-container'>
-        <div className='indv-post'>
+        <div>
+        <IndvPost>
             <PostHeader 
             thumbnailUrl={props.post.thumbnailUrl}
             username={props.post.username}
             />
 
-            <div className='post-image-container'>
-                <img
+            <div>
+                <StyledImg
                 alt='thumbnail'
-                className='post-image'
                 src={props.post.imageUrl}
                 />
             </div>
@@ -27,7 +27,7 @@ const Post = props => {
             likes={props.post.likes}
             comments={props.post.comments}
             />
-        </div>
+        </IndvPost>
             </div>
     )
 }

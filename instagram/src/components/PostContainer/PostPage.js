@@ -9,7 +9,7 @@ constructor(props) {
     super(props);
     this.state={
         posts: [],
-        postFilter: [],
+        postFilter: []
     }
 }
 
