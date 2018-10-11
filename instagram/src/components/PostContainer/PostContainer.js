@@ -1,15 +1,15 @@
 import React from 'react';
 import Post from './Post';
 
-import './PostContainerStyle/PostContainer.css';
+import { StyledPostContainer } from './PostStyle';
 
 const PostContainer = props => {
   return (
-    <div className="post-container">
+    <StyledPostContainer>
       {props.posts.map(p => (
         <Post key={p.imageUrl} post={p} />
       ))}
-    </div>
+    </StyledPostContainer>
   );
 };
 

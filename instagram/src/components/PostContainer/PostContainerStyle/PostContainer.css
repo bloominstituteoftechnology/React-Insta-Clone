@@ -1,21 +1,21 @@
-.post-container {
+/* .post-container {
   padding-left: 100px;
   padding-right: 59px;
   max-width: 800px;
-}
+} */
 
-.post-border {
+/* .post-border {
   border: 1px solid lightgray;
-}
+} */
 
-.post-header {
+/* .post-header {
   max-width: 800px;
   padding-top: 30px;
   padding-bottom: 15px;
   padding-left: 30px;
   display: flex;
   align-items: center;
-}
+} */
 
 .poster {
   display: flex;
@@ -30,10 +30,10 @@
   height: 40px;
 }
 
-.username {
+/* .username {
   font-weight: bold;
   padding-left: 10px;
-}
+} */
 
 .post-image {
   width: 100%;
@@ -83,34 +83,4 @@
   margin-left: 180px;
   height: 40px;
   width: 60%;
-}
-
-/*-----------------Log In Styles-----------------------------*/
-
-/* .login-input {
-  display: flex;
-  justify-content: center;
-  padding-top: 150px;
-} */
-
-/* .login-user,
-.login-password {
-  width: 200px;
-  height: 25px;
-  padding-left: 10px;
-  margin-right: 20px;
-  opacity: 0.5;
-  border: 1px solid #555555;
-}
-
-.login-button {
-  background-color: #555555;
-  color: white;
-  transition-duration: 0.4s;
-} */
-
-.login-button:hover {
-  background-color: white;
-  color: #555555;
-  cursor: pointer;
 }
