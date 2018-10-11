@@ -4,10 +4,6 @@ import './CommentSection.css';
 
 const Comment = (props) => {
 
-    if (!props.comment.length) {
-        console.log('comments are rendering')
-    }
-
     return (
         <div>
             <div className='comments'>
