@@ -22,8 +22,8 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
-      <div className="login-form">
+      <div className='login-form'>
+      <div className='login-border'>
         <h3>Welcome to React Insta Clone</h3>
         <div>Please Login</div>
         <div>
