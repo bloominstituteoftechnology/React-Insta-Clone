@@ -16,7 +16,7 @@ const Post = props => {
           thumbnailUrl={props.post.thumbnailUrl}
         />
       </div>
-      <CommentContainer comments='props.post.comments' />
+      <CommentContainer comments={props.post.comments} />
     </div>
   );
 };
