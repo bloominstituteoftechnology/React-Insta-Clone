@@ -4,6 +4,7 @@ import CommentSection from '../CommentSection/CommentSection';
 import LikePost from './LikePost';
 import PostHeader from './PostHeader';
 import './PostContainer.css'
+import {PostDiv} from '../../Styles';
 
 
 class Post extends React.Component {
@@ -14,12 +15,13 @@ class Post extends React.Component {
         }
     }
     increment = () => {
-        let likes = this.state.likes + 1;
+        let likes = this.state.likes + 1; 
         this.setState({ likes });
     };
     render() {
         return (
-            <div className="post">
+            // <div className="post">
+            <PostDiv>
                 <PostHeader
                     username={this.props.post.username}
                     thumbnail={this.props.post.thumbnailUrl}
@@ -39,7 +41,8 @@ class Post extends React.Component {
                     postId={this.props.post.imageUrl}
                     comments={this.props.post.comments} 
                 />
-            </div>
+            </PostDiv>
+            // </div>
         );
     }
 }
