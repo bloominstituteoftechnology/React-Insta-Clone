@@ -1,8 +1,8 @@
 import React from 'react';
-import LoginPage from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/components/Login/loginpage';
-import SearchBar from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/components/SearchBar/searchbar'
+import LoginPage from '../Login/loginpage';
+import SearchBar from '../SearchBar/searchbar'
 
-import { LoginContainer } from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/styles'
+import { LoginContainer } from '../styles'
 
 // import App from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/App'
 

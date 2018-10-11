@@ -1,5 +1,5 @@
 import React from 'react';
-import { AddComment } from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/styles';
+import { AddComment } from '../styles';
 
 
 

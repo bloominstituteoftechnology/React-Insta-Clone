@@ -1,9 +1,9 @@
 import React from 'react';
-import CommentSection from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/components/CommentSection/commentsection';
-import PostContainer from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/components/PostContainer/postcontainer';
-import SearchBar from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/components/SearchBar/searchbar';
-import dummyData from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/dummy-data';
-import {AppStyles} from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/styles'
+import CommentSection from '../CommentSection/commentsection';
+import PostContainer from '../PostContainer/postcontainer';
+import SearchBar from '../SearchBar/searchbar';
+import dummyData from '../../dummy-data';
+import {AppStyles} from '../styles'
 
 class PostsPage extends React.Component {
     constructor() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { InputStyles, InputHeaders, LoginBox, LoginButton } from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/styles';
+import { InputStyles, InputHeaders, LoginBox, LoginButton } from '../styles';
 
 
 class LoginPage extends Component{

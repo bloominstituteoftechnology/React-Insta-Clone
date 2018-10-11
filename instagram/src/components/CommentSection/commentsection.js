@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CommentInput from './commentinput';
-import { CommentContainer, CommentCombo, FontAwesomes, Commenter, CommentText, Timestamp } from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/styles'
+import { CommentContainer, CommentCombo, FontAwesomes, Commenter, CommentText, Timestamp } from '../styles'
 
 class CommentSection extends Component {
     constructor(props) {
