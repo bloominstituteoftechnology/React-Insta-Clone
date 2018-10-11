@@ -36,7 +36,7 @@ export default class Login extends Component {
           placeholder="password"
           value={this.state.password}
           onChange={this.handleChange} />
-        <button>Login</button>
+        <button disabled={this.state.username && this.state.password ? false: true}>Login</button>
       </form>
     );
   }
