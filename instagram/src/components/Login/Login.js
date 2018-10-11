@@ -1,8 +1,9 @@
 import React from "react";
 import "./Login.css";
 import igTextLogo from "../../images/text-logo.png";
+import authenticate from "../../Authentication/Authenticate";
 
-const Login = () => {
+const Login = props => {
   const footerLinks = [
     "about us",
     "support",
@@ -24,7 +25,7 @@ const Login = () => {
         <form>
           <input type="text" placeholder="Mobile Number or Email" />
           <input type="password" placeholder="Password" /> <br />
-          <button>Log in</button>
+          <button onClick={props.clicked}>Log in</button>
         </form>
 
         <h4>OR</h4>

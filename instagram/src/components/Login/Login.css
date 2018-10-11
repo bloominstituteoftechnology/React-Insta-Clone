@@ -1,14 +1,14 @@
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
-a {
+.login a {
   text-decoration: none;
   font-size: 14px;
   cursor: pointer;
 }
 
-p {
+.login p {
   text-align: center;
   margin: 20px auto;
   font-size: 14px;
@@ -40,19 +40,20 @@ p {
   margin: 22px auto 12px;
 }
 
-form {
+.login-card form {
   margin: 0 auto;
   padding-left: 42px;
 }
 
-input {
+.login-card input {
   width: 250px;
   height: 36px;
-  padding: 14px 0 2px 8px;
+  padding: 10px 4px 2px 8px;
   margin-bottom: 8px;
+  box-sizing: border-box;
 }
 
-button {
+.login button {
   width: 250px;
   padding: 5px 9px;
   text-align: center;
@@ -65,7 +66,7 @@ button {
   margin: 15px 0;
 }
 
-h4 {
+.login h4 {
   margin: 0;
   color: #999;
 }
@@ -88,6 +89,7 @@ h4 {
   margin: 0 auto;
   font-size: 14px;
   padding: 25px;
+  box-sizing: border-box;
 }
 
 .cta-signup a {

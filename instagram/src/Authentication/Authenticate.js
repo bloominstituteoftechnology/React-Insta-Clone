@@ -1,10 +1,31 @@
 import React from "react";
+import Login from "../components/Login/Login";
+import PostsPage from "../components/PostContainer/PostsPage";
 
-const Authenticate = App =>
-  class extends React.Component {
+const authenticate = App => {
+  return class extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        isLoggedIn: false
+      };
+    }
+
+    loginButton = e => {
+      e.preventDefault();
+      this.setState({
+        isLoggedIn: true
+      });
+    };
+
     render() {
-      return <App />;
+      return !this.state.isLoggedIn ? (
+        <Login clicked={this.loginButton} />
+      ) : (
+        <PostsPage />
+      );
     }
   };
+};
 
-export default Authenticate;
+export default authenticate;

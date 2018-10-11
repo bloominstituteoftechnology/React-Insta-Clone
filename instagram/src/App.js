@@ -2,14 +2,12 @@ import React, { Component } from "react";
 import "./App.css";
 import PostsPage from "./components/PostContainer/PostsPage";
 import Login from "./components/Login/Login";
-import Authenticate from "./Authentication/Authenticate";
+import authenticate from "./Authentication/Authenticate";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isLoggedIn: false
-    };
+    this.state = {};
   }
 
   render() {
@@ -17,7 +15,7 @@ class App extends Component {
       <div className="App">
         {/* <ShowConditionally isLoggedIn={this.state.isLoggedIn} /> */}
         {/* <PostsPage /> */}
-        <Login />
+
         {/* <header className="App-header">
           <SearchBar />
         </header>
@@ -27,6 +25,6 @@ class App extends Component {
   }
 }
 
-const ShowConditionally = Authenticate(App);
+const enhancedApp = authenticate(App);
 
-export default App;
+export default enhancedApp;

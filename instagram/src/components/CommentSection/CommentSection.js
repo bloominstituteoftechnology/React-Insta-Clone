@@ -1,6 +1,5 @@
 import React from "react";
 import "./CommentSection.css";
-import dummyData from "../../dummy-data";
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -16,26 +15,27 @@ class CommentSection extends React.Component {
 
   componentDidMount() {
     setTimeout(() => {
-      this.setState({ comments: dummyData.map(data => data.comments) });
-      // this.setState({ comments: dummyData.comments) });
+      this.setState({ comments: this.props.comments });
     }, 500);
   }
 
-  newCommentHandler = (event, index) => {
+  newCommentHandler = event => {
     this.setState({ newComment: event.target.value });
-    console.log(this.state.newComment);
   };
 
-  addNewComment = (e, index) => {
+  addNewComment = e => {
     e.preventDefault();
-    const commentsArr = [...this.state.comments];
-    // commentsArr.filter( comment[i] === index ?
-    //   commentsArr.push({
-    //    username: 'user',
-    //    text: this.state.newComment
-    // }))
-
-    this.setState({ comments: commentsArr });
+    // build out our comment obj
+    let userComment = {
+      username: this.state.user,
+      text: this.state.newComment
+    };
+    // clone our comments array
+    const comments = this.state.comments.slice();
+    // push obj into new clone
+    comments.push(userComment);
+    // set new clone as state... + reset our comment str
+    this.setState({ comments: comments, newComment: "" });
   };
 
   likeHandler = () => {
@@ -69,7 +69,7 @@ class CommentSection extends React.Component {
           </div>
           <div className="like-count">{this.props.likes} likes</div>
 
-          {this.props.comments.map(comment => {
+          {this.state.comments.map(comment => {
             return (
               <div className="comment" key={Math.random()}>
                 <strong>{comment.username}</strong> {comment.text}
@@ -84,7 +84,7 @@ class CommentSection extends React.Component {
                 type="text"
                 placeholder="Add a comment..."
                 name={this.props.newComment}
-                // value={}
+                value={this.state.newComment}
                 onChange={this.newCommentHandler}
               />
             </form>
