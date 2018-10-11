@@ -1,7 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection.js';
-import './PostContainer.css'
+import styled from 'styled-components';
+//import './PostContainer.css'
+
+const CardContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto 30px auto;
+    border: 1px solid #e7e7e7;
+`;
+
+const CardHeader = styled.div`
+    display: flex;
+    align-items: center;
+
+    img{
+        width: 40px;
+        height: 40px;
+        margin: 25px 15px 25px 20px;
+        border-radius: 50%;
+    }
+
+    p{
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+`;
+
+const CardImage = styled.img`
+    width: 100%;
+`;
 
 class PostContainer extends React.Component{
     constructor(props){
@@ -13,19 +43,17 @@ class PostContainer extends React.Component{
 
     render(){
         if(this.props.post.isHidden){
-            return (
-                <div className="hide-container"></div>
-            )
+            return null;
         }
         return(
-            <div className="post-container">
-                <div className="img-name">
+            <CardContainer>
+                <CardHeader>
                     <img src={this.props.post.thumbnailUrl} alt={`${this.props.post.username} Icon`}></img>
                     <p>{this.props.post.username}</p>
-                </div>
-                <img src={this.props.post.imageUrl} alt={`${this.props.post.username} Post`}></img>
+                </CardHeader>
+                <CardImage src={this.props.post.imageUrl} alt={`${this.props.post.username} Post`}></CardImage>
                 <CommentSection postIndex={this.props.index} likes={this.props.post.likes} comments={this.state.comments} timeStamp={this.props.post.timestamp} addLike={this.props.addLike} addNewComment={this.props.addNewComment} deleteComment={this.props.deleteComment}/>
-            </div>
+            </CardContainer>
         )
     }
 }

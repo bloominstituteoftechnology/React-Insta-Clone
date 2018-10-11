@@ -2,7 +2,16 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import Authenticate from './authenticate/Authenticate.js';
-import './App.css';
+import styled from 'styled-components';
+//import './App.css';
+
+const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 880px;
+  margin: 0 auto;
+`;
 
 class App extends Component {
   constructor(){
@@ -99,10 +108,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <Div>
         <SearchBar searchPosts={this.searchPosts}/>
         <Authenticate posts={this.state.posts} displayInfo={this.state.displayLoginWarning} addNewComment={this.addNewComment} addLike={this.addLike} searchPosts={this.searchPosts} deleteComment={this.deleteComment} setUser={this.setUser}/>
-      </div>
+      </Div>
     );
   }
 }

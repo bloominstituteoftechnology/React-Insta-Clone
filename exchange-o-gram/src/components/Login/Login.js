@@ -1,5 +1,74 @@
 import React from 'react';
-import './Login.css';
+import styled from 'styled-components';
+//import './Login.css';
+
+const LoginContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 70%;
+`;
+
+const LoginHeader = styled.h2`
+    text-align: center;
+    font-size: 3.2rem;
+    margin-bottom: 50px;
+`;
+
+const FormContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 50px;
+`;
+
+const InputContainer = styled.div`
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+`;
+
+const InputLabel = styled.p`
+    align-self: center;
+    width: 45%;
+    padding-right: 5px;
+    text-align: end;
+    font-size: 2.4rem;
+`;
+
+const InputBox = styled.input`
+    width: 45%;
+    height: 30px;
+    font-size: 2.4rem;
+    border-radius: 5px;
+    outline: none;
+`;
+
+const SubmitButton = styled.input`
+    width: 30%;
+    padding: 10px 0;
+    margin: 0 auto;
+    font-size: 2.4rem;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    outline: none;
+    border: 2px solid black;
+
+    &:hover{
+        color: white;
+        background-color: black;
+    }
+`;
+
+const DisplayInfo = styled.p`
+    align-self: center;
+    margin-top: 50px;
+    font-size: 3.2rem;
+    color: red;
+
+    ${props => props.isDisplayed ? null : `display: none`}
+`;
 
 class Login extends React.Component{
     constructor(props){
@@ -58,15 +127,15 @@ class Login extends React.Component{
 
     render(){
         return(
-            <div className="login">
-                <h2>Please Sign In</h2>
-                <div className="login-form">
-                    <div className="login-input"><p className="input-label">UserName:</p><input className="input-box" onChange={this.usernameInput} placeholder="Enter username" value={this.state.usernameInput}></input></div>
-                    <div className="login-input"><p className="input-label">Password:</p><input className="input-box" onChange={this.passwordInput} placeholder="Enter password" value={this.state.passwordInput}></input></div>
-                    <input className="submit-button" onClick={this.login} type="submit" value="Submit"></input>
-                    {this.props.displayInfo ? <p className="input-info">Please log in to search posts</p> : null}
-                </div>
-            </div>
+            <LoginContainer>
+                <LoginHeader>Please Sign In</LoginHeader>
+                <FormContainer>
+                    <InputContainer><InputLabel>UserName:</InputLabel><InputBox onChange={this.usernameInput} placeholder="Enter username" value={this.state.usernameInput}></InputBox></InputContainer>
+                    <InputContainer><InputLabel>Password:</InputLabel><InputBox onChange={this.passwordInput} placeholder="Enter password" value={this.state.passwordInput}></InputBox></InputContainer>
+                    <SubmitButton onClick={this.login} type="submit" value="Submit"></SubmitButton>
+                    <DisplayInfo isDisplayed={this.props.displayInfo}>Please log in to search posts</DisplayInfo>
+                </FormContainer>
+            </LoginContainer>
         )
     }
 }
