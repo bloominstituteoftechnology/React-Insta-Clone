@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return(
         <div className="search-bar">
             <div className="left">
@@ -9,7 +9,7 @@ const SearchBar = () => {
                 <h1 className="instagram-logo">instagram</h1>
             </div>
 
-            <input type="text" placeholder="Search" className="search-input"/>
+            <input type="text" placeholder="Search" className="search-input" onKeyDown={props.searchPosts}/>
 
             <div className="right">
                 <i class="far fa-compass fa-2x"></i>
