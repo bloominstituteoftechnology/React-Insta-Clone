@@ -8,11 +8,12 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      posts: []
+      posts: [],
     };
   }
 
   
+  // using componentDidMount lifecycle method to pass stuff from 'data' to the state
   componentDidMount() {
     console.log('CDM: Component Did Mount');
     this.setState({posts: data}); 

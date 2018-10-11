@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment'; // grab comments from Comment.js to pass to state here
+import CommentInput from './CommentInput';
 
 
 // set constructor to grab props so as to simplify the render/add
@@ -13,7 +14,13 @@ class CommentContainer extends React.Component {
     };
   }
 
-  
+  componentDidMount() {
+    this.addNewComment();
+  } 
+
+  addNewComment = () => {
+    console.log('bruh!!!!');
+  }
 
   render() {
     return (
@@ -34,6 +41,8 @@ class CommentContainer extends React.Component {
         <div className='post__comments'>
           {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
         </div>
+
+        <CommentInput />
       </div>
     ) 
   }
