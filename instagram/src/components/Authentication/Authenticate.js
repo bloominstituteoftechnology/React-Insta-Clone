@@ -15,7 +15,7 @@ const Authenticate = App =>
     }
     // On componentDidMount we need to check localStorage to see if a user is logged in.
     componentDidMount() {
-      if (!localStorage.getItem("user")) {
+      if (!localStorage.getItem("user") || !localStorage.getItem("password")) {
         this.setState({ loggedIn: false });
       } else {
         this.setState({ loggedIn: true });
