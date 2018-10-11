@@ -46,17 +46,6 @@ class CommentSection extends React.Component {
     }
 }
 
-// const CommentSection = props => {
-//     return (
-//         <div>
-//             {props.comments.map(comment => {
-//                 return (
-//                     <Comment comment={comment}/>
-//                 )
-//             })}
-//         </div>
-//     )
-// }
 CommentSection.propTypes = {
     comments: PropTypes.array.isRequired
 }

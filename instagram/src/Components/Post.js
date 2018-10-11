@@ -1,16 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../App.css"
+import { Images, Thumbnail, Username, Top } from "./Styles"
 
 const Post = props => {
     return (
-        <div className="images">
-            <div className="top">
-            <img src={props.thumbnail} className="thumbnail" />
-           <p className="username">{props.username}</p> 
-           </div>
+       <Images>
+            <Top>
+            <Thumbnail src={props.thumbnail}></Thumbnail>
+           <Username>{props.username}</Username> 
+           </Top>
             <img src={props.image} />
-        </div>
+         </Images>
     )
 }
 

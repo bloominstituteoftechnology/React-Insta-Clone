@@ -43,6 +43,31 @@ let Instagramtext = styled.p`
     margin-bottom: 5px;
     border-bottom: 1px solid lightgray;
     `
+    const Images = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    margin: 0 auto;
+    `
+    const Thumbnail = styled.img`
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    align-self: flex-start;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    `
+    const Username = styled.p`
+    align-self: center;
+    margin-left: 10px;
+    font-weight: bold;
+    `
+    const Top = styled.div`
+    display: flex;
+    width: 90%;
+    `
 
     export {
         Instagramtext,
@@ -50,5 +75,9 @@ let Instagramtext = styled.p`
         RightIcons,
         StyledP,
         CommentContainer,
-        Time
+        Time,
+        Images,
+        Thumbnail,
+        Username,
+        Top
     }
