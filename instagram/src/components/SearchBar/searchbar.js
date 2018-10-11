@@ -14,12 +14,13 @@ const SearchBar = props => {
                 <h1 id= 'instagram'>Instagram</h1>
             </div>
             <input 
+                onChange={props.changer}
                 onKeyDown={props.searching} 
-                onClick={console.log(props.searching)}
                 className= 'search'  
+                name='searchKey'
                 placeholder= '⚲ Search'
-                type="text">
-            </input>          
+                type="text"
+                value={props.searcher}/>                      
             <div id= 'right-icons'>
                 <i className="far fa-compass"></i>
                 <i className="far fa-heart"></i>

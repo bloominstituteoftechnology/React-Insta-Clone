@@ -10,30 +10,40 @@ class PostsPage extends React.Component {
         super();
         this.state = {
             content: [],
+            searchKey: ''       
         }
     }
     componentDidMount() {
         this.setState({ content: dummyData });
-        localStorage.clear();
     }
-    searchFunction = event => {
+    handleInputChange = event => this.setState({ [event.target.name]: event.target.value });
+
+    searchFunction = () => {
+        
         const posts = this.state.content.filter(search => {
-            if (search.username.includes(event.target.value)) {
+            if (search.username.includes(this.state.searchKey)) {
             return search;      
             }
         });
-        this.setState({ content: posts });
+        console.log(posts);        
+        if (!this.state.content){
+            this.setState({content: dummyData});
+        }else{
+            this.setState({ content: posts });
+        }
     };  
     render() {
-        if (!this.state.content.length) {
-            return <h4>Loading Posts...</h4>;
-        }    
+        // if (!this.state.content.length) {
+        //     return <h4>Loading Posts...</h4>;
+        // }    
         return (
             <div className="App">
                 <div className='top-header'>
                 <SearchBar
+                    changer={this.handleInputChange}
                     searching = {this.searchFunction}                     
-                    content= {this.state.content} />
+                    content= {this.state.content}
+                    searcher={this.state.searchKey} />
                 </div> 
                 {this.state.content.map((items, i) => 
                 <div key = {i}>

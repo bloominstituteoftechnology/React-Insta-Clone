@@ -14,7 +14,7 @@ class CommentSection extends Component {
     } 
     addComment = event => {
         event.preventDefault();
-        const newComment = { text: this.state.comment, username: 'Braff Zacklin' };
+        const newComment = { text: this.state.comment, username: localStorage.getItem('user') };
         const comments = this.state.comments.slice();
         if (this.state.comment ===''){
             return;
@@ -23,6 +23,8 @@ class CommentSection extends Component {
             this.setState({ comments, comment: '' });
         }
     };
+    handleInputChange = event => this.setState({ [event.target.name]: event.target.value });
+
     render() {
         return (
             <div className = 'comment-container'>
