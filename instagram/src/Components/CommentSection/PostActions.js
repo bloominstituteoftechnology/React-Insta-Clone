@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Sprite} from '../../Style';
 
 const PostActions = ({likePost, postLiked=false, showInput}) => {
     return (
@@ -7,13 +8,13 @@ const PostActions = ({likePost, postLiked=false, showInput}) => {
             <div className="action-icons">
                 {
                     postLiked
-                    ?<span onClick={likePost} className="action-icon sprite heart-fill"></span>
-                    :<span onClick={likePost} className="action-icon sprite heart"></span>
+                    ?<Sprite heartRed onClick={likePost} />
+                    :<Sprite heart onClick={likePost} />
                 }
-                <span className="action-icon sprite comment-icon" onClick={showInput}></span>
-                <span className="action-icon sprite share"></span>
+                <Sprite comment onClick={showInput} />
+                <Sprite share />
             </div>
-            <div className="action-icon sprite bookmark"></div>
+            <Sprite bookmark />
         </div>
     );
 }

@@ -1,11 +1,12 @@
 import React from 'react';
+import { SpriteCore } from '../Style';
 import './Login.css';
 
 const Login = ({login, username, password, change, attempted}) => {
     return (
         <div className="login-container">
             <form className="login-page" onSubmit={login} autoComplete="off">
-                <div className="login-logo sprite-core"></div>
+                <SpriteCore logo />
                 <input
                     autoComplete="off"
                     className="username"

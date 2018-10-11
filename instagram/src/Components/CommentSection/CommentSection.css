@@ -27,32 +27,6 @@
     align-items: center;
 }
 
-.action-icon {
-    width: 24px;
-    height: 24px;
-}
-.action-icons .heart {
-    background-position: -136px -102px;
-}
-.action-icons .heart-fill {
-    background-position: -132px -31px;
-}
-.action-icons .comment-icon {
-    background-position: -75px -189px;
-    margin-left: 16px;
-}
-.action-icons .share {
-    background-position: -50px -189px;
-    margin-left: 16px;
-}
-
-.post-actions .bookmark {
-    background-position: -192px -100px;
-    position: absolute;
-    right: 0;
-    top: 9px;
-}
-
 .post-info {
     margin-bottom: 8px;
 }

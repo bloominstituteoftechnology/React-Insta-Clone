@@ -1,25 +1,24 @@
 import React from 'react';
+import { Sprite, SpriteCore } from '../../Style';
 import './SearchBar.css';
+
 
 const SearchBar = ({searchPost, value, logout}) => {
     return (
         <div className="searchbar-container">
             <div className="container">
                 <div className="searchbar-logo">
-                    <span className="logo-sprite sprite" ></span> 
+                    <Sprite smallLogo/>
                     <div className="split"></div>
-                    <span className="logo-name-sprite sprite"></span> 
+                    <Sprite logoText />
                 </div>
                 <div className="searchbar-input">
                     <input type="text" placeholder="Search" name="search" value={value} onChange={searchPost}/>
                 </div>
                 <div className="searchbar-icons">
-                    <span className="icons-navigate sprite-core" ></span> 
-                    <span className="icons-heart sprite-core" ></span> 
-                    <span 
-                        className="icons-user sprite-core" 
-                        onClick={logout}
-                    ></span> 
+                    <SpriteCore navigate />
+                    <SpriteCore heart />
+                    <SpriteCore user onClick={logout} />
                 </div>
             </div>
         </div>

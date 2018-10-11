@@ -1,13 +1,3 @@
-.login-logo {
-    margin: 0 auto;
-    margin-top: 22px;
-    margin-bottom: 12px;
-    background-position: -97px 0px;
-    height: 51px;
-    width: 175px;
-    display: block;
-}
-
 .login-page-container {
    width: 100%;
    height: 100vh;
