@@ -21,4 +21,4 @@ export default Comment;
 
 //not this in function??
 //comments is array name.  text is actual commment.  dummyData.
-//props.comment singular  from commentsection
+//props.comment singular from commentsection

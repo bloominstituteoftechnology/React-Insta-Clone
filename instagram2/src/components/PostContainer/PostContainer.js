@@ -10,7 +10,7 @@ const PostContainer = props => {
         <div className="master-container">
             <div className="header">
                 <div className="thumbnail-div">
-                    <img src={props.thumbnailUrl} alt="thumbnail" className="thumbnail"/>   {/*not quotations? */}
+                    <img src={props.thumbnailUrl} alt="thumbnail" className="thumbnail"/>
                 </div>
                 <div className="username">
                     {props.username}

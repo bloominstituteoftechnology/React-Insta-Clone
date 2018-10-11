@@ -7,9 +7,8 @@ import CommentSection from '../CommentSection/CommentSection';
 const Post = (props) => {
     console.log('postprops', props);
     return (
-        <div>
-        <div>post comments</div>
-        <CommentSection comments={props.post.comments}/>
+        <div className="post-div">
+            <CommentSection comments={props.post.comments}/>
         </div>
     )
 }

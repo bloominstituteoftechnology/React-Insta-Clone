@@ -26,5 +26,10 @@ class App extends Component {
 }
 
 export default App;
+//throws error when try to wrap App with Authenticate
 
-//render authenticate? 
+//dont render authenticate component in app.
+//want to replace app with authenticate version of app.
+//has to be done outside app comp otherwise will create infinte loop. 
+//index taking in app wrapped in authentic.  exporting app with added authenticate functionality.
+

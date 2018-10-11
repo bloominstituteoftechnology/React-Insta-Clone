@@ -7,14 +7,16 @@ class Authenticate extends React.Component {
         constructor(props) {
             super(props);
             this.state = {
-                loggedIn: ""
+                loggedIn: false
             };
         }
         componentDidMount() {
             console.log('authenticate props', this.props);
-            // if (localStorage.getItem("username")) {
-                
-            // }
+            if (!localStorage.getItem("username")) {
+                this.setState({ loggedIn: false});
+            } else {
+                this.setState({ loggedIn: true});
+            }
         }
         render() {
             if (this.state.loggedIn === true) {
