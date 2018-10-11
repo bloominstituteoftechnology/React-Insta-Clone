@@ -4,6 +4,29 @@ import styled from 'styled-components'
 const WrapperDiv = styled.div`
    font-family: sans-serif;
    text-align: center;
+   margin-top: 200px;
+`
+const WrapperForm = styled.div `
+
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  width: 350px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+
+`
+
+const Input = styled.input `
+
+`
+
+const Button = styled.button `
+  width: 350px;
+  height: 50px;
+  background: white;
+  border: none;
+  border-radius: 3px;
 `
 class Login extends Component {
     constructor(props) {
@@ -27,13 +50,18 @@ class Login extends Component {
     render(){
     return (
     <WrapperDiv>
-     <h2>Login</h2>
+     <h2>Instagram (clone) </h2>
+     
+
      <form>
-         <input placeholder= "Username" type="text" name="username" value = {this.state.username} onChange= {this.handleInputChange}></input>
-         <input placeholder= "Password" type="text" name="password" value = {this.state.password} onChange= {this.handleInputChange}></input>
-         <button onClick={this.handleLoginSubmit}>Log In</button>
+     <WrapperForm>
+         <Input placeholder= "Username" type="text" name="username" value = {this.state.username} onChange= {this.handleInputChange}></Input>
+         <Input placeholder= "Password" type="text" name="password" value = {this.state.password} onChange= {this.handleInputChange}></Input>
+     </WrapperForm>
+         <Button onClick={this.handleLoginSubmit}>Log In</Button>
 
      </form>
+
     </WrapperDiv>
     )
     }
