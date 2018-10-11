@@ -1,14 +1,16 @@
 import React from 'react';
 import IGLogo from '../../assets/iglogo.png';
 import './SearchBar.css';
+import {StyledsearchBarWrapper} from '../Styled'
 
 const SearchBar = props => {
   return (
-    <div className="search-bar-wrapper">
+    <StyledsearchBarWrapper>
       <div className="image-wrapper">
         <img alt="instagram logo" src={IGLogo} className="logo-image" />
       </div>
       <div>
+        {/* Insert an input field and call the SearchPosts method on the constructor. */}
         <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
       </div>
       <div className="social-wrapper">
@@ -22,7 +24,7 @@ const SearchBar = props => {
           <i className="far fa-user-circle" />
         </div>
       </div>
-    </div>
+    </StyledsearchBarWrapper>
   );
 };
 
