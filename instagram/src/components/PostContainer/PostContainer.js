@@ -2,6 +2,8 @@ import React from 'react';
 import CommentSection from './CommentSection';
 import './PostContainer.css';
 import PropTypes from 'prop-types';
+import App from '../../App';
+import LogIn from '../Autentication/LogIn';
 
 class PostContainer extends React.Component{
     constructor(){
@@ -45,10 +47,18 @@ class PostContainer extends React.Component{
     commentInput=event=>{
         document.getElementById(`CommentSection__${this.state.id}`).focus();
     }
+    logOut=event=>{
+    this.render(<LogIn/>)
+       
+}
+
+        
+    
 
     render(){
         return(
             <div className="whole-post">
+                <button onClick={this.logOut}/>
                 <div className="username-thumbnail">
                     <div >
                         <img className="thumbnail" src ={this.state.thumbnailUrl}/>
@@ -86,5 +96,10 @@ PostContainer.propTypes={
     likes: PropTypes.number,
     id: PropTypes.number
 };
+CommentSection.propTypes={
+    comments: PropTypes.string,
+    timestamp: PropTypes.number,
+    id: PropTypes.number
+}
 
 export default PostContainer;

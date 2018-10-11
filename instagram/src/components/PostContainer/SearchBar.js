@@ -44,4 +44,5 @@ Input=event=>{
 SearchBar.propTypes={
     searchInput: PropTypes.string,
 }
+
 export default SearchBar;
