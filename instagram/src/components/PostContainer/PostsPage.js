@@ -3,7 +3,7 @@ import dummyData from '../../dummy-data';
 import PostContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
 
-class PostsPage extends Component {
+class PostsPage extends React.Component {
     constructor() {
         super();
         this.state = {
