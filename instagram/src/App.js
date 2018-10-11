@@ -1,53 +1,20 @@
-import React, { Component } from 'react';
+
+import React, {
+  Component
+} from 'react';
 import './App.css';
-import CommentSection from './components/CommentSection/commentSection';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/postContainer';
-import SearchBar from './components/SearchBar/searchBar';
+import PostsPage from './components/PostContainer/postspage';
+import Authenticate from './components/Authentication/authenticate'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state ={ 
-      dummyData:[],
-      searchTerm: ''
-    };
+  constructor() {
+    super();
+    this.state = {};
   }
-  componentDidMount() {
-    this.setState({ dummyData: dummyData });
-  }
-
-  searchFunction = event => {
-    event.preventDefault();
-    console.log('Nice Search');
-  }
-
   render() {
-    console.log(this.state);
-    if (!this.state.dummyData.length) {
-      return <h4>Loading Posts...</h4>;
-    }    return (
-      <div className="App">
-        <div className='top-header'>
-          <SearchBar 
-            term={this.state.searchTerm} 
-            search = {this.searchFunction} 
-            handleSearchChange = {this.handleInputChange} 
-            content= {this.state.dummyData} />
-        </div> 
-        {this.state.dummyData.map((items, i) => 
-          <div className='posty' key = {i}>
-            <PostContainer content= {items} />
-            <CommentSection 
-              comments= {items.comments}
-              extras= {items} 
-              />
-          </div>
-          )}
-      </div>
-    );
-
+    return (
+    <PostsPage />)
   }
 }
 
-export default App;
+export default Authenticate(App);
