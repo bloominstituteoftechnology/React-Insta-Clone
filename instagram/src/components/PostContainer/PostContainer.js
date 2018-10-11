@@ -1,46 +1,44 @@
 import React, { Component } from 'react';
 import Comment from '../CommentSection/CommentSection.js'
 import './Post.css'
-import dummyData from '../../dummy-data';
-
+import PropTypes from 'prop-types';
+import PostPages from './PostPages.js'
 
 class PostContainer extends Component {
 	constructor() {
 		super()
-		this.state = {
-			data: dummyData
-		}
 	}
 	
-	
-	
-
   render(){
 		return(
 			<div>
-			  {this.state.data.map((data, index) =>(
-			    <div className="postContainer">
-                  <div className="postHeader">
-					<img className="headerImg" src={data.thumbnailUrl} />
-					<h1 className="headerText">{data.username}</h1>
-				  </div>
-				  <img className="postImg" src={data.imageUrl} />
-				  <div className="bottomIcons">
-				    <i class="far fa-heart fa-2x"></i>
-				    <i class="far fa-comment fa-2x"></i>  
-				  </div>
-				  <div className="commentContainer">
-				    <p><strong>200 likes</strong></p>
-				    <Comment comment={data.comments} />
-				    <span>{data.timestamp}</span>
-				  </div>
-					<input className="addComment" type="text" placeholder="Add a comment..."></input>
-				</div>
+		      {this.props.data.map(data => (
+			  <div className="postContainer">
+			  	<PostPages 
+				  key={data.timestamp}
+				  username={data.username}
+				  imageUrl={data.imageUrl}
+				  thumbnailUrl={data.thumbnailUrl}
+				/>
+				<Comment 
+				  key={data.timestamp}
+			      comments={data.comments}
+				  likes={data.likes}
+				  timestamp={data.timestamp}
+			    />
+			  </div>
 			  ))}
 		    </div>
-		
-		
-	)
-  }
+	      );
+        }
 }
+
+PostContainer.propTypes = {
+		data: PropTypes.shape({
+			username: PropTypes.string,
+			thumbnailUrl: PropTypes.string,
+			imageUrl: PropTypes.string,
+			likes: PropTypes.string
+		}),
+	}
 export default PostContainer;
