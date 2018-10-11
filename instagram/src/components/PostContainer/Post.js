@@ -6,6 +6,16 @@ import PostHeader from './PostHeader';
 
 
 class Post extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            likes: props.post.likes
+        }
+    }
+    increment = () => {
+        let likes = this.state.likes + 1;
+        this.setState({ likes });
+    };
     render() {
         return (
             <div className="post">
@@ -22,7 +32,7 @@ class Post extends React.Component {
                 </div>
                 <LikePost
                     increment={this.increment}
-                    likes={this.props.likes}
+                    likes={this.state.likes} 
                 /> 
                 <CommentSection
                     postId={this.props.post.imageUrl}
