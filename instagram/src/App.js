@@ -16,7 +16,7 @@ class App extends Component {
   componentDidMount() {
     let username = window.localStorage.getItem('username');
     console.log(username);
-    if (username === '' || username === null) {
+    if (username === '' || username === null || username === "undefined") {
       this.setState({
         isLoggedIn: false,
       })
