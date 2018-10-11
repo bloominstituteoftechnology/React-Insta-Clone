@@ -1,0 +1,24 @@
+.search-container {
+    margin: 0 auto;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+  }
+  
+  .search-container .right {
+    width: 70px;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .search-container .middle input {
+    text-align: center;
+    background: #FAFAFA;
+    border: 1px solid lightgray;
+    color: lightgray;
+    border-radius: 3px;
+    padding: 2px 0;
+  }
