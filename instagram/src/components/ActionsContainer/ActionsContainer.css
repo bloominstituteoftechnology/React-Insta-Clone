@@ -5,3 +5,6 @@
 .action-heart,.action-person{
     margin-left:30px;
 }
+.action-person{
+    cursor: pointer;
+}

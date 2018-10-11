@@ -20,7 +20,6 @@ class PostContainer extends React.Component{
         this.setState({likes: (this.state.likes+1)})
     }    
     render(){
-        console.log("props", this.props)
         return(
             <div className='post-container'>
                 <PostHeader data={this.props.data}/>

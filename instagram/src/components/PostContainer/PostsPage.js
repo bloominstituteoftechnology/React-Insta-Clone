@@ -64,6 +64,7 @@ class PostsPage extends React.Component{
                     handleSearchSubmit={this.handleSearchSubmit}
                     handleSearchChange={this.handleSearchChange}
                     searchText={this.state.searchText}
+                    logout={this.props.logout}
                 />
                 <div className='app-post-container'>
                     {

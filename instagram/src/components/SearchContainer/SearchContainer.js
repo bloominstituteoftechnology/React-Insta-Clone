@@ -9,7 +9,7 @@ const SearchContainer = props => {
         <div className='search-container'>
             <LogoContainer />
             <SearchBar searchText={props.searchText} handleSearchChange={props.handleSearchChange} handleSearchSubmit={props.handleSearchSubmit} />
-            <ActionsContainer />
+            <ActionsContainer logout={props.logout} />
         </div>
         
     )

@@ -4,14 +4,14 @@ import PostsPage from './components/PostContainer/PostsPage'
 import Authentication from './components/Authentication/Authentication';
 
 class App extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = { }
   }
   render(){
     return (
       <div className='app'>
-        <PostsPage />
+        <PostsPage logout={this.props.logout} />
       </div>
     )
   }
