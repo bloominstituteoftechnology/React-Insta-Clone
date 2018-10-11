@@ -10,6 +10,7 @@ class PostContainer extends Component {
     this.state = {
       likes: props.post.likes
     }
+    this.inputComment = React.createRef()
   }
 
   handleLikes = (e, index) => {
@@ -24,6 +25,14 @@ class PostContainer extends Component {
         likes: likes + 1
       })
     }
+  }
+  focusInput = (ref) => {
+    console.log(ref.current.focus())
+    ref.current.focus()
+  }
+
+  handleFocus = (ref) => {
+    this.focusInput(ref)
   }
 
   render () {
@@ -46,10 +55,30 @@ class PostContainer extends Component {
             alt='Card cap'
             className='img-fluid'
           />
-          <div>
+          <div className='post-cta'>
+            <div className='icons'>
+              <div className='heart-icon'>
+                <i
+                  className='far fa-heart fa-lg'
+                  onClick={(e) => {
+                    this.handleLikes(e, this.index)
+                    e.target.classList.toggle('heart-red')
+                  }}
+                />
+              </div>
+              <div className='comment-icon'>
+                <i
+                  onClick={() => this.handleFocus(this.inputComment)}
+                  className='far fa-comment fa-lg'
+                />
+              </div>
+            </div>
+
+            <span>
+              <strong>{this.state.likes} likes</strong>
+            </span>
             <CommentSection
-              handleLikes={this.handleLikes}
-              likes={this.state.likes}
+              myRef={this.inputComment}
               comments={post.comments}
               keyId={post.imageUrl}
               timeStamp={post.timestamp}

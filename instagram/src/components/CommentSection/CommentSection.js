@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './CommentSection.css'
 import Comment from './Comment'
 import TimeStamp from './TimeStamp'
+import CommentInput from './CommentInput'
 // import PropTypes from 'prop-types'
 
 class CommentSection extends Component {
@@ -11,11 +12,6 @@ class CommentSection extends Component {
       comments: props.comments,
       newComment: ''
     }
-    this.focusInput = this.focusInput.bind(this)
-  }
-
-  focusInput () {
-    this.inputText.focus()
   }
 
   componentDidMount () {
@@ -58,37 +54,17 @@ class CommentSection extends Component {
 
   render () {
     return (
-      <div className='comment-section'>
-        <div className='icons'>
-          <i
-            className='far fa-heart fa-lg'
-            onClick={(e) => {
-              this.props.handleLikes(e, this.index)
-              e.target.classList.toggle('heart-red')
-            }}
-          />
-          <i onClick={this.focusInput} className='far fa-comment fa-lg' />
-        </div>
-        <span>
-          <strong>{this.props.likes} likes</strong>
-        </span>
+      <div>
         {this.state.comments.map((comment, index) => (
           <Comment key={this.props.keyId + Math.random()} comment={comment} />
         ))}
         <TimeStamp timeStamp={this.props.timeStamp} />
-        <form onSubmit={this.handleOnSubmit}>
-          <input
-            placeholder='Add a comment...'
-            type='text'
-            className='comment-input'
-            value={this.state.newComment}
-            required
-            ref={(input) => {
-              this.inputText = input
-            }}
-            onChange={this.handleChange}
-          />
-        </form>
+        <CommentInput
+          handleSubmit={this.handleOnSubmit}
+          value={this.state.newComment}
+          handleChange={this.handleChange}
+          myRef={this.props.myRef}
+        />
       </div>
     )
   }

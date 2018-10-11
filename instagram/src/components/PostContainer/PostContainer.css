@@ -21,14 +21,15 @@
 .icons {
   display: flex;
   justify-content: space-between;
-  width: 55px;
+  width: 45px;
+  margin-bottom: 6px;
 }
 
 .heart-icon {
   cursor: pointer;
 }
 
-.comment-icon {
+.far {
   cursor: pointer;
 }
 
