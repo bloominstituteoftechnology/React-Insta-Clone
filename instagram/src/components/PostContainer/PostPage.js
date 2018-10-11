@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import dummyData from "../dummy-data";
 import logo from "../img/ig-logo.png";
 import PostContainer from "./PostContainer";
 import SearchBar from "../Search Bar/SearchBar";
@@ -9,6 +10,33 @@ import { faCompass, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
 library.add(faCompass, faHeart, faUser);
 
 class PostPage extends Component {
+  constructor() {
+    super();
+    this.state = {
+      dummyData: [],
+      holder: ''
+    };
+  }
+  componentDidMount () {
+    this.setState({
+      dummyData: dummyData
+    });
+  }
+  handleInput = e => {
+    this.setState({
+      holder: e.target.value
+    });
+  };
+
+  handleSearch = e => {
+    e.preventDefault();
+    this.setState({
+      dummydata: this.state.dummyData.filter(x => {
+        return x.username.includes(this.state.holder);
+      })
+    });
+  };
+
   render() {
     return (
       <div>
@@ -18,9 +46,9 @@ class PostPage extends Component {
             <p className="title">Fake Instagram</p>
           </div>
           <SearchBar
-            input={this.props.holder}
-            handleInput={this.props.handleInput}
-            handleSearch={this.props.handleSearch}
+            input={this.state.holder}
+            handleInput={this.handleInput}
+            handleSearch={this.handleSearch}
           />
           <div className="icon-container">
             <FontAwesomeIcon icon="compass" className="icon" />
@@ -29,7 +57,7 @@ class PostPage extends Component {
           </div>
         </header>
         <div className="post-container">
-          <PostContainer dummyData={this.props.dummyData} />
+          <PostContainer dummyData={this.state.dummyData} />
         </div>
       </div>
     );

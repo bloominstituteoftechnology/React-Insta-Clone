@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LoginImg from "../img/ig-login-img.png";
 
 class Login extends Component {
   constructor(props) {
@@ -15,31 +16,37 @@ class Login extends Component {
     });
   };
 
-handleSubmit = e => {
-  localStorage.setItem('username', this.state.username)
-  window.location.reload();
-}
+  handleSubmit = e => {
+    localStorage.setItem('username', this.state.username)
+    window.location.reload();
+  }
 
   render() {
     return (
       <div className="login-container">
-        <form onSubmit={this.handleSubmit}>
-          <h3>username</h3>
-          <input 
-            type="text"
-            name="username"
-            value={this.state.username}
-            onChange={this.handleInput}
-          />
-          <h3>password</h3>
-          <input 
-            type="text"
-            name="password"
-            value={this.state.password}
-            onChange={this.handleInput}
+        <img src={LoginImg} alt="loginImg" className="loginImg" />
+        <div className="login-box">
+          <p className="title">Instagram</p>
+          <form onSubmit={this.handleSubmit} className="loginInput">
+            <input
+              type="text"
+              name="username"
+              placeholder="Phone number, username or email"
+              value={this.state.username}
+              onChange={this.handleInput}
             />
-        </form>
-        <button onClick={this.handleSubmit}>login</button>
+            <input
+              type="text"
+              name="password"
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.handleInput}
+            />
+          </form>
+          <button onClick={this.handleSubmit} className="login-button">
+            Log in
+          </button>
+        </div>
       </div>
     );
   }

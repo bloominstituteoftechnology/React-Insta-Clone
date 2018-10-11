@@ -156,3 +156,58 @@ p {
 .post-container .posts .comment-section .add-comment:focus {
   outline: none;
 }
+.login-container {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+}
+.login-container .loginImg {
+  width: 400px;
+  padding: 0;
+}
+.login-container .login-box {
+  margin-top: 40px;
+  width: 400px;
+  border: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+}
+.login-container .login-box .title {
+  font-family: 'Billabong';
+  font-size: 3rem;
+  margin: 0;
+  padding: 50px 0;
+}
+.login-container .login-box .loginInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-container .login-box .loginInput input {
+  color: #999;
+  height: 36px;
+  width: 260px;
+  margin: 5px 0;
+  background-color: #fafafa;
+  border: none;
+  border: 1px solid #efefef;
+  padding: 0 10px;
+  font-size: 0.7rem;
+  border-radius: 3px;
+}
+.login-container .login-box .login-button {
+  height: 36px;
+  width: 280px;
+  border: 0;
+  color: white;
+  background-color: skyblue;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+.login-container .login-box .login-button:hover {
+  background-color: #3897f0;
+}
