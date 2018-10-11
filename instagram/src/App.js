@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import usernames from './local-storage';
 import PostsPage from './components/PostContainer/PostsPage.js';
 import Authenticate from './components/Authentication/Authenticate.js';
 
@@ -13,22 +12,20 @@ class App extends Component {
     super();
     this.state = {
       postData: [],
-      usernames: usernames
 
     }
   }
 
   componentDidMount(){
     setTimeout(() => {
-      this.setState({postData: dummyData, usernames: usernames});
+      this.setState({postData: dummyData});
 
     }, 500);
 
   }
 
   addComment = (commentObj, user) =>{
-    console.log(commentObj);
-    console.log(user);
+
 
 
     let newPostData = this.state.postData;
@@ -55,12 +52,7 @@ class App extends Component {
     })
   }
 
-  login = (username) =>{
-    const newUserList = [...this.usernames, username];
-    this.setState({
-      usernames: newUserList
-    })
-  }
+
 
   render() {
     return (

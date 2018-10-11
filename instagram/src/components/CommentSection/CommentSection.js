@@ -33,8 +33,6 @@ class CommentSection extends Component{
 
     handleSubmit = (event) =>{
         event.preventDefault();
-        // const commentInputBox = document.querySelector('.comment-input');
-        // let commentText = commentInputBox.value;
         const newCommentObj = (this.state.newComment)
         ? {
             text: this.state.newComment,
@@ -43,10 +41,8 @@ class CommentSection extends Component{
         : null;
 
         if(newCommentObj){
-            // debugger;
             this.state.addComment(newCommentObj, this.state.user);
-            // commentInputBox.value = '';
-            // this.state.newComment = '';
+
             this.setState({
                 newComment: ''
             })
@@ -54,7 +50,6 @@ class CommentSection extends Component{
     }
 
     render(){
-        // console.log(moment.format());
 
         const commentList = (!this.state.comments.length === 0)
         ? null

@@ -1,35 +1,44 @@
 import React from 'react';
-import usernames from '../../local-storage.js'
+import Login from '../Login/Login.js'
 
 
-const Authenticate = (WrappedComponent) =>{
-    return
+const Authenticate = (WrappedComponent) =>
+
         //return a class component
-        class newComponent extends React.Component{
+        class extends React.Component{
 
             constructor(){
                 super();
                 this.state = {
                     loggedIn: false,
-                    usernames: usernames
+
                 }
             }
 
             componentDidMount(){
-                this.setState({
-                    usernames: usernames
-                })
+                if(localStorage.getItem('username')){
+
+                    this.setState({
+                        loggedIn: true
+                    })
+                }
             }
 
+
+
             render(){
+                const renderedComponent = (this.state.loggedIn)
+                ? <><WrappedComponent /></>
+                : <><Login /></>
+                // if(this.state.loggedIn){return <WrappedComponent />}
+                // return <Login />
+
                 return(
-                    <div>
-                        <WrappedComponent />
-                    </div>
+                    renderedComponent
                 )
             }
         }
 
-}
+
 
 export default Authenticate;
