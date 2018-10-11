@@ -1,0 +1,92 @@
+.form{
+    display: block;
+    width:100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fafafa;
+}
+.page{
+    max-width: 1056px;
+    width: 100%;
+    margin: 0 auto;
+}
+.headerLogo img{
+    margin: 25px 24% 10px;
+    width: 190px;
+    height: 70px;
+}
+.signin-button{
+    background: #3897f0;
+    border-color: #3897f0;
+    color: #fff;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 26px;
+    outline: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+    white-space: nowrap;
+    width: 60%;
+    margin: 10px 0 30px 73px;
+}
+.Username{
+    background:#fafafa;
+    border: 0;
+    height: 36px;
+    width: 220px;
+    color: black;
+}
+.bar-bar{
+    width: 80%;
+}
+.bar-div{
+    margin: 0 auto;
+    padding-left: 55px;
+    padding-top: 10px;
+}
+.user-form{
+    color: #999;
+    font-size: 12px;
+    height: 36px;
+    left: 8px;
+    line-height: 36px;
+    pointer-events: none;
+    
+    right: 0;
+    
+}
+.username-form{
+    border: 1px solid #efefef;
+    width: 58%;
+    margin: 0px 20% 30px;
+}
+.center{
+    margin: 50px auto 0;
+    max-width: 380px;
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+}
+.h2-words h2{
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 18px;
+    margin: 0 40px 10px;
+    color: #999;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.appstore{
+    margin: 20px 0 0 310px;
+    width: 40%;
+}
+div .h2-word{
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}

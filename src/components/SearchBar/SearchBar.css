@@ -1,0 +1,61 @@
+.search-bar-wrapper {
+  border-bottom: 1px solid #3333;
+  height: 80px;
+  line-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+}
+.navbar{
+  display:flex;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  padding: 15px 40px;
+  width: 100%;
+  margin: 0 auto;
+}
+.searchbar{
+  padding-top: 15px;
+}
+.navicons{
+  margin-top: 12px;
+}
+.instagramlogo{
+  padding-bottom: 20px;
+}
+.nav-items{
+  display:flex;
+  justify-content: space-evenly;
+}
+.nav-items a{
+  margin-left: 50%;
+}
+.bar{
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  -webkit-transition: height .2s ease-in-out;
+  transition: height .2s ease-in-out;
+  height: 77px;
+  margin-right: 20px;
+}
+
+.image-wrapper {
+  height: 50px;
+}
+
+.logo-image {
+  height: 100%;
+}
+
+.social-wrapper {
+  display: flex;
+}
+
+.social {
+  width: 20px;
+  height: 20px;
+}

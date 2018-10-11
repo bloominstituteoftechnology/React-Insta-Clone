@@ -1,0 +1,49 @@
+.comment-text {
+  text-align: left;
+  padding: 5px 0 5px 15px;
+  background: white;
+  display: flex;
+  
+}
+
+.comment {
+  font-weight: 200;
+  font-size: 14px;
+  background: white;
+}
+.form{
+  background: white;
+  padding-bottom: 17px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  border-top: 1px solid #efefef;
+  margin: 0 auto;
+  width: 95%;
+
+ 
+}
+.container-add{
+  background: white;
+  padding-top: 20px;
+}
+.box{
+  background: 0 0;
+  border: 0;
+  color: #262626;
+  font-size: inherit;
+  height: 18px;
+  max-height: 80px;
+  outline: 0;
+  padding: 0;
+  padding-right: 68%;
+  resize: none;
+  font-size: 14px;;
+}
+
+.user {
+  font-weight: 600;
+  font-size: 13px;
+  color: #262626;
+  margin-right: .5em;
+}
