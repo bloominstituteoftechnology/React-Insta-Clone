@@ -87,13 +87,13 @@
 
 /*-----------------Log In Styles-----------------------------*/
 
-.login-input {
+/* .login-input {
   display: flex;
   justify-content: center;
   padding-top: 150px;
-}
+} */
 
-.login-user,
+/* .login-user,
 .login-password {
   width: 200px;
   height: 25px;
@@ -107,7 +107,7 @@
   background-color: #555555;
   color: white;
   transition-duration: 0.4s;
-}
+} */
 
 .login-button:hover {
   background-color: white;
