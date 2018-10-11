@@ -7,7 +7,8 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: this.props.comments,
-      comment: ""
+      comment: "",
+      index: this.props.index
     };
   }
   addNewComment = e => {
@@ -21,18 +22,37 @@ class CommentSection extends React.Component {
         comment: ""
       });
     }
-    localStorage.setItem("comments", JSON.stringify(newComments));
+    localStorage.setItem(
+      `post${this.state.index}`,
+      JSON.stringify(newComments)
+    );
   };
   deleteComment = index => {
     let filteredComments = this.state.comments.filter(
       (comment, i) => index !== i
     );
     this.setState({ comments: filteredComments });
-    localStorage.setItem("comments", JSON.stringify(filteredComments));
+    localStorage.setItem(
+      `post${this.state.index}`,
+      JSON.stringify(filteredComments)
+    );
   };
   onCommentChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
+  componentDidMount() {
+    localStorage.getItem(`post${this.state.index}`) !== null
+      ? this.setState(
+          JSON.parse(localStorage.getItem(`post${this.state.index}`))
+        )
+      : localStorage.setItem(
+          `post${this.state.index}`,
+          JSON.stringify(this.state)
+        );
+  }
+  componentDidUpdate() {
+    localStorage.setItem(`post${this.state.index}`, JSON.stringify(this.state));
+  }
   render() {
     return (
       <React.Fragment>

@@ -33,7 +33,7 @@ class PostsPage extends React.Component {
           handleLogOut={this.handleLogOut}
         />
         {filteredData.map((data, i) => (
-          <PostContainer key={i} data={data} />
+          <PostContainer key={i} data={data} index={i} />
         ))}
       </div>
     );

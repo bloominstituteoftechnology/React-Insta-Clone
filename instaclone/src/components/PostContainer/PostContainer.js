@@ -15,12 +15,16 @@ class PostContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      likes: this.props.data.likes
+      likes: this.props.data.likes,
+      postLiked: false
     };
   }
   plusLikes = () => {
     this.setState(prevState => {
-      return { likes: prevState.likes + 1 };
+      return {
+        likes: prevState.postLiked ? prevState.likes - 1 : prevState.likes + 1,
+        postLiked: !prevState.postLiked
+      };
     });
   };
   render() {
@@ -36,7 +40,10 @@ class PostContainer extends React.Component {
           <I className="far fa-comment" />
         </PostIcons>
         <PostLikes>{this.state.likes} likes</PostLikes>
-        <CommentSection comments={this.props.data.comments} />
+        <CommentSection
+          comments={this.props.data.comments}
+          index={this.props.index}
+        />
       </PostDiv>
     );
   }
