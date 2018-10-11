@@ -9,5 +9,5 @@ id="inst-clone"
 
 [build]
   base    = "./instagram"
-  publish = "./instagram/build"
+  publish = "./instagram/public"
   command = "yarn build"
