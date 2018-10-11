@@ -24,11 +24,13 @@ class CommentSection extends React.Component {
       this.setComments();
     }
   }
-   //saves currently displayed comments on unmount
+
+  //saves currently displayed comments on unmount
   componentWillUnmount() {
     this.setComments();
   }
-   //the function for saving comments to storage
+
+  //the function for saving comments to storage
   setComments = () => {
     localStorage.setItem(
       this.props.postId,
@@ -36,9 +38,9 @@ class CommentSection extends React.Component {
     );
   };
 
-
   addNewComment = (event, index) => {
     event.preventDefault();
+
     if (this.state.newComment !== "") {
       let newCommentList = [
         ...this.state.comments,
@@ -55,9 +57,8 @@ class CommentSection extends React.Component {
       });
       //after delay, updates comment list to storage
       setTimeout(() => {
-       this.setComments();
+        this.setComments();
       }, 500);
-
     }
   };
 
@@ -65,9 +66,7 @@ class CommentSection extends React.Component {
     this.setState({
       [key]: value
     });
-  
   };
-
 
   render() {
     return (

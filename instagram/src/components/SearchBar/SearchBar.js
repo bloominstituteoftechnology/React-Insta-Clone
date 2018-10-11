@@ -1,8 +1,10 @@
 import React from "react";
 import "./SearchBar.css";
+import { StyledHeader } from "./../../Styles.js";
+
 const SearchBar = props => {
   return (
-    <div className="searchbar">
+    <StyledHeader>
       <div className="logos">
         <img
           className="logo"
@@ -32,7 +34,7 @@ const SearchBar = props => {
         <i className="far fa-heart" />
         <i className="far fa-user" />
       </div>
-    </div>
+    </StyledHeader>
   );
 };
 
