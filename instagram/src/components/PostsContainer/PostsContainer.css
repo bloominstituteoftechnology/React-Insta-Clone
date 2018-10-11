@@ -7,6 +7,7 @@
   border-radius: 3px;
   margin-bottom: 30px;
   box-shadow: 2px 5px 10px lightgray;
+  background-color: white;
 }
 .main-image {
   width: 621px;
@@ -39,6 +40,7 @@
 }
 .fa-heart {
   padding: 8px 0px 0px 0px;
+  color: red;
 }
 
 .fa-comment {

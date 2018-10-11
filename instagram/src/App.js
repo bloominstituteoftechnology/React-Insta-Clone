@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PostsPage from "./components/PostsContainer/PostsPage";
 import Authenticate from "./components/Authentication/Authenticate";
 

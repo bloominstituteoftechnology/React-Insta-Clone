@@ -4,11 +4,12 @@
   background-size: cover;
 }
 
-h1 {
+.login-page h1 {
   color: white;
   text-align: center;
-  fmargin-top: 20px;
-  border: 1px solid red;
+  margin: 60px 0px;
+  font-family: "Unica One", sans-serif;
+  font-size: 40px;
 }
 
 body {
@@ -20,9 +21,9 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 300px;
+  width: 270px;
   margin: 20px auto;
-  background: #ccc;
+  background: rgb(206, 206, 206);
   border-radius: 10px;
   padding: 25px 20px 10px;
 }
@@ -36,6 +37,12 @@ body {
   color: white;
   background-color: #4897b1;
   white-space: nowrap;
+  box-shadow: 2px 2px 2px rgb(175, 175, 175);
+  font-family: "Unica One", sans-serif;
+}
+
+.login button:active {
+  background-color: #000000;
 }
 
 input {
