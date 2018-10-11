@@ -1,3 +1,12 @@
+/* input {
+    background: transparent;
+    color: black;
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+} 
+
 .comment-section-footer {
     margin: 10px auto;
     width: 50%;
@@ -14,4 +23,4 @@
     border: 1px solid lightgray;
     text-align: left;
     padding-left: 3%;
-}
+} */

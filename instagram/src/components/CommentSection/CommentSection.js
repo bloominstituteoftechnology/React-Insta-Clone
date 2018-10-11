@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import LikesComponent from "./Likes"
 import CommentContent from "./CommentContent";
 import AddComment from "../CommentSection/AddComment";
+import {CommentWrapper} from "../../styles";
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -48,7 +49,7 @@ class CommentSection extends React.Component {
     
     render(){
         return (
-            <div>
+            <CommentWrapper>
                 <LikesComponent
                 post={this.state.posts}
                 addLikes={this.addLikes}
@@ -61,7 +62,7 @@ class CommentSection extends React.Component {
                 newComment={this.state.newComment}
                 addNewComment={this.addNewComment}
                 textInputHandler={this.textInputHandler} />
-            </div>
+            </CommentWrapper>
         ); 
     }
 }

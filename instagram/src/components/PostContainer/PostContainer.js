@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import PostContent from "./PostContent";
 import CommentSection from "../CommentSection/CommentSection";
+import {PostWrapper} from "../../styles";
 import "./PostContainer.css";
 
 
@@ -9,7 +10,7 @@ const PostContainer = props => {
     return (
         props.posts.map(post => {
             return (
-                <div key={post.timestamp}>
+                <PostWrapper key={post.timestamp}>
                     <PostContent 
                     post={post}
                     addLikes={props.addLikes} 
@@ -17,7 +18,7 @@ const PostContainer = props => {
                     <CommentSection
                     post={post}
                     />
-                </div>
+                </PostWrapper>
             );
         })
     )

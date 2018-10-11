@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./PostContent.css";
+import {PostHeader, PostedImage} from "../../styles";
 
 const PostContent = props => {
     return (
-        <div className="post">
-            <div className="post-header">
+        <div>
+            <PostHeader>
                 <img src={props.post.thumbnailUrl} alt="user avatar"></img>
                 <p>{props.post.username}</p>
-            </div>
-            <div className="post-content">
+            </PostHeader>
+            <PostedImage>
                 <img src={props.post.imageUrl} alt="insert machine learning generated description"></img>
-            </div>
+            </PostedImage>
         </div>
     );
 }

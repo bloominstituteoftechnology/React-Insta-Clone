@@ -1,9 +1,10 @@
 import React from "react";
+import {AddComments} from "../../styles";
 // import PropTypes from "prop-types";
 
 const AddComment = props => {
     return (
-        <div className="comment-section-footer">
+        <AddComments>
             <p>{props.post.timestamp}</p>
             <form onSubmit={props.addNewComment}>
             <input 
@@ -13,7 +14,7 @@ const AddComment = props => {
             onChange={props.textInputHandler} >
             </input>
             </form>
-        </div>
+        </AddComments>
     );
 }
 

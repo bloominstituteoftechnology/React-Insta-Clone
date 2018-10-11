@@ -1,13 +1,13 @@
 import React from "react";
 import logo from "../../images/instagram-new-logo.png";
-import {Header, LogoHeader, SearchDiv, UserDiv} from "../../styles";
+import {Header, LogoHeader, LogoImage, SearchDiv, UserDiv} from "../../styles";
 
 const SearchBar = props => {
     return (
         <Header>
             <LogoHeader>
                 <i className="fa fa-2x fa-instagram" aria-hidden="true"></i>
-                <img src={logo} alt="logo"></img>
+                <LogoImage src={logo} alt="logo"></LogoImage>
             </LogoHeader>
             <SearchDiv>
             <form onSubmit={props.searchPosts}>

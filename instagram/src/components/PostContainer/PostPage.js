@@ -51,7 +51,7 @@ class PostPage extends React.Component {
     
       render() {
         return (
-          <div className="App">
+          <div>
             <SearchBar 
             search={this.state.search}
             searchInputHandler={this.searchInputHandler}
