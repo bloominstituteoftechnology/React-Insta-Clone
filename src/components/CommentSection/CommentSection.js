@@ -3,6 +3,8 @@ import Comment from './Comment';
 import AddComment from './AddComment';
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styled from 'styled-components';
+import CommentsContainer from './CommentsContainer';
 import './comment.css';
 
 class CommentSection extends Component {
@@ -82,28 +84,40 @@ class CommentSection extends Component {
 
     render () {
         return (
-            <section className="comment-container">
-                <section className="comment-icons">
+            <CommentsContainer>
+                <CommmentIcons>
                     <FontAwesomeIcon icon='heart' onClick={this.addLike} />
                     <FontAwesomeIcon icon='comment-alt' />
-                </section>
+                </CommmentIcons>
                 <p><strong>{this.state.likes} likes</strong></p>
-                <section className="comments">
+                <Comments>
                     {this.state.comments.map(comment => (
                         <div>
                             <Comment user={comment.username}
                                     text={comment.text}/>
                         </div>
                     ))}
-                </section>
+                </Comments>
                 <section>
                     <AddComment value={this.state.newInput} onSubmit={this.submitHandler} 
                                 onChange={this.changeHandler}  />
                 </section>
-            </section>
+            </CommentsContainer>
         )
     }
 }
+
+const CommmentIcons = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 7%;
+    font-size: 18px;
+`;
+
+const Comments = styled.div`
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(239, 239, 239);
+`;
 
 CommentSection.propTypes = {
     comments: PropTypes.array,

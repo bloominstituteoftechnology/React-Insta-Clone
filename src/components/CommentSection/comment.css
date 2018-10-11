@@ -1,4 +1,4 @@
-.comment-container {
+/* .comment-container {
     display: flex;
     flex-direction: column;
     width: 98%;
@@ -15,8 +15,8 @@
     justify-content: space-between;
     width: 7%;
     font-size: 18px;
-}
-
+} */
+/* 
 .comments {
     padding-bottom: 10px;
     border-bottom: 1px solid rgb(239, 239, 239);
@@ -28,7 +28,7 @@
     font-weight: 400;
     font-size: 14px;
     padding-bottom: 5px;
-}
+} */
 
 .add-comment {
     display: flex;

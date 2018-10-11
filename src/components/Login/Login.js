@@ -18,15 +18,10 @@ class Login extends Component {
     }
 
     login = () => {
-        // let user = JSON.parse(localStorage.getItem('user'));
-
-        // if (!user) {
-        //     localStorage.setItem('user', this.state.username) // https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem
-        // }
-
-        // console.log(this.state.username)
-        // window.location.reload();
-        this.props.login()
+        const user = this.state.username;
+        localStorage.setItem('user', user) // https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem
+        window.location.reload();
+        // this.props.login()
     }
 
     render() {
