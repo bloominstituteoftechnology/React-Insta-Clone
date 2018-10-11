@@ -1,4 +1,5 @@
 import React from "react";
+import {StyledInput, LoginPage} from "../../styles"
 import "./Login.css"
 
 class Login extends React.Component {
@@ -31,23 +32,25 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div className="login">
+            <LoginPage>
                 <form onSubmit={this.login}>
-                    <input 
+                    <StyledInput 
+                        login
                         name="username" 
                         placeholder="username" 
                         onChange={this.setUsername} 
                         value={this.state.username}>
-                    </input>
-                    <input 
+                    </StyledInput>
+                    <StyledInput 
+                        login
                         name="password" 
                         placeholder="password"
                         onChange={this.setPassword}
                         value={this.state.password}>
-                    </input>
+                    </StyledInput>
                     <button name="login">Login</button>
                 </form>
-            </div>
+            </LoginPage>
     )
     }
 }

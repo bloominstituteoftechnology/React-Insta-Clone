@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {PostHeader, PostedImage} from "../../styles";
+import {PostHeader, PostedImageWrapper, PostedImage, Avatar, StyledText} from "../../styles";
 
 const PostContent = props => {
     return (
         <div>
             <PostHeader>
-                <img src={props.post.thumbnailUrl} alt="user avatar"></img>
-                <p>{props.post.username}</p>
+                <Avatar src={props.post.thumbnailUrl} alt="user avatar"></Avatar>
+                <StyledText bolder>{props.post.username}</StyledText>
             </PostHeader>
-            <PostedImage>
-                <img src={props.post.imageUrl} alt="insert machine learning generated description"></img>
-            </PostedImage>
+            <PostedImageWrapper>
+                <PostedImage src={props.post.imageUrl} alt="insert machine learning generated description"></PostedImage>
+            </PostedImageWrapper>
         </div>
     );
 }

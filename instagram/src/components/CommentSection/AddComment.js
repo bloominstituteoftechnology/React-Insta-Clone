@@ -1,18 +1,19 @@
 import React from "react";
-import {AddComments} from "../../styles";
+import {AddComments, StyledInput, StyledText} from "../../styles";
 // import PropTypes from "prop-types";
 
 const AddComment = props => {
     return (
         <AddComments>
-            <p>{props.post.timestamp}</p>
+            <StyledText timestamp>{props.post.timestamp}</StyledText>
             <form onSubmit={props.addNewComment}>
-            <input 
+            <StyledInput 
+            left
             name="newComment" 
             placeholder="Add a comment..." 
             value={props.newComment}
             onChange={props.textInputHandler} >
-            </input>
+            </StyledInput>
             </form>
         </AddComments>
     );

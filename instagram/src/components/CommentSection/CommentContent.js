@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {Comments} from "../../styles";
+import {Comments, StyledText} from "../../styles";
 
 const CommentContent = props => {
     return (
         props.comments.map(comment => {
             return (
                 <Comments key={Math.random()}>
-                    <p>{comment.username}</p>
-                    <p>{comment.text}</p>
+                    <StyledText bold>{comment.username}</StyledText>
+                    <StyledText>{comment.text}</StyledText>
                 </Comments>
             );
         })

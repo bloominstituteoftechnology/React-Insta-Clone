@@ -48,6 +48,10 @@ class PostPage extends React.Component {
         localStorage.removeItem("username");
         window.location.reload();
     }
+
+    reloadContent = () => {
+      this.setState({dummyData: data});
+    }
     
       render() {
         return (
@@ -57,6 +61,7 @@ class PostPage extends React.Component {
             searchInputHandler={this.searchInputHandler}
             searchPosts={this.searchPosts}
             logout={this.logout}
+            reloadContent={this.reloadContent}
             />
             <PostContainer 
             posts={this.state.dummyData}

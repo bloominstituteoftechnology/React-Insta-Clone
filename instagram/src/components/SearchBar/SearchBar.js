@@ -1,17 +1,18 @@
 import React from "react";
 import logo from "../../images/instagram-new-logo.png";
-import {Header, LogoHeader, LogoImage, SearchDiv, UserDiv} from "../../styles";
+import {Header, LogoHeader, LogoImage, SearchDiv, StyledInput, UserDiv} from "../../styles";
 
 const SearchBar = props => {
     return (
         <Header>
             <LogoHeader>
                 <i className="fa fa-2x fa-instagram" aria-hidden="true"></i>
-                <LogoImage src={logo} alt="logo"></LogoImage>
+                <LogoImage src={logo} alt="logo" onClick={props.reloadContent}>
+                </LogoImage>
             </LogoHeader>
             <SearchDiv>
             <form onSubmit={props.searchPosts}>
-            <input 
+            <StyledInput 
                 className="fa fa-search"
                 name= "search" 
                 placeholder="&#xF002; Search" 
