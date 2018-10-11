@@ -2,10 +2,19 @@ import React from 'react';
 import CommentSection from './CommentSection';
 import './PostContainer.css'
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const PostContainerDiv = styled.div`
+    border: 1px solid black;
+    margin: 30px 0;
+    width: 100%;
+`;
+
+
 
 function PostContainer(props) {
     return (
-        <div className='postContainer'>
+        <PostContainerDiv className='postContainer'>
             <header className='postHeader'>
                 <img className='userThumbnail' src={props.postData.thumbnailUrl} alt=''/>
                 <h2 className='username'>{props.postData.username}</h2>
@@ -25,7 +34,7 @@ function PostContainer(props) {
                         value={props.commentInput} 
                         onChange={props.commentInputHandler}/>
             </form>
-        </div>
+        </PostContainerDiv>
     )
 }
 
