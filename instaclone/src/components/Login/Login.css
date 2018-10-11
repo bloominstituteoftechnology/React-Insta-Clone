@@ -20,7 +20,7 @@ body {
   box-shadow: 1px 1px 1px lightgrey;
 }
 
-.loginForm h2,
+.loginForm h1,
 .loginForm p {
   margin: 0 20px 10px;
   text-align: center;
@@ -46,7 +46,7 @@ input[type='submit'] {
   border-radius: 5px;
   color: white;
   font-size: 1rem;
-  width: 275px;
-  height: 25px;
+  width: 290px;
+  height: 35px;
   margin-bottom: 15px;
 }

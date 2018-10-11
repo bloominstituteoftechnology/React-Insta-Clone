@@ -21,18 +21,19 @@ class Login extends React.Component {
       <div className="loginPage">
         <img src="https://i.imgur.com/K0GVTfd.png" alt="" />
         <form className="loginForm">
-          <h2>
+          <h1>
             Welcome To <br /> React-Insta-Clone
-          </h2>
+          </h1>
           <p>Sign up to see photos and videos from your friends</p>
           <input type="submit" value="Log in with Facebook" />
-          <hr />
+          <p>--------------- OR ---------------</p>
           <input
             type="text"
             name="username"
             placeholder="Username"
             onChange={this.handleInputChange}
             value={this.state.username}
+            required
           />
           <input
             type="password"
@@ -40,6 +41,7 @@ class Login extends React.Component {
             placeholder="Password"
             onChange={this.handleInputChange}
             value={this.state.password}
+            required
           />
           <input
             type="submit"

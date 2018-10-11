@@ -12,30 +12,24 @@ class CommentSection extends React.Component {
     };
   }
   addNewComment = e => {
-    let newComments = [
-      ...this.state.comments,
-      { username: localStorage.getItem("user"), text: this.state.comment }
-    ];
-    if (e.key === "Enter") {
-      this.setState({
-        comments: newComments,
-        comment: ""
-      });
+    if (this.state.comment) {
+      let newComments = [
+        ...this.state.comments,
+        { username: localStorage.getItem("user"), text: this.state.comment }
+      ];
+      if (e.key === "Enter") {
+        this.setState({
+          comments: newComments,
+          comment: ""
+        });
+      }
     }
-    localStorage.setItem(
-      `post${this.state.index}`,
-      JSON.stringify(newComments)
-    );
   };
   deleteComment = index => {
     let filteredComments = this.state.comments.filter(
       (comment, i) => index !== i
     );
     this.setState({ comments: filteredComments });
-    localStorage.setItem(
-      `post${this.state.index}`,
-      JSON.stringify(filteredComments)
-    );
   };
   onCommentChange = e => {
     this.setState({ [e.target.name]: e.target.value });
