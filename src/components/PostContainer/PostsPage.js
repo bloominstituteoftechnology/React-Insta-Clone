@@ -9,7 +9,7 @@ class PostsPage  extends React.Component {
         console.log(props, 'hello')
         this.state = {
             post: props.posting,
-            filteredPosts: [],
+            filtered: [],
           }
     }
     
@@ -20,7 +20,7 @@ class PostsPage  extends React.Component {
                      return post; 
                  }
              });
-             this.setState({filteredPosts: post})
+             this.setState({filtered: post})
              }
 
     render() { 
@@ -31,8 +31,8 @@ class PostsPage  extends React.Component {
                 filterSearch = {this.filterSearch}                          
                 />
                 <PostContainer posts = {
-                    this.state.filteredPosts.length > 0
-                    ? this.state.filteredPosts: 
+                    this.state.filtered.length > 0
+                    ? this.state.filtered: 
                     this.state.post
                     } 
                 />
