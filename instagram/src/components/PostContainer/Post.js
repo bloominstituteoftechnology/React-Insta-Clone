@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import LikeSection from './LikeSection';
 import './Posts.css'
+import {ImgAndComment} from './StyledPosts'
 
 class Post extends React.Component {
     constructor (props) {
@@ -28,7 +29,7 @@ class Post extends React.Component {
 
     render() {
         return (
-            <div className="img-and-comment">
+            <ImgAndComment>
                 <PostHeader
                     thumbnailUrl={this.props.post.thumbnailUrl}
                     username={this.props.post.username}
@@ -42,7 +43,7 @@ class Post extends React.Component {
                 </div>
                 <LikeSection incrementLike={this.incrementLike} likes={this.state.likes} bool={this.state.liked} />
                 <CommentSection comments={this.props.post.comments}/>
-            </div>
+            </ImgAndComment>
         )
 
 

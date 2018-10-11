@@ -1,13 +1,14 @@
 import React from 'react'
 import './Posts.css'
+import {LikeSectionDiv, LikesNuserName } from './StyledPosts'
 
 const LikeSection = (props) => {
     return (
-        <div className="like-sect">
+        <LikeSectionDiv>
             <i onClick={props.incrementLike} className={ !props.bool ? "far fa-heart" : "fas fa-heart"}></i>
             <i className="far fa-comment"></i>
-            <h4 className="like-heart">{props.likes} likes</h4>
-        </div>
+            <LikesNuserName>{props.likes} likes</LikesNuserName>
+        </LikeSectionDiv>
     )
 }
 

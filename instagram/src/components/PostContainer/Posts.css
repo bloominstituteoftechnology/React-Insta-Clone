@@ -1,20 +1,10 @@
-.post-container {
-    width: 655px;
-    height: 100%;
-    margin: 0px 400px;
-}
 
-.img-and-comment {
-    border: 1px solid lightgray;
-    margin-top: 150px;
-    background: white;
-}
 .comment-border {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     line-height: 2.5px;
-    margin-top: -15px;
+    margin-top: 15px;
     margin-left: 45px;
 }
 
@@ -49,10 +39,6 @@
     margin: 10px;
 }
 
-.like-sect {
-    text-align: start;
-    margin-left: 44px;
-}
 
 .far {
     margin-left: 0px;
@@ -61,9 +47,4 @@
 .fas {
     margin: 10px;
     font-size: 24px;
-}
-
-.like-heart {
-    margin-top: 5px;
-
 }

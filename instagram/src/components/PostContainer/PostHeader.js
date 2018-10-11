@@ -1,5 +1,6 @@
 import React from 'react';
 import './Posts.css';
+import {LikesNuserName} from './StyledPosts'
 
 const PostHeader = props => {
     return (
@@ -8,9 +9,9 @@ const PostHeader = props => {
                  className="user-picture" 
                  src={props.thumbnailUrl}>
             </img>
-            <h4>
+            <LikesNuserName>
                 {props.username}
-            </h4>
+            </LikesNuserName>
         </div>
     )
 }
