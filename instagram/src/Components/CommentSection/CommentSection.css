@@ -65,6 +65,8 @@
 
 .comment-container {
     width: 100%;
+    max-height: 90px;
+    overflow: scroll;
 }
 
 .comment {
@@ -100,7 +102,7 @@
     justify-content: space-between;
 }
 
-.comment-input textarea {
+.comment-input input {
     height: 18px;
     width: 556px;
     font-size: 14px;

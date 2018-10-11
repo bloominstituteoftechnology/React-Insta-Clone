@@ -94,7 +94,7 @@ class CommentSection extends Component {
                 onSubmit={this.addNewComment}
                 style={{display: `${this.state.showInput?'flex':'none'}`}}
             >
-                <textarea 
+                <input
                     placeholder="Add a comment..." 
                     value={this.state.commentValue}
                     onChange={this.changeHandler}
