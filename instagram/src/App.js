@@ -4,6 +4,7 @@ import './App.css';
 import Search from './components/SearchBar/Search.js';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer.js';
+import PropTypes from 'prop-types';
 
 
 class App extends React.Component {
@@ -11,7 +12,8 @@ class App extends React.Component {
     super();
 
     this.state = {
-       data: []
+       data: [],
+       newData:[]
     }
    }
    componentDidMount() {
@@ -19,15 +21,27 @@ class App extends React.Component {
          data: dummyData
       })
    }
-
+   addLikes = () => {
+     this.setState({
+         
+     })
+   }
   render() {
+    let data = this.state.data;
     return (
+     
       <div className="App">
         <Search  />
-        {this.state.data.map(postObject=> <PostContainer key={postObject.likes} card={postObject} />)}
+        {data.map(postObject=> <PostContainer key={postObject.likes} card={postObject} />)}
       </div>
     );
   }
+}
+
+PostContainer.propTypes = {
+    card:PropTypes.arrayOf({
+        key: PropTypes.number.isRequired
+    })
 }
 
 export default App;

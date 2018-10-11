@@ -9,8 +9,8 @@ class PostContainer extends Component {
         return(
             <div className='post-container'>
               <div className='container'>
-                <Card key={this.props.card.timestamp} card={this.props.card} />
-                <CommentSection key={this.props.card.likes} comments={this.props.card.comments} likes={this.props.card.likes}  />
+                <Card key={this.props.card.likes} card={this.props.card} />
+                <CommentSection key={Date.now()} comments={this.props.card.comments} likes={this.props.card.likes}  />
                </div>
             </div>
         );

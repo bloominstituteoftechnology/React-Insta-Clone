@@ -32,7 +32,7 @@ span {
     border-radius: 0px;
     border: none;
     border-top: 1px solid lightgrey;
-    color: lightgray;
+    color: rgba(0,0,0,.6);
     font-size:16px;
 }
 
