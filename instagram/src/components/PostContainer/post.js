@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 // import "./PostContainer.css";
 import CommentSection from "../CommentSection/commentsection";
 import PostLikes from "./PostLikes";
@@ -10,6 +11,9 @@ import {
   LargeImgPostWrapper,
   IconsLikesComments
 } from "./PostSyles.js";
+
+
+
 
 const Post = props => {
   return (
@@ -32,5 +36,16 @@ const Post = props => {
     </PostWrapper>
   );
 };
+
+Post.propTypes ={
+  post: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string
+  })
+};
+
+
+
 
 export default Post;
