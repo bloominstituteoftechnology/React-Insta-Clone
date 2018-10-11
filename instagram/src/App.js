@@ -18,28 +18,24 @@ class App extends Component {
     }, 500)
   }
 
-  // searchFilter = (event) => {
-  //   event.preventDefault();
-  //   console.log(event.target.vaule);
-  //   this.setState({
-  //     data: this.state.data.filter(post => {
-  //       return {
-  //         username: event.target.vaule,
-  //         tuhmbnailURL: post.tuhmbnailURL,
-  //         imageURL: post.imageURL,
-  //         likes: post.likes,
-  //         timestamp: post.timestamp,
-  //         comments: post.comments,
-  //       }
-  //     })
-  //   })
-  // }
+  searchFilter = (event) => {
+    event.preventDefault();
+    if (event.keyCode === 13 && event.target.value.length > 0) {
+      let newData = this.state.data.filter((data) => {
+        return data.username === event.target.value;
+      })
+      this.setState({ data: newData });
+      event.target.value = '';
+    }
+  }
 
   render() {
 
     return (
       <div className="App">
-        <PostsPage dummyData={this.state.data} search={this.searchFilter} />
+        <PostsPage
+          dummyData={this.state.data}
+          search={this.searchFilter} />
       </div >
     );
   }

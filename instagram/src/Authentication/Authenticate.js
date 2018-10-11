@@ -7,11 +7,11 @@ const Authenticate = PassedComponent =>
             super();
 
             this.state = {
-                loggedIn: false,
+                loggedIn: true,
             }
         }
 
-        
+
 
         render() {
             if (this.state.loggedIn === false) {
