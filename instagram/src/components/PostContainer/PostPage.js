@@ -1,32 +1,31 @@
-import React from 'react'
-import SearchBar from '../SearchBar/SearchBar'
-import PostContainer from './PostContainer'
-import dummyData from '../../dummy-data'
+import React from "react";
+import SearchBar from "../SearchBar/SearchBar";
+import PostContainer from "./PostContainer";
+import dummyData from "../../dummy-data";
 
 class PostPage extends React.Component {
-    constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
-        postData: [],
-    }
-}
-
-changeHandler = event => {
-    this.setState({[event.target.name]: event.target.value });
+      postData: []
+    };
   }
 
-componentDidMount() {
+  changeHandler = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
+  componentDidMount() {
     this.setState({ postData: dummyData });
   }
-    render() {
+  render() {
     return (
-        <div>
+      <div>
         <SearchBar />
         <PostContainer postItems={this.state.postData} />
-        </div>
-    )
-} 
-
+      </div>
+    );
+  }
 }
 
-export default PostPage
+export default PostPage;

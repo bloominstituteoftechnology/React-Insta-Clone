@@ -1,24 +1,29 @@
 import React from 'react'
+import { SearchBarDiv, LogoContainer, IGWidget, 
+        LineSpacer, IGLogo, SearchInput, IconContainer,
+    
+    } from '../../Styles'
+
 
 
 
 const SearchBar = () => {
     return (
-        <div className="searchBarDiv">
-            <div className="logoContainer">
-                <div className="IGWidget"></div>
-                <div className="lineSpacer"></div>
-                <div className="IGLogo"></div>
-            </div>
+        <SearchBarDiv>
+            <LogoContainer>
+                <IGWidget></IGWidget>
+                <LineSpacer></LineSpacer>
+                <IGLogo></IGLogo>
+            </LogoContainer>
 
-         <input placeholder="search" className="searchInput"></input>
+         <SearchInput placeholder="search"></SearchInput>
 
-            <div className="iconContainer">
+            <IconContainer>
                 <i className="far fa-circle"></i>
                 <i className="far fa-heart"></i>
                 <i className="far fa-user"></i>
-            </div>
-        </div>
+            </IconContainer>
+        </SearchBarDiv>
     )
 }
 
