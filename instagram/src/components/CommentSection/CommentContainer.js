@@ -28,7 +28,7 @@ class CommentContainer extends React.Component {
         </div>
 
         <div className='post__comments'>
-          {this.state.comments.map((comment, i) => <Comment key={i} comment={comment} />)}
+          {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
         </div>
       </div>
     ) 

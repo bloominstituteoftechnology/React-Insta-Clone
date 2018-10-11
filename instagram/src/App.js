@@ -8,10 +8,11 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      posts: data
+      posts: []
     };
   }
 
+  
   componentDidMount() {
     console.log('CDM: Component Did Mount');
     this.setState({posts: data}); 
