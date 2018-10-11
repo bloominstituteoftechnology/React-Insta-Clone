@@ -1,4 +1,7 @@
 import React from "react";
+import { Instagram } from "react-feather";
+
+import { AppContainer, LoginHeader, LoginForm } from "../../styles";
 
 class Login extends React.Component {
     constructor() {
@@ -28,11 +31,12 @@ class Login extends React.Component {
 
     render() {
         return(
-            <div className="login-screen">
-                <header>    
+            <AppContainer>
+                <LoginHeader>
+                    <Instagram />
                     <h1>Instagram</h1>
-                </header>
-                <form>
+                </LoginHeader>
+                <LoginForm>
                     <input 
                         type="text" 
                         placeholder="Username" 
@@ -46,8 +50,8 @@ class Login extends React.Component {
                         onChange={this.passChangeHandler}
                     />
                     <button type="submit" onClick={this.submit}>Login</button>
-                </form>
-            </div>
+                </LoginForm>
+            </AppContainer>
         );
     }
 }

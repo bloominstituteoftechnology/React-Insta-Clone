@@ -10,7 +10,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = { 
-      data: []
+      data: [],
+      searchText: ""
     };
   }
 
@@ -27,7 +28,7 @@ class App extends Component {
   render() {
     return (
       <AppContainer>
-        <PostsPage data={this.state.data} logout={this.logout} />
+        <PostsPage data={this.state.data} logout={this.logout} searchText={this.state.searchText} />
       </AppContainer>
     );
   }

@@ -6,6 +6,25 @@ export const AppContainer = styled.div`
     margin: 0 auto;
 `;
 
+export const LoginHeader = styled.header`
+    display: flex;
+    align-items: center;
+
+    h1 {
+        margin-left: 15px;
+    }
+`;
+
+export const LoginForm = styled.form`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    input, button {
+        margin: 5px;
+    }
+`;
+
 export const SearchHeader = styled.header`
     display: flex;
     justify-content: space-between;
