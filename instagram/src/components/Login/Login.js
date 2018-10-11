@@ -18,6 +18,7 @@ const StyledForm = styled.form`
     height: 300px;
     background: white;
     border: 0.5px solid lightgrey;
+    border-radius: 2px;
     width: 348px;
     height: 500px;
     margin-left: 50px;
@@ -38,6 +39,9 @@ const Input = styled.input`
     width: 240px;
     border-radius: 3px;
     border: 0.5px solid lightgrey;
+    background: #fafafa;
+    font-size: 10px;
+    outline: none;
 `;
 
 const Button = styled.button`
@@ -64,8 +68,8 @@ let Login = props => {
             <StyledForm>
                 <Wordmark src={require('./assets/wordmark.svg')} alt='wordmark' />
                 <StyledHeader>Log in to see photos and videos from your friends.</StyledHeader>
-                <Input type="text" name="username" value={props.value} placeholder="username"/>
-                <Input type="password" name="password" value={props.value} placeholder="password"/>
+                <Input type="text" name="username" value={props.value} placeholder="Username"/>
+                <Input type="password" name="password" value={props.value} placeholder="Password"/>
                 <Button onClick={props.login}>Log In</Button>
                 <StyledHeader>By logging in, you agree to our Terms, Data Policy and Cookies Policy.</StyledHeader>
             </StyledForm>
