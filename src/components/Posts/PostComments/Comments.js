@@ -65,7 +65,7 @@ render(){
         <div className="commentsContainer">
         { this.state.counter === 1 ? ( <p className={"like"}></p> ) : ( <p className={"likes"}>{this.state.counter} likes</p> )}
         <div className={"action"} id={"likeAction"} ref={"likeAction"} onClick={this.addLike}></div>
-        <div className={"action"} id={"redLikeAction"} ref={"redLikeAction"} onClick={this.removeLike}></div>
+        <div className={"action"} id={"redLikeAction"} ref={"likeAction"} onClick={this.removeLike}></div>
         <div className={"action"} id={"commentAction"}></div>
         
             {this.state.comments.map(instance => {
