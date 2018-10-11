@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./CommentSection.css";
+import { CommentP, I } from "./Styles";
 
 const Comment = props => (
-  <p className="comment">
+  <CommentP>
     <strong>{props.comment.username}</strong> {props.comment.text}{" "}
-    <i
+    <I
       className="fas fa-minus-circle"
       onClick={() => props.deleteComment(props.i)}
     />
-  </p>
+  </CommentP>
 );
 
 Comment.propTypes = {

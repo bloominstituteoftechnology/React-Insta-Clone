@@ -1,6 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./PostContainer.css";
+import {
+  PostDiv,
+  PostTitle,
+  PostTitleImg,
+  PostImg,
+  PostIcons,
+  I,
+  PostLikes
+} from "./Styles";
 import CommentSection from "../CommentSection/CommentSection";
 
 class PostContainer extends React.Component {
@@ -17,19 +25,19 @@ class PostContainer extends React.Component {
   };
   render() {
     return (
-      <div className="post">
-        <div className="postTitle">
-          <img src={this.props.data.thumbnailUrl} alt="" />
+      <PostDiv>
+        <PostTitle>
+          <PostTitleImg src={this.props.data.thumbnailUrl} alt="" />
           <p>{this.props.data.username}</p>
-        </div>
-        <img className="postImage" src={this.props.data.imageUrl} alt="" />
-        <div className="postIcons">
-          <i className="far fa-heart" onClick={this.plusLikes} />
-          <i className="far fa-comment" />
-        </div>
-        <p className="likes">{this.state.likes} likes</p>
+        </PostTitle>
+        <PostImg src={this.props.data.imageUrl} alt="" />
+        <PostIcons>
+          <I className="far fa-heart" onClick={this.plusLikes} />
+          <I className="far fa-comment" />
+        </PostIcons>
+        <PostLikes>{this.state.likes} likes</PostLikes>
         <CommentSection comments={this.props.data.comments} />
-      </div>
+      </PostDiv>
     );
   }
 }

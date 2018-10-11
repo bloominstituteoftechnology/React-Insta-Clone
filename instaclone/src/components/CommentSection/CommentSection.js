@@ -1,5 +1,5 @@
 import React from "react";
-import "./CommentSection.css";
+import { CommentInput } from "./Styles";
 import Comment from "./Comment";
 
 class CommentSection extends React.Component {
@@ -21,12 +21,14 @@ class CommentSection extends React.Component {
         comment: ""
       });
     }
+    localStorage.setItem("comments", JSON.stringify(newComments));
   };
   deleteComment = index => {
     let filteredComments = this.state.comments.filter(
       (comment, i) => index !== i
     );
     this.setState({ comments: filteredComments });
+    localStorage.setItem("comments", JSON.stringify(filteredComments));
   };
   onCommentChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -42,9 +44,8 @@ class CommentSection extends React.Component {
             deleteComment={this.deleteComment}
           />
         ))}
-        <input
+        <CommentInput
           type="text"
-          id="commentInput"
           name="comment"
           placeholder="Add a comment..."
           onChange={this.onCommentChange}

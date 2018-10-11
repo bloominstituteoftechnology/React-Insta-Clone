@@ -1,26 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./SearchBar.css";
+import {
+  SearchDiv,
+  SearchLogoDiv,
+  SearchIconDiv,
+  SearchInput,
+  I
+} from "./Styles";
 
 const SearchBar = props => {
   return (
-    <div className="searchBar">
-      <div className="instaLogo">
+    <SearchDiv>
+      <SearchLogoDiv>
         <i className="fab fa-instagram"> | Instagram</i>
-      </div>
-      <input
+      </SearchLogoDiv>
+      <SearchInput
         type="text"
         name="search"
         value={props.search}
         onChange={props.onInputChange}
         placeholder="Search"
       />
-      <div className="instaIcons">
-        <i className="far fa-compass" />
-        <i className="far fa-heart" />
-        <i className="far fa-user" onClick={props.handleLogOut} />
-      </div>
-    </div>
+      <SearchIconDiv className="">
+        <I className="far fa-compass" />
+        <I className="far fa-heart" />
+        <I className="far fa-user" onClick={props.handleLogOut} />
+      </SearchIconDiv>
+    </SearchDiv>
   );
 };
 

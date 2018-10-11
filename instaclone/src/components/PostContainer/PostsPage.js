@@ -18,7 +18,7 @@ class PostsPage extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
   handleLogOut = () => {
-    localStorage.clear();
+    localStorage.removeItem("user");
     window.location.reload();
   };
   render() {
