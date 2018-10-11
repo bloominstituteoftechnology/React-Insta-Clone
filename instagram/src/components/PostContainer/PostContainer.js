@@ -12,7 +12,7 @@ class PostContainer extends React.Component{
     render(props){
         return(
             <div className="postContDiv">
-            <div>{props.data.username}</div>
+            <div>{this.props.data.username}</div>
                <CommentContainer 
 
                Comment={this.props.Comment}

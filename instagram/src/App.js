@@ -41,7 +41,22 @@ commentUpdater = (event) => {
   })
 }
 
+LikeButton = () => (
+
+  <i className="fa fa-heart like-button" />
+
+);
+
+
+
+Comment = () => (
+
+  <i className="fa fa-comment comment "/>
+
+);
 render(){
+
+    
   return(
     <div>
     <Authenticate />
@@ -64,7 +79,32 @@ render(){
         
         )}
     />
-    <PostContainer />
+    <PostContainer
+
+      commentUpdater={this.commentUpdater}
+
+
+
+inputText={this.inputText}
+
+
+
+
+   LikeButton={this.LikeButton}
+
+
+
+   Comment={this.Comment}
+
+
+
+   newComment={this.state.newComment} 
+
+
+
+   data={this.state.data}
+    
+     />
     <PostsPage 
         commentUpdater={this.commentUpdater}
 

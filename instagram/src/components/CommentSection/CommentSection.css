@@ -48,5 +48,26 @@ table {
 }
 
 .cmntSectDiv {
-	border: 2px solid blue !important;
+	
+}
+
+.AddComment{
+	border: 7px solid green !important ;
+}
+
+.commentMap {
+	border: 2px solid yellow !important ;
+}
+
+.thumbnailImg {
+	border: 4px solid red !important ;
+	border-radius: 50% ;
+	height: 40px ;
+	width: 40px ;
+}
+
+.imageUrl {
+	border: 5px solid pink ;
+	display: flex ;
+	justify-content: center ;
 }

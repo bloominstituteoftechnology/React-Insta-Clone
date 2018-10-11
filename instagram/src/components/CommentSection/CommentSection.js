@@ -93,16 +93,18 @@ class CommentSection extends React.Component {
     return(
         <div className="cmntSectDiv">
         {this.props.data.map(item => <div key={item.timestamp}>
+           
+            <img className="thumbnailImg" alt="" src={item.thumbnailUrl} /> 
             {item.username}
 <AddComment addComment={this.AddComment} commentUpdater={this.CommentUpdater} data={this.state.data} />
-            <img alt="" src={item.thumbnailUrl} />
-            <img alt="" src={item.imageUrl} />
-            <div>{item.likes}</div>
+            <div className="imageUrl" > <img  alt="" src={item.imageUrl} /> </div>
+            
+            <div>{item.likes} likes</div>
             <div>{item.timestamp}</div>
             {this.props.LikeButton()}
             {this.props.Comment()}
            
-            <div>{item.comments.map(item =>
+            <div className="commentMap">{item.comments.map(item =>
             
             <div key={item.text}>
                 {item.username}
