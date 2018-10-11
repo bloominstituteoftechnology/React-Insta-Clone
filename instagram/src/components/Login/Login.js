@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Input } from '../../Styles/Input';
 
 const LoginForm = styled.form`
   margin: 20rem auto 0;
@@ -17,21 +18,6 @@ const LogoImage = styled.img`
   margin: 0 auto 2rem;
 `;
 
-const LoginInput = styled.input`
-  background: #fafafa;
-  outline: 0;
-  border: 1px solid #dbdbdb;
-  margin-bottom: 1rem;
-  font-size: inherit;
-  padding: 0.5rem 1rem;
-  border-radius: 2.5px;
-  font-weight: 300;
-
-  &:focus {
-    border: 1px solid #8e8e8e;
-  }
-`;
-
 const LoginButton = styled.button`
   background: #5097e9;
   color: #fff;
@@ -47,13 +33,15 @@ const Login = ({ loginInput, validateUser }) => {
   return (
     <LoginForm onSubmit={validateUser}>
       <LogoImage src="logo.png" alt="Instagram" />
-      <LoginInput
+      <Input
+        login
         type="text"
         placeholder="Username"
         onChange={loginInput}
         name="username"
       />
-      <LoginInput
+      <Input
+        login
         type="password"
         placeholder="Password"
         onChange={loginInput}

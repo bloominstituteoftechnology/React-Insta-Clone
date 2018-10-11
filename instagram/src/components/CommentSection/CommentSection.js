@@ -55,12 +55,9 @@ class CommentSection extends React.Component {
       };
     });
     localStorage.setItem(index, JSON.stringify(comments));
-    // Need to figure out why state isn't updating this
-    // e.target.firstChild.value = '';
   };
 
   updateText = e => {
-    console.log(e.target);
     this.setState({ commentText: e.target.value });
   };
 

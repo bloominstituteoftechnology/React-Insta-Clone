@@ -1,16 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Input } from '../../Styles/Input';
 
 const CommentForm = styled.form`
   position: relative;
-`;
-
-const NewComment = styled.input`
-  border: none;
-  outline: 0;
-  font-size: 1.4rem;
-  margin-top: 2rem;
-  width: 100%;
 `;
 
 const CommentOptions = styled.div`
@@ -23,7 +16,8 @@ const CommentOptions = styled.div`
 const CommentInput = ({ addNewComment, commentText, updateText, id }) => {
   return (
     <CommentForm onSubmit={e => addNewComment(e, id)}>
-      <NewComment
+      <Input
+        comment
         type="text"
         placeholder="Add a comment..."
         value={commentText}

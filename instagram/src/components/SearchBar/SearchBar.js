@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Container from '../../Styles/Container';
+import { Input } from '../../Styles/Input';
 
 const Header = styled.header`
   height: 77px;
@@ -43,23 +44,6 @@ const InputContainer = styled.form`
   position: relative;
 `;
 
-const SearchInput = styled.input`
-  padding: 8px 0;
-  width: 215px;
-  height: 28px;
-  background: #fafafa;
-  border: 1px solid #dbdbdb;
-  border-radius: 5px;
-  text-align: center;
-  outline: 0;
-
-  &:focus {
-    text-align: left;
-    padding-left: 2rem;
-    background: #fff;
-  }
-`;
-
 const SearchIcon = styled.label`
   position: absolute;
   top: 50%;
@@ -88,7 +72,8 @@ const SearchBar = ({ filterUsers, updateValue }) => {
           </Brand>
         </LogoHeader>
         <InputContainer onSubmit={e => filterUsers(e)}>
-          <SearchInput
+          <Input
+            search
             type="text"
             placeholder="Search"
             className="SearchBar-Input"
