@@ -13,7 +13,8 @@ const authRequired = App => class extends Component {
                     username: 'test',
                     password: 'password',
                 },
-            ]
+            ],
+            attempted: false,
         }
     }
 
@@ -36,9 +37,16 @@ const authRequired = App => class extends Component {
             }
         });
 
-        if(!userExists) return;
-        if (currentUser.password === this.state.password) 
-            this.setState({auth: true}, localStorage.setItem('auth', 'true'));
+        if(!userExists) {
+            this.setState({attempted: true})
+            return;
+        } 
+        if (currentUser.password !== this.state.password){
+            this.setState({attempted: true})
+            return;
+        }
+            
+        this.setState({auth: true}, localStorage.setItem('auth', 'true'));
     }
 
     changeHandler = (event) => {
@@ -53,6 +61,7 @@ const authRequired = App => class extends Component {
             username={this.state.username}
             password={this.state.password}
             change={this.changeHandler}
+            attempted={this.state.attempted}
         />;
     }
 }

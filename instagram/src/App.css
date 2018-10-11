@@ -42,12 +42,3 @@
   margin: 0 auto;
   position: relative;
 }
-
-.sprite {
-  background: url(./assets/icons-sprite.png);
-  background-size: 241px 213px;
-}
-.sprite-core {
-  background: url(./assets/sprite-core.png);
-  background-size: 437px 386px;
-}
