@@ -9,12 +9,16 @@ const AddCommentForm = styled.form`
     margin-top: 6px;
     margin-bottom: 20px;
     `;
+
+const AddCommentInput = styled.input`
+    border: none;
+`;
     
 
 const CommentInput = props => {
     return (
         <AddCommentForm onSubmit={props.submitComment}>
-        <input
+        <AddCommentInput
           type="text"
           value={props.comment}
           placeholder="Add comment... "
