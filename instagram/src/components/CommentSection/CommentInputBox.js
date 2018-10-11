@@ -11,6 +11,7 @@ const CommentInputBox = (props) => {
                     type = "text"
                     name = "comment"
                     value = {props.comment}
+                    onFocus = ''
                     placeholder = "comment... " />
             </form>
         </div>
