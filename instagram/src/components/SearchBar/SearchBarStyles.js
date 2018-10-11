@@ -39,7 +39,7 @@ export const Input = styled.input`
 export const Placeholder = styled.div`
   font-size: 1.6rem;
   position: absolute;
-  display: flex;
+  display: ${({ focused }) => focused ? 'none' : 'flex'}
   align-items: center;
   width: fit-content;
   height: fit-content;
@@ -48,4 +48,5 @@ export const Placeholder = styled.div`
   top: 0;
   bottom: 0;
   margin: auto;
+  pointer-events: none;
 `
