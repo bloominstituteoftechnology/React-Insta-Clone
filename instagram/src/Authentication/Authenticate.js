@@ -38,7 +38,7 @@ const Authenticate = (App, Login) =>
             <App />
           ) : (
             <Login
-              usernameInput={this.usernameInput}
+              loginInput={this.loginInput}
               validateUser={this.validateUser}
             />
           )}

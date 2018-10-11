@@ -48,14 +48,12 @@ const Login = ({ loginInput, validateUser }) => {
     <LoginForm onSubmit={validateUser}>
       <LogoImage src="logo.png" alt="Instagram" />
       <LoginInput
-        className="Login-Input"
         type="text"
         placeholder="Username"
         onChange={loginInput}
         name="username"
       />
       <LoginInput
-        className="Login-Input"
         type="password"
         placeholder="Password"
         onChange={loginInput}
