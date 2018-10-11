@@ -19,14 +19,12 @@ class PostsPage extends Component {
   }
 
   searchPostsHandler = e => {
-    // eslint-disable-next-line
-    const posts = this.state.posts.filter(post => {
-      if (post.username.includes(e.target.value)) {
-        return post;
-      }
-    });
+    const posts = this.state.posts.filter(post =>
+      (post.username.includes(e.target.value)) 
+    );
     this.setState({ filteredPosts: posts });
   };
+
   render() {
     return (
       <div className="App">

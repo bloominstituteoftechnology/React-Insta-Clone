@@ -8,7 +8,7 @@ class Login extends Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
     };
   }
 
@@ -57,6 +57,3 @@ class Login extends Component {
 }
 
 export default Login;
-
-// localStorage.setItem('username', this.state.username);
-// localStorage.setItem('password', this.state.password);

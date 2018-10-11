@@ -22,6 +22,7 @@ const SearchBar = props => {
         placeholder=' &#x1F50D; Search' 
         value={props.filterTarget} 
         onChange={props.changeHandler}
+        onKeyDown={props.searchPosts} 
         name='filterTarget'
         />
         
