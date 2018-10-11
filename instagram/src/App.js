@@ -12,10 +12,10 @@ class App extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   console.log('CDM: Component Did Mount');
-  //   this.setState({posts: data}); 
-  // }
+  componentDidMount() {
+    console.log('CDM: Component Did Mount');
+    this.setState({posts: data}); 
+  }
   
   
   render() {

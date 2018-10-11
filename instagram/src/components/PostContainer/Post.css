@@ -1,5 +1,6 @@
 .container {
   padding: 0 30vw;
+  border: 10px solid red;
 }
 
 .post {
@@ -30,4 +31,25 @@
 
 .post__content--img {
   width: 100%;
+}
+
+.post__icons {
+  margin-bottom: 10px;
+}
+
+.post__icons--icon {
+  margin-right: 30px;
+}
+
+.post__comment {
+  margin-bottom: 10px;
+}
+
+.post__comment--username {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.post__comment--comment {
+  font-weight: 500;
 }

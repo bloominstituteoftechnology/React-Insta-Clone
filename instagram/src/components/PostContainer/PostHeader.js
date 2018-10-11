@@ -3,12 +3,12 @@ import './Post.css';
 
 const PostHeader = props => {
   return (
-    <div>
+    <div className='post__header'>
       <div>
-        <img src={props.thumbnailUrl} alt="no" />
+        <img className='post__header--avatar' src={props.thumbnailUrl} alt="no" />
       </div>
       <div>
-        <h3>{props.username}</h3>
+        <h3 className='post__header--username'>{props.username}</h3>
       </div>
       
     </div>
