@@ -2,10 +2,28 @@ import React from 'react';
 const Authenticate = App => class extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = { 
+      login: false
+     }
+     this.handleLogin = this.handleLogin.bind(this)
   }
+
+  handleLogin() {
+    this.setState({
+      login: true
+    })
+  }
+
   render() { 
-    return <App />;
+    if(this.state.login) {
+      return <App />;
+    } else {
+      return (
+        <div className="login" onClick={this.handleLogin}>
+          login
+        </div>
+      )
+    }
   }
 }
  

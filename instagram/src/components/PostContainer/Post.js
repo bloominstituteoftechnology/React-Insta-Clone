@@ -65,7 +65,8 @@ class Post extends React.Component {
         />
         <CommentSection 
           comments={this.props.postData.comments}
-          timestamp={this.props.postData.timestamp}/>
+          timestamp={this.props.postData.timestamp}
+        />
       </div>
     )
   }
