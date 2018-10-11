@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './CommentSection.css';
 import { EventEmitter } from '../../events.js';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 
 const CommentSection = ({data, index, commentInput}) => (
     <div className='comments-container'>
@@ -27,4 +28,9 @@ const CommentSection = ({data, index, commentInput}) => (
     </div>
 )
 
+CommentSection.proptypes = {
+    data: PropTypes.object,
+    index: PropTypes.number,
+    commentInput: PropTypes.string
+}
 export default CommentSection;

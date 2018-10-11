@@ -2,7 +2,7 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import HeartButton from './HeartButton.js';
 import styles from './PostContainer.css';
-
+import PropTypes from 'prop-types';
 
 const PostContainer = ({data, index, commentInput, searchInput}) => (
     <div className={data.username.includes(searchInput) ? 'post-container' : 'hide'}>
@@ -22,5 +22,12 @@ const PostContainer = ({data, index, commentInput, searchInput}) => (
         <CommentSection data={data} index={index} commentInput={commentInput}/>
     </div>
 )
+
+PostContainer.proptypes = {
+    data: PropTypes.object,
+    index: PropTypes.number,
+    commentInput: PropTypes.string,
+    searchInput: PropTypes.string
+}
 
 export default PostContainer;

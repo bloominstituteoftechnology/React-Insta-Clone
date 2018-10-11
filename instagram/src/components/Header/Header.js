@@ -3,6 +3,7 @@ import styles from './Header.css';
 import EndButtons from './EndButtons';
 import Search from './Search';
 import { EventEmitter } from '../../events.js'
+import PropTypes from 'prop-types';
 
 const Header = ({searchInput}) => (
     <div className='header-container'>
@@ -27,4 +28,7 @@ const Header = ({searchInput}) => (
     </div>
 );
 
+Header.propTypes = {
+    searchInput: PropTypes.string
+}
 export default Header;

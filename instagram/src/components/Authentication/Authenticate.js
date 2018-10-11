@@ -8,7 +8,7 @@ const authenticate = App =>
     constructor() {
         super()
         this.state = {
-            loggedIn: localStorage.getItem('loggedIn') ? true : false,
+            loggedIn: localStorage.getItem('loggedIn') ? (localStorage.getItem('loggedIn') === 'true' ? true : false) : false,
             username: '',
             password: ''
         }
