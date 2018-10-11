@@ -1,26 +1,17 @@
-import React, { Component } from 'react';
-import Authorization from './components/Authorization/Authorization';
-import MainContainer from './components/MainContainer/MainContainer';
-import authCheck from './components/Authorization/authCheck';
+import React from 'react';
+import PostPage from './components/PostContainer/PostPage';
+import Authenticate from './components/Authentication/Authenticate';
 import './App.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      username: undefined,
-    }
-  }
+class App extends React.Component {
 
   render() {
     return (
       <div className="App">
-        <CheckAuth username={this.state.username}/>
+        <Authenticate />
       </div>
     );
   }
 }
-
-const CheckAuth = authCheck(Authorization)(MainContainer);
 
 export default App;

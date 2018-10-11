@@ -1,10 +1,10 @@
 import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
-import PostContainer from '../PostContainer/PostContainer';
+import PostContainer from './PostContainer';
 import Data from '../../dummy-data';
-import './MainContainer.css';
+import './PostContainer.css';
 
-class MainContainer extends React.Component {
+class PostPage extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -29,7 +29,7 @@ class MainContainer extends React.Component {
     addComment = (event, index) => {
         event.preventDefault()
         let currentComments = this.state.data[index].comments
-        currentComments.push({username: this.state.username, text: this.state.newComment})
+        currentComments.push({ username: this.state.username, text: this.state.newComment })
         this.setState({
             [this.state.data[index].comments]: currentComments,
             newComment: '',
@@ -46,9 +46,9 @@ class MainContainer extends React.Component {
 
     render() {
         return (
-            <div className='mainContainer'>
+            <div className='postPage'>
                 <SearchBar />
-                <PostContainer 
+                <PostContainer
                     {...this.state}
                     changeHandler={this.changeHandler}
                     addComment={this.addComment}
@@ -59,4 +59,4 @@ class MainContainer extends React.Component {
     }
 }
 
-export default MainContainer;
+export default PostPage;

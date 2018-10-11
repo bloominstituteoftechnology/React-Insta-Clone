@@ -1,7 +1,7 @@
 import React from 'react';
-import './Authorization.css';
+import './Login.css';
 
-class Authorization extends React.Component {
+class Login extends React.Component {
 
     render() {
         return (
@@ -18,4 +18,5 @@ class Authorization extends React.Component {
         )
     }
 }
-export default Authorization;
+
+export default Login;

@@ -30,6 +30,7 @@
 .searchInput {
     background-image: url('../../img/insta_search.png');
     background-position: 30% 50%;
+    background-size: 6%;
     background-repeat: no-repeat;
     padding: 0.5rem;
     text-align: center;
@@ -38,6 +39,12 @@
     border: 0.1rem solid lightgray;
     border-radius: 0.6rem;
     /* margin-left: 1rem; */
+}
+
+.searchInput:focus {
+    background-image: none;
+    text-align: left;
+    
 }
 
 .searchIcons {
