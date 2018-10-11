@@ -3,35 +3,42 @@ import React from "react";
 import "./Login.css";
 import iglogo from "../../img/iglogo.png";
 import instacamera from "../../img/instacamera.png";
+import {
+  PageContainer,
+  LogoContainer,
+  CamImg,
+  LogoImg,
+  FormWrapper,
+  UserInput,
+  SignInButton
+} from "./LoginStyles.js";
 
 const Login = props => {
   return (
-    <div className="form-container">
-      <div className="logos">
-        <img className="cam" alt="instagram camera" src={instacamera} />
-        <img className="logo" alt="instagram logo" src={iglogo} />
-      </div>
+    <PageContainer>
+      <LogoContainer>
+        <CamImg alt="instagram camera" src={instacamera} />
+        <LogoImg alt="instagram logo" src={iglogo} />
+      </LogoContainer>
 
-      <form className="signin-form">
-        <input
+      <FormWrapper>
+        <UserInput
           name="username"
           type="text"
           value={props.username}
           onChange={props.changeHandler}
           placeholder=" username"
         />
-        <input
+        <UserInput
           name="password"
           type="password"
           value={props.password}
           onChange={props.changeHandler}
           placeholder=" password"
         />
-        <button className="sign-in" onClick={props.signIn}>
-          Login
-        </button>
-      </form>
-    </div>
+        <SignInButton onClick={props.signIn}>Log in</SignInButton>
+      </FormWrapper>
+    </PageContainer>
   );
 };
 

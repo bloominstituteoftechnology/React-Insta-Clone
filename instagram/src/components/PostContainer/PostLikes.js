@@ -1,5 +1,6 @@
 import React from "react";
-import "./PostContainer.css";
+// import "./PostContainer.css";
+import { IconsComment, IconSymbols, UserComments } from "./PostSyles.js";
 
 class PostLikes extends React.Component {
   constructor(props) {
@@ -17,29 +18,20 @@ class PostLikes extends React.Component {
   render() {
     return (
       <div>
-        <div className="icons-comment">
-          <div className="icons-c">
+        <IconsComment>
+          <IconSymbols>
             <i className="fa fa-heart-o" onClick={this.increment} />
-          </div>
-          <div className="icons-c">
+          </IconSymbols>
+          <IconSymbols>
             <i className="fa fa-comment-o" />
-          </div>
-        </div>
-        <div className="likes">
-          <p>{this.state.likes} likes</p>
+          </IconSymbols>
+        </IconsComment>
+        <div>
+          <UserComments>{this.state.likes} likes</UserComments>
         </div>
       </div>
     );
   }
 }
-
-// const PostLikes = props =>{
-//     return(
-//         <div>
-//          {props.likes}
-//         </div>
-//     );
-
-// };
 
 export default PostLikes;

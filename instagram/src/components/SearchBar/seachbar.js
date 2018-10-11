@@ -1,17 +1,26 @@
 import React from "react";
 import iglogo from "../../img/iglogo.png";
 import instacamera from "../../img/instacamera.png";
-import "./SearchBar.css";
+// import "./SearchBar.css";
+import {
+  InstaHeader,
+  CamLogo,
+  CameraPic,
+  InstaLogo,
+  SearchBarInput,
+  AllIcons,
+  Icons
+} from "./SearchBarStyles";
 
 const SearchBar = props => {
   return (
-    <div className="insta-header">
-      <div className="cam-logo">
-        <img className="instacam" alt="instagram camera" src={instacamera} />
+    <InstaHeader>
+      <CamLogo>
+        <CameraPic alt="instagram camera" src={instacamera} />
         <h2>|</h2>
-        <img className="instalogo" alt="instagram logo" src={iglogo} />
-      </div>
-      <input
+        <InstaLogo alt="instagram logo" src={iglogo} />
+      </CamLogo>
+      <SearchBarInput
         placeholder="search"
         type="text"
         className="search-bar"
@@ -19,18 +28,18 @@ const SearchBar = props => {
         onChange={props.changeHandle}
         value={props.searchPost}
       />
-      <div className="all-icons">
-        <div className="icons">
+      <AllIcons>
+        <Icons>
           <i className="fa fa-compass" />
-        </div>
-        <div className="icons">
+        </Icons>
+        <Icons>
           <i className="fa fa-heart-o" />
-        </div>
-        <div className="icons">
+        </Icons>
+        <Icons>
           <i className="fa fa-user-o" />
-        </div>
-      </div>
-    </div>
+        </Icons>
+      </AllIcons>
+    </InstaHeader>
   );
 };
 

@@ -1,48 +1,46 @@
-body {
-  max-width: 600px;
-  margin: 0 auto;
-}
+import React from "react";
+import styled from "styled-components";
 
-/* .form-container {
+export const PageContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 150px;
   flex-direction: column;
-}
+`;
 
-.logos {
+export const LogoContainer = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
+`;
 
-.cam {
+export const CamImg = styled.img`
   width: 30%;
   height: 200px;
-}
+`;
 
-.logo {
+export const LogoImg = styled.img`
   width: 60%;
   height: 200px;
-}
+`;
 
-.signin-form {
+export const FormWrapper = styled.form`
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-}
+`;
 
-.signin-form input {
+export const UserInput = styled.input`
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+`;
 
-.sign-in {
+export const SignInButton = styled.button`
   margin-top: 30px;
   width: 20%;
-} */
+`;
