@@ -14,7 +14,7 @@ class CommentSection extends React.Component {
   }
 
   // pass saveLocalStorage down as a prop
-  // when a comment is added, call it
+  // when a comment is added, call it?
 
   // saveStatetoLocalStorage() {
   //   for (let key in this.state) {

@@ -74,6 +74,13 @@ class App extends Component {
     localStorage.setItem("username", JSON.stringify(this.state.username));
   };
 
+  logout = e => {
+    e.preventDefault();
+    localStorage.removeItem("username");
+    localStorage.removeItem("password");
+    this.setState({ username: '', password: '', loggedIn: false,})
+  }
+
   updateSearchText = e => {
     this.setState({ searchText: e.target.value });
   };
@@ -88,8 +95,9 @@ class App extends Component {
         <PostsPage
           posts={this.state.data}
           searchText={this.state.searchText}
-          updateSearchText={this.state.updateSearchText}
-          saveState={this.saveStatetoLocalStorage}
+          updateSearchText={this.updateSearchText}
+          logout={this.logout}
+          username={this.state.username}
         />
       </div>
     );
