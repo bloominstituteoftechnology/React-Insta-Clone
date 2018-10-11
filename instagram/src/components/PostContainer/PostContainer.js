@@ -29,7 +29,7 @@ const PostContainer = props => {
       </div>
       <div className="Icon-row">
 
-      // look for the heart and comment  icons. 
+      {/* // look for the heart and comment  icons.  */}
       {/* <FontAwesomeIcon icon={["far", "heart"]} onClick={this.addALike} />{" "}
          <FontAwesomeIcon icon={["far", "comment"]} /> */}
         {/* <img
@@ -38,8 +38,11 @@ const PostContainer = props => {
           alt="heart icon"
         />{/* designed by Smashicons
         https://smashicons.com/ from Flaticon */}
-        {/* // import icons directly from a local fa.
-        <img className="Icon" src="../../assets/like-heart.png" alt="Heart icon" /> */}
+        {/* // import icons directly from a local fa. */}
+        <span className="Icon-row">
+        <img className="Icon-heart" src={require('./like-heart.png')} alt="Heart icon" />
+        <img className="Icon-comment" src={require('./comment.png')} alt="Comment icon" />
+        </span>
       </div>
       <div className="Stats-row">{props.likes} likes</div>
       <div className="Comments">
