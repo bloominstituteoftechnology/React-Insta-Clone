@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box
+}
+
 .login-content {
     display: flex;
     width: 60%;
@@ -11,4 +15,63 @@
     width: 400px;
     background: url('login-phones.png') no-repeat 0 0;
     background-size: 400px auto;
+}
+
+.column-two {
+    height: 600px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form {
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    background-color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-logo {
+    height: 100px;
+    width: 200px;
+    background: url('login-logo.png') no-repeat 0 0;
+    background-size: 200px auto;
+}
+
+.login-download {
+    height: 150px;
+    width: 300px;
+    background: url('login-download.png') no-repeat 0 0;
+    background-size: 300px auto;
+}
+
+.login-text {
+    color: gray;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.login-form {
+    height: auto;
+
+}
+
+.form-box {
+    width: 100%;
+}
+
+.login-button {
+    width: 100%;
+    background-color:#458eff;
+    color: white;
+    height: 35px;
+    border: none;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 14px;
 }

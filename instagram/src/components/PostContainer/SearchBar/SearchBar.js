@@ -21,9 +21,9 @@ class SearchBar extends React.Component {
     this.state = {
       props: props,
       isOpen: false,
-      posts: this.props.posts
-          };
-     }
+      posts: this.props.posts,
+      };
+    }
 
 toggle() {
   this.setState({
@@ -31,8 +31,14 @@ toggle() {
   });
 }
 
-
-
+logOutHandler = event => {
+  event.preventDefault();
+  let username = this.state.username;
+  window.localStorage.setItem('', username);
+  let password = this.state.password;
+  window.localStorage.setItem('', password);
+  window.location.reload();
+}
 
 render() {
   console.log('searchBar props',this.props);
@@ -75,7 +81,8 @@ render() {
             <div className='icon heart' id='heart'></div>
           </DropdownToggle>
           <DropdownMenu right>
-          <DropdownItem>
+          <DropdownItem onClick={this.state.logOutHandler}>
+            <div>Log Out</div>
           </DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>

@@ -7,9 +7,8 @@ document.body.classList.add('background-snow');
 
 class App extends React.Component {
   constructor() {
-    super();
+    super();   
     this.state= { 
-
     };
   }
 
@@ -18,7 +17,8 @@ class App extends React.Component {
     return (
       <div className="App">
       
-      <PostPage />
+      <PostPage 
+      />
 
       </div>
     );

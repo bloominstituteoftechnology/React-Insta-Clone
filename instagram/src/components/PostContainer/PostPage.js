@@ -31,6 +31,7 @@ constructor(props) {
       }
 
 
+
     render() {
     return (
         <div>
@@ -39,7 +40,9 @@ constructor(props) {
       handleFilter={this.handleFilter}
       />
 
-      <PostContainer posts={this.state.postFilter.length > 0 ? this.state.postFilter : this.state.posts} />
+      <PostContainer
+        posts={this.state.postFilter.length > 0 ? this.state.postFilter : this.state.posts}
+        />
 
 
         </div>
