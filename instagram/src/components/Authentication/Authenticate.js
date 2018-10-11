@@ -37,7 +37,7 @@ const Authenticate = App => class extends Component {
         }
       ];
     }
-    window.localStorage.setItem(this.localStorageKey, JSON.stringify(newLogin));
+    window.localStorage.setItem(this.localStorageLogins, JSON.stringify(newLogin));
     alert("Thanks for signing up");
     this.setState({loggedIn: true, username});
   };
