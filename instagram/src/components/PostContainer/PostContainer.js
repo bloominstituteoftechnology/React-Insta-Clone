@@ -1,15 +1,15 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
-import "./PostContainer.css";
 import heart from "../icons/heart.png";
 import chat from "../icons/chat.png";
+import { StyledPost, UserDiv, IconBar, Thumbnail, UserName } from "../Styles.js";
 
 class PostContainer extends React.Component {
   constructor(props) {
     super();
     this.state = {
       post: props.post,
-      likes: 0,
+      likes: 0
     };
   }
 
@@ -23,27 +23,28 @@ class PostContainer extends React.Component {
 
   render() {
     return (
-      <div className="Post">
-        <div className="userDiv">
-          <img
-            className="thumbnail"
-            src={this.state.post.thumbnailUrl}
-            alt=""
-          />
-          <h2 className="userName"> {this.state.post.username} </h2>
-        </div>
-        <img src={this.state.post.imageUrl} alt="" />
-        <div className="icon-bar">
-          <img
-            id="likeButton"
-            src={heart}
-            onClick={this.increaseLikes}
-            alt=""
-          />
-          <img src={chat} alt="" />
-        </div>
-        <p>{this.state.likes} likes</p>
-        <CommentSection comments={this.state.post.comments} />
+      <div>
+        <StyledPost>
+          <UserDiv>
+            <Thumbnail
+              src={this.state.post.thumbnailUrl}
+              alt=""
+            />
+            <UserName> {this.state.post.username} </UserName>
+          </UserDiv>
+          <img src={this.state.post.imageUrl} alt="" />
+          <IconBar>
+            <img
+              id="likeButton"
+              src={heart}
+              onClick={this.increaseLikes}
+              alt=""
+            />
+            <img src={chat} alt="" />
+          </IconBar>
+          <p>{this.state.likes} likes</p>
+          <CommentSection comments={this.state.post.comments} />
+        </StyledPost>
       </div>
     );
   }
