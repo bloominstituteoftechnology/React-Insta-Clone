@@ -44,7 +44,7 @@ const Authenticate = App =>
   };
 ```
 
-- Build out the LoginPage component. You can design it how you like
+- [x] Build out the LoginPage component. You can design it how you like
 
   - [x] In your `components` directory, create a directory called `Login` and add a new file called `Login.js`.
   - [x] There should be a `username` input, a `password` input, and a `Login` button.

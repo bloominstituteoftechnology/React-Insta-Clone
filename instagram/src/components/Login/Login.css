@@ -1,0 +1,65 @@
+.loginContainer {
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.formContainer {
+    background-color: white;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25%;
+    border-radius: 3%;
+    border: 1px solid gainsboro;
+    -webkit-box-shadow: -4px 6px 10px 0px rgba(128,128,128,1);
+    -moz-box-shadow: -4px 6px 10px 0px rgba(128,128,128,1);
+    box-shadow: -4px 6px 10px 0px rgba(128,128,128,1);;
+}
+
+.formContainer .logoTitle {
+    font-size: 5rem;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.loginForm input {
+    margin-bottom: 20px;
+    width: 70%;
+    height: 30px;
+    padding-left: 1%;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 5%;
+    font-family: 'Niramit', sans-serif;
+}
+
+.loginForm button {
+    width: 70%;
+    height: 30px;
+    padding: 0;
+    background-color: #3897F0;
+    border: none;
+    border-radius: 3%;
+    font-family: 'Niramit', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+}
+
+.loginForm button:hover {
+    cursor: pointer;
+}
