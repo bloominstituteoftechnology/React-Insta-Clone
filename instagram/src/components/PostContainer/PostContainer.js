@@ -97,8 +97,8 @@ PostContainer.propTypes={
     id: PropTypes.number
 };
 CommentSection.propTypes={
-    comments: PropTypes.string,
-    timestamp: PropTypes.number,
+    comments: PropTypes.array,
+    timestamp: PropTypes.string,
     id: PropTypes.number
 }
 

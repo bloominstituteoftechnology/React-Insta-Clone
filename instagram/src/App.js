@@ -9,11 +9,19 @@ class App extends Component {
   constructor(){
         super();
         this.state={
-          postData:{dummyData}
+          postData:{dummyData},
+          username:{LogIn}
         }
     }
+
     logOut=event=>{
-    
+      const username=localStorage.key.username
+    return dispatch=>{
+      localStorage.removeItem(username);
+      
+      dispatch(LogIn({}));
+      window.location.reload();
+    }
          
   }
    

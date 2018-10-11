@@ -4,13 +4,15 @@ import PropTypes from 'prop-types';
 
 
 class CommentSection extends React.Component{
-   constructor(){
+   
+    constructor(){
        super();
        this.state = {
         id: 0,
         comments: [],
         newComment: '',
         timestamp: '',
+        
     }
    }
    componentDidMount(){
@@ -24,7 +26,7 @@ class CommentSection extends React.Component{
        if(event.keyCode===13){
            event.preventDefault();
            const newComment={
-               username:'jeff',
+               username:this.state.username.value,
                text:this.state.newCommentInput,
            }
            this.setState({
@@ -53,7 +55,7 @@ class CommentSection extends React.Component{
             })}
            </div>
            <div className="timeStamp">
-            <span><moment parse="MMMM do YYYY, hh:mm:ss A" fromNow>{this.state.timestamp}</moment></span>
+            <span><div format="YYYY/MM/DD">{this.props.timestamp}</div></span>
            </div>
            <div className="add-comment">
             <input className="comment-input" id={`CommentSection__${this.state.id}`} type="text"placeholder="Add a comment..."value={this.state.newCommentInput} onChange={this.handleComment}onKeyDown={this.addComment} />
@@ -67,6 +69,5 @@ class CommentSection extends React.Component{
 CommentSection.propTypes={
     id: PropTypes.number,
     newComment: PropTypes.string,
-    timestamp: PropTypes.string
-}
+    timestamp: PropTypes.string}
 export default CommentSection;
