@@ -15,8 +15,12 @@ class PostContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      likes: this.props.data.likes,
-      postLiked: false
+      likes: localStorage.getItem("likes")
+        ? JSON.parse(localStorage.getItem("likes"))
+        : this.props.data.likes,
+      postLiked: localStorage.getItem("liked")
+        ? JSON.parse(localStorage.getItem("liked"))
+        : false
     };
   }
   plusLikes = () => {
@@ -27,6 +31,10 @@ class PostContainer extends React.Component {
       };
     });
   };
+  componentDidUpdate() {
+    localStorage.setItem("likes", this.state.likes);
+    localStorage.setItem("liked", this.state.postLiked);
+  }
   render() {
     return (
       <PostDiv>
