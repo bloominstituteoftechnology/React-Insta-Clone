@@ -11,10 +11,6 @@ const Authenticate = App =>
                 loggedIn: false
             };
         } 
-        logIn(event) {
-            event.preventDefault();
-            console.log(this.state.loggedIn)
-        }
         componentDidMount() {
             if (!localStorage.getItem('user')) {
                 this.setState({ loggedIn: false });

@@ -1,29 +1,34 @@
-import React from 'react';
-import IGLogo from '../../assets/iglogo.png';
-import './SearchBar.css';
-import {StyledsearchBarWrapper} from '../Styled'
+import React from "react";
+import IGLogo from "../../assets/iglogo.png";
+import "./SearchBar.css";
+import {
+  StyledsearchBarWrapper,
+  StyledimageWrapper,
+  Styledlogoimage,
+  StyledsocialWrapper,Styledsocialdiv
+} from "../Styled";
 
 const SearchBar = props => {
   return (
     <StyledsearchBarWrapper>
-      <div className="image-wrapper">
-        <img alt="instagram logo" src={IGLogo} className="logo-image" />
-      </div>
+      <StyledimageWrapper>
+        <Styledlogoimage alt="instagram logo" src={IGLogo} />
+      </StyledimageWrapper>
       <div>
         {/* Insert an input field and call the SearchPosts method on the constructor. */}
         <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
       </div>
-      <div className="social-wrapper">
-        <div className="social">
+      <StyledsocialWrapper>
+        <Styledsocialdiv>
           <i className="far fa-compass" />
-        </div>
-        <div className="social">
+        </Styledsocialdiv>
+        <Styledsocialdiv>
           <i className="far fa-heart" />
-        </div>
-        <div className="social">
+        </Styledsocialdiv>
+        <Styledsocialdiv>
           <i className="far fa-user-circle" />
-        </div>
-      </div>
+        </Styledsocialdiv>
+      </StyledsocialWrapper>
     </StyledsearchBarWrapper>
   );
 };

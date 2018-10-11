@@ -12,3 +12,19 @@ export const StyledsearchBarWrapper = styled.div`
   background: #ffffff;
 `;
 
+export const StyledimageWrapper = styled.div`
+  height: 50px;
+`;
+
+export const Styledlogoimage = styled.img`
+  height: 100%;
+`;
+
+export const StyledsocialWrapper = styled.div`
+  display: flex;
+`;
+
+export const Styledsocialdiv = styled.div`
+  width: 50px;
+`;
+
