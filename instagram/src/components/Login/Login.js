@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CameraIcon from '../Icons/CameraIcon'
+import LogoType from '../Icons/LogoType'
 import './Login.css'
 
 class Login extends Component {
@@ -29,7 +29,7 @@ class Login extends Component {
   render(){
     return(
       <div className='login'>
-        <CameraIcon className='login-camera'/>
+        <LogoType className='login-logotype' />
         <form className='login-form' onSubmit={this.handleLogin}>
           <input
             name='username'
