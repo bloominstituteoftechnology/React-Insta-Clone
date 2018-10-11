@@ -21,13 +21,13 @@ class App extends Component {
 
   searchFilter = event => {
     console.log(event.target.value);
-    const post = this.state.data.filter(p => {
-      if (p.username.includes(event.target.value)) {
-        return p;
+    const posts = this.state.data.filter(name => {
+      if (name.username.includes(event.target.value)) {
+        return name;
       }
     });
-    this.setState({ filteredposts: post });
-    console.log("search filter fired");
+    this.setState({ filteredposts: posts });
+    console.log("search filter fired", this.state.filteredposts);
   };
 
   render() {
@@ -35,7 +35,12 @@ class App extends Component {
       <div className="container">
         <SearchBar searchFilter={this.searchFilter} />
         {this.state.data.map(post => {
-          return <PostContainer post={post} />;
+          return (
+            <PostContainer
+              post={post}
+              filteredPosts={this.state.filteredposts.length > 0 ? this.state.filteredposts : this.state.posts}
+            />
+          );
         })}
       </div>
     );
