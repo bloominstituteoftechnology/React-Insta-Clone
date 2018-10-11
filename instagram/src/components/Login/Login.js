@@ -22,6 +22,7 @@ class Login extends React.Component {
 
   handleSubmit = ev => {
     const user = this.state.username;
+    //  adding the keyname "user" to the local storage and creating a key value "user" in which we will pass to the keyname : https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem
     localStorage.setItem("user", user);
     //forces the page to reload: https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
     window.location.reload();
