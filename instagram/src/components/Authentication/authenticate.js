@@ -1,6 +1,6 @@
 import React from 'react';
 import LoginPage from './components/Login/loginpage';
-import SearchBar from './components/SearchBar/searchbar';
+import SearchBar from './components/SearchBar/searchBar';
 
 
 const Authenticate = App =>

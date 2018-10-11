@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import './loginpage.css';
 
 class LoginPage extends Component{
@@ -43,6 +43,5 @@ class LoginPage extends Component{
     );
   }
 }
-
 
 export default LoginPage;
