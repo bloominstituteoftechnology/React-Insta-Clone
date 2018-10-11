@@ -6,6 +6,8 @@ import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 
 
+
+
 // addNewComment = (event, id) => {
 //     event.preventDefault();
 //     console.log(id);
@@ -54,6 +56,7 @@ const PostContainer = props => {
                     <h4 className = "likes">{post.likes} likes</h4>
                     <CommentSection
                     commentInfo = {post.comments}
+                    
                     // addNewComment = {this.addNewComment}
 
                     />
@@ -63,7 +66,7 @@ const PostContainer = props => {
                     <p className = "time-stamp">{post.timestamp}</p>
                 </div>
 
-                <div className = "input-comment">
+                {/* <div className = "input-comment">
                     <form onSubmit={props.addNewComment}>
                         <input 
                         type = "text" 
@@ -75,7 +78,7 @@ const PostContainer = props => {
                         />
 
                     </form>
-                </div>
+                </div> */}
 
                 
                 </div>
