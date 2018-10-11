@@ -1,45 +1,49 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from './dummy-data';
-import PostsContainer from './components/PostsContainer/PostsContainer';
-import SearchBar from './components/SearchBar/SearchBarContainer';
+import PostsPage from './components/PostContainer/PostsPage';
+import Login from './components/Login/Login'
+import Authenticate from './authentication/Authenticate';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: [],
-      filteredPosts: []
-    };
+      isLoggedIn: false,
+      username: window.localStorage.getItem('username'),
+    }
   }
+
   componentDidMount() {
-    this.setState({ posts: dummyData });
+    let username = window.localStorage.getItem('username');
+    console.log(username);
+    if (username === '' || username === null) {
+      this.setState({
+        isLoggedIn: false,
+      })
+    }
+    else {
+      this.setState({
+        isLoggedIn: true,
+      })
+    }
   }
-  searchPostsHandler = e => {
-    const posts = this.state.posts.filter(p => {
-      if (p.username.includes(e.target.value)) {
-        return p;
-      }
-    });
-    this.setState({ filteredPosts: posts });
-  };
+
+  login = event => {
+    let username = event.target.parentNode.firstChild.value;
+    if (username !== '') {
+      window.localStorage.setItem('username', `${username}`);
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar
-          searchTerm={this.state.searchTerm}
-          searchPosts={this.searchPostsHandler}
-        />
-        <PostsContainer
-          posts={
-            this.state.filteredPosts.length > 0
-              ? this.state.filteredPosts
-              : this.state.posts
-          }
-        />
+        <ShowConditionally isLoggedIn={this.state.isLoggedIn} login={this.login} username={this.state.username}/>
       </div>
     );
   }
 }
+
+const ShowConditionally = Authenticate(PostsPage)(Login);
 
 export default App;
