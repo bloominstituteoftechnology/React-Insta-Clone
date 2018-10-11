@@ -2,25 +2,71 @@ import React from 'react';
 import './search.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Instagram from './instagram.svg';
+import styled from 'styled-components';
 
 const SearchBar = (props) => {
     return (
-        <section className="search-bar">
-            <section className="insta-logo">
+        <Search>
+            <Logo>
                 <img src={ Instagram } alt="instagram logo"></img>
                 <p>|</p>
                 <h1>Instagram</h1>
-            </section>
-            <section className="search-box">
+            </Logo>
+            <SearchBox>
                 <input placeholder="🔍 Search" onChange={props.search}></input>
-            </section>
-            <section className="search-icons">
+            </SearchBox>
+            <Icons>
                 <FontAwesomeIcon icon="compass" />
                 <FontAwesomeIcon icon="heart" />
                 <FontAwesomeIcon icon="user" />
-            </section>
-        </section>
+            </Icons>
+        </Search>
     )
 }
 
 export default SearchBar;
+
+const Search = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    height: 50px;
+`;
+
+const Logo = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
+    height: 50px;
+
+    img {
+        fill: black;
+        height: 25px;
+    }
+
+    p {
+        padding: 0px 10px;
+    }
+`;
+
+const SearchBox = styled.div`
+    input {
+        font-family: "proxima-nova",sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        border: 1px solid lightgray;
+        background-color: rgb(250, 250, 250);
+        border-radius: 2px;
+        text-align: center;
+        height: 18px;
+    }
+`;
+
+const Icons = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    width: 15%;
+`;

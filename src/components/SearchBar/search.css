@@ -1,4 +1,4 @@
-.search-bar {
+/* .search-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,9 +21,9 @@
 
 .insta-logo p {
     padding: 0px 10px;
-}
+} */
 
-.search-box input{
+/* .search-box input{
     font-family: "proxima-nova",sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -39,4 +39,4 @@
     display: flex;
     justify-content: space-evenly;
     width: 15%;
-}
+} */
