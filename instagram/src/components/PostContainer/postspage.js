@@ -3,7 +3,7 @@ import CommentSection from '/Users/BradMortensen/Documents/Git/React/React-Insta
 import PostContainer from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/components/PostContainer/postcontainer';
 import SearchBar from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/components/SearchBar/searchbar';
 import dummyData from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/dummy-data';
-
+import {AppStyles} from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/styles'
 
 class PostsPage extends React.Component {
     constructor() {
@@ -37,13 +37,13 @@ class PostsPage extends React.Component {
         //     return <h4>Loading Posts...</h4>;
         // }    
         return (
-            <div className="App">
+            <AppStyles >
                 <div className='top-header'>
-                <SearchBar
-                    changer={this.handleInputChange}
-                    searching = {this.searchFunction}                     
-                    content= {this.state.content}
-                    searcher={this.state.searchKey} />
+                    <SearchBar
+                        changer={this.handleInputChange}
+                        searching = {this.searchFunction}                     
+                        content= {this.state.content}
+                        searcher={this.state.searchKey} />
                 </div> 
                 {this.state.content.map((items, i) => 
                 <div key = {i}>
@@ -54,7 +54,7 @@ class PostsPage extends React.Component {
                     />
                 </div>
                 )}
-            </div>
+            </AppStyles >
         );
     
     }

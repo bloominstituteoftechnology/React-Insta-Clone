@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
+import { InputStyles, InputHeaders, LoginBox, LoginButton } from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/styles';
 
-import './loginpage.css'
 
 class LoginPage extends Component{
   constructor(props){
@@ -11,6 +11,7 @@ class LoginPage extends Component{
       password:''
     }
   }
+  
   handleInputChange = event => this.setState({ [event.target.name]: event.target.value });
   
   loginSubmit = () => {
@@ -21,26 +22,24 @@ class LoginPage extends Component{
   
   render(){  
     return (
-      <div className='login-stuff'>
+      <LoginBox >
         {/* <img src=/>       */}
-        <h2>Username:</h2>
-        <input 
-          className='login-username' 
+        <InputHeaders>Username:</InputHeaders>
+        <InputStyles 
           placeholder='Enter Your Username'          
           type="text"
           name="username"
           value={this.state.username}
-          onChange={this.handleInputChange}></input>
-        <h2>Password:</h2>
-        <input 
-          className='login-password' 
+          onChange={this.handleInputChange}></InputStyles>
+        <InputHeaders>Password:</InputHeaders>
+        <InputStyles
           placeholder='Enter Your Password'
           type="password"
           name="password"
           value={this.state.password}
-          onChange={this.handleInputChange}></input>
-        <button onClick={this.loginSubmit} className='login-button'>Log In</button>
-      </div>
+          onChange={this.handleInputChange}></InputStyles>
+        <LoginButton onClick={this.loginSubmit} className='login-button'>Log In</LoginButton>
+      </LoginBox>
     );
   }
 }

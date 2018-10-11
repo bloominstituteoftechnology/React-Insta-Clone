@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './commentsection.css';
-
 import CommentInput from './commentinput';
+import { CommentContainer, CommentCombo, FontAwesomes, Commenter, CommentText, Timestamp } from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/styles'
 
 class CommentSection extends Component {
     constructor(props) {
@@ -27,21 +26,21 @@ class CommentSection extends Component {
 
     render() {
         return (
-            <div className = 'comment-container'>
-                <i className="far fa-heart"></i>
-                <i className="far fa-comment"></i>
+            <CommentContainer >
+                <FontAwesomes className="far fa-heart"></FontAwesomes>
+                <FontAwesomes className="far fa-comment"></FontAwesomes>
                 <h2 className= 'likes'>{this.state.extras.likes} likes</h2> 
                 {this.state.comments.map((comments, i) => 
-                    <div key= {i} className= 'comment-combo'>
-                        <h3 className= 'commenter'>{comments.username}</h3>
-                        <p className= 'comment-text'>{comments.text}</p>
-                    </div>)} 
-                <p className= 'timestamp'>{this.state.extras.timestamp}</p>   
+                    <CommentCombo key= {i} >
+                        <Commenter >{comments.username}</Commenter>
+                        <CommentText >{comments.text}</CommentText>
+                    </CommentCombo>)} 
+                <Timestamp >{this.state.extras.timestamp}</Timestamp>   
                 <CommentInput 
                     comment= {this.state.comment}
                     handleInputChange={this.handleInputChange}
                     addComment={this.addComment}  />           
-            </div>
+            </CommentContainer>
         );
     }    
 }

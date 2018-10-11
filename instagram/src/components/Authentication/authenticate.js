@@ -2,6 +2,8 @@ import React from 'react';
 import LoginPage from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/components/Login/loginpage';
 import SearchBar from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/components/SearchBar/searchbar'
 
+import { LoginContainer } from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/styles'
+
 // import App from '/Users/BradMortensen/Documents/Git/React/React-Insta-Clone/instagram/src/App'
 
 const Authenticate = App =>
@@ -25,10 +27,10 @@ const Authenticate = App =>
         render() { 
             if (this.state.loggedIn) return <App />;
             return (    
-                <div className='login-container'>
+                <LoginContainer >
                     <SearchBar />
                     <LoginPage content={this.state} logIn={this.logIn} />
-                </div>
+                </LoginContainer>
             );
         }
     };

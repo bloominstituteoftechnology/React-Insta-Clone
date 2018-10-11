@@ -1,7 +1,6 @@
 import React, {
   Component
 } from 'react';
-import './App.css';
 import PostsPage from './components/PostContainer/postspage';
 import Authenticate from './components/Authentication/authenticate'
 
