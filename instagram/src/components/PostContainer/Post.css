@@ -26,7 +26,7 @@
 }
 
 .post__content--img {
-  width: 100%;
+  width: 102%;
 }
 
 .post__icons {
@@ -59,9 +59,10 @@
   font-weight: 500;
 }
 .post__input--input {
-  width: 96%;
+  width: 98%;
   height: 45px;
   border: none;
   font-size: 16px;
   padding-left: 10px;
+  border-top: 1px solid lightgray;
 }

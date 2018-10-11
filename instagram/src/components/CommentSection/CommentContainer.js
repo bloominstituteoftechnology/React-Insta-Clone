@@ -10,7 +10,9 @@ class CommentContainer extends React.Component {
     super(props);
     this.state = {
       comments: props.comments,
-      likes: props.likes
+      likes: props.likes,
+      comment: '',
+      username: 'bummings'
     };
   }
 
@@ -21,6 +23,20 @@ class CommentContainer extends React.Component {
   addNewComment = () => {
     console.log('bruh!!!!');
   }
+
+  //this is why you couldn't type in the input, you idiot
+  commentHandler = e => {
+    this.setState({ comment: e.target.value }); 
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    const newComment = { text: this.state.comment, username: this.state.username };
+    const comments = this.state.comments.slice(); // clone array!
+    comments.push(newComment);  // add comment to well, comment
+    this.setState({ comments, comment: '' }); 
+  };
+
 
   render() {
     return (
@@ -42,7 +58,7 @@ class CommentContainer extends React.Component {
           {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
         </div>
 
-        <CommentInput />
+        <CommentInput comment={this.state.comment} submitComment={this.handleSubmit} changeComment={this.commentHandler} />
       </div>
     ) 
   }
