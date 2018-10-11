@@ -1,8 +1,9 @@
 import React from 'react';
-import './SearchBar.css';
 import Styled from 'styled-components'
 
 const Input = Styled.input`
+    height:30px;
+    width:250px;
 `
 
 const SearchBar = props =>{

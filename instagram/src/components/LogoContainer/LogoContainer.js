@@ -25,7 +25,7 @@ const LogoContainer = props => {
                 <LogoImage alt='logo' src={require('../../static/img/logo.png')}></LogoImage>
             </LogoDivider>
              <div>
-                <LogoLettering className='logo-lettering' alt='instagram' 
+                <LogoLettering alt='instagram' 
                                src={require('../../static/img/lettering.png')}>
                 </LogoLettering>
             </div>

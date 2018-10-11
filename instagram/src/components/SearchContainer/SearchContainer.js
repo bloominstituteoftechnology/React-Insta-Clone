@@ -6,6 +6,7 @@ import Styled from 'styled-components';
 
 const WrapperDiv = Styled.div`
     display:flex;
+    alignItems:center;
     justify-content: space-between;
     padding-top:20px;
     background-color: white;

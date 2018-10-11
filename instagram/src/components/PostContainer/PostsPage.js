@@ -2,7 +2,17 @@ import React from 'react';
 import PostContainer from './PostContainer'
 import { dummyData } from '../../data/dummy-data'
 import SearchContainer from '../SearchContainer/SearchContainer'
-import './PostContainer.css'
+import Styled from 'styled-components';
+
+const Spacer = Styled.div`
+    height:30px;
+`
+const MainPostContainer = Styled.div`
+    .searchContainer{
+        background:blue
+    }
+    padding-top:80px;
+`
 
 class PostsPage extends React.Component{
     constructor(props){
@@ -60,13 +70,12 @@ class PostsPage extends React.Component{
         return(
             <div>
                 <SearchContainer 
-                    className='app-search-container' 
                     handleSearchSubmit={this.handleSearchSubmit}
                     handleSearchChange={this.handleSearchChange}
                     searchText={this.state.searchText}
                     logout={this.props.logout}
                 />
-                <div className='app-post-container'>
+                <MainPostContainer>
                     {
                     this.state.data.map((element,index) => {
                         return(
@@ -86,12 +95,12 @@ class PostsPage extends React.Component{
 
 
                             />
-                            <div className='spacer'>&nbsp;</div>
+                            <Spacer>&nbsp;</Spacer>
                         </div>
                             )
                     })
                     }
-                </div>
+                </MainPostContainer>
             </div>
         )
     }

@@ -1,9 +1,5 @@
 import Styled from 'styled-components';
 
-{/* <img alt='circle' className='action-icons' src={require('../../static/img/circle.png')}></img>
-<img alt='like' className='action-icons action-heart' src={require('../../static/img/heart.png')}></img>
-<img alt='person' onClick={props.logout} className='action-icons action-person' src={require('../../static/img/person.png')}></img> */}
-
 
 export const Image = Styled.img`
     height:24px;

@@ -24,13 +24,13 @@ const NewCommentTools = Styled.div`
 const NewCommentSection = props =>{
     return(
 
-        <WrapperDiv className='new-comment-section'>
+        <WrapperDiv>
             <AddNewComment>
                 <form onSubmit={props.addNewComment}>
                     <input id={props.postId} value={props.newComment} placeholder='Add a comment...' onChange={props.handleCommentChange} />
                 </form>
             </AddNewComment>
-            <NewCommentTools className='new-comment-tools'><p>...</p></NewCommentTools>
+            <NewCommentTools><p>...</p></NewCommentTools>
         </WrapperDiv>
 
     )
