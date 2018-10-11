@@ -15,8 +15,14 @@ const PostContainer = props => (
     <div className='interactivity-area'>
       <div className='interactive-buttons'>
         <div onClick={() => props.addLikeHandler(props.post.timestamp)} className="interactive-button like-icon"></div>
-        <div onClick={() => props.addCommentHandler(props.post.timestamp)} className="interactive-button comment-icon"></div>
-        <form action='submit'><input type='text' className='commentInput' placeholder='enter new comment' /></form>
+        <div className="interactive-button comment-icon"></div>
+        <form action='submit' onSubmit={() => props.addCommentHandler(props.post.timestamp)} >
+          <input 
+            type='text' 
+            className='commentInput' 
+            placeholder='enter new comment'
+          />
+        </form>
       </div>
       <p className='like-count'>{props.post.likes} likes</p>
     </div>

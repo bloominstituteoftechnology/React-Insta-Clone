@@ -8,9 +8,9 @@
 
 .left-items {
   margin-left: 5px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -20,12 +20,12 @@
   background-position: -78px -168px;
   height: 24px;
   width: 24px;
-  margin: 0 auto;
+  margin-left: 20px;
 }
 
 .vertical-divider {
   height: 35px;
-  margin-left: 15px;
+  margin-left: 20px;
   border-right: 1px solid #888;
 }
 
@@ -35,7 +35,7 @@
   background-position: -58px 0;
   height: 29px;
   width: 103px;
-  margin: 0 auto;
+  margin-left: 20px;
 }
 
 .search {
@@ -53,11 +53,9 @@
 }
 
 .right-items {
-  margin-left: 5px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: end;
-  justify-items: end;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -67,6 +65,7 @@
   background-position: -458px -112px;
   height: 24px;
   width: 24px;
+  margin-right: 20px;
 }
 
 .activity {
@@ -75,13 +74,14 @@
   background-position: -458px -190px;
   height: 24px;
   width: 24px;
+  margin-right: 20px;
 }
 
 .profile {
-  border: 1px solid orange;
   background-image: url(../../img/real-spritesheet.png);
   background-repeat: no-repeat;
   background-position: -458px -294px;
   height: 24px;
   width: 24px;
+  margin-right: 20px;
 }
