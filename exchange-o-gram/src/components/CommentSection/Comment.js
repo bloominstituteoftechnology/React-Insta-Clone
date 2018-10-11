@@ -73,18 +73,25 @@ class Comment extends React.Component{
             <CommentContainer>
                 <p><strong>{this.props.comment.username}</strong> {this.props.comment.text}</p>
                 <CommentMenu onClick={this.askForDelete}>···
-                    <DeleteComment displayDeleteComment={this.state.displayDeleteComment}onClick={this.deleteComment}>Delete?</DeleteComment>
+                    <DeleteComment displayDeleteComment={this.state.displayDeleteComment} onClick={this.deleteComment}>Delete?</DeleteComment>
                 </CommentMenu>
             </CommentContainer>
         )
     }
 }
 
+DeleteComment.propTypes = {
+    displayDeleteComment: PropTypes.bool
+}
+
 Comment.propTypes = {
+    postIndex: PropTypes.number.isRequired,
+    commentIndex: PropTypes.number.isRequired,
     comment: PropTypes.shape({
         username: PropTypes.string,
         text: PropTypes.string
-    }).isRequired
+    }).isRequired,
+    deleteComment: PropTypes.func.isRequired
 }
 
 export default Comment;

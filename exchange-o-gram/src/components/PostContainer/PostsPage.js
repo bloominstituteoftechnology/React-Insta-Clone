@@ -1,6 +1,7 @@
 import React from 'react';
 import PostContainer from './PostContainer.js';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 //import './PostContainer.css'
 
 const PostsContainer = styled.div`
@@ -29,6 +30,26 @@ class PostsPage extends React.Component{
         )
         
     }
+}
+
+PostsPage.propTypes = {
+    posts: PropTypes.arrayOf(PropTypes.shape({
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        imageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string,
+        comments: PropTypes.arrayOf(PropTypes.shape({
+            username: PropTypes.string,
+            text: PropTypes.string
+        }))
+    })),
+    displayInfo: PropTypes.bool,
+    addLike: PropTypes.func.isRequired,
+    addNewComment: PropTypes.func.isRequired,
+    searchPosts: PropTypes.func.isRequired,
+    deleteComment: PropTypes.func.isRequired,
+    setUser: PropTypes.func.isRequired
 }
 
 export default PostsPage;

@@ -72,7 +72,8 @@ PostContainer.propTypes = {
         }))
     }),
     addLike: PropTypes.func.isRequired,
-    addNewComment: PropTypes.func.isRequired
+    addNewComment: PropTypes.func.isRequired,
+    deleteComment: PropTypes.func.isRequired
 }
 
 export default PostContainer;

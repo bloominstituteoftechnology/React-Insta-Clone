@@ -108,6 +108,10 @@ class CommentSection extends React.Component{
     }
 }
 
+AddComment.propTypes = {
+    value: PropTypes.string
+}
+
 CommentSection.propTypes = {
     postIndex: PropTypes.number,
     likes: PropTypes.number,
@@ -117,7 +121,8 @@ CommentSection.propTypes = {
     })),
     timeStamp: PropTypes.string,
     addLike: PropTypes.func.isRequired,
-    addNewComment: PropTypes.func.isRequired
+    addNewComment: PropTypes.func.isRequired,
+    deleteComment: PropTypes.func.isRequired
 }
 
 export default CommentSection;
