@@ -65,8 +65,6 @@
 
 .comment-container {
     width: 100%;
-    max-height: 90px;
-    overflow: scroll;
 }
 
 .comment {
@@ -127,6 +125,7 @@
     border: none;
     outline: none;
     text-align: right;
+    background-color: transparent;
 }
 
 .post-text:hover {
