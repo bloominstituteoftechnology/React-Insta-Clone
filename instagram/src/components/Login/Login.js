@@ -39,6 +39,7 @@ class Login extends React.Component {
     return (
       <div className="login-page">
         <h1 className="title">Welcome</h1>
+        <i className="fas fa-chevron-down" />
         <div>
           <h3>Please Log In</h3>
           <form className="login">
@@ -61,7 +62,6 @@ class Login extends React.Component {
             <button className="login-button" onClick={this.handleSubmit}>
               GO
             </button>
-            <i className="fas fa-chevron-down" />
           </form>
         </div>
       </div>

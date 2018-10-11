@@ -5,15 +5,15 @@
 }
 
 .login-page h1 {
-  color: black;
+  color: white;
   text-align: center;
   font-family: "Unica One", sans-serif;
-  font-size: 45px;
+  font-size: 60px;
   font-weight: bold;
-  background-color: #ffffff;
   padding: 50px;
   margin-top: 0px;
   box-shadow: 0px 5px 20px rgb(175, 175, 175);
+  background-image: url("./Calvin.jpg");
 }
 
 .login-page h3 {
@@ -79,6 +79,8 @@ input:focus {
 }
 
 .fa-chevron-down {
+  position: absolute;
+  z-index: 2;
   font-size: 30px;
   width: 11%;
   height: 10%;
