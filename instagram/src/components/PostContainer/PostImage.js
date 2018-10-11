@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import '../PostContainer/PostContainer.css';
+const Image = styled.img`
+    width: 100%;
+    height: auto;
+`;
 
 const PostImage = props => {
     return (
-        <img src={props.image} className="post-image" alt="post" />
+        <Image src={props.image} alt="post" />
     );
 }
 

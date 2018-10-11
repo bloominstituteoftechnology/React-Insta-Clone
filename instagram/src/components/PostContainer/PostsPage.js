@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './PostContainer.css';
+import styled from 'styled-components';
 import dummyData from '../../data/dummy-data';
 import PostContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
+
+const PostsPageDiv = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif; 
+`;
 
 class PostsPage extends Component {
   constructor() {
@@ -47,7 +53,7 @@ class PostsPage extends Component {
 
   render() {
     return (
-      <div className="App">
+      <PostsPageDiv>
         <SearchBar submitSearch={this.submitSearch} />
         {(this.state.posts || []).map((post, index) => <PostContainer post={post} key={post.id} />)}
         {/* {this.state.posts.map((post, index) => {
@@ -56,7 +62,7 @@ class PostsPage extends Component {
         }
       }) */}
 
-      </div>
+      </PostsPageDiv>
     );
   }
 }
