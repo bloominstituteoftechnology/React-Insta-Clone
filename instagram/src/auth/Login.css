@@ -50,6 +50,7 @@
     border-radius: 4px;
     margin-bottom: 10px;
     outline: none;
+    border: none;
 }
 
 .login-page button:hover {
