@@ -13,7 +13,6 @@ class App extends React.Component {
       likes: Math.floor(Math.random() * 1000),
       filteredPosts: [],
       filterTarget: "",
-      index: null
 
     };
   }
@@ -23,30 +22,14 @@ class App extends React.Component {
       this.setState({ posts: dummyData });
  
   }
+
   increment = (e) => {
-    if (this.state.index === null) {
-    this.setState({ 
-      likes: this.state.likes + 1,
-      index: 0
+    this.setState( prevState => ({ 
+      likes: prevState.likes + 1,
     })
-  }
-  
-  if (this.state.index < 2 && this.state.index >= 0 ) {
-    this.setState({ 
-      likes: this.state.likes + 1,
-      index: this.state.index + 1
-    })
+    )
   }
 
-  if (this.state.index === 2) {
-    this.setState({
-      likes: this.state.likes + 1,
-      index: 0
-    })
-  }
-
-
-}
     
   
 
