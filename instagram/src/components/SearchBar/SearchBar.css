@@ -1,12 +1,15 @@
 .search-bar-wrapper {
-	border-bottom: 1px solid #3333;
+	position: fixed;
+	top: 0;
 	height: 50px;
+	width: 100%;
+	border-bottom: 1px solid #3333;
 	line-height: 70px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	background: #ffffff;
-	padding: 1% 4% 1% 4%;
+	padding: 1%;
 	margin: 0;
 }
 
@@ -14,7 +17,7 @@
 	height: 50px;
 	display: flex;
 	justify-items: center;
-	width: 20%;
+	width: 9%;
 	justify-content: space-between;
 }
 
@@ -31,15 +34,15 @@
 
 .social-wrapper {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	height: 50px;
-	width: 20%;
+	width: 14%;
 }
 
 .social img {
 	width: 30px;
-	margin-right: 15px;
+	margin-right: 5em;
 }
 
 .search input {
