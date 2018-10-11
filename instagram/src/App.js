@@ -4,6 +4,7 @@ import './App.css';
 import Search from './components/SearchBar/Search.js';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer.js';
+// import PostPage from './components/PostContainer/PostPage';
 import PropTypes from 'prop-types';
 
 
@@ -40,7 +41,8 @@ class App extends React.Component {
      
       <div className="App">
         <Search display={this.displaySearch} />
-        {data.map(postObject=> <PostContainer key={Date.now()} card={postObject} />)}
+        {data.map(postObject=> <PostContainer key={postObject.timestamp} card={postObject} />)}
+        {/* <Postpage display={this.displaySearch} data={data} /> */}
       </div>
     );
   }
