@@ -66,11 +66,15 @@ class PostsPage extends Component {
   search = event => {
     event.preventDefault();
     const newData = this.state.data.filter(post => {
-      return post.username.includes(this.state.searchText)
-      
+        return post.username.includes(this.state.searchText)
+        
     })
+    
+    this.setState({
+        data: newData,
+        searchText: ''
+    });
 
-    this.setState({data: newData})
   }
 
   render() {
