@@ -1,27 +1,44 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Heart } from "react-feather";
+import { MessageCircle } from "react-feather";
 
 import "./PostContainer.css";
 
 import CommentSection from "../CommentSection/CommentSection";
 
-const PostContainer = props => {
-    return (
-        <div className="post">
-            <header>
-                <img className="thumb" src={props.item.thumbnailUrl} alt="user icon" />
-                <h2>{props.item.username}</h2>
-            </header>
-            <img className="postPic" src={props.item.imageUrl} alt="picture" />
-            <div className="icons">
+class PostContainer extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { ...props };
+    }
+
+    addLike = ev => {
+        let temp = { ...this.state.item };
+        temp.likes += 1;
+        this.setState({ item: temp });
+    }
+
+    render() {
+        return (
+            <div className="post">
+                <header>
+                    <img className="thumb" src={this.state.item.thumbnailUrl} alt="user icon" />
+                    <h2>{this.state.item.username}</h2>
+                </header>
+                <img className="postPic" src={this.state.item.imageUrl} alt="picture" />
+                <div className="icons">
+                    <Heart className="icon heart" onClick={this.addLike} />
+                    <MessageCircle className="icon" />
+                </div>
+                <p>{this.state.item.likes} likes</p>
+                <CommentSection 
+                    arr={this.state.item.comments} 
+                    id={this.state.id}
+                />
             </div>
-            <p>{props.item.likes} likes</p>
-            <CommentSection 
-                arr={props.item.comments} 
-                id={props.id}
-            />
-        </div>
-    );
+        );
+    }
 };
 
 PostContainer.propTypes = {

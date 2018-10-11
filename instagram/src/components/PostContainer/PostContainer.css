@@ -11,12 +11,23 @@
 }
 
 .thumb {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     margin: 15px;
     border-radius: 50%;
 }
 
+.post .icons {
+    width: 70px;
+    padding: 10px 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post .icons .icon {
+    cursor: pointer;
+}
+
 .post > p {
-    font-weight: bold;
+    padding-left: 10px;
 }

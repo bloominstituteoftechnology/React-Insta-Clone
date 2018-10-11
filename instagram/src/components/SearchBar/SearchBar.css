@@ -4,3 +4,25 @@ header.search {
     justify-content: space-between;
     align-items: center;
 }
+
+header.search .home {
+    display: flex;
+    align-items: center;
+}
+
+header.search h1 {
+    margin-left: 15px;
+}
+
+header.search .icons {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header.search .icons .user,
+header.search .icons .compass,
+header.search .icons .heart {
+    cursor: pointer;
+    color: gray;
+}
