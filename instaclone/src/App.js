@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import PostContainer from './components/PostContainer/PostContainer';
 import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
 
 const appData = dummyData;
 
@@ -13,23 +12,47 @@ class App extends Component {
 		super(props);
 
 		this.state = {
-			instgramData: [],
-			comments: []
+			instagramData: [],
+			comments: [],
+			searchInput: ''
 		};
 	}
+	searchHandler = event => {
+		event.preventDefault();
+    let returnedData = [...this.state.instagramData];
+    
+		returnedData = returnedData.filter(element => {
+			if (element.username === this.state.searchInput) {
+				return {element};
+			}
+		});
+    this.setState({ instagramData: returnedData });
+    if (this.state.searchInput.length===0) {
+      this.setState({ instagramData: appData })
+    }
+	};
+
+  searchInput = event => {
+    this.setState({ searchInput: event.target.value})
+    
+  }
+
 	componentDidMount() {
 		setTimeout(() => {
-			this.setState({ instgramData: appData });
+			this.setState({ instagramData: appData });
 		}, 3000);
 	}
 	render() {
-		if (!this.state.instgramData.length) {
+		if (!this.state.instagramData.length) {
 			return <h1>"Loading App Data..."</h1>;
 		}
 		return (
 			<div className="appContainer">
-				<SearchBar />
-				<PostContainer appData={this.state.instgramData} />
+				<PostContainer
+					appData={this.state.instagramData}
+					searchInput={this.searchInput}
+					searchHandler={this.searchHandler}
+				/>
 			</div>
 		);
 	}

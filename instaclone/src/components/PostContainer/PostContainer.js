@@ -1,34 +1,22 @@
 import React, { Component } from 'react';
 import './PostContianer.css';
-import PostHeader from './PostHeader/PostHeader';
-import CommentSection from './CommentSection/CommentSection';
+import SearchBar from '../SearchBar/SearchBar';
+import PostCreation from './PostCreation';
 
 class PostContainer extends Component {
 	render() {
-		return this.props.appData.map(post => {
-			return (
-				<div key={Math.random()}>
-					<div className="postContainer">
-						<PostHeader
-							profileImage={post.thumbnailUrl}
-							userName={post.username}
-						/>
-						<img
-							id="mainPost"
-							src={post.imageUrl}
-							alt={post.username + 'image'}
-						/>
-            <CommentSection
-              
-							likes={post.likes}
-							comment={post.comments}
-							time={post.timestamp}
-						/>
-					</div>
-				</div>
-			);
-		});
+		return (
+			<div>
+        <SearchBar 
+          searchInput={this.props.searchInput}
+          searchHandler={this.props.searchHandler}
+        />
+				<PostCreation
+					appData={this.props.appData}
+					
+				/>
+			</div>
+		);
 	}
 }
-
 export default PostContainer;
