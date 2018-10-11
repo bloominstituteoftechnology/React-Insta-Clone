@@ -8,4 +8,4 @@
 [build]
   base    = "./instagram"
   publish = "./instagram/build"
-  command = "yarn build"
+  command = "HUGO_0.40.2"
