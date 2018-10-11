@@ -9,30 +9,15 @@ class App extends Component {
   constructor() {
     console.log("constructor invoked")
     super()
-    this.state = {
-      postData: [],
-      filteredPosts: []
-
-    }
+    this.state = {}
   }
 
-  searchPostsHandler = e => {
-    const postData =this.state.postData.filter(p => {
-      if(p.username.includes(e.target.value)) {
-        return p
-      }
-    })
-    this.setState({filteredPosts: postData})
-  }
   render() {
     console.log("render invoked")
     return (
       <div className="App">
-        <header className="App-header">
-        <SearchBar searchTerm={this.state.searchTerm} searchPosts={this.searchPostsHandler} />
-        </header>
         <section >
-          <PostsPage post={this.state.postData} />
+          <PostsPage />
         </section>
 
 
