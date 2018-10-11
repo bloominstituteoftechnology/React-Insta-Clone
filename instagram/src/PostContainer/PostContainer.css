@@ -1,0 +1,13 @@
+
+
+.new-comment input{
+    border: none;
+    width: 100%;
+}
+.new-comment {
+    margin-left: 4%;
+    margin-right:4%;
+    border-top: 1px solid #E6E6E6;
+    margin-bottom: 10px;
+}
+
