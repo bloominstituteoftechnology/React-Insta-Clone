@@ -1,15 +1,19 @@
 .login{
-  max-width: 400px;
+  max-width: 300px;
   width: 100%;
-  margin: 10% auto;
+  height: 200px;
+  margin: 20% auto;
+  padding: 10% 5%;
   display: flex;
   flex-direction: column;
   jusify-content: space-between;
   align-items: center;
+  background-color: white;
+  border: 1px solid #E6E6E6;
 }
 
 .login .login-form{
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,22 +22,27 @@
 }
 
 .login input{
-  border: 1px solid gray;
+  border: 1px solid #E6E6E6;
+  border-radius: 3px;
   text-align: center;
+  background-color: #FAFAFA;
+  color: #99A5C2;
 }
 
 .login button {
-  border-radius: 5px;
-  border: 1px solid gray;
-  margin: 2%;
-  width: 100px;
-  padding: 2%;
+  border-radius: 3px;
+  border: none;
+  background-color: #3195F3;
+  margin-top: 5%;
+  width: 100%;
+  padding: 3%;
   cursor: pointer;
+  color: white;
+  font-weight: bold;
 
 }
 
-.login .login-logotype {
-  width: 200px;
-  height: 100px;
-  border: 1px solid black;
+.login svg{
+  transform: scale(2);
+  margin-bottom: 5%;
 }

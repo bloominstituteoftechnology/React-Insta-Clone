@@ -36,14 +36,16 @@ class Login extends Component {
             type='text'
             placeholder='Username'
             value={this.state.username}
+            isRequired={true}
             onChange={this.handleChange}/>
             <input
               name='password'
               type='text'
               placeholder='Password'
               value={this.state.password}
+              isRequired={true}
               onChange={this.handleChange}/>
-            <button>Login</button>
+            <button>Log in</button>
         </form>
 
       </div>
