@@ -1,5 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
+import PropTypes from 'prop-types';
+
 
 export default class SearchBar extends React.Component {
 
@@ -13,7 +15,7 @@ export default class SearchBar extends React.Component {
 
         <form className = 'searchInput-container' onSubmit = {this.props.searchDemPosts}>
           <input name = 'search' className = 'searchInput'
-                         placeholder = '&#x1F50D; search'
+                 placeholder = '&#x1F50D; search'
                  value = {this.props.searchInfo}
                  onChange = {this.props.handleSearch}
           />
@@ -31,5 +33,10 @@ export default class SearchBar extends React.Component {
 
   }
 }
+
+SearchBar.propTypes = {
+  searchInfo: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
+};
 
 

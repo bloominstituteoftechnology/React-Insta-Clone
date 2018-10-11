@@ -23,8 +23,9 @@ export default class CommentsContainer extends React.Component {
           username: 'WebDude2834',
           text: this.state.commentText
         }
-      ]
+      ],
 
+      commentText: ''
 
     })
   };
