@@ -1,6 +1,6 @@
 import React from 'react';
-import './Login.css';
 import avatar from '../../assets/avatar.png';
+import { LoginButton, LoginInput, LoginContainer, LoginAuth, LoginParagraph } from './LoginStyles';
 
 class Login extends React.Component {
 	constructor(props) {
@@ -18,44 +18,42 @@ class Login extends React.Component {
 	recordAuth = (event) => {
 		const user = this.state.username;
 		const pw = this.state.password;
-		localStorage.setItem('username', user);
-		localStorage.setItem('password', pw);
+		localStorage.setItem('username', JSON.stringify(user));
+		localStorage.setItem('password', JSON.stringify(pw));
 		window.location.reload();
 	};
 
 	render() {
 		return (
-			<div className="container">
+			<LoginContainer>
 				<div className="welcomeHeader">
-					<img src={avatar} alt="instagram logo" />
+					<img src={avatar} alt="instagram avatar" />
 				</div>
-				<form className="userAuth">
-					<label htmlFor="Please Login" />
-					<p>Enter your username:</p>
-					<input
-						className="userName"
+				<LoginAuth>
+					<LoginParagraph>Enter your username:</LoginParagraph>
+					<LoginInput
+						userName
 						type="text"
 						placeholder="username"
 						name="username"
 						onChange={this.changeHandler}
 						value={this.state.username}
 					/>
-					<p>Enter your password:</p>
-					<input
-						className="password"
-						type="text"
+					<LoginParagraph>Enter your password:</LoginParagraph>
+					<LoginInput
+						password
 						placeholder="password"
 						name="password"
 						onChange={this.changeHandler}
 						value={this.state.password}
 						type="password"
 					/>
-					<button onClick={this.recordAuth}>login</button>
-				</form>
+					<LoginButton onClick={this.recordAuth}>login</LoginButton>
+				</LoginAuth>
 				<div className="signUpToday">
 					Sign up today for <span className="free">free</span>!!
 				</div>
-			</div>
+			</LoginContainer>
 		);
 	}
 }

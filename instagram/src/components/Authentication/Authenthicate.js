@@ -9,9 +9,10 @@ const Authenticate = (App) =>
 				loggedIn: false
 			};
 		}
-
 		componentDidMount() {
-			if (localStorage.getItem('username') && localStorage.getItem('password')) {
+			const username = localStorage.getItem('username');
+			const password = localStorage.getItem('password');
+			if (username && password) {
 				this.setState({ loggedIn: true });
 			} else {
 				this.setState({ loggedIn: false });

@@ -1,17 +1,18 @@
 import React from 'react';
+import { LikeSectionWrapper } from './PostStyles';
 
 const LikeSection = (props) => {
 	return [
 		<div className="like-section" key="likes-icons-container" onClick={props.incrementLike}>
-			<div className="like-section-wrapper">
+			<LikeSectionWrapper>
 				<i className="far fa-heart" />
-			</div>
-			<div className="like-section-wrapper">
+			</LikeSectionWrapper>
+			<LikeSectionWrapper>
 				<i className="far fa-comment" />
-			</div>
+			</LikeSectionWrapper>
 		</div>,
 		<div className="like-section" key="likes-container">
-			<div className="like-section-wrapper">{props.likes}</div>
+			<LikeSectionWrapper>{props.likes}</LikeSectionWrapper>
 		</div>
 	];
 };
