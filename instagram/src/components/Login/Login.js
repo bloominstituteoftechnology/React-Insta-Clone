@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './login.css'
 
 class Login extends Component{
 
@@ -29,9 +30,9 @@ class Login extends Component{
 
             <div className="login-container">
                 <form onSubmit={this.handleSubmit}>
-                    <label for="username">Username: </label>
+                    <label htmlFor="username">Username: </label>
                     <input type="text" id="username" onChange={this.handleChange} value={this.state.username} />
-                    <label for="pw">Password: </label>
+                    <label htmlFor="pw">Password: </label>
                     <input type="text" id="pw" />
                     <button>Submit</button>
                 </form>
