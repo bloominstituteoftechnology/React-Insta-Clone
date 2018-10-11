@@ -1,4 +1,5 @@
 import React from 'react';
+import PostHeader from './PostHeader.js'
 import CommentSection from '../CommentSection/CommentSection.js';
 
 const Post = props => {
@@ -16,21 +17,6 @@ const Post = props => {
         />
       </div>
       <CommentSection comments={props.post.comments} />
-    </div>
-  )
-}
-
-const PostHeader = props => {
-  return (
-    <div className='post-header'>
-      <img
-        className='thumbnail'
-        src={props.thumbnailUrl}
-        alt='user thumbnail'
-      />
-      <div>
-        <div>{props.username}</div>
-      </div>
     </div>
   )
 }
