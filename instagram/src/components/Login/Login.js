@@ -6,32 +6,7 @@ import Styled from 'styled-components';
 const Fieldwrap = Styled.div`
     margin-top : 20px;
 `;
-/* h1 {
-    text-align: center;
-    color : #1ab188;
-    
-}
 
-.button-block {
-        border: 0;      
-        padding:15px 0;
-        font-size:2rem;
-        font-weight: bold;
-        text-transform:uppercase;
-        letter-spacing : .1em;
-        background : #1ab188;
-        color : white;
-        transition:all.5s ease;
-        display : block;
-        width : 40%;
-        margin-top: 40px;
-        margin-left: 160px;
-        border-radius: 5px;
-}
-
- .field-wrap {
-     margin-top : 20px;
- } */
 class Login extends React.Component {
     
     constructor (props) {
@@ -61,7 +36,6 @@ class Login extends React.Component {
                 <h3> Login Page...</h3>
 
                 <form>
-                    
                     <Fieldwrap>
                         <label>Username : </label>
                         <input 
