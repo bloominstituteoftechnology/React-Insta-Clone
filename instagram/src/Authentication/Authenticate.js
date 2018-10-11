@@ -12,9 +12,10 @@ const authenticate = App => {
       };
     }
 
-    loginButton = e => {
-      e.preventDefault();
-      const username = localStorage.getItem("user");
+    loginButton = user => {
+      // e.preventDefault();
+      const username = localStorage.setItem("user", user);
+      console.log(user);
       this.setState({
         isLoggedIn: true,
         username: username

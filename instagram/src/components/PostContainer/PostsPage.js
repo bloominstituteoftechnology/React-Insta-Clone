@@ -10,7 +10,8 @@ class PostsPage extends React.Component {
     super(props);
     this.state = {
       data: [],
-      comments: []
+      comments: [],
+      filteredPosts: []
     };
   }
 
@@ -23,22 +24,34 @@ class PostsPage extends React.Component {
     }, 800);
   }
 
-  // searchPostHandler = e => {
-  //   const posts = this.state.posts.filter(p => {
-  //     if (p.username.includes(e.target.value)){
-  //       return p;
-  //     }f
-  //   })
-  // }
+  searchPostHandler = e => {
+    e.preventDefault();
+    const posts = this.state.data.filter(post => {
+      if (post.username.includes(e.target.value)) {
+        return post;
+      }
+    });
+    console.log(posts);
+    this.setState({ filteredPosts: posts });
+  };
 
   render() {
     // console.log(this.state.comments);
     return (
       <div className="App">
         <header className="App-header">
-          <SearchBar />
+          <SearchBar searchPost={this.searchPostHandler} />
         </header>
-        <PostContainer data={this.state.data} key={Math.random()} />
+        <PostContainer
+          key={Math.random()}
+          // data={this.state.data}
+          data={
+            // this.state.filteredPosts
+            this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.data
+          }
+        />
       </div>
     );
   }

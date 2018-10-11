@@ -17,9 +17,11 @@ class Login extends React.Component {
   };
 
   loginHandler = e => {
+    console.log("loginHandler launched");
     e.preventDefault();
     const user = this.state.username;
     localStorage.setItem("user", user);
+    // this.setState({ username:  })
     // window.location.reload();
   };
 
@@ -42,7 +44,7 @@ class Login extends React.Component {
       <div className="login">
         <div className="login-card box">
           <img src={igTextLogo} alt="logo" />
-          <form onSubmit={this.loginHandler}>
+          <form>
             <input
               type="text"
               name="username"
@@ -58,7 +60,9 @@ class Login extends React.Component {
               onChange={this.changeHandler}
             />{" "}
             <br />
-            <button onClick={this.props.clicked}>Log in</button>
+            <button onClick={() => this.props.clicked(this.state.username)}>
+              Log in
+            </button>
             {/* <button onClick={this.loginHandler}>Log in</button> */}
           </form>
 
