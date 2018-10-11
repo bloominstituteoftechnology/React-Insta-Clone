@@ -1,12 +1,12 @@
 import React from 'react';
-import Comment from './Comments';
+import Comments from './Comments';
 
 
 const CommentSection = props => {
     return (
         <div>
             {props.comments.map(comment => {
-                return <Comment comment = {comment} />
+                return <Comments comments = {comment} />
             })}
         </div>
     )

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import dummyData from "./dummy-data";
-import SearchBar from "./components/SearchBar";
-import PostContainer from "./components/PostContainer";
+import SearchBar from "./components/SearchBar/SearchBar";
+import PostContainer from "./components/PostContainer/PostContainer";
 
 class App extends Component {
   constructor() {
@@ -16,9 +16,11 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         {this.state.dummyData.map(post => {
-          return <div className="post">
-              <PostContainer dummyData={post} />
+          return (
+            <div className="post">
+              <PostContainer data={post} />
             </div>
+          );
         })}
       </div>
     );
