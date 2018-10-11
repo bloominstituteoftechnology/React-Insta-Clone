@@ -27,13 +27,13 @@
   font-size:25px;
 
 }
-.search-bar .search-input{
+/* .search-bar .search-input{
   text-align: center;
   padding:3px 10px;
   width:170px;
   background: #fafafa;
   border: solid 1px #dbdbdb;
-}
+} */
 /* .search-bar .left .instagram-logo{
   padding-left:10px;
   margin:0;
@@ -115,14 +115,14 @@
   font-size:14px;
 }
 
-.post-container-border .comments-input{
+/* .post-container-border .comments-input{
   border-top: solid 1px #dbdbdb;
   width:660px;
   padding:20px 0;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-}
+} */
 
 .post-container-border .comments-input input[type="text"]{
   outline: 0;

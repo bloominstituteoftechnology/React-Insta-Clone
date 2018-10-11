@@ -1,9 +1,11 @@
 import React from 'react';
+import {Form, Inputs} from '../../Styles';
 
 const CommentInput = props =>{
     return(
-        <form onSubmit={props.submitComment} className="add-comment">
-            <input 
+        <Form>
+        <form onSubmit={props.submitComment}>
+            <Inputs commentInput
                 type="text"
                 placeholder="Add Comment..."
                 value={props.comment}
@@ -11,6 +13,7 @@ const CommentInput = props =>{
             />
             <i class="fas fa-ellipsis-h fa-2x"></i>
         </form>
+        </Form>
     );
 }
 

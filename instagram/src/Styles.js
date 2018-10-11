@@ -33,10 +33,47 @@ const InstagramLogo = styled.h1`
     font-size:25px;
 `
 
+const Form = styled.div`
+    margin:0 auto;
+    border-top: solid 1px #dbdbdb;
+    margin-top:10px;
+    width:90%;
+
+`;
+
+const Inputs = styled.input`
+    outline:0;
+    ${props =>
+        props.searchInput
+        ? `
+        text-align: center;
+        padding:3px 10px;
+        width:170px;
+        background: #fafafa;
+        border: solid 1px #dbdbdb;
+        `
+        : null
+    }
+     ${props =>
+        props.commentInput
+        ? `
+        border: none;
+        padding:20px 0;
+        width:90%;
+        margin:0 auto;
+        font-size:15px;
+        `
+        : null
+    }
+`;
+
+
 export {
     Header,
     PostDiv,
     LogoHeader,
     Separator,
-    InstagramLogo
+    InstagramLogo,
+    Inputs,
+    Form
 }

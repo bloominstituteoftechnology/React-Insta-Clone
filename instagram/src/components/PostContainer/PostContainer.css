@@ -65,23 +65,19 @@
 }
 
 /*comment input */
-.add-comment{
-  /* border-top: solid 1px #dbdbdb; */
+/* .add-comment{
+  border:1px solid black;
   margin-top:10px;
-  display: flex;
-  align-items: center;
-}
-.add-comment i{
+ 
+} */
+.fa-ellipsis-h{
   font-size:20px;
-  justify-content: flex-end;
-  margin-right:10px;
+  margin-left:30px;
 }
-.add-comment input{
+/* .commentInputomg{
   border: none;
-  border-top: solid 1px #dbdbdb;
   padding:20px 0;
   width:90%;
   margin:0 auto;
-  outline:none;
   font-size:15px;
-}
+} */

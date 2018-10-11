@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, LogoHeader, Separator, InstagramLogo} from '../../Styles';
+import { Header, LogoHeader, Separator, InstagramLogo, Inputs} from '../../Styles';
 
 const SearchBar = (props) => {
     return(
@@ -10,9 +10,9 @@ const SearchBar = (props) => {
                 <InstagramLogo>instagram</InstagramLogo>
             </LogoHeader>
 
-            <input type="text" placeholder="Search" className="search-input" onKeyDown={props.searchPosts}/>
+            <Inputs searchInput type="text" placeholder="Search" onKeyDown={props.searchPosts}/>
 
-            <div >
+            <div>
                 <i class="far fa-compass fa-2x"></i>
                 <i class="far fa-heart fa-2x"></i>
                 <i class="far fa-user fa-2x"></i>
