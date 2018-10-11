@@ -1,7 +1,8 @@
 import React from "react";
 import Comment from "./Comment";
 import PropTypes from "prop-types";
-import "./CommentSection.css";
+// import "./CommentSection.css";
+import { StyledCommentSection } from "../Styles";
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -78,7 +79,7 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <div className="CommentSection">
+      <StyledCommentSection>
         {this.state.comments.map((com, idx) => (
           <Comment key={idx} comment={com} />
         ))}
@@ -90,7 +91,7 @@ class CommentSection extends React.Component {
           onChange={this.changeHandler}
           />
         </form>
-      </div>
+      </StyledCommentSection>
     );
   }
 }

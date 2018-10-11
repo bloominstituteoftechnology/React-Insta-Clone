@@ -50,3 +50,12 @@ export const Thumbnail = styled.img`
 export const UserName = styled.h2`
   display: inline;
 `;
+
+export const StyledCommentSection = styled.div`
+  text-align: left;
+  margin-left: 60px;
+
+  span {
+    font-weight: bold;
+  }
+`;
