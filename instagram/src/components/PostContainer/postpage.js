@@ -16,10 +16,11 @@ class PostPage extends Component {
     this.setState({ data: dummyData });
   }
 
-  logOut() {
+  logOut = () => {
     localStorage.removeItem("user");
-    window.location.reload();
-  }
+    // window.location.reload();
+    this.props.onLogout();
+  };
 
   handleSearchChange = event => {
     this.setState({ searchQuery: event.target.value });
@@ -38,7 +39,7 @@ class PostPage extends Component {
       return (
         data.username
           .toLowerCase()
-          .indexOf(this.state.searchQuery.toLowerCase()) != -1
+          .indexOf(this.state.searchQuery.toLowerCase()) !== -1
       );
     });
     return (

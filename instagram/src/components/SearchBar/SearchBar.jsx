@@ -1,12 +1,18 @@
 import React from "react";
 import "./SearchBar.css";
+import styled from "styled-components";
+
+const InstagramLogo = styled.img`
+  padding-top: 5px;
+  margin-left: 10px;
+  width: 18%;
+`;
 
 const SearchBar = props => {
   return (
     <div className="row search-bar d-flex justify-content-start align-items-center">
       <i className="fab fa-instagram col-1 insta-icon" />
-      <img
-        className="instagram-logo"
+      <InstagramLogo
         src="https://cdn.iphoneincanada.ca/wp-content/uploads/2017/06/Instagram_logo.svg_.png"
         alt=""
       />

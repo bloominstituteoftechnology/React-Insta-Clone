@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 import LikesSection from "./likesection";
+import styled from "styled-components";
+
+const PostImg = styled.img`
+  width: 100%;
+`;
 
 class Post extends Component {
   constructor(props) {
@@ -17,8 +22,10 @@ class Post extends Component {
     checked = !checked;
     if (checked === false) {
       likes = likes - 1;
+      console.log(likes);
     } else {
       likes = likes + 1;
+      console.log(likes);
     }
 
     this.setState({ liked: checked, likes: likes });
@@ -37,7 +44,7 @@ class Post extends Component {
             {this.state.data.username}
           </span>
         </h2>
-        <img className="post-img" src={this.state.data.imageUrl} alt="" />
+        <PostImg src={this.state.data.imageUrl} alt="" />
         <LikesSection
           incrementLike={this.incrementLike}
           likes={this.state.likes}
