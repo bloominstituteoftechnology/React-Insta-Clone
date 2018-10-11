@@ -1,46 +1,4 @@
-.login{
-  max-width: 300px;
-  width: 100%;
-  height: 200px;
-  margin: 20% auto;
-  padding: 10% 5%;
-  display: flex;
-  flex-direction: column;
-  jusify-content: space-between;
-  align-items: center;
-  background-color: white;
-  border: 1px solid #E6E6E6;
-}
 
-.login .login-form{
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2%;
-
-}
-
-.login input{
-  border: 1px solid #E6E6E6;
-  border-radius: 3px;
-  text-align: center;
-  background-color: #FAFAFA;
-  color: #99A5C2;
-}
-
-.login button {
-  border-radius: 3px;
-  border: none;
-  background-color: #3195F3;
-  margin-top: 5%;
-  width: 100%;
-  padding: 3%;
-  cursor: pointer;
-  color: white;
-  font-weight: bold;
-
-}
 
 .login svg{
   transform: scale(2);

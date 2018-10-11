@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LogoType from '../Icons/LogoType'
+import {WrapperDiv, StyledInput, StyledForm, StyledButton, StyledIcon} from '../Styles'
 import './Login.css'
  class Login extends Component {
   constructor(props){
@@ -22,7 +23,7 @@ import './Login.css'
     } else {
       if (this.state.password.length === 0){
         alert('You must provide a password');
-        return; 
+        return;
       }
     }
     this.props.login(this.state.username, this.state.password);
@@ -33,24 +34,24 @@ import './Login.css'
   }
    render(){
     return(
-      <div className='login'>
-        <LogoType className='login-logotype'/>
-        <form className='login-form' onSubmit={this.handleLogin}>
-          <input
+      <WrapperDiv login className='login'>
+        <LogoType login />
+        <StyledForm login onSubmit={this.handleLogin}>
+          <StyledInput
             name='username'
             type='text'
             placeholder='Username'
             value={this.state.username}
             onChange={this.handleChange}/>
-            <input
+            <StyledInput
               name='password'
               type='text'
               placeholder='Password'
               value={this.state.password}
               onChange={this.handleChange}/>
-            <button>Login</button>
-        </form>
-       </div>
+            <StyledButton login>Login</StyledButton>
+        </StyledForm>
+      </WrapperDiv>
     )
   }
 }

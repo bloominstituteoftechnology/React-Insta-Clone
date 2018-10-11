@@ -1,17 +1,17 @@
-.comment-section {
+/* .comment-section {
   padding: 0% 2%;
   display: flex;
   flex-direction: column;
   text-align: left;
   font-size: 1.2rem;
-}
+} */
 
-.comment {
+/* .comment {
   line-height: 1.7;
-}
+} */
 
 
-form input {
+/* form input {
   margin-top: 1%;
   width: 100%;
   border: none;
@@ -22,8 +22,8 @@ form input {
 }
 
 form input:focus {
-  outline: none; 
-}
+  outline: none;
+} */
 
 .date-stamp{
   margin: 1% 0;

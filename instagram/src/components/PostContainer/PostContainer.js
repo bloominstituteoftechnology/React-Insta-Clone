@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CommentIcon from '../Icons/CommentIcon'
 import HeartIcon from '../Icons/HeartIcon'
 import CommentSection from '../CommentSection/CommentSection';
+import { WrapperDiv, StyledImage, StyledParagraph } from '../Styles'
 import './PostContainer.css';
 
 
@@ -33,18 +34,18 @@ handleLikes = (event, index) => {
 }
 render() {
     return (
-      <div className='post'>
+      <WrapperDiv post>
         <div className='post-header'>
-          <img src={this.props.data.thumbnailUrl} alt='thumbnail'/>
-          <p><strong>{this.props.data.username}</strong></p>
+          <StyledImage postuser src={this.props.data.thumbnailUrl} alt='thumbnail'/>
+          <StyledParagraph postHeader><strong>{this.props.data.username}</strong></StyledParagraph>
         </div>
         <div className='post-content'>
-          <img className='post-image' src={this.props.data.imageUrl} alt=''/>
+          <StyledImage post src={this.props.data.imageUrl} alt=''/>
         </div>
 
         <div className='post-icons'>
-          <HeartIcon
-            isLiked={this.state.liked} handleLikes={this.handleLikes} />
+          <HeartIcon post
+            isLiked={this.state.liked} onClick={this.handleLikes} />
           <CommentIcon />
 
         </div>
@@ -52,7 +53,7 @@ render() {
         <CommentSection comments={this.props.data.comments} comment={this.props.comment}
        timestamp={this.props.data.timestamp}
         username={this.props.username}/>
-      </div>
+      </WrapperDiv>
     )
 }
 }

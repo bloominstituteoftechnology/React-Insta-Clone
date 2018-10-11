@@ -5,6 +5,7 @@ import HeartIcon from '../Icons/HeartIcon'
 import SearchIcon from '../Icons/SearchIcon'
 import UserIcon from '../Icons/UserIcon'
 import LogoType from '../Icons/LogoType'
+import {WrapperDiv, StyledInput, ContainerDiv} from '../Styles'
 
 import PropTypes from 'prop-types'
 import './SearchBar.css'
@@ -12,25 +13,25 @@ import './SearchBar.css'
 
 const SearchBar = props => {
   return (
-    <div className='search-bar'>
-        <div className='logo'>
+    <WrapperDiv searchBar>
+        <ContainerDiv logo>
           <CameraIcon />
-          <LogoType />
-        </div>
-        <div className='search-field'>
+          <LogoType className='logo-type'/>
+        </ContainerDiv>
+        <ContainerDiv search>
           <SearchIcon />
-          <input type='text' name='search' value={props.input} onChange={props.handleSearch} placeholder='Search' />
+          <StyledInput type='text' name='search' value={props.input} onChange={props.handleSearch} placeholder='Search' />
 
-        </div>
+        </ContainerDiv>
 
 
-      <div className='icons'>
+      <ContainerDiv icons>
         <CompassIcon />
         <HeartIcon />
         <UserIcon />
-      </div>
+      </ContainerDiv>
 
-      </div>
+    </WrapperDiv>
 
   )
 }

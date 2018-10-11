@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {StyledParagraph} from '../Styles'
 
 
 const Comment = props => {
   return (
-    <p className='comment'><strong>{props.comment.username}</strong> {props.comment.text}</p>
+    <StyledParagraph comment ><strong>{props.comment.username}</strong> {props.comment.text}</StyledParagraph>
   )
 }
 

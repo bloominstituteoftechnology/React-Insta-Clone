@@ -37,6 +37,7 @@
 import React, { Component } from 'react';
 import PostsPage from './components/PostContainer/PostsPage.js'
 import Authenticate from './components/Authentication/Authenticate.js'
+import {WrapperDiv} from './components/Styles'
 import './App.css';
 
 class App extends Component {
@@ -54,9 +55,9 @@ class App extends Component {
 
   render() {
     return(
-      <div className='App'>
+      <WrapperDiv>
         <PostsPage username={this.state.username} />
-      </div>
+      </WrapperDiv>
     )
   }
 }

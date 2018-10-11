@@ -2,6 +2,7 @@ import React from 'react';
 import Comment from './Comment'
 import CommentEntry from './CommentEntry'
 import Timestamp from './Timestamp'
+import {WrapperDiv} from '../Styles'
 import './CommentSection.css'
 
 class CommentSection extends React.Component {
@@ -40,15 +41,14 @@ class CommentSection extends React.Component {
   }
 
   render() {
-    // console.log(this.props.timestamp)
-    return (
-      <div className='comment-section'>
-            {this.state.comments.map((comment, i) =>
-              <Comment key={i} comment={comment} />
-            )}
-            <Timestamp timestamp={this.props.timestamp} />
-            <CommentEntry addNewComment={this.addNewComment} handleCommentChange={this.handleCommentChange} newComment={this.state.newComment} />
-      </div>
+      return (
+        <WrapperDiv commentSection>
+              {this.state.comments.map((comment, i) =>
+                <Comment key={i} comment={comment} />
+              )}
+              <Timestamp timestamp={this.props.timestamp} />
+              <CommentEntry addNewComment={this.addNewComment} handleCommentChange={this.handleCommentChange} newComment={this.state.newComment} />
+        </WrapperDiv>
 
     )
   }
