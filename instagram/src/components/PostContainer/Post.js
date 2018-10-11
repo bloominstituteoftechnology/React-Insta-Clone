@@ -4,6 +4,26 @@ import PostHeader from './PostHeader';
 import './Post.css';
 import LikeSection from './LikeSection';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+
+const PostBorder = styled.div`
+    border: 1px solid #d3d3d3;
+    margin-top: 110px;
+    margin-bottom: -75px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    `;
+
+const PostImgWrapper = styled.div`
+    height: 100%;
+    width: 100%;
+    `;
+
+const PostImg = styled.img`
+    width: 100%;
+    margin-bottom: 20px;
+    `;
+
 
 class Post extends React.Component {
     constructor(props) {
@@ -20,24 +40,23 @@ class Post extends React.Component {
 
     render() {
         return (
-        <div className="post-border">
+        <PostBorder>
           <PostHeader
             username={this.props.post.username}
             thumbnailUrl={this.props.post.thumbnailUrl}
         />
-      <div className="post-img-wrapper">
-        <img
+      <PostImgWrapper>
+        <PostImg
           alt="post thumbnail"
-          className="post-img"
           src={this.props.post.imageUrl}
         />
-      </div>
+      </PostImgWrapper>
         <LikeSection 
             incrementLike={this.incrementLike}
             likes={this.state.likes}
         />
         <CommentSectionContainer comments={this.props.post.comments} />
-    </div>
+    </PostBorder>
     );
     }
     
