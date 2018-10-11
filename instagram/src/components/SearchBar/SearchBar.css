@@ -17,7 +17,9 @@ input {
 .instaword{
     height: auto;
     width: 100px;
-    border-left: solid 1px gray;
+    padding: 0 5px;
+    position: relative;
+    top: 5px;
 }
 
 .instalogo{

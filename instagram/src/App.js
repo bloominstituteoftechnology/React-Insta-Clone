@@ -11,7 +11,9 @@ import PropType from 'prop-types';
 import PostsPage from './components/PostContainer/PostsPage.js';
 import Authenticate from './components/Authentication/Authenticate.js';
 import Login from './components/Login/Login.js';
+import { TweenMax, TimelineLite, Power2, Elastic, CSSPlugin } from "gsap/TweenMax";
 
+const TweensRef = [TweenMax, TimelineLite, Power2, Elastic, CSSPlugin, TweensRef];
 
 library.add(faHeart);
 library.add(faUserCircle);
@@ -48,7 +50,7 @@ class App extends Component {
 
   inputHandler(event){
       
-    let username = this.state.username;
+    let username = this.props.username;
     this.setState({
         commentInput: {
             text: event.target.value,

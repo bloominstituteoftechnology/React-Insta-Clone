@@ -21,7 +21,7 @@ class extends React.Component {
         if(this.state.username && this.state.password){
             window.localStorage.setItem('loggedIn', 'true');
             window.localStorage.setItem('username', this.state.username);
-            this.setState({loggedIn: true});
+            this.setState({loggedIn: true, username: this.state.username, password: this.state.password});
         }
         
       }
@@ -45,7 +45,7 @@ class extends React.Component {
         let loggedIn = window.localStorage.getItem('loggedIn');
         if (loggedIn){
             let usernameCheck = window.localStorage.getItem('username');
-            this.setState({loggedIn: true, currentUser: usernameCheck});
+            this.setState({loggedIn: true, username: usernameCheck, });
         }
         else {
             this.setState({loggedIn: false, currentUser: ''});
