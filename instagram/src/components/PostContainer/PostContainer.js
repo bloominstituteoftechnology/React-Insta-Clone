@@ -1,7 +1,11 @@
 import React from "react";
+
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
-
+// import icons from the font-awesome library
+import FontAwesomeIcon from 'react-fontawesome';
+// "font-awesome": "^4.7.0",
+// "react-fontawesome": "^1.6.1",
 const PostContainer = props => {
   console.log(props);
   return (
@@ -24,13 +28,18 @@ const PostContainer = props => {
         {/* or use class name in css */}
       </div>
       <div className="Icon-row">
+
+      // look for the heart and comment  icons. 
+      {/* <FontAwesomeIcon icon={["far", "heart"]} onClick={this.addALike} />{" "}
+         <FontAwesomeIcon icon={["far", "comment"]} /> */}
         {/* <img
           className="SearchBar-icons"
           src="https://www.flaticon.com/free-icon/like_149217"
           alt="heart icon"
         />{/* designed by Smashicons
         https://smashicons.com/ from Flaticon */}
-        <img className="Icon" src="../../assets/like-heart.png" alt="Heart icon" />
+        {/* // import icons directly from a local fa.
+        <img className="Icon" src="../../assets/like-heart.png" alt="Heart icon" /> */}
       </div>
       <div className="Stats-row">{props.likes} likes</div>
       <div className="Comments">

@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+
 // import logo from './D2rdroid1.png';
 import logo from "./d2rdDroidEmoji.png";
 import "./App.css";
+
+
 import data from "./dummy-data";
 
 import SearchBar from "./components/SearchBar/SearchBar";

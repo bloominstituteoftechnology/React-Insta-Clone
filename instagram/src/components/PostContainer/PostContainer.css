@@ -64,7 +64,7 @@
   text-align: left;
   margin-left: 2rem;
   margin-top: 1rem;
-  margin-bottom: ;
+  margin-bottom: 1.5rem;
 }
 
 .Timestamp {
@@ -98,7 +98,7 @@
   display: flex;
   font-size: 1.1rem;
   padding-left: 28px;
-  justify-conetnt: left;
+  justify-content: left;
 }
 
 .color {
