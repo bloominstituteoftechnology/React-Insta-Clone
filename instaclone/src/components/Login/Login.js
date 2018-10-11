@@ -18,9 +18,15 @@ class Login extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="loginPage">
+        <img src="https://i.imgur.com/K0GVTfd.png" alt="" />
         <form className="loginForm">
-          <h2>Welcome To React-Insta-Clone</h2>
+          <h2>
+            Welcome To <br /> React-Insta-Clone
+          </h2>
+          <p>Sign up to see photos and videos from your friends</p>
+          <input type="submit" value="Log in with Facebook" />
+          <hr />
           <input
             type="text"
             name="username"
@@ -37,7 +43,7 @@ class Login extends React.Component {
           />
           <input
             type="submit"
-            placeholder="Login"
+            value="Sign up"
             onClick={this.handleLoginSubmit}
           />
         </form>

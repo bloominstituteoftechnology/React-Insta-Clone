@@ -1,22 +1,52 @@
+body {
+  background: #FAFAFA;
+  box-sizing: border-box;
+}
+
+.loginPage {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+}
+
 .loginForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: lightgreen;
-  border-radius: 10px;
-  width: 400px;
+  background: #fff;
+  width: 350px;
   margin: 50px auto;
+  box-shadow: 1px 1px 1px lightgrey;
+}
+
+.loginForm h2,
+.loginForm p {
+  margin: 0 20px 10px;
+  text-align: center;
+}
+
+.loginForm p {
+  font-weight: bold;
+  color: #999999;
 }
 
 .loginForm input[type='text'],
 .loginForm input[type='password'] {
-  height: 20px;
-  width: 300px;
+  height: 25px;
+  width: 275px;
   padding-left: 10px;
   margin-bottom: 10px;
+  background: #fafafa;
+  outline: none;
 }
 
-.loginForm input[type='submit'] {
+input[type='submit'] {
+  background: #3897F0;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  width: 275px;
+  height: 25px;
   margin-bottom: 15px;
 }
