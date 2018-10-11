@@ -5,13 +5,16 @@ import dummyData from './dummy-data'
 import SearchBar from './SearchBar'
 import PropTypes from "prop-types"
 
+
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
       posts:[],
+      filtered:[],
       search:'',
+      comments: [],
     } 
   }
 
@@ -28,6 +31,16 @@ class App extends Component {
     );
     }
 
+    searchHandler = event => {
+      event.preventDefault();
+      const filtered=this.state.posts.filter(post => post.username === this.state.search) 
+
+      this.setState({
+        filtered: filtered,
+        search: '',
+    });
+  
+    }
 
 
 
@@ -53,8 +66,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <SearchBar value={this.state.search} inputHandler={this.inputHandler} searchClickHandler={this.searchClickHandler}/>
-      <PostContainer posts={this.state.posts} submitHandler={this.submitHandler}/>
+      <SearchBar value={this.state.search} inputHandler={this.inputHandler} searchHandler={this.searchHandler}/>
+      {this.state.filtered.length>0 ?
+      <PostContainer posts={this.state.filtered} submitHandler={this.submitHandler} /> :
+      <PostContainer posts={this.state.posts} submitHandler={this.submitHandler}/>   }
       </div>
     );
   }

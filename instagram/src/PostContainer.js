@@ -4,7 +4,7 @@ import CommentSection from './CommentSection';
 
 const PostContainer = (props) => {
     return (
-    <section>
+    <section className='section'>
 
     {props.posts.map(item => <CommentSection count={props.count} submitHandler={props.submitHandler} key={item.timestamp} obj={item} />)}
     </section>

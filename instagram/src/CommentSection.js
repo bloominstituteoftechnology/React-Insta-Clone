@@ -5,6 +5,7 @@ import Comments from './Comments'
 
 
 const CommentSection = (props) => {
+    
     return(
 <div className='poster' data-id={props.obj.timestamp}>
     <div className='posterID'>
