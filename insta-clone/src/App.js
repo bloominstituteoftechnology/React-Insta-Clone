@@ -6,23 +6,20 @@ import Authenticate from "./components/Authenticate/Authenticate"
 
 const App = (
   class App extends Component {
-    // constructor() {
-    //   super()
-    //   this.state = {
-    //     username: '',
-    //   }
-    // }
-
+    constructor() {
+      super()
+      this.state = {}
+     }
 
     render() {
 
 
       return (
-        <>
+        <div className='App'>
 
           <PostPage />
 
-        </>
+        </div>
       );
     }
   }

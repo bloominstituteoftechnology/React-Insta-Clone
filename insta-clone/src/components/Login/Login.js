@@ -2,31 +2,52 @@ import React from "react";
 import { Button } from "reactstrap";
 
 class Login extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props);
     this.state = {
-      username: '',
-    }
+      username: "",
+      password: ""
+    };
   }
 
-  componentDidMount = () => {
-    const user = localStorage.getItem("username");
-    this.setState({ username: user });
-    }
-    handleLogin = () => {
-        const user = this.state.username
-        localStorage.setItem('user', user)
-        window.location.reload
-    }
+  handleInputChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+  handleLogin = () => {
+    const user = this.state.username;
+    localStorage.setItem("user", user);
+    window.location.reload();
+
+  };
 
   render() {
     return (
-      <form action="">
+      <form className="login-form" >
         <label>Username</label>
-        <input type="text" />
+        <input
+          type="text"
+          placeholder="Username"
+          name="username"
+          value={this.state.username}
+          onChange={this.handleInputChange}
+        />
         <label>Password</label>
-        <input type="password" />
-        <Button color="secondary" size="lg" outline block>
+        <input
+          type="password"
+          placeholder="Password"
+          value={this.state.password}
+          name="password"
+          onChange={this.handleInputChange}
+        />
+        <Button
+          color="secondary"
+          size="lg"
+          outline
+          block
+          onClick={this.handleLogin}
+        >
           Login
         </Button>
       </form>
