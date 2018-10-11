@@ -5,8 +5,6 @@ import CommentInput from './CommentInput';
 import instaheart from './Images/instaheart.png';
 import comment from './Images/comment.png';
 
-import './CommentSection.css';
-
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
