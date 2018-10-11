@@ -9,11 +9,6 @@ body {
   background-color: #FAFAFA;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 i:hover {
   cursor: pointer;
 }
