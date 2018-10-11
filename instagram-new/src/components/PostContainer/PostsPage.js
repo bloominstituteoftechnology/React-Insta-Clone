@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './Post.css';
 import dummyData from '../../dummy-data';
 import Search from '../SearchBar/Search';
 import Post from './Post';
+import { ContentContainer } from './PostStyle';
 
 
 class PostsPage extends Component {
@@ -49,9 +49,9 @@ class PostsPage extends Component {
       
       <div className="App">
         <Search inputChange = {this.inputChange} filtered = {this.filtered} />
-        <div className = "content-container">
+        <ContentContainer>
             <Post dummyData ={this.state.filteredData} counter = {this.counter}/>
-        </div>
+        </ContentContainer>
       </div>
     );
   }

@@ -1,34 +1,34 @@
 import React from 'react';
-import './Post.css' 
 import CommentSection from './CommentSection/CommentSection';
+import {PostContainer, PostHeader, PostHeaderThumbnail, BigImage, CommentsContainer, InteractiveButtonsContainer, LikesInfo, OverallHolder} from './PostStyle';
+import { PostUserName } from '../StylesReusable';
 
 const Post= props => { 
     return (
-        <div>
+        <OverallHolder>
             {props.dummyData.map((info,index) => {
                 return (
-                <div className = 'post'>
-                    <div className = 'post-header'>
-                        <img src = {info.thumbnailUrl} alt = 'thumbnail'/>
-                        <p>{info.username}</p>
-                    </div>
-                    <img className = 'big-image' src = {info.imageUrl} alt = 'post-image'/>
+                <PostContainer>
+                    <PostHeader>
+                        <PostHeaderThumbnail src = {info.thumbnailUrl} alt = 'thumbnail'/>
+                        <PostUserName>{info.username}</PostUserName>
+                    </PostHeader>
+                    <BigImage src = {info.imageUrl} alt = 'post-image'/>
 
-                    <div className = 'comments'>
-                        <div className = 'likes'>
-                            <div className = "cl-buttons">
+                    <CommentsContainer>
+                        <InteractiveButtonsContainer>
                                 <i onClick = {event => {
                                     props.counter(event,index);
                                 }} class="far fa-heart"></i>
-                            </div>
-                            <p>{info.likes} likes</p>
-                        </div>
+                            <LikesInfo>{info.likes} likes</LikesInfo>
+                        </InteractiveButtonsContainer>
                         <CommentSection comments={info.comments}/> 
-                    </div> 
-                </div>
+                    </CommentsContainer> 
+                </PostContainer>
                 );
             })}
-        </div>
+        </OverallHolder>
+        
     );
 }
 

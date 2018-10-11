@@ -11,7 +11,7 @@ export const StyleSearchInput = styled.input`
     background: #f7f6f6;
 `;
 
-export const StyleSearhBar= styled.div`
+export const Header= styled.header`
     display: flex;
     padding: 1.9rem 1.5rem;
     align-items: center;
@@ -23,17 +23,22 @@ export const StyleSearhBar= styled.div`
     background: white;
 `;
 
-export const StyleImgLogo = styled.img`
+export const LogoHeader = styled.div`
+    display: flex;
+    margin-right: 22%;
+`;
+
+export const LogoImage = styled.img`
     width: 3rem;
     height: 3rem;
-    padding-right: 2%;
+    padding-right: 5%;
     border-right: 1px solid black;
 `;
 
 export const StyleWordLogo = styled.img`
     width: 11.3rem;
     height: 4rem;
-    padding-left: 2%;
+    padding-left: 5%;
     padding-right: 19%;
     
 `;
