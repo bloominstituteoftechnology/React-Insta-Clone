@@ -44,7 +44,7 @@ class Login extends Component {
             required 
           />
         </FormGroup>
-        <Button type="submit" value="Login" onClick={this.handleLoginSubmit} >Submit</Button>
+        <Button type="submit" value="Login" onClick={this.handleLoginSubmit} >Log In</Button>
       </Form>
     )
     }

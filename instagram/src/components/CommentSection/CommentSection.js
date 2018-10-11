@@ -7,6 +7,7 @@ import React, { Component } from 'react';
    
 //   } from 'reactstrap';
 import './CommentSection.css';
+import Login from '../Login/Login';
 
 class CommentSection extends Component {
     constructor(props) {
@@ -16,6 +17,7 @@ class CommentSection extends Component {
           images: props.data.image,
           likes: props.data.likes,
           input: '',
+          username: props.username,
         }
       }
 
@@ -33,7 +35,7 @@ class CommentSection extends Component {
                 comments: [
                     ...this.state.comments,
                     {
-                        username: "unknown",
+                        username: [localStorage.getItem('user')],
                         text: this.state.input
                     }
                 ]
@@ -72,7 +74,7 @@ class CommentSection extends Component {
                     </div>
                     ))}
                 <p>{this.props.data.timestamp}</p>
-
+                    
                 <form onSubmit={this.addNewComment}>
                     <textarea
                         value={this.state.input} 

@@ -31,6 +31,11 @@ class SearchBar extends Component {
         }
       };
 
+      handleLogOut = event => {
+          localStorage.clear('user');
+          window.location.reload();
+      }
+
     // doSearch = event => {
     //     let filteredUsers = this.props.comments.filter(
     //         (user) => {
@@ -67,7 +72,7 @@ class SearchBar extends Component {
             </li>  */}
             <i class="far fa-compass fa-2x lt"></i>
             <i class="far fa-heart fa-2x lt"></i>
-            <i class="far fa-user fa-2x lt"></i>
+            <i onClick={this.handleLogOut} class="far fa-user fa-2x lt"></i>
         </Navbar>
 
     )
