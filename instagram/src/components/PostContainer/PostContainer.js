@@ -3,17 +3,25 @@ import PropTypes from 'prop-types';
 
 import CommentSection from '../CommentSection/CommentSection';
 
+import {
+  Post,
+  Image,
+  PostHeader,
+  PostHeaderImage,
+  PostUsername,
+} from './PostContainerStyles';
+
 const PostContainer = (props) => {
   return (
-    <div className="post">
-      <div className="user">
-        <img
+    <Post>
+      <PostHeader>
+        <PostHeaderImage
           src={props.post.thumbnailUrl}
           alt={`${props.post.username} profile`}
         />
-        <h3>{props.post.username}</h3>
-      </div>
-      <img src={props.post.imageUrl} alt="probably toast" />
+        <PostUsername>{props.post.username}</PostUsername>
+      </PostHeader>
+      <Image src={props.post.imageUrl} alt="probably toast" />
       <div className="post-data">
         <button
           className="heart-icon"
@@ -26,7 +34,7 @@ const PostContainer = (props) => {
         comments={props.post.comments}
         timestamp={props.post.timestamp}
       />
-    </div>
+    </Post>
   );
 };
 

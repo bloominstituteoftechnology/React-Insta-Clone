@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Comment from '../Comment/Comment';
+import { CommentSectionContainer } from './CommentSectionStyles';
 
 class CommentSection extends React.Component {
   state = { comments: this.props.comments, newComment: '' };
@@ -30,12 +31,12 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <div className="comment-section">
+      <CommentSectionContainer>
         {this.state.comments.map((comment) => {
           return <Comment comment={comment} key={comment.text} />;
         })}
         <div className="timestamp">{this.props.timestamp}</div>
-        <form autocomplete="off" onSubmit={this.addNewComment}>
+        <form autoComplete="off" onSubmit={this.addNewComment}>
           <input
             type="text"
             name="newComment"
@@ -44,7 +45,7 @@ class CommentSection extends React.Component {
             onChange={this.changeHandler}
           />
         </form>
-      </div>
+      </CommentSectionContainer>
     );
   }
 }

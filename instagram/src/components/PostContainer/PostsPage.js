@@ -4,6 +4,8 @@ import dummyData from '../../dummy-data.js';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 
+import { StyledPostsContainer } from './PostsPageStyles';
+
 export class PostsPage extends Component {
   state = {
     posts: dummyData,
@@ -57,15 +59,17 @@ export class PostsPage extends Component {
           logout={this.logout}
           text={this.state.searchQuery}
         />
-        {posts.map((post) => {
-          return (
-            <PostContainer
-              post={post}
-              addLike={this.addLike}
-              key={post.timestamp}
-            />
-          );
-        })}
+        <StyledPostsContainer>
+          {posts.map((post) => {
+            return (
+              <PostContainer
+                post={post}
+                addLike={this.addLike}
+                key={post.timestamp}
+              />
+            );
+          })}
+        </StyledPostsContainer>
       </div>
     );
   }
