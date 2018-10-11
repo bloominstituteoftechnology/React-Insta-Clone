@@ -1,0 +1,16 @@
+.comment-section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+}
+
+.comment-username {
+  font-weight: bold;
+  padding-right: 10px;
+}
