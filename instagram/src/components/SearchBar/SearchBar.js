@@ -9,6 +9,7 @@ import LogoType from '../Icons/LogoType'
 import PropTypes from 'prop-types'
 import './SearchBar.css'
 
+
 const SearchBar = props => {
   return (
     <div className='search-bar'>
