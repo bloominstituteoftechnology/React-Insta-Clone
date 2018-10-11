@@ -1,0 +1,15 @@
+.post-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-left: 3%;
+}
+
+.post-thumb {
+    border-radius: 50%;
+    width: 2em;
+}
+
+.post-image {
+    width: 99%;
+}
