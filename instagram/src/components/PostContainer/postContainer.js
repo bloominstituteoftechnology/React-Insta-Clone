@@ -2,6 +2,34 @@ import React from 'react'
 import CommentSection from '../CommentSection/commentSection';
 import like from './likeandcomment.PNG'
 import './postContainer.css'
+import styled from 'styled-components'
+
+const LikeandcommentIcons = styled.img`
+    padding-left: 1%;
+`
+const Likes = styled.p`
+    padding-left: 2%;
+`
+const Image = styled.img`
+    width: 99%;
+    padding-left: .5%;
+`
+const Header = styled.h4`
+    padding-left: 2%;
+`
+const HeaderIcon = styled.img`
+    border-radius: 50%;
+    width: 5%;
+`
+const ContainerDiv = styled.div`
+    margin: 7% 0%;
+    border: 1px solid lightgrey;
+`
+const MasterDivContainer = styled.div`
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+`
 
 const PostContainer = props => {
 
@@ -20,13 +48,18 @@ const PostContainer = props => {
     }
 
     return (
-        <div className='masterDivContainer'>
+        <MasterDivContainer>
             {props.data.map(user => {
-            return <div className='containerDiv' key={user.username}>
-            <h4 className='header'><img className='headerIcon' src={user.thumbnailUrl} alt='header thumbnail' />{user.username}</h4>
-                <img className='image' src={user.imageUrl} alt='user post' />
-                <img onClick={props.increaseLike} className='likeandcommentIcons' src={like} alt='like button' />
-                <p className='likes' >{props.count} likes</p>
+            return <ContainerDiv key={user.username}>
+
+
+            <Header><HeaderIcon src={user.thumbnailUrl} alt='header thumbnail'/>{user.username}</Header>
+
+                <Image src={user.imageUrl} alt='user post' />
+
+                <LikeandcommentIcons onClick={props.increaseLike} className='likeandcommentIcons' src={like} alt='like button' />
+
+                <Likes>Likes {props.count}</Likes>
                 
                     <CommentSection 
                     text={user.comments.map(comments => {
@@ -36,9 +69,9 @@ const PostContainer = props => {
                     changeHandler={props.changeHandler}
                     newInput={props.newInput}
                     />
-            </div>
+            </ContainerDiv>
             })}
-        </div>
+        </MasterDivContainer>
     )
 }
 
