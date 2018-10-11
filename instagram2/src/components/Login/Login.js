@@ -1,5 +1,6 @@
 import React from 'react';
 import './Login.css'
+import {Button} from '../../Styles';
 
 class Login extends React.Component {
     constructor(props) {
@@ -36,7 +37,7 @@ class Login extends React.Component {
                     placeholder="password"
                     value={this.state.password}
                 />
-                <button className="log-in-button" type="login">Log In</button>
+                <Button className="log-in-button" type="login">Log In</Button>
             </form>
         )
     }

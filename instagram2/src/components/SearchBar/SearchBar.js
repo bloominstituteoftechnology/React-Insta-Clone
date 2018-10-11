@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
+import {StyledHeader} from '../../Styles';
 
 const SearchBar = props => {
     return (

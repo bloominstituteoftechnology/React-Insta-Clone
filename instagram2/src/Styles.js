@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const StyledHeader = styled.header`
+const StyledHeader = styled.header`
     display: flex;
-    border: 1px solid darkgray;
+    border: 1px solid red;
     height: 80px;
     line-height: 70px;
     justify-content: space-between;
@@ -20,3 +20,6 @@ const Button = styled.button`
 
     ${props => (props.type === 'login' ? `background-color: purple;` : null)}
     `;
+
+
+export {StyledHeader, Button};
