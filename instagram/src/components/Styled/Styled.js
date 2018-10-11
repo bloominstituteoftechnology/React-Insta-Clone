@@ -15,3 +15,32 @@ export const CommentActions = Styled.span`
     color:grey;
     font-size:.8rem;
 `
+
+export const LoginInput = Styled.input`
+    width:300px;
+    height:30px;
+`
+export const LoginHeader = Styled.p`
+    font-size:1.2rem;
+`
+
+export const Spacer = Styled.div`
+    height:30px;
+`
+export const Spacer20 = Styled.div`
+    height:20px;
+`
+export const Spacer10 = Styled.div`
+    height:10px;
+`
+export const Button = Styled.button`
+ height:35px;
+ width:100px;   
+ border-radius:3px;
+`
+export const LoginButton = Styled.button`
+ height:35px;
+ width:300px;   
+ border-radius:3px;
+ background-color:#007bff
+`

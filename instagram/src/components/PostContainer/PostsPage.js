@@ -3,10 +3,9 @@ import PostContainer from './PostContainer'
 import { dummyData } from '../../data/dummy-data'
 import SearchContainer from '../SearchContainer/SearchContainer'
 import Styled from 'styled-components';
+import {Spacer} from '../Styled/Styled'
 
-const Spacer = Styled.div`
-    height:30px;
-`
+
 const MainPostContainer = Styled.div`
     .searchContainer{
         background:blue
