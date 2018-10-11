@@ -11,8 +11,9 @@ const Post = (props) => {
             </div>
             <img className='main-image' src={props.postData.imageUrl} alt='post content' />
            
-            <div className='likes'>{props.postData.likes} </div>
-            <CommentSection comments={props.postData.comments} timestamp={props.postData.timestamp}/>
+            {/* <div className='likes'>{props.postData.likes}  </div> */}
+            
+            <CommentSection likes={props.postData.likes} comments={props.postData.comments} timestamp={props.postData.timestamp} />
             
         </div>
     )

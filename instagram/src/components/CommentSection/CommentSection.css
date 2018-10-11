@@ -11,3 +11,9 @@
 .user:hover {
     cursor: pointer;
 }
+.likes {
+    display: flex;
+    margin: 0 2%;
+    font-weight: bold;
+    
+}

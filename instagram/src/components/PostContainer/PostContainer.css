@@ -46,11 +46,11 @@
 }
 
 
-.likes {
+/* .likes {
     display: flex;
     margin: 0 2%;
     font-weight: bold;
-}
+} */
 
 .timestamp {
     display: flex;
