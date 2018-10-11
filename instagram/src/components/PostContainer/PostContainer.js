@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { Heart } from "react-feather";
 import { MessageCircle } from "react-feather";
 
-import "./PostContainer.css";
+// import "./PostContainer.css";
+import { InstaPost } from "../../styles";
 
 import CommentSection from "../CommentSection/CommentSection";
 
@@ -21,14 +22,14 @@ class PostContainer extends React.Component {
 
     render() {
         return (
-            <div className="post">
+            <InstaPost>
                 <header>
                     <img className="thumb" src={this.state.item.thumbnailUrl} alt="user icon" />
                     <h2>{this.state.item.username}</h2>
                 </header>
                 <img className="postPic" src={this.state.item.imageUrl} alt="picture" />
                 <div className="icons">
-                    <Heart className="icon heart" onClick={this.addLike} />
+                    <Heart className="icon" onClick={this.addLike} />
                     <MessageCircle className="icon" />
                 </div>
                 <p>{this.state.item.likes} likes</p>
@@ -36,7 +37,7 @@ class PostContainer extends React.Component {
                     arr={this.state.item.comments} 
                     id={this.state.id}
                 />
-            </div>
+            </InstaPost>
         );
     }
 };

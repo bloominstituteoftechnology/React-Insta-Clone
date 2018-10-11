@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./CommentSection.css";
+import { Comments } from "../../styles";
 
 class CommentSection  extends React.Component {
     constructor(props) {
@@ -27,7 +27,7 @@ class CommentSection  extends React.Component {
 
     render() {
         return(
-            <div className="comments">
+            <Comments>
                 {this.state.arr.map(comment => 
                     <p><strong>{comment.username}</strong> {comment.text}</p>
                 )}
@@ -40,7 +40,7 @@ class CommentSection  extends React.Component {
                         onChange={this.newCommentChangeHandler}
                     />
                 </form>
-            </div>
+            </Comments>
         );
     }
 };

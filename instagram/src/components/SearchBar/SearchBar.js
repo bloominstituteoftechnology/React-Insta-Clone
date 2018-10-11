@@ -4,11 +4,12 @@ import { Instagram } from "react-feather";
 import { Compass } from "react-feather";
 import { Heart } from "react-feather";
 
-import "./SearchBar.css";
+// import "./SearchBar.css";
+import { SearchHeader } from "../../styles";
 
 const SearchBar = props => {
     return (
-        <header className="search">
+        <SearchHeader>
             <div className="home">
                 <Instagram />
                 <h1>Instagram</h1>
@@ -17,11 +18,11 @@ const SearchBar = props => {
                 <input type="text" placeholder="Search" />
             </form>
             <div className="icons">
-                <Compass className="compass" />
-                <Heart className="heart" />
-                <User onClick={props.logout} className="user" />
+                <Compass className="icon" />
+                <Heart className="icon" />
+                <User onClick={props.logout} className="icon" />
             </div>
-        </header>
+        </SearchHeader>
     );
 };
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
 import dummyData from "./dummy-data";
+
+import { AppContainer } from "./styles";
 
 import PostsPage from "./components/PostContainer/PostsPage"
 import Authenticate from "./components/Authentication/Authenticate";
@@ -25,9 +26,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <AppContainer>
         <PostsPage data={this.state.data} logout={this.logout} />
-      </div>
+      </AppContainer>
     );
   }
 }
