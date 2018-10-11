@@ -3,6 +3,10 @@ import PostContainer from "./PostContainer";
 import SearchBarContainer from "../SearchBar/SearchBarContainer";
 import dummyData from "../dummy-data";
 import "./PostPage.css"
+import styled from 'styled-components';
+const PostPageDiv=styled.div`
+  width:100%;
+`;
 class PostPage extends Component {
   constructor(props) {
     super();
@@ -17,12 +21,12 @@ class PostPage extends Component {
   }
   render() {
     return (
-      <div className="post-page">
+      <PostPageDiv>
         <SearchBarContainer />
         {this.state.data.map(post => {
           return <PostContainer data={post} />;
         })}
-      </div>
+      </PostPageDiv>
     );
   }
 }

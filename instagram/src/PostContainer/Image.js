@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
+const MainImg= styled.img `
+    width:100%;
+    height:auto;
+`;
 const Image =(prop)=>{
     return (
         <div>
-            <img className='main-image' src={prop.ImageUrl} alt="main image"></img>
+            <MainImg  src={prop.ImageUrl} alt="main image"/>
         </div>
     )
 }

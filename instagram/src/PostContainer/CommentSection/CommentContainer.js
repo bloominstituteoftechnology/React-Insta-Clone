@@ -22,7 +22,7 @@ class CommentContainer extends Component {
 
   render() {
     return (
-      <div className="comment-container">
+      <div>
         <Comment
           comments={this.state.comments}
           
