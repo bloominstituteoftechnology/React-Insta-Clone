@@ -17,9 +17,9 @@ const PostThumbWrapper = styled.div`
   align-items: center;
 `;
 
-const UserName = styled.div`
+export const UserName = styled.div`
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.2rem;
   padding: 20px;
 `;
 
