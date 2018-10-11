@@ -20,7 +20,8 @@ class CommentList extends React.Component {
 
   submitHandler = e => {
     e.preventDefault();
-    let newComment = {text: this.state.comment, username:'randomuser'}
+    const user = localStorage.getItem('username')
+    let newComment = {text: this.state.comment, username: user}
     this.setState({comments: [...this.state.comments, newComment], comment: ''})
   }
 
