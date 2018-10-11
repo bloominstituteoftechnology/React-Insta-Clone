@@ -1,5 +1,4 @@
 import React from 'react';
-import "./SearchBar.css";
 import camera from '../icons/camera.png';
 import heart from '../icons/heart.png';
 import instagram from '../icons/instagram.png';
@@ -14,7 +13,6 @@ const SearchBar = props => {
       <img src={camera} alt=""/>
       <img id="instagram" src={instagram} alt=""/>
       <StyledSearchBar
-      className="searchbar"
       type="text" 
       value={props.searchText} 
       onChange={props.updateSearchText} 
