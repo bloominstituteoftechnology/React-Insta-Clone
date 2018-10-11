@@ -7,23 +7,26 @@ class PostsPage extends Component {
     super(props);
     this.state = {
       posts: [],
-      filteredPosts: [],
-      filterTarget: ""
+      filteredPosts: []
+      // filterTarget: "hello"
     };
   }
 
   // component did mount set state
   componentDidMount() {
-    console.log(this.state);
     this.setState({
       posts: dummyData
     });
   }
+
   render() {
     const posts = this.state.posts;
+    let filteredPosts = this.state.posts.filter(post =>
+      post.username.includes(this.props.filterTarget)
+    );
     return (
       <div>
-        {posts.map((post, i) => (
+        {filteredPosts.map((post, i) => (
           <PostContainer key={post.timestamp} post={post} />
         ))}
       </div>

@@ -9,25 +9,64 @@ class Auth extends React.Component {
     super();
     this.state = {
       loggedIn: false,
-      hello: "Hello"
+      hello: "Hello",
+      filteredPosts: [],
+      filterTarget: "",
+      loginTarget: ""
     };
+  }
+
+  handleSearchInput = e => {
+    this.setState({
+      filterTarget: e.target.value
+    });
+  };
+
+  componentDidMount() {
+    if (localStorage.getItem("user")) {
+      this.setState({
+        loggedIn: true
+      });
+    } else {
+      this.setState({
+        loggedIn: false
+      });
+    }
   }
 
   handleSignupState = e => {
     e.preventDefault();
-    this.setState({
-      loggedIn: true
-    });
+    // this.setState({
+    //   loggedIn: true
+    // });
+
+    localStorage.setItem("user", this.state.loginTarget);
+    window.location.reload();
   };
 
+  handleLoginInput = e => {
+    e.preventDefault();
+    this.setState({
+      loginTarget: e.target.value
+    });
+  };
   render() {
     if (this.state.loggedIn === false) {
-      return <LoginPage handleSignupState={this.handleSignupState} />;
+      return (
+        <LoginPage
+          handleSignupState={this.handleSignupState}
+          handleLoginInput={this.handleLoginInput}
+          loginTarget={this.state.loginTarget}
+        />
+      );
     } else {
       return (
         <React.Fragment>
-          <SearchBar />
-          <PostsPage />
+          <SearchBar
+            filterTarget={this.state.filterTarget}
+            handleSearchInput={this.handleSearchInput}
+          />
+          <PostsPage filterTarget={this.state.filterTarget} />
         </React.Fragment>
       );
     }

@@ -19,7 +19,13 @@ const LoginPage = props => {
 
             <input type="text" placeholder="Mobile Number or Email" required />
             <input type="text" placeholder="Full Name" required />
-            <input type="text" placeholder="username" required />
+            <input
+              type="text"
+              placeholder="username"
+              required
+              onChange={props.handleLoginInput}
+              value={props.loginTarget}
+            />
             <input type="password" placeholder="Password" required />
             <input type="submit" id="sign-up-btn" value="Sign Up" />
             <p>
@@ -28,7 +34,9 @@ const LoginPage = props => {
             </p>
           </form>
           <div className="log-in">
-            <p>Have an account? Log in</p>
+            <p>
+              Have an account? <a href="#">Log in</a>
+            </p>
           </div>
           <div className="get-the-app">
             <h6>Get the App.</h6>

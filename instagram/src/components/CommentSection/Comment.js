@@ -38,7 +38,7 @@ class Comment extends React.Component {
       comments: [
         ...this.state.comments,
         {
-          username: "Username",
+          username: localStorage.getItem("user"),
           text: this.state.commentInput
         }
       ],
