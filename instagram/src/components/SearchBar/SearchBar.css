@@ -1,29 +1,28 @@
-.search-bar {
+/* .search-bar {
   width: 100%;
   max-width: 800px;
   padding-left: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
 
-.header-left {
+/* .header-left {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: -70px;
-}
+} */
 
 .search-bar-input {
   width: 180px;
   text-align: center;
 }
 
-.social-search-bar {
+/* .social-search-bar {
   display: flex;
   align-items: center;
   padding-left: 60px;
-}
+} */
 
 .logo {
   width: 30px;
