@@ -22,7 +22,7 @@ class PostsPage extends Component {
 
   search = event => {
     this.setState({
-      search: event.target.value.substr(0, 20)
+      search: event.target.value
     });
   };
 

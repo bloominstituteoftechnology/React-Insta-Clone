@@ -21,9 +21,10 @@ class App extends Component {
     super(props);
     this.state = {};
   }
+
   render() {
     return <div>{this.props.loggedIn ? <PostsPage /> : <Login />}</div>;
-    // return <Login />;
   }
 }
 export default Authenticate(App);
+// export default App;

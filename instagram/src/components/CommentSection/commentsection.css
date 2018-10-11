@@ -1,11 +1,11 @@
-.commentSection {
+/* .commentSection {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 5px;
   font-size: 1.6rem;
-}
+} */
 
 .commentSection p {
   width: 97%;

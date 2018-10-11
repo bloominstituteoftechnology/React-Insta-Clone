@@ -1,9 +1,9 @@
 .searchBar {
-  border: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
 
 .searchBar form {
-  width: 35%;
+  width: 100%;
 }
 
 .searchBarInput {

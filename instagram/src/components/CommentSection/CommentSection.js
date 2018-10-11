@@ -3,6 +3,7 @@ import Comment from '../CommentSection/Comment';
 import PostInteraction from '../PostInteraction/PostInteraction';
 import propTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { StyledCommentSection } from '../Styles/Styles';
 
 import '../CommentSection/commentsection.css';
 
@@ -21,7 +22,10 @@ class CommentSection extends Component {
     this.setState({
       comments: [
         ...this.state.comments,
-        { text: this.state.newComment, username: 'Brandon' }
+        {
+          text: this.state.newComment,
+          username: localStorage.getItem('username')
+        }
       ],
       newComment: ''
     });
@@ -37,7 +41,7 @@ class CommentSection extends Component {
 
   render() {
     return (
-      <div className="commentSection">
+      <StyledCommentSection className="commentSection">
         <PostInteraction likes={this.state.likes} addLikes={this.addLikes} />
         {this.state.comments.map((comment, index) => {
           return <Comment key={index} comment={comment} />;
@@ -56,7 +60,7 @@ class CommentSection extends Component {
           />
           <FontAwesomeIcon icon="ellipsis-h" className="tripleDot" />
         </form>
-      </div>
+      </StyledCommentSection>
     );
   }
 }
