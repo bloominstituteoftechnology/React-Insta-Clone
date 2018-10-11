@@ -2,3 +2,9 @@
     display: flex;
     flex-direction: column;
 }
+
+.loginScreen {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}

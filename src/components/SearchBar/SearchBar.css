@@ -35,6 +35,15 @@ h1 {
     width: 20%;
 }
 
+.instaclone {
+    border: none;
+    background: none;
+}
+
+.instaclone:hover {
+    cursor: pointer;
+}
+
 input {
     height: 20px;
     text-align: center;
