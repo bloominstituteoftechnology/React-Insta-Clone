@@ -14,7 +14,6 @@ const Authenticate = App =>
         } 
         logIn(event) {
             event.preventDefault();
-            console.log(this.state.loggedIn)
         }
         componentDidMount() {
             if (!localStorage.getItem('user')) {
@@ -24,7 +23,7 @@ const Authenticate = App =>
             } 
         }      
         render() { 
-            if (this.state.loggedIn){ return <App />};
+            if (this.state.loggedIn) return <App />;
             return (    
                 <div className='login-container'>
                     <SearchBar />

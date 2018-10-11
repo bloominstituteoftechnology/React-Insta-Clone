@@ -14,9 +14,9 @@ class PostsPage extends React.Component {
     }
     componentDidMount() {
         this.setState({ content: dummyData });
+        localStorage.clear();
     }
     searchFunction = event => {
-        console.log(event.target.value);
         const posts = this.state.content.filter(search => {
             if (search.username.includes(event.target.value)) {
             return search;      

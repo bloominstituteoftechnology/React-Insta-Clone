@@ -21,7 +21,6 @@ class CommentSection extends Component {
         }else{
             comments.push(newComment);
             this.setState({ comments, comment: '' });
-            console.log(this.state.comment)
         }
     };
     render() {
