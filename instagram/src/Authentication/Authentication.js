@@ -7,13 +7,20 @@ const Authentication = App =>
             super(props)
             this.state = {
                 login: false,
-                username: ''
+                username: '',
+                password: ''
             }
         }
 
+        // componentDidMount() {
+        //     localStorage.setItem('username', 'ynafey');
+        //     localStorage.setItem('password', 'kevinbrack');
+        //   }
+
         componentDidMount() {
-            localStorage.setItem('username', 'ynafey')
-            localStorage.setItem('password', 'kevinbrack')
+            !localStorage.getItem('user')
+                ? this.setState({ login: false })
+                : this.setState({ login: true })
         }
 
         render() {

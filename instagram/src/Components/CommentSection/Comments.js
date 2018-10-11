@@ -1,15 +1,34 @@
 import React from 'react'
 import './CommentSection.css'
 import PropTypes from 'prop-types'
+import styled from 'styled-components';
+
+const CommentsDiv = styled.div`
+    display: flex;
+    font-size: 10px;
+    font-weight: 600;
+`
+
+const P = styled.div`
+    margin: 0;
+`
+
+const Text = styled.span`
+    margin-left: 4px;
+    font-weight: 400;
+`
 
 const Comments = props => {
     return (
-        <div className="comments">
-            <p>
-                {props.comments.username}<span className="text">{props.comments.text}</span>
-            </p>
+        <CommentsDiv>
+            <P>
+                {props.comments.username}
+                <Text>
+                    {props.comments.text}
+                </Text>
+            </P>
             
-        </div>
+        </CommentsDiv>
     )
 }
 

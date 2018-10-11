@@ -1,6 +1,37 @@
 import React from 'react'
 import Comments from './Comments'
 import './CommentSection.css'
+import styled from 'styled-components';
+
+const CommentSectionDiv = styled.div`
+    margin: 0 10px;
+`
+
+const Top = styled.div`
+    margin: 5px 0;
+`
+
+const Hr = styled.div`
+    border: .4px solid rgb(230, 230, 230);
+`
+
+const Bottom = styled.form`
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9px;
+`
+
+const Input = styled.input`
+    width: 90%;
+    font-size: 9px;
+    padding: 5px;
+    border: none;
+`
+
+
+
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -50,8 +81,8 @@ class CommentSection extends React.Component {
 
     render () {
         return (
-            <div className="comment-section">
-                <div className="top">
+            <CommentSectionDiv>
+                <Top>
                     {this.state.comments.map((item, index) => {
                         return (
                             <Comments 
@@ -60,13 +91,13 @@ class CommentSection extends React.Component {
                             />
                         )
                     })}
-                </div>
-                <hr></hr>
-                <form 
+                </Top>
+                <Hr></Hr>
+                <Bottom 
                     className="bottom" 
                     onSubmit={this.submitCommentHandler}
                 >
-                    <input 
+                    <Input 
                         onChange={this.commentChangeHandler}
                         type="text"
                         value={this.state.newComments}
@@ -74,8 +105,8 @@ class CommentSection extends React.Component {
                         className="comment-input"
                     />
                     <i className="fas fa-ellipsis-h"></i>
-                </form>
-            </div>
+                </Bottom>
+            </CommentSectionDiv>
         )
     }
     
