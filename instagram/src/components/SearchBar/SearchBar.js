@@ -7,7 +7,7 @@ import { SearchBarDiv, LogoContainer, IGWidget,
 
 
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <SearchBarDiv>
             <LogoContainer>
@@ -16,7 +16,13 @@ const SearchBar = () => {
                 <IGLogo></IGLogo>
             </LogoContainer>
 
-         <SearchInput placeholder="search"></SearchInput>
+         <SearchInput 
+         placeholder="Search"
+         type="text"
+         name="filterTarget"
+         value={props.filterTarget}
+         onChange={props.filter}
+         ></SearchInput>
 
             <IconContainer>
                 <i className="far fa-circle"></i>

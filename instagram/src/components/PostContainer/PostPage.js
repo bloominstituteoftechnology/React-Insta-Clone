@@ -7,8 +7,14 @@ class PostPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      postData: dummyData,
+      postData: [],
+      filteredPosts: [],
+      filterTarget: '',
     };
+  }
+
+  componentDidMount() {
+    this.setState({postData: dummyData})
   }
 
   changeHandler = event => {
@@ -17,13 +23,27 @@ class PostPage extends React.Component {
 
 
 
+  filter = (event) => {
+    this.changeHandler(event);
+   this.setState(prevState => { 
+    const filteredPosts = this.state.postData.filter(
+      post => {
+        return post.username.includes(this.state.filterTarget)
+      });
+    return {filteredPosts: filteredPosts}
+  });
+}
+
 
   render() {
     
     return (
       <div>
-        <SearchBar />
-        <PostContainer postItems={this.state.postData} addLike={this.addLike} />
+        <SearchBar filterTarget={this.state.filterTarget} filter={this.filter} />
+        <PostContainer postItems={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.postData} 
+        addLike={this.addLike} 
+  
+        />
       </div>
     );
   }
