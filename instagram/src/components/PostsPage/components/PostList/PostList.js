@@ -17,6 +17,8 @@ const PostList = props => {
             key={post.timestamp}
             addCommentHandler={props.addCommentHandler}
             addLikeHandler={props.addLikeHandler}
+            newComment={props.newComment}
+            inputEventHandler={props.inputEventHandler}
           />)}
       </div>
     );

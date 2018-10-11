@@ -16,11 +16,13 @@ const PostContainer = props => (
       <div className='interactive-buttons'>
         <div onClick={() => props.addLikeHandler(props.post.timestamp)} className="interactive-button like-icon"></div>
         <div className="interactive-button comment-icon"></div>
-        <form action='submit' onSubmit={() => props.addCommentHandler(props.post.timestamp)} >
+        <form action='submit' onSubmit={(event) => props.addCommentHandler(event, props.post.timestamp)} >
           <input 
             type='text' 
             className='commentInput' 
             placeholder='enter new comment'
+            value={props.newComment}
+            onChange={(event) => props.inputEventHandler(event)}
           />
         </form>
       </div>

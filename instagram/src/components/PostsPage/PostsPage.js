@@ -25,22 +25,30 @@ class PostsPage extends Component {
 
   searchPostHandler = event => {
     const posts = this.state.posts.filter(post => {
-      if(post.username.includes(event.target.value)) {
+      if (post.username.includes(event.target.value)) {
         return post;
       } else {
         return null;
       }
     });
     this.setState({ filteredPosts: posts });
-}
+  }
 
-  addCommentHandler = (event, timestamp) => {
-    console.log('handle comment');
-    // gets comment - have to add an input field onClick
+  inputEventHandler = (event) => {
     this.setState({
       newComment: event.target.value
     });
+  }
 
+  addCommentHandler = (event, timestamp) => {
+    event.preventDefault();
+    console.log('handle comment');
+    // gets comment - have to add an input field onClick
+    // this.setState({
+    //   newComment: event.target.value
+    // });
+
+    console.log(this.state.newComment);
     // adds username and comment to the post
     const updatedComments = [...this.state.posts.map(post => {
       if (post.timestamp === timestamp) {
@@ -79,19 +87,20 @@ class PostsPage extends Component {
   render() {
     return (
       <div className="PostsPage">
-        <SearchBar 
-          searchPosts={this.searchPostHandler} 
+        <SearchBar
+          searchPosts={this.searchPostHandler}
           searchText={this.state.searchText}
         />
-        <PostList 
+        <PostList
           posts={
             this.state.filteredPosts.length > 0
-              ? this.state.filteredPosts 
+              ? this.state.filteredPosts
               : this.state.posts
-          } 
-          addCommentHandler={this.addCommentHandler} 
+          }
+          addCommentHandler={this.addCommentHandler}
           newComment={this.state.newComment}
           addLikeHandler={this.addLikeHandler}
+          inputEventHandler={this.inputEventHandler}
         />
       </div>
     );
