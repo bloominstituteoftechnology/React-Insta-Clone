@@ -6,7 +6,7 @@ const CommentSection = props => {
     return (
         <div className='comments'>{props.text.map(text => {
             return <div className='commentstext'>{text.username}: {text.text}</div>
-        })}{props.newInput}
+        })}
         <form className='commentFieldContainer' onSubmit={props.newComment} >
             <input 
                  className='addComment' 

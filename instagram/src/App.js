@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data.js'
 import PostContainer from './components/PostContainer/postContainer.js'
 import SearchBar from './components/SearchBar/searchBar.js';
+import Authenticate from './components/Authentication/Authenticate';
 import './App.css';
 
 
@@ -9,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      dummyData: dummyData,
+      dummyData: [],
       newInput: '',
       count: 0,
       username: '',
@@ -30,14 +31,14 @@ addNewComment = event => {
       ...this.state.dummyData,
       { 
         username: 'Conner',
-        text: this.state.newComment
+        text: this.state.newInput
        }
     ],
+    newInput: '',
   });
 };
 
 changeHandler = event => {
-  console.log(event.target)
   event.preventDefault();
   this.setState({ [event.target.name]: event.target.value });
 };
@@ -69,4 +70,4 @@ clickToIncrease = () => {
   }
 }
 
-export default App;
+export default Authenticate(App);
