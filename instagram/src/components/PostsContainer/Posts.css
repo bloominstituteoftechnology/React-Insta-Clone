@@ -1,0 +1,63 @@
+.posts-container-wrapper {
+  background-color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 5%;
+  width: 90%;
+}
+
+.posts-container-wrapper img {
+  height: 35px;
+}
+
+.post-border {
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 614px;
+  margin: 20px auto;
+}
+
+.post-header {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  font-weight: bolder;
+  padding: 10px 0;
+}
+
+.post-thumb {
+  border: .1px solid white;
+  border-radius: 50%;
+  margin: 0 20px;
+}
+
+.post-image-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.like-section-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  background-color: white;
+  padding-left: 1rem;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.like-section-wrapper .insta-heart {
+  height: 25px;
+  opacity: .5;
+  padding: 10px;
+}
+
+.like-section-wrapper .speech-bubbles {
+  height: 25px;
+  margin: 0;
+  padding: 10px;
+}
