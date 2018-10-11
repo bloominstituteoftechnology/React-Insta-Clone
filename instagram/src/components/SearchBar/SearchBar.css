@@ -7,6 +7,11 @@
   padding: 20px 0;
   background: #fff;
   height: 85px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
 .search-bar {
   display: flex;

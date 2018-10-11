@@ -2,12 +2,15 @@
   max-width: 1010px;
   margin: auto;
 }
+
 .post-container {
   margin: 40px 0;
   max-width: 616px;
   border: 1px solid lightgrey;
   background: #fff;
+  margin-top: 100px;
 }
+
 .post-header img {
   width: 40px;
   height: 40px;

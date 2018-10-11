@@ -1,5 +1,11 @@
 import React from "react";
 import "./Comments.css";
+import {
+  CommentContainer,
+  CommentContainerIcon,
+  CommentsDiv,
+  FormInput
+} from "./CommentStyles";
 
 class Comment extends React.Component {
   constructor(props) {
@@ -48,7 +54,7 @@ class Comment extends React.Component {
 
   render() {
     return (
-      <div className="post-comment-container">
+      <CommentContainer>
         <div className="comment-icons">
           <i className="far fa-heart" onClick={this.handleLikes} />
           <i className="far fa-comment" />
@@ -68,7 +74,7 @@ class Comment extends React.Component {
           </div>
           <div className="comment-form">
             <form onSubmit={this.addNewComment}>
-              <input
+              <FormInput
                 type="text"
                 placeholder="Add a comment..."
                 onChange={this.formChange}
@@ -77,7 +83,7 @@ class Comment extends React.Component {
             </form>
           </div>
         </div>
-      </div>
+      </CommentContainer>
     );
   }
 }

@@ -1,3 +1,8 @@
 .post-comment-container i {
   cursor: pointer;
 }
+
+.comment-icons i {
+  margin-right: 10px;
+  font-size: 24px;
+}

@@ -20,7 +20,6 @@ class PostsPage extends Component {
   }
 
   render() {
-    const posts = this.state.posts;
     let filteredPosts = this.state.posts.filter(post =>
       post.username.includes(this.props.filterTarget)
     );
