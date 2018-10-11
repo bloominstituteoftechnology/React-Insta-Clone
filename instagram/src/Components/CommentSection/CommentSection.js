@@ -54,8 +54,8 @@ class CommentSection extends Component {
 
     formatTime = () => {
         // console.log(this.state.timestamp);
-        // return moment(this.state.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase();
-        return moment().calendar(this.state.timestamp, 'MMMM Do YYYY, h:mm:ss a').toUpperCase();
+        return moment(this.state.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase();
+        // return moment().calendar(this.state.timestamp, 'MMMM Do YYYY, h:mm:ss a').toUpperCase();
     }
 
     onLikePost = (event) => {
