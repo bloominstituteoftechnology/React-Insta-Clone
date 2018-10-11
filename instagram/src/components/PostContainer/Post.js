@@ -19,12 +19,12 @@ class Post extends React.Component {
   render() {
     return (
       <div>
-        <header>
+        <header className="header">
           <img src={this.props.post.thumbnailUrl} alt="user pic" />
           {this.props.post.username}
         </header>
 
-        <img src={this.props.post.imageUrl} alt="main pic" />
+        <img className="main-post" src={this.props.post.imageUrl} alt="main pic" />
         <Likes
           increment={this.increment}
           likes={this.state.likes}
@@ -32,6 +32,7 @@ class Post extends React.Component {
         
 
         <CommentSection 
+          postId={this.props.post.imageUrl}
           comments={this.props.post.comments} 
         />
       </div>

@@ -4,49 +4,48 @@ import CommentInput from './CommentInput';
 import PropTypes from 'prop-types';
 
 class CommentSection extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       comments: props.comments,
-      comment: ''
-    }
+      comment: ""
+    };
   }
 
-  comHandler = (event) => {
+  
+
+
+  commentHandler = event => {
     this.setState({ comment: event.target.value });
-  }
+  };
 
   addNewComment = event => {
     event.preventDefault();
     this.setState({
       comments: [
         ...this.state.comments,
-        {text: this.state.comment,
-        username: 'MindySueasaurus'}
+        {
+          text: this.state.comment,
+          username: "MindySueasaurus"
+        }
       ],
-      comment: ''
-    })
+      comment: ""
+    });
+  };
 
-  }
-
-  
-  render(){
+  render() {
     return (
-        <div>
-          {this.state.comments.map((comment, index) => 
-          {
-            return(
-              <Comment key={index} comment={comment} />
-            )
-          }
-          )}
-          <CommentInput 
-            changeHandler={this.comHandler} 
-            comment={this.state.comment}
-            submitHandler={this.addNewComment}
-          />
-        </div>
-    )
+      <div>
+        {this.state.comments.map((comment, index) => {
+          return <Comment key={index} comment={comment} />
+        })}
+        <CommentInput
+          changeHandler={this.commentHandler}
+          comment={this.state.comment}
+          submitHandler={this.addNewComment}
+        />
+      </div>
+    );
   }
 }
 
