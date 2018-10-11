@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchBar.css";
 
-const Searchbar = props => {
+const SearchBar = props => {
   return (
     <div className="search-bar-container">
       <img className="camera" src={require("../PostContainer/img/insta_icon.png")} alt="logo" />
@@ -20,4 +20,4 @@ const Searchbar = props => {
   );
 };
 
-export default Searchbar;
+export default SearchBar;
