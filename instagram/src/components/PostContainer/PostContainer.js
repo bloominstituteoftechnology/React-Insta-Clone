@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import CommentSection from '../CommentSection/CommentSection'
+import Likes from './Likes'
 
 const PostContainer = props => {
    
@@ -13,17 +14,14 @@ const PostContainer = props => {
         <div>   
             <div className="postContainerDiv">
                 <div className="userHeading">
-                    <img className="userImage" src={post.thumbnailUrl} alt="userlogo"/> 
+                    <img className="userImage" src={post.thumbnailUrl} alt="userLogo"/> 
                     <p>{post.username}</p>
                 </div>
             
                 <img src={post.imageUrl} alt="usersPostedImage"/>
 
-                <div className="iconContainer">
-                    <i className="far fa-heart"></i>
-                    <i className="far fa-comment"></i>
-                </div>
-            <p className="likes">{post.likes} likes</p>
+                
+            <Likes props={post}/>
             
             <CommentSection commentInfo={post.comments} key={post.username}/>
                 

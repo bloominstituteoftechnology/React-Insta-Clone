@@ -1,3 +1,8 @@
+.iconContainer {
+  display: flex;
+  width: 15%;
+  flex-wrap: wrap;
+}
 .App {
   text-align: center;
   width: 100%;
@@ -47,6 +52,12 @@ body {
 .postContainerDiv .likes {
   color: #4b4b4b;
   font-weight: bold;
+  margin: 0;
+}
+.postContainerDiv .likeButton {
+  background: white;
+  border: none;
+  outline: none;
 }
 .commentDiv {
   width: 100%;

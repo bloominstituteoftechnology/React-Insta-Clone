@@ -7,7 +7,7 @@ class PostPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      postData: []
+      postData: dummyData,
     };
   }
 
@@ -15,14 +15,15 @@ class PostPage extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  componentDidMount() {
-    this.setState({ postData: dummyData });
-  }
+
+
+
   render() {
+    
     return (
       <div>
         <SearchBar />
-        <PostContainer postItems={this.state.postData} />
+        <PostContainer postItems={this.state.postData} addLike={this.addLike} />
       </div>
     );
   }
