@@ -16,7 +16,16 @@ class PostContainer extends Component {
 
   likeClickHandler = event => {
     event.preventDefault();
-    this.setState({ likes: this.state.likes + 1 });
+    const likes = event.target;
+    if (likes.classList.contains("far")) {
+      likes.classList.remove("far");
+      likes.classList.add("fas");
+      this.setState({ likes: this.state.likes + 1 });
+    } else {
+      likes.classList.remove("fas");
+      likes.classList.add("far");
+      this.setState({ likes: this.state.likes - 1 });
+    }
   };
   commentClickHandler = event => {
     event.preventDefault();
