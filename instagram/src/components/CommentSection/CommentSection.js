@@ -21,7 +21,7 @@ class CommentSection extends Component{
     addNewComment =(event) =>{
         event.preventDefault();
         const newObj = {
-            username: 'DenE',
+            username: [localStorage.getItem('user')],
             text: this.state.tempComment
         };
         if (this.state.tempComment !==''){
