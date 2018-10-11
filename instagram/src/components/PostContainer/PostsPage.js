@@ -10,7 +10,6 @@ class PostsPage extends Component {
       dummyData: [],
       search: '',
     }
-    console.log('PostsPage', this.props.username)
   }
 
   componentDidMount() {

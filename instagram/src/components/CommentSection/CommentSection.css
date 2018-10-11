@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .comment {
@@ -15,7 +15,18 @@ form input {
   margin-top: 1%;
   width: 100%;
   border: none;
-  border-top: 1px solid gray;
+  border-top: 1px solid #999999;
   font-size: 1.6rem;
   padding: 3% 0;
+  font-color: #999999;
+}
+
+form input:focus {
+  outline: none; 
+}
+
+.date-stamp{
+  margin: 1% 0;
+  font-size: 1rem;
+  color: #999999;
 }

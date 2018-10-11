@@ -1,17 +1,20 @@
 .post {
-  max-width: 640px;
-  border: 1px solid lightgray;
+  max-width: 500px;
+  border: 1px solid #E6E6E6;
   background-color: white;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
+}
+
+.post img {
+  width: 500px;
 }
 
 .post-header {
   display: flex;
   flex-wrap: wrap;
-  font-size: 1rem;
   align-items: center;
 }
 
@@ -23,7 +26,7 @@
 }
 
 .post-header p {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
 }
 
 .post-icons{
@@ -34,22 +37,24 @@
 }
 
 .post-icons .heart-icon{
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
 }
 
 .liked{
-  fill: red;
+  fill: #ED4956;
+  color: #ED4956;
 }
 
 .post-icons .comment-icon{
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 .likes {
   margin: 1% 2%;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }

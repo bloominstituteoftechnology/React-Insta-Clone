@@ -15,6 +15,7 @@ class PostContainer extends Component {
     }
 }
 
+
 handleLikes = (event, index) => {
   let likes = this.state.likes;
   if (this.state.liked){

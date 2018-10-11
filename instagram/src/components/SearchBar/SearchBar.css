@@ -1,14 +1,21 @@
 .search-bar {
-  margin: 30px 15px;
+  margin: 0 15px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center; 
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 20px 0;
+  z-index: 10;
 }
 
 .logo {
-  width: 23%;
-
+  width: 30%;
+  cursor: pointer;
 }
 .logo .camera-icon {
   width: 30px;
@@ -29,18 +36,22 @@
   text-align: center;
   margin: 2px;
   border-radius: 3px;
-  border: 1px solid gray;
+  border: 1px solid #E6E6E6;
+}
+
+.search-field input:focus {
+  outline: none;
 }
 
 .search-field .search-icon {
   width: 10px;
   height: 10px;
-  transform: translate(80px);
+  transform: translate(15px);
 }
 
 .icons {
-  width: 17%;
-  margin: 5px;
+  width: 30%;
+  margin: 1%;
   display: flex;
   justify-content: space-around;
 }
@@ -48,14 +59,17 @@
 .search-bar .compass-icon {
   width: 21px;
   height: 21px;
+  cursor: pointer;
 }
 
 .search-bar .heart-icon {
   width: 21px;
   height: 21px;
+  cursor: pointer;
 }
 
 .search-bar .user-icon {
   width: 21px;
   height: 21px;
+  cursor: pointer;
 }

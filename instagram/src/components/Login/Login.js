@@ -16,6 +16,15 @@ import './Login.css'
   }
    handleLogin = event => {
     event.preventDefault();
+    if (this.state.username.length === 0){
+      alert('You must provide a username');
+      return;
+    } else {
+      if (this.state.password.length === 0){
+        alert('You must provide a password');
+        return; 
+      }
+    }
     this.props.login(this.state.username, this.state.password);
     this.setState({
       username: '',

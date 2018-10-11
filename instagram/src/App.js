@@ -45,7 +45,6 @@ class App extends Component {
     this.state = ({
       username: this.props.username,
     })
-    console.log('App', this.state.username)
   }
   //
   // login = event => {
