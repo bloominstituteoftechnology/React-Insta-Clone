@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import Comment from "./Comment";
 import Input from "../Input";
 
-import './CommentSection.css';
+
+
 
 class CommentSection extends React.Component {
   constructor(props) {
