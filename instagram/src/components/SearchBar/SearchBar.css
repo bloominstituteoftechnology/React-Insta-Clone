@@ -49,11 +49,6 @@ font-family: 'Roboto Condensed', sans-serif;
     font-size: 12px;
 }
 
-.search .search-selected{
-    text-align: left;
-    background: white;
-    padding-left: 26px;
-}
 
 .search{
     position: relative;

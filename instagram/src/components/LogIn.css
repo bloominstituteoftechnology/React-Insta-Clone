@@ -1,14 +1,4 @@
-.transparent-cover{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: black;
-    opacity: .8;
-    z-index: 10;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .log-in-form{
     width: 300px;

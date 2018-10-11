@@ -8,28 +8,28 @@ import {
   Search,
   Xcircle
 } from "../../assets/assets";
+import {InstaboxDiv, InstatitleDiv, SearchInput} from '../styleComponents'
 
 const SearchBar = props => {
   return (
     <div className="fixed-header">
-      <div className="instabox">
+      <InstaboxDiv>
         <Instagram />
 
-        <div className="title">
-          <h1>Instagram</h1>
-        </div>
-      </div>
+        <InstatitleDiv>
+          Instagram
+        </InstatitleDiv>
+      </InstaboxDiv>
       <div className="search">
         <Search searchFocus={props.searchFocus} />
         <Xcircle searchFocus={props.searchFocus} searchBlur={props.searchBlur} />
-        <input
+        <SearchInput
           type="text"
           placeholder="Search"
-          className={props.searchFocus ? "search-selected" : ""}
+          searchFocus={props.searchFocus}
           onFocus={props.searchFocusHandler}
           onChange={props.searchHandler}
           value={props.searchInput}
-          
         />
       </div>
       <div className="icons">

@@ -3,13 +3,14 @@ import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
 import DummyPost from "./DummyPost";
 import PropTypes from "prop-types";
+import {PostContDiv} from '../styleComponents'
 
 const PostContainer = props => {
   if (!props.data.length) {
     return <DummyPost />;
   }
   return (
-    <div className="post-container">
+    <PostContDiv>
       {props.data.map(post => {
         let historyObj = {
           likes: post.likes,
@@ -36,7 +37,7 @@ const PostContainer = props => {
           </div>
         );
       })}
-    </div>
+    </PostContDiv>
   );
 };
 

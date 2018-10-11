@@ -3,6 +3,7 @@ import DummyPost from "./PostContainer/DummyPost";
 import SearchBar from "./SearchBar/SearchBar";
 import { Instagram } from "../assets/assets";
 import "./LogIn.css";
+import {FullPageCover} from '../components/styleComponents'
 
 class LogIn extends React.Component {
     constructor(){
@@ -27,7 +28,7 @@ class LogIn extends React.Component {
   render() {
     return (
       <div>
-        <div className="transparent-cover">
+        <FullPageCover>
           <form className="log-in-form" onSubmit={this.logInHandler}>
             <div className="instabox">
               <Instagram />
@@ -51,7 +52,7 @@ class LogIn extends React.Component {
             />
             <button type='submit'></button>
           </form>
-        </div>
+        </FullPageCover>
         <SearchBar />
         <DummyPost />
       </div>
