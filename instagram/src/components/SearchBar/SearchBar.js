@@ -3,7 +3,8 @@ import React from 'react';
 import {
   StyledSearchBar,
   StyledHeaderLeft,
-  StyledSocialSearchBar
+  StyledSocialSearchBar,
+  StyledSearchBarInput
 } from './SearchBarStyle';
 
 import CameraLogo from './images/CameraLogo.png';
@@ -23,12 +24,10 @@ const SearchBar = props => {
         <img src={line} className="line" alt="line" />
         <img src={InstagramLogo} className="instagram" alt="Instagram" />
       </StyledHeaderLeft>
-      <input
-        className="search-bar-input"
-        type="text"
-        placeholder="Search"
-        onKeyDown={props.searchPosts}
-      />
+      <StyledSearchBarInput>
+        <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
+      </StyledSearchBarInput>
+
       <StyledSocialSearchBar>
         <img src={compass} className="compass" alt="compass" />
         <img src={instaheart} className="heart" alt="heart" />

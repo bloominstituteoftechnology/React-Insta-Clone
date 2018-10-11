@@ -20,3 +20,8 @@ export const StyledSocialSearchBar = styled.div`
   align-items: center;
   padding-left: 60px;
 `;
+
+export const StyledSearchBarInput = styled.div`
+  width: 180px;
+  text-align: center;
+`;
