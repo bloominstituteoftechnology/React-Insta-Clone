@@ -19,6 +19,8 @@ class LoginPage extends React.Component {
       username: "",
       password: ""
     });
+    //could invoke window.location.reload() here, but leaving off preventDefault
+    //makes the page refresh upon a form submit anyway
   };
 
   changeHandler = (key, value) => {
