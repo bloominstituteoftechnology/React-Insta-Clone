@@ -10,6 +10,7 @@
     text-align: center;
     width:500px;
     border:1px solid rgb(225, 224, 224);
+    padding:50px;
 }
 .login-form input{
     border:1px solid rgb(225, 224, 224);
