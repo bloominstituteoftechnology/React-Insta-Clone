@@ -5,14 +5,16 @@ import Data from '../../dummy-data';
 import './PostContainer.css';
 
 class PostPage extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             data: [],
             username: 'senior_one_more',
             newComment: '',
         }
+
     }
+
 
     componentDidMount() {
         this.setState({

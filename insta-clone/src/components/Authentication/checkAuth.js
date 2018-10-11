@@ -1,7 +1,7 @@
 import React from 'react';
 
 const checkAuth = Login => PostPage => props =>{
-    if(props.password) {
+    if(localStorage.password) {
         return (
             <PostPage {...props} />
         )
