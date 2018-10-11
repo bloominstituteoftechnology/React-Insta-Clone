@@ -6,22 +6,22 @@ import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 
 
-addNewComment = (event, id) => {
-    event.preventDefault();
-    console.log(id);
-    event.target.value = ""
-    this.setState({
-      comments: [
-        // ...this.state.dummyData[id].comments,
-        { username: "Troy", text: this.state.newComment},
+// addNewComment = (event, id) => {
+//     event.preventDefault();
+//     console.log(id);
+//     event.target.value = ""
+//     this.setState({
+//       comments: [
+//         // ...this.state.dummyData[id].comments,
+//         { username: "Troy", text: this.state.newComment},
 
-      ],
+//       ],
       
-      newComment: "",
+//       newComment: "",
       
-    })
+//     })
     
-  }
+//   }
 
 
 
@@ -54,7 +54,7 @@ const PostContainer = props => {
                     <h4 className = "likes">{post.likes} likes</h4>
                     <CommentSection
                     commentInfo = {post.comments}
-                    addNewComment = {this.addNewComment}
+                    // addNewComment = {this.addNewComment}
 
                     />
                 </div>
