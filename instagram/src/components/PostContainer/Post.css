@@ -16,6 +16,8 @@
 
 .post__header--avatar {
   border-radius: 50px;
+  height: 50px;
+  width: 50px;
 }
 
 .post__header--username {
