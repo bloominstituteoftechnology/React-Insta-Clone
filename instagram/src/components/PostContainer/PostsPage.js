@@ -9,7 +9,7 @@ class PostsPage extends Component {
       super(props);
       this.state = {
         posts : [],
-       filteredPosts: []
+        filteredPosts: []
       };
     }
    

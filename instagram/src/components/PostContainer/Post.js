@@ -9,7 +9,8 @@ class Post extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      likes: props.post.likes
+      likes: props.post.likes,
+      timestamp : props.post.timestamp
     };
   }
   incrementLike = () => {
@@ -37,6 +38,7 @@ class Post extends React.Component {
         <CommentSection
           postId={this.props.post.imageUrl}
           comments={this.props.post.comments}
+          timestamp = {this.state.timestamp}
         />
       </div>
     );

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
+import Timestamp from './Timestamp'
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class CommentSection extends React.Component {
     this.state = {
       comments: props.comments,
       comment: '',
-      
+      timestamp : props.timestamp
     };
   }
 
@@ -42,6 +43,7 @@ class CommentSection extends React.Component {
   handleCommentSubmit = e => {
     e.preventDefault();
     const newComment = { text: this.state.comment, username: 'SavannahG' };
+
     const comments = this.state.comments.slice();
     comments.push(newComment);
     this.setState({ comments, comment: '' });
@@ -53,8 +55,13 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div className = 'theContainer'>
-        {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-        
+        {this.state.comments.map((c, i) =>
+           <Comment 
+            key={i}
+            comment={c}
+            
+            />)}
+        <Timestamp timestamp = {this.state.timestamp} />
         <CommentInput
           comment={this.state.comment}
           submitComment={this.handleCommentSubmit}
