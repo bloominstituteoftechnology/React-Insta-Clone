@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 import AddComment from '../AddComment/AddComment';
+import styled from 'styled-components';
 
 class PostContainer extends React.Component {
     constructor(props) {
@@ -43,23 +44,23 @@ class PostContainer extends React.Component {
 
     render() {
         return (
-        <div className="postContainer">
-            <div className="post">
-                <div className="postHeader">
-                    <img src={this.props.icon} alt='userIcon'/> {this.props.username}
-                </div>
+        <PostContainerParent>
+            <div>
+                <PostHeader>
+                    <UserIcon src={this.props.icon} alt='userIcon'/> {this.props.username}
+                </PostHeader>
 
                 <div>
-                    <img src={this.props.image} alt="postImage" className="postImage"/>
+                    <PostImg src={this.props.image} alt="postImage" />
                 </div>
 
-                <div className="likes">
-                    <div className="likesIcons">
+                <Likes>
+                    <div>
                     <i className="far fa-heart" onClick={this.likeHandler}></i>
-                    <i class="far fa-comment"></i>
+                    <i className="far fa-comment"></i>
                     </div>
                     {this.state.likes} Likes
-                </div>  
+                </Likes>  
             </div>
             
             <div className="commentContainer">
@@ -76,16 +77,16 @@ class PostContainer extends React.Component {
             
             </div>
 
-            <div className="addCommentContainer">
+            <commentContainer>
                 <AddComment 
                     id={this.props.timestamp}
                     inputHandler={this.inputHandler}
                     submitHandler={this.submitHandler}
                     commentInputValue={this.state.commentInputValue}
                 />
-            </div>
+            </commentContainer>
             
-        </div>
+        </PostContainerParent>
         )
 
     }
@@ -101,6 +102,48 @@ PostContainer.propTypes ={
     comments: PropTypes.string,
     inputHandler: PropTypes.func,
     submitHandler: PropTypes.func,
-}
+};
+
+const PostContainerParent = styled.div`
+    width: 604px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid lightgray;
+    margin: 20px auto;
+`
+
+const PostHeader = styled.div` 
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 24px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+`
+
+const UserIcon = styled.img` 
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+`
+
+const PostImg = styled.img`
+    width: 100%;
+`
+
+const Likes = styled.div`
+    font-weight: bold;
+    margin-left: 10px;  
+`
+
+const commentContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 584px;
+    border-bottom: 1px solid lightgray;
+`
 
 export default PostContainer;

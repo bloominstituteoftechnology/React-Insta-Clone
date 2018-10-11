@@ -2,6 +2,38 @@ import React from 'react';
 import './SearchBar.css';
 import styled from 'styled-components';
 
+class SearchBar extends React.Component {
+
+    render() {
+        return (
+            <SearchBarParent> 
+                <Instagram>
+                    <i className="fab fa-instagram"></i>
+                    <InstagramTitleImg alt="instagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" />
+                </Instagram>
+                <form onSubmit={this.props.searchSubmitHandler}>
+                <SearchField 
+                    type="text" 
+                    placeholder="search" 
+                    value={this.props.searchValue} 
+                    onChange={this.props.searchInputHandler}
+                    ></SearchField>
+                </form>
+
+                <Icons className="icons">
+                <i className="far fa-compass"></i>
+                <i className="far fa-heart"></i>
+                <i className="far fa-user"></i>
+
+                </Icons>
+            </SearchBarParent>
+        )
+
+    }
+};
+
+//Styled components "CSS"
+
 const SearchBarParent = styled.div`
     display: flex;
     flex-direction: row;
@@ -42,35 +74,5 @@ const Icons = styled.div`
     justify-content: space-between;
     margin-right: 10px;
 `;
-
-class SearchBar extends React.Component {
-
-    render() {
-        return (
-            <SearchBarParent> 
-                <Instagram>
-                    <i className="fab fa-instagram"></i>
-                    <InstagramTitleImg alt="instagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" />
-                </Instagram>
-                <form onSubmit={this.props.searchSubmitHandler}>
-                <SearchField 
-                    type="text" 
-                    placeholder="search" 
-                    value={this.props.searchValue} 
-                    onChange={this.props.searchInputHandler}
-                    ></SearchField>
-                </form>
-
-                <Icons className="icons">
-                <i className="far fa-compass"></i>
-                <i className="far fa-heart"></i>
-                <i className="far fa-user"></i>
-
-                </Icons>
-            </SearchBarParent>
-        )
-
-    }
-};
 
 export default SearchBar;
