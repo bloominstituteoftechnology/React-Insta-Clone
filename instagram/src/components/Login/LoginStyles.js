@@ -1,32 +1,33 @@
-.Login-wrapper {
+import styled from 'styled-components';
+import { customLayout } from '../SearchBar/SearchBarStyles';
+
+export const LoginWrapper = styled.div`
   border: 1px solid #eaeaea;
   max-width: 400px;
   width: 100%;
   margin: 100px auto;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-}
+`;
 
-.Login-wrapper .ig-logo {
+export const LogoWrapper = styled.div`
   margin-top: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  ${customLayout('center', 'center')}
+`;
 
-.Login-wrapper .ig-logo img {
+export const Logo = styled.img`
   width: 55%;
   height: auto;
-}
+`;
 
-.Login-wrapper .Form-group {
+export const FormGroup = styled.form`
   width: 75%;
   margin: 20px auto;
   margin-bottom: 120px;
   display: flex;
   flex-wrap: wrap;
-}
+`;
 
-.Form-group input {
+export const LoginInput = styled.input`
   width: 100%;
   height: 40px;
   margin-bottom: 15px;
@@ -35,18 +36,17 @@
   padding: 10px;
   background-color: #fafafa;
   font-size: 1.4rem;
-}
 
-.Form-group input::placeholder {
-  color: #999;
-}
+  ::placeholder {
+    color: #999;
+  }
 
-.Form-group input:focus,
-.Form-group button:focus {
-  outline: none;
-}
+  :focus {
+    outline: none;
+  }
+`;
 
-.Form-group button {
+export const LoginButton = styled.button`
   width: 100%;
   height: 35px;
   margin-top: 15px;
@@ -56,4 +56,4 @@
   color: #fff;
   background-color: #3897f0;
   cursor: pointer;
-}
+`;
