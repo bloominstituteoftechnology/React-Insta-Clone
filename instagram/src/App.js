@@ -8,8 +8,12 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: dummyData
+      data: []
     };
+  }
+
+  componentDidMount(props) {
+    this.setState({data : dummyData})
   }
   render() {
     return (
