@@ -19,6 +19,8 @@ class Login extends React.Component {
 
     handleLoginSubmit = () => {
         const user = this.state.username;
+        localStorage.setItem('user', user);
+        //window.location.reload();
     }
 
 
