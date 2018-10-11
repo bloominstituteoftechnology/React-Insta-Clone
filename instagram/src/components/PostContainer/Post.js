@@ -12,6 +12,7 @@ const PostBorder = styled.div`
     margin-top: 110px;
     margin-bottom: -75px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
     `;
 
 const PostImgWrapper = styled.div`
