@@ -104,6 +104,8 @@ input {
   border-bottom: 1px solid lightgray;
 }
 
+/* SearchBar CSS */
+
 .search {
   border-bottom: 1px solid lightgray;
   display: flex;
@@ -117,9 +119,9 @@ input {
   padding: 10px;
   text-align: center;
   border: 1px solid lightgray;
- margin-top: 25px;
- background: whitesmoke;
- font-size: 14px;
+  margin-top: 25px;
+  background: whitesmoke;
+  font-size: 14px;
 }
 
 .right-icons {
