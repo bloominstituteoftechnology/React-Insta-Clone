@@ -12,7 +12,7 @@ const Authenticate = App => class extends React.Component {
      this.handleLogin = this.handleLogin.bind(this)
   }
 
-  handleLogin() {
+  handleLogin = () => {
     this.setState({
       login: true
     })
@@ -23,7 +23,7 @@ const Authenticate = App => class extends React.Component {
       return <App />;
     } else {
       return (
-        <Login />
+        <Login handleLogin={this.handleLogin}/>
       )
     }
   }

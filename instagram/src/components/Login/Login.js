@@ -1,17 +1,30 @@
 import React from 'react';
+import styled from 'styled-components'
+import LoginForm from './LoginForm'
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = {
+      username: '',
+      password: ''
+    }
   }
-  render() { 
-    return ( 
-      <div className="Login" onClick={this.props.handleLogin}>
-        login
+  render() {
+    return (
+      <div className={this.props.className} onClick={this.props.handleLogin}>
+        <LoginForm />
       </div>
-     );
+    );
   }
 }
- 
-export default Login;
+
+const StyledLogin = styled(Login)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: green;
+
+`
+
+export default StyledLogin;
