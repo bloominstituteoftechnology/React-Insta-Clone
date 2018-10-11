@@ -16,6 +16,7 @@ const PostContainer = props => {
             key={data.username}
             username={data.username}
             thumbnail={data.thumbnailUrl}
+            id={data.index}
           />
           {/* Pass comments to the comment section */}
           <CommentSection
@@ -24,6 +25,7 @@ const PostContainer = props => {
             comments={data.comments}
             likes={data.likes}
             image={data.imageUrl}
+            id={data.index}
           />
 
         </div>

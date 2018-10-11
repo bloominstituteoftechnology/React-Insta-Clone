@@ -1,10 +1,4 @@
-.search-container {
-    position: fixed;
-    width: 100%;
-    height: 46px;
-    margin-bottom: 40px;
-    background-color: white;
-}
+
 
 .search-content {
     display: flex;
@@ -49,8 +43,9 @@ h2 {
     color: gray;
 }
 
-input {
-    position: relative;
+input .search-bar {
+    position: absolute;
+
     top: 3px;
     border: 1px solid transparent;
     height: 30px;
@@ -58,10 +53,11 @@ input {
     text-align: center;
     font-size: 15px;
     background-color: whitesmoke;
+    
 }
 
 .search {
-    z-index: 1;
+    position: absolute;
     top: 3px;
     text-align: center;
     position: relative;

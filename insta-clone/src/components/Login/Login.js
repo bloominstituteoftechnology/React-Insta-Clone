@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "reactstrap";
+import Button from "@material-ui/core/Button";
 
 class Login extends React.Component {
   constructor(props) {
@@ -16,6 +16,7 @@ class Login extends React.Component {
     });
   };
   handleLogin = () => {
+    
     const user = this.state.username;
     localStorage.setItem("user", user);
     window.location.reload();
@@ -42,8 +43,8 @@ class Login extends React.Component {
           onChange={this.handleInputChange}
         />
         <Button
-          color="secondary"
-          size="lg"
+          color="primary"
+          variant="contained"
           outline
           block
           onClick={this.handleLogin}

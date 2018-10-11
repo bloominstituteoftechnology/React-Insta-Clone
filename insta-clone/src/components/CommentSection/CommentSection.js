@@ -1,6 +1,6 @@
 import React from "react";
-import Comment from "./Comment";
-import "./CommentSection.css";
+import Comment from './Comment'
+import { CommentWrapper } from '../Styles/StylePost'
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as moment from "moment";
@@ -14,7 +14,9 @@ class CommentSection extends React.Component {
       images: props.image,
       likes: props.likes,
       timestamp: props.timestamp,
-      text: ""
+      id: props.index,
+      text: "",
+      username: props.username
     };
   }
 // Add a like function to counter each click
@@ -45,7 +47,7 @@ class CommentSection extends React.Component {
   render() {
     return (
       // Created comment section for each post
-      <div className="comment-section">
+      <CommentWrapper>
         <img className="post-img" src={this.state.images} alt=" " />
         <div className="icons-likes">
           <FontAwesomeIcon icon={["far", "heart"]} onClick={this.addALike} />{" "}
@@ -53,7 +55,7 @@ class CommentSection extends React.Component {
         </div>
         <div className="section likes">{this.state.likes} likes</div>
 
-        {/* Here I mapped the comments and passed them to a new */}
+        {/* Here I mapped the comments and passed them to a new component*/}
         {this.state.comments.map((comment, index) => {
           return (
             <Comment
@@ -61,12 +63,13 @@ class CommentSection extends React.Component {
               comments={comment.text}
               key={index}
               name={this.state.timestamp}
+              id={comment.index}
             />
           );
         })}
 
         {/* The footer of each post will have a time associated with the */}
-        <p className="time-moment">{now}</p>
+        <p>{now}</p>
         <form
           className="form-comment"
           onSubmit={e => { e.preventDefault(); this.addNewComment();}}
@@ -74,13 +77,12 @@ class CommentSection extends React.Component {
           <FontAwesomeIcon className="more-icon" icon={["fas", "ellipsis-h"]} />
           <input
             className="add-comment"
-            index = {this.state.timestamp}
             value={this.state.text}
             onChange={e => this.handleChange("text", e.target.value)}
             placeholder="Add comment..."
           />
         </form>
-      </div>
+      </CommentWrapper>
     );
   }
 }

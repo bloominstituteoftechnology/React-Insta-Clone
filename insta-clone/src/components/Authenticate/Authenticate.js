@@ -16,10 +16,19 @@ const Authenticate = App =>
       }
     };
 
+    componentWillUnmount = () => {
+      if (this.state.loggedIn === true)
+      localStorage.setItem(
+      'user', null
+      )
+      window.location.reload();
+    }
+
     render() {
       // return <App />
         if (this.state.loggedIn) return <App />;
       return <Login />;
+
     }
   };
 export default Authenticate;

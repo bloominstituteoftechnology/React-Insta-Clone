@@ -1,6 +1,7 @@
 import React from "react";
 import instacloneimg from "./../../imgs/instacloneimg.png";
 import "./SearchBar.css";
+import {SearchWrapper, SearchContainer} from "../Styles/StyledSearch"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class SearchBar extends React.Component {
@@ -20,15 +21,15 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="search-container">
-        <div className="search-content">
+      <SearchWrapper>
+        <SearchContainer>
           <img className="img-clone" src={instacloneimg} alt="insta-clone" />
           <h2>|</h2>
           <h1>Instagram</h1>
 
           <form>
             <FontAwesomeIcon className="search" icon="search" />
-            <input
+            <input className= 'search-bard'
               value={this.state.search}
               onChange={this.handleInputChange}
               placeholder="Search"
@@ -40,11 +41,11 @@ class SearchBar extends React.Component {
             <FontAwesomeIcon className="heart" icon={["far", "heart"]} />{" "}
             <FontAwesomeIcon className="user" icon={["far", "user"]} />
           </div>
-        </div>
+        </SearchContainer>
         <div>
           <hr />
         </div>
-      </div>
+      </SearchWrapper>
     );
   }
 }
