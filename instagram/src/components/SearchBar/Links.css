@@ -1,33 +1,7 @@
-.logo {
-    display: flex;
-    align-items: center;
-    margin-top: 23px;
-    margin-left: 14px;
-}
 
 .svg-inline--fa.fa-w-14 {
     width: 43px;
     height: auto;
     margin-right: 32px;
     margin-left: 12px;
-}
-
-/* .instagramLogo {
-    width: 43px;
-    height: auto;
-    margin-right: 15px;
-} */
-
-.divider {
-    font-size: 47px;
-    position: relative;
-    bottom: 8px;
-    margin-right: 23px;
-    font-weight: 100;
-}
-
-.linkH2 {
-    font-weight: 100;
-    font-size: 44px;
-    font-family: Billabong;
 }

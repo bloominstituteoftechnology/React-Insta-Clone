@@ -40,7 +40,7 @@ class PostsPage extends React.Component {
 
       render() {
         return (
-            <div className="App">
+            <div>
             <SearchHeader           
               searchPostsHandler={this.searchPostsHandler}
               // filterTarget={this.state.filterTarget}

@@ -2,18 +2,18 @@ import React from 'react';
 import Links from './Links.js';
 import Search from './Search.js';
 import Icons from './Icons.js';
-import './SearchHeader.css';
+import { SearchHead } from '../../Styles';
 
 const SearchHeader = props => {
     return (
-        <div className="searchHeader">
+        <SearchHead>
           <Links logo="" titleLogo="Instagram" />
           <Search          
           searchPostsHandler={props.searchPostsHandler}
           filterTarget={props.filterTarget}
           />
           <Icons icon="Hello" />
-        </div>
+        </SearchHead>
     );
 }
 

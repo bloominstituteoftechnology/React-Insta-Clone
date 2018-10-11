@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import './PostHeader.css';
+import { PostHead, PostHeadImg, PostHeadH4, PostImg } from '../../Styles';
 
 const PostHeader = props => {
     return (
         <div>
-            <div className="postHeader">
-                <img src={props.post.thumbnailUrl} alt="profile"/>
-                <h4>{props.post.username}</h4>
-            </div>
-            <img className="postimg" src={props.post.imageUrl} alt="post"/>
+            <PostHead>
+                <PostHeadImg src={props.post.thumbnailUrl} alt="profile"/>
+                <PostHeadH4>{props.post.username}</PostHeadH4>
+            </PostHead>
+            <PostImg src={props.post.imageUrl} alt="post"/>
         </div>
     );
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 import './Search.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Header, SearchInput } from "../../Styles";
 
 const Search = props => {
     return (
-        <div className='searchDiv'>
+        <Header>
             <label htmlFor="searchInput"><FontAwesomeIcon icon={['fas', 'search']} className={"searchIcon"} /></label>
-            <input 
-            className="search" 
+            <SearchInput 
             id="searchInput" 
             type="text" 
             placeholder="Search"         
@@ -15,7 +15,7 @@ const Search = props => {
             onChange={props.searchPostsHandler}
             name="filterTarget"
             />
-        </div>
+        </Header>
     );
 }
 

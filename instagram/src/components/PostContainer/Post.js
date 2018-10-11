@@ -1,14 +1,14 @@
 import React from 'react';
 import PostHeader from './PostHeader';
-import './Post.css';
 import CommentSection from '../CommentSection/CommentSection.js';
+import { PostDiv } from '../../Styles';
 
 const Post = props => {
     return (
-        <div className="postContainer">
+        <PostDiv>
             <PostHeader post={props.post}/>
             <CommentSection post={props.post} index={props.index}/>
-        </div>
+        </PostDiv>
     );
 }
 

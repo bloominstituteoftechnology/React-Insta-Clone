@@ -29,6 +29,8 @@ const Authenticate = App =>
         event.preventDefault();
         if (this.state.username === localStorage.getItem('username') && (this.state.password === localStorage.getItem('password'))) {
           this.setState({ login: true });
+        } else {
+          this.setState({ login: false });
         }
       };
       
