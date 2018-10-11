@@ -2,7 +2,8 @@ import React from "react";
 import dummyData from "../../dummy-data";
 import PostContainer from "./PostContainer";
 import SearchBar from "../SearchBar/SearchBar";
- class PostsPage extends React.Component {
+
+class PostsPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,12 +12,14 @@ import SearchBar from "../SearchBar/SearchBar";
       filtered: false
     };
   }
-   componentDidMount() {
+
+  componentDidMount() {
     setTimeout(() => {
       this.setState({ postData: dummyData });
     }, 500);
   }
-   startSearch = event => {
+
+  startSearch = event => {
     event.preventDefault();
     let newData = dummyData;
     let filteredArr = newData.filter(
@@ -41,12 +44,14 @@ import SearchBar from "../SearchBar/SearchBar";
       });
     }
   };
-   changeHandler = (key, value) => {
+
+  changeHandler = (key, value) => {
     this.setState({
       [key]: value
     });
   };
-   render() {
+
+  render() {
     return (
       <div className="PostsPage">
         {!this.state.postData.length ? (
@@ -70,4 +75,5 @@ import SearchBar from "../SearchBar/SearchBar";
     );
   }
 }
- export default PostsPage;
+
+export default PostsPage;
