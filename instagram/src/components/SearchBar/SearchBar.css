@@ -6,6 +6,7 @@
     padding: 15px 0;
     border-bottom: 1px solid #eaeaea;
     background-color: #fff;
+    z-index: 1;
   }
   
   .Search-bar-container {
@@ -52,6 +53,10 @@
   .Search-bar-container input::placeholder {
     font-family: 'FontAwesome', sans-serif;
     color: #b6b6b6;
+  }
+  
+  .Search-bar-container input:focus {
+    outline: none;
   }
   
   .Search-bar-container .Menu {
