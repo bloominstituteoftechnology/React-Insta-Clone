@@ -1,15 +1,3 @@
-.comment:first-child {
-    margin-top: 0;
-}
-
-form {
-    position: relative;
-}
-
-.deleteComment:hover {
-    color: crimson;
-}
-
 .hidden {
     display: none;
 }

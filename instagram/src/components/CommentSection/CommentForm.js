@@ -17,12 +17,16 @@ const Icon = styled.i`
     padding-top: 22.5px;
 `;
 
+const Form = styled.form`
+    position: relative;
+`;
+
 let CommentForm = props => {
     return(
-        <form onSubmit={props.addNewComment} autoComplete="off">
+        <Form onSubmit={props.addNewComment} autoComplete="off">
             <Icon className="fas fa-ellipsis-h"/>
             <Input type='text' name="newComment" placeholder="Add a comment..." value={props.value} onChange={props.changeHandler} />
-        </form>
+        </Form>
     )
 }
 

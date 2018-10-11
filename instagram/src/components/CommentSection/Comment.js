@@ -6,6 +6,10 @@ const CommentDiv = styled.div`
     padding-top: 2px;
     margin-top: 19px;
     position: relative;
+
+    :first-child {
+        margin-top: 0;
+    }
 `;
 
 const Username = styled.h2`
@@ -27,6 +31,10 @@ const Delete = styled.span`
     right: 0px;
     color: grey;
     cursor: pointer;
+
+    :hover {
+        color: crimson;
+    }
 `;
 
 const Comment = props => {
