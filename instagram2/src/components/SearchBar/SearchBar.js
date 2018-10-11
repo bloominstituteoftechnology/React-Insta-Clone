@@ -3,7 +3,8 @@ import './SearchBar.css';
 
 const SearchBar = props => {
     return (
-        <div className="search-bar-container">
+        //<div className="search-bar-container">
+        <StyledHeader>
             <div className="logo-container">
                 <div className="image-container">
                     <i class="fab fa-instagram 2x"></i>
@@ -27,7 +28,7 @@ const SearchBar = props => {
                     <i class="far fa-user"></i>
                 </div>
             </div>
-        </div>
+        </StyledHeader>
     );
 };
 export default SearchBar;

@@ -36,7 +36,7 @@ class Login extends React.Component {
                     placeholder="password"
                     value={this.state.password}
                 />
-                <button className="log-in-button">Log In</button>
+                <button className="log-in-button" type="login">Log In</button>
             </form>
         )
     }
