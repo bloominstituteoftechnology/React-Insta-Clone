@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-import dummyData from './dummy-data';
-import PostsContainer from './components/PostsContainer/PostsContainer';
-import SearchBar from './components/SearchBar/SearchBarContainer';
+import './PostsPage.css';
+import dummyData from '../dummy-data';
+import PostsContainer from './PostsContainer';
+import SearchBar from '../SearchBar/SearchBarContainer';
 
 // Creating the overall app. This sets the state and creates the searchPostsHandler which matches and returns the filtered posts. IF there are no matches it returns all the posts. This only searches the username titles. 
 class PostsPage extends Component {
