@@ -18,10 +18,11 @@ const Header = props => {
             onKeyDown={props.searchPosts}
           />
         </div>
-
-        <div className="Nav-icon-feed" />
-        <div className="Nav-icon-heart" />
-        <div className="Nav-icon-profile" onClick={props.logoutHandler} />
+        <div className="Nav-icons">
+          <div className="Nav-icon-feed" />
+          <div className="Nav-icon-heart" />
+          <div className="Nav-icon-profile" onClick={props.logoutHandler} />
+        </div>
       </div>
     </nav>
   );

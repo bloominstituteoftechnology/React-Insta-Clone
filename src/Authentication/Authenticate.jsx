@@ -13,8 +13,8 @@ const Authenticate = App =>
 
     componentDidMount() {
       if (
-        window.localStorage.getItem("login") === "username" &&
-        window.localStorage.getItem("password") === "password"
+        window.localStorage.getItem("login") === "charlieBearPaws" &&
+        window.localStorage.getItem("password") === "woof2018"
       ) {
         console.log("setting loggin state to true");
         this.setState({ isLoggedIn: true });

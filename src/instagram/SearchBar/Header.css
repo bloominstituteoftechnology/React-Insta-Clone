@@ -1,31 +1,26 @@
-i.Nav {
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-  -webkit-transition: height 0.2s ease-in-out;
-  transition: height 0.2s ease-in-out;
-  height: 77px;
-}
 .Nav-menus {
   display: flex;
   flex-direction: row;
-
   height: 77px;
   width: 70%;
   margin: 0 auto;
   padding: 26px 40px;
+  justify-content: space-between;
 }
-.Search {
-  height: 30px;
+.Nav-icons {
+  display: flex;
+}
+.Nav-icons div {
+  margin: 0 5px;
+}
+.Nav-search input {
+  height: 20px;
+  width: 200px;
   border-radius: 5px;
-  order: 2;
 }
 .Nav-brand-logo {
   display: block;
-  order: 1;
+
   background-position: -176px 0px;
   background-image: url(../../sprite.png);
   background-size: 405px 379px;
@@ -84,4 +79,9 @@ i.Nav {
   background-position: -308px -173px;
   height: 25px;
   width: 25px;
+}
+
+.menu {
+  height: 400px;
+  weight: 400px;
 }
