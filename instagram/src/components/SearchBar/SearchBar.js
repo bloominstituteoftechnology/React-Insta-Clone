@@ -16,13 +16,12 @@ const LeftItems = styled.div`
     align-items: center;
 `;
 
-// this isn't working with styled-componenets but is with css!
-// const InstaBadge = styled.i`
-//     margin: 40px 0 40px 40px;
-//     padding-right: 40px;
-//     font-size: 70px;
-//     border-right: 1px solid grey;
-// `;
+const InstaBadge = styled.i`
+    margin: 40px 0 40px 40px;
+    padding-right: 40px;
+    font-size: 70px;
+    border-right: 1px solid grey;
+`;
 
 const InstaImage = styled.img`
     padding-left: 20px;
@@ -45,20 +44,35 @@ const SearchInput = styled.input`
 const RightItems = styled.div`
 `;
 
+const CompassAndHeart = styled.i`
+    margin: 0 25px;
+    font-size: 50px;
+    font-weight: 100;
+    -webkit-text-stroke: 3px white;
+`;
+
+const UserFontAwesome = styled.i`
+    margin: 0 25px;
+    font-size: 50px;
+    font-weight: 100;
+    -webkit-text-stroke: 3px white;
+    padding-right: 20px;    
+`;
+
 const SearchBar = props => {
     return ( 
         <Header>
             <LeftItems>
-                <i className="fab fa-instagram"></i>
+                <InstaBadge className="fab fa-instagram" />
                 <InstaImage src={logo} alt="logo" />
             </LeftItems>
             <MiddleItems>
                 <SearchInput type="text" placeholder="&#128269; Search" onKeyDown={props.searchPosts} />
             </MiddleItems>
             <RightItems>
-                <i className="far fa-compass"></i>
-                <i className="far fa-heart"></i>
-                <i className="far fa-user"></i>
+                <CompassAndHeart className="far fa-compass" />
+                <CompassAndHeart className="far fa-heart" />
+                <UserFontAwesome className="far fa-user" />
             </RightItems>
         </Header>
     );
