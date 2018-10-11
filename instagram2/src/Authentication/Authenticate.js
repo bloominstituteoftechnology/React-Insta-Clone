@@ -2,8 +2,8 @@ import React from 'react';
 import App from '../App';
 import Login from '../components/Login/Login';
 
-
-class Authenticate extends React.Component {
+const Authenticate = PassedComponent => class extends React.Component {
+// class Authenticate extends React.Component {
         constructor(props) {
             super(props);
             this.state = {
@@ -20,7 +20,7 @@ class Authenticate extends React.Component {
         }
         render() {
             if (this.state.loggedIn === true) {
-                return (<App />)
+                return (<PassedComponent />)
                 } else {
                 return (<Login />)
                 };

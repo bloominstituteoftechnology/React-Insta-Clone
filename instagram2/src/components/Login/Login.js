@@ -1,6 +1,5 @@
 import React from 'react';
-import { runInThisContext } from 'vm';
-//css
+import './Login.css'
 
 class Login extends React.Component {
     constructor(props) {
@@ -20,7 +19,7 @@ class Login extends React.Component {
     handleLoginSubmit = () => {
         const user = this.state.username;
         localStorage.setItem('user', user);
-        //window.location.reload();
+        window.location.reload();
     }
 
 
@@ -30,12 +29,12 @@ class Login extends React.Component {
                 <input className="log-in"
                     type="text"
                     placeholder="username"
-                    value="this.state.username"
+                    value={this.state.username}
                 />
                 <input className="password"
                     type="password"
                     placeholder="password"
-                    value="this.state.password"
+                    value={this.state.password}
                 />
                 <button className="log-in-button">Log In</button>
             </form>

@@ -5,8 +5,10 @@ const SearchBar = props => {
     return (
         <div className="search-bar-container">
             <div className="logo-container">
-                <i class="fab fa-instagram 2x"></i>
-                <div className="instagram">Instagram</div>
+                <div className="image-container">
+                    <i class="fab fa-instagram 2x"></i>
+                    <div className="instagram">Instagram</div>
+                </div>
             </div>
             <div className="search-bar">
                 <input

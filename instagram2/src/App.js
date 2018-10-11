@@ -8,8 +8,8 @@ import Authenticate from './Authentication/Authenticate';
 
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       posts: dummyData
     }
@@ -25,7 +25,7 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
 //throws error when try to wrap App with Authenticate
 
 //dont render authenticate component in app.
