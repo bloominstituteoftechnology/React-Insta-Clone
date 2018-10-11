@@ -10,14 +10,14 @@
   margin: 20px;
 }
 
-.leftContent {
+/* .leftContent {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 30px;
   padding: 20px;
-}
+} */
 
 .line {
   padding: 0px 20px;
