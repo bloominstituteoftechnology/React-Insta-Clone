@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "font-awesome": "^4.7.0",
+    "netlify-cli": "^2.0.0",
     "prop-types": "^15.6.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
