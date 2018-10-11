@@ -5,10 +5,10 @@ class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      likes: this.props.likes,
       comments: [],
       newComment: "",
       user: localStorage.getItem("user"),
-      // user: "user",
       isLiked: false,
       heart: "far fa-heart"
     };
@@ -41,14 +41,20 @@ class CommentSection extends React.Component {
 
   likeHandler = () => {
     if (!this.state.isLiked) {
+      let likes = this.state.likes + 1;
+      console.log(likes);
       this.setState({
-        // likes: ++this.props.likes,
+        likes,
         isLiked: true,
         heart: "fas fa-heart"
       });
-    } else {
+    }
+
+    if (this.state.isLiked) {
+      let likes = this.state.likes - 1;
+      console.log(likes);
       this.setState({
-        // likes: --this.props.likes,
+        likes,
         isLiked: false,
         heart: "far fa-heart"
       });
@@ -68,7 +74,7 @@ class CommentSection extends React.Component {
             </div>
             <i className="far fa-bookmark" />
           </div>
-          <div className="like-count">{this.props.likes} likes</div>
+          <div className="like-count">{this.state.likes} likes</div>
 
           {this.state.comments.map(comment => {
             return (
