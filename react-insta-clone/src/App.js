@@ -3,8 +3,8 @@ import './App.css';
 import SearchBar from './components/SearchBar';
 import PostContainer from './components/PostContainer';
 import PostsPage from './components/PostContainer';
-import CommentSection from './components/CommentSection';
 import dummyData from "./dummy-data.js";
+
 
 class App extends Component {
   constructor() {
@@ -20,11 +20,11 @@ class App extends Component {
   render() {
     return (<div>
 
+
       <SearchBar/>
-      {this.state.myData.map((data, index) => (<PostContainer key={index} username={data.username} avatar={data.thumbnailUrl} image={data.imageUrl} caption={data.comments}/>))}
-      {/* {this.state.myData.map((data, index) => (<CommentSection key={index}  caption={data.comments}/>))} */}
 
-
+      {this.state.myData.map((data, index) => (<PostContainer key={index} username={data.username} likes={data.likes} avatar={data.thumbnailUrl} image={data.imageUrl} caption={data.comments}/>))}
+    {/* <PostsPage /> */}
 
     </div>);
   }

@@ -6,7 +6,15 @@ import PropTypes from 'prop-types';
 class PostContainer extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+       likes: this.props.likes
+     };
   }
+  addsOne = () => {
+    this.setState(prevState => {
+      return { likes: prevState.likes + 1 };
+    });
+  };
 
 
   render() {
@@ -14,6 +22,7 @@ class PostContainer extends Component {
     const avatar = this.props.avatar;
     const image = this.props.image;
     const caption = this.props.caption;
+
 
 
 
@@ -35,6 +44,8 @@ class PostContainer extends Component {
         </div>
       </div>
       <div className="Post-caption">
+          <div><i onClick={this.addsOne} class="far fa-heart fa-lg"></i>   <i class="far fa-comment fa-lg"></i></div>
+        <strong> {this.state.likes} likes </strong>
         <CommentSection caption={caption}/>
       </div>
     </article>;

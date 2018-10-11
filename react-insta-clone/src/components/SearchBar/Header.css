@@ -35,9 +35,9 @@ form{
 input {
 
 
-height: 25px;
+height: 35px;
 margin-left: 0px;
-padding-right: 30px;
+padding-right: 40px;
 margin-right: 190px;
 text-align: center;
 }
@@ -50,18 +50,23 @@ text-align: center;
 /* style glyph */
 .inner-addon .fas {
   position: absolute;
-  padding: 10px;
+  padding: 11px;
   pointer-events: none;
 }
 
 /* align glyph */
-.left-addon .fas  { left:  60px;}
+.left-addon .fas  {
+  left:  60px;
+}
 
 
 /* add padding  */
-.left-addon input  { padding-left:  40px; }
+.left-addon input  {
+  padding-left:  40px;
+}
 
 .far {
-  padding-left: 30px;
-  height:0px;
+  padding-left: 15px;
+  margin-left: 10px;
+  height:10px;
 }
