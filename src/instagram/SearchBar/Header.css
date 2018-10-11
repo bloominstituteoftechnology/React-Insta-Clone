@@ -22,7 +22,7 @@
   display: block;
 
   background-position: -176px 0px;
-  background-image: url(../../sprite.png);
+  background-image: url(../../sprite.svg);
   background-size: 405px 379px;
   background-repeat: no-repeat;
   height: 35px;
@@ -32,7 +32,7 @@
 .Nav-icon-feed {
   color: #003569;
 
-  background-image: url(../../sprite.png);
+  background-image: url(../../sprite.svg);
   background-size: 405px 379px;
   text-decoration: none;
   display: block;
@@ -41,7 +41,7 @@
   white-space: nowrap;
   cursor: pointer;
   background-repeat: no-repeat;
-  background-position: -275px -353px;
+  background-position: -275px -354px;
   height: 25px;
   width: 25px;
 }
@@ -49,7 +49,7 @@
 .Nav-icon-heart {
   color: #003569;
 
-  background-image: url(../../sprite.png);
+  background-image: url(../../sprite.svg);
   background-size: 405px 379px;
   text-decoration: none;
   display: block;
@@ -67,7 +67,7 @@
 .Nav-icon-profile {
   color: #003569;
 
-  background-image: url(../../sprite.png);
+  background-image: url(../../sprite.svg);
   background-size: 405px 379px;
   text-decoration: none;
   display: block;
