@@ -1,15 +1,15 @@
 import React from "react";
-import logo from "../../images/instagram-new-logo.png"
-import "./SearchBar.css";
+import logo from "../../images/instagram-new-logo.png";
+import {Header, LogoHeader, SearchDiv, UserDiv} from "../../styles";
 
 const SearchBar = props => {
     return (
-        <div className="search-bar">
-            <div className="left">
+        <Header>
+            <LogoHeader>
                 <i className="fa fa-2x fa-instagram" aria-hidden="true"></i>
                 <img src={logo} alt="logo"></img>
-            </div>
-            <div className="center">
+            </LogoHeader>
+            <SearchDiv>
             <form onSubmit={props.searchPosts}>
             <input 
                 className="fa fa-search"
@@ -20,14 +20,13 @@ const SearchBar = props => {
                 type="text"
                 />
             </form>
-            </div>
-            <div className="right">
+            </SearchDiv>
+            <UserDiv>
                 <i className="fa fa-2x fa-compass" aria-hidden="true"></i>
                 <i className="fa fa-2x fa-heart-o" aria-hidden="true"></i>
                 <i className="fa fa-2x fa-user-o" aria-hidden="true" onClick={props.logout}></i>
-            </div>
-            
-        </div>
+            </UserDiv>
+        </Header>
     );
 }
 

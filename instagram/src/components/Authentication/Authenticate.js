@@ -12,17 +12,19 @@ const Authenticate = App =>
       }
 
       triggerOnLogin = username => {
-        this.setState(
-          {
-            loggedIn: true,
-            username: username,
-          },
-          () => {
-            localStorage.setItem("loggedIn", this.state.loggedIn);
-            localStorage.setItem("username", this.state.username);
-            
-          }
-        )
+        if (username) {
+          this.setState(
+            {
+              loggedIn: true,
+              username: username,
+            },
+            () => {
+              localStorage.setItem("loggedIn", this.state.loggedIn);
+              localStorage.setItem("username", this.state.username);
+              
+            }
+          )
+        }
       }
 
       componentDidMount() {
