@@ -7,7 +7,7 @@ const Comment = props =>{
         <div className="comments-section">
             <div className="comments">
                 <p className="user">{props.comment.username}</p>
-                <p className="comment">{props.comment.text}</p>
+                <p className="comment">{props.comment.text}</p> 
             </div>
         </div>
     );

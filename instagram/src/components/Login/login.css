@@ -1,0 +1,29 @@
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width:500px;
+    border:1px solid rgb(225, 224, 224);
+}
+.login-form input{
+    border:1px solid rgb(225, 224, 224);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom:5px;
+    font-size:15px;
+    outline: none;
+}
+
+.login-form button{
+    padding:10px;
+    background-color:black;
+    color:white;
+    font-size:15px;
+    border:none;
+}

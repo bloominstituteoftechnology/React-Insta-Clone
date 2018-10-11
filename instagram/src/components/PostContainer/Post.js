@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import LikePost from './LikePost';
 import PostHeader from './PostHeader';
+import './PostContainer.css'
 
 
 class Post extends React.Component {
