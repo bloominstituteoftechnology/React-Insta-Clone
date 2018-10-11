@@ -1,0 +1,49 @@
+.stories-container {
+  /* border: 1px solid red; */
+  margin-top: 100px;
+  max-width: 293px;
+  width: 100%;
+  margin-left: 30px;
+}
+.stories-container img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.stories-username {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.stories-username h1 {
+  margin-left: 20px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.stories-map {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.stories-map h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.stories-map p {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+.stories-map h1,
+.stories-map p {
+  margin-left: 10px;
+}
+
+.stories h5 {
+  opacity: 0.6;
+  margin-top: 10px;
+}

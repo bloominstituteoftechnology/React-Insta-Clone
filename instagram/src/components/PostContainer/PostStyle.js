@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const PostWrapper = styled.div`
   max-width: 1010px;
   margin: auto;
+  display: flex;
+  align-items: baseline;
 `;
 
 export const PostContainerStyled = styled.div`

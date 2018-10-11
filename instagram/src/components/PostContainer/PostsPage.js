@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import dummyData from "../../dummy-data";
 import PostContainer from "./PostContainer";
+import StoriesContainer from "../Stories.js/StoriesContainer";
 
 class PostsPage extends Component {
   constructor(props) {
@@ -24,10 +25,13 @@ class PostsPage extends Component {
       post.username.includes(this.props.filterTarget)
     );
     return (
-      <div>
-        {filteredPosts.map((post, i) => (
-          <PostContainer key={post.timestamp} post={post} />
-        ))}
+      <div className="post-wrapper">
+        <div>
+          {filteredPosts.map((post, i) => (
+            <PostContainer key={post.timestamp} post={post} />
+          ))}
+        </div>
+        <StoriesContainer posts={this.state.posts} />
       </div>
     );
   }

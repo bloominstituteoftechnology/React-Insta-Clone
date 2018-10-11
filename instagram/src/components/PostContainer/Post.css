@@ -1,6 +1,9 @@
 .post-wrapper {
   max-width: 1010px;
   margin: auto;
+  display: flex;
+
+  /* align-items: center; */
 }
 
 .post-container {
