@@ -1,4 +1,5 @@
 import React from 'react';
+import Comment from './Comment.js';
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -16,20 +17,6 @@ class CommentSection extends React.Component {
       </div>
     );
   }
-}
-
-const Comment = props => {
-  console.log('props', props);
-  return (
-    <div className='comment'>
-      <div>
-        {props.comment.username}
-      </div>
-      <div>
-        <p>{props.comment.text}</p>
-      </div>
-    </div>
-  )
 }
 
 export default CommentSection;
