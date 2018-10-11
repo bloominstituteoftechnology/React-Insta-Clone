@@ -15,7 +15,7 @@ class CommentSection extends Component {
             comments,
             index,
             commentValue: '',
-            username: 'chris',
+            username: 'test',
             postLiked: false,
             showInput: false,
         }
