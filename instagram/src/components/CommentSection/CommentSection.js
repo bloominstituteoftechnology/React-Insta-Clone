@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import moment from "moment";
-import UserName from "../PostContainer/Post.js";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const CommentContainer = styled.div`
   font-weight: 300;
@@ -22,6 +21,12 @@ const CommentInput = styled.input`
   border: none;
   height: 50px;
   padding: 0 20px;
+`;
+
+const CommentUserName = styled.span`
+  font-weight: 500;
+  font-size: 12px;
+  margin-right: 5px;
 `;
 
 class CommentSection extends Component {
@@ -53,7 +58,7 @@ class CommentSection extends Component {
         {this.state.comments.map((comment, index) => (
           <CommentContainer key={index}>
             <p>
-              <UserName>{comment.username}</UserName>
+              <CommentUserName>{comment.username}</CommentUserName>
               {comment.text}
             </p>
           </CommentContainer>

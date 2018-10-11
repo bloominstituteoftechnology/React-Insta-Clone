@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import "./PostContainer.css"
 import CommentSection from "../CommentSection/CommentSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 
 const StyledPost = styled.div`
@@ -29,15 +30,10 @@ const ProfilePicture = styled.img`
   margin-right: 10px;
 `;
 
-export const UserName = styled.span`
+const UserName = styled.span`
   font-weight: 500;
   font-size: 12px;
   margin-right: 5px;
-  ${props =>
-    props.bold &&
-    css`
-      font-weight: 600;
-    `};
 `;
 
 const Icons = styled.div`
@@ -72,7 +68,7 @@ class Post extends Component {
             alt={this.props.post.username}
             className="profile-picture"
           />
-        <UserName bold>{this.props.post.username}</UserName>
+        <UserName>{this.props.post.username}</UserName>
         </Profile>
         <MainImg
           src={this.props.post.imageUrl}
