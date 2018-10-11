@@ -1,7 +1,6 @@
 import React from 'react';
 import Logo from '../IG-assets/iglogo.png';
 import Camera from '../IG-assets/IGLogo.svg'
-import "@fortawesome/fontawesome-free";
 import styled from 'styled-components';
 
 const Header = styled.header`
