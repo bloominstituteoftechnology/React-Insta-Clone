@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Comments.css';
+import { CommentBody, CommentText } from './CommentsStyles';
 
 const Comment = props => {
   const { username, text } = props.comment;
 
   return (
-    <div className="Comment-body">
-      <h2>{username}</h2>
-      <p>{text}</p>
-    </div>
+    <CommentBody>
+      <CommentText type="username">{username}</CommentText>
+      <CommentText>{text}</CommentText>
+    </CommentBody>
   );
 };
 

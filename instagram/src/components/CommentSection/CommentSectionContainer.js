@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import Comment from './Comment';
 import CommentForm from './CommentForm';
-import './Comments.css'
+import { Container, TimeStamp } from './CommentsStyles';
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -35,14 +35,10 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <div className="Comment-container">
-        {this.state.comments.map((comment, i) =>
-          <div key={i}>
-            <Comment comment={comment} />
-          </div>
-        )}
+      <Container>
+        {this.state.comments.map((comment, i) => <Comment key={i} comment={comment} />)}
 
-        <p className="time">{moment(this.state.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</p>
+        <TimeStamp>{moment(this.state.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</TimeStamp>
 
         <CommentForm
           addNewComment={this.addNewComment}
@@ -50,7 +46,7 @@ class CommentSection extends React.Component {
           commentHandler={this.commentHandler}
           newComment={this.state.newComment}
         />
-      </div>
+      </Container>
     );
   }
 }

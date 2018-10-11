@@ -1,19 +1,20 @@
 import React from 'react';
-import './Comments.css';
+import { InputWrapper, CommentInput } from './CommentsStyles';
 
 const CommentForm = props => {
   return (
     <form onSubmit={props.addNewComment}>
-      <div className="Comment-input">
-        <input
+      <InputWrapper>
+        <CommentInput
           type="text"
           placeholder="Add a comment..."
           name="newComment"
           value={props.newComment}
           onChange={props.commentHandler}
-        />
+        ></CommentInput>
+
         <i className="fas fa-ellipsis-h fa-sm"></i>
-      </div>
+      </InputWrapper>
     </form>
   );
 };
