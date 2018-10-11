@@ -15,6 +15,8 @@ const Authenticate = PostsPage => LoginPage =>
       }
     }
 
+    
+
     render() {
       if(this.state.loggedIn) {
         return <PostsPage />
