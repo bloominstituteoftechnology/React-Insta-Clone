@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostStream from './components/PostStream/PostStream';
-import SearchBar from './components/SearchBar/SearchBarContainer';
+import SearchHeader from './components/SearchHeader/SearchHeader';
+import SearchBarLogic from './components/SearchHeader/SearchBarLogic';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       posts: [],
-      filteredPosts: []
     };
   }
   componentDidMount() {
@@ -19,8 +19,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar/>
+        <SearchHeader/>
         <PostStream/>
+        <SearchBarLogic unfilteredPosts={this.state.posts} ></SearchBarLogic>
       </div>
     );
   }
