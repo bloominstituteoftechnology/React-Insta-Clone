@@ -46,8 +46,9 @@ const SearchBar = props => (
       />
       <FontAwesomeIcon
         icon={faUser}
-        style={{ height: "30px", width: "30px",}}
+        style={{ height: "30px", width: "30px", cursor: "pointer"}}
         className="right"
+        onClick={props.showLogout}
       />
     </div>
   </div>

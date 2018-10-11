@@ -9,7 +9,8 @@ class PostsPage extends Component {
     super();
     this.state = {
       data: [],
-      searchResults: []
+      searchResults: [],
+      logoutVisible: false
     };
   }
 
@@ -26,14 +27,20 @@ class PostsPage extends Component {
   };
 
   handleLogOut = () => {
-    localStorage.removeItem('username');
+    localStorage.removeItem("username");
     window.location.reload();
-  }
-  
+  };
+  showLogout = () => this.setState({logoutVisible: !this.state.logoutVisible});
   render() {
     return (
       <div className="container posts">
-        <SearchBar handleSearch={this.handleSearch}/>
+        <SearchBar
+          handleSearch={this.handleSearch}
+          showLogout={this.showLogout}
+        />
+        <button onClick={this.handleLogOut} className={"logout-button"} style={this.state.logoutVisible ? {display: "block"} : {display: "none"}}>
+          Log Out
+        </button>
         <div className="main-content">
           <PostContainer
             data={
@@ -43,7 +50,6 @@ class PostsPage extends Component {
             }
           />
         </div>
-        <button onClick={this.handleLogOut} className={'logout-button'}>Log Out</button>
       </div>
     );
   }
