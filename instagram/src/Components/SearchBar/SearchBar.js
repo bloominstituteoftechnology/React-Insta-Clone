@@ -3,7 +3,8 @@ import "./SearchBar.css";
 import styled, { css } from "styled-components";
 
 const SearchBarDiv = styled.div`
-  /* border: 3px solid red; */
+
+
 `;
 const SearchBarWrapper = styled.div`
   /* border: 3px solid blue; */
@@ -30,8 +31,8 @@ const SearchBar = props => {
           </div>
         </div>
       </SearchBarWrapper>
+      <button onClick={() => props.handleCreds(null)}>Logout</button>
 
-      <button onClick={() => props.handleCreds(null)}>LOGOUT!!!</button>
     </SearchBarDiv>
   );
 };

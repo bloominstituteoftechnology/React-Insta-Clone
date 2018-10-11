@@ -1,8 +1,4 @@
-.Searchbar{
-    display: flex;
-    align-items: center;
-    border: 3px solid red;
-}
+
 
 .logo {
     display: flex;
@@ -14,11 +10,18 @@
     font-size: 2.5rem;
     src: local('Billabong'), url('Billabong.woff') format('woff');
     max-width: 800px;
-    width: 80%;
-    padding-left: 40px;
+    width: 65%;
+
 
 }
 .icons{
     display: flex;
+    flex-direction: row;
+
+}
+.logoutButton {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 200px;
 
 }
