@@ -16,6 +16,7 @@
     flex-direction: column;
   }
   .post-icons {
+    user-select: none;
    }
   .post-icons svg{
     padding: 0 15px 0 0;

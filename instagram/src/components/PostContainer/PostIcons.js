@@ -17,9 +17,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
      }
 
      updateLikes = (event) => {
+        // this.setState({
+        //     likes:this.state.likes + this.state.counter
+        // })
+
+
+
+         if (this.state.counter){
          this.setState({
-             likes: this.state.likes + this.state.counter
-         })
+             
+             likes: this.state.likes + this.state.counter,
+             counter: 0
+             
+         })}
+         else {this.setState({
+             likes: this.state.likes - 1,
+             counter: 1
+
+         })}
      }
 
      render(){
