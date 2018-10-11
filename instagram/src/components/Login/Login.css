@@ -1,8 +1,19 @@
 .login-page {
-  background-image: url("./bart.png");
-  height: 100%;
   width: 100%;
+  height: 100%;
   background-size: cover;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  fmargin-top: 20px;
+  border: 1px solid red;
+}
+
+body {
+  height: 100%;
+  background-image: url("./Calvin.jpg");
 }
 
 .login {
@@ -10,21 +21,26 @@
   justify-content: center;
   flex-direction: column;
   width: 300px;
-  margin: 250px auto;
+  margin: 20px auto;
+  background: #ccc;
+  border-radius: 10px;
+  padding: 25px 20px 10px;
 }
 
 .login button {
   text-decoration: none;
-  display: inline-block;
   border: none;
-  width: 20%;
   margin: 20px auto;
-  padding: 10px 20px;
+  padding: 10px 25px;
   border-radius: 5px;
   color: white;
   background-color: #4897b1;
+  white-space: nowrap;
 }
 
 input {
   margin-bottom: 15px;
+  border-radius: 5px;
+  border-style: none;
+  padding: 20px 10px;
 }

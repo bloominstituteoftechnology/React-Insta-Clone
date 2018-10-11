@@ -30,7 +30,7 @@ class Login extends React.Component {
   render() {
     return (
       <div className="login-page">
-        <img className="main-image" />
+        <h1 className="title">Welcome To React Insta-Clone</h1>
         <div>
           <form className="login">
             <input
