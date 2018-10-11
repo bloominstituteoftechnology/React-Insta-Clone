@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import './commentsection.css';
 
-
-
-
 class CommentSection extends Component {
     constructor() {
         super()

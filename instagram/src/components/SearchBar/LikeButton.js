@@ -7,17 +7,16 @@ class LikeButton extends Component {
       super(props);
       this.state = {
         posts : [],
-        count: 0
       }
     }
 
     render(){
         return (
-            <div>
+            <button onClick = {this.props.addLike}>
                 <img className="Like-Button" alt="''" src= {LikeButt} />
-            </div>
+            </button>
     )
 }
 }
-
+// I know this doesn't need to be a class component, but when I changed it to a functional component, the app broke so I'm leaving it.
 export default LikeButton;

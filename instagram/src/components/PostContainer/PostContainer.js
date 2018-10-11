@@ -4,53 +4,56 @@ import CommentButton from './CommentButton';
 import LikeButton from '../SearchBar/LikeButton';
 import './postcontainer.css';
 import PropTypes from "prop-types";
-// import dummyData from './dummy-data';
 
 class PostContainer extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
-          posts : []
+          posts : [],
+          likes: props.post.likes
         }
       }
+
+      addLike = () => {
+        this.setState ({
+            likes: this.state.likes + 1
+        })
+    }
 
       render() {
 
       return (
         <div className = "postBody">
-        {this.props.posts.map((post, index) => {
-            return(<div key={index}>
+            <div>
                 <div className = "profileHead">
-                    <img className = "profilePick" alt="''" src={post.thumbnailUrl} ></img>
-                    <h2>{post.username}</h2>
+                    <img className = "profilePick" alt="''" src={this.props.post.thumbnailUrl} ></img>
+                    <h2>{this.props.post.username}</h2>
                 </div>
            
                 <div>
-                    <img className = "postImg" alt="''" src={post.imageUrl} />
+                    <img className = "this.props.postImg" alt="''" src={this.props.post.imageUrl} />
                 </div>
                 
-                <div className = "postIcons">
-                    <LikeButton />
+                <div className = "this.props.postIcons">
+                    <LikeButton addLike = {this.addLike} />
                     <CommentButton />
                 </div>
 
                 <div className = "likeContainer">       
-                    <h3>{post.likes} Likes</h3>  
+                    <h3>{this.state.likes} Likes</h3>  
                 </div>
                     <CommentSection 
-                    comments={post.comments}
-                    timestring={post.timestamp}
+                    comments={this.props.post.comments}
+                    timestring={this.props.post.timestamp}
                     />
-                </div>)  
-        })}
+            </div>  
         </div>
       );
     }
 }
   
   PostContainer.propTypes = {
-    posts: PropTypes.arrayOf(
-        PropTypes.shape({
+    post: PropTypes.shape({
             username: PropTypes.string,
             thumbnailUrl: PropTypes.string,
             imageUrl:PropTypes.string,
@@ -59,7 +62,6 @@ class PostContainer extends Component {
             comments:PropTypes.string,
             text: PropTypes.string,
           })
-        )
     }.isRequired
   
   

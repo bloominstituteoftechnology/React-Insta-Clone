@@ -8,13 +8,14 @@ import PersonButton from './PersonButton';
 import './searchbar.css';
 
 const SearchBar = (props) => {
+    
     return (
         <div className = 'header'>
             <Logo />
             <WordLogo />
             <Search searchHandler = {props.searchHandler} />
             <GPSIcon />
-            <LikeButton />
+            <LikeButton onClick = {props.addLike} />
             <PersonButton />
         </div>
     )
