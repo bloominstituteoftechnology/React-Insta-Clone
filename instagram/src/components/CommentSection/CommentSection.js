@@ -5,6 +5,21 @@ import moment from 'moment';
 import CommentForm from './CommentForm'
 import PropTypes from 'prop-types';
 
+import styled from 'styled-components';
+
+const Comments = styled.div`
+    margin: 0 15px;
+`;
+
+const Timestamp = styled.p`
+    text-transform: uppercase;
+    color: gray;
+    font-size: 10px;
+    margin: 8px 15px 0;
+    border-bottom: .5px solid gray;
+    padding-bottom: 11px;
+`;
+
 class CommentSection extends React.Component {
     constructor(props) {
         super(props);
@@ -48,10 +63,10 @@ class CommentSection extends React.Component {
     render() {
         return (
             <div>
-                <div className="comments">
+                <Comments>
                     {this.state.comments.map((comment, i) => <Comment key={i} deleteComment={this.deleteComment} comment={comment} username={this.state.username}/>)}
-                </div>
-                <p className='timestamp'>{moment(this.state.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}</p>
+                </Comments>
+                <Timestamp>{moment(this.state.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}</Timestamp>
                 <CommentForm changeHandler={this.changeHandler} addNewComment={this.addNewComment}/>
             </div>
         )
