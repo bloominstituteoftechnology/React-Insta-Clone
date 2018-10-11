@@ -29,7 +29,7 @@
 
 .searchbar input {
   width: 80%;
-
+  height: 50px;
   text-align: left;
   text-indent: 5%;
   font-weight: bold;
