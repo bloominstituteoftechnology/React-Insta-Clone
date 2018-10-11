@@ -1,4 +1,8 @@
 import React from 'react';
+import Login from '../Login/Login';
+
+
+
 const Authenticate = App => class extends React.Component {
   constructor(props) {
     super(props);
@@ -19,9 +23,7 @@ const Authenticate = App => class extends React.Component {
       return <App />;
     } else {
       return (
-        <div className="login" onClick={this.handleLogin}>
-          login
-        </div>
+        <Login />
       )
     }
   }
