@@ -3,7 +3,7 @@ import React, {
   Component
 } from 'react';
 import './App.css';
-import PostsPage from './components/PostContainer/postspage';
+import PostsPage from './src/components/PostContainer/postspage';
 import Authenticate from './components/Authentication/authenticate'
 
 class App extends Component {

@@ -1,7 +1,6 @@
 import React from 'react';
-import LoginPage from './components/Login/loginpage';
 import SearchBar from './components/SearchBar/searchBar';
-
+import LoginPage from './components/Login/loginpage';
 
 const Authenticate = App =>
     class extends React.Component {
