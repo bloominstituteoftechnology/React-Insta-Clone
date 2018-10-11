@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Posts.css';
 import CommentSection from '../CommentSection/CommentSectionContainer';
-import CommentForm from '../CommentSection/CommentForm';
+// import CommentForm from '../CommentSection/CommentForm';
 
 const Post = props => {
-  const { username, thumbnailUrl, imageUrl, likes, comments, } = props.post;
+  const { username, thumbnailUrl, imageUrl, likes, comments, timestamp } = props.post;
   return (
     <div className="Post">
 
@@ -21,12 +21,10 @@ const Post = props => {
           <i className="far fa-comment fa-2x icon"></i>
         </div>
 
-        <p>{likes} likes</p>
+        <p className="likes">{likes} likes</p>
       </section>
 
-      <CommentSection comments={comments} />
-
-      <CommentForm />
+      <CommentSection comments={comments} timestamp={timestamp} />
     </div>
   );
 };

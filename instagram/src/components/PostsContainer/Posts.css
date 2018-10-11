@@ -1,65 +1,58 @@
 .Post-container {
-    max-width: 650px;
-    width: 100%;
-    margin: 125px auto;
-  }
-  
-  .Post-container .Post-card {
-    margin-top: 50px;
-    border: 1px solid #eaeaea;
-    border-radius: 3px;
-  }
-  
-  .Post .Post-header {
-    width: 40%;
-    padding: 15px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  .Post .Post-header img {
-    border-radius: 50%;
-    width: 15%;
-  }
-  
-  .Post .Post-header h2 {
-    margin-left: 5%;
-    font-weight: 700;
-    font-size: 1.5rem;
-  }
-  
-  .Post-body img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .Post-body .Post-action {
-    width: 95%;
-    margin: 0 auto;
-  }
-  
-  .Post-body .Post-action .icon {
-    margin-top: 10px;
-    margin-right: 3%;
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: FlipH;
-    -ms-filter: "FlipH";
-  }
-  
-  .Post-body p {
-    width: 95%;
-    margin: 10px auto;
-    font-weight: 700;
-    font-size: 1.5rem;
-  }
-  
-  .Post-card .time {
-    width: 95%;
-    margin: 0 auto;
-    color: #b6b6b6;
-    font-size: 1.2rem;
-  }
+  max-width: 650px;
+  width: 100%;
+  margin: 125px auto;
+}
+
+.Post-container .Post-card {
+  margin-top: 50px;
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+}
+
+.Post .Post-header {
+  width: 40%;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Post .Post-header img {
+  border-radius: 50%;
+  width: 15%;
+}
+
+.Post .Post-header h2 {
+  margin-left: 5%;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.Post-body img {
+  width: 100%;
+  height: auto;
+}
+
+.Post-body .Post-action {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.Post-body .Post-action .icon {
+  margin-top: 10px;
+  margin-right: 3%;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.Post-body .likes {
+  width: 95%;
+  margin: 10px auto;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
