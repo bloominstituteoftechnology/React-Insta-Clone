@@ -13,7 +13,7 @@ class App extends React.Component {
 
     this.state = {
        data: [],
-       search: ''
+       searchData:[]
     }
    }
    componentDidMount() {
@@ -23,16 +23,14 @@ class App extends React.Component {
    }
    
   displaySearch = (value) => {
-    const filteredData= this.state.data.filter(item => {
-        return item.username.indexOf(value) > -1;
-    });
+    const filteredData= this.state.data.filter(item => item.username.includes(value));
     this.setState({
-         data:filteredData
+         searchData:filteredData
     });
      console.log('working');
   }
   render() {
-    let data = this.state.data;
+    let data = this.state.searchData.length > 0 ? this.state.searchData : this.state.data;
     console.log(data);
     if(!data.length) {
       return <h2>Please wait. Loading data....</h2>

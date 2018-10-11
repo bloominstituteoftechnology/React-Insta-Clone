@@ -10,8 +10,10 @@ class SearchInput extends Component {
     // }
 
     search = (event) => {
-        let val = event.target.value;
-        this.props.display(val);
+        
+        let value = event.target.value;
+        this.props.display(value);
+        
     }
 
     render() {
