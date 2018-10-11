@@ -28,3 +28,5 @@ Comment.propTypes = {
 
  
 export default Comment;
+
+//comment.js

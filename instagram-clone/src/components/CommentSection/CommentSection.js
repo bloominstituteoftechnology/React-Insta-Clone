@@ -63,7 +63,7 @@ class CommentSection extends Component {
         );
     }
 }
-
+// left off here
 CommentSection.propTypes = {
     data: PropTypes.shape({
         comments: PropTypes.arrayOf(PropTypes.object)
@@ -71,3 +71,5 @@ CommentSection.propTypes = {
 };
 
 export default CommentSection;
+
+//CommentSection.js

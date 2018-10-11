@@ -15,7 +15,7 @@ const LoginInput = styled.input`
     border-radius: 5px;
     box-shadow: 0 0 10px slategray;
     padding-left: 10px;
-    font-family: 'Poiret One', cursive;
+    font-family: 'Niramit', sans-serif;
     font-size: 20px;
 `
 
@@ -31,7 +31,7 @@ const LoginButton = styled.button`
 const PageLogin = styled.div`
     height: 100vh;
     width: 100vw;
-    background: #b22020;
+    background: #AB2317;
 `
 
 const PandaImg = styled.img`
@@ -86,3 +86,5 @@ class Login extends Component {
 }
  
 export default Login;
+
+//login.js

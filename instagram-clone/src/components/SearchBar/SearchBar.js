@@ -15,7 +15,7 @@ const SearchBarAttrib = styled.div`
     background: lightgray;
     width: 100%;
     border-bottom: 1px solid black;
-    background: red;
+    background: #AB2317;
 `
 
 const InstaIcon = styled.i`
@@ -66,3 +66,5 @@ const SearchBar = (props) => {
 }
  
 export default SearchBar;
+
+//SearchBar.js

@@ -33,3 +33,6 @@ const Authenticate = App =>
 }
  
 export default Authenticate;
+  
+  //authenticate.js
+  

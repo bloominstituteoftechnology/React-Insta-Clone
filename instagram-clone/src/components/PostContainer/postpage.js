@@ -53,3 +53,5 @@ class PostPage extends Component {
 }
  
 export default PostPage;
+
+//PostPage.js

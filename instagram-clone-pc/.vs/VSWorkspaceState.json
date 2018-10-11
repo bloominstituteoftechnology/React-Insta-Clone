@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\Authentication",
+    "\\src\\components\\CommentSection",
+    "\\src\\components\\Login"
+  ],
+  "SelectedNode": "\\src\\components\\CommentSection\\CommentSection.js",
+  "PreviewInSolutionExplorer": false
+}

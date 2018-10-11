@@ -16,14 +16,19 @@ const PostContainerAttrib = styled.div`
     border-radius: 5px;
 `
 
+const PostBody = styled.div`
+    width: 85%;
+    margin: 0 auto;
+`
+
 const PostContainer = (props) => {
     return ( 
-        <div className="PostBody">
+        <PostBody>
         <PostContainerAttrib className="row">
             <Post data={props.data}/>
             <CommentSection data={props.data} />
             </PostContainerAttrib>
-        </div>
+        </PostBody>
      );
 }
 
@@ -37,3 +42,5 @@ PostContainer.propTypes = {
 };
  
 export default PostContainer;
+
+//PostContainer.js
