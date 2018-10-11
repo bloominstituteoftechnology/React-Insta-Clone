@@ -11,7 +11,6 @@ class PostsPage extends Component {
     super();
     this.state = {
       posts: [],
-      currentUser: '',
       newComment: '',
       searchText: '',
       filteredPosts: []
@@ -20,8 +19,7 @@ class PostsPage extends Component {
 
   componentDidMount() {
     setTimeout(this.setState({
-      posts: dummyData,
-      currentUser: 'BobBelcher'
+      posts: dummyData
     }), 2000);
   }
 
@@ -47,7 +45,7 @@ class PostsPage extends Component {
     const updatedComments = [...this.state.posts.map(post => {
       if (post.timestamp === timestamp) {
         const addComment = {
-          username: this.state.currentUser,
+          username: this.state.username,
           text: this.state.newComment
         }
         return { ...post, comments: [...post.comments, addComment] };

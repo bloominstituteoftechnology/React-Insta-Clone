@@ -1,20 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 import PostsPage from './components/PostsPage/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
+
 import './App.css';
 
-class App extends Component {
+
+
+class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-      currentUser: window.currentUser
-    };
+    this.state = {};
   }
-
-  componentDidMount = () => {
-    this.setState({ currentUser: window.currentUser })
-  }
-  
 
   render() {
     return <PostsPage />;
