@@ -4,7 +4,7 @@ import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 
-class PostsPage extends Component {
+export default class PostsPage extends Component {
   constructor() {
     super();
     this.state = {
@@ -31,5 +31,3 @@ class PostsPage extends Component {
     );
   }
 }
-
-export default PostsPage;

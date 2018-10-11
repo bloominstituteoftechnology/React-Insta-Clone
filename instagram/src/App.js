@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Authenticate from './components/Authentication/Authenticate';
 import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './components/Authentication/Authenticate';
 
 
 class App extends Component {
