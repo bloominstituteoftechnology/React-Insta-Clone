@@ -23,3 +23,7 @@ code {
   background: url(./assets/sprite-core.png);
   background-size: 437px 386px
 }
+
+.sprite:hover, .sprite-core:hover {
+  cursor: pointer;
+}

@@ -32,6 +32,7 @@ class App extends Component {
         <SearchBar 
           searchPost={this.changeHandler}
           value={this.state.search}
+          logout={this.props.logout}
         />
         <PostContainer posts={this.filteredPosts()}/>
       </div>

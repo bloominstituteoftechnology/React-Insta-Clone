@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
 
-const SearchBar = ({searchPost, value}) => {
+const SearchBar = ({searchPost, value, logout}) => {
     return (
         <div className="searchbar-container">
             <div className="container">
@@ -16,7 +16,10 @@ const SearchBar = ({searchPost, value}) => {
                 <div className="searchbar-icons">
                     <span className="icons-navigate sprite-core" ></span> 
                     <span className="icons-heart sprite-core" ></span> 
-                    <span className="icons-user sprite-core" ></span> 
+                    <span 
+                        className="icons-user sprite-core" 
+                        onClick={logout}
+                    ></span> 
                 </div>
             </div>
         </div>

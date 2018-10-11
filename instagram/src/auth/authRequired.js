@@ -49,13 +49,18 @@ const authRequired = App => class extends Component {
         this.setState({auth: true}, localStorage.setItem('auth', 'true'));
     }
 
+    logout = (event) => {
+        event.preventDefault();
+        this.setState({attempted: false, auth: false}, localStorage.removeItem('auth'))
+    }
+
     changeHandler = (event) => {
         event.preventDefault();
         this.setState({[event.target.name]: event.target.value});
     }
 
     render() {
-        if (this.state.auth) return <App />;
+        if (this.state.auth) return <App logout={this.logout}/>;
         return <Login 
             login={this.login} 
             username={this.state.username}
