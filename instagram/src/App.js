@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import Search from './components/SearchBar/Search';
-import Posts from './components/PostContainer/Posts';
+// import Search from './components/SearchBar/Search';
+// import Posts from './components/PostContainer/Posts';
 import data from './dummy-data'
+import PostPage from './components/PostContainer/PostPage'
 
 class App extends Component {
 
@@ -28,11 +29,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Search search={this.filteredSearchHandler} />
-        
-        <Posts data = {this.state.filter.length > 0
-        ? this.state.filter
-        : this.state.data}/>
+      <PostPage search={this.filteredSearchHandler} data={this.state} />
       </div>
     );
   }
