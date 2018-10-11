@@ -3,7 +3,7 @@
     padding: 0px 16px;
 }
 
-.comment-section time {
+.comment-section .time {
     width: 100%;
     font-size: 12px;
     letter-spacing: .2px;
@@ -124,6 +124,7 @@
     font-weight: 500;
     border: none;
     outline: none;
+    text-align: right;
 }
 
 .post-text:hover {

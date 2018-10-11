@@ -20,7 +20,7 @@ const authRequired = App => class extends Component {
 
     componentDidMount() {
         let auth = localStorage.getItem('auth');
-        console.log(auth);
+        // console.log(auth);
         if (auth === null) {localStorage.setItem('auth', 'false')};
         if (auth === 'true') {this.setState({auth: true})};
         

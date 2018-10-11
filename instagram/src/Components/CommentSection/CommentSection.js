@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import './CommentSection.css';
 import PostActions from './PostActions';
 import CommentContainer from './CommentContainer';
@@ -16,6 +17,7 @@ class CommentSection extends Component {
             commentValue: '',
             username: 'chris',
             postLiked: false,
+            showInput: false,
         }
     }
 
@@ -50,6 +52,12 @@ class CommentSection extends Component {
         });
     }
 
+    formatTime = () => {
+        // console.log(this.state.timestamp);
+        // return moment(this.state.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase();
+        return moment().calendar(this.state.timestamp, 'MMMM Do YYYY, h:mm:ss a').toUpperCase();
+    }
+
     onLikePost = (event) => {
         event.preventDefault();
         this.setState(prevState => {
@@ -59,6 +67,11 @@ class CommentSection extends Component {
                 postLiked: !prevState.postLiked
             }
         });
+    }
+
+    showInput = (event) => {
+        event.preventDefault();
+        this.setState({showInput: !this.state.showInput})
     }
 
     changeHandler = (event) => {
@@ -71,18 +84,23 @@ class CommentSection extends Component {
             <PostActions 
                 likePost={this.onLikePost}
                 postLiked={this.state.postLiked}
+                showInput={this.showInput}
             />
             <div className="likes">{this.state.likes} likes</div>
             <CommentContainer comments={this.state.comments} />
-            <time>21 minutes ago</time>
-            <form className="comment-input" onSubmit={this.addNewComment}>
+            <div className="time">{this.formatTime()}</div>
+            <form 
+                className="comment-input" 
+                onSubmit={this.addNewComment}
+                style={{display: `${this.state.showInput?'flex':'none'}`}}
+            >
                 <textarea 
                     placeholder="Add a comment..." 
                     value={this.state.commentValue}
                     onChange={this.changeHandler}
                     name="commentValue"
                 />
-                <button className="post-text">Post</button>
+                <button className="post-text" >Post</button>
             </form>
         </div>
     );

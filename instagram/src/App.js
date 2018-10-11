@@ -14,7 +14,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    setTimeout(() => this.setState({posts: dummyData}), 2000);
+    setTimeout(() => this.setState({posts: dummyData}), 1000);
   }
 
   filteredPosts = () => {
