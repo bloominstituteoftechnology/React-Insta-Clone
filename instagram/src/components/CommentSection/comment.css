@@ -38,6 +38,7 @@ span {
 
 .fontawesome {
     margin-right:10px;
+    cursor: pointer;
 }
 
 .input-holder {

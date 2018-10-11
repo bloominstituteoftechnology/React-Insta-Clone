@@ -29,7 +29,7 @@ class UserComment extends Component {
         //  console.log('check this: ', this.addComments);
         return (
             <>
-            <div className="para-div extraPadding" add={this.addComments}>
+            <div className="para-div extraPadding">
               {this.state.commentsArray.map( (note,index) => {
                   return(
                     <p key={index}><span>{note.username}{"  "}</span> {note.text}</p>

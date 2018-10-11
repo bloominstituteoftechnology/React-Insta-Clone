@@ -5,14 +5,27 @@ import UserComments from './UserComment.js';
 import PropTypes from 'prop-types';
 
 class Comment extends Component {
+    constructor(props){
+        super(props);
+        
+        this.state = {
+            likes: props.likes
+        }
+    }
+
+    addLikes = (event) => {
+       this.setState({
+           likes: this.state.likes + 1
+       })
+    }
     render() {
         console.log(this.props);
         return (
             <div className='comment'>
               <div className="comment-container">
                 <div className="extraPadding">
-                    <Likes />  
-                    <p>{this.props.likes} likes</p>
+                    <Likes addLikes = {this.addLikes} />  
+                    <p>{this.state.likes} likes</p>
                 </div>
                 <UserComments notes={this.props.comments} />
               </div>
