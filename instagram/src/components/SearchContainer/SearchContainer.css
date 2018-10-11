@@ -1,9 +1,0 @@
-.search-container{
-   display:flex;
-   justify-content: space-between;
-   padding-top:20px;
-   background-color: white;
-   position: fixed;
-   width: 100%;
-   max-width: 600px;
-}

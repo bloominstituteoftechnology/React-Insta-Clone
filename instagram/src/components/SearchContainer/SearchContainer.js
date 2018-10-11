@@ -1,16 +1,26 @@
 import React from 'react';
-import './SearchContainer.css';
 import LogoContainer from '../LogoContainer/LogoContainer';
 import SearchBar from '../SearchBar/SearchBar';
 import ActionsContainer from '../ActionsContainer/ActionsContainer';
+import Styled from 'styled-components';
+
+const WrapperDiv = Styled.div`
+    display:flex;
+    justify-content: space-between;
+    padding-top:20px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    max-width: 600px;
+`
 
 const SearchContainer = props => {
     return(
-        <div className='search-container'>
+        <WrapperDiv>
             <LogoContainer />
             <SearchBar searchText={props.searchText} handleSearchChange={props.handleSearchChange} handleSearchSubmit={props.handleSearchSubmit} />
             <ActionsContainer logout={props.logout} />
-        </div>
+        </WrapperDiv>
         
     )
 }

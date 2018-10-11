@@ -1,19 +1,38 @@
 import React from 'react';
-import './NewCommentSection.css';
 import PropTypes from 'prop-types';
+import Styled from 'styled-components';
+
+
+const WrapperDiv = Styled.div`
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;   
+    border-top:1px solid #ccc;
+    width: 95%;
+    margin:0 auto;
+    margin-bottom:18px;    
+`
+const AddNewComment = Styled.div`
+    margin-top:23px;
+    font-size:1rem;
+`
+const NewCommentTools = Styled.div`
+    font-size: 1rem;   
+`
+
 
 const NewCommentSection = props =>{
     return(
-        <div>
-            <div className='new-comment-section'>
-                <div className='new-comment-add'>
-                    <form onSubmit={props.addNewComment}>
-                        <input id={props.postId} value={props.newComment} placeholder='Add a comment...' onChange={props.handleCommentChange} />
-                    </form>
-                </div>
-                <div className='new-comment-tools'><p>...</p></div>
-            </div>
-        </div>
+
+        <WrapperDiv className='new-comment-section'>
+            <AddNewComment>
+                <form onSubmit={props.addNewComment}>
+                    <input id={props.postId} value={props.newComment} placeholder='Add a comment...' onChange={props.handleCommentChange} />
+                </form>
+            </AddNewComment>
+            <NewCommentTools className='new-comment-tools'><p>...</p></NewCommentTools>
+        </WrapperDiv>
+
     )
 }
 
