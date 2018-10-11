@@ -1,13 +1,12 @@
 import React from 'react';
-import LoginPage from './components/Login/loginPage';
-import SearchBar from './components/SearchBar/searchBar';
 
-const Authenticate = App =>
-    class extends React.Component {
-        constructor(props) {
-            super(props);
 
-        } 
+const Authenticate = PassedComponent => OtherComponent => props => {
+    if (props.username) {
+      return <PassedComponent {...props} />;
     }
+  
+    return <OtherComponent {...props} />;
+  };
 
-export default Authenticate;    
+  export default Authenticate;
