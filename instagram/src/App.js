@@ -28,6 +28,7 @@ class App extends React.Component {
    }
   render() {
     let data = this.state.data;
+    // console.log(data);
     return (
      
       <div className="App">

@@ -2,10 +2,10 @@
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    /* align-items: flex-start; */
 }
 .comment-container {
-    padding:15px 20px;
+    /* padding:15px 20px; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -44,6 +44,7 @@ span {
     width:100%;
     background:transparent;
     position: relative;
+    margin-top:15px;
 }
 .fonta {
     position: absolute;
@@ -52,4 +53,8 @@ span {
     margin:0px;
     padding:0px;
     color:gray;
+}
+
+.extraPadding {
+    padding: 13px 0px 0px 22px;
 }
