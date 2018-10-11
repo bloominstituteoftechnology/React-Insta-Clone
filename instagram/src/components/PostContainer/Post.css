@@ -19,24 +19,11 @@
   margin-bottom: 20px;
 }
 
-.post-header {
-  display: flex;
-}
-
-.thumbnail-wrapper {
-  height: 50px;
-  width: 50px;
-  margin: 5px 10px;
-}
 .post-thumbnail {
   height: 100%;
   border-radius: 50%;
 }
 
-.header-user {
-    margin: 20px 10px;
-    font-weight: bold;
-}
 
 .like-section {
     display: flex;
