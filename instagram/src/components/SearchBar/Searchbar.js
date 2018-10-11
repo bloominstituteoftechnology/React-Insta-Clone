@@ -7,9 +7,13 @@ const SearchBar = props => {
       <img className="camera" src={require("../PostContainer/img/insta_icon.png")} alt="logo" />
       <img className="instagram" src={require("../PostContainer/img/insta_logo.png")} alt="logo" />
       <div className="search-form">
-        <form>
-          <input className="search-input" type="text" placeholder="Search" onKeyDown={props.searchFilter} />
-        </form>
+        <input
+          // onChange={props.searchFilterHandler}
+          className="search-input"
+          type="text"
+          placeholder="Search"
+          onKeyDown={props.searchFilter}
+        />
       </div>
       <div className="search-bar-left-icons-container">
         <img className="search-bar-left-icons" src={require("../PostContainer/img/insta_plus.png")} alt="logo" />

@@ -7,10 +7,10 @@ class PostContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.post.comments,
+      comments: props.filteredPosts.comments,
       newComment: ""
     };
-    console.log(props.post.comments);
+    console.log(props.filteredPosts.comments);
   }
 
   changeHandler = event => {
@@ -29,26 +29,27 @@ class PostContainer extends Component {
   };
 
   render() {
+    console.log(this.props.filteredPosts.imageUrl);
     return (
       <div className="post-container">
         <div className="post-top-section">
-          <img className="thumbnail" src={this.props.post.thumbnailUrl} alt="thumbnail" />
-          <p className="username">{this.props.post.username}</p>
+          <img className="thumbnail" src={this.props.filteredPosts.thumbnailUrl} alt="thumbnail" />
+          <p className="username">{this.props.filteredPosts.username}</p>
         </div>
         <div>
-          <img className="post-img" src={this.props.post.imageUrl} alt="post" />
+          <img className="post-img" src={this.props.filteredPosts.imageUrl} alt="post" />
         </div>
         <div>
           <img className="heart-plus" src={require("./img/insta_heart.png")} alt="heart" />
           <img className="heart-plus" src={require("./img/insta_plus.png")} alt="plus" />
         </div>
-        <p className="likes">{this.props.post.likes} likes</p>
+        <p className="likes">{this.props.filteredPosts.likes} likes</p>
 
         {this.state.comments.map((comment, index) => {
           return <CommentsContainer comments={comment} key={index} />;
         })}
         <form onSubmit={this.addNewComment}>
-          <input onChange={this.changeHandler} value={this.newComment} type="text" placeholder="add new comment" />
+          <input onChange={this.changeHandler} type="text" placeholder="add new comment" />
         </form>
       </div>
     );
@@ -56,7 +57,13 @@ class PostContainer extends Component {
 }
 
 PostContainer.propTypes = {
-  comments: PropTypes.arrayOf(PropTypes.object)
+  filteredPosts: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    comments: PropTypes.array
+  })
 };
 
 export default PostContainer;
