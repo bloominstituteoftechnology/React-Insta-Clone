@@ -23,4 +23,4 @@ const App = Authenticate (
 )
 
 
-export default App;
+export default Authenticate(App);
