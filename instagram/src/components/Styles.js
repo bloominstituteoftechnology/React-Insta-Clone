@@ -59,3 +59,28 @@ export const StyledCommentSection = styled.div`
     font-weight: bold;
   }
 `;
+
+export const TimeStamp = styled.p`
+  color: #504a4a;
+  text-align: left;
+`;
+
+export const LoginForm = styled.form`
+  width: 40%;
+  margin: 0 auto;
+  border: 1px solid black;
+  background: lightslategray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+  padding: 40px 0;
+  text-align: center;
+
+  input {
+    padding: 20px;
+    width: 50%;
+    margin: 30px auto;
+    border-radius: 10px;
+  }
+`;

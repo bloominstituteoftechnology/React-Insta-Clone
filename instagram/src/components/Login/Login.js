@@ -1,22 +1,15 @@
 import styled from "styled-components";
 import React from "react";
-
-const StyledButton = styled.button`
-  padding: 6px 10px;
-  margin: 5px;
-  background-color: yellow;
-  color: white;
-  border-radius: 3px;
-`;
+import { LoginForm } from "../Styles";
 
 const Login = props => {
   return (
-    <form onSubmit={props.login}>
+    <LoginForm onSubmit={props.login}>
+      <h2>InstaClone</h2>
       <input type="text" name="username" placeholder="username" />
       <input type="text" name="password" placeholder="password" />
       <input type="submit" value="Log In" />
-      <StyledButton />
-    </form>
+    </LoginForm>
   );
 };
 

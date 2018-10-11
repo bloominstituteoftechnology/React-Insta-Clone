@@ -2,14 +2,14 @@ import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
 import heart from "../icons/heart.png";
 import chat from "../icons/chat.png";
-import { StyledPost, UserDiv, IconBar, Thumbnail, UserName } from "../Styles.js";
+import { StyledPost, UserDiv, IconBar, Thumbnail, UserName, TimeStamp } from "../Styles.js";
 
 class PostContainer extends React.Component {
   constructor(props) {
     super();
     this.state = {
       post: props.post,
-      likes: 0
+      likes: props.post.likes
     };
   }
 
@@ -44,6 +44,7 @@ class PostContainer extends React.Component {
           </IconBar>
           <p>{this.state.likes} likes</p>
           <CommentSection comments={this.state.post.comments} />
+          <TimeStamp>{this.state.post.timestamp}</TimeStamp>
         </StyledPost>
       </div>
     );
