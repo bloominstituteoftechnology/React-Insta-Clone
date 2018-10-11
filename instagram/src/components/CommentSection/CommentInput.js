@@ -1,16 +1,26 @@
 import React from 'react';
-import './Comment.css';
+import styled from 'styled-components';
+
+
+const AddCommentForm = styled.form`
+    display: flex;  
+    align-items: left;
+    margin-left: 8px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    `;
+    
 
 const CommentInput = props => {
     return (
-        <form onSubmit={props.submitComment} className="add-comment">
+        <AddCommentForm onSubmit={props.submitComment}>
         <input
           type="text"
           value={props.comment}
           placeholder="Add comment... "
           onChange={props.changeComment}
         />
-      </form>
+      </AddCommentForm>
     );
 }
 
