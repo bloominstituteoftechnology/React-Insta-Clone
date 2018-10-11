@@ -7,7 +7,8 @@ class CommentSection extends React.Component {
     this.state = {
       comments: [],
       newComment: "",
-      user: "dummyuser",
+      // user: localStorage.getItem("user"),
+      user: "user",
       isLiked: false,
       heart: "far fa-heart"
     };

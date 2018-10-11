@@ -7,14 +7,17 @@ const authenticate = App => {
     constructor(props) {
       super(props);
       this.state = {
+        username: "",
         isLoggedIn: false
       };
     }
 
     loginButton = e => {
       e.preventDefault();
+      const username = localStorage.getItem("user");
       this.setState({
-        isLoggedIn: true
+        isLoggedIn: true,
+        username: username
       });
     };
 
