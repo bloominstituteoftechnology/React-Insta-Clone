@@ -77,14 +77,14 @@ class PostContainer extends React.Component {
             
             </div>
 
-            <commentContainer>
+            <CommentContainer>
                 <AddComment 
                     id={this.props.timestamp}
                     inputHandler={this.inputHandler}
                     submitHandler={this.submitHandler}
                     commentInputValue={this.state.commentInputValue}
                 />
-            </commentContainer>
+            </CommentContainer>
             
         </PostContainerParent>
         )
@@ -139,7 +139,7 @@ const Likes = styled.div`
     margin-left: 10px;  
 `
 
-const commentContainer = styled.div`
+const CommentContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 584px;
