@@ -12,6 +12,7 @@ const SearchBar = (props) => {
           value={props.text}
         />
       </form>
+      <button onClick={props.logout}>Logout</button>
     </div>
   );
 };

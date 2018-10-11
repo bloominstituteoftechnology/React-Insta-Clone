@@ -38,6 +38,12 @@ export class PostsPage extends Component {
       }),
     });
   };
+
+  logout = () => {
+    localStorage.removeItem('username');
+    window.location.reload();
+  };
+
   render() {
     const posts =
       this.state.filteredPosts.length === 0
