@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import loginLogo from './login-logo.png'
 
 class Login extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             usernameInput: '',
             loggedIn: false

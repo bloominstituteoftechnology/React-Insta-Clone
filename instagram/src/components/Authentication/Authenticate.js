@@ -3,10 +3,10 @@ import App from '../../App.js';
 import Login from '../Login/Login.js'
 import PostsPage from '../PostContainer/PostsPage.js'
 
-// const Authenticate = (App, Login) => { 
-    class Authenticate extends React.Component {
-        constructor() {
-            super();
+const Authenticate = App =>  
+    class extends React.Component {
+        constructor(props) {
+            super(props);
             this.state = {
                 loggedIn: false
             }
@@ -35,6 +35,5 @@ import PostsPage from '../PostContainer/PostsPage.js'
             }
         }
     }
-// }
 
 export default Authenticate;
