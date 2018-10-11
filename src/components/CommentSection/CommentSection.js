@@ -15,7 +15,8 @@ class CommentSection extends React.Component {
     this.state = {
       comments: [...this.props.comments],
       inputText: "",
-      likes: this.props.likes
+      likes: this.props.likes,
+      liked: false
     };
   }
 
@@ -39,6 +40,23 @@ class CommentSection extends React.Component {
     console.log(this.state.comments);
   }
 
+  likePost() {
+    if (this.state.liked) {
+      this.setState({
+        comments: [...this.props.comments],
+        inputText: "",
+        likes: this.state.likes - 1,
+        liked: false
+      });
+    } else {
+      this.setState({
+        comments: [...this.props.comments],
+        inputText: "",
+        likes: this.state.likes + 1,
+        liked: true
+      });
+    }
+  }
   render() {
     return (
       <div className="commentSection">
@@ -47,11 +65,7 @@ class CommentSection extends React.Component {
             <button
               onClick={() => {
                 console.log(this.state);
-                this.setState({
-                  comments: [...this.props.comments],
-                  inputText: "",
-                  likes: this.state.likes + 1
-                })
+                this.likePost();
               }}
               className="likeButton"
             >
