@@ -1,30 +1,8 @@
 import React from 'react';
-import './search.css';
+// import './search.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Instagram from './instagram.svg';
 import styled from 'styled-components';
-
-const SearchBar = (props) => {
-    return (
-        <Search>
-            <Logo>
-                <img src={ Instagram } alt="instagram logo"></img>
-                <p>|</p>
-                <h1>Instagram</h1>
-            </Logo>
-            <SearchBox>
-                <input placeholder="🔍 Search" onChange={props.search}></input>
-            </SearchBox>
-            <Icons>
-                <FontAwesomeIcon icon="compass" />
-                <FontAwesomeIcon icon="heart" />
-                <FontAwesomeIcon icon="user" />
-            </Icons>
-        </Search>
-    )
-}
-
-export default SearchBar;
 
 const Search = styled.div`
     display: flex;
@@ -70,3 +48,25 @@ const Icons = styled.div`
     justify-content: space-evenly;
     width: 15%;
 `;
+
+const SearchBar = (props) => {
+    return (
+        <Search>
+            <Logo>
+                <img src={ Instagram } alt="instagram logo"></img>
+                <p>|</p>
+                <h1>Instagram</h1>
+            </Logo>
+            <SearchBox>
+                <input placeholder="🔍 Search" onChange={props.search}></input>
+            </SearchBox>
+            <Icons>
+                <FontAwesomeIcon icon="compass" />
+                <FontAwesomeIcon icon="heart" />
+                <FontAwesomeIcon icon="user" />
+            </Icons>
+        </Search>
+    )
+}
+
+export default SearchBar;
