@@ -19,7 +19,7 @@ class App extends Component {
   constructor(){
   super();
       this.state = {
-      dummyData: [],
+      dummyData: dummyData,
         newComment: ''
     }
 
@@ -40,6 +40,15 @@ class App extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  // searchPostsHandler = e => {
+  //   const posts = this.state.dummyData.filter(p => {
+  //     if (p.username.includes(e.target.value)) {
+  //       return p;
+  //     }
+  //   });
+  //   this.setState({ filteredPosts: posts });
+  // };
+
   // targetHandler = id => {
   //   console.log(id);
   // }
@@ -56,7 +65,9 @@ class App extends Component {
     return (
       <div className="App">
       <h1>Am I Rendered?</h1>
-      <SearchBar />
+      <SearchBar
+      usernameInfo = {this.state.dummyData}
+      />
       <PostContainer
       postInfo = {this.state.dummyData}
       addNewComment = {this.addNewComment}

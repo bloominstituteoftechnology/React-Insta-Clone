@@ -18,6 +18,11 @@ class CommentSection extends React.Component {
         this.setState({ [event.target.name]: event.target.value });
       };
     
+    //   incrementLike = () => {
+    //     let likes = this.state.likes + 1;
+    //     this.setState({ likes });
+
+    
 
     addNewComment = (event, id) => {
     event.preventDefault();
@@ -26,7 +31,7 @@ class CommentSection extends React.Component {
     this.setState({
       comments: [
         ...this.state.comments,
-        { username: "Troy", text: this.state.newComment},
+        { username: "LeeTroy", text: this.state.newComment},
 
       ],
       
