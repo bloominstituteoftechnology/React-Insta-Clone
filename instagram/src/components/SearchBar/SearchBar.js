@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 // styled search bar components
 
-const SearchBarContainer = styled.div`
+const Header = styled.div`
     display: flex;
     margin: 0 auto;
     padding: 20px 2%;
@@ -29,8 +29,13 @@ const RightCorner = styled(Corner)`
     align-items: center;
 `
 
-const SearchBarLogo = styled.img`
+const LogoImage = styled.div`
+    display: inline-block;
+    background-repeat: no-repeat;
     height: 35px;
+    width: 109px;
+    background-image: url(${logo});
+    background-size: 109px 35px;
 `
 
 const VerticalLine = styled.div`
@@ -56,15 +61,12 @@ class SearchBar extends React.Component {
     render () {
         return (
             // upper left corner with instagram logos
-            <SearchBarContainer>
+            <Header>
                 <Corner>
                     <i className='fab fa-instagram fa-2x'></i>
                     <VerticalLine/>
                     <a href='#'>
-                        <SearchBarLogo 
-                            src={logo} 
-                            alt='Instagram logo' 
-                        /> 
+                        <LogoImage/> 
                     </a>
                 </Corner>
                 {/* search bar */}
@@ -82,7 +84,7 @@ class SearchBar extends React.Component {
                     <i className="far fa-heart fa-2x"></i>
                     <i className="far fa-user fa-2x"></i>
                 </RightCorner>
-            </SearchBarContainer>
+            </Header>
         )
     }
 }
