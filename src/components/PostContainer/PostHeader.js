@@ -1,10 +1,12 @@
 import React from 'react';
+import Strong from '../Styles/Strong';
+
 
 const PostHeader = (props) => {
     return (
         <>
             <img src={props.thumbnail} alt="user thumbnail" />
-            <strong className="username">{props.username}</strong>
+            <Strong type='header'>{props.username}</Strong>
         </>
     )
 }

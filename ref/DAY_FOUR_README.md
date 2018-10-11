@@ -19,7 +19,7 @@
 
   [x] We recommend working left to right so begin changing out your styles on the instagram logo.
   [x] Create a `LogoHeader` styled-component.div
-  [x] Create a `LogoImage` styled-component.img that fills in the background of your
+  [x] Create a `LogoImage` styled-component.img that fills in the background of your logo.
 
 [x] Re-factor your `PostContainer` component use only styled components
 

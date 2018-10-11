@@ -15,6 +15,7 @@ class App extends Component {
 
     this.state = {
       posts: [],
+      input: '',
     }
   }
 
@@ -22,16 +23,12 @@ class App extends Component {
       this.setState({ posts: dummyData });
   }
 
-  searchTerm = (event) => {
-    const query = event.target.value;
-    const posts = [];
-
-    this.state.posts.filter(post => {
-      return post.username.includes(query) ? posts.push(post) : null;
+  searchHandler = (str) => {
+    const filtered = dummyData.filter(post => {
+      return post.username.includes(str);
     })
 
-    // If blank...
-    query === '' ? this.setState({ posts : dummyData }) : this.setState({ posts : posts });
+    this.setState({ posts : filtered })
   }
 
   render() {
@@ -39,7 +36,7 @@ class App extends Component {
       return (
         <>
           {/* FIXME: search is no longer working as expected. */}
-          <PostsPage {...this.state} search={this.searchTerm} />
+          <PostsPage {...this.state} search={this.searchHandler}/>
         </>
       )
     }

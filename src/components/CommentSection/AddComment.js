@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import './comment.css';
 
-const Form = styled.div`
+const Form = styled.form`
     display: flex;
     justify-content: space-between;
     align-items: center;

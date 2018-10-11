@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 // import './search.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Instagram from './instagram.svg';
@@ -49,24 +49,43 @@ const Icons = styled.div`
     width: 15%;
 `;
 
-const SearchBar = (props) => {
-    return (
-        <Search>
-            <Logo>
-                <img src={ Instagram } alt="instagram logo"></img>
-                <p>|</p>
-                <h1>Instagram</h1>
-            </Logo>
-            <SearchBox>
-                <input placeholder="🔍 Search" onChange={props.search}></input>
-            </SearchBox>
-            <Icons>
-                <FontAwesomeIcon icon="compass" />
-                <FontAwesomeIcon icon="heart" />
-                <FontAwesomeIcon icon="user" />
-            </Icons>
-        </Search>
-    )
+class SearchBar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            input: '',
+        }
+    }
+
+    searchInputHandler = (event) => {
+        const value = event.target.value;
+
+        this.setState({
+          input: value
+        })
+
+        this.props.search(value);
+      }
+
+    render() {
+        return (
+            <Search>
+                <Logo>
+                    <img src={ Instagram } alt="instagram logo"></img>
+                    <p>|</p>
+                    <h1>Instagram</h1>
+                </Logo>
+                <SearchBox>
+                    <input placeholder="🔍 Search" onChange={this.searchInputHandler} value={this.state.input}></input>
+                </SearchBox>
+                <Icons>
+                    <FontAwesomeIcon icon="compass" />
+                    <FontAwesomeIcon icon="heart" />
+                    <FontAwesomeIcon icon="user" />
+                </Icons>
+            </Search>
+        )
+    }
 }
 
 export default SearchBar;
