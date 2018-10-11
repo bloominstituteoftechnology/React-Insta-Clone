@@ -2,6 +2,8 @@ import React from 'react';
 import Heart from '../../img/heart.png';
 import Bubble from '../../img/message-circle.png';
 
+import '../CommentSection/CommentSection.css'
+
 const Likes = props => {
     return (
         <div className="post-likes">

@@ -1,11 +1,31 @@
 import React from 'react';
 import More from '../../img/more-horizontal.png';
+import styled from 'styled-components';
+
+
+const AddCommentDiv = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
+const Form = styled.form`
+    width: 100%;
+`;
+
+const Input = styled.input`
+    width: 100%;
+    border: none;
+    color: darkgrey;
+    font-size: 1.6rem;
+    outline: none;
+    position: relative;
+`;
 
 const AddComment = props => {
     return (
-        <div className="add-comment">
-            <form className="add-comment-form" onSubmit={props.addNewComment}>
-                <input
+        <AddCommentDiv>
+            <Form className="add-comment-form" onSubmit={props.addNewComment}>
+                <Input
                     type="text"
                     placeholder="Add a comment..."
                     className="add-comment-input"
@@ -13,9 +33,9 @@ const AddComment = props => {
                     name={props.id}
                     value={props.newComment}
                     />
-            </form>
+            </Form>
             <img src={More} alt="more options" />
-        </div>
+        </AddCommentDiv>
     );
 }
 

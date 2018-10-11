@@ -4,8 +4,13 @@ import Likes from './Likes';
 import Timestamp from './Timestamp';
 import AddComment from './AddComment';
 import Comments from './Comments';
+import styled from 'styled-components';
 
-import '../CommentSection/CommentSection.css';
+const CommentSectionDiv = styled.div`
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+`;
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -57,7 +62,7 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <div className="comment-section">
+            <CommentSectionDiv>
                 <Likes likes={this.state.likes} likeClicked={this.likeClicked} />
                 <Comments comments={this.state.comments} />
                 <Timestamp timestamp={this.state.timestamp} />
@@ -67,7 +72,7 @@ class CommentSection extends React.Component {
                     comments={this.state.comments}
                     newComment={this.state.newComment}
                 />
-            </div>
+            </CommentSectionDiv>
         );
     }
 }
