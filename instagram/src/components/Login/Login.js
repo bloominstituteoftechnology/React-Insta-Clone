@@ -44,13 +44,14 @@ class Login extends React.Component {
       <div className="login">
         <div className="login-card box">
           <img src={igTextLogo} alt="logo" />
-          <form>
+          <form onSubmit={() => this.props.clicked(this.state.username)}>
             <input
               type="text"
               name="username"
               placeholder="User Name"
               value={this.state.username}
               onChange={this.changeHandler}
+              required
             />
             <input
               type="password"
@@ -58,11 +59,13 @@ class Login extends React.Component {
               placeholder="Password"
               value={this.state.password}
               onChange={this.changeHandler}
+              required
             />{" "}
             <br />
-            <button onClick={() => this.props.clicked(this.state.username)}>
+            {/* <button onClick={() => this.props.clicked(this.state.username)}>
               Log in
-            </button>
+            </button> */}
+            <button type="submit">Log in</button>
             {/* <button onClick={this.loginHandler}>Log in</button> */}
           </form>
 
