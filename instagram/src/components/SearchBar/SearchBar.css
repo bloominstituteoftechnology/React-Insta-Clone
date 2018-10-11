@@ -1,16 +1,43 @@
-.searchBarContainer {
-  border: 10px solid black;
+.searchBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
   height: 100px;
   padding: 0 50px;
+  border-bottom: 1px solid darkgray;
+  margin-bottom: 20px;
 }
 
-.searchBarContainer .searchBar {
-  width: 400px;
+.searchBar__logo--icon {
   height: 40px;
+  width: 40px;
+  padding-right: 25px;
+  border-right: 1px solid black;
+}
+
+.searchBar__logo--words {
+  margin-left: 25px;
+  height: 40px;
+  width: 130px;
+}
+
+.searchBar__search--input {
+  width: 400px;
+  height: 30px;
   background: #FAFAFA;
+  border: 1px solid darkgray;
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
+}
+
+
+.searchBar__icons--icon {
+  height: 32px;
+  width: 32px;
+  margin-right: 40px;
+}
+
+.searchBar__hr--bottom {
+  height: 1px;
 }
