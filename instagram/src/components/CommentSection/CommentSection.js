@@ -5,6 +5,18 @@ import CommentInput from './CommentInput';
 import moment from 'moment';
 import styled from 'styled-components';
 
+const CommentSectionDiv = styled.div`
+  padding: 1.5rem;
+`;
+
+const TimeStamp = styled.div`
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 1.5rem;
+  color: #8e8e8e;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+`;
+
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
@@ -44,28 +56,17 @@ class CommentSection extends React.Component {
     });
     localStorage.setItem(index, JSON.stringify(comments));
     // Need to figure out why state isn't updating this
-    e.target.firstChild.value = '';
+    // e.target.firstChild.value = '';
   };
 
   updateText = e => {
+    console.log(e.target);
     this.setState({ commentText: e.target.value });
   };
 
   render() {
-    const CommentSection = styled.div`
-      padding: 1.5rem;
-    `;
-
-    const TimeStamp = styled.div`
-      border-bottom: 1px solid #ededed;
-      padding-bottom: 1.5rem;
-      color: #8e8e8e;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-    `;
-
     return (
-      <CommentSection>
+      <CommentSectionDiv>
         {this.state.comments.map((comment, i) => {
           return <Comment comment={comment} key={i} />;
         })}
@@ -76,11 +77,11 @@ class CommentSection extends React.Component {
         </TimeStamp>
         <CommentInput
           addNewComment={this.addNewComment}
-          commentText={this.commentText}
+          commentText={this.state.commentText}
           updateText={this.updateText}
           id={this.state.id}
         />
-      </CommentSection>
+      </CommentSectionDiv>
     );
   }
 }
