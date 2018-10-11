@@ -1,7 +1,6 @@
 import React from 'react';
 import Login from '../Login/Login';
-
-
+import { Center } from '../Login/LoginForm'
 
 const Authenticate = App => class extends React.Component {
   constructor(props) {
@@ -23,7 +22,9 @@ const Authenticate = App => class extends React.Component {
       return <App />;
     } else {
       return (
-        <Login handleLogin={this.handleLogin}/>
+        <Center>
+          <Login handleLogin={this.handleLogin}/>
+        </Center>
       )
     }
   }

@@ -1,25 +1,21 @@
-import React from 'react';
 import styled from 'styled-components'
 
-class LoginFormClass extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {  }
-  }
-  render() { 
-    return (
-      <div className={this.props.className}>
-        <form>
-          <label>Username:</label>
-          <input value={this.state.username} placeholder="username"></input>
-          <label>Password:</label>
-          <input value={this.state.password} placeholder="password"></input>
-        </form>
-      </div>
-    );
-  }
-}
- 
-const LoginForm = styled(LoginFormClass)``;
+export const Center = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: ${window.innerHeight}px;
+`;
 
-export default LoginForm;
+export const InputForm = styled.input`
+  color: black;
+  background-color: white;
+`;
+
+export const LoginLabel = styled.label`
+  padding: 10px;
+`;
+
+export const SubmitButton = styled.button`
+  padding: 10px;
+`

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import LoginForm from './LoginForm'
+import { InputForm, LoginLabel, SubmitButton } from './LoginForm'
 
 class Login extends React.Component {
   constructor(props) {
@@ -10,10 +10,25 @@ class Login extends React.Component {
       password: ''
     }
   }
+  handleLoginInput = (e) => {
+    this.setState({
+      username: e.target.value
+    })
+  }
+  handlePasswordInput = (e) => {
+    this.setState({
+      username: e.target.value
+    })
+  }
+
   render() {
     return (
-      <div className={this.props.className} onClick={this.props.handleLogin}>
-        <LoginForm />
+      <div className={this.props.className} >
+        <LoginLabel>Username</LoginLabel>
+        <InputForm onChange={this.handleLoginInput} />
+        <LoginLabel>Password</LoginLabel>
+        <InputForm onChange={this.handlePasswordInput} />
+        <SubmitButton onClick={this.props.handleLogin}>Submit</SubmitButton>
       </div>
     );
   }
@@ -21,10 +36,10 @@ class Login extends React.Component {
 
 const StyledLogin = styled(Login)`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background: green;
-
+  background: grey;
+  width: 80%;
 `
 
 export default StyledLogin;
