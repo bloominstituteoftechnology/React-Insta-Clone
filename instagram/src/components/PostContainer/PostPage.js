@@ -12,10 +12,12 @@ class PostPage extends Component {
     };
   }
 
+  // Bring in data from API
   componentDidMount() {
     this.setState({ data: data });
   }
 
+  // Filter users by full username
   filterUsers = e => {
     e.preventDefault();
     const filteredUsers = this.state.data.filter(
@@ -24,11 +26,14 @@ class PostPage extends Component {
     this.setState({ data: filteredUsers });
   };
 
+  // Updates Search Input Value
   updateValue = e => {
     this.setState({ value: e.target.value });
   };
 
+  // Toggle Liking a Post
   likePost = (e, index) => {
+    // If heart is empty
     if (e.target.classList.contains('far')) {
       e.target.classList.add('fas');
       e.target.classList.remove('far');
@@ -45,6 +50,8 @@ class PostPage extends Component {
       });
 
       this.setState({ data: updateLike });
+
+      // else if heart is full
     } else if (e.target.classList.contains('fas')) {
       e.target.classList.remove('fas');
       e.target.classList.add('far');
@@ -59,6 +66,7 @@ class PostPage extends Component {
           return post;
         }
       });
+
       this.setState({ data: updateLike });
     }
   };

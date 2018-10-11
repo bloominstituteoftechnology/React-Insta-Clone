@@ -4,6 +4,7 @@ import CommentSection from '../CommentSection/CommentSection';
 import styled from 'styled-components';
 import Username from '../../Styles/Username';
 
+// Styled Components
 const PostWrapper = styled.div`
   max-width: 604px;
   width: 100%;

@@ -41,19 +41,19 @@ class CommentSection extends React.Component {
   addNewComment = (e, index) => {
     e.preventDefault();
 
+    // Create new comment
     const comment = {
       username: this.state.username,
       text: this.state.commentText
     };
 
+    // Copy the comments array from state and add the new comment to end
     const comments = [...this.state.comments, comment];
 
-    this.setState(() => {
-      return {
-        comments: comments,
-        commentText: ''
-      };
-    });
+    // Update state with new comments
+    this.setState({ comments: comments, commentText: '' });
+
+    // Persist data to database (localStorage)
     localStorage.setItem(index, JSON.stringify(comments));
   };
 
