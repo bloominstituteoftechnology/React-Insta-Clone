@@ -1,7 +1,8 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
-
+import styled from 'styled-components';
+import {WrapperDiv, Header, HeaderImg, HeaderH3, PostImg } from "./Styles";
 
 class Post extends React.Component {
     constructor(props) {
@@ -24,14 +25,14 @@ console.log("increase");
     render(){
     return(
     
-        <div className='post'>
+        <WrapperDiv>
     
-            <div className='header'>
-                 <img src={this.state.post.thumbnailUrl} alt="User thumbNail"></img>
-                <h3>{this.state.post.username}</h3>
-            </div>
+            <Header>
+                 <HeaderImg src={this.state.post.thumbnailUrl} alt="User thumbNail" />
+                <HeaderH3>{this.state.post.username}</HeaderH3>
+            </Header>
           
-            <img src={this.state.post.imageUrl} alt="Posting Image" onClick={this.increaseLikes}></img>
+            <PostImg src={this.state.post.imageUrl} alt="Posting Image" onClick={this.increaseLikes} />
           
             <div className='emoji'>
                 <i  className="far fa-heart" onClick={this.increaseLikes}></i>
@@ -43,7 +44,7 @@ console.log("increase");
             <CommentSection  comments={this.state.post.comments}/>
                   
             
-        </div>
+        </WrapperDiv>
 
     );
     }
