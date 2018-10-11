@@ -2,6 +2,8 @@
   max-width: 40%;
   margin: 0 auto;
   border: 1px solid black;
+  background-color: lightslategray;
+  margin-bottom: 50px;
 }
 
 .Post>img {
@@ -16,4 +18,23 @@
 
 .icon-bar img {
   padding: 10px;
+}
+
+.userDiv {
+  text-align: left;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.thumbnail {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.userName {
+  display: inline;
 }

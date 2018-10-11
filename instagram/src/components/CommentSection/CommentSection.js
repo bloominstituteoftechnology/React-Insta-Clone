@@ -13,6 +13,33 @@ class CommentSection extends React.Component {
     };
   }
 
+  // pass saveLocalStorage down as a prop
+  // when a comment is added, call it
+
+  // saveStatetoLocalStorage() {
+  //   for (let key in this.state) {
+  //     console.log(key);
+  //     localStorage.setItem(key, JSON.stringify(this.state[key]));
+  //   }
+  // }
+
+  // hydrateStateWithLocalStorage() {
+  //   for (let key in this.state) {
+  //     console.log(key);
+  //     if (localStorage.hasOwnProperty(key)) {
+  //       let value = localStorage.getItem(key);
+  //       console.log(value);
+
+  //     try {
+  //       value = JSON.parse(value);
+  //       this.setState({ [key]: value });
+  //     } catch (e) {
+  //       this.setState({ [key]: value });
+  //     }
+  //   }
+  // }
+  // }
+
   increaseLikes = e => {
     this.setState((prevState) => {
       return {likes: prevState.likes + 1}
@@ -30,6 +57,24 @@ class CommentSection extends React.Component {
       text: this.state.newComment}],
     newComment: '', });
   };
+
+  // componentDidMount() {
+  //   window.addEventListener(
+  //     "beforeunload",
+  //     this.saveStatetoLocalStorage.bind(this)
+  //   );
+  //     this.hydrateStateWithLocalStorage();
+  // }
+
+  // componentWillUnmount() {
+  //   window.removeEventListener(
+  //     "beforeunload",
+  //     this.saveStatetoLocalStorage.bind(this)
+  //   );
+  //   this.saveStatetoLocalStorage();
+  // }
+
+
 
   render() {
     return (

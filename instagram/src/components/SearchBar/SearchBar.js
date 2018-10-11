@@ -12,7 +12,7 @@ const SearchBar = props => {
       <img src={camera} alt=""/>
       <img id="instagram" src={instagram} alt=""/>
       <input 
-      class="searchbar"
+      className="searchbar"
       type="text" 
       value={props.searchText} 
       onChange={props.updateSearchText} 
