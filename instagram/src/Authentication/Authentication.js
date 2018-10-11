@@ -1,27 +1,29 @@
 import React, { Component } from 'react'
+import Login from '../Components/LoginPage/LoginPage'
 
-const Authentication = App => {
+const Authentication = App => 
     class extends Component {
         constructor(props) {
             super(props)
             this.state = {
-                login: false
+                login: false,
+                username: ''
             }
         }
 
         componentDidMount() {
-            !localStorage.getItem('user')
-                ? this.setState({ login: false })
-                : this.setState({ login: true })
+            localStorage.setItem('username', 'ynafey')
+            localStorage.setItem('password', 'kevinbrack')
         }
+
         render() {
             if (this.state.login) {
                 return <App />
             } else {
-                return <LoginPage />
+                return <Login />
             }
         }
     }
-}
+
 
 export default Authentication

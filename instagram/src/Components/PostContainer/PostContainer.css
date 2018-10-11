@@ -1,7 +1,6 @@
 .post-container {
     width: 300px;
     margin: 0 auto;
-    border: 1px solid red;
   }
   
   .post .user {
@@ -25,20 +24,24 @@
   .post div img {
     width: 300px;
   }
+
+  .post-actions {
+    margin: 0 10px;
+  }
   
-  .post .post-actions {
+  .post-actions .top {
     display: flex;
     justify-content: space-between;
   }
   
-  .post .post-actions .left-actions {
+  .post-actions .top .left-actions {
     width: 40px;
     /* border: 1px solid blue; */
     display: flex;
     justify-content: space-between;  
   }
   
-  .post .likes {
+  .post-actions .bottom .likes {
     display: flex;
     justify-content: flex-start;
     font-size: 10px;

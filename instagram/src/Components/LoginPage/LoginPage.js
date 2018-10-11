@@ -10,7 +10,15 @@ class Login extends Component {
         }
     }
 
-    changeHandler = 
+    changeHandler = event => {
+        this.setState({ [event.target.name]: event.target.value })
+    }
+
+    loginHandler = event => {
+        const user = this.state.username
+        localStorage.setItem('user', user)
+        window.location.reload()
+    }
 
     render() {
         return(
