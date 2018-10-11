@@ -1,21 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Instagramtext, Searchdiv, RightIcons } from "./Styles"
+import { Instagramtext, Searchdiv, RightIcons, SearchInput, SearchLeft } from "./Styles"
 
 const SearchBar = props => {
 
     return (
         <Searchdiv>
-            <div className="search-left">
+            <SearchLeft>
         <i className="fab fa-instagram fa-2x"></i>
         <p className="line">|</p>
            <Instagramtext>Instagram</Instagramtext>
-            </div>
-        <input placeholder="Search" type="text"
-         className="search-input"
-          value={props.filterTarget}
-          onChange={props.changeHandler}
-           name="filterTarget"/>
+           </SearchLeft>
+            <SearchInput placeholder="Search" type="text" value={props.filterTarget} onChange={props.changeHandler} name="filterTarget"></SearchInput>
         <RightIcons>
         <i className="far fa-compass fa-2x"></i>
         <i className="far fa-heart fa-2x"></i>

@@ -28,20 +28,6 @@
 
 }
 
-.icons-small {
-  width: 13%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.input-box {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-}
-
 .inputs {
   
   width: 100%;
@@ -52,26 +38,6 @@
 input {
   border: none;
   font-size: 16px;
-}
-
-.search-input {
-  width: 23%;
-  height: 20px;
-  padding: 10px;
-  text-align: center;
-  border: 1px solid lightgray;
- margin-top: 25px;
- background: whitesmoke;
- font-size: 14px;
-}
-
-
-
-.search-left {
-  display: flex;
-  width: 20%;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .line {

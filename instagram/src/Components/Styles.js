@@ -68,6 +68,45 @@ let Instagramtext = styled.p`
     display: flex;
     width: 90%;
     `
+    const SearchInput = styled.input`
+    width: 23%;
+    height: 20px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid lightgray;
+   margin-top: 25px;
+   background: whitesmoke;
+   font-size: 14px;
+    `
+    const SearchLeft = styled.div`
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+    `
+    const InputBox = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    `
+    const Inputs = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    `
+    const MyIcons = styled.div`
+    width: 80%;
+    margin: 10px 85px;
+    display: flex;
+    `
+    const IconsSmall = styled.div`
+    width: 13%;
+    display: flex;
+    justify-content: space-between;
+    `
 
     export {
         Instagramtext,
@@ -79,5 +118,11 @@ let Instagramtext = styled.p`
         Images,
         Thumbnail,
         Username,
-        Top
+        Top,
+        SearchInput,
+        SearchLeft,
+        InputBox,
+        Inputs,
+        MyIcons,
+        IconsSmall
     }
