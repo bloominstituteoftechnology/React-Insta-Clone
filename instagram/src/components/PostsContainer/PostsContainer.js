@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Post from './Post';
-import './Posts.css';
+import { Container, Card } from './PostsStyles';
 
 const PostsContainer = props => {
   return (
-    <div className="Post-container">
+    <Container>
       {props.posts.map(post =>
-        <div key={post.timestamp} className="Post-card">
+        <Card key={post.timestamp}>
           <Post post={post} />
-        </div>
+        </Card>
       )}
-    </div>
+    </Container>
   )
 };
 

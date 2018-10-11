@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../img/instagram.png';
-import * as styl from './Styles';
+import * as styl from './SearchBarStyles';
 import './SearchBar.css';
 
 const SearchBar = props => {
@@ -17,7 +17,7 @@ const SearchBar = props => {
 
         <styl.Menu>
           <i className="far fa-compass fa-lg"></i>
-          <i className="far fa-heart fa-lg"></i>
+          <i className="far fa-heart fa-lg header-heart"></i>
           <i className="far fa-user fa-lg"></i>
         </styl.Menu>
       </styl.Container>

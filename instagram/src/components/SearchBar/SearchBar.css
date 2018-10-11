@@ -3,7 +3,7 @@
 }
 
 .fa-compass,
-.fa-heart,
+.header-heart,
 .fa-user {
   filter: invert(40%);
 }

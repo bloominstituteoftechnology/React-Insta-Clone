@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const customLayout = (justify, align) => (
+export const customLayout = (justify, align) => (
   `display: flex;
   justify-content: ${justify};
   align-items: ${align};

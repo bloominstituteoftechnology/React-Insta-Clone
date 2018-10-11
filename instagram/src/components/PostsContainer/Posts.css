@@ -1,47 +1,4 @@
-.Post-container {
-  max-width: 650px;
-  width: 100%;
-  margin: 125px auto;
-}
-
-.Post-container .Post-card {
-  margin-top: 50px;
-  border: 1px solid #eaeaea;
-  border-radius: 3px;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-}
-
-.Post .Post-header {
-  width: 40%;
-  padding: 15px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.Post .Post-header img {
-  border-radius: 50%;
-  width: 15%;
-}
-
-.Post .Post-header h2 {
-  margin-left: 5%;
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-.Post-body img {
-  width: 100%;
-  height: auto;
-}
-
-.Post-body .Post-action {
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
-}
-
-.Post-body .Post-action .icon {
+.icon {
   margin-top: 10px;
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
@@ -52,27 +9,6 @@
   cursor: pointer;
 }
 
-.Post-body .Post-action .btn {
-  margin-right: 3%;
-}
-
-.Post-body .Post-action .liked {
+.liked {
   color: #f05a7d;
-}
-
-.Post-body .likes {
-  width: 95%;
-  margin: 10px auto;
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-@media (max-width: 500px) {
-  .Post-container {
-    margin-top: 110px;
-  }
-
-  .Post-container .Post-card {
-    border-radius: 0;
-  }
 }
