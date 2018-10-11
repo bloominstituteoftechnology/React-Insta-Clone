@@ -41,7 +41,20 @@
     font-size: 1.4rem;
 }
 
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
 .end-btn {
     cursor: pointer;
     margin: 0 12px;
+}
+
+.logout-btn {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 1.4rem;
+    cursor: pointer;
 }

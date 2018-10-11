@@ -3,16 +3,17 @@ import App from '../../App';
 import Login from '../Login/Login';
 import { EventEmitter } from '../../events.js';
 
-const Authenticate = App =>
+const authenticate = App =>
   class extends Component {
     constructor() {
         super()
         this.state = {
-            loggedIn: false,
+            loggedIn: localStorage.getItem('loggedIn') ? true : false,
             username: '',
             password: ''
         }
         EventEmitter.subscribe('login', () => this.login())
+        EventEmitter.subscribe('logout', () => this.logout())
         EventEmitter.subscribe('usernameChange', (event) => this.usernameChange(event))
         EventEmitter.subscribe('passwordChange', (event) => this.passwordChange(event))
     }
@@ -35,10 +36,20 @@ const Authenticate = App =>
                 loggedIn: true
             })
             localStorage.setItem('username', this.state.username);
+            localStorage.setItem('loggedIn', true)
         } else {
             alert('Please enter a username and password')
         }
-       
+    }
+
+    logout = () => {
+        this.setState({
+            loggedIn: false,
+            username: '',
+            password: ''
+        })
+        localStorage.removeItem('username');
+        localStorage.setItem('loggedIn', false)
     }
 
     renderContent = () => {
@@ -54,4 +65,4 @@ const Authenticate = App =>
     }
 };
 
-export default Authenticate;
+export default authenticate;

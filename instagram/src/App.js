@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostsPage from './components/PostsPage/PostsPage';
-import Authenticate from './components/Authentication/Authenticate';
+import authenticate from './components/Authentication/Authenticate';
 import { EventEmitter } from './events.js';
 
 class App extends Component {
@@ -78,4 +78,4 @@ class App extends Component {
   }
 }
 
-export default Authenticate(App);
+export default authenticate(App);

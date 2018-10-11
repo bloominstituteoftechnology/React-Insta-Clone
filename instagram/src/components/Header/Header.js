@@ -22,6 +22,7 @@ const Header = ({searchInput}) => (
         </div>
         <div className='header-right'>
             <EndButtons />
+            <div className='logout-btn' onClick={() => EventEmitter.dispatch('logout')}>Log out</div>
         </div>
     </div>
 );

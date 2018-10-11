@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from './CommentSection.css'
-import { EventEmitter } from '../../events.js'
+import styles from './CommentSection.css';
+import { EventEmitter } from '../../events.js';
+import moment from 'moment';
 
 const CommentSection = ({data, index, commentInput}) => (
     <div className='comments-container'>
@@ -10,7 +11,7 @@ const CommentSection = ({data, index, commentInput}) => (
                         {comment.text}
                     </div>
         })}
-        <div className='timestamp'>{data.timestamp}</div>
+        <div className='timestamp'>{moment(data.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}</div>
         <div className='add-comment'>
             <form id={index} onSubmit={(event) => EventEmitter.dispatch('addComment', event)}>
                 <input 
