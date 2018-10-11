@@ -1,11 +1,12 @@
 import React from 'react';
-import styled from 'styled-components'
 import { 
   InputForm, 
   LoginLabel, 
   SubmitButton,
-  MainHeader
+  MainHeader,
+  FormContainer
 } from './LoginForm'
+
 
 class Login extends React.Component {
   constructor(props) {
@@ -28,25 +29,16 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className={this.props.className} >
+      <FormContainer>
         <MainHeader>Insta Clone</MainHeader>
         <LoginLabel>Username</LoginLabel>
         <InputForm onChange={this.handleLoginInput} />
         <LoginLabel>Password</LoginLabel>
         <InputForm onChange={this.handlePasswordInput} />
         <SubmitButton onClick={this.props.handleLogin}>Submit</SubmitButton>
-      </div>
+      </FormContainer>
     );
   }
 }
 
-const StyledLogin = styled(Login)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: grey;
-  width: 80%;
-  border-radius: 4px;
-`
-
-export default StyledLogin;
+export default Login;

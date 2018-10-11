@@ -18,6 +18,7 @@ export const FormContainer = styled.div`
   justify-content: center;
   background: grey;
   width: 80%;
+  border-radius: 4px;
 `
 
 export const InputForm = styled.input`

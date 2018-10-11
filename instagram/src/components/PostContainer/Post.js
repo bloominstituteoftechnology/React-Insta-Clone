@@ -47,4 +47,5 @@ Post.PropType = {
     }))
   })
 }
+
 export default Post;
