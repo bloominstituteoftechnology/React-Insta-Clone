@@ -12,7 +12,7 @@ const WrapperDiv = Styled.div`
 const PostTimeStamp = Styled.p`
     margin-left:15px;
     margin-top:10px;
-    font-size:.8rem;
+    font-size:1.4rem;
     color:gray;
     margin-bottom:5px;
 `

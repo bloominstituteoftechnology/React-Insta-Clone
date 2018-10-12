@@ -8,7 +8,7 @@ const WrapperDiv = Styled.div`
     margin-left:15px;
 `
 const LikeBarLikes = Styled.p`
-    font-size:1.1rem;
+    font-size:1.6rem;
     margin-top:5px;
     margin-left:15px;
 `

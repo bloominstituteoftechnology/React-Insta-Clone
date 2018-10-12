@@ -7,7 +7,7 @@ const WrapperDiv = Styled.div`
 display: flex;
 margin-top:9px;
 margin-left:15px;
-font-size:1.1rem;
+font-size:1.6rem;
 `
 const UserName = Styled.span`
     font-weight: bold;
@@ -22,7 +22,6 @@ class CommentSection extends React.Component{
         if(props.data.text.length > 90){
            this.more =' ...more' 
         }
-
         if(props.data.username === 'Frank-E-B')
         {
             this.delete = ' ...remove'

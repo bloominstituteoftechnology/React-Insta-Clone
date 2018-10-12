@@ -22,8 +22,18 @@ const LogoImage = Styled.img`
     height:50px;
     width:50px;
 `
+const LoginMessage = Styled.p`
+    color: red;
+    font-size:1.6rem;
+`
 
 const Login = props => {
+    let loginMessage = ''
+    if(!props.loginStatus)
+    {
+        loginMessage = 'Both The Username And Password Are Required.'
+    } 
+
     return( 
         <WrapperDiv>
                 <LogoImage src={require('../../static/img/Instagram.png')}></LogoImage>
@@ -31,8 +41,9 @@ const Login = props => {
                 <Spacer20></Spacer20>
                 <LoginHeader>UserName</LoginHeader><LoginInput id='txtUserName' placeholder='Username' value={props.txtUserName} onChange={props.userNameChange}></LoginInput>
                 <Spacer10></Spacer10>
-                <LoginHeader>Password</LoginHeader><LoginInput id='txtPassword' placeholder='Password' value={props.txtPassword} onChange={props.passwordChange}></LoginInput>
+                <LoginHeader>Password</LoginHeader><LoginInput type='password' id='txtPassword' placeholder='Password' value={props.txtPassword} onChange={props.passwordChange}></LoginInput>
                 <Spacer20></Spacer20>
+                <LoginMessage>{loginMessage}</LoginMessage>
                 <Spacer20></Spacer20>
                 <FlexDiv>
                     <LoginButton onClick={props.login}>Log In</LoginButton>

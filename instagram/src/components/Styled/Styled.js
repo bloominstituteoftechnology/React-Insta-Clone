@@ -21,7 +21,7 @@ export const LoginInput = Styled.input`
     height:30px;
 `
 export const LoginHeader = Styled.p`
-    font-size:1.2rem;
+    font-size:1.6rem;
 `
 
 export const Spacer = Styled.div`
@@ -43,4 +43,6 @@ export const LoginButton = Styled.button`
  width:300px;   
  border-radius:3px;
  background-color:#007bff
+ color:white;
+ font-size:1.6rem;
 `

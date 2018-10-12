@@ -14,7 +14,7 @@ const Avatar = Styled.img`
     margin-left:20px;
 `
 const UserName = Styled.p`
-    font-size:1rem;
+    font-size:1.6rem;
     margin-left:8px;
     margin-top:10px;
 `

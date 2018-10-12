@@ -24,6 +24,7 @@ const Authentication = WrappedComponent =>
             this.logout = this.logout.bind(this)
             this.state = {
                 isLoggedIn: false,
+                loginStatus: true,
                 txtUserName: '',
                 txtPassword: ''
             }
@@ -37,7 +38,7 @@ const Authentication = WrappedComponent =>
         componentDidMount(){
             let userName = localStorage.getItem('igUserName');
             let password = localStorage.getItem('igPassword');
-            debugger
+
             if(userName && password){
               this.setState({isLoggedIn:true})
             } else {
@@ -45,18 +46,32 @@ const Authentication = WrappedComponent =>
             }            
         } 
         login(){
-            localStorage.setItem('igUserName',this.state.txtUserName);
-            localStorage.setItem('igPassword',this.state.txtPassword);
-            this.setState({
-                isLoggedIn:true,
-                txtUserName:'',
-                txtPassword:''
-                })
+
+            if(!this.state.txtUserName || !this.state.txtPassword)
+            {
+                this.setState({loginStatus:false})
+                setTimeout(()=>{this.setState({loginStatus:true})},40000)
+
+            } else {
+                localStorage.setItem('igUserName',this.state.txtUserName);
+                localStorage.setItem('igPassword',this.state.txtPassword);
+                this.setState({
+                    isLoggedIn:true,
+                    txtUserName:'',
+                    txtPassword:'',
+                    loginStatus:false
+                    })
+            }
+
         }
         logout(){
             localStorage.removeItem('igUserName');
             localStorage.removeItem('igPassword');
-            this.setState({isLoggedIn:false})
+            this.setState(
+                            {
+                                isLoggedIn:false,
+                                loginStatus:true
+                            })
         }
 
 
@@ -72,6 +87,7 @@ const Authentication = WrappedComponent =>
                             login = {this.login}
                             txtUserName = {this.state.txtUserName}
                             txtPassword = {this.state.txtPassword}
+                            loginStatus = {this.state.loginStatus} 
                         />
                     </ModalDiv>
                 </Modal>

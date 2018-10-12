@@ -7,9 +7,6 @@ import {Spacer} from '../Styled/Styled'
 
 
 const MainPostContainer = Styled.div`
-    .searchContainer{
-        background:blue
-    }
     padding-top:80px;
 `
 
