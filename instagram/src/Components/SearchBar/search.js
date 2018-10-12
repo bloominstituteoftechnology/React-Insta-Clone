@@ -27,6 +27,19 @@ const SearchBox = styled.input`
     border-radius: 3px;
 `
 
+const Button = styled.button`
+    width: 20%;
+    max-width: 68px;
+    background-color: navy;
+    color: grey;
+    opacity: .2;
+
+    :hover {
+        opacity: 1;
+        color: whitesmoke;
+    }
+`
+
 const Search = props =>{
     return (
         <HeaderDiv>
@@ -52,6 +65,13 @@ const Search = props =>{
                 <i className="far fa-heart fa-3x"></i>
                 <i className="fas fa-user fa-3x"></i>
             </LogoHeader>
+            <Button
+                onClick={() => {
+                    localStorage.setItem("user", "")
+                    window.location.reload()
+                }}>
+                Sign Out
+            </Button>
         </HeaderDiv>
     )
 }
