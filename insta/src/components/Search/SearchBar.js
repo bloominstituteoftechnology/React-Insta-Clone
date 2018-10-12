@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //Styled components
-const SearchWell = styled.section `
+const SearchWell = styled.header `
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #ecf0f1;
