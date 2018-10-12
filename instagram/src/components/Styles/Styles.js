@@ -18,6 +18,7 @@ export const StyledHeader = styled.div`
 
 export const LogoHeader = styled.div`
   width: 30%;
+  padding-top: 10px;
 `;
 
 export const LogoImage = styled.img`
@@ -55,11 +56,12 @@ export const ResetButton = styled.button`
 export const HeaderSprites = styled.div`
   width: 30%;
   opacity: 0.6;
-  padding-top: 0;
+  padding-top: 10px;
 `;
 
 export const Sprite = styled.i`
   padding: 0 6% 0px;
+  font-size: 28px;
 `;
 
 //PostContainer/Post
