@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Comment from "./comment";
 import "./commentsection.css";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 class CommentSection extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class CommentSection extends Component {
     event.preventDefault();
     const arr = this.state.data.comments.slice();
     arr.push({
-      username: this.state.data.username,
+      username: localStorage.getItem("user"),
       text: this.state.input,
       id: Date.now()
     });

@@ -1,8 +1,3 @@
-.post-container {
-  border: 1px solid lightgray;
-  margin: 30px auto;
-}
-
 .thumbnail-img {
   width: 30px;
   border-radius: 50%;
@@ -11,14 +6,6 @@
 .username-header {
   font-size: 16px;
   margin: 0 10px;
-}
-
-.header {
-  margin: 15px 15px;
-}
-
-.likes-text {
-  margin: 10px 15px;
 }
 
 .icons {
