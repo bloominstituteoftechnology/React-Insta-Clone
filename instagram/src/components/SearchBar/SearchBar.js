@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import './SearchBar.css';
 import {
     
-    Navbar,
+    
     
   } from 'reactstrap';
 import styled from 'styled-components';
@@ -13,6 +13,13 @@ const Title = styled.h1 `
     font-style: italic;
     border-left: 2px solid lightgray;
     padding-left: 20px;
+`
+const Navbar = styled.div `
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    
 `
 
 class SearchBar extends Component {
