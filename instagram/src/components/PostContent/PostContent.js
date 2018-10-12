@@ -3,12 +3,12 @@ import PostImage from './PostImage.js'
 import UserName from './UserName.js'
 
 const PostContent= props => {
-  return [
-    <div>
+  return (
+    <div id='postContent'>
         <PostImage></PostImage>
         <UserName></UserName>
     </div>
-  ];
+  );
 };
 
 export default PostContent;

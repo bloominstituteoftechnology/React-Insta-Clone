@@ -1,11 +1,11 @@
 import React from 'react';
 
 const IconBar = props => {
-  return [
+  return (
     <div>
-    
+    IconBar
     </div>
-  ];
+  );
 };
 
 export default IconBar;

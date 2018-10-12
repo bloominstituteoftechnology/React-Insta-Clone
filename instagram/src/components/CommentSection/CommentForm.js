@@ -1,11 +1,15 @@
 import React from 'react';
 
 const CommentForm = props => {
-  return [
+  return (
     <div>
-    
+      <form id="style"> 
+          <input type="text" placeholder="Add Comment"/>
+      </form>
     </div>
-  ];
+  );
 };
 
 export default CommentForm;
+
+//onChange={props.searchPosts}

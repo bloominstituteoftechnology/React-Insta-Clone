@@ -1,27 +1,51 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import PostStream from './components/PostStream/PostStream';
-import SearchHeader from './components/SearchHeader/SearchHeader';
-import SearchBarLogic from './components/SearchHeader/SearchBarLogic';
+import PostStream from './components/PostStream/PostStream.js';
+import SearchHeader from './components/SearchHeader/SearchHeader.js';
+import SearchBarForm from './components/SearchHeader/SearchBarForm.js';
 
 class App extends Component {
   constructor() {
     super();
+  
     this.state = {
-      posts: [],
+      posts: dummyData,
     };
+
   }
-  componentDidMount() {
-    this.setState({ posts: dummyData });
-  }
+  searchPostsHandler = e => {
+    console.log(e.target.value)
+     const postArray = []
+     this.state.posts.filter(p => {
+        // console.log(this.state)
+         if (p.username===e.target.value) {
+             console.log(p)
+             postArray.push(p)
+ 
+         }
+      console.log(postArray)
+        return postArray;
+         });
+        // console.log(posts) 
+         this.setState({ filteredPosts: postArray});
+    
+       };
+ // componentDidMount() {
+  // this.setState({ posts: dummyData });
+//}
 
   render() {
+    
     return (
+      
       <div className="App">
+      App
+      <SearchBarForm  searchTerm={this.searchTerm}
+        searchPosts={this.searchPostsHandler}></SearchBarForm>
         <SearchHeader/>
-        <PostStream/>
-        <SearchBarLogic unfilteredPosts={this.state.posts} ></SearchBarLogic>
+        <PostStream filteredPosts={this.state.filteredposts}></PostStream>
+       
       </div>
     );
   }

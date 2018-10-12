@@ -4,13 +4,14 @@ import SearchIcons from './SearchIcons.js';
 import SearchLogo from './SearchLogo.js';
 
 const SearchHeader= props => {
-  return [
-    <div>
+  
+  return (
+    <div id="searchHeader">
         <SearchBarForm></SearchBarForm>
         <SearchIcons></SearchIcons>
-        <SearchLogo></SearchLogo>
+       <SearchLogo></SearchLogo>
     </div>
-  ];
+  );
 };
 
 export default SearchHeader;

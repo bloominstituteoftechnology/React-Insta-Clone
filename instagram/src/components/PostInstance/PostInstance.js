@@ -1,14 +1,15 @@
 import React from 'react';
-import React from '../components/PostContent/PostContent.js'
-import React from '../components/CommentSection/CommentSection.js'
+import PostContent from '../PostContent/PostContent.js'
+import CommentSection from '../CommentSection/CommentSection.js'
 
 const PostInstance= props => {
-  return [
-    <div>
+  return (
+    <div id="postInstance">
+      PostInstance
         <PostContent></PostContent>
         <CommentSection></CommentSection>
     </div>
-  ];
+  );
 };
 
 export default PostInstance;

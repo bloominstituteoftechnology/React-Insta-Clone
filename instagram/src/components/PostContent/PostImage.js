@@ -2,11 +2,11 @@ import React from 'react';
 
 
 const PostImage= props => {
-  return [
+  return (
     <div>
-        
+        PostImage
     </div>
-  ];
+  );
 };
 
 export default PostImage;

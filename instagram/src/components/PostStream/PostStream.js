@@ -1,20 +1,13 @@
 import React from 'react';
+import PostInstance from '../PostInstance/PostInstance.js'
+const PostStream= props => {
 
+  return (
+    <div id="postStream">
+     PostStream
+      <PostInstance></PostInstance>
+    </div>
+  );
+};
 
-class PostStream extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        filteredPosts:[],
-      };
-    }
-
-    render() {
-        return (
-          <div>
-              {this.filteredPosts}
-          </div>
-        );
-      }
-    }
-  export default PostStream;
+export default PostStream;
