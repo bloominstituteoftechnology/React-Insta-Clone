@@ -14,7 +14,7 @@ const Header = props => {
     return (
             <>
                 <Thumbnail src={props.post.thumbnailUrl} alt="user thumbnail"/>
-                <Username size="2em">{props.post.username}</Username>
+                <Username size="2em" weight="bold">{props.post.username}</Username>
             </>
     )
 }

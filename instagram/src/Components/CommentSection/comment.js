@@ -5,9 +5,13 @@ import "./comment.css";
 import Username from "../Styles/reusable";
 import styled from "styled-components";
 
-const PostImg = styled.img`
-    display: flex;
-    width: 100%;
+const CommentText = styled.div`
+    margin: 5px 0;
+`
+
+const TimeStamp = styled.div`
+    font-size: .8rem;
+    color: grey;
 `
 //comments component maps over the comment array and passes that data to comment component
 class Comments extends React.Component {
@@ -59,21 +63,22 @@ class Comments extends React.Component {
     render() {
         return (
             <>
-                <div className="images">
-                    <i className="far fa-heart fa-2x" onClick={() => this.increment()}></i>
-                    <i className="far fa-comment fa-2x"></i>
+                <div>
+                    <i className="far fa-heart fa-3x" onClick={() => this.increment()}></i>
+                    <i className="far fa-comment fa-3x"></i>
                 </div>
-                <Username>{this.state.likes} likes</Username>
+                <Username size="1rem" weight="bold">{this.state.likes} likes</Username>
                 {this.state.comments.map((comment) => {
                     return (
-                    <div className="comment-text" key={comment.text}>
-                        <Username>{comment.username}</Username>{comment.text}
-                    </div>
+                    <CommentText key={comment.text}>
+                        <Username size="1rem" weight="bold">{comment.username}</Username>
+                        <Username size="1rem">{comment.text}</Username>
+                    </CommentText>
                     )
                 })}
-                <div className="timestamp">
+                <TimeStamp>
                     {this.props.time}
-                </div>
+                </TimeStamp>
                 <CommentBox 
                     text={this.state.input}
                     input={this.handleInput}
