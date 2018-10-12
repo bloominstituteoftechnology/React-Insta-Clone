@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import PostContainer from './components/PostContainer/PostContainer';
 import dummyData from './dummy-data';
+import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './components/Authentication/Authenticate'
 
 const appData = dummyData;
 
@@ -49,19 +50,15 @@ class App extends Component {
 		}, 3000);
 	}
 	render() {
-		if (!this.state.instagramData.length) {
-			return <h1>"Loading App Data..."</h1>;
-		}
-		return (
-			<div className="appContainer">
-				<PostContainer
-					appData={this.state.instagramData}
-					searchInput={this.searchInput}
-					searchHandler={this.searchHandler}
-				/>
-			</div>
-		);
+    return(
+		<div>
+      <PostsPage
+          appData={this.state.instagramData}
+          searchInput={this.searchInput}
+          searchHandler={this.searchHandler} />
+    </div>
+    )
 	}
 }
 
-export default App;
+export default Authenticate(App);
