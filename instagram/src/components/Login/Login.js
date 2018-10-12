@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Login.css";
 import igTextLogo from "../../images/text-logo.png";
 import authenticate from "../../Authentication/Authenticate";

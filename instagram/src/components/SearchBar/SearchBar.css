@@ -65,3 +65,13 @@
   cursor: pointer;
   color: #6a6a6a;
 }
+
+@media (max-width: 600px) {
+  .line-between {
+    display: none;
+  }
+
+  .nav-logo img {
+    display: none;
+  }
+}

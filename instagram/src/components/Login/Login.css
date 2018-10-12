@@ -132,3 +132,29 @@
   color: #567b9b;
   font-weight: bold;
 }
+
+@media (max-width: 900px) {
+  .footer-nav {
+    width: 90%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .footer-links {
+    margin-bottom: 8px;
+    width: 90%;
+  }
+
+  .footer-links a {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 835px) {
+  .footer-links {
+    max-width: 500px;
+  }
+}

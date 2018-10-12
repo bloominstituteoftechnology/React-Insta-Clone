@@ -48,8 +48,13 @@
   border-top: 1px solid #e6e6e6;
 }
 
+.add-comment form {
+  width: 95%;
+}
+
 .add-comment input[type="text"] {
-  width: 556px;
+  width: 100%;
+  max-width: 556px;
   height: 18px;
   border: none;
 }
@@ -71,3 +76,7 @@ input:focus {
   font-size: 27px;
   color: #ec4a57;
 }
+
+/* @media ( max-width: 600px )  {
+
+} */

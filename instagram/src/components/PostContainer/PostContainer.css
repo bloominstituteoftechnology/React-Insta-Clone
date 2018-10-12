@@ -2,7 +2,11 @@
   background: #fff;
   border: 1px solid #e6e6e6;
   max-width: 614px;
-  margin: 125px auto 20px;
+  margin: 55px auto 20px;
+}
+
+.post-container:nth-of-type(1) {
+  margin-top: 125px;
 }
 
 .thumbnail-img {

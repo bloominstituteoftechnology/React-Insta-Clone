@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Login from "../components/Login/Login";
 import PostsPage from "../components/PostContainer/PostsPage";
 
