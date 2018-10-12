@@ -22,13 +22,13 @@ class CommentSection extends Component {
             <>
               <CommentContainer>
                   <FlexColumnContainer>
-                      <FontAwesomeIcon className='icons' icon='heart' onClick={() => props.newLike(props.index)} />
+                      <FontAwesomeIcon className='icons' icon='heart' onClick={() => this.props.newLike(this.props.index)} />
                       <FontAwesomeIcon className='icons comment' icon='comment' />
                   </FlexColumnContainer>
                   <div>
-                      <p>{props.likes} likes</p>
+                      <p>{this.props.likes} likes</p>
                   </div>
-                  {props.comments.map(comment => (
+                  {this.props.comments.map(comment => (
                       <div key={comment.id}>
                           <Comment comment={comment} />
                       </div>
@@ -37,9 +37,9 @@ class CommentSection extends Component {
               <CommentInput
                   type='text' 
                   placeholder='Comment' 
-                  value={props.commentInput} 
-                  onChange={props.handleSubmit} 
-                  onKeyPress={(e) => props.addNewComment(props.index, e)}
+                  value={this.props.commentInput} 
+                  onChange={this.props.handleSubmit} 
+                  onKeyPress={(e) => this.props.addNewComment(this.props.index, e)}
               />   
             </>  
           );

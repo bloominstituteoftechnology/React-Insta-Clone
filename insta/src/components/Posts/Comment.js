@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const Comment = props => {
-    return (
-        <>
-            <p><span style={{fontWeight: "bold"}}>{props.comment.username}</span> {props.comment.text}</p>
-        </>
-    );
+class Comment extends Component {
+    render() {
+        return (
+            <>
+                <p><span style={{fontWeight: "bold"}}>{this.props.comment.username}</span> {this.props.comment.text}</p>
+            </>
+        );
+    }
 };
 
 //Test
