@@ -1,0 +1,33 @@
+.main-login {
+    display:flex;
+    flex-direction: column;
+    padding: 50px;
+    align-items: center;
+    background-color:skyblue;
+    border: 1px solid black;
+
+}
+
+.flex {
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+}
+
+h2 {
+    color:black;
+}
+
+.login-button {
+    width: 200px;
+    padding:20px;
+}
+
+.login-button {
+   font-size:1em;
+   font-weight: bold;
+   border-radius: 20px;
+   background-color:lightcyan;
+   margin:10px;
+}

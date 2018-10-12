@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import PostContainer from './PostContainer';
+import PostContainer from './Components/PostContainer/PostContainer';
 import dummyData from './dummy-data'
-import SearchBar from './SearchBar'
+import SearchBar from './Components/SearchBar/SearchBar'
 import PropTypes from "prop-types"
-
+import Authentication from './Authentication'
 
 class App extends Component {
 
@@ -42,6 +42,12 @@ class App extends Component {
   
     }
 
+    Logout = event => {
+      event.preventDefault()
+      localStorage.clear();
+      window.location.reload();
+  }
+
 
 
     submitHandler = event => {
@@ -69,7 +75,8 @@ class App extends Component {
       <SearchBar value={this.state.search} inputHandler={this.inputHandler} searchHandler={this.searchHandler}/>
       {this.state.filtered.length>0 ?
       <PostContainer posts={this.state.filtered} submitHandler={this.submitHandler} /> :
-      <PostContainer posts={this.state.posts} submitHandler={this.submitHandler}/>   }
+      <PostContainer posts={this.state.posts} submitHandler={this.submitHandler}/>  }
+      <button className="login-button" onClick={this.Logout}><p>Log Out</p></button>
       </div>
     );
   }
@@ -92,4 +99,4 @@ PostContainer.propTypes = {
     }))
 }
 
-export default App;
+export default Authentication(App);

@@ -30,3 +30,11 @@
     transform: rotate(360deg);
   }
 }
+
+.login-button {
+  font-size:1em;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color:lightcyan;
+  margin:10px;
+}

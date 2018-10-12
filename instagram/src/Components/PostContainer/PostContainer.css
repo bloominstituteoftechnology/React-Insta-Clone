@@ -1,5 +1,10 @@
-
-section {
+.App {
+    display:flex
+;flex-direction: column
+;justify-content: center;
+align-items: center;
+}
+.section {
     display:flex;
     flex-direction: column;
     justify-content:center;
@@ -65,15 +70,20 @@ p {
 }
 
 .poster {
+    display:flex;
+    flex-direction: column;
     border: 1px solid black;
     background-color: white;
     margin: 20px;
+    justify-content: center;
 
 }
 
 .poster .time {
+    display:flex;
     color:gray;
     margin-bottom: 20px;
+    justify-content: center;
 }
 
 .icons {
