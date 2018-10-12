@@ -15,7 +15,7 @@ class App extends React.Component {
       text: '',
       newComment: [],
       asyncMessage: '',
-      searchedComment: []
+      searchedComment: [],
 
 
     }

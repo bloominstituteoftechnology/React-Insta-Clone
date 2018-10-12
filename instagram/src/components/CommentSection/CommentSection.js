@@ -25,12 +25,16 @@ class CommentSection extends React.Component {
 
             newData: [],
 
-            comment: ''
+            comment: '',
+
+            likes: dummyData.likes,
+            
 
         }
     }
 
  
+            
 
 //     addNewComment = (event, index) => {
 
@@ -91,13 +95,17 @@ class CommentSection extends React.Component {
             <div className="imageUrl" > <img  alt="" src={item.imageUrl} /> </div>
             
             <div>{item.likes} likes</div>
+            
             <i className="far fa-heart"/>
+            <i className="far fa-comment"></i>
             <div>{item.timestamp}</div>
            
             <div className="commentMap">{item.comments.map(item =>
             
             <div key={item.text}>
+            {' '}
                 {item.username}
+                {' '}
                 {item.text}
             </div>,
            
