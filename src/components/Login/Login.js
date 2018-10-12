@@ -11,18 +11,17 @@ class Login extends Component {
 
     /* Log the user in */
     handleLogin = event => {
-        const user = this.window.querySelector('userInput');
-        const pass = this.window.querySelector('passInput');
-        localStorage.setItem('username', user);
-        localStorage.setItem('password', pass);
+        event.preventDefault();
+        localStorage.setItem('username', this.refs.userInput.value);
+        localStorage.setItem('password', this.refs.passInput.value);
         window.location.reload();
     };
     render() {
         return (
-            <form>
-                <input type='text' name='userInput'></input>
-                <input type='password' name='passInput'></input>
-                <submit></submit>
+            <form onSubmit={this.handleLogin}>
+                <input type='text' ref='userInput' placeholder="User Name"></input>
+                <input type='password' ref='passInput' placeholder="Password"></input>
+                <input type='submit' value="Login" ></input>
             </form>
         );
     };

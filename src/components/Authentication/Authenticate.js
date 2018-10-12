@@ -11,6 +11,7 @@ import Login from '../Login/Login';
             }
 
             componentDidMount() {
+                console.log("login stuff:", localStorage.getItem('username') );
                 if( !localStorage.getItem('username') ) {
                     this.setState({ loggedIn: false });
                 } else {
