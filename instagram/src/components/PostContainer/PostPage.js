@@ -14,7 +14,7 @@ class PostPage extends Component {
     super();
     this.state = {
       dummyData: [],
-      holder: ''
+      searchInput: ''
     };
   }
   componentDidMount () {
@@ -22,18 +22,27 @@ class PostPage extends Component {
       dummyData: dummyData
     });
   }
+
+  componentWillUnmount () {
+    this.setState({
+      dummyData: []
+    });
+  }
+
   handleInput = e => {
     this.setState({
-      holder: e.target.value
+      searchInput: e.target.value
     });
   };
 
   handleSearch = e => {
     e.preventDefault();
+    const filteredData = dummyData.filter(x => {
+      return x.username.includes(this.state.searchInput);
+    });
     this.setState({
-      dummydata: this.state.dummyData.filter(x => {
-        return x.username.includes(this.state.holder);
-      })
+      dummyData: filteredData,
+      searchInput: ''
     });
   };
 
@@ -46,7 +55,7 @@ class PostPage extends Component {
             <p className="title">Fake Instagram</p>
           </div>
           <SearchBar
-            input={this.state.holder}
+            input={this.state.searchInput}
             handleInput={this.handleInput}
             handleSearch={this.handleSearch}
           />

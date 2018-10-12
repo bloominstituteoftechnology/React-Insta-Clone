@@ -160,14 +160,13 @@ p {
   width: 800px;
   margin: auto;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 .login-container .loginImg {
   width: 400px;
   padding: 0;
 }
 .login-container .login-box {
-  margin-top: 40px;
   width: 400px;
   border: 1px solid #e6e6e6;
   display: flex;

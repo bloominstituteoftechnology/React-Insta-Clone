@@ -26,7 +26,7 @@ class Login extends Component {
       <div className="login-container">
         <img src={LoginImg} alt="loginImg" className="loginImg" />
         <div className="login-box">
-          <p className="title">Instagram</p>
+          <p className="title">Fake Instagram</p>
           <form onSubmit={this.handleSubmit} className="loginInput">
             <input
               type="text"
@@ -36,7 +36,7 @@ class Login extends Component {
               onChange={this.handleInput}
             />
             <input
-              type="text"
+              type="password"
               name="password"
               placeholder="Password"
               value={this.state.password}
