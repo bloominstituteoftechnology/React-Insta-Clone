@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component }  from 'react';
 import CommentSection from './CommentSection';
 import Post from './Post';
 import styled from 'styled-components';
@@ -17,25 +17,27 @@ const PostTunnel = styled.section `
     border: 2px solid #ecf0f1;
 `;
 
-const PostContainer = props => {
-    return (
-        <PostWell>
-            {props.posts.map(post => (
-                <PostTunnel key={post.timestamp}>
-                    <Post post={post} />
-                    <CommentSection 
-                        comments={post.comments} 
-                        likes={props.likes[post.index]} 
-                        index={post.index} 
-                        commentInput={props.commentInput} 
-                        handleSubmit={props.handleSubmit} 
-                        addNewComment={props.addNewComment} 
-                        newLike={props.newLike}
-                    />
-                </PostTunnel>
-            ))}
-        </PostWell>
-    );
+class PostContainer extends Component {
+    render() {
+        return (
+            <PostWell>
+                {this.props.posts.map(post => (
+                    <PostTunnel key={post.timestamp}>
+                        <Post post={post} />
+                        <CommentSection 
+                            comments={post.comments} 
+                            likes={this.props.likes[post.index]} 
+                            index={post.index} 
+                            commentInput={this.props.commentInput} 
+                            handleSubmit={this.props.handleSubmit} 
+                            addNewComment={this.props.addNewComment} 
+                            newLike={this.props.newLike}
+                        />
+                    </PostTunnel>
+                ))}
+            </PostWell>
+        );
+    }
 }
 
 PostContainer.propTypes = {
