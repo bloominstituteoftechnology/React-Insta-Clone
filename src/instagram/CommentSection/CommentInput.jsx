@@ -1,5 +1,4 @@
 import React from "react";
-
 import { StyledDiv, StyledImg, StyledInput } from "../Styles/StyleSheet";
 
 const CommentInput = props => {

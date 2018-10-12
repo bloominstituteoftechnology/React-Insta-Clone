@@ -5,10 +5,10 @@ export const StyledDiv = styled.div`
 ${props =>
   props.post
     ? `
-border-radius: 3px;
+border-radius: 0.3rem;
 border: 1px solid #e6e6e6;
 background-color: #fff;
-margin-bottom: 60px;
+margin-bottom: 6rem;
 margin-left: 20%;
 margin-right: 20%;
 `
@@ -18,7 +18,7 @@ ${props =>
   props.postHead
     ? `
 display: flex;
-padding: 16px;
+padding: 1.6rem;
 align-items: center;
 `
     : null}
@@ -28,8 +28,8 @@ align-items: center;
 ${props =>
   props.postHeadAvatar
     ? `
-width: 30px;
-height: 30px;
+width: 3rem;
+height: 3rem;
 `
     : null}
 
@@ -37,7 +37,7 @@ height: 30px;
 ${props =>
   props.postNickname
     ? `
-margin-left: 12px;
+margin-left: 1.2rem;
 font-family: "PT Sans", sans-serif;
 font-weight: bold;
 `
@@ -51,7 +51,14 @@ ${props =>
 background-color: #efefef;
 `
     : null}
-
+    ${props =>
+      props.postLikes
+        ? `
+     
+      margin: 1rem;
+      font-size: 1.6rem;
+      `
+        : null}
 
 
 ${props =>
@@ -60,7 +67,7 @@ ${props =>
 display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 5px;
+  margin: 1rem;
 `
     : null}
 
@@ -84,18 +91,18 @@ ${props =>
           flex-direction: row;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
             Arial, sans-serif;
-          font-size: 14px;
-          line-height: 18px;
+          font-size: 1.4rem;
+          line-height: 1.8rem;
           width: 95%;
           margin: 0 auto;
-          padding: 5px 5px;
+          padding: .5rem .5rem;
       `
     : null}
 
           ${props =>
             props.commentText
               ? `
-              padding-left: 10px;
+              padding-left: 1rem;
               text-align: left;
           `
               : null}
@@ -114,7 +121,7 @@ export const StyledInput = styled.input`
       border: none;
       justify-content: center;
       border-top: 1px solid lightgrey;
-      height: 40px;
+      height: 4rem;
   `
       : null};
 `;

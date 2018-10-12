@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Comments from "../CommentSection/Comments";
 import LikeSection from "./LikeSection";
-import "./PostContainer.css";
+import "./Icons.css";
 import { StyledDiv, StyledImg } from "../Styles/StyleSheet";
 
 class Post extends Component {
@@ -52,12 +52,12 @@ class Post extends Component {
             <div className="Post-icon-save" />
           </StyledDiv>
         </StyledDiv>
-        <section className="Post-likes">
+        <StyledDiv postLikes>
           <LikeSection
             incrementLike={this.incrementLike}
             likes={this.state.likes}
           />
-        </section>
+        </StyledDiv>
 
         <Comments
           postId={this.props.post.image}
