@@ -11,13 +11,20 @@ import CommentSection from "../CommentSection/CommentSection";
 class PostContainer extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { ...props };
+        this.state = { 
+            ...props,
+            showNewComment: true
+        };
     }
 
-    addLike = ev => {
+    addLike = () => {
         let temp = { ...this.state.item };
         temp.likes += 1;
         this.setState({ item: temp });
+    }
+
+    toggleInput = () => {
+        this.setState(prevState => ({ showNewComment: (prevState.showNewComment ? false : true) }))
     }
 
     render() {
@@ -30,12 +37,13 @@ class PostContainer extends React.Component {
                 <img className="postPic" src={this.state.item.imageUrl} alt="picture" />
                 <div className="icons">
                     <Heart className="icon" onClick={this.addLike} />
-                    <MessageCircle className="icon" />
+                    <MessageCircle className="icon" onClick={this.toggleInput} />
                 </div>
                 <p>{this.state.item.likes} likes</p>
                 <CommentSection 
                     arr={this.state.item.comments} 
                     id={this.state.id}
+                    showNewComment={this.state.showNewComment}
                 />
             </InstaPost>
         );

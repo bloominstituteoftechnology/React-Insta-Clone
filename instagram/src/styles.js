@@ -87,3 +87,7 @@ export const InstaPost = styled.section`
 export const Comments = styled.section`
     padding: 10px;
 `;
+
+export const NewCommentInput = styled.input`
+    display: ${props => props.enable ? "block" : "none"};
+`;

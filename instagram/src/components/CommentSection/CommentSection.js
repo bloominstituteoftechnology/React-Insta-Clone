@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Comments } from "../../styles";
+import { Comments, NewCommentInput } from "../../styles";
 
 class CommentSection  extends React.Component {
     constructor(props) {
@@ -32,12 +32,13 @@ class CommentSection  extends React.Component {
                     <p><strong>{comment.username}</strong> {comment.text}</p>
                 )}
                 <form onSubmit={this.submitNewComment}>
-                    <input 
+                    <NewCommentInput 
                         type="text" 
                         placeholder="Add a comment..." 
                         id={this.state.id} 
                         value={this.state.newCommentText}
                         onChange={this.newCommentChangeHandler}
+                        enable={this.state.showNewComment}
                     />
                 </form>
             </Comments>
