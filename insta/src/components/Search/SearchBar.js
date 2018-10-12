@@ -16,7 +16,7 @@ const SearchContainer = styled.section `
     width: 15%;
 `;
 
-const Logo = styled.img `
+const LogoImage = styled.img `
     width: 100px;
 `;
 
@@ -36,9 +36,9 @@ class SearchBar extends Component {
         return (
             <SearchWell>
                 <SearchContainer>
-                    <Logo src={require('../img/insta-camera-logo.jpg')} alt={'insta-camera'}></Logo>
+                    <LogoImage src={require('../img/insta-camera-logo.jpg')} alt={'insta-camera'}></LogoImage>
                     <VL></VL>
-                    <Logo className='logo' src={require('../img/insta-logo.png')} alt={'insta-logo'}></Logo>
+                    <LogoImage className='logo' src={require('../img/insta-logo.png')} alt={'insta-logo'}></LogoImage>
                 </SearchContainer>
                 <SearchContainer>
                     <Search className='search' 

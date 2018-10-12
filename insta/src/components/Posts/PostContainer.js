@@ -40,6 +40,7 @@ class PostContainer extends Component {
     }
 }
 
+//Test
 PostContainer.propTypes = {
     posts: PropTypes.arrayOf(PropTypes.object)
 };
