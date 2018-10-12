@@ -2,6 +2,36 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment.js';
 import './CommentSection.css';
+import styled from 'styled-components';
+
+const CommentSectionDiv = styled.div`
+    font-size: 14px;
+    margin-left: 10px;
+    border-bottom: 1px solid lightgray;
+`
+
+const Timestamp = styled.div`
+    padding: 10px 0;
+`
+
+const AddComment = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    align-items: center;
+`
+
+const CommentInput = styled.input`
+    margin-top: 10px;
+    padding-left: 10px;
+    border: none;
+    font-size: 16px;
+    width: 90%;
+    height: 30px;
+    &:focus{
+        outline: none;
+    }
+`
 
 class CommentSection extends Component  {
     state = {
@@ -36,19 +66,18 @@ class CommentSection extends Component  {
     render()    {
         return(
             <div>
-                <div className="commentSection">
+                <CommentSectionDiv>
                     {this.state.content.map((comment, index)    =>  {
                         return <Comment key={index} username={comment.username} text={comment.text}/>
                     })}
-                    <div className="timestamp">{this.state.timestamp}</div>
-                </div>
-                <div className="addComment">
+                    <Timestamp>{this.state.timestamp}</Timestamp>
+                </CommentSectionDiv>
+                <AddComment>
                     <form onSubmit={event => this.addComment(event)}>
-                        <input value={this.state.input} onChange={this.inputChangeHandler} className="commentInput" placeholder="Add a comment..."></input>
+                        <CommentInput value={this.state.input} onChange={this.inputChangeHandler} placeholder="Add a comment..."></CommentInput>
                     </form>
                     <i className="fas fa-ellipsis-h fa-lg"></i>
-                </div>
-
+                </AddComment>
             </div>
         )
     }
