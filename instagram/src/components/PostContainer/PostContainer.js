@@ -5,10 +5,7 @@ import PropTypes from 'prop-types';
 
 const PostContainer = (props) => {
 
-    if (!props.dummyData.length) {
-        console.log('dummy data is rendering');
-        return <h3>Loadinating...</h3>
-    }
+    
     
     return (
         <div>
