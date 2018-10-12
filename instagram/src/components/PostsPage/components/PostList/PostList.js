@@ -2,15 +2,22 @@ import React from 'react';
 import PostContainer from '../PostContainer/PostContainer';
 import PropTypes from 'prop-types';
 
-import './PostList.css';
+import styled from 'styled-components';
 
+
+// import './PostList.css';
+
+const StyledPostList = styled.div`
+  max-width: 600px;
+  margin: 0 auto;
+`
 
 const PostList = props => {
   if (!props.posts.length) {
     return <div>Loading ...</div>
   } else {
     return (
-      <div className='post-list'>
+      <StyledPostList>
         {props.posts.map(post =>
           <PostContainer
             post={post}
@@ -20,7 +27,7 @@ const PostList = props => {
             newComment={props.newComment}
             inputEventHandler={props.inputEventHandler}
           />)}
-      </div>
+      </StyledPostList>
     );
   }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import PostsPage from './components/PostsPage/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
 
-import './App.css';
+// import './App.css';
 
 
 
@@ -17,5 +17,6 @@ class App extends React.Component {
     return <PostsPage />;
   }
 }
+
 
 export default Authenticate(App);

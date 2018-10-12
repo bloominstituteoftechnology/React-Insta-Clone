@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostList from './components/PostList/PostList'
 
+import styled from 'styled-components';
+
+
 import dummyData from './dummy-data';
 
-import './PostsPage.css';
+// import './PostsPage.css';
+let StyledPostsPage = styled.div`
+  background-color: #eee;
+`
+
 
 class PostsPage extends Component {
   constructor() {
@@ -13,7 +20,8 @@ class PostsPage extends Component {
       posts: [],
       newComment: '',
       searchText: '',
-      filteredPosts: []
+      filteredPosts: [],
+      currentUser: localStorage.getItem('user')
     };
   }
 
@@ -43,6 +51,7 @@ class PostsPage extends Component {
   addCommentHandler = (event, timestamp) => {
     event.preventDefault();
     console.log('handle comment');
+    console.log('currentUser = ' + this.state.currentUser )
     // gets comment - have to add an input field onClick
     // this.setState({
     //   newComment: event.target.value
@@ -53,7 +62,7 @@ class PostsPage extends Component {
     const updatedComments = [...this.state.posts.map(post => {
       if (post.timestamp === timestamp) {
         const addComment = {
-          username: this.state.username,
+          username: this.state.currentUser,
           text: this.state.newComment
         }
         return { ...post, comments: [...post.comments, addComment] };
@@ -86,7 +95,7 @@ class PostsPage extends Component {
 
   render() {
     return (
-      <div className="PostsPage">
+      <StyledPostsPage>
         <SearchBar
           searchPosts={this.searchPostHandler}
           searchText={this.state.searchText}
@@ -102,9 +111,10 @@ class PostsPage extends Component {
           addLikeHandler={this.addLikeHandler}
           inputEventHandler={this.inputEventHandler}
         />
-      </div>
+      </StyledPostsPage>
     );
   }
 }
+
 
 export default PostsPage;

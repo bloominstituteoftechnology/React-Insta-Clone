@@ -1,6 +1,17 @@
 import React from 'react';
 import './Login.css';
 
+import styled from 'styled-components'
+
+const LoginContainer = styled.div`
+  height: 100vh;
+  width: 100vw;
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
