@@ -10,7 +10,7 @@ import {
   ResetButton,
   HeaderSprites,
   Sprite
-} from "./../../Styles.js";
+} from "../Styles/Styles";
 
 const SearchBar = props => {
   return (

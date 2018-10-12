@@ -1,14 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { CommentInstance, CommentText } from "../Styles/Styles";
+import { Username } from "../Styles/Reusables";
+
 const Comment = props => {
   return (
-    <div className="comment">
-      <p>
-        <span className="bold">{props.comment.username}</span>
+    <CommentInstance>
+      <CommentText>
+        <Username>{props.comment.username}</Username>
         {props.comment.text}
-      </p>
-    </div>
+      </CommentText>
+    </CommentInstance>
   );
 };
 

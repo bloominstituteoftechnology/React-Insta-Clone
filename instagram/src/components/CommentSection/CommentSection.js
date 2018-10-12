@@ -2,7 +2,8 @@ import React from "react";
 import Comment from "./Comment";
 import PropTypes from "prop-types";
 import AddComment from "./AddComment";
-import "./CommentSection.css";
+// import "./CommentSection.css";
+import { CommentsContainer, Timestamp } from "../Styles/Styles";
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -74,18 +75,18 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <div className="comment-section">
+      <CommentsContainer>
         {this.state.comments.map(comment => {
           return <Comment key={comment.id} comment={comment} />;
         })}
-        <p className="timestamp">{this.state.timestamp}</p>
+        <Timestamp>{this.state.timestamp}</Timestamp>
         <AddComment
           addNewComment={this.addNewComment}
           changeHandler={this.changeHandler}
           newComment={this.state.newComment}
           comments={this.state.comments}
         />
-      </div>
+      </CommentsContainer>
     );
   }
 }

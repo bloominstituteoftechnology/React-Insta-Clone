@@ -2,7 +2,7 @@ import React from "react";
 import Post from "./Post";
 import CommentSection from "./../CommentSection/CommentSection";
 
-import { BodyContainer } from "./../../Styles";
+import { BodyContainer } from "../Styles/Styles";
 // import "./PostContainer.css";
 
 class PostContainer extends React.Component {
