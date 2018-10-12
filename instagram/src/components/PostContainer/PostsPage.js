@@ -43,6 +43,7 @@ class PostsPage extends React.Component {
             <div>
             <SearchHeader           
               searchPostsHandler={this.searchPostsHandler}
+              signOut={this.props.signOut}
               // filterTarget={this.state.filterTarget}
               />
             <PostContainer 

@@ -7,7 +7,7 @@ import { SearchHead } from '../../Styles';
 const SearchHeader = props => {
     return (
         <SearchHead>
-          <Links logo="" titleLogo="Instagram" />
+          <Links signOut={props.signOut} logo="" titleLogo="Instagram" />
           <Search          
           searchPostsHandler={props.searchPostsHandler}
           filterTarget={props.filterTarget}

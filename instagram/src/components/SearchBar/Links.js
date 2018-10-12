@@ -6,7 +6,7 @@ import { LogoIcon, Divider, LogoH2 } from '../../Styles';
 const Links = props => {
     return (
         <LogoIcon>
-            <FontAwesomeIcon className="instagramLogo" icon={['fab', 'instagram']} />
+            <FontAwesomeIcon onClick={props.signOut} className="instagramLogo" icon={['fab', 'instagram']} />
              <Divider>|</Divider>
             <LogoH2>{props.titleLogo}</LogoH2>
         </LogoIcon>
