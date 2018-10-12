@@ -5,6 +5,12 @@ import NewComment from './NewComment.js';
 import Buttons from './Buttons.js';
 import styled from 'styled-components';
 
+const Timestamp = styled.div`
+    display: flex;
+    margin: 10px 2%;
+    color: grey;
+`
+
 class CommentSection extends Component {
     constructor(props) {
         super(props);
@@ -59,7 +65,7 @@ class CommentSection extends Component {
                         <Comment comment={comment} key={Math.random()} />
                     )
                 })}
-                <div className='timestamp'>{this.props.postData.timestamp}</div>
+                <Timestamp>{this.props.postData.timestamp}</Timestamp>
                 <NewComment
                     text={this.state.text}    
                     newComment={this.addNewComment}
