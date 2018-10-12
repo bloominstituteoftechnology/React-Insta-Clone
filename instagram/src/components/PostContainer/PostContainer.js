@@ -3,14 +3,16 @@ import React from "react";
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
 // import icons from the font-awesome library
-import FontAwesomeIcon from 'react-fontawesome';
+import FontAwesomeIcon from "react-fontawesome";
 // "font-awesome": "^4.7.0",
 // "react-fontawesome": "^1.6.1",
 const PostContainer = props => {
   console.log(props);
   return (
     <div className="Container">
-      <h4>____________</h4>
+      <span className="Separator">
+        <h4>____________</h4>
+      </span>
       <div className="Post-user-row">
         <span>
           <img
@@ -28,9 +30,8 @@ const PostContainer = props => {
         {/* or use class name in css */}
       </div>
       <div className="Icon-row">
-
-      {/* // look for the heart and comment  icons.  */}
-      {/* <FontAwesomeIcon icon={["far", "heart"]} onClick={this.addALike} />{" "}
+        {/* // look for the heart and comment  icons.  */}
+        {/* <FontAwesomeIcon icon={["far", "heart"]} onClick={this.addALike} />{" "}
          <FontAwesomeIcon icon={["far", "comment"]} /> */}
         {/* <img
           className="SearchBar-icons"
@@ -40,8 +41,16 @@ const PostContainer = props => {
         https://smashicons.com/ from Flaticon */}
         {/* // import icons directly from a local fa. */}
         <span className="Icon-row">
-        <img className="Icon-heart" src={require('./like-heart.png')} alt="Heart icon" />
-        <img className="Icon-comment" src={require('./comment.png')} alt="Comment icon" />
+          <img
+            className="Icon-heart"
+            src={require("./like-heart.png")}
+            alt="Heart icon"
+          />
+          <img
+            className="Icon-comment"
+            src={require("./comment.png")}
+            alt="Comment icon"
+          />
         </span>
       </div>
       <div className="Stats-row">{props.likes} likes</div>
@@ -60,8 +69,7 @@ const PostContainer = props => {
           />
           <input type="submit" value="Add" />
         </form>
-{/* ☞ 8856f45d-bf37-455b-8549-b7a5ef4cecf2 */}
-
+        {/* ☞ 8856f45d-bf37-455b-8549-b7a5ef4cecf2 */}
       </div>
     </div>
   );

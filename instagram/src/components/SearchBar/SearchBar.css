@@ -5,8 +5,8 @@
   width: 100%;
   justify-content: space-around;
   align-content: flex-start;
-
-  margin-left: 10rem;
+  margin-top: 2rem;
+  margin-left: 3.5rem;
 }
 
 .SearchBar-row {
@@ -46,3 +46,17 @@ Handelson
 The Busher
 Hokyaa
 */
+
+.Search-bar {
+  margin: 10rem 10px 10px 10px;
+}
+
+.Search-nav {
+
+}
+
+.Search-input {
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 12pts;
+}

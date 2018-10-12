@@ -16,27 +16,23 @@ class App extends Component {
     this.state = {
       instaClonePosts: [],
     };
-    
-  }
-  componentDidMount() {
-    this.setState({ instaClonePosts: data });
   }
   
   /* DATA MODEL
-{
+  {
     username: "philzcoffee",
     thumbnailUrl:
-      "https://tk-assets.lambdaschool.com/ecd33d34-c124-4b75-92d2-e5c52c171ed8_11201517_887808411287357_1307163552_a.jpg",
-
+    "https://tk-assets.lambdaschool.com/ecd33d34-c124-4b75-92d2-e5c52c171ed8_11201517_887808411287357_1307163552_a.jpg",
+    
     imageUrl:
-      "https://tk-assets.lambdaschool.com/69cf901b-f96d-466e-a745-ff2a01effac9_philz-image.jpg",
+    "https://tk-assets.lambdaschool.com/69cf901b-f96d-466e-a745-ff2a01effac9_philz-image.jpg",
     likes: 400,
     timestamp: "July 17th 2017, 12:42:40 pm",
     comments: [
       {
         username: "philzcoffee",
         text:
-          "We've got more than just delicious coffees to offer at our shops!"
+        "We've got more than just delicious coffees to offer at our shops!"
       },
       {
         username: "biancasaurus",
@@ -48,22 +44,43 @@ class App extends Component {
       }
     ]
   },
-*/
-  render() {
+  */
+ 
+ 
+ componentDidMount() {
+   this.setState({ instaClonePosts: data });
+   
+ }
+ 
+// Add Comments
+addComment = () => {
+  const username = "Jonathan";
+  const text = this.state.newCommentText;
+  this.setState({
+  comments: [...this.state.comments, { username, text }],
+  newCommentText: ""
+  });
+};
+
+likePost = () => {
+this.setState({ likes: this.state.likes + 1 });
+};
+
+
+ render() {
     return (
       <div className="App">
         <header className="App-header">
-   <SearchBar />
-
+          <SearchBar />
         </header>
         <div>
           {this.state.instaClonePosts.map((post, i) => {
             return (
               <PostContainer
-            {...post} // spread operator `...` passes all elements in the `post` to `PostContainer`
+                {...post} // spread operator `...` passes all elements in the `post` to `PostContainer`
               />
-              );
-            })}
+            );
+          })}
         </div>
       </div>
     );

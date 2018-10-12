@@ -31,7 +31,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   width: 399px;
   height: 399px;
   margin-left: 2rem;
@@ -42,8 +42,8 @@
   flex-direction: row;
   /* justify-content: flex-start; */
   align-items: flex-start;
-
-  margin-left: 2rem;
+  justify-content: space-between;
+  margin-left: 1rem;
 }
 
 .Stats-row {
@@ -64,7 +64,7 @@
   /* align-content: left; */
   text-align: left;
   margin-left: 2rem;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   margin-bottom: 1.5rem;
 }
 
@@ -87,7 +87,14 @@
 
   margin: 2rem;
 }
+.Separator {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* margin-left: 15px; */
+}
 
+/* ICONS */
 .fa-heart {
   display: flex;
   font-size: 1.1rem;
@@ -115,7 +122,8 @@
   border: 1px solid #ffffff;
   border-radius: 4px;
   padding: 1px;
-  width: 40px;   
+  width: 4rem; 
+  align-items: flex-start;  
 }
 
 .color {

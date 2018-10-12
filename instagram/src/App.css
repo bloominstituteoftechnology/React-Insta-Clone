@@ -9,7 +9,7 @@
 }
 
 .App-header {
-  min-height: 15vh;
+  min-height: 1vh;
   display: flex;
   flex-direction: row; 
     /* flex-direction: column;  */
@@ -17,8 +17,8 @@
   /* align-items: center;
   align-items: left; */
   justify-content: flex-start;
-  background-color: hsl(0, 15%, 95%);
-  font-size: 30pt;
+  /* background-color: hsl(0, 15%, 95%); */
+  /* font-size: 20pt; */
   color: black;
 }
 
@@ -44,22 +44,9 @@
 }
 
 /* MY STYLES */
-.Search-bar {
-  margin: 10px 20px 20px 20px;
-}
-
-.Search-nav {
-
-}
-
-.Search-input {
-  border: 1px solid gray;
-  border-radius: 5px;
-  font-size: 16pts;
-}
 
 .Logo-type {
-  font-size: 2rem;
+  font-size: 4rem;
   margin: 0;
   border-left: 1px solid grey;
   padding-left: 5px;

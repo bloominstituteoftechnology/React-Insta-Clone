@@ -8,10 +8,9 @@ const CommentSection = (props) => {
     <div className="Comments">
      {props.commentProps.map((comment,i)=> {
        return(
-         <div><strong>
-
-
-          <span>{comment.username}: </span>
+         <div>
+          <strong>
+            <span>{comment.username}: </span>
           </strong>
           <span>
             {comment.text}
