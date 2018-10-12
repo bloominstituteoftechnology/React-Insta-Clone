@@ -29,11 +29,17 @@ class App extends Component {
     }
   }
 
+  logoutHandler = (event) => {
+    localStorage.clear();
+    window.location.reload();
+  }
+
   render() {
 
     return (
       <div className="App">
         <PostsPage
+          logout={this.logoutHandler}
           dummyData={this.state.data}
           search={this.searchFilter} />
       </div >

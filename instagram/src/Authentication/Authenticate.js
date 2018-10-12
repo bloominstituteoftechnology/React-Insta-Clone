@@ -7,17 +7,26 @@ const Authenticate = PassedComponent =>
             super();
 
             this.state = {
-                loggedIn: true,
+                loggedIn: false,
             }
         }
 
-
+        componentDidMount() {
+            if (
+                !!localStorage.getItem('username') &&
+                !!localStorage.getItem('password')
+            ) {
+                this.setState({
+                    loggedIn: true
+                })
+            }
+        }        
 
         render() {
-            if (this.state.loggedIn === false) {
-                return <Login />
-            } else {
+            if (this.state.loggedIn) {
                 return <PassedComponent />
+            } else {
+                return <Login />
             }
 
         }

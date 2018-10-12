@@ -18,7 +18,7 @@ const SearchBar = (props) => {
         <Search>
             <SearchLogo />
             <SearchInput search={props.search} />
-            <SearchButtons />
+            <SearchButtons logout={props.logout}/>
         </Search>
     )
 }

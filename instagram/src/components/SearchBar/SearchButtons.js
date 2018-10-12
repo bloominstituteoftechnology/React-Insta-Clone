@@ -14,9 +14,13 @@ const Buttons = styled.div`
 const SearchButton = (props) => {
     return (
         <Buttons>
-            <i className="far fa-compass"></i>
-            <i className="far fa-heart"></i>
-            <i className="far fa-user"></i>
+            <i className="far fa-compass" />
+            <i className="far fa-heart" />
+            <i className="far fa-user" />
+            <i
+                onClick={props.logout}
+                class="fas fa-sign-out-alt"
+            />
         </Buttons>
     )
 }
