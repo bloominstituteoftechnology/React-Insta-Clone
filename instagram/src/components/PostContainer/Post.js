@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/comment-section';
 import LikeSection from './LikeSection';
 import PostHeader from './PostHeader';
+import styled from 'styled-components';
+
+const Image = styled.img`
+    width: 100%;
+`;
 
 
 class Post extends React.Component {
@@ -25,7 +30,7 @@ class Post extends React.Component {
           thumbnailUrl={this.props.post.thumbnailUrl}
         />
         <div className="post-image-wrapper">
-          <img
+          <Image
             alt="post thumbnail"
             className="post-image"
             src={this.props.post.imageUrl}

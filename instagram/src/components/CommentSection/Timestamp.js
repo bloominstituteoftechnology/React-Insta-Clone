@@ -1,8 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
 
-    const Timestamp = props => {
+const StyledTime = styled.div`
+    display: flex;
+    padding: 10px 15px;
+    color: grey;
+` 
+
+ const Timestamp = props => {
         return(
-            <div className="timestamp">{props.timestamp}</div>
+            <StyledTime>{props.timestamp}</StyledTime>
         );
     }
 export default Timestamp;

@@ -75,7 +75,7 @@ const Logoimage = styled.div`
          <form className = 'searchBarFunction'>
            <Input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
          </form>
-         <Logoimage  >
+         <Logoimage>
             <Img type ='compass' src={compass} alt ='compass' />
             <Img type = 'heart' src = {heart} alt ='heart'/>
             <Img type ='person' src ={person} alt = 'person'/>

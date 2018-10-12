@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
 import Timestamp from './Timestamp'
+import styled from 'styled-components'
+
+const Thecontainer = styled.div`
+  width: 100%;
+  margin-bottom: 10px;
+`
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -52,9 +58,11 @@ class CommentSection extends React.Component {
     }, 500);
   };
 
+
+ 
   render() {
     return (
-      <div className = 'theContainer'>
+      <Thecontainer className = 'theContainer'>
         {this.state.comments.map((c, i) =>
            <Comment 
             key={i}
@@ -67,7 +75,7 @@ class CommentSection extends React.Component {
           submitComment={this.handleCommentSubmit}
           changeComment={this.commentHandler}
         />
-      </div>
+      </Thecontainer>
     );
   }
 }
