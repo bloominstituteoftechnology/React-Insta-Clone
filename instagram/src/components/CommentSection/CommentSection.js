@@ -67,24 +67,6 @@ class CommentSection extends React.Component {
         })
     }
 
-    // }
-
-    // addNewComment = (event, index) => {
-    //     const newComment = this.state.data.comments.slice();
-
-    //     this.setState({
-    //         data: this.state.comments.concat([newComment]),
-    //     })
-    // }
-
-    // commentUpdater = (event) => {
-
-    //     this.setState({
-    //         newData: this.newData.push({username: 'LorenzoEvans', text: event.target.value  })
-    //     })
-
-
-    // }
 
 
     render(){
@@ -96,23 +78,24 @@ class CommentSection extends React.Component {
            
             <img className="thumbnailImg" alt="" src={item.thumbnailUrl} /> 
             {item.username}
-<AddComment addComment={this.AddComment} commentUpdater={this.CommentUpdater} data={this.state.data} />
+
             <div className="imageUrl" > <img  alt="" src={item.imageUrl} /> </div>
             
             <div>{item.likes} likes</div>
+            <i className="far fa-heart"/>
             <div>{item.timestamp}</div>
-            {this.props.LikeButton()}
-            {this.props.Comment()}
            
             <div className="commentMap">{item.comments.map(item =>
             
             <div key={item.text}>
                 {item.username}
                 {item.text}
-            </div>, 
-            
-            )}</div>
-
+            </div>,
+           
+            )}
+            <AddComment addComment={this.AddComment} commentUpdater={this.CommentUpdater} data={this.state.data} />
+            </div>
+ 
             {/* In theory I feel like I should be able to nest a map method
             within a map method, so long as the parameters match and the values resolve correctly.
             

@@ -50,4 +50,6 @@ table {
 .sBarDiv {
 	border: 2px solid green !important;
 	height: 80px ;
+	display: flex ;
+	justify-content: space-between ;
 }

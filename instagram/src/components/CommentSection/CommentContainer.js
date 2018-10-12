@@ -8,9 +8,7 @@ class CommentContainer extends React.Component {
             
             data={this.props.data}
             
-            Comment={this.props.Comment}
                
-            LikeButton={this.props.LikeButton} 
             
              /></>
             )

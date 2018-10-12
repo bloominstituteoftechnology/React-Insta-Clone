@@ -41,19 +41,6 @@ commentUpdater = (event) => {
   })
 }
 
-LikeButton = () => (
-
-  <i className="fa fa-heart like-button" />
-
-);
-
-
-
-Comment = () => (
-
-  <i className="fa fa-comment comment "/>
-
-);
 render(){
 
     
@@ -68,9 +55,7 @@ render(){
       
         text={this.state.text}
         
-        LikeButton={this.LikeButton}
 
-        Comment={this.Comment}
         
       
         {...this.state.data.map(item =>
@@ -90,11 +75,9 @@ inputText={this.inputText}
 
 
 
-   LikeButton={this.LikeButton}
 
 
 
-   Comment={this.Comment}
 
 
 
@@ -111,9 +94,7 @@ inputText={this.inputText}
 inputText={this.inputText}
 
 
-   LikeButton={this.LikeButton}
 
-   Comment={this.Comment}
 
    newComment={this.state.newComment} 
 
