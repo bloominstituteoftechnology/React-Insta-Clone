@@ -1,0 +1,27 @@
+/* .sbContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+    border-bottom: 1px solid lightgray;
+}
+
+.sbCamera {
+    border-right: 1px solid gray;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+
+.sbInsta {
+    width: 100px;
+}
+
+.sbLeft {
+    display: flex;
+    align-items: center;
+}
+
+.sbRight {
+    width: 45px;
+    padding-right: 20px;
+} */
