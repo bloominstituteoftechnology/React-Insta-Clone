@@ -5,9 +5,10 @@ width:100%;
 max-width: 980px;
 display:flex;
 flex-direction:column;
-align-items:center;
+align-items: center;
+
 margin:auto;
 
-border:1px solid blue;
+
 
 }

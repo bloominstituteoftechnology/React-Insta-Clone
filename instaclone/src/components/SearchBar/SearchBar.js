@@ -7,7 +7,7 @@ class SearchBar extends Component {
 				<img id="instagram" src={require('./images/instagram.png')} alt="instagram" />
 				<h2>Instagram</h2>
       <form onSubmit={this.props.searchHandler}>
-					<input  onChange={this.props.searchInput} type="text" className="search" />
+					<input  placeholder='search' onChange={this.props.searchInput} type="text" className="search" />
 				</form>
 
 				<div className="icons">
