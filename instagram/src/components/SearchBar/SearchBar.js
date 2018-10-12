@@ -1,5 +1,6 @@
 import React from 'react';
-import './SearchBar.css';
+import {StyledHeader, StyledCompany, StyledCompanyLogo, StyledCompanyName, StyledSearchForm,
+StyledSearchInput, StyledLinks } from '../../reusables/Styles';
 
 class SearchBar extends React.Component {
 
@@ -19,23 +20,24 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div className="search-bar">
-                <div className="company">
-                    <i className="fab fa-instagram"></i><h1>Instagram</h1>
-                </div>
-                <form className="search" onSubmit={this.handleSubmit}>
-                    <input 
+            <StyledHeader>
+                <StyledCompany>
+                    <StyledCompanyLogo className="fab fa-instagram"></StyledCompanyLogo>
+                    <StyledCompanyName>Instagram</StyledCompanyName>
+                </StyledCompany>
+                <StyledSearchForm onSubmit={this.handleSubmit}>
+                    <StyledSearchInput 
                         placeholder="&#8981;&nbsp;Search" 
                         value={this.state.text} 
                         onChange={this.handleChange}
                     />
-                </form>
-                <div className="links">
+                </StyledSearchForm>
+                <StyledLinks>
                     <i className="far fa-compass"></i>
                     <i className="far fa-heart"></i>
                     <i className="far fa-user"></i>
-                </div>
-            </div>
+                </StyledLinks>
+            </StyledHeader>
         )
     }
 }
