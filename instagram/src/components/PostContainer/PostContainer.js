@@ -2,6 +2,37 @@ import React, { Component } from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection.js';
 import PropTypes from 'prop-types';
+import styled from 'styled-components'
+
+// styled post container components
+
+const Container = styled.div`
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #E6E6E6;
+    margin-bottom: 20px;
+`
+
+const PostHeader = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+const Thumbnail = styled.img`
+    height: 40px;
+    border-radius: 50%;
+    margin: 20px;
+`
+
+const Bold = styled.p`
+    font-weight: bold
+`
+
+const PostOptionsContainer = styled.div`
+    padding: 20px 20px 17px 20px;
+`
+
+// post container component
 
 class PostContainer extends React.Component {
     constructor() {
@@ -25,12 +56,12 @@ class PostContainer extends React.Component {
     checkLikes () {
         if (this.state.likes === 1) {
             return (
-                <p className='likes'>1 like</p>
+                <Bold>1 like</Bold>
             )
         }
         else {
             return (
-                <p className='likes'>{this.state.likes} likes</p>
+                <Bold>{this.state.likes} likes</Bold>
             )
         }
     }
@@ -58,16 +89,16 @@ class PostContainer extends React.Component {
 
     render () {
         return (
-            <div className='post-container'>
+            <Container>
                 {/* post header */}
-                <div className='post-header'>
-                    <img src={this.state.post.thumbnailUrl} className='thumbnail'/>
+                <PostHeader>
+                    <Thumbnail src={this.state.post.thumbnailUrl}/>
                     <p className='username'>{this.state.post.username}</p>
-                </div>
+                </PostHeader>
                 {/* image */}
                 <img src={this.state.post.imageUrl}/>
                 {/* like and comment buttons */}
-                <div className='post-options'>
+                <PostOptionsContainer>
                     <div>
                         <i 
                             className="far fa-heart fa-2x post"
@@ -77,8 +108,8 @@ class PostContainer extends React.Component {
                     </div>
                     {this.checkLikes()}
                     <CommentSection data={this.props.postInfo}/>
-                </div>
-            </div>
+                </PostOptionsContainer>
+            </Container>
         )
     }
 }

@@ -3,6 +3,18 @@ import './PostsPage.css';
 import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar.js';
 import PostContainer from './PostContainer.js';
+import styled from 'styled-components'
+
+const PostsPageContainer = styled.div`
+  display: flex;
+`
+
+const PostsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-top: 90px;
+`
 
 class PostsPage extends Component {
     constructor() {
@@ -40,13 +52,13 @@ class PostsPage extends Component {
 
     render() {
         return (
-          <div className="PostsPage">
+          <PostsPageContainer>
             <SearchBar 
               value={this.state.searchInput}
               onChange={this.typeInSearch}
               onSubmit={this.submitSearch}
             />
-            <div className='PostsContainer'>
+            <PostsContainer>
               {this.state.posts.map(post => {
                 return (
                   <PostContainer 
@@ -55,8 +67,8 @@ class PostsPage extends Component {
                   />
                 )
               })}
-            </div>
-          </div>
+            </PostsContainer>
+          </PostsPageContainer>
         );
       }
     }
