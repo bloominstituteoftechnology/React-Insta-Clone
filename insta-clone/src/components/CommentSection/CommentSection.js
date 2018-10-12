@@ -28,10 +28,10 @@ class CommentSection extends React.Component {
     this.setState({
       username: user
     })
-    let comment = JSON.parse(localStorage.getItem('post'))
-    this.setState({
-      comments: comment
-    })
+    // let comment = JSON.parse(localStorage.getItem('post'))
+    // this.setState({
+    //   comments: comment
+    // })
 }
   addNewComment = index => {
     const newPost = {
