@@ -1,6 +1,6 @@
 import React from "react"
-import Login from "../Login/login"
 
+//authenticte determines if the user is logged in and returns either the login page or the app
 const Authenticate = (App, Login) =>
     class extends React.Component {
         constructor(props){

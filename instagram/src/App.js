@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import Search from "./Components/SearchBar/search";
-import Post from "./Components/PostContainer/post";
+//import Post from "./Components/PostContainer/post";
 import PostPage from "./Components/PostContainer/postpage";
 import Authenticate from "./Components/Authentication/authenticate"
 import Login from './Components/Login/login';

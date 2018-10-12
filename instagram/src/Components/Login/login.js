@@ -1,5 +1,6 @@
 import React from "react"
 
+//login page requests the user to login and persist the users name in local storage
 class Login extends React.Component {
     constructor(props){
         super(props)
@@ -9,10 +10,9 @@ class Login extends React.Component {
         }
     }
     handelInput = (event) => {
-            console.log(event.target.value)
-            this.setState({
-                username: event.target.value,
-            })
+        this.setState({
+            username: event.target.value,
+        })
         
     }
     submitLogin = () => {
@@ -32,7 +32,13 @@ class Login extends React.Component {
                 </input>
                 <input 
                     type="password"
-                    placeholder="Password">
+                    placeholder="Password"
+                    onKeyDown={(event) => {
+                        if (event.keyCode === 13) {
+                            event.preventDefault()
+                            this.submitLogin()
+                        }}
+                    }>
                 </input>
                 <button
                     onClick={this.submitLogin}>

@@ -14,12 +14,6 @@ class Comments extends React.Component {
             likedFlag: false,
         }
     }
-
-    componentDidMount(){
-        console.log(this.state.comments)
-        const com = JSON.stringify(this.state.comments);
-        localStorage.setItem("comment", com)
-    }
     //tracks user input for the comment section
     handleInput = (event) => {
         this.setState({input: event.target.value})
@@ -30,16 +24,17 @@ class Comments extends React.Component {
     */
     addNewComment = () => {
         let data = {
-        username: "hotdamnirock",
-        text: this.state.input,
+            username: localStorage.getItem("user"),
+            text: this.state.input,
         }
-        let newcomment = this.state.comments.push(data)
+        this.state.comments.push(data)
+        //attempted stretch goal not working as intended
+        // localStorage.setItem("comment", JSON.stringify(this.state.comments))
+        // let newComments = JSON.parse(localStorage.getItem("comment"))
         this.setState({
-        comment: localStorage.getItem("comment", JSON.parse(newcomment)),
-        input: "",
+            comments: this.state.comments,
+            input: "",
         })
-        let storage = localStorage.setItem("comment", JSON.stringify(this.state.comments))
-        console.log(storage)
     }
 
     //increases likes for heart click
