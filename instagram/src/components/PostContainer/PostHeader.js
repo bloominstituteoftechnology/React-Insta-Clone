@@ -17,14 +17,12 @@ const Thumbnail = styled.img`
     margin: 0 15px;
 `
 
-const PostHeader = props => <PostHeaderContainer>
-                                <Thumbnail src={props.thumbnail} alt="User Thumbnail" />
-                                <strong>{props.username}</strong>
-                            </PostHeaderContainer>
+export const PostHeader = props =>  <PostHeaderContainer>
+                                        <Thumbnail src={props.thumbnail} alt="User Thumbnail" />
+                                        <strong>{props.username}</strong>
+                                    </PostHeaderContainer>
 
 PostHeader.propTypes = {
     thumbnail: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired
-}                            
-
-export default PostHeader
+}

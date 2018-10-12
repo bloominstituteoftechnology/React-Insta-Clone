@@ -1,7 +1,7 @@
 import React from 'react';
 import dummyData from '../../dummy-data';
-import PostContainer from './PostContainer';
-import SearchBar from '../SearchBar/SearchBar';
+import { PostContainer } from './PostContainer';
+import { SearchBar } from '../SearchBar/SearchBar';
 import styled from '../../../node_modules/styled-components';
 
 const App = styled.div`
@@ -19,7 +19,7 @@ export default class PostPage extends React.Component {
         this.state = {
             posts: [],
             search: "",
-            displayedPosts: [],
+            displayedPosts: []
         }
     }
     
@@ -32,8 +32,8 @@ export default class PostPage extends React.Component {
         this.setState({
             search: e.target.value
         },() => {
-            this.searchHandler();
-        });      
+            this.searchHandler()
+        })      
     }  
     searchHandler = () => {    
         this.setState({
@@ -41,11 +41,11 @@ export default class PostPage extends React.Component {
         })
     }
     render() {
+        const renderedPosts = this.state.search ? [...this.state.displayedPosts] : [...this.state.posts]
         return <App>
                     <SearchBar searchInputHandler={this.searchInputHandler} value={this.state.search} />
                     <Container>
-                        {this.state.search.length ? (this.state.displayedPosts.map(post => <PostContainer key={post.timestamp} post={post} incrementHandler={this.incrementHandler} />))
-                        : (this.state.posts.map(post => <PostContainer key={post.timestamp} post={post} incrementHandler={this.incrementHandler} />))}
+                        {renderedPosts.map(post => <PostContainer key={post.timestamp} post={post} incrementHandler={this.incrementHandler} />)}                        
                     </Container>            
                 </App>    
     }

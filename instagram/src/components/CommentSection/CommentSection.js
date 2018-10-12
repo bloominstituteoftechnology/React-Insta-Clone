@@ -1,8 +1,8 @@
 import React from 'react';
-import Comment from './Comment';
+import { Comment } from './Comment';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import LikesSection from './LikesSection';
+import { LikesSection } from './LikesSection';
 import styled from '../../../node_modules/styled-components';
 
 const Form = styled.form`
@@ -59,9 +59,8 @@ export default class CommentSection extends React.Component {
         localStorage.setItem('comments', JSON.stringify(this.state.comments))
     }
     inputHandler = e => {
-        const { value } = e.target;
         this.setState({
-            holder : value
+            holder : e.target.value
         })
     }
     addNewComment = e => {
@@ -71,14 +70,14 @@ export default class CommentSection extends React.Component {
         })
         this.savingComments()      
     }
-    likeHandler = (e) => {        
+    likeHandler = () => {        
         this.setState({
             bool: !this.state.bool
         })
     }
     
     render() {
-        return  <div>
+        return  <>
                     <LikesSection bool={this.state.bool} likes ={this.state.bool ? this.state.likes + 1 : this.state.likes} likeHandler={this.likeHandler} />
                     {this.state.comments.map(comment => <Comment key={Math.random()+comment.text} username={comment.username} text={comment.text} />)}
                     <Span>{moment(this.props.date, "MMMM Do YYYY, hh:mm:ss a").fromNow()}</Span>
@@ -86,7 +85,7 @@ export default class CommentSection extends React.Component {
                         <FormInput type="text" onChange={this.inputHandler} placeholder="Add a comment..." value={this.state.holder}></FormInput>
                         <FormIcon className="fas fa-ellipsis-h"></FormIcon>
                     </Form>                    
-                </div>
+                </>
     }
 }
 

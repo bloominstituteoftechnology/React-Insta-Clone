@@ -15,13 +15,13 @@ const LikesIcon = styled.i`
     ${props =>props.className.includes('fa-comment') ? `transform: scaleX(-1); position: relative; z-index: -1` : null}
 `
 
-const LikesSection = props =>   <Wrapper>
-                                    <div>
-                                        <LikesIcon bool={props.bool} className={props.bool ? "fas fa-heart fa-2x likes" : "far fa-heart fa-2x likes"} onClick={props.likeHandler}></LikesIcon>
-                                        <LikesIcon className="far fa-comment fa-2x likes"></LikesIcon>
-                                    </div>
-                                    <strong>{props.likes} likes</strong>    
-                                </Wrapper>
+export const LikesSection = props =>    <Wrapper>
+                                            <div>
+                                                <LikesIcon bool={props.bool} className={props.bool ? "fas fa-heart fa-2x likes" : "far fa-heart fa-2x likes"} onClick={props.likeHandler}></LikesIcon>
+                                                <LikesIcon className="far fa-comment fa-2x likes"></LikesIcon>
+                                            </div>
+                                            <strong>{props.likes} likes</strong>    
+                                        </Wrapper>
 
 LikesSection.propTypes = {
     likes: PropTypes.number,
@@ -30,6 +30,4 @@ LikesSection.propTypes = {
 
 LikesSection.defaultProps = {
     likes: 0
-}
-
-export default LikesSection                                
+}                      

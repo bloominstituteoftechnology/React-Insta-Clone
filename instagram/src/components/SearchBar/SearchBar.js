@@ -18,15 +18,13 @@ const SearchHeader = styled.header`
     background-color: white
 `
 
-const SearchBar = props =>  <SearchHeader>
-                                <Logo />
-                                <Search value={props.value} searchInputHandler={props.searchInputHandler} />
-                                <Icons />
-                            </SearchHeader>
+export const SearchBar = props =>   <SearchHeader>
+                                        <Logo />
+                                        <Search value={props.value} searchInputHandler={props.searchInputHandler} />
+                                        <Icons />
+                                    </SearchHeader>
 
 SearchBar.propTypes = {
     value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     searchInputHandler: PropTypes.func.isRequired
 }
-
-export default SearchBar;

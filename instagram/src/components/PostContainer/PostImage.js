@@ -7,10 +7,8 @@ const Image = styled.img`
     margin:0 1.5%;
 `
 
-const PostImage = props => <Image src={props.image} alt="Post" className="post-image" />
+export const PostImage = props => <Image src={props.image} alt="Post" className="post-image" />
 
 PostImage.propTypes = {
     image: PropTypes.string.isRequired
 }
-
-export default PostImage
