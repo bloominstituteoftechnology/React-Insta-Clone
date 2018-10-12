@@ -78,7 +78,8 @@ class PostContainer extends React.Component{
                         <CommentSection 
                                 comments={this.props.post.comments}
                                 timestamp={this.props.post.timestamp}
-                                id={this.props.id}/>
+                                id={this.props.id}
+                                username={this.props.username}/>
                     </div>
                 </div>
             </div>

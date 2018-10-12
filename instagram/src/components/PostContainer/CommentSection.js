@@ -12,6 +12,7 @@ class CommentSection extends React.Component{
         comments: [],
         newComment: '',
         timestamp: '',
+        username:''
         
     }
    }
@@ -20,13 +21,14 @@ class CommentSection extends React.Component{
            id:this.props.id,
            comments:this.props.comments,
            timestamp:this.props.timestamp,
+           username:this.props.username
        });
    }
    addComment=event=>{
        if(event.keyCode===13){
            event.preventDefault();
            const newComment={
-               username:this.state.username.value,
+               username:localStorage.user,
                text:this.state.newCommentInput,
            }
            this.setState({
