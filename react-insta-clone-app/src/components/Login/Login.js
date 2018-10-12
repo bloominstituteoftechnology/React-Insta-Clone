@@ -11,26 +11,48 @@ class Login extends React.Component {
             password: '',
         };
     }
-    handleInput = ({event}) => {
-        this.setState({ 
-            [event.target.name]: event.target.value
-        });
-        console.log('input')
+    handleInput = event => {
+        if (event.target.className === 'username'){
+            this.setState({ 
+                username: event.target.value
+            });
+            console.log(event.target.value)
+            console.log(this.state)
+        } else if (event.target.className === 'password'){
+            this.setState({ 
+                password: event.target.value
+            });
+            console.log(event.target.value)
+            console.log(this.state)
+        }
     }
     handleLogin = event => {
         const user = this.state.username;
         localStorage.setItem('user', user);
-        window.location.reload(true);
-        console.log('login')
+        window.location.reload();
+        console.log(event.target.value)
+        console.log(this.state)
     };
+    handleEnterPress = event => {
+        if (event.key === 'Enter'){
+            this.setState({ 
+                password: event.target.value
+            });
+            console.log(event.target.value)
+            console.log(this.state)
+            const user = this.state.username;
+            localStorage.setItem('user', user);
+            window.location.reload();
+        }
+    }
 
     render() {
         return(
             <div className='login-box'>
                 <h2>React-Insta-Clone</h2>
                 <span>Please Login:</span>
-                <input name='username' className='username-password' value={this.state.username} onChange={this.handleInput} />
-                <input password='password' className='username-password' value={this.state.password} onChange={this.handleInput} />
+                <InputComponent placeholder='Username' className='username'  input={this.handleInput} />
+                <InputComponent placeholder='Password'  className='password'  input={this.handleInput} onEnter={this.handleEnterPress} />
                 <br />
                 <button onClick={this.handleLogin}>Login</button>
             </div>
