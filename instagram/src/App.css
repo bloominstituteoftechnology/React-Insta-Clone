@@ -1,0 +1,109 @@
+.App {
+  text-align: center;
+}
+
+.searchBarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+/* .leftContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  padding: 20px;
+} */
+
+/* .line {
+  padding: 0px 20px;
+  margin: 0px;
+  width: 10px;
+  height: 45px
+} */
+
+/* .instaLogo{
+  height: 40px;
+ } */
+
+ /* .textLogo {
+   width: 125px;
+ } */
+
+ /* .searchBar {
+  padding: 10px;
+} */
+input {
+  text-align: center;
+} */
+
+ /* .compass {
+  width:25px;
+  height: 25px;
+  padding: 15px;
+ } */
+
+ /* .heart{
+   width:25px;
+   height: 25px;
+   padding: 15px;
+ }
+
+ .person {
+  width:25px;
+   height: 25px;
+   padding: 15px;
+ } */
+
+ .loginInput {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 80%;
+   margin: 100px;
+ } 
+ .loginInput h2 {
+   font-size: 40px;
+   padding-bottom: 20px;
+ }
+
+ .loginInput input {
+   padding: 20px;
+   width: 50%;
+   margin: 20px 0px;
+   background-color: rgba(32, 178, 171, 0.246);
+   font-size: 18px;
+   border: none;
+ }
+
+ .loginInput input:hover {
+  width: 55%;
+  height: 50px;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #DDDDDD
+ }
+
+ .login-button {
+  padding: 20px;
+  width: 57%;
+  margin: 20px 0px;
+  border:none;
+ }
+
+ .login-button:hover {
+   cursor: pointer;
+   background-color: rgb(236, 206, 210);
+   width: 62%;
+   height: 80px;
+   border: none;
+   font-weight: bold;
+   font-size: 20px;
+ }
+
