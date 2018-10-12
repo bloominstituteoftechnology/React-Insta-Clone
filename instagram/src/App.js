@@ -5,6 +5,24 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 import PostsPage from './components/PostContainer/PostsPage' ;
 import Authenticate from './components/Authentication/Authenticate';
+import styled from 'styled-components'
+
+const Body = styled.body`
+
+justify-content: center ;
+flex-direction: column ;
+font-size: 1.6rem ;
+
+`
+const HTML = styled.html`
+font-size: 62.5%
+display: flex ;
+justify-content: center ;
+border: 2px solid black ;
+
+`
+
+const Root = styled
 
 
 class App extends React.Component {
@@ -46,6 +64,7 @@ render(){
     
   return(
     <div>
+    <HTML> <Body> 
     <Authenticate />
     <SearchBar 
 
@@ -73,14 +92,6 @@ render(){
 inputText={this.inputText}
 
 
-
-
-
-
-
-
-
-
    newComment={this.state.newComment} 
 
 
@@ -102,9 +113,12 @@ inputText={this.inputText}
     />
 
 
-
-
+ </Body>
+</HTML>
+   
     </div>
+   
+   
   )
 }
 

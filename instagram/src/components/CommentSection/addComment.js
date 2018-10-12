@@ -11,7 +11,7 @@ const AddComment = (props) => {
                 onChange={props.addComment}
                 type="text"
                 placeholder="Comment here!"
-                /><button onClick={props.commentUpdater} ></button>
+                /><button onClick={props.submitComment} ></button>
             </form>
         </div>
         )    

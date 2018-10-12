@@ -48,25 +48,28 @@ class CommentSection extends React.Component {
 
         
     AddComment = (event) => {
+        event.preventDefault();
         const dataCopy = this.state.data.comments.slice() ;
 
-        dataCopy.push({username: 'LorenzoEvans', text: this.state.newComment })
+        dataCopy.push({username: 'LorenzoEvans', text: event.target.value })
 
         this.setState({
-            // data: dataCopy 
+            data: dataCopy 
         })
     }
 
-    HandleAdd = (event) => {
+    changeHandler = (event) => {
+        event.preventDefault();
         this.state({
-            comment: event.target.value 
+            newData: event.target.value 
         })
     }
 
-    SubmitComment = () => {
+    handleComment = (commentText) => {
+        // event.preventDefault()
         this.setState({
         data: this.state.data.comments.map( comment => {
-            if (comment.text === this.text){
+            if (comment.text === commentText){
                 return {
                     username: comment.username,
                     text: comment.text
