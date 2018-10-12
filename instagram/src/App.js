@@ -135,4 +135,4 @@ inputText={this.inputText}
 
 
 
-export default App 
+export default  Authenticate(App) 

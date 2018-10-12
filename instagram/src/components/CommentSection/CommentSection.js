@@ -3,6 +3,17 @@ import dummyData from '../../dummy-data';
 import PropTypes from 'prop-types';
 import './CommentSection.css';
 import AddComment from './addComment';
+import styled from "styled-components"
+
+const Img = styled(Img)`
+border: 5px solid pink ;
+	display: flex ;
+	justify-content: center ;
+
+`
+
+
+
 
 class CommentSection extends React.Component {
 
@@ -39,7 +50,7 @@ class CommentSection extends React.Component {
         dataCopy.push({username: 'LorenzoEvans', text: this.state.newComment })
 
         this.setState({
-            data: dataCopy 
+            // data: dataCopy 
         })
     }
 

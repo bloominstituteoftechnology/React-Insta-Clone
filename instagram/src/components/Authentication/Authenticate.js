@@ -1,7 +1,8 @@
 import React from 'react';
 
 
-class Authenticate extends React.Component{
+const Authenticate = (App) => class extends React.Component
+{
     constructor(props){
         super(props)
 
@@ -12,16 +13,27 @@ class Authenticate extends React.Component{
         }
     }
 
-    // componentDidMount() {
-    //     if
-    // }
+    componentDidMount() {
+        if(!localStorage.getItem('user')){
+            this.setState({
+                login: false
+            })
+        }
+
+        else {
+            this.setState({
+                login: true 
+            })
+        }
+    }
     
 
 render(){
+    if(this.state.login) return <App />
     return(
         <div></div>
     )
 }
 }
 
-export default Authenticate 
+export default Authenticate ;
