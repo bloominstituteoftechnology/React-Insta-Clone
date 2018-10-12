@@ -1,0 +1,48 @@
+/*background: #FAFAFA ;
+font-family: 'Lobster Two', cursive;
+font-family: 'Roboto Condensed', sans-serif;
+#DBDBDB
+
+*/
+
+
+.title {
+    border-left: solid 1px black;
+    padding-left: 15px;
+    display: inline-block;
+    padding-top: 1px;
+    
+}
+
+.title h1{
+    font-family: 'Lobster Two', cursive;
+    font-weight: 100;
+    font-size: 24px;
+}
+
+
+.search{
+    position: relative;
+}
+
+.feather-search{
+    position: absolute;
+    top: 7px;
+    left: 75px;
+}
+
+.search-selected-icon{
+    left:5px;
+}
+
+.feather-x-circle{
+    position: absolute;
+    width: 20px;
+    top: 2px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.none{
+    display: none;
+}

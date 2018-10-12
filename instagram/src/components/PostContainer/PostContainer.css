@@ -1,0 +1,79 @@
+.post-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 77px;
+}
+
+.card{
+    max-width: 614px;
+    margin: 30px auto;
+    background: white;
+}
+
+.fill-in-card{
+    width: 614px;
+    margin: 30px auto;
+    background: white;
+}
+
+.fill-in-thumbnail{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 15px;
+    background: radial-gradient(gray,white,gray) ;
+    
+}
+
+.card-header{
+    border: #DBDBDB 1px solid;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: .4px;
+}
+
+.post-img{
+    width: 100%;
+}
+
+.card-comments{
+    border: #DBDBDB 1px solid;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.card-comments-fill-in{
+    border: #DBDBDB 1px solid;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    height:225px;
+    width: 100%;
+}
+
+.post-img-fill-in{
+    background-image: linear-gradient(to bottom right, gray , white 50%, gray );
+    height: 600px;
+    width: 100%;
+}
+
+
+
+.thumbnail{
+    height: 30px;
+    width: auto;
+    border-radius: 50%;
+    margin: 15px;
+}
+
+.icon-bar .icon{
+    transform: scale(1.35);
+    padding: 15px 9px;
+}
+
+.icon-bar{
+    padding: 0 6px;
+}

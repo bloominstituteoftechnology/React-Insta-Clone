@@ -1,0 +1,38 @@
+
+
+.log-in-form{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 5px;
+    padding: 25px;
+    justify-content: space-around;
+}
+
+.log-in-form h4{
+    font-size: 28px;
+    font-family: 'Lobster Two', cursive;
+}
+
+.log-in-form .instabox{
+    height: 38px;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.log-in-form .instabox>*{
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+}
+
+.log-in-form .instabox .feather-instagram{
+    transform: translateY(3px)
+}
+
+.log-in-form button{
+    display:none;
+}
