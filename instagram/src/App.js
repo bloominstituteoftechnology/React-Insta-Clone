@@ -5,7 +5,6 @@ import Search from "./Components/SearchBar/search";
 import Post from "./Components/PostContainer/post";
 import PostPage from "./Components/PostContainer/postpage";
 import Authenticate from "./Components/Authentication/authenticate"
-import ls from 'local-storage'
 
 //App renders the header for IG
 //Also renders post component to the screen via mapping the state

@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import CommentBox from "./commentbox";
 import "./comment.css";
-import ls from 'local-storage'
 
 //comments component maps over the comment array and passes that data to comment component
 class Comments extends React.Component {
@@ -16,6 +15,11 @@ class Comments extends React.Component {
         }
     }
 
+    componentDidMount(){
+        console.log(this.state.comments)
+        const com = JSON.stringify(this.state.comments);
+        localStorage.setItem("comment", com)
+    }
     //tracks user input for the comment section
     handleInput = (event) => {
         this.setState({input: event.target.value})
@@ -24,16 +28,18 @@ class Comments extends React.Component {
     /*adds comment to any post
     if the username of the current post matches the comment box we are adding the comment to, the new comment is pushed as an addition to the comment section. Otherwise the orginal post is returned
     */
-    addNewComment = (event) => {
-        event.preventDefault()
+    addNewComment = () => {
         let data = {
         username: "hotdamnirock",
         text: this.state.input,
         }
+        let newcomment = this.state.comments.push(data)
         this.setState({
-        comment: this.state.comments.push(data),
+        comment: localStorage.getItem("comment", JSON.parse(newcomment)),
         input: "",
         })
+        let storage = localStorage.setItem("comment", JSON.stringify(this.state.comments))
+        console.log(storage)
     }
 
     //increases likes for heart click
@@ -53,10 +59,7 @@ class Comments extends React.Component {
         return (
             <>
                 <div className="images">
-                    <i className="far fa-heart fa-2x" onClick={() =>
-                    {
-                        this.increment()
-                    }}></i>
+                    <i className="far fa-heart fa-2x" onClick={() => this.increment()}></i>
                     <i className="far fa-comment fa-2x"></i>
                 </div>
                 <div className="username">{this.state.likes} likes</div>
