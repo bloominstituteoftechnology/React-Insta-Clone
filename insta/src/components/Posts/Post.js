@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import FlexColumnContainer from '../Styles/Reusables/FlexColumnContainer'
@@ -15,19 +15,21 @@ const Img = styled.img `
     width: 100%;
 `;
 
-const Post = props => {
-    return (
-        <>
-            <FlexColumnContainer>
-                <Thumbnail src={props.post.thumbnailUrl} alt={'user'}></Thumbnail>
-                <p>{props.post.username}</p>
-            </FlexColumnContainer>
+class Post extends Component {
+    render() {
+        return (
             <>
-                <Img src={props.post.imageUrl} alt={'post-img'}></Img>
+                <FlexColumnContainer>
+                    <Thumbnail src={this.props.post.thumbnailUrl} alt={'user'}></Thumbnail>
+                    <p>{this.props.post.username}</p>
+                </FlexColumnContainer>
+                <>
+                    <Img src={this.props.post.imageUrl} alt={'post-img'}></Img>
+                </>
             </>
-        </>
-    );
-};
+        );
+    }
+}
 
 //Tests
 Post.propTypes = {
