@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Comments from "../CommentSection/Comments";
 import LikeSection from "./LikeSection";
 import "./PostContainer.css";
+import { StyledDiv, StyledImg } from "../Styles/StyleSheet";
 
 class Post extends Component {
   constructor(props) {
@@ -25,32 +26,32 @@ class Post extends Component {
     const likes = this.props.post.likes;
 
     return (
-      <section className="Post" ref="Post">
+      <StyledDiv post>
         <header>
-          <div className="Post-head">
-            <div className="Post-head-avatar">
-              <img src={avatar} alt={nickname} />
-            </div>
-            <div className="Post-nickname">
+          <StyledDiv postHead>
+            <StyledDiv postHeadAvatar>
+              <StyledImg avatarImg src={avatar} alt={nickname} />
+            </StyledDiv>
+            <StyledDiv postNickname>
               <span>{nickname}</span>
-            </div>
-          </div>
+            </StyledDiv>
+          </StyledDiv>
         </header>
-        <div className="Post-image">
-          <div className="Post-image-bg">
-            <img alt={caption} src={image} />
-          </div>
+        <div>
+          <StyledDiv postImgBg>
+            <StyledImg postImg alt={caption} src={image} />
+          </StyledDiv>
         </div>
-        <section className="Post-icons">
-          <div className="left-icons">
+        <StyledDiv postIcons>
+          <StyledDiv leftIcons>
             <div className="Post-icon-heart" onClick={this.addLikes} />
             <div className="Post-icon-comment" />
             <div className="Post-icon-share" />
-          </div>
-          <div className="right-icons">
+          </StyledDiv>
+          <StyledDiv rightIcons>
             <div className="Post-icon-save" />
-          </div>
-        </section>
+          </StyledDiv>
+        </StyledDiv>
         <section className="Post-likes">
           <LikeSection
             incrementLike={this.incrementLike}
@@ -62,7 +63,7 @@ class Post extends Component {
           postId={this.props.post.image}
           comments={this.props.post.comments}
         />
-      </section>
+      </StyledDiv>
     );
   }
 }

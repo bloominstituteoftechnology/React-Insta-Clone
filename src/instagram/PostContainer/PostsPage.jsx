@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+
 import Header from "../SearchBar/Header";
 import PostContainer from "./PostContainer";
 import Post from "./Post";
