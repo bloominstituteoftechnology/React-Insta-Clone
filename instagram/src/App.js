@@ -12,17 +12,15 @@ const Body = styled.body`
 justify-content: center ;
 flex-direction: column ;
 font-size: 1.6rem ;
-
 `
 const HTML = styled.html`
 font-size: 62.5%
 display: flex ;
 justify-content: center ;
 border: 2px solid black ;
-
 `
 
-const Root = styled
+// const Root = styled
 
 
 class App extends React.Component {
@@ -63,9 +61,10 @@ render(){
 
     
   return(
-    <div>
-    <HTML> <Body> 
-    <Authenticate />
+   
+   <>
+    <HTML><Body> 
+    <Authenticate state={this.state} />
     <SearchBar 
 
         inputText={this.inputText} 
@@ -113,10 +112,9 @@ inputText={this.inputText}
     />
 
 
- </Body>
-</HTML>
+ </Body></HTML>
    
-    </div>
+    </>
    
    
   )

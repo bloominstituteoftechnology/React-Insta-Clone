@@ -9,7 +9,6 @@ const Img = styled.img`
 border: 5px solid pink ;
 	display: flex ;
 	justify-content: center ;
-
 `
 
 
@@ -21,7 +20,7 @@ class CommentSection extends React.Component {
 
         this.state = {
 
-            data: props.data,
+            data: dummyData,
 
             newData: [],
 
@@ -47,14 +46,26 @@ class CommentSection extends React.Component {
 //        }
 
         
-    AddComment = (event) => {
+    addComment = (event) => {
         event.preventDefault();
-        const dataCopy = this.state.data.comments.slice() ;
+        const dataCopy = this.state.data.map(item =>{
+
+
+            // if(item.comments){
+            //     do {
+            //       this.state.newData.push(item.comments.slice )  
+            //     } while (item.comments) 
+
+            //     return item ;
+            // }
+
+            // ^If uncommented, the app will crash immediately if text is entered into comment field.
+        })  ;
 
         dataCopy.push({username: 'LorenzoEvans', text: event.target.value })
 
         this.setState({
-            data: dataCopy 
+            data: this.state.newData
         })
     }
 
@@ -68,7 +79,7 @@ class CommentSection extends React.Component {
     handleComment = (commentText) => {
         // event.preventDefault()
         this.setState({
-        data: this.state.data.comments.map( comment => {
+        data: this.state.data.map( comment => {
             if (comment.text === commentText){
                 return {
                     username: comment.username,
@@ -91,7 +102,7 @@ class CommentSection extends React.Component {
 
     return(
         <div className="cmntSectDiv">
-        {this.props.data.map(item => <div key={item.timestamp}>
+        {this.state.data.map(item => <div key={item.timestamp}>
             <img className="thumbnailImg" alt="" src={item.thumbnailUrl} /> 
             {item.username}
 
@@ -113,7 +124,7 @@ class CommentSection extends React.Component {
             </div>,
            
             )}
-            <AddComment addComment={this.AddComment} commentUpdater={this.CommentUpdater} data={this.state.data} />
+            <AddComment handleComment={this.handleComment} changeHandler={this.changeHandler} addComment={this.addComment} data={this.state.data} />
             </div>
  
             {/* In theory I feel like I should be able to nest a map method

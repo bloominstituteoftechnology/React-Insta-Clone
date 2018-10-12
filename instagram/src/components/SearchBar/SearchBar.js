@@ -11,7 +11,7 @@ const SearchBar = (props) => {
         <div>instagram</div>
         <img alt="" src={props.data.map(item => <div key={item.username}>item.thumbnailUrl</div>)} />
        
-        <input className="searchInput" value="Search..." />
+        <input  onChange={props.commentUpdater} className="searchInput" />
         <i className="far fa-compass"/>
         <i className="far fa-heart" />
         <i className="far fa-user"/>

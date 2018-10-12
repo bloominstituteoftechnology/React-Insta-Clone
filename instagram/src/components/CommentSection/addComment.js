@@ -8,6 +8,7 @@ const AddComment = (props) => {
 
                 <input 
                 value={props.newComment}
+                onClick={props.handleComment}
                 onChange={props.addComment}
                 type="text"
                 placeholder="Comment here!"
