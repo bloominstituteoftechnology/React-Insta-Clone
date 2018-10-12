@@ -5,10 +5,21 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import FlexColumnContainer from '../Styles/Reusables/FlexColumnContainer'
 
+//Styles
+const CommentInput = styled.input `
+    border: 2px solid #ecf0f1;
+    padding: 20px 0;
+    width: 100%;
+`;
+
+const CommentContainer = styled.section `
+    margin-left: 20px;
+`;
+
 const CommentSection = props => {
     return (
       <>
-        <div className='comment-container'>
+        <CommentContainer>
             <FlexColumnContainer>
                 <FontAwesomeIcon className='icons' icon='heart' onClick={() => props.newLike(props.index)} />
                 <FontAwesomeIcon className='icons comment' icon='comment' />
@@ -21,9 +32,8 @@ const CommentSection = props => {
                     <Comment comment={comment} />
                 </div>
             ))}
-        </div>
-        <input 
-            className='comment-input' 
+        </CommentContainer>
+        <CommentInput
             type='text' 
             placeholder='Comment' 
             value={props.commentInput} 
@@ -34,6 +44,7 @@ const CommentSection = props => {
     );
 }
 
+//Test
 CommentSection.propTypes = {
     comments: PropTypes.arrayOf(PropTypes.object),
     likes: PropTypes.number

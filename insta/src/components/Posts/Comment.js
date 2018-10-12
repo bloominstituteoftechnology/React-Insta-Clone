@@ -9,6 +9,7 @@ const Comment = props => {
     );
 };
 
+//Test
 Comment.propTypes = {
     comment: PropTypes.object
 };
