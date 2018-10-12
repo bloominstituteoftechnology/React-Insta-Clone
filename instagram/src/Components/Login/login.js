@@ -1,6 +1,35 @@
 import React from "react"
+import styled from "styled-components";
 
 //login page requests the user to login and persist the users name in local storage
+
+const LoginContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+`
+const Button = styled.button`
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    max-width: 200px;
+    width: 30%;
+    margin-top: 5px;
+
+    :hover {
+        background-color: white;
+        color: blue;
+        border: 1px solid blue;
+    }
+`
+
+const Input = styled.input`
+    width: 30%;
+    maxwidth: 400px;
+    margin: 2px 0;
+`
 class Login extends React.Component {
     constructor(props){
         super(props)
@@ -22,15 +51,15 @@ class Login extends React.Component {
     }
     render() {
         return (
-            <>
+            <LoginContainer>
                 <h1>Welcome to Instagram-Clone</h1>
                 <h2>Please Login</h2>
-                <input
+                <Input
                     tyep="text"
                     placeholder="Username"
                     onChange={this.handelInput}>
-                </input>
-                <input 
+                </Input>
+                <Input 
                     type="password"
                     placeholder="Password"
                     onKeyDown={(event) => {
@@ -39,11 +68,12 @@ class Login extends React.Component {
                             this.submitLogin()
                         }}
                     }>
-                </input>
-                <button
+                </Input>
+                <Button
                     onClick={this.submitLogin}>
-                    Login</button>
-            </>
+                    Login
+                </Button>
+            </LoginContainer>
         )
     }
 }

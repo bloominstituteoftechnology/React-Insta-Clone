@@ -3,17 +3,34 @@ import Header from "./header";
 import Img from "./img";
 import Comments from "../CommentSection/comment";
 import PropTypes from "prop-types";
-import "./post.css";
+//import "./post.css";
+import styled from "styled-components";
+
+const PostHeader = styled.div`
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    width: 100%;
+`
+
+const CommentContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    margin: 20px;
+    margin-right: 0;
+`
 
 //post component creates the header for the user post and passes the comment data to the comments component
 const PostPage = (props) => {
     return (
         <>
-            <div className="header">
+            <PostHeader>
                 <Header post={props.post}/>
-            </div>
+            </PostHeader>
             <Img img={props.post}/>
-            <div className="comments">
+            <CommentContainer>
                 <Comments
                     postId={props.post.username}
                     comment={props.post.comments} 
@@ -22,7 +39,7 @@ const PostPage = (props) => {
                     time={props.post.timestamp}
                     increment={props.increment}
                 />
-            </div>
+            </CommentContainer>
         </>
     )
 }

@@ -1,8 +1,14 @@
 import React from "react";
+import styled from "styled-components";
+
+const PostImg = styled.img`
+    display: flex;
+    width: 100%;
+`
 
 const Img = props => {
     return (
-        <img className="post-img" src={props.img.imageUrl} alt="user post"/>
+        <PostImg src={props.img.imageUrl} alt="user post"/>
     )
 }
 

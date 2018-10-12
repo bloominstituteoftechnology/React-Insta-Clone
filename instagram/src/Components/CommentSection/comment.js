@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import CommentBox from "./commentbox";
 import "./comment.css";
+import Username from "../Styles/reusable";
+import styled from "styled-components";
 
+const PostImg = styled.img`
+    display: flex;
+    width: 100%;
+`
 //comments component maps over the comment array and passes that data to comment component
 class Comments extends React.Component {
     constructor(props){
@@ -57,11 +63,11 @@ class Comments extends React.Component {
                     <i className="far fa-heart fa-2x" onClick={() => this.increment()}></i>
                     <i className="far fa-comment fa-2x"></i>
                 </div>
-                <div className="username">{this.state.likes} likes</div>
+                <Username>{this.state.likes} likes</Username>
                 {this.state.comments.map((comment) => {
                     return (
                     <div className="comment-text" key={comment.text}>
-                        <span className="username">{comment.username}</span>{comment.text}
+                        <Username>{comment.username}</Username>{comment.text}
                     </div>
                     )
                 })}

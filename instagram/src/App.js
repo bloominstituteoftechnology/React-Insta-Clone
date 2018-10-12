@@ -6,7 +6,24 @@ import Search from "./Components/SearchBar/search";
 import PostPage from "./Components/PostContainer/postpage";
 import Authenticate from "./Components/Authentication/authenticate"
 import Login from './Components/Login/login';
+import styled from "styled-components";
 
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 62.5%;
+`
+const PostContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 924px; */
+  max-width: 604px;
+  width: 100%;
+`
 //App renders the header for IG
 //Also renders post component to the screen via mapping the state
 class App extends Component {
@@ -56,7 +73,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <AppContainer>
         <Search
           insta={this.state.instagram}
           text={this.state.input}
@@ -64,15 +81,15 @@ class App extends Component {
           search={this.filterPost}
         />
         {this.state.instagram.map(data => (
-          <div className="post-container" key={data.username}>
+          <PostContainer className="post-container" key={data.username}>
             <PostPage 
               post={data}
               text={this.state.input}
               increment={this.increment}
             />
-          </div>
+          </PostContainer>
         ))}
-      </div>
+      </AppContainer>
     );
   }
 }
