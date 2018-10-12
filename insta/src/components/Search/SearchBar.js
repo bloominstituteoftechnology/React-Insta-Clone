@@ -1,24 +1,59 @@
 import React from 'react';
-import './SearchBar.css';
+import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+//Styled components
+const SearchWell = styled.section `
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ecf0f1;
+`;
+
+const SearchContainer = styled.section `
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 15%;
+`;
+
+const Logo = styled.img `
+    width: 100px;
+`;
+
+const VL = styled.section `
+    border-left: 6px solid #ecf0f1;
+    height: 50px;
+`;
+
+const Search = styled.input `
+    padding: 10px 40px;
+    text-align: center;
+    border: 2px solid #ecf0f1;
+`;
 
 const SearchBar = (props) => {
     return (
-        <div className='search-well'>
-            <div className='search-container'>
-                <img className='logo' src={require('../img/insta-camera-logo.jpg')} alt={'insta-camera'}></img>
-                <div className='vl'></div>
-                <img className='logo' src={require('../img/insta-logo.png')} alt={'insta-logo'}></img>
-            </div>
-            <div className='search-container'>
-                <input className='search' type='text' placeholder='Search' value={props.searchInput} onChange={props.handleSearch} onKeyPress={props.searchUp} />
-            </div>
-            <div className='search-container'>
+        <SearchWell>
+            <SearchContainer>
+                <Logo src={require('../img/insta-camera-logo.jpg')} alt={'insta-camera'}></Logo>
+                <VL></VL>
+                <Logo className='logo' src={require('../img/insta-logo.png')} alt={'insta-logo'}></Logo>
+            </SearchContainer>
+            <SearchContainer>
+                <Search className='search' 
+                    type='text' 
+                    placeholder='Search' 
+                    value={props.searchInput} 
+                    onChange={props.handleSearch} 
+                    onKeyPress={props.searchUp} 
+                />
+            </SearchContainer>
+            <SearchContainer>
                 <FontAwesomeIcon className='icons' icon='compass' />
                 <FontAwesomeIcon className='icons' icon='heart' />
                 <FontAwesomeIcon className='icons' icon='user' onClick={props.clearStorage} />
-            </div>
-        </div>
+            </SearchContainer>
+        </SearchWell>
     );
 };
 
