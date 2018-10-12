@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Post from './Post';
 import Likes from './Likes';
 import CommentList from '../CommentSection/CommentList';
+import {PostContainer} from './styled'
 
 class PostList extends React.Component {
   constructor(props) {
@@ -19,11 +20,11 @@ class PostList extends React.Component {
 
   render() {
     return (
-      <div>
+      <PostContainer>
         <Post userData={this.props.post} />
         <Likes likes={this.state.likes} increaseLikes={this.increaseLikes} />
         <CommentList comments={this.props.post.comments} timeStamp={this.props.post.timestamp} />
-      </div>
+      </PostContainer>
     )
   }
 }

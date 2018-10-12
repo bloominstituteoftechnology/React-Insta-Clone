@@ -1,18 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import {UserDetails, ProfileImage, PostImageContainer, PostImage, } from './styled'
 
 const Post = props => {
   return (
     <div>
-      <div className='userDetails'>
+      <UserDetails>
         <div className='profileImgContainer'>
-          <img src={props.userData.thumbnailUrl} alt='post images'/>
+          <ProfileImage src={props.userData.thumbnailUrl} alt='post images'/>
         </div>
         <p>{props.userData.username}</p>
-      </div>
-      <div className='postImage'>
-        <img src={props.userData.imageUrl} alt='post' />
-      </div>
+      </UserDetails>
+      <PostImageContainer>
+        <PostImage src={props.userData.imageUrl} alt='post' />
+      </PostImageContainer>
     </div>
   )
 }
