@@ -19,7 +19,7 @@ class Comment extends Component {
        })
     }
     render() {
-       
+         console.log(this.props.comments);
         return (
             <div className='comment'>
               <div className="comment-container">

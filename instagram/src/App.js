@@ -5,6 +5,7 @@ import Search from './components/SearchBar/Search.js';
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage.js';
 import PropTypes from 'prop-types';
+import Authenticate from './components/Authentication/Authenticate';
 
 
 class App extends React.Component {
@@ -42,6 +43,7 @@ class App extends React.Component {
         <Search display={this.displaySearch} />
         {/* {data.map(postObject=> <PostContainer key={postObject.timestamp} card={postObject} />)} */}
         <PostsPage  data = {data} />
+        {/* <Authenticate {PostsPage} /> */}
       </div>
     );
   }
@@ -54,4 +56,5 @@ App.propTpes = {
   data: PropTypes.arrayOf(PropTypes.object),
  }
 
-export default App;
+// export default App;
+export default Authenticate(App);
