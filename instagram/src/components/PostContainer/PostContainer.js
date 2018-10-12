@@ -6,8 +6,15 @@ class PostContainer extends Component{
     constructor(props){
         super(props);
         this.state={
+            likes: this.props.post.likes
+        };
+    }
 
-        }
+    likesHandler = () =>{
+        this.setState=(prevState) =>{
+            likes: prevState + 1
+        };
+        console.log(this.state.likes)
     }
 
     render(){
@@ -22,10 +29,10 @@ class PostContainer extends Component{
                 </div>
                 <div className='comments'>
                     <div>
-                        <i className="far fa-heart"></i>
+                        <i onClick={this.likesHandler} className="far fa-heart"></i>
                         <i className="far fa-comment"></i>
                     </div>
-                    <p>{this.props.post.likes} likes</p>
+                    <p>{this.state.likes} likes</p>
                     <CommentSection comments={this.props.comments} timestamp={this.props.post.timestamp} />
                 </div>
             </div>
