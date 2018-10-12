@@ -1,5 +1,4 @@
 import React from 'react';
-import './CommentSection.css';
 import styled from 'styled-components';
 
 const Comments = styled.div`

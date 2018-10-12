@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './CommentSection.css';
 import Comment from './Comment.js'
 import NewComment from './NewComment.js';
 import Buttons from './Buttons.js';

@@ -1,5 +1,4 @@
 import React from 'react';
-import './SearchBar.css';
 import SearchButtons from './SearchButtons.js';
 import SearchInput from './SearchInput.js';
 import SearchLogo from './SearchLogo.js';
