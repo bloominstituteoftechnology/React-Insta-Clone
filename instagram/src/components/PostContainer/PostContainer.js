@@ -1,5 +1,6 @@
 import React from "react";
 import Post from "./Post";
+import PropTypes from "prop-types";
 
 const PostContainer = props => {
   return (
@@ -10,6 +11,18 @@ const PostContainer = props => {
     </div>
   );
 };
+
+PostContainer.propTypes = {
+  postObject: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    timestamp: PropTypes.string,
+    comments: PropTypes.arrayOf(PropTypes.string)
+  })
+
+}
 
 export default PostContainer;
 
