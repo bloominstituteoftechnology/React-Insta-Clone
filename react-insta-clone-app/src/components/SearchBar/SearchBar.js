@@ -13,7 +13,7 @@ function ImagesComponent(props){
 }
 function InputComponent(props){
     return (
-        <input placeholder='search' className={props.className}></input>
+        <input onChange={props.asdf} placeholder='search' className={props.className}></input>
     );
 }
 
@@ -29,7 +29,7 @@ export default class SearchBar extends React.Component {
                     <div className='line-break'></div>
                     <ImagesComponent src={title} alt='instagram-title' className='title' />
                 </div>          
-                <InputComponent onChange={this.handleChange} className='search-input' />            
+                <InputComponent type='search' asdf={this.props.filterPosts} className='search-input' />            
                 <div className='title-icons'>
                     <ImagesComponent src={compass} alt='compass-icon' />
                     <ImagesComponent src={heart} alt='heart-icon' />

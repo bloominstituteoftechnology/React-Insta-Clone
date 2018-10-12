@@ -14,8 +14,8 @@ class App extends React.Component {
     this.setState({ data: dummyData });
   }
 
-  filterPosts = str => {
-    const filteredPosts = dummyData.filter(post => post.username.includes(str));
+  filterPosts = event => {
+    const filteredPosts = dummyData.filter(post => post.username.includes(event.target.value));
     this.setState({ data: filteredPosts });
   };
 
