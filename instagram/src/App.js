@@ -3,6 +3,8 @@ import './App.css';
 import dummyData from './dummy-data.js';
 import SearchBar from './components/SearchBar';
 import PostsPage from './components/PostsPage';
+import Login from './components/Login';
+import Authenticate from './authentication/Authenticate';
 
 class App extends Component {
     state = { /*state is a special object that re-renders the component every time a value held within state changes changes*/
@@ -21,15 +23,25 @@ class App extends Component {
         });
     };
 
+    /*Login functionality*/
+    handleLogin = event => { /*Handle submission of login form*/
+        event.preventDefault(); /*Prevent form from trying to submit using default functionality*/
+        localStorage.setItem("username", event.target.elements[0].value); /*Save username in browser localstorage*/
+        window.location.reload(); /*Refresh page*/
+    };
+
     /*Rendering the app*/
     render() {
         return (
             <div className="App">
+                <Login login={this.handleLogin} />
                 <SearchBar handleSearchInput={this.handleSearchInput} /> {/*Inserted search bar component, passes handling for search input*/}
                 <PostsPage posts={this.state.posts}/>
             </div>
         );
     }
 }
+
+Authenticate(App);
 
 export default App;
