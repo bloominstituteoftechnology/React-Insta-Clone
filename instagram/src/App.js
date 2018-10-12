@@ -3,7 +3,7 @@ import dummyData from './dummy-data';
 import Header from './Components/SearchBar/Header';
 import PostsPage from './Components/PostContainer/PostsPage';
 import Authenticate from './Components/Authentication/Authenticate';
-
+import styled from 'styled-components';
 
 /* Come back to this later.
 import { library } from '@fortawesome/fontawesome-svg-core';

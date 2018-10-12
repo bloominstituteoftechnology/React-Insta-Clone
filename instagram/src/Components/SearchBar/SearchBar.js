@@ -1,4 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const SearchContainer = styled.div`
+    width: 200px;
+    height: 25px;
+    margin: 5px;
+`
 
 const SearchBar = (props) => {
     function clearDefaultText(event) {
@@ -7,9 +14,9 @@ const SearchBar = (props) => {
         }
     }
     return (
-        <div className='searchbar'>
+        <SearchContainer>
             <input onClick={clearDefaultText} onChange={props.changeSearchTerm} className='search' defaultValue='search' />
-        </div>
+        </SearchContainer>
     )
 }
 

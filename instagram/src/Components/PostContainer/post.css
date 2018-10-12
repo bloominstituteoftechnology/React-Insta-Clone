@@ -1,9 +1,3 @@
-.post-container {
-    display: flex;
-    flex-direction: column;
-    /*border: 2px solid brown;*/
-    margin: 5% auto;
-}
 
 .likes-section {
     margin: 1% 0;
@@ -20,35 +14,4 @@
     border: none;
 }
 
-.add-comment-form {
-    margin: 2% 0;
-    display: flex;
-    opacity: 0.5;
-    border: 1px solid black;
-}
-
-.add-comment-text {
-    display: inline;
-    width: 90%;
-    height: 25px;
-}
-
-.add-comment-button {
-    width: 10%;
-    display: inline;
-}
-
-.post-header {
-    display: flex;
-    align-items: center;
-}
-
-.thumbnail {
-    max-width: 30px;
-    max-height: 30px;
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    margin: 10px;
-}
 
