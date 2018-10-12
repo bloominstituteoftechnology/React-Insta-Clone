@@ -101,6 +101,7 @@ class App extends Component {
 
   clearStorage = () => {
     localStorage.clear();
+    window.location.reload();
   }
 
   render() {
