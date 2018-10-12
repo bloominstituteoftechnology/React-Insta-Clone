@@ -2,7 +2,6 @@ import React from "react";
 import PostHeader from "./PostHeader/PostHeader";
 import PostImage from "./PostImg/PostImg";
 import CommentSection from "../CommentSection/CommentSection";
-import Comment from "../Comment/Comment";
 import "./PostContainer.css"
 
 export default ({ posts }) => {

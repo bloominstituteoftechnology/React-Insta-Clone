@@ -1,12 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import dummyData from "./dummy-data";
-
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
 import "./App.css";
+import Authenticate from './components/Authentication/Authentication';
 
-export default class App extends React.Component {
+class App extends React.Component {
   state = {
     data: []
   };
@@ -64,3 +63,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default Authenticate(App);
