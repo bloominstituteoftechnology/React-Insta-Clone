@@ -1,10 +1,16 @@
-import React from "react";
-import "./CommentSection.css";
+import React from 'react'
+import PropTypes from 'prop-types';
 
-export default ({ comment }) => {
-    return (
-    <div style={{ display: "flex", paddingBottom: "5px" }}>
-        <strong>{comment.username}</strong> <span>{comment.text}</span>
+const Comment = props => {
+  return (
+    <div className='comments'>
+      <p><span className='username'>{props.comment.username}</span> <span>{props.comment.text} </span></p>
     </div>
-    );
-};
+  )
+}
+
+Comment.propTypes = {
+  username: PropTypes.string,
+  text: PropTypes.string
+}
+export default Comment;
