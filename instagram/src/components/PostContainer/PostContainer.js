@@ -3,6 +3,7 @@ import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection.js';
 import PropTypes from 'prop-types';
 import styled from 'styled-components'
+import Bold from '../Styles/Bold.js'
 
 // styled post container components
 
@@ -22,10 +23,6 @@ const Thumbnail = styled.img`
     height: 40px;
     border-radius: 50%;
     margin: 20px;
-`
-
-const Bold = styled.p`
-    font-weight: bold
 `
 
 const PostOptionsContainer = styled.div`
@@ -93,7 +90,7 @@ class PostContainer extends React.Component {
                 {/* post header */}
                 <PostHeader>
                     <Thumbnail src={this.state.post.thumbnailUrl}/>
-                    <p className='username'>{this.state.post.username}</p>
+                    <Bold>{this.state.post.username}</Bold>
                 </PostHeader>
                 {/* image */}
                 <img src={this.state.post.imageUrl}/>
