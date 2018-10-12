@@ -1,0 +1,60 @@
+﻿.post-container {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 20px 0;
+  box-shadow: 2px 2px 3px #eee;
+  max-width: 600px;
+}
+
+.user-information {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: bold;
+}
+
+.user-thumbnail {
+  border-radius: 50%;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.interactive-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.interactive-button {
+  margin: 0 10px;
+}
+
+p {
+  margin: 0;
+  padding: 0 0 5px;
+}
+
+.like-icon {
+  background-image: url(../../img/real-spritesheet.png);
+  background-repeat: no-repeat;
+  background-position: -458px -190px;
+  height: 24px;
+  width: 24px;
+}
+
+.comment-icon {
+  background-image: url(../../img/instagram-spritesheet.png);
+  background-repeat: no-repeat;
+  background-position: -104px -194px;
+  height: 24px;
+  width: 24px;
+}
+
+.like-count {
+  margin: 0 10px;
+}
