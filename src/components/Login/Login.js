@@ -11,7 +11,6 @@ class Login extends Component {
 
     /* Log the user in */
     handleLogin = event => {
-        event.preventDefault();
         localStorage.setItem('username', this.refs.userInput.value);
         localStorage.setItem('password', this.refs.passInput.value);
         window.location.reload();

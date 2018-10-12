@@ -15,7 +15,10 @@ import Login from '../Login/Login';
                 if( !localStorage.getItem('username') ) {
                     this.setState({ loggedIn: false });
                 } else {
-                    this.setState({ loggedIn: true });
+                    this.setState({ 
+                        loggedIn: true, 
+                        userName: localStorage.getItem('username')
+                    });
                 }
             }
             render() {

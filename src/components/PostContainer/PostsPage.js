@@ -17,7 +17,10 @@ class PostsPage extends Component {
         const localSaved = localStorage.getItem('data');
         if( localSaved ) {
           //this.setState({ data: JSON.parse(localSaved) });
-          this.state = { data: JSON.parse(localSaved) }
+          this.state = { 
+            data: JSON.parse(localSaved), 
+            user: localStorage.getItem('username')
+          }
           console.log("readlocal:",this.state.data);
           return;
         } else {
@@ -30,7 +33,7 @@ class PostsPage extends Component {
     
       componentDidMount() {
         console.log("Mounted");
-    
+        this.setState({ user: localStorage.getItem('username')});
         // // Load in locally saved data
         // const localSaved = localStorage.getItem('data');
         // if( localSaved ) {
@@ -115,6 +118,7 @@ class PostsPage extends Component {
                   timestamp={data.timestamp}
                   comments={data.comments}
                   mergeData={this.mergeData}
+                  user={data.user}
                 />
               );
             })}

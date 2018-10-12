@@ -18,10 +18,12 @@ class PostContainer extends Component {
     // timestamp: "July 17th 2017, 12:42:40 pm",
     // comments: []
     // mergeData: fn
+    // user: ""
     
     constructor(props) {
         super(props);
-        this.state = {...props, input: ""};
+        this.state = {...props, input: "", user: localStorage.getItem('username')};
+        console.log("user:", props.user);
         //console.log("PostContainer: ", this.state );
     };
 
@@ -42,7 +44,7 @@ class PostContainer extends Component {
         if( event.keyCode === 13 && event.target.value.length > 0 ) {
             let updatedComments = this.state.comments;
             updatedComments.push({
-                username: "Guest",
+                username: this.state.user,
                 text: event.target.value
             });
             //console.log("updatedComments", updatedComments);
