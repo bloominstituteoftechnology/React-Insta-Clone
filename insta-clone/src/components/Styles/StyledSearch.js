@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const SearchWrapper = styled.div`
-  position: fixed;
-  width: 100%;
-  height: 52px;
-  margin-bottom: 40px;
-  background-color: white;
-  z-index: 2;
-`;
+         position: fixed;
+         width: 100%;
+         height: 52px;
+         margin-bottom: 40px;
+         background-color: white;
+         z-index: 2;
+         @media only screen and (min-width: 1280px) {width: 50%;}`;
 
 export const ImgInsta = styled.img`
   width: 25px;

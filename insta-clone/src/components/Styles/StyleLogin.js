@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const VWrapper = styled.video`
-  background-size: cover;
-  z-index: -100;
-`;
+         object-fit: cover;
+         z-index: -100;`;
 export const LoginWrapper = styled.div`
   display: flex;
   flex-direction: column;

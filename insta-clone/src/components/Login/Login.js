@@ -26,9 +26,8 @@ class Login extends React.Component {
     return (
       <LoginWrapper>
         <VWrapper src={traffic}
-          autoPlay="autoplay"
-          loop="loop"
-          playsinline="playsinline"
+          autoPlay
+          loop
           type="video/mp4"
         />
         {/* <video
