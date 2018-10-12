@@ -1,3 +1,6 @@
+/* No longer Used after creating styled components
+
+
 .search-bar {
     display: flex;
     justify-content: space-between;
@@ -46,3 +49,5 @@ input {
     margin-left: 25px;
     cursor: pointer;
 }
+
+ */

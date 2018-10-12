@@ -16,7 +16,6 @@ const Authenticate = App => {
             if (localStorage.getItem('username')) {
                 this.setState({
                     authenticated: true, 
-                    // username: localStorage.getItem('username'),
                 })
             }
             else {
