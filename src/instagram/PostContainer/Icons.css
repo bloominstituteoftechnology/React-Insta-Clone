@@ -1,0 +1,60 @@
+.Post-icon-heart {
+  color: #003569;
+  background-image: url(../../sprite.svg);
+  background-size: 405px 379px;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-position: -325px -328px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+.Post-icon-comment {
+  color: #003569;
+  background-image: url(../../sprite.svg);
+  background-size: 405px 379px;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-position: -258px -174px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+.Post-icon-share {
+  fill: #003569;
+  background-image: url(../../sprite.svg);
+  background-size: 405px 379px;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-position: -174px -328px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+.Post-icon-save {
+  color: #003569;
+  background-image: url(../../sprite.svg);
+  background-size: 405px 379px;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-position: -75px -328px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
