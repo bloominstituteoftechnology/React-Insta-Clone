@@ -158,3 +158,13 @@
     max-width: 500px;
   }
 }
+
+@media (max-width: 600px) {
+  .login-card {
+    margin-top: 55px;
+  }
+
+  .login {
+    width: 95%;
+  }
+}

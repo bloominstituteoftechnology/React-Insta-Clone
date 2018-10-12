@@ -77,7 +77,7 @@ class Login extends React.Component {
 
         <div className="cta-signup box">
           Don't have an account?{" "}
-          <Link signup href="https://www.instagram.com/">
+          <Link signup href="#">
             Sign up
           </Link>
         </div>
