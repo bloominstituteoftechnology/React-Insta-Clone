@@ -1,10 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import Authenticate from '../src/Authentication/Authenticate';
-import PostsPage from "../src/PostsPage";
-import "./App.css";
+import PostsPage from '../src/PostsPage';
 
 class App extends Component {
- 
   render() {
     return (
       <>

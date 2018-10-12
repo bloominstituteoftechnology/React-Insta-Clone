@@ -1,6 +1,27 @@
-import React from "react";
-import "../PostContainer/PostContainer.css";
-import Post from "../Post/Post";
+import React from 'react';
+import styled from 'styled-components';
+import Post from '../Post/Post';
+
+const PCContainer = styled.div`
+  position: relative;
+  top: 76px;
+  background-color: #fafafa;
+  padding-top: 65px;
+  width: 100%;
+`;
+
+const PCContentContainer = styled.div`
+  max-width: 935px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+
+  @media (max-width: 960px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
 
 class PostContainer extends React.Component {
   constructor(props) {
@@ -9,7 +30,7 @@ class PostContainer extends React.Component {
       comments: this.props.dummyData.map(log => {
         return log.comments;
       }),
-      likes: props.likes,
+      likes: props.likes
     };
   }
   componentDidMount() {
@@ -32,18 +53,16 @@ class PostContainer extends React.Component {
 
   updateComments = post => {
     this.state.comments.push(post);
-    this.setState(
-      {
-        comments: this.state.comments
-      },
-    );
-    localStorage.setItem("comments", JSON.stringify(this.state.comments));
+    this.setState({
+      comments: this.state.comments
+    });
+    localStorage.setItem('comments', JSON.stringify(this.state.comments));
   };
 
   render() {
     return (
-      <div className="container">
-        <div className="contentContainer">
+      <PCContainer>
+        <PCContentContainer>
           {this.props.dummyData.map(post => {
             return (
               <Post
@@ -57,8 +76,8 @@ class PostContainer extends React.Component {
               />
             );
           })}
-        </div>
-      </div>
+        </PCContentContainer>
+      </PCContainer>
     );
   }
 }

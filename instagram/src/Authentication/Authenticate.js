@@ -1,5 +1,5 @@
-import React from "react";
-import Login from "../components/Login/Login";
+import React from 'react';
+import Login from '../components/Login/Login';
 
 const Authenticate = App =>
   class extends React.Component {
@@ -7,7 +7,7 @@ const Authenticate = App =>
       super();
       this.state = {
         loggedIn: false,
-        username: '',
+        username: ''
       };
     }
 
@@ -15,23 +15,18 @@ const Authenticate = App =>
       this.setState(
         {
           loggedIn: true,
-          username: id,
+          username: id
         },
         () => {
-          localStorage.setItem("loggedIn", JSON.stringify(this.state.loggedIn));
+          localStorage.setItem('loggedIn', JSON.stringify(this.state.loggedIn));
           localStorage.setItem('username', this.state.username);
-          
         }
       );
     };
 
-    
-
     componentDidMount() {
       this.hydrateStateWithLocalStorage();
     }
-
-
 
     hydrateStateWithLocalStorage() {
       for (let key in this.state) {
@@ -49,7 +44,11 @@ const Authenticate = App =>
 
     render() {
       return this.state.loggedIn === false ? (
-        <Login updateUserId={this.updateUserId} updateLogin={this.updateLogin} loggedIn={this.state.loggedIn} />
+        <Login
+          updateUserId={this.updateUserId}
+          updateLogin={this.updateLogin}
+          loggedIn={this.state.loggedIn}
+        />
       ) : (
         <App loggedIn={this.state.loggedIn} />
       );

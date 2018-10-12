@@ -21,7 +21,8 @@ const dummyData = [
         username: "biancasaurus",
         text: "Looks delicious!"
       },
-      { id: 1,
+      {
+        id: 1,
         username: "martinseludo",
         text: "Can't wait to try it!"
       }
@@ -37,11 +38,13 @@ const dummyData = [
     likes: 4307,
     timestamp: "July 15th 2018, 03:12:09 pm",
     comments: [
-      { id: 2,
+      {
+        id: 2,
         username: "twitch",
         text: "Epic Street Fighter action here in Las Vegas at #EVO2017!"
       },
-      { id: 2,
+      {
+        id: 2,
         username: "michaelmarzetta",
         text: "Omg that match was crazy"
       },
@@ -50,17 +53,20 @@ const dummyData = [
         username: "themexican_leprechaun",
         text: "What a setup"
       },
-      { id: 2,
+      {
+        id: 2,
         username: "dennis_futbol",
         text: "It that injustice"
       },
-      { id: 2,
+      {
+        id: 2,
         username: "dennis_futbol",
         text: "Is"
       }
     ]
   },
-  { id: 3,
+  {
+    id: 3,
     username: "playhearthstone",
     thumbnailUrl:
       "https://tk-assets.lambdaschool.com/c432f179-8bd7-4758-959d-d88a21f96bca_37105899_432228420518610_5035444036064772096_n.jpg",
@@ -74,11 +80,13 @@ const dummyData = [
         username: "playhearthstone",
         text: "Love this shot!"
       },
-      { id: 3,
+      {
+        id: 3,
         username: "awaywetravel",
         text: "Yosemite is my most favorite place in the universe"
       },
-      { id: 3,
+      {
+        id: 3,
         username: "awesomebt28",
         text: "I like how Half Dome looks so old and useless"
       }

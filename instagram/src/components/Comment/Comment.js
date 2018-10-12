@@ -1,13 +1,27 @@
 import React from "react";
+import styled from "styled-components";
 import PropTypes from "prop-types";
-import '../Comment/Comment.css';
+
+const StyledCommentItem = styled.div`
+  margin-bottom: 5px;
+`;
+
+const StyledBoldName = styled.span`
+  font-weight: bold;
+  margin-right: 0.2%;
+`;
+
+const StyledCommentText = styled.span`
+  padding-left: 1%;
+`;
 
 class Comment extends React.Component {
   render() {
     return (
-      <div className='commentItem'>
-        <span className='boldName'>{this.props.comment.username}</span><span className='commentText'>{this.props.comment.text}</span>
-      </div>
+      <StyledCommentItem>
+        <StyledBoldName>{this.props.comment.username}</StyledBoldName>
+        <StyledCommentText>{this.props.comment.text}</StyledCommentText>
+      </StyledCommentItem>
     );
   }
 }
