@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-
+import { VWrapper, LoginWrapper, FormGroup } from "../Styles/StyleLogin";
+import traffic from "./../../imgs/Traffic_disco.jpg";
 class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -16,42 +17,42 @@ class Login extends React.Component {
     });
   };
   handleLogin = () => {
-    
     const user = this.state.username;
     localStorage.setItem("user", user);
     window.location.reload();
-
   };
 
   render() {
     return (
-      <form className="login-form" >
-        <label>Username</label>
-        <input
-          type="text"
-          placeholder="Username"
-          name="username"
-          value={this.state.username}
-          onChange={this.handleInputChange}
-        />
-        <label>Password</label>
-        <input
-          type="password"
-          placeholder="Password"
-          value={this.state.password}
-          name="password"
-          onChange={this.handleInputChange}
-        />
-        <Button
-          color="primary"
-          variant="contained"
-          outline
-          block
-          onClick={this.handleLogin}
-        >
-          Login
-        </Button>
-      </form>
+      <LoginWrapper>
+        <VWrapper src={traffic} alt='' />
+        <FormGroup>
+          <input
+            type="text"
+            placeholder="Username"
+            name="username"
+            value={this.state.username}
+            onChange={this.handleInputChange}
+          />
+
+          <input
+            type="password"
+            placeholder="Password"
+            value={this.state.password}
+            name="password"
+            onChange={this.handleInputChange}
+          />
+          <Button
+            color="primary"
+            variant="contained"
+            onClick={this.handleLogin}
+          >
+            Login
+          </Button>
+        </FormGroup>
+        <div>
+        </div>
+      </LoginWrapper>
     );
   }
 }

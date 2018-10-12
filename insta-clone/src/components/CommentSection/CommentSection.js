@@ -16,17 +16,26 @@ class CommentSection extends React.Component {
       timestamp: props.timestamp,
       id: props.index,
       text: "",
-      username: props.username
+      username: ''
     };
   }
 // Add a like function to counter each click
   addALike = e => {
     this.setState({ likes: this.state.likes + 1 });
   };
-
+  componentDidMount = ()=> {
+    const user = localStorage.getItem('user')
+    this.setState({
+      username: user
+    })
+    let comment = JSON.parse(localStorage.getItem('post'))
+    this.setState({
+      comments: comment
+    })
+}
   addNewComment = index => {
     const newPost = {
-      username: "iepoch",
+      username: this.state.username,
       text: this.state.text
     };
 
@@ -37,7 +46,10 @@ class CommentSection extends React.Component {
     this.setState({
       comments,
       text: ""
-    });
+    }, () => localStorage.setItem('post', JSON.stringify(comments)));
+
+
+
   };
 
   handleChange = (key, value) => {

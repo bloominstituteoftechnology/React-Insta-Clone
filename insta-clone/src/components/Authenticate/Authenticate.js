@@ -12,17 +12,10 @@ const Authenticate = App =>
       if (!localStorage.getItem("user")) {
         this.setState({ loggedIn: false });
       } else {
+        setTimeout(() => { localStorage.clear() }, 300000)
           this.setState({ loggedIn: true });
       }
     };
-
-    componentWillUnmount = () => {
-      if (this.state.loggedIn === true)
-      localStorage.setItem(
-      'user', null
-      )
-      window.location.reload();
-    }
 
     render() {
       // return <App />
