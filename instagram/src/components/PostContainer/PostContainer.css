@@ -29,3 +29,13 @@
   padding-left: 10px;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .post-container {
+    margin: 0 auto;
+  }
+
+  .post-container:nth-of-type(1) {
+    margin-top: 77px;
+  }
+}

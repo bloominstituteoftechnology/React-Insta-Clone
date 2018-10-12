@@ -11,7 +11,9 @@ class CommentSection extends React.Component {
       newComment: "",
       user: localStorage.getItem("user"),
       isLiked: false,
-      heart: "far fa-heart"
+      heart: "far fa-heart",
+      isBookMarked: false,
+      bookMark: "far fa-bookmark"
     };
   }
 
@@ -43,7 +45,6 @@ class CommentSection extends React.Component {
   likeHandler = () => {
     if (!this.state.isLiked) {
       let likes = this.state.likes + 1;
-      console.log(likes);
       this.setState({
         likes,
         isLiked: true,
@@ -53,7 +54,6 @@ class CommentSection extends React.Component {
 
     if (this.state.isLiked) {
       let likes = this.state.likes - 1;
-      console.log(likes);
       this.setState({
         likes,
         isLiked: false,
@@ -62,8 +62,23 @@ class CommentSection extends React.Component {
     }
   };
 
+  bookMarkHandler = () => {
+    if (!this.state.isBookMarked) {
+      this.setState({
+        isBookMarked: true,
+        bookMark: "fas fa-bookmark"
+      });
+    }
+
+    if (this.state.isBookMarked) {
+      this.setState({
+        isBookMarked: false,
+        bookMark: "far fa-bookmark"
+      });
+    }
+  };
+
   render() {
-    // console.log(this.state.comments);
     return (
       <div>
         <div className="comments-container">
@@ -71,9 +86,8 @@ class CommentSection extends React.Component {
             <div>
               <i className={this.state.heart} onClick={this.likeHandler} />
               <i className="far fa-comment" />
-              <i className="far fa-share-square" />
             </div>
-            <i className="far fa-bookmark" />
+            <i className={this.state.bookMark} onClick={this.bookMarkHandler} />
           </div>
           <div className="like-count">{this.state.likes} likes</div>
 

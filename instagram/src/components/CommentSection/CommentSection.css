@@ -77,6 +77,6 @@ input:focus {
   color: #ec4a57;
 }
 
-/* @media ( max-width: 600px )  {
-
-} */
+.fas.fa-bookmark {
+  font-size: 27px;
+}
