@@ -38,11 +38,12 @@ class Login extends React.Component {
   render() {
     return (
       <div className="login-page">
-        <h1 className="title">Welcome</h1>
-        <i className="fas fa-chevron-down" />
+        <div className="circle">
+          <i className="fas fa-chevron-down" />
+        </div>
         <div>
-          <h3>Please Log In</h3>
           <form className="login">
+            <h3>Login</h3>
             <input
               className="login-input"
               type="text"
@@ -62,6 +63,16 @@ class Login extends React.Component {
             <button className="login-button" onClick={this.handleSubmit}>
               GO
             </button>
+            <span className="social-box">
+              <span className="inner-social-box-facebook">
+                <i className="fab fa-facebook-f" />
+                <h6 className="social-text">Login with Facebook</h6>
+              </span>
+              <span className="inner-social-box-twitter">
+                <i className="fab fa-twitter" />
+                <h6 className="social-text">Login with Twitter</h6>
+              </span>
+            </span>
           </form>
         </div>
       </div>
