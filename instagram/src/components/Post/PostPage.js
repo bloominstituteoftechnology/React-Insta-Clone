@@ -20,6 +20,9 @@ class PostPage extends React.Component {
 
   handleSearchInput = event => {
     this.setState({ searchInput: event.target.value });
+    if (!event.target.value.length) {
+      this.setState({ dummyData, searchInput: '' });
+    }
   };
 
   searchPosts = event => {
@@ -33,7 +36,7 @@ class PostPage extends React.Component {
         })
       });
     } else {
-      this.componentDidMount();
+      this.setState({ dummyData, searchInput: '' });
     }
   };
 

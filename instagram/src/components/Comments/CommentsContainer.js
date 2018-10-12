@@ -2,6 +2,7 @@ import React from 'react';
 import AddComment from './AddComment';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
+import { Comments } from './../Styled/styled';
 import './comments.css';
 
 class CommentsContainer extends React.Component {
@@ -37,7 +38,7 @@ class CommentsContainer extends React.Component {
       return <div>Loading Data...</div>;
     }
     return (
-      <div className="comments">
+      <Comments>
         {this.state.comments.map(x => {
           return <Comment username={x.username} text={x.text} />;
         })}
@@ -46,7 +47,7 @@ class CommentsContainer extends React.Component {
           handleInput={this.handleInput}
           inputValue={this.state.inputValue}
         />
-      </div>
+      </Comments>
     );
   }
 }

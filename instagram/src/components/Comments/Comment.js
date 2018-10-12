@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { SingleComment } from './../Styled/styled';
 
 class Comment extends React.Component {
   render() {
     return (
-      <div className="singleComment">
+      <SingleComment>
         <span>{this.props.username} </span>
         {this.props.text}
-      </div>
+      </SingleComment>
     );
   }
 }

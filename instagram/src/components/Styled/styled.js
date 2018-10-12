@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import styled from 'styled-components';
 
 //   EXAMPLE SYNTAX FOR DIV
@@ -154,4 +154,27 @@ export const PFooter = styled.div`
     font-size: 0.8rem;
     font-weight: 700;
   }
+`;
+
+export const Comments = styled.div`
+  box-sizing: border-box;
+  text-align: left;
+  padding: 0 0.8rem;
+
+  span {
+    font-weight: 600;
+  }
+
+  input {
+    padding: 15px 0;
+    border: none;
+    border-top: 1px solid rgb(194, 194, 194);
+    width: 100%;
+    outline: none;
+    font-size: 0.8rem;
+  }
+`;
+
+export const SingleComment = styled.div`
+  margin: 5px 0;
 `;
