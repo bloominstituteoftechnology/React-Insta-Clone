@@ -1,49 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './Login.css';
 
-class Logins extends Component {
-  constructor() {
-    super();
-    this.state = {
-      usernameInput: "",
-      passwordInput: ""
-    }
-  }
-
-
-  changeInput = event => {this.setState({[event.target.name]: event.target.value});};
-
-  loginSubmit = (event, i) => {
-    event.preventDefault();
-    const username = this.state.usernameInput;
-    const password = this.state.passwordInput;
-    localStorage.setItem('user', username);
-    localStorage.setItem('password', password);
-    document.location.reload();
-  }
-
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.loginSubmit}>
-          <input
-            type="text"
-            name="usernameInput"
-            className="username"
-            onChange={this.changeInput}
-            value={this.state.usernameInput}
-          />
-          <input
-            type="text"
-            name="passwordInput"
-            className="password"
-            onChange={this.changeInput}
-            value={this.state.passwordInput}
-          />
-          <button onClick={this.loginSubmit}>Login</button>
+const Login = (props) => (
+    <div className='bg'>
+    <div className='login-form'>
+            <div class='heading'>
+                <h1>Instagram</h1>
+            </div>
+            <form className='myform' onSubmit={props.login}>
+                <input className='myinput' onChange = {props.handleInputChange} type='text' name='username' placeholder='username'></input>
+                <input className='myinput' type='text' name='password' placeholder='password'></input>
+        <button className='mybutton'>Log in here</button>
         </form>
-      </div>
-    )
-  }
-}
-
-export default Logins;
+            <form><button className='secondary-button'>No Account? Sign up Here!</button></form>
+            <img className='store-buttons' src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png" alt=""></img>
+            <img className='store-buttons' src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png" alt=""></img>
+    </div>
+    <div className='large-right'>
+            
+            <span className='Slogan'>Capture and Share the World's Moments.</span>
+    </div>
+    
+    </div>
+);
+export default Login;

@@ -1,20 +1,21 @@
 import React from 'react';
+import SearchBarContainer from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
-import SearchBar from  '../SearchBar/SearchBar';
+import './PostContainer.css';
 
-const PostWindow = props => {
-    
-    return (
-        <div className="App">
-            <SearchBar />
-    
-            <div className="App-content">
-                {props.dummyData.map(post => (
-                    <PostContainer key={post.timestamp} dummyData={post} />
-                ))}
-            </div>
-        </div>    
-    )
-}
- 
-export default PostWindow;
+const PostsPage = (props) => (
+      <div className="App">
+        <header className="App-header">
+        <SearchBarContainer handleChange = {props.handleChange} value ={props.value} search = {props.search}/>
+         </header>
+        <div className ='App-body'>
+        {props.data.map((post, index) => {
+         return <PostContainer key = {Math.random()} postIndex = {index} post = {post} />
+        })}
+
+       </div>
+      
+      </div>
+);
+
+export default PostsPage;

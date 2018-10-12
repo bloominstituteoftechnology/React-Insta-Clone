@@ -1,47 +1,65 @@
-.custom-post {
-    border: 2px solid rgb(202, 192, 192);
-    border-radius: .3rem;
-    box-shadow: .2rem .2rem .5rem rgb(202, 192, 192);;
-    margin: 1rem 0;
+.post {
+    max-height: 1160px;
+    max-width: 620px;
+    background-color: white;
+    margin: 80px auto 0;
+    border: 1px solid #EFEFEF;
+    border-radius: 4px;
+    flex-direction: column;
 }
+.post-bottom {
+      padding: 0 16px 0 16px;
 
-.post-header {
+}
+.post-image-fullsize {
+    max-width: 100%;
+}
+.post-header{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start; 
 }
-.post-header img {
-    border-radius: 50%;
-    width: 7%;
-    padding: 10px .6rem;
+.user-thumb{
+ width: 40px;
+ height: 40px;
+ padding: 10px;
+}
+.user {
+    font-weight: 600;
+    margin: 10px 0 4px 0;
+    font-size: 14px;
+    color: #262626;
+
+}
+.location {
+    font-size: 12px;
+    margin:0;
+    color: #262626b7;
+
+}
+.likes {
+     font-weight: 600;
+     margin: 10px 0 10px 0;
+     font-size: 14px;
+     color: #262626;
+  
+
+}
+.App {
+    background-color: #FAFAFA;
+    margin: 0;
 }
 
-.post-img {
-    width: 100%;
-}
-.post-img img {
-    width: 100%;
-}
-.post-comments {
-    padding: 10px .6rem 0 .6rem;
-}
-.post-comments .custom-likes {
-    margin: .5rem 0 .2rem 0;
-}
-.post-comments .comment-interaction {
+.App-header {
+    background-color: white;
+    height: 50px;
+    padding: 0 20px 20px;
+    color: #353535;
     display: flex;
-}
-.post-comments .comment-interaction i {
-    font-size: 1.2rem;
-}
-.post-comments .comment-interaction i:hover {
-    cursor: pointer;
-}
-.post-comments .comment-interaction i:last-child {
-    margin: auto .6rem;
+    margin: 0;
+    padding: 0;
 }
 
-.red-heart {
-    color: red;
-    font-weight: 850;
-    pointer-events: none;
+.App-body {
+    background-color: #FAFAFA;
 }
