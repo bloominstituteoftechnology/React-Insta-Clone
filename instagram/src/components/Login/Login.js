@@ -27,7 +27,9 @@ class LoginPage extends React.Component {
         window.location.reload();
     }
 
-
+    clearStorage = event => {
+        localStorage.clear();
+    }
     render() {
         return (
       <form>
@@ -36,6 +38,7 @@ class LoginPage extends React.Component {
           <input className='login' type="text" placeholder="Username" name="username" value={this.state.username} onChange={this.handleChange} />
           <input className='login'  type="password" placeholder="Password" name="password" value={this.state.password} onChange={this.handleChange}/>
           <button onClick={this.handleSubmit}>Login</button>
+          {/* <button className='clear' onClick={this.clearStorage}>Clear Storage</button> */}
         </form>
         )
     }
