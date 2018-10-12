@@ -19,10 +19,17 @@ class SearchBar extends Component {
 						className="search"
 					/>
 				</form>
-				
 
-        <div className="icons">
-          <button onClick={()=> {localStorage.clear(); window.location.reload()}}className="logout">Logout</button>
+				<div className="icons">
+					<button
+						onClick={() => {
+							localStorage.clear();
+							window.location.reload();
+						}}
+						className="logout"
+					>
+						Logout
+					</button>
 					<i className="far fa-compass" />
 					<i className="far fa-heart" />
 					<i className="far fa-user" />
