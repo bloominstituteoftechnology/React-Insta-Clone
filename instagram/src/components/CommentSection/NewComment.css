@@ -1,0 +1,18 @@
+.newComment {
+    border-top: 1px solid grey;
+}
+
+.commentLabel {
+    font-size: 40px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+#newCmt {
+    margin-left: 22px;
+    border: none;
+    font-size: 20px;
+    color: grey;
+    width: 100%;
+    height: 90%;
+}

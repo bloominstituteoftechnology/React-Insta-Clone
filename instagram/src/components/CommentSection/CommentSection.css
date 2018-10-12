@@ -1,0 +1,47 @@
+
+.commentSection {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    /* align-items: flex-start; */
+}
+
+.commentSection h4 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.likes {
+    margin-left: 20px;
+}
+
+.commentIcons {
+    display: flex;
+    margin-left: 15px;
+    padding-top: 10px;
+}
+
+.commentIcon {
+    padding-right: 15px;
+}
+
+.newComment {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.messages {
+    height: 30px;
+    display: flex;
+    align-items: baseline;
+}
+
+.messages h4 {
+    margin-top: 0;
+}
+
+.messages p {
+    margin-left: 10px;
+}
