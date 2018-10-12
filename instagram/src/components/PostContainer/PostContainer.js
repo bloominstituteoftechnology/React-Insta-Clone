@@ -1,7 +1,50 @@
 import React, {Component} from 'react';
-import './postcontainer.css';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection.js'
+import styled from 'styled-components';
+
+const PostContainerDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto 20px auto;
+    width: 600px;
+`
+
+const PostHeader = styled.div`
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+`
+
+const PostThumbnail = styled.img`
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin-right: 15px;
+`
+
+const PostImage =   styled.img`
+    width: 600px;
+    margin-top: 10px;
+`
+
+const PostButtons = styled.div`
+    display: flex;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    justify-content: space-between;
+`
+
+const Likes = styled.div`
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+`
+
+
 
 class PostContainer extends Component  {
     state = {
@@ -33,22 +76,22 @@ class PostContainer extends Component  {
 
     render()    {
         return(
-            <div className="postContainer">
-                <div className="postHeader">
-                    <img src={this.props.thumbnail} alt="User profile"/>
+            <PostContainerDiv>
+                <PostHeader>
+                    <PostThumbnail src={this.props.thumbnail} alt="User profile"/>
                     {this.props.username}
-                </div>
-                <img className="postImage" src={this.props.image} alt="Post"/>
-                <div className="postButtons">
+                </PostHeader>
+                <PostImage src={this.props.image} alt="Post"/>
+                <PostButtons>
                     <i className={this.state.heart1} onClick={this.likePost}></i>
                     <i className={this.state.heart2} onClick={this.unlikePost}></i>
                     <i className="far fa-comment"></i>
-                </div>
-                <div className="likes">
+                </PostButtons>
+                <Likes>
                     {this.state.likes} likes
-                </div>
+                </Likes>
                 <CommentSection timestamp={this.props.timestamp} content={this.props.comments}/>
-            </div>
+            </PostContainerDiv>
         )
     }
 }
