@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styled from 'styled-components'
 
 export const WrapperDiv = styled.div `
@@ -86,7 +86,7 @@ export const ContainerDiv = styled.div `
 
 export const StyledInput = styled.input `
   :focus{
-    outline: none; 
+    outline: none;
   }
 
   ${props => (

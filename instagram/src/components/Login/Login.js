@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LogoType from '../Icons/LogoType'
-import {WrapperDiv, StyledInput, StyledForm, StyledButton, StyledIcon} from '../Styles'
+import {WrapperDiv, StyledInput, StyledForm, StyledButton} from '../Styles'
 
  class Login extends Component {
   constructor(props){
