@@ -36,22 +36,38 @@ class CommentSection extends Component {
                     }
                 ]
             });
-            event.currentTarget.value = null;
-        }
+            
+        }event.currentTarget.value = null;
       };
 
       enterHandler = event => {
         if (event.keyCode === 13 && event.shiftKey === false) {
-          if (this.state.input.length >= 1)
-            event.preventDefault();
+            event.currentTarget.value = null;
+        }
+        if (event.keyCode === 13 && event.shiftKey === false) {
+          if (this.state.input.length >= 1) {
+          event.preventDefault();
           this.addNewComment(event);
+          }
         }
       };
 
-      addLike = event => {
-        this.setState({ 
-            likes: this.state.likes + 1
-        });
+      addLike = () => {
+        if (!this.state.toggled) {
+            this.setState(prevState => {
+                return{
+                    likes: prevState.likes + 1,
+                    toggled: !prevState.toggled
+                }
+            })
+        } else {
+            this.setState(prevState => {
+                return {
+                    likes: prevState.likes - 1,
+                    toggled: !prevState.toggled
+                }
+            })
+        }
       }
 
     render() {
