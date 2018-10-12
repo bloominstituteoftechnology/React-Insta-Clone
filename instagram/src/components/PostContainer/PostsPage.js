@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import dummyData from "./dummy-data";
 import SearchBar from "../SearchBar/SearchBar";
 import PostContainer from "./PostContainer";
-import styled from "styled-components";
+import { LogInOutButton } from '../Styles/Reusables';
+import styled, { css } from 'styled-components';
 
 const Container = styled.div`
   display: flex;
@@ -15,19 +16,13 @@ const MainContent = styled.div`
   margin: 0 auto;
 `;
 
-const LogoutButton = styled.button`
-  width: 200px;
-  height: 50px;
-  background: #fff;
-  cursor: pointer;
-  color: #666666;
-  border-radius: 5px;
-  font-size: 20px;
-  font-weight: bold;
-  position: absolute;
-  top: 110px;
-  right: 400px;
-`;
+const ButtonContainer = styled.div`
+display: flex;
+justify-content: flex-end;
+width: 1100px;
+align-items: flex-start;
+margin-top: -20px;
+`
 
 class PostsPage extends Component {
   constructor() {
@@ -64,8 +59,8 @@ class PostsPage extends Component {
           handleSearch={this.handleSearch}
           showLogout={this.showLogout}
         />
-
-        <LogoutButton
+        <ButtonContainer>
+        <LogInOutButton
           onClick={this.handleLogOut}
           className={"logout-button"}
           style={
@@ -73,9 +68,11 @@ class PostsPage extends Component {
               ? { display: "block" }
               : { display: "none" }
           }
+
         >
           Log Out
-        </LogoutButton>
+        </LogInOutButton>
+        </ButtonContainer>
         <MainContent>
           <PostContainer
             data={
