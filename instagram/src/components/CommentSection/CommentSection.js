@@ -24,12 +24,13 @@ class CommentSection extends React.Component {
       comments: this.props.comments,
       username: 'hardlyreal',
       commentText: '',
-      id: this.props.id
+      id: this.props.id,
+      commentsLoaded: false
     };
   }
 
   componentDidMount() {
-    if (localStorage.getItem(!this.state.id)) {
+    if (localStorage.getItem(this.state.id) === null) {
       localStorage.setItem(this.state.id, JSON.stringify(this.state.comments));
     } else {
       let value = localStorage.getItem(this.state.id);

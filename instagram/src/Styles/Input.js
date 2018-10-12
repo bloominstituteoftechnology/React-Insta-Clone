@@ -45,6 +45,4 @@ export const Input = styled.input`
           border: 1px solid #8e8e8e;
         }
       `}
-  
-
 `;
