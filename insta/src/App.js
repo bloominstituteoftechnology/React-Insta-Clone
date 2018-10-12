@@ -1,0 +1,131 @@
+import React, { Component } from 'react';
+import dummyData from './dummy-data';
+import './App.css';
+import Authenticate from './components/Authentication/Authenticate';
+import PostsPage from './components/Posts/PostsPage';
+import SearchBar from './components/Search/SearchBar';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faComment } from '@fortawesome/free-solid-svg-icons';
+import { faCompass } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faHeart);
+library.add(faComment);
+library.add(faCompass);
+library.add(faUser);
+library.add(faSearch);
+
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data: [],
+      comments: [],
+      commentInput: '',
+      searchInput: '',
+      likes: []
+    };
+  }
+
+  componentDidMount() {
+    const comments = [];
+    const likes = [];
+
+    dummyData.map(data => {
+      return [comments.push(data.comments), likes.push(data.likes)];  
+    })
+
+    this.setState({
+      data: dummyData,
+      comments: comments,
+      likes: likes
+    });
+  }
+
+  addNewComment = (index, event) => {
+    if(event.which === 13) {
+
+      const comment = {
+        username: 'Cyanide6033',
+        text: event.target.value,
+        id: Date.now()
+      };
+
+      const newComments = this.state.comments;
+      newComments[index].push(comment);
+
+      this.setState({
+        commentInput: '',
+        comments: newComments
+      })
+    }
+  }
+
+  newLike = (index) => {
+    const newLike = this.state.likes;
+    newLike[index] += 1;
+
+    this.setState({
+      likes: newLike
+    })
+  }
+
+  handleSubmit = event => {
+      this.setState({
+        commentInput: event.target.value
+      });
+  }
+
+  handleSearch = event => {
+    this.setState({
+      searchInput: event.target.value
+    });
+  }
+
+  searchUp = event => {
+    if(event.which === 13) {
+      const posts = this.state.data;
+      const newPost = posts.filter(post => {
+        return post.username.includes(event.target.value);
+      });
+
+      this.setState({
+        data: newPost,
+        searchInput: ''
+      });
+    }
+  }
+
+  clearStorage = () => {
+    localStorage.clear();
+    window.location.reload();
+  }
+
+  render() {
+    return (
+      <>
+        <SearchBar 
+          searchInput={this.state.searchInput} 
+          handleSearch={this.handleSearch} 
+          searchUp={this.searchUp} 
+          clearStorage={this.clearStorage} 
+        />
+        <PostsPage 
+          posts={this.state.data} 
+          likes={this.state.likes} 
+          commentInput={this.state.commentInput} 
+          handleSubmit={this.handleSubmit} 
+          addNewComment={this.addNewComment} 
+          newLike={this.newLike} 
+        />
+      </>
+    );
+  }
+}
+
+const AuthApp = Authenticate(App);
+
+export default AuthApp;
