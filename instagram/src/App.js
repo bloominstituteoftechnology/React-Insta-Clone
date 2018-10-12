@@ -1,8 +1,8 @@
 import React from "react";
 import dummyData from "./dummy-data";
 import "./App.css";
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer";
+import PostsPage from "./components/PostContainer/PostsPage";
+import Authentication from "./components/Authentication/Authentication";
 
 class App extends React.Component {
   constructor() {
@@ -23,7 +23,7 @@ class App extends React.Component {
     const list = this.state.dummyData.filter(
       item => item.username === this.state.search
     );
-    this.setState({ 
+    this.setState({
       searchList: list
     });
   };
@@ -34,20 +34,13 @@ class App extends React.Component {
     }
 
     return (
-      <div className="main-container">
-        <SearchBar
-          searchChange={this.filterChangeHandler}
-          search={this.filterClickHandler}
-          searchValue={this.state.search}
-        />
-        {this.state.search ? this.state.searchList.map(item => (
-          <PostContainer key={item.timestamp} posts={item} />
-        )) : this.state.dummyData.map(item => (
-          <PostContainer key={item.timestamp} posts={item} />
-        ))}
-      </div>
+      <PostsPage
+        data={this.state}
+        filterChange={this.filterChangeHandler}
+        filterClick={this.filterClickHandler}
+      />
     );
   }
 }
 
-export default App;
+export default Authentication(App);
