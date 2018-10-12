@@ -1,16 +1,4 @@
 
-
-.thumbnail {
-    border-radius: 50%;
-    width: 5%;
-    height: 40px;
-    margin: 0 10px;
-}
-
-.img {
-    width: 100%;
-}
-
 .comment-input {
     border: 2px solid #ecf0f1;
     padding: 20px 0;

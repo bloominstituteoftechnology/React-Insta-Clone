@@ -11,6 +11,10 @@ const Thumbnail = styled.img `
     margin: 0 10px;
 `;
 
+const Img = styled.img `
+    width: 100%;
+`;
+
 const Post = props => {
     return (
         <>
@@ -19,7 +23,7 @@ const Post = props => {
                 <p>{props.post.username}</p>
             </FlexColumnContainer>
             <>
-                <img className='img' src={props.post.imageUrl} alt={'post-img'}></img>
+                <Img src={props.post.imageUrl} alt={'post-img'}></Img>
             </>
         </>
     );
