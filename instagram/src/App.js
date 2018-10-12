@@ -15,4 +15,4 @@ class App extends Component {
   }
 }
 
-export default Authenticate(App);
+export default authenticate(App);

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Login from '../Login/Login';
 
-const Authenticate = (App) =>
+const authenticate = (App) =>
   class extends React.Component {
     state = {
       auth: false,
@@ -28,4 +28,4 @@ const Authenticate = (App) =>
     }
   };
 
-export default Authenticate;
+export default authenticate;
