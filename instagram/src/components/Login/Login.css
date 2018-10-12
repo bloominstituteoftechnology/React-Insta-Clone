@@ -24,7 +24,7 @@ body {
 
 .login-page h3 {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 15px;
   color: white;
   font-size: 30px;
 }
@@ -43,17 +43,18 @@ body {
 
 .login button {
   text-decoration: none;
-  border: none;
+  border: 1px solid white;
   margin: 20px auto;
   padding: 10px 10px;
   border-radius: 10px;
-  color: black;
+  color: white;
   white-space: nowrap;
   font-family: "Unica One", sans-serif;
   width: 40%;
   font-size: 25px;
   outline: none;
-  background-color: #f7f7f7;
+  background-color: transparent;
+  font-weight: bolder;
 }
 
 .login button:active {
@@ -71,10 +72,10 @@ body {
   font-size: 16px;
   font-weight: 700;
   line-height: 10px;
-  padding: 25px 0 20px;
+  padding: 15px 0 20px;
   width: 80%;
   border-bottom: 1px solid white;
-  margin: 10px 40px;
+  margin: 8px 40px;
   text-indent: 125px;
 }
 
@@ -82,7 +83,7 @@ input:focus {
   outline: none;
 }
 
-input::placeholder {
+.login-input::placeholder {
   color: white;
 }
 
@@ -96,7 +97,7 @@ input::placeholder {
   background: #f7f7f7;
   position: fixed;
   object-position: center;
-  top: 440px;
+  top: 390px;
   text-align: center;
   font-size: 30px;
   margin: 0 auto;
@@ -110,7 +111,7 @@ input::placeholder {
 /* Social Boxes */
 
 .social-box {
-  padding: 50px 20px;
+  padding: 20px 20px;
   margin: 13px -20px -10px;
   display: flex;
   flex-direction: column;
@@ -126,7 +127,7 @@ input::placeholder {
   align-items: center;
   background-color: #5185c6;
   padding: 10px 15px;
-  margin: 15px 0;
+  margin: 25px 0;
   width: 70%;
   border-radius: 10px;
 }
@@ -136,7 +137,7 @@ input::placeholder {
   align-items: center;
   background-color: #47b1f3;
   padding: 10px 15px;
-  margin: 10px 0;
+  margin: 2px 0;
   width: 70%;
   border-radius: 10px;
 }
@@ -155,4 +156,18 @@ input::placeholder {
   color: white;
   margin: 0 auto;
   font-size: 14px;
+}
+
+.create {
+  border-bottom: 1px solid rgb(201, 201, 201);
+  width: 78%;
+  text-align: center;
+  padding-bottom: 25px;
+  font-size: 18px;
+  font-family: "Unica One", sans-serif;
+  color: #bbbaba;
+}
+
+.create:hover {
+  color: #5185c6;
 }

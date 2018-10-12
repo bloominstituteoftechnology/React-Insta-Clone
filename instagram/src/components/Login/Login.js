@@ -61,7 +61,7 @@ class Login extends React.Component {
               onChange={this.handleInputChange}
             />
             <button className="login-button" onClick={this.handleSubmit}>
-              GO
+              Sign In
             </button>
             <span className="social-box">
               <span className="inner-social-box-facebook">
@@ -72,6 +72,7 @@ class Login extends React.Component {
                 <i className="fab fa-twitter" />
                 <h6 className="social-text">Login with Twitter</h6>
               </span>
+              <h5 className="create">Create An Account</h5>
             </span>
           </form>
         </div>

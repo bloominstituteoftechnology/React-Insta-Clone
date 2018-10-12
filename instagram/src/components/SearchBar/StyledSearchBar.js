@@ -10,6 +10,7 @@ export const Header = styled.header`
     height: 50%;
     padding: 3% 1% 2% 2%;
     font-size: 35px;
+    color: black;
   }
 `;
 
