@@ -27,30 +27,50 @@ const LoginMessage = Styled.p`
     font-size:1.6rem;
 `
 
-const Login = props => {
-    let loginMessage = ''
-    if(!props.loginStatus)
-    {
-        loginMessage = 'Both The Username And Password Are Required.'
-    } 
+class Login extends React.Component {
+    constructor(props){ 
+        super(props)
+        this.loginMessage = ''
+    
+    }
 
-    return( 
-        <WrapperDiv>
-                <LogoImage src={require('../../static/img/Instagram.png')}></LogoImage>
-                <Spacer20></Spacer20>
-                <Spacer20></Spacer20>
-                <LoginHeader>UserName</LoginHeader><LoginInput id='txtUserName' placeholder='Username' value={props.txtUserName} onChange={props.userNameChange}></LoginInput>
-                <Spacer10></Spacer10>
-                <LoginHeader>Password</LoginHeader><LoginInput type='password' id='txtPassword' placeholder='Password' value={props.txtPassword} onChange={props.passwordChange}></LoginInput>
-                <Spacer20></Spacer20>
-                <LoginMessage>{loginMessage}</LoginMessage>
-                <Spacer20></Spacer20>
-                <FlexDiv>
-                    <LoginButton onClick={props.login}>Log In</LoginButton>
-                </FlexDiv>
-        </WrapperDiv>
-    )
+    componentDidMount(){
+        document.addEventListener("keydown",event=>{
+            if(event.key==='Enter')
+            {
+                this.props.login()
+            }
+        })
+    }
+    render(){
+        if(!this.props.loginStatus)
+        {
+            this.loginMessage = 'Both The Username And Password Are Required.'
+        } else 
+        {
+            this.loginMessage =''
+        }
+        return( 
+            <WrapperDiv>
+                    <LogoImage src={require('../../static/img/Instagram.png')}></LogoImage>
+                    <Spacer20></Spacer20>
+                    <Spacer20></Spacer20>
+                    <LoginHeader>UserName</LoginHeader><LoginInput id='txtUserName' placeholder='Username' value={this.props.txtUserName} onChange={this.props.userNameChange}></LoginInput>
+                    <Spacer10></Spacer10>
+                    <LoginHeader>Password</LoginHeader><LoginInput type='password' id='txtPassword' placeholder='Password' value={this.props.txtPassword} onChange={this.props.passwordChange}></LoginInput>
+                    <Spacer20></Spacer20>
+                    <LoginMessage>{this.loginMessage}</LoginMessage>
+                    <Spacer20></Spacer20>
+                    <FlexDiv>
+                        <LoginButton onClick={this.props.login}>Log In</LoginButton>
+                    </FlexDiv>
+            </WrapperDiv>
+        )
+    
+    }
 }
+
+
 
 
 export default Login

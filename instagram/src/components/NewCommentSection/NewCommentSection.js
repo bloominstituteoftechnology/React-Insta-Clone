@@ -19,6 +19,10 @@ const AddNewComment = Styled.div`
 const NewCommentTools = Styled.div`
     font-size: 1rem;   
 `
+const Input = Styled.input`
+    width:300px;
+    height:30px;
+`
 
 
 const NewCommentSection = props =>{
@@ -27,7 +31,7 @@ const NewCommentSection = props =>{
         <WrapperDiv>
             <AddNewComment>
                 <form onSubmit={props.addNewComment}>
-                    <input id={props.postId} value={props.newComment} placeholder='Add a comment...' onChange={props.handleCommentChange} />
+                    <Input id={props.postId} value={props.newComment} placeholder='Add a comment...' onChange={props.handleCommentChange} />
                 </form>
             </AddNewComment>
             <NewCommentTools><p>...</p></NewCommentTools>

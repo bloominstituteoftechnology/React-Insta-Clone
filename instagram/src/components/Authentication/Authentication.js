@@ -46,11 +46,13 @@ const Authentication = WrappedComponent =>
             }            
         } 
         login(){
-
+            console.log('checking ', this.state.txtUserName, ' and ', this.state.txtPassword)
             if(!this.state.txtUserName || !this.state.txtPassword)
             {
+                
                 this.setState({loginStatus:false})
-                setTimeout(()=>{this.setState({loginStatus:true})},40000)
+                setTimeout(()=>{this.setState({loginStatus:true})},4000)
+                
 
             } else {
                 localStorage.setItem('igUserName',this.state.txtUserName);

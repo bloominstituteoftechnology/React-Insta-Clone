@@ -13,6 +13,7 @@ const WrapperDiv = Styled.div`
     position: fixed;
     width: 100%;
     max-width: 600px;
+    padding-bottom:28px;
 `
 
 const SearchContainer = props => {
