@@ -3,11 +3,20 @@ import PropTypes from 'prop-types';
 import Comments from "../CommentSection/Comments";
 import'./Post.css';
 import PostIcon from './PostIcon';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  display:flex;
+  justify-content:row;
+  width:100%;
+  max-width:940px;
+  margin:0 auto;
+`;
 
 class Posts extends Component {
   render() {
     return (  
-      <div  className="container">
+      <Container>
         <div className="post-lists">
           {this.props.posts.map(post => {
               return[
@@ -27,7 +36,7 @@ class Posts extends Component {
               ] 
             })}
         </div>
-      </div>
+      </Container>
     );
   }
 }

@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
+import instagram from"../../images/instagram.png";  
+import"./login.css"
 
 class Login extends Component {
   constructor(props){
     super(props)
     this.state = {
-      username: '',
-      password:''
+      username: ''
     }
   }
 
   handleChange = (e) =>{
     this.setState({
-     [e.target.name]: e.target.value
+      username: e.target.value
     })
   }
 
@@ -22,22 +23,25 @@ class Login extends Component {
 
   render() { 
     return (
-      <div className="Login-container">
-        <input 
-        name="username"
-        type="text" 
-        placeholder="Username" 
-        onChange={this.handleChange}
-        value={this.state.username}
-        />
-        <input 
-        name="password" 
-        type="password" 
-        placeholder="Password" 
-        onChange={this.handleChange}
-        value={this.state.password}
-        />
-        <div className="btn login" onClick={this.handleSubmit}>Login</div>
+      <div className="container">
+        <div className="login-container">
+          <img className="logo" src={instagram} alt= "instagram logo" />
+          <input 
+          name="username"
+          type="text" 
+          placeholder="Username" 
+          onChange={this.handleChange}
+          value={this.state.username}
+          />
+          <input 
+          name="password" 
+          type="password" 
+          placeholder="Password" 
+          onChange={this.handleChange}
+          value={this.state.password}
+          />
+          <div className="btn login" onClick={this.handleSubmit}>Login</div>
+        </div>
       </div>
     );
   }

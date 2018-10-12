@@ -58,21 +58,20 @@ html{
   outline-style: none;
 }
 
-.container{
+/* .container{
   display:flex;
   justify-content:row;
   width:100%;
   max-width:940px;
   margin:0 auto;
-  /*border:1px dotted darkgray;*/
 }
 
-.Header-section{
+/* .Header-section{
   height: 77px;
   background-color:white;
   border-bottom:1px solid rgba(0,0,0,.0975);
   width: 100%;
-}
+} */
 
 
 
