@@ -1,26 +1,31 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
-import AddComment from "../CommentSection/AddComment";
+import PostHeader from '../PostContainer/PostHeader'
+import PostImage from '../PostContainer/PostImage'
 import './PostContainer.css';
 
 const PostContainer = (props) => {
-    return (
-        
+    return (        
         <div className='post-container'>
-            <div className='user-info'>
-                {console.log(`This is happening in PostContainer ${props.user}`)}
-                <img src={props.user.thumbnailUrl} alt='user thumbnail'/>
-                {props.user.username}
-            </div>
-            <img src={props.user.imageUrl} alt='post pic'
-                className='post-content'/>   
-            {props.user.comments.map((comment, index) => {
-                    return <CommentSection 
-                        comment = {comment} 
-                        key = {index}/>
-            })}
-            
-            <AddComment />
+           {props.posts.map((post) => {
+               return (
+                   <div>
+                        <PostHeader 
+                            thumbNail={post.thumbnailUrl}
+                            username={post.username}
+                            key={Date.now()}
+                        />
+                        <PostImage 
+                            image={post.imageUrl}
+                            
+                        />
+                        <CommentSection
+                            likes={post.likes}
+                            comments={post.comments}                            
+                        />
+                   </div>
+               )
+           })}            
         </div>
     )
 }

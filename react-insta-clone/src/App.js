@@ -14,7 +14,6 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({ postInfo: dummyData });
-  console.log(`${this.state}`)
 }
 
 filterPosts = str => {
@@ -32,11 +31,8 @@ filterPosts = str => {
           {console.log(`This is happening after SearchBar is rendered ${dummyData}`)}
         </header>
         <div className="post">
-          {this.state.postInfo.map((user, index) => {
-           return <PostContainer 
-            user = {user}
-            key = {index}/>
-          })}
+          <PostContainer 
+            posts={this.state.postInfo}/>
         </div>
       </div>
     );

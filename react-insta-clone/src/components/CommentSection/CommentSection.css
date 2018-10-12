@@ -1,7 +1,8 @@
 .comment-section{
     width: 100%;
     min-height: 50px;
-    display: flex;    
+    display: flex;   
+    flex-direction: column; 
 }
 .comment-user {
     font-weight: bold;
