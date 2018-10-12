@@ -18,9 +18,6 @@ function InputComponent(props){
 }
 
 export default class SearchBar extends React.Component {
-    handleChange = event => {
-        this.props.filterPosts(event.target.value);
-    };
     render(){
         return (
             <div className={this.props.className}>
