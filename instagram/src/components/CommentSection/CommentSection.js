@@ -104,4 +104,9 @@ class CommentSection extends React.Component {
   }
 }
 
+CommentSection.propTypes = {
+  timestamp: PropTypes.string,
+  newComment: PropTypes.string
+};
+
 export default CommentSection;

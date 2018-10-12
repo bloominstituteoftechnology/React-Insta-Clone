@@ -31,4 +31,8 @@ const PostContainer = props => {
   );
 };
 
+PostContainer.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object)
+};
+
 export default PostContainer;

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./SearchBar.css";
 
 const SearchInput = props => {
@@ -13,6 +14,10 @@ const SearchInput = props => {
       />
     </div>
   );
+};
+
+SearchInput.propTypes = {
+  searchPost: PropTypes.func
 };
 
 export default SearchInput;

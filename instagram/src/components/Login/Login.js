@@ -64,11 +64,7 @@ class Login extends React.Component {
               required
             />{" "}
             <br />
-            {/* <button onClick={() => this.props.clicked(this.state.username)}>
-              Log in
-            </button> */}
             <button type="submit">Log in</button>
-            {/* <button onClick={this.loginHandler}>Log in</button> */}
           </form>
 
           <h4>OR</h4>
@@ -118,5 +114,9 @@ class Login extends React.Component {
     );
   }
 }
+
+Login.propTypes = {
+  clicked: PropTypes.func
+};
 
 export default Login;

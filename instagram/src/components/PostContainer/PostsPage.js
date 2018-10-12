@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./PostContainer.css";
 import dummyData from "../../dummy-data";
 import PostContainer from "./PostContainer";
