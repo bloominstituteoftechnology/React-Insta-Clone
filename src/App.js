@@ -73,11 +73,11 @@ class App extends Component {
   render() {
     return (
       <>
-      <Authenticate comp={App} />
+
       <PostsPage />
       </>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
