@@ -2,14 +2,14 @@ import React from 'react';
 import IGLogo from '../../assets/iglogo.png';
 import './SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = props => {
     return (
         <div className='search-bar-wrap'>
         <div class='image'>
             <img alt='instagram logo' src={IGLogo} className='logo' />
         </div>
         <div className='search'>
-            <input type='text' placeholder='Search' id='search-text-input' />
+            <input type='text' placeholder='Search' onKeyDown={props.searchPosts} />
             <button type="submit"><i class="fa fa-search"></i></button>
         </div>
         <div className="social-wrap">
