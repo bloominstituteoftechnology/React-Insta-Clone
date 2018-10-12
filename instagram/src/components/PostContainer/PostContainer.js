@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import CommentIcon from '../Icons/CommentIcon'
 import HeartIcon from '../Icons/HeartIcon'
 import CommentSection from '../CommentSection/CommentSection';
-import { WrapperDiv, StyledImage, StyledParagraph } from '../Styles'
-import './PostContainer.css';
+import { WrapperDiv, StyledImage, StyledParagraph, ContainerDiv } from '../Styles'
+
 
 
 class PostContainer extends Component {
@@ -35,21 +35,18 @@ handleLikes = (event, index) => {
 render() {
     return (
       <WrapperDiv post>
-        <div className='post-header'>
+        <ContainerDiv post>
           <StyledImage postuser src={this.props.data.thumbnailUrl} alt='thumbnail'/>
           <StyledParagraph postHeader><strong>{this.props.data.username}</strong></StyledParagraph>
-        </div>
-        <div className='post-content'>
+        </ContainerDiv>
           <StyledImage post src={this.props.data.imageUrl} alt=''/>
-        </div>
 
-        <div className='post-icons'>
+        <ContainerDiv postIcons>
           <HeartIcon post
             isLiked={this.state.liked} onClick={this.handleLikes} />
           <CommentIcon />
-
-        </div>
-        <p className='likes'><strong>{this.state.likes} likes</strong></p>
+        </ContainerDiv>
+        <StyledParagraph likes><strong>{this.state.likes} likes</strong></StyledParagraph>
         <CommentSection comments={this.props.data.comments} comment={this.props.comment}
        timestamp={this.props.data.timestamp}
         username={this.props.username}/>

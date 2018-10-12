@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LogoType from '../Icons/LogoType'
 import {WrapperDiv, StyledInput, StyledForm, StyledButton, StyledIcon} from '../Styles'
-import './Login.css'
+
  class Login extends Component {
   constructor(props){
     super(props);

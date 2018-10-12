@@ -3,7 +3,6 @@ import Comment from './Comment'
 import CommentEntry from './CommentEntry'
 import Timestamp from './Timestamp'
 import {WrapperDiv} from '../Styles'
-import './CommentSection.css'
 
 class CommentSection extends React.Component {
   constructor(props) {

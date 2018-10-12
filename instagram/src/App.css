@@ -55,11 +55,24 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
-.App{
-	/* max-width: 900px; */
-	margin: 0 auto;
-}
+
 
 body {
 	background: #FAFAFA;
+}
+
+/* begin css to remove */
+.login .logo-type{
+  transform: scale(2);
+  margin-bottom: 5%;
+}
+
+
+.logo .logo-type{
+ border-left: 1px solid black;
+ padding: 10px 15px;
+ position: absolute;
+ bottom: 15px;
+ align-self: flex-end;
+
 }

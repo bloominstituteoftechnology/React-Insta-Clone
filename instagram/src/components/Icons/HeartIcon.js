@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import {Heart} from 'styled-icons/feather/Heart';
 import styled from 'styled-components'
 

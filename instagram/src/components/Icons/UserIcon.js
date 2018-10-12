@@ -1,5 +1,5 @@
 
-import React from 'react'
+// import React from 'react'
 import {User} from 'styled-icons/feather/User';
 import styled from 'styled-components'
 
@@ -19,4 +19,4 @@ const UserIcon = styled(User)`
 
 `
 
-export default UserIcon; 
+export default UserIcon;
