@@ -1,7 +1,19 @@
 import React from 'react';
+import styled from '../../../node_modules/styled-components';
 
-export default () =>    <div className="icons">
-                            <i className="far fa-compass fa-2x"></i>
-                            <i className="far fa-heart fa-2x"></i>
-                            <i className="far fa-user fa-2x"></i>
-                        </div>
+const IconsContainer = styled.div`
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
+
+const Icon = styled.i`
+    color: gray
+`
+
+export default () =>    <IconsContainer>
+                            <Icon className="far fa-compass fa-2x"></Icon>
+                            <Icon className="far fa-heart fa-2x"></Icon>
+                            <Icon className="far fa-user fa-2x"></Icon>
+                        </IconsContainer>

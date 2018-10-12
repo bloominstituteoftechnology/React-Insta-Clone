@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from '../../../node_modules/styled-components';
 
-const Comment = props => <p><strong>{props.username}</strong> {props.text}</p>
+const CommentP = styled.p`
+    margin: 5px 1.5%
+`
+const Comment = props => <CommentP><strong>{props.username}</strong> {props.text}</CommentP>
 
 Comment.propTypes = {
     username: PropTypes.string,
@@ -9,7 +13,7 @@ Comment.propTypes = {
 }
 
 Comment.defaultProps = {
-    username: "Jorge_Osto"
+    username: localStorage.getItem('username')
 }
 
 export default Comment
