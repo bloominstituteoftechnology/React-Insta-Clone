@@ -1,12 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import CommentWrap from '../Styles/Styles';
+import CommentInput from '../Styles/Styles';
 import './CommentSection.css';
 
 const Comment = props => {
-    return <p className='comment'>
-        <span className='commentUser'>{props.comment.username}</span> 
-        <span className='commentText'>{props.comment.text}</span>
-      </p>;
+    return <CommentWrap>
+        <CommentInput type='user'>{props.comment.username}</CommentInput> 
+        <CommentInput type='comment'>{props.comment.text}</CommentInput>
+      </CommentWrap>;
 }
 
 Comment.propTypes = {

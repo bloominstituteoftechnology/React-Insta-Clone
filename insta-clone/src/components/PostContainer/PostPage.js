@@ -46,15 +46,9 @@ class PostPage extends React.Component {
         })
     }
 
-    signOut = event => {
-        window.localStorage.removeItem('password')
-        
-    }
-
     render() {
         return (
             <div className='postPage'>
-                <SearchBar signOut={this.signOut}/>
                 <PostContainer
                     {...this.state}
                     changeHandler={this.changeHandler}

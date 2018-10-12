@@ -1,5 +1,6 @@
 import React from 'react';
 import checkAuth from './checkAuth';
+import SearchBar from '../SearchBar/SearchBar';
 import Login from '../Login/Login';
 import PostPage from '../PostContainer/PostPage';
 
@@ -31,9 +32,14 @@ const Authenticate =  App =>
             })
         }
 
+        signOut = event => {
+            window.localStorage.removeItem('password')
+        }
+
         render() {
             return (
                 <div>
+                    <SearchBar signOut={this.signOut} />
                     <AuthCheck
                         username={this.state.username}
                         onchange={this.changeHandler}
