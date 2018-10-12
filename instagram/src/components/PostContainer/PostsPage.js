@@ -23,7 +23,7 @@ class PostsPage extends React.Component {
     event.preventDefault();
     let newData = dummyData;
     let filteredArr = newData.filter(
-      post => post.username === this.state.newSearch
+      post => post.username.includes(this.state.newSearch)
     );
     if (filteredArr.length) {
       this.setState({
