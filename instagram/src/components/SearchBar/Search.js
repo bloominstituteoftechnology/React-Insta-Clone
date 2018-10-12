@@ -25,6 +25,17 @@ const Container = styled.div`
   /*border:1px dotted darkgray*/;
 `;
 
+const LogoHeader = styled.div`
+  padding-right:15px;
+  border-right:1px solid black;
+`
+
+const LogoImage = styled.img`
+  width:106px;
+  height:40px;
+  cursor: pointer;
+`
+
 class Search extends Component {
   
   handleLogout = () =>{
@@ -37,11 +48,11 @@ class Search extends Component {
       <Container>
         <SearchContainer>
           <div className="search-header">
-           <div className="main-logo">
+           <LogoHeader>
               <img src={logo} alt="logo"/>
-           </div>
+           </LogoHeader>
             <div className="logo" onClick={this.props.reload}>
-             <img src={instagram} alt="instagram"/>
+             <LogoImage src={instagram} alt="instagram"/>
             </div>
           </div>
           <div className="search-bar">
