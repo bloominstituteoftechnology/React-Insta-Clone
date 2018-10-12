@@ -1,7 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const CommentSection = (props) => {
-    return(null)
+    console.log(props);
+    return(
+        <>
+          <p>{props.comment.text}</p>
+        </>
+    )
 }
 
 export default CommentSection;
