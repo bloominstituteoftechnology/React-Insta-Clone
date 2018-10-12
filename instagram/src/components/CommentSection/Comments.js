@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Comments = props => {
     return (
@@ -8,6 +9,12 @@ const Comments = props => {
         </div>
     )
 }
+
+Comments.propTypes = {
+    username: PropTypes.string,
+    text: PropTypes.string
+}
+  
 
 export default Comments;
 //`Comment` component with the username of the poster as well as the post's text.
