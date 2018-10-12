@@ -1,14 +1,14 @@
 import React from 'react'
-import './CommentSection.css'
+import {CommentSection} from '../Styles/StylePost'
 
 
 const Comment = props => {
 
     return (
-        <div className="section comment">
+        <CommentSection>
             <span className='post-user'>{props.user}</span> {''}
             <span className='post-comments'>{props.comments}</span>
-        </div>
+        </CommentSection>
 
 
     )

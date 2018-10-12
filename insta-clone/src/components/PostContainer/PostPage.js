@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import dummyData from "../../dummy-data";
 import PostContainer from "./PostContainer";
 import SearchBar from "../SearchBar/SearchBar";
-
+import { Post } from "../Styles/StylePost"
 
 class PostPage extends Component {
     constructor() {
@@ -29,18 +29,18 @@ class PostPage extends Component {
 
 
         return (
-            <>
-                <div className="SearchBar">
+            <Post>
+
                     <SearchBar
                         dummyData={this.state.data}
                         handleSearch={this.handleSearch}
                         handleInputChange={this.handleInputChange}
                     />
-                </div>
-                <div className="PostContainer">
+
+
                     <PostContainer dummyData={this.state.data} />
-                </div>
-            </>
+
+            </Post>
         );
     }
 }

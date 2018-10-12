@@ -1,6 +1,4 @@
 import React from "react";
-import "./PostContainer.css";
-
 import { Header} from "../Styles/StylePost";
 
 const PostHeader = props => {

@@ -1,16 +1,19 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
 import PostHeader from "./PostHeader";
-import "./PostContainer.css";
+import { PostWrapper, PostContent } from "../Styles/StylePost";
 import PropTypes from "prop-types";
 
 const PostContainer = props => {
   return (
     //This is my Post Container for each post.
-    <div className="post-content">
+    <PostContent>
       {/* Created a post area to map each post */}
       {props.dummyData.map(data => (
-        <div className="post-container" key={Math.random().toString() * 2}>
+        <PostWrapper
+          className="post-container"
+          key={Math.random().toString() * 2}
+        >
           {/* Pass the Post information to Post Header */}
           <PostHeader
             key={data.username}
@@ -27,10 +30,9 @@ const PostContainer = props => {
             image={data.imageUrl}
             id={data.index}
           />
-
-        </div>
+        </PostWrapper>
       ))}
-    </div>
+    </PostContent>
   );
 };
 

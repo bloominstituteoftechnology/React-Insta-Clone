@@ -34,15 +34,17 @@ class CommentSection extends React.Component {
     // })
 }
   addNewComment = index => {
+
+    // What does state currently have
     const newPost = {
       username: this.state.username,
       text: this.state.text
     };
-
+     // Create and array holder
     const comments = [...this.state.comments];
-
+    // Push new comments onto the pos
     comments.push(newPost);
-
+    //set state to new comment and send the entire array to localStorage.
     this.setState({
       comments,
       text: ""
