@@ -1,45 +1,19 @@
-.App {
-    text-align: center;
-    height: auto;
-}
-
-.App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 40vmin;
-}
-
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 .searchBarContainer {
+    display: inline-block;
+    height: 64px;
+    left: 0px;
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
+    position: fixed;
+    border: 1px solid rgba(128, 128, 128, 0.281);
+}
+
+.searchSubContainer {
+    width: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height: 64px;
-    width: 100%;
-    padding-top: 10px;
-    border: 1px solid rgba(128, 128, 128, 0.281);
+    margin-left: 5%;
 }
 
 .postContainer {
@@ -47,67 +21,96 @@
     flex-direction: column;
     height: auto;
     width: 604px;
-    margin-bottom: 40px;
     margin-right: auto;
     margin-left: auto;
-
+    margin-top: 30px;
+    background-color: white;
+    border: 1px solid lightgray;
 }
 
 .App {
     display: flex;
     flex-direction: column;
-    
-    width: 100%;
-    max-width: 1036px;
+    text-align: center;
     height: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background-color: rgb(243, 241, 241);
 }
 
 .iconContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
     width: 150px;
+    margin-top: 6px;
 }
 
 .searchBarInput {
-    width: 200px;
+    max-width: 100%;
+    width: 100%;
+    display: inline-block;
     height: 36px;
-    border: 1px solid white;
-    border-radius: 15px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    /* margin-left: 80%; */
+    padding-left: 10px;
+}
+
+.searchForm {
+    display: flex;
+    width: 30%;
+}
+
+.searchHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 64px;
+    width: 90%;
+    padding-top: 10px;
+}
+
+.loginText {
+    margin-top: 20px;
+}
+
+.submitBtn {
+    width: 100px;
+    margin-top: 10px;
 }
 
 .menu {
     display: none;
     position: fixed;
-    
     top: 175px;
+    font-size: 24px;
     left: auto;
     right: auto;
     margin-left: 140px;
+    line-height: 40px;
     width: 300px;
-    height: 32vh; /* This give the height 100% of the screen or, '100% of View Height' */
-    background-color: rgba(230, 232, 233, 0.548);
-  /*   border: 1px solid #004D40; */
+    height: 50vh;
+    background-color: rgb(230, 232, 233);
     border-left: none;
     border-bottom: none;
-    z-index: 2; /* This set the layer level of the element, it has precendence over initial level of 1*/
-  }
-/* .searchBarInput {
-    height: 36px;
-    width: 220px;
-    font-size: 16px;
-} */
-
-.cameraIcon {
-    background-image: url('./icons/icon4.png');
-    width: 35px;
-    height: 38px;
-    margin-left: 10px;
+    border-radius: 15px;
+    z-index: 2;
 }
 
-.cameraIcon:hover {
+.menuList {
+    list-style-type: none;
+    width: 100%;
+}
+
+li {
+    padding-right: 40px;
     cursor: pointer;
+}
+
+li:hover {
+    font-weight: bold;
 }
 
 .header {
@@ -117,8 +120,6 @@
 }
 
 .thumbNail {
-    /* background-image: url('./icons/icon1.png'); */
-    background: no-repeat;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -135,9 +136,7 @@
 }
 
 .image {
-    display: flex;
     width: 100%;
-    background: no-repeat;
 }
 
 .iconContainer2 {
@@ -157,6 +156,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     height: auto;
+    /*  border: 2px solid green; */
 }
 
 .user {
@@ -181,13 +181,6 @@
     padding-bottom: 4px;
 }
 
-.otherContainer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-}
-
 .timeStamp {
     margin-right: auto;
     margin-left: 10px;
@@ -207,37 +200,41 @@
 .addCommentContainer {
     display: flex;
     flex-direction: row;
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
     border-top: 1px solid rgba(128, 128, 128, 0.705);
     border-bottom: 1px solid rgba(128, 128, 128, 0.705);
 }
 
-.addComment {
-    display: none;
-    margin-left: 10px;
-    width: 300px;
-    z-index: 2;
-    color: gray;
-    border-radius: 15px;
-    border: 1px solid white;
-}
-
-.hide {
-    display: none;
-}
-
 .addComment2 {
     display: flex;
     margin-left: 10px;
     width: 400px;
-    z-index: 2;
     border-radius: 20px;
     border: 1px solid white;
 }
 
 .visible {
     display: flex;
+}
+
+div.button {
+    background-image: url("./icons/sprites.png");
+    height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+div#commentDots {
+    background-image: url("./icons/sprites.png");
+    /*  border: 1px solid blue; */
+    margin-left: auto;
+    margin-right: 20px;
+    width: 18px;
+    background-position: 190px 68px;
+    height: 20px;
 }
 
 a.button {
@@ -247,58 +244,57 @@ a.button {
     display: inline-block;
 }
 
-a#postIcon1 {
+/* likes heart */
+div#postIcon1 {
     width: 28px;
     margin-left: 10px;
     background-position: -456px 441px;
 }
 
-a#postIcon2 {
+/* bubble */
+div#postIcon2 {
     width: 32px;
     margin-left: 10px;
     background-position: 214px 44px;
 }
 
-a#icon1 {
+/* compass */
+div#icon1 {
     width: 32px;
     background-position: -456px 362px;
 }
 
-a#icon2 {
+/* search heart */
+div#icon2 {
     width: 24px;
     background-position: -457px 284px;
 }
 
-a#icon3 {
+/* profile */
+div#icon3 {
     width: 24px;
-    background-position: -457px 182px;
+    height: 28px;
+    background-position: -457px 180px;
 }
 
-a#titleText {
+div#titleText {
+    margin-left: 16px;
     width: 178px;
     height: 52px;
     background-position: 386px 323px;
 }
 
-a#commentIcon {
+/* comment heart small */
+div#commentIcon {
     width: 24px;
     background-position: -34px 40px;
     height: auto;
 }
 
-a#commentDots {
-    margin-left: auto;
-    margin-right: 20px;
-    width: 18px;
-    background-position: 190px 68px;
-    height: 20px;
-}
-
-a#camera {
+div#camera {
     width: 28px;
     background-position: -456px 388px;
     height: 28px;
     margin-left: 10px;
     margin-top: 8px;
-   /*  border: 2px solid green; */
 }

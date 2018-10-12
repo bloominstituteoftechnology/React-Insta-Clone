@@ -3,7 +3,8 @@ import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar'
 import PostContainer from './components/PostContainer/PostContainer'
-
+import LoginPage from "./components/Login/LoginPage"
+import Authenticate from "./components/Authenticate/Authenticate"
 
 class App extends Component {
   constructor(props) {
@@ -19,56 +20,27 @@ class App extends Component {
    /*  this.getDummyData(); */
   }
 
- /*  showPrevPage = event => {
-    if(this.state.prevPage !== null) {
-      const newData = this.getCharacters(this.state.prevPage);
-    /*   console.log(newData); 
-    }
-  } */
-
- /*  showCurrentChar = () => {
-    const currentChar = this.state.dummyData.map((chars,index) => {
-     this.key=this.index,
-     this.char=this.chars.username,
-     this.name= this.chars.name,
-     this.thumb= this.chars.thumbnailUrl,
-     this.time= this.timestamp,
-     this.likes= this.char.likes,
-     this.image= this.chars.image,
-     this.comments= this.chars.comments,
-    
-    this.setState({ currentChar: currentChar})
-
-  }) */
-      
- /*  char={chars.username} name={chars.name} thumb={chars.thumbnailUrl} time={chars.timestamp}
-      likes={chars.likes} image={chars.imageUrl} comments={chars.comments}
-    })
-    const currentChar = this.state.starwarsChars.find(char => char.name === name);
-      this.setState({ currentChar: currentChar, currentImage: currentImage});
-  }
-  returnToList = event => {
-    this.setState({ currentChar: null }) */
-  
-
-
+ 
   render() {
+   
+   
     return (
 
       <div className="App">
-        <div className="searchBar">
-          <SearchBar />
+      {/* <div><LoginPage /></div> */}
+    
+        <div className="searchBar">{dummyData.map((chars, index) => {
+  return<SearchBar key={index} char={chars.comments} />})}
         </div>
         <div className="postContainer">{dummyData.map((chars, index) => {
   return <PostContainer key={index} char={chars.username} name={chars.name} thumb={chars.thumbnailUrl} time={chars.timestamp}
-    likes={chars.likes} image={chars.imageUrl} comments={chars.comments} />
+    likes={chars.likes} image={chars.imageUrl} comments={chars.comments} keyIndex={index}/>
 })}  
-        
-        </div>
+    </div>
 
-      </div>
+  </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
