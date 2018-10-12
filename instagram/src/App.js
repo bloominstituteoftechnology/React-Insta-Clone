@@ -12,6 +12,7 @@ class App extends Component {
     super()
     this.state = {
       data : [],
+      search: '',
       
     }
   }
@@ -21,13 +22,19 @@ class App extends Component {
     })
   }
   searchFilter = (event) => {
-    const search = event.target.value;
-    const data = [];
-
-    this.state.data.filter(post =>{
-      return post.username.includes(search) ? data.push(post) : null;
+    event.preventDefault()
+    const search = this.state.search
+    const data = this.state.data.filter(post =>{
+      return post.username.includes(search) 
     })
+    console.log(search)
     search === '' ? this.setState({data: dummyData}) : this.setState({data:data})
+  }
+  searchChanger = (event) =>{
+    this.setState({
+      search: event.target.value,
+    })
+    console.log(event.target.value)
   }
   
   
@@ -36,8 +43,8 @@ class App extends Component {
     const App = () =>{
       return (
         <div>
-          <Login />
-          <PostPage data = {this.state.data} />
+         
+          <PostPage data = {this.state.data} changer = {this.searchChanger} search = {this.searchFilter} searchValue = {this.state.search}/>
         </div>
       );
     }
@@ -70,4 +77,4 @@ App.propTypes = {
   )
 }
 
-export default App;
+export default Authenticate(App)

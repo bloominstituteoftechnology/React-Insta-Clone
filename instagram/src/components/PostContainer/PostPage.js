@@ -7,7 +7,7 @@ const PostPage = (props) => {
     return(
         <div className ="app-container">
             <div>
-                <SearchBar />
+                <SearchBar changer = {props.changer} search = {props.search} searchValue = {props.searchValue}/>
             </div>    
             <div>
                 {props.data.map(dummyObj =>{

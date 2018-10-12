@@ -10,21 +10,21 @@ const Authenticate = (PassedComponent) => {
             }
         }
         componentDidMount(){
-            if(localStorage.getItem('Username') !== null){
+            if(!localStorage.getItem('Username')){
                 this.setState({
-                    loggedIn:true,
+                    loggedIn:false,
                 })
             }else{
                 this.setState({
-                    loggeIn:false,
+                    loggedIn:true,
                 })
             }
         }
         render(){
-            if(this.state.loggeIn === false){
-                return <Login />
+            if(this.state.loggedIn){
+                return <PassedComponent />
             }else{
-                return <PassedComponent />;
+                return <Login />;
             }     
         }
     }

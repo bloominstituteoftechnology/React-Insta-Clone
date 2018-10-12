@@ -2,6 +2,10 @@ import React from 'react';
 import CommentSection from '../CommentSection/commentsection'
 import styles from './postcontainer.css';
 import PropTypes from 'prop-types';
+import styled from 'styled-components'
+import {Container, UserHeader} from '../StyledComponents/StyledComponents';
+
+
 
 class PostContainer extends React.Component{
   constructor(props){
@@ -12,16 +16,20 @@ class PostContainer extends React.Component{
   }
   addLike = () =>{
     this.setState({
-      likes : ++this.state.likes
+      likes :this.state.likes + 1
     })
   }
   render(){  
+  
+
     return (
-        <div className = "post-container">
-            <div className="user-header">
+        
+       // <div className = "post-container">
+         <Container>  
+            <UserHeader>
               <img src={this.props.dummyObj.thumbnailUrl} className="thumbnail" />
               <div className="username">{this.props.dummyObj.username}</div>
-            </div>
+            </UserHeader>
             <div>
               <img className="main-image" src={this.props.dummyObj.imageUrl} />
             </div>
@@ -33,8 +41,10 @@ class PostContainer extends React.Component{
               <div className="likes">{this.state.likes} likes</div>
                          
             </div>
+           
             <CommentSection key={this.props.dummyObj.key} comments ={this.props.dummyObj.comments}/>
-        </div>
+            </Container> 
+        //</div>
     );
   }  
 }
