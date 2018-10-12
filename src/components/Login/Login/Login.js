@@ -26,8 +26,10 @@ class LoginPage extends Component {
 
         return(
             <Form className="login-form">
-            <h3>Welcome to React Insta-Clone</h3>
-            <div>Please Login</div>
+
+                <h3>Welcome to React Insta-Clone</h3>
+                <div>Please Login</div>
+
             <FormGroup>
                 <Input 
                 type="text"
@@ -37,6 +39,7 @@ class LoginPage extends Component {
                 onChange={this.handleInputChange}
                 />
             </FormGroup>
+
             <FormGroup>
                 <Input 
                 type="password"
@@ -45,14 +48,16 @@ class LoginPage extends Component {
                 value={this.state.password}
                 onChange={this.handleInputChange}
                 />
-            <br />
-            <Button
-            color="success"
-            size="large"
-            disabled={disableLogin}
-            onClick={this.handelLoginSubmit}>
-            Log in
-            </Button>
+
+                <br />
+
+                <Button
+                color="success"
+                size="large"
+                disabled={disableLogin}
+                onClick={this.handelLoginSubmit}>
+                Log in
+                </Button>
             </FormGroup>
             </Form>
         );
