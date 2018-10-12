@@ -1,39 +1,39 @@
 
-.searchContainer {
+/* .searchContainer {
   display: flex;
   height: 50px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
-}
+} */
 
-img {
+/* img {
   width: 24px;
   height: 24px;
-}
+} */
 
-.logo {
+/* .logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 120px;
-}
+} */
 
-.logo img {
+/* .logo img {
   padding-right: 10px;
   border-right: 1px solid black;
-}
+} */
 
-input {
+/* input {
   width: 200px;
-}
+} */
 
-input::placeholder {
+/* input::placeholder {
   text-align: center;
-}
+} */
 
-.searchContainer .icons {
+/* .searchContainer .icons {
   display: flex;
   justify-content: space-between;
   width: 100px;
-}
+} */
