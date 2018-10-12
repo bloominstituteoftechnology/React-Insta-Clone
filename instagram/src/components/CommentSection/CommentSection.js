@@ -32,16 +32,14 @@ class CommentSection extends Component {
 
 	addNewComment = event => {
 		event.preventDefault();
-		/* this.setState( () => { */
-//*****I have the newComment here through state */
-//****I also have the index here through event.target.name */
-//*****I need to add the comment to the array using the index */
-		console.log(this.state.newComment)
-		console.log("keyIndex:" + event.target.name)
+		let arr = this.state.comments;
+		const newUser = { username: "currentUser", text: this.state.newComment }
+		let arr2 = [...arr, newUser]
+		this.setState({ comments: arr2, newComment: "" })
 	}
 
 	handleInputChange = event => {
-		this.setState({ [event.target.name]: event.target.value });	
+		this.setState({ [event.target.name]: event.target.value });
 	};
 
 	render() {
@@ -52,7 +50,7 @@ class CommentSection extends Component {
 			'visible': this.state.display
 		})
 		return (
-			<div className="userCommentContainer">  {this.props.comments.map((comment, index) => {
+			<div className="userCommentContainer">  {this.state.comments.map((comment, index) => {
 				return <Comment user={comment.username} comments={comment.text} key={index} />;
 			})}
 				<div className="timeStamp">{this.props.timeStamp}</div>

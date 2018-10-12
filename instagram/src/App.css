@@ -84,33 +84,42 @@
 .menu {
     display: none;
     position: fixed;
+
     top: 175px;
     font-size: 24px;
     left: auto;
     right: auto;
-    margin-left: 140px;
+   /*  margin-left: 140px; */
     line-height: 40px;
     width: 300px;
-    height: 50vh;
+    height: auto;
     background-color: rgb(230, 232, 233);
     border-left: none;
     border-bottom: none;
     border-radius: 15px;
     z-index: 2;
+    /* border: 1px solid green; */
 }
 
 .menuList {
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
-    width: 100%;
+    width: 85%;
+    /* border: 1px solid blue; */
+    margin-top: 6px;
 }
 
 li {
-    padding-right: 40px;
+    /* padding-right: 40px; */
     cursor: pointer;
+   /*  border: 1px solid red; */
 }
 
 li:hover {
     font-weight: bold;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.644);
+    border-top: 1px solid rgba(128, 128, 128, 0.644);
 }
 
 .header {
