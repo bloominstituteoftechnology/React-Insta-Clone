@@ -1,6 +1,6 @@
 ## Day II
 
-### Focus (Day II)
+### x Focus (Day II)
 
 - Understand the concept of React component lifecycles, along with the major lifecycle methods such as `render`, `componentDidMount`.
 
