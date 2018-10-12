@@ -12,7 +12,7 @@ import Login from '../Login/Login.js'
     }
          login = (username, password) => {
 
-           if(localStorage.getItem)
+          
          let newLogin;
       let logins = JSON.parse(
         window.localStorage.getItem(this.localStorageKey)
