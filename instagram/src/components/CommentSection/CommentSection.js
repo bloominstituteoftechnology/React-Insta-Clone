@@ -2,6 +2,37 @@ import React, { Component } from 'react';
 import './CommentSection.css';
 import Comment from './Comment.js';
 import PropTypes from 'prop-types';
+import styled from 'styled-components'
+
+const Timestamp = styled.p`
+    color: #757575;
+    font-size: 12px;
+`
+
+const CommentInputSection = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #E6E6E6;
+    margin-top: 15px;
+    padding-top: 10px;
+`
+
+const CommentInput = styled.input`
+    height: 45px; 
+    border: 0px;
+    width: 565px;
+    font-size: 16px;
+    outline-width: 0;
+`
+
+const Squarellipsis = styled.span`
+    height: 5px;
+    width: 5px;
+    background-color: black;
+    display: inline-block;
+    margin: 1px;
+`
 
 class CommentSection extends React.Component {
     constructor() {
@@ -59,25 +90,25 @@ class CommentSection extends React.Component {
                     )
                 })}
                 {/* time stamp */}
-                <p className='timestamp'>{this.props.data.timestamp.toUpperCase()}</p>
+                <Timestamp>{this.props.data.timestamp.toUpperCase()}</Timestamp>
                 {/* comment input field */}
-                <div className='comment-input-section'>
+                <CommentInputSection>
                     <form onSubmit={this.addNewComment}>
-                        <input 
+                        <CommentInput 
                             className='comment-input' 
                             type='text' 
                             placeholder='Add a comment...'
                             value={this.state.input}
-                            onChange={this.updateInput}>
-                        </input>
+                            onChange={this.updateInput}
+                        />
                     </form>
                     {/* comment option button */}
                     <div>
-                        <span className="dot"></span>
-                        <span className="dot"></span>
-                        <span className="dot"></span>
+                        <Squarellipsis/>
+                        <Squarellipsis/>
+                        <Squarellipsis/>
                     </div>
-                </div>
+                </CommentInputSection>
             </div>
         )
     }
