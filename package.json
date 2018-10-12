@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@atlaskit/button": "^9.0.13",
+    "@atlaskit/field-text": "^7.0.11",
+    "@atlaskit/form": "^4.0.11",
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
     "@fortawesome/free-solid-svg-icons": "^5.3.1",
     "@fortawesome/react-fontawesome": "^0.1.3",
