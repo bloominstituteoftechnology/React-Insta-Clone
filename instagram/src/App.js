@@ -11,7 +11,7 @@ class App extends React.Component {
       posts: [],
       likes: Math.floor(Math.random() * 1000),
       filteredPosts: [],
-      filterTarget: "",
+      filterTarget: ''
 
     };
   }
@@ -39,7 +39,7 @@ class App extends React.Component {
     this.handleInput(event);
     this.setState(prevState => {
       const filteredPosts = prevState.posts.filter(post => {
-        return post.username.includes(prevState.filterTarget);
+        return post.username.includes(prevState.filterTarget)
       });
       return { filteredPosts }
     });

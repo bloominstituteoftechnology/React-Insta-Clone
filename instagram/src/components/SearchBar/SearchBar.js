@@ -62,8 +62,7 @@ const SearchBar = (props) => {
                 type="text"
                 value={props.filterTarget}
                 onChange={props.changeHandler}
-                name="filterTarget" />
-            
+                name="filterTarget"></Input>
             <DivThree>
                 <i className="fa fa-compass fa-2x" />
                 <i className="fa fa-heart fa-2x" />

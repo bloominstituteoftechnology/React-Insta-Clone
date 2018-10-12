@@ -12,7 +12,7 @@ const AppWrapper = styled.div`
 const PostsPage = (props) => {
     return (
         <AppWrapper>
-            <SearchBar changeHandler={props.filter} filterTarget={props.filterTarget} />
+            <SearchBar changeHandler={props.changeHandler} filterTarget={props.filterTarget} />
             <PostContainer data={props.data} likes={props.likes} increment={props.increment} />
         </AppWrapper>
     );
