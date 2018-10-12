@@ -3,15 +3,14 @@ import dummyData from '../../dummy-data';
 import PropTypes from 'prop-types';
 import './CommentSection.css';
 import AddComment from './addComment';
-import styled from "styled-components"
+import styled from 'styled-components'
 
-const Img = styled(Img)`
+const Img = styled.img`
 border: 5px solid pink ;
 	display: flex ;
 	justify-content: center ;
 
 `
-
 
 
 
@@ -86,7 +85,6 @@ class CommentSection extends React.Component {
     return(
         <div className="cmntSectDiv">
         {this.props.data.map(item => <div key={item.timestamp}>
-           
             <img className="thumbnailImg" alt="" src={item.thumbnailUrl} /> 
             {item.username}
 

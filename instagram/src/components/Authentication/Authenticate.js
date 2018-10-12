@@ -1,4 +1,5 @@
 import React from 'react';
+import Login from '../Login/Login'
 
 
 const Authenticate = (App) => class extends React.Component
@@ -30,9 +31,8 @@ const Authenticate = (App) => class extends React.Component
 
 render(){
     if(this.state.login) return <App />
-    return(
-        <div></div>
-    )
+    return <Login />
+
 }
 }
 
