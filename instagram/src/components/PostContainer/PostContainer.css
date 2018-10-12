@@ -1,7 +1,7 @@
-.posts-container-wrap {
+.post-container {
     height: 500px;
     width: 50%;
-    margin: 5px auto;
+    margin: auto;
 }
 
 .post-border {
@@ -11,24 +11,29 @@
 }
 
 .post-image-wrapper {
+    margin: auto;
     height: 100%;
-    width: 100%;
+    width: 340px;
 }
 
 .post-image {
+    margin: auto;
     width: 100%;
 }
 
 .post-header {
+    margin: auto;
     display: flex;
 }
 
 .post-thumb-wrapper {
+    margin: auto;
     height: 50px;
     width: 50px;
 }
 
 .post-thumb {
+    margin: auto;
     height: 100%;
     border-radius: 50%;
 }
