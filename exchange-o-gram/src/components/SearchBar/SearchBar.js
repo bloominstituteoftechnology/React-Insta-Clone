@@ -68,6 +68,12 @@ class SearchBar extends React.Component{
         })
     }
 
+    signOut = (event)=>{
+        localStorage.removeItem('loggedInUser');
+        this.props.logoutUser();
+        window.location.reload(true);
+    }
+
     render(){
         return (
             <SearchBarContainer>
@@ -76,7 +82,7 @@ class SearchBar extends React.Component{
                 <form onSubmit={this.searchPosts}>
                     <SearchBarInput onChange={this.storeSearchText} placeholder={'\ud83d\udd0d Search'} value={this.state.searchText}></SearchBarInput>
                 </form>
-                <IconsContainer><i className="far fa-compass fa-2x"></i><i className="far fa-heart fa-2x"></i><i className="far fa-user fa-2x"></i></IconsContainer>
+                <IconsContainer><i className="far fa-compass fa-2x"></i><i className="far fa-heart fa-2x"></i><i className="far fa-user fa-2x" onClick={this.signOut}></i></IconsContainer>
             </SearchBarContainer>
         )
     }

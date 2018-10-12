@@ -57,6 +57,12 @@ class App extends Component {
     })
   }
 
+  logoutUser = ()=>{
+    this.setState({
+      user: ''
+    })
+  }
+
   addNewComment = (comment, index)=>{
     const data = this.state.posts;
     const commentObj = {
@@ -109,7 +115,7 @@ class App extends Component {
   render() {
     return (
       <AppContainer>
-        <SearchBar searchPosts={this.searchPosts}/>
+        <SearchBar searchPosts={this.searchPosts} logoutUser={this.logoutUser}/>
         <Authenticate posts={this.state.posts} displayInfo={this.state.displayLoginWarning} addNewComment={this.addNewComment} addLike={this.addLike} searchPosts={this.searchPosts} deleteComment={this.deleteComment} setUser={this.setUser}/>
       </AppContainer>
     );
