@@ -1,12 +1,29 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const SearchBarActionIcons = styled.div`
+  align-items: center;
+  display: flex;
+  font-size: 25px;
+`;
+
+const SearchBarActionIcon = styled.span`
+  margin-left: 15px;
+`;
 
 const SearchBarActions = () => {
   return (
-    <div className="search-bar-actions">
-      <i className="far fa-compass" />
-      <i className="far fa-heart" />
-      <i className="far fa-user" />
-    </div>
+    <SearchBarActionIcons>
+      <SearchBarActionIcon>
+        <i className="far fa-compass" />
+      </SearchBarActionIcon>
+      <SearchBarActionIcon>
+        <i className="far fa-heart" />
+      </SearchBarActionIcon>
+      <SearchBarActionIcon>
+        <i className="far fa-user" />
+      </SearchBarActionIcon>
+    </SearchBarActionIcons>
   );
 }
 

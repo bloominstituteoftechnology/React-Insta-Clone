@@ -1,17 +1,33 @@
 import React from 'react';
-
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
+
+const SearchBarInputContainer = styled.div`
+  align-items: center;
+  display: flex;
+`;
+
+const SearchIcon = styled.span`
+ font-size: 16px;
+ `;
+
+const SearchInput = styled.input`
+  text-align: center;
+`;
+  
 
 const SearchBarInput = ({ onChange }) => {
   return (
-    <div className="search-bar-input">
-      <i className="fas fa-search" />
-      <input
+    <SearchBarInputContainer>
+      <SearchIcon>
+        <i className="fas fa-search" />
+      </SearchIcon>
+      <SearchInput
         type="search"
         name="search"
         placeholder="Search"
         onChange={onChange} />
-    </div>
+    </SearchBarInputContainer>
   );
 }
 

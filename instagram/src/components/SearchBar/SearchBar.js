@@ -1,5 +1,5 @@
 import React from 'react';
-import './SearchBar.css'
+import styled from 'styled-components';
 
 import SearchBarLogo from './SearchBarLogo';
 import SearchBarInput from './SearchBarInput';
@@ -7,13 +7,19 @@ import SearchBarActions from './SearchBarActions';
 
 import PropTypes from 'prop-types';
 
+const SearchBarContainer = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+`;
+
 const SearchBar = ({ onChange }) => {
   return (
-    <div className="search-bar-container">
+    <SearchBarContainer>
       <SearchBarLogo />
       <SearchBarInput onChange={onChange} />
       <SearchBarActions />
-    </div>
+    </SearchBarContainer>
   );
 }
 
