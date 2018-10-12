@@ -20,7 +20,7 @@ class CommentSection extends React.Component {
     };
   
     addComment = (event) => {
-      console.log(event)
+      // console.log(event)
       const username = "CRJuelfs15";
       const text = this.state.newCommentText;
       this.setState({
@@ -29,7 +29,7 @@ class CommentSection extends React.Component {
       });
     };
     addCommentEnter = (event) => {
-      console.log(event)
+      // console.log(event)
       if (event.key === 'Enter'){
         const username = "CRJuelfs15";
         const text = this.state.newCommentText;
@@ -37,6 +37,8 @@ class CommentSection extends React.Component {
           comments: [...this.state.comments, { username, text }],
           newCommentText: ""
         });
+        // window.location.reload(false);
+        event.preventDefault();
       }
     }
   
@@ -50,7 +52,7 @@ class CommentSection extends React.Component {
             <img src = {heart} alt = 'heart-icon' onClick = {this.likePost} />
             <img src = {chat} alt = 'chat-icon' onClick = {this.addComment} />
           </div>
-          <strong style={{ paddingBottom: "5px" }}>
+          <strong>
             {this.state.likes} likes
           </strong>
           {this.state.comments.map(comment => {
