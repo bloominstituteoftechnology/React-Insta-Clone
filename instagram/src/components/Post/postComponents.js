@@ -2,42 +2,33 @@
 
 /*============================================================================*/
 
-.post-container{
+//-- Dependencies --------------------------------
+import styled from 'styled-components';
+
+//-- Components ----------------------------------
+export const Container = styled.div`
     font-family: sans-serif;
-}
-.post-container a:any-link {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-/*============================================================================*/
-
-.post-container {
     width: 600px;
     border: solid #ccc 1px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     margin: 20px auto;
-}
-.post-username {
-    font-weight: bold;
-}
-.post-header {
+`;
+export const Header = styled.div`
     display: flex;
     align-items: center;
-}
-.post-header img {
+`;
+export const HeaderImg = styled.img`
     width: 32px;
     height: 32px;
     border-radius: 50%;
     margin: 16px;
-}
-.post-photo {
+`;
+export const Photo = styled.div`
     width: 600px;
-}
-.post-photo img {
+`;
+export const PhotoImg = styled.img`
     width: 100%;
     height: auto;
-}
+`;

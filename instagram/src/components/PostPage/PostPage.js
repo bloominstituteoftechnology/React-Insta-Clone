@@ -4,7 +4,7 @@ import Post from '../Post/Post';
 class PostPage extends React.Component {
     render() {
         return (
-            <div className="posts">
+            <div>
                 {
                     this.renderFilterSearch(this.props.posts).map(post => (
                     <Post

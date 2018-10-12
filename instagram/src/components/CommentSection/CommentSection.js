@@ -1,7 +1,8 @@
 import React from 'react';
 import Comment from './Comment.js';
-import './CommentSection.css';
 import Authenticate from '../Authenticate/Authenticate.js';
+//import * as globalStyles from '../../globalStyles.js';
+import * as comments from './commentComponents.js';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -15,17 +16,20 @@ class CommentSection extends React.Component {
     }
     render() {
         return (
-            <div className="comments">
-                <div className="comments-interaction">
-                    <img
+            <comments.Comments>
+                <comments.CommentsInteraction>
+                    <comments.CommentsInteractionImg
                         src="img/interact-like.png"
                         alt="like button"
                         onClick={this.addLike}
                     />
-                    <img src="img/interact-comment.png" alt="comment button" />
-                    <div className="comments-likes-count">{this.state.likes} likes</div>
-                </div>
-                <div className="comments-list">
+                    <comments.CommentsInteractionImg
+                        src="img/interact-comment.png"
+                        alt="comment button"
+                    />
+                    <comments.CommentsLikesCount>{this.state.likes} likes</comments.CommentsLikesCount>
+                </comments.CommentsInteraction>
+                <div>
                 {
                     this.state.commentList.map((comment, commentIndex) => (
                         <Comment
@@ -36,17 +40,17 @@ class CommentSection extends React.Component {
                     ))
                 }
                 </div>
-                <div className="post-time">{this.state.lastActivity}</div>
-                <form className="comments-add" onSubmit={this.addNewComment}>
-                    <input
+                <comments.CommentsPostTime>{this.state.lastActivity}</comments.CommentsPostTime>
+                <comments.CommentsAdd onSubmit={this.addNewComment}>
+                    <comments.CommentsAddInput
                         type="text"
                         placeholder="Add a comment..."
                         onChange={this.typeComment}
                         value={this.state.commentBody}
                     />
-                    <span className="comments-unknown-dots">...</span>
-                </form>
-            </div>
+                    <comments.CommentsUnknownDots>...</comments.CommentsUnknownDots>
+                </comments.CommentsAdd>
+            </comments.Comments>
         )
     }
 

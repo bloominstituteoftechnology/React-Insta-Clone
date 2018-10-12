@@ -1,5 +1,5 @@
 import React from 'react';
-import './SearchBar.css';
+import * as search from './searchComponents.js';
 
 class SearchBar extends React.Component {
     constructor() {
@@ -10,11 +10,11 @@ class SearchBar extends React.Component {
     }
     render() {
         return (
-            <div className="search">
-                <div className="logo-container">
+            <search.Container>
+                <search.LogoContainer>
                     <img src="img/logo.png" alt="logo" />
                     <img src="img/wordmark.png" alt="Instagram" />
-                </div>
+                </search.LogoContainer>
                 <form onSubmit={this.submit}>
                     <input
                         type="text"
@@ -22,14 +22,15 @@ class SearchBar extends React.Component {
                         value={this.state.searchText}
                     />
                 </form>
-                <div className="profile-container">
-                    <img src="img/compass.png" alt="compass" />
-                    <img src="img/heart.png" alt="heart" />
-                    <img src="img/person.png" alt="person" />
+                <div>
+                    <search.ProfileContainerImg src="img/compass.png" alt="compass" />
+                    <search.ProfileContainerImg src="img/person.png" alt="person" />
+                    <search.ProfileContainerImg src="img/heart.png" alt="heart" />
                 </div>
-            </div>
+            </search.Container>
         )
     }
+    
     //--------------------------------------------
     typeValue = (changeEvent) => {
         let newValue = changeEvent.target.value;

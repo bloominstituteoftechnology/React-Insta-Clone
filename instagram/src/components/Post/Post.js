@@ -1,32 +1,33 @@
 import React from 'react';
-import './Post.css';
+import * as post from './postComponents.js';
+import * as globalStyles from '../../globalStyles.js';
 import CommentSection from '../CommentSection/CommentSection';
 
 class Post extends React.Component {
     render() {
         return (
-            <div className="post-container">
-                <div className="post-header">
-                    <img
+            <post.Container>
+                <post.Header>
+                    <post.HeaderImg
                         src={this.props.thumbnailUrl}
                         alt={this.props.username+' profile'}
                     />
-                    <a
+                    <globalStyles.UserName
                         className={this.props.username}
                         href={'https://example.com/users/'+this.props.username}
                     >
                         {this.props.username}
-                    </a>
-                </div>
-                <div className="post-photo">
-                    <img src={this.props.imageUrl} alt="Alt text should be provided by the API" />
-                </div>
+                    </globalStyles.UserName>
+                </post.Header>
+                <post.Photo>
+                    <post.PhotoImg src={this.props.imageUrl} alt="Alt text should be provided by the API" />
+                </post.Photo>
                 <CommentSection
                     lastActivity={this.props.timestamp}
                     comments={this.props.comments}
                     likes={this.props.likes}
                 />
-            </div>
+            </post.Container>
         )
     }
 }
