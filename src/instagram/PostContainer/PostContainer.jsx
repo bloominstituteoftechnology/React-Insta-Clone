@@ -4,7 +4,7 @@ import Post from "./Post";
 
 const PostContainer = props => {
   return (
-    <div className="posts-container-wrapper">
+    <div>
       {props.posts.map(p => (
         <Post key={p.imageUrl} post={p} />
       ))}

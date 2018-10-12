@@ -1,5 +1,28 @@
 const dummyData = [
   {
+    nickname: "PetitAlouetteEnLyon",
+    avatar: "https://picsum.photos/200",
+
+    image:
+      "https://preview.ibb.co/ik04g9/21462510-1513572312024007-3614161606157308386-n.jpg",
+    likes: 120,
+    timestamp: "1 HOUR AGO ",
+    comments: [
+      {
+        nickname: "PetitAlouetteEnLyon",
+        text: "Bonjour mes chéris! Mes filles me manquent à Paris!"
+      },
+      {
+        nickname: "PetitAlouetteEnLyon",
+        text: "Bonjour mes chéris! Mes filles me manquent à Paris!"
+      },
+      {
+        nickname: "NickTheBaker",
+        text: "Can't wait to see you!"
+      }
+    ]
+  },
+  {
     nickname: "philzcoffee",
     avatar:
       "https://tk-assets.lambdaschool.com/ecd33d34-c124-4b75-92d2-e5c52c171ed8_11201517_887808411287357_1307163552_a.jpg",
@@ -7,7 +30,7 @@ const dummyData = [
     image:
       "https://tk-assets.lambdaschool.com/69cf901b-f96d-466e-a745-ff2a01effac9_philz-image.jpg",
     likes: 400,
-    timestamp: "July 17th 2017, 12:42:40 pm",
+    timestamp: "1 HOUR AGO ",
     comments: [
       {
         nickname: "philzcoffee",
@@ -15,7 +38,7 @@ const dummyData = [
           "We've got more than just delicious coffees to offer at our shops!"
       },
       {
-        nickname: "biancasaurus",
+        nickname: "PetitAlouetteEnLyon",
         text: "Looks delicious!"
       },
       {
@@ -31,7 +54,7 @@ const dummyData = [
     image:
       "https://tk-assets.lambdaschool.com/89d13918-b7a2-4b40-9658-f376ea3f6b59_37131538_213683546146400_1083714364399157248_n.jpg",
     likes: 4307,
-    timestamp: "July 15th 2017, 03:12:09 pm",
+    timestamp: "2 HOURS AGO",
     comments: [
       {
         nickname: "twitch",
@@ -62,7 +85,7 @@ const dummyData = [
     image:
       "https://tk-assets.lambdaschool.com/43bf01f9-319c-469d-8cf5-0120fe1007f1_yosemite.jpg",
     likes: 5306,
-    timestamp: "July 14th 2017, 10:04:08 am",
+    timestamp: "4 HOURS AGO",
     comments: [
       {
         nickname: "playhearthstone",

@@ -38,6 +38,7 @@ ${props =>
   props.postNickname
     ? `
 margin-left: 1.2rem;
+font-size: 1.8rem;
 font-family: "PT Sans", sans-serif;
 font-weight: bold;
 `
@@ -51,6 +52,7 @@ ${props =>
 background-color: #efefef;
 `
     : null}
+
     ${props =>
       props.postLikes
         ? `
@@ -59,7 +61,15 @@ background-color: #efefef;
       font-size: 1.6rem;
       `
         : null}
-
+  ${props =>
+    props.timestamp
+      ? `
+     
+      margin: 1rem;
+      font-size: 1.4rem;
+      color: lightgray;
+      `
+      : null}
 
 ${props =>
   props.postIcons

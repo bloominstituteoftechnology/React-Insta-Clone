@@ -24,6 +24,7 @@ class Post extends Component {
     const image = this.props.post.image;
     const caption = this.props.post.caption;
     const likes = this.props.post.likes;
+    const timestamp = this.props.post.timestamp;
 
     return (
       <StyledDiv post>
@@ -63,6 +64,7 @@ class Post extends Component {
           postId={this.props.post.image}
           comments={this.props.post.comments}
         />
+        <StyledDiv timestamp> {timestamp}</StyledDiv>
       </StyledDiv>
     );
   }
