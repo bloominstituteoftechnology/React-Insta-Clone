@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -31,30 +31,32 @@ const Search = styled.input `
     border: 2px solid #ecf0f1;
 `;
 
-const SearchBar = (props) => {
-    return (
-        <SearchWell>
-            <SearchContainer>
-                <Logo src={require('../img/insta-camera-logo.jpg')} alt={'insta-camera'}></Logo>
-                <VL></VL>
-                <Logo className='logo' src={require('../img/insta-logo.png')} alt={'insta-logo'}></Logo>
-            </SearchContainer>
-            <SearchContainer>
-                <Search className='search' 
-                    type='text' 
-                    placeholder='Search' 
-                    value={props.searchInput} 
-                    onChange={props.handleSearch} 
-                    onKeyPress={props.searchUp} 
-                />
-            </SearchContainer>
-            <SearchContainer>
-                <FontAwesomeIcon className='icons' icon='compass' />
-                <FontAwesomeIcon className='icons' icon='heart' />
-                <FontAwesomeIcon className='icons' icon='user' onClick={props.clearStorage} />
-            </SearchContainer>
-        </SearchWell>
-    );
-};
+class SearchBar extends Component {
+    render() {
+        return (
+            <SearchWell>
+                <SearchContainer>
+                    <Logo src={require('../img/insta-camera-logo.jpg')} alt={'insta-camera'}></Logo>
+                    <VL></VL>
+                    <Logo className='logo' src={require('../img/insta-logo.png')} alt={'insta-logo'}></Logo>
+                </SearchContainer>
+                <SearchContainer>
+                    <Search className='search' 
+                        type='text' 
+                        placeholder='Search' 
+                        value={this.props.searchInput} 
+                        onChange={this.props.handleSearch} 
+                        onKeyPress={this.props.searchUp} 
+                    />
+                </SearchContainer>
+                <SearchContainer>
+                    <FontAwesomeIcon className='icons' icon='compass' />
+                    <FontAwesomeIcon className='icons' icon='heart' />
+                    <FontAwesomeIcon className='icons' icon='user' onClick={this.props.clearStorage} />
+                </SearchContainer>
+            </SearchWell>
+        );
+    }
+}
 
 export default SearchBar;
