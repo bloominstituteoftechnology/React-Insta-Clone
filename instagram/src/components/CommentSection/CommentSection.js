@@ -61,8 +61,6 @@ class CommentSection extends Component {
     }
     }
 
-
-
     CommentSection.propTypes = {
         comments: PropTypes.arrayOf(
             PropTypes.shape({

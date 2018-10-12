@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import Authenticate from './Authentication/Authenticate';
 import dummyData from './dummy-data';
 import './App.css';
 
@@ -44,6 +45,6 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
 
 	 
