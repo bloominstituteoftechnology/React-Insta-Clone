@@ -3,6 +3,7 @@ import Comment from './Comment';
 import CommentInput from './CommentInput'
 import PropTypes from 'prop-types';
 import './Comment.css'
+import {TimeStamp} from './styled'
 
 class CommentList extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class CommentList extends React.Component {
     return(
       <div>
         {this.state.comments.map((comment) => <Comment key={comment.text} comment={comment}/>)}
-        <p className='timeStamp'>{this.props.timeStamp}</p>
+        <TimeStamp>{this.props.timeStamp}</TimeStamp>
         <CommentInput inputHandler ={this.inputHandler} submitHandler={this.submitHandler} value={this.state.comment}/>
       </div>
     )

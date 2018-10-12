@@ -1,9 +1,10 @@
 import React from 'react';
+import {AddComment} from './styled'
 
 const CommentInput = (props) => {
   return (
     <form onSubmit={props.submitHandler}>
-      <input value={props.value} onChange={props.inputHandler} className='addComment' type='text' placeholder='Add a comment...' />
+      <AddComment value={props.value} onChange={props.inputHandler} type='text' placeholder='Add a comment...' />
     </form>
   )
 }
