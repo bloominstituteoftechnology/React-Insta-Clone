@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { PFooter } from './../Styled/styled';
 
 class PostFooter extends React.Component {
   constructor(props) {
@@ -32,13 +33,13 @@ class PostFooter extends React.Component {
       liked = 'far';
     }
     return (
-      <div className="postFooter">
+      <PFooter>
         <div>
           <i className={`${liked} fa-heart`} onClick={this.likePost} />
           <i className="far fa-comment" />
         </div>
         <p>{this.state.likes} likes</p>
-      </div>
+      </PFooter>
     );
   }
 }

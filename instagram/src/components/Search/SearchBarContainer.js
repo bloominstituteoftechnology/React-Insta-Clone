@@ -2,12 +2,13 @@ import React from 'react';
 import SearchBarLogo from './SearchBarLogo';
 import SearchBar from './SearchBar';
 import SearchBarIcons from './SearchBarIcons';
+import { SearchBarWrapper } from './../Styled/styled';
 import './searchBar.css';
 
 class SearchBarContainer extends React.Component {
   render() {
     return (
-      <div className="searchBar">
+      <SearchBarWrapper>
         <SearchBarLogo />
         <SearchBar
           handleSearchInput={this.props.handleSearchInput}
@@ -15,7 +16,7 @@ class SearchBarContainer extends React.Component {
           searchInput={this.props.searchInput}
         />
         <SearchBarIcons />
-      </div>
+      </SearchBarWrapper>
     );
   }
 }

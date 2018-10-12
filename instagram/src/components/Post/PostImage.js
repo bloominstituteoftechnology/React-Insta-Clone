@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { PImg } from './../Styled/styled';
 
 class PostImage extends React.Component {
   render() {
-    return <img className="postImage" src={this.props.image} />;
+    return <PImg src={this.props.image} />;
   }
 }
 

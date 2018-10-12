@@ -1,4 +1,4 @@
-.searchBar {
+/* .searchBar {
   border: 1px solid black;
   display: flex;
   justify-content: space-between;
@@ -7,7 +7,7 @@
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
-}
+} */
 
 /*.sbLogo {
   display: flex;
@@ -27,32 +27,32 @@
   outline: none;
 } */
 
-.searchBarIcons {
+/* .searchBarIcons {
   display: flex;
   justify-content: space-between;
   width: 15%;
   font-size: 1.6rem;
   font-weight: lighter;
   padding-right: 1rem;
-}
+} */
 
-.searchBarIcons li {
+/* .searchBarIcons li {
   display: flex;
   align-items: center;
   font-size: 1rem;
   font-weight: lighter;
   cursor: pointer;
-}
+} */
 
-.searchBarIcons li:hover {
+/* .searchBarIcons li:hover {
   color: rgb(179, 37, 37);
   text-decoration: underline;
-}
+} */
 
-.sbLogo hr {
+/* .sbLogo hr {
   height: 30px;
   width: 1px;
-}
+} */
 
 .fa-instagram {
   font-size: 2.4rem;

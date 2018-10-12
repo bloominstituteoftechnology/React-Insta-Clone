@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { PHeader } from './../Styled/styled';
 
 class PostHeader extends React.Component {
   render() {
     return (
-      <div className="postHeader">
+      <PHeader>
         <img src={this.props.headerImage} />
         <p>{this.props.name}</p>
-      </div>
+      </PHeader>
     );
   }
 }

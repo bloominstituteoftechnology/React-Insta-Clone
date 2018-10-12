@@ -50,11 +50,27 @@ export const SubmitButton = styled.button`
   }
 `;
 
+export const SearchBarWrapper = styled.div`
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+
 export const SBLogo = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 11%;
+`;
+
+export const SBhr = styled.hr`
+  height: 30px;
+  width: 1px;
 `;
 
 export const SearchBarInput = styled.input`
@@ -87,5 +103,55 @@ export const SBListItem = styled.li`
   :hover {
     color: rgb(179, 37, 37);
     text-decoration: underline;
+  }
+`;
+
+export const PostWrapper = styled.div`
+  width: 60%;
+  max-width: 600px;
+  margin: 25px auto;
+  border: 1px solid rgb(202, 202, 202);
+  box-sizing: border-box;
+`;
+
+export const PHeader = styled.div`
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 0.8rem;
+
+  img {
+    border-radius: 50%;
+    height: 40px;
+    padding: 5px 2%;
+  }
+`;
+
+export const PImg = styled.img`
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+`;
+
+export const PFooter = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.4rem;
+
+  .far,
+  .fas {
+    padding: 5px 0.4rem;
+    font-size: 1.3rem;
+    transition: 0.1s;
+    cursor: pointer;
+  }
+
+  p {
+    margin: 0px 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 700;
   }
 `;
