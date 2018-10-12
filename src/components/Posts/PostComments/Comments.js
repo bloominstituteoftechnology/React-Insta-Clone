@@ -4,6 +4,7 @@ import PostTimeStamps from '../PostBody/PostTimeStamps';
 import '../post.css'
 
 
+
 class Comments extends Component {
   constructor(props){
     super(props);
@@ -70,7 +71,7 @@ render(){
         
             {this.state.comments.map(instance => {
                 return (
-                    <div>
+                    <div key={instance.username + instance.timestamps + instance.text}>
                     <PostComments key={instance.username + instance.timestamps + instance.text}username={instance.username} text={instance.text} />
 
                     </div>

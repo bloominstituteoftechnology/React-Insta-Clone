@@ -4,6 +4,7 @@ import dummyData   from "./dummy-data";
 import SearchbarContainer from "./components/SearchBar/SearchbarContainer";
 import Post from "./components/Posts/Post/Post";
 import PropTypes from "prop-types";
+import Authenticate from "./components/Login/Authenticate/Authenticate";
 
 class App extends Component {
   constructor(){
@@ -25,6 +26,33 @@ componentDidMount() {
     data: dummyData
   })
 }
+
+addLike = (event) => {
+  event.preventDefault();
+  const likesCounter = this.state.counter;
+  var likeButton = document.getElementById("likeAction");
+  var redLikeButton = document.getElementById("redLikeAction");
+  likeButton.style.display = "none";
+  redLikeButton.style.display = "inline-flex";
+
+  this.setState({
+      counter: likesCounter + 1
+  })
+}
+
+removeLike = (event) =>{
+  event.preventDefault();
+  const likesCounter = this.state.counter;
+  var likeButton = document.getElementById("likeAction");
+  var redLikeButton = document.getElementById("redLikeAction");
+  likeButton.style.display = "inline-flex";
+  redLikeButton.style.display = "none";
+
+  this.setState({
+      counter: likesCounter - 1
+  })
+}
+
 
   render() {
     return (
@@ -58,4 +86,4 @@ App.propTypes = {
       })
   ),
 }
-export default App;
+export default Authenticate(App);
