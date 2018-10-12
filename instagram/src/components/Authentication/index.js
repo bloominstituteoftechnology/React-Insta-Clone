@@ -3,20 +3,20 @@ import Login from '../Login';
 
 const Authenticate = App => {
     return class extends React.Component {
-        constructor() {
-            super();
+        constructor(props) {
+            super(props);
 
             this.state = {
                 authenticated: false,
                 username: '',
-            }
+            };
         }
 
         componentDidMount() {
             if (localStorage.getItem('username')) {
                 this.setState({
                     authenticated: true, 
-                    username: localStorage.getItem('username'),
+                    // username: localStorage.getItem('username'),
                 })
             }
             else {
@@ -38,7 +38,7 @@ const Authenticate = App => {
                 );
             }
         }
-    }
+    };
 }
 
 export default Authenticate;
