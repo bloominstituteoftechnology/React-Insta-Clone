@@ -4,13 +4,15 @@ import Login from '../Login/Login.js'
   class extends Component {
     constructor(props){
       super(props);
-      this.localStorageKey = 'instagram-login-data';
+      this.localStorageKey = 'login-record';
       this.state = {
         loggedIn: false,
         username: null,
       };
     }
          login = (username, password) => {
+
+           if(localStorage.getItem)
          let newLogin;
       let logins = JSON.parse(
         window.localStorage.getItem(this.localStorageKey)
