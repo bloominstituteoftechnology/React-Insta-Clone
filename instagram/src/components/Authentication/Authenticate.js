@@ -32,6 +32,13 @@ class Auth extends React.Component {
         loggedIn: false
       });
     }
+    setTimeout(() => {
+      if (!this.state.loggedIn) {
+        alert(
+          "This is a test app using React. Use any username and password to sign up."
+        );
+      }
+    }, 1000);
   }
 
   handleSignupState = e => {
