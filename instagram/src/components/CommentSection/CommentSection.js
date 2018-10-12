@@ -30,7 +30,7 @@ class CommentSection extends React.Component {
   }
 
   componentDidMount() {
-    if (localStorage.getItem(this.state.id) === null) {
+    if (!localStorage.getItem(this.state.id)) {
       localStorage.setItem(this.state.id, JSON.stringify(this.state.comments));
     } else {
       let value = localStorage.getItem(this.state.id);
