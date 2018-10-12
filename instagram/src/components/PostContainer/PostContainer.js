@@ -2,7 +2,8 @@ import React from "react";
 import Post from "./Post";
 import CommentSection from "./../CommentSection/CommentSection";
 
-import "./PostContainer.css";
+import { BodyContainer } from "./../../Styles";
+// import "./PostContainer.css";
 
 class PostContainer extends React.Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class PostContainer extends React.Component {
 
   render() {
     return (
-      <div className="post-container">
+      <BodyContainer>
         <Post
           user={this.state.userData}
           addLike={this.addLike}
@@ -33,7 +34,7 @@ class PostContainer extends React.Component {
           user={this.state.userData}
           postId={this.state.userData.imageUrl}
         />
-      </div>
+      </BodyContainer>
     );
   }
 }

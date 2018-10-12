@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+//non-reusable components
+
+//SearchBar
 export const StyledHeader = styled.div`
   width: 80vw;
   left: 10vw;
@@ -57,4 +60,47 @@ export const HeaderSprites = styled.div`
 
 export const Sprite = styled.i`
   padding: 0 6% 0px;
+`;
+
+//PostContainer/Post
+export const BodyContainer = styled.div`
+  margin: 50px;
+  background: white;
+  border: 1px solid lightgrey;
+  text-align: left;
+`;
+
+export const BodyHeader = styled.div`
+  display: flex;
+  padding: 10px 5%;
+`;
+
+export const UserThumbnail = styled.img`
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+
+  margin-right: 1%;
+`;
+
+export const Username = styled.p`
+  ${props => (props.bold ? `font-weight: bold` : null)};
+`;
+
+export const BodyImage = styled.img`
+  width: 100%;
+`;
+
+export const BodySprites = styled.div`
+  padding: 10px 0 0 3%;
+`;
+
+export const BodySprite = styled.i`
+  font-size: 25px;
+  margin-right: 2%;
+`;
+
+export const LikeButton = styled.div`
+  padding-left: 3%;
+  font-weight: bold;
 `;
