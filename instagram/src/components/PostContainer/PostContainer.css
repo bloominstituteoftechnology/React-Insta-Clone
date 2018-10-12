@@ -1,0 +1,39 @@
+.post-container {
+  margin: 50px;
+  background: white;
+  border: 1px solid lightgrey;
+  text-align: left;
+}
+.post-header {
+  display: flex;
+  padding: 10px 5%;
+}
+
+.post-header img {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin-top: 12px;
+  margin-right: 1%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.sprites {
+  padding: 10px 0 0 3%;
+}
+
+i {
+  font-size: 25px;
+  margin-right: 2%;
+}
+
+.likes {
+  padding-left: 3%;
+}
