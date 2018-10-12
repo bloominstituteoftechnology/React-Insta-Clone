@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+}
+.logIn {
+  height: 100vh;
+  width: 100vw;
+}
+.searchbar {
+  display: inline-flex;
+  justify-content: space-between;
+  width:100%;
+}
+.searchbar div {
+  display: flex;
+  justify-content: space-between;
+  width: 33%;
+  margin-right: 20px;
+}
+.searchbar .instaDiv {
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+.searchbar .far {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.searchbar .fab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-right:1px solid black;
+}
+.searchbar .insta {
+  height: 50px;
+  margin-left: 0;
+  padding: 5px 20px;
+}
+.searchbar input {
+  height: 30px;
+  width: 100%;
+  align-self: center;
+}
+
+.postContainer {
+  margin: 0 25%;
+}
+.postContainer h4 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.postContainer h4 img {
+  border-radius: 50%;
+  height: 60px;
+  width:60px;
+}
+.postContainer h4 p{
+  align-self: center;
+  padding-left: 20px;
+}
+.postContainer .likes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.postContainer i {
+  padding: 0 10px;
+}
+.postContainer p {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.posted {
+    border: 1px solid red;
+}
+.posted .user {
+  font-weight: bold;
+  font-size: 20px;
+  height: 40px;
+  width:19%;
+  margin: 0 10px;
+}
+.posted p {
+  margin: 0 0;
+  width:100%;
+  /* height: 1rem; */
+}
+.postContainer input {
+  width: 90%;
+}
