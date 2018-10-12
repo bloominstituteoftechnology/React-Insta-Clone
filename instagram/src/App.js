@@ -3,7 +3,14 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 import Authenticate from './Authentication/Authenticate';
 import dummyData from './dummy-data';
-import './App.css';
+import styled from 'styled-components';
+
+const AppStyled = styled.div`
+  .App {
+    max-width: 570px;
+    margin: 0 auto;
+  }
+`
 
 class App extends Component {
   constructor(props){
@@ -35,12 +42,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <SearchBar searchHandler = {this.searchHandler} />
-          {this.state.posts.map(post => {
-            return <PostContainer post = {post} key = {post.timestamp} addLike = {this.addLike} />
-          })}
-      </div>
+      <AppStyled>
+        <div className="App">
+          <SearchBar searchHandler = {this.searchHandler} />
+            {this.state.posts.map(post => {
+              return <PostContainer post = {post} key = {post.timestamp} addLike = {this.addLike} />
+            })}
+        </div>
+      </AppStyled>
     );
   }
 }

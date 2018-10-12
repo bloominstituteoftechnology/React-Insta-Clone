@@ -1,6 +1,29 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
-import './commentsection.css';
+import styled from "styled-components";
+
+const CommentContainer = styled.div`
+    .commentBody {
+        display: flex;
+        text-align: justify;
+        margin: 10px 10px 10px 20px;
+    }
+
+    .commentText {
+        margin-left: 5px;
+    }
+
+    .timeStamp {
+        display: flex;
+        margin-left: 20px;
+    }
+
+    .commentInput {
+        width: 93%;
+        margin: 10px 0px;
+        height: 25px;
+    }
+`
 
 class CommentSection extends Component {
     constructor() {
@@ -39,7 +62,7 @@ class CommentSection extends Component {
     
     render(){
         return (
-            <div>
+            <CommentContainer>
                 {this.state.comments.map(comment =>{
                     return (
                         <div key={comment.text} className = "commentBody"> 
@@ -56,7 +79,7 @@ class CommentSection extends Component {
                     {/* value = {this.state.newComment} reset the comment bar after use by calling the origional state */}
             </div>
         </form>
-        </div>
+        </CommentContainer>
     )
     }
     }

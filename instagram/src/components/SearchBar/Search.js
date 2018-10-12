@@ -1,11 +1,9 @@
 import React from 'react';
-import './searchbar.css';
-
 
 const Search = (props) => {
 
     return (
-        <input type="search" placeholder = " Search... " onKeyUp = {props.searchHandler} />
+        <input className = "searcBarImput" type="search" placeholder = " Search... " onKeyUp = {props.searchHandler} />   
     )
 }
 

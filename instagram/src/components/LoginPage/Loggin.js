@@ -1,18 +1,35 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import WordLogo from '../../components/SearchBar/WordLogo';
 
 const LoginContainer = styled.div`
     background-color: red;
     text-align: center;
-    width: 100%;
+    width: 570px;
     height: 300px;
-    margin-left: 20px;
-`
+    margin: 20px auto;
+    border-radius: 10px;
 
-const Welcome = styled.div`
-    margin-top: 40px;
-    padding-top: 40px;
-    font-size: 2rem;
+    .userName {
+        margin-right: 5px;
+    }
+
+    img {
+        margin: 0px;
+    }
+
+    button {
+        margin-left: 5px;
+    }
+
+    h2 {
+        margin: 0px;
+    }
+
+    h4 {
+        font-size: 2rem;
+        margin: 0px;
+    }
 `
 
 class Login extends Component {
@@ -38,11 +55,10 @@ class Login extends Component {
         render() {
             return (
                 <LoginContainer>
-                    <Welcome>Welcome to React Insta Clone</Welcome>
+                    <h4>Welcome to React <WordLogo /> Clone</h4>
                     <h4>Security is our third highest priority</h4>
                     <h2>Please Enter Whatever</h2>
-                {console.log(this.state.username)}
-                    <input
+                    <input className = "userName"
                         type = 'text'
                         name = 'username'
                         placeholder = "User Name"

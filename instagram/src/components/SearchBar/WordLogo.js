@@ -1,11 +1,15 @@
 import React from 'react';
 import Word from '../../img/Instagram-Word.png';
-import './searchbar.css';
+import styled from 'styled-components';
+
+const InstagramWord = styled.img`
+    height: 40px;
+`
 
 const WordLogo = () => {
     return (
         <div>
-            <img className="Insta-Logo-Word" alt="''" src= {Word} />
+            <InstagramWord alt="''" src= {Word} />
         </div>
     )
 }

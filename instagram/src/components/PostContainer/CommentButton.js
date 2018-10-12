@@ -1,5 +1,6 @@
 import React from 'react';
 import InstaCommentButt from '../../img/comment.png';
+import styled from "styled-components";
 
 
 const CommentButton = () => {

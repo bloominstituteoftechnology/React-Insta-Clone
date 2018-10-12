@@ -1,6 +1,5 @@
 import React from 'react';
 import InstagramLogo from '../../img/Instagram-Logo.png';
-import './searchbar.css';
 
 const Logo = () => {
     return (

@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import LikeButt from '../../img/like.png';
-import './searchbar.css';
+import styled from 'styled-components';
+
+const LikeIcon = styled.img`
+    height: 25px;
+`
 
 class LikeButton extends Component {
     constructor(props){
@@ -12,8 +16,8 @@ class LikeButton extends Component {
 
     render(){
         return (
-            <button onClick = {this.props.addLike}>
-                <img className="Like-Button" alt="''" src= {LikeButt} />
+            <button  onClick = {this.props.addLike}>
+                <LikeIcon alt="''" src= {LikeButt} />
             </button>
     )
 }
