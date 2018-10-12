@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const VWrapper = styled.img`
+export const VWrapper = styled.video`
   background-size: cover;
-  z-index: 1;
+  z-index: -100;
 `;
 export const LoginWrapper = styled.div`
   display: flex;
@@ -17,8 +17,7 @@ export const LoginHeader = styled.h1`
   flex-direction: column;
   position: absolute;
   font-family:'Siry';
-
-  bottom: 310px;
+  bottom: 550px;
   color: white;
   border-shadow: 20px 20px;
   font-size: 80px;
