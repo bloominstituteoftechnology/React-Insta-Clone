@@ -62,7 +62,6 @@ class PostsPage extends Component {
         <ButtonContainer>
         <LogInOutButton
           onClick={this.handleLogOut}
-          className={"logout-button"}
           style={
             this.state.logoutVisible
               ? { display: "block" }

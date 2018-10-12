@@ -68,7 +68,6 @@ const SearchBar = props => (
       <img
         src="https://www.edigitalagency.com.au/wp-content/uploads/instagram-logo-text-black-png-768x221.png"
         alt="instagram text logo"
-        className="text-logo"
       />
     </Logos>
     <SearchText>

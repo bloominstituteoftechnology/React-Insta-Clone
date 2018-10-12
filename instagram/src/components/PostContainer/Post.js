@@ -61,7 +61,6 @@ class Post extends Component {
           <ProfilePicture
             src={this.props.post.thumbnailUrl}
             alt={this.props.post.username}
-            className="profile-picture"
           />
         <UserName bold>{this.props.post.username}</UserName>
         </Profile>
