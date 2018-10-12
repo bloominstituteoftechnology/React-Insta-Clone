@@ -70,7 +70,13 @@ ${props =>
 display: flex;
 `
     : null}
-
+    ${props =>
+      props.centerFlex
+        ? `
+      display: flex;
+      justify-content: center;
+      `
+        : null}
 ${props =>
   props.commentSection
     ? `
@@ -94,18 +100,23 @@ ${props =>
           `
               : null}
 
-              ${props =>
-                props.commentAddInput
-                  ? `
-                  width: 95%;
-                  margin: 5px auto;
-                  border: none;
-                  border-top: 1px solid lightgrey;
-                  height: 40px;
-              `
-                  : null}
+         
 
 
+`;
+
+export const StyledInput = styled.input`
+  ${props =>
+    props.commentAddInput
+      ? `
+      width: 95%;
+      margin: 2% auto;
+      border: none;
+      justify-content: center;
+      border-top: 1px solid lightgrey;
+      height: 40px;
+  `
+      : null};
 `;
 
 export const StyledImg = styled.img`

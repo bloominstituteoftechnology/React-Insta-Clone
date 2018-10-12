@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Comment.css";
+import { StyledDiv, StyledImg } from "../Styles/StyleSheet";
 
 const Comment = props => {
   return (
-    <div className="Comment-section">
-      <div className="Comment-nickname">
+    <StyledDiv commentSection>
+      <StyledDiv commentNickname>
         <strong>{props.comment.nickname}</strong>
-      </div>
-      <div className="Comment-text">{props.comment.text}</div>{" "}
-    </div>
+      </StyledDiv>
+      <StyledDiv commentText>{props.comment.text}</StyledDiv>{" "}
+    </StyledDiv>
   );
 };
 
