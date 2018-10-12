@@ -63,3 +63,10 @@ class CommentSection extends Component {
     }
 }
 
+CommentSection.propTypes = {
+    data: PropTypes.shape({
+        comments: PropTypes.arrayOf(PropTypes.object)
+    })
+};
+
+export default CommentSection;
