@@ -5,7 +5,7 @@ const Authenticate = PostComponent => LoginComponent => {
         constructor(props) {
             super(props);
             this.state = {
-                loggedin: true,  //set to true for now so i dont have to sign in every time i make a change 
+                loggedin: false,  //set to true for now so i dont have to sign in every time i make a change 
                 loginValue: '',
                 passwordValue: ''
             }
