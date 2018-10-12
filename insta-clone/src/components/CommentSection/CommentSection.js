@@ -2,24 +2,20 @@ import React from 'react';
 import Comment from './Comment';
 import NewComment from './NewComment';
 import PropTypes from 'prop-types';
-import './CommentSection.css'
+
+import { CommentWrapper } from '../Styles/Styles';
+import { TimeStamp } from '../Styles/Styles';
 
 const CommentSection = props => {
-    // console.log(props.comments)
     return <div>
         {props.comments.map((comment, index) => {
-          return <div key={index + 1} className="commentSection">
+          return <CommentWrapper key={index + 1} >
               <Comment comment={comment} />
-            </div>;
+            </CommentWrapper>;
         })}
-        <p className="timeStamp">{props.timestamp}</p>
+        <TimeStamp>{props.timestamp}</TimeStamp>
         <NewComment
             {...props}
-            // username={props.username}
-            // changeHandler={props.changeHandler}
-            // newComment={props.newComment}
-            // addComment={props.addComment}
-            // postIndex={props.postIndex}
         />
       </div>;
 }

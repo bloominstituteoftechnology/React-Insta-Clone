@@ -1,8 +1,9 @@
 import React from 'react';
-import './CommentSection.css';
+
+import { NewCommentSection } from '../Styles/Styles';
 
 function NewComment(props) {
-    return <div className="newCommentSection">
+    return <NewCommentSection>
         <form onSubmit={(event) => {props.addComment(event, props.postIndex)}}>
             <input
                 className="newcomment"
@@ -13,7 +14,7 @@ function NewComment(props) {
             />
         </form>
         <button onClick={(event) => {props.addComment(event, props.postIndex)}}>&#xb7;&#xb7;&#xb7;</button>
-      </div>;
+      </NewCommentSection>;
 }
 
 export default NewComment;

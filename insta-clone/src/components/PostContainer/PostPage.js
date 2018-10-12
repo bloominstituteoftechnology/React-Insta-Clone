@@ -1,12 +1,13 @@
 import React from 'react';
-import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 import Data from '../../dummy-data';
-import './PostContainer.css';
+
+// styles
+import { PostPageContainer } from '../Styles/Styles';
+
 
 class PostPage extends React.Component {
     constructor(props) {
-        console.log(props.username)
         super(props);
         this.state = {
             data: [],
@@ -48,14 +49,14 @@ class PostPage extends React.Component {
 
     render() {
         return (
-            <div className='postPage'>
+            <PostPageContainer>
                 <PostContainer
                     {...this.state}
                     changeHandler={this.changeHandler}
                     addComment={this.addComment}
                     addLike={this.addLike}
                 />
-            </div>
+            </PostPageContainer>
         )
     }
 }

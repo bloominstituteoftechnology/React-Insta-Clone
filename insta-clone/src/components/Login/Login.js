@@ -1,12 +1,13 @@
 import React from 'react';
-import './Login.css';
+
+import { LoginWrapper } from '../Styles/Styles';
 
 const Login = props => {
     return (
-        <div className='authorize'>
-            <div className='userLogin'>
+        <LoginWrapper>
+            <div>
                 <h2>Please login to continue {}</h2>
-                <form onSubmit={props.toggle} className='loginForm'>
+                <form onSubmit={props.toggle}>
                     <input 
                         name='username'
                         type='text'
@@ -24,7 +25,7 @@ const Login = props => {
                     <button onClick={props.checkPassword}>ENTER</button>
                 </form>
             </div>
-        </div>
+        </LoginWrapper>
     )
 }
 

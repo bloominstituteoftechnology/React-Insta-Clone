@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CommentWrap from '../Styles/Styles';
-import CommentInput from '../Styles/Styles';
-import './CommentSection.css';
+
+import {CommentWrap} from '../Styles/Styles';
+import {CommentInput} from '../Styles/Styles';
+
 
 const Comment = props => {
     return <CommentWrap>
