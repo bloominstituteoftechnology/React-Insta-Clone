@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Authenticate = (App, Login) => {
-    return class WrappedComponent extends React.Component {
+    return class extends React.Component {
         constructor(props) {
             super(props);
             this.state = {
@@ -10,7 +10,6 @@ const Authenticate = (App, Login) => {
                 username: '',
             };
 
-            this.username = this.state.username;
         }
         componentDidMount() {
             this.setState( {
@@ -18,6 +17,7 @@ const Authenticate = (App, Login) => {
                 username: localStorage.getItem('username'),
             });
         }
+
         updateLocal() {
             localStorage.setItem('loggedIn', this.state.loggedIn);
             localStorage.setItem('username', this.state.username)
@@ -25,16 +25,17 @@ const Authenticate = (App, Login) => {
 
         login = event => {
             event.preventDefault();
-            if (this.username !== '') {
+            if (this.state.username) {
                 this.setState({
-                    username: this.username,
                     loggedIn: true
                 }, this.updateLocal)
             }
         }
 
         updateUsername = event => {
-            this.username = event.target.value;
+            this.setState({
+                username: event.target.value,
+            })
         }
 
         render() {

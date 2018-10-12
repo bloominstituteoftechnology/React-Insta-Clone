@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import Header from './Components/SearchBar/Header';
 import PostsPage from './Components/PostContainer/PostsPage';
-import Authenticate from './Components/Authentication/Authenticate';
-import styled from 'styled-components';
-
-/* Come back to this later.
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-*/
 
 import './Reset.css';
 
@@ -18,30 +10,26 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
-    this.postNumber = 0;
     this.state = {
       data: {},
       username: localStorage.getItem('username'),
       searchTerm: '',
+      commentText: ''
     }
-    this.username = "C137";
-    this.commentText = "Add a comment...";
-    this.searchTerm = '';
   }
 
   addCommentClickHandler = (postID) => {
-    if (this.commentText === 'Add a comment...') {
-      return;
+    if (!this.state.commentText) { 
+      return; 
     }
 
-    let username = this.username;
-    let text = this.commentText;
+    let username = this.state.username;
+    let text = this.state.commentText;
+    let comment = {username, text}; 
 
-    let comment = {username, text};
-    console.log(comment);
     this.setState ({
       data: this.state.data.map(data => {
-        if (data.timestamp === postID) {
+        if (data.timestamp === postID) {  // Push the comment to the correct post
           data.comments.push(comment);
           return data;
         }
@@ -51,8 +39,9 @@ class App extends Component {
   }
 
   commentTextOnChange = (event) => {
-    this.commentText = event.target.value;
-    console.log(this.commentText, " ", event.target.value);
+    this.setState({
+      commentText: event.target.value,
+    })
   }
 
   likeClickHandler = (postID) => {
@@ -68,16 +57,16 @@ class App extends Component {
   }
 
   changeSearchTerm = (event) => {
-    this.searchTerm = event.target.value;
     this.setState({
-      searchTerm: this.searchTerm
+      searchTerm: event.target.value
     })
   }
 
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        data: dummyData
+        data: dummyData,
+        username: localStorage.getItem('username'),
       });
     }, 500);
   }
@@ -104,8 +93,8 @@ class App extends Component {
         clickHandler={this.clickHandler}
         commentTextOnChange={this.commentTextOnChange}
         addCommentClickHandler={this.addCommentClickHandler}
-        commentText={this.commentText}
-        searchTerm={this.searchTerm}
+        commentText={this.state.commentText}
+        searchTerm={this.state.searchTerm}
         />      
       </div>
     );
