@@ -40,14 +40,14 @@ class CommentSection extends Component {
 		console.log("keyIndex:" + event.target.name)
 	}
 
-	handleInputChange = e => {
-		this.setState({ [e.target.name]: e.target.value });	
+	handleInputChange = event => {
+		this.setState({ [event.target.name]: event.target.value });	
 	};
 
 	render() {
-		var classNames = require('classnames');
+		let classNames = require('classnames');
 
-		var btnClass = classNames({
+		let navClass = classNames({
 			menu: true,
 			'visible': this.state.display
 		})
@@ -57,7 +57,7 @@ class CommentSection extends Component {
 			})}
 				<div className="timeStamp">{this.props.timeStamp}</div>
 				<footer className="addCommentContainer">
-					<nav className={btnClass} >
+					<nav className={navClass} >
 						<ul className="menuList">
 							<li className="menuAnchor" onClick={this.menu}>Report</li>
 							<li className="menuAnchor" onClick={this.menu}>Embed</li>

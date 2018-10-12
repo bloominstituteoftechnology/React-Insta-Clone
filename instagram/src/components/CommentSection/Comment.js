@@ -9,16 +9,10 @@ class Comment extends Component {
         this.state = {
             dummyData: this.dummyData,
             counter: 0,
-            display: false
-        };
+            };
 
     }
-    menu = event => {
-        event.preventDefault();
-        if (this.state.display) {
-            this.setState({ display: false })
-        } else { this.setState({ display: true }) }
-    }
+  
 
     increment = event => {
         event.preventDefault();
@@ -27,12 +21,7 @@ class Comment extends Component {
     };
 
     render() {
-        var classNames = require('classnames');
-
-        var btnClass = classNames({
-            menu: true,
-            'visible': this.state.display
-        })
+       
         return (
            
            <div className="commentUser">

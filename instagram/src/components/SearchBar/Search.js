@@ -4,11 +4,7 @@ import PropTypes from 'prop-types';
 
 const Search = props => {
 
-	const arrHandler = (e) => {
-		const arr = [];
-			arr.push(e.target.value)
-		console.log("arr: " + arr);
-		 }
+	
 		
 			const clickHandler = (e) => {
 					console.log("clickHandler")

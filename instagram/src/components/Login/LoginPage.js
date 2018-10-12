@@ -20,36 +20,32 @@ class LoginPage extends Component {
     const user = this.state.username;
     const password = this.state.password;
     localStorage.setItem('user', user);
+    localStorage.setItem('password', password);
     window.location.reload();
   };
- 
-  //localStorage.setItem(‘recipe’, JSON.stringify(this.state.recipe)
- // const recipe = localStorage.getItem(‘recipe’) 
- // this.setState({...recipe})
 
 
   render() {
     return (
       <div className="login">
-        <form className="loginForm" onSubmit={this.handleSubmit}>
-
-           <h3 className="title">Insta-React Clone</h3> 
-          <input 
+        <form
+          className="loginForm"
+          onSubmit={this.handleSubmit}>
+          <h3 className="title">Insta-React Clone</h3>
+          <input
             className="username"
             type="text"
             name='username'
-            data-test="username"
             placeholder="username"
             value={this.state.username}
             onChange={this.handleInputChange} />
 
-         {/*  <label>Password</label> */}
-          <input 
+
+          <input
             className="password"
             type="password"
             name='password'
             placeholder="password"
-            data-test="password"
             value={this.state.password}
             onChange={this.handleInputChange} />
 
@@ -57,7 +53,6 @@ class LoginPage extends Component {
             className="submitBtn"
             type="button"
             value="Log In"
-            data-test="submit"
             onClick={this.handleLoginSubmit} />
         </form>
       </div>
