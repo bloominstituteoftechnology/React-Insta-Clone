@@ -5,7 +5,7 @@ import propTypes from 'prop-types';
  const PostHeader = (props) => {
   return (
     <section className='post-header'>
-      <img src={props.thumbnailUrl} alt={props.username}/>
+      <img src={props.thumbnailUrl} alt=''/>
       <h2>{props.username}</h2>
     </section>
   );

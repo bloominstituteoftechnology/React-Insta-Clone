@@ -31,12 +31,12 @@ const Authenticate = (PassedComponent) =>
                   loggedIn: false
                 })
               }
-              else {
-            this.setState({
+            else {
+              this.setState({
               loggedIn: JSON.parse(localStorage.getItem('loggedIn'))
             })
             }
-          }//end comp did mount
+          }//end component didmount
 
            login = (e) => {
               
@@ -52,7 +52,7 @@ const Authenticate = (PassedComponent) =>
                 password = field.value;
               }
             })
-            this.state.loginCredentials.map(login => {
+            this.state.loginCredentials.forEach(login => {
                 if (login.username === username) {
                   localStorage.setItem('username', username);
                   if(login.password === password) {
@@ -77,7 +77,6 @@ const Authenticate = (PassedComponent) =>
 
 
         render() {
-            // console.log(this.state.loggedIn);
             if(!this.state.loggedIn) {
               return (
                 <Login submit={this.login}

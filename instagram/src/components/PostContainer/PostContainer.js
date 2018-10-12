@@ -56,11 +56,11 @@ class PostContainer extends React.Component {
     }
   
     close = (e) => {
-      const comments = Object.assign([],this.state.comments);
-      console.log(e.target.parentNode.id)
+      const comments = [...this.state.comments];
+      // console.log(e.target.parentNode.id)
       comments.splice(e.target.parentNode.id, 1)
       localStorage.setItem(this.state.id, JSON.stringify(comments));
-      console.log(comments)
+      // console.log(comments)
       this.setState({
         comments: comments
       })
@@ -68,7 +68,9 @@ class PostContainer extends React.Component {
   
     render() {
       return (
+        
         <section className='post-container' id={this.props.id}>
+    
           <PostHeader  username={this.state.user.username}
                        thumbnailUrl={this.state.user.thumbnailUrl}/>
                      <img className='post-cta-image' src={this.state.user.imageUrl}

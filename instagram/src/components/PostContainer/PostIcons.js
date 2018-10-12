@@ -22,11 +22,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
         // })
 
 
-
          if (this.state.counter){
          this.setState({
              
-             likes: this.state.likes + this.state.counter,
+             likes: this.state.likes + 1,
              counter: 0
              
          })}

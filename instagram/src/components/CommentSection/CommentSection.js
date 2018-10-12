@@ -9,7 +9,6 @@ class CommentSection extends React.Component {
     super(props);
 
     this.state = {
-
       // comments: this.props.comments,
       commentText: '',
       container : 0
@@ -24,40 +23,40 @@ class CommentSection extends React.Component {
 
   }
   addNewComment = (e) => {
-    console.log(e.isDefaultPrevented());
    e.preventDefault();
-   console.log(e.isDefaultPrevented());
-    const text = e.target.children[0].value;
-    const comments = this.state.comments;
-    const username = this.state.username;
-    comments.push({username,text})
+    
+    const comment = {
+      username: this.state.username,
+      text: e.target.children[0].value
+    }
+    const comments = [...this.state.comments, comment]
+    // comments.push({username,text})
 
     this.setState({
-      comments: comments,
+      comments: comments, 
       commentText: ''
     })
   }
   onChange = (e) => {
-    console.log(e.isDefaultPrevented());
     e.preventDefault();
-    console.log(e.isDefaultPrevented());
     this.setState({
       commentText : e.target.value
     })
     
   }
+ 
   render() {
-    return (
+    return ( 
       <section className='comments'>
           {this.props.comments.map((comment, index) => {
             return (
-              <section className='comment' key={Math.random()} id={index}>
+              <section className='comment' key={`${comment.username}${comment.text}`} id={index}>
                 <p>
                 <strong>{comment.username}</strong> {comment.text}
                 </p>
                 <span className='close' onClick={this.props.close}>X</span>
-            </section>
-            );
+              </section>
+            )
           })}
           <NewComment onSubmit={this.props.onSubmit} value={this.props.commentText} onChange={this.props.onChange}/>
       </section>
