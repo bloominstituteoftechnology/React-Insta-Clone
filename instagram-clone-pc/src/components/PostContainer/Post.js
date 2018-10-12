@@ -6,11 +6,11 @@ const PostImage = styled.img`
     width: 100%;
 `
 
-const PostHeader = sytled.h2`
+const PostHeader = styled.h2`
     margin: 10px 10px;
 `
 
-const UserThmbNail = sytled.img`
+const UserThmbNail = styled.img`
     width: 30px;
     border-radius: 50%;
 `
@@ -56,7 +56,7 @@ class Post extends Component {
                     </UserNameHeader>
                 </PostHeader>
                 <PostImage src={this.state.data.imageUrl} alt="" />
-                <LikesSection incrementLike={this.incrementLike} likes={this.state.likes} liked={this.state.liked} />
+                <LikeSection incrementLike={this.incrementLike} likes={this.state.likes} liked={this.state.liked} />
             </div>
         );
     }

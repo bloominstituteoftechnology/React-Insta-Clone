@@ -1,12 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
     "\\src\\components",
+    "\\src\\components\\CommentSection",
     "\\src\\components\\images",
     "\\src\\components\\Login",
+    "\\src\\components\\PostContainer",
     "\\src\\components\\SearchBar"
   ],
-  "SelectedNode": "\\src\\components\\images",
+  "SelectedNode": "\\src\\components\\SearchBar\\SearchBar.js",
   "PreviewInSolutionExplorer": false
 }

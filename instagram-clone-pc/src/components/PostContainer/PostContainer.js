@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection'
 import PropTypes from 'prop-types';
-import Post from './post'
+import Post from './Post';
 import styled from 'styled-components';
 
 const PostContainerAttrib = styled.div`

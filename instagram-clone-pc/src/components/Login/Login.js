@@ -20,6 +20,7 @@ const LoginText = styled.input`
 const EnterBtn = styled.button`
     margin: 25px 0;
     border: 2px solid black;
+    height: 50px;
     border-radius: 10px;
     box-shadow: 0 0 10px darkgray;
     padding-left: 10px;
@@ -28,11 +29,15 @@ const EnterBtn = styled.button`
 const LoginPage = styled.div`
     height: 100vh;
     width: 100vw;
-    background: #311254;
+    background: #FB3B45;
 `
 
 const LoginImg = styled.img`
-    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: auto;
 `
 
 class Login extends Component {
@@ -57,8 +62,8 @@ class Login extends Component {
         return (
             <LoginPage className="d-flex justify-content-center">
                 <form autoComplete="off" className="login-container d-flex flex-column justify-content-center">
-                    <LoginImg src={require('../images/avengers-logo.jpg')} alt="" />
-                    <LoginLabel>Avengers Login</LoginLabel>
+                    <LoginImg src={require('../images/avengers-png-logo-4974.png')} alt="" />
+                    <LoginLabel className = "text-center">Login</LoginLabel>
                     <LoginText
                         type="text"
                         placeholder="Enter Your Login Name"

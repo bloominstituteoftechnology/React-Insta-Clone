@@ -15,6 +15,10 @@ const CommentBox = styled.input`
     margin: 10px 15px;
     width: 50%;
     border: none;
+
+    @media(max-width: 800px){
+        width: 40%;
+    }
 `
 
 const HR = styled.hr`
