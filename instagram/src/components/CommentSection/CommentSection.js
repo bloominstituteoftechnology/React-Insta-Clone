@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import heart from '../../heart.svg';
-import convo from '../../convo.svg';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart, faComment } from '@fortawesome/free-solid-svg-icons'
 import './CommentSection.css'
-import Moment from 'react-moment';
+import Moment from 'react-moment'
 
-
+library.add( faHeart, faComment )
 
 
 class CommentSection extends React.Component {
@@ -55,8 +56,8 @@ class CommentSection extends React.Component {
         <div>
             <div className="underPic">
                 <div className="icons">
-                    <img src={heart} width="25px" onClick={this.addLike}/>
-                    <img src={convo} width="25px"/>
+                    <FontAwesomeIcon icon="heart" onClick={this.addLike}/>
+                    <FontAwesomeIcon icon="comment" />
                 </div>
                 <Moment parse="MMM D YYYY" className="timestamp" fromNow AGO>{this.props.time}</Moment>
             </div>

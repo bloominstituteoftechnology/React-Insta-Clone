@@ -1,22 +1,25 @@
 import React from 'react';
-import insta from '../../insta.svg';
-import user from '../../user.svg';
-import compass from '../../compass.svg';
-import heart from '../../heart.svg';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart, faCompass, faUser } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
 import './SearchBar.css';
+
+library.add(fab, faHeart, faCompass, faUser, )
 
 const SearchBar = (props) => {
     return (
         <div className="searchBar">
             <div className="brand">
-                <img src={insta} width="40px" />
+                <FontAwesomeIcon icon={['fab', 'instagram']} />
                 <h1>Instagram</h1>
             </div>
             <input placeholder= "&#128269; Search" onKeyPress={props.search}/>
             <div className="searchNav">
-                <img src={compass} width="25px"/>
-                <img src={heart} width="25px"/>
-                <img src={user} width="25px"/>
+                <FontAwesomeIcon icon="heart" />
+                <FontAwesomeIcon icon="compass" />
+                <FontAwesomeIcon icon="user" />
             </div>
         </div>
     )
