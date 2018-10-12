@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from 'styled-components'
 
 export const InstaboxDiv = styled.div`
   display: flex;
@@ -26,9 +26,12 @@ export const SearchInput = styled.input`
   height: 26px;
   margin-top: 1px;
   font-size: 12px;
-  text-align: ${props => (props.searchFocus ? "left" : "center")};
-  padding-left: ${props => props.searchFocus && "26px"};
-  background-color: ${props => (props.searchFocus ? "white" : "#fafafa")};
+  text-align: center;
+  background-color: #fafafa;
+  ${props => props.searchFocus && css`
+  text-align: left;
+  padding-left:26px;
+  background-color: white;`};
 `;
 
 export const PostContDiv = styled.div`
@@ -65,4 +68,16 @@ export const AddCommentDiv = styled.div `
 export const CommentsDiv = styled.div `
   padding: 5px 0;
     border-bottom: 1px solid #DBDBDB;
+`
+
+export const FixedHeader = styled.div `
+    max-width: 1010px;
+    padding: 26px 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 76px;
+    box-sizing: border-box;
+    align-items: center;
 `

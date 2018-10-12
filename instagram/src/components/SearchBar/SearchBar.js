@@ -8,11 +8,11 @@ import {
   Search,
   Xcircle
 } from "../../assets/assets";
-import {InstaboxDiv, InstatitleDiv, SearchInput} from '../styleComponents'
+import {InstaboxDiv, InstatitleDiv, SearchInput, FixedHeader} from '../styleComponents'
 
 const SearchBar = props => {
   return (
-    <div className="fixed-header">
+    <FixedHeader>
       <InstaboxDiv>
         <Instagram />
 
@@ -37,7 +37,7 @@ const SearchBar = props => {
         <Heart />
         <User />
       </div>
-    </div>
+    </FixedHeader>
   );
 };
 

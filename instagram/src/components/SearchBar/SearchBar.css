@@ -4,17 +4,7 @@ font-family: 'Roboto Condensed', sans-serif;
 #DBDBDB
 
 */
-.fixed-header{
-    max-width: 1010px;
-    padding: 26px 40px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 76px;
-    box-sizing: border-box;
-    align-items: center;
-}
+
 
 .title {
     border-left: solid 1px black;
@@ -30,25 +20,6 @@ font-family: 'Roboto Condensed', sans-serif;
     font-size: 24px;
 }
 
-.fixed-header .instabox{
-    display: flex;
-    align-items: center;
-    
-}
-
-.search input{
-    background: #FAFAFA ;
-    border-style: inset;
-    border: 1px solid #DBDBDB;
-    border-radius: 5px;
-    font-size: 2rem;
-    width: 213px;
-    height: 26px;
-    margin-top: 1px;
-    text-align: center;
-    font-size: 12px;
-}
-
 
 .search{
     position: relative;
@@ -56,7 +27,7 @@ font-family: 'Roboto Condensed', sans-serif;
 
 .feather-search{
     position: absolute;
-    top: 9px;
+    top: 7px;
     left: 75px;
 }
 
@@ -67,7 +38,7 @@ font-family: 'Roboto Condensed', sans-serif;
 .feather-x-circle{
     position: absolute;
     width: 20px;
-    top: 4px;
+    top: 2px;
     right: 5px;
     cursor: pointer;
 }
