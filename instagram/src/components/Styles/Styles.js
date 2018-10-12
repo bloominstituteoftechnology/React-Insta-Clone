@@ -19,8 +19,9 @@ export const LogoHeader = styled.div`
 
 export const LogoImage = styled.img`
   height: 30px;
-  width: 30px;
-  ${props => (props.instagram ? `width:100px` : `width:30px`)};
+  width: 40px;
+  padding-right: 10px;
+  ${props => (props.instagram ? `width:100px` : null)};
   ${props => (props.instagram ? null : `border-right:1px solid lightgrey`)};
 `;
 
@@ -97,4 +98,41 @@ export const BodyContainer = styled.div`
  export const LikeButton = styled.div`
   padding-left: 3%;
   font-weight: bold;
+`;
+
+//CommentSection/Comment/AddComment
+//CommentSection
+export const CommentsContainer = styled.div`
+  width: 94%;
+  margin: 20px auto;
+`;
+
+ export const Timestamp = styled.p`
+  color: grey;
+  font-size: 12px;
+`;
+
+//Comment
+export const CommentInstance = styled.div`
+  display: flex;
+  margin: 0;
+  padding: 0;
+`;
+
+ export const CommentText = styled.p`
+  margin: 0;
+  padding: 0 0 10px 0;
+  width: 100%;
+  text-align: left;
+  overflow-wrap: break-word;
+`;
+
+//AddComment
+export const AddCommentInput = styled.input`
+  width: 100%;
+  border: none;
+  border-top: 1px solid lightgrey;
+  padding: 15px 0;
+  text-indent: 2%;
+  font-size: 16px;
 `;

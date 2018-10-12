@@ -10,7 +10,7 @@ import {
   ResetButton,
   HeaderSprites,
   Sprite
-} from "./../../Styles.js";
+} from "../Styles/Styles";
 
 const SearchBar = props => {
   return (
@@ -26,6 +26,7 @@ const SearchBar = props => {
           alt="instagram"
         />
       </LogoHeader>
+
       <SearchForm onSubmit={props.startSearch}>
         <SearchInput
           placeholder="Search"
@@ -36,8 +37,10 @@ const SearchBar = props => {
             props.changeHandler("newSearch", event.target.value)
           }
         />
+
         <ResetButton filtered={props.filtered}>Reset</ResetButton>
       </SearchForm>
+      
       <HeaderSprites>
         <Sprite className="far fa-compass" />
         <Sprite className="far fa-heart" />

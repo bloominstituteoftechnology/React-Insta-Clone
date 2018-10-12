@@ -2,12 +2,13 @@ import React from "react";
 import {
   BodyHeader,
   UserThumbnail,
-  Username,
+
   BodyImage,
   BodySprites,
   BodySprite,
   LikeButton
-} from "./../../Styles";
+} from "../Styles/Styles";
+import { Username } from "../Styles/Reusables";
 
 const Post = props => {
   return (
