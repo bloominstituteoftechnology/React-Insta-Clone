@@ -36,7 +36,7 @@ class PostsPage extends Component {
     typeInSearch = (e) => {
       this.setState({
         searchInput: e.target.value
-      }, console.log(this.state.searchInput))
+      })
     }
   
     //perform search
