@@ -1,0 +1,37 @@
+.postContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto 20px auto;
+    width: 600px;
+}
+ .postHeader{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    font-family:  'Open Sans', sans-serif;
+}
+ .postHeader img{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+ .postImage{
+    width: 600px;
+    margin-top: 10px;
+}
+ .likes{
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family:  'Open Sans', sans-serif;
+}
+ .postButtons{
+    display: flex;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    justify-content: space-between;
+}
