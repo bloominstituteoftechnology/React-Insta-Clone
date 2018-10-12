@@ -3,6 +3,7 @@ import CommentSection from './CommentSection';
 import Post from './Post';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import './Posts.css';
 
 //Styled components
 const PostWell = styled.section `

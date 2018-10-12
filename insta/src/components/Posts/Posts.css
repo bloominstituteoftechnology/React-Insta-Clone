@@ -1,20 +1,4 @@
-.post-container {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 0 auto;
-}
 
-.flex-column-container {
-    display: flex;
-    align-items: center;
-    margin: 5px 0;
-}
-
-.post-tunnel {
-    margin: 30px 0;
-    border: 2px solid #ecf0f1;
-}
 
 .thumbnail {
     border-radius: 50%;
