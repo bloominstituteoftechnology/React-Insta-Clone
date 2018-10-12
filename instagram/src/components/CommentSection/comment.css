@@ -1,0 +1,61 @@
+.comment {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: flex-start; */
+}
+.comment-container {
+    /* padding:15px 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.comment p {
+    margin:0px;
+    display:flex;
+    justify-content: flex-start;
+    font-size:16px;
+    
+}
+span {
+    font-weight: bold;  
+    padding-right:7px;  
+}
+.likes {
+    margin-bottom: 7px;
+}
+
+.comment-input {
+    width:100%;
+    padding: 15px 50px 15px 20px;
+    border-radius: 0px;
+    border: none;
+    border-top: 1px solid lightgrey;
+    color: rgba(0,0,0,.6);
+    font-size:16px;
+}
+
+.fontawesome {
+    margin-right:10px;
+    cursor: pointer;
+}
+
+.input-holder {
+    width:100%;
+    background:transparent;
+    position: relative;
+    margin-top:15px;
+}
+.fonta {
+    position: absolute;
+    right:13px;
+    top:14px;
+    margin:0px;
+    padding:0px;
+    color:gray;
+}
+
+.extraPadding {
+    padding: 13px 0px 0px 22px;
+}

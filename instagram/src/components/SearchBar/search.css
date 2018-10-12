@@ -1,0 +1,104 @@
+
+.search-bar {
+	width:100%;
+	max-width: 1024px;
+	height:75px;
+	border-bottom: 1px solid rgba(0,0,0,0.9);
+    background-color: #fff;
+   
+	/* position: fixed; */
+    /* top: 0; */
+    z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 40px;
+	margin:0 auto;
+}
+
+.search-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	transition: opacity .1s ease-out;
+}
+
+div.line {
+	background-color: #262626;
+    height: 28px;
+    margin: 0 16px;
+    width: 1px;
+}
+.search-bar p {
+	font-family: 'Grand Hotel', cursive;
+	color: rgba(0,0,0,0.9);
+	font-size: 28px;
+	letter-spacing: 0px;
+
+	cursor: pointer;
+} 
+.input {
+	position: relative;
+}
+.search-icon {
+	left: 11px;
+    position: absolute;
+    top: 9px;
+	z-index: 2;
+	
+}
+
+.search-icon img {
+	width:20px;
+	height:20px;
+}
+.fa-search {
+	height: 10px;
+	width: 10px;
+	margin-left:267px;
+	margin-top:279px;
+}
+
+.image-icon img, .search-head img {
+	width:24px;
+	height:24px;
+}
+
+/*****************
+   Input styles
+******************/
+input {
+	
+	 padding: 12px 20px 12px 40px;
+    border: solid 1px #dbdbdb;
+    border-radius: 5px;
+    color: #262626;
+    outline: 0;
+    /* padding: 6px 15px 6px 26px; */
+    z-index: 2;
+}   
+
+/********************
+   Images
+********************/
+/* .image-container {
+	width:80%;
+	display: flex;
+	justify-content: flex-end;
+}   */
+.image-icon {
+   display: flex;
+   justify-content: space-between;
+   width:120px;
+} 
+
+.cross-mark {
+	position: absolute;
+    top: 12px;
+    right: 10px;
+}
+.cross-mark img {
+	width:16px;
+	height:16px;
+}
