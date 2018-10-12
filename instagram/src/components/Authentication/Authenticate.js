@@ -7,7 +7,7 @@ const Authenticate = PassedComponent =>
   class extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {loggedIN: true}
+      this.state = {loggedIN: false}
     }
 
     componentDidMount() {
