@@ -1,0 +1,20 @@
+.cardUser {
+    padding-top: 11px;
+}
+
+.top-username {
+    display: inline-flex;
+}
+
+.card-img {
+    display: block;
+}
+
+.likeIcon {
+    text-align: left;
+    padding-bottom: 8px;
+    margin-left: -10px;
+    margin-top: -4px;
+}
+
+    
