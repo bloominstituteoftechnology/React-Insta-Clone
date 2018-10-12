@@ -28,12 +28,12 @@ class CommentSection extends React.Component {
     this.setState({
       username: user
     })
-    // let comment = JSON.parse(localStorage.getItem('post'))
-    // this.setState({
-    //   comments: comment
-    // })
+    // let comments = localStorage.getItem('post')
+    // if(comments) {
+    //   this.setState({comments: JSON.parse(comments))
+    // }
 }
-  addNewComment = index => {
+  addNewComment = () => {  
 
     // What does state currently have
     const newPost = {
@@ -42,17 +42,23 @@ class CommentSection extends React.Component {
     };
      // Create and array holder
     const comments = [...this.state.comments];
-    // Push new comments onto the pos
+    // Push new comments onto the post
     comments.push(newPost);
     //set state to new comment and send the entire array to localStorage.
     this.setState({
       comments,
       text: ""
-    }, () => localStorage.setItem('post', JSON.stringify(comments)));
-
-
+    });
 
   };
+
+
+  saveToLocal = () => {
+     const post = [...this.state.comments]
+     console.log(post)
+
+  }
+
 
   handleChange = (key, value) => {
     this.setState({ [key]: value });
