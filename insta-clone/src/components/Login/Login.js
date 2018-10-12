@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import { VWrapper, LoginWrapper, FormGroup } from "../Styles/StyleLogin";
-import traffic from "./../../imgs/Traffic_disco.jpg";
+import {  LoginWrapper, FormGroup } from "../Styles/StyleLogin";
+import traffic from "../../imgs/Traffic_disco.mp4";
 class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -25,7 +25,8 @@ class Login extends React.Component {
   render() {
     return (
       <LoginWrapper>
-        <VWrapper src={traffic} alt='' />
+        {/* <VWrapper src={traffic} alt="" /> */}
+        <video src={traffic} autoPlay loop/>
         <FormGroup>
           <input
             type="text"
@@ -50,8 +51,7 @@ class Login extends React.Component {
             Login
           </Button>
         </FormGroup>
-        <div>
-        </div>
+        <div />
       </LoginWrapper>
     );
   }
