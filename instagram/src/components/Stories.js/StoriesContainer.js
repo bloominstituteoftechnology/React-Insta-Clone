@@ -16,7 +16,7 @@ const Stories = props => {
         {props.posts.map(post => (
           <div className="stories-map" key={post.timestamp}>
             <div>
-              <img src={post.imageUrl} alt="" />
+              <img src={post.thumbnailUrl} alt="" />
             </div>
             <div>
               <h1>{post.username}</h1>

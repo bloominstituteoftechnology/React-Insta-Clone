@@ -47,3 +47,9 @@
   opacity: 0.6;
   margin-top: 10px;
 }
+
+@media (max-width: 980px) {
+  .stories-container {
+    display: none;
+  }
+}
