@@ -19,23 +19,29 @@ class App extends Component {
 	}
 	searchHandler = event => {
 		event.preventDefault();
-    let returnedData = [...this.state.instagramData];
-    
-		returnedData = returnedData.filter(element => {
-			if (element.username === this.state.searchInput) {
-				return {element};
+		let returnedData = [...this.state.instagramData];
+
+		const filterData = () => {
+			returnedData = returnedData.filter(element => {
+				if (element.username === this.state.searchInput) return element;
+				else return null;
+			});
+
+			this.setState({ instagramData: returnedData });
+			if (this.state.searchInput.length === 0) {
+				this.setState({ instagramData: appData });
 			}
-		});
-    this.setState({ instagramData: returnedData });
-    if (this.state.searchInput.length===0) {
-      this.setState({ instagramData: appData })
-    }
+
+			if (returnedData === null) {
+				this.setState({ instagramData: appData });
+			}
+		};
+		filterData();
 	};
 
-  searchInput = event => {
-    this.setState({ searchInput: event.target.value})
-    
-  }
+	searchInput = event => {
+		this.setState({ searchInput: event.target.value });
+	};
 
 	componentDidMount() {
 		setTimeout(() => {
