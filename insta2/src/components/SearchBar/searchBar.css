@@ -1,0 +1,32 @@
+.searchBar {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logos {
+}
+
+.logo1 {
+    border-right: 1px solid #2F2B2C;
+    padding-right: 15px;
+    margin-right: 15px;
+}
+
+.form {
+}
+
+form input {
+    border-radius: 5px;
+}
+
+.searchIcons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.searchIcons i {
+    margin: 0 5%;
+}

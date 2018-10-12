@@ -1,0 +1,63 @@
+.postContainer {
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.postImg {
+    width: 100%;
+}
+
+div {
+    width: 100%;
+}
+
+form {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+}
+
+input:focus {
+    border: none;
+}
+
+.thumbnail {
+    border-radius: 50%;
+    width: 10%;
+    padding: 15px;
+}
+.icons {
+    font-size: 2.2rem;
+}
+
+.likes {
+    padding: 0 20px;
+}
+
+.comments {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+form {
+    padding: 0 20px;
+}
+
+.newComment {
+    border-top: 2px solid #f5f5f5;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding: 20px 0;
+}
+
+.postIcons i {
+    padding: 0 20px;
+}
