@@ -1,36 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Comment from './Comment.js';
 import '../ig.css';
 import PropTypes from 'prop-types';
 
 // const CommentSection = props =>
-class CommentSection extends React.Component {
-
+class CommentSection extends Component {
+    constructor (props) {
+        super(props);
+    }
+    
     state = {
         comments: [],
         commentinput: "",
         usernameinput:""
     }
 
-    componentDidMount () {
-    this.setState = {
-        comments: this.props.comments
-        }
-    }
-
     addNewComment = (event) => {
         event.preventDefault();
 
         const comm  = {
-            username: event.target.value,
-            text: event.target.value,
-            index: ""
-          }
-
-        this.setState ({
-            comments: this.state.comments.concat([{comm}]),
-        });
+            username: event.target.usernameinput.value,
+            text: event.target.commentinput.value,
+            index: event.target.index
+            }
         
+        this.setState({comments: this.state.comments.concat([comm])})
+        alert(this.state.comments);
     }
 
     render() {
