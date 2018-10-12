@@ -1,13 +1,4 @@
-.searchBar{
-    max-width:950px;
-    width:100%;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid lightgray;
-    height:175px;
-    margin-bottom: 50px;
-   
-}
+
 .icons{
     width:50px;
     height: 50px;

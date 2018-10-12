@@ -27,15 +27,14 @@ class App extends Component {
     event.preventDefault();
 
     this.setState({
-      allUserData: this.state.allUserData.filter((obj, i, arr) => {
-        if (obj.username === this.state.searchInput) {
-          return obj
-        }
-      }
+      allUserData: this.state.allUserData.filter(obj =>
+        obj.username === this.state.searchInput
+
       )
     })
-
   }
+
+
   reset = (event) => {
     event.preventDefault();
     this.setState({
