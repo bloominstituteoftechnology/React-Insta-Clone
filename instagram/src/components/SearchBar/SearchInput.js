@@ -4,7 +4,11 @@ import './SearchBar.css';
 const SearchInput = (props) => {
     return (
         <>
-            <input type='text' placeholder='🔍 search' />
+            <input 
+             onKeyUp={props.search}
+            type='text'
+             placeholder='🔍 search'
+              />
         </>
     )
 }

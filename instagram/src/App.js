@@ -22,11 +22,22 @@ class App extends Component {
     })
   },500)
   }
+  
+  searchFilter =(event) => {
+    event.preventDefault();
+    if(event.keyCode === 13 && event.target.value.length > 0){
+      let newData = this.state.dummyData.filter((dummyData)=> {
+        return dummyData.username === event.target.value;
+      })
+      this.setState({dummyData:newData});
+      event.target.value='';
+    }
+  }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar search={this.searchFilter}/>
         <PostContainer dummyData={this.state.dummyData} />
       </div>
     );
