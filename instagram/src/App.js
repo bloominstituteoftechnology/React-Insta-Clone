@@ -15,20 +15,15 @@ class App extends Component {
     }
 
     logOut=event=>{
-      const username=localStorage.key.username
-    return dispatch=>{
-      localStorage.removeItem(username);
-      
-      dispatch(LogIn({}));
+        
+      localStorage.removeItem('user')
       window.location.reload();
-    }
-         
   }
    
   render(){
     return (
       <div className="whole-app">
-       <button onClick={this.logOut}/>
+       <button onClick={this.logOut}>LogOut</button>
         <span><SearchBar/></span>
         <span className="post">
        {dummyData.map((post,index)=>{

@@ -47,10 +47,7 @@ class PostContainer extends React.Component{
     commentInput=event=>{
         document.getElementById(`CommentSection__${this.state.id}`).focus();
     }
-    logOut=event=>{
-    this.render(<LogIn/>)
-       
-}
+    
 
         
     
@@ -58,7 +55,7 @@ class PostContainer extends React.Component{
     render(){
         return(
             <div className="whole-post">
-                <button onClick={this.logOut}/>
+                
                 <div className="username-thumbnail">
                     <div >
                         <img className="thumbnail" src ={this.state.thumbnailUrl}/>

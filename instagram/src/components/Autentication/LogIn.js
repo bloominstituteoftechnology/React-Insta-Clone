@@ -24,7 +24,7 @@ render(){
             <div>
             <input type="password"placeholder="password"name="password"value={this.state.password}onChange={this.handleInputChange}/>
             </div>
-            <button onClick={this.handleLoginSubmit}/>
+            <button onClick={this.handleLoginSubmit}>LogIn</button>
     </div>
     )
 }
