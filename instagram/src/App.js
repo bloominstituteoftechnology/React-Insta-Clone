@@ -1,34 +1,55 @@
 import React, { Component } from 'react';
-import './App.css';
 import dummyData from './dummy-data';
-import PostWindow from './components/PostContainer/PostWindow';
-import Authentication from './Authentication/Authentication';
+import PostsPage from './components/PostContainer/PostsPage';
+import './App.css';
+
+
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      dummyData: [],
-      authentication: Authentication
-    }
+constructor(props) {
+super();
+this.state = {
+ data: [],
+ search: '',
+}
+}
+
+componentDidMount() {
+this.setState({data: dummyData,
+})
+}
+
+search = (event) => {
+  event.preventDefault();
+  let term = event.target.value;
+  let searchData = this.state.data.slice();
+
+  // searchData = searchData.filter(post => post.username === term);
+  searchData = searchData.filter(post => post.username.includes(term));
+
+  if (term.length < 1) {
+this.setState({
+  data: dummyData,
+})
+  }else {
+  this.setState({
+    data: searchData,
+  })
   }
 
-  componentDidMount() {
-    this.setState({dummyData: dummyData})
-  }
+}
+
+ handleChange = (event) => {
+   event.preventDefault();
+   this.setState({
+     [event.target.name]: event.target.value,
+   });
+ };
+
 
   render() {
     return (
-      <PostWindow dummyData={this.state.dummyData} authenticate={this.state.authenticate}  />
-      // <div className="App">
-      //   <SearchBar />
-       
-      //   <div className="App-content">
-      //     {this.state.dummyData.map(post => (
-      //       <PostContainer key={post.timestamp} dummyData={post} />
-      //     ))}
-      //   </div>
-      // </div>
+    <PostsPage login = {this.login} data = {this.state.data} handleChange = {this.handleChange} value ={this.state.search} search = {this.search} />
     );
   }
 }

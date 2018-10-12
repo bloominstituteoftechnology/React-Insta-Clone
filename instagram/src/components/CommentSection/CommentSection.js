@@ -1,80 +1,131 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './CommentSection.css';
-
-class CommentSection extends React.Component {
+import React, {
+    Component
+  } from 'react';
+  import Comment from './Comment';
+  import './CommentSection.css';
+  import AddAComment from '../CommentSection/AddAComment';
+  import IconHeaderBar from '../CommentSection/IconHeaderBar';
+  
+  class CommentSection extends Component {
     constructor(props) {
-        super(props);
-        this.state = {
-            comments: props.dummyData,
-            input: '',
-            placeholder: 'Share a comment...'
-        };
+      super(props);
+      this.state = {
+        comments: props.comments,
+        username: 'jjashcraft',
+        newComment: '',
+        likeHandler: {
+          userLiked: false,
+          likes: props.likes,},
+        postIndex: props.postIndex,
+      }
     }
-
-    changeInput = event => this.setState({
-        input: event.target.value
-    });
-
-    addNewComment = (event, i) => {
-        event.preventDefault();
-        const comments = this.state.comments.slice();
-        comments.push({
-            text: this.state.input,
-            username: localStorage.getItem('user')
-        });
+    componentDidMount() {
+      let comments;
+      if (window.localStorage.getItem(this.props.postIndex)) {
+        comments = JSON.parse(window.localStorage.getItem(this.props.postIndex));
+      } else {
+        comments = this.props.comments;
+        window.localStorage.setItem(this.state.postIndex, JSON.stringify(comments));
+      }
+      this.setState({
+        comments
+      });
+    }
+  
+    addComment = (event) => {
+      event.preventDefault();
+      let comments = this.state.comments.slice();
+      let newComment = this.state.newComment;
+      let user = window.localStorage.getItem('username');
+      comments.push({
+        text: newComment,
+        username: user,
+      });
+      window.localStorage.setItem(this.state.postIndex, JSON.stringify(comments));
+    
+      this.setState({
+        comments: comments,
+        newComment: '',
+      });
+  
+    }
+    toggleLike = (event) => {
+      if (this.state.likeHandler.userLiked === false) {
+        event.target.className = 'fas fa-heart liked-button';
+        console.log('plus one like');
+        let likes = this.state.likeHandler.likes;
+        likes = likes + 1;
+        window.localStorage.setItem(this.props.likeIndex, JSON.stringify(this.state.likeHandler));
         this.setState({
-            comments,
-            input: ''
-        });
+          likeHandler: {likes: likes,
+          userLiked: true,
+        }
+      });
+    }else {
+        
+        if (window.localStorage.getItem(this.props.likeIndex)) {
+          window.localStorage.removeItem(this.props.likeIndex);
+          event.target.className = 'far fa-heart like-button';
+          console.log('no more likey');
+          let likes = this.state.likeHandler.likes;
+          likes--;
+          this.setState({likeHandler: {
+          userLiked: false,
+          likes: likes,}
+          })
+        } 
+  
+      }
+  
     }
-
+  
+  
+    handleChange = (event) => {
+      this.setState({
+        [event.target.name]: event.target.value
+      });
+    }
+  
     render() {
-        return ( <
-            div className = "comment-section" > {
-                this.state.comments.map(comment => ( <
-                    div className = "custom-comment"
-                    key = {
-                        Math.random()
-                    } >
-                    <
-                    p > < strong > {
-                        comment.username
-                    } < /strong> {comment.text}</p > { /* <span>{comment.text}</span> */ } <
-                    /div>
-                ))
-            } <
-            form className = "comment-form"
-            onSubmit = {
-                this.addNewComment
-            } >
-            <
-            input type = "text"
-            className = "comment-input"
-            onChange = {
-                this.changeInput
+      return ( <div className = 'comments' >
+  
+        <IconHeaderBar userLiked = {
+          this.state.likeHandler.userLiked}
+        toggleLike = {
+          this.toggleLike
+        }
+        likes = {
+          this.state.likeHandler.likes
+        }
+        /> <ul> {
+          this.state.comments.map((comment, index) => {
+  
+            return <Comment key = {
+              Math.random()
             }
-            placeholder = {
-                this.state.placeholder
+            username = {
+              comment.username
             }
-            value = {
-                this.state.input
+            text = {
+              comment.text
             }
-            /> <
-            /form> <
-            /div>
-        )
-    }
-
-}
-
-CommentSection.propTypes = {
-    comments: PropTypes.arrayOf(
-        PropTypes.shape({
-            username: PropTypes.string,
-            text: PropTypes.string
-        })
-    )
-};
-
-export default CommentSection;
+            />
+          })
+        } </ul>
+  
+        <AddAComment value = {
+          this.state.newComment
+        }
+        handleChange = {
+          this.handleChange
+        }
+        addComment = {
+          this.addComment
+        }
+        /> </div>
+  
+      );
+    };
+  };
+  
+  export default CommentSection;

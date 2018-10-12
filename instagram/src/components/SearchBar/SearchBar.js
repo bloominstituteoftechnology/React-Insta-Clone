@@ -1,48 +1,23 @@
+
 import React from 'react';
+import Icon from './Icon';
 import './SearchBar.css';
 
-class SearchBar extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            dummyData: props.dummyData,
-            input: '',
-            placeholder: '&#xf002; Search'
-        }
-    }
+const SearchBarContainer = (props) => (
+    <div className='searchbar-container'>
+        <div className='inside-left-searchbar'> 
+            <Icon icon={< i className="fab fa-instagram fa-2x instagram-icon" > </i>}/>
+            <div className="logo">Instagram</div>
+        </div>
+        <div> <input type='text' onChange ={props.search} name='search' className='search-input' placeholder='Search' /> </div>
+       
+        <div className='inside-right-searchbar'>
+            <Icon icon={<i className="far fa-compass right-icons"></i>} /> 
+            <Icon icon={<i className="far fa-heart right-icons"></i>} /> 
+            <Icon icon={<i className="far fa-user right-icons"></i>} /> 
+            
+        </div>
+    </div>
+);
 
-    changeSearch = event => this.setState({input: event.target.value});
-
-    logout = (event => {
-        localStorage.removeItem('user');
-        localStorage.removeItem('password');
-        document.location.reload();
-    })
-
-    render() {
-        return (
-            <div className="search-header">
-                <div className="div1">
-                    <i className="fa fa-size">&#xf16d;</i>
-                    <h3>Instagram</h3>
-                </div>
-                
-                <div className="div-mid">
-                    <form onSubmit={this.newSearch}>
-                        <input type="text" onChange={this.changeSearch} className="fa" placeholder={this.state.placeholder} value={this.state.input} />
-                    </form>    
-                </div>
-                
-                
-                <div className="div2">
-                    <i className="fa fa-size">&#xf14e;</i>
-                    <i className="fa fa-size">&#xf08a;</i>
-                    <i className="fa fa-size" onClick={this.logout}>&#xf00d;</i> 
-                </div> 
-            </div>
-        )  
-    }
-    
-}
- 
-export default SearchBar;
+export default SearchBarContainer;
