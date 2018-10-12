@@ -2,11 +2,11 @@
   box-sizing: border-box;
 } */
 
-.login a {
+/* .login a {
   text-decoration: none;
   font-size: 14px;
   cursor: pointer;
-}
+} */
 
 .login p {
   text-align: center;
@@ -92,9 +92,9 @@
   box-sizing: border-box;
 }
 
-.cta-signup a {
+/* .cta-signup a {
   color: #5fa9f3;
-}
+} */
 
 .cta-download {
   display: flex;
@@ -127,11 +127,11 @@
   width: 750px;
 }
 
-.footer-links a {
+/* .footer-links a {
   text-decoration: none;
   color: #567b9b;
   font-weight: bold;
-}
+} */
 
 @media (max-width: 900px) {
   .footer-nav {

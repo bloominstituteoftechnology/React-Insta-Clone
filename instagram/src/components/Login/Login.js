@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./Login.css";
 import igTextLogo from "../../images/text-logo.png";
 import authenticate from "../../Authentication/Authenticate";
+import { Link } from "./LoginStyles";
 
 class Login extends React.Component {
   constructor(props) {
@@ -75,11 +76,14 @@ class Login extends React.Component {
           <div className="login-fb">
             <i className="fab fa-facebook" /> Log in with Facebook
           </div>
-          <a>Forgot password?</a>
+          <Link>Forgot password?</Link>
         </div>
 
         <div className="cta-signup box">
-          Don't have an account? <a href="#">Sign up</a>
+          Don't have an account?{" "}
+          <Link signup href="https://www.instagram.com/">
+            Sign up
+          </Link>
         </div>
 
         <p>Get the app</p>
@@ -102,9 +106,9 @@ class Login extends React.Component {
           <div className="footer-links">
             {footerLinks.map(link => {
               return (
-                <a href="#" key={Math.random()}>
+                <Link footer href="#" key={Math.random()}>
                   {link}
-                </a>
+                </Link>
               );
             })}
           </div>
