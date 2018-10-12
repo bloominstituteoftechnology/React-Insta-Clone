@@ -6,7 +6,7 @@ class PostsPage extends Component{
     constructor(props){
         super(props);
         this.state={
-            searchValue:''
+            searchValue:'',
         }
     }
 
@@ -16,6 +16,18 @@ class PostsPage extends Component{
         });
         console.log(this.state.searchValue)
     }
+
+    filterPosts=(event)=>{
+        event.preventDefault();
+        if (this.searchValue !==''){
+            {this.props.dummyData.filter()}
+        }
+    }
+    
+
+
+
+
 
     render(){
         return(
