@@ -1,5 +1,4 @@
 import React from 'react';
-import {Button} from 'reactstrap'
 class Login extends React.Component {
     constructor() {
         super();
@@ -22,7 +21,7 @@ class Login extends React.Component {
     render() {
         return (
             <div>
-                <form className="login">
+                <form>
                     <input onChange={this.usernameHandler} type="text" placeholder=" Username" />
                     <input type="text" placeholder=" Password" />
                 </form>

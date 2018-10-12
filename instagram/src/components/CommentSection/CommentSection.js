@@ -1,7 +1,23 @@
 import React from 'react'
 import Comment from '../CommentSection/Comment';
-import './commentSection.css';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+const AddComment =styled.div`
+    display:flex;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    padding:10px;
+    
+.dots{
+    font-weight: bolder;
+    font-size: 20px;
+     
+}
+
+.commentForm{
+    border:none;
+}
+`
 class CommentSection extends React.Component {
     constructor(props) {
         super();
@@ -45,12 +61,12 @@ addComment = (event) => {
                         );
                     })}
                 </>
-                <div className="addComment">
+                <AddComment>
                     <form onSubmit={(event) => {  this.addComment(event) } }>
                         <input onChange={this.inputHandler} className="commentForm" type="text" placeholder="Add a comment..."  />
                     </form>
                     <div className='dots'><p>...</p></div>
-                </div>
+                </AddComment>
             </div>
         );
     }

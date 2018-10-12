@@ -1,12 +1,18 @@
 import React from 'react'
-import './commentSection.css';
+import styled from 'styled-components';
+const CommentAreaUser = styled.p`
+padding-left:10px;
+.commentUser{
+    font-weight:bold;
+}
+`
 class Comment extends React.Component {
 
     render() {
         return (
-            <p className="commentArea">
-             <span className='commentUser'>{this.props.commentUsername}</span> {this.props.commentText}  
-            </p>
+            <CommentAreaUser>
+             <span>{this.props.commentUsername}</span> {this.props.commentText}  
+            </CommentAreaUser>
         );
     }
 }

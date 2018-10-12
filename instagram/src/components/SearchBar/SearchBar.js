@@ -1,10 +1,8 @@
 import React from 'react'
 import logos from '../../img/logos.png';
-import search from '../../img/search.png';
 import compass from '../../img/compass.png';
 import heart from '../../img/heart.png';
 import friend from '../../img/friend.png';
-import './searchBar.css';
 import styled from 'styled-components';
 const Header = styled.header`
     max-width:950px;
@@ -14,31 +12,38 @@ const Header = styled.header`
     justify-content: space-between;
     border-bottom: 1px solid lightgray;
     height:175px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 `
 const IconImage = styled.img`
-    width:50px;
-    height: 50px;
-    padding-top:70px;
+  width:50px;
+  height:50px;
+  margin-top:70px;
     
+`
+const CompheartFriend = styled.div`
+    display:flex;
+    align-items:center;
+`
+const Form = styled.form`
+margin-top:120px;
 `
 class SearchBar extends React.Component {
 
     render() {
         return (
             <Header>
-                <div><img className="header" src={logos} alt="logo" /></div>
+                <div><img  src={logos} alt="logo" /></div>
                 <div>
-                    <form className="form" onSubmit={(event) => { this.props.filter(event) }}>
+                    <Form onSubmit={(event) => { this.props.filter(event) }}>
                         <input onChange={this.props.searchHandler} type="text" value={this.props.searchInput} placeholder=" Search 🔍" />
-                    </form>
+                    </Form>
                     <button onClick={(event) => { this.props.reset(event) }}>Reset</button>
                 </div>
-                <div className="compheartfriend">
-                    <IconImage className="icons" src={compass} alt="compass" />
-                    <IconImage className="icons" src={heart} alt="heart" />
-                    <IconImage className="icons" src={friend} alt="friend" />
-                </div>
+                <CompheartFriend>
+                    <IconImage src={compass} alt="compass" />
+                    <IconImage src={heart} alt="heart" />
+                    <IconImage src={friend} alt="friend" />
+                </CompheartFriend>
             </Header>
         );
     }
