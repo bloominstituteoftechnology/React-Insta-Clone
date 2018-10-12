@@ -41,3 +41,12 @@
     margin:1.3rem;
 }
 
+.comment {
+    display:flex;
+    margin: 14px;
+}
+
+.reactionIcons {
+    display:flex;
+}
+
