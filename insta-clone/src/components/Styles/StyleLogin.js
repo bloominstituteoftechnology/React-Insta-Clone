@@ -2,18 +2,32 @@ import styled from "styled-components";
 
 export const VWrapper = styled.img`
   background-size: cover;
-  z-index:1;
+  z-index: 1;
 `;
 export const LoginWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  postiion: realtive;
+`;
+
+export const LoginHeader = styled.h1`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  font-family:'Siry';
+
+  bottom: 310px;
+  color: white;
+  border-shadow: 20px 20px;
+  font-size: 80px;
+  z-index: 3;
 `;
 export const FormGroup = styled.form`
   display: flex;
   flex-direction: column;
-position:absolute;
+  position: absolute;
   margin-top: 50px;
   line-height: 100px;
   padding: 40px;

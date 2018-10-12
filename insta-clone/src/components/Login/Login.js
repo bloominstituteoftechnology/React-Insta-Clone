@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import {  LoginWrapper, FormGroup } from "../Styles/StyleLogin";
+import { LoginHeader, LoginWrapper, FormGroup } from "../Styles/StyleLogin";
 import traffic from "../../imgs/Traffic_disco.mp4";
 class Login extends React.Component {
   constructor(props) {
@@ -26,7 +26,9 @@ class Login extends React.Component {
     return (
       <LoginWrapper>
         {/* <VWrapper src={traffic} alt="" /> */}
-        <video src={traffic} autoPlay loop/>
+        <video src={traffic} autoPlay loop />
+
+        <LoginHeader>Insta-Clone</LoginHeader>
         <FormGroup>
           <input
             type="text"
