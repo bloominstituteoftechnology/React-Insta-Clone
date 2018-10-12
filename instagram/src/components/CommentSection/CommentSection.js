@@ -3,6 +3,7 @@ import './CommentSection.css';
 import Comment from './Comment.js'
 import NewComment from './NewComment.js';
 import Buttons from './Buttons.js';
+import styled from 'styled-components';
 
 class CommentSection extends Component {
     constructor(props) {

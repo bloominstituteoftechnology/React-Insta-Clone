@@ -1,13 +1,24 @@
 import React from 'react';
 import './SearchBar.css';
+import styled from 'styled-components';
+
+const Buttons = styled.div`
+        width: 25%;
+        display: flex;
+        justify-content: space-around;
+
+        i:hover {
+        cursor: pointer;
+    }
+`
 
 const SearchButton = (props) => {
     return (
-        <div className='buttons'>
+        <Buttons>
             <i className="far fa-compass"></i>
             <i className="far fa-heart"></i>
             <i className="far fa-user"></i>
-        </div>
+        </Buttons>
     )
 }
 
