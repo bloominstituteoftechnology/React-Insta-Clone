@@ -27,31 +27,6 @@ componentDidMount() {
   })
 }
 
-addLike = (event) => {
-  event.preventDefault();
-  const likesCounter = this.state.counter;
-  var likeButton = document.getElementById("likeAction");
-  var redLikeButton = document.getElementById("redLikeAction");
-  likeButton.style.display = "none";
-  redLikeButton.style.display = "inline-flex";
-
-  this.setState({
-      counter: likesCounter + 1
-  })
-}
-
-removeLike = (event) =>{
-  event.preventDefault();
-  const likesCounter = this.state.counter;
-  var likeButton = document.getElementById("likeAction");
-  var redLikeButton = document.getElementById("redLikeAction");
-  likeButton.style.display = "inline-flex";
-  redLikeButton.style.display = "none";
-
-  this.setState({
-      counter: likesCounter - 1
-  })
-}
 
 
   render() {
