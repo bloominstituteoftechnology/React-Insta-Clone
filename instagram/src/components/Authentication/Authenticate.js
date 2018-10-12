@@ -12,7 +12,7 @@ const Authenticate = PassedComponent =>
 
     componentDidMount() {
       if (localStorage.getItem('user' === 'ImaHacker') &&
-        localStorage.getItem('password') === ' password'
+         localStorage.getItem('password') === 'password'
       ) {
         this.setState({loggedIN: true})
       }

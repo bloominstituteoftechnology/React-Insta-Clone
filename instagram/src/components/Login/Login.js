@@ -11,7 +11,7 @@ class LoginPage extends React.Component {
   }
 
   handleInput = event => {
-      this.SetState( {[event.target.name]: event.target.value} );
+      this.setState( {[event.target.name]: event.target.value} );
   };
 
   handleSubmit = event => {
@@ -47,7 +47,7 @@ class LoginPage extends React.Component {
                  onChange = {this.handleInput}
           />
 
-          <button onClick = {this.handleSubmit}> Log In</button>
+          <button onClick = {this.handleSubmit}> Log In </button>
 
         </form>
 
