@@ -30,6 +30,10 @@ class SearchBar extends Component {
         this.props.handleSearch(input);
       };
 
+      handleLogOut = () => {
+        localStorage.clear('user');
+        window.location.reload();
+    }
 
     render() {
         
