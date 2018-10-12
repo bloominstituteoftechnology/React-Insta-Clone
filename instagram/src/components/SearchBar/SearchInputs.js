@@ -1,4 +1,15 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
+
+const SearchInput = styled.input`
+    height: 24px;
+    width: 210px;
+    margin-left: -25px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 14px;
+`
 
 class SearchInputs extends Component  {
     state = {
@@ -15,7 +26,7 @@ class SearchInputs extends Component  {
     render()    {
         return(
             <div>
-                <input value={this.state.value} onChange={this.onChangeHandler} className="search" placeholder="Search"/>
+                <SearchInput value={this.state.value} onChange={this.onChangeHandler} placeholder="Search"/>
                 <i className="fa fa-search" aria-hidden="false"></i>
             </div>
         )
