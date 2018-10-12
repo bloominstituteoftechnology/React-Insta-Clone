@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 
 const PostContainer = props => {
 	return (
-		<div className="post-container">
+		<div>
 			{props.posts.map(post => (
-				<div className="post-tunnel" key={post.timestamp}>
+				<div key={post.timestamp}>
 					<Post post={post} />
 					<CommentSection comments={post.comments} likes={post.likes} />
 				</div>

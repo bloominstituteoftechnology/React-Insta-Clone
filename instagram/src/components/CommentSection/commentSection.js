@@ -47,7 +47,7 @@ class CommentSection extends React.Component {
 				/>
 				<p className="likes">
 					{this.state.likes}
-					likes
+					<span>  likes</span>
 				</p>
 				{this.state.comments.map(comment => {
 					return (
