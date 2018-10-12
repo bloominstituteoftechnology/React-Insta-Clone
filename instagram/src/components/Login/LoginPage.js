@@ -30,8 +30,8 @@ class LoginPage extends React.Component {
   render() {
     return (
       <div className="login-page">
-        <h1>Instaclone</h1>
-        <p>Login to see fake posts from fake people.</p>
+        <h1>Instgram</h1>
+        <p>Login to see fake posts from fake people.LOL</p>
         <form className="login-form" onSubmit={this.login}>
           <input
             type="text"
