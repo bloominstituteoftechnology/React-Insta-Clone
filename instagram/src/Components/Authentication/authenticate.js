@@ -1,7 +1,7 @@
 import React from "react"
 import Login from "../Login/login"
 
-const Authenticate = (App) =>
+const Authenticate = (App, Login) =>
     class extends React.Component {
         constructor(props){
             super(props)
@@ -20,7 +20,7 @@ const Authenticate = (App) =>
             if(this.state.loginStatus) {
                 return <App />
             }else {
-                return <Login state={this.state}/>
+                return <Login />
             }
         }
     }

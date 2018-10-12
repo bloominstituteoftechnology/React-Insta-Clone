@@ -5,6 +5,7 @@ import Search from "./Components/SearchBar/search";
 import Post from "./Components/PostContainer/post";
 import PostPage from "./Components/PostContainer/postpage";
 import Authenticate from "./Components/Authentication/authenticate"
+import Login from './Components/Login/login';
 
 //App renders the header for IG
 //Also renders post component to the screen via mapping the state
@@ -22,13 +23,6 @@ class App extends Component {
     setTimeout(() => {
       this.setState({instagram: dummyData});
     }, 500)
-  }
-
-  //login sets username on local storage
-  login () {
-    this.setState({
-
-    })
   }
 
   //tracks user input search bar
@@ -83,4 +77,4 @@ class App extends Component {
   }
 }
 
-export default Authenticate(App);
+export default Authenticate(App, Login);
