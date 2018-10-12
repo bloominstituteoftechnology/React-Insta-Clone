@@ -1,23 +1,19 @@
 
 import React, { Component } from 'react';
-// import {
-//     CardImg,
-//     Card,
-//     CardTitle,
-   
-//   } from 'reactstrap';
 import './CommentSection.css';
-import Login from '../Login/Login';
+import moment from "moment";
+
 
 class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          comments: props.data.comments,
-          images: props.data.image,
-          likes: props.data.likes,
+          comments: props.dataEach.comments,
+          images: props.dataEach.image,
+          likes: props.dataEach.likes,
           input: '',
           username: props.username,
+         
         }
       }
 
@@ -58,10 +54,11 @@ class CommentSection extends Component {
         });
       }
 
-
     render() {
+        
     return (
         
+
             <div className="comments">
                 <div className="like_comment">
                 <i onClick={this.addLike} class="far fa-heart fa-2x"></i>
@@ -73,7 +70,8 @@ class CommentSection extends Component {
                         <p><strong>{comment.username}</strong><span> {comment.text}</span></p>
                     </div>
                     ))}
-                <p>{this.props.data.timestamp}</p>
+                {/* <p>{moment(this.props.data.timestamp).fromNow()}</p> */}
+                <p>{this.props.dataEach.timestamp}</p>
                     
                 <form onSubmit={this.addNewComment}>
                     <textarea

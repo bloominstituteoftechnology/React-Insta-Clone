@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
     CardImg,
     Card,
@@ -10,22 +10,36 @@ import './PostContainer.css';
 
 
 
-const PostContainer = props => {
+
+class PostContainer extends Component {
+    constructor(props){
+        super(props);
+        this.state ={
+
+        }
+    }
+
+
+
+render(){
     return (
-        <Card>
-            {props.dummyData.map((data) =>
-            <div>
-            <CardTitle>
-                    <img src={data.thumbnailUrl}/><p>{data.username}</p>
-            </CardTitle>
-            <CardImg top width="100%" src={data.imageUrl} alt="Card image"/>
-            <CommentSection dummyData={props.dummyData} data={data}/>
-            </div> )}
-            
-        </Card> 
+        
+            <Card>
+                {this.props.datas.map((dataEach) =>
+                <div>
+                <CardTitle>
+                        <img src={dataEach.thumbnailUrl}/><p>{dataEach.username}</p>
+                </CardTitle>
+                <CardImg top width="100%" src={dataEach.imageUrl} alt="Card image" />
+                <CommentSection dummyData={this.props.dummyData} dataEach={dataEach} />
+                </div> )}   
+            </Card>
+        
     ) 
          
 };
+}
+
 
 export default PostContainer;
 

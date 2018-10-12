@@ -8,20 +8,32 @@ class PostsPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-      
+          data : [],
+          search: "",
         }
       }
     
       componentDidMount() {
-        this.setState({instaData: [dummyData]})
+        this.setState({data: dummyData})
       }
-    
+
+     handleSearch = text => {
+        const filteredPost = dummyData.filter(post => {
+            return post.username.includes(text);
+        });
+        this.setState({ data: filteredPost });
+    };
+
   
     render() {
       return (
         <div>
-        <SearchBar />
-        <PostContainer instaData={this.state.instaData} dummyData={dummyData} />
+        <SearchBar 
+            dummyData={this.state.data}
+            handleSearch={this.handleSearch}
+            handleInputChange={this.handleInputChange}
+                    />
+        <PostContainer datas={this.state.data} />
         
         
         </div>
