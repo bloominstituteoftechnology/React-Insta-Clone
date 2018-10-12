@@ -45,7 +45,10 @@ export const SearchInput = styled.input`
 
 export const ResetButton = styled.button`
   width: 20%;
-  font-size: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  background: #4395ef;
+  color: white;
   ${props => (props.filtered === "not-filtered" ? `visibility:hidden` : null)};
 `;
 
