@@ -1,0 +1,212 @@
+@font-face {
+  font-family: 'Billabong';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Billabong'), url('./font/Billabong.woff') format('woff');
+}
+h3,
+h4,
+p {
+  font-size: 1rem;
+}
+.App {
+  text-align: center;
+  width: 800px;
+  margin: auto;
+}
+.header {
+  height: 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Billabong';
+}
+.header .logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
+}
+.header .logo-container .logo {
+  width: 30px;
+  height: 30px;
+  border-right: 0.1px solid black;
+  padding-right: 20px;
+}
+.header .logo-container .title {
+  font-size: 2rem;
+  padding-top: 8px;
+}
+.header .search-bar {
+  border: 0.1px solid Gainsboro;
+  height: 26px;
+  width: 200px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .search-bar .search-icon {
+  color: gray;
+  width: 10px;
+  height: 10px;
+  margin-left: 30px;
+}
+.header .search-bar form {
+  width: 45%;
+  padding-left: 8px;
+  padding-top: 2px;
+}
+.header .search-bar form input {
+  width: 100%;
+  font-size: 0.8rem;
+  background-color: whitesmoke;
+  border: none;
+}
+.header .search-bar form input:focus {
+  outline: none;
+}
+.header .icon-container {
+  width: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .icon-container .icon {
+  height: 18px;
+  width: 18px;
+  color: grey;
+  background: none;
+}
+.post-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: auto;
+}
+.post-container .posts {
+  border: 0.1px solid Gainsboro;
+  margin: 50px 0;
+}
+.post-container .posts .user {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.post-container .posts .user .thumbnail {
+  width: 28px;
+  height: 28px;
+  border-radius: 30px;
+  margin-left: 20px;
+}
+.post-container .posts .user .username {
+  margin-left: 10px;
+}
+.post-container .posts .post-image {
+  width: 100%;
+}
+.post-container .posts .likes {
+  text-align: left;
+}
+.post-container .posts .comment-section {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 560px;
+  margin: auto;
+}
+.post-container .posts .comment-section .icon-container {
+  display: flex;
+  margin: 5px 0;
+  justify-content: space-between;
+  width: 60px;
+}
+.post-container .posts .comment-section .icon-container .icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.post-container .posts .comment-section .icon-container .icon:hover {
+  color: maroon;
+}
+.post-container .posts .comment-section h3,
+.post-container .posts .comment-section p {
+  display: inline-block;
+  line-height: 0;
+}
+.post-container .posts .comment-section .text {
+  margin-left: 10px;
+}
+.post-container .posts .comment-section .timestamp {
+  color: gray;
+  font-size: 0.8rem;
+  padding-bottom: 20px;
+  border-bottom: 1px solid whitesmoke;
+}
+.post-container .posts .comment-section .add-comment {
+  width: 500px;
+  height: 20px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border: none;
+  margin-bottom: 20px;
+}
+.post-container .posts .comment-section .add-comment:focus {
+  outline: none;
+}
+.login-container {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.login-container .loginImg {
+  width: 400px;
+  padding: 0;
+}
+.login-container .login-box {
+  width: 400px;
+  border: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+}
+.login-container .login-box .title {
+  font-family: 'Billabong';
+  font-size: 3rem;
+  margin: 0;
+  padding: 50px 0;
+}
+.login-container .login-box .loginInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-container .login-box .loginInput input {
+  color: #999;
+  height: 36px;
+  width: 260px;
+  margin: 5px 0;
+  background-color: #fafafa;
+  border: none;
+  border: 1px solid #efefef;
+  padding: 0 10px;
+  font-size: 0.7rem;
+  border-radius: 3px;
+}
+.login-container .login-box .login-button {
+  height: 36px;
+  width: 280px;
+  border: 0;
+  color: white;
+  background-color: skyblue;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+.login-container .login-box .login-button:hover {
+  background-color: #3897f0;
+}
