@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { UserName, LogInOutButton } from '../Styles/Reusables';
-import styled, { css } from 'styled-components';
+import { LogInOutButton } from '../Styles/Reusables';
+import styled from 'styled-components';
 
 const ContainerLogin = styled.div`
   margin: 0 auto;

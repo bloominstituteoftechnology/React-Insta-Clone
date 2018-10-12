@@ -3,7 +3,7 @@ import dummyData from "./dummy-data";
 import SearchBar from "../SearchBar/SearchBar";
 import PostContainer from "./PostContainer";
 import { LogInOutButton } from '../Styles/Reusables';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import moment from "moment";
 import { UserName } from '../Styles/Reusables';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const CommentContainer = styled.div`
   font-weight: 300;
