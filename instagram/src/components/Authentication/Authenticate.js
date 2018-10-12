@@ -11,15 +11,17 @@ const Authenticate = App =>
     }
 
     componentDidMount() {
-      if (!!localStorage.getItem('username') && !!localStorage.getItem('password'))
+      if (localStorage.getItem('username') && !!localStorage.getItem('password'))
         this.setState({ authenticated: true });
     }
 
     render() {
-      if (this.state.authenticated)
-        return <App />;
-      return <Login />;
+      return (
+        <>
+        {this.state.authenticated ? < App /> : <Login />}
+        </>
+      );
     }
-  };
+  }
 
 export default Authenticate;
