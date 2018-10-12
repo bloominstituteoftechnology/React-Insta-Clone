@@ -13,7 +13,8 @@ class Comment extends React.Component {
     this.state = {
       comments: [],
       commentInput: "",
-      likes: ""
+      likes: null,
+      hasLiked: false
     };
   }
 
@@ -25,9 +26,17 @@ class Comment extends React.Component {
   }
 
   handleLikes = e => {
-    this.setState(prevState => ({
-      likes: prevState.likes + 1
-    }));
+    if (!this.state.hasLiked) {
+      this.setState(prevState => ({
+        likes: prevState.likes + 1,
+        hasLiked: true
+      }));
+    } else {
+      this.setState(prevState => ({
+        likes: prevState.likes - 1,
+        hasLiked: false
+      }));
+    }
   };
 
   // comment form handle change

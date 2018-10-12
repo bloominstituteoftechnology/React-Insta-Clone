@@ -4,19 +4,8 @@ import "./App.css";
 // import PostsPage from "./components/PostContainer/PostsPage";
 import Auth from "./components/Authentication/Authenticate";
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      loggedIn: false
-    };
-  }
-
-  // component did mount set state
-  componentDidMount() {}
-  render() {
-    return <Auth />;
-  }
-}
+const App = () => {
+  return <Auth />;
+};
 
 export default App;

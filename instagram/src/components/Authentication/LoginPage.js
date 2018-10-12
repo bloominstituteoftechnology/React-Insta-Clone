@@ -24,7 +24,7 @@ const LoginPage = props => {
               placeholder="username"
               required
               onChange={props.handleLoginInput}
-              value={props.loginTarget}
+              value={props.usernameInput}
             />
             <input type="password" placeholder="Password" required />
             <input type="submit" id="sign-up-btn" value="Sign Up" />

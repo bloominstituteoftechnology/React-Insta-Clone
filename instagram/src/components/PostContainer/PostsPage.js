@@ -9,7 +9,7 @@ class PostsPage extends Component {
     this.state = {
       posts: [],
       filteredPosts: []
-      // filterTarget: "hello"
+      // searchInput: "hello"
     };
   }
 
@@ -22,7 +22,7 @@ class PostsPage extends Component {
 
   render() {
     let filteredPosts = this.state.posts.filter(post =>
-      post.username.includes(this.props.filterTarget)
+      post.username.includes(this.props.searchInput)
     );
     return (
       <div className="post-wrapper">

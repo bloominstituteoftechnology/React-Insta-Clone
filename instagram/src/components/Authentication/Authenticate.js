@@ -9,16 +9,14 @@ class Auth extends React.Component {
     super();
     this.state = {
       loggedIn: false,
-      hello: "Hello",
-      filteredPosts: [],
-      filterTarget: "",
-      loginTarget: ""
+      searchInput: "",
+      usernameInput: ""
     };
   }
 
   handleSearchInput = e => {
     this.setState({
-      filterTarget: e.target.value
+      searchInput: e.target.value
     });
   };
 
@@ -47,14 +45,14 @@ class Auth extends React.Component {
     //   loggedIn: true
     // });
 
-    localStorage.setItem("user", this.state.loginTarget);
+    localStorage.setItem("user", this.state.usernameInput);
     window.location.reload();
   };
 
   handleLoginInput = e => {
     e.preventDefault();
     this.setState({
-      loginTarget: e.target.value
+      usernameInput: e.target.value
     });
   };
   render() {
@@ -63,17 +61,17 @@ class Auth extends React.Component {
         <LoginPage
           handleSignupState={this.handleSignupState}
           handleLoginInput={this.handleLoginInput}
-          loginTarget={this.state.loginTarget}
+          usernameInput={this.state.usernameInput}
         />
       );
     } else {
       return (
         <React.Fragment>
           <SearchBar
-            filterTarget={this.state.filterTarget}
+            searchInput={this.state.searchInput}
             handleSearchInput={this.handleSearchInput}
           />
-          <PostsPage filterTarget={this.state.filterTarget} />
+          <PostsPage searchInput={this.state.searchInput} />
         </React.Fragment>
       );
     }
