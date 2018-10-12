@@ -13,7 +13,7 @@ class PostContainer extends React.Component {
         super(props);
         this.state = { 
             ...props,
-            showNewComment: true
+            showNewComment: false
         };
     }
 

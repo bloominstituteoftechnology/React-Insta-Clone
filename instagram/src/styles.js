@@ -89,5 +89,5 @@ export const Comments = styled.section`
 `;
 
 export const NewCommentInput = styled.input`
-    display: ${props => props.enable ? "block" : "none"};
+    ${props => props.enable ? "display: block;" : "display: none;"}
 `;

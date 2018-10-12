@@ -38,7 +38,7 @@ class CommentSection  extends React.Component {
                         id={this.state.id} 
                         value={this.state.newCommentText}
                         onChange={this.newCommentChangeHandler}
-                        enable={this.state.showNewComment}
+                        enable={this.props.showNewComment}
                     />
                 </form>
             </Comments>
