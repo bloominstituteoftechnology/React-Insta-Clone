@@ -3,10 +3,10 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\CommentSection",
+    "\\src\\components\\images",
     "\\src\\components\\Login",
-    "\\src\\components\\PostContainer"
+    "\\src\\components\\SearchBar"
   ],
-  "SelectedNode": "\\src\\components\\PostContainer\\LikeSection.js",
+  "SelectedNode": "\\src\\components\\images",
   "PreviewInSolutionExplorer": false
 }
