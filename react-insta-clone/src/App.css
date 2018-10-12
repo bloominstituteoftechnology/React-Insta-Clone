@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.App-header {
+  width: 100%;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+.post {
+  border: 1px solid green;
+  width: 100%;
+}
+

@@ -1,0 +1,13 @@
+.comment-section{
+    width: 100%;
+    min-height: 50px;
+    display: flex;   
+    flex-direction: column; 
+}
+.comment-user {
+    font-weight: bold;
+}
+
+.comment-text {    
+    padding-left: 2%;
+}
