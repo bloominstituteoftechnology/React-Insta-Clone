@@ -30,11 +30,20 @@ const LogoHeader = styled.div`
   border-right:1px solid black;
 `
 
+const SearchHeader = styled.div`
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
 const LogoImage = styled.img`
-  width:106px;
-  height:40px;
+  height: props => props.height;
+  width : props => props.width;
   cursor: pointer;
-`
+  height: ${props => props.height};
+  width: ${props => props.width};
+`;
 
 class Search extends Component {
   
@@ -47,16 +56,15 @@ class Search extends Component {
     return (  
       <Container>
         <SearchContainer>
-          <div className="search-header">
+          <SearchHeader>
            <LogoHeader>
-              <img src={logo} alt="logo"/>
+            <LogoImage src={logo} alt="logo" height="24" width="24"/>
            </LogoHeader>
             <div className="logo" onClick={this.props.reload}>
-             <LogoImage src={instagram} alt="instagram"/>
+              <LogoImage src={instagram} alt="instagram" height="40" width="106"/>
             </div>
-          </div>
+          </SearchHeader>
           <div className="search-bar">
-           {/* <img src={search} alt="search"/> */}
            <form onSubmit={this.props.submit}>
             <input 
             value={this.props.value} 

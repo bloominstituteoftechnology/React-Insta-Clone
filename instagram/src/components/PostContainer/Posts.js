@@ -13,6 +13,19 @@ const Container = styled.div`
   margin:0 auto;
 `;
 
+const UserThumbnail = styled.img`
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+`
+
+const Username = styled.h3`
+  font-size:1.5rem;
+  font-family: Helvetica,Arial, sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+`
+
 class Posts extends Component {
   render() {
     return (  
@@ -22,8 +35,8 @@ class Posts extends Component {
               return[
                 <div key={post.username} className="post-container">
                 <div className="post-header">
-                  <img  className ="round" src={post.thumbnailUrl} alt="thumbnail"/>
-                  <h3>{post.username}</h3>
+                  <UserThumbnail className ="round" src={post.thumbnailUrl} alt="thumbnail"/>
+                  <Username>{post.username}</Username>
                 </div>
                 <div className="post-body">
                   <img src={post.imageUrl} alt="post"/>

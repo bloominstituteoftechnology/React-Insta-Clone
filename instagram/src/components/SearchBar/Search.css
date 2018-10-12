@@ -1,18 +1,8 @@
 
-
-.search-header{
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
 .search-header img{
   width: 24px;
   height:24px;
 }
-
-
 
 .search-header .logo{
   padding-left:10px;

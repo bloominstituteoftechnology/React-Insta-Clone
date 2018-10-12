@@ -21,6 +21,8 @@ const Container = styled.div`
   /border:1px dotted darkgray;*/
 `;
 
+
+
 class PostPage extends Component {
   constructor(){
     super();
