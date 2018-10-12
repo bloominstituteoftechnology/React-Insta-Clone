@@ -29,7 +29,7 @@ class CommentSection extends React.Component {
       return {
         comments: prevState.comments.concat({
           text: this.state.dummy,
-          username: "Blah"
+          username: localStorage.getItem('username')
         }),
         dummy: ""
       };
