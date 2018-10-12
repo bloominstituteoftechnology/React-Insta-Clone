@@ -1,0 +1,25 @@
+.search-bar{
+    width:100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.search{
+    height: 35px;
+    border-radius: 5px;
+    margin-left: 20%;
+    width: 250px;
+    text-align: center;
+    border: 1px solid grey;
+    box-shadow: 1px 1px grey inset;
+    background: ghostwhite;
+}
+.logo{
+    display: flex;
+    font-size: 20px;
+    font-family:cursive;
+}
+.icons{
+    display: flex;
+}

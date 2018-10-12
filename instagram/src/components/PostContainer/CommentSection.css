@@ -1,0 +1,36 @@
+.comments{
+    width:100%;
+}
+.user{
+   
+    margin-right: .5%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.comment{
+    margin-bottom: 8px;
+}
+.add-comment{
+    display: flex;
+    border-top: .5px solid lightgrey;
+    margin-right: 2%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.comment-input{
+    width: 95%;
+    margin-left: -.5%;
+    border: none;
+    font-size: 16px;
+    padding-top: 5px;
+    margin-top: 18px;
+    margin-bottom: 5px;
+    padding-left: 3%;
+    
+    
+}
+.dots{
+    margin-right: 5%;
+    font-size: 20px;
+    font-weight: bold;
+}
