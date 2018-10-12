@@ -9,23 +9,25 @@ class Login extends React.Component {
         }
     }
     userinputHandler = (event) => {
-        const value = event.target.value;
+        event.preventDefault()
         this.setState({
             username: event.target.value,
         })
     }
-    pwinputHandler = (event) => {
-        const value = event.target.value;
-        this.setState({
-           password: event.target.value,
-        })
+    LoginHandler = (event) => {
+        event.preventDefault()
+        const user = this.state.username;
+        localStorage.setItem('username',user);
+        window.location.reload();
     }
+    
     render(){
         return(
+            
             <form>
-            <input placeholder='username' onChange={this.userinputHandler} value={this.state.username}>  </input>
-            <input value={this.state.password} onChange={this.pwinputHandler}></input>
-            <button>Login</button>
+            <input placeholder='username' name='username' value={this.state.username} onChange={this.userinputHandler} value={this.state.username}/>
+            <input placeholder='password' type='password'/>
+            <button onClick={this.LoginHandler}>Login</button>
             </form>
         )
     }

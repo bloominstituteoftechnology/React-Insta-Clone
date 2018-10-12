@@ -16,13 +16,12 @@ class App extends Component {
     return (
       <div className="App">
       <PostsPage/>
-      <Authenticate/>
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
   
 
 
