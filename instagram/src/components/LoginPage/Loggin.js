@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-const LoginContainer = styled.div``
+const LoginContainer = styled.div`
+    background-color: red;
+    text-align: center;
+    width: 100%;
+    height: 300px;
+`
+
+const Welcome = styled.div`
+    margin-top: 40px;
+    padding-top: 40px;
+    font-size: 2rem;
+`
 
 class Login extends Component {
     constructor(props) {
@@ -25,8 +36,8 @@ class Login extends Component {
 
         render() {
             return (
-                <div>
-                    <h3>Welcome to React Insta Clone</h3>
+                <LoginContainer>
+                    <Welcome>Welcome to React Insta Clone</Welcome>
                     <h4>Saftey is our third highest priority</h4>
                     <h2>Please Enter Whatever</h2>
                 {console.log(this.state.username)}
@@ -43,7 +54,7 @@ class Login extends Component {
                         onChange = {this.handleInputChange}
                     />  
                     <button onClick = {this.handleSubmit}>Log In</button>  
-                </div>
+                </LoginContainer>
             )
         }
     }
