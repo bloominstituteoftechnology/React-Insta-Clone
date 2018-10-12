@@ -7,27 +7,37 @@ const Authenticate = App =>
       super(props);
       this.state = {
         online: false,
-        constuser: "test",
-        constpass: "test123",
+        constuser: "",
+        constpass: "",
         tempuser: "",
         temppass: ""
       };
     }
 
-    loginHandler = e => {
-      e.preventDefault();
-      if (
-        this.state.constuser === this.state.tempuser &&
-        this.state.constpass === this.state.temppass
-      ) {
-        this.setState(prevState => {
-          return { online: !prevState.online };
-        });
-        alert("You are now logged in!");
-      } else {
-        alert("Incorrect username or Password");
+
+
+    componentDidMount(){
+      
+      if (!localStorage.getItem('user')
+      ) {this.setState({online: false});
+      }else {
+        this.setState({online: true});
+
       }
-    };
+    }
+    
+    loginHandler = e =>{
+      e.preventDefault();
+      const user = this.state.tempuser;
+       
+      localStorage.setItem('user', user);
+      window.location.reload();
+
+      }
+    
+
+
+
 
     userHandler = e => {
       this.setState({ tempuser: e.target.value });
