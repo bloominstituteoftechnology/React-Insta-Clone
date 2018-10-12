@@ -38,7 +38,7 @@ import SearchBarForm from './components/SearchHeader/SearchBarForm.js';
       <SearchBarForm  searchTerm={this.searchTerm}
         searchPosts={this.searchPostsHandler}></SearchBarForm>
         <SearchHeader/>
-        <PostStream filteredPosts={this.state.filteredposts}></PostStream>
+        <PostStream filteredPosts={this.state.filteredPosts}></PostStream>
        
       </div>
     );
