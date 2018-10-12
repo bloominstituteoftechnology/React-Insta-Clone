@@ -1,5 +1,4 @@
 import React from 'react';
-//import "../src/index.css";
 import dummyData from "../src/dummy-data";
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './Authentication/Authenticate';
@@ -18,26 +17,26 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-   
+
       this.setState({ posts: dummyData });
- 
+
   }
 
   increment = (e) => {
-    this.setState( prevState => ({ 
+    this.setState( prevState => ({
       likes: prevState.likes + 1,
     })
     )
   }
 
- 
+
 
   handleInput = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
   filter = event => {
-    this.handleInput(event); 
+    this.handleInput(event);
     this.setState(prevState => {
       const filteredPosts = prevState.posts.filter(post => {
         return post.username.includes(prevState.filterTarget);
@@ -52,4 +51,3 @@ class App extends React.Component {
 }
 
 export default Authenticate(App);
-
