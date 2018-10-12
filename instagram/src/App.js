@@ -5,38 +5,32 @@ import PostStream from './components/PostStream/PostStream.js';
 import SearchHeader from './components/SearchHeader/SearchHeader.js';
 import SearchBarForm from './components/SearchHeader/SearchBarForm.js';
 
-class App extends Component {
-  constructor() {
-    super();
-  
-    this.state = {
-      posts: dummyData,
-    };
+  class App extends Component {
+    constructor() {
+      super();
+      this.state = {
+        posts: [],
+        filteredPosts: []
+      };
+    }
 
-  }
+  componentDidMount() {
+    this.setState({ posts: dummyData });
+   }
+
   searchPostsHandler = e => {
-    console.log(e.target.value)
      const postArray = []
      this.state.posts.filter(p => {
-        // console.log(this.state)
          if (p.username===e.target.value) {
-             console.log(p)
-             postArray.push(p)
- 
+            return postArray.push(p)
          }
-      console.log(postArray)
-        return postArray;
+        return this.setState({ filteredPosts: postArray});
          });
-        // console.log(posts) 
-         this.setState({ filteredPosts: postArray});
-    
        };
- // componentDidMount() {
-  // this.setState({ posts: dummyData });
-//}
+
 
   render() {
-    
+    console.log(this.state.filteredPosts)
     return (
       
       <div className="App">

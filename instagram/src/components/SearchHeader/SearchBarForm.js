@@ -6,7 +6,7 @@ const SearchBarForm= props => {
     <div>
      
       <form id="style"> 
-          <input type="text" placeholder="Search" onKeyDown={props.searchPosts}/>
+          <input type="text" placeholder="Search" onChange={props.searchPosts}/>
       </form>
     </div>
   );
