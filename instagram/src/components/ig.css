@@ -95,6 +95,17 @@ table {
     width:100%;
 }
 
+.commenting {
+    display:flex;
+    flex-direction:column;
+    width:80%;
+    margin:auto;
+}
+
+.commenting input {
+    margin:5px;
+}
+
 /*Comment*/
 .comments {
     text-align: left;

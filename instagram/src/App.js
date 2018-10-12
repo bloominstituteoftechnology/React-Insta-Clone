@@ -40,7 +40,7 @@ class App extends Component {
 
             <div className="ig_posts">
             {/* map through dummydata, create new PostContainer for each object. */}
-            {this.state.igPosts.map(posts => <PostContainer postObject={posts}/>)}
+            {this.state.igPosts.map(posts => <PostContainer postObjectArray={posts}/>)}
             </div>
         </div>
       </div>
