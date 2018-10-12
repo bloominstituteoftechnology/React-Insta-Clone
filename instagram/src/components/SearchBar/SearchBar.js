@@ -1,7 +1,9 @@
 import React from 'react';
 import './SearchBar.css';
 
-const SearchBar = () => {
+class SearchBar extends React.Component {
+    
+    render() {
     return (
         <div className='searchContainer'>
             <div className="insta">
@@ -9,7 +11,11 @@ const SearchBar = () => {
                 <p className="logo-text">Instagram</p>
             </div>
             <div className="search">
-                <input type='search' placeholder= 'Search'/>
+                <input 
+                    type='search' 
+                    placeholder='Search'
+                    onChange={this.props.search} 
+                    />
             </div>
             <div className="icons">
                 <img className="icon" src='https://image.flaticon.com/icons/svg/77/77521.svg' alt='explore'/>
@@ -18,6 +24,7 @@ const SearchBar = () => {
             </div>
         </div>
     )
+}
 }
 
 export default SearchBar;

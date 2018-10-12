@@ -54,6 +54,7 @@ class CommentSection extends React.Component {
                     onChange={this.onChange}
                     onKeyDown={(event) => {
                         if (event.keyCode === 13) {
+                            event.preventDefault();
                             this.addComment()
                         }
                     }} 
