@@ -1,0 +1,50 @@
+.login-page {
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background: #f8f6f6;
+    padding-bottom: 40px;
+  }
+  
+  .login-page h1 {
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 60px;
+    margin-bottom: 0;
+  }
+  
+  .login-page p {
+    margin-top: 0;
+  }
+  
+  .login-form {
+    margin: 50px auto 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form input,
+  button {
+    padding: 10px 0;
+    margin: 10px auto;
+    border-radius: 3px;
+    background: white;
+    border: 2px solid grey;
+  }
+  
+  .login-form input {
+    text-indent: 5%;
+    width: 70%;
+  }
+  
+  .login-form button {
+    width: 30%;
+    border-color: black;
+    background: #4395ef;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
