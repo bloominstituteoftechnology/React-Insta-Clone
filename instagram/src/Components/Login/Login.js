@@ -18,8 +18,15 @@ class Login extends React.Component{
 
     handleLoginSubmit = event => {
         const user = this.state.username; 
-        localStorage.setItem('user', user); 
-        window.location.reload(); 
+        if(this.state.username === ""){
+            alert("Please Enter Your Username"); 
+        }
+         else if(this.state.password === '') {
+            alert("Please Enter Your Password"); 
+        } else {
+            localStorage.setItem('user', user); 
+            window.location.reload(); 
+        } 
     }
 
   render() {
