@@ -16,7 +16,7 @@ const Authenticate = App => {
 		}
 
 		render() {
-			return this.state.loggedIn === false ? <Login /> : <App />;
+			return this.state.loggedIn === false ? <Login /> : <App loginState={this.state.loggedIn} />;
 		}
 	};
 };

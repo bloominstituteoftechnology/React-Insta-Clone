@@ -4,6 +4,7 @@
   margin-top:10px;
   font-family: 'Grand Hotel', cursive;
   display:flex;
+  justify-content: space-evenly;
   align-items: center;
   width:100%;
 }
@@ -40,6 +41,10 @@ height:30px;
 justify-content: space-around;
 margin-left:175px;
 align-items: center;
+}
+
+.logout{
+  justify-self: flex-end;
 }
 
 

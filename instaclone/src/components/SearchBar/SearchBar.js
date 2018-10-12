@@ -3,19 +3,32 @@ import './SearchBar.css';
 
 class SearchBar extends Component {
 	render() {
-		return <div className="container">
-				<img id="instagram" src={require('./images/instagram.png')} alt="instagram" />
+		return (
+			<div className="container">
+				<img
+					id="instagram"
+					src={require('./images/instagram.png')}
+					alt="instagram"
+				/>
 				<h2>Instagram</h2>
-      <form onSubmit={this.props.searchHandler}>
-					<input  placeholder='search' onChange={this.props.searchInput} type="text" className="search" />
+				<form onSubmit={this.props.searchHandler}>
+					<input
+						placeholder="search"
+						onChange={this.props.searchInput}
+						type="text"
+						className="search"
+					/>
 				</form>
+				
 
-				<div className="icons">
+        <div className="icons">
+          <button onClick={()=> {localStorage.clear(); window.location.reload()}}className="logout">Logout</button>
 					<i className="far fa-compass" />
 					<i className="far fa-heart" />
 					<i className="far fa-user" />
 				</div>
-			</div>;
+			</div>
+		);
 	}
 }
 

@@ -7,7 +7,7 @@ class PostsPage extends Component {
       return <h1>"Loading App Data..."</h1>;
     }
     return <div className="appContainer">
-				<PostContainer appData={this.props.appData} searchInput={this.props.searchInput} searchHandler={this.props.searchHandler} />
+				<PostContainer appData={this.props.appData} searchInput={this.props.searchInput} searchHandler={this.props.searchHandler} loginState={this.props.loginState} />
 			</div>;
 	}
 }

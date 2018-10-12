@@ -37,7 +37,7 @@ class Login extends Component {
 						name="passInput"
 						value={this.state.passInput}
 					/>
-					<button onClic={this.submitHandler}>Login</button>
+					<button onClick={this.submitHandler}>Login</button>
 				</form>
 			</div>
 		);

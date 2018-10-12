@@ -8,6 +8,7 @@ class PostContainer extends Component {
 		return (
 			<div>
         <SearchBar 
+          loginState={this.props.loginState}
           searchInput={this.props.searchInput}
           searchHandler={this.props.searchHandler}
         />
