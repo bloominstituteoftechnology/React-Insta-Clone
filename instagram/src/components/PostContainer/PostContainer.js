@@ -6,15 +6,23 @@ class PostContainer extends Component{
     constructor(props){
         super(props);
         this.state={
-            likes: this.props.post.likes
-        };
+            likes: this.props.post.likes,
+            clicked: false
+        }
     }
 
     likesHandler = () =>{
-        this.setState=(prevState) =>{
-            likes: prevState + 1
-        };
-        console.log(this.state.likes)
+        if(this.state.clicked){
+            this.setState({
+                likes:this.state.likes -1,
+                clicked: false
+            });
+        }else{
+            this.setState({
+                likes: this.state.likes + 1,
+                clicked: true
+            }); 
+        }
     }
 
     render(){
