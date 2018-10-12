@@ -3,6 +3,7 @@ import "./CommentSection.css";
 import { Heart, Bookmark, Message, Share, More } from "../../assets/assets";
 import PropTypes from "prop-types";
 import moment from "moment";
+import { CommentTextDiv, AddCommentDiv, CommentsDiv } from "../styleComponents";
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -99,9 +100,9 @@ class CommentSection extends React.Component {
             bookmarkHandler={this.bookmarkHandler}
           />
         </div>
-        <div className="comment-text">
+        <CommentTextDiv>
           <h5>{this.state.likes} likes</h5>
-          <div className="comments">
+          <CommentsDiv>
             {this.state.comments.map((comment, i) => (
               <div className="comment" key={i}>
                 <p>
@@ -116,9 +117,9 @@ class CommentSection extends React.Component {
                 "MMMM Do YYYY, h:mm:ss a"
               ).fromNow()}
             </div>
-          </div>
-        </div>
-        <div className="add-comment">
+          </CommentsDiv>
+        </CommentTextDiv>
+        <AddCommentDiv>
           <form className="form-holder" onSubmit={this.addComment}>
             <input
               type="text"
@@ -129,7 +130,7 @@ class CommentSection extends React.Component {
             />
           </form>
           <More />
-        </div>
+        </AddCommentDiv>
       </div>
     );
   }

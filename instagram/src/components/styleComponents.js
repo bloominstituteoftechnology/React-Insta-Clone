@@ -36,6 +36,7 @@ export const PostContDiv = styled.div`
   flex-direction: column;
   padding-top: 77px;
 `;
+
 export const FullPageCover = styled.div`
   position: fixed;
   width: 100vw;
@@ -47,3 +48,21 @@ export const FullPageCover = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const CommentTextDiv = styled.div `
+    margin: 0 16px;
+    font-size: 15px;
+    h5{
+    font-size: 15px;
+}
+`
+
+export const AddCommentDiv = styled.div `
+    display: flex;
+    justify-content: space-between;
+`
+
+export const CommentsDiv = styled.div `
+  padding: 5px 0;
+    border-bottom: 1px solid #DBDBDB;
+`
