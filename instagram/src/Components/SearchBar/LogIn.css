@@ -1,0 +1,21 @@
+.main-login {
+    display:flex;
+    flex-direction: column;
+    padding: 50px;
+    align-items: center;
+    background-color:skyblue;
+    border: 1px solid black;
+
+}
+
+.flex {
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+}
+
+h2 {
+    color:black;
+}
+
