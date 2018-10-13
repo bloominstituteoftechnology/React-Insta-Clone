@@ -1,9 +1,15 @@
 import React from 'react';
 import Comments from '../CommentSection/CommentSection';
+import styled from 'styled-components';
+
+const PostWrapper = styled.div `
+    display: flex;
+    flex-direction: coloumn;
+`
 
 const PostContainer = props =>{
     return(
-            <div>
+            <PostWrapper>
                 <div className="post-header">
                     <img src={props.obj.thumbnailUrl} alt="User Profile Logo" />
                     
@@ -13,7 +19,7 @@ const PostContainer = props =>{
                     <img src={props.obj.imageUrl} alt={props.obj.username} />
                 </div>
                 <Comments commentArray={props.obj.comments} likes={props.obj.likes}/>
-            </div>
+            </PostWrapper>
     )
         
 }

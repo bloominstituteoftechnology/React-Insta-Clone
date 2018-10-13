@@ -3,6 +3,11 @@ import './PostContainer.css'
 import dummyData from '../../dummy-data'
 import SearchBar from "../SearchBar/searchBar";
 import PostContainer from './PostContainer'
+import styled from 'styled-components';
+
+const PostContainerWrapper = styled.div `
+margin-top; 100px;
+`
 
 
 class PostsPage extends React.Component {
