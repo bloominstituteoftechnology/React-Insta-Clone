@@ -26,7 +26,10 @@ class PostsPage extends React.Component {
     }
 
 
-
+changeHandler =(e)=>{
+  e.preventDefault();
+  this.setState({searchInput: e.target.value}, this.searchPostforUser()); 
+}
   
     searchPostforUser=()=>{
      this.setState({searchReturn: this.state.posts.filter(item =>{return item.username.toLowerCase().includes(this.state.searchInput.toLocaleLowerCase())}), searchInput: ''})

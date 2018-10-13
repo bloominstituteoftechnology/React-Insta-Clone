@@ -26,13 +26,13 @@
     width: 10%;
    
 }
-.name-logo{
+.name-logo{ 
     width:200px;
     margin-left: 20px;
     padding:10px;
     border-left: 2px solid lightgrey;
     margin-top: 15px;
-}
+ }
 .search-bar-input{
     text-align: center;
     width:300px;

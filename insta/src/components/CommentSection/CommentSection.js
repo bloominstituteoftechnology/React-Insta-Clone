@@ -24,7 +24,7 @@ class Comments extends React.Component{
             this.setState({
                 comments: [...this.state.comments,
                     {
-                        username: "EpikIsKaos",
+                        username: localStorage.getItem('user'),
                        text: this.state.newComment
                     }
                 ]

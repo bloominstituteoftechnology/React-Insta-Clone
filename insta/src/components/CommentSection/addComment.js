@@ -1,20 +1,24 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {InputGroup, Container, Row, Input } from 'reactstrap';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import moment from 'moment'
 
 const AddComment = props =>{
       
     return(
-        <form onSubmit={props.submit} >
-        <Container>
-        <Row>
-                <InputGroup>
-                    <Input  onChange={props.change} type="text" value={props.val}/>
-                </InputGroup>
-          </Row>
-        </Container>
-        </form>
+        <>
+        <p className="time-since">{ moment().fromNow() } </p>
+             <form onSubmit={props.submit} >
+             <Container>
+                <Row>
+                    <InputGroup>
+                         <Input  onChange={props.change} type="text" value={props.val} />
+                    </InputGroup>
+                 </Row>
+                </Container>
+            </form>
+        </>
     )
 }
 AddComment.propTypes={

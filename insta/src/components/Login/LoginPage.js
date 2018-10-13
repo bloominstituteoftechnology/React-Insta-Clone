@@ -1,7 +1,29 @@
 import React from 'react';
 import './Login.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import styled from 'styled-components';
 
+const LoginContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:95%
+
+`
+const LoginHeader = styled.div`
+    margin:0 auto;
+    >h1{
+        text-align:center;
+        font-size:1.8rem;
+        margin-bottom: 80px;
+    }
+` 
+const LoginImg = styled.img`
+    width: 70%;
+    height: 150px;
+    margin-left:10%;
+`
 
 class Login extends React.Component{
     constructor(props) {
@@ -21,13 +43,13 @@ class Login extends React.Component{
     }
     render(){
     return(
-        <div>
-            <div className="login-header-img">
-               <img src="http://allvectorlogo.com/img/2017/10/instagram-logo.png" className="login-logo" alt="insta Logo" />
+        <LoginContainer>
+            <LoginHeader >
+               <LoginImg src="http://allvectorlogo.com/img/2017/10/instagram-logo.png"  alt="insta Logo" />
                <h1>Login to see photos and videos <br /> from your friends</h1>
-            </div>
-            <div>
-            <Form inline>
+            </LoginHeader>
+            <div >
+            <Form >
                 <FormGroup>
                   <Input type="text" name="username" id="Username" placeholder="Username" value={this.state.username} onChange={this.handleInputChange}/>
                 </FormGroup>
@@ -42,7 +64,7 @@ class Login extends React.Component{
             <div>
                 <p>Don't have an account sign-up <span><a href="#">here</a></span></p>
             </div>
-            </div>
+            </LoginContainer>
     )}
 }
 export default Login;
