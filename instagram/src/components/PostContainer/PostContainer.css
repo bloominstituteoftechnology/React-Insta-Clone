@@ -60,15 +60,3 @@
 .post-comments {
     margin: 10px 15px;
 }
-
-.post-timestamp {
-    margin: 0 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #999999;
-}
-
-.post-comment-form {
-    margin: 10px 15px;
-    border-top: 1px solid #eeeeee;
-}

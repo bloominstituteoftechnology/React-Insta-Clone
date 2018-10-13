@@ -1,8 +1,40 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import './CommentSection.css';
+import styled from 'styled-components';
 
 import CommentForm from '../CommentSection/CommentForm';
+
+
+const StyledComments = styled.div`
+    margin: 10px 15px;
+`
+
+const StyledComment = styled.div`
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+`
+
+const StyledCommentText = styled.p`
+    line-height: 2rem;
+`
+
+const StyledCommentUsername = styled.span`
+    font-weight: bold;
+    letter-spacing: 0.02rem;
+`
+
+const StyledPostTimestamp = styled.div`
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #999999;
+`
+
+const StyledPostCommentForm = styled.div`
+    margin: 10px 15px;
+    border-top: 1px solid #eeeeee;
+`
+
 
 class CommentSection extends React.Component {
 
@@ -15,19 +47,22 @@ class CommentSection extends React.Component {
     render() {
         return (
             <>
-                <div className="post-comments">
+                <StyledComments>
                     {this.state.comments.map(comment => (
-                        <div className="comment">
-                            <p><span className="comment-username">{comment.username}</span> {comment.text}</p>
-                        </div>
+                        <StyledComment>
+                            <StyledCommentText>
+                                <StyledCommentUsername>{comment.username}</StyledCommentUsername> 
+                                {comment.text}
+                            </StyledCommentText>
+                        </StyledComment>
                     ))}
-                </div>
-                <div className="post-timestamp">
-                    <p>{this.state.timestamp}</p>
-                </div>
-                <div className="post-comment-form">
+                </StyledComments>
+                <StyledPostTimestamp>
+                    {this.state.timestamp}
+                </StyledPostTimestamp>
+                <StyledPostCommentForm>
                     <CommentForm postKey={this.state.postKey} addNewComment={this.props.addNewComment} />
-                </div>
+                </StyledPostCommentForm>
             </>
         )
     }
