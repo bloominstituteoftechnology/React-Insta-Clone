@@ -83,3 +83,41 @@ import styled from 'styled-components';
     }
 
  `;
+
+  /********************************************************
+ * CommentSection Styling
+ ************************************************/
+
+export const CSDiv = styled.div`
+
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+
+        .timestamp {
+            font-size: 13px;
+            opacity: .5;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+`;
+
+export const CommentInput = styled.input`
+    width: 90%;
+    height: 30px;
+    margin-left: .5%;
+    border: 1px solid #E6E6E6;
+    outline-color: inherit;
+    padding: 1px;
+`;
+
+export const CommentButton = styled.button`
+    width: 6%;
+    height: 30px;
+    margin-right: .5%;
+    margin-left: .5%;
+
+    /* Example of using props */
+    /* ${props => props.type===`success` ? `background: #2d2d2d;` : null} */
+`;

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Comment from '../Comment/Comment.js'
 import './CommentSection.css'
 import moment from 'moment';
+import {CSDiv, CommentInput, CommentButton} from '../styled-components';
 
 //Receives an individual post's comments array from PostContainer
 class CommentSection extends Component{
@@ -61,16 +62,17 @@ class CommentSection extends Component{
             )
         })
         return (
-            <div className="comments">
+            <CSDiv>
+
                 {commentList}
                 <p className="timestamp">{moment().startOf('day').fromNow()}</p>
                 <div className="input-comment">
                     <form onSubmit={this.handleSubmit}>
-                        <input onChange={this.handleChange} className="comment-input" type="text" placeholder="Add a comment..." value={this.state.newComment}/>
-                        <button>...</button>
+                        <CommentInput onChange={this.handleChange} className="comment-input" type="text" placeholder="Add a comment..." value={this.state.newComment}/>
+                        <CommentButton type="success">...</CommentButton>
                     </form>
                 </div>
-            </div>
+            </CSDiv>
         )
     }
 }
