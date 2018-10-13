@@ -1,0 +1,40 @@
+.Post {
+   border-radius: 3px;
+   border: 1px solid grey;
+   background-color: #fff;
+   margin-bottom: 70px;
+   margin-left : 20%;
+   margin-right: 20%;
+   margin-top: 2%;
+ }
+ .Post-user {
+   display: flex;
+   padding: 16px;
+   align-items: center;
+ }
+ .Post-user-avatar {
+   width: 30px;
+   height: 30px;
+ }
+ .Post-user-avatar img {
+ height: 100%;
+   border-radius: 50%;
+ }
+ .Post-user-nickname {
+   margin-left: 12px;
+   font-weight: bold;
+ }
+
+ .Post-image img {
+   width: 100%;
+ }
+ .Post-caption {
+   padding: 16px 15px;
+ }
+ .Post-caption strong {
+   font-family: 'PT Sans', sans-serif;
+   font-weight: bold;
+ }
+ .Post-caption .far {
+   padding: 0px 0px;
+ }

@@ -1,0 +1,72 @@
+
+i.Nav {
+      background-color: #fff;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+      height: 77px;
+    }
+    .Nav-menus {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      height: 77px;
+      width: 70%;
+      margin: 0 auto;
+      padding: 26px 40px;
+    }
+    .Nav-brand-logo {
+      display: block;
+      background-position: -176px 0px;
+      background-image: url(../../sprite.png);
+      background-size: 405px 379px;
+      background-repeat: no-repeat;
+      height: 35px;
+      width: 176px;
+  text-indent: -1000%
+
+}
+form{
+  width: 50%;
+}
+
+input {
+
+
+height: 35px;
+margin-left: 0px;
+padding-right: 40px;
+margin-right: 190px;
+text-align: center;
+}
+
+/* enable absolute positioning */
+.inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .fas {
+  position: absolute;
+  padding: 11px;
+  pointer-events: none;
+}
+
+/* align glyph */
+.left-addon .fas  {
+  left:  60px;
+}
+
+
+/* add padding  */
+.left-addon input  {
+  padding-left:  40px;
+}
+
+.far {
+  padding-left: 15px;
+  margin-left: 10px;
+  height:10px;
+}
