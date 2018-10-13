@@ -6,6 +6,7 @@ export const CommentContainer = styled.div`
 export const CommentContainerIcon = styled.i`
   margin-right: 10px;
   font-size: 24px;
+  cursor: pointer;
 `;
 export const CommentsDiv = styled.div`
   margin-bottom: 7px;

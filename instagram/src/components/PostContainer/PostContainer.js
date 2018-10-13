@@ -1,29 +1,21 @@
 import React from "react";
 import "./Post.css";
 import Comment from "../CommentSection/Comment";
-import {
-  PostWrapper,
-  PostContainerStyled,
-  PostHeader,
-  PostHeaderH2,
-  PostBody,
-  PostBodyImg,
-  PostHeaderImg
-} from "./PostStyle";
+import * as styled from "./PostStyle";
 const PostContainer = props => {
   const { post } = props;
   return (
     // <PostWrapper>
-    <PostContainerStyled key={post.timestamp}>
-      <PostHeader>
-        <PostHeaderImg src={post.thumbnailUrl} alt="test icon" />
-        <PostHeaderH2>{post.username}</PostHeaderH2>
-      </PostHeader>
-      <PostBody>
-        <PostBodyImg src={post.imageUrl} alt="post body" />
-      </PostBody>
+    <styled.PostContainerStyled key={post.timestamp}>
+      <styled.PostHeader>
+        <styled.PostHeaderImg src={post.thumbnailUrl} alt="test icon" />
+        <styled.PostHeaderH2>{post.username}</styled.PostHeaderH2>
+      </styled.PostHeader>
+      <styled.PostBody>
+        <styled.PostBodyImg src={post.imageUrl} alt="post body" />
+      </styled.PostBody>
       <Comment comments={post.comments} likes={post.likes} />
-    </PostContainerStyled>
+    </styled.PostContainerStyled>
     // </PostWrapper>
   );
 };
