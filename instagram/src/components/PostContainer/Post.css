@@ -5,6 +5,14 @@
 
   /* align-items: center; */
 }
+@media (max-width: 980px) {
+  .post-wrapper {
+    justify-content: center;
+  }
+  .post-map-container {
+    width: 95%;
+  }
+}
 
 .post-container {
   margin: 40px 0;

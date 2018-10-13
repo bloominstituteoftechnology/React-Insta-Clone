@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const PostWrapper = styled.div`
-  max-width: 1010px;
-  margin: auto;
-  display: flex;
-  align-items: baseline;
-`;
+// export const PostWrapper = styled.div`
+//   max-width: 1010px;
+//   margin: auto;
+//   display: flex;
+//   align-items: baseline;
+// `;
 
 export const PostContainerStyled = styled.div`
   margin: 40px 0;
@@ -31,6 +31,9 @@ export const PostBody = styled.div`
 `;
 export const PostBodyImg = styled.img`
   max-width: 614px;
+  @media (max-width: 980px) {
+    width: 100%;
+  }
 `;
 
 export const PostHeaderImg = styled.img`

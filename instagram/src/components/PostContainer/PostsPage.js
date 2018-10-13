@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import dummyData from "../../dummy-data";
 import PostContainer from "./PostContainer";
 import StoriesContainer from "../Stories.js/StoriesContainer";
+import "./Post.css";
 
 class PostsPage extends Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class PostsPage extends Component {
     );
     return (
       <div className="post-wrapper">
-        <div>
+        <div className="post-map-container">
           {filteredPosts.map((post, i) => (
             <PostContainer key={post.timestamp} post={post} />
           ))}
