@@ -1,12 +1,25 @@
 import React from "react";
-import "./CommentSection.css";
+import styled from "styled-components";
+
+const CommentContainer = styled.div`
+  display: flex;
+  margin-left: 10px;
+  margin-bottom: 2px;
+  margin-top: 0px;
+  padding: 0px;
+`;
+
+const User = styled.p`
+  font-weight: bold;
+  margin-right: 5px;
+`;
 
 const Comment = props => {
   return (
-    <div className="comment">
-      <p className="user">{props.commentUser}</p>
-      <p className="comment-text">{props.comment}</p>
-    </div>
+    <CommentContainer>
+      <User>{props.commentUser}</User>
+      <p>{props.comment}</p>
+    </CommentContainer>
   );
 };
 

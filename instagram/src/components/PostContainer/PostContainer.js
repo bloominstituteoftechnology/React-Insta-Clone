@@ -1,7 +1,15 @@
 import React, { Component } from "react";
-import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection.js";
 import Post from "../Post/Post.js";
+import styled from "styled-components";
+
+const Card = styled.div`
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid whitesmoke;
+  margin-bottom: 40px;
+  border-radius: 3px;
+`;
 
 class PostContainer extends Component {
   constructor(props) {
@@ -33,7 +41,7 @@ class PostContainer extends Component {
   };
   render() {
     return (
-      <div className="card">
+      <Card>
         <Post
           thumbnail={this.state.thumbnailUrl}
           username={this.state.username}
@@ -43,7 +51,7 @@ class PostContainer extends Component {
           commentClickHandler={this.commentClickHandler}
         />
         <CommentSection comments={this.props.comments} time={this.props.time} />
-      </div>
+      </Card>
     );
   }
 }

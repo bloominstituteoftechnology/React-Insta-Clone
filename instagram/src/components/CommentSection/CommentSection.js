@@ -1,9 +1,23 @@
 import React, { Component } from "react";
-import "./CommentSection.css";
 import Comment from "./Comment.js";
 import PropTypes from "prop-types";
 import moment from "moment";
+import styled from "styled-components";
 
+const Time = styled.div`
+  margin-left: 10px;
+  color: silver;
+`;
+const AddComment = styled.input`
+  padding: 10px 0px;
+  border: none;
+  border-top: 1px solid silver;
+  color: silver;
+  margin-top: 10px;
+  width: 95%;
+  font-size: 16px;
+  margin-left: 10px;
+`;
 class CommentSection extends Component {
   constructor(props) {
     super();
@@ -51,17 +65,17 @@ class CommentSection extends Component {
               comment={comment.text}
             />
           );
-        })}
-        <div className="time">{moment(this.props.time).fromNow()}</div>
-        <input
-          type="text"
+        })}{" "}
+        <Time> {moment(this.props.time).fromNow()} </Time>{" "}
+        <AddComment
           className="add-comment"
+          type="text"
           defaultValue="Add a comment..."
           onChange={this.changeHandler}
           onFocus={this.onFocus}
           onKeyDown={this.submitHandler}
           onBlur={this.onBlur}
-        />
+        />{" "}
       </>
     );
   }
