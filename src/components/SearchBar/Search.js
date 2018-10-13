@@ -1,12 +1,19 @@
 import React from 'react';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import styled from 'styled-components';
+
+const WrappedSearch = styled.input`
+    width: 150px;
+    border: 1px solid gray;
+    background: ghostwhite;
+    text-align: center;
+`;
+
 
 const Search = (props) => {
     // Gets props:
         // searchHandler: ()
     return (
-        <input type='search' className='search' onKeyUp={props.searchHandler} placeholder='Search'/>
-        
+        <WrappedSearch type='search' onKeyUp={props.searchHandler} placeholder='Search'/>        
     );
 };
 

@@ -7,6 +7,7 @@ import { faUser, faCompass, faHeart, faComment } from "@fortawesome/free-regular
 import { faSearch, faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import dummyData from '../../dummy-data';
 
+
 library.add(faUser, faCompass, faHeart, faInstagram, faSearch, faComment, faEllipsisH);
 
 class PostsPage extends Component {
