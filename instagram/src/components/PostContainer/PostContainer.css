@@ -9,6 +9,10 @@
   margin-top: 125px;
 }
 
+.post-container:last-of-type {
+  margin-bottom: 100px;
+}
+
 .thumbnail-img {
   border-radius: 100%;
   width: 30px;
@@ -37,5 +41,9 @@
 
   .post-container:nth-of-type(1) {
     margin-top: 77px;
+  }
+
+  .post-container:last-of-type {
+    margin-bottom: 0;
   }
 }
