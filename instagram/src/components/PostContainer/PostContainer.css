@@ -16,16 +16,17 @@
 }
 
 .post-image {
-    width: 100%;
+    width: 80%;
 }
 
 .post-header {
+    width: 20px;
     display: flex;
 }
 
 .post-thumb-wrapper {
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
 }
 
 .post-thumb {
@@ -35,12 +36,11 @@
 }
 
 .like-section {
-    margin: 0;
     display: flex;
 }
 
 .like-section-wrapper {
     height: 10px;
     width: 10px;
-    margin: auto;
+    padding: 10px;
 }

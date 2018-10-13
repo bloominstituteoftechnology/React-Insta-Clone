@@ -3,7 +3,6 @@ import dummyData from '././components/dummy-data';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
-import LikeSection from './components/PostContainer/LikeSection';
 
 class App extends Component {
   constructor() {
@@ -24,9 +23,8 @@ class App extends Component {
         return p;
       }
     });
-
-    this.setState({ filteredPosts: posts});
-  }
+    this.setState({ filteredPosts: posts });
+  };
 
   render() {
     return (
@@ -40,7 +38,6 @@ class App extends Component {
         : this.state.posts 
         }
         />
-        <LikeSection />
       
       </div>
     );

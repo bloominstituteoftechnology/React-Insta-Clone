@@ -47,12 +47,8 @@ const dummyData = [
       },
       {
         username: "dennis_futbol",
-        text: "It that injustice"
+        text: "Is that injustice"
       },
-      {
-        username: "dennis_futbol",
-        text: "Is"
-      }
     ]
   },
   {

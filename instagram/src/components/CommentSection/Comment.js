@@ -8,8 +8,8 @@ const Comment = props => {
         <span className='comment'>{props.comment.text}</span>{' '}
         <span className='user'>-{props.comment.username}</span>
         </div>
-    )
-}
+    );
+};
 
 Comment.PropTypes = {
     comment: PropTypes.shape({

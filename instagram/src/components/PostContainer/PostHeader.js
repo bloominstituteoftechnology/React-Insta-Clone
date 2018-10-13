@@ -14,7 +14,7 @@ const PostHeader = props => {
         </div>
         <div>{props.username}</div>
         </div>
-    )
-}
+    );
+};
 
 export default PostHeader;
