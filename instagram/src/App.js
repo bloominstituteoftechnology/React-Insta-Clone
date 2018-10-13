@@ -5,6 +5,17 @@ import dummyData from './dummy-data'
 import SearchBar from './Components/SearchBar/SearchBar'
 import PropTypes from "prop-types"
 import Authentication from './Authentication'
+import styled from 'styled-components'
+
+const Inandout = styled.button `
+font-size:1em;
+font-weight: bold;
+border-radius: 20px;
+background-color:lightcyan;
+margin:10px;
+width: 200px;
+padding:20px;
+`
 
 class App extends Component {
 
@@ -76,7 +87,7 @@ class App extends Component {
       {this.state.filtered.length>0 ?
       <PostContainer posts={this.state.filtered} submitHandler={this.submitHandler} /> :
       <PostContainer posts={this.state.posts} submitHandler={this.submitHandler}/>  }
-      <button className="login-button" onClick={this.Logout}><p>Log Out</p></button>
+      <Inandout onClick={this.Logout}><p>Log Out</p></Inandout>
       </div>
     );
   }

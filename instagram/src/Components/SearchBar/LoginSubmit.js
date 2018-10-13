@@ -1,6 +1,16 @@
 import React from 'react';
 import './LogIn.css'
+import styled from 'styled-components'
 
+const Inandout = styled.button `
+font-size:1em;
+font-weight: bold;
+border-radius: 20px;
+background-color:lightcyan;
+margin:10px;
+width: 200px;
+padding:20px;
+`
 const LoginSubmit = (props) => {
     return (
         <div className='main-login'>
@@ -19,9 +29,9 @@ const LoginSubmit = (props) => {
             </form>
         </div>
 
-        <button className='login-button' onClick={props.submitHandler}><p>Not Registered? Sign Up</p></button>
+        <Inandout className='login-button' onClick={props.submitHandler}><p>Not Registered? Sign Up</p></Inandout>
 
-        <button className='login-button' onClick={props.loginHandler}><p>Log In</p></button>
+        <Inandout className='login-button' onClick={props.loginHandler}><p>Log In</p></Inandout>
         </div>
     )
 }
