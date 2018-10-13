@@ -64,10 +64,11 @@ const PostContainer = props => {
             className="commentInput"
             name="addComment"
             type="text"
+            // value= {name}
             placeholder="Add a comment..."
-            // onChange={this.handleInputChange}
+            onChange={props.handler} //calls handleInputChange
           />
-          <input type="submit" value="Add" />
+          <input type="submit"  />
         </form>
         {/* ☞ 8856f45d-bf37-455b-8549-b7a5ef4cecf2 */}
       </div>

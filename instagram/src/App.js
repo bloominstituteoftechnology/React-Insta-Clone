@@ -52,6 +52,13 @@ class App extends Component {
    
  }
  
+
+likePost = () => {
+this.setState({ likes: this.state.likes + 1 });
+};
+
+handleInputChange = (event)=> {this.setState({[event.target.name]:event.target.value})} // creates state addComment and set the value to value in inpt form.  Sends this to new array
+
 // Add Comments
 addComment = () => {
   const username = "Jonathan";
@@ -60,10 +67,6 @@ addComment = () => {
   comments: [...this.state.comments, { username, text }],
   newCommentText: ""
   });
-};
-
-likePost = () => {
-this.setState({ likes: this.state.likes + 1 });
 };
 
 
@@ -77,7 +80,9 @@ this.setState({ likes: this.state.likes + 1 });
           {this.state.instaClonePosts.map((post, i) => {
             return (
               <PostContainer
-                {...post} // spread operator `...` passes all elements in the `post` to `PostContainer`
+              handler={this.handleInputChange}  
+              {...post} // spread operator `...` passes all elements in the `post` to `PostContainer`
+
               />
             );
           })}
