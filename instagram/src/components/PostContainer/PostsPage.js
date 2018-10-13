@@ -41,11 +41,11 @@ export default class PostPage extends React.Component {
         })
     }
     render() {
-        const renderedPosts = this.state.search ? [...this.state.displayedPosts] : [...this.state.posts]
-        return <App>
+        const arr = this.state.search ? [...this.state.displayedPosts] : [...this.state.posts]
+        return  <App>
                     <SearchBar searchInputHandler={this.searchInputHandler} value={this.state.search} />
                     <Container>
-                        {renderedPosts.map(post => <PostContainer key={post.timestamp} post={post} incrementHandler={this.incrementHandler} />)}                        
+                        {arr.map(post => <PostContainer key={post.timestamp} post={post} incrementHandler={this.incrementHandler} />)}                        
                     </Container>            
                 </App>    
     }

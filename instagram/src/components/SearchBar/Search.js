@@ -7,4 +7,4 @@ const SearchInput = styled.input`
     text-align: center;
 `
 
-export default (props) => <SearchInput placeholder="&#x1F50D; Search" onChange={props.searchInputHandler} value={props.value} />
+export default props => <SearchInput placeholder="&#x1F50D; Search" onChange={props.searchInputHandler} value={props.value} />
