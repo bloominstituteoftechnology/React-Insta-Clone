@@ -13,7 +13,13 @@ const SearchBar = props => {
           <styl.Logo src={logo} alt="Instagram logo"></styl.Logo>
         </styl.Header>
 
-        <styl.SearchInput type="text" placeholder="&#61442; Search" onChange={props.searchPosts}></styl.SearchInput>
+        <styl.SearchInput
+          type="text" placeholder="&#61442; Search"
+          name='searchInput'
+          value={props.searchInput}
+          onChange={props.searchHandler}
+          onKeyDown={props.searchPosts}>
+        </styl.SearchInput>
 
         <styl.Menu>
           <i className="far fa-compass fa-lg"></i>

@@ -8,7 +8,8 @@ class PostsPage extends Component {
     super();
     this.state = {
       posts: [],
-      filteredPosts: []
+      filteredPosts: [],
+      searchInput: ''
     };
   }
 
@@ -18,12 +19,14 @@ class PostsPage extends Component {
     })
   }
 
-  searchPosts = (event) => {
-    event.preventDefault();
+  searchHandler = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+  }
 
+  searchPosts = () => {
     let filteredPosts = this.state.posts;
     filteredPosts = filteredPosts.filter(post => {
-      return post.username.toLowerCase() === event.target.value
+      return post.username.toLowerCase().includes(this.state.searchInput) ? post : null;
     });
 
     this.setState({ filteredPosts });
@@ -32,7 +35,11 @@ class PostsPage extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar searchPosts={this.searchPosts} />
+        <SearchBar
+          searchPosts={this.searchPosts}
+          searchHandler={this.searchHandler}
+          searchInput={this.state.searchInput}
+        />
         <PostsContainer posts={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} />
       </div>
     );
