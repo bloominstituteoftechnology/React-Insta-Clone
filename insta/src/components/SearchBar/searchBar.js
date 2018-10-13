@@ -42,7 +42,7 @@ const SearchContainer = styled.div`
     left: 50%;
     transform: translate(-50%, 0);
     @media (max-wdth:550px){
-        justify-content:space-between;
+        justify-content:space-around;
     }
 `
 const ImgRight = styled.div `
@@ -50,6 +50,10 @@ const ImgRight = styled.div `
     justify-content: space-evenly;
     align-items: center;
     width: 25%;
+    @media (max-width: 550px){
+        justify-content: space-around;
+        margin-right:20px;
+    }
 `
 const ImgLeft = styled.div `
     height: 100px;
@@ -58,16 +62,17 @@ const ImgLeft = styled.div `
     justify-content: flex-start;
     align-items: center; 
     @media (max-width: 550px){
-        justify-content: space-evenly;
+        justify-content: center;
+        padding-right: 35px;
     }
 `
 const CenterContent = styled.div `
     width:30%;
     @media (max-width:550px){
-        margin-right: 24px;
+        margin-right: 35px;
     }
     >input{
-        text-align: center;
+    text-align: center;
     width:100%;
     height:30px;
     border-radius:5px;
