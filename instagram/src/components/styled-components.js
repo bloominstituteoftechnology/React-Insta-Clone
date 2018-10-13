@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 /********************************************************
- * Search Bar Styling
+ * SearchBar Styling
  ************************************************/
 
- export const Header = styled.header`
+ export const SBHeader = styled.header`
     width: 100 %;
     box-sizing: border-box;
     margin: 0;
@@ -51,4 +51,35 @@ import styled from 'styled-components';
             display: flex;
             align-items: center;
         }
+ `;
+
+
+ /********************************************************
+ * PostContainer Styling
+ ************************************************/
+
+ export const PCDiv = styled.div`
+    border-top: 1px solid #2d2d2d;
+    border-bottom: 1px solid #2d2d2d;
+    text-align: left;
+
+    .post-heading {
+        display: flex;
+        align-items: center;
+        margin: 15px auto 10px;
+        color: #2D2D2D;
+        font-size: 14px;
+        font-weight: bold;
+
+    }
+
+    .thumbnail {
+        border-radius: 50%;
+        margin: 0 10px;
+    }
+
+    .likes {
+        padding-left: 5px;
+    }
+
  `;
