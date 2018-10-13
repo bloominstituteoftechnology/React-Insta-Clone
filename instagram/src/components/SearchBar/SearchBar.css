@@ -1,42 +1,11 @@
-/* max-width set at 800px for App */
-.sb-container {
-    width: 100%;
-    box-sizing: border-box;
-    margin:0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    height: 70px;
-}
 
-.left {
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-
-}
-.left p {
-    font-size: 30px;
-    font-family: 'Damion', cursive;
-    font-family: 'Devonshire', cursive;
-}
 
 .left .fab {
     font-size: 30px;
 }
 
-.insta {
-    border-left: 1px solid #2D2D2D;
-    color: #2D2D2D;
-    margin-left: 20px;
-    padding-left: 20px;
-}
 
-.middle {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
+
 
 .middle .fa-search{
     opacity: .4;
@@ -45,17 +14,9 @@
     left: 40px;
 }
 
-.middle .input {
-    background: #FAFAFA;
-    border: 1px solid #E6E6E6;
-    height: 25px;
-    width: 210px;
-}
 
-.right {
-    display: flex;
-    align-items: center;
-}
+
+
 
 .right .far {
     margin-left: 10px;
@@ -65,8 +26,5 @@
     cursor: pointer;
 }
 
-input {
-    border: 1px solid #E6E6E6;
-    outline-color: inherit;
-}
+
 

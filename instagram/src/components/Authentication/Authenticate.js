@@ -2,7 +2,7 @@ import React from 'react';
 import Login from '../Login/Login.js'
 
 
-const Authenticate = (WrappedComponent) =>
+const Authenticate = (App) =>
 
         //return a class component
         class extends React.Component{
@@ -28,10 +28,9 @@ const Authenticate = (WrappedComponent) =>
 
             render(){
                 const renderedComponent = (this.state.loggedIn)
-                ? <><WrappedComponent /></>
+                ? <><App /></>
                 : <><Login /></>
-                // if(this.state.loggedIn){return <WrappedComponent />}
-                // return <Login />
+
 
                 return(
                     renderedComponent

@@ -19,7 +19,7 @@ class Login extends Component{
 
     handleChange = (event) =>{
         this.setState({
-            username: event.target.value
+            [event.target.name]: event.target.value
         })
     }
 
@@ -31,9 +31,9 @@ class Login extends Component{
             <div className="login-container">
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="username">Username: </label>
-                    <input type="text" id="username" onChange={this.handleChange} value={this.state.username} />
+                    <input type="text" name="username" onChange={this.handleChange} value={this.state.username} />
                     <label htmlFor="pw">Password: </label>
-                    <input type="text" id="pw" />
+                    <input type="text" name="pw" />
                     <button>Submit</button>
                 </form>
 

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './SearchBar.css';
+import {Header} from '../styled-components.js';
 
 
 class SearchBar extends Component{
@@ -16,7 +17,8 @@ class SearchBar extends Component{
     render(){
 
         return (
-            <div className="sb-container">
+            // <div className="sb-container">
+            <Header>
                 <div className="left">
                     <i className="fab fa-instagram"></i>
                     <p className="insta">Instagram</p>
@@ -30,7 +32,7 @@ class SearchBar extends Component{
                     <i className="far fa-heart"></i>
                     <i className="far fa-user"></i>
                 </div>
-            </div>
+            </Header>
         )
     }
 
