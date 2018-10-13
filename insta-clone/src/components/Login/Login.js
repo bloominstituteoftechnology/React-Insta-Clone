@@ -1,4 +1,5 @@
 import React from 'react'
+import {Button, Form, Input, FormGroup} from 'reactstrap';
 
 
 class Login extends React.Component {
@@ -10,33 +11,30 @@ class Login extends React.Component {
         } 
     }
 
-    componentDidMount(){
-        
-    }
-
     userChangeHandler = event => {
         this.setState({
             username: event.target.value,
         })
     }
 
-    pwChangeHandler = event => {
-        this.setState({
-            password: event.target.value,
-        })
-    }
-
     submitHandler = event => {
-
+        event.preventDefault();
+        const user = this.state.username;
+        localStorage.setItem('username', user);
+        window.location.reload();
     }
 
     render(){
         return(
-            <form>
-                <input placeholder="username" onChange={this.userChangeHandler} value={this.state.username}></input>
-                <input placeholder="password" value={this.state.password} onChange={this.pwChangeHandler}></input>
-                <button>Login</button>
-            </form>
+            <Form>
+                <FormGroup>
+                    <Input type="text" placeholder="username" onChange={this.userChangeHandler} value={this.state.username}></Input>
+                </FormGroup>
+                <FormGroup>
+                    <Input type="password"placeholder="password" ></Input>
+                </FormGroup>
+                <Button onClick={this.submitHandler}>Login</Button>
+            </Form>
         )
     }
 }
