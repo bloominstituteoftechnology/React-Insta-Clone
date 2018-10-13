@@ -1,6 +1,6 @@
 ## Day III
 
-### Focus (Day III)
+### Focus (Day III) 
 
 - Be able to explain and implement a React Higher Order Component to conditionally render protected content to the screen.
 

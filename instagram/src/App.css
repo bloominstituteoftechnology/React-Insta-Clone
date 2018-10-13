@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.thumbnail {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  align-self: flex-start;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.images { 
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  margin: 0 auto;
+}
+.username {
+  align-self: center;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.top {
+
+  display: flex;
+  width: 90%;
+}
+
+.comments-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.icons {
+  width: 80%;
+  margin: 10px 85px;
+  display: flex;
+}
+
+.comments {
+  margin: 10px 10px 0;
+}
+
+.likes {
+  width: 80%;
+  margin: 10px 90px;
+  display: flex;
+  font-weight: bold;
+
+}
+
+.icons-small {
+  width: 13%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+input {
+  border: none;
+  font-size: 16px;
+}
+
+.time {
+  width: 80%;
+  margin: 0 83px;
+  text-align: left;
+  margin-top: 5px;
+  padding: 10px;
+  color: darkgray;
+  font-size: 12px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid lightgray;
+}
+
+/* SearchBar CSS */
+
+.search {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  height: 75px;
+  justify-content: space-between;
+}
+
+.search-input {
+  width: 23%;
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid lightgray;
+  margin-top: 25px;
+  background: whitesmoke;
+  font-size: 14px;
+}
+
+.right-icons {
+  width: 33%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.instagram {
+font-size: 24px;
+font-family: cursive;
+font-weight: bold;
+}
+
+.search-left {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+i {
+  margin: 0 10px;
+  cursor: pointer;
+}
