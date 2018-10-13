@@ -24,7 +24,7 @@ const SearchBar = props => {
         </div>
       </div>
     </div>
-    )
-}
+    );
+};
 
 export default SearchBar;

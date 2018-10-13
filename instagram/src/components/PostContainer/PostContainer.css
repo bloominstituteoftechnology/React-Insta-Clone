@@ -1,7 +1,7 @@
 .post-container {
     height: 500px;
     width: 50%;
-    margin: auto;
+    margin: 5px auto;
 }
 
 .post-border {
@@ -12,16 +12,18 @@
 
 .post-image-wrapper {
     height: 100%;
-    width: 340px;
+    width: 100%;
 }
 
 .post-image {
-    width: 80%;
+    width: 99%;
 }
 
 .post-header {
-    width: 20px;
+    font-size: 1rem;
+    border-radius: 50%;
     display: flex;
+    margin: 9px;
 }
 
 .post-thumb-wrapper {
@@ -30,8 +32,7 @@
 }
 
 .post-thumb {
-    margin: auto;
-    height: 100%;
+    width: 2em;
     border-radius: 50%;
 }
 
@@ -41,6 +42,6 @@
 
 .like-section-wrapper {
     height: 10px;
-    width: 10px;
+    width: 20px;
     padding: 10px;
 }
