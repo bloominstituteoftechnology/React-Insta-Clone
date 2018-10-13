@@ -167,4 +167,20 @@
   .login {
     width: 95%;
   }
+
+  .cta-download {
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cta-download img {
+    height: auto;
+    width: 85%;
+    margin: 0 auto 10px;
+  }
+
+  .footer-nav {
+    margin-top: 60px;
+  }
 }

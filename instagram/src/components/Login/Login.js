@@ -46,7 +46,10 @@ class Login extends React.Component {
       <div className="login">
         <div className="login-card box">
           <img src={igTextLogo} alt="logo" />
-          <form onSubmit={() => this.props.clicked(this.state.username)}>
+          <form
+            onSubmit={() => this.props.clicked(this.state.username)}
+            netlify
+          >
             <input
               type="text"
               name="username"
