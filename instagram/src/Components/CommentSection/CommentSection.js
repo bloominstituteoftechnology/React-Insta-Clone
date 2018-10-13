@@ -1,6 +1,7 @@
 import React from 'react';
 import Comment from "./Comment";
 import './CommentSection.css';
+import moment from 'moment';
 
 class CommentSection extends React.Component {
     constructor() {
@@ -46,7 +47,7 @@ class CommentSection extends React.Component {
                         return <Comment username={comment.username} text={comment.text}/>
                     })}
                     {/* Time stamp*/}
-                    <div className="timestamp">{this.state.timestamp}</div>
+                    <div className="timestamp">{moment(this.props.timestamp, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}</div>
                     {/* Divider (border-bottom)*/}
                 </div>  
                 {/* Add Comment section*/}

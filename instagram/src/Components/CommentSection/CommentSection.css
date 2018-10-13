@@ -38,7 +38,7 @@
 
 input{
     max-width: 600px;
-    font-size: 17px;
+    font-size: 15px;
     color: gray;
     border: none;
     height: 50px;
@@ -55,4 +55,9 @@ input.break {
     margin: auto 0 ;
     font-size: 20px;
     width: 10%;
+}
+
+.comment-username{
+    font-weight:600;
+    font-size: 15px;
 }

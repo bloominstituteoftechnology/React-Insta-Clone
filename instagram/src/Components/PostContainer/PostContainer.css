@@ -1,19 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 .post-container{
     font-family: 'Roboto', sans-serif;
-    width: 100%;
+    width: 85%;
     max-width: 650px;
     margin: 0 auto 30px auto;
     display: flex;
     flex-direction: column;
-    border: 1px solid lightgray;
-    border-radius: 5px;
+    border: 1px solid whitesmoke ;
+    background-color: white;
+    border-radius: 2px;
 }
 
 .header-container{
+    font-size: 10px;
     height: 60px; 
     display: flex;
     padding-left: 3%;
+    border-bottom: 1px solid whitesmoke;
 }
 
 .user-img{
@@ -46,6 +49,7 @@
     width: 15%;
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
     margin-bottom: 0;
 }
 
@@ -53,6 +57,7 @@
     cursor: pointer;
     font-size: 25px;
     color: black;
+    font-weight: lighter;
 }
 
 .post-icons i:nth-child(1) {
@@ -69,11 +74,11 @@
 }
 
 .likes{
-    font-weight: bold;
+    font-weight: 600;
     display: flex;
     justify-content: flex-start;
     width: 20%;
-    margin: 0 0 0 0;
+    margin: 5px 0 0 0;
     font-size: 15px;
 }
 

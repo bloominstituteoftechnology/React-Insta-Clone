@@ -54,7 +54,7 @@ class PostContainer extends React.Component {
                     </div>
                     {/* Like Counter */}
                     <p className="likes">
-                        {this.state.likes} Likes
+                        {this.state.likes} likes
                     </p>
                 </div>
                 <CommentSection content={this.props.comments} timestamp={this.props.timestamp}/>

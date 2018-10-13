@@ -30,7 +30,7 @@ class SearchBar extends React.Component {
                 {/*Search bar*/}
                 <div className="search-area">
                     <form> 
-                        <input type="text" placeholder="&#x1F50D; Search" className="search-input" onChange={this.inputChangeHandler} value={this.state.value}/>
+                        <input type="text" placeholder="&#x1F50D; Search" className="search-input" onChange={this.inputChangeHandler} value={this.state.Searchvalue}/>
                     </form>
                 </div>
                 
