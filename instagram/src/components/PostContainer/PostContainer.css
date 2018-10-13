@@ -1,0 +1,29 @@
+
+
+
+
+
+
+.like-icons {
+    opacity: .6;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.like-icons, .likes {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+
+.like-icons a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.like-icons .fa-comment{
+    margin: 0 15px;
+}
+
