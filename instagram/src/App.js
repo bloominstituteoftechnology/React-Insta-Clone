@@ -15,6 +15,7 @@ class App extends Component {
     super();
     this.state = {
       instaClonePosts: [],
+      newListComment: ''
     };
   }
   
@@ -57,17 +58,31 @@ likePost = () => {
 this.setState({ likes: this.state.likes + 1 });
 };
 
-handleInputChange = (event)=> {this.setState({[event.target.name]:event.target.value})} // creates state addComment and set the value to value in inpt form.  Sends this to new array
+// handleInputChange = (event)=> {
+// {alert('hello world')}}// this test works.  Alert pops up on change to input
 
-// Add Comments
-addComment = () => {
-  const username = "Jonathan";
-  const text = this.state.newCommentText;
+handleInputChange = (event)=> {this.setState({[event.target.name]:event.target.value})
+{alert('hello world')}} // creates state addComment and set the value to value in inpt form.  Sends this to new array
+
+AddComment = (event) => {
+  event.preventDefault();
+  const commentsList = this.state.instaClonePosts;
+  commentsList.push(this.state.newListComment);
   this.setState({
-  comments: [...this.state.comments, { username, text }],
-  newCommentText: ""
+    newListComment: '',
+    comments: commentsList
   });
 };
+
+// // Add Comments
+// addComment = () => {
+//   const username = "Jonathan";
+//   const text = this.state.newCommentText;
+//   this.setState({
+//   comments: [...this.state.comments, { username, text }],
+//   newCommentText: ""
+//   });
+// };
 
 
  render() {
@@ -82,7 +97,7 @@ addComment = () => {
               <PostContainer
               handler={this.handleInputChange}  
               {...post} // spread operator `...` passes all elements in the `post` to `PostContainer`
-
+// ***** Suspect that {...post} overwrites new comment with old post state
               />
             );
           })}

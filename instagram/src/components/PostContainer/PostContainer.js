@@ -62,11 +62,13 @@ const PostContainer = props => {
         <form className="AddComment">
           <input
             className="commentInput"
+            // name="newCommentList"
             name="addComment"
             type="text"
             // value= {name}
             placeholder="Add a comment..."
-            onChange={props.handler} //calls handleInputChange
+            // onChange={alert('hello world')} // submit test works
+            onChange={props.newCommentList} //calls handleInputChange
           />
           <input type="submit"  />
         </form>
