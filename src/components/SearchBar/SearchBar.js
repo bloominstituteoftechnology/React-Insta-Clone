@@ -2,7 +2,6 @@ import React from 'react';
 import Logo from './Logo';
 import Search from './Search';
 import Menu from './Menu';
-
 import styled from 'styled-components';
 
 // CSS Styled components

@@ -3,11 +3,24 @@ import PropTypes from "prop-types";
 import PostHeader from './PostHeader';
 import LikesContainer from './LikesContainer';
 import CommentSection from '../CommentSection/CommentSection';
+import styled from 'styled-components';
 import './PostContainer.css';
+
+// Styled Components
+const PostWrapper = styled.div`
+    border: 1px solid gray;
+    width: 800px;
+    margin: auto;
+    margin-bottom: 40px;
+`;
+
+const PostImgWrapper = styled.img`
+    width: 798px;
+    height: 798px;
+`;
 
 // Body of the container
 
-//const PostContainer = (props) => {
 class PostContainer extends Component {
     // Props taken in:
     // key: 0
@@ -68,15 +81,15 @@ class PostContainer extends Component {
 
     render() {
         return (
-            <div className='postContainer'>
+            <PostWrapper>
                 <PostHeader username={this.state.username} thumbnailUrl={this.state.thumbnailUrl} />
-                <img className='postContainerImg' src={this.state.imageUrl} alt='' />
+                <PostImgWrapper src={this.state.imageUrl} alt='' />
                 <LikesContainer likes={this.state.likes} postId={this.state.id} likesHandler={this.likesHandler} mergeData={this.props.mergeData} />
                 <CommentSection 
                     comments={this.state.comments} 
                     timestamp={this.state.timestamp}
                     handleComment={this.handleComment} />
-            </div>
+            </PostWrapper>
         );
     };
 };

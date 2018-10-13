@@ -1,43 +1,9 @@
 /* PostContainer CSS Styles */
 
-.postContainer {
-    border: 1px solid gray;
-    width: 800px;
-    margin: auto;
-    margin-bottom: 40px;
-}
 
-.postContainerImg {
-    width: 800px;
-    height: 800px;
-}
 
-/* PostContainer Header */
-.postHeader {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 10px;
-}
 
-.postHeaderImg {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-}
 
-.thumbnail {
-    width: 40px;
-    height: 40px;
-    border-radius: 25px;
-}
-
-.postHeaderName {
-    font-weight: bold;
-}
 
 /* Likes Container */
 .likesContainer {
