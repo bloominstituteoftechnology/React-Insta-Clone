@@ -85,11 +85,12 @@
     display: none;
     position: fixed;
 
-    top: 175px;
+    top: 50%;
     font-size: 24px;
-    left: auto;
-    right: auto;
-   /*  margin-left: 140px; */
+    /* left: auto;
+    right: auto; */
+    margin-left: 6%; 
+    margin-right: 50%;
     line-height: 40px;
     width: 300px;
     height: auto;
