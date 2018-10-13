@@ -105,3 +105,22 @@
 #sign-up-btn {
   cursor: pointer;
 }
+.get-the-app {
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .log-in-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .log-in-form-container {
+    order: -1;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+  }
+  .log-in-phone-container {
+    width: initial;
+  }
+}
