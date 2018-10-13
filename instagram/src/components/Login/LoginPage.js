@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./LoginPage.css";
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 class LoginPage extends Component {
@@ -24,41 +25,25 @@ class LoginPage extends Component {
     window.location.reload();
   };
 
-
   render() {
     return (
+
       <div className="login">
-        <form
-          className="loginForm"
-          onSubmit={this.handleSubmit}>
-          <h3 className="title">Insta-React Clone</h3>
-          <input
-            className="username"
-            type="text"
-            name='username'
-            placeholder="username"
-            value={this.state.username}
-            onChange={this.handleInputChange} />
+        <h3 className="title">Insta-React Clone</h3>
 
-
-          <input
-            className="password"
-            type="password"
-            name='password'
-            placeholder="password"
-            value={this.state.password}
-            onChange={this.handleInputChange} />
-
-          <input
-            className="submitBtn"
-            type="button"
-            value="Log In"
-            onClick={this.handleLoginSubmit} />
+        <form onSubmit={this.handleSubmit}>>
+          <div className="form-group">
+            <input type="text" id="username" value={this.state.username} name='username' className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username" onChange={this.handleInputChange} />
+          </div>
+          <div className="form-group">
+            <input type="password" id="password" className="form-control" id="exampleInputPassword1" placeholder="Enter Password" onChange={this.handleInputChange} />
+          </div>
+          <button type="submit" className="btn btn-primary" id="logon" onClick={this.handleLoginSubmit}>Log In</button>
         </form>
       </div>
+
     );
   }
 }
-
 
 export default LoginPage;

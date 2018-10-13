@@ -239,7 +239,7 @@ div.button {
 
 div#commentDots {
     background-image: url("./icons/sprites.png");
-    /*  border: 1px solid blue; */
+      /* border: 1px solid blue;  */
     margin-left: auto;
     margin-right: 20px;
     width: 18px;
@@ -250,7 +250,7 @@ div#commentDots {
 a.button {
     height: 30px;
     background-image: url("./icons/sprites.png");
-    text-indent: -9999px;
+   /*  text-indent: -9999px; */
     display: inline-block;
 }
 

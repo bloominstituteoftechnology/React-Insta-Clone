@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar'
 import PostContainer from './components/PostContainer/PostContainer'
 import LoginPage from "./components/Login/LoginPage"
 import Authenticate from "./components/Authenticate/Authenticate"
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-   /*  this.getDummyData(); */
+   
   }
 
  
@@ -27,7 +27,7 @@ class App extends Component {
     return (
 
       <div className="App">
-      {/* <div><LoginPage /></div> */}
+     
     
         <div className="searchBar">{dummyData.map((chars, index) => {
   return<SearchBar key={index} char={chars.comments} />})}

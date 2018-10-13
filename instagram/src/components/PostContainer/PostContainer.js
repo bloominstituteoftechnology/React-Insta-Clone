@@ -3,6 +3,7 @@ import CommentSection from '../CommentSection/CommentSection';
 import "../../App.css";
 import PropTypes from 'prop-types';
 import dummyData from '../../dummy-data';
+/* import styled from 'styled-components'; */
 
 
 class PostContainer extends Component {
@@ -40,6 +41,7 @@ class PostContainer extends Component {
         <div className="iconContainer2">
           <div className="button" id="postIcon1" onClick={this.increment}></div>
           <div className="button" id="postIcon2" onClick={this.props.postIcon2}></div>
+         
         </div>
 
         <div className="likes">{this.state.counter} likes</div>
