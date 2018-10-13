@@ -19,7 +19,7 @@ class App extends Component {
     let posts = this.state.allPosts.filter((post) => {
         return posts.username.includes(query) || post.body.includes(query)
       });
-      console.log("testPPp",query)
+      console.log("test",query)
   }
 
   componentDidMount() {
@@ -34,7 +34,7 @@ class App extends Component {
 
       <SearchBar  searchPosts={this.searchPosts.bind(this)}/>
 
-      {this.state.myData.map((data, index) => (<PostContainer key={index} username={data.username} likes={data.likes} avatar={data.thumbnailUrl} image={data.imageUrl} caption={data.comments}/>))}
+      {this.state.myData.map((data, index) => (<PostContainer key={index} username={data.username} likes={data.likes} avatar={data.thumbnailUrl} image={data.imageUrl} caption={data.comments} time={data.timestamp}/>))}
     {/* <PostsPage /> */}
 
     </div>);

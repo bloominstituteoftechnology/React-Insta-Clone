@@ -4,7 +4,6 @@ import "./Header.css";
 class Header extends React.Component {
 
   handleSearch(event) {
-    console.log(event.target.value);
   this.props.searchPosts(event.target.value)
 
  }

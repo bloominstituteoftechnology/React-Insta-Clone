@@ -5,6 +5,7 @@ import CommentSection from '../CommentSection';
 import PropTypes from 'prop-types';
 import styled from 'styled-components'
 
+
 const Button = styled.button`
     padding: 6px 10px;
     margin: 5px;
@@ -23,13 +24,18 @@ class PostContainer extends Component {
     super(props);
     this.state = {
        likes: this.props.likes,
-       caption: this.props.caption
+       input: '',
+       comments: [],
+       user: ''
      };
+
+
+  //       let newcomms =  this.state.value.map(comm => <div> <strong>{comm.value}</strong> <p>{comm.value}</p></div>)
+  // console.log( 'comm', newcomms);
 
      this.handleChange = this.handleChange.bind(this);
 this.handleSubmit = this.handleSubmit.bind(this);
     let caption = this.props.caption;
-     console.log("test=comment" ,caption)
   }
   addsOne = () => {
     this.setState(prevState => {
@@ -38,11 +44,16 @@ this.handleSubmit = this.handleSubmit.bind(this);
   };
 
   handleChange(event) {
-     this.setState({value: event.target.caption});
+     this.setState({input: event.target});
+       console.log( 'input', this.state.input.value);
    }
   //
    handleSubmit(event) {
-     alert('A name was submitted: ' + this.state.caption);
+     const newContent = this.state.comments;
+     const addcomment = this.state.input.value;
+  newContent.push({user: "Pascale", text: addcomment})
+
+     alert('A name was submitted: ' + addcomment);
      event.preventDefault();
    }
 
@@ -51,8 +62,15 @@ this.handleSubmit = this.handleSubmit.bind(this);
   render() {
     const nickname = this.props.username;
     const avatar = this.props.avatar;
-    const image = this.props.image;
+    const image = this.props.image;;
+    const comments = this.state.comments;
     const caption = this.props.caption;
+    const time = this.props.time;
+
+    let newtext =  comments.map(text => <div> <strong>{text.user}</strong> <p>{text.text}</p></div>)
+      console.log("comments: ", newtext);
+
+
 
     return <article className="Post" ref="Post">
       <header>
@@ -74,15 +92,17 @@ this.handleSubmit = this.handleSubmit.bind(this);
           <div><i onClick={this.addsOne} class="far fa-heart fa-lg"></i>   <i class="far fa-comment fa-lg"></i></div>
         <strong> {this.state.likes} likes </strong>
 
-        <CommentSection caption={caption}/>
+        <CommentSection caption={caption} time={time}/>
+          {newtext}
+
         <form onSubmit={this.handleSubmit}>
           <label>
             Comment:
-            <input type="text" value={this.state.caption} onChange={this.handleChange} />
-            <Button  type="primary"> Comment </Button>
-          </label>
+            <input type="text" value={this.state.input.value} onChange={this.handleChange} />   <Button  type="primary"> Comment </Button>
+</label>
 
         </form>
+
       </div>
     </article>;
 
