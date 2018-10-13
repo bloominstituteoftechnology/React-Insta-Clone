@@ -3,6 +3,7 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 import dummyData from './dummy-data';
+import Authenticate from './components/Authentication/Authenticate';
 
 class App extends React.Component {
   constructor() {
@@ -32,4 +33,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
