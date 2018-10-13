@@ -21,12 +21,12 @@
   [x] Create a `LogoHeader` styled-component.div
   [x] Create a `LogoImage` styled-component.img that fills in the background of your
 
-- Re-factor your `PostContainer` component use only styled components
+[x] Re-factor your `PostContainer` component use only styled components
 
-  - Start with the `UserThumbnail` and `Username`
-  - Note that the `Username` styles could most certainly be used by your `CommentSection` component as well.
-  - To achieve this, you'll simply just build out your reusable `styled-component` inside of a `Styles/Reusables` directory. This is where you could store all of your reusable styled components and export them out of their respective files to then import them for reuse.
-    - Notice that the `Username` on top of the Post is a bit bolder than the `Username`'s found in the comment section. If there is a way to make this reusable styled component accept a prop that will distinguish it from being now is the time to figure that out.
+  [x] Start with the `UserThumbnail` and `Username`
+  [x] Note that the `Username` styles could most certainly be used by your `CommentSection` component as well.
+  [x] To achieve this, you'll simply just build out your reusable `styled-component` inside of a `Styles/Reusables` directory. This is where you could store all of your reusable styled components and export them out of their respective files to then import them for reuse.
+    [x] Notice that the `Username` on top of the Post is a bit bolder than the `Username`'s found in the comment section. If there is a way to make this reusable styled component accept a prop that will distinguish it from being now is the time to figure that out.
 
 - Now move onto the `CommmentSection` and get rid of any CSS that you don't need.
 - By now you're a pro at using `Styled-Components` and we hope you armed with the ammo necessary to choose whether or not you like using it as opposed to vanilla CSS or even a Pre-Processor. We don't want you to believe that there is never a time and place for both native CSS/Pre-processing to exist. But at least now you have a variety of weapons you can choose from to get the job done.
