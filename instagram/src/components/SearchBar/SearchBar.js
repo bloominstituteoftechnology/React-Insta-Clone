@@ -24,6 +24,7 @@ const LogoImg = styled.div`
   border-right: 1px solid black;
   padding-left: 0px;
   height: 28px;
+  padding-right: 10px;
 `;
 const InstaLogo = styled.i`
   font-size: 28px;
@@ -45,6 +46,7 @@ const Icon = styled.i`
   font-size: 24px;
   padding-right: 8px;
   padding-left: 8px;
+  cursor: pointer;
 `;
 class SearchBar extends Component {
   constructor() {
@@ -69,9 +71,9 @@ class SearchBar extends Component {
         <Logo>
           <LogoImg>
             <InstaLogo className="fab fa-instagram" />
-          </LogoImg>
-          <LogoName>Instagram</LogoName>
-        </Logo>
+          </LogoImg>{" "}
+          <LogoName> Instagram </LogoName>{" "}
+        </Logo>{" "}
         <Search
           type="search"
           defaultValue="Search"
@@ -79,7 +81,7 @@ class SearchBar extends Component {
           onBlur={this.onBlur}
           onChange={this.props.searchInputHandler}
           onKeyDown={this.props.searchHandler}
-        />
+        />{" "}
         <div>
           <Icon className="far fa-compass" />
           <Icon className="far fa-heart" />
@@ -87,8 +89,8 @@ class SearchBar extends Component {
           <Icon
             className="fas fa-sign-out-alt"
             onClick={this.props.logoutHandler}
-          />
-        </div>
+          />{" "}
+        </div>{" "}
       </SearchBarContainer>
     );
   }
