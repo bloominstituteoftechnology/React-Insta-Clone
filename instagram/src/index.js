@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/font-awesome/css/font-awesome.min.css'; 
+import React from "react";
+import ReactDOM from "react-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import instagram from "@fortawesome/fontawesome-free-brands/faInstagram";
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
