@@ -4,7 +4,7 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainter';
 import dummyData from './components/dummy-data.js';
-import PropTypes from 'prop-types';
+
 
 class App extends Component {
   constructor(props){
