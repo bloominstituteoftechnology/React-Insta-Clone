@@ -45,6 +45,10 @@ class SearchBar extends React.Component {
 		this.props.filterPosts(event.target.value);
 	};
 
+	logout = () => {
+		localStorage.removeItem('username');
+	};
+
 	render() {
 		return (
 			// Earlier Code:
@@ -74,7 +78,7 @@ class SearchBar extends React.Component {
 				</SearchBarForm>
 				<HeaderImg src='https://image.freepik.com/iconen-gratis/safari-kompas-logo-ios-7-interface-symbool_318-33584.jpg' alt='Compass Icon' />
 				<HeaderImg src='https://ubisafe.org/images/svg-heart-black-and-white-6.png' alt='Heart logo' />
-				<HeaderImg src='https://d30y9cdsu7xlg0.cloudfront.net/png/137578-200.png' alt='Person logo' />
+				<HeaderImg src='https://d30y9cdsu7xlg0.cloudfront.net/png/137578-200.png' alt='Person logo' onClick={this.logout} />
 			</Header>
 		)
 	}

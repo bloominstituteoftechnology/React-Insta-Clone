@@ -60,7 +60,7 @@ const CommentInput = styled.input`
 	outline: none;
 	height: 32px;
 	width: 90%;
-	padding-top: 20px;
+	padding-top: 10px;
 `;
 
 const OptionsButton = styled.button`
