@@ -1,8 +1,19 @@
 import React from 'react';
-import './PostContainer.css';
+import styled from 'styled-components';
 
 import PostContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
+
+const StyledPostsPage = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const StyledPosts = styled.div`
+  max-width: 600px;
+  width: 100%;
+`
 
 class PostsPage extends React.Component {
     state = {
@@ -35,9 +46,9 @@ class PostsPage extends React.Component {
     
       render() {
         return (
-          <div className="posts-page">
+          <StyledPostsPage>
             <SearchBar search={this.search} />
-            <div className="posts">
+            <StyledPosts>
               {this.state.posts.map((post, index) => (
                 <PostContainer 
                   postKey={index} 
@@ -46,8 +57,8 @@ class PostsPage extends React.Component {
                   addLike={this.addLike}
                  />
               ))}
-            </div>
-          </div>
+            </StyledPosts>
+          </StyledPostsPage>
         );
       }
 }
