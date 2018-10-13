@@ -102,5 +102,6 @@
   width: 100%;
   background: #fff;
 }
-.get-the-app {
+#sign-up-btn {
+  cursor: pointer;
 }

@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const CommentContainer = styled.div`
   padding: 5px 10px;
+  i {
+    cursor: pointer;
+  }
 `;
 export const CommentContainerIcon = styled.i`
   margin-right: 10px;
