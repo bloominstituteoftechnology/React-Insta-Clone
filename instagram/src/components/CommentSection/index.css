@@ -1,0 +1,62 @@
+/* No longer used
+
+.comment-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.0rem;
+    margin-left: 2%;
+    margin-bottom: 10px;
+}
+
+.comment-section .comment-username {
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.post-time {
+    font-size: .8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 2%;
+    color: grey;
+    margin-bottom: 15px;
+}
+
+.comment-bar {
+    margin-bottom: 30px;
+}
+
+.comment-bar form {
+    width: 100%;
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    height: 50px;
+}
+
+.comment-bar form input {
+    font-size: 1.0rem;
+    border: 0px solid;
+    margin-left: 2%;
+    border-top: 1px solid lightgrey;
+    outline: none;
+    height: 32px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 0px solid;
+    font-weight: bold;
+    padding-right: 3%;
+    font-size: 1.5rem;
+    border-top: 1px solid lightgrey;
+    outline: none;
+    cursor: pointer;
+    height: 100%;
+} */

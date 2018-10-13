@@ -1,0 +1,53 @@
+/* No longer Used after creating styled components
+
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1024px;
+    position: fixed;
+    top: 0px;
+    padding: 20px;
+    height: 50px;
+    background-color: white;
+}
+
+.search-bar-left-icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.search-bar-left-icons img {
+    height: 45px;
+    cursor: pointer;
+}
+
+.instagram-camera-logo {
+    padding-right: 25px;
+    border-right: 1px solid grey;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+input {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 8px;
+}
+
+.search-bar-right-icons {
+    display: flex;
+    align-items: flex-end;
+}
+
+.search-bar-right-icons img {
+    width: 35px;
+    height: 35px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+ */

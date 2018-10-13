@@ -1,0 +1,64 @@
+/*  Earlier styling no longer used
+
+.user-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    margin-bottom: 10px;
+}
+
+.user-info img {
+    border-radius: 50%;
+    height: 40px;
+    margin-right: 25px;
+    margin-left: 10%;
+}
+
+.user-info p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+.post-container-main-img {
+    margin-bottom: 20px;
+}
+.post-container-main-img img {
+    width: 100%;
+    max-width: 1024px;
+}
+
+.interactive-action-buttons {
+    margin-left: 2%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.interactive-action-buttons img {
+    width: 40px;
+    height: 40px;
+    margin-right: 3%;
+    cursor: pointer;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.likes {
+    font-weight: bold;
+    font-size: 1.0rem;
+    text-align: left;
+    margin-left: 2%;
+} */
+
+#username {
+    font-weight: 800;
+    color: black;
+}
