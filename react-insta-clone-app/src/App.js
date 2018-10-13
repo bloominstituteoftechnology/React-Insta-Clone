@@ -12,6 +12,7 @@ class App extends React.Component {
 
   componentDidMount() {
     this.setState({ data: dummyData });
+    console.log(this.state)
   }
 
   filterPosts = event => {
