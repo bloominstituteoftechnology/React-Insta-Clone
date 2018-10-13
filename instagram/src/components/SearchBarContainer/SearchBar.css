@@ -1,0 +1,47 @@
+
+.serach-container{
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid #3333;
+}
+
+.logo-container{
+	display: flex;
+	width: 200px;
+	margin-top: 5px;
+}
+
+.logo{
+	height: 20px;
+	width: 20px;
+	padding-right: 25px;
+	margin-left: 5px;
+	border-right: 2px solid #3333;
+}
+
+.brand{
+	height: 20px;
+	padding-left: 25px;
+}
+
+.input-container{
+	width: 200px;
+	height: 20px;
+	margin-left: 200px;
+	margin-top: -20px;
+}
+
+.social-container{
+	display: flex;
+	height: 20px;
+	width: 200px;
+	margin-left: 425px;
+	margin-top: -20px;
+}
+
+.social{
+	width: 20px;
+	height: 20px;
+	padding-right: 25px;
+}
