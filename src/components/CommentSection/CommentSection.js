@@ -1,8 +1,41 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './CommentSection.css';
+
 import moment from 'moment';
+import styled from 'styled-components';
+
+// Styled Components:
+const CommentSectWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 10px;
+`;
+const CommentWrapper = styled.div`
+    padding-bottom: 10px;
+`;
+const DateWrapper = styled.div`
+    font-size: 11px;
+    color: gray;
+`;
+const NewComment = styled.div`
+    height: 40px;
+    margin-top: 10px;
+    border-top: 1px solid gray;
+    width: 780px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+`;
+const InputWrapper = styled.input`
+    width: 730px;
+    height: 25px;
+    border: 0px solid gray;
+    margin-top: 10px;
+`;
+
 
 const CommentSection = (props) => {
     // console.log("commentsection", props);
@@ -20,22 +53,22 @@ const CommentSection = (props) => {
     let i = 0;
 
     return (
-        <div className='commentSection'>
+        <CommentSectWrapper>
             {props.comments.map( comment => {
                 return(
-                    <div className='comment' key={i++}>
+                    <CommentWrapper key={i++}>
                         <b>{comment.username}</b> {comment.text}
-                    </div>
+                    </CommentWrapper>
                 );
             }
 
             )}
-            <div className='postedAt'>{postedAt}</div>
-            <div className='newComment'>
-                <input className='commentInput' onKeyUp={props.handleComment} placeholder='Add a comment...' />
+            <DateWrapper>{postedAt}</DateWrapper>
+            <NewComment>
+                <InputWrapper onKeyUp={props.handleComment} placeholder='Add a comment...' />
                 <FontAwesomeIcon icon="ellipsis-h" />
-            </div>
-        </div>
+            </NewComment>
+        </CommentSectWrapper>
     );
 };
 
