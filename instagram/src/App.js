@@ -57,10 +57,10 @@ class App extends Component {
           filterTarget={this.state.filterTarget}
         />
         <PostContainer 
-          dummyData={ this.state.posts
-            // this.state.filteredPosts.length > 0
-            //   ? this.state.filteredPosts
-            //   : this.state.posts
+          dummyData={
+            this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.posts
           } 
           likes={this.state.likes}
           increment={this.increment}/>
