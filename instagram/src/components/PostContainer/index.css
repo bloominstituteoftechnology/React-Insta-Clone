@@ -1,3 +1,5 @@
+/*  Earlier styling no longer used
+
 .user-info {
     display: flex;
     justify-content: flex-start;
@@ -54,4 +56,9 @@
     font-size: 1.0rem;
     text-align: left;
     margin-left: 2%;
+} */
+
+#username {
+    font-weight: 800;
+    color: black;
 }

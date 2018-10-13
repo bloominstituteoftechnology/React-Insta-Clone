@@ -59,7 +59,7 @@ const SinglePost = props => {
 		<div key = {props.userData.username + props.userData.timestamp}>
 			<PostHeader>
 				<PostHeaderImg src={props.userData.thumbnailUrl} alt='user thumbnail' />
-				<Username>{props.userData.username}</Username>
+				<Username id='username'>{props.userData.username}</Username>
 			</PostHeader>
 			<PostMainImg src={props.userData.imageUrl} alt='user posted img'/>
 		</div>
