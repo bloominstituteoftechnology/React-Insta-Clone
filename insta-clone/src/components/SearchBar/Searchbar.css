@@ -1,0 +1,37 @@
+.search-bar-container {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-search-bar {
+    display:flex;
+}
+.icon {
+    color:darkgray;
+    font-size:20px;
+    margin-left:30px;
+    cursor: pointer;
+}
+
+.instacam {
+    margin-top:33px;
+    width:50px;
+    height:50px;
+    cursor: pointer;
+}
+
+.instaname {
+    margin-top:32px;
+    width:100px;
+    height:50px;
+    cursor: pointer;
+}
+.icon-container {
+    display: flex;
+}
+.line {
+    font-size: 30px;
+    transform: scale(.5, 1);
+    padding: 0 10px;
+}

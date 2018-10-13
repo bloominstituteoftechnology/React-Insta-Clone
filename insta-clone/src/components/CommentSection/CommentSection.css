@@ -1,0 +1,46 @@
+.comment-section {
+    text-align: left;  
+    width:100%;  
+}
+
+.comment{
+    transform: scaleX(-1)
+}
+
+.post-pic {
+    margin-bottom:10px;
+}
+
+.likes {
+    margin-left:30px;
+}
+.comment-text{
+    margin-left:30px;
+}
+
+.timestamp {
+    margin-left:30px;
+
+}
+
+
+.comment-input {
+    height:45px;
+    border:none;
+    margin-right:30px;
+    width:100%;
+}
+
+
+.add-comment {
+    display:flex;
+    width:100%;
+    border-top:1px solid lightgray;
+}
+
+.add-comment form {
+    width:90%;
+}
+.fas {
+    color:red;
+}
