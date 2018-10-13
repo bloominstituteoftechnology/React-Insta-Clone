@@ -18,12 +18,12 @@ class App extends Component {
   }
 
   searchPostsHandler = e => {
-    const posts = this.state.posts.filter(p => {
-      if (p.username.includes(e.target.value)) {
-        return p;
-      }
-    });
-    this.setState({ filteredPosts: posts });
+    this.setState({
+      filteredPosts: this.state.posts.filter(p => {
+       return p.username.includes(e.target.value) 
+      
+      })
+    })
   };
 
   render() {
