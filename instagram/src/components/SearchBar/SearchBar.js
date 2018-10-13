@@ -9,7 +9,7 @@ const SearchBar = props => {
             <img alt='instagram logo' src={IGLogo} className='logo' />
         </div>
         <div className='search'>
-            <input type='text' placeholder='Search' onKeyDown={props.searchPosts} />
+            <input type='text' placeholder='Search' onChange={props.searchPosts} />
             <button type="submit"><i class="fa fa-search"></i></button>
         </div>
         <div className="social-wrap">

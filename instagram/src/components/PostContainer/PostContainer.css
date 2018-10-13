@@ -16,7 +16,7 @@
 }
 
 .post-image {
-    width: 99%;
+    width: 45%;
 }
 
 .post-header {
@@ -37,11 +37,11 @@
 }
 
 .like-section {
+    width: 100%;
     display: flex;
 }
 
 .like-section-wrapper {
     height: 10px;
-    width: 20px;
     padding: 10px;
 }
