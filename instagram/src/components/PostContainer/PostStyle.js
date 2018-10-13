@@ -13,6 +13,9 @@ export const PostContainerStyled = styled.div`
   border: 1px solid lightgrey;
   background: #fff;
   margin-top: 100px;
+  @media (max-width: 980px) {
+    margin: 100px auto;
+  }
 `;
 
 export const PostHeader = styled.div`
