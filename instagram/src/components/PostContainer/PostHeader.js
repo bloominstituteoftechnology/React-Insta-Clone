@@ -8,7 +8,7 @@ const PostHeader = props => {
 
         <img
         alt='post header'
-        classNme='post-thumb'
+        className='post-thumb'
         src={props.thumbnailUrl}
         />
         </div>

@@ -5,12 +5,12 @@ import './SearchBar.css';
 const SearchBar = props => {
     return (
         <div className='search-bar-wrap'>
-        <div class='image'>
+        <div className='image'>
             <img alt='instagram logo' src={IGLogo} className='logo' />
         </div>
         <div className='search'>
             <input type='text' placeholder='Search' onChange={props.searchPosts} />
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <button type="submit"><i className="fa fa-search"></i></button>
         </div>
         <div className="social-wrap">
         <div className="social">
