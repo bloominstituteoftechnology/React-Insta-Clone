@@ -57,3 +57,32 @@
   margin: 0 10px;
   cursor: pointer;
 }
+
+.search-bar .log-out {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid lightgrey;
+  margin-top: 30px;
+  border-radius: 10px;
+  display: none;
+  animation: fadeIn 500ms;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.search-bar .log-out h3 {
+  border-bottom: 1px solid lightgray;
+  font-weight: 400;
+  opacity: 0.7;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.search-bar .log-out h3:hover {
+  opacity: 1;
+  transition: 300ms;
+}

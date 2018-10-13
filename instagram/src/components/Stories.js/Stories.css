@@ -53,3 +53,7 @@
     display: none;
   }
 }
+
+.stories-wrapper {
+  position: fixed;
+}

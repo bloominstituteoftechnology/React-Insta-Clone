@@ -60,7 +60,11 @@ class Comment extends React.Component {
     return (
       <styled.CommentContainer>
         <div className="comment-icons">
-          <i className="far fa-heart" onClick={this.handleLikes} />
+          <i
+            className={this.state.hasLiked ? "fas fa-heart" : "far fa-heart"}
+            onClick={this.handleLikes}
+            style={this.state.hasLiked ? { color: "red" } : null}
+          />
           <i className="far fa-comment" />
           <i className="far fa-share-square" />
         </div>
