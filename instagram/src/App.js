@@ -6,16 +6,7 @@ import SearchBar from './Components/SearchBar/SearchBar'
 import PropTypes from "prop-types"
 import Authentication from './Authentication'
 import styled from 'styled-components'
-
-const Inandout = styled.button `
-font-size:1em;
-font-weight: bold;
-border-radius: 20px;
-background-color:lightcyan;
-margin:10px;
-width: 200px;
-padding:20px;
-`
+import {Inandout} from './Components/SearchBar/LoginSubmit'
 
 class App extends Component {
 

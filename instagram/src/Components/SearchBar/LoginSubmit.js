@@ -2,7 +2,7 @@ import React from 'react';
 import './LogIn.css'
 import styled from 'styled-components'
 
-const Inandout = styled.button `
+export const Inandout = styled.button `
 font-size:1em;
 font-weight: bold;
 border-radius: 20px;
