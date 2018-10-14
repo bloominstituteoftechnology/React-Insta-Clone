@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Comment.css';
+import PropTypes from 'prop-types';
 
 
 const Comment=(props)=>{
@@ -13,6 +14,14 @@ const Comment=(props)=>{
         </p>
     )
 
+}
+
+Comment.propTypes={
+    commentObject: PropTypes.shape({
+        username:PropTypes.string,
+        text:PropTypes.string,
+    }
+    )
 }
 
 export default Comment;

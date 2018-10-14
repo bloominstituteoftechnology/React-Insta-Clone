@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './PostContainer.css';
-import CommentSection from '../CommentSection/CommentSection.js'
+import CommentSection from '../CommentSection/CommentSection.js';
+import Post from '../Post/Post.js'
+
 
 const PostContainer=(props)=>{
     const posts=props.posts.slice();
@@ -9,15 +11,8 @@ const PostContainer=(props)=>{
             {posts.map((post)=>{
                 return(
                     <div class="big-container">
-                        <div class="topofpic">
-                    <img src={post.thumbnailUrl} class="circle"/>
-                    <div class="username"> {post.username}</div>
-                    
-                    </div>
-                        <div class="main-image">
-                            <img src={post.imageUrl}/>
-
-                        </div>
+                    <Post post={post}/>
+                       
                     <CommentSection comments={post.comments} likes={post.likes} id={post.timestamp}/>
                         <div class="timestamp">
                         {post.timestamp}

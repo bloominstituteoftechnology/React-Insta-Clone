@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "prop-types": "^15.6.2",
     "reactstrap": "^6.5.0"
   }
 }

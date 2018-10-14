@@ -27,7 +27,6 @@ return(
 
     )
     
-    
     }         <form class="input-comment">
     <input type="text" placeholder="Add a comment"/>
     &#8230;
