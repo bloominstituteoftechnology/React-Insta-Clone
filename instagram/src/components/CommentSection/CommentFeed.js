@@ -7,6 +7,7 @@ let currentCommentFeed = props.commentArray.map(item => {
 return   <Comment key= {`${item.username}${item.text}`} username={item.username} text={item.text} />
  }   
   );
+
  
   return (
     <div>

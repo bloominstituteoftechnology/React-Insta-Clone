@@ -4,7 +4,7 @@ const CommentForm = props => {
   return (
     <div>
       <form id="style"> 
-          <input type="text" placeholder="Add Comment"/>
+          <input type="text" placeholder="Add Comment"  onKeyPress={props.commentsEventHandler}/>
       </form>
     </div>
   );

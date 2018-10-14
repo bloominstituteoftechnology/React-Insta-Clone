@@ -4,10 +4,10 @@ import SearchIcons from './SearchIcons.js';
 import SearchLogo from './SearchLogo.js';
 
 const SearchHeader= props => {
-  
+  console.log(props)
   return (
     <div id="searchHeader">
-        <SearchBarForm searchTerm={this.searchTerm} searchPosts={this.searchPostsHandler} ></SearchBarForm>
+        <SearchBarForm searchPosts={props.searchPosts} ></SearchBarForm>
         <SearchIcons></SearchIcons>
        <SearchLogo></SearchLogo>
     </div>

@@ -7,17 +7,15 @@ import PostInstance from '../PostInstance/PostInstance.js'
 
 const PostStream= props => {
 let currentPostArray = props.filteredPosts.map(item => {
- return <PostInstance key={item.likes} username={item.username} imageUrl={item.imageUrl} thumbnailUrl={item.thumbnailUrl} likes={item.likes} timestamp={item.timestamp} commentsArray={item.comments} commentsUpdater={this.props.commentsUpdater} commentsEventHandler={this.props.commentsEventHandler}/>
+ return <PostInstance key={item.likes} username={item.username} imageUrl={item.imageUrl} thumbnailUrl={item.thumbnailUrl} likes={item.likes} timestamp={item.timestamp} commentsArray={item.comments}/>
 }   
 );
 
-console.log(currentPostArray)
- //
 
 
   return (
     <div id="postStream">
-     PostStream
+     PostStream FILTERED
      {currentPostArray}
     </div>
   );
