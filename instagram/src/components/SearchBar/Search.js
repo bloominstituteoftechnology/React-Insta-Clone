@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import "../../App.css"
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import dummyData from '../../dummy-data';
+/* import PropTypes from 'prop-types'; */
+/* import styled from 'styled-components'; */
 import Form from '../Styles/Form';
 import Input from '../Styles/Input';
 
@@ -26,7 +25,8 @@ import Input from '../Styles/Input';
 	 submitHandler = (event) => {
 		event.preventDefault();
 		console.log(this.state.searchInput)
-		
+		//have to pass this stuff back
+		//to the App to do a filtered search
 
 	}
 render() {

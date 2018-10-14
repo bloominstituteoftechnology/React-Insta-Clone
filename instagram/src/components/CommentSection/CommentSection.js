@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Comment from "./Comment";
 import "../../App.css";
-import PropTypes from 'prop-types';
+/* import PropTypes from 'prop-types'; */
 
 
 class CommentSection extends Component {

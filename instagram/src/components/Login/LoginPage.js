@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import "./LoginPage.css";
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import { Button, Input } from 'reactstrap';
+/* import PropTypes from 'prop-types'; */
+import { Input } from 'reactstrap';
 
 class LoginPage extends Component {
   constructor(props) {

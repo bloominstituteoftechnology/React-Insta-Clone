@@ -1,6 +1,6 @@
 import React from 'react'
 import "../../App.css"
-import PropTypes from 'prop-types';
+/* import PropTypes from 'prop-types'; */
 import Search from './Search';
 
 
@@ -21,9 +21,9 @@ const SearchBar = props => {
 	const clickHandler = (e) => {
 		console.log("clickHandler")
 	}
-	const submitHandler = () => {
+	/* const submitHandler = () => {
 		alert("wait")
-	}
+	} */
 
 	return (
 
@@ -35,16 +35,7 @@ const SearchBar = props => {
 					<div className='button' id='titleText'>Instagram</div></div>
 				
 					<Search  char={props.char}> </Search>
-				
-				{/* <form className="searchForm" onSubmit={submitHandler} value={props.value}>
-					<input
-						className="searchBarInput"
-						placeholder="Search..."
-						type="text"
-						value={props.value}
-						onChange={clickHandler}
-					/>
-				</form> */}
+								
 				<div className='iconContainer'>
 					<div className='button' value={props.username} id='icon1' onClick={arrHandler}></div>
 					<div className='button' id='icon2' onClick={clickHandler}></div>

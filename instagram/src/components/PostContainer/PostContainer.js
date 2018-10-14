@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import "../../App.css";
-import PropTypes from 'prop-types';
-import dummyData from '../../dummy-data';
+/* import PropTypes from 'prop-types'; */
+/* import dummyData from '../../dummy-data'; */
 /* import styled from 'styled-components'; */
 
 
