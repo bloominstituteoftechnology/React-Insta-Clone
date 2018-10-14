@@ -1,34 +1,50 @@
-import React from 'react'
+import React, { Component } from 'react';
 import "../../App.css"
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import dummyData from '../../dummy-data';
+import Form from '../Styles/Form';
+import Input from '../Styles/Input';
 
-const Search = props => {
+/* const Search = props => { */
+	class Search extends Component {
+		constructor(props) {
+		  super(props);
+		  this.state = {
+			searchName: '',	
+			
+		  };
+		}
 
-	
+
+	clickHandler = (event) => {
+		/* event.preventDefault(); */
+		this.setState({ [event.target.name]: event.target.value });
+		console.log(this.state)
+	}
+
+	 submitHandler = (event) => {
+		event.preventDefault();
+		console.log(this.state.searchInput)
 		
-			const clickHandler = (e) => {
-					console.log("clickHandler")
-			}
-			const submitHandler = () => {
-				
-				alert("wait")
-			}
 
-    return (
-        <div>
-        <form className="searchForm" onSubmit={submitHandler} value={this.props.value}>
-				<input
-					className="searchBarInput"
+	}
+render() {
+	return (
+		<div>
+			<Form onSubmit={this.submitHandler} value={this.props.value}>
+				<Input
 					placeholder="Search..."
 					type="text"
-					value={props.value}
-					onChange={clickHandler}
-					/>
-			</form>
-            </div>
-    )
+					name="searchInput"
+					value={this.props.value}
+					onChange={this.clickHandler}
+				/>
+			</Form>
+		</div>
+	)
 
-
+}
 }
 
 export default Search;

@@ -33,7 +33,10 @@ const SearchBar = props => {
 				<div className="searchSubContainer">
 					<div className='button' id="camera" onClick={props.camera}></div>
 					<div className='button' id='titleText'>Instagram</div></div>
-				<form className="searchForm" onSubmit={submitHandler} value={props.value}>
+				
+					<Search  char={props.char}> </Search>
+				
+				{/* <form className="searchForm" onSubmit={submitHandler} value={props.value}>
 					<input
 						className="searchBarInput"
 						placeholder="Search..."
@@ -41,7 +44,7 @@ const SearchBar = props => {
 						value={props.value}
 						onChange={clickHandler}
 					/>
-				</form>
+				</form> */}
 				<div className='iconContainer'>
 					<div className='button' value={props.username} id='icon1' onClick={arrHandler}></div>
 					<div className='button' id='icon2' onClick={clickHandler}></div>

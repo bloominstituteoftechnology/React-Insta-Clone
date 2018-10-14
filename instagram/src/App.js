@@ -10,14 +10,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dummyData: this.dummyData,
+     /*  dummyData: this.props.dummyData, */
       comments: null,
     };
 
   }
 
   componentDidMount() {
-   
+  /*  this.setState({ dummyData }) */
+   console.log(this.state)
   }
 
  
@@ -30,7 +31,7 @@ class App extends Component {
      
     
         <div className="searchBar">{dummyData.map((chars, index) => {
-  return<SearchBar key={index} char={chars.comments} />})}
+  return<SearchBar key={index} char={chars.username} />})}
         </div>
         <div className="postContainer">{dummyData.map((chars, index) => {
   return <PostContainer key={index} char={chars.username} name={chars.name} thumb={chars.thumbnailUrl} time={chars.timestamp}
