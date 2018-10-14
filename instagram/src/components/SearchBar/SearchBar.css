@@ -52,6 +52,7 @@
   border-radius: 5px;
   border: 1px solid lightgrey;
   text-align: center;
+  width: 250px;
 }
 .search-bar .search-icons i {
   margin: 0 10px;
@@ -85,4 +86,10 @@
 .search-bar .log-out h3:hover {
   opacity: 1;
   transition: 300ms;
+}
+
+@media (max-width: 768px) {
+  .search-bar form {
+    display: none;
+  }
 }
