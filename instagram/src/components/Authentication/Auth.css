@@ -62,6 +62,9 @@
   padding: 7px;
   border-radius: 5px;
   border: 1px solid lightgrey;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .log-in-form-container #sign-up-btn {
   background: #3897f0;
