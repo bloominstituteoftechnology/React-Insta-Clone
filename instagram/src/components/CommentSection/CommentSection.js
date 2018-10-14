@@ -4,16 +4,16 @@ import Comments from './Comments';
 
 
 class CommentSection extends React.Component {
-    constructor(props) {
+    constructor(props) { //recieves props from state on App.js
         super(props);
         this.state = {
-            comments: props.comments
+            comments: props.comments //gets comments from state as props
         };
     }
     render() {
         return (
             <div>
-                {this.state.comments.map((c, i) => <Comments key = {i} comment ={c} />)}
+                {this.state.comments.map((comment, index) => <Comments key = {index} comment ={comment} />)}
             </div>
         )
     }

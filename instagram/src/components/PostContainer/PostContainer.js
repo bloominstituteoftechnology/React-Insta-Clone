@@ -1,28 +1,17 @@
 import React from "react";
 import Post from "./Post";
-import PropTypes from "prop-types";
+
 
 const PostContainer = props => {
   return (
     <div className="post-wrapper">
-      {props.posts.map(p => (
-        <Post key={p.imageUrl} post={p} />
+      {props.posts.map(post => (
+        <Post key={post.imageUrl} post={post} />
       ))}
     </div>
   );
 };
 
-PostContainer.propTypes = {
-  postObject: PropTypes.shape({
-    username: PropTypes.string,
-    thumbnailUrl: PropTypes.string,
-    imageUrl: PropTypes.string,
-    likes: PropTypes.number,
-    timestamp: PropTypes.string,
-    comments: PropTypes.arrayOf(PropTypes.string)
-  })
-
-}
 
 export default PostContainer;
 
