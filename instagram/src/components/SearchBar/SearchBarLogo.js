@@ -6,15 +6,15 @@ import styled from 'styled-components';
 const SearchBarLogoHeader = styled.header`
   align-items: center;
   display: flex;
-`;
 
-const SearchBarLogoHeaderCamera = styled.span`
-  font-size: 62px;
-`;
+  i {
+    font-size: 62px;
+  }
 
-const SearchBarLogoHeaderImage = styled.img`
-  height: 80px;
-  margin-top: 10px;
+  img {
+    height: 80px;
+    margin-top: 10px;
+  }
 `;
 
 const SearchBarVerticalLine = styled.div`
@@ -26,11 +26,9 @@ const SearchBarVerticalLine = styled.div`
 const SearchBarLogo = () => {
   return (
     <SearchBarLogoHeader>
-      <SearchBarLogoHeaderCamera>
-        <i className="fab fa-instagram" />
-      </SearchBarLogoHeaderCamera>
+      <i className="fab fa-instagram" />
       <SearchBarVerticalLine />
-      <SearchBarLogoHeaderImage alt="logo" src={instaLogo} />
+      <img alt="logo" src={instaLogo} />
     </SearchBarLogoHeader>
   );
 }
