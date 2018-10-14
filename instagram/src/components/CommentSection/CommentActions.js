@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const PostCommentActions = styled.div`
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+
+  i {
+    margin-right: 20px;
+  }
+`;
 
 class CommentActions extends Component {
   constructor(props) {
@@ -20,7 +30,7 @@ class CommentActions extends Component {
 
   render() {
     return (
-      <div className="post-comment-actions">
+      <PostCommentActions>
         <i
           style={{ display: 'inline-block', cursor: 'pointer' }}
           className={this.props.liked || this.state.hover ? 'fas fa-heart' : 'far fa-heart'}
@@ -29,7 +39,7 @@ class CommentActions extends Component {
           onClick={this.props.onClick} />
         <i 
           className="far fa-comment" />
-      </div>
+      </PostCommentActions>
     );
   }
 }

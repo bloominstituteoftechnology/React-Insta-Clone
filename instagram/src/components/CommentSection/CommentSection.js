@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import './CommentSection.css';
-
 import CommentActions from './CommentActions';
 import CommentLikes from './CommentLikes';
 import Comment from './Comment';
 import CommentForm from './CommentForm';
-
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const PostComments = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 1.6rem;
+  padding: 15px;
+`;
 
 export default class CommentSection extends Component {
   constructor(props) {
@@ -56,14 +62,14 @@ export default class CommentSection extends Component {
 
   render() {
     return (
-      <div className="post-comments">
+      <PostComments>
         <CommentActions onClick={this.handleClick} liked={this.state.liked} />
         <CommentLikes likes={this.state.likes} />
         {this.state.comments.map((user, index) =>
           <Comment key={index} username={user.username} text={user.text} />
         )}
         <CommentForm comment={this.state.comment} onSubmit={this.addNewComment} onChange={this.handleChange} />
-      </div>
+      </PostComments>
     );
   }
 }

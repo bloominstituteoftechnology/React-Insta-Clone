@@ -1,11 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
-
 import SearchBarLogo from './SearchBarLogo';
 import SearchBarInput from './SearchBarInput';
 import SearchBarActions from './SearchBarActions';
-
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const SearchBarContainer = styled.header`
   align-items: center;
