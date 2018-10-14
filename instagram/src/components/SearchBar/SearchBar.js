@@ -20,7 +20,7 @@ class SearchBar extends React.Component{
 
     render(){
         return(
-            <nav>
+            <nav id="topnav">
                 <div class="insta">
                 <FontAwesomeIcon icon={instagram} />
                 
@@ -28,7 +28,7 @@ class SearchBar extends React.Component{
                   Instagram
                 </div>
 
-                <input type="text" placeholder="&#x1f50d; search"/>
+                <input id="inputty" type="text" placeholder="&#x1f50d; search"/>
                 <div class="threenav">
             
                 <FontAwesomeIcon icon="compass"/>

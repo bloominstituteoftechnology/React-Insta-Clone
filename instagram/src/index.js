@@ -5,6 +5,8 @@ import instagram from "@fortawesome/fontawesome-free-brands/faInstagram";
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 
 ReactDOM.render(<App />, document.getElementById('root'));

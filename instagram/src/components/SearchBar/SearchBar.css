@@ -3,7 +3,7 @@
     font-family: 'Grand Hotel', cursive;
 }
 
-nav{
+#topnav{
     display:flex;
     justify-content:space-around;
     font-size:3rem;
@@ -20,7 +20,7 @@ nav{
     justify-content:space-between;
 }
 
-input{
+#inputty{
     font-size: 1rem;
     text-align: center;
     font-weight: 100;
