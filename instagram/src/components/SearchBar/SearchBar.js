@@ -7,7 +7,7 @@ import SearchBarActions from './SearchBarActions';
 
 import PropTypes from 'prop-types';
 
-const SearchBarContainer = styled.div`
+const SearchBarContainer = styled.header`
   align-items: center;
   display: flex;
   justify-content: space-between;

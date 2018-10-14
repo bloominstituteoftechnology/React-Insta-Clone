@@ -1,22 +1,27 @@
 import React from 'react';
-import './PostContainer.css';
-
 import PostHeader from './PostHeader';
 import PostContent from './PostContent';
 import CommentSection from '../CommentSection/CommentSection';
-
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const StyledPostContainer = styled.div`
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  margin: 0 auto 20px auto;
+  width: 642px;
+`;
 
 const PostContainer = ({ posts }) => {
   return (
     <>
       {posts.map(post => {
         return (
-          <div className="post" key={post.username + post.timestamp}>
+          <StyledPostContainer key={post.username + post.timestamp}>
             <PostHeader username={post.username} thumbnail={post.thumbnailUrl} />
             <PostContent image={post.imageUrl} />
             <CommentSection comments={post.comments} likes={post.likes} />
-          </div>
+          </StyledPostContainer>
         );
       })}
     </>

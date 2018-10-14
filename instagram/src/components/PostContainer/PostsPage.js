@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import dummyData from '../../dummy-data';
-
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
+import styled from 'styled-components';
+
+const AppContainer = styled.div`
+  max-width: 880px;
+  margin: 0 auto;
+  width: 100%;
+`;
 
 export default class PostsPage extends Component {
   constructor() {
@@ -24,10 +30,10 @@ export default class PostsPage extends Component {
 
   render() {
     return (
-      <div className="app-container">
+      <AppContainer>
         <SearchBar onChange={this.filterPosts} />
         <PostContainer posts={this.state.posts} />
-      </div>
+      </AppContainer>
     );
   }
 }

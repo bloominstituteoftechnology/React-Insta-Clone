@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const StyledPostImg = styled.div``;
 
 const PostContent = props => {
   return (
-    <div className="post-content">
+    <StyledPostImg>
       <img src={props.image} alt="postphoto" />
-    </div>
+    </StyledPostImg>
   );
 }
 
