@@ -7,7 +7,7 @@ const SearchHeader= props => {
   
   return (
     <div id="searchHeader">
-        <SearchBarForm></SearchBarForm>
+        <SearchBarForm searchTerm={this.searchTerm} searchPosts={this.searchPostsHandler} ></SearchBarForm>
         <SearchIcons></SearchIcons>
        <SearchLogo></SearchLogo>
     </div>

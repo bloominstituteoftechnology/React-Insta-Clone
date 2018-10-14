@@ -9,8 +9,8 @@ const PostInstance= props => {
       PostInstance
       <p>{props.username}</p>
       <p>{props.likes}</p>
-        <PostContent></PostContent>
-        <CommentSection></CommentSection>
+        <PostContent username={props.username} imageUrl={props.imageUrl} thumbnailUrl={props.thumbnailUrl} ></PostContent>
+        <CommentSection  likes={props.likes} commentArray={props.commentsArray} commentsUpdater={this.props.commentsUpdater} commentsEventHandler={this.props.commentsEventHandler}/>
     </div>
   );
 };

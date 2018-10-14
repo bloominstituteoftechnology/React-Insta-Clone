@@ -1,23 +1,17 @@
 import React from 'react';
 import PostInstance from '../PostInstance/PostInstance.js'
-import Comment from '../CommentSection/Comment.js'
+//import Comment from '../CommentSection/Comment.js'
+//import CommentFeed from '../CommentSection/CommentFeed.js';
 //import CommentFeed from '../CommentSection/CommentFeed.js'
 
 
 const PostStream= props => {
-let currentCommentArray =[]
 let currentPostArray = props.filteredPosts.map(item => {
-  currentCommentArray.push(item.comments)
- return <PostInstance key={item.likes} username={item.username} likes={item.likes} timestamp={item.timestamp}/>
+ return <PostInstance key={item.likes} username={item.username} imageUrl={item.imageUrl} thumbnailUrl={item.thumbnailUrl} likes={item.likes} timestamp={item.timestamp} commentsArray={item.comments} commentsUpdater={this.props.commentsUpdater} commentsEventHandler={this.props.commentsEventHandler}/>
 }   
 );
-let i;
-let commentArray =[]
-console.log(currentCommentArray)
-for(i=0; i>currentCommentArray.length; i++) {
-  commentArray.push(<Comment key={[i].username} username={[i].username} text={[i].text} />)
-}
-console.log(commentArray)
+
+console.log(currentPostArray)
  //
 
 
@@ -32,3 +26,4 @@ console.log(commentArray)
 export default PostStream;
 
 
+//}  posts={this.state.posts} filteredPosts={props.filteredPosts}

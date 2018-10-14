@@ -19,26 +19,25 @@ import SearchBarForm from './components/SearchHeader/SearchBarForm.js';
    }
 
   searchPostsHandler = e => {
-     const postArray = []
-     this.state.posts.filter(p => {
+     const postArray = this.state.posts.filter(p => {
          if (p.username===e.target.value) {
-            return postArray.push(p)
+            return true 
+         } else {
+           return false 
          }
-        return this.setState({ filteredPosts: postArray});
          });
+         this.setState({ filteredPosts: postArray });
        };
 
 
   render() {
-    console.log(this.state.filteredPosts)
+    //console.log(this.state.filteredPosts)
     return (
       
       <div className="App">
       App
-      <SearchBarForm  searchTerm={this.searchTerm}
-        searchPosts={this.searchPostsHandler}></SearchBarForm>
-        <SearchHeader/>
-        <PostStream filteredPosts={this.state.filteredPosts}></PostStream>
+        <SearchHeader searchTerm={this.searchTerm} searchPosts={this.searchPostsHandler}/>
+        <PostStream filteredPosts={this.state.filteredPosts} posts={this.state.posts} commentsUpdater={this.props.commentsUpdater} commentsEventHandler={this.props.commentsEventHandler}></PostStream>
        
       </div>
     );
