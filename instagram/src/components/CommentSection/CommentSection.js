@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Comment from "./Comment";
 import "../../App.css";
-/* import PropTypes from 'prop-types'; */
+import PropTypes from 'prop-types'; 
 
 
 class CommentSection extends Component {
@@ -76,8 +76,7 @@ class CommentSection extends Component {
 							onChange={this.handleInputChange}
 						/>
 					</form>
-					<div className="button"
-						type="button"
+					<div className="button"					
 						id="commentDots"
 						onClick={this.menu}> </div>
 				</footer>
@@ -88,7 +87,8 @@ class CommentSection extends Component {
 		);
 	};
 }
-/* CommentSection.propTypes = {
+ CommentSection.propTypes = {
+	timeStamp: PropTypes.string.isRequired,
 	comment: PropTypes.arrayOf(
 		PropTypes.shape({
 			user: PropTypes.array,
@@ -97,5 +97,5 @@ class CommentSection extends Component {
 		})
 			.isRequired
 	)
-} */
+} 
 export default CommentSection;

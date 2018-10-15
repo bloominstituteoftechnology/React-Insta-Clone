@@ -18,7 +18,7 @@ class App extends Component {
 
   componentDidMount() {
   /*  this.setState({ dummyData }) */
-   console.log(this.state)
+   
   }
 
  

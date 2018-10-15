@@ -7,7 +7,6 @@ class Comment extends Component {
         super(props);
 
         this.state = {
-            dummyData: this.dummyData,
             counter: 0,
             };
 
@@ -17,7 +16,6 @@ class Comment extends Component {
     increment = event => {
         event.preventDefault();
         this.setState(prevState => ({ counter: prevState.counter + 1 }));
-        console.log("counter: " + this.state.counter)
     };
 
     render() {
