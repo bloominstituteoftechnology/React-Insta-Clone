@@ -1,32 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import animals from './animals.js'
+import Search from './components/SearchBar/components/Search';
+import Container from './components/PostContainer/components/Container';
+import Comments from './components/CommentSection/components/Comments';
+
+import './components/SearchBar/components/search.css';
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      animals: animals
     }
   }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Search />
+        <Container />
+        <Comments />
       </div>
     );
   }
