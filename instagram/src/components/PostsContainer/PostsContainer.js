@@ -6,7 +6,7 @@ const PostsContainer = props => {
     <div>
       {props.posts.map( post => {
         return (
-          <Post 
+          <Post key={post.timestamp}
             thumbnailUrl = {post.thumbnailUrl}
             username = {post.username}
             imageUrl = {post.imageUrl}
