@@ -1,4 +1,4 @@
-* {
+/* * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -119,16 +119,16 @@ input {
   padding: 10px;
   text-align: center;
   border: 1px solid lightgray;
- margin-top: 25px;
- background: whitesmoke;
- font-size: 14px;
+margin-top: 25px;
+background: whitesmoke;
+font-size: 14px;
 }
 
 .right-icons {
   width: 33%;
- display: flex;
- align-items: center;
- justify-content: center;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .insta-border {
@@ -152,4 +152,4 @@ font-weight: bold;
 i {
   margin: 0 10px;
   cursor: pointer;
-}
+} */

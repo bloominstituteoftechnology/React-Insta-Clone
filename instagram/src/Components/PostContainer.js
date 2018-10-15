@@ -2,10 +2,11 @@ import React from 'react';
 import HeartIcon from './Img/heart-icon.png';
 import ChatBubble from './Img/bubble.png';
 import CommentSection from './CommentSection';
-
+import PropTypes from 'prop-types';
 
 const PostContainer = props => {
-  return(
+  console.log(props);
+  return (
   <div className='post'>
       <div className='heading'>
         <img src={props.post.thumbnailUrl} alt='userthumbnail' className='thumb'/>
@@ -18,15 +19,23 @@ const PostContainer = props => {
       <img src={HeartIcon} alt='heart' className='heart'/>
       <img src={ChatBubble} alt='chat bubble' className='bubble'/>
       <h4>{props.post.likes} likes</h4>
-      <h1>{}</h1>
     </div>
 
     <div className='comments'>
       <CommentSection comments={props.post.comments}/>
-      
     </div>
   </div>
   )
+}
+
+
+PostContainer.propTypes = {
+  post: PropTypes.shape({
+    thumbnailUrl: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired
+  })
 }
 
 export default PostContainer;

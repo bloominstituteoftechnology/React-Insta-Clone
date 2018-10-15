@@ -1,21 +1,30 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
+import ThreeDots from './Img/three dot.png';
 
 const CommentSection = props => {
-  console.log(props.comments);
-  return(
+  console.log(props);
+  return (
     <div className='comment'>
-      <h5>{props.comments.map(comment => {
+      {props.comments.map((comment, index) => {
         return (
-          <div>
-            <span>{comment.username}</span>
+          <div key={index}>
+            <h5>{comment.username}</h5>
             <p>{comment.text}</p>
           </div>
-          
         )
-      })}</h5>
+      })}
+      <div>
+        <h5>Add a comment...</h5>
+        <img src={ThreeDots} alt='three-dots'/>
+      </div>
     </div>
+
   )
+}
+
+CommentSection.propTypes = {
+  comments: PropTypes.array.isRequired
 }
 
 export default CommentSection;

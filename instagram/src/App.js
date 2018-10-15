@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   render() {
-    return(
+    return (
       <div className='app-wrap'>
         <SearchBar />
         <Post />

@@ -4,7 +4,7 @@ import dummyData from '../dummy-data';
 
 
 const Post = props => {
-  return(
+  return (
     <div className='post-con'>
       {dummyData.map(post => (
       <PostContainer post={post} key={post.username}/>
