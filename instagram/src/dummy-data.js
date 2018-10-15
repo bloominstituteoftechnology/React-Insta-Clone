@@ -1,3 +1,5 @@
+import React, { Component } from 'react';
+
 const dummyData = [
   {
     username: "philzcoffee",
