@@ -7,7 +7,7 @@ const Search = () => {
         <div class="searchHeader">
             <img class="instaLogo" src="https://png.icons8.com/ios/1600/instagram-new.png" />
             <form> 
-                <input classname="searchbar" type="text" placeholder="search"></input>
+                <input class="searchBar" type="text" placeholder="search"></input>
             </form>
             <div class="searchButtons">
                 <img class= "searchNav" src="https://cdn1.iconfinder.com/data/icons/superthick-app-ui/128/explore-compass-travel-512.png" />

@@ -1,0 +1,8 @@
+.postContainer .postHeader img {
+    border: 1px solid gray;
+    height: 30px;
+}
+
+.postContainer img {
+    width: 80px;
+}

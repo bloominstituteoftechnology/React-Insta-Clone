@@ -6,6 +6,9 @@
 .searchHeader .instaLogo {
     height: 25px;
 }
+.searchHeader .searchBar {
+    text-align: center;
+}
 .searchHeader .searchButtons {
     display: flex;
     justify-content: flex-start;
