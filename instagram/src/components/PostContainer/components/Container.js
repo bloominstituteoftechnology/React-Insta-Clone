@@ -17,7 +17,7 @@ const Container = props => {
                             <img src={item.imageUrl} />
                         </div>
                         372 likes
-                        {/* <Comment /> */}
+                        <Comment comment={item}/>
                     </div> 
                 )
             })}
