@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import SearchBar from './Components/SearchBar'
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      comments:[],
+      search: '',
+
+    }
+  }
+
+  inputHandler = event => {
+    const value = event.target.value;
+
+    this.setState(
+      {search: value}
+    );
+  }
+
   render() {
-    return (
+    return(
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <SearchBar />
+
       </div>
     );
   }
