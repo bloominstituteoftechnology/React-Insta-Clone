@@ -7,6 +7,8 @@
     width: 100%;
     background-color: white;
     border-bottom: 1px solid #DFE0DF;
+    position: fixed;
+    z-index: 10;
 }
 
 .search-bar_area {
@@ -15,7 +17,7 @@
     align-items: center;
     justify-content: center;
     width: 80%;
-    max-width: 930px;
+    max-width: 935px;
     /* border: 1px solid red; */
 }
 
