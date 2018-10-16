@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
-import CommentSection from './components/CommentSection/CommentSection';
+import SearchBar from './components/SearchBar/searchBar';
+import PostContainer from './components/PostContainer/postContainer';
+
 
 class App extends Component {
     constructor() {
@@ -12,20 +12,14 @@ class App extends Component {
        dummyData: dummyData  
     }
   }
-  
-
-
-
-
 
 
   render() {
     return (
       <div className="App">
-        <h1>Confusion</h1>
+        <h1>Instagram</h1>
         <SearchBar />
-        <PostContainer dummyData={this.state.dummyData} />
-        <CommentSection />                                                                       
+        <PostContainer dummyData={this.state.dummyData} />                                                                      
       </div>
     );
   }

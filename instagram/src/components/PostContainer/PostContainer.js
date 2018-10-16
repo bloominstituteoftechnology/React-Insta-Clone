@@ -1,5 +1,6 @@
 import React from 'react';
-import CommentSection from '../CommentSection/CommentSection'
+import CommentSection from '../CommentSection/commentSection';
+import './postContainer.css';
 
 const PostContainer = props => {
     return (
@@ -7,25 +8,18 @@ const PostContainer = props => {
         {props.dummyData.map (data => {
             return (
                 <div className = 'posts'>
-                    <h3> {data.username}</h3>
-                    <img src ={data.thumbnailUrl}/>
+                    <div className = 'thumbName'>
+                        <img clasName = 'thumbnail' src ={data.thumbnailUrl}/>
+                        <p><strong>{data.username}</strong></p>
+                    </div>
                     <img src ={data.imageUrl}/>
-                    <h3>{data.likes}</h3>
-                    <p>{data.text}</p>
-                </div>
-                <div className = 'comments'>
-                    <CommentSection />
-                </div>
+                    <p>{data.likes} likes</p>
+                    <p>{data.timestamp}</p>
+                    <CommentSection item={data}/>
+                </div>  
             )
         }
-        
-        
-        
-        
-        
         )}
- 
-
         </div> 
     )
 }
