@@ -1,0 +1,25 @@
+.igContainer {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  width:800px;
+  max-width:800px;
+  min-height:200px;
+  margin:auto;
+  border:2px solid black;
+}
+
+.ig_header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width:800px;
+  height:50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border:2px solid black;
+}
+
+.ig_posts {
+  width:50%;
+}
