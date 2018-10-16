@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import SearchBar from "./Components/SearchBar";
 
 
 
@@ -21,6 +22,8 @@ class App extends Component {
           >
             Learn React
           </a>
+
+          <SearchBar/>
         </header>
       </div>
     );

@@ -1,10 +1,18 @@
 import './styles.css';
 
-const SearchBar = () => (
+const SearchBar = props => 
 
-    <div>
-        
-<input type= "text" placeholder= "Search..."> />
+ (
+     <div>
 
-    </div>
-)
+<form>
+    <input type="text" placeholder="Search..."/>
+    </form>
+
+     </div>
+    
+    
+);
+
+
+export default SearchBar;
