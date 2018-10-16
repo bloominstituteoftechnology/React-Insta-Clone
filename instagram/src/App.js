@@ -11,6 +11,8 @@ class App extends Component {
     this.state = { instaData : dummyData }
   }
 
+  
+
   render() {
     return (
       <div className="App">

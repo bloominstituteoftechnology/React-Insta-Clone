@@ -3,6 +3,7 @@ import Comment from './Comment';
 
 const CommentsSection = props => {
   return (
+  <div>
     <div>
       {props.comments.map ( comment => {
         return (
@@ -17,7 +18,15 @@ const CommentsSection = props => {
         )
       })}
     </div>
-    
+
+    <div>
+      <input 
+        type="text"
+        name="entercomment"
+        placeholder="add comment..."
+        />
+    </div>
+  </div>  
   )
 }
 
