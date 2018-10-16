@@ -12,6 +12,11 @@ class Post extends React.Component {
     }
   }
 
+  incrementHandler = () => {
+    let likes = this.state.likes + 1;
+    this.setState({likes});
+  }
+
   render() {
   return (
     <div className="post-border">
@@ -26,7 +31,9 @@ class Post extends React.Component {
           src={this.props.post.imageUrl}
         />
       </div>
-      <Likes likes = {this.props.post.likes}/>
+      <Likes
+        incrementHandler = {this.incrementHandler}
+        likes = {this.state.likes}/>
       <CommentSection comments={this.props.post.comments} />
     </div>
   );

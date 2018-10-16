@@ -3,7 +3,9 @@ import React from 'react';
 const Likes = props => {
     return (
         <div className = "likes-wrapper">
-            <div className="social-wrapper">
+            <div 
+                onClick = {props.incrementHandler}
+                className="social-wrapper">
                 <div className="social">
                     <i className="fa fa-heart" />
                 </div>
