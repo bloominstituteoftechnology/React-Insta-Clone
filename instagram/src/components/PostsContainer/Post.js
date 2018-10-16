@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Posts.css';
 import CommentSection from '../CommentSection/CommentSectionContainer';
+import * as styl from './PostsStyles';
 
 class Post extends React.Component {
   constructor(props) {
@@ -28,27 +29,27 @@ class Post extends React.Component {
   render() {
     const { username, thumbnailUrl, imageUrl, likes, comments, timestamp } = this.state.post;
     return (
-      <div className="Post">
+      <div>
 
-        <header className="Post-header">
-          <img src={thumbnailUrl} alt="user thumbnail" />
-          <h2>{username}</h2>
-        </header>
+        <styl.Header>
+          <styl.UserThumbnail src={thumbnailUrl} alt="user thumbnail"></styl.UserThumbnail>
+          <styl.Username>{username}</styl.Username>
+        </styl.Header>
 
-        <section className="Post-body">
-          <img src={imageUrl} alt="post img" />
-          <div className="Post-action">
-            <div className="like-btn btn" onClick={this.incrementLike}>
+        <section>
+          <styl.PostImage src={imageUrl} alt="post img"></styl.PostImage>
+
+          <styl.PostAction>
+            <styl.LikeButtonWrapper onClick={this.incrementLike}>
               {this.state.liked ? <i className="fas fa-heart fa-2x icon liked"></i> : <i className="far fa-heart fa-2x icon"></i>}
-            </div>
+            </styl.LikeButtonWrapper>
 
-            <div className="comment-btn btn">
+            <div>
               <i className="far fa-comment fa-2x icon comment-btn"></i>
             </div>
+          </styl.PostAction>
 
-          </div>
-
-          <p className="likes">{likes} likes</p>
+          <styl.LikeCounter>{likes} likes</styl.LikeCounter>
         </section>
 
         <CommentSection comments={comments} timestamp={timestamp} />

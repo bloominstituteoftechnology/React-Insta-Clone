@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './img/instagram.png';
+import React, { Component } from 'react';
+import logo from '../img/instagram.png';
+import * as styl from './SearchBarStyles';
 import './SearchBar.css';
 
 const SearchBar = props => {
   return (
-    <div className="Fixed-navbar">
-      <div className="Search-bar-container">
-        <header>
-          <i className="fab fa-instagram fa-2x icon"></i>
-          <div className="divider"></div>
-          <img src={logo} alt="Instagram logo" />
-        </header>
+    <styl.FixedNav>
+      <styl.Container>
+        <styl.Header>
+          <i className="fab fa-instagram fa-2x"></i>
+          <styl.Divider></styl.Divider>
+          <styl.Logo src={logo} alt="Instagram logo"></styl.Logo>
+        </styl.Header>
 
-        <input type="text" placeholder="&#61442; Search" onChange={props.searchPosts} />
+        <styl.SearchInput type="text" placeholder="&#61442; Search" onChange={props.searchPosts}></styl.SearchInput>
 
-        <div className="Menu">
-          <i className="far fa-compass fa-lg icon"></i>
-          <i className="far fa-heart fa-lg icon"></i>
-          <i className="far fa-user fa-lg icon"></i>
-        </div>
-      </div>
-    </div>
+        <styl.Menu>
+          <i className="far fa-compass fa-lg"></i>
+          <i className="far fa-heart fa-lg header-heart"></i>
+          <i className="far fa-user fa-lg"></i>
+        </styl.Menu>
+      </styl.Container>
+    </styl.FixedNav>
   );
 };
 
