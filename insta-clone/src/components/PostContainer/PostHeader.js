@@ -1,6 +1,6 @@
 import React from "react";
 import { Header} from "../Styles/StylePost";
-
+import PropTypes from 'prop-types'
 const PostHeader = props => {
     return (
 
@@ -15,5 +15,13 @@ const PostHeader = props => {
 
   );
 };
+
+// Error checking whats passed into the Post Container
+
+
+PostHeader.propTypes = {
+  thumbnailUrl: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired
+}
 
 export default PostHeader;
