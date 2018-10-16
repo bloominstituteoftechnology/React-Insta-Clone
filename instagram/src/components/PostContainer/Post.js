@@ -3,23 +3,32 @@ import CommentSection from "../CommentSection/CommentSection";
 import PostHeader from "./PostHeader";
 import PropTypes from 'prop-types';
 
-const Post = props => {
+class Post extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      likes: props.post.likes
+    }
+  }
+
+  render() {
   return (
     <div className="post-border">
       <PostHeader
-        username={props.post.username}
-        thumbnailUrl={props.post.thumbnailUrl}
+        username={this.props.post.username}
+        thumbnailUrl={this.props.post.thumbnailUrl}
       />
       <div className="post-image-wrapper">
         <img
           alt="post thumbnail"
           className="post-image"
-          src={props.post.imageUrl}
+          src={this.props.post.imageUrl}
         />
       </div>
-      <CommentSection comments={props.post.comments} />
+      <CommentSection comments={this.props.post.comments} />
     </div>
   );
+};
 };
 
 Post.propTypes = {
