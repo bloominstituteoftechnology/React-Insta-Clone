@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ThreeDots from './Img/three dot.png';
+import Input from './Input';
+import Comment from './Comment';
 
 class CommentSection extends Component {
   constructor() {
@@ -11,7 +13,6 @@ class CommentSection extends Component {
       text: ""
     }
   }
-
 
   addNewComment = (event, index) => {
     event.preventDefault();
