@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Comment from './Comment.js';
 import '../ig.css';
 import PropTypes from 'prop-types';
 
 // const CommentSection = props =>
-class CommentSection extends Component {
+class CommentSection extends React.Component {
     constructor (props) {
         super(props);
-    }
     
-    state = {
-        comments: [],
+    this.state = {
+        comments: props.comments,
         commentinput: "",
         usernameinput:""
     }
+}
 
     addNewComment = (event) => {
         event.preventDefault();
@@ -23,7 +23,7 @@ class CommentSection extends Component {
             text: event.target.commentinput.value,
             index: event.target.index
             }
-        
+            
         this.setState({comments: this.state.comments.concat([comm])})
         alert(this.state.comments);
     }
@@ -38,7 +38,7 @@ class CommentSection extends Component {
                 <input type="submit" value="Say what'chu gon' say, bruh."/>
             </form>
             {/* breakdown array of comments and pass each item in to <Comment/> */}
-            {this.props.comments.map(comm => <Comment comments={comm}/>)}
+            {this.state.comments.map(comm => <Comment comments={comm}/>)}
         </div>
     )}
 }
