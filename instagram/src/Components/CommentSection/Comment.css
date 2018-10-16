@@ -1,0 +1,23 @@
+.comWrap {
+   display: flex;
+   justify-content: space-between;
+   font-size: 2rem;
+   border-top: 1px solid lightgray;
+   margin: 20px 0;
+}
+
+.addComment {
+      width: 400px;
+      height: 40px;
+      border: none;
+      padding: 0 20px;
+      margin: 10px 0px; 
+}
+
+.comMenu {
+  background-color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+ margin: auto 0;
+}

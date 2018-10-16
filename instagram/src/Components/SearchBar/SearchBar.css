@@ -1,0 +1,44 @@
+.searchContainer {
+    margin: 10px auto;
+    width: 880px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.instaLogo {
+    height: 30px;
+    width: 30px;
+    margin: 5px 20px;
+}
+
+.insta {
+    font-size: 2rem;
+    margin: 0;
+    border-left: 1px solid gray;
+    padding-left: 5px;
+}
+.logoContainer {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Grand Hotel', cursive;
+}
+
+.searchBar {
+    margin: 10px 20px 0px 20px;
+    
+}
+
+.inputSearch {
+    height: 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 150px;
+    margin: auto;
+    text-align: center;
+}
+
+.searchNav {
+
+}
+
+
