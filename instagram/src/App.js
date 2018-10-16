@@ -21,8 +21,31 @@ class App extends Component {
   constructor(){
     super();
     this.state={
+      controlledComment:'',
       database: dummyData
     }
+};
+
+handleChange=event=>{
+  this.setState({
+    controlledComment:event.target.value
+  })
+  
+}
+
+handleNew=event=>{
+  event.preventDefault();
+  let newdatabase=this.state.database.slice();
+  //find the old comment list
+  
+  let currentimage=newdatabase.filter(entry=>entry.imageUrl===event.target.id)
+
+  console.log(currentimage);
+  // add to it
+
+  //replace database
+
+  
 };
 
   render() {
@@ -33,7 +56,7 @@ class App extends Component {
         </header>
 
         { <div>
-        <PostContainer posts={this.state.database}/>
+        <PostContainer posts={this.state.database} handleChange={this.handleChange} handleNew={this.handleNew} val={this.state.controlledComment}/>
             
         </div> }
       </div>
