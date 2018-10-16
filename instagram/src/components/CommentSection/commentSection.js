@@ -4,11 +4,11 @@ import React from 'react';
 const CommentSection = props => {
     return (
         <div className = 'commentSection'>
-            {props.comment.map((comment)=>{
+            {props.item.comments.map((comment)=>{
                 return (
                     <div>
-                        <h3>{comment.comments.username}</h3>
-                        <h3>{comment.comments.text}</h3>
+                        <h3>{comment.username}</h3>
+                        <h3>{comment.text}</h3>
                     </div>
                 )
             })}
