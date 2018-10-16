@@ -5,11 +5,13 @@ import * as Icon from 'react-feather'
 const CommentSection = props => {
   return(
     <div className="commentSection">
-      <div className="likeAndCommentIcons">
-        <Icon.Heart />
-        <Icon.MessageCircle />
+      <div className="likeAndComment">
+        <div className="likeAndCommentIcons">
+          <Icon.Heart className="icons"/>
+          <Icon.MessageCircle className="icons" />
+        </div>  
+        <p>{props.post.likes} likes</p>
       </div>
-      <p>{props.post.likes} likes</p>
       {props.post.comments.map( (comment, i) => {
          return (
             <div className="comment">
