@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Comment from '../../CommentSection/components/Comment';
 
 const Container = props => {
@@ -16,12 +17,21 @@ const Container = props => {
                         <div class="postBody">
                             <img src={item.imageUrl} />
                         </div>
-                        <div class="likes">372 likes </div>
-                        <Comment comment={item}/>
+                        <div class="likes">{item.likes} likes</div>
+                        <Comment 
+                        input={item.comments}
+                        />
                     </div> 
                 )
             })}
         </div> );
 }
+// Container.propTypes = {
+//     data: PropTypes.shape({
+//         thumbnailUrl: PropTypes.string.isRequired,
+//         imageUrl: PropTypes.string.isRequired,
+//         likes: PropTypes.number.isRequired
+//     })
+// };
  
 export default Container;

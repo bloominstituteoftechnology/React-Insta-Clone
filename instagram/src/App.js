@@ -15,15 +15,33 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData
+      data: [],
+      newData: ''
     };
+  }
+  componentDidMount() {
+    this.setState({data: dummyData})
+  }
+  addComment = event => {
+    event.preventDefault();
+    this.setState({
+      data: [
+        ...this.state.data,
+        { comments: this.state.newData }
+      ],
+      newData: '',
+    })
+  }
+  changeHandler = event => {
+    this.setState({ [event.target.name]: event.target.value})
   }
   render() {
     return (
       <div className="App">
         <Search />
         <Container 
-        data={this.state.data}/>
+        data={this.state.data}
+        addComment={this.addComment}/>
       </div>
     );
   }
