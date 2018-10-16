@@ -1,6 +1,6 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 const PostContainer = (props) => {
         console.log("Props: ", props);
@@ -18,7 +18,9 @@ const PostContainer = (props) => {
 }
 
         PostContainer.propTypes = {
-                comment: PropTypes.objectOf(PropTypes.string).isRequired
+                comments: PropTypes.array,
+                imageUrl: PropTypes.string,
+                likes: PropTypes.number
         }
 
 export default PostContainer;
