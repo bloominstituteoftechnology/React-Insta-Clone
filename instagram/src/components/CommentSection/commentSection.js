@@ -1,14 +1,14 @@
 import React from 'react';
+import './commentSection.css';
 
 
 const CommentSection = props => {
     return (
         <div className = 'commentSection'>
-            {props.item.comments.map((comment)=>{
+            {props.item.comments.map((comment, index)=>{
                 return (
-                    <div>
-                        <h3>{comment.username}</h3>
-                        <h3>{comment.text}</h3>
+                    <div className = 'comment'key = {index}>
+                        <p><strong>{comment.username}</strong> {comment.text}</p>
                     </div>
                 )
             })}
@@ -22,5 +22,14 @@ const CommentSection = props => {
         
     )
 }
+
+
+
+
+
+
+
+
+
  
 export default CommentSection;

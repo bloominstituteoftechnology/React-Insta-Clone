@@ -1,0 +1,14 @@
+.postContainer{
+    border: 1px solid lightgrey;
+    width: 642px;
+    text-align: left;
+}
+
+.thumbName{
+    display: flex;
+    text-align: left;
+}
+
+.thumbnail{
+    border: 1px solid red;
+}
