@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
 * {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 html,
 body,
@@ -131,10 +138,9 @@ table {
   border-spacing: 0;
 }
 .main-container {
-  max-width: 900px;
+  max-width: 650px;
   width: 100%;
   margin: 0px auto;
-  border: 1px solid blue;
   display: flex;
   flex-flow: row wrap;
 }
@@ -143,11 +149,61 @@ table {
   border: 1px solid red;
   display: flex;
   flex-flow: columns wrap;
-  padding: 20px;
+  padding: 20px 25px;
 }
 .main-container .post-container {
   width: 100%;
-  border: 1px solid green;
+  margin: 30px 0;
   display: flex;
   flex-flow: row wrap;
+}
+.main-container .post-container .user-header {
+  width: 100%;
+  padding: 20px 25px;
+  display: flex;
+  flex-flow: columns wrap;
+}
+.main-container .post-container .user-header .usr-header-text {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 1em;
+  align-self: center;
+}
+.main-container .post-container .user-header .thumbnail-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.main-container .post-container .post-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-container .post-container .likes-container {
+  width: 100%;
+  padding: 20px 25px;
+  display: flex;
+}
+.main-container .post-container .likes-container .likes {
+  font-weight: bold;
+}
+.main-container .post-container .comment-container {
+  width: 100%;
+  padding: 20px 25px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.main-container .post-container .comment-container .comment {
+  width: 100%;
+  margin: 5px 0;
+}
+.main-container .post-container .comment-container .comment-usr {
+  font-weight: bold;
+}
+.main-container .post-container .comment-container .comment-text {
+  width: 100%;
+  margin-left: 10px;
+}
+.main-container .post-container .timestamp-container {
+  width: 100%;
 }

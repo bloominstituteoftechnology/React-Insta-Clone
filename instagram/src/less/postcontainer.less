@@ -1,8 +1,74 @@
 .main-container{
+
     .post-container{
-        width: 100%;
-        border: 1px solid green;
+        width: @width;
+        margin: 30px 0;
         display: flex;
         flex-flow: row wrap;
+
+        .user-header{
+            width: @width;
+            padding: 20px 25px;
+            display: flex;
+            flex-flow: columns wrap;
+        
+            .usr-header-text{
+                margin-left: 20px;
+                font-weight: bold;
+                font-size: 1em;
+                align-self: center;
+            }
+
+            .thumbnail-img{
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+            }
+        }
+
+        .post-image{
+            width: @width;
+            display: flex;
+            justify-content: center;
+        }
+
+        .likes-container{
+            width: @width;
+            padding: 20px 25px;
+            display: flex;
+
+            .likes{
+                font-weight: bold;
+            }
+        }
+
+        .comment-container{
+            width: @width;
+            padding: 20px 25px;
+            display: flex;
+            flex-flow: row wrap;
+
+            .comment{
+                width: @width;
+                margin: 5px 0;
+            }
+
+            .comment-usr{
+                font-weight: bold;
+            }
+             
+            .comment-text{
+                width: @width;
+                margin-left: 10px;
+            }
+        }
+
+        .timestamp-container{
+            width: @width;  
+
+            .timestamp{
+
+            }
+        }
     }
 }

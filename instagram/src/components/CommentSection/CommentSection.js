@@ -6,7 +6,7 @@ const CommentSection = props => {
         <div className="comment-container">
            {props.usrData.comments.map((comment, idx) => {
                return(
-                   <p key={idx}>{comment.username} : {comment.text}</p>
+                   <p className="comment" key={idx}><span className="comment-usr">{comment.username}</span> <span className="comment-text">{comment.text}</span></p>
                )
            })}
         </div>

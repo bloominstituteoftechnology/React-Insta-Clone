@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const LikeSection = props => {
     return(
         <div className="likes-container">
-            <p>{props.likes}</p>
+            <p className="likes">{props.likes} likes</p>
         </div>
     );
 }

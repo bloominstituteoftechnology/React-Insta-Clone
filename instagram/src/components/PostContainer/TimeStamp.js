@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 const TimeStamp = props => {
     return(
-        <div className="time-stamp">
-            <p>{props.timestamp}</p>
+        <div className="timestamp-container">
+            <p className="timestamp">{props.timestamp}</p>
         </div>
     );
 }
