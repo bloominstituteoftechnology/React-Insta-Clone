@@ -10,7 +10,9 @@ class App extends Component {
     super();
     this.state = {
       posts: [],
-      likes: 370
+      likes: 370,
+      filteredPosts: [],
+      filterTarget: ''
     };
   }
 
@@ -26,12 +28,23 @@ class App extends Component {
     this.setState({[event.target.name]: event.target.value});
   }
 
+  filter = event => {
+    this.handleInput(event); 
+    this.setState(prevState => {
+      const filteredPosts = prevState.posts.filter(post => {
+        return post.username.includes(prevState.filterTarget);
+      });
+      return { filteredPosts: filteredPosts };
+    });
+  };
 
   render() {
     return (
       <div className='app-wrap'>
-        <SearchBar />
-        <PostContainer likes={this.state.likes} 
+        <SearchBar changeHandler={this.filter}
+          filterTarget={this.state.filterTarget}/>
+        <PostContainer data={this.state.filteredPosts.length
+        > 0 ? this.state.filteredPosts : this.state.posts} likes={this.state.likes} 
         increment={this.increment} />
       </div>
     );

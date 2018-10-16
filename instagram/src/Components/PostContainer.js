@@ -5,6 +5,9 @@ import CommentSection from './CommentSection';
 import PropTypes from 'prop-types';
 
 const PostContainer = props => {
+  if (!props.data.length) {
+    return <h1>Loading ...</h1>;
+  }
   return (
     <div className="post">
       <div>

@@ -10,7 +10,8 @@ const SearchBar = props => {
         <p className="insta-border">Instagram</p>
       </div>
       <input type="text" placeholder="Search"
-      className="search-input"/>
+      className="search-input" value={props.filterTarget}
+      onChange={props.changeHandler} name='filterTarget'/>
       <div className="right-icons">
         <i className="far fa-compass fa-2x" />
         <i className="far fa-heart fa-2x" />
