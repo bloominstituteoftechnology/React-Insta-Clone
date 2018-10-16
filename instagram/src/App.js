@@ -15,8 +15,10 @@ const AppContainer = styled.div`
   justify-content: center;
   font-size: 62.5%;
 `
-const PostContainer = styled.div`
-  display: flex;
+const PostContainer = styled.div.attrs({
+  display: props => props.display,
+})`
+  display: ${props => props.display};
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -49,27 +51,51 @@ class App extends Component {
 
   //filter post based on post username entered
   filterPost = (searchText) => {
-    let instaDisplay = document.querySelectorAll(".post-container")
-    let matchFound = false;
     this.setState({
       input: "",
-      instgram: this.state.instagram.filter((post, index) => {
-        instaDisplay[index].classList.add("hidden");
-        if((index === this.state.instagram.length-1) && (matchFound === false)) {
-          for(let i=0; i < this.state.instagram.length; i++) {
-            instaDisplay[i].classList.remove("hidden");
+      instagram: dummyData,
+    })
+    let matchFound = false;
+    let postDisplay = []
+    this.setState(prevState => {
+      return {
+        input: "",
+        instgram: prevState.instagram.filter((post, index) => {
+          if(post.username.includes(searchText)){
+            postDisplay.push(post)
+            matchFound = true;
           }
-          alert("No Matches Found")
+          if((matchFound === false && index === this.state.instagram.length-1) 
+          || (searchText === "" && index === this.state.instagram.length-1)) {
+            alert("No Matches Found")
+            return 0;
+          }
+          if(postDisplay.length > 0) {
+            this.setState({
+                input: "",
+                instagram: postDisplay,
+            })
+          }
           return 0;
-        }
-        if(post.username.includes(searchText)) {
-          instaDisplay[index].classList.remove("hidden");
-          matchFound = true;
-        }
-        return post;
-      })
+        })
+      }
     })
   }
+  //old filter
+    // let instaDisplay = document.querySelectorAll(".post-container")
+    // instaDisplay[index].classList.add("hidden");
+    // if((index === this.state.instagram.length-1) && (matchFound === false)) {
+    //   for(let i=0; i < this.state.instagram.length; i++) {
+    //     instaDisplay[i].classList.remove("hidden");
+    //   }
+    //   alert("No Matches Found")
+    //   return 0;
+    // }
+    // if(post.username.includes(searchText)) {
+    //   instaDisplay[index].classList.remove("hidden");
+    //   matchFound = true;
+    // }
+    // return post;
 
   render() {
     return (
@@ -81,7 +107,7 @@ class App extends Component {
           search={this.filterPost}
         />
         {this.state.instagram.map(data => (
-          <PostContainer className="post-container" key={data.username}>
+          <PostContainer display="flex" className="post-container" key={data.username}>
             <PostPage 
               post={data}
               text={this.state.input}
