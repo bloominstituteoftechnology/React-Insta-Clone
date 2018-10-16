@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/post-container';
-
+import './App.css'
 
 
 class App extends Component {
@@ -18,7 +18,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Instagram Clone</h1>
         <PostContainer dummyData= {this.state.dummyData} />
       </div>
     );

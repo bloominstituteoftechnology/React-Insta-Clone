@@ -1,5 +1,6 @@
 import React from 'react';
 import './post-container.css'
+import Comments from '../CommentSection/comments'
 
 const Post = props => {
     return (
@@ -10,8 +11,8 @@ const Post = props => {
             </div>
             <div className="postImage">
                 <img src={props.post.imageUrl} alt=""></img>
-                <p>{props.post.likes} likes</p>
             </div >
+            <Comments likes={props.post.like} comments={props.post.comment} />
         </div >
     )
 }
