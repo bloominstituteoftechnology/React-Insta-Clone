@@ -1,6 +1,5 @@
 import React from "react";
 import instacloneimg from "./../../imgs/instacloneimg.png";
-import "./SearchBar.css";
 import { Border, FontIcon, InputSearch, SearchWrapper, SearchContainer, ImgInsta} from "../Styles/StyledSearch"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
