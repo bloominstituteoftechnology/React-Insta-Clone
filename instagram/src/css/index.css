@@ -184,8 +184,19 @@ table {
   margin-top: 20px;
   padding: 10px 25px;
   display: flex;
+  flex-flow: row wrap;
+}
+.main-container .post-container .likes-container .img-like-box {
+  width: 100%;
+}
+.main-container .post-container .likes-container .img-like-box .like-img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 .main-container .post-container .likes-container .likes {
+  width: 100%;
+  margin-top: 10px;
   font-weight: bold;
 }
 .main-container .post-container .comment-container {

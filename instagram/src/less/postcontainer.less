@@ -37,8 +37,21 @@
             margin-top: 20px;
             padding: 10px 25px;
             display: flex;
+            flex-flow: row wrap;
+
+            .img-like-box{
+                width: @width; 
+
+                .like-img{
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 10px;
+                }
+            }
 
             .likes{
+                width: @width;
+                margin-top: 10px;
                 font-weight: bold;
             }
         }
