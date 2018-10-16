@@ -17,13 +17,16 @@ const CommentsSection = props => {
       })}
     </div>
 
-    <div className="addcomment">
+    addNewComment = (event, index) => {
+    }
+
+    <form className="addcomment">
       <input 
         type="text"
         name="entercomment"
         placeholder="add comment..."
         />
-    </div>
+    </form>
 
   </div>  
   )

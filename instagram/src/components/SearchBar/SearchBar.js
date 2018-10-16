@@ -4,7 +4,7 @@ const SearchBar = props => {
   return (
   <div className='fullSearchBar'>
     <div className='leftside'>
-      <div>@</div>
+      <img src="./icons/instacamera" alt="instacamera" />
       <div>|</div>
       <div>Instagram</div>    
     </div>
@@ -20,9 +20,9 @@ const SearchBar = props => {
     </div>
 
     <div className="rightside">
-      <div>@</div>
-      <div>@</div>
-      <div>@</div>
+      <img src="./icons/compass" alt="compass" />
+      <img src="./icons/heart" alt="heart" />
+      <img src="./icons/person" alt="person" />
     </div>
   </div>
 
