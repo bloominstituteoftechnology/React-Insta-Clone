@@ -3,29 +3,28 @@ import Comment from './Comment';
 
 const CommentsSection = props => {
   return (
-  <div>
+  <div className="commentsSection">
     <div>
-      {props.comments.map ( comment => {
+      {props.comments.map ( (comment, index) => {
         return (
-          <div>
-            <div key={comment.index}>
-              <Comment
+          <div className="comments" key={index}>
+              <Comment 
                 username = {comment.username}
                 text = {comment.text}
               />
-            </div>
           </div>
         )
       })}
     </div>
 
-    <div>
+    <div className="addcomment">
       <input 
         type="text"
         name="entercomment"
         placeholder="add comment..."
         />
     </div>
+
   </div>  
   )
 }

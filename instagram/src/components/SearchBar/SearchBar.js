@@ -9,7 +9,7 @@ const SearchBar = props => {
       <div>Instagram</div>    
     </div>
 
-    <div className='search=center'>
+    <div className='searchcenter'>
       <div>
         <input 
           type="text" 
@@ -19,7 +19,7 @@ const SearchBar = props => {
       </div>
     </div>
 
-    <div>
+    <div className="rightside">
       <div>@</div>
       <div>@</div>
       <div>@</div>

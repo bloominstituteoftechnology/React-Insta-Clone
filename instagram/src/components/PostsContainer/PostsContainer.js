@@ -8,9 +8,9 @@ const PostsContainer = props => {
   return (
     <div className="post">
       <div>
-        {props.posts.map( post => {
+        {props.posts.map( (post, index) => {
           return (
-            <div className="postsContainer" key={post.timestamp}>
+            <div className="postsContainer" key={index}>
               <Post 
                 thumbnailUrl = {post.thumbnailUrl}
                 username = {post.username}
