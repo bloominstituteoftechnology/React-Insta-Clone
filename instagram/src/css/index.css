@@ -181,7 +181,8 @@ table {
 }
 .main-container .post-container .likes-container {
   width: 100%;
-  padding: 20px 25px;
+  margin-top: 20px;
+  padding: 10px 25px;
   display: flex;
 }
 .main-container .post-container .likes-container .likes {
@@ -189,7 +190,7 @@ table {
 }
 .main-container .post-container .comment-container {
   width: 100%;
-  padding: 20px 25px;
+  padding: 0 25px;
   display: flex;
   flex-flow: row wrap;
 }
@@ -203,7 +204,15 @@ table {
 .main-container .post-container .comment-container .comment-text {
   width: 100%;
   margin-left: 10px;
+  line-height: 1.2rem;
 }
 .main-container .post-container .timestamp-container {
   width: 100%;
+  margin-top: 20px;
+  padding: 0 25px;
+  display: flex;
+}
+.main-container .post-container .timestamp-container .timestamp {
+  font-size: 1rem;
+  color: #bdc3c7;
 }

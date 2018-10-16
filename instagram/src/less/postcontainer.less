@@ -34,7 +34,8 @@
 
         .likes-container{
             width: @width;
-            padding: 20px 25px;
+            margin-top: 20px;
+            padding: 10px 25px;
             display: flex;
 
             .likes{
@@ -44,7 +45,7 @@
 
         .comment-container{
             width: @width;
-            padding: 20px 25px;
+            padding: 0 25px;
             display: flex;
             flex-flow: row wrap;
 
@@ -60,14 +61,19 @@
             .comment-text{
                 width: @width;
                 margin-left: 10px;
+                line-height: 1.2rem;
             }
         }
 
         .timestamp-container{
-            width: @width;  
+            width: @width;
+            margin-top: 20px;
+            padding: 0 25px;
+            display: flex; 
 
             .timestamp{
-
+                font-size: 1rem;
+                color: #bdc3c7;
             }
         }
     }
