@@ -1,22 +1,65 @@
 .main-container{
     .search-bar-container{
         width: 100%;
-        border: 1px solid red;
+        
+        margin-top: 30px;
         display: flex;
         flex-flow: columns wrap;
-        padding: 10px;
+        align-content: center;
+        justify-content: space-evenly;
+        padding: 0px;
 
         .logo{
-            border: 1px solid blue;
+            width: 25%;
             display:flex;
             flex-flow: columns wrap;
+            align-items: center;
 
             .logoBox{
                 width: 30px;
                 height: 30px;
             }
-            
+
+            .logoPipe{
+                height: 40px;
+                margin:  0 5px;
+                padding: 0;
+                font-size: 35px;
+            }
+
             .logoTxt{
+                height: 30px;
+            }
+        }
+
+        .search-container{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .search-input{
+                width: 300px;
+                height: 30px;
+                border: 1px solid #ccc;
+                background-color: #eeeeee;
+                border-radius: 5px;
+            }
+
+            .search-input::placeholder{
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+
+        .search-bar-icons{
+            width: 25%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .search-icons{
+                width: 30px;
                 height: 30px;
             }
         }

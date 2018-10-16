@@ -146,21 +146,57 @@ table {
 }
 .main-container .search-bar-container {
   width: 100%;
-  border: 1px solid red;
+  margin-top: 30px;
   display: flex;
   flex-flow: columns wrap;
-  padding: 10px;
+  align-content: center;
+  justify-content: space-evenly;
+  padding: 0px;
 }
 .main-container .search-bar-container .logo {
-  border: 1px solid blue;
+  width: 25%;
   display: flex;
   flex-flow: columns wrap;
+  align-items: center;
 }
 .main-container .search-bar-container .logo .logoBox {
   width: 30px;
   height: 30px;
 }
+.main-container .search-bar-container .logo .logoPipe {
+  height: 40px;
+  margin: 0 5px;
+  padding: 0;
+  font-size: 35px;
+}
 .main-container .search-bar-container .logo .logoTxt {
+  height: 30px;
+}
+.main-container .search-bar-container .search-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .search-bar-container .search-container .search-input {
+  width: 300px;
+  height: 30px;
+  border: 1px solid #ccc;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+.main-container .search-bar-container .search-container .search-input::placeholder {
+  text-align: center;
+  font-size: 1rem;
+}
+.main-container .search-bar-container .search-bar-icons {
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main-container .search-bar-container .search-bar-icons .search-icons {
+  width: 30px;
   height: 30px;
 }
 .main-container .post-container {
