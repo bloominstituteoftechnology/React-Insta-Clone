@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from './dummy-data'
-import PostsContainer from './components/PostsContainer/PostsContainer'
+import dummyData from './dummy-data';
+import PostsContainer from './components/PostsContainer/PostsContainer';
+import CommentsSection from './components/CommentsSection/CommentsSection';
 
 class App extends Component {
   constructor() {
@@ -13,6 +14,7 @@ class App extends Component {
     return (
       <div className="App">
         <PostsContainer posts={this.state.instaData}/>
+        <CommentsSection comments={this.state.instaData}/>
       </div>
     );
   }
