@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Post = props => {
   return (
@@ -6,7 +6,7 @@ const Post = props => {
       <img src={props.thumbnailUrl} alt="avatar" />
       <p>{props.username}</p>
       <img src={props.imageUrl} alt="main" />
-      <p>{props.likes}</p>
+      <p>{props.likes} likes</p>
       <p>{props.timestamp}</p>
     </div>
   )
