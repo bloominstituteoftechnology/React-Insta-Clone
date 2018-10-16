@@ -1,10 +1,11 @@
 import React from 'react';
 
 
-const CommentInput = props =>(
+const CommentSection = props =>(
 
 <div className="comment">
-<input type= 'text' placeholder= "Have a thought?" />
+
+<input type= 'text' placeholder= "Add a Comment" />
 
 
 </div>
