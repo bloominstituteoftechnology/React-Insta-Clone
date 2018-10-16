@@ -7,6 +7,8 @@ import dummyData from './dummy-data';
 
 import './components/SearchBar/components/search.css';
 import './components/PostContainer/components/container.css';
+import './components/CommentSection/components/comment.css';
+
 
 
 class App extends Component {

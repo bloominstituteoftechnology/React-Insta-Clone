@@ -16,7 +16,7 @@ const Container = props => {
                         <div class="postBody">
                             <img src={item.imageUrl} />
                         </div>
-                        372 likes
+                        <div class="likes">372 likes </div>
                         <Comment comment={item}/>
                     </div> 
                 )

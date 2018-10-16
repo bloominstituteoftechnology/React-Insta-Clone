@@ -1,9 +1,33 @@
+.postContainer {
+    width: 100%;
+    border: 1px solid darkgray;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding:25px;
+}
+.postContainer .postHeader {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+}
 .postContainer .postHeader img {
-    border: 1px solid gray;
-    height: 30px;
+    height: 60px;
+    border-radius: 50px;
     width: auto;
+    margin-right: 32px;
 }
 
-.postContainer img {
-    width: 80px;
+.postContainer .postBody img {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+.postContainer .likes {
+    color: darkgray;
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
 }
