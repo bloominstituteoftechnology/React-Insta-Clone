@@ -17,7 +17,7 @@ const PostContainer = props => {
                         <p className = 'username'><strong>{data.username}</strong></p>
                     </div>
                     <img src ={data.imageUrl} alt = 'img'/>
-                    <p>{data.likes} likes</p>
+                    <p><strong>{data.likes} likes</strong></p>
                     <p>{data.timestamp}</p>
                     <CommentSection item={data}/>
                 </div>  
@@ -28,17 +28,8 @@ const PostContainer = props => {
     )
 }
  PostContainer.propTypes = {
-     username: PropTypes.string,
-     thumbnailUrl: PropTypes.string,
-     imageUrl: PropTypes.string,
-     likes: PropTypes.number,
-     timestamp: PropTypes.string,
-     comments: PropTypes.arrayOf(PropTypes.string),
+         dummyData: PropTypes.array
  }
-
-
-
-
 
 
 

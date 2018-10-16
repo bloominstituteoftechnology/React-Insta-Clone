@@ -7,16 +7,17 @@ class CommentSection extends React.Component {
         super(props);
         this.state = {
             comments: props.item.comments,
-            newComment: ""
+            comment: "",
+            placeholder: 'Add a comment...'
         }
     }
 
     addNewComment = event => {
        event.preventDefault();
-       const newComment = {username: 'JakeAndPhil', text: this.state.newComment} 
+       const newComment = {username: 'JakeAndPhil', text: this.state.comment} 
        const comments = this.state.comments.slice();
        comments.push(newComment)
-       this.setState({comments, newComment: ''})
+       this.setState({comments, comment: '', placeholder: 'Add a comment...'})
        console.log(newComment)
        
     };
@@ -24,7 +25,7 @@ class CommentSection extends React.Component {
     changeHandler= event => {
         console.log('event name', event.target.name);
         console.log('event value', event.target.value);
-        this.setState({ newComment: event.target.value });
+        this.setState({ comment: event.target.value });
     };
 
 
@@ -43,9 +44,9 @@ class CommentSection extends React.Component {
                 <form className = 'form' onSubmit={this.addNewComment} >
                     <input 
                            type="text" 
-                           placeholder="Add a comment..." 
+                           placeholder= {this.state.placeholder} 
                            onChange={this.changeHandler}
-                           
+                           value={this.state.comment}
                            />
                         
                 </form>  
