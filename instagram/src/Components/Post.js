@@ -1,15 +1,18 @@
 import React from 'react';
-import PostContainer from './PostContainer';
-import dummyData from '../dummy-data';
+import PropTypes from 'prop-types';
+import './../App.css';
 
 
 const Post = props => {
   return (
-    <div className='post-con'>
-      {dummyData.map(post => (
-      <PostContainer post={post} key={post.username}/>
-      ))}
+    <div className='images'>
+      <img src={props.thumbnail} alt='thumb' className='thumbnail'/>
+      <p className='username'>{props.username}</p>
+      <div>
+        <img src={props.image} />
+      </div>
     </div>
+    
   );
 };
 

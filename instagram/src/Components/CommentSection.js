@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ThreeDots from './Img/three dot.png';
 import Input from './Input';
 import Comment from './Comment';
 
@@ -18,7 +17,7 @@ class CommentSection extends Component {
     event.preventDefault();
     const comments = this.state.comments.slice();
     comments.push({username: 'VaderSteve', text: this.state.text});
-    this.setState({comments: comments, text: ''});
+    this.setState({comments: comments, text:''});
   };
   changeComment = event => {
     event.preventDefault();
