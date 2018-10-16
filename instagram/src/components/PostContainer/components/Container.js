@@ -19,7 +19,7 @@ const Container = props => {
                         </div>
                         <div class="likes">{item.likes} likes</div>
                         <Comment 
-                        input={item.comments}
+                        comments={item.comments}
                         />
                     </div> 
                 )

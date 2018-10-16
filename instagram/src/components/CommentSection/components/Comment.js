@@ -1,9 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Comment = (props) => {
-    return ( <div class="commentContainer">
-        {props.input.map((item, index) => {
+class Comment extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            comments: props.comments,
+            newData: '',
+        
+        };
+    }
+    addComment = event => {
+        event.preventDefault();
+        this.setState({
+          data: [
+            ...this.state.comments,
+            { comments: this.state.newData }
+          ],
+          newData: '',
+        })
+      }
+      changeHandler = event => {
+        this.setState({ [event.target.name]: event.target.value})
+      }
+    render() {
+        return(
+        <div class="commentContainer">
+        {this.state.comments.map((item, index) => {
             return (
                 <div class="comment"
                 key={index}>
@@ -13,17 +36,18 @@ const Comment = (props) => {
             )
         })}
             <div class="timestamp">6 hours ago</div>
-            <form class="addComment" onSubmit={props.addComment}>
+            <form class="addComment" onSubmit={this.addComment}>
                 <input 
                 type="text" 
                 placeholder="Add a comment . . ."
-                onChange={props.changeHandler}
                 name="newData"
-                value={props.newData}
+                value={this.newData}
                 ></input>
             </form>
-        </div> );
+        </div>
+        )}
 }
+
 Comment.propTypes = {
     input: PropTypes.shape({
         username: PropTypes.string.isRequired,
