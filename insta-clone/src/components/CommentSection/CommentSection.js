@@ -1,6 +1,6 @@
 import React from "react";
-import Comment from './Comment'
-import { CommentWrapper } from '../Styles/StylePost'
+import Comment from "./Comment";
+import { CommentWrapper } from "../Styles/StylePost";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import moment from "moment";
@@ -14,50 +14,47 @@ class CommentSection extends React.Component {
       images: props.image,
       likes: props.likes,
       timestamp: props.timestamp,
-      id: props.index,
+      id: props.id,
       text: "",
-      username: ''
+      username: ""
     };
   }
-// Add a like function to counter each click
+  // Add a like function to counter each click
   addALike = e => {
     this.setState({ likes: this.state.likes + 1 });
   };
-  componentDidMount = ()=> {
-    const user = localStorage.getItem('user')
+  componentDidMount = () => {
+    const user = localStorage.getItem("user");
     this.setState({
       username: user
-    })
-    // let comments = localStorage.getItem('post')
-    // if(comments) {
-    //   this.setState({comments: JSON.parse(comments))
-    // }
-}
-  addNewComment = () => {  
-
+    });
+    if (!localStorage.getItem(this.state.id)) {
+      localStorage.setItem(this.state.id, JSON.stringify(this.state.comments));
+    } else {
+      let value = localStorage.getItem(this.state.id);
+      value = JSON.parse(value);
+      this.setState({ comments: value });
+    }
+  };
+  addNewComment = index => {
     // What does state currently have
     const newPost = {
       username: this.state.username,
       text: this.state.text
     };
-     // Create and array holder
-    const comments = [...this.state.comments];
-    // Push new comments onto the post
-    comments.push(newPost);
+    // Create and array holder
+    const comments = [...this.state.comments, newPost];
+
     //set state to new comment and send the entire array to localStorage.
     this.setState({
       comments,
       text: ""
-    });
+    },   // Persist data to database (localStorage)
+      localStorage.setItem(this.state.id, JSON.stringify(comments)));
+
+
 
   };
-
-
-  saveToLocal = () => {
-     const post = [...this.state.comments]
-     console.log(post)
-
-  }
 
 
   handleChange = (key, value) => {
@@ -83,7 +80,7 @@ class CommentSection extends React.Component {
               comments={comment.text}
               key={index}
               name={this.state.timestamp}
-              id={comment.index}
+              id={this.state.id}
             />
           );
         })}
@@ -92,7 +89,10 @@ class CommentSection extends React.Component {
         <p>{now}</p>
         <form
           className="form-comment"
-          onSubmit={e => { e.preventDefault(); this.addNewComment();}}
+          onSubmit={e => {
+            e.preventDefault();
+            this.addNewComment();
+          }}
         >
           <FontAwesomeIcon className="more-icon" icon={["fas", "ellipsis-h"]} />
           <input
@@ -100,6 +100,7 @@ class CommentSection extends React.Component {
             value={this.state.text}
             onChange={e => this.handleChange("text", e.target.value)}
             placeholder="Add comment..."
+            id={this.state.id}
           />
         </form>
       </CommentWrapper>

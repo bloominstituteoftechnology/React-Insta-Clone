@@ -15,8 +15,6 @@ class PostPage extends Component {
     componentDidMount() {
         //Mounting the data after it renders.
         this.setState({ data: dummyData });
-        const dataCopy = JSON.parse(localStorage.getItem('data'))
-        console.log(dataCopy)
 
     }
 
@@ -40,7 +38,7 @@ class PostPage extends Component {
                     />
 
 
-                    <PostContainer dummyData={this.state.data} />
+                <PostContainer dummyData={this.state.data} />
 
             </Post>
         );

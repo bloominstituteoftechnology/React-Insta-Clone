@@ -20,7 +20,7 @@ const PostHeader = props => {
 
 
 PostHeader.propTypes = {
-  thumbnailUrl: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired
 }
 
