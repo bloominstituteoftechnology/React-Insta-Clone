@@ -5,6 +5,12 @@ import SearchBar from "./Components/SearchBar";
 import dummyData from './dummy-data';
 
 class App extends Component {
+
+
+
+
+
+  
   render() {
     return (
       <div className="App">

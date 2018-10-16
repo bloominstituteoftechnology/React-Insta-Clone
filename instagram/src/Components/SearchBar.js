@@ -12,7 +12,7 @@ const SearchBar = props =>
 
     <div className="search-bar-container">
     <img src="#" className="logo"/>
-    <img src="#" className="heart"/>
+    <img src=".\Images\heart.svg" className="heart"/>
     <img src="#" className="lilguy" />
 
     
