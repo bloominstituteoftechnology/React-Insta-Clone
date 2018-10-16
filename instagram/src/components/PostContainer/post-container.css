@@ -1,0 +1,9 @@
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+.postHeader {
+    display: flex;
+    flex-direction: row;
+}
