@@ -13,3 +13,12 @@
 .post-image {
     width: 99%;
 }
+
+.likes {
+    font-weight: bold;
+}
+
+.social-wrapper {
+    display: flex;
+    
+}
