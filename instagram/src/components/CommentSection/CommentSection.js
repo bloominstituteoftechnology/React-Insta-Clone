@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Comments from './Comments';
-import CommentInput from './CommentInput';
+import Comments from '../CommentSection/Comments';
+import CommentInput from '../CommentSection/CommentInput';
 
 
 
@@ -14,12 +14,17 @@ class CommentSection extends React.Component {
             comment: ''
         };
     }
+
+    commentHandler = event => {
+        this.setState({comment: event.target.value});
+      }
+
     render() {
         return (
             <div>
                 {this.state.comments.map((comment, index) => <Comments key = {index} comment ={comment} />)}
                 <CommentInput 
-                comment = {this.state.comments} />
+                changeHandler = {this.commentHandler} />
             </div>
         )
     }
