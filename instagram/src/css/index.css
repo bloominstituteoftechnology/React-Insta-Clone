@@ -138,3 +138,16 @@ table {
   display: flex;
   flex-flow: row wrap;
 }
+.main-container .search-bar-container {
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+  flex-flow: columns wrap;
+  padding: 20px;
+}
+.main-container .post-container {
+  width: 100%;
+  border: 1px solid green;
+  display: flex;
+  flex-flow: row wrap;
+}
