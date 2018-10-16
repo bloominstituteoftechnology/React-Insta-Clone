@@ -4,16 +4,19 @@ import './postContainer.css';
 import PropTypes from 'prop-types';
 
 const PostContainer = props => {
+    if (!props.dummyData.length) {
+        return <h4>Loading Posts...</h4>;
+    }
     return (
         <div className = 'postContainer'>
-        {props.dummyData.map (data => {
+        {props.dummyData.map ((data, index) => {
             return (
-                <div className = 'posts'>
+                <div className = 'posts' key = {index}>
                     <div className = 'thumbName'>
-                        <img clasName = 'thumbnail' src ={data.thumbnailUrl}/>
-                        <p><strong>{data.username}</strong></p>
+                        <img className = 'thumbnail' src ={data.thumbnailUrl} alt = 'img'/>
+                        <p className = 'username'><strong>{data.username}</strong></p>
                     </div>
-                    <img src ={data.imageUrl}/>
+                    <img src ={data.imageUrl} alt = 'img'/>
                     <p>{data.likes} likes</p>
                     <p>{data.timestamp}</p>
                     <CommentSection item={data}/>
