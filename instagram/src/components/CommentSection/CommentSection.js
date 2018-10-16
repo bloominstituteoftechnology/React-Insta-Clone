@@ -17,14 +17,23 @@ class CommentSection extends React.Component {
 
     commentHandler = event => {
         this.setState({comment: event.target.value});
-      }
+    };
+
+    submitHandler = event => {
+        event.preventDefault(); //prevent page refresh
+        const newComment = {text: this.state.comment, username: this.state.username };
+        const comments = this.state.comments.slice();
+        comments.push(newComment);
+        this.setState({comments, comment: ''}) //replaces state: select comments field and add to comments ES6
+    };//build out comment object, clone comments array, push to clone, set new clone as state
 
     render() {
         return (
             <div>
                 {this.state.comments.map((comment, index) => <Comments key = {index} comment ={comment} />)}
                 <CommentInput 
-                changeHandler = {this.commentHandler} />
+                submitHandler = {this.submitHandler}
+                changeHandler = {this.commentHandler} comment = {this.state.comment}/>
             </div>
         )
     }
