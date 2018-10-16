@@ -9,8 +9,15 @@ const CommentSection = props => {
         <Icon.Heart />
         <Icon.MessageCircle />
       </div>
-      <p>{props.likes} likes</p>
-      This is where the Comment Section will be
+      <p>{props.post.likes} likes</p>
+      {props.post.comments.map( (comment, i) => {
+         return (
+            <div className="comment">
+               <h3>{comment.username}</h3>
+               <p>{comment.text}</p>
+            </div>
+            )
+        })}
     </div>
   )
 }
