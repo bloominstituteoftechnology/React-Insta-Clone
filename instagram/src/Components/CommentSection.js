@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Input from './Input';
 import Comment from './Comment';
 
-class CommentSection extends Component {
-  constructor() {
-    super();
+class CommentSection extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
-      comments: [this.props.comments],
+      comments: [...props.comments],
       user: "",
       text: ""
-    }
+    };
   }
 
   addNewComment = (event, index) => {
@@ -36,7 +36,7 @@ class CommentSection extends Component {
           value={this.state.text}
         />
       </div>
-    )
+    );
   }
 }
 

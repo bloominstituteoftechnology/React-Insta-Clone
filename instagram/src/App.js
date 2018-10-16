@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SearchBar from '../src/Components/SearchBar';
 import dummyData from './dummy-data';
 import PostContainer from './Components/PostContainer';
-import Post from './Components/SearchBar';
+import './App.css';
 
 
 class App extends Component {
@@ -31,7 +31,8 @@ class App extends Component {
     return (
       <div className='app-wrap'>
         <SearchBar />
-        <PostContainer likes={this.state.likes} increment={this.increment} />
+        <PostContainer likes={this.state.likes} 
+        increment={this.increment} />
       </div>
     );
   }
