@@ -7,20 +7,20 @@ const SearchBar = props => {
         <div className='search-bar-wrap'>
         <div className='image'>
             <img alt='instagram logo' src={IGLogo} className='logo' />
+              <i className="fab fa-instagram fa-3x" />
         </div>
         <div className='search'>
             <input type='text' placeholder='Search' onChange={props.searchPosts} />
-            <button type="submit"><i className="fa fa-search"></i></button>
         </div>
         <div className="social-wrap">
         <div className="social">
-          <i className="fa fa-compass" />
+          <i className="far fa-compass fa-3x" />
         </div>
         <div className="social">
-          <i className="fa fa-heart" />
+          <i className="far fa-heart fa-3x" />
         </div>
         <div className="social">
-          <i className="fa fa-user-circle" />
+          <i className="far fa-user-circle fa-3x" />
         </div>
       </div>
     </div>

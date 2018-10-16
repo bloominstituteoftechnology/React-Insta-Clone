@@ -1,4 +1,7 @@
 .App {
+  max-width: 1920px;
+  min-width: 920px;
+  width: 90%;
   text-align: center;
   margin: 0 auto;
   font-size: 62.5%;
