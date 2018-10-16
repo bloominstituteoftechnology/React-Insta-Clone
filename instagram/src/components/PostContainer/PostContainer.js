@@ -3,7 +3,7 @@ import Comment from '../CommentSection/CommentSection.js'
 import './Post.css'
 import PropTypes from 'prop-types';
 import PostPages from './PostPages.js'
-
+import Post from "./Post.js"
 class PostContainer extends Component {
 	constructor() {
 		super()
@@ -14,14 +14,14 @@ class PostContainer extends Component {
 			<div>
 		      {this.props.data.map(data => (
 			  <div className="postContainer">
-			  	<PostPages 
-				  key={data.timestamp}
+			  	<Post 
+				  key={Math.random()} 
 				  username={data.username}
 				  imageUrl={data.imageUrl}
 				  thumbnailUrl={data.thumbnailUrl}
 				/>
 				<Comment 
-				  key={data.timestamp}
+				  key={Math.random()}
 			      comments={data.comments}
 				  likes={data.likes}
 				  timestamp={data.timestamp}

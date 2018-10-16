@@ -7,7 +7,8 @@ class Comment extends Component  {
 	constructor() {
 		super()
 		this.state = {
-			
+			comment: [],
+			likes: []
 		}
 	}
 	
@@ -40,7 +41,7 @@ class Comment extends Component  {
 
 	submitLikes = e => {
 		this.setState(prevState => ({
-			likes: this.props.likes + 1
+			likes: prevState.likes + 1
 		}));
 	}
 	
@@ -48,8 +49,8 @@ class Comment extends Component  {
 		return(
 			<div className="commentContainer">
 				<div className="bottomIcons">
-				  <i class="far fa-heart fa-2x" onClick={this.submitLikes}></i>
-				  <i class="far fa-comment fa-2x"></i>
+				  <i className="far fa-heart fa-2x" onClick={this.submitLikes}></i>
+				  <i className="far fa-comment fa-2x"></i>
 				</div>
 				<h3 className="likes">{this.state.likes} likes</h3>
 				{this.props.comments.map(data => (

@@ -1,20 +1,54 @@
 import React, { Component } from "react";
-
+import dummyData from '../../dummy-data.js'
+import SearchBar from '../SearchBar/SearchBar.js'
+import PostContainer from './PostContainer.js'
 class PostPages extends Component {
 	constructor() {
 		super();
+		this.state = {
+			dummyData: [],
+			search: ''
+		}
+	}
+	
+	componentDidMount() {
+		this.setState({
+			dummyData: dummyData
+		});
+	}
+	
+	handleInput = e => {
+		this.setState ({
+			search: e.target.value
+		})
+	}
+	
+	handleInputChange = e => {
+		e.preventDefault(); 
+		const filterPost = this.state.dummyData.filter(data => {
+			if(data.username.includes(this.state.search)) {
+				return data;
+			}
+		})
+		this.setState ({
+			dummyData: filterPost,
+			search: ''
+		})
 	}
 	
 	render() { 
 	  return(
-	  	<div >
-		  <div className="postHeader">
-			<img className="headerImg" alt="thumbnail" src={this.props.thumbnailUrl} />
-			  <h3>{this.props.username}</h3>
-		  </div>
-		  <div className="imageContainer">
-			  <img alt="post" src={this.props.imageUrl} className="postImg" />
-		  </div>
+	  	 <div>
+		  <SearchBar 
+			  input={this.state.search}
+			  onChange={this.handleInput}
+			  onSubmit={this.handleInputChange}
+		  />
+			  <div>
+				  <PostContainer 
+					  data={this.state.dummyData} 
+				  />
+			  </div>
 		</div>
 	  )
 	}

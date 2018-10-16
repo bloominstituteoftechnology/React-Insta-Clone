@@ -16,7 +16,9 @@ class SearchBar extends Component {
 				<div className="vertical"></div>
 				<img src={logo} alt="instagram logo" className="logo" />
 			</div>
-			<input className="inputBar" type="text" placeholder="Search"></input>
+			<form className="inputBarForm" onSubmit={this.props.onSubmit}> 
+			  <input className="inputBar" type="text" placeholder="Search" onChange={this.props.onChange} value={this.props.input} />
+			</form>
 			<div className="right-items">
 				<i className="far fa-compass fa-2x"></i>
 				<i className="far fa-heart fa-2x"></i>
