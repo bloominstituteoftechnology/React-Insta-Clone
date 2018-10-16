@@ -1,0 +1,21 @@
+.post-container {
+    display: flex;
+    flex-direction: column;
+    border:1px solid lightgrey;
+    margin:0 auto;
+    width:45%;
+}
+
+.user-photo {
+    width:80px;
+}
+
+.post-container section {
+    display:flex;
+    flex-direction: row;
+}
+
+
+.middle img {
+    width:100%;
+}

@@ -1,0 +1,23 @@
+.bottom{
+    width:90%;
+    margin:0 auto;
+}
+
+.bottom .top{
+    display:flex;
+    flex-direction: row;
+    padding:20px 0px;
+    justify-content: space-between;
+    
+}
+
+.heart-comment{
+    display:flex;
+    justify-content: space-between;
+    width:15%;
+}
+
+.bottom img {
+    width: 30px;
+}
+

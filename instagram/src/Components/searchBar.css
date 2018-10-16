@@ -3,14 +3,18 @@ header{
     flex-direction: row;
     height:50px;
     align-items: center;
-    margin-top:50px;
+    
     justify-content: space-around;
+    border-bottom: 1px solid lightgrey;
+    padding:20px;
+    
     
 }
 header div{
     display:flex;
     align-items: center;
     justify-content: space-between;
+    
     
 }
 header img {

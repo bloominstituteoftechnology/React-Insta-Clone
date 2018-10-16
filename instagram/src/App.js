@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import SearchBar from './Components/SearchBar'
+import PostContainer from './Components/PostContainer'
+
 
 class App extends Component {
   constructor() {
@@ -25,7 +27,8 @@ class App extends Component {
     return(
       <div className="App">
       <SearchBar value={this.state.search} inputHandler={this.inputHandler}/>
-
+      <PostContainer />
+      
       </div>
     );
   }
