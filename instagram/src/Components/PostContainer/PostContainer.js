@@ -5,10 +5,16 @@ import './post.css';
 
 class PostContainer extends React.Component {
 
+    componentDidMount() {
+        
+        console.log(this.props.subComment)
+    }
+
     render () {
         return (
             <div className={"postWrap"}>
-                <PostContent 
+                <PostContent
+                subComment={this.props.subComment}
                 commentHandler={this.props.commentHandler}
                 dummyData={this.props.dummyData}/>
             </div>
@@ -17,4 +23,4 @@ class PostContainer extends React.Component {
 }
 
 
-export default PostContainer;
+export default PostContainer;  

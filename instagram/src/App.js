@@ -1,50 +1,64 @@
 import React  from 'react';
 import './App.css';
+// import PropTypes from 'prop-types';
 import dummyData from './dummy-data';
 import SearchContainer from './Components/SearchBar/SearchContainer';
 import PostContainer from './Components/PostContainer/PostContainer';
 
 class App extends React.Component {
 
-  state = {
-    newComment: "",
-    data: [{dummyData}],
-  }
-  
+constructor(props) {
+  super(props);
 
-commentHandler = (e) => {
-      this.setState({
-        newComment: e.target.value,
-      });
+  this.state = {
+    data: [],
+    newData: [],
+    newComment: "",
+  };
 }
 
-subComment = (e) => {
-    this.setState({
-        data: 
+
+
+componentDidMount() {
+  this.setState({
+    data: dummyData,
     })
 }
 
 
+commentHandler = (comment) => {
+      this.setState ({
+      newComment: comment,
+    });
+}
+
+subComment = (e) => {
+    e.preventDefault();
+      this.setState({
+        data: [...this.state.data, {username: "Furryduckie", text: this.state.newComment}]
+      })
+}
 
 
 
-
-
-
-
-
-
- 
   render() {
+
     return (
       <div className="App">
               <SearchContainer  />
-              <PostContainer 
+              <PostContainer
+              subComment={this.subComment}
               commentHandler={this.commentHandler}
+              comments={this.state.commentData}
               dummyData={dummyData} />
       </div>
     );
   }
+
 }
 
+
+
 export default App;
+
+

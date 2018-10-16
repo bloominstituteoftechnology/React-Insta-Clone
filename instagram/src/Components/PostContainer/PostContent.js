@@ -5,13 +5,19 @@ import './post.css';
 
 class PostContent extends React.Component {
 
+
+    componentDidMount(){
+        console.log("Post Content did mount")
+        console.log(this.props)
+    }
+
     render() {
 
         return (
             <div key={this.props.timestamp}>
                 {this.props.dummyData.map(postProps => {
                     return (
-                        <>
+                        <div>
                             <div className={"postHeader"}>
                             <img className={"profileThumbImg"} src={postProps.thumbnailUrl} alt={"profile pic"}/>
                             <h4>{postProps.username}</h4>
@@ -21,8 +27,8 @@ class PostContent extends React.Component {
                             </div>
                             <div className="likes">
                                 <div className="comIconWrap">
-                                <i class = "far fa-heart" > </i>
-                                < i class = "far fa-comment" > </i>
+                                <i className= "far fa-heart" > </i>
+                                < i className= "far fa-comment" > </i>
                                 </div>
                                 <h3>{postProps.likes}{" likes"}</h3>
                             </div>
@@ -31,7 +37,7 @@ class PostContent extends React.Component {
                              <div> {
                                     postProps.comments.map((newData) => {
                                         return (
-                                            <div className={"commentWrap"} key={postProps.username.toString()}>
+                                            <div className={"commentWrap"}>
                                                 <h4>{newData.username}</h4>
                                                 <p className={"comment"}>{newData.text}</p>
                                             </div>
@@ -40,12 +46,14 @@ class PostContent extends React.Component {
                               }</div> //end comments 
                             }
                     <div>
-                    <CommentFooter 
+                    <CommentFooter
+                    subComment={this.props.subComment}
                     dummyData={this.props.dummyData}
-                    commentHandler={this.props.commentHandler} />
+                    commentHandler={this.props.commentHandler}
+                    comments={this.props.comments} />
                     </div>
                         </div> 
-                    </> //end comments wrap
+                    </div> //end comments wrap
                     )
                 })}
             </div>

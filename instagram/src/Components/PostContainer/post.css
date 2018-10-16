@@ -38,10 +38,14 @@
     font-weight: normal;
     margin: 5px 0;
 }
+
+
 .comIconWrap {
     display: flex;
  
 }
+
+
 
 .fa-heart {
     display: flex;
@@ -49,12 +53,16 @@
     padding-left: 20px;
     justify-content: left;
 }
+
+
 .fa-comment {
     display: flex;
     font-size: 1.3rem;
     padding-left: 20px;
     justify-content: left;
 }
+
+
 .color {
     color: red;
 }
