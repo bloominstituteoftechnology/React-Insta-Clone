@@ -1,13 +1,13 @@
 import React from 'react';
 import './SearchBar.css';
+import logo from '.././assets/ig_search_bar.png';
 
 const SearchBar = props => {
     return (
         <div className= "searchBar_wrapper">
-            {/* <div className= "instaLogo_container">-Insta Logos-</div>
-            <div className= "searchBar_container">-SEARCH BAR-</div>
-            <div className= "instaHeaderIcons_container">-Insta Icons * :-> $-</div> */}
-            <div>{props.headerImgs.header}</div>
+            <div>
+                <img src={logo} alt="header-searchBar-img" height="42" width="800"></img>
+            </div>
         </div>
     )
 } 

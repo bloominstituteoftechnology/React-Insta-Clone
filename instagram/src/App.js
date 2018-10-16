@@ -10,9 +10,6 @@ class App extends Component {
     super();
     this.state = {
       instaData: dummyData, 
-      imgAssets: { 
-        header: 'This is a test',
-      },
     }
   }
 
