@@ -9,7 +9,10 @@ class App extends Component {
   constructor(props) {
     super();
     this.state = {
-      instaData: dummyData
+      instaData: dummyData, 
+      imgAssets: { 
+        header: 'This is a test',
+      },
     }
   }
 
@@ -17,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar instaData = {this.state.instaData}/>
+        <SearchBar instaData = {this.state.instaData} headerImgs={this.state.imgAssets}/>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -30,7 +33,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Let's Clone Instgram!!!
+            Let's Clone Instagram!!!
           </a>
         </header>
       </div>
