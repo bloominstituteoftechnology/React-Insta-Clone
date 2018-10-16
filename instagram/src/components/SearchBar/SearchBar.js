@@ -1,6 +1,6 @@
 import React from 'react'
 import './SearchBar.css'
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import {  Form, FormGroup, Input } from 'reactstrap';
 import * as Icon from 'react-feather'
 
 const SearchBar = props => {
