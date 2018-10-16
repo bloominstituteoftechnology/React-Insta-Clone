@@ -14,9 +14,11 @@ const PostContainer = (props) => {
                 </div>
         );
 
+        
+}
+
         PostContainer.propTypes = {
                 comment: PropTypes.objectOf(PropTypes.string).isRequired
-            };
-}
+        }
 
 export default PostContainer;
