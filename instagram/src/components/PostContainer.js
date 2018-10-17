@@ -40,7 +40,11 @@ const PostContainer = (props) => {
                             {/* PostContainer Post Content Footer Section end */}
 
                             {/* PostContainer Comment Section Start */}
-                            <CommentSection />
+                            <CommentSection comments = {user.comments} />
+                            {/* <div className= "comments">
+                                {props.instaData.map()}
+                            </div> */}
+                            
                             {/* <div className= "post-content-comments-wrapper">
                                 COMMENT SECTION PLACEHOLDER
                             </div> */}
