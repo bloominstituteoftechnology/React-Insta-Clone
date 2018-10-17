@@ -16,8 +16,10 @@ const PostContainer = props => {
                         <img className = 'thumbnail' src ={data.thumbnailUrl} alt = 'img'/>
                         <p className = 'username'><strong>{data.username}</strong></p>
                     </div>
-                    <img src ={data.imageUrl} alt = 'img'/>
-                    <p><strong>{data.likes} likes</strong></p>
+                        <img src ={data.imageUrl} alt = 'img'/>
+                    <div className= 'likes'>
+                        <p ><strong>{data.likes} likes</strong></p>
+                    </div>
                     <p>{data.timestamp}</p>
                     <CommentSection item={data}/>
                 </div>  
