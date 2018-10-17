@@ -8,16 +8,22 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      data: dummyData
+      data: [] 
     }
+
+    console.log("Constructor Invoked")
   }
 
   randomIdGenerator = () => {
     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
   }
 
+  componentDidMount(){
+    this.setState({data: dummyData});
+  }
 
   render() {
+    console.log("render invoked");
     return (
       <div className="App">
         <div className="main-container">

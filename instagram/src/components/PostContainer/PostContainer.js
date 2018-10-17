@@ -5,6 +5,7 @@ import LikeSection from './LikeSection';
 import TimeStamp from './TimeStamp';
 import PostImage from './PostImage';
 import UserPostHeader from './UserHeader';
+import AddComment from './AddComment';
 
 
 const PostContainer = props => {
@@ -15,6 +16,7 @@ const PostContainer = props => {
             <LikeSection likes={props.usrData.likes}/>
             <CommentSection usrData={props.usrData} />
             <TimeStamp timestamp = {props.usrData.timestamp} />
+           <AddComment  />
         </div>
     );
 }
@@ -23,7 +25,7 @@ export default PostContainer;
 
 
 PostContainer.propTypes = {
-    usrData: PropTypes.object,
+    usrData: PropTypes.object.isRequired,
     username: PropTypes.number,
     comments: PropTypes.array,
     likes: PropTypes.number
