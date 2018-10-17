@@ -1,0 +1,17 @@
+.comments-section-wrapper-main {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.comments-section-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    margin-left: 13%;
+    
+}
+
+.comment-text {
+    margin-left: 1%;
+}
