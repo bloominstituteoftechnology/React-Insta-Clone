@@ -16,3 +16,20 @@
 .postContainer-header-user {
     margin-left: 10px;
 }
+
+.post-content-footer {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    margin-left: 13%;
+}
+
+.post-nav-icons {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+}
+
+.post-nav-TextBubbelIcon {
+    margin-left: 7px;
+}

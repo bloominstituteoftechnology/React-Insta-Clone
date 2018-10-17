@@ -27,8 +27,8 @@ const PostContainer = (props) => {
                             <div className= "post-content-footer">
                                 <div className= "post-nav">
                                     <div className="post-nav-icons">
-                                        <img className= "post-nav-heartIcon" alt="heartIcon" src= {props.instaData} src= {heartIcon}></img>
-                                        <img className= "post-nav-TextBubbelIcon" alt= "TextBubbelIcon" src= {commentBubbelIcon}></img>
+                                        <img className= "post-nav-heartIcon" alt="heartIcon" src= {props.instaData} src= {heartIcon} width = "30px" height ="30px"></img>
+                                        <img className= "post-nav-TextBubbelIcon" alt= "TextBubbelIcon" src= {commentBubbelIcon} width = "30px" height ="30px"></img>
                                     </div>
                                     <div className="post-nav-likes">
                                         <h4 className= "post-nav-total-likes">{post.likes} likes</h4>
