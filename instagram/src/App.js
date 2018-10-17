@@ -26,7 +26,7 @@ class App extends Component {
       <div className="App">
         <div className="main-container">
         <SearchBar />
-        {this.state.data.map((user, index) => <PostContainer usrData={user} key={index} />)}
+        {this.state.data.map((user, index) => <PostContainer usrData={user} idx={index} key={index} />)}
         </div>
       </div>
     );
