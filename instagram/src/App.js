@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar';
-// import PostContainer from './components/PostContainer';
+import PostContainer from './components/PostContainer';
 
 class App extends Component {
 
@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar instaData = {this.state.instaData} />
-        {/* <PostContainer instaData = {this.state.instaData} /> */}
+        <PostContainer instaData = {this.state.instaData} />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
