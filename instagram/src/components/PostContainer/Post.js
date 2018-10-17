@@ -5,16 +5,18 @@ import './Post.css'
 
 const Post = props => {
 	return (
-		<div>
+		<div className="post-bucket">
 			<PostHead
 				username={props.post.username}
 				thumbnailUrl={props.post.thumbnailUrl}
 			/>
-			<img 
-				src={props.post.imageUrl}
-				alt="post image"
-				className="post-image"
-			/>
+			<div className="img-container">
+				<img 
+					src={props.post.imageUrl}
+					alt="post image"
+					className="post-image"
+				/>
+			</div>
 			<CommentSection 
 				comments={props.post.comments}
 			/>
