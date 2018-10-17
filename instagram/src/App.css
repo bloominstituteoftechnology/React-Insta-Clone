@@ -11,16 +11,53 @@
   text-align: center;
 }
 
-.fullSearchBar {
+/* Search Bar CSS */
+
+.search {
   display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  height: 75px;
+  padding: 0 10%;
 }
 
 .leftside {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .instacamera {
+  width: 20%;
+}
 
+.line {
+  font-size: 24px;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.instatext {
+  font-size: 24px;
+  font-family: cursive;
+  font-weight: bold;
+  }
+
+.searchinput {
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid lightgray;
+  margin-top: 25px;
+  background: whitesmoke;
+  font-size: 14px;
+}
+
+.rightside {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
 }
 
 /* 
