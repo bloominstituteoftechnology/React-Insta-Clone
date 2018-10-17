@@ -11,7 +11,6 @@ class App extends Component {
       data: [] 
     }
 
-    console.log("Constructor Invoked")
   }
 
   randomIdGenerator = () => {
@@ -23,7 +22,6 @@ class App extends Component {
   }
 
   render() {
-    console.log("render invoked");
     return (
       <div className="App">
         <div className="main-container">

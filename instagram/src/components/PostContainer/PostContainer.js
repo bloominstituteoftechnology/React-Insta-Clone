@@ -5,7 +5,7 @@ import LikeSection from './LikeSection';
 import TimeStamp from './TimeStamp';
 import PostImage from './PostImage';
 import UserPostHeader from './UserHeader';
-import AddComment from './AddComment';
+import AddComment from '../CommentSection/AddComment';
 
 
 const PostContainer = props => {
@@ -14,7 +14,7 @@ const PostContainer = props => {
             <UserPostHeader thumbnailUrl={props.usrData.thumbnailUrl} username={props.usrData.username} />
             <PostImage image={props.usrData.imageUrl} />
             <LikeSection likes={props.usrData.likes}/>
-            <CommentSection usrData={props.usrData} />
+            <CommentSection comments={props.usrData.comments} />
             <TimeStamp timestamp = {props.usrData.timestamp} />
            <AddComment  />
         </div>

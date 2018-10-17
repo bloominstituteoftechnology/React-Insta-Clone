@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 
 
 const TimeStamp = props => {
-
+    // let date =  props.timestamp.split();
+    // let newDate = new Date(`"${props.timestamp}"`);
+    // console.log(date );
     return(
         <div className="timestamp-container">
             <p className="timestamp">

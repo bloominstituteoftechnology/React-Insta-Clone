@@ -1,23 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Comments from './comments';
 
-const CommentSection = props => {
-    return(
-        <div className="comment-container">
-           {props.usrData.comments.map((comment, idx) => {
-               return(
-                   <p className="comment" key={idx}><span className="comment-usr">{comment.username}</span> <span className="comment-text">{comment.text}</span></p>
-               )
-           })}
-        </div>
-    );
+
+
+class CommentSection extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            comments : this.props.comments
+        }
+    }
+
+    // componentDidMount(){
+    //     this.setState({ comments: this.props.comments});
+    // }
+
+    addComment = event => {
+        console.log(event);
+    }
+
+    render(){
+        console.log(this.state.comments)
+        return(
+           <div>
+               {this.state.comments.map((comment, idx) =>{
+                   return(
+                       <Comments comment={comment} key={idx} addComment={this.addComment}/>
+                   );
+               })}
+           </div>
+        )
+    }
 }
 
 export default CommentSection;
 
 
 CommentSection.propTypes = {
-    usrData: PropTypes.object,
-    text: PropTypes.string,
-    username:   PropTypes.string
+    comments: PropTypes.array.isRequired
 }
