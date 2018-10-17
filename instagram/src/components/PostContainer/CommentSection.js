@@ -1,7 +1,7 @@
 import React from 'react'
 import './CommentSection.css'
 import * as Icon from 'react-feather'
-import {  InputGroup, InputGroupAddon, Input } from 'reactstrap';
+import { Input } from 'reactstrap';
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -9,8 +9,19 @@ class CommentSection extends React.Component {
     this.state = {
       comments: props.comments,
       likes: props.likes
-    }
+    };
+  
   }
+
+  
+
+  addNewComment =  (event, i) => {
+    i = this.state.comments.length;
+    console.log(i);
+    console.log(event.target.value);
+    event.preventDefault();
+   }
+  
 
   render() {
     return(
@@ -25,17 +36,18 @@ class CommentSection extends React.Component {
           <div>
             {this.state.comments.map( (comment, i) => {
                return (
-                  <div className="comment">
+                  <div className="comment" key={i}>
                      <h3>{comment.username}</h3>
                      <p>{comment.text}</p>
                   </div>
                   )
               })}
           </div> 
-          <InputGroup>
-            <Input placeholder="Add a comment..." />
-            <InputGroupAddon addonType="append">...</InputGroupAddon>
-         </InputGroup>   
+          <form onSubmit={this.addNewComment}>
+            <Input 
+              placeholder="Add a comment..."
+              type="text" />
+         </form>   
       </div>
     )
   }

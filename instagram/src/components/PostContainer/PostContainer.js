@@ -1,6 +1,6 @@
 import React from 'react'
 import './PostContainer.css'
-import * as Icon from 'react-feather'
+// import * as Icon from 'react-feather'
 // import PropTypes from 'prop-types'
 // import TimeAgo from 'react-time-ago'
 
@@ -15,7 +15,7 @@ const PostContainer = props => {
     <div>  
       {props.postData.map( (post, i) => {
         return (
-          <div className="postContainer">
+          <div className="postContainer" key={i}>
              <div className="opUserInfo">
                 <img src={post.thumbnailUrl} alt="Avatar"/>
                 <h3>{post.username}</h3>
