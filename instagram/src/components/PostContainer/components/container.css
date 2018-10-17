@@ -21,8 +21,7 @@
 }
 
 .postContainer .postBody img {
-    width: 100%;
-    height: auto;
+    width: 140%;
     margin: 10px 0;
 }
 .postContainer .likes {
