@@ -3,9 +3,16 @@
     flex-direction: row;
     justify-content: flex-start;
     height: fit-content;
+    margin-left: 20px;
+    align-items: center;
 }
 
 .postContainer-header-img {
     border-radius: 100%;
     height: 50px;
+}
+
+
+.postContainer-header-user {
+    margin-left: 10px;
 }
