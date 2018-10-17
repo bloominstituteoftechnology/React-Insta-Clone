@@ -5,7 +5,7 @@ const PostHeader = (props) => {
     return(
        <>
            <div style={{display: 'flex', flexDirection: 'column-reverse'}}>
-            <img alt="" src={props.avatar} />
+            <img style={{borderRadius: 50, height: 40, width: 40}} alt="" src={props.avatar} />
             <div>{props.username} </div>
            </div>
        </>

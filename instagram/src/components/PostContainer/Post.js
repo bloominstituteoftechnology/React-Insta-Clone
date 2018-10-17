@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 const Post = (props) => {
     return(
         <div>
-            {props.likes}
+        <img alt="" src={props.post} />
         </div>
     )
 }
