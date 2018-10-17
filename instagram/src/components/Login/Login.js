@@ -54,7 +54,7 @@ class Login extends Component {
                     <h4>Password</h4>
                     
                     <Input 
-                    type="text" 
+                    type="password" 
                     placeholder="Password..." 
                     name="password"
                     value={this.state.password}

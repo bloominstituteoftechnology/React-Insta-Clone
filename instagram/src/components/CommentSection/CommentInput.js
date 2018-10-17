@@ -20,6 +20,7 @@ const CommentInputForm = styled.input`
     color: grey;
     padding-right: 25px;
     border: white;
+    color: black;
 `;
 
 const Ellipsis = styled.i`

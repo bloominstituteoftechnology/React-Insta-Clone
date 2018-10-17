@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from '../../assets/instagramlogin.png';
 import styled from 'styled-components';
-import './searchbar.css';
 
 const Header = styled.header`
     display: flex;
