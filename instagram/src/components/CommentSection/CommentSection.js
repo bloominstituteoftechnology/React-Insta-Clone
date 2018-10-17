@@ -1,11 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './CommentSection.css'
 
 import AddComment from './addComment';
 
 const CommentSection = (props) => {
     return(
-        <div>
+        <div className='CommentSection'>
         {props.comments.map(item => <AddComment
 
             key={item.index}

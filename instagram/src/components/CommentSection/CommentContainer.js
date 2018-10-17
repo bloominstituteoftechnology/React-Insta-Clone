@@ -1,15 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CommentSection from './CommentSection';
-
+import './CommentContainer.css'
 const CommentContainer = (props) => {
         return(
-            <div>
+            <div className='CommentContainer'>
             
                 {props.comments.map(comment => <div>
-
-                    {comment.username}
-                    {comment.text}
+                        <div> 
+                        
+                        {comment.username}:
+                        {' '}
+                        {comment.text}
+                        </div>
+                        {/* <div> {comment.text}</div> */}
+                   
+                   
                 </div>)}
             </div>
         )

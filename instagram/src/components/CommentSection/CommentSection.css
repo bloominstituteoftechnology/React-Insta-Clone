@@ -78,4 +78,7 @@ table {
 	justify-content: center ;
 } */
 
+.CommentSection {
+	border: 3px solid green !important ;
+}
 

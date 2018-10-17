@@ -2,7 +2,7 @@ body {
 display: flex ;
 margin: 0 auto ;
 justify-content: center;
-
+font-size: 1.6rem ;
 border: 2px solid black !important;
 width: 800px ;
 
@@ -23,6 +23,12 @@ html {
 .App{
   display: flex ;
   flex-direction: column ;
-  justify-content: center ;
+  justify-content: space-around ;
   border: 2px solid green !important ;
+}
+
+.searchBar {
+  border: 3px solid pink !important ;
+  display: flex ;
+  justify-content: space-evenly ;
 }

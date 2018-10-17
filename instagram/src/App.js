@@ -10,7 +10,7 @@ class App extends React.Component {
   render(){
     return(
       <div className='App' >
-      <div>  
+      <div className='searchBar'>  
       <i class="fab fa-instagram"></i>
       <span>|</span>
       <span>Instagram</span>
