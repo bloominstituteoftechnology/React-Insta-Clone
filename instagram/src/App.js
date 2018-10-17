@@ -12,12 +12,15 @@ import Authenticate from './components/Authentication/components/Authenticate';
 class App extends Component {
   constructor() {
     super();
+    this.state = {
+      open: false
+    };
   }
 
 
   render() {
     return (
-      <Authenticate />
+      <Authenticate open={this.state.open}/>
     );
   }
 }

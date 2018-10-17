@@ -3,7 +3,7 @@ import PostPage from '../../PostContainer/components/PostPage';
 import Search from '../../SearchBar/components/Search';
 
 const authenticate = PassedComp => OtherComp => props => {
-    if (props.first) {
+    if (props.open) {
         return (<PassedComp {...props} />)
     }
     return (<OtherComp {...props} />)
