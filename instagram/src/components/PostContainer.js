@@ -2,6 +2,7 @@ import React from 'react';
 import './PostContainer.css';
 import heartIcon from '.././assets/Instagram-Heart.png';
 import commentBubbelIcon from '.././assets/Instagram-CommentBubbleIcon.png';
+import CommentSection from './CommentSection';
 
 const PostContainer = (props) => {
     return (
@@ -17,7 +18,7 @@ const PostContainer = (props) => {
                     {/* PostContainer Header Section End */}
 
                     {/* PostContainer Post Content Section Start */}
-                        <div>
+                        <div className= "post-content-wrapper-main">
                         <div className= "post-content-wrapper" key={user.username}>
                             <div className= "post-content-body">
                                 <img className= "post-content-body-img" src={user.imageUrl} alt= "userPostImg" width="700px"></img>
@@ -35,8 +36,16 @@ const PostContainer = (props) => {
                                         <h4 className= "post-nav-total-like-copy"></h4>
                                     </div>
                                 </div>
-                            </div>
-                            {/* PostContainer Post Content Footer Section Start */}
+                            </div >
+                            {/* PostContainer Post Content Footer Section end */}
+
+                            {/* PostContainer Comment Section Start */}
+                            <CommentSection />
+                            {/* <div className= "post-content-comments-wrapper">
+                                COMMENT SECTION PLACEHOLDER
+                            </div> */}
+                            {/* PostContainer Comment Section End */}
+
                         </div>
                     )
             </div>
