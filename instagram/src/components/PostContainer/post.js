@@ -12,7 +12,7 @@ const Post = props => {
             <div className="postImage">
                 <img src={props.post.imageUrl} alt=""></img>
             </div >
-            <Comments likes={props.post.like} comments={props.post.comment} />
+            <Comments  />
         </div >
     )
 }

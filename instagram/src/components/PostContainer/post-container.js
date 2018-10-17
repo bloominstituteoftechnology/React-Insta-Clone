@@ -7,9 +7,10 @@ const PostContainer = props => {
             {props.dummyData.map((post) => {
                 return (
                     <Post key={post.id} post={post} />
+                    
                 ) 
             })}
-                
+               <p>{props.dummyData.likes}</p> 
         </div>
     )
 }
