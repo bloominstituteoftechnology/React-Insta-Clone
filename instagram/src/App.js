@@ -22,19 +22,7 @@ class App extends Component {
   componentDidMount() {
     this.setState({data: dummyData})
   }
-  addComment = event => {
-    event.preventDefault();
-    this.setState({
-      data: [
-        ...this.state.data,
-        { comments: this.state.newData }
-      ],
-      newData: '',
-    })
-  }
-  changeHandler = event => {
-    this.setState({ [event.target.name]: event.target.value})
-  }
+
   render() {
     return (
       <div className="App">

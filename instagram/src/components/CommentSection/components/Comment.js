@@ -24,20 +24,19 @@ class Comment extends React.Component {
         this.setState({ [event.target.name]: event.target.value})
       }
     render() {
-        console.log(this.addComment);
         return(
-        <div class="commentContainer">
+        <div className="commentContainer">
         {this.state.comments.map((item, index) => {
             return (
-                <div class="comment"
+                <div className="comment"
                 key={index}>
-                    <div class="commentUser">{item.username}</div>
-                    <div class="commentText">{item.text}</div>
+                    <div className="commentUser">{item.username}</div>
+                    <div className="commentText">{item.text}</div>
                 </div>
             )
         })}
-            <div class="timestamp">6 hours ago</div>
-            <form class="addComment" onSubmit={this.addComment}>
+            <div className="timestamp">6 hours ago</div>
+            <form className="addComment" onSubmit={this.addComment}>
                 <input 
                 type="text" 
                 placeholder="Add a comment . . ."

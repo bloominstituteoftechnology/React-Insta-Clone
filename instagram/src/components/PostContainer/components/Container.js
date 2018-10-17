@@ -8,16 +8,16 @@ const Container = props => {
             {props.data.map((item, index) => {
                 return (
                     <div 
-                    class="postContainer"
+                    className="postContainer"
                     key={index}>
-                        <div class="postHeader">
-                            <img src={item.thumbnailUrl} />
+                        <div className="postHeader">
+                            <img src={item.thumbnailUrl} alt="user thumbnail" />
                             {item.username}
                         </div>
-                        <div class="postBody">
-                            <img src={item.imageUrl} />
+                        <div className="postBody">
+                            <img src={item.imageUrl} alt="post" />
                         </div>
-                        <div class="likes">{item.likes} likes</div>
+                        <div className="likes">{item.likes} likes</div>
                         <Comment 
                         comments={item.comments}
                         />
@@ -26,12 +26,12 @@ const Container = props => {
             })}
         </div> );
 }
-// Container.propTypes = {
-//     data: PropTypes.shape({
-//         thumbnailUrl: PropTypes.string.isRequired,
-//         imageUrl: PropTypes.string.isRequired,
-//         likes: PropTypes.number.isRequired
-//     })
-// };
+Container.propTypes = {
+    data: PropTypes.shape({
+        thumbnailUrl: PropTypes.string.isRequired,
+        imageUrl: PropTypes.string.isRequired,
+        likes: PropTypes.number.isRequired
+    })
+};
  
 export default Container;
