@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+	justify-content: space-between;
+	border: 1px solid red;
+}
+img{
+    height: 50px;
+    width: 50px;
+}
+ .brand{
+	height: 50px;
+    width: 150px;
+ }
