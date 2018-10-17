@@ -2,3 +2,20 @@
     display: flex;
     flex-direction: column;
 }
+
+.comment {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0 2px;
+}
+
+.commentName {
+    font-size: 12px;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.commentText {
+    font-size: 12px;
+
+}
