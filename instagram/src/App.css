@@ -1,32 +1,73 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.fullSearchBar {
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.leftside {
+  display: flex;
+}
+
+.instacamera {
+
+}
+
+/* 
+.post {
+  display: block;
+}
+
+.post-head {
+  display: flex;
+  flex-direction: row;
+}
+
+.thumbnail {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  align-self: flex-start;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.image { 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.heart { 
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.instacamera { 
+  display: flex;
 }
+
+.username {
+  align-self: center;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.likes {
+  width: 80%;
+  margin: 10px 90px;
+  display: flex;
+  font-weight: bold;
+
+} */

@@ -1,28 +1,34 @@
-import React from 'react'
+import React from 'react';
+import instacamera from '../Icons/instacamera.png'
+import compass from '../Icons/compass.png';
+import heart from '../Icons/heart.png';
+import person from '../Icons/person.png'
+
 
 const SearchBar = props => {
   return (
+
   <div className='fullSearchBar'>
     <div className='leftside'>
-      <img src="./icons/instacamera" alt="instacamera" />
-      <div>|</div>
-      <div>Instagram</div>    
+      <img src={instacamera} alt="instacamera" className="instacamera" />
+      <div className="line">|</div>
+      <div className="instatext">Instagram</div>    
     </div>
 
     <div className='searchcenter'>
-      <div>
+      <form>
         <input 
           type="text" 
           name="searchbar"
           placeholder="search"
         />
-      </div>
+      </form>
     </div>
 
     <div className="rightside">
-      <img src="./icons/compass" alt="compass" />
-      <img src="./icons/heart" alt="heart" />
-      <img src="./icons/person" alt="person" />
+      <img src={compass} alt="compass" />
+      <img src={heart} alt="heart" />
+      <img src={person} alt="person" />
     </div>
   </div>
 

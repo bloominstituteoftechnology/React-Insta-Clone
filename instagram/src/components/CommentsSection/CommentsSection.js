@@ -17,9 +17,6 @@ const CommentsSection = props => {
       })}
     </div>
 
-    addNewComment = (event, index) => {
-    }
-
     <form className="addcomment">
       <input 
         type="text"
