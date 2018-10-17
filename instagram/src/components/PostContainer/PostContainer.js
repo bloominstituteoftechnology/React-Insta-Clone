@@ -1,30 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PostPage from './PostsPage';
 import CommentContainer from '../CommentSection/CommentContainer';
-import './PostContainer.css'
 
-class PostContainer extends React.Component{
+
+class PostContainer extends React.Component {
     constructor(props){
-        super();
+        super(props);
+        this.state = {
 
-        this.state = {}
+            data: props.dummyData
+
+        }
     }
-    render(props){
-        return(
-            <div className="postContDiv">
-            <div>{this.props.data.username}</div>
-               <CommentContainer 
 
-               Comment={this.props.Comment}
-               
-               LikeButton={this.props.LikeButton} 
-               
-               data={this.props.data} />  
+
+    render(){
+        return(
+            <div>
+                <PostPage data={this.props.data} />
+                <CommentContainer data={this.props.data} />
             </div>
-           
         )
     }
-
 }
 
 export default PostContainer

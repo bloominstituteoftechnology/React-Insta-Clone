@@ -1,22 +1,13 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 const AddComment = (props) => {
-        
-        return(
+    return(
         <div>
-            <form type="submit">
-
-                <input 
-                value={props.newComment}
-                onClick={props.handleComment}
-                onChange={props.addComment}
-                type="text"
-                placeholder="Comment here!"
-                /><button onClick={props.submitComment} ></button>
-            </form>
+            {props.username}
+            {props.text}
         </div>
-        )    
+    )
 }
 
-
-export default AddComment;
+export default AddComment
