@@ -9,21 +9,21 @@ const PostContainer = (props) => {
             {props.instaData.map(user => {
                 return (
                     <div className= "postcontainer-wrapper" key= {user.username}>
+                    {/* PostContainer Header Section Start */}
                         <div className= "postContainer-header">
                             <img className= "postContainer-header-img" src={user.thumbnailUrl} alt= "userProfileImg" width="50px"></img>
                             <h4 className="postContainer-header-user">{user.username}</h4>
                         </div>
-                     </div>
-                )
-            })}
+                    {/* PostContainer Header Section End */}
 
-            <div>
-                {props.instaData.map(post => {
-                    return (
-                        <div className= "post-content-wrapper" key={post.username}>
+                    {/* PostContainer Post Content Section Start */}
+                        <div>
+                        <div className= "post-content-wrapper" key={user.username}>
                             <div className= "post-content-body">
-                                <img className= "post-content-body-img" src={post.imageUrl} alt= "userPostImg" width="700px"></img>
+                                <img className= "post-content-body-img" src={user.imageUrl} alt= "userPostImg" width="700px"></img>
                             </div>
+
+                            {/* PostContainer Post Content Footer Section Start */}
                             <div className= "post-content-footer">
                                 <div className= "post-nav">
                                     <div className="post-nav-icons">
@@ -31,16 +31,24 @@ const PostContainer = (props) => {
                                         <img className= "post-nav-TextBubbelIcon" alt= "TextBubbelIcon" src= {commentBubbelIcon} width = "30px" height ="30px"></img>
                                     </div>
                                     <div className="post-nav-likes">
-                                        <h4 className= "post-nav-total-likes">{post.likes} likes</h4>
+                                        <h4 className= "post-nav-total-likes">{user.likes} likes</h4>
                                         <h4 className= "post-nav-total-like-copy"></h4>
                                     </div>
                                 </div>
                             </div>
+                            {/* PostContainer Post Content Footer Section Start */}
                         </div>
                     )
-                })}
-
             </div>
+            {/* PostContainer Post Content Section Start */}
+        </div>
+                     
+
+                     
+                )
+            })}
+
+
         </div>
     )
 }
