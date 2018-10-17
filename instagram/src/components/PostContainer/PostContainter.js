@@ -19,7 +19,7 @@ const PostContainer = (props) => {
 
         PostContainer.propTypes = {
                 comments: PropTypes.array,
-                imageUrl: PropTypes.string,
+                imageUrl: PropTypes.string,     
                 likes: PropTypes.number
         }
 

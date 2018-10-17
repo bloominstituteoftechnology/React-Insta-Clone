@@ -1,9 +1,11 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SearchBar = (props) => {
         return(
                 <div>
-                        <h1>This is a search bar.</h1>
+                <FontAwesomeIcon icon='ghost' />
+                <input></input>
                 </div>
         )
 }
