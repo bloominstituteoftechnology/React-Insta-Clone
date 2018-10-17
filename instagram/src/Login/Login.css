@@ -1,7 +1,26 @@
 .login-form {
     width: 500px;
-    background: gray;
+    background: #D3D3D3;
     border-radius: 6px;
     margin: 10px auto;
     padding: 10px 25px;
+    color: #333333;
+}
+
+button {
+    background-color: #87CEEB;
+    border: none;
+    color: #ffffff;
+    padding: 0.30em 1.2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 1em;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #333333;
 }

@@ -7,7 +7,7 @@ const SearchBar = props => {
         <div className='search-bar-wrap'>
         <div className='image'>
             <img alt='instagram logo' src={IGLogo} className='logo' />
-              <i className="fab fa-instagram fa-3x" />
+              <i className="fab fa-instagram fa-5x" />
         </div>
         <div className='search'>
             <input type='text' placeholder='Search' onChange={props.searchPosts} />

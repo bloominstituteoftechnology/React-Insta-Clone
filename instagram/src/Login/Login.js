@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Input } from 'reactstrap';
 import './Login.css';
 
 class Login extends Component {
@@ -29,15 +29,23 @@ class Login extends Component {
                 <FormGroup>
                     <Input
                     type='text'
-                    placeholder='User Name'
+                    placeholder='Enter username'
                     name='username'
                     value={this.state.username}
                     onChange={this.handleInputChange}
                     />
-                    <br />
                     <Button color='success' size='large' onClick={this.handleLoginSubmit}>
                     Log In
                     </Button>
+                    </FormGroup>
+                    <FormGroup>
+                        <Input
+                        type='password'
+                        placeholder='Enter password'
+                        name='password'
+                        value={this.state.password}
+                        onChange={this.handleInputChange}
+                        />
                     </FormGroup>
             </Form>
         );
