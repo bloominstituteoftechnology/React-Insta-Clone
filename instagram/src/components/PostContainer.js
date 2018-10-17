@@ -14,6 +14,15 @@ const PostContainer = (props) => {
                      </div>
                 )
             })}
+
+            <div className= "post-content-wrapper">
+                <div className= "post-content-body">
+                    CONTENT BODY
+                </div>
+                <div className= "post-content-footer">
+                    CONTENT FOOTER
+                </div>
+            </div>
         </div>
     )
 }
