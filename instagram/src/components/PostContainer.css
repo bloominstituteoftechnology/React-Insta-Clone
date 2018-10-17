@@ -1,0 +1,11 @@
+.postContainer-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: fit-content;
+}
+
+.postContainer-header-img {
+    border-radius: 100%;
+    height: 50px;
+}
