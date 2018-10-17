@@ -1,5 +1,7 @@
 import React from 'react';
 import './PostContainer.css';
+import heartIcon from '.././assets/Instagram-Heart.png';
+import commentBubbelIcon from '.././assets/Instagram-CommentBubbleIcon.png';
 
 const PostContainer = (props) => {
     return (
@@ -23,7 +25,16 @@ const PostContainer = (props) => {
                                 <img className= "post-content-body-img" src={post.imageUrl} alt= "userPostImg" width="700px"></img>
                             </div>
                             <div className= "post-content-footer">
-                                CONTENT FOOTER
+                                <div className= "post-nav">
+                                    <div className="post-nav-icons">
+                                        <img className= "post-nav-heartIcon" alt="heartIcon" src= {props.instaData} src= {heartIcon}></img>
+                                        <img className= "post-nav-TextBubbelIcon" alt= "TextBubbelIcon" src= {commentBubbelIcon}></img>
+                                    </div>
+                                    <div className="post-nav-likes">
+                                        <h4 className= "post-nav-total-likes">{post.likes} likes</h4>
+                                        <h4 className= "post-nav-total-like-copy"></h4>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     )
