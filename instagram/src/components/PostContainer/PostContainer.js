@@ -5,10 +5,10 @@ import './Post.css';
 const PostContainer = props => {
 	return (
 		<div className="post-container">
-			{props.post.map(p => 
+			{props.post.map(posts => 
 				<Post
-					key={p.imageUrl}
-					post={p}
+					key={posts.imageUrl}
+					post={posts}
 				/>
 			)}
 		</div>
