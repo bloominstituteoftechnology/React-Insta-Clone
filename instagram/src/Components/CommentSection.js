@@ -43,7 +43,9 @@ class CommentSection extends React.Component {
 
 
 CommentSection.propTypes = {
-  comments: PropTypes.array.isRequired
-}
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({ comments: PropTypes.string, text: PropTypes.string })
+  )
+};
 
 export default CommentSection;
