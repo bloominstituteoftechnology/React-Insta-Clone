@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const LikeSection = () => {
+const LikeSection = (props) => {
     return(
         <div>
-
+        {props.likes}
         </div>
     )
 }

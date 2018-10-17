@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Post from './Post';
 import PostHeader from './PostHeader';
 import LikeSection from './LikeSection';
+import CommentContainer from '../CommentSection/CommentContainer'
 
 
 const PostPage = (props) => {
@@ -15,6 +16,10 @@ const PostPage = (props) => {
 
               <PostHeader username={item.username} avatar={item.thumbnailUrl} />
                <Post post={item.imageUrl} />
+               <LikeSection likes={item.likes} />
+               <CommentContainer data={props.data} comments={item.comments} 
+
+               />
         </div>
       
        

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PostPage from './PostsPage';
-import CommentContainer from '../CommentSection/CommentContainer';
 
 
 class PostContainer extends React.Component {
@@ -19,7 +18,6 @@ class PostContainer extends React.Component {
         return(
             <div>
                 <PostPage data={this.props.data} />
-                <CommentContainer data={this.props.data} />
             </div>
         )
     }

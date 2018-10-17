@@ -2,23 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CommentSection from './CommentSection';
 
-class CommentContainer extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            data: props.data   
-        }
-    }
-
-    render(){
+const CommentContainer = (props) => {
         return(
             <div>
-                {this.state.data.map(item => {
-                    return <CommentSection comments={item.comments} />
-                })}
+                {props.comments.map(comment => <div>
+
+                    {comment.username}
+                    {comment.text}
+                </div>)}
             </div>
         )
-    }
+
+
 }
+
+   
 
 export default CommentContainer
