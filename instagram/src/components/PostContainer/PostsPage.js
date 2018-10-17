@@ -16,7 +16,10 @@ const PostPage = (props) => {
 
               <PostHeader username={item.username} avatar={item.thumbnailUrl} />
                <Post post={item.imageUrl} />
+               <i class="far fa-heart"></i>
+               <i class="far fa-comment"></i>
                <LikeSection likes={item.likes} />
+               
                <CommentContainer data={props.data} comments={item.comments} 
 
                />

@@ -5,6 +5,7 @@ import CommentSection from './CommentSection';
 const CommentContainer = (props) => {
         return(
             <div>
+            
                 {props.comments.map(comment => <div>
 
                     {comment.username}

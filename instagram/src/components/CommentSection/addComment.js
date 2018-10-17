@@ -6,6 +6,7 @@ const AddComment = (props) => {
         <div>
            {/* {props.username}
            {props.text} */}
+           <input />
         </div>
     )
 }

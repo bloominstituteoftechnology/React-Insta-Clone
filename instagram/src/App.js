@@ -9,8 +9,16 @@ import dummyData from './dummy-data';
 class App extends React.Component {
   render(){
     return(
-      <div>
+      <div className='App' >
+      <div>  
+      <i class="fab fa-instagram"></i>
+      <span>|</span>
+      <span>Instagram</span>
         <SearchBar data={dummyData} />
+        <i class="far fa-compass"></i>
+        <i class="far fa-user"></i>
+      </div>
+        
         <PostContainer data={dummyData} />
         
       </div>

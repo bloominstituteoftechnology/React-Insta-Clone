@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class SearchBar extends React.Component {
-    constructor(){
-        super()
-    }
-    render(){
+const SearchBar = () => {
         return(
-            <div></div>
+            <div>
+
+                <input type='text' placeholder='Search' />
+            </div>
         )
-    }
 }
 export default SearchBar 

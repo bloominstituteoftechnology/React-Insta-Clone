@@ -1,14 +1,28 @@
 body {
 display: flex ;
-justify-content: center ;
+margin: 0 auto ;
+justify-content: center;
+
+border: 2px solid black !important;
+width: 800px ;
 
 }
 
 html {
   font-size: 62.5% ;
+  border: 3px solid blue !important ;
+  margin: 0 auto ;
   
 }
 
 #root {
   width: 800px ;
+  border: 3px solid red ;
+}
+
+.App{
+  display: flex ;
+  flex-direction: column ;
+  justify-content: center ;
+  border: 2px solid green !important ;
 }

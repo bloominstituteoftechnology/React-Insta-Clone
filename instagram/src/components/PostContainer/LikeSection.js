@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 const LikeSection = (props) => {
     return(
         <div>
-        {props.likes}
+        {props.likes} likes
         </div>
     )
 }
