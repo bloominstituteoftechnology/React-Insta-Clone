@@ -7,15 +7,15 @@ class Comment extends React.Component {
         this.state = {
             comments: props.comments,
             newData: '',
-        
         };
     }
     addComment = event => {
         event.preventDefault();
         this.setState({
-          data: [
+          comments: [
             ...this.state.comments,
-            { comments: this.state.newData }
+                { username: "me",
+                text: this.state.newData }
           ],
           newData: '',
         })
@@ -24,6 +24,7 @@ class Comment extends React.Component {
         this.setState({ [event.target.name]: event.target.value})
       }
     render() {
+        console.log(this.addComment);
         return(
         <div class="commentContainer">
         {this.state.comments.map((item, index) => {
@@ -41,6 +42,7 @@ class Comment extends React.Component {
                 type="text" 
                 placeholder="Add a comment . . ."
                 name="newData"
+                onChange={this.changeHandler}
                 value={this.newData}
                 ></input>
             </form>
