@@ -28,7 +28,7 @@ return(
     )
     
     }         <form id={id} onSubmit={props.handleNew} onChange={props.handleChange}class="input-comment" value={props.val}>
-    <input type="text" placeholder="Add a comment"/>
+    <input type="text" value={props.val}placeholder="Add a comment"/>
     &#8230;
     </form>
     

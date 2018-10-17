@@ -30,21 +30,52 @@ handleChange=event=>{
   this.setState({
     controlledComment:event.target.value
   })
-  
 }
 
 handleNew=event=>{
   event.preventDefault();
   let newdatabase=this.state.database.slice();
   //find the old comment list
-  
-  let currentimage=newdatabase.filter(entry=>entry.imageUrl===event.target.id)
+  let currentimage=null;
+  console.log(newdatabase);
+  newdatabase= newdatabase.map(
+    (image)=>{
+        if(image.imageUrl===event.target.id){
+          currentimage=image;
+          return(image);
+        }else{return(image)}
+      }
 
+  )
+  console.log(newdatabase);
   console.log(currentimage);
+  //all works until this point
+
   // add to it
+  currentimage.comments.push(
+  {username: "placeholder fellow",
+    text: this.state.controlledComment
+  }
+)
+console.log(currentimage);
+//all works until this point
 
-  //replace database
+// make new dummy database
+let finaldummydatabase= newdatabase.map(
+  (image)=>{
+  if(image.imageUrl===event.target.id){
+  //make currentimage replace image
+  return (currentimage);
+}
+  else{return(image)}
+}
+)
 
+  //replace database with new dummy
+ this.setState({
+  controlledComment: "",
+  database: finaldummydatabase
+  })
   
 };
 
