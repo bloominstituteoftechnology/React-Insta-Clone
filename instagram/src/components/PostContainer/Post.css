@@ -1,0 +1,33 @@
+.posthead-container {
+	display: flex;
+}
+
+.thumbnail-container {
+	height: 50px;
+	width: 50px;
+}
+
+.post-thumbnail {
+	border-radius: 50%;
+	height: 100%;
+}
+
+.post-image {
+	width: 100%;
+}
+
+.post-bucket {
+	border: 2px solid lightgray;
+	margin: 5px 0;
+}
+
+.img-container {
+	height: 100%;
+	width: 100%;
+}
+
+.post-container {
+	height: 500px;
+	width: 50%;
+	margin: 5px auto;
+}

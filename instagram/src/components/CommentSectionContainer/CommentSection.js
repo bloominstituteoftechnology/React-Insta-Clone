@@ -27,7 +27,7 @@ class CommentSection extends React.Component {
 }
 
 CommentSection.propTypes = {
-	comments: PropTypes.arrayof(
+	comments: PropTypes.arrayOf(
 		PropTypes.shape({
 			text: PropTypes.string,
 			username: PropTypes.string

@@ -16,7 +16,7 @@ const Post = props => {
 				className="post-image"
 			/>
 			<CommentSection 
-				comments={props.psot.comments}
+				comments={props.post.comments}
 			/>
 		</div>
 	);
