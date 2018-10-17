@@ -34,7 +34,7 @@ const PostContainer = props => {
 PostContainer.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      thumbnailUrl: PropTypes.string, imageUrl: PropTypes.string, username: PropTypes.string, likes: PropTypes.string
+      thumbnailUrl: PropTypes.string, imageUrl: PropTypes.string, username: PropTypes.string, likes: PropTypes.number
     })
   )
 };

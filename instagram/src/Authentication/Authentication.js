@@ -12,9 +12,9 @@ const Authenticate = App =>
     }
 
     componentDidMount() {
-      const username = localStorage.getItem('username');
-			const password = localStorage.getItem('password');
-			if (username && password) {
+      const user = localStorage.getItem('username');
+			const pw = localStorage.getItem('password');
+			if (user && pw) {
 				this.setState({ loggedIn: true });
 			} else {
 				this.setState({ loggedIn: false });
@@ -22,13 +22,14 @@ const Authenticate = App =>
     }
 
     render() {
-      if(this.state.loggedIn) {
-        return <App />
-      } else {
-        return <Login />
-      }
+      if (this.state.loggedIn == true) {
+				return <App />;
+			} else {
+				return <Login />;
+			}
       
     }
-  }
-
+}
+  
+  
   export default Authenticate;

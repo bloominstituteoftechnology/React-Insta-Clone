@@ -5,7 +5,7 @@ import PostPage from './PostPage';
 
 class Login extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       username: '',
       password: ''
@@ -17,10 +17,10 @@ class Login extends Component {
   };
 
   loginSubmit = event => {
-    const username = this.state.username;
-    const password = this.state.password;
-    localStorage.setItem('username', username);
-    localStorage.setItem('password', password);
+    const user = this.state.username;
+    const pw = this.state.password;
+    localStorage.setItem('username', user);
+    localStorage.setItem('password', pw);
     window.location.reload();
   };
 
@@ -33,8 +33,8 @@ class Login extends Component {
             type="text"
             placeholder="Username"
             name="username"
-            value={this.state.username}
             onChange={this.inputChange}
+            value={this.state.username}
             className="form-boxes"
           />
 
@@ -42,8 +42,8 @@ class Login extends Component {
             type="password"
             placeholder="Password"
             name="password"
-            value={this.state.password}
             onChange={this.inputChange}
+            value={this.state.password}
             className="form-boxes"
           />
           <button onClick={this.loginSubmit} className="login-button">Login</button>
