@@ -27,11 +27,11 @@ const Container = props => {
         </div> );
 }
 Container.propTypes = {
-    data: PropTypes.shape({
+    data: PropTypes.arrayOf(PropTypes.shape({
         thumbnailUrl: PropTypes.string.isRequired,
         imageUrl: PropTypes.string.isRequired,
         likes: PropTypes.number.isRequired
-    })
+    }))
 };
  
 export default Container;
