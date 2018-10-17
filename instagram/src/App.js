@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
+import PostPage from './components/PostContainer/components/PostPage';
+
 import './App.css';
-import Search from './components/SearchBar/components/Search';
-import Container from './components/PostContainer/components/Container';
-
-import dummyData from './dummy-data';
-
 import './components/SearchBar/components/search.css';
 import './components/PostContainer/components/container.css';
 import './components/CommentSection/components/comment.css';
@@ -15,21 +12,14 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: [],
-      newData: ''
+      
     };
   }
-  componentDidMount() {
-    this.setState({data: dummyData})
-  }
+
 
   render() {
     return (
-      <div className="App">
-        <Search />
-        <Container 
-        data={this.state.data}/>
-      </div>
+      <PostPage />
     );
   }
 }
