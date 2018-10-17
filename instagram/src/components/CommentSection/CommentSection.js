@@ -9,26 +9,33 @@ class CommentSection extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            comments : this.props.comments,
+            comments : [],
             idx: this.props.idx,
-            newComment: ""
+            newComment: "",
         }
     }
 
-    // componentDidMount(){
-    //     this.setState({ comments: this.props.comments});
-    // }
+    componentDidMount(){
+        this.setState({ comments: this.props.comments});
+    }
 
     changeHandler = event => {
         this.setState({[event.target.name] : event.target.value});
     }
-    
+
     addComment = event => {
-        console.log(event.target);
+        event.preventDefault();
+        this.setState({
+            comments: [
+                ...this.state.comments,
+                {username: "test_username", text: this.state.newComment}
+            ],
+            newComment: ""
+        })
     }
 
     render(){
-        console.log(this.state.idx, this.state.comments)
+       
         return(
            <div>
                {this.state.comments.map((comment, idx) =>{
@@ -37,7 +44,7 @@ class CommentSection extends React.Component{
                    );
                })}
                <div>
-                    <AddComment changeHandler={this.changeHandler} newComment={this.state.newComment} />
+                    <AddComment addComment={this.addComment} changeHandler={this.changeHandler} newComment={this.state.newComment} />
                </div>
            </div>
            
