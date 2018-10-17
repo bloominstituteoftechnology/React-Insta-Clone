@@ -7,10 +7,19 @@
     width: 100%;
     line-height: 2;
     display: flex;
+    justify-content: space-between;
+}
+.commentContainer .comment .inputs {
+    display: flex;
 }
 .commentContainer .comment .commentUser {
     font-weight: bold;
     padding-right: 10px;
+}
+.commentContainer .comment .delete {
+    border: none;
+    background-color: white;
+    padding-right: 50px;
 }
 .addComment {
     width: 100%;

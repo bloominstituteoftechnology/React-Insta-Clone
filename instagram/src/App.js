@@ -28,8 +28,7 @@ class App extends Component {
       <div className="App">
         <Search />
         <Container 
-        data={this.state.data}
-        addComment={this.addComment}/>
+        data={this.state.data}/>
       </div>
     );
   }

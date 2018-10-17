@@ -20,9 +20,22 @@ class Comment extends React.Component {
           newData: '',
         })
       }
-      changeHandler = event => {
+    changeHandler = event => {
         this.setState({ [event.target.name]: event.target.value})
-      }
+    }
+    removeComment = event => {
+        console.log("it does something");
+        event.preventDefault();
+        this.setState({
+            comments: this.state.comments.filter((item) => {
+                if (item.username === 'me') {
+                    return null;
+                } else {
+                    return item;
+                }
+            })
+        })
+    }
     render() {
         return(
         <div className="commentContainer">
@@ -30,8 +43,11 @@ class Comment extends React.Component {
             return (
                 <div className="comment"
                 key={index}>
+                <div className="inputs">
                     <div className="commentUser">{item.username}</div>
-                    <div className="commentText">{item.text}</div>
+                    <div className="text">{item.text}</div>
+                </div>
+                    <button className="delete" onClick={this.removeComment}>delete comment</button>
                 </div>
             )
         })}
