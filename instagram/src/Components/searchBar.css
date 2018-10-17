@@ -1,4 +1,10 @@
+.top-bar{
+    width:100%;
+}
+
 header{
+    margin:0 auto;
+    width:90%;
     display:flex;
     flex-direction: row;
     height:50px;
@@ -6,7 +12,7 @@ header{
     
     justify-content: space-around;
     border-bottom: 1px solid lightgrey;
-    padding:20px;
+    padding: 10px 0;
     
     
 }
@@ -18,11 +24,26 @@ header div{
     
 }
 header img {
-    width: 50px;
+    width: 30px;
     height:100%;
 }
 
-.container {
+.container:first-child {
+    width:25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
     width:20%;
 }
 
+.explore {
+    width:40px;
+}
+
+input{
+    width:215px;
+    text-align: center;
+}

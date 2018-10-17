@@ -1,0 +1,36 @@
+
+
+.top-bottom{
+    display:flex;
+    flex-direction: row;
+    padding:10px 0px;
+    justify-content: space-between;
+    
+}
+
+.heart-comment{
+    display:flex;
+    justify-content: space-between;
+    width:15%;
+}
+
+.bottom img {
+    width: 30px;
+}
+
+.likes {
+   text-align: left;
+   display:flex;
+   flex-direction: row;
+   align-items: center; 
+}
+
+.likes h1{
+    padding-left: 7px;
+}
+
+.comments-time{
+    text-align: left;
+    padding-right:10px;
+}
+

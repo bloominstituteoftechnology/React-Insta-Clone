@@ -1,21 +1,31 @@
-.post-container {
-    display: flex;
-    flex-direction: column;
+.main{
+    background-color: #fafafa;
+}
+
+.card {
+    width:60%;
+    margin:50px auto;
     border:1px solid lightgrey;
-    margin:0 auto;
-    width:45%;
+}
+
+.top{
+    padding-left:20px;
+    justify-content: space-between;
+    width:30%;
+    display: flex;
+    align-items: center;
 }
 
 .user-photo {
-    width:80px;
+    border: 1px black solid;
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+   
+
 }
 
-.post-container section {
-    display:flex;
-    flex-direction: row;
-}
-
-
-.middle img {
-    width:100%;
+.bottom{
+    width:90%;
+    margin:0 auto;
 }
