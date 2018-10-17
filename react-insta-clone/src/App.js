@@ -4,7 +4,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './Components/PostContainer/PostContainer';
 import SearchBar from './Components/SearchBar/SearchBar';
-import CommentSection from './Components/CommentSection/CommentSection';
+
 
 class App extends Component {
   constructor( props)
@@ -12,17 +12,28 @@ class App extends Component {
     super( props )
     this.state = 
     {
-      array1: dummyData
+      array1: dummyData,
+      loaded: false
     }
+  }
+
+  loadingFunction()
+  {
+    setTimeout( () =>
+    {
+      this.setState({
+        loaded: true
+      })
+    }, 1 )
   }
   render() {
     return (
       <div className="App">
         <h1>Hello</h1>
         <SearchBar />
-        <PostContainer objects = { this.state.array1 }/>
-        <CommentSection />
-        <CommentSection />
+        {
+          this.state.loaded ? <PostContainer objects = { this.state.array1 } /> : <div>Loading...</div>
+        }
       </div>
     );
   }

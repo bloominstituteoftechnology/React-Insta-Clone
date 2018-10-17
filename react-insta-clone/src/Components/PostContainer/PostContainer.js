@@ -1,15 +1,9 @@
 import React from 'react';
+import propTypes from 'prop-types';
+import CommentSection from "../CommentSection/CommentSection";
+import "../PostContainer/PostContainer.css";
+import PostSubComponent from "./PostSubComponent/PostSubComponent";
 
-const SmallComponent = ( props ) =>
-{
-  return( 
-    <div>
-      <p>{ props.data.username }</p>
-      <img src = { props.data.thumbnailUrl}></img>
-      <p></p>
-    </div>
-  )
-}
 class PostContainer extends React.Component
 {
   constructor( props )
@@ -19,12 +13,12 @@ class PostContainer extends React.Component
   render()
   {
     return(
-      <div>
+      <div className = "post-container">
         {
           this.props.objects.map( ( element ) =>
           {
             return(
-              <SmallComponent data = { element }/>
+              <PostSubComponent data = { element }/>
             )
           })
         }
