@@ -149,3 +149,42 @@ i {
   margin: 0 10px;
   cursor: pointer;
 }
+
+.login-form {
+  border: 2px solid black;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  background: lightgray
+}
+
+.welcome {
+  color: black;
+  font-family: 'Lucida Grande';
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-top: 20px;
+
+}
+
+.form-boxes{
+  border-radius: 5px;
+  display: flex;
+  padding: 10px;
+  margin: 10px 0;
+  margin-left: 10px;
+}
+
+.login-button {
+  width: 125px;
+  height: 35px;
+  padding: 10px;
+  background: whitesmoke;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+button:hover {
+  background: darkgrey;
+  color: white;
+}
