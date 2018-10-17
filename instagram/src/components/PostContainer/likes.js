@@ -6,22 +6,16 @@ import dummyData from '../../dummy-data';
 class Likes extends React.Component {
     constructor(props){
         super(props);
-        this.state = dummyData  
-    }    
+        this.state = {
+            likes: props.item.likes  
+    } 
+}    
 
     render() {
         return (
             <div className = 'likeSection'>
-                {dummyData.map((info, index)=>{
-                    return (
-                        <div key = {index}>
-                            <div>
-                                <img src = '../insta_heart.png'/>
-                            </div>
-                            <p className = 'likes'> {info.likes} likes</p>
-                        </div>
-                    )
-                })}
+                <img src = '../../Images/insta_heart.png'/>
+               {this.state.likes} likes
     
             </div> 
                         

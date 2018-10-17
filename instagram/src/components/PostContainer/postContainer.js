@@ -18,7 +18,7 @@ const PostContainer = props => {
                         <p className = 'username'><strong>{data.username}</strong></p>
                     </div>
                         <img src ={data.imageUrl} alt = 'img'/>
-                        <strong><Likes /></strong>
+                        <strong><Likes item={data}/></strong>
                     <p>{data.timestamp}</p>
                     <CommentSection item={data}/>
                 </div>  
