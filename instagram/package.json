@@ -1,6 +1,7 @@
 {
   "name": "instagram",
   "version": "0.1.0",
+  "homepage": "http://theiseja.github.io/React-Insta-Clone",
   "private": true,
   "dependencies": {
     "prop-types": "^15.6.2",

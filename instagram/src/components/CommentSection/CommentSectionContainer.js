@@ -38,15 +38,16 @@ class CommentSection extends React.Component {
         this.setState({ comment: e.target.value });
     };
 
-    handleCommentSubmit = e => {
+    handleCommentSubmit = e => {    // Comment submit handler. Allows you to input a comment into the Add a comment... bar.
         e.preventDefault();
-        const newComment = { text: this.state.comment, username: 'jessetheisen'};
-        const comments = this.state.comments.slice();
-        comments.push(newComment);
+        const newComment = { text: this.state.comment, username: 'jessetheisen'}; // newComment var, when you add a new comment whatever username you set in username: '' will display that username on the page.
+        const comments = Object.assign([], this.state.comments);
+       // console.log(comments); for testing purposes
+        comments.push(newComment)
         this.setState({ comments, comment: ''});
         setTimeout(() => {
             this.setComments();
-        }, 5000);
+        }, 500);
     };
     render() {
         return (
