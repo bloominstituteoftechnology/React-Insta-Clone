@@ -2,7 +2,8 @@ import React from 'react';
 
 const LogOut = (props) => {
     return ( <div className='logOut'>
-        <button className='logOutButton'>Logout</button>
+        <button
+        className='logOutButton'>Logout</button>
     </div> );
 }
  
