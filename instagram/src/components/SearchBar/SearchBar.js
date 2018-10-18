@@ -3,7 +3,22 @@ import './SearchBar.css'
 import {  Form, FormGroup, Input } from 'reactstrap';
 import * as Icon from 'react-feather'
 
-const SearchBar = props => {
+class SearchBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state ={
+      
+    }
+  }
+
+  handleInputChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  }
+
+
+  render(){
   return(
     <div className="searchBar">
       <div className="searchBarLeft">
@@ -13,8 +28,13 @@ const SearchBar = props => {
       </div>
       <Form>
         <FormGroup>
-          <Input type="search" name="search" id="exampleSearch" placeholder="🔍 Search" />
-        </FormGroup>
+          <Input 
+            type="search" 
+            name="search" 
+            id="exampleSearch" 
+            onChange={this.handleInputChange}
+            placeholder="🔍 Search" />
+          </FormGroup>    
       </Form>
       <div className="searchBarRight">
         <Icon.Compass className="navIcons" /> 
@@ -22,7 +42,8 @@ const SearchBar = props => {
         <Icon.User className="navIcons" />
       </div>  
     </div>
-  )
+   )
+  }
 }
 
 export default SearchBar;
