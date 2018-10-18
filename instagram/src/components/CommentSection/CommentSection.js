@@ -5,7 +5,10 @@ const CommentSection = (props) => {
     
     return(
         <>
+        {console.log(props)}
+          <h3>{props.comment.username}</h3>
           <p>{props.comment.text}</p>
+          
         </>
     );
 }
