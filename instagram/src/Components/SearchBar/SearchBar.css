@@ -27,9 +27,9 @@
     font-size: 25px;
 }
 .instagram-logo{
-    margin: auto 0;
+    margin: auto 0 auto 10px;
     cursor: pointer;
-    width: 10%;
+    width: 40px;
 }
 
 .divider{
@@ -60,7 +60,7 @@
     border-radius: 5px;
     background-color: aliceblue;
     text-align: center;
-    margin: auto 0;
+    margin: auto 0 auto 40px;
 }
 
 
@@ -69,6 +69,7 @@
     justify-content: flex-end;
     width: 25%;
 }
+
 .rigth-icon-container{
     display: flex;
     width: 100%;
