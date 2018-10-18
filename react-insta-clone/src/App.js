@@ -12,28 +12,24 @@ class App extends Component {
     super( props )
     this.state = 
     {
-      array1: dummyData,
-      loaded: false
+      array1: dummyData
     }
   }
 
-  loadingFunction()
+  clickHandler()
   {
-    setTimeout( () =>
+    let someVar = document.querySelector( ".App" );
+    someVar.addEventListener( "click", ( event ) =>
     {
-      this.setState({
-        loaded: true
-      })
-    }, 1 )
+      console.log( "Hello" );
+    })
   }
   render() {
     return (
       <div className="App">
         <h1>Hello</h1>
         <SearchBar />
-        {
-          this.state.loaded ? <PostContainer objects = { this.state.array1 } /> : <div>Loading...</div>
-        }
+        <PostContainer objects = { this.state.array1 } />
       </div>
     );
   }
