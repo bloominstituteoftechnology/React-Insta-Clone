@@ -16,4 +16,4 @@ import './CommentSection.css';
     )
 }
 
-export default CommentSection; 
+export default CommentSection;
