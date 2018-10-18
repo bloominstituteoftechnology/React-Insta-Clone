@@ -1,0 +1,108 @@
+.searchbarContainer{
+    position: relative;
+    width: 100%;
+    max-height: 75px;
+    height: 60px;
+    border-bottom: 1px solid lightgrey;
+    z-index: +1;
+}
+.iconsContent{
+    display: flex;
+    flex-direction: row;
+    z-index: +1;
+}
+.instaLogoIcon{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-image: url(https://i1.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Instagram-Logo.png?resize=300%2C300);
+    background-size: cover;
+    margin-top: 15px;
+    z-index: +1;
+    cursor: pointer;
+    left: 15px;
+}
+.seperator {
+    position: relative;
+    top: 15px;
+    left: 40px;
+    width: 1px;
+    height: 30px;
+    border-right: 1px solid grey;
+    z-index: +1;
+}
+.instaLogoFont{
+    position: relative;
+    width: 120px;
+    height: 40px;
+    background-image: url(https://www.edigitalagency.com.au/wp-content/uploads/instagram-logo-only-font.png);
+    background-size: cover;
+    left: 58px;
+    top: 8px;
+    z-index: +1;
+
+}
+
+.searchbar{
+    background-image: url(../../img/searchbarassets/searchbaricon.png);
+    background-repeat: no-repeat;
+    background-size: 4% 50%;
+    background-position: 110px 8px;
+    background-color: #fcfcfc;
+    width: 300px;
+    height: 25px;
+    position: relative;
+    right: 10px;
+    bottom: 23px;
+    text-align: center;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    color: black;
+    z-index: +1;
+}
+
+.searchbar:focus {
+    background-image: none;
+    outline-color: transparent;
+    outline-style: none;
+    
+  }
+
+.exploreIcon{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-image: url(../../img/searchbarassets/sprite.png);
+    background-size: fill;
+    background-position: -455px 363.5px;
+    z-index: +1;
+    left: 560px;
+    top: 21px;
+    cursor: pointer;
+}
+
+.heartIcon{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-image: url(../../img/searchbarassets/sprite.png);
+    background-position: -455px 283.5px;
+    background-size: fill;
+    z-index: +1;
+    left: 580px;
+    top: 23px;
+    cursor: pointer;
+}
+
+.profileIcon{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-image: url(../../img/searchbarassets/sprite.png);
+    background-position: -455px 181px;
+    background-size: fill;
+    z-index: +1;
+    left: 600px;
+    top: 20px;
+    cursor: pointer;
+}

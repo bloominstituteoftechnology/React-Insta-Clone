@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script');
+
+.login-form{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    position: relative;
+    max-width: 440px;
+    margin: 0 auto;
+    margin-top: 15%;
+}
+
+.login-form h3 {
+    font-family: 'Oleo Script', cursive;
+    text-align: center;
+    margin: 25px 0px;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.login-form div {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: grey;
+}

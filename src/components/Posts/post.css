@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+.postUser{
+    display: inline-flex;
+    position: relative;
+    border-bottom: 1px solid grey;
+    width: 650px; 
+    height: 60px;
+    margin: 0px auto;
+    margin-top: 5px;
+}
+.postUser img {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    margin: 2px 10px;
+    cursor: pointer;
+}
+.postUser h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+
+}
+
+.postImg{
+    position: relative;
+    right: 1px;
+    width: 650px;
+    bottom: 3px;
+}
+.action {
+    position: relative;
+    right: 285px;
+    margin-top: 5px;
+    margin-left: 15px;
+    background-image: url('../../img/sprites.png');
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+}
+
+#likeAction {
+    position: relative;
+    width: 26px;
+    background-position: -457px 439px;
+    cursor: pointer;
+    left: -280px;
+    margin-top: 12px;
+    
+}
+
+#redLikeAction {
+    position: relative;
+    width: 36px;
+    background-size: 2600% 3100%;
+    background-position: -67px 60px;
+    cursor: pointer;
+    left: -280px;
+    margin-top: 12px;
+    margin-right: -9px;
+    display: none;
+}
+#commentAction {
+    position: relative;
+    bottom: 2px;
+    width: 26px;
+    background-position: 212px 42px;
+    cursor: pointer;
+    top: 0.5px;
+}
+
+.postLikes{
+    font-weight: 500;
+    margin: 5px 0px;
+    position: relative;
+    right: 277px;
+}
+.commentBox{
+    display: inline-flex;
+    position: relative;
+    bottom: 8px;
+    left: 10px;
+    width: 648px;
+    margin-top: 8px;
+    border: 1px solid transparent;
+}
+
+.commentUser{
+    color: black;
+    font-weight: 650;
+    margin-right: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.postTimeStamp{
+    position: relative;
+    right: 235px;
+    font-size: 12px;
+    color: darkgrey;
+}
+.footerContainer{
+    display: inline-flex;
+}
+.likes{
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    padding-left: 16px;
+    margin: -1px;
+}
+
+
+.addCommentActionMenu{
+    align-self: center;
+    width: 30px;
+    height: 40px;
+    position: relative;
+    top: 5px;
+    cursor: pointer;
+    
+}
+.commentInputForm{
+    display: inline-flex;
+    position: relative;
+    right: 15px;
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 10px;
+    border-top: 1px solid lightgrey;
+}
+.addACommentInput{
+    border: none;
+    position: relative;
+    left: 3px;
+    width: 575px;
+    height: 40px;
+    margin: 10px 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.addACommentInput:focus {
+    outline-color: transparent;
+    outline-style: none;
+  }
+
+
+.commentInputForm form {
+    display: flex;
+    
+  }
