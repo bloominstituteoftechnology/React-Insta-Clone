@@ -1,5 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 class LikeSection extends React.Component {
     constructor(props){
@@ -20,8 +23,13 @@ class LikeSection extends React.Component {
 
     render(){
         return(
+        
             <div>
-                {this.props.likes} likes
+            <span onClick={this.addLike}>
+                <FontAwesomeIcon icon={faHeart} />
+                {this.state.likes} likes
+            </span>
+                
             </div>
         )
     }

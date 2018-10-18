@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Post from './Post';
 import PostHeader from './PostHeader';
-import LikeSection from './LikeSection';
 import CommentContainer from '../CommentSection/CommentContainer'
 import dummyData from '../../dummy-data'
 
@@ -33,10 +32,7 @@ class PostPage extends React.Component{
         <div key={item.username}>
 
               <PostHeader username={item.username} avatar={item.thumbnailUrl} />
-               <Post post={item.imageUrl} timestamp={item.timestamp} />
-               <i onClick={this.addLike} className="far fa-heart"></i>
-               <i className="far fa-comment"></i>
-               <LikeSection likes={item.likes} />
+               <Post likes={item.likes} post={item.imageUrl} timestamp={item.timestamp} />
                
                <CommentContainer data={this.props.data} comments={item.comments} 
 
