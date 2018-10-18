@@ -9,11 +9,12 @@
 
 .App-header {
   min-height: 10vh;
-  width: 80%;     
+  width: 48%;     
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  position: relative;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
 }
