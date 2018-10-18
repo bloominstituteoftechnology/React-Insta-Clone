@@ -21,19 +21,6 @@ const Authenticate = App =>
         if (this.state.open) return <App />;
         return <Login />
     }
-
-
-
-
-    //     authenticater = () => { PassedComp => OtherComp => props => {
-    //         if (props.open) {
-    //             return (<PassedComp />)
-    //         }
-    //         return (<OtherComp {...props}/>)
-    //     };
-    // }
-    //     authenticater(PostPage)(Login);
-
-    };
+};
 
 export default Authenticate;

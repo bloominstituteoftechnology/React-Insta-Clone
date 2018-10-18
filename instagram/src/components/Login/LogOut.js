@@ -1,9 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const LogOut = (props) => {
+const LogoutButton = styled.button`
+    padding: 0 20px;
+`;
+
+
+
+const LogOut = () => {
     return ( <div className='logOut'>
-        <button
-        className='logOutButton'>Logout</button>
+        <LogoutButton>Logout</LogoutButton>
     </div> );
 }
  

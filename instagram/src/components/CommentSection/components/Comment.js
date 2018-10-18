@@ -1,5 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const CommentContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+`;
+const Commented = styled.div`
+    width: 100%;
+    line-height: 2;
+    display: flex;
+    justify-content: space-between;
+`;
+const Inputs = styled.div`
+    display:flex;
+`;
+const CommentUser = styled.div`
+    font-weight: bold;
+    padding-right: 10px;
+`;
+const Delete = styled.button`
+    border: none;
+    background-color: white;
+    padding-right: 50px;
+`;
+const TimeStamp = styled.div`
+    font-size: 12px;
+    float:left;
+    margin-top: 10px;
+`;
+const AddaComment = styled.form`
+    width: 100%;
+    border-top: 1px solid lightgray;
+    margin-top: 10px;
+`;
+const AddaCommentInput = styled.input`
+    border: none;
+    color: darkgray;
+    width: 100%;
+`;
 
 class Comment extends React.Component {
     constructor(props) {
@@ -38,30 +78,29 @@ class Comment extends React.Component {
     }
     render() {
         return(
-        <div className="commentContainer">
+        <CommentContainer>
         {this.state.comments.map((item, index) => {
             return (
-                <div className="comment"
-                key={index}>
-                <div className="inputs">
-                    <div className="commentUser">{item.username}</div>
+                <Commented key={index}>
+                <Inputs>
+                    <CommentUser>{item.username}</CommentUser>
                     <div className="text">{item.text}</div>
-                </div>
-                    <button className="delete" onClick={this.removeComment}>delete comment</button>
-                </div>
+                </Inputs>
+                    <Delete onClick={this.removeComment}>delete comment</Delete>
+                </Commented>
             )
         })}
-            <div className="timestamp">6 hours ago</div>
-            <form className="addComment" onSubmit={this.addComment}>
-                <input 
+            <TimeStamp>6 hours ago</TimeStamp>
+            <AddaComment onSubmit={this.addComment}>
+                <AddaCommentInput 
                 type="text" 
                 placeholder="Add a comment . . ."
                 name="newData"
                 onChange={this.changeHandler}
                 value={this.newData}
-                ></input>
-            </form>
-        </div>
+                ></AddaCommentInput>
+            </AddaComment>
+        </CommentContainer>
         )}
 }
 

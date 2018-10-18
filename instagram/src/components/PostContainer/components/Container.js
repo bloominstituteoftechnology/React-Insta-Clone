@@ -1,27 +1,56 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import Comment from '../../CommentSection/components/Comment';
+
+const PostContainer = styled.div`
+    width: 100%;
+    border: 1px solid darkgray;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding:25px;
+`;
+const PostHeader = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+`;
+const PostHeaderImg = styled.img`
+    height: 60px;
+    border-radius: 50px;
+    width: auto;
+    margin-right: 32px;
+`;
+const PostBodyImg = styled.img`
+    width: 100%;
+    margin: 10px 0;
+`;
+const Likes = styled.div`
+    color: darkgray;
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+`;
 
 const Container = props => {
     return ( 
         <div>
             {props.data.map((item, index) => {
                 return (
-                    <div 
-                    className="postContainer"
-                    key={index}>
-                        <div className="postHeader">
-                            <img src={item.thumbnailUrl} alt="user thumbnail" />
+                    <PostContainer key={index}>
+                        <PostHeader>
+                            <PostHeaderImg src={item.thumbnailUrl} alt="user thumbnail" />
                             {item.username}
-                        </div>
+                        </PostHeader>
                         <div className="postBody">
-                            <img src={item.imageUrl} alt="post" />
+                            <PostBodyImg src={item.imageUrl} alt="post" />
                         </div>
-                        <div className="likes">{item.likes} likes</div>
-                        <Comment 
-                        comments={item.comments}
-                        />
-                    </div> 
+                        <Likes>{item.likes} likes</Likes>
+                        <Comment comments={item.comments} />
+                    </PostContainer> 
                 )
             })}
         </div> );

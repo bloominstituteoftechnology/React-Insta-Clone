@@ -26,8 +26,7 @@ class Login extends React.Component {
                 className="username" 
                 placeholder="Username"
                 name="username" 
-                value={this.state.username}
-                />
+                value={this.state.username}/>
                 <input 
                 onChange={this.changeHandler}
                 type="text" 
