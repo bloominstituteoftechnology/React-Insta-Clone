@@ -14,14 +14,6 @@ class SearchBar extends React.Component {
     }
 
     }
-
-    
-
-    //  changeHandler = event => {
-    //     console.log('event name', event.target.name);
-    //     console.log('event value', event.target.value);
-    //     this.setState({ search: event.target.value });
-    // };
         
     render () {
         return (
