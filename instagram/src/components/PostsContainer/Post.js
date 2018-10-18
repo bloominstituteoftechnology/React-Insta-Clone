@@ -2,6 +2,7 @@ import React from 'react';
 import heart from '../Icons/heart.png';
 import combubble from '../Icons/combubble.png'
 
+
 const Post = props => {
   return (
     <div className="post">
@@ -11,7 +12,8 @@ const Post = props => {
       </div>
 
       <img src={props.imageUrl} alt="main" className="image" />
-      <img src={heart} alt="instacamera" className="heart" />
+      <img src={heart} alt="instacamera" className="heart" 
+        onClick={props.increment}/>
       <img src={combubble} alt="instacamera" className="instacamera"/>
       <p className="likes">{props.likes} likes</p>
       <p>{props.timestamp}</p>
