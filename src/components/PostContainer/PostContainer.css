@@ -1,0 +1,26 @@
+.postContainer{
+	margin-top:25px;
+	margin-bottom:75px;
+}
+.user-data{
+	display:flex;
+	flex-direction:row;
+	margin-bottom:10px;
+}
+
+.user-img{
+	height:50px;
+	width:50px;
+	border-radius:50%;
+	border:2px solid #222222;
+}
+
+.username{
+	position:relative;
+	left:20px;
+	top:15px;
+}
+
+.likes{
+	font-weight:bold;
+}
