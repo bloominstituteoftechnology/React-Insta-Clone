@@ -11,12 +11,12 @@ class App extends React.Component {
     return(
       <div className='App' >
       <div className='searchBar'>  
-      <i class="fab fa-instagram"></i>
+      <i className="fab fa-instagram"></i>
       <span>|</span>
       <span>Instagram</span>
         <SearchBar data={dummyData} />
-        <i class="far fa-compass"></i>
-        <i class="far fa-user"></i>
+        <i className="far fa-compass"></i>
+        <i className="far fa-user"></i>
       </div>
         
         <PostContainer data={dummyData} />

@@ -6,7 +6,7 @@ const CommentContainer = (props) => {
         return(
             <div className='CommentContainer'>
             
-                {props.comments.map(comment => <div>
+                {props.comments.map(comment => <div key={comment.text}>
                         <div> 
                         
                         {comment.username}:

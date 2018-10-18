@@ -4,23 +4,41 @@ import Post from './Post';
 import PostHeader from './PostHeader';
 import LikeSection from './LikeSection';
 import CommentContainer from '../CommentSection/CommentContainer'
+import dummyData from '../../dummy-data'
 
 
-const PostPage = (props) => {
-    return(
+class PostPage extends React.Component{
+    constructor(){
+        super()
+        this.state = {
+                counter: dummyData.likes 
+    }
+    }
+    
+
+    addLike = () => {
+        let counter = this.state.counter + 1
+        this.setState({
+        counter: counter 
+        },
+        
+        console.log(this.state.likes))
+    }
+   render(){
+        return(
 
 
         <div className='cmntSectionDiv'>
-        {props.data.map(item => 
-        <div>
+        {this.props.data.map(item => 
+        <div key={item.username}>
 
               <PostHeader username={item.username} avatar={item.thumbnailUrl} />
-               <Post post={item.imageUrl} />
-               <i class="far fa-heart"></i>
-               <i class="far fa-comment"></i>
+               <Post post={item.imageUrl} timestamp={item.timestamp} />
+               <i onClick={this.addLike} className="far fa-heart"></i>
+               <i className="far fa-comment"></i>
                <LikeSection likes={item.likes} />
                
-               <CommentContainer data={props.data} comments={item.comments} 
+               <CommentContainer data={this.props.data} comments={item.comments} 
 
                />
         </div>
@@ -32,6 +50,8 @@ const PostPage = (props) => {
 
         </div>
     )
+   }
+   
 }
 // const PostPage = (props) => {
 //         return(
