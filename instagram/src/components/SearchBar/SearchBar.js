@@ -6,9 +6,7 @@ import * as Icon from 'react-feather'
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state ={
-      
-    }
+    this.state ={}
   }
 
   handleInputChange = event => {
