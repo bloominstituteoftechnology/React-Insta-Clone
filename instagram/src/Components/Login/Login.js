@@ -27,6 +27,7 @@ class Login extends React.Component {
 
     render() { 
         return ( 
+            <div className="login-main-container">
             <div className="login-container">
                 <div className="header">
                     <h2 className="login-header">Instagram</h2>
@@ -35,8 +36,8 @@ class Login extends React.Component {
                     <input type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.inputHandler}/>
                     <input type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.inputHandler}/>
                     <button type="submit" className="button">Login</button>
-                </form>
-                
+                </form>   
+            </div>
             </div>
         );
     }
