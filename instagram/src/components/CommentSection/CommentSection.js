@@ -16,7 +16,7 @@ class CommentSection extends React.Component{
     }
 
     componentDidMount(){
-        this.setState({comments: this.props.comments});
+        this.setState({comments: this.props.usrData.comments});
     }
 
     changeHandler = event => {
@@ -28,7 +28,7 @@ class CommentSection extends React.Component{
         this.setState({
             comments: [
                 ...this.state.comments,
-                {username: "test_username", text: this.state.newComment}
+                {username: this.props.usrData.username, text: this.state.newComment}
             ],
             newComment: ""
         })
@@ -55,6 +55,6 @@ class CommentSection extends React.Component{
 export default CommentSection;
 
 
-CommentSection.propTypes = {
-    comments: PropTypes.array.isRequired
-}
+// CommentSection.propTypes = {
+//     comments: PropTypes.array.isRequired
+// }

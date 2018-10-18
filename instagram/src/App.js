@@ -8,7 +8,7 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      data: [] 
+      data: []
     }
 
   }
@@ -21,14 +21,11 @@ class App extends Component {
     this.setState({data: dummyData});
   }
 
-
-
-
   render() {
     return (
       <div className="App">
         <div className="main-container">
-        <SearchBar />
+        <SearchBar usrData={this.state.data} />
         {this.state.data.map((user, index) => <PostContainer usrData={user} idx={index} key={index} />)}
         </div>
       </div>

@@ -16,7 +16,7 @@ const Search = props => {
             <img className="logoTxt" src={logotxt} alt=""/>
         </div>
         <div className="search-container">
-            <form action="">
+            <form onSubmit={event => props.searchResults(event)}>
                 <input onChange={props.changeHandler} name="searchInput" className="search-input" type="text" value={props.searchInput} placeholder="Search"/>
             </form>
         </div>

@@ -14,7 +14,7 @@ const PostContainer = props => {
             <UserPostHeader thumbnailUrl={props.usrData.thumbnailUrl} username={props.usrData.username} />
             <PostImage image={props.usrData.imageUrl} />
             <LikeSection likes={props.usrData.likes}/>
-            <CommentSection comments={props.usrData.comments} idx={props.idx} />
+            <CommentSection usrData={props.usrData} idx={props.idx} />
             <TimeStamp timestamp = {props.usrData.timestamp} />  
         </div>
     );
