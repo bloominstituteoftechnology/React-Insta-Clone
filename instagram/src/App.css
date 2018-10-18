@@ -1,0 +1,110 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Search Bar CSS */
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  height: 75px;
+  padding: 0 10%;
+}
+
+.leftside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instacamera {
+  width: 20%;
+}
+
+.line {
+  font-size: 24px;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.instatext {
+  font-size: 24px;
+  font-family: cursive;
+  font-weight: bold;
+  }
+
+.searchinput {
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid lightgray;
+  margin-top: 25px;
+  background: whitesmoke;
+  font-size: 14px;
+}
+
+.rightside {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+/* 
+.post {
+  display: block;
+}
+
+.post-head {
+  display: flex;
+  flex-direction: row;
+}
+
+.thumbnail {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  align-self: flex-start;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.image { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.heart { 
+  display: flex;
+}
+
+.instacamera { 
+  display: flex;
+}
+
+.username {
+  align-self: center;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.likes {
+  width: 80%;
+  margin: 10px 90px;
+  display: flex;
+  font-weight: bold;
+
+} */
