@@ -63,13 +63,13 @@ const SearchBar = props => {
       </InputWrap>
       <IconsWrap>
         <SocialDiv>
-          <i className="far fa-compass" />
+          <i className="far fa-compass fa-3x" />
         </SocialDiv>
         <SocialDiv>
-          <i className="far fa-heart" />
+          <i className="far fa-heart fa-3x" />
         </SocialDiv>
         <SocialDiv>
-          <i className="far fa-user-circle" />
+          <i className="far fa-user-circle fa-3x" />
         </SocialDiv>
       </IconsWrap>
     </Header>
