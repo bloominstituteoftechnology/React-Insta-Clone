@@ -8,13 +8,27 @@ class CommentSection extends React.Component {
 		super(props);
 		this.state = {
 			comments: props.comments,
-			comment: ''
+			comment: '' //controlled input
 		};
 	}
 
 	addNewComment = event => {
 		this.setState({ comment: event.target.value});
 	};
+
+	commentSubmit = event => {
+		event.preventDefault();
+		//build out comment object
+		const newComment= { text: this.state.comment, username: 'Batman' };
+		//clone object array
+		const comments = this.state.comments.slice();
+		//push object into new clone
+		comments.push(newComment);
+		//set new clone as state.. and reset our comment string
+		this.setState({ comments: comments, comment: ''});
+	};
+
+
 
 	render() {
 		return (
@@ -26,6 +40,7 @@ class CommentSection extends React.Component {
 					/>
 				)}
 				<CommentInput 
+					submitHandler={this.commentSubmit}
 					addNewComment={this.addNewComment} 
 					comment={this.state.comment}
 				/>
