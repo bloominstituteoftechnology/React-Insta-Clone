@@ -7,9 +7,14 @@ class CommentSection extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			comments: props.comments
+			comments: props.comments,
+			comment: ''
 		};
 	}
+
+	addNewComment = event => {
+		this.setState({ comment: event.target.value});
+	};
 
 	render() {
 		return (
@@ -20,7 +25,10 @@ class CommentSection extends React.Component {
 						comment={c}
 					/>
 				)}
-				<CommentInput />
+				<CommentInput 
+					addNewComment={this.addNewComment} 
+					comment={this.state.comment}
+				/>
 			</div>
 		);
 	}
