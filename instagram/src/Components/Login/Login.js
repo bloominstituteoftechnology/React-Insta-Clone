@@ -29,9 +29,9 @@ class Login extends React.Component {
         return ( 
             <div className="login-container">
                 <div className="header">
-                    <h2>Login Page</h2>
+                    <h2 className="login-header">Instagram</h2>
                 </div>
-                <form onSubmit={this.submitLogin}>
+                <form className="login-form" onSubmit={this.submitLogin}>
                     <input type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.inputHandler}/>
                     <input type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.inputHandler}/>
                     <button type="submit" className="button">Login</button>
