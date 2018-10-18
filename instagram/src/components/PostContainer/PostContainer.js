@@ -2,6 +2,7 @@ import React from 'react';
 import CommentSection from '../CommentSection/commentSection';
 import './postContainer.css';
 import PropTypes from 'prop-types';
+import Likes from './likes';
 
 const PostContainer = props => {
     if (!props.dummyData.length) {
@@ -16,8 +17,8 @@ const PostContainer = props => {
                         <img className = 'thumbnail' src ={data.thumbnailUrl} alt = 'img'/>
                         <p className = 'username'><strong>{data.username}</strong></p>
                     </div>
-                    <img src ={data.imageUrl} alt = 'img'/>
-                    <p><strong>{data.likes} likes</strong></p>
+                        <img src ={data.imageUrl} alt = 'img'/>
+                        <strong><Likes item={data}/></strong>
                     <p>{data.timestamp}</p>
                     <CommentSection item={data}/>
                 </div>  
@@ -27,9 +28,9 @@ const PostContainer = props => {
         </div> 
     )
 }
- PostContainer.propTypes = {
-         dummyData: PropTypes.array
- }
+    PostContainer.propTypes = {
+        dummyData: PropTypes.array
+    }
 
 
 

@@ -42,7 +42,7 @@ class CommentSection extends React.Component {
     
     
                 <form className = 'form' onSubmit={this.addNewComment} >
-                    <input 
+                    <input className = 'addComment' 
                            type="text" 
                            placeholder= {this.state.placeholder} 
                            onChange={this.changeHandler}
@@ -68,3 +68,4 @@ class CommentSection extends React.Component {
 
  
 export default CommentSection;
+

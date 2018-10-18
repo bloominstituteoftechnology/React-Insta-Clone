@@ -1,0 +1,10 @@
+.instaIcon{
+    height: 50px;
+}
+
+.instaLogo{
+    height: 50px;
+    border-left: 1px solid lightgrey;
+    margin-left: 20px;
+    padding-left: 10px;
+}
