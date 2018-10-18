@@ -5,6 +5,7 @@
         margin: 20px 0;
         display: flex;
         flex-flow: row wrap;
+      
 
         .user-header{
             width: @width;
@@ -62,26 +63,60 @@
             }
         }
 
-        .comment-container{
+        .comment-box{
             width: @width;
-            padding: 0 25px;
             display: flex;
             flex-flow: row wrap;
 
-            .comment{
+            .comment-container{
                 width: @width;
-                margin: 5px 0;
+                padding: 0 25px;
+                display: flex;
+                flex-flow: row wrap;
+    
+                .comment{
+                    width: @width;
+                    margin: 5px 0;
+                }
+    
+                .comment-usr{
+                    font-weight: bold;
+                }
+                 
+                .comment-text{
+                    width: @width;
+                    margin-left: 10px;
+                    line-height: 1.2rem;
+                }
             }
 
-            .comment-usr{
-                font-weight: bold;
-            }
-             
-            .comment-text{
+            .add-comment-container{
                 width: @width;
-                margin-left: 10px;
-                line-height: 1.2rem;
+                margin-top: 20px;
+                padding: 0 25px;
+                display: flex;
+                flex-flow: row wrap;
+
+                .form-box{
+                    width: @width;
+                    border-top: 1px solid #bdc3c7;;
+                    padding: 20px 0;
+
+                    .add-comment{
+                        width: @width;
+                        padding: 20px 0px;
+                        font-size: 1rem;
+                        border: 0px;
+                        outline: 0;
+                    }
+
+                    .add-comment::placeholder{
+                        margin-left: 30px;
+                        color: #bdc3c7;
+                    }
+                }
             }
+    
         }
 
         .timestamp-container{
@@ -89,6 +124,7 @@
             margin-top: 20px;
             padding: 0 25px;
             display: flex; 
+           
 
             .timestamp{
                 font-size: 1rem;

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import LikeSection from '../Likes/LikeSection';
-import TimeStamp from './TimeStamp';
 import PostImage from './PostImage';
 import UserPostHeader from './UserHeader';
 
@@ -15,7 +14,7 @@ const PostContainer = props => {
             <PostImage image={props.usrData.imageUrl} />
             <LikeSection likes={props.usrData.likes}/>
             <CommentSection usrData={props.usrData} idx={props.idx} />
-            <TimeStamp timestamp = {props.usrData.timestamp} />  
+         
         </div>
     );
 }

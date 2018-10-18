@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comments from './comments';
 import AddComment from './AddComment';
+import TimeStamp from './TimeStamp';
 
 
 
@@ -37,15 +38,17 @@ class CommentSection extends React.Component{
     render(){
        
         return(
-           <div>
+           <div className="comment-box">
                {this.state.comments.map((comment, idx) =>{
                    return(
                        <Comments comment={comment} key={idx}/>
                    );
                })}
-               <div>
+
+               <TimeStamp timestamp = {this.props.usrData.timestamp}/>
+                <div className="add-comment-container">
                     <AddComment addComment={this.addComment} changeHandler={this.changeHandler} newComment={this.state.newComment} />
-               </div>
+                </div>
            </div>
            
         )

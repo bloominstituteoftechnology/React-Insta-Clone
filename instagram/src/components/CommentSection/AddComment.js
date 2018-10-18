@@ -3,9 +3,9 @@ import React from 'react';
 
  const AddComment = props => {
      return(
-         <div>
-             <form onSubmit={event => props.addComment(event)}>
-                <input type="text" name="newComment" onChange={props.changeHandler} id="" value={props.newComment}/>
+         <div className="form-box">
+             <form onSubmit={event => props.addComment(event)} className="comment-form">
+                <input type="text" name="newComment" onChange={props.changeHandler} className="add-comment" value={props.newComment} placeholder="Add a comment..."/>
              </form>
          </div>
      );

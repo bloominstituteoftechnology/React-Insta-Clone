@@ -252,23 +252,51 @@ table {
   margin-top: 10px;
   font-weight: bold;
 }
-.main-container .post-container .comment-container {
+.main-container .post-container .comment-box {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+.main-container .post-container .comment-box .comment-container {
   width: 100%;
   padding: 0 25px;
   display: flex;
   flex-flow: row wrap;
 }
-.main-container .post-container .comment-container .comment {
+.main-container .post-container .comment-box .comment-container .comment {
   width: 100%;
   margin: 5px 0;
 }
-.main-container .post-container .comment-container .comment-usr {
+.main-container .post-container .comment-box .comment-container .comment-usr {
   font-weight: bold;
 }
-.main-container .post-container .comment-container .comment-text {
+.main-container .post-container .comment-box .comment-container .comment-text {
   width: 100%;
   margin-left: 10px;
   line-height: 1.2rem;
+}
+.main-container .post-container .comment-box .add-comment-container {
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 25px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.main-container .post-container .comment-box .add-comment-container .form-box {
+  width: 100%;
+  border-top: 1px solid #bdc3c7;
+  padding: 20px 0;
+}
+.main-container .post-container .comment-box .add-comment-container .form-box .add-comment {
+  width: 100%;
+  padding: 20px 0px;
+  font-size: 1rem;
+  border: 0px;
+  outline: 0;
+}
+.main-container .post-container .comment-box .add-comment-container .form-box .add-comment::placeholder {
+  margin-left: 30px;
+  color: #bdc3c7;
 }
 .main-container .post-container .timestamp-container {
   width: 100%;
