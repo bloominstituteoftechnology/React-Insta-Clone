@@ -16,7 +16,7 @@ class CommentSection extends React.Component{
     }
 
     componentDidMount(){
-        this.setState({ comments: this.props.comments});
+        this.setState({comments: this.props.comments});
     }
 
     changeHandler = event => {

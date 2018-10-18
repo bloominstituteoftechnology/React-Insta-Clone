@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import heart from './img/heart.png';
 import bubble from './img/speech-bubble.png';
 
@@ -15,5 +16,9 @@ const Likes = props => {
     );
 }
 
-
 export default Likes;
+
+
+Likes.propTypes = {
+    likes: PropTypes.number.isRequired
+}
