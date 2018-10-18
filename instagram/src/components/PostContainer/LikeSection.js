@@ -14,7 +14,7 @@ const LikeSection = props => {
 		</div>,
 		<div className="like-container" key="likes">
 			<div className="like-wrapper">
-				{props.likes}
+				<h2 className="likes">{props.likes} likes</h2>
 			</div>
 		</div>
 	];

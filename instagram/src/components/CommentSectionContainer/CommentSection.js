@@ -4,10 +4,10 @@ import Comment from './Comment';
 import CommentInput from './CommentInput';
 
 class CommentSection extends React.Component {
-	constructor(props) {
+	constructor(props) { //receives props from state on App.js
 		super(props);
 		this.state = {
-			comments: props.comments,
+			comments: props.comments, //gets comment from state as props
 			comment: '' //controlled input
 		};
 	}
@@ -33,10 +33,10 @@ class CommentSection extends React.Component {
 	render() {
 		return (
 			<div>
-				{this.state.comments.map((c, i) => 
+				{this.state.comments.map((comment, index) => 
 					<Comment
-						key={i}
-						comment={c}
+						key={index}
+						comment={comment}
 					/>
 				)}
 				<CommentInput 

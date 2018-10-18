@@ -6,7 +6,7 @@ import Compass from './compass.png'
 import User from './User.png'
 import Heart from './heart.png'
 
-const SearchBar = () => {
+const SearchBar = props => {
 	return (
 		<div className="search-container">
 			<div className="logo-container">
@@ -14,7 +14,13 @@ const SearchBar = () => {
 				<img src={Brand} className="brand"/>
 			</div>
 			<div className="input-container">
-				<input type="text" placeholder="	      &#128269; Search"/>
+				<form>
+					<input
+						type="text" 
+						placeholder="        &#128269; Search"
+						onChange={props.SearchBar}
+					/>
+				<form/>
 			</div>
 			<div className="social-container">
 				<div>
