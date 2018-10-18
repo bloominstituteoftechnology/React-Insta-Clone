@@ -6,11 +6,12 @@ class Login extends React.Component {
         this.state = { 
             username: '',
             password: '',
-            [props.open]: false
         }
     }
-    login = event => {
-        this.setState({ open: true })
+    login = () => {
+        const user = this.state.username;
+        localStorage.setItem('user', user);
+        window.location.reload();
     }
     changeHandler = event => {
         this.setState({ [event.target.name]: event.target.value})
@@ -18,7 +19,7 @@ class Login extends React.Component {
     render() { 
         return ( 
         <div className="loginPage">
-            <form onSumbmit={this.login}>
+            <form onSubmit={this.login}>
                 <input 
                 onChange={this.changeHandler}
                 type="text" 

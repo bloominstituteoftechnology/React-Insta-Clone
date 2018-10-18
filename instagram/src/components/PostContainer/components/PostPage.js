@@ -19,9 +19,8 @@ class PostPage extends Component {
     render() { 
         return ( 
         <div className="App">
-            <Search />
-            <Container 
-            data={this.state.data}/>
+            <Search data={this.state.data}/>
+            <Container data={this.state.data}/>
       </div> );
     }
 }
