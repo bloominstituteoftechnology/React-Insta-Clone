@@ -3,8 +3,6 @@ import PostComments from "./PostComments";
 import PostTimeStamps from '../PostBody/PostTimeStamps';
 import '../post.css'
 
-
-
 class Comments extends Component {
   constructor(props){
     super(props);
@@ -12,7 +10,7 @@ class Comments extends Component {
     userInput: '',
     comments: this.props.obj.comments,
     timestamps: this.props.obj,
-    counter: this.props.obj.likes
+    counter: this.props.obj.likes,
     }
 }
 

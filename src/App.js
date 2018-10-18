@@ -36,7 +36,11 @@ componentDidMount() {
         <SearchbarContainer />
         {this.state.data.map(instance =>{
             return(
+            <div>
+              
         <Post data={this.state.data} obj={instance} key={instance.timestamp}/>
+        
+              </div>
             )})}
         
       </div>
