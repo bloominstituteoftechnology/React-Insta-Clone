@@ -32,11 +32,11 @@ class CommentSection extends React.Component{
                 {username: this.props.usrData.username, text: this.state.newComment}
             ],
             newComment: ""
-        })
+        }) 
+       
     }
 
     render(){
-       
         return(
            <div className="comment-box">
                {this.state.comments.map((comment, idx) =>{

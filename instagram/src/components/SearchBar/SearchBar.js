@@ -1,54 +1,31 @@
 import React from 'react';
-import Search from './search';
-import dummyData from '../../dummy-data';
+import logo from './imgs/logo.png';
+import logotxt from './imgs/logo-txt.png';
+import heart from './imgs/heart.png';
+import compass from './imgs/compass.png';
+import user from './imgs/user.png';
 
 
-// const SearchBar = () => {
-//    return(
-    
-//    );
-// }
-
-class SearchBar extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-           data: [],
-           searchInput: ""
-        }
-    }
-
-    componentDidMount(){
-        this.setState({data: dummyData})
-    }
-
-    changeHandler = event => {
-        this.setState({[event.target.name] : event.target.value});
-    }
-
-   searchResults = event =>{
-        event.preventDefault();
-        this.setState({
-            data: this.state.data.filter(item => {
-
-                if(this.state.searchInput === item.username){
-                    return item.username;
-                }else{
-                    return item;
-                }
-            }),
-            searchInput: ""
-        });
-   }
-
-    render(){
-        console.log(this.state.data);
-       return(
+const SearchBar = props => {
+    return(
         <div className="search-bar-container">
-            <Search changeHandler={this.changeHandler} searchInput={this.state.searchInput} searchResults={this.searchResults} />
-        </div>
-       );
-    }
+            <div className="logo">
+                <img className="logoBox"src={logo} alt=""/>
+                <span className="logoPipe">|</span>
+                <img className="logoTxt" src={logotxt} alt=""/>
+            </div>
+            <div className="search-container">
+                <form onSubmit={event => props.searchResults(event)}>
+                    <input onChange={props.changeHandler} name="searchInput" className="search-input" type="text" value={props.searchInput} placeholder="Search"/>
+                </form>
+            </div>
+            <div className="search-bar-icons">
+                <img className="search-icons" src={compass} alt=""/>
+                <img className="search-icons" src={heart} alt=""/>
+                <img className="search-icons" src={user }alt=""/>
+            </div>
+    </div>
+    );
 }
 
 export default SearchBar;

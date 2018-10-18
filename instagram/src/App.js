@@ -8,7 +8,8 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      data: []
+      data: [],
+      searchInput: ""
     }
 
   }
@@ -21,11 +22,23 @@ class App extends Component {
     this.setState({data: dummyData});
   }
 
+  changeHandler = event => {
+    this.setState({[event.target.name] : event.target.value});
+  }
+
+  searchResults = event =>{
+    event.preventDefault();
+    this.setState({
+      data: this.state.data.filter(item => item.username === this.state.searchInput ? item : null),
+     searchInput: ""
+    });
+  }
+
   render() {
     return (
       <div className="App">
         <div className="main-container">
-        <SearchBar usrData={this.state.data} />
+        <SearchBar usrData={this.state.data} changeHandler={this.changeHandler} searchResults={this.searchResults} />
         {this.state.data.map((user, index) => <PostContainer usrData={user} idx={index} key={index} />)}
         </div>
       </div>
