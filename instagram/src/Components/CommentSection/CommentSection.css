@@ -31,12 +31,12 @@
     font-size: 13px;
 }
 
-.comment-input{
+.new-comment{
     display: flex;
     width: 100%;
 }
 
-input{
+.comment-input{
     max-width: 600px;
     font-size: 15px;
     color: gray;
@@ -46,12 +46,12 @@ input{
     overflow: auto;
 }
 
-input.break {
+.comment-input.break {
     word-wrap: break-word;
     word-break: break-all;
     height: 80px;
 }
-.comment-input i{
+.new-comment i{
     margin: auto 0 ;
     font-size: 20px;
     width: 10%;

@@ -51,8 +51,8 @@ class CommentSection extends React.Component {
                     {/* Divider (border-bottom)*/}
                 </div>  
                 {/* Add Comment section*/}
-                <form className="comment-input" onSubmit={this.addNewComment}>
-                    <input type="text" placeholder="Add a comment..." value={this.state.commentValue} onChange={this.inputChangeHandler}/>
+                <form className="new-comment" onSubmit={this.addNewComment}>
+                    <input className="comment-input" type="text" placeholder="Add a comment..." value={this.state.commentValue} onChange={this.inputChangeHandler}/>
                     <i className="fas fa-ellipsis-h"></i>
                 </form>
             </div>
