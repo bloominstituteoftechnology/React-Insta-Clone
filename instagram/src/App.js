@@ -14,7 +14,10 @@ class App extends Component {
     }
   }
 
-  
+componentDidMount(){
+  let myData = this.state;
+        
+}
 
   render() {
     return (
