@@ -6,7 +6,7 @@ const AddComment = (props) => {
         <div>
            {/* {props.username}
            {props.text} */}
-           <input />
+           <input onSubmit={props.AddedComment} onChange={props.CommentHandler} />
         </div>
     )
 }
