@@ -2,7 +2,7 @@
 .post-container{
     font-family: 'Roboto', sans-serif;
     width: 85%;
-    max-width: 650px;
+    max-width: 600px;
     margin: 0 auto 30px auto;
     display: flex;
     flex-direction: column;

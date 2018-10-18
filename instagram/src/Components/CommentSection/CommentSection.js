@@ -39,9 +39,6 @@ class CommentSection extends React.Component {
                 commentValue: '',
             }))
         }
-        
-
-
     }
 
     render() {
