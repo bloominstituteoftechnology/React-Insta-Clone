@@ -8,27 +8,47 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.comments,
-      likes: props.likes
+      likes: props.likes,
+      comment:''
     };
   
   }
 
   
 
-  addNewComment =  (event, i) => {
-    i = this.state.comments.length;
-    console.log(i);
-    console.log(event.target.value);
+  addNewComment =  event => {
     event.preventDefault();
+    this.setState({
+      comments: [
+        ...this.state.comments, 
+        { text: this.state.comment,
+          username: "Groucho Marx"
+        }
+      ],
+      comment: ''
+    })
    }
   
+  handleInputChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  }
+
+  increaseLikes = event => {
+    this.setState({
+      likes: this.state.likes + 1
+    });
+  }
 
   render() {
     return(
       <div className="commentSection">
         <div className="likeAndComment">
           <div className="likeAndCommentIcons">
-            <Icon.Heart className="icons"/>
+            <Icon.Heart 
+              className="icons"
+              onClick={this.increaseLikes}/>
             <Icon.MessageCircle className="icons" />
           </div>  
           <p>{this.state.likes} likes</p>
@@ -45,8 +65,11 @@ class CommentSection extends React.Component {
           </div> 
           <form onSubmit={this.addNewComment}>
             <Input 
+              name="comment"
               placeholder="Add a comment..."
-              type="text" />
+              type="text"
+              onChange={this.handleInputChange}
+              value={this.state.comment} />
          </form>   
       </div>
     )
