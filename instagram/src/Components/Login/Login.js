@@ -18,7 +18,9 @@ class Login extends React.Component {
     //send login info to local storage
     submitLogin = () => {
         const user = this.state.username;
+        const password = this.state.password;
         window.localStorage.setItem('user', user);
+        window.localStorage.setItem('password', password);
         window.location.reload();
     }
 
