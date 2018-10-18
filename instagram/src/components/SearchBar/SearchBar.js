@@ -11,10 +11,17 @@ const SearchBar = (props) => {
         return(
         <div className="App">
                 <header className="App-header">
-                        <i className="fab fa-instagram"></i>
+                <div className="grp1">
+                        <i className="fab fa-instagram item"></i>
+                        <p className="fab item"> | </p>
+                        <span className="cursive item">Instaclone</span>
+                </div>
+                <div className="grp2">                
                         <input></input>
-                        <FontAwesomeIcon icon="ghost" /> 
-                        <FontAwesomeIcon icon="search" />
+                </div>
+                <div className="grp3">
+                        <FontAwesomeIcon icon="search" className="fab" />
+                </div>
                 
                 </header>
         </div>

@@ -8,9 +8,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 10vh;
-  width: 80%;
+  width: 80%;     
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -32,6 +31,23 @@
   }
 }
 
+.fab {
+  color: black;
+}
 
+.grp1 {
+  padding: 2px;
+}
+
+.cursive {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 110%;
+  font-weight: bold;
+  color: black;
+}
+
+.item {
+  margin: 10px;
+}
 
 
