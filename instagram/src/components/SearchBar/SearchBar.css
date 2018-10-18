@@ -1,0 +1,40 @@
+/* Search Bar Syling */
+
+.search-bar-wrap {
+    border-bottom: 1px solid #3333;
+    height: 80px;
+    line-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 20px;
+}
+
+.image {
+    width: 200px;
+    height: 50px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.social-wrap {
+    display: flex;
+}
+
+.social {
+    width:  40px;
+    height: 40px;
+    padding: 40px 45px 40px 3px;
+}
+
+.fa-instagram {
+    position: relative;
+    bottom: 90px;
+    right: 180px;
+    left: -140px;
+    padding-right: 20px;
+    border-right: 1px solid black;
+}
