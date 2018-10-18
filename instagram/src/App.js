@@ -1,9 +1,7 @@
 import React from 'react';
 import PostPage from './Components/PostContainer/PostPage';
-import 'font-awesome/css/font-awesome.min.css';
-
+import Authenticate from './Components/Authentication/Authenticate';
 import './App.css';
-import {faHospitalAlt} from '@fortawesome/free-solid-svg-icons';
 
 class App extends React.Component {
   constructor () {
@@ -20,4 +18,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
