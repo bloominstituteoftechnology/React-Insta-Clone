@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
+
+
+.searchbar-container {
+    border-bottom: 1px solid whitesmoke;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    display: flex;
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+    height: 60px;
+    background-color: white;
+    width: 100%;
+  position: sticky;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    top: -1px;
+    
+}
+.far{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 25px;
+}
+.instagram-logo{
+    margin: auto 0 auto 10px;
+    cursor: pointer;
+    width: 40px;
+}
+
+.divider{
+    border-left: 1px solid black;
+    height: 28px;
+    margin: auto 0;
+}
+
+.instagram-letter-logo{
+    padding-left: 1%;
+    padding-right: 1%;
+    cursor: pointer;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 35px;
+    width: 20%;
+    margin: auto 0;}
+
+.search-area{
+    width: 60%;
+    align-items: center;
+    margin-top: 8px;
+    margin: auto 0;
+}
+
+.search-input{
+    height: 25px;;
+    width: 65%;
+    border-radius: 5px;
+    background-color: aliceblue;
+    text-align: center;
+    margin: auto 0 auto 40px;
+}
+
+
+.rigth-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
+}
+
+.rigth-icon-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
+.login-main-container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background:#EEEEEE;
+    z-index: 10;
+}
+
+.login-container {
+    border: 4px solid lightgray;
+    border-radius: 4px;
+    max-width: 300px;
+    margin: 130px auto 0 auto;
+    background-color: white;
+    padding-bottom: 30px;
+}
+.login-header{
+    text-align: center;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 50px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.login-form input {
+    margin-bottom: 5px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.login-form button{
+    margin-top: 10px;
+    background-color: #3897F0;
+    color: white;
+    height: 35px;
+    border-radius: 5px;
+}
