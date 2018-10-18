@@ -27,10 +27,11 @@ class SearchBar extends React.Component{
                 &ensp;|&ensp;
                   Instagram
                 </div>
-
-                <input id="inputty" type="text" placeholder="&#x1f50d; search"/>
+                <form onSubmit={this.props.onSearch}>
+                <input value={this.props.val} onChange={this.props.onChange}id="inputty" type="text" placeholder="&#x1f50d; search"/>
+                </form>
                 <div class="threenav">
-            
+                
                 <FontAwesomeIcon icon="compass"/>
                 &ensp;
                 <FontAwesomeIcon icon="heart"/>

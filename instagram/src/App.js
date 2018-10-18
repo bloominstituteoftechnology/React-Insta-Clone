@@ -39,6 +39,7 @@ class App extends Component {
     super();
     this.state={
       controlledComment:'',
+      controlledSearch:'',
       database: []
     }
 };
@@ -46,6 +47,7 @@ class App extends Component {
 componentDidMount(){
 this.setState(
   {controlledComment:'',
+  controlledSearch:'',
   database: dummyData}
 )
 }
@@ -99,6 +101,7 @@ let finaldummydatabase= newdatabase.map(
   //replace database with new dummy
  this.setState({
   controlledComment: "",
+  controlledSearch:'',
   database: finaldummydatabase
   })
   
@@ -118,17 +121,32 @@ onClick=event=>{
   )
 
   this.setState({
-    conrolledComment:'',
+    controlledComment:'',
+    controlledSearch:'',
     database: updatedDatabase
   })
 }
 
-// onSearch=event=>{
-//   let newdatabase=this.state.database.slice();
-//   let filteredImages=newdatabase.map(
+onSearch=event=>{
+  event.preventDefault();
+  console.log("onSearchCalled");
+  let newdatabase=this.state.database.slice();
+  let filteredImages=newdatabase.filter(
+   (image)=>image.username===this.state.controlledSearch
+  )
+  console.log(filteredImages)
+  this.setState({
+    controlledComment:'',
+    controlledSearch:event.target.id,
+    database: filteredImages,
+  })
+}
 
-//   )
-// }
+onSearchChange=event=>{
+  this.setState({
+    controlledSearch:event.target.value
+  })
+}
 
 
 
@@ -137,7 +155,7 @@ onClick=event=>{
     return (
       <div className="App">
         <header>
-<SearchBar/>
+<SearchBar val={this.state.controlledSearch} onSearch={this.onSearch} onChange={this.onSearchChange}/>
         </header>
 
         { <div>
