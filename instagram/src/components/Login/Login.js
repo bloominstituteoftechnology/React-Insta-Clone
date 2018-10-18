@@ -1,14 +1,43 @@
-import React from 'react'
+import React from "react";
 
-const Login = props => {
+class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: ""
+    };
+  }
+
+  inputHandler = event => {
+    this.setState({ [event.target.name]: event.target.value }); //reusable handler, allows for different values to be updated
+  };
+
+  submitHandler = event => {
+    const user = this.state.username; //grab username from state
+    localStorage.setItem("user", user); //create item in local storage called user, set equal to username
+    window.location.reload(); //force location reload, refresh page
+  };
+
+  render() {
     return (
-        <form>
-            <input placeholder = 'username' />
-            <input placeholder = 'password' />
-            <button>Login</button>
-        </form>
-        
-    )
+      <form>
+        <input
+          name="username"
+          placeholder="username"
+          value={this.state.username}
+          onChange={this.inputHandler}
+        />
+        <input
+          name="password"
+          placeholder="password"
+          value={this.state.password}
+          onChange={this.inputHandler}
+        />
+        <button onClick={this.submitHandler}>Login</button>
+      </form>
+    );
+  }
 }
 
-export default Login
+export default Login;
