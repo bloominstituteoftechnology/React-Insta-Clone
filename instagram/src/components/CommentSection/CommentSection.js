@@ -9,7 +9,7 @@ let id=props.id;
 return(
     <div class="comment-section">
         <div class="likes">
-    &#9825;
+    <button onClick={props.onClick} id={props.id}>&#9825;</button>
     &#128488;
     <p>{likes}&nbsp; likes</p>
     </div>

@@ -12,19 +12,43 @@ import {faUser} from '@fortawesome/free-solid-svg-icons'
 import dummyData from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer.js'
 
+
+
 library.add(faSearch)
 library.add(faCompass)
   library.add(faHeart)
   library.add(faUser)
+
+  const findTargetImage= (id, database)=>{
+  
+    let currentimage=null;
+    let newdatabase= database.map(
+      (image)=>{
+          if(image.imageUrl===id){
+            currentimage=image;
+            return(image);
+          }else{return(image)}
+        }
+  
+    )
+    return(currentimage);
+  }
 
 class App extends Component {
   constructor(){
     super();
     this.state={
       controlledComment:'',
-      database: dummyData
+      database: []
     }
 };
+
+componentDidMount(){
+this.setState(
+  {controlledComment:'',
+  database: dummyData}
+)
+}
 
 handleChange=event=>{
   this.setState({
@@ -47,6 +71,7 @@ handleNew=event=>{
       }
 
   )
+
   console.log(newdatabase);
   console.log(currentimage);
   //all works until this point
@@ -79,6 +104,35 @@ let finaldummydatabase= newdatabase.map(
   
 };
 
+onClick=event=>{
+  let newdatabase=this.state.database.slice();
+  let currentImage= findTargetImage(event.target.id, newdatabase);
+  currentImage.likes=(currentImage.likes+1);
+  console.log(currentImage.likes);
+  let updatedDatabase=newdatabase.map(
+    (image)=>{
+      if(image.imageUrl===currentImage.imageUrl){
+        return(currentImage);
+      }else{return(image)}
+    }
+  )
+
+  this.setState({
+    conrolledComment:'',
+    database: updatedDatabase
+  })
+}
+
+// onSearch=event=>{
+//   let newdatabase=this.state.database.slice();
+//   let filteredImages=newdatabase.map(
+
+//   )
+// }
+
+
+
+
   render() {
     return (
       <div className="App">
@@ -87,7 +141,7 @@ let finaldummydatabase= newdatabase.map(
         </header>
 
         { <div>
-        <PostContainer posts={this.state.database} handleChange={this.handleChange} handleNew={this.handleNew} val={this.state.controlledComment}/>
+        <PostContainer onClick={this.onClick} posts={this.state.database} handleChange={this.handleChange} handleNew={this.handleNew} val={this.state.controlledComment}/>
             
         </div> }
       </div>

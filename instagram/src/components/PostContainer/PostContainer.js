@@ -13,7 +13,7 @@ const PostContainer=(props)=>{
                     <div class="big-container">
                     <Post post={post}/>
                        
-                    <CommentSection comments={post.comments} likes={post.likes} id={post.imageUrl} handleChange={props.handleChange} handleNew={props.handleNew} val={props.val}/>
+                    <CommentSection comments={post.comments} likes={post.likes} id={post.imageUrl} handleChange={props.handleChange} handleNew={props.handleNew} val={props.val} onClick={props.onClick}/>
                         <div class="timestamp">
                         {post.timestamp}
                         </div>
