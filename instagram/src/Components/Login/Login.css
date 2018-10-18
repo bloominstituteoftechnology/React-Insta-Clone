@@ -2,13 +2,13 @@
 
 html{
     background-color: #EEEEEE;
-    padding-top: 130px;
+    
 }
 
 .login-container {
     border: 4px solid lightgray;
     max-width: 300px;
-    margin: 0 auto;
+    margin: 130px auto 0 auto;
     background-color: white;
     padding-bottom: 30px;
 }
