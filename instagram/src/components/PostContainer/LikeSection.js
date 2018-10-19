@@ -5,17 +5,17 @@ import './Post.css'
 
 const LikeSection = props => {
 	return [
+		<div className="like-container" key="likes">
+			<div>
+				<p className="likes"><strong>{props.likes} likes</strong></p>
+			</div>
+		</div>,
 		<div className="like-container" key="icons" onClick={props.incrementLike}>
 			<div className="like-wrapper">
 				<img src={Heart} className="social"/>
 			</div>
 			<div className="like-wrapper">
 				<img src={Comment} className="social"/>
-			</div>
-		</div>,
-		<div className="like-container" key="likes">
-			<div className="like-wrapper">
-				<h2 className="likes">{props.likes} likes</h2>
 			</div>
 		</div>
 	];
