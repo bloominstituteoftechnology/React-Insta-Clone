@@ -1,21 +1,33 @@
-import React from 'react'
+import React from "react";
+import LoginPage from '../components/Login/Login';
+
 
 //HOC
 
 const Authenticate = App =>
   class extends React.Component {
-    constructor() {
-      super ();
+    constructor(props) {
+      super(props);
       this.state = {
-        loggedIn: true,
+        loggedIn: false
+      };
+    }
+
+    componentDidMount() {
+      if (!localStorage.getItem("user")) {
+        this.setState({ loggedIn: false });
+      } else {
+        this.setState({ loggedIn: true });
       }
     }
 
+    
 
     render() {
-      //if user is logged in, render app, else render a login component
-      return <App />
+      //If a user is logged in we will return the `<App />`, else we will return the `<LoginPage>`
+      if (this.state.loggedIn) return <App />;
+      return <LoginPage />
     }
-  }
+  };
 
-  export default Authenticate
+export default Authenticate;

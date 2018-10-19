@@ -1,6 +1,7 @@
 import React from "react";
+import "./Login.css"
 
-class Login extends Component {
+class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,12 +25,14 @@ class Login extends Component {
       <form>
         <input
           name="username"
+          type="text"
           placeholder="username"
           value={this.state.username}
           onChange={this.inputHandler}
         />
         <input
           name="password"
+          type="text"
           placeholder="password"
           value={this.state.password}
           onChange={this.inputHandler}

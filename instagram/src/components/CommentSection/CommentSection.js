@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comments from '../CommentSection/Comments';
 import CommentInput from '../CommentSection/CommentInput';
+import '../CommentSection/CommentSection.css';
 
 
 
@@ -21,7 +22,7 @@ class CommentSection extends React.Component {
 
     submitHandler = event => {
         event.preventDefault(); //prevent page refresh
-        const newComment = {text: this.state.comment, username: this.state.username };
+        const newComment = {text: this.state.comment, username: 'Tom Foolery' };
         const comments = this.state.comments.slice();
         comments.push(newComment);
         this.setState({comments, comment: ''}) //replaces state: select comments field and add to comments ES6
@@ -29,6 +30,7 @@ class CommentSection extends React.Component {
 
     render() {
         return (
+            
             <div>
                 {this.state.comments.map((comment, index) => <Comments key = {index} comment ={comment} />)}
                 <CommentInput 

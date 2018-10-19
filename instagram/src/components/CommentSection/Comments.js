@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 const Comments = props => {
     return (
         <div className = 'comments-wrapper'>
-            <h2>{props.comments.username}</h2>
-            <h2>{props.comments.text}</h2>
+            <h2 className = 'comment-user-name'>{props.comment.username}</h2>
+            <h2 className = 'comment-text'>{props.comment.text}</h2>
         </div>
     )
 }

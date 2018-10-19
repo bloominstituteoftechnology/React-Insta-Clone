@@ -5,6 +5,7 @@ const CommentInput = props => {
     <form onSubmit = {props.submitHandler}>
       <input onChange = {props.changeHandler} type="text" value={props.comment} placeholder="Add comment..." />
     </form>
+    //value controls the form and keeps it from being 'dirty' ie it refreshes the form input to the placeholder each time
   );
 };
 

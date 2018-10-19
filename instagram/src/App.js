@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Authenticate from './Authentication/Authenticate;
+import Authenticate from './Authentication/Authenticate';
 import PostsPage from "./components/PostContainer/PostsPage";
  
 

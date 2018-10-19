@@ -1,3 +1,21 @@
+.search-bar-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.left-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+
+.insta-logo {
+    font-family: Grand Hotel;
+    font-size: 3rem;
+}
+
 .post-header {
     display: flex;
     flex-direction: row;
@@ -14,11 +32,12 @@
     width: 99%;
 }
 
+.social-wrapper {
+    display: flex;
+}
+
 .likes {
     font-weight: bold;
 }
 
-.social-wrapper {
-    display: flex;
-    
-}
+
