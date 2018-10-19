@@ -3,13 +3,20 @@ import CommentSection from '../CommentSection/commentSection';
 import './postContainer.css';
 import PropTypes from 'prop-types';
 import Likes from './likes';
+// import styled from 'styled-components';
+
+// const PostWrapper = styled.div`
+//     width: 642px;
+//     text-align: left;
+//     `;
 
 const PostContainer = props => {
     if (!props.dummyData.length) {
         return <h4>Loading Posts...</h4>;
     }
     return (
-        <div className = 'postContainer'>
+        // <PostWrapper>
+        <div>
         {props.dummyData.map ((data, index) => {
             return (
                 <div className = 'posts' key = {index}>
@@ -19,12 +26,13 @@ const PostContainer = props => {
                     </div>
                         <img src ={data.imageUrl} alt = 'img'/>
                         <strong><Likes item={data}/></strong>
-                    <p>{data.timestamp}</p>
+                    {/* <p>{data.timestamp}</p> */}
                     <CommentSection item={data}/>
                 </div>  
             )
         }
         )}
+        {/* </PostWrapper> */}
         </div> 
     )
 }

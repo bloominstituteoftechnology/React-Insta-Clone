@@ -1,7 +1,7 @@
 import React from 'react';
 import './searchBar.css';
 import instaLogo from '../../Images/insta_logo.png';
-import instaIcon from '../../Images/insta_icon.png';
+import * as Icon from 'react-feather';
 
 
 class SearchBar extends React.Component {
@@ -19,14 +19,22 @@ class SearchBar extends React.Component {
     
     render () {
         return (
-            <div>
-                <div>
-                    <img className = 'instaIcon' src = {instaIcon} />
+            <div className = 'searchBarSection'>
+                <div className = 'leftIcons'>
+                    <Icon.Instagram />
                     <img className = 'instaLogo' src = {instaLogo} />
                 </div>
-                <form className = 'searchBar'>
-                <input onKeyDown={this.props.search} type="text" placeholder="Search" />
+                <form >
+                <input className = 'searchBar' 
+                    onKeyDown={this.props.search} 
+                    type="text" 
+                    placeholder=  "Search" />
                 </form>
+                <div className= 'rightIcons'>
+                    <Icon.Compass />
+                    <Icon.Heart />
+                    <Icon.User />
+                </div>
             </div>
 
         )

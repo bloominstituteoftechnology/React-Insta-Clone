@@ -39,6 +39,7 @@ class App extends Component {
             this.state.filteredPosts.length > 0
               ? this.state.filteredPosts
               : this.state.dummyData} />
+        {/* <PostPage /> */}
       </div>
     );
   }
