@@ -19,7 +19,13 @@ const LogoHeader = styled.div `
 
 const Logo = styled.img`
   height: 50%;
-  padding: 0px 15px;
+  padding: 10px 15px;
+`;
+
+const LogoCamera = styled.img`
+    border-right: 1px solid black;
+    height: 50%;
+    padding: 10px 15px;
 `;
 
 const InputWrap = styled.div`
@@ -47,7 +53,7 @@ const SearchBar = props => {
     return (
       <Header>
       <LogoHeader>
-        <Logo alt='instagram camera' src={Camera} />
+        <LogoCamera alt='instagram camera' src={Camera} />
       <Logo alt="instagram logo" src={IGLogo} />
       </LogoHeader>
       <InputWrap>
