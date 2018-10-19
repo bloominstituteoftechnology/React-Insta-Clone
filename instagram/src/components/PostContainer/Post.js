@@ -1,5 +1,7 @@
 import React from 'react';
 import PostHeader from './PostHeader.js';
+import './PostContainer.css';
+import CommentSection from '../CommentSection/CommentSection';
 const Post = props => {
 	return (
 		<div className='postData'>
@@ -19,6 +21,7 @@ const Post = props => {
 				/>
 				
 			</div>
+			<CommentSection comments={props.post.comments} />
 		</div>
 	);
 };

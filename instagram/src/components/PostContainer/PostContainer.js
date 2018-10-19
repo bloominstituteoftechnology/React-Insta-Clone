@@ -1,11 +1,11 @@
 import React from 'react';
 import './PostContainer.css';
 import Post from './Post.js'
-import CommentSection from '../CommentSection/CommentSection.js'
+// import CommentSection from './CommentSection/CommentSection'
 
 const PostContainer = props => {
 	return (
-		<div className="postContainer">
+		<div className='postContainer'>
 			{props.post.map(posts => 
 				<Post
 					key={posts.imageUrl}
@@ -13,7 +13,7 @@ const PostContainer = props => {
 				/>
                 
             )}
-            
+            {/* <CommentSection /> will go here */}
             
 		</div>
        
