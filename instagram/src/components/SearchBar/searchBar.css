@@ -1,0 +1,30 @@
+.searchBarSection{
+    display:flex;
+    margin-top: 20px;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    height: 100px;
+}
+.searchBar{
+width: 200px;
+height: 25px;
+}
+
+.rightIcons{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftIcons{
+    display: flex;
+    align-items: center;
+}
+
+.instaLogo{
+    height: 35px;
+    border-left: 1px solid lightgrey;
+    margin-left: 20px;
+    padding-left: 10px;
+  
+}
