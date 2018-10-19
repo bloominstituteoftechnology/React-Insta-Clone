@@ -1,7 +1,7 @@
 import React from "react";
-import dummyData from "./dummy-data";
+import dummyData from "../dummy-data";
 import PostContainer from "./PostContainer";
-import SearchBar from "../SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 
 //main state goes in this component
 
