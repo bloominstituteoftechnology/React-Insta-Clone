@@ -20,7 +20,7 @@ const SearchBar = props => {
 						placeholder="        &#128269; Search"
 						onChange={props.SearchBar}
 					/>
-				<form/>
+				</form>
 			</div>
 			<div className="social-container">
 				<div>

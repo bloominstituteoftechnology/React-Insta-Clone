@@ -15,7 +15,7 @@ class Post extends React.Component {
 	}
 
 	incrementLike = () => {
-		let likes = this.state.likes + 1;
+		let likes = this.state.like + 1;
 		this.setState({ likes });
 	}
 
@@ -23,12 +23,12 @@ class Post extends React.Component {
 		return (
 			<div className="post-bucket">
 				<PostHead
-					username={props.post.username}
-					thumbnailUrl={props.post.thumbnailUrl}
+					username={this.props.post.username}
+					thumbnailUrl={this.props.post.thumbnailUrl}
 				/>
 				<div className="img-container">
 					<img 
-						src={props.post.imageUrl}
+						src={this.props.post.imageUrl}
 						alt="post image"
 						className="post-image"
 					/>
@@ -38,7 +38,7 @@ class Post extends React.Component {
 					likes={this.state.likes}
 				/>
 				<CommentSection 
-					comments={props.post.comments}
+					comments={this.props.post.comments}
 				/>
 			</div>
 		);	
