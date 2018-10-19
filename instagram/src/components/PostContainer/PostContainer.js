@@ -1,7 +1,7 @@
 import React from 'react';
 import './PostContainer.css';
 import Post from './Post.js'
-// import CommentSection from './CommentSection/CommentSection'
+
 
 const PostContainer = props => {
 	return (
@@ -13,7 +13,7 @@ const PostContainer = props => {
 				/>
                 
             )}
-            {/* <CommentSection /> will go here */}
+         
             
 		</div>
        
