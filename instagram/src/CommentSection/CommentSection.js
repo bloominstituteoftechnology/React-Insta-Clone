@@ -20,6 +20,11 @@ class CommentSection extends React.Component {
         });
     }
 
+    commentIcon = (event) => {
+        event.preventDefault();
+        document.getElementById("comment-input").focus();
+    }
+
     addNewComment = (event) => {
         event.preventDefault();
         const newComment = {
@@ -53,8 +58,8 @@ class CommentSection extends React.Component {
         return (
             <div className="commentSection">
                 <div className="comment-icons">
-                    <a href="#" onClick={this.addNewLike}><i className="far fa-heart"></i></a>
-                    <a href="#"><i className="far fa-comment"></i></a>
+                    <a href="#" onClick={this.addNewLike} ><i className="far fa-heart"></i></a>
+                    <a href="#" onClick={this.commentIcon} ><i className="far fa-comment"></i></a>
                 </div>
 
                 { this.state.counter === 1 ? 
@@ -73,7 +78,7 @@ class CommentSection extends React.Component {
                 <p className="timestamp">{this.props.obj.timestamp}</p>
 
                 <form className="addComment" onSubmit={this.addNewComment}>
-                    <input onChange={this.handleInput} placeholder="Add a comment..."></input>
+                    <input onChange={this.handleInput} id="comment-input" placeholder="Add a comment..."></input>
                     <p>...</p>
                 </form>
 
