@@ -40,7 +40,13 @@ const PostContainer = (props) => {
                             {/* PostContainer Post Content Footer Section end */}
 
                             {/* PostContainer Comment Section Start */}
-                            <CommentSection comments = {user.comments} />
+                            <div className="comment-section-wrapper">
+                                <CommentSection comments = {user.comments} />
+                                <p className='timestamp'>{user.timestamp}</p>
+                                <hr></hr>
+                                <input className="addComment" placeholder="Add a comment..." />
+                            </div>
+                            
                             {/* <div className= "comments">
                                 {props.instaData.map()}
                             </div> */}
@@ -49,6 +55,7 @@ const PostContainer = (props) => {
                                 COMMENT SECTION PLACEHOLDER
                             </div> */}
                             {/* PostContainer Comment Section End */}
+                            <div> < commentSecFooter /> </div>
 
                         </div>
                     )

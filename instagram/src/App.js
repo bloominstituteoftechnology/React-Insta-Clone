@@ -18,6 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <input className = "instaSearch" placeholder= "InstaSearch!" type = "text"></input>
         <SearchBar instaData = {this.state.instaData} />
         <PostContainer instaData = {this.state.instaData} />
       </div>

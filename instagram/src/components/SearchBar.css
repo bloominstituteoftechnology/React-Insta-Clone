@@ -1,0 +1,10 @@
+.instaSearch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+
