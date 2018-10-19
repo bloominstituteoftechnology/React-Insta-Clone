@@ -11,6 +11,8 @@ import {faHeart} from '@fortawesome/free-solid-svg-icons'
 import {faUser} from '@fortawesome/free-solid-svg-icons'
 import dummyData from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer.js'
+import PostsPage from './components/PostContainer/PostsPage.js'
+import Authenticate from './components/Authentication/Authenticate.js'
 
 
 
@@ -33,6 +35,9 @@ library.add(faCompass)
     )
     return(currentimage);
   }
+
+  Authenticate(App);
+
 
 class App extends Component {
   constructor(){
@@ -131,6 +136,8 @@ onSearch=event=>{
   event.preventDefault();
   console.log("onSearchCalled");
   let newdatabase=this.state.database.slice();
+  console.log(newdatabase);
+  console.log(this.state.controlledSearch);
   let filteredImages=newdatabase.filter(
    (image)=>image.username===this.state.controlledSearch
   )
@@ -143,27 +150,44 @@ onSearch=event=>{
 }
 
 onSearchChange=event=>{
+  console.log("onSearchChange");
   this.setState({
     controlledSearch:event.target.value
   })
 }
 
+onLogin=event=>{
+  console.log("onLoginTriggered");
+  localStorage.setItem("username", this.state.controlledSearch);
+  window.location.reload();
+  //remember to pass down this function when we add a render of this
+  //he will need an onChange prop (just use the controlledSearch state spot and function) and a onSubmit prop(which is this onLogin func) also
+
+}
 
 
 
   render() {
-    return (
-      <div className="App">
-        <header>
-<SearchBar val={this.state.controlledSearch} onSearch={this.onSearch} onChange={this.onSearchChange}/>
-        </header>
+    return(
+      <PostsPage 
+   
+      //search bar
+      SBval={this.state.controlledSearch}
+      onSearch={this.onSearch} 
+      onChange={this.onSearchChange}
+   
+      //post container
+      onClick={this.onClick} 
+      posts={this.state.database} 
+      handleChange={this.handleChange} 
+      handleNew={this.handleNew} 
+      PCval={this.state.controlledComment}
+      
+      />
 
-        { <div>
-        <PostContainer onClick={this.onClick} posts={this.state.database} handleChange={this.handleChange} handleNew={this.handleNew} val={this.state.controlledComment}/>
-            
-        </div> }
-      </div>
-    );
+
+    )
+
   }
 }
 

@@ -34,9 +34,9 @@ x- Adding comments
  x - The 'Add a comment...' input should be wrapped in a `<form></form>` element. Using that form's `onSubmit` event handler, invoke the `addNewComment` function and pass it the required arguments it needs to add a new comment.
  x - Update your state with the new comment (This should trigger your component tree to "re-render" with your new comment on that post).
  - Liking posts
-  - This will be set up a lot like the 'Add a comment...' input. Pass a function down to where your heart icon is, and use `onClick` event handler to increment that post's likes.
+  x- This will be set up a lot like the 'Add a comment...' input. Pass a function down to where your heart icon is, and use `onClick` event handler to increment that post's likes.
 - Search
-  - Set up the search bar will like the comment input and the like button. In your function, filter out any post whose username doesn't match the search term passed in, then update the state with the resulting data.
+  x- Set up the search bar will like the comment input and the like button. In your function, filter out any post whose username doesn't match the search term passed in, then update the state with the resulting data.
 
 #### Stretch Problems (Day II)
 

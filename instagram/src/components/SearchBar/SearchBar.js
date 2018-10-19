@@ -28,7 +28,7 @@ class SearchBar extends React.Component{
                   Instagram
                 </div>
                 <form onSubmit={this.props.onSearch}>
-                <input value={this.props.val} onChange={this.props.onChange}id="inputty" type="text" placeholder="&#x1f50d; search"/>
+                <input value={this.props.SBval} onChange={this.props.onChange}id="inputty" type="text" placeholder="&#x1f50d; search"/>
                 </form>
                 <div class="threenav">
                 

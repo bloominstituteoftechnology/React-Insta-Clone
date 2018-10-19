@@ -4,6 +4,7 @@ import CommentSection from '../CommentSection/CommentSection.js';
 import Post from '../Post/Post.js'
 
 
+
 const PostContainer=(props)=>{
     const posts=props.posts.slice();
     return(
@@ -13,7 +14,7 @@ const PostContainer=(props)=>{
                     <div class="big-container">
                     <Post post={post}/>
                        
-                    <CommentSection comments={post.comments} likes={post.likes} id={post.imageUrl} handleChange={props.handleChange} handleNew={props.handleNew} val={props.val} onClick={props.onClick}/>
+                    <CommentSection comments={post.comments} likes={post.likes} id={post.imageUrl} handleChange={props.handleChange} handleNew={props.handleNew} val={props.PCval} onClick={props.onClick}/>
                         <div class="timestamp">
                         {post.timestamp}
                         </div>
