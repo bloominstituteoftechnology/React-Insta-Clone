@@ -12,22 +12,19 @@ const Authenticate = App =>
     }
 
     componentDidMount() {
-      const user = localStorage.getItem('username');
-			const pw = localStorage.getItem('password');
-			if (user && pw) {
-				this.setState({ loggedIn: true });
-			} else {
-				this.setState({ loggedIn: false });
-			}
+      !localStorage.getItem('user') ? this.setState({ loggedIn: false }) :
+      this.setState({ loggedIn: true });
+
+			// if (!localStorage.getItem('user')) {
+			// 	this.setState({ loggedIn: false });
+			// } else {
+			// 	this.setState({ loggedIn: true });
+			// }
     }
 
     render() {
-      if (this.state.loggedIn == true) {
-				return <App />;
-			} else {
-				return <Login />;
-			}
-      
+      if (this.state.loggedIn) return <App />;
+        return <Login />;
     }
 }
   

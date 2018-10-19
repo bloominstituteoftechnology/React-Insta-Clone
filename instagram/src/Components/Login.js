@@ -18,9 +18,10 @@ class Login extends Component {
 
   loginSubmit = event => {
     const user = this.state.username;
-    const pw = this.state.password;
-    localStorage.setItem('username', user);
-    localStorage.setItem('password', pw);
+    // const pw = this.state.password;
+    localStorage.setItem('user', user);
+    // localStorage.setItem('password', pw);
+    // localStorage.removeItem(user);
     window.location.reload();
   };
 
@@ -33,8 +34,8 @@ class Login extends Component {
             type="text"
             placeholder="Username"
             name="username"
-            onChange={this.inputChange}
             value={this.state.username}
+            onChange={this.inputChange}
             className="form-boxes"
           />
 
@@ -42,8 +43,8 @@ class Login extends Component {
             type="password"
             placeholder="Password"
             name="password"
-            onChange={this.inputChange}
             value={this.state.password}
+            onChange={this.inputChange}
             className="form-boxes"
           />
           <button onClick={this.loginSubmit} className="login-button">Login</button>
