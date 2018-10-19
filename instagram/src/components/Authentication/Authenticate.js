@@ -2,7 +2,7 @@ import React from 'react';
 import Login from '../Login/Login.js'
 
 
-const Authenticate=(passedInComponent)=>class extends React.Component{
+const Auth=(App)=>class extends React.Component{
     constructor (props){
         super(props);
         this.state={
@@ -11,13 +11,16 @@ const Authenticate=(passedInComponent)=>class extends React.Component{
     }
     componentDidMount(){
         if(localStorage.getItem("username")){
-            this.state.loggedIn=true;
+            this.setState({ loggedIn: true })
         };
     }
     render(){
+        console.log("authenticate ran")
+        console.log(localStorage.getItem("username"))
+        console.log(this.state.loggedIn)
         if(this.state.loggedIn=true){
             return(
-                <passedInComponent/>
+                <App/>
             )}else{
                 return(
                     <Login onSubmit={this.onLogin} onChange={this.onSearchChange}/>
@@ -27,5 +30,4 @@ const Authenticate=(passedInComponent)=>class extends React.Component{
       
     }
 }
-
-export default Authenticate
+export default Auth

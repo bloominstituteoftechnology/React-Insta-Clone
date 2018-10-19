@@ -12,8 +12,7 @@ import {faUser} from '@fortawesome/free-solid-svg-icons'
 import dummyData from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer.js'
 import PostsPage from './components/PostContainer/PostsPage.js'
-import Authenticate from './components/Authentication/Authenticate.js'
-
+import Auth from './components/Authentication/Authenticate.js'
 
 
 library.add(faSearch)
@@ -36,8 +35,7 @@ library.add(faCompass)
     return(currentimage);
   }
 
-  Authenticate(App);
-
+  
 
 class App extends Component {
   constructor(){
@@ -190,5 +188,6 @@ onLogin=event=>{
 
   }
 }
+App=Auth(App);
 
 export default App;
