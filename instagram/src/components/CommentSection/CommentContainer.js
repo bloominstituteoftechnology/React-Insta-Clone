@@ -8,83 +8,39 @@ class CommentContainer extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            comments: [],
+            comments: props.comments,
             username: 'Lorenzo',
             text: '',
+            newComment: ''
         }
-
-
-
     }
 
-    componentDidMount(){
+    AddedComment = (event) => {
+        event.preventDefault()
+         const comments = Object.assign([], this.state.comments)
+
+         const newComment = {text: this.state.newComment, username: 'LorenzoEvans'}
+
+        //  newComment.push({username: 'LorenzoEvans', text: this.state.newComment })
+        comments.push(newComment)
+
+         this.setState({
+             comments, newComment: ''
+         })
+    }
+
+    CommentHandler = (event) => {
+        event.preventDefault()
         this.setState({
-            comments: this.props.comments
+            newComment: event.target.value 
         })
     }
-
-    // AddedComment = (event) => {
-    //     event.preventDefault()
-    //      const newComment = {username: 'LorenzoEvans', text: this.state.text }
-    //      const comment = Object.assign([], this.state.comments)
-
-    //         comment.push(newComment)
-
-    //      this.setState({comment: newComment })
-    // }
-
-    // CommentHandler = (event) => {
-    //     event.preventDefault()
-    //     this.setState({
-    //         text: event.target.value 
-    //     })
-    // }
-
-    handleClick = () => {
-        this.setState({
-
-        })
-    }
-
-    addTodo = () => {
-        const newCopy = this.state.comments.slice();
-    }
-
-    // CommentHandler = ({target}) => {
-    //     // event.preventDefault();
-    //     // event.stopPropagation()
-    //     // this.setState({text: event.target.value});
-    //     this.setState(function (state) {
-    //         return({
-    //             text: target.value 
-    //         })
-    // })
-
-    //   };
-    
-    //   AddedComment= event => {
-    //     event.preventDefault();
-    //     let commentCopy = this.state.comments;
-    //     event.stopPropagation();
-    //     // const newComment = { text: event.target.value , username: 'LorenzoEvans' };
-
-    //     // const comments = this.state.newComment
-    //     this.state.comments.push({username: 'LorenzoEvans', text: this.state.text});
-    //     this.setState(function (state) {
-    //             return({
-    //                 comments: commentCopy, text: ''
-    //             })
-    //     })
-    //     // this.setState({ comment });
-       
-    //   };
-
 
     render(){
          return(
             <div className='CommentContainer'>
             
-                {this.state.comments.map(comment => <div key={comment.text}>
+                {this.props.comments.map(comment => <div key={comment.text}>
                         <div> 
                         
                         {comment.username}:
@@ -95,7 +51,7 @@ class CommentContainer extends React.Component {
                    
                    
                 </div>)}
-                 <AddComment text={this.state.text} AddedComment={this.AddedComment} CommentHandler={this.CommentHandler}/>
+                 <AddComment AddedComment={this.AddedComment} CommentHandler={this.CommentHandler}/>
             </div>
         )
     }
