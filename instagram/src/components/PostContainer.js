@@ -3,7 +3,7 @@ import './PostContainer.css';
 import heartIcon from '.././assets/Instagram-Heart.png';
 import commentBubbelIcon from '.././assets/Instagram-CommentBubbleIcon.png';
 import CommentSection from './CommentSection';
-import CommentsSecFooter from './CommentsSecFooter.js';
+// import CommentsSecFooter from './CommentsSecFooter.js';
 import PropTypes from 'prop-types';
 
 const PostContainer = (props) => {
@@ -42,23 +42,12 @@ const PostContainer = (props) => {
 
                             {/* PostContainer Comment Section Start */}
                             <div className="comment-section-wrapper">
-                                <CommentSection comments = {user.comments} />
-                                {/* <p className='timestamp'>{user.timestamp}</p>
+                                {/* <CommentSection comments = {user.comments} /> */}
+                                <p className='timestamp'>{user.timestamp}</p>
                                 <hr></hr>
-                                <input className="addComment" placeholder="Add a comment..." /> */}
-                                <CommentsSecFooter commentsSecFooter = {user.timestamp} /> 
+                                <input className="addComment" placeholder="Add a comment..." />
+                                {/* <CommentsSecFooter commentsSecFooter = {user.timestamp} />  */}
                             </div>
-                            
-                            {/* <div className= "comments">
-                                {props.instaData.map()}
-                            </div> */}
-                            
-                            {/* <div className= "post-content-comments-wrapper">
-                                COMMENT SECTI                                                                                                                ON PLACEHOLDER
-                            </div> */}
-                            {/* PostContainer Comment Section End */}
-                            
-
                         </div>
             </div>
         </div>

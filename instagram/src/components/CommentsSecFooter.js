@@ -4,20 +4,18 @@ import './PostContainer.css';
 
 
 const CommentsSecFooter = (props) => {
+
     return (
-        <div className="commentsSecFooter-wrapper-main"></div>
-    )
-    return (
-        <div className= "commentsSecFooter-wrapper">
-            {props.commentsSecFooter.map(item => {
+        // <div className= "commentsSecFooter-wrapper">
+            {propscommentsSecFooter.map(item => {
                 return (
-                    <div className= "commentsSecFooter">
-                        <p className='timestamp'>{props.commentsSecFooter.timestamp}</p>
+                    <div className= "commentsSecFooter" >
+                        <p className='timestamp'>{props.commentsSecFooter}</p>
                         <hr></hr>
                         <input className="addComment" placeholder="Add a comment..." />
                     </div>
                 )
-            })}
+          
 
                     {/* <div className= "comments-section-wrapper-main">
             {props.comments.map(comment => {
@@ -30,7 +28,7 @@ const CommentsSecFooter = (props) => {
             })}
         </div> */}
             
-        </div>
+        {/* </div> */}
     )
 }
 

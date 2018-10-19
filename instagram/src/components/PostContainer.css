@@ -52,7 +52,7 @@
     padding-top: -10%;
     padding-bottom: -13%;
     margin-top: 2%;
-    margin-bottom: -13%;
+    margin-bottom: -19%;
     margin-left: -39px;
 }
 
@@ -87,12 +87,12 @@
 }
 
 hr {
-    width: 90%;
+    width: 107%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    margin-left: 90px;
-    color: #ECECEC;
+    margin-left: 86px;
+    color: #ECECEC
 }
 
 p {
@@ -117,4 +117,5 @@ p {
     margin-right: 180px;
     font-size: 15px;
     color: #ECECEC;
+    margin-left: 94px;
 }
