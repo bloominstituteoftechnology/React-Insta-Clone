@@ -11,13 +11,13 @@ class Login extends React.Component {
   }
 
   inputHandler = event => {
-    this.setState({ [event.target.name]: event.target.value }); //reusable handler, allows for different values to be updated
+    this.setState({ [event.target.name]: event.target.value }); //Computed Property: reusable handler, allows for different values to be updated, (ES6 shortcut)
   };
 
   submitHandler = event => {
     const user = this.state.username; //grab username from state
     localStorage.setItem("user", user); //create item in local storage called user, set equal to username
-    window.location.reload(); //force location reload, refresh page
+    window.location.reload(); //force location reload, refresh page, 
   };
 
   render() {

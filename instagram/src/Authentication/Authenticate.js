@@ -1,6 +1,5 @@
 import React from "react";
-import LoginPage from '../components/Login/Login';
-
+import LoginPage from "../components/Login/Login";
 
 //HOC
 
@@ -21,12 +20,10 @@ const Authenticate = App =>
       }
     }
 
-    
-
     render() {
       //If a user is logged in we will return the `<App />`, else we will return the `<LoginPage>`
       if (this.state.loggedIn) return <App />;
-      return <LoginPage />
+      return <LoginPage />;
     }
   };
 

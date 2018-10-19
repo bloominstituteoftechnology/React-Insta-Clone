@@ -19,7 +19,7 @@
 
 [x] Create a `<PostsPage />` component in your `components/PostsContainer` directory.
 
-  - You'll have to move a lot of what is rendered in `app.js` to this new component
+  -You'll have to move a lot of what is rendered in `app.js` to this new component
   [x] In app.js, render the `PostsPage` component.
   [x] Make sure the app working as it was before since it has been re-factored now.
   - This is to ensure that we clean up our App component a little bit before we re-factor it to be wrapped up in an HOC
@@ -48,7 +48,7 @@ const Authenticate = App =>
 
   [x] In your `components` directory, create a directory called `Login` and add a new file called `Login.js`.
   [x] There should be a `username` input, a `password` input, and a `Login` button.
-  - The component should invoke the `login` function in `app.js` when a user logs in.
+  [x] The component should invoke the `login` function in `app.js` when a user logs in.
   [x] This login function should set a `username` on `localStorage`. You'll need to check local storage to see if a user is logged in.
   [x] Be sure to force the page to reload when a user logs in so that our component un-mounts and mounts again.
 
