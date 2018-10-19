@@ -1,7 +1,8 @@
 .comments-section-wrapper-main {
     display: flex;
     flex-direction: column;
-
+    width: 100%;
+    margin-left: 25px;
 }
 
 .comments-section-wrapper {
@@ -15,3 +16,16 @@
 .comment-text {
     margin-left: 1%;
 }
+ b {
+     margin-right: 1px;
+ }
+
+ .timestamp {
+    margin-left: -4%;
+    width: 69%;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    font-size: 12px;
+    color: gray;
+
+ }

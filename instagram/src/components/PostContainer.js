@@ -3,18 +3,19 @@ import './PostContainer.css';
 import heartIcon from '.././assets/Instagram-Heart.png';
 import commentBubbelIcon from '.././assets/Instagram-CommentBubbleIcon.png';
 import CommentSection from './CommentSection';
+import CommentsSecFooter from './CommentsSecFooter.js';
 import PropTypes from 'prop-types';
 
 const PostContainer = (props) => {
     return (
-        <div>
+        <div className="app-border">
             {props.instaData.map(user => {
                 return (
                     <div className= "postcontainer-wrapper" key= {user.username}>
                     {/* PostContainer Header Section Start */}
                         <div className= "postContainer-header">
                             <img className= "postContainer-header-img" src={user.thumbnailUrl} alt= "userProfileImg" width="50px"></img>
-                            <h4 className="postContainer-header-user">{user.username}</h4>
+                            <p className="postContainer-header-user">{user.username}</p>
                         </div>
                     {/* PostContainer Header Section End */}
 
@@ -33,7 +34,7 @@ const PostContainer = (props) => {
                                         <img className= "post-nav-TextBubbelIcon" alt= "TextBubbelIcon" src= {commentBubbelIcon} width = "30px" height ="30px"></img>
                                     </div>
                                     <div className="post-nav-likes">
-                                        <h4 className= "post-nav-total-likes">{user.likes} likes</h4>
+                                        <p className= "post-nav-total-likes">{user.likes} likes</p>
                                     </div>
                                 </div>
                             </div >
@@ -42,9 +43,10 @@ const PostContainer = (props) => {
                             {/* PostContainer Comment Section Start */}
                             <div className="comment-section-wrapper">
                                 <CommentSection comments = {user.comments} />
-                                <p className='timestamp'>{user.timestamp}</p>
+                                {/* <p className='timestamp'>{user.timestamp}</p>
                                 <hr></hr>
-                                <input className="addComment" placeholder="Add a comment..." />
+                                <input className="addComment" placeholder="Add a comment..." /> */}
+                                <CommentsSecFooter commentsSecFooter = {user.timestamp} /> 
                             </div>
                             
                             {/* <div className= "comments">
@@ -52,15 +54,13 @@ const PostContainer = (props) => {
                             </div> */}
                             
                             {/* <div className= "post-content-comments-wrapper">
-                                COMMENT SECTION PLACEHOLDER
+                                COMMENT SECTI                                                                                                                ON PLACEHOLDER
                             </div> */}
                             {/* PostContainer Comment Section End */}
-                            <div> < commentSecFooter /> </div>
+                            
 
                         </div>
-                    )
             </div>
-            {/* PostContainer Post Content Section Start */}
         </div>
                      
 

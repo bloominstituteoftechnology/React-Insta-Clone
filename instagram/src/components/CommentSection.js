@@ -25,7 +25,7 @@
 import React from 'react';
 import './CommentSection.css';
 
- const CommentSection = (props) => {
+const CommentSection = (props) => {
     return (
         <div className= "comments-section-wrapper-main">
             {props.comments.map(comment => {
