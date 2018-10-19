@@ -13,7 +13,7 @@ const PostBorder = styled.div`
   `;
 
 const PostImage = styled.img`
-  width: 50%;
+  width: 100%;
 `;
 
 

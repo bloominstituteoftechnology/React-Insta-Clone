@@ -20,7 +20,7 @@ export const UserName = styled.div`
     props.bold &&
     css`
       font-weight: 600;
-      font-size: 0.9em;
+      font-size: 1rem;
       padding: 5px;
     `};
 `;
