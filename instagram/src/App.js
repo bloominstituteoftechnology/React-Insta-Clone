@@ -1,4 +1,5 @@
 import React from 'react';
+import Authenticate from './components/Authentication/Authenticate';
 import ReactDOM from 'react-dom';
 import './App.css';
 import PostContainer from './components/PostContainer/PostContainer';
@@ -26,4 +27,4 @@ class App extends React.Component {
   }
 }
 
-export default App 
+export default Authenticate(App)
