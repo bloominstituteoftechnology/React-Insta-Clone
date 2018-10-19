@@ -23,15 +23,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-          <SearchBar data={this.state.data}/>
-          {this.state.data.map(item =>{
-            return(
-            <PostContainer obj={item} key={item.timestamp} />
-            )
-          })}
-          <PostsPage />
-      </div>
+          <PostsPage data={this.state.data}/>
     );
   }
 }
