@@ -8,7 +8,8 @@ class CommentSection extends React.Component {
         this.state = {
             comments: this.props.obj.comments,
             counter: this.props.obj.likes,
-            input: ''
+            input: '',
+            liked: false
         }
     }
 
@@ -34,9 +35,18 @@ class CommentSection extends React.Component {
     addNewLike = (event) => {
         event.preventDefault();
         const hearts = this.state.counter;
-        this.setState({
-            counter: hearts+1
-        })
+        const liked = this.state.liked;
+        if (liked === false) {
+            this.setState({
+                counter: hearts+1,
+                liked: true
+            })
+        } else if (liked === true) {
+            this.setState({
+                counter: hearts-1,
+                liked: false
+            })
+        }
     }
 
     render() {

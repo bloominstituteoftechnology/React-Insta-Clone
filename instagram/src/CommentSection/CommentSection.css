@@ -49,3 +49,7 @@ i {
     font-size: 14px;
     border: none;
 }
+
+.fa-heart:hover {
+    color: red;
+}
