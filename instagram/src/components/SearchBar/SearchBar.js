@@ -1,4 +1,5 @@
 import React from 'react';
+import Camera from '../../assets/igcameralogo.png';
 import IGLogo from '../../assets/iglogo.png';
 import './SearchBar.css';
 import styled from 'styled-components';
@@ -17,13 +18,13 @@ const LogoHeader = styled.div `
   line-height: 75px;
 `;
 
-const LogoImage = styled.img`
+const Logo = styled.img`
   height: 50%;
   padding: 0px 15px;
 `;
 
 const Divider = styled.span`
-  width: 50px;
+  width: 800px;
 `;
 
 const InputWrap = styled.div`
@@ -51,8 +52,9 @@ const SearchBar = props => {
     return (
       <Header>
       <LogoHeader>
-      <LogoImage alt="instagram logo" src={IGLogo} />
-      <Divider>|</Divider>
+        <Logo alt='instagram camera' src={Camera} />
+        <Divider>|</Divider>
+      <Logo alt="instagram logo" src={IGLogo} />
       </LogoHeader>
       <InputWrap>
       <SearchInput
