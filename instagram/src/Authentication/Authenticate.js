@@ -20,15 +20,8 @@ const authentication = ConditionalComponent => PassedComponent => {
         }
         
         render(){
-            if (this.state.loggedIn === false) {
-                return(
-                    <ConditionalComponent />
-                )
-            }
-            return(
-                <div>
-                    <PassedComponent />
-                </div>
+            return (
+                this.state.loggedIn ? <PassedComponent /> : <ConditionalComponent />
             )
         }
     }

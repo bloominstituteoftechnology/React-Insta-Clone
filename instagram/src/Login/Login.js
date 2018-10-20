@@ -1,10 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const WrapperDiv = styled.div`
-    font-family: sans-serif;
-    text-align: center;
-`;
+import {LoginDiv, LoginInput, LoginSubmit } from '../StyledComponents';
 
 
 
@@ -39,15 +34,15 @@ export default class Login extends React.Component {
 
     render(){
         return(
-            <div className="login">
+            <LoginDiv>
     
-                <input type="text" placeholder="Username" onChange={this.setUsername} ></input>
+                <LoginInput type="text" placeholder="Username" onChange={this.setUsername} ></LoginInput>
 
-                <input type="text" placeholder="Password" onChange={this.setPassword} ></input>
+                <LoginInput type="text" placeholder="Password" onChange={this.setPassword} ></LoginInput>
 
-                <button onClick={this.login} >Login</button>
+                <LoginSubmit onClick={this.login} >Login</LoginSubmit>
 
-            </div>
+            </LoginDiv>
         )
     }
 }
