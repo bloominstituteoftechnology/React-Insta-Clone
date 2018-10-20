@@ -37,7 +37,6 @@ export default class Login extends React.Component {
 
                 <input type="text" placeholder="Password" onChange={this.setPassword} ></input>
 
-                <h1>{this.state.username} {this.state.password}</h1>
                 <button onClick={this.login} >Login</button>
 
             </div>

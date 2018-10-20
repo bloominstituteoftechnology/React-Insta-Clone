@@ -36,6 +36,10 @@
     color: lightgray;
 }
 
+.icon:hover {
+    color: darkgray;
+}
+
 .searchBar {
     display: flex;
     justify-content: space-between;
@@ -46,3 +50,4 @@
     height: 7vh;
     margin-top: 5px;
 }
+
