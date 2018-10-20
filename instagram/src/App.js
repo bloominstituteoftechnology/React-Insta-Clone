@@ -5,6 +5,7 @@ import PostContainer from './PostContainer/PostContainer';
 import dummyData from './dummy-data';
 import PropTypes from "prop-types";
 import PostsPage from './PostContainer/PostsPage';
+import authentication from './Authentication/Authenticate';
 
 
 class App extends Component {
@@ -16,17 +17,18 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      data: dummyData
-    })
-  }
+  this.setState({
+    data: dummyData
+  })
+}
 
   render() {
     return (
-          <PostsPage data={this.state.data}/>
+          <PostsPage data={this.state.data} />
     );
   }
 }
+
 
 App.default = {
   likes: 0,
@@ -53,4 +55,4 @@ App.propTypes = {
   ),
 }
 
-export default App;
+export default authentication(App);

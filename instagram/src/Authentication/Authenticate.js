@@ -1,26 +1,25 @@
 import React from 'react';
-import PostContainer from '../PostContainer/PostContainer';
+import ReactDOM from 'react-dom';
 
 
-function authenticate(PostContainer, selectData){
-    return class extends React.Component {
-        constructor(props) {
+
+const authentication = PassedComponent => {
+    return class Authenticate extends React.Component {
+        constructor(props){
             super(props);
-            this.state={
-                data: selectData(Datasource, props)
+            this.state = {
+                loggedIn: false
             };
         }
-
-        componentDidMount
-
-        render() {
-            return <PostContainer data={this.state.data} {...this.props} />
+        
+        render(){
+            return(
+                <div>
+                    <PassedComponent />
+                </div>
+            )
         }
-
     }
 }
 
-const AuthenticatePosts = authenticate(PostContainer)
-
-
-export default Authenticate;
+export default authentication;
