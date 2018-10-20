@@ -6,7 +6,8 @@ const Auth=(App)=>class extends React.Component{
     constructor (props){
         super(props);
         this.state={
-            loggedIn: false
+            loggedIn: false,
+            username: ""
         }
     }
     componentDidMount(){
@@ -14,6 +15,19 @@ const Auth=(App)=>class extends React.Component{
             this.setState({ loggedIn: true })
         };
     }
+    onLogin=event=>{
+        event.preventDefault();
+        console.log("onLoginTriggered");
+        localStorage.setItem("username", event.target.value);
+        window.location.reload();
+        //remember to pass down this function when we add a render of this
+        //he will need an onChange prop (just use the controlledSearch state spot and function) and a onSubmit prop(which is this onLogin func) also
+      
+      }
+      onUserTyping=event=>{
+          this.setState({username: event.target.value})
+      }
+
     render(){
         console.log("authenticate ran")
         console.log(localStorage.getItem("username"))
@@ -23,7 +37,7 @@ const Auth=(App)=>class extends React.Component{
                 <App/>
             )}else{
                 return(
-                    <Login onSubmit={this.onLogin} onChange={this.onSearchChange}/>
+                    <Login onSubmit={this.onLogin} onChange={this.onUserTyping} changingVal={this.state.username}/>
                 )
             }
 

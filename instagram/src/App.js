@@ -126,6 +126,7 @@ onClick=event=>{
   this.setState({
     controlledComment:'',
     controlledSearch:'',
+    controlledUserName:"",
     database: updatedDatabase
   })
 }
@@ -154,17 +155,11 @@ onSearchChange=event=>{
   })
 }
 
-onLogin=event=>{
-  console.log("onLoginTriggered");
-  localStorage.setItem("username", this.state.controlledSearch);
-  window.location.reload();
-  //remember to pass down this function when we add a render of this
-  //he will need an onChange prop (just use the controlledSearch state spot and function) and a onSubmit prop(which is this onLogin func) also
-
-}
 
 resetLocal=event=>{
-  localStorage.setItem("username", "");
+  console.log("resetLocal ran");
+  localStorage.removeItem("username");
+  
 }
 
 
@@ -177,7 +172,7 @@ resetLocal=event=>{
       SBval={this.state.controlledSearch}
       onSearch={this.onSearch} 
       onChange={this.onSearchChange}
-      resetLocal={this.resetLocal}
+      
    
       //post container
       onClick={this.onClick} 
@@ -185,6 +180,7 @@ resetLocal=event=>{
       handleChange={this.handleChange} 
       handleNew={this.handleNew} 
       PCval={this.state.controlledComment}
+      resetLocal={this.resetLocal}
       
       />
       

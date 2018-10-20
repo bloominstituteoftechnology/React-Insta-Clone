@@ -12,7 +12,7 @@ const PostsPage=(props)=>{
             </header>
     
             { <div>
-            <PostContainer onClick={props.onClick} posts={props.posts} handleChange={props.handleChange} handleNew={props.handleNew} PCval={props.PCval}/>
+            <PostContainer resetLocal={props.resetLocal} onClick={props.onClick} posts={props.posts} handleChange={props.handleChange} handleNew={props.handleNew} PCval={props.PCval}/>
                 
             </div> }
           </div>
