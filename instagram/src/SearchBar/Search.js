@@ -1,5 +1,10 @@
 
 import React from 'react';
+import styled from 'styled-components';
+
+const Searchstyle = styled.div`
+    width: 40%;
+`;
 
 class Search extends React.Component {
     constructor(props){
@@ -22,12 +27,12 @@ class Search extends React.Component {
 
     render(){
         return (
-            <div className='search'>
+            <Searchstyle>
                 <form onSubmit={this.preventDefault}>
                     <input onChange={this.handleInput} type='text' placeholder='&#x1F50D; Search'>
                     </input>
                 </form>
-            </div>
+            </Searchstyle>
         )
     }
 };

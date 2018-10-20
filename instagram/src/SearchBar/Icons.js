@@ -1,5 +1,22 @@
 
 import React from 'react';
+import styled from 'styled-components';
+
+const Iconstyle = styled.div`
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    color: lightgray;
+`;
+
+const IconStyling = styled.i`
+    color: lightgray;
+    font-size: 24px;
+
+    &:hover {
+        color: darkgray;
+    }
+`;
 
 class Icons extends React.Component {
     constructor(){
@@ -15,16 +32,16 @@ class Icons extends React.Component {
 
     render(){
         return (
-            <div className='icons'>
+            <Iconstyle>
 
-                <a href='#'><i className="icon far fa-compass"></i></a>    
+                <a href='#'><IconStyling className="far fa-compass"></IconStyling></a>    
 
-                <a href='#'><i className="icon far fa-heart"></i></a>
+                <a href='#'><IconStyling className="far fa-heart"></IconStyling></a>
 
-                <a href='#'><i className="icon far fa-user"></i></a>
+                <a href='#'><IconStyling className="far fa-user"></IconStyling></a>
 
-                <a href='#' onClick={this.logout} ><i className="icon fas fa-sign-out-alt"></i></a>
-            </div>
+                <a href='#' onClick={this.logout} ><IconStyling className="fas fa-sign-out-alt"></IconStyling></a>
+            </Iconstyle>
         )
     }
 };

@@ -1,53 +1,5 @@
 
-.icon {
-    color: lightgray;
-    font-size: 24px;
-}
-
-.logo {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 40%;
-}
-
-.camera{
-    color: lightgray;
-    font-size: 24px;
-}
-
-.grey {
-    color: lightgrey;
-    font-size: 25px;
-}
-
-.search {
-    width: 40%;
-}
 .searchIcon {
     height: 4vh;
     width: auto;
 }
-
-.icons {
-    display: flex;
-    justify-content: space-around;
-    width: 20%;
-    color: lightgray;
-}
-
-.icon:hover {
-    color: darkgray;
-}
-
-.searchBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.word-logo {
-    height: 7vh;
-    margin-top: 5px;
-}
-

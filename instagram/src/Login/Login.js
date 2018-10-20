@@ -1,4 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const WrapperDiv = styled.div`
+    font-family: sans-serif;
+    text-align: center;
+`;
+
+
 
 export default class Login extends React.Component {
     constructor(){
