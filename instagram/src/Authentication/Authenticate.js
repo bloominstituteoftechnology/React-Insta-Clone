@@ -11,6 +11,14 @@ const authentication = ConditionalComponent => PassedComponent => {
                 loggedIn: false
             };
         }
+
+        componentDidMount(){
+            if (localStorage.getItem('username')){
+                this.setState({
+                    loggedIn: true
+                })
+            }
+        }
         
         render(){
             if (this.state.loggedIn === false) {
