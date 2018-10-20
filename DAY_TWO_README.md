@@ -10,9 +10,9 @@
 
 <img src='/assets/InstaClone-componentStructure.jpg' width='235' />
 
-- Your data should be imported to `app.js`, and then passed as props to each `PostContainer`.
-- Each `PostContainer` should then be passing data to a `CommentSection` via props as well.
-- The props being passed to each component should be typed checked using `propTypes` and `defaultProps`.
+x Your data should be imported to `app.js`, and then passed as props to each `PostContainer`.
+x Each `PostContainer` should then be passing data to a `CommentSection` via props as well.
+x The props being passed to each component should be typed checked using `propTypes` and `defaultProps`.
 - The comment section should add a comment to the post
 
 ### Description (Day II)
@@ -25,13 +25,13 @@
 
 #### Tasks (Day II)
 
-- Use lifecycle methods
-  - In `app.js` use `componentDidMount()` to set your data to the component's state. Use the state object to pass data to your `PostContainer` component.
+x Use lifecycle methods
+  x In `app.js` use `componentDidMount()` to set your data to the component's state. Use the state object to pass data to your `PostContainer` component.
 - Adding comments
-  - Lets divide up the data that we've been working with this far by separating the comments array onto a new component's state. Pass down the comments through each post to the CommentSection component. Be sure that you set the incoming `comments` props data on the state of the CommentSection component.
-  - Create a function in `CommentSection.js` called `addNewComment` that takes in an event and an index number. The function will add the comment that is on the event object to the post that is at that index number.
-  - Pass the `addNewComment` function down the component tree to where ever you have your 'Add a comment...' input.
-  - The 'Add a comment...' input should be wrapped in a `<form></form>` element. Using that form's `onSubmit` event handler, invoke the `addNewComment` function and pass it the required arguments it needs to add a new comment.
+  x Lets divide up the data that we've been working with this far by separating the comments array onto a new component's state. Pass down the comments through each post to the CommentSection component. Be sure that you set the incoming `comments` props data on the state of the CommentSection component.
+  x Create a function in `CommentSection.js` called `addNewComment` that takes in an event and an index number. The function will add the comment that is on the event object to the post that is at that index number.
+  x Pass the `addNewComment` function down the component tree to where ever you have your 'Add a comment...' input.
+  x The 'Add a comment...' input should be wrapped in a `<form></form>` element. Using that form's `onSubmit` event handler, invoke the `addNewComment` function and pass it the required arguments it needs to add a new comment.
   - Update your state with the new comment (This should trigger your component tree to "re-render" with your new comment on that post).
 - Liking posts
   - This will be set up a lot like the 'Add a comment...' input. Pass a function down to where your heart icon is, and use `onClick` event handler to increment that post's likes.
