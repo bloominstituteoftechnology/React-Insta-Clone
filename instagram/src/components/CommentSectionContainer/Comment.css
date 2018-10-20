@@ -1,0 +1,16 @@
+.comment{
+	text-align: left;
+	margin-left: 5px;
+	padding: 3px;
+}
+
+.text{
+	margin-left: 5px;
+	font-weight: normal;
+	font-size: 15px;
+}
+
+.user{
+	font-weight: bold;
+	font-size: 13px;
+}
