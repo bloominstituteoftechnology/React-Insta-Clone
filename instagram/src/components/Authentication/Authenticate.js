@@ -18,7 +18,7 @@ const Auth=(App)=>class extends React.Component{
         console.log("authenticate ran")
         console.log(localStorage.getItem("username"))
         console.log(this.state.loggedIn)
-        if(this.state.loggedIn=true){
+        if(this.state.loggedIn===true){
             return(
                 <App/>
             )}else{
