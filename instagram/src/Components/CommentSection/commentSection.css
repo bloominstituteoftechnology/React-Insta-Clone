@@ -34,3 +34,12 @@
     padding-right:10px;
 }
 
+.username-text {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.username {
+    padding-right: 5px;
+}

@@ -11,7 +11,7 @@ const SearchBar = (props) => {
             </div>
 
             <form className='container'>{/*Search box*/}
-                <input value={props.value} onChange={props.inputHandler} onClick={props.inputClickHandler} placeholder='Search'></input>
+                <input  type='text' onKeyDown={props.searchPost} placeholder='Search'></input>
             </form>
 
             <div className='container'>{/*Exlore - Activity - Profile */}

@@ -1,54 +1,50 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import SearchBar from './Components/SearchBar'
 import PostInfo from './Components/PostInfo'
 import dummyData from './dummy-data'
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       post:[],
-      comments:[],
+      search:[],
 
     }
   }
 
-  inputHandler = event => {
-    const value = event.target.value;
-
-    this.setState(
-      {search: value}
-    );
-  }
+  
 
   componentDidMount() {
-    this.setState({post: dummyData})
+    this.setState({post: dummyData
+                    })
+    
   }
 
 
-  submitHandler = event =>{
-    event.preventDefault();
-
-    const obj = {
-      task: this.state.task,
-      id: Date.now(),
-      completed: false,
-    }
-
-    this.setState({
-      comments:[...this.state.todo, obj],
-      task: '',
+  searchHandler = e => {
+    const posts = this.state.post.filter(p => {
+      if (p.username.includes(e.target.value)) {
+        return p;
+      }
     });
-  }
-
+    this.setState({ search: posts });
+  };
+    
+  
 
   render() {
     return(
       <div className="App">
-      <SearchBar value={this.state.search} inputHandler={this.inputHandler} searchClickHandler={this.searchClickHandler}/>
-      <PostInfo post={this.state.post} />
+      <SearchBar  searchPost={this.searchHandler}/>
+      <PostInfo post={this.state.search.length > 0
+              ? this.state.search
+              : this.state.post} />
+
+      
       
       </div>
     );

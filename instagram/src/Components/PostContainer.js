@@ -13,11 +13,9 @@ const PostContainer = (props) => {
                 <img src={props.obj.imageUrl} alt=''></img>
             </section>
             <section className='bottom'>{/*Like Comment and Bookmark icons and comments*/}
-                <CommentSection likes={props.obj.likes}  comments={props.obj.comments} />
+                <CommentSection  obj={props.obj} />
             </section>
-            <form>
-             <input type="text" className="commentAdd" placeholder="Add a Comment..."/>
-            </form>
+            
         </div>
         
            
