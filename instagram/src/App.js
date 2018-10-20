@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchBar from './SearchBar/SearchBar';
-import PostContainer from './PostContainer/PostContainer';
 import dummyData from './dummy-data';
 import PropTypes from "prop-types";
 import PostsPage from './PostContainer/PostsPage';
 import authentication from './Authentication/Authenticate';
+import Login from './Login/Login';
 
 
 class App extends Component {
@@ -55,4 +54,4 @@ App.propTypes = {
   ),
 }
 
-export default authentication(App);
+export default authentication(Login)(App);

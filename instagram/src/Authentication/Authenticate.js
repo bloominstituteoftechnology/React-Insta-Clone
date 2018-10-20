@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 
 
-const authentication = PassedComponent => {
+const authentication = ConditionalComponent => PassedComponent => {
     return class Authenticate extends React.Component {
         constructor(props){
             super(props);
@@ -13,6 +13,11 @@ const authentication = PassedComponent => {
         }
         
         render(){
+            if (this.state.loggedIn === false) {
+                return(
+                    <ConditionalComponent />
+                )
+            }
             return(
                 <div>
                     <PassedComponent />
