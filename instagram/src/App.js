@@ -163,6 +163,10 @@ onLogin=event=>{
 
 }
 
+resetLocal=event=>{
+  localStorage.setItem("username", "");
+}
+
 
 
   render() {
@@ -173,6 +177,7 @@ onLogin=event=>{
       SBval={this.state.controlledSearch}
       onSearch={this.onSearch} 
       onChange={this.onSearchChange}
+      resetLocal={this.resetLocal}
    
       //post container
       onClick={this.onClick} 
@@ -182,12 +187,13 @@ onLogin=event=>{
       PCval={this.state.controlledComment}
       
       />
+      
+      
 
 
     )
 
   }
 }
-App=Auth(App);
 
-export default App;
+export default Auth(App);

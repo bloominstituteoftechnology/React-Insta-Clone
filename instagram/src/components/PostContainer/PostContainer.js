@@ -19,7 +19,7 @@ const PostContainer=(props)=>{
                         {post.timestamp}
                         </div>
                
-
+                        <button onClick={props.resetLocal}>click to reset</button>
 
                     </div>
                   
