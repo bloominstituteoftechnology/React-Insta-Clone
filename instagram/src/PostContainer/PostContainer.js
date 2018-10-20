@@ -20,8 +20,3 @@ const PostContainer = (props) => {
 }
 
 export default PostContainer;
-
-          {/* { this.state.data === 0 ? 
-              ( <h2>Loading...</h2> ) : 
-              ( <PostContainer data={this.state.data} /> ) 
-          } */}
