@@ -4,7 +4,7 @@ import './App.css';
 import SearchBar from './Components/SearchBar'
 import PostInfo from './Components/PostInfo'
 import dummyData from './dummy-data'
-
+import Authenticate from './Components/Authenticate'
 
 class App extends Component {
   constructor() {
@@ -51,4 +51,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
