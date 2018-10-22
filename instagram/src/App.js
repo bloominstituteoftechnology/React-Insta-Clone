@@ -8,21 +8,25 @@ import styled from 'styled-components';
 import dummyData from './dummy-data';
 
 class App extends React.Component {
+constructor(){
+  super()
+  this.state = {
+    data: dummyData
+  }
+}
   render(){
     return(
-      <div className='App' >
-      <div className='searchBar'>  
-      <i className="fab fa-instagram"></i>
-      <span>|</span>
-      <span>Instagram</span>
-        <SearchBar data={dummyData} />
-        <i className="far fa-compass"></i>
-        <i className="far fa-user"></i>
-      </div>
-        
-        <PostContainer data={dummyData} />
-        
-      </div>
+    <div className='App' >
+    <div className='searchBar'>  
+    <i className="fab fa-instagram"></i>
+    <span>|</span>
+    <span>Instagram</span>
+    <SearchBar data={dummyData} />
+    <i className="far fa-compass"></i>
+    <i className="far fa-user"></i>
+    </div>
+    <PostContainer data={this.state.dummyData} />
+    </div>
     )
   }
 }

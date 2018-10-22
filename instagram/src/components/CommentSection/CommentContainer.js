@@ -14,45 +14,35 @@ class CommentContainer extends React.Component {
             newComment: ''
         }
     }
-
-    AddedComment = (event) => {
+    AddedComment = event => {
         event.preventDefault()
-         const comments = Object.assign([], this.state.comments)
-
-         const newComment = {text: this.state.newComment, username: 'LorenzoEvans'}
-
+        const comments = Object.assign([], this.state.comments)
+        const newComment = {text: this.state.newComment, username: 'LorenzoEvans'}
         //  newComment.push({username: 'LorenzoEvans', text: this.state.newComment })
         comments.push(newComment)
-
          this.setState({
              comments, newComment: ''
          })
     }
-
-    CommentHandler = (event) => {
+    CommentHandler = event => {
         event.preventDefault()
         this.setState({
             newComment: event.target.value 
         })
     }
-
     render(){
-         return(
-            <div className='CommentContainer'>
-            
-                {this.props.comments.map(comment => <div key={comment.text}>
-                        <div> 
-                        
-                        {comment.username}:
-                        {' '}
-                        {comment.text}
-                        </div>
-                        {/* <div> {comment.text}</div> */}
-                   
-                   
-                </div>)}
-                 <AddComment AddedComment={this.AddedComment} CommentHandler={this.CommentHandler}/>
-            </div>
+     return(
+        <div className='CommentContainer'>
+        {this.props.comments.map(comment => <div key={comment.text}>
+        <div> 
+        {comment.username}:
+        {' '}
+        {comment.text}
+        </div>
+        {/* <div> {comment.text}</div> */}
+        </div>)}
+        <AddComment AddedComment={this.AddedComment} CommentHandler={this.CommentHandler}/>
+        </div>
         )
     }
        
