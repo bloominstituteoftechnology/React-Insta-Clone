@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Login from '../Login/Login'
 
 const Authenticate = (App) => class extends React.Component {

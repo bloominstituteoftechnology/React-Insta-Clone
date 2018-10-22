@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import LikeSection from './LikeSection'
 
 class Post extends React.Component {

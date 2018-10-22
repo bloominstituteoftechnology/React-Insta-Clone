@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Post from './Post';
 import PostHeader from './PostHeader';
 import CommentContainer from '../CommentSection/CommentContainer'

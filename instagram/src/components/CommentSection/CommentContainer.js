@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import CommentSection from './CommentSection';
 import './CommentContainer.css'
 import AddComment from './addComment'
 
