@@ -28,3 +28,16 @@ h2{
 .lilpics{
     padding-left:25%;
 }
+
+.logo{
+    display:flex;
+}
+
+.fa-instagram{
+    height:30px;
+    width:40px;
+}
+
+.fab{
+    line-height: 5;
+}
