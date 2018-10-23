@@ -1,16 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const LikesWrapper = styled.div`
-
-`;
+const LikesWrapper = styled.div``;
 
 const SocialWrapper = styled.div`
-    display: flex;
+  display: flex;
 `;
 
 const Social = styled.div`
-    display: flex;
+  display: flex;
 `;
 
 const Lykes = styled.h2`
@@ -20,8 +18,8 @@ const Lykes = styled.h2`
 const Likes = props => {
   return (
     <LikesWrapper>
-        <SocialWrapper onClick = {props.incrementHandler}>
-      <Social>
+      <SocialWrapper onClick={props.incrementHandler}>
+        <Social>
           <i className="far fa-heart fa-2x" />
         </Social>
         <Social>

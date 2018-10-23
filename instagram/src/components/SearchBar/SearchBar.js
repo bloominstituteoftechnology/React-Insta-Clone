@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const Header = styled.header`
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-evenly
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 `;
 const LeftWrapper = styled.div`
   display: flex;
