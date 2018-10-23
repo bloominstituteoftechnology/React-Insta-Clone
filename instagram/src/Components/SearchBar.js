@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./searchbar.css";
 
 
 const SearchBar = props => 
@@ -11,7 +11,7 @@ const SearchBar = props =>
 <div  className="logo" alt="logo">    <h2>Instagram</h2>
 </div>
 
-    <input type="text" placeholder="Search..."/>
+    <input className = "search" type="text" placeholder="Search..."/>
 
  
  <div className="social-wrapper">
