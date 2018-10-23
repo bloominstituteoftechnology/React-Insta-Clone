@@ -6,7 +6,7 @@
 
 ### Daily Setup (Day III)
 
-- To start off today, your application should still be structured like yesterday, but now it should have a working search bar, comment input, and like icon.
+[x] To start off today, your application should still be structured like yesterday, but now it should have a working search bar, comment input, and like icon.
 - Those aren't necessary, however, for what you will be doing today. You can still work on today's part of this project even if you aren't completely done with yesterday's portion.
 
 ### Description (Day III)
@@ -17,23 +17,23 @@
 
 #### Tasks (Day III)
 
-- Create a `<PostsPage />` component in your `components/PostsContainer` directory.
+[x] Create a `<PostsPage />` component in your `components/PostsContainer` directory.
 
-  - You'll have to move a lot of what is rendered in `app.js` to this new component
-  - In app.js, render the `PostsPage` component.
-  - Make sure the app working as it was before since it has been re-factored now.
+  -You'll have to move a lot of what is rendered in `app.js` to this new component
+  [x] In app.js, render the `PostsPage` component.
+  [x] Make sure the app working as it was before since it has been re-factored now.
   - This is to ensure that we clean up our App component a little bit before we re-factor it to be wrapped up in an HOC
 
 - Building the High Order Component
 
-  - Create a directory called `Authentication`
-  - Inside that directory create a component called `<Authenticate />`. This is where all of the magic sis going to happen.
-  - This component should be able to take in a component as an argument, and it will return a `class` component.
-  - Inside of `<Authenticate />'s` render method, you'll want to return the Component that gets passed into it.
-  - Be sure to export out this component.
-  - Head over to App.js and `import` in our new `Authenticate` Higher Order Component and pass in `App`.
-  - If this worked right then everything should render as it used to.
-  - Authenticate will look a lot like this when you're done setting it up.
+  [x] Create a directory called `Authentication`
+  [x] Inside that directory create a component called `<Authenticate />`. This is where all of the magic sis going to happen.
+  [x] This component should be able to take in a component as an argument, and it will return a `class` component.
+  [x] Inside of `<Authenticate />'s` render method, you'll want to return the Component that gets passed into it.
+  [x] Be sure to export out this component.
+  [x] Head over to App.js and `import` in our new `Authenticate` Higher Order Component and pass in `App`.
+  [x] If this worked right then everything should render as it used to.
+  [x] Authenticate will look a lot like this when you're done setting it up.
 
 ```js
 const Authenticate = App =>
@@ -46,19 +46,18 @@ const Authenticate = App =>
 
 - Build out the LoginPage component. You can design it how you like
 
-  - In your `components` directory, create a directory called `Login` and add a new file called `Login.js`.
-  - There should be a `username` input, a `password` input, and a `Login` button.
-  - The component should invoke the `login` function in `app.js` when a user logs in.
-  - This login function should set a `username` on `localStorage`. You'll need to check local storage to see if a user is logged in.
-  - Be sure to force the page to reload when a user logs in so that our component un-mounts and mounts again.
+  [x] In your `components` directory, create a directory called `Login` and add a new file called `Login.js`.
+  [x] There should be a `username` input, a `password` input, and a `Login` button.
+  [x] The component should invoke the `login` function in `app.js` when a user logs in.
+  [x] This login function should set a `username` on `localStorage`. You'll need to check local storage to see if a user is logged in.
+  [x] Be sure to force the page to reload when a user logs in so that our component un-mounts and mounts again.
 
 - Extending the functionality of the HOC to conditionally render the `LoginPage` or the `App`
-
-  - Inside of `Authenticate` we need to add a constructor to hold our state data.
-  - On state we need a user `loggedIn` boolean flag.
-  - On `componentDidMount` we need to check `localStorage` to see if a user is logged in.
-  - Inside of the render function we will check `if a user is logged in`
-  - If a user is logged in we will return the `<App />`, else we will return the `<LoginPage>`
+  [x] Inside of `Authenticate` we need to add a constructor to hold our state data.
+  [x] On state we need a user `loggedIn` boolean flag.
+  [x] On `componentDidMount` we need to check `localStorage` to see if a user is logged in.
+  [x] Inside of the render function we will check `if a user is logged in`
+  [x] If a user is logged in we will return the `<App />`, else we will return the `<LoginPage>`
 
 #### Stretch Problems (Day III)
 
