@@ -4,8 +4,6 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainter';
 import dummyData from './components/dummy-data.js';
 
-
-
 class App extends Component {
   constructor(props){
     super(props)
@@ -16,8 +14,9 @@ class App extends Component {
 
 componentDidMount(){
   let myData = this.state;
-        
+  return(<PostContainer post={myData.post} index={myData.index} />)
 }
+
 
   render() {
     return (
@@ -37,6 +36,7 @@ componentDidMount(){
     )}
  }
 
+ 
 
 
 export default App

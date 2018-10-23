@@ -1,5 +1,6 @@
 body {
   margin-left: 60px;
+  max-width:  70%;
 }
 
 .App {
@@ -16,6 +17,7 @@ body {
   width: 50%;     
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   position: relative;
   justify-content: space-between;
