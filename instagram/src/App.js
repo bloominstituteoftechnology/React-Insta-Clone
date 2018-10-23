@@ -8,19 +8,25 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-        posts: dummyData,
+        posts: "",
     }
   }
 
 componentDidMount(){
-  let myData = this.state;
-  return(<PostContainer post={myData.post} index={myData.index} />)
+  this.setState({
+    posts: dummyData,
+  })
 }
 
 
+
+
   render() {
+    if (!this.state.posts){
+      return <div>Loading. . ..</div>
+    }
     return (
-      <div key={this.state.username}>
+      <div>
         <SearchBar />
         
        
@@ -36,7 +42,7 @@ componentDidMount(){
     )}
  }
 
- 
+
 
 
 export default App
