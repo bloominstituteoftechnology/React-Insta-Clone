@@ -12,4 +12,4 @@ const CommentSection = props =>(
 
 );
 
-export default CommentInput;
+export default CommentSection;

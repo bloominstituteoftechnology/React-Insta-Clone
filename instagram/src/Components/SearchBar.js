@@ -8,11 +8,23 @@ const SearchBar = props =>
 
     <div className="search-bar-container">
 
-    <img src=".\Images\instagram-logo-text-black-png.png" className="logo"/>
+<div  className="logo" alt="logo">    <h2>Instagram</h2>
+</div>
 
     <input type="text" placeholder="Search..."/>
 
-  
+ 
+ <div className="social-wrapper">
+        <div className="lilpics">
+          <i className="fa fa-compass" />
+        </div>
+        <div className="lilpics">
+          <i className="fa fa-heart" />
+        </div>
+        <div className="lilpics">
+          <i className="fa fa-user-circle" />
+        </div>
+      </div>
   
 
     
@@ -26,3 +38,6 @@ const SearchBar = props =>
 
 
 export default SearchBar;
+
+//ISSUES
+// Won't pick up on Logo (Try to adjust directories to keep things in order)
