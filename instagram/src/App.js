@@ -3,7 +3,7 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainter';
 import dummyData from './components/dummy-data.js';
-import CommentArray from './components/CommentArray/CommentArray';
+
 
 class App extends Component {
   constructor(props){
@@ -35,7 +35,7 @@ componentDidMount(){
         return ( 
           <div key={index}> 
             <PostContainer index={index} post={post} /> 
-            <CommentArray comments={post.comments} />
+            
 
           </div>
             )
