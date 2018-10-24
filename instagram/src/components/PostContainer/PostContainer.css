@@ -1,0 +1,15 @@
+.post-thumb {
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+.like-section {
+    width: 100%;
+    display: flex;
+}
+
+.like-section-wrapper {
+    font-size: 0.7rem;
+    height: 10px;
+    padding: 10px;
+}
