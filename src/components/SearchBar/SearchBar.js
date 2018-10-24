@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from 'reactstrap';
-import { Input} from 'reactstrap';
+
 import styles from "./SearchBar.css";
 import styled from 'styled-components';
 
@@ -11,8 +10,33 @@ import instagram from "@fortawesome/fontawesome-free-brands/faInstagram";
 
 {/* <FontAwesomeIcon icon="search"/> */}
 
-const Header=styled.div`
+const Header=styled.nav`
+display:flex;
+justify-content:space-around;
+font-size:3rem;
+width: 65%;
+margin: auto;
+padding-top:10px;
+padding-bottom:10px;
+`
 
+const Insta=styled.div`
+font-family: 'Grand Hotel', cursive
+`
+
+const ThreeNav=styled.div`
+display:flex;
+justify-content:space-between;
+`
+const Inputty=styled.input`
+font-size: 1rem;
+text-align: center;
+font-weight: 100;
+height: 100%;
+margin-top: auto;
+margin-bottom: auto;
+margin-left: auto;
+margin-right: auto;
 `
 
 class SearchBar extends React.Component{
@@ -23,19 +47,20 @@ class SearchBar extends React.Component{
         }
     };
 
+
     render(){
         return(
-            <nav id="topnav">
-                <div class="insta">
+            <Header>
+                <Insta>
                 <FontAwesomeIcon icon={instagram} />
                 
                 &ensp;|&ensp;
                   Instagram
-                </div>
+                </Insta>
                 <form onSubmit={this.props.onSearch}>
                 <input value={this.props.SBval} onChange={this.props.onChange}id="inputty" type="text" placeholder="&#x1f50d; search"/>
                 </form>
-                <div class="threenav">
+                <ThreeNav>
                 
                 <FontAwesomeIcon icon="compass"/>
                 &ensp;
@@ -43,8 +68,8 @@ class SearchBar extends React.Component{
                 &ensp;
                 <FontAwesomeIcon icon="user"/>
                 &ensp;
-                </div>
-            </nav>
+                </ThreeNav>
+            </Header>
 
         )
     }
