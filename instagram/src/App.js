@@ -3,6 +3,7 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainter';
 import dummyData from './components/dummy-data.js';
+import CommentSection from './components/CommentSection/CommentSection';
 
 
 class App extends Component {
@@ -33,11 +34,12 @@ componentDidMount(){
        
         {this.state.posts.map((post, index) =>  {
         return ( 
-          <div key={index}> 
-            <PostContainer index={index} post={post} /> 
-            
+            <div>
+            <PostContainer index={index} post={post} />
+            <CommentSection comment={this.state.comment} />
+            </div>
 
-          </div>
+          
             )
           })}
 
