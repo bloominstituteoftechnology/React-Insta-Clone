@@ -7,12 +7,13 @@ import AddComment from './addComment';
 const CommentSection = (props) => {
     return(
         <div className='CommentSection'>
-        {props.comments.map(item => <AddComment
+        {props.post.comments.map(item => <AddComment
 
             key={item.index}
             username={item.username}
             text={item.text}
         />)}
+        {props.comment}
         </div>
     )
 

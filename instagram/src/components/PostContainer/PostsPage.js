@@ -1,5 +1,5 @@
 import React from 'react';
-import Post from './Post';
+// import Post from './Post';
 import PostHeader from './PostHeader';
 import CommentContainer from '../CommentSection/CommentContainer'
 import dummyData from '../../dummy-data'
@@ -9,40 +9,24 @@ class PostPage extends React.Component{
     constructor(){
         super()
         this.state = {
-                counter: dummyData.likes 
-    }
-    }
-    
-
-    addLike = () => {
-        let counter = this.state.counter + 1
+        counter: dummyData.likes 
+    }}
+    componentDidMount(){
         this.setState({
-        counter: counter 
-        },
-        
-        console.log(this.state.likes))
+            
+        })
     }
    render(){
         return(
-
-
         <div className='cmntSectionDiv'>
         {this.props.data.map(item => 
         <div key={item.username}>
-
-              <PostHeader username={item.username} avatar={item.thumbnailUrl} />
-               <Post likes={item.likes} post={item.imageUrl} timestamp={item.timestamp} />
-               
-               <CommentContainer data={this.props.data} comments={item.comments} 
-
-               />
+        <PostHeader username={item.username} avatar={item.thumbnailUrl} />
+        {/* <Post {...this.props.data.map(post => {})} likes={item.likes} post={item.imageUrl} timestamp={item.timestamp} /> */}
+        <CommentContainer  data={this.props.data} comments={item.comments} 
+        />
         </div>
-      
-       
         )}
-
-
-
         </div>
     )
    }

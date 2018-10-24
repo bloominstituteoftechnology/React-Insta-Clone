@@ -22,10 +22,9 @@ constructor(){
 
   handleSearch = event => {
     const comments = this.state.data.filter(comment => {
-      if (comment.username.includes(event.target.value)) {
-          return comment ;
+      return (comment.username.includes(event.target.value) ? comment : null)
       }
-    })
+    )
 
     this.setState({
       search: comments 
@@ -38,11 +37,11 @@ constructor(){
     <i className="fab fa-instagram"></i>
     <span>|</span>
     <span>Instagram</span>
-    <SearchBar handleSearch={this.handleSearch} data={this.state.data} />
+    <SearchBar stringSearch={this.state.stringSearch} postSearch={this.state.postSearch} handleSearch={this.handleSearch} data={this.state.data} />
     <i className="far fa-compass"></i>
     <i className="far fa-user"></i>
     </div>
-    <PostContainer data={this.state.data} />
+    <PostContainer data={this.state.search.length > 0 ? this.state.search : this.state.data} />
     </div>
     )
   }

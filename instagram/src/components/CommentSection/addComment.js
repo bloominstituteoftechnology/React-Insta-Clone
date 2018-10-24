@@ -5,13 +5,11 @@ const AddComment = (props) => {
         <div>
         {/* {props.username}
         {props.text} */}
-        <form onSubmit={props.AddedComment}>
-        <input
-        type="text"
-        value={props.text}
-        onChange={props.CommentHandler}
-        />
-        </form>
+        <div>
+            {props.username}
+            {props.text}
+        </div>
+        
         </div>
     )
 }
