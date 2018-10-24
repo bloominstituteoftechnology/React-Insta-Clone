@@ -12,7 +12,7 @@ const SearchBar = props =>
 <i className= "fab fa-instagram"></i>    <h2>Instagram</h2>
 </div>
 
-    <input className = "search" type="text" placeholder="Search..."/>
+    <input className = "search" type="text" placeholder="Search..." onChange= "props.SearchBar"/>
 
  
  <div className="social-wrapper">
@@ -31,7 +31,7 @@ const SearchBar = props =>
     
 
    </div>
-
+//done
 
 
     

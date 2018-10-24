@@ -4,9 +4,17 @@ import './App.css';
 import SearchBar from "./Components/SearchBar";
 import CommentSection from "./Components/CommentSection";
 import dummyData from './dummy-data';
+import PostContainer from './Components/PostContainer';
 
 class App extends Component {
 //data 
+
+constructor() {
+
+  super();
+  this.state = {dummyData: dummyData}
+
+};
 
 
 
@@ -17,10 +25,12 @@ class App extends Component {
     return (
       <div className="App">
        
+<PostContainer/>
 
           <SearchBar/>
 
 
+ 
          
 
    
