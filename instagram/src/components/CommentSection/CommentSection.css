@@ -1,0 +1,31 @@
+.likes{
+    font-size: 2rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 4rem;
+    flex-wrap: wrap;
+    width: 17%;
+}
+.likes p{
+    font-size:1rem;
+    font-weight:bold;
+}
+
+input{
+    border:none;
+}
+
+form{
+    display: flex;
+    align-content: center;
+    margin-left: 4.25rem;
+    margin-bottom: 1rem;
+    justify-content: space-around;
+}
+button{
+    background-color:none;
+    border:none;
+}
