@@ -1,5 +1,11 @@
 import React, { Component } from 'react'
 
-const commentArray = (props) => {
-    this.state = props
+class CommentArray extends Component {
+    constructor(props){
+      super(props)
+      this.state = props
+      console.log(this.state)
+    }
 }
+
+export default CommentArray;
