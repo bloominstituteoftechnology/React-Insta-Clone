@@ -8,12 +8,13 @@ class CommentSection extends Component {
       this.state = {
         comment: []
     }
+}
 
-    componentDidMount() {
+    componentDidMount(props) {
         this.setState({comment: this.props.comment})
     }
   
-    const addNewComment = () => {
+    addNewComment = (event, indNumber) => {
       this.setState = props.comment
     }
   
@@ -28,7 +29,6 @@ class CommentSection extends Component {
         </div>
       )
     }
-}
 }
 
 /*CommentSection.propTypes = {
