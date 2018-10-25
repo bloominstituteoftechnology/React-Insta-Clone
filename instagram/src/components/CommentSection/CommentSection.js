@@ -6,25 +6,23 @@ class CommentSection extends Component {
     constructor (props) {
       super (props)
       this.state = {
-        comment: []
-    }
+        comment: props.comment
+        }
 }
 
-    componentDidMount(props) {
-        this.setState({comment: this.props.comment})
-    }
-  
+
     addNewComment = (event, indNumber) => {
-      this.setState = props.comment
+      return(this.setState({event: this.event,
+                                indNumber: this.indNumber  }))
     }
   
     render = () => {
+        console.log("Check: ", this.props )
       return (
         <div>
           <p>
-            <span className="comment_username">{props.comment.username}</span>
-           {/* <span>{this.sate.comment.text}</span>*/}
-          {/*<CommentSection comment={this.state.comment.text} />*/}
+            <span className="comment_username">{this.props.username}</span>
+            <span>{this.state.comment.username}</span>       
           </p>
         </div>
       )
