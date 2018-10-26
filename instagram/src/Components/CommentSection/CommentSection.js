@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Comment from './Components/Comment';
-import CommentInput from './Components/CommentInput';
+import Comment from './Comment';
+import CommentInput from './CommentInput';
 
 
 

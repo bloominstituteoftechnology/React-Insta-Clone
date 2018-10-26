@@ -1,5 +1,5 @@
-mport React from 'react';
-import dummyData from '../dummy-data';
+import React from 'react';
+import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBarContainer/SearchBar.js';
 import PostContainer from './PostContainer.js';
 
