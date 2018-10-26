@@ -1,25 +1,22 @@
 import React from 'react';
-import CommentSection from "./Components/CommentSection";
-import Post from "./Components/post";
+import Post from "./Post";
 
 
 
-const PostContainer = props => {
+const PostSection = props => {
 	return (
 		<div className= "postcontainer">
 
-	<div className="post-container">
 	
-			{props.post.map(posts => 
+			{props.posts.map((post, index) => 
 				<Post
-					key={posts.imageUrl}
-					post={posts}
+					key={post.index}
+					post={post}
 				/>
 			)}
 		</div>
-	);
-		</div>
+		
 	);
 };
 
-export default PostContainer;
+export default PostSection;

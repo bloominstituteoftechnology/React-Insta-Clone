@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CommentSection from "./CommentSection/CommentSection";
-import LikeSection from "./Likes/Likes"
-import './PostContainer.css';
+import CommentSection from "../CommentSection/CommentSection";
+import LikeSection from "../Likes/Likes";
+import PostHead from "./PostHead";
+
 
 class Post extends React.Component {
 	constructor(props) {
@@ -11,7 +12,7 @@ class Post extends React.Component {
 			like: props.post.likes
 		};
 	
-	
+	}
 
 	incrementLike = () => {
 		let likes = this.state.like + 1;
@@ -44,7 +45,8 @@ class Post extends React.Component {
 		);	
 	}
 }
-}
+
+
 
 Post.propTypes = {
 	post: PropTypes.shape({

@@ -1,39 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import SearchBar from "./Components/SearchBar";
-import CommentSection from "./Components/CommentSection";
+import SearchBar from "./Components/SearchBar/SearchBar";
 import dummyData from './dummy-data';
-import PostContainer from './Components/PostContainer';
+import PostSection from './Components/PostSection/PostSection';
 
 class App extends Component {
-//data 
-
-constructor() {
-
-  super();
-  this.state = {dummyData: dummyData}
-
-};
-
-
-
-
-
+  constructor() {
+    super();
+    this.state = {
+      posts : dummyData
+    }
+  };
 
   render() {
     return (
       <div className="App">
-       
-<PostContainer/>
-
-          <SearchBar/>
-
-
- 
-         
-
-   
+        <SearchBar/>
+        <PostSection posts={this.state.posts}/>
       </div>
     );
   }

@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import "./postcontainer.css";
-import Heart from "./images/heart.png";
-import Comment from "./images/comment.png";
+import Heart from "../images/heart.png";
+import Comment from "../images/comment.png";
 
 const LikeSection = props => {
 	return (
