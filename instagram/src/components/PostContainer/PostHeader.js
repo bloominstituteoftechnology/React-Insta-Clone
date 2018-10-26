@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const PostHeader = (props) => {
     return(
@@ -10,5 +11,6 @@ const PostHeader = (props) => {
        </>
     )
 }
+
 
 export default PostHeader 

@@ -6,6 +6,16 @@ import SearchBar from './components/SearchBar/SearchBar';
 import styled from 'styled-components';
 import dummyData from './dummy-data';
 
+const AppStyle = styled.div `
+  display: flex ;
+  flex-direction: column ;
+  justify-content: space-around ;
+`
+const SearchBarStyle = styled.div `
+ display: flex ;
+ justify-content: space-evenly ;
+`
+
 class App extends React.Component {
 constructor(){
   super()
@@ -21,8 +31,8 @@ constructor(){
   }
 
   handleSearch = event => {
-    const comments = this.state.data.filter(comment => {
-      return (comment.username.includes(event.target.value) ? comment : null)
+    const comments = this.state.data.filter(item => {
+      return (item.username.includes(event.target.value) ? item : null)
       }
     )
 
@@ -32,19 +42,21 @@ constructor(){
   }
   render(){
     return(
-    <div className='App' >
-    <div className='searchBar'>  
+    // <div className='App' >
+    <AppStyle>
+    <SearchBarStyle>
     <i className="fab fa-instagram"></i>
     <span>|</span>
     <span>Instagram</span>
     <SearchBar stringSearch={this.state.stringSearch} postSearch={this.state.postSearch} handleSearch={this.handleSearch} data={this.state.data} />
     <i className="far fa-compass"></i>
     <i className="far fa-user"></i>
-    </div>
-    <PostContainer data={this.state.search.length > 0 ? this.state.search : this.state.data} />
-    </div>
+    </SearchBarStyle>
+    <PostContainer data={this.state.search.length > 0 ? this.state.search : this.state.data} />    
+    </AppStyle>
     )
   }
 }
 
 export default Authenticate(App)
+// export default App

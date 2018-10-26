@@ -5,35 +5,34 @@ class Login extends React.Component {
     constructor(){
         super()
         this.state = {
-            user: '',
-            pw: ''
+            username: '',
+            password: ''
         }
     }
-    LoginSubmit = event => {
+    LoginSubmit = () => {
+     if(this.state.username && this.state.password){
+         localStorage.setItem("user", this.state.username)
+         localStorage.setItem("password", this.state.password)    
+         window.location.reload();
+        }
+        }
+    LoginHandler = event => {
         this.setState({
-            [event.target.user]: event.target.value
+            [event.target.name]: event.target.value
         })
-    }
-    LoginUser = event => {
-        const user = this.state.username
-        localStorage.setItem('user', user)
-        this.setState({
-            user: event.target.value
-        })
-        window.location.reload();
     }
     render(){
         return(
-        <div>
-        <input value={this.state.user}
-            onChange={this.LoginUser}
-        />
-    
-        <input value={this.state.pw} onChange={this.LoginUser}/>
-        </div>
-        )
+            <div>
+            <form onSubmit={this.LoginSubmit} >
+                <input name="username" value={this.state.username} onChange={this.LoginHandler} />
+                <input name="password" value={this.state.password} onChange={this.LoginHandler} />
+                <button type="submit" >Submit</button>
+            </form>
+           
+            </div>
+            )
     }
-    
 }
 
 export default Login 

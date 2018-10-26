@@ -1,6 +1,6 @@
 import React from 'react'
 import Login from '../Login/Login'
-
+import PropTypes from 'prop-types';
 const Authenticate = (App) => class extends React.Component {
     constructor(){
         super() 
@@ -9,14 +9,12 @@ const Authenticate = (App) => class extends React.Component {
             login: false 
         }
     }
-
     componentDidMount(){
         if (!localStorage.getItem('user')){
             this.setState({
                 login: false
             })
         }
-
         else {
             if (localStorage.getItem('user')){
                 this.setState({
@@ -25,7 +23,6 @@ const Authenticate = (App) => class extends React.Component {
             }
         }
     }
-
     render(){
         if(this.state.login) return <App />
         return <Login />

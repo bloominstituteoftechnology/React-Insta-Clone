@@ -1,9 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const SearchBar = props => {
     return(
         <div>
-        <input onKeyDown={props.handleSearch} type='text' placeholder='Search' />
+        <form onChange={props.handleSearch}>
+            <input type='text' placeholder='Search' />
+        </form>
+        
         </div>
     )
 }

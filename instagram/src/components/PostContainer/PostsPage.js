@@ -1,9 +1,8 @@
 import React from 'react';
-// import Post from './Post';
 import PostHeader from './PostHeader';
-import CommentContainer from '../CommentSection/CommentContainer'
+import CommentSection from '../CommentSection/CommentSection'
 import dummyData from '../../dummy-data'
-
+import PropTypes from 'prop-types';
 
 class PostPage extends React.Component{
     constructor(){
@@ -11,54 +10,25 @@ class PostPage extends React.Component{
         this.state = {
         counter: dummyData.likes 
     }}
-    componentDidMount(){
-        this.setState({
-            
-        })
-    }
-   render(){
-        return(
+render(){
+    return(
         <div className='cmntSectionDiv'>
-        {this.props.data.map(item => 
-        <div key={item.username}>
-        <PostHeader username={item.username} avatar={item.thumbnailUrl} />
-        {/* <Post {...this.props.data.map(post => {})} likes={item.likes} post={item.imageUrl} timestamp={item.timestamp} /> */}
-        <CommentContainer  data={this.props.data} comments={item.comments} 
-        />
-        </div>
-        )}
+            {this.props.data.map(item => 
+                <div key={item.username}>
+                    <PostHeader 
+                    username={item.username} 
+                    avatar={item.thumbnailUrl} />
+                    <CommentSection  
+                    data={this.props.data} 
+                    comments={item.comments} 
+                    />
+                </div>
+            )}
         </div>
     )
-   }
-   
 }
-// const PostPage = (props) => {
-//         return(
-//             <div>
-//             {props.data.map(item => 
-            
-//             <PostHeader key={item.username}
-            
-//             avatar={item.imageUrl} 
 
-//             username={item.username}
+}
 
-
-                
-//             /> )};
-
-//             {props.data.map(item => <Post key={item.username} comments={item.comments.map( item =>
-//             <div key={item.index}>item.username
-//             item.text
-            
-//             </div>
-            
-//             )} />)};
-
-//             {props.data.map(item => <LikeSection likes={item.likes} />)}
-                
-//             </div>
-//         )
-// }
 
 export default PostPage 
