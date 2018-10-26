@@ -25,7 +25,7 @@ componentDidMount(){
 
   render() {
     if (!this.state.posts){
-      return <div>Loading. . ..</div>
+      return <div>Loading...</div>
     }
     return (
       <div>
@@ -36,7 +36,7 @@ componentDidMount(){
         return ( 
             <div>
             <PostContainer index={index} post={post} />
-            <CommentSection comment={this.state.comment} />
+            {/*<CommentSection comment={this.state.comment} />*/}
             </div>
 
           

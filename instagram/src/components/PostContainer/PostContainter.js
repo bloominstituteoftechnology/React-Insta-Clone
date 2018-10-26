@@ -6,13 +6,15 @@ const PostContainer = (props) => {
         
         return(
                 <div>
-               
-               <h2>{props.post.username}</h2>
-               <img src={props.post.imageUrl} alt={props.alt}/>
-                {props.post.comments.map((comment, index) => (
-                        <CommentSection comment={comment} key={index} />
-                ))}
-                <input></input>
+                
+                <h2>{props.post.username}</h2>
+                <img src={props.post.imageUrl} alt={props.alt}/>
+                        {props.post.comments.map((comment, index) => (
+                                <CommentSection comment={comment} key={index} />
+                        ))}
+                        <div className="commentLine">
+                                <input></input><button>...</button>
+                        </div>
                 </div>
         );
 

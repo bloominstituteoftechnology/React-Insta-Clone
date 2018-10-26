@@ -22,7 +22,8 @@ class CommentSection extends Component {
         <div>
           <p>
             <span className="comment_username">{this.props.username}</span>
-            <span>{this.state.comment.username}</span>       
+            <span className="comUser">{this.state.comment.username} </span>
+            <span>{this.state.comment.text}</span> 
           </p>
         </div>
       )
