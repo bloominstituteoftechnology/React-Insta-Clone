@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CommentSection from "../CommentSection/CommentSection";
 import LikeSection from "../Likes/Likes";
 import PostHead from "./PostHead";
+import './PostSection.css';
 
 
 class Post extends React.Component {
@@ -22,7 +23,7 @@ class Post extends React.Component {
 	render() {
 
 		return (
-			<div className="post-bucket">
+			<div className="post-drop">
 				<PostHead
 					username={this.props.post.username}
 					thumbnailUrl={this.props.post.thumbnailUrl}

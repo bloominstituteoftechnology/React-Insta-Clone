@@ -1,0 +1,32 @@
+.thumbnail-container{
+margin-left: 0%;
+height: 50px;
+width: 20px;
+padding-bottom: 3%;
+
+
+}
+
+.img-container{
+    height:652px;
+    width:128px;
+}
+
+.post-image{
+    height: auto;
+    margin-bottom: 5%;
+}
+
+/*circle logo*/
+.post-thumbnail{
+    height:50px;
+    border-radius: 50px;
+    margin-left: 25px;
+}
+
+
+
+.user-name{
+    margin-left: 429%;
+    margin-top: -185%;
+}
