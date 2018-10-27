@@ -1,6 +1,22 @@
 import React from 'react'
+import styled from 'styled-components'
+const Button = styled.button `
+border: 1px solid black ;
+background: transparent ;
 
 
+`
+const Container = styled.div `
+display: flex ;
+justify-content: space-around ;
+height: 25px;
+align-items: center ;
+`
+
+const Form = styled.form `
+display: flex;
+justify-content: space-between ;
+`
 class Login extends React.Component {
     constructor(){
         super()
@@ -23,14 +39,14 @@ class Login extends React.Component {
     }
     render(){
         return(
-            <div>
-            <form onSubmit={this.LoginSubmit} >
+            <Container>
+            <Form onSubmit={this.LoginSubmit} >
                 <input name="username" value={this.state.username} onChange={this.LoginHandler} />
                 <input name="password" value={this.state.password} onChange={this.LoginHandler} />
-                <button type="submit" >Submit</button>
-            </form>
+                <Button type="submit" >Submit</Button>
+            </Form>
            
-            </div>
+            </Container>
             )
     }
 }

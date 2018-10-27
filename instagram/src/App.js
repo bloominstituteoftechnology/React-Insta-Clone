@@ -7,13 +7,16 @@ import styled from 'styled-components';
 import dummyData from './dummy-data';
 
 const AppStyle = styled.div `
-  display: flex ;
-  flex-direction: column ;
-  justify-content: space-around ;
-`
-const SearchBarStyle = styled.div `
  display: flex ;
- justify-content: space-evenly ;
+  flex-direction: column ;
+border: 2px solid red ;
+margin: 0 auto ;
+`
+
+const SearchBarStyle = styled.div `
+  display: flex ;
+  flex-direction: row ;
+  justify-content: space-around ;
 `
 
 class App extends React.Component {
@@ -42,18 +45,19 @@ constructor(){
   }
   render(){
     return(
-    // <div className='App' >
     <AppStyle>
-    <SearchBarStyle>
+ <SearchBarStyle >
     <i className="fab fa-instagram"></i>
     <span>|</span>
     <span>Instagram</span>
-    <SearchBar stringSearch={this.state.stringSearch} postSearch={this.state.postSearch} handleSearch={this.handleSearch} data={this.state.data} />
+    <SearchBar handleSearch={this.handleSearch} data={this.state.data} />
     <i className="far fa-compass"></i>
     <i className="far fa-user"></i>
-    </SearchBarStyle>
-    <PostContainer data={this.state.search.length > 0 ? this.state.search : this.state.data} />    
+  </SearchBarStyle>
+    <PostContainer data={this.state.search.length > 0 ? this.state.search : this.state.data} />
+
     </AppStyle>
+   
     )
   }
 }

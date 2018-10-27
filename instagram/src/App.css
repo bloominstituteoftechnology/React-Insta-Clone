@@ -1,34 +1,27 @@
 body {
 display: flex ;
-margin: 0 auto ;
 justify-content: center;
 font-size: 1.6rem ;
-border: 2px solid black !important;
-width: 800px ;
 
 }
 
 html {
   font-size: 62.5% ;
-  border: 3px solid blue !important ;
   margin: 0 auto ;
-  
 }
 
 #root {
-  width: 800px ;
-  border: 3px solid red ;
+  width: 600px ;
 }
 
 .App{
   display: flex ;
   flex-direction: column ;
   justify-content: space-around ;
-  border: 2px solid green !important ;
+  margin: 0 auto ;
 }
 
 .searchBar {
-  border: 3px solid pink !important ;
   display: flex ;
   justify-content: space-evenly ;
 }

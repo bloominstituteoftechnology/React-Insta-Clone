@@ -17,7 +17,7 @@ render(){
                 <div key={item.username}>
                     <PostHeader 
                     username={item.username} 
-                    avatar={item.thumbnailUrl} />
+                    />
                     <CommentSection  
                     data={this.props.data} 
                     comments={item.comments} 

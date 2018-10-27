@@ -3,6 +3,17 @@ import PostHeader from './PostHeader'
 import CommentSection from '../CommentSection/Comment'
 import LikeSection from './LikeSection'
 import PropTypes from 'prop-types';
+import styled from 'styled-components'
+
+const Container = styled.div `
+    display: flex ;
+    justify-content: center ;
+    flex-direction: column ;
+`
+
+const TimeStamp = styled.div `
+margin: 10px 0 10px 0 ;
+`
 
 class Post extends React.Component {
     constructor(props){
@@ -43,13 +54,13 @@ class Post extends React.Component {
     render(){
     
          return(
-        <div>
-         <PostHeader
+        <Container>
+      <PostHeader
         username={this.props.post.username}
-        avatar={this.props.post.thumbnailImg}
+        avatar={this.props.post.thumbnailUrl}
          />
         <img alt="" src={this.props.post.imageUrl} />
-        <div>{this.props.post.timestamp}</div>
+        <TimeStamp>{this.props.post.timestamp}</TimeStamp>
        
         <LikeSection addLike={this.addLike} likes={this.state.likes} />
             <CommentSection  comments={this.state.comments} />
@@ -58,8 +69,9 @@ class Post extends React.Component {
 
                    </input>
                </form>
+        </Container>
+   
        
-        </div>
     )
     }
 }
