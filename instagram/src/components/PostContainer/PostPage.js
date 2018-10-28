@@ -2,7 +2,6 @@ import React from 'react';
 import PostContainer from './PostContainer';
 import dummyData from '../../dummy-data';
 import SearchBar from './SearchBar/SearchBar';
-import './PostContainer.css';
 
 class PostPage extends React.Component {
 constructor(props) {

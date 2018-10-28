@@ -1,23 +1,24 @@
 import React from 'react';
+import {CommentIcons, Likes, Icon} from '../Styles/Styles';
 import './CommentSection.css';
 
 const CommentHeader = props => {
     return (
         <div>
-        <div className='comment-icon-bar'>
-            <div className='left-icons'>
-                <div className='icon heart' id='love' onClick={props.addLike}></div>
-                <div className='icon' id='bubble'></div>
-                <div className='icon' id='upload'></div>
+        <CommentIcons>
+            <div className='left-comments'>
+                <Icon type='love' onClick={props.addLike} />
+                <Icon type='bubble' />
+                <Icon type='upload' />
             </div>
-            <div className='right-icons'>
-                <div className='icon' id='save'></div>
+            <div>
+                <Icon type='save' />
             </div>
-        </div>
+        </CommentIcons>
 
-        <div className='likes'>
+        <Likes>
         {props.likes} likes
-        </div>
+        </Likes>
 
         </div>
     )

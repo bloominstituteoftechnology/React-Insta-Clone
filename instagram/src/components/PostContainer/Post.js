@@ -1,9 +1,7 @@
 import React from 'react';
 import PostHeader from './PostHeader';
-import {IndvPost, StyledImg} from '../IndvPost';
+import {IndvPost, StyledImg} from '../Styles/Styles';
 import CommentSection from '../CommentSection/CommentSection';
-
-import './PostContainer.css';
 
 const Post = props => {
     return (

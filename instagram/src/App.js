@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import {StyledApp} from './components/Styles/Styles';
 import PostPage from './components/PostContainer/PostPage';
 import Authenticate from './components/Authenticate/Authenticate';

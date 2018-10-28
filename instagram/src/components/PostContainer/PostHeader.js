@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import {StyledPostHeader, StyledThumbnail, PostUsername} from '../Styles/Styles';
 import React from 'react';
-import './PostContainer.css'
 
 const PostHeader = props => {
     return (

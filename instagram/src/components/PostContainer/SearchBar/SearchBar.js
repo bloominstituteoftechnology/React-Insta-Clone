@@ -11,6 +11,7 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem } from 'reactstrap';
+import {Icon} from '../../Styles/Styles';
 import Search from './Search';
 
 
@@ -43,16 +44,16 @@ logOutHandler = event => {
 render() {
   console.log('searchBar props',this.props);
   return (
-    <div className='searchbar'>
+    <div class="search-container">
+    <Navbar className='searchbar' color="white" light expand="md">
 
-    <Navbar color="white" light expand="md">
-
-    <div className='navitems'>
-      <a href='https://www.instagram.com/' className='navitems-left'>
-        <div className='icon' id='camera'></div>
-        <div className='line'></div>
-        <div className='icon' id='logo'></div>
-      </a>
+    <a href='https://www.instagram.com/'>
+    <div className='left-navitems'>
+        <Icon type='camera' />
+        <Icon type='line' />
+        <Icon type ='logo' />
+    </div>
+    </a>
 
     <Search
     handleFilter={this.props.handleFilter}
@@ -65,11 +66,11 @@ render() {
     <NavbarToggler onClick={this.toggle} />
 
                 
-    <div className='navitems-right'>
+    <div className='right-navitems'>
     <Nav className="ml-auto" navbar> 
       <NavItem>
         <NavLink href="/components/">
-          <div className='icon' id='compass'></div>
+          <Icon type='compass' />
         </NavLink>
       </NavItem>
     </Nav>
@@ -78,7 +79,7 @@ render() {
       <Collapse isOpen={this.state.isOpen} navbar>
         <UncontrolledDropdown nav inNavbar>
           <DropdownToggle nav>
-            <div className='icon heart' id='heart'></div>
+            <Icon type='love'/>
           </DropdownToggle>
           <DropdownMenu right>
           <DropdownItem onClick={this.state.logOutHandler}>
@@ -92,13 +93,10 @@ render() {
     <Nav className="ml-auto" navbar> 
       <NavItem>
         <NavLink href="https://www.instagram.com/the_halal_home/">
-          <div className='icon' id='profile'></div>
+          <Icon type='profile' />
          </NavLink>
       </NavItem>
     </Nav>
-                  
-    </div>
-    {/* </Nav> */}
     </div>
 </Navbar>
 </div>

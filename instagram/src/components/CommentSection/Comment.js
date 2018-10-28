@@ -1,22 +1,20 @@
 import React from 'react';
+import {CommentContent, CommentUsername, CommentText} from '../Styles/Styles';
 
 
 const Comment = props => {
     return(
-    <div className='comment-content'>
+    <CommentContent>
 
-        <div className='comment-username'>
+        <CommentUsername>
         {props.comment.username}
-        </div>
-        <div className='comment-text'>
+        </CommentUsername>
+        
+        <CommentText>
         {props.comment.text}
-        </div>
-
-        {/* <div className='time-stamp'>
-        {props.timestamp}
-        </div> */}
-
-        </div>
+        </CommentText>
+ 
+        </CommentContent>
     );
 }
 
