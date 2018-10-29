@@ -1,5 +1,10 @@
 import React from 'react';
 
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCompass } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 // images
 import InstaCam from '../../img/insta_cam.png';
 import InstaScript from '../../img/insta_script.png';
@@ -18,6 +23,9 @@ const SearchBar = props => {
             </div>
             <input name='searchBar' type='text' placeholder='Search' />
             <div className='searchIcons'>
+                {/* <FontAwesomeIcon icon={faCompass} />
+                <FontAwesomeIcon icon={faHeart} />
+                <FontAwesomeIcon icon={faUser} /> */}
                 <img src={InstaLocal} alt='location search button' />
                 <img src={InstaLike} alt='like button' />
                 <img src={InstaFriend} alt='friend request' />
