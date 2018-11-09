@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CommentSection from '../CommentSection/CommentSection';
+
 import './PostContainer.scss';
 
 export default function PostContainer({data}) {
@@ -31,6 +33,8 @@ export default function PostContainer({data}) {
         <p>{likes} likes</p>
 
       </div>
+
+      <CommentSection comments={comments} time={timestamp} />
 
     </div>
 
