@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 import CommentSection from '../CommentSection/CommentSection';
 
@@ -35,7 +36,7 @@ export default function PostContainer({data}) {
 
       </div>
 
-      <CommentSection comments={comments} time={timestamp} />
+      <CommentSection comments={comments} time={moment(timestamp).fromNow()} />
 
     </div>
 
