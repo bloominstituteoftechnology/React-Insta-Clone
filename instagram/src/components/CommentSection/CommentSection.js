@@ -12,7 +12,7 @@ export default function CommentSection({comments, time, addComment}) {
     <div className='comment-section'>
 
       {comments.map(comment => (
-        <Comment comment={comment} />
+        <Comment key={comment.text} comment={comment} />
       ))}
 
       <p className='time'>{time}</p>

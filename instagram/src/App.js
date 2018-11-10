@@ -8,19 +8,13 @@ import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
 
-  constructor() {
-
-    super();
-
-  }
-
   render() {
     return (
       <div className='app'>
 
         <SearchBar />
 
-        {dummyData.map(data => <PostContainer data={data} />)}
+        {dummyData.map(data => <PostContainer key={data.imageUrl} data={data} />)}
 
       </div>
     );

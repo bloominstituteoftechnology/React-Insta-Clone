@@ -14,7 +14,7 @@ export default function SearchBar() {
 
         <p className="fab fa-instagram"></p>
         <p className='divider'>|</p>
-        <img className='logo' src={logo}></img>
+        <img className='logo' src={logo} alt='logo'></img>
 
       </div>
 

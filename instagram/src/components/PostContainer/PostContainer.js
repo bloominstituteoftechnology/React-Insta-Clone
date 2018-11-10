@@ -15,12 +15,12 @@ export default function PostContainer({data}) {
 
       <div className='header'>
 
-        <img src={thumbnailUrl}></img>
+        <img src={thumbnailUrl} alt='user thumbnail'></img>
         <h3>{username}</h3>
 
       </div>
 
-      <img className='post-img' src={imageUrl}></img>
+      <img className='post-img' src={imageUrl} alt='post'></img>
 
       <div className='like-comment'>
 
