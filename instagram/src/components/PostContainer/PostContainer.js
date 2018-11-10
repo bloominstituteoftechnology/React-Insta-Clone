@@ -36,7 +36,7 @@ export default function PostContainer({data}) {
 
       </div>
 
-      <CommentSection comments={comments} time={moment(timestamp).fromNow()} />
+      <CommentSection comments={comments} time={moment(timestamp, "MMMM Do YYYY hh:mm:ss A").fromNow()} />
 
     </div>
 
