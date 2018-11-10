@@ -1,10 +1,38 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { Button } from "reactstrap";
+import SearchBar from "./components/SearchBar/SearchBar";
 import dummyData from "./dummy-data";
+import PostContainer from "./components/PostContainer/PostContainer";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faInstagram } from "@fortawesome/fontawesome-free-brands";
+import {
+  faComment,
+  faHeart,
+  faUser,
+  faCompass,
+  faTimesCircle
+} from "@fortawesome/free-regular-svg-icons";
+import { faEllipsisH, faSearch } from "@fortawesome/free-solid-svg-icons";
+
+library.add(
+  faInstagram,
+  faComment,
+  faHeart,
+  faUser,
+  faCompass,
+  faEllipsisH,
+  faSearch,
+  faTimesCircle
+);
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      state: "womp"
+    };
+  }
   render() {
     return (
       <div className="App">
@@ -22,6 +50,10 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <SearchBar />
+        {dummyData.map(item => (
+          <PostContainer key={item.timestamp} post={item} />
+        ))}
       </div>
     );
   }

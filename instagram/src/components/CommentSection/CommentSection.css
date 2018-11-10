@@ -1,0 +1,49 @@
+.comment {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.bold {
+  font-weight: bold;
+  padding-right: 1%;
+  margin-bottom: 0;
+}
+
+.text {
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+.time {
+  text-align: left;
+  color: slategray
+}
+
+.input-group {
+  border-top: 1px solid #ECECEC;
+}
+
+#add-comment {
+  border: none;
+  padding: 0;
+  margin: 1% 0;
+
+}
+
+.input-group-append {
+  display: flex;
+  align-items: center;
+}
+
+.comment-entry {
+  width: 100%;
+  border: none;
+  padding: 2% 0;
+}
+
+p {
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
