@@ -7,6 +7,13 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
+
+  constructor() {
+
+    super();
+
+  }
+
   render() {
     return (
       <div className='app'>

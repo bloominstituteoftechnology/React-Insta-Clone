@@ -2,20 +2,25 @@ import React from 'react';
 
 import './CommentSection.scss';
 
-export default function CommentSection({comments, time}) {
+import Comment from './Comment';
+
+export default function CommentSection({comments, time, addComment}) {
 
   return (
 
     <div className='comment-section'>
 
-      <p>{comments.map(comment => (
-        <div className='comment'>
+      {comments.map(comment => (
+        <Comment comment={comment} />
+      ))}
 
-          <h4>{comment.username}</h4>
-          <p>{comment.text}</p>
+      <p className='time'>{time}</p>
 
-        </div>
-    ))}</p>
+      <form onSubmit={addComment}>
+
+        <input type='text' placeholder='Add a comment...' />
+
+      </form>
 
     </div>
 
