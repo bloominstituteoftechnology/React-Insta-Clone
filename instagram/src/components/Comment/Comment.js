@@ -3,8 +3,8 @@ import './Comment.css';
 
 const Comment = props => {
     return (
-        <div>
-            {props.comment.username} said: {props.comment.text}
+        <div className="comment">
+            <span className="comment__name">{props.comment.username}</span> <span className="comment__content">{props.comment.text}</span>
         </div>
     );
 }

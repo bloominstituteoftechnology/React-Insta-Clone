@@ -3,8 +3,8 @@ import './SearchBar.css';
 
 const SearchBar = props => {
     return (
-        <div>
-            Hello from Search
+        <div className='header__search'>
+           <i class="fas fa-search"></i> Search
         </div>
     );
 }
