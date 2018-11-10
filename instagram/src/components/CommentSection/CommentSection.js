@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './CommentSection.scss';
 
@@ -25,5 +26,13 @@ export default function CommentSection({comments, time, addComment}) {
     </div>
 
   );
+
+}
+
+CommentSection.propTypes = {
+
+  comments: PropTypes.array,
+  time: PropTypes.string,
+  addComment: PropTypes.func
 
 }

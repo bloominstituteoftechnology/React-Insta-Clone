@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "node-sass": "^4.10.0",
+    "prop-types": "^15.6.2",
     "react": "*",
     "react-dom": "*",
     "react-scripts": "*"

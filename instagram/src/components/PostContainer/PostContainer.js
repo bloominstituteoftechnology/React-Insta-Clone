@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import CommentSection from '../CommentSection/CommentSection';
 
@@ -39,5 +40,11 @@ export default function PostContainer({data}) {
     </div>
 
   );
+
+}
+
+PostContainer.propTypes = {
+
+  data: PropTypes.object
 
 }
