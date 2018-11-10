@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import DummmyData from './dummy-data';
+// import animals from './animalsData';
 
 class App extends Component {
   constructor(){
     super();
     this.state = {
-      animals: []
+      animals: DummmyData,
     }
   }
   render() {
