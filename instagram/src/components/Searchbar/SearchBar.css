@@ -1,0 +1,49 @@
+.icons {
+  width: 30px;
+  height: 30px;
+}
+
+.searchBar-container {
+  display: flex;
+  border: 1px solid purple;
+  justify-content: space-between;
+}
+
+.imageLOGO-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25%;
+
+}
+
+.cameraIMG {
+  width: 4rem;
+  height: 4rem;
+}
+
+.instagramLOGO{
+  font-family: 'Billabong', cursive;
+  font-size: 1.5rem;
+
+}
+
+.searchInput-container {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: center;
+
+}
+
+.searchInput {
+  height: 80%;
+  width: 60%;
+}
+
+.littleIcons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25%;
+}

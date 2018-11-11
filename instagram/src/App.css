@@ -1,0 +1,18 @@
+
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+
+.App-container{
+  border: 5px solid darkslategrey;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.loadingMSG {
+  font-weight: lighter;
+  font-size: 3rem;
+
+}

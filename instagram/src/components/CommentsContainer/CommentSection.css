@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.commentInfo {
+  display: flex;
+  font-family: "Thonburi";
+  font-size: 2rem;
+}
+
+.userName {
+  font-weight: bold;
+
+}

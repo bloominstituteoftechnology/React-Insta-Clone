@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+
+.post-container{
+/* border: 2px solid blue; */
+
+}
+
+.header-container {
+  display: flex;
+  padding:  0 2rem;
+}
+
+.headerIMG {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.userName {
+  padding: 0 2rem;
+  font-family: "Thonburi";
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.postIMG {
+  width: 100%;
+  display: flex;
+}
+
+.actualPostIMG{
+  width: 47rem;
+  margin: 0 auto;
+}
+
+.footer-container {
+
+}
+
+.likesCount {
+  font-family: "Thonburi";
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 2rem;
+}
+
+.littleIcons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25%;
+}
