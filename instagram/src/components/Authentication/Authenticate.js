@@ -3,28 +3,33 @@ import Login from '../Login/Login';
 import './Authenticate.css';
 
 
-const Authenticate = PassedComponent =>
+const Authenticate = App =>
   class extends React.Component {
-    constructor(props) {
+
+  constructor(props) {
+
       super(props);
       this.state = {loggedIN: false}
     }
 
+
+
     componentDidMount() {
-      if (localStorage.getItem('user' === 'ImaHacker') &&
-         localStorage.getItem('password') === 'password'
-      ) {
-        this.setState({loggedIN: true})
-      }
-      else {this.setState({loggedIN: false})
+
+    console.log(this.state.loggedIN);
+    if(!localStorage.getItem('user')) {
+        this.setState({loggedIN: false})
+      } else {
+        this.setState({loggedIN: true});
       }
 
     }
 
     render() {
-      if(this.state.loggedIN) return <PassedComponent/>;
+    console.log(this.state.loggedIN);
+    if(this.state.loggedIN) return <App/>;
+     return <Login/>
 
-      return <Login/>;
     }
 
 };

@@ -8,7 +8,7 @@ export default class PostImage extends React.Component {
   render () {
     return (
       <div className = 'postIMG'>
-        <img className = 'actualPostIMG' src = {this.props.image} />
+        <img className = 'actualPostIMG' src = {this.props.image} alt = 'postIMG'/>
       </div>
 
     )

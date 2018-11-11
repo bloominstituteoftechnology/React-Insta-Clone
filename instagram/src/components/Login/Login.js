@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Login.css';
 
-class LoginPage extends React.Component {
+class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,15 +14,10 @@ class LoginPage extends React.Component {
       this.setState( {[event.target.name]: event.target.value} );
   };
 
-  handleSubmit = event => {
+  handleSubmit = event => {                     // refactored
     event.preventDefault();
-
-    const username = this.state.username;
-    localStorage.setItem('user', username);
-
-    const password = this.state.password;
-    localStorage.setItem('password', password);
-
+    const user = this.state.name;
+    localStorage.setItem('user', user);
     window.location.reload();
 
   };
@@ -34,6 +29,7 @@ class LoginPage extends React.Component {
         <form className = 'form-container'>
 
           <input className = 'inputUSER'
+                 type = 'text'
                  placeholder = 'enter username'
                  value = {this.state.username}
                  name = 'username'
@@ -43,6 +39,7 @@ class LoginPage extends React.Component {
           <input className = 'inputPASSWORD'
                  type = 'password'
                  placeholder = 'enter password'
+               //  value = {this.state.password}        // this was missing
                  name = 'password'
                  onChange = {this.handleInput}
           />
@@ -58,4 +55,4 @@ class LoginPage extends React.Component {
   }
 }
 
-export default LoginPage;
+export default Login;

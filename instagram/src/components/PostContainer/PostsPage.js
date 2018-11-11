@@ -18,14 +18,25 @@ class PostsPage extends React.Component {
 
   handleSearch = event => {
     this.setState({searchInfo: event.target.value});
+
+    if(!event.target.value.length) {
+     this.setState({ dummyData,
+                     searchInfo: ''
+     });
+    }
+
+
+
   };
 
   searchDemPosts = event => {
     event.preventDefault();
     if(this.state.searchInfo) {
       this.setState({
-        dummyData: this.state.dummyData.filter(post => {
-          if(post.username.includes(this.state.searchInfo)) return post;
+        dummyData: this.state.dummyData.filter(post => {    // Not returning value
+          if(post.username.includes(this.state.searchInfo)) {
+            return post;
+          }
         })
 
       })} else this.componentDidMount();
