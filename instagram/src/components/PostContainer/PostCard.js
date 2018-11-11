@@ -1,5 +1,6 @@
 import React from 'react'
 import CommentCard from '../CommentSection/CommentCard';
+import PropTypes from 'prop-types';
 
 const PostCard = props => {
   
@@ -29,5 +30,16 @@ const PostCard = props => {
     </div>
   )
 }
+
+PostCard.propTypes = {
+  postcard: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    timestamp: PropTypes.string,
+    comments: PropTypes.array,
+  })
+};
 
 export default PostCard
