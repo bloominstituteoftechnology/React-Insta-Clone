@@ -1,5 +1,5 @@
 import React from 'react';
-import './SearchBarBox/css';
+import './SearchBarBox.css';
 import SearchBar from './SearchBar';
 
 
@@ -12,7 +12,7 @@ function SearchBarBox(props) {
                 <a><img src ></img></a>
             
             </div>
-            <div>
+            {/*<div>
                 <form onInput={} >
                 <input
                 type="text"
@@ -22,7 +22,7 @@ function SearchBarBox(props) {
 
                 </form>
             
-            </div>
+            </div>*/}
 
             <div>
 

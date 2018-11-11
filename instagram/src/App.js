@@ -9,9 +9,27 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      animals: DummmyData,
+      InstaPosts: DummmyData,
     }
   }
+
+  addPost =() => {
+    {/*ev.preventDefault();*/}
+    this.setState({
+      InstaPosts: [...this.state.InstaPosts,
+      {
+
+      }],
+      inputText:''
+    })
+  }
+
+ 
+  
+
+
+
+
   render() {
     return (
       <div className="App">
