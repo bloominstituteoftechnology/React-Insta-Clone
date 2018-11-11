@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import DummmyData from './dummy-data';
 // import animals from './animalsData';
+import SearchBarBox from './components/SearchBar/SearchBarBox';
 
 class App extends Component {
   constructor(){
@@ -28,6 +29,7 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <SearchBarBox />
       </div>
     );
   }
