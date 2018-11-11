@@ -6,15 +6,24 @@ PostContainer = (props) => {
     return (
         <div>
             <section className="PostHeader" >
+                {props.placeholder.thumnailUrl} {props.placeholder.username}
 
             </section>
 
             <div className="Postimg" >
+                {props.placeholder.imgUrl}
 
             </div>
-            <div className="PostComents" >
+            <div>
+
+                {props.placeholder.likes}
+
             </div>
-            <div className="CommentSectionDiv">
+            <div className="PostedComments" >
+
+                {props.placeholder.comments}
+            </div>
+            <div className="AddCommentsDiv">
                 
             </div>
         
@@ -30,3 +39,4 @@ PostContainer = (props) => {
 
     );
 }
+export default PostContainer;
