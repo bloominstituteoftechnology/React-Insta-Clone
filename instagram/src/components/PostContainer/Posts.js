@@ -5,9 +5,9 @@ Posts = props => {
     return(
 
         <React.Fragment>
-            InstaPosts.map(post) => { 
-            return PostContainer key= {post.index} placeholder={post}
-            }
+            {props.InstaPosts.map((post) => (
+                <PostContainer placeholder={post} key={post.index} />
+            ))}
 
         </React.Fragment>
 

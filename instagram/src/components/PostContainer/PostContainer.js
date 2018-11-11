@@ -16,7 +16,8 @@ PostContainer = (props) => {
             </div>
             <div>
 
-                {props.placeholder.likes}
+                <img  alt="Post Image" className="LargePostImgs" 
+                src={props.placeholder.likes} />
 
             </div>
             <div className="PostedComments" >
