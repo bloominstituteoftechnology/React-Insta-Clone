@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentSection from './';
+// import CommentSection from './';
 
 
 PostContainer = (props) => {
