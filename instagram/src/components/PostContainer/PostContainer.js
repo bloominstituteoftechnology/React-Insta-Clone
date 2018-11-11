@@ -2,41 +2,35 @@ import React from 'react';
 // import CommentSection from './';
 
 
-PostContainer = (props) => {
+const PostContainer = (props) => {
     return (
         <div>
-            <section className="PostHeader" >
-                {props.placeholder.thumnailUrl} {props.placeholder.username}
+            <div className="PostHeader" >
+                <img src={props.placeholderOnProp.thumnailUrl} alt="thumnail Url"/> <h4>{props.placeholderOnProp.username}</h4>
 
-            </section>
+            </div>
 
             <div className="Postimg" >
-                {props.placeholder.imgUrl}
+                <img alt="Post Image" className="LargePostImgs"
+                    src={props.placeholderOnProp.imgUrl} />
 
             </div>
             <div>
 
-                <img  alt="Post Image" className="LargePostImgs" 
-                src={props.placeholder.likes} />
+                <h5>{`${props.placeholderOnProp.likes} likes `}</h5>
+                
 
             </div>
             <div className="PostedComments" >
 
-                {props.placeholder.comments}
+                <p>{props.placeholderOnProp.comments.username}</p>
+                <p>{props.placeholderOnProp.comments.text}</p>
             </div>
             <div className="AddCommentsDiv">
                 
             </div>
-        
-        
-        
-        
+
         </div>
-
-
-
-
-
 
     );
 }

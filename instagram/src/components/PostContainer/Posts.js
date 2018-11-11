@@ -1,12 +1,12 @@
 import React from 'react';
 import PostContainer from './PostContainer';
 
-Posts = props => {
+const Posts = props => {
     return(
 
         <React.Fragment>
-            {props.InstaPosts.map((post) => (
-                <PostContainer placeholder={post} key={post.index} />
+            {props.IGPosts.map((post, index) => (
+                <PostContainer key={post.index} placeholderOnProp={post}/>
             ))}
 
         </React.Fragment>

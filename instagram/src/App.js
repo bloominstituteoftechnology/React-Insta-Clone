@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import DummmyData from './dummy-data';
-// import animals from './animalsData';
 import SearchBarBox from './components/SearchBar/SearchBarBox';
 import Posts from './components/PostContainer/Posts';
+
 
 class App extends Component {
   constructor(){
@@ -49,7 +49,7 @@ class App extends Component {
           </a>
         </header>
         <SearchBarBox />
-        {/*<Posts ={this.state.InstaPosts}/>*/}
+        <Posts IGPosts={this.state.InstaPosts} />
       </div>
     );
   }
