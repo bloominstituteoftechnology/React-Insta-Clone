@@ -10,8 +10,8 @@
 
 <img src='/assets/InstaClone-componentStructure.jpg' width='235' />
 
-- Your data should be imported to `app.js`, and then passed as props to each `PostContainer`.
-- Each `PostContainer` should then be passing data to a `CommentSection` via props as well.
+[ x ] - Your data should be imported to `app.js`, and then passed as props to each `PostContainer`.
+[ x ] - Each `PostContainer` should then be passing data to a `CommentSection` via props as well.
 - The props being passed to each component should be typed checked using `propTypes` and `defaultProps`.
 - The comment section should add a comment to the post
 
