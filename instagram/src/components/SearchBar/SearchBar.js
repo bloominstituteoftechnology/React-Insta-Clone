@@ -5,7 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const SearchBar = () => {
   return (
     <div className="searchbar-container">
-      <FontAwesomeIcon icon={["fab", "instagram"]} size="4x" />
+      <div className="branding-container">
+        <FontAwesomeIcon icon={["fab", "instagram"]} size="4x" />
+        <img src="./logo-instagram.png" alt="instagram typescript" />
+      </div>
+
       <div className="search-field">
         <span className="searchIcon">
           <FontAwesomeIcon icon="search" />
@@ -23,9 +27,3 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
-
-{
-  /* <span className="close-button">
-  <FontAwesomeIcon icon={["far", "times-circle"]} />
-</span>; */
-}

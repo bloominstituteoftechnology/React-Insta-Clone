@@ -2,8 +2,8 @@
   border:1px solid #ECECEC;
   display: flex;
   flex-direction: column;
-  width: 40%;
-  margin: 1% auto;
+  width: 50%;
+  margin: 1% 0;
 }
 
 .post-header {
