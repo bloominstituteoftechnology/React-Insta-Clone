@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Input } from 'reactstrap';
+import './SearchBar.sass';
 
 const SearchBar = props => {
     return (
