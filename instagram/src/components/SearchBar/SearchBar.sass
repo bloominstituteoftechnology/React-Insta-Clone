@@ -1,0 +1,64 @@
+.search
+    background-color: #fff
+    height: 77px
+    width: 100%
+    border-bottom: 1px solid rgba(0,0,0,0.0975)
+    display: flex
+    position: fixed
+    top: 0
+    z-index: 1
+    transition: height .2s ease-in-out
+    .search--content
+        max-width: 1010px
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+        justify-content: center
+        display: flex
+        padding: 26px 20px
+        display: flex
+        .search--input
+            min-width: 125px
+            width: 215px
+            flex: 0 1 auto
+            height: 28px
+            position: relative
+            flex: 0 1 auto
+            input
+                color: #999
+                line-height: 18px
+                height: 100%
+                width: 100%
+                z-index: 2
+                padding: 3px 10px 3px 26px
+                border-radius: 3px
+                border: solid 1px #dbdbdb
+                font-size: 0.9rem
+                font-weight: 300
+            .search--icon_magnify
+                position: absolute
+                left: 11px
+                top: 9px
+                z-index: 2
+                background-repeat: no-repeat
+                background-position: -444px -264px
+                height: 10px
+                width: 10px
+                background-image: url(https://www.instagram.com/static/bundles/base/sprite_core.png/00b79edf00fd.png)
+            .search--icon_clear
+                z-index: 3
+                right: 5px
+                top: 4px
+                position: absolute
+                background-position: -405px -399px
+                height: 20px
+                width: 20px
+                display: block
+                background-repeat: no-repeat
+                background-image: url(https://www.instagram.com/static/bundles/base/sprite_core.png/00b79edf00fd.png)
+        .search--social_icons
+            align-content: center
+            align-items: center 
+            display: flex
+            flex-direction: row
+            flex: 1 0 0%
