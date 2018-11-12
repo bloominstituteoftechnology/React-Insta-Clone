@@ -1,0 +1,46 @@
+.search--input
+    min-width: 125px
+    width: 215px
+    flex: 0 1 auto
+    height: 28px
+    position: relative
+    display: flex
+    input
+        font-size: 0.9rem
+        height: 100%
+        width: 100%
+        font-weight: 300
+        border: solid 1px #dbdbdb
+        padding: 3px 10px 3px 26px
+        z-index: 2
+        border-radius: 3px
+        display: flex
+        &:placeholder
+            color: #999
+    .search--icon_magnify
+        background-image: url(https://www.instagram.com/static/bundles/base/sprite_core.png/00b79edf00fd.png)
+        width: 10px
+        height: 10px
+        background-position: -444px -264px
+        background-repeat: no-repeat
+        display: inline-block
+        vertical-align: baseline
+        margin-right: 6px
+    &.active
+        input
+            background-color: white
+        .search--icon_magnify
+            position: absolute
+            left: 11px
+            top: 9px
+        .search--icon_clear
+            z-index: 3
+            right: 5px
+            top: 4px
+            position: absolute
+            background-position: -405px -399px
+            height: 20px
+            width: 20px
+            display: block
+            background-repeat: no-repeat
+            background-image: url(https://www.instagram.com/static/bundles/base/sprite_core.png/00b79edf00fd.png)

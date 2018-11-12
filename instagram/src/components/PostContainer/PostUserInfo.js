@@ -7,7 +7,9 @@ const PostUserInfo = props => {
         <Container>
             <Row>
                 <Col xs="1">
-                    <img src={props.thumbnailUrl} alt="" />
+                    <div className="user-thumbnail">
+                        <img src={props.thumbnailUrl} alt="" />
+                    </div>
                 </Col>
                 <Col xs="3">
                     <h2>{props.username}</h2>
