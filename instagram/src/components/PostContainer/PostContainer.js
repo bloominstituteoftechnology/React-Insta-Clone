@@ -8,7 +8,10 @@ const PostContainer = props => {
     <div className="post-container">
       {props.data.map((user, i) => {
         return (
-          <PostCard data={user} key={i+1} />
+          <PostCard
+            data={user}
+            key={i+1}
+          />
         )
       })}
     </div>

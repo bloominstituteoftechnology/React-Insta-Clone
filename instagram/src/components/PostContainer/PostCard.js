@@ -6,16 +6,27 @@ const PostCard = props => {
   return (
     <div className="post-card">
       <div className="post-card__header">
-        <img className="post-avatar" src={props.data.thumbnailUrl} alt="user avatar" />
+        <img
+          className="post-avatar"
+          src={props.data.thumbnailUrl}
+          alt="user avatar"
+        />
         <p>{props.data.username}</p>
       </div>
-      <img className="post-card__img" src={props.data.imageUrl} alt="user post" />
+      <img 
+        className="post-card__img"
+        src={props.data.imageUrl}
+        alt="user post"
+      />
       <div className="social-container">
         <i className="far fa-heart"></i>
         <i className="far fa-comment"></i>
       </div>
       <p>{props.data.likes} likes</p>
-      <CommentCard comments={props.data.comments} timestamp={props.data.timestamp}/>
+      <CommentCard 
+        comments={props.data.comments}
+        timestamp={props.data.timestamp}
+      />
     </div>
   )
 }

@@ -4,15 +4,20 @@ import dummyData from './dummy-data';
 import SearchBarContainer from './components/SearchBar/SearchBarContainer';
 import PostContainer from './components/PostContainer/PostContainer';
 
-const data = dummyData;
-
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: data,
+      data: [],
     }
   }
+
+  componentDidMount() {
+    this.setState({
+      data: dummyData,
+    })
+  }
+
   render() {
     
     return (
@@ -20,6 +25,7 @@ class App extends Component {
         <SearchBarContainer />
         <PostContainer 
           data={this.state.data}
+          addComment={this.addComment}
         />
       </div>
     );

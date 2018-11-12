@@ -13,6 +13,14 @@ class CommentCard extends Component {
       timestamp: props.timestamp
     }
   }
+
+
+  addComment = (e) => {
+    e.preventDefault();
+    console.log("add comment here");
+  }
+
+
   render () {
     console.log(this.state);
     
@@ -20,7 +28,9 @@ class CommentCard extends Component {
       <div className="comment-card">
         {this.state.comments.map((comment, i) => <Comment data={comment} key= {i+1} />)}
         <p className="timestamp" >{this.state.timestamp}</p>
-        <CommentInput />
+        <CommentInput 
+          addComment={this.addComment}
+        />
       </div>
     )
   }

@@ -32,7 +32,9 @@ p.timestamp {
   font-weight: bold;
   font-family: "Font Awesome 5 Free", "Open Sans", sans-serif;
 }
-.fa-ellipsis-h {
+button.fa-ellipsis-h {
+  border: none;
+  background: white;
   font-size: 1.1rem;
   padding-top: 1.2rem;
   color: gray;
