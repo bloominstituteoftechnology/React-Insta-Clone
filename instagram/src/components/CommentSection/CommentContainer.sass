@@ -1,5 +1,37 @@
-.comment--container
+.comment-container
     padding: 0 16px
-    display: flex
     align-items: stretch
+    display: flex
     flex-direction: column
+    .comment--social-icons
+        margin-top: 4px
+        display: flex
+        flex-direction: row
+        width: 100%
+        div
+            display: flex
+            align-items: center
+            cursor: pointer
+            justify-content: center
+            height: 40px
+            width: 40px
+            span
+                background-image: url(https://www.instagram.com/static/bundles/base/sprite_glyphs.png/07c1c2c6e459.png)
+                display: block
+                background-repeat: no-repeat
+                height: 24px
+                width: 24px
+            &.icon-heart
+                span
+                    background-position: -130px -115px
+                    margin-left: -8px
+            &.icon-comment
+                span
+                    background-position: -217px 0px
+            &.icon-share
+                span
+                    background-position: -182px -167px
+            &.icon-bookmark
+                justify-self: flex-end
+                span
+                    background-position: -52px -167px
