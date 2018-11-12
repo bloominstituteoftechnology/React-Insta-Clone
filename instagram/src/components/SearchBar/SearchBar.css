@@ -1,0 +1,39 @@
+header {
+    border-bottom: 2px solid #E9E9E9;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    
+}
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+}
+
+.fa-instagram {
+    border-right: 1px solid gray;
+    padding-right: 2rem;
+}
+.insta-logo{
+    font-family:  'Leckerli One' , 'Open Sans', sans-serif;
+}
+
+ input {
+    border: 1.5px solid #DBDBDB;
+    border-radius: 4px;
+    padding: .8rem;
+    width: 100%;
+    background-color: #FAFAFA;
+    font-family: 'Font Awesome 5 free', 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+}
