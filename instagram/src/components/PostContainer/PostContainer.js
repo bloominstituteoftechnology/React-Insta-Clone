@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import heartImage from '../../Images/Post/post-heart.png';
 import commentImage from '../../Images/Post/post-comment.png';
+import moment from 'moment';
 import './Style.css';
 
 const PostContainer = props => {
@@ -11,7 +12,7 @@ const PostContainer = props => {
       <form className="post-form">
         <div className="post-header">
           <img className ="username-img-thumbnail" src={props.postContainer.thumbnailUrl} alt="" />
-          <h2>{props.postContainer.username} <span className="timestamp">{props.postContainer.timestamp}</span></h2>
+          <h2>{props.postContainer.username} <span className="timestamp">{moment(props.postContainer.timestamp, 'MMMM Do YYYY hh:mm:ss A').fromNow()}</span></h2>
         </div>
         <img className ="post-img" src={props.postContainer.imageUrl} alt="" />
         <div className="post-click-icons">
