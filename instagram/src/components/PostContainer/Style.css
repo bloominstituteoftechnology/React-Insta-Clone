@@ -6,7 +6,7 @@
   margin: 20px 0;
 }
 
-.post-container{
+.post-container {
   width: 400px;
   margin: 0 auto;
   border: 1px solid black;
@@ -16,6 +16,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+.post-container h2 {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
 }
 
 @media (max-width: 500px) {

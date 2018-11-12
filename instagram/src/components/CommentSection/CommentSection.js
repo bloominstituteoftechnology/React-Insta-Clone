@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Style.css';
 
 const CommentSection = props => {
   return (
   <div className="comment">
-    <p>username <span className="timestamp">last comment date</span></p>
+    <h4>username <span className="timestamp">timestamp</span></h4>
     <p>comment</p>
   </div>
   );

@@ -1,0 +1,37 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin: 0 0 20px 0;
+  padding: 25px 0;
+  background-color: lightsteelblue;
+}
+
+.header-left-side {
+  width: 18%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-right-side {
+  width: 12%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-icons {
+  cursor: pointer;
+}
+
+.header input {
+  height: 25px;
+  width: 15%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}

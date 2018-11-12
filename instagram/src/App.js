@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PostContainerList from './components/PostContainer/PostContainerList';
+import Header from './components/Header/Header';
 import dummyData from './components/dummy-data';
 import './Style.css';
 
@@ -15,6 +16,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="main-header">{/* camera | Instagram search-bar circle-diamond heart person */}</header>
+        <Header />
         <div className="app-container">
           <PostContainerList data={this.state.data} />
         </div>

@@ -1,0 +1,19 @@
+.comment {
+  width: 80%;
+  margin: 10px 0;
+  border: 1px solid lightblue;
+  border-radius: 5px
+}
+
+.comment h4 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0;
+  background-color: lightblue;
+}
+
+.comment p {
+  padding: 5px;
+  margin: 5px 0;
+}

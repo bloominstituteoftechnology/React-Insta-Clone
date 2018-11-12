@@ -6,7 +6,7 @@ import './Style.css';
 const PostContainer = props => {
     return (
     <div className="post-container">
-      <h2>Post Username <span className="timestamp">Timestamp</span></h2>
+      <h2>Username <span className="timestamp">Timestamp</span></h2>
       <h1>Post Image</h1>
       <p>Post ClickButtons</p>
       <h3>Post likes</h3>
