@@ -1,0 +1,144 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ======= End of Reset */
+
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.App {
+  text-align: center;
+  border: 2px solid blue;
+  width: 100%;
+}
+
+.App-header {
+  background-color: #fff;
+  /* display: flex; */
+  /* flex-direction: column;
+  align-items: center; */
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+  width: 100%;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.search-bar-container {
+  
+}
+
+.search-bar-container .search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.search-bar-container .search-bar .logo-container {
+  display: flex;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  width: 15%;
+  padding: 0;
+}
+
+.App-logo {
+  max-width: 60px;
+  /* max-height: 40px; */
+  border-right: 1px solid black;
+  padding: 0 10px;
+}
+
+.App-text-logo {
+  /* width: 200px; */
+  object-fit: contain;
+  max-width: 160px;
+  max-height: 80px;
+}
+
+.search-bar-container .search-bar .search-box {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
+}
+
+.search-bar-container .search-bar .search-box input {
+
+}
+
+.search-bar-container .search-bar .icon-container {
+  display: flex;
+  width: 15%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.search-bar-container .search-bar .icon-container .icon {
+  max-width: 40px;
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
