@@ -6,7 +6,7 @@ import './PostContainer.sass';
 
 const PostContainer = props => {
     return (
-        <div className="post">
+        <div className="post-container">
             <PostUserInfo username={props.post.username} thumbnailUrl={props.post.thumbnailUrl} />
             <PostBody post={props.post} />
         </div>

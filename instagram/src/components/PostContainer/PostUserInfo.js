@@ -1,21 +1,17 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
 import { PropTypes } from 'prop-types';
+import './PostUserInfo.sass';
 
 const PostUserInfo = props => {
     return (
-        <Container>
-            <Row>
-                <Col xs="1">
-                    <div className="user-thumbnail">
-                        <img src={props.thumbnailUrl} alt="" />
-                    </div>
-                </Col>
-                <Col xs="3">
-                    <h2>{props.username}</h2>
-                </Col>
-            </Row>
-        </Container>
+        <div className="post--user-info">
+            <div className="user-info--thumbnail">
+                <img src={props.thumbnailUrl} alt="" />
+            </div>
+            <div className="user-info--name">
+                <h2>{props.username}</h2>
+            </div>
+        </div>
     );
 };
 
