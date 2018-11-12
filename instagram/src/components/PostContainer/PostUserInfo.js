@@ -17,7 +17,7 @@ const PostUserInfo = props => {
     );
 };
 
-PostUserInfo.PropTypes = {
+PostUserInfo.propTypes = {
     thumbnailUrl: PropTypes.string,
     username: PropTypes.string
 };
