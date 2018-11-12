@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import shortid from 'shortid';
 
 class App extends Component {
     constructor() {
@@ -16,7 +17,7 @@ class App extends Component {
             <div className="App">
                 <SearchBar />
                 {this.state.posts.map(post => (
-                    <PostContainer post={post} />
+                    <PostContainer post={post} key={shortid.generate()} />
                 ))}
             </div>
         );
