@@ -15,25 +15,25 @@ class CommentCard extends Component {
     }
   }
 
-  componentDidMount() {
-    let storedComments = JSON.parse(localStorage.getItem('comments'));
-    if(storedComments) {this.setState({ comments: storedComments})}
-  }
+  // componentDidMount() {
+  //   let storedComments = JSON.parse(localStorage.getItem('comments'));
+  //   if(storedComments) {this.setState({ comments: storedComments})}
+  // }
 
 
-  addComment = (e) => {
+  addComment = e => {
     e.preventDefault();
 
-    let newComments = [...this.state.comments,
-      {username: "Ghosty", text: this.state.comment}];
-      localStorage.setItem('comments', JSON.stringify(newComments))
+    // let newComments = [...this.state.comments,
+    //   {username: "Ghosty", text: this.state.comment}];
+    //   localStorage.setItem('comments', JSON.stringify(newComments))
 
     console.log("add comment here");
     this.setState({
       comments: [...this.state.comments,
         {
           username: "Ghosty",
-          text: this.state.comment
+          text: this.state.comment,
         }],
         comment: '',
     })
@@ -44,8 +44,7 @@ class CommentCard extends Component {
     // console.log("changing input name: ", e.target.name);
     this.setState({
       [e.target.name]: e.target.value,
-    })
-    
+    })    
   }
 
   render () {
