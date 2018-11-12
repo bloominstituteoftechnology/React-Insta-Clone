@@ -89,6 +89,11 @@
   width: 90%;
   margin: 0 0 10px 0;
   height: 40px;
+  border-radius: 10px;
+}
+
+.post-add-comment-btn:focus {
+  outline: none;
 }
 
 @media (max-width: 500px) {

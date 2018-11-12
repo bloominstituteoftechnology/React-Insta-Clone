@@ -7,7 +7,11 @@ const PostContainerList = props => {
   return (
   <div className="post-container-list">
     {props.data.map( post => (
-      <PostContainer key={post.timestamp} postContainer={post} />
+      <PostContainer
+        key={post.timestamp}
+        postContainer={post}
+        addComment={props.addComment}
+      />
     ))}
   </div>);
 }

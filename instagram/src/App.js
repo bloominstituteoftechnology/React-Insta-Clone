@@ -12,13 +12,18 @@ class App extends Component {
     };
   }
 
+  addComment = comment => {}
+
   render() {
     return (
       <div className="App">
         <header className="main-header">{/* camera | Instagram search-bar circle-diamond heart person */}</header>
         <Header />
         <div className="app-container">
-          <PostContainerList data={this.state.data} />
+          <PostContainerList
+          data={this.state.data}
+          addComment={this.addComment}
+          />
         </div>
       </div>
     );
