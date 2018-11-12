@@ -18,12 +18,20 @@ const CommentSection = props => {
       <p className="time">
         {moment(props.time, "MMMM Do YYYY hh:mm:ss A").fromNow()}
       </p>
-      <InputGroup>
-        <Input placeholder="Add a comment..." id="add-comment" />
-        <InputGroupAddon addonType="append">
-          <FontAwesomeIcon icon="ellipsis-h" size="xs" />
-        </InputGroupAddon>
-      </InputGroup>
+      <form onSubmit={props.addComment}>
+        <InputGroup>
+          <Input
+            placeholder="Add a comment..."
+            id="add-comment"
+            value={props.inputText}
+            name="inputText"
+            onChange={props.handleChange}
+          />
+          <InputGroupAddon addonType="append">
+            <FontAwesomeIcon icon="ellipsis-h" size="xs" />
+          </InputGroupAddon>
+        </InputGroup>
+      </form>
     </div>
   );
 };

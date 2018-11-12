@@ -30,9 +30,35 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      state: "womp"
+      data: dummyData,
+      addComment: ""
     };
   }
+
+  // handleChange = ev => {
+  //   this.setState({
+  //     [ev.target.name]: ev.target.value
+  //   });
+  // };
+
+  // addComment = ev => {
+  //   ev.preventDefault();
+  //   if (this.state.addComment === "") {
+  //     return alert("Please write your todo item!");
+  //   }
+  //   this.setState({
+  //     data: [
+  //       ...this.state.todo,
+  //       {
+  //         task: this.state.inputText,
+  //         id: Date.now(),
+  //         completed: false
+  //       }
+  //     ],
+  //     inputText: ""
+  //   });
+  // };
+
   render() {
     return (
       <div className="App">
@@ -51,8 +77,13 @@ class App extends Component {
           </a>
         </header>
         <SearchBar />
-        {dummyData.map(item => (
-          <PostContainer key={item.timestamp} post={item} />
+        {this.state.data.map(item => (
+          <PostContainer
+            key={item.timestamp}
+            post={item}
+            comment={this.state.addComment}
+            handleChange={this.handleChange}
+          />
         ))}
       </div>
     );

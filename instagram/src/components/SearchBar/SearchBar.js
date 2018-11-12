@@ -1,20 +1,27 @@
 import React from "react";
 import "./SearchBar.css";
+import logo from "./logo-instagram.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SearchBar = () => {
   return (
     <div className="searchbar-container">
       <div className="branding-container">
-        <FontAwesomeIcon icon={["fab", "instagram"]} size="4x" />
-        <img src="./logo-instagram.png" alt="instagram typescript" />
+        <FontAwesomeIcon
+          icon={["fab", "instagram"]}
+          size="2x"
+          className="camera-logo"
+        />
+        <div className="logo-container">
+          <img className="logo" src={logo} alt="instagram typescript" />
+        </div>
       </div>
 
       <div className="search-field">
-        <span className="searchIcon">
+        {/* <span className="searchIcon">
           <FontAwesomeIcon icon="search" />
-        </span>
-        <input type="text" placeholder="Search" />
+        </span> */}
+        <input type="text" placeholder="&#x1F50D; Search" />
       </div>
 
       <div className="icon-links">
