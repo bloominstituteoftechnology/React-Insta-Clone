@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { PropTypes } from 'prop-types';
 
 const PostUserInfo = props => {
     return (
@@ -14,6 +15,11 @@ const PostUserInfo = props => {
             </Row>
         </Container>
     );
+};
+
+PostUserInfo.PropTypes = {
+    thumbnailUrl: PropTypes.string,
+    username: PropTypes.string
 };
 
 export default PostUserInfo;
