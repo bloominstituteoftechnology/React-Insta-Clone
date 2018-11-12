@@ -8,13 +8,16 @@
 .post-card {
   width: 100%;
   margin: 0 auto 2rem;
+  background: white;
   max-width: 38rem;
   border: 1px solid lightgray;
+  box-shadow: -1px 1px 15px 0 rgba(0,0,0,0.2)
 }
 
 .post-card__header  {
   width: 100%;
   display: flex;
+  background: white;
 }
 
 .post-card__header  > img {
