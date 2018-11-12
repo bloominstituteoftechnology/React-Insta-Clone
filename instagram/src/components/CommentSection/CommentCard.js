@@ -10,7 +10,8 @@ class CommentCard extends Component {
     super(props);
     this.state = {
       comments: props.comments,
-      timestamp: props.timestamp
+      timestamp: props.timestamp,
+      comment: ''
     }
   }
 
@@ -18,8 +19,24 @@ class CommentCard extends Component {
   addComment = (e) => {
     e.preventDefault();
     console.log("add comment here");
+    this.setState({
+      comments: [...this.state.comments,
+        {
+          username: "Ghosty",
+          text: this.state.comment
+        }],
+        comment: '',
+    })
   }
 
+  handleChange = e => {
+    // console.log("changing to: ", e.target.value);
+    // console.log("changing input name: ", e.target.name);
+    this.setState({
+      [e.target.name]: e.target.value,
+    })
+    
+  }
 
   render () {
     console.log(this.state);
@@ -29,7 +46,9 @@ class CommentCard extends Component {
         {this.state.comments.map((comment, i) => <Comment data={comment} key= {i+1} />)}
         <p className="timestamp" >{this.state.timestamp}</p>
         <CommentInput 
+          value={this.state.comment}
           addComment={this.addComment}
+          handleChange={this.handleChange}
         />
       </div>
     )

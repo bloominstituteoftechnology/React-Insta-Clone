@@ -5,7 +5,7 @@ import './Comment.css'
 const CommentInput= props => {
   return (
     <Fragment>
-      <form action="">
+      <form>
         <input
           value={props.value}
           name="comment"
