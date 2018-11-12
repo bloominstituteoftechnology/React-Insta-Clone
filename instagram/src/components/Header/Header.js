@@ -12,7 +12,7 @@ const Header = props => {
   return (
   <div className="header">
     <div className="header-left-side">
-      <a href="#"><img src={cameraImage} alt="" /></a>
+      <img className="header-icons" src={cameraImage} alt="" />
       <img src={dividerImage} alt="" />
       <img src={logoImage} alt="" />
     </div>

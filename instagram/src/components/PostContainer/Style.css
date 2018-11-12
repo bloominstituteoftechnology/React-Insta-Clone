@@ -6,7 +6,7 @@
   margin: 20px 0;
 }
 
-.post-container {
+.post-container .post-form {
   width: 400px;
   margin: 0 auto;
   border: 1px solid black;
@@ -18,10 +18,77 @@
   align-items: center;
 }
 
-.post-container h2 {
+.post-container .post-form h2 {
   display: flex;
   justify-content: space-between;
   width: 90%;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  width: 95%;
+}
+
+.username-img-thumbnail {
+  width: 10%;
+  height: 10%;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.post-img {
+  width: 90%;
+}
+
+.post-click-icons {
+  width: 80%;
+  margin-top: 20px;
+}
+
+.post-click-icons .post-icons {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.post-container .post-form .post-likes {
+  width: 80%;
+  font-size: 14px;
+  margin: 5px 0 40px 0;
+}
+
+.post-add-comment-textbox {
+  width: 90%;
+  margin: 30px 0 10px 0;
+  border-radius: 5px;
+}
+
+.post-add-comment-textbox::-webkit-input-placeholder {
+  font-size: 16px;
+}
+
+.post-add-comment-textbox:-moz-placeholder { /* Firefox 18- */
+  font-size: 16px;
+}
+
+.post-add-comment-textbox::-moz-placeholder {  /* Firefox 19+ */
+  font-size: 16px;
+}
+
+.post-add-comment-textbox:-ms-input-placeholder {
+  font-size: 16px;
+}
+
+.post-add-comment-textbox:focus::-webkit-input-placeholder { color:transparent; }
+.post-add-comment-textbox:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+.post-add-comment-textbox:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+.post-add-comment-textbox:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+.post-add-comment-btn {
+  width: 90%;
+  margin: 0 0 10px 0;
+  height: 40px;
 }
 
 @media (max-width: 500px) {

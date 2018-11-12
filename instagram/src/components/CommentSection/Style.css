@@ -11,6 +11,12 @@
   padding: 10px;
   margin: 0;
   background-color: lightblue;
+  font-size: 14px;
+}
+
+.timestamp {
+  color:gray;
+  font-size: 9px;
 }
 
 .comment p {

@@ -5,8 +5,8 @@ import './Style.css';
 const CommentSection = props => {
   return (
   <div className="comment">
-    <h4>username <span className="timestamp">timestamp</span></h4>
-    <p>comment</p>
+    <h4>{props.comment.username} <span className="timestamp">{props.comment.timestamp}</span></h4>
+    <p>{props.comment.text}</p>
   </div>
   );
 }

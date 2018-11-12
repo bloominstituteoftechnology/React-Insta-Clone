@@ -38,7 +38,7 @@ const dummyData = [
     comments: [
       {
         username: "twitch",
-        timestamp: "July 15th 2017, 03:12:09 pm",
+        timestamp: "July 15th 2017, 03:12:21 pm",
         text: "Epic Street Fighter action here in Las Vegas at #EVO2017!"
       },
       {

@@ -19,6 +19,5 @@ body {
 .app-container {
   max-width: 1280px;
   margin: 0 auto;
-  border: 1px solid red;
   display: flex;
 }
