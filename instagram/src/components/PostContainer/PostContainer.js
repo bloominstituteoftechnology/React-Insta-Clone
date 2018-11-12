@@ -2,6 +2,7 @@ import React from 'react';
 import PostBody from './PostBody';
 import PostUserInfo from './PostUserInfo';
 import PropTypes from 'prop-types';
+import './PostContainer.sass';
 
 const PostContainer = props => {
     return (
