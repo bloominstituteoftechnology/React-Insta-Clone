@@ -8,9 +8,15 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData,
-      inputText: ''
+      posts: [],
+      filterInput: ''
   }
+  }
+
+  componentDidMount() {
+    this.setState({
+      posts: dummyData
+    })
   }
 
   handleChange = event => {
@@ -19,18 +25,12 @@ class App extends Component {
     })
   }
 
-  addComment = event => {
-    event.preventDefault();
+  filterComments = event => {
     this.setState({
-      // data: [...this.state.data, 
-      // {myComment: this.state.inputText,
-      // username: 'Bob'}],
-      // data: this.state.data.map(e => {
-      //   if (e.timestamp === event.timestamp) {
-      //     console.log('timestamp', event.timestamp)
-      //   }
-      // }),
-      inputText: ''
+      filterInput: event.target.value,
+      posts: this.state.posts.filter(
+        e => e.username.includes(this.state.filterInput)
+      )
     })
   }
 
@@ -40,7 +40,10 @@ class App extends Component {
     return (
       <div className="App">
         <div>
-          <SearchBar />
+          <SearchBar 
+          filterComments={this.filterComments}
+          filterInput={this.state.filterInput}
+          />
         </div>
         <div>
             <PostContainer 

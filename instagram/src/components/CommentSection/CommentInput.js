@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const CommentInput = props => {
     return (
         <div className='comment-section'>
-            <form onSubmit={props.addComment}>
+            <form onSubmit={props.addNewComment}>
                 <input 
                 className='comment-input'
                 type = 'text'

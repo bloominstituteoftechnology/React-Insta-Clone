@@ -8,16 +8,53 @@ class CommentSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: props.comments
+            comments: props.comments,
+            likes: props.likes,
+            inputText: ''
         }
     }
+
+    handleChange = event => {
+        console.log("WHOOO I'm changing", event.target.value)
+        this.setState({
+            inputText: event.target.value
+        })
+    }
+
+    addNewComment = event => {
+        event.preventDefault();
+        this.setState({
+            comments: [...this.state.comments,
+            {text: this.state.inputText, 
+                username: "Billy_Bob"}],
+                inputText: ''
+        })
+    }
+
+    incrementLike = event => {
+        this.setState({
+            likes: this.state.likes +1
+        })
+    }
+
     render() {
-        // console.log('comment section props =', this.state.comments)
+        console.log('comment section props =', this.state.comments)
         return (
             <div>
+                <div className='text-icons'>
+                    <i onClick={this.incrementLike} class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                </div>
+                <div className='likes' >
+                    {`${this.state.likes} likes`}
+                </div>
+
                 {this.state.comments.map((c, i) => 
                 <Comment key={i} comment={c} />)}
-                <CommentInput /> 
+                <CommentInput 
+                addNewComment={this.addNewComment} 
+                handleChange={this.handleChange}
+                /> 
             </div>
         );
     }

@@ -3,7 +3,8 @@ import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
 
 const Post = props => {
-    console.log('props in Post', props)
+    // console.log('props in Post', props)
+    // console.log('props.post.comments in post.js', props.post.comments)
     return (
         <div className="post-border">
             <PostHeader 
@@ -18,17 +19,10 @@ const Post = props => {
                 />
             </div>
 
-            <div className='text-icons'>
-                <i class="far fa-heart"></i>
-                <i class="far fa-comment"></i>
-            </div>
-            <div className='likes' >
-                {`${props.post.likes} likes`}
-            </div>
-
             <div>
                 <CommentSection 
                     comments = {props.post.comments}
+                    likes = {props.post.likes}
                     // Here we're sending the comments array from state data
                 />
             </div>

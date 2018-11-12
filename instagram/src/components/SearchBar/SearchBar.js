@@ -10,7 +10,13 @@ const SearchBar = props => {
             </div>
             <div>
             <form class="search">
-                <input className="search-input" type="text" placeholder="Search.." name="search" />            </form>
+                <input className="search-input" 
+                type="text" placeholder="Search.." 
+                name="search" 
+                value={props.filterInput}
+                onChange={props.filterComments}
+                />            
+            </form>
             </div>
             <div className='icons'>
                 <i class="far fa-compass"></i>
