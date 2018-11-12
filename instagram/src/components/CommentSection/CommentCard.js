@@ -15,9 +15,19 @@ class CommentCard extends Component {
     }
   }
 
+  componentDidMount() {
+    let storedComments = JSON.parse(localStorage.getItem('comments'));
+    if(storedComments) {this.setState({ comments: storedComments})}
+  }
+
 
   addComment = (e) => {
     e.preventDefault();
+
+    let newComments = [...this.state.comments,
+      {username: "Ghosty", text: this.state.comment}];
+      localStorage.setItem('comments', JSON.stringify(newComments))
+
     console.log("add comment here");
     this.setState({
       comments: [...this.state.comments,
@@ -43,7 +53,12 @@ class CommentCard extends Component {
     
     return (
       <div className="comment-card">
-        {this.state.comments.map((comment, i) => <Comment data={comment} key= {i+1} />)}
+        {this.state.comments.map(
+          (comment, i) => <Comment
+                            data={comment}
+                            key= {i+1}
+                          />
+        )}
         <p className="timestamp" >{this.state.timestamp}</p>
         <CommentInput 
           value={this.state.comment}

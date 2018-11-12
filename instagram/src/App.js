@@ -13,6 +13,8 @@ class App extends Component {
   }
 
   componentDidMount() {
+    let storedPosts = JSON.parse(localStorage.getItem('posts'));
+    if(storedPosts) {this.setState({ data: storedPosts})}
     this.setState({
       data: dummyData,
     })
