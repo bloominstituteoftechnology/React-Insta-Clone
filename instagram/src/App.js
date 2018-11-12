@@ -15,7 +15,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData
+      gram: dummyData
     };
   }
 
@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div>Test
       <SearchBar />
-        <PostContainer />
+      <PostContainer grams={this.state.gram}/>
 
       </div>
     );

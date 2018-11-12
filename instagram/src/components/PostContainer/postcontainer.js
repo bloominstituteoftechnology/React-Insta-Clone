@@ -1,18 +1,17 @@
 import React from 'react';
 
-import CommentSection from '../CommentSection/commentsection';
+import Post from './post';
 
 import './postcontainer.css';
 
 
-const PostContainer = () => {
+const PostContainer = grams => {
     return (
         <div className="postContainer">
-            This is the post Container     
-            <CommentSection /> 
+            <Post />
         </div>
 
     );
 };
 
-export default PostContainer;
+export default Post;

@@ -1,3 +1,26 @@
  .searchBar {
+     display: flex;
+     flex-direction: row;
+     height: 50px;
      color: red;
+ }
+
+ p {
+     padding-right: 2px;
+ }
+
+ .searchInput {
+     height: 12px;
+ }
+
+ .picLogo {
+     width: 46px;
+     height: 46px;
+     
+ }
+
+ .fontLogo {
+    width: 100px; 
+    height: 46px;
+
  }
