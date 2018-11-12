@@ -24,7 +24,7 @@ const PostContainer = props => {
           <CommentSection key={comment.timestamp} comment={comment} />
         ))}
         <textarea className="post-add-comment-textbox" rows="4" name="comment" placeholder="Add a comment..." form="usrform" />
-        <input className="post-add-comment-btn" type="submit" value="Submit" />
+        <input className="post-add-comment-btn" type="submit" value="Post Comment" />
       </form>
     </div>);
 }
