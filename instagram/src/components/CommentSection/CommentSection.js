@@ -23,8 +23,8 @@ const CommentSection = props => {
           <Input
             placeholder="Add a comment..."
             id="add-comment"
-            value={props.inputText}
-            name="inputText"
+            value={props.comment}
+            name={props.time}
             onChange={props.handleChange}
           />
           <InputGroupAddon addonType="append">

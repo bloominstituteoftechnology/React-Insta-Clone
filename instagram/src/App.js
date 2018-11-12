@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBar";
 import dummyData from "./dummy-data";
@@ -30,59 +29,47 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData,
-      addComment: ""
+      post: dummyData,
+      comment: ""
     };
   }
 
-  // handleChange = ev => {
-  //   this.setState({
-  //     [ev.target.name]: ev.target.value
-  //   });
-  // };
-
-  // addComment = ev => {
-  //   ev.preventDefault();
-  //   if (this.state.addComment === "") {
-  //     return alert("Please write your todo item!");
-  //   }
-  //   this.setState({
-  //     data: [
-  //       ...this.state.todo,
-  //       {
-  //         task: this.state.inputText,
-  //         id: Date.now(),
-  //         completed: false
-  //       }
-  //     ],
-  //     inputText: ""
-  //   });
-  // };
+  addComment = (comment, id) => {
+    this.setState(prevState => {
+      return {
+        post: prevState.post.map(currentPost => {
+          if (currentPost.timestamp === id) {
+            return {
+              ...currentPost,
+              comments: [
+                ...currentPost.comments,
+                {
+                  username: "holdenSucks",
+                  text: comment,
+                  id: Date.now()
+                }
+              ]
+            };
+          } else {
+            return currentPost;
+          }
+        })
+      };
+    });
+  };
 
   render() {
+    console.log(this.state.post);
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
         <SearchBar />
-        {this.state.data.map(item => (
+        {this.state.post.map(item => (
           <PostContainer
             key={item.timestamp}
             post={item}
-            comment={this.state.addComment}
-            handleChange={this.handleChange}
+            addComment={this.addComment}
+            // handleChange={this.handleChange}
+            // comments={this.state.comments}
           />
         ))}
       </div>
