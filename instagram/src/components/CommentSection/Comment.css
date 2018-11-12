@@ -13,7 +13,7 @@
   line-height: .5rem;
 }
 
-.timestamp {
+p.timestamp {
   font-size: .65rem;
   text-transform: uppercase;
   color: gray;
@@ -26,7 +26,7 @@
 .add-comment {
   border: none;
   width: 80%;
-  padding: 1.2rem .5rem 1.2rem 0;
+  padding: 1.2rem .5rem 1.2rem 1.2rem;
   margin-right: 3rem;
   font-size: .8rem;
   font-weight: bold;

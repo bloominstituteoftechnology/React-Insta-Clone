@@ -1,14 +1,37 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Comment from './Comment';
 import './Comment.css';
+import { PropTypes } from 'prop-types';
+import CommentInput from './CommentInput';
 
-const CommentCard = props => {
-  return (
-    <div className="comment-card">
-      {props.comments.map((comment, i) => {
-        return <Comment data={comment} key={i+1} />
-      })}
-    </div>
+// console.log("CARD PROPS", props)
+class CommentCard extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: props.comments,
+      timestamp: props.timestamp
+    }
+  }
+  render () {
+    console.log(this.state);
+    
+    return (
+      <div className="comment-card">
+        {this.state.comments.map((comment, i) => <Comment data={comment} key= {i+1} />)}
+        <p className="timestamp" >{this.state.timestamp}</p>
+        <CommentInput />
+      </div>
+    )
+  }
+}
+
+CommentCard.propTypes = {
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string,
+      username: PropTypes.string
+    })
   )
 }
 

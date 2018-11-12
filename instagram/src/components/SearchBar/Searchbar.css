@@ -2,6 +2,7 @@ header {
   width: 100%;
   position: fixed;
   background-color: white;
+  z-index: 100;
 }
 
 .searchbar-container {

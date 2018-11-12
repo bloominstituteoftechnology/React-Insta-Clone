@@ -2,13 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Comment = props => {
-  console.log(props.data);
-  
-  return (
-    <div>
-      <p><span>{props.data.username}</span>{props.data.text}</p>
-    </div>
-  )
+  return <p><span>{props.data.username}</span>{props.data.text}</p>
 }
 
 Comment.propTypes = {
