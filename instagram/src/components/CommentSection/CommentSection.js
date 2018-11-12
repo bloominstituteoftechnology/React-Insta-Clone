@@ -2,7 +2,7 @@ import React from "react";
 import "./CommentSection.css";
 import Comment from "./Comment";
 import moment from "moment";
-import { InputGroup, InputGroupAddon, InputGroupText, Input } from "reactstrap";
+import { InputGroup, InputGroupAddon, Input } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CommentSection = props => {

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThemeisle } from "@fortawesome/fontawesome-free-brands";
 
 class PostContainer extends Component {
   constructor(props) {
