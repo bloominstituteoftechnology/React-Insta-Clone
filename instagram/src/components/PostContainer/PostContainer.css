@@ -1,0 +1,119 @@
+.post-wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.post-item {
+    max-width: 660px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    border-radius: 3px;
+}
+
+.post-header {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.post-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.post-text__bold {
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-left: 20px;
+}
+
+
+.post-img {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Font awesome icons */
+
+.post-icons {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.far {
+    font-size: 2.4rem;
+    color: #000;
+    margin-right: 18px;
+    
+}
+
+.fa-comment {
+    transform: scaleX(-1);
+}
+
+/* Comments Section */
+
+.post-comment {
+    margin-top: 15px;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comment-wrapper {
+    text-align: left;
+    
+}
+
+.comment-text {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.comment-text__bold {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-right: 10px;
+}
+
+.timestamp {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    color: #77787a;
+    margin-top: 15px;
+    text-transform: uppercase;
+
+}
+
+/* Add new comment input */
+
+.comment-input {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.input-text-comment {
+    background: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 1.5rem;
+    
+}
