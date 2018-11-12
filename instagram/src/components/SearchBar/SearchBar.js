@@ -9,12 +9,12 @@ const SearchBar = props => {
                 <h1 className='logo-text'>Instagram</h1>
             </div>
             <div>
-            <form class="search">
+            <form onSubmit={props.filterComments} class="search">
                 <input className="search-input" 
                 type="text" placeholder="Search.." 
                 name="search" 
                 value={props.filterInput}
-                onChange={props.filterComments}
+                onChange={props.changeFilterInputs}
                 />            
             </form>
             </div>

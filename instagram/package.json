@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "i": "^0.3.6",
+    "local-storage": "^1.4.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-moment": "^0.8.3",

@@ -25,9 +25,15 @@ class App extends Component {
     })
   }
 
+  changeFilterInputs = event => {
+    event.preventDefault();
+    this.setState({
+      filterInput: event.target.value
+    })
+  }
+
   filterComments = event => {
     this.setState({
-      filterInput: event.target.value,
       posts: this.state.posts.filter(
         e => e.username.includes(this.state.filterInput)
       )
@@ -35,14 +41,13 @@ class App extends Component {
   }
 
   render() {
-    // console.log('data is...', this.state.data[0].comments)
-    // console.log('data is...', this.state.data)
     return (
       <div className="App">
         <div>
           <SearchBar 
           filterComments={this.filterComments}
           filterInput={this.state.filterInput}
+          changeFilterInputs={this.changeFilterInputs}
           />
         </div>
         <div>
