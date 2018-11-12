@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
-import './App.css';
+import PostContainerList from './components/PostContainer/PostContainerList';
+import dummyData from './components/dummy-data';
+import './Style.css';
 
 class App extends Component {
   constructor(){
     super();
     this.state = {
-      removeThisProp: 'Begin coding for your app'
+      data: dummyData
     };
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>{this.state.removeThisProp}}</h1>
-        </header>
+        <header className="main-header">{/* camera | Instagram search-bar circle-diamond heart person */}</header>
+        <div className="app-container">
+          <PostContainerList data={this.state.data} />
+        </div>
       </div>
     );
   }
