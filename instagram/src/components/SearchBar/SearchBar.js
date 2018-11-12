@@ -3,7 +3,8 @@ import "./SearchBar.css";
 import logo from "./logo-instagram.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const SearchBar = () => {
+const SearchBar = props => {
+  console.log(props.search);
   return (
     <header className="searchbar-container">
       <div className="branding-container">
@@ -18,10 +19,12 @@ const SearchBar = () => {
       </div>
 
       <div className="search-field">
-        {/* <span className="searchIcon">
-          <FontAwesomeIcon icon="search" />
-        </span> */}
-        <input type="text" placeholder="&#x1F50D; Search" />
+        <input
+          type="text"
+          placeholder="&#x1F50D; Search"
+          value={props.search}
+          onChange={props.onChange}
+        />
       </div>
 
       <div className="icon-links">

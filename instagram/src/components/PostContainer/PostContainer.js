@@ -33,6 +33,8 @@ class PostContainer extends Component {
     this.props.like(this.state.likes, this.props.post.timestamp);
   };
 
+  focus = e => {};
+
   render() {
     return (
       <div className="post-container">
@@ -64,6 +66,7 @@ class PostContainer extends Component {
               icon={["far", "comment"]}
               flip="horizontal"
               size="2x"
+              onClick={this.focus}
             />
           </div>
           <div className="likes">
