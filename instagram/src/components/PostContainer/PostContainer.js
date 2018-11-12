@@ -7,7 +7,8 @@ class PostContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      newComment: ""
+      newComment: "",
+      likes: this.props.post.likes
     };
   }
 
@@ -23,6 +24,13 @@ class PostContainer extends Component {
       this.props.addComment(this.state.newComment, this.props.post.timestamp);
       this.setState({ newComment: "" });
     }
+  };
+
+  handleLike = e => {
+    console.log(e.target);
+    e.preventDefault();
+    this.setState({ likes: this.props.post.likes + 1 });
+    this.props.like(this.state.likes, this.props.post.timestamp);
   };
 
   render() {
@@ -49,6 +57,7 @@ class PostContainer extends Component {
               icon={["far", "heart"]}
               size="2x"
               className="icon"
+              onClick={this.handleLike}
             />
             <FontAwesomeIcon
               className="icon"
@@ -58,7 +67,7 @@ class PostContainer extends Component {
             />
           </div>
           <div className="likes">
-            <p className="bold">{this.props.post.likes} likes</p>
+            <p className="bold">{this.state.likes} likes</p>
           </div>
           <CommentSection
             comments={this.props.post.comments}
@@ -66,7 +75,6 @@ class PostContainer extends Component {
             comment={this.state.newComment}
             handleChange={this.handleChange}
             addComment={this.handleComment}
-            moop={this.input}
           />
         </div>
       </div>

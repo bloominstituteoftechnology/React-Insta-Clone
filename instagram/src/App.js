@@ -29,20 +29,26 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      post: dummyData,
-      comment: ""
+      post: [],
+      searchTerm: ""
     };
+  }
+
+  componentDidMount() {
+    this.setState({
+      post: dummyData
+    });
   }
 
   addComment = (comment, id) => {
     this.setState(prevState => {
       return {
-        post: prevState.post.map(currentPost => {
-          if (currentPost.timestamp === id) {
+        post: prevState.post.map(current => {
+          if (current.timestamp === id) {
             return {
-              ...currentPost,
+              ...current,
               comments: [
-                ...currentPost.comments,
+                ...current.comments,
                 {
                   username: "holdenSucks",
                   text: comment,
@@ -51,7 +57,24 @@ class App extends Component {
               ]
             };
           } else {
-            return currentPost;
+            return current;
+          }
+        })
+      };
+    });
+  };
+
+  addLike = (like, id) => {
+    this.setState(prevState => {
+      return {
+        post: prevState.post.map(current => {
+          if (current.timestamp === id) {
+            return {
+              ...current,
+              likes: (like += 1)
+            };
+          } else {
+            return current;
           }
         })
       };
@@ -59,7 +82,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.post);
     return (
       <div className="App">
         <SearchBar />
@@ -68,8 +90,7 @@ class App extends Component {
             key={item.timestamp}
             post={item}
             addComment={this.addComment}
-            // handleChange={this.handleChange}
-            // comments={this.state.comments}
+            like={this.addLike}
           />
         ))}
       </div>
