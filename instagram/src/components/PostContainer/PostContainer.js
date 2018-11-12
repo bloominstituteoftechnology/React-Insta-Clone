@@ -18,7 +18,7 @@ const PostContainer = props => {
           <img className="post-icons" src={heartImage} alt="" />
           <img className="post-icons" src={commentImage} alt="" />
         </div>
-        <h4 className="post-likes">Post likes</h4>
+        <h4 className="post-likes">{props.postContainer.likes} likes</h4>
         {props.postContainer.comments.map(comment => (
           <CommentSection key={comment.timestamp} comment={comment} />
         ))}
