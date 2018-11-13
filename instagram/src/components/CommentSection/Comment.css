@@ -1,0 +1,13 @@
+.comment-container {
+    margin: 10px;
+}
+
+.comm-user {
+    font-weight: 400;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.comm-text {
+    font-weight: 300;
+}

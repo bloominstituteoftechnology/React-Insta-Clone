@@ -1,0 +1,36 @@
+.post-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.post-header {
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.thumb {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.add-comment {
+    width: 250px;
+}
+
+.comm-add {
+    margin-left: 10px;
+}

@@ -1,0 +1,19 @@
+.search-container {
+    width: 800px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home {
+    background-image: url("../../img/insta-cam.png");
+    width: 15px;
+    height: 10px;
+}
+
+.instagram-logo {}
+
+.search-bar {}
+
+.icons {}

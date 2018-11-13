@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import dummyData from "./dummy-data";
+import dummyData from "./dummy-data.js";
 import SearchBarNavContainer from "./components/SearchBar/SearchBarNavContainer";
 import PostContainer from "./components/PostContainer/PostContainer";
 import "./App.css";
@@ -15,10 +15,13 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Insta-Clone</h1>
           <SearchBarNavContainer />
-          <PostContainer data={this.state.data} />
         </header>
+        <div>
+          {this.state.data.map(post => {
+            return <PostContainer data={post} />;
+          })}
+        </div>
       </div>
     );
   }
