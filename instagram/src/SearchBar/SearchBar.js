@@ -1,5 +1,6 @@
 import React from 'react';
 import './searchBar.css';
+import PropTypes from 'prop-types';
 
 const SearchBar =  props => {
     return (
@@ -15,6 +16,11 @@ const SearchBar =  props => {
             </form>
         </div>
     );
+}
+
+SearchBar.propTypes = {
+    searchText: PropTypes.string.isRequired,
+    hanldesChanges: PropTypes.func,
 }
 
 export default SearchBar;

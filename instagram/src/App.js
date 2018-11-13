@@ -9,8 +9,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData,
+      data: [],
       searchText: '',
+      newComment: '',
     }
   }
 
@@ -19,14 +20,27 @@ class App extends Component {
       [event.target.name]: event.target.value
     });
   }
+
+  componentDidMount() {
+    this.setState ({
+      data: dummyData,
+    });
+  }
   
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <Navigation handlesChanges={this.handlesChanges} searchText={this.state.searchText}/>
+          <Navigation 
+            handlesChanges={this.handlesChanges} 
+            searchText={this.state.searchText}
+          />
         </header>
-        <PostContainer data={this.state.data}/>
+        <PostContainer 
+          data={this.state.data}
+          commentText={this.state.newComment}
+          handlesChanges={this.handlesChanges} 
+        />
       </div>
     );
   }

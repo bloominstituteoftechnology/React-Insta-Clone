@@ -1,7 +1,8 @@
 import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import logo from '../img/1024px-Instagram_logo.svg.png';
-import './Navigation.css'
+import './Navigation.css';
+import PropTypes from 'prop-types';
 
 const Navigation = props => {
     return(
@@ -19,6 +20,10 @@ const Navigation = props => {
             </div>
         </React.Fragment>
     );
+}
+
+Navigation.propTypes = {
+    handlesChanges: PropTypes.func,
 }
 
 export default Navigation;

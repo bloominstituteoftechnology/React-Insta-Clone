@@ -19,10 +19,14 @@ const PostContainer = props => {
                     <i className="far fa-comment"></i>
                     <p className='likes-amount'>{currentPost.likes} likes</p>
                     <CommentSection
-                        key ={`${index},${currentPost.timestamp}`}
+                        key={index + 1}
                         comments={currentPost.comments}/>
                     <p className='timestamp'>{currentPost.timestamp.toUpperCase()}</p>
-                    <CommentForm />
+                    <CommentForm 
+                        key={(index + 1) * 100}
+                        commentText={props.newComment}
+                        handlesChanges={props.handlesChanges} 
+                    />
                 </div>
         ))}
         </div>
@@ -31,12 +35,14 @@ const PostContainer = props => {
 }
 
 PostContainer.propTypes = {
+    commentText: PropTypes.string,
+    handlesChanges: PropTypes.func,
     userObject: PropTypes.shape({
       username: PropTypes.string,
       imageUrl: PropTypes.string,
       likes: PropTypes.number,
       timestamp: PropTypes.string,
-      comments: PropTypes.array,
+      comments: PropTypes.arrayOf(PropTypes.string),
     })
   }
 

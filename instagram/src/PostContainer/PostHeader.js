@@ -12,10 +12,8 @@ const PostHeader = props => {
 }
 
 PostHeader.propTypes = {
-    props: PropTypes.shape({
-        thumbnail: PropTypes.string.isRequired,
-        userName: PropTypes.string.isRequired,
-    })
+    thumbnail: PropTypes.string.isRequired,
+    userName: PropTypes.string.isRequired,
 }
 
 export default PostHeader;

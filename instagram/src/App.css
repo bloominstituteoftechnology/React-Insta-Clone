@@ -3,5 +3,5 @@
   display: flex;
   justify-content: space-between;
   font-size: 4.5rem;
-  margin: 25px 18px;
+  margin: 25px auto;
 }
