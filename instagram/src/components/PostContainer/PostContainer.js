@@ -6,7 +6,7 @@ import CommentSection from '../CommentSection/CommentSection';
 
 import './PostContainer.scss';
 
-export default function PostContainer({data, addComment}) {
+export default function PostContainer({data, addComment, addLike}) {
 
   const {comments, imageUrl, likes, thumbnailUrl, timestamp, username, id} = data;
 
@@ -27,7 +27,7 @@ export default function PostContainer({data, addComment}) {
 
         <div>
 
-        <p className='far fa-heart'></p>
+        <p className='far fa-heart' onClick={() => addLike(imageUrl)}></p>
         <p className='far fa-comment'></p>
 
         </div>

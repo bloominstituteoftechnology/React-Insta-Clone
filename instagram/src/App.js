@@ -28,9 +28,19 @@ class App extends Component {
 
   addComment = (comment, postUrl) => {
 
-    let index = this.state.data.findIndex(item => item.imageUrl === postUrl);
+    const index = this.state.data.findIndex(item => item.imageUrl === postUrl);
     const newData = this.state.data;
     newData[index].comments.push(comment);
+
+    this.setState({data: newData});
+
+  }
+
+  addLike = postUrl => {
+
+    const index = this.state.data.findIndex(item => item.imageUrl === postUrl);
+    const newData = this.state.data;
+    newData[index].likes++;
 
     this.setState({data: newData});
 
@@ -42,7 +52,7 @@ class App extends Component {
 
         <SearchBar />
 
-        {this.state.data.map(data => <PostContainer key={data.imageUrl} data={data} addComment={this.addComment} />)}
+        {this.state.data.map(data => <PostContainer key={data.imageUrl} data={data} addLike={this.addLike} addComment={this.addComment} />)}
 
       </div>
     );
