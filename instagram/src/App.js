@@ -31,7 +31,7 @@ class App extends Component {
     super();
     this.state = {
       post: [],
-      searchTerm: false,
+      // searchTerm: false,
       filtered: []
     };
   }
@@ -75,39 +75,35 @@ class App extends Component {
   //   });
   // };
 
-  filterPosts = ev => {
-    var updatedList = this.state.post;
-    updatedList = updatedList.filter(item => {
-      return item.username.includes(ev.target.value);
-    });
-    this.setState({
-      filtered: updatedList,
-      searchTerm: ev.target.value
-    });
-  };
-
   // filterPosts = ev => {
-  //   var options = {
-  //     threshold: 0.6,
-  //     location: 0,
-  //     distance: 100,
-  //     maxPatternLength: 32,
-  //     minMatchCharLength: 0,
-  //     keys: ["username"]
-  //   };
-  //   var fuse = new Fuse(dummyData, options); // "list" is the item array
-  //   var result = fuse.search(ev.target.value);
-  //   if (result.length > 0) {
-  //     this.setState({ post: result, searchTerm: ev.target.value });
-  //   } else {
-  //     this.setState({ post: dummyData, searchTerm: ev.target.value });
-  //   }
+  //   var updatedList = this.state.post;
+  //   updatedList = updatedList.filter(item => {
+  //     return item.username.includes(ev.target.value);
+  //   });
+  //   this.setState({
+  //     filtered: updatedList
+  //     // searchTerm: ev.target.value
+  //   });
   // };
+
+  filterPosts = ev => {
+    var options = {
+      threshold: 0.6,
+      location: 0,
+      distance: 100,
+      maxPatternLength: 32,
+      minMatchCharLength: 0,
+      keys: ["username"]
+    };
+    var fuse = new Fuse(dummyData, options); // "list" is the item array
+    var result = fuse.search(ev.target.value);
+    this.setState({ filtered: result });
+  };
 
   render() {
     return (
       <div className="App">
-        <SearchBar search={this.state.searchTerm} onChange={this.filterPosts} />
+        <SearchBar onChange={this.filterPosts} />
         {(this.state.filtered.length > 0
           ? this.state.filtered
           : this.state.post
