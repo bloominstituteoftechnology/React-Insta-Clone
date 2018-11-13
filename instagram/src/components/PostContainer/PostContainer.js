@@ -6,7 +6,7 @@ import PostHeader from "./PostHeader";
 import PostImage from "./PostImage";
 
 const PostContainer = props => {
-  console.log(props.post.imageUrl);
+  // console.log(props.post.imageUrl);
   return (
     <div className="post-container">
       <PostHeader info={props.post} />

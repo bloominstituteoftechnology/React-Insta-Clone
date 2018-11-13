@@ -3,6 +3,7 @@ import "./App.css";
 import Fuse from "fuse.js";
 import SearchBar from "./components/SearchBar/SearchBar";
 import dummyData from "./dummy-data";
+import PostsPage from "./components/PostContainer/PostsPage";
 import PostContainer from "./components/PostContainer/PostContainer";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faInstagram } from "@fortawesome/fontawesome-free-brands";
@@ -98,17 +99,13 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar onChange={this.filterPosts} />
-        {(this.state.filtered.length > 0
+        <PostsPage post={this.state} />
+        {/* {(this.state.filtered.length > 0
           ? this.state.filtered
           : this.state.post
         ).map(item => (
-          <PostContainer
-            key={item.imageUrl}
-            post={item}
-            addComment={this.addComment}
-            like={this.addLike}
-          />
-        ))}
+          <PostContainer key={item.imageUrl} post={item} />
+        ))} */}
       </div>
     );
   }
