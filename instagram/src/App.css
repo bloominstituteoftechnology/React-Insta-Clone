@@ -1,5 +1,5 @@
 .container {
-  text-align: center;
+  /* text-align: center; */
   margin: 0 auto;
   width: 90%;
 }
@@ -30,5 +30,13 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    border: 1px solid green;
   }
 }

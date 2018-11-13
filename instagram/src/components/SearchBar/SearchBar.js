@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from './Instagram_logo.jpg';
 import './SearchBar.css';
 
 
@@ -9,14 +10,15 @@ const SearchBar = () => {
             <header>
                 <div className='logos'>
                     <i className='fab fa-instagram fa-3x'></i>
-                    <h1 className='insta-logo'>Instagram</h1>
+                    <img src={logo} alt='Instagram Logo' className='insta-logo'/>
                 </div>
+    
 
                 <div className='input-field'>
                     <form>
                         <input
                             type='text'
-                            className='fa fa-input'
+                            className='fa fa-input search-input'
                             placeholder='  Search'
                         />
                     </form>

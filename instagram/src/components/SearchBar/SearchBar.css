@@ -1,16 +1,22 @@
 header {
     border-bottom: 2px solid #E9E9E9;
     width: 100%;
+    margin-top: 30px;
+    padding-bottom: 15px;
     justify-content: space-between;
     align-items: center;
     display: flex;
-    
 }
+
 .logos {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 20%;
+}
+
+.insta-logo {
+    width: 40%;
+    margin-left: 15px;
 }
 
 .fa-instagram {
@@ -21,7 +27,7 @@ header {
     font-family:  'Leckerli One' , 'Open Sans', sans-serif;
 }
 
- input {
+ .search-input {
     border: 1.5px solid #DBDBDB;
     border-radius: 4px;
     padding: .8rem;
@@ -36,4 +42,36 @@ header {
     display: flex;
     justify-content: space-evenly;
     width: 20%;
+}
+
+@media (max-width: 500px) {
+    header {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 1rem;
+    }
+
+    .logos {
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+
+    .fa-instagram {
+        border: none;
+    }
+    .insta-logo {
+        margin-left: 80px;
+    }
+
+    .search-input {
+        display: none;
+    }
+
+    .fa-compass {
+        display: none;
+    }
+
+    .fa-heart {
+        display: none;
+    }
 }

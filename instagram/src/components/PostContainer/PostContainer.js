@@ -7,8 +7,9 @@ const PostContainer = (props) => {
     return (
         <div>
             
-            {props.data.map( post => (
+            {props.data.map((post, index) => (
                 <CommentSection 
+                key={index}
                 post={post}
                 />
             ))}
