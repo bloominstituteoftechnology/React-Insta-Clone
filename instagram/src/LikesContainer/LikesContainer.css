@@ -1,0 +1,11 @@
+.far, .fas {
+    font-size: 2.8rem;
+    margin: 19px 10px 13px 10px;
+    cursor: pointer;
+}
+
+.likes-amount {
+    font-size: 1.6rem;
+    margin: 0 14px;
+    font-weight: bold;
+}

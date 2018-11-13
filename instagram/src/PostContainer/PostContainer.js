@@ -1,8 +1,8 @@
 import React from 'react';
 import './PostContainer.css';
 import PostHeader from './PostHeader';
+import LikesContainer from '../LikesContainer/LikesContainer';
 import CommentSection from '../CommentSection/CommentSection';
-import CommentForm from '../CommentSection/CommentForm';
 import PropTypes from 'prop-types';
 
 const PostContainer = props => {
@@ -15,9 +15,7 @@ const PostContainer = props => {
                         thumbnail={currentPost.thumbnailUrl} 
                         userName={currentPost.username}/>
                     <img src={currentPost.imageUrl} alt="An Instagram Post"/>
-                    <i className="far fa-heart"></i>
-                    <i className="far fa-comment"></i>
-                    <p className='likes-amount'>{currentPost.likes} likes</p>
+                    <LikesContainer likes={currentPost.likes}/>
                     <CommentSection
                         key={index + 1}
                         comments={currentPost.comments}
