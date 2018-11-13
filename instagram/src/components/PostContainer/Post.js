@@ -1,14 +1,12 @@
 import React from 'react';
-import Comment from '../CommentSection/Comment';
-import InputComment from '../CommentSection/InputComment';
+import CommentContainer from '../CommentsContainer/CommentContainer';
+
 import PropTypes from 'prop-types';
 
 
 const Post = props => {
 
-let comments = props.postData.comments.map((comment, index) => {
-    return <Comment key={index} commentData={comment}/>; 
-});
+
 
 
     return (
@@ -25,12 +23,12 @@ let comments = props.postData.comments.map((comment, index) => {
             </div>
 
             <p className="post-text__bold">{props.postData.likes} likes</p>
-
+            
             <div className="post-comment">
-                {comments}
+                <CommentContainer comments={props.postData.comments} timestamp={props.postData.timestamp}/>
             </div>
-            <p className="timestamp">{props.postData.timestamp}</p>
-            <InputComment username={props.postData.username} inputComment={props.inputComment} handleAddComment={props.handleAddComment} handleChange={props.handleChange}/>
+            
+            
         </div>
     </div>
     );

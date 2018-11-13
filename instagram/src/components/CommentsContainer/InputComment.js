@@ -5,12 +5,12 @@ const InputComment = props => {
 
   return (
     <div>
-      <form className="comment-input" onSubmit={(event) => props.handleAddComment(event, props.username)}>
+      <form className="comment-input" onSubmit={(event) => props.handleAddComment(event)}>
         <input
           className="input-text-comment"
           type="text"
           placeholder={'Add comment...'}
-          value={props.inputComment.currentUserCommentInput}
+          value={props.inputText}
           onChange={props.handleChange}
           name = {props.username}
         />
