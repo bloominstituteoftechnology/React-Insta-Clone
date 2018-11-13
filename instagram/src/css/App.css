@@ -1,0 +1,301 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+.navigation {
+  border-bottom: 1px lightgray solid;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+.navigation .nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  height: auto;
+}
+.navigation .nav .home {
+  margin: 0;
+  padding: 0 1%;
+}
+.navigation .nav .home img {
+  width: 200px;
+  height: auto;
+}
+.navigation .nav .icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.navigation .nav .icons img {
+  width: 50px;
+  height: auto;
+  margin: 0;
+  padding: 10px;
+}
+.navigation .nav .search form input {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10px;
+  border: 1px lightgray solid;
+  border-radius: 5px;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: space-between;
+  margin: 0;
+  padding: 5%;
+  max-width: 800px;
+}
+.container .post {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background: white;
+  width: 100%;
+  height: auto;
+  margin: 0 0 10%;
+  padding: 0;
+}
+.container .post .top {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 20%;
+  height: auto;
+  margin: 0;
+  padding: 1%;
+}
+.container .post .top div {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0 0 5%;
+}
+.container .post .top div img {
+  width: 40%;
+  height: auto;
+  border-radius: 50%;
+}
+.container .post .top div h3 {
+  margin: 0;
+  padding: 5%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.container .post .middle img {
+  width: 100%;
+  height: auto;
+}
+.container .post .bottom .icons img {
+  width: 5%;
+  height: auto;
+  margin: 0;
+  padding: 1%;
+}
+.container .post .bottom h3 {
+  margin: 0;
+  padding: 0% 1%;
+  font-size: 1.25rem;
+}
+.container .post .bottom h3 span {
+  font-weight: bold;
+}
+.post .comments {
+  margin: 0;
+  padding: 1%;
+}
+.post .comments .comment {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.post .comments .comment h3 {
+  margin: 0;
+  padding: 1% 0;
+  font-size: 1.25rem;
+}
+.post .comments .comment h3 span {
+  font-weight: bold;
+}
+.post form input {
+  margin: 1%;
+  padding: 2.5% 0;
+  width: 98%;
+  height: auto;
+  border: none;
+  border-top: 1px lightgrey solid;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: #fafafa;
+}

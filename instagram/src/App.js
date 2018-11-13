@@ -1,25 +1,60 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './less/App.less';
+import dummyData from './dummy-data.js';
+import SearchBar from './components/SearchBar/SearchBar'
+import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state ={
+      posts: dummyData,
+      commentInput: '',
+      searchInput:'',
+      username: 'cotikor'
+    }
+  }
+  handleChange = event => {
+    console.log(this.state.posts)
+    this.setState({
+      [event.target.name]: event.target.value
+      
+    });
+  };
+  
+  handleSearch = event => {
+    this.handleChange();
+    this.setState({
+      posts: this.state.posts.filter(post => {
+        return post.username.includes(event.target.value)
+      })
+    })
+  };
+
+  addComment = event => {
+    event.preventDefault();
+    this.setState({
+      posts: [
+        ...this.state.posts,
+        {comment: 
+        { text: this.state.commentInput, username: this.state.username}
+        }
+      ],
+      commentInput: ''
+    });
+  };
+  
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+       <SearchBar />
+
+        <PostContainer 
+        posts= {this.state.posts}
+        AddComment={this.AddComment}
+			  commentInput={this.state.commentInput}
+			handleChange={this.handleChange}
+        />
       </div>
     );
   }

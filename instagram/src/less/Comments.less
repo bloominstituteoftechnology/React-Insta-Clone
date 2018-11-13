@@ -1,0 +1,23 @@
+.post {
+	.comments {
+		#layout > .margins-padding(0, 1%);
+		.comment {
+			#layout > .flex-row(flex-start, center, nowrap);
+			h3 {
+				#layout > .margins-padding(0, 1% 0);
+				font-size: 1.25rem;
+				span {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	form {
+		input {
+			#layout > .margins-padding(1%, 2.5% 0);
+			#layout > .width-height(98%, auto);
+			border: none;
+			border-top: 1px lightgrey solid;
+		}
+	}
+}

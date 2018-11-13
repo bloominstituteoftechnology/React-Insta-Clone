@@ -1,0 +1,24 @@
+#layout {
+    .flex-column(@justify, @align, @wrap) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: @wrap;
+        justify-content: @justify;
+        align-items: @align;
+    }
+    .flex-row(@justify, @align, @wrap) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: @wrap;
+        justify-content: @justify;
+        align-items: @align;
+    }
+    .width-height(@width, @height) {
+        width: @width;
+        height: @height;
+    }
+    .margins-padding(@margin, @padding){
+        margin: @margin;
+        padding: @padding;
+    }
+}

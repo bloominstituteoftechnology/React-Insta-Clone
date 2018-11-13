@@ -1,0 +1,35 @@
+.navigation {
+	border-bottom: 1px lightgray solid;
+	#layout > .width-height(100%, auto);
+	#layout > .flex-row(center, center, nowrap);
+	background: white;
+	.nav {
+		#layout > .flex-row(space-between, center, nowrap);
+		#layout > .width-height(800px, auto);
+		.home {
+			#layout > .margins-padding(0, 0 1%);
+			img {
+				#layout > .width-height(200px, auto);
+			}
+		}
+		.icons {
+			#layout > .flex-row(center, center, nowrap);
+
+			img {
+				#layout > .width-height(50px, auto);
+				#layout > .margins-padding(0, 10px);
+			}
+		}
+		.search {
+			form {
+				input {
+					#layout > .width-height(100%, auto);
+					#layout > .margins-padding(0, 10px);
+					border: 1px lightgray solid;
+					border-radius: 5px;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
