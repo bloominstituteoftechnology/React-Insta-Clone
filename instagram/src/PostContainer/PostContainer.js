@@ -20,13 +20,10 @@ const PostContainer = props => {
                     <p className='likes-amount'>{currentPost.likes} likes</p>
                     <CommentSection
                         key={index + 1}
-                        comments={currentPost.comments}/>
-                    <p className='timestamp'>{currentPost.timestamp.toUpperCase()}</p>
-                    <CommentForm 
-                        key={(index + 1) * 100}
-                        commentText={props.newComment}
-                        handlesChanges={props.handlesChanges} 
+                        comments={currentPost.comments}
+                        postTimestamp={currentPost.timestamp}
                     />
+                    
                 </div>
         ))}
         </div>

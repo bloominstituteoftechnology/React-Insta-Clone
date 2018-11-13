@@ -5,13 +5,13 @@ import PropTypes from 'prop-types';
 const CommentForm = props => {
     return(
         <div className="add-comment">
-            <form>
+            <form onSubmit={props.addNewComment}>
                 <input 
                     type="text" 
                     name="newComment"
                     placeholder="Add a comment..."
                     value={props.newComment}
-                    onChange={console.log(props.handlesChange)}
+                    onChange={props.handleChange}
                 />
             </form>
             <i className="fas fa-ellipsis-h"></i>
@@ -21,7 +21,7 @@ const CommentForm = props => {
 
 CommentForm.propTypes ={
     newComment: PropTypes.string,
-    handlesChanges: PropTypes.func,
+    handleChanges: PropTypes.func,
 }
 
 export default CommentForm;

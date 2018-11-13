@@ -11,7 +11,7 @@ class App extends Component {
     this.state = {
       data: [],
       searchText: '',
-      newComment: '',
+      comment: '',
     }
   }
 
@@ -38,7 +38,7 @@ class App extends Component {
         </header>
         <PostContainer 
           data={this.state.data}
-          commentText={this.state.newComment}
+          comment={this.state.comment}
           handlesChanges={this.handlesChanges} 
         />
       </div>
