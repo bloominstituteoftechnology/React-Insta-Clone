@@ -20,12 +20,20 @@ const PostContainer = props => {
                         <p className='heavy-font'>{post.likes} likes</p> 
                     </div>
                     
-                    {post.comments.map(comment => (
-                        <CommentSection comment={comment} />
+                    {post.comments.map((comment, idx) => (
+                        <CommentSection key={idx} comment={comment} />
                     ))}
 
                     <p className='light-font'>{post.timestamp}</p>
-                    <input type='text' placeholder='Add a comment...'></input>
+                    <div className='add-comment'>
+                        <input type='text' placeholder='Add a comment...'></input>
+                        <div className='triple-dot'>
+                            <span className='dot'></span>
+                            <span className='dot'></span>
+                            <span className='dot'></span>
+                        </div>
+                    </div>
+                    
                 </div>
                 
             </div>

@@ -6,6 +6,9 @@
     flex-direction: column;
     flex-wrap: wrap;
     margin: 0 auto;
+    border: 2px solid gray;
+    border-radius: 10px;
+    margin-bottom: 25px;
 }
 
 .insta-user {
@@ -62,4 +65,30 @@ p {
     margin-bottom: 10px;
     text-align: left;
     font-weight: 500;
+}
+
+.add-comment {
+    width: 100%;
+    text-align: left;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+}
+
+.triple-dot {
+    width: 10%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background: black;
+    margin-right: 4px;
+    border: 1px solid gray;
+    border-radius: 40%;
 }

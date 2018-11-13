@@ -33,14 +33,14 @@ i {
 }
 
 .search-bar {
-    width: 25%;
+    width: 35%;
     height: 30px;
     border: 1px solid lightgray;
     border-radius: 5px;
     background: rgb(243, 243, 243);
-    color: lightgray;
+    color: gray;
     text-align: center;
     font-size: 1.5rem;
     font-weight: lighter;
-    margin-right: 30px;
+    margin-right: 70px;
 }
