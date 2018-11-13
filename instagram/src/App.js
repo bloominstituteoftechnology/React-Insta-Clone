@@ -14,6 +14,7 @@ class App extends Component {
       username: 'currentUser',
       // data: dummyData,
       data: [],
+      searchText: '',
     };
   }
 
@@ -53,14 +54,25 @@ class App extends Component {
     });
   }
 
+  handleSearch(e) {
+    this.setState({
+      searchText: e.target.value,
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar
+          searchText={this.state.searchText}
+          handleSearch={(e) => this.handleSearch(e)}
+        />
         <div className="posts--container">
           <div className="posts">
             {
-              this.state.data.map(
+              this.state.data
+              .filter(post => post.username.includes(this.state.searchText))
+              .map(
                 (post, i) => (
                   <PostContainer
                     key={post.username + post.timestamp}
