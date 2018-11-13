@@ -57,7 +57,6 @@ class CommentSection extends Component {
                 value={this.state.inputText}
                 onChange={this.handleChange} 
                 />
-                 <button type="submit">Add Todo</button>
            </form>
            
             

@@ -7,12 +7,15 @@
 }
 .post .likes{
     text-align: left;
-    margin: 10px;
+    margin-left: 10px;
 }
 
 .likes .icons{
     display: flex;
     align-items: center;
+}
+.likes .icons h1{
+    margin: 0 10px 0 0;
 }
 .icons .comment{
     font-size: 22px;
