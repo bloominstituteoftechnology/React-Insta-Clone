@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import heartImage from '../../Images/Post/post-heart.png';
+import { Heart, MessageCircle } from 'react-feather';
 import commentImage from '../../Images/Post/post-comment.png';
 import moment from 'moment';
 import './Style.css';
@@ -16,8 +17,8 @@ const PostContainer = props => {
         </div>
         <img className ="post-img" src={props.postContainer.imageUrl} alt="" />
         <div className="post-click-icons">
-          <img className="post-icons" src={heartImage} alt="" />
-          <img className="post-icons" src={commentImage} alt="" />
+          <Heart className="post-icons" />
+          <MessageCircle className="post-icons post-icon-flipped" />
         </div>
         <h4 className="post-likes">{props.postContainer.likes} likes</h4>
         {props.postContainer.comments.map(comment => (

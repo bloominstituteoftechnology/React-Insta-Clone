@@ -29,6 +29,10 @@
   cursor: pointer;
 }
 
+.header-logo-img {
+  width: 60%;
+}
+
 .header input {
   height: 25px;
   width: 15%;

@@ -47,6 +47,13 @@
   margin-top: 20px;
 }
 
+.post-icon-flipped {
+  transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+}
+
 .post-click-icons .post-icons {
   margin-right: 20px;
   cursor: pointer;
