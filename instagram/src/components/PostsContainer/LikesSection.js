@@ -4,14 +4,22 @@ import CommentIcon from './commenticon.png';
 
 const LikesSection = props => {
     return (
-        <div className="likes-section-wrapper">
-            <div className="likes-icon">
-                <img src={HeartIcon} alt="icon" />
+        <div className='likes-section-wrapper'>
+
+            <div className="icon-wrapper">
+                <div className="likes-icon">
+                    <img 
+                        src={HeartIcon} 
+                        alt="icon" 
+                        onClick={props.incrementLikes}
+                    />
+                </div>
+                <div className="comment-icon">
+                    <img src={CommentIcon} alt="icon" />
+                </div>
             </div>
-            <div className="comment-icon">
-                <img src={CommentIcon} alt="icon" />
-            </div>
-            <div>{props.likes} likes</div>
+
+                <div>{props.likes} likes</div>
         </div>
 
     )
