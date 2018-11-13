@@ -8,10 +8,14 @@ import './Posts.css';
 const Posts = props => {
     return (
         <div className="posts">
-            {props.data.map(post => (
+            {props.data.map((post, index) => (
                 <PostContainer 
                     key={post.timestamp}
                     post={post}
+                    commentText={props.commentText}
+                    handleInputChange={props.handleInputChange}
+                    addNewComment={props.addNewComment}
+                    index={index}
                 />
             ))}
         </div>        

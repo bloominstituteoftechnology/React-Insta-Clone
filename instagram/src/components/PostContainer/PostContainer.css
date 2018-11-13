@@ -67,5 +67,7 @@
     margin-bottom: 15px;
     font-weight: bold;
     color: grey;
+    border: none;
+    text-decoration: none;
 }
 

@@ -10,15 +10,35 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData,
+      data: [],
       filter: '',
-      comment: ''
+      commentText: '',
+      logedInUser: 'therealbondor'
     }
+  }
+
+  componentDidMount(){
+    this.setState({
+     data: dummyData 
+    })
   }
 
   handleInputChange = event => {
     this.setState({
       [event.target.name]: event.target.value,
+    });
+  };
+
+  addNewComment = (event, index) => {
+    event.preventDefault();
+    
+    let newComment = { text: this.state.commentText, username: this.state.logedInUser};
+    let newDataState = this.state.data;
+    newDataState[index].comments.push(newComment);
+    
+    this.setState({
+      data: newDataState,
+      commentText: ''
     });
   };
 
@@ -38,7 +58,10 @@ class App extends Component {
           filter={this.state.filter}
         />
         <Posts 
-            data={this.getData()}
+          data={this.getData()}
+          commentText={this.state.commentText}
+          handleInputChange={this.handleInputChange}
+          addNewComment={this.addNewComment}
         />  
       </div>
     );

@@ -7,9 +7,6 @@ import PropTypes from 'prop-types';
 import './PostContainer.css';
 
 const PostContainer = props => {
-    
-    var timeJ = moment(props.post.timestamp, "MMMM Do YYYY, hh:mm:ss a").fromNow().toString();
-
     return (
         <div className="post">
             <div className="post__top">
@@ -25,13 +22,20 @@ const PostContainer = props => {
             <CommentsSection 
                 comments={props.post.comments}
             />
-            <div className="post__time">{timeJ}</div>
-            {/* props.post.timestamp,  "MMMM Do YYYY[,] HH:MM:SS a").fromNow( */}
-            <div className="post__add-new-comment">Add a comment ...</div>
+            <div className="post__time">{moment(props.post.timestamp, "MMMM Do YYYY, hh:mm:ss a").fromNow().toString()}</div>
+            <form onSubmit={event => props.addNewComment(event, props.index)}>
+                <input 
+                    className="post__add-new-comment"
+                    placeholder="Add a comment ..."
+                    type="text"
+                    name="commentText"
+                    value={props.commentText}
+                    onChange={props.handleInputChange}
+                />           
+            </form>
         </div>
     );
 }
-
 
 PostContainer.propTypes = {
     post: PropTypes.shape({
