@@ -5,13 +5,13 @@ const CommentForm = props => {
   return (
     <form
       className="comment--form"
-      onSubmit={(e, u, t) => props.onCommentFormSubmit(e, props.commentText.username, props.commentText.timestamp)}>
+      onSubmit={(e, u, t) => props.onCommentFormSubmit(e, props.username, props.timestamp)}>
       <input 
         type="text"
         name="text"
-        onChange={(e, u, t) => props.onCommentFormChange(e,props.commentText.username, props.commentText.timestamp)}
+        onChange={(e, u, t) => props.onCommentFormChange(e,props.username, props.timestamp)}
         placeholder="Add a comment..."
-        value={props.commentText.text}/>
+        value={props.commentText}/>
       <button>...</button>
     </form>
   );
@@ -19,11 +19,7 @@ const CommentForm = props => {
 
 CommentForm.propTypes = {
   onCommentFormSubmit: PropTypes.func.isRequired,
-  commentText: PropTypes.shape({
-    username: PropTypes.string,
-    timestamp: PropTypes.string,
-    text: PropTypes.string,
-  }).isRequired,
+  commentText: PropTypes.string.isRequired,
   onCommentFormChange: PropTypes.func.isRequired,
 }
 

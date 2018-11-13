@@ -2,6 +2,10 @@
   max-width: 104.7rem;
   padding: 2rem 0;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-wrap: wrap;
 }
 
 .posts--container {

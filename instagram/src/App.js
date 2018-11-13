@@ -12,23 +12,28 @@ class App extends Component {
     super(props);
     this.state = {
       username: 'currentUser',
-      data: dummyData,
-      commentText: dummyData.map(post => ({
-        username: post.username,
-        text: '',
-        timestamp: post.timestamp,
-      })),
+      // data: dummyData,
+      data: [],
     };
+  }
+
+  componentDidMount() {
+    this.setState({
+      data: dummyData.map(post => {
+        post.commentText = '';
+        return post;
+      }),
+    })
   }
 
   onCommentFormChange(e, u, t) {
     this.setState({
-      commentText: this.state.commentText.map(text => {
-        if (text.username === u && text.timestamp === t) {
-          text.text = e.target.value;
+      data: this.state.data.map(post => {
+        if (post.username === u && post.timestamp === t) {
+          post.commentText = e.target.value;
         }
-        return text;
-      }),
+        return post;
+      })
     });
   }
 
@@ -39,18 +44,11 @@ class App extends Component {
         if (post.username === u && post.timestamp === t){
           post.comments.push({
             username: this.state.username,
-            text: this.state.commentText.filter(text => (
-              text.username === u && text.timestamp === t
-            ))[0].text,
+            text: post.commentText,
           });
+          post.commentText = '';
         }
         return post;
-      }),
-      commentText: this.state.commentText.map(text => {
-        if (text.username === u && text.timestamp === t) {
-          text.text = '';
-        }
-        return text;
       }), 
     });
   }
@@ -66,7 +64,7 @@ class App extends Component {
                 (post, i) => (
                   <PostContainer
                     key={post.username + post.timestamp}
-                    commentText={this.state.commentText[i]}
+                    commentText={post.commentText}
                     onCommentFormChange={(e, u, t) => this.onCommentFormChange(e, u, t)}
                     onCommentFormSubmit={(e, u, t) => this.onCommentFormSubmit(e, u, t)}
                     post={post}

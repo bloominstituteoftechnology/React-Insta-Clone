@@ -24,6 +24,8 @@ const CommentSection = props => {
       </div>
       <CommentForm
         commentText={props.commentText}
+        username={props.username}
+        timestamp={props.timestamp}
         onCommentFormChange={(e, u, t) => props.onCommentFormChange(e, u, t)}
         onCommentFormSubmit={(e, u, t) => props.onCommentFormSubmit(e, u, t)}
       />
@@ -40,11 +42,7 @@ CommentSection.propTypes = {
     })).isRequired,
   likes: PropTypes.number,
   timestamp: PropTypes.string.isRequired,
-  commentText: PropTypes.shape({
-    username: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    timestamp: PropTypes.string.isRequired
-  }).isRequired, 
+  commentText: PropTypes.string.isRequired, 
   onCommentFormChange: PropTypes.func.isRequired,
   onCommentFormSubmit: PropTypes.func.isRequired,
 }

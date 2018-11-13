@@ -40,11 +40,7 @@ PostContainer.propTypes = {
       text: PropTypes.string,
     })),
   }).isRequired,
-  commentText: PropTypes.shape({
-    username: PropTypes.string,
-    timestamp: PropTypes.string,
-    text: PropTypes.string,
-  }).isRequired,
+  commentText: PropTypes.string.isRequired,
   onCommentFormChange: PropTypes.func.isRequired,
   onCommentFormSubmit: PropTypes.func.isRequired,
 }
