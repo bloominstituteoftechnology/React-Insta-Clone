@@ -4,6 +4,8 @@ import './Comment.css';
 import { PropTypes } from 'prop-types';
 import CommentInput from './CommentInput';
 
+let moment = require('moment');
+
 // console.log("CARD PROPS", props)
 class CommentCard extends Component {
   constructor(props) {
@@ -58,7 +60,8 @@ class CommentCard extends Component {
                             key= {i+1}
                           />
         )}
-        <p className="timestamp" >{this.state.timestamp}</p>
+        {/* <p className="timestamp" >{this.state.timestamp}</p> */}
+        <p className="timestamp" >{moment().format("MMMM Do YYYY, hh:mm a")}</p>
         <CommentInput 
           value={this.state.comment}
           addComment={this.addComment}
