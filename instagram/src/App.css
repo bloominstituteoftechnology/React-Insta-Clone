@@ -137,15 +137,14 @@ table {
   color: black;
 }
 
-/* Post Container */
-.post-container {
-  border: 1px solid lightgray;
-  min-width: 300px;
-  min-height: 400px;
+
+
+/* Comments */
+.post-comments {
+  text-align: left;
 }
 
-/* Post */
-.profile-img {
-  max-width: 30px;
-  border-radius: 50%;
+.comment-username {
+  font-weight: bold;
+  margin-right: 2px;
 }

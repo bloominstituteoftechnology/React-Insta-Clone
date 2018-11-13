@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-// import dummyData from './src/dummy-data';
-import instagram from '../../instagram-brands.svg';
 
 import Post from './Post';
 import CommentSection from '../CommentSection/CommentSection';
-// import CommentSection from './CommentSection/CommentSection';
+import './PostContainer.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -17,25 +15,24 @@ library.add(fab, faCompass, faSearch, faHeart);
 const PostContainer = props => {
     return (
         <div className="post-container">
-            <div className="post-header">
+            <div className="post-content">
             {/* Works */}
                 {props.data.map( post => (
-                    <Post
-                        key={post.username}
-                        post={post}
-                    />
+                    <div>
+                        <Post
+                            key={post.username}
+                            post={post}
+                        />
+                        <CommentSection 
+                            key={post.username}
+                            post={post}
+                        />
+                    </div>
                 ))
                 }
             </div>
             <div className="post-bottom">
-            {/* Works */}
-            {props.data.map( post => (
-                    <CommentSection 
-                        key={post.username}
-                        post={post}
-                    />
-                ))
-                }
+            
                 
             </div>
 

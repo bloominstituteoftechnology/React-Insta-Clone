@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-// import dummyData from './src/dummy-data';
-import CommentSection from '../CommentSection/CommentSection';
-import Comment from '../CommentSection/Comment';
+
+import './PostContainer.css';
 
 
 const Post = props => {
@@ -15,14 +14,7 @@ const Post = props => {
                 <img src={props.post.imageUrl} alt="main-img" /> 
             </div>
             <div className="post-comments">
-                {props.post.comments.map(
-                    comment => (
-                        <Comment 
-                            key={comment.username}
-                            comment={comment}
-                        />
-                    )
-                )}
+                
             </div>
         </div>
     )

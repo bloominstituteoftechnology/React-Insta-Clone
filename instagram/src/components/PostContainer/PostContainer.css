@@ -1,0 +1,37 @@
+/* Post Container */
+.post-container {
+    border: 1px solid lightgray;
+    min-width: 300px;
+    min-height: 400px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Post */
+
+.post {
+    /* border: 2px solid red; */
+}
+
+.post .post-author {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.post .post-author .profile-img {
+max-width: 30px;
+border-radius: 50%;
+}
+
+.post .post-image img{
+    width: 100%;
+}
+
+.post .post-comments {
+
+}
+

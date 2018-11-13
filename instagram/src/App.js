@@ -15,6 +15,7 @@ import PostContainer from './components/PostContainer/PostContainer';
 // import CommentSection from './components/CommentSection/CommentSection';
 
 import './App.css';
+import Post from './components/PostContainer/Post';
 
 // library.add(fab, faCheckSquare, faCoffee);
 
@@ -28,7 +29,7 @@ class App extends Component {
 
   iterate() {
     return (
-      this.state.dummyData.map(post => (
+      this.state.data.map(post => (
         <PostContainer key={post.username} />
     )))}
 
@@ -40,11 +41,13 @@ class App extends Component {
           <SearchBar />
         </header>
         <div>
-          <PostContainer 
-          data={this.state.data}
-          comments={this.state.data.comments}
-          iterate={this.iterate}
-          />
+          {/* {this.state.data.map( post => ( */}
+            
+            <PostContainer 
+              data={this.state.data}
+            />
+          ))
+          // }
         </div>
       </div>
     );
