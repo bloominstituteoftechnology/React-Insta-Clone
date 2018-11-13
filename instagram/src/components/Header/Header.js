@@ -12,7 +12,10 @@ const Header = props => {
                 <img className="header__logo--img" src={logo} />
             </div>
 
-            <SearchBar />
+            <SearchBar 
+                handleInputChange={props.handleInputChange}
+                filter={props.filter}
+            />
 
             <div className="header__menu">
                 <i class="far fa-compass"></i>

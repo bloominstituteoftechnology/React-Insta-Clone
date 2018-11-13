@@ -10,16 +10,34 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData
+      data: dummyData,
+      filter: ''
     }
+  }
+
+  handleInputChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  getData () {
+    if (this.state.filter === '')
+      return this.state.data;
+    return this.state.data.filter(post => {
+      return JSON.stringify(post).toLowerCase().includes(this.state.filter.toLowerCase());
+    })
   }
 
   render() {
     return (
       <div className="container">
-        <Header />
+        <Header 
+          handleInputChange={this.handleInputChange}
+          filter={this.state.filter}
+        />
         <Posts 
-            data={this.state.data}
+            data={this.getData()}
         />  
       </div>
     );
