@@ -24,6 +24,7 @@ const Post = props => {
                     comments = {props.post.comments}
                     likes = {props.post.likes}
                     timestamp = {props.post.timestamp}
+                    postId = {props.post.imageUrl}
                     // Here we're sending the comments array from state data
                 />
             </div>

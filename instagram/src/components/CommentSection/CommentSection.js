@@ -17,6 +17,21 @@ class CommentSection extends React.Component {
         }
     }
 
+    componentDidMount() {
+        const id = this.props.postId
+        if (localStorage.getItem(id)) {
+            // If id exists, set the commments by that parsed array
+            this.setState({comments: JSON.parse(localStorage.getItem(id))})
+        } else {
+            // call setComments() 
+            this.setComments();
+        }
+      }
+
+    setComments = () => {
+        localStorage.setItem(this.props.postId, JSON.stringify(this.state.comments));
+    }
+
     handleChange = event => {
         this.setState({
             inputText: event.target.value
@@ -32,6 +47,9 @@ class CommentSection extends React.Component {
                 removed: false}],
                 inputText: ''
         })
+        setTimeout(() => {
+            this.setComments();
+        }, 500)
     }
 
     incrementLike = event => {
