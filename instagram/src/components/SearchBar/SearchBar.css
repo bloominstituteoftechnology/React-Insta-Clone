@@ -1,0 +1,14 @@
+.search-bar{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-buttons{
+    display: flex;
+    
+}
+.nav-buttons div{
+    margin: 0 5px;
+}
+.nav-buttons :last-child{
+    margin: 0 10px 0 5px;
+}

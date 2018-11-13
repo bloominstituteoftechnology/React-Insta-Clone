@@ -1,0 +1,20 @@
+.post{
+    
+    max-width: 640px;
+    margin: 10px auto;
+}
+.post span{
+    font-weight: bold;
+}
+.post-head{
+    border: 1px solid lightgrey;
+}
+.likes{
+    width: 100%;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+}
+.interact-buttons{
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+}
