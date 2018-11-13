@@ -64,6 +64,30 @@ class App extends Component {
     }
   };
 
+  incrementLikes = (event, postUsr) => {
+    event.preventDefault();
+
+    let selectedPost = this.getSelectedPost(this.state, postUsr);
+    if (selectedPost === undefined || selectedPost === null){
+      console.error("Post Username Not Found");
+    } else {
+      let newData = this.state.data.map(post => {
+        if (post.username === selectedPost.username){
+          selectedPost.likes = selectedPost.likes + 1;
+          return selectedPost;
+
+        } else {
+          return post;
+        }
+      });
+  
+      this.setState({
+        data: newData,
+        ...this.state.newComment
+      });
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -74,6 +98,7 @@ class App extends Component {
           data={this.state.data}
           addNewComment={this.addNewComment}
           handleChange={this.handleChange}
+          incrementLikes={this.incrementLikes}
           />
         </div>
       </div>

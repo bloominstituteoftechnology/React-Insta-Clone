@@ -16,7 +16,7 @@ const PostContainer = props => {
         </div>
         <img className ="post-img" src={props.postContainer.imageUrl} alt="" />
         <div className="post-click-icons">
-          <Heart className="post-icons" />
+          <Heart className="post-icons" onClick={event => {props.incrementLikes(event, props.postContainer.username)}} />
           <MessageCircle className="post-icons post-icon-flipped" />
         </div>
         <h4 className="post-likes">{props.postContainer.likes} likes</h4>

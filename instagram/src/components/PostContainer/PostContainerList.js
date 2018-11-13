@@ -12,6 +12,7 @@ const PostContainerList = props => {
         postContainer={post}
         addNewComment={props.addNewComment}
         handleChange={props.handleChange}
+        incrementLikes={props.incrementLikes}
       />
     ))}
   </div>);
