@@ -31,7 +31,6 @@ class App extends Component {
     super();
     this.state = {
       post: [],
-      // searchTerm: false,
       filtered: []
     };
   }
@@ -68,12 +67,6 @@ class App extends Component {
       }
     }
   }
-
-  // handleChange = e => {
-  //   this.setState({
-  //     searchTerm: e.target.value
-  //   });
-  // };
 
   // filterPosts = ev => {
   //   var updatedList = this.state.post;
