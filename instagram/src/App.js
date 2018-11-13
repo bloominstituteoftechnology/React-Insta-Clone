@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import dummyData from "./dummy-data";
 import PostContainer from "./components/PostContainer/PostContainer";
-import PropTypes from "prop-types";
+import SearchBar from './components/SearchBar/SearchBar'
 
 class App extends Component {
   constructor() {
@@ -19,11 +19,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
 
-        <PostContainer chocolate={this.state.data} />
+        <SearchBar />
+        <PostContainer data={this.state.data} />
       </div>
     );
   }

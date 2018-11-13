@@ -1,17 +1,27 @@
 import React, { Component } from "react";
-import "../PostContainer/PostContainer.css";
+import "./CommentSection.css";
+import PropTypes from "prop-types";
+
 
 const CommentSection = props => {
     return(
-        <div>
+        <div className="commentSectionContainer">
             
-            <span>{props.dataInMap.username}</span>
-            <span>{props.dataInMap.text}</span>
+            <h2>{props.dataInMap.username}</h2>
+            <p>{props.dataInMap.text}</p>
         </div>
     )
 
 
 
+}
+
+CommentSection.propTypes = {
+    dataInMap: PropTypes.shape(
+            {username: PropTypes.string,
+            text: PropTypes.string}
+        )
+    
 }
 
 export default CommentSection;

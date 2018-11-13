@@ -1,0 +1,12 @@
+.searchBarContainer {
+    max-width: 800px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid purple;
+    margin: 10px auto;
+}
+
+.searchBar {
+    align-self: center;
+}
