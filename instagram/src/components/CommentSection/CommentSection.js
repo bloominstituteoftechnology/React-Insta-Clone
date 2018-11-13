@@ -12,6 +12,7 @@ const CommentSection = props => {
             {props.comments.map((comment, index) => (
                 <Comment
                 comment ={comment}
+                key={index}
                 />
            ))}
            <input placeholder='Add a comment...'/>

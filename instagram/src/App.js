@@ -28,6 +28,7 @@ class App extends Component {
         {this.state.posts.map((data, index) => (
           <PostContainer
             data ={data}
+            key={index}
             />
         ))}
         </div>

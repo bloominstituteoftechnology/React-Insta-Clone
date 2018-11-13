@@ -8,7 +8,7 @@ import CommentSection from '../CommentSection/CommentSection';
 const PostContainer = props => {
 
     return(
-        <div className='post'>
+        <div className='post' >
             <Post data={props.data}/>
             <CommentSection comments={props.data.comments}/>
         </div>
