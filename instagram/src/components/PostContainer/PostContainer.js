@@ -27,7 +27,6 @@ class PostContainer extends Component {
   };
 
   handleLike = e => {
-    console.log(e.target);
     e.preventDefault();
     this.setState({ likes: this.props.post.likes + 1 });
     this.props.like(this.state.likes, this.props.post.timestamp);

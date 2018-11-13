@@ -32,6 +32,7 @@ class App extends Component {
     this.state = {
       post: [],
       searchTerm: ""
+      // filtered: false
     };
   }
 
@@ -149,14 +150,16 @@ class App extends Component {
           // handleChange={this.handleChange}
           onChange={this.filterPosts}
         />
-        {this.state.post.map(item => (
-          <PostContainer
-            key={item.timestamp}
-            post={item}
-            addComment={this.addComment}
-            like={this.addLike}
-          />
-        ))}
+        {(this.state.filtered ? this.state.filtered : this.state.post).map(
+          item => (
+            <PostContainer
+              key={item.timestamp}
+              post={item}
+              addComment={this.addComment}
+              like={this.addLike}
+            />
+          )
+        )}
       </div>
     );
   }
