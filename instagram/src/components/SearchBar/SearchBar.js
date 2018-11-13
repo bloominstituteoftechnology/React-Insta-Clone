@@ -9,7 +9,13 @@ const SearchBar = props => {
                 <img src='https://itsdcdn.com/resources/services/logowide/170/instagram.png' className ='instagram-title' alt='Instagram Logo' />
             </div>
 
-            <input type='text' placeholder='Search' className='search-bar'></input>
+            <input 
+                type='text' 
+                placeholder='Search' 
+                className='search-bar'
+                value={props.searchText}
+                onChange={props.handleChange}
+            />
 
             <div className='menu-icons'>
                 <i className="fa fa-compass fa-3x" aria-hidden="true"></i>

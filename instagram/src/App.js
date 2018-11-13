@@ -9,19 +9,50 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData
+      data: [],
+      searchText: '',
+      newComment: '',
     };
   }
 
   componentDidMount() {
-
+    this.setState({
+      data: dummyData,
+    })
   }
+
+  handleSearch = ev => {
+    this.setState({
+      searchText: ev.target.value,
+    });
+  };
+
+  handleComment = ev => {
+    this.setState({
+      newComment: ev.target.value
+    });
+  };
+
+  // addComment = ev => {
+  //   ev.preventDefault();
+  //   this.setState({
+  //     toDoList: [...this.state.toDoList, {
+  //         task: this.state.inputText,
+  //         id: Date.now(),
+  //         completed: false,
+  //       }],
+  //       inputText: ''
+  //   })
+  // }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer postsList={this.state.posts} />
+        <SearchBar 
+          handleChange={this.handleSearch}
+          searchText={this.state.searchText} 
+        />
+        <PostContainer postsData={this.state.data} />
       </div>
     );
   }

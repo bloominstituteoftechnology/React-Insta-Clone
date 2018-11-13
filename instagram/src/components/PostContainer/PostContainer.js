@@ -5,7 +5,7 @@ import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => {
     return (
-        props.postsList.map(post => (
+        props.postsData.map(post => (
             <div className='post-container' key={post.timestamp}>
                 <div className='insta-user'>
                     <img src={post.thumbnailUrl} alt='User Thumbnail' className='icon' />
