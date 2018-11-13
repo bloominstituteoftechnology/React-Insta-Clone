@@ -1,12 +1,8 @@
 import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
-import cameraImage from '../../Images/Header/header-camera.png';
 import { Instagram, Compass, Heart, User } from 'react-feather';
 import dividerImage from '../../Images/Header/header-divider.png';
 import logoImage from '../../Images/Header/header-logo.png';
-import circleDiamondImage from '../../Images/Header/header-circle-diamond.png';
-import heartImage from '../../Images/Header/header-heart.png';
-import personImage from '../../Images/Header/header-person.png';
 import './Style.css';
 
 const Header = props => {

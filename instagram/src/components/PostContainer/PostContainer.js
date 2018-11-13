@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
-import heartImage from '../../Images/Post/post-heart.png';
 import { Heart, MessageCircle } from 'react-feather';
-import commentImage from '../../Images/Post/post-comment.png';
 import moment from 'moment';
 import './Style.css';
 
