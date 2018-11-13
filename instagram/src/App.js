@@ -4,6 +4,7 @@ import PostContainer from './components/PostContainer/PostContainer';
 import SearchForm from './components/SearchBar/SearchBar';
 import styled from 'styled-components';
 import './App.css';
+// import Fuse from 'fuse';
 
 const AppContainer = styled.div`
   margin-top: 50px;
@@ -41,6 +42,9 @@ class App extends Component {
 
   searchItems = ev => {
     ev.preventDefault();
+    const options = {keys: ['username']};
+    // const fuse = new Fuse(this.state.posts,options);
+    // console.log(fuse.search('fort'))
     console.log('searching...')
     this.setState({
       posts: this.state.posts.map(item => {

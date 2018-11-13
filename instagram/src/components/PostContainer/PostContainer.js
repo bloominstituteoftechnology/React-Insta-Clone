@@ -71,8 +71,8 @@ class PostContainer extends Component {
     render(){
         return (
         <Post className={`${this.props.thisPost.display ? 'displayed' : 'hidden'}`} >
-        <h2><img src={this.props.thisPost.thumbnailUrl}></img>{this.props.thisPost.username}<p>{this.props.thisPost.timestamp}</p></h2>
-        <img src={this.props.thisPost.imageUrl} />
+        <h2><img src={this.props.thisPost.thumbnailUrl} alt={this.props.thisPost.thumbnailUrl} />{this.props.thisPost.username}<p>{this.props.thisPost.timestamp}</p></h2>
+        <img src={this.props.thisPost.imageUrl} alt={this.props.thisPost.imageUrl} />
         
         <p onClick={this.addLike}>{this.state.likes} likes</p>
         <CommentSection thisPost={this.props.thisPost} postIndex={this.props.index} />
