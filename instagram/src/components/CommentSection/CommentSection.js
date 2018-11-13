@@ -13,7 +13,7 @@ const CommentSection = props =>{
     );
 }
 CommentSection.propTypes ={
-    comments: PropTypes.arrayOf(PropTypes.string)
+    comments: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default CommentSection;
