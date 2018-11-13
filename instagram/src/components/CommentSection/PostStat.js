@@ -5,7 +5,15 @@ const PostStat = props => {
   return (
     <div className="post--stat">
       <div className="stat-icons">
-        <i className="far fa-heart"></i>
+        <i
+          className={
+            `${props.liked ? "fas" : "far"} fa-heart`
+          }
+          onClick={() => props.toggleLike()}
+          style={{
+            color: props.liked ? 'red':'black'
+          }}
+        ></i>
         <i className="far fa-comment fa-flip-horizontal"></i>
       </div>
       {props.likes > 1 ? `${props.likes} likes` : `${props.likes} like`}
@@ -15,6 +23,8 @@ const PostStat = props => {
 
 PostStat.propTypes = {
   likes: PropTypes.number.isRequired,
+  toggleLike: PropTypes.func.isRequired,
+  liked: PropTypes.bool.isRequired,
 }
 
 export default PostStat;

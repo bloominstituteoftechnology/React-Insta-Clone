@@ -16,6 +16,7 @@
 
 .stat-icons i {
   margin-right: 1rem;
+  transition: all 1s;
 }
 
 .comment {
