@@ -1,6 +1,7 @@
 .comment {
     margin-bottom: 5px;
     /* border: 1px solid red; */
+    text-align: left;
 }
 
 .comment__name {

@@ -42,6 +42,18 @@ class App extends Component {
     });
   };
 
+  addLike = (event, index) => {
+    event.preventDefault();
+
+    let newDataState = this.state.data;
+    newDataState[index].likes++;
+
+    this.setState({
+      data: newDataState,
+    });
+
+  }
+
   getData () {
     if (this.state.filter === '')
       return this.state.data;
@@ -62,6 +74,7 @@ class App extends Component {
           commentText={this.state.commentText}
           handleInputChange={this.handleInputChange}
           addNewComment={this.addNewComment}
+          addLike={this.addLike}
         />  
       </div>
     );

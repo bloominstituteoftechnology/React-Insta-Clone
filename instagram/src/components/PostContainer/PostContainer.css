@@ -43,6 +43,11 @@
     font-size: 1.8rem;
 }
 
+.post__bottom--heart:hover{
+    cursor: pointer;
+    color: red;
+}
+
 .post__bottom--likes {
     font-size: 1rem;
     margin: 10px;
@@ -57,11 +62,15 @@
     padding-bottom: 5px;
     border-bottom: 1px solid lightgrey;
     width: 96.75%;
-    /* border: 1px solid red; */
     text-align: left;
 }
 
+
 .post__add-new-comment {
+    width: 96.75%;
+}
+
+.post__add-new-comment-input {
     padding: 0 10px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -69,5 +78,6 @@
     color: grey;
     border: none;
     text-decoration: none;
+    width: 100%;
 }
 

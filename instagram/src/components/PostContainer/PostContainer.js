@@ -15,7 +15,9 @@ const PostContainer = props => {
             </div>
             <img className="post__img" src={props.post.imageUrl} alt="Post"/>
             <div className="post__bottom">
-                <div className="far fa-heart"></div> &nbsp;&nbsp;
+                <div 
+                    className="far fa-heart post__bottom--heart" 
+                    onClick={event => props.addLike(event, props.index)}></div> &nbsp;&nbsp;
                 <div className="far fa-comment"></div>
                 <div className="post__bottom--likes">{props.post.likes} likes</div>
             </div>
@@ -23,9 +25,9 @@ const PostContainer = props => {
                 comments={props.post.comments}
             />
             <div className="post__time">{moment(props.post.timestamp, "MMMM Do YYYY, hh:mm:ss a").fromNow().toString()}</div>
-            <form onSubmit={event => props.addNewComment(event, props.index)}>
+            <form className="post__add-new-comment" onSubmit={event => props.addNewComment(event, props.index)}>
                 <input 
-                    className="post__add-new-comment"
+                    className="post__add-new-comment-input"
                     placeholder="Add a comment ..."
                     type="text"
                     name="commentText"

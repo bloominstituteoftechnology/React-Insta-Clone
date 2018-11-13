@@ -16,6 +16,7 @@ const Posts = props => {
                     handleInputChange={props.handleInputChange}
                     addNewComment={props.addNewComment}
                     index={index}
+                    addLike={props.addLike}
                 />
             ))}
         </div>        
