@@ -1,0 +1,50 @@
+.search-bar {
+  display: flex;
+  max-width: 107.4rem;
+  height: 7.6rem;
+  padding: 2rem 2.6rem;
+  justify-content: space-between;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+  font-family: 'Cormorant Upright', serif;
+  font-size: 2.7rem;
+  font-weight: bold;
+}
+
+.logo .logo--vline {
+  font-weight: 100;
+  font-size: 3rem;
+  margin: 0 1rem;
+}
+
+.logo i {
+  font-size: 2.4rem;
+  font-weight: 100;
+  padding-bottom: .4rem;
+}
+
+.fa-input {
+  width: 21.5rem;
+  height: 2.8rem;
+  border-radius: .3rem;
+  border-style: none;
+  border: 1px solid lightgray;
+  background-color: #fafafa;
+  text-align: center;
+  font-weight: regular;
+  font-size: 1.6rem;
+  font-family: "Font Awesome 5 Free", "Roboto", sans-serif;
+}
+
+.fa-input::placeholder {
+  color: lightgray;
+}
+
+.navbar .fa-heart {
+  margin: 0 4rem;
+}
