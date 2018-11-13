@@ -1,0 +1,46 @@
+/* Comments */
+.comment-section-container {
+    padding: 10px;
+}
+
+.comment-section-container .post-interact-icons {
+    text-align: left;
+}
+
+.comment-section-container .post-interact-icons i {
+    font-size: 1.5rem;
+    margin: 5px 8px 5px 0;
+    cursor: pointer;
+}
+
+.comment-section-container .post-comments {
+    text-align: left;
+    /* margin: 10px; */
+}
+
+.comment-section-container .post-likes {
+    text-align: left;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.comment-username {
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.comment {
+    margin: 8px 0;
+}
+
+.comment-section-container .post-comment-input {
+    border-top: 1px solid lightgray;
+}
+
+.comment-section-container .post-comment-input input {
+    width: 100%;
+    font-size: 1rem;
+    margin: 0;
+    border: 0;
+    padding: 15px 0;
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import dummyData from './src/dummy-data';
+import PropTypes from 'prop-types';
 
 const Comment = props => {
     return (
@@ -13,5 +13,9 @@ const Comment = props => {
     )
 }
 
+Comment.propTypes = {
+    username: PropTypes.string,
+    text: PropTypes.string,
+}
 
 export default Comment;

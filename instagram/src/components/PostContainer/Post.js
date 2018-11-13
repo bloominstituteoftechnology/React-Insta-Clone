@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-
+import React from 'react';
+import PropTypes from 'prop-types';
 import './PostContainer.css';
 
 
@@ -7,7 +7,7 @@ const Post = props => {
     return (
         <div className="post">
             <div className="post-author">
-                <img src={props.post.thumbnailUrl} alt="profile" className="profile-img"/>
+                <img src={props.thumbnailUrl} alt="profile" className="profile-img"/>
                 {props.post.username}
             </div>
             <div className="post-image">
@@ -20,5 +20,9 @@ const Post = props => {
     )
 }
 
+Post.propTypes = {
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+}
 
 export default Post;

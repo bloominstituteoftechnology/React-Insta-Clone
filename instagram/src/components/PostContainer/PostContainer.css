@@ -1,11 +1,16 @@
 /* Post Container */
 .post-container {
-    border: 1px solid lightgray;
+    /* border: 1px solid red; */
     min-width: 300px;
-    min-height: 400px;
+    /* min-height: 400px; */
     max-width: 600px;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
+}
+
+.post-container .post-content {
+    border: 1px solid lightgray;
+    margin: 25px 0;
 }
 
 /* Post */
@@ -29,6 +34,7 @@ border-radius: 50%;
 
 .post .post-image img{
     width: 100%;
+    margin: 10px 0;
 }
 
 .post .post-comments {

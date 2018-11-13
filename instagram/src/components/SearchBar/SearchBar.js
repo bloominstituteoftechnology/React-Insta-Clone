@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 // import dummyData from './src/dummy-data';
 import instagram from '../../instagram-brands.svg';
-import search from './search.svg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faCompass, faHeart } from '@fortawesome/free-regular-svg-icons';
 
-library.add(fab, faCompass, faSearch, faHeart);
+library.add(fab, faCompass, faHeart);
+
+const searchIcon = <i className="fas fa-search" />
 
 const SearchBar = () => {
     return (
@@ -20,16 +20,14 @@ const SearchBar = () => {
                     <img className="App-text-logo" src="https://fontmeme.com/images/instagram-new-logo.png" alt="logo"/>
                 </div>
                 <div className="search-box">
-                    <input type="text" name="inputText" placeholder="Search"            // value={props.inputText}
-                    // onChange={props.handleChange}
+    <input type="text" name="inputText" placeholder="Search"
                     ></input>
                     
                 </div>
                 <div className="icon-container">
-                    <FontAwesomeIcon icon="compass" className="black icon"/>
-                    <FontAwesomeIcon icon="heart" className="black icon"/>
-                    <img className="heart icon" src={instagram} alt="logo" />
-                    <img className="person icon" src={instagram} alt="logo" />
+                    <i className="far fa-compass"></i>
+                    <i className="far fa-heart"></i>
+                    <i className="far fa-user"></i>
                 </div>
             </div>
         </div>

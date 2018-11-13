@@ -127,24 +127,13 @@ table {
   width: 15%;
   justify-content: space-evenly;
   align-items: center;
+  color: #222222;
 }
 
-.search-bar-container .search-bar .icon-container .icon {
+.search-bar-container .search-bar .icon-container i {
   max-width: 40px;
-}
-
-.black {
-  color: black;
+  cursor: pointer;
 }
 
 
 
-/* Comments */
-.post-comments {
-  text-align: left;
-}
-
-.comment-username {
-  font-weight: bold;
-  margin-right: 2px;
-}

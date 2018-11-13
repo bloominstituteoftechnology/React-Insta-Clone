@@ -1,31 +1,35 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
+import PropTypes from 'prop-types';
+import './CommentSection.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { faCompass, faHeart } from '@fortawesome/free-regular-svg-icons';
+// import { faComment, faHeart} from '@fortawesome/free-solid-svg-icons';
+import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
+
+library.add(fab, faComment, faHeart);
 
 const CommentSection = props => {
     return (
         <div className="comment-section-container">
             <div className="post-interact-icons">
-
+                <i className="far fa-heart"></i>
+                <i className="far fa-comment"></i>
             </div>
             <div className="post-likes">
-                {/* Works */}
-                <p>{props.post.likes} Likes</p>
+                <p>{props.post.likes} likes</p>
             </div>
             <div className="post-comments">
-                {props.post.comments.map(
-                    comment => (
+                {/* {props.post.comments.map( */}
+                    {/* comment => (  */}
                         <Comment 
-                            key={comment.username}
-                            comment={comment}
+                            key={props.username}
+                            comment={props}
                         />
-                    )
-                )}
+                    {/* ) */}
+                {/* )}  */}
             </div>
             <div className="post-comment-input">
                 <input type="text" placeholder="Add a comment..." />
@@ -33,5 +37,14 @@ const CommentSection = props => {
         </div>
     )
 };
+
+CommentSection.propTypes = {
+    username: PropTypes.string,
+    likes: PropTypes.number,
+    comments: PropTypes.shape({
+        username: PropTypes.string,
+        text: PropTypes.string
+    })
+}
 
 export default CommentSection;
