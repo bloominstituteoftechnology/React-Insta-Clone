@@ -4,7 +4,7 @@ import PostContainer from './components/PostContainer/PostContainer';
 import SearchForm from './components/SearchBar/SearchBar';
 import styled from 'styled-components';
 import './App.css';
-// import Fuse from 'fuse';
+import Fuse from 'fuse.js';
 
 const AppContainer = styled.div`
   margin-top: 50px;
@@ -43,12 +43,13 @@ class App extends Component {
   searchItems = ev => {
     ev.preventDefault();
     const options = {keys: ['username']};
-    // const fuse = new Fuse(this.state.posts,options);
-    // console.log(fuse.search('fort'))
-    console.log('searching...')
+    const fuse = new Fuse(this.state.posts,options);
+    console.log(fuse.search(`${this.state.searchText.toUpperCase()}`))
+    // console.log('searching...')
     this.setState({
       posts: this.state.posts.map(item => {
-        if(!item.username.toUpperCase().includes(`${this.state.searchText.toUpperCase()}`)){
+        // if(!item.username.toUpperCase().includes(`${this.state.searchText.toUpperCase()}`)){
+        if(!fuse.search(`${this.state.searchText.toUpperCase()}`).includes(item)){
           return{...item, display: false}
         }
         else{
