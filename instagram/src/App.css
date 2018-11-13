@@ -56,7 +56,6 @@ table {
 
 .App {
   text-align: center;
-  border: 2px solid blue;
   width: 100%;
 }
 
@@ -77,7 +76,7 @@ table {
 
 
 .search-bar-container {
-  
+  border-bottom: 1px solid #EDEDED;
 }
 
 .search-bar-container .search-bar {
@@ -118,7 +117,9 @@ table {
 }
 
 .search-bar-container .search-bar .search-box input {
-
+  background-color: #FAFAFA;
+  border: 1px solid #EDEDED;
+  text-align: center;
 }
 
 .search-bar-container .search-bar .icon-container {
@@ -132,13 +133,13 @@ table {
   max-width: 40px;
 }
 
+.black {
+  color: black;
+}
 
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Post Container */
+.post-container {
+  border: 1px solid lightgray;
+  min-width: 300px;
+  min-height: 400px;
 }
