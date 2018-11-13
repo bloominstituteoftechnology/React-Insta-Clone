@@ -21,8 +21,6 @@ class CommentSection extends Component {
 
       addNewComment = ev =>{
         ev.preventDefault();
-        console.log(ev.target);
-        console.log(this);
         if(!(this.state.inputText === '')){
             this.setState({
                 comments:[

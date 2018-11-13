@@ -15,7 +15,7 @@ const Post = props => {
             </div>
             <img src={props.data.imageUrl} />
             <div className='likes'>
-            <div className='icons'><h1>♡</h1><h1 className='comment'>🗨️</h1></div>
+            <div className='icons'><h1 onClick={props.addLike}>♡</h1><h1 className='comment'>🗨️</h1></div>
                 
                 <p>{props.data.likes} likes</p>
             </div>
