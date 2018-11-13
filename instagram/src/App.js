@@ -149,8 +149,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.searchTerm.length);
-    console.log(this.state.post);
     return (
       <div className="App">
         <SearchBar
@@ -160,7 +158,7 @@ class App extends Component {
         />
         {this.state.post.map(item => (
           <PostContainer
-            key={item.timestamp}
+            key={item.imageUrl}
             post={item}
             addComment={this.addComment}
             like={this.addLike}
