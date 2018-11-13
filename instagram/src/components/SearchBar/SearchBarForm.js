@@ -10,7 +10,9 @@ const SearchBarForm = props => {
         <input 
           className="input-text fas fa-search"
           type="text"
-          placeholder="&#xf002; Search"/>
+          placeholder="&#xf002; Search"
+          value={props.filter}
+          onChange={props.handleInputChange}/>
       </form>
     </div>
   );

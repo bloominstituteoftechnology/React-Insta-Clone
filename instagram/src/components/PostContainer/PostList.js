@@ -6,7 +6,10 @@ import './PostContainer.css';
 
 const PostList = props => {
     let posts = props.postData.map((post, index) => {
-    return <Post key={index} postData={post} inputComment={props.inputComment} handleAddComment={props.handleAddComment} handleChange={props.handleChange}/>; 
+    return <Post key={index} postData={post} 
+    inputComment={props.inputComment} 
+    handleAddComment={props.handleAddComment} 
+    handleChange={props.handleChange}/>; 
     });
 
 

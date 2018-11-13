@@ -9,9 +9,24 @@ class App extends Component {
     super();
     this.state = {
       posts: [],
-      
+      filter: ''
 
     };
+  }
+
+  handleInputChange = event => {
+    this.setState({
+      filter: event.target.value,
+    });
+  };
+
+  getFilteredPosts = () => {
+    if (this.state.filter === '') return this.state.posts;
+
+    return this.state.posts.filter(post => {
+      let username = post.username.toLowerCase().includes(this.state.filter.toLowerCase());
+      return username;
+    });
   }
 
   componentDidMount(){
@@ -23,8 +38,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar  />
-        <PostList postData={this.state.posts} inputComment={this.state.usersComments} handleAddComment={this.handleAddComment} handleChange={this.handleChange}/>
+        <SearchBar  filter={this.state.filter} handleInputChange={this.handleInputChange}/>
+        <PostList postData={this.getFilteredPosts()} inputComment={this.state.usersComments} handleAddComment={this.handleAddComment} handleChange={this.handleChange}/>
       </div>
     );
   }

@@ -12,7 +12,7 @@ const SearchBar = props => {
                 <div className="searchbar-container">
                     <div className="container-flex">
                         <SearchBarLogoContainer />
-                        <SearchBarForm inputText={props.inputText} inputIcon={props.inputIcon}/>
+                        <SearchBarForm filter={props.filter} handleInputChange={props.handleInputChange}/>
                         <IconsContainer />
                     </div>
                 </div>
