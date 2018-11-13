@@ -1,0 +1,32 @@
+.searchBar{
+    width: 100%;
+    background: lightblue;
+    padding: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:  space-between;
+    align-items: center;
+}
+.head-box{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+input{
+    text-align: center;
+}
+.searchBar img{
+    width: 50%;
+    height: 10%;
+}
+.searchBar .profile{
+    width: 10%;
+    height: 5%;
+}
+.searchBar .logo{
+    width: 20%;
+    height: 5%;
+}
+.menu{
+    justify-content: space-around;
+}
