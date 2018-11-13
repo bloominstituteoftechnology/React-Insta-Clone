@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from './post';
+import Comments from '../CommentSection/comments';
 
 const PostContainer = props => {
     return (
@@ -9,6 +10,7 @@ const PostContainer = props => {
                 <Post key={post.id} post={post} />
             )
             })}
+            <p>{props.dummyData.likes}</p>
         </div>
     )
 }

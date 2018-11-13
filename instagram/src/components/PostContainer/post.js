@@ -11,7 +11,6 @@ const Post = props => {
       </div>
       <div className="postImage">
         <img src={props.post.imageUrl} alt="" />
-        <Comments like={props.post.like} comments={props.post.comment} />
       </div>
     </div>
   );

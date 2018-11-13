@@ -5,6 +5,15 @@ const Comments = props => {
     return (
         <div className="comments">
         <p>{props.likes} likes</p>
+        {props.post.comments.map((comment, i) => {
+            return (
+                <div className="commnent">
+                <p className="commentName">{comment.username}</p>
+                <p className="commentText">{comment.text}</p>
+
+                </div>
+            )
+        })}
         </div>
     )
 }
