@@ -4,8 +4,10 @@
   height: 7.6rem;
   padding: 2rem 2.6rem;
   justify-content: space-between;
+  align-items: flex-end;
   font-size: 2.4rem;
   font-weight: 500;
+  margin: 0 auto;
 }
 
 .logo {
