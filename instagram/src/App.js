@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import dummyData from './dummy-data';
 import './App.css';
+import Navigation from './components/Navigation';
+import PostContainer from './PostContainer/PostContainer';
+
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data: dummyData,
+      searchText: '',
+    }
+  }
+
+  handlesChanges = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  }
+  
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <Navigation handlesChanges={this.handlesChanges} searchText={this.state.searchText}/>
         </header>
+        <PostContainer data={this.state.data}/>
       </div>
     );
   }
 }
+
 
 export default App;

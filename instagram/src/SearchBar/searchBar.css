@@ -1,0 +1,24 @@
+.search-bar {
+    position: relative;
+    margin-right: 60px;
+}
+
+/* .fa-search {
+    position: absolute;
+    left: 9.2rem;
+    top: 2.4rem;
+    font-size: 1.4rem;
+    color: #A5A5A5;
+    cursor: text;
+} */
+
+.search-bar input {
+    width: 28rem;
+    background-color: #FAFAFA;
+    padding: 5px;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+    color: #A5A5A5;
+    text-align: center;
+    font-size: 1.8rem;
+}
