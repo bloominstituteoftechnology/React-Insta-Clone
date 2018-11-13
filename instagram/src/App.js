@@ -102,6 +102,9 @@ class App extends Component {
   }
 
   render() {
+    console.log('rendering');
+    const displayedPosts = this.state.data.filter(d => d.username.includes(this.state.searchText));
+    console.log(displayedPosts);
     if (!this.state.loggedIn) {
       return <Login login={this.login} />;
     }
@@ -109,7 +112,7 @@ class App extends Component {
     return (
       <div className="App">
         <PostsPage
-          posts={this.state.data}
+          posts={displayedPosts}
           searchText={this.state.searchText}
           updateSearchText={this.updateSearchText}
           logout={this.logout}
