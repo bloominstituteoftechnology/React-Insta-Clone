@@ -5,25 +5,29 @@ import CommentSection from '../CommentSection/CommentSection';
 const PostContainer = props => {
     return (
         props.postsList.map(post => (
-            <div className='post'>
-                <div>
-                    <img src={post.thumbnailUrl} alt='' />
+            <div className='post-container'>
+                <div className='insta-user'>
+                    <img src={post.thumbnailUrl} alt='User Thumbnail' className='icon' />
                     <h2>{post.username}</h2>
                 </div>
                 
-                <img src={post.imageUrl} alt='' />
+                <img src={post.imageUrl} alt='Post Image' className='post-img' />
 
-                <div>
-                    <i class="fa fa-heart-o" aria-hidden="true"></i>
-                    <i class="fa fa-comment-o" aria-hidden="true"></i>
-                    <p className='heavy-font'>{post.likes}</p>  
+                <div className='comments-container'>
+                    <div className='likes-container'>
+                        <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-comment-o fa-2x" aria-hidden="true"></i> 
+                        <p className='heavy-font'>{post.likes} likes</p> 
+                    </div>
+                    
+                    {post.comments.map(comment => (
+                        <CommentSection comment={comment} />
+                    ))}
+
+                    <p className='light-font'>{post.timestamp}</p>
+                    <input type='text' placeholder='Add a comment...'></input>
                 </div>
                 
-                {post.comments.map(comment => (
-                    <CommentSection comment={comment} />
-                ))}
-
-                <p className='light-font'>{post.timestamp}</p>
             </div>
         ))
             

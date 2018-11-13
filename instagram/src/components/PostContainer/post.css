@@ -1,0 +1,65 @@
+.post-container {
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.insta-user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 15px 15px;
+}
+
+.insta-user .icon {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.post-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.comments-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.likes-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.likes-container i {
+    margin-bottom: -5px;
+    margin-left: -15px;
+}
+
+.likes-container .fa-comment-o {
+    margin-left: -20px;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+.likes-container p {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 500;
+}

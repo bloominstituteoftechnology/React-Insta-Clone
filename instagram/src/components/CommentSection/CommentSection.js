@@ -3,7 +3,7 @@ import './Comments.css';
 
 const CommentSection = props => {
     return (
-        <div className='comment-section'>
+        <div className='comment'>
             <p><span className='heavy-font'>{props.comment.username}</span> {props.comment.text}</p>
         </div>
     )
