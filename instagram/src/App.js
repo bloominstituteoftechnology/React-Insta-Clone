@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/post-container';
+import './App.css';
 
 class App extends Component {
   constructor() {
