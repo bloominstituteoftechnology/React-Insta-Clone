@@ -10,6 +10,7 @@ const PostContainer = props => {
         <div className="post-container">
             {props.posts.map(p => <Post key={p.id} post={p} />)} 
         </div>
+        
 
     );
 };

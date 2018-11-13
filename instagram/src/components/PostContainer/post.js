@@ -8,12 +8,28 @@ import './postcontainer.css';
 
 const Post = props => {
     return (
-        <div className="post-individual">
-            <PostHeader 
-                userimg={props.post.thumbnailUrl}
-                username={props.post.username}
-            />
-            <CommentSection /> 
+        <div className="postIndividual">
+            <div>
+                <PostHeader
+                    userimg={props.post.thumbnailUrl}
+                    username={props.post.username}
+                />
+            </div>
+            <div>
+                <img className="postImage"
+                    alt="post visual rep"
+                    src={props.post.imageUrl}
+                />
+            </div>
+                <div>
+                    Like Comment
+                </div>
+                <div>
+                    <p>{props.post.likes} likes</p>
+                </div>
+            <div>
+                <CommentSection comments={props.post.comments}/>
+            </div>
         </div>
 
     );
