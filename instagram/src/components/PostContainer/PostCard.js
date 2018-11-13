@@ -2,7 +2,8 @@ import React from 'react'
 import CommentCard from '../CommentSection/CommentCard';
 
 const PostCard = props => {
-  console.log("POSTCARD PROPS", props);
+  // console.log("POSTCARD PROPS",typeof props.likes);
+  // console.log("POSTCARD PROPS DATA", props.addLike);
   
   return (
     <div className="post-card">
@@ -19,8 +20,16 @@ const PostCard = props => {
         src={props.data.imageUrl}
         alt="user post"
       />
-      <div className="social-container">
-        <i className="far fa-heart"></i>
+      <div 
+        className="social-container"
+        key="socialContainer"
+        >
+        <i 
+          className="far fa-heart"
+          id={props.id}
+          likes={parseInt(props.likes, 10)}
+          onClick={props.addLike}
+        ></i>
         <i className="far fa-comment"></i>
       </div>
       <p>{props.data.likes} likes</p>

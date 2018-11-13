@@ -50,8 +50,6 @@ class CommentCard extends Component {
       }
       
       render () {
-        // console.log(this.state);
-        {console.log("CARD PROPS", this.props)}
         return (
           <div className="comment-card">
         {this.state.comments.map(

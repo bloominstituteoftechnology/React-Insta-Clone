@@ -8,25 +8,50 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: [],
-    }
+      posts: [],
+      filteredPosts: []
+    };
   }
 
   componentDidMount() {
     let storedPosts = JSON.parse(localStorage.getItem('posts'));
-    if(storedPosts) {this.setState({ data: storedPosts})}
+    if(storedPosts) {this.setState({ posts: storedPosts})}
     this.setState({
-      data: dummyData,
+      posts: dummyData,
     })
   }
+
+  handleSearchChange = e => {
+    let posts = this.state.posts.filter(post => {
+      if(post.username.includes(e.target.value)) {
+        return post;
+      }
+    });
+    this.setState({ filteredPosts: posts})
+  }
+
+
+  // addLike = (prevState) => {
+    
+  //   this.setState(prevState => {
+  //     // {console.log("PREVSTATE", prevState)}
+  //     return {likes: prevState.likes + 1}
+  //   });
+  // };
 
   render() {
     
     return (
       <div className="App">
-        <SearchBarContainer />
+        <SearchBarContainer 
+          searchTerm={this.state.searchTerm}
+          searchPosts={this.handleSearchChange}
+        />
         <PostContainer 
-          data={this.state.data}
+          data={this.state.filteredPosts.length > 0 ?
+            this.state.filteredPosts : 
+            this.state.posts}
+          // addLike={this.addLike}
         />
       </div>
     );

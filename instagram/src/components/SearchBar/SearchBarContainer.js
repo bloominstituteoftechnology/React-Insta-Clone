@@ -1,11 +1,9 @@
 import React from 'react';
 import './Searchbar.css';
-import Searchbar from './Searchbar';
 import logo from '../Images/instagramScript.svg';
 
 
 const SearchBarContainer = props => {
-
   return (
     <header>
       <div className="searchbar-container">
@@ -13,7 +11,15 @@ const SearchBarContainer = props => {
           <i className="fab fa-instagram"></i>
           <img src={logo} alt="instagram script logo"/>
         </div>
-        <Searchbar />
+        <div>
+          <input
+            name="search"
+            type="text"
+            onChange={props.searchPosts}
+            className="fa fa-input"
+            placeholder="&#xf002; Search"
+            />
+        </div>
         <div className="searchbar-right">
           <i className="far fa-compass"></i>
           <i className="far fa-heart"></i>

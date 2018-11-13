@@ -3,8 +3,6 @@ import './Comment.css'
 
 
 const CommentInput= props => {
-  {console.log("COMMENTS INPUT PROPS", props);
-  }
   return (
     <Fragment>
       <form>
