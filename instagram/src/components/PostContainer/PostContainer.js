@@ -19,6 +19,8 @@ const PostContainer = props => {
         comments={props.post.comments}
         likes={props.post.likes}
         timestamp={props.post.timestamp}
+        commentText={props.commentText}
+        onCommentFormChange={(e, u , t) => props.onCommentFormChange(e, u, t)}
       />
     </div>
   );

@@ -20,7 +20,10 @@ const CommentSection = props => {
       <div className="post--time-stamp">
         {props.timestamp}
       </div>
-      <CommentForm />
+      <CommentForm
+        commentText={props.commentText}
+        onCommentFormChange={(e, u, t) => props.onCommentFormChange(e, u, t)}
+      />
     </div>
   );
 }

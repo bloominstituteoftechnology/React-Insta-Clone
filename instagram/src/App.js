@@ -12,8 +12,26 @@ class App extends Component {
     super(props);
     this.state = {
       data: dummyData,
+      commentText: dummyData.map(post => ({
+        username: post.username,
+        text: '',
+        timestamp: post.timestamp,
+      })),
     };
   }
+
+  onCommentFormChange(e, u, t) {
+    console.log(u, t);
+    this.setState({
+      commentText: this.state.commentText.map(text => {
+        if (text.username === u && text.timestamp === t) {
+          text.text = e.target.value;
+        }
+        return text;
+      }),
+    });
+  }
+
   render() {
     console.log(dummyData);
     return (
@@ -23,9 +41,14 @@ class App extends Component {
           <div className="posts">
             {
               this.state.data.map(
-                post => <PostContainer key={post.username + post.timestamp} post={post}/>
-              )
-            }
+                (post, i) => (
+                  <PostContainer
+                    key={post.username + post.timestamp}
+                    commentText={this.state.commentText[i]}
+                    onCommentFormChange={(e, u, t) => this.onCommentFormChange(e, u, t)}
+                    post={post}
+                  />
+            ))}
           </div>
         </div>
       </div>
