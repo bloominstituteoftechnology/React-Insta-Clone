@@ -23,7 +23,21 @@ class App extends Component {
 
   componentDidMount() {
 
-    this.setState({data: dummyData, displayedData: dummyData});
+    let initialData = dummyData;
+
+    if (localStorage.data) {
+
+      initialData = JSON.parse(localStorage.data);
+
+    }
+
+    this.setState({data: initialData, displayedData: initialData});
+
+  }
+
+  componentDidUpdate() {
+
+    localStorage.data = JSON.stringify(this.state.data);
 
   }
 
