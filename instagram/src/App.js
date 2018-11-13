@@ -11,23 +11,42 @@ class App extends Component {
   constructor(){
     super();
     this.state={
-      posts: []
+      posts: [],
+      filteredPosts: []
     }
   }
 
   componentDidMount(){
     this.setState({ posts: dummyData})
+    this.setState({ filteredPosts: dummyData})
   }
 
-  
+  searchFilter = ev =>{
+    let thing = this.state.posts.filter(data =>{
+        // console.log(ev.target.value)
+        // console.log(data.username)
+        // console.log(data.username.includes(ev.target.value))
+        return data.username.includes(ev.target.value);
+      
+      
+    })
+    // if(ev.target.value === ''){
+    //   filterPosts = this.state.posts;
+    // }
+    
+    this.setState({
+      filteredPosts: thing
+    })
+
+  }
   
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar searchFilter={this.searchFilter}/>
         <div className="container">
         
-        {this.state.posts.map((data, index) => (
+        {this.state.filteredPosts.map((data, index) => (
           <PostContainer
             data ={data}
             key={index}

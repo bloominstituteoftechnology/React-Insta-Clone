@@ -16,7 +16,8 @@ const SearchBar = props => {
             
             </div>
             <div className='head-box search'>
-            <input placeholder="Search"/>
+            <form ><input onChange={props.searchFilter} placeholder="Search"/></form>
+            
             </div>
             <div className='head-box menu'>
             <h1>⦾</h1>
