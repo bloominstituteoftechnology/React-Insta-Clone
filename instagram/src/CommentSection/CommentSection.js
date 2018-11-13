@@ -39,8 +39,8 @@ class CommentSection extends React.Component {
     render() {
         return(
             <div>
-                {this.state.comments.map(comment => (
-                <div className='individual-comment'>
+                {this.state.comments.map((comment, index) => (
+                <div key={`comment ${index}`} className='individual-comment'>
                     <p><span>{comment.username}</span> {comment.text}</p>
                 </div>
             ))}

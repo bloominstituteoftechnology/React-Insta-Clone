@@ -9,7 +9,7 @@ const PostContainer = props => {
     return(
         <div className='post-container'>
             {props.data.map((currentPost, index) => (
-                <div className='individual-post'>
+                <div key ={(index + 1) * 100} className='individual-post'>
                     <PostHeader 
                         key={currentPost.timestamp} 
                         thumbnail={currentPost.thumbnailUrl} 
