@@ -3,7 +3,9 @@ import './App.css';
 
 import dummyData from './dummy-data';
 
+// Components
 import SearchBar from './components/SearchBar/SearchBar';
+import Posts from './components/PostContainer/Posts';
 
 class App extends Component {
   constructor(){
@@ -25,6 +27,7 @@ class App extends Component {
           <header>
             <SearchBar/>
           </header>
+          <Posts />
         </Fragment>
     );
   }
