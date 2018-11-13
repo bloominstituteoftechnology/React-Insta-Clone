@@ -7,17 +7,19 @@ function SearchForm(props) {
     return (
         <React.Fragment>
             
-            {/*} <form>
+             <form>
                     <input 
                     type="text"
                     name=""
-                    placeholder="(&search image)Search">
+                    onChange={props.handleChange}
+                    placeholder="Search">
             
                     </input>
+                    <i class="fas fa-search" type="submit"></i>
 
                 </form>
 
-    */}
+    
 
         </React.Fragment>
     );

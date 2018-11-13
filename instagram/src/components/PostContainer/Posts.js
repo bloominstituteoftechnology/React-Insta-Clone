@@ -6,7 +6,7 @@ const Posts = props => {
 
         <React.Fragment>
             {props.IGPosts.map((post, index) => (
-                <PostContainer key={post.index} placeholderOnProp={post}/>
+                <PostContainer key={post.timestamp} placeholderOnProp={post}/>
             ))}
 
         </React.Fragment>

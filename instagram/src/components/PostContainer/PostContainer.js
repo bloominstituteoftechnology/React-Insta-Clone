@@ -1,12 +1,12 @@
 import React from 'react';
-// import CommentSection from './';
+import CommentSectionContainer from '../CommentSection/CommentSectionContainer ';
 
 
 const PostContainer = (props) => {
     return (
         <div>
             <div className="PostHeader" >
-                <img src={props.placeholderOnProp.thumnailUrl} alt="thumnail Url"/> <h4>{props.placeholderOnProp.username}</h4>
+                <img src={props.placeholderOnProp.thumnailUrl} alt="thumbnail Url"/> <h4>{props.placeholderOnProp.username}</h4>
 
             </div>
 
@@ -18,13 +18,27 @@ const PostContainer = (props) => {
             <div>
 
                 <h5>{`${props.placeholderOnProp.likes} likes `}</h5>
+                <h5>{`${props.placeholderOnProp.timestamp}`}</h5>
                 
 
             </div>
-            <div className="PostedComments" >
 
-                <p>{props.placeholderOnProp.comments.username}</p>
-                <p>{props.placeholderOnProp.comments.text}</p>
+
+
+
+
+            <div className="PostedComments" >
+                {/*<CommentSectionContainer commets= {props.InstaPosts.comments} />*/}
+
+                {/*<p>{props.placeholderOnProp.comments.username}</p>
+                <p>{props.placeholderOnProp.comments.text}</p>*/}
+            </div>
+
+
+
+
+            <div>
+                <h5>{props.placeholderOnProp.timestamp}</h5>
             </div>
             <div className="AddCommentsDiv">
                 

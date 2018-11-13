@@ -4,14 +4,20 @@ import './App.css';
 import DummmyData from './dummy-data';
 import SearchBarBox from './components/SearchBar/SearchBarBox';
 import Posts from './components/PostContainer/Posts';
+import PropTypes from 'prop-types';
 
 
 class App extends Component {
   constructor(){
     super();
     this.state = {
-      InstaPosts: DummmyData,
-    }
+      InstaPosts: []
+      {/*filteredInstaPosts: []*/}
+    };
+  }
+
+  componentDidMount() {
+    this.setState({ InstaPosts: DummmyData });
   }
 
   addPost =() => {
@@ -54,5 +60,23 @@ class App extends Component {
     );
   }
 }
+
+
+{/* 
+App.proptypes = {
+  InstaPosts: PropTypes.arrayOf(
+    PropTypes.shape({
+      thumbnailUrl: PropTypes.string,
+      imageUrl: PropTypes.string,
+      likes: PropTypes.num,
+      timestamp: PropTypes.string,
+      comments: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+          UserName: PropTypes.string
+        })
+      )
+    })
+*/}
 
 export default App;
