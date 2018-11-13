@@ -6,9 +6,9 @@ import CommentSection from '../CommentSection/CommentSection';
 
 import './PostContainer.scss';
 
-export default function PostContainer({data}) {
+export default function PostContainer({data, addComment}) {
 
-  const {comments, imageUrl, likes, thumbnailUrl, timestamp, username} = data;
+  const {comments, imageUrl, likes, thumbnailUrl, timestamp, username, id} = data;
 
   return (
 
@@ -36,7 +36,7 @@ export default function PostContainer({data}) {
 
       </div>
 
-      <CommentSection comments={comments} time={moment(timestamp, "MMMM Do YYYY hh:mm:ss A").fromNow()} />
+      <CommentSection url={imageUrl} comments={comments} time={moment(timestamp, "MMMM Do YYYY hh:mm:ss A").fromNow()} addComment={addComment} />
 
     </div>
 

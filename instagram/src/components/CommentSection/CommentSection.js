@@ -5,27 +5,55 @@ import './CommentSection.scss';
 
 import Comment from './Comment';
 
-export default function CommentSection({comments, time, addComment}) {
+export default class CommentSection extends React.Component {
 
-  return (
+  constructor() {
 
-    <div className='comment-section'>
+    super();
 
-      {comments.map(comment => (
-        <Comment key={comment.text} comment={comment} />
-      ))}
+    this.state = {
 
-      <p className='time'>{time}</p>
+      currentComment: ''
 
-      <form onSubmit={addComment}>
+    }
 
-        <input type='text' placeholder='Add a comment...' />
+  }
 
-      </form>
+  handleChange = e => {
 
-    </div>
+    this.setState({currentComment: e.target.value});
 
-  );
+  }
+
+  render() {
+
+    let {comments, time, addComment, url} = this.props;
+
+    return (
+
+      <div className='comment-section'>
+
+        {comments.map(comment => (
+          <Comment key={comment.text} comment={comment} />
+        ))}
+
+        <p className='time'>{time}</p>
+
+        <form onSubmit={e => {
+          e.preventDefault();
+          addComment({username: 'captaincrunch17', text: this.state.currentComment}, url);
+          this.setState({currentComment: ''});
+        }}>
+
+          <input type='text' placeholder='Add a comment...' value={this.state.currentComment} onChange={this.handleChange}/>
+
+        </form>
+
+      </div>
+
+    );
+
+  }
 
 }
 
