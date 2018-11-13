@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
@@ -13,7 +14,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    
+
   }
 
   render() {
@@ -24,6 +25,10 @@ class App extends Component {
       </div>
     );
   }
+}
+
+App.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default App;

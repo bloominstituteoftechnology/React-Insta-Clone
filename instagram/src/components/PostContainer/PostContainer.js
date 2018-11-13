@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Post.css';
 import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => {
     return (
         props.postsList.map(post => (
-            <div className='post-container'>
+            <div className='post-container' key={post.timestamp}>
                 <div className='insta-user'>
                     <img src={post.thumbnailUrl} alt='User Thumbnail' className='icon' />
                     <h2>{post.username}</h2>
@@ -15,8 +16,8 @@ const PostContainer = props => {
 
                 <div className='comments-container'>
                     <div className='likes-container'>
-                        <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
-                        <i class="fa fa-comment-o fa-2x" aria-hidden="true"></i> 
+                        <i className="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+                        <i className="fa fa-comment-o fa-2x" aria-hidden="true"></i> 
                         <p className='heavy-font'>{post.likes} likes</p> 
                     </div>
                     
@@ -40,6 +41,16 @@ const PostContainer = props => {
         ))
             
     )    
+}
+
+PostContainer.propTypes = {
+    post: PropTypes.shape({
+        comments: PropTypes.arrayOf(PropTypes.string),
+        imageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string,
+        username: PropTypes.string,
+    })  
 }
 
 export default PostContainer;
