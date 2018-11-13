@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import Fuse from "fuse.js";
 import SearchBar from "./components/SearchBar/SearchBar";
 import dummyData from "./dummy-data";
 import PostContainer from "./components/PostContainer/PostContainer";
@@ -30,8 +31,7 @@ class App extends Component {
     super();
     this.state = {
       post: [],
-      searchTerm: "",
-      filtered: []
+      searchTerm: ""
     };
   }
 
@@ -66,20 +66,38 @@ class App extends Component {
     }
   }
 
-  handleChange = e => {
-    this.setState({
-      searchTerm: e.target.value
-    });
-  };
+  // handleChange = e => {
+  //   this.setState({
+  //     searchTerm: e.target.value
+  //   });
+  // };
+
+  // filterPosts = ev => {
+  //   var updatedList = dummyData;
+  //   updatedList = updatedList.filter(item => {
+  //     return (
+  //       item.username.toLowerCase().search(ev.target.value.toLowerCase()) !== -1
+  //     );
+  //   });
+  //   this.setState({ post: updatedList, searchTerm: ev.target.value });
+  // };
 
   filterPosts = ev => {
-    var updatedList = dummyData;
-    updatedList = updatedList.filter(item => {
-      return (
-        item.username.toLowerCase().search(ev.target.value.toLowerCase()) !== -1
-      );
-    });
-    this.setState({ post: updatedList, searchTerm: ev.target.value });
+    var options = {
+      threshold: 0.6,
+      location: 0,
+      distance: 100,
+      maxPatternLength: 32,
+      minMatchCharLength: 0,
+      keys: ["username"]
+    };
+    var fuse = new Fuse(dummyData, options); // "list" is the item array
+    var result = fuse.search(ev.target.value);
+    if (result.length > 0) {
+      this.setState({ post: result, searchTerm: ev.target.value });
+    } else {
+      this.setState({ post: dummyData, searchTerm: ev.target.value });
+    }
   };
 
   addComment = (comment, id) => {
