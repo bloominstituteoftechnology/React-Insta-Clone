@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 const Comment = (props) => {
 	return (
@@ -8,10 +9,19 @@ const Comment = (props) => {
 				name="commentInput"
 				placeholder="Add a comment ..."
 				value={props.commentInput}
-				onChange={props.handleChange}
+				onChange= {(event) => {
+					props.handleChange(event)
+				}}
 			/>
 		</form>
 	);
 };
+
+Comment.propTypes = {
+	AddComment: PropTypes.func,
+	commentInput: PropTypes.string,
+	handleChange: PropTypes.func
+};
+
 
 export default Comment;

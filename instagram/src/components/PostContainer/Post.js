@@ -1,6 +1,7 @@
 import React from 'react';
 import like from '../../like.png';
 import comment from '../../comment.png';
+import PropTypes from 'prop-types';
 
 const Post = (props) => {
 	return (
@@ -29,4 +30,13 @@ const Post = (props) => {
 	);
 };
 
+Post.propTypes = {
+	posts: PropTypes.shape({
+			username: PropTypes.string.isRequired,
+			thumbnailUrl: PropTypes.string.isRequired,
+			imageUrl: PropTypes.string.isRequired,
+			likes: PropTypes.number,
+			timestamp: PropTypes.string.isRequired,
+	}).isRequired		
+}	
 export default Post;

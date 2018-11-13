@@ -3,6 +3,7 @@ import like from '../../like.png';
 import home from '../../home.png';
 import explore from '../../explore.png';
 import profile from '../../profile.png';
+import PropTypes from 'prop-types'
 
 const SearchBar = (props) => {
 	return (
@@ -12,7 +13,7 @@ const SearchBar = (props) => {
 					<img src={home} alt="home icon" />
 				</section>
 				<section className="search">
-					<form onSubmit={props.filterPosts}>
+					<form onSubmit={props.handleSearch}>
 						<input
 							type="text"
 							name="input"
@@ -34,4 +35,8 @@ const SearchBar = (props) => {
 	);
 };
 
+SearchBar.propTypes = {
+	searchInput: PropTypes.string,
+	handleSearch: PropTypes.func,
+}
 export default SearchBar;
