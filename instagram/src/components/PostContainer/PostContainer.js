@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './PostContainer.css';
 
 import PostHeader from './PostHeader';
@@ -26,6 +27,13 @@ const PostContainer = props => {
       />
     </div>
   );
+}
+
+PostContainer.propTypes = {
+  post: PropTypes.object.isRequired,
+  commentText: PropTypes.object.isRequired,
+  onCommentFormChange: PropTypes.func.isRequired,
+  onCommentFormSubmit: PropTypes.func.isRequired,
 }
 
 export default PostContainer;
