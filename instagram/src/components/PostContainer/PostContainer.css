@@ -33,6 +33,11 @@
     margin-left: 20px;
 }
 
+.mg-bottom {
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+
 
 .post-img {
     width: 100%;
@@ -44,7 +49,6 @@
 
 .post-icons {
     text-align: left;
-    margin-left: 20px;
     margin-bottom: 15px;
 }
 

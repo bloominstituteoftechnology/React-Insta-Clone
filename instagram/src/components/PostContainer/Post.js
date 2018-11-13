@@ -17,15 +17,9 @@ const Post = props => {
                 <p className="post-text__bold">{props.postData.username}</p>
             </div>
             <img className="post-img" src={props.postData.imageUrl} />
-            <div className="post-icons">
-                <i className="far fa-heart"></i>
-                <i className="far fa-comment"></i>
-            </div>
-
-            <p className="post-text__bold">{props.postData.likes} likes</p>
             
             <div className="post-comment">
-                <CommentContainer comments={props.postData.comments} timestamp={props.postData.timestamp}/>
+                <CommentContainer comments={props.postData.comments} timestamp={props.postData.timestamp} likes={props.postData.likes}/>
             </div>
             
             
