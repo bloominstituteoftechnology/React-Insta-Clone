@@ -14,6 +14,16 @@ class App extends Component {
     }
   }
 
+  searchData = () => {
+    if (this.state.searchText === '') {
+      return this.state.data;
+    } else {
+      return this.state.data.filter(post => {
+        return post.username.toLowerCase().includes(this.state.searchText.toLowerCase());
+      })
+    }
+  }
+
   handlesChanges = event => {
     this.setState({
       [event.target.name]: event.target.value
@@ -33,10 +43,11 @@ class App extends Component {
           <Navigation 
             handlesChanges={this.handlesChanges} 
             searchText={this.state.searchText}
+            searchData={this.searchData}
           />
         </header>
         <PostContainer 
-          data={this.state.data}
+          data={this.searchData()}
           searchText={this.state.searchText}
           handlesChanges={this.handlesChanges} 
         />

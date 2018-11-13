@@ -8,9 +8,7 @@ import PropTypes from 'prop-types';
 const PostContainer = props => {
     return(
         <div className='post-container'>
-            {props.data.filter(post => (
-                post.username.toLowerCase().includes(props.searchText.toLowerCase())
-            )).map((currentPost, index) => (
+            {props.data.map((currentPost, index) => (
                 <div key ={(index + 1) * 100} className='individual-post'>
                     <PostHeader 
                         key={currentPost.timestamp} 
