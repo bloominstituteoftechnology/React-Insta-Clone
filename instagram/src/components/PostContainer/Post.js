@@ -10,6 +10,7 @@ let comments = props.postData.comments.map((comment, index) => {
     return <Comment key={index} commentData={comment}/>; 
 });
 
+
     return (
     <div className="post-wrapper">
         <div className="post-item">
@@ -29,7 +30,7 @@ let comments = props.postData.comments.map((comment, index) => {
                 {comments}
             </div>
             <p className="timestamp">{props.postData.timestamp}</p>
-            <InputComment />
+            <InputComment username={props.postData.username} inputComment={props.inputComment} handleAddComment={props.handleAddComment} handleChange={props.handleChange}/>
         </div>
     </div>
     );
@@ -43,7 +44,7 @@ let comments = props.postData.comments.map((comment, index) => {
     timestamp: PropTypes.string,
     comments: PropTypes.array,
   };
-  
+
 
   
   export default Post;
