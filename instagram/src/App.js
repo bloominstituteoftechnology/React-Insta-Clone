@@ -27,7 +27,6 @@ class App extends Component {
         <SearchBarContainer />
         <PostContainer 
           data={this.state.data}
-          addComment={this.addComment}
         />
       </div>
     );

@@ -10,7 +10,8 @@ const PostContainer = props => {
         return (
           <PostCard
             data={user}
-            key={i+1}
+            key={i}
+            id={i.toString()}
           />
         )
       })}

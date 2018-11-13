@@ -6,7 +6,7 @@ import CommentInput from './CommentInput';
 
 let moment = require('moment');
 
-// console.log("CARD PROPS", props)
+// {console.log("COMMENTCARD PROPS", props)}
 class CommentCard extends Component {
   constructor(props) {
     super(props);
@@ -16,53 +16,54 @@ class CommentCard extends Component {
       comment: ''
     }
   }
-
+  
   // componentDidMount() {
-  //   let storedComments = JSON.parse(localStorage.getItem('comments'));
-  //   if(storedComments) {this.setState({ comments: storedComments})}
-  // }
-
-
-  addComment = e => {
-    e.preventDefault();
-
-    // let newComments = [...this.state.comments,
-    //   {username: "Ghosty", text: this.state.comment}];
-    //   localStorage.setItem('comments', JSON.stringify(newComments))
-
-    console.log("add comment here");
-    this.setState({
-      comments: [...this.state.comments,
-        {
-          username: "Ghosty",
-          text: this.state.comment,
-        }],
-        comment: '',
-    })
-  }
-
-  handleChange = e => {
-    // console.log("changing to: ", e.target.value);
-    // console.log("changing input name: ", e.target.name);
-    this.setState({
-      [e.target.name]: e.target.value,
-    })    
-  }
-
-  render () {
-    console.log(this.state);
+    //   let storedComments = JSON.parse(localStorage.getItem('comments'));
+    //   if(storedComments) {this.setState({ comments: storedComments})}
+    // }
     
-    return (
-      <div className="comment-card">
+    
+    addComment = e => {
+      e.preventDefault();
+      
+      // let newComments = [...this.state.comments,
+      //   {username: "Ghosty", text: this.state.comment}];
+      //   localStorage.setItem('comments', JSON.stringify(newComments))
+      
+      this.setState({
+        comments: [...this.state.comments,
+          {
+            username: "Ghosty",
+            text: this.state.comment,
+
+          }],
+          comment: '',
+        })
+      }
+      
+      handleChange = e => {
+        // console.log("changing to: ", e.target.value);
+        // console.log("changing input name: ", e.target.name);
+        this.setState({
+          [e.target.name]: e.target.value,
+        })    
+      }
+      
+      render () {
+        // console.log(this.state);
+        {console.log("CARD PROPS", this.props)}
+        return (
+          <div className="comment-card">
         {this.state.comments.map(
           (comment, i) => <Comment
-                            data={comment}
-                            key= {i+1}
-                          />
-        )}
+          data={comment}
+          key= {i+1}
+          />
+          )}
         {/* <p className="timestamp" >{this.state.timestamp}</p> */}
         <p className="timestamp" >{moment().format("MMMM Do YYYY, hh:mm a")}</p>
         <CommentInput 
+          props={this.props}
           value={this.state.comment}
           addComment={this.addComment}
           handleChange={this.handleChange}
