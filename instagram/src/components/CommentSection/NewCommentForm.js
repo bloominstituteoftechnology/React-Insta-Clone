@@ -8,7 +8,10 @@ const NewCommentForm = props => {
 
   return (
   <div className="AddNewComment">
-    <form className="post-form" onSubmit={event => props.addNewComment(event, props.postUsr, cmtUsr, moment().format('MMMM Do YYYY, h:mm:ss a'))}>
+    <form className="post-form" onSubmit={event => {
+      props.addNewComment(event, props.postUsr, cmtUsr, moment().format('MMMM Do YYYY, h:mm:ss a'));
+      }}>
+
       <textarea 
         className="post-add-comment-textbox" 
         rows="4" 

@@ -20,7 +20,6 @@ class App extends Component {
   handleChange = e => {
     let newKeyValue = e.target.value;
     this.setState({
-      // keyName: keyValue
       [e.target.name]: newKeyValue
     });
   }
@@ -47,7 +46,6 @@ class App extends Component {
         timestamp: dateTime,
         text: this.state.newComment
       }
-      console.log(selectedPost);
       selectedPost.comments.push(newComment);
   
       let newData = this.state.data.map(post => {
@@ -58,12 +56,15 @@ class App extends Component {
         }
       });
   
-      this.setState({data: newData});
+      this.setState({
+        data: newData,
+        newComment: ''
+      });
+      event.target.querySelector('textarea').value = '';
     }
   };
 
   render() {
-    console.log(this.state.comment);
     return (
       <div className="App">
         <header className="main-header">{/* camera | Instagram search-bar circle-diamond heart person */}</header>

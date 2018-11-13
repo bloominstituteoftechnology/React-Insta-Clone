@@ -23,7 +23,11 @@ const PostContainer = props => {
         {props.postContainer.comments.map(comment => (
           <CommentSection key={comment.timestamp} comment={comment} />
         ))}
-        <NewCommentForm addNewComment={props.addNewComment} postUsr={props.postContainer.username} handleChange={props.handleChange}/>
+        <NewCommentForm
+          postUsr={props.postContainer.username}
+          handleChange={props.handleChange}
+          addNewComment={props.addNewComment}
+        />
       </div>
     </div>);
 }
