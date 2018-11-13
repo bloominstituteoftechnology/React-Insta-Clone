@@ -7,10 +7,15 @@ import './Comment.css';
 const Comment = props => {
     return (
         <div className="comment">
-            <span className="comment__name">{props.comment.username}</span> <span className="comment__content">{props.comment.text}</span>
+            <div>
+                <span className="comment__name">{props.comment.username}</span> <span className="comment__content">{props.comment.text}</span>
+            </div>
+            <div onClick={event => props.removeComment(event, props.parentIndex, props.index)} className="fas fa-times comment__close">
+            </div>
         </div>
     );
 }
+
 
 Comment.propTypes = {
     comment: PropTypes.shape({

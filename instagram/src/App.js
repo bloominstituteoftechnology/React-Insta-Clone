@@ -42,6 +42,18 @@ class App extends Component {
     });
   };
 
+  removeComment = (event, parentIndex, childIndex) => {
+    event.preventDefault();
+
+    let newDataState = this.state.data;
+
+    newDataState[parentIndex].comments.splice(childIndex, 1);
+
+    this.setState({
+      data: newDataState,
+    });
+  }
+
   addLike = (event, index) => {
     event.preventDefault();
 
@@ -75,6 +87,7 @@ class App extends Component {
           handleInputChange={this.handleInputChange}
           addNewComment={this.addNewComment}
           addLike={this.addLike}
+          removeComment={this.removeComment}
         />  
       </div>
     );

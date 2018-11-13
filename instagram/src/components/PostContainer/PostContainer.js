@@ -23,6 +23,8 @@ const PostContainer = props => {
             </div>
             <CommentsSection 
                 comments={props.post.comments}
+                removeComment={props.removeComment}
+                parentIndex={props.index}
             />
             <div className="post__time">{moment(props.post.timestamp, "MMMM Do YYYY, hh:mm:ss a").fromNow().toString()}</div>
             <form className="post__add-new-comment" onSubmit={event => props.addNewComment(event, props.index)}>

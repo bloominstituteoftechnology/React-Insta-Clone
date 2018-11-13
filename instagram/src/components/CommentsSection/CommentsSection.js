@@ -8,10 +8,13 @@ import './CommentsSection.css';
 const CommentsSection = props => {
     return (
         <div className="comments">
-            {props.comments.map(comment =>
+            {props.comments.map((comment, index) =>
                 <Comment 
                     key={Math.random()}
                     comment={comment}
+                    index={index}
+                    removeComment={props.removeComment}
+                    parentIndex={props.parentIndex}
                 />    
             )}
         </div>

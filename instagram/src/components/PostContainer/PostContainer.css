@@ -41,6 +41,12 @@
 .post__bottom {
     font-weight: bold;
     font-size: 1.8rem;
+    min-width: 84px;
+    text-align: left;
+}
+
+.post__bottom--heart{
+    margin-left: 10px;
 }
 
 .post__bottom--heart:hover{
