@@ -65,17 +65,23 @@ class App extends Component {
     const index = this.state.data.findIndex(item => item.imageUrl === postUrl);
     const newData = this.state.data;
 
-    if (!newData[index].liked) {
+    if (!newData[index].likedBy) {
+
+      newData[index].likedBy = [];
+
+    }
+
+    if (!newData[index].likedBy.includes(this.state.username)) {
 
       newData[index].likes++;
-      newData[index].liked = true;
+      newData[index].likedBy.push(this.state.username)
 
     }
 
     else {
 
       newData[index].likes--;
-      newData[index].liked = false;
+      newData[index].likedBy.splice(newData[index].likedBy.indexOf(this.state.username), 1);
 
     }
 

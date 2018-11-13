@@ -8,7 +8,7 @@ import './PostContainer.scss';
 
 export default function PostContainer({data, addComment, removeComment, addLike, currentUser, id}) {
 
-  const {comments, imageUrl, likes, thumbnailUrl, timestamp, username, liked} = data;
+  const {comments, imageUrl, likes, thumbnailUrl, timestamp, username, likedBy} = data;
 
   return (
 
@@ -27,7 +27,7 @@ export default function PostContainer({data, addComment, removeComment, addLike,
 
         <div>
 
-        <p className={liked ? 'far fa-heart bold' : 'far fa-heart'} onClick={() => addLike(imageUrl)}></p>
+        <p className={likedBy && likedBy.includes(currentUser) ? 'far fa-heart bold' : 'far fa-heart'} onClick={() => addLike(imageUrl)}></p>
         <p className='far fa-comment'></p>
 
         </div>
@@ -37,7 +37,7 @@ export default function PostContainer({data, addComment, removeComment, addLike,
       </div>
 
       <CommentSection
-        id={id} 
+        id={id}
         currentUser={currentUser}
         comments={comments}
         time={moment(timestamp, "MMMM Do YYYY hh:mm:ss A").fromNow()}
