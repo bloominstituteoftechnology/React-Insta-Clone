@@ -27,7 +27,7 @@ export default class CommentSection extends React.Component {
 
   render() {
 
-    let {comments, time, addComment, url} = this.props;
+    let {comments, time, addComment, id} = this.props;
 
     return (
 
@@ -41,7 +41,7 @@ export default class CommentSection extends React.Component {
 
         <form onSubmit={e => {
           e.preventDefault();
-          addComment({username: 'captaincrunch17', text: this.state.currentComment}, url);
+          addComment({username: 'captaincrunch17', text: this.state.currentComment}, id);
           this.setState({currentComment: ''});
         }}>
 

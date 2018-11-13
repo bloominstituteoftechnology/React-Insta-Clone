@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Fuse from 'fuse.js';
 import './App.scss';
 
 import dummyData from './dummy-data';
@@ -41,9 +42,8 @@ class App extends Component {
 
   }
 
-  addComment = (comment, postUrl) => {
+  addComment = (comment, index) => {
 
-    const index = this.state.data.findIndex(item => item.imageUrl === postUrl);
     const newData = this.state.data;
     newData[index].comments.push(comment);
 
@@ -76,7 +76,22 @@ class App extends Component {
 
   search = searchTerm => {
 
-    this.setState({displayedData: this.state.data.filter(item => item.username.includes(searchTerm))});
+    var options = {
+      shouldSort: true,
+      threshold: 0.5,
+      location: 0,
+      distance: 100,
+      maxPatternLength: 32,
+      minMatchCharLength: 1,
+      keys: [
+        "username"
+      ]
+    };
+
+    var fuse = new Fuse(this.state.data, options);
+    var result = fuse.search(searchTerm);
+
+    this.setState({displayedData: searchTerm === '' ? this.state.data : result});
 
   }
 
@@ -88,7 +103,7 @@ class App extends Component {
 
         <div className='posts'>
 
-          {this.state.displayedData.map(data => <PostContainer key={data.imageUrl} data={data} addLike={this.addLike} addComment={this.addComment} />)}
+          {this.state.displayedData.map((data, index) => <PostContainer key={index} data={data} addLike={this.addLike} addComment={this.addComment} />)}
 
         </div>
 
