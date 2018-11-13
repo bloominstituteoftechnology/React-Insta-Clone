@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Fuse from 'fuse.js';
 
 // import data
 import dummyData from './dummy-data'
@@ -91,7 +92,6 @@ class App extends Component {
   }
 
   handleRemoveComment(u, t, i) {
-    console.log(i);
     this.setState({
       data: this.state.data.map( post => {
         if (post.username === u && post.timestamp === t) {
@@ -107,6 +107,11 @@ class App extends Component {
   }
 
   render() {
+    const options = {
+      keys: ['username'],
+    };
+    const fuse = new Fuse(this.state.data, options);
+    const filteredData = this.state.searchText === '' ? this.state.data : fuse.search(this.state.searchText);
     return (
       <div className="App">
         <SearchBar
@@ -116,8 +121,7 @@ class App extends Component {
         <div className="posts--container">
           <div className="posts">
             {
-              this.state.data
-              .filter(post => post.username.includes(this.state.searchText))
+              filteredData
               .map(
                 (post, i) => (
                   <PostContainer
