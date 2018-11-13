@@ -1,5 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+.posts {
+  max-width: 104.7rem;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+
+.posts--container {
+  width: 100%;
+  background-color: #fafafa;
 }

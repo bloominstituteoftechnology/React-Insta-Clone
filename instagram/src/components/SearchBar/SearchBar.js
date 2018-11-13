@@ -7,10 +7,12 @@ import NavBar from './NavBar';
 
 const SearchBar = props => {
   return (
-    <div className="search-bar">
-      <Logo />
-      <SearchBox />
-      <NavBar />
+    <div className="search-bar--container">
+      <div className="search-bar">
+        <Logo />
+        <SearchBox />
+        <NavBar />
+      </div>
     </div>
   );
 }

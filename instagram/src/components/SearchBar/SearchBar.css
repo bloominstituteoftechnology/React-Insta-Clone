@@ -1,8 +1,13 @@
+.search-bar--container {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+}
+
 .search-bar {
   display: flex;
   max-width: 107.4rem;
   height: 7.6rem;
-  padding: 2rem 2.6rem;
+  padding: 2rem 0;
   justify-content: space-between;
   align-items: flex-end;
   font-size: 2.4rem;
