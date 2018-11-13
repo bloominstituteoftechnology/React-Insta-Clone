@@ -35,6 +35,13 @@
   padding-bottom: .4rem;
 }
 
+.logo--text span {
+  color: lightgray;
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
 .fa-input {
   width: 21.5rem;
   height: 2.8rem;

@@ -8,7 +8,7 @@ const Logo = props => {
         |
       </div>
       <div className="logo--text">
-        InstaClone
+        InstaClone <span>- by YKrueng</span>
       </div>
     </div>
   );
