@@ -7,8 +7,8 @@ import './postcontainer.css';
 
 const PostContainer = props => {
     return (
-        <div className="post">
-            {props.grams.map(g => <Post key={g.id} gram={g} />)} 
+        <div className="post-container">
+            {props.posts.map(p => <Post key={p.id} post={p} />)} 
         </div>
 
     );

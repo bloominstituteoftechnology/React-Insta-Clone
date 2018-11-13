@@ -6,14 +6,12 @@ import PostHeader from './postheader';
 import './postcontainer.css';
 
 
-const Post = grams => {
+const Post = props => {
     return (
-        <div className="post">
-            {gram.username}
-
+        <div className="post-individual">
             <PostHeader 
-                userimg={grams.gram.thumbnailUrl}
-                username={grams.gram.username}
+                userimg={props.post.thumbnailUrl}
+                username={props.post.username}
             />
             <CommentSection /> 
         </div>

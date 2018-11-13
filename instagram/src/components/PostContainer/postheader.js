@@ -4,12 +4,12 @@ import React from 'react';
 import './postcontainer.css';
 
 
-const PostHeader = gram => {
+const PostHeader = props => {
     return (
         <div className="postHeader">
         Test
-            <img src={grams.gram.thumbnailUrl}/>
-            <p>{gram.username}</p>
+            <img src={props.thumbnailUrl}/>
+            <p>{props.username}</p>
         </div>
     );
 };
