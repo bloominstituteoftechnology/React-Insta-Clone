@@ -1,32 +1,53 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 968px;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.instaclone-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: "Grand Hotel", cursive;
+  font-size: 32px;
+  margin-left: 20px;
+}
+
+.instaclone-logo i {
+  margin-right: 20px;
+}
+
+.instaclone-logo p {
+  border-left: 2px solid #333;
+  padding-left: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+  font-size: 25px;
+  margin-right: 20px;
+  color: #ccc;
+}
+
+.posts-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
