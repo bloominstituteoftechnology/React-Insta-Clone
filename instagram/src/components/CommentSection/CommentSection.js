@@ -40,7 +40,11 @@ class CommentSection extends React.Component {
            (comment,i) => (
              <Comment
               key={i + this.props.username}
-              comment={comment} />
+              comment={comment}
+              username={this.props.username}
+              timestamp={this.props.timestamp}
+              handleRemoveComment={() => this.props.handleRemoveComment(this.props.username, this.props.timestamp, i)}
+            />
         ))}
         <div className="post--time-stamp">
           {moment(parseDate(this.props.timestamp)).fromNow()}

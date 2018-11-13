@@ -24,6 +24,7 @@ const PostContainer = props => {
         onCommentFormChange={(e, u, t) => props.onCommentFormChange(e, u, t)}
         onCommentFormSubmit={(e, u, t) => props.onCommentFormSubmit(e, u, t)}
         updateLikes={(u, t, n) => props.updateLikes(u, t, n)}
+        handleRemoveComment={(u, t, i) => props.handleRemoveComment(u, t, i)}
       />
     </div>
   );

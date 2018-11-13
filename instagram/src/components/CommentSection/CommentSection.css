@@ -21,6 +21,18 @@
 
 .comment {
   padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment--btn {
+  cursor: pointer;
+  color: gray;
+}
+
+.comment--btn:hover {
+  color: black;
+  transform: scale(1.5);
 }
 
 .comment span {

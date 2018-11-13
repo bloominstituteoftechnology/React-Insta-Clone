@@ -90,6 +90,22 @@ class App extends Component {
     ));
   }
 
+  handleRemoveComment(u, t, i) {
+    console.log(i);
+    this.setState({
+      data: this.state.data.map( post => {
+        if (post.username === u && post.timestamp === t) {
+          post.comments = post.comments.filter((comment,id) => id !== i);
+        }
+        return post;
+      })
+    });
+
+    localStorage.setItem('instaClone', JSON.stringify(
+      this.state.data
+    ));
+  }
+
   render() {
     return (
       <div className="App">
@@ -111,6 +127,7 @@ class App extends Component {
                     onCommentFormSubmit={(e, u, t) => this.onCommentFormSubmit(e, u, t)}
                     updateLikes={(u, t, n) => this.updateLikes(u, t, n)}
                     post={post}
+                    handleRemoveComment={(u, t, i) => this.handleRemoveComment(u, t, i)}
                   />
             ))}
           </div>

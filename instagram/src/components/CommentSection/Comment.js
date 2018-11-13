@@ -4,7 +4,15 @@ import PropTypes from 'prop-types';
 const Comment = props => {
   return (
     <div className="comment">
-      <span>{props.comment.username}</span> {props.comment.text}
+      <div className="comment--text">
+        <span>{props.comment.username}</span> {props.comment.text}
+      </div>
+      <div
+        className="comment--btn"
+        onClick={() => props.handleRemoveComment()}
+      >
+        x
+      </div>
     </div>
   );
 }
