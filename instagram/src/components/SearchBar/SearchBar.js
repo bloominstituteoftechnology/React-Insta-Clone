@@ -1,10 +1,10 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 
 const SearchBar = props => {
     return(
-        <div>
+        <Fragment>
             <input type="text" placeholder="search here.."/>
-        </div>
+        </Fragment>
     );
 }
 
