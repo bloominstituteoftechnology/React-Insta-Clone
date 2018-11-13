@@ -68,9 +68,11 @@ class CommentSection extends React.Component {
 }
 
 CommentSection.propTypes = {
+    timestamp: PropTypes.string,
+    newComment: PropTypes.string,
     comments: PropTypes.arrayOf(PropTypes.shape({
-        username: PropTypes.string,
-        text: PropTypes.string,
+        username: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired,
     }))
 }
 
