@@ -22,6 +22,8 @@ class CommentSection extends React.Component {
                 username: 'testuser03',
                 text:  this.state.newComment,
             }];
+
+        localStorage.setItem('comments', JSON.stringify(constructedComment));
         
 
         this.setState({
@@ -34,6 +36,16 @@ class CommentSection extends React.Component {
         this.setState({
             [event.target.name]: event.target.value
         });
+    }
+
+    componentDidMount(){
+        const storedComments = JSON.parse(localStorage.getItem('comments'));
+
+        if (storedComments){
+            this.setState({
+                comments: storedComments,
+            })
+        }
     }
 
     render() {
