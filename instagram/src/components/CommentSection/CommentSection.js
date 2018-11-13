@@ -8,10 +8,17 @@ import CommentForm from './CommentForm';
 const CommentSection = props => {
   return (
     <div className="post--comments">
-      <PostStat />
-      <Comment />
+      <PostStat likes={props.likes}/>
+      {
+        props.comments.map(
+         (comment,i) => (
+           <Comment
+            username={props.username}
+            key={i + props.username}
+            comment={comment} />
+      ))}
       <div className="post--time-stamp">
-        2 HOURS AGO
+        {props.timestamp}
       </div>
       <CommentForm />
     </div>

@@ -7,4 +7,6 @@
 .posts--container {
   width: 100%;
   background-color: #fafafa;
+  display: flex;
+  flex-wrap: wrap;
 }

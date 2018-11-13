@@ -7,11 +7,19 @@ import CommentSection from '../CommentSection/CommentSection';
 const PostContainer = props => {
   return (
     <div className="post--container">
-      <PostHeader />
+      <PostHeader
+        username={props.post.username}
+        thumbnailUrl={props.post.thumbnailUrl}
+      />
       <div className="post--img">
-        <img src="https://tk-assets.lambdaschool.com/69cf901b-f96d-466e-a745-ff2a01effac9_philz-image.jpg" alt=""/>
+        <img src={props.post.imageUrl} alt=""/>
       </div>
-      <CommentSection />
+      <CommentSection
+        username={props.post.username}
+        comments={props.post.comments}
+        likes={props.post.likes}
+        timestamp={props.post.timestamp}
+      />
     </div>
   );
 }

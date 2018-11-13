@@ -5,9 +5,9 @@ const PostStat = props => {
     <div className="post--stat">
       <div className="stat-icons">
         <i className="far fa-heart"></i>
-        <i class="far fa-comment fa-flip-horizontal"></i>
+        <i className="far fa-comment fa-flip-horizontal"></i>
       </div>
-      373 likes
+      {props.likes > 1 ? `${props.likes} likes` : `${props.likes} like`}
     </div>
   );
 }

@@ -8,6 +8,12 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: dummyData,
+    };
+  }
   render() {
     console.log(dummyData);
     return (
@@ -15,7 +21,11 @@ class App extends Component {
         <SearchBar />
         <div className="posts--container">
           <div className="posts">
-            <PostContainer />
+            {
+              this.state.data.map(
+                post => <PostContainer key={post.username + post.timestamp} post={post}/>
+              )
+            }
           </div>
         </div>
       </div>
