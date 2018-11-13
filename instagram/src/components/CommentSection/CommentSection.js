@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comments';
 import CommentInput from './CommentInput';
+import moment from 'moment';
 import './CommentSection.css';
 // import PostContainer from '../PostContainer/PostContainer';
 
@@ -33,7 +34,7 @@ const CommentSection = (props) => {
                     { comments }
                 
                     <h5 className='timestamp'>
-                        {props.post.timestamp} 
+                        {moment(props.post.timestamp, 'MMMM Do YYYY hh:mm:ss A').fromNow() }
                     </h5>
                 </div>
 
