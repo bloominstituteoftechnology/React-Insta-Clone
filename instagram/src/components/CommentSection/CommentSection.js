@@ -5,20 +5,66 @@ import Comment from './Comment';
 
 
 
-const CommentSection = props => {
+class CommentSection extends Component {
+    
+    constructor(){
+        super();
+        this.state={
+          comments: [],
+          inputText: ''
+        }
+      }
 
-    return(
+      componentDidMount(){
+        this.setState({ comments: this.props.comments})
+      }
+
+      addNewComment = ev =>{
+        ev.preventDefault();
+        console.log(ev.target);
+        console.log(this);
+        if(!(this.state.inputText === '')){
+            this.setState({
+                comments:[
+                ...this.state.comments,
+                {username: 'anonymous', text: this.state.inputText}
+                ],
+                inputText: ''
+            });
+        }
+      };
+
+      handleChange = ev =>{
+        this.setState({
+          [ev.target.name]: ev.target.value
+        });
+      }
+
+    render(){
+        return(
         <div className='comment-section'>
-            {props.comments.map((comment, index) => (
+            {this.state.comments.map((comment, index) => (
                 <Comment
                 comment ={comment}
                 key={index}
                 />
            ))}
-           <input placeholder='Add a comment...'/>
+           <form onSubmit={this.addNewComment}>
+            <input 
+                type='text' 
+                name="inputText" 
+                placeholder='Add a comment...' 
+                value={this.state.inputText}
+                onChange={this.handleChange} 
+                />
+                 <button type="submit">Add Todo</button>
+           </form>
+           
             
         </div>
     );
+    }
+    
 }
 
 export default CommentSection;
