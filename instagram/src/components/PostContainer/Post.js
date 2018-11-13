@@ -23,10 +23,10 @@ const Post = props => {
                 <CommentSection 
                     comments = {props.post.comments}
                     likes = {props.post.likes}
+                    timestamp = {props.post.timestamp}
                     // Here we're sending the comments array from state data
                 />
             </div>
-
         </div>
     )
 }

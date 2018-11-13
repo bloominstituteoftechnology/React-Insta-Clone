@@ -5,10 +5,13 @@
   "dependencies": {
     "i": "^0.3.6",
     "local-storage": "^1.4.2",
+    "moment": "^2.22.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
+    "react-fuzzy-search": "^0.4.0",
     "react-moment": "^0.8.3",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "react-simple-storage": "^1.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
