@@ -42,7 +42,12 @@ PostsPage.propTypes = {
       username: PropTypes.string,
       text: PropTypes.string,
     }))
-  }))
+  })),
+  searchText: PropTypes.string,
+  updateSearchText: PropTypes.func,
+  logout: PropTypes.func,
+  username: PropTypes.string,
+  increaseLikes: PropTypes.func,
 }
 
 export default PostsPage;

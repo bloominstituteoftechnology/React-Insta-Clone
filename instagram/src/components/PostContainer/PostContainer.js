@@ -2,6 +2,7 @@ import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
 import heart from "../icons/heart.png";
 import chat from "../icons/chat.png";
+import PropTypes from "prop-types";
 import { StyledPost, UserDiv, IconBar, Thumbnail, UserName, TimeStamp, LikeCounter } from "../Styles.js";
 
 class PostContainer extends React.Component {
@@ -52,4 +53,19 @@ class PostContainer extends React.Component {
   }
 }
 
+PostContainer.propTypes = {
+  index: PropTypes.number,
+  post: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    timestamp: PropTypes.string,
+  }),
+  username: PropTypes.string,
+  increaseLikes: PropTypes.func,
+}
+
 export default PostContainer;
+
+
