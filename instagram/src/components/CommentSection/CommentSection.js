@@ -23,6 +23,7 @@ const CommentSection = props => {
       <CommentForm
         commentText={props.commentText}
         onCommentFormChange={(e, u, t) => props.onCommentFormChange(e, u, t)}
+        onCommentFormSubmit={(e, u, t) => props.onCommentFormSubmit(e, u, t)}
       />
     </div>
   );

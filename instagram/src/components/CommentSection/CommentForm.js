@@ -4,7 +4,7 @@ const CommentForm = props => {
   return (
     <form
       className="comment--form"
-      action="submit">
+      onSubmit={(e, u, t) => props.onCommentFormSubmit(e, props.commentText.username, props.commentText.timestamp)}>
       <input 
         type="text"
         name="text"
