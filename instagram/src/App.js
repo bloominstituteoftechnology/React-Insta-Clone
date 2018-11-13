@@ -27,7 +27,7 @@ class App extends Component {
           <header>
             <SearchBar/>
           </header>
-          <Posts />
+          <Posts posts={this.state.data}/>
         </Fragment>
     );
   }
