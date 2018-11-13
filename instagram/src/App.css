@@ -1,6 +1,10 @@
 .App {
   text-align: center;
-  width: 1000px;
+  
+  margin: 0 auto;
+}
+.container{
+  width: 680px;
   margin: 0 auto;
 }
 

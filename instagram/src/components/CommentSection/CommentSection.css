@@ -1,0 +1,16 @@
+.comment-section{
+    margin: 10px;
+    
+}
+.comment{
+    text-align: left;
+}
+.comment span{
+    font-weight: bold;
+}
+.comment-section input{
+    width: 90%;
+    text-align: left;
+    padding: 10px;
+    border: none;
+}

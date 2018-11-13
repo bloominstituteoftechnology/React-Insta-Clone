@@ -1,6 +1,7 @@
 .searchBar{
     width: 100%;
-    background: lightblue;
+    background: white;
+    border-bottom: 1px solid lightgray;
     padding: 10px;
     display: flex;
     flex-wrap: nowrap;
