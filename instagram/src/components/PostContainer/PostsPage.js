@@ -1,6 +1,7 @@
 import React from 'react';
 import PostContainer from "./PostContainer";
 import SearchBar from "../SearchBar/SearchBar";
+import PropTypes from "prop-types";
 
 const LogoutButton = (props) => {
   return (
@@ -29,6 +30,19 @@ const PostsPage = (props) => {
         </div>
 </div>
   )
+}
+
+PostsPage.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.shape({
+    username: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    timestamp: PropTypes.string,
+    comments: PropTypes.arrayOf(PropTypes.shape({
+      username: PropTypes.string,
+      text: PropTypes.string,
+    }))
+  }))
 }
 
 export default PostsPage;
