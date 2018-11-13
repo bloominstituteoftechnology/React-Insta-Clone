@@ -57,6 +57,7 @@ class App extends Component {
 
   render() {
     // console.log(dummyData);
+    // console.log(moment(parseDate(this.state.commentText[0].timestamp)).fromNow());
     return (
       <div className="App">
         <SearchBar />

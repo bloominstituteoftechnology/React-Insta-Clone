@@ -1,4 +1,6 @@
 import React from 'react';
+import moment from 'moment';
+import parseDate from '../../helperFunctions/helper';
 import './CommentSection.css';
 
 import PostStat from './PostStat';
@@ -18,7 +20,7 @@ const CommentSection = props => {
             comment={comment} />
       ))}
       <div className="post--time-stamp">
-        {props.timestamp}
+        {moment(parseDate(props.timestamp)).fromNow()}
       </div>
       <CommentForm
         commentText={props.commentText}
