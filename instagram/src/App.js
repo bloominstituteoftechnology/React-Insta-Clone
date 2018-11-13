@@ -86,7 +86,11 @@ class App extends Component {
 
         <SearchBar searchFunc={this.search}/>
 
-        {this.state.displayedData.map(data => <PostContainer key={data.imageUrl} data={data} addLike={this.addLike} addComment={this.addComment} />)}
+        <div className='posts'>
+
+          {this.state.displayedData.map(data => <PostContainer key={data.imageUrl} data={data} addLike={this.addLike} addComment={this.addComment} />)}
+
+        </div>
 
       </div>
     );
