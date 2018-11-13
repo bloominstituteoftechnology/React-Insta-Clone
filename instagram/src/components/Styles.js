@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 export const StyledSearchBarContainer = styled.div`
@@ -31,7 +30,7 @@ export const UserDiv = styled.div`
 `;
 
 export const IconBar = styled.div`
-  margin: 10px 60px;
+  margin: 10px 0 0 60px;
   display: flex;
   justify-content: flex-start;
 
@@ -64,6 +63,13 @@ export const TimeStamp = styled.p`
   color: #504a4a;
   text-align: left;
 `;
+
+export const LikeCounter = styled.p`
+  text-align: left;
+  margin-left: 60px;
+  margin-top: 0;
+  font-weight: bold;
+  `;
 
 export const LoginForm = styled.form`
   width: 40%;

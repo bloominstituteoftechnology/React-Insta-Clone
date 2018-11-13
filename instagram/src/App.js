@@ -18,7 +18,7 @@ class App extends Component {
       searchText: "",
       username: "",
       password: "",
-      loggedIn: false,
+      loggedIn: false
     };
   }
 
@@ -31,10 +31,8 @@ class App extends Component {
 
   hydrateStateWithLocalStorage() {
     for (let key in this.state) {
-      console.log(key);
       if (localStorage.hasOwnProperty(key)) {
         let value = localStorage.getItem(key);
-        console.log(value);
 
         try {
           value = JSON.parse(value);
@@ -45,6 +43,7 @@ class App extends Component {
       }
     }
   }
+
 
   componentDidMount() {
     window.addEventListener(
@@ -65,29 +64,46 @@ class App extends Component {
     this.saveStatetoLocalStorage();
   }
 
+  componentDidUpdate() {
+    for (let key in this.state) {
+      if (localStorage.getItem(key) !== this.state[key]) {
+        console.log('setting', key);
+        localStorage.setItem(key, JSON.stringify(this.state[key]));
+      }
+    }
+  }
+
   login = e => {
     e.preventDefault();
     this.setState({ username: e.target.username.value });
     this.setState({ password: e.target.password.value });
-    this.setState({ loggedIn: true });
-    localStorage.setItem("password", JSON.stringify(this.state.password));
-    localStorage.setItem("username", JSON.stringify(this.state.username));
+
+    // ensure password and username are not empty before logging user in
+    if (this.state.username && this.state.password) {
+      this.setState({ loggedIn: true });
+      localStorage.setItem("password", JSON.stringify(this.state.password));
+      localStorage.setItem("username", JSON.stringify(this.state.username));
+    }
   };
 
   logout = e => {
     e.preventDefault();
     localStorage.removeItem("username");
     localStorage.removeItem("password");
-    this.setState({ username: '', password: '', loggedIn: false,})
-  }
+    this.setState({ username: "", password: "", loggedIn: false });
+  };
 
   updateSearchText = e => {
     this.setState({ searchText: e.target.value });
   };
 
+  increaseLikes = (e) => {
+    console.log(e.target.parentElement.parentElement.index);
+  }
+
   render() {
     if (!this.state.loggedIn) {
-      return <Login login={this.login} />
+      return <Login login={this.login} />;
     }
 
     return (
@@ -98,6 +114,7 @@ class App extends Component {
           updateSearchText={this.updateSearchText}
           logout={this.logout}
           username={this.state.username}
+          increaseLikes={this.increaseLikes}
         />
       </div>
     );

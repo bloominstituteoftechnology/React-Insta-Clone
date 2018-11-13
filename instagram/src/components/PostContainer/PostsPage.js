@@ -19,7 +19,12 @@ const PostsPage = (props) => {
         />
         <div className="Posts">
           {props.posts.map((post, idx) => (
-            <PostContainer key={idx} post={post} />
+            <PostContainer key={idx} 
+            index={idx}
+            post={post} 
+            username={props.username}
+            increaseLikes={props.increaseLikes}
+            />
           ))}
         </div>
 </div>
