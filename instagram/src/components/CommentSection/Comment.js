@@ -13,15 +13,8 @@ const Comment = props => {
                 {props.comment.text}
             </p>
             <i onClick={() => props.removeComment(props.comment.text)} className="fas fa-times"></i>
-            {/* <i onClick={console.log('clicked icon')} className="fas fa-times"></i> */}
-            {/* <i onClick={props.removeComment} className="fas fa-times"></i> */}
         </div>
     )
 }
 
 export default Comment
-
-// <h1 
-// onClick={() => props.changeComplete(props.propsItem.id)}
-// className={`myTask ${props.propsItem.completed}`}
-// >

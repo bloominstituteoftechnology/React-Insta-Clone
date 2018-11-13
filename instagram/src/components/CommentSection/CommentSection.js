@@ -41,24 +41,6 @@ class CommentSection extends React.Component {
     }
 
     removeComment = text => {
-        // console.log('clicked removeComment method', this.state.comments)
-        // this.setState({
-        //     comments: this.state.comments.filter(
-        //       e => e.removed === true)
-        //   })
-
-    //     this.setState({
-    //         comments: this.state.comments.map(e => {
-    //             if (e.timestamp === e) {
-    //                 return {...e,
-    //                 removed: e.removed === true ? false : true}
-    //             }
-    //         else {
-    //             return e
-    //         }
-    //     })
-    // })
-    // console.log("TEXT = ", text)
     this.setState({
         comments: this.state.comments.map(e => {
             
@@ -73,22 +55,6 @@ class CommentSection extends React.Component {
     })
 
     }
-
-    // changeComplete = id => {
-    //     this.setState({
-    //       data: this.state.data.map(singleChar => {
-    //         if (singleChar.id === id) {
-    //           console.log('single char', singleChar.completed)
-    //           return {...singleChar, 
-    //             completed: singleChar.completed=== true ? false :
-    //             true};
-    //         } else {
-    //           return singleChar;
-    //         }
-    //       })
-    //     })
-    //   }
-    
 
     render() {
         // console.log("props.post.timestamp = ", typeof this.state.timestamp)
