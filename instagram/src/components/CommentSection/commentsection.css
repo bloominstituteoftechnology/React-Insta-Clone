@@ -1,3 +1,14 @@
 .commentSection {
-    color: blue;
+    width: 100%;
+    
+}
+
+.comment {
+    display: flex;
+    font-size: 10px;
+}
+
+.userId {
+    font-weight: bold;
+    padding-right: 5px;
 }

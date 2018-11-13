@@ -11,6 +11,7 @@
     font-size: 12px;
     font-weight: bold;
     padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 .headerImage {
@@ -31,4 +32,8 @@
 
 .postImage {
     width: 100%
+}
+
+.likes {
+    font-size: 10px;
 }
