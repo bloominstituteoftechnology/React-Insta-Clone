@@ -9,9 +9,11 @@ import './postcontainer.css';
 const Post = grams => {
     return (
         <div className="post">
+            {gram.username}
+
             <PostHeader 
-                userimg={grams.thumbnailUrl}
-                username={grams.username}
+                userimg={grams.gram.thumbnailUrl}
+                username={grams.gram.username}
             />
             <CommentSection /> 
         </div>
