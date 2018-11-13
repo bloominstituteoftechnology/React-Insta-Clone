@@ -1,9 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Components
+import Post from './Post';
+
 const Posts = props => {
     return(
-        <h1>Posts</h1>
+        <div className='posts'>
+            {props.posts.map((p, i) => (
+                <Post post={p} key={i}/>
+            ))}
+        </div>
     )
 }
 
