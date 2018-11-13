@@ -6,17 +6,32 @@ import dummyData from "./dummy-data";
 
 
 class App extends Component {
+  
   constructor(){
     super();
     this.state = {
-      data: dummyData
+      data: [],
+      comments: []
     };
   }
+
+  componentDidMount(){
+    this.setState({
+      data: dummyData,
+      comments: dummyData.comments
+    });
+  }
+
+  
+
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer data={this.state.data}/>
+        <PostContainer 
+        data={this.state.data}
+        comments={this.state.comments}  
+      />
       </div>
     );
   }

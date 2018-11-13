@@ -30,19 +30,29 @@ const PostContent = props => {
                 <div className="likes">
                     <p>{props.data.likes}</p>
                 </div>
-                {props.data.comments.map(item=>{
+
+                <CommentSection data={props.data} comments={props.comments}/>
+                
+                {/* {props.data.comments.map(item=>{
                     return <CommentSection key={`${item.username}${item.text}`} data={item}/>;
                 })}
                 <div className="time">
                     <p className="time-text">{props.data.timestamp}</p>
                     
                 </div>
-                <div className="add-comment">
-                    <input type="text" className="input-comment" placeholder="Add a comment..."/>
+                <form  className="add-comment" onSubmit={props.addItem}>
+                    <input 
+                    className="input-comment" 
+                    placeholder="Add a comment..."
+                    type="text" 
+                    name="inputText"
+                    value={props.inputText}
+                    onChange={props.handleChange}
+                    />
                     <a href="">
                         <i className="fas fa-ellipsis-h settings"></i>
                     </a>
-                </div>
+                </form> */}
             </div>
             
         </div>
@@ -56,7 +66,8 @@ PostContent.propTypes = {
         imageUrl: PropTypes.string.isRequired,
         comments: PropTypes.array.isRequired,
         likes: PropTypes.number,
-        timestamp: PropTypes.string
+        timestamp: PropTypes.string,
+
     })
 };
 
