@@ -10,7 +10,8 @@ const PostContainerList = props => {
       <PostContainer
         key={post.timestamp}
         postContainer={post}
-        addComment={props.addComment}
+        addNewComment={props.addNewComment}
+        handleChange={props.handleChange}
       />
     ))}
   </div>);

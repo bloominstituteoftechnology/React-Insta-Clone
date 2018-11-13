@@ -8,7 +8,8 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      data: []
+      data: [],
+      newComment: ''
     };
   }
 
@@ -16,9 +17,53 @@ class App extends Component {
     this.setState({data: dummyData});
   }
 
-  addComment = comment => {}
+  handleChange = e => {
+    let newKeyValue = e.target.value;
+    this.setState({
+      // keyName: keyValue
+      [e.target.name]: newKeyValue
+    });
+  }
+
+  getSelectedPost = (state, selectedPostUsr) => {
+    let postFound = {};
+    state.data.forEach(post => {
+      if (post.username === selectedPostUsr){
+        postFound = post;
+      }
+    });
+    return postFound;
+  }
+
+  addNewComment = (event, postUsr, cmtUsr, dateTime) => {
+    event.preventDefault();
+    
+    let selectedPost = this.getSelectedPost(this.state, postUsr);
+    if (selectedPost === undefined || selectedPost === null){
+      console.error("Post Username Not Found");
+    } else {
+      let newComment = {
+        username: cmtUsr,
+        timestamp: dateTime,
+        text: this.state.newComment
+      }
+      console.log(selectedPost);
+      selectedPost.comments.push(newComment);
+  
+      let newData = this.state.data.map(post => {
+        if (post.username === selectedPost.username){
+          return selectedPost;
+        } else {
+          return post;
+        }
+      });
+  
+      this.setState({data: newData});
+    }
+  };
 
   render() {
+    console.log(this.state.comment);
     return (
       <div className="App">
         <header className="main-header">{/* camera | Instagram search-bar circle-diamond heart person */}</header>
@@ -26,7 +71,8 @@ class App extends Component {
         <div className="app-container">
           <PostContainerList
           data={this.state.data}
-          addComment={this.addComment}
+          addNewComment={this.addNewComment}
+          handleChange={this.handleChange}
           />
         </div>
       </div>

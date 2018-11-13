@@ -11,7 +11,7 @@ const Header = props => {
     <div className="header-left-side">
       <Instagram className="header-icons" size={48} />
       <img src={dividerImage} alt="" />
-      <img class="header-logo-img" src={logoImage} alt="" />
+      <img className="header-logo-img" src={logoImage} alt="" />
     </div>
     <SearchBar />
     <div className="header-right-side">
