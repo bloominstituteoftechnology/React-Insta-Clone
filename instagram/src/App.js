@@ -29,7 +29,7 @@ class App extends Component {
   iterate() {
     return (
       this.state.dummyData.map(post => (
-        <PostContainer key={post.username} profile={post.thumbnailUrl} />
+        <PostContainer key={post.username} />
     )))}
 
   
@@ -38,10 +38,13 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <SearchBar />
-          
         </header>
         <div>
-          <PostContainer data={this.state.data}/>
+          <PostContainer 
+          data={this.state.data}
+          comments={this.state.data.comments}
+          iterate={this.iterate}
+          />
         </div>
       </div>
     );

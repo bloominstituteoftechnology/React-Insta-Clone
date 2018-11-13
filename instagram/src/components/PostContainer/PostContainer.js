@@ -18,6 +18,7 @@ const PostContainer = props => {
     return (
         <div className="post-container">
             <div className="post-header">
+            {/* Works */}
                 {props.data.map( post => (
                     <Post
                         key={post.username}
@@ -25,15 +26,17 @@ const PostContainer = props => {
                     />
                 ))
                 }
-                
-                {/* <img src="" alt="profile" /> */}
-                {/* <h4 className="username">{props.post.username}</h4> */}
-            </div>
-            <div className="post-image">
-                {/* <img src="" alt="main-img" /> */}
             </div>
             <div className="post-bottom">
-                {/* <CommentSection key={props.post.username} /> */}
+            {/* Works */}
+            {props.data.map( post => (
+                    <CommentSection 
+                        key={post.username}
+                        post={post}
+                    />
+                ))
+                }
+                
             </div>
 
         </div>

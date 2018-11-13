@@ -143,3 +143,9 @@ table {
   min-width: 300px;
   min-height: 400px;
 }
+
+/* Post */
+.profile-img {
+  max-width: 30px;
+  border-radius: 50%;
+}
