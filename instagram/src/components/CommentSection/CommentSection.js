@@ -34,7 +34,7 @@ const CommentSection = (props) => {
                     { comments }
                 
                     <h5 className='timestamp'>
-                        {moment(props.post.timestamp, 'MMMM Do YYYY hh:mm:ss A').fromNow() }
+                        { moment(props.post.timestamp, 'MMMM Do YYYY hh:mm:ss A').fromNow() }
                     </h5>
                 </div>
 
@@ -54,11 +54,16 @@ CommentSection.propTypes = {
         imageUrl: PropTypes.string,
         likes: PropTypes.number,
         timestamp: PropTypes.string,
-        comments: PropTypes.arrayOf ({
-            username: PropTypes.string,
-            text: PropTypes.string,
-        })
+    }),
+
+    comments: PropTypes.shape ({
+        username: PropTypes.string,
+        text: PropTypes.string,
     })
 }
+
+// CommentSection.propTypes = {
+//     post: PropTypes.sha
+// }
 
 export default CommentSection;
