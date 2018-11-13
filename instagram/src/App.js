@@ -33,6 +33,8 @@ class App extends Component {
     // if(ev.target.value === ''){
     //   filterPosts = this.state.posts;
     // }
+    console.log(thing);
+    console.log(this.state.filteredPosts);
     
     this.setState({
       filteredPosts: thing
