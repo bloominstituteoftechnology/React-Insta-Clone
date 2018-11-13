@@ -1,20 +1,24 @@
 import React, { Component } from "react";
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PostInfo from "./PostInfo";
+import PostHeader from "./PostHeader";
+import PostImage from "./PostImage";
 
 class PostContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      newComment: "",
+      comments: this.props.post.comments,
+      comment: "",
+      id: this.props.post.imageUrl,
       likes: this.props.post.likes
     };
   }
 
   handleChange = ev => {
     this.setState({
-      newComment: ev.target.value
+      comment: ev.target.value
     });
   };
 
@@ -37,43 +41,12 @@ class PostContainer extends Component {
   render() {
     return (
       <div className="post-container">
-        <div className="post-header">
-          <div className="thumbnail-container">
-            <img
-              src={this.props.post.thumbnailUrl}
-              alt="profile thumbnail"
-              className="header-thumbnail"
-            />
-          </div>
-          <h2 className="bold">{this.props.post.username}</h2>
-        </div>
-        <img
-          src={this.props.post.imageUrl}
-          alt="full-size post"
-          className="post-img"
-        />
+        <PostHeader info={this.props.post} />
+        <PostImage src={this.props.post.imageUrl} />
         <div className="lower-content">
-          <div className="action-buttons">
-            <FontAwesomeIcon
-              icon={["far", "heart"]}
-              size="2x"
-              className="icon"
-              onClick={this.handleLike}
-            />
-            <FontAwesomeIcon
-              className="icon"
-              icon={["far", "comment"]}
-              flip="horizontal"
-              size="2x"
-              onClick={this.focus}
-            />
-          </div>
-          <div className="likes">
-            <p className="bold">{this.state.likes} likes</p>
-          </div>
+          <PostInfo info={this.props.post} like={this.handlelike} />
           <CommentSection
-            comments={this.props.post.comments}
-            time={this.props.post.timestamp}
+            post={this.props.post}
             comment={this.state.newComment}
             handleChange={this.handleChange}
             addComment={this.handleComment}

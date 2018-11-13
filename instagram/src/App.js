@@ -31,12 +31,14 @@ class App extends Component {
     super();
     this.state = {
       post: [],
-      searchTerm: ""
-      // filtered: false
+      searchTerm: false,
+      filtered: []
     };
   }
 
   componentDidMount() {
+    this.setState({ post: dummyData });
+
     this.fillStateWithLocalStorage();
     window.addEventListener("beforeunload", () => this.saveLocalStorage());
     this.saveLocalStorage();
@@ -80,7 +82,11 @@ class App extends Component {
         item.username.toLowerCase().search(ev.target.value.toLowerCase()) !== -1
       );
     });
-    this.setState({ post: updatedList, searchTerm: ev.target.value });
+    this.setState({
+      post: updatedList,
+      // filtered: updatedList,
+      searchTerm: ev.target.value
+    });
   };
 
   // filterPosts = ev => {
@@ -143,6 +149,8 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state.searchTerm.length);
+    console.log(this.state.post);
     return (
       <div className="App">
         <SearchBar
@@ -150,16 +158,14 @@ class App extends Component {
           // handleChange={this.handleChange}
           onChange={this.filterPosts}
         />
-        {(this.state.filtered ? this.state.filtered : this.state.post).map(
-          item => (
-            <PostContainer
-              key={item.timestamp}
-              post={item}
-              addComment={this.addComment}
-              like={this.addLike}
-            />
-          )
-        )}
+        {this.state.post.map(item => (
+          <PostContainer
+            key={item.timestamp}
+            post={item}
+            addComment={this.addComment}
+            like={this.addLike}
+          />
+        ))}
       </div>
     );
   }
