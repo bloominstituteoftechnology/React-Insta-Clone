@@ -1,14 +1,19 @@
 import React from 'react';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const CommentsContainer = styled.div`
+    width: 100%;
+`
 
 const CommentSection = (props) => {
     return (
-        <div>
+        <CommentsContainer>
             {props.thisPost.comments.map((comment,index) => {
                 return <Comment thisComment={comment} key={index} />
             })}
-        </div>
+        </CommentsContainer>
     );
 }
 
