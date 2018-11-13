@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from './Post.js';
+import PropTypes from 'prop-types';
 
 const PostsContainer = props => {
     return (
@@ -9,6 +10,24 @@ const PostsContainer = props => {
 
             ))}
         </div>
+    )
+}
+
+PostsContainer.propTypes = {
+    posts: PropTypes.arrayOf(
+        PropTypes.shape({
+        username: PropTypes.string,
+        thumbnailURL: PropTypes.string,
+        imageURL: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string,
+        comments: PropTypes.arrayOf(
+            PropTypes.shape({
+                username: PropTypes.string,
+                text: PropTypes.string
+            })
+        )
+        })
     )
 }
 
