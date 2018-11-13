@@ -1,0 +1,28 @@
+.header-container {
+    width: 700px;
+    height: 50px;
+    /* border: 1px solid red; */
+    /* background-color: whitesmoke; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.left-side-logo {
+    width: 30%;
+}
+
+.searchBar-container {
+    width: 30%;
+}
+
+.searchBar-container input {
+    text-align: center;
+    height: 20px;
+    border-radius: 3px;
+}
+
+.right-side-logo {
+    width: 30%;
+}
