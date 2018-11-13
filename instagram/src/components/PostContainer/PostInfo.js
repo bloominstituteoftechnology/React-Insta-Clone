@@ -39,14 +39,13 @@ class PostInfo extends Component {
     return (
       <Fragment>
         <div className="action-buttons">
-          <div className="like-container" onClick={this.plusLike}>
-            <FontAwesomeIcon
-              icon={["far", "heart"]}
-              size="2x"
-              className="icon"
-              // value={props.likes}
-            />
-          </div>
+          <FontAwesomeIcon
+            icon={["far", "heart"]}
+            size="2x"
+            className="icon"
+            onClick={this.plusLike}
+            // value={props.likes}
+          />
 
           <FontAwesomeIcon
             className="icon"
