@@ -8,8 +8,8 @@ const SearchBar = props => {
   return (
     <header className="searchbar-container">
       <Branding />
-      <SearchField search={props.search} onChange={props.onChange} />
       <IconLinks />
+      <SearchField search={props.search} onChange={props.onChange} />
     </header>
   );
 };

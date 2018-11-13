@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import SearchBar from "../SearchBar/SearchBar";
 import "./Login.css";
 
 class Login extends Component {
@@ -31,6 +32,7 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
+        <SearchBar />
         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="username" bsSize="large">
             <ControlLabel>Username</ControlLabel>
