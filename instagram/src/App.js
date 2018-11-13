@@ -42,10 +42,16 @@ class App extends Component {
 
   searchItems = ev => {
     ev.preventDefault();
+    if(this.state.searchText === ''){
+      this.setState({
+        posts: this.state.posts.map(item=> {
+          return {...item, display: true};
+        })
+      })
+    }
+    else{
     const options = {keys: ['username']};
     const fuse = new Fuse(this.state.posts,options);
-    console.log(fuse.search(`${this.state.searchText.toUpperCase()}`))
-    // console.log('searching...')
     this.setState({
       posts: this.state.posts.map(item => {
         // if(!item.username.toUpperCase().includes(`${this.state.searchText.toUpperCase()}`)){
@@ -57,6 +63,7 @@ class App extends Component {
         }
       })
     });
+  }
   };
 
   render() {
