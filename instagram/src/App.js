@@ -72,33 +72,33 @@ class App extends Component {
   //   });
   // };
 
-  // filterPosts = ev => {
-  //   var updatedList = dummyData;
-  //   updatedList = updatedList.filter(item => {
-  //     return (
-  //       item.username.toLowerCase().search(ev.target.value.toLowerCase()) !== -1
-  //     );
-  //   });
-  //   this.setState({ post: updatedList, searchTerm: ev.target.value });
-  // };
-
   filterPosts = ev => {
-    var options = {
-      threshold: 0.6,
-      location: 0,
-      distance: 100,
-      maxPatternLength: 32,
-      minMatchCharLength: 0,
-      keys: ["username"]
-    };
-    var fuse = new Fuse(dummyData, options); // "list" is the item array
-    var result = fuse.search(ev.target.value);
-    if (result.length > 0) {
-      this.setState({ post: result, searchTerm: ev.target.value });
-    } else {
-      this.setState({ post: dummyData, searchTerm: ev.target.value });
-    }
+    var updatedList = dummyData;
+    updatedList = updatedList.filter(item => {
+      return (
+        item.username.toLowerCase().search(ev.target.value.toLowerCase()) !== -1
+      );
+    });
+    this.setState({ post: updatedList, searchTerm: ev.target.value });
   };
+
+  // filterPosts = ev => {
+  //   var options = {
+  //     threshold: 0.6,
+  //     location: 0,
+  //     distance: 100,
+  //     maxPatternLength: 32,
+  //     minMatchCharLength: 0,
+  //     keys: ["username"]
+  //   };
+  //   var fuse = new Fuse(dummyData, options); // "list" is the item array
+  //   var result = fuse.search(ev.target.value);
+  //   if (result.length > 0) {
+  //     this.setState({ post: result, searchTerm: ev.target.value });
+  //   } else {
+  //     this.setState({ post: dummyData, searchTerm: ev.target.value });
+  //   }
+  // };
 
   addComment = (comment, id) => {
     this.setState(prevState => {
@@ -146,7 +146,7 @@ class App extends Component {
       <div className="App">
         <SearchBar
           search={this.state.searchTerm}
-          handleChange={this.handleChange}
+          // handleChange={this.handleChange}
           onChange={this.filterPosts}
         />
         {this.state.post.map(item => (
