@@ -19,12 +19,23 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      data: dummyData.map(post => {
-        post.commentText = '';
-        return post;
-      }),
-    })
+    if (localStorage.getItem('instaClone')) {
+      this.setState({
+        data: JSON.parse(localStorage.getItem('instaClone')).map(
+          post => {
+            post.commentText = '';
+            return post;
+          }
+        )
+      })
+    } else {
+      this.setState({
+        data: dummyData.map(post => {
+          post.commentText = '';
+          return post;
+        }),
+      })
+    }
   }
 
   onCommentFormChange(e, u, t) {
@@ -52,12 +63,31 @@ class App extends Component {
         return post;
       }), 
     });
+
+    localStorage.setItem('instaClone', JSON.stringify(
+      this.state.data
+    ));
   }
 
   handleSearch(e) {
     this.setState({
       searchText: e.target.value,
     })
+  }
+
+  updateLikes(u, t, n) {
+    this.setState({
+      data: this.state.data.map( post => {
+        if (post.username === u && post.timestamp === t) {
+          post.likes = n;
+        }
+        return post;
+      })
+    });
+
+    localStorage.setItem('instaClone', JSON.stringify(
+      this.state.data
+    ));
   }
 
   render() {
@@ -79,6 +109,7 @@ class App extends Component {
                     commentText={post.commentText}
                     onCommentFormChange={(e, u, t) => this.onCommentFormChange(e, u, t)}
                     onCommentFormSubmit={(e, u, t) => this.onCommentFormSubmit(e, u, t)}
+                    updateLikes={(u, t, n) => this.updateLikes(u, t, n)}
                     post={post}
                   />
             ))}

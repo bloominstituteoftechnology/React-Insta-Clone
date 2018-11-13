@@ -17,9 +17,11 @@ class CommentSection extends React.Component {
     }
   }
 
-  toggleLike() {
+  toggleLike(cb) {
+    const likes = this.state.liked ? this.state.likes - 1 : this.state.likes + 1;
+    cb(this.props.username, this.props.timestamp, likes);
     this.setState({
-      likes: this.state.liked ? this.state.likes - 1 : this.state.likes +1,
+      likes: likes,
       liked: !this.state.liked
     });
   }
@@ -30,7 +32,8 @@ class CommentSection extends React.Component {
         <PostStat
           likes={this.state.likes}
           liked={this.state.liked}
-          toggleLike={() => this.toggleLike()}
+          toggleLike={(cb) => this.toggleLike(cb)}
+          updateLikes={(u, t, n) => this.props.updateLikes(u, t, n)}
         />
         {
           this.props.comments.map(
