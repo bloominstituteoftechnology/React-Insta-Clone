@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -7,14 +7,57 @@ const CommentsContainer = styled.div`
     width: 100%;
 `
 
-const CommentSection = (props) => {
-    return (
-        <CommentsContainer>
-            {props.thisPost.comments.map((comment,index) => {
-                return <Comment thisComment={comment} key={index} />
-            })}
-        </CommentsContainer>
-    );
+// const CommentSection = (props) => {
+//     return (
+//         <CommentsContainer>
+//             {props.thisPost.comments.map((comment,index) => {
+//                 return <Comment thisComment={comment} key={index} />
+//             })}
+//         </CommentsContainer>
+//     );
+// }
+
+class CommentSection extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            comments: [],
+            commentText: '',
+        }
+    }
+
+    componentDidMount() {
+        this.setState({
+            comments: this.props.thisPost.comments
+        })
+    }
+
+    addNewComment = (event) => {
+        event.preventDefault();
+        this.setState({
+            comments: [...this.state.comments, { username: "me", text: `${this.state.commentText}` }] 
+        })
+    }
+
+    handleChange = event => {
+        this.setState({
+          [event.target.name]: event.target.value
+        });
+      }
+
+    render() {
+        return (
+            <CommentsContainer>
+                {this.state.comments.map((comment,index) => {
+                    return <Comment thisComment={comment} key={index} />
+                })}
+                <form onSubmit={this.addNewComment} >
+                    <input onChange={this.handleChange} placeholder={`add new comment`} name='commentText' value={this.state.commentText} />
+                </form>
+
+            </CommentsContainer>
+        );
+    }
 }
 
 CommentSection.propTypes = {

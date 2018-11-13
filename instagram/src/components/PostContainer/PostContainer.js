@@ -31,8 +31,6 @@ const Post = styled.div`
             padding-left: 20px;
             align-self: flex-start;
         }
-
-
     }
     p {
         padding: 0 20px;
@@ -46,7 +44,7 @@ const PostContainer = (props) => {
             <img src={props.thisPost.imageUrl} />
             
             <p>{props.thisPost.likes} likes</p>
-            <CommentSection thisPost={props.thisPost} />
+            <CommentSection thisPost={props.thisPost} postIndex={props.index} />
         </Post>
     );
 }

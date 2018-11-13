@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchForm from './components/SearchBar/SearchBar';
 import styled from 'styled-components';
+import './App.css';
 
 const AppContainer = styled.div`
   margin-top: 50px;
@@ -14,9 +13,15 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      posts: dummyData.map(item => {return {...item, display: true}}),
+      posts: [],
       searchText: ''
     }
+  }
+
+  componentDidMount() {
+    this.setState({
+      posts: dummyData.map(item => {return {...item, display: true}})
+    })
   }
 
   handleChange = event => {
@@ -36,6 +41,7 @@ class App extends Component {
 
   searchItems = ev => {
     ev.preventDefault();
+    console.log('searching...')
     this.setState({
       posts: this.state.posts.map(item => {
         if(!item.username.toUpperCase().includes(`${this.state.searchText.toUpperCase()}`)){
@@ -58,7 +64,7 @@ class App extends Component {
         />
 
       {this.state.posts.map( (item,index) => {
-         return <PostContainer thisPost={item} key={index} />
+         return <PostContainer thisPost={item} key={index} index={index} />
       })}
 
       </AppContainer>

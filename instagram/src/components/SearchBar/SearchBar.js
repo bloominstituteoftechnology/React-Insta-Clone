@@ -24,7 +24,6 @@ const StyledForm = styled.form`
     }
 `
 
-
 const SearchForm = props => {
     return (
             <StyledForm onSubmit={props.searchItems}>
