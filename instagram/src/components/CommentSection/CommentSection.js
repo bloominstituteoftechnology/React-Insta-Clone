@@ -10,14 +10,18 @@ class CommentSection extends Component {
     super(props);
     this.state = {
       comments: this.props.post.comments,
-      comment: ""
+      comment: "",
+      username: ""
     };
   }
 
   componentDidMount() {
     let id = this.props.id;
     if (localStorage.getItem(id)) {
-      this.setState({ comments: JSON.parse(localStorage.getItem(id)) });
+      this.setState({
+        comments: JSON.parse(localStorage.getItem(id)),
+        username: localStorage.getItem("username")
+      });
     } else {
       this.saveComments();
     }
@@ -39,17 +43,19 @@ class CommentSection extends Component {
 
   addNewComment = e => {
     e.preventDefault();
-    const newComment = { text: this.state.comment, username: "holdenSucks" };
-    const comments = this.state.comments.slice();
+    const newComment = {
+      text: this.state.comment,
+      username: this.state.username
+    };
+    const comments = [...this.state.comments];
     comments.push(newComment);
     this.setState({ comments, comment: "" });
     setTimeout(() => {
       this.saveComments();
-    }, 1000);
+    }, 100);
   };
 
   render() {
-    console.log(localStorage);
     return (
       <div className="comments">
         {this.state.comments.map(data => (
