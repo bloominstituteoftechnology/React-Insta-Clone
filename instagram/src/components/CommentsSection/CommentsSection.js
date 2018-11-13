@@ -1,5 +1,8 @@
 import React from 'react';
 import Comment from '../Comment/Comment';
+
+import PropTypes from 'prop-types';
+
 import './CommentsSection.css';
 
 const CommentsSection = props => {
@@ -11,10 +14,12 @@ const CommentsSection = props => {
                     comment={comment}
                 />    
             )}
-            <div className="comments__time">2 HOURS AGO</div>
-            <div className="comment__add-new">Add a comment ...</div>
         </div>
     );
 }
+
+CommentsSection.propTypes = {
+    comments: PropTypes.arrayOf(PropTypes.object)
+};
 
 export default CommentsSection;

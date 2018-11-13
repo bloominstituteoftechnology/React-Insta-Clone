@@ -13,7 +13,8 @@
     /* left: 0;
     right: 0; */
     top: 0px;
-    background: white;
+    background: rgba(255, 255, 255, 0.975);
+
 }
 
 .header__logo {

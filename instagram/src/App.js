@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+
 import Posts from './components/Posts/Posts';
 import Header from './components/Header/Header';
 import dummyData from './dummy-data';
-
 
 import './App.css';
 
@@ -11,7 +11,8 @@ class App extends Component {
     super();
     this.state = {
       data: dummyData,
-      filter: ''
+      filter: '',
+      comment: ''
     }
   }
 

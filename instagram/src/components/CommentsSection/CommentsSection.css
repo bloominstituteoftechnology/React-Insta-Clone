@@ -7,22 +7,3 @@
     justify-content: flex-start;
     /* border: 1px solid red; */
 }
-
-.comments__time {
-    margin-bottom: 5px;
-    color: lightgrey;
-    font-weight: bold;
-    font-size: .8rem;
-    padding-bottom: 5px;
-    border-bottom: 1px solid lightgrey;
-    width: 100%;
-    /* border: 1px solid red; */
-    text-align: left;
-}
-
-.comment__add-new {
-    margin-top: 5px;
-    margin-bottom: 15px;
-    font-weight: bold;
-    color: grey;
-}

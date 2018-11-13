@@ -6,7 +6,7 @@
     border: 1px solid lightgrey;
     align-items: flex-start;
     margin-bottom: 20px;
-
+    /* border: 1px solid red; */
 }
 
 .post__top {
@@ -20,8 +20,17 @@
     margin: 10px;
 }
 
+.post__top--thumb:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .post__top--user {
     font-weight: bold;
+}
+
+.post__top--user:hover {
+    cursor: pointer;
 }
 
 .post__img{
@@ -34,13 +43,29 @@
     font-size: 1.8rem;
 }
 
-.post__bottom--icon{
-    border: 1px solid red;
-}
-
 .post__bottom--likes {
     font-size: 1rem;
-    
     margin: 10px;
+}
+
+.post__time {
+    margin: 0 10px;
+    margin-bottom: 5px;
+    color: lightgrey;
+    font-weight: bold;
+    font-size: .8rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid lightgrey;
+    width: 96.75%;
+    /* border: 1px solid red; */
+    text-align: left;
+}
+
+.post__add-new-comment {
+    padding: 0 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: grey;
 }
 
