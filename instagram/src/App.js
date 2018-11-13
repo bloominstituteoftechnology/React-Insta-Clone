@@ -76,15 +76,12 @@ class App extends Component {
   // };
 
   filterPosts = ev => {
-    var updatedList = dummyData;
+    var updatedList = this.state.post;
     updatedList = updatedList.filter(item => {
-      return (
-        item.username.toLowerCase().search(ev.target.value.toLowerCase()) !== -1
-      );
+      return item.username.includes(ev.target.value);
     });
     this.setState({
-      post: updatedList,
-      // filtered: updatedList,
+      filtered: updatedList,
       searchTerm: ev.target.value
     });
   };
@@ -107,56 +104,14 @@ class App extends Component {
   //   }
   // };
 
-  addComment = (comment, id) => {
-    this.setState(prevState => {
-      return {
-        post: prevState.post.map(current => {
-          if (current.timestamp === id) {
-            return {
-              ...current,
-              comments: [
-                ...current.comments,
-                {
-                  username: "holdenSucks",
-                  text: comment,
-                  id: Date.now()
-                }
-              ]
-            };
-          } else {
-            return current;
-          }
-        })
-      };
-    });
-  };
-
-  addLike = (like, id) => {
-    this.setState(prevState => {
-      return {
-        post: prevState.post.map(current => {
-          if (current.timestamp === id) {
-            return {
-              ...current,
-              likes: (like += 1)
-            };
-          } else {
-            return current;
-          }
-        })
-      };
-    });
-  };
-
   render() {
     return (
       <div className="App">
-        <SearchBar
-          search={this.state.searchTerm}
-          // handleChange={this.handleChange}
-          onChange={this.filterPosts}
-        />
-        {this.state.post.map(item => (
+        <SearchBar search={this.state.searchTerm} onChange={this.filterPosts} />
+        {(this.state.filtered.length > 0
+          ? this.state.filtered
+          : this.state.post
+        ).map(item => (
           <PostContainer
             key={item.imageUrl}
             post={item}

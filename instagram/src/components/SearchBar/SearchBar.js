@@ -9,7 +9,6 @@ const SearchBar = props => {
     <header className="searchbar-container">
       <Branding />
       <SearchField search={props.search} onChange={props.onChange} />
-
       <IconLinks />
     </header>
   );
