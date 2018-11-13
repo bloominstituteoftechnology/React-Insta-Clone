@@ -8,7 +8,7 @@ import './PostContainer.scss';
 
 export default function PostContainer({data, addComment, addLike}) {
 
-  const {comments, imageUrl, likes, thumbnailUrl, timestamp, username, id} = data;
+  const {comments, imageUrl, likes, thumbnailUrl, timestamp, username, id, liked} = data;
 
   return (
 
@@ -27,7 +27,7 @@ export default function PostContainer({data, addComment, addLike}) {
 
         <div>
 
-        <p className='far fa-heart' onClick={() => addLike(imageUrl)}></p>
+        <p className={liked ? 'far fa-heart bold' : 'far fa-heart'} onClick={() => addLike(imageUrl)}></p>
         <p className='far fa-comment'></p>
 
         </div>

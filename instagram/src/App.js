@@ -55,7 +55,20 @@ class App extends Component {
 
     const index = this.state.data.findIndex(item => item.imageUrl === postUrl);
     const newData = this.state.data;
-    newData[index].likes++;
+
+    if (!newData[index].liked) {
+
+      newData[index].likes++;
+      newData[index].liked = true;
+
+    }
+
+    else {
+
+      newData[index].likes--;
+      newData[index].liked = false;
+
+    }
 
     this.setState({data: newData});
 
