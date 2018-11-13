@@ -49,7 +49,7 @@ class CommentSection extends Component {
   };
 
   render() {
-    console.log(this.state.comment);
+    console.log(localStorage);
     return (
       <div className="comments">
         {this.state.comments.map(data => (

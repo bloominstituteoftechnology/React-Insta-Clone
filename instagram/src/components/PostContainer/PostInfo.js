@@ -11,11 +11,28 @@ class PostInfo extends Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    let id = this.props.id;
+    if (localStorage.getItem(id)) {
+      this.setState({ likes: JSON.parse(localStorage.getItem(id)) });
+    } else {
+      this.saveLikes();
+    }
+  }
+
+  componentWillUnmount() {
+    this.saveLikes();
+  }
+  saveLikes = () => {
+    localStorage.setItem(this.props.id, JSON.stringify(this.state.likes));
+  };
 
   plusLike = () => {
     let add = this.state.likes + 1;
     this.setState({ likes: add });
+    setTimeout(() => {
+      this.saveLikes();
+    }, 1);
   };
 
   render() {
