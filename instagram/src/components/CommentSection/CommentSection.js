@@ -27,21 +27,21 @@ export default class CommentSection extends React.Component {
 
   render() {
 
-    let {comments, time, addComment, id} = this.props;
+    let {comments, time, addComment, removeComment, id, currentUser} = this.props;
 
     return (
 
       <div className='comment-section'>
 
-        {comments.map(comment => (
-          <Comment key={comment.text} comment={comment} />
+        {comments.map((comment, index) => (
+          <Comment key={comment.text} comment={comment} id={index} postID={id} currentUser={currentUser} removeComment={removeComment} />
         ))}
 
         <p className='time'>{time}</p>
 
         <form onSubmit={e => {
           e.preventDefault();
-          addComment({username: 'captaincrunch17', text: this.state.currentComment}, id);
+          addComment({username: currentUser, text: this.state.currentComment}, id);
           this.setState({currentComment: ''});
         }}>
 

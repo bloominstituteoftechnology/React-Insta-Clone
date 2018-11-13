@@ -16,7 +16,8 @@ class App extends Component {
     this.state = {
 
       data: [],
-      displayedData: []
+      displayedData: [],
+      username: 'captaincrunch17'
 
     }
 
@@ -51,6 +52,14 @@ class App extends Component {
 
   }
 
+  removeComment = (postIndex, commentIndex) => {
+
+    const newData = this.state.data;
+    newData[postIndex].comments.splice(commentIndex, 1);
+    this.setState({data: newData});
+
+  }
+
   addLike = postUrl => {
 
     const index = this.state.data.findIndex(item => item.imageUrl === postUrl);
@@ -76,7 +85,7 @@ class App extends Component {
 
   search = searchTerm => {
 
-    var options = {
+    const options = {
       shouldSort: true,
       threshold: 0.5,
       location: 0,
@@ -88,8 +97,8 @@ class App extends Component {
       ]
     };
 
-    var fuse = new Fuse(this.state.data, options);
-    var result = fuse.search(searchTerm);
+    const fuse = new Fuse(this.state.data, options);
+    const result = fuse.search(searchTerm);
 
     this.setState({displayedData: searchTerm === '' ? this.state.data : result});
 
@@ -103,7 +112,16 @@ class App extends Component {
 
         <div className='posts'>
 
-          {this.state.displayedData.map((data, index) => <PostContainer key={index} data={data} addLike={this.addLike} addComment={this.addComment} />)}
+          {this.state.displayedData.map((data, index) =>
+            <PostContainer
+              key={index}
+              data={data}
+              id={index}
+              addLike={this.addLike}
+              addComment={this.addComment}
+              removeComment={this.removeComment}
+              currentUser={this.state.username}
+            />)}
 
         </div>
 
