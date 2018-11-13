@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const PostStat = props => {
   return (
@@ -10,6 +11,10 @@ const PostStat = props => {
       {props.likes > 1 ? `${props.likes} likes` : `${props.likes} like`}
     </div>
   );
+}
+
+PostStat.propTypes = {
+  likes: PropTypes.number.isRequired,
 }
 
 export default PostStat;

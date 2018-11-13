@@ -23,15 +23,28 @@ const PostContainer = props => {
         commentText={props.commentText}
         onCommentFormChange={(e, u, t) => props.onCommentFormChange(e, u, t)}
         onCommentFormSubmit={(e, u, t) => props.onCommentFormSubmit(e, u, t)}
-
       />
     </div>
   );
 }
 
 PostContainer.propTypes = {
-  post: PropTypes.object.isRequired,
-  commentText: PropTypes.object.isRequired,
+  post: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    timestamp: PropTypes.string,
+    comments: PropTypes.arrayOf(PropTypes.shape({
+      username: PropTypes.string,
+      text: PropTypes.string,
+    })),
+  }).isRequired,
+  commentText: PropTypes.shape({
+    username: PropTypes.string,
+    timestamp: PropTypes.string,
+    text: PropTypes.string,
+  }).isRequired,
   onCommentFormChange: PropTypes.func.isRequired,
   onCommentFormSubmit: PropTypes.func.isRequired,
 }

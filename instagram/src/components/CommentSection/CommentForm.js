@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 const CommentForm = props => {
   return (
@@ -14,6 +15,16 @@ const CommentForm = props => {
       <button>...</button>
     </form>
   );
+}
+
+CommentForm.propTypes = {
+  onCommentFormSubmit: PropTypes.func.isRequired,
+  commentText: PropTypes.shape({
+    username: PropTypes.string,
+    timestamp: PropTypes.string,
+    text: PropTypes.string,
+  }).isRequired,
+  onCommentFormChange: PropTypes.func.isRequired,
 }
 
 export default CommentForm;
