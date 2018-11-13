@@ -1,4 +1,6 @@
 .commentSectionContainer {
-    margin: 0px auto;
+    margin: 10px auto;
     border: 1px solid blue;
+    width: 90%;
+
 }

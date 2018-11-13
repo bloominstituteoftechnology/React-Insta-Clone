@@ -16,6 +16,8 @@ const CommentSection = props => {
 
 }
 
+
+
 CommentSection.propTypes = {
     dataInMap: PropTypes.shape(
             {username: PropTypes.string,

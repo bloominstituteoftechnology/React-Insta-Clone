@@ -16,6 +16,16 @@ class App extends Component {
     this.setState({ data: dummyData });
   }
 
+
+
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+    console.log(event.target.name);
+  };
+
+  
   render() {
     return (
       <div className="App">

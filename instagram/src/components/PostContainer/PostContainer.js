@@ -19,7 +19,7 @@ const PostContainer = props => {
                 <h2>{post.username}</h2>
                 <h2>{post.timestamp}</h2>
                 <h2>{post.likes}</h2>
-
+                
                 {post.comments.map(comment => {
                   return (
                     <CommentSection key={comment.text} dataInMap={comment} />
