@@ -14,7 +14,8 @@ class App extends Component {
 
     this.state = {
 
-      data: []
+      data: [],
+      displayedData: []
 
     }
 
@@ -22,7 +23,7 @@ class App extends Component {
 
   componentDidMount() {
 
-    this.setState({data: dummyData});
+    this.setState({data: dummyData, displayedData: dummyData});
 
   }
 
@@ -46,13 +47,19 @@ class App extends Component {
 
   }
 
+  search = searchTerm => {
+
+    this.setState({displayedData: this.state.data.filter(item => item.username.includes(searchTerm))});
+
+  }
+
   render() {
     return (
       <div className='app'>
 
-        <SearchBar />
+        <SearchBar searchFunc={this.search}/>
 
-        {this.state.data.map(data => <PostContainer key={data.imageUrl} data={data} addLike={this.addLike} addComment={this.addComment} />)}
+        {this.state.displayedData.map(data => <PostContainer key={data.imageUrl} data={data} addLike={this.addLike} addComment={this.addComment} />)}
 
       </div>
     );
