@@ -1,4 +1,29 @@
-.search-bar {
-    border: 1px solid red;
+.search-bar-wrapper {
+    border-bottom: 1px solid lightgrey;
+    height: 80px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-wrapper {
+    display: flex;
+    height: 50px
+}
+
+.logo {
+    height: 100%;
+}
+
+.icons-wrapper {
+    height: 50px;
+}
+
+.icons {
+    height: 100%;
+}
+
+.search-input {
+    height: 30px;
+    width: 200px;
 }
