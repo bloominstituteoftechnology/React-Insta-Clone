@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './App.css';
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage'
+import Authenticate from './Authentication/Authenticate';
 
 
 class App extends Component {
@@ -48,7 +49,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
+        <Authenticate />
         <PostsPage 
           handleSearch={this.handleSearch}
           searchText={this.state.searchText} 

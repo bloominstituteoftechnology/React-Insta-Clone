@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PostContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
 
-function PostsPage (props) {
+const PostsPage = props => {
     return (
         <>
             <SearchBar 
