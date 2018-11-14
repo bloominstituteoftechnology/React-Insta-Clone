@@ -1,6 +1,6 @@
 .comment {
     margin-bottom: 5px;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     text-align: left;
     width: 100%;
     display: flex;
@@ -8,12 +8,13 @@
 }
 .comment:hover .comment__close{
     display: block;
-    
+   
     justify-content: space-between;
 }
 
 .comment__name {
     font-weight: bold;
+    border: 1px solid red;
 }
 
 .comment__close {
@@ -22,4 +23,9 @@
 
 .comment__close:hover {
    color: red;
+}
+
+.comment__content {
+    padding-right: 20px;
+    border: 1px solid red;
 }
