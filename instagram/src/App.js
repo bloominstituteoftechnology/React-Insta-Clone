@@ -4,6 +4,7 @@ import './App.css';
 
 // Components
 import SearchBar from './components/SearchBar/SearchBar';
+import Posts from './components/PostContainer/Posts';
 
 // Data
 import dummyData from './dummy-data';
@@ -25,9 +26,11 @@ class App extends Component {
 
   render() {
     return (
-      <SearchBar />
+      <>
+        <SearchBar />
 
-      <Posts />
+        <Posts />
+      </>
     );
   }
 }
