@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import './App.css';
-import Navigation from './components/Navigation';
-import PostContainer from './PostContainer/PostContainer';
+import PostsPage from './PostContainer/PostsPage';
 
 
 class App extends Component {
@@ -61,21 +60,15 @@ class App extends Component {
   
   render() {
     return (
-      <div className="App" onClick={this.hasBeenClicked}>
-        <header className="App-header">
-          <Navigation 
-            handlesChanges={this.handlesChanges} 
-            searchText={this.state.searchText}
-            searchData={this.searchData}
-            isSelected={this.state.isSelected}
-            hasBeenClicked={this.hasBeenClicked}
-            clearSearchText={this.clearSearchText}
-          />
-        </header>
-        <PostContainer 
+      <div className="App">
+        <PostsPage 
           data={this.searchData()}
-          searchText={this.state.searchText}
           handlesChanges={this.handlesChanges} 
+          searchText={this.state.searchText}
+          searchData={this.searchData}
+          isSelected={this.state.isSelected}
+          hasBeenClicked={this.hasBeenClicked}
+          clearSearchText={this.clearSearchText}
         />
       </div>
     );
