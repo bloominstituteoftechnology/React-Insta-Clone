@@ -12,7 +12,7 @@ function Authenticate(Page) {
       return this.props.loggedIn ?
       (<Page
         displayedData={this.props.displayedData}
-        searchFunc={this.props.search}
+        searchFunc={this.props.searchFunc}
         addLike={this.props.addLike}
         addComment={this.props.addComment}
         removeComment={this.props.removeComment}
