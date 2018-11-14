@@ -5,11 +5,6 @@ import PostsPage from "./components/PostContainer/PostsPage";
 import Authenticate from "./components/Authentication/Authenticate";
 import Login from "./components/Login/Login";
 
-// fontAwesome imports
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faStroopwafel } from '@fortawesome/free-solid-svg-icons';
-
 class App extends Component {
   constructor() {
     super();
@@ -18,7 +13,7 @@ class App extends Component {
       searchText: "",
       username: "",
       password: "",
-      loggedIn: false
+      loggedIn: false,
     };
   }
 
@@ -101,23 +96,32 @@ class App extends Component {
     console.log(e.target.parentElement.parentElement.index);
   }
 
+  filterPosts() {
+    if (this.state.searchText === '') return this.state.data;
+    return this.state.data.filter(d => {
+      return d.username.includes(this.state.searchText);
+    })
+  }
+
   render() {
     console.log('rendering');
-    const displayedPosts = this.state.data.filter(d => d.username.includes(this.state.searchText));
-    console.log(displayedPosts);
+    // const displayedPosts = this.state.data.filter(d => d.username.includes(this.state.searchText));
+    // console.log(displayedPosts);
     if (!this.state.loggedIn) {
       return <Login login={this.login} />;
     }
 
+    let filteredPosts = this.filterPosts();
     return (
       <div className="App">
         <PostsPage
-          posts={displayedPosts}
+          posts={filteredPosts}
           searchText={this.state.searchText}
           updateSearchText={this.updateSearchText}
           logout={this.logout}
           username={this.state.username}
           increaseLikes={this.increaseLikes}
+          filterPosts={this.filterPosts}
         />
       </div>
     );

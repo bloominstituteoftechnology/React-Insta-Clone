@@ -4,6 +4,7 @@ import heart from "../icons/heart.png";
 import chat from "../icons/chat.png";
 import PropTypes from "prop-types";
 import { StyledPost, UserDiv, IconBar, Thumbnail, UserName, TimeStamp, LikeCounter } from "../Styles.js";
+import moment from "moment";
 
 class PostContainer extends React.Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class PostContainer extends React.Component {
           </IconBar>
           <LikeCounter>{this.state.likes} likes</LikeCounter>
           <CommentSection comments={this.state.post.comments} username={this.state.username}/>
-          <TimeStamp>{this.state.post.timestamp}</TimeStamp>
+          <TimeStamp>{moment(this.state.post.timestamp, "MMMM Do YYYY, h:mm:ss").fromNow()}</TimeStamp>
         </StyledPost>
       </div>
     );

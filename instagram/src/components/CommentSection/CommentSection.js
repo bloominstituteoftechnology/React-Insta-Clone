@@ -14,33 +14,6 @@ class CommentSection extends React.Component {
     };
   }
 
-  // pass saveLocalStorage down as a prop
-  // when a comment is added, call it?
-
-  // saveStatetoLocalStorage() {
-  //   for (let key in this.state) {
-  //     console.log(key);
-  //     localStorage.setItem(key, JSON.stringify(this.state[key]));
-  //   }
-  // }
-
-  // hydrateStateWithLocalStorage() {
-  //   for (let key in this.state) {
-  //     console.log(key);
-  //     if (localStorage.hasOwnProperty(key)) {
-  //       let value = localStorage.getItem(key);
-  //       console.log(value);
-
-  //     try {
-  //       value = JSON.parse(value);
-  //       this.setState({ [key]: value });
-  //     } catch (e) {
-  //       this.setState({ [key]: value });
-  //     }
-  //   }
-  // }
-  // }
-
   increaseLikes = e => {
     this.setState((prevState) => {
       return {likes: prevState.likes + 1}
@@ -51,31 +24,14 @@ class CommentSection extends React.Component {
     this.setState({ newComment: e.target.value });
   }
 
-  addNewComment = e => {
+  addNewComment = (e, idx) => {
+    console.log(idx);
     e.preventDefault();
     this.setState({ comments: [...this.state.comments, {
       username: this.props.username,
       text: this.state.newComment}],
       newComment: '', });
   };
-
-  // componentDidMount() {
-  //   window.addEventListener(
-  //     "beforeunload",
-  //     this.saveStatetoLocalStorage.bind(this)
-  //   );
-  //     this.hydrateStateWithLocalStorage();
-  // }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener(
-  //     "beforeunload",
-  //     this.saveStatetoLocalStorage.bind(this)
-  //   );
-  //   this.saveStatetoLocalStorage();
-  // }
-
-
 
   render() {
     return (

@@ -6118,6 +6118,11 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
   dependencies:
     minimist "0.0.8"
 
+moment@^2.22.2:
+  version "2.22.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
+  integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -7786,10 +7791,20 @@ react-error-overlay@^5.0.4:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.0.4.tgz#39cf184d770f98b65a2ee59a779d03b8d092b69e"
   integrity sha512-grVJtoDzIbSMYgy5rKbSOmt2FvzR4iJnpMBjXmZolSYJM5acQvBHoEbBBNW0FzTE/TLZMZ+gSy0bAHydc1hFEw==
 
+react-feather@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/react-feather/-/react-feather-1.1.4.tgz#d0143da95f9d52843cf13a553091573a7c617897"
+  integrity sha512-Odke3WUl00+a2scGQKlep4m+qDESl/x+PsTRB3v6fAV/2dteF4EaRjqhX8h7HM3mU3V3v0xGTv8Z5S26bpQ5PQ==
+
 react-is@^16.3.1:
   version "16.5.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.5.2.tgz#e2a7b7c3f5d48062eb769fcb123505eb928722e3"
   integrity sha512-hSl7E6l25GTjNEZATqZIuWOgSnpXb3kD0DVCujmg46K5zLxsbiKaaT6VO9slkSBDPZfYs30lwfJwbOFOnoEnKQ==
+
+react-moment@^0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/react-moment/-/react-moment-0.8.3.tgz#68b5add7145c736b8a737d55c4ed31fbcbcfe1eb"
+  integrity sha512-9wFd3tS44D5NPjuDUGv7qinXKIE50wy2TsOJEUn3pNVO2z7edc1hsjKF5Ol2w7I7qmWd3X1h52/y5H/Ufi7xIA==
 
 react-scripts@2.0.4:
   version "2.0.4"

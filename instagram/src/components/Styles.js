@@ -1,25 +1,28 @@
 import styled from "styled-components";
 
 export const StyledSearchBarContainer = styled.div`
-  max-width: 40%;
+  width: 40%;
   border: 1px solid blue;
-  background-color: gray;
+  background-color: #7073ec;
   display: flex;
   justify-content: space-between;
-  padding: 20px 10px;
+  padding: 10px 10px;
   margin: 0 auto 30px;
+  border-radius: 4px;
 `;
 
 export const StyledSearchBar = styled.input`
   width: 30%;
+  border-radius: 3px;
 `;
 
 export const StyledPost = styled.div`
   max-width: 40%;
   margin: 0 auto;
   border: 1px solid black;
-  background-color: lightslategray;
   margin-bottom: 50px;
+  border-radius: 4px;
+  padding: 0 60px;
 `;
 
 export const UserDiv = styled.div`
@@ -62,6 +65,7 @@ export const StyledCommentSection = styled.div`
 export const TimeStamp = styled.p`
   color: #504a4a;
   text-align: left;
+  margin-left: 60px;
 `;
 
 export const LikeCounter = styled.p`

@@ -3,20 +3,15 @@ import PostContainer from "./PostContainer";
 import SearchBar from "../SearchBar/SearchBar";
 import PropTypes from "prop-types";
 
-const LogoutButton = (props) => {
-  return (
-  <button onClick={props.logout}>Log Out {props.username} </button>
-  )
-}
 
 const PostsPage = (props) => {
   return (
     <div>
-      <LogoutButton logout={props.logout} username={props.username} />
-
         <SearchBar
           searchText={props.searchText}
           updateSearchText={props.updateSearchText}
+          filterPosts={props.filterPosts}
+          logout={props.logout}
         />
         <div className="Posts">
           {props.posts.map((post, idx) => (

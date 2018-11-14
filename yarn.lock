@@ -2,3 +2,7 @@
 # yarn lockfile v1
 
 
+react-feather@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/react-feather/-/react-feather-1.1.4.tgz#d0143da95f9d52843cf13a553091573a7c617897"
+  integrity sha512-Odke3WUl00+a2scGQKlep4m+qDESl/x+PsTRB3v6fAV/2dteF4EaRjqhX8h7HM3mU3V3v0xGTv8Z5S26bpQ5PQ==
