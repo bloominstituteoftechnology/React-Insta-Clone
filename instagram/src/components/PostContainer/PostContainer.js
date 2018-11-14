@@ -12,15 +12,16 @@ const PostContainer = props => {
       <div className="post-image">
         <img src={props.data.imageUrl} alt="post" />
       </div>
-      <div className="like-heart">
-        <img
-          onClick={() => props.handleLike(props.postcontainer.timestamp)}
-          src="../../img/like-heart.png"
-          alt="heart-icon"
-        />
-      </div>
-      <div className="comment">
-        <img src="../../img/comments.png" alt="comments" />
+      <div className="like-comm-container">
+        <div className="like-heart">
+          <i
+            class="far fa-heart"
+            onClick={() => props.handleLike(props.postcontainer.timestamp)}
+          />
+        </div>
+        <div className="comment">
+          <i class="far fa-comment" />
+        </div>
       </div>
       <div className="comments">
         {props.data.comments.map(comment => {
