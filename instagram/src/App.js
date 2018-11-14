@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import './App.css';
 import PostsPage from './PostContainer/PostsPage';
+import Authenticate from './Authentication/Authenticate';
 
 
 class App extends Component {
@@ -76,4 +77,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default Authenticate(App);
