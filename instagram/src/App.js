@@ -92,8 +92,17 @@ class App extends Component {
     this.setState({ searchText: e.target.value });
   };
 
-  increaseLikes(index) {
-    console.log(index);
+  increaseLikes = (id) => {
+    console.log(id);
+    const newData = this.state.data.map(d => {
+      if (d.id === id) {
+        d.likes++;
+        return d
+      }
+      else return d;
+    })
+    console.log(newData);
+    this.setState({ data: newData });
   }
 
   filterPosts() {

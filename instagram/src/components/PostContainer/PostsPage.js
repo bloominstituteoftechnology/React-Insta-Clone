@@ -16,7 +16,7 @@ const PostsPage = (props) => {
         <div className="Posts">
           {props.posts.map((post, idx) => (
             <PostContainer key={idx} 
-            index={idx}
+            id={post.id}
             post={post} 
             username={props.username}
             increaseLikes={props.increaseLikes}

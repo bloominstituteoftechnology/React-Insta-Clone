@@ -12,18 +12,9 @@ class PostContainer extends React.Component {
     super();
     this.state = {
       post: props.post,
-      likes: props.post.likes,
       username: props.username,
     };
   }
-
-  increaseLikes = () => {
-    this.setState(prevState => {
-      return {
-        likes: prevState.likes + 1
-      };
-    });
-  };
 
   render() {
     return (
@@ -38,10 +29,10 @@ class PostContainer extends React.Component {
           </UserDiv>
           <img src={this.state.post.imageUrl} alt="" />
           <IconBar>
-            <Heart onClick = {() => {this.props.increaseLikes(this.props.index)}} />
+            <Heart onClick = {() => {this.props.increaseLikes(this.props.id)}} />
             <MessageCircle />
           </IconBar>
-          <LikeCounter>{this.state.likes} likes</LikeCounter>
+          <LikeCounter>{this.props.post.likes} likes</LikeCounter>
           <CommentSection comments={this.state.post.comments} username={this.state.username}/>
           <TimeStamp>{moment(this.state.post.timestamp, "MMMM Do YYYY, h:mm:ss").fromNow()}</TimeStamp>
         </StyledPost>
