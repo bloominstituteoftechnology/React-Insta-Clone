@@ -20,15 +20,27 @@ class App extends Component {
   }
 
   componentDidMount() {
-    if (localStorage.getItem('instaClone')) {
-      this.setState({
-        data: JSON.parse(localStorage.getItem('instaClone')),
-      })
-    } else {
-      this.setState({
-        data: dummyData,
-      })
-    }
+    let data = localStorage.getItem('instaClone');
+    data = data ? JSON.parse(data) : dummyData;
+
+    let user = localStorage.getItem('instaCloneLogin');
+    user = user? (JSON.parse(user)).username : 'newUser';
+
+    this.setState({
+      data: data,
+      username: user,
+    })
+
+
+    // if (localStorage.getItem('instaClone')) {
+    //   this.setState({
+    //     data: JSON.parse(localStorage.getItem('instaClone')),
+    //   })
+    // } else {
+    //   this.setState({
+    //     data: dummyData,
+    //   })
+    // }
   }
 
   componentDidUpdate(prevState) {
@@ -81,6 +93,21 @@ class App extends Component {
     }));
   }
 
+  handleLogin(name, password) {
+    localStorage.setItem('instaCloneLogin', JSON.stringify({
+      username: name,
+      password: password,
+    }))
+
+    window.location.reload()
+  }
+
+  setUsername(name){
+    this.setState({
+      username: name,
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -91,6 +118,8 @@ class App extends Component {
           submitComment={(c, u, t) => this.submitComment(c, u, t)}
           updateLikes={(u, t, n) => this.updateLikes(u, t, n)}
           handleRemoveComment={(u, t, i) => this.handleRemoveComment(u, t, i)}
+          handleLogin={(name, password) => this.handleLogin(name, password)}
+          setUsername={(name) => this.setUsername(name)}
         />
       </div>
     );

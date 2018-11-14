@@ -3,7 +3,7 @@ import Fuse from 'fuse.js';
 
 import PropTypes from 'prop-types';
 
-
+import Authenticate from '../Authentication/Authenticate';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 
@@ -50,4 +50,5 @@ PostPage.propTypes = {
   handleRemoveComment: PropTypes.func.isRequired,
 }
 
-export default PostPage
+export default Authenticate(PostPage);
+// export default PostPage;
