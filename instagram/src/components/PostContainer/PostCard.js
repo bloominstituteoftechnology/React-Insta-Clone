@@ -33,7 +33,7 @@ class PostCard extends Component {
   };
 
   render () {
-    console.log("POSTCARD PROPS", this.props);
+    // console.log("POSTCARD PROPS", this.props);
     return (
       <div className="post-card">
         <div className="post-card__header">
