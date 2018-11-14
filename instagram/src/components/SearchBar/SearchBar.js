@@ -2,7 +2,7 @@ import React from 'react';
 import './SearchBar.css';
 import * as Icon from 'react-feather';
 
-function SearchBar(){
+function SearchBar(props){
     return(
         <div className='search-bar'>
             <div className='logos'>
@@ -17,7 +17,7 @@ function SearchBar(){
             <div className='nav-buttons'>
                 <Icon.Compass className='menu-button'/>
                 <Icon.Heart className='menu-button'/>
-                <Icon.User className='menu-button'/>
+                <Icon.UserMinus onClick={props.logout} className='menu-button'/>
             </div>
         </div>
     );
