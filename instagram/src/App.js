@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './App.css';
 import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
-import { runInThisContext } from 'vm';
+import PostsPage from './components/PostContainer/PostsPage'
+
 
 class App extends Component {
   constructor() {
@@ -49,16 +48,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar 
+
+        <PostsPage 
           handleSearch={this.handleSearch}
           searchText={this.state.searchText} 
-        />
-        <PostContainer 
           postsData={this.state.data}
           commentText={this.state.commentText} 
           handleComment={this.handleComment}
           addComment={this.addComment}
         />
+        
       </div>
     );
   }
