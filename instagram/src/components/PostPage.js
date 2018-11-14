@@ -71,7 +71,7 @@ class PostPage extends React.Component {
       return (
         <AppContainer className="App">
 
-        <button onClick={()=>console.log('clicked')}>LogOut</button>
+        <button onClick={this.props.logout}>LogOut</button>
 
           <SearchForm searchText={this.state.searchText}
           handleChange={this.handleChange}

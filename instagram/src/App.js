@@ -37,13 +37,8 @@ class App extends React.Component {
   }
 
   logOut = () => {
-    console.log('logging out')
-    // this.setState({ userName: ''});
-    // localStorage.removeItem('userName');
-  }
-
-  clicked = () => {
-    console.log('clicked');
+    this.setState({ userName: ''});
+    localStorage.removeItem('userName');
   }
 
   userInputChange = event => {

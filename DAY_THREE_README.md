@@ -44,7 +44,7 @@ const Authenticate = App =>
   };
 ```
 
-- Build out the LoginPage component. You can design it how you like
+- [X] Build out the LoginPage component. You can design it how you like
 
   - In your `components` directory, create a directory called `Login` and add a new file called `Login.js`.
   - There should be a `username` input, a `password` input, and a `Login` button.
@@ -52,7 +52,7 @@ const Authenticate = App =>
   - This login function should set a `username` on `localStorage`. You'll need to check local storage to see if a user is logged in.
   - Be sure to force the page to reload when a user logs in so that our component un-mounts and mounts again.
 
-- Extending the functionality of the HOC to conditionally render the `LoginPage` or the `App`
+- [X] Extending the functionality of the HOC to conditionally render the `LoginPage` or the `App`
 
   - Inside of `Authenticate` we need to add a constructor to hold our state data.
   - On state we need a user `loggedIn` boolean flag.

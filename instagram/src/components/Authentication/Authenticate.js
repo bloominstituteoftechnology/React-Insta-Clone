@@ -9,8 +9,7 @@ const Authenticate = App =>
                 userInputChange={this.props.userInputChange} userInput={this.props.userInput} />
             }
             else {
-                console.log(this.props.userName)
-                return <App />
+                return <App {...this.props} />
             }  
         }
     };
