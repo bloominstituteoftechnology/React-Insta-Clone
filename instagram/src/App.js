@@ -3,6 +3,7 @@ import "./App.css";
 import dummyData from "./dummy-data";
 import PostContainer from "./components/PostContainer/PostContainer";
 import SearchBar from "./components/SearchBar/SearchBar";
+import * as Icon from 'react-feather';
 class App extends Component {
   constructor() {
     super();
@@ -11,6 +12,17 @@ class App extends Component {
       post: [],
     };
   }
+  handleLikes = timestamp => {
+    let posts = this.state.post.slice();
+    posts = posts.map(post =>
+      {
+        if (post.timestamp === timestamp){
+          post.likes = post.likes + 1;
+        }
+      }
+      )
+    this.setState({posts});
+  }
   componentDidMount(){
     this.setState({
       post: dummyData,
@@ -18,14 +30,10 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className="App"> 
         <header className="App-header">
           <div className="App-header__logo">
-            <img
-              className="logo__icon"
-              src={require("./images/instagram-png-instagram-icon-1600.png")}
-              alt="instagram icon"
-            />
+            <Icon.Instagram className="logo"/>
           </div>
           <div>
             <img
@@ -36,9 +44,13 @@ class App extends Component {
           </div>
 
           <SearchBar className="search-bar" />
+          <a href="#" className="link"><Icon.Compass className="link-compass"/></a>
+          <a href="#" className="link"><Icon.Heart className="link-heart"/></a>
+          <a href="#" className="link"><Icon.User className="link-user"/></a>
+          
         </header>
         {this.state.post.map(post => (
-          <PostContainer key={post.timestamp} post={post} />
+          <PostContainer key={post.timestamp} post={post} handlelikesprop={this.handleLikes}/>
         ))}
       </div>
     );
