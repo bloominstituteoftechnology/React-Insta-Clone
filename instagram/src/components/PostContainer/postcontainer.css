@@ -33,7 +33,18 @@
 .postImage {
     width: 100%
 }
-
+.postIcon {
+    display: flex;
+}
+.postIconImg {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+}
 .likes {
+    font-size: 10px;
+}
+
+.timePosted {
     font-size: 10px;
 }

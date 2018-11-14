@@ -1,8 +1,10 @@
  .searchBar {
      display: flex;
      flex-direction: row;
+     justify-content: space-between;
+
      height: 50px;
-     color: red;
+     
  }
 
  p {
@@ -23,4 +25,13 @@
     width: 100px; 
     height: 46px;
 
+ }
+.icons {
+    display: flex;
+    justify-content: flex-end;
+}
+ .iconBox{
+    width: 30px;
+    height: 30px;
+    padding-right: 3px;
  }

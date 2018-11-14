@@ -21,14 +21,22 @@ const Post = props => {
                     src={props.post.imageUrl}
                 />
             </div>
-                <div>
-                    Like Comment
+            <div className="postIcon">
+                <div className="postIconImg">
+                    <img src={require('../img/heart-regular.svg')} />
                 </div>
-                <div className="likes">
-                    <p>{props.post.likes} likes</p>
+                <div className="postIconImg">
+                    <img src={require('../img/comment-regular.svg')} />
                 </div>
+            </div>
+            <div className="likes">
+                <p>{props.post.likes} likes</p>
+            </div>
             <div>
-                <CommentSection comments={props.post.comments}/>
+                <CommentSection comments={props.post.comments} />
+            </div>
+            <div className="timePosted">
+                <p>{props.post.timestamp}</p>
             </div>
         </div>
 

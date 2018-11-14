@@ -21,7 +21,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>Test
+      <div>
       <SearchBar />
       <PostContainer posts={this.state.posts}/>
 
