@@ -1,0 +1,77 @@
+::placeholder {
+    color: lightgray;
+}
+
+.loginpage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginpage form {
+    padding: 30px 0;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 360px;
+    border: 1px solid lightgray;
+}
+
+.loginpage form img {
+    margin: 5px 0;
+    width: 180px;
+}
+
+.loginpage form input {
+    margin: 3px 0;
+    padding: 5px;
+    width: 270px;
+    height: 38px;
+    font-size: 1.2rem;
+    background-color: #FAFAFA;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.loginpage form input:focus {
+    outline: none;
+    shadow: none;
+}
+
+.loginpage form button {
+    width: 270px;
+    height: 30px;
+    padding: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #FFF;
+    margin: 12px 0;
+    background-color: #CBE0F8;
+    border: none;
+    border-radius: 5px;
+}
+
+.loginpage form .orfacebook {
+    width: 270px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loginpage form .orfacebook-line {
+    width: 110px;
+    border-top: 1px solid lightgray;
+}
+
+.loginpage form .orfacebook-or {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: lightgray;
+}

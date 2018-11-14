@@ -8,22 +8,26 @@
 }
 
 .logo {
+    width: 212px;
+    padding: 19px 16px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
 .logo .fa-instagram {
     font-size: 3.4rem;
-    margin: 22px 18px;
+    margin-right: 5px;
 }
 
-.logo span {
-    font-size: 4rem;
-    font-weight: normal;
+.empty-div {
+    height: 32px;
+    border-right: 1px solid gray;
 }
 
 .logo img {
+    margin-right: 3px;
     width: 113px;
     height: auto;
 }
@@ -40,6 +44,15 @@
     background-color: #FAFAFA;
 }
 
-.login {
-    width: 200px;
+.header .login {
+    width: 215px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.header .login img {
+    width: 22px;
+    height: 20px;
 }

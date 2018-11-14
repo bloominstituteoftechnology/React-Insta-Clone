@@ -1,0 +1,23 @@
+.timestamp {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: gray;
+}
+
+.commentform {
+    padding: 15px 0;
+    border-top: 1px solid lightgray;
+}
+
+.commentform input {
+    width: 100%;
+    border: none;
+    padding: 5px 0;
+    font-size: 1.4rem;
+}
+
+.commentform input:focus {
+    outline: none;
+}

@@ -1,4 +1,5 @@
 import React, {Fragment, Component} from 'react';
+import './CommentSection.css'
 import Comment from './Comment';
 import PropTypes from 'prop-types';
 import moment from 'moment';
@@ -46,7 +47,7 @@ class CommentSection extends Component {
                 <p className="timestamp">
                     {(moment(this.props.timestamp, "MMMM Do YYYY, h:mm:ss a").fromNow()).toUpperCase()}
                 </p>
-                <form onSubmit={this.addComment}>
+                <form className="commentform" onSubmit={this.addComment}>
                     <input type="text" name="commentText" placeholder="Add a comment..." value={this.state.commentText} onChange={this.changeHandler} />
                 </form>
             </Fragment>
