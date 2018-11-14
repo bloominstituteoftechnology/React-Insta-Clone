@@ -16,7 +16,8 @@ class App extends Component {
 
       data: [],
       displayedData: [],
-      username: 'captaincrunch17'
+      username: 'captaincrunch17',
+      loggedIn: false
 
     }
 
@@ -109,6 +110,12 @@ class App extends Component {
 
   }
 
+  setUsername = newUsername => {
+
+    this.setState({username: newUsername, loggedIn: true});
+
+  }
+
   render() {
     return (
       <div className='app'>
@@ -120,6 +127,8 @@ class App extends Component {
           addComment={this.addComment}
           removeComment={this.removeComment}
           username={this.state.username}
+          setUsername={this.setUsername}
+          loggedIn={this.state.loggedIn}
         />
 
       </div>
