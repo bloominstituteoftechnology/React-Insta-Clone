@@ -1,29 +1,46 @@
 .search-bar-wrapper {
     border-bottom: 1px solid lightgrey;
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
+    margin-bottom: 50px;
+    position: sticky;
+    top: 0;
+}
+
+.search-bar {
+    width: 1000px;
+    max-width: 1000px;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+
 .logo-wrapper {
-    display: flex;
-    height: 50px
+    margin: 0 0 0 20px;
+    width: 175px;
 }
 
 .logo {
     height: 100%;
+    width: 100%;
 }
 
 .icons-wrapper {
-    height: 50px;
 }
 
 .icons {
-    height: 100%;
+    width: 150px;
 }
 
 .search-input {
-    height: 30px;
+    font-size: 16px;
     width: 200px;
+    text-align: center;
+    line-height: 25px;
+    background: #FAFAFA;
+    border-radius: 3px;
+    border: 1px solid lightgrey;
 }

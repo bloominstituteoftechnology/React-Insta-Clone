@@ -7,19 +7,21 @@ import Icons from './searchbaricons.png';
 const SearchBar = props => {
     return (
         <header className="search-bar-wrapper">
-            <div className="logo-wrapper">
-                <img className="logo" src={Logo} alt="logo" />
-            </div>
+            <div className="search-bar">
+                <div className="logo-wrapper">
+                    <img className="logo" src={Logo} alt="logo" />
+                </div>
 
-            <input 
-                className="search-input" 
-                type="text" 
-                placeholder="Search" 
-                onKeyDown={props.searchPosts}
-            />
+                <input 
+                    className="search-input" 
+                    type="search" 
+                    placeholder="Search" 
+                    onKeyDown={props.searchPosts}
+                />
 
-            <div className="icons-wrapper">
-                <img className="icons" src={Icons} alt="logos" />
+                <div className="icons-wrapper">
+                    <img className="icons" src={Icons} alt="logos" />
+                </div>
             </div>
         </header>
     )

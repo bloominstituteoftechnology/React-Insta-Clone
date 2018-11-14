@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import './index.css';
 import SearchBar from './components/SearchBar/SearchBar.js';
-import './App.css';
 import dummyData from './dummy-data.js';
 import PostsContainer from './components/PostsContainer/PostsContainer.js';
+import './App.css';
+
 
 class App extends Component {
   constructor() {

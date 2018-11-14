@@ -1,6 +1,7 @@
 import React from 'react';
 import HeartIcon from './hearticon.png';
 import CommentIcon from './commenticon.png';
+import './LikesSection.css'
 
 const LikesSection = props => {
     return (
@@ -19,8 +20,8 @@ const LikesSection = props => {
                 </div>
             </div>
 
-                <div>{props.likes} likes</div>
-        </div>
+                <div className="likes-counter">{props.likes} likes</div>
+        </div> 
 
     )
 }

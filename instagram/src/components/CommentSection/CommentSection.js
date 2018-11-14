@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
+import './CommentSection.css';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -12,8 +13,6 @@ class CommentSection extends React.Component {
         };
     }
 
-
-
     addNewComment = event => {
         event.preventDefault();
         this.setState({ 
@@ -22,17 +21,13 @@ class CommentSection extends React.Component {
         })
     }
 
-  
-
     commentHandler = event => {
         this.setState({ inputText: event.target.value });
       };
 
-
-
     render() {
         return (
-            <div>
+            <div className="comment-section">
                 {this.state.comments.map((commentMap, index) => (
                     <Comment key={index} comment={commentMap} />
                 ))}

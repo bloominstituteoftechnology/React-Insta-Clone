@@ -1,9 +1,11 @@
 import React from 'react';
+import './CommentInput.css';
 
 const CommentInput = props => {
     return (
         <form onSubmit={props.addNewComment} >
-            <input 
+            <input
+                className="comment-input" 
                 type="text" 
                 name="inputText"
                 placeholder="Add a comment..."

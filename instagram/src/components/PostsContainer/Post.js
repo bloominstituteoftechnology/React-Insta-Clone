@@ -4,6 +4,8 @@ import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
 import LikeSection from './LikesSection';
 
+import './Post.css';
+
 
 class Post extends React.Component {
     constructor(props) {
