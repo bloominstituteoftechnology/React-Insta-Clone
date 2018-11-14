@@ -1,18 +1,24 @@
-.search-container {
-    width: 800px;
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.home {
-    display: flex;
-    justify-content: space-between;
-}
-
-.instagram-logo {}
-
-.search-bar {}
-
-.icons {}
+    .search-container {
+        width: 800px;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .home {
+        display: flex;
+        justify-content: space-between;
+        color: #777;
+        font-size: 30px;
+        border-right: 1px solid #777;
+        padding-right: 10px;
+    }
+    
+    .instagram-logo {}
+    
+    .search-bar {
+        opacity: 0.5;
+    }
+    
+    .icons {}
