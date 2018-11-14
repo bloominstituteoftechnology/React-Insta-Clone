@@ -13,7 +13,7 @@ const Authenticate = WrappedComponent => {
     }
 
     componentDidMount =() =>{
-        if(!(localStorage.getItem('username') === undefined)){
+        if(!(localStorage.getItem('username') == undefined)){
             this.setState({
                 loggedIn: true,
             })
@@ -22,7 +22,7 @@ const Authenticate = WrappedComponent => {
 
       render() {
         console.log(this.state);
-        if (localStorage.getItem('username') == undefined) {
+        if (this.state.loggedIn === false) {
           return (<div className="login-screen">
             <LoginPage />
         </div>)

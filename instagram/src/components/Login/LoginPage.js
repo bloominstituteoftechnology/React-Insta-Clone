@@ -5,19 +5,26 @@ class LoginPage extends Component {
   constructor(){
     super();
     this.state=({
-      users: []
+      inputText: ''
     })
   }
 
-  login = () => {
-    localStorage.setItem('username', 'anonymous') 
-    this.setState();
+  handleChange = ev =>{
+    this.setState({
+      [ev.target.name]: ev.target.value
+    });
+  }
+
+  login = ev => {
+      console.log(this.state.inputText);
+     localStorage.setItem('username', this.state.inputText); 
+    
   }
   
 
   render() {
     return (
-      <Login login={this.login}/>
+      <Login login={this.login} handleChange={this.handleChange} inputTex={this.state.inputText} />
     );
   }
 }

@@ -6,8 +6,14 @@ const Login = props => {
     return(
         <div className='Login-field'>
            <form onSubmit={props.login}>
-           <input placeholder="Username"/>
-           <input placeHolder="Password"/>
+           <input 
+            type='text'
+            name='inputText'
+            placeholder="Username"
+            value={props.inputText}
+            onChange={props.handleChange}
+           />
+           <input placeholder="Password"/>
            <button type='submit'>Login</button>
            </form>
             

@@ -65,11 +65,17 @@ class PostsPage extends Component {
   })
    
 }
+
+logout = ev => {
+    localStorage.removeItem('username');
+    window.location.reload();
+}
+
   
   render() {
     return (
       <div className="App">
-        <SearchBar searchFilter={this.searchFilter}/>
+        <SearchBar searchFilter={this.searchFilter} logout={this.logout}/>
         <div className="container">
         
         {this.state.filteredPosts.map((data, index) => (

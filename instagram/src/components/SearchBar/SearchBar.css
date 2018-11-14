@@ -29,6 +29,7 @@ input{
 .searchBar .profile{
     width: 10%;
     height: 5%;
+    cursor: pointer;
 }
 .searchBar .logo{
     width: 15%;

@@ -22,7 +22,7 @@ const SearchBar = props => {
             <div className='head-box menu'>
             <h1>☯</h1>
             <h1>♡</h1>
-            <img src={profileImg} className='profile'/>
+            <img src={profileImg} className='profile' onClick={props.logout}/>
             
             </div>
             
