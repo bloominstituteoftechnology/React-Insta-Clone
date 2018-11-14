@@ -22,13 +22,12 @@ const CommentSection = props => {
             </div>
             <div className="post-comments">
                 {props.post.post.comments.map( 
-                    comment => { 
-                        console.log('Props.post.post.comments', props.post.post.comments);
-                        console.log('props.post.post.comments', props.post.post.comments);
-                        console.log('Props', props.post.post); 
+                    comment => {
+                        console.log('CommentSection.js', comment.username);
                         return (
                         <Comment 
-                            key={props.post.post.comments.username}
+                            key={comment.username}
+                            comment={comment}
                         />
                         )
                     }
