@@ -10,7 +10,6 @@ class App extends Component {
 		super();
 		this.state = {
 			posts: [],
-			commentInput: '',
 			searchInput: '',
 		};
   }
@@ -24,38 +23,28 @@ class App extends Component {
     this.setState ({
       searchInput: event.target.value,
     })
-    if (event.target.value !== ''){
-      this.setState({
-          posts: 
-          this.state.posts.filter((post) => {
-             return  post.username.includes(event.target.value);
-          })
-        });
-    } else {
+    if (event.target.value === ''){
       this.setState({
         posts: dummyData
       }) 
+    } else {
+        this.setState({
+          posts: 
+          this.state.posts.filter((post) => {
+            return post.username.includes(event.target.value);
+          })
+        
+        });
     }  
 	};
 
-  
-  handleLike = (event, index) => {
-    let number = this.state.posts[index].likes
-
-    console.log(number)
-    event.preventDefault();
-      this.setState({
-        posts: [
-        ...this.state.posts,
-           
-      ]
-    })   
-  }
 
 	render() {
 		return (
 			<div className="App">
-				<SearchBar 
+        <SearchBar 
+        handleSearch={this.handleSearch}
+        searchInput={this.state.searchInput}
         />
 				<PostContainer
 					posts={this.state.posts}
