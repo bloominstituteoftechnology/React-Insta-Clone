@@ -8,9 +8,12 @@ import PostList from './components/PostContainer/PostList';
 class App extends Component {
     constructor() {
         super();
-        this.state = {
+        this.state = {};
+    }
+    componentDidMount() {
+        this.setState({
             posts: dummyData
-        };
+        });
     }
     render() {
         return (

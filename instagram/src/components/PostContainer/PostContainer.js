@@ -8,7 +8,7 @@ const PostContainer = props => {
     return (
         <div className="post-container">
             <PostUserInfo username={props.post.username} thumbnailUrl={props.post.thumbnailUrl} />
-            <PostBody post={props.post} />
+            <PostBody post={props.post} likes={props.likes} index={props.index} />
         </div>
     );
 };

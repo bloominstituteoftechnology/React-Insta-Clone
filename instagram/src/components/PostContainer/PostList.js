@@ -8,8 +8,8 @@ const PostList = props => {
     return (
         <main className="stream">
             <div className="post-list">
-                {props.posts.map(post => (
-                    <PostContainer post={post} key={shortid.generate()} />
+                {props.posts.map((post, index) => (
+                    <PostContainer post={post} key={shortid.generate()} index={index} />
                 ))}
             </div>
             <SideBar />

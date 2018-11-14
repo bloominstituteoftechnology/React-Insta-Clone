@@ -7,7 +7,7 @@ const PostBody = props => {
     return (
         <div className="post--body">
             <img src={props.post.imageUrl} alt="" />
-            <CommentContainer likes={props.post.likes} comments={props.post.comments} />
+            <CommentContainer likes={props.post.likes} comments={props.post.comments} index={props.index} />
         </div>
     );
 };
