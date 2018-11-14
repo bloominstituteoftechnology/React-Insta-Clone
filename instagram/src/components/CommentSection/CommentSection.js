@@ -7,23 +7,34 @@ class CommentSection extends React.Component {
         super(props);
         this.state= {
             comments: props.comments,
-
+            input: ''
         }
     }
-   addNewComment = event => {
-       event.preventDefault();
-       this.setState({
-           comments:[...this.props.comments, {text:event.target.value, username:this.props.comments.username}]
-       })
+    handleChange = event => {
+        this.setState({
+            input: event.target.value
+        })
     }
+    addNewComment = event => {
+        event.preventDefault();
+        // console.log('type',typeof this.state.comments, 'comment', this.state.comments);
+
+       this.setState({ comments: [...this.state.comments, {username:'holybanana', text:this.state.input}],input: ''})
+        // const comments = this.state.comments.slice();
+        // comments.push({username:'testing', text:this.state.input});
+        // this.setState({
+        //     comments: comments,
+        //     input:''
+        // })
+}
     render(){
         return (
         <Fragment>
         {this.state.comments.map((comment,i) =>
         <Comment key = {i} comment = {comment} />)
         }
-        <form action=""  onSubmit={e => this.addNewComment(e.target.value)}>
-        <input type="text" placeholder="Add a comment..."/>
+        <form action=""  onSubmit={this.addNewComment}>
+            <input type="text" placeholder="Add a comment..." value={this.state.input} onChange={this.handleChange} />
         </form>
         </Fragment>
     );

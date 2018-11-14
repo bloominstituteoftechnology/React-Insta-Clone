@@ -9,12 +9,14 @@
   justify-content:flex-start;
   
 }
-.logo__icon{
-width:100%;
-}
 .logo__text{
-width:100%;
+  max-width:100px;
+/* width:100%; */
 }
 .search-bar{
   flex:1;
+}
+a.link:link, a.link:visited{
+  text-decoration:none;
+  color:rgb(37, 37, 37);
 }
