@@ -3,6 +3,7 @@ import './util/reset.sass';
 import './App.css';
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './components/Authentication/Authenticate';
 
 class App extends Component {
     constructor() {
@@ -23,4 +24,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Authenticate(App);
