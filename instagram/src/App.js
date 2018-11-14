@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import Authenticate from './components/Authentication/Authenticate';
 import PostsPage from './components/PostsPage/PostsPage'
 import dummyData from './dummy-data';
-import LoginPage from './components/LoginPage/LoginPage'
+//import LoginPage from './components/LoginPage/LoginPage'
 
 import './App.css';
 
@@ -18,13 +18,7 @@ class App extends Component {
       filter: '',
       commentText: '',
       logedInUser: 'therealbondor',
-      loginUserText: '',
-      loginPasswordText: ''
     }
-  }
-
-  login(username, password) {
-    localStorage.setItem('user', username)
   }
 
   componentDidMount(){
@@ -86,21 +80,21 @@ class App extends Component {
 
   render() {
     return (
-      <LoginPage 
-        login={this.login}
-        loginUserText={this.state.loginUserText}
-        loginPasswordText={this.state.loginPasswordText}
-        handleInputChange={this.handleInputChange}
-      />
-      // <PostsPage 
-      //   data={this.getData()}
-      //   commentText={this.state.commentText}
+      // <LoginPage 
+      //   login={this.login}
+      //   loginUserText={this.state.loginUserText}
+      //   loginPasswordText={this.state.loginPasswordText}
       //   handleInputChange={this.handleInputChange}
-      //   addNewComment={this.addNewComment}
-      //   addLike={this.addLike}
-      //   removeComment={this.removeComment}
-      //   filter={this.state.filter}
       // />
+      <PostsPage 
+        data={this.getData()}
+        commentText={this.state.commentText}
+        handleInputChange={this.handleInputChange}
+        addNewComment={this.addNewComment}
+        addLike={this.addLike}
+        removeComment={this.removeComment}
+        filter={this.state.filter}
+      />
     );
   }
 }
