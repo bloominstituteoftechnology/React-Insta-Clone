@@ -4,14 +4,17 @@ import dummyData from "./dummy-data";
 
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
-
+import PostsPage from './components/PostContainer/PostsPage';
 import "./App.css";
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: []
+      data: [],
+      // text: '',
+      // id: 0,
     };
   }
 
@@ -25,14 +28,7 @@ class App extends Component {
         <header className="App-header">
           <SearchBar />
         </header>
-        <div>
-          {this.state.data.map(
-            post => {
-              return (
-              <PostContainer key={post.username} post={post} />
-              )
-          })}
-        </div>
+          <PostsPage key={this.state.data.username} post={this.state.data}/>
       </div>
     );
   }

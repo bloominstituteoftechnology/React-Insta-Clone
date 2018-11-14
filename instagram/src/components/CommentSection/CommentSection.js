@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
+import CommentInput from './CommentInput';
 import PropTypes from 'prop-types';
 import './CommentSection.css';
 
@@ -7,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { throws } from 'assert';
 
 library.add(fab, faComment, faHeart);
 
@@ -23,7 +25,7 @@ const CommentSection = props => {
             <div className="post-comments">
                 {props.post.post.comments.map( 
                     comment => {
-                        console.log('CommentSection.js', comment.username);
+                        // console.log('CommentSection.js', comment.username);
                         return (
                         <Comment 
                             key={comment.username}
@@ -35,11 +37,16 @@ const CommentSection = props => {
                 }
             </div>
             <div className="post-comment-input">
-                <input type="text" placeholder="Add a comment..." />
+                <CommentInput
+                    text={props.text}
+                    addComment={props.addComment}
+                    handleChange={props.handleChange}
+                />
             </div>
         </div>
     )
 };
+
 
 CommentSection.propTypes = {
     username: PropTypes.string,
