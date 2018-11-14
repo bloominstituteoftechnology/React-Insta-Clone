@@ -10,11 +10,8 @@
     margin-right: 10px;
     margin-bottom: 20px;
     position: fixed;
-    /* left: 0;
-    right: 0; */
     top: 0px;
     background: rgba(255, 255, 255, 0.975);
-
 }
 
 .header__logo {
@@ -22,7 +19,7 @@
     justify-content: space-between;
     align-items: flex-start;
     min-width: 150px;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-left: 10px;
 }
 
@@ -34,6 +31,7 @@
 .words {
     margin-top: 3px;
 }
+
 .logo {
     margin-top: 2px;
 }
@@ -42,6 +40,6 @@
     display: flex;
     justify-content: space-between;
     min-width: 150px;
-    font-size: 1.8rem;
+    font-size: 3rem;
     margin-right: 10px;
 }
