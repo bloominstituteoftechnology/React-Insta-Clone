@@ -19,7 +19,7 @@ function Authenticate(Page) {
         username={this.props.username}
       />)
       :
-      (<LoginPage />);
+      (<LoginPage setUsername={this.props.setUsername}/>);
 
     }
 
