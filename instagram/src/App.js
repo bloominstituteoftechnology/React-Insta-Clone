@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
 import PostsPage from './components/PostContainer/PostsPage.js';
 
 
-class App extends Component {
+class App extends React.Component {
   constructor() {
     super();
     this.state={

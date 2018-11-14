@@ -6,6 +6,7 @@ const Authentication = Component => {
       render() {
           return localStorage.getItem('Spike') === 'Bebop' ? ( 
           <Component 
+          user={this.props.user}
           posts={this.props.posts}
           logout={this.props.logout}
           />) :(

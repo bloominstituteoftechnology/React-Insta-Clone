@@ -13,6 +13,7 @@ function PostsPage(props){
           <div className='posts-container'>
             {props.posts.map((post, index)=>(
               <PostContainer
+                user = {props.user}
                 post = {post}
                 key ={index}
               />  

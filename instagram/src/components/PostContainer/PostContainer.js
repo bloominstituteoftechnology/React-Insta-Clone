@@ -21,6 +21,7 @@ function PostContainer(props){
                 </div>
             </div>
             <CommentSection 
+            user = {props.user}
             comments = {props.post.comments}
             timestamp = {props.post.timestamp}
             />
