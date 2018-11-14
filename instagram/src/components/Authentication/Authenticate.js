@@ -21,7 +21,6 @@ const Authenticate = App =>
     };
 
     render() {
-      console.log(this.state);
       if (this.state.isLoggedIn) return <App />;
       return <Login login={this.login} />;
     }
