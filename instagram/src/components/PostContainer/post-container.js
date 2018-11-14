@@ -1,18 +1,13 @@
 import React from 'react';
 import Post from './post';
-import Comments from '../CommentSection/comments';
+import './post-container.css'
 
 const PostContainer = props => {
     return (
-        <div>
-            {props.dummyData.map((post) => {
-            return (
-                <Post key={post.id} post={post} />
-            )
-            })}
-            <p>{props.dummyData.likes}</p>
+        <div className="post-container-wrapper">
+            {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
         </div>
-    )
-}
+    );
+};
 
 export default PostContainer;
