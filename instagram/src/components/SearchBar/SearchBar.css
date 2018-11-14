@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    background-color: white;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo .fa-instagram {
+    font-size: 3.4rem;
+    margin: 22px 18px;
+}
+
+.logo span {
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+.logo img {
+    width: 113px;
+    height: auto;
+}
+
+.searchbar {
+    text-align: center;
+    width: 211px;
+    height: 24px;
+    border: 1px solid lightgray;
+    justify-self: center;
+    padding: none;
+    font-size: 1.4rem;
+    border-radius: 3px;
+    background-color: #FAFAFA;
+}
+
+.login {
+    width: 200px;
+}
