@@ -29,7 +29,7 @@ class App extends Component {
       <>
         <SearchBar />
 
-        <Posts />
+        <Posts posts={this.state.posts} />
       </>
     );
   }
