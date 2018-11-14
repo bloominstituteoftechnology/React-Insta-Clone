@@ -1,0 +1,17 @@
+.login-page {
+    max-width: 800px;
+    margin: 20% auto;
+}
+
+form {
+    max-width: 80%;
+    text-align: center;
+}
+
+input {
+    margin-right: 10px;
+}
+
+input, button {
+    font-size: 2rem;
+}
