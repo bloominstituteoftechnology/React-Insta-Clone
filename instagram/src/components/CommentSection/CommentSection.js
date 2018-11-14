@@ -39,6 +39,16 @@ class CommentSection extends Component {
         })
     }
 
+    deleteComment = (event) => {
+        event.preventDefault();
+        console.log(event.currentTarget.dataset.index)
+        this.setState({
+            comments:  this.state.comments.filter((comment,index) => {
+                return event.currentTarget.dataset.index !== index.toString();
+            })
+        })
+    }
+
     handleChange = event => {
         this.setState({
           [event.target.name]: event.target.value
@@ -49,7 +59,7 @@ class CommentSection extends Component {
         return (
             <CommentsContainer>
                 {this.state.comments.map((comment,index) => {
-                    return <Comment thisComment={comment} key={index} />
+                    return <Comment thisComment={comment} key={index} index={index} onClick={this.deleteComment} />
                 })}
                 <form onSubmit={this.addNewComment} >
                     <input onChange={this.handleChange} placeholder={`add new comment`} name='commentText' value={this.state.commentText} />

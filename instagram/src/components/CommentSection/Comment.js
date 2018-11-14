@@ -12,12 +12,21 @@ const CommentContainer = styled.div`
     p {
         margin: 0;
     }
+
+    .delete-comment {
+        cursor: pointer;
+        border: 1px solid black;
+        display: inline-block;
+        padding: 2px 10px;
+        border-radius: 5px;
+    }
 `
 
 const Comment = (props) => {
     return (
-        <CommentContainer>
+        <CommentContainer  >
             <p><strong>{props.thisComment.username}</strong> {props.thisComment.text}</p> 
+            <div className={`delete-comment`}onClick={props.onClick} data-index={props.index}>Delete Comment</div>
         </CommentContainer>
     );
 }

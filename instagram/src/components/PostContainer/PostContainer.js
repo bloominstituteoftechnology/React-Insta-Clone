@@ -34,6 +34,8 @@ const Post = styled.div`
     }
     p {
         padding: 0 20px;
+    }
+    .point {
         cursor: pointer;
     }
 `
@@ -74,7 +76,7 @@ class PostContainer extends Component {
         <h2><img src={this.props.thisPost.thumbnailUrl} alt={this.props.thisPost.thumbnailUrl} />{this.props.thisPost.username}<p>{this.props.thisPost.timestamp}</p></h2>
         <img src={this.props.thisPost.imageUrl} alt={this.props.thisPost.imageUrl} />
         
-        <p onClick={this.addLike}>{this.state.likes} likes</p>
+        <p className={`point`} onClick={this.addLike}>{this.state.likes} likes</p>
         <CommentSection thisPost={this.props.thisPost} postIndex={this.props.index} />
     </Post>
         )

@@ -30,8 +30,8 @@ const SearchForm = props => {
                 <input type="text" name="searchText" 
                 placeholder="enter search criteria" value={props.searchText}
                 onChange={props.handleChange} />
-                <button type="submit">Search</button>
-                <button onClick={props.clearSearch}>Clear Search</button>
+                {/* <button type="submit">Search</button>
+                <button onClick={props.clearSearch}>Clear Search</button> */}
             </StyledForm>
     );
 }

@@ -50,7 +50,7 @@ class App extends Component {
       })
     }
     else{
-    const options = {keys: ['username']};
+    const options = {threshold: 0.5, keys: ['username'],minMatchCharLength: 2,shouldSort: true};
     const fuse = new Fuse(this.state.posts,options);
     this.setState({
       posts: this.state.posts.map(item => {
@@ -72,7 +72,7 @@ class App extends Component {
         <SearchForm searchText={this.state.searchText}
         handleChange={this.handleChange}
         searchItems={this.searchItems}
-        clearSearch={this.clearSearch}
+        // clearSearch={this.clearSearch}
         />
 
       {this.state.posts.map( (item,index) => {
