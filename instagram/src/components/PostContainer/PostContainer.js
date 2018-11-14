@@ -77,7 +77,7 @@ class PostContainer extends Component {
         <img src={this.props.thisPost.imageUrl} alt={this.props.thisPost.imageUrl} />
         
         <p className={`point`} onClick={this.addLike}>{this.state.likes} likes</p>
-        <CommentSection thisPost={this.props.thisPost} postIndex={this.props.index} />
+        <CommentSection thisPost={this.props.thisPost} postIndex={this.props.index} userName={this.props.userName}/>
     </Post>
         )
     }

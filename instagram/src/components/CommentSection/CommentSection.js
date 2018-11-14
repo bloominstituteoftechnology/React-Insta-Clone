@@ -35,7 +35,7 @@ class CommentSection extends Component {
     addNewComment = (event) => {
         event.preventDefault();
         this.setState({
-            comments: [...this.state.comments, { username: "me", text: `${this.state.commentText}` }] 
+            comments: [...this.state.comments, { username: `${this.props.userName}`, text: `${this.state.commentText}` }] 
         })
     }
 

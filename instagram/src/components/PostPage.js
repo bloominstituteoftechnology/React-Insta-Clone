@@ -80,7 +80,7 @@ class PostPage extends React.Component {
           />
   
         {this.state.posts.map( (item,index) => {
-           return <PostContainer thisPost={item} key={index} index={index} />
+           return <PostContainer thisPost={item} key={index} index={index} userName={this.props.userName} />
         })}
   
         </AppContainer>

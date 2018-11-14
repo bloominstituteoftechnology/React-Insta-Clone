@@ -13,31 +13,38 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
+      isLoggedIn: false,
       userName: '',
       userInput: '',
     }
   }
 
-  componentDidUpdate() {
-    localStorage.setItem('userName', this.state.userName);
-  }
+  // componentDidUpdate() {
+  //   localStorage.setItem('userName', this.state.userName);
+  // }
 
   componentDidMount() {
-    if(localStorage.getItem('userName') !== "null" && localStorage.getItem('userName') !== undefined){
+    if(localStorage.getItem('userName') !== null && localStorage.getItem('userName') !== undefined){
       this.setState({
-        userName: localStorage.getItem('userName')
+        userName: localStorage.getItem('userName'),
+        isLoggedIn: true
       })
     }
   }
 
   logIn = (event) => {
     event.preventDefault();
-    this.setState({ userName: this.state.userInput});
-    localStorage.setItem('userName',this.state.userInput)
+    if(this.state.userInput === ''){
+      console.log('name input empty')
+    }
+    else{
+      this.setState({ userName: this.state.userInput, isLoggedIn: true});
+      localStorage.setItem('userName',this.state.userInput);
+    }
   }
 
   logOut = () => {
-    this.setState({ userName: ''});
+    this.setState({ userName: '', isLoggedIn: false});
     localStorage.removeItem('userName');
   }
 
@@ -50,7 +57,7 @@ class App extends React.Component {
   render() {
     return <PostPage login={this.logIn} logout={this.logOut}
      userName={this.state.userName} userInput={this.state.userInput} 
-     userInputChange={this.userInputChange} clicked={this.clicked} />
+     userInputChange={this.userInputChange} clicked={this.clicked} isLoggedIn={this.state.isLoggedIn}/>
   }
 }
 

@@ -30,7 +30,7 @@ const Login = props => {
                 <input type="text" name="userInput" 
                 placeholder="user name" value={props.userInput}
                 onChange={props.userInputChange} />
-                <button type="submit">Submit</button>
+                <button type="submit">Log In</button>
             </StyledForm>
     );
 }
