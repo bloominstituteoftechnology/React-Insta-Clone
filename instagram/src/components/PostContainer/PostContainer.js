@@ -13,7 +13,11 @@ const PostContainer = props => {
         <img src={props.data.imageUrl} alt="post" />
       </div>
       <div className="like-heart">
-        <img src="../../img/like-heart.png" alt="heart-icon" />
+        <img
+          onClick={() => props.handleLike(props.postcontainer.timestamp)}
+          src="../../img/like-heart.png"
+          alt="heart-icon"
+        />
       </div>
       <div className="comment">
         <img src="../../img/comments.png" alt="comments" />
@@ -26,6 +30,7 @@ const PostContainer = props => {
       <div className="add-comment">
         <form className="comm-add">
           <input type="text" name="addComment" placeholder="Add comment...." />
+          <i class="fas fa-ellipsis-h" />
         </form>
       </div>
     </div>

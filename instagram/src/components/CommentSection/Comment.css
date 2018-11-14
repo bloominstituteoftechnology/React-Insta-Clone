@@ -1,5 +1,5 @@
 .comment-container {
-    margin: 10px;
+    display: flex;
 }
 
 .comm-user {

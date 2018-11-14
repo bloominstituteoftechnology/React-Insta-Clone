@@ -6,7 +6,7 @@ const SearchBarNavContainer = props => {
     <div className="search-container">
       <div className="home">
         <a href="https://www.instagram.com">
-          <img src="../../img/insta-cam.png" alt="instagram-icon" />
+          <i class="fab fa-instagram" />
         </a>
       </div>
 

@@ -6,7 +6,10 @@
     align-items: center;
 }
 
-.home {}
+.home {
+    display: flex;
+    justify-content: space-between;
+}
 
 .instagram-logo {}
 

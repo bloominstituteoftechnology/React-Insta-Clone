@@ -28,9 +28,30 @@
 }
 
 .add-comment {
-    width: 250px;
+    margin-top: 10px;
+    /* width: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .comm-add {
-    margin-left: 10px;
+    opacity: 0.3;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+}
+
+input::placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+.fas {
+    color: black;
+    display: flex;
+    flex-direction: row-reverse;
 }
