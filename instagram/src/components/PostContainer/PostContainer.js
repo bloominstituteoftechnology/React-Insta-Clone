@@ -5,7 +5,7 @@ import Post from './Post';
 const PostContainer = props => {
     return (
         <div>
-            {props.post.map(item => <Post key={Math.random()} post={item} />)}
+            {props.post.map(item => <Post key={Math.random()} post={item} user = {props.user}/>)}
         </div>
     );
 };

@@ -15,7 +15,13 @@ const Header = props =>{
                 alt="instagram"
             />
         </div>
-        <SearchBar />
+            <div>
+                <input
+                    type="text"
+                    placeholder='Search'
+                    onChange={props.searchHandler}
+                />
+            </div>
         <div className="right-logo-div">
             <img
                 className="explore-logo"
