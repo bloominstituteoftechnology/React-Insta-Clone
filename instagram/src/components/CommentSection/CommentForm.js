@@ -5,11 +5,11 @@ const CommentForm = props => {
   return (
     <form
       className="comment--form"
-      onSubmit={(e) => props.handleFormInputSubmit(e)}>
+      onSubmit={(e) => props.handleInputSubmit(e)}>
       <input 
         type="text"
         name="text"
-        onChange={(e) => props.handleFormInputChange(e)}
+        onChange={(e) => props.handleInputChange(e)}
         placeholder="Add a comment..."
         value={props.commentText}/>
       <button>...</button>
@@ -18,9 +18,9 @@ const CommentForm = props => {
 }
 
 CommentForm.propTypes = {
-  handleFormInputSubmit: PropTypes.func.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
   commentText: PropTypes.string.isRequired,
-  handleFormInputChange: PropTypes.func.isRequired,
+  handleInputSubmit: PropTypes.func.isRequired,
 }
 
 export default CommentForm;

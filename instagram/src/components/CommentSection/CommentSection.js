@@ -14,6 +14,7 @@ class CommentSection extends React.Component {
     this.state = {
       likes : this.props.likes,
       liked: false,
+      commentText: '',
     }
   }
 
@@ -24,6 +25,20 @@ class CommentSection extends React.Component {
       likes: likes,
       liked: !this.state.liked
     });
+  }
+
+  handleInputChange(e) {
+    this.setState({
+      commentText: e.target.value
+    })
+  }
+
+  handleInputSubmit(e, cb) {
+    e.preventDefault();
+    cb(this.state.commentText);
+    this.setState({
+      commentText: ''
+    })
   }
 
   render() {
@@ -47,9 +62,9 @@ class CommentSection extends React.Component {
           {moment(parseDate(this.props.timestamp)).fromNow()}
         </div>
         <CommentForm
-          commentText={this.props.commentText}
-          handleFormInputChange={(e) => this.props.handleFormInputChange(e)}
-          handleFormInputSubmit={(e) => this.props.handleFormInputSubmit(e)}
+          commentText={this.state.commentText}
+          handleInputChange={(e) => this.handleInputChange(e)}
+          handleInputSubmit={(e) => this.handleInputSubmit(e, this.props.submitComment)}
         />
       </div>
     );
@@ -66,9 +81,7 @@ CommentSection.propTypes = {
   likes: PropTypes.number,
   liked: PropTypes.bool,
   timestamp: PropTypes.string.isRequired,
-  commentText: PropTypes.string.isRequired, 
-  handleFormInputChange: PropTypes.func.isRequired,
-  handleFormInputSubmit: PropTypes.func.isRequired,
+  submitComment: PropTypes.func.isRequired,
   handleRemoveComment: PropTypes.func.isRequired,
 }
 

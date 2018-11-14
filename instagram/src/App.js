@@ -16,7 +16,6 @@ class App extends Component {
     super(props);
     this.state = {
       username: 'currentUser',
-      // data: dummyData,     // moved to CDM below
       data: [],
       searchText: '',
     };
@@ -25,41 +24,28 @@ class App extends Component {
   componentDidMount() {
     if (localStorage.getItem('instaClone')) {
       this.setState({
-        data: JSON.parse(localStorage.getItem('instaClone')).map(
-          post => {
-            post.commentText = '';
-            return post;
-          }
-        )
+        data: JSON.parse(localStorage.getItem('instaClone')),
       })
     } else {
       this.setState({
-        data: dummyData.map(post => {
-          post.commentText = '';
-          return post;
-        }),
+        data: dummyData,
       })
     }
   }
 
   componentDidUpdate(prevState) {
     if(prevState.data !== this.state.data) {
+      localStorage.setItem('instaClone',JSON.stringify(this.state.data));
     }
   }
 
-  handleFormInputChange(e, u, t) {
+  handleSearch(e) {
     this.setState({
-      data: this.state.data.map(post => {
-        if (post.username === u && post.timestamp === t) {
-          return {...post, commentText: e.target.value}
-        }
-        return post;
-      })
-    });
+      searchText: e.target.value,
+    })
   }
 
-  handleFormInputSubmit(e, u, t) {
-    e.preventDefault();
+  submitComment(c, u, t) {
     this.setState({
       data: this.state.data.map(post => {
         if (post.username === u && post.timestamp === t){
@@ -67,19 +53,12 @@ class App extends Component {
             ...post,
             comments: [...(post.comments), {
               username: this.state.username, 
-              text: post.commentText}],
-            commentText: '',
+              text: c}],
           }
         }
         return post;
       }), 
     });
-  }
-
-  handleSearch(e) {
-    this.setState({
-      searchText: e.target.value,
-    })
   }
 
   updateLikes(u, t, n) {
@@ -125,8 +104,7 @@ class App extends Component {
                   <PostContainer
                     key={post.username + post.timestamp}
                     commentText={post.commentText}
-                    handleFormInputChange={(e, u, t) => this.handleFormInputChange(e, u, t)}
-                    handleFormInputSubmit={(e, u, t) => this.handleFormInputSubmit(e, u, t)}
+                    submitComment={(c, u, t) => this.submitComment(c, u, t)}
                     updateLikes={(u, t, n) => this.updateLikes(u, t, n)}
                     post={post}
                     handleRemoveComment={(u, t, i) => this.handleRemoveComment(u, t, i)}
