@@ -2,7 +2,7 @@ import React from "react";
 import Comment from "./Comment";
 import PropTypes from "prop-types";
 // import "./CommentSection.css";
-import { StyledCommentSection } from "../Styles";
+import { StyledCommentSection, AddCommentBar } from "../Styles";
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class CommentSection extends React.Component {
           <Comment key={idx} comment={com} />
         ))}
         <form onSubmit={this.addNewComment}>
-          <input type="text" 
+          <AddCommentBar type="text" 
           name="addComment" 
           placeholder="Add a comment..." 
           value={this.state.newComment}

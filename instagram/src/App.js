@@ -18,8 +18,8 @@ class App extends Component {
   }
 
   saveStatetoLocalStorage() {
+    console.log('saving');
     for (let key in this.state) {
-      console.log(key);
       localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
   }
@@ -46,9 +46,9 @@ class App extends Component {
       this.saveStatetoLocalStorage.bind(this)
     );
     setTimeout(() => {
-      this.setState({ data: dummyData });
+      this.setState({ data: dummyData, displayedPosts: dummyData }, this.hydrateStateWithLocalStorage());
     }, 200);
-    this.hydrateStateWithLocalStorage();
+    // this.hydrateStateWithLocalStorage();
   }
 
   componentWillUnmount() {
@@ -59,14 +59,14 @@ class App extends Component {
     this.saveStatetoLocalStorage();
   }
 
-  componentDidUpdate() {
+ /* componentDidUpdate() {
     for (let key in this.state) {
       if (localStorage.getItem(key) !== this.state[key]) {
-        console.log('setting', key);
         localStorage.setItem(key, JSON.stringify(this.state[key]));
       }
     }
   }
+  */
 
   login = e => {
     e.preventDefault();
@@ -101,30 +101,32 @@ class App extends Component {
       }
       else return d;
     })
-    console.log(newData);
     this.setState({ data: newData });
   }
 
-  filterPosts() {
+  filterPosts = e => {
+    console.log('filterPosts running');
     if (this.state.searchText === '') return this.state.data;
-    return this.state.data.filter(d => {
-      return d.username.includes(this.state.searchText);
-    })
+    else { 
+      const postsToDisplay = this.state.data.filter(d => 
+      d.username.includes(this.state.searchText)
+    )
+    return postsToDisplay;
   }
+}
 
   render() {
-    console.log('rendering');
-    // const displayedPosts = this.state.data.filter(d => d.username.includes(this.state.searchText));
-    // console.log(displayedPosts);
     if (!this.state.loggedIn) {
       return <Login login={this.login} />;
     }
 
-    let filteredPosts = this.filterPosts();
+    const p = this.filterPosts();
+    console.log(p);
+
     return (
       <div className="App">
         <PostsPage
-          posts={filteredPosts}
+          posts={p}
           searchText={this.state.searchText}
           updateSearchText={this.updateSearchText}
           logout={this.logout}

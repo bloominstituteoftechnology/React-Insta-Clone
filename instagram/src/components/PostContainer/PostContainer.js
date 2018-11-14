@@ -1,7 +1,5 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
-import heart from "../icons/heart.png";
-import chat from "../icons/chat.png";
 import { Heart, MessageCircle } from "react-feather";
 import PropTypes from "prop-types";
 import { StyledPost, UserDiv, IconBar, Thumbnail, UserName, TimeStamp, LikeCounter } from "../Styles.js";

@@ -12,8 +12,9 @@ export const StyledSearchBarContainer = styled.div`
 `;
 
 export const StyledSearchBar = styled.input`
-  width: 30%;
-  border-radius: 3px;
+  /* width: 30%; */
+  border-radius: 8px;
+  padding: 5px;
 `;
 
 export const StyledPost = styled.div`
@@ -24,10 +25,10 @@ export const StyledPost = styled.div`
   border-radius: 4px;
   padding: 0 60px;
 
-  /* &>img {
-    max-width: 90%;
+  &>img {
+    max-width: 80%;
     height: auto;
-  } */
+  }
 `;
 
 export const UserDiv = styled.div`
@@ -76,6 +77,12 @@ export const LikeCounter = styled.p`
   font-weight: bold;
   `;
 
+export const AddCommentBar = styled.input`
+  padding: 10px;
+  border-radius: 5px;
+  width: 80%;
+
+`;
 export const LoginForm = styled.form`
   width: 40%;
   margin: 0 auto;

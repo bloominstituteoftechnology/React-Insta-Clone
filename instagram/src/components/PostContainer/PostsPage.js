@@ -7,23 +7,23 @@ import PropTypes from "prop-types";
 const PostsPage = (props) => {
   return (
     <div>
-        <SearchBar
-          searchText={props.searchText}
-          updateSearchText={props.updateSearchText}
-          filterPosts={props.filterPosts}
-          logout={props.logout}
-        />
-        <div className="Posts">
-          {props.posts.map((post, idx) => (
-            <PostContainer key={idx} 
-            id={post.id}
-            post={post} 
-            username={props.username}
-            increaseLikes={props.increaseLikes}
-            />
-          ))}
-        </div>
-</div>
+    <SearchBar
+    searchText={props.searchText}
+    updateSearchText={props.updateSearchText}
+    filterPosts={props.filterPosts}
+    logout={props.logout}
+    />
+    <div className="Posts">
+    {props.posts.map((post, idx) => (
+      <PostContainer key={idx} 
+      id={post.id}
+      post={post} 
+      username={props.username}
+      increaseLikes={props.increaseLikes}
+      />
+    ))}
+    </div>
+    </div>
   )
 }
 
