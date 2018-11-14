@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostList from './components/PostContainer/PostList';
+import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
   constructor() {
@@ -38,8 +39,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar  filter={this.state.filter} handleInputChange={this.handleInputChange}/>
-        <PostList postData={this.getFilteredPosts()} inputComment={this.state.usersComments} handleAddComment={this.handleAddComment} handleChange={this.handleChange}/>
+        <PostsPage filter={this.state.filter} handleInputChange={this.handleInputChange} postData={this.getFilteredPosts} inputComment={this.state.usersComments} handleAddComment={this.handleAddComment} handleChange={this.handleChange}/>
       </div>
     );
   }
