@@ -1,7 +1,33 @@
 .login {
-    border: @test-border;
-    #layout > .margins-padding(0 , 5%);
+    #layout > .width-height(100%, auto);
+    #layout > .margins-padding(0 , 10%);
+    #layout > .flex-column(center, center, wrap);
     form {
+        border: 5px black solid;
+        background: #E0FFFF;
+        #layout > .width-height(400px, auto);
         #layout > .flex-column(space-between, center, wrap);
+        #layout > .margins-padding(0, 2.5%);
+        border-radius: 10px;
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            font-style: italic;
+        }
+        input {
+            #layout > .margins-padding(2.5%, 2.5%);
+            #layout > .width-height(50%, auto); 
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+        button {
+            border-radius: 10px;
+            background: black;
+            color: white;
+            border: 2px solid black;
+            #layout > .margins-padding(2.5%, 2.5%);
+            #layout > .width-height(50%, auto); 
+        }
     }
 }

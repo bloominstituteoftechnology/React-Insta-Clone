@@ -1,26 +1,25 @@
 import React, {Component} from 'react';
 import Login from './../LoginPage/LoginPage'
 
-
 const Authenticate = (Page) =>{ 
-let storage = window.localStorage
-    storage.setItem('username', 'cotikor')
-    storage.setItem('password', 'password1')
-
+    let storage = window.localStorage
 
    return class extends Component {
     constructor(props){
         super(props);
         this.state = {
-            loginSuccessful: false,
             usernameInput: '',
-            passwordInput: ''
+            passwordInput: '',
+            loginSuccessful: '',
         }
     }
-
+    componentDidMount(){
+        
+    }
     authenticateLogin(){
-       
-        if (this.state.usernameInput === storage.getItem('username') && this.state.passwordInput === storage.getItem('password')){
+        storage.setItem('username', this.state.usernameInput)
+        storage.setItem('password', this.state.passwordInput)
+        if (storage.getItem('username') === 'cotikor'){
             return (
              this.setState({
                  loginSuccessful: true
@@ -30,13 +29,13 @@ let storage = window.localStorage
             return (
                 this.setState({
                     loginSuccessful: false
-                })
+                })  
             )
         }
     }
 
         render() {
-            console.log(this.state.usernameInput)
+            console.log(storage)
             if (this.state.loginSuccessful === true) {
                 return (
                     <Page />
