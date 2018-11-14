@@ -4,6 +4,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import PostPage from './components/PostContainer/PostPage';
 
 class App extends Component {
   constructor(){
@@ -76,11 +77,9 @@ class App extends Component {
               liked={this.likedToggle} 
               open={this.state.heartOpen}
               close={this.state.heartClosed}
-              // heartToggle={this.state.heartToggle}
             />
           })}
         </div>
-
 
       </div>
     );
