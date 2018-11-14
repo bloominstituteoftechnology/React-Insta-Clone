@@ -14,7 +14,7 @@ const SearchBar = props => {
                 placeholder='Search' 
                 className='search-bar'
                 value={props.searchText}
-                onChange={props.handleChange}
+                onChange={props.handleSearch}
             />
 
             <div className='menu-icons'>

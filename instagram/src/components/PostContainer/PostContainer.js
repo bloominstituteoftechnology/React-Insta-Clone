@@ -5,14 +5,17 @@ import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => {
     return (
-        props.postsData.map(post => (
-            <div className='post-container' key={post.timestamp}>
+        props.postsData.map((post, idx) => (
+            <div className='post-container' key={post.timestamp} id={idx} >
+
                 <div className='insta-user'>
                     <img src={post.thumbnailUrl} alt='User Thumbnail' className='icon' />
                     <h2>{post.username}</h2>
                 </div>
                 
-                <img src={post.imageUrl} alt='Post Image' className='post-img' />
+                <div className='post-img'>
+                    <img src={post.imageUrl} alt='Post Image' />
+                </div>
 
                 <div className='comments-container'>
                     <div className='likes-container'>
@@ -22,21 +25,31 @@ const PostContainer = props => {
                     </div>
                     
                     {post.comments.map((comment, idx) => (
-                        <CommentSection key={idx} comment={comment} />
+                        <CommentSection key={idx} index={idx} comment={comment} />
                     ))}
 
                     <p className='light-font'>{post.timestamp}</p>
+
                     <div className='add-comment'>
-                        <input type='text' placeholder='Add a comment...'></input>
-                        <div className='triple-dot'>
-                            <span className='dot'></span>
-                            <span className='dot'></span>
-                            <span className='dot'></span>
-                        </div>
+
+                        <form onSubmit={props.addComment}>
+                            <input 
+                                type='text' 
+                                placeholder='Add a comment...' 
+                                value={props.commentText}
+                                onChange={props.handleComment}
+                                id={idx}
+                            />
+                            <div className='triple-dot'>
+                                <span className='dot'></span>
+                                <span className='dot'></span>
+                                <span className='dot'></span>
+                            </div>
+                        </form> 
+                        
                     </div>
-                    
+
                 </div>
-                
             </div>
         ))
             

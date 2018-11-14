@@ -19,6 +19,12 @@
     margin: 5px 0 10px;
 }
 
+.comments-container form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .comments-container input {
     width: 100%;
     padding: 15px 0;

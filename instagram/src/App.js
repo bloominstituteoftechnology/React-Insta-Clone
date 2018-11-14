@@ -4,6 +4,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
+import { runInThisContext } from 'vm';
 
 class App extends Component {
   constructor() {
@@ -11,7 +12,8 @@ class App extends Component {
     this.state = {
       data: [],
       searchText: '',
-      newComment: '',
+      commentText: '',
+      postId: 0
     };
   }
 
@@ -29,30 +31,34 @@ class App extends Component {
 
   handleComment = ev => {
     this.setState({
-      newComment: ev.target.value
+      commentText: ev.target.value,
+      postId: ev.target.id
     });
   };
 
-  // addComment = ev => {
-  //   ev.preventDefault();
-  //   this.setState({
-  //     toDoList: [...this.state.toDoList, {
-  //         task: this.state.inputText,
-  //         id: Date.now(),
-  //         completed: false,
-  //       }],
-  //       inputText: ''
-  //   })
-  // }
+  addComment = ev => {
+    ev.preventDefault();
+    let metaData = this.state.data;
+    metaData[this.state.postId].comments.push({username: 'tommaay', text: this.state.commentText})
+    this.setState({
+      data: metaData,
+      commentText: ''
+    })
+  }
 
   render() {
     return (
       <div className="App">
         <SearchBar 
-          handleChange={this.handleSearch}
+          handleSearch={this.handleSearch}
           searchText={this.state.searchText} 
         />
-        <PostContainer postsData={this.state.data} />
+        <PostContainer 
+          postsData={this.state.data}
+          commentText={this.state.commentText} 
+          handleComment={this.handleComment}
+          addComment={this.addComment}
+        />
       </div>
     );
   }
