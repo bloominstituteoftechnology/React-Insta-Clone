@@ -11,6 +11,29 @@ class App extends Component {
     this.state = {
       data: [],
       searchText: '',
+      isSelected: false,
+    }
+  }
+
+  clearSearchText = () => {
+    this.setState({
+      searchText: '',
+    })
+  }
+
+  hasBeenClicked = event => {
+    if (event.target.className === "app") {
+      return this.setState({
+        isSelected: false,
+      })
+    } else if (this.state.isSelected) {
+      return this.setState({
+        isSelected: false,
+      })
+    } else {
+      return this.setState({
+        isSelected: true,
+      })
     }
   }
 
@@ -38,12 +61,15 @@ class App extends Component {
   
   render() {
     return (
-      <div className="App">
+      <div className="App" onClick={this.hasBeenClicked}>
         <header className="App-header">
           <Navigation 
             handlesChanges={this.handlesChanges} 
             searchText={this.state.searchText}
             searchData={this.searchData}
+            isSelected={this.state.isSelected}
+            hasBeenClicked={this.hasBeenClicked}
+            clearSearchText={this.clearSearchText}
           />
         </header>
         <PostContainer 

@@ -12,7 +12,13 @@ const Navigation = props => {
                 <p>|</p>
                 <img className="instagram-logo-text" src={logo} alt="Instagram"/>
             </div>
-            <SearchBar handlesChanges={props.handlesChanges} searchText={props.searchText}/>
+            <SearchBar 
+                handlesChanges={props.handlesChanges} 
+                searchText={props.searchText}
+                isSelected={props.isSelected}
+                hasBeenClicked={props.hasBeenClicked}
+                clearSearchText={props.clearSearchText}
+            />
             <div className="header-icons">
                 <i className="far fa-compass"></i>
                 <i className="far fa-heart"></i>
