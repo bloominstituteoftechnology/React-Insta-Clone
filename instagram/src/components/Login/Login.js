@@ -9,7 +9,8 @@ class Login extends Component {
 
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      isLoggedIn: false
     };
   }
 
@@ -17,16 +18,17 @@ class Login extends Component {
     return this.state.username.length > 0 && this.state.password.length > 0;
   }
 
-  handleChange = event => {
+  handleChange = ev => {
     this.setState({
-      [event.target.id]: event.target.value
+      [ev.target.id]: ev.target.value
     });
   };
 
-  handleSubmit = event => {
-    event.preventDefault();
+  handleSubmit = ev => {
+    ev.preventDefault();
     const username = this.state.username;
     localStorage.setItem("username", username);
+    this.props.login();
   };
 
   render() {

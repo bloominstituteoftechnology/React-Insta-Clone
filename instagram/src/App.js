@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Authenticate from "./components/Authentication/Authenticate";
 import PostsPage from "./components/PostContainer/PostsPage";
+import { BrowserRouter as Router } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faInstagram } from "@fortawesome/fontawesome-free-brands";
 import {
@@ -30,22 +31,14 @@ class App extends Component {
     this.state = {};
   }
 
-  // filterPosts = ev => {
-  //   var updatedList = this.state.post;
-  //   updatedList = updatedList.filter(item => {
-  //     return item.username.includes(ev.target.value);
-  //   });
-  //   this.setState({
-  //     filtered: updatedList
-  //     // searchTerm: ev.target.value
-  //   });
-  // };
-
   render() {
+    console.log(this.state);
     return (
-      <div className="App">
-        <PostsPage />
-      </div>
+      <Router>
+        <div className="App">
+          <PostsPage />
+        </div>
+      </Router>
     );
   }
 }
