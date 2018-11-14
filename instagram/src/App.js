@@ -4,7 +4,8 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/post-container';
 import SearchBar from './components/SearchBar/searchbar';
-import './App.css';
+import Comments from './components/CommentSection/comments';
+
 
 class App extends Component {
   constructor() {
