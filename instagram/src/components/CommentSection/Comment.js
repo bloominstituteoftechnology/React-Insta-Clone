@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { throws } from 'assert';
 
 const CommentContainer = styled.div`
     text-align: left;
@@ -30,6 +31,7 @@ const Comment = (props) => {
         </CommentContainer>
     );
 }
+
 
 Comment.propTypes = {
     thisComment: PropTypes.shape({

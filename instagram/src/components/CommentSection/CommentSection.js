@@ -27,9 +27,18 @@ class CommentSection extends Component {
     }
 
     componentDidMount() {
-        this.setState({
-            comments: this.props.thisPost.comments
-        })
+        if(localStorage.getItem(`theseComments${this.props.postIndex}`) !== null) {
+            this.setState({ comments: JSON.parse(localStorage.getItem(`theseComments${this.props.postIndex}`))})
+        }
+        else {
+            this.setState({
+                comments: this.props.thisPost.comments
+            })
+        }      
+    }
+
+    componentDidUpdate() {
+        localStorage.setItem(`theseComments${this.props.postIndex}`,JSON.stringify(this.state.comments))
     }
 
     addNewComment = (event) => {
