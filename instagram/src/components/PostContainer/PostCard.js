@@ -5,18 +5,43 @@ class PostCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      likes: props.post.likes
+      likes: props.data.likes
     };
   }
 
-    addLike = () => {
-    let likes = this.state.likes + 1;
-    this.setState({
-      likes: likes
-    });
-  };
+  // handleToggleLike = (text) => {
+    
+  //   // let likes = this.state.likes;
+    
+  //   this.setState(prevState => (
+  //     {
+  //       likes: prevState.likes.map(post => {
+  //         if (text === post.text) {
+  //           return {
+  //             ...post,
+  //             likes: post.likes + 1
+  //           }
+  //         }
+  //       })
+  //     }
+  //   ))
+  // }
 
+  
+  toggleLike = (e) => {
+    // console.log("EVENT", e);
+    if(e.target.classList.contains('liked')){
+      e.target.classList.toggle('liked');
+      let likes = this.state.likes - 1;
+      this.setState({ likes });
+    }
+    else {e.target.classList.toggle('liked');
+    let likes = this.state.likes + 1;
+    this.setState({ likes })}
+  };
+  
   render () {
+    console.log("POSTCARD PROPS", this.props);
     return (
       <div className="post-card">
         <div className="post-card__header">
@@ -38,7 +63,7 @@ class PostCard extends Component {
           >
           <i 
             className="far fa-heart"
-            onClick={this.addLike}
+            onClick={this.toggleLike}
           ></i>
           <i className="far fa-comment"></i>
         </div>

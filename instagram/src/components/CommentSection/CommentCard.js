@@ -17,28 +17,43 @@ class CommentCard extends Component {
     }
   }
   
-  // componentDidMount() {
-    //   let storedComments = JSON.parse(localStorage.getItem('comments'));
-    //   if(storedComments) {this.setState({ comments: storedComments})}
-    // }
+  componentDidMount() {
+    console.log(this.state.comments);
+    
+    // let storedComments = JSON.parse(localStorage.getItem('comments'));
+    // if(storedComments) {this.setState({ comments: storedComments})}
+    // if(storedComments) {this.setState({ comments: this.state.comments})}
+    }
     
     
     addComment = e => {
       e.preventDefault();
+      // console.log(...this.state.comments);
       
       // let newComments = [...this.state.comments,
       //   {username: "Ghosty", text: this.state.comment}];
       //   localStorage.setItem('comments', JSON.stringify(newComments))
       
-      this.setState({
-        comments: [...this.state.comments,
-          {
-            username: "Ghosty",
-            text: this.state.comment,
+      // this.setState({
+      //   comments: [...this.state.comments,
+      //     {
+      //       username: "Ghosty",
+      //       text: this.state.comment,
 
-          }],
-          comment: '',
-        })
+      //     }],
+      //     comment: '',
+      //   })
+
+      let commentsCopy = this.state.comments.slice();
+      commentsCopy.push({
+        username: "Ghosty",
+        text: this.state.comment,
+      })
+      // console.log(commentsCopy);
+      this.setState({
+        comments: commentsCopy 
+      })
+
       }
       
       handleChange = e => {

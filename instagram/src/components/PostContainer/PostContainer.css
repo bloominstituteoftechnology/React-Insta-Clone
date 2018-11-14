@@ -55,3 +55,7 @@
   margin-left: 1.3rem;
   margin-bottom: -.02rem;
 }
+
+.liked {
+  color: red;
+}
