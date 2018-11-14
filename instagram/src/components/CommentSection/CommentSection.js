@@ -1,41 +1,62 @@
-import React from 'react';
+import React, {Component} from 'react';
 import '../../less/Comments.less';
 import PropTypes from 'prop-types';
-import Comment from './NewComment';
+import NewComment from './NewComment';
 
-const CommentSection = (props) => {
+class CommentSection extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			comments: props.comments,
+			commentInput: '',
+			username: props.username,
+			text: props.text,
+		}
+	}
+
+	addComment = (event, index) => {
+		event.preventDefault();
+		this.setState({
+			comments: [
+				...this.state.comments,
+				this.state.comments[index],
+				{
+					username: 'cotikor',
+					text: this.state.commentInput
+				}
+			],
+			commentInput: ''
+		});
+	};
+
+	render () {
 	return (
 		<React.Fragment>
 			<section className="comments">
-				{props.posts.comments.map((comment) => (
-					<div className="comment">
+				{this.state.comments.map((comment, index) => (
+					<div className="comment" key={index}>
 						<h3>
-							<span>{comment.username}</span> {comment.text}
+							<span>{this.state.username}</span> {this.state.text}
 						</h3>
 					</div>
 				))}
 			</section>
-			<Comment
-				AddComment={props.AddComment}
-				commentInput={props.commentInput}
-				handleChange={props.handleChange}
+			<NewComment
+				comments={this.state.comments}
+				addComment={(event,index) => {this.addComment (event, index)}}
 			/>
 		</React.Fragment>
-	);
+		);
+				}	
 };
 
 CommentSection.propTypes = {
-	posts: PropTypes.shape({
-			comment: PropTypes.arrayOf(
-				PropTypes.shape({
-				username: PropTypes.string,
-				text: PropTypes.string
-			}).isRequired)
-
-		}).isRequired,
-	AddComment: PropTypes.func,
-	commentInput: PropTypes.string,
-	handleChange: PropTypes.func
+	comments:  PropTypes.arrayOf(
+		PropTypes.shape({
+			username: PropTypes.string,
+			text: PropTypes.string
+		}).isRequired
+	),
 };
 
 export default CommentSection;

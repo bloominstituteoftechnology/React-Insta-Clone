@@ -12,59 +12,53 @@ class App extends Component {
 			posts: [],
 			commentInput: '',
 			searchInput: '',
-			username: 'cotikor'
 		};
   }
   
   componentDidMount(){
     this.setState({posts: dummyData})
   }
-  
-	handleChange = (event) => {
-		this.setState({
-			commentInput: event.target.value
-		});
-	};
+
 
 	handleSearch = (event) => {
-		this.setState({
+    this.setState ({
       searchInput: event.target.value,
-      posts: 
-      this.state.posts.filter((post) => {
-      post.username.includes(event.target.value);
-      }),
-    });
+    })
+    if (event.target.value !== ''){
+      this.setState({
+          posts: 
+          this.state.posts.filter((post) => {
+             return  post.username.includes(event.target.value);
+          })
+        });
+    } else {
+      this.setState({
+        posts: dummyData
+      }) 
+    }  
 	};
 
-	addComment = (event) => {
-		event.preventDefault();
-		this.setState({
-			posts: [
-				...this.state.posts,
-				{
-					comments: {
-						text: this.state.commentInput,
-						username: this.state.username
-					}
-				}
-			],
-			commentInput: ''
-		});
-	};
+  
+  handleLike = (event, index) => {
+    let number = this.state.posts[index].likes
+
+    console.log(number)
+    event.preventDefault();
+      this.setState({
+        posts: [
+        ...this.state.posts,
+           
+      ]
+    })   
+  }
 
 	render() {
 		return (
 			<div className="App">
 				<SearchBar 
-        handleSearch={this.handleSearch}
-        searchInput={this.state.searchInput}
         />
-
 				<PostContainer
 					posts={this.state.posts}
-					AddComment={this.AddComment}
-					commentInput={this.state.commentInput}
-					handleChange={this.handleChange}
 				/>
 			</div>
 		);

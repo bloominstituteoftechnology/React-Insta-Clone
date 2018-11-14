@@ -13,7 +13,9 @@ const SearchBar = (props) => {
 					<img src={home} alt="home icon" />
 				</section>
 				<section className="search">
-					<form onSubmit={props.handleSearch}>
+					<form onSubmit={(event) => {
+								props.handleSearch(event);
+							}}>
 						<input
 							type="text"
 							name="input"
