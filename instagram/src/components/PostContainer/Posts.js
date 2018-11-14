@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Components
+import Post from './Post'
+
 const Posts = props => {
     return (
         <div className='posts'>
             Posts Here
+            <Post/>
         </div>
     )
 }
