@@ -13,10 +13,30 @@
 .likes .icons{
     display: flex;
     align-items: center;
+    
 }
 .likes .icons h1{
     margin: 0 10px 0 0;
+    cursor: pointer;
+    user-select: none;
 }
+
+.liked{
+    color: red;
+    font-size: 40px;
+    height: 43px;
+  }
+
 .icons .comment{
     font-size: 22px;
+}
+
+.post-header img{
+    width: 50px;
+    height: 50px;
+    margin: 20px 10px 20px 20px;
+    border-radius: 100px;
+}
+.post-header h3{
+    align-self: center;
 }

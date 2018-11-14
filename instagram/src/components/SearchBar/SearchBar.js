@@ -9,9 +9,9 @@ const SearchBar = props => {
 
     return(
         <div className='searchBar'>
-            <div className='head-box logo'>
+            <div className='head-box logos'>
             <img src={logo} className='logo'/>
-            <h1> | </h1>
+            
             <img src={logoWord}/>
             
             </div>
@@ -20,7 +20,7 @@ const SearchBar = props => {
             
             </div>
             <div className='head-box menu'>
-            <h1>⦾</h1>
+            <h1>☯</h1>
             <h1>♡</h1>
             <img src={profileImg} className='profile'/>
             

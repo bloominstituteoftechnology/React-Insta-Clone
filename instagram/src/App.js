@@ -42,14 +42,23 @@ class App extends Component {
   addNewLike = ev =>{
     let currentObj = {};
     let currentIndex = 0;
-    this.state.posts.forEach( (item,index) =>{
+    this.state.filteredPosts.forEach( (item,index) =>{
       if(ev.target.id == index){
         currentObj =item;
         currentIndex = index;
       }
     });
-    let tempList = this.state.posts.slice();
-    currentObj.likes++
+    let tempList = this.state.filteredPosts.slice();
+    if(ev.target.className){
+      ev.target.className = '';
+      currentObj.likes--
+
+    }else{
+      currentObj.likes++
+      ev.target.className = 'liked';
+    }
+    
+    
     tempList[currentIndex] = currentObj;
     
     this.setState({
