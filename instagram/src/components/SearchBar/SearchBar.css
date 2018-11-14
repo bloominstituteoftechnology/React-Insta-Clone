@@ -62,3 +62,7 @@
 .navbar .fa-heart {
   margin: 0 4rem;
 }
+
+.navbar .fa-user:hover {
+  color: red;
+}

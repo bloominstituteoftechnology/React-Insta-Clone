@@ -29,18 +29,7 @@ class App extends Component {
     this.setState({
       data: data,
       username: user,
-    })
-
-
-    // if (localStorage.getItem('instaClone')) {
-    //   this.setState({
-    //     data: JSON.parse(localStorage.getItem('instaClone')),
-    //   })
-    // } else {
-    //   this.setState({
-    //     data: dummyData,
-    //   })
-    // }
+    });
   }
 
   componentDidUpdate(prevState) {
@@ -94,12 +83,12 @@ class App extends Component {
   }
 
   handleLogin(name, password) {
-    localStorage.setItem('instaCloneLogin', JSON.stringify({
-      username: name,
-      password: password,
-    }))
-
-    window.location.reload()
+    if (password === 'lambda') {
+      localStorage.setItem('instaCloneLogin', JSON.stringify({
+        username: name
+      }))
+      window.location.reload()
+    }
   }
 
   setUsername(name){
