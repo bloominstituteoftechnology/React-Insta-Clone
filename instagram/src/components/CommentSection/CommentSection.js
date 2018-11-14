@@ -14,6 +14,11 @@ class CommentSection extends React.Component {
     };
   }
 
+  componentDidMount() {
+    // get added comments from local storage
+    // append them to the proper posts
+  }
+
   increaseLikes = e => {
     this.setState((prevState) => {
       return {likes: prevState.likes + 1}

@@ -92,8 +92,8 @@ class App extends Component {
     this.setState({ searchText: e.target.value });
   };
 
-  increaseLikes = (e) => {
-    console.log(e.target.parentElement.parentElement.index);
+  increaseLikes(index) {
+    console.log(index);
   }
 
   filterPosts() {

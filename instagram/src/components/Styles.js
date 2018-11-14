@@ -23,6 +23,11 @@ export const StyledPost = styled.div`
   margin-bottom: 50px;
   border-radius: 4px;
   padding: 0 60px;
+
+  /* &>img {
+    max-width: 90%;
+    height: auto;
+  } */
 `;
 
 export const UserDiv = styled.div`
@@ -36,10 +41,6 @@ export const IconBar = styled.div`
   margin: 10px 0 0 60px;
   display: flex;
   justify-content: flex-start;
-
-  img {
-    padding: 10px;
-  }
 `;
 
 export const Thumbnail = styled.img`
