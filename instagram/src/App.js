@@ -5,26 +5,28 @@ import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
 // import SimpleStorage from "react-simple-storage";
 import Authenticate from './components/Authentication/Authentication';
+import LoginPage from './components/Login/Login';
+import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: [],
+      posts: dummyData,
       filterInput: ''
   }
   }
 
-  componentDidMount() {
-    // if (!localStorage.getItem('posts')) {
-      this.setState({
-        posts: dummyData
-      })
-    // }
-    // else {
-    //   console.log("Didn't work!")
-    // }
-  }
+  // componentDidMount() {
+  //   // if (!localStorage.getItem('posts')) {
+  //     this.setState({
+  //       posts: dummyData
+  //     })
+  //   // }
+  //   // else {
+  //   //   console.log("Didn't work!")
+  //   // }
+  // }
 
   handleChange = event => {
     event.preventDefault();
@@ -47,18 +49,21 @@ class App extends Component {
     return (
       <div className="App">
         {/* <SimpleStorage parent={this} /> */}
-        <div>
-          <Authenticate />
+        {/* <div>
+          {/* <LoginPage /> */}
+          {/* <Authenticate App LoginPage={this.LoginPage} />
           <SearchBar 
           filterComments={this.filterComments}
           filterInput={this.state.filterInput}
-          // changeFilterInputs={this.changeFilterInputs}
           />
-        </div>
+        </div> */}
+          <Authenticate App LoginPage={this.LoginPage} />
         <div>
-            <PostContainer 
+          <PostsPage 
             posts={this.state.posts}
-            />
+            filterComments={this.filterComments}
+            filterInput={this.state.filterInput}
+          /> 
         </div>
       </div>
     );
@@ -67,5 +72,5 @@ class App extends Component {
 
 
 
-export default App;
+export default Authenticate(App);
 

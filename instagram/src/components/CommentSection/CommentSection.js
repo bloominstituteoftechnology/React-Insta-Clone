@@ -49,7 +49,7 @@ class CommentSection extends React.Component {
         })
         setTimeout(() => {
             this.setComments();
-        }, 500)
+        }, 500) 
     }
 
     incrementLike = event => {

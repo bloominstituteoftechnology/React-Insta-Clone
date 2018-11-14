@@ -14,8 +14,8 @@ const PostContainer = props => {
                 <div>
                     {props.posts.map(p => 
                     <Post 
-                    key={p.imageUrl} 
-                    post={p}
+                        key={p.imageUrl} 
+                        post={p}
                     />)}
                     {/* Here we send state data one by one to Post */}
                 </div>
