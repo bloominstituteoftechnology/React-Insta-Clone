@@ -28,8 +28,6 @@ export default class LoginPage extends React.Component {
 
     e.preventDefault();
 
-    console.log(document.activeElement.name);
-
     if (document.activeElement.name === 'login') {
 
       if (!localStorage[this.state.userField]) {
@@ -46,7 +44,6 @@ export default class LoginPage extends React.Component {
 
       else {
 
-        console.log('Logged in!');
         this.props.setUsername(this.state.userField);
 
       }
@@ -72,6 +69,14 @@ export default class LoginPage extends React.Component {
 
   }
 
+  handleKeyPress = e => {
+
+    if (e.charCode === 13) {
+      document.querySelector('button[name="login"]').focus();
+    }
+
+  }
+
   handleChange = e => {
 
     if (e.target.name == 'user-field') {
@@ -88,12 +93,19 @@ export default class LoginPage extends React.Component {
       if (this.state.showPassMessage)
         this.setState({showPassMessage: false});
 
+      let newPassword = '';
+
+      if (e.target.value == '')
+        newPassword = '';
+
+      else if (e.target.value[e.target.value.length - 1] != '*' && e.target.value[e.target.value.length - 1] != undefined)
+        newPassword = this.state.password + e.target.value[e.target.value.length - 1];
+
+      else
+        newPassword = this.state.password.slice(0, -1);
+
       this.setState({
-        password: (e.target.value[e.target.value.length - 1] != '*' && e.target.value[e.target.value.length - 1] != undefined)
-        ?
-        this.state.password + e.target.value[e.target.value.length - 1]
-        :
-        this.state.password.slice(0, -1),
+        password: newPassword,
         passField: e.target.value.split('').map(val => '*').join('')
       });
 
@@ -109,7 +121,7 @@ export default class LoginPage extends React.Component {
 
         <h1>Log In</h1>
 
-        <form onSubmit={this.logIn}>
+        <form onKeyPress={this.handleKeyPress} onSubmit={this.logIn}>
 
           {this.state.showUserMessage ? <WarningMessage text={this.state.userMessage} /> : null}
 
