@@ -21,10 +21,10 @@ class CommentSection extends React.Component {
   toggleLike(cb) {
     const likes = this.state.liked ? this.state.likes - 1 : this.state.likes + 1;
     cb(this.props.username, this.props.timestamp, likes);
-    this.setState({
+    this.setState(prevState => ({
       likes: likes,
-      liked: !this.state.liked
-    });
+      liked: !prevState.liked
+    }));
   }
 
   handleInputChange(e) {

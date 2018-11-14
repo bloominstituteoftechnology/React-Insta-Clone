@@ -46,41 +46,41 @@ class App extends Component {
   }
 
   submitComment(c, u, t) {
-    this.setState({
-      data: this.state.data.map(post => {
+    this.setState(prevState => ({
+      data: prevState.data.map(post => {
         if (post.username === u && post.timestamp === t){
           return {
             ...post,
             comments: [...(post.comments), {
-              username: this.state.username, 
+              username: prevState.username, 
               text: c}],
           }
         }
         return post;
       }), 
-    });
+    }));
   }
 
   updateLikes(u, t, n) {
-    this.setState({
-      data: this.state.data.map( post => {
+    this.setState(prevState => ({
+      data: prevState.data.map( post => {
         if (post.username === u && post.timestamp === t) {
           post.likes = n;
         }
         return post;
       })
-    });
+    }));
   }
 
   handleRemoveComment(u, t, i) {
-    this.setState({
-      data: this.state.data.map( post => {
+    this.setState(prevState => ({
+      data: prevState.data.map( post => {
         if (post.username === u && post.timestamp === t) {
           return {...post, comments: post.comments.filter((comment, id) => id !== i)}
         }
         return post;
       })
-    });
+    }));
   }
 
   render() {
