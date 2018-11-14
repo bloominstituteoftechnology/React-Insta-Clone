@@ -32,12 +32,11 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <Router>
-        <div className="App">
+        <>
           <PostsPage />
-        </div>
+        </>
       </Router>
     );
   }

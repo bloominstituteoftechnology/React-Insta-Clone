@@ -6,11 +6,9 @@ import "./Login.css";
 class Login extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       username: "",
-      password: "",
-      isLoggedIn: false
+      password: ""
     };
   }
 
@@ -28,6 +26,7 @@ class Login extends Component {
     ev.preventDefault();
     const username = this.state.username;
     localStorage.setItem("username", username);
+    console.log(localStorage);
     // this.setState({ isLoggedIn: true });
     this.props.login();
   };
