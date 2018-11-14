@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import Authenticate from './components/Authentication/Authenticate';
 import PostsPage from './components/PostsPage/PostsPage'
 import dummyData from './dummy-data';
+import LoginPage from './components/LoginPage/LoginPage'
 
 import './App.css';
 
@@ -79,16 +80,16 @@ class App extends Component {
 
   render() {
     return (
-      <PostsPage 
-        data={this.getData()}
-        commentText={this.state.commentText}
-        handleInputChange={this.handleInputChange}
-        addNewComment={this.addNewComment}
-        addLike={this.addLike}
-        removeComment={this.removeComment}
-        filter={this.state.filter}
-      />
-      
+      <LoginPage />
+      // <PostsPage 
+      //   data={this.getData()}
+      //   commentText={this.state.commentText}
+      //   handleInputChange={this.handleInputChange}
+      //   addNewComment={this.addNewComment}
+      //   addLike={this.addLike}
+      //   removeComment={this.removeComment}
+      //   filter={this.state.filter}
+      // />
     );
   }
 }
