@@ -14,6 +14,7 @@ class App extends Component {
       username: "",
       password: "",
       loggedIn: false,
+      displayedPosts: [],
     };
   }
 
@@ -89,7 +90,7 @@ class App extends Component {
   };
 
   updateSearchText = e => {
-    this.setState({ searchText: e.target.value });
+    this.setState({ searchText: e.target.value }, this.filterPosts);
   };
 
   increaseLikes = (id) => {
@@ -104,8 +105,7 @@ class App extends Component {
     this.setState({ data: newData });
   }
 
-  filterPosts = e => {
-    console.log('filterPosts running');
+  filterPosts = () => {
     if (this.state.searchText === '') return this.state.data;
     else { 
       const postsToDisplay = this.state.data.filter(d => 
@@ -120,13 +120,10 @@ class App extends Component {
       return <Login login={this.login} />;
     }
 
-    const p = this.filterPosts();
-    console.log(p);
-
     return (
       <div className="App">
         <PostsPage
-          posts={p}
+          posts={this.filterPosts()}
           searchText={this.state.searchText}
           updateSearchText={this.updateSearchText}
           logout={this.logout}
