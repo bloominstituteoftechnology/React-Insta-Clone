@@ -45,7 +45,7 @@ class CommentSection extends Component {
     e.preventDefault();
     const newComment = {
       text: this.state.comment,
-      username: this.state.username
+      username: localStorage.getItem("username")
     };
     const comments = [...this.state.comments];
     comments.push(newComment);

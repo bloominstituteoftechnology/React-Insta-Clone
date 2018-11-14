@@ -15,7 +15,7 @@ const Authenticate = App =>
     };
 
     render() {
-      if (this.state.isLoggedIn) return <App />;
+      if (localStorage.getItem("username") !== null) return <App />;
       return <Login state={this.state.isLoggedIn} login={this.login} />;
     }
   };
