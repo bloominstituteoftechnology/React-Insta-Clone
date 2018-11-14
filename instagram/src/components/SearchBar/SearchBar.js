@@ -1,8 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
-import Logo from './screenshotlogo.png';
-
-import Icons from './searchbaricons.png';
+import Logo from './SearchBarImages/screenshotlogo.png';
+import Icons from './SearchBarImages/searchbaricons.png';
 
 const SearchBar = props => {
     return (

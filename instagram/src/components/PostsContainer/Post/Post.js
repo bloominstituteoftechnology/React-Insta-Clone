@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PostHeader from './PostHeader';
-import CommentSection from '../CommentSection/CommentSection';
-import LikeSection from './LikesSection';
+import PostHeader from '../PostHeader/PostHeader';
+import CommentSection from '../../CommentSection/CommentSection';
+import LikeSection from '../LikesSection/LikesSection';
 
 import './Post.css';
 
