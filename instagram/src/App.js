@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer";
-import "./App.css";
+import PostPage from "./components/PostContainer/PostPage";
 import dummyData from "./dummy-data";
+import authenticate from './components/Authentication/Authenticate';
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -11,7 +11,9 @@ class App extends Component {
       data: [],
       comments: [],
       likes: [],
-      filter: ""
+      filter: "",
+      // UserName: "",
+      // Password: ""
     };
   }
 
@@ -21,10 +23,7 @@ class App extends Component {
       comments: dummyData.comments,
       likes: dummyData.likes
     });
-
   }
-
-
 
   handleInputChange = event => {
     this.setState({
@@ -32,9 +31,21 @@ class App extends Component {
     });
   };
 
+  // handleLoginChange = event => {
+  //   this.setState({
+  //     [event.target.name]: event.target.value
+  //   });
+  // };
+
+  loginSubmit = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
   filterItems = event => {
     event.preventDefault();
-    if(this.state.filter === ""){
+    if (this.state.filter === "") {
       return this.setState({
         data: dummyData
       });
@@ -49,20 +60,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <SearchBar
-          handleInputChange={this.handleInputChange}
-          filterItems={this.filterItems}
-          filter={this.state.filter}
-        />
-        <PostContainer
-          data={this.state.data}
-          comments={this.state.comments}
-          likes={this.state.likes}
-        />
-      </div>
+      <PostPage
+        data={this.state.data}
+        comments={this.state.comments}
+        likes={this.state.likes}
+        handleInputChange={this.handleInputChange}
+        filterItems={this.filterItems}
+        filter={this.state.filter}
+      />
     );
   }
 }
 
-export default App;
+export default authenticate(App);
