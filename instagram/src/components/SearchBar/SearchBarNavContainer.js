@@ -6,12 +6,12 @@ const SearchBarNavContainer = props => {
     <div className="search-container">
       <div className="home">
         <a href="https://www.instagram.com">
-          <img src="" alt="instagram-icon" />
+          <img src="../../img/insta-cam.png" alt="instagram-icon" />
         </a>
       </div>
 
       <div className="instagram-logo">
-        <img src="" alt="instagram" />
+        <img src="../../img/instagram.png" alt="instagram" />
       </div>
 
       <div className="search-bar">
@@ -21,9 +21,9 @@ const SearchBarNavContainer = props => {
       </div>
 
       <div className="icons">
-        <img src="" alt="compass" />
-        <img src="" alt="heart" />
-        <img src="" alt="user" />
+        <img src="../../img/discover.png" alt="compass" />
+        <img src="../../img/search-heart.jpg" alt="heart" />
+        <img src="../../img/users.png" alt="user" />
       </div>
     </div>
   );

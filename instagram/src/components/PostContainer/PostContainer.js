@@ -12,11 +12,11 @@ const PostContainer = props => {
       <div className="post-image">
         <img src={props.data.imageUrl} alt="post" />
       </div>
-      <div className="icons">
-        <img src="" alt="heart-icon" />
+      <div className="like-heart">
+        <img src="../../img/like-heart.png" alt="heart-icon" />
       </div>
       <div className="comment">
-        <img src="" alt="comments" />
+        <img src="../../img/comments.png" alt="comments" />
       </div>
       <div className="comments">
         {props.data.comments.map(comment => {
