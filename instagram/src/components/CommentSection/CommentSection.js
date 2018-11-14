@@ -64,7 +64,6 @@ class CommentSection extends Component {
                 <form onSubmit={this.addNewComment} >
                     <input onChange={this.handleChange} placeholder={`add new comment`} name='commentText' value={this.state.commentText} />
                 </form>
-
             </CommentsContainer>
         );
     }

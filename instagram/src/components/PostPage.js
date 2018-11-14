@@ -4,14 +4,15 @@ import dummyData from '../dummy-data';
 import PostContainer from './PostContainer/PostContainer';
 import SearchForm from './SearchBar/SearchBar';
 import Fuse from 'fuse.js';
+import Authenticate from './Authentication/Authenticate';
 
 const AppContainer = styled.div`
   margin-top: 50px;
 `
 
 class PostPage extends React.Component {
-    constructor(){
-      super();
+    constructor(props){
+      super(props);
       this.state = {
         posts: [],
         searchText: ''
@@ -69,6 +70,9 @@ class PostPage extends React.Component {
     render() {
       return (
         <AppContainer className="App">
+
+        <button onClick={()=>console.log('clicked')}>LogOut</button>
+
           <SearchForm searchText={this.state.searchText}
           handleChange={this.handleChange}
           searchItems={this.searchItems}
@@ -84,4 +88,4 @@ class PostPage extends React.Component {
     }
   }
 
-  export default PostPage;
+  export default Authenticate(PostPage);
