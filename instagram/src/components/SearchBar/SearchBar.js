@@ -1,6 +1,6 @@
 import React from "react";
 import "./SearchBar.css";
- const SearchBar = () => {
+const SearchBar = () => {
   return (
     <header className="header">
       <div className="container">
@@ -31,4 +31,4 @@ import "./SearchBar.css";
     </header>
   );
 };
- export default SearchBar;
+export default SearchBar;

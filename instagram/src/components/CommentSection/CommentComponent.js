@@ -1,11 +1,11 @@
-
-import React from 'react';
- const CommentComponent = ( props ) =>
-{
+import React from "react";
+const CommentComponent = props => {
   return (
     <div>
-      <p>{ props.data.username} { props.data.text }</p>
+      <p>
+        {props.data.username} {props.data.text}
+      </p>
     </div>
-  )
-}
- export default CommentComponent; 
+  );
+};
+export default CommentComponent;
