@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+// Components
+import SearchBar from './components/SearchBar/SearchBar';
+
 // Data
 import dummyData from './dummy-data';
 
