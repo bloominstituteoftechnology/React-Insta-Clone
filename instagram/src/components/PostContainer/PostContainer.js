@@ -2,6 +2,9 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 import "./post.css";
+import openHeart from '../images/Large-Heart.png';
+import closeHeart from '../images/Large-Heart-Red.png';
+import commentImg from '../images/Large-Q-Bubble.png';
 
 function PostContainer(props){
     return (
@@ -21,11 +24,11 @@ function PostContainer(props){
                     <div>
                         <div onClick={() => {props.liked(props.arg.username)}}>
                         {console.log(props.arg.heartToggle)}
-                            <img className={`${props.arg.heartToggle === true ? `fas fa-heart` : `far fa-heart`}`} src="#" alt="heartIcon"  />
+                            <img src={`${props.arg.heartToggle === true ? `${closeHeart}` : `${openHeart}`}`} alt="heartIcon"  />
                         </div> 
                         <p><span>{props.arg.likes}</span> likes</p> 
                     </div>                
-                    <img className='far fa-comment' src="#" alt="commentIcon"/>
+                    <img src={`${commentImg}`} alt="commentIcon"/>
                 </div>
 
                 <div className='post-comment-container'>
