@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 
-import Posts from './components/Posts/Posts';
-import Header from './components/Header/Header';
+// import Posts from './components/Posts/Posts';
+// import Header from './components/Header/Header';
+
+import PostsPage from './components/PostsPage/PostsPage'
 import dummyData from './dummy-data';
 
 import './App.css';
+import PostPage from './components/PostsPage/PostsPage';
 
 class App extends Component {
   constructor() {
@@ -76,20 +79,31 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        <Header 
-          handleInputChange={this.handleInputChange}
-          filter={this.state.filter}
-        />
-        <Posts 
-          data={this.getData()}
-          commentText={this.state.commentText}
-          handleInputChange={this.handleInputChange}
-          addNewComment={this.addNewComment}
-          addLike={this.addLike}
-          removeComment={this.removeComment}
-        />  
-      </div>
+      
+      <PostsPage 
+        data={this.getData()}
+        commentText={this.state.commentText}
+        handleInputChange={this.handleInputChange}
+        addNewComment={this.addNewComment}
+        addLike={this.addLike}
+        removeComment={this.removeComment}
+        filter={this.state.filter}
+      />
+      
+      // <div className="container">
+      //   <Header 
+      //     handleInputChange={this.handleInputChange}
+      //     filter={this.state.filter}
+      //   />
+      //   <Posts 
+      //     data={this.getData()}
+      //     commentText={this.state.commentText}
+      //     handleInputChange={this.handleInputChange}
+      //     addNewComment={this.addNewComment}
+      //     addLike={this.addLike}
+      //     removeComment={this.removeComment}
+      //   />  
+      // </div>
     );
   }
 }

@@ -16,7 +16,6 @@ const Comment = props => {
     );
 }
 
-
 Comment.propTypes = {
     comment: PropTypes.shape({
         username: PropTypes.string.isRequired,
