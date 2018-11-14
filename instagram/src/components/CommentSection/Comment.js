@@ -22,6 +22,7 @@ Comment.propTypes = {
     username: PropTypes.string,
     text: PropTypes.string,
   }).isRequired,
+  handleRemoveComment: PropTypes.func.isRequired,
 }
 
 export default Comment;

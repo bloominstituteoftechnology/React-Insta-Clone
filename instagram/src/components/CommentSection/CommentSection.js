@@ -32,8 +32,7 @@ class CommentSection extends React.Component {
         <PostStat
           likes={this.state.likes}
           liked={this.state.liked}
-          toggleLike={(cb) => this.toggleLike(cb)}
-          updateLikes={(u, t, n) => this.props.updateLikes(u, t, n)}
+          toggleLike={() => this.toggleLike(this.props.updateLikes)}
         />
         {
           this.props.comments.map(
@@ -41,9 +40,7 @@ class CommentSection extends React.Component {
              <Comment
               key={i + this.props.username}
               comment={comment}
-              username={this.props.username}
-              timestamp={this.props.timestamp}
-              handleRemoveComment={() => this.props.handleRemoveComment(this.props.username, this.props.timestamp, i)}
+              handleRemoveComment={() => this.props.handleRemoveComment(i)}
             />
         ))}
         <div className="post--time-stamp">
@@ -51,10 +48,8 @@ class CommentSection extends React.Component {
         </div>
         <CommentForm
           commentText={this.props.commentText}
-          username={this.props.username}
-          timestamp={this.props.timestamp}
-          onCommentFormChange={(e, u, t) => this.props.onCommentFormChange(e, u, t)}
-          onCommentFormSubmit={(e, u, t) => this.props.onCommentFormSubmit(e, u, t)}
+          onCommentFormChange={(e) => this.props.onCommentFormChange(e)}
+          onCommentFormSubmit={(e) => this.props.onCommentFormSubmit(e)}
         />
       </div>
     );
@@ -69,10 +64,12 @@ CommentSection.propTypes = {
       text: PropTypes.string.isRequired,
     })).isRequired,
   likes: PropTypes.number,
+  liked: PropTypes.bool,
   timestamp: PropTypes.string.isRequired,
   commentText: PropTypes.string.isRequired, 
   onCommentFormChange: PropTypes.func.isRequired,
   onCommentFormSubmit: PropTypes.func.isRequired,
+  handleRemoveComment: PropTypes.func.isRequired,
 }
 
 export default CommentSection;

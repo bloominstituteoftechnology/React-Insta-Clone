@@ -5,11 +5,11 @@ const CommentForm = props => {
   return (
     <form
       className="comment--form"
-      onSubmit={(e, u, t) => props.onCommentFormSubmit(e, props.username, props.timestamp)}>
+      onSubmit={(e) => props.onCommentFormSubmit(e)}>
       <input 
         type="text"
         name="text"
-        onChange={(e, u, t) => props.onCommentFormChange(e,props.username, props.timestamp)}
+        onChange={(e) => props.onCommentFormChange(e)}
         placeholder="Add a comment..."
         value={props.commentText}/>
       <button>...</button>

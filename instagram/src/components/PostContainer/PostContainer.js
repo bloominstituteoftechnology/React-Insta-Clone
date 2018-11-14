@@ -21,10 +21,20 @@ const PostContainer = props => {
         likes={props.post.likes}
         timestamp={props.post.timestamp}
         commentText={props.commentText}
-        onCommentFormChange={(e, u, t) => props.onCommentFormChange(e, u, t)}
-        onCommentFormSubmit={(e, u, t) => props.onCommentFormSubmit(e, u, t)}
+        onCommentFormChange={(e) => props.onCommentFormChange(
+          e,
+          props.post.username,
+          props.post.timestamp
+        )}
+        onCommentFormSubmit={(e) => props.onCommentFormSubmit(
+          e,
+          props.post.username,
+          props.post.timestamp)}
         updateLikes={(u, t, n) => props.updateLikes(u, t, n)}
-        handleRemoveComment={(u, t, i) => props.handleRemoveComment(u, t, i)}
+        handleRemoveComment={(i) => props.handleRemoveComment(
+          props.post.username,
+          props.post.timestamp,
+          i)}
       />
     </div>
   );
@@ -45,6 +55,7 @@ PostContainer.propTypes = {
   commentText: PropTypes.string.isRequired,
   onCommentFormChange: PropTypes.func.isRequired,
   onCommentFormSubmit: PropTypes.func.isRequired,
+  handleRemoveComment: PropTypes.func.isRequired,
 }
 
 export default PostContainer;

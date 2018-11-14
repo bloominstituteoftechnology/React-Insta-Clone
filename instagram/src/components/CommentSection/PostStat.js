@@ -9,7 +9,7 @@ const PostStat = props => {
           className={
             `${props.liked ? "fas" : "far"} fa-heart`
           }
-          onClick={(cb) => props.toggleLike(props.updateLikes)}
+          onClick={() => props.toggleLike()}
           style={{
             color: props.liked ? 'red':'black'
           }}
