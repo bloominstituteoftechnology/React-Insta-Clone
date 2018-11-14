@@ -1,45 +1,73 @@
-## Day II
+## Day III
 
-### Focus (Day II)
+### Focus (Day III)
 
-- Understand the concept of React component lifecycles, along with the major lifecycle methods such as `render`, `componentDidMount`.
+- Be able to explain and implement a React Higher Order Component to conditionally render protected content to the screen.
 
-### Daily Setup (Day II)
+### Daily Setup (Day III)
 
-- At this point you should have a working app with a component tree that is setup kind of like this (note that this is not a design spec!):
+- To start off today, your application should still be structured like yesterday, but now it should have a working search bar, comment input, and like icon.
+- Those aren't necessary, however, for what you will be doing today. You can still work on today's part of this project even if you aren't completely done with yesterday's portion.
 
-<img src='/assets/InstaClone-componentStructure.jpg' width='235' />
+### Description (Day III)
 
-- Your data should be imported to `app.js`, and then passed as props to each `PostContainer`.
-- Each `PostContainer` should then be passing data to a `CommentSection` via props as well.
-- The props being passed to each component should be typed checked using `propTypes` and `defaultProps`.
-- The comment section should add a comment to the post
+- Today you will be building a "Higher Order Component" (HOC)
+- The HOC will not let users see the posts until they have logged in. (Our login system for this will be faked using LocalStorage).
+- The job of the HOC will be to render a login page if the user is not logged in, then render the posts after the user is logged in.
 
-### Description (Day II)
+#### Tasks (Day III)
 
-- For this part of the project you are going to use React's lifecycle methods to get data and to render the components. Then you will use functions passed as props to build out the functionality more.
-- As data comes into the component, you will set it to the component's state, then pass it down to the child components.
-- Add the functionality to add a comment to any of the posts. Since there is no login page or anything of that sort, hard code a static username.
-- Implement the ability to like a post by clicking on a heart icon and having the number of likes increment accordingly.
-- Get the Search Bar to filter posts by the post's username. When you submit a search term should filter out posts by users whose usernames do not match the search term.
+- Create a `<PostsPage />` component in your `components/PostsContainer` directory.
 
-#### Tasks (Day II)
+  - You'll have to move a lot of what is rendered in `app.js` to this new component
+  - In app.js, render the `PostsPage` component.
+  - Make sure the app working as it was before since it has been re-factored now.
+  - This is to ensure that we clean up our App component a little bit before we re-factor it to be wrapped up in an HOC
 
-- Use lifecycle methods
-  - In `app.js` use `componentDidMount()` to set your data to the component's state. Use the state object to pass data to your `PostContainer` component.
-- Adding comments
-  - Lets divide up the data that we've been working with this far by separating the comments array onto a new component's state. Pass down the comments through each post to the CommentSection component. Be sure that you set the incoming `comments` props data on the state of the CommentSection component.
-  - Create a function in `CommentSection.js` called `addNewComment` that takes in an event and an index number. The function will add the comment that is on the event object to the post that is at that index number.
-  - Pass the `addNewComment` function down the component tree to where ever you have your 'Add a comment...' input.
-  - The 'Add a comment...' input should be wrapped in a `<form></form>` element. Using that form's `onSubmit` event handler, invoke the `addNewComment` function and pass it the required arguments it needs to add a new comment.
-  - Update your state with the new comment (This should trigger your component tree to "re-render" with your new comment on that post).
-- Liking posts
-  - This will be set up a lot like the 'Add a comment...' input. Pass a function down to where your heart icon is, and use `onClick` event handler to increment that post's likes.
-- Search
-  - Set up the search bar will like the comment input and the like button. In your function, filter out any post whose username doesn't match the search term passed in, then update the state with the resulting data.
+- Building the High Order Component
 
-#### Stretch Problems (Day II)
+  - Create a directory called `Authentication`
+  - Inside that directory create a component called `<Authenticate />`. This is where all of the magic sis going to happen.
+  - This component should be able to take in a component as an argument, and it will return a `class` component.
+  - Inside of `<Authenticate />'s` render method, you'll want to return the Component that gets passed into it.
+  - Be sure to export out this component.
+  - Head over to App.js and `import` in our new `Authenticate` Higher Order Component and pass in `App`.
+  - If this worked right then everything should render as it used to.
+  - Authenticate will look a lot like this when you're done setting it up.
 
-- Persist your data using `localStorage`. If done correctly, you will be able to refresh your page and still see your new comments.
-- Add the ability to delete a comment from your data. If your data is in `localhost`, make sure to delete it from there as well.
-- Implement a third-party library that does "fuzzy" searches into your search bar functionality (ie - search terms that aren't exact, like "phils" or "coffeephilz", would still return the username "philzcoffe").
+```js
+const Authenticate = App =>
+  class extends React.Component {
+    render() {
+      return <App />;
+    }
+  };
+```
+
+- Build out the LoginPage component. You can design it how you like
+
+  - In your `components` directory, create a directory called `Login` and add a new file called `Login.js`.
+  - There should be a `username` input, a `password` input, and a `Login` button.
+  - The component should invoke the `login` function in `app.js` when a user logs in.
+  - This login function should set a `username` on `localStorage`. You'll need to check local storage to see if a user is logged in.
+  - Be sure to force the page to reload when a user logs in so that our component un-mounts and mounts again.
+
+- Extending the functionality of the HOC to conditionally render the `LoginPage` or the `App`
+
+  - Inside of `Authenticate` we need to add a constructor to hold our state data.
+  - On state we need a user `loggedIn` boolean flag.
+  - On `componentDidMount` we need to check `localStorage` to see if a user is logged in.
+  - Inside of the render function we will check `if a user is logged in`
+  - If a user is logged in we will return the `<App />`, else we will return the `<LoginPage>`
+
+#### Stretch Problems (Day III)
+
+- Now that you have a user set in `localStorage`, go ahead and use that `username` when a user posts a comment to make it so the logged in user is the one commenting on the posts.
+- Styled-Components
+
+  - Watch this video about [styled-components](https://youtu.be/bIK2NwoK9xk) in its entirety.
+  - Head over to the [Styled-Components docs](https://www.styled-components.com/) and learn about the library.
+  - Once you feel like you've got a good grasp of this concept, go ahead and start converting your components into styled-components.
+  - Try and make this thing as beautiful as possible
+
+- Deploy your Instagram clone to netlify and share it in the #show-it-off channel.
