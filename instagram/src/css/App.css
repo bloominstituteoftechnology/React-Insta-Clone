@@ -289,6 +289,18 @@ code {
   border: none;
   border-top: 1px lightgrey solid;
 }
+.login {
+  border: 1px red solid;
+  margin: 0;
+  padding: 5%;
+}
+.login form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 .App {
   display: flex;
   flex-direction: column;

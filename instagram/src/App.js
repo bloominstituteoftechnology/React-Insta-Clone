@@ -1,57 +1,47 @@
 import React, { Component } from 'react';
 import './less/App.less';
-import dummyData from './dummy-data.js';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
+import Login from './components/LoginPage/LoginPage';
 
+
+let storage = window.localStorage
+    storage.setItem('username', 'cotikor')
+    storage.setItem('password', 'password1')
 
 class App extends Component {
-	constructor() {
-		super();
-		this.state = {
-			posts: [],
-			searchInput: '',
-		};
-  }
-  
-  componentDidMount(){
-    this.setState({posts: dummyData})
-  }
+	constructor(props){
+        super(props);
+        this.state = {
+            usernameInput: '',
+			passwordInput: '',
+            username: storage.getItem('username'),
+            password: storage.getItem('password')
+        }
+    }
 
-
-	handleSearch = (event) => {
-    this.setState ({
-      searchInput: event.target.value,
-    })
-    if (event.target.value === ''){
-      this.setState({
-        posts: dummyData
-      }) 
-    } else {
-        this.setState({
-          posts: 
-          this.state.posts.filter((post) => {
-            return post.username.includes(event.target.value);
-          })
-        
-        });
-    }  
+    authenticateLogin(username, password){
+        if (username === this.state.username && password === this.state.password){
+            return true
+        } else {
+            return false
+        }
+	}
+	handleChange = (event) => {
+		event.preventDefault();
+		this.setState({
+			[event.target.name]: event.target.value
+		});
 	};
-
 
 	render() {
 		return (
 			<div className="App">
-        <SearchBar 
-        handleSearch={this.handleSearch}
-        searchInput={this.state.searchInput}
-        />
-				<PostContainer
-					posts={this.state.posts}
-				/>
+        <PostsPage />
+		<Login usernameInput={this.state.usernameInput} passwordInput={this.state.passwordInput} />
 			</div>
 		);
 	}
 }
 
 export default App;
+
