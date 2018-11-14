@@ -3,9 +3,7 @@ import Fuse from 'fuse.js';
 import './App.scss';
 
 import dummyData from './dummy-data';
-
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
 
@@ -114,22 +112,14 @@ class App extends Component {
     return (
       <div className='app'>
 
-        <SearchBar searchFunc={this.search}/>
-
-        <div className='posts'>
-
-          {this.state.displayedData.map((data, index) =>
-            <PostContainer
-              key={index}
-              data={data}
-              id={index}
-              addLike={this.addLike}
-              addComment={this.addComment}
-              removeComment={this.removeComment}
-              currentUser={this.state.username}
-            />)}
-
-        </div>
+        <PostsPage
+          displayedData={this.state.displayedData}
+          searchFunc={this.search}
+          addLike={this.addLike}
+          addComment={this.addComment}
+          removeComment={this.removeComment}
+          username={this.state.username}
+        />
 
       </div>
     );
