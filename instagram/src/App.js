@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 // import Posts from './components/Posts/Posts';
 // import Header from './components/Header/Header';
 
+import Authenticate from './components/Authentication/Authenticate';
 import PostsPage from './components/PostsPage/PostsPage'
 import dummyData from './dummy-data';
 
 import './App.css';
-import PostPage from './components/PostsPage/PostsPage';
 
 class App extends Component {
   constructor() {
@@ -79,7 +79,6 @@ class App extends Component {
 
   render() {
     return (
-      
       <PostsPage 
         data={this.getData()}
         commentText={this.state.commentText}
@@ -90,22 +89,8 @@ class App extends Component {
         filter={this.state.filter}
       />
       
-      // <div className="container">
-      //   <Header 
-      //     handleInputChange={this.handleInputChange}
-      //     filter={this.state.filter}
-      //   />
-      //   <Posts 
-      //     data={this.getData()}
-      //     commentText={this.state.commentText}
-      //     handleInputChange={this.handleInputChange}
-      //     addNewComment={this.addNewComment}
-      //     addLike={this.addLike}
-      //     removeComment={this.removeComment}
-      //   />  
-      // </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
