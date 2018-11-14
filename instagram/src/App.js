@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Fuse from 'fuse.js';
 
 // styles
 import './App.css';
@@ -8,8 +7,7 @@ import './App.css';
 import dummyData from './dummy-data'
 
 // components
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostPage from './components/PostContainer/PostPage';
 
 class App extends Component {
   constructor(props) {
@@ -84,34 +82,16 @@ class App extends Component {
   }
 
   render() {
-    const options = {
-      keys: ['username'],
-    };
-    const fuse = new Fuse(this.state.data, options);
-    const filteredData = this.state.searchText === '' ? this.state.data : fuse.search(this.state.searchText);
     return (
       <div className="App">
-        <SearchBar
+        <PostPage
+          data={this.state.data}
           searchText={this.state.searchText}
-          handleSearch={(e) => this.handleSearch(e)}
+          handleSearch={e => this.handleSearch(e)}
+          submitComment={(c, u, t) => this.submitComment(c, u, t)}
+          updateLikes={(u, t, n) => this.updateLikes(u, t, n)}
+          handleRemoveComment={(u, t, i) => this.handleRemoveComment(u, t, i)}
         />
-        <div className="posts--container">
-          <div className="posts">
-            {
-              filteredData
-              .map(
-                (post, i) => (
-                  <PostContainer
-                    key={post.username + post.timestamp}
-                    commentText={post.commentText}
-                    submitComment={(c, u, t) => this.submitComment(c, u, t)}
-                    updateLikes={(u, t, n) => this.updateLikes(u, t, n)}
-                    post={post}
-                    handleRemoveComment={(u, t, i) => this.handleRemoveComment(u, t, i)}
-                  />
-            ))}
-          </div>
-        </div>
       </div>
     );
   }
