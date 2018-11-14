@@ -1,0 +1,97 @@
+.search-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.search-bar .search-input-container {
+  background: #FAFAFA;
+  border: 1px solid #DBDBDB;
+  border-radius: 3px;
+  padding: 5px;
+  width: 15%;
+  color: #9C9C9C;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-bar .search-input-container:before {
+  content: '\f002';
+  border-right: 1px solid grey;
+  padding-right: 5px;
+}
+
+.search-bar .search-input-container:after {
+  content: '\f057';
+}
+
+.search-bar input {
+  background: #FAFAFA;
+  border: none;
+  color: #9C9C9C;
+  text-align: left;
+}
+
+
+.search-bar input:placeholder-shown {
+  text-align: center;
+}
+
+
+input:focus::placeholder {
+  content: 'search';
+  text-align: left;
+} 
+
+input:focus {
+  outline: none;
+  text-align: left;
+} 
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 10%;
+  width: 12%;
+}
+
+.fontAwesome {
+  font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+.instagram-icon {
+  width: 50px;
+  height: auto;
+  padding-right: 21px;
+  border-right: 1px solid black;
+}
+
+.instagram-logo {
+  width: 100px;
+  height: auto;
+  padding-left: 20px;
+}
+
+.search-input {
+  border: 1px solid red;
+}
+
+.testing {
+  border: 1px solid red;
+  width: 50px;
+  height: 20px;
+  text-align: left;
+}
+
+.testing:before {
+  border: 1px solid green;
+
+  content: '\f002';
+}
+
+.testing:after {
+  border: 1px solid yellow;
+  content: 'h';
+}
