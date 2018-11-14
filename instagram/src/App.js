@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import PostPage from './components/PostContainer/PostPage';
+import authenticateHOC from './components/Authentication/Authenticate';
+
 
 class App extends Component {
 
@@ -14,4 +15,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default authenticateHOC(App);
