@@ -17,8 +17,14 @@ class App extends Component {
       data: [],
       filter: '',
       commentText: '',
-      logedInUser: 'therealbondor'
+      logedInUser: 'therealbondor',
+      loginUserText: '',
+      loginPasswordText: ''
     }
+  }
+
+  login(username, password) {
+    localStorage.setItem('user', username)
   }
 
   componentDidMount(){
@@ -80,7 +86,12 @@ class App extends Component {
 
   render() {
     return (
-      <LoginPage />
+      <LoginPage 
+        login={this.login}
+        loginUserText={this.state.loginUserText}
+        loginPasswordText={this.state.loginPasswordText}
+        handleInputChange={this.handleInputChange}
+      />
       // <PostsPage 
       //   data={this.getData()}
       //   commentText={this.state.commentText}
