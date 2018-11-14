@@ -6,7 +6,6 @@ import './CommentSection.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-// import { faComment, faHeart} from '@fortawesome/free-solid-svg-icons';
 import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
 
 library.add(fab, faComment, faHeart);
@@ -19,17 +18,22 @@ const CommentSection = props => {
                 <i className="far fa-comment"></i>
             </div>
             <div className="post-likes">
-                <p>{props.post.likes} likes</p>
+                <p>{props.post.post.likes} likes</p>
             </div>
             <div className="post-comments">
-                {/* {props.post.comments.map( */}
-                    {/* comment => (  */}
+                {props.post.post.comments.map( 
+                    comment => { 
+                        console.log('Props.post.post.comments', props.post.post.comments);
+                        console.log('props.post.post.comments', props.post.post.comments);
+                        console.log('Props', props.post.post); 
+                        return (
                         <Comment 
-                            key={props.username}
-                            comment={props}
+                            key={props.post.post.comments.username}
                         />
-                    {/* ) */}
-                {/* )}  */}
+                        )
+                    }
+                    ) 
+                }
             </div>
             <div className="post-comment-input">
                 <input type="text" placeholder="Add a comment..." />

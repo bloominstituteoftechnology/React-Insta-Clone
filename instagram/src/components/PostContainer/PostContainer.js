@@ -11,13 +11,16 @@ import { faCompass, faHeart } from '@fortawesome/free-regular-svg-icons';
 
 library.add(fab, faCompass, faHeart);
 
+
+
 const PostContainer = props => {
+    
     return (
         <div className="post-container">
-                {/* {props.map( post => ( */}
+                {/* {props.post.map( post => ( */}
                     <div className="post-content">
                         <Post
-                            key={props.username}
+                            key={props.post.username}
                             post={props}
                         />
                         <CommentSection 
@@ -25,7 +28,7 @@ const PostContainer = props => {
                             post={props}
                         />
                     </div>
-                {/* ) ) } */}
+                {/* ))}  */}
         </div>
     )
 };

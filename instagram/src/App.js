@@ -16,13 +16,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log("CDM running");
     this.setState({ data: dummyData });
   }
 
   render() {
     return (
-      console.log('Render running'),
       <div className="App">
         <header className="App-header">
           <SearchBar />
