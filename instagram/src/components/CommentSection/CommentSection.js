@@ -25,7 +25,7 @@ class CommentSection extends Component {
             this.setState({
                 comments:[
                 ...this.state.comments,
-                {username: 'anonymous', text: this.state.inputText}
+                {username: localStorage.getItem('username'), text: this.state.inputText}
                 ],
                 inputText: ''
             });
