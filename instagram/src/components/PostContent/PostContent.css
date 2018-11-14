@@ -72,3 +72,10 @@
 .time{
     margin-top: 1rem;
 }
+
+button.heart{
+    border: none;
+    background: none;
+    color: grey;
+    cursor: pointer;
+}

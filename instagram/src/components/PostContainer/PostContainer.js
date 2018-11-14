@@ -11,7 +11,8 @@ const PostContainer = props => {
         return <PostContent 
         key={item.username} 
         data={item}
-        comments={item.comments} 
+        comments={item.comments}
+        likes={item.likes}   
         />;
       })}
     </div>

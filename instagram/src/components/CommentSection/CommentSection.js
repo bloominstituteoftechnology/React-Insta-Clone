@@ -14,12 +14,12 @@ class CommentSection extends React.Component {
     };
   }
 
-  //   componentDidMount(){
-  //     const data = JSON.parse(localStorage.getItem('data'));
-  //     if(data){
-  //       this.setState({data: data});
-  //     }
-  //   }
+    componentDidMount(){
+      const comments = JSON.parse(localStorage.getItem('comments'));
+      if(comments){
+        this.setState({comments: comments});
+      }
+    }
 
   handleChange = event => {
     this.setState({
@@ -35,7 +35,7 @@ class CommentSection extends React.Component {
         { text: this.state.inputText, username: "New User" }
       ];
 
-      //   localStorage.setItem("data", JSON.stringify(newComment));
+    localStorage.setItem("comments", JSON.stringify(newComment));
 
       this.setState({
         comments: newComment,
@@ -45,13 +45,13 @@ class CommentSection extends React.Component {
   };
 
   render() {
-    console.log(this.state.comments);
-    console.log(this.state.inputText);
-    console.log(this.state.index);
+    // console.log(this.state.comments);
+    // console.log(this.state.inputText);
+    // console.log(this.state.index);
     return (
       <React.Fragment>
-        {this.state.data.comments.map(item => {
-          return <Comment key={`${item.username}${item.text}`} data={item} />;
+        {this.state.comments.map((item) => {
+          return <Comment key={`${item.username}${item.text}`} comments={item}/>;
         })}
         <div className="time">
           <p className="time-text">{this.state.data.timestamp}</p>
@@ -69,7 +69,7 @@ class CommentSection extends React.Component {
           <a href="">
             <i className="fas fa-ellipsis-h settings" />
           </a>
-          <button type="submit">Add Todo</button>
+          {/* <button type="submit">Add Todo</button> */}
         </form>
       </React.Fragment>
     );

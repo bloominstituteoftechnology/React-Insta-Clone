@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchBar.css";
 
-const SearchBar = () => {
+const SearchBar = props => {
   return (
     <header className="header">
       <div className="container">
@@ -9,14 +9,16 @@ const SearchBar = () => {
           <i className="fab fa-instagram icon" />
           <h1 className="site-title">Instagram</h1>
         </div>
-        <div className="search">
+        <form onSubmit={props.clear} className="search">
           <input
             type="text"
             name="search"
             className="search-input fa fa-input"
             placeholder="&#xf002; Search"
+            value={props.search}
+            onChange={props.handleChange}
           />
-        </div>
+        </form>
         <div className="links">
           <a href="">
             <i className="fas fa-chevron-circle-down icon" />

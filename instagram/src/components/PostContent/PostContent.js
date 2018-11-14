@@ -1,7 +1,9 @@
 import React from "react";
 import CommentSection from '../CommentSection/CommentSection';
+import LikesContainer from './LikesContainer';
 import './PostContent.css';
 import PropTypes from 'prop-types';
+
 // import moment from 'moment';
 const PostContent = props => {
     
@@ -19,17 +21,8 @@ const PostContent = props => {
                 <img src={props.data.imageUrl} alt=""/>
             </div>
             <div className="comments-container">
-                <div className="buttons">
-                <a href="">
-                    <i className="far fa-heart icon" />
-                </a>
-                <a href="">
-                    <i className="far fa-comment"></i>
-                </a>
-                </div>
-                <div className="likes">
-                    <p>{props.data.likes}</p>
-                </div>
+                
+                <LikesContainer likes={props.likes}/>
 
                 <CommentSection data={props.data} comments={props.comments}/>
                 
