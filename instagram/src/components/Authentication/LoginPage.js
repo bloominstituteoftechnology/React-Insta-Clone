@@ -1,5 +1,7 @@
 import React from 'react';
 
+import WarningMessage from './WarningMessage';
+
 import './LoginPage.scss';
 
 export default class LoginPage extends React.Component {
@@ -12,7 +14,11 @@ export default class LoginPage extends React.Component {
 
       userField: '',
       passField: '',
-      password: ''
+      password: '',
+      showUserMessage: false,
+      showPassMessage: false,
+      userMessage: '',
+      passMessage: ''
 
     }
 
@@ -28,13 +34,13 @@ export default class LoginPage extends React.Component {
 
       if (!localStorage[this.state.userField]) {
 
-        console.log('username does not exist');
+        this.setState({showUserMessage: true, userMessage: 'invalid username!'});
 
       }
 
       else if (this.state.password != localStorage[this.state.userField]) {
 
-        console.log('incorrect password!');
+        this.setState({showPassMessage: true, passMessage: 'invalid password!'});
 
       }
 
@@ -58,7 +64,7 @@ export default class LoginPage extends React.Component {
 
       else {
 
-        console.log('username taken!');
+        this.setState({showUserMessage: true, userMessage: 'username already taken!'});
 
       }
 
@@ -70,11 +76,17 @@ export default class LoginPage extends React.Component {
 
     if (e.target.name == 'user-field') {
 
+      if (this.state.showUserMessage)
+        this.setState({showUserMessage: false});
+
       this.setState({userField: e.target.value});
 
     }
 
     else {
+
+      if (this.state.showPassMessage)
+        this.setState({showPassMessage: false});
 
       this.setState({
         password: (e.target.value[e.target.value.length - 1] != '*' && e.target.value[e.target.value.length - 1] != undefined)
@@ -99,6 +111,8 @@ export default class LoginPage extends React.Component {
 
         <form onSubmit={this.logIn}>
 
+          {this.state.showUserMessage ? <WarningMessage text={this.state.userMessage} /> : null}
+
           <input
             name='user-field'
             type='text'
@@ -109,6 +123,8 @@ export default class LoginPage extends React.Component {
             required
           />
 
+          {this.state.showPassMessage ? <WarningMessage text={this.state.passMessage} /> : null}
+
           <input
             name='pass-field'
             type='text'
@@ -118,7 +134,7 @@ export default class LoginPage extends React.Component {
             autoComplete='off'
             required
           />
-          
+
           <button name='login' type='submit'>Log In</button>
           <button name='signup' type='submit'>Sign Up</button>
 
