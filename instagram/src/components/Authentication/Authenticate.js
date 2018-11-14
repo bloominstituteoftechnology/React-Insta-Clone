@@ -17,6 +17,7 @@ function Authenticate(Page) {
         addComment={this.props.addComment}
         removeComment={this.props.removeComment}
         username={this.props.username}
+        setUsername={this.props.setUsername}
       />)
       :
       (<LoginPage setUsername={this.props.setUsername}/>);

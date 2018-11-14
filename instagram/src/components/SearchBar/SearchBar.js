@@ -53,7 +53,7 @@ export default class SearchBar extends React.Component {
 
           <p className='right far fa-compass'></p>
           <p className='right far fa-heart'></p>
-          <p className='right far fa-user'></p>
+          <p className='right far fa-user' onClick={() => this.props.setUsername('')}></p>
 
         </div>
 

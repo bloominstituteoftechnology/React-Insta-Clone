@@ -112,7 +112,10 @@ class App extends Component {
 
   setUsername = newUsername => {
 
-    this.setState({username: newUsername, loggedIn: true});
+    if (newUsername != '')
+      this.setState({username: newUsername, loggedIn: true});
+    else
+      this.setState({loggedIn: false});
 
   }
 
