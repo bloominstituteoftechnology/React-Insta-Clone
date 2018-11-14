@@ -8,12 +8,8 @@ const PostContainer = props => {
             <h1>{props.propsInPC.username}</h1>
         </div>
         <div>
-            {props.data.map(propsInPC => (
-                <Comments
-                    key ={propsInPC.username}
-                    propsInComments= {propsInPC}
-                    />
-            ))}
+            <Comments />
+         
         </div>
         </div>
        
