@@ -1,6 +1,39 @@
 .comments{
-    border-left: 1px solid lightgrey;
-    border-right: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
-    border-radius: 2px;
+    width: 95%;
+    margin: 10px auto;
+   display: flex;
+   flex-direction: column;
+}
+.comment{
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.comment span{
+    margin-right: 5px;
+}
+.comment p{
+    color: #02267b;
+    font-weight: 500;
+    margin: 0;
+}
+.time-stamp{
+    color: #6b6b83;
+    font-size: 12px;
+
+}
+.comments form{
+    margin: 10px 0;
+    border-top: 1px solid #02267b;
+}
+.comments form input{
+    padding-top: 15px;
+    background: #f2eaeb;
+    color:#4da6cc;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+}
+.comments form input:focus{
+    outline: none;
 }

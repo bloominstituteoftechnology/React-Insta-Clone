@@ -9,7 +9,7 @@ function CommentSection(props){
                 <p>{comment.text}</p>        
             </div>
         ))}
-        <div className='timestamp'>{props.timestamp}</div>
+        <div className='time-stamp'>{props.timestamp}</div>
         <form>
             <input>
             </input>

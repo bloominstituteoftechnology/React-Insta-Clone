@@ -1,20 +1,42 @@
+.posts-container{
+    padding-top: 40px
+}
 .post{
-    
+    box-sizing: content-box;
+    background: #f2eaeb;
+    border: 1px solid #6b6b83;
     max-width: 640px;
     margin: 10px auto;
+    border-radius: 2px;
 }
 .post span{
     font-weight: bold;
 }
 .post-head{
-    border: 1px solid lightgrey;
+    padding: 15px 0;
+   display: flex;
+   align-items: center;
 }
-.likes{
-    width: 100%;
-    border-left: 1px solid lightgrey;
-    border-right: 1px solid lightgrey;
+.post-head .thumbnail{
+    margin: 0 5px 0 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
 .interact-buttons{
-    border-left: 1px solid lightgrey;
-    border-right: 1px solid lightgrey;
+    width: 95%;
+    margin: 0 auto;
+}
+.interact-buttons .like-button{
+    margin-right: 15px;
+}
+.likes{
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 14px;
+}
+.likes .num-likes{
+    margin-right: 5px;
+    color: #4da6cc;
 }

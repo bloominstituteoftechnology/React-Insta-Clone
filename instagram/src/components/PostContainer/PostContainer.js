@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
+import * as Icon from 'react-feather';
 
 function PostContainer(props){
     return(
@@ -11,10 +12,13 @@ function PostContainer(props){
                 </div>
                 <img src={props.post.imageUrl}/>
                 <div className='interact-buttons'>
-                    <div className='like-button'>heart</div>
-                    <div className='comment-button'>bubble</div>
+                    <Icon.Heart className='like-button' />
+                    <Icon.MessageCircle className='msg-button'/>
                 </div>
-                <span className='likes'>{props.post.likes} likes</span>
+                <div className='likes'>
+                    <span className='num-likes'>{props.post.likes}</span>
+                    <span>likes</span> 
+                </div>
             </div>
             <CommentSection 
             comments = {props.post.comments}
