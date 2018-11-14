@@ -48,6 +48,7 @@ span {
 .timestamp {
     color: #B0ABAE;
     padding-bottom: 20px;
+    padding-left: 1rem;
     border-bottom: 1px solid #E9E9E9;
 }
 

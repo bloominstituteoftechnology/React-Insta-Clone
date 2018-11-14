@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentSection from '../CommentSection/CommentSection';
+import Post from './Post';
 import PropTypes from 'prop-types';
 import './PostContainer.css';
 
@@ -8,7 +8,8 @@ const PostContainer = (props) => {
         <div>
             
             {props.data.map((post, index) => (
-                <CommentSection 
+                
+                <Post
                 key={index}
                 post={post}
                 />
