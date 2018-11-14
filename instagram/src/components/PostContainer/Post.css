@@ -34,11 +34,13 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .comm-add {
     opacity: 0.3;
     width: 100%;
+    cursor: pointer;
 }
 
 input {

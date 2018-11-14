@@ -4,6 +4,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
     }
     
     .home {
@@ -19,6 +20,7 @@
     
     .search-bar {
         opacity: 0.5;
+        cursor: pointer;
     }
     
     .icons {}
