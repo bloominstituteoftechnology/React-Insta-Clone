@@ -54,7 +54,7 @@ import Comment from "./Comment";
           <a href="">
             <i className="fas fa-ellipsis-h settings" />
           </a>
-          <button type="submit">Add Todo</button>
+          <button type="submit">Add comment</button>
         </form>
       </React.Fragment>
     );
