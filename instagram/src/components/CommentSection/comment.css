@@ -1,7 +1,7 @@
 .each-comment-container {
     line-height: 1.6;
-    width: 90%;
-    border: 1px solid red;
+    width: 100%;
+    /* border: 1px solid red; */
 }
 
 .username-comment {

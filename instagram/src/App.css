@@ -1,6 +1,6 @@
 .App {
   width: 100vw;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,9 +38,10 @@
 
 .searchContainer {
   width: 100%;
-  border-bottom: 1px solid #222222;
+  border-bottom: 1px solid lightgray;
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .postContainer {

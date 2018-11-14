@@ -18,10 +18,10 @@ function PostContainer(props){
             <div className='below-post-container'>
                 <div className='post-engagement-container'>
                     <div>
-                        <img src="#" alt="heartIcon"/>
-                        <p>{`${props.arg.likes} likes`}</p>
+                        <img className='far fa-heart' src="#" alt="heartIcon"/>
+                        <p><span>{props.arg.likes}</span> likes</p> 
                     </div>                
-                    <img src="#" alt="commentIcon"/>
+                    <img className='far fa-comment' src="#" alt="commentIcon"/>
                 </div>
 
                 <div className='post-comment-container'>
@@ -31,7 +31,7 @@ function PostContainer(props){
                 </div>
 
                 <div className='add-comment-container'>
-                    <input type="text" placeholder='Add a comment...'/>
+                    <input type="text" placeholder='Add a comment . . .'/>
                 </div>
             </div>
         </div>

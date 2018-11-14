@@ -4,17 +4,44 @@
     /* border: 1px solid red; */
     /* background-color: whitesmoke; */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 20px 0;
 }
 
 .left-side-logo {
     width: 30%;
+    /* border: 1px solid red; */
+    text-align: left;
+    display: flex;
+    /* align-items: center; */
+    font-size: 30px;
+}
+
+.fa-instagram {
+    font-size: 45px;
+    margin-right: 15px;
+}
+
+.fa-compass {
+    font-size: 26px;
+    margin: 0 5px;
+}
+
+.fa-heart {
+    font-size: 26px;
+    margin: 0 5px;
+}
+
+.fa-user {
+    font-size: 26px;
+    margin: 0 5px;
 }
 
 .searchBar-container {
     width: 30%;
+    /* border: 1px solid red; */
+    text-align: center;
 }
 
 .searchBar-container input {
@@ -25,4 +52,6 @@
 
 .right-side-logo {
     width: 30%;
+    /* border: 1px solid red; */
+    text-align: right;
 }

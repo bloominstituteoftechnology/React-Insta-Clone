@@ -1,12 +1,14 @@
 
 .post-content-container {
     /* background-color: lightgray; */
+    border: 1px solid lightgray;
+    border-radius: 5px;
     margin: 0 20px;
     margin-bottom: 70px;
 }
 
 .post-header-container {
-    width: 90%;
+    width: 95%;
     /* border: 1px solid red; */
     display: flex;
     align-items: center;
@@ -29,35 +31,60 @@
 }
 
 .post-image-content img {
-    width: 90%;
+    width: 100%;
     height: auto;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .below-post-container {
-    width: 90%;
-    border: 1px solid green;
-    margin: 0 auto;
+    width: 95%;
+    /* border: 1px solid green; */
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .post-engagement-container {
-    margin: 20px 0;
+    margin: 10px 0 0 0;
     display: flex;
+    /* border: 1px solid purple; */
+    width: 95%;
 }
 
 .post-engagement-container img {
     margin-right: 20px;
 }
 
+.post-engagement-container span {
+    font-weight: 600;
+}
+
+.post-comment-container {
+    width: 95%;
+}
+
 .add-comment-container {
-    width: 90%;
-    border: 1px solid red;
+    width: 95%;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: flex-start;
+    margin: 10px 0;
 }
 
 .add-comment-container input {
     width: 100%;
     height: 30px;
-    border: 1px solid lightgray;
+    /* border: 1px solid lightgray; */
+    border: none;
+    border-top: 1px solid lightgray;
+    padding: 0 10px;
+    padding-top: 10px;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.fa-comment {
+    font-size: 27px;
 }
