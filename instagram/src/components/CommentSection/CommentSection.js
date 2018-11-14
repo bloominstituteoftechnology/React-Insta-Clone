@@ -41,7 +41,7 @@ class CommentSection extends Component {
 
     deleteComment = (event) => {
         event.preventDefault();
-        console.log(event.currentTarget.dataset.index)
+        // console.log(event.currentTarget.dataset.index)
         this.setState({
             comments:  this.state.comments.filter((comment,index) => {
                 return event.currentTarget.dataset.index !== index.toString();
