@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import './PostContainer.css';
 
 const PostContainer = (props) => {
+    console.log(props.data)
     return (
         <div>
             

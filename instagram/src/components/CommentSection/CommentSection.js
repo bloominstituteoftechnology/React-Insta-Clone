@@ -9,7 +9,6 @@ import './CommentSection.css';
 
 class CommentSection extends React.Component {
     constructor(props) {
-        
         super(props);
         this.state = {
             comments: props.comments,
@@ -28,24 +27,17 @@ class CommentSection extends React.Component {
       };
 
     addComment = event => {
-        console.log('click')
+        
         event.preventDefault();
         const newComment= {text: this.state.commentInput, username: 'cosmicChocolate'}
         const brandNewComments = this.state.comments.slice();
-        console.log(brandNewComments)
+        
         brandNewComments.push(newComment)
         this.setState({
           comments: brandNewComments , commentInput: ''
         }) 
       }
 
-      onKeydown = event => {
-          if(event.key=== 'Enter') {
-              event.preventDefault();
-              event.stopPropagation()
-              this.addComment()
-          } 
-      }
 
     render () {
         return (
@@ -59,9 +51,12 @@ class CommentSection extends React.Component {
                     />
                 )}
 
-                {/* <h5 className='timestamp'>
-                  { moment(props.post.timestamp, 'MMMM Do YYYY hh:mm:ss A').fromNow() }
-                 </h5> */}
+               
+               <h5 className='timestamp'>
+                    {/* { moment(this.timestamp, 'MMMM-Do-YYYY h:mm:ss a').fromNow() } */}
+                
+                    {this.props.timestamp}
+                </h5>
 
                 <CommentInput 
                     commentInput={this.state.commentInput}

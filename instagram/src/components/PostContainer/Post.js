@@ -42,18 +42,20 @@ class Post extends React.Component {
                             likes={this.state.likes}
                             increment={this.increment}
                         />
+
+                           
+                        </div>
                     <div > 
+                    
                            <CommentSection 
                                 comments={this.props.post.comments}
-                                timestamp={this.props.post.username}
+                                timestamp={this.props.post.timestamp}
                             />
                             
-                        
-                            {/* <h5 className='timestamp'>
+{/*                         
+                            <h5 className='timestamp'>
                                 { moment(this.props.post.timestamp, 'MMMM Do YYYY hh:mm:ss A').fromNow() }
                             </h5> */}
-                        </div>
-        
                         
                     
                     </div>

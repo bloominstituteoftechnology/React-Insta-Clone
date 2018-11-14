@@ -4,7 +4,7 @@ import './SearchBar.css';
 
 
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
     
             <header>
@@ -17,9 +17,12 @@ const SearchBar = () => {
                 <div className='input-field'>
                     <form>
                         <input
-                            type='text'
                             className='fa fa-input search-input'
+                            name='filteredSearch'
+                            onChange={props.handleSearchInput}
                             placeholder='  Search'
+                            type='text'
+                            value={props.filteredSearch}
                         />
                     </form>
                 </div>

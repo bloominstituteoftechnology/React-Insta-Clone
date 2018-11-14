@@ -5,7 +5,7 @@ import './CommentSection.css';
 const CommentInput = (props) => {
     return (
         <div className='comment-field'>
-            <form >
+            <form  onSubmit={props.addComment}>
                 <input
                     className='comment-input'
                     name='commentInput'
@@ -14,8 +14,6 @@ const CommentInput = (props) => {
                     placeholder='Add a comment... '
                     onChange={props.handleChange}
                 />
-
-                <button type='submit' onClick={props.addComment} >Add Comment</button>
             </form>
             <i className="fas fa-ellipsis-h fa-1x"></i>
         </div>
