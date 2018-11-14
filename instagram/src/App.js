@@ -8,8 +8,13 @@ class App extends Component {
     super();
     this.state = {
       search: "",
-      post: dummyData
+      post: [],
     };
+  }
+  componentDidMount(){
+    this.setState({
+      post: dummyData,
+    })
   }
   render() {
     return (
