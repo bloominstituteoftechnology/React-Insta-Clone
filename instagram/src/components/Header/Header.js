@@ -13,7 +13,7 @@ const Header = props => {
       <img src={dividerImage} alt="" />
       <img className="header-logo-img" src={logoImage} alt="" />
     </div>
-    <SearchBar />
+    <SearchBar setSearchResults={props.setSearchResults} />
     <div className="header-right-side">
       <Compass className="header-icons" size={48} />
       <Heart className="header-icons" size={48} />

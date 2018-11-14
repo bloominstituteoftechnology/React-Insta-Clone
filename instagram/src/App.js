@@ -9,7 +9,8 @@ class App extends Component {
     super();
     this.state = {
       data: [],
-      newComment: ''
+      newComment: '',
+      searchText: ''
     };
   }
 
@@ -58,7 +59,8 @@ class App extends Component {
   
       this.setState({
         data: newData,
-        newComment: ''
+        newComment: '',
+        ...this.state.searchText
       });
       event.target.querySelector('textarea').value = '';
     }
@@ -83,16 +85,24 @@ class App extends Component {
   
       this.setState({
         data: newData,
-        ...this.state.newComment
+        ...this.state.newComment,
+        ...this.state.searchText
       });
     }
+  }
+
+  setSearchResults = e => {
+    e.preventDefault();
+    const postsFound = dummyData.filter(post => post.username.includes(e.target.value));
+    this.setState({
+      data: postsFound
+    })
   }
 
   render() {
     return (
       <div className="App">
-        <header className="main-header">{/* camera | Instagram search-bar circle-diamond heart person */}</header>
-        <Header />
+        <Header setSearchResults={this.setSearchResults} />
         <div className="app-container">
           <PostContainerList
           data={this.state.data}

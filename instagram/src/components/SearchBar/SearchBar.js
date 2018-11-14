@@ -1,10 +1,21 @@
 import React from 'react';
+//import PropTypes from 'prop-types';
 import './Style.css';
 
-const Header = props => {
+const SearchBar = props => {
   return (
-    <input type="search" id="SearchBar" placeholder="Search" results="0" />
+    <input
+      type="search"
+      id="SearchBar"
+      placeholder="Search"
+      results="0"
+      onChange={(e) => props.setSearchResults(e)}
+    />
   )
 }
 
-export default Header;
+// SearchBar.propTypes = {
+//   setSearchResults: PropTypes.func
+// }
+
+export default SearchBar;
