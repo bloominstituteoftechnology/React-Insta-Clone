@@ -49,7 +49,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Authenticate />
         <PostsPage 
           handleSearch={this.handleSearch}
           searchText={this.state.searchText} 
@@ -68,4 +67,4 @@ App.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.object)
 }
 
-export default App;
+export default Authenticate(App);

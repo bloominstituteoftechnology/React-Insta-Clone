@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const LoginPage = props => {
     return (
-        <div className='login-container'>
+        <div className='login-page'>
             <form>
                 <input type='text' placeholder='Username' />
                 <input type='text' placeholder='Password' />
