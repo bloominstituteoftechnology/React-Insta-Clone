@@ -1,4 +1,6 @@
 import React from 'react';
+import './LoginPage.css';
+import logo from '../img/1024px-Instagram_logo.svg.png';
 
 class LoginPage extends React.Component {
     constructor() {
@@ -48,10 +50,11 @@ class LoginPage extends React.Component {
 
     render() {
         return(
-            <div className="Login-container">
-                <form onSubmit={this.setUsername}>
+            <div className="login-container">
+                <form className="login-form" onSubmit={this.setUsername}>
+                <img src={logo} className="instagram-logo-text" alt="Instagram Logo"/>
                     <input 
-                        className="login-input" 
+                        className="login-input input-username" 
                         type="text"
                         name="username"
                         placeholder="Phone number, username, or email"
@@ -59,14 +62,14 @@ class LoginPage extends React.Component {
                         onChange={this.handlesUsernameChange}
                     />
                     <input 
-                        className="login-input" 
+                        className="login-input input-password" 
                         type="text"
                         name="password"
                         placeholder="Password"
                         value={this.state.password}
                         onChange={this.handlesUsernameChange}
                     />
-                    <button className="login-button" onClick="submit">Log in</button>
+                    <button className={this.state.password || this.state.username ? "login-button unfaded" : "login-button"} type="submit">Log in</button>
                 </form>
             </div>
         );
