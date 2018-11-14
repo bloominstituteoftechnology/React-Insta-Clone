@@ -1,6 +1,6 @@
 import React from 'react'
 import LoginPage from '../LoginPage/LoginPage'
-import { getPositivePatterns } from '../../../../../../AppData/Local/Microsoft/TypeScript/3.1/node_modules/fast-glob/out/managers/tasks';
+
 const Authenticate = App =>
     class auth extends React.Component {
         constructor() {
