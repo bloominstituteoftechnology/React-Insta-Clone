@@ -1,7 +1,7 @@
 .post {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin: 20px;
     max-width: 640px;
     border: 1px solid lightgrey;
     align-items: flex-start;
@@ -40,7 +40,7 @@
 
 .post__bottom {
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 2.6rem;
     min-width: 84px;
     text-align: left;
 }
