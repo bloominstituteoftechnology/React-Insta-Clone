@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostList from './components/PostContainer/PostList';
 import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './Authenticaltion/Authenticate';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       posts: [],
-      filter: ''
+      filter: '',
+      username: ''
 
     };
   }
@@ -31,20 +31,26 @@ class App extends Component {
   }
 
   componentDidMount(){
+    const storedUsername = JSON.parse(localStorage.getItem('username'));
+    if (storedUsername){
+      this.setState({username: storedUsername})
+    }
+
     this.setState({
       posts: dummyData
     })
+
   }
 
   render() {
     return (
       <div className="App">
-        <PostsPage filter={this.state.filter} handleInputChange={this.handleInputChange} postData={this.getFilteredPosts} inputComment={this.state.usersComments} handleAddComment={this.handleAddComment} handleChange={this.handleChange}/>
+        <PostsPage filter={this.state.filter} handleInputChange={this.handleInputChange} postData={this.getFilteredPosts} inputComment={this.state.usersComments} handleAddComment={this.handleAddComment} handleChange={this.handleChange} username={this.state.username}/>
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
 
 

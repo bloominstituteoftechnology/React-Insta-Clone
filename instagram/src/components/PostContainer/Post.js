@@ -19,7 +19,7 @@ const Post = props => {
             <img className="post-img" src={props.postData.imageUrl} />
             
             <div className="post-comment">
-                <CommentContainer comments={props.postData.comments} timestamp={props.postData.timestamp} likes={props.postData.likes}/>
+                <CommentContainer comments={props.postData.comments} timestamp={props.postData.timestamp} likes={props.postData.likes} username={props.username}/>
             </div>
             
             

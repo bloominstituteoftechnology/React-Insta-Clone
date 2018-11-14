@@ -12,7 +12,8 @@ class CommentContainer extends React.Component  {
             timestamp: props.timestamp,
             inputText: '',
             likes: props.likes, //400 likes
-            like: false
+            like: false,
+            username: props.username
         };
     }
 
@@ -38,7 +39,7 @@ class CommentContainer extends React.Component  {
     handleAddComment = event => {
         event.preventDefault();
         this.setState({
-            comments: [...this.state.comments, {username: 'SpyGirl', text: this.state.inputText}],
+            comments: [...this.state.comments, {username: this.state.username, text: this.state.inputText}],
             inputText: ''
         })
     }

@@ -7,7 +7,7 @@ const PostsPage = props => {
     return (
     <React.Fragment>
         <SearchBar  filter={props.filter} handleInputChange={props.handleInputChange}/>
-        <PostList postData={props.postData()} inputComment={props.usersComments} handleAddComment={props.handleAddComment} handleChange={props.handleChange}/>
+        <PostList postData={props.postData()} inputComment={props.usersComments} handleAddComment={props.handleAddComment} handleChange={props.handleChange} username={props.username}/>
     </React.Fragment>
     );
 };

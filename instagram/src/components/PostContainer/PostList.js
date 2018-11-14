@@ -9,7 +9,7 @@ const PostList = props => {
     return <Post key={index} postData={post} 
     inputComment={props.inputComment} 
     handleAddComment={props.handleAddComment} 
-    handleChange={props.handleChange}/>; 
+    handleChange={props.handleChange} username={props.username}/>; 
     });
 
 
