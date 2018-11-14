@@ -1,9 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Components
+import Comments from '../CommentSection/Comments';
+
 const Post = props => {
     return(
-        <p>Post</p>
+        <>
+            <p>Post</p>
+            <Comments />
+        </>
     )
 }
 
