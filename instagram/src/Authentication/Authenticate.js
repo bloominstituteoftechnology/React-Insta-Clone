@@ -12,6 +12,15 @@ const Authenticate = App =>
             } 
         }
 
+        componentDidMount() {
+            const username = localStorage.getItem('username')
+            if (this.state.loggedIn === false && username) {
+              this.setState({
+                  loggedIn: true
+              })
+            }
+        }
+
         usernameInput = ev => {
             this.setState({
                 username: ev.target.value
@@ -31,8 +40,6 @@ const Authenticate = App =>
             localStorage.setItem('username', userName);
             localStorage.setItem('password', passWord);
             this.setState({
-                username: '',
-                password: '',
                 loggedIn: true
             })
         }

@@ -3,7 +3,7 @@
     margin: 20% auto;
 }
 
-form {
+.login-page form {
     max-width: 80%;
     text-align: center;
 }
