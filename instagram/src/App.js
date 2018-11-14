@@ -16,7 +16,7 @@ class App extends Component {
 
       data: [],
       displayedData: [],
-      username: 'captaincrunch17',
+      username: '',
       loggedIn: false
 
     }
@@ -33,6 +33,12 @@ class App extends Component {
 
     }
 
+    if (localStorage.loggedIn === 'true') {
+
+      this.setState({loggedIn: true, username: localStorage.currentUser});
+
+    }
+
     this.setState({data: initialData, displayedData: initialData});
 
   }
@@ -40,6 +46,8 @@ class App extends Component {
   componentDidUpdate() {
 
     localStorage.data = JSON.stringify(this.state.data);
+    localStorage.loggedIn = this.state.loggedIn;
+    localStorage.currentUser = this.state.username;
 
   }
 
