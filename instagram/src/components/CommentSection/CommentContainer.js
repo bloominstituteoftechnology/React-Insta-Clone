@@ -10,11 +10,11 @@ class CommentContainer extends Component {
             likes: props.likes,
             comments: props.comments,
             index: props.index,
-            commentInput: ''
+            commentInput: '',
+            liked: false
         };
     }
-    addNewComment = (event, index) => {
-        console.log(event);
+    addNewComment = event => {
         this.setState({
             comments: [...this.state.comments, { username: 'testingUser', text: event.target[0].value }]
         });
@@ -24,12 +24,24 @@ class CommentContainer extends Component {
             [event.target.name]: event.target.value
         });
     };
+    likeHandler = event => {
+        if (this.state.liked) {
+            this.setState({ ...this.state, liked: false, likes: this.state.likes - 1 });
+        } else {
+            this.setState({ ...this.state, liked: true, likes: this.state.likes + 1 });
+        }
+    };
     render() {
         return (
             <div className="comment-container">
                 <div className="comment--social-icons">
-                    <div className="icon-heart">
-                        <span />
+                    <div
+                        className="icon-heart"
+                        onClick={() => {
+                            this.likeHandler();
+                        }}
+                    >
+                        {this.state.liked ? <span className="liked" /> : <span />}
                     </div>
                     <div className="icon-comment">
                         <span />
