@@ -3,7 +3,7 @@ import "./App.css";
 import dummyData from "./dummy-data";
 import PostsPage from "./components/PostContainer/PostsPage";
 import Authenticate from "./components/Authentication/Authenticate";
-import Login from "./components/Login/Login";
+// import Login from "./components/Login/Login";
 
 class App extends Component {
   constructor() {
@@ -11,10 +11,9 @@ class App extends Component {
     this.state = {
       data: [],
       searchText: "",
-      username: "",
-      password: "",
-      loggedIn: false,
-      displayedPosts: [],
+      // username: "",
+      // password: "",
+      // loggedIn: false,
     };
   }
 
@@ -42,22 +41,22 @@ class App extends Component {
 
 
   componentDidMount() {
-    window.addEventListener(
-      "beforeunload",
-      this.saveStatetoLocalStorage.bind(this)
-    );
+    // window.addEventListener(
+    //   "beforeunload",
+    //   this.saveStatetoLocalStorage.bind(this)
+    // );
     setTimeout(() => {
-      this.setState({ data: dummyData, displayedPosts: dummyData }, this.hydrateStateWithLocalStorage());
+      this.setState({ data: dummyData, displayedPosts: dummyData });
     }, 200);
     // this.hydrateStateWithLocalStorage();
   }
 
   componentWillUnmount() {
-    window.removeEventListener(
-      "beforeunload",
-      this.saveStatetoLocalStorage.bind(this)
-    );
-    this.saveStatetoLocalStorage();
+    // window.removeEventListener(
+    //   "beforeunload",
+    //   this.saveStatetoLocalStorage.bind(this)
+    // );
+    // this.saveStatetoLocalStorage();
   }
 
  /* componentDidUpdate() {
@@ -69,28 +68,29 @@ class App extends Component {
   }
   */
 
-  login = e => {
-    e.preventDefault();
-    this.setState({ username: e.target.username.value });
-    this.setState({ password: e.target.password.value });
+  // login = e => {
+  //   e.preventDefault();
+  //   this.setState({ username: e.target.username.value });
+  //   this.setState({ password: e.target.password.value });
 
-    // ensure password and username are not empty before logging user in
-    if (this.state.username && this.state.password) {
-      this.setState({ loggedIn: true });
-      localStorage.setItem("password", JSON.stringify(this.state.password));
-      localStorage.setItem("username", JSON.stringify(this.state.username));
-    }
-  };
+  //   // ensure password and username are not empty before logging user in
+  //   if (this.state.username && this.state.password) {
+  //     this.setState({ loggedIn: true });
+  //     localStorage.setItem("password", JSON.stringify(this.state.password));
+  //     localStorage.setItem("username", JSON.stringify(this.state.username));
+  //   }
+  // };
 
   logout = e => {
     e.preventDefault();
     localStorage.removeItem("username");
     localStorage.removeItem("password");
-    this.setState({ username: "", password: "", loggedIn: false });
+    localStorage.setItem('loggedIn', 'false');
+    // this.setState({ username: "", password: "", loggedIn: false });
   };
 
   updateSearchText = e => {
-    this.setState({ searchText: e.target.value }, this.filterPosts);
+    this.setState({ searchText: e.target.value });
   };
 
   increaseLikes = (id) => {
@@ -107,19 +107,19 @@ class App extends Component {
 
   filterPosts = () => {
     if (this.state.searchText === '') return this.state.data;
-    else { 
-      const postsToDisplay = this.state.data.filter(d => 
+    else return ( 
+      this.state.data.filter(d => 
       d.username.includes(this.state.searchText)
     )
-    return postsToDisplay;
-  }
+  )
 }
 
   render() {
-    if (!this.state.loggedIn) {
-      return <Login login={this.login} />;
-    }
+    // if (!this.state.loggedIn) {
+    //   return <Login login={this.login} />;
+    // }
 
+    console.log('app');
     return (
       <div className="App">
         <PostsPage

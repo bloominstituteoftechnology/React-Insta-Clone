@@ -1,7 +1,6 @@
 import React from "react";
 import Comment from "./Comment";
 import PropTypes from "prop-types";
-// import "./CommentSection.css";
 import { StyledCommentSection, AddCommentBar } from "../Styles";
 
 class CommentSection extends React.Component {
