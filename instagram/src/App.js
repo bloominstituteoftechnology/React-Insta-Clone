@@ -27,7 +27,7 @@ class App extends Component {
     console.log(e.target.value)
   }
 
-  likedToggle = id =>
+  likedToggle = id => 
     this.setState( prevState => ({
       data: prevState.data.map(post => {
         if(post.username === id && post.heartToggle === undefined){
