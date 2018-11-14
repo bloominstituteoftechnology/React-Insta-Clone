@@ -1,15 +1,27 @@
 import React from "react";
 import "./CommentSection.css";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const CommentContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width; 100%;
+`;
+
+const CommentText = styled.p`
+  text-align: left;
+  margin-bottom: 0px;
+`;
 
 const Comment = props => {
   return (
-    <div className="comment">
-      <p className="text">
+    <CommentContainer>
+      <CommentText>
         <b>{props.user}</b> &nbsp;
         {props.text}
-      </p>
-    </div>
+      </CommentText>
+    </CommentContainer>
   );
 };
 

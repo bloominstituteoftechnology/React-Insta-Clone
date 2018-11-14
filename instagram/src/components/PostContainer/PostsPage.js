@@ -3,6 +3,11 @@ import PostContainer from "../PostContainer/PostContainer";
 import dummyData from "../../dummy-data";
 import Fuse from "fuse.js";
 import SearchBar from "../SearchBar/SearchBar";
+import styled from "styled-components";
+
+const AppContainer = styled.div`
+  max-width: 100%;
+`;
 
 class PostsPage extends Component {
   constructor(props) {
@@ -15,36 +20,7 @@ class PostsPage extends Component {
 
   componentDidMount() {
     this.setState({ post: dummyData });
-
-    // this.fillStateWithLocalStorage();
-    // window.addEventListener("beforeunload", () => this.saveLocalStorage());
-    // this.saveLocalStorage();
   }
-
-  // componentWillUnmount() {
-  //   window.addEventListener("beforeunload", () => this.saveLocalStorage());
-  //   this.saveLocalStorage();
-  // }
-
-  // saveLocalStorage() {
-  //   for (let key in this.state) {
-  //     localStorage.setItem(key, JSON.stringify(this.state[key]));
-  //   }
-  // }
-
-  // fillStateWithLocalStorage() {
-  //   for (let key in this.state) {
-  //     if (localStorage.hasOwnProperty(key)) {
-  //       let value = localStorage.getItem(key);
-  //       try {
-  //         value = JSON.parse(value);
-  //         this.setState({ [key]: value });
-  //       } catch (e) {
-  //         this.setState({ [key]: value });
-  //       }
-  //     }
-  //   }
-  // }
 
   filterPosts = ev => {
     var options = {
@@ -62,7 +38,7 @@ class PostsPage extends Component {
 
   render() {
     return (
-      <div className="App">
+      <AppContainer>
         <SearchBar onChange={this.filterPosts} />
         {(this.state.filtered.length > 0
           ? this.state.filtered
@@ -70,7 +46,7 @@ class PostsPage extends Component {
         ).map(post => {
           return <PostContainer key={post.imageUrl} post={post} />;
         })}
-      </div>
+      </AppContainer>
     );
   }
 }

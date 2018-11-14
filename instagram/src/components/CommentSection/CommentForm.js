@@ -2,10 +2,13 @@ import React from "react";
 import "./CommentSection";
 import { InputGroup, InputGroupAddon, Input } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styled from "styled-components";
+
+const CommentInput = styled.form``;
 
 const CommentForm = props => {
   return (
-    <form onSubmit={props.add}>
+    <CommentInput onSubmit={props.add}>
       <InputGroup>
         <Input
           placeholder="Add a comment..."
@@ -18,7 +21,7 @@ const CommentForm = props => {
           <FontAwesomeIcon icon="ellipsis-h" size="xs" />
         </InputGroupAddon>
       </InputGroup>
-    </form>
+    </CommentInput>
   );
 };
 

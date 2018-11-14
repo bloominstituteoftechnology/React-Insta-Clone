@@ -2,6 +2,21 @@ import React, { Fragment, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./PostContainer";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const LikeAndComment = styled.div`
+  display: flex;
+  justify-content: flex-start;
+`;
+const Likes = styled.div`
+  display: flex;
+  justify-content: flex-start;
+`;
+
+const LikeText = styled.p`
+  margin: 0;
+  font-weight: bold;
+`;
 
 class PostInfo extends Component {
   constructor(props) {
@@ -38,13 +53,12 @@ class PostInfo extends Component {
   render() {
     return (
       <Fragment>
-        <div className="action-buttons">
+        <LikeAndComment>
           <FontAwesomeIcon
             icon={["far", "heart"]}
             size="2x"
             className="icon"
             onClick={this.plusLike}
-            // value={props.likes}
           />
 
           <FontAwesomeIcon
@@ -52,12 +66,11 @@ class PostInfo extends Component {
             icon={["far", "comment"]}
             flip="horizontal"
             size="2x"
-            // onClick={this.focus}
           />
-        </div>
-        <div className="likes">
-          <p className="bold">{this.state.likes} likes</p>
-        </div>
+        </LikeAndComment>
+        <Likes>
+          <LikeText>{this.state.likes} likes</LikeText>
+        </Likes>
       </Fragment>
     );
   }

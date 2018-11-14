@@ -4,6 +4,14 @@ import Comment from "./Comment";
 import CommentForm from "./CommentForm";
 import moment from "moment";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const CommentContainer = styled.div``;
+
+const Time = styled.p`
+  color: slategray;
+  text-align: left;
+`;
 
 class CommentSection extends Component {
   constructor(props) {
@@ -57,7 +65,7 @@ class CommentSection extends Component {
 
   render() {
     return (
-      <div className="comments">
+      <CommentContainer>
         {this.state.comments.map(data => (
           <Comment
             user={data.username}
@@ -65,19 +73,19 @@ class CommentSection extends Component {
             key={data.username + Math.random()}
           />
         ))}
-        <p className="time">
+        <Time>
           {moment(
             this.props.post.timestamp,
             "MMMM Do YYYY hh:mm:ss A"
           ).fromNow()}
-        </p>
+        </Time>
         <CommentForm
           comment={this.state.comment}
           add={this.addNewComment}
           handleChange={this.handleChange}
           time={this.props.post.timestamp}
         />
-      </div>
+      </CommentContainer>
     );
   }
 }

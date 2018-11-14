@@ -3,14 +3,23 @@ import IconLinks from "./IconLinks";
 import SearchField from "./SearchField";
 import Branding from "./Branding";
 import "./SearchBar.css";
+import styled from "styled-components";
+
+const SearchbarContainer = styled.header`
+  width: 100%;
+  padding: 2% 0;
+  margin-bottom: 5%;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+`;
 
 const SearchBar = props => {
   return (
-    <header className="searchbar-container">
+    <SearchbarContainer>
       <Branding />
       <IconLinks />
       <SearchField search={props.search} onChange={props.onChange} />
-    </header>
+    </SearchbarContainer>
   );
 };
 

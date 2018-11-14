@@ -2,6 +2,16 @@ import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import SearchBar from "../SearchBar/SearchBar";
 import "./Login.css";
+import styled from "styled-components";
+
+const LoginContainer = styled.div`
+  padding: 0 0 60px;
+`;
+
+const LoginForm = styled.form`
+  margin: 0 auto;
+  max-width: 320px;
+`;
 
 class Login extends Component {
   constructor(props) {
@@ -26,16 +36,14 @@ class Login extends Component {
     ev.preventDefault();
     const username = this.state.username;
     localStorage.setItem("username", username);
-    console.log(localStorage);
-    // this.setState({ isLoggedIn: true });
     this.props.login();
   };
 
   render() {
     return (
-      <div className="Login">
+      <LoginContainer>
         <SearchBar />
-        <form onSubmit={this.handleSubmit}>
+        <LoginForm onSubmit={this.handleSubmit}>
           <FormGroup controlId="username" bsSize="large">
             <ControlLabel>Username</ControlLabel>
             <FormControl
@@ -61,8 +69,8 @@ class Login extends Component {
           >
             Login
           </Button>
-        </form>
-      </div>
+        </LoginForm>
+      </LoginContainer>
     );
   }
 }

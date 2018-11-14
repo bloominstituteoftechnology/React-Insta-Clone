@@ -1,4 +1,4 @@
-.comment {
+/* .comment {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -18,7 +18,7 @@
 .time {
   text-align: left;
   color: slategray
-}
+} */
 
 .input-group {
   border-top: 1px solid #ECECEC;
@@ -34,6 +34,7 @@
 .input-group-append {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .comment-entry {
@@ -42,8 +43,8 @@
   padding: 2% 0;
 }
 
-p {
+/* p {
   margin: 0;
   text-align: left;
   width: 100%;
-}
+} */
