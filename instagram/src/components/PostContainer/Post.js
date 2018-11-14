@@ -8,7 +8,7 @@ const Post = props => {
     return(
         <>
             <p>Post</p>
-            <Comments />
+            <Comments comments={props.post.comments}/>
         </>
     )
 }
