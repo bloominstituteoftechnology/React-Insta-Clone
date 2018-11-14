@@ -2,23 +2,55 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment'
 import './CommentSection.css'
-const CommentSection = props =>{
-    return(
-        <div>
-            {props.comments.map((item) =>
-                <Comment key = {Math.random()} comment = {item}/>)
-                }
-            <div className = 'input-section'>
-            <input type="text" placeholder="Add a comment..." />
-            <strong><p>...</p></strong>
+import CommentInput from './CommentInput'
+
+class CommentSection extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            comments: [],
+            inputText: ''
+        }
+    }
+    componentDidMount() {
+        this.setState({ comments: this.props.comments })
+    }
+
+    handler = event => {
+        this.setState({ inputText: event.target.value
+         });
+        
+    };
+    addNewComment = event => {
+        event.preventDefault();
+        if (!(this.state.inputText === '')) {
+            this.setState({
+                comments: [
+                    ...this.state.comments,
+                    { username: 'Brooks_Cooks', text: this.state.inputText }
+                ],
+                inputText: ''
+            });
+        }
+    };
+  
+
+    render() {
+        return (
+            <div className = 'comment-section'>
+                 {
+                this.state.comments.map((comment) =>
+                <Comment key={Math.random()} comment={comment} />)
+                } 
+                <CommentInput
+                    inputText = {this.state.inputText}
+                    handler = {this.handler}
+                    addNewComment ={this.addNewComment}
+                />
             </div>
-        </div>
-    )
+        );
+    }
 }
 
-
-CommentSection.propTypes = {
-    comments: PropTypes.arrayOf(PropTypes.object)
-}
 
 export default CommentSection;

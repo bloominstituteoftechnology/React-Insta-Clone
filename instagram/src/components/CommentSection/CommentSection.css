@@ -1,0 +1,11 @@
+
+form{
+    display: flex;
+    justify-content: space-between;
+}
+.text-input{
+    width: 80%;
+}
+.expand{
+    font-weight: bold;
+}

@@ -1,10 +1,7 @@
 .post-header{
     width: 500px;
     display: flex;
-    border-top: 1px solid #E8E8E8;
-    border-right: 1px solid #E8E8E8;
-    border-left: 1px solid #E8E8E8;
-    border-radius: 5px;
+
 }
 .post-username-img{
     border-radius: 50%;
@@ -23,15 +20,18 @@
 
 .post{
     margin:50px;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+    width: 500px;
 }
 
 .likes{
     font-size: 16px;
+    font-weight: bold;
 }
 .comment-section{
-    width: 500px;
-    border: 1px solid #E8E8E8;
-    border-radius: 5px;
+    width: 480px;
+    padding: 10px;
 }
 .likes{
     padding-left: 10px;
@@ -51,3 +51,13 @@
     border: none;
     margin-bottom: 1px;
 }
+.like-bar{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+.heart-emoji{
+    font-size: 30px;
+    margin-top: 8px;
+}
+
