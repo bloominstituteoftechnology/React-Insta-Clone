@@ -3,7 +3,8 @@ import './Login.css'
 
 function Login(props) {
   return (
-        <form 
+        <form
+          onSubmit={props.handleLogin}
           className="login"
           name="login"
           >
@@ -25,10 +26,11 @@ function Login(props) {
             onChange={props.handleChange}
             placeholder="Enter Password"
           />
-          <button
-            htmlFor="login"
-            onSubmit={props.handleLogin}
-          >LOGIN</button>
+          <input
+            type="submit"
+            value="LOGIN"
+            className="submit"
+          />
         </form>
   )
 }

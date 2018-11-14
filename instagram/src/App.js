@@ -22,6 +22,8 @@ class App extends Component {
   }
   handleLogin = (e) => {
     e.preventDefault();
+    return console.log("LOGGED IN");
+    
   }
   render() {
     
