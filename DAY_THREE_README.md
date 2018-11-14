@@ -17,14 +17,14 @@
 
 #### Tasks (Day III)
 
-- Create a `<PostsPage />` component in your `components/PostsContainer` directory.
+[ x ] - Create a `<PostsPage />` component in your `components/PostsContainer` directory.
 
-  - You'll have to move a lot of what is rendered in `app.js` to this new component
-  - In app.js, render the `PostsPage` component.
-  - Make sure the app working as it was before since it has been re-factored now.
-  - This is to ensure that we clean up our App component a little bit before we re-factor it to be wrapped up in an HOC
+  [ x ] - You'll have to move a lot of what is rendered in `app.js` to this new component
+  [ x ] - In app.js, render the `PostsPage` component.
+  [ x ] - Make sure the app working as it was before since it has been re-factored now.
+  [ x ] - This is to ensure that we clean up our App component a little bit before we re-factor it to be wrapped up in an HOC
 
-- Building the High Order Component
+[  ] - Building the High Order Component
 
   - Create a directory called `Authentication`
   - Inside that directory create a component called `<Authenticate />`. This is where all of the magic sis going to happen.

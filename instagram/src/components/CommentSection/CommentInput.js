@@ -5,7 +5,7 @@ import './Comment.css'
 const CommentInput= props => {
   return (
     <Fragment>
-      <form>
+      <form className="comment-form">
         <input
           value={props.value}
           name="comment"
@@ -13,7 +13,6 @@ const CommentInput= props => {
           className="add-comment fas fa-ellipses-h"
           onChange={props.handleChange}
           placeholder="Add a comment..."
-
         />
         <button 
           htmlFor="comment"
