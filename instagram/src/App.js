@@ -9,8 +9,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: [],
-      searchText: "",
+      // data: [],
+      // searchText: "",
       // username: "",
       // password: "",
       // loggedIn: false,
@@ -45,9 +45,9 @@ class App extends Component {
     //   "beforeunload",
     //   this.saveStatetoLocalStorage.bind(this)
     // );
-    setTimeout(() => {
-      this.setState({ data: dummyData, displayedPosts: dummyData });
-    }, 200);
+    // setTimeout(() => {
+    //   this.setState({ data: dummyData, displayedPosts: dummyData });
+    // }, 200);
     // this.hydrateStateWithLocalStorage();
   }
 
@@ -114,23 +114,19 @@ class App extends Component {
   )
 }
 
-  render() {
-    // if (!this.state.loggedIn) {
-    //   return <Login login={this.login} />;
-    // }
 
+          // posts={this.filterPosts()}
+          // searchText={this.state.searchText}
+          // updateSearchText={this.updateSearchText}
+          // logout={this.logout}
+          // username={this.state.username}
+          // increaseLikes={this.increaseLikes}
+          // filterPosts={this.filterPosts}
+  render() {
     console.log('app');
     return (
       <div className="App">
-        <PostsPage
-          posts={this.filterPosts()}
-          searchText={this.state.searchText}
-          updateSearchText={this.updateSearchText}
-          logout={this.logout}
-          username={this.state.username}
-          increaseLikes={this.increaseLikes}
-          filterPosts={this.filterPosts}
-        />
+        <PostsPage />
       </div>
     );
   }
