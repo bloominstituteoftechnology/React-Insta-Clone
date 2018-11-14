@@ -66,5 +66,11 @@ input::placeholder {
 
 .far {
     font-size: 20px;
+    font-weight: 400;
     margin: 10px 10px;
+}
+
+.post-like {
+    margin: 10px;
+    font-weight: 500;
 }

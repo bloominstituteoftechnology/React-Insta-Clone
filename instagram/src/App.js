@@ -8,13 +8,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData
+      data: [],
+      searchText: ""
     };
   }
 
   componentDidMount() {
     this.setState({ data: dummyData });
   }
+
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
 
   handleLiked = timestamp =>
     this.setState(prevState => ({
@@ -32,7 +39,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <SearchBarNavContainer />
+          {
+            <SearchBarNavContainer
+              handleChange={this.handleChange}
+              search={this.state.searchText}
+            />
+          }
         </header>
         <div>
           {this.state.data.map(post => {

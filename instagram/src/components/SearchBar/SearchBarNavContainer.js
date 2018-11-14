@@ -15,7 +15,13 @@ const SearchBarNavContainer = props => {
 
       <div className="search-bar">
         <form>
-          <input type="text" name="searchText" placeholder="Search" />
+          <input
+            type="text"
+            name="searchText"
+            placeholder="Search"
+            value={props.searchText}
+            onChange={props.handleChange}
+          />
         </form>
       </div>
 

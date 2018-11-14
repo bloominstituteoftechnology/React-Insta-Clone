@@ -4,6 +4,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 10px;
     }
     
     .home {
@@ -15,10 +16,11 @@
     
     .instagram-logo img {
         width: 100px;
-        height: 50px;
+        height: 30px;
         color: #777;
         opacity: 0.6;
         border-left: 1px solid #777;
+        padding: 5px;
         margin-left: 10px;
     }
     
@@ -33,6 +35,6 @@
     }
     
     .fab {
-        margin-top: 8px;
+        /* margin-top: 2px; */
         color: #777;
     }

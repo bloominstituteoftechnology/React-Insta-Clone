@@ -1,5 +1,6 @@
 import React from "react";
 import CommentSection from "../CommentSection/Comments";
+import PropTypes from "prop-types";
 import "./Post.css";
 
 const PostContainer = props => {
@@ -16,13 +17,14 @@ const PostContainer = props => {
         <div className="like-heart">
           <i
             class="far fa-heart"
-            onClick={() => props.handleLike(props.postcontainer.timestamp)}
+            onClick={() => props.handleLiked(props.data.timestamp)}
           />
         </div>
         <div className="comment">
           <i class="far fa-comment" />
         </div>
       </div>
+      <h4 className="post-like">{props.data.likes} likes</h4>
       <div className="comments">
         {props.data.comments.map(comment => {
           return <CommentSection comm={comment} />;
@@ -36,6 +38,16 @@ const PostContainer = props => {
       </div>
     </div>
   );
+};
+
+PostContainer.PropTypes = {
+  post: PropTypes.shape({
+    thumbnailUrl: PropTypes.string,
+    username: PropTypes.string,
+    imageUrl: PropTypes.string,
+    timestamp: PropTypes.string,
+    comment: PropTypes.arrayOf(PropTypes.object)
+  })
 };
 
 export default PostContainer;
