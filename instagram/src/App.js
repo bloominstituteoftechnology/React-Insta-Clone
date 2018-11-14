@@ -28,6 +28,17 @@ class App extends Component {
   //   // }
   // }
 
+  // componentDidMount() {
+  //   const username = this.state.posts.username
+  //   if (localStorage.getItem(id)) {
+  //       // If id exists, set the commments by that parsed array
+  //       this.setState({comments: JSON.parse(localStorage.getItem(id))})
+  //   } else {
+  //       // call setComments() 
+  //       this.setComments();
+  //   }
+  // }
+
   handleChange = event => {
     event.preventDefault();
     this.setState({
@@ -46,18 +57,19 @@ class App extends Component {
   }
 
   render() {
+    console.log("this.state.posts.username", this.state.posts[0].username)
     return (
       <div className="App">
         {/* <SimpleStorage parent={this} /> */}
         {/* <div>
-          {/* <LoginPage /> */}
+          
           {/* <Authenticate App LoginPage={this.LoginPage} />
           <SearchBar 
           filterComments={this.filterComments}
           filterInput={this.state.filterInput}
           />
         </div> */}
-          <Authenticate App LoginPage={this.LoginPage} />
+          {/* <Authenticate App LoginPage={this.LoginPage} /> */}
         <div>
           <PostsPage 
             posts={this.state.posts}

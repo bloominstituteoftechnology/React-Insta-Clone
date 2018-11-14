@@ -6,6 +6,9 @@ import SearchBar from '../SearchBar/SearchBar';
 const PostsPage = props => {
     return (
         <div>
+            {/* <LoginPage 
+                posts={props.posts}
+            />  */}
             <div>
                 <SearchBar 
                     filterComments={props.filterComments}

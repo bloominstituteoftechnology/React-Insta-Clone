@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
+import LoginPage from '../Login/Login';
 
 const Authenticate = App =>
   class extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        loggedIn: false
+      }
+    }
+
+    updateUser = event => {
+      event.preventDefault();
+      this.setState({
+        loggedIn: true
+      })
+    }
+
     render() {
-      if (2 < 1) {
+      if (this.state.loggedIn === false) {
         return (
           <div>
-            <form>
-                <input 
-                    className="username-input"
-                    type="text"
-                    placeholder="Your username.."
-                    name="username"
-                    // value={props.usernameInput}
-                />
-                <input 
-                    className="password-input"
-                    type="text"
-                    placeholder="Your password.."
-                    name="password"
-                    // value={props.passwordInput}
-                />
-                <button>Login</button>
-            </form>
+            <LoginPage updateUser={this.updateUser}/>
           </div>
         )
       }
