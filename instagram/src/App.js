@@ -26,32 +26,20 @@ class App extends Component {
       if(post.username.includes(e.target.value)) {
         return post;
       }
-    });
-    this.setState({ filteredPosts: posts})
+    });return this.setState({ filteredPosts: posts})
   }
-
-
-  // addLike = (prevState) => {
-    
-  //   this.setState(prevState => {
-  //     // {console.log("PREVSTATE", prevState)}
-  //     return {likes: prevState.likes + 1}
-  //   });
-  // };
 
   render() {
     
     return (
       <div className="App">
         <SearchBarContainer 
-          searchTerm={this.state.searchTerm}
           searchPosts={this.handleSearchChange}
         />
         <PostContainer 
           data={this.state.filteredPosts.length > 0 ?
             this.state.filteredPosts : 
             this.state.posts}
-          // addLike={this.addLike}
         />
       </div>
     );

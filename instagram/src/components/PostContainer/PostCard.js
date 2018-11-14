@@ -1,45 +1,56 @@
-import React from 'react'
+import React, { Component} from 'react'
 import CommentCard from '../CommentSection/CommentCard';
 
-const PostCard = props => {
-  // console.log("POSTCARD PROPS",typeof props.likes);
-  // console.log("POSTCARD PROPS DATA", props.addLike);
-  
-  return (
-    <div className="post-card">
-      <div className="post-card__header">
-        <img
-          className="post-avatar"
-          src={props.data.thumbnailUrl}
-          alt="user avatar"
+class PostCard extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      likes: props.post.likes
+    };
+  }
+
+    addLike = () => {
+    let likes = this.state.likes + 1;
+    this.setState({
+      likes: likes
+    });
+  };
+
+  render () {
+    return (
+      <div className="post-card">
+        <div className="post-card__header">
+          <img
+            className="post-avatar"
+            src={this.props.data.thumbnailUrl}
+            alt="user avatar"
+          />
+          <p>{this.props.data.username}</p>
+        </div>
+        <img 
+          className="post-card__img"
+          src={this.props.data.imageUrl}
+          alt="user post"
         />
-        <p>{props.data.username}</p>
+        <div 
+          className="social-container"
+          key="socialContainer"
+          >
+          <i 
+            className="far fa-heart"
+            onClick={this.addLike}
+          ></i>
+          <i className="far fa-comment"></i>
+        </div>
+        <p>{this.state.likes} likes</p>
+        <CommentCard 
+          id={this.props.id}
+          comments={this.props.data.comments}
+          timestamp={this.props.data.timestamp}
+        />
       </div>
-      <img 
-        className="post-card__img"
-        src={props.data.imageUrl}
-        alt="user post"
-      />
-      <div 
-        className="social-container"
-        key="socialContainer"
-        >
-        <i 
-          className="far fa-heart"
-          id={props.id}
-          likes={parseInt(props.likes, 10)}
-          onClick={props.addLike}
-        ></i>
-        <i className="far fa-comment"></i>
-      </div>
-      <p>{props.data.likes} likes</p>
-      <CommentCard 
-        id={props.id}
-        comments={props.data.comments}
-        timestamp={props.data.timestamp}
-      />
-    </div>
-  )
+    )
+  }
 }
 
 export default PostCard

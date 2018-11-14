@@ -7,14 +7,13 @@ const PostContainer = props => {
   return (
     <div className="post-container">
       {props.data.map((user, i) => {
+        // console.log("USER", user);
         
         return (
           <PostCard
             data={user}
-            key={i}
-            id={i.toString()}
-            likes={user.likes}
-            addLike={props.addLike}
+            post={user}
+            key={user.thumbnailUrl}
           />
         )
       })}
