@@ -1,6 +1,6 @@
 import React from 'react';
 import './CommentSection.css';
-import CommentForm from './CommentForm'
+import CommentForm from './CommentForm';
 import PropTypes from 'prop-types';
 
 
@@ -22,8 +22,6 @@ class CommentSection extends React.Component {
                 username: 'testuser03',
                 text:  this.state.newComment,
             }];
-
-        localStorage.setItem('comments', JSON.stringify(constructedComment));
         
 
         this.setState({
@@ -38,30 +36,20 @@ class CommentSection extends React.Component {
         });
     }
 
-    componentDidMount(){
-        const storedComments = JSON.parse(localStorage.getItem('comments'));
-
-        if (storedComments){
-            this.setState({
-                comments: storedComments,
-            })
-        }
-    }
-
     render() {
         return(
             <div>
-                {this.state.comments.map((comment, index) => (
-                <div key={`comment ${index}`} className='individual-comment'>
-                    <p><span>{comment.username}</span> {comment.text}</p>
-                </div>
-            ))}
-            <p className="timestamp">{this.state.timestamp.toUpperCase()}</p>
-            <CommentForm 
-                newComment={this.state.newComment} 
-                handleChange={this.handleChange}
-                addNewComment={this.addNewComment}
-            />
+                {this.state.comments.map((item, index) => (
+                        <div key={index} className='individual-comment'>
+                            <p><span>{item.username}</span> {item.text}</p>
+                        </div>
+                ))}
+                <p className="timestamp">{this.state.timestamp.toUpperCase()}</p>
+                <CommentForm 
+                    newComment={this.state.newComment} 
+                    handleChange={this.handleChange}
+                    addNewComment={this.addNewComment}
+                />
             </div>
         );
     }
