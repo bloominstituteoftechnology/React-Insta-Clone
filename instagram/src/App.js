@@ -1,89 +1,30 @@
 import React, { Component } from 'react';
-import dummyData from './dummy-data';
 import './App.css';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
-
-
-console.log(dummyData);
+import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './Authentication/Authenticate';
 
 class App extends Component {
   constructor(){
     super();
-    this.state={
-      posts: [],
-      filteredPosts: []
-    }
-  }
-
-  componentDidMount(){
-    this.setState({ posts: dummyData})
-    this.setState({ filteredPosts: dummyData})
-  }
-
-  searchFilter = ev =>{
-    let thing = this.state.posts.filter(data =>{
-        
-        return data.username.includes(ev.target.value);
-      
-      
+    this.state=({
+      users: [1]
     })
-    // if(ev.target.value === ''){
-    //   filterPosts = this.state.posts;
-    // }
-    console.log(thing);
-    console.log(this.state.filteredPosts);
-    
-    this.setState({
-      filteredPosts: thing
-    })
-
   }
-  addNewLike = ev =>{
-    let currentObj = {};
-    let currentIndex = 0;
-    this.state.filteredPosts.forEach( (item,index) =>{
-      if(ev.target.id == index){
-        currentObj =item;
-        currentIndex = index;
-      }
-    });
-    let tempList = this.state.filteredPosts.slice();
-    if(ev.target.className){
-      ev.target.className = '';
-      currentObj.likes--
 
-    }else{
-      currentObj.likes++
-      ev.target.className = 'liked';
-    }
-    
-    
-    tempList[currentIndex] = currentObj;
-    
-    this.setState({
-      filteredPosts: tempList
-  })
-   
-}
+  login = () => {
+    localStorage.setItem('username', 'anonymous') 
+    this.setState();
+  }
   
+
   render() {
     return (
-      <div className="App">
-        <SearchBar searchFilter={this.searchFilter}/>
-        <div className="container">
-        
-        {this.state.filteredPosts.map((data, index) => (
-          <PostContainer
-            data ={data}
-            addNewLike={this.addNewLike}
-            id={index}
-            />
-        ))}
-        </div>
-      </div>
+      <PostsPage />
     );
   }
 }
 
-export default App;
+  
+  
+
+export default Authenticate(App);
