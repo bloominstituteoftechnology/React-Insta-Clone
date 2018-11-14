@@ -48,8 +48,8 @@ class CommentSection extends React.Component {
         </div>
         <CommentForm
           commentText={this.props.commentText}
-          onCommentFormChange={(e) => this.props.onCommentFormChange(e)}
-          onCommentFormSubmit={(e) => this.props.onCommentFormSubmit(e)}
+          handleFormInputChange={(e) => this.props.handleFormInputChange(e)}
+          handleFormInputSubmit={(e) => this.props.handleFormInputSubmit(e)}
         />
       </div>
     );
@@ -67,8 +67,8 @@ CommentSection.propTypes = {
   liked: PropTypes.bool,
   timestamp: PropTypes.string.isRequired,
   commentText: PropTypes.string.isRequired, 
-  onCommentFormChange: PropTypes.func.isRequired,
-  onCommentFormSubmit: PropTypes.func.isRequired,
+  handleFormInputChange: PropTypes.func.isRequired,
+  handleFormInputSubmit: PropTypes.func.isRequired,
   handleRemoveComment: PropTypes.func.isRequired,
 }
 

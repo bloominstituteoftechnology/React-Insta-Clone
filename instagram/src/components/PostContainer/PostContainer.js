@@ -21,12 +21,12 @@ const PostContainer = props => {
         likes={props.post.likes}
         timestamp={props.post.timestamp}
         commentText={props.commentText}
-        onCommentFormChange={(e) => props.onCommentFormChange(
+        handleFormInputChange={(e) => props.handleFormInputChange(
           e,
           props.post.username,
           props.post.timestamp
         )}
-        onCommentFormSubmit={(e) => props.onCommentFormSubmit(
+        handleFormInputSubmit={(e) => props.handleFormInputSubmit(
           e,
           props.post.username,
           props.post.timestamp)}
@@ -53,8 +53,8 @@ PostContainer.propTypes = {
     })),
   }).isRequired,
   commentText: PropTypes.string.isRequired,
-  onCommentFormChange: PropTypes.func.isRequired,
-  onCommentFormSubmit: PropTypes.func.isRequired,
+  handleFormInputChange: PropTypes.func.isRequired,
+  handleFormInputSubmit: PropTypes.func.isRequired,
   handleRemoveComment: PropTypes.func.isRequired,
 }
 

@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
 import Fuse from 'fuse.js';
 
-// import data
+// styles
+import './App.css';
+
+// data
 import dummyData from './dummy-data'
 
+// components
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 
@@ -13,7 +16,7 @@ class App extends Component {
     super(props);
     this.state = {
       username: 'currentUser',
-      // data: dummyData,
+      // data: dummyData,     // moved to CDM below
       data: [],
       searchText: '',
     };
@@ -39,35 +42,38 @@ class App extends Component {
     }
   }
 
-  onCommentFormChange(e, u, t) {
+  componentDidUpdate(prevState) {
+    if(prevState.data !== this.state.data) {
+    }
+  }
+
+  handleFormInputChange(e, u, t) {
     this.setState({
       data: this.state.data.map(post => {
         if (post.username === u && post.timestamp === t) {
-          post.commentText = e.target.value;
+          return {...post, commentText: e.target.value}
         }
         return post;
       })
     });
   }
 
-  onCommentFormSubmit(e, u, t) {
+  handleFormInputSubmit(e, u, t) {
     e.preventDefault();
     this.setState({
       data: this.state.data.map(post => {
         if (post.username === u && post.timestamp === t){
-          post.comments.push({
-            username: this.state.username,
-            text: post.commentText,
-          });
-          post.commentText = '';
+          return {
+            ...post,
+            comments: [...(post.comments), {
+              username: this.state.username, 
+              text: post.commentText}],
+            commentText: '',
+          }
         }
         return post;
       }), 
     });
-
-    localStorage.setItem('instaClone', JSON.stringify(
-      this.state.data
-    ));
   }
 
   handleSearch(e) {
@@ -85,25 +91,17 @@ class App extends Component {
         return post;
       })
     });
-
-    localStorage.setItem('instaClone', JSON.stringify(
-      this.state.data
-    ));
   }
 
   handleRemoveComment(u, t, i) {
     this.setState({
       data: this.state.data.map( post => {
         if (post.username === u && post.timestamp === t) {
-          post.comments = post.comments.filter((comment,id) => id !== i);
+          return {...post, comments: post.comments.filter((comment, id) => id !== i)}
         }
         return post;
       })
     });
-
-    localStorage.setItem('instaClone', JSON.stringify(
-      this.state.data
-    ));
   }
 
   render() {
@@ -127,8 +125,8 @@ class App extends Component {
                   <PostContainer
                     key={post.username + post.timestamp}
                     commentText={post.commentText}
-                    onCommentFormChange={(e, u, t) => this.onCommentFormChange(e, u, t)}
-                    onCommentFormSubmit={(e, u, t) => this.onCommentFormSubmit(e, u, t)}
+                    handleFormInputChange={(e, u, t) => this.handleFormInputChange(e, u, t)}
+                    handleFormInputSubmit={(e, u, t) => this.handleFormInputSubmit(e, u, t)}
                     updateLikes={(u, t, n) => this.updateLikes(u, t, n)}
                     post={post}
                     handleRemoveComment={(u, t, i) => this.handleRemoveComment(u, t, i)}
