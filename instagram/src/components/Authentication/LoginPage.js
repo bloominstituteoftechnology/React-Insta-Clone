@@ -18,7 +18,8 @@ export default class LoginPage extends React.Component {
       showUserMessage: false,
       showPassMessage: false,
       userMessage: '',
-      passMessage: ''
+      passMessage: '',
+      headerText: 'Log In'
 
     }
 
@@ -44,7 +45,7 @@ export default class LoginPage extends React.Component {
 
       else {
 
-        this.props.setUsername(this.state.userField);
+        this.setState({headerText: 'Logging In...'}, () => setTimeout(() => this.props.setUsername(this.state.userField), 1000));
 
       }
 
@@ -55,7 +56,7 @@ export default class LoginPage extends React.Component {
       if (!localStorage[this.state.userField]) {
 
         localStorage[this.state.userField] = this.state.password;
-        this.props.setUsername(this.state.userField);
+        this.setState({headerText: 'Signing Up...'}, () => setTimeout(() => this.props.setUsername(this.state.userField), 1000));
 
       }
 
@@ -119,7 +120,7 @@ export default class LoginPage extends React.Component {
 
       <div className='login'>
 
-        <h1>Log In</h1>
+        <h1>{this.state.headerText}</h1>
 
         <form onKeyPress={this.handleKeyPress} onSubmit={this.logIn}>
 
