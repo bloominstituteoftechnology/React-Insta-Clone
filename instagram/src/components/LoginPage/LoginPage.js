@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Authenticate from './../Authentication/Authenticate';
 import './../../less/Login.less'
 
 class Login extends Component {
@@ -9,10 +8,14 @@ class Login extends Component {
             usernameInput: props.usernameInput,
             passwordInput: props.passwordInput,
             authenticateLogin: props.authenticateLogin,
-            handleChange: props.handleChange
         }
     }
-
+	handleChange = (event) => {
+		event.preventDefault();
+		this.setState({
+			[event.target.name]: event.target.value
+        });
+	};
 
 	render() {
 		return (
@@ -20,27 +23,27 @@ class Login extends Component {
                 <form onSubmit={this.state.authenticateLogin}>
                     <input 
                     type="text"
-                    name="username"
+                    name="usernameInput"
                     placeholder="username"
                     value={this.state.usernameInput}
                     onChange={(event) => {
-                        this.state.handleChange(event);
+                        this.handleChange(event);
                     }}
                     />
                    
                    <input 
                     type="text"
-                    name="password"
+                    name="passwordInput"
                     placeholder="password"
                     value={this.state.passwordInput}
                     onChange={(event) => {
-                        this.state.handleChange(event);
+                        this.handleChange(event);
                     }}
                     />
-                   <button>Login</button>
+                   <button onSubmit={this.state.authenticateLogin}>Login</button>
                 </form>
 			</div>
 		);
 	}
 }
-export default Authenticate(Login);
+export default Login;
