@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import PropTypes from 'prop-types';
 import "./post.css";
 
 function PostContainer(props){
@@ -18,16 +19,20 @@ function PostContainer(props){
             <div className='below-post-container'>
                 <div className='post-engagement-container'>
                     <div>
-                        <img className='far fa-heart' src="#" alt="heartIcon"/>
+                        <div onClick={() => {props.liked(props.arg.username)}}>
+                        {console.log(props.arg.heartToggle)}
+                            <img className={`${props.arg.heartToggle === true ? `fas fa-heart` : `far fa-heart`}`} src="#" alt="heartIcon"  />
+                        </div> 
                         <p><span>{props.arg.likes}</span> likes</p> 
                     </div>                
                     <img className='far fa-comment' src="#" alt="commentIcon"/>
                 </div>
 
                 <div className='post-comment-container'>
-                    {props.arg.comments.map( com => {
-                        return <CommentSection com={com}/>
-                    })}
+                    {props.arg.comments.map( (com, index) => (
+                        <CommentSection com={com} key={`${props.arg.username}`+index}/>
+                        )                  
+                    )}
                 </div>
 
                 <div className='add-comment-container'>
@@ -37,6 +42,16 @@ function PostContainer(props){
         </div>
         
     );
+}
+
+PostContainer.prototype = {
+    data: PropTypes.shape({
+        thumbnailUrl: PropTypes.string,
+        imageUrl: PropTypes.string,
+        likes: PropTypes.likes,
+        username: PropTypes.username,
+
+    })
 }
 
 export default PostContainer;

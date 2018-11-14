@@ -10,7 +10,15 @@ function SearchBar(props) {
                     | InstaClone
                 </div>
                 <div className='searchBar-container'>
-                    <input type="text" placeholder='search' />
+                    <form>
+                        <input 
+                            type="text" 
+                            name='searchInputText'
+                            placeholder='search'
+                            value={props.searchInputText}
+                            onChange={props.handleChange}
+                        />
+                    </form>
                 </div>                    
                 <div className="right-side-logo">
                     <img className="far fa-compass" src="#" alt="IC icon 1"/>
