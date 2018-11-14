@@ -4,7 +4,7 @@ import PostUserInfo from './PostUserInfo';
 import PropTypes from 'prop-types';
 import './PostContainer.sass';
 
-const PostContainer = props => {
+const PostContainer = (props) => {
     return (
         <div className="post-container">
             <PostUserInfo username={props.post.username} thumbnailUrl={props.post.thumbnailUrl} />
@@ -14,13 +14,13 @@ const PostContainer = props => {
 };
 
 PostContainer.propTypes = {
-    post: PropTypes.shape({
-        username: PropTypes.string,
-        thumbnailUrl: PropTypes.string,
-        imageUrl: PropTypes.imageUrl,
-        likes: PropTypes.number,
-        timestamp: PropTypes.string,
-        comments: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
+    post : PropTypes.shape({
+        username     : PropTypes.string,
+        thumbnailUrl : PropTypes.string,
+        imageUrl     : PropTypes.imageUrl,
+        likes        : PropTypes.number,
+        timestamp    : PropTypes.string,
+        comments     : PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
     })
 };
 

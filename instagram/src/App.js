@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './util/reset.sass';
 import './App.css';
 import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostList from './components/PostContainer/PostList';
+import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
     constructor() {
@@ -12,14 +11,13 @@ class App extends Component {
     }
     componentDidMount() {
         this.setState({
-            posts: dummyData
+            posts : dummyData
         });
     }
     render() {
         return (
             <div className="App">
-                <SearchBar />
-                <PostList posts={dummyData} />
+                <PostsPage posts={dummyData} />
             </div>
         );
     }
