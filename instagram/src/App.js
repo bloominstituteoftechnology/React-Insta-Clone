@@ -37,11 +37,7 @@ class App extends Component {
   //   });
   // };
 
-  loginSubmit = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  };
+  
 
   filterItems = event => {
     event.preventDefault();
