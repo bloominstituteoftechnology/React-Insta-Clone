@@ -1,0 +1,50 @@
+
+.postContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.postHeader {
+    display: flex;
+    align-items: center; 
+    height: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.headerImage {
+    height: 50px;
+    width: 50px;
+    padding-right: 5px;
+}
+
+.userImg {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.postIndividual {
+    width: 100%
+}
+
+.postImage {
+    width: 100%
+}
+.postIcon {
+    display: flex;
+}
+.postIconImg {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+}
+.likes {
+    font-size: 10px;
+}
+
+.timePosted {
+    font-size: 10px;
+}
