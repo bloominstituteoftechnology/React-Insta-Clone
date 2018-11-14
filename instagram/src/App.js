@@ -93,7 +93,7 @@ class App extends Component {
 
   setSearchResults = e => {
     e.preventDefault();
-    const postsFound = dummyData.filter(post => post.username.includes(e.target.value));
+    const postsFound = dummyData.filter(post => post.username.toUpperCase().includes(e.target.value.toUpperCase()));
     this.setState({
       data: postsFound
     })
