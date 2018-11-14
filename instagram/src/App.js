@@ -23,9 +23,7 @@ class App extends Component {
 
   searchFilter = ev =>{
     let thing = this.state.posts.filter(data =>{
-        // console.log(ev.target.value)
-        // console.log(data.username)
-        // console.log(data.username.includes(ev.target.value))
+        
         return data.username.includes(ev.target.value);
       
       
@@ -41,6 +39,24 @@ class App extends Component {
     })
 
   }
+  addNewLike = ev =>{
+    let currentObj = {};
+    let currentIndex = 0;
+    this.state.posts.forEach( (item,index) =>{
+      if(ev.target.id == index){
+        currentObj =item;
+        currentIndex = index;
+      }
+    });
+    let tempList = this.state.posts.slice();
+    currentObj.likes++
+    tempList[currentIndex] = currentObj;
+    
+    this.setState({
+      filteredPosts: tempList
+  })
+   
+}
   
   render() {
     return (
@@ -51,7 +67,8 @@ class App extends Component {
         {this.state.filteredPosts.map((data, index) => (
           <PostContainer
             data ={data}
-            key={index}
+            addNewLike={this.addNewLike}
+            id={index}
             />
         ))}
         </div>

@@ -5,37 +5,16 @@ import CommentSection from '../CommentSection/CommentSection';
 
 
 
-class PostContainer extends Component {
+const PostContainer = props => {
 
-    constructor(){
-        super();
-        this.state={
-            data: {}
-        }
-        
-      }
-
-      componentDidMount(){
-        this.setState({ data: this.props.data})
-      }
-
-      addNewLike = ev =>{
-          let tempData = this.state.data;
-          tempData.likes++
-          this.setState({
-              data: tempData
-          })
-         
-      }
-
-    render(){
+    
         return(
-        <div className='post' >
-            <Post data={this.state.data} addLike={this.addNewLike}/>
-            <CommentSection comments={this.props.data.comments}/>
+        <div className='post' id={props.id} >
+            <Post data={props.data} addLike={props.addNewLike}/>
+            <CommentSection comments={props.data.comments}/>
         </div>
     );
-    }
+    
     
 }
 
