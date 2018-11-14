@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import PostsPage from './components/PostContainer/PostsPage';
+// import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './Authentication/Authenticate';
 
 
 
@@ -17,10 +18,11 @@ class App extends Component {
     
     return (
       <div className="App">
-        <PostsPage />
+        {/* <PostsPage /> */}
+        <Authenticate />
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
