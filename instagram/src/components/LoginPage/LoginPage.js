@@ -4,9 +4,9 @@ import './LoginPage.css';
 
 const LoginPage = props => {
     return (
-        <div className="container">
-            You must be logegd in to view the site
-            <form onSubmit={() => props.login(props.loginUserText, props.loginPasswordText)}>
+        <div className="login">
+            <h3>You must be logged in to view the site</h3>
+            <form className="login__form" onSubmit={() => props.login(props.loginUserText, props.loginPasswordText)}>
                 <div>Username</div>
                 <input 
                     type="text"
@@ -21,7 +21,7 @@ const LoginPage = props => {
                     value={props.loginPasswordText}
                     onChange={props.handleInputChange}
                 />
-                <button>Login</button>
+                <button className="login__for--button">Login</button>
             </form>
         </div>
     )

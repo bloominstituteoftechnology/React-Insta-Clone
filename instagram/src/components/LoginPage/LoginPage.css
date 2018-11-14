@@ -1,4 +1,22 @@
-.container {
-    border: 1px solid red;
+.login {
+    border: 1px solid grey;
+    font-size: 2rem;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login__for--button {
+    margin-top: 10px;
     font-size: 2rem;
 }

@@ -17,7 +17,7 @@ class App extends Component {
       data: [],
       filter: '',
       commentText: '',
-      logedInUser: 'therealbondor',
+      logedInUser: localStorage.getItem('user'),
     }
   }
 
