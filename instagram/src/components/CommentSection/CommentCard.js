@@ -52,7 +52,7 @@ class CommentCard extends Component {
       comments: [
         ...this.state.comments,
         {
-          username: "Ghosty",
+          username: localStorage.getItem("username"),
           text: this.state.comment
         }
       ],
