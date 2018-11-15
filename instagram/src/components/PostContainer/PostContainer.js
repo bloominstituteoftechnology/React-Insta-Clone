@@ -16,12 +16,12 @@ const PostContainer = props => {
       <div className="like-comm-container">
         <div className="like-heart">
           <i
-            class="far fa-heart"
+            className="far fa-heart"
             onClick={() => props.handleLiked(props.data.timestamp)}
           />
         </div>
         <div className="comment">
-          <i class="far fa-comment" />
+          <i className="far fa-comment" />
         </div>
       </div>
       <h4 className="post-like">{props.data.likes} likes</h4>
@@ -33,7 +33,7 @@ const PostContainer = props => {
       <div className="add-comment">
         <form className="comm-add">
           <input type="text" name="addComment" placeholder="Add comment...." />
-          <i class="fas fa-ellipsis-h" />
+          <i className="fas fa-ellipsis-h" />
         </form>
       </div>
     </div>

@@ -6,7 +6,7 @@ const SearchBarNavContainer = props => {
     <div className="search-container">
       <div className="home">
         <a href="https://www.instagram.com">
-          <i class="fab fa-instagram" />
+          <i className="fab fa-instagram" />
         </a>
         <div className="instagram-logo">
           <img src={require("../../img/instagram.png")} alt="instagram" />
@@ -26,9 +26,9 @@ const SearchBarNavContainer = props => {
       </div>
 
       <div className="icons">
-        <i class="far fa-compass" />
-        <i class="far fa-heart" />
-        <i class="far fa-user" />
+        <i className="far fa-compass" />
+        <i className="far fa-heart" />
+        <i className="far fa-user" />
       </div>
     </div>
   );
