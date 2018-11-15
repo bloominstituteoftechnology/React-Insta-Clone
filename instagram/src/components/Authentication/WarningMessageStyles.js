@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+/* eslint-disable */
+
 export const WarningText = styled.p
 `
 

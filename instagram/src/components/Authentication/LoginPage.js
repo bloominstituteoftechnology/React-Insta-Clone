@@ -38,7 +38,7 @@ export default class LoginPage extends React.Component {
 
       }
 
-      else if (this.state.password != CryptoJS.AES.decrypt(localStorage[this.state.userField], 's3cr3tk3yz25').toString(CryptoJS.enc.Utf8)) {
+      else if (this.state.password !== CryptoJS.AES.decrypt(localStorage[this.state.userField], 's3cr3tk3yz25').toString(CryptoJS.enc.Utf8)) {
 
         this.setState({showPassMessage: true, passMessage: 'invalid password!'});
 
@@ -81,7 +81,7 @@ export default class LoginPage extends React.Component {
 
   handleChange = e => {
 
-    if (e.target.name == 'user-field') {
+    if (e.target.name === 'user-field') {
 
       if (this.state.showUserMessage)
         this.setState({showUserMessage: false});
@@ -97,10 +97,10 @@ export default class LoginPage extends React.Component {
 
       let newPassword = '';
 
-      if (e.target.value == '')
+      if (e.target.value === '')
         newPassword = '';
 
-      else if (e.target.value[e.target.value.length - 1] != '*' && e.target.value[e.target.value.length - 1] != undefined)
+      else if (e.target.value[e.target.value.length - 1] !== '*' && e.target.value[e.target.value.length - 1] !== undefined)
         newPassword = this.state.password + e.target.value[e.target.value.length - 1];
 
       else
