@@ -1,5 +1,6 @@
 import React from 'react';
 import "./search.css";
+import PropTypes from 'prop-types';
 
 function SearchBar(props) {
     return (
@@ -15,7 +16,7 @@ function SearchBar(props) {
                             type="text" 
                             name='searchInputText'
                             placeholder='search'
-                            value={props.searchInputText}
+                            value={props.searchText}
                             onChange={props.handleChange}
                         />
                     </form>
@@ -28,6 +29,11 @@ function SearchBar(props) {
             </header>
         </div>
     );
+}
+
+SearchBar.propTypes = {
+    handleChange: PropTypes.func,
+    searchText: PropTypes.string,
 }
 
 export default SearchBar;

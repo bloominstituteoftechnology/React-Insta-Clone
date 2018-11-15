@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CommentSection from './CommentSection';
 import CommentInput from './CommentInput';
 
@@ -42,8 +43,8 @@ class CommentContainer extends React.Component {
     handleCommentSubmit = e => {
         e.preventDefault();
         const newCom = { 
-            text: this.state.comment, 
-            username: localStorage.getItem('user')
+            username: localStorage.getItem('user'),
+            text: this.state.comment,             
         };
 
         const comments = this.state.comments.slice();
@@ -62,8 +63,8 @@ class CommentContainer extends React.Component {
     render() {
         return (
             <div>
-                {this.state.comments.map((com, i) => 
-                    <CommentSection key={i} com={com}/>
+                {this.state.comments.map((com, index) => 
+                    <CommentSection key={index} com={com}/>
                 )}
                 
                 <CommentInput 
@@ -75,6 +76,11 @@ class CommentContainer extends React.Component {
         )
     }
 
+}
+
+CommentContainer.propTypes = {
+    com: PropTypes.array,
+    postid: PropTypes.string,
 }
 
 

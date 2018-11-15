@@ -3,8 +3,8 @@ import Login from '../Login/Login';
 
 const authenticateHOC = App => 
     class extends React.Component {
-        constructor(props) {
-            super(props);
+        constructor() {
+            super();
             this.state = {
                 loggedIn: false,
             }
