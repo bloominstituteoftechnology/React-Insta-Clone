@@ -13,7 +13,8 @@ class Post extends Component {
         this.state = {
             modal: false,
             commentText: '',
-            comments: this.props.post.comments
+            comments: this.props.post.comments,
+            likes: this.props.post.likes
         }
 
         this.toggleComments = this.toggleComments.bind(this);
@@ -40,6 +41,14 @@ class Post extends Component {
         })
     }
 
+    likePost = e => {
+        e.preventDefault();
+
+        this.setState({
+            likes: this.state.likes + 1
+        })
+    }
+
 
     render(){
 
@@ -53,10 +62,11 @@ class Post extends Component {
                         </CardHeader>
                         <CardBody>
                             <img src={this.post.imageUrl} alt='Post'/>
-                            <Button color="danger" onClick={this.toggleComments}>Comments</Button>
                         </CardBody>
                         <CardFooter>
                             Posted: {this.post.timestamp}
+                            <Button color="danger" onClick={this.toggleComments}><i className="far fa-comment"> {this.state.comments.length}</i></Button>{' '}
+                            <Button color="danger" onClick={this.likePost}><i className="far fa-heart"> {this.state.likes}</i></Button> 
                         </CardFooter>
                     </Card>
     
