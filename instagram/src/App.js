@@ -15,6 +15,7 @@ class App extends Component {
             posts : dummyData
         });
     }
+    
     render() {
         return (
             <div className="App">
