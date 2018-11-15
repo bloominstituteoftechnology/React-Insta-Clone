@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 export const StyledSearchBarContainer = styled.div`
-  /* width: 45%; */
   border: 1px solid black;
-  /* background-color: #7073ec; */
   display: flex;
   justify-content: space-between;
-  padding: 25px;
+  padding: 20px;
   margin: 10px 0;
   border-radius: 4px;
 `;
@@ -18,7 +16,6 @@ export const SearchForm = styled.form`
 export const SearchBarLeft = styled.div`
   display: flex;
   justify-content: space-around;
-  border: 1px solid red;
   width: 10%;
 `;
 
@@ -108,10 +105,12 @@ export const ContentContainer = styled.div`
 
   `;
 export const LoginForm = styled.form`
+  font-family: 'Cookie', cursive;
+  font-size: 32px;
   width: 40%;
   margin: 0 auto;
   border: 1px solid black;
-  background: lightslategray;
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -122,7 +121,7 @@ export const LoginForm = styled.form`
   input {
     padding: 20px;
     width: 50%;
-    margin: 30px auto;
+    margin: 10px auto;
     border-radius: 10px;
   }
 `;

@@ -10,7 +10,7 @@ class PostsPage extends React.Component {
     this.state = {
       data: [],
       filteredPosts: [],
-      searchText: ""
+      searchText: "",
     };
   }
 
@@ -92,15 +92,27 @@ class PostsPage extends React.Component {
     }
   };
 
-  toggleLikes = id => {
-    console.log("click");
-    console.log(id);
-    // console.log(e.target.parentElement);
-    const newData = this.state.data.map(d => {
-      if (d.id === id) {
-        console.log(d);
-      }
-    });
+  // toggleLikes = id => {
+  //   console.log("click");
+  //   console.log(id);
+  //   const user = JSON.parse(localStorage.getItem('username'));
+  //   console.log(user, localStorage.getItem('username'));
+  //   console.log(this.state.likes[id]);
+  //   if (this.state.likes[id].includes(user)) {
+  //     console.log(`${user} found`)
+  //     // remove user from array
+  //     const newArr = this.state.likes[id].splice(this.state.likes[id].indexOf(user), 1)
+  //     const newLikes = this.state.likes//.filter(l => l.id !== id);
+  //     console.log('newArr:', newArr, 'newLikes', newLikes);
+  //     //decrease likes by one
+  //   }
+  //   else console.log('no match');
+  //   // console.log(e.target.parentElement);
+  //   const newData = this.state.data.map(d => {
+  //     if (d.id === id) {
+  //       console.log(d);
+  //     }
+  //   });
     //   if (this.state.liked) {
     //   this.setState((prevState) => {
     //     return {likes: prevState.likes + 1}
@@ -111,19 +123,19 @@ class PostsPage extends React.Component {
     //   }))
     // }
     //   this.setState({ liked: !this.setState.liked})
-  };
-  // increaseLikes = e => {
-  //   console.log(e);
-  // const newData = this.state.data.map(d => {
-  //   if (d.id === id) {
-  //     console.log("found");
-  //     d.likes++;
-  //     return d;
-  //   } else return d;
-  // });
-  // this.setState({ data: newData });
-  // console.log(this.state.data);
   // };
+  increaseLikes = id => {
+    console.log(id);
+  const newData = this.state.data.map(d => {
+    if (d.id === id) {
+      console.log("found");
+      d.likes++;
+      return d;
+    } else return d;
+  });
+  this.setState({ data: newData });
+  console.log(this.state.data);
+  };
 
   logout = e => {
     e.preventDefault();
@@ -151,7 +163,7 @@ class PostsPage extends React.Component {
               post={post}
               likes={post.likes}
               username={this.state.username}
-              toggleLikes={this.toggleLikes}
+              increaseLikes={this.increaseLikes}
             />
           ))}
         </div>

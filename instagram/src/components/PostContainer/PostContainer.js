@@ -19,7 +19,7 @@ const PostContainer = props => {
           <img src={props.post.imageUrl} alt="" />
           <ContentContainer>
           <IconBar>
-            <Heart onClick={() => props.toggleLikes(props.id)} />
+            <Heart onClick={() => props.increaseLikes(props.id)} />
             <MessageCircle />
           </IconBar>
           <LikeCounter>{props.post.likes} likes</LikeCounter>

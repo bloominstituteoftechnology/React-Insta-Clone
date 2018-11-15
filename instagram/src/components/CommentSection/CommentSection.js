@@ -9,9 +9,9 @@ class CommentSection extends React.Component {
     this.state = {
       comments: props.comments,
       newComment: "",
-      // liked: false,
       username: '',
-      id: props.id
+      id: props.id,
+      likes: [{0: ['justin', 'joe']}]
     };
   }
 
