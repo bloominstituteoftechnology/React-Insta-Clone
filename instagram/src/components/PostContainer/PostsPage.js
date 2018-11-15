@@ -1,11 +1,12 @@
 import React from 'react';
 import Navigation from '../Navigation/Navigation';
 import PostContainer from '../PostContainer/PostContainer';
+import { AppHeader } from './StyledPostsPage';
 
 const PostsPage = props => {
     return(
         <React.Fragment>
-            <header className="App-header">
+            <AppHeader>
                 <Navigation 
                     handlesChanges={props.handlesChanges} 
                     searchText={props.searchText}
@@ -15,7 +16,7 @@ const PostsPage = props => {
                     clearSearchText={props.clearSearchText}
                     logOut={props.logOut}
                 />
-            </header>
+            </AppHeader>
             <PostContainer 
                 data={props.searchData()}
                 searchText={props.searchText}

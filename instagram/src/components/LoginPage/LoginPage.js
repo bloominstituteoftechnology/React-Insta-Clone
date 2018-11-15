@@ -1,5 +1,5 @@
 import React from 'react';
-import './LoginPage.css';
+import { LoginContainer, LoginForm, InstagramLogoText, InputContainer, InputUsername, InputPassword, LoginButton } from './StyledLoginPage';
 import logo from '../../img/1024px-Instagram_logo.svg.png';
 
 class LoginPage extends React.Component {
@@ -50,12 +50,11 @@ class LoginPage extends React.Component {
 
     render() {
         return(
-            <div className="login-container">
-                <form className="login-form" onSubmit={this.setUsername}>
-                <img src={logo} className="instagram-logo-text" alt="Instagram Logo"/>
-                    <div className="input-container">
-                        <input 
-                            className="login-input input-username" 
+            <LoginContainer>
+                <LoginForm onSubmit={this.setUsername}>
+                <InstagramLogoText src={logo} alt="Instagram Logo"/>
+                    <InputContainer>
+                        <InputUsername 
                             type="text"
                             name="username"
                             value={this.state.username}
@@ -63,10 +62,9 @@ class LoginPage extends React.Component {
                             required
                         />
                         <label>Phone number, username, or email</label>
-                    </div>
-                    <div className="input-container">
-                        <input 
-                            className="login-input input-password" 
+                    </InputContainer>
+                    <InputContainer>
+                        <InputPassword 
                             type="text"
                             name="password"
                             value={this.state.password}
@@ -74,10 +72,10 @@ class LoginPage extends React.Component {
                             required
                         />
                         <label>Password</label>
-                    </div>
-                    <button className={this.state.password || this.state.username ? "login-button unfaded" : "login-button"} type="submit">Log in</button>
-                </form>
-            </div>
+                    </InputContainer>
+                    <LoginButton type="submit">Log in</LoginButton>
+                </LoginForm>
+            </LoginContainer>
         );
     }
 }
