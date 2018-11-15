@@ -4,8 +4,8 @@ import PostContainer from './PostContainer';
 import dummyData from '../../dummy-data';
 
 class PostsPage extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       posts: [],
       filteredPosts: []
@@ -20,10 +20,12 @@ class PostsPage extends Component {
     })
   }
 
-  logout = () => {
+  logout = (props) => {
+    console.log("LOGOUT PROPS", props);
+    
     localStorage.removeItem("username");
     this.setState({
-      
+      isLoggedIn: false
     })
     window.location.reload()
   }
@@ -37,17 +39,17 @@ class PostsPage extends Component {
   }
 
   render() {
+    console.log(this.props);
+    
     return (
       <div>
         <SearchBarContainer 
             searchPosts={this.handleSearchChange}
           />
-          <input
+          <button
             className="logout"
-            value="LOGOUT"
-            disabled
             onClick={this.logout}
-          />
+          >LOGOUT</button>
           <PostContainer 
             data={this.state.filteredPosts.length > 0 ?
               this.state.filteredPosts : 

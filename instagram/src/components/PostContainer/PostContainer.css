@@ -64,7 +64,11 @@
   display:none
 }
 
-.logout {
+
+button.logout {
+  border: 1px solid lightgray;
+  padding: .5rem 2rem;
+  border-radius: 5px;
   margin-top: 100px;
   text-align: center;
   cursor: pointer;

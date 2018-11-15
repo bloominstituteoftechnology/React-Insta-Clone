@@ -12,7 +12,6 @@ const Authenticate = App =>
     }
 
     componentDidMount() {
-      console.log("AUTH STATE CDM", this.state);
       this.setState ({
         isLoggedIn: true
       })
@@ -29,8 +28,10 @@ const Authenticate = App =>
         }
       }
 
+
+
     render() {
-      if (this.state.isLoggedIn) return <App />;
+      if (this.state.isLoggedIn) return <App isLoggedIn={this.state.isLoggedIn}/>;
       return <Login />;
       // return <App />
     }
