@@ -8,7 +8,11 @@ const Posts = props => {
     return (
         <div className='posts'>
             Posts Here
-            <Post/>
+            {props.posts.map((p, i)=> <Post 
+                post={p} 
+                toggleComments={props.toggleComments} 
+                key={i}
+                />)}
         </div>
     )
 }
