@@ -1,21 +1,3 @@
-.search-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.instagram-icons {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.menu-icons {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 i {
   width: 50px;
   height: auto;
@@ -35,16 +17,4 @@ i {
 .search-container {
   width: 35%;
   margin-right: 70px;
-}
-
-.search-bar {
-  width: 100%;
-  height: 30px;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  background: rgb(243, 243, 243);
-  color: gray;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: lighter;
 }
