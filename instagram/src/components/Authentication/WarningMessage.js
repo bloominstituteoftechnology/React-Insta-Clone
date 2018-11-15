@@ -1,7 +1,9 @@
 import React from 'react';
 
+import {WarningText} from './WarningMessageStyles';
+
 export default function WarningMessage({text}) {
 
-  return <p className='warning'>{text}</p>;
+  return <WarningText>{text}</WarningText>;
 
 }

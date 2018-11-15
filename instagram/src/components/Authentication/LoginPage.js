@@ -2,7 +2,6 @@ import React from 'react'
 
 import WarningMessage from './WarningMessage';
 import {LoginContainer, LoginHeader, LoginForm, LoginInput, LoginBtn} from './LoginStyles';
-import './LoginPage.scss';
 
 const CryptoJS = require('crypto-js');
 
