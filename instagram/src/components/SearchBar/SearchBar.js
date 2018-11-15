@@ -1,17 +1,19 @@
 import React from 'react';
 import './searchBar.css';
 import PropTypes from 'prop-types';
+import { SearchBarDiv, InputField, SearchInput } from './StyledSearchBar';
+
 
 const SearchBar =  props => {
     return (
-        <div className='search-bar'>
+        <SearchBarDiv>
             <form>
-                <div className="input-field">
+                <InputField>
                     <i className={props.isSelected ? "fas fa-search icon-left": "fas fa-search"}></i>
-                    <input className={props.isSelected ? "input-box move-left" : "input-box center"}
+                    <SearchInput
                         type="text"
                         name="searchText"
-                        placeholder={props.isSelected ? props.searcText : "   Search"}
+                        placeholder={props.isSelected ? props.searchText : "   Search"}
                         value={props.searchText}
                         onChange={props.handlesChanges}
                         onClick={props.hasBeenClicked}
@@ -19,9 +21,9 @@ const SearchBar =  props => {
                     <i 
                         className={props.isSelected ? "fas fa-times-circle" : "hide"}
                         onClick={props.clearSearchText}></i>
-                </div>
+                </InputField>
             </form>
-        </div>
+        </SearchBarDiv>
     );
 }
 

@@ -35,8 +35,8 @@ class LikesContainer extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <i className={this.state.clicked ? "fas fa-heart" : "far fa-heart"} onClick={this.changeLikes}></i>
-                <i className="far fa-comment"></i>
+                <i className={this.state.clicked ? "fas fa-heart likes-container" : "far fa-heart likes-container"} onClick={this.changeLikes}></i>
+                <i className="far fa-comment likes-container"></i>
                 <p className='likes-amount'>{this.state.likes} likes</p>
             </React.Fragment>
         );
