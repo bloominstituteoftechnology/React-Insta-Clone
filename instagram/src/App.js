@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostPage from './components/PostContainer/PostPage'
+// import dummyData from './dummy-data';
+// import SearchBar from './components/SearchBar/SearchBar';
+// import PostContainer from './components/PostContainer/PostContainer';
 import './App.css';
 
 
@@ -10,44 +11,51 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData,
-      filteredSearch: ''
     }
   }
 
-  handleSearchInput = (event) => {
+//   componentDidMount = () => {
+//     this.setState({
+//       data: dummyData
+//     })
+//   }
+
+//   handleSearchInput = (event) => {
     
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  }
+//     this.setState({
+//       [event.target.name]: event.target.value
+//     });
+//   }
 
-//if the search bar is empty return all the dat(this.state.data)
+// //if the search bar is empty return all the dat(this.state.data)
 
-//otherwise return only the post with matching username
-  getFilteredSearch = () => {
-    
-    if(this.state.filteredSearch = '') {
-      return this.state.data
-    }
+// //otherwise return only the post with matching username
+//   getFilteredSearch = () => {
+//     if(this.state.filteredSearch = '') {
+//       return this.state.data
+//     }
 
-    return this.state.data.filter(post => {
-      const username = post.username.toLowerCase().includes(this.state.filteredSearch.toLowerCase())
-        return username
-    })
-  }
+//     return this.state.data.filter(post => {
+//       const username = post.username.toLowerCase().includes(this.state.filteredSearch.toLowerCase())
+//         return username
+//     })
+//     // this.setState({
+//     //   filteredSearch: username
+//     // })
+//   }
   
 
   render() {
     return (
       <div className="container">
-        <SearchBar 
+        <PostPage />
+        {/* <SearchBar 
           filteredSearch={this.state.filteredSearch}
           handleSearchInput={this.handleSearchInput}
         />
         <PostContainer 
           data={this.getFilteredSearch()} 
-        />
+        /> */}
       
       </div>
     );

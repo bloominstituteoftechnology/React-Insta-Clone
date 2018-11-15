@@ -65,10 +65,7 @@ class CommentSection extends React.Component {
                     onKeydown={this.onKeydown}
                 />
                      
-            </div>
-           
-           
-            
+            </div>     
         );
         
     //}

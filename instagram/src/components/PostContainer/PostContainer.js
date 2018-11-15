@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import './PostContainer.css';
 
 const PostContainer = (props) => {
-    console.log(props.data)
+    console.log(props.Postdata)
     return (
         <div>
             
-            {props.data.map((post, index) => (
+            {props.Postdata.map((post, index) => (
                 
                 <Post
                 key={index}
