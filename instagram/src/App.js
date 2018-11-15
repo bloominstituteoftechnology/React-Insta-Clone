@@ -1,34 +1,56 @@
-import React, { Component } from 'react';
-import dummyData from './dummy-data';
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from './components/PostContainer/PostContainer';
-import './App.css';
+
+import React, { Component } from "react";
+import PostPage from "./components/PostContainer/PostPage";
+import dummyData from "./dummy-data";
+import Auth from './components/Auth/Auth';
+import "./App.css";
  class App extends Component {
-  
-  constructor(){
+  constructor() {
     super();
     this.state = {
       data: [],
-      comments: []
+      comments: [],
+      likes: [],
+      filter: "",
     };
   }
-   componentDidMount(){
+   componentDidMount() {
     this.setState({
       data: dummyData,
-      comments: dummyData.comments
+      comments: dummyData.comments,
+      likes: dummyData.likes
     });
   }
-   
+   handleInputChange = event => {
+    this.setState({
+      filter: event.target.value
+    });
+  };
+   filterItems = event => {
+    event.preventDefault();
+    if (this.state.filter === "") {
+      return this.setState({
+        data: dummyData
+      });
+    }
+    let filtered = this.state.data.filter(item => {
+      return item.username === this.state.filter;
+    });
+    this.setState({
+      data: filtered
+    });
+  };
    render() {
     return (
-      <div className="App">
-        <SearchBar />
-        <PostContainer 
+      <PostPage
         data={this.state.data}
-        comments={this.state.comments}  
+        comments={this.state.comments}
+        likes={this.state.likes}
+        handleInputChange={this.handleInputChange}
+        filterItems={this.filterItems}
+        filter={this.state.filter}
       />
-      </div>
     );
   }
 }
- export default App;
+ export default Auth(App);
