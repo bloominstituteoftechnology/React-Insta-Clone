@@ -22,7 +22,7 @@ const SearchBar = (props) => {
       <div className={'nav-buttons'}>
         <i className="far fa-heart"></i> 
         <i className="far fa-compass"></i>
-        <i className="far fa-user"></i>
+        <i onClick={props.logOut} className="far fa-user"></i>
       </div>
     </div>
   );

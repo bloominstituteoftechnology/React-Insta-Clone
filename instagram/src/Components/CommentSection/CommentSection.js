@@ -20,7 +20,7 @@ class CommentSection extends React.Component {
     e.preventDefault();
 
     this.setState({
-      comments: [...this.state.comments, {username: 'nomadic4life', text: this.state.inputText}],
+      comments: [...this.state.comments, {username: this.state.user, text: this.state.inputText}],
       inputText: '',
     })
 

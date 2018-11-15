@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import PostsPage from './Components/PostContainer/PostsPage.js';
+import Authenticate from './Authentication/Authenticate.js';
 import dummyData from './dummy-data.js';
 
 
@@ -10,22 +11,22 @@ class App extends Component {
     super()
     this.state = {
       posts: [],
+      loginInput: '',
+      passwordInput: '',
       inputText: '',
-      user: 'Nomadic4Life',
+      username: '',
       search: []
     }
   }
 
-  componentDidMount = () => {
-
-
-     
+  componentDidMount(){
+    const storedUsername = JSON.parse(localStorage.getItem('username'));
+    if (storedUsername){
+      this.setState({username: storedUsername})
+    }
 
     this.setState({
-      posts: [...dummyData],
-      userInputText: dummyData.map(user => {
-        return {username: user.username, inputText: ''}
-      }),
+      posts: dummyData
     })
   }
 
@@ -50,21 +51,35 @@ class App extends Component {
     
   }
 
+  login = (e) => {
+    e.preventDefault();
+    console.log(e.target.value)
+    localStorage.setItem('username', JSON.stringify(e.target.value))
+
+  }
+
+  
+
   
   render() {
     return (
       <div className="App">
+        
         <PostsPage 
           handleOnChange={this.handleOnChange}
           inputText={this.state.inputText}
-          
+          loginInput={this.state.loginInput}
+          passwordInput={this.state.passwordInput}
+          logOut={this.props.logOut}
+
+          login={this.login}
           searchItem={this.state.search}
           posts={this.state.posts}
-          user={this.state.user}/>
+          user={this.state.username}/>
       
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
