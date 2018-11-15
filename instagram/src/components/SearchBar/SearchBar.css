@@ -1,46 +1,50 @@
 .search-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .instagram-icons {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .menu-icons {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 i {
-    width: 50px;
-    height: auto;
+  width: 50px;
+  height: auto;
 }
 
 .fa-instagram {
-    border-right: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .instagram-title {
-    width: 50%;
-    height: auto;
-    padding-top: 8px;
-    padding-left: 12px;
+  width: 50%;
+  height: auto;
+  padding-top: 8px;
+  padding-left: 12px;
+}
+
+.search-container {
+  width: 35%;
+  margin-right: 70px;
 }
 
 .search-bar {
-    width: 35%;
-    height: 30px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    background: rgb(243, 243, 243);
-    color: gray;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: lighter;
-    margin-right: 70px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background: rgb(243, 243, 243);
+  color: gray;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: lighter;
 }

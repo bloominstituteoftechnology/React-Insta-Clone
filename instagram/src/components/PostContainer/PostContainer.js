@@ -1,69 +1,114 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import './Post.css';
-import CommentSection from '../CommentSection/CommentSection';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import "./Post.css";
+import CommentSection from "../CommentSection/CommentSection";
+import LikesContainer from "./LikesContainer";
 
-const PostContainer = props => {
+class PostContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: props.post.comments,
+      commentText: "",
+      likes: props.post.likes,
+      liked: false,
+      id: props.post.id
+    };
+  }
+
+  handleComment = ev => {
+    this.setState({
+      commentText: ev.target.value
+    });
+  };
+
+  addComment = ev => {
+    ev.preventDefault();
+    let metaData = this.state.comments;
+    metaData.push({ username: "tommaay", text: this.state.commentText });
+    this.setState({
+      comments: metaData,
+      commentText: ""
+    });
+  };
+
+  addLike = (ev, prevState) => {
+    ev.preventDefault();
+    let likes = this.state.likes;
+    let heartIcon = document.querySelector(".likes-container .fa-heart-o");
+
+    this.setState(state => {
+      if (this.state.liked === false)
+        return {
+          likes: likes + 1,
+          liked: true
+        };
+      else
+        return {
+          likes: likes - 1,
+          liked: false
+        };
+    });
+
+    if (this.state.liked === false) {
+      heartIcon.style.color = "red";
+    } else {
+      heartIcon.style.color = "black";
+    }
+  };
+
+  render() {
     return (
-        props.postsData.map((post, idx) => (
-            <div className='post-container' key={post.timestamp} id={idx} >
+      <div className="post-container">
+        <div className="insta-user">
+          <img
+            src={this.props.post.thumbnailUrl}
+            alt="User Thumbnail"
+            className="icon"
+          />
+          <h2>{this.props.post.username}</h2>
+        </div>
 
-                <div className='insta-user'>
-                    <img src={post.thumbnailUrl} alt='User Thumbnail' className='icon' />
-                    <h2>{post.username}</h2>
-                </div>
-                
-                <div className='post-img'>
-                    <img src={post.imageUrl} alt='Post Image' />
-                </div>
+        <div className="post-img">
+          <img src={this.props.post.imageUrl} alt="Post Image" />
+        </div>
 
-                <div className='comments-container'>
-                    <div className='likes-container'>
-                        <i className="fa fa-heart-o fa-2x" aria-hidden="true"></i>
-                        <i className="fa fa-comment-o fa-2x" aria-hidden="true"></i> 
-                        <p className='heavy-font'>{post.likes} likes</p> 
-                    </div>
-                    
-                    {post.comments.map((comment, idx) => (
-                        <CommentSection key={idx} index={idx} comment={comment} />
-                    ))}
+        <LikesContainer likes={this.state.likes} addLike={this.addLike} />
 
-                    <p className='light-font'>{post.timestamp}</p>
+        <div className="comments-container">
+          {this.state.comments.map((comment, idx) => (
+            <CommentSection key={idx} index={idx} comment={comment} />
+          ))}
 
-                    <div className='add-comment'>
+          <p className="light-font">{this.props.post.timestamp}</p>
 
-                        <form onSubmit={props.addComment}>
-                            <input 
-                                type='text' 
-                                placeholder='Add a comment...' 
-                                value={props.commentText}
-                                onChange={props.handleComment}
-                                id={idx}
-                            />
-                            <div className='triple-dot'>
-                                <span className='dot'></span>
-                                <span className='dot'></span>
-                                <span className='dot'></span>
-                            </div>
-                        </form> 
-                        
-                    </div>
-
-                </div>
+          <form className="add-comment" onSubmit={this.addComment}>
+            <input
+              type="text"
+              placeholder="Add a comment..."
+              value={this.state.commentText}
+              onChange={this.handleComment}
+            />
+            <div className="triple-dot">
+              <span className="dot" />
+              <span className="dot" />
+              <span className="dot" />
             </div>
-        ))
-            
-    )    
+          </form>
+        </div>
+      </div>
+    );
+  }
 }
 
 PostContainer.propTypes = {
-    post: PropTypes.shape({
-        comments: PropTypes.arrayOf(PropTypes.string),
-        imageUrl: PropTypes.string,
-        likes: PropTypes.number,
-        timestamp: PropTypes.string,
-        username: PropTypes.string,
-    })  
-}
+  post: PropTypes.shape({
+    comments: PropTypes.arrayOf(PropTypes.string),
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    timestamp: PropTypes.string,
+    username: PropTypes.string
+  })
+};
 
 export default PostContainer;
