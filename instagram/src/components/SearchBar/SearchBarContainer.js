@@ -1,5 +1,4 @@
 import React from "react";
-import "./Searchbar.css";
 import logo from "../Images/instagramScript.svg";
 import styled from "styled-components";
 
@@ -37,18 +36,38 @@ const Logo = styled.img`
   width: 6.5rem;
   position: absolute;
   margin-left: 1.1rem;
-  top: 5px;
+  top: 13px;
   cursor: pointer;
 `;
 
-const SearchBarContainer = props => {
-  console.log("SEARCHPROPS", props);
+const Icon = styled.i`
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding-top: 0.5rem;
+  transition: all 0.3s ease-in-out;
 
+  &:not(:first-child) {
+    padding-left: 2.2rem;
+  }
+
+  &:hover {
+    color: red;
+  }
+
+  &.fa-instagram {
+    font-size: 2rem;
+    margin-left: -0.5rem;
+    padding-right: 1.4rem;
+    border-right: 0.1rem solid black;
+  }
+`;
+
+const SearchBarContainer = props => {
   return (
     <Header>
       <Container>
         <LeftContainer>
-          <i className="fab fa-instagram" />
+          <Icon className="fab fa-instagram" />
           <Logo src={logo} alt="instagram script logo" />
         </LeftContainer>
         <div>
@@ -60,10 +79,10 @@ const SearchBarContainer = props => {
             placeholder="&#xf002; Search"
           />
         </div>
-        <div className="searchbar-right">
-          <i className="far fa-compass" />
-          <i className="far fa-heart" />
-          <i className="far fa-user" onClick={props.logout} />
+        <div>
+          <Icon className="far fa-compass" />
+          <Icon className="far fa-heart" />
+          <Icon className="far fa-user" onClick={props.logout} />
         </div>
       </Container>
     </Header>

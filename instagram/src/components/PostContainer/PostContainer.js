@@ -12,7 +12,7 @@ const PostEnvelop = styled.div`
 
 const PostContainer = props => {
   return (
-    <PostEnvelop className="post-container">
+    <PostEnvelop>
       {props.data.map((user, i) => {
         return <PostCard data={user} key={user.thumbnailUrl} />;
       })}

@@ -47,6 +47,19 @@ const Likes = styled.p`
   margin-bottom: -0.02rem;
 `;
 
+const SocialIcons = styled.i`
+  transform: scale(-1, 1);
+  margin-left: 1.2rem;
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(-1.2, 1.2);
+  }
+`;
+
 class PostCard extends Component {
   constructor(props) {
     super(props);
@@ -88,9 +101,12 @@ class PostCard extends Component {
           <User>{this.props.data.username}</User>
         </PostHeader>
         <PostImage src={this.props.data.imageUrl} alt="user post" />
-        <SocialBox className="social-container" key="socialContainer">
-          <i className="far fa-heart" onClick={this.toggleLike} />
-          <i className="far fa-comment" onClick={this.toggleComment} />
+        <SocialBox key="socialContainer">
+          <SocialIcons className="far fa-heart" onClick={this.toggleLike} />
+          <SocialIcons
+            className="far fa-comment"
+            onClick={this.toggleComment}
+          />
         </SocialBox>
         <Likes>{this.state.likes} likes</Likes>
         <CommentCard

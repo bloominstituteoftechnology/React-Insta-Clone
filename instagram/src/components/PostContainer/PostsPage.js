@@ -71,9 +71,7 @@ class PostsPage extends Component {
           searchPosts={this.handleSearchChange}
           logout={this.logout}
         />
-        <LogOutButton className="logout" onClick={this.logout}>
-          LOGOUT
-        </LogOutButton>
+        <LogOutButton onClick={this.logout}>LOGOUT</LogOutButton>
         <PostContainer
           data={
             this.state.filteredPosts.length > 0

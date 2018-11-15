@@ -38,7 +38,7 @@ class Login extends Component {
 
   render() {
     return (
-      <LoginForm onSubmit={this.handleLogin} className="login" name="login">
+      <LoginForm onSubmit={this.handleLogin} name="login">
         <h1>InstaClone Login</h1>
         <LoginInputs
           required
@@ -56,12 +56,7 @@ class Login extends Component {
           onChange={this.handleChange}
           placeholder="Enter Password"
         />
-        <LoginInputs
-          type="submit"
-          onSubmit={this.handleLogin}
-          value="LOGIN"
-          className="submit"
-        />
+        <LoginInputs type="submit" onSubmit={this.handleLogin} value="LOGIN" />
       </LoginForm>
     );
   }
