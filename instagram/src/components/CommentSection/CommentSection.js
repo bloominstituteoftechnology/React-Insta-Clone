@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './CommentSection.scss';
+import {CommentsContainer, TimeDisplay, CommentsInput} from './CommentSectionStyles';
 
 import Comment from './Comment';
 
@@ -31,13 +31,13 @@ export default class CommentSection extends React.Component {
 
     return (
 
-      <div className='comment-section'>
+      <CommentsContainer>
 
         {comments.map((comment, index) => (
           <Comment key={comment.text} comment={comment} id={index} postID={id} currentUser={currentUser} removeComment={removeComment} />
         ))}
 
-        <p className='time'>{time}</p>
+        <TimeDisplay>{time}</TimeDisplay>
 
         <form onSubmit={e => {
           e.preventDefault();
@@ -45,11 +45,11 @@ export default class CommentSection extends React.Component {
           this.setState({currentComment: ''});
         }}>
 
-          <input type='text' placeholder='Add a comment...' value={this.state.currentComment} onChange={this.handleChange}/>
+          <CommentsInput type='text' placeholder='Add a comment...' value={this.state.currentComment} onChange={this.handleChange}/>
 
         </form>
 
-      </div>
+      </CommentsContainer>
 
     );
 
