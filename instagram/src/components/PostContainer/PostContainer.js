@@ -4,7 +4,7 @@ import moment from 'moment';
 
 import CommentSection from '../CommentSection/CommentSection';
 
-import './PostContainer.scss';
+import {PostingContainer, PostHeader, PostInteractSection} from './PostContainerStyles';
 
 export default function PostContainer({data, addComment, removeComment, addLike, currentUser, id}) {
 
@@ -12,18 +12,18 @@ export default function PostContainer({data, addComment, removeComment, addLike,
 
   return (
 
-    <div className='post'>
+    <PostingContainer>
 
-      <div className='header'>
+      <PostHeader>
 
         <img src={thumbnailUrl} alt='user thumbnail'></img>
         <h3>{username}</h3>
 
-      </div>
+      </PostHeader>
 
       <img className='post-img' src={imageUrl} alt='post'></img>
 
-      <div className='like-comment'>
+      <PostInteractSection>
 
         <div>
 
@@ -34,7 +34,7 @@ export default function PostContainer({data, addComment, removeComment, addLike,
 
         <p>{likes} likes</p>
 
-      </div>
+      </PostInteractSection>
 
       <CommentSection
         id={id}
@@ -45,7 +45,7 @@ export default function PostContainer({data, addComment, removeComment, addLike,
         addComment={addComment}
       />
 
-    </div>
+    </PostingContainer>
 
   );
 
