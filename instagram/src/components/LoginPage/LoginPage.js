@@ -4,18 +4,13 @@ import './../../less/Login.less';
 class Login extends Component {
 	constructor(props) {
 		super(props);
+		console.log(props)
 		this.state = {
-			usernameInput: props.usernameInput,
-			passwordInput: props.passwordInput,
-			authenticateLogin: props.authenticateLogin
+			
+			authenticateLogin: props.authenticateLogin,
 		};
 	}
-	handleChange = (event) => {
-        event.preventDefault();
-        this.setState({
-            [event.target.name]: event.target.value
-        });
-    };
+	
  
 
 	render() {
@@ -27,20 +22,16 @@ class Login extends Component {
 						type="text"
 						name="usernameInput"
 						placeholder="username"
-						value={this.state.usernameInput}
-						onChange={(event) => {
-							this.handleChange(event);
-						}}
+						value={this.props.usernameInput}
+						onChange={this.props.handleChange}
 					/>
 
 					<input
 						type="text"
 						name="passwordInput"
 						placeholder="password"
-						value={this.state.passwordInput}
-						onChange={(event) => {
-							this.handleChange(event);
-						}}
+						value={this.props.passwordInput}
+						onChange={this.props.handleChange}
 					/>
 					<button onSubmit={this.state.authenticateLogin}>Login</button>
 				</form>
