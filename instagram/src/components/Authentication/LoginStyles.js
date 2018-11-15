@@ -14,6 +14,18 @@ export const LoginContainer = styled.div
   padding: 20px;
   background-color: #a3944c;
 
+  @media (max-width: 1000px) {
+
+    width: 50%;
+
+  }
+
+  @media (max-width: 500px) {
+
+    width: 85%;
+
+  }
+
 `;
 
 export const LoginHeader = styled.h1
