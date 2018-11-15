@@ -82,9 +82,13 @@
     border-top: 1px solid lightgray;
     padding: 0 10px;
     padding-top: 10px;
-    color: lightgray;
+    color: #222222;
     font-weight: bold;
     font-size: 14px;
+}
+
+::placeholder {
+    color: lightgray;
 }
 
 .fa-comment {

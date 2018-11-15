@@ -5,12 +5,12 @@ import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from '../PostContainer/PostContainer';
 
 class PostPage extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             data: [],
             searchInputText: "",
-          }
+        }
     }
 
     componentDidMount() {
@@ -28,27 +28,27 @@ class PostPage extends React.Component {
 
     likedToggle = id => 
     this.setState( prevState => ({
-      data: prevState.data.map(post => {
-        if(post.username === id && post.heartToggle === undefined){
-          return {
-            ...post,
-            heartToggle: true,
-            likes: post.likes + 1,            
-          };
-        } else if (post.username === id && post.heartToggle === true){
-          return {
-            ...post,
-            heartToggle: false,
-            likes: post.likes - 1,            
-          };
-        } else if (post.username === id && post.heartToggle === false){
-          return {
-            ...post,
-            heartToggle: true,
-            likes: post.likes + 1,            
-          };
-        } else return post;
-      })
+        data: prevState.data.map(post => {
+            if(post.username === id && post.heartToggle === undefined){
+            return {
+                ...post,
+                heartToggle: true,
+                likes: post.likes + 1,            
+            };
+            } else if (post.username === id && post.heartToggle === true){
+            return {
+                ...post,
+                heartToggle: false,
+                likes: post.likes - 1,            
+            };
+            } else if (post.username === id && post.heartToggle === false){
+            return {
+                ...post,
+                heartToggle: true,
+                likes: post.likes + 1,            
+            };
+            } else return post;
+        })
     }));
 
 
@@ -58,31 +58,28 @@ class PostPage extends React.Component {
             post => {
                 return post.username.indexOf(this.state.searchInputText) !== -1;
             }    
-            );
+        );
             
-            return (
-            
-                <div className='postPage-container'>
-
-                <div className='searchContainer'>
-                {<SearchBar handleChange={this.handleChange} searchText={this.state.searchInputText} />}
-                </div>
+        return (
         
-                <div className='postContainer'>
-                {filteredArray.map( arg => {
-                    return <PostContainer 
-                    arg={arg} 
-                    key={arg.username} 
-                    liked={this.likedToggle} 
-                    open={this.state.heartOpen}
-                    close={this.state.heartClosed}
-                    />
-                })}
-                </div>
+            <div className='postPage-container'>
 
-                </div>
+            <div className='searchContainer'>
+            {<SearchBar handleChange={this.handleChange} searchText={this.state.searchInputText} />}
+            </div>
+    
+            <div className='postContainer'>
+            {filteredArray.map( arg => {
+                return <PostContainer 
+                arg={arg} 
+                key={arg.username} 
+                liked={this.likedToggle} 
+                />
+            })}
+            </div>
 
-            );
+            </div>
+        );
     }
 }
 
