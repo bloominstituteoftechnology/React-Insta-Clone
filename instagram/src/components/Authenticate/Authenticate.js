@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Login from '../Login/Login';
-import App from '../../App';
 
 const Authenticate = (Input) => {
     return class extends Component {
