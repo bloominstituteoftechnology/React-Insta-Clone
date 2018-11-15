@@ -5,8 +5,9 @@ import home from '../../home.png';
 import explore from '../../explore.png';
 import profile from '../../profile.png';
 import PropTypes from 'prop-types';
+
 const HeaderContainer = styled.header`
-	border-bottom: 1px lightgray solid;
+	border-bottom: 1px black solid;
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -14,7 +15,9 @@ const HeaderContainer = styled.header`
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
-	background: white;
+	background: #0e3b43;
+	position: fixed;
+	top: 0;
 `;
 const NavSection = styled.section`
 	display: flex;
@@ -33,6 +36,7 @@ const Logo = styled.img`
 `;
 
 const Input = styled.input`
+	background: #000000;
 	width: 100%;
 	height: auto;
 	margin: 0;
@@ -40,6 +44,12 @@ const Input = styled.input`
 	border: 1px lightgray solid;
 	border-radius: 5px;
 	text-align: center;
+	::placeholder {
+		color: white;
+	}
+	:focus {
+		outline: none;
+	}
 `;
 const IconsDiv = styled.div`
 	display: flex;

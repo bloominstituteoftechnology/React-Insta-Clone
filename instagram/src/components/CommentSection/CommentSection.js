@@ -2,35 +2,44 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const CommentContainer = styled.section `
+const CommentContainer = styled.section`
 	margin: 0;
-  padding: 1%;
-`
-const CommentDiv = styled.div `
-display: flex;
-flex-direction: row;
-flex-wrap: nowrap;
-justify-content: flex-start;
-align-items: center;
-`
+	padding: 1%;
+	border-bottom: 1px black solid;
+`;
+const CommentDiv = styled.div`
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+`;
 
-const CommentUsername = styled.h3 `
-margin: 0;
-padding: 1% 0;
-font-size: 1.25rem;
-`
-const Span = styled.span `
-font-weight: bold;
-
-`
-const Input = styled.input `
-	margin: 1%;
-  padding: 2.5% 0;
-  width: 98%;
-  height: auto;
-  border: none;
-  border-top: 1px lightgrey solid;
-`
+const CommentUsername = styled.h3`
+	margin: 0;
+	padding: 1% 0;
+	font-size: 1.25rem;
+	color: white;
+`;
+const Span = styled.span`
+	font-weight: bold;
+`;
+const Input = styled.input`
+	background: #000000;
+	margin: 0;
+	padding: 5% 1%;
+	width: 100%;
+	height: auto;
+	border: 1px solid black;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	::placeholder {
+		color: white;
+	}
+	:focus {
+		outline: none;
+	}
+`;
 class CommentSection extends Component {
 	constructor(props) {
 		super(props);

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import like from '../../like.png';
+import black from '../../blacklike.png';
 import comment from '../../comment.png';
 import PropTypes from 'prop-types';
 
@@ -32,15 +32,17 @@ const Thumbnail = styled.img `
 width: 40%;
 height: auto;
 border-radius: 50%;
+border: 1px solid white;
 `
 const Username = styled.h3 `
 	margin: 0;
   padding: 5%;
   font-size: 1.5rem;
   font-weight: bold;
+  color: white;
 `
 const Timestamp = styled.h4 `
-	color: grey;
+	color: #BAD6C5;
 `
 const MiddleImage = styled.img `
 	width: 100%;
@@ -57,6 +59,7 @@ const Likes = styled.h3 `
 margin: 0;
 padding: 0% 1%;
 font-size: 1.25rem;
+color: #BAD6C5;
 `
 const Span = styled.span `
 font-weight: bold;
@@ -96,7 +99,7 @@ class Post extends Component{
 				
 				<MiddleImage src={this.props.image} alt="" />
 			
-						<Icon src={like} alt="like icon" onClick={this.handleLike} />
+						<Icon src={black} alt="like icon" onClick={this.handleLike} />
 						<Icon src={comment} alt="comment icon"  />
 					<Likes>
 						<Span>{this.state.likes}</Span> likes

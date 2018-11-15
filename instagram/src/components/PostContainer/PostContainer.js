@@ -10,18 +10,18 @@ const PostContainerStyle = styled.main`
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: space-between;
-	margin: 0;
+	margin: 0.5% 0 0;
 	padding: 5%;
 	max-width: 800px;
 `;
 const PostSection = styled.section`
-border: 1px solid lightgrey;
-border-radius: 10px;
-background: white;
-width: 100%;
-height: auto;
-margin: 0 0 10%;
-padding: 0;
+	border: 1px solid black;
+	border-radius: 10px;
+	background: #418e7f;
+	width: 100%;
+	height: auto;
+	margin: 0 0 10%;
+	padding: 0;
 `;
 
 const PostContainer = (props) => {
