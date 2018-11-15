@@ -1,0 +1,276 @@
+/* Your Code Goes Here */
+/*
+.width-100 {
+  width: 100%;
+}
+
+.border-bottom-grey {
+  border-bottom: 1px solid @lambda-times-color-lightgrey;
+}
+
+.flex(@jc: none, @ai: none, @dir: row) {
+  display: flex;
+  justify-content: @jc;
+  align-items: @ai;
+  flex-direction: @dir;
+}
+
+*/
+/*------------------------------------*\
+RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0b1 | 201101 
+NOTE:WORK IN PROGRESS
+USE WITH CAUTION AND TEST WITH ABANDON */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: ’’;
+  content: none;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+*:focus {
+  outline: none;
+}
+h1 {
+  font-size: 4rem;
+}
+/*
+h2{
+  font-size: 1.8rem;
+  width: 100%;
+  background-color: lightgrey;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card-container{
+
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 15px;
+  margin: 40px 0;
+  padding: 10px;
+
+  .header {
+    //char name
+    font-size: 3rem;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .bio-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    p{
+      width: 50%;
+      font-size: 1.6rem;
+      text-align: left;
+      margin-top: 5px;
+    }
+  }
+
+  .xenobiology-container {
+    width: 100%;
+    margin-bottom: 20px;
+    div{
+      font-size: 1.6rem;
+      margin-top: 10px
+    }
+  }
+
+  .starships-container{
+    width: 100%;
+    margin-bottom: 20px;
+    div{
+      font-size: 1.6rem;
+      margin-top: 10px
+    }
+  }
+  
+  .vechiles-container{
+    width: 100%;
+    margin-bottom: 20px;
+    div{
+      font-size: 1.6rem;
+      margin-top: 10px
+    }
+  }
+        
+  .films-container{
+    width: 100%;
+    div{
+      font-size: 1.6rem;
+      margin-top: 10px
+    }
+  }
+}
+*/
+/*
+
+ .character-container{
+	width: 400px;
+	margin: 0 auto;
+}
+
+*/
+.navbar {
+  height: 75px;
+  background: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.098);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .searchbar {
+  height: 28px;
+  width: 215px;
+  border: 1px solid rgba(219, 219, 219);
+  border-radius: 3px;
+  -webkit-appearance: none;
+  font-size: 14px;
+  text-align: center;
+  background: #fafafa;
+  color: #999999;
+  font-family: helvetica neue, FontAwesome;
+}
+.navbar .searchbar ::placeholder {
+  color: #999999;
+}
