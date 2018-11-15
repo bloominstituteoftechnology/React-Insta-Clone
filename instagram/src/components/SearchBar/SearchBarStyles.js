@@ -164,3 +164,14 @@ export const SearchButtons = styled(CustomDiv)
   }
 
 `;
+
+export const CompassSymbol = styled.p
+`
+
+  @media (max-width: 600px) {
+
+    opacity: 0;
+
+  }
+
+`;

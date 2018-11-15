@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {SearchBarContainer, SearchLogoSection, SearchInputSection, SearchInput, SearchIcon, SearchButtons, CustomDiv} from './SearchBarStyles';
+import {SearchBarContainer, SearchLogoSection, SearchInputSection, SearchInput, SearchIcon, SearchButtons, CustomDiv, CompassSymbol} from './SearchBarStyles';
 
 import logo from './logo.png';
 
@@ -51,7 +51,7 @@ export default class SearchBar extends React.Component {
 
         <SearchButtons>
 
-          <p className='right far fa-compass'></p>
+          <CompassSymbol className='right far fa-compass'></CompassSymbol>
           <p className='right far fa-heart'></p>
           <p className='right far fa-user' onClick={() => this.props.setUsername('')}></p>
 
