@@ -13,12 +13,17 @@ class App extends Component {
     super();
     this.state = {
       data: [],
+      username: '',
       // text: '',
       // id: 0,
     };
   }
 
   componentDidMount() {
+    let usernameInStorage = localStorage.getItem('username');
+    if (usernameInStorage) {
+      this.setState({username: usernameInStorage})
+    }
     this.setState({ data: dummyData });
   }
 
@@ -30,15 +35,19 @@ class App extends Component {
   }
 
   render() {
-    Authenticate()
     return (
       
       <div className="App">
-        <Login/>
         <header className="App-header">
           <SearchBar />
         </header>
-          <PostsPage login={this.login} key={this.state.data.username} post={this.state.data}/>
+          <PostsPage 
+            login={this.login} 
+            key={this.state.data.username} 
+            post={this.state.data}
+            handleChange={this.handleChange}
+            username={this.state.username}
+          />
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import App from '../App';
+// import App from './App';
 import Login from '../components/Login/Login';
 
 const Authenticate = App => {
@@ -8,45 +8,36 @@ const Authenticate = App => {
             constructor() {
                 super();
                 this.state = {
-                    loggedIn: false,
-                    usernameText: '',
+                    loggedIn: true,
                 }
 
-            }
-
-            login() {
-                localStorage.setItem('username', this.state.usernameText);
-                // localStorage.setItem('password', '');
-                this.forceUpdate();
             }
 
             componentDidMount() {
-                let loginStatus = false;
-                if (localStorage.getItem('username') !== '') {
+                console.log(this.state.loggedIn)
+                let loginStatus;
+                if (localStorage.getItem('username')) {
                     loginStatus = true;
-                } else {
-                    loginStatus = false;
-                }
+                } 
                 this.setState({
                     loggedIn: loginStatus,
+                    
                 })
+                console.log(this.state.loggedIn)
             }
 
             render() {
-                if (localStorage.getItem('username') !== '') {
+                if (this.state.loggedIn) {
+                    console.log("Logged In")
                     return <App/>
                 } else {
+                    console.log("NOT Logged In")
                     return <Login
                         login={this.login}
                         usernameText={this.state.usernameText}
                         handleChange={this.handleChange}
                     />
                 }
-                // if (localStorage.getItem('username') !== '') {
-                //     return <App/>
-                // } else {
-                //     return <Login/>
-                // }
             }
         }
     )
