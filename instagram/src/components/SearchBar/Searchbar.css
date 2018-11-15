@@ -1,59 +1,17 @@
-header {
-  width: 100%;
-  position: fixed;
-  background-color: white;
-  z-index: 100;
-}
-
-.searchbar-container {
-  width: 100%;
-  max-width: 920px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 1.4rem;
-  align-items: center;
-}
-
-.searchbar-container input[name="search"] {
-  font-family: "Font Awesome 5 Free", "Open Sans", sans-serif;
-  text-align: center;
-  width: 12rem;
-  font-size: .8rem;
-  padding: .2rem 0;
-  margin-left: 5rem;
-}
-.searchbar-left {
-  position: relative;
-}
-
 .fab.fa-instagram {
   cursor: pointer;
   font-size: 2rem;
-  margin-left: -.5rem;
+  margin-left: -0.5rem;
   padding-right: 1.4rem;
-  border-right: .1rem solid black; 
+  border-right: 0.1rem solid black;
 }
 
 .far {
   cursor: pointer;
   font-size: 1.3rem;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
 }
 
 .far:not(:first-child) {
   padding-left: 2.2rem;
-}
-
-.searchbar-left img {
-  width: 6.5rem;
-  position: absolute;
-  margin-left: 1.1rem;
-  top: 5px;
-  cursor: pointer;
-
-}
-
-.searchbar-right {
-  
 }

@@ -1,37 +1,46 @@
-import React, { Component } from 'react';
-import './Login.css'
+import React, { Component } from "react";
+import styled from "styled-components";
+
+const LoginForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+`;
+
+const LoginInputs = styled.input`
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 2rem;
+`;
 
 class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
       username: "",
-      password: "",
+      password: ""
     };
   }
 
   handleChange = e => {
     this.setState({
-      [e.target.name]: e.target.value,
-    })
-  }
-  handleLogin = (e) => {
+      [e.target.name]: e.target.value
+    });
+  };
+  handleLogin = e => {
     let username = this.state.username;
-    localStorage.setItem('username', username);
-    window.location.reload()
+    localStorage.setItem("username", username);
+    window.location.reload();
   };
 
-
-  render () {
-
+  render() {
     return (
-      <form
-        onSubmit={this.handleLogin}
-        className="login"
-        name="login"
-        >
+      <LoginForm onSubmit={this.handleLogin} className="login" name="login">
         <h1>InstaClone Login</h1>
-        <input 
+        <LoginInputs
           required
           type="text"
           name="username"
@@ -39,7 +48,7 @@ class Login extends Component {
           onChange={this.handleChange}
           placeholder="Enter Username"
         />
-        <input 
+        <LoginInputs
           required
           // type="password"
           value={this.state.password}
@@ -48,15 +57,15 @@ class Login extends Component {
           onChange={this.handleChange}
           placeholder="Enter Password"
         />
-        <input
+        <LoginInputs
           type="submit"
           onSubmit={this.handleLogin}
           value="LOGIN"
           className="submit"
         />
-      </form>
-    )
+      </LoginForm>
+    );
   }
 }
 
-export default Login
+export default Login;

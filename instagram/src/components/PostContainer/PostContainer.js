@@ -1,22 +1,23 @@
-import React from 'react';
-import './PostContainer.css';
-import PostCard from './PostCard';
+import React from "react";
+import "./PostContainer.css";
+import PostCard from "./PostCard";
+import styled from "styled-components";
+
+const PostEnvelop = styled.div`
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 1.8rem;
+`;
 
 const PostContainer = props => {
-  
   return (
-    <div className="post-container">
+    <PostEnvelop className="post-container">
       {props.data.map((user, i) => {
-        
-        return (
-          <PostCard
-            data={user}
-            key={user.thumbnailUrl}
-          />
-        )
+        return <PostCard data={user} key={user.thumbnailUrl} />;
       })}
-    </div>
-  )
-}
+    </PostEnvelop>
+  );
+};
 
-export default PostContainer
+export default PostContainer;

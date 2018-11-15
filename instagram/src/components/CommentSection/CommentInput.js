@@ -1,28 +1,44 @@
-import React, { Fragment} from 'react';
-import './Comment.css'
+import React, { Fragment } from "react";
+import styled from "styled-components";
 
+const WriteAComment = styled.input`
+  border: none;
+  width: 80%;
+  padding: 1.2rem 0.5rem 1.2rem 1.2rem;
+  margin-right: 3rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: "Font Awesome 5 Free", "Open Sans", sans-serif;
+`;
 
-const CommentInput= props => {
+const AddCommentButton = styled.button`
+  border: none;
+  background: white;
+  font-size: 1.1rem;
+  padding-top: 1.2rem;
+  color: gray;
+  cursor: pointer;
+`;
+
+const CommentInput = props => {
   return (
-    <Fragment>
-      <form className="comment-form">
-        <input
-          value={props.value}
-          name="comment"
-          type="text"
-          className="add-comment fas fa-ellipses-h"
-          onChange={props.handleChange}
-          placeholder="Add a comment..."
-        />
-        <button 
-          htmlFor="comment"
-          type="submit"
-          onClick={props.addComment}
-          className="fas fa-ellipsis-h"
-        />
-      </form>
-    </Fragment>
-  )
-}
+    <form>
+      <WriteAComment
+        value={props.value}
+        name="comment"
+        type="text"
+        className="fas fa-ellipses-h"
+        onChange={props.handleChange}
+        placeholder="Add a comment..."
+      />
+      <AddCommentButton
+        htmlFor="comment"
+        type="submit"
+        onClick={props.addComment}
+        className="fas fa-ellipsis-h"
+      />
+    </form>
+  );
+};
 
-export default CommentInput
+export default CommentInput;
