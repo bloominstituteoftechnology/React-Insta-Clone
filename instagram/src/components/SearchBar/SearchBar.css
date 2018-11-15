@@ -56,3 +56,7 @@
     width: 22px;
     height: 20px;
 }
+
+.header .login img:hover {
+    cursor: pointer;
+}

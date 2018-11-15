@@ -8,13 +8,14 @@ class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: []
-
+            comments: [],
+            username: window.localStorage.getItem('username')
         }        
     }
 
     componentDidMount() {
         this.setState({
+            ...this.state,
             comments: this.props.comments,
             commentText: ''
         })
@@ -22,6 +23,7 @@ class CommentSection extends Component {
 
     changeHandler = (event) => {
         this.setState({
+            ...this.state,
             commentText: event.target.value
         })
     }
@@ -30,7 +32,7 @@ class CommentSection extends Component {
         event.preventDefault();
         this.setState({
             comments: [...this.state.comments, { 
-                username: 'username',
+                username: this.state.username,
                 text: this.state.commentText
             }]
         }, () => {

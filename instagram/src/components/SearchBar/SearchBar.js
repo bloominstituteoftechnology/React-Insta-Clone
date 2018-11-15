@@ -30,7 +30,7 @@ class SearchBar extends Component {
                 <div className="login">
                     <img src="compass.svg" alt="compass" />
                     <img src="like.svg" alt="like" />
-                    <img src="login.svg" alt="login" />
+                    <img onClick={this.props.logOut} src="login.svg" alt="login" />
                 </div>
             </div>
             

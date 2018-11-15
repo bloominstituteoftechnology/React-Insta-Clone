@@ -7,11 +7,16 @@ class Login extends Component {
         this.state = {
             usernameText: '',
             passwordText: '',
+            username: '',
         }
     }
 
     submitLogin = () => {
         window.localStorage.setItem('username', this.state.usernameText);
+        this.setState({
+            ...this.state,
+            username: window.localStorage.getItem('username')
+        })
     }
 
     changeHandler = (event) => {
@@ -35,9 +40,9 @@ class Login extends Component {
                         <div className="orfacebook-line"></div>
                     </div>
                     <img className="facebook" src="loginwithfacebook.png" alt="facebook" />
+                    <div className="forgotpassword">Forgot password?</div>
                 </form>
                 <p>
-                    Get the App
                 </p>
                 <div className="app-buttons">
                     <div className="app-store"></div>

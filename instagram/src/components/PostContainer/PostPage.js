@@ -23,7 +23,7 @@ class PostPage extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar onSearch={(searchQuery) => this.onSearch(searchQuery)} />
+        <SearchBar logOut={this.props.logOut} onSearch={(searchQuery) => this.onSearch(searchQuery)} />
         <PostContainer searchQuery={this.state.searchQuery} posts={this.state.posts} />
       </div>
     );

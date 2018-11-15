@@ -22,13 +22,17 @@ class Post extends Component {
 
     incrementLikes = (event) => {
         if (!event.target.classList.contains('fas')) {
-            this.setState({
-                likes: this.props.post.likes + 1
+            this.setState((prevState) => {
+                return {
+                    likes: prevState.likes + 1
+                };
             })
         }
         else if (event.target.classList.contains('fas')) {
-            this.setState({
-                likes: this.props.post.likes
+            this.setState((prevState) => {
+                return {
+                    likes: prevState.likes - 1
+                }
             })
         }
         event.target.classList.toggle('fas');
