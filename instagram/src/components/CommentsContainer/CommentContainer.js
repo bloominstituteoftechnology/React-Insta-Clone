@@ -2,7 +2,7 @@ import React from 'react';
 import Comment from './Comment';
 import InputComment from './InputComment';
 
-
+import {PostIconsContainer, PostHeadingBold, Timestamp} from '../PostContainer/PostsStyled';
 
 class CommentContainer extends React.Component  {
     constructor(props){
@@ -51,14 +51,14 @@ class CommentContainer extends React.Component  {
 
         return (
             <div className="post-container">
-                <div className="post-icons">
+                <PostIconsContainer>
                     <i onClick={this.handleLike} className="far fa-heart"></i>
                     <i className="far fa-comment"></i>
-                </div>
+                </PostIconsContainer>
 
-                <p className="post-text__bold mg-bottom">{this.state.likes} likes</p>
+                <PostHeadingBold className="mg-bottom">{this.state.likes} likes</PostHeadingBold>
                 {comments}
-                <p className="timestamp">{this.state.timestamp}</p>
+                <Timestamp>{this.state.timestamp}</Timestamp>
                 <InputComment inputText={this.state.inputText} handleChange={this.handleChange} handleAddComment={this.handleAddComment}/>
             </div>
         );

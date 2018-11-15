@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import {CommentWrapper, CommentText, CommentHeading} from '../PostContainer/PostsStyled';
+
 const Comment = props => {
 
 
     return (
-    <div className="comment-wrapper">
-        <p className="comment-text"><span className="comment-text__bold">{props.commentData.username}</span>{props.commentData.text}</p>
-    </div>
+    <CommentWrapper>
+        <CommentText><CommentHeading>{props.commentData.username}</CommentHeading>{props.commentData.text}</CommentText>
+    </CommentWrapper>
     );
   };
 

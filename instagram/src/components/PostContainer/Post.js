@@ -2,7 +2,7 @@ import React from 'react';
 import CommentContainer from '../CommentsContainer/CommentContainer';
 
 import PropTypes from 'prop-types';
-import {PostWrapper, PostItem, PostHeader, PostUserLogo, PostHeadingBold, PostImg} from './PostsStyled';
+import {PostWrapper, PostItem, PostHeader, UserThumbnail , PostHeadingBold, PostImg, PostComment} from './PostsStyled';
 
 const Post = props => {
 
@@ -13,14 +13,14 @@ const Post = props => {
     <PostWrapper>
         <PostItem>
             <PostHeader>
-                <PostUserLogo src={props.postData.thumbnailUrl}></PostUserLogo>
+                <UserThumbnail  src={props.postData.thumbnailUrl}></UserThumbnail>
                 <PostHeadingBold>{props.postData.username}</PostHeadingBold>
             </PostHeader>
             <PostImg src={props.postData.imageUrl}></PostImg>
             
-            <div className="post-comment">
+            <PostComment>
                 <CommentContainer comments={props.postData.comments} timestamp={props.postData.timestamp} likes={props.postData.likes} username={props.username}/>
-            </div>
+            </PostComment>
             
             
         </PostItem>

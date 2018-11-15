@@ -1,21 +1,21 @@
 import React from 'react';
+import {FormInputContainer, InputAddComent} from '../PostContainer/PostsStyled';
 
 const InputComment = props => {
  
 
   return (
     <div>
-      <form className="comment-input" onSubmit={(event) => props.handleAddComment(event)}>
-        <input
-          className="input-text-comment"
+      <FormInputContainer onSubmit={(event) => props.handleAddComment(event)}>
+        <InputAddComent
           type="text"
           placeholder={'Add comment...'}
           value={props.inputText}
           onChange={props.handleChange}
           name = {props.username}
-        />
+        ></InputAddComent>
 
-      </form>
+      </FormInputContainer>
     </div>
   );
 };
