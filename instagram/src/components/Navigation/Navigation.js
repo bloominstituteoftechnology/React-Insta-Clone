@@ -1,17 +1,17 @@
 import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import logo from '../../img/1024px-Instagram_logo.svg.png';
-import './Navigation.css';
+import { InstagramLogos, InstagramLogoText, HeaderIcons } from './StyledNavigation';
 import PropTypes from 'prop-types';
 
 const Navigation = props => {
     return(
         <React.Fragment>
-            <div className="instagram-logos">
+            <InstagramLogos>
                 <i className="fab fa-instagram"></i>
                 <p>|</p>
-                <img className="instagram-logo-text" src={logo} alt="Instagram"/>
-            </div>
+                <InstagramLogoText src={logo} alt="Instagram"/>
+            </InstagramLogos>
             <SearchBar 
                 handlesChanges={props.handlesChanges} 
                 searchText={props.searchText}
@@ -19,11 +19,11 @@ const Navigation = props => {
                 hasBeenClicked={props.hasBeenClicked}
                 clearSearchText={props.clearSearchText}
             />
-            <div className="header-icons">
+            <HeaderIcons>
                 <i className="far fa-compass"></i>
                 <i className="far fa-heart"></i>
                 <i className="far fa-user" onClick={props.logOut}></i>
-            </div>
+            </HeaderIcons>
         </React.Fragment>
     );
 }
