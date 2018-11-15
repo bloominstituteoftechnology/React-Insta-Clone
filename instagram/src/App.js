@@ -19,9 +19,6 @@ class App extends React.Component {
     }
   }
 
-  // componentDidUpdate() {
-  //   localStorage.setItem('userName', this.state.userName);
-  // }
 
   componentDidMount() {
     if(localStorage.getItem('userName') !== null && localStorage.getItem('userName') !== undefined){
@@ -38,7 +35,7 @@ class App extends React.Component {
       console.log('name input empty')
     }
     else{
-      this.setState({ userName: this.state.userInput, isLoggedIn: true});
+      this.setState({ userName: this.state.userInput, isLoggedIn: true, userInput: ''});
       localStorage.setItem('userName',this.state.userInput);
     }
   }

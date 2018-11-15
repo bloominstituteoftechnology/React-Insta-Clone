@@ -16,15 +16,6 @@ const CommentsContainer = styled.div`
     }
 `
 
-// const CommentSection = (props) => {
-//     return (
-//         <CommentsContainer>
-//             {props.thisPost.comments.map((comment,index) => {
-//                 return <Comment thisComment={comment} key={index} />
-//             })}
-//         </CommentsContainer>
-//     );
-// }
 
 class CommentSection extends Component {
     constructor(props) {
@@ -53,7 +44,8 @@ class CommentSection extends Component {
     addNewComment = (event) => {
         event.preventDefault();
         this.setState({
-            comments: [...this.state.comments, { username: `${this.props.userName}`, text: `${this.state.commentText}` }] 
+            comments: [...this.state.comments, { username: `${this.props.userName}`, text: `${this.state.commentText}` }],
+            commentText: '' 
         })
     }
 
