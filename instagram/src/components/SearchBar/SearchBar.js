@@ -3,27 +3,23 @@ import like from '../../like.png';
 import home from '../../home.png';
 import explore from '../../explore.png';
 import profile from '../../profile.png';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const SearchBar = (props) => {
 	return (
 		<header className="navigation">
-			<section className='nav'>
+			<section className="nav">
 				<section className="home">
 					<img src={home} alt="home icon" />
 				</section>
 				<section className="search">
-					<form onSubmit={(event) => {
-								props.handleSearch(event);
-							}}>
+					<form onSubmit={props.handleSearch}>
 						<input
 							type="text"
-							name="input"
+							name="searchInput"
 							placeholder="search"
 							value={props.searchInput}
-							onChange={(event) => {
-								props.handleSearch(event);
-							}}
+							onChange={props.handleChange}
 						/>
 					</form>
 				</section>
@@ -39,6 +35,6 @@ const SearchBar = (props) => {
 
 SearchBar.propTypes = {
 	searchInput: PropTypes.string,
-	handleSearch: PropTypes.func,
-}
+	handleSearch: PropTypes.func
+};
 export default SearchBar;

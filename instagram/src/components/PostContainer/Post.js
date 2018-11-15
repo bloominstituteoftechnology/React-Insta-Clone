@@ -4,17 +4,7 @@ import comment from '../../comment.png';
 import PropTypes from 'prop-types';
 
 class Post extends Component{
-	constructor(props){
-		super(props);
-		this.state = {
-			post: props.post,
-			username: props.username,
-			thumbnail: props.thumbnail,
-			timestamp: props.timestamp,
-			image: props.image,
-			likes: props.likes
-		}
-	}
+	
 	handleLike = (event) => {
 		event.preventDefault();
 		let likeCount = this.state.likes
@@ -28,14 +18,14 @@ class Post extends Component{
 			<React.Fragment>
 				<section className="top">
 					<div>
-						<img src={this.state.thumbnail} alt="" />
-						<h3>{this.state.username}</h3>
+						<img src={this.props.thumbnail} alt="" />
+						<h3>{this.props.username}</h3>
 					</div>
 	
-					<h4>{this.state.timestamp}</h4>
+					<h4>{this.props.timestamp}</h4>
 				</section>
 				<section className="middle">
-					<img src={this.state.image} alt="" />
+					<img src={this.props.image} alt="" />
 				</section>
 				<section className="bottom">
 					<div className="icons">
@@ -43,7 +33,7 @@ class Post extends Component{
 						<img src={comment} alt="comment icon"  />
 					</div>
 					<h3>
-						<span>{this.state.likes}</span> likes
+						<span>{this.props.likes}</span> likes
 					</h3>
 				</section>
 			</React.Fragment>

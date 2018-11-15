@@ -13,7 +13,6 @@ const Authenticate = (Page) =>
 		}
 		componentDidMount() {}
 		handleChange = (event) => {
-           
 			this.setState({
 				[event.target.name]: event.target.value
 			});
@@ -35,7 +34,6 @@ const Authenticate = (Page) =>
 		};
 
 		render() {
-            console.log('state', this.state.usernameInput)
 			if (this.state.loginSuccessful === true) {
 				return <Page />;
 			} else {

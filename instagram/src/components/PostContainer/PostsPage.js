@@ -17,33 +17,41 @@ class PostsPage extends Component {
     this.setState({posts: dummyData})
   }
 
+  handleChange = (event) => {
+    event.preventDefault();
+    this.setState ({
+      [event.target.name]: event.target.value,
+    })
+  }
 
 	handleSearch = (event) => {
-    this.setState ({
-      searchInput: event.target.value,
-    })
-    if (event.target.value === ''){
+    event.preventDefault();
+    if (this.state.searchInput){
+      this.setState({
+        posts: 
+        this.state.posts.filter((post) => {
+        return post.username.includes(this.state.searchInput);
+        }),
+        searchInput: ''
+      });
+    } else {
       this.setState({
         posts: dummyData
       }) 
-    } else {
-        this.setState({
-          posts: 
-          this.state.posts.filter((post) => {
-            return post.username.includes(event.target.value);
-          })
-        
-        });
     }  
 	};
 
 
 	render() {
+    console.log( this.state.posts.filter((post) => {
+      return post.username.includes(this.state.searchInput);
+      }))
 		return (
 			<div className="App">
         <SearchBar 
         handleSearch={this.handleSearch}
         searchInput={this.state.searchInput}
+        handleChange={this.handleChange}
         />
 				<PostContainer
 					posts={this.state.posts}
