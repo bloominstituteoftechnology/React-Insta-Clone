@@ -1,0 +1,15 @@
+.login-button {
+    width: 27rem;
+    height: 3rem;
+    margin-top: 20px;
+    background-color: #C4E0FA;
+    border: 1px solid #C4E0FA;
+    color: #FCFDFF;
+    font-weight: bold;
+}
+
+.unfaded {
+    background-color: #3897F0;
+    border: 1px solid #3897F0;
+    color: white;
+} 

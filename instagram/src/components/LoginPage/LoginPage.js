@@ -1,6 +1,7 @@
 import React from 'react';
 import { LoginContainer, LoginForm, InstagramLogoText, InputContainer, InputUsername, InputPassword, LoginButton } from './StyledLoginPage';
 import logo from '../../img/1024px-Instagram_logo.svg.png';
+import './LoginPage.css';
 
 class LoginPage extends React.Component {
     constructor() {
@@ -49,6 +50,9 @@ class LoginPage extends React.Component {
     }
 
     render() {
+        let currentUsernameText = this.state.username;
+        let currentPasswordText = this.state.password;
+
         return(
             <LoginContainer>
                 <LoginForm onSubmit={this.setUsername}>
@@ -73,7 +77,7 @@ class LoginPage extends React.Component {
                         />
                         <label>Password</label>
                     </InputContainer>
-                    <LoginButton type="submit">Log in</LoginButton>
+                    <button className={this.state.password || this.state.username ? "login-button unfaded" : "login-button"} type="submit">Log in</button>
                 </LoginForm>
             </LoginContainer>
         );
