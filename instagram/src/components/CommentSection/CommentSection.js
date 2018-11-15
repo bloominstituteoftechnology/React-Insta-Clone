@@ -1,5 +1,5 @@
 import React from 'react';
-import './CommentSection.css';
+import { IndividualComment, Timestamp } from './StyledCommentSection';
 import CommentForm from './CommentForm';
 import PropTypes from 'prop-types';
 
@@ -40,11 +40,11 @@ class CommentSection extends React.Component {
         return(
             <div>
                 {this.state.comments.map((item, index) => (
-                        <div key={index} className='individual-comment'>
+                        <IndividualComment key={index}>
                             <p><span>{item.username}</span> {item.text}</p>
-                        </div>
+                        </IndividualComment>
                 ))}
-                <p className="timestamp">{this.state.timestamp.toUpperCase()}</p>
+                <Timestamp>{this.state.timestamp.toUpperCase()}</Timestamp>
                 <CommentForm 
                     newComment={this.state.newComment} 
                     handleChange={this.handleChange}

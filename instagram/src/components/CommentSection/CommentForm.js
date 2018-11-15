@@ -1,10 +1,10 @@
 import React from 'react';
-import './CommentForm.css';
+import { AddComment } from './StyledCommentForm'
 import PropTypes from 'prop-types';
 
 const CommentForm = props => {
     return(
-        <div className="add-comment">
+        <AddComment>
             <form onSubmit={props.addNewComment}>
                 <input 
                     type="text" 
@@ -15,7 +15,7 @@ const CommentForm = props => {
                 />
             </form>
             <i className="fas fa-ellipsis-h"></i>
-        </div>
+        </AddComment>
     );
 }
 

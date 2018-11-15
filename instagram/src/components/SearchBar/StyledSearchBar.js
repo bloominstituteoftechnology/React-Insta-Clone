@@ -26,7 +26,7 @@ const SearchInput = styled.input`
     text-align: ${props => (props.isSelected ? 'left' : 'center')}
     padding-left: ${props => (props.isSelected ? '10px' : null)}
 
-    :focus {
+    &:focus {
         outline: 0;
     }
 `;
