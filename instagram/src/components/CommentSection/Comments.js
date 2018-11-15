@@ -8,7 +8,7 @@ import Comment from './Comment';
 const Comments = props => {
     return(
         <ListGroup>
-            {props.comments.map(c => <Comment comment={c}/>)}
+            {props.comments.map((c, i) => <Comment comment={c} key={i}/>)}
         </ListGroup>
     )
 }

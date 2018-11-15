@@ -8,8 +8,6 @@ import Comments from '../CommentSection/Comments';
 
 class Post extends Component {
     constructor(props){
-
-        console.log(props)
         super(props)
         this.post = props.post
         this.state = {
@@ -23,10 +21,7 @@ class Post extends Component {
 
         this.setState({
             modal: !this.state.modal
-        }, console.log(this))
-
-
-        // console.log(post)
+        })
     }
 
     render(){

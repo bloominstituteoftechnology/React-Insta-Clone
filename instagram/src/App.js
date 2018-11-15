@@ -14,7 +14,8 @@ class App extends Component {
         super();
 
         this.state = {
-            posts: []
+            posts: [],
+            searchText: ''
         }
     }
 
@@ -24,9 +25,15 @@ class App extends Component {
         })
     }
 
+    handleChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
     render() {
         return ( <>
-            <SearchBar / >
+            <SearchBar searchText={this.searchText} handleChange={this.handleChange}/ >
 
             <Posts posts = { this.state.posts } />  
             </>
