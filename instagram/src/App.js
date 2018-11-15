@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import CommentSection from './components/CommentSection/CommentSection';
-// import PostContainer from './components/PostContainer/PostContainer';
+import PostSection from './components/PostSection/PostSection';
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       data: dummyData,
-      comments: dummyData.comments,
     }
   }
   render() {
     return (
       <div className="App">
-        <CommentSection data = {this.state.data}/>
-        {/* <PostContainer comments = {this.state.comments}/>  */}
+        <PostSection data = {this.state.data}/>
       </div>
     );
   }
