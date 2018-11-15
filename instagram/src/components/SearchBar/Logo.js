@@ -1,8 +1,8 @@
 import React from 'react';
-import './Logo.sass';
 import styled from 'styled-components';
 
 const Div = styled.div`
+    margin-top: 2px;
     justify-content: flex-start;
     flex-direction: row;
     align-items: center;

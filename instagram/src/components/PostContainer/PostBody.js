@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 import './PostBody.sass';
 
 import CommentContainer from './../CommentSection/CommentContainer';
-const PostBody = props => {
+const PostBody = (props) => {
     return (
         <div className="post--body">
             <img src={props.post.imageUrl} alt="" />
@@ -13,9 +13,9 @@ const PostBody = props => {
 };
 
 CommentContainer.propTypes = {
-    post: PropTypes.shape({
-        imageUrl: PropTypes.string,
-        likes: PropTypes.string
+    post : PropTypes.shape({
+        imageUrl : PropTypes.string,
+        likes    : PropTypes.string
     })
 };
 
