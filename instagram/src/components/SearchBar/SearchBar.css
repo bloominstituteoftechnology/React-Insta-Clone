@@ -5,14 +5,15 @@
 
 .search-bar {
   display: flex;
-  max-width: 107.4rem;
+  max-width: 111.4rem;
   height: 7.6rem;
-  padding: 2rem 0;
+  padding: 2rem 2rem;
   justify-content: space-between;
   align-items: flex-end;
   font-size: 2.4rem;
   font-weight: 500;
   margin: 0 auto;
+  border: 1px solid red;
 }
 
 .logo {
@@ -65,4 +66,25 @@
 
 .navbar .fa-user:hover {
   color: red;
+}
+
+@media only screen and (max-width: 800px) {
+  .logo--text span {
+    display: none;
+  }
+
+  .navbar .fa-heart{
+    margin: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .logo--text,
+  .logo--vline {
+    display: none;
+  }
+
+  .navbar .fa-heart{
+    margin: 0 1rem;
+  }
 }
