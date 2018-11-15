@@ -4,7 +4,7 @@ import PostHeader from './PostHeader';
 import { Route, Link } from "react-router-dom";
 
 const Post = props => {
-    console.log('props.index =', props.index)
+    // console.log('props.index =', props.index)
     return (
         <div className="post-border">
             <PostHeader 

@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginPage from '../Login/Login';
+// import { Route, Link, Switch } from "react-router-dom";
 
 const Authenticate = App =>
   class extends React.Component {
@@ -48,6 +49,7 @@ const Authenticate = App =>
         )
       }
       else {
+        // <Route exact path="/" component={App} />
         return <App />
       }
     }

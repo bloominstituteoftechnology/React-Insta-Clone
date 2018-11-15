@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './SearchBar.css'
 import styled from 'styled-components';
+import { Route, Link, Switch } from "react-router-dom";
 
 const Header = styled.div`
     display: flex;
@@ -38,7 +39,9 @@ const SearchBar = props => {
         <Header>
             <LogoAndText>
                 <i className="fab fa-instagram"></i>
-                <LogoHeader>Instagram</LogoHeader>
+                <Link to={`/`}>
+                    <LogoHeader>Instagram</LogoHeader>
+                </Link>
             </LogoAndText>
             <div>
             <form className="search">
