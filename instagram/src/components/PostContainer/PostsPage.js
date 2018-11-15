@@ -23,8 +23,8 @@ class PostsPage extends React.Component {
   // }
 
   hydrateStateWithLocalStorage() {
-    if (localStorage.getItem('data')) {
-      this.setState({ data: JSON.parse(localStorage.getItem('data')) });
+    if (localStorage.getItem("data")) {
+      this.setState({ data: JSON.parse(localStorage.getItem("data")) });
     }
     // for (let key in this.state) {
     //   if (localStorage.hasOwnProperty(key)) {
@@ -42,12 +42,12 @@ class PostsPage extends React.Component {
   }
 
   componentDidMount() {
-    console.log('mounting');
     if (localStorage.getItem("data")) {
-      console.log('hydrating');
       this.hydrateStateWithLocalStorage();
     } else {
-      this.setState({ data: dummyData, filteredPosts: dummyData }, () => localStorage.setItem('data', JSON.stringify(this.state.data)));
+      this.setState({ data: dummyData, filteredPosts: dummyData }, () =>
+        localStorage.setItem("data", JSON.stringify(this.state.data))
+      );
       // this.setState({ filteredPosts: dummyData });
       // localStorage.setItem(('data', this.state.data));
     }
@@ -74,51 +74,55 @@ class PostsPage extends React.Component {
     );
   };
 
-  filterPosts = () => {
+  filterPosts = e => {
     // if (this.state.searchText === "") {
     //   this.setState({ filteredPosts: this.state.data });
     // } else {
+    if (this.state.searchText.trim().length > 0) {
+      console.log(this.state.searchText.trim().length);
       const filteredPosts = this.state.data.filter(d => {
         if (d.username.includes(this.state.searchText)) {
           return d;
         }
       });
       this.setState({ filteredPosts: filteredPosts });
-    // }
-  }
+      // }
+    } else {
+      this.setState({ filteredPosts: this.state.data });
+    }
+  };
 
   toggleLikes = id => {
-    console.log('click');
+    console.log("click");
     console.log(id);
     // console.log(e.target.parentElement);
     const newData = this.state.data.map(d => {
       if (d.id === id) {
         console.log(d);
-
       }
-    })
-  //   if (this.state.liked) {
-  //   this.setState((prevState) => {
-  //     return {likes: prevState.likes + 1}
-  //   })
-  // } else {
-  //   this.setState((prevState => {
-  //     return {likes: prevState.likes -1}
-  //   }))
-  // }
-  //   this.setState({ liked: !this.setState.liked})
-  }
+    });
+    //   if (this.state.liked) {
+    //   this.setState((prevState) => {
+    //     return {likes: prevState.likes + 1}
+    //   })
+    // } else {
+    //   this.setState((prevState => {
+    //     return {likes: prevState.likes -1}
+    //   }))
+    // }
+    //   this.setState({ liked: !this.setState.liked})
+  };
   // increaseLikes = e => {
   //   console.log(e);
-    // const newData = this.state.data.map(d => {
-    //   if (d.id === id) {
-    //     console.log("found");
-    //     d.likes++;
-    //     return d;
-    //   } else return d;
-    // });
-    // this.setState({ data: newData });
-    // console.log(this.state.data);
+  // const newData = this.state.data.map(d => {
+  //   if (d.id === id) {
+  //     console.log("found");
+  //     d.likes++;
+  //     return d;
+  //   } else return d;
+  // });
+  // this.setState({ data: newData });
+  // console.log(this.state.data);
   // };
 
   logout = e => {
@@ -129,7 +133,8 @@ class PostsPage extends React.Component {
   };
 
   render() {
-    const posts = this.state.searchText === '' ? this.state.data : this.state.filteredPosts;
+    const posts =
+      this.state.searchText === "" ? this.state.data : this.state.filteredPosts;
     return (
       <div>
         <SearchBar

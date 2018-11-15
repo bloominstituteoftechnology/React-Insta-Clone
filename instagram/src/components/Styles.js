@@ -11,11 +11,30 @@ export const StyledSearchBarContainer = styled.div`
   border-radius: 4px;
 `;
 
-export const StyledSearchBar = styled.input`
-  /* width: 30%; */
-  border-radius: 8px;
-  padding: 5px;
+export const SearchForm = styled.form`
+  width: 30%;
 `;
+
+export const SearchBarLeft = styled.div`
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid red;
+  width: 10%;
+`;
+
+export const SearchBarRight = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 15%;
+`;
+
+export const StyledSearchBar = styled.input`
+  border-radius: 8px;
+  padding: 8px;
+  width: 100%;
+`;
+
+
 
 export const StyledPost = styled.div`
   max-width: 40%;
