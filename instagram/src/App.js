@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import dummyData from "./dummy-data";
 import PostsPage from "./components/PostContainer/PostsPage";
 import Authenticate from "./components/Authentication/Authenticate";
 // import Login from "./components/Login/Login";
@@ -18,7 +17,6 @@ class App extends Component {
   }
 
   saveStatetoLocalStorage() {
-    console.log('saving');
     for (let key in this.state) {
       localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
@@ -81,17 +79,17 @@ class App extends Component {
   //   }
   // };
 
-  logout = e => {
-    e.preventDefault();
-    localStorage.removeItem("username");
-    localStorage.removeItem("password");
-    localStorage.setItem('loggedIn', 'false');
-    // this.setState({ username: "", password: "", loggedIn: false });
-  };
+  // logout = e => {
+  //   e.preventDefault();
+  //   localStorage.removeItem("username");
+  //   localStorage.removeItem("password");
+  //   localStorage.setItem('loggedIn', 'false');
+  //   // this.setState({ username: "", password: "", loggedIn: false });
+  // };
 
-  updateSearchText = e => {
-    this.setState({ searchText: e.target.value });
-  };
+  // updateSearchText = e => {
+  //   this.setState({ searchText: e.target.value });
+  // };
 
   increaseLikes = (id) => {
     console.log(id);

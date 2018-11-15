@@ -9,7 +9,7 @@ const SearchBar = props => {
       <StyledSearchBarContainer>
         <Instagram />
       <img id="instagram" src={instagram} alt=""/>
-      <form >
+      <form onSubmit={props.filterPosts}>
       <StyledSearchBar
       type="text" 
       value={props.searchText} 

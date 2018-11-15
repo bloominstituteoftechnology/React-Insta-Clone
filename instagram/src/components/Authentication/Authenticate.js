@@ -11,7 +11,7 @@ const Authenticate = Component =>
     }
 
     componentDidMount() {
-      if (localStorage.getItem("username")) {
+      if (localStorage.getItem("username") && localStorage.getItem('password')) {
         this.setState({
           loggedIn: true,
         });
@@ -24,7 +24,6 @@ const Authenticate = Component =>
     }
 
     render() {
-      console.log("auth");
       // return this.state.loggedIn ? <App /> : <Login login={this.login} />;
       // return <Component />;
       if (this.state.loggedIn) return <Component />;

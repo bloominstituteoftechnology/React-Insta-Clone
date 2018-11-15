@@ -10,12 +10,12 @@ class CommentSection extends React.Component {
       comments: props.comments,
       newComment: '',
       likes: 0,
+      username: ''
     };
   }
 
   componentDidMount() {
-    // get added comments from local storage
-    // append them to the proper posts
+    this.setState({ username: localStorage.getItem('username') })
   }
 
   increaseLikes = e => {
@@ -32,7 +32,7 @@ class CommentSection extends React.Component {
     console.log(idx);
     e.preventDefault();
     this.setState({ comments: [...this.state.comments, {
-      username: this.props.username,
+      username: this.state.username,
       text: this.state.newComment}],
       newComment: '', });
   };

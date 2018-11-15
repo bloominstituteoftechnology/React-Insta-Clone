@@ -14,9 +14,44 @@ class PostsPage extends React.Component {
     };
   }
 
+  saveStatetoLocalStorage() {
+    console.log("saving");
+    for (let key in this.state) {
+      localStorage.setItem(key, JSON.stringify(this.state[key]));
+    }
+  }
+
+  hydrateStateWithLocalStorage() {
+    for (let key in this.state) {
+      if (localStorage.hasOwnProperty(key)) {
+        let value = localStorage.getItem(key);
+
+        try {
+          value = JSON.parse(value);
+          this.setState({ [key]: value });
+        } catch (e) {
+          this.setState({ [key]: value });
+        }
+      }
+    }
+  }
+
   componentDidMount() {
     this.setState({ data: dummyData });
     this.setState({ filteredPosts: dummyData });
+    window.addEventListener(
+      "beforeunload",
+      this.saveStatetoLocalStorage.bind(this)
+    );
+    // this.hydrateStateWithLocalStorage();
+  }
+
+  componentDidUpdate() {
+    for (let key in this.state) {
+      if (localStorage.getItem(key) !== this.state[key]) {
+        localStorage.setItem(key, JSON.stringify(this.state[key]));
+      }
+    }
   }
 
   updateSearchText = e => {
@@ -24,24 +59,18 @@ class PostsPage extends React.Component {
     this.filterPosts();
   };
 
-  filterPosts = e => {
+  filterPosts() {
     if (this.state.searchText === "") {
       this.setState({ filteredPosts: this.state.data });
     } else {
-      const posts = this.state.data.filter(d => {
+      const filteredPosts = this.state.data.filter(d => {
         if (d.username.includes(this.state.searchText)) {
           return d;
-        };
+        }
       });
-      //   if (this.state.searchText === '') return this.state.data;
-      //   else return (
-      //     this.state.data.filter(d =>
-      //     d.username.includes(this.state.searchText)
-      //   )
-      // )
-      this.setState({ filteredPosts: posts });
+      this.setState({ filteredPosts: filteredPosts });
     }
-  };
+  }
 
   increaseLikes = id => {
     const newData = this.state.data.map(d => {
@@ -54,13 +83,12 @@ class PostsPage extends React.Component {
   };
 
   logout = e => {
-    console.log('click');
+    console.log("click");
     e.preventDefault();
     localStorage.removeItem("username");
     localStorage.removeItem("password");
-    localStorage.setItem('loggedIn', 'false');
     window.location.reload();
-  }
+  };
 
   render() {
     return (

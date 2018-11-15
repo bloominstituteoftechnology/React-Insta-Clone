@@ -2,7 +2,7 @@ import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
 import { Heart, MessageCircle } from "react-feather";
 import PropTypes from "prop-types";
-import { StyledPost, UserDiv, IconBar, Thumbnail, UserName, TimeStamp, LikeCounter } from "../Styles.js";
+import { StyledPost, UserDiv, IconBar, Thumbnail, UserName, TimeStamp, LikeCounter, ContentContainer } from "../Styles.js";
 import moment from "moment";
 
 class PostContainer extends React.Component {
@@ -26,6 +26,7 @@ class PostContainer extends React.Component {
             <UserName> {this.state.post.username} </UserName>
           </UserDiv>
           <img src={this.state.post.imageUrl} alt="" />
+          <ContentContainer>
           <IconBar>
             <Heart onClick = {() => {this.props.increaseLikes(this.props.id)}} />
             <MessageCircle />
@@ -33,6 +34,7 @@ class PostContainer extends React.Component {
           <LikeCounter>{this.props.post.likes} likes</LikeCounter>
           <CommentSection comments={this.state.post.comments} username={this.state.username}/>
           <TimeStamp>{moment(this.state.post.timestamp, "MMMM Do YYYY, h:mm:ss").fromNow()}</TimeStamp>
+          </ContentContainer>
         </StyledPost>
       </div>
     );

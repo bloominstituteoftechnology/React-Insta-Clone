@@ -15,13 +15,19 @@ class Login extends React.Component {
   };
 
   handleSubmit = e => {
+    e.preventDefault();
     const user = this.state.username;
+    const password = this.state.password;
     localStorage.setItem('username', user);
-    window.location.reload();
+    localStorage.setItem('password', password);
+    
+    // ensure password and username are not blank before reloading
+    if (this.state.username && this.state.password) {
+      window.location.reload();
+    }
   }
 
   render() {
-    console.log('login');
   return (
     <LoginForm onSubmit={this.handleSubmit}>
       <h2>InstaClone</h2>

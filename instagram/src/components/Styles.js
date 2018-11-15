@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledSearchBarContainer = styled.div`
-  width: 40%;
+  width: 45%;
   border: 1px solid blue;
   background-color: #7073ec;
   display: flex;
@@ -26,20 +26,20 @@ export const StyledPost = styled.div`
   padding: 0 60px;
 
   &>img {
-    max-width: 80%;
+    max-width: 70%;
     height: auto;
   }
 `;
 
 export const UserDiv = styled.div`
   text-align: left;
-  margin-left: 5%;
+  margin-left: 12%;
   display: flex;
   align-items: center;
 `;
 
 export const IconBar = styled.div`
-  margin: 10px 0 0 60px;
+  margin: 10px 0;
   display: flex;
   justify-content: flex-start;
 `;
@@ -57,7 +57,7 @@ export const UserName = styled.h2`
 
 export const StyledCommentSection = styled.div`
   text-align: left;
-  margin-left: 60px;
+  /* margin-left: 60px; */
 
   span {
     font-weight: bold;
@@ -67,12 +67,12 @@ export const StyledCommentSection = styled.div`
 export const TimeStamp = styled.p`
   color: #504a4a;
   text-align: left;
-  margin-left: 60px;
+  /* margin-left: 60px; */
 `;
 
 export const LikeCounter = styled.p`
   text-align: left;
-  margin-left: 60px;
+  /* margin-left: 60px; */
   margin-top: 0;
   font-weight: bold;
   `;
@@ -83,6 +83,11 @@ export const AddCommentBar = styled.input`
   width: 80%;
 
 `;
+
+export const ContentContainer = styled.div`
+  margin-left: 15%;
+
+  `;
 export const LoginForm = styled.form`
   width: 40%;
   margin: 0 auto;
