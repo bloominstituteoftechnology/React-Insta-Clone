@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Form, FormGroup, Col, Button, FormControl } from 'react-bootstrap';
+import './Login.css';
 
 class LoginForm extends React.Component  {
     constructor(){
@@ -29,18 +31,38 @@ class LoginForm extends React.Component  {
 
  render(){
     return (
-        <div className="login-form">
-          <form onSubmit={this.storeUsersInput}>
-            <label for="username">Username</label>
-            <input type="text" id="username" placeholder="Enter your username" value={this.state.username} onChange={this.handleUsernameChange}/> 
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter your password" value={this.state.password} onChange={this.handlePasswordChange}/>
-            <button type="submit">Login</button>
-          </form>
+        <div className="form-wrapper" >
+            <h2>Instagram</h2>
+            <div className="login-form">
+                <Form horizontal onSubmit={this.storeUsersInput}>
+                    <FormGroup controlId="formHorizontalUsername">
+                        <Col sm={12}>
+                            <FormControl className="login-input" type="text" placeholder="Username" value={this.state.username} onChange={this.handleUsernameChange} />
+                        </Col>
+                    </FormGroup>
+
+                    <FormGroup controlId="formHorizontalPassword">
+                        <Col sm={12}>
+                            <FormControl className="login-input" type="password" placeholder="Password" value={this.state.password} onChange={this.handlePasswordChange} />
+                        </Col>
+                    </FormGroup>
+
+                    <FormGroup>
+                        <Col smOffset={0} sm={12}>
+                        <Button className="btn-login" type="submit">Log in</Button>
+                        </Col>
+                    </FormGroup>
+
+                </Form>
+            </div>
+        
         </div>
+
       );
  }
 
+
 };
+
 
 export default LoginForm;
