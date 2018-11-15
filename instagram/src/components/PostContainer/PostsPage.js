@@ -20,9 +20,17 @@ class PostsPage extends Component {
     })
   }
 
+  logout = () => {
+    localStorage.removeItem("username");
+    this.setState({
+      
+    })
+    window.location.reload()
+  }
+
   handleSearchChange = e => {
     let posts = this.state.posts.filter(post => {
-      if(post.username.includes(e.target.value)) {
+      if(post.username.includes(e.target.value.toLowerCase())) {
         return post;
       }
     });return this.setState({ filteredPosts: posts})
@@ -33,6 +41,12 @@ class PostsPage extends Component {
       <div>
         <SearchBarContainer 
             searchPosts={this.handleSearchChange}
+          />
+          <input
+            className="logout"
+            value="LOGOUT"
+            disabled
+            onClick={this.logout}
           />
           <PostContainer 
             data={this.state.filteredPosts.length > 0 ?

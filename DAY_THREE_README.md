@@ -52,7 +52,7 @@ const Authenticate = App =>
   [ x ] - This login function should set a `username` on `localStorage`. You'll need to check local storage to see if a user is logged in.
   [ x ] - Be sure to force the page to reload when a user logs in so that our component un-mounts and mounts again.
 
-[  ] - Extending the functionality of the HOC to conditionally render the `LoginPage` or the `App`
+[ x ] - Extending the functionality of the HOC to conditionally render the `LoginPage` or the `App`
 
   [ x ] - Inside of `Authenticate` we need to add a constructor to hold our state data.
   [ x ] - On state we need a user `loggedIn` boolean flag.

@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding-top: 8.8rem;
+  padding-top: 1.8rem;
 }
 
 .post-card {
@@ -62,4 +62,21 @@
 
 .no-comment {
   display:none
+}
+
+.logout {
+  margin-top: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.logout:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.logout:active {
+  transform: scale(1.08);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
