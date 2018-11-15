@@ -7,15 +7,15 @@ import Fuse from 'fuse.js';
 import Authenticate from './Authentication/Authenticate';
 
 const AppContainer = styled.div`
-  margin-top: 50px;
+  margin-top: 80px;
 `
 const LogOutButton = styled.button`
   background-color: white;
   font-size: 20px;
   padding: 3px 10px;
   position: fixed;
-  top: 10px;
-  right: 10%;
+  top: 55px;
+  right: 10px;
   z-index: 2;
   cursor: pointer;
 `
@@ -59,6 +59,7 @@ class PostPage extends React.Component {
           })
         })
       }
+      
       else{
       const options = {threshold: 0.5, keys: ['username'],minMatchCharLength: 2,shouldSort: true};
       const fuse = new Fuse(this.state.posts,options);
@@ -86,6 +87,7 @@ class PostPage extends React.Component {
           <SearchForm searchText={this.state.searchText}
           handleChange={this.handleChange}
           searchItems={this.searchItems}
+          // logOut={this.props.logout}
           // clearSearch={this.clearSearch}
           />
   

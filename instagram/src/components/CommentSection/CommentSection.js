@@ -6,6 +6,7 @@ import styled from 'styled-components';
 const CommentsContainer = styled.div`
     width: 100%;
     box-sizing: border-box;
+    border-top: 1px solid lightgray;
 
     form {
         input {
@@ -72,7 +73,7 @@ class CommentSection extends Component {
                     return <Comment thisComment={comment} key={index} index={index} onClick={this.deleteComment} />
                 })}
                 <form onSubmit={this.addNewComment} >
-                    <input onChange={this.handleChange} placeholder={`add new comment`} name='commentText' value={this.state.commentText} />
+                    <input onChange={this.handleChange} placeholder={`add new comment...`} name='commentText' value={this.state.commentText} />
                 </form>
             </CommentsContainer>
         );

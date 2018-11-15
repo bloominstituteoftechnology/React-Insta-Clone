@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import * as Icon from 'react-feather';
 
 const Post = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    border: 1px solid black;
+    border: 1px solid lightgray;
+    border-radius: 5px;
     margin: 30px auto;
     width: 640px;
 
@@ -44,7 +46,8 @@ class PostContainer extends Component {
     constructor(props){
         super(props);
         this.state = {
-            likes: 0
+            likes: 0,
+            isLiked: false,
         }
     }
 
@@ -55,7 +58,13 @@ class PostContainer extends Component {
     }
 
     addLike = () => {
-        this.setState({likes: this.state.likes+1})
+        if(!this.state.isLiked){
+            this.setState({likes: this.state.likes+1, isLiked: true})
+        }
+        else{
+            this.setState({likes: this.state.likes-1, isLiked: false})
+        }
+        
     }
 
     render(){
@@ -64,7 +73,9 @@ class PostContainer extends Component {
         <h2><img src={this.props.thisPost.thumbnailUrl} alt={this.props.thisPost.thumbnailUrl} />{this.props.thisPost.username}<p>{this.props.thisPost.timestamp}</p></h2>
         <img src={this.props.thisPost.imageUrl} alt={this.props.thisPost.imageUrl} />
         
-        <p className={`point`} onClick={this.addLike}>{this.state.likes} likes</p>
+        <p className={`point`} onClick={this.addLike}>
+            <Icon.Heart fill={this.state.isLiked ? "red" : "none"} />{this.state.likes} likes
+        </p>
         <CommentSection thisPost={this.props.thisPost} postIndex={this.props.index} userName={this.props.userName}/>
     </Post>
         )
