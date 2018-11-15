@@ -23,6 +23,13 @@ class Login extends Component {
         this.setState({
             ...this.state,
             [event.target.name]: event.target.value
+        }, () => {
+            if (this.state.usernameText !== '') {
+                document.querySelector('.loginbutton').style.backgroundColor = '#5097E9';
+            }
+            else if (this.state.usernameText === '') {
+                document.querySelector('.loginbutton').style.backgroundColor = '#CBE0F8';
+            }
         })
     }
 
@@ -33,7 +40,7 @@ class Login extends Component {
                     <img src="instagram_logo.svg" alt="logo"></img>
                     <input onChange={this.changeHandler} name="usernameText" className="login-input" type="text" value={this.state.usernameText} placeholder="Phone number, username, or email" />
                     <input onChange={this.changeHandler} name="passwordText" className="password-input" type="password" value={this.state.passwordText} placeholder="Password" />
-                    <button type="submit">Log in</button>
+                    <button className="loginbutton" type="submit">Log in</button>
                     <div className="orfacebook">
                         <div className="orfacebook-line"></div>
                         <div className="orfacebook-or">OR</div>
