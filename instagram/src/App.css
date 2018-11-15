@@ -76,15 +76,10 @@ table {
 
 
 .search-bar-container {
-  border-bottom: 1px solid #EDEDED;
+  
 }
 
-.search-bar-container .search-bar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-}
+
 
 .search-bar-container .search-bar .logo-container {
   display: flex;

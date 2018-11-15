@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styled from 'styled-components'
 import Login from './components/Login/Login';
 import dummyData from "./dummy-data";
 import Authenticate from './Authentication/Authenticate';
