@@ -24,7 +24,11 @@
     margin-top: 16px;
   }
 
-.login-form .login-input {
+.login-form .input-container {
+    position: relative;
+}
+
+.login-form .input-container .login-input {
     width: 27rem;
     height: 3.5rem;
     border: 1px solid #F4F4F4;
@@ -34,12 +38,33 @@
     font-size: 1.2rem;
 }
 
-.login-form .input-username {
+.login-form .input-container .input-username {
     margin-top: 3px;
 }
 
-.login-form .input-password {
+.login-form .input-container .input-password {
     margin-top: 5px;
+}
+
+.login-form .input-container label {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    font-size: 1.3rem;
+    color: #B2B2B2;
+    transition: 0.5s;
+}
+
+.input-container input:focus, .input-container input:valid {
+    font-size: 1rem;
+    padding-top: 10px;
+}
+
+.input-container input:focus + label, .input-container input:valid + label {
+    top: 2px;
+    left: 0;
+    font-size: 1rem;
+    transform: translate(4%, 50%);
 }
 
 .login-form .login-button {
