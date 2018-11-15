@@ -67,10 +67,10 @@ class Authenticate extends React.Component {
           localStorage.setItem('usrLoggedIn', JSON.stringify(usrLogin));
         } else if (user.username.toUpperCase() === this.state.usrname.toUpperCase() && user.password !== this.state.usrpwd){
           // incorrect password message
+        } else {
+          // username/password not recognized
         }
       });
-
-      
     }
 
     render() {

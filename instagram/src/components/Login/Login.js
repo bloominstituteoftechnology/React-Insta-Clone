@@ -1,6 +1,11 @@
 import React from 'react';
+import styled from "styled-components";
 // import PropTypes from 'prop-types';
 import './Style.css';
+
+const LoginButton = styled.input`
+  &:hover {background-color: lightgreen}
+`;
 
 const Login = props => {
   return (
@@ -24,7 +29,7 @@ const Login = props => {
           onChange={props.changeHandler}
         />
       </div>
-      <input className="login-btn" type="submit" placeholder="Login" />
+      <LoginButton className="login-btn" type="submit" placeholder="Login" />
     </form>
   </div>
   );
