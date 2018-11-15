@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './SearchBar.css';
+// import './SearchBar.css';
+import {Header, SearchbarContainer, ContainerFlex} from './SearchBarStyled';
 import SearchBarLogoContainer from './SearchBarLogoContainer';
 import SearchBarForm from './SearchBarForm';
 import IconsContainer from './SearchBarIconsContainer';
@@ -8,15 +9,15 @@ import IconsContainer from './SearchBarIconsContainer';
 const SearchBar = props => {
 
         return (
-            <div className="container">
-                <div className="searchbar-container">
-                    <div className="container-flex">
+            <Header>
+                <SearchbarContainer>
+                    <ContainerFlex>
                         <SearchBarLogoContainer />
                         <SearchBarForm filter={props.filter} handleInputChange={props.handleInputChange}/>
                         <IconsContainer />
-                    </div>
-                </div>
-            </div>
+                    </ContainerFlex>
+                </SearchbarContainer>
+            </Header>
         );
 
 };

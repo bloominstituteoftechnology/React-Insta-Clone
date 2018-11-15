@@ -1,7 +1,8 @@
 import React from 'react';
 import Post from './Post';
 
-import './PostContainer.css';
+// import './PostContainer.css';
+
 
 
 const PostList = props => {
@@ -14,9 +15,9 @@ const PostList = props => {
 
 
   return (
-    <div className="post-container">
+    <React.Fragment>
         {posts}
-    </div>
+    </React.Fragment>
   );
 };
 

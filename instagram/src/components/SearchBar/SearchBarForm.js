@@ -1,4 +1,5 @@
 import React from 'react';
+import {Input} from './SearchBarStyled';
 
 const SearchBarForm = props => {
 
@@ -7,12 +8,12 @@ const SearchBarForm = props => {
   return (
     <div>
       <form >
-        <input 
-          className="input-text fas fa-search"
+        <Input 
+          className="fas fa-search"
           type="text"
           placeholder="&#xf002; Search"
           value={props.filter}
-          onChange={props.handleInputChange}/>
+          onChange={props.handleInputChange}></Input>
       </form>
     </div>
   );

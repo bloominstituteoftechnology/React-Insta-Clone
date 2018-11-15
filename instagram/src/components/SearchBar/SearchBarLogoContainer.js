@@ -1,12 +1,12 @@
 import React from 'react';
-
+import {LogoHeader, LogoImage , LogoHeading} from './SearchBarStyled';
 
 const SearchBarLogoContainer = () => {
   return (
-    <div className="logo-container">
-        <p><i className="fab fa-instagram"></i></p>
-        <p className="logo-container-heading">Instagram</p>
-    </div>
+    <LogoHeader>
+        <LogoImage><i className="fab fa-instagram"></i></LogoImage>
+        <LogoHeading>Instagram</LogoHeading>
+    </LogoHeader>
   );
 };
 
