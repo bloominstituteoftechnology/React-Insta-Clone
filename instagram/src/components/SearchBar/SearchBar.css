@@ -11,4 +11,29 @@
 .header {
     display: flex;
     align-items: center;
+    /* border: 2px solid red; */
+    width: 27%;
+    justify-content: space-between;
 }
+
+.line-divider {
+    font-weight: lighter;
+}
+
+.search {
+    border: 1px solid lightgray;
+    width: 25%;
+    background-color: #fafafa;
+    padding: .5% 0;
+    border-radius: 2px;
+    color: gray;
+    
+}
+
+.navigation {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+}
+

@@ -39,13 +39,16 @@ class PostContainer extends React.Component {
                             </div>
                             
                         </div>
-                        <div className="likes">
-                            {this.props.propsInPC.likes}
-                        </div>
+                        
+                            <h4 className="likes">{this.props.propsInPC.likes} likes</h4>
+                        
                         <div className="comments">
-                            {<CommentSection commentSection={this.props.propsInPC.comments}/> }
-                        </div>  
-                        <h5 class="post-time">2 HOURS AGO</h5>
+                            <div className="comment">
+                                {<CommentSection commentSection={this.props.propsInPC.comments}/> }
+                            </div>  
+                        </div>
+                        
+                        <h5 className="post-time">2 HOURS AGO</h5>
                         <div className="new-comment">
                             <div className="add-comment">
                                 <h3>Add a comment...</h3>

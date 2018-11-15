@@ -9,7 +9,7 @@ const CommentContainer = props => {
         <div className="cusername">
           {props.propsInCC.username}
         </div>
-        <div classname="text">
+        <div className="text">
           {props.propsInCC.text}
         </div>
         

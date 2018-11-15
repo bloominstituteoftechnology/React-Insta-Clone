@@ -8,13 +8,15 @@ const SearchBar = props => {
         <div className="search-bar">
             <div className="header">
                 <FeatherIcon className="IG-logo" icon="instagram" />
+                <h1 className="line-divider">|</h1>
+                {/* <img src="instagram.png"></img> */}
                 <h1>Instagram</h1>
             </div>
             
 
-            <div className="search">
-                <input type="text" placeholder="Search"></input>
-            </div>
+            
+                <h4 className="search">Search</h4>
+            
             
 
 
