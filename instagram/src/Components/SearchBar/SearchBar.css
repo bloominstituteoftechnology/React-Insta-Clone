@@ -34,11 +34,9 @@
   text-align: left;
 }
 
-
 .search-bar input:placeholder-shown {
   text-align: center;
 }
-
 
 input:focus::placeholder {
   content: 'search';
@@ -57,10 +55,6 @@ input:focus {
   width: 12%;
 }
 
-.fontAwesome {
-  font-family: 'Helvetica', FontAwesome, sans-serif;
-}
-
 .instagram-icon {
   width: 50px;
   height: auto;
@@ -72,26 +66,4 @@ input:focus {
   width: 100px;
   height: auto;
   padding-left: 20px;
-}
-
-.search-input {
-  border: 1px solid red;
-}
-
-.testing {
-  border: 1px solid red;
-  width: 50px;
-  height: 20px;
-  text-align: left;
-}
-
-.testing:before {
-  border: 1px solid green;
-
-  content: '\f002';
-}
-
-.testing:after {
-  border: 1px solid yellow;
-  content: 'h';
 }

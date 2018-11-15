@@ -2,6 +2,11 @@ import React from 'react';
 import './CommentSection.css'
 import Comments from './Comments'
 import CommentInput from './CommentInput.js'
+import styled from 'styled-components';
+
+const CommentsContainer = styled.div`
+
+`
 
 class CommentSection extends React.Component {
   constructor(props) {
