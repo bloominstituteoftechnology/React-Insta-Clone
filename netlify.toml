@@ -1,3 +1,7 @@
 [build]
 
-base = "instagram"
+base = "instagram/"
+
+publish="instagram/build/"
+
+command="yarn build"
