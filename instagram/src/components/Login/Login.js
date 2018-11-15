@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, Route } from "react-router-dom";
+import App from "../../App";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import SearchBar from "../SearchBar/SearchBar";
 import "./Login.css";
@@ -38,13 +39,15 @@ class Login extends Component {
     ev.preventDefault();
     const username = this.state.username;
     localStorage.setItem("username", username);
-    this.setState({ isLoggedIn: true });
+    this.props.log();
+    // this.setState({ isLoggedIn: true });
+    // return <Route path="/" component={App} />;
   };
 
   render() {
-    if (this.state.isLoggedIn) {
-      return <Redirect to="/home" />;
-    }
+    // if (this.state.isLoggedIn) {
+    //   return <Redirect to="/home" />;
+    // }
     return (
       <LoginContainer>
         <SearchBar />

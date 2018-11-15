@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "../Login/Login";
+import { Redirect } from "react-router-dom";
 
 const Authenticate = App =>
   class extends React.Component {
@@ -22,7 +23,7 @@ const Authenticate = App =>
 
     render() {
       if (this.state.isLoggedIn) return <App />;
-      return <Login login={this.login} />;
+      return <Login log={this.login} />;
     }
   };
 

@@ -11,8 +11,8 @@ import Authenticate from "./components/Authentication/Authenticate";
 ReactDOM.render(
   <Router>
     <div>
-      <Route exact path="/" component={Login} />
-      <Route path="/home" component={Authenticate(App)} />
+      <Route exact path="/" component={Authenticate(App)} />
+      <Route path="/login" component={Login} />
     </div>
   </Router>,
   document.getElementById("root")
