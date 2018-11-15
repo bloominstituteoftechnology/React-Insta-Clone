@@ -1,48 +1,56 @@
-import React, { Component } from "react";
-import dummyData from "./dummy-data";
-import PostContainer from "./Components/PostContainer/PostContainer";
-import SearchBar from "./Components/SearchBar/SearchBar";
-import CommentSection from "./Components/CommentSection/CommentSection";
-import "./App.css";
+import React from 'react';
+import Authenticate from './Components/Auth/Auth';
+import PostsPage from './Components/PostContainer/PostsPage';
+import './App.css';
+const App = () => <PostsPage />;
 
-class App extends Component {
-  constructor() {
-    super();
+export default Authenticate(App);
 
-    this.state = {
-      posts: []
-    };
-  }
+// import React, { Component } from "react";
+// import dummyData from "./dummy-data";
+// import PostContainer from "./Components/PostContainer/PostContainer";
+// import SearchBar from "./Components/SearchBar/SearchBar";
+// import CommentSection from "./Components/CommentSection/CommentSection";
+// import "./App.css";
 
-  componentDidMount() {
-    this.setState({ posts: dummyData });
-  }
+// class App extends Component {
+//   constructor() {
+//     super();
 
-  searchHandler = event => {};
+//     this.state = {
+//       posts: []
+//     };
+//   }
 
-  render() {
-    return (
-      <div className="App">
-        <div className="wrapper">
-          <header>
-            <div className="instaclone-logo">
-              <i className="fab fa-instagram" />
-              <p>Instagram</p>
-            </div>
-            <SearchBar searchHandler={this.searchHandler} />
-            <div className="social-icons">
-              <i className="far fa-compass" />
-              <i className="far fa-heart" />
-              <i className="far fa-user" />
-            </div>
-          </header>
-          <div className="posts-wrapper">
-            <PostContainer data={this.state.posts} />
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
+//   componentDidMount() {
+//     this.setState({ posts: dummyData });
+//   }
 
-export default App;
+//   searchHandler = event => {};
+
+//   render() {
+//     return (
+//       <div className="App">
+//         <div className="wrapper">
+//           <header>
+//             <div className="instaclone-logo">
+//               <i className="fab fa-instagram" />
+//               <p>Instagram</p>
+//             </div>
+//             <SearchBar searchHandler={this.searchHandler} />
+//             <div className="social-icons">
+//               <i className="far fa-compass" />
+//               <i className="far fa-heart" />
+//               <i className="far fa-user" />
+//             </div>
+//           </header>
+//           <div className="posts-wrapper">
+//             <PostContainer data={this.state.posts} />
+//           </div>
+//         </div>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
