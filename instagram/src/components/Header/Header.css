@@ -1,5 +1,5 @@
 .header {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     max-width: 1000px;
     width: 100%;
@@ -11,35 +11,35 @@
     margin-bottom: 20px;
     position: fixed;
     top: 0px;
-    background: rgba(255, 255, 255, 0.975);
+    background: rgba(255, 255, 255, 0.975); */
 }
 
 .header__logo {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     align-items: flex-start;
     min-width: 150px;
     font-size: 3rem;
-    margin-left: 10px;
+    margin-left: 10px; */
 }
 
 .header__logo--img {
-    max-height: 30px;
-    width: auto;
+    /* max-height: 30px;
+    width: auto; */
 }
 
 .words {
-    margin-top: 3px;
+    /* margin-top: 3px; */
 }
 
 .logo {
-    margin-top: 2px;
+    /* margin-top: 2px; */
 }
 
 .header__menu {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     min-width: 150px;
     font-size: 3rem;
-    margin-right: 10px;
+    margin-right: 10px; */
 }

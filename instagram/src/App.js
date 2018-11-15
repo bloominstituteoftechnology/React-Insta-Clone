@@ -18,25 +18,24 @@ class App extends Component {
   }
 
   logOut(){
-    localStorage.setItem('user', 'nope');
-
+    localStorage.setItem('user', 'nope')
     this.setState({
-      logedInUser: ''
+      logedInUser : ''
     })
-  }
+  };
 
   componentDidMount(){
     this.setState({
      data: dummyData 
     })
-  }
+  };
 
   handleInputChange = event => {
     this.setState({
       [event.target.name]: event.target.value
       });
 
-  }
+  };
 
   handleInputChangeComment = event => {
     let copy = this.state.commentText.slice()
