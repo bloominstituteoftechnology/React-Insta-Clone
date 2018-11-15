@@ -41,6 +41,8 @@ class PostsPage extends Component {
     }  
 	};
 
+  
+ 
 
 	render() {
     console.log( this.state.posts.filter((post) => {

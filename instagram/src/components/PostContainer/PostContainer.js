@@ -16,6 +16,7 @@ const PostContainer = (props) => {
 						timestamp={post.timestamp}
 						image={post.imageUrl}
 						likes={post.likes}
+						handleLike={props.handleLike}
 					/>
 					<CommentSection
 						comments={post.comments}
