@@ -74,3 +74,11 @@ export const PostInteractSection = styled.div
   }
 
 `;
+
+export const PostImage = styled.img
+`
+
+  width: 100%;
+  height: auto;
+
+`;

@@ -4,7 +4,7 @@ import moment from 'moment';
 
 import CommentSection from '../CommentSection/CommentSection';
 
-import {PostingContainer, PostHeader, PostInteractSection} from './PostContainerStyles';
+import {PostingContainer, PostHeader, PostInteractSection, PostImage} from './PostContainerStyles';
 
 export default function PostContainer({data, addComment, removeComment, addLike, currentUser, id}) {
 
@@ -21,7 +21,7 @@ export default function PostContainer({data, addComment, removeComment, addLike,
 
       </PostHeader>
 
-      <img className='post-img' src={imageUrl} alt='post'></img>
+      <PostImage src={imageUrl} alt='post'></PostImage>
 
       <PostInteractSection>
 
