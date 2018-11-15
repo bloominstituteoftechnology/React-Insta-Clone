@@ -20,25 +20,25 @@ class App extends Component {
     });
   }
 
-  handleSearch = ev => {
+  filterSearch = ev => {
     ev.preventDefault();
-    let userName = this.state.searchText;
-    let posts = this.state.data.filter(post =>
-      post.username.includes(userName)
-    );
+
     this.setState({
-      searchText: ev.target.value,
-      data: posts
+      searchText: ev.target.value
     });
   };
 
   render() {
+    let posts = this.state.data.filter(post =>
+      post.username.includes(this.state.searchText)
+    );
+
     return (
       <div className="App">
         <PostsPage
-          handleSearch={this.handleSearch}
+          filterSearch={this.filterSearch}
           searchText={this.state.searchText}
-          postsData={this.state.data}
+          postsData={posts}
           commentText={this.state.commentText}
           handleComment={this.handleComment}
           addComment={this.addComment}

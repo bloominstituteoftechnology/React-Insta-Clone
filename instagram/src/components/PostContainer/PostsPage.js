@@ -6,12 +6,11 @@ const PostsPage = props => {
   return (
     <>
       <SearchBar
-        handleSearch={props.handleSearch}
+        filterSearch={props.filterSearch}
         searchText={props.searchText}
-        searchPosts={props.searchPosts}
       />
       {props.postsData.map((post, idx) => {
-        return <PostContainer post={post} key={idx} />;
+        return <PostContainer post={post} key={idx} id={idx} />;
       })}
     </>
   );

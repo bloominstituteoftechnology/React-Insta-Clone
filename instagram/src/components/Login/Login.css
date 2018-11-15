@@ -1,17 +1,32 @@
 .login-page {
-    max-width: 800px;
-    margin: 20% auto;
+  max-width: 800px;
+  margin: 20% auto;
 }
 
 .login-page form {
-    max-width: 80%;
-    text-align: center;
+  max-width: 100%;
+  text-align: center;
+  border: 10px double dodgerblue;
+  padding: 100px 40px;
+  background: rgba(195, 223, 255, 0.39);
+  border-radius: 10px;
 }
 
 input {
-    margin-right: 10px;
+  margin-right: 10px;
+  font-size: 2rem;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
 }
 
-input, button {
-    font-size: 2rem;
+button {
+  margin-right: 10px;
+  font-size: 2rem;
+  padding: 5px 20px;
+  border: 1px solid black;
+  color: white;
+  background: dodgerblue;
+  border-radius: 5px;
+  font-weight: bold;
 }

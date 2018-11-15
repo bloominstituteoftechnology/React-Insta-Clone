@@ -12,7 +12,7 @@ class PostContainer extends Component {
       commentText: "",
       likes: props.post.likes,
       liked: false,
-      id: props.post.id
+      id: props.id
     };
   }
 
@@ -32,10 +32,11 @@ class PostContainer extends Component {
     });
   };
 
-  addLike = (ev, prevState) => {
+  addLike = ev => {
     ev.preventDefault();
     let likes = this.state.likes;
-    let heartIcon = document.querySelector(".likes-container .fa-heart-o");
+    let heartIcon = document.querySelectorAll(".likes-container .heart");
+    heartIcon = Array.from(heartIcon);
 
     this.setState(state => {
       if (this.state.liked === false)
@@ -51,9 +52,13 @@ class PostContainer extends Component {
     });
 
     if (this.state.liked === false) {
-      heartIcon.style.color = "red";
+      heartIcon[this.state.id].classList.remove("fa-heart-o");
+      heartIcon[this.state.id].classList.add("fa-heart");
+      heartIcon[this.state.id].style.color = "red";
     } else {
-      heartIcon.style.color = "black";
+      heartIcon[this.state.id].classList.remove("fa-heart");
+      heartIcon[this.state.id].classList.add("fa-heart-o");
+      heartIcon[this.state.id].style.color = "black";
     }
   };
 
@@ -103,7 +108,7 @@ class PostContainer extends Component {
 
 PostContainer.propTypes = {
   post: PropTypes.shape({
-    comments: PropTypes.arrayOf(PropTypes.string),
+    comments: PropTypes.array,
     imageUrl: PropTypes.string,
     likes: PropTypes.number,
     timestamp: PropTypes.string,
