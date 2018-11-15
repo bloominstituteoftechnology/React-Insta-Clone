@@ -1,48 +1,48 @@
 .post {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     margin: 20px;
     max-width: 640px;
     border: 1px solid lightgrey;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 20px; */
     /* border: 1px solid red; */
 }
 
 .post__top {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 
 .post__top--thumb {
-    border-radius: 100%;
+    /* border-radius: 100%;
     height: 40px;
-    margin: 10px;
+    margin: 10px; */
 }
 
 .post__top--thumb:hover {
-    text-decoration: underline;
-    cursor: pointer;
+    /* text-decoration: underline;
+    cursor: pointer; */
 }
 
 .post__top--user {
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .post__top--user:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .post__img{
-    margin-bottom: 10px;
-    width: 100%;
+    /* margin-bottom: 10px;
+    width: 100%; */
 }
 
 .post__bottom {
-    font-weight: bold;
+    /* font-weight: bold;
     font-size: 2.6rem;
     min-width: 84px;
-    text-align: left;
+    text-align: left; */
 }
 
 .post__bottom--heart{
@@ -55,12 +55,12 @@
 }
 
 .post__bottom--likes {
-    font-size: 1.8rem;
-    margin: 10px;
+    /* font-size: 1.8rem;
+    margin: 10px; */
 }
 
 .post__time {
-    margin: 0 10px;
+    /* margin: 0 10px;
     margin-bottom: 5px;
     color: lightgrey;
     font-weight: bold;
@@ -68,18 +68,18 @@
     padding-bottom: 5px;
     border-bottom: 1px solid lightgrey;
     width: 96.75%;
-    text-align: left;
+    text-align: left; */
 }
 
 
 .post__add-new-comment {
-    width: 96.75%;
-    margin-left: 10px;
+    /* width: 96.75%;
+    margin-left: 10px; */
 }
 
 .post__add-new-comment-input {
     /* padding: 0 10px; */
-    margin-top: 5px;
+    /* margin-top: 5px;
     margin-bottom: 15px;
     font-weight: bold;
     color: grey;
@@ -87,7 +87,7 @@
     text-decoration: none;
     font-size: 1.6rem;
     text-align: left;
-    min-width: 98%;
-    background: 
+    min-width: 98%; */
+    
 }
 

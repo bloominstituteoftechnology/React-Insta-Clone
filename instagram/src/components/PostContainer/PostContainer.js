@@ -56,6 +56,40 @@ const PostBottom = styled.div`
     text-align: left;
 `;
 
+const PostBottomLikes = styled.div`
+    font-size: 1.8rem;
+    margin: 10px;
+`;
+
+const PostTime = styled.div`
+    margin: 0 10px;
+    margin-bottom: 5px;
+    color: lightgrey;
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid lightgrey;
+    width: 96.75%;
+    text-align: left;
+`;
+
+const PostAddNewComment = styled.form`
+    width: 96.75%;
+    margin-left: 10px;
+`;
+
+const PostAddNewCommentInput = styled.input`
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: grey;
+    border: none;
+    text-decoration: none;
+    font-size: 1.6rem;
+    text-align: left;
+    min-width: 98%;
+`;
+
 const PostContainer = props => {
     return (
         <Post>
@@ -69,24 +103,23 @@ const PostContainer = props => {
                     className="far fa-heart post__bottom--heart" 
                     onClick={event => props.addLike(event, props.index)}></div> &nbsp;&nbsp;
                 <div className="far fa-comment"></div>
-                <div className="post__bottom--likes">{props.post.likes} likes</div>
+                <PostBottomLikes>{props.post.likes} likes</PostBottomLikes>
             </PostBottom>
             <CommentsSection 
                 comments={props.post.comments}
                 removeComment={props.removeComment}
                 parentIndex={props.index}
             />
-            <div className="post__time">{moment(props.post.timestamp, "MMMM Do YYYY, hh:mm:ss a").fromNow().toString()}</div>
-            <form className="post__add-new-comment" onSubmit={event => props.addNewComment(event, props.index)}>
-                <input 
-                    className="post__add-new-comment-input"
+            <PostTime>{moment(props.post.timestamp, "MMMM Do YYYY, hh:mm:ss a").fromNow().toString()}</PostTime>
+            <PostAddNewComment onSubmit={event => props.addNewComment(event, props.index)}>
+                <PostAddNewCommentInput 
                     placeholder="Add a comment ..."
                     type="text"
                     name={props.index}
                     value={props.commentText[props.index]}
                     onChange={props.handleInputChangeComment}
                 />           
-            </form>
+            </PostAddNewComment>
         </Post>
     );
 }
