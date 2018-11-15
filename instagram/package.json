@@ -10,7 +10,8 @@
     "prop-types": "^15.6.2",
     "react": "*",
     "react-dom": "*",
-    "react-scripts": "*"
+    "react-scripts": "*",
+    "styled-components": "^4.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 import WarningMessage from './WarningMessage';
-
+import {LoginContainer, LoginHeader, LoginForm, LoginInput, LoginBtn} from './LoginStyles';
 import './LoginPage.scss';
 
 const CryptoJS = require('crypto-js');
@@ -120,15 +120,15 @@ export default class LoginPage extends React.Component {
 
     return (
 
-      <div className='login'>
+      <LoginContainer>
 
-        <h1>{this.state.headerText}</h1>
+        <LoginHeader>{this.state.headerText}</LoginHeader>
 
-        <form onKeyPress={this.handleKeyPress} onSubmit={this.logIn}>
+        <LoginForm onKeyPress={this.handleKeyPress} onSubmit={this.logIn}>
 
           {this.state.showUserMessage ? <WarningMessage text={this.state.userMessage} /> : null}
 
-          <input
+          <LoginInput
             name='user-field'
             type='text'
             placeholder='username'
@@ -140,7 +140,7 @@ export default class LoginPage extends React.Component {
 
           {this.state.showPassMessage ? <WarningMessage text={this.state.passMessage} /> : null}
 
-          <input
+          <LoginInput
             name='pass-field'
             type='text'
             placeholder='password'
@@ -150,12 +150,12 @@ export default class LoginPage extends React.Component {
             required
           />
 
-          <button name='login' type='submit'>Log In</button>
-          <button name='signup' type='submit'>Sign Up</button>
+          <LoginBtn name='login' type='submit'>Log In</LoginBtn>
+          <LoginBtn name='signup' type='submit'>Sign Up</LoginBtn>
 
-        </form>
+        </LoginForm>
 
-      </div>
+      </LoginContainer>
 
     );
 
