@@ -3,7 +3,7 @@ import './util/reset.sass';
 import './App.css';
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
-import Authenticate from './components/Authentication/Authenticate';
+import Authenticate from './components/Authenticate/Authenticate';
 
 class App extends Component {
     constructor() {

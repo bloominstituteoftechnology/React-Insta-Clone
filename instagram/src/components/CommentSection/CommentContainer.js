@@ -7,24 +7,27 @@ class CommentContainer extends Component {
     constructor(props) {
         super();
         this.state = {
-            likes: props.likes,
-            comments: props.comments,
-            index: props.index,
-            commentInput: '',
-            liked: false
+            likes        : props.likes,
+            comments     : props.comments,
+            index        : props.index,
+            commentInput : '',
+            liked        : false
         };
     }
-    addNewComment = event => {
+    addNewComment = (event) => {
         this.setState({
-            comments: [...this.state.comments, { username: 'testingUser', text: event.target[0].value }]
+            comments : [
+                ...this.state.comments,
+                { username: 'testingUser', text: event.target[0].value }
+            ]
         });
     };
-    handleChange = event => {
+    handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value
         });
     };
-    likeHandler = event => {
+    likeHandler = (event) => {
         if (this.state.liked) {
             this.setState({ ...this.state, liked: false, likes: this.state.likes - 1 });
         } else {
@@ -39,8 +42,7 @@ class CommentContainer extends Component {
                         className="icon-heart"
                         onClick={() => {
                             this.likeHandler();
-                        }}
-                    >
+                        }}>
                         {this.state.liked ? <span className="liked" /> : <span />}
                     </div>
                     <div className="icon-comment">
@@ -54,18 +56,14 @@ class CommentContainer extends Component {
                     </div>
                 </div>
                 <p>{this.state.likes}</p>
-                {this.state.comments.map(comment => (
-                    <Comment comment={comment} key={shortid.generate()} />
-                ))}
+                {this.state.comments.map((comment) => <Comment comment={comment} key={shortid.generate()} />)}
                 <form
                     onSubmit={(event, index) => {
-                        event.preventDefault();
                         this.setState({
-                            commentInput: ''
+                            commentInput : ''
                         });
                         this.addNewComment(event, index);
-                    }}
-                >
+                    }}>
                     <input
                         type="text"
                         placeholder="Add a comment..."
