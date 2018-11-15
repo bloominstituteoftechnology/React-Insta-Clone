@@ -1,24 +1,58 @@
 import React, { Component } from 'react';
-import './PostContainer.css';
+// import './PostContainer.css';
 import PropTypes from 'prop-types';
+import styled from 'styled-components'
 
+const PostHeader = styled.div`
+    display: flex   
+`;
+const PostHeadImg = styled.img`
+    width: 50px;
+    height: 50px;
+    margin: 20px 10px 20px 20px;
+    border-radius: 100px;
+`;
+const PostHeadText = styled.h3`
+    align-self: center;
+`;
 
+const Likes = styled.div`
+    text-align: left;   
+    margin-left: 10px;
+`;
+const FooterIcons = styled.div`
+    display: flex;
+    align-items: center;
+`;
+const LikesIcon = styled.h1`
+    margin: 0 10px 0 0;
+    cursor: pointer;
+    user-select: none;
+    ${props => (props.className === "liked" ? `color: red` : `color: black`)}
+
+`;
+const CommentIcon = styled.h1`
+    font-size: 22px;
+`;
 
 
 const Post = props => {
 
     return(
-        <div className='post-img'>
-            <div className='post-header'> 
-                <img src={props.data.thumbnailUrl}/>
-                <h3>{props.data.username}</h3>
-            </div>
+        <div >
+            <PostHeader > 
+                <PostHeadImg src={props.data.thumbnailUrl}/>
+                <PostHeadText>{props.data.username}</PostHeadText>
+            </PostHeader>
             <img src={props.data.imageUrl} />
-            <div className='likes'>
-            <div className='icons'><h1 onClick={props.addLike} id={props.id}>♡</h1><h1 className='comment'>🗨️</h1></div>
+            <Likes >
+            <FooterIcons >
+                <LikesIcon onClick={props.addLike} id={props.id}>♡</LikesIcon>
+                <CommentIcon >🗨️</CommentIcon>
+            </FooterIcons>
                 
                 <p>{props.data.likes} likes</p>
-            </div>
+            </Likes>
             
         </div>
     );

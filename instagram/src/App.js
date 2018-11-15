@@ -11,10 +11,7 @@ class App extends Component {
     })
   }
 
-  login = () => {
-    localStorage.setItem('username', 'anonymous') 
-    this.setState();
-  }
+  
   
 
   render() {
