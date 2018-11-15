@@ -1,6 +1,6 @@
 import React from 'react';
 import './LoginPage.css';
-import logo from '../img/1024px-Instagram_logo.svg.png';
+import logo from '../../img/1024px-Instagram_logo.svg.png';
 
 class LoginPage extends React.Component {
     constructor() {

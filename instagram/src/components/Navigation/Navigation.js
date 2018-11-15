@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
-import logo from '../img/1024px-Instagram_logo.svg.png';
+import logo from '../../img/1024px-Instagram_logo.svg.png';
 import './Navigation.css';
 import PropTypes from 'prop-types';
 
