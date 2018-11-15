@@ -32,9 +32,10 @@ const PostContainer = props => {
                     className="post__add-new-comment-input"
                     placeholder="Add a comment ..."
                     type="text"
-                    name="commentText"
-                    value={props.commentText}
-                    onChange={props.handleInputChange}
+                    name={props.index}
+                    // { `commentText[${props.index}]` }
+                    value={props.commentText[props.index]}
+                    onChange={props.handleInputChangeComment}
                 />           
             </form>
         </div>

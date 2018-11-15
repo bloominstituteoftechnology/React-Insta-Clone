@@ -21,7 +21,7 @@ const Header = props => {
             <div className="header__menu">
                 <div className="far fa-compass"></div>
                 <div className="far fa-heart"></div>
-                <div className="far fa-user"></div>
+                <div onClick={props.logOut} className="far fa-user"></div>
             </div>
         </header>
     );

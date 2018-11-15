@@ -8,6 +8,7 @@ const PostsPage = props => {
             <Header 
             handleInputChange={props.handleInputChange}
             filter={props.filter}
+            logOut={props.logOut}
             />
             <Posts 
             data={props.data}
@@ -16,6 +17,7 @@ const PostsPage = props => {
             addNewComment={props.addNewComment}
             addLike={props.addLike}
             removeComment={props.removeComment}
+            handleInputChangeComment={props.handleInputChangeComment}
             />  
       </div>
     );

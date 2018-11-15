@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 
-// import Posts from './components/Posts/Posts';
-// import Header from './components/Header/Header';
-
 import Authenticate from './components/Authentication/Authenticate';
 import PostsPage from './components/PostsPage/PostsPage'
 import dummyData from './dummy-data';
-//import LoginPage from './components/LoginPage/LoginPage'
 
 import './App.css';
 
@@ -16,9 +12,17 @@ class App extends Component {
     this.state = {
       data: [],
       filter: '',
-      commentText: '',
+      commentText: [],
       logedInUser: localStorage.getItem('user'),
     }
+  }
+
+  logOut(){
+    localStorage.setItem('user', 'nope');
+
+    this.setState({
+      logedInUser: ''
+    })
   }
 
   componentDidMount(){
@@ -29,20 +33,32 @@ class App extends Component {
 
   handleInputChange = event => {
     this.setState({
-      [event.target.name]: event.target.value,
+      [event.target.name]: event.target.value
+      });
+
+  }
+
+  handleInputChangeComment = event => {
+    let copy = this.state.commentText.slice()
+    copy[event.target.name] = event.target.value
+    
+    this.setState({
+      commentText : copy
     });
   };
 
   addNewComment = (event, index) => {
     event.preventDefault();
     
-    let newComment = { text: this.state.commentText, username: this.state.logedInUser};
+    let newComment = { text: this.state.commentText[index], username: this.state.logedInUser};
     let newDataState = this.state.data;
     newDataState[index].comments.push(newComment);
-    
+    let newCommentArray = this.state.commentText;
+    newCommentArray[index] = ''
+
     this.setState({
       data: newDataState,
-      commentText: ''
+      commentText: newCommentArray
     });
   };
 
@@ -80,20 +96,16 @@ class App extends Component {
 
   render() {
     return (
-      // <LoginPage 
-      //   login={this.login}
-      //   loginUserText={this.state.loginUserText}
-      //   loginPasswordText={this.state.loginPasswordText}
-      //   handleInputChange={this.handleInputChange}
-      // />
       <PostsPage 
         data={this.getData()}
         commentText={this.state.commentText}
         handleInputChange={this.handleInputChange}
+        handleInputChangeComment={this.handleInputChangeComment}
         addNewComment={this.addNewComment}
         addLike={this.addLike}
         removeComment={this.removeComment}
         filter={this.state.filter}
+        logOut={this.logOut}
       />
     );
   }

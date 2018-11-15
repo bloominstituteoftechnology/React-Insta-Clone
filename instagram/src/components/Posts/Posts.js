@@ -18,6 +18,7 @@ const Posts = props => {
                     index={index}
                     addLike={props.addLike}
                     removeComment={props.removeComment}
+                    handleInputChangeComment={props.handleInputChangeComment}
                 />
             ))}
         </div>        
