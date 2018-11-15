@@ -52,13 +52,14 @@
     color: #fff;
 }
 
-.btn-login:active {
-    background: #007fff;
-    color: #fff;
+.btn-login:focus {
+    background: #0072e6 !important;
+    color: #fff !important;
 }
 
-.btn-login:focus {
-    background: #007fff;
-    color: #fff;
+.btn-login:active {
+    background: #0072e6 !important;
+    color: #fff !important;
 }
+
 
