@@ -16,37 +16,19 @@ class App extends Component {
         this.state = {
             posts: []
         }
-
-        // this.
     }
 
     componentDidMount() {
         this.setState({
-            posts: dummyData.map((d, i) => ({...d, modal: false, key: i }))
+            posts: dummyData
         })
-    }
-
-    toggleComments = post => {
-
-        this.setState({
-            posts: this.state.posts.map(p => {
-                return p.id === post.id ? (p.modal === false ? {...p, modal: true} : {...p, modal: true}) : {...p, modal: false}
-                // p.id === post.id ? console.log(true) : console.log(false)
-            })
-        }, console.log(this.state))
-
-
-        // console.log(post)
     }
 
     render() {
         return ( <>
             <SearchBar / >
 
-            <Posts 
-                posts = { this.state.posts }
-                toggleComments = { this.toggleComments }
-            />  
+            <Posts posts = { this.state.posts } />  
             </>
         );
     }
