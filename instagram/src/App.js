@@ -9,16 +9,23 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      search: "",
+      searchText: "",
       post: [],
       completed: false
     };
   }
   componentDidMount() {
     this.setState({
-      post: dummyData
+      post: dummyData,
+      searchText: ""
     });
   }
+  handleSearch = event => {
+    this.setState({
+      searchText: event.target.value
+    });
+  };
+
   handleLikes = timestamp => {
     // console.log(timestamp);
     let posts = this.state.post.slice();
@@ -39,34 +46,30 @@ class App extends Component {
     });
   };
   render() {
-    console.log(this.state.completed);
+    let filtered = this.state.post.filter(post => {
+      return post.username.includes(this.state.searchText);
+    });
+    console.log(filtered);
+
     return (
       <div className="App">
-        <PostsPage />
         <header className="App-header">
-          <div className="App-header__logo">
-            <Icon.Instagram className="logo" />
-          </div>
-          <div>
-            <img
-              className="logo__text"
-              src={require("./images/logo-instagram.png")}
-              alt="instagram logo"
-            />
-          </div>
-
-          <SearchBar className="search-bar" />
-          <a href="#" className="link">
-            <Icon.Compass className="link-compass" />
-          </a>
-          <a href="#" className="link">
-            <Icon.Heart className="link-heart" />
-          </a>
-          <a href="#" className="link">
-            <Icon.User className="link-user" />
-          </a>
+          <Icon.Instagram className="logo" />
+          <img
+            className="logo__text"
+            src={require("./images/logo-instagram.png")}
+            alt="instagram logo"
+          />
+          <SearchBar
+            className="search-bar"
+            searchText={this.state.searchText}
+            handleSearch={this.handleSearch}
+          />
+          <Icon.Compass className="link-compass" />
+          <Icon.Heart className="link-heart" />
+          <Icon.User className="link-user" />
         </header>
-        {this.state.post.map(post => (
+        {filtered.map(post => (
           <PostContainer
             key={post.timestamp}
             post={post}
