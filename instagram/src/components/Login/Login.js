@@ -1,8 +1,8 @@
 import React from 'react';
 
 class Login extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             username: '',
             password: ''
@@ -14,8 +14,7 @@ class Login extends React.Component {
     };
 
     handleSubmitLogin = event => {
-        const user = this.state.username;
-        localStorage.setItem('user', user);
+        localStorage.setItem('user', this.state.username);
         window.location.reload();
     }
 
@@ -25,19 +24,19 @@ class Login extends React.Component {
                 <div>Login Page Yo</div>
                 <form>
                     <input 
-                    type="text"
-                    placeholder="Enter your user name"
-                    name="username"
-                    value={this.state.username}
-                    onChange={this.handleInput}
+                        type="text"
+                        placeholder="Enter your user name"
+                        name="username"
+                        value={this.state.username}
+                        onChange={this.handleInput}
                     />
 
                     <input
-                    type="password"
-                    placeholder="Enter your password"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.handleInput} 
+                        type="password"
+                        placeholder="Enter your password"
+                        name="password"
+                        value={this.state.password}
+                        onChange={this.handleInput} 
                     />
 
                     <button onClick={this.handleSubmitLogin}>Log In</button>
