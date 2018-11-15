@@ -5,6 +5,9 @@ import './App.scss';
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
+import LoginPage from './components/Authentication/LoginPage';
+
+const LoginAuthenticator = Authenticate(PostsPage)(LoginPage);
 
 class App extends Component {
 
@@ -131,7 +134,7 @@ class App extends Component {
     return (
       <div className='app'>
 
-        <Authenticate
+        <LoginAuthenticator
           displayedData={this.state.displayedData}
           searchFunc={this.search}
           addLike={this.addLike}

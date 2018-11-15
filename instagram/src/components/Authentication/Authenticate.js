@@ -1,9 +1,6 @@
 import React from 'react';
 
-import PostsPage from '../PostContainer/PostsPage';
-import LoginPage from './LoginPage';
-
-function Authenticate(Page) {
+const Authenticate = (Page) => (Login) => {
 
   return class extends React.Component {
 
@@ -20,7 +17,7 @@ function Authenticate(Page) {
         setUsername={this.props.setUsername}
       />)
       :
-      (<LoginPage setUsername={this.props.setUsername}/>);
+      (<Login setUsername={this.props.setUsername}/>);
 
     }
 
@@ -28,4 +25,4 @@ function Authenticate(Page) {
 
 }
 
-export default Authenticate(PostsPage);
+export default Authenticate;
