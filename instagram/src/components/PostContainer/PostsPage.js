@@ -13,6 +13,7 @@ const PostsPage = props => {
                     isSelected={props.isSelected}
                     hasBeenClicked={props.hasBeenClicked}
                     clearSearchText={props.clearSearchText}
+                    logOut={props.logOut}
                 />
             </header>
             <PostContainer 

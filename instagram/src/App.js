@@ -15,6 +15,11 @@ class App extends Component {
     }
   }
 
+  logOut = () => {
+    localStorage.removeItem('username');
+    window.location.reload();
+  }
+
   clearSearchText = () => {
     this.setState({
       searchText: '',
@@ -70,6 +75,7 @@ class App extends Component {
           isSelected={this.state.isSelected}
           hasBeenClicked={this.hasBeenClicked}
           clearSearchText={this.clearSearchText}
+          logOut={this.logOut}
         />
       </div>
     );

@@ -22,7 +22,7 @@ const Navigation = props => {
             <div className="header-icons">
                 <i className="far fa-compass"></i>
                 <i className="far fa-heart"></i>
-                <i className="far fa-user"></i>
+                <i className="far fa-user" onClick={props.logOut}></i>
             </div>
         </React.Fragment>
     );
