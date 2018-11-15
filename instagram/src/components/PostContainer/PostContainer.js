@@ -5,7 +5,6 @@ import PostInfo from "./PostInfo";
 import PostHeader from "./PostHeader";
 import PostImage from "./PostImage";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const LowerContent = styled.div`
   width: 95%;
@@ -36,30 +35,5 @@ const PostContainer = props => {
     </PostWrapper>
   );
 };
-
-// class PostContainer extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       id: this.props.post.imageUrl,
-//       likes: this.props.post.likes
-//     };
-//   }
-
-//   handleLike = () => {
-//     console.log("clicked");
-//     let plus = this.state.likes + 1;
-//     this.setState({ likes: plus });
-//   };
-
-//   render() {
-//     console.log(this.state.likes);
-//     return (
-
-//     );
-//   }
-// }
-
-// onClick={props.onClick} id={props.post.username}
 
 export default PostContainer;
