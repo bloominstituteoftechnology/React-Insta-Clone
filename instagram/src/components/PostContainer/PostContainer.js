@@ -3,7 +3,7 @@ import CommentSection from "../CommentSection/CommentSection";
 import PropTypes from "prop-types";
 import * as Icon from "react-feather";
 const PostContainer = props => {
-  // console.log(props)
+  console.log(props);
   return (
     <article className="article">
       <div className="user__wrapper">
@@ -17,7 +17,7 @@ const PostContainer = props => {
       <img className="post__image" src={props.post.imageUrl} alt="coffee" />
       <Icon.Heart
         style={props.completedProp ? { color: "red" } : { color: "black" }}
-        onClick={() => props.handlelikesprop(props.post.timestamp)}
+        onClick={() => props.handleLikesProp(props.post.timestamp)}
       />
       <Icon.MessageCircle />
       <p>{props.post.likes}</p>
