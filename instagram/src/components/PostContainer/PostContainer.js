@@ -1,5 +1,5 @@
 import React from 'react';
-import './PostContainer.css';
+import { PostContainerDiv, IndividualPost } from './StyledPostContainer';
 import PostHeader from './PostHeader';
 import LikesContainer from '../LikesContainer/LikesContainer';
 import CommentSection from '../CommentSection/CommentSection';
@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 
 const PostContainer = props => {
     return(
-        <div className='post-container'>
+        <PostContainerDiv>
             {props.data.map((currentPost, index) => (
-                <div key ={(index + 1) * 100} className='individual-post'>
+                <IndividualPost key ={(index + 1) * 100}>
                     <PostHeader 
                         key={currentPost.timestamp} 
                         thumbnail={currentPost.thumbnailUrl} 
@@ -22,9 +22,9 @@ const PostContainer = props => {
                         postTimestamp={currentPost.timestamp}
                     />
                     
-                </div>
+                </IndividualPost>
         ))}
-        </div>
+        </PostContainerDiv>
         
     );
 }

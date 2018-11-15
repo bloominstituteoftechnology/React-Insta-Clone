@@ -1,13 +1,13 @@
 import React from 'react';
-import './PostHeader.css';
+import { PostHeaderDiv, Avatar } from './StyledPostHeader';
 import PropTypes from 'prop-types';
 
 const PostHeader = props => {
     return(
-        <div className='post-header'>
-            <img src={props.thumbnail} className='avatar' alt="User Avatar"/>
+        <PostHeaderDiv>
+            <Avatar src={props.thumbnail} alt="User Avatar"/>
             <p>{props.userName}</p>
-        </div>
+        </PostHeaderDiv>
     );
 }
 
