@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Authenticate from "./components/Authentication/Authenticate";
 import PostsPage from "./components/PostContainer/PostsPage";
-import { BrowserRouter as Router } from "react-router-dom";
+import Login from "./components/Login/Login";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faInstagram } from "@fortawesome/fontawesome-free-brands";
 import {
@@ -40,4 +40,4 @@ class App extends Component {
   }
 }
 
-export default Authenticate(App);
+export default Authenticate(App)(Login);

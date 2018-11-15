@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Redirect, Route } from "react-router-dom";
-import App from "../../App";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import SearchBar from "../SearchBar/SearchBar";
 import "./Login.css";
@@ -20,8 +18,7 @@ class Login extends Component {
     super(props);
     this.state = {
       username: "",
-      password: "",
-      isLoggedIn: false
+      password: ""
     };
   }
 
@@ -39,15 +36,10 @@ class Login extends Component {
     ev.preventDefault();
     const username = this.state.username;
     localStorage.setItem("username", username);
-    this.props.log();
-    // this.setState({ isLoggedIn: true });
-    // return <Route path="/" component={App} />;
+    window.location.reload();
   };
 
   render() {
-    // if (this.state.isLoggedIn) {
-    //   return <Redirect to="/home" />;
-    // }
     return (
       <LoginContainer>
         <SearchBar />
