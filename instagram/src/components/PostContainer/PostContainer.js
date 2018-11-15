@@ -14,10 +14,13 @@ class PostContainer extends React.Component {
         return (
             
             <div className="what"> 
+            <img src={this.props.propsInPC.thumbnailUrl}></img>
+            {this.props.propsInPC.username}
+            <img src={this.props.propsInPC.imageUrl}></img>
                 {this.props.propsInPC.likes}
-                {this.state.commentSection.map(comments => <CommentSection commentSection={this.state.commentSection}/> )}
-
+                {<CommentSection commentSection={this.props.propsInPC.comments}/> }
             </div>
+        
         )
     }  
 }
