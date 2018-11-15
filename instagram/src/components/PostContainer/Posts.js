@@ -7,7 +7,6 @@ import Post from './Post'
 const Posts = props => {
     return (
         <div className='posts'>
-            Posts Here
             {props.posts.map((p, i)=> <Post 
                 post={p} 
                 toggleComments={props.toggleComments} 

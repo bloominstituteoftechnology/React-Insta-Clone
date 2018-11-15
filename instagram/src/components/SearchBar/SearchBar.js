@@ -3,7 +3,8 @@ import React from 'react';
 const SearchBar = props => {
     return(
         <header>
-            Search bar Here
+            <i class="fab fa-instagram">InstaClone</i>
+            <input type='text'/>
         </header>
     )
 }
