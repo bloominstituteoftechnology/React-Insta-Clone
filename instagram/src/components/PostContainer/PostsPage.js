@@ -9,6 +9,7 @@ class PostsPage extends Component {
     super(props);
     this.dummyData = props.dummyData;
     this.state = {
+      usr: props.loginUsr,
       data: [],
       newComment: '',
       searchText: ''

@@ -24,7 +24,7 @@ const Login = props => {
           onChange={props.changeHandler}
         />
       </div>
-      <button className="login-btn" type="submit">Login</button>
+      <input className="login-btn" type="submit" placeholder="Login" />
     </form>
   </div>
   );
