@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./CommentSection.css";
 import PropTypes from "prop-types";
-
+//import Moment from 'react-moment';
 
 const CommentSection = props => {
     return(
