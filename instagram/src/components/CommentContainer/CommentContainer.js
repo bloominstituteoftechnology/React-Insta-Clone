@@ -1,6 +1,6 @@
 import React from "react";
 import './CommentContainer.css';
-
+import PropTypes from 'prop-types';
 
 const CommentContainer = props => {
     // console.log("Comments: ", props)
@@ -18,6 +18,14 @@ const CommentContainer = props => {
 
     )
      
-  }
+}
 
+
+  CommentContainer.propTypes = {
+    propsInPC: PropTypes.shape({
+        username: PropTypes.string,
+        text: PropTypes.string,
+        
+    })
+  }
 export default CommentContainer;

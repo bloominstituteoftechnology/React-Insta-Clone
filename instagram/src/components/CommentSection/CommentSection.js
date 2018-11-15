@@ -5,7 +5,7 @@ import './CommentSection.css'
 const CommentSection = props => {
   return (
       
-      <div class="commment-section">
+      <div className="commment-section">
           {props.commentSection.map(propsInCSection => (
               <CommentContainer 
                   key ={propsInCSection.text}

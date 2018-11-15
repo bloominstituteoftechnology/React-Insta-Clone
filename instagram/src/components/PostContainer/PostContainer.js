@@ -2,7 +2,7 @@ import React from 'react';
 import CommentSection from '/Users/cengizbug/Lambda Projects/02_Month 2/React-Insta-Clone/instagram/src/components/CommentSection/CommentSection';
 import './PostContainer.css'
 import FeatherIcon from 'feather-icons-react';
-
+import PropTypes from 'prop-types';
 
 
 class PostContainer extends React.Component {
@@ -21,13 +21,13 @@ class PostContainer extends React.Component {
                 <div className="post-container"> 
                 
                     <div className="user">   
-                        <img className="logo" src={this.props.propsInPC.thumbnailUrl}></img>
+                        <img className="logo" src={this.props.propsInPC.thumbnailUrl} alt="logo"></img>
                         <div className="username">
                             {this.props.propsInPC.username}
                         </div> 
                     </div>
 
-                    <img className="img" src={this.props.propsInPC.imageUrl}></img>
+                    <img className="img" src={this.props.propsInPC.imageUrl} alt="content"></img>
 
                     <div className="lower-half">
                         <div className="symbols">
@@ -71,5 +71,17 @@ class PostContainer extends React.Component {
 }
 
 
+PostContainer.propTypes = {
+    propsInPC: PropTypes.shape({
+        username: PropTypes.string,
+        timestamp: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        likes: PropTypes.number,
+        comments: PropTypes.arrayOf(PropTypes.shape({
+            username: PropTypes.string,
+            text: PropTypes.string,
+        }))
 
+    })
+}
 export default PostContainer;

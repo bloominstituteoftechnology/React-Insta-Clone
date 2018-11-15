@@ -1,6 +1,6 @@
 import React from 'react';
 import PostContainer from '/Users/cengizbug/Lambda Projects/02_Month 2/React-Insta-Clone/instagram/src/components/PostContainer/PostContainer';
-
+import PropTypes from 'prop-types';
 
 const PostSection = props => {
     return (
@@ -16,6 +16,10 @@ const PostSection = props => {
     );
 };
 
+
+PostSection.propTypes = {
+    data: PropTypes.array.isRequired
+}
 
 
 export default PostSection;
