@@ -1,20 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './PostContainer.css';
+import styled from 'styled-components';
 
 import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
 
+const StyledPostContainer = styled.div`
+  max-width: 50rem;
+  border: 1px solid lightgray;
+  border-radius: .3rem;
+  background-color: white;
+  margin-bottom: 1rem;
+`;
+
+const StyledImgContainer = styled.div`
+  overflow: hidden;
+  height: 300px;
+  img {
+    width: 100%;
+  }
+`;
+
 const PostContainer = props => {
   return (
-    <div className="post--container">
+    <StyledPostContainer className="post--container">
       <PostHeader
         username={props.post.username}
         thumbnailUrl={props.post.thumbnailUrl}
       />
-      <div className="post--img">
+      <StyledImgContainer className="post--img">
         <img src={props.post.imageUrl} alt=""/>
-      </div>
+      </StyledImgContainer>
       <CommentSection
         username={props.post.username}
         comments={props.post.comments}
@@ -30,7 +47,7 @@ const PostContainer = props => {
           props.post.timestamp,
           i)}
       />
-    </div>
+    </StyledPostContainer>
   );
 }
 
