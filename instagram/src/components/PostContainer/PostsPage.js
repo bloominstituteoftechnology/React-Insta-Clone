@@ -12,13 +12,15 @@ class PostsPage extends Component {
     super();
     this.state={
       posts: [],
-      filteredPosts: []
+      filteredPosts: [],
+      liked:[]
     }
   }
 
   componentDidMount(){
     this.setState({ posts: dummyData})
     this.setState({ filteredPosts: dummyData})
+    this.setState({liked: dummyData.map(() => 'notLiked')})
   }
 
   searchFilter = ev =>{
@@ -39,29 +41,38 @@ class PostsPage extends Component {
 
   }
   addNewLike = ev =>{
+    
     let currentObj = {};
     let currentIndex = 0;
+    
     this.state.filteredPosts.forEach( (item,index) =>{
       if(ev.target.id == index){
         currentObj =item;
         currentIndex = index;
       }
     });
+    let newState = this.state.liked[currentIndex];
+    let tempLiked = this.state.liked.slice();
     let tempList = this.state.filteredPosts.slice();
-    if(ev.target.className){
-      ev.target.className = '';
+    if(newState === 'liked'){
+      
+      newState = 'notLiked';
       currentObj.likes--
 
     }else{
+      
       currentObj.likes++
-      ev.target.className = 'liked';
+      newState = 'liked';
     }
     
+    console.log(newState)
     
+    tempLiked[currentIndex] = newState
     tempList[currentIndex] = currentObj;
     
     this.setState({
-      filteredPosts: tempList
+      filteredPosts: tempList,
+      liked: tempLiked
   })
    
 }
@@ -83,6 +94,7 @@ logout = ev => {
             data ={data}
             addNewLike={this.addNewLike}
             id={index}
+            likedBool = {this.state.liked[index]}
             />
         ))}
         </div>

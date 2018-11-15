@@ -12,8 +12,8 @@ const PostBox = styled.div`
 const PostContainer = props => {
     
         return(
-        <PostBox   >
-            <Post data={props.data} addLike={props.addNewLike} id={props.id}/>
+        <PostBox>
+            <Post data={props.data} addLike={props.addNewLike} id={props.id} likedBool = {props.likedBool}/>
             <CommentSection comments={props.data.comments} />
         </PostBox>
     );

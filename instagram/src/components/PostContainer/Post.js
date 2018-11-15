@@ -28,7 +28,7 @@ const LikesIcon = styled.h1`
     margin: 0 10px 0 0;
     cursor: pointer;
     user-select: none;
-    
+    ${props => (props.type === "liked" ? `color:red; font-size:43px;` : `color:black`)}
 
 `;
 const CommentIcon = styled.h1`
@@ -47,7 +47,7 @@ const Post = props => {
             <img src={props.data.imageUrl} />
             <Likes >
             <FooterIcons >
-                <LikesIcon onClick={props.addLike} id={props.id}>♡</LikesIcon>
+                <LikesIcon onClick={props.addLike} id={props.id} type={props.likedBool}>♡</LikesIcon>
                 <CommentIcon >🗨️</CommentIcon>
             </FooterIcons>
                 
