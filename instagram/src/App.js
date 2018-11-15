@@ -33,11 +33,9 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <>
-          <PostsPage />
-        </>
-      </Router>
+      <>
+        <PostsPage />
+      </>
     );
   }
 }
