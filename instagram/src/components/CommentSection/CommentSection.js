@@ -11,7 +11,6 @@ class CommentSection extends React.Component {
       newComment: "",
       username: '',
       id: props.id,
-      likes: [{0: ['justin', 'joe']}]
     };
   }
 
@@ -29,19 +28,6 @@ class CommentSection extends React.Component {
       this.saveStatetoLocalStorage.bind(this)
     )
   }
-
-  // toggleLikes = e => {
-  //   if (this.state.liked) {
-  //   this.setState((prevState) => {
-  //     return {likes: prevState.likes + 1}
-  //   })
-  // } else {
-  //   this.setState((prevState => {
-  //     return {likes: prevState.likes -1}
-  //   }))
-  // }
-  //   this.setState({ liked: !this.setState.liked})
-  // }
 
   changeHandler = e => {
     this.setState({ newComment: e.target.value });

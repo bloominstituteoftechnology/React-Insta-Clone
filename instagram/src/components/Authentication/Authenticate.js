@@ -25,9 +25,6 @@ const Authenticate = Component =>
 
     render() {
       return this.state.loggedIn ? <Component /> : <Login />;
-      // return <Component />;
-      // if (this.state.loggedIn) return <Component />;
-      // return <Login />;
     }
   };
 

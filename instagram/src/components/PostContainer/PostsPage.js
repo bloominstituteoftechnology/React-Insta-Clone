@@ -14,31 +14,10 @@ class PostsPage extends React.Component {
     };
   }
 
-  // saveStatetoLocalStorage() {
-  //   for (let key in this.state) {
-  //     localStorage.setItem(key, JSON.stringify(this.state[key]));
-  //   }
-  //   console.log(this.state.data)
-  //   console.log('saving');
-  // }
-
   hydrateStateWithLocalStorage() {
     if (localStorage.getItem("data")) {
       this.setState({ data: JSON.parse(localStorage.getItem("data")) });
     }
-    // for (let key in this.state) {
-    //   if (localStorage.hasOwnProperty(key)) {
-    //     console.log('has', key);
-    //     let value = localStorage.getItem(key);
-
-    //     try {
-    //       value = JSON.parse(value);
-    //       this.setState({ [key]: value });
-    //     } catch (e) {
-    //       this.setState({ [key]: value });
-    //     }
-    //   }
-    // }
   }
 
   componentDidMount() {
@@ -48,22 +27,8 @@ class PostsPage extends React.Component {
       this.setState({ data: dummyData, filteredPosts: dummyData }, () =>
         localStorage.setItem("data", JSON.stringify(this.state.data))
       );
-      // this.setState({ filteredPosts: dummyData });
-      // localStorage.setItem(('data', this.state.data));
     }
-    // window.addEventListener(
-    //   "beforeunload",
-    //   this.saveStatetoLocalStorage.bind(this)
-    // );
   }
-
-  // componentDidUpdate() {
-  //   for (let key in this.state) {
-  //     if (localStorage.getItem(key) !== this.state[key]) {
-  //       localStorage.setItem(key, JSON.stringify(this.state[key]));
-  //     }
-  //   }
-  // }
 
   updateSearchText = e => {
     this.setState({ searchText: e.target.value }, this.filterPosts);
@@ -75,9 +40,6 @@ class PostsPage extends React.Component {
   };
 
   filterPosts = e => {
-    // if (this.state.searchText === "") {
-    //   this.setState({ filteredPosts: this.state.data });
-    // } else {
     if (this.state.searchText.trim().length > 0) {
       console.log(this.state.searchText.trim().length);
       const filteredPosts = this.state.data.filter(d => {
@@ -92,49 +54,14 @@ class PostsPage extends React.Component {
     }
   };
 
-  // toggleLikes = id => {
-  //   console.log("click");
-  //   console.log(id);
-  //   const user = JSON.parse(localStorage.getItem('username'));
-  //   console.log(user, localStorage.getItem('username'));
-  //   console.log(this.state.likes[id]);
-  //   if (this.state.likes[id].includes(user)) {
-  //     console.log(`${user} found`)
-  //     // remove user from array
-  //     const newArr = this.state.likes[id].splice(this.state.likes[id].indexOf(user), 1)
-  //     const newLikes = this.state.likes//.filter(l => l.id !== id);
-  //     console.log('newArr:', newArr, 'newLikes', newLikes);
-  //     //decrease likes by one
-  //   }
-  //   else console.log('no match');
-  //   // console.log(e.target.parentElement);
-  //   const newData = this.state.data.map(d => {
-  //     if (d.id === id) {
-  //       console.log(d);
-  //     }
-  //   });
-    //   if (this.state.liked) {
-    //   this.setState((prevState) => {
-    //     return {likes: prevState.likes + 1}
-    //   })
-    // } else {
-    //   this.setState((prevState => {
-    //     return {likes: prevState.likes -1}
-    //   }))
-    // }
-    //   this.setState({ liked: !this.setState.liked})
-  // };
   increaseLikes = id => {
-    console.log(id);
   const newData = this.state.data.map(d => {
     if (d.id === id) {
-      console.log("found");
       d.likes++;
       return d;
     } else return d;
   });
   this.setState({ data: newData });
-  console.log(this.state.data);
   };
 
   logout = e => {
