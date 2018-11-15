@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './PostContainer.css';
+import './PostContainer.css';
 import PropTypes from 'prop-types';
 import styled from 'styled-components'
 
@@ -28,7 +28,7 @@ const LikesIcon = styled.h1`
     margin: 0 10px 0 0;
     cursor: pointer;
     user-select: none;
-    ${props => (props.className === "liked" ? `color: red` : `color: black`)}
+    
 
 `;
 const CommentIcon = styled.h1`

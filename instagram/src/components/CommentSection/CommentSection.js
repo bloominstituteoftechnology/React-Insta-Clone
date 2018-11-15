@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
 import './CommentSection.css';
 import Comment from './Comment';
+import styled from 'styled-components'
 
-
+const CommentContainer = styled.div`
+  margin: 10px;
+`;
+const CommentInput = styled.input`
+  width: 90%;
+  text-align: left;
+  padding: 10px;
+  border: none;
+`;
 
 
 class CommentSection extends Component {
@@ -40,7 +49,7 @@ class CommentSection extends Component {
 
     render(){
         return(
-        <div className='comment-section'>
+        <CommentContainer>
             {this.state.comments.map((comment, index) => (
                 <Comment
                 comment ={comment}
@@ -48,7 +57,7 @@ class CommentSection extends Component {
                 />
            ))}
            <form onSubmit={this.addNewComment}>
-            <input 
+            <CommentInput 
                 type='text' 
                 name="inputText" 
                 placeholder='Add a comment...' 
@@ -58,7 +67,7 @@ class CommentSection extends Component {
            </form>
            
             
-        </div>
+        </CommentContainer>
     );
     }
     

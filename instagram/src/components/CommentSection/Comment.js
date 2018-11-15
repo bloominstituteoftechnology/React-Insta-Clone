@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import './CommentSection.css';
 import PropTypes from 'prop-types';
+import styled from 'styled-components'
 
-
+const CommentBox = styled.div`
+    text-align: left;
+`;
+const CommentUsername = styled.span`
+    font-weight: bold;
+`;
 
 const Comment = props => {
 
     return(
-        <div className='comment'>
-            <p><span>{props.comment.username}</span> {props.comment.text}</p>
-        </div>
+        <CommentBox >
+            <p><CommentUsername>{props.comment.username}</CommentUsername> {props.comment.text}</p>
+        </CommentBox>
     );
 }
 
