@@ -1,7 +1,67 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
 import like from '../../like.png';
 import comment from '../../comment.png';
 import PropTypes from 'prop-types';
+
+
+const TopSection = styled.section `
+	display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 20%;
+  height: auto;
+  margin: 0;
+  padding: 1%;
+`;
+
+const TopSectionDiv = styled.div `
+width: 100%;
+height: auto;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: flex-start;
+align-items: center;
+margin: 0;
+padding: 0 0 5%;
+`;
+const Thumbnail = styled.img `
+width: 40%;
+height: auto;
+border-radius: 50%;
+`
+const Username = styled.h3 `
+	margin: 0;
+  padding: 5%;
+  font-size: 1.5rem;
+  font-weight: bold;
+`
+const Timestamp = styled.h4 `
+	color: grey;
+`
+const MiddleImage = styled.img `
+	width: 100%;
+ 	 height: auto;
+`
+const Icon = styled.img `
+width: 5%;
+height: auto;
+margin: 0;
+padding: 1%;
+`
+
+const Likes = styled.h3 `
+margin: 0;
+padding: 0% 1%;
+font-size: 1.25rem;
+`
+const Span = styled.span `
+font-weight: bold;
+`
+
 
 class Post extends Component{
 
@@ -25,27 +85,24 @@ class Post extends Component{
 	render (){
 		return (
 			<React.Fragment>
-				<section className="top">
-					<div>
-						<img src={this.props.thumbnail} alt="" />
-						<h3>{this.props.username}</h3>
-					</div>
+				<TopSection>
+					<TopSectionDiv>
+						<Thumbnail src={this.props.thumbnail} alt="" />
+						<Username>{this.props.username}</Username>
+					</TopSectionDiv>
 	
-					<h4>{this.props.timestamp}</h4>
-				</section>
-				<section className="middle">
-					<img src={this.props.image} alt="" />
-				</section>
-				<section className="bottom">
-					<div className="icons">
-						<img src={like} alt="like icon" onClick={this.handleLike} />
-						<img src={comment} alt="comment icon"  />
-					</div>
-					<h3>
-						<span>{this.state.likes}</span> likes
-					</h3>
-				</section>
-			</React.Fragment>
+					<Timestamp>{this.props.timestamp}</Timestamp>
+				</TopSection>
+				
+				<MiddleImage src={this.props.image} alt="" />
+			
+						<Icon src={like} alt="like icon" onClick={this.handleLike} />
+						<Icon src={comment} alt="comment icon"  />
+					<Likes>
+						<Span>{this.state.likes}</Span> likes
+					</Likes>
+
+		</React.Fragment>			
 		);
 	}
 

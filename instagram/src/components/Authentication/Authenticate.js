@@ -8,7 +8,7 @@ const Authenticate = (Page) =>
 			this.state = {
 				usernameInput: '',
 				passwordInput: '',
-				loginSuccessful: false
+				loginSuccessful: true
 			};
 		}
 		componentDidMount() {}

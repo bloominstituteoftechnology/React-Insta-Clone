@@ -1,7 +1,36 @@
 import React, { Component } from 'react';
-import '../../less/Comments.less';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
+const CommentContainer = styled.section `
+	margin: 0;
+  padding: 1%;
+`
+const CommentDiv = styled.div `
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: flex-start;
+align-items: center;
+`
+
+const CommentUsername = styled.h3 `
+margin: 0;
+padding: 1% 0;
+font-size: 1.25rem;
+`
+const Span = styled.span `
+font-weight: bold;
+
+`
+const Input = styled.input `
+	margin: 1%;
+  padding: 2.5% 0;
+  width: 98%;
+  height: auto;
+  border: none;
+  border-top: 1px lightgrey solid;
+`
 class CommentSection extends Component {
 	constructor(props) {
 		super(props);
@@ -36,21 +65,21 @@ class CommentSection extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<section className="comments">
+				<CommentContainer>
 					{this.state.comments.map((comment, index) => (
-						<div className="comment" key={index}>
-							<h3>
-								<span>{comment.username}</span> {comment.text}
-							</h3>
-						</div>
+						<CommentDiv className="comment" key={index}>
+							<CommentUsername>
+								<Span>{comment.username}</Span> {comment.text}
+							</CommentUsername>
+						</CommentDiv>
 					))}
-				</section>
+				</CommentContainer>
 				<form
 					onSubmit={(event) => {
 						this.addComment(event);
 					}}
 				>
-					<input
+					<Input
 						type="text"
 						name="commentInput"
 						placeholder="Add a comment ..."

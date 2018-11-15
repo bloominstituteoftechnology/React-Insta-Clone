@@ -1,15 +1,16 @@
 import React from 'react';
-import './less/App.less';
+import './css/App.css';
 import PostsPage from './components/PostContainer/PostsPage';
 
-const App = props => {
-	
-		return (
-			<div className="App">
-        <PostsPage />
-			</div>
-		);
-}
+
+
+
+const App = (props) => {
+	return (
+		<React.Fragment>
+			<PostsPage />
+		</React.Fragment>
+	);
+};
 
 export default App;
-

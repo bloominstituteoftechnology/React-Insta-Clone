@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
+import styled from 'styled-components'
 import dummyData from './../../dummy-data.js';
 import SearchBar from './../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 import Authenticate from './../Authentication/Authenticate';
+
+const AppStyle = styled.div`
+	display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: #fafafa;
+`;
 
 class PostsPage extends Component {
 	constructor() {
@@ -49,7 +61,7 @@ class PostsPage extends Component {
       return post.username.includes(this.state.searchInput);
       }))
 		return (
-			<div className="App">
+			<AppStyle>
         <SearchBar 
         handleSearch={this.handleSearch}
         searchInput={this.state.searchInput}
@@ -58,7 +70,7 @@ class PostsPage extends Component {
 				<PostContainer
 					posts={this.state.posts}
 				/>
-			</div>
+			</AppStyle>
 		);
 	}
 }
