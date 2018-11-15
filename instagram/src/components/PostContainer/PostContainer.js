@@ -5,6 +5,7 @@ import PostInfo from "./PostInfo";
 import PostHeader from "./PostHeader";
 import PostImage from "./PostImage";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const LowerContent = styled.div`
   width: 95%;
@@ -58,5 +59,7 @@ const PostContainer = props => {
 //     );
 //   }
 // }
+
+// onClick={props.onClick} id={props.post.username}
 
 export default PostContainer;
