@@ -3,3 +3,7 @@
     margin: 10px auto;
     max-width: 800px;
 }
+
+.container {
+    max-width: 800px;
+}

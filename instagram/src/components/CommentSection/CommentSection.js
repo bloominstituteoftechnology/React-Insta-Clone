@@ -7,8 +7,8 @@ const CommentSection = props => {
     return(
         <div className="commentSectionContainer">
             
-            <h2>{props.dataInMap.username}</h2>
-            <p>{props.dataInMap.text}</p>
+            <h2>{props.coolData.username}</h2>
+            <p>{props.coolData.text}</p>
         </div>
     )
 
@@ -19,7 +19,7 @@ const CommentSection = props => {
 
 
 CommentSection.propTypes = {
-    dataInMap: PropTypes.shape(
+    coolData: PropTypes.shape(
             {username: PropTypes.string,
             text: PropTypes.string}
         )
