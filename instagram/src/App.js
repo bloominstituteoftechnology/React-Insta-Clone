@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import dummyData from "./dummy-data";
 import PostsPage from "./components/PostContainer/PostsPage";
+import Authenticate from "./components/Authentication/Authenticate";
 class App extends Component {
   constructor() {
     super();
@@ -48,14 +49,17 @@ class App extends Component {
       return post.username.includes(this.state.searchText);
     });
     return (
-      <PostsPage
-        filtered={filtered}
-        post={this.state.post}
-        handleLikes={this.handleLikes}
-        completed={this.state.completed}
-        searchText={this.state.searchText}
-        handleSearch={this.handleSearch}
-      />
+      <React.Fragment>
+        <Authenticate />
+        <PostsPage
+          filtered={filtered}
+          post={this.state.post}
+          handleLikes={this.handleLikes}
+          completed={this.state.completed}
+          searchText={this.state.searchText}
+          handleSearch={this.handleSearch}
+        />
+      </React.Fragment>
     );
   }
 }
