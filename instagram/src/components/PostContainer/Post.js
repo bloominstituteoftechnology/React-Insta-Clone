@@ -3,8 +3,6 @@ import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
 
 const Post = props => {
-    // console.log('props in Post', props)
-    // console.log('props.post.comments in post.js', props.post.comments)
     return (
         <div className="post-border">
             <PostHeader 

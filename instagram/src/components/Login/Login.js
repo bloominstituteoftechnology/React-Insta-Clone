@@ -10,7 +10,8 @@ const LoginPage = props => {
                     type="text"
                     placeholder="Your username.."
                     name="username"
-                    // value={props.usernameInput}
+                    value={props.usernameInput}
+                    onChange={props.usernameChange}
                 />
                 <input 
                     className="password-input"
@@ -18,6 +19,7 @@ const LoginPage = props => {
                     placeholder="Your password.."
                     name="password"
                     value={props.passwordInput}
+                    onChange={props.passwordChange}
                 />
                 <button onClick={props.updateUser}>Login</button>
             </form>

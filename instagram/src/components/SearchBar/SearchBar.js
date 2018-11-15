@@ -1,17 +1,46 @@
 import React, { Component } from 'react';
 import './SearchBar.css'
+import styled from 'styled-components';
 
-// var FuzzySearch = require("react-fuzzy-search")
+const Header = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5%;
+    align-items: center;
+`;
+
+const LogoAndText = styled.div`
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    max-height: 50px;
+    justify-content: space-between;
+    width: 17%;
+`;
+
+const LogoHeader = styled.div`
+    font-family: billabong;
+    font-size: 2rem;
+    border-left: 1px solid grey;
+    padding-left: 7%;
+    font-weight: normal;
+`;
+
+const Icons = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+`;
+
 
 const SearchBar = props => {
     return (
-        <div className='search-bar-container'>
-            <div className='logo-and-text'>
+        <Header>
+            <LogoAndText>
                 <i className="fab fa-instagram"></i>
-                <h1 className='logo-text'>Instagram</h1>
-            </div>
+                <LogoHeader>Instagram</LogoHeader>
+            </LogoAndText>
             <div>
-            {/* <form onSubmit={props.filterComments} className="search"> */}
             <form className="search">
                 <input className="search-input" 
                 type="text" placeholder="Search.." 
@@ -21,12 +50,12 @@ const SearchBar = props => {
                 />            
             </form>
             </div>
-            <div className='icons'>
+            <Icons>
                 <i className="far fa-compass"></i>
                 <i className="far fa-heart"></i>
                 <i className="far fa-user"></i>
-            </div>
-        </div>
+            </Icons>
+        </Header>
     )
 }
 

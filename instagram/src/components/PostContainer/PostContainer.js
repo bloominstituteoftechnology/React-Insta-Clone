@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css'
-// import moment from 'moment';
 import Moment from 'react-moment';
 import 'moment-timezone';
 import Post from './Post';

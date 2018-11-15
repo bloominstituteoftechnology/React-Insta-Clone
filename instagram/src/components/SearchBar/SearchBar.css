@@ -3,7 +3,7 @@
     src: url('/instagram/src/Billabong/Billabong.ttf');
 }
 
-.search-bar-container {
+/* .search-bar-container {
     display: flex;
     justify-content: space-between;
     margin-top: 0.5%;
@@ -17,15 +17,15 @@
     max-height: 50px;
     justify-content: space-between;
     width: 17%;
-}
+} */
 
-.logo-text {
+/* .logo-text {
     font-family: billabong;
     font-size: 2rem;
     border-left: 1px solid grey;
     padding-left: 7%;
     font-weight: normal;
-}
+} */
 
 .fa-instagram {
     font-size: 2rem;
@@ -45,13 +45,7 @@
     background-position:left center;outline:0;
 }
 
-.icons {
-    display: flex;
-    justify-content: space-between;
-    width: 15%;
-}
-
-.icons i {
+i {
     font-size: 1.5rem;
     color: grey;
 }

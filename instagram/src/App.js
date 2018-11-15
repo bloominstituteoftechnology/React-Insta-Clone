@@ -7,6 +7,15 @@ import SearchBar from './components/SearchBar/SearchBar';
 import Authenticate from './components/Authentication/Authentication';
 import LoginPage from './components/Login/Login';
 import PostsPage from './components/PostContainer/PostsPage';
+import styled from 'styled-components';
+
+// const WrapperDiv = styled.div`
+//     width: 100%;
+//     height: 100%;
+// `;
+const WrapperDiv = styled.div`
+  background-color: red;
+`;
 
 class App extends Component {
   constructor() {
@@ -60,6 +69,7 @@ class App extends Component {
     console.log("this.state.posts.username", this.state.posts[0].username)
     return (
       <div className="App">
+
         {/* <SimpleStorage parent={this} /> */}
         {/* <div>
           

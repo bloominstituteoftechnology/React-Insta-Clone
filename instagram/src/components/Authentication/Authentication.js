@@ -6,7 +6,9 @@ const Authenticate = App =>
     constructor(props) {
       super(props);
       this.state = {
-        loggedIn: false
+        loggedIn: true,
+        passwordInput: '',
+        usernameInput: ''
       }
     }
 
@@ -17,16 +19,36 @@ const Authenticate = App =>
       })
     }
 
+    passwordChange = event => {
+      console.log(this.state.passwordInput)
+      this.setState({
+        passwordInput: event.target.value
+      })
+    }
+
+    usernameChange = event => {
+      console.log(this.state.usernameInput)
+      this.setState({
+        usernameInput: event.target.value
+      })
+    }
+
     render() {
       if (this.state.loggedIn === false) {
         return (
           <div>
-            <LoginPage updateUser={this.updateUser}/>
+            <LoginPage 
+            updateUser={this.updateUser}
+            passwordChange={this.passwordChange}
+            usernameChange={this.usernameChange}
+            usernameInput={this.usernameInput}
+            passwordInput={this.passwordInput}
+            />
           </div>
         )
       }
       else {
-        return (console.log('yesss'), <App />)
+        return <App />
       }
     }
   };

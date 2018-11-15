@@ -88,16 +88,16 @@ class CommentSection extends React.Component {
 
                 {this.state.comments.map((c, i) => 
                 <Comment 
-                key={i} 
-                comment={c} 
-                removeComment={this.removeComment}
-                removed={this.state.removed}
+                    key={i} 
+                    comment={c} 
+                    removeComment={this.removeComment}
+                    removed={this.state.removed}
                 />)}
                 {/* <span>{moment(this.state.timestamp, 'MMMM Do YYYY HH:mm:ss a')}</span> */}
                 {/* <span>{moment().fromNow()}</span> */}
                 <CommentInput 
-                addNewComment={this.addNewComment} 
-                handleChange={this.handleChange}
+                    addNewComment={this.addNewComment} 
+                    handleChange={this.handleChange}
                 /> 
             </div>
         );
