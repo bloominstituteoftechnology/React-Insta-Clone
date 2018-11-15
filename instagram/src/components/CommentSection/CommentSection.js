@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import Comment from './Comment/Comment';
 import CommentInput from './CommentInput/CommentInput';
 import './CommentSection.css';
+import styled from 'styled-components';
+
+const CommentSectionWrapper = styled.div`
+    margin: 0 23px;
+`;
+
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -27,7 +33,7 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <div className="comment-section">
+            <CommentSectionWrapper>
                 {this.state.comments.map((commentMap, index) => (
                     <Comment key={index} comment={commentMap} />
                 ))}
@@ -37,7 +43,7 @@ class CommentSection extends React.Component {
                     inputText={this.state.inputText}
                     commentHandler={this.commentHandler} 
                 />
-            </div>
+            </CommentSectionWrapper>
         )
     }
 }
