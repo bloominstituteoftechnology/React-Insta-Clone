@@ -14,38 +14,47 @@ class PostsPage extends React.Component {
     };
   }
 
-  saveStatetoLocalStorage() {
-    for (let key in this.state) {
-      localStorage.setItem(key, JSON.stringify(this.state[key]));
-    }
-  }
+  // saveStatetoLocalStorage() {
+  //   for (let key in this.state) {
+  //     localStorage.setItem(key, JSON.stringify(this.state[key]));
+  //   }
+  //   console.log(this.state.data)
+  //   console.log('saving');
+  // }
 
   hydrateStateWithLocalStorage() {
-    for (let key in this.state) {
-      if (localStorage.hasOwnProperty(key)) {
-        let value = localStorage.getItem(key);
-
-        try {
-          value = JSON.parse(value);
-          this.setState({ [key]: value });
-        } catch (e) {
-          this.setState({ [key]: value });
-        }
-      }
+    if (localStorage.getItem('data')) {
+      this.setState({ data: JSON.parse(localStorage.getItem('data')) });
     }
+    // for (let key in this.state) {
+    //   if (localStorage.hasOwnProperty(key)) {
+    //     console.log('has', key);
+    //     let value = localStorage.getItem(key);
+
+    //     try {
+    //       value = JSON.parse(value);
+    //       this.setState({ [key]: value });
+    //     } catch (e) {
+    //       this.setState({ [key]: value });
+    //     }
+    //   }
+    // }
   }
 
   componentDidMount() {
+    console.log('mounting');
     if (localStorage.getItem("data")) {
+      console.log('hydrating');
       this.hydrateStateWithLocalStorage();
     } else {
-      this.setState({ data: dummyData });
-      this.setState({ filteredPosts: dummyData });
+      this.setState({ data: dummyData, filteredPosts: dummyData }, () => localStorage.setItem('data', JSON.stringify(this.state.data)));
+      // this.setState({ filteredPosts: dummyData });
+      // localStorage.setItem(('data', this.state.data));
     }
-    window.addEventListener(
-      "beforeunload",
-      this.saveStatetoLocalStorage.bind(this)
-    );
+    // window.addEventListener(
+    //   "beforeunload",
+    //   this.saveStatetoLocalStorage.bind(this)
+    // );
   }
 
   // componentDidUpdate() {
@@ -78,8 +87,29 @@ class PostsPage extends React.Component {
     // }
   }
 
-  increaseLikes = e => {
-    console.log(e);
+  toggleLikes = id => {
+    console.log('click');
+    console.log(id);
+    // console.log(e.target.parentElement);
+    const newData = this.state.data.map(d => {
+      if (d.id === id) {
+        console.log(d);
+
+      }
+    })
+  //   if (this.state.liked) {
+  //   this.setState((prevState) => {
+  //     return {likes: prevState.likes + 1}
+  //   })
+  // } else {
+  //   this.setState((prevState => {
+  //     return {likes: prevState.likes -1}
+  //   }))
+  // }
+  //   this.setState({ liked: !this.setState.liked})
+  }
+  // increaseLikes = e => {
+  //   console.log(e);
     // const newData = this.state.data.map(d => {
     //   if (d.id === id) {
     //     console.log("found");
@@ -89,7 +119,7 @@ class PostsPage extends React.Component {
     // });
     // this.setState({ data: newData });
     // console.log(this.state.data);
-  };
+  // };
 
   logout = e => {
     e.preventDefault();
@@ -116,7 +146,7 @@ class PostsPage extends React.Component {
               post={post}
               likes={post.likes}
               username={this.state.username}
-              increaseLikes={this.increaseLikes}
+              toggleLikes={this.toggleLikes}
             />
           ))}
         </div>

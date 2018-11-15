@@ -19,11 +19,11 @@ const PostContainer = props => {
           <img src={props.post.imageUrl} alt="" />
           <ContentContainer>
           <IconBar>
-            <Heart onClick={props.increaseLikes} />
+            <Heart onClick={() => props.toggleLikes(props.id)} />
             <MessageCircle />
           </IconBar>
           <LikeCounter>{props.post.likes} likes</LikeCounter>
-          <CommentSection comments={props.post.comments} username={props.username}/>
+          <CommentSection comments={props.post.comments} username={props.username} id={props.id}/>
           <TimeStamp>{moment(props.post.timestamp, "MMMM Do YYYY, h:mm:ss").fromNow()}</TimeStamp>
           </ContentContainer>
         </StyledPost>

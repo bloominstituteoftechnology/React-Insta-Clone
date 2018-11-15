@@ -8,33 +8,76 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.comments,
-      newComment: '',
-      likes: 0,
-      username: ''
+      newComment: "",
+      // liked: false,
+      username: '',
+      id: props.id
     };
   }
 
-  componentDidMount() {
-    this.setState({ username: localStorage.getItem('username') })
+  saveStatetoLocalStorage() {
+    for (let key in this.state) {
+      localStorage.setItem(key, JSON.stringify(this.state[key]));
+    }
+    console.log(this.state.data)
+    console.log('saving');
   }
 
-  increaseLikes = e => {
-    this.setState((prevState) => {
-      return {likes: prevState.likes + 1}
-    })
+  componentDidMount() {
+    // without removing quotes, i was getting an extra pair with every page refresh
+    this.setState({ username: localStorage.getItem("username").replace(/['"]/g, '')});
+    window.addEventListener(
+      "beforeunload",
+      this.saveStatetoLocalStorage.bind(this)
+    )
   }
+
+  // toggleLikes = e => {
+  //   if (this.state.liked) {
+  //   this.setState((prevState) => {
+  //     return {likes: prevState.likes + 1}
+  //   })
+  // } else {
+  //   this.setState((prevState => {
+  //     return {likes: prevState.likes -1}
+  //   }))
+  // }
+  //   this.setState({ liked: !this.setState.liked})
+  // }
 
   changeHandler = e => {
     this.setState({ newComment: e.target.value });
-  }
+  };
 
-  addNewComment = (e, idx) => {
-    console.log(idx);
+  addNewComment = e => {
+    const updateStorage = () => {
+      console.log(this.state.comments);
+      let newData = JSON.parse(localStorage.getItem("data"));
+      newData = newData.map(post => {
+        if (post.id === this.state.id) {
+          post.comments = this.state.comments;
+          return post;
+        } else {
+          return post;
+        }
+      });
+      localStorage.setItem("data", JSON.stringify(newData));
+    };
+
     e.preventDefault();
-    this.setState({ comments: [...this.state.comments, {
-      username: this.state.username,
-      text: this.state.newComment}],
-      newComment: '', });
+    this.setState(
+      {
+        comments: [
+          ...this.state.comments,
+          {
+            username: this.state.username,
+            text: this.state.newComment
+          }
+        ],
+        newComment: ""
+      },
+      updateStorage
+    );
   };
 
   render() {
@@ -44,11 +87,12 @@ class CommentSection extends React.Component {
           <Comment key={idx} comment={com} />
         ))}
         <form onSubmit={this.addNewComment}>
-          <AddCommentBar type="text" 
-          name="addComment" 
-          placeholder="Add a comment..." 
-          value={this.state.newComment}
-          onChange={this.changeHandler}
+          <AddCommentBar
+            type="text"
+            name="addComment"
+            placeholder="Add a comment..."
+            value={this.state.newComment}
+            onChange={this.changeHandler}
           />
         </form>
       </StyledCommentSection>
