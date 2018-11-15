@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 
 import { ListGroup } from 'reactstrap';
 
+import Comment from './Comment';
+
 const Comments = props => {
     return(
-        <>
-            comments go here
-        </>
+        <ListGroup>
+            {props.comments.map(c => <Comment comment={c}/>)}
+        </ListGroup>
     )
 }
 
