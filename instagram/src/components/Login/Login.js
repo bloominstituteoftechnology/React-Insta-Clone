@@ -28,12 +28,16 @@ class Login extends React.Component {
     }
   }
 
+  handleKey(e) {
+    if (e.key === 'Enter') this.login();
+  }
+
   render() {
     return (
       <div className="login--form">
         <form>
           <input name="username" onChange={e => this.handleChange(e)} type="text" placeholder="Username"/>
-          <input name="password" onChange={e => this.handleChange(e)} type="password" placeholder="Password"/>
+          <input name="password" onKeyPress={e => this.handleKey(e)} onChange={e => this.handleChange(e)} type="password" placeholder="Password"/>
           <button type="button" onClick={() => this.login()}>Log In</button>
         </form>
         <ul className="login--hint" style={{display: this.state.hint ? 'block' : 'none' }}>
