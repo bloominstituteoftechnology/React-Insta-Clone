@@ -42,6 +42,8 @@ const Logo = styled.img`
 `;
 
 const SearchBarContainer = props => {
+  console.log("SEARCHPROPS", props);
+
   return (
     <Header>
       <Container>
@@ -61,7 +63,7 @@ const SearchBarContainer = props => {
         <div className="searchbar-right">
           <i className="far fa-compass" />
           <i className="far fa-heart" />
-          <i className="far fa-user" />
+          <i className="far fa-user" onClick={props.logout} />
         </div>
       </Container>
     </Header>

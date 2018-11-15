@@ -50,9 +50,8 @@ class Login extends Component {
         />
         <LoginInputs
           required
-          // type="password"
+          type="password"
           value={this.state.password}
-          type="text"
           name="password"
           onChange={this.handleChange}
           placeholder="Enter Password"

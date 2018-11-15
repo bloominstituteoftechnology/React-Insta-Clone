@@ -67,7 +67,10 @@ class PostsPage extends Component {
 
     return (
       <div>
-        <SearchBarContainer searchPosts={this.handleSearchChange} />
+        <SearchBarContainer
+          searchPosts={this.handleSearchChange}
+          logout={this.logout}
+        />
         <LogOutButton className="logout" onClick={this.logout}>
           LOGOUT
         </LogOutButton>
