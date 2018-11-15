@@ -34,6 +34,8 @@ const authenticate = WrappedComponent => {
       localStorage.setItem(
         this.state.username, JSON.stringify(this.state.password)
       );
+
+      // window.location.reload();
         
       this.setState({
   

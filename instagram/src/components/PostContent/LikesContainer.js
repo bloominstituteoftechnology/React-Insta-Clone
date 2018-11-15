@@ -1,6 +1,27 @@
 import React from "react";
+import styled from 'styled-components';
 import './PostContent.css';
 
+const Container = styled.div`
+  width: 8rem;
+  display:flex;
+  justify-content: space-between;
+`;
+
+const I = styled.i`
+font-size: 3rem;
+`;
+
+const Button = styled.button`
+border: none;
+    background: none;
+    color: grey;
+    cursor: pointer;
+`;
+
+const Likes = styled.div`
+margin-top: 1rem;
+`;
 class LikesContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -27,17 +48,17 @@ class LikesContainer extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="buttons">
-          <button className="heart" onClick={this.likeClick}>
-            <i className="far fa-heart icon" />
-          </button>
-          <a href="">
-            <i className="far fa-comment" />
-          </a>
-        </div>
-        <div  className="likes">
+        <Container>
+          <Button onClick={this.likeClick}>
+            <I className="far fa-heart " />
+          </Button>
+          <Button>
+            <I className="far fa-comment" />
+          </Button>
+        </Container>
+        <Likes>
           <p>{this.state.likes}</p>
-        </div>
+        </Likes>
       </React.Fragment>
     );
   }

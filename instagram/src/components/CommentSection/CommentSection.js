@@ -2,6 +2,24 @@ import React from "react";
 import "./CommentSection.css";
 import PropTypes from "prop-types";
 import Comment from "./Comment";
+import styled from "styled-components";
+
+const AddComment = styled.form`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 0rem;
+  border-top: 1px solid lightgrey;
+  margin-top: 1rem;
+`;
+
+
+const Input = styled.input`
+width:95%;
+border: none;
+font-size: 2rem;
+`;
+
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -14,12 +32,12 @@ class CommentSection extends React.Component {
     };
   }
 
-    componentDidMount(){
-      const comments = JSON.parse(localStorage.getItem('comments'));
-      if(comments){
-        this.setState({comments: comments});
-      }
+  componentDidMount() {
+    const comments = JSON.parse(localStorage.getItem("comments"));
+    if (comments) {
+      this.setState({ comments: comments });
     }
+  }
 
   handleChange = event => {
     this.setState({
@@ -35,7 +53,7 @@ class CommentSection extends React.Component {
         { text: this.state.inputText, username: "New User" }
       ];
 
-    localStorage.setItem("comments", JSON.stringify(newComment));
+      localStorage.setItem("comments", JSON.stringify(newComment));
 
       this.setState({
         comments: newComment,
@@ -50,8 +68,48 @@ class CommentSection extends React.Component {
     // console.log(this.state.index);
     return (
       <React.Fragment>
-        {this.state.comments.map((item) => {
-          return <Comment key={`${item.username}${item.text}`} comments={item}/>;
+        {this.state.comments.map(item => {
+          return (
+            <Comment key={`${item.username}${item.text}`} comments={item} />
+          );
+        })}
+        <div className="time">
+          <p className="time-text">{this.state.data.timestamp}</p>
+        </div>
+
+        <AddComment onSubmit={this.addNewComment}>
+          <Input
+            className="input-comment"
+            placeholder="Add a comment..."
+            type="text"
+            name="inputText"
+            value={this.state.inputText}
+            onChange={this.handleChange}
+          />
+          <a href="">
+            <i className="fas fa-ellipsis-h settings" />
+          </a>
+        </AddComment>
+      </React.Fragment>
+    );
+  }
+}
+
+CommentSection.propTypes = {
+  data: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
+  })
+};
+
+export default CommentSection;
+
+
+{/* <React.Fragment>
+        {this.state.comments.map(item => {
+          return (
+            <Comment key={`${item.username}${item.text}`} comments={item} />
+          );
         })}
         <div className="time">
           <p className="time-text">{this.state.data.timestamp}</p>
@@ -69,18 +127,5 @@ class CommentSection extends React.Component {
           <a href="">
             <i className="fas fa-ellipsis-h settings" />
           </a>
-          {/* <button type="submit">Add Todo</button> */}
         </form>
-      </React.Fragment>
-    );
-  }
-}
-
-CommentSection.propTypes = {
-  data: PropTypes.shape({
-    username: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
-  })
-};
-
-export default CommentSection;
+      </React.Fragment> */}

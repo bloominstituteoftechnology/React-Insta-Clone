@@ -1,12 +1,20 @@
 import React from "react";
 import PostContent from "../PostContent/PostContent";
-import "./PostContainer.css";
+import styled from 'styled-components';
+// import "./PostContainer.css";
 import PropTypes from 'prop-types';
+
+
+const Container = styled.div`
+  margin: 0 auto;
+  margin-top: 10rem;
+  width: 100rem;
+`;
 
 const PostContainer = props => {
 
   return (
-    <div className="post-container">
+    <Container>
       {props.data.map(item => {
         return <PostContent 
         key={item.username} 
@@ -15,7 +23,7 @@ const PostContainer = props => {
         likes={item.likes}   
         />;
       })}
-    </div>
+    </Container>
   );
 };
 
@@ -37,3 +45,14 @@ PostContainer.propTypes = {
 
 
 export default PostContainer;
+
+    {/* <div className="post-container">
+      {props.data.map(item => {
+        return <PostContent 
+        key={item.username} 
+        data={item}
+        comments={item.comments}
+        likes={item.likes}   
+        />;
+      })}
+    </div> */}

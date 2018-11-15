@@ -4,7 +4,7 @@ import SearchBar from "../SearchBar/SearchBar";
 
 const PostPage = props => {
   return (
-    <div className="App">
+    <div>
       <SearchBar
         handleInputChange={props.handleInputChange}
         filterItems={props.filterItems}
