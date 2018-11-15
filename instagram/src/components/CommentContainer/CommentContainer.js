@@ -12,8 +12,6 @@ const CommentContainer = props => {
         <div className="text">
           {props.propsInCC.text}
         </div>
-        
-        
       </div>
 
     )

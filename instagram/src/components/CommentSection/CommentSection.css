@@ -1,2 +1,11 @@
 
+.comment-box {
+    color: gray;
+    height: 45px;
+    
+    font-size: 15px;
+    border-radius: 4px;
+    border: none;
+
+}
 

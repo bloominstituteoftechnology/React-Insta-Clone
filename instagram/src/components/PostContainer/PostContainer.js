@@ -3,7 +3,7 @@ import CommentSection from '/Users/cengizbug/Lambda Projects/02_Month 2/React-In
 import './PostContainer.css'
 import FeatherIcon from 'feather-icons-react';
 import PropTypes from 'prop-types';
-
+import CommentForm from '../CommentSection/CommentForm';
 
 class PostContainer extends React.Component {
     constructor(props) {
@@ -11,7 +11,26 @@ class PostContainer extends React.Component {
         super(props);
         this.state = {
             commentSection: props.propsInPC.comments,
+            inputText: " ",
         }
+    }
+
+    handleChange = event => {
+        this.setState({
+            [event.target.name]: event.target.value,
+        })
+        console.log(event.target.name);
+    }
+
+    addComment = ev => {
+        console.log("enter clicked", this.state);
+        ev.preventDefault();
+        this.setState({
+            
+            // commentsSection: this.state.commentSection.slice().push(this.state.inputText)
+                commentSection: [...this.state.commentSection, {username: "andrewC", text: this.state.inputText}]
+            
+        })
     }
     
     render() {
@@ -50,7 +69,8 @@ class PostContainer extends React.Component {
                         
                         <h5 className="post-time">2 HOURS AGO</h5>
                         <div className="new-comment">
-                        <input className="comment-box" type="text" size="40" placeholder="Add a comment..."></input>
+                        <CommentForm inputText={this.state.inputText} handleChange={this.handleChange} addComment={this.addComment}/>
+                        
                             <div className="more-button">
                                 <FeatherIcon icon="more-horizontal" />
                             </div>
