@@ -1,19 +1,41 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const StyledForm = styled.form`
+  border-top: 1px solid lightgray;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: .5rem 0;
+`;
+
+const StyledInput = styled.input`
+  all: unset;
+  flex-grow: 1;
+  padding: 1rem 0;
+`;
+
+const StyledButton = styled.button`
+  border: none;
+  width: 4rem;
+  font-weight: bold;
+  font-size: 2rem;
+`;
 
 const CommentForm = props => {
   return (
-    <form
+    <StyledForm
       className="comment--form"
       onSubmit={(e) => props.handleInputSubmit(e)}>
-      <input 
+      <StyledInput 
         type="text"
         name="text"
         onChange={(e) => props.handleInputChange(e)}
         placeholder="Add a comment..."
         value={props.commentText}/>
-      <button>...</button>
-    </form>
+      <StyledButton>...</StyledButton>
+    </StyledForm>
   );
 }
 

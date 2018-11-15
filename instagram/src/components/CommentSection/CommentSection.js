@@ -3,10 +3,24 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import parseDate from '../../helperFunctions/helper';
 import './CommentSection.css';
+import styled from 'styled-components';
 
 import PostStat from './PostStat';
 import Comment from './Comment';
 import CommentForm from './CommentForm';
+
+const StyledCommentSec = styled.div`
+  width: 100%;
+  padding: 0  1.2rem;
+  font-size: 1.5rem;
+`;
+
+const Timestamp = styled.div`
+  margin: 1rem 0;
+  color: gray;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+`;
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -43,7 +57,7 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <div className="post--comments">
+      <StyledCommentSec className="post--comments">
         <PostStat
           likes={this.state.likes}
           liked={this.state.liked}
@@ -58,15 +72,15 @@ class CommentSection extends React.Component {
               handleRemoveComment={() => this.props.handleRemoveComment(i)}
             />
         ))}
-        <div className="post--time-stamp">
+        <Timestamp className="post--time-stamp">
           {moment(parseDate(this.props.timestamp)).fromNow()}
-        </div>
+        </Timestamp>
         <CommentForm
           commentText={this.state.commentText}
           handleInputChange={(e) => this.handleInputChange(e)}
           handleInputSubmit={(e) => this.handleInputSubmit(e, this.props.submitComment)}
         />
-      </div>
+      </StyledCommentSec>
     );
   }
 } 
