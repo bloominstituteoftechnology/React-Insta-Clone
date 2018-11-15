@@ -8,11 +8,16 @@ class App extends React.Component {
   constructor() {
     super();
     this.state={
-      postData: dummyData,
+      postData: [],
       user: '',
       password: ''
     }
   
+  }
+  componentDidMount() {
+    this.setState({
+      postData: dummyData,
+    })
   }
   handleChange = e => {
     this.setState({

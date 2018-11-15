@@ -36,4 +36,5 @@
 }
 .comments form input:focus{
     outline: none;
+    background: #f2eaeb;
 }
