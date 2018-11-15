@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './SearchBar.scss';
+import {SearchBarContainer, SearchLogoSection, SearchInputSection, SearchInput, SearchIcon, SearchButtons, CustomDiv} from './SearchBarStyles';
 
 import logo from './logo.png';
 
@@ -28,36 +28,36 @@ export default class SearchBar extends React.Component {
 
     return (
 
-      <div className='search-bar'>
+      <SearchBarContainer>
 
-        <div>
+        <SearchLogoSection>
 
           <p className="fab fa-instagram"></p>
           <p className='divider'>|</p>
-          <img className='logo' src={logo} alt='logo'></img>
+          <img src={logo} alt='logo'></img>
 
-        </div>
+        </SearchLogoSection>
 
-        <div>
+        <CustomDiv>
 
-          <div className='input'>
+          <SearchInputSection>
 
-            <input type='text' placeholder='Search' onChange={this.handleChange} value={this.state.searchText} />
-            <p className={this.state.searchText === '' ? 'fas fa-search' : 'invisible'}></p>
+            <SearchInput type='text' placeholder='Search' onChange={this.handleChange} value={this.state.searchText} />
+            <SearchIcon className={this.state.searchText === '' ? 'fas fa-search' : 'invisible'}></SearchIcon>
 
-          </div>
+          </SearchInputSection>
 
-        </div>
+        </CustomDiv>
 
-        <div>
+        <SearchButtons>
 
           <p className='right far fa-compass'></p>
           <p className='right far fa-heart'></p>
           <p className='right far fa-user' onClick={() => this.props.setUsername('')}></p>
 
-        </div>
+        </SearchButtons>
 
-      </div>
+      </SearchBarContainer>
 
     );
 
