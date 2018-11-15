@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Card, Button, CardHeader, CardFooter, CardBody,
     Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+
+import Comments from '../CommentSection/Comments';
   
 
 class Post extends Component {
@@ -49,7 +51,7 @@ class Post extends Component {
                     <Modal isOpen={this.state.modal} toggle={this.toggleComments} className={this.props.className}>
                         <ModalHeader toggle={this.toggle}>{this.post.username}'s Post</ModalHeader>
                         <ModalBody>
-                           {this.post.comments.map((c, i) => <p key={i}>{c.text}</p>)}
+                           <Comments comments={this.post.comments}/>
                         </ModalBody>
                         <ModalFooter>
                             {/* <Button color="primary" onClick={this.toggleComments}>Do Something</Button>{' '} */}
