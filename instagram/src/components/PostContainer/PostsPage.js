@@ -4,8 +4,8 @@ import PostContainer from './PostContainer';
 import dummyData from '../../dummy-data';
 
 class PostsPage extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       posts: [],
       filteredPosts: []

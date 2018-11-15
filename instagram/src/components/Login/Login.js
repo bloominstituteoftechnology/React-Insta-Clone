@@ -1,38 +1,62 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Login.css'
 
-function Login(props) {
-  return (
-        <form
-          onSubmit={props.handleLogin}
-          className="login"
-          name="login"
-          >
-          <h1>InstaClone Login</h1>
-          <input 
-            required
-            type="text"
-            name="username"
-            htmlFor="login"
-            value={props.value}
-            onChange={props.handleChange}
-            placeholder="Enter Username"
-          />
-          <input 
-            required
-            type="text"
-            name="password"
-            htmlFor="login"
-            onChange={props.handleChange}
-            placeholder="Enter Password"
-          />
-          <input
-            type="submit"
-            value="LOGIN"
-            className="submit"
-          />
-        </form>
-  )
+class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: "",
+    };
+  }
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    })
+  }
+  handleLogin = (e) => {
+    let username = this.state.username;
+    localStorage.setItem('username', username);
+    window.location.reload()
+  };
+
+
+  render () {
+
+    return (
+      <form
+        onSubmit={this.handleLogin}
+        className="login"
+        name="login"
+        >
+        <h1>InstaClone Login</h1>
+        <input 
+          required
+          type="text"
+          name="username"
+          value={this.state.username}
+          onChange={this.handleChange}
+          placeholder="Enter Username"
+        />
+        <input 
+          required
+          // type="password"
+          value={this.state.password}
+          type="text"
+          name="password"
+          onChange={this.handleChange}
+          placeholder="Enter Password"
+        />
+        <input
+          type="submit"
+          onSubmit={this.handleLogin}
+          value="LOGIN"
+          className="submit"
+        />
+      </form>
+    )
+  }
 }
 
 export default Login
