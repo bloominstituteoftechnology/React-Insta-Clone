@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const StyledSearchBarContainer = styled.div`
-  width: 45%;
-  border: 1px solid blue;
-  background-color: #7073ec;
+  /* width: 45%; */
+  border: 1px solid black;
+  /* background-color: #7073ec; */
   display: flex;
   justify-content: space-between;
-  padding: 10px 10px;
-  margin: 0 auto 30px;
+  padding: 25px;
+  margin: 10px 0;
   border-radius: 4px;
 `;
 
@@ -23,7 +23,7 @@ export const StyledPost = styled.div`
   border: 1px solid black;
   margin-bottom: 50px;
   border-radius: 4px;
-  padding: 0 60px;
+  padding: 0 10px;
 
   &>img {
     max-width: 70%;

@@ -121,7 +121,6 @@ class App extends Component {
           // increaseLikes={this.increaseLikes}
           // filterPosts={this.filterPosts}
   render() {
-    console.log('app');
     return (
       <div className="App">
         <PostsPage />

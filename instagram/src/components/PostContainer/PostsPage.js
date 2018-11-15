@@ -15,7 +15,6 @@ class PostsPage extends React.Component {
   }
 
   saveStatetoLocalStorage() {
-    console.log("saving");
     for (let key in this.state) {
       localStorage.setItem(key, JSON.stringify(this.state[key]));
     }
@@ -37,53 +36,62 @@ class PostsPage extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ data: dummyData });
-    this.setState({ filteredPosts: dummyData });
+    if (localStorage.getItem("data")) {
+      this.hydrateStateWithLocalStorage();
+    } else {
+      this.setState({ data: dummyData });
+      this.setState({ filteredPosts: dummyData });
+    }
     window.addEventListener(
       "beforeunload",
       this.saveStatetoLocalStorage.bind(this)
     );
-    // this.hydrateStateWithLocalStorage();
   }
 
-  componentDidUpdate() {
-    for (let key in this.state) {
-      if (localStorage.getItem(key) !== this.state[key]) {
-        localStorage.setItem(key, JSON.stringify(this.state[key]));
-      }
-    }
-  }
+  // componentDidUpdate() {
+  //   for (let key in this.state) {
+  //     if (localStorage.getItem(key) !== this.state[key]) {
+  //       localStorage.setItem(key, JSON.stringify(this.state[key]));
+  //     }
+  //   }
+  // }
 
   updateSearchText = e => {
-    this.setState({ searchText: e.target.value });
-    this.filterPosts();
+    this.setState({ searchText: e.target.value }, this.filterPosts);
+    // this.filterPosts();
+    localStorage.setItem(
+      "filteredPosts",
+      JSON.stringify(this.state.filteredPosts)
+    );
   };
 
-  filterPosts() {
-    if (this.state.searchText === "") {
-      this.setState({ filteredPosts: this.state.data });
-    } else {
+  filterPosts = () => {
+    // if (this.state.searchText === "") {
+    //   this.setState({ filteredPosts: this.state.data });
+    // } else {
       const filteredPosts = this.state.data.filter(d => {
         if (d.username.includes(this.state.searchText)) {
           return d;
         }
       });
       this.setState({ filteredPosts: filteredPosts });
-    }
+    // }
   }
 
-  increaseLikes = id => {
-    const newData = this.state.data.map(d => {
-      if (d.id === id) {
-        d.likes++;
-        return d;
-      } else return d;
-    });
-    this.setState({ data: newData });
+  increaseLikes = e => {
+    console.log(e);
+    // const newData = this.state.data.map(d => {
+    //   if (d.id === id) {
+    //     console.log("found");
+    //     d.likes++;
+    //     return d;
+    //   } else return d;
+    // });
+    // this.setState({ data: newData });
+    // console.log(this.state.data);
   };
 
   logout = e => {
-    console.log("click");
     e.preventDefault();
     localStorage.removeItem("username");
     localStorage.removeItem("password");
@@ -91,6 +99,7 @@ class PostsPage extends React.Component {
   };
 
   render() {
+    const posts = this.state.searchText === '' ? this.state.data : this.state.filteredPosts;
     return (
       <div>
         <SearchBar
@@ -100,11 +109,12 @@ class PostsPage extends React.Component {
           logout={this.logout}
         />
         <div className="Posts">
-          {this.state.filteredPosts.map((post, idx) => (
+          {posts.map((post, idx) => (
             <PostContainer
               key={idx}
               id={post.id}
               post={post}
+              likes={post.likes}
               username={this.state.username}
               increaseLikes={this.increaseLikes}
             />

@@ -5,41 +5,32 @@ import PropTypes from "prop-types";
 import { StyledPost, UserDiv, IconBar, Thumbnail, UserName, TimeStamp, LikeCounter, ContentContainer } from "../Styles.js";
 import moment from "moment";
 
-class PostContainer extends React.Component {
-  constructor(props) {
-    super();
-    this.state = {
-      post: props.post,
-      username: props.username,
-    };
-  }
-
-  render() {
+const PostContainer = props => {
     return (
       <div>
         <StyledPost>
           <UserDiv>
             <Thumbnail
-              src={this.state.post.thumbnailUrl}
+              src={props.post.thumbnailUrl}
               alt=""
             />
-            <UserName> {this.state.post.username} </UserName>
+            <UserName> {props.post.username} </UserName>
           </UserDiv>
-          <img src={this.state.post.imageUrl} alt="" />
+          <img src={props.post.imageUrl} alt="" />
           <ContentContainer>
           <IconBar>
-            <Heart onClick = {() => {this.props.increaseLikes(this.props.id)}} />
+            <Heart onClick={props.increaseLikes} />
             <MessageCircle />
           </IconBar>
-          <LikeCounter>{this.props.post.likes} likes</LikeCounter>
-          <CommentSection comments={this.state.post.comments} username={this.state.username}/>
-          <TimeStamp>{moment(this.state.post.timestamp, "MMMM Do YYYY, h:mm:ss").fromNow()}</TimeStamp>
+          <LikeCounter>{props.post.likes} likes</LikeCounter>
+          <CommentSection comments={props.post.comments} username={props.username}/>
+          <TimeStamp>{moment(props.post.timestamp, "MMMM Do YYYY, h:mm:ss").fromNow()}</TimeStamp>
           </ContentContainer>
         </StyledPost>
       </div>
     );
   }
-}
+// }
 
 PostContainer.propTypes = {
   index: PropTypes.number,
