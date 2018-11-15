@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 // Components
+import PostsPage from './components/PostContainer/PostsPage';
 import SearchBar from './components/SearchBar/SearchBar';
 import Posts from './components/PostContainer/Posts';
 
@@ -36,6 +37,7 @@ class App extends Component {
     render() {
         return ( 
             <>
+                <PostsPage/>
                 <SearchBar 
                     searchText={this.searchText} 
                     handleChange={this.handleChange}
