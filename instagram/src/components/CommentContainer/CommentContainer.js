@@ -22,7 +22,7 @@ const CommentContainer = props => {
 
 
   CommentContainer.propTypes = {
-    propsInPC: PropTypes.shape({
+    propsInCC: PropTypes.shape({
         username: PropTypes.string,
         text: PropTypes.string,
         

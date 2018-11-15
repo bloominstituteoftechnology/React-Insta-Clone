@@ -50,9 +50,7 @@ class PostContainer extends React.Component {
                         
                         <h5 className="post-time">2 HOURS AGO</h5>
                         <div className="new-comment">
-                            <div className="add-comment">
-                                <h3>Add a comment...</h3>
-                            </div>
+                        <input className="comment-box" type="text" size="40" placeholder="Add a comment..."></input>
                             <div className="more-button">
                                 <FeatherIcon icon="more-horizontal" />
                             </div>

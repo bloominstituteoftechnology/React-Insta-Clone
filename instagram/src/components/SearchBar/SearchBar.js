@@ -15,7 +15,7 @@ const SearchBar = props => {
             
 
             
-                <h4 className="search">Search</h4>
+                <input className="search-box" type="text" size="30" placeholder="Search"></input>
             
             
 
