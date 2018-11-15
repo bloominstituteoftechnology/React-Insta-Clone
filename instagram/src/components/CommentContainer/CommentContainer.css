@@ -1,0 +1,13 @@
+
+.comments {
+    margin: 1% 0;
+    
+    text-align: left;
+}
+
+.cusername {
+    font-weight: bold;
+    margin-right: 1%;
+    /* border: 2px solid red; */
+}
+

@@ -1,12 +1,22 @@
 import React from "react";
+import './CommentContainer.css';
+
 
 const CommentContainer = props => {
     // console.log("Comments: ", props)
-    return <div>
-   
-    {props.propsInCC.username}
-    {props.propsInCC.text}
-    </div>;
+    return (
+      <div className="comments">
+        <div className="cusername">
+          {props.propsInCC.username}
+        </div>
+        <div classname="text">
+          {props.propsInCC.text}
+        </div>
+        
+      </div>
+
+    )
+     
   }
 
 export default CommentContainer;

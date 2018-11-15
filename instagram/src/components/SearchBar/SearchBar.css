@@ -1,0 +1,14 @@
+
+.search-bar {
+    display: flex;
+    max-width: 800px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-bottom: 1px solid lightgray;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
