@@ -18,8 +18,8 @@ class Login extends Component {
     submitCredentials = (event) => {
         localStorage.userName = event.target[0].value;
         localStorage.password = event.target[0].value;
-        if (event.target[0].value !== "") {
-           localStorage.loggedIn = true;
+        if (event.target[0].value !== '') {
+            localStorage.loggedIn = true;
         }
     };
 
