@@ -12,25 +12,33 @@ const authenticate = WrappedComponent => {
       };
     }
 
-    componentDidMount() {
-      const user = JSON.parse(localStorage.getItem(this.state.username));
-      console.log(user);
-      if (user) {
-        this.setState({ loggedIn: true });
+    componentDidUpdate() {
+      const pass = JSON.parse(localStorage.getItem(this.state.username));
+      console.log(pass);
+      if (pass === this.state.password && this.state.loggedIn === false) {
+        this.setState({ 
+            loggedIn: true, 
+            username: "",
+            password: ""
+        });
       }
     }
 
     loginSubmit = event => {
       event.preventDefault();
-    //   console.log("works");
+      console.log("works");
       console.log(this.state.username);
       console.log(this.state.password);
       console.log(this.state.loggedIn);
 
       localStorage.setItem(
-        this.state.username,
-        JSON.stringify(this.state.password)
+        this.state.username, JSON.stringify(this.state.password)
       );
+        
+      this.setState({
+  
+      });
+
     };
 
     handleChange = event => {
@@ -40,16 +48,14 @@ const authenticate = WrappedComponent => {
     };
 
     render() {
-      
-      return (
-        <React.Fragment>
-          <Login
+        if(this.state.loggedIn === false){
+            return <Login
             loginSubmit={this.loginSubmit}
             handleChange={this.handleChange}
-          />
-          <WrappedComponent />
-        </React.Fragment>
-      );
+          />;
+        }if(this.state.loggedIn === true){
+            return <WrappedComponent />;
+        }
     }
   };
 };
