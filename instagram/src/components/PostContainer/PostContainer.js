@@ -2,7 +2,7 @@ import React from 'react';
 import CommentSection from '/Users/cengizbug/Lambda Projects/02_Month 2/React-Insta-Clone/instagram/src/components/CommentSection/CommentSection';
 import './PostContainer.css'
 import FeatherIcon from 'feather-icons-react';
-import SearchBar from '/Users/cengizbug/Lambda Projects/02_Month 2/React-Insta-Clone/instagram/src/components/SearchBar/SearchBar';
+
 
 
 class PostContainer extends React.Component {
@@ -17,7 +17,7 @@ class PostContainer extends React.Component {
     render() {
         return (
             <div className="instagram-posts">
-                <SearchBar />
+                
                 <div className="post-container"> 
                 
                     <div className="user">   
@@ -44,7 +44,17 @@ class PostContainer extends React.Component {
                         </div>
                         <div className="comments">
                             {<CommentSection commentSection={this.props.propsInPC.comments}/> }
-                        </div>         
+                        </div>  
+                        <h5 class="post-time">2 HOURS AGO</h5>
+                        <div className="new-comment">
+                            <div className="add-comment">
+                                <h3>Add a comment...</h3>
+                            </div>
+                            <div className="more-button">
+                                <FeatherIcon icon="more-horizontal" />
+                            </div>
+                            
+                        </div>       
                     </div>
                     
                 </div>
