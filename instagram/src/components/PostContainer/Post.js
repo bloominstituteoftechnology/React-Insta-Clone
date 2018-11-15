@@ -11,7 +11,9 @@ class Post extends Component {
         super(props)
         this.post = props.post
         this.state = {
-            modal: false
+            modal: false,
+            commentText: '',
+            comments: this.props.post.comments
         }
 
         this.toggleComments = this.toggleComments.bind(this);
@@ -23,6 +25,21 @@ class Post extends Component {
             modal: !this.state.modal
         })
     }
+    handleChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    addComment = e => {
+        e.preventDefault();
+
+        this.setState({
+            comments: [...this.state.comments, {text: this.state.commentText}],
+            commentText: ''
+        })
+    }
+
 
     render(){
 
@@ -46,10 +63,20 @@ class Post extends Component {
                     <Modal isOpen={this.state.modal} toggle={this.toggleComments} className={this.props.className}>
                         <ModalHeader toggle={this.toggle}>{this.post.username}'s Post</ModalHeader>
                         <ModalBody>
-                           <Comments comments={this.post.comments}/>
+                           <Comments comments={this.state.comments}/>
                         </ModalBody>
                         <ModalFooter>
-                            {/* <Button color="primary" onClick={this.toggleComments}>Do Something</Button>{' '} */}
+                            <form onSubmit={this.addComment}>
+
+                                <input 
+                                    type='text'
+                                    name='commentText'
+                                    placeholder='Add comment...'
+                                    value={this.commentText}
+                                    onChange={this.handleChange}
+                                />
+                                <Button color="primary" type='submit'>Add comment</Button>{' '}
+                            </form>
                             <Button color="secondary" onClick={this.toggleComments}>Close</Button>
                         </ModalFooter>
                     </Modal>

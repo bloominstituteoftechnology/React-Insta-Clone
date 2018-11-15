@@ -29,13 +29,23 @@ class App extends Component {
         this.setState({
             [e.target.name]: e.target.value
         })
+
+        console.log(e.target.value);
     }
 
     render() {
-        return ( <>
-            <SearchBar searchText={this.searchText} handleChange={this.handleChange}/ >
+        return ( 
+            <>
+                <SearchBar 
+                    searchText={this.searchText} 
+                    handleChange={this.handleChange}
+                />
 
-            <Posts posts = { this.state.posts } />  
+                <Posts 
+                    posts = { this.state.posts } 
+                    handleChange={this.handleChange} 
+                    commentText={this.state.commentText}
+                />  
             </>
         );
     }

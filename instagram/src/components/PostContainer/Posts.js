@@ -9,8 +9,9 @@ const Posts = props => {
         <div className='posts'>
             {props.posts.map((p, i)=> <Post 
                 post={p} 
-                toggleComments={props.toggleComments} 
                 key={i}
+                handleChange={props.handleChange} 
+                commentText={props.commentText}
                 />)}
         </div>
     )
