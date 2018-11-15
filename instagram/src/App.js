@@ -21,18 +21,15 @@ class App extends Component {
   }
 
   handleSearch = ev => {
-    this.setState({
-      searchText: ev.target.value
-    });
-  };
-
-  searchPosts = ev => {
     ev.preventDefault();
-    let slicedData = this.state.data.slice();
     let userName = this.state.searchText;
-    let posts = slicedData.filter(post => post.username.includes(userName));
-    console.log("search working");
-    this.setState({ data: posts });
+    let posts = this.state.data.filter(post =>
+      post.username.includes(userName)
+    );
+    this.setState({
+      searchText: ev.target.value,
+      data: posts
+    });
   };
 
   render() {
