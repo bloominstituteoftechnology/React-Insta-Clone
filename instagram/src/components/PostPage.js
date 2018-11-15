@@ -9,6 +9,16 @@ import Authenticate from './Authentication/Authenticate';
 const AppContainer = styled.div`
   margin-top: 50px;
 `
+const LogOutButton = styled.button`
+  background-color: white;
+  font-size: 20px;
+  padding: 3px 10px;
+  position: fixed;
+  top: 10px;
+  right: 10%;
+  z-index: 2;
+  cursor: pointer;
+`
 
 class PostPage extends React.Component {
     constructor(props){
@@ -71,7 +81,7 @@ class PostPage extends React.Component {
       return (
         <AppContainer className="App">
 
-        <button onClick={this.props.logout}>LogOut</button>
+        <LogOutButton onClick={this.props.logout}>LogOut</LogOutButton>
 
           <SearchForm searchText={this.state.searchText}
           handleChange={this.handleChange}

@@ -5,6 +5,15 @@ import styled from 'styled-components';
 
 const CommentsContainer = styled.div`
     width: 100%;
+    box-sizing: border-box;
+
+    form {
+        input {
+            width: 80%;
+            padding: 5px 10px;
+            margin: 10px 0;
+        }
+    }
 `
 
 // const CommentSection = (props) => {

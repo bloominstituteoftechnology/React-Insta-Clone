@@ -40,18 +40,6 @@ const Post = styled.div`
     }
 `
 
-// const PostContainer = (props) => {
-//     return (
-//         <Post className={`${props.thisPost.display ? 'displayed' : 'hidden'}`} >
-//             <h2><img src={props.thisPost.thumbnailUrl}></img>{props.thisPost.username}<p>{props.thisPost.timestamp}</p></h2>
-//             <img src={props.thisPost.imageUrl} />
-            
-//             <p>{props.thisPost.likes} likes</p>
-//             <CommentSection thisPost={props.thisPost} postIndex={props.index} />
-//         </Post>
-//     );
-// }
-
 class PostContainer extends Component {
     constructor(props){
         super(props);

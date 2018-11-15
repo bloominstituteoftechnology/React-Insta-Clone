@@ -9,6 +9,13 @@ const CommentContainer = styled.div`
     padding: 10px;
     margin: 0;
     border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    .comment-text {
+        width: 70%;
+    }
 
     p {
         margin: 0;
@@ -26,7 +33,9 @@ const CommentContainer = styled.div`
 const Comment = (props) => {
     return (
         <CommentContainer  >
-            <p><strong>{props.thisComment.username}</strong> {props.thisComment.text}</p> 
+            <div className="comment-text">
+                <p><strong>{props.thisComment.username}</strong> {props.thisComment.text}</p> 
+            </div>
             <div className={`delete-comment`}onClick={props.onClick} data-index={props.index}>Delete Comment</div>
         </CommentContainer>
     );
