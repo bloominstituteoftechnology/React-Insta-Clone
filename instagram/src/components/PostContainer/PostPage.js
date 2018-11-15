@@ -3,7 +3,6 @@ import Fuse from 'fuse.js';
 
 import dummyData from '../../dummy-data';
 
-import Authenticate from '../Authentication/Authenticate';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 
@@ -22,7 +21,7 @@ class PostPage extends React.Component {
     data = data ? JSON.parse(data) : dummyData;
 
     let user = localStorage.getItem('instaCloneLogin');
-    user = user? (JSON.parse(user)).username : 'newUser';
+    user = user ? (JSON.parse(user)).username : 'newUser';
 
     this.setState({
       data: data,
@@ -119,5 +118,5 @@ class PostPage extends React.Component {
   )}
 }
 
-export default Authenticate(PostPage);
+export default PostPage;
 // export default PostPage;

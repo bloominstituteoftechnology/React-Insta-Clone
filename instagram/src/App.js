@@ -4,18 +4,10 @@ import React, { Component } from 'react';
 import './App.css';
 
 // components
+import Authenticate from './components/Authentication/Authenticate';
 import PostPage from './components/PostContainer/PostPage';
 
 class App extends Component {
-
-  handleLogin(name, password) {
-    if (password === 'lambda') {
-      localStorage.setItem('instaCloneLogin', JSON.stringify({
-        username: name
-      }))
-      window.location.reload()
-    }
-  }
 
   render() {
     return (
@@ -28,4 +20,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);

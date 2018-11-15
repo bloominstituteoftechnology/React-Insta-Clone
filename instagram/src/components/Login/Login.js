@@ -20,7 +20,10 @@ class Login extends React.Component {
 
   login() {
     if (this.state.username && this.state.password === 'lambda') {
-      this.props.handleLogin(this.state.username, this.state.password);
+      localStorage.setItem('instaCloneLogin', JSON.stringify({
+        username: this.state.username
+      }))
+      window.location.reload()
     } else {
       this.setState({
         hint: true,

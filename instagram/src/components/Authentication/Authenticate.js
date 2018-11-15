@@ -25,7 +25,7 @@ const Authenticate = App  => (
       return this.state.loggedIn ?
         <App />
         :
-      <Login handleLogin={(name, password) => this.props.handleLogin(name, password)}/>
+      <Login />
     }
   }
 )
