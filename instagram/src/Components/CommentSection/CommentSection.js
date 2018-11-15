@@ -1,7 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
-import './CommentSection.css';
+import styled from 'styled-components';
+
+const CommentWrapperInput = styled.input`
+  width: 100%;
+  padding: 15px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: none;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+   &:focus {
+    outline: none;
+  }
+   &::placeholder {
+    color: #ccc;
+    text-align: left;
+    font-size: 14px;
+  }
+`;
 
 class CommentSection extends React.Component {
   state = {
@@ -46,6 +64,7 @@ class CommentSection extends React.Component {
 
     this.setState({ comments: comments, comment: '' });
 
+
     setTimeout(() => {
       this.setComments();
     }, 600);
@@ -65,7 +84,7 @@ class CommentSection extends React.Component {
           />
         ))}
         <form onSubmit={this.submitComment}>
-          <input
+          <CommentWrapperInput
             placeholder="Add a comment..."
             type="text"
             value={this.state.comment}
