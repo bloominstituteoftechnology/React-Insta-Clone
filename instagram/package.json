@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "crypto-js": "^3.1.9-1",
     "fuse.js": "^3.3.0",
     "moment": "^2.22.2",
     "node-sass": "^4.10.0",

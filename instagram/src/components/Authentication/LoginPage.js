@@ -4,6 +4,8 @@ import WarningMessage from './WarningMessage';
 
 import './LoginPage.scss';
 
+const CryptoJS = require('crypto-js');
+
 export default class LoginPage extends React.Component {
 
   constructor() {
@@ -37,7 +39,7 @@ export default class LoginPage extends React.Component {
 
       }
 
-      else if (this.state.password != localStorage[this.state.userField]) {
+      else if (this.state.password != CryptoJS.AES.decrypt(localStorage[this.state.userField], 's3cr3tk3yz25').toString(CryptoJS.enc.Utf8)) {
 
         this.setState({showPassMessage: true, passMessage: 'invalid password!'});
 
@@ -55,7 +57,7 @@ export default class LoginPage extends React.Component {
 
       if (!localStorage[this.state.userField]) {
 
-        localStorage[this.state.userField] = this.state.password;
+        localStorage[this.state.userField] = CryptoJS.AES.encrypt(this.state.password, 's3cr3tk3yz25').toString();
         this.setState({headerText: 'Signing Up...'}, () => setTimeout(() => this.props.setUsername(this.state.userField), 1000));
 
       }
