@@ -80,21 +80,6 @@ const PostIconsFlipped = {
   msTransform: 'scaleX(-1)'
 }
 
-// const PostContainerGeneralStyle = styled.css`
-//   .post-icon-flipped {
-//     transform: scaleX(-1);
-//     -moz-transform: scaleX(-1);
-//     -webkit-transform: scaleX(-1);
-//     -ms-transform: scaleX(-1);
-//   }
-
-//   @media (max-width: 500px) {
-//     .post-container{
-//       width: 300px;
-//     }
-//   }
-// `;
-
 /***************************************************************************************************
 ********************************************* Component ********************************************
 ***************************************************************************************************/

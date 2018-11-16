@@ -11,6 +11,10 @@ const DivAppContainer = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
+
+  @media (max-width: 500px) {
+    width: 300px;
+  }
 `;
 
 /***************************************************************************************************
