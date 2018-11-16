@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    max-width: 1010px;
+    height:77px;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto;
+    padding:26px 20px;
+  }
+
+.logo {
+    height: 29px;
+    width: 103px;
+}
+
+.icons {
+    width:24px;
+    height:24px;
+}
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 33%;
+}
