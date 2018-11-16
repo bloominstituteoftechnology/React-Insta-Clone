@@ -10,7 +10,8 @@ const HeaderWarpper = styled.header`
     justify-content: space-between;
     max-width: 1000px;
     width: 100%;
-    border-bottom: 1px solid lightgray;
+    border: 1px solid lightgray;
+    border-top: none;
     padding-bottom: 15px;
     padding-top: 15px;
     margin-left: 10px;

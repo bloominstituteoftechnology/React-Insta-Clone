@@ -1,6 +1,7 @@
 import React from 'react';
 import Posts from '../Posts/Posts';
 import Header from '../Header/Header';
+// import '../../App.css';
 
 const PostsPage = props => {
     return (
