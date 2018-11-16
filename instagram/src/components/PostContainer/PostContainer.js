@@ -12,29 +12,21 @@ const PostContainer = props => {
         post => (
           console.log(post),
           (
-            <div key={post.timestamp}>
-              <Card className="container">
-                <CardBody>
-                  <Row>
-                    <img className="img-thumbnail"
-                      style={{ borderRaidus: 90 }}
-                      src={post.thumbnailUrl}
-                      alt=""
-                    />
-                    <CardSubtitle>{post.username}</CardSubtitle>
-                  </Row>
-                </CardBody>
-                <img src={post.imageUrl} alt="" />
+            <div className="postBorder" key={post.timestamp}>
+              <div className="header">
+                <img className="imgThumbnail" src={post.thumbnailUrl} alt="" />
+                <h2>{post.username}</h2>
+              </div>
+              <img className="img-main" src={post.imageUrl} alt="" />
 
-                <h2>{post.timestamp}</h2>
-                <h2>{post.likes}</h2>
+              
+              <div>{post.likes}</div>
 
-                {post.comments.map(comment => {
-                  return (
-                    <CommentSection key={comment.text} coolData={comment} />
-                  );
-                })}
-              </Card>
+              {post.comments.map(comment => {
+                return <CommentSection key={comment.text} coolData={comment} />;
+              })}
+              <div className="timeStamp">{post.timestamp}</div>
+
             </div>
           )
         )
