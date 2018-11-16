@@ -1,11 +1,23 @@
 import React from 'react';
-import "./search.css";
+// import "./search.css";
 import PropTypes from 'prop-types';
+import styled, { css } from 'styled-components';
+
+const Header = styled.header`
+    width: 700px;
+    height: 50px;
+    /* border: 1px solid red; */
+    /* background-color: whitesmoke; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+`;
 
 function SearchBar(props) {
     return (
         <div>
-            <header className='header-container'>
+            <Header className='header-container'>
                 <div className='left-side-logo'>
                     <img className='fab fa-instagram' src="" alt="instaclone logo" />
                     | InstaClone
@@ -26,7 +38,7 @@ function SearchBar(props) {
                     <img className='far fa-heart' src="#" alt="IC icon 2"/>
                     <img className='far fa-user' src="#" alt="IC icon 3"/>
                 </div>
-            </header>
+            </Header>
         </div>
     );
 }
