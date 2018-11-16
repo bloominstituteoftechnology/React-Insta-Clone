@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CommentForm from './CommentForm';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 const IndividualComment = styled.div`
     margin: 10px 14px;
@@ -34,7 +35,7 @@ class CommentSection extends React.Component {
 
         let constructedComment = [...this.state.comments, 
             {
-                username: 'testuser03',
+                username: JSON.parse(localStorage.getItem('username')),
                 text:  this.state.newComment,
             }];
         
@@ -59,7 +60,7 @@ class CommentSection extends React.Component {
                             <p><span>{item.username}</span> {item.text}</p>
                         </IndividualComment>
                 ))}
-                <Timestamp>{this.state.timestamp.toUpperCase()}</Timestamp>
+                <Timestamp>{moment(this.state.timestamp, 'MMMM-DD-YYYY hh:mm:ss').fromNow().toUpperCase()}</Timestamp>
                 <CommentForm 
                     newComment={this.state.newComment} 
                     handleChange={this.handleChange}

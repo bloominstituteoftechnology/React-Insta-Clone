@@ -12,15 +12,9 @@ class LoginPage extends React.Component {
         }
     }
 
-    handlesUsernameChange = event => {
+    handlesChange = event => {
         this.setState({
             [event.target.name]: event.target.value
-        })
-    }
-
-    handlesPasswordChange = event => {
-        this.setState({
-            [event.target.name]: this.showAsStars(event.target.value)
         })
     }
 
@@ -51,7 +45,7 @@ class LoginPage extends React.Component {
                             name="username"
                             placeholder=" "
                             value={this.state.username}
-                            onChange={this.handlesUsernameChange}
+                            onChange={this.handlesChange}
                             required
                         />
                         <label>Username</label>
@@ -62,7 +56,7 @@ class LoginPage extends React.Component {
                             name="password"
                             placeholder=" "
                             value={this.state.password}
-                            onChange={this.handlesUsernameChange}
+                            onChange={this.handlesChange}
                             required
                         />
                         <label>Password</label>
