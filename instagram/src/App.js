@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Fuse from 'fuse.js';
+import moment from 'moment';
 import './App.scss';
 
 import dummyData from './dummy-data';
@@ -20,7 +21,8 @@ class App extends Component {
       data: [],
       displayedData: [],
       username: '',
-      loggedIn: false
+      loggedIn: false,
+      addingPost: false
 
     }
 
@@ -130,6 +132,51 @@ class App extends Component {
 
   }
 
+  addPost = val => {
+
+    this.setState({addingPost: val});
+
+  }
+
+  submitPost = img => {
+
+    const newPost = {
+
+      username: this.state.username,
+      thumbnailUrl: 'https://tk-assets.lambdaschool.com/ecd33d34-c124-4b75-92d2-e5c52c171ed8_11201517_887808411287357_1307163552_a.jpg',
+      imageUrl: `${this.state.username}-${img.name}`,
+      likes: 0,
+      timestamp: moment().format('MMMM Do YYYY hh:mm:ss A'),
+      comments: [],
+      urlIsLocal: true
+
+    }
+
+    const updatedData = this.state.data;
+    updatedData.unshift(newPost);
+
+    const reader = new FileReader();
+
+    const username = this.state.username;
+
+    reader.onload = function(base64) {
+
+      localStorage[`${username}-${img.name}`] = reader.result;
+
+    }
+
+    reader.readAsDataURL(img);
+
+    this.setState({data: updatedData}, () => {
+      this.setState({addingPost: false});
+      setTimeout(() => {
+        this.forceUpdate();
+        console.log("UPDATED");
+      }, 1000);
+    });
+
+  }
+
   render() {
     return (
       <div className='app'>
@@ -143,6 +190,9 @@ class App extends Component {
           username={this.state.username}
           setUsername={this.setUsername}
           loggedIn={this.state.loggedIn}
+          addPost={this.addPost}
+          addingPost={this.state.addingPost}
+          submitPost={this.submitPost}
         />
 
       </div>
