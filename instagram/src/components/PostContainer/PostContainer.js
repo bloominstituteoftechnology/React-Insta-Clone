@@ -3,7 +3,7 @@ import CommentsSection from '../CommentsSection/CommentsSection';
 
 import moment from 'moment'; 
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import './PostContainer.css';
 
@@ -15,15 +15,12 @@ const Post = styled.div`
     border: 1px solid lightgrey;
     align-items: flex-start;
     margin-bottom: 20px;
+    background: white;
 `;
 
 const PostTop = styled.div`
     display: flex;
     align-items: center;
-
-    ${props => props.user && css`
-
-    `}
 `;
 
 const PostTopThumb = styled.img`

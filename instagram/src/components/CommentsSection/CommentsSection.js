@@ -2,7 +2,7 @@ import React from 'react';
 import Comment from '../Comment/Comment';
 import PropTypes from 'prop-types';
 import './CommentsSection.css';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const Comments = styled.div`
     width: 100%;

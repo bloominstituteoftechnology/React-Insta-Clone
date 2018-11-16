@@ -13,6 +13,12 @@ const Authenticate = App => {
             }
         }
     
+        logOutTop = () => {
+            this.setState({
+                loggedIn : false
+            })
+        }
+
         login(username, password) {
             localStorage.setItem('user', username)
             localStorage.setItem('password', password)
@@ -28,7 +34,6 @@ const Authenticate = App => {
             let loginStatus = false; 
 
             if (localStorage.getItem('user') === 'FRANK'){
-                
                 loginStatus = true;
             } else {
                 loginStatus = false;
@@ -41,16 +46,17 @@ const Authenticate = App => {
 
         render() {
             if(this.state.loggedIn) {
-                return <App />;
+                return <App 
+                    logOutTop={this.logOutTop}            
+                />;
             } else {
                 return <LoginPage 
-                login={this.login}
-                loginUserText={this.state.loginUserText}
-                loginPasswordText={this.state.loginPasswordText}
-                handleInputChange={this.handleInputChange}
-              />
+                    login={this.login}
+                    loginUserText={this.state.loginUserText}
+                    loginPasswordText={this.state.loginPasswordText}
+                    handleInputChange={this.handleInputChange}
+                />
             }
-            
         }
     }
 }

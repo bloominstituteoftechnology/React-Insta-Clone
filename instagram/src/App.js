@@ -17,13 +17,13 @@ class App extends Component {
     }
   }
 
-  logOut(){
+  logOut = () => {
     localStorage.setItem('user', 'nope')
+    this.props.logOutTop()
     this.setState({
       logedInUser : ''
-    })
-  };
-
+    });
+  }
   componentDidMount(){
     this.setState({
      data: dummyData 
