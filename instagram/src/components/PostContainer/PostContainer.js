@@ -17,20 +17,18 @@ class PostContainer extends React.Component {
 
     handleChange = event => {
         this.setState({
-            [event.target.name]: event.target.value,
+            inputText: event.target.value,
         })
-        console.log(event.target.name);
+       
     }
 
     addComment = ev => {
-        console.log("enter clicked", this.state);
         ev.preventDefault();
         this.setState({
-            
-            // commentsSection: this.state.commentSection.slice().push(this.state.inputText)
                 commentSection: [...this.state.commentSection, {username: "andrewC", text: this.state.inputText}]
             
         })
+        console.log("enter clicked", this.state);
     }
     
     render() {
@@ -63,7 +61,7 @@ class PostContainer extends React.Component {
                         
                         <div className="comments">
                             <div className="comment">
-                                {<CommentSection commentSection={this.props.propsInPC.comments}/> }
+                                <CommentSection commentSection={this.state.commentSection}/> 
                             </div>  
                         </div>
                         
