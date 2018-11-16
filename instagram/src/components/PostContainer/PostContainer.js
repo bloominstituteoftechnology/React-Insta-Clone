@@ -34,9 +34,6 @@ const Post = styled.div`
             align-self: flex-start;
         }
     }
-    p {
-        padding: 0 20px;
-    }
     .point {
         cursor: pointer;
     }
@@ -47,14 +44,24 @@ class PostContainer extends Component {
         super(props);
         this.state = {
             likes: 0,
-            isLiked: false,
+            isLiked: false
         }
     }
 
     componentDidMount() {
-        this.setState({
-            likes: this.props.thisPost.likes
-        })
+        if(localStorage.getItem(`likes${this.props.index}`) === null){
+            this.setState({
+                likes: this.props.thisPost.likes
+            })
+        }
+        else {
+            this.setState(JSON.parse(localStorage.getItem(`likes${this.props.index}`)));
+        }
+
+    }
+
+    componentDidUpdate() {
+        localStorage.setItem(`likes${this.props.index}`,JSON.stringify(this.state))
     }
 
     addLike = () => {
@@ -70,14 +77,14 @@ class PostContainer extends Component {
     render(){
         return (
         <Post className={`${this.props.thisPost.display ? 'displayed' : 'hidden'}`} >
-        <h2><img src={this.props.thisPost.thumbnailUrl} alt={this.props.thisPost.thumbnailUrl} />{this.props.thisPost.username}<p>{this.props.thisPost.timestamp}</p></h2>
-        <img src={this.props.thisPost.imageUrl} alt={this.props.thisPost.imageUrl} />
-        
-        <p className={`point`} onClick={this.addLike}>
-            <Icon.Heart fill={this.state.isLiked ? "red" : "none"} />{this.state.likes} likes
-        </p>
-        <CommentSection thisPost={this.props.thisPost} postIndex={this.props.index} userName={this.props.userName}/>
-    </Post>
+            <h2><img src={this.props.thisPost.thumbnailUrl} alt={this.props.thisPost.thumbnailUrl} />{this.props.thisPost.username}<p>{this.props.thisPost.timestamp}</p></h2>
+            <img src={this.props.thisPost.imageUrl} alt={this.props.thisPost.imageUrl} />
+            
+            <p className={`point`} onClick={this.addLike}>
+                <Icon.Heart fill={this.state.isLiked ? "red" : "none"} />{this.state.likes} likes
+            </p>
+            <CommentSection thisPost={this.props.thisPost} postIndex={this.props.index} userName={this.props.userName}/>
+        </Post>
         )
     }
 }

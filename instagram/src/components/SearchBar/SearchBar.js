@@ -40,6 +40,16 @@ const LogoContainer = styled.div`
 const InputHolder = styled.div`
     position: relative;
     width: 500px;
+    display: flex;
+
+    div {
+        font-size: 20px;
+        border: 1px solid gray;
+        cursor: pointer;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+    }
 
     input {
         width: 100%;
@@ -51,7 +61,7 @@ const InputHolder = styled.div`
 
     svg {
         position: absolute;
-        top: 15px;
+        top: 5px;
         left: 10px;
     }
 `
@@ -69,6 +79,7 @@ const SearchForm = props => {
                     placeholder="enter search criteria" value={props.searchText}
                     onChange={props.handleChange} />
                     <Icon.Search color="gray" />
+                    <div onClick={props.clearSearch}>Clear</div>
                 </InputHolder>
                 <LogoContainer>
                     <Icon.Compass />

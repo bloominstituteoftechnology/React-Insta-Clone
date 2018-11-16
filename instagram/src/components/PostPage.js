@@ -4,7 +4,6 @@ import dummyData from '../dummy-data';
 import PostContainer from './PostContainer/PostContainer';
 import SearchForm from './SearchBar/SearchBar';
 import Fuse from 'fuse.js';
-import Authenticate from './Authentication/Authenticate';
 
 const AppContainer = styled.div`
   margin-top: 80px;
@@ -41,9 +40,9 @@ class PostPage extends React.Component {
       });
     }
   
-    clearSearch = ev => {
-      ev.preventDefault();
+    clearSearch = () => {
       this.setState({
+        searchText: '',
         posts: this.state.posts.map(item=> {
           return {...item, display: true};
         })
@@ -53,11 +52,7 @@ class PostPage extends React.Component {
     searchItems = ev => {
       ev.preventDefault();
       if(this.state.searchText === ''){
-        this.setState({
-          posts: this.state.posts.map(item=> {
-            return {...item, display: true};
-          })
-        })
+        this.clearSearch();
       }
       
       else{
@@ -65,7 +60,6 @@ class PostPage extends React.Component {
       const fuse = new Fuse(this.state.posts,options);
       this.setState({
         posts: this.state.posts.map(item => {
-          // if(!item.username.toUpperCase().includes(`${this.state.searchText.toUpperCase()}`)){
           if(!fuse.search(`${this.state.searchText.toUpperCase()}`).includes(item)){
             return{...item, display: false}
           }
@@ -87,8 +81,7 @@ class PostPage extends React.Component {
           <SearchForm searchText={this.state.searchText}
           handleChange={this.handleChange}
           searchItems={this.searchItems}
-          // logOut={this.props.logout}
-          // clearSearch={this.clearSearch}
+          clearSearch={this.clearSearch}
           />
   
         {this.state.posts.map( (item,index) => {
@@ -100,4 +93,4 @@ class PostPage extends React.Component {
     }
   }
 
-  export default Authenticate(PostPage);
+  export default PostPage;
