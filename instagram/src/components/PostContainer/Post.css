@@ -65,5 +65,7 @@ p {
 }
 
 .post-img {
+  width: 100%;
+  height: auto;
   box-shadow: -1px 1px 8px black;
 }
