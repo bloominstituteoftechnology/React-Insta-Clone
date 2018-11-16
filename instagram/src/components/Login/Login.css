@@ -1,0 +1,25 @@
+.login-container{
+    margin: 0 auto;
+    width: 40rem;
+    height: 100vh;
+}
+ .login-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20%;
+    background-color: grey;
+    margin-top: 20rem;
+}
+ .login-input{
+    width: 80%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+}
+ .login-button{
+    width: 80%;
+    height: 3rem;
+    border-radius: 0.5rem;
+} 
