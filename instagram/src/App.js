@@ -1,30 +1,31 @@
 import React, { Component } from 'react';
-import './App.css';
 import dummyData from "./dummy-data";
-import SearchBar from "./components/SearchBar/SearchBar";
-import Post from "./components/PostContainer/Post";
 import Header from './components/header/Header'
 import PostContainer from './components/PostContainer/PostContainer'
 import Authenticate from './components/Authentication/Authentication'
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
       post: [],
-      searchInput: ''
+      newPost: [],
     }
   }
   componentDidMount() {
     this.setState({
       post: dummyData,
+      newPost: dummyData
     })
   }
 
   searchHandler = event => {
-    this.setState({
-      searchInput: event.target.value,
+    const search = this.state.post.filter(item => {
+      if(item.username.includes(event.target.value)){
+        return item;
+      }
     });
-    console.log(this.state.searchInput)
+    this.setState ({newPost: search});
   };
 
 
@@ -36,7 +37,7 @@ class App extends Component {
         searchHandler ={this.searchHandler}
         
         />
-        <PostContainer post={this.state.post} user={this.props.user}/>
+        <PostContainer post={this.state.newPost} user={this.props.user}/>
 
     </div>
 

@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment'
-import './CommentSection.css'
 import CommentInput from './CommentInput'
+import styled from 'styled-components'
 
+const StyleCS = styled.div`
+    width: 600px;
+    padding: 10px;
+    padding-right: 30px;
+`;
 class CommentSection extends React.Component {
     constructor(props) {
         super(props);
@@ -37,7 +42,7 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <div className = 'comment-section'>
+            <StyleCS>
                  {
                 this.state.comments.map((comment) =>
                 <Comment key={Math.random()} comment={comment} />)
@@ -47,7 +52,7 @@ class CommentSection extends React.Component {
                     handler = {this.handler}
                     addNewComment ={this.addNewComment}
                 />
-            </div>
+            </StyleCS>
         );
     }
 }
