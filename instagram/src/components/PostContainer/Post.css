@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    border: 1px solid #777;
+    margin-bottom: 20px;
 }
 
 .post-header {
@@ -27,9 +29,12 @@
     margin-left: 10px;
 }
 
+.post-image {}
+
 .add-comment {
     margin-top: 10px;
     /* width: 100%; */
+    margin-left: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
