@@ -41,7 +41,6 @@ class PostsPage extends React.Component {
 
   filterPosts = e => {
     if (this.state.searchText.trim().length > 0) {
-      console.log(this.state.searchText.trim().length);
       const filteredPosts = this.state.data.filter(d => {
         if (d.username.includes(this.state.searchText)) {
           return d;

@@ -35,7 +35,6 @@ class CommentSection extends React.Component {
 
   addNewComment = e => {
     const updateStorage = () => {
-      console.log(this.state.comments);
       let newData = JSON.parse(localStorage.getItem("data"));
       newData = newData.map(post => {
         if (post.id === this.state.id) {
