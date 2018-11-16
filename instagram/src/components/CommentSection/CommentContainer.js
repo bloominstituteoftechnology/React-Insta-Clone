@@ -10,6 +10,14 @@ const Div = styled.div`
     flex-direction: column;
 `;
 
+const Likes = styled.p`
+    align-self: flex-start;
+    margin-bottom: 7px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(38, 38, 38);
+`;
+
 class CommentContainer extends Component {
     constructor(props) {
         super();
@@ -41,11 +49,24 @@ class CommentContainer extends Component {
             this.setState({ ...this.state, liked: true, likes: this.state.likes + 1 });
         }
     };
+
+    addCommas = (nStr) => {
+        nStr += '';
+        let x = nStr.split('.');
+        let x1 = x[0];
+        let x2 = x.length > 1 ? '.' + x[1] : '';
+        var rgx = /(\d+)(\d{3})/;
+        while (rgx.test(x1)) {
+            x1 = x1.replace(rgx, '$1' + ',' + '$2');
+        }
+        return x1 + x2;
+    };
+
     render() {
         return (
             <Div>
                 <SocialIcons liked={this.state.liked} likeHandler={this.likeHandler} />
-                <p>{this.state.likes}</p>
+                <Likes>{this.addCommas(this.state.likes)} likes</Likes>
                 {this.state.comments.map((comment) => <Comment comment={comment} key={shortid.generate()} />)}
                 <form
                     onSubmit={(event, index) => {
