@@ -1,0 +1,71 @@
+.insta-user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 15px 15px;
+}
+
+.insta-user .icon {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.likes-container i {
+  margin-bottom: -5px;
+  margin-left: -15px;
+}
+
+.likes-container .fa-comment-o {
+  margin-left: -20px;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+.likes-container p {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.add-comment {
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid lightgray;
+}
+
+.add-comment input {
+  width: 100%;
+  border: none;
+  margin: 10px 0;
+}
+
+.triple-dot {
+  width: 10%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background: black;
+  margin-right: 4px;
+  border: 1px solid gray;
+  border-radius: 40%;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
+  box-shadow: -1px 1px 8px black;
+}

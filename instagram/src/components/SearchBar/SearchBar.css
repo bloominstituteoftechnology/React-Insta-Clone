@@ -1,0 +1,24 @@
+i {
+  width: 50px;
+  height: auto;
+}
+
+.fa-instagram {
+  border-right: 1px solid black;
+}
+
+.instagram-title {
+  width: 50%;
+  height: auto;
+  padding-top: 8px;
+  padding-left: 12px;
+}
+
+.search-container {
+  width: 35%;
+  margin-right: 70px;
+}
+
+.search-container .search-bar {
+  text-align: center;
+}
