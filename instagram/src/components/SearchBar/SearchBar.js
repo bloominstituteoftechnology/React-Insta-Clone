@@ -32,7 +32,7 @@ export default class SearchBar extends React.Component {
 
         <SearchLogoSection>
 
-          <p className="fab fa-instagram" onClick={() => this.props.addPost(true)}></p>
+          <p className="fab fa-instagram" style={{cursor: 'pointer'}} onClick={() => this.props.addPost(true)}></p>
           <p className='divider'>|</p>
           <img src={logo} alt='logo'></img>
 
