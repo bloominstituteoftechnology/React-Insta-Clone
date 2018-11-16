@@ -27,7 +27,7 @@ const SearchField = styled.input`
     border-radius: 5px;
     background: rgb(243, 243, 243);
     color: gray;
-    text-align: center;
+    text-align: left;
     font-size: 1.5rem;
     font-weight: lighter;
   }

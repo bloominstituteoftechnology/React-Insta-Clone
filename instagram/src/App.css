@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   border: 2px solid gray;
+  background: rgb(247, 247, 247);
+  box-shadow: -1px 1px 8px black;
 }
 
 .App-logo {

@@ -41,6 +41,12 @@ p {
   border-top: 1px solid lightgray;
 }
 
+.add-comment input {
+  width: 100%;
+  border: none;
+  margin: 10px 0;
+}
+
 .triple-dot {
   width: 10%;
   height: auto;

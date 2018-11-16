@@ -13,9 +13,11 @@ const PostDiv = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   margin: 0 auto;
-  border: 2px solid gray;
+  border: 2px solid black;
+  box-shadow: -1px 1px 8px black;
   border-radius: 10px;
   margin-bottom: 25px;
+  background: white;
 `;
 
 const PostImgDiv = styled.div`

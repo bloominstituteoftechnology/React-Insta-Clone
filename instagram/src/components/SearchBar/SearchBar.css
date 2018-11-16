@@ -18,3 +18,7 @@ i {
   width: 35%;
   margin-right: 70px;
 }
+
+.search-container .search-bar {
+  text-align: center;
+}
