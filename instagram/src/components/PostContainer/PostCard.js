@@ -20,8 +20,9 @@ const PostHeader = styled.div`
 const Avatar = styled.img`
   border-radius: 50%;
   width: 2rem;
-  padding: 0.8rem 1.2rem;
-  padding-right: 0.5rem;
+  padding: 1px;
+  margin: 8px;
+  max-height: 40px;
 `;
 
 const User = styled.p`
