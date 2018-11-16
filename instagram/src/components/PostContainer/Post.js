@@ -4,7 +4,7 @@ import CommentSection from './../CommentSection/CommentSection';
 // import CommentInput from './../CommentSection/CommentInput'
 import PostHeader from './PostHeader'
 import LikesPost from './LikesPost'
-import moment from 'moment';
+// import moment from 'moment';
 
 class Post extends React.Component {
     constructor(props) {

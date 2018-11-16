@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PostPage from './components/PostContainer/PostPage'
-// import dummyData from './dummy-data';
-// import SearchBar from './components/SearchBar/SearchBar';
-// import PostContainer from './components/PostContainer/PostContainer';
+import Authenticate from './components/Authentication/Authenticate'
 import './App.css';
 
 
@@ -13,53 +11,14 @@ class App extends Component {
     this.state = {
     }
   }
-
-//   componentDidMount = () => {
-//     this.setState({
-//       data: dummyData
-//     })
-//   }
-
-//   handleSearchInput = (event) => {
-    
-//     this.setState({
-//       [event.target.name]: event.target.value
-//     });
-//   }
-
-// //if the search bar is empty return all the dat(this.state.data)
-
-// //otherwise return only the post with matching username
-//   getFilteredSearch = () => {
-//     if(this.state.filteredSearch = '') {
-//       return this.state.data
-//     }
-
-//     return this.state.data.filter(post => {
-//       const username = post.username.toLowerCase().includes(this.state.filteredSearch.toLowerCase())
-//         return username
-//     })
-//     // this.setState({
-//     //   filteredSearch: username
-//     // })
-//   }
   
-
   render() {
     return (
       <div className="container">
         <PostPage />
-        {/* <SearchBar 
-          filteredSearch={this.state.filteredSearch}
-          handleSearchInput={this.handleSearchInput}
-        />
-        <PostContainer 
-          data={this.getFilteredSearch()} 
-        /> */}
-      
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);

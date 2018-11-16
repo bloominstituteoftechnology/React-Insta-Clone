@@ -1,14 +1,14 @@
 import React from 'react';
 import Post from './Post';
-import PropTypes from 'prop-types';
 import './PostContainer.css';
 
 const PostContainer = (props) => {
-    console.log(props.Postdata)
+    console.log(typeof (props.Postdata))
+   let  data= Array.from(props.Postdata)
     return (
         <div>
             
-            {props.Postdata.map((post, index) => (
+            {data.map((post, index) => (
                 
                 <Post
                 key={index}
@@ -19,8 +19,8 @@ const PostContainer = (props) => {
     );
 }
 
-PostContainer.propTypes = {
-    data: PropTypes.array.isRequired
-};
+// PostContainer.propTypes = {
+//     data: PropTypes.array.isRequired
+// };
 
 export default PostContainer;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import dummyData from './../.././dummy-data';
 import SearchBar from './../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
+import PropTypes from 'prop-types';
 import './../../App';
 
 
@@ -17,7 +18,8 @@ class PostPage extends Component {
 
   componentDidMount = () => {
     this.setState({
-      data: dummyData
+      data: dummyData,
+      // filteredSearch: dummyData
     })
   }
 
@@ -38,15 +40,6 @@ class PostPage extends Component {
           }
           this.setState({filteredSearch: filteredPost})
       })
-      
-
-    // return this.state.data.filter(post => {
-    //   const username = post.username.toLowerCase().includes(this.state.filteredSearch.toLowerCase())
-    //     return username
-   // })
-    // this.setState({
-    //   filteredSearch: username
-    // })
   }
   
 
@@ -61,12 +54,16 @@ class PostPage extends Component {
           Postdata={this.state.filteredSearch.length > 0 ? 
             this.state.filteredSearch : 
             this.state.data
-        } 
+            } 
         />
       
       </div>
     );
   }
 }
+
+PostContainer.propTypes = {
+    data: PropTypes.array
+};
 
 export default PostPage;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comments from './Comments';
 import CommentInput from './CommentInput';
-import moment from 'moment';
+// import moment from 'moment';
 import './CommentSection.css';
 
 
@@ -17,8 +17,20 @@ class CommentSection extends React.Component {
     }
 
     // componentDidMount () {
-    //     this.setState(comments: )
+    //     this.setState(comments:)
+
+
+
+
+
     // }
+
+componentWillUnmount () {
+    this.setComments({})
+}
+    setComments = () => {
+        localStorage.setItem(this.props.postId, JSON.stringify(this.state.comments))
+    }
 
     handleChange = event => {
         this.setState({
@@ -40,6 +52,8 @@ class CommentSection extends React.Component {
 
 
     render () {
+        console.log(this.state.comments)
+        // let newComments= Array.from(this.state.comments)
         return (
 
             <div>
