@@ -18,15 +18,6 @@ class LoginPage extends React.Component {
         })
     }
 
-    // showAsStars = event => {
-    //     let totalStars = '',
-    //     for (i = 0; i <= event.target.value.length; i++) {
-    //         totalStars += '*';
-    //     }
-
-    //     return totalStars;
-    // }
-
     handlesPasswordChange = event => {
         this.setState({
             [event.target.name]: this.showAsStars(event.target.value)
@@ -50,9 +41,6 @@ class LoginPage extends React.Component {
     }
 
     render() {
-        let currentUsernameText = this.state.username;
-        let currentPasswordText = this.state.password;
-
         return(
             <LoginContainer>
                 <LoginForm onSubmit={this.setUsername}>
@@ -61,16 +49,18 @@ class LoginPage extends React.Component {
                         <InputUsername 
                             type="text"
                             name="username"
+                            placeholder=" "
                             value={this.state.username}
                             onChange={this.handlesUsernameChange}
                             required
                         />
-                        <label>Phone number, username, or email</label>
+                        <label>Username</label>
                     </InputContainer>
                     <InputContainer>
                         <InputPassword 
-                            type="text"
+                            type="password"
                             name="password"
+                            placeholder=" "
                             value={this.state.password}
                             onChange={this.handlesUsernameChange}
                             required

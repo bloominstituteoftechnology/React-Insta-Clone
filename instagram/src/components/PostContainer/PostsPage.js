@@ -1,7 +1,17 @@
 import React from 'react';
 import Navigation from '../Navigation/Navigation';
 import PostContainer from '../PostContainer/PostContainer';
-import { AppHeader } from './StyledPostsPage';
+import styled from 'styled-components';
+
+
+const AppHeader = styled.div`
+    max-width: 122.3rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 4.5rem;
+    margin: 25px auto;
+`
+
 
 const PostsPage = props => {
     return(

@@ -26,17 +26,15 @@ class App extends Component {
   }
 
   hasBeenClicked = event => {
-    if (event.target.className === "app") {
-      return this.setState({
-        isSelected: false,
-      })
-    } else if (this.state.isSelected) {
-      return this.setState({
-        isSelected: false,
+    if (event.target.name === 'text') {
+      document.getElementByName('searchText').focus();
+
+      this.setState({
+        isSelected: true,
       })
     } else {
-      return this.setState({
-        isSelected: true,
+      this.setState({
+        isSelected: false,
       })
     }
   }

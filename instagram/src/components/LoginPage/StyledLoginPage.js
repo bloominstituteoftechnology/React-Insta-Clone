@@ -27,37 +27,38 @@ const InstagramLogoText = styled.img`
 
 const InputContainer = styled.div`
     position: relative;
-
-    input:focus {
-        font-size: 1rem;
-        padding-top: 10px;
-        
-        & + label {
-            top: 2px;
-            left: 0;
-            font-size: 1rem;
-            transform: translate(4%, 50%);
-        }
-
-    }
-
-    label {
-        position: absolute;
-        left: 10px;
-        top: 15px;
-        font-size: 1.3rem;
-        color: #B2B2B2;
-        transition: 0.5s;
-    }
-`
-
-const LoginInput = styled.input`
     width: 27rem;
     height: 3.5rem;
     border: 1px solid #F4F4F4;
     border-radius: 5px;
     background-color: #FAFAFA;
+    margin-top: 5px;
+
+    input:focus {
+        outline: 0;
+    }
+
+    input:focus ~ label, input:not(:focus):valid ~ label {
+        transform: scale(0.75) translateY(-100%) translateX(-10px);
+    }
+
+    label {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-size: 1.3rem;
+        color: #B2B2B2;
+        transition: 0.5s ease all;
+    }
+`
+
+const LoginInput = styled.input`
+    position: absolute;
+    width: 100%;
+    height: 100%;
     padding-left: 10px;
+    border: none;
+    background-color: transparent;
     font-size: 1.2rem;
 `
 

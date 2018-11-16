@@ -1,7 +1,22 @@
 import React from 'react';
-import { IndividualComment, Timestamp } from './StyledCommentSection';
+import styled from 'styled-components';
 import CommentForm from './CommentForm';
 import PropTypes from 'prop-types';
+
+const IndividualComment = styled.div`
+    margin: 10px 14px;
+    font-size: 1.6rem;
+
+    span {
+        font-weight: bold;
+    }
+`
+
+const Timestamp = styled.p`
+    margin: 14px;
+    font-size: 1.1rem;
+`
+
 
 
 class CommentSection extends React.Component {
