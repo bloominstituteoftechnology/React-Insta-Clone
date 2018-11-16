@@ -42,6 +42,7 @@ class App extends Component {
           this.setState({ posts, completed: completed });
         }
       }
+      return post;
     });
   };
   render() {
@@ -50,7 +51,6 @@ class App extends Component {
     });
     return (
       <React.Fragment>
-        <Authenticate />
         <PostsPage
           filtered={filtered}
           post={this.state.post}
@@ -64,4 +64,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
