@@ -1,0 +1,15 @@
+.each-comment-container {
+    line-height: 1.6;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.username-comment {
+    font-weight: bold;
+    /* margin-right: 10px; */
+}
+
+
+.add-comment-container input{
+    color: #222222;
+}
