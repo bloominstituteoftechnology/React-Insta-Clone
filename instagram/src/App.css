@@ -1,0 +1,22 @@
+.App{
+  margin:0 auto;
+  border:1px solid blue;
+}
+.App-header{
+  border:1px solid red;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  
+}
+.logo__text{
+  max-width:100px;
+/* width:100%; */
+}
+.search-bar{
+  flex:1;
+}
+a.link:link, a.link:visited{
+  text-decoration:none;
+  color:rgb(37, 37, 37);
+}
