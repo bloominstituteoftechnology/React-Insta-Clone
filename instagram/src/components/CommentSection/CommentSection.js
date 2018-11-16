@@ -11,9 +11,6 @@ const CommentSection = props => {
             <p>{props.coolData.text}</p>
         </div>
     )
-
-
-
 }
 
 

@@ -16,7 +16,7 @@ class App extends Component {
     this.setState({ data: dummyData });
   }
 
-
+  //lets just get the like icon
 
   handleChange = event => {
     this.setState({

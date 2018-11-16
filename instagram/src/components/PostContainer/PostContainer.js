@@ -22,8 +22,8 @@ const PostContainer = props => {
               
               <div>{post.likes}</div>
 
-              {post.comments.map(comment => {
-                return <CommentSection key={comment.text} coolData={comment} />;
+              {post.comments.map(arg => {
+                return <CommentSection key={arg.text} coolData={arg} />;
               })}
               <div className="timeStamp">{post.timestamp}</div>
 
