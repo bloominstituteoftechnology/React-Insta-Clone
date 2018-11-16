@@ -1,12 +1,17 @@
 import React from 'react';
 import styled from "styled-components";
 // import PropTypes from 'prop-types';
-import './Style.css';
 
-const LoginButton = styled.input`
+/***************************************************************************************************
+********************************************** Styles **********************************************
+***************************************************************************************************/
+const InputLoginButton = styled.input`
   &:hover {background-color: lightgreen}
 `;
 
+/***************************************************************************************************
+********************************************* Component ********************************************
+***************************************************************************************************/
 const Login = props => {
   return (
   <div className="login-page">
@@ -29,7 +34,7 @@ const Login = props => {
           onChange={props.changeHandler}
         />
       </div>
-      <LoginButton className="login-btn" type="submit" placeholder="Login" />
+      <InputLoginButton className="login-btn" type="submit" placeholder="Login" />
     </form>
   </div>
   );

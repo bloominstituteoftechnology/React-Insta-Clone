@@ -2,7 +2,6 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import PostsPage from '../PostContainer/PostsPage';
 import Login from '../Login/Login';
-import './Style.css';
 
 const Users = [
   {
@@ -22,6 +21,10 @@ const Users = [
     password: 'iLikeTeaching'
   }
 ];
+
+/***************************************************************************************************
+********************************************* Component ********************************************
+***************************************************************************************************/
 
 class Authenticate extends React.Component {
     constructor(props){

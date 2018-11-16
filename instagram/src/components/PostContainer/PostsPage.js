@@ -2,8 +2,20 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import PostContainerList from '../PostContainer/PostContainerList';
 import Header from '../Header/Header';
-import './Style.css';
+import styled from 'styled-components';
 
+/***************************************************************************************************
+********************************************** Styles **********************************************
+***************************************************************************************************/
+const DivAppContainer = styled.div`
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+`;
+
+/***************************************************************************************************
+********************************************* Component ********************************************
+***************************************************************************************************/
 class PostsPage extends Component {
   constructor(props){
     super(props);
@@ -103,21 +115,20 @@ class PostsPage extends Component {
 
   render() {
     return (
-      <div className="posts-page">
+      <div>
         <Header setSearchResults={this.setSearchResults} />
-        <div className="app-container">
+        <DivAppContainer>
           <PostContainerList
           data={this.state.data}
           addNewComment={this.addNewComment}
           handleChange={this.handleChange}
           incrementLikes={this.incrementLikes}
         />
-        </div>
+        </DivAppContainer>
       </div>
     )
   };
 }
-
 
 // PostsPage.propTypes = {
 //   comment: PropTypes.objectOf(PropTypes.string)

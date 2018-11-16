@@ -7,17 +7,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.App {
-
-}
-
-.main-header {
-
-}
-
-.app-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-}

@@ -2,24 +2,116 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import NewCommentForm from '../CommentSection/NewCommentForm';
-import { Heart, MessageCircle } from 'react-feather';
+import { Heart as IconHeart, MessageCircle as IconMessageCircle } from 'react-feather';
 import moment from 'moment';
-import './Style.css';
+import styled from "styled-components";
 
+/***************************************************************************************************
+********************************************** Styles **********************************************
+***************************************************************************************************/
+const DivPostContent = styled.div`
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #F5F5F5; /* Color = Wild Sand: http://chir.ag/projects/name-that-color/#F5F5F5 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
+const DivPostHeader = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  width: 95%;
+`;
+
+const ImgPostHeaderThumbnail = styled.img`
+  width: 10%;
+  height: 10%;
+  margin-right: 10px;
+  border-radius: 50%;
+`;
+
+const H2PostHeaderTitle = styled.h2`
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+`;
+
+const SpanPostHeaderTimestamp = styled.span`
+  color:gray;
+  font-size: 9px;
+`;
+
+const ImgPostPicture = styled.img`
+  width: 90%;
+`;
+
+const DivPostIconsContainer = styled.div`
+  width: 80%;
+  margin-top: 20px;
+`;
+
+const H4PostLikes = styled.h4`
+  width: 80%;
+  font-size: 14px;
+  margin: 5px 0 40px 0;
+`;
+
+const PostIcons = {
+    marginRight: '20px',
+    cursor: 'pointer',
+
+    WebkitTouchCallout: 'none',
+    WebkitUserSelect: 'none',
+      KhtmlUserSelect: 'none',
+        MozUserSelect: 'none',
+          msUserSelect: 'none',
+            userSelect: 'none'
+}
+
+const PostIconsFlipped = {
+  transform: 'scaleX(-1)',
+  MozTransform: 'scaleX(-1)',
+  WebkitTransform: 'scaleX(-1)',
+  msTransform: 'scaleX(-1)'
+}
+
+// const PostContainerGeneralStyle = styled.css`
+//   .post-icon-flipped {
+//     transform: scaleX(-1);
+//     -moz-transform: scaleX(-1);
+//     -webkit-transform: scaleX(-1);
+//     -ms-transform: scaleX(-1);
+//   }
+
+//   @media (max-width: 500px) {
+//     .post-container{
+//       width: 300px;
+//     }
+//   }
+// `;
+
+/***************************************************************************************************
+********************************************* Component ********************************************
+***************************************************************************************************/
 const PostContainer = props => {
-    return (
-    <div className="post-container">
-      <div className="post-content">
-        <div className="post-header">
-          <img className ="username-img-thumbnail" src={props.postContainer.thumbnailUrl} alt="" />
-          <h2>{props.postContainer.username} <span className="timestamp">{moment(props.postContainer.timestamp, 'MMMM Do YYYY hh:mm:ss A').fromNow()}</span></h2>
-        </div>
-        <img className ="post-img" src={props.postContainer.imageUrl} alt="" />
-        <div className="post-click-icons">
-          <Heart className="post-icons" onClick={event => {props.incrementLikes(event, props.postContainer.username)}} />
-          <MessageCircle className="post-icons post-icon-flipped" />
-        </div>
-        <h4 className="post-likes">{props.postContainer.likes} likes</h4>
+  return (
+    <div>
+      <DivPostContent>
+        <DivPostHeader>
+          <ImgPostHeaderThumbnail src={props.postContainer.thumbnailUrl} alt="" />
+          <H2PostHeaderTitle>{props.postContainer.username} <SpanPostHeaderTimestamp>{moment(props.postContainer.timestamp, 'MMMM Do YYYY hh:mm:ss A').fromNow()}</SpanPostHeaderTimestamp></H2PostHeaderTitle>
+        </DivPostHeader>
+        <ImgPostPicture src={props.postContainer.imageUrl} alt="" />
+        <DivPostIconsContainer>
+          <IconHeart style={PostIcons} onClick={event => {props.incrementLikes(event, props.postContainer.username)}} />
+          <IconMessageCircle style={Object.assign({}, PostIcons, PostIconsFlipped)} />
+        </DivPostIconsContainer>
+        <H4PostLikes>{props.postContainer.likes} likes</H4PostLikes>
         {props.postContainer.comments.map(comment => (
           <CommentSection key={comment.timestamp} comment={comment} />
         ))}
@@ -28,8 +120,9 @@ const PostContainer = props => {
           handleChange={props.handleChange}
           addNewComment={props.addNewComment}
         />
-      </div>
-    </div>);
+      </DivPostContent>
+    </div>
+  );
 }
 
 PostContainer.propTypes = {

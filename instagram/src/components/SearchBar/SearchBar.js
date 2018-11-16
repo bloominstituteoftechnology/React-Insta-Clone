@@ -2,7 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from "styled-components";
 
-const SearchBarInput = styled.input`
+/***************************************************************************************************
+********************************************** Styles **********************************************
+***************************************************************************************************/
+const InputSearchBar = styled.input`
+  width: 30%;
+  height: 30px;
+  border-radius: 10px;
+  padding: 0 10px;
+  &:focus {
+    outline: none;
+  }
+
   &::-webkit-input-placeholder {
     text-align: center;
     color: lightgray;
@@ -33,12 +44,13 @@ const SearchBarInput = styled.input`
   &:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 `;
 
-
+/***************************************************************************************************
+********************************************* Component ********************************************
+***************************************************************************************************/
 const SearchBar = props => {
   return (
-    <SearchBarInput
+    <InputSearchBar
       type="search"
-      id="SearchBar"
       placeholder="Search"
       results="0"
       onChange={(e) => props.setSearchResults(e)}

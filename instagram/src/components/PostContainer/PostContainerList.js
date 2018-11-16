@@ -1,11 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PostContainer from './PostContainer';
-import './Style.css';
+import styled from "styled-components";
 
+/***************************************************************************************************
+********************************************** Styles **********************************************
+***************************************************************************************************/
+const DivPostContainerList = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 20px 0;
+`;
+
+/***************************************************************************************************
+********************************************* Component ********************************************
+***************************************************************************************************/
 const PostContainerList = props => {
   return (
-  <div className="post-container-list">
+  <DivPostContainerList>
     {props.data.map( post => (
       <PostContainer
         key={post.timestamp}
@@ -15,7 +29,7 @@ const PostContainerList = props => {
         incrementLikes={props.incrementLikes}
       />
     ))}
-  </div>);
+  </DivPostContainerList>);
 }
 
 PostContainerList.propTypes = {
