@@ -13,7 +13,7 @@ function CardOne(props) {
             <SearchBar />
             <PostContainer 
             posts={props.posts.filter(post => {
-                return post.username.includes('philzcoffee')
+                return post.username.includes('playhearthstone')
             })}
             />
         </div>

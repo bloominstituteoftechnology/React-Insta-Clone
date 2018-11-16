@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
 import Authenticate from './components/Authentication/Authentication';
-import LoginPage from './components/Login/Login';
 import PostsPage from './components/PostContainer/PostsPage';
 import styled from 'styled-components';
-
 import CardOne from './components/Cards/CardOne';
+import CardTwo from './components/Cards/CardTwo';
+import CardThree from './components/Cards/CardThree';
 
 import { Route, Link, Switch } from "react-router-dom";
 
@@ -43,20 +41,29 @@ class App extends Component {
   }
 
   render() {
-    // console.log("this.state.posts.username", this.state.posts)
     return (
       <div className="App">
-        <Route exact path="/card/0" component={CardOne} 
-        />
-        {/* <Route exact path="/card/0" render={props => (
-          // <CardOne 
-          //   {...props}
-          //   posts={this.state.posts}
-          //   filterComments={this.filterComments}
-          //   filterInput={this.state.filterInput}
-          // />
-        )} 
-        /> */}
+        <Route exact path="/card/0" render={props => (
+          <CardOne  
+            {...props}
+            posts={this.state.posts}
+          /> 
+        )} />
+
+        <Route exact path="/card/1" render={props => (
+          <CardTwo  
+            {...props}
+            posts={this.state.posts}
+          /> 
+        )} />
+
+        <Route exact path="/card/2" render={props => (
+          <CardThree  
+            {...props}
+            posts={this.state.posts}
+          /> 
+        )} />
+
         <div>
         <Route exact path="/" render={props => (
           <PostsPage 
@@ -67,7 +74,6 @@ class App extends Component {
           /> 
         )} />
         </div>
-          {/* <Route exact path="/" component={App} /> */}
       </div>
     );
   }

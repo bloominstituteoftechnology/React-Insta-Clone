@@ -7,7 +7,7 @@ const Authenticate = App =>
     constructor(props) {
       super(props);
       this.state = {
-        loggedIn: true,
+        loggedIn: false,
         passwordInput: '',
         usernameInput: ''
       }
