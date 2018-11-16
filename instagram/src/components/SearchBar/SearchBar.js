@@ -3,7 +3,7 @@ import React from 'react';
 function SearchBar(props){
     return(
         <form>
-            <input></input>
+            <input onChange={props.search}></input>
         </form>
     );
 }

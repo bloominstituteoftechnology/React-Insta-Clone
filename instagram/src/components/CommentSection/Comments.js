@@ -3,9 +3,9 @@ import "./CommentSection.css"
 
 function Comments(props){
     return(
-        <div>
-            <h3>{props.username}</h3>
-            <p>{props.text}</p>
+        <div className="comment-area">
+            <h3 className="commenter">{props.username}</h3>
+            <p className="comment"> {props.text}</p>
         </div>
     );
 }

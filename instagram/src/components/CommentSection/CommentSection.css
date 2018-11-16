@@ -1,4 +1,21 @@
 .comment-section {
-    width:500px;
+    width:100%;
     background:white;
+    padding:0 4%;
+    border-bottom: 1px solid #e6e6e6;
+}
+.comment-input {
+    width:90%;
+    height:18px;
+}
+.commenter {
+    display: inline;
+}
+
+.comment {
+    display: inline;
+}
+
+.comment-area {
+    width:100%;
 }
