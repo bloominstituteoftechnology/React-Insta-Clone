@@ -3,12 +3,12 @@ import Post from './Post';
 import './PostContainer.css';
 
 const PostContainer = (props) => {
-    console.log(typeof (props.Postdata))
-   let  data= Array.from(props.Postdata)
+//     console.log(typeof (props.Postdata))
+//    let  data= Array.from(props.Postdata)
     return (
         <div>
             
-            {data.map((post, index) => (
+            {props.Postdata.map((post, index) => (
                 
                 <Post
                 key={index}

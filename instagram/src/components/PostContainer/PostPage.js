@@ -35,11 +35,12 @@ class PostPage extends Component {
 //otherwise return only the post with matching username
   getFilteredSearch = (e) => {
       const filteredPost =  this.state.data.filter(post => {
-        if(post.username.includes(e.target.value)) {
-            return post
+        if(post.username.includes(this.state.filteredSearch)) {
+            return true
           }
-          this.setState({filteredSearch: filteredPost})
-      })
+          return false
+      }) 
+     return filteredPost
   }
   
 
@@ -52,7 +53,7 @@ class PostPage extends Component {
         />
         <PostContainer 
           Postdata={this.state.filteredSearch.length > 0 ? 
-            this.state.filteredSearch : 
+            this.getFilteredSearch() : 
             this.state.data
             } 
         />

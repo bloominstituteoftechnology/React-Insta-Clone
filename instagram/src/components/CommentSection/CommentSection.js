@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comments from './Comments';
 import CommentInput from './CommentInput';
-// import moment from 'moment';
+import moment from 'moment';
 import './CommentSection.css';
 
 
@@ -11,19 +11,20 @@ class CommentSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: props.comments,
+            comments: [],
             commentInput: '',
         }
     }
 
-    // componentDidMount () {
-    //     this.setState(comments:)
+    componentDidMount () {
+        console.log(this.props.comments)
+        this.setState({comments: this.props.comments})
 
 
 
 
 
-    // }
+    }
 
 componentWillUnmount () {
     this.setComments({})
@@ -67,9 +68,7 @@ componentWillUnmount () {
 
                
                <h5 className='timestamp'>
-                    {/* { moment(this.timestamp, 'MMMM-Do-YYYY h:mm:ss a').fromNow() } */}
-                
-                    {this.props.timestamp}
+                    { moment(this.props.timestamp, 'MMMM-Do-YYYY h:mm:ss a').fromNow() }
                 </h5>
 
                 <CommentInput 
