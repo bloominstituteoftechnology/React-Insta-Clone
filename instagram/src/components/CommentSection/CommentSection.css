@@ -1,0 +1,8 @@
+.CommentSection {
+  text-align: left;
+  margin-left: 60px;
+}
+
+.CommentSection span {
+  font-weight: bold;
+}
