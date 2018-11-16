@@ -63,3 +63,7 @@ p {
   border: 1px solid gray;
   border-radius: 40%;
 }
+
+.post-img {
+  box-shadow: -1px 1px 8px black;
+}

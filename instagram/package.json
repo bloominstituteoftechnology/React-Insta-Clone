@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "moment": "^2.22.2",
+    "netlify-cli": "^2.2.1",
     "prop-types": "^15.6.2",
     "react": "^16.6.2",
     "react-dom": "^16.6.2",

@@ -105,8 +105,12 @@ class PostContainer extends Component {
           <h2>{this.props.post.username}</h2>
         </div>
 
-        <PostImgDiv className="post-img">
-          <img src={this.props.post.imageUrl} alt="Post Image" />
+        <PostImgDiv>
+          <img
+            src={this.props.post.imageUrl}
+            alt="Posted Image"
+            className="post-img"
+          />
         </PostImgDiv>
 
         <LikesContainer likes={this.state.likes} addLike={this.addLike} />
