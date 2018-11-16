@@ -32,7 +32,7 @@ class Login extends React.Component {
     <LoginForm onSubmit={this.handleSubmit}>
       <h2>InstaClone</h2>
       <input type="text" name="username" placeholder="username" value={this.state.username} onChange={this.handleChange}/>
-      <input type="text" name="password" placeholder="password" value={this.state.password} onChange={this.handleChange}/>
+      <input type="password" name="password" placeholder="password" value={this.state.password} onChange={this.handleChange}/>
       <input type="submit" value="Log In" />
     </LoginForm>
   );
