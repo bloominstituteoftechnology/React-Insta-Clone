@@ -52,6 +52,7 @@ font-size: 2rem;
     }
   };
    render() {
+     console.log(this.state.comments)
     return (
       <React.Fragment>
         {this.state.comments.map(item => {
@@ -79,10 +80,10 @@ font-size: 2rem;
     );
   }
 }
- CommentSection.propTypes = {
-  data: PropTypes.shape({
-    username: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
-  })
-};
+//  CommentSection.propTypes = {
+//   data: PropTypes.shape({
+//     username: PropTypes.string.isRequired,
+//     text: PropTypes.string.isRequired
+//   })
+// };
  export default CommentSection;
