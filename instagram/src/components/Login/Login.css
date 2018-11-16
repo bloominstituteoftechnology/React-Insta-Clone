@@ -1,0 +1,56 @@
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+    margin-top: 12%;
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 20%;
+    background-color: lightgrey; 
+    padding: 2%;
+}
+
+h2 {
+    font-family: billabong;
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+button {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.my-inputs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.my-button {
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+.login-input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 5%;
+    font-size: 0.8rem;
+    padding-left: 3%;
+}
+
+.login-button {
+    width: 50%;
+    height: 30px;
+    cursor: pointer;
+}

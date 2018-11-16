@@ -79,8 +79,8 @@ class CommentSection extends React.Component {
         return (
             <div>
                 <div className='text-icons'>
-                    <i onClick={this.incrementLike} class="far fa-heart"></i>
-                    <i class="far fa-comment"></i>
+                    <i onClick={this.incrementLike} className="far fa-heart"></i>
+                    <i className="far fa-comment"></i>
                 </div>
                 <div className='likes' >
                     {`${this.state.likes} likes`}
@@ -93,8 +93,6 @@ class CommentSection extends React.Component {
                     removeComment={this.removeComment}
                     removed={this.state.removed}
                 />)}
-                {/* <span>{moment(this.state.timestamp, 'MMMM Do YYYY HH:mm:ss a')}</span> */}
-                {/* <span>{moment().fromNow()}</span> */}
                 <CommentInput 
                     addNewComment={this.addNewComment} 
                     handleChange={this.handleChange}

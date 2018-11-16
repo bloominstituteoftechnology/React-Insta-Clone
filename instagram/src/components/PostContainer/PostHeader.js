@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Username from '../Styles/Styles';
 import { Route, Link } from "react-router-dom";
 
-// import CardOne from '../Cards/CardOne';
 
 const PostHeader = props => {
     return (
@@ -15,7 +14,5 @@ const PostHeader = props => {
         </div>
     )
 }
-{/* <Link to="/card">Home</Link> */}
-{/* <Route exact path="/card/0" component={CardOne} /> */}
 
 export default PostHeader
