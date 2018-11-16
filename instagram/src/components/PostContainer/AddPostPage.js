@@ -1,10 +1,12 @@
 import React from 'react';
 
+import './AddPostPage.scss';
+
 export default function AddPostPage({submitPost, addPost}) {
 
   return (
 
-    <>
+    <div className='add-page'>
 
       <h1>Add Post</h1>
 
@@ -17,7 +19,7 @@ export default function AddPostPage({submitPost, addPost}) {
 
       <button onClick={() => addPost(false)}>Go back</button>
 
-    </>
+    </div>
 
   );
 

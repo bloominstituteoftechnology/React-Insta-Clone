@@ -1,0 +1,32 @@
+.add-page {
+
+  width: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h1 {
+
+    font-size: 3rem;
+    text-align: center;
+
+  }
+
+  form {
+
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  button {
+
+    margin: auto;
+
+  }
+
+}
