@@ -3,6 +3,35 @@ import PropTypes from "prop-types";
 import "./Post.css";
 import CommentSection from "../CommentSection/CommentSection";
 import LikesContainer from "./LikesContainer";
+import styled, { css } from "styled-components";
+
+const PostDiv = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  border: 2px solid gray;
+  border-radius: 10px;
+  margin-bottom: 25px;
+`;
+
+const PostImgDiv = styled.div`
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+`;
+
+const CommentsContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 15px;
+`;
 
 class PostContainer extends Component {
   constructor(props) {
@@ -64,7 +93,7 @@ class PostContainer extends Component {
 
   render() {
     return (
-      <div className="post-container">
+      <PostDiv className="post-container">
         <div className="insta-user">
           <img
             src={this.props.post.thumbnailUrl}
@@ -74,13 +103,13 @@ class PostContainer extends Component {
           <h2>{this.props.post.username}</h2>
         </div>
 
-        <div className="post-img">
+        <PostImgDiv className="post-img">
           <img src={this.props.post.imageUrl} alt="Post Image" />
-        </div>
+        </PostImgDiv>
 
         <LikesContainer likes={this.state.likes} addLike={this.addLike} />
 
-        <div className="comments-container">
+        <CommentsContainer>
           {this.state.comments.map((comment, idx) => (
             <CommentSection key={idx} index={idx} comment={comment} />
           ))}
@@ -100,8 +129,8 @@ class PostContainer extends Component {
               <span className="dot" />
             </div>
           </form>
-        </div>
-      </div>
+        </CommentsContainer>
+      </PostDiv>
     );
   }
 }
