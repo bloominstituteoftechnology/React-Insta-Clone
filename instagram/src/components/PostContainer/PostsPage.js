@@ -44,9 +44,13 @@ class PostsPage extends Component {
         {(this.state.filtered.length > 0
           ? this.state.filtered
           : this.state.post
-        ).map(post => {
-          return <PostContainer key={post.imageUrl} post={post} />;
-        })}
+        ).map(post => (
+          <PostContainer
+            key={post.imageUrl}
+            post={post}
+            postId={post.username}
+          />
+        ))}
       </AppContainer>
     );
   }
