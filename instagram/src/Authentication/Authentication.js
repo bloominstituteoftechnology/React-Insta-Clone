@@ -4,7 +4,7 @@ import Login from '../components/Login/Login.js';
 const Authentication = Component => { 
     return class extends React.Component { 
       render() {
-          return localStorage.getItem('Spike') === 'Bebop' ? ( 
+          return localStorage.getItem(`${this.props.user}`) === this.props.password ? ( 
           <Component 
           user={this.props.user}
           posts={this.props.posts}
@@ -16,6 +16,7 @@ const Authentication = Component => {
             user = {this.props.user}
             password ={this.props.password}
            />
+           
           )
 
           
