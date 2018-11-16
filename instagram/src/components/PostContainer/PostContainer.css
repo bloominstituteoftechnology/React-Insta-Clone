@@ -1,7 +1,7 @@
-.posts-container{
+ .posts-container{
     padding-top: 40px
 }
-.post{
+/* .post{
     box-sizing: content-box;
     background: #f2eaeb;
     border: 1px solid #6b6b83;
@@ -39,4 +39,4 @@
 .likes .num-likes{
     margin-right: 5px;
     color: #4da6cc;
-}
+} */ 
