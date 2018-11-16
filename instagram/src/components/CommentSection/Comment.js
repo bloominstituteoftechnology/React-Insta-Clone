@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Bolded from '../Styles/Reusables';
 
 Comment.propTypes = {
     comment: PropTypes.shape({
@@ -12,9 +13,9 @@ function Comment(props) {
     return (
         <div className="comment">
             <p>
-                <span>
+                <Bolded comments>
                     {props.comment.username}
-                </span>
+                </Bolded>
                 {props.comment.text}
             </p>
         </div>

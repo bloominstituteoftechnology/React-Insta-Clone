@@ -1,8 +1,31 @@
 import React, {Fragment, Component} from 'react';
-import './CommentSection.css'
 import Comment from './Comment';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import styled from 'styled-components';
+
+const TimeStamp = styled.p`
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: gray;
+`
+
+const CommentForm = styled.form`
+    padding: 15px 0;
+    border-top: 1px solid lightgray;
+`
+
+const CommentInput = styled.input`
+    width: 100%;
+    border: none;
+    padding: 5px 0;
+    font-size: 1.4rem;
+    &:focus {
+        outline: none;
+    }
+`
 
 class CommentSection extends Component {
     constructor(props) {
@@ -46,12 +69,12 @@ class CommentSection extends Component {
         return (
             <Fragment>
                 {this.state.comments.map((comment, index) => <Comment comment={comment} key={index} />)}
-                <p className="timestamp">
+                <TimeStamp>
                     {(moment(this.props.timestamp, "MMMM Do YYYY, h:mm:ss a").fromNow()).toUpperCase()}
-                </p>
-                <form className="commentform" onSubmit={this.addComment}>
-                    <input type="text" name="commentText" placeholder="Add a comment..." value={this.state.commentText} onChange={this.changeHandler} />
-                </form>
+                </TimeStamp>
+                <CommentForm className="commentform" onSubmit={this.addComment}>
+                    <CommentInput type="text" name="commentText" placeholder="Add a comment..." value={this.state.commentText} onChange={this.changeHandler} />
+                </CommentForm>
             </Fragment>
         );
     }

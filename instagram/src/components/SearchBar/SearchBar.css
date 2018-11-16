@@ -1,62 +1,10 @@
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid lightgray;
-    background-color: white;
-}
-
-.logo {
-    width: 212px;
-    padding: 19px 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo .fa-instagram {
+.fa-instagram {
     font-size: 3.4rem;
     margin-right: 5px;
 }
 
-.empty-div {
-    height: 32px;
-    border-right: 1px solid gray;
-}
-
-.logo img {
+.logo-img {
     margin-right: 3px;
     width: 113px;
     height: auto;
-}
-
-.searchbar {
-    text-align: center;
-    width: 211px;
-    height: 24px;
-    border: 1px solid lightgray;
-    justify-self: center;
-    padding: none;
-    font-size: 1.4rem;
-    border-radius: 3px;
-    background-color: #FAFAFA;
-}
-
-.header .login {
-    width: 215px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 40px;
-}
-
-.header .login img {
-    width: 18px;
-    height: 20px;
-}
-
-.header .login img:hover {
-    cursor: pointer;
 }

@@ -1,6 +1,60 @@
 import React, {Component} from 'react';
 import './SearchBar.css'
+import styled from 'styled-components';
 
+const HeaderDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    background-color: white;
+`
+
+const LogoDiv = styled.div`
+    width: 212px;
+    padding: 19px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+`
+
+const Line = styled.div`
+    height: 32px;
+    border-right: 1px solid gray;
+`
+
+const SearchbarInput = styled.input`
+    text-align: center;
+    width: 211px;
+    height: 24px;
+    border: 1px solid lightgray;
+    justify-self: center;
+    padding: none;
+    font-size: 1.4rem;
+    border-radius: 3px;
+    background-color: #FAFAFA;
+    &:focus {
+        outline: none;
+    }
+`
+
+const LoginDiv = styled.div`
+    width: 215px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 40px;
+`
+
+const LoginIcon = styled.img`
+    width: 22px;
+    height: 22px;
+    &:hover {
+        cursor: pointer;
+    }
+`
 
 class SearchBar extends Component {
     constructor(props) {
@@ -18,21 +72,21 @@ class SearchBar extends Component {
 
     render() {
         return(
-            <div className="header">
-                <div className="logo">
+            <HeaderDiv>
+                <LogoDiv>
                     <i className="fab fa-instagram"></i>
-                    <div className="empty-div"></div>
-                    <img src="instagram_logo.svg" alt="logo" />
-                </div>
+                    <Line />
+                    <img className="logo-img" src="instagram_logo.svg" alt="logo" />
+                </LogoDiv>
                 
-                <input className="searchbar" type="text" placeholder="Search" value={this.state.searchQuery} onChange={this.changeHandler}></input>
+                <SearchbarInput type="text" placeholder="Search" value={this.state.searchQuery} onChange={this.changeHandler}></SearchbarInput>
 
-                <div className="login">
-                    <img src="compass.svg" alt="compass" />
-                    <img src="like.svg" alt="like" />
-                    <img onClick={this.props.logOut} src="login.svg" alt="login" />
-                </div>
-            </div>
+                <LoginDiv>
+                    <LoginIcon src="compass.svg" alt="compass" />
+                    <LoginIcon src="like.svg" alt="like" />
+                    <LoginIcon onClick={this.props.logOut} src="login.svg" alt="login" />
+                </LoginDiv>
+            </HeaderDiv>
             
         );
     }
