@@ -29,7 +29,7 @@ const SearchBar = props => {
                     <NavLink ><i className="far fa-heart"></i></NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink ><i className="far fa-user"></i></NavLink>
+                    <NavLink onClick={props.logout} ><i className="far fa-user"></i></NavLink>
                 </NavItem>
             </Nav>
         </Navbar>

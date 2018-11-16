@@ -35,8 +35,11 @@ class Post extends Component {
     addComment = e => {
         e.preventDefault();
 
+        console.log(localStorage)
+        let user = localStorage.getItem('user');
+
         this.setState({
-            comments: [...this.state.comments, {text: this.state.commentText}],
+            comments: [...this.state.comments, {text: this.state.commentText, username: user}],
             commentText: ''
         })
     }
