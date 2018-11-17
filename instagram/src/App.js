@@ -3,6 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostSection from './components/PostSection/PostSection';
 import SearchBar from '/Users/cengizbug/Lambda Projects/02_Month 2/React-Insta-Clone/instagram/src/components/SearchBar/SearchBar';
+import SearchForm from '/Users/cengizbug/Lambda Projects/02_Month 2/React-Insta-Clone/instagram/src/components/SearchBar/SearchForm';
 
 
 class App extends Component {
@@ -19,7 +20,7 @@ class App extends Component {
       <div className="App">
         <SearchBar data = {this.state.data}/>
         <PostSection data = {this.state.data}/>
-        
+        <SearchForm data = {this.state.data} />
         
       </div>
     );

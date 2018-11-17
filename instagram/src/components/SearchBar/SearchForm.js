@@ -10,11 +10,6 @@ class App extends React.Component {
         }
     }
 
-
-
-
-
-
     render() {
         return (
             <form onSubmit={console.log("onsubmit")}>
