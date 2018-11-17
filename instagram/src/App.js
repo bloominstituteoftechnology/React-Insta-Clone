@@ -3,6 +3,7 @@ import "./App.css";
 import Authenticate from "./components/Authentication/Authenticate";
 import PostsPage from "./components/PostContainer/PostsPage";
 import Login from "./components/Login/Login";
+import SinglePost from "./components/PostContainer/SinglePost";
 import { Route, Switch } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faInstagram } from "@fortawesome/fontawesome-free-brands";
@@ -38,6 +39,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Login} />
           <Route exact path="/posts" component={PostsPage} />} />
+          <Route path="/posts/:username" component={SinglePost} />
         </Switch>
       </>
     );

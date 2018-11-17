@@ -17,7 +17,7 @@ const SearchBar = props => {
   return (
     <SearchbarContainer>
       <Branding />
-      <IconLinks />
+      <IconLinks logout={props.onClick} />
       <SearchField search={props.search} onChange={props.onChange} />
     </SearchbarContainer>
   );

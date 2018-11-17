@@ -23,6 +23,13 @@ class PostsPage extends Component {
     this.setState({ post: dummyData });
   }
 
+  logout = ev => {
+    // ev.preventDefault();
+    console.log("done");
+    localStorage.removeItem("username");
+    window.location.reload();
+  };
+
   filterPosts = ev => {
     var options = {
       threshold: 0.6,
@@ -40,7 +47,7 @@ class PostsPage extends Component {
   render() {
     return (
       <AppContainer>
-        <SearchBar onChange={this.filterPosts} />
+        <SearchBar onChange={this.filterPosts} onClick={this.logout} />
         {(this.state.filtered.length > 0
           ? this.state.filtered
           : this.state.post
