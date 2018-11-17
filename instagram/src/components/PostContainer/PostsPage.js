@@ -23,8 +23,7 @@ class PostsPage extends Component {
     this.setState({ post: dummyData });
   }
 
-  logout = ev => {
-    // ev.preventDefault();
+  logout = () => {
     console.log("done");
     localStorage.removeItem("username");
     window.location.reload();
