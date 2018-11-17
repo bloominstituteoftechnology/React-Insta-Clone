@@ -16,6 +16,7 @@ class PostContainer extends React.Component {
     }
 
     handleChange = event => {
+        event.preventDefault();
         this.setState({
             inputText: event.target.value,
         })
@@ -30,6 +31,22 @@ class PostContainer extends React.Component {
         })
         console.log("enter clicked", this.state);
     }
+
+    toggleLike = ev => {
+        const element = document.getElementById("heartIcon");
+        const redHeart = element.classList.toggle("heartRed");
+        console.log(element, redHeart)
+    }
+
+    
+
+    // redHearts = ev => {
+    //     const redHeart = document.getElementsByClassName("eachHeart")
+    //     const redHearts = Array.from(redHeart);
+    //     redHearts.forEach(heart => {
+    //         heart.classList.toggle(toggleLike);
+    //     })
+    // }
     
     render() {
         return (
@@ -51,8 +68,8 @@ class PostContainer extends React.Component {
                             <div>
                             <FeatherIcon className="message" icon="message-circle" />
                             </div>
-                            <div>
-                                <FeatherIcon icon="heart" />
+                            <div >
+                                <FeatherIcon className="eachHeart" id="heartIcon" onClick={this.toggleLike} icon="heart" />
                             </div>
                             
                         </div>

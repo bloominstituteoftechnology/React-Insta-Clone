@@ -10,13 +10,14 @@ class App extends Component {
     super();
     this.state = {
       data: dummyData,
-      inputText: "text data from state",
+      inputText: "",
     }
   }
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar data = {this.state.data}/>
         <PostSection data = {this.state.data}/>
         
         

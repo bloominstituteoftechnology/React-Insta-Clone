@@ -1,8 +1,10 @@
 import React from 'react';
 import FeatherIcon from 'feather-icons-react';
 import "./SearchBar.css";
+import SearchForm from './SearchForm';
 
 const SearchBar = props => {
+
     return (
         
         <div className="search-bar">
@@ -12,14 +14,9 @@ const SearchBar = props => {
                 {/* <img src="instagram.png"></img> */}
                 <h1>Instagram</h1>
             </div>
+                  
+            <SearchForm/>
             
-
-            
-                <input className="search-box" type="text" size="30" placeholder="Search"></input>
-            
-            
-
-
             <div className="navigation">
                 <FeatherIcon className="IG-logo" icon="compass" />
                 <FeatherIcon className="IG-logo" icon="heart" />
@@ -28,7 +25,8 @@ const SearchBar = props => {
             
         </div>
     );
-  };
+}
+    
   
   
   
