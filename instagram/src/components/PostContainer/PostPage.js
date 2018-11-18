@@ -19,7 +19,6 @@ class PostPage extends Component {
   componentDidMount = () => {
     this.setState({
       data: dummyData,
-      // filteredSearch: dummyData
     })
   }
 

@@ -45,7 +45,7 @@ class LoginPage extends React.Component  {
             
                 <input
                     className='password'
-                    type='text'
+                    type='password'
                     name='password'
                     placeholder='Password'
                     onChange={this.handleLoginChange}
@@ -61,12 +61,12 @@ class LoginPage extends React.Component  {
                     <p>Log in with Facebook</p>
                 </div>
 
-                <a href='#'>Forgot password?</a>
+                <a href='https://www.instagram.com/accounts/password/reset/'>Forgot password?</a>
         </div>
         </div>
 
         <div className='get-account'>
-        Don't have an account? <a href='#' className='signup'>Sing up</a>
+        Don't have an account? <a href='https://www.instagram.com/accounts/emailsignup/'  className='signup'>Sing up</a>
         </div>
        
       </div>

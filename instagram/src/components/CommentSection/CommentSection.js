@@ -17,18 +17,13 @@ class CommentSection extends React.Component {
     }
 
     componentDidMount () {
-        console.log(this.props.comments)
         this.setState({comments: this.props.comments})
-
-
-
-
-
     }
 
-componentWillUnmount () {
-    this.setComments({})
-}
+    componentWillUnmount () {
+        this.setComments({})
+    }
+
     setComments = () => {
         localStorage.setItem(this.props.postId, JSON.stringify(this.state.comments))
     }
@@ -53,8 +48,7 @@ componentWillUnmount () {
 
 
     render () {
-        console.log(this.state.comments)
-        // let newComments= Array.from(this.state.comments)
+        
         return (
 
             <div>
@@ -80,57 +74,8 @@ componentWillUnmount () {
                      
             </div>     
         );
-        
-    //}
 }}
 
-
-// const CommentSection = (props) => {
-
-//     let comments = props.post.comments.map ((comment, index) => {
-//         return <Comment 
-//         comment={comment} 
-//         key={index}
-        
-//         />
-//     })
-
-//     return (
-//         <div className='comment-section'>
-//             <div className='comment-header'>
-//                 <img src={props.post.thumbnailUrl} alt='thumbnail' className='thumbnail' />
-//                 <h4>{props.post.username}</h4>
-//             </div>
-            
-//             <div className='main-image'>
-//                 <img src={props.post.imageUrl} alt='main ' />
-//             </div>
-           
-//             <div className='main-content'>
-                
-//                  <div className='likes'>
-//                     <i className="far fa-heart fa-2x comment-icons"></i>
-//                     <i className="far fa-comment fa-2x comment-icons"></i>
-//                     <h4> {props.post.likes} likes </h4>
-//                </div> 
-               
-//                <div > 
-//                     { comments }
-                
-//                     <h5 className='timestamp'>
-//                         { moment(props.post.timestamp, 'MMMM Do YYYY hh:mm:ss A').fromNow() }
-//                     </h5>
-//                 </div>
-
-//                 <div>
-//                     <CommentInput />
-//                 </div>
-
-//             </div>
-
-//         </div>
-//     );
-// }
 CommentSection.propTypes = {
     post: PropTypes.shape ({
         username: PropTypes.string,
