@@ -10,15 +10,33 @@ class Post extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            likes: props.post.likes
+            likes: props.post.likes,
+            liked: false
         }
     }
 
 
     increment = () => {
-        let likes = this.state.likes + 1;
-        this.setState({ likes });
+       if(!this.state.liked) {
+           this.setState({
+               likes: this.state.likes + 1,
+               liked: true
+           })
+       } else {
+           this.setState({
+               likes: this.state.likes - 1,
+               liked: !this.state.liked
+           })
+       }
       };
+
+      changeColor = () =>{
+        if(this.state.liked === true) {
+
+        }
+      }
+
+     
 
     render () {
         
@@ -41,6 +59,8 @@ class Post extends React.Component {
                         <LikesPost 
                             likes={this.state.likes}
                             increment={this.increment}
+                            changeColor={this.changeColor}
+                            liked={this.state.liked}
                         />
 
                            
