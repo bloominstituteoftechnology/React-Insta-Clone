@@ -4,10 +4,14 @@ import PostContainer from '/Users/cengizbug/Lambda Projects/02_Month 2/React-Ins
 import PropTypes from 'prop-types';
 
 const PostSection = props => {
+    // console.log(props.data.filter(post);
     return (
         
         <div>
-            {props.data.map(propsInSection => (
+            {props.data
+            .filter(post => (
+                post.username.includes(props.searchText)))
+                .map(propsInSection => (
                         <PostContainer 
                             key ={propsInSection.timestamp}
                             username={propsInSection.inputText}
@@ -26,3 +30,5 @@ PostSection.propTypes = {
 
 
 export default PostSection;
+
+

@@ -7,11 +7,11 @@ import CommentForm from '../CommentSection/CommentForm';
 
 class PostContainer extends React.Component {
     constructor(props) {
-        console.log(props);
+        console.log("on constructor");
         super(props);
         this.state = {
             commentSection: props.propsInPC.comments,
-            inputText: " ",
+            inputText: "",
         }
     }
 
@@ -22,7 +22,8 @@ class PostContainer extends React.Component {
         })
        
     }
-
+        
+        
     addComment = ev => {
         ev.preventDefault();
         this.setState({
@@ -38,7 +39,7 @@ class PostContainer extends React.Component {
         console.log(element, redHeart)
     }
 
-    
+
 
     // redHearts = ev => {
     //     const redHeart = document.getElementsByClassName("eachHeart")
@@ -49,7 +50,9 @@ class PostContainer extends React.Component {
     // }
     
     render() {
+        console.log("on render");
         return (
+            
             <div className="instagram-posts">
                 
                 <div className="post-container"> 

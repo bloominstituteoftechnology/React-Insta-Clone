@@ -15,7 +15,7 @@ const SearchBar = props => {
                 <h1>Instagram</h1>
             </div>
                   
-            <SearchForm/>
+            <SearchForm searchText = {props.searchText} handleChange = {props.handleChange}/>
             
             <div className="navigation">
                 <FeatherIcon className="IG-logo" icon="compass" />
