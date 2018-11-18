@@ -20,6 +20,7 @@ const UserHeader = styled.h2`
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0;
+  margin-left: 1%;
 `;
 
 const Thumbnail = styled.img`

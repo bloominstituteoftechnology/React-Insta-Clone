@@ -15,7 +15,6 @@ import {
   faTimesCircle
 } from "@fortawesome/free-regular-svg-icons";
 import { faEllipsisH, faSearch } from "@fortawesome/free-solid-svg-icons";
-
 library.add(
   faInstagram,
   faComment,

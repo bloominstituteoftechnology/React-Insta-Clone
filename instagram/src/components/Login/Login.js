@@ -36,7 +36,7 @@ class Login extends Component {
     ev.preventDefault();
     const username = this.state.username;
     localStorage.setItem("username", username);
-    window.location.reload();
+    this.props.history.push("/Posts");
   };
 
   render() {

@@ -22,7 +22,8 @@ class PostInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      likes: this.props.likes
+      likes: this.props.likes,
+      isLiked: false
     };
   }
 
@@ -42,9 +43,17 @@ class PostInfo extends Component {
     localStorage.setItem(this.props.id, JSON.stringify(this.state.likes));
   };
 
-  plusLike = () => {
-    let add = this.state.likes + 1;
-    this.setState({ likes: add });
+  plusLike = e => {
+    e.preventDefault();
+    e.stopPropagation();
+    let liked;
+    if (this.state.isLiked) {
+      liked = this.state.likes - 1;
+      this.setState({ likes: liked, isLiked: false });
+    } else {
+      liked = this.state.likes + 1;
+      this.setState({ likes: liked, isLiked: true });
+    }
     setTimeout(() => {
       this.saveLikes();
     }, 1);
@@ -57,7 +66,7 @@ class PostInfo extends Component {
           <FontAwesomeIcon
             icon={["far", "heart"]}
             size="2x"
-            className="icon"
+            className={`icon ${this.state.isLiked ? "red" : null}`}
             onClick={this.plusLike}
           />
 
