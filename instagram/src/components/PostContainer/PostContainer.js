@@ -94,7 +94,7 @@ const PostContainer = props => {
         <ImgPostPicture src={props.postContainer.imageUrl} alt="" />
         <DivPostIconsContainer>
           <IconHeart style={PostIcons} onClick={event => {props.incrementLikes(event, props.postContainer.username)}} />
-          <IconMessageCircle style={Object.assign({}, PostIcons, PostIconsFlipped)} />
+          <IconMessageCircle style={Object.assign({}, PostIcons, PostIconsFlipped)}/>
         </DivPostIconsContainer>
         <H4PostLikes>{props.postContainer.likes} likes</H4PostLikes>
         {props.postContainer.comments.map(comment => (

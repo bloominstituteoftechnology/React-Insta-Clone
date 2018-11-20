@@ -120,7 +120,7 @@ class PostsPage extends Component {
   render() {
     return (
       <div>
-        <Header setSearchResults={this.setSearchResults} />
+        <Header setSearchResults={this.setSearchResults} user={this.state.usr} />
         <DivAppContainer>
           <PostContainerList
           data={this.state.data}

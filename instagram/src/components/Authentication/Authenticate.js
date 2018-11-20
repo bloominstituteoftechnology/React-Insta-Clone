@@ -3,25 +3,6 @@ import React from 'react';
 import PostsPage from '../PostContainer/PostsPage';
 import Login from '../Login/Login';
 
-const Users = [
-  {
-    username: 'James',
-    password: 'iLikeCoding'
-  },
-  {
-    username: 'Sawyer',
-    password: 'iLikePming'
-  },
-  {
-    username: 'Ryan',
-    password: 'iLikeTeaching'
-  },
-  {
-    username: 'Dustin',
-    password: 'iLikeTeaching'
-  }
-];
-
 /***************************************************************************************************
 ********************************************* Component ********************************************
 ***************************************************************************************************/
@@ -30,7 +11,7 @@ class Authenticate extends React.Component {
     constructor(props){
       super(props);
       this.state = {
-        data: props.dummyData,
+        users: props.dummyData,
         isUsrLoggedIn: false,
         loginUsr: {},
         usrname: '',
@@ -59,7 +40,7 @@ class Authenticate extends React.Component {
     login = e => {
       e.preventDefault();
       let usrLogin = {}
-      Users.forEach(user => {
+      this.state.users.forEach(user => {
         if (user.username.toUpperCase() === this.state.usrname.toUpperCase() && user.password === this.state.usrpwd){
           usrLogin = user;
           this.setState({
@@ -78,7 +59,7 @@ class Authenticate extends React.Component {
 
     render() {
       if (this.state.isUsrLoggedIn){
-        return <PostsPage dummyData={this.state.data} loginUsr={this.state.loginUsr}/> // display app page
+        return <PostsPage dummyData={this.state.users} loginUsr={this.state.loginUsr}/> // display app page
       } else {
         return <Login login={this.login} changeHandler={this.changeHandler}/> // display login page
       }

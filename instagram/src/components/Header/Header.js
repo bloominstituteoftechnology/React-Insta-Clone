@@ -1,9 +1,11 @@
 import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
-import { Instagram, Compass, Heart, User } from 'react-feather';
+import HeaderUserIcon from './User/HeaderUserIcon'
+import { Instagram, Compass, Heart} from 'react-feather';
 import dividerImage from '../../Images/Header/header-divider.png';
 import logoImage from '../../Images/Header/header-logo.png';
 import styled from "styled-components";
+import PropTypes from 'prop-types';
 
 
 /***************************************************************************************************
@@ -57,10 +59,15 @@ const Header = props => {
     <DivRightSide>
       <Compass style={headerIconStyle} size={48} />
       <Heart style={headerIconStyle} size={48} />
-      <User style={headerIconStyle} size={48} />
+      <HeaderUserIcon user={props.user} />
     </DivRightSide>
   </DivHeaderMain>
   );
+}
+
+Header.propTypes = {
+  setSearchResults: PropTypes.func,
+  user: PropTypes.object
 }
 
 export default Header;
