@@ -1,17 +1,16 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import PostsPage from '../PostContainer/PostsPage';
 import Login from '../Login/Login';
+import UserAccounts from '../../DummyData/UserAccounts';
 
 /***************************************************************************************************
 ********************************************* Component ********************************************
 ***************************************************************************************************/
-
 class Authenticate extends React.Component {
     constructor(props){
       super(props);
       this.state = {
-        users: props.userPosts,
+        users: UserAccounts,
         isUsrLoggedIn: false,
         loginUsr: {},
         usrname: '',
@@ -59,14 +58,11 @@ class Authenticate extends React.Component {
 
     render() {
       if (this.state.isUsrLoggedIn){
-        return <PostsPage userPosts={this.state.users} loginUsr={this.state.loginUsr}/> // display app page
+        return <PostsPage loginUsr={this.state.loginUsr}/> // display app page
       } else {
         return <Login login={this.login} changeHandler={this.changeHandler}/> // display login page
       }
     }
   }
-// Authenticate.propTypes = {
-//   comment: PropTypes.objectOf(PropTypes.string)
-// }
 
 export default Authenticate;

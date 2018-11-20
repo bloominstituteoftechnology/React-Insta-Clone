@@ -70,6 +70,8 @@ const NewCommentForm = props => {
 }
 
 NewCommentForm.propTypes = {
+  postUsr: PropTypes.string,
+  handleChange: PropTypes.func,
   addNewComment: PropTypes.func
 }
 

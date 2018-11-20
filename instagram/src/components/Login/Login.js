@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 /***************************************************************************************************
 ********************************************** Styles **********************************************
@@ -21,7 +21,6 @@ const Login = props => {
           className="login-usr-input"
           type="text"
           name="usrname"
-          value={props.usrname}
           onChange={props.changeHandler}
         />
       </div>
@@ -30,7 +29,6 @@ const Login = props => {
           className="login-pwd-input"
           type="password"
           name="usrpwd"
-          value={props.usrpwd}
           onChange={props.changeHandler}
         />
       </div>
@@ -40,8 +38,9 @@ const Login = props => {
   );
 }
 
-// Login.propTypes = {
-//   comment: PropTypes.objectOf(PropTypes.string)
-// }
+Login.propTypes = {
+  login: PropTypes.func,
+  changeHandler: PropTypes.func
+}
 
 export default Login;

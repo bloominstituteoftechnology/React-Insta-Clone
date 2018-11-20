@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import PostContainerList from '../PostContainer/PostContainerList';
 import Header from '../Header/Header';
 import styled from 'styled-components';
+import UserPosts from '../../DummyData/UserPosts';
 
 /***************************************************************************************************
 ********************************************** Styles **********************************************
@@ -23,7 +24,7 @@ const DivAppContainer = styled.div`
 class PostsPage extends Component {
   constructor(props){
     super(props);
-    this.userPosts = props.userPosts;
+    this.userPosts = UserPosts;
     this.state = {
       usr: props.loginUsr,
       data: [],
@@ -134,8 +135,12 @@ class PostsPage extends Component {
   };
 }
 
-// PostsPage.propTypes = {
-//   comment: PropTypes.objectOf(PropTypes.string)
-// }
+PostsPage.propTypes = {
+  loginUsr: PropTypes.shape({
+    username: PropTypes.string,
+    password: PropTypes.string,
+    thumbnailUrl: PropTypes.string
+  })
+}
 
 export default PostsPage;

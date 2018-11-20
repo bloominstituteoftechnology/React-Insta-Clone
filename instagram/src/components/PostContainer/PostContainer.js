@@ -112,6 +112,11 @@ const PostContainer = props => {
 
 PostContainer.propTypes = {
   postContainer: PropTypes.shape({
+    postOwner: PropTypes.shape({
+      username: PropTypes.string,
+      password: PropTypes.string,
+      thumbnailUrl: PropTypes.string
+    }),
     username: PropTypes.string,
     thumbnailUrl: PropTypes.string,
     imageUrl: PropTypes.string,
