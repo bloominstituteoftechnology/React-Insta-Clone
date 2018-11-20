@@ -11,7 +11,7 @@ class Authenticate extends React.Component {
     constructor(props){
       super(props);
       this.state = {
-        users: props.dummyData,
+        users: props.userPosts,
         isUsrLoggedIn: false,
         loginUsr: {},
         usrname: '',
@@ -59,7 +59,7 @@ class Authenticate extends React.Component {
 
     render() {
       if (this.state.isUsrLoggedIn){
-        return <PostsPage dummyData={this.state.users} loginUsr={this.state.loginUsr}/> // display app page
+        return <PostsPage userPosts={this.state.users} loginUsr={this.state.loginUsr}/> // display app page
       } else {
         return <Login login={this.login} changeHandler={this.changeHandler}/> // display login page
       }

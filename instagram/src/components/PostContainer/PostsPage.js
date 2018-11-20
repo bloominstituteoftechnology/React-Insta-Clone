@@ -23,7 +23,7 @@ const DivAppContainer = styled.div`
 class PostsPage extends Component {
   constructor(props){
     super(props);
-    this.dummyData = props.dummyData;
+    this.userPosts = props.userPosts;
     this.state = {
       usr: props.loginUsr,
       data: [],
@@ -33,7 +33,7 @@ class PostsPage extends Component {
   }
 
   componentDidMount() {
-    this.setState({data: this.dummyData});
+    this.setState({data: this.userPosts});
   }
 
   handleChange = e => {
@@ -111,7 +111,7 @@ class PostsPage extends Component {
 
   setSearchResults = e => {
     e.preventDefault();
-    const postsFound = this.dummyData.filter(post => post.username.toUpperCase().includes(e.target.value.toUpperCase()));
+    const postsFound = this.userPosts.filter(post => post.username.toUpperCase().includes(e.target.value.toUpperCase()));
     this.setState({
       data: postsFound
     })
