@@ -4,15 +4,20 @@ import './PostContainer.css'
 import FeatherIcon from 'feather-icons-react';
 import PropTypes from 'prop-types';
 import CommentForm from '../CommentSection/CommentForm';
+import dummyData from '../../dummy-data';
 
 class PostContainer extends React.Component {
     constructor(props) {
-        console.log("on constructor");
         super(props);
         this.state = {
+            data: dummyData,
             commentSection: props.propsInPC.comments,
             inputText: "",
-        }
+            likes: props.propsInPC.likes,
+            liked: false,
+            username: props.username
+            
+        };
     }
 
     handleChange = event => {
@@ -30,27 +35,35 @@ class PostContainer extends React.Component {
                 commentSection: [...this.state.commentSection, {username: "andrewC", text: this.state.inputText}]
             
         })
-        console.log("enter clicked", this.state);
+        
     }
 
+    
     toggleLike = ev => {
-        const element = document.getElementById("heartIcon");
-        const redHeart = element.classList.toggle("heartRed");
-        console.log(element, redHeart)
+        ev.preventDefault();
+        let likes = this.state.likes;
+
+        if (this.state.liked === false) {
+            this.setState({
+                liked: true,
+                likes: likes +1,
+                
+            })
+        } else {
+            this.setState({
+                liked: false,
+                likes: likes -1,
+            })  
+        } 
     }
 
+            
 
 
-    // redHearts = ev => {
-    //     const redHeart = document.getElementsByClassName("eachHeart")
-    //     const redHearts = Array.from(redHeart);
-    //     redHearts.forEach(heart => {
-    //         heart.classList.toggle(toggleLike);
-    //     })
-    // }
+   
     
     render() {
-        console.log("on render");
+        
         return (
             
             <div className="instagram-posts">
@@ -60,7 +73,7 @@ class PostContainer extends React.Component {
                     <div className="user">   
                         <img className="logo" src={this.props.propsInPC.thumbnailUrl} alt="logo"></img>
                         <div className="username">
-                            {this.props.propsInPC.username}
+                            {this.state.username}
                         </div> 
                     </div>
 
@@ -72,12 +85,12 @@ class PostContainer extends React.Component {
                             <FeatherIcon className="message" icon="message-circle" />
                             </div>
                             <div >
-                                <FeatherIcon className="eachHeart" id="heartIcon" onClick={this.toggleLike} icon="heart" />
+                                <FeatherIcon className={this.state.liked ? 'eachHeart' : 'none'}  id="heartIcon" onClick={this.toggleLike}  icon="heart" />
                             </div>
                             
                         </div>
                         
-                            <h4 className="likes">{this.props.propsInPC.likes} likes</h4>
+                            <h4 className="likes">{this.state.likes} likes</h4>
                         
                         <div className="comments">
                             <div className="comment">

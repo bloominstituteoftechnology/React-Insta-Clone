@@ -11,7 +11,6 @@ const SearchBar = props => {
             <div className="header">
                 <FeatherIcon className="IG-logo" icon="instagram" />
                 <h1 className="line-divider">|</h1>
-                {/* <img src="instagram.png"></img> */}
                 <h1>Instagram</h1>
             </div>
                   

@@ -1,48 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from './dummy-data';
-import PostSection from './components/PostSection/PostSection';
-import SearchBar from '/Users/cengizbug/Lambda Projects/02_Month 2/React-Insta-Clone/instagram/src/components/SearchBar/SearchBar';
-
+// import dummyData from './dummy-data';
+import PostPage from './components/PostPage';
+import Authenticate from './components/Authentication/Authenticate';
 
 class App extends Component {
   constructor() {
-    console.log("constructor")
     super();
-    this.state = {
-      data: dummyData,
-      searchText: "",
-    }
-  }
+    this.state = {}
+  }//constructor
 
-  handleChange = event => {
-    event.preventDefault();
-    this.setState({
-        searchText: event.target.value,
-    })
-   
-}
 
-  searchFilter = event => {
-    event.preventDefault();
-    this.setState({
-      inputText: [console.log("set state")]
-    })
-    console.log("set filter")    
-  }
-  
-  
   render() {
-    console.log("render")
     return (
       <div className="App">
-        <SearchBar data = {this.state.data} searchText = {this.state.searchText} handleChange = {this.handleChange}/>
-        <PostSection data = {this.state.data} searchText = {this.state.searchText}/>
-        
-        
+        <PostPage />
       </div>
-    );
+    )
   }
-}
+}//app
 
-export default App;
+
+export default Authenticate(App);
