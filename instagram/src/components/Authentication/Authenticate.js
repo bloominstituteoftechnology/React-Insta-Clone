@@ -65,8 +65,12 @@ class Authenticate extends React.Component {
   logout = () => {
     this.setState({
       loginUsr: {},
-      isUsrLoggedIn: false
+      isUsrLoggedIn: false,
+      usrname: "",
+      usrpwd: ""
     });
+    localStorage.setItem("usrIsLoggedIn", false);
+    localStorage.setItem("usrLoggedIn", JSON.stringify({}));
   };
 
   render() {
