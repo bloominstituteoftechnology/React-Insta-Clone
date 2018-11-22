@@ -35,38 +35,38 @@ const DivUserIcon = styled.div`
 class HeaderUserIcon extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isSelected: false
-    };
+    this.state = {};
   }
-
-  toggleDropdown = () => {
-    this.setState({ isSelected: !this.state.isSelected });
-  };
 
   render() {
     const UserIcon =
       this.props.user.thumbnailUrl === "default" ? (
-        <DivUserIcon>
+        <DivUserIcon className="UserIconDropdown">
           <FeatherUserIcn
             style={defaultUserIcon.css}
             size={defaultUserIcon.featherIcnSize}
-            onClick={() => this.toggleDropdown()}
+            onClick={() => this.props.toggleUserIconDropdown()}
+            className="UserIconDropdown"
           />
           <UserIconDropdown
             username={this.props.user.username}
-            isUserIconSelected={this.state.isSelected}
+            logout={this.props.logout}
+            isUserIconSelected={this.props.isUserIconSelected}
+            className="UserIconDropdown"
           />
         </DivUserIcon>
       ) : (
-        <DivUserIcon>
+        <DivUserIcon className="UserIconDropdown">
           <ImgUserIcon
             src={this.props.user.thumbnailUrl}
-            onClick={() => this.toggleDropdown()}
+            onClick={() => this.props.toggleUserIconDropdown()}
+            className="UserIconDropdown"
           />
           <UserIconDropdown
             username={this.props.user.username}
-            isUserIconSelected={this.state.isSelected}
+            logout={this.props.logout}
+            isUserIconSelected={this.props.isUserIconSelected}
+            className="UserIconDropdown"
           />
         </DivUserIcon>
       );

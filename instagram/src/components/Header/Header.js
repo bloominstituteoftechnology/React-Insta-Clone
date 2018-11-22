@@ -59,7 +59,13 @@ const Header = props => {
       <DivRightSide>
         <Compass style={headerIconStyle} size={48} />
         <Heart style={headerIconStyle} size={48} />
-        <HeaderUserIcon user={props.user} />
+        <HeaderUserIcon
+          user={props.user}
+          logout={props.logout}
+          isUserIconSelected={props.isUserIconSelected}
+          toggleUserIconDropdown={props.toggleUserIconDropdown}
+          className="UserIconDropdown"
+        />
       </DivRightSide>
     </DivHeaderMain>
   );

@@ -37,64 +37,80 @@ const LiItem = styled.li`
 `;
 
 const UlDropdown = styled.ul`
-  border: 1px solid black;
   list-style: none;
   padding: 0;
   margin: 0;
   background-color: lightgray;
   position: absolute;
+  transform: translate(-50%);
   top: 100%;
   left: 50%;
-  transform: translate(-50%);
-  box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.3);
 
   ${props =>
     props.isUserIconSelected
       ? css`
-          visibility: visible;
+          overflow: auto;
+          overflow-y: hidden;
+          max-height: 500px;
+          transition: max-height 0.3s ease-in;
+          box-shadow: -1px 3px 10px 1px rgba(0, 0, 0, 0.3);
         `
       : css`
-          visibility: hidden;
+          overflow: hidden;
+          max-height: 0;
+          transition-property: max-height, box-shadow;
+          transition-duration: 0.1s;
+          transition-timing-function: ease-out;
         `}
 `;
 
 const isUserIconClicked = isUserIconSelected =>
-  isUserIconSelected ? TriangleRotate : null;
+  isUserIconSelected ? null : TriangleRotate;
 
 const TriangleRotate = {
   transform: "rotate(180deg)"
 };
+
+const DivBorder = styled.div`
+  border: 1px inset black;
+`;
 
 /***************************************************************************************************
  ********************************************* Component ********************************************
  ***************************************************************************************************/
 const UserIconDropdown = props => {
   return props.username === "Guest" ? (
-    <DivDropdown>
+    <DivDropdown className="UserIconDropdown">
       <Triangle
         style={isUserIconClicked(props.isUserIconSelected)}
         fill="black"
+        className="UserIconDropdown"
       />
       <UlDropdown isUserIconSelected={props.isUserIconSelected}>
-        <LiItem>Logout</LiItem>
+        <DivBorder>
+          <LiItem onClick={() => props.logout()}>Logout</LiItem>
+        </DivBorder>
       </UlDropdown>
     </DivDropdown>
   ) : (
-    <DivDropdown>
+    <DivDropdown className="UserIconDropdown">
       <Triangle
         style={isUserIconClicked(props.isUserIconSelected)}
         fill="black"
+        className="UserIconDropdown"
       />
       <UlDropdown isUserIconSelected={props.isUserIconSelected}>
-        <LiItem>Edit&nbsp;Profile</LiItem>
-        <LiItem>
-          <div>
-            <Settings />
-            &nbsp;Settings
-          </div>
-        </LiItem>
-        <LiDivider />
-        <LiItem>Logout</LiItem>
+        <DivBorder>
+          <LiItem>Edit&nbsp;Profile</LiItem>
+          <LiItem>
+            <div>
+              <Settings />
+              &nbsp;Settings
+            </div>
+          </LiItem>
+          <LiDivider />
+          <LiItem onClick={() => props.logout()}>Logout</LiItem>
+        </DivBorder>
       </UlDropdown>
     </DivDropdown>
   );
