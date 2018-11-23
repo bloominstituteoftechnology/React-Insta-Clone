@@ -1,7 +1,7 @@
 import React from "react";
 import PostsPage from "../PostContainer/PostsPage";
 import Login from "../Login/Login";
-import UserAccounts from "../../DummyData/UserAccounts";
+import TestAccounts from "../../DummyData/UserAccounts";
 
 /***************************************************************************************************
  ********************************************* Component ********************************************
@@ -10,7 +10,7 @@ class Authenticate extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: UserAccounts,
+      users: TestAccounts,
       isUsrLoggedIn: false,
       loginUsr: {},
       usrname: "",
@@ -77,7 +77,13 @@ class Authenticate extends React.Component {
     if (this.state.isUsrLoggedIn) {
       return <PostsPage loginUsr={this.state.loginUsr} logout={this.logout} />; // display app page
     } else {
-      return <Login login={this.login} changeHandler={this.changeHandler} />; // display login page
+      return (
+        <Login
+          login={this.login}
+          changeHandler={this.changeHandler}
+          testAccounts={TestAccounts}
+        />
+      ); // display login page
     }
   }
 }

@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import DisplayAccountsList from "./DisplayAccountsList";
 
 /***************************************************************************************************
  ********************************************** Styles **********************************************
  ***************************************************************************************************/
-const DivLoginPage = styled.div``;
+const DivLoginPage = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 const FormLogin = styled.form`
   width: 600px;
@@ -41,6 +45,7 @@ const InputUsername = styled.input`
   height: 100%;
   border-radius: 10px;
   font-size: 24px;
+  outline: none;
 `;
 
 const DivPassword = styled.div`
@@ -61,6 +66,7 @@ const InputPassword = styled.input`
   height: 100%;
   border-radius: 10px;
   font-size: 24px;
+  outline: none;
 `;
 
 const InputLoginButton = styled.input`
@@ -120,6 +126,7 @@ const Login = props => {
           value="Log In"
         />
       </FormLogin>
+      <DisplayAccountsList testAccounts={props.testAccounts} />
     </DivLoginPage>
   );
 };
