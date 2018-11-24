@@ -32,15 +32,19 @@ const DivAccountsList = styled.div`
  ********************************************* Component *******************************************
  ***************************************************************************************************/
 const DisplayAccountsList = props => {
-  console.log(props.testAccounts);
   return (
     <DivAccountsListContainer>
       <H1DisplayAccountsTitle>
         Use one of the following test accounts to login...
       </H1DisplayAccountsTitle>
       <DivAccountsList>
-        {props.testAccounts.map((testAccount, index) => {
-          return <DisplayAccountInfo testAccount={testAccount} />;
+        {props.testAccounts.map(testAccount => {
+          return (
+            <DisplayAccountInfo
+              key={testAccount.username}
+              testAccount={testAccount}
+            />
+          );
         })}
       </DivAccountsList>
     </DivAccountsListContainer>

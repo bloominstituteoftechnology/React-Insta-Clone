@@ -80,6 +80,7 @@ const InputLoginButton = styled.input`
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
   outline: none;
   cursor: pointer;
+  margin-right: 50px;
   &:hover {
     outline: 0;
     background: radial-gradient(
@@ -91,6 +92,17 @@ const InputLoginButton = styled.input`
     transition: opacity 2s ease-in;
     color: rgb(251, 244, 209);
   }
+`;
+
+const DivLogin = styled.div`
+  display: flex;
+`;
+
+const H3FailLogMsg = styled.h3`
+  color: red;
+
+  ${props =>
+    props.failedLogin ? { visibility: "visible" } : { visibility: "hidden" }}
 `;
 
 /***************************************************************************************************
@@ -119,12 +131,17 @@ const Login = props => {
             onChange={props.changeHandler}
           />
         </DivPassword>
-        <InputLoginButton
-          className="login-btn"
-          type="submit"
-          placeholder="Login"
-          value="Log In"
-        />
+        <DivLogin>
+          <InputLoginButton
+            className="login-btn"
+            type="submit"
+            placeholder="Login"
+            value="Log In"
+          />
+          <H3FailLogMsg failedLogin={props.failedLogin}>
+            Invalid Username/Password
+          </H3FailLogMsg>
+        </DivLogin>
       </FormLogin>
       <DisplayAccountsList testAccounts={props.testAccounts} />
     </DivLoginPage>
