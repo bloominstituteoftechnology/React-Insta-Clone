@@ -18,7 +18,6 @@ const PostContainer = props => {
                         post={p}
                         index={index}
                     />)}
-                    {/* Here we send state data one by one to Post */}
                 </div>
             </div>
         </div>
