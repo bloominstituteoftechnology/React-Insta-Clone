@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
-import Authenticate from './components/Authentication/Authenticate';
-import './Style.css';
+import React, { Component } from "react";
+import Authenticate from "./components/Authentication/Authenticate";
+import PostsPage from "./components/PostContainer/PostsPage";
+import "./Style.css";
 
 /***************************************************************************************************
-********************************************* Component ********************************************
-***************************************************************************************************/
+ ********************************************* Component ********************************************
+ ***************************************************************************************************/
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Authenticate />
+        <PostsPage loginUsr={this.props.loginUsr} logout={this.props.logout} />
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
