@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import DisplayAccountsList from "./DisplayAccountsList";
 
 /***************************************************************************************************
- ********************************************** Styles **********************************************
+ ********************************************** Styles *********************************************
  ***************************************************************************************************/
 const DivLoginPage = styled.div`
   display: flex;
@@ -106,7 +106,7 @@ const H3FailLogMsg = styled.h3`
 `;
 
 /***************************************************************************************************
- ********************************************* Component ********************************************
+ ********************************************* Component *******************************************
  ***************************************************************************************************/
 const Login = props => {
   return (
@@ -150,7 +150,15 @@ const Login = props => {
 
 Login.propTypes = {
   login: PropTypes.func,
-  changeHandler: PropTypes.func
+  changeHandler: PropTypes.func,
+  failedLogin: PropTypes.bool,
+  testAccounts: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string,
+      password: PropTypes.string,
+      thumbnailUrl: PropTypes.string
+    })
+  )
 };
 
 export default Login;

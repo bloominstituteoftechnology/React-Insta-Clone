@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import DisplayAccountInfo from "./DisplayAccountInfo";
-// import PropTypes from 'prop-types';
 
 /***************************************************************************************************
  ********************************************** Styles *********************************************
@@ -51,8 +51,14 @@ const DisplayAccountsList = props => {
   );
 };
 
-// componentFunction.propTypes = {
-//   propertyName: PropTypes.string
-// }
+DisplayAccountsList.propTypes = {
+  testAccounts: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string,
+      password: PropTypes.string,
+      thumbnailUrl: PropTypes.string
+    })
+  )
+};
 
 export default DisplayAccountsList;

@@ -1,14 +1,14 @@
 import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 import SearchBar from "../SearchBar/SearchBar";
 import HeaderUserIcon from "./User/HeaderUserIcon";
 import { Instagram, Compass, Heart } from "react-feather";
 import dividerImage from "../../Images/Header/header-divider.png";
 import logoImage from "../../Images/Header/header-logo.png";
-import styled from "styled-components";
-import PropTypes from "prop-types";
 
 /***************************************************************************************************
- ********************************************** Styles **********************************************
+ ********************************************** Styles *********************************************
  ***************************************************************************************************/
 const DivHeaderMain = styled.div`
   width: 100%;
@@ -45,7 +45,7 @@ const ImgHeaderLogo = styled.img`
 const headerIconStyle = { cursor: "pointer" };
 
 /***************************************************************************************************
- ********************************************* Component ********************************************
+ ********************************************* Component *******************************************
  ***************************************************************************************************/
 const Header = props => {
   return (
@@ -72,8 +72,15 @@ const Header = props => {
 };
 
 Header.propTypes = {
+  user: PropTypes.shape({
+    username: PropTypes.string,
+    password: PropTypes.string,
+    thumbnailUrl: PropTypes.string
+  }),
   setSearchResults: PropTypes.func,
-  user: PropTypes.object
+  logout: PropTypes.func,
+  isUserIconSelected: PropTypes.bool,
+  toggleUserIconDropdown: PropTypes.func
 };
 
 export default Header;

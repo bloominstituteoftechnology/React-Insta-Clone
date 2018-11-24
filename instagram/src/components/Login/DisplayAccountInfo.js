@@ -61,7 +61,12 @@ const DisplayAccountInfo = props => {
 };
 
 DisplayAccountInfo.propTypes = {
-  propertyName: PropTypes.string
+  "get key": PropTypes.func,
+  testAccount: PropTypes.shape({
+    username: PropTypes.string,
+    password: PropTypes.string,
+    thumbnailUrl: PropTypes.string
+  })
 };
 
 export default DisplayAccountInfo;

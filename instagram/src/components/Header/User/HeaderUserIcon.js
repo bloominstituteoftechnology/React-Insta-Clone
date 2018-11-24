@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { User as FeatherUserIcn } from "react-feather";
+import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
+import { User as FeatherUserIcn } from "react-feather";
 import UserIconDropdown from "./UserIconDropdown";
-// import PropTypes from 'prop-types';
 
 /***************************************************************************************************
- ********************************************** Styles **********************************************
+ ********************************************** Styles *********************************************
  ***************************************************************************************************/
 const defaultUserIcon = {
   css: { cursor: "pointer", userSelect: "none" },
@@ -29,54 +29,54 @@ const DivUserIcon = styled.div`
 `;
 
 /***************************************************************************************************
- ********************************************* Component ********************************************
+ ********************************************* Component *******************************************
  ***************************************************************************************************/
 
-class HeaderUserIcon extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const HeaderUserIcon = props => {
+  const UserIcon =
+    props.user.thumbnailUrl === "default" ? (
+      <DivUserIcon className="UserIconDropdown">
+        <FeatherUserIcn
+          style={defaultUserIcon.css}
+          size={defaultUserIcon.featherIcnSize}
+          onClick={() => props.toggleUserIconDropdown()}
+          className="UserIconDropdown"
+        />
+        <UserIconDropdown
+          username={props.user.username}
+          logout={props.logout}
+          isUserIconSelected={props.isUserIconSelected}
+          className="UserIconDropdown"
+        />
+      </DivUserIcon>
+    ) : (
+      <DivUserIcon className="UserIconDropdown">
+        <ImgUserIcon
+          src={props.user.thumbnailUrl}
+          onClick={() => props.toggleUserIconDropdown()}
+          className="UserIconDropdown"
+        />
+        <UserIconDropdown
+          username={props.user.username}
+          logout={props.logout}
+          isUserIconSelected={props.isUserIconSelected}
+          className="UserIconDropdown"
+        />
+      </DivUserIcon>
+    );
 
-  render() {
-    const UserIcon =
-      this.props.user.thumbnailUrl === "default" ? (
-        <DivUserIcon className="UserIconDropdown">
-          <FeatherUserIcn
-            style={defaultUserIcon.css}
-            size={defaultUserIcon.featherIcnSize}
-            onClick={() => this.props.toggleUserIconDropdown()}
-            className="UserIconDropdown"
-          />
-          <UserIconDropdown
-            username={this.props.user.username}
-            logout={this.props.logout}
-            isUserIconSelected={this.props.isUserIconSelected}
-            className="UserIconDropdown"
-          />
-        </DivUserIcon>
-      ) : (
-        <DivUserIcon className="UserIconDropdown">
-          <ImgUserIcon
-            src={this.props.user.thumbnailUrl}
-            onClick={() => this.props.toggleUserIconDropdown()}
-            className="UserIconDropdown"
-          />
-          <UserIconDropdown
-            username={this.props.user.username}
-            logout={this.props.logout}
-            isUserIconSelected={this.props.isUserIconSelected}
-            className="UserIconDropdown"
-          />
-        </DivUserIcon>
-      );
+  return UserIcon;
+};
 
-    return UserIcon;
-  }
-}
-
-// Login.propTypes = {
-//   comment: PropTypes.objectOf(PropTypes.string)
-// }
+HeaderUserIcon.propTypes = {
+  user: PropTypes.shape({
+    username: PropTypes.string,
+    password: PropTypes.string,
+    thumbnailUrl: PropTypes.string
+  }),
+  logout: PropTypes.func,
+  isUserIconSelected: PropTypes.bool,
+  toggleUserIconDropdown: PropTypes.func
+};
 
 export default HeaderUserIcon;

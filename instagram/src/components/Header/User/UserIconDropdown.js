@@ -1,10 +1,10 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
 import { Settings, Triangle } from "react-feather";
-// import PropTypes from 'prop-types';
 
 /***************************************************************************************************
- ********************************************** Styles **********************************************
+ ********************************************** Styles *********************************************
  ***************************************************************************************************/
 const DivDropdown = styled.div`
   position: relative;
@@ -76,7 +76,7 @@ const DivBorder = styled.div`
 `;
 
 /***************************************************************************************************
- ********************************************* Component ********************************************
+ ********************************************* Component *******************************************
  ***************************************************************************************************/
 const UserIconDropdown = props => {
   return props.username === "Guest" ? (
@@ -116,8 +116,10 @@ const UserIconDropdown = props => {
   );
 };
 
-// UserIconDropdown.propTypes = {
-//   propertyName: PropTypes.number
-// }
+UserIconDropdown.propTypes = {
+  username: PropTypes.string,
+  logout: PropTypes.func,
+  isUserIconSelected: PropTypes.bool
+};
 
 export default UserIconDropdown;

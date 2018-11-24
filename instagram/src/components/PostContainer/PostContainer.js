@@ -1,20 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import CommentSection from '../CommentSection/CommentSection';
-import NewCommentForm from '../CommentSection/NewCommentForm';
-import { Heart as IconHeart, MessageCircle as IconMessageCircle } from 'react-feather';
-import moment from 'moment';
+import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
+import {
+  Heart as IconHeart,
+  MessageCircle as IconMessageCircle
+} from "react-feather";
+import moment from "moment";
+import CommentSection from "../CommentSection/CommentSection";
+import NewCommentForm from "../CommentSection/NewCommentForm";
 
 /***************************************************************************************************
-********************************************** Styles **********************************************
-***************************************************************************************************/
+ ********************************************** Styles *********************************************
+ ***************************************************************************************************/
 const DivPostContent = styled.div`
   width: 400px;
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: #F5F5F5; /* Color = Wild Sand: http://chir.ag/projects/name-that-color/#F5F5F5 */
+  background-color: #f5f5f5; /* Color = Wild Sand: http://chir.ag/projects/name-that-color/#F5F5F5 */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -42,7 +45,7 @@ const H2PostHeaderTitle = styled.h2`
 `;
 
 const SpanPostHeaderTimestamp = styled.span`
-  color:gray;
+  color: gray;
   font-size: 9px;
 `;
 
@@ -62,68 +65,89 @@ const H4PostLikes = styled.h4`
 `;
 
 const PostIcons = {
-    marginRight: '20px',
-    cursor: 'pointer',
+  marginRight: "20px",
+  cursor: "pointer",
 
-    WebkitTouchCallout: 'none',
-    WebkitUserSelect: 'none',
-      KhtmlUserSelect: 'none',
-        MozUserSelect: 'none',
-          msUserSelect: 'none',
-            userSelect: 'none'
-}
+  WebkitTouchCallout: "none",
+  WebkitUserSelect: "none",
+  KhtmlUserSelect: "none",
+  MozUserSelect: "none",
+  msUserSelect: "none",
+  userSelect: "none"
+};
 
 const PostIconsFlipped = {
-  transform: 'scaleX(-1)',
-  MozTransform: 'scaleX(-1)',
-  WebkitTransform: 'scaleX(-1)',
-  msTransform: 'scaleX(-1)'
-}
+  transform: "scaleX(-1)",
+  MozTransform: "scaleX(-1)",
+  WebkitTransform: "scaleX(-1)",
+  msTransform: "scaleX(-1)"
+};
 
 /***************************************************************************************************
-********************************************* Component ********************************************
-***************************************************************************************************/
+ ********************************************* Component *******************************************
+ ***************************************************************************************************/
 const PostContainer = props => {
+  console.log(props);
   return (
     <div>
       <DivPostContent>
         <DivPostHeader>
-          <ImgPostHeaderThumbnail src={props.postContainer.thumbnailUrl} alt="" />
-          <H2PostHeaderTitle>{props.postContainer.username} <SpanPostHeaderTimestamp>{moment(props.postContainer.timestamp, 'MMMM Do YYYY hh:mm:ss A').fromNow()}</SpanPostHeaderTimestamp></H2PostHeaderTitle>
+          <ImgPostHeaderThumbnail src={props.post.thumbnailUrl} alt="" />
+          <H2PostHeaderTitle>
+            {props.post.username}{" "}
+            <SpanPostHeaderTimestamp>
+              {moment(
+                props.post.timestamp,
+                "MMMM Do YYYY hh:mm:ss A"
+              ).fromNow()}
+            </SpanPostHeaderTimestamp>
+          </H2PostHeaderTitle>
         </DivPostHeader>
-        <ImgPostPicture src={props.postContainer.imageUrl} alt="" />
+        <ImgPostPicture src={props.post.imageUrl} alt="" />
         <DivPostIconsContainer>
-          <IconHeart style={PostIcons} onClick={event => {props.incrementLikes(event, props.postContainer.username)}} />
-          <IconMessageCircle style={Object.assign({}, PostIcons, PostIconsFlipped)}/>
+          <IconHeart
+            style={PostIcons}
+            onClick={event => {
+              props.incrementLikes(event, props.post.username);
+            }}
+          />
+          <IconMessageCircle
+            style={Object.assign({}, PostIcons, PostIconsFlipped)}
+          />
         </DivPostIconsContainer>
-        <H4PostLikes>{props.postContainer.likes} likes</H4PostLikes>
-        {props.postContainer.comments.map(comment => (
+        <H4PostLikes>{props.post.likes} likes</H4PostLikes>
+        {props.post.comments.map(comment => (
           <CommentSection key={comment.timestamp} comment={comment} />
         ))}
         <NewCommentForm
-          postUsr={props.postContainer.username}
+          postUsr={props.post.username}
           handleChange={props.handleChange}
           addNewComment={props.addNewComment}
         />
       </DivPostContent>
     </div>
   );
-}
+};
 
 PostContainer.propTypes = {
-  postContainer: PropTypes.shape({
-    postOwner: PropTypes.shape({
-      username: PropTypes.string,
-      password: PropTypes.string,
-      thumbnailUrl: PropTypes.string
-    }),
+  "get key": PropTypes.func,
+  post: PropTypes.shape({
     username: PropTypes.string,
     thumbnailUrl: PropTypes.string,
     imageUrl: PropTypes.string,
     likes: PropTypes.number,
     timestamp: PropTypes.string,
-    comments: PropTypes.arrayOf(PropTypes.object)
-  })
-}
+    comments: PropTypes.arrayOf(
+      PropTypes.shape({
+        username: PropTypes.string,
+        timestamp: PropTypes.string,
+        text: PropTypes.string
+      })
+    )
+  }),
+  addNewComment: PropTypes.func,
+  handleChange: PropTypes.func,
+  incrementLikes: PropTypes.func
+};
 
-export default PostContainer
+export default PostContainer;

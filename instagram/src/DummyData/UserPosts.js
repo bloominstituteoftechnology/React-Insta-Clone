@@ -1,14 +1,15 @@
-import UserAccounts from './UserAccounts'
+import UserAccounts from "./UserAccounts";
 
 const postOwners = {
-  philzcoffee: UserAccounts.find(user => user.username === 'philzcoffee'),
-  fortnite: UserAccounts.find(user => user.username === 'fortnite'),
-  playhearthstone: UserAccounts.find(user => user.username === 'playhearthstone')
-}
+  philzcoffee: UserAccounts.find(user => user.username === "philzcoffee"),
+  fortnite: UserAccounts.find(user => user.username === "fortnite"),
+  playhearthstone: UserAccounts.find(
+    user => user.username === "playhearthstone"
+  )
+};
 
 const UserPosts = [
   {
-    postOwner: postOwners.philzcoffee,
     username: postOwners.philzcoffee.username,
     thumbnailUrl: postOwners.philzcoffee.thumbnailUrl,
     imageUrl:
@@ -35,7 +36,6 @@ const UserPosts = [
     ]
   },
   {
-    postOwner: postOwners.fortnite,
     username: postOwners.fortnite.username,
     thumbnailUrl: postOwners.fortnite.thumbnailUrl,
     imageUrl:
@@ -71,7 +71,6 @@ const UserPosts = [
     ]
   },
   {
-    postOwner: postOwners.playhearthstone,
     username: postOwners.playhearthstone.username,
     thumbnailUrl: postOwners.playhearthstone.thumbnailUrl,
     imageUrl:

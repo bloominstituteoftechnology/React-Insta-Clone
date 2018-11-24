@@ -1,12 +1,12 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 import PropTypes from "prop-types";
 import PostContainerList from "../PostContainer/PostContainerList";
 import Header from "../Header/Header";
-import styled from "styled-components";
 import UserPosts from "../../DummyData/UserPosts";
 
 /***************************************************************************************************
- ********************************************** Styles **********************************************
+ ********************************************** Styles *********************************************
  ***************************************************************************************************/
 const DivAppContainer = styled.div`
   max-width: 1280px;
@@ -19,7 +19,7 @@ const DivAppContainer = styled.div`
 `;
 
 /***************************************************************************************************
- ********************************************* Component ********************************************
+ ********************************************* Component *******************************************
  ***************************************************************************************************/
 class PostsPage extends Component {
   constructor(props) {
@@ -140,18 +140,18 @@ class PostsPage extends Component {
     return (
       <div onClick={e => this.hideUserIconDropdown(e)}>
         <Header
-          setSearchResults={this.setSearchResults}
           user={this.state.usr}
+          setSearchResults={this.setSearchResults}
           logout={this.props.logout}
           isUserIconSelected={this.state.isHeaderUserIconSelected}
           toggleUserIconDropdown={this.toggleUserIconDropdown}
         />
         <DivAppContainer>
           <PostContainerList
-            data={this.state.data}
             addNewComment={this.addNewComment}
             handleChange={this.handleChange}
             incrementLikes={this.incrementLikes}
+            data={this.state.data}
           />
         </DivAppContainer>
       </div>
@@ -164,7 +164,8 @@ PostsPage.propTypes = {
     username: PropTypes.string,
     password: PropTypes.string,
     thumbnailUrl: PropTypes.string
-  })
+  }),
+  logout: PropTypes.func
 };
 
 export default PostsPage;

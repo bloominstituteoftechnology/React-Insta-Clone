@@ -4,11 +4,11 @@ import Login from "../Login/Login";
 import TestAccounts from "../../DummyData/UserAccounts";
 
 /***************************************************************************************************
- ********************************************* Component ********************************************
+ ********************************************* Component *******************************************
  ***************************************************************************************************/
 class Authenticate extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       users: TestAccounts,
       isUsrLoggedIn: false,
@@ -87,8 +87,8 @@ class Authenticate extends React.Component {
         <Login
           login={this.login}
           changeHandler={this.changeHandler}
-          testAccounts={TestAccounts}
           failedLogin={this.state.failedLogin}
+          testAccounts={TestAccounts}
         />
       ); // display login page
     }
