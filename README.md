@@ -1,64 +1,73 @@
-# React-Insta-Clone
+## Day III
 
-## Introduction
+### Focus (Day III)
 
-- The purpose of this project is to continue building on your knowledge of React that you have gained thus far.
+- Be able to explain and implement a React Higher Order Component to conditionally render protected content to the screen.
 
-  - Here, you'll be implementing a lot of the same concepts that you have been in previous projects, in a very similar fashion.
-  - The main difference this time around is that you'll be using the `create-react-app (CRA)` utility to generate your React project for you.
-  - Don't worry about all of the extra files that you may not understand which will be present inside your React application that you will build with CRA.
-  - The overall structure of the project remains exactly the same as what you worked with in Todo-React.
+### Daily Setup (Day III)
 
-- This project will be worked on throughout the entire week.
+- To start off today, your application should still be structured like yesterday, but now it should have a working search bar, comment input, and like icon.
+- Those aren't necessary, however, for what you will be doing today. You can still work on today's part of this project even if you aren't completely done with yesterday's portion.
 
-  - Each day as you learn new things, you will use that knowledge to build and enhance this project a little more.
-  - You will use the same repo throughout the whole week, adding more code, and changing things here and there as you learn new principles and techniques.
-  - It will be important to communicate any problems you're having to your Project Manager so that we can make sure to get you un-stuck along the way as soon as possible.
-  - The goal is to finish each day's objectives, and have a working project to start with on the next day.
-  - If you don't get the daily objectives, don't panic, some days will be easier for you than others and some days will be harder.
-  - The hope is that by the end of the week, you'll have seen a react application come to life, and you'll start to see how react works at a higher level.
+### Description (Day III)
 
-- For this project, you'll be building a simple Instagram clone using React.
-- There is a file provided called `dummy-data.js` that contains some mock data. Each object in the mock data represents a faux Instagram post.
-- Your React application will receive faux post data and render each as a separate Instagram post.
+- Today you will be building a "Higher Order Component" (HOC)
+- The HOC will not let users see the posts until they have logged in. (Our login system for this will be faked using LocalStorage).
+- The job of the HOC will be to render a login page if the user is not logged in, then render the posts after the user is logged in.
 
-## Day I
+#### Tasks (Day III)
 
-### Focus (Day I)
+- Create a `<PostsPage />` component in your `components/PostsContainer` directory.
 
-- Demonstrate the the ability to use create-react-app to boilerplate a react application
-- Describe and be able to use PropTypes to 'type check' specific data being passed down to a child component
-- Demonstrate the ability to use defaultProps in a React component
+  - You'll have to move a lot of what is rendered in `app.js` to this new component
+  - In app.js, render the `PostsPage` component.
+  - Make sure the app working as it was before since it has been re-factored now.
+  - This is to ensure that we clean up our App component a little bit before we re-factor it to be wrapped up in an HOC
 
-### Project Setup
+- Building the High Order Component
 
-- If you so choose you may install `create-react-app` globally by running `yarn global add create-react-app`.
-  - If you have CRA installed then run `create-react-app instagram` to create your starter application with the name `instagram`.
-  - If you don't have CRA installed then run `npx create-react-app instagram` to create your starter application with the name `instagram`.
-- Create a `components` directory inside the `src` directory, and then create a sub-directory called `SearchBar`, another one called `PostContainer`, and lastly one called `CommentSection`, all inside the `src` directory. Each of these directories should contain the component file as well as the CSS for their respective components. You'll also want to put any other components that coincide with your respective container components inside of these directories.
+  - Create a directory called `Authentication`
+  - Inside that directory create a component called `<Authenticate />`. This is where all of the magic sis going to happen.
+  - This component should be able to take in a component as an argument, and it will return a `class` component.
+  - Inside of `<Authenticate />'s` render method, you'll want to return the Component that gets passed into it.
+  - Be sure to export out this component.
+  - Head over to App.js and `import` in our new `Authenticate` Higher Order Component and pass in `App`.
+  - If this worked right then everything should render as it used to.
+  - Authenticate will look a lot like this when you're done setting it up.
 
-### Tasks (Day I)
+```js
+const Authenticate = App =>
+  class extends React.Component {
+    render() {
+      return <App />;
+    }
+  };
+```
 
-- There are three major container components that you'll need to implement for this project: the Search Bar, the Post Container, and the Comment Section.
-- At the end of Day I there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Post Container and a Comment Section for every piece of mock data in the `dummy-data.js` file.
-- The root App component of your application should import the dummy data from the `dummy-data.js` file with `import dummyData from './dummy-data';` and iterate over said data, passing each individual object as a prop to an instance of `PostContainer`.
-- Each `PostContainer` component will then pass the array of comments on each post object as a prop to an instance of the `CommentSection` component.
-- The `CommentSection` component will receive the array of comments as props and render a `Comment` component with the username of the poster as well as the post's text. Additionally, there should be an input box that allows users to submit a new comment for any post. We'll work on posting new comments tomorrow.
-- Be sure to check the `Types` of the data you are passing around as props in the components that will be using props to present data as DOM elements. This should be linked to your `Comment` component that `Comment Section` will render and potentially to your `Post` component that `Post Container` will render.
-- You are free to leverage the Bootstrap library for this project for the purposes of theming and styling. I recommend the awesome [reactstrap](https://reactstrap.github.io/) library, which is a library of Bootstrap components that have been implemented using React, so they're really easy to just drop straight into React projects.
-- In addition to Bootstrap for theming, you'll want to add your own styles via CSS. To keep things organized, have the CSS file that corresponds with a component live in the same directory as the component file.
+- Build out the LoginPage component. You can design it how you like
 
----
+  - In your `components` directory, create a directory called `Login` and add a new file called `Login.js`.
+  - There should be a `username` input, a `password` input, and a `Login` button.
+  - The component should invoke the `login` function in `app.js` when a user logs in.
+  - This login function should set a `username` on `localStorage`. You'll need to check local storage to see if a user is logged in.
+  - Be sure to force the page to reload when a user logs in so that our component un-mounts and mounts again.
 
-Your search bar header should look something like this:
-![search bar](/assets/ig_search_bar.png)
+- Extending the functionality of the HOC to conditionally render the `LoginPage` or the `App`
 
----
+  - Inside of `Authenticate` we need to add a constructor to hold our state data.
+  - On state we need a user `loggedIn` boolean flag.
+  - On `componentDidMount` we need to check `localStorage` to see if a user is logged in.
+  - Inside of the render function we will check `if a user is logged in`
+  - If a user is logged in we will return the `<App />`, else we will return the `<LoginPage>`
 
-Your post container should look something like this:
-![insta post](/assets/ig_post.png)
+#### Stretch Problems (Day III)
 
-### Stretch Problems (Day I)
+- Now that you have a user set in `localStorage`, go ahead and use that `username` when a user posts a comment to make it so the logged in user is the one commenting on the posts.
+- Styled-Components
 
-- Implement the ability to comment on a post with the `Add a comment...` input.
-- Use the [moment.js](https://momentjs.com/) library dynamically format the timestamp into a human-readable format like how it is being displayed in the screenshot.
+  - Watch this video about [styled-components](https://youtu.be/bIK2NwoK9xk) in its entirety.
+  - Head over to the [Styled-Components docs](https://www.styled-components.com/) and learn about the library.
+  - Once you feel like you've got a good grasp of this concept, go ahead and start converting your components into styled-components.
+  - Try and make this thing as beautiful as possible
+
+- Deploy your Instagram clone to netlify and share it in the #show-it-off channel.
