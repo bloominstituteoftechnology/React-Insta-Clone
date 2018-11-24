@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import Authenticate from "./components/Authentication/Authenticate";
 import PostsPage from "./components/PostContainer/PostsPage";
 import "./Style.css";
@@ -15,5 +16,14 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  loginUsr: PropTypes.shape({
+    username: PropTypes.string,
+    password: PropTypes.string,
+    thumbnailUrl: PropTypes.string
+  }),
+  logout: PropTypes.func
+};
 
 export default Authenticate(App);
