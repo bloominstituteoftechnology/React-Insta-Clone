@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import PostsContainer from './compoonents/PostContainer/PostsContainer';
+import PostsContainer from './components/PostContainer/PostsContainer';
 import SearchBar from './components/SearchBar/SearchBarContainer';
 
 
