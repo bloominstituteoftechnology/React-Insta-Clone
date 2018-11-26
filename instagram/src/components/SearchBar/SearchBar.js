@@ -7,8 +7,7 @@ library.add(faStroopwafel);
 
 function SearchBar(props) {
   return (
-    <input className="searchbar" type="text" placeholder={'\uf002 Search'}></input>
-    //<input className="searchbar" type="text" placeholder={<FontAwesomeIcon icon="stroopwafel" />}></input>
+    <input className="searchbar" type="text" placeholder={'\uf002 Search'} value={props.value} onKeyPress={props.onKeyPress}></input>
   );
 }
 

@@ -1,7 +1,10 @@
 import React from 'react';
-import PostCommentsContainer from './PostCommentsContainer';
-import CommentFooter from './CommentFooter';
+import CommentSection from './CommentSection';
 import Moment from 'react-moment';
+
+function handler(onClick) {
+	return () => onClick();
+}
 
 //couldnt get moment to work
 function modifyTimestamp(timestamp){
@@ -19,12 +22,11 @@ function PostFooter(props) {
   return (
     <div className="post-footer">
     	<div className="footer-icons-container">
-	    	<div className="footer-icon">{'\uf004'}</div>
-	    	<div className="footer-icon">{'\uf075'}</div>
+	    	<button className="footer-icon" onClick={handler(props.onClick)}>{'\uf004'}</button>
+	    	<button className="footer-icon">{'\uf075'}</button>
 	    </div>
     	<div className="footer-likes">{props.post.likes} likes</div>
-    	<PostCommentsContainer comments={props.post.comments}/>
-    	<CommentFooter modifiedTimestamp={modifyTimestamp(props.post.timestamp)}/>
+    	<CommentSection comments={props.post.comments} modifiedTimestamp={modifyTimestamp(props.post.timestamp)} />
     </div>
   );
 }

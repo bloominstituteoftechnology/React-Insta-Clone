@@ -245,6 +245,10 @@ h1 {
   font-size: 2rem;
   font-family: helvetica neue, FontAwesome;
   margin-right: 15px;
+  border: none;
+}
+.post-container .post-footer .footer-icons-container .footer-icon:hover {
+  cursor: pointer;
 }
 .post-container .post-footer .footer-likes {
   font-size: 1.8rem;

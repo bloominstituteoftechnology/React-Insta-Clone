@@ -16,15 +16,22 @@ function  assignIdToPost(post, index){
   return post;
 }
 
+function filterPostsFromSearchText(posts, searchTerm){
+  //filter posts
+  let filteredPosts = posts.filter(post => post.username === searchTerm);
+  return filteredPosts;
+}
+
 class App extends Component {
   constructor() {
     super();
+    this.updateSearchText = this.updateSearchText.bind(this);
     this.state = {
       loading: true,
-      dummyData: {}
+      dummyData: {},
+      searchText: ''
     };
   }
-
 
   componentDidMount() {
     this.initializeDummyData(dummyData);
@@ -38,10 +45,26 @@ class App extends Component {
     this.setState(
       { 
         posts: feedData, 
-        loading: false 
+        loading: false, 
       }
     );
   }
+
+  updateSearchText = event => {
+    console.log(event.key);
+    if(event.key === 'Enter'){
+      //filter posts by username
+      //clear search text
+      this.setState({
+        posts: filterPostsFromSearchText(this.state.posts, this.state.searchText),
+        searchText: ''
+      });
+    }else{
+      this.setState({
+        searchText: this.state.searchText + event.key
+      });
+    }
+  };
 
   render() {
     if(this.state.loading){
@@ -51,7 +74,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <NavBar />
+          <NavBar value={this.state.searchText} onKeyPress={this.updateSearchText}/>
           <FeedContainer posts={this.state.posts} />
         </header>
       </div>
@@ -60,7 +83,7 @@ class App extends Component {
 }
 
 App.propTypes = {
-  posts: PropTypes.array,
+  posts: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default App;
