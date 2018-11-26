@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
 import 'font-awesome/css/font-awesome.min.css';
+import PropTypes from 'prop-types';
 
 //i'm pretty sure the actual inta API would include a post ID in the json, 
 //but since our dummy data doesn't have one, I'll create a fake one
@@ -56,8 +57,11 @@ class App extends Component {
       </div>
     );
   }
-
 }
+
+App.propTypes = {
+  posts: PropTypes.array,
+};
 
 export default App;
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Comment from './Comment';
 import CommentFooter from './CommentFooter';
+import PropTypes from 'prop-types';
 
 function PostCommentsContainer(props) {
   return (
@@ -9,5 +10,9 @@ function PostCommentsContainer(props) {
     </div>
   );
 }
+
+PostCommentsContainer.propTypes = {
+  comment: PropTypes.object
+};
 
 export default PostCommentsContainer;
