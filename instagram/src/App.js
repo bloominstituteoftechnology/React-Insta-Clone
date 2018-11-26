@@ -2,10 +2,18 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import dummyData from './dummy-data';
 import NavBar from './components/NavBar';
-import FeedContainer from './components/PostFeed';
-//import './App.css';
+import FeedContainer from './components/FeedContainer';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
+import 'font-awesome/css/font-awesome.min.css';
 
-
+//i'm pretty sure the actual inta API would include a post ID in the json, 
+//but since our dummy data doesn't have one, I'll create a fake one
+function  assignIdToPost(post, index){
+  post.id = index;
+  return post;
+}
 
 class App extends Component {
   constructor() {
@@ -24,11 +32,11 @@ class App extends Component {
   //child component syntax
   initializeDummyData = (dummyData) => {
     
-    dummyData = dummyData.map((post, index) => post.id=index);
+    let feedData = dummyData.map((post, index) => assignIdToPost(post, index) );
 
     this.setState(
       { 
-        posts: dummyData, 
+        posts: feedData, 
         loading: false 
       }
     );

@@ -166,82 +166,83 @@ body {
 h1 {
   font-size: 4rem;
 }
-/*
-h2{
-  font-size: 1.8rem;
+.post-container {
   width: 100%;
-  background-color: lightgrey;
-  border-radius: 8px;
+  height: auto;
+  border: 1px solid rgba(219, 219, 219);
+  border-radius: 3px;
+  margin: 20px 0;
+}
+.post-container .post-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.post-container .post-header .profile-image {
+  border-radius: 50%;
+  border: 1px solid rgba(219, 219, 219);
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+.post-container .post-header .profile-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.post-container .post-image {
+  width: 100%;
+}
+.post-container .post-footer {
+  padding: 15px 30px;
+}
+.post-container .post-footer .footer-icons-container {
+  display: flex;
   margin-bottom: 10px;
 }
-
-.card-container{
-
-  width: 100%;
-  border: 1px solid grey;
-  border-radius: 15px;
-  margin: 40px 0;
-  padding: 10px;
-
-  .header {
-    //char name
-    font-size: 3rem;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .bio-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-
-    p{
-      width: 50%;
-      font-size: 1.6rem;
-      text-align: left;
-      margin-top: 5px;
-    }
-  }
-
-  .xenobiology-container {
-    width: 100%;
-    margin-bottom: 20px;
-    div{
-      font-size: 1.6rem;
-      margin-top: 10px
-    }
-  }
-
-  .starships-container{
-    width: 100%;
-    margin-bottom: 20px;
-    div{
-      font-size: 1.6rem;
-      margin-top: 10px
-    }
-  }
-  
-  .vechiles-container{
-    width: 100%;
-    margin-bottom: 20px;
-    div{
-      font-size: 1.6rem;
-      margin-top: 10px
-    }
-  }
-        
-  .films-container{
-    width: 100%;
-    div{
-      font-size: 1.6rem;
-      margin-top: 10px
-    }
-  }
+.post-container .post-footer .footer-icons-container .footer-icon {
+  font-size: 2rem;
+  font-family: helvetica neue, FontAwesome;
+  margin-right: 15px;
 }
-*/
+.post-container .post-footer .footer-likes {
+  font-size: 1.8rem;
+}
+.post-container .post-footer .post-comments-container .comment {
+  margin-top: 15px;
+  display: flex;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+.post-container .post-footer .post-comments-container .comment .comment-source {
+  font-weight: bold;
+  margin-right: 4px;
+}
+.post-container .post-footer .time-since-post {
+  border-bottom: 1px solid rgba(219, 219, 219);
+  color: #999999;
+  font-size: 1.2rem;
+  margin: 15px 0;
+  font-family: helvetica neue, FontAwesome;
+  padding-bottom: 5px;
+}
+.post-container .post-footer .add-comment-more-options-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.post-container .post-footer .add-comment-more-options-container .comment-input-box {
+  border: none;
+  height: 40px;
+  width: 98%;
+  font-size: 1.6rem;
+}
+.post-container .post-footer .add-comment-more-options-container .more-options-icon {
+  font-family: helvetica neue, FontAwesome;
+  font-size: 2.6rem;
+  width: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /*
 
  .character-container{
@@ -250,6 +251,10 @@ h2{
 }
 
 */
+.feed-container {
+  width: 100%;
+  padding: 0 5%;
+}
 .navbar {
   height: 75px;
   background: white;

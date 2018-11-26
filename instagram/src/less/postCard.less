@@ -1,76 +1,99 @@
-/*
-h2{
-  font-size: 1.8rem;
+.post-container {
   width: 100%;
-  background-color: lightgrey;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
+  height: auto;
+  border: 1px solid rgba(219, 219, 219);
+  border-radius: 3px;
+  margin: 20px 0;
 
-.card-container{
-
-  width: 100%;
-  border: 1px solid grey;
-  border-radius: 15px;
-  margin: 40px 0;
-  padding: 10px;
-
-  .header {
-    //char name
-    font-size: 3rem;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .bio-container {
-    width: 100%;
+  .post-header {
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    align-items: center;
 
-    p{
-      width: 50%;
-      font-size: 1.6rem;
-      text-align: left;
-      margin-top: 5px;
+    .profile-image {
+      border-radius: 50%;
+      border: 1px solid rgba(219, 219, 219);
+      width: 30px;
+      height: 30px;
+      margin: 10px;
     }
-  }
 
-  .xenobiology-container {
-    width: 100%;
-    margin-bottom: 20px;
-    div{
-      font-size: 1.6rem;
-      margin-top: 10px
+    .profile-name {
+      font-weight: bold;
+      font-size: 1.5rem;
     }
   }
 
-  .starships-container{
+  .post-image {
     width: 100%;
-    margin-bottom: 20px;
-    div{
-      font-size: 1.6rem;
-      margin-top: 10px
-    }
   }
-  
-  .vechiles-container{
-    width: 100%;
-    margin-bottom: 20px;
-    div{
-      font-size: 1.6rem;
-      margin-top: 10px
+
+  .post-footer {
+    padding: 15px 30px;
+
+    .footer-icons-container {
+      display: flex;
+      margin-bottom: 10px;
+
+      .footer-icon {
+        font-size: 2rem;
+        font-family: helvetica neue, FontAwesome;
+        margin-right: 15px;
+      }
     }
-  }
-        
-  .films-container{
-    width: 100%;
-    div{
-      font-size: 1.6rem;
-      margin-top: 10px
+
+    .footer-likes {
+      font-size: 1.8rem;
     }
+
+    .post-comments-container {
+
+      .comment{
+        margin-top: 15px;
+        display: flex;
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+
+        .comment-source{
+          font-weight: bold;
+          margin-right: 4px;
+        }
+
+        .comment-text{
+        }
+      }
+    }
+
+    .time-since-post {
+      border-bottom: 1px solid rgba(219, 219, 219);
+      color: rgba(153, 153, 153, 1);
+      font-size: 1.2rem;
+      margin: 15px 0;
+      font-family: helvetica neue, FontAwesome;
+      padding-bottom: 5px;
+    }
+
+    .add-comment-more-options-container { 
+      display: flex;
+      justify-content: flex-start;
+
+      .comment-input-box {
+        border: none;
+        height: 40px;
+        width: 98%;
+        font-size: 1.6rem;
+      }
+
+      .more-options-icon {
+        font-family: helvetica neue, FontAwesome;
+        font-size: 2.6rem;
+        width: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
   }
 }
-*/
+
