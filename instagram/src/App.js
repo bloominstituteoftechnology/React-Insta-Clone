@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import authenticate from './components/Authentication/Authenticate';
 import logo from './logo.svg';
 import dummyData from './dummy-data';
 import NavBar from './components/NavBar';
-import FeedContainer from './components/FeedContainer';
+import PostsPage from './components/PostContainer/PostsPage';
+import LoginPage from './components/Login/LoginPage';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
@@ -75,7 +77,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <NavBar value={this.state.searchText} onKeyPress={this.updateSearchText}/>
-          <FeedContainer posts={this.state.posts} />
+          <PostsPage posts={this.state.posts} />
         </header>
       </div>
     );
@@ -86,7 +88,7 @@ App.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.object),
 };
 
-export default App;
+export default authenticate(App);
 
 /*
   username: "philzcoffee",

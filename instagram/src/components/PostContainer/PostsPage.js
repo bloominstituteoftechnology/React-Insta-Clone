@@ -1,8 +1,8 @@
 import React from 'react';
-import PostCard from './PostContainer/PostCard';
+import PostCard from './PostCard';
 import PropTypes from 'prop-types';
 
-function FeedContainer(props) {
+function PostsPage(props) {
   return (
     <div className="feed-container">
     	{props.posts.map(post => <PostCard key={post.id} post={post} />)}
@@ -10,9 +10,9 @@ function FeedContainer(props) {
   );
 }
 
-FeedContainer.propTypes = {
+PostsPage.propTypes = {
   post: PropTypes.object
 };
 
 
-export default FeedContainer;
+export default PostsPage;
