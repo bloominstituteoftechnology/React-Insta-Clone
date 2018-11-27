@@ -1,0 +1,23 @@
+ .post-container {
+     margin-left: 50px;
+ }
+ 
+ .post-header {
+    display: flex;
+    margin-top: 50px;
+    height: 50px;
+    padding-top: 15px;
+    width: 640px;
+    border: 1px solid #E6E6E6;
+    background-color: #FFFFFF;
+  }
+  .post-thumb {
+    height: 60%;
+    border-radius: 60%;
+    margin-right: 5px;
+  }
+
+  .post-image-wrapper {
+    margin-top: 0px;
+      display: flex;
+  }

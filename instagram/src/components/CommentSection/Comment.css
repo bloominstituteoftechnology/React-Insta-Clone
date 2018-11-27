@@ -1,0 +1,25 @@
+.comment-container {
+    border: 1px solid #E6E6E6;
+    background-color: #FFFFFF;
+    width: 640px;
+}
+
+.comment-text {
+    padding: 3px;
+    display: flex;
+  }
+  
+  .comment {
+    font-size: 13px;
+  }
+  
+  .user {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  form {
+      display: flex;
+      border-top: 1px solid #E6E6E6;
+      outline: none;
+  }
