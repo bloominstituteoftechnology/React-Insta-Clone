@@ -7,8 +7,9 @@ const PostsHeader = props => {
         <div className='img-wrap'>
             <img 
             className='post-img'
-            src={props.thumbnailUrl}
             alt='Header for the post'
+            src={props.thumbnailUrl}
+            
             />
         </div>
         Posts Header here

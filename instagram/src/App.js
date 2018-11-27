@@ -19,7 +19,7 @@ class App extends Component {
         My instagram clone
         <SearchBar />
         <PostContainer posts={this.state.posts} />
-        <CommentSection />        
+                
       </div>
     );
   }
