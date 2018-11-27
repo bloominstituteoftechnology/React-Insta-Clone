@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import './Comments.css';
 
-class Comments extends React.Component{
-  //iterates over comments in dummy-data
-  // If characters exceed a certain amount encase in a more expand button
-  // find a date function for last updated
+const Comments = props => {
+  return(
+    <div className='text'>
+      <h2 className='user'>{props.comment.username}</h2>
+      <p className='comment'>{props.comment.text}</p>
+    </div>
+  )
 }
+
+Comments.propTypes = {
+  commentP: PropTypes.shape({
+    username: PropTypes.string,
+    text: PropTypes.string
+  })
+};
+
+export default Comments;
