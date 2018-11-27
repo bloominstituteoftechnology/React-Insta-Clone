@@ -1,3 +1,7 @@
 .search-bar {
     background-color: lightgoldenrodyellow; 
+    display: flex;
+}
+.search-input {
+    
 }
