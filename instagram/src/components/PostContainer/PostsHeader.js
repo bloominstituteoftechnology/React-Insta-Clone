@@ -11,8 +11,7 @@ const PostsHeader = props => {
             src={props.thumbnailUrl}
             
             />
-        </div>
-        Posts Header here
+        </div>        
         <div>{props.username}</div>
     </div>  
     );

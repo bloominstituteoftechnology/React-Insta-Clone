@@ -13,8 +13,7 @@ class CommentSection extends React.Component {
     }
     render() {
         return (
-            <div className='comment-section'>
-            This is the comment section all hooked up
+            <div className='comment-section'>           
             {this.state.comments.map((c, i) => <Comment comment={c} key={i}  />)}
             <Input />
             </div>

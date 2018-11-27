@@ -15,8 +15,7 @@ class App extends Component {
   }
   render() {    
     return (
-      <div className="App">
-        My instagram clone
+      <div className="App">        
         <SearchBar />
         <PostContainer posts={this.state.posts} />                
       </div>

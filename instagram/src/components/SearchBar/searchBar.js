@@ -17,8 +17,6 @@ const SearchBar = props => {
             <div className='social'>
                 <i className='fa fa-user-circle' />
             </div>
-
-        This is the search bar
         </div>
     );
 }

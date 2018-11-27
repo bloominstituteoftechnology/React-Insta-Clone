@@ -7,10 +7,8 @@ import './PostContainer.css'
 
 const PostContainer = props => {
     return (
-        <div className='post-container'>
-        This is the PostContainer
-        <PostsHeader />
-        
+        <div className='post-container'>        
+        <PostsHeader />        
         {props.posts.map(p =>
             <Post key={p.imageUrl} post={p} /> )}
         </div>
