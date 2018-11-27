@@ -1,4 +1,4 @@
-import React, { Component  } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Comment from './Comment';
 import Input from "./Input";
@@ -21,7 +21,7 @@ class CommentSection extends React.Component {
     }
 }
 
-CommentSection.PropTypes = {
+CommentSection.propTypes = {
     comments: PropTypes.arrayOf(
         PropTypes.shape({text: PropTypes.string, username: PropTypes.string})
     )

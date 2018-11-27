@@ -12,6 +12,7 @@ const Post = props => {
             />
             <img className='post-image'
             src={props.post.imageUrl}
+            alt=''
             />
             <CommentSection comments={props.post.comments} />        
         </div>

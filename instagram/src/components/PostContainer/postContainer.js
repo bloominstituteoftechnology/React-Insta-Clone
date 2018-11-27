@@ -1,5 +1,5 @@
 import React from "react";
-import PostsHeader from "./PostsHeader";
+
 import Post from "./Post";
 import './PostContainer.css'
 
@@ -7,8 +7,8 @@ import './PostContainer.css'
 
 const PostContainer = props => {
     return (
-        <div className='post-container'>        
-        <PostsHeader />        
+        <div className='post-container'> 
+               
         {props.posts.map(p =>
             <Post key={p.imageUrl} post={p} /> )}
         </div>
