@@ -1,0 +1,15 @@
+.text{
+  text-align: left;
+  padding: 0.2rem;
+  margin-left: 0.2rem;
+}
+
+.text .username{
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.text .comment{
+  font-weight: 600;
+  font-size: 0.7rem;
+}

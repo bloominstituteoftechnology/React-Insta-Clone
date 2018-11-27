@@ -9,7 +9,7 @@ const PostHeader = props => {
           src={props.thumbnailUrl}
         />
       </div>
-      <div>{props.username}</div>
+      <div className='username'>{props.username}</div>
     </div>
   )
 }

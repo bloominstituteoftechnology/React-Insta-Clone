@@ -1,0 +1,36 @@
+.p-container{
+  height: 500px;
+  width: 50%;
+  margin: 5px auto;
+
+}
+
+.p-border{
+  border: 1px solid lightgrey;
+  margin: 5px 0;
+}
+
+.p-header{
+  display: flex;
+}
+.username{
+  margin-top: 0.8rem;
+}
+.p-simg-container{
+  height: 2rem;
+  width: 2rem;
+  padding: 0.6rem 1rem;
+}
+.p-simg{
+  height: 100%;
+  border-radius: 50%;
+}
+
+.p-image-container{
+  height: 100%;
+
+}
+
+.p-image{
+  width: 100%;
+}
