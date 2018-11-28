@@ -6,6 +6,16 @@
     justify-content: space-between;
     background: #ffffff;
   }
+
+  .search-bar input {
+    border: 1px solid #DBDBDB;
+    background-color: #FAFAFA;
+    outline: none;
+    border-radius: 5%;
+    width: 200px;
+    height: 25px;
+    text-align: center;
+  }
   
   .search-img {
     height: 50px;

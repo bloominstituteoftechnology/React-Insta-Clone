@@ -10,7 +10,7 @@ const SearchBarContainer = () => {
         <img alt="instagram logo" src={IGLogo} className="logo-image" />
       </div>
       <div>
-        <input type="text" placeholder="Search..." />
+        <input type="text" placeholder="Search" />
       </div>
       <div className="social-wrapper">
         <div className="social">
