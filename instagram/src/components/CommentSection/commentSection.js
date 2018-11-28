@@ -23,21 +23,40 @@ class CommentSection extends React.Component {
             this.setComments();
         }
     }
+
     componentWillUnmount() {
         this.setComments();
     }
+
     setComments = () => {
         localStorage.setItem(
             this.props.idPost,
             JSON.stringify(this.state.comments)
         );
     }
-    
+
+    handleComment = event => {
+        this.setState({comment: event.target.value});
+    }
+
+    handleSubmit = event => {
+        event.preventDefault();
+        const addComment = {text: this.state.comment, username: ''};
+        const comments = this.state.comments.slice();
+        comments.push(addComment);
+        this.setState({comments, comment:''});
+
+    }
+
     render() {
         return (
             <div className='comment-section'>           
-            {this.state.comments.map((c, i) => <Comment comment={c} key={i}  />)}
-            <Input />
+                {this.state.comments.map((c, i) => <Comment comment={c} key={i}  />)}
+            <Input
+                comment={this.state.comment}
+                handleSubmit={this.handleSubmit}
+                handleComment={this.handleComment} 
+            />
             </div>
         );
     }
