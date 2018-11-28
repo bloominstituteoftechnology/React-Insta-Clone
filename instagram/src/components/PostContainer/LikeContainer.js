@@ -3,10 +3,11 @@ import React from "react";
 const LikeContainer = props => {
     return (
         <React.Fragment>
-            <div className='like-container'
-                key='likes-icons-container'
-                onClick={props.addLike}>
-                <div className='like-container-wrap'>
+            <div className='like-container'>
+                <div className='like-container-wrap'
+                    key='likes-icons-container'
+                    onClick={props.addLike}
+                >
                     <i className='fa fa-heart' />
                 </div>
                 <div className='like-container-wrap'>
