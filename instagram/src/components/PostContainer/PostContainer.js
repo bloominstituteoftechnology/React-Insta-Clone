@@ -1,18 +1,24 @@
-import React from 'react';
-import './InstaPost.css';
+import React from "react";
+import "./Posts.css";
 
-import Comments from './Comments';
+import PostHeader from "./PostHeader";
+import PostContent from "./PostContent";
+import Comments from "../CommentsSection/Comments";
 
-const PostContainer = () => {
+const PostContainer = props => {
   return (
     <div className="post-container">
-      <div>
-
-      </div>
-      <p></p>
-      <Comments />
+      {props.posts.map(x => {
+        return (
+          <div>
+            <PostHeader username={x.username} thumbnailUrl={x.thumbnailUrl} />
+            <PostContent imageUrl={x.imageUrl} />
+            <Comments comments={x.comments} />
+          </div>
+        );
+      })}
     </div>
-  )
-}
+  );
+};
 
 export default PostContainer;
