@@ -37,7 +37,7 @@ class Post extends React.Component {
                 />
                 <CommentSection
                     comments={this.props.post.comments}
-                    id={this.props.post.imageUrl}
+                    idPost={this.props.post.imageUrl}
                 />        
             </div>
         );

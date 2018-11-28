@@ -14,8 +14,25 @@ class CommentSection extends React.Component {
     }
 
     componentDidMount() {
-        
+        const id = this.props.idPost;
+        if (localStorage.getItem(id)) {
+            this.setState({
+                comments: JSON.parse(localStorage.getItem(this.props.idPost))
+            });
+         } else {
+            this.setComments();
+        }
     }
+    componentWillUnmount() {
+        this.setComments();
+    }
+    setComments = () => {
+        localStorage.setItem(
+            this.props.idPost,
+            JSON.stringify(this.state.comments)
+        );
+    }
+    
     render() {
         return (
             <div className='comment-section'>           
