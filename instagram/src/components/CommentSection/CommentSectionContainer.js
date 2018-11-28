@@ -7,16 +7,53 @@ class CommentSectionContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.comments
+      comments: props.comments,
+      likes: 373,
+      comment: ''
     };
   }
+
+  count = () => {
+    const addLike = this.state.likes + 1;
+
+    this.setState({
+      likes: addLike
+    })
+  }
+
+  commentHandle = ev => {
+    this.setState({ 
+      comment: ev.target.value 
+    });
+  };
+
+  commentSubmit = ev => {
+    ev.preventDefault();
+    const addComment = { 
+      text: this.state.comment, 
+      username: 'josepheastman' 
+    };
+    const comments = this.state.comments.slice();
+    comments.push(addComment);
+    this.setState({ 
+      comments, 
+      comment: '' 
+    });
+  };
+
   render() {
     return (
       <div className='comment-container'>
+      <i onClick={this.count} class='far fa-heart' id='ig-heart'/>
+      <p>{this.state.likes}</p>
         {this.state.comments.map((c, i) => (
           <Comment key={i} comment={c} />
         ))}
-        <CommentInput />
+        <CommentInput
+        comment={this.state.comment}
+        submitComment={this.commentSubmit}
+        changeComment={this.commentHandle}
+        />
       </div>
     );
   }
@@ -24,7 +61,10 @@ class CommentSectionContainer extends React.Component {
 
 CommentSectionContainer.propTypes = {
   comments: PropTypes.arrayOf(
-    PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
+    PropTypes.shape({ 
+      text: PropTypes.string, 
+      username: PropTypes.string 
+    })
   )
 };
 
