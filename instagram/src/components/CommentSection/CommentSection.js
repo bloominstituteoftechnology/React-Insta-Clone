@@ -1,6 +1,8 @@
 import React from 'react';
 import Comment from './Comment'
 import CommentEntry from './CommentEntry'
+import Timestamp from './Timestamp'
+import {WrapperDiv} from '../Styles'
 
 
 class CommentSection extends React.Component {

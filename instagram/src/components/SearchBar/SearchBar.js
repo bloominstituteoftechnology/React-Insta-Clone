@@ -1,4 +1,11 @@
 import React from "react";
+import CameraIcon from "../Icons/CameraIcon";
+import CompassIcon from "../Icons/CompassIcon";
+import HeartIcon from "../Icons/HeartIcon";
+import SearchIcon from "../Icons/SearchIcon";
+import UserIcon from "../Icons/UserIcon";
+import LogoType from "../Icons/LogoType";
+import { WrapperDiv, StyledInput, ContainerDiv } from "../Styles";
 
 import PropTypes from "prop-types";
 

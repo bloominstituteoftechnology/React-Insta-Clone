@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import CommentIcon from '../Icons/CommentIcon'
+import HeartIcon from '../Icons/HeartIcon'
 import CommentSection from '../CommentSection/CommentSection';
 import { WrapperDiv, StyledImage, StyledParagraph, ContainerDiv } from '../Styles'
 
