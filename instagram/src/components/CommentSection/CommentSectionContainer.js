@@ -12,12 +12,47 @@ class CommentSection extends React.Component {
     };
   }
 
-componentDidMount () {
+  componentDidMount() {
+   const id = this.props.postId;
+    if (localStorage.getItem(id)) {
+     this.setState({
+        comments: JSON.parse(localStorage.getItem(this.props.postId))
+      });
+    } else {
+     this.setComments();
+    }
+  }
 
+componentDidUpdate() {
+  localStorage.setItem(
+    this.props.postId,
+    JSON.stringify(this.state.comments)
+   );
+  
 }
 
 componentWillUnmount() {
-  
+  // this.setComments();
+}
+
+setComments = () => {
+  localStorage.setItem(
+   this.props.postId,
+   JSON.stringify(this.state.comments)
+  );
+};
+
+commentHandler = elem => {
+  this.setState({ comment:elem.target.value });
+}
+
+commentSubmitHandler = elem => {
+  elem.preventDefault();
+  const addNewComment = {text: this.state.comment, username: 'Interent Rando'}
+  const comments=this.state.comments.slice();
+  comments.push(addNewComment);
+  this.setState({comments, comment: ' '})
+
 }
 
  // addComment = comment => {
@@ -30,7 +65,11 @@ componentWillUnmount() {
     return (
       <div>
         {this.state.comments.map((comments, input) => <Comment key={input} comment={comments} />)}
-        <CommentInput />
+        <CommentInput
+          comment={this.state.comment}
+          submitAComment={this.commentSubmitHandler}
+          changeAComment={this.commentHandler}
+         />
       </div>
     );
   }
