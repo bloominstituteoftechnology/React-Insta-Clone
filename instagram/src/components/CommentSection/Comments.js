@@ -1,12 +1,19 @@
-import React from 'react';
-import './InstaPost.css';
+import React from "react";
+import "./Comments.css";
 
 const Comments = props => {
   return (
     <div className="comments">
-      <p></p>
+      {props.comments.map(x => {
+        return (
+          <div>
+            <p>{x.username}</p>
+            <p>{x.text}</p>
+          </div>
+        );
+      })}
     </div>
-  )
-}
+  );
+};
 
 export default Comments;
