@@ -4,20 +4,36 @@ import PostsHeader from "./PostsHeader";
 import LikeContainer from "./LikeContainer";
 import './Post.css';
 
-const Post = props => {
-    return (
-        <div className='post'>
-            <PostsHeader
-            username={props.post.username}
-            thumbnailUrl={props.post.thumbnailUrl}
-            />
-            <img className='post-image'
-            src={props.post.imageUrl}
-            alt=''
-            />
-            <CommentSection comments={props.post.comments} />        
-        </div>
-    );
+class Post extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            likes: props.post.likes
+        };
+    }
+    addLike = () => {
+        const newLike = this.state.likes +1;
+        this.setState({
+            likes: newLike
+        });
+    };
+
+
+    render() {
+        return (
+            <div className='post'>
+                <PostsHeader
+                username={this.props.post.username}
+                thumbnailUrl={this.props.post.thumbnailUrl}
+                />
+                <img className='post-image'
+                src={this.props.post.imageUrl}
+                alt=''
+                />
+                <CommentSection comments={this.props.post.comments} />        
+            </div>
+        );
+        }    
 }
 
 export default Post;

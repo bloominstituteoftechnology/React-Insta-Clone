@@ -5,7 +5,7 @@ const LikeContainer = props => {
         <React.Fragment>
             <div className='like-container'
                 key='likes-icons-container'
-                onClick={props.incrementLike}>
+                onClick={props.addLike}>
                 <div className='like-container-wrap'>
                     <i className='fa fa-heart' />
                 </div>
