@@ -16,13 +16,13 @@ class CommentContainer extends React.Component {
     const id = this.props.ID;
     if(localStorage.getItem(id)) {
       this.setState({
-        comments: JSON.parse(localStorage.getItem(id))
+        comments: JSON.parse(localStorage.getItem(this.props.ID))
       });
     } else {
       this.storeComments();
     }
   }
-  
+
   componentWillUnmount(){
     this.storeComments();
   }
