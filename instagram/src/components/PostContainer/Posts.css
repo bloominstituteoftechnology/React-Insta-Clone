@@ -28,9 +28,22 @@
 
 .p-image-container{
   height: 100%;
-
 }
 
 .p-image{
   width: 100%;
+}
+
+.like-icon-container{
+  display: flex;
+  flex-flow: row nowrap;
+  border: 1px solid orange;
+  padding-left: 0.7rem;
+  margin-bottom: 0.2rem;
+}
+
+.icon{
+  font-size: 1.5rem;
+  margin-right: 0.7rem;
+  cursor: pointer;
 }
