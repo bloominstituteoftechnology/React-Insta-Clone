@@ -1,14 +1,16 @@
 import React from 'react';
 import './SearchBar.css'
 
-const SearchBar = () => {
+
+//anonymous function changed to prop, added props and function to input
+const SearchBar = props=> {
     return (
         <div className="search-bar-wrap">
           <div className="img-wrap">
             <i className="fa fa-instagram" />
             </div>
           <div>
-            <input type ="text" placeholder="Search" />
+            <input type ="text" placeholder="Search" onChange={props.searchedPosts} />
             </div>
           <div className="social-icons-wrapper">
           <div className="social-icon">
