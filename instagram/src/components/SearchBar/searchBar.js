@@ -6,7 +6,7 @@ const SearchBar = props => {
     return (
         <div className='search-bar'>
             <div className='search-input'>
-                <input type='text' placeholder='What are you looking for...'  />
+                <input type='text' placeholder='What are you looking for...' onKeyDown={props.searchPosts}  />
             </div>
             <div className='social'>
                 <i className='fa fa-compass' />
