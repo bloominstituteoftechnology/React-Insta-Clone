@@ -6,7 +6,9 @@ import Comments from './Comments';
 const PostContainer = () => {
   return (
     <div className="post-container">
+      <div>
 
+      </div>
       <p></p>
       <Comments />
     </div>
