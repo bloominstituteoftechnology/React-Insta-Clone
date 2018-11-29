@@ -3,7 +3,7 @@ import "./Posts.css";
 
 import PostHeader from "./PostHeader";
 import PostContent from "./PostContent";
-import Comments from "../CommentsSection/Comments";
+import Comments from "../CommentSection/Comments";
 
 const PostContainer = props => {
   return (

@@ -4,7 +4,7 @@ import "./Posts.css";
 const PostContent = props => {
   return (
     <div>
-      <img src={props.imageUrl} />
+      <img src={props.imageUrl} alt=""/>
     </div>
   );
 };
