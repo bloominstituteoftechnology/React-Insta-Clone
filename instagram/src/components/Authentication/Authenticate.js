@@ -4,7 +4,7 @@ import Login from '../Login/Login.js'
   class extends Component {
     constructor(props){
       super(props);
-      this.localStorageKey = 'login-record';
+      this.localStorageKey = 'manage-login';
       this.state = {
         loggedIn: false,
         username: null,
@@ -13,39 +13,39 @@ import Login from '../Login/Login.js'
          login = (username, password) => {
 
           
-         let newLogin;
+         let createLogin;
       let logins = JSON.parse(
         window.localStorage.getItem(this.localStorageKey)
       );
       if (logins) {
-        let login = logins.find(pair => pair.username === username);
-        if (login) {
-          if (password === login.password) {
-            this.setState({ loggedIn: true, username: login.username });
+        let newLog = logins.find(combo => combo.username === username);
+        if (newLog) {
+          if (password === newLog.password) {
+            this.setState({ loggedIn: true, username: newLog.username });
             return;
           } else {
             alert("Aw snap :( Wrong password. Try again.");
             return;
           }
         } else {
-          newLogin = logins.slice();
-          newLogin.push({ username, password });
+          createLogin = logins.slice();
+          createLogin.push({ username, password });
         }
       } else {
-          newLogin = [{ username, password }];
+          createLogin = [{ username, password }];
       }
       window.localStorage.setItem(
         this.localStorageKey,
-        JSON.stringify(newLogin)
+        JSON.stringify(createLogin)
       );
-      alert("Welcome!");
+      alert("Welcome to Insta-Clone!");
       this.setState({ loggedIn: true, username });
     };
     render() {
       if (this.state.loggedIn){
         return <App username={this.state.username} />;
       } else {
-        return <Login login={this.login} />;
+        return <Login newLog={this.newLog} />;
       }
   }
 }

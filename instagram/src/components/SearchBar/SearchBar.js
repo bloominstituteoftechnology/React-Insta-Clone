@@ -1,11 +1,11 @@
 import React from "react";
-import CameraIcon from "../Icons/CameraIcon";
-import CompassIcon from "../Icons/CompassIcon";
-import HeartIcon from "../Icons/HeartIcon";
-import SearchIcon from "../Icons/SearchIcon";
-import UserIcon from "../Icons/UserIcon";
-import LogoType from "../Icons/LogoType";
-import { WrapperDiv, StyledInput, ContainerDiv } from "../Styles";
+import CameraImg from "../Imgs/CameraImg";
+import CompassImg from "../Imgs/CompassImg";
+import HeartImg from "../Imgs/HeartImg";
+import SearchImg from "../Imgs/SearchImg";
+import UserImg from "../Imgs/UserImg";
+import LogoType from "../Imgs/LogoImg";
+import {WrapperDiv, InputStyles, ContainerDiv} from "../Styles";
 
 import PropTypes from "prop-types";
 
@@ -14,12 +14,12 @@ const SearchBar = props => {
   return (
     <WrapperDiv searchBar>
       <ContainerDiv logo className='logo'>
-        <CameraIcon />
+        <CameraImg />
         <LogoType />
       </ContainerDiv>
       <ContainerDiv search>
-        <SearchIcon />
-        <StyledInput
+        <SearchImg />
+        <InputStyles
           type="text"
           name="search"
           value={props.input}
@@ -27,10 +27,10 @@ const SearchBar = props => {
           placeholder="Search"
         />
       </ContainerDiv>
-      <ContainerDiv icons>
-        <CompassIcon />
-        <HeartIcon />
-        <UserIcon />
+      <ContainerDiv Imgs>
+        <CompassImg />
+        <HeartImg />
+        <UserImg />
       </ContainerDiv>
     </WrapperDiv>
   );

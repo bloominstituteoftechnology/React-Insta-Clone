@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import LogoType from '../Icons/LogoType'
-import {WrapperDiv, StyledInput, StyledForm, StyledButton} from '../Styles'
+import LogoType from '../Imgs/LogoImg'
+import {WrapperDiv, InputStyles, FormStyles, ButtonStyles} from '../Styles'
 
  class Login extends Component {
   constructor(props){
@@ -10,19 +10,19 @@ import {WrapperDiv, StyledInput, StyledForm, StyledButton} from '../Styles'
       password: '',
     })
   }
-   handleChange = event => {
+   handleChange = event=> {
     this.setState({
       [event.target.name]: event.target.value
     })
   }
-   handleLogin = event => {
+   handleLogin = event=> {
     event.preventDefault();
     if (this.state.username.length === 0){
-      alert('You must provide a username');
+      alert('Please provide a username');
       return;
     } else {
       if (this.state.password.length === 0){
-        alert('You must provide a password');
+        alert('Please provide a password');
         return;
       }
     }
@@ -36,21 +36,21 @@ import {WrapperDiv, StyledInput, StyledForm, StyledButton} from '../Styles'
     return(
       <WrapperDiv login className='login'>
         <LogoType login />
-        <StyledForm login onSubmit={this.handleLogin}>
-          <StyledInput
+        <FormStyles login onSubmit={this.handleLogin}>
+          <InputStyles
             name='username'
             type='text'
             placeholder='Username'
             value={this.state.username}
             onChange={this.handleChange}/>
-            <StyledInput
+            <InputStyles
               name='password'
               type='text'
               placeholder='Password'
               value={this.state.password}
               onChange={this.handleChange}/>
-            <StyledButton login>Login</StyledButton>
-        </StyledForm>
+            <ButtonStyles login>Login</ButtonStyles>
+        </FormStyles>
       </WrapperDiv>
     )
   }

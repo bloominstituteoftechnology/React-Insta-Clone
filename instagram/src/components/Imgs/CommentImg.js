@@ -4,11 +4,11 @@ import styled from 'styled-components'
 
 
 
-const CommentIcon = styled(MessageCircle)`
+const Comment = styled(MessageCircle)`
   width: 25px;
   height: 25px;
   cursor: pointer;
   transform: rotateY(180deg);
 `
 
-export default CommentIcon;
+export default Comment;

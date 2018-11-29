@@ -17,8 +17,8 @@ class PostsPage extends Component {
     this.setState({ dummyData: dummyData});
   }
 
-  handleSearch = event => {
-    this.setState({[event.target.name]: event.target.value})
+  handleSearch = searchEvent => {
+    this.setState({[searchEvent.target.name]: searchEvent.target.value})
   }
 
   render() {

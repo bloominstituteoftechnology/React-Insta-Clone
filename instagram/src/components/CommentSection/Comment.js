@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {StyledParagraph} from '../Styles'
+import {ParagraphStyles} from '../Styles'
 
 
 
 const Comment = props => {
   return (
-    <StyledParagraph comment ><strong>{props.comment.username}</strong> {props.comment.text}</StyledParagraph>
+    <ParagraphStyles comment ><strong>{props.comment.username}</strong> {props.comment.text}</ParagraphStyles>
   )
 }
 

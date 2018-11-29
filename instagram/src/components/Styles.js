@@ -15,7 +15,6 @@ export const WrapperDiv = styled.div `
     margin: 0;
     width: 100%;
     display: flex;
-    // flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -74,7 +73,7 @@ export const ContainerDiv = styled.div `
       color: #999999;` : null)}
 `;
 
-export const StyledInput = styled.input `
+export const InputStyles = styled.input `
   :focus{
     outline: none;
   }
@@ -109,7 +108,7 @@ export const StyledInput = styled.input `
   : null)}
 `;
 
-export const StyledButton = styled.button `
+export const ButtonStyles = styled.button `
   ${props => (props.login ? `
     border-radius: 3px;
     border: none;
@@ -123,7 +122,7 @@ export const StyledButton = styled.button `
   : null)}
 `;
 
-export const StyledParagraph = styled.p `
+export const ParagraphStyles = styled.p `
   ${props => (props.likes ? `
     margin: 1% 2%;
     font-size: 1.4rem;` : null)}
@@ -135,7 +134,7 @@ export const StyledParagraph = styled.p `
   : null)}
 `;
 
-export const StyledImage = styled.img `
+export const ImageStyles = styled.img `
   ${props => (props.post ? `
     width: 500px;`
   : null)}
@@ -147,7 +146,7 @@ export const StyledImage = styled.img `
   : null)}
 `;
 
-export const StyledForm = styled.form `
+export const FormStyles = styled.form `
   ${props => (props.login ? `
     width: 90%;
     display: flex;

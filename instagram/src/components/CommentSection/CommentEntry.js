@@ -1,15 +1,15 @@
 import React from 'react';
-import { StyledInput } from '../Styles'
+import { InputStyles } from '../Styles'
 
 const CommentEntry = props => {
 
     return (
-      <form className='comment-form' onSubmit={props.addNewComment}>
-        <StyledInput
+      <form className='add-comment' onSubmit={props.addNewComment}>
+        <InputStyles
           comment={true}
           type='text'
           name='newComment'
-          placeholder='Add a comment...' onChange={props.handleCommentChange} value={props.newComment}
+          placeholder='Add a comment...' onChange={props.handleChange} value={props.newComment}
 />
       </form>
 

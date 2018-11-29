@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import CommentIcon from '../Icons/CommentIcon'
-import HeartIcon from '../Icons/HeartIcon'
+import HeartImg from '../Imgs/HeartImg'
 import CommentSection from '../CommentSection/CommentSection';
-import { WrapperDiv, StyledImage, StyledParagraph, ContainerDiv } from '../Styles'
+import { WrapperDiv, ImageStyles, ParagraphStyles, ContainerDiv } from '../Styles'
 
 
 
@@ -12,7 +11,7 @@ class PostContainer extends Component {
     super(props);
     this.state = {
       liked: false,
-      likes: this.props.data.likes,
+      likes: this.props.someData.likes,
     }
 }
 
@@ -36,19 +35,19 @@ render() {
     return (
       <WrapperDiv post>
         <ContainerDiv post>
-          <StyledImage postuser src={this.props.data.thumbnailUrl} alt='thumbnail'/>
-          <StyledParagraph postHeader><strong>{this.props.data.username}</strong></StyledParagraph>
+          <ImageStyles postuser src={this.props.someData.thumbnailUrl} alt='thumbnail'/>
+          <ParagraphStyles postHeader><strong>{this.props.someData.username}</strong></ParagraphStyles>
         </ContainerDiv>
-          <StyledImage post src={this.props.data.imageUrl} alt=''/>
+          <ImageStyles post src={this.props.someData.imageUrl} alt=''/>
 
-        <ContainerDiv postIcons>
-          <HeartIcon post
+        <ContainerDiv postImgs>
+          <HeartImg post
             isLiked={this.state.liked} onClick={this.handleLikes} />
-          <CommentIcon />
+          
         </ContainerDiv>
-        <StyledParagraph likes><strong>{this.state.likes} likes</strong></StyledParagraph>
-        <CommentSection comments={this.props.data.comments} comment={this.props.comment}
-       timestamp={this.props.data.timestamp}
+        <ParagraphStyles likes><strong>{this.state.likes} likes</strong></ParagraphStyles>
+        <CommentSection comments={this.props.someData.comments} comment={this.props.comment}
+       timestamp={this.props.someData.timestamp}
         username={this.props.username}/>
       </WrapperDiv>
     )
