@@ -21,14 +21,11 @@ class App extends Component {
   }
 
 //Write a function for post search bar
-searchPostsHandler = elem => {
-  const posts = this.state.posts.filter(post => {
-    if (post.username.includes(elem.target.value)) {
-      return post;
-    }
-  });
-  this.setState({ searchedPosts: posts });
-};
+//needs to map over the posts
+// searchPostsHandlerFunction = elem => {
+
+//   this.setState({ searchedPosts: posts });
+// };
   
   //pulls down posts from state on class App so it will render
   //same deal for SearchBar
@@ -36,13 +33,9 @@ searchPostsHandler = elem => {
     return (
       <div className="App">
       <SearchBar 
-        searchTerm={this.state.searchTerm}
-        searchPosts={this.state.searchPostsHandler}
+
       />
-      <PostsContainer posts={            
-              this.state.searchedPosts.length > 0
-              ? this.state.searchedPosts
-              : this.state.posts} />
+      <PostsContainer posts={this.state.posts} />
       </div>
     )
   }
