@@ -19,8 +19,8 @@ class CommentSection extends React.Component {
 
 
 
-  addNewComment = changeEvent => {
-    changeEvent.preventDefault();
+  addNewComment = event => {
+    event.preventDefault();
     if (this.state.newComment.length > 0) {
       this.setState({
         comments: [...this.state.comments, {
@@ -34,9 +34,9 @@ class CommentSection extends React.Component {
   }
 
 
-  handleCommentChange = changeEvent => {
+  handleCommentChange = event => {
     this.setState({
-      [changeEvent.target.name]: changeEvent.target.value,
+      [event.target.name]: event.target.value,
     })
   }
 

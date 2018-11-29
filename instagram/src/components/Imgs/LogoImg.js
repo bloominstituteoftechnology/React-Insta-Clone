@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const LogoType = () => {
+const LogoImg = () => {
   return (
   <svg xmlns='http://www.w3.org/2000/svg' width='103.855' height='24.764'
 id='svg4' className="logo-type">
@@ -10,7 +10,7 @@ id='svg4' className="logo-type">
 </svg>
   )
 }
-export default styled(LogoType)`
+export default styled(LogoImg)`
   border: 1px solid black;
   ${props => (props.login ? `
     transform: scale(2);

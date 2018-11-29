@@ -18,13 +18,13 @@ import Login from '../Login/Login.js'
         window.localStorage.getItem(this.localStorageKey)
       );
       if (logins) {
-        let newLog = logins.find(combo => combo.username === username);
-        if (newLog) {
-          if (password === newLog.password) {
-            this.setState({ loggedIn: true, username: newLog.username });
+        let relogin = logins.find(combo => combo.username === username);
+        if (relogin) {
+          if (password === relogin.password) {
+            this.setState({ loggedIn: true, username: relogin.username });
             return;
           } else {
-            alert("Aw snap :( Wrong password. Try again.");
+            alert("Aw snap :( Wrong Password. Try again?");
             return;
           }
         } else {
@@ -45,7 +45,7 @@ import Login from '../Login/Login.js'
       if (this.state.loggedIn){
         return <App username={this.state.username} />;
       } else {
-        return <Login newLog={this.newLog} />;
+        return <Login login={this.login} />;
       }
   }
 }

@@ -4,8 +4,8 @@ export const WrapperDiv = styled.div `
   width: 100%;
   ${props => (props.post ? `
     max-width: 500px;
-    border: 1px solid #e6e6e6;
-    background-color: white;
+    border: 1px solid #f6f3f3;
+    background-color: #e9ece3;
     margin: 0 auto;
     margin-top: 5%;
     display: flex;
@@ -19,8 +19,8 @@ export const WrapperDiv = styled.div `
     align-items: center;
     position: sticky;
     top: 0;
-    background: white;
-    border-bottom: 1px solid #e6e6e6;
+    background: #e9ece3;
+    border-bottom: 1px solid #f6f3f3;
     padding: 20px 15px;
     z-index: 10;`
   : null)}
@@ -42,8 +42,8 @@ export const WrapperDiv = styled.div `
     flex-direction: column;
     jusify-content: space-between;
     align-items: center;
-    background-color: white;
-    border: 1px solid #E6E6E6;`
+    background-color: #e9ece3;
+    border: 1px solid #f6f3f3;`
   : null)}
 `;
 
@@ -70,7 +70,7 @@ export const ContainerDiv = styled.div `
     ${props => (props.timestamp ? `
       margin: 1% 0;
       font-size: 1rem;
-      color: #999999;` : null)}
+      color: #0f0d0d;` : null)}
 `;
 
 export const InputStyles = styled.input `
@@ -82,10 +82,10 @@ export const InputStyles = styled.input `
     margin-top: 1%;
     width: 100%;
     border: none;
-    border-top: 1px solid #999999;
+    border-top: 1px solid #0f0d0d;
     font-size: 1.6rem;
-    padding: 3% 0;
-    font-color: #999999;`
+    padding: 5% 0;
+    font-color: #0f0d0d;`
   : null)}
   ${props => ( props.name === 'search' ? `
     padding: 3px;
@@ -93,18 +93,18 @@ export const InputStyles = styled.input `
     text-align: center;
     margin: 2px;
     border-radius: 3px;
-    border: 1px solid #E6E6E6;
+    border: 1px solid #f6f3f3;
     background-color: #FAFAFA;`
   : null)}
     ${props => ((props.name === 'username') || (props.name === 'password') ? `
-    border: 1px solid #E6E6E6;
+    border: 1px solid #f6f3f3;
     width: 100%;
     padding:3% 0;
     margin-top: 3%;
     border-radius: 3px;
     text-align: center;
     background-color: #FAFAFA;
-    color: #99A5C2;`
+    color: #241414;`
   : null)}
 `;
 
@@ -112,12 +112,12 @@ export const ButtonStyles = styled.button `
   ${props => (props.login ? `
     border-radius: 3px;
     border: none;
-    background-color: #3195F3;
+    background-color: #37aef6;
     margin-top: 5%;
     width: 100%;
     padding: 3%;
     cursor: pointer;
-    color: white;
+    color: #e9ece3;
     font-weight: bold;`
   : null)}
 `;

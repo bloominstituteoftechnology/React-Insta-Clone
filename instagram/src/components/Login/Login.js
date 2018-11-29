@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LogoType from '../Imgs/LogoImg'
+import LogoImg from '../Imgs/LogoImg'
 import {WrapperDiv, InputStyles, FormStyles, ButtonStyles} from '../Styles'
 
  class Login extends Component {
@@ -10,12 +10,12 @@ import {WrapperDiv, InputStyles, FormStyles, ButtonStyles} from '../Styles'
       password: '',
     })
   }
-   handleChange = event=> {
+   handleChange = event => {
     this.setState({
       [event.target.name]: event.target.value
     })
   }
-   handleLogin = event=> {
+   handleLogin = event => {
     event.preventDefault();
     if (this.state.username.length === 0){
       alert('Please provide a username');
@@ -35,7 +35,7 @@ import {WrapperDiv, InputStyles, FormStyles, ButtonStyles} from '../Styles'
    render(){
     return(
       <WrapperDiv login className='login'>
-        <LogoType login />
+        <LogoImg login />
         <FormStyles login onSubmit={this.handleLogin}>
           <InputStyles
             name='username'

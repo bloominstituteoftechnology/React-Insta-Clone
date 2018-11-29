@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import HeartImg from '../Imgs/HeartImg'
+import CommentImg from '../Imgs/CommentImg'
 import CommentSection from '../CommentSection/CommentSection';
 import { WrapperDiv, ImageStyles, ParagraphStyles, ContainerDiv } from '../Styles'
 
@@ -11,7 +12,7 @@ class PostContainer extends Component {
     super(props);
     this.state = {
       liked: false,
-      likes: this.props.someData.likes,
+      likes: this.props.data.likes,
     }
 }
 
@@ -35,19 +36,19 @@ render() {
     return (
       <WrapperDiv post>
         <ContainerDiv post>
-          <ImageStyles postuser src={this.props.someData.thumbnailUrl} alt='thumbnail'/>
-          <ParagraphStyles postHeader><strong>{this.props.someData.username}</strong></ParagraphStyles>
+          <ImageStyles postuser src={this.props.data.thumbnailUrl} alt='thumbnail'/>
+          <ParagraphStyles postHeader><strong>{this.props.data.username}</strong></ParagraphStyles>
         </ContainerDiv>
-          <ImageStyles post src={this.props.someData.imageUrl} alt=''/>
+          <ImageStyles post src={this.props.data.imageUrl} alt=''/>
 
-        <ContainerDiv postImgs>
+        <ContainerDiv postImg>
           <HeartImg post
             isLiked={this.state.liked} onClick={this.handleLikes} />
-          
+          <CommentImg />
         </ContainerDiv>
         <ParagraphStyles likes><strong>{this.state.likes} likes</strong></ParagraphStyles>
-        <CommentSection comments={this.props.someData.comments} comment={this.props.comment}
-       timestamp={this.props.someData.timestamp}
+        <CommentSection comments={this.props.data.comments} comment={this.props.comment}
+       timestamp={this.props.data.timestamp}
         username={this.props.username}/>
       </WrapperDiv>
     )

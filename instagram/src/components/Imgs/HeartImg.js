@@ -3,7 +3,7 @@ import {Heart} from 'styled-icons/feather/Heart';
 import styled from 'styled-components'
 
 
-const HeartIcon = styled(Heart) `
+const HeartImg = styled(Heart) `
   width: 21px;
   height: 21px;
   cursor: pointer;
@@ -11,7 +11,7 @@ const HeartIcon = styled(Heart) `
     width: 25px;
     height: 25px; ` : null)}
     ${props => (props.isLiked ? `
-      fill: #ED4956;
-      color: #ED4956;` : null)}
+      fill: #ee0013;
+      color: #ee0013;` : null)}
 `
-export default HeartIcon;
+export default HeartImg;

@@ -4,7 +4,7 @@ import CompassImg from "../Imgs/CompassImg";
 import HeartImg from "../Imgs/HeartImg";
 import SearchImg from "../Imgs/SearchImg";
 import UserImg from "../Imgs/UserImg";
-import LogoType from "../Imgs/LogoImg";
+import LogoImg from "../Imgs/LogoImg";
 import {WrapperDiv, InputStyles, ContainerDiv} from "../Styles";
 
 import PropTypes from "prop-types";
@@ -13,9 +13,9 @@ import PropTypes from "prop-types";
 const SearchBar = props => {
   return (
     <WrapperDiv searchBar>
-      <ContainerDiv logo className='logo'>
+      <ContainerDiv logo className="logo">
         <CameraImg />
-        <LogoType />
+        <LogoImg />
       </ContainerDiv>
       <ContainerDiv search>
         <SearchImg />
@@ -27,7 +27,7 @@ const SearchBar = props => {
           placeholder="Search"
         />
       </ContainerDiv>
-      <ContainerDiv Imgs>
+      <ContainerDiv icons>
         <CompassImg />
         <HeartImg />
         <UserImg />
