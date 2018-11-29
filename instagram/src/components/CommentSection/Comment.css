@@ -41,3 +41,7 @@
   #ig-heart {
       cursor: pointer;
   }
+
+  #ig-comment {
+      padding-left: 10px;
+  }

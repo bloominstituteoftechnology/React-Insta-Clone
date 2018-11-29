@@ -19,11 +19,14 @@
   
   .search-img {
     height: 50px;
-    text-align: center;
   }
 
   .logo-image {
     height: 70%;
+    margin-top: 20px;
+  }
+
+  #ig-camera {
   }
   
   .social-wrapper {
