@@ -6,6 +6,7 @@ const Comment = props => {
     return (
         <div className='comment'>       
         <p className='text'>{props.comment.text}</p>{' '}
+        ->
         <p className='user'>{props.comment.username}</p>
         </div>
     );

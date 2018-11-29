@@ -10,12 +10,22 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: [],
+      postFilter: []
     };
   }
 
   componentDidMount() {
     this.setState({ posts: dummyData});
+  }
+
+  handleSearch = event => {
+    const search = this.state.search.filter(posts => {
+      if (posts.username.includes(event.target.value)) {
+        return posts;
+      }
+    });
+    this.setState({postFilter: search});
   }
 
   render() {    
