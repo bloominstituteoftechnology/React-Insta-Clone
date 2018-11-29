@@ -44,8 +44,8 @@ class CommentSectionContainer extends React.Component {
   render() {
     return (
       <div className='comment-container'>
-      <div class ='like-bar'>
-        <i onClick={this.count} class='far fa-heart' id='ig-heart'/>
+      <div className='like-bar'>
+        <i onClick={this.count} className='far fa-heart' id='ig-heart'/>
         <p>{this.state.likes} likes</p>
       </div>
         {this.state.comments.map((c, i) => (
