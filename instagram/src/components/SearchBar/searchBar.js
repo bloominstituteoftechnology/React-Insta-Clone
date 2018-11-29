@@ -12,7 +12,7 @@ const SearchBar = props => {
                      />
             </div>
             <div className='search-input'>
-                <input type='text' placeholder='What are you looking for...' onKeyDown={props.searchPosts}  />
+                <input type='text' placeholder='What are you looking for...' onKeyDown={props.handleSearch}  />
             </div>
             <div className='social'>
                 <i className='fa fa-compass' />

@@ -20,9 +20,9 @@ class App extends Component {
   }
 
   handleSearch = event => {
-    const search = this.state.search.filter(posts => {
-      if (posts.username.includes(event.target.value)) {
-        return posts;
+    const search = this.state.posts.filter(search => {
+      if (search.username.includes(event.target.value)) {
+        return search;
       }
     });
     this.setState({postFilter: search});
@@ -31,8 +31,12 @@ class App extends Component {
   render() {    
     return (
       <div className="App">        
-        <SearchBar />
-        <PostContainer posts={this.state.posts} />                
+        <SearchBar
+          handleSearch={this.handleSearch}
+        />
+        <PostContainer 
+        posts={this.state.postFilter.length > 0 ? this.state.postFilter :this.state.posts}
+         />                
       </div>
     );
   }
