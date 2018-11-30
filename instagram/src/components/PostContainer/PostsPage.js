@@ -30,7 +30,7 @@ class PostsPage extends Component {
   render() {
     return (
       <div className="App">
-      <button onClick={this.props.logout}>LogOut</button>
+        <button onClick={this.props.logout}>LogOut</button>
         <SearchBar
           keyword={this.state.keyword}
           search={this.searchHandler}
