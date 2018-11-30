@@ -4,46 +4,23 @@ import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './components/Authentication/Authenticate';
 
 class App extends Component {
   constructor(){
     super();
-    this.state = {
-      data: [],
-      filteredData: []
-    }
+    this.state = {}
   }
-
-  componentDidMount(){
-    this.setState({ data: dummyData})
-  }
-
-  searchHandler = event => {
-    const data = this.state.data.filter(tempArr => {
-      if(tempArr.username.includes(event.target.value)) {
-        return tempArr;
-      }
-    });
-    this.setState({ filteredData: data });
-  };
 
   render() {
     return (
       <div className="App">
-        <SearchBar
-          keyword={this.state.keyword}
-          search={this.searchHandler}
-        />
-        <PostContainer
-          data={
-            this.state.filteredData.length > 0
-              ? this.state.filteredData
-              : this.state.data
-        }
-        />
+        <PostsPage {...this.props} logout={this.props.logout} />
+
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
