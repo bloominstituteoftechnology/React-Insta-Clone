@@ -15,6 +15,12 @@ const CommentInput = styled.input`
   font-size: 1.7rem;
 `;
 
+const Time = styled.p`
+  color: grey;
+  font-size: 1.5rem;
+  margin: 10px 0;
+`;
+
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
@@ -47,13 +53,17 @@ class CommentSection extends React.Component {
         }	       
       }
       let mili = Date.parse(new Date(time));
-      let now = Date.parse(new Date());	    
+      let now = Date.parse(new Date());	   
       let long = (now-mili);	    
       if (long < 3600000*24) {	     
-        return `${Math.floor(long/3600000)} hours`
-     } else {	
-       return `${Math.floor(long/86400000)} days`
-    }
+        return `${Math.floor(long/3600000)} ${Math.floor(long/3600000) < 2 ? 'hour':'hours'} ago`
+      } else if(long < 2592000000) {	
+       return `${Math.floor(long/86400000)} ${Math.floor(long/86400000) < 2 ? 'day':'days'} ago`
+      } else if (long < 31104000000) {
+        return `${Math.floor(long/2592000000)} ${Math.floor(long/2592000000) < 2 ? 'month': 'months'} ago`
+      } else {
+        return `${Math.floor(long/31104000000)} ${Math.floor(long/31104000000) < 2 ? 'year': 'years'} ago`
+      }
   }
 
   render() {
@@ -66,7 +76,7 @@ class CommentSection extends React.Component {
 
           />
         ))}
-        <p>{this.timePass()} hours</p>
+        <Time>{this.timePass()}</Time>
         <CommentForm onSubmit={this.onSubmit}>
           <CommentInput 
             placeholder="Add a comment..."
