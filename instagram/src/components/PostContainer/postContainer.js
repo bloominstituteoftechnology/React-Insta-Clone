@@ -1,20 +1,25 @@
 import React from "react";
-
 import Post from "./Post";
-import './PostContainer.css'
+import sc from 'styled-components';
 
+const PostContainerDiv = sc.div`
+  height: 50%;
+  width: 33%;
+  min-width: 400px;
+  margin: 5px auto;
+`;
 
 
 const PostContainer = props => {
     return (
-        <div className='post-container'> 
+        <PostContainerDiv> 
                
         {props.posts.map(p =>
             <Post 
                 key={p.imageUrl} 
                 post={p}
                  /> )}
-        </div>
+        </PostContainerDiv>
         
     );
 }

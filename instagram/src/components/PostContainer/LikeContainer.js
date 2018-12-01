@@ -1,25 +1,35 @@
 import React from "react";
+import sc from "styled-components";
+
+const LikeContainerDiv = sc.div`
+    display: flex;
+`;
+const LikeContainerWrap = sc.div`
+  height: 10px;
+  width: 10px;
+  margin: 10px;
+`;
 
 const LikeContainer = props => {
     return (
         <React.Fragment>
-            <div className='like-container'>
-                <div className='like-container-wrap'
+            <LikeContainerDiv>
+                <LikeContainerWrap
                     key='likes-icons-container'
                     onClick={props.addLike}
                 >
                     <i className='fa fa-heart' />
-                </div>
-                <div className='like-container-wrap'>
+                </LikeContainerWrap>
+                <LikeContainerWrap>
                     <i className='fa fa-comment' />
-                </div>       
-            </div>
-            <div className='like-container'
+                </LikeContainerWrap>       
+            </LikeContainerDiv>
+            <LikeContainerDiv
                 key='likes-container'>
-                <div className='like-container-wrap'>
+                <LikeContainerWrap>
                     {props.likes}
-                </div> 
-            </div>
+                </LikeContainerWrap> 
+            </LikeContainerDiv>
         </React.Fragment>    
     );
 }

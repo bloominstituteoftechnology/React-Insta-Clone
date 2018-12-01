@@ -20,7 +20,7 @@ const Authenticate = App =>
             }
         }
         render() {
-            if (this.setState.loggedIn) return <App />;
+            if (this.state.loggedIn) return <App />;
             return <Login />;
         }
     }
