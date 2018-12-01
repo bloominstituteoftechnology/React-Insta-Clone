@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PostsPage from "./components/PostContainer/PostsPage";
 import Authenticate from "./components/Authenticate/Authenticate";
+import './App.css'
 
 
 class App extends Component {
