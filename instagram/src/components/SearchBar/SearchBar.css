@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+    height: 80px;
+    border-bottom: 1px solid lightgray;
+}
+header > * {
+    display: flex;
+    justify-content: center;
+    width: 33.3%;
+    width: calc(100%/3);
+}
+.logos img:first-child {
+    padding-right: 10px;
+    border-right: 1px solid gray;
+}
+.logos img:last-child {
+    margin-left: 10px;
+}
+.icons img {
+    margin-right: 10px;
+}
+.icons img:last-child {
+    margin-right: 0;
+}
+header div > * {
+    max-height: 40px;
+}
+input {
+    text-align: center;
+}
