@@ -2,6 +2,10 @@
     width: 40%;
     margin: 0 auto;
     border: 1px solid rgba(128, 128, 128, 0.3);
+    margin-bottom: 50px;
+}
+.post:last-of-type {
+    margin-bottom: 0;
 }
 .post-header {
     display: flex;
