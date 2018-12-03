@@ -1,0 +1,23 @@
+.post {
+    width: 40%;
+    margin: 0 auto;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+}
+.post-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 3%;
+    height: 50px;
+}
+.post-header img {
+    border-radius: 100%;
+    height: 50%;
+    margin-right: 2%;
+}
+.post-header h4 {
+    font-weight: bold;
+}
+.post-image img {
+    width: 100%;
+}

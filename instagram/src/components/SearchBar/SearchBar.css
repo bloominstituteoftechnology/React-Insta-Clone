@@ -3,13 +3,18 @@ header {
     justify-content: space-between;
     align-items:  center;
     height: 80px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    margin-bottom: 20px;
 }
 header > * {
     display: flex;
     justify-content: center;
     width: 33.3%;
     width: calc(100%/3);
+}
+.logos img {
+    max-height: 35px;
+    cursor: pointer;
 }
 .logos img:first-child {
     padding-right: 10px;
@@ -19,13 +24,13 @@ header > * {
     margin-left: 10px;
 }
 .icons img {
-    margin-right: 10px;
+    margin-right: 8%;
+    max-height: 25px;
+    width: auto;
+    cursor: pointer;
 }
 .icons img:last-child {
     margin-right: 0;
-}
-header div > * {
-    max-height: 40px;
 }
 input {
     text-align: center;
