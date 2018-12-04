@@ -9,8 +9,8 @@ import Comment from '../Comment/Comment';
 const CommentSection = props => (
     <div className="comments">
         <div className="comment-icons">
-            <img src={heart} alt="fave button" />
-            <img src={reply} alt="reply button" />
+            <img src={heart} alt="fave button" draggable="false" />
+            <img src={reply} alt="reply button" draggable="false" />
         </div>
         <h5>{props.likes} like{props.likes !== 1 ? 's':null}</h5>
         <div className="comment-list">
@@ -28,6 +28,7 @@ const CommentSection = props => (
             <img src={commentOptions} 
                 alt='Comment options button' 
                 onClick={() => props.onAddComment(props.id)}
+                draggable="false"
             />
         </div>
     </div>

@@ -15,7 +15,7 @@ class App extends Component {
   handleCommentChange = e => {
     this.setState({
       commentInput: e.target.value,
-    }, () => console.log(this.state));
+    });
   }
   handleNewComment = (id) => {
     if(!this.state.commentInput){
@@ -33,6 +33,7 @@ class App extends Component {
         }
       });
       return {
+        data: prevState.data,
         commentInput: '',
       }
     });

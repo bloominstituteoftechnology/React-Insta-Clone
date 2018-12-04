@@ -5,11 +5,11 @@ import CommentSection from '../CommentSection/CommentSection';
 const PostContainer = props => (
     <div className="post">
         <div className="post-header">
-            <img src={props.data.thumbnailUrl} alt="user thumbnail" />
+            <img src={props.data.thumbnailUrl} alt="user thumbnail" draggable="false" />
             <h4>{props.data.username}</h4>
         </div>
         <div className='post-image'>
-            <img src={props.data.imageUrl} alt="User post"/>
+            <img src={props.data.imageUrl} alt="User post" draggable="false" />
             <div></div>
         </div>
         <CommentSection 

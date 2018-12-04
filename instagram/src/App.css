@@ -51,3 +51,6 @@ table {
 html {
   font-family: 'Roboto', sans-serif;
 }
+img {
+	user-select: none;
+}
