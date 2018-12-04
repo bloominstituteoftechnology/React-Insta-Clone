@@ -1,6 +1,5 @@
 import React from 'react';
 import './PostContainer.css';
-import heart from '../../assets/insta-heart.png';
 import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => (
@@ -13,7 +12,7 @@ const PostContainer = props => (
             <img src={props.data.imageUrl} alt="User post"/>
             <div></div>
         </div>
-        <CommentSection />
+        <CommentSection comments={props.data.comments} likes={props.data.likes} time={props.data.timestamp}/>
     </div>
 );
 
