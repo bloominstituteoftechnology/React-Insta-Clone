@@ -14,8 +14,8 @@ const CommentSection = props => (
         </div>
         <h5>{props.likes} like{props.likes !== 1 ? 's':null}</h5>
         <div className="comment-list">
-            {props.comments.map(comment => <Comment name={comment.username} text={comment.text} />)}
-        </div>
+            {props.comments.map(comment => <Comment key={comment.username + comment.text} name={comment.username} text={comment.text} />)}
+        </div> {/* Really bad key, above.  Would probably assign ID's to comments in practice. */}
         <p className="date">{moment(props.time, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}</p>
         <div className='add-comment'>
             <input 
