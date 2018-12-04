@@ -1,0 +1,8 @@
+.comment-instance {
+  text-align: left;
+  margin-bottom: 10px;
+}
+.comment-instance span {
+  font-weight: bold;
+  cursor: pointer;
+}

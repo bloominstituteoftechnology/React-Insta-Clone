@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: flex-start;
   margin: 0 3%;
-  margin-bottom: 10px;
 }
 .comment-icons {
   display: flex;
@@ -24,10 +23,27 @@
   margin: 10px 0;
   font-weight: bold;
 }
-.comment-instance {
-  text-align: left;
-  margin-bottom: 10px;
+.date {
+  font-size: 14px;
+  color: gray;
 }
-.comment-instance span {
-  font-weight: bold;
+.add-comment {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+  margin-top: 10px;
+}
+.add-comment input {
+  height: 20px;
+  margin: 15px 0;
+  font-size: 16px;
+  border: none;
+  text-align: left;
+  flex-grow: 1;
+}
+.add-comment img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
