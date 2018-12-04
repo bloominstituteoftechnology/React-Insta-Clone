@@ -25,7 +25,7 @@ class App extends Component {
     this.setState((prevState) => {
       prevState.data.forEach(x => {
         if (x.imageUrl === id){
-          x.comments.shift();
+          if (x.comments.length >= 3) x.comments.shift();
           x.comments.push({
             username: 'Test User',
             text: prevState.commentInput,
