@@ -9,13 +9,48 @@ class App extends Component {
     super(props);
     this.state = {
       data: dummyData,
+      commentInput: '',
     };
+  }
+  handleCommentChange = e => {
+    this.setState({
+      commentInput: e.target.value,
+    }, () => console.log(this.state));
+  }
+  handleNewComment = (id) => {
+    if(!this.state.commentInput){
+      alert('Please add a comment!');
+      return;
+    }
+    this.setState((prevState) => {
+      prevState.data.forEach(x => {
+        if (x.imageUrl === id){
+          x.comments.shift();
+          x.comments.push({
+            username: 'Test User',
+            text: prevState.commentInput,
+          });
+        }
+      });
+      return {
+        commentInput: '',
+      }
+    });
   }
   render() {
     return (
       <div className="app">
         <SearchBar />
-        {this.state.data.map(postData => <PostContainer key={postData.username + postData.timestamp} data={postData} />)}
+        {this.state.data.map(postData => (
+          <PostContainer
+            key={postData.imageUrl} 
+            data={postData}
+            commentValue={this.state.commentInput}
+            onCommentChange={this.handleCommentChange}
+            onAddComment={this.handleNewComment}
+          />
+          )
+        )}
       </div>
     );
   }

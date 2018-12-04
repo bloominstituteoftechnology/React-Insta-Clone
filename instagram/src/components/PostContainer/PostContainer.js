@@ -12,7 +12,15 @@ const PostContainer = props => (
             <img src={props.data.imageUrl} alt="User post"/>
             <div></div>
         </div>
-        <CommentSection comments={props.data.comments} likes={props.data.likes} time={props.data.timestamp}/>
+        <CommentSection 
+            comments={props.data.comments}
+            likes={props.data.likes}
+            time={props.data.timestamp}
+            commentValue={props.commentValue}
+            onCommentChange={props.onCommentChange}
+            onAddComment={props.onAddComment}
+            id={props.data.imageUrl}
+        />
     </div>
 );
 

@@ -18,8 +18,17 @@ const CommentSection = props => (
         </div>
         <p className="date">{moment(props.time, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}</p>
         <div className='add-comment'>
-            <input type='text' placeholder='Add a Comment...' />
-            <img src={commentOptions} alt='Comment options button' />
+            <input 
+                type='text' 
+                placeholder='Add a Comment...' 
+                value={props.commentValue} 
+                onChange={props.onCommentChange} 
+                onKeyDown={ (e) => { if(e.keyCode===13) props.onAddComment(props.id) } }
+            />
+            <img src={commentOptions} 
+                alt='Comment options button' 
+                onClick={() => props.onAddComment(props.id)}
+            />
         </div>
     </div>
 );
