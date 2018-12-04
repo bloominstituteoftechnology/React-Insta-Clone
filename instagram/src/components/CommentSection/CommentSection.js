@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import './CommentSection.css';
 import heart from '../../assets/insta-heart.png';
 import reply from '../../assets/insta-reply.PNG';  // For some reason, caps required for png
@@ -13,7 +14,7 @@ const CommentSection = props => (
         <div className="comment-list">
             {props.comments.map(comment => <p className="comment-instance"><span>{comment.username}</span> {comment.text}</p>)}
         </div>
-        <p>{props.time}</p>
+        <p>{moment(props.time, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}</p>
     </div>
 );
 
