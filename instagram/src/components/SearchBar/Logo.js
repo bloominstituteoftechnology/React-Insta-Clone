@@ -12,7 +12,7 @@ let LogoImage = styled.img`
 `;
 
 let Wordmark = styled.img`
-    height: 25px;
+    height: 30px;
     width: 100px;
     margin-left: 16px;
     border-left: 0.5px solid black;

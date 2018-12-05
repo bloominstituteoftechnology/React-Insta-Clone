@@ -42,10 +42,7 @@ font-weight: bold;
 let Login = props => {
     return (
         <StyledDiv>
-            {/* <HeroImg src={require('./assets/insta.jpg')} alt="hero"/> */}
             <StyledForm>
-                {/* <Wordmark src={require('./assets/wordmark.svg')} alt='wordmark' /> */}
-                {/* <StyledHeader>Log in to see photos and videos from your friends.</StyledHeader> */}
                 <Input type="text" name="username" value={props.value} placeholder="Username" autoComplete="off"/>
                 <Input type="password" name="password" value={props.value} placeholder="Password"/>
                 <Button onClick={props.login}>Log In</Button>
@@ -56,3 +53,4 @@ let Login = props => {
 }
 
 export default Login;
+
