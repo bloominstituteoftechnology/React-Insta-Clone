@@ -1,8 +1,8 @@
 # React-Insta-Clone
 
-## Introduction
+## Introduction:
 
-- The purpose of this project is to continue building on your knowledge of React that you have gained thus far.
+- The purpose of this project is to continue building on your knowledge of React that you have gained thus far
 
   - Here, you'll be implementing a lot of the same concepts that you have been in previous projects, in a very similar fashion.
   - The main difference this time around is that you'll be using the `create-react-app (CRA)` utility to generate your React project for you.

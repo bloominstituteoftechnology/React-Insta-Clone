@@ -1,0 +1,36 @@
+form input[type="text"] {
+  width: 575px;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 0;
+} 
+
+
+.comments {
+  display: inline;
+}
+
+.comment {
+  margin: 10px 10px 10px 10px;
+}
+.comment h2 {
+  font-size: 1rem;
+  display: inline;
+  padding: 30px 3px 10px 5px;
+
+
+}
+
+.comment p {
+  display: inline;
+  padding: 5px;
+
+}
+
+.timestamp {
+  margin: 10px 15px 10px 16px;
+  font-size: 13px;
+  color: gray;
+
+}

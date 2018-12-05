@@ -1,0 +1,11 @@
+.likes img {
+  max-width: 24px;
+  height: auto;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.likeCount {
+  margin: 3px 15px;
+  font-size: 14.5px;
+}
