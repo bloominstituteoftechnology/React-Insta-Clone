@@ -44,8 +44,14 @@ class CommentSection extends React.Component {
                 </div>
                 <h5>{this.state.likes} like{this.state.likes !== 1 ? 's':null}</h5>
                 <div className="comment-list">
-                    {this.state.comments.slice(-5).map(comment => <Comment key={comment.id || comment.name + comment.text} name={comment.username} text={comment.text} />)}
-                </div> {/* Adding ID's to my newly generated comments, but don't want to go modify dummy data. */}
+                    {this.state.comments.slice(-5).map(comment => (
+                        <Comment 
+                        key={comment.id || comment.name + comment.text} 
+                        name={comment.username} 
+                        text={comment.text} 
+                        onDelete={() => this.props.onDeleteComment(comment.id, this.props.index)}/>
+                    ))}
+                    </div> {/* Adding ID's to my newly generated comments, but don't want to go modify dummy data. */}
                 <p className="date">{moment(this.state.time, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}</p>
                 <form className='add-comment' onSubmit={(e) => { 
                     e.preventDefault();
@@ -61,7 +67,7 @@ class CommentSection extends React.Component {
                     <img src={commentOptions} 
                         alt='Comment options button' 
                         onClick={() => {
-                            this.onNewComment(this.state.input, this.props.index);
+                            this.props.onNewComment(this.state.input, this.props.index);
                             this.setState( { input: '' } );
                         }}
                         draggable="false"

@@ -19,6 +19,7 @@ const PostContainer = props => (
             time={props.data.timestamp}
             index={props.index}
             onNewComment={props.onNewComment}
+            onDeleteComment={props.onDeleteComment}
         />
     </div>
 );

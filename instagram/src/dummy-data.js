@@ -12,15 +12,18 @@ const dummyData = [
       {
         username: "philzcoffee",
         text:
-          "We've got more than just delicious coffees to offer at our shops!"
+          "We've got more than just delicious coffees to offer at our shops!",
+          id: 1,
       },
       {
         username: "biancasaurus",
-        text: "Looks delicious!"
+        text: "Looks delicious!",
+        id: 2,
       },
       {
         username: "martinseludo",
-        text: "Can't wait to try it!"
+        text: "Can't wait to try it!",
+        id: 3,
       }
     ]
   },
@@ -35,23 +38,28 @@ const dummyData = [
     comments: [
       {
         username: "twitch",
-        text: "Epic Street Fighter action here in Las Vegas at #EVO2017!"
+        text: "Epic Street Fighter action here in Las Vegas at #EVO2017!",
+        id: 4,
       },
       {
         username: "michaelmarzetta",
-        text: "Omg that match was crazy"
+        text: "Omg that match was crazy",
+        id: 5,
       },
       {
         username: "themexican_leprechaun",
-        text: "What a setup"
+        text: "What a setup",
+        id: 6,
       },
       {
         username: "dennis_futbol",
-        text: "It that injustice"
+        text: "It that injustice",
+        id: 7,
       },
       {
         username: "dennis_futbol",
-        text: "Is"
+        text: "Is",
+        id: 8,
       }
     ]
   },
@@ -66,15 +74,18 @@ const dummyData = [
     comments: [
       {
         username: "playhearthstone",
-        text: "Love this shot!"
+        text: "Love this shot!",
+        id: 9,
       },
       {
         username: "awaywetravel",
-        text: "Yosemite is my most favorite place in the universe"
+        text: "Yosemite is my most favorite place in the universe",
+        id: 10,
       },
       {
         username: "awesomebt28",
-        text: "I like how Half Dome looks so old and useless"
+        text: "I like how Half Dome looks so old and useless",
+        id: 11,
       }
     ]
   }

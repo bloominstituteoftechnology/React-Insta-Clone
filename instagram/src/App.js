@@ -63,12 +63,27 @@ class App extends Component {
     });
   }
   addNewComment = (value, index) => {
+    if (!value){
+      alert('Please enter a comment');
+      return;
+    }
     this.setState((prevState) => {
       const newData = prevState.data;
       newData[index].comments = newData[index].comments.concat({ username: 'Test User', text: value, id: Date.now() });
       return {
         data: newData,
       };
+    });
+  }
+  deleteComment = (id, index) => {
+    this.setState((prevState) => {
+    const newData = prevState.data;
+    newData[index].comments = newData[index].comments.filter(x => x.id !== id);
+      return {
+        data: newData,
+      };
+    }, () => {
+      localStorage.removeItem('data');
     });
   }
   render() {
@@ -84,6 +99,7 @@ class App extends Component {
             data={postData}
             index={index}
             onNewComment={this.addNewComment}
+            onDeleteComment={this.deleteComment}
           />
           )
         )}
