@@ -14,7 +14,10 @@ const SearchBar = props => (
         </div>
         <div>
             <input type="text" 
-            placeholder="&#128269;Search" />
+            placeholder="&#128269;Search"
+            onChange={props.onSearchInput}
+            onKeyDown={(e) => { if(e.keyCode === 13) props.onSearch()}}
+            />
         </div>
         <div className="icons">
             <img src={compass} alt="compass icon" draggable="false" />

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 import './CommentSection.css';
 import heart from '../../assets/insta-heart.png';
@@ -33,5 +34,18 @@ const CommentSection = props => (
         </div>
     </div>
 );
+
+CommentSection.propTypes = {
+    comments: PropTypes.arrayOf(PropTypes.shape({
+        username: PropTypes.string,
+        text: PropTypes.string,
+    })),
+    likes: PropTypes.number,
+    time: PropTypes.string,
+    commentValue: PropTypes.string,
+    onCommentChange: PropTypes.func,
+    onAddComment: PropTypes.func,
+    id: PropTypes.string,
+};
 
 export default CommentSection;
