@@ -21,6 +21,7 @@ const PostContainer = props => (
             onCommentChange={props.onCommentChange}
             onAddComment={props.onAddComment}
             id={props.data.imageUrl}
+            onLike={props.handleLike}
         />
     </div>
 );
@@ -40,6 +41,7 @@ PostContainer.propTypes = {
     commentValue: PropTypes.string,
     onCommentChange: PropTypes.func,
     onAddComment: PropTypes.func,
+    handleLike: PropTypes.func,
 };
 
 export default PostContainer;

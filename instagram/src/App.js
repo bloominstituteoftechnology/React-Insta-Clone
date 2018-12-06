@@ -20,6 +20,7 @@ class App extends Component {
       data: dummyData,
     });
   }
+
   handleCommentChange = e => {
     this.setState({
       commentInput: e.target.value,
@@ -31,17 +32,18 @@ class App extends Component {
       return;
     }
     this.setState((prevState) => {
-      prevState.data.forEach(x => {
+      const newData = [...prevState.data];
+      newData.forEach(x => {
         if (x.imageUrl === id){
-          if (x.comments.length >= 3) x.comments.shift();
           x.comments.push({
             username: 'Test User',
             text: prevState.commentInput,
+            id: Date.now(),
           });
         }
       });
       return {
-        data: prevState.data,
+        data: newData,
         commentInput: '',
       }
     });
@@ -76,6 +78,19 @@ class App extends Component {
       searchInput: e.target.value,
     });
   }
+  handleLike = (url) => {
+    this.setState((prevState) => {
+      const newData = prevState.data;
+      newData.forEach(x => {
+        if (x.imageUrl === url){
+          x.likes++;
+        }
+      });
+      return {
+        data: newData,
+      };
+    });
+  }
   render() {
     return (
       <div className="app">
@@ -90,6 +105,7 @@ class App extends Component {
             commentValue={this.state.commentInput}
             onCommentChange={this.handleCommentChange}
             onAddComment={this.handleNewComment}
+            handleLike={this.handleLike}
           />
           )
         )}

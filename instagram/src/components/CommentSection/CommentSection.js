@@ -10,13 +10,13 @@ import Comment from '../Comment/Comment';
 const CommentSection = props => (
     <div className="comments">
         <div className="comment-icons">
-            <img src={heart} alt="fave button" draggable="false" />
+            <img src={heart} alt="fave button" draggable="false" onClick={() => props.onLike(props.id)} />
             <img src={reply} alt="reply button" draggable="false" />
         </div>
         <h5>{props.likes} like{props.likes !== 1 ? 's':null}</h5>
         <div className="comment-list">
-            {props.comments.map(comment => <Comment key={comment.username + comment.text} name={comment.username} text={comment.text} />)}
-        </div> {/* Really bad key, above.  Would probably assign ID's to comments in practice. */}
+            {props.comments.slice(-5).map(comment => <Comment key={comment.id || comment.name + comment.text} name={comment.username} text={comment.text} />)}
+        </div> {/* Adding ID's to my newly generated comments, but don't want to go modify dummy data. */}
         <p className="date">{moment(props.time, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}</p>
         <div className='add-comment'>
             <input 
@@ -46,6 +46,7 @@ CommentSection.propTypes = {
     onCommentChange: PropTypes.func,
     onAddComment: PropTypes.func,
     id: PropTypes.string,
+    onLike: PropTypes.func,
 };
 
 export default CommentSection;
