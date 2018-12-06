@@ -16,9 +16,20 @@ class App extends Component {
     };
   }
   componentDidMount(){
-    this.setState({
-      data: dummyData,
-    });
+    for (let key in this.state){
+      if (localStorage.hasOwnProperty(key)){
+        this.setState({ [key]: JSON.parse(localStorage.getItem(key)) });
+      } else if (key === 'data') this.setState({ data: dummyData });
+    }
+    window.addEventListener('beforeunload', this.handleLocalStorage);
+  }
+  componentWillUnmount(){
+    window.removeEventListener('beforeunload', this.handleLocalStorage);
+  }
+  handleLocalStorage = () => {
+    for (let key in this.state){
+      localStorage.setItem(key, JSON.stringify(this.state[key]));
+    }
   }
   handleSearch = () => {
     this.setState((prevState) => {
@@ -46,8 +57,18 @@ class App extends Component {
     });
   }
   handleSearchInput = (e) => {
+    console.log(this.state);
     this.setState({
       searchInput: e.target.value,
+    });
+  }
+  addNewComment = (value, index) => {
+    this.setState((prevState) => {
+      const newData = prevState.data;
+      newData[index].comments = newData[index].comments.concat({ username: 'Test User', text: value, id: Date.now() });
+      return {
+        data: newData,
+      };
     });
   }
   render() {
@@ -57,10 +78,12 @@ class App extends Component {
           onSearch={this.handleSearch}
           onSearchInput={this.handleSearchInput}
         />
-        {this.state.data.map(postData => (
+        {this.state.data.map((postData, index) => (
           <PostContainer
             key={postData.imageUrl} 
             data={postData}
+            index={index}
+            onNewComment={this.addNewComment}
           />
           )
         )}

@@ -11,35 +11,22 @@ class CommentSection extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            comments: [],
-            likes: 0,
-            time: '',
+            comments: this.props.comments,
+            likes: this.props.likes,
+            time: this.props.time,
             input: '',
             liked: false,
         };
     }
-    componentDidMount(){
-        this.setState({
-            comments: this.props.comments,
-            likes: this.props.likes,
-            time: this.props.time,
-        });
+    componentDidUpdate(prevProps, prevState){
+        if (JSON.stringify(prevProps.comments) !== JSON.stringify(this.props.comments)){
+            this.setState({ comments: this.props.comments });
+        }
     }
     handleCommentInput = (e) => {
         this.setState({ input: e.target.value });
     }
-    addNewComment= () => {
-        if (!this.state.input){
-            alert('Please enter a comment');
-            return;
-        }
-        this.setState((prevState) => {
-            return {
-                comments: prevState.comments.concat({ username: 'Test User', text: prevState.input, id: Date.now()}),
-                input: '',
-            };
-        });
-    }
+
     addNewLike = () => {
         this.setState((prevState) => {
             return {
@@ -60,21 +47,23 @@ class CommentSection extends React.Component {
                     {this.state.comments.slice(-5).map(comment => <Comment key={comment.id || comment.name + comment.text} name={comment.username} text={comment.text} />)}
                 </div> {/* Adding ID's to my newly generated comments, but don't want to go modify dummy data. */}
                 <p className="date">{moment(this.state.time, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}</p>
-                <form className='add-comment'>
+                <form className='add-comment' onSubmit={(e) => { 
+                    e.preventDefault();
+                    this.props.onNewComment(this.state.input, this.props.index);
+                    this.setState({ input: '' })
+                }}>
                     <input 
                         type='text' 
                         placeholder='Add a Comment...' 
                         value={this.state.input} 
                         onChange={this.handleCommentInput} 
-                        onKeyDown={ (e) => { if (e.keyCode===13) {
-                            e.preventDefault();
-                            this.addNewComment(); 
-                        }}
-                    }
                     />
                     <img src={commentOptions} 
                         alt='Comment options button' 
-                        onClick={this.addNewComment}
+                        onClick={() => {
+                            this.onNewComment(this.state.input, this.props.index);
+                            this.setState( { input: '' } );
+                        }}
                         draggable="false"
                     />
                 </form>

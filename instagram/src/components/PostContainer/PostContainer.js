@@ -17,6 +17,8 @@ const PostContainer = props => (
             comments={props.data.comments}
             likes={props.data.likes}
             time={props.data.timestamp}
+            index={props.index}
+            onNewComment={props.onNewComment}
         />
     </div>
 );
