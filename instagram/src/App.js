@@ -20,34 +20,6 @@ class App extends Component {
       data: dummyData,
     });
   }
-
-  handleCommentChange = e => {
-    this.setState({
-      commentInput: e.target.value,
-    });
-  }
-  handleNewComment = (id) => {
-    if(!this.state.commentInput){
-      alert('Please add a comment!');
-      return;
-    }
-    this.setState((prevState) => {
-      const newData = [...prevState.data];
-      newData.forEach(x => {
-        if (x.imageUrl === id){
-          x.comments.push({
-            username: 'Test User',
-            text: prevState.commentInput,
-            id: Date.now(),
-          });
-        }
-      });
-      return {
-        data: newData,
-        commentInput: '',
-      }
-    });
-  }
   handleSearch = () => {
     this.setState((prevState) => {
       const prevData = [...prevState.data];
@@ -78,19 +50,6 @@ class App extends Component {
       searchInput: e.target.value,
     });
   }
-  handleLike = (url) => {
-    this.setState((prevState) => {
-      const newData = prevState.data;
-      newData.forEach(x => {
-        if (x.imageUrl === url){
-          x.likes++;
-        }
-      });
-      return {
-        data: newData,
-      };
-    });
-  }
   render() {
     return (
       <div className="app">
@@ -102,10 +61,6 @@ class App extends Component {
           <PostContainer
             key={postData.imageUrl} 
             data={postData}
-            commentValue={this.state.commentInput}
-            onCommentChange={this.handleCommentChange}
-            onAddComment={this.handleNewComment}
-            handleLike={this.handleLike}
           />
           )
         )}

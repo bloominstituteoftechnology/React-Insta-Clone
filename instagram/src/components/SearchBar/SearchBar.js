@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './SearchBar.css';
 import logo from '../../assets/insta-logo.png';
 import textLogo from '../../assets/insta-title.png'; 
@@ -26,5 +27,10 @@ const SearchBar = props => (
         </div>
     </header>
 );
+
+SearchBar.propTypes = {
+    onSearch: PropTypes.func,
+    onSearchInput: PropTypes.func,
+};
 
 export default SearchBar;

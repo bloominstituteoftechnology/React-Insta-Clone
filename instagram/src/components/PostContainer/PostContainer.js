@@ -17,11 +17,6 @@ const PostContainer = props => (
             comments={props.data.comments}
             likes={props.data.likes}
             time={props.data.timestamp}
-            commentValue={props.commentValue}
-            onCommentChange={props.onCommentChange}
-            onAddComment={props.onAddComment}
-            id={props.data.imageUrl}
-            onLike={props.handleLike}
         />
     </div>
 );
@@ -38,10 +33,6 @@ PostContainer.propTypes = {
             text: PropTypes.string,
         })),
     }),
-    commentValue: PropTypes.string,
-    onCommentChange: PropTypes.func,
-    onAddComment: PropTypes.func,
-    handleLike: PropTypes.func,
 };
 
 export default PostContainer;
