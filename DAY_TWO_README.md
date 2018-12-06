@@ -8,7 +8,7 @@
 
 - At this point you should have a working app with a component tree that is setup kind of like this (note that this is not a design spec!):
 
-<img src='/assets/InstaClone-componentStructure.jpg' width='235' />
+<img src='instagram/src/assets/InstaClone-componentStructure.jpg' width='235' />
 
 - Your data should be imported to `app.js`, and then passed as props to each `PostContainer`.
 - Each `PostContainer` should then be passing data to a `CommentSection` via props as well.
