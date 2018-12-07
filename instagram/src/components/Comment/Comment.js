@@ -13,6 +13,7 @@ const Comment = props => (
 Comment.propTypes = {
     name: PropTypes.string,
     text: PropTypes.string,
+    onDelete: PropTypes.func,
 };
 
 export default Comment;

@@ -46,7 +46,7 @@ class CommentSection extends React.Component {
                 <div className="comment-list">
                     {this.state.comments.slice(-5).map(comment => (
                         <Comment 
-                        key={comment.id || comment.name + comment.text} 
+                        key={comment.id} 
                         name={comment.username} 
                         text={comment.text} 
                         onDelete={() => this.props.onDeleteComment(comment.id, this.props.index)}/>
@@ -85,6 +85,9 @@ CommentSection.propTypes = {
     })),
     likes: PropTypes.number,
     time: PropTypes.string,
+    index: PropTypes.number,
+    onNewComment: PropTypes.func,
+    onDeleteComment: PropTypes.func,
 };
 
 export default CommentSection;

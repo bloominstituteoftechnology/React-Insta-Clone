@@ -36,6 +36,9 @@ PostContainer.propTypes = {
             text: PropTypes.string,
         })),
     }),
+    index: PropTypes.number,
+    onNewComment: PropTypes.func,
+    onDeleteComment: PropTypes.func,
 };
 
 export default PostContainer;
