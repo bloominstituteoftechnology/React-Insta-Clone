@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
 
@@ -16,19 +16,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
         </header>
+        <h1 className="searchContainer">Search Container</h1>
+        <div>{this.state.dummyData.map( dummyD => 
+          <ul key={dummyD.id}>{dummyD.username} {dummyD.likes}</ul>)}</div>
       </div>
     );
   }
