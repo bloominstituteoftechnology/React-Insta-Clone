@@ -3,7 +3,7 @@ import moment from 'moment';
 import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
   constructor(props){
@@ -93,16 +93,9 @@ class App extends Component {
           onSearch={this.handleSearch}
           onSearchInput={this.handleSearchInput}
         />
-        {this.state.data.map((postData, index) => (
-          <PostContainer
-            key={postData.imageUrl} 
-            data={postData}
-            index={index}
-            onNewComment={this.addNewComment}
-            onDeleteComment={this.deleteComment}
-          />
-          )
-        )}
+        <PostsPage data={this.state.data}
+        onNewComment={this.addNewComment}
+        onDeleteComment={this.deleteComment} />
       </div>
     );
   }
