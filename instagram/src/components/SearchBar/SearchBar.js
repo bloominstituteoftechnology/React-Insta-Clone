@@ -14,11 +14,12 @@ const SearchBar = props => (
             <img src={textLogo} alt="Instagram" draggable="false" />
         </div>
         <div>
-            <input type="text" 
-            placeholder="&#128269;Search"
-            onChange={props.onSearchInput}
-            onKeyDown={(e) => { if(e.keyCode === 13) props.onSearch()}}
-            />
+            {props.loginPage ? null : // Remove search capability if user is on the login page.
+                (<input type="text" 
+                placeholder="&#128269;Search"
+                onChange={props.onSearchInput}
+                onKeyDown={(e) => { if(e.keyCode === 13) props.onSearch()}}
+                />)}
         </div>
         <div className="icons">
             <img src={compass} alt="compass icon" draggable="false" />

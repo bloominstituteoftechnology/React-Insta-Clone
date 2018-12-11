@@ -18,7 +18,7 @@ const PostsPage = props => (
 );
 
 PostsPage.propTypes = {
-    data: PropTypes.shape({
+    data: PropTypes.arrayOf(PropTypes.shape({
         username: PropTypes.string,
         thumbnailUrl: PropTypes.string,
         imageUrl: PropTypes.string,
@@ -28,7 +28,7 @@ PostsPage.propTypes = {
             username: PropTypes.string,
             text: PropTypes.string,
         })),
-    }), 
+    })), 
     onNewComment: PropTypes.func,
     onDeleteComment: PropTypes.func,
 };
