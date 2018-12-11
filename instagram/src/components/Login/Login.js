@@ -23,6 +23,9 @@ class Login extends React.Component{
     }
     login = e => {
         e.preventDefault();
+        if (!this.state.usernameLoginInput || 
+            !this.state.passwordLoginInput ||
+            !this.state.usernameLoginInput.trim()) return;
         localStorage.setItem('username', JSON.stringify(this.state.usernameLoginInput));
         window.location.reload();
         return false;

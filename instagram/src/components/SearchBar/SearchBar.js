@@ -24,7 +24,7 @@ const SearchBar = props => (
         <div className="icons">
             <img src={compass} alt="compass icon" draggable="false" />
             <img src={heart} alt="heart icon" draggable="false" />
-            <img src={profile} alt="profile icon" draggable="false" />
+            <img src={profile} alt="profile icon" draggable="false" onClick={props.onLogout}/>
         </div>
     </header>
 );

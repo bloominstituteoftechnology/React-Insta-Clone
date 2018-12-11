@@ -10,8 +10,8 @@ const Authenticate = (Component) =>
             };
         }
         componentDidMount(){
-            if (localStorage.getItem('username'))
-                this.setState({ loggedIn: true, user: JSON.parse(localStorage.getItem('user')) });
+            if (JSON.parse(localStorage.getItem('username')) !== null)
+                this.setState({ loggedIn: true, user: JSON.parse(localStorage.getItem('username')) });
         }
         render(){
             return this.state.loggedIn ? <Component /> : <Login />

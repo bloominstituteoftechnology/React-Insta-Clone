@@ -12,9 +12,11 @@ header > * {
     width: 33.3%;
     width: calc(100%/3);
 }
+header img {
+    cursor: pointer;
+}
 .logos img {
     max-height: 35px;
-    cursor: pointer;
 }
 .logos img:first-child {
     padding-right: 10px;

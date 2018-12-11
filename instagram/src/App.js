@@ -14,6 +14,7 @@ class App extends Component {
       commentInput: '',
       searchInput: '',
       stored: [],
+      username: '',
     };
   }
   componentDidMount(){
@@ -70,7 +71,7 @@ class App extends Component {
     }
     this.setState((prevState) => {
       const newData = prevState.data;
-      newData[index].comments = newData[index].comments.concat({ username: 'Test User', text: value, id: Date.now() });
+      newData[index].comments = newData[index].comments.concat({ username: this.state.username, text: value, id: Date.now() });
       return {
         data: newData,
       };
@@ -87,12 +88,17 @@ class App extends Component {
       localStorage.removeItem('data');
     });
   }
+  logout = () => {
+    localStorage.removeItem('username');
+    this.setState({ username: null}, () => window.location.reload());
+  }
   render() {
     return (
       <div className="app">
         <SearchBar
           onSearch={this.handleSearch}
           onSearchInput={this.handleSearchInput}
+          onLogout={this.logout}
         />
         <PostsPage data={this.state.data}
         onNewComment={this.addNewComment}
