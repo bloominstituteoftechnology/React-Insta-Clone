@@ -38,6 +38,7 @@
 .post__comments__add input {
   border: none;
   font-size: 1.4rem;
+  width: 100%;
 }
 
 .post__comments__add input:focus {

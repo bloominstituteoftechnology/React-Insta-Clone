@@ -31,7 +31,8 @@ class PostContainer extends React.Component {
 
         <CommentSection time={this.state.time}
                         likes={this.state.likes}
-                        comments={this.state.comments}/>
+                        comments={this.state.comments}
+                        />
       </div>
     );
   }

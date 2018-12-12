@@ -19,6 +19,19 @@ class CommentSection extends React.Component {
     }
   }
 
+  addComment = event => {
+
+    if(event.key === 'Enter'){
+      const newComments = this.state.comments.slice();
+      const newValue = event.target.value;
+
+      newComments.push({username: 'Anonymous', text: newValue});
+
+      this.setState({comments: newComments});
+      event.target.value = ''
+    }
+  }
+
   render() {
 
     const comments = this.state.comments.map(comment => <Comment key={Math.random()}
@@ -39,7 +52,7 @@ class CommentSection extends React.Component {
         <p className="post__comments__time">{this.state.time}</p>
 
         <div className="post__comments__add">
-          <input type="text" placeholder="Add Comment..." />
+          <input type="text" placeholder="Add Comment..." onKeyPress={this.addComment}/>
           <img src={comment} alt="insta-comment" />
         </div>
       </div>
