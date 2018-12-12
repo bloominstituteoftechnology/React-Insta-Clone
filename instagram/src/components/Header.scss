@@ -1,0 +1,17 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  .navbar-brand {
+    .navbar-item {
+      .logoContent {
+        content: url(../instagram-for-project.png);
+      }
+      .vr {
+        width: 2px;
+        border: 1px solid black;
+        margin: 0 20px;
+        padding: 25px 0;
+      }
+    }
+  }
+}
