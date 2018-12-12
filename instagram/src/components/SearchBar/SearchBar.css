@@ -1,0 +1,20 @@
+.search-logos {
+  display: flex;
+}
+.insta-logo {
+  width: 100%;
+}
+.insta-logo img {
+  max-width: 30px;
+}
+.spacer-line {
+  height: 30px;
+  width: 1px;
+  background: rgba(0,0,0,0.5);
+}
+.insta-logo-text {
+  width: 100%;
+}
+.insta-logo-text img {
+  max-width: 100px;
+}
