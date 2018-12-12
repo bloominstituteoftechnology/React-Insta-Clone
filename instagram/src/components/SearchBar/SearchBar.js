@@ -32,6 +32,7 @@ const SearchBar = props => (
 SearchBar.propTypes = {
     onSearch: PropTypes.func,
     onSearchInput: PropTypes.func,
+    onLogout: PropTypes.func,
 };
 
 export default SearchBar;

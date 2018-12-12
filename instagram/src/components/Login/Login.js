@@ -23,7 +23,7 @@ class Login extends React.Component{
         if (type === 'usernameLogin') this.setState({ usernameBlank: false });
         if (type === 'passwordLogin') this.setState({ passwordBlank: false });
         const current = `${type}Input`;
-        this.setState({ [current]: e.target.value }, () => console.log(this.state));
+        this.setState({ [current]: e.target.value });
     }
     login = e => {
         e.preventDefault();

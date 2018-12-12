@@ -88,9 +88,16 @@ class App extends Component {
       localStorage.removeItem('data');
     });
   }
-  logout = () => {
+  logout = () => { // Re-sorting data to avoid search results persisting after logout, but changes material right before page reload.
     localStorage.removeItem('username');
-    this.setState({ username: null}, () => window.location.reload());
+    this.setState((prevState) => {
+      return {
+        username: null,
+        data: prevState.stored.concat(prevState.data).sort((a, b) => moment(b.timestamp,'MMMM Do YYYY, hh:mm:ss a').valueOf() 
+        - moment(a.timestamp,'MMMM Do YYYY, hh:mm:ss a').valueOf()),
+        stored: [],
+      };
+    }, () => window.location.reload());
   }
   render() {
     return (
