@@ -27,7 +27,7 @@ class PostContainer extends React.Component {
           <p>{this.state.username}</p>
         </div>
 
-        <img src={this.state.image} alt="thumbnail"/>
+        <img className="post__thumbnail"src={this.state.image} alt="thumbnail"/>
 
         <CommentSection time={this.state.time}
                         likes={this.state.likes}

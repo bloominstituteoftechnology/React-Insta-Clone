@@ -1,21 +1,49 @@
+.post__comments {
+  font-size: 1.6rem;
+  padding: 2% 5%;
+}
+
 .post__comments__interaction {
   width: 100%;
   max-width: 150px;
 
-  font-weight: bold;
-  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .post__comments__interaction img {
-  margin: 5%;
+  margin-right: 5%;
+  cursor: pointer;
 }
 
-.post__comments__interaction img:first-child {
-  margin-left: 10%;
-}
 
 .post__comments__interaction p {
   margin: 0;
-  margin-left: 12%;
   padding: 0;
+}
+
+.post__comments__time {
+  font-size: 1.3rem;
+  opacity: .6;
+}
+
+.post__comments__add {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding-top: 10px;
+}
+
+.post__comments__add input {
+  border: none;
+  font-size: 1.4rem;
+}
+
+.post__comments__add input:focus {
+  outline: none;
+}
+
+.post__comments__add {
+  cursor: pointer;
 }
