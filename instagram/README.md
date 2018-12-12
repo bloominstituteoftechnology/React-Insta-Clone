@@ -22,16 +22,22 @@ Your React application will receive faux post data and render each as a separate
 
 Day I
 Focus (Day I)
-Demonstrate the the ability to use create-react-app to boilerplate a react application
+Demonstrate the the ability to use create-react-app to boilerplate a react application  
+-------------- completed ----------
 Describe and be able to use PropTypes to 'type check' specific data being passed down to a child component
 Demonstrate the ability to use defaultProps in a React component
-Project Setup
+
+Project Setup has been completed without issue.
+
 If you so choose you may install create-react-app globally by running yarn global add create-react-app.
 If you have CRA installed then run create-react-app instagram to create your starter application with the name instagram.
 If you don't have CRA installed then run npx create-react-app instagram to create your starter application with the name instagram.
 Create a components directory inside the src directory, and then create a sub-directory called SearchBar, another one called PostContainer, and lastly one called CommentSection, all inside the src directory. Each of these directories should contain the component file as well as the CSS for their respective components. You'll also want to put any other components that coincide with your respective container components inside of these directories.
+
+
 Tasks (Day I)
 There are three major container components that you'll need to implement for this project: the Search Bar, the Post Container, and the Comment Section.
+
 At the end of Day I there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Post Container and a Comment Section for every piece of mock data in the dummy-data.js file.
 The root App component of your application should import the dummy data from the dummy-data.js file with import dummyData from './dummy-data'; and iterate over said data, passing each individual object as a prop to an instance of PostContainer.
 Each PostContainer component will then pass the array of comments on each post object as a prop to an instance of the CommentSection component.
