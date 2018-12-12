@@ -1,0 +1,16 @@
+.container {
+  border: 1px solid #fff;
+  width: 80vw;
+  margin: auto;
+  background-color: #fff;
+  color: #000;
+}
+.top {
+
+  display: flex;
+  border: 1px solid grey;
+  height: 50px;
+  justify-content: flex-start;
+  padding-left: 20px;
+  padding-top: 20px;
+}
