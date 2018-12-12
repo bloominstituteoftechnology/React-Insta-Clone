@@ -14,18 +14,27 @@ class Login extends React.Component{
             lastNameRegInput: '',
             passwordRegInput: '',
             birthdayRegInput: '',
+            usernameBlank: false,
+            passwordBlank: false,
 
         };
     }
     handleChange = (e, type) => {
+        if (type === 'usernameLogin') this.setState({ usernameBlank: false });
+        if (type === 'passwordLogin') this.setState({ passwordBlank: false });
         const current = `${type}Input`;
         this.setState({ [current]: e.target.value }, () => console.log(this.state));
     }
     login = e => {
         e.preventDefault();
-        if (!this.state.usernameLoginInput || 
-            !this.state.passwordLoginInput ||
-            !this.state.usernameLoginInput.trim()) return;
+        if (!this.state.usernameLoginInput || !this.state.usernameLoginInput.trim()){
+            this.setState({ usernameBlank: true });
+            return;
+        }
+        if (!this.state.passwordLoginInput){
+            this.setState({ passwordBlank: true });
+            return;
+        }
         localStorage.setItem('username', JSON.stringify(this.state.usernameLoginInput));
         window.location.reload();
         return false;
@@ -44,7 +53,8 @@ class Login extends React.Component{
                             <form className="login-form" onSubmit={this.login} method="POST">
                                 <h4>Login</h4>
                                 <input type="text" 
-                                    placeholder="Username" 
+                                    placeholder="Username"
+                                    style={this.state.usernameBlank ? {border: '3px solid red'} : {}} 
                                     name="usernameLogin" 
                                     value={this.state.usernameLoginInput}
                                     onChange={(e) => this.handleChange(e, 'usernameLogin')}
@@ -52,6 +62,7 @@ class Login extends React.Component{
                                 <input 
                                     type="password" 
                                     placeholder="Password" 
+                                    style={this.state.passwordBlank ? {border: '3px solid red'} : {}}
                                     name="passwordLogin"
                                     value={this.state.passwordLoginInput}
                                     onChange={(e) => this.handleChange(e, 'passwordLogin')}
