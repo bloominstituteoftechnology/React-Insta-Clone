@@ -1,0 +1,31 @@
+.searchBarContainer {
+    max-width: 568px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.fa-instagram {
+    padding: 0 10px;
+}
+
+img {
+    padding: 0 80px 0 10px;
+}
+
+.input {
+    padding: 0 10px;
+}
+
+.fa-dot-circle {
+    padding: 0 10px 0 80px;
+}
+
+.fa-heart {
+    padding: 0 10px;
+} 
+
+.fa-user-alt {
+    padding: 0 10px;
+}
