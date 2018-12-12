@@ -9,7 +9,7 @@ import title from '../../img/insta-title.png';
 import compass from '../../img/insta-compass.png';
 import heart from '../../img/insta-heart.png';
 import profile from '../../img/insta-profile.png';
-import search from '../../img/insta-search.png';
+
 
 
 class SearchBar extends React.Component {
@@ -42,6 +42,10 @@ class SearchBar extends React.Component {
       </div>
     );
   }
+}
+
+SearchBar.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default SearchBar;

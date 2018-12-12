@@ -6,10 +6,6 @@ import dummyData from './dummy-data';
 
 import './App.css';
 
-console.log(dummyData);
-
-
-
 class App extends Component {
   constructor(props) {
     super(props);
