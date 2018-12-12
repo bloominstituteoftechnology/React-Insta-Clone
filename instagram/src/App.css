@@ -1,3 +1,7 @@
 html {
   font-size: 62.5%;
 }
+
+.App:nth-child(1) {
+  margin-top: 70px;
+}

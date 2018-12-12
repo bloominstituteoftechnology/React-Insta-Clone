@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './SearchBar.css';
+
 import logo from '../../img/insta-logo.png';
 import title from '../../img/insta-title.png';
 
 import compass from '../../img/insta-compass.png';
 import heart from '../../img/insta-heart.png';
 import profile from '../../img/insta-profile.png';
+import search from '../../img/insta-search.png';
 
 
 class SearchBar extends React.Component {
@@ -31,7 +34,7 @@ class SearchBar extends React.Component {
 
         <input type="text" placeholder={"search..."} />
 
-        <div className="icons">
+        <div className="search-bar__icons">
           <img src={compass} alt="Instagram" />
           <img src={heart} alt="Instagram" />
           <img src={profile} alt="Instagram" />
