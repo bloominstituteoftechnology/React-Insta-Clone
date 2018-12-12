@@ -2,6 +2,10 @@ import React from 'react';
 import Proptypes from 'prop-types';
 import Comment from './Comment';
 
+import heart from '../../img/insta-heart.png';
+import reply from '../../img/insta-reply.PNG';
+import comment from '../../img/insta-comment.PNG';
+
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
@@ -15,15 +19,24 @@ class CommentSection extends React.Component {
 
   render() {
 
-    const comments = this.state.comments.map(comment => <Comment user={comment.username} text={comment.text} />)
+    const comments = this.state.comments.map(comment => <Comment key={Math.random()}
+                                                                 user={comment.username}
+                                                                 text={comment.text} />)
 
     return(
       <div className="post__comments">
+
         <div  className="post__comments__interaction">
-          <p>{this.state.likes}</p>
+          <img src={heart} alt="insta-heart" />
+          <img src={reply} alt="insta-reply" />
+          <p>{this.state.likes} likes</p>
         </div>
+
         {comments}
+
         <p className="post__comments__time">{this.state.time}</p>
+        <input type="text" placeholder="Add Comment.." />
+        <img src={comment} alt="insta-comment" />
       </div>
     );
   }
