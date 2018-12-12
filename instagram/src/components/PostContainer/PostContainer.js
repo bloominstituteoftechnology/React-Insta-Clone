@@ -2,6 +2,8 @@ import React from 'react';
 import Proptypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 
+import './PostContainer.css';
+
 class PostContainer extends React.Component {
   constructor(props) {
     super(props);

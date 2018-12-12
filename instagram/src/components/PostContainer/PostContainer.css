@@ -1,0 +1,23 @@
+.post {
+  border: 1px solid red;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.post__user {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 200px;
+
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.post__user img {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  margin:  0 6% 0 8%;
+}

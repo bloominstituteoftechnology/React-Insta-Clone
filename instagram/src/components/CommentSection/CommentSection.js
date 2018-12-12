@@ -35,8 +35,11 @@ class CommentSection extends React.Component {
         {comments}
 
         <p className="post__comments__time">{this.state.time}</p>
-        <input type="text" placeholder="Add Comment.." />
-        <img src={comment} alt="insta-comment" />
+
+        <div className="post__comments__add">
+          <input type="text" placeholder="Add Comment.." />
+          <img src={comment} alt="insta-comment" />
+        </div>
       </div>
     );
   }
