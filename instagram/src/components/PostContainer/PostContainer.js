@@ -1,8 +1,9 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 
 const PostContainer = (props) => {
   return (
-    console.log ('PostContainer test' )
+    <div>PostContainer</div>
   );
 }
 

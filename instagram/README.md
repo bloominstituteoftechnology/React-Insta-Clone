@@ -39,6 +39,8 @@ Tasks (Day I)
 There are three major container components that you'll need to implement for this project: the Search Bar, the Post Container, and the Comment Section.
 
 At the end of Day I there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Post Container and a Comment Section for every piece of mock data in the dummy-data.js file.
+
+
 The root App component of your application should import the dummy data from the dummy-data.js file with import dummyData from './dummy-data'; and iterate over said data, passing each individual object as a prop to an instance of PostContainer.
 Each PostContainer component will then pass the array of comments on each post object as a prop to an instance of the CommentSection component.
 The CommentSection component will receive the array of comments as props and render a Comment component with the username of the poster as well as the post's text. Additionally, there should be an input box that allows users to submit a new comment for any post. We'll work on posting new comments tomorrow.

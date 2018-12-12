@@ -1,7 +1,8 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 const SearchBar = (props) => {
   return (
-    console.log('SearchBar test')
+  <div>SearchBar</div>
   );
 }
 

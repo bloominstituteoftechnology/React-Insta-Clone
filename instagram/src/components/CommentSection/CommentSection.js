@@ -1,7 +1,8 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 const CommentSection = (props) => {
   return (
-    console.log('CommentSection Test')
+    <div>CommentSection</div>
   );
 }
 
