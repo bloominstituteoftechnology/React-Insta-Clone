@@ -1,0 +1,21 @@
+.post__comments__interaction {
+  width: 100%;
+  max-width: 150px;
+
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.post__comments__interaction img {
+  margin: 5%;
+}
+
+.post__comments__interaction img:first-child {
+  margin-left: 10%;
+}
+
+.post__comments__interaction p {
+  margin: 0;
+  margin-left: 12%;
+  padding: 0;
+}

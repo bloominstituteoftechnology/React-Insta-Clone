@@ -6,6 +6,8 @@ import heart from '../../img/insta-heart.png';
 import reply from '../../img/insta-reply.PNG';
 import comment from '../../img/insta-comment.PNG';
 
+import './CommentSection.css';
+
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
