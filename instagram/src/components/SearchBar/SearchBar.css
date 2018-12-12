@@ -1,31 +1,49 @@
-.searchBarContainer {
-    max-width: 568px;
-    width: 100%;
-    border-bottom: 1px solid lightgrey;
-    display: flex;
-    align-items: center;
+html {
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-.fa-instagram {
-    padding: 0 10px;
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
 }
 
 img {
-    padding: 0 80px 0 10px;
+  max-width: 100%;
+  height: auto;
 }
 
-.input {
-    padding: 0 10px;
+.searchBarContainer {
+  max-width: 640px;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.fa-dot-circle {
-    padding: 0 10px 0 80px;
+.logoContainer {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: space-between;
+  margin-left: 1%;
 }
 
-.fa-heart {
-    padding: 0 10px;
-} 
-
-.fa-user-alt {
-    padding: 0 10px;
+.userIconsContainer {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: space-between;
+  margin-right: 1%;
 }
+
