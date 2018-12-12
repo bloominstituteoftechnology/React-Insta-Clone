@@ -6,6 +6,7 @@
   left: 50%;
   transform: translateX(-50%);
 
+  z-index: 9001;
   background-color: white;
 
   display: flex;
@@ -13,7 +14,7 @@
   align-items: center;
 
   width: 100%;
-  max-width: 640px;
+  max-width: 642px;
 
   box-sizing: border-box;
   padding: 5px 0px;

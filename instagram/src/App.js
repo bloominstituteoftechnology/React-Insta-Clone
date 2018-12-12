@@ -11,7 +11,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      data: dummyData
+      data: dummyData,
+      prevData: []
     }
   }
 
@@ -25,6 +26,7 @@ class App extends Component {
                                                       time={obj.timestamp}
                                                       likes={obj.likes}
                                                       comments={obj.comments}/>)
+
 
 
     return (

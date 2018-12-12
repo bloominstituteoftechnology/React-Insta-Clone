@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 
+import moment from 'moment'
+
 import heart from '../../img/insta-heart.png';
 import reply from '../../img/insta-reply.PNG';
 import comment from '../../img/insta-comment.PNG';
@@ -38,6 +40,14 @@ class CommentSection extends React.Component {
                                                                  user={comment.username}
                                                                  text={comment.text} />)
 
+
+    const splitDate = this.state.time.split(' ');
+    const year = splitDate[2].substring(0, splitDate[2].length-1);
+    const month = splitDate[0];
+    const day = splitDate[1].substring(0,2);
+
+    const postMoment = moment(`${year}-${month}-${day}`);
+
     return(
       <div className="post__comments">
 
@@ -49,7 +59,7 @@ class CommentSection extends React.Component {
 
         {comments}
 
-        <p className="post__comments__time">{this.state.time}</p>
+        <p className="post__comments__time">{postMoment.from(moment())}</p>
 
         <div className="post__comments__add">
           <input type="text" placeholder="Add Comment..." onKeyPress={this.addComment}/>

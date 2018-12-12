@@ -18,8 +18,6 @@ class SearchBar extends React.Component {
 
     this.state = {
       users: this.props.data.map(obj => obj.username),
-      prevState: this.props.data,
-      newState: [],
     }
   }
 
