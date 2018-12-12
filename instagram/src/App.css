@@ -67,8 +67,11 @@ nav img {
   display: flex;
   flex-direction: row;
 }
-.navs.icons {
+.navs.search {
   justify-content: center;
+}
+.navs.icons {
+  justify-content: flex-end;
 }
 .navs .icons {
   padding: 0px 10px;

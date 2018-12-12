@@ -11,7 +11,7 @@ const SearchBar = () => {
                 <img src={logo} alt="insta-logo" />
                 <h3>Instagram</h3>
             </div>
-            <div className="navs">
+            <div className="navs search">
                 <button>
                     <i className="fa fa-search"></i>
                     Search
