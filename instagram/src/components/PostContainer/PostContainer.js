@@ -1,10 +1,10 @@
 import React from 'react';
 import Post from './Post';
+import PropTypes from 'prop-types';
 
 const PostContainer = props => {
     return (
         props.posts.map(post => {
-            console.log(post.comments);
             return(
                 <div className="container">
                     <Post 
@@ -16,13 +16,14 @@ const PostContainer = props => {
                     timestamp={post.timestamp}
                     comments={post.comments}
                     />
-                    
-                    
                 </div>
             )
         })
     )
-
 }
+
+PostContainer.propType = {
+    posts: PropTypes.arrayOf(PropTypes.object)
+};
 
 export default PostContainer;
