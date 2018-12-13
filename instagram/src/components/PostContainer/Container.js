@@ -8,7 +8,7 @@ import './post.css';
 const Container = props => {
     const comments = props.post.comments;
     const commentsArray = comments.map( (comment, index) => (
-        <ul key={index} value={comment}>{comment.username} {comment.text}</ul> 
+        <ul key={index} value={comment}><span className="bold">{comment.username}</span> {comment.text}</ul> 
     ))
     return (
         <div>
@@ -22,7 +22,7 @@ const Container = props => {
                     <img src={props.post.imageUrl} alt="lgImage" className="postedImage"/>
                 </section>
                 <section className="reactions">
-                    <img src="heart"/>
+                    <div className="heart"></div>
                     {props.post.likes} likes
                     {commentsArray}
                     {props.post.timestamp}
