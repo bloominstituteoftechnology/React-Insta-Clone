@@ -43,10 +43,11 @@ class App extends Component {
         <div>
         <SearchBar/>
         <PostContainer
-        post = {this.state.dummyData}
-        />
-        <CommentSection
-        comm = {this.state.dummyData}/>
+        post = {this.state.dummyData}/>
+
+      
+      
+        
         </div>
        
       </div>
