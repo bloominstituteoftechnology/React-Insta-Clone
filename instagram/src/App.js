@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import PostContainer from './Components/PostContainer/PostContainer';
-import SearchBar from './Components/SearchBar/SearchBar';
-import CommentSection from './Components/CommentSection/CommentSection';
+import PostContainer from './components/PostContainer/PostContainer';
+import SearchBar from './components/SearchBar/SearchBar';
+import CommentSection from './components/CommentSection/CommentSection';
 
 class App extends Component {
   constructor( props)
