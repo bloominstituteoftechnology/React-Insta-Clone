@@ -11,11 +11,15 @@ const PostContainer = props => {
             <UserInfo thumbnailUrl={props.post.thumbnailUrl} username={props.post.username} />
 
             <div className="image-container">
-                <img src={props.post.imageUrl} alt=""/>
+                <img src={props.post.imageUrl} alt="" className="post-image"/>
             </div>
-            <div className="icon-container"></div>
-            <p className="likes">Likes {props.post.likes}</p>
-            <CommentSection comments={props.post.comments} />
+
+            <div className="bottom-container">
+                <div className="icon-container"></div>
+                <p className="likes">{props.post.likes} likes</p>
+                <CommentSection comments={props.post.comments} />
+            </div>
+            
         </div>
     );
 }

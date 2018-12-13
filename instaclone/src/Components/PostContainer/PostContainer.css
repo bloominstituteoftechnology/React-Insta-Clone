@@ -1,0 +1,25 @@
+.post-container{
+    display: flex;
+    flex-direction: column;
+
+    margin:3rem 0rem;
+
+    /* temporary */
+    max-width: 640px;
+
+    border: 1px solid #AB7C94;
+}
+
+.post-image{
+    width:100%;
+}
+.bottom-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 2rem;
+}
+
+.bottom-container .likes{
+    font-weight: bold;
+}
