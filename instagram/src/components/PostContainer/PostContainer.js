@@ -14,7 +14,9 @@ const PostContainer = props => {
 							userPic = {user.thumbnailUrl}
 							UserName = {user.username}
 							UserPost = {user.imageUrl}
-							UserLikes = {user.likes}/>
+							UserLikes = {user.likes}
+							UserComments = {user.comments}
+							/>
 						)
 					})
 				}

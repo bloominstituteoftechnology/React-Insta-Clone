@@ -21,10 +21,17 @@ const UserTitle = props => {
 				<div>
 					{props.UserLikes} Likes
 				</div>
+				<div>
+					{props.UserComments.map( comment => {
+						return (
+							<UserComments 
+								comUserName = {comment.username}
+								comUserCom = {comment.text}/>
+						)
+					})}
+				</div>
 			</div>
-			<div>
-				<UserComments/>
-			</div>
+			
 		)
 }
 
