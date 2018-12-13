@@ -1,11 +1,18 @@
 import React from 'react';
+import CommentSection from '../CommentSection/CommentSection';
+
+
+
  const Post = ( props ) =>
 {
-  return( 
-    <div>
+
+return( 
+    <div className = "post">
       <p>{ props.data.username }</p>
-      <img src = { props.data.thumbnailUrl}></img>
-      <p></p>
+      <img src = { props.data.thumbnailUrl }></img>
+      <img src = { props.data.imageUrl }></img>
+      <p>{ props.data.likes }</p>
+      <CommentSection comments = { props.data.comments }/>
     </div>
   )
 }

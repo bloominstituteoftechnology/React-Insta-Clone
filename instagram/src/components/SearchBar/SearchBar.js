@@ -4,7 +4,7 @@ import React from 'react';
   render()
   {
     return(
-      <div>SearchBar</div>
+        <div className = "searchbar">SearchBar</div>
     )
   }
 }
