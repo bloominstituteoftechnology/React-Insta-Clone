@@ -7,6 +7,12 @@
   align-items: center;
 }
 
+.post-header h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: auto 1%;
+}
+
 .post-header img {
   width: 40px;
   height: 40px;

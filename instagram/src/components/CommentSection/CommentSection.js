@@ -1,14 +1,14 @@
 import React from "react";
 import "./CommentSection.css";
-import { Input } from "reactstrap";
-import { FiHeart, FiMessageCircle } from "react-icons/fi";
+import { FiHeart, FiMessageCircle, FiSend } from "react-icons/fi";
 
 const CommentSection = props => {
   return (
     <div className={"comments-container"}>
-      <div className={"icon container"}>
+      <div className={"icon-container"}>
         <FiHeart className={"icon"} />
         <FiMessageCircle className={"icon"} />
+        <FiSend className={"icon"} />
       </div>
       <h3 className={"likes"}>{props.data.likes} likes</h3>
       {props.data.comments.map((comments, index) => {
@@ -19,7 +19,6 @@ const CommentSection = props => {
           </div>
         );
       })}
-      <Input placeHolder={"Add comment..."} />
     </div>
   );
 };

@@ -1,0 +1,8 @@
+.comments-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-container .icon {
+  margin-right: 1%;
+}

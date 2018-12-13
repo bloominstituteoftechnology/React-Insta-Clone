@@ -4,6 +4,7 @@ import "./PostContainer.css";
 import PostHeader from "./PostHeader";
 import CommentSection from "../CommentSection/CommentSection";
 import TimePosted from "./TimePosted";
+import { Input } from "reactstrap";
 
 const PostContainer = props => {
   return (
@@ -16,6 +17,7 @@ const PostContainer = props => {
       />
       <CommentSection data={props.data} />
       <TimePosted timestamp={props.data.timestamp} />
+      <Input placeHolder={"Add comment..."} />
     </div>
   );
 };
