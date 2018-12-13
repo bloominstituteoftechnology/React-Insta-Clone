@@ -40,7 +40,7 @@ const PostContainer = props => (
     <Post>
         <Header>
             <Thumbnail src={props.data.thumbnailUrl} alt="user thumbnail" draggable="false" />
-            <Username>{props.data.username}</Username>
+            <Username main>{props.data.username}</Username>
         </Header>
         <PostImage src={props.data.imageUrl} alt="User post" draggable="false" />
         <CommentSection 
