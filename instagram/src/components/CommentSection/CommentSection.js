@@ -11,7 +11,7 @@ const CommentSection = props => {
         <FiMessageCircle className={"icon"} />
         <FiSend className={"icon"} />
       </div>
-      <h3 className={"likes"}>{props.data.likes} likes</h3>
+      <span className={"likes"}>{props.data.likes} likes</span>
       {props.data.comments.map((comments, index) => {
         return (
           <div className={"comments-field"} key={comments.text}>

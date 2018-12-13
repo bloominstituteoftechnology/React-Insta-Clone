@@ -3,6 +3,11 @@
   flex-direction: column;
 }
 
+.comments-container span {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
 .icon-container .icon {
   margin-right: 1%;
 }
