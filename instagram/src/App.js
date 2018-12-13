@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js'
-import PostContainer from './components/PostContainer/postContainer';
+import PostContainer from './components/postContainer';
 
 class App extends Component {
   constructor(){
