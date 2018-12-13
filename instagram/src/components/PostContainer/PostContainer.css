@@ -1,3 +1,9 @@
+.postContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 100px;
+}
 
 .post {
   border: 1px solid lightgray;

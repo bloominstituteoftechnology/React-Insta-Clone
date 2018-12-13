@@ -1,9 +1,18 @@
 
 .SearchBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   color: black;
-  padding: 20px;
+  padding: 10px;
   font-size: 2rem;
   border-bottom: 1px solid lightgray;
+  background-color: white;
+}
+
+.SearchBar .navbar {
+  width: 42%;
+  margin: auto;
 }
 
 .SearchBar a.navbar-brand {
