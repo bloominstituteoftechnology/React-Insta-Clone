@@ -3,8 +3,13 @@
   flex-direction: column;
 }
 
-.comments-container span {
+.comments-container .comment-username {
   font-weight: bold;
+  font-size: 1.4rem;
+  margin-right: 1%;
+}
+
+.comments-container .comment-content {
   font-size: 1.4rem;
 }
 

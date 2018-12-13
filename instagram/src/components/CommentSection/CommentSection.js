@@ -15,8 +15,12 @@ const CommentSection = props => {
       {props.data.comments.map((comments, index) => {
         return (
           <div className={"comments-field"} key={comments.text}>
-            <span className={"comment-username"}>{comments.username}</span>
-            <p className={"comment-content"}>{comments.text}</p>
+            <p className={"comment-content"}>
+              <span className={"comment-username"}>
+                {comments.username}
+              </span>
+              {comments.text}
+            </p>
           </div>
         );
       })}
