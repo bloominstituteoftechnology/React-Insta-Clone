@@ -3,25 +3,23 @@ import './SearchBar.css';
 
 const SearchBar = props =>{
     return(
-        <div>
             <div className="searchLogo">
-                <div>
-                    <span>icon</span>
-                    <div>|</div>
-                    <span>instagram</span>
+                <div className="logo">
+                    <div className="insta"></div>
+                    <span className="divider">|</span>
+                    <div className="instagram"></div>
                 </div>
                 <div>
                     <form>
-                        <input value="search" />
+                        <input className="search-logo" value="search" />
                     </form>
                 </div>
-                <div>
-                    <span>explore</span>
-                    <span>heart</span>
-                    <span>profile</span>
+                <div className="icons">
+                    <div className="explore"></div>
+                    <div className="heart"></div>
+                    <div className="profile"></div>
                 </div>
             </div>
-        </div>
     )
 }
 
