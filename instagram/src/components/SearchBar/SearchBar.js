@@ -26,7 +26,6 @@ class SearchBar extends React.Component {
         <Field>
           <Control iconLeft>
             <Input
-              color="info"
               type="text"
               placeholder="Search"
               name="newSearch"
