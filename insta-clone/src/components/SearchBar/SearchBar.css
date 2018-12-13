@@ -1,0 +1,39 @@
+.SearchBar {
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+}
+
+  .logo {
+    display: flex;
+  }
+
+    .insta-logo {
+      width: 30px;
+      height: 30px;
+    }
+
+    .insta-name {
+      width: 120px;
+      height: 40px;
+    }
+
+  .user {
+    display: flex;
+  }
+
+    .compass {
+      width: 34px;
+      height: 34px;
+    }
+
+    .heart {
+      width: 24px;
+      height: 24px;
+    }
+
+    .person {
+      width: 36px;
+      height: 36px;
+    }
