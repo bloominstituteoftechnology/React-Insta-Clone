@@ -20,7 +20,7 @@ class App extends Component {
           <SearchBar />
         </nav>
         <div className="body-wrapper">
-          <PostContainer key={Math.random()} posts={this.state.posts} />
+          <PostContainer posts={this.state.posts} />
         </div>
       </div>
     );

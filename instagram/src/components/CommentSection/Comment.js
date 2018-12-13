@@ -1,5 +1,7 @@
 import React from 'react';
-import './Comment.css'
+import './Comment.css';
+import PropTypes from 'prop-types';
+
 const Comment = props => {
     return (
         <div className="comment-container">
@@ -9,4 +11,8 @@ const Comment = props => {
     )
 }
 
+Comment.propTypes = {
+    text: PropTypes.string.isRequired,
+    username: PropTypes.string
+};
 export default Comment;

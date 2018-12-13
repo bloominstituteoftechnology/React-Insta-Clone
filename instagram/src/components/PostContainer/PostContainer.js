@@ -8,6 +8,7 @@ const PostContainer = props => {
             return(
                 <div className="container">
                     <Post 
+                    post={post}
                     key={Math.random()} 
                     username={post.username}
                     thumbnailUrl={post.thumbnailUrl}
