@@ -3,8 +3,12 @@ import PropTypes from "prop-types";
 import "./PostContainer.css";
 import Message from "./Message";
 import Comments from "../CommentSection/Comments";
+import moment from 'moment';
+const time = moment();
 
 const Post = props => {
+  const myTime = props.post.timestamp;
+  let newTime = moment(myTime);
   return (
     <div className="postContainer">
       <div className="topContainer">
@@ -34,7 +38,7 @@ const Post = props => {
               ))}
             </div>
             <div className='timeStamp'>
-              {props.post.timestamp}
+              <span className="time-stamp">{newTime.format('Do MMM')}</span>  
             </div>
           </div>
           <div className="commentsContainer">
