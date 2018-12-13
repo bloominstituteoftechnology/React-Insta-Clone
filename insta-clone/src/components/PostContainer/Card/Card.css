@@ -1,14 +1,63 @@
 .Card {
   width: 100%;
-  border: 1px solid blue;
+  border: 1px solid lightgray;
+  margin-top: 10px;
 }
 
   .cardHeader {
     display: flex;
+    height: 60px;
   }
 
     .cardHeader img {
       border-radius: 50%;
       width: 32px;
       height: 32px;
+      margin: 10px 0 0 10px;
+      padding: 5px;
     }
+
+  .cardIMG {
+    width: 100%;
+  }
+
+  .comments {
+    /* border: 1px solid red; */
+  }
+
+    .icons {
+      display: flex;
+      padding: 12px 0 0 12px;
+    }
+
+      .icons img:nth-child(1) {
+        width: 24px;
+        height: 24px;
+      }
+
+      .icons img:nth-child(2) {
+        width: 30px;
+        height: 30px;
+        margin-top: -4px;
+        padding: 0 10px 0 10px;
+      }
+
+      .icons p {
+        margin-top: -0px;
+        font-size: 17px;
+        font-weight: bold;
+      }
+
+  .timestamp {
+    text-align: left;
+    padding: 0 0 0 14px; 
+  }
+
+  .commentInput {
+    width: 96%;
+    border: none;
+    border-top: 1px solid lightgray;
+    height: 56px;
+    color: lightgray;
+    font-weight: bold;
+  }

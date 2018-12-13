@@ -14,7 +14,7 @@ const Card = props => {
         <p>{card.username}</p>
       </div>
 
-      <img src={card.imageUrl} alt="post IMG" />
+      <img src={card.imageUrl} className="cardIMG" alt="post IMG" />
 
       <div className="comments">
         <div className="icons">
@@ -25,9 +25,10 @@ const Card = props => {
         {card.comments.map(comment => (
           <Comment comment={comment} />
         ))}
-        <p>{card.timestamp}</p>
+        <p className="timestamp">{card.timestamp}</p>
       </div>
 
+      <input type="text" className="commentInput" placeholder="Add a comment..." />
     </div>
   );
 };
