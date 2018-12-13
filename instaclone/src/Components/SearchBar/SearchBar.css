@@ -1,0 +1,58 @@
+.nav-bar-container{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem;
+}
+
+/* this is for the branding including the logo and the name */
+.branding-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    max-height: 30px;
+    max-width:30px;
+    height: 100%;
+    width: 100%;
+}
+.divider{
+    border-left:1px solid  black;
+    width: 1px;
+    height: 30px;
+    margin: 0rem 1rem;
+}
+.logo-name{
+    max-width: 100px;
+    height:auto;
+    padding-top:10px;
+}
+
+/*  this is for the actual search input */
+.search-input{
+    background-color:light-gray;
+    border: solid rgb(182, 182, 182);
+    border-width: 1px 1px;
+    border-radius:2px;
+    
+}
+.search-input::placeholder{
+    text-align: center;
+}
+.search-input:placeholder-shown{
+    background: url('./imgs/search.svg')  no-repeat scroll 25px;
+}
+
+/* icon container for the compass the heart and the person */
+.icon-container{
+    display: flex;
+    justify-content: space-between;
+    
+    width: 110px;
+}
+.icon{
+    max-width:25px;
+    max-height:25px;
+}
