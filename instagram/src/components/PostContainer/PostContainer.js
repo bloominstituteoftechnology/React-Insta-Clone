@@ -16,7 +16,7 @@ const PostContainer = props => {
         className={"posted-image"}
       />
       <CommentSection data={props.data} />
-      <TimePosted timestamp={props.data.timestamp} />
+      <TimePosted className={"timestamp"} timestamp={props.data.timestamp} />
       <Input placeholder={"Add comment..."} />
     </div>
   );

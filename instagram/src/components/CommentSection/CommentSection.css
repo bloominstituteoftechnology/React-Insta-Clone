@@ -1,3 +1,10 @@
+.likes {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
 .comments-container {
   display: flex;
   flex-direction: column;
@@ -15,4 +22,9 @@
 
 .icon-container .icon {
   margin-right: 1%;
+}
+
+.timestamp {
+  font-weight: lighter;
+  
 }
