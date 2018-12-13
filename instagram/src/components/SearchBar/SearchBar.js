@@ -1,6 +1,28 @@
 import React from "react";
-import { Input } from "reactstrap";
+import SearchInput from "./SearchInput";
+import {
+  FiSearch,
+  FiInstagram,
+  FiCompass,
+  FiHeart,
+  FiUser
+} from "react-icons/fi";
+import "./SearchBar.css";
 
-const SearchBar = props => <Input placeHolder="Search" />;
-
+const SearchBar = props => {
+  return (
+    <div className="search-bar-container">
+      <div className="logo-container">
+        <FiInstagram className="icon logo" />
+        <h1 id="header-logo">SlightDelayGram</h1>
+      </div>
+      <SearchInput />
+      <div className="header-icon-container">
+        <FiCompass className="icon" />
+        <FiHeart className="icon" />
+        <FiUser className="icon" />
+      </div>
+    </div>
+  );
+};
 export default SearchBar;
