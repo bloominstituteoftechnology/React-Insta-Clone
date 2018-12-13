@@ -1,0 +1,21 @@
+.postContainer{
+    width: 90%;
+}
+
+.postPicture{
+    width: 50%;
+}
+
+.OpContainer{
+    display: flex;
+}
+
+.postOp{
+    font-size: 0.9rem;
+}
+
+.postOpAvatar{
+    width: 10%;
+    height: 40px;
+    border-radius: 70%;
+}
