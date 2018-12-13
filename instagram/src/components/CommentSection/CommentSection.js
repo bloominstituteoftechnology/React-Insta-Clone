@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Container from "react-bulma-components/lib/components/container";
+// import Container from "react-bulma-components/lib/components/container";
 import Heading from "react-bulma-components/lib/components/heading";
 import {
   Field,
@@ -8,6 +8,7 @@ import {
   Input
 } from "react-bulma-components/lib/components/form";
 import Icon from "react-bulma-components/lib/components/icon";
+import Content from 'react-bulma-components/lib/components/content';
 import PropTypes from "prop-types";
 import "./CommentSection.scss";
 
@@ -27,16 +28,16 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Container>
+      <Content>
+        <Content>
         <FontAwesomeIcon icon={["far", "heart"]} size="2x" />
         <FontAwesomeIcon icon={["far", "comment"]} size="2x" flip="horizontal" />
-        </Container>
+        </Content>
         {this.props.comments.map((current, index) => {
           return (
-            <Container key={`comments-of-${this.props.belongsTo}-from-${current.username}-keyIsText:${current.text}`} className="flexify">
+            <Content key={`comments-of-${this.props.belongsTo}-from-${current.username}-keyIsText:${current.text}`} className="flexify">
               <Heading subtitle size={5} renderAs="h2"> {current.username} </Heading> <p> {current.text} </p>
-            </Container>
+            </Content>
           );
         })}
         <p>{this.props.time}</p>
@@ -54,7 +55,7 @@ class CommentSection extends React.Component {
             </Icon>
           </Control>
         </Field>
-      </Container>
+      </Content>
     );
   }
 }
