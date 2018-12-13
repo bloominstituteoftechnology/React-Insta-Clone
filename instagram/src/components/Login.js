@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import SearchBar from '../SearchBar/SearchBar';
+import SearchBar from './SearchBar';
 
 const Container = styled.div`
     box-sizing: border-box;

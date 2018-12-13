@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import styled from 'styled-components';
-import heart from '../../assets/insta-heart.png';
-import reply from '../../assets/insta-reply.PNG';  // For some reason, caps required for png
-import commentOptions from '../../assets/insta-comment.PNG';
-import Comment from '../Comment/Comment';
+import heart from '../assets/insta-heart.png';
+import reply from '../assets/insta-reply.PNG';  // For some reason, caps required for png
+import commentOptions from '../assets/insta-comment.PNG';
+import Comment from './Comment';
 
 const Comments = styled.section`
     display: flex;

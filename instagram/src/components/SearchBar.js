@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import logo from '../../assets/insta-logo.png';
-import textLogo from '../../assets/insta-title.png'; 
-import compass from '../../assets/insta-compass.png';
-import heart from '../../assets/insta-heart.png';
-import profile from '../../assets/insta-profile.png';
+import logo from '../assets/insta-logo.png';
+import textLogo from '../assets/insta-title.png'; 
+import compass from '../assets/insta-compass.png';
+import heart from '../assets/insta-heart.png';
+import profile from '../assets/insta-profile.png';
 
 const Container = styled.header`
     display: flex;

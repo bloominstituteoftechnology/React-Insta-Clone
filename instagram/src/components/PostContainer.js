@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import CommentSection from '../CommentSection/CommentSection';
+import CommentSection from './CommentSection';
 
 const Post = styled.section`
     width: 50%;

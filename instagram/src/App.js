@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import './App.css';
 import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostsPage from './components/PostContainer/PostsPage';
-import Authenticate from './components/Authentication/Authenticate';
+import SearchBar from './components/SearchBar';
+import PostsPage from './components/PostsPage';
+import Authenticate from './components/Authenticate';
 
 class App extends Component {
   constructor(props){
