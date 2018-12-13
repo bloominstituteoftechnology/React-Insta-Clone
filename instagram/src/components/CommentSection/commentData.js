@@ -1,4 +1,4 @@
-const commentData = [
+export const commentData = [
     {
         comments: [
             {
@@ -57,3 +57,5 @@ const commentData = [
       ]
     }
 ]
+
+export default commentData;
