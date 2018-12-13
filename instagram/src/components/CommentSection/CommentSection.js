@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./CommentSection.css";
 import { FiHeart, FiMessageCircle, FiSend } from "react-icons/fi";
 
@@ -21,6 +22,18 @@ const CommentSection = props => {
       })}
     </div>
   );
+};
+
+CommentSection.propTypes = {
+  data: PropTypes.shape({
+    likes: PropTypes.number,
+    comments: PropTypes.arrayOf(
+      PropTypes.shape({
+        username: PropTypes.string,
+        text: PropTypes.string
+      })
+    )
+  })
 };
 
 export default CommentSection;
