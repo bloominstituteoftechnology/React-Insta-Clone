@@ -1,24 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import SearchBar from "./components/SearchBar/SearchBar";
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <div className="brand">
+            <span className="brand__logo">
+              <i class="fas fa-camera-retro" />
+            </span>
+            <span className="brand__line">│</span>
+            <span className="brand__title">Instaclone</span>
+          </div>
+          <SearchBar />
+          <i class="far fa-compass" />
+          <i class="far fa-heart" />
+          <i class="far fa-user" />
         </header>
       </div>
     );

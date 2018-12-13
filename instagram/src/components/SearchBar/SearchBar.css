@@ -1,0 +1,19 @@
+.input {
+    display: flex;
+    align-items: center;
+    width: 37%;
+}
+
+input {
+    width: 100%;
+    background: #fafafa;
+    border: solid 1px #dbdbdb;
+    border-radius: 3px;
+    color: #999;
+    cursor: text;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 7px;
+    text-align: center;
+    z-index: 2;
+}
