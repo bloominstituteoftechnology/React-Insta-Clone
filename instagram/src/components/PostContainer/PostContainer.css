@@ -1,9 +1,19 @@
+.post-container {
+  margin: 20px auto;
+}
+
 .post-header {
   display: flex;
+  align-items: center;
 }
 
 .post-header img {
   width: 40px;
   height: 40px;
   border-radius: 100%;
+  margin: auto 1%;
+}
+
+.posted-image {
+  margin: 10px auto;
 }

@@ -16,15 +16,17 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        {this.state.posts.map(post => {
-          return (
-            <PostContainer
-              data={post}
-              key={post.timestamp}
-              className="post-container"
-            />
-          );
-        })}
+        <div className={"content"}>
+          {this.state.posts.map(post => {
+            return (
+              <PostContainer
+                data={post}
+                key={post.timestamp}
+                className="post-container"
+              />
+            );
+          })}
+        </div>
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./PostContainer.css";
 import PostHeader from "./PostHeader";
+import CommentSection from "../CommentSection/CommentSection";
 
 const PostContainer = props => {
   return (
@@ -11,6 +12,7 @@ const PostContainer = props => {
         alt={"the post"}
         className={"posted-image"}
       />
+      <CommentSection />
     </div>
   );
 };

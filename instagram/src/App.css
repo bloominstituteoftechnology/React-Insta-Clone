@@ -3,3 +3,9 @@
   width: 100%;
   margin: 0 auto;
 }
+
+.content {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
