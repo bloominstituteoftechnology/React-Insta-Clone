@@ -1,11 +1,14 @@
 import React from 'react';
 
-/*The CommentSection component will receive the array of comments as props and render a Comment component with the username of the poster as well as the post's text. Additionally, there should be an input box that allows users to submit a new comment for any post. We'll work on posting new comments tomorrow. */
+/*The CommentSection component will receive the array of comments as props and render a Comment component with the username of the poster as well as the post's text. Additionally, there should be an input box that allows users to submit a new comment for any post. We'll work on posting new comments tomorrow. 
 
-const Comments = () => {
+key = {data.key} user={data.username} text={data.text}
+*/
+
+const Comments = props => {
     return (
-        <div>
-            <h1>comments section</h1>
+        <div key={props.key}>
+            <p><strong>{props.user}</strong> {props.text}</p>
         </div>
     )
 }

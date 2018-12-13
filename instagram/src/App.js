@@ -4,7 +4,14 @@ import './App.css';
 import SearchBar from './components/SearchBar/search';
 import Posts from './components/PostContainer/posts';
 
-/*The root App component of your application should import the dummy data from the dummy-data.js file with import dummyData from './dummy-data'; and iterate over said data, passing each individual object as a prop to an instance of PostContainer. */
+/*The root App component of your application should import the dummy data from the dummy-data.js file with import dummyData from './dummy-data'; and iterate over said data, passing each individual object as a prop to an instance of PostContainer. 
+needs to pass Posts the following: 
+thumbnailUrl
+imageUrl
+likes
+comments (the entire object)
+timestamp
+*/
 
 
 
@@ -19,7 +26,8 @@ class App extends Component {
     return (
       <div className="App">
       <SearchBar />
-      <Posts />
+      <Posts data = {this.state.instaData} />
+      
       </div>
     );
   }
