@@ -7,7 +7,7 @@ const Post = (props) => {
             <img src = {props.userName.thumbnailUrl} alt = 'user profile'/>
             <p>{props.userName.username}</p>
             <img src = {props.userName.imageUrl} alt ='user post' />
-            <CommentSection comment ={props.userName.comments} />
+            <CommentSection comment ={props.userName} />
             
         </div>
     );
