@@ -1,0 +1,29 @@
+/* NAV content stylings */
+/* for nav container content, see SearchBar.css */
+
+.explore-icon {
+  background-image: url("./insta-compass.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  margin: 2px;
+}
+
+.liked-posts-icon {
+  background-image: url("./insta-heart.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  margin: 2px;
+}
+
+.profile-icon {
+  background-image: url("./insta-profile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  margin: 2px;
+}

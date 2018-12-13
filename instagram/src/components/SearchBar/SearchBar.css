@@ -1,0 +1,17 @@
+/* search bar contents styling
+for search bar container styling, see app.css */
+
+.brand {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 50px;
+}
+
+.search {
+  width: 50px;
+}
