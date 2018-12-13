@@ -14,7 +14,9 @@ const SearchBar = props => {
         <p>|</p>
         <img src={LogoName} className="insta-name" alt="instagram text logo" />
       </div>
-      <input type="text" />
+
+      <input className="search" type="text" placeholder="Search" />
+
       <div className="user">
         <img src={Compass} className="compass" alt="compass" />
         <img src={Heart} className="heart" alt="heart" />

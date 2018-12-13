@@ -1,6 +1,5 @@
 .SearchBar {
   width: 100%;
-  border: 1px solid red;
   display: flex;
   justify-content: space-between;
 }
@@ -14,13 +13,32 @@
       height: 30px;
     }
 
+    .logo p {
+      padding: 0 5px 0 10px;
+      font-size: 20px;
+      margin-top: -1px;
+    }
+
     .insta-name {
       width: 120px;
       height: 40px;
+      margin-top: -3px;
     }
+
+  .search {
+    width: 170px;
+    height: 24px;
+    border-radius: 6px;
+    border: 2px solid lightgray;
+    text-align: center;
+    color: lightgray;
+  }
 
   .user {
     display: flex;
+    justify-content: space-between;
+    width: 120px;
+    margin-top: -2px;
   }
 
     .compass {
@@ -31,6 +49,7 @@
     .heart {
       width: 24px;
       height: 24px;
+      margin-top: 6px;
     }
 
     .person {
