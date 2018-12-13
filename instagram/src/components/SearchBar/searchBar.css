@@ -1,0 +1,11 @@
+
+.searchBarContainer{
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid silver;
+    margin-bottom: 30px;
+}
+
+.searchInput{
+    padding: 5px;
+}

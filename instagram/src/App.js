@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import './App.css';
 import PostContainer from './components/PostContainer/PostContainer';
 import dummyData from './dummy-data';
-import commentData from './components/CommentSection/commentData';
+// import commentData from './components/CommentSection/commentData';
 import CommentSection from './components/CommentSection/CommentSection';
+import SearchBar from './components/SearchBar/SearchBar';
 
 
 
@@ -12,8 +13,8 @@ class App extends Component {
   constructor (){
     super();
     this.state ={
-      dummyData: dummyData,
-      commentData: commentData
+      dummyData: dummyData
+      // commentData: commentData
     }
   }
     render() {
@@ -23,7 +24,7 @@ class App extends Component {
         <header className="App-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
         </header>
-        <h1 className="searchContainer">Search Container</h1>
+        <SearchBar />
        <PostContainer posts={this.state.dummyData} />
        <CommentSection comment={this.state.commentData} />
       </div>

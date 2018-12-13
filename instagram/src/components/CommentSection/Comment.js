@@ -1,29 +1,24 @@
-import React from 'react';
-import './comment.css';
-import commentData from './commentData';
+// import React from 'react';
+// import './comment.css';
+// import PropTypes from 'prop-types';
 
 
-const Comment = props => {
-    console.log(props)
-    const comments = props.comment.comments;
-    const commentsArray = comments.map( comment => (
-        <ul key={comment.id} value={comment}>{comment.username} {comment.text}</ul> 
-    ))
-    return (
-        <div>{commentsArray}</div>
-    )
-}
-
-// const CommentSection = props => {
-//     // const commentData = props.commentData;
-//     const commentsArray = props.commentData.map( comment => (
-//         comment.comments.map((commentInfo, index) =>
-//         <ul key={index} value={commentInfo}>{commentInfo.username} {commentInfo.text}</ul> 
-//         )
+// const Comment = props => {
+//     console.log(props)
+//     const comments = props.comment.comments;
+//     const commentsArray = comments.map( (comment, index) => (
+//         <ul key={index} value={comment}>{comment.username} {comment.text}</ul> 
 //     ))
 //     return (
 //         <div>{commentsArray}</div>
 //     )
 // }
 
-export default Comment;
+// Comment.propTypes = {
+//     comment: PropTypes.shape({
+//         id: PropTypes.string,
+//         comments: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
+//     })
+// }
+
+// export default Comment;

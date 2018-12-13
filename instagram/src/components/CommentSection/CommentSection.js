@@ -1,31 +1,28 @@
 import React from 'react';
 import './comment.css';
-import commentData from './commentData';
 import Comment from './Comment';
 
 const CommentSection = props => {
     console.log(props)
     return (
-        <div>{props.comment.map( (comment, index) => (
-            <Comment key={index} comment={comment} />
-        ))}
+        <div className="commentSectionContainer">
+            <input placeholder="Add a comment..."
+            />
         </div>
     )
 }
 
+export default CommentSection;
+
 // const CommentSection = props => {
-//     // const commentData = props.commentData;
-//     const commentsArray = props.commentData.map( comment => (
-//         comment.comments.map((commentInfo, index) =>
-//         <ul key={index} value={commentInfo}>{commentInfo.username} {commentInfo.text}</ul> 
-//         )
-//     ))
+//     console.log(props)
 //     return (
-//         <div>{commentsArray}</div>
+//         <div>{props.comment.map( (comment, index) => (
+//             <Comment key={index} comment={comment} />
+//         ))}
+//         </div>
 //     )
 // }
-
-export default CommentSection;
 
 // class CommentSection extends React.Component {
 //     constructor() {
