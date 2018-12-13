@@ -33,7 +33,10 @@
 @import url('https://fonts.googleapis.com/css?family=Cookie');
 
 .App {
-  width: 800px;
+  width: 100%;
+}
+.container {
   margin-left: auto;
   margin-right: auto;
+  width: 800px;
 }

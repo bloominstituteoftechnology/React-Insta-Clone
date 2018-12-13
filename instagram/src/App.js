@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav>
+        <nav className="container">
           <SearchBar />
         </nav>
         <div className="body-wrapper">

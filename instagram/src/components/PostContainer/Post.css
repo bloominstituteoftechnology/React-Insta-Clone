@@ -14,3 +14,15 @@
 .post-image img {
     width: 100%;
 }
+.likes {
+    text-align: left;
+    margin: 20px auto;
+}
+.fa {
+    font-size: 30px;
+    margin-right: 10px;
+}
+.count {
+    margin: 15px 0px;
+    font-weight: bold;
+}
