@@ -17,9 +17,17 @@ const PostContainer = props => {
       />
       <CommentSection data={props.data} />
       <TimePosted timestamp={props.data.timestamp} />
-      <Input placeHolder={"Add comment..."} />
+      <Input placeholder={"Add comment..."} />
     </div>
   );
+};
+
+PostContainer.propTypes = {
+  className: PropTypes.string,
+  data: PropTypes.shape({
+    imageUrl: PropTypes.string,
+    timestamp: PropTypes.string
+  })
 };
 
 export default PostContainer;

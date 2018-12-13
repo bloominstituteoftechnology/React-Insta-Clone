@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./PostContainer.css";
 
 const PostHeader = props => {
@@ -8,6 +9,14 @@ const PostHeader = props => {
       <h2>{props.data.username}</h2>
     </div>
   );
+};
+
+PostHeader.propTypes = {
+  className: PropTypes.string,
+  data: PropTypes.shape({
+    thumbnailUrl: PropTypes.string,
+    username: PropTypes.string
+  })
 };
 
 export default PostHeader;
