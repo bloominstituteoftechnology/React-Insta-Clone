@@ -1,0 +1,12 @@
+.comment-container {
+    text-align: left;
+    display: flex;
+    flex-flow: row;
+}
+.comment-container .username {
+    font-weight: 600;
+    margin-right: 15px;
+}
+.comment-container .comment {
+    font-weight: 500;
+}

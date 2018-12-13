@@ -1,4 +1,6 @@
 import React from "react";
+import Comment from './../CommentSection/Comment';
+
 import './Post.css'
 const Post = props => {
     return(
@@ -19,6 +21,17 @@ const Post = props => {
                 <div className="count">
                 {props.likes} likes </div>
             </div>
+
+            {props.comments.map(comment => {
+                return (
+                    <Comment
+                        key={Math.random()}
+                        username={comment.username}
+                        text={comment.text}
+                    />
+                )
+            })}
+            
             
         </div>
     )
