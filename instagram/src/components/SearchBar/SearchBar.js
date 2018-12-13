@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.png';
+import './Search.css';
 
 import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 

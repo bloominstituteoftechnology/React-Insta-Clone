@@ -33,54 +33,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cookie');
 
 .App {
-  width: 1024px;
+  width: 800px;
   margin-left: auto;
   margin-right: auto;
-
-}
-.searchbar-wrapper {
-  display: flex;
-  justify-content: space-around;
-  height: 100px;
-  align-items: center;
-}
-nav img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  align-self: center;
-}
-.img-logo {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: flex-start;
-}
-.img-logo h3 {
-  border-left: 1px solid black;
-  padding-left: 15px;
-  font-family: 'Cookie', sans-serif;
-  font-size: 2.6rem;
-  font-weight: lighter;
-}
-.navs {
-  width: 33.33%;
-  display: flex;
-  flex-direction: row;
-}
-.navs.search {
-  justify-content: center;
-}
-.navs.icons {
-  justify-content: flex-end;
-}
-.navs .icons {
-  padding: 0px 10px;
-}
-button {
-  padding: 10px 100px;
-  background-color: rgba(255, 255, 255, .4);
-  border-radius: 3px;
-}
-.fa {
-  padding-right: 7px;
 }
