@@ -1,0 +1,40 @@
+
+.post {
+  border: 1px solid lightgray;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.post .name {
+  display: flex;
+  align-items: baseline;
+  padding: 10px;
+}
+.post .name .thumbnail {
+  border-radius: 50%;
+  width: 2.5%;
+}
+
+.post .name .username {
+  align-self: center;
+  margin-left: 0.7%;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.post .postImg {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.post .postIcon {
+  margin-left: 15px;
+}
+
+.post .likes {
+  margin-left: 15px;
+  margin-top: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+

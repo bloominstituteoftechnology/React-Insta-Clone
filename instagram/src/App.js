@@ -1,25 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faHeart, faCompass, faUser, faComment } from '@fortawesome/free-solid-svg-icons';
+
+import SearchBar from './components/SearchBar/SearchBar';
+import dummyData from './dummy-data';
+import PostContainer from './components/PostContainer/PostContainer';
+
 import './App.css';
 
+library.add(faInstagram, faCompass, faHeart, faUser, faComment);
+
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      users: []
+    }
+  }
+
+  componentDidMount() {
+    this.buildUsers(dummyData);
+  }
+
+  buildUsers = (data) => {
+    this.setState({users: data});
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <SearchBar />  
+        <PostContainer users={this.state.users} />      
       </div>
     );
   }

@@ -1,0 +1,43 @@
+.navbar.bg-light {
+  background-color: white;
+}
+
+.SearchBar {
+  color: black;
+  padding: 20px;
+  font-size: 2rem;
+}
+
+.SearchBar a.navbar-brand {
+  width: 80%;
+}
+
+.SearchBar .searchInput {
+  /* margin: 0 30%; */
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.SearchBar .NavLeft {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  font-size: 2rem;
+  width: 50%;
+}
+
+.SearchBar .brand {
+  margin: 0 10%;
+  font-size: 2.5rem;
+  font-family: 'Lobster', cursive;
+}
+
+.SearchBar .icon {
+  border-right: 1px solid lightgray;
+  width: 20%;
+  font-size: 2.5rem;
+}
+
+.SearchBar .navIcon {
+  color: black;
+}
