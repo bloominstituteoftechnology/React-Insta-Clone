@@ -1,11 +1,74 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import './CommentSection.css';
+import styled from 'styled-components';
 import heart from '../../assets/insta-heart.png';
 import reply from '../../assets/insta-reply.PNG';  // For some reason, caps required for png
 import commentOptions from '../../assets/insta-comment.PNG';
 import Comment from '../Comment/Comment';
+
+const Comments = styled.section`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 3%;
+
+    h5 {
+        margin: 10px 0;
+        font-weight: bold;
+    }
+`;
+
+const Icons = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+
+    img {
+        height: 25px;
+        margin-right: 3%;
+        cursor: pointer;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+    }
+`;
+
+const Date = styled.p`
+    font-size: 14px;
+    color: gray;
+`;
+
+const AddComment = styled.form`
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid rgba(128, 128, 128, 0.3);
+    margin-top: 10px;
+
+    input {
+        height: 20px;
+        margin: 15px 0;
+        font-size: 16px;
+        border: none;
+        text-align: left;
+        flex-grow: 1;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+`;
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
 
 class CommentSection extends React.Component {
     constructor(props){
@@ -37,11 +100,11 @@ class CommentSection extends React.Component {
     }
     render(){
         return (
-            <div className="comments">
-                <div className="comment-icons">
+            <Comments>
+                <Icons>
                     <img src={heart} alt="fave button" draggable="false" onClick={this.addNewLike} />
                     <img src={reply} alt="reply button" draggable="false" />
-                </div>
+                </Icons>
                 <h5>{this.state.likes} like{this.state.likes !== 1 ? 's':null}</h5>
                 <div className="comment-list">
                     {this.state.comments.slice(-5).map(comment => (
@@ -52,8 +115,8 @@ class CommentSection extends React.Component {
                         onDelete={() => this.props.onDeleteComment(comment.id, this.props.index)}/>
                     ))}
                     </div> {/* Adding ID's to my newly generated comments, but don't want to go modify dummy data. */}
-                <p className="date">{moment(this.state.time, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}</p>
-                <form className='add-comment' onSubmit={(e) => { 
+                <Date>{moment(this.state.time, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}</Date>
+                <AddComment onSubmit={(e) => { 
                     e.preventDefault();
                     this.props.onNewComment(this.state.input, this.props.index);
                     this.setState({ input: '' })
@@ -72,8 +135,8 @@ class CommentSection extends React.Component {
                         }}
                         draggable="false"
                     />
-                </form>
-            </div>
+                </AddComment>
+            </Comments>
         );
     }
 }
