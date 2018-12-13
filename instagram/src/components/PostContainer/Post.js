@@ -1,18 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CommentSection from '../CommentSection/CommentSection';
+import PropTypes from 'prop-types';
 
 const Post = props => {
-  const d1 = Date.now().valueOf();
-  const d2 = new Date(props.user.timestamp);
-  console.log(d1, d2, props.user.timestamp);
   return (
     <div className="post">
       <div className="name">
         <img className="thumbnail" src={props.user.thumbnailUrl} alt="Thumbnail" />
         <div className="username">{props.user.username}</div>
       </div>
-      <img src={props.user.imageUrl} alt="post image" className="postImg"/>
+      <img src={props.user.imageUrl} alt="post" className="postImg"/>
       <FontAwesomeIcon
         icon={['fas', 'heart']}
         size="3x"
@@ -27,6 +25,26 @@ const Post = props => {
       <CommentSection comments={props.user.comments} />
     </div>
   );
+}
+
+Post.propTypes = {
+  user: PropTypes.shape({
+    thumbnailUrl: PropTypes.string,
+    username: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    comments: PropTypes.arrayOf(PropTypes.object)
+  })
+}
+
+Post.defaultProps = {
+  user: PropTypes.shape({
+    thumbnailUrl: "",
+    username: "anonymous",
+    imageUrl: "",
+    likes: 0,
+    comments: []
+  })
 }
 
 export default Post;
