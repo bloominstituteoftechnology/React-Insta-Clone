@@ -1,5 +1,14 @@
 import React from 'react';
 
+const CommentInput = props => {
+    return (
+      <form>
+        <input type="text" placeholder="Add comment... " />
+      </form>
+    );
+  };
+/////////////////////////////////////////////////////////////////////
+
  const Comment = ( props ) =>
 {
   return (
@@ -8,7 +17,7 @@ import React from 'react';
     </div>
   )
 }
-
+///////////////////////////////////////////////////////////////////////
 
 class CommentSection extends React.Component
 {
