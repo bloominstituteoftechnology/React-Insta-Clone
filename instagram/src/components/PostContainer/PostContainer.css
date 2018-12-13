@@ -1,0 +1,9 @@
+.post-header {
+  display: flex;
+}
+
+.post-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}

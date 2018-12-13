@@ -1,12 +1,6 @@
 import React from "react";
 import SearchInput from "./SearchInput";
-import {
-  FiSearch,
-  FiInstagram,
-  FiCompass,
-  FiHeart,
-  FiUser
-} from "react-icons/fi";
+import { FiInstagram, FiCompass, FiHeart, FiUser } from "react-icons/fi";
 import "./SearchBar.css";
 
 const SearchBar = props => {
