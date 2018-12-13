@@ -1,0 +1,15 @@
+.searchBar {
+	display: flex;
+	justify-content: center;
+
+}
+
+.logo {
+	width: 30px;
+	height: 30px;
+}
+
+.title {
+	width: 100px;
+	height: 40px;
+}
