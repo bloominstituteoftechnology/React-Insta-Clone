@@ -28,7 +28,7 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="SearchBar">
-        <Navbar sticky-top expand="md">
+        <Navbar expand="md">
           <NavbarBrand href="/">
             <div className="NavLeft">
               <FontAwesomeIcon

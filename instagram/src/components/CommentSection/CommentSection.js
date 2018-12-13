@@ -10,7 +10,26 @@ class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.comments
+      comments: props.comments,
+      currentUser: "leila100"
+    }
+  }
+
+  addCommentHandler = (event) => {
+    if(event.key === 'Enter' && event.target.value) {
+      const newComment = {
+        username: this.state.currentUser,
+        text: event.target.value
+      }
+      this.setState(
+        prevState => {
+          const comments = prevState.comments.slice();
+          comments.push(newComment);
+          console.log(comments);
+          return {comments: comments};
+        }
+      );
+      event.target.value = "";
     }
   }
 
@@ -20,7 +39,7 @@ class CommentSection extends React.Component {
       <div className="commentSection">
         <div className="comments">{ this.state.comments.map(comment => <Comment comment={comment} key={comment.text} />) }</div>
         <Moment fromNow className="date">{d1}</Moment>
-        <input type="text" placeholder="Add a comment..."  className="commentAdd"/>
+        <input type="text" placeholder="Add a comment..."  className="commentAdd" onKeyDown={this.addCommentHandler}/>
       </div>
     );  
   }

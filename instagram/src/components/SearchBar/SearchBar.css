@@ -11,12 +11,8 @@
 }
 
 .SearchBar .navbar {
-  width: 42%;
+  width: 52%;
   margin: auto;
-}
-
-.SearchBar a.navbar-brand {
-  width: 30%;
 }
 
 .SearchBar .searchInput {
@@ -52,7 +48,29 @@
   padding-right: 5px;
 }
 
+.SearchBar a.navbar-brand {
+  width: 30%;
+}
+
 .SearchBar .navIcon {
   color: black;
   margin-left: 10px;
+}
+
+@media (max-width: 800px) {
+  .SearchBar .navbar {
+    width: 100%;
+  }
+
+  .SearchBar .searchInput, .SearchBar .brand {
+    display: none;
+  }
+
+  .SearchBar .navbar-toggler {
+    background-color: gray;
+  }
+
+  .SearchBar a.navbar-brand {
+    width: 80%;
+  }
 }
