@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './data/dummy-data.js';
 import SearchBar from './components/SearchBar/SearchBar'
+import PostContainer from './components/PostContainer/PostContainer'
+
 
 class App extends Component {
   constructor() {
@@ -11,7 +13,7 @@ class App extends Component {
     }
   }
   render() {
-    console.log(this.state.posts)
+
     return (
       <div className="App">
         <header className="App-header">
@@ -19,6 +21,13 @@ class App extends Component {
                 <SearchBar />
             </div>
         </header>
+
+        <div className ="content">
+
+          <PostContainer User ={this.state.posts}/>
+
+        </div>
+
       </div>
     );
   }
