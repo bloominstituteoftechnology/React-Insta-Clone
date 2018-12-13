@@ -1,82 +1,115 @@
 html {
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-  }
-  
-  ol, ul {
-    list-style: none;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 .PostContainer {
-    width: 100%;
-    border: 1px solid lightgrey;
+  width: 100%;
+  border: 1px solid lightgrey;
 }
 
 .topContainer {
-    width: 99%;
-    margin-left: 1%;
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-    height: 60px;
+  width: 99%;
+  margin-left: 1%;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  height: 60px;
 }
 
 .companyLogo {
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-    margin-right: 2%;
-    border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 2%;
+  border-radius: 50%;
 }
 
 .bottomContainer {
-    width: 99%;
-    margin-left: 1%;
-    display: flex;
-    flex-direction: column;
+  border-bottom: 1px solid lightgrey;
+}
+
+.contentContainer {
+  width: 96%;
+  width: 0 2%;
+  display: flex;
+  flex-direction: column;
 }
 
 .iconContainer {
-    width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 10%;
+  margin-left: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .likes {
-   width: 15%;
-   margin: 0; 
-   display: flex;
+  width: 15%;
+  margin: 0 0 0 1%;
+  display: flex;
 }
 
 .likes p {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .messageContainer {
-    text-align: left;
-    margin-top: .7rem;
+  text-align: left;
+  margin-top: 0.7rem;
+  margin-left: 1%;
 }
 
 .username {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .text {
+  margin-left: 1%;
+}
+
+.timeStamp {
+    text-align: left;
     margin-left: 1%;
+    padding-bottom: 2%;
+}
+
+.messContainer {
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+}
+
+.message {
+  margin-bottom: 2%;
 }

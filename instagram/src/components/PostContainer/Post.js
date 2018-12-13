@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./PostContainer.css";
-import Message from './Message'
+import Message from "./Message";
+import Comments from "../CommentSection/Comments";
 
 const Post = props => {
   return (
@@ -18,18 +19,26 @@ const Post = props => {
         <img className="postImg" src={props.post.imageUrl} alt="Post" />
       </div>
       <div className="bottomContainer">
-        <div className="iconContainer">
-          <i className="far fa-heart" />
-          <i className="far fa-comment" />
-        </div>
-        <div className="likes">
-          <p>{props.post.likes} likes</p>
-        </div>
-        <div className="commentsContainer">
-          <div>
-            {props.post.comments.map( message => (
-              <Message key={message.text} message={message} />
-            ))}
+        <div className="contentContainer">
+          <div className="iconContainer">
+            <i className="far fa-heart" />
+            <i className="far fa-comment" />
+          </div>
+          <div className="likes">
+            <p>{props.post.likes} likes</p>
+          </div>
+          <div className="messContainer">
+            <div>
+              {props.post.comments.map(message => (
+                <Message key={message.text} message={message} />
+              ))}
+            </div>
+            <div className='timeStamp'>
+              {props.post.timestamp}
+            </div>
+          </div>
+          <div className="commentsContainer">
+            <Comments />
           </div>
         </div>
       </div>
