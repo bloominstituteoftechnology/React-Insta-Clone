@@ -17,6 +17,10 @@
       padding: 5px;
     }
 
+    .cardHeader p {
+      padding: 3px 0 0 6px;
+    }
+
   .cardIMG {
     width: 100%;
   }
