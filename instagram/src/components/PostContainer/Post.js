@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./PostContainer.css";
-import Comment from './Comment'
+import Message from './Message'
 
 const Post = props => {
   return (
@@ -27,8 +27,8 @@ const Post = props => {
         </div>
         <div className="commentsContainer">
           <div>
-            {props.post.comments.map(comment => (
-              <Comment key={comment.text} comment={comment} />
+            {props.post.comments.map( message => (
+              <Message key={message.text} message={message} />
             ))}
           </div>
         </div>
