@@ -12,7 +12,9 @@ class App extends Component {
     }
   }
    
-
+componentDidMount () {
+  this.setState ({posts: dummyData})
+}
 
 
 
@@ -23,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
+        <PostContainer />
       </div>
     );
   }
