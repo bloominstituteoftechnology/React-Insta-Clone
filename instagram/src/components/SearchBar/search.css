@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 20px 0;
   width: 100%;
-  border-bottom: 2px solid rgba(170, 170, 170, 0.637);
+  border-bottom: 1px solid rgba(170, 170, 170, 0.637);
 }
 
 .logo img {
@@ -18,7 +18,7 @@
 .instagram-font {
   height: 46px;
   width: auto;
-  border-left: 2px solid rgba(170, 170, 170, 0.637);
+  border-left: 1px solid rgba(170, 170, 170, 0.637);
 }
 
 .nav-bar form {
@@ -32,6 +32,10 @@
   height: 24px;
   width: 200px;
   background-color: #ddd;
+}
+
+.nav-bar form input:focus {
+  outline: none;
 }
 
 .nav-items {

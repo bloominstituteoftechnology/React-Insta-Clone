@@ -1,5 +1,5 @@
 .post-container {
-  border: 1px solid #000;
+  border: 1px solid rgba(170, 170, 170, 0.637);;
   max-width: 640px;
   margin-top: 40px;
 }
@@ -17,7 +17,7 @@
 }
 
 .likes-container {
-  padding: 10px;
+  padding: 10px 10px 0;
 }
 
 .likes-container div img {
