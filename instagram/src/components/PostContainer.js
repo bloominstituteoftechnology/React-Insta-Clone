@@ -27,9 +27,9 @@ class Post extends React.Component{
                     src={this.props.post.imageUrl}
                    /> 
                 </div>
-                {/* <InstagramLikes 
+                <InstagramLikes 
                   incrementLikes={this.incrementLikes}
-                  likes={this.state.likes} */}
+                  likes={this.state.likes}
                 />
                 {/* <CommentSection comments={this.props.post.comments} /> */}
             </div>
