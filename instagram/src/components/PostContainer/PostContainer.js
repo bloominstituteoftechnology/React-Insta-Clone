@@ -1,4 +1,7 @@
 import React from 'react';
+import {Card, CardImg, CardBody} from 'reactstrap';
+import CommentSection from '../CommentSection/CommentSection';
+import './PostContainer.css';
 
 const PostContainer = props => {
   return (
@@ -7,13 +10,14 @@ const PostContainer = props => {
         <img src={props.data.thumbnailUrl}/>
         <div>{props.data.username}</div>
       </div>
-      <div>
-        <img src={props.data.imageUrl} />
-      </div>
-      <div>
-        <div>{props.data.likes}</div>
-        <div>{props.data.timestamp}</div>
-      </div>
+      <Card className='card'>
+        <CardImg src={props.data.imageUrl} />
+        <CardBody>
+          <div>{props.data.likes}</div>
+          <div>{props.data.timestamp}</div>
+          {props.data.comments.map(data => <CommentSection data={data} />)}
+        </CardBody>
+      </Card>
     </div>
   );
 };
