@@ -1,13 +1,32 @@
 import React from 'react';
- class CommentSection extends React.Component
+
+ const Comment = ( props ) =>
+{
+  return (
+    <div>
+      <p>{ props.data.username} { props.data.text }</p>
+    </div>
+  )
+}
+
+
+class CommentSection extends React.Component
 {
   render()
   {
     return(
       <div>
-        CommentSection
+        {
+          this.props.comments.map( ( element ) =>
+          {
+            return(
+              <Comment data = { element } />
+            )
+          })
+        }
       </div>
     )
   }
 }
- export default CommentSection; 
+
+export default CommentSection;
