@@ -11,7 +11,7 @@ class Comments extends React.Component{
   }
 
   render(){
-    console.log(this.state.comments);
+    console.log(this.props);
     return(
       <div>
         {this.state.comments.map((comment, index) =>(
@@ -19,6 +19,7 @@ class Comments extends React.Component{
          key={index}
          comment={comment} />
       ))}
+      <p>{this.props.time}</p>
       </div>
     )
   }

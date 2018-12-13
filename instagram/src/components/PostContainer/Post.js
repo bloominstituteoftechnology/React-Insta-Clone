@@ -31,7 +31,7 @@ class Post extends React.Component{
         <div className="interaction_container">
           <p>{user.likes} likes </p>
         </div>
-        <Comments comments = {user.comments}/>
+        <Comments comments = {user.comments} time={user.timestamp}/>
       </div>
     )
   }
