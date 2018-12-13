@@ -8,7 +8,7 @@ import {
   Input
 } from "react-bulma-components/lib/components/form";
 import Icon from "react-bulma-components/lib/components/icon";
-
+import PropTypes from "prop-types";
 import "./CommentSection.scss";
 
 class CommentSection extends React.Component {
@@ -57,6 +57,13 @@ class CommentSection extends React.Component {
       </Container>
     );
   }
+}
+
+CommentSection.propTypes = {
+  comments: PropTypes.arrayOf(PropTypes.shape({
+      username: PropTypes.string,
+      text: PropTypes.string,
+  }))
 }
 
 export default CommentSection;

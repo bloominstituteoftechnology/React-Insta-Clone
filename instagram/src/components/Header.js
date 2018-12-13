@@ -23,7 +23,7 @@ const Header = props => {
       <Navbar.Item>
         <SearchBar />
       </Navbar.Item>
-      <Navbar.Item>
+      <Navbar.Item renderAs="div">
         <Navbar.Item href="#">
           <FontAwesomeIcon icon={["far", "compass"]} size="lg" />
         </Navbar.Item>
