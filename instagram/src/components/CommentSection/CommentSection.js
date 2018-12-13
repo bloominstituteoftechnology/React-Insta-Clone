@@ -24,7 +24,7 @@ const CommentSection = props => {
 
 CommentSection.propTypes = {
   likes: PropTypes.number,
-  comments: PropTypes.string,
+  comments: PropTypes.arrayOf(PropTypes.object),
   timestamp: PropTypes.string
 };
 

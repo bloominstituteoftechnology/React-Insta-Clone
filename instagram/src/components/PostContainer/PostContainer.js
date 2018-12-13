@@ -27,8 +27,16 @@ const PostContainer = props => {
 }
 
 PostContainer.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object).isRequired
+  data: PropTypes.arrayOf(PropTypes.object),
+  thumbnailUrl: PropTypes.string,
+  username: PropTypes.string,
+  imageUrl: PropTypes.string,
+  comments: PropTypes.arrayOf(PropTypes.object),
+  likes: PropTypes.number,
+  timestamp: PropTypes.string
 }
+
+
 
 
 export default PostContainer;
