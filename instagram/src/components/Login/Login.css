@@ -1,0 +1,50 @@
+.instagram-word {
+  background: url('../SearchBar/Logos/download.png') no-repeat -98px -150px;
+  width: 175px;
+  height: 51px;
+  margin-left: 50px;
+}
+
+.login-box {
+  background-color: white;
+  padding: 110px 90px;
+  border: 1px solid lightgrey;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAFAFA;
+  height: 100vh;
+  background-image: url('https://kt-media-knowtechie.netdna-ssl.com/wp-content/uploads/2017/03/instagram.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+input {
+  padding: 10px 80px;
+  text-align: center;
+  border-radius: 0px;
+  margin-bottom: 20px;
+  background-color: #FAFAFA;
+  border: none;
+}
+
+form {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-blue {
+  background-color: #BEDFFC;
+  color: white;
+  font-weight: bold;
+}
+
+.login-blue:hover {
+  background-color: #2492F4;
+  cursor: pointer;
+}
