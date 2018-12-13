@@ -1,5 +1,5 @@
 import React from "react";
-import SearchInput from "./SearchInput";
+import { Input } from "reactstrap";
 import { FiInstagram, FiCompass, FiHeart, FiUser } from "react-icons/fi";
 import "./SearchBar.css";
 
@@ -10,7 +10,7 @@ const SearchBar = props => {
         <FiInstagram className="icon logo" />
         <h1 id="header-logo">SlightDelayGram</h1>
       </div>
-      <SearchInput />
+      <Input id="search-input" type="text" placeholder="Search" />
       <div className="header-icon-container">
         <FiCompass className="icon" />
         <FiHeart className="icon" />
