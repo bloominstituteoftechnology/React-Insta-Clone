@@ -1,18 +1,52 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './PostContainer.css';
+import styled from 'styled-components';
 import CommentSection from '../CommentSection/CommentSection';
 
+const Post = styled.section`
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    margin-bottom: 50px;
+    overflow: hidden;
+    font-size: 1.6rem;
+`;
+
+const Header = styled.section`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 3%;
+    height: 50px;
+
+    h4 {
+        font-weight: bold;
+        cursor: pointer;
+    }
+`;
+
+const Thumbnail = styled.img`
+    border-radius: 100%;
+    height: 50%;
+    margin-right: 2%;
+    cursor: pointer;
+`;
+
+const PostImage = styled.img`
+    width: 100%;
+`;
+
+
+///////////////////////////////////////////////////////////////////////////////////
+
+
 const PostContainer = props => (
-    <div className="post">
-        <div className="post-header">
-            <img src={props.data.thumbnailUrl} alt="user thumbnail" draggable="false" />
+    <Post>
+        <Header>
+            <Thumbnail src={props.data.thumbnailUrl} alt="user thumbnail" draggable="false" />
             <h4>{props.data.username}</h4>
-        </div>
-        <div className='post-image'>
-            <img src={props.data.imageUrl} alt="User post" draggable="false" />
-            <div></div>
-        </div>
+        </Header>
+        <PostImage src={props.data.imageUrl} alt="User post" draggable="false" />
         <CommentSection 
             comments={props.data.comments}
             likes={props.data.likes}
@@ -21,7 +55,7 @@ const PostContainer = props => (
             onNewComment={props.onNewComment}
             onDeleteComment={props.onDeleteComment}
         />
-    </div>
+    </Post>
 );
 
 PostContainer.propTypes = {

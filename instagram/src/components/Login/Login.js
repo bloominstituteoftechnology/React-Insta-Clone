@@ -84,13 +84,17 @@ const RegisterForm = styled.form`
     justify-content: space-between;
     padding-bottom: 20px;
 
-    .b-day {
+    > div {
         width: 100%;
         display: flex;
         flex-direction: column;
         font-size: 1.4rem;
     }
 `;
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
 
 class Login extends React.Component{
     constructor(props){
@@ -196,7 +200,7 @@ class Login extends React.Component{
                                     value={this.state.lastNameRegInput}
                                     onChange={(e) => this.handleChange(e, 'lastNameReg')}
                                 />
-                                <div className="b-day">
+                                <div>
                                     <p>Birthday:</p>
                                     <input 
                                     type="date" 
