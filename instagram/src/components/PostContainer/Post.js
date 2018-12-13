@@ -22,7 +22,7 @@ const Post = props => {
         className="postIcon"
       />
       <div className="likes">{props.user.likes} likes</div>
-      <CommentSection comments={props.user.comments} />
+      <CommentSection comments={props.user.comments} timestamp={props.user.timestamp}/>
     </div>
   );
 }

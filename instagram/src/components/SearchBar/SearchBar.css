@@ -38,8 +38,9 @@
 
 .SearchBar .icon {
   border-right: 1px solid lightgray;
-  width: 20%;
+  width: 30%;
   font-size: 2.5rem;
+  padding-right: 5px;
 }
 
 .SearchBar .navIcon {

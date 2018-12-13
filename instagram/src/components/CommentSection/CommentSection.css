@@ -27,3 +27,13 @@
 .commentSection .commentAdd:focus {
   outline: none;
 }
+
+.commentSection .comments {
+  margin-bottom: 10px;
+}
+
+.commentSection .date {
+  margin-left: 15px;
+  font-size: 1.2rem;
+  color: grey;
+}
