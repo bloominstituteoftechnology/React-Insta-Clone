@@ -1,0 +1,14 @@
+.Card {
+  width: 100%;
+  border: 1px solid blue;
+}
+
+  .cardHeader {
+    display: flex;
+  }
+
+    .cardHeader img {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+    }
