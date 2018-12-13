@@ -1,0 +1,7 @@
+.commentSection{
+    display: flex;
+    border: 1px solid green;
+    flex-direction: column;
+    width: 80%;
+
+}

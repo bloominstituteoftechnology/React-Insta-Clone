@@ -1,13 +1,22 @@
 .postContainer{
     width: 90%;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .postPicture{
-    width: 50%;
+    width: 80%;
 }
 
 .OpContainer{
     display: flex;
+    width: 80%;
+    border: 1px solid blue;
+    align-items: center;
 }
 
 .postOp{
@@ -15,7 +24,32 @@
 }
 
 .postOpAvatar{
-    width: 10%;
-    height: 40px;
+    width: 4%;
+    margin: 0 1.5%;
+    height: 25px;
     border-radius: 70%;
+}
+
+.buttonsContainer{
+    display:flex;
+    justify-content: flex-start;
+    border: 1px solid yellow;
+    width: 80%;
+}
+.buttonsContainer .likeButton{
+    padding: 0 2%;
+}
+.likesContainer{
+    border: 1px solid purple;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+}
+.likesContainer p{
+    padding: 0 2%;
+}
+
+.inputComment{
+    width: 80%;
+    border: 1px solid brown;
 }
