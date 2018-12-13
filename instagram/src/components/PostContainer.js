@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import CommentSection from './CommentSection';
+import { Username } from '../assets/styles/reusable-components';
 
 const Post = styled.section`
     width: 50%;
@@ -18,11 +19,6 @@ const Header = styled.section`
     align-items: center;
     padding: 0 3%;
     height: 50px;
-
-    h4 {
-        font-weight: bold;
-        cursor: pointer;
-    }
 `;
 
 const Thumbnail = styled.img`
@@ -44,7 +40,7 @@ const PostContainer = props => (
     <Post>
         <Header>
             <Thumbnail src={props.data.thumbnailUrl} alt="user thumbnail" draggable="false" />
-            <h4>{props.data.username}</h4>
+            <Username>{props.data.username}</Username>
         </Header>
         <PostImage src={props.data.imageUrl} alt="User post" draggable="false" />
         <CommentSection 
