@@ -1,0 +1,14 @@
+.user_title {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.title {
+	display: flex;
+	align-items: center;
+}
+.userImgPic {
+	width: 40px;
+	border-radius: 20px;
+}
