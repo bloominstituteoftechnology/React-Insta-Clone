@@ -3,7 +3,9 @@ import './CommentSection.css';
 
 const CommentSection = prop =>{
     return(
-        <div></div>
+        <div>
+            {prop.data.username} {prop.data.text}
+        </div>
     )
 }
 
