@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import SearchBar from "./components/SearchBar/SearchBar";
+import PostContainer from "./components/PostContainer/PostContainer";
+import dummyData from "./dummy-data";
 import "./App.css";
 
 class App extends Component {
@@ -9,16 +11,17 @@ class App extends Component {
         <header className="App-header">
           <div className="brand">
             <span className="brand__logo">
-              <i class="fas fa-camera-retro" />
+              <i className="fas fa-camera-retro" />
             </span>
             <span className="brand__line">│</span>
             <span className="brand__title">Instaclone</span>
           </div>
           <SearchBar />
-          <i class="far fa-compass" />
-          <i class="far fa-heart" />
-          <i class="far fa-user" />
+          <i className="far fa-compass" />
+          <i className="far fa-heart" />
+          <i className="far fa-user" />
         </header>
+        <PostContainer posts={dummyData} />
       </div>
     );
   }

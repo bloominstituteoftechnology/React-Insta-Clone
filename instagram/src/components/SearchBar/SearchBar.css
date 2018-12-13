@@ -1,11 +1,12 @@
 .input {
     display: flex;
     align-items: center;
-    width: 37%;
+    width: 55%;
+    justify-content: center;
 }
 
 input {
-    width: 100%;
+    width: 50%;
     background: #fafafa;
     border: solid 1px #dbdbdb;
     border-radius: 3px;

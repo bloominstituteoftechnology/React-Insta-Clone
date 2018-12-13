@@ -2,11 +2,11 @@
   background-color: white;
   border-bottom: 1px solid #efefef;
   width: 100%;
-  padding: 1.8rem 2rem;
+  padding: 20px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: calc(20px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: black;
 }
 
@@ -22,7 +22,7 @@
 
 .brand__title {
   cursor: pointer;
-  padding: 0 0 8px;
+  padding: 0 0 2px;
 }
 
 i {
