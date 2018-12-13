@@ -1,7 +1,7 @@
 .comment-container {
-    text-align: left;
     display: flex;
     flex-flow: row;
+    padding: 3px 0px;
 }
 .comment-container .username {
     font-weight: 600;

@@ -1,3 +1,7 @@
+.post-container {
+    text-align: left;
+}
+
 .user-info {
     display: flex;
     flex-direction: row;

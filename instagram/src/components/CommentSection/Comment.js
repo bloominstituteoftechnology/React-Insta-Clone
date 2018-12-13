@@ -1,5 +1,5 @@
 import React from 'react';
-import './Comment.css';
+import './Comment.css'
 const Comment = props => {
     return (
         <div className="comment-container">
