@@ -25,7 +25,7 @@ componentDidMount () {
   render() {
     return (
       <div className="App">
-        <PostContainer />
+        <PostContainer posts ={this.state.posts} />
       </div>
     );
   }

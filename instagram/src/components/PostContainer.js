@@ -1,6 +1,44 @@
 import React from "react";
 
-//map over posts and render
+class Post extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            likes: props.post.likes
+        }
+    }
+
+    
+
+    incrementLikes = () => {
+        let likes = this.state.likes + 1;
+        this.setState({ likes });
+    }
+
+    render () {
+        return (
+            <div className="post-wrapper">
+                <PostHeader username={this.props.post.username}
+                thumbnailUrl={this.props.post.thumbnailUrl}
+                />
+                <div className="post-img-wrap">
+                   <img alt = "post thumb"
+                    className="post-image"
+                    src={this.props.post.imageUrl}
+                   /> 
+                </div>
+                {/* <InstagramLikes 
+                  incrementLikes={this.incrementLikes}
+                  likes={this.state.likes} */}
+                />
+                {/* <CommentSection comments={this.props.post.comments} /> */}
+            </div>
+        )
+    }
+}
+
+
+//map over posts and return Post
 const PostContainer = props => {
     return (
         <div className = "post-container">
@@ -8,6 +46,41 @@ const PostContainer = props => {
         </div>
     )
 }
+
+//Instagram Likes
+const InstagramLikes = props => {
+    return [
+        <div className ="insta-likes" key="insta-icons" onClick={props.incrementLikes}>
+
+          <div className="insta-likes-wrapper">
+            <i className="fa fa-heart" />
+          </div>
+         
+          <div className = "insta-likes-wrapper">
+              <i className="fa fa-comment" />
+                </div>
+
+            <div className="insta-likes" key="insta-likes-container">
+              <div className="insta-likes-wrapper">{props.likes}</div>
+             </div>
+        </div>
+    ]
+}
+
+//Post Header
+const PostHeader = props => {
+    return (
+        <div className="post-header">
+          <div className="post-thumb-wrap">
+            <img alt="post header"
+             className="post-thumb"
+             src={props.thumbnailUrl}
+            />
+          </div>
+        </div>
+    )
+}
+
 
 
 
