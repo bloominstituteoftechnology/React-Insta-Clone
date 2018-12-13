@@ -1,6 +1,96 @@
 import React from 'react';
+import styled from 'styled-components';
 import SearchBar from '../SearchBar/SearchBar';
-import './Login.css';
+
+const Container = styled.div`
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding-top: 80px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+const LoginPrompt = styled.section`
+    width: 40%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+`;
+
+const Title = styled.div`
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+`;
+
+const Forms = styled.div`
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    height: 80%;
+    font-size: 1.6rem;
+
+    > * {
+        position: relative;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 50%;
+        border-top: 1px solid #222;
+        padding: 10px;
+        padding-top: 44px;
+    }
+
+    h4 {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+`;
+
+const LoginForm = styled.form`
+    border-right: 1px solid #222;
+
+    input {
+        margin-bottom: 20px;
+    }
+`;
+
+const RegisterForm = styled.form`
+    justify-content: space-between;
+    padding-bottom: 20px;
+
+    .b-day {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.4rem;
+    }
+`;
 
 class Login extends React.Component{
     constructor(props){
@@ -43,14 +133,14 @@ class Login extends React.Component{
         return (
             <div>
                 <SearchBar loginPage />
-                <div className="container">
-                    <section className="login-prompt">
-                        <div className="title">
+                <Container>
+                    <LoginPrompt>
+                        <Title>
                             <h2>A picture's worth a billion users.</h2>
                             <h3>Register today!</h3>
-                        </div>
-                        <div className="forms">
-                            <form className="login-form" onSubmit={this.login} method="POST">
+                        </Title>
+                        <Forms>
+                            <LoginForm onSubmit={this.login} method="POST">
                                 <h4>Login</h4>
                                 <input type="text" 
                                     placeholder="Username"
@@ -68,8 +158,8 @@ class Login extends React.Component{
                                     onChange={(e) => this.handleChange(e, 'passwordLogin')}
                                 />
                                 <button type="submit">Login</button>
-                            </form>
-                            <form className="register-form">
+                            </LoginForm>
+                            <RegisterForm>
                                 <h4>Register</h4>
                                 <input
                                     type="text"
@@ -115,10 +205,10 @@ class Login extends React.Component{
                                     onChange={(e) => this.handleChange(e, 'birthdayReg')} />
                                 </div>
                                 <button type="submit">Register</button>
-                            </form>
-                        </div>
-                    </section>
-                </div>
+                            </RegisterForm>
+                        </Forms>
+                    </LoginPrompt>
+                </Container>
             </div>
         );
     }
