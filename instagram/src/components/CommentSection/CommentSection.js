@@ -34,7 +34,7 @@ class CommentSection extends React.Component {
         </Container>
         {this.props.comments.map((current, index) => {
           return (
-            <Container key={`comments-${this.props.belongsTo}-${index}`} className="flexify">
+            <Container key={`comments-of-${this.props.belongsTo}-from-${current.username}-keyIsText:${current.text}`} className="flexify">
               <Heading subtitle size={5} renderAs="h2"> {current.username} </Heading> <p> {current.text} </p>
             </Container>
           );

@@ -12,7 +12,7 @@ const PostContainer = props => {
       {props.data.map((user, index) => {
         let comments = user.comments;
         return (
-          <Card key={`card-${index}`}>
+          <Card key={`card-${user.timestamp}`}>
             <Container className="flexify">
               <Image src={user.thumbnailUrl} size="32x32" className="roundOverride" />
               <Heading subtitle size={5} renderAs="h2">{user.username}</Heading>
