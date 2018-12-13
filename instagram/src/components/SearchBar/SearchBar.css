@@ -1,19 +1,38 @@
-.search-bar {
+.header {
   padding: 20px 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
 } 
+.header-bar {
+  display: flex;
+  justify-content: space-evenly;
+}
 .search-logos {
   display: flex;
+  justify-content: flex-start;
+}
+.search-bar-icons {
+  display: flex;
+}
+.search-icon {
+  width: 100%;
+  margin: 0 10px;
+}
+.search-icon img {
+  max-width: 24px;
 }
 .insta-logo {
+  margin-right: 20px;
   width: 100%;
 }
 .insta-logo img {
-  max-width: 30px;
+  max-width: 24px;
 }
 .spacer-line {
   height: 30px;
   width: 1px;
   background: rgba(0,0,0,0.5);
+  margin-right: 20px;
 }
 .insta-logo-text {
   width: 100%;
