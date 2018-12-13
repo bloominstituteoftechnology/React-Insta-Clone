@@ -1,21 +1,25 @@
-.navbar.bg-light {
-  background-color: white;
-}
 
 .SearchBar {
   color: black;
   padding: 20px;
   font-size: 2rem;
+  border-bottom: 1px solid lightgray;
 }
 
 .SearchBar a.navbar-brand {
-  width: 80%;
+  width: 30%;
 }
 
 .SearchBar .searchInput {
-  /* margin: 0 30%; */
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  padding: 5px;
+  width: 40%;
+  border-radius: 5px;
+}
+
+.SearchBar .searchInput:focus {
+  outline: none;
 }
 
 .SearchBar .NavLeft {
@@ -40,4 +44,5 @@
 
 .SearchBar .navIcon {
   color: black;
+  margin-left: 10px;
 }

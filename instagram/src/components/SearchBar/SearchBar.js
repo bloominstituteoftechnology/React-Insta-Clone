@@ -37,9 +37,9 @@ class SearchBar extends React.Component {
                 className="icon"
               />
               <div className="brand">Instagram</div>
-              <input type="text" className="searchInput" placeholder="Search"/>                
             </div>
           </NavbarBrand>
+          <input type="text" className="searchInput" placeholder="Search"/>                
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
