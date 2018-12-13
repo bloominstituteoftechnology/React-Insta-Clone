@@ -15,6 +15,7 @@ const Post = props => {
         icon={['fas', 'heart']}
         size="3x"
         className="postIcon"
+        onClick={(event) => props.hearClick(event, props.user.timestamp)}
       />
       <FontAwesomeIcon
         icon={['fas', 'comment']}

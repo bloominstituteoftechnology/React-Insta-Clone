@@ -27,11 +27,27 @@ class App extends Component {
     this.setState({users: data});
   }
 
+  heartClickHandler = (event, timeStamp) => {
+    let userIndex = 0;
+    for(let i=0; i<this.state.users.length; i++) {
+      if (this.state.users[i].timestamp === timeStamp) {
+        userIndex = i;
+      }
+    }
+    this.setState(
+      prevState => {
+        const users = prevState.users.slice();
+        users[userIndex].likes ++;
+        return {users: users};
+      }
+    );
+  }
+
   render() {
     return (
       <div className="App">
         <SearchBar />  
-        <PostContainer users={this.state.users} />      
+        <PostContainer users={this.state.users} hearClick={this.heartClickHandler}/>      
       </div>
     );
   }

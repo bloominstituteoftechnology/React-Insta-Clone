@@ -36,6 +36,7 @@
 
 .post .postIcon {
   margin-left: 15px;
+  cursor: pointer;
 }
 
 .post .likes {

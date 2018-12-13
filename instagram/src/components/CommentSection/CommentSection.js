@@ -25,7 +25,6 @@ class CommentSection extends React.Component {
         prevState => {
           const comments = prevState.comments.slice();
           comments.push(newComment);
-          console.log(comments);
           return {comments: comments};
         }
       );
