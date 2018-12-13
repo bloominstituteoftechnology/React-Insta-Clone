@@ -23,7 +23,9 @@ const CommentSection = props => {
 }
 
 CommentSection.propTypes = {
-  
-}
+  likes: PropTypes.number,
+  comments: PropTypes.string,
+  timestamp: PropTypes.string
+};
 
 export default CommentSection;
