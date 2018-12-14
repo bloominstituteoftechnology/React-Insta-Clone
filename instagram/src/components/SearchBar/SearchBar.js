@@ -17,14 +17,28 @@ class SearchBar extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      searchInput: ""
     };
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
+
+  setSearchInput = (event) => {
+    this.setState({searchInput: event.target.value});
+  }
+
+  searchUsername = (event) => {
+    event.preventDefault();
+    const users = this.props.users.slice();
+    const searchResult = users.filter(user => user.username.includes(this.state.searchInput));
+    this.props.update(searchResult);
+  }
+
   render() {
     return (
       <div className="SearchBar">
@@ -39,7 +53,10 @@ class SearchBar extends React.Component {
               <div className="brand">Instagram</div>
             </div>
           </NavbarBrand>
-          <input type="text" className="searchInput" placeholder="Search"/>                
+          <form onSubmit={this.searchUsername}>
+            <input type="text" className="searchInput" placeholder="Search" onChange={this.setSearchInput} value={this.state.searchInput} />                
+            <input type="submit" hidden />
+          </form>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

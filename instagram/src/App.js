@@ -27,10 +27,14 @@ class App extends Component {
     this.setState({users: data});
   }
 
+  updateUsers = (users) => {
+    this.setState({users: users});
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar />  
+        <SearchBar users={this.state.users} update={this.updateUsers} />  
         <PostContainer users={this.state.users} />      
       </div>
     );

@@ -10,20 +10,25 @@
   background-color: white;
 }
 
+.SearchBar form {
+  width: 40%;
+  text-align: center;
+}
+
 .SearchBar .navbar {
   width: 52%;
   margin: auto;
 }
 
-.SearchBar .searchInput {
+.SearchBar form .searchInput {
   text-align: center;
   font-size: 1.5rem;
   padding: 5px;
-  width: 40%;
   border-radius: 5px;
+  width: 100%;
 }
 
-.SearchBar .searchInput:focus {
+.SearchBar form .searchInput:focus {
   outline: none;
 }
 
@@ -62,7 +67,7 @@
     width: 100%;
   }
 
-  .SearchBar .searchInput, .SearchBar .brand {
+  .SearchBar .searchInput, .SearchBar .brand, .SearchBar form {
     display: none;
   }
 
