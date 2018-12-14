@@ -13,10 +13,13 @@ const Instance = styled.section`
     p {
         margin-right: 10px;
     }
-    img {
-        height: auto;
-        width: 20px;
+    span {
+        font-size: 1.8rem;
         cursor: pointer;
+
+        &:active {
+            transform: translateY(1px);
+        }
     }
 `;
 
@@ -27,7 +30,7 @@ const Instance = styled.section`
 const Comment = props => (
     <Instance>
         <p><Username>{props.name}</Username> {props.text}</p>
-        <img src={deleteIcon} onClick={props.onDelete} alt="Delete button" title="Delete" />
+        <span className="far fa-times-circle" onClick={props.onDelete} title="Delete"></span>
     </Instance>
 )
 

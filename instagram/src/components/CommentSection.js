@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import styled from 'styled-components';
-import heart from '../assets/insta-heart.png';
-import reply from '../assets/insta-reply.PNG';  // For some reason, caps required for png
 import commentOptions from '../assets/insta-comment.PNG';
 import Comment from './Comment';
 
@@ -26,15 +24,20 @@ const Icons = styled.div`
     width: 100%;
     margin-top: 10px;
 
-    img {
-        height: 25px;
+    span {
+        font-size: 2.5rem;
         margin-right: 3%;
         cursor: pointer;
 
         &:last-of-type {
             margin-right: 0;
         }
-
+        &:active {
+            transform: translateY(1px);
+        }
+        &:active:last-child {
+            transform: translateY(1px) scaleX(-1);
+        }
     }
 `;
 
@@ -79,6 +82,7 @@ class CommentSection extends React.Component {
             time: this.props.time,
             input: '',
             liked: false,
+            commentRef: React.createRef(),
         };
     }
     componentDidUpdate(prevProps, prevState){
@@ -102,8 +106,15 @@ class CommentSection extends React.Component {
         return (
             <Comments>
                 <Icons>
-                    <img src={heart} alt="fave button" draggable="false" onClick={this.addNewLike} />
-                    <img src={reply} alt="reply button" draggable="false" />
+                    <span 
+                        className="far fa-heart" 
+                        onClick={this.addNewLike}
+                        style={this.state.liked ? {color: '#FF4136'} : {}}
+                    ></span>
+                    <span 
+                        className="far fa-comment fa-flip-horizontal"
+                        onClick={() => this.state.commentRef.current.focus()}
+                    ></span>
                 </Icons>
                 <h5>{this.state.likes} like{this.state.likes !== 1 ? 's':null}</h5>
                 <div className="comment-list">
@@ -126,6 +137,7 @@ class CommentSection extends React.Component {
                         placeholder='Add a Comment...' 
                         value={this.state.input} 
                         onChange={this.handleCommentInput} 
+                        ref={this.state.commentRef}
                     />
                     <img src={commentOptions} 
                         alt='Comment options button' 

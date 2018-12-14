@@ -29,7 +29,7 @@ const Container = styled.header`
     div:first-child span {
         cursor: pointer;
         z-index: 1;
-        font-size: 3.3rem;
+        font-size: 4rem;
         padding-right: 10px;
         border-right: 1px solid rgba(128, 128, 128, 0.3);
     }
@@ -44,12 +44,15 @@ const Icon = styled.span`
     margin-right: 8%;
     max-height: 25px;
     width: auto;
-    font-size: 3.3rem;
+    font-size: 3rem;
     cursor: pointer;
     z-index: 1;
 
     &:last-child {
         margin-right: 0;
+    }
+    &:active {
+        transform: translateY(1px);
     }
 `;
 
