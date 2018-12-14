@@ -6,3 +6,30 @@
     cursor: pointer;
     font-weight: 600;
 }
+
+.post__comment__input__div {
+    padding-top: 1rem;
+    border-top: 1px solid #efefef;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.post__comment__input {
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    color: #999;
+    cursor: text;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 7px;
+    z-index: 2;
+}
+
+.post__comment__input:focus {
+    outline-width: 0;
+}
+
+.post__comment__input:not(:placeholder-shown) {
+    color: black;
+}

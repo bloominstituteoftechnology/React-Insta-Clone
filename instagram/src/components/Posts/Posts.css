@@ -55,6 +55,7 @@
 }
 
 .post__timestamp {
+    margin-top: 0.5rem;
     cursor: pointer;
     width: 100%;
     font-size: 0.8rem;

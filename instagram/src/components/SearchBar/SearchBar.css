@@ -5,7 +5,7 @@
     justify-content: center;
 }
 
-input {
+.searchbar {
     width: 50%;
     background: #fafafa;
     border: solid 1px #dbdbdb;
@@ -17,4 +17,13 @@ input {
     padding: 7px;
     text-align: center;
     z-index: 2;
+}
+
+.searchbar:focus {
+    outline-width: 0;
+    text-align: left;
+}
+
+.searchbar:not(:placeholder-shown) {
+    color: black;
 }
