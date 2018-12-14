@@ -12,6 +12,7 @@
 
 .post__comments__interaction img {
   margin-right: 5%;
+  max-height: 25px;
   cursor: pointer;
 }
 

@@ -5,6 +5,7 @@ import Comment from './Comment';
 import moment from 'moment'
 
 import heart from '../../img/insta-heart.png';
+import liked from '../../img/insta-heart-liked.png';
 import reply from '../../img/insta-reply.PNG';
 import comment from '../../img/insta-comment.PNG';
 
@@ -64,11 +65,19 @@ class CommentSection extends React.Component {
 
     const postMoment = moment(`${year}-${month}-${day}`);
 
+    let likedIcon;
+
+    if(this.state.clicked) {
+      likedIcon = liked;
+    } else {
+      likedIcon = heart;
+    }
+
     return(
       <div className="post__comments">
 
         <div  className="post__comments__interaction">
-          <img src={heart} onClick={this.likePost} alt="insta-heart" />
+          <img src={likedIcon} onClick={this.likePost} alt="insta-heart" />
           <img src={reply} alt="insta-reply" />
           <p>{this.state.likes} likes</p>
         </div>
