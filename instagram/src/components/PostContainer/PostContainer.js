@@ -1,8 +1,15 @@
 import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
+import moment from 'moment';
 
 const PostContainer = props =>{
+    console.log(props.data.timestamp.split(',')[0]);
+    console.log(moment(new Date()).format('LLL').split(',')[0])
+    let a = moment([new Date()]).format('LLL')
+    let b = props.data.timestamp.split(", ")[0]
+    //let c = a.from(b);
+    //console.log(c)
     return(
         <div className="container">
             <div className="post-header">
@@ -18,18 +25,23 @@ const PostContainer = props =>{
             </div>
             <div className="post-content">
                 <div className="post-icons">
-                    <div class="heart"></div>
-                    <div class="chat"></div>
+                    <div className="heart"></div>
+                    <div className="chat"></div>
                 </div>
                 <div className="likes">
                     <div className="likes-container">
                         {props.data.likes} likes
                     </div>
                 </div>
-                <div class="comments">
-                    <div class="comments-container">
+                <div className="comments">
+                    <div className="comments-container">
                         {props.data.comments.map((comment,i) => <CommentSection key={i} data={comment}/>)}
                     </div>
+                </div>
+                <div className="timestamp">
+                    <span>{b}</span>
+                </div>
+                <div className="hr">
                 </div>
             </div>
         </div>

@@ -4,7 +4,12 @@ import './CommentSection.css';
 const CommentSection = prop =>{
     return(
         <div>
-            {prop.data.username} {prop.data.text}
+            <div className="username_text">
+                {prop.data.username} {prop.data.text}
+            </div>
+            <div>
+                {prop.data.timestamp}
+            </div>
         </div>
     )
 }

@@ -44,7 +44,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border:1px solid red;
+    border:1px solid #dadada;
     width:45%;
 }
 .post-content > .post-icons{
@@ -52,14 +52,14 @@
     justify-content: flex-start;
     width:100%;
     margin-top:20px;
-    border:1px solid red;
+    padding-left: 10px;
 }
 .likes{
     margin-top:10px;
     display:flex;
     justify-content: flex-start;
     width:100%;
-    border:1px solid red;
+    padding-left: 10px;
 }
 .likes > .likes-container{
     display: flex;
@@ -83,12 +83,24 @@
     justify-content: flex-start;
     width:100%;
     margin-top:20px;
-    margin-bottom: 50px;
-    border:1px solid red;
+    margin-bottom: 20px;
 }
 .comments > .comments-container{
     display:flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     width:100%;
+    padding-left: 10px;
+}
+.timestamp{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom:10px;
+    padding-left: 10px;
+}
+.hr{
+    border-bottom: 1px solid #dadada;
+    width: 85%;
+    margin-bottom: 20px;
 }
