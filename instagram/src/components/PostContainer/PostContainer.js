@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import CommentSection from './../CommentSection/CommentSection'
-
+import PropTypes from 'prop-types';
 const PostContainer = (props) => {
 
   return (
@@ -19,14 +19,18 @@ const PostContainer = (props) => {
            <CommentSection 
            comm = {post.comments}/>
            </div>
-         )
-        
+         )  
        }
        )
       }
-     
-       </div>
+       </div>  
   )
+    }
+    PostContainer.propTypes = {
+        post: PropTypes.shape({
+          username: PropTypes.string,
+          comments: PropTypes.string
+        })
     }
       
 

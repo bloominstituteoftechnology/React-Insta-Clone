@@ -20,21 +20,6 @@ class App extends Component {
     this.setState({dummyData});
   }
 
-  // getCharacters = URL => {
-    
-  
-  //   fetch(URL)
-  //     .then(res => {
-  //       return res.json();
-  //     })
-  //     .then(data => {
-  //       this.setState({ dumData: data.results});
-  //     })
-  //     .catch(err => {
-  //       throw new Error(err);
-  //     });
-    
-  // };
 
   render() {
     return (
