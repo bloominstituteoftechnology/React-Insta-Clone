@@ -40,3 +40,14 @@
   margin-right: auto;
   width: 800px;
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loading img {
+  width: 150px;
+  height: 150px;
+}

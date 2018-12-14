@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
+import loading from './loading.gif';
 import dummyData from './dummy-data';
 class App extends Component {
   
@@ -26,7 +27,10 @@ class App extends Component {
         </nav>
         <div className="body-wrapper">
           { this.state.posts.length === 0 ? (
-            <div> Loading ...</div>
+            <div className="loading">
+              <img src={loading}/>
+              Loading..
+            </div>
             ) : (
               <div>
               <PostContainer posts={this.state.posts} />
