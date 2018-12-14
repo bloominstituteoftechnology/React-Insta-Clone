@@ -17,6 +17,8 @@
     align-content: center;
     width: 50px;
     height:50px;
+    margin-left: 10px;
+    margin-top:5px;
 }
 
 .post-header > .user-name{
@@ -38,20 +40,31 @@
 .main-image img{
     width:45%;
 }
-.post-icons{
+.post-content{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border:1px solid red;
     width:45%;
+}
+.post-content > .post-icons{
+    display: flex;
+    justify-content: flex-start;
+    width:100%;
     margin-top:20px;
+    border:1px solid red;
 }
 .likes{
     margin-top:10px;
     display:flex;
+    justify-content: flex-start;
     width:100%;
+    border:1px solid red;
 }
 .likes > .likes-container{
     display: flex;
-    justify-content: center;
-    width:60%;
+    justify-content: flex-start;
+    width:100%;
 }
 .post-icons > .heart{
     background: url('../../images/heart.png') no-repeat;
@@ -65,15 +78,17 @@
     width: 30px;
     height: 30px;
 }
-.comments{
+.post-content > .comments{
     display:flex;
-    justify-content: center;
-    width:45%;
+    justify-content: flex-start;
+    width:100%;
     margin-top:20px;
     margin-bottom: 50px;
+    border:1px solid red;
 }
 .comments > .comments-container{
     display:flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
     width:100%;
 }

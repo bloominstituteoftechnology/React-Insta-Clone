@@ -16,18 +16,20 @@ const PostContainer = props =>{
             <div className="main-image">
                 <img src={props.data.imageUrl} alt="post"/>
             </div>
-            <div className="post-icons">
-                <div class="heart"></div>
-                <div class="chat"></div>
-            </div>
-            <div className="likes">
-                <div className="likes-container">
-                    {props.data.likes} likes
+            <div className="post-content">
+                <div className="post-icons">
+                    <div class="heart"></div>
+                    <div class="chat"></div>
                 </div>
-            </div>
-            <div class="comments">
-                <div class="comments-container">
-                    {props.data.comments.map((comment,i) => <CommentSection key={i} data={comment}/>)}
+                <div className="likes">
+                    <div className="likes-container">
+                        {props.data.likes} likes
+                    </div>
+                </div>
+                <div class="comments">
+                    <div class="comments-container">
+                        {props.data.comments.map((comment,i) => <CommentSection key={i} data={comment}/>)}
+                    </div>
                 </div>
             </div>
         </div>
