@@ -17,6 +17,7 @@ class CommentSection extends React.Component {
     this.state = {
       time: props.time,
       likes: props.likes,
+      clicked: false,
       comments: props.comments
     }
   }
@@ -36,8 +37,17 @@ class CommentSection extends React.Component {
 
   likePost = event => {
     let count = this.state.likes;
-    count++
-    this.setState({likes: count});
+
+    if(!this.state.clicked) {
+      count++
+    } else {
+      count--
+    }
+
+    this.setState({
+      likes: count,
+      clicked: !this.state.clicked
+    });
   }
 
   render() {
