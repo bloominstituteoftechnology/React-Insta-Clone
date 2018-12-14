@@ -50,10 +50,15 @@
     font-weight: 600;
     cursor: pointer;
     width: 100%;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
 }
 
 .post__timestamp {
     cursor: pointer;
+    width: 100%;
+    font-size: 0.8rem;
+    color: #999;
 }
 
 .post__name {

@@ -1,13 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
+import Comment from "../Comment/Comment";
 import "./CommentSection.css";
 
 const CommentSection = props => {
-  let arr = props.comments.map((e, i) => (
-    <div className="post__comment" key={`comment-${i}`}>
-      <span className="username">{e.username}</span> {e.text}
+  return (
+    <div className="posts">
+      <Comment className="post__comment" comments={props.comments} />
     </div>
-  ));
-  return <div className="posts">{arr}</div>;
+  );
+};
+
+CommentSection.propTypes = {
+  comments: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default CommentSection;
