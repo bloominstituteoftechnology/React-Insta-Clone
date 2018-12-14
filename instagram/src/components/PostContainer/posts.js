@@ -28,6 +28,7 @@ const Posts = props => {
                     postImage={post.imageUrl}
                     likes={post.likes}
                     comments={post.comments}
+                    timestamp={post.timestamp}
                     />
                 )}
             </div>

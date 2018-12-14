@@ -1,5 +1,6 @@
 import React from 'react';
 import './posts.css';
+import Moment from 'react-moment';
 
 import Comments from '../CommentSection/comments';
 
@@ -39,6 +40,10 @@ const Post = props => {
 
             <div>
                 {props.comments.map( data => <Comments key = {data.key} user={data.username} text={data.text}/>)}
+            </div>
+            <div className="time-stamp">
+                <Moment fromNow>{props.timestamp}</Moment>
+                
             </div>
 
             <div className="comment-input">
