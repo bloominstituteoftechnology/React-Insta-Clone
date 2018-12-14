@@ -9,10 +9,15 @@ class App extends Component {
     super();
 
     this.state = {
-      posts: dummyData,
+      posts: [],
     }
   }
 
+  componentDidMount() {
+    setTimeout( () => {
+      this.setState({posts: dummyData});
+    }, 3000)
+  }
   render() {
     return (
       <div className="App">
@@ -20,7 +25,15 @@ class App extends Component {
           <SearchBar />
         </nav>
         <div className="body-wrapper">
-          <PostContainer posts={this.state.posts} />
+          { this.state.posts.length === 0 ? (
+            <div> Loading ...</div>
+            ) : (
+              <div>
+              <PostContainer posts={this.state.posts} />
+
+              </div>
+            )
+          }
         </div>
       </div>
     );
