@@ -17,7 +17,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log('In did mount')
     setTimeout(() => {
       this.setState({data: dummyData})
     }, 1500)

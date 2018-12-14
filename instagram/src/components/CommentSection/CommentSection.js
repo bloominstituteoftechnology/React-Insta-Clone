@@ -34,6 +34,12 @@ class CommentSection extends React.Component {
     }
   }
 
+  likePost = event => {
+    let count = this.state.likes;
+    count++
+    this.setState({likes: count});
+  }
+
   render() {
 
     const comments = this.state.comments.map(comment => <Comment key={Math.random()}
@@ -52,7 +58,7 @@ class CommentSection extends React.Component {
       <div className="post__comments">
 
         <div  className="post__comments__interaction">
-          <img src={heart} alt="insta-heart" />
+          <img src={heart} onClick={this.likePost} alt="insta-heart" />
           <img src={reply} alt="insta-reply" />
           <p>{this.state.likes} likes</p>
         </div>
