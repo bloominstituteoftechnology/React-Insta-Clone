@@ -11,28 +11,32 @@ class App extends Component {
     super(props);
 
     this.state = {
-      data: dummyData,
+      data: [],
       prevData: []
     }
+  }
+
+  componentDidMount() {
+    console.log('In did mount')
+    setTimeout(() => {
+      this.setState({data: dummyData})
+    }, 1500)
   }
 
 
     render() {
 
-    const posts = this.state.data.map(obj => <PostContainer key={Math.random()}
-                                                      user={obj.username}
-                                                      thumbnail={obj.thumbnailUrl}
-                                                      image={obj.imageUrl}
-                                                      time={obj.timestamp}
-                                                      likes={obj.likes}
-                                                      comments={obj.comments}/>)
-
-
-
     return (
       <div className="App">
         <SearchBar data={this.state.data} />
-        {posts}
+        { this.state.data.length === 0 ? <h1 className="load">LOADING...</h1>
+          : this.state.data.map(obj => <PostContainer key={Math.random()}
+                                                            user={obj.username}
+                                                            thumbnail={obj.thumbnailUrl}
+                                                            image={obj.imageUrl}
+                                                            time={obj.timestamp}
+                                                            likes={obj.likes}
+                                                            comments={obj.comments}/>)}
       </div>
     );
   }
