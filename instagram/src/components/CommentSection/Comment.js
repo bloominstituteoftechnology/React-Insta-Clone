@@ -13,6 +13,6 @@ const Comment = props => {
 
 Comment.propTypes = {
     text: PropTypes.string.isRequired,
-    username: PropTypes.string
+    username: PropTypes.string.isRequired
 };
 export default Comment;

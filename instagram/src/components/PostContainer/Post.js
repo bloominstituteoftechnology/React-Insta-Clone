@@ -1,5 +1,5 @@
 import React from "react";
-import Comment from './../CommentSection/Comment';
+import CommentSection from './../CommentSection/CommentSection';
 import moment from './../../../node_modules/moment';
 import PropTypes from 'prop-types';
 import './Post.css'
@@ -23,15 +23,7 @@ const Post = props => {
                 {props.likes} likes </div>
             </div>
             <div className="comments">
-                {props.comments.map(comment => {
-                    return (
-                        <Comment
-                            key={Math.random()}
-                            username={comment.username}
-                            text={comment.text}
-                        />
-                    )
-                })}
+                <CommentSection comments={props.comments}/>
             </div>    
             <div className="timestamp">
                 {moment().startOf('hour').fromNow()}
