@@ -2,6 +2,7 @@
   margin: 0 auto;
   max-width: 640px;
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .img-thumbnail{
@@ -15,4 +16,10 @@
 .username{
   display: flex;
   align-self: center;
+}
+
+.like-message-icons{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

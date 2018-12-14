@@ -9,7 +9,7 @@ import logoCompass from './img/icons8-compass-filled-50.png';
 
 const SearchBar = props => {
   return (
-    <Navbar color='light'>
+    <Navbar className='search-bar' color='light'>
       <div>
         <img src={logoCam} height='32px'/>
         <img src={logo} height='48px'/>
