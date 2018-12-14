@@ -4,11 +4,7 @@ import Comment from "../Comment/Comment";
 import "./CommentSection.css";
 
 const CommentSection = props => {
-  return (
-    <div className="posts">
-      <Comment className="post__comment" comments={props.comments} />
-    </div>
-  );
+  return <Comment className="post__comment" comments={props.comments} />;
 };
 
 CommentSection.propTypes = {

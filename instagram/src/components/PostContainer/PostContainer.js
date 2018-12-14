@@ -1,10 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Posts from "../Posts/Posts";
 import "./PostContainer.css";
 
 const PostContainer = props => {
-  let arr = props.posts.map((e, i) => <Posts key={i} post={e} />);
-  return <div className="posts">{arr}</div>;
+  return <Posts posts={props.posts} />;
+};
+
+PostContainer.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default PostContainer;
