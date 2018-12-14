@@ -11,23 +11,40 @@ class App extends Component {
     super(props);
 
     this.state = {
-      data: [],
-      prevData: []
+      data: []
     }
   }
 
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({data: dummyData})
-    }, 1500)
-  }
+  searchPosts = (event) => {
+      const term = event.target.value;
 
+      if(term === '') {
+        this.setState({data: dummyData});
+      }
+
+      const newList = this.state.data.filter(post => post.username === term);
+
+      if(newList.length === 0) {
+        return;
+      }
+
+      this.setState({
+        data: newList})
+    }
+
+
+    componentDidMount() {
+      setTimeout(() => {
+        this.setState({
+          data: dummyData})
+      }, 1500)
+    }
 
     render() {
 
     return (
       <div className="App">
-        <SearchBar data={this.state.data} />
+        <SearchBar data={this.state.data} searchHandler={this.searchPosts} />
         { this.state.data.length === 0 ? <h1 className="load">LOADING...</h1>
           : this.state.data.map(obj => <PostContainer key={Math.random()}
                                                             user={obj.username}
