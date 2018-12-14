@@ -3,3 +3,16 @@
   max-width: 640px;
   width: 100%;
 }
+
+.img-thumbnail{
+  border: none;
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  margin: 15px;
+}
+
+.username{
+  display: flex;
+  align-self: center;
+}
