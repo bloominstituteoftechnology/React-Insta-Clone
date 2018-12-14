@@ -1,6 +1,7 @@
 import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
+import AddComment from '../AddComment/AddComment';
 import moment from 'moment';
 
 const PostContainer = props =>{
@@ -43,6 +44,7 @@ const PostContainer = props =>{
                 </div>
                 <div className="hr">
                 </div>
+                <AddComment comment={props.comment}/>
             </div>
         </div>
     )

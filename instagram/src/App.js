@@ -8,16 +8,22 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      data: dummyData
+      data: dummyData,
+      inputText: ''
     }
+  }
+  handleInput = event =>{
+    this.setState({
+      inputText: event.target.value
+    })
   }
 
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        {this.state.data.map((data,i) => <PostContainer key={i} data={data} />)}
+        <SearchBar handle={this.handleInput} search={this.inputText}/>
+        {this.state.data.map((data,i) => <PostContainer key={i} data={data} handle={this.handleInput} comment={this.inputText} />)}
       </div>
     );
   }

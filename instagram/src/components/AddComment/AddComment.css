@@ -1,0 +1,18 @@
+.new-comment{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left:10px;
+    padding-right:10px;
+    margin-bottom: 20px;
+}
+.new-comment > form > input{
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    outline: none;
+}
+
+.new-comment > .dots{
+    font-size: 20px;
+}

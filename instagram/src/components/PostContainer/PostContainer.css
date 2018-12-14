@@ -46,6 +46,7 @@
     justify-content: center;
     border:1px solid #dadada;
     width:45%;
+    margin-bottom:50px;
 }
 .post-content > .post-icons{
     display: flex;
@@ -96,11 +97,11 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    margin-bottom:10px;
+    margin-bottom:15px;
     padding-left: 10px;
 }
 .hr{
     border-bottom: 1px solid #dadada;
-    width: 85%;
+    width: 97%;
     margin-bottom: 20px;
 }
