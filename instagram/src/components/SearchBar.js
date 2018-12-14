@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import logo from '../assets/insta-logo.png';
 import textLogo from '../assets/insta-title.png'; 
-import compass from '../assets/insta-compass.png';
-import heart from '../assets/insta-heart.png';
-import profile from '../assets/insta-profile.png';
 
 const Container = styled.header`
     display: flex;
@@ -30,25 +26,27 @@ const Container = styled.header`
     input {
         text-align: center;
     }
+    div:first-child span {
+        cursor: pointer;
+        z-index: 1;
+        font-size: 3.3rem;
+        padding-right: 10px;
+        border-right: 1px solid rgba(128, 128, 128, 0.3);
+    }
 `;
 
 const Logo = styled.img`
     max-height: 35px;
-
-    &:first-child {
-        padding-right: 10px;
-        border-right: 1px solid rgba(128, 128, 128, 0.3);
-    }
-
-    &:last-child {
-        margin-left: 10px;
-    }
+    margin-left: 10px;
 `;
 
-const Icon = styled.img`
+const Icon = styled.span`
     margin-right: 8%;
     max-height: 25px;
     width: auto;
+    font-size: 3.3rem;
+    cursor: pointer;
+    z-index: 1;
 
     &:last-child {
         margin-right: 0;
@@ -62,7 +60,7 @@ const Icon = styled.img`
 const SearchBar = props => (
     <Container>
         <div>
-            <Logo src={logo} alt="Instagram Logo" draggable="false" />
+            <span className="fab fa-instagram"></span>
             <Logo src={textLogo} alt="Instagram" draggable="false" />
         </div>
         <div>
@@ -74,9 +72,9 @@ const SearchBar = props => (
                 />)}
         </div>
         <div>
-            <Icon src={compass} alt="compass icon" draggable="false" />
-            <Icon src={heart} alt="heart icon" draggable="false" />
-            <Icon src={profile} alt="profile icon" draggable="false" onClick={props.onLogout}/>
+            <Icon className="far fa-compass"></Icon>
+            <Icon className="far fa-heart"></Icon>
+            <Icon className="far fa-user" onClick={props.onLogout}></Icon>
         </div>
     </Container>
 );
