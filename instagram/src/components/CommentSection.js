@@ -14,7 +14,7 @@ class CommentSection extends React.Component {
         return (
             <div>
             {this.state.comments.map((comments, input) => <Comment key={input} comment={comments} />)}
-            <Comment
+            <CommentInput 
               comment={this.state.comment}
              />
           </div>
@@ -23,12 +23,12 @@ class CommentSection extends React.Component {
 }
 
 
-
+//goes with <Comment /> 
 const Comment = props => {
     return (
       <div className="comment-text">
-        <span className="comment">{props.comment.text}</span>{' '}
-        <span className="user">-{props.comment.username}</span>
+        <div className="comment">{props.comment.text}</div>{' '}
+        <div className="user">-{props.comment.username}</div>
       </div>
     );
   };
@@ -41,6 +41,35 @@ Comment.PropTypes = {
     })
 }
 
+const CommentInput = props => {
+    return (
+        <div className="comment-text">
+        <form>
+            <input 
+                type="text"
+                value={props.comment}
+                placeholder="Add a comment"
+            />
+        </form>
+
+        </div>
+    )
+}
+
+// const Comment = props => {
+//     return (
+//       <div className="comment-text">
+//         <form onSubmit = {props.submitAComment}> 
+//           <input type="text"
+//           value={props.comment}
+//           placeholder="Add a comment"
+//           onChange={props.changeAComment}
+//            />
+          
+//         </form>
+//       </div>
+//     );
+//   };
 
 export default CommentSection
 
