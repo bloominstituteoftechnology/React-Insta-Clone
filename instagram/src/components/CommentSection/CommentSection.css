@@ -12,10 +12,13 @@
     border-top: 1px solid #efefef;
     margin-top: 1rem;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
 }
 
 .post__comment__input {
-    width: 100%;
     border: none;
     border-radius: 3px;
     color: #999;
@@ -32,4 +35,8 @@
 
 .post__comment__input:not(:placeholder-shown) {
     color: black;
+}
+
+.dots {
+    transform: translateY(25%);
 }

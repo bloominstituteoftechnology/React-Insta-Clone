@@ -41,6 +41,7 @@ const Posts = props => {
               className="post__comment__input"
               placeholder="Add a comment..."
             />
+            <i className="fas fa-ellipsis-h dots" />
           </div>
         </div>
       </div>
