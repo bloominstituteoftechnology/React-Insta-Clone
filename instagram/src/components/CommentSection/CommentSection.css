@@ -1,4 +1,8 @@
 .comment{
-  border: 1px solid red;
   display: flex;
+}
+
+.username{
+  font-weight: bold;
+  padding-right: 5px;
 }

@@ -14,7 +14,7 @@ const PostContainer = props => {
           <div className='username'>{props.data.username}</div>
         </Media>
         <CardImg src={props.data.imageUrl} />
-        <CardBody>
+        <CardBody className='btm-border'>
           <div className='like-message-icons'>
             <div>
               <img src={heart} height='32px' width='32px'/>
@@ -25,6 +25,7 @@ const PostContainer = props => {
           {props.data.comments.map(data => <CommentSection data={data} />)}
           <div>{props.data.timestamp}</div>
         </CardBody>
+        <input className='comment' placeholder='Add a comment...' />
       </Card>
     </div>
   );
