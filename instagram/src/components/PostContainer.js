@@ -1,4 +1,5 @@
 import React from "react";
+import CommentSection from './CommentSection';
 
 class Post extends React.Component{
     constructor(props){
@@ -31,14 +32,14 @@ class Post extends React.Component{
                   incrementLikes={this.incrementLikes}
                   likes={this.state.likes}
                 />
-                {/* <CommentSection comments={this.props.post.comments} /> */}
+                <CommentSection comments={this.props.post.comments} />
             </div>
         )
     }
 }
 
 
-//map over posts and return Post
+//map over posts and return Post images
 const PostContainer = props => {
     return (
         <div className = "post-container">
@@ -77,6 +78,7 @@ const PostHeader = props => {
              src={props.thumbnailUrl}
             />
           </div>
+          <div>{props.username}</div>
         </div>
     )
 }

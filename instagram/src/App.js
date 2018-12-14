@@ -4,6 +4,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer';
 
+
 class App extends Component {
   constructor() {
     super ();
