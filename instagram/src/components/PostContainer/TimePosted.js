@@ -4,7 +4,9 @@ import "./PostContainer.css";
 import Moment from 'react-moment';
 
 const TimePosted = props => {
-  return <span className={"time-posted"}>{props.timestamp}</span>;
+  console.log(moment())
+  return <Moment toNow>{props.timestamp}</Moment>;
+
 };
 
 TimePosted.propTypes = {
