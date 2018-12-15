@@ -40,7 +40,7 @@ class Card extends Component {
           <p className="timestamp">{card.timestamp}</p>
         </div>
   
-        <form onSubmit={() => addComment(comment, card.id)}>
+        <form onSubmit={(e) => addComment(comment, card.id, e)}>
           <input
             type="text"
             className="commentInput"

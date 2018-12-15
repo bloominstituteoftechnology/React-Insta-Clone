@@ -14,16 +14,20 @@ class App extends Component {
     this.setState({ card: dummyData });
   };
 
-  handleAddComment = (textInput, id) => {
+  handleAddComment = (textInput, id, e) => {
     // alert(textInput);
     // alert(id);
+    e.preventDefault();
+    const comments = this.state.card[id].comments.slice();
     const newComment = {
       username: 'snow',
       text: textInput,
     };
 
+    comments.push(newComment);
+
     this.setState({
-      card: [...this.state[id], newComment]
+      comments: comments
     });
   };
 
