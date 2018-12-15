@@ -11,6 +11,13 @@ class App extends Component {
       comments: []
     };
   }
+  liked = (e, i) => {
+    let array = this.state.posts;
+    array[i].likes += 1;
+    this.setState({
+      posts: array
+    });
+  };
   componentDidMount() {
     this.setState({
       posts: dummyData.map(e => {
@@ -44,6 +51,7 @@ class App extends Component {
           <i className="far fa-user" />
         </header>
         <PostContainer
+          like={this.liked}
           posts={this.state.posts}
           comments={this.state.comments}
         />

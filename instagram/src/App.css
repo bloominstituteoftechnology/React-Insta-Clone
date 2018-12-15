@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 .App-header {
   background-color: white;
   border-bottom: 1px solid #efefef;
@@ -21,6 +23,8 @@
 }
 
 .brand__title {
+  font-family: 'Pacifico',
+    cursive;
   cursor: pointer;
   padding: 0 0 2px;
 }

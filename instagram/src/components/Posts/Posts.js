@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Moment from "react-moment";
 import CommentSection from "../CommentSection/CommentSection";
 import "./Posts.css";
 
@@ -18,25 +17,14 @@ const Posts = props => {
         <div className="post__body">
           <div className="post__body__buttons">
             <div className="main--buttons">
-              <i className="far fa-heart" />
+              <i onClick={e => props.like(e, i)} className="far fa-heart" />
               <i className="far fa-comment" />
               <i className="far fa-share-square" />
             </div>
             <i className="far fa-bookmark" />
           </div>
           <span className="post__likes">{e.likes} likes</span>
-          <CommentSection comments={props.comments[i]} />
-          <span className="post__timestamp">
-            <Moment fromNow>{e.timestamp}</Moment>
-          </span>
-          <div className="post__comment__input__div">
-            <input
-              type="text"
-              className="post__comment__input"
-              placeholder="Add a comment..."
-            />
-            <i className="fas fa-ellipsis-h dots" />
-          </div>
+          <CommentSection comments={props.comments[i]} time={e.timestamp} />
         </div>
       </div>
     );
