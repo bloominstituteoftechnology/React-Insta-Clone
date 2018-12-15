@@ -20,13 +20,14 @@ class CommentSection extends React.Component {
     });
   }
 
-  /*  */
+  /* Takes user input in comment field into state */
   onChangeHandler = event => {
     this.setState({
       addComment: event.target.value
     });
   };
 
+  /* Adds comment to this.state.comments, resets input field */
   addNewComment = event => {
     event.preventDefault();
     const currentComments = this.state.comments;
@@ -86,7 +87,8 @@ CommentSection.propTypes = {
         text: PropTypes.string
       })
     )
-  })
+  }),
+  user: PropTypes.string
 };
 
 export default CommentSection;
