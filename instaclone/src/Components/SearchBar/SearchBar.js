@@ -4,7 +4,6 @@ import './SearchBar.css';
 import logo_name from './imgs/instagram_logo.svg'
 import compass_icon  from './imgs/compass.svg'
 import heart_icon  from './imgs/heart.svg'
-import search_icon from './imgs/search.svg'
 import person_icon from './imgs/person.svg'
 
 
@@ -12,7 +11,7 @@ const SearchBar = () => {
     return ( 
         <div className="nav-bar-container">
             <div className="branding-container">
-                <img src={process.env.PUBLIC_URL + `/imgs/logo.jpg`} alt="logo" srcset="" className="logo"/>
+                <img src={process.env.PUBLIC_URL + `/imgs/logo.jpg`} alt="logo" className="logo"/>
                 <div className="divider"></div>
                 <img src={logo_name} alt="meh" className="logo-name"/>
             </div>

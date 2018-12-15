@@ -46,7 +46,7 @@
 }
 
 /* icon container for the compass the heart and the person */
-.icon-container{
+.nav-bar-container .icon-container{
     display: flex;
     justify-content: space-between;
     

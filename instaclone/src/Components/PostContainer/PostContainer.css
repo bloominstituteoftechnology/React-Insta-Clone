@@ -8,8 +8,8 @@
     max-width: 640px;
 
     border: 1px solid #AB7C94;
+    border-radius:5px;
 }
-
 .post-image{
     width:100%;
 }
@@ -18,8 +18,12 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0 1.5rem;
+    margin-top: 1rem;
 }
-
+.bottom-container .icon-container .fa-icon{
+    padding-right: 1rem;
+}
 .bottom-container .likes{
     font-weight: bold;
+    margin: .5rem 0rem;
 }
