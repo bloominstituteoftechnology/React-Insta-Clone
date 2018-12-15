@@ -14,9 +14,17 @@ class App extends Component {
     this.setState({ card: dummyData });
   };
 
-  handleAddComment = (text, id) => {
-    console.log(text);
-    console.log(id);
+  handleAddComment = (textInput, id) => {
+    // alert(textInput);
+    // alert(id);
+    const newComment = {
+      username: 'snow',
+      text: textInput,
+    };
+
+    this.setState({
+      card: [...this.state[id], newComment]
+    });
   };
 
   render() {

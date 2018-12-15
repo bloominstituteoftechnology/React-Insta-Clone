@@ -8,7 +8,7 @@ const PostContainer = props => {
   return (
     <div className="PostContainer">
       {posts.map(card => (
-        <Card key={card.timestamp} card={card} />
+        <Card key={card.timestamp} card={card} addComment={props.addComment} />
       ))}
     </div>
   );

@@ -16,7 +16,7 @@ class Card extends Component {
   setComment = (e) => this.setState({ comment: e.target.value });
 
   render() {
-    const { textInput } = this.state;
+    const { comment } = this.state;
     const { card, addComment } = this.props;
 
     return (
@@ -32,19 +32,19 @@ class Card extends Component {
           <div className="icons">
             <img src={Heart} alt="Heart Icon" />
             <img src={CommentIcon} alt="chat icon" />
-            <p>{card.likes} likes</p>
+            <p>{card.likes}likes</p>
           </div>
           {card.comments.map(comment => (
-            <Comment key={comment.timestamp} comment={comment} />
+            <Comment key={comment.text} comment={comment} />
           ))}
           <p className="timestamp">{card.timestamp}</p>
         </div>
   
-        <form onSubmit={() => addComment(textInput, card.id)}>
+        <form onSubmit={() => addComment(comment, card.id)}>
           <input
-            type="submit"
+            type="text"
             className="commentInput"
-            value={textInput}
+            value={comment}
             onChange={this.setComment} />
         </form>
       </div>
