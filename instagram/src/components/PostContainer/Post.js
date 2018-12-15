@@ -13,10 +13,16 @@ class Post extends React.Component {
     }
   }
 
-  addCommentHandler = () => {
+  addLikeHandler = () => {
     let likes = this.state.likes;
-    if(!this.state.alreadyHeart) likes ++;
-    this.setState({likes: likes, heartColor: "red", alreadyHeart: true});
+    if(!this.state.alreadyHeart) {
+      likes ++;
+      this.setState({likes: likes, heartColor: "red", alreadyHeart: true});
+    }
+    else {
+      likes --;
+      this.setState({likes: likes, heartColor: "black", alreadyHeart: false});
+    }
   }
 
   render() {
@@ -31,7 +37,7 @@ class Post extends React.Component {
           icon={['fas', 'heart']}
           size="3x"
           className="postIcon"
-          onClick={this.addCommentHandler}
+          onClick={this.addLikeHandler}
           color= {this.state.heartColor}
         />
         <FontAwesomeIcon

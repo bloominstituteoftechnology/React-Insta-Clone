@@ -1,8 +1,3 @@
-.comment {
-  font-size: 1.4rem;
-  margin-left: 15px;
-  margin-top: 10px;
-}
 
 .comment .username {
   font-weight: bold;
@@ -30,6 +25,13 @@
 
 .commentSection .comments {
   margin-bottom: 10px;
+}
+
+.commentSection .comments .comment {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 1.4rem;
+  margin-top: 10px;
 }
 
 .commentSection .date {

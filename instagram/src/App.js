@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faHeart, faCompass, faUser, faComment } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faCompass, faUser, faComment, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 import SearchBar from './components/SearchBar/SearchBar';
 import dummyData from './dummy-data';
@@ -9,19 +9,19 @@ import PostContainer from './components/PostContainer/PostContainer';
 
 import './App.css';
 
-library.add(faInstagram, faCompass, faHeart, faUser, faComment);
+library.add(faInstagram, faCompass, faHeart, faUser, faComment, faTrashAlt);
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      users: []
+      users: dummyData
     }
   }
 
-  componentDidMount() {
-    this.buildUsers(dummyData);
-  }
+  // componentDidMount() {
+  //   this.buildUsers(dummyData);
+  // }
 
   buildUsers = (data) => {
     this.setState({users: data});
