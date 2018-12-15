@@ -10,13 +10,15 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: [],
-      addComment: "" /*Buffer for input field*/
+      addComment: "" /*Buffer for input field*/,
+      likes: 0
     };
   }
 
   componentDidMount() {
     this.setState({
-      comments: this.props.data.comments
+      comments: this.props.data.comments,
+      likes: this.props.data.likes
     });
   }
 
@@ -42,15 +44,24 @@ class CommentSection extends React.Component {
     });
   };
 
+  /* Add Likes */
+  addLikeHandler = event => {
+    let likeAdder = this.state.likes;
+    likeAdder++;
+    this.setState({
+      likes: likeAdder
+    });
+  };
+
   render() {
     return (
       <div className={"comments-container"}>
         <div className={"icon-container"}>
-          <FiHeart className={"icon"} />
+          <FiHeart className={"icon"} onClick={this.addLikeHandler} />
           <FiMessageCircle className={"icon"} />
           <FiSend className={"icon"} />
         </div>
-        <span className={"likes"}>{this.props.data.likes} likes</span>
+        <span className={"likes"}>{this.state.likes} likes</span>
         {this.props.data.comments.map((comments, index) => {
           return (
             <div className={"comments-field"} key={comments.text}>
