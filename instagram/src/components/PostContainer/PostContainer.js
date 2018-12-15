@@ -33,7 +33,7 @@ const PostContainer = (props) => {
         thumbnailUrl: PropTypes.string,
         imageUrl: PropTypes.string,
         likes: PropTypes.number,
-        timestamp: PropTypes.string,       
+        timestamp: PropTypes.string      
         }
       ))
     }

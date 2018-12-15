@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PostContainer from './../PostContainer/PostContainer'
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-const CommentSection = (props,index) => {
-  console.log(props);
+const CommentSection = (props) => {
   return (
    
     <div >
-      {props.comm.map( comment => {
-        console.log (comment)
-        return( <div key={`${comment.username}${comment.text}`}><div>{comment.username}</div>
-          <div>{comment.text}</div></div>
+      {props.comm.map( comm => {
+        return( <div key={`${comm.username}${comm.text}`}><div>{comm.username}</div>
+          <div>{comm.text}</div></div>
           )
       })}
     </div>
@@ -19,4 +17,13 @@ const CommentSection = (props,index) => {
   );
 }
 
+
+CommentSection.propTypes = {
+  comm: PropTypes.arrayOf(PropTypes.shape(
+    {
+    username: PropTypes.string,
+    text: PropTypes.string    
+    }
+  ))
+  }
 export default CommentSection;
