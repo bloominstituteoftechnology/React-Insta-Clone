@@ -7,7 +7,7 @@ const SearchBar = props => {
                 <i className="fa fa-instagram"/>
             </div>
         <div>
-            <input type="text" placeholder="Search" />
+            <input type="text" placeholder="Search" onKeyDown={props.searchedPosts} />
         </div>
         <div className="insta-icons-container">
           <div className="insta-icon">

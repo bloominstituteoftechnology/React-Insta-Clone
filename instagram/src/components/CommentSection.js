@@ -18,12 +18,12 @@ class CommentSection extends React.Component {
 
     }
 
-    setComments = () => {
-        localStorage.setItem(
-         this.props.postId,
-         JSON.stringify(this.state.comments)
-        );
-      };
+    // setComments = () => {
+    //     localStorage.setItem(
+    //      this.props.postId,
+    //      JSON.stringify(this.state.comments)
+    //     );
+    //   };
       
       commentHandler = elem => {
         this.setState({ comment:elem.target.value });
@@ -86,23 +86,6 @@ const CommentInput = props => {
         </div>
     )
 }
-
-// const Comment2 = props => {
-//     return (
-//       <div className="comment-text">
-//         <form onSubmit = {props.submitAComment}> 
-//           <input type="text"
-//           value={props.comment}
-//           placeholder="Add a comment"
-//           onChange={props.changeAComment}
-//            />
-          
-//         </form>
-//       </div>
-//     );
-//   };
-
-
 
 
 
