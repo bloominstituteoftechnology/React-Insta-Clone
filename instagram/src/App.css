@@ -10,6 +10,10 @@
 }
 
 .App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
