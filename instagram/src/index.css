@@ -20,31 +20,80 @@ code {
 
 .App {
   width: 900px;
+  border: 1px solid black;
 }
 
 .searchBar {
+  display: flex;
   border: 1px solid black;
-  padding: 20px;
+  max-width: 100%;
+  margin: 10px;
+}
+
+.searchBar img {
+  width: 99%;
+  height: 100%;
 }
 
 .postContainer {
-  border: 1px solid blue;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  margin: 10px;
+}
+
+.postUser {
+  display: flex;
+  border: 1px solid purple;
+  width: 100%;
+  height: 65px;
+  align-items: center;
+}
+
+.postUser img {
+  width: 5%;
+  height: 70%;
+  border-radius: 50%;
+}
+
+.postUser h3 {
+  display: flex;
+  justify-content: flex-start;
+  width: 91%;
+}
+
+.image {
+  display: flex;
+  align-self: center;
+  border: 2px solid red;
+  width: 100%;
   height: 400px;
 }
 
 .commentSection {
-  border: 1px solid green;
-  padding: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  border: 2px solid lavender;
+  color: black;
+  height: 100%; 
+  flex-direction: column;
+  margin: 5px;
+
 }
 
 .comment {
+  display: flex;
   border: 1px solid purple;
   height: 40px;
   margin-bottom: 10px;
+  margin: 5px;
+
 }
 
 .addComment {
-  border: 1px solid purple;
+  display: flex;
+  border-top: 1px solid gray;
+  padding-top: 15px;
   height: 40px;
+  width: 90%;
 }

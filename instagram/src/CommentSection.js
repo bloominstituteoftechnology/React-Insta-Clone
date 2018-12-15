@@ -1,11 +1,15 @@
 import React from "react";
-import Comment from './comment';
+import Comment from "./Comment";
 
 function CommentSection(props) {
     return (
-      <section className="commentSection">search bar --- level one
-        <Comment />
-      </section> 
+      <div className="commentSection">
+          {props.dummyData.comments.map(commenters => {
+            return (
+              <Comment key={commenters.username} commentData={commenters}/>
+            );
+          })}
+      </div>
     );
 }
 

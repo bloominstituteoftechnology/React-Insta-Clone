@@ -2,15 +2,28 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchBar from './SearchBar';
 import PostContainer from './PostContainer';
-import CommentSection from './CommentSection';
+import dummyData from './dummyData';
 
 class App extends Component {
+  constructor () {
+    super();
+    this.state = {
+      dummy: []
+    }
+  }
+
+  componentDidMount () {
+    this.setState({dummy: dummyData})
+  }
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer />
-        <CommentSection />
+        <section className="content">
+        {this.state.dummy.map(dummyData => (
+          <PostContainer key={dummyData.username} dummyData={dummyData} />
+        ))}
+        </section>
       </div>
     );
   }
