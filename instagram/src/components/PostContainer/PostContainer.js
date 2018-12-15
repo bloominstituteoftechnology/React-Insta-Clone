@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import "./PostContainer.css";
 import PostHeader from "./PostHeader";
 import CommentSection from "../CommentSection/CommentSection";
-import TimePosted from "./TimePosted";
-import { Input } from "reactstrap";
 
 const PostContainer = props => {
   return (
@@ -16,8 +14,6 @@ const PostContainer = props => {
         className={"posted-image"}
       />
       <CommentSection data={props.data} />
-      <TimePosted className={"timestamp"} timestamp={props.data.timestamp} />
-      <Input className={"comment-input"} placeholder={"Add comment..."} />
     </div>
   );
 };

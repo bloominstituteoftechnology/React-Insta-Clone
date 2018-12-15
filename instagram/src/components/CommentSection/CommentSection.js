@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./CommentSection.css";
 import { FiHeart, FiMessageCircle, FiSend } from "react-icons/fi";
+import TimePosted from "./TimePosted";
+import { Input } from "reactstrap";
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -36,6 +38,11 @@ class CommentSection extends React.Component {
             </div>
           );
         })}
+        <TimePosted
+          className={"timestamp"}
+          timestamp={this.props.data.timestamp}
+        />
+        <Input className={"comment-input"} placeholder={"Add comment..."} />
       </div>
     );
   }
