@@ -25,7 +25,7 @@ const Posts = props => {
             <i className="far fa-bookmark" />
           </div>
           <span className="post__likes">{e.likes} likes</span>
-          <CommentSection comments={e.comments} />
+          <CommentSection comments={props.comments[i]} />
           <span className="post__timestamp">
             <Moment fromNow>{e.timestamp}</Moment>
           </span>

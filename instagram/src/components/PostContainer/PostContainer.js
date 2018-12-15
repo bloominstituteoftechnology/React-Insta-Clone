@@ -4,7 +4,7 @@ import Posts from "../Posts/Posts";
 import "./PostContainer.css";
 
 const PostContainer = props => {
-  return <Posts posts={props.posts} />;
+  return <Posts posts={props.posts} comments={props.comments} />;
 };
 
 PostContainer.propTypes = {

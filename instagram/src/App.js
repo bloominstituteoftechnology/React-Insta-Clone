@@ -7,11 +7,25 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: [],
+      comments: []
     };
   }
   componentDidMount() {
-    this.setState({ posts: dummyData });
+    this.setState({
+      posts: dummyData.map(e => {
+        return {
+          username: e.username,
+          thumbnailUrl: e.thumbnailUrl,
+          imageUrl: e.imageUrl,
+          likes: e.likes,
+          timestamp: e.timestamp
+        };
+      }),
+      comments: dummyData.map(e => {
+        return e.comments;
+      })
+    });
   }
   render() {
     return (
@@ -29,7 +43,10 @@ class App extends Component {
           <i className="far fa-heart" />
           <i className="far fa-user" />
         </header>
-        <PostContainer posts={this.state.posts} />
+        <PostContainer
+          posts={this.state.posts}
+          comments={this.state.comments}
+        />
       </div>
     );
   }
