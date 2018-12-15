@@ -8,6 +8,7 @@ const PostContainer = props => {
     return (
         <div>{props.posts.map( (post, index) => (
             <Container key={index} post={post} />
+         
         ))}
         </div>
     )

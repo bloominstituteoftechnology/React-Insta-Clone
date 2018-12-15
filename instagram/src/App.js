@@ -4,7 +4,7 @@ import './App.css';
 import PostContainer from './components/PostContainer/PostContainer';
 import dummyData from './dummy-data';
 // import commentData from './components/CommentSection/commentData';
-import CommentSection from './components/CommentSection/CommentSection';
+// import CommentSection from './components/CommentSection/CommentSection';
 import SearchBar from './components/SearchBar/SearchBar';
 import PropTypes from "prop-types";
 
