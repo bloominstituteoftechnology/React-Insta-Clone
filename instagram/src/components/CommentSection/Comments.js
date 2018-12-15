@@ -32,7 +32,7 @@ class Comments extends React.Component {
           value={this.state.inputText}
           onChange={this.inputHandler}
         />
-        <i class="fas fa-ellipsis-h" />
+        <i className="fas fa-ellipsis-h" />
       </div>
     );
   }

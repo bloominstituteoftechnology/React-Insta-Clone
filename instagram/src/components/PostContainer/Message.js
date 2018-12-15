@@ -11,8 +11,17 @@ const Message = props => (
   </div>
 );
 
-Comment.propTypes = {
-  comment: PropTypes.arrayOf(PropTypes.object)
-};
+Message.propTypes = {
+  message: PropTypes.object
+}
+
+// Message.propTypes = {
+//   message: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       username: PropTypes.string,
+//       text: PropTypes.string
+//     })
+//   )
+// };
 
 export default Message;

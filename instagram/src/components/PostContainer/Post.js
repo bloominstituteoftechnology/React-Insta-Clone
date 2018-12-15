@@ -6,21 +6,18 @@ import Comments from "../CommentSection/Comments";
 import moment from 'moment';
 
 const Post = props => {
-  let time = moment();
+  // find out how long since last post
+  let currentTime = moment();
   let tStamp = props.post.timestamp;
-  tStamp = moment(tStamp.split("th").pop()).format('MMMM DD YYYY, hh:mm:ss a');
-  tStamp = moment(tStamp);
-  let displayTime = tStamp.fromNow();
-  if (!tStamp.isValid()) {
-    console.log(tStamp);
+  tStamp = tStamp.replace("th", "");
+  let tStamp2 = moment(tStamp);
+  let displayTime = tStamp2.from(currentTime);
+  if (!tStamp2.isValid()) {
+    console.log(tStamp2);
   } else {
     console.log(displayTime);
   }
   
-  
-
- 
-
   return (
     <div className="postContainer">
       <div className="topContainer">

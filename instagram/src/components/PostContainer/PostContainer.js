@@ -7,7 +7,7 @@ const PostContainer = props => {
   return (
     <div>
       {props.dataFeed.map(post => (
-        <Post key={post.id} post={post} />
+        <Post key={post.timestamp} post={post} />
       ))}
     </div>
   );
