@@ -14,25 +14,23 @@ class CommentSection extends Component {
   }
 
   componentDidMount(){
-    this.setState({comments: this.props.comments})
+    this.setState({comments: this.props.comments});
   }
 
   handleNewComment = (event) => {
-    if (event.target.value > 0){
-      this.setState({newComment: event.target.value})
-    }
-    console.log(this.state.newComment);
-  }
-  
-  onCommentAdd = (event, i) => {
-    event.preventDefault();
-    const comments = this.state.comments.slice();
-    comments.push({username: "christene", text: this.state.newComment});
-    this.setState({comments: comments})
-    this.setState({newComment: ""});
+    this.setState({newComment: event.target.value});
   }
 
-  
+  onCommentAdd = (event) => {
+    event.preventDefault();
+    const newComments = this.state.comments.slice();
+    console.log(this.state.comments)
+    console.log(newComments)
+    newComments.push({username: "christene", text: this.state.newComment});
+    this.setState({comments: newComments, newComment: ""}, () => console.log(this.state.comments))
+
+    
+  }
 
   render(){
     return (
@@ -54,7 +52,7 @@ class CommentSection extends Component {
         <div className="timestamp">{this.props.timestamp}</div>
 
         <div className="comments-input">
-          <CommentInput  handleNewComment={this.props.handleNewComment} newComment={this.props.newComment} onCommentAdd={this.props.onCommentAdd}/>
+          <CommentInput  handleNewComment={this.handleNewComment} newComment={this.newComment} onCommentAdd={this.onCommentAdd}/>
         </div>
 
       </div>
