@@ -22,7 +22,7 @@ class CommentSection extends Component {
     this.setState(prevState => {
       let comments = prevState.comments.slice();
       comments.push({
-        username: "sign-in",
+        username: "*sign-in*",
         text: this.state.commentInput
       });
 

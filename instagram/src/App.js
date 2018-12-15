@@ -9,13 +9,22 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      instaData: dummyData,
+      instaData: [],
       searchText: ""
     };
   }
 
   changeSearchText = event => {
     this.setState({ searchText: event.target.value })
+  }
+
+  searchQuery = event => {
+    event.preventDefault();
+    let data = this.state.instaData.filter(item => item.username.includes(this.state.searchText.toLowerCase()));
+    this.setState({ 
+      instaData: data,
+      searchText: ""
+     })
   }
 
   addLike = id => {
@@ -32,10 +41,14 @@ class App extends Component {
     this.setState({ instaData: data });
   }
 
+  componentDidMount() {
+    this.setState({ instaData: dummyData })
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar changeText={this.changeSearchText} />
+        <SearchBar changeText={this.changeSearchText} search={this.searchQuery} value={this.state.searchText} />
         {this.state.instaData.map(user => <PostContainer data={user} key={user.timestamp} like={this.addLike} />)}
       </div>
     );
