@@ -1,5 +1,6 @@
 .post-container {
-  border: 1px solid rgba(170, 170, 170, 0.637);;
+  border: 1px solid rgba(170, 170, 170, 0.637);
+  border-radius: 2px;
   max-width: 640px;
   margin-top: 40px;
 }

@@ -31,8 +31,6 @@ class CommentSection extends Component {
         commentInput: "",
       };
     });
-
-    
   }
 
   render() {

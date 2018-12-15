@@ -16,7 +16,7 @@ const PostContainer = props => {
 
       <div className="likes-container">
         <div>
-          <img src={require('../images/favourite-heart-lrg.png')} alt="" />
+          <img onClick={() => props.like(props.data.timestamp)} src={require('../images/favourite-heart-lrg.png')} alt="" />
           <img src={require('../images/speech-bubble.png')} alt="" />
         </div>
         <p>{props.data.likes} likes</p>

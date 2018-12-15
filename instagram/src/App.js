@@ -14,11 +14,29 @@ class App extends Component {
     };
   }
 
+  changeSearchText = event => {
+    this.setState({ searchText: event.target.value })
+  }
+
+  addLike = id => {
+    let data = this.state.instaData;
+    data.map(item => {
+      if(item.timestamp === id) {
+        item.likes++;
+        return item;
+      } else {
+        return item;
+      }
+    })
+
+    this.setState({ instaData: data });
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        {this.state.instaData.map(user => <PostContainer data={user} key={user.timestamp} />)}
+        <SearchBar changeText={this.changeSearchText} />
+        {this.state.instaData.map(user => <PostContainer data={user} key={user.timestamp} like={this.addLike} />)}
       </div>
     );
   }
