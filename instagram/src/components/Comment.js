@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Username } from '../assets/styles/reusable-components';
-import deleteIcon from '../assets/insta-delete.png';
 
 const Instance = styled.section`
     display: flex;

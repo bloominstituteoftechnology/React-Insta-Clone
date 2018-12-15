@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import styled from 'styled-components';
-import commentOptions from '../assets/insta-comment.PNG';
 import Comment from './Comment';
 
 const Comments = styled.section`
@@ -62,9 +61,8 @@ const AddComment = styled.form`
         flex-grow: 1;
     }
 
-    img {
-        width: 20px;
-        height: 20px;
+    span {
+        font-size: 2rem;
         cursor: pointer;
     }
 `;
@@ -139,14 +137,11 @@ class CommentSection extends React.Component {
                         onChange={this.handleCommentInput} 
                         ref={this.state.commentRef}
                     />
-                    <img src={commentOptions} 
-                        alt='Comment options button' 
+                    <span className="fas fa-ellipsis-h"
                         onClick={() => {
                             this.props.onNewComment(this.state.input, this.props.index);
                             this.setState( { input: '' } );
-                        }}
-                        draggable="false"
-                    />
+                        }}/>
                 </AddComment>
             </Comments>
         );
