@@ -1,47 +1,71 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CommentInput = props => {
-    return (
-      <form>
-        <input type="text" placeholder="Add comment... " />
+const CommentInput =props =>{
+  return (
+      <form onSubmit={props.addNewComment}>
+          <input 
+          className='text-input' 
+          type="text" 
+          placeholder="Add a comment..."
+          value={props.inputText}
+          onChange = {props.handler}
+          
+          />
+          <p className='expand'>...</p>
       </form>
-    );
-  };
+  )
+}
 /////////////////////////////////////////////////////////////////////
 
  const Comment = ( props ) =>
 {
-  return (
-    <div>
-      <span className="comment">{props.comment.text}</span>{' '}
-      <span className="user">-{props.comment.username}</span>
-    </div>
-  )
+  return <p><strong>{props.comment.username}</strong> {props.comment.text}</p>;
 }
 ///////////////////////////////////////////////////////////////////////
-
 class CommentSection extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = {
-      comments: props.comments
+      super(props);
+      this.state = {
+        comments: [],
+        inputText: ''
+        }
+    }
+  componentDidMount() {
+    this.setState({ comments: this.props.comments })
+    }
+  handler = event => {
+    this.setState({ inputText: event.target.value
+     }); 
     };
-  }
-  render() {
-    return (
-      <div>
-        {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-        <CommentInput />
-      </div>
-    );
+  addNewComment = event => {
+    event.preventDefault();
+      if (!(this.state.inputText === '')) {
+          this.setState({
+              comments: [
+                ...this.state.comments,
+                  { username: 'Conana The Barbarian', text: this.state.inputText }
+              ],
+              inputText: ''
+            });
+        }
+    };
+  
+
+    render() {
+      return (
+          <div className = 'comment-section'>
+               {
+              this.state.comments.map((comment) =>
+              <Comment key={Math.random()} comment={comment} />)
+              } 
+              <CommentInput
+                  inputText = {this.state.inputText}
+                  handler = {this.handler}
+                  addNewComment ={this.addNewComment}
+              />
+          </div>
+      );
   }
 }
-
-CommentSection.propTypes = {
-  comments: PropTypes.arrayOf(
-    PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
-  )
-};
-
-export default CommentSection;
+export default CommentSection; 
