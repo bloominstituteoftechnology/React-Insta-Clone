@@ -1,0 +1,32 @@
+
+.post-header{
+    display: flex;
+    font-size: 1rem;
+}
+
+.like-bar{
+    display: flex;
+    justify-content: center;
+}
+.post-thumb{
+    border-radius: 50%;
+    width: 50%;
+}
+.post-container-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:50%;
+    margin:auto;
+}
+.post-image{
+    width: 100%;
+}
+.thumb-wrapper{
+    width:21%
+}
+.post{
+    border: 1px solid #d3d3d3;
+  margin: 5px 0;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}

@@ -5,7 +5,7 @@ import CommentSection from '../CommentSection/CommentSection';
 
 const PostsContainer = props => {
   return (
-    <div className="posts-container-wrapper">
+    <div className="post-container-wrapper">
       {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
     </div>
   );
@@ -43,9 +43,11 @@ class Post extends React.Component{
   }
   render(){
     return (
-        <div className="posts-container-wrapper">
+        <div className="post">
           <div className="post-header">
-            <img src={this.props.post.thumbnailUrl} alt='' className='post-thumb' />
+            <div className="thumb-wrapper">
+              <img src={this.props.post.thumbnailUrl} alt='' className='post-thumb' />
+            </div>
             <h1 className="post-username">{this.props.post.username}</h1>
           </div>
               
