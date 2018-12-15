@@ -11,11 +11,16 @@ class App extends Component {
       dataFeed: dummyData
     };
   }
+
+  createComment = inputText => {
+
+  }
+
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer dataFeed={this.state.dataFeed} />
+        <PostContainer dataFeed={this.state.dataFeed} createComment={this.createComment} />
       </div>
     );
   }

@@ -4,11 +4,23 @@ import "./PostContainer.css";
 import Message from "./Message";
 import Comments from "../CommentSection/Comments";
 import moment from 'moment';
-const time = moment();
 
 const Post = props => {
-  const myTime = props.post.timestamp;
-  let newTime = moment(myTime);
+  let time = moment();
+  let tStamp = props.post.timestamp;
+  tStamp = moment(tStamp.split("th").pop()).format('MMMM DD YYYY, hh:mm:ss a');
+  tStamp = moment(tStamp);
+  let displayTime = tStamp.fromNow();
+  if (!tStamp.isValid()) {
+    console.log(tStamp);
+  } else {
+    console.log(displayTime);
+  }
+  
+  
+
+ 
+
   return (
     <div className="postContainer">
       <div className="topContainer">
@@ -38,11 +50,11 @@ const Post = props => {
               ))}
             </div>
             <div className='timeStamp'>
-              <span className="time-stamp">{newTime.format('Do MMM')}</span>  
+              <span className="time-stamp">{displayTime}</span>  
             </div>
           </div>
           <div className="commentsContainer">
-            <Comments />
+            <Comments createComment={displayTime}/>
           </div>
         </div>
       </div>

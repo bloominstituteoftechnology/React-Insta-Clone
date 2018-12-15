@@ -14,7 +14,8 @@ const PostContainer = props => {
 };
 
 PostContainer.propTypes = {
-  dataFeed: PropTypes.arrayOf(PropTypes.object).isRequired
+  dataFeed: PropTypes.arrayOf(PropTypes.object).isRequired,
+  createComment: PropTypes.func,
 };
 
 export default PostContainer;
