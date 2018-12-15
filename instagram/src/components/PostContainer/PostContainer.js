@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 
 const PostContainer = props => {
     return (  
-      <div className="post-container">{props.data.map(d => (
-        <div key={d.username} className="post">
+      <div className="post-container">{props.data.map((d,i) => (
+        <div key={i} className="post">
           <div className="user-info">
             <div className="profile-pic">
               <img src={d.thumbnailUrl} alt="" />

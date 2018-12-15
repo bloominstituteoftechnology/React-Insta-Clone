@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import './CommentSection.css';
 import PropTypes from 'prop-types';
+import CommentInput from './CommentInput';
+import Comment from './Comment';
 
 class CommentSection extends Component {
   constructor(props){
     super(props);
     this.state = {
-      comments: [],
-      newComment: []
+      comments: props.comments,
+      newComment: ""
     }    
   }
 
@@ -15,15 +17,17 @@ class CommentSection extends Component {
     this.setState({comments: this.props.comments})
   }
 
-  addNewComment = (event, index) => {
-    event.preventDefault();
-    const newCommentsCopy = this.state.comments.slice();
-    if (event.target.value.length > 0) {
-      newCommentsCopy.push({username: "riceislife" , text: event.target.value});
-      this.setState({comments: newCommentsCopy.push({username: "riceislife" , text: event.target.value})});
-      console.log(this.state.comments);
-      
+  handleNewComment = (event) => {
+    if (event.target.value > 0){
+      this.setState({newComment: event.target.value})
     }
+    console.log(this.state.newComment);
+  }
+  
+  addNewComment = (event, i) => {
+    event.preventDefault();
+    console.log(this.state.newComment)
+    
   }
 
   
@@ -33,25 +37,20 @@ class CommentSection extends Component {
       <div className="comments-con">
         <div className="comments-icons">
           <div className="comment-heart-icon comment-icon">
-            <img src="https://i.imgur.com/CTQpSrK.png" alt="" />
+            <i className="far fa-heart"></i>
           </div>
           <div className="comment-comment-icon comment-icon">
-            <img src="https://i.imgur.com/fgPw8c3.png" alt="" />
+            <i className="far fa-comment"></i>
           </div>
         </div>
         <div className="comments-likes">{this.props.likes} likes</div>
-        <div className="comments-con">{this.props.comments.map(comment => (
-          <div  className="comments-comment">
-            <div className="comments-username">{comment.username}</div>
-            <div className="comments-text">{comment.text}</div>
-          </div>
+        <div className="comments-con">{this.props.comments.map((c, i) => (
+          <Comment key={i} comment={c} />
         ))}
         </div>
         <div className="timestamp">{this.props.timestamp}</div>
         <div className="comments-input">
-          <form onSubmit={this.addNewComment}>
-            <input type="text" placeholder="Add a comment..."/>
-          </form>
+          <CommentInput  handleNewComment={this.props.handleNewComment} newComment={this.props.newComment} addNewComment={this.props.addNewComment}/>
         </div>
       </div>
     )
