@@ -24,7 +24,7 @@
   margin-right: 1%;
 }
 
-.timestamp {
-  font-weight: lighter;
-  
+.comment-input {
+  width: 99%;
+  margin-top: 5px;
 }

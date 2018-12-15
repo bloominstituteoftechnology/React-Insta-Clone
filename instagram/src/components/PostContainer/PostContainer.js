@@ -17,7 +17,7 @@ const PostContainer = props => {
       />
       <CommentSection data={props.data} />
       <TimePosted className={"timestamp"} timestamp={props.data.timestamp} />
-      <Input placeholder={"Add comment..."} />
+      <Input className={"comment-input"} placeholder={"Add comment..."} />
     </div>
   );
 };
