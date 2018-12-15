@@ -1,17 +1,25 @@
-/* search bar contents styling
-for search bar container styling, see app.css */
+.search-bar-wrapper {
+  border-bottom: 1px solid #3333;
+  height: 80px;
+  line-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+}
 
-.brand {
+.image-wrapper {
+  height: 50px;
+}
+
+.logo-image {
+  height: 100%;
+}
+
+.social-wrapper {
   display: flex;
 }
 
-.nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 50px;
-}
-
-.search {
-  width: 50px;
+.social {
+  width: 20px;
+  height: 20px;
 }
