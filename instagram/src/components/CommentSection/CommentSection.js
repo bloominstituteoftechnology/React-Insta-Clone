@@ -19,7 +19,7 @@ class CommentSection extends React.Component {
       time: props.time,
       likes: props.likes,
       clicked: false,
-      comments: props.comments
+      comments: props.comments,
     }
   }
 
@@ -31,6 +31,7 @@ class CommentSection extends React.Component {
 
       newComments.push({username: 'Anonymous', text: newValue});
 
+      localStorage.setItem(`${this.state.time}-comment`, JSON.stringify(newComments));
       this.setState({comments: newComments});
       event.target.value = ''
     }
@@ -49,6 +50,20 @@ class CommentSection extends React.Component {
       likes: count,
       clicked: !this.state.clicked
     });
+  }
+
+  componentDidMount() {
+    if(!localStorage.getItem(`${this.state.time}-comment`)) {
+      return;
+    }
+
+    const comment = localStorage.getItem(`${this.state.time}-comment`);
+    console.log(comment)
+    const loadUpdate = JSON.parse(comment)
+
+    this.setState({
+      comments: loadUpdate,
+    })
   }
 
   render() {
