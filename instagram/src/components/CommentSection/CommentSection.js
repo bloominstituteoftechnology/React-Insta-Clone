@@ -8,7 +8,7 @@ class CommentSection extends Component {
   constructor(props){
     super(props);
     this.state = {
-      comments: props.comments,
+      comments: {},
       newComment: ""
     }    
   }
@@ -24,10 +24,12 @@ class CommentSection extends Component {
     console.log(this.state.newComment);
   }
   
-  addNewComment = (event, i) => {
+  onCommentAdd = (event, i) => {
     event.preventDefault();
-    console.log(this.state.newComment)
-    
+    const comments = this.state.comments.slice();
+    comments.push({username: "christene", text: this.state.newComment});
+    this.setState({comments: comments})
+    this.setState({newComment: ""});
   }
 
   
@@ -48,10 +50,13 @@ class CommentSection extends Component {
           <Comment key={i} comment={c} />
         ))}
         </div>
+        
         <div className="timestamp">{this.props.timestamp}</div>
+
         <div className="comments-input">
-          <CommentInput  handleNewComment={this.props.handleNewComment} newComment={this.props.newComment} addNewComment={this.props.addNewComment}/>
+          <CommentInput  handleNewComment={this.props.handleNewComment} newComment={this.props.newComment} onCommentAdd={this.props.onCommentAdd}/>
         </div>
+
       </div>
     )
   }
