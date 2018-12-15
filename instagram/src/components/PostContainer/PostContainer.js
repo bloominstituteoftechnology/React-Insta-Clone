@@ -8,7 +8,6 @@ class PostContainer extends React.Component {
     super(props);
   }
   render() {
-    console.log(this.props.posts);
     return (
       <Posts
         like={this.props.like}

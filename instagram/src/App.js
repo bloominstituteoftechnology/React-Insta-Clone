@@ -18,6 +18,16 @@ class App extends Component {
       posts: array
     });
   };
+  sort = text => {
+    let array = this.state.posts;
+    let newArray = array.filter(e => {
+      return e.username.includes(text);
+    });
+    console.log(array);
+    this.setState({
+      posts: newArray
+    });
+  };
   componentDidMount() {
     this.setState({
       posts: dummyData.map(e => {
@@ -45,7 +55,7 @@ class App extends Component {
             <span className="brand__line">│</span>
             <span className="brand__title">Instaclone</span>
           </div>
-          <SearchBar />
+          <SearchBar sort={this.sort} />
           <i className="far fa-compass" />
           <i className="far fa-heart" />
           <i className="far fa-user" />

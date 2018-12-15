@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import "./Comment.css";
 
 const Comment = props => {
-  console.log(props);
   let arr = props.comments.map((e, i) => (
     <div className="post__comment" key={`comment-${i}`}>
       <span className="username">{e.username}</span> {e.text}

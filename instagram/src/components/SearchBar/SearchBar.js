@@ -8,10 +8,22 @@ class SearchBar extends React.Component {
       search: ""
     };
   }
+  search = e => {
+    this.setState({
+      search: e.target.value
+    });
+    this.props.sort(this.state.search);
+  };
   render() {
     return (
       <div className="input">
-        <input className="searchbar" type="text" placeholder="Search" />
+        <input
+          className="searchbar"
+          type="text"
+          placeholder="Search"
+          value={this.state.search}
+          onChange={this.search}
+        />
       </div>
     );
   }
