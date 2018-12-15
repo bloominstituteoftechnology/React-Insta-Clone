@@ -1,35 +1,44 @@
 import React from 'react';
 import './comment.css';
+import dummyData from '../../dummy-data';
 // import Comment from './Comment';
 
 class CommentSection extends React.Component{
     constructor(props){
         super(props);
         this.state ={
-            commentInput: "",
+            commentInput: [],
+            newComment: '',
             placeholder: "Add a comment..."
         }
     }
 
-        handleComments = (e) => {
-   this.setState({commentInput: e.target.value});
+    handleComments = (e) => {
+        this.setState({commentInput: e.target.value});    
     }
 
-    addComment = (e) => {
+    addNewComment = (e) => {
         e.preventDefault();
-        const newComments = this.state.newComments.slice;
+        const newComments = this.state.commentInput.slice;
         newComments.push({
-            commentInput: this.state.userPosts
+            commentInput: this.state.newComment
         })
-        this.setState({newComments, commentInput: ""});
+        this.setState({ commentInput: newComments, newComment: '', placeholder: "Add a comment..."});
+        console.log(newComments)
+ 
     };
 
     render() {
         return (
-            <div className="commentSectionContainer">
-                <input placeholder={this.state.placeholder}
-                />
-             </div>
+            <form onSubmit={this.addNewComment}>
+                <div className="commentSectionContainer">
+                    <input placeholder={this.state.placeholder}
+                        type="text"
+                        value={this.state.commentInput}
+                        onChange={this.handleComments}
+                    />
+                </div>
+             </form>
         )
     }
 }
