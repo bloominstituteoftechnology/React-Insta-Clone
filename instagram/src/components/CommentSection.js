@@ -10,12 +10,42 @@ class CommentSection extends React.Component {
         }
     }
 
+    componentDidMount() {
+
+    }
+
+    componentDidUpdate () {
+
+    }
+
+    setComments = () => {
+        localStorage.setItem(
+         this.props.postId,
+         JSON.stringify(this.state.comments)
+        );
+      };
+      
+      commentHandler = elem => {
+        this.setState({ comment:elem.target.value });
+      }
+      
+      commentSubmitHandler = elem => {
+        elem.preventDefault();
+        const addNewComment = {text: this.state.comment, username: 'Interent Rando'}
+        const comments=this.state.comments.slice();
+        comments.push(addNewComment);
+        this.setState({comments, comment: ' '})
+      
+      }
+
     render () {
         return (
             <div>
             {this.state.comments.map((comments, input) => <Comment key={input} comment={comments} />)}
             <CommentInput 
               comment={this.state.comment}
+              submitAComment={this.commentSubmitHandler}
+              changeAComment={this.commentHandler}
              />
           </div>
         )
@@ -44,11 +74,12 @@ Comment.PropTypes = {
 const CommentInput = props => {
     return (
         <div className="comment-text">
-        <form>
+        <form onSubmit = {props.submitAComment}>
             <input 
                 type="text"
                 value={props.comment}
                 placeholder="Add a comment"
+                onChange={props.changeAComment}
             />
         </form>
 
@@ -56,7 +87,7 @@ const CommentInput = props => {
     )
 }
 
-// const Comment = props => {
+// const Comment2 = props => {
 //     return (
 //       <div className="comment-text">
 //         <form onSubmit = {props.submitAComment}> 
@@ -70,6 +101,19 @@ const CommentInput = props => {
 //       </div>
 //     );
 //   };
+
+
+
+
+
+  CommentSection.propTypes={
+    comments:PropTypes.arrayOf(
+        PropTypes.shape({
+            text: PropTypes.string,
+            username: PropTypes.string
+        })
+    )
+}
 
 export default CommentSection
 
