@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 import loading from './loading.gif';
 import dummyData from './dummy-data';
+
 class App extends Component {
   
   constructor() {
@@ -28,7 +29,7 @@ class App extends Component {
         <div className="body-wrapper">
           { this.state.posts.length === 0 ? (
             <div className="loading">
-              <img src={loading}/>
+              <img alt="Loading gif" src={loading}/>
               Loading..
             </div>
             ) : (

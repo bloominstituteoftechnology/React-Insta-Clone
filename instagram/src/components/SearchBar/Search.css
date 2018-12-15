@@ -37,6 +37,9 @@
   .navs .icons {
     padding: 0px 10px;
   }
+  .icons:last-child {
+    padding-right: 0px;
+  }
   button {
     padding: 7px 52px;
     background-color: rgba(255, 255, 255, .4);
@@ -46,7 +49,7 @@
     align-items: center;
   }
   .fa {
-    padding-right: 7px;
+    padding-right: 0px;
   }
   button .fa {
     font-size: 26px;

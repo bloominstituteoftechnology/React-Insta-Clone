@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 
 const PostContainer = props => {
     return (
-        props.posts.map(post => {
+        props.posts.map((post, index) => {
             return(
                 <div className="container">
                     <Post 
                     post={post}
-                    key={Math.random()} 
+                    key={index} 
                     username={post.username}
                     thumbnailUrl={post.thumbnailUrl}
                     imageUrl={post.imageUrl}
