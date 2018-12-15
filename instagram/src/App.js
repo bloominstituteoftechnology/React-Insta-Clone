@@ -9,7 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      post: []
     };
   }
   componentDidMount() {
@@ -17,11 +17,12 @@ class App extends Component {
       post: dummyData,
     })
   }
+
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer posts={this.state.posts} />
+        <PostContainer posts={this.state.post} />
       </div>
     );
   }
