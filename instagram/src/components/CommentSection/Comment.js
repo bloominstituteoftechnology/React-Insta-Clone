@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Comment = props => {
   return(
-    <p onClick={props.deleteHandler}><strong>{props.user}</strong> {props.text}</p>
+    <p><strong>{props.user}</strong> {props.text} <span onClick={props.deleteHandler}>&times;</span></p>
   );
 }
 

@@ -54,21 +54,20 @@ class CommentSection extends React.Component {
 
   removePost = event => {
     const newComments = this.state.comments.slice()
-    let currentComment = event.target.innerText;
+    let currentComment = event.target.parentElement.innerText;
     const arr = currentComment.split(' ')
 
     const user = arr.shift();
+    arr.pop();
 
     currentComment = arr.join(' ')
 
     for(let i = 0; i < newComments.length; i++) {
       if(newComments[i].username === user && newComments[i].text === currentComment) {
-        console.log(newComments[i])
         newComments.splice(i, 1)
       }
     }
 
-    console.log(newComments)
     localStorage.setItem(`${this.state.time}-comment`, JSON.stringify(newComments));
     this.setState({comments: newComments});
   }
@@ -79,7 +78,6 @@ class CommentSection extends React.Component {
     }
 
     const comment = localStorage.getItem(`${this.state.time}-comment`);
-    console.log(comment)
     const loadUpdate = JSON.parse(comment)
 
     this.setState({

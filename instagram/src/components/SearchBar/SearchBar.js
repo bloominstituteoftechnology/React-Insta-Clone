@@ -15,7 +15,7 @@ import profile from '../../img/insta-profile.png';
 class SearchBar extends React.Component {
 
   render() {
-    const search = <input type="text" placeholder={"search..."} onChange={this.props.searchHandler}/>
+
 
     return(
       <div className="search-bar">
@@ -25,7 +25,7 @@ class SearchBar extends React.Component {
           <img src={title} alt="Instagram" />
         </div>
 
-        {search}
+        <input type="text" placeholder={"search..."} onChange={this.props.searchHandler}/>
 
         <div className="search-bar__icons">
           <img src={compass} alt="Instagram" />

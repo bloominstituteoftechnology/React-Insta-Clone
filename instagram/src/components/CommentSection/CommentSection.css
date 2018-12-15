@@ -3,6 +3,18 @@
   padding: 2% 5%;
 }
 
+.post__comments p {
+  position: relative;
+}
+
+.post__comments p span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  cursor: pointer;
+}
+
 .post__comments__interaction {
   width: 100%;
   max-width: 150px;
