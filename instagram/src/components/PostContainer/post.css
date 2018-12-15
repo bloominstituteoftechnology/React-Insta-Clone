@@ -1,18 +1,21 @@
 .container{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-items: center; */
     margin-left: 25%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 600px;
     border: solid 1px silver;
+    background: lavender;
 }
 
 .userNameAndImage{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     justify-items: flex-start;
+    margin-right: 20px;
 }
 
 #thumbnail{
@@ -22,7 +25,7 @@
 }
 
 .postedImage{
-    height: 500px;
+    height: 550px;
     width: 100%;
 }
 

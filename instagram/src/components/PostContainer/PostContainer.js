@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import Container from './Container';
 
 
-
 const PostContainer = props => {
     console.log(props)
     return (

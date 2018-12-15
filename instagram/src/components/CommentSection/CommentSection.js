@@ -1,28 +1,51 @@
 import React from 'react';
 import './comment.css';
-import Comment from './Comment';
+// import Comment from './Comment';
 
-const CommentSection = props => {
-    console.log(props)
-    return (
-        <div className="commentSectionContainer">
-            <input placeholder="Add a comment..."
-            />
-        </div>
-    )
+class CommentSection extends React.Component{
+    constructor(props){
+        super(props);
+        this.state ={
+            commentInput: "",
+            placeholder: "Add a comment..."
+        }
+    }
+
+        handleComments = (e) => {
+   this.setState({commentInput: e.target.value});
+    }
+
+    addComment = (e) => {
+        e.preventDefault();
+        const newComments = this.state.newComments.slice;
+        newComments.push({
+            commentInput: this.state.userPosts
+        })
+        this.setState({newComments, commentInput: ""});
+    };
+
+    render() {
+        return (
+            <div className="commentSectionContainer">
+                <input placeholder={this.state.placeholder}
+                />
+             </div>
+        )
+    }
 }
-
-export default CommentSection;
 
 // const CommentSection = props => {
 //     console.log(props)
 //     return (
-//         <div>{props.comment.map( (comment, index) => (
-//             <Comment key={index} comment={comment} />
-//         ))}
+//         <div className="commentSectionContainer">
+//             <input placeholder="Add a comment..."
+//             />
 //         </div>
 //     )
 // }
+
+export default CommentSection;
+
 
 // class CommentSection extends React.Component {
 //     constructor() {

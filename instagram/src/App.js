@@ -6,6 +6,7 @@ import dummyData from './dummy-data';
 // import commentData from './components/CommentSection/commentData';
 import CommentSection from './components/CommentSection/CommentSection';
 import SearchBar from './components/SearchBar/SearchBar';
+import PropTypes from "prop-types";
 
 
 
@@ -13,23 +14,40 @@ class App extends Component {
   constructor (){
     super();
     this.state ={
-      dummyData: dummyData
+      // dummyData: dummyData
+      userPosts: dummyData
       // commentData: commentData
     }
   }
-    render() {
 
+  componentDidMount(){
+   console.log(dummyData);
+    console.log("Component did mount")
+    setTimeout(() => {
+      this.setState = ({userPosts: dummyData});
+    }, 2000);
+  }
+
+  componentDidUpdate(){
+    console.log('Did it work?')
+  }
+
+  render() {
     return (
       <div className="App">
         <header className="App-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
         </header>
         <SearchBar />
-       <PostContainer posts={this.state.dummyData} />
-       <CommentSection comment={this.state.commentData} />
+       <PostContainer posts={this.state.userPosts} />
+       <CommentSection commentInput={this.state.userPosts} />
       </div>
     );
   }
+}
+
+App.propTypes = {
+  dummyData: PropTypes.array,
 }
 
 export default App;

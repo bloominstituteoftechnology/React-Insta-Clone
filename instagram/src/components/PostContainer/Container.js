@@ -2,6 +2,7 @@ import React from 'react';
 // import PostContainer from './PostContainer';
 import PropTypes from 'prop-types';
 import './post.css';
+// import Comment from '../CommentSection/Comment';
 
 
 
@@ -25,6 +26,7 @@ const Container = props => {
                     <div className="heart"></div>
                     {props.post.likes} likes
                     {commentsArray}
+                    {/* <Comment comment ={commentsArray}/> */}
                     {props.post.timestamp}
                 </section>
             </section>
