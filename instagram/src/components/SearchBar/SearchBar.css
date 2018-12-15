@@ -26,4 +26,5 @@
 
 .searchbar:not(:placeholder-shown) {
     color: black;
+    text-align: left;
 }
