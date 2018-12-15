@@ -7,22 +7,51 @@ class Post extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      likes: props.user.likes,
+      likes: 0,
       heartColor: "black",
       alreadyHeart: false
     }
   }
 
+  componentDidMount() {
+    if (localStorage.hasOwnProperty(this.props.user.timestamp+1)) {
+      // get the key's value from localStorage
+      let info = localStorage.getItem(this.props.user.timestamp+1);
+
+      // parse the localStorage string and setState
+      try {
+        info = JSON.parse(info);
+        const likes = info.likes;
+        const heartColor = info.heartColor;
+        const alreadyHeart = info.alreadyHeart;
+        this.setState({likes: likes, heartColor: heartColor, alreadyHeart: alreadyHeart});
+      } catch (e) {
+        this.setState({likes: this.props.user.likes, heartColor: "black", alreadyHeart: false});
+      }
+    } else this.setState({likes: this.props.user.likes, heartColor: "black", alreadyHeart: false});
+  }
+
   addLikeHandler = () => {
     let likes = this.state.likes;
+    let heartColor = "black";
+    let alreadyHeart = false;
     if(!this.state.alreadyHeart) {
       likes ++;
-      this.setState({likes: likes, heartColor: "red", alreadyHeart: true});
+      heartColor = "red";
+      alreadyHeart = true;
+      // this.setState({likes: likes, heartColor: "red", alreadyHeart: true});
     }
     else {
       likes --;
-      this.setState({likes: likes, heartColor: "black", alreadyHeart: false});
+      // this.setState({likes: likes, heartColor: "black", alreadyHeart: false});
     }
+    const info = {
+      likes: likes,
+      heartColor: heartColor,
+      alreadyHeart: alreadyHeart
+    }
+    localStorage.setItem(this.props.user.timestamp+1, JSON.stringify(info));
+    this.setState({likes: likes, heartColor: heartColor, alreadyHeart: alreadyHeart});
   }
 
   render() {
