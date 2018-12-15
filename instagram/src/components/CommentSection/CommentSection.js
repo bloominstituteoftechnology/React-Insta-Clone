@@ -12,6 +12,9 @@ const CommentSection = (props) => {
           <div>{comm.text}</div></div>
           )
       })}
+         <div className="commentForm">
+        Add a comment...
+      </div>
     </div>
    
   );
