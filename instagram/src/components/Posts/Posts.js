@@ -1,16 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Moment from "react-moment";
 import CommentSection from "../CommentSection/CommentSection";
 import "./Posts.css";
 
 const Posts = props => {
   let arr = props.posts.map((e, i) => {
-    let time = Math.round(
-      (Date.now() - Date.parse(e.timestamp)) / 1000 / 60 / 60 / 24
-    );
-    if (time > 1) {
-      time = Math.round(time / 365);
-    }
     return (
       <div className="post" key={`comment-${i}`}>
         <div className="post__header">
@@ -32,8 +27,7 @@ const Posts = props => {
           <span className="post__likes">{e.likes} likes</span>
           <CommentSection comments={e.comments} />
           <span className="post__timestamp">
-            {time}
-            {" year ago"}
+            <Moment fromNow>{e.timestamp}</Moment>
           </span>
           <div className="post__comment__input__div">
             <input
