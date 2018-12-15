@@ -53,3 +53,18 @@
     width: 80%;
     border: 1px solid brown;
 }
+
+.inputComment input{
+    width: 100%;
+}
+
+.postDate{
+    border: 1px solid indigo;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.postDate p{
+    padding-left: 2%;
+}
