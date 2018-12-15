@@ -43,15 +43,14 @@ class Post extends React.Component{
   }
   render(){
     return (
-        <div className="post">
+        <div className="posts-container-wrapper">
           <div className="post-header">
-            <img
-              src={this.props.post.thumbnailUrl} alt='' className='post-username-img' />
-                <h1 className="post-username">{this.props.post.username}</h1>
+            <img src={this.props.post.thumbnailUrl} alt='' className='post-thumb' />
+            <h1 className="post-username">{this.props.post.username}</h1>
           </div>
               
           <div>
-            <img className="post-img" src={this.props.post.imageUrl} alt="" />
+            <img className="post-image" src={this.props.post.imageUrl} alt="" />
             <div className="comment-bottom">
               <div className = "like-bar">
                 <p className='likes'>{this.state.likes} likes</p>
