@@ -8,6 +8,7 @@ import {
   Nav,
   NavItem,
   NavLink } from 'reactstrap';
+import Fuse from 'fuse.js';
 
 import './SearchBar.css';
 
@@ -35,7 +36,13 @@ class SearchBar extends React.Component {
   searchUsername = (event) => {
     event.preventDefault();
     const users = this.props.users.slice();
-    const searchResult = users.filter(user => user.username.includes(this.state.searchInput));
+
+    const options = {
+      keys: ['username'],
+      threshold: 0.6,
+    }
+    const fuse = new Fuse(users, options);
+    const searchResult = fuse.search(this.state.searchInput);
     this.props.update(searchResult);
   }
 

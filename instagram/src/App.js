@@ -15,13 +15,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      users: dummyData
+      users: []
     }
   }
 
-  // componentDidMount() {
-  //   this.buildUsers(dummyData);
-  // }
+  componentDidMount() {
+    this.buildUsers(dummyData);
+  }
 
   buildUsers = (data) => {
     this.setState({users: data});
