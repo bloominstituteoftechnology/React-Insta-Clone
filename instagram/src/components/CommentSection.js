@@ -4,8 +4,11 @@ const CommentSection = (props) => {
     return ( 
         <div>
             {props.comment.map(comment =>(
-                <p>{comment.username}</p>
-            ))};
+                <div>
+                <h3 >{comment.username}</h3>
+                <p>{comment.text}</p>
+                </div>
+            ))}
         </div>
      );
 };

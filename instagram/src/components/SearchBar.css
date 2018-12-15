@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+
+.searchBar{
+    display: flex;
+    justify-content: space-around;
+}
+.logo{
+    font-family: 'Lobster Two', cursive;
+}
+.search{
+    text-align: center;
+}
