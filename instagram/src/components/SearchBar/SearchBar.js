@@ -1,21 +1,8 @@
 import React from "react";
 import iglogo from "./iglogo.png";
 import "./SearchBar.css";
-import PropTypes from 'prop-types';
 
-
-class SearchBar extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      users: this.props.data.map(obj => obj.username),
-      prevState: this.props.data,
-      newState: [],
-    }
-  }
-
-  render() {
+const SearchBar = () => {
     return(
     <div className="search-bar-wrapper">
       <div className="image-wrapper">
@@ -41,10 +28,5 @@ class SearchBar extends React.Component {
     </div>
     );
   }
-}
-
-SearchBar.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object)
-}
 
 export default SearchBar;
