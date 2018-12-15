@@ -7,19 +7,27 @@ class CommentSection extends Component {
     super(props);
     this.state = {
       comments: [],
-      newComment: ""
+      newComment: []
     }    
   }
 
   componentDidMount(){
     this.setState({comments: this.props.comments})
   }
+
   addNewComment = (event, index) => {
     event.preventDefault();
+    const newCommentsCopy = this.state.comments.slice();
     if (event.target.value.length > 0) {
-      this.setState({newComment: event.target.value});
+      newCommentsCopy.push({username: "riceislife" , text: event.target.value});
+      this.setState({comments: newCommentsCopy.push({username: "riceislife" , text: event.target.value})});
+      console.log(this.state.comments);
+      
     }
   }
+
+  
+
   render(){
     return (
       <div className="comments-con">
@@ -33,7 +41,7 @@ class CommentSection extends Component {
         </div>
         <div className="comments-likes">{this.props.likes} likes</div>
         <div className="comments-con">{this.props.comments.map(comment => (
-          <div className="comments-comment">
+          <div  className="comments-comment">
             <div className="comments-username">{comment.username}</div>
             <div className="comments-text">{comment.text}</div>
           </div>
@@ -41,7 +49,9 @@ class CommentSection extends Component {
         </div>
         <div className="timestamp">{this.props.timestamp}</div>
         <div className="comments-input">
-          <input type="text" placeholder="Add a comment..."/>
+          <form onSubmit={this.addNewComment}>
+            <input type="text" placeholder="Add a comment..."/>
+          </form>
         </div>
       </div>
     )

@@ -9,7 +9,7 @@ const SearchBar = props => {
 
         <div className="search-logos">
           <div className="insta-logo">
-            <img src="https://i.imgur.com/G94rAPX.png" alt="Instagram Logo" />
+            <i className="fab fa-instagram"></i>
           </div>
           <div className="spacer-line"></div>
           <div className="insta-logo-text">
@@ -23,13 +23,13 @@ const SearchBar = props => {
         
         <div className="search-bar-icons">
           <div className="search-history search-icon">
-            <img src="https://i.imgur.com/nTHcklP.png" alt="history icon" />
+          <i className="far fa-compass"></i>
           </div>
           <div className="search-likes search-icon">
-            <img src="https://i.imgur.com/CTQpSrK.png" alt="likes icon" />
+            <i className="far fa-heart"></i>
           </div>
           <div className="search-profile search-icon">
-            <img src="https://i.imgur.com/wP7aVGp.png" alt="profile icon" />
+            <i className="far fa-user"></i>
           </div>
         </div>
         

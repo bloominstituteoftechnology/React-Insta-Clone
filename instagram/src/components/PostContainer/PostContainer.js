@@ -36,7 +36,4 @@ PostContainer.propTypes = {
   timestamp: PropTypes.string
 }
 
-
-
-
 export default PostContainer;
