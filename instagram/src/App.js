@@ -8,7 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: [],
+      user: "thisUser"
     };
   }
 
@@ -27,6 +28,7 @@ class App extends Component {
                 data={post}
                 key={post.timestamp}
                 className="post-container"
+                user={this.state.user}
               />
             );
           })}

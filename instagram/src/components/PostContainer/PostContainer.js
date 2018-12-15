@@ -13,7 +13,7 @@ const PostContainer = props => {
         alt={"the post"}
         className={"posted-image"}
       />
-      <CommentSection data={props.data} />
+      <CommentSection data={props.data} user={props.user} />
     </div>
   );
 };

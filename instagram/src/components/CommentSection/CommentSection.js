@@ -9,7 +9,8 @@ class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: []
+      comments: [],
+      addComment: "" /*Buffer for input field*/
     };
   }
 
@@ -18,6 +19,27 @@ class CommentSection extends React.Component {
       comments: this.props.data.comments
     });
   }
+
+  /*  */
+  onChangeHandler = event => {
+    this.setState({
+      addComment: event.target.value
+    });
+  };
+
+  addNewComment = event => {
+    event.preventDefault();
+    const currentComments = this.state.comments;
+    console.log(currentComments);
+    currentComments.push({
+      username: this.props.user,
+      text: this.state.addComment
+    });
+    return this.setState({
+      comments: currentComments,
+      addComment: ""
+    });
+  };
 
   render() {
     return (
@@ -42,7 +64,14 @@ class CommentSection extends React.Component {
           className={"timestamp"}
           timestamp={this.props.data.timestamp}
         />
-        <Input className={"comment-input"} placeholder={"Add comment..."} />
+        <form onSubmit={this.addNewComment}>
+          <Input
+            onChange={this.onChangeHandler}
+            className={"comment-input"}
+            placeholder={"Add comment..."}
+            value={this.state.addComment}
+          />
+        </form>
       </div>
     );
   }

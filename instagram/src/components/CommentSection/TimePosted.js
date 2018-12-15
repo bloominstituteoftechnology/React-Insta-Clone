@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./PostContainer.css";
+import "./CommentSection.css";
 import Moment from "react-moment";
 
 /*"MMMM Do YYYY, hh:mm:ss a"*/
