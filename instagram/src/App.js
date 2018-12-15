@@ -3,8 +3,16 @@ import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
 import dummyData from "./dummy-data";
 import "./App.css";
-
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      posts: []
+    };
+  }
+  componentDidMount() {
+    this.setState({ posts: dummyData });
+  }
   render() {
     return (
       <div className="App">
@@ -21,7 +29,7 @@ class App extends Component {
           <i className="far fa-heart" />
           <i className="far fa-user" />
         </header>
-        <PostContainer posts={dummyData} />
+        <PostContainer posts={this.state.posts} />
       </div>
     );
   }
