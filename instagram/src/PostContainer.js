@@ -9,7 +9,7 @@ function PostContainer(props) {
           <h3>{props.dummyData.username}</h3>
         </div>
         <div className="image">
-          <h3>Image</h3>
+          <img src={props.dummyData.imageUrl} alt="postImg"/>
         </div>
         <CommentSection key={props.username} dummyData={props.dummyData} />
       </section>
