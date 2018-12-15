@@ -1,45 +1,53 @@
+
 import React from 'react';
+import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 
-
-
- const Post = ( props ) =>
-{
-
-return( 
-    <div className = "post">
-      <p>{ props.data.username }</p>
-      <img src = { props.data.thumbnailUrl }></img>
-      <img src = { props.data.imageUrl }></img>
-      <p>{ props.data.likes }</p>
-      <CommentSection comments = { props.data.comments }/>
+const PostsContainer = props => {
+  return (
+    <div className="posts-container-wrapper">
+      {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
     </div>
-  )
-}
+  );
+};
 
-class PostContainer extends React.Component
-{
-  constructor( props )
-  {
-    super( props );
-  }
-  render()
-  {
-    return(
-      <div>
-        {
-          this.props.objects.map( ( element ) =>
-          {
-            return(
-              <Post data = { element }/>
-            )
-          })
-        }
+
+//////////////////////////////////////////////
+
+const PostHeader = props => {
+  return (
+    <div className="post-header">
+      <div className="post-thumb-wrapper">
+        <img
+          alt="post header"
+          className="post-thumb"
+          src={props.thumbnailUrl}
+        />
       </div>
-    )
-  }
-}
+      <div>{props.username}</div>
+    </div>
+  );
+};
+/////////////////////////////////////////////////////
+
+const Post = props => {
+  return (
+    <div className="post-border">
+      <PostHeader
+        username={props.post.username}
+        thumbnailUrl={props.post.thumbnailUrl}
+      />
+      <div className="post-image-wrapper">
+        <img
+          alt="post thumbnail"
+          className="post-image"
+          src={props.post.imageUrl}
+        />
+      </div>
+      <CommentSection comments={props.post.comments} />
+    </div>
+  );
+};
 
 
-
- export default PostContainer; 
+export default PostsContainer;
