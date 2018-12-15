@@ -40,7 +40,7 @@ class App extends Component {
         </header>
         <SearchBar />
        <PostContainer posts={this.state.userPosts} />
-       <CommentSection commentInput={this.state.userPosts} />
+       {/* <CommentSection commentInput={this.state.userPosts} /> */}
       </div>
     );
   }

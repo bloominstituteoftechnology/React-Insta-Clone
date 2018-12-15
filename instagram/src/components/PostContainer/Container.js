@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './post.css';
 // import Comment from '../CommentSection/Comment';
+import CommentSection from "../CommentSection/CommentSection";
 
 
 
@@ -28,6 +29,7 @@ const Container = props => {
                     {commentsArray}
                     {/* <Comment comment ={commentsArray}/> */}
                     {props.post.timestamp}
+                    <CommentSection commentInput={props.post.userPosts} />
                 </section>
             </section>
         </div>
