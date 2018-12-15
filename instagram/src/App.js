@@ -18,13 +18,22 @@ class App extends Component {
     this.setState({ searchText: event.target.value })
   }
 
+  setStorage = () => {
+    localStorage.setItem('data', JSON.stringify(this.state.instaData));
+  }
+
   searchQuery = event => {
     event.preventDefault();
+    this.setStorage();
     let data = this.state.instaData.filter(item => item.username.includes(this.state.searchText.toLowerCase()));
     this.setState({ 
       instaData: data,
       searchText: ""
      })
+  }
+
+  clearSearch = () => {
+    this.setState({ instaData: JSON.parse(localStorage.getItem('data'))});  
   }
 
   addLike = id => {
@@ -42,13 +51,15 @@ class App extends Component {
   }
 
   componentDidMount() {
+    
+    
     this.setState({ instaData: dummyData })
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBar changeText={this.changeSearchText} search={this.searchQuery} value={this.state.searchText} />
+        <SearchBar changeText={this.changeSearchText} search={this.searchQuery} clearSearch={this.clearSearch} value={this.state.searchText} />
         {this.state.instaData.map(user => <PostContainer data={user} key={user.timestamp} like={this.addLike} />)}
       </div>
     );
