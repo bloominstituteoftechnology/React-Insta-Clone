@@ -15,23 +15,23 @@ class App extends Component {
   };
 
   handleAddComment = (textInput, id, e) => {
-    // alert(textInput);
-    // alert(id);
     e.preventDefault();
-    const comments = this.state.card[id].comments.slice();
-    const newComment = {
-      username: 'snow',
-      text: textInput,
-    };
+    const cardID = this.state.card.findIndex(c => c.id === id);
 
-    comments.push(newComment);
+    if (cardID !== -1) {
+      const oldCard = this.state.card[cardID];
+      const newCard = {...oldCard};
+      newCard.comments.push({username: 'snow', text: textInput});
+      
+      const allCards = [...this.state.card];
+      allCards.splice(cardID, 1, newCard);
 
-    this.setState({
-      comments: comments
-    });
+      this.setState({ card: allCards });
+    }
   };
 
   render() {
+    console.log(this.state);
     return (
       <div className="App">
         <SearchBar />
