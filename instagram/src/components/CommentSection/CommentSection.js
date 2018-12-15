@@ -18,7 +18,18 @@ class CommentSection extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({comments: this.props.comments});
+    if (localStorage.hasOwnProperty(this.props.timestamp)) {
+      // get the key's value from localStorage
+      let comments = localStorage.getItem(this.props.timestamp);
+
+      // parse the localStorage string and setState
+      try {
+        comments = JSON.parse(comments);
+        this.setState({comments: comments});
+      } catch (e) {
+        this.setState({comments: this.props.comments});
+      }
+    } else this.setState({comments: this.props.comments});
   }
 
   addCommentHandler = (event) => {
@@ -32,6 +43,7 @@ class CommentSection extends React.Component {
         prevState => {
           const comments = prevState.comments.slice();
           comments.push(newComment);
+          localStorage.setItem(this.props.timestamp, JSON.stringify(comments));
           return {comments: comments, addCommentText: ""};
         }
       );      
@@ -43,9 +55,12 @@ class CommentSection extends React.Component {
   }
 
   deleteCommentHandler = (event, index) => {
+    
     this.setState(
       prevState => {
         const comments = prevState.comments.filter((comment, i) => i !== index);
+        //Remove from local storage
+        localStorage.setItem(this.props.timestamp, JSON.stringify(comments));
         return {comments: comments};
       }
     ); 
