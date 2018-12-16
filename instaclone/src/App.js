@@ -11,7 +11,8 @@ class App extends Component {
   constructor(){
     super();
     this.state ={
-      dummyData:[]
+      dummyData:[],
+      userSearch: ""
     }
   }
 
@@ -19,6 +20,11 @@ componentDidMount(){
   setTimeout(()=>{
     this.setState({dummyData:dummyData})
   }, 2000)
+}
+
+//handles state for SearchBar in this component
+changeHandler= event=>{
+  this.setState({[event.target.name]: event.target.value})
 }
 
 //update app's state with new comment
@@ -41,12 +47,13 @@ updateLikes = (index,liked)=>{
 }
 
   render() {
+    const re = new RegExp(this.state.userSearch,'i');
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar changeHandler={this.changeHandler} userSearch={this.state.userSearch} />
         <div>
           {this.state.dummyData.length === 0? <p>LOADING</p>:
-            this.state.dummyData.map((post,i)=>{
+            this.state.dummyData.filter(e=>{return e.username.match(re)}).map((post,i)=>{
               return <PostContainer 
                 key={i}  
                 post={post} 
