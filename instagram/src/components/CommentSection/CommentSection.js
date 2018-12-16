@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+
 
 const CommentInput =props =>{
   return (

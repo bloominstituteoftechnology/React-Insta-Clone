@@ -3,7 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 
 class App extends Component {
@@ -47,7 +47,7 @@ class App extends Component {
   }
 }
 
-App.PropTypes = {card:PropTypes.arrayOf(PropTypes.object)};
+App.propTypes = {card:propTypes.arrayOf(propTypes.object)};
 
 
 export default App;
