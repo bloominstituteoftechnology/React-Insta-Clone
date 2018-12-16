@@ -10,11 +10,26 @@ class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            comments: this.props.comments
+            comments: this.props.comments,
+            commentText: ""
         }
     }
+
+    //adds new comment and passes it up to App
+    addNewCommment = (event, index)=>{
+        event.preventDefault();
+        const comment = event.target.elements[0].value
+        this.props.updateComments(this.props.index,comment)
+        this.setState({commentText: ""})
+        
+    }
+
+    //handles state for addComment in this component
+    changeHandler= event=>{
+        this.setState({[event.target.name]: event.target.value})
+    }
+
     render() { 
-        console.log(this.state.comments)
         return ( 
             <div className="comment-section-container">
                 <div className="comments">
@@ -24,7 +39,11 @@ class CommentSection extends Component {
                 </div>
                 <p className="time-stamp">{this.props.timestamp}</p>
                 <hr className="comment-divider"/>
-                <AddComment />
+                <AddComment 
+                    addNewCommment={this.addNewCommment} 
+                    changeHandler={this.changeHandler} 
+                    commentText={this.state.commentText}
+                />
             </div>
         );
     }

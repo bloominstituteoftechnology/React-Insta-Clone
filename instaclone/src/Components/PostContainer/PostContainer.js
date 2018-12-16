@@ -26,7 +26,12 @@ const PostContainer = props => {
                     </IconContext.Provider>
                 </div>
                 <p className="likes">{props.post.likes} likes</p>
-                <CommentSection comments={props.post.comments} timestamp={props.post.timestamp} />
+                <CommentSection 
+                    comments={props.post.comments} 
+                    timestamp={props.post.timestamp} 
+                    index={props.index}
+                    updateComments={props.updateComments}
+                />
             </div>
             
         </div>

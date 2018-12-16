@@ -18,9 +18,20 @@ class App extends Component {
 componentDidMount(){
   setTimeout(()=>{
     this.setState({dummyData:dummyData})
-  }, 1000)
-  
+  }, 2000)
 }
+
+//update app's state with new comment
+updateComments = (index,text) =>{
+  this.setState((prevState,props)=>{
+    const posts = prevState.dummyData.slice();
+    posts[index].comments.push({username:"nole",text:text});
+    
+    return {dummyData: posts};
+
+  })
+}
+
 
   render() {
     return (
@@ -29,7 +40,7 @@ componentDidMount(){
         <div>
           {this.state.dummyData.length === 0? <p>LOADING</p>:
             this.state.dummyData.map((post,i)=>{
-              return <PostContainer key={i}  post={post} index={i} />
+              return <PostContainer key={i}  post={post} index={i} updateComments={this.updateComments} />
             })
           }          
         </div>
