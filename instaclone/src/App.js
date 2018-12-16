@@ -11,13 +11,6 @@ import './App.css';
 class App extends Component {
   constructor(){
     super();
-
-    //if there's nothing in local storage
-    if(!myStorage.getObject('data')){
-      //add the dummy data to local storage
-      myStorage.setObject('data',dummyData);
-    }
-    
     this.state ={
       dummyData:[],
       userSearch: ""
@@ -27,6 +20,12 @@ class App extends Component {
   // when the component mounts  
   //I want to get the dummy data from the local storage
   componentDidMount(){
+     //if there's nothing in local storage
+     if(!myStorage.getObject('data')){
+      //add the dummy data to local storage
+      myStorage.setObject('data',dummyData);
+    }
+
     setTimeout(()=>{
       this.setState({dummyData:myStorage.getObject('data')})
     }, 2000)
