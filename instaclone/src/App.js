@@ -32,6 +32,13 @@ updateComments = (index,text) =>{
   })
 }
 
+updateLikes = (index,liked)=>{
+  this.setState((prevState,props)=>{
+    const posts = prevState.dummyData.slice();
+    liked? posts[index].likes+=1:posts[index].likes-=1;
+    return{dummyData: posts}
+  })
+}
 
   render() {
     return (
@@ -40,7 +47,13 @@ updateComments = (index,text) =>{
         <div>
           {this.state.dummyData.length === 0? <p>LOADING</p>:
             this.state.dummyData.map((post,i)=>{
-              return <PostContainer key={i}  post={post} index={i} updateComments={this.updateComments} />
+              return <PostContainer 
+                key={i}  
+                post={post} 
+                index={i} 
+                updateComments={this.updateComments} 
+                updateLikes= {this.updateLikes}
+                />
             })
           }          
         </div>

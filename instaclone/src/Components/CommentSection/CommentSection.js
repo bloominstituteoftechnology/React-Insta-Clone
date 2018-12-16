@@ -24,7 +24,7 @@ class CommentSection extends Component {
         
     }
 
-    //handles state for addComment in this component
+    //handles state for AddComment in this component
     changeHandler= event=>{
         this.setState({[event.target.name]: event.target.value})
     }

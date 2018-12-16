@@ -21,7 +21,10 @@
     margin-top: 1rem;
 }
 .bottom-container .icon-container .fa-icon{
-    padding-right: 1rem;
+    margin-right: 1rem;
+}
+.bottom-container .icon-container .fa-icon:hover{
+    cursor: pointer;
 }
 .bottom-container .likes{
     font-weight: bold;

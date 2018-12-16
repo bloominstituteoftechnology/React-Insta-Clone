@@ -4,38 +4,58 @@ import './PostContainer.css'
 import CommentSection from '../CommentSection/CommentSection';
 import UserInfo from '../UserInfo/UserInfo';
 
-import {FaRegComment, FaRegHeart}  from 'react-icons/fa'
+import {FaRegComment, FaRegHeart, FaHeart}  from 'react-icons/fa'
 import { IconContext } from "react-icons";
 
 
-const PostContainer = props => {
-    console.log(props)
-    return (
-        <div className="post-container">
-            <UserInfo thumbnailUrl={props.post.thumbnailUrl} username={props.post.username} />
+class PostContainer extends  React.Component {
+    constructor(props){
+        super(props)
+        this.state={
+            liked:false
+        };
+    }
 
-            <div className="image-container">
-                <img src={props.post.imageUrl} alt="" className="post-image"/>
-            </div>
+    toggleLiked = event =>{
+        if(!this.state.liked){
+            this.setState({liked: true})
+            this.props.updateLikes(this.props.index,true);
+        }else{
+            this.setState({liked: false})
+            this.props.updateLikes(this.props.index,false);
+        }
+        
+    }
 
-            <div className="bottom-container">
-                <div className="icon-container">
-                    <IconContext.Provider value={{ size: "1.5rem",className:"fa-icon" }}>
-                        <FaRegHeart />
-                        <FaRegComment />
-                    </IconContext.Provider>
+
+    render(){ 
+        return (
+            <div className="post-container">
+                <UserInfo thumbnailUrl={this.props.post.thumbnailUrl} username={this.props.post.username} />
+    
+                <div className="image-container">
+                    <img src={this.props.post.imageUrl} alt="" className="post-image"/>
                 </div>
-                <p className="likes">{props.post.likes} likes</p>
-                <CommentSection 
-                    comments={props.post.comments} 
-                    timestamp={props.post.timestamp} 
-                    index={props.index}
-                    updateComments={props.updateComments}
-                />
+    
+                <div className="bottom-container">
+                    <div className="icon-container">
+                        <IconContext.Provider value={{ size: "1.5rem",className:"fa-icon" }}>
+                            {this.state.liked === false? <FaRegHeart onClick={this.toggleLiked} />:<FaHeart onClick={this.toggleLiked} /> }
+                            <FaRegComment />
+                        </IconContext.Provider>
+                    </div>
+                    <p className="likes">{this.props.post.likes} likes</p>
+                    <CommentSection 
+                        comments={this.props.post.comments} 
+                        timestamp={this.props.post.timestamp} 
+                        index={this.props.index}
+                        updateComments={this.props.updateComments}
+                    />
+                </div>
+                
             </div>
-            
-        </div>
-    );
+        ); 
+    }
 }
  
 export default PostContainer;
