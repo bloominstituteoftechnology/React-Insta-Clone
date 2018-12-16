@@ -18,7 +18,7 @@ class CommentSection extends Component {
     //adds new comment and passes it up to App
     addNewCommment = (event, index)=>{
         event.preventDefault();
-        const comment = event.target.elements[0].value
+        const comment = this.state.commentText;
         this.props.updateComments(this.props.index,comment)
         this.setState({commentText: ""})
         

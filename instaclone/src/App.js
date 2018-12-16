@@ -49,7 +49,6 @@ class App extends Component {
       posts[index].comments.push({username:"nole",text:text});
       
       return {dummyData: posts};
-
     })
   }
 
