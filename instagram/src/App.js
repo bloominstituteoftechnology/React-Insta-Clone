@@ -27,6 +27,15 @@ class App extends Component {
     console.log(this.state.searchInput)
   };
 
+  search = event => {
+    event.preventDefault();
+      if (!(this.state.searchInput === '')) {
+          this.setState({
+              post: [],
+              inputText: ''
+            });
+        }
+    };
 
   render() {
     return (
@@ -38,7 +47,7 @@ class App extends Component {
   }
 }
 
-
+App.PropTypes = {card:PropTypes.arrayOf(PropTypes.object)};
 
 
 export default App;

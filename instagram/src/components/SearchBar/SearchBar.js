@@ -7,7 +7,7 @@ const SearchBar = () => {
     <div className="search-bar-wrapper">
       <div className="image-wrapper">
       <div className="social">
-        <i class ="fab fa-instagram" ></i>
+        <i className ="fab fa-instagram" ></i>
       </div>
         <img alt="instagram logo" src={iglogo} className="logo-image" />
       </div>
@@ -28,5 +28,7 @@ const SearchBar = () => {
     </div>
     );
   }
+
+  
 
 export default SearchBar;
