@@ -71,7 +71,6 @@ const SearchBar = props => (
                 (<input type="text" 
                     placeholder="&#128269;Search"
                     onChange={props.onSearchInput}
-                    onKeyDown={(e) => { if(e.keyCode === 13) props.onSearch()}}
                 />)}
         </div>
         <div>

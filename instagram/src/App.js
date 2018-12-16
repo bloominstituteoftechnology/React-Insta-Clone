@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+import Fuse from 'fuse.js';
 import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar';
@@ -13,7 +14,7 @@ class App extends Component {
       data: [],
       commentInput: '',
       searchInput: '',
-      stored: [],
+      allData: [],
       username: '',
     };
   }
@@ -23,6 +24,7 @@ class App extends Component {
         this.setState({ [key]: JSON.parse(localStorage.getItem(key)) });
       } else if (key === 'data') this.setState({ data: dummyData });
     }
+    this.setState( { allData: dummyData } );
     window.addEventListener('beforeunload', this.handleLocalStorage);
   }
   componentWillUnmount(){
@@ -34,35 +36,25 @@ class App extends Component {
     }
   }
   handleSearch = () => {
-    this.setState((prevState) => {
-      const prevData = [...prevState.data];
-      const prevStored = [...prevState.stored];
-      const newData = [];
-      const newStored = [];
-      prevData.forEach((x, y) => {
-        if (new RegExp(prevState.searchInput, 'gi').test(x.username)){
-          newData.push(x);
-        } else newStored.push(x);
-      });
-      prevStored.forEach((x, y) => {
-        if (new RegExp(prevState.searchInput, 'gi').test(x.username)){
-          newData.push(x);
-        } else newStored.push(x);
-      });
-    
-      return {
-        data: newData.sort((a, b) => moment(b.timestamp,'MMMM Do YYYY, hh:mm:ss a').valueOf() 
-        - moment(a.timestamp,'MMMM Do YYYY, hh:mm:ss a').valueOf()),
-        stored: newStored,
-        searchInput: '',
-      }
-    });
+    const options = {
+      threshold: 0.5,
+      location: 0,
+      distance: 100,
+      maxPatternLength: 32,
+      minMatchCharLength: 1,
+      keys: [
+        'username'
+    ]
+    };
+    const fuse = new Fuse(this.state.allData, options);
+    this.setState( { data: fuse.search(this.state.searchInput).sort((a, b) => moment(b.timestamp,'MMMM Do YYYY, hh:mm:ss a').valueOf() 
+    - moment(a.timestamp,'MMMM Do YYYY, hh:mm:ss a').valueOf()) } );
   }
   handleSearchInput = (e) => {
     console.log(this.state);
     this.setState({
       searchInput: e.target.value,
-    });
+    }, this.handleSearch());
   }
   addNewComment = (value, index) => {
     if (!value){
@@ -93,9 +85,7 @@ class App extends Component {
     this.setState((prevState) => {
       return {
         username: null,
-        data: prevState.stored.concat(prevState.data).sort((a, b) => moment(b.timestamp,'MMMM Do YYYY, hh:mm:ss a').valueOf() 
-        - moment(a.timestamp,'MMMM Do YYYY, hh:mm:ss a').valueOf()),
-        stored: [],
+        data: prevState.allData,
       };
     }, () => window.location.reload());
   }
@@ -103,7 +93,6 @@ class App extends Component {
     return (
       <div className="app">
         <SearchBar
-          onSearch={this.handleSearch}
           onSearchInput={this.handleSearchInput}
           onLogout={this.logout}
         />
