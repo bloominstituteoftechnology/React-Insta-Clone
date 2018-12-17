@@ -22,28 +22,35 @@ img {
   height: auto;
 }
 
-.searchBarContainer {
-  max-width: 640px;
-  width: 100%;
-  border-bottom: 1px solid lightgrey;
+.search-bar-wrapper {
+  border-bottom: 1px solid #3333;
+  height: 60px;
+  line-height: 50px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  background: #ffffff;
 }
 
-.logoContainer {
+.image-wrapper {
+  height: 50px;
   display: flex;
   align-items: center;
-  width: 20%;
-  justify-content: space-between;
-  margin-left: 1%;
 }
 
-.userIconsContainer {
+.logo-image {
+  height: 100%;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+.social-wrapper {
   display: flex;
-  align-items: center;
-  width: 20%;
-  justify-content: space-between;
-  margin-right: 1%;
 }
 
+.social {
+  width: 50px;
+}
+
+.fa-instagram {
+  margin-left: 10px;
+}

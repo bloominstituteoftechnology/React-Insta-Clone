@@ -1,77 +1,69 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./PostContainer.css";
-import Message from "./Message";
-import Comments from "../CommentSection/Comments";
-import moment from 'moment';
+import CommentSection from "../CommentSection/CommentSection";
+import LikeSection from "./LikeSection";
+import moment from "moment";
 
-const Post = props => {
-  // find out how long since last post
-  let currentTime = moment();
-  let tStamp = props.post.timestamp;
-  tStamp = tStamp.replace("th", "");
-  let tStamp2 = moment(tStamp);
-  let displayTime = tStamp2.from(currentTime);
-  if (!tStamp2.isValid()) {
-    console.log(tStamp2);
-  } else {
-    console.log(displayTime);
+import "./Posts.css";
+
+class Post extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      likes: props.post.likes,
+      dTime: ''
+    };
   }
-  
-  return (
-    <div className="postContainer">
-      <div className="topContainer">
-        <img
-          className="companyLogo"
-          src={props.post.thumbnailUrl}
-          alt="Company Logo"
-        />
-        {props.post.username}
-      </div>
-      <div className="imgContainer">
-        <img className="postImg" src={props.post.imageUrl} alt="Post" />
-      </div>
-      <div className="bottomContainer">
-        <div className="contentContainer">
-          <div className="iconContainer">
-            <i className="far fa-heart" />
-            <i className="far fa-comment" />
+
+  componentDidMount = () => {
+    let currentTime = moment();
+    let tStamp = this.props.post.timestamp;
+    tStamp = tStamp.replace("th", "");
+    let tStamp2 = moment(tStamp);
+    let displayTime = tStamp2.from(currentTime);
+    this.setState({ dTime: displayTime });
+  };
+
+  incrementLike = () => {};
+  render() {
+    return (
+      <div className="post-border">
+        <div className="post-header">
+          <div className="post-thumb-wrapper">
+            <img
+              alt="post header"
+              className="post-thumb"
+              src={this.props.post.thumbnailUrl}
+            />
           </div>
-          <div className="likes">
-            <p>{props.post.likes} likes</p>
-          </div>
-          <div className="messContainer">
-            <div>
-              {props.post.comments.map(message => (
-                <Message key={message.text} message={message} />
-              ))}
-            </div>
-            <div className='timeStamp'>
-              <span className="time-stamp">{displayTime}</span>  
-            </div>
-          </div>
-          <div className="commentsContainer">
-            <Comments createComment={displayTime}/>
-          </div>
+          <div>{this.props.post.username}</div>
         </div>
+        <div className="post-image-wrapper">
+          <img
+            alt="post thumbnail"
+            className="post-image"
+            src={this.props.post.imageUrl}
+          />
+        </div>
+        <LikeSection
+          incrementLike={this.incrementLike}
+          likes={this.state.likes}
+        />
+        <CommentSection
+          postId={this.props.post.imageUrl}
+          comments={this.props.post.comments}
+          dTime={this.state.dTime}
+        />
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 Post.propTypes = {
   post: PropTypes.shape({
     username: PropTypes.string,
     thumbnailUrl: PropTypes.string,
-    imageUrl: PropTypes.string,
-    likes: PropTypes.number,
-    timestamp: PropTypes.string,
-    comments: PropTypes.arrayOf(
-      PropTypes.shape({
-        username: PropTypes.string,
-        text: PropTypes.string
-      })
-    )
+    imageUrl: PropTypes.string
   })
 };
 
