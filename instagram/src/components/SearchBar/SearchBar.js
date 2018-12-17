@@ -10,7 +10,13 @@ const SearchBar = props => {
         <FiInstagram className="icon logo" />
         <h1 id="header-logo">SlightDelayGram</h1>
       </div>
-      <Input id="search-input" type="text" placeholder="Search" />
+      <Input
+        id="search-input"
+        type="text"
+        placeholder="Search"
+        onChange={props.changeHandler}
+        value={props.searchState}
+      />
       <div className="header-icon-container">
         <FiCompass className="icon" />
         <FiHeart className="icon" />

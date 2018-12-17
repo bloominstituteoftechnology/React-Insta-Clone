@@ -9,18 +9,40 @@ class App extends Component {
     super();
     this.state = {
       posts: [],
-      user: "thisUser"
+      staticData: [],
+      user: "thisUser",
+      search: ""
     };
   }
 
   componentDidMount() {
-    this.setState({ posts: dummyData });
+    this.setState({ posts: dummyData, staticData: dummyData });
   }
+
+  searchInput = event => {
+    this.setState({ search: event.target.value });
+    const searchArray = this.state.staticData;
+    if (this.state.search.length === 0)
+      return this.setState({ posts: searchArray });
+    else {
+      const resultsArray = searchArray.filter(post => {
+        return post.username.includes(this.state.search);
+      });
+      return this.setState((prevState, props) => {
+        return {
+          posts: resultsArray
+        };
+      });
+    }
+  };
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar
+          changeHandler={this.searchInput}
+          searchState={this.state.search}
+        />
         <div className={"content"}>
           {this.state.posts.map(post => {
             return (
