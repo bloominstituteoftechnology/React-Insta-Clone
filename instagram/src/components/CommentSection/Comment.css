@@ -31,13 +31,16 @@ html {
     border-top: 1px solid lightgrey;
     margin: 10px auto 0;
     width: 98%;
-    height: 35px;
+    height: 45px;
+    display: flex;
+    align-items: center;
   }
 
   .input-field {
     height: 28px;
     border: white;
-    width: 50%;
+    width: 98%;
+    color: grey;
   }
 
   .comment-text {
@@ -48,11 +51,11 @@ html {
   
   .comment {
     font-weight: 300;
-    font-size: 14px;
+    font-size: 1rem
   }
   
   .user {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 1rem;
   }
   
