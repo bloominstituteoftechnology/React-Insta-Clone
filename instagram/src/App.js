@@ -23,7 +23,9 @@ class App extends Component {
     this.setState({ search: event.target.value });
     const searchArray = this.state.staticData;
     if (this.state.search.length === 0)
-      return this.setState({ posts: searchArray });
+      return this.setState((prevState, props) => {
+        return { posts: searchArray };
+      });
     else {
       const resultsArray = searchArray.filter(post => {
         return post.username.includes(this.state.search);
