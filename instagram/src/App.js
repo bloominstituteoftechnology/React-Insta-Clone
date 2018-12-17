@@ -22,11 +22,12 @@ class App extends Component {
   searchInput = event => {
     this.setState({ search: event.target.value });
     const searchArray = this.state.staticData;
+    /* If search field is empty, show all posts */
     if (this.state.search.length === 0)
       return this.setState((prevState, props) => {
         return { posts: searchArray };
       });
-    else {
+    /* Filters out posts with usernames not including substr this.state.search */ else {
       const resultsArray = searchArray.filter(post => {
         return post.username.includes(this.state.search);
       });
