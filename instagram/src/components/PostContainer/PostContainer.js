@@ -8,6 +8,7 @@ const PostContainer = props => {
             return(
                 <div className="container">
                     <Post 
+                    addLike={post.addLike}
                     post={post}
                     key={index} 
                     username={post.username}

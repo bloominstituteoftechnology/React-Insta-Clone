@@ -1,5 +1,6 @@
 import React from "react";
 import CommentSection from './../CommentSection/CommentSection';
+import Likes from './Likes';
 import moment from './../../../node_modules/moment';
 import PropTypes from 'prop-types';
 import './Post.css'
@@ -8,12 +9,15 @@ class Post extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: this.props.post.comments
+            comments: props.post.comments,
+            likes: props.post.likes
         }
     }
-
+    addLike = () => {
+        var newLikes = this.state.likes;
+        this.setState({likes: newLikes + 1});
+    }
     render() {
-        console.log(this.state.posts);
         return(
             <div className="post-container container">
                 <div className="user-info ">
@@ -24,12 +28,12 @@ class Post extends React.Component {
                     <img src={this.props.post.imageUrl} alt=""/>
                 </div>  
                 <div className="likes container">
-                    <div className="icons">
-                        <i className="fa fa-heart-o"></i>
-                        <i className="fa fa-comment-o"></i>
+                    <div className="icons">                        
+                        <Likes increaseLikes={this.addLike}/>
                     </div>
                     <div className="count">
-                    {this.props.post.likes} likes </div>
+                        {this.state.likes} Likes
+                    </div>
                 </div>
                 <div className="comments">
                     <CommentSection comments={this.state.comments}/>
