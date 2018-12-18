@@ -26,7 +26,7 @@
 #### Tasks (Day II)
 
 - Use lifecycle methods
-  - In `app.js` use `componentDidMount()` to set your data to the component's state. Use the state object to pass data to your `PostContainer` component.
+  [x] In `app.js` use `componentDidMount()` to set your data to the component's state. Use the state object to pass data to your `PostContainer` component.
 - Adding comments
   - Lets divide up the data that we've been working with this far by separating the comments array onto a new component's state. Pass down the comments through each post to the CommentSection component. Be sure that you set the incoming `comments` props data on the state of the CommentSection component.
   - Create a function in `CommentSection.js` called `addNewComment` that takes in an event and an index number. The function will add the comment that is on the event object to the post that is at that index number.
