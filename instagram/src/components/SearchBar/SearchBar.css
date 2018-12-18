@@ -3,17 +3,29 @@ html {
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -54,3 +66,19 @@ img {
 .fa-instagram {
   margin-left: 10px;
 }
+
+.input-wrapper {
+  width: 40%;
+}
+
+.input-field-search {
+  background-image: url("../../assets/search.png");
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  background-position-x: 38%;
+  background-position-y: 3px;
+  text-align: center;
+  height: 1.7rem;
+  width: 90%;
+}
+

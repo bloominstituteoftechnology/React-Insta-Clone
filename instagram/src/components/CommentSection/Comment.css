@@ -36,17 +36,21 @@ html {
     align-items: center;
   }
 
-  .input-field {
+  .form-comment {
+    width: 100%;
+  }
+
+  .input-field-comment {
+    width: 100%;
     height: 28px;
-    border: white;
-    width: 98%;
-    color: grey;
+    border: 1px solid white;
   }
 
   .comment-text {
     text-align: left;
     padding: 2px;
     margin-left: 4px;
+    width: 80%;
   }
   
   .comment {
@@ -55,7 +59,12 @@ html {
   }
   
   .user {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1rem;
+  }
+
+  .fa-ellipsis-h {
+    text-align: right;
+    margin-left: 5%;
   }
   

@@ -1,5 +1,6 @@
 import React from "react";
 import IGLogo from "../../assets/iglogo.png";
+import Search from "../../assets/search.png"
 import "./SearchBar.css";
 
 const SearchBar = props => {
@@ -9,8 +10,13 @@ const SearchBar = props => {
         <i className="fab fa-instagram" />
         <img alt="instagram logo" src={IGLogo} className="logo-image" />
       </div>
-      <div>
-        <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
+      <div className="input-wrapper">
+        <input 
+          className="input-field-search" 
+          type="text" 
+          placeholder=" Search" 
+          onKeyDown={props.searchPosts} 
+        />
       </div>
       <div className="social-wrapper">
         <div className="social">
