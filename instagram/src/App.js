@@ -51,7 +51,6 @@ class App extends Component {
     - moment(a.timestamp,'MMMM Do YYYY, hh:mm:ss a').valueOf()) } );
   }
   handleSearchInput = (e) => {
-    console.log(this.state);
     this.setState({
       searchInput: e.target.value,
     }, this.handleSearch());
@@ -87,7 +86,7 @@ class App extends Component {
         username: null,
         data: prevState.allData,
       };
-    }, () => window.location.reload());
+    }, this.props.history.push('/login'));
   }
   render() {
     return (

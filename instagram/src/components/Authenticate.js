@@ -1,5 +1,6 @@
 import React from 'react';
 import Login from './Login';
+import { Route, Switch } from 'react-router-dom';
 
 const Authenticate = (Component) => 
     class extends React.Component{
@@ -14,7 +15,12 @@ const Authenticate = (Component) =>
                 this.setState({ loggedIn: true, user: JSON.parse(localStorage.getItem('username')) });
         }
         render(){
-            return this.state.loggedIn ? <Component /> : <Login />
+            return (
+                <Switch>
+                    <Route exact path="/" component={Component} />
+                    <Route path="/login" component={Login} />
+                </Switch>
+            );
         }
     }
 

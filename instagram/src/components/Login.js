@@ -130,7 +130,7 @@ class Login extends React.Component{
             return;
         }
         localStorage.setItem('username', JSON.stringify(this.state.usernameLoginInput));
-        window.location.reload();
+        this.props.history.push('/');
         return false;
     }
     render(){
