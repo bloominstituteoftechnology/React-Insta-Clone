@@ -1,13 +1,13 @@
 import React from 'react';
 import './comment.css';
 // import dummyData from '../../dummy-data';
-// import Comment from './Comment';
+import Comment from './Comment';
 
 class CommentSection extends React.Component{
     constructor(props){
         super(props);
         this.state ={
-            commentInput: props.usercomments,
+            commentInput: props.comments,
             newComment: '',
             placeholder: "Add a comment..."
         }
@@ -15,7 +15,7 @@ class CommentSection extends React.Component{
 
     componentDidMount(){
         this.setState({
-            commentInput: this.props.usercomments
+            commentInput: this.props.comments
         })      
     }
 
@@ -45,17 +45,18 @@ class CommentSection extends React.Component{
         console.log("commentInput", this.state.commentInput)
         return (
             <div>
-            <form onSubmit={this.addNewComment}>
-                <div className="commentSectionContainer">
-                    <input placeholder={this.state.placeholder}
-                        type="text"
-                        name="newComment"
-                        value={this.state.newComment}
-                        onChange={this.handleComments}
-                    />
-                    <div className="commentMenu">...</div>
-                </div>
-             </form>
+                <Comment comments={this.state.commentInput} />
+                <form onSubmit={this.addNewComment}>
+                    <div className="commentSectionContainer">
+                        <input placeholder={this.state.placeholder}
+                            type="text"
+                            name="newComment"
+                            value={this.state.newComment}
+                            onChange={this.handleComments}
+                        />
+                        <div className="commentMenu">...</div>
+                    </div>
+                </form>
              </div>
         )
     }

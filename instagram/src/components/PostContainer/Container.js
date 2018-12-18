@@ -2,17 +2,16 @@ import React from 'react';
 // import PostContainer from './PostContainer';
 import PropTypes from 'prop-types';
 import './post.css';
-// import Comment from '../CommentSection/Comment';
 import CommentSection from "../CommentSection/CommentSection";
 import Likes from "../CommentSection/Likes";
 
 
 
 const Container = props => {
-    const comments = props.post.comments;
-    const commentsArray = comments.map( (comment, index) => (
-        <ul className="commentPostUl"key={index} value={comment}><span className="bold">{comment.username}</span> {comment.text}</ul> 
-    ))
+    // const comments = props.post.comments;
+    // const commentsArray = comments.map( (comment, index) => (
+    //     <ul className="commentPostUl"key={index} value={comment}><span className="bold">{comment.username}</span> {comment.text}</ul> 
+    // ))
     console.log(props)
     return (
         <div>
@@ -29,10 +28,11 @@ const Container = props => {
                     {/* {<div className="heartContainer"><div className="heart"></div></div>} */}
                     {/* <div className="likes">{props.post.likes} likes </div> */}
                     <Likes like={props.post.likes} />
-                    <div className="commentOnPost">{commentsArray}</div>
+                    {/* <div className="commentOnPost">{commentsArray}</div> */}
                     {/* <Comment comment ={commentsArray}/> */}
                     <div className="timeStamp">{props.post.timestamp}</div>
-                    <CommentSection usercomments={props.post.comments} />
+                    {/* <CommentSection usercomments={props.post.usercomments} /> */}
+                    <CommentSection comments={props.post.comments} />
                 </section>
             </section>
         </div>
