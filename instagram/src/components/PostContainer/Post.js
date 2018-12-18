@@ -24,7 +24,11 @@ class Post extends React.Component {
     this.setState({ dTime: displayTime });
   };
 
-  incrementLike = () => {};
+  incrementLike = () => {
+    let likes = this.state.likes + 1;
+    this.setState({likes: likes});
+  };
+
   render() {
     return (
       <div className="post-border">

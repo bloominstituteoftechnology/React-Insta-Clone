@@ -30,19 +30,18 @@ class CommentSection extends React.Component {
   setComments = () => {};
 
   commentHandler = e => {
-    this.setState({ comment: e.target.value });
+    this.setState({ comment: e.target.value }); // update state comment field
   };
 
   handleCommentSubmit = e => {
-      e.preventDefault();
-      if (this.state.comment.length > 0) {
+    e.preventDefault();
+    if (this.state.comment.length > 0) {
       const newComment = { text: this.state.comment, username: "bmadrid" }; // make object to add
       const comments = this.state.comments.slice(); // make copy of state object to update
-      console.log(newComment.text);
       comments.push(newComment); // add newComment object to the state array
       this.setState({ comments: comments, comment: "" }); // update State and blank out the state comment field
       this.setComments(); // save objects offline
-      }
+    }
   };
 
   render() {

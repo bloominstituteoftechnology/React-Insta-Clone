@@ -1,6 +1,6 @@
 import React from "react";
 import IGLogo from "../../assets/iglogo.png";
-import Search from "../../assets/search.png"
+import PropTypes from "prop-types";
 import "./SearchBar.css";
 
 const SearchBar = props => {
@@ -15,7 +15,7 @@ const SearchBar = props => {
           className="input-field-search" 
           type="text" 
           placeholder=" Search" 
-          onKeyDown={props.searchPosts} 
+          onKeyUp={props.searchPosts} 
         />
       </div>
       <div className="social-wrapper">
@@ -32,5 +32,9 @@ const SearchBar = props => {
     </div>
   );
 };
+
+SearchBar.propTypes = {
+  searchPosts: PropTypes.func
+}
 
 export default SearchBar;

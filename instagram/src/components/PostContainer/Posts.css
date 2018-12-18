@@ -40,6 +40,10 @@
     font-weight: 700;
   }
 
+  .like-section-container {
+    display: flex;
+  }
+
   .like-section {
     display: flex;
   }

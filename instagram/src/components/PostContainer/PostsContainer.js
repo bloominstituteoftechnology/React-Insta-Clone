@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from './Post';
+import PropTypes from "prop-types";
 import './Posts.css';
 
 const PostsContainer = props => {
@@ -9,5 +10,9 @@ const PostsContainer = props => {
     </div>
   );
 };
+
+PostsContainer.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.object)
+}
 
 export default PostsContainer;
