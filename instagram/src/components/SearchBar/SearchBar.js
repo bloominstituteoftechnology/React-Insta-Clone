@@ -95,6 +95,11 @@ class SearchBar extends React.Component {
                   <span className="user"> {this.props.user}</span>
                 </NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink href="/">
+                  <button onClick={() => localStorage.removeItem('currentUser')}>Logout</button>
+                </NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>

@@ -16,7 +16,7 @@
 }
 
 .SearchBar .navbar {
-  width: 52%;
+  width: 55%;
   margin: auto;
 }
 
@@ -83,4 +83,10 @@
 .SearchBar .user {
   margin-left: 5px;
   color: black;
+}
+
+.SearchBar button {
+  font-size: 1.4rem;
+  padding: 5px;
+  border-radius: 5px;
 }
