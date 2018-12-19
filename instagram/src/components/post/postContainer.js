@@ -2,16 +2,17 @@ import React from 'react';
 import Post from './post';
 
 
+
 const PostContainer = (props) => {
     return (
-        <div>
+        <React.Fragment>
             {props.posts.map(post => (
                 <div>
                     <Post userName={post} key={post.timestamp} />
                     
                 </div>
             ))}
-        </div>
+        </React.Fragment>
     );
 }
 

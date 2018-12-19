@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+.postContainer{
+    max-width: 640px;
+    width: 100%;
+    margin: 10px auto;
+    border: 1px solid lightgray;
+}
+.userContainer{
+    display: flex;
+    margin: 10px 2%;
+
+}
+.profileImage{
+    border-radius: 50%;
+    width: 10%;
+    height: 65px;
+}
+
+.username{
+    font: bold 16px 'Roboto', sans-serif;
+    margin: 10px 10px;
+}
+.comment{
+    font-family: 'Roboto', sans-serif;
+}
