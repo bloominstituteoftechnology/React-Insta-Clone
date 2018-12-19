@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentSection from '../commentSection/CommentSection';
+import CommentSectionContainer from '../commentSection/CommentsSectionContainer';
 import PropTypes from 'prop-types';
 import './post.css'
 import LikeSection from './LikeSection'
@@ -10,12 +10,12 @@ class Post extends React.Component {
         this.state = {
             likes: props.userName.likes
         };
-       
+
     }
     incrementLikes = () => {
-        let likes = this.state.likes +1;
-        this.setState({likes});
-     };
+        let likes = this.state.likes + 1;
+        this.setState({ likes });
+    };
     render() {
         return (
             <div className='postContainer' >
@@ -24,8 +24,11 @@ class Post extends React.Component {
                     <h3 className='username'>{this.props.userName.username}</h3>
                 </div>
                 <img src={this.props.userName.imageUrl} alt='user post' />
-                <LikeSection incrementLike={this.incrementLikes} likes = {this.state.likes}/>
-                <CommentSection key={this.props.userName.timestamp} comment={this.props.userName.comments} />
+                <LikeSection incrementLike={this.incrementLikes} likes={this.state.likes} />
+                <CommentSectionContainer
+                    postId={this.props.userName.imageUrl}
+                    comments={this.props.userName.comments}
+                />
 
             </div>
         );
