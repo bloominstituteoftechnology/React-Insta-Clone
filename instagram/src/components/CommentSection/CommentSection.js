@@ -8,8 +8,9 @@ class CommentSection extends Component {
   constructor(props){
     super(props);
     this.state = {
-      comments: {},
-      newComment: ""
+      comments: [],
+      newComment: "",
+      likes: this.props.likes
     }    
   }
 
@@ -27,24 +28,31 @@ class CommentSection extends Component {
     console.log(this.state.comments)
     console.log(newComments)
     newComments.push({username: "christene", text: this.state.newComment});
-    this.setState({comments: newComments, newComment: ""}, () => console.log(this.state.comments))
+    this.setState({
+        comments: newComments, 
+        newComment: ""
+      }, () => console.log(this.state.comments, this.state.newComment))
+  }
 
-    
+  onCommentLike = (event) => {
+    this.setState(prevState => ({
+      likes: prevState.likes + 1
+    }))
   }
 
   render(){
     return (
       <div className="comments-con">
         <div className="comments-icons">
-          <div className="comment-heart-icon comment-icon">
+          <div className="comment-heart-icon comment-icon" onClick={this.onCommentLike}>
             <i className="far fa-heart"></i>
           </div>
           <div className="comment-comment-icon comment-icon">
             <i className="far fa-comment"></i>
           </div>
         </div>
-        <div className="comments-likes">{this.props.likes} likes</div>
-        <div className="comments-con">{this.props.comments.map((c, i) => (
+        <div className="comments-likes">{this.state.likes} likes</div>
+        <div className="comments-con">{this.state.comments.map((c, i) => (
           <Comment key={i} comment={c} />
         ))}
         </div>
