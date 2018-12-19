@@ -92,6 +92,7 @@ class SearchBar extends React.Component {
                     size="lg"
                     className="navIcon"
                   />
+                  <span className="user"> {this.props.user}</span>
                 </NavLink>
               </NavItem>
             </Nav>

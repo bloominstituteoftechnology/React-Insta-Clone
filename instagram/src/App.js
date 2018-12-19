@@ -3,42 +3,19 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faHeart, faCompass, faUser, faComment, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
-import SearchBar from './components/SearchBar/SearchBar';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './Authentication/Authenticate';
 
 import './App.css';
 
 library.add(faInstagram, faCompass, faHeart, faUser, faComment, faTrashAlt);
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      users: []
-    }
-  }
+const App = () => {
 
-  componentDidMount() {
-    this.buildUsers(dummyData);
-  }
+  return (
+    <PostsPage />
+  );
 
-  buildUsers = (data) => {
-    this.setState({users: data});
-  }
-
-  updateUsers = (users) => {
-    this.setState({users: users});
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <SearchBar users={this.state.users} update={this.updateUsers} />  
-        <PostContainer users={this.state.users} />      
-      </div>
-    );
-  }
 }
 
-export default App;
+export default Authenticate(App);

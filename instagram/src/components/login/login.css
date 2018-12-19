@@ -1,0 +1,27 @@
+.login {
+  max-width: 600px;
+  margin: 50px auto;
+  border: 3px solid dodgerblue;
+  padding: 20px;
+  font-size: 2rem;
+}
+
+.login label {
+  width: 20%;
+}
+
+.login input {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.login .form-group {
+  margin-bottom: 10px;
+}
+
+.login button {
+  padding: 10px;
+  font-size: 1.8rem;
+  width: 25%;
+  margin-top: 20px;
+}

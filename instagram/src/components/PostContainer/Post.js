@@ -39,11 +39,9 @@ class Post extends React.Component {
       likes ++;
       heartColor = "red";
       alreadyHeart = true;
-      // this.setState({likes: likes, heartColor: "red", alreadyHeart: true});
     }
     else {
       likes --;
-      // this.setState({likes: likes, heartColor: "black", alreadyHeart: false});
     }
     const info = {
       likes: likes,

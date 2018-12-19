@@ -13,7 +13,7 @@ class CommentSection extends React.Component {
     this.state = {
       comments: [],
       addCommentText: "", 
-      currentUser: "leila100"
+      currentUser: ""
     }
   }
 
@@ -30,6 +30,10 @@ class CommentSection extends React.Component {
         this.setState({comments: this.props.comments});
       }
     } else this.setState({comments: this.props.comments});
+
+    //Check if user logged in, then set currentUser
+    const user = localStorage.getItem("currentUser");
+    if(user) this.setState({currentUser: user});
   }
 
   addCommentHandler = (event) => {

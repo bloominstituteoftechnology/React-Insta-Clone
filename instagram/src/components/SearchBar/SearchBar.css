@@ -79,3 +79,8 @@
     width: 80%;
   }
 }
+
+.SearchBar .user {
+  margin-left: 5px;
+  color: black;
+}
