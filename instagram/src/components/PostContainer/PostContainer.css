@@ -1,0 +1,16 @@
+.user-info{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+.thumbnail{
+    border-radius: 50%;
+    width: 30px;
+    height: 40px;
+    margin: 10px 0;
+}
+
+.username{
+    font-weight: bold;
+}
