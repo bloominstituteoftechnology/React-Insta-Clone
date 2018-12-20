@@ -58,7 +58,7 @@ class Post extends React.Component {
       <PostBody>
         <PostName>
           <PostThumbnail src={this.props.user.thumbnailUrl} alt="Thumbnail" />
-          <PostUserName>{this.props.user.username}</PostUserName>
+          <PostUserName bold>{this.props.user.username}</PostUserName>
         </PostName>
         <PostImg src={this.props.user.imageUrl} alt="post" />
         <PostIcon>

@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FlexDiv, Icon } from '../styles/basicStyles';
+import { PostDate, Comments, CommentInput } from '../styles/CommentSectionStyles';
 
-import './CommentSection.css';
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -59,7 +60,6 @@ class CommentSection extends React.Component {
   }
 
   deleteCommentHandler = (event, index) => {
-    
     this.setState(
       prevState => {
         const comments = prevState.comments.filter((comment, i) => i !== index);
@@ -73,25 +73,28 @@ class CommentSection extends React.Component {
   render() {
     const d1 = moment(this.props.timestamp, 'MMM DD YYYY, HH:mm:ss a');
     return (
-      <div className="commentSection">
-        <div className="comments">{ this.state.comments.map((comment, index) => {
+      <div>
+        <Comments>{ this.state.comments.map((comment, index) => {
           return (
-            <div key={comment.text}>
-              <FontAwesomeIcon
-                icon={['fas', 'trash-alt']}
-                size="lg"
-                color= "red"
-                className="postIcon"
-                onClick={(event) => this.deleteCommentHandler(event, index)}
-              />
+            <FlexDiv key={comment.text}>
+              <Icon>
+                <FontAwesomeIcon
+                  icon={['fas', 'trash-alt']}
+                  size="lg"
+                  color= "red"
+                  onClick={(event) => this.deleteCommentHandler(event, index)}
+                />
+              </Icon>
               <Comment comment={comment} />
-            </div>
+            </FlexDiv>
           );
           })}
-        </div>
-        <Moment fromNow className="date">{d1}</Moment>
+        </Comments>
+        <PostDate>
+          <Moment fromNow className="date">{d1}</Moment>
+        </PostDate>
         <form onSubmit={this.addCommentHandler}>
-          <input type="text" placeholder="Add a comment..."  className="commentAdd" onChange={this.setCommentText} value={this.state.addCommentText}/>
+          <CommentInput type="text" placeholder="Add a comment..." onChange={this.setCommentText} value={this.state.addCommentText}/>
           <input type="submit" hidden />
         </form>
       </div>

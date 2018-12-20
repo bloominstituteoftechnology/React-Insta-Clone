@@ -3,8 +3,6 @@ import Post from './Post';
 import PropTypes from 'prop-types';
 import { Container } from '../styles/PostContainerStyles'
 
-import './PostContainer.css';
-
 const PostContainer = props => {
   return (
     <Container>{ props.users.map(user => <Post key={user.timestamp} user={user} />) }</Container>

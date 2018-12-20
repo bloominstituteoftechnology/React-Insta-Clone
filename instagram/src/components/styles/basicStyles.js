@@ -38,3 +38,15 @@ export const Form = styled.form`
   font-size: 2rem;
 `
 
+export const UserName = styled.div`
+  margin-left: 0.7%;
+  font-size: 1.4rem;
+  ${props => (props.bold ? `font-weight: bold;` : null)}
+`
+
+export const Icon = styled.div`
+  cursor: pointer;
+  margin-left: 2%;
+  align-self: baseline;
+`
+

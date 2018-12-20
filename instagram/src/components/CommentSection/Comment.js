@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CommentBlock, CommentUserName, CommentText } from '../styles/CommentSectionStyles';
 
 const Comment = props => {
   return (
-    <div className="comment">
-      <div className="username">{props.comment.username}</div>
-      <p className="text">{props.comment.text}</p>
-    </div>
+    <CommentBlock>
+      <CommentUserName bold>{props.comment.username}</CommentUserName>
+      <CommentText>{props.comment.text}</CommentText>
+    </CommentBlock>
   );
 }
 

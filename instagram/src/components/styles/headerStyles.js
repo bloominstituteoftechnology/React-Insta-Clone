@@ -19,6 +19,7 @@ export const Logo = styled.div`
   border-right: 2px solid lightgray;
   font-size: 3rem;
   padding-right: 10%;
+  padding-left: 5%;
   color: black;
   @media (max-width: 800px) {
     font-size: 2.2rem;
@@ -46,6 +47,7 @@ export const SearchInput = styled(InputBox)`
 
 export const IconGroup = styled(FlexDiv)`
   width: 30%;
+  padding-right: 2%;
   @media (max-width: 600px) {
     width: 50%;
   }

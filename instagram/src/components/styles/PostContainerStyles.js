@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FlexDiv } from './basicStyles';
+import { FlexDiv, UserName, Icon } from './basicStyles';
 
 export const Container = styled.div`
   max-width: 800px;
@@ -18,7 +18,7 @@ export const PostBody = styled.div`
 export const PostName = styled(FlexDiv)`
   align-items: baseline;
   justify-content: start;
-  padding-left: 10px;
+  padding-left: 2%;
 `
 
 export const PostThumbnail = styled.img`
@@ -26,10 +26,8 @@ export const PostThumbnail = styled.img`
   width: 4.5%;
 `
 
-export const PostUserName = styled.div`
+export const PostUserName = styled(UserName)`
   align-self: center;
-  margin-left: 0.7%;
-  font-size: 1.4rem;
   font-weight: bold;
 `
 
@@ -38,14 +36,12 @@ export const PostImg = styled.img`
   margin: 10px 0;
 `
 
-export const PostIcon = styled.div`
+export const PostIcon = styled(Icon)`
   display: inline-block;
-  cursor: pointer;
 `
 
 export const PostLikes = styled.div`
   margin-left: 15px;
   margin-top: 5px;
   font-size: 1.4rem;
-  font-weight: bold;
 `
