@@ -1,7 +1,6 @@
 import React from 'react';
-import { form } from 'reactstrap';
-
-import './login.css';
+import { InputLabel, InputBox, Button } from '../styles/basicStyles';
+import { LoginForm } from '../styles/loginStyles'; 
 
 class Login extends React.Component {
   constructor() {
@@ -26,17 +25,17 @@ class Login extends React.Component {
 
   render() {
     return (
-      <form  onSubmit = {this.loginUser} className="login">
-        <div className="form-group">
-          <label htmlFor="username">Username</label>
-          <input type="text" placeholder="Username" onChange={this.setUsername} value={this.state.username} /> 
+      <LoginForm  onSubmit = {this.loginUser}>
+        <div>
+          <InputLabel htmlFor="username">Username</InputLabel>
+          <InputBox name="username" type="text" placeholder="Username" onChange={this.setUsername} value={this.state.username} /> 
         </div>
-        <div className="form-group">
-          <label htmlFor="exampleInputPassword1">Password</label>
-          <input type="password" placeholder="Password" onChange={this.setPassword} value={this.state.password}/>
+        <div>
+          <InputLabel htmlFor="inputPassword">Password</InputLabel>
+          <InputBox name="inputPassword" type="password" placeholder="Password" onChange={this.setPassword} value={this.state.password}/>
         </div>
-        <button type="submit" className="btn btn-primary">Login</button>
-      </form>
+        <Button type="submit" color="primary">Login</Button>
+      </LoginForm>
     )
   }
 

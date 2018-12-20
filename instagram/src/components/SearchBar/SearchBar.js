@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FlexDiv, Button } from '../styles/basic';
-import { Container, Header, Logo, AppName, SearchInput, IconGroup, IconLink } from '../styles/Header';
+import { FlexDiv, Button } from '../styles/basicStyles';
+import { Container, Header, Logo, AppName, SearchInput, IconGroup, IconLink } from '../styles/headerStyles';
 
 import Fuse from 'fuse.js';
 

@@ -13,6 +13,8 @@ export const InputBox = styled.input`
   :focus {
     outline: none;
   }
+  border-radius: 5px;
+  margin-bottom: 10px;
 `
 
 export const Button = styled.button`
@@ -22,4 +24,17 @@ export const Button = styled.button`
   :focus {
     outline: none;
   }
+  border-radius: 5px;
+  ${props => (props.color === "primary" ? `background-color: #007bff; border-color: #007bff; color: #fff;` : null)}
 `
+
+export const InputLabel = styled.label`
+  font-size: 1.4rem;
+  font-weight: bold;
+`
+
+export const Form = styled.form`
+  padding: 20px;
+  font-size: 2rem;
+`
+

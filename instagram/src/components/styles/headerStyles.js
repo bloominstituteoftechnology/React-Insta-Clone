@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FlexDiv, InputBox } from './basic';
+import { FlexDiv, InputBox } from './basicStyles';
 
 export const Container = styled.div`
   border-bottom: 1px solid lightgray;
