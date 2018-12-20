@@ -1,48 +1,51 @@
-.postContainer {
+import styled from "styled-components";
+import { FlexDiv } from './basicStyles';
+
+export const Container = styled.div`
   max-width: 800px;
   margin: 0 auto;
   width: 100%;
   margin-top: 100px;
-}
+`
 
-.post {
+export const PostBody = styled.div`
   border: 1px solid lightgray;
   padding: 15px 0;
   margin: 40px 0;
   border-radius: 5px;
-}
+`
 
-.post .name {
-  display: flex;
+export const PostName = styled(FlexDiv)`
   align-items: baseline;
+  justify-content: start;
   padding-left: 10px;
-}
-.post .name .thumbnail {
+`
+
+export const PostThumbnail = styled.img`
   border-radius: 50%;
   width: 4.5%;
-}
+`
 
-.post .name .username {
+export const PostUserName = styled.div`
   align-self: center;
   margin-left: 0.7%;
   font-size: 1.4rem;
   font-weight: bold;
-}
+`
 
-.post .postImg {
+export const PostImg = styled.img`
   width: 100%;
   margin: 10px 0;
-}
+`
 
-.post .postIcon {
-  margin-left: 15px;
+export const PostIcon = styled.div`
+  display: inline-block;
   cursor: pointer;
-}
+`
 
-.post .likes {
+export const PostLikes = styled.div`
   margin-left: 15px;
   margin-top: 5px;
   font-size: 1.4rem;
   font-weight: bold;
-}
-
+`

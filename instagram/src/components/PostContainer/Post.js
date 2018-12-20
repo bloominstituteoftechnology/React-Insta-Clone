@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
+import { PostBody, PostName, PostThumbnail, PostUserName, PostImg, PostIcon, PostLikes } from '../styles/PostContainerStyles';
 
 class Post extends React.Component {
   constructor(props) {
@@ -54,27 +55,31 @@ class Post extends React.Component {
 
   render() {
     return (
-      <div className="post">
-        <div className="name">
-          <img className="thumbnail" src={this.props.user.thumbnailUrl} alt="Thumbnail" />
-          <div className="username">{this.props.user.username}</div>
-        </div>
-        <img src={this.props.user.imageUrl} alt="post" className="postImg"/>
-        <FontAwesomeIcon
-          icon={['fas', 'heart']}
-          size="3x"
-          className="postIcon"
-          onClick={this.addLikeHandler}
-          color= {this.state.heartColor}
-        />
-        <FontAwesomeIcon
-          icon={['fas', 'comment']}
-          size="3x"
-          className="postIcon"
-        />
-        <div className="likes">{this.state.likes} likes</div>
+      <PostBody>
+        <PostName>
+          <PostThumbnail src={this.props.user.thumbnailUrl} alt="Thumbnail" />
+          <PostUserName>{this.props.user.username}</PostUserName>
+        </PostName>
+        <PostImg src={this.props.user.imageUrl} alt="post" />
+        <PostIcon>
+          <FontAwesomeIcon
+            icon={['fas', 'heart']}
+            size="3x"
+            className="postIcon"
+            onClick={this.addLikeHandler}
+            color= {this.state.heartColor}
+          />
+        </PostIcon>
+        <PostIcon>
+          <FontAwesomeIcon
+            icon={['fas', 'comment']}
+            size="3x"
+            className="postIcon"
+          />
+        </PostIcon>
+        <PostLikes>{this.state.likes} likes</PostLikes>
         <CommentSection comments={this.props.user.comments} timestamp={this.props.user.timestamp}/>
-      </div>
+      </PostBody>
     );
   }
 }
