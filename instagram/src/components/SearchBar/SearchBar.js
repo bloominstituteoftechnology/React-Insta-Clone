@@ -1,32 +1,17 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink } from 'reactstrap';
-import Fuse from 'fuse.js';
+import { FlexDiv, Button } from '../styles/basic';
+import { Container, Header, Logo, AppName, SearchInput, IconGroup, IconLink } from '../styles/Header';
 
-import './SearchBar.css';
+import Fuse from 'fuse.js';
 
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
 
-    this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false,
       searchInput: ""
     };
-  }
-
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
   }
 
   setSearchInput = (event) => {
@@ -48,62 +33,57 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="SearchBar">
-        <Navbar expand="md">
-          <NavbarBrand href="/">
-            <div className="NavLeft">
-              <FontAwesomeIcon
-                icon={['fab', 'instagram']}
-                size="sm"
-                className="icon"
-              />
-              <div className="brand">Instagram</div>
-            </div>
-          </NavbarBrand>
+      <Container fixed>
+        <Header>
+          <FlexDiv>
+            <Logo>
+              <a href="/">
+                <FontAwesomeIcon
+                  icon={['fab', 'instagram']}
+                  size="sm"
+                />
+              </a>
+            </Logo>
+            <AppName>
+              <a href="/">Instagram</a>
+            </AppName>
+          </FlexDiv>
           <form onSubmit={this.searchUsername}>
-            <input type="text" className="searchInput" placeholder="Search" onChange={this.setSearchInput} value={this.state.searchInput} />                
+            <SearchInput type="text" placeholder="Search" onChange={this.setSearchInput} value={this.state.searchInput} />
             <input type="submit" hidden />
           </form>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/">
-                  <FontAwesomeIcon
-                    icon={['fas', 'compass']}
+          <IconGroup>
+            <IconLink>
+              <a href="/">
+                <FontAwesomeIcon
+                  icon={['fas', 'compass']}
+                  size="lg"
+                />
+              </a>
+            </IconLink>
+            <IconLink>
+              <a href="/">
+                <FontAwesomeIcon
+                    icon={['fas', 'heart']}
                     size="lg"
-                    className="navIcon"
-                  />
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/">
-                  <FontAwesomeIcon
-                      icon={['fas', 'heart']}
-                      size="lg"
-                      className="navIcon"
-                  />
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/">
-                  <FontAwesomeIcon
-                    icon={['fas', 'user']}
-                    size="lg"
-                    className="navIcon"
-                  />
-                  <span className="user"> {this.props.user}</span>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/">
-                  <button onClick={() => localStorage.removeItem('currentUser')}>Logout</button>
-                </NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
+                />
+              </a>
+            </IconLink>
+            <IconLink>
+              <a href="/">
+                <FontAwesomeIcon
+                  icon={['fas', 'user']}
+                  size="lg"
+                />
+              </a>  
+            </IconLink>
+            <IconLink>
+              <span> {this.props.user}</span>
+            </IconLink>
+            <a href="/"><Button onClick={() => localStorage.removeItem('currentUser')}>Logout</Button></a>
+          </IconGroup>
+        </Header>
+      </Container>
     );
   }
 };
