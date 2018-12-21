@@ -1,13 +1,13 @@
 import React from 'react';
-import AddComment from './AddComment';
 
 const CommentSection = props => {
+    console.log(props)
     return (
         <div>
             <div>
-                <b>{props.comment.username} </b> {props.comment.text}
+                <b>{props.comment.username} </b>{props.comment.text}
             </div>
-                <AddComment />
+                
         </div>
     )
 }

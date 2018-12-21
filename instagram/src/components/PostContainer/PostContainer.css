@@ -2,15 +2,32 @@
     display: flex;
     width: 100%;
     margin: 0 auto;
-    border: 1px solid red;
+    padding-left: 25px;
 }
+
 .thumbnail{
     border-radius: 50%;
     width: 30px;
-    height: 40px;
+    height: 30px;
     margin: 10px 0;
 }
 
+
 .username{
     font-weight: bold;
+    padding-left: 15px;
+}
+
+.png-images{
+    display: flex;  
+    margin-left: 25px;
+}
+
+.insta-reply{
+    max-width: 22px;
+    margin-left: 15px;
+}
+
+.insta-heart2{
+    width: 25px;
 }
