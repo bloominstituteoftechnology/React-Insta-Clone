@@ -1,7 +1,6 @@
 import React from 'react'
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styled from 'styled-components'
 import PropTypes from 'prop-types';
 
 
