@@ -15,19 +15,24 @@ border-radius: 50px;
 height: 40px;
 width: 40px;
 margin-bottom: 10px ;
-
 `
+
 const PostHeader = (props) => {
-    return(
-       <>
-       <HeaderStyle>
-       <ImgStyle alt="" src={props.avatar} />
-       <UserName>
-           {props.username}
-       </UserName>
-       </HeaderStyle>
-       </>
-    )
+ return(
+  <>
+   <HeaderStyle>
+    <ImgStyle alt="" src={props.avatar} />
+    <UserName>
+     {props.username}
+    </UserName>
+   </HeaderStyle>
+  </>
+ )
+}
+
+PostHeader.propTypes = {
+ avatar: PropTypes.string.isRequired,
+ username: PropTypes.string.isRequired
 }
 
 
