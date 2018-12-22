@@ -3,6 +3,13 @@ import "./App.css";
 import dummyData from "./dummy-data";
 import PostsContainer from "./components/PostContainer/PostContainer";
 import SearchBar from "./components/SearchBar/SearchBar";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faHeart,
+  faComment
+} from "./../node_modules/@fortawesome/free-regular-svg-icons";
+
+library.add(faHeart, faComment);
 
 class App extends Component {
   constructor() {

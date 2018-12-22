@@ -1,4 +1,5 @@
 import React from "react";
+import { FontAwesomeIcon } from "./../../../node_modules/@fortawesome/react-fontawesome";
 
 const LikeSection = props => {
   return [
@@ -8,10 +9,10 @@ const LikeSection = props => {
       onClick={props.incrementLike}
     >
       <div className="like-section-wrapper">
-        <i className="far fa-heart" />
+        <FontAwesomeIcon icon={["far", "heart"]} />
       </div>
       <div className="like-section-wrapper">
-        <i className="far fa-comment" />
+        <FontAwesomeIcon icon={["far", "comment"]} />
       </div>
     </div>,
     <div className="like-section" key="likes-container">
