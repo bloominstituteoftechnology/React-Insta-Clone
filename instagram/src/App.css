@@ -9,3 +9,15 @@
   width: 100%;
   margin: 0 auto;
 }
+
+@media (max-width: 600px) {
+
+  .App {
+    max-width: 600px;
+  }
+
+  .content {
+    width: 98%;
+  }
+
+}
