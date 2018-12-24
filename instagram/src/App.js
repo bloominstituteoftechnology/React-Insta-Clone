@@ -4,6 +4,7 @@ import PostContainer from './components/PostContainer/PostContainer';
 
 import dummyData from './dummy-data';
 
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 class App extends Component {

@@ -6,7 +6,7 @@
   left: 50%;
   transform: translateX(-50%);
 
-  z-index: 9001;
+  z-index: 1040;
   background-color: white;
 
   display: flex;

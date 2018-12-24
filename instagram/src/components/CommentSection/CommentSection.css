@@ -61,3 +61,7 @@
 .post__comments__add {
   cursor: pointer;
 }
+
+div div .modal {
+  top: 30%;
+}

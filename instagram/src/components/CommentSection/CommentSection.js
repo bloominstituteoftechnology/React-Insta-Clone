@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+
 
 import moment from 'moment'
 
@@ -20,7 +22,10 @@ class CommentSection extends React.Component {
       likes: props.likes,
       clicked: false,
       comments: props.comments,
-    }
+      modal: false,
+    };
+
+    this.toggle = this.toggle.bind(this);
   }
 
   addComment = event => {
@@ -64,13 +69,19 @@ class CommentSection extends React.Component {
 
     for(let i = 0; i < newComments.length; i++) {
       if(newComments[i].username === user && newComments[i].text === currentComment) {
-        newComments.splice(i, 1)
+        newComments.splice(i, 1);
       }
     }
 
     localStorage.setItem(`${this.state.time}-comment`, JSON.stringify(newComments));
     this.setState({comments: newComments});
   }
+
+  toggle() {
+     this.setState({
+       modal: !this.state.modal
+     });
+   }
 
   componentDidMount() {
     if(!localStorage.getItem(`${this.state.time}-comment`)) {
@@ -123,7 +134,21 @@ class CommentSection extends React.Component {
 
         <div className="post__comments__add">
           <input type="text" placeholder="Add Comment..." onKeyPress={this.addComment}/>
-          <img src={comment} alt="insta-comment" />
+
+
+          <div className='modal-container'>
+            <Button color="danger" onClick={this.toggle}><img src={comment} alt="insta-comment" /></Button>
+            <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+              <ModalHeader toggle={this.toggle}>Report inappropriate</ModalHeader>
+              <ModalHeader>Unfollow</ModalHeader>
+              <ModalHeader>Go To Post</ModalHeader>
+              <ModalHeader>Embed</ModalHeader>
+              <ModalHeader>Share</ModalHeader>
+              <ModalHeader>Copy Link</ModalHeader>
+              <ModalHeader>Cancel</ModalHeader>
+            </Modal>
+          </div>
+
         </div>
       </div>
     );
