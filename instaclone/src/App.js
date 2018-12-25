@@ -14,18 +14,11 @@ class App extends Component {
     }
   }
 
-  componentDidMount(){
-  }
-  componentDidUpdate(){ 
-  }
-
   // updates local storage with the username and also sets the state of apps this.state.user
   login = (username, password) => { 
     myStorage.setObject('user', {username:username});
-    console.log(' username',myStorage.getObject('user'));
     this.setState({user:  myStorage.getObject('user').username})
   }
-
 
   //posts page passed into the higher order component
   /* which pattern is better?
@@ -37,7 +30,6 @@ class App extends Component {
     return (
       <div className="App">
        <this.AuthenticatedPostPage login={this.login} />
-       {/* <Login login={this.login} /> */}
       </div>
     );
   }
