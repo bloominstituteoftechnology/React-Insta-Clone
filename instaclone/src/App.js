@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 
+import Authenticate from './Authentication/Authenticate'
 import PostsPage from './Components/PostContainer/PostsPage';
 class App extends Component {
   constructor(){
@@ -19,11 +20,15 @@ class App extends Component {
   componentDidUpdate(){ 
   }
 
+  //posts page passed into the higher order component
+  /* which pattern is better?
+  composing the higher order component here or inside of posts page? */
+  AuthenticatedPostPage = Authenticate(PostsPage);
 
   render() {
     return (
       <div className="App">
-       <PostsPage />
+       <this.AuthenticatedPostPage />
       </div>
     );
   }
