@@ -3,6 +3,7 @@ import './Login.css';
 
 class Login extends Component {
     constructor(props) {
+        console.log(props)
         super(props);
         this.state = { 
             username:'',
@@ -14,13 +15,16 @@ class Login extends Component {
     changeHandler= event=>{
         this.setState({[event.target.name]: event.target.value})
     }
+
+    // handles the submit an event by passing props up to app, 
+    // and passing props up to the authenticate component
     submitHandler = (event) =>{
         event.preventDefault();
         this.props.login(this.state.username,this.state.password)
+        this.props.toggleLogin();
     }
 
     render() { 
-        console.log(this.state)
         return ( 
             <div className="login-container">
                 <form action="" onSubmit={this.submitHandler}>

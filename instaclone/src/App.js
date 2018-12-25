@@ -14,32 +14,30 @@ class App extends Component {
     }
   }
 
-  // when the component mounts  
-  //I want to get the dummy data from the local storage
   componentDidMount(){
   }
-
-  //only update local storage if the data has changed
   componentDidUpdate(){ 
   }
 
-  login(username, password){ 
+  // updates local storage with the username and also sets the state of apps this.state.user
+  login = (username, password) => { 
     myStorage.setObject('user', {username:username});
     console.log(' username',myStorage.getObject('user'));
+    this.setState({user:  myStorage.getObject('user').username})
   }
-
 
 
   //posts page passed into the higher order component
   /* which pattern is better?
   composing the higher order component here or inside of posts page? */
-  AuthenticatedPostPage = Authenticate(PostsPage);
+  AuthenticatedPostPage = Authenticate(PostsPage,Login);
 
   render() {
+    // localStorage.clear()
     return (
       <div className="App">
-       {/* <this.AuthenticatedPostPage /> */}
-       <Login login={this.login} />
+       <this.AuthenticatedPostPage login={this.login} />
+       {/* <Login login={this.login} /> */}
       </div>
     );
   }
