@@ -3,7 +3,6 @@ import myStorage from '../Storage'
 
 const Authenticate = (App,LoginPage) => class extends React.Component{
     constructor(props){
-        console.log(myStorage.getObject('user'))
         super(props);
         this.state= {
             loggedIn: false
@@ -24,9 +23,8 @@ const Authenticate = (App,LoginPage) => class extends React.Component{
     }
 
     render(){ 
-        
         return this.state.loggedIn?(
-            <App />
+            <App user={this.props.user}/>
         ):(
             <LoginPage login={this.props.login} toggleLogin={this.toggleLogin} />
         );

@@ -3,7 +3,6 @@ import './Login.css';
 
 class Login extends Component {
     constructor(props) {
-        console.log(props)
         super(props);
         this.state = { 
             username:'',

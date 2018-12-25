@@ -8,11 +8,12 @@ import PostContainer from '../PostContainer/PostContainer';
 
 
 class PostsPage extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state ={
       dummyData:[],
-      userSearch: ""
+      userSearch: "",
+      user: this.props.user
     }
   }
 
@@ -43,10 +44,9 @@ class PostsPage extends Component {
 
   //update app's state with new comment
   updateComments = (index,text) =>{
-    console.log(text)
     this.setState((prevState,props)=>{
       const posts = prevState.dummyData.slice();
-      posts[index].comments.push({username:"nole",text:text});
+      posts[index].comments.push({username:this.state.user.username,text:text});
       
       return {dummyData: posts};
     })

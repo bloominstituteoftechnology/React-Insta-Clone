@@ -10,8 +10,14 @@ class App extends Component {
   constructor(){
     super();
     this.state ={
-      user: ""
+      user: {}
     }
+  }
+
+  /*should the users information be on App or should it be on postsPage? */
+  componentDidMount(){
+    if(myStorage.getObject('user'))
+      this.setState({user:myStorage.getObject('user')})
   }
 
   // updates local storage with the username and also sets the state of apps this.state.user
@@ -29,7 +35,9 @@ class App extends Component {
     // localStorage.clear()
     return (
       <div className="App">
-       <this.AuthenticatedPostPage login={this.login} />
+       <this.AuthenticatedPostPage 
+       {...this.state}
+       login={this.login} />
       </div>
     );
   }
