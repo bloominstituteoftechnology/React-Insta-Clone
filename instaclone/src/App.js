@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 
 import './App.css';
+import myStorage from './Storage'
 
 import Authenticate from './Authentication/Authenticate'
 import PostsPage from './Components/PostContainer/PostsPage';
+import Login from './Components/Login/Login'
 class App extends Component {
   constructor(){
     super();
     this.state ={
+      user: ""
     }
   }
 
@@ -20,6 +23,13 @@ class App extends Component {
   componentDidUpdate(){ 
   }
 
+  login(username, password){ 
+    myStorage.setObject('user', {username:username});
+    console.log(' username',myStorage.getObject('user'));
+  }
+
+
+
   //posts page passed into the higher order component
   /* which pattern is better?
   composing the higher order component here or inside of posts page? */
@@ -28,7 +38,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       <this.AuthenticatedPostPage />
+       {/* <this.AuthenticatedPostPage /> */}
+       <Login login={this.login} />
       </div>
     );
   }
