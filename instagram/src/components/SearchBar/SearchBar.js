@@ -5,13 +5,35 @@ class SearchBar extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      users: this.props.users
+      users: this.props.users,
+      searched: ""
     }
+  }
+
+  handleNewSearch = (event) => {
+    this.setState({searched: event.target.value});
+  }
+
+  onSearch = (event) => {
+    event.preventDefault();
+    const searchedUser = this.state.searched;
+    const searchedUserResult = this.state.users.filter(user => user === searchedUser);
+    console.log(searchedUserResult)
+    if (searchedUserResult.length > 0) {
+      this.setState({users: searchedUserResult});
+    } else {
+      alert(`No user found`);
+    }
+    this.setState({
+      searched: ""
+    })
+    // console.log(searchedUserResult);
+    
   }
 
   render() {  
     // console.log(this.props.users)
-    console.log(this.state.users)
+    // console.log(this.state.users)
   
     return (
       <div className="header">
@@ -29,7 +51,9 @@ class SearchBar extends React.Component {
           </div>
   
           <div className="search-bar-input">
-            <input type="text" placeholder="Search" />
+            <form onSubmit={this.onSearch}>
+              <input type="text" placeholder="Search" onChange={this.handleNewSearch}/>
+            </form>
           </div>
           
           <div className="search-bar-icons">
