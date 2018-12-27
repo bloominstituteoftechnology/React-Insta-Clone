@@ -5,7 +5,10 @@
     height: 100px;
     align-items: center;
   }
-  nav img {
+  nav a {
+    display: flex;
+  }
+  nav a img {
     width: 40px;
     height: 40px;
     margin-right: 10px;
@@ -20,7 +23,7 @@
     border-left: 1px solid black;
     padding-left: 15px;
     font-family: 'Cookie', sans-serif;
-    font-size: 2.6rem;
+    font-size: 1.6rem;
     font-weight: lighter;
   }
   .navs {
@@ -37,21 +40,45 @@
   .navs .icons {
     padding: 0px 10px;
   }
+  .navs.icons .fa {
+    font-size: 25px;
+  }
   .icons:last-child {
     padding-right: 0px;
   }
-  button {
-    padding: 7px 52px;
+
+  .searchbar-wrapper form {
+    display: flex;
+
+  }
+  .searchbar-wrapper button {
     background-color: rgba(255, 255, 255, .4);
-    border-radius: 3px;
     font-size: 14px;
+    border-radius: 3px;
     display: flex;
     align-items: center;
+    border-left: none;
+    border: 1px solid black;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 0px;
+  }
+
+  .searchbar-wrapper input {
+    border: 1px solid black;
+    border-right: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding-left: 7px;
   }
   .fa {
     padding-right: 0px;
   }
+  .searchbar-wrapper .fa {
+    margin-right: 0px;
+  }
   button .fa {
-    font-size: 26px;
-    margin-left: 15px;
+    font-size: 16px;
+    padding: 7px 12px;
+    margin-right: 0px;
   }

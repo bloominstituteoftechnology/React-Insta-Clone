@@ -1,6 +1,7 @@
 import React from 'react';
 import Comment from './Comment';
 import CommentForm from './CommentForm';
+import moment from './../../../node_modules/moment';
 
 
 class CommentSection extends React.Component {
@@ -16,7 +17,7 @@ class CommentSection extends React.Component {
         
         const currentComments = this.state.comments.slice();
         const newComment = {
-            username: 'newUser',
+            username: 'anonamous',
             text: inputText
         }
         currentComments.push(newComment);
@@ -24,7 +25,6 @@ class CommentSection extends React.Component {
     }
 
     render() {
-        console.log(this.state.comments);
         return (
             <div>
                 <div>
@@ -39,6 +39,9 @@ class CommentSection extends React.Component {
                         )
                     })}
                 </div>
+                <div className="timestamp">
+                    {moment().startOf('hour').fromNow()}
+                </div>
     
                 <div className="add-comment">
                     <CommentForm createComment={this.addNewComment}/>
@@ -47,11 +50,4 @@ class CommentSection extends React.Component {
         )
     }
 }
-// const CommentSection = props => {
-
-    
-    // console.log(addNewComment);
-   
-// }
-
 export default CommentSection;

@@ -1,5 +1,6 @@
 .post-container {
     text-align: left;
+    margin-bottom: 20px;
 }
 
 .user-info {
@@ -8,6 +9,7 @@
     flex-flow: flex-start;
     align-items: center;
     height: 80px;
+    text-transform: lowercase;
 }
 .user-info img {
     width: 40px;

@@ -1,7 +1,17 @@
+.timestamp {
+    margin: 12px 0px 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: gainsboro;
+    font-weight: bold;
+}
 .comment-container {
     display: flex;
     flex-flow: row;
     padding: 3px 0px;
+}
+.add-comment {
+    border-top: 1px solid gainsboro;
 }
 .comment-container .username {
     font-weight: 600;
@@ -9,4 +19,22 @@
 }
 .comment-container .comment {
     font-weight: 500;
+}
+.comments form {
+    display: flex;
+    margin: 10px 0px;
+    justify-content: space-between;
+}
+.comments input {
+    padding: 15px 15px 5px 5px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+}
+.comments button {
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
 }

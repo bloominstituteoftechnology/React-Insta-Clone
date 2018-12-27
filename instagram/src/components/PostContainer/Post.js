@@ -1,7 +1,6 @@
 import React from "react";
 import CommentSection from './../CommentSection/CommentSection';
 import Likes from './Likes';
-import moment from './../../../node_modules/moment';
 import PropTypes from 'prop-types';
 import './Post.css'
 
@@ -35,12 +34,11 @@ class Post extends React.Component {
                         {this.state.likes} Likes
                     </div>
                 </div>
+                
                 <div className="comments">
                     <CommentSection comments={this.state.comments}/>
                 </div>    
-                <div className="timestamp">
-                    {moment().startOf('hour').fromNow()}
-                </div>
+                
             </div>
         )
     }
