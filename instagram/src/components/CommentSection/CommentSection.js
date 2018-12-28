@@ -56,17 +56,13 @@ class CommentSection extends React.Component {
           <Comment key={i} comment={c} />
         ))}
         </div>
-        
         <div className="timestamp">{this.props.timestamp}</div>
-
         <div className="comments-input">
           <CommentInput  handleNewComment={this.handleNewComment} newComment={this.newComment} onCommentAdd={this.onCommentAdd}/>
         </div>
-
       </div>
     )
   }
-  
 }
 
 CommentSection.propTypes = {

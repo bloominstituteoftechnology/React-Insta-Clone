@@ -10,9 +10,7 @@ class SearchBar extends React.Component {
   
     return (
       <div className="header">
-  
         <div className="header-bar">
-  
           <div className="search-logos">
             <div className="insta-logo">
               <i className="fab fa-instagram"></i>
@@ -22,13 +20,11 @@ class SearchBar extends React.Component {
               <img src="https://i.imgur.com/wOWyaBc.png" alt="Instagram Text Logo" />
             </div>
           </div>
-  
           <div className="search-bar-input">
             <form onSubmit={this.props.onSearch}>
-              <input type="text" placeholder="Search" onChange={this.props.handleNewSearch}/>
+              <input type="text" placeholder="Search" onChange={this.props.handleNewSearch} value={this.props.searched}/>
             </form>
           </div>
-          
           <div className="search-bar-icons">
             <div className="search-history search-icon">
             <i className="far fa-compass"></i>
@@ -40,12 +36,9 @@ class SearchBar extends React.Component {
               <i className="far fa-user"></i>
             </div>
           </div>
-          
         </div>
-        
       </div>
     )
   }
-  
 }
 export default SearchBar;

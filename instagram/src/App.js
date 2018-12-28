@@ -13,6 +13,7 @@ class App extends Component {
       searched: ""
     };
   }
+  // I removed componentDidMount here because it was causing problems when I would change state.
   // componentDidMount() {
   //   this.setState({data: dummyData});
   // }
@@ -27,27 +28,23 @@ class App extends Component {
     const users = this.state.data.slice();
     const searchedUserResult = users.filter(user => user.username === searchedUser);
 
-    console.log(users);
-    console.log(searchedUserResult);
-    console.log(this.state.searched);
-
-    // if (searchedUserResult.length > 0) {
-    //   this.setState({users: searchedUserResult}, () => console.log(this.state.users));
-    // } 
-
     if (searchedUserResult.length > 0) {
-      this.setState({data: searchedUserResult},
-        () => console.log(this.state.data)
+      this.setState(
+        {
+          data: searchedUserResult,
+          searched: ""
+        }
       )
-    } 
-    
+    } else {
+      alert ("No user by that name. Please try again.");
+      this.setState({data: dummyData})
+    }
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBar data={this.state.data} onSearch={this.onSearch} handleNewSearch={this.handleNewSearch} />
-        {/* <SearchBar users={this.state.data.map(user => { return user.username })}/> */}
+        <SearchBar data={this.state.data} onSearch={this.onSearch} handleNewSearch={this.handleNewSearch} searched={this.state.searched}/>
         <PostContainer data={this.state.data} users={this.state.users}/>
       </div>
     );
