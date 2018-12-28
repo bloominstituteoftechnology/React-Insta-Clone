@@ -5,6 +5,8 @@
     margin-bottom: 1rem;
     height: 30rem;
     color: red;
+    width: 50%;
+    justify-content: center;
     /* display: flex; */
     /* align-items: flex-end; */
 }
