@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
+import './Comment.css'
 
 class Comment extends Component {
     constructor(props){
@@ -14,10 +15,9 @@ class Comment extends Component {
     render(){
         console.log("Comment: ", this.state)
         return (
-            <div>
-               <p>username: {this.state.username}</p> 
-                <p>comment: {this.state.text}</p>
-                <input type="text" value="comment"/>
+            <div className='comment'>
+               <p className='username'>{this.state.username}</p> 
+                <p className='text-comment'>{this.state.text}</p>
             </div>
         )
     }
