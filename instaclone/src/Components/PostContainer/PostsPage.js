@@ -46,7 +46,7 @@ class PostsPage extends Component {
   updateComments = (index,text) =>{
     this.setState((prevState,props)=>{
       const posts = prevState.dummyData.slice();
-      posts[index].comments.push({username:this.state.user.username,text:text});
+      posts[index].comments.push({username:this.state.user,text:text});
       
       return {dummyData: posts};
     })
@@ -61,6 +61,7 @@ class PostsPage extends Component {
   }
 
   render() {
+    console.log(this.props)
     const re = new RegExp(this.state.userSearch,'i');
     return (
       <div className="App">
