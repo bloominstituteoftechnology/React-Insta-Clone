@@ -21,9 +21,7 @@ class App extends Component {
   /*should the users information be on App or should it be on postsPage? */
   componentDidMount(){
     
-  }
-
-  
+  }  
 
   render() {
     localStorage.clear()

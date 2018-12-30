@@ -1,41 +1,98 @@
 import React from 'react';
-import './SearchBar.css';
+// import './SearchBar.css';
 
 import logo_name from './imgs/instagram_logo.svg'
 import compass_icon  from './imgs/compass.svg'
 import heart_icon  from './imgs/heart.svg'
 import person_icon from './imgs/person.svg'
 
+import styled from 'styled-components'
+
+const Header = styled.header`
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem;
+`
+const BrandingContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`
+const Divider= styled.div`
+    border-left:1px solid  black;
+    width: 1px;
+    height: 30px;
+    margin: 0rem 1rem;
+`
+const InputWrapper= styled.div``
+
+const SearchInput = styled.input`
+    background-color:light-gray;
+    border: solid rgb(182, 182, 182);
+    border-width: 1px 1px;
+    border-radius:2px;
+
+    :placeholder{
+        text-align: center;
+    }
+
+    :placeholder-shown{
+        background: url('./imgs/search.svg')  no-repeat scroll 25px;
+    }
+
+`
+const IconWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+`
+
+const Icon =  styled.img`
+    max-width:25px;
+    max-height:25px;
+`
+const Logo =  styled(Icon)`
+    max-height: 30px;
+    max-width:30px;
+    height: 100%;
+    width: 100%;
+`
+const LogoName = styled.img`
+    max-width: 100px;
+    height:auto;
+    padding-top:10px;
+`
+
+
+
 
 const SearchBar = props => {
     return ( 
-        <div className="nav-bar-container">
-            <div className="branding-container">
-                <img src={process.env.PUBLIC_URL + `/imgs/logo.jpg`} alt="logo" className="logo"/>
-                <div className="divider"></div>
-                <img src={logo_name} alt="meh" className="logo-name"/>
-            </div>
+        <Header>
+            <BrandingContainer>
+                <Logo src={process.env.PUBLIC_URL + `/imgs/logo.jpg`} alt="logo"/>
+                <Divider></Divider>
+                <LogoName src={logo_name} alt="meh" className="logo-name"/>
+            </BrandingContainer>
             
-
-            <div className="input-container">
-                <input type="text" 
-                    className="search-input" 
+            <InputWrapper>
+                <SearchInput type="text" 
                     placeholder="Search" 
                     name="userSearch"
                     onChange={props.changeHandler}
                     value={props.userSearch} 
                 />
-                {/* <img src={search_icon} alt="" className="search-icon"/> */}
-            </div>
+            </InputWrapper>
             
-
-            <div className="icon-container">
-                <img src={compass_icon} alt="" className="icon compass-icon"/>
-                <img src={heart_icon} alt="" className="icon heart-icon"/>
-                <img src={person_icon} alt="" className="icon person-icon"/>
-            </div>
+            <IconWrapper>
+                <Icon src={compass_icon} alt="" />
+                <Icon src={heart_icon} alt="" />
+                <Icon src={person_icon} alt="" />
+            </IconWrapper>
                
-        </div> 
+        </Header> 
     );
 }
  
