@@ -3,7 +3,7 @@ import './PostContainer.css';
 
 const Likes = props =>{
     return (
-        <div>
+        <div className="social-icons">
             <div className="post-icons">
                 <div onClick={props.incrementLikes}className="heart"></div>
                 <div className="chat"></div>

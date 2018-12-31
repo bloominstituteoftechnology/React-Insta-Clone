@@ -48,7 +48,13 @@
     width:45%;
     margin-bottom:50px;
 }
-.post-content > .post-icons{
+.social-icons{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.social-icons > .post-icons{
     display: flex;
     justify-content: flex-start;
     width:100%;
@@ -68,9 +74,10 @@
     width:100%;
 }
 .post-icons > .heart{
-    background: url('../../images/heart.png') no-repeat;
-    width:30px;
-    height: 30px;
+    background: url('../../images/like.svg') no-repeat;
+    width:25px;
+    height: 25px;
+    margin-right:10px;
 }
 
 .post-icons > .chat{

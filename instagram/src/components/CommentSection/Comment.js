@@ -3,11 +3,11 @@ import './CommentSection.css';
 
 const Comment = props => {
     return(
-        <div>
+        <div className="user-comment">
             <div className="username_text">
                 <ul>
                     <li>
-                        {props.comment.username} <span>{props.comment.text}</span>
+                        <span className="username">{props.comment.username}</span> <span className="comment-text">{props.comment.text}</span>
                     </li>
                 </ul>
             </div>

@@ -18,7 +18,7 @@ const SearchBar = props =>{
                 </div>
                 <div>
                     <form>
-                        <input className="search-logo" value={props.inputText} onChange={props.handle} placeholder="Search" />
+                        <input className="search-logo" value={props.inputText} onKeyDown={props.searchPosts} placeholder="Search" />
                     </form>
                 </div>
                 <div className="icons">
