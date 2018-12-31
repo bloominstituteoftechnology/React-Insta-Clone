@@ -1,0 +1,21 @@
+.comments-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.comments-wrapper > .comments {
+    display: flex;
+    width: 100%;
+}
+.timestamp{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom:15px;
+    padding-left: 10px;
+}
+.hr{
+    border-bottom: 1px solid #dadada;
+    width: 100%;
+    margin-bottom: 20px;
+}
