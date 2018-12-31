@@ -3,21 +3,40 @@ import CommentSection from "../CommentSection/CommentSection"
 import PropTypes  from "prop-types";
 import "./PostContainer.css"
 
-const PostContainer =props=>{
+class PostContainer extends React.Component{
+       constructor(props){
+         super(props);
+         this.state={
+             likes:props.data.likes
+         }
 
-    return (
-        <div >
-            <section className="first">
-                <img src={props.data.thumbnailUrl}/>
-                <p><strong>{props.data.username}</strong> </p>
-            </section>
-            <img src={props.data.imageUrl} />
-            <p><strong>{props.data.likes} likes</strong></p>
-            <CommentSection comments={props.data.comments}/>
+         this.likeHandler=this.likeHandler.bind(this);
+       }
 
-       </div>
-     );
+      likeHandler=(event)=>{
+        console.log("Liked");
+        const newLikes=this.state.likes+1;
+        this.setState({likes:newLikes});
+      }
+      render() {
+          return (
+              <div>
+                  <section className="first">
+                      <img src={this.props.data.thumbnailUrl}/>
+                      <p><strong>{this.props.data.username}</strong></p>
+                  </section>
+                  <img src={this.props.data.imageUrl}/>
+                  <p><strong>{this.state.likes} likes</strong></p>
+                  <section className="sprites">
+                      <img className="sprite" src="../../assets/1__NI11fxAiWzMjRbJeuj5Yw.png"
+                           onClick={this.likeHandler}/>
+                      <img className="sprite2" src="../../assets/chat-image.png"/>
+                  </section>
+                  <CommentSection comments={this.props.data.comments}/>
 
+              </div>
+          );
+      }
 }
 
 PostContainer.propTypes={

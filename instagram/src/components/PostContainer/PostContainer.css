@@ -16,9 +16,22 @@
 
 
 }
+.sprites{
+
+    display:flex;
+}
 
 .sprite {
     background: url('../../assets/1__NI11fxAiWzMjRbJeuj5Yw.png') no-repeat -362px -216px;
     width: 52px;
     height: 44px;
+    margin-right: 20px;
 }
+
+.sprite2{
+
+    background: url('../../assets/chat-image.png') no-repeat 0 0;
+    width: 126px;
+    height: 126px;
+}
+
