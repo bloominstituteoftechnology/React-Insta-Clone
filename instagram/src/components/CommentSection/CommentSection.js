@@ -57,7 +57,7 @@ class CommentSection extends React.Component {
     return (
       <div className={"comments-container"}>
         <div className={"icon-container"}>
-          <FiHeart className={"icon"} onClick={this.addLikeHandler} />
+          <FiHeart className={"icon like"} onClick={this.addLikeHandler} />
           <FiMessageCircle className={"icon"} />
           <FiSend className={"icon"} />
         </div>

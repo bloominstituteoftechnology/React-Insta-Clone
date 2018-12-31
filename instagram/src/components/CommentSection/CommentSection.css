@@ -30,6 +30,10 @@
   font-size: 1.4rem;
 }
 
+.like {
+  cursor: pointer;
+}
+
 time {
   font-size: 1.2rem;
   text-transform: uppercase;
