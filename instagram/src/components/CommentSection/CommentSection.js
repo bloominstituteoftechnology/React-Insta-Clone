@@ -46,11 +46,11 @@ class CommentSection extends React.Component {
 
   /* Add Likes */
   addLikeHandler = event => {
-    let likeAdder = this.state.likes;
-    likeAdder++;
-    this.setState({
-      likes: likeAdder
-    });
+    this.setState((prevState, props) => {
+      return {
+        likes: prevState.likes + 1
+      }
+    })
   };
 
   render() {
