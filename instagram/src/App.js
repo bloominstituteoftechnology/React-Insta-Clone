@@ -9,9 +9,17 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      data: dummyData
+      // data: dummyData
+      data: [],
     }
   }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({data: dummyData})
+    }, 4000)
+  }
+
   render() {
     console.log(this.state.data)
     return (

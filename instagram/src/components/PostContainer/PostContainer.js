@@ -16,6 +16,7 @@ const PostContainer = props => {
     )
 }
 
+
 PostContainer.propTypes = {
     data: PropTypes.shape({
         username: PropTypes.string,
