@@ -1,22 +1,16 @@
 import React from 'react';
-import UserPosts from './UserTitle'
+import UserPosts from './UserPost'
 
 
 const PostContainer = props => {
-	console.log(props);
+	// console.log(props);
 
 	return (
 		<div>
 			<div className="user_title">
 				{props.User.map( user => {
 						return (
-							<UserPosts key={user.timestamp}
-							userPic = {user.thumbnailUrl}
-							UserName = {user.username}
-							UserPost = {user.imageUrl}
-							UserLikes = {user.likes}
-							UserComments = {user.comments}
-							/>
+							<UserPosts key={user.imageUrl} user ={user}/>
 						)
 					})
 				}
