@@ -28,7 +28,33 @@ class CommentSection extends Component {
         this.state = {
             comments: props.comments,
             data: props.data,
+            inputValue: "",
         }
+    }
+
+    addNewComment = event => {
+        console.log("comments before: ", this.state.comments)
+        event.preventDefault();
+        if(this.state.inputValue !== ''){
+            if (event.key === 'Enter') {
+            //   this.setState(this.state.comments.push(this.inputValue))
+                let newArray = [...this.state.comments]
+                newArray.push({
+                    username: "kalicha",
+                    text: this.state.inputValue,
+                })
+                this.setState({
+                    comments: newArray,
+                })
+            }
+          }
+          console.log("comments after: ", this.state.comments)
+    }
+
+    changeComment = event => {
+        // console.log(event.target.value);
+        this.setState({inputValue: event.target.value});
+        console.log(this.state.inputValue)
     }
 
     render(){
@@ -43,8 +69,20 @@ class CommentSection extends Component {
                              text={comment.text}
                              key={comment.text}
                     />
-                ))}
-                <input type="text" value="Add a comment..." className='input'/>
+                    )
+                        )
+                }
+                <form onSubmit={this.addNewComment}>
+                    <input 
+                    type="text" 
+                    placeholder="Add a comment..." 
+                    className='input'   
+                    onChange={this.changeComment}
+                    value={this.state.inputValue}
+                    // onChange={this.addNewComment}
+                    // index={(this.state.comments).length}
+                    />
+                </form>
             </div>
         )
     }
