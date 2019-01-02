@@ -32,7 +32,7 @@ class CommentSection extends React.Component {
 
     handleCommentSubmit = e => {
         e.preventDefault();
-        const newComment = {text: this.state.comment, username: '@landoooooo'};
+        const newComment = {text: this.state.comment, username: `@${localStorage.getItem('username')}`};
         const comments = this.state.comments.slice();
         comments.push(newComment);
         this.setState({comments, comment: ''});
@@ -49,7 +49,7 @@ class CommentSection extends React.Component {
     render(){
         return(
             <div className="comments-wrapper">
-                {this.state.comments.map((c,i) => <div className="comments"> <Comment key={i} comment={c} /> </div> )}
+                {this.state.comments.map((c,i) => <div className="comments"> <Comment key={c.text} comment={c} /> </div> )}
                 <div className="timestamp">
                     <span>ago</span>
                 </div>
