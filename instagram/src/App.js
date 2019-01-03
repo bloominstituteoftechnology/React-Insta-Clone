@@ -3,6 +3,7 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import dummyData  from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
   constructor(){
@@ -42,12 +43,19 @@ class App extends Component {
   }
 
   render() {
+    // return (
+    //   <div className="App">
+    //     <SearchBar data={this.state.data} onSearch={this.onSearch} handleNewSearch={this.handleNewSearch} searched={this.state.searched}/>
+    //     <PostContainer data={this.state.data} users={this.state.users}/>
+    //   </div>
+    // );
     return (
       <div className="App">
-        <SearchBar data={this.state.data} onSearch={this.onSearch} handleNewSearch={this.handleNewSearch} searched={this.state.searched}/>
-        <PostContainer data={this.state.data} users={this.state.users}/>
+        <PostsPage data={this.state.data} users={this.state.users} searched={this.state.searched} onSearch={this.onSearch} handleNewSearch={this.handleNewSearch}/>
       </div>
-    );
+      
+    )
+    
   }
 }
 

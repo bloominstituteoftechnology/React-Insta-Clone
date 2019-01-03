@@ -1,18 +1,15 @@
 import React from 'react';
+import SearchBar from '../SearchBar/SearchBar';
+import PostContainer from '../PostContainer/PostContainer';
 
-const postsPage = WrappedComponent => {
-  return class extends React.Component {
-    render() {
-      return {(
-        <div className="App">
-          <SearchBar data={this.state.data} onSearch={this.onSearch} handleNewSearch={this.handleNewSearch} searched={this.state.searched}/>
-          <PostContainer data={this.state.data} users={this.state.users}/>
-        </div>
-        )} 
-    }
-  }
-  
+const postsPage = (props) => {
+  return (
+    <>
+      <SearchBar data={props.data} onSearch={props.onSearch} handleNewSearch={props.handleNewSearch} searched={props.searched}/>
+      <PostContainer data={props.data} users={props.users}/>
+    </>
+  )
 }
 
 
-export default PostsPage;
+export default postsPage;
