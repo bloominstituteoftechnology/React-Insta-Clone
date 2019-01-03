@@ -2,7 +2,7 @@ import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from '../PostContainer/PostContainer';
 
-const postsPage = (props) => {
+const PostsPage = (props) => {
   return (
     <>
       <SearchBar data={props.data} onSearch={props.onSearch} handleNewSearch={props.handleNewSearch} searched={props.searched}/>
@@ -12,4 +12,4 @@ const postsPage = (props) => {
 }
 
 
-export default postsPage;
+export default PostsPage;
