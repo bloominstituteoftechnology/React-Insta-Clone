@@ -4,101 +4,69 @@ import PropTypes from "prop-types";
 import Comment from './Comment'
 import './CommentSection.css'
 
-//  Initial functional component used
-// const CommentSection = props => {
-//     // console.log("CommentSection: ", props.comments)
-//     return (
-//         <div className='comment-section'> 
-//             <img src={props.data.imageUrl} alt='post image' />
-//             <p className='likes'>{props.data.likes} likes</p>
-//             {props.comments.map(comment => (
-//                 <Comment username={comment.username}
-//                          text={comment.text}
-//                          key={comment.text}
-//                 />
-//             ))}
-//             <input type="text" value="Add a comment..." className='input'/>
-//         </div>
-//     )
-// }
-
 class CommentSection extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            comments: props.comments,
-            data: props.data,
-            inputValue: "",
-        }
+  constructor(props) {
+    super(props)
+    this.state = {
+      comments: props.comments,
+      data: props.data,
+      comment: "",
     }
+  }
 
-    addNewComment = event => {
-        console.log("comments before: ", this.state.comments)
-        event.preventDefault();
-        if(this.state.inputValue !== ''){
-            if (event.key === 'Enter') {
-            //   this.setState(this.state.comments.push(this.inputValue))
-                let newArray = [...this.state.comments]
-                newArray.push({
-                    username: "kalicha",
-                    text: this.state.inputValue,
-                })
-                this.setState({
-                    comments: newArray,
-                })
-            }
-          }
-          console.log("comments after: ", this.state.comments)
+  changeComment = event => {
+    // console.log('event.key', event.keyCode)
+    if (event.key === 'Enter' && this.state.comment !== '') {
+      // call add function
+      this.addNewComment(event)
+    } else {
+      console.log('Test')
+      this.setState({
+        [event.target.name]: event.target.value
+      })
     }
+  }
+  
+  addNewComment = (event) => {
+    event.preventDefault()
+    let newArray = [...this.state.comments]
+    newArray.push({
+      username: "kalicha",
+      text: this.state.comment,
+    })
+    this.setState({
+      comments: newArray,
+      comment: ''
+    })
+  }
 
-    changeComment = event => {
-        // console.log(event.target.value);
-        this.setState({inputValue: event.target.value});
-        console.log(this.state.inputValue)
-    }
-
-    render(){
-        console.log(this.state.data)
-        console.log(this.state.comments)
-        return (
-            <div className='comment-section'> 
-                <img src={this.state.data.imageUrl} alt='post image' />
-                <p className='likes'>{this.state.data.likes} likes</p>
-                {this.state.comments.map(comment => (
-                    <Comment username={comment.username}
-                             text={comment.text}
-                             key={comment.text}
-                    />
-                    )
-                        )
-                }
-                <form onSubmit={this.addNewComment}>
-                    <input 
-                    type="text" 
-                    placeholder="Add a comment..." 
-                    className='input'   
-                    onChange={this.changeComment}
-                    value={this.state.inputValue}
-                    // onChange={this.addNewComment}
-                    // index={(this.state.comments).length}
-                    />
-                </form>
-            </div>
-        )
-    }
-
+  render(){
+    // console.log('test comments', this.state.comments)
+    return (
+      <div className='comment-section'> 
+        <img src={this.state.data.imageUrl} alt='post image' />
+        <p className='likes'>{this.state.data.likes} likes</p>
+        {this.state.comments.map((comment, index) => (
+          <Comment username={comment.username}
+            text={comment.text}
+            key={index}
+          />
+        ))}
+        <form>
+          <input
+            name="comment"
+            type="text" 
+            placeholder="Add a comment..." 
+            className='input'   
+            onChange={this.changeComment}
+            onKeyDown={this.changeComment}
+            value={this.state.comment}
+          />
+        </form>
+      </div>
+    )
+  }
 }
-
-/*
-
-Lets divide up the data that we've been working with this 
-far by separating the comments array onto a new component's
-state. Pass down the comments through each post to the 
-CommentSection component. Be sure that you set the 
-incoming comments props data on the state of the 
-CommentSection component.
-
-*/
 
 CommentSection.propTypes = {
     comments: PropTypes.arrayOf(PropTypes.shape({
