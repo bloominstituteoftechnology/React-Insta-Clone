@@ -12,11 +12,14 @@ const SearchBar = props => {
 	  		<img className ="logo" src= {logo} alt="Logo" />,
 	  		<h4> | </h4>
 	  		<img className ="title" src = {title} alt ="Title"/>
-	  		<form className ="search">
-	  			<input type="text" placeholder="Search"/>
-	  		</form>
+
+	  		<input type="text" placeholder="Search" 
+	  			onKeyDown = {props.searchPosts}/>
+
 	  		<img className ="nav" src = {nav} alt ="Nav"/>
+
 	  		<img className ="heart" src = {heart} alt ="Heart"/>
+
 	  		<img className ="empty_user" src = {empty_user} alt ="Empty_user"/>
 
   		</div>
