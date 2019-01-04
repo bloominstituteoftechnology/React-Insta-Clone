@@ -25,3 +25,14 @@
     border: none;
     border-top: 1px solid lightgray;
 }
+
+.heart-icon{
+    width: 10%;
+    height: auto;
+    margin-top: 2%;
+    margin-left: 1rem;
+}
+
+.heart-icon:hover{
+    cursor: pointer;
+}

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import Comment from './Comment'
 import './CommentSection.css'
+import heart from './ig-heart-icon-unliked.png'
 
 class CommentSection extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class CommentSection extends Component {
       // call add function
       this.addNewComment(event)
     } else {
-      console.log('Test')
+      // console.log('Test')
       this.setState({
         [event.target.name]: event.target.value
       })
@@ -40,11 +41,19 @@ class CommentSection extends Component {
     })
   }
 
+  clickedImg = (event) =>{
+    //change img
+    // add one like
+  }
+
   render(){
     // console.log('test comments', this.state.comments)
     return (
       <div className='comment-section'> 
         <img src={this.state.data.imageUrl} alt='post image' />
+        <div className="heart-icon">
+          <img src={heart} alt="IG heart" onClick="clickedImg"/>
+        </div>
         <p className='likes'>{this.state.data.likes} likes</p>
         {this.state.comments.map((comment, index) => (
           <Comment username={comment.username}
