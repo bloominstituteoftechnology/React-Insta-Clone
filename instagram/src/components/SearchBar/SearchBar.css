@@ -2,10 +2,9 @@
   margin: 0 auto;
   max-width: 800px;
   background-color: white;
-  border-bottom: 1px solid black;
+  border: 1px solid black;
   display: flex;
   justify-content: center;
-  position: fixed;
   top: 0;
 }
 .logoSearch{
