@@ -1,0 +1,21 @@
+.searchContainer {
+  margin: 0 auto;
+  max-width: 800px;
+  background-color: white;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+}
+.logoSearch{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 77px;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
