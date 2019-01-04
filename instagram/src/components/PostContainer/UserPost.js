@@ -52,8 +52,6 @@ class UserPost extends React.Component {
 						<CommentSection 
 							key={this.props.imageUrl} 
 							comments = {this.props.user.comments}/>
-
-						<input type="text" placeholder="Write a comment"/>
 					</div>
 				</div>
 		)
