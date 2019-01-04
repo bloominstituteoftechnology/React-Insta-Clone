@@ -15,11 +15,11 @@ const SearchBar = props => {
             <div className="instagramSearchBar">
             </div>
             <input placeholder="Search"
+                type="text"
                 className="searchInput"
                 onKeyUp={props.searchFilteredPosts}
             />
             <div className="instagramSearchAction">
-            {/* {searchFilter} */}
             </div>
         </section>
     </div>

@@ -45,16 +45,17 @@ class App extends Component {
   //   this.onChange(e.target.value)
   // }
 
-  searchFilter = p => {
-    const filteredPostResults = this.state.userPosts;
-    console.log("filtered posts: ", filteredPostResults)
-     filteredPostResults.filter((post) => {
+  searchFilter = event => {
+    let filteredPostResults = this.state.userPosts;
+    // console.log("filtered posts: ", filteredPostResults)
+    filteredPostResults = filteredPostResults.filter((post) => {
+      console.log("filtered posts: ", filteredPostResults)
       let userPostName = post.username.toLowerCase();
     // return post.username.toLowerCase().search(
     //   post.username.value.toLowerCase()) !== -1;
         // return userPostName.indexOf( 
         //   p.toLowerCase()) !== -1
-           if (userPostName.includes(p.target.value)){
+           if (userPostName.includes(event.target.value)){
       return post;
     }
     });
@@ -74,13 +75,6 @@ class App extends Component {
   //   }
   // });
   // this.setState({ filteredPosts: filteredPosts2 });
-  // }
-
-
-  // searchFilterBar = posts => {
-  //   const postResults = this.state.userPosts.filter(post => {
-  //     if (post.username)
-  //   })
   // }
 
   render() {
