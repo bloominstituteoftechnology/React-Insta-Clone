@@ -13,7 +13,7 @@ class PostContainer extends React.Component{
          this.likeHandler=this.likeHandler.bind(this);
        }
 
-      likeHandler=(event)=>{
+        likeHandler=(event)=>{
         console.log("Liked");
         const newLikes=this.state.likes+1;
         this.setState({likes:newLikes});
