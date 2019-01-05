@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Comment from './Comment'
 import './CommentSection.css'
 import heart from './ig-heart-icon-unliked.png'
+import redHeart from './ig-heart-icon-liked.jpeg'
 
 class CommentSection extends Component {
   constructor(props) {
@@ -20,7 +21,6 @@ class CommentSection extends Component {
   changeComment = event => {
     // console.log('event.key', event.keyCode)
     if (event.key === 'Enter' && this.state.comment !== '') {
-      // call add function
       this.addNewComment(event)
     } else {
       // console.log('Test')
@@ -43,31 +43,30 @@ class CommentSection extends Component {
     })
   }
 
-  clickedImg = (event) =>{
-    //change img
-    // add one like and on
-    console.log(this.state.likeStatus)
-    this.setState({likeStatus: !this.state.likeStatus})
-    let newLikes
+  clickedImg = () =>{
     if (this.state.likeStatus === false){
-      newLikes = this.state.likes + 1
-      this.setState({likes: newLikes})
+      console.log("Inside if")
+      this.setState({
+        likeStatus: true,
+        likes: this.state.likes + 1,
+      })
     } else {
-      newLikes = this.state.likes -1
-      this.setState({likes: newLikes})
+      this.setState(
+        {
+        likeStatus: false,
+        likes: this.state.likes - 1,
+      })
     }
-    
-    // console.log(newLikes)
-    
   }
 
   render(){
     // console.log('test comments', this.state.comments)
+    console.log(this.state.postLiked)
     return (
       <div className='comment-section'> 
         <img src={this.state.data.imageUrl} alt='post image' />
         <div className="heart-icon">
-          <img src={heart} alt="IG heart" onClick={this.clickedImg}/>
+          <img src={this.state.likeStatus ? redHeart: heart} alt="IG heart" onClick={this.clickedImg}/>
         </div>
         <p className='likes'>{this.state.likes} likes</p>
         {this.state.comments.map((comment, index) => (
