@@ -1,28 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
+import NewComment from './NewComment';
 import './Comments.css'
 
-const Comments = (props) => {
-    console.log('comments', props.comments);
-    return (
-        <div className="Comments">
-            <div> {props.comments.length === 0 ? (
-                <p>"no props yet"</p>
+class Comments extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            comments: props.comments
+        }
+    }
+
+    
+    render() {
+        const { comments } = this.props;
+        return (
+            <div className="Comments">
+                <div> {comments.length === 0 ? (
+                    <p>"no props yet"</p>
                     ) : (
-                    <div>
-                        {props.comments.map((comment, i) => {
-                            return (
-                                <div key={i}>
+                        <div>
+                            <div>{comments.map((comment, i) => {
+                                return (
+                                    <div key={i}>
                                     <div>{`${comment.username} says ${comment.text}`}</div>
                                     {/*<div>{comment.text}</div>*/}
-                                </div>
-                            )
-                        })}
-                    </div>
+                                    </div>
+                                    )
+                                })}
+                            </div>
+                            <NewComment commentList={comments}/>
+                        </div>
                     )
                 }
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default Comments;
