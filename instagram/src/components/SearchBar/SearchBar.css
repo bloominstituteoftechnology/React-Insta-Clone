@@ -1,0 +1,29 @@
+.searchBar {
+    width:100%;
+    height: 5rem;
+    /* border: 2px solid red; */
+}
+
+.ig-icon-div{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.ig-icon {
+    width: 5%;
+    height: auto;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding-right: 2rem;
+    /* padding-bottom: -3rem; */
+    border-right: 1px solid lightgray;
+}
+
+.ig-letters {
+    width: 15%;
+    height: auto;
+    /* margin-bottom: 2rem; */
+}
