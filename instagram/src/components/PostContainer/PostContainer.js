@@ -4,22 +4,20 @@ import PostHeader from '../PostContainer/PostHeader.js';
 import './PostContainer.css';
 
 const PostContainer = props => {
-return (
-  <div className="post-container">
- {props.postData.map(post => {
+    return (
+    <div className="postContainer">
+        {props.dummyData.map(post => {
             return (
             <div className="post">
                 <PostHeader username={post.username} thumbnail={post.thumbnailUrl} />
-                <div className="content-img">
+                <div className="contentImage">
                     <img src={post.imageUrl} />
                 </div>
-                <CommentSection comments={post.comments}/>
+                <CommentSection likes={post.likes} comments={post.comments}/>
             </div>
             )
-        }
-        )}
-      </div>
-
-)
+        })}
+    </div>  
+    )
 }
 export default PostContainer;

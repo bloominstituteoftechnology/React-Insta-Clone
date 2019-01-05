@@ -15,11 +15,11 @@ class App extends Component {
   render() 	{
   return (
     <div className="App">
-    <header className="App-header">
-      <SearchBar />
-    </header>
-     <div className="post">
-      <PostContainer />
+      <div className="App-header">
+        <SearchBar />
+      </div>
+      <div className="post">
+      <PostContainer dummyData={this.state.dummyData}/>
       </div>
       
     </div>
