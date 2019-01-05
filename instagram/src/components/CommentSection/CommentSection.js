@@ -12,6 +12,8 @@ class CommentSection extends Component {
       comments: props.comments,
       data: props.data,
       comment: "",
+      likes: props.data.likes,
+      likeStatus: false,
     }
   }
 
@@ -43,7 +45,20 @@ class CommentSection extends Component {
 
   clickedImg = (event) =>{
     //change img
-    // add one like
+    // add one like and on
+    console.log(this.state.likeStatus)
+    this.setState({likeStatus: !this.state.likeStatus})
+    let newLikes
+    if (this.state.likeStatus === false){
+      newLikes = this.state.likes + 1
+      this.setState({likes: newLikes})
+    } else {
+      newLikes = this.state.likes -1
+      this.setState({likes: newLikes})
+    }
+    
+    // console.log(newLikes)
+    
   }
 
   render(){
@@ -52,9 +67,9 @@ class CommentSection extends Component {
       <div className='comment-section'> 
         <img src={this.state.data.imageUrl} alt='post image' />
         <div className="heart-icon">
-          <img src={heart} alt="IG heart" onClick="clickedImg"/>
+          <img src={heart} alt="IG heart" onClick={this.clickedImg}/>
         </div>
-        <p className='likes'>{this.state.data.likes} likes</p>
+        <p className='likes'>{this.state.likes} likes</p>
         {this.state.comments.map((comment, index) => (
           <Comment username={comment.username}
             text={comment.text}
