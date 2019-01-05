@@ -3,7 +3,11 @@
   return (	 
       <div className="comment">
        <div class="commentPart">
-          <span class="comment-user">{props.username} {props.text}</span> 
+          <div class="comment-user">{props.username} {props.text}</div> 
+      </div>
+      <div className="addComment">
+        <input value="Add a comment..." />
+        <div className="threeDots">...</div>
       </div>
       </div>
   )}
