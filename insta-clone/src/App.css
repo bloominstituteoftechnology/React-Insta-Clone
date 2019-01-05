@@ -13,3 +13,7 @@
   border: 3px solid purple;
   margin: 20px 0px;
 }
+
+.likesContainer {
+  display: flex;
+}

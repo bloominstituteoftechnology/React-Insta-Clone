@@ -9,34 +9,17 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: [],
+      posts: dummyData,
     }
-  }
-  
-  componentDidMount() {
-    const postInfo = dummyData
-    this.setState ({
-      posts: postInfo
-    });
   }
 
   render() {
-    const { posts } = this.state;
     return (
       <div className="App">
         <p>hello!</p>
         <SearchBar />
-        <div className="card">
-        {/* map function here- each post should have all 3 components */}
-          {posts.map((post, i) => {
-            return (
-              <div className="postItem" key={i}>
-                {post.username}
-                <Post />
-                <Comments commentProp={post.comments}/>
-              </div>
-            )
-          })}  
+        <div>
+          <Post {...this.state}/>
         </div>
       </div>
     );
@@ -44,3 +27,14 @@ class App extends Component {
 }
 
 export default App;
+
+// <div className="card">
+//   {posts.map((post, i) => {
+//     return (
+//       <div className="postItem" key={i}>
+//         <Post postProp={posts} />
+//         <Comments commentProp={posts} />
+//       </div>
+//     )
+//   })}
+// </div>
