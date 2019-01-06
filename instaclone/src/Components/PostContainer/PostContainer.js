@@ -7,6 +7,7 @@ import UserInfo from '../UserInfo/UserInfo';
 import {FaRegComment, FaRegHeart, FaHeart}  from 'react-icons/fa'
 import { IconContext } from "react-icons";
 
+ 
 
 class PostContainer extends  React.Component {
     constructor(props){
