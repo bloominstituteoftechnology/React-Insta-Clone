@@ -6,14 +6,8 @@ class AddComment extends React.Component {
     constructor(props) {
         super(props)
         this.state={
-            newComment: ""
+           
         }
-    }
-
-    handleChange(event) {
-        console.log("working?")
-        const {name, value} = event.target
-        this.setState({ [name]: value})
     }
 
     render() {
