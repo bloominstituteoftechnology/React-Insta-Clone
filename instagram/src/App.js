@@ -17,7 +17,7 @@ class App extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({data: dummyData})
-    }, 4000)
+    }, 2000)
   }
 
   render() {

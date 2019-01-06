@@ -1,29 +1,80 @@
 .searchBar {
     width:100%;
     height: 5rem;
-    /* border: 2px solid red; */
+    margin-bottom: 7rem;
+    padding-left: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .ig-icon-div{
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid lightgray;
+    /* width: 50%; */
 }
 
 .ig-icon {
-    width: 5%;
+    width: 4%;
     height: auto;
     margin-left: 1rem;
     margin-right: 2rem;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
     padding-right: 2rem;
-    /* padding-bottom: -3rem; */
-    border-right: 1px solid lightgray;
+    border-right: 1px solid black;
 }
 
 .ig-letters {
     width: 15%;
     height: auto;
     /* margin-bottom: 2rem; */
+}
+
+/* .search-div{
+    display: flex;
+    justify-content: center;
+} */
+
+.search {
+    justify-content: center;
+    height: 2rem;
+    width: 15rem;
+    font-size: 1.2rem;
+}
+
+.search-div {
+    border: 1px solid lightgray;
+    color: gray;
+    height: 2rem;
+    width: 30rem;
+    font-size: 1.2rem;
+    display: flex; 
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 5rem;
+    padding-right: 10rem;
+}
+
+.searchbar-icon {
+    width: 15%;
+    height: auto;
+}
+
+.explore-icon {
+    width: 15%;
+    height: auto;
+    /* padding-right: 1rem; */
+}
+
+.heart-icon {
+    width: 20%;
+    height: auto;
+    padding-right: 1rem;
+}
+
+.profile-icon {
+    width: 13%;
+    height: auto; 
 }
