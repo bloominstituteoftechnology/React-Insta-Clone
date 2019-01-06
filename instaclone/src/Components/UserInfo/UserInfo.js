@@ -1,12 +1,13 @@
 import React from 'react';
-import './UserInfo.css'
+//import './UserInfo.css'
+import { UserInfoWrapper, UserThumbnail, Username } from '../../MyStyledComponents/MyComponents'
 
 const UserInfo = props => {
     return ( 
-        <div className="user-info">
-            <img src={props.thumbnailUrl} alt="user thumbnail" className="user-thumbnail"/>
-            <p className="username">{props.username}</p>
-        </div>
+        <UserInfoWrapper>
+            <UserThumbnail src={props.thumbnailUrl} alt="user thumbnail"/>
+            <Username>{props.username}</Username>
+        </UserInfoWrapper>
     );
 }
  
