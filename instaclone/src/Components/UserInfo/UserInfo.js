@@ -1,6 +1,6 @@
 import React from 'react';
 //import './UserInfo.css'
-import { UserInfoWrapper, UserThumbnail, Username } from '../../MyStyledComponents/MyComponents'
+import { UserInfoWrapper, UserThumbnail, Username } from '../../Styles/Reusables'
 
 const UserInfo = props => {
     return ( 
