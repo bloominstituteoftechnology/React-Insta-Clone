@@ -4,17 +4,23 @@
   background-color: white;
   border: 1px solid black;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   top: 0;
 }
 .logoSearch{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 77px;
+  height: 80px;
 }
 .navigation {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  align-items: center;
+}
+.searchContainer input{
+  background-color: #f3f3f3;
+  border-radius: 4px;
+  padding: 5px;
 }

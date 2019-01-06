@@ -4,7 +4,7 @@ const PostHeader = props => {
   	    return (
             <div class="postHeader">
                <img class="userThumbnail" src={props.thumbnail} />
-               <p class="username">{props.username}</p>
+               <p class="commentUser">{props.username}</p>
             </div>
           )}
 export default PostHeader;

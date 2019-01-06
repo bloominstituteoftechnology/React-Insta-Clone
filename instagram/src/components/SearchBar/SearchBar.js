@@ -8,10 +8,14 @@ import user from './Images/user.png';
  const SearchBar = props => {
     return (
     <div className="searchContainer">
-        <div className='logoSearch'>
+        
+        <div className="logo">
             <a href="#"><img src={logo} alt="insta-logo" /></a>
+        </div>
+        <div className="search"> 
             <input placeholder="Search" />
         </div>
+        
         <div className="navigation">
             <a href="#"><img src={location} alt="location" /></a>
             <a href="#"><img src={like} alt="like" /></a>
