@@ -7,12 +7,22 @@ import PropTypes from 'prop-types';
 
 class App extends Component {
   state = {
-    card: []
+    card: [],
+    filteredCard: []
   };
 
   componentDidMount() {
     this.setState({ card: dummyData });
   };
+
+  searchPostsHandler = e => {
+    const card = this.state.card.filter(p => {
+      if (p.username.includes(e.target.value)) {
+        return p;
+      }
+    });
+    this.setState({ filteredCard: card });
+  }
 
   handleAddComment = (textInput, id, e) => {
     e.preventDefault();
@@ -34,8 +44,12 @@ class App extends Component {
     console.log(this.state);
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer posts={this.state.card} addComment={this.handleAddComment} />
+        <SearchBar
+          searchPosts={this.searchPostsHandler} />
+
+        <PostContainer
+          posts={this.state.filteredCard.length > 0 ? this.state.filteredCard : this.state.card}
+          addComment={this.handleAddComment} />
       </div>
     );
   }
