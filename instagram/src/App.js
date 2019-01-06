@@ -9,7 +9,8 @@ class App extends Component {
     console.log("Constructor Invoked");
     super();
     this.state = {
-      dummyData: []
+      dummyData: [],
+      filteredData: []
     }
   }
 
@@ -18,13 +19,34 @@ class App extends Component {
     this.setState({dummyData: dummyData});
   }
  
+  handleSearch = event => {
+    let currentData = this.state.dummyData.slice()
+    let matchingData = currentData.filter(user => {
+      if (user.username === event) {
+        return true
+      } else {
+        return false
+      }
+    })
+
+    if (matchingData.length > 0) {
+      this.setState({dummyData : matchingData})
+    } else {
+      prompt("User not found")
+    }
+  }
+
   render() {
     console.log("Render Invoked")
     return (
       <div className="App">       
-       <SearchBar />
+       <SearchBar search={this.handleSearch} />
+
        {this.state.dummyData.map(data => (
-         <PostContainer key={data.timestamp} data={data} />
+         <PostContainer 
+            key={data.timestamp} 
+            data={data} 
+          />
        ))}   
       </div>
     );

@@ -6,23 +6,52 @@ import instaHeart from './insta-heart.png';
 import instaProfile from './insta-profile.png';
 import './SearchBar.css';
 
-const SearchBar = () => {
-    return (
-        <div className="header">
-            <div className="header-left">
-                <img className="insta-logo" alt="instagram logo" src={instaLogo} />
-                <img className="insta-title" alt="instagram title" src={instaTitle} />
+class SearchBar extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state ={
+            term: ""
+        }
+    }
+
+    changeHandler = event => {
+        this.setState({term: event.target.value})
+    }
+
+    submitHandler = event => {
+        event.preventDefault()
+        this.props.search(this.state.term)
+        this.setState({term: ""})
+    }
+
+    render() {
+        return (
+            <div className="header">
+                <div className="header-left">
+                    <img className="insta-logo" alt="instagram logo" src={instaLogo} />
+                    <img className="insta-title" alt="instagram title" src={instaTitle} />
+                </div>
+                <div>
+                    <form onSubmit={this.submitHandler}>
+                        <input 
+                            className="header-middle" 
+                            type="text" 
+                            placeholder="Search" 
+                            value={this.state.term}
+                            onChange={this.changeHandler}
+                        />
+                    </form>
+                    
+                </div>
+                <div className="header-right">
+                    <img className="insta-compass" alt="instagram compass" src={instaCompass} />
+                    <img className="insta-heart" alt="instagram heart" src={instaHeart} />
+                    <img className="insta-profile" alt="instagram profile" src={instaProfile} />
+                </div>
             </div>
-            <div>
-                <input className="header-middle" type="text" placeholder="Search"></input>
-            </div>
-            <div className="header-right">
-                <img className="insta-compass" alt="instagram compass" src={instaCompass} />
-                <img className="insta-heart" alt="instagram heart" src={instaHeart} />
-                <img className="insta-profile" alt="instagram profile" src={instaProfile} />
-            </div>
-        </div>
-    )
+        )
+    }
+
 }
 
 export default SearchBar;
