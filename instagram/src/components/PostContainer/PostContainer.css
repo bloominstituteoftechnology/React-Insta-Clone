@@ -31,3 +31,8 @@
 .insta-heart2{
     width: 25px;
 }
+
+.imageurl {
+    max-width: 500px;
+    height: auto;
+}

@@ -9,13 +9,13 @@ class App extends Component {
     console.log("Constructor Invoked");
     super();
     this.state = {
-      dummies: []
+      dummyData: []
     }
   }
 
   componentDidMount() {
     console.log("CDM Invoked");
-    this.setState({dummies: dummyData});
+    this.setState({dummyData: dummyData});
   }
  
   render() {
@@ -23,9 +23,9 @@ class App extends Component {
     return (
       <div className="App">       
        <SearchBar />
-       {this.state.dummies.map(dummy => (
-         <PostContainer key={dummy.timestamp} dummy={dummy} />
-       ))}
+       {this.state.dummyData.map(data => (
+         <PostContainer key={data.timestamp} data={data} />
+       ))}   
       </div>
     );
   }
