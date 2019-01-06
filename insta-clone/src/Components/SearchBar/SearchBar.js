@@ -1,10 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './SearchBar.css';
 
-const SearchBar = (props) => {
-    return (
-        <div className="SearchBar">search bar</div>
-    )
+class SearchBar extends Component {
+    constructor() {
+        super();
+        this.state = {
+            searchField: '',
+        }
+    }
+
+    handleSearchInput = (e) => {
+        this.setState({ searchField: e.target.value})
+    }
+
+    render() {
+        const { searchField } = this.state;
+        return (
+            <div>
+                <div className="SearchBar">search bar</div>
+                <input 
+                placeholder="search for a post"
+                name="search"
+                type="text"
+                value={searchField}
+                onChange={this.handleSearchInput}
+                />
+            </div>
+        )
+    }
 }
 
 export default SearchBar;

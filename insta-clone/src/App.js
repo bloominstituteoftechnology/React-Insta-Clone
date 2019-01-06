@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>hello!</p>
+        <h1>Welcome to my Instagram Clone App</h1>
         <SearchBar />
         <div>
           <Post {...this.state}/>
