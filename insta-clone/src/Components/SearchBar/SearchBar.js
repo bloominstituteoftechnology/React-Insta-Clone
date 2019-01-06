@@ -18,13 +18,15 @@ class SearchBar extends Component {
         return (
             <div>
                 <div className="SearchBar">search bar</div>
-                <input 
-                placeholder="search for a post"
-                name="search"
-                type="text"
-                value={searchField}
-                onChange={this.handleSearchInput}
-                />
+                <form>
+                    <input 
+                    placeholder="search for a post"
+                    name="search"
+                    type="text"
+                    value={searchField}
+                    onChange={this.handleSearchInput}
+                    />
+                </form>
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Comments from '../CommentSection/Comments';
+import Likes from '../Likes/Likes';
 import './Posts.css';
 
 const Post = (props) => {
@@ -16,6 +17,7 @@ const Post = (props) => {
                                         <h3>{post.username}</h3>
                                         <img src={post.thumbnailUrl} alt="thumbnail"/>
                                         <img src={post.imageUrl} alt="a post" />
+                                        <Likes likes={post.likes}/>
                                         <p>{`Likes: ${post.likes}`}</p>
                                         <p>{`Posted: ${post.timestamp}`}</p>
                                     </div>
