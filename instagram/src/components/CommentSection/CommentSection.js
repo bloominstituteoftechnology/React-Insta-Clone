@@ -19,7 +19,6 @@ class CommentSection extends React.Component {
         comments.push(newComment)
         this.setState({ comments, comment: ""})
         console.log("working?")
-
     }
 
     handleChange = event => {
@@ -43,7 +42,6 @@ class CommentSection extends React.Component {
                         value={this.state.value}
                         onChange={this.handleChange}
                     />
-                    <button type="submit">AddComment</button>
                  </form>
             </div>
         )

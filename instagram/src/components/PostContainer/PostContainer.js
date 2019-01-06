@@ -6,28 +6,46 @@ import instaReply from './insta-reply.png';
 import CommentSection from '../CommentSection/CommentSection';
 
 
-const PostContainer = props => {
-    console.log(props);
-    return (
-        <div className="postcontainer">
-            <div className="user-info">
-                <img src={props.data.thumbnailUrl} className="thumbnail" alt="data thumbnail"/>
-                <p className="username">{props.data.username}</p>
+class PostContainer extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            likes: this.props.data.likes
+        }
+        this.handleLikes = this.handleLikes.bind(this)
+    }
+
+    handleLikes() {
+        console.log("liked clicked yay")
+        this.setState(prevState => {
+            return {
+                likes: prevState.likes + 1
+            }
+        })
+    }
+
+    render() {
+        return (
+            <div className="postcontainer">
+                <div className="user-info">
+                    <img src={this.props.data.thumbnailUrl} className="thumbnail" alt="data thumbnail"/>
+                    <p className="username">{this.props.data.username}</p>
+                </div>
+                <div>
+                    <img src={this.props.data.imageUrl} className="imageurl" alt="data url pic" />
+                </div>
+                <div className="png-images">
+                    <img className="insta-heart2" alt="instagram heart" src={instaHeart2} onClick={this.handleLikes} />
+                    <img className="insta-reply" alt="instagram reply" src={instaReply} />
+                </div>
+                <div>
+                    <p>{this.state.likes} likes </p>
+                </div>             
+                    <CommentSection comments={this.props.data.comments} />                                 
             </div>
-            <div>
-                <img src={props.data.imageUrl} className="imageurl" alt="data url pic" />
-            </div>
-            <div className="png-images">
-                <img className="insta-heart2" alt="instagram heart" src={instaHeart2} />
-                <img className="insta-reply" alt="instagram reply" src={instaReply} />
-            </div>
-            <div>
-                <p>{props.data.likes} likes </p>
-            </div>             
-                <CommentSection comments={props.data.comments} />              
-                      
-        </div>
-    )
+        )
+    }
+ 
 }
 
 PostContainer.propTypes = {
