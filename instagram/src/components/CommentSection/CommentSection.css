@@ -62,6 +62,11 @@
   cursor: pointer;
 }
 
-div div .modal {
-  top: 30%;
+.modal-container__btn {
+  background-color: transparent;
+  border: none;
+}
+
+.modal-container__btn:focus {
+  outline: none;
 }

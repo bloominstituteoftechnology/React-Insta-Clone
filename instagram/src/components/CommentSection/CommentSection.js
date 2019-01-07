@@ -137,7 +137,7 @@ class CommentSection extends React.Component {
 
 
           <div className='modal-container'>
-            <Button color="danger" onClick={this.toggle}><img src={comment} alt="insta-comment" /></Button>
+            <button className="modal-container__btn" onClick={this.toggle}><img src={comment} alt="insta-comment" /></button>
             <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
               <ModalHeader toggle={this.toggle}>Report inappropriate</ModalHeader>
               <ModalHeader>Unfollow</ModalHeader>
