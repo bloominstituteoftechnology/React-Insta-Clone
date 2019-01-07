@@ -11,7 +11,8 @@ class CommentSection extends Component {
    this.state={
     likes:props.likes,
     comments:props.comments,
-    newComment:''
+    newComment:'',
+    likeStatus: false,
    }
  }
  handleTextChange = (e) => {
@@ -30,16 +31,31 @@ class CommentSection extends Component {
      this.setState({comments: enteredValue})
    }
    
-   
+   clickedImg = () =>{
+    
+    if (this.state.likeStatus === false){
+      this.setState({
+        likeStatus: true,
+        likes: this.state.likes + 1,
+      })
+    } else {
+      this.setState(
+        {
+        likeStatus: false,
+        likes: this.state.likes - 1,
+      })
+    }
+  }
+
  render() {
     return (
     <div className="commentSection">
       <div className="likeComments">
-        <a href="#"><img src={like} alt="like" /></a>
+        <a href="#"><img src={like} onClick={this.clickedImg} alt="like" /></a>
         <a href="#"><img src={comments} alt="comments" /></a>
       </div>
       <div className="likes">
-        <p>{this.props.likes} likes</p>
+        <p>{this.state.likes} likes</p>
       </div>
 
     {this.props.comments.map(comment => {
@@ -50,7 +66,7 @@ class CommentSection extends Component {
   })}
   <div className="addComment">
         <form>
-         <input type ="text" placeholder="Add a Comment" onChange={this.handleTextChange} onKeyDown={this.handleTextChange} value={this.state.newComment} 
+         <input comments="comment" type ="text" placeholder="Add a Comment..." onChange={this.handleTextChange} onKeyDown={this.handleTextChange} value={this.state.comment} 
          />
         </form>
        
