@@ -65,7 +65,6 @@ code {
 .image {
   display: flex;
   align-self: center;
-  border: 2px solid red;
 }
 
 .commentSection {
