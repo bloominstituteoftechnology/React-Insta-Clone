@@ -2,6 +2,66 @@ import React from 'react';
 import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 import Likes from './likes';
+import styled from 'styled-components';
+
+
+const Container = styled.div`
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+`;
+
+const PostHeader = styled.div`
+    display:flex;
+    justify-content: flex-start;
+    width:45%;
+    border:.5px solid #fafafa;
+`;
+
+const MainImage = styled.div`
+    display: flex;
+    justify-content: center;
+    width:100%;
+`;
+
+const PostContent = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border:1px solid #dadada;
+    width:45%;
+    margin-bottom:50px;
+`;
+
+const CommentsContainer = styled.div`
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:100%;
+    margin-top:20px;
+    margin-bottom: 20px;
+`;
+const Image = styled.img`
+
+`;
+
+const Username = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+`;
+
+const ProfileContainer = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    width: 50px;
+    height:50px;
+    margin-left: 10px;
+    margin-top:5px;
+`;
 
 class Posts extends React.Component{
     constructor(props){
@@ -61,27 +121,25 @@ class Posts extends React.Component{
     };
     render(){
         return(
-            <div className="container">
-                <div className="post-header">
-                <div className="user-icon">
-                    <img className="profile-pic" src={this.props.post.thumbnailUrl} alt="logo"/>
-                </div>
-                <div className="user-name">
-                    {this.props.post.username}
-                </div>
-            </div>
-            <div className="main-image">
-                <img src={this.props.post.imageUrl} alt="post"/>
-            </div>
-            <div className="post-content">
-                < Likes likes={this.state.likes} incrementLikes={this.incrementLike}/>
-                <div className="comments">
-                    <div className="comments-container">
+            <Container>
+                <PostHeader>
+                    <ProfileContainer>
+                        <Image className="profile-pic" src={this.props.post.thumbnailUrl} alt="logo"/>
+                    </ProfileContainer>
+                    <Username>
+                        {this.props.post.username}
+                    </Username>
+                </PostHeader>
+                <MainImage>
+                    <Image src={this.props.post.imageUrl} alt="post"/>
+                </MainImage>
+                <PostContent>
+                    <Likes likes={this.state.likes} incrementLikes={this.incrementLike}/>
+                    <CommentsContainer>
                         <CommentSection postId={this.props.post.imageUrl} comments={this.props.post.comments} />
-                    </div>
-                </div>
-            </div>
-            </div>
+                    </CommentsContainer>
+                </PostContent>
+            </Container>
         );
     }
 }

@@ -1,20 +1,41 @@
 import React from 'react';
 import './CommentSection.css';
+import styled from 'styled-components';
+
+const UserComment = styled.div`
+`;
+
+const UsernameText = styled.div`
+    width: 100%;
+    margin-bottom: 0px;
+`;
+
+const CommentList = styled.ul`
+    list-style-type: none;
+    text-align: left;
+    padding-left: 10px;
+`;
+
+const Timestamp = styled.div`
+
+`;
+
+
 
 const Comment = props => {
     return(
-        <div className="user-comment">
-            <div className="username_text">
-                <ul>
+        <UserComment>
+            <UsernameText>
+                <CommentList>
                     <li>
                         <span className="username">{props.comment.username}</span> <span className="comment-text">{props.comment.text}</span>
                     </li>
-                </ul>
-            </div>
-            <div>
+                </CommentList>
+            </UsernameText>
+            <Timestamp>
                 {props.comment.timestamp}
-            </div>
-        </div>
+            </Timestamp>
+        </UserComment>
     )
 }
 

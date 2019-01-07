@@ -3,6 +3,11 @@ import "./PostContainer.css";
 import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
+import styled from 'styled-components';
+
+const PostsPage = styled.div`
+
+`;
 
 class PostPage extends React.Component {
     constructor(){
@@ -28,12 +33,12 @@ class PostPage extends React.Component {
 
     render() {
       return (
-        <div className="App">
+        <PostsPage>
           <SearchBar handle={this.handleInput} searchPosts={this.searchPostsHandler} />
           <PostContainer post={this.state.filteredPosts.length > 0
             ? this.state.filteredPosts
              : this.state.data} />
-        </div>
+        </PostsPage>
       );
     }
 }

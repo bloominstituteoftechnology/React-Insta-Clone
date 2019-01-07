@@ -2,6 +2,15 @@ import React from 'react';
 import './CommentSection.css';
 import AddComment from '../AddComment/AddComment';
 import Comment from './Comment';
+import styled from 'styled-components';
+
+const CommentsWrapper = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+`;
 
 class CommentSection extends React.Component {
     constructor(props){
@@ -48,14 +57,14 @@ class CommentSection extends React.Component {
     }
     render(){
         return(
-            <div className="comments-wrapper">
+            <CommentsWrapper>
                 {this.state.comments.map((c,i) => <div className="comments"> <Comment key={c.text} comment={c} /> </div> )}
                 <div className="timestamp">
                     <span>ago</span>
                 </div>
                 <div className="hr"></div>
                 <AddComment comment={this.state.comment} changeComment={this.commentHandler} submitComment={this.handleCommentSubmit} />
-            </div>
+            </CommentsWrapper>
         )
     };
 }

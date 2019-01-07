@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     width: 90%;
 }
-.comments-wrapper > .comments {
+.comments {
     display: flex;
     align-content: center;
     width: 100%;

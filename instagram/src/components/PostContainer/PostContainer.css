@@ -10,8 +10,7 @@
     width:45%;
     border:.5px solid #fafafa;
 }
-
-.post-header > .user-icon{
+.user-icon{
     display: flex;
     justify-content: flex-start;
     align-content: center;
@@ -21,13 +20,14 @@
     margin-top:5px;
 }
 
-.post-header > .user-name{
+.user-name{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 40px;
 }
-.post-header > .user-icon > img{
+
+.profile-pic{
     border-radius: 50%;
     width:40px;
     height: 40px;
