@@ -7,6 +7,7 @@
           <span class="commentUser">{props.username} </span> 
            {props.text}
       </div>
+
       </div>
   )}
  export default Comment;
