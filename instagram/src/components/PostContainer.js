@@ -10,7 +10,7 @@ class Post extends React.Component{
     }
 
     
-
+    //how to add only one like at a time?
     incrementLikes = () => {
         let likes = this.state.likes + 1;
         this.setState({ likes });
