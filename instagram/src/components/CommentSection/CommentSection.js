@@ -58,7 +58,7 @@ class CommentSection extends React.Component {
     render(){
         return(
             <CommentsWrapper>
-                {this.state.comments.map((c,i) => <div className="comments"> <Comment key={c.text} comment={c} /> </div> )}
+                {this.state.comments.map((c,i) => <div className="comments"> <Comment key={i} comment={c} /> </div> )}
                 <div className="timestamp">
                     <span>ago</span>
                 </div>

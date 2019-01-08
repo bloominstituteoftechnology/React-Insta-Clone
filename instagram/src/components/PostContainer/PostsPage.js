@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import "./PostContainer.css";
 import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar';
@@ -27,6 +28,7 @@ class PostPage extends React.Component {
         if (p.username.includes(e.target.value)){
           return p;
         }
+        return p;
       });
       this.setState({filteredPosts: posts});
     }
@@ -35,9 +37,11 @@ class PostPage extends React.Component {
       return (
         <PostsPage>
           <SearchBar handle={this.handleInput} searchPosts={this.searchPostsHandler} />
-          <PostContainer post={this.state.filteredPosts.length > 0
-            ? this.state.filteredPosts
-             : this.state.data} />
+          <Route exact path="posts" render={
+            (props) => <PostContainer  post={this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.data} {...props} />
+          } />
         </PostsPage>
       );
     }

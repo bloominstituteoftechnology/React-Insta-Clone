@@ -1,7 +1,7 @@
 import React from 'react';
 import './Login.css';
 import styled from 'styled-components';
-const PageContainer = styled.body`
+const PageContainer = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
