@@ -11,20 +11,19 @@ class App extends Component {
     super(props);
 
     this.state = {
-      loggedIn: true
+
     }
   }
 
   render() {
     return (
       <div>
-        <h1>test</h1>
-        <AppHOC />
+        <PostsPage />
       </div>
     );
   }
 }
 
-const AppHOC = Authenticate(App);
+const AppPage = Authenticate(App)
 
 export default App;
