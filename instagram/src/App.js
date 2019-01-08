@@ -22,7 +22,7 @@ class App extends Component {
         <SearchBar />
       </div>
       <div className="post">
-      <PostContainer dummyData={this.state.dummyData}/>
+      <PostContainer dummyData={this.state.dummyData} key={dummyData.timestamp}/>
       </div>
       
     </div>

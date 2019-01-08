@@ -11,12 +11,21 @@ class CommentSection extends Component {
    this.state={
     likes:props.likes,
     comments:props.comments,
-    newComment:'',
+    newComment:" ",
     likeStatus: false,
+    timestamp:props.timestamp 
    }
  }
+
+ addNewComment = (e) =>{
+   e.preventDefault();
+   let enteredValue = [...this.state.comments]
+   enteredValue.push({username:'My User Name', text: this.state.newComment})
+   this.setState({comments: enteredValue})
+ }
+
  handleTextChange = (e) => {
-  if (this.state.comment !== '' && e.key === 'Enter') {
+  if (this.key !== " " && e.key === 'Enter') { 
     this.addNewComment(e)
   }
   else{
@@ -24,12 +33,7 @@ class CommentSection extends Component {
     [e.target.comments]: e.target.value
 })}}
 
- addNewComment = (e) =>{
-  e.preventDefault();
-     let enteredValue = [...this.setState.comments]
-     enteredValue.push({username:'My User Name', text: this.state.newComment})
-     this.setState({comments: enteredValue})
-   }
+ 
    
    clickedImg = () =>{
     
@@ -57,16 +61,19 @@ class CommentSection extends Component {
       <div className="likes">
         <p>{this.state.likes} likes</p>
       </div>
-
-    {this.props.comments.map(comment => {
+      
+    {this.state.comments.map((comment, index) => {
       return <Comment 
       username={comment.username} 
       text={comment.text}
+      key={index}
       />
+      
   })}
+  <div className="timestamp"><p>{this.state.timestamp}</p></div>
   <div className="addComment">
         <form>
-         <input comments="comment" type ="text" placeholder="Add a Comment..." onChange={this.handleTextChange} onKeyDown={this.handleTextChange} value={this.state.comment} 
+         <input comments="newComment" type ="text" placeholder="Add a Comment..." onChange={this.handleTextChange} onKeyDown={this.handleTextChange} value={this.state.comment} 
          />
         </form>
        
