@@ -15,7 +15,7 @@ const SearchBar = props => {
         <img src={logo} height='48px'/>
       </div>
       <div>
-        <input placeholder='Search' />
+        <input type='text' placeholder='Search' onChange={props.search}/>
       </div>
       <div>
         <img src={logoCompass} height='32px'/>
