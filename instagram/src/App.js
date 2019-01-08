@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import PostPage from './components/PostContainer/PostPage';
+import Authenticate from './Authentication/Authenticate';
 
 class App extends Component {
   constructor() {
@@ -19,4 +20,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);
