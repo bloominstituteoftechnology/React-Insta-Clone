@@ -18,7 +18,6 @@ const Post = (props) => {
                                         <img src={post.thumbnailUrl} alt="thumbnail"/>
                                         <img src={post.imageUrl} alt="a post" />
                                         <Likes likes={post.likes}/>
-                                        <p>{`Likes: ${post.likes}`}</p>
                                         <p>{`Posted: ${post.timestamp}`}</p>
                                     </div>
                                     <Comments comments={post.comments}/>
