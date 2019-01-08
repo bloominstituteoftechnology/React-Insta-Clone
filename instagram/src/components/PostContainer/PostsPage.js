@@ -11,5 +11,4 @@ const PostsPage = (props) => {
   )
 }
 
-
 export default PostsPage;

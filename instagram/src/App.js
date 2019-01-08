@@ -5,6 +5,7 @@ import dummyData  from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './Authentication/Authenticate';
+import LoginPage from './components/Login/Login';
 
 class App extends Component {
   constructor(){
@@ -12,7 +13,8 @@ class App extends Component {
     this.state = {
       data: dummyData,
       users: [],
-      searched: ""
+      searched: "",
+      usernameInput: ""
     };
   }
   // I removed componentDidMount here because it was causing problems when I would change state.
@@ -43,6 +45,16 @@ class App extends Component {
     }
   }
 
+  handleNewLogin = (event) => {
+    this.setState({usernameInput: event.target.value});
+    
+  }
+  onLogin = (event) => {
+    // event.preventDefault();
+    localStorage.setItem('user', this.state.usernameInput);
+    window.location.reload();
+  }
+
   render() {
     // return (
     //   <div className="App">
@@ -52,9 +64,18 @@ class App extends Component {
     // );
     return (
       <div className="App">
-        <PostsPage data={this.state.data} users={this.state.users} searched={this.state.searched} onSearch={this.onSearch} handleNewSearch={this.handleNewSearch}/>
+        {/* <PostsPage data={this.state.data} users={this.state.users} searched={this.state.searched} onSearch={this.onSearch} handleNewSearch={this.handleNewSearch}/> */}
+        {/* <LoginPage handleNewLogin={this.handleNewLogin} onLogin={this.onLogin} /> */}
+        <Authenticate 
+          handleNewLogin={this.handleNewLogin} 
+          onLogin={this.onLogin} 
+          data={this.state.data} 
+          users={this.state.users} 
+          searched={this.state.searched} 
+          onSearch={this.onSearch} 
+          handleNewSearch={this.handleNewSearch} 
+        />
       </div>
-      
     )
     
   }
