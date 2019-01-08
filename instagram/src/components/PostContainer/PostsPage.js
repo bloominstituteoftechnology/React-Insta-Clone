@@ -36,7 +36,7 @@ class PostsPage extends React.Component {
       setTimeout(() => {
         this.setState({
           data: dummyData})
-      }, 1500)
+      }, 1000)
     }
 
   render() {
