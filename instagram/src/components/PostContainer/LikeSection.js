@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const LikeSection = props => {
   return [
@@ -23,5 +24,10 @@ const LikeSection = props => {
     </div>
   ];
 };
+
+LikeSection.propTypes = {
+  incrementLike: PropTypes.func,
+  likes: PropTypes.number
+}
 
 export default LikeSection;

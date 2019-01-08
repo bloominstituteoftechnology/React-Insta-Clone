@@ -11,11 +11,11 @@ const SearchBar = props => {
         <img alt="instagram logo" src={IGLogo} className="logo-image" />
       </div>
       <div className="input-wrapper">
-        <input 
-          className="input-field-search" 
-          type="text" 
-          placeholder=" Search" 
-          onKeyUp={props.searchPosts} 
+        <input
+          className="input-field-search"
+          type="text"
+          placeholder=" Search"
+          onKeyUp={props.searchPosts}
         />
       </div>
       <div className="social-wrapper">

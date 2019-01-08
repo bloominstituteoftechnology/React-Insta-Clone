@@ -54,9 +54,9 @@ class Post extends React.Component {
           likes={this.state.likes}
         />
         <CommentSection
-          postId={this.props.post.imageUrl}
-          comments={this.props.post.comments}
-          dTime={this.state.dTime}
+          postId={this.props.post.imageUrl}  // in order to use localStorage, need to pass an id
+          comments={this.props.post.comments} // pass the comments array of objects
+          dTime={this.state.dTime} // pass moment date delta
         />
       </div>
     );

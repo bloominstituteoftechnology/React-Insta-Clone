@@ -14,12 +14,12 @@ class CommentSection extends React.Component {
 
   componentDidMount() {
     const id = this.props.postId;
-    if (localStorage.getItem(id)) {
+    if (localStorage.getItem(id)) { // if still in memory
       this.setState({
-        comments: JSON.parse(localStorage.getItem(this.props.postId))
+        comments: JSON.parse(localStorage.getItem(this.props.postId)) // update with memory vals
       });
     } else {
-      this.setComments();
+      this.setComments();  // if not in memory, set comments to what is in state in local memory
     }
   }
 
@@ -27,13 +27,19 @@ class CommentSection extends React.Component {
     this.setComments();
   }
 
-  setComments = () => {};
+  // set local storage to what the value is in state
+  setComments = () => {
+    localStorage.setItem(
+      this.props.postId,
+      JSON.stringify(this.state.comments)
+    )
+  };
 
   commentHandler = e => {
     this.setState({ comment: e.target.value }); // update state comment field
   };
 
-  handleCommentSubmit = e => {
+  addNewComment = e => {
     e.preventDefault();
     if (this.state.comment.length > 0) {
       const newComment = { text: this.state.comment, username: "bmadrid" }; // make object to add
@@ -53,7 +59,7 @@ class CommentSection extends React.Component {
         <div className="display-time">{this.props.dTime}</div>
         <CommentInput
           comment={this.state.comment}
-          submitComment={this.handleCommentSubmit}
+          submitComment={this.addNewComment}
           changeComment={this.commentHandler}
         />
       </div>
