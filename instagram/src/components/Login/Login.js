@@ -23,8 +23,8 @@ class Login extends React.Component {
     return (
       <div>
         <h1>Login Page</h1>
-        <input type='text' placeholder='Username' onChange={this.usernameHandler} value={this.state.username}/>
-        <input type='password' placeholder='Password' value={this.state.password}/>
+        <input placeholder='Username' onChange={this.usernameHandler} value={this.state.username}/>
+        <input placeholder='Password' value={this.state.password}/>
         <button onClick={this.login}>Login</button>
       </div>
     );
