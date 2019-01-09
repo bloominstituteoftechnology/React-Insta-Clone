@@ -9,11 +9,12 @@ const CommentWrapper = styled.div`
     display: flex;
 `
 const CommentUsername = styled(Username)`
+    font-weight: bold;
     margin: 0rem;
     margin-right: .3rem;
 `
 const CommentText =  styled.span`
-    margin: 0rem;
+    margin-left: .3rem;
     font-weight: normal;
 `
 

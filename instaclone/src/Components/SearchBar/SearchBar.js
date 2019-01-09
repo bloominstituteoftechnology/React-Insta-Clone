@@ -1,10 +1,11 @@
 import React from 'react';
-// import './SearchBar.css';
 
-import logo_name from './imgs/instagram_logo.svg'
+
+import logo_name from '../../imgs/instagram_logo.svg'
 import compass_icon  from './imgs/compass.svg'
 import heart_icon  from './imgs/heart.svg'
 import person_icon from './imgs/person.svg'
+import logo  from '../../imgs/logo.jpg'
 
 import styled from 'styled-components'
 
@@ -72,7 +73,7 @@ const SearchBar = props => {
     return ( 
         <Header>
             <BrandingContainer>
-                <Logo src={process.env.PUBLIC_URL + `/imgs/logo.jpg`} alt="logo"/>
+                <Logo src={logo} alt="logo"/>
                 <Divider></Divider>
                 <LogoName src={logo_name} alt="meh" className="logo-name"/>
             </BrandingContainer>

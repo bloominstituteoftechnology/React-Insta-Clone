@@ -15,7 +15,7 @@ export const UserThumbnail = styled.img`
 `
 // defaults style for username
 export const Username = styled.p`
-    font-weight: bold;
+    font-weight: 750;
     margin: 0 .5rem;
 `
 export default { UserInfoWrapper, UserThumbnail, Username }
