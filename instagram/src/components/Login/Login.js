@@ -9,10 +9,8 @@ class Login extends React.Component {
     }
   }
 
-  login = event => {
-    // event.preventDefault();
+  login = () => {
     localStorage.setItem('username', this.state.username);
-    // this.setState({ username: "" })
   }
 
   onChange = event => {

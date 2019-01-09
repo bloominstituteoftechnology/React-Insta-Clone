@@ -4,7 +4,6 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
-// import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
   constructor() {
@@ -29,7 +28,8 @@ class App extends Component {
     let data = this.state.instaData.filter(item => item.username.includes(this.state.searchText.toLowerCase()));
     this.setState({ 
       instaData: data,
-      searchText: ""
+      searchText: "",
+      username: ""
      })
   }
 
@@ -53,7 +53,7 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({ instaData: dummyData });
-    localStorage.setItem('data', JSON.stringify(dummyData))
+    localStorage.setItem('data', JSON.stringify(dummyData));
   }
 
   render() {
