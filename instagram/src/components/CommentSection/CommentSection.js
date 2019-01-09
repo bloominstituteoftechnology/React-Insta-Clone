@@ -35,8 +35,8 @@ class CommentSection extends Component {
 
  
    
-   clickedImg = () =>{
-    
+   clickedImg = (e) =>{
+    e.preventDefault();
     if (this.state.likeStatus === false){
       this.setState({
         likeStatus: true,
@@ -72,8 +72,8 @@ class CommentSection extends Component {
   })}
   <div className="timestamp"><p>{this.state.timestamp}</p></div>
   <div className="addComment">
-        <form>
-         <input comments="newComment" type ="text" placeholder="Add a Comment..." onChange={this.handleTextChange} onKeyDown={this.handleTextChange} value={this.state.comment} 
+        <form onSubmit={this.addNewComment}>
+         <input type ="text" placeholder="Add a Comment..." onChange={this.handleTextChange} onKeyDown={this.handleTextChange} value={this.state.value} 
          />
         </form>
        

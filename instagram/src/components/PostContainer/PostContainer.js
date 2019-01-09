@@ -5,21 +5,22 @@ import './PostContainer.css';
 import PropTypes from "prop-types";
 
 
+
 const PostContainer = props => {
     return (
-    <div className="postContainer">
-        {props.dummyData.map(post => {
+        <div>
+        {props.data.map(post => {
             return (
             <div className="post">
                 <PostHeader username={post.username} thumbnail={post.thumbnailUrl} />
                 <div className="contentImage">
                     <img src={post.imageUrl} />
                 </div>
-                <CommentSection likes={post.likes} comments={post.comments}/>
+                <CommentSection comments={post.comments}/>
             </div>
             )
         })}
-    </div>  
+        </div>
     )
     }
     PostContainer.propTypes = {
