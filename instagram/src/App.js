@@ -13,12 +13,11 @@ class App extends Component {
       posts: [],
     }
   }
-
   
   render() {
     return (
       <div className="App">
-        <Login />
+        <Login login={this.login}/>
         <PostPage />
         
       </div>
