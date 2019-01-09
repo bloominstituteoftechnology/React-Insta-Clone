@@ -29,7 +29,8 @@ const Authenticate = WrappedComponent => {
                   users={this.props.users} 
                   searched={this.props.searched} 
                   onSearch={this.props.onSearch} 
-                  handleNewSearch={this.props.handleNewSearch} />
+                  handleNewSearch={this.props.handleNewSearch} 
+                  onSignout={this.props.onSignout}/>
       } else {
         return <LoginPage 
                   handleNewLogin={this.props.handleNewLogin} 

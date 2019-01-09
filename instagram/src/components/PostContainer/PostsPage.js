@@ -9,7 +9,9 @@ const PostsPage = (props) => {
         data={props.data} 
         onSearch={props.onSearch} 
         handleNewSearch={props.handleNewSearch} 
-        searched={props.searched}/>
+        searched={props.searched}
+        onSignout={props.onSignout}/>
+        
       <PostContainer
         data={props.data} 
         users={props.users}/>

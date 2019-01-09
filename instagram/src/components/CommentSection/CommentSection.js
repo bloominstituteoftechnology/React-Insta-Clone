@@ -25,9 +25,8 @@ class CommentSection extends React.Component {
   onCommentAdd = (event) => {
     event.preventDefault();
     const newComments = this.state.comments.slice();
-    console.log(this.state.comments)
-    console.log(newComments)
-    newComments.push({username: "christene", text: this.state.newComment});
+    const currentUser = localStorage.getItem('user');
+    newComments.push({username: currentUser, text: this.state.newComment});
     this.setState({
         comments: newComments, 
         newComment: ""
@@ -58,7 +57,7 @@ class CommentSection extends React.Component {
         </div>
         <div className="timestamp">{this.props.timestamp}</div>
         <div className="comments-input">
-          <CommentInput  handleNewComment={this.handleNewComment} newComment={this.newComment} onCommentAdd={this.onCommentAdd}/>
+          <CommentInput  handleNewComment={this.handleNewComment} newComment={this.state.newComment} onCommentAdd={this.onCommentAdd}/>
         </div>
       </div>
     )

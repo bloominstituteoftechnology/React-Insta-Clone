@@ -29,6 +29,9 @@ const SearchBar = (props) => {
           <div className="search-profile search-icon">
             <i className="far fa-user"></i>
           </div>
+          <div className="search-signout search-icon" onClick={props.onSignout}>
+            <i className="fas fa-sign-out-alt"></i>
+          </div>
         </div>
       </div>
     </div>

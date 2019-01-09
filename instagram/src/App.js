@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-// import SearchBar from './components/SearchBar/SearchBar';
 import dummyData  from './dummy-data.js';
-// import PostContainer from './components/PostContainer/PostContainer';
-// import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './Authentication/Authenticate';
-// import LoginPage from './components/Login/Login';
 
 class App extends Component {
   constructor(){
@@ -17,10 +13,6 @@ class App extends Component {
       usernameInput: ""
     };
   }
-  // I removed componentDidMount here because it was causing problems when I would change state.
-  // componentDidMount() {
-  //   this.setState({data: dummyData});
-  // }
 
   handleNewSearch = (event) => {
     this.setState({searched: event.target.value});
@@ -48,22 +40,18 @@ class App extends Component {
     
   }
   onLogin = (event) => {
-    // event.preventDefault();
     localStorage.setItem('user', this.state.usernameInput);
     window.location.reload();
   }
 
+  onSignout = (event) => {
+    localStorage.clear();
+    window.location.reload();
+  }
+
   render() {
-    // return (
-    //   <div className="App">
-    //     <SearchBar data={this.state.data} onSearch={this.onSearch} handleNewSearch={this.handleNewSearch} searched={this.state.searched}/>
-    //     <PostContainer data={this.state.data} users={this.state.users}/>
-    //   </div>
-    // );
     return (
       <div className="App">
-        {/* <PostsPage data={this.state.data} users={this.state.users} searched={this.state.searched} onSearch={this.onSearch} handleNewSearch={this.handleNewSearch}/> */}
-        {/* <LoginPage handleNewLogin={this.handleNewLogin} onLogin={this.onLogin} /> */}
         <Authenticate 
           handleNewLogin={this.handleNewLogin} 
           onLogin={this.onLogin} 
@@ -72,10 +60,10 @@ class App extends Component {
           searched={this.state.searched} 
           onSearch={this.onSearch} 
           handleNewSearch={this.handleNewSearch} 
+          onSignout={this.onSignout}
         />
       </div>
     )
-    
   }
 }
 
