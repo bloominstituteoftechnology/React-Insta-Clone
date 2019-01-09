@@ -3,13 +3,12 @@ import { FontAwesomeIcon } from "./../../../node_modules/@fortawesome/react-font
 
 const LikeSection = props => {
   return [
-    <div
-      className="like-section"
-      key="likes-icons-container"
-      onClick={props.incrementLike}
-    >
+    <div className="like-section" key="likes-icons-container">
       <div className="like-section-wrapper">
-        <FontAwesomeIcon icon={["far", "heart"]} />
+        <FontAwesomeIcon
+          icon={["far", "heart"]}
+          onClick={props.incrementLike}
+        />
       </div>
       <div className="like-section-wrapper">
         <FontAwesomeIcon icon={["far", "comment"]} />
