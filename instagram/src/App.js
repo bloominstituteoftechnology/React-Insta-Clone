@@ -6,8 +6,8 @@ import dummyData from "./data/dummy-data";
 import Authenticate from "./components/Authentication/Authenticate";
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       posts: [],
       staticData: [],
@@ -44,6 +44,7 @@ class App extends Component {
         <SearchBar
           changeHandler={this.searchInput}
           searchState={this.state.search}
+          logout={this.props.logout}
         />
         <PostsPage posts={this.state.posts} user={this.state.user} />
       </div>

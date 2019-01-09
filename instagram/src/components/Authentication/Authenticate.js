@@ -35,7 +35,8 @@ const Authenticate = WrappedComponent => {
       });
     };
 
-    checkCreds = () => {
+    checkCreds = event => {
+      event.preventDefault();
       console.log("submit");
       this.state.users.forEach(user => {
         if (
@@ -44,7 +45,18 @@ const Authenticate = WrappedComponent => {
         )
           this.setState({ loggedIn: true });
       });
+      localStorage.setItem("loggedIn", this.state.loggedIn);
     };
+
+    logout = () => {
+      console.log("logout");
+      this.setState({ loggedIn: false });
+      localStorage.setItem("loggedIn", this.state.loggedIn);
+    };
+
+    componentDidMount() {
+      if (localStorage.getItem("loggedIn")) this.setState({ loggedIn: true });
+    }
 
     render() {
       if (!this.state.loggedIn) {
@@ -57,7 +69,7 @@ const Authenticate = WrappedComponent => {
             onSubmit={this.checkCreds}
           />
         );
-      } else return <WrappedComponent />;
+      } else return <WrappedComponent logout={this.logout} />;
     }
   };
 };

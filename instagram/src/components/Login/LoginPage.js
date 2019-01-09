@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { InputGroup, InputGroupAddon, Input } from "reactstrap";
-import { FiLock } from "react-icons/fi";
+import { Input } from "reactstrap";
 import "./Login.css";
 
 const LoginPage = props => {

@@ -1,6 +1,12 @@
 import React from "react";
 import { Input } from "reactstrap";
-import { FiInstagram, FiCompass, FiHeart, FiUser } from "react-icons/fi";
+import {
+  FiInstagram,
+  FiCompass,
+  FiHeart,
+  FiUser,
+  FiLogOut
+} from "react-icons/fi";
 import "./SearchBar.css";
 
 const SearchBar = props => {
@@ -21,6 +27,7 @@ const SearchBar = props => {
         <FiCompass className="icon" />
         <FiHeart className="icon" />
         <FiUser className="icon" />
+        <FiLogOut className="icon" onClick={props.logout} />
       </div>
     </div>
   );
