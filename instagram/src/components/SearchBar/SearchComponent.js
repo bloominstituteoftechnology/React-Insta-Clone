@@ -18,9 +18,10 @@ class SearchComponent extends React.Component{
           <img className="instagram_logo" alt="instagram logo" src="./../img/instagram.png" />
         </div>
         <div className="input">
-        <input
+        <input className="search-input"
           type="text"
-          placeholder="Search"/>
+          placeholder="Search"
+          onChange={this.props.searchPostHandler}/>
         </div>
         <div className="search-component-navigation">
           <img className="icons" alt="browse" src="./../img/compass.png" />

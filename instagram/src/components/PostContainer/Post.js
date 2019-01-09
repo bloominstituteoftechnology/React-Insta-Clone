@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Post.css';
 import Comments from '../CommentSection/Comments';
 
@@ -6,13 +7,18 @@ class Post extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      data: this.props.data,
       likes:this.props.data.likes,
     }
   }
 
+  addLike = () => {
+    this.setState({
+      likes: this.state.likes + 1
+    })
+  }
+
   render(){
-    const user = this.state.data;
+    const user = this.props.data;
     return (
       <div className="user_post">
         <div className="userInfo">
@@ -25,16 +31,24 @@ class Post extends React.Component{
           <img className="post_image" alt="user_post" src={user.imageUrl} />
         </div>
         <div className="interaction_container">
-          <img className="user_interaction" alt="likes" src="./../img/heart.png" />
+          <img onClick={this.addLike} className="user_interaction" alt="likes" src="./../img/heart.png" />
           <img className="user_interaction" alt="comment" src="./../img/message.png" />
         </div>
         <div className="interaction_container">
-          <p>{user.likes} likes </p>
+          <p>{this.state.likes} likes </p>
         </div>
         <Comments comments = {user.comments} time={user.timestamp}/>
       </div>
     )
   }
 }
+
+Post.propTypes = {
+  post: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string
+  })
+};
 
 export default Post;
