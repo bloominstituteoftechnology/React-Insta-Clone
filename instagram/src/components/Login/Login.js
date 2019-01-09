@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './Login.css';
 
 const Login = props => {
@@ -12,6 +14,13 @@ const Login = props => {
       </form>
     </div>
   );
+}
+
+Login.propTypes = {
+  login: PropTypes.func,
+  handleUser: PropTypes.func,
+  handlePass: PropTypes.func,
+  signup: PropTypes.func,
 }
 
 export default Login;

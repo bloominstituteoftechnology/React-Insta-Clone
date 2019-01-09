@@ -68,7 +68,7 @@ const Authenticate = Component => {
         return;
       }
         this.setState({
-          page: <Login login={this.login}
+          page: <Login  login={this.login}
                         handleUser={this.handleUser}
                         handlePass={this.handlePassword}
                         signup={this.signUp}
