@@ -23,6 +23,7 @@ class CommentSection extends React.Component {
       clicked: false,
       comments: props.comments,
       modal: false,
+      username: localStorage.getItem('username'),
     };
 
     this.toggle = this.toggle.bind(this);
@@ -34,7 +35,7 @@ class CommentSection extends React.Component {
       const newComments = this.state.comments.slice();
       const newValue = event.target.value;
 
-      newComments.push({username: 'Anonymous', text: newValue});
+      newComments.push({username: this.state.username, text: newValue});
 
       localStorage.setItem(`${this.state.time}-comment`, JSON.stringify(newComments));
       this.setState({comments: newComments});
