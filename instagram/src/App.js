@@ -7,6 +7,7 @@ import dummyData from './dummy-data';
 // import CommentSection from './components/CommentSection/CommentSection';
 import SearchBar from './components/SearchBar/SearchBar';
 import PropTypes from "prop-types";
+import PostsPage from './components/PostContainer/PostsPage';
 
 
 
@@ -64,17 +65,25 @@ class App extends Component {
     })
   }
 
-  // searchFilter = event => {
-
-  //   const filteredPosts2 = this.state.userPosts;
-  //   console.log("filtered posts: ", filteredPosts2)
-  //    filteredPosts2.filter((post) => {
-  //     let userPostName = post.username.toLowerCase();
-  //   if (userPostName.includes(event.target.value)){
-  //     return post;
-  //   }
-  // });
-  // this.setState({ filteredPosts: filteredPosts2 });
+  // render() {
+  //   return (
+  //     <div className="App">
+  //       <header className="App-header">
+  //         {/* <img src={logo} className="App-logo" alt="logo" /> */}
+  //       </header>
+  //       <SearchBar 
+  //                 searchFilteredPosts={this.searchFilter}
+  //       />
+  //      <PostContainer 
+  //      posts={
+  //        this.state.filteredPosts.length > 0 
+  //        ? this.state.filteredPosts
+  //        : this.state.userPosts
+  //       } 
+  //      />
+  //      {/* <CommentSection commentInput={this.state.userPosts} /> */}
+  //     </div>
+  //   );
   // }
 
   render() {
@@ -83,9 +92,8 @@ class App extends Component {
         <header className="App-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
         </header>
+        <PostsPage />
         <SearchBar 
-                  // users={this.state.userPosts}
-                  // search={this.state.search}
                   searchFilteredPosts={this.searchFilter}
         />
        <PostContainer 
@@ -94,8 +102,6 @@ class App extends Component {
          ? this.state.filteredPosts
          : this.state.userPosts
         } 
-        // onChange={this.filteredPosts}
-        // match={this.props.match}
        />
        {/* <CommentSection commentInput={this.state.userPosts} /> */}
       </div>
