@@ -1,3 +1,7 @@
-.CommentSection{
-    border: 1px solid green;
+.commentSection{
+    border: 1px solid purple;
+}
+.username{
+    font-weight: bold;
+    size: 15px;
 }

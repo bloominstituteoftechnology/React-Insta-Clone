@@ -1,3 +1,22 @@
 .postContainer {
-    border: 1px solid purple;
+    border: 1px solid red;
+    height: 500px;
+    width: 50%;
+    margin: 5px auto;
+    padding-bottom: 10px;
+}
+.postHead{
+    border: 1px solid pink;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.postHeadUsername{
+    font-weight: bold;
+    size: 15px;
+}
+.userIcon{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
 }

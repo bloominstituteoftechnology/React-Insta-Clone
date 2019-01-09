@@ -6,8 +6,6 @@ const Post = props => {
 	return (
 		<div className='postData'>
 			
-			
-			
 			<PostHeader
 				username={props.post.username}
 				// username, text

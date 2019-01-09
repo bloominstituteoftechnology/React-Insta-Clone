@@ -12,16 +12,16 @@ const SearchBar = () => {
     return(
         <div className = 'container'>
             <div className = 'branding'>
-                <img src={Logo} alt='logo'/>
+                <img className = 'searchLogos' src={Logo} alt='logo'/>
                 <img className = 'brand' src={Brand} alt='brand'/>
             </div>
             <div className = 'SearchBar'>
                 <input type="text" placeholder="Search"/>
             </div>
             <div className = 'ProfileSection'>
-                <img src={Compass}alt = 'compass'/>
-                <img src={Heart}alt='heart'/>
-                <img src={User}alt='user'/>
+                <img className = 'searchLogos' src={Compass}alt = 'compass'/>
+                <img className = 'searchLogos' src={Heart}alt='heart'/>
+                <img className = 'searchLogos' src={User}alt='user'/>
             </div>
 		</div>
     )
