@@ -4,16 +4,8 @@ import "./SearchBar.css";
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      search: ""
-    };
   }
-  search = e => {
-    this.setState({
-      search: e.target.value
-    });
-    this.props.sort(this.state.search);
-  };
+
   render() {
     return (
       <div className="input">
@@ -21,8 +13,8 @@ class SearchBar extends React.Component {
           className="searchbar"
           type="text"
           placeholder="Search"
-          value={this.state.search}
-          onChange={this.search}
+          value={this.props.searchInput}
+          onChange={this.props.search}
         />
       </div>
     );

@@ -1,73 +1,64 @@
 import React, { Component } from "react";
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer";
+import PostsPage from "./components/PostContainer/PostsPage";
 import dummyData from "./dummy-data";
+import Authenticate from "./components/Authentication/Authenticate";
 import "./App.css";
+import Posts from "./components/Posts/Posts";
+
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      posts: [],
-      comments: []
-    };
+    // this.state = {
+    //   posts: [],
+    //   search: [],
+    //   comments: []
+    // };
   }
-  liked = (e, i) => {
-    let array = this.state.posts;
-    array[i].likes += 1;
-    this.setState({
-      posts: array
-    });
-  };
-  sort = text => {
-    let array = this.state.posts;
-    let newArray = array.filter(e => {
-      return e.username.includes(text);
-    });
-    console.log(array);
-    this.setState({
-      posts: newArray
-    });
-  };
-  componentDidMount() {
-    this.setState({
-      posts: dummyData.map(e => {
-        return {
-          username: e.username,
-          thumbnailUrl: e.thumbnailUrl,
-          imageUrl: e.imageUrl,
-          likes: e.likes,
-          timestamp: e.timestamp
-        };
-      }),
-      comments: dummyData.map(e => {
-        return e.comments;
-      })
-    });
-  }
+  // liked = (e, i) => {
+  //   let array = this.state.posts;
+  //   array[i].likes += 1;
+  //   this.setState({
+  //     posts: array
+  //   });
+  // };
+  // sort = text => {
+  //   let array = this.state.posts;
+  //   let newArray;
+  //   if (text.length != "") {
+  //     newArray = array.filter(e => {
+  //       return e.username.includes(text);
+  //     });
+  //   } else {
+  //     newArray = array;
+  //   }
+  //   this.setState({
+  //     search: newArray
+  //   });
+  // };
+  // componentDidMount() {
+  //   this.setState({
+  //     posts: dummyData.map(e => {
+  //       return {
+  //         username: e.username,
+  //         thumbnailUrl: e.thumbnailUrl,
+  //         imageUrl: e.imageUrl,
+  //         likes: e.likes,
+  //         timestamp: e.timestamp
+  //       };
+  //     }),
+  //     search: this.state.posts,
+  //     comments: dummyData.map(e => {
+  //       return e.comments;
+  //     })
+  //   });
+  // }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <div className="brand">
-            <span className="brand__logo">
-              <i className="fas fa-camera-retro" />
-            </span>
-            <span className="brand__line">│</span>
-            <span className="brand__title">Instaclone</span>
-          </div>
-          <SearchBar sort={this.sort} />
-          <i className="far fa-compass" />
-          <i className="far fa-heart" />
-          <i className="far fa-user" />
-        </header>
-        <PostContainer
-          like={this.liked}
-          posts={this.state.posts}
-          comments={this.state.comments}
-        />
+        <PostsPage />
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);

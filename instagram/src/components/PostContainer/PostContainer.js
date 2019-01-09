@@ -10,6 +10,7 @@ class PostContainer extends React.Component {
   render() {
     return (
       <Posts
+        searchInput={this.props.searchInput}
         like={this.props.like}
         posts={this.props.posts}
         comments={this.props.comments}
