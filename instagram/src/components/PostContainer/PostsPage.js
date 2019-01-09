@@ -4,10 +4,16 @@ import PostContainer from '../PostContainer/PostContainer';
 
 const PostsPage = (props) => {
   return (
-    <>
-      <SearchBar data={props.data} onSearch={props.onSearch} handleNewSearch={props.handleNewSearch} searched={props.searched}/>
-      <PostContainer data={props.data} users={props.users}/>
-    </>
+    <div className="posts-page">
+      <SearchBar 
+        data={props.data} 
+        onSearch={props.onSearch} 
+        handleNewSearch={props.handleNewSearch} 
+        searched={props.searched}/>
+      <PostContainer
+        data={props.data} 
+        users={props.users}/>
+    </div>
   )
 }
 

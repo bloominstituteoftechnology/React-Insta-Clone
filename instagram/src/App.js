@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchBar from './components/SearchBar/SearchBar';
+// import SearchBar from './components/SearchBar/SearchBar';
 import dummyData  from './dummy-data.js';
-import PostContainer from './components/PostContainer/PostContainer';
-import PostsPage from './components/PostContainer/PostsPage';
+// import PostContainer from './components/PostContainer/PostContainer';
+// import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './Authentication/Authenticate';
-import LoginPage from './components/Login/Login';
+// import LoginPage from './components/Login/Login';
 
 class App extends Component {
   constructor(){
@@ -33,12 +33,10 @@ class App extends Component {
     const searchedUserResult = users.filter(user => user.username === searchedUser);
 
     if (searchedUserResult.length > 0) {
-      this.setState(
-        {
-          data: searchedUserResult,
-          searched: ""
-        }
-      )
+      this.setState({
+        data: searchedUserResult,
+        searched: ""
+      })
     } else {
       alert ("No user by that name. Please try again.");
       this.setState({data: dummyData})

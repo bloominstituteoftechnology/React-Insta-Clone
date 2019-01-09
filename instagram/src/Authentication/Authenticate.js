@@ -17,24 +17,26 @@ const Authenticate = WrappedComponent => {
         this.setState({loggedIn: true})
       }
     } 
-    // clearStorage = () => {
-    //   localStorage.clear();
-    // }
 
     componentDidMount() {
       this.checkLogin();
     }
 
-    
-
     render() {
       if (this.state.loggedIn === true) {
-        return <PostsPage data={this.props.data} users={this.props.users} searched={this.props.searched} onSearch={this.onSearch} handleNewSearch={this.handleNewSearch} />
+        return <PostsPage 
+                  data={this.props.data} 
+                  users={this.props.users} 
+                  searched={this.props.searched} 
+                  onSearch={this.props.onSearch} 
+                  handleNewSearch={this.props.handleNewSearch} />
       } else {
-        return <LoginPage handleNewLogin={this.props.handleNewLogin} onLogin={this.props.onLogin} loggedIn={this.state.loggedIn} />
+        return <LoginPage 
+                  handleNewLogin={this.props.handleNewLogin} 
+                  onLogin={this.props.onLogin} 
+                  loggedIn={this.state.loggedIn} />
       }
     }
-
   }
 }
 
