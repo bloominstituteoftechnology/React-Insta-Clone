@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import PostsPage from "./components/PostContainer/PostsPage";
 import Login from './components/Login/Login'
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      validated: false
+      validated: false,
     }
   }
 
@@ -13,10 +13,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Authenticate validated={this.state.validated}>
-          <PostsPage
-            filteredPosts={this.state.filteredPosts}
-            posts={this.state.posts}
-          />
+          <PostsPage />
         </Authenticate>
       </div>
     );
