@@ -15,11 +15,40 @@ class App extends Component {
   constructor (){
     super();
     this.state ={
-      userPosts: [],
-      filteredPosts: []
+      validated: false
+      // userPosts: [],
+      // filteredPosts: []
       // commentData: commentData
     }
   }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        </header>
+        <PostsPage 
+        posts={
+          this.state.posts
+          } 
+          filteredPosts={this.state.filteredPosts}
+        />
+        {/* <SearchBar 
+                  searchFilteredPosts={this.searchFilter}
+        />
+       <PostContainer 
+       posts={
+         this.state.filteredPosts.length > 0 
+         ? this.state.filteredPosts
+         : this.state.userPosts
+        } 
+       /> */}
+       {/* <CommentSection commentInput={this.state.userPosts} /> */}
+      </div>
+    );
+  }
+}
 
   // componentDidMount(){
   //  console.log(dummyData);
@@ -31,13 +60,13 @@ class App extends Component {
   //   }, 2000);
   // }
 
-  componentDidMount() {
-    this.setState({ userPosts: dummyData });
-  }
+  // componentDidMount() {
+  //   this.setState({ userPosts: dummyData });
+  // }
 
-  componentDidUpdate(){
-    console.log('Did it work?')
-  }
+  // componentDidUpdate(){
+  //   console.log('Did it work?')
+  // }
 
   // handleChange = (e) => {
   //   this.setState({
@@ -46,24 +75,24 @@ class App extends Component {
   //   this.onChange(e.target.value)
   // }
 
-  searchFilter = event => {
-    let filteredPostResults = this.state.userPosts;
-    // console.log("filtered posts: ", filteredPostResults)
-    filteredPostResults = filteredPostResults.filter((post) => {
-      console.log("filtered posts: ", filteredPostResults)
-      let userPostName = post.username.toLowerCase();
-    // return post.username.toLowerCase().search(
-    //   post.username.value.toLowerCase()) !== -1;
-        // return userPostName.indexOf( 
-        //   p.toLowerCase()) !== -1
-           if (userPostName.includes(event.target.value)){
-      return post;
-    }
-    });
-    this.setState({
-      filteredPosts: filteredPostResults
-    })
-  }
+  // searchFilter = event => {
+  //   let filteredPostResults = this.state.userPosts;
+  //   // console.log("filtered posts: ", filteredPostResults)
+  //   filteredPostResults = filteredPostResults.filter((post) => {
+  //     console.log("filtered posts: ", filteredPostResults)
+  //     let userPostName = post.username.toLowerCase();
+  //   // return post.username.toLowerCase().search(
+  //   //   post.username.value.toLowerCase()) !== -1;
+  //       // return userPostName.indexOf( 
+  //       //   p.toLowerCase()) !== -1
+  //          if (userPostName.includes(event.target.value)){
+  //     return post;
+  //   }
+  //   });
+  //   this.setState({
+  //     filteredPosts: filteredPostResults
+  //   })
+  // }
 
   // render() {
   //   return (
@@ -86,28 +115,7 @@ class App extends Component {
   //   );
   // }
 
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        </header>
-        <PostsPage />
-        <SearchBar 
-                  searchFilteredPosts={this.searchFilter}
-        />
-       <PostContainer 
-       posts={
-         this.state.filteredPosts.length > 0 
-         ? this.state.filteredPosts
-         : this.state.userPosts
-        } 
-       />
-       {/* <CommentSection commentInput={this.state.userPosts} /> */}
-      </div>
-    );
-  }
-}
+  
 
 App.propTypes = {
   dummyData: PropTypes.array,

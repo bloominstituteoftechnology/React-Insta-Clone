@@ -2,6 +2,8 @@ import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from '../PostContainer/PostContainer';
 import dummyData from '../../dummy-data';
+// import PropTypes from "prop-types";
+import '../../App.css';
 
 
 class PostsPage extends React.Component {
