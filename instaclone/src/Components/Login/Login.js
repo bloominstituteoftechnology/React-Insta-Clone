@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-//import './Login.css';
+
 import logo from '../../imgs/instagram_logo.svg'
+import {Button, Input} from '../../Styles/Reusables'
 
 import styled from 'styled-components'
-
-
 
 const LoginContainer= styled.div`
     display: flex;
@@ -20,29 +19,7 @@ const StyledForm= styled.form`
     justify-content: center;
     flex-direction: column;
 `
-const StyledInput= styled.input`
-    width: 250px;
-    height: 25px;
-    padding:0px 6px;
-    margin-bottom:10px;
-    border:1px solid lightgray;
-    border-radius:5px;
-    outline: none;
 
-    &:focus{
-        border:2px solid gray;
-    }
-`
-const SubmitButton= styled.button`
-    height: 25px;
-    max-width:250px;
-    width: 250px;
-    font-weight: bolder;
-    
-    border: none;
-    background-color: #0097F7;
-    color:white;
-`
 const InstagramLogo = styled.img`
     height: 50px;
 `
@@ -74,19 +51,19 @@ class Login extends Component {
             <LoginContainer>
                 <InstagramLogo src={logo} alt=""/>
                 <StyledForm action="" onSubmit={this.submitHandler}>
-                    <StyledInput type="text" 
+                    <Input type="text" 
                         name="username" 
                         placeholder="Phone number, username, or email"
                         value={this.state.username}
                         onChange={this.changeHandler} 
                     />
-                    <StyledInput type="password" 
+                    <Input type="password" 
                         name="password" 
                         placeholder="Password"
                         value={this.state.password}
                         onChange={this.changeHandler} 
                     />
-                    <SubmitButton type="submit">Log In</SubmitButton>
+                    <Button primary type="submit">Log In</Button>
                 </StyledForm>
             </LoginContainer>
         );
