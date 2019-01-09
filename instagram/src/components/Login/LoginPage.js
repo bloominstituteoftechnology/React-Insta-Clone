@@ -1,5 +1,5 @@
 import React from 'react'
-import {iglogo} from '../../assets/iglogo'
+import iglogo from '../../assets/iglogo.png'
 
 const LoginPage = props => {
   return (

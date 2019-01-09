@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import PostsPage from './components/PostContainer/PostsPage';
-import Authenticate from './components/Authentication/Authenticate'
-
-class App extends Component {
+import React, { Component } from "react";
+import PostsPage from "./components/PostContainer/PostsPage";
+import Login from './components/Login/Login'
+class App extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -13,13 +12,23 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PostsPage 
-          filteredPosts={this.state.filteredPosts}
-          posts={this.state.posts}
-        />
+        <Authenticate validated={this.state.validated}>
+          <PostsPage
+            filteredPosts={this.state.filteredPosts}
+            posts={this.state.posts}
+          />
+        </Authenticate>
       </div>
     );
   }
 }
 
-export default Authenticate(App);
+const Authenticate = props => {
+  return props.validated ? (
+    <div>{props.children}</div>
+  ) : (
+    <Login />
+  );
+};
+
+export default App;

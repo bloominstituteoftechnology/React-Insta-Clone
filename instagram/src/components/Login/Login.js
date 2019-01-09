@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
-import App from '../../App'
 import LoginPage from '../Login/LoginPage'
 
 class Login extends Component {
   constructor() {
     super();
     this.state = {
+      username: "",
+      password: "",
       loggedIn: false
     }
   }
 
-  componentDidMount () {
-    return (this.state.loggedIn) ? <App /> : <LoginPage />
-  }
-
   render() {
     return (
-
+      <div>
+        <LoginPage 
+          username={this.state.username}
+          password={this.state.password}
+          loggedIn={this.state.loggedIn}
+        />
+      </div>
     )
   }
 }
