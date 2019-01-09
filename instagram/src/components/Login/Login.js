@@ -13,6 +13,10 @@ class Login extends React.Component {
    this.setState({ username: e.target.value });
   };
 
+  pwHandler = e => {
+   this.setState({ password: e.target.value });
+  };
+
   login = () => {
     localStorage.setItem('username', this.state.username);
     this.setState({username: '', password: ''});
@@ -24,7 +28,7 @@ class Login extends React.Component {
       <div>
         <h1>Login Page</h1>
         <input placeholder='Username' onChange={this.usernameHandler} value={this.state.username}/>
-        <input placeholder='Password' value={this.state.password}/>
+        <input type='password' placeholder='Password' onChange={this.pwHandler} value={this.state.password}/>
         <button onClick={this.login}>Login</button>
       </div>
     );

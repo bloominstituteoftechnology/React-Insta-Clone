@@ -11,7 +11,7 @@ const Authenticate = App => {
     };
 
     componentDidMount(){
-      if(localStorage.getItem('username') === 'xpuentes'){
+      if(localStorage.getItem('username')){
         this.setState({loggedIn: true});
       }
     };
