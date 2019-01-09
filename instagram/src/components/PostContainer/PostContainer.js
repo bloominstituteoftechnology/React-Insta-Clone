@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Posts from "../Posts/Posts";
-import "./PostContainer.css";
 
 class PostContainer extends React.Component {
   constructor(props) {

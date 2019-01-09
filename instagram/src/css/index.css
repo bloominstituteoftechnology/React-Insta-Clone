@@ -1,0 +1,204 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6Mw.ttf) format('truetype');
+}
+.App-header {
+  background-color: white;
+  border-bottom: 1px solid #efefef;
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(8px + 2vmin);
+  color: black;
+}
+.brand {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.brand__line {
+  padding: 0 1rem 7px;
+}
+.brand__title {
+  font-family: "Pacifico", cursive;
+  cursor: pointer;
+  padding: 0 0 2px;
+}
+i {
+  cursor: pointer;
+}
+.post__comment {
+  font-size: 0.9rem;
+  width: 100%;
+}
+.username {
+  cursor: pointer;
+  font-weight: 600;
+}
+.post__comment {
+  font-size: 0.9rem;
+}
+.username {
+  cursor: pointer;
+  font-weight: 600;
+}
+.post__comment__input__div {
+  padding-top: 1rem;
+  border-top: 1px solid #efefef;
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+.post__comment__input {
+  flex: 1 1 auto;
+  border: none;
+  border-radius: 3px;
+  color: #999;
+  cursor: text;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 7px;
+  z-index: 2;
+}
+.post__comment__input:focus {
+  outline-width: 0;
+}
+.post__comment__input:not(:placeholder-shown) {
+  color: black;
+}
+.dots {
+  transform: translateY(25%);
+}
+.loginPage {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  margin: auto;
+}
+.login {
+  border: 1px solid grey;
+}
+.post {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem auto;
+  width: 600px;
+}
+.post__header {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #efefef;
+  border-bottom: none;
+  display: flex;
+  align-content: center;
+  border-radius: 3px;
+}
+.post__body {
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid #efefef;
+  border-top: none;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.post__body__buttons {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.main--buttons i {
+  margin: 0 0.75rem;
+}
+.main--buttons i:first-child {
+  margin: 0 0.75rem 0 0;
+}
+.fa-bookmark .far {
+  justify-self: flex-end;
+}
+.post__likes {
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.post__timestamp {
+  margin-top: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.8rem;
+  color: #999;
+}
+.post__name {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-content: center;
+  padding: 3px 0.8rem 0;
+}
+.post__profile {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.post__image {
+  width: 100%;
+  height: 100%;
+}
+.input {
+  display: flex;
+  align-items: center;
+  width: 55%;
+  justify-content: center;
+}
+.searchbar {
+  width: 50%;
+  background: #fafafa;
+  border: solid 1px #dbdbdb;
+  border-radius: 3px;
+  color: #999;
+  cursor: text;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 7px;
+  text-align: center;
+  z-index: 2;
+}
+.searchbar:focus {
+  outline-width: 0;
+  text-align: left;
+}
+.searchbar:not(:placeholder-shown) {
+  color: black;
+  text-align: left;
+}

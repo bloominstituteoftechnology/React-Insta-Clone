@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import CommentSection from "../CommentSection/CommentSection";
-import "./Posts.css";
 
 const Posts = props => {
   let arr = props.posts.map((post, i) => {

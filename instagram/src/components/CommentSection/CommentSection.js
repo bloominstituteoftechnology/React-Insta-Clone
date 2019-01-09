@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Moment from "react-moment";
 import Comment from "../Comment/Comment";
-import "./CommentSection.css";
 
 class CommentSection extends React.Component {
   constructor(props) {
