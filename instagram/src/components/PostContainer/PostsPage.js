@@ -42,7 +42,10 @@ class PostsPage extends React.Component {
   render() {
     return(
       <div className="posts-page">
-        <SearchBar data={this.state.data} searchHandler={this.searchPosts} />
+        <SearchBar data={this.state.data}
+                    searchHandler={this.searchPosts}
+                    logout={this.props.logout}/>
+
         { this.state.data.length === 0 ? <h1 className="load">LOADING...</h1>
           : this.state.data.map(obj => <PostContainer key={Math.random()}
                                                             user={obj.username}

@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <PostsPage />
+        <PostsPage logout={this.props.logout}/>
       </div>
     );
   }

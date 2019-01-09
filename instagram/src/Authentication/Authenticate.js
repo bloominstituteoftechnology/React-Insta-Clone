@@ -8,23 +8,35 @@ const Authenticate = Component => {
       super(props);
 
       this.state = {
-        loggedIn: false,
+        loggedIn: localStorage.getItem('loggedIn'),
         username: "",
-        password: ""
+        password: "",
+        page: localStorage.getItem('page')
       }
     }
 
     login = (event) => {
-      event.preventDefault();
       const user = localStorage.getItem('username');
       const pass = localStorage.getItem('password');
       const userIn = this.state.username;
       const passIn = this.state.password;
 
       if(user === userIn && pass === passIn) {
-        this.setState(prev => {
-          return {loggedIn: !prev.loggedIn}
-        })
+        localStorage.setItem('loggedIn', true);
+
+        this.setState({
+          loggedIn: true
+        });
+      }
+    }
+
+    logout = (event) => {
+      console.log('test')
+      localStorage.setItem('loggedIn', false);
+
+      this.setState({
+        loggedIn: localStorage.getItem('loggedIn')
+      });
     }
 
     signUp = (event) => {
@@ -47,17 +59,33 @@ const Authenticate = Component => {
       });
     }
 
-    render() {
-      if(this.state.loggedIn) {
-        return <App />
+    componentDidMount() {
+      if(this.state.loggedIn === "true") {
+        this.setState({
+          page: <App logout={this.logout}/>
+        })
+
+        return;
       }
-      return <Login login={this.login}
-                    handleUser={this.handleUser}
-                    handlePass={this.handlePassword}
-                    signup={this.signUp}
-                />
-    }
-  };
+        this.setState({
+          page: <Login login={this.login}
+                        handleUser={this.handleUser}
+                        handlePass={this.handlePassword}
+                        signup={this.signUp}
+                    />
+        })
+      }
+
+    render() {
+      const page = this.state.page === undefined ? <h1>Loading...</h1> : this.state.page
+
+      return(
+        <div>
+          {page}
+        </div>
+      );
+    };
+  }
 
   return Page;
 }

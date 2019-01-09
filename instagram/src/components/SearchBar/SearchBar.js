@@ -31,6 +31,7 @@ class SearchBar extends React.Component {
           <img src={compass} alt="Instagram" />
           <img src={heart} alt="Instagram" />
           <img src={profile} alt="Instagram" />
+          <button onClick={this.props.logout}>Sign Out</button>
         </div>
       </div>
     );
