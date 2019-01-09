@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import PostsPage from './components/PostContainer/PostsPage';
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -16,6 +18,10 @@ class App extends Component {
       </div>
     );
   }
+}
+
+App.propTypes = {
+  logout: PropTypes.func,
 }
 
 export default App;

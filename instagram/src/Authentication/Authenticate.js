@@ -11,7 +11,6 @@ const Authenticate = Component => {
         loggedIn: localStorage.getItem('loggedIn'),
         username: "",
         password: "",
-        page: localStorage.getItem('page')
       }
     }
 
@@ -59,25 +58,14 @@ const Authenticate = Component => {
       });
     }
 
-    componentDidMount() {
-      if(this.state.loggedIn === "true") {
-        this.setState({
-          page: <App logout={this.logout}/>
-        })
-
-        return;
-      }
-        this.setState({
-          page: <Login  login={this.login}
-                        handleUser={this.handleUser}
-                        handlePass={this.handlePassword}
-                        signup={this.signUp}
-                    />
-        })
-      }
-
     render() {
-      const page = this.state.page === undefined ? <h1>Loading...</h1> : this.state.page
+      const page = this.state.loggedIn === "false" || this.state.loggedIn === null
+                                                      ? <Login login={this.login}
+                                                               handleUser={this.handleUser}
+                                                               handlePass={this.handlePassword}
+                                                               signup={this.signUp}
+                                                           />
+                                                      : <Component logout={this.logout} />
 
       return(
         <div>
