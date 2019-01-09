@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './UserTitle.css'
 import heart from '../../data/pics/heart.png'
 import comment from '../../data/pics/comment.png'
@@ -55,12 +56,16 @@ class UserPost extends React.Component {
 					</div>
 				</div>
 		)
-	
-				
-		
 	}
-
 }
+
+UserPost.propTypes = {
+	User: PropTypes.shape({
+		username: PropTypes.string,
+		thumbnailUrl: PropTypes.string,
+		imageUrl: PropTypes.string
+	})
+};
 
 
 export default UserPost;
