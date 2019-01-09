@@ -1,4 +1,5 @@
 import React from 'react';
+import Login from '../Login/Login';
 
 
 const Authenticate = App => 
@@ -6,11 +7,22 @@ const Authenticate = App =>
         constructor(props) {
             super(props)
             this.state = {
-                
+                loggedIn: false
             }
         }
+
+        componentDidMount() {
+            if (localStorage.getItem('username')){
+            this.setState({loggedIn: true}) 
+        }
+            else   { this.setState({loggedIn: false})
+            }
+        }
+
         render(){
-            return <App />
+            if (this.state.loggedIn)
+            return <App />;
+            else return <Login />;
         }
     }
 

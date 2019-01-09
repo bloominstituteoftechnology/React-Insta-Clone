@@ -9,14 +9,14 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PropTypes from "prop-types";
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
-
+import Login from './components/Login/Login';
 
 
 class App extends Component {
   constructor (){
     super();
     this.state ={
-      validated: false
+      valid: false
       // userPosts: [],
       // filteredPosts: []
       // commentData: commentData
@@ -30,10 +30,10 @@ class App extends Component {
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
         </header>
         <PostsPage 
-        posts={
-          this.state.posts
-          } 
-          filteredPosts={this.state.filteredPosts}
+        // posts={
+        //   this.state.posts
+        //   } 
+        //   filteredPosts={this.state.filteredPosts}
         />
         {/* <SearchBar 
                   searchFilteredPosts={this.searchFilter}
@@ -122,4 +122,4 @@ App.propTypes = {
   dummyData: PropTypes.array,
 }
 
-export default App;
+export default Authenticate(App);
