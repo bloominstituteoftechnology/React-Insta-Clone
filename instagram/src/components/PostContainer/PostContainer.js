@@ -17,6 +17,7 @@ const PostContainer = (props) => {
            <div>{post.likes}</div>
            <div>{post.timestamp}</div>
            <CommentSection 
+
            comm = {post.comments}/>
            </div>
          )  
@@ -36,7 +37,5 @@ const PostContainer = (props) => {
         timestamp: PropTypes.string      
         }
       ))
-    }
-      
-
+    }     
 export default PostContainer;

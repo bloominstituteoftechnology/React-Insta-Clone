@@ -13,13 +13,12 @@ const CommentSection = (props) => {
           )
       })}
          <div className="commentForm">
-        Add a comment...
+         <input id="" type="text" placeholder="Add a comment" style = {{border: 'none'}} />
       </div>
     </div>
    
   );
 }
-
 
 CommentSection.propTypes = {
   comm: PropTypes.arrayOf(PropTypes.shape(
