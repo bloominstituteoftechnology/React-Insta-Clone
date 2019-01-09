@@ -61,7 +61,6 @@ class CommentSection extends Component {
 
   render(){
     // console.log('test comments', this.state.comments)
-    console.log(this.state.postLiked)
     return (
       <div className='comment-section'> 
         <img src={this.state.data.imageUrl} alt='post image' />

@@ -8,7 +8,7 @@ const PostContainer = props => {
     return (
         <div className='post-style'> 
             <div className='post-header'>
-                <img src={props.data.thumbnailUrl}/>
+                <img src={props.data.thumbnailUrl} alt="thumbnail"/>
                 <p>{props.data.username}</p>
             </div>
             <CommentSection comments={props.data.comments} data={props.data}/>

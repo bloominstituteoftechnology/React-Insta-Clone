@@ -21,10 +21,10 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.data)
+    // console.log(this.state.data)
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar data={this.state.data}/>
         {this.state.data.map(dataItem => (
           <PostContainer data={dataItem} key={dataItem.timestamp}/>
         ))}

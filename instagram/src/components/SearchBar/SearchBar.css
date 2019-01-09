@@ -38,23 +38,24 @@
 } */
 
 .search {
-    justify-content: center;
+    text-align: center;
     height: 2rem;
     width: 15rem;
     font-size: 1.2rem;
 }
 
 .search-div {
-    border: 1px solid lightgray;
+    /* border: 1px solid lightgray; */
     color: gray;
     height: 2rem;
     width: 30rem;
     font-size: 1.2rem;
     display: flex; 
+    justify-content: center;
     align-items: center;
     border-radius: 5px;
     margin-right: 5rem;
-    padding-right: 10rem;
+    /* padding-right: 10rem; */
 }
 
 .searchbar-icon {

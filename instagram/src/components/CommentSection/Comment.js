@@ -13,7 +13,7 @@ class Comment extends Component {
     }
 
     render(){
-        console.log("Comment: ", this.state)
+        // console.log("Comment: ", this.state)
         return (
             <div className='comment'>
                <p className='username'>{this.state.username}</p> 
