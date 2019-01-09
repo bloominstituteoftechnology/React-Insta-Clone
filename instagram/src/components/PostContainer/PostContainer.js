@@ -17,8 +17,7 @@ const PostContainer = (props) => {
            <div>{post.likes}</div>
            <div>{post.timestamp}</div>
            <CommentSection 
-
-           comm = {post.comments}/>
+            comm = {post.comments}/>
            </div>
          )  
        }
