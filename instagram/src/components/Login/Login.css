@@ -55,7 +55,6 @@
   width: 60%;
   height: 35px;
   background-color: #405de6;
-  margin: 10px 0;
 
   color: white;
   font-size: 1.4rem;
@@ -83,6 +82,11 @@
 .app-icons img {
   height: 40px;
   margin-bottom: 60px;
+}
+
+.app-icons img:last-child {
+  margin-left: 12px;
+  border-radius: 5px;
 }
 
 .form__footer {
