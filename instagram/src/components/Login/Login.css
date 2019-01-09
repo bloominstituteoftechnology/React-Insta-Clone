@@ -1,17 +1,27 @@
-.login {
-  height: 60vh;
-  width: 35%;
-  background-color:#cdcdcd;
-  box-shadow: 0 0 14px 6px rgba(0, 0, 0, 0.75);
+.login--container {
+  height: 100vh;
+  background-color: #fafafa;
+}
 
-  color: black;
-  font-weight: bold;
-  margin: 5% auto;
-  border-radius: 10px;
+.login__main {
+  display: flex;
+  justify-content: center;
+}
 
+.login__main__img {
+  position: relative;
+}
+
+#screenshot {
+  position: absolute;
+  top: 100px;
+  left: 151px;
+}
+
+.form-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -21,27 +31,29 @@
   justify-content: space-around;
   align-items: center;
 
-  height: 75%;
-  width: 80%;
+  height: 60%;
+  width: 100%;
+  padding: 40px 0;
+
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
 }
 
-.login__form p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  font-size: 2rem;
-  letter-spacing: 1.5px;
-}
-
-.login__form p input {
+.login__form input {
   margin-top: 10px;
+  width: 60%;
+  height: 35px;
+  padding-left: 7px;
+
+  font-size: 1.4rem;
 }
 
 .login__form button {
   border: none;
-  width: 27%;
-  height: 40px;
+  border-radius: 7px;
+  width: 60%;
+  height: 35px;
   background-color: #405de6;
   margin: 10px 0;
 
@@ -63,9 +75,65 @@
   outline: none;
 }
 
+.form-container p {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.app-icons img {
+  height: 40px;
+  margin-bottom: 60px;
+}
+
+.form__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.form__footer p {
+  margin: 0;
+}
+
+.form__footer__links {
+  flex: .55;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-right: 50px;
+}
+
+.form__footer__links a {
+  color: #003569;
+  font-size: 1.4rem;
+  margin-right: 8px;
+}
+
+.form__footer__links a:hover {
+  text-decoration: none;
+}
+
 @media(max-width: 952px) {
   .login__form button {
     width: 34%;
+  }
+}
+
+@media(max-width: 891px) {
+  .login__main__img {
+    display: none;
+  }
+
+  .login__main {
+    height: 80%;
+  }
+
+  .form__footer__links {
+    flex: .8;
   }
 }
 
