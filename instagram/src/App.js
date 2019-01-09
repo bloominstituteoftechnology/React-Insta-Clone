@@ -3,12 +3,16 @@ import './App.css';
 import dummyData from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
+import PostsPage from './components/PostContainer/PostsPage.js';
+import Authenticate from './components/Authentication/Authenticate.js';
 
 class App extends Component {
   constructor() {
     super();
-    this.state = { dummy: [],
-    filteredUserName: ''}
+    this.state = {
+      dummy: [],
+      filteredUserName: ''
+    }
   }
   componentDidMount() {
     setTimeout(() => {
@@ -17,25 +21,23 @@ class App extends Component {
   }
 
   inputFilteredUserName = event => {
-    this.setState({filteredUserName: event.target.value})
+    this.setState({ filteredUserName: event.target.value })
   }
 
   filterPost = event => {
     event.preventDefault();
     let userName = this.state.filteredUserName;
-    console.log(userName)
     let dummyCopy = this.state.dummy.slice();
-    let filteredPost = [];
-    // console.log(dummyCopy[0].username)
 
-    for (let i = 0; i < dummyCopy.length; i++) {
-      if (dummyCopy[i].username === userName) {
-        filteredPost.push(dummyCopy[i])
+    const filteredPost = dummyCopy.filter(post => {
+      if (post.username === userName) {
+        return true;
       }
-    }
-    this.setState({dummy: filteredPost});
-    if(userName === ''){
-      this.setState({dummy: dummyData});
+    })
+    this.setState({ dummy: filteredPost })
+
+    if (userName === '') {
+      this.setState({ dummy: dummyData });
     }
 
   }
@@ -43,17 +45,22 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar filterPost={this.filterPost} inputFilteredUserName={this.inputFilteredUserName} />
+        <PostsPage filterPost={this.filterPost}
+          inputFilteredUserName={this.inputFilteredUserName}
+          dummy={this.state.dummy} />
+          {/* <AuthenticateApp /> */}
+        {/* <SearchBar filterPost={this.filterPost} inputFilteredUserName={this.inputFilteredUserName} />
         {this.state.dummy.length === 0 ? (
           <h1>Loading</h1>
         ) : (
             this.state.dummy.map(post => {
               return <PostContainer post={post} key={post.timestamp} />
-            }))}
-        <p>{this.state.example}</p>
+            }))} */}
       </div>
     );
   }
 }
+
+// const AuthenticateApp = Authenticate(App);
 
 export default App;
