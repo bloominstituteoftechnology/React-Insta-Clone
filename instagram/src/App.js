@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostPage from './components/PostContainer/PostPage';
+// import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
   constructor() {
@@ -51,16 +52,15 @@ class App extends Component {
   }
 
   componentDidMount() {
-    
-    
-    this.setState({ instaData: dummyData })
+    this.setState({ instaData: dummyData });
+    localStorage.setItem('data', JSON.stringify(dummyData))
   }
 
   render() {
     return (
       <div className="App">
         <SearchBar changeText={this.changeSearchText} search={this.searchQuery} clearSearch={this.clearSearch} value={this.state.searchText} />
-        {this.state.instaData.map(user => <PostContainer data={user} key={user.timestamp} like={this.addLike} />)}
+        <PostPage state={this.state} addLike={this.addLike} />
       </div>
     );
   }

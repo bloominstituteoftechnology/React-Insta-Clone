@@ -28,7 +28,7 @@ class CommentSection extends Component {
 
       return {
         comments: comments,
-        commentInput: "",
+        commentInput: ""
       };
     });
   }
