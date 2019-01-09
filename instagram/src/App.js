@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import PostsPage from "./components/PostContainer/PostsPage";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
 import dummyData from "./data/dummy-data";
@@ -20,13 +21,14 @@ class App extends Component {
   }
 
   searchInput = event => {
-    this.setState({ search: event.target.value });
+    this.setState({
+      search: event.target.value
+    });
     const searchArray = this.state.staticData;
     /* If search field is empty, show all posts */
     if (this.state.search.length === 0)
       this.setState({ posts: this.state.staticData });
-    /* Filters out posts with usernames not including substr this.state.search */
-    else {
+    /* Filters out posts with usernames not including substr this.state.search */ else {
       const resultsArray = searchArray.filter(post => {
         return post.username.includes(this.state.search);
       });
@@ -43,18 +45,7 @@ class App extends Component {
           changeHandler={this.searchInput}
           searchState={this.state.search}
         />
-        <div className={"content"}>
-          {this.state.posts.map(post => {
-            return (
-              <PostContainer
-                data={post}
-                key={post.timestamp}
-                className="post-container"
-                user={this.state.user}
-              />
-            );
-          })}
-        </div>
+        <PostsPage posts={this.state.posts} user={this.state.user} />
       </div>
     );
   }
