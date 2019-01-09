@@ -6,16 +6,17 @@ const Authenticate = WrappedComponent => {
     constructor() {
       super();
       this.state = {
-        loggedIn: true,
+        loggedIn: false,
         loginInfo: {
           username: "",
           password: ""
-        }
+        },
+        users: [{ username: "default", password: "default" }]
       };
     }
 
     nameHandler = event => {
-      event.preventDefault();
+      // event.preventDefault();
       this.setState({
         loginInfo: {
           username: event.target.value,
@@ -25,12 +26,23 @@ const Authenticate = WrappedComponent => {
     };
 
     passHandler = event => {
-      event.preventDefault();
+      // event.preventDefault();
       this.setState({
         loginInfo: {
           username: this.state.loginInfo.username,
           password: event.target.value
         }
+      });
+    };
+
+    checkCreds = () => {
+      console.log("submit");
+      this.state.users.forEach(user => {
+        if (
+          this.state.loginInfo.username === user.username &&
+          this.state.loginInfo.password === user.password
+        )
+          this.setState({ loggedIn: true });
       });
     };
 
@@ -42,6 +54,7 @@ const Authenticate = WrappedComponent => {
             password={this.state.loginInfo.password}
             nameInput={this.nameHandler}
             passInput={this.passHandler}
+            onSubmit={this.checkCreds}
           />
         );
       } else return <WrappedComponent />;

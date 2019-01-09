@@ -7,24 +7,19 @@ import "./Login.css";
 const LoginPage = props => {
   return (
     <div className="login-page">
-      <InputGroup>
-        <InputGroupAddon addonType="prepend">@</InputGroupAddon>
+      <form className="login-form" name="login" onSubmit={props.onSubmit}>
         <Input
           placeholder="username"
           value={props.userName}
           onChange={props.nameInput}
         />
-      </InputGroup>
-      <InputGroup>
-        <InputGroupAddon addonType="prepend">
-          <FiLock />
-        </InputGroupAddon>
         <Input
           placeholder="password"
           value={props.password}
           onChange={props.passInput}
         />
-      </InputGroup>
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 };
