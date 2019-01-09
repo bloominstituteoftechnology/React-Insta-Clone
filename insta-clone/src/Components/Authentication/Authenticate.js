@@ -1,13 +1,23 @@
-import React, { Component } from 'react';
-import App from '../App';
+import React from 'react';
+import Login from '../Login/Login';
 
-const Authenticate = (App) => {
-    class Authenticate extends Component {
+const Authenticate = App => {
+    return class extends React.Component {
+        constructor() {
+            super();
+            this.state = {
+                loggedIn: false
+            }
+        }
+        
         render() {
             return (
                 <div>
-                    <h2>please Authenticate</h2>
-                    <App />
+                    <h2>please authenticate</h2>
+                    <div>
+                        <Login />
+                        <App />
+                    </div>
                 </div>
             )
         }

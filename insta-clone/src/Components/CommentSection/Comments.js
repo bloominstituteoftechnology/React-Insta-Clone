@@ -29,7 +29,6 @@ class Comments extends Component {
             username: this.state.newComment.username,
             text: this.state.newComment.text
         };
-        console.log('new comment', newComment);
         commentListArray.push(newComment);
         this.setState({
             commentList: commentListArray,
