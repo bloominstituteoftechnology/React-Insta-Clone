@@ -1,0 +1,29 @@
+.login-container {
+  padding-top: 50px;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 200px;
+  margin: 2rem auto 0 auto;
+  padding: 5rem;
+  background: #aa4b6b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.login-container form input {
+  margin-bottom: 2rem;
+  height: 2rem;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  border: none;
+}
+.login-container form button {
+  font-size: 1.4rem;
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  border: none;
+  padding: .5rem;
+  border-radius: 5px;
+}

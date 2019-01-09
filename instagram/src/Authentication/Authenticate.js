@@ -12,11 +12,26 @@ const Authenticate = WrappedComponent => {
       }
     }
 
-    render() {
+    checkLogin = () => {
       if (localStorage.getItem('user')) {
+        this.setState({loggedIn: true})
+      }
+    } 
+    // clearStorage = () => {
+    //   localStorage.clear();
+    // }
+
+    componentDidMount() {
+      this.checkLogin();
+    }
+
+    
+
+    render() {
+      if (this.state.loggedIn === true) {
         return <PostsPage data={this.props.data} users={this.props.users} searched={this.props.searched} onSearch={this.onSearch} handleNewSearch={this.handleNewSearch} />
       } else {
-        return <LoginPage handleNewLogin={this.props.handleNewLogin} onLogin={this.props.onLogin} />
+        return <LoginPage handleNewLogin={this.props.handleNewLogin} onLogin={this.props.onLogin} loggedIn={this.state.loggedIn} />
       }
     }
 
