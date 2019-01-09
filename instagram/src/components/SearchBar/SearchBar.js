@@ -15,8 +15,6 @@ import profile from '../../img/insta-profile.png';
 class SearchBar extends React.Component {
 
   render() {
-
-
     return(
       <div className="search-bar">
         <div className="search-bar__logo">
@@ -39,7 +37,9 @@ class SearchBar extends React.Component {
 }
 
 SearchBar.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object)
+  data: PropTypes.arrayOf(PropTypes.object),
+  searchHandler: PropTypes.func,
+  logout: PropTypes.func,
 }
 
 export default SearchBar;

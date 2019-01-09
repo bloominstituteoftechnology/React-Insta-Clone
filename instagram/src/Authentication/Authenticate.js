@@ -1,5 +1,4 @@
 import React from 'react';
-import App from '../App.js';
 import Login from '../components/Login/Login'
 
 const Authenticate = Component => {

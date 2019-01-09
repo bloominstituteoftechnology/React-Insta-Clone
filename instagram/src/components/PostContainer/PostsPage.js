@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
+import PropTypes from 'prop-types';
 
 import dummyData from '../../dummy-data';
 
@@ -43,8 +44,8 @@ class PostsPage extends React.Component {
     return(
       <div className="posts-page">
         <SearchBar data={this.state.data}
-                    searchHandler={this.searchPosts}
-                    logout={this.props.logout}/>
+                   searchHandler={this.searchPosts}
+                   logout={this.props.logout}/>
 
         { this.state.data.length === 0 ? <h1 className="load">LOADING...</h1>
           : this.state.data.map(obj => <PostContainer key={Math.random()}
@@ -57,6 +58,10 @@ class PostsPage extends React.Component {
       </div>
     );
   }
+}
+
+PostsPage.propTypes = {
+  logout: PropTypes.func,
 }
 
 export default PostsPage;
