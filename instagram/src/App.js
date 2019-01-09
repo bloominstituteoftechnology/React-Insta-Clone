@@ -24,17 +24,14 @@ class App extends Component {
     const searchArray = this.state.staticData;
     /* If search field is empty, show all posts */
     if (this.state.search.length === 0)
-      return this.setState((prevState, props) => {
-        return { posts: searchArray };
-      });
-    /* Filters out posts with usernames not including substr this.state.search */ else {
+      this.setState({ posts: this.state.staticData });
+    /* Filters out posts with usernames not including substr this.state.search */
+    else {
       const resultsArray = searchArray.filter(post => {
         return post.username.includes(this.state.search);
       });
-      return this.setState((prevState, props) => {
-        return {
-          posts: resultsArray
-        };
+      this.setState({
+        posts: resultsArray
       });
     }
   };

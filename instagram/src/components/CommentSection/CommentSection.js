@@ -49,8 +49,8 @@ class CommentSection extends React.Component {
     this.setState((prevState, props) => {
       return {
         likes: prevState.likes + 1
-      }
-    })
+      };
+    });
   };
 
   render() {
