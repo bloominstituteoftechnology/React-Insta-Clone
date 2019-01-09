@@ -7,20 +7,23 @@ const Authenticate = App => {
   return class extends React.Component {
     constructor(){
       super()
-      this.state= {
+      this.state = {
         login: false
       }
     }
 
-    LoggedIn = (e) => {
-    	const loggedUser = this.state.login = true;
-    	this.setState( { login: loggedUser } )
+    changeLogIn = e => {
+    	const loggedIn = {login: true}
+    	this.setState({ login: loggedIn })
     }
-
 
     render() {
       return(
-      	this.state.login ? <PostPage /> : <Login />
+      	this.state.login 
+      			? <PostPage /> 
+      			: <Login 
+      				loggingIn = {this.state.login}
+      				loggingInInsta = {this.changeLogIn} />
       )
     }
   }

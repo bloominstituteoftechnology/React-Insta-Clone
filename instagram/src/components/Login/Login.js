@@ -7,7 +7,7 @@ const Login = props => {
 				<form>
 					<input type="text" placeholder="UserName"/>
 				</form>
-				<button>LOGIN</button>
+				<button onClick = {props.loggingInInsta}>LOGIN</button>
 			</div>
 		
 	)
