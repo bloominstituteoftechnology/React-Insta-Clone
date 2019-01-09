@@ -18,18 +18,6 @@ componentDidMount () {
   this.setState ({posts: dummyData})
 }
 
-searchPostsFunction = elem =>{
-  const posts=this.state.posts.filter(p=>{
-    if(p.text.includes(elem.target.value)) {
-      return p;
-    }
-  });
-  this.setState({ searchedPosts: posts })
-}
-
-
-
-
 
   render() {
     return (
@@ -37,6 +25,7 @@ searchPostsFunction = elem =>{
         <SearchBar searchPosts={this.searchPostsFunction} />
         <PostContainer posts ={this.state.posts.length>0 ? this.state.searchedPosts: this.state.posts } />
         <PostContainer posts ={this.state.posts} />
+        
       </div>
     );
   }

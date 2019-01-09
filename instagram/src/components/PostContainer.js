@@ -5,15 +5,38 @@ class Post extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            likes: props.post.likes
+            likes: props.post.likes,
+            updated: false
         }
+       
     }
 
     
-    //how to add only one like at a time?
-    incrementLikes = () => {
-        let likes = this.state.likes + 1;
-        this.setState({ likes });
+    //this method adds 1 like.
+    // incrementLikes = () => {
+    //     let likes = this.state.likes + 1;
+    //     this.setState({ likes });
+    // }
+
+
+    //this method adds 1 like and removes 1 like
+    incrementLikes = () =>{
+        if(!this.state.updated){
+            this.setState((prevState)=>{
+                return {
+                    likes: prevState.likes +1,
+                    updated: true
+                };
+            });
+        } else {
+            this.setState((prevState) =>{
+                return {
+                    likes: prevState.likes-1,
+                    updated: false
+                };
+            });
+        
+        }
     }
 
     render () {
