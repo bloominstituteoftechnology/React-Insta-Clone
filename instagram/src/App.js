@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './App.css';
 import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostPage from './components/PostContainer/PostPage';
+import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './components/Authentication/Authenticate';
 // import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
@@ -15,8 +15,8 @@ class App extends Component {
     };
   }
 
-  changeSearchText = event => {
-    this.setState({ searchText: event.target.value })
+  onChange = event => {
+    this.setState({ [event.target.name]: event.target.value })
   }
 
   setStorage = () => {
@@ -59,8 +59,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar changeText={this.changeSearchText} search={this.searchQuery} clearSearch={this.clearSearch} value={this.state.searchText} />
-        <PostPage state={this.state} addLike={this.addLike} />
+        <PostsPage state={this.state} addLike={this.addLike} changeText={this.onChange} search={this.searchQuery} clearSearch={this.clearSearch}/>
       </div>
     );
   }
@@ -76,4 +75,4 @@ App.propTypes = {
   })
 }
 
-export default App;
+export default Authenticate(App);

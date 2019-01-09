@@ -10,7 +10,7 @@ const SearchBar = props => {
         <img onClick={props.clearSearch} src={require('./../images/instagram-font.png')} className="instagram-font" alt="" />
       </div>
       <form onSubmit={props.search}>
-        <input onChange={props.changeText} type="text" value={props.value} placeholder="Search"></input>
+        <input onChange={props.changeText} type="text" value={props.value} name="searchText" placeholder="Search"></input>
       </form>
       <div className="nav-items">
         <img src={require('./../images/compass.png')} alt="" />
