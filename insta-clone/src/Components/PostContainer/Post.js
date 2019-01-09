@@ -14,11 +14,15 @@ const Post = (props) => {
                             return (
                                 <div key={i}>
                                     <div>
-                                        <h3>{post.username}</h3>
-                                        <img src={post.thumbnailUrl} alt="thumbnail"/>
+                                        <div>
+                                            <h3>{post.username}</h3>
+                                            <img src={post.thumbnailUrl} alt="thumbnail"/>
+                                        </div>
                                         <img src={post.imageUrl} alt="a post" />
-                                        <Likes likes={post.likes}/>
-                                        <p>{`Posted: ${post.timestamp}`}</p>
+                                        <div>
+                                            <Likes likes={post.likes}/>
+                                            <p>{`Posted: ${post.timestamp}`}</p>
+                                        </div>
                                     </div>
                                     <Comments comments={post.comments}/>
                                 </div>
