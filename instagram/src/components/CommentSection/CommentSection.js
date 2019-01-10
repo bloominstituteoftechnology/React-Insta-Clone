@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 const CommentInput =props =>{
   return (
@@ -18,10 +18,22 @@ const CommentInput =props =>{
 }
 /////////////////////////////////////////////////////////////////////
 
- const Comment = ( props ) =>
-{
-  return <p><strong>{props.comment.username}</strong> {props.comment.text}</p>;
-}
+const Comment = props => {
+  return (
+    <div className="comment-text">
+      <span className="comment">{props.comment.text}</span>{' '}
+      <span className="user">-{props.comment.username}</span>
+    </div>
+  );
+};
+
+Comment.propTypes = {
+  comment: PropTypes.shape({
+    text: PropTypes.string,
+    username: PropTypes.string
+  })
+};
+
 ///////////////////////////////////////////////////////////////////////
 class CommentSection extends React.Component {
   constructor(props) {

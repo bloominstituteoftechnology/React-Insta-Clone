@@ -3,6 +3,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import dummyData from '../../dummy-data';
 import PostContainer from './PostContainer';
 import propTypes from "prop-types";
+import Login from '../Login/Login';
 
 class PostsPage extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class PostsPage extends Component {
     });
   }
 
+  
   searchHandler = text => {
     if (text === "") {
       this.setState({ post: dummyData });
@@ -41,6 +43,7 @@ class PostsPage extends Component {
     return (
       <div className="PostsPage">
         <SearchBar searchHandler={this.searchHandler} />
+        <Login />
         <PostContainer posts={this.state.post} user={this.props.user} />
       </div>
     );
