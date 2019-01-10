@@ -1,5 +1,8 @@
 import React from 'react';
 import './Login.css';
+import styled from 'styled-components';
+import Input from '../StyledComponents/Input';
+import Button from '../StyledComponents/Button';
 
 const LoginPage = (props) => {
   return (
@@ -8,9 +11,9 @@ const LoginPage = (props) => {
         <img src="https://i.imgur.com/wOWyaBc.png" alt="Instagram Text Logo" />
       </div>
       <form className="login-form" onSubmit={props.onLogin}>
-        <input type="text" placeholder="username" onChange={props.handleNewLogin} required/>
-        <input type="text" placeholder="password" required/>
-        <button>Login</button>
+        <Input type="text" placeholder="username" onChange={props.handleNewLogin} required/>
+        <Input type="text" placeholder="password" required/>
+        <Button>Login</Button>
       </form>
     </div>
   )
