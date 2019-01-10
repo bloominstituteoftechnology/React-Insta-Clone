@@ -1,4 +1,5 @@
 import React from "react";
+//import SimpleStorage from "react-simple-storage";
 import PostsPage from "./components/PostContainer/PostsPage";
 import Login from "./components/Login/Login";
 class App extends React.Component {
@@ -16,6 +17,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        {/* <SimpleStorage parent={this} /> */}
         <Authenticate validated={this.state.validated} validate={this.validate}>
           <PostsPage />
         </Authenticate>
