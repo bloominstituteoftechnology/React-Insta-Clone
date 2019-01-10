@@ -21,8 +21,10 @@ class LoginPage extends React.Component {
   render() {
     return (
       <div className="login">
-        <form action="submit">
+        <form className="login__form" action="submit">
+          <h2>Sign In</h2>
           <input
+            className="login__user"
             type="username"
             value={this.state.userText}
             placeholder="username"
@@ -30,6 +32,7 @@ class LoginPage extends React.Component {
             required
           />
           <input
+            className="login__pass"
             type="password"
             value={this.state.passText}
             placeholder="password"

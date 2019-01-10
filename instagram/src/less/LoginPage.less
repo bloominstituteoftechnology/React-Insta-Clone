@@ -1,9 +1,28 @@
 .login {
+  text-align: center;
   display: flex;
   justify-content: flex-end;
   width: 50%;
   margin: auto;
+  height: 100vh;
+  h2 {
+    margin-bottom: 1rem;
+  }
   &__btn {
     border: 1px solid grey;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  &__form {
+    border: 1px solid grey;
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  &__user,
+  &__pass {
+    margin: 0.5rem;
+    padding: 0.5rem;
   }
 }

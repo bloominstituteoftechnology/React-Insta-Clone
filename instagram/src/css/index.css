@@ -94,13 +94,32 @@ i {
   transform: translateY(25%);
 }
 .login {
+  text-align: center;
   display: flex;
   justify-content: flex-end;
   width: 50%;
   margin: auto;
+  height: 100vh;
+}
+.login h2 {
+  margin-bottom: 1rem;
 }
 .login__btn {
   border: 1px solid grey;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.login__form {
+  border: 1px solid grey;
+  padding: 10vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.login__user,
+.login__pass {
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 .post {
   display: flex;
