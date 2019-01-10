@@ -15,27 +15,19 @@ class PostPage extends Component {
     this.setState({dummyData: dummyData})
   }
   handleSearch = e => {
-    let currentData = this.state.dummyData.slice()
-    let matchingData = currentData.filter(user => {
-      if (user.username === e) {
-        return true
-      } else {
-        return false
-      }
-    })
-
-    if (matchingData.length > 0) {
-      this.setState({dummyData : matchingData})
-    } else {
-      prompt("User not found")
-    }
-  }
+    const filtered = dummyData.filter(post => {
+      return post.username.includes(e);
+  });
+  this.setState({ dummyData: filtered });
+};
 
 
 render() 	{
 return (
   <div className="App">
-      <SearchBar search={this.handleSearch} />
+      <SearchBar dummyData={this.state.dummyData}
+            handleSearch={this.handleSearch}
+            handleInputChange={this.handleInputChange} />
   
 
     <PostContainer data={this.state.dummyData}/>
