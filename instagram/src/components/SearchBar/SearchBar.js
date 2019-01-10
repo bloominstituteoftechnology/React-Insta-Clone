@@ -18,40 +18,16 @@ class SearchBar extends Component {
         }
     }
 
-    /*
-        To filter out by username:
-        create an array with usename from dummyDta
-        compare the input from search bar to the array
-    */
-
-    // setUsernamesArray = () => {
-    //     // let newArray = this.state.data.map(username => {
-    //     //     return username.username
-    //     // })
-    //     // this.setState({
-    //     //     usernames: state.data.map(username =>{
-    //     //         return username.username
-    //     //     })
-    //     // })
-    //     this.state.data.map(username =>{
-    //         console.log("username:username: ",username.username)
-    //         return username.username
-    //     })
-    //     console.log("usernames: newArray", this.state.usernames)
-    // }
-
     searchInput = (event) => {
         console.log("input: ", this.state.input)
         this.setState({
             input: event.target.value,
         })
         console.log("input after setState: ", this.state.input)
-        for(let i =0; i< (this.props.data).length; i++){
-            if((this.props.data[i].username).includes(this.state.input) ){
-                console.log("match")
-            }
-            
-        }
+
+        // const result = (this.props.data).filter(
+        //                 data.username => data.username.includes(this.state.input))
+        // console.log(result)
         
     }
 
