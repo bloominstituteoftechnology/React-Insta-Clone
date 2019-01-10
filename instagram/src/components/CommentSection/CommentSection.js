@@ -2,6 +2,7 @@ import React from 'react';
 import './comment.css';
 // import dummyData from '../../dummy-data';
 import Comment from './Comment';
+// import Authenticate from '../Authentication/Authenticate';
 
 class CommentSection extends React.Component{
     constructor(props){
@@ -9,7 +10,7 @@ class CommentSection extends React.Component{
         this.state ={
             commentInput: props.comments,
             newComment: '',
-            placeholder: "Add a comment..."
+            // user: 'user'
         }
     }
 
@@ -22,13 +23,19 @@ class CommentSection extends React.Component{
     handleComments = (e) => {
         // this.setState({commentInput: e.target.value});    
         this.setState({
-            [e.target.name]: e.target.value});  
+            // [e.target.name]: e.target.value});  
+            newComment: e.target.value 
+        })
     }
 
 
     addNewComment = (e) => {
         e.preventDefault();
-        // const commentInputs = this.state.commentInput.slice();
+        const commentInputs = this.state.commentInput.slice();
+        const retainNewComment = {username: `${localStorage.getItem('username')}`, text: this.state.newComment}
+        console.log('retained..', retainNewComment)
+        commentInputs.push(retainNewComment);
+        this.setState({commentInput: commentInputs, newComment:''})
         // const theComment = {
         //     username: 'Jamar', text: this.state.newComment
         // }
@@ -36,9 +43,14 @@ class CommentSection extends React.Component{
         //     commentInput: [...this.state.commentInput, {username: 'Jamar', text: this.state.newComment }]
         //     }
         // )
-        this.setState({ commentInput: [...this.state.commentInput, {username: 'Jamar', text: this.state.newComment }], newComment: '', placeholder: "Add a comment..."});
+        // this.setState({ commentInput: [...this.state.commentInput, {username: this.state.user, 
+        //     text: this.state.newComment }], newComment: '', placeholder: "Add a comment..."});
         // console.log(commentInput)
- 
+        // `@ ${localStorage.setItem('username')}`
+        // this.setState({ commentInput: [...this.state.commentInput, {username: `${localStorage.setItem('username')}`,
+        //  text: this.state.newComment }] , newComment: '', placeholder: "Add a comment..."});
+        // console.log(commentInput)
+        
     };
 
     render() {
@@ -51,6 +63,7 @@ class CommentSection extends React.Component{
                         <input placeholder={this.state.placeholder}
                             type="text"
                             name="newComment"
+                            placeholder="Add a comment..."
                             value={this.state.newComment}
                             onChange={this.handleComments}
                         />

@@ -4,6 +4,7 @@ import PostContainer from '../PostContainer/PostContainer';
 import dummyData from '../../dummy-data';
 // import PropTypes from "prop-types";
 import '../../App.css';
+import styled from 'styled-components';
 
 
 class PostsPage extends React.Component {
@@ -20,7 +21,7 @@ class PostsPage extends React.Component {
       }
     
       componentDidUpdate(){
-        console.log('Did it work?')
+        console.log('Component did update')
       }
     
       searchFilter = event => {

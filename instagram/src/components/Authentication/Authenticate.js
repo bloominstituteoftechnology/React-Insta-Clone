@@ -19,6 +19,13 @@ const Authenticate = App =>
         
         }
 
+        componentWillUnmount(e) {
+            if (this.setState({loggedIn: true}))
+            e.preventDefault()
+            this.setState({loggedIn: false})
+            window.location.reload()
+        }
+
         render(){
             if (this.state.loggedIn)
             return <App />;
