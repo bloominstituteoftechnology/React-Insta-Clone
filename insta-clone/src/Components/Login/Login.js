@@ -4,36 +4,64 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: '',
-            password: '',
+            loggedInUsers: [],
+            newUser: {
+                username: '',
+                password: '',
+            }
         }
     }
 
     handleInput = (e) => {
-        this.setState({ [e.target.name]: e.target.value })
+        this.setState({ 
+            newUser: {
+                ...this.state.newUser,
+                [e.target.name]: e.target.value 
+            }
+        })
+    }
+
+    //persist loggedin users to localstorage
+    login = (e) => {
+        e.preventDefault();
+        const loggedInUsersArray = this.state.loggedInUsers;
+        const newUser = {
+            username: this.state.newUser.username,
+            password: this.state.newUser.password
+        }
+        loggedInUsersArray.push(newUser);
+        this.setState ({
+            newUser: {
+                username: '',
+                password: '',
+            }
+        })
+        localStorage.setItem("loggedInUsersArray", JSON.stringify(loggedInUsersArray));
     }
 
     render() {
-        const { username, password} = this.state;
+        const { username, password } = this.state.newUser;
         return (
             <div>
                 <h2>please login</h2>
                 <div>
+                <form onSubmit={this.login}>
                     <input
                         placeholder="enter username"
                         name="username"
-                        type="username"
+                        type="text"
                         value={username}
-                        handleInput={this.handleInput}
+                        onChange={this.handleInput}
                     />
                     <input
                         placeholder="enter password"
                         name="password"
                         type="password"
                         value={password}
-                        handleInput={this.handleInput}
+                        onChange={this.handleInput}
                     />
-                    <button>Login</button>
+                    <button onClick={this.login}>Login</button>
+                </form>
                 </div>
             </div>
         )
