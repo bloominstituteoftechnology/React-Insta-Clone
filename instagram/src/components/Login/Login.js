@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Form, Button, Input} from 'reactstrap';
 
 class Login extends Component {
   constructor(props) {
@@ -20,8 +21,9 @@ class Login extends Component {
 }
 render() {
   return (
-    <div>
+    <Form>
     <h1>Instagram</h1>
+    
     <Input 
       type="text" 
       name="username" 
@@ -37,7 +39,8 @@ render() {
       onChange={this.handleInputChange}
       />
       <Button type="submit" value="Login" onClick={this.handleLoginSubmit} >Log In</Button>
-      </div>
+      
+      </Form>
   )}
 }
 export default Login
