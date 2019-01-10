@@ -1,28 +1,36 @@
 import React from "react";
 import LoginPage from "../LoginPage/LoginPage";
 
+localStorage.setItem("loggedIn", false);
 let status = localStorage.getItem("loggedIn");
 
 const Authenticate = ReactComponent => {
   return class extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { loggedIn: status };
+      this.state = {
+        loggedIn: status,
+        name: "",
+        password: ""
+      };
     }
-    signIn = () => {
+    signIn = (e, user, pass) => {
+      e.preventDefault();
       localStorage.setItem("loggedIn", true);
+      localStorage.setItem("user", user);
       status = localStorage.getItem("loggedIn");
       this.setState({
         loggedIn: status
       });
-      console.log(this.state.loggedIn);
     };
     render() {
       return this.state.loggedIn === "true" ? (
         <ReactComponent />
       ) : this.state.loggedIn === "false" ? (
         <LoginPage signIn={this.signIn} />
-      ) : null;
+      ) : (
+        <LoginPage signIn={this.signIn} />
+      );
     }
   };
 };

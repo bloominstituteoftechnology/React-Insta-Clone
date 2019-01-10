@@ -93,13 +93,13 @@ i {
 .dots {
   transform: translateY(25%);
 }
-.loginPage {
+.login {
   display: flex;
   justify-content: flex-end;
   width: 50%;
   margin: auto;
 }
-.login {
+.login__btn {
   border: 1px solid grey;
 }
 .post {
