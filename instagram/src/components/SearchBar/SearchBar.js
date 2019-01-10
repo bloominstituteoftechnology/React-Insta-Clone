@@ -49,7 +49,7 @@ class SearchBar extends React.Component {
             </AppName>
           </FlexDiv>
           <form onSubmit={this.searchUsername}>
-            <SearchInput type="text" placeholder="Search" onChange={this.setSearchInput} value={this.state.searchInput} />
+            <SearchInput type="text" placeholder="Search a Username" onChange={this.setSearchInput} value={this.state.searchInput} />
             <input type="submit" hidden />
           </form>
           <IconGroup>

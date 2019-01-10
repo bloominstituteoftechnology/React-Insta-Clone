@@ -3,14 +3,17 @@ import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 import ShowPost from './ShowPost';
+import SearchResult from './SearchResult';
 import { Route, Switch } from 'react-router-dom';
+import { withRouter } from "react-router";
 
 class PostsPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       users: [],
-      currentUser: ""
+      currentUser: "",
+      searchResult: []
     }
   }
 
@@ -32,6 +35,11 @@ class PostsPage extends React.Component {
     this.setState({users: users});
   }
 
+  setSearchResult = (users) => {
+    this.setState({searchResult: users});
+    this.props.history.push("/search-result");
+  }
+
   getUser = (id) => {
     return this.state.users.filter(user => user.timestamp === id)[0];
   }
@@ -39,9 +47,10 @@ class PostsPage extends React.Component {
   render() {
     return (
       <div className="App">
-        <SearchBar users={this.state.users} update={this.updateUsers} user={this.state.currentUser}/>  
+        <SearchBar users={this.state.users} update={this.setSearchResult} user={this.state.currentUser}/>  
         <Switch>
           <Route path="/" exact render={() => <PostContainer users={this.state.users} /> } />
+          <Route path={"/search-result"} render={ () => <SearchResult users={this.state.searchResult}/> } />
           <Route path={"/:id"} render={ () => <ShowPost getUser={this.getUser}/> } />
         </Switch>
       </div>
@@ -50,4 +59,4 @@ class PostsPage extends React.Component {
 
 }
 
-export default PostsPage;
+export default withRouter(PostsPage);
