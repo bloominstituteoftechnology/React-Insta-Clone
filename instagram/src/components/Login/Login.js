@@ -2,22 +2,26 @@ import React, { Component } from 'react';
 import LoginPage from '../Login/LoginPage'
 
 class Login extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       username: "",
-      password: "",
-      loggedIn: false
+      password: ""
     }
+  }
+
+  updateInput = (key, value) => {
+    this.setState({ [key]: value })
   }
 
   render() {
     return (
       <div>
-        <LoginPage 
+        <LoginPage
           username={this.state.username}
           password={this.state.password}
-          loggedIn={this.state.loggedIn}
+          updateInput={this.updateInput}
+          validateHandler={this.props.validateHandler}
         />
       </div>
     )

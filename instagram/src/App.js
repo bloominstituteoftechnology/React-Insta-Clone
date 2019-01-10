@@ -9,10 +9,16 @@ class App extends React.Component {
     }
   }
 
+  validateHandler = event => {
+    this.setState({validated: true})
+  }
+
   render() {
     return (
       <div className="App">
-        <Authenticate validated={this.state.validated}>
+        <Authenticate
+          validated={this.state.validated}
+          validateHandler={this.validateHandler}>
           <PostsPage />
         </Authenticate>
       </div>
@@ -24,7 +30,7 @@ const Authenticate = props => {
   return props.validated ? (
     <div>{props.children}</div>
   ) : (
-    <Login />
+    <Login validateHandler={props.validateHandler}/>
   );
 };
 
