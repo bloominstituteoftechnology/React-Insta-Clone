@@ -4,7 +4,7 @@ import './Login.css'
 
 const LoginPage = props => {
   return (
-    <div className="login-page-container">
+    <div>
       <img className="LoginPage-img"
            src={iglogo} alt="ig logo" />
       <form className="login-page-form">

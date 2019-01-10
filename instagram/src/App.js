@@ -19,11 +19,6 @@ class App extends React.Component {
         <Authenticate validated={this.state.validated} validate={this.validate}>
           <PostsPage />
         </Authenticate>
-        {/* {this.validated ? null : (
-          <button className="App-button" onClick={this.validate} value="Log in">
-            Log In
-          </button>
-        )} */}
       </div>
     );
   }
@@ -33,7 +28,7 @@ const Authenticate = props => {
   return props.validated ? (
     <div>{props.children}</div>
   ) : (
-    <div>
+    <div className="login-page-container">
       <Login />
       <button className="App-button" onClick={props.validate} value="Log in">
         Log In

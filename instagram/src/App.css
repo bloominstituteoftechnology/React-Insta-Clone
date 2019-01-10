@@ -7,9 +7,9 @@
 }
 
 .App-button {
-  margin: 0 0;
+  margin: 4% auto;
   height: 30px;
-  width: 37%;
+  width: 85%;
   background-color: dodgerblue;
   color: white;
   border-radius: 5px;
