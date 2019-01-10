@@ -29,6 +29,10 @@ const Image = styled.img`
   max-width: ${props => props.textLogo ? "100px" : null};
 `
 
+const SearchBarIcons  = styled.div`
+  display: flex;
+`
+
 const SearchBar = (props) => {
   return (
     <Header>
@@ -38,7 +42,7 @@ const SearchBar = (props) => {
             <i className="fab fa-instagram"></i>
           </InstaLogo>
           <div className="spacer-line"></div>
-          <InstaLogo>
+          <InstaLogo> 
             <Image textLogo src="https://i.imgur.com/wOWyaBc.png" alt="Instagram Text Logo" />
           </InstaLogo>
         </SearchLogos>
@@ -47,7 +51,7 @@ const SearchBar = (props) => {
             <Input type="text" placeholder="Search" onChange={props.handleNewSearch} value={props.searched}/>
           </form>
         </div>
-        <div className="search-bar-icons">
+        <SearchBarIcons>
           <Icon className="search-history search-icon">
           <i className="far fa-compass"></i>
           </Icon>
@@ -60,7 +64,7 @@ const SearchBar = (props) => {
           <Icon className="search-signout search-icon" onClick={props.onSignout}>
             <i className="fas fa-sign-out-alt"></i>
           </Icon>
-        </div>
+        </SearchBarIcons>
       </HeaderBar>
     </Header>
   )
