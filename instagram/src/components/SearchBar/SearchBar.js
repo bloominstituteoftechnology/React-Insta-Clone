@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import './SearchBar.css';
 
@@ -12,28 +13,72 @@ import profile from '../../img/insta-profile.png';
 
 
 
-class SearchBar extends React.Component {
+const SearchBar = (props) => {
 
-  render() {
-    return(
-      <div className="search-bar">
-        <div className="search-bar__logo">
-          <img src={logo} alt="instagram logo" />
-          <p>|</p>
-          <img src={title} alt="Instagram" />
-        </div>
+  const Header = styled.header`
+    border: 1px solid rgba(0, 0, 0, 0.2);
 
-        <input type="text" placeholder={"search..."} onChange={this.props.searchHandler}/>
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
-        <div className="search-bar__icons">
-          <img src={compass} alt="Instagram" />
-          <img src={heart} alt="Instagram" />
-          <img src={profile} alt="Instagram" />
-          <button onClick={this.props.logout}>Sign Out</button>
-        </div>
+    z-index: 1040;
+    background-color: white;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    max-width: 642px;
+
+    box-sizing: border-box;
+    padding: 5px 0px;
+    margin: 0 auto;
+  `;
+
+  const LogoHeader= styled.div`
+    display: flex;
+    align-items: center;
+    flex-grow: .3;
+
+    p {
+      margin: 0 3% 10px 5%;
+      font-size: 2.4rem;
+      opacity: .3
+    }
+  `;
+
+  const Button = styled.button`
+    border: none;
+    background-color: #833ab4;
+    color: white;
+  `
+
+  const LogoImg = styled.img`
+    height: 25px;
+  `;
+
+  return(
+    <Header>
+      <LogoHeader>
+        <LogoImg src={logo} alt="instagram logo" />
+        <p>|</p>
+        <LogoImg src={title} alt="Instagram" />
+      </LogoHeader>
+
+      <input type="text" placeholder={"search..."} onChange={props.searchHandler}/>
+
+      <div className="search-bar__icons">
+        <img src={compass} alt="Instagram" />
+        <img src={heart} alt="Instagram" />
+        <img src={profile} alt="Instagram" />
+        <Button onClick={props.logout}>Sign Out</Button>
       </div>
-    );
-  }
+    </Header>
+  );
+
 }
 
 SearchBar.propTypes = {

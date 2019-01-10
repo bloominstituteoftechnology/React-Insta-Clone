@@ -82,6 +82,7 @@
 .app-icons img {
   height: 40px;
   margin-bottom: 60px;
+  cursor: pointer;
 }
 
 .app-icons img:last-child {

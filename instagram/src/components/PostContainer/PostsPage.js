@@ -28,9 +28,12 @@ class PostsPage extends React.Component {
         return;
       }
 
+
+
       this.setState({
         data: newList})
     }
+
 
 
     componentDidMount() {
