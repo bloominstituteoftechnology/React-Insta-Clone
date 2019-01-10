@@ -44,18 +44,27 @@ const Authenticate = WrappedComponent => {
           this.state.loginInfo.password === user.password
         )
           this.setState({ loggedIn: true });
+        localStorage.setItem("loggedIn", "true");
       });
-      localStorage.setItem("loggedIn", this.state.loggedIn);
+      console.log("got it");
     };
 
     logout = () => {
       console.log("logout");
-      this.setState({ loggedIn: false });
-      localStorage.setItem("loggedIn", this.state.loggedIn);
+      this.setState({
+        loggedIn: false,
+        loginInfo: {
+          username: "",
+          password: ""
+        }
+      });
+      localStorage.clear();
+      console.log(localStorage);
     };
 
     componentDidMount() {
-      if (localStorage.getItem("loggedIn")) this.setState({ loggedIn: true });
+      const logTok = JSON.parse(localStorage.getItem("loggedIn"));
+      if (logTok) this.setState({ loggedIn: logTok });
     }
 
     render() {
