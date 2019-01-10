@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import PostPage from './components/PostContainer/PostPage';
-import Authenticate from './Authentication/Authenticate';;
+import Authenticate from './components/Authentication/Authenticate';;
 
 
 class App extends Component {
