@@ -45,3 +45,10 @@ export const PostLikes = styled.div`
   margin-top: 5px;
   font-size: 1.4rem;
 `
+
+export const ShowPostWrapper = styled.div`
+  width: 80%;
+  margin: auto;
+  height: 100%;
+  margin-top: 100px;
+`

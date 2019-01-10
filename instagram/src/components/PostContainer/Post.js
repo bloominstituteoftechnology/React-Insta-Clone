@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 import { PostBody, PostName, PostThumbnail, PostUserName, PostImg, PostIcon, PostLikes } from '../styles/PostContainerStyles';
+import { Link } from "react-router-dom";
 
 class Post extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class Post extends React.Component {
     this.state = {
       likes: 0,
       heartColor: "black",
-      alreadyHeart: false
+      alreadyHeart: false,
     }
   }
 
@@ -60,7 +61,9 @@ class Post extends React.Component {
           <PostThumbnail src={this.props.user.thumbnailUrl} alt="Thumbnail" />
           <PostUserName bold>{this.props.user.username}</PostUserName>
         </PostName>
-        <PostImg src={this.props.user.imageUrl} alt="post" />
+        <Link to= {"/" + this.props.user.timestamp} >
+          <PostImg src={this.props.user.imageUrl} alt="post" />
+        </Link>
         <PostIcon>
           <FontAwesomeIcon
             icon={['fas', 'heart']}

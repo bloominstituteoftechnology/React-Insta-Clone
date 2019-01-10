@@ -76,7 +76,7 @@ class CommentSection extends React.Component {
       <div>
         <Comments>{ this.state.comments.map((comment, index) => {
           return (
-            <FlexDiv key={comment.text}>
+            <FlexDiv key={comment.text + this.props.timestamp}>
               <Icon>
                 <FontAwesomeIcon
                   icon={['fas', 'trash-alt']}

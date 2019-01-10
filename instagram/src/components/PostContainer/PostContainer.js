@@ -5,7 +5,9 @@ import { Container } from '../styles/PostContainerStyles'
 
 const PostContainer = props => {
   return (
-    <Container>{ props.users.map(user => <Post key={user.timestamp} user={user} />) }</Container>
+    <Container>
+      { props.users.map( user => <Post key={user.timestamp} user={user} /> ) }
+    </Container>
   );
 };
 
