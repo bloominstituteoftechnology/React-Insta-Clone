@@ -1,58 +1,24 @@
-.SearchBar {
-  width: 100%;
+.search-bar-wrapper {
+  border-bottom: 1px solid #3333;
+  height: 80px;
+  line-height: 70px;
   display: flex;
   justify-content: space-between;
+  background: #ffffff;
 }
 
-  .logo {
-    display: flex;
-  }
+.image-wrapper {
+  height: 50px;
+}
 
-    .insta-logo {
-      width: 30px;
-      height: 30px;
-    }
+.logo-image {
+  height: 100%;
+}
 
-    .logo p {
-      padding: 0 5px 0 10px;
-      font-size: 20px;
-      margin-top: -1px;
-    }
+.social-wrapper {
+  display: flex;
+}
 
-    .insta-name {
-      width: 120px;
-      height: 40px;
-      margin-top: -3px;
-    }
-
-  .search {
-    width: 170px;
-    height: 24px;
-    border-radius: 6px;
-    border: 2px solid lightgray;
-    text-align: center;
-    color: lightgray;
-  }
-
-  .user {
-    display: flex;
-    justify-content: space-between;
-    width: 120px;
-    margin-top: -2px;
-  }
-
-    .compass {
-      width: 34px;
-      height: 34px;
-    }
-
-    .heart {
-      width: 24px;
-      height: 24px;
-      margin-top: 6px;
-    }
-
-    .person {
-      width: 36px;
-      height: 36px;
-    }
+.social {
+  width: 50px;
+}
