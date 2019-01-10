@@ -1,17 +1,17 @@
-.post {
+/* .post {
   border: 1px solid rgba(0,0,0,0.2);
   max-width: 650px;
   width: 100%;
   margin: 0 auto;
-}
-.profile-pic {
+} */
+/* .profile-pic {
   border-radius: 50%;
   overflow: hidden;
   height: 30px;
   width: 30px;
   position: relative;
   margin: 2%;
-}
+} */
 .profile-pic img {
   position:absolute;
   top:50%;
@@ -19,10 +19,10 @@
   transform:translate(-50%,-50%);
   max-width: 30px;
 }
-.user-info {
+/* .user-info {
   display: flex;
   align-items: center;
-}
-.user-info .username {
+} */
+/* .user-info .username {
   font-weight: bold;
-}
+} */
