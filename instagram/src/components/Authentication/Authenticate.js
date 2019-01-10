@@ -10,8 +10,7 @@ const Authenticate = ReactComponent => {
       super(props);
       this.state = {
         loggedIn: status,
-        name: "",
-        password: ""
+        error: ""
       };
     }
     signIn = (e, user, pass) => {
@@ -19,17 +18,29 @@ const Authenticate = ReactComponent => {
       localStorage.setItem("loggedIn", true);
       localStorage.setItem("user", user);
       status = localStorage.getItem("loggedIn");
-      this.setState({
-        loggedIn: status
-      });
+      if (pass.length > 0 && user.length > 0) {
+        this.setState({
+          loggedIn: status
+        });
+      } else {
+        this.setState({
+          error: <div>username or password field is empty</div>
+        });
+      }
     };
     render() {
       return this.state.loggedIn === "true" ? (
         <ReactComponent />
       ) : this.state.loggedIn === "false" ? (
-        <LoginPage signIn={this.signIn} />
+        <>
+          <LoginPage signIn={this.signIn} />
+          {this.state.error}
+        </>
       ) : (
-        <LoginPage signIn={this.signIn} />
+        <>
+          <LoginPage signIn={this.signIn} />
+          {this.state.error}
+        </>
       );
     }
   };
