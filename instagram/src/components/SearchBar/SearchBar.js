@@ -1,5 +1,9 @@
 import React from 'react';
 import './SearchBar.css';
+import Input from '../StyledComponents/Input';
+import Icon from '../StyledComponents/Icon';
+
+
 
 const SearchBar = (props) => {
   return (
@@ -16,22 +20,22 @@ const SearchBar = (props) => {
         </div>
         <div className="search-bar-input">
           <form onSubmit={props.onSearch}>
-            <input type="text" placeholder="Search" onChange={props.handleNewSearch} value={props.searched}/>
+            <Input type="text" placeholder="Search" onChange={props.handleNewSearch} value={props.searched}/>
           </form>
         </div>
         <div className="search-bar-icons">
-          <div className="search-history search-icon">
+          <Icon className="search-history search-icon">
           <i className="far fa-compass"></i>
-          </div>
-          <div className="search-likes search-icon">
+          </Icon>
+          <Icon className="search-likes search-icon">
             <i className="far fa-heart"></i>
-          </div>
-          <div className="search-profile search-icon">
+          </Icon>
+          <Icon className="search-profile search-icon">
             <i className="far fa-user"></i>
-          </div>
-          <div className="search-signout search-icon" onClick={props.onSignout}>
+          </Icon>
+          <Icon className="search-signout search-icon" onClick={props.onSignout}>
             <i className="fas fa-sign-out-alt"></i>
-          </div>
+          </Icon>
         </div>
       </div>
     </div>
