@@ -1,6 +1,5 @@
 .login-page-container {
   text-align: center;
-  border: 1px solid lightgrey;
   max-width: 300px;
   width: 100%;
   margin: 0 auto;
@@ -8,7 +7,7 @@
   flex-direction: column;
 }
 
-img {
+.LoginPage-img {
   margin: 0 auto;
   padding: 10% 0;
   width: 70%;
@@ -21,19 +20,11 @@ img {
   flex-direction: column;
 }
 
-.input {
+.LoginPage-input {
   margin: 5% 0;
   font-size: .7rem;
   height: 40px;
   width: 100%;
   background-color: lightyellow;
-}
-
-.submit {
-  margin: 5% 0;
-  height: 30px;
-  width: 100%;
-  background-color: dodgerblue;
-  color: white;
-
+  border-radius: 5px;
 }

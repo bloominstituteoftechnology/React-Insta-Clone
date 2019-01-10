@@ -1,26 +1,29 @@
 import React from "react";
 import PostsPage from "./components/PostContainer/PostsPage";
-import Login from './components/Login/Login'
+import Login from "./components/Login/Login";
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      validated: false,
-    }
+      validated: false
+    };
   }
 
-  validateHandler = event => {
-    this.setState({validated: true})
-  }
+  validate = () => {
+    this.setState({ validated: true });
+  };
 
   render() {
     return (
       <div className="App">
-        <Authenticate
-          validated={this.state.validated}
-          validateHandler={this.validateHandler}>
+        <Authenticate validated={this.state.validated} validate={this.validate}>
           <PostsPage />
         </Authenticate>
+        {/* {this.validated ? null : (
+          <button className="App-button" onClick={this.validate} value="Log in">
+            Log In
+          </button>
+        )} */}
       </div>
     );
   }
@@ -30,7 +33,12 @@ const Authenticate = props => {
   return props.validated ? (
     <div>{props.children}</div>
   ) : (
-    <Login validateHandler={props.validateHandler}/>
+    <div>
+      <Login />
+      <button className="App-button" onClick={props.validate} value="Log in">
+        Log In
+      </button>
+    </div>
   );
 };
 

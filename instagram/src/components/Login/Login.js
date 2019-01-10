@@ -5,8 +5,8 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
-      password: ""
+      username: "neo_badfish",
+      password: "12345"
     }
   }
 
@@ -21,7 +21,6 @@ class Login extends Component {
           username={this.state.username}
           password={this.state.password}
           updateInput={this.updateInput}
-          validateHandler={this.props.validateHandler}
         />
       </div>
     )
