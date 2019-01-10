@@ -23,7 +23,6 @@ class Login extends Component {
 
     //persist loggedin users to localstorage
     login = (e) => {
-        e.preventDefault();
         const loggedInUsersArray = this.state.loggedInUsers;
         const newUser = {
             username: this.state.newUser.username,

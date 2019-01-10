@@ -3,49 +3,29 @@ import Login from '../Login/Login';
 
 const Authenticate = App => {
     return class extends React.Component {
-        constructor() {
-            super();
+        constructor(props) {
+            super(props);
             this.state = {
-                loggedInUsers: [],
                 loggedIn: false
             }
         }
 
-        getLoggedInUsers = (e) => {
+        getLoggedInUsers = () => {
             const loggedInUsersArray = localStorage.getItem("loggedInUsersArray");
-            this.setState({
-                    loggedInUsers: loggedInUsersArray,
-            })
-        }
-        
-        checkLogIn = () => {
-            const loggedInUsersArray = this.state.loggedInUsers;
-            if (loggedInUsersArray.length > 0) {
+            if (loggedInUsersArray) {
                 this.setState({
                     loggedIn: true
                 })
-                console.log('is user loggedin?', this.state.loggedIn);
-            } else {
-                alert('no one is logged in');
-            }
+            } 
         }
 
         componentDidMount(){
             this.getLoggedInUsers();
-            console.log('logged in users state', this.state.loggedInUsers);
         }
 
-
         render() {
-            const logInCheck = this.state.loggedIn;
-            return (
-                <div>
-                <Login />
-                <div>{logInCheck}</div>
-                    <button onClick={() => { this.getLoggedInUsers(); this.checkLogIn()}}>Get loggedin users</button>
-                <App />
-                </div>
-            )
+            if (this.state.loggedIn === true) return <App />
+            return <Login />
         }
     }
 }
