@@ -11,12 +11,6 @@ const Authenticate = App =>
             }
         }
         login = (username) => {
-
-            // const User = {
-            //   username: user.username,
-            //   password: user.password
-            // }
-            console.log(username);
             localStorage.setItem('username', username.username);
             this.setState({user: username.username, loggedIn: true})
         }
@@ -26,6 +20,7 @@ const Authenticate = App =>
             }
         }
         render() {
+            let local = localStorage.getItem('username');
             if (this.state.loggedIn === true) {
                 return <App />
             }
