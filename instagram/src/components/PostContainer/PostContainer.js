@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
+import Username from '../../styled-components/Username';
+import styled from 'styled-components';
 
 import './PostContainer.css';
 
@@ -20,12 +22,40 @@ class PostContainer extends React.Component {
 
   render() {
 
+      const Post = styled.div`
+        width: 100%;
+        max-width: 640px;
+        margin: 40px auto;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      `;
+
+      const User = styled.div`
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 200px;
+
+        padding: 10px 0;
+
+        font-weight: bold;
+        font-size: 1.6rem;
+      `;
+
+      const UserImg = styled.img`
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        margin:  0 6% 0 8%;
+     `;
+
+
+
     return(
-      <div className="post">
-        <div className="post__user">
-          <img src={this.state.thumbnail} alt="thumbnail"/>
-          <p>{this.state.username}</p>
-        </div>
+      <Post>
+        <User>
+          <UserImg src={this.state.thumbnail} alt="thumbnail"/>
+          <Username>{this.state.username}</Username>
+        </User>
 
         <img className="post__thumbnail"src={this.state.image} alt="thumbnail"/>
 
@@ -34,7 +64,7 @@ class PostContainer extends React.Component {
                         comments={this.state.comments}
                         id={this.state.likes}
                         />
-      </div>
+      </Post>
     );
   }
 }

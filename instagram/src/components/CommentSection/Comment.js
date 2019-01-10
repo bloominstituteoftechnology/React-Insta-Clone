@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Username from '../../styled-components/Username';
 
 const Comment = props => {
   return(

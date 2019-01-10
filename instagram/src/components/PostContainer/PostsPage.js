@@ -35,8 +35,6 @@ class PostsPage extends React.Component {
         data: newList})
     }
 
-
-
     componentDidMount() {
       setTimeout(() => {
         this.setState({
@@ -58,9 +56,7 @@ class PostsPage extends React.Component {
                    logout={this.props.logout}/>
 
         { this.state.data.length === 0 ?  <div className="d-flex justify-content-center">
-                                            <div className="spinner-border" style={spinnerStyle} role="status">
-                                              <span className="sr-only">Loading...</span>
-                                            </div>
+                                            <div className="spinner-border" style={spinnerStyle} role="status"></div>
                                           </div>
                                           : this.state.data.map(obj => <PostContainer key={Math.random()}
                                                             user={obj.username}
