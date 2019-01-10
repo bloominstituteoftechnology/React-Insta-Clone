@@ -20,8 +20,11 @@ class CommentSection extends Component {
  addNewComment = (e) =>{
    e.preventDefault();
    let enteredValue = [...this.state.comments]
-   enteredValue.push({username:'My User Name', text: this.state.newComment})
-   this.setState({comments: enteredValue})
+   enteredValue.push({username:'My User Name', 
+   text: this.state.comment
+  })
+   this.setState({comments: enteredValue, comment:''
+  })
  }
 
  handleTextChange = (e) => {
@@ -30,7 +33,7 @@ class CommentSection extends Component {
   }
   else{
     this.setState({
-    [e.target.comments]: e.target.value
+    [e.target.name]: e.target.value
 })}}
 
  
@@ -72,8 +75,8 @@ class CommentSection extends Component {
   })}
   <div className="timestamp"><p>{this.state.timestamp}</p></div>
   <div className="addComment">
-        <form onSubmit={this.addNewComment}>
-         <input type ="text" placeholder="Add a Comment..." onChange={this.handleTextChange} onKeyDown={this.handleTextChange} value={this.state.value} 
+        <form>
+         <input name="comment" type ="text" placeholder="Add a Comment..." onChange={this.handleTextChange} onKeyDown={this.handleTextChange} value={this.state.comment} 
          />
         </form>
        
