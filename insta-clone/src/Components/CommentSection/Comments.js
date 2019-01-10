@@ -31,12 +31,36 @@ class Comments extends Component {
         };
         commentListArray.push(newComment);
         this.setState({
-            commentList: commentListArray,
+            comments: commentListArray,
             newComment: {
                 username: 'a_new_user',
                 text: ''
             }
         })
+        localStorage.setItem("comments", JSON.stringify(commentListArray));
+        localStorage.setItem("text", "");
+        localStorage.setItem("username", "a_new_user")
+    }
+
+    //from tutorial
+    //this is the name of the method on LocalStorage
+    hydrateStatewithLocalStorage() {
+        for (let key in this.state) {
+            if (localStorage.hasOwnProperty(key)) {
+                let value = localStorage.getItem(key);
+                try {
+                    value = JSON.parse(value);
+                    this.setState({ [key]: value });
+                } catch (e) {
+                    this.setState({ [key]: value });
+                }
+            }
+        }
+    }
+
+    //add a componentDidMount() to render the data from LocalStorage
+    componentDidMount() {
+        this.hydrateStatewithLocalStorage();
     }
     
     render() {

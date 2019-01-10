@@ -13,11 +13,10 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Welcome to my Instagram Clone App</h1>
-        <Authenticate />
         <PostsPage />
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);

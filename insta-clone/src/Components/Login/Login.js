@@ -17,7 +17,7 @@ class Login extends Component {
         const { username, password} = this.state;
         return (
             <div>
-                <h2>please authenticate</h2>
+                <h2>please login</h2>
                 <div>
                     <input
                         placeholder="enter username"
