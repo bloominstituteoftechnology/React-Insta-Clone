@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js'
-import PostContainer from './components/post/postContainer';
-import SearchBar from './components/search/SearchBar';
+import PostPage from './components/post/PostPage'
+import Authenticate from './components/Authenticate/Authenticate';
+
 
 class App extends Component {
   constructor() {
@@ -27,16 +28,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar
-          searchPost={this.searchPostsHandler}
-        />
-        <PostContainer posts={this.state.filteredPost.length > 0
-              ? this.state.filteredPost
-              : this.state.post
-          } />
+        <PostPage postPage = {this.state} search ={this.searchPostsHandler} />
       </div>
     );
   }
 }
 
-export default App;
+export default Authenticate(App);
