@@ -1,23 +1,47 @@
 import React from 'react';
 import './SearchBar.css';
+import styled from 'styled-components';
 import Input from '../StyledComponents/Input';
 import Icon from '../StyledComponents/Icon';
 
+const Header = styled.div`
+  padding: 20px 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+`
 
+const HeaderBar = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`
+
+const SearchLogos = styled.div`
+  display: flex;
+  justify-content: flex-start;
+`
+
+const InstaLogo = styled.div`
+  width: 100%;
+  margin-right: ${props => props.iconLogo ? "20px" : null};
+`
+
+const Image = styled.img`
+  max-width: ${props => props.textLogo ? "100px" : null};
+`
 
 const SearchBar = (props) => {
   return (
-    <div className="header">
-      <div className="header-bar">
-        <div className="search-logos">
-          <div className="insta-logo">
+    <Header>
+      <HeaderBar>
+        <SearchLogos>
+          <InstaLogo iconLogo>
             <i className="fab fa-instagram"></i>
-          </div>
+          </InstaLogo>
           <div className="spacer-line"></div>
-          <div className="insta-logo-text">
-            <img src="https://i.imgur.com/wOWyaBc.png" alt="Instagram Text Logo" />
-          </div>
-        </div>
+          <InstaLogo>
+            <Image textLogo src="https://i.imgur.com/wOWyaBc.png" alt="Instagram Text Logo" />
+          </InstaLogo>
+        </SearchLogos>
         <div className="search-bar-input">
           <form onSubmit={props.onSearch}>
             <Input type="text" placeholder="Search" onChange={props.handleNewSearch} value={props.searched}/>
@@ -37,8 +61,8 @@ const SearchBar = (props) => {
             <i className="fas fa-sign-out-alt"></i>
           </Icon>
         </div>
-      </div>
-    </div>
+      </HeaderBar>
+    </Header>
   )
 }
 
