@@ -11,7 +11,11 @@ const Authenticate = WrappedComponent => {
           username: "",
           password: ""
         },
-        users: [{ username: "default", password: "default" }]
+        users: [
+          { username: "default", password: "default" },
+          { username: "tommytutone", password: "jenny" },
+          { username: "realwallaceshawn", password: "inconceivable" }
+        ]
       };
     }
 
@@ -42,9 +46,11 @@ const Authenticate = WrappedComponent => {
         if (
           this.state.loginInfo.username === user.username &&
           this.state.loginInfo.password === user.password
-        )
+        ) {
+          localStorage.setItem("loggedIn", "true");
+          localStorage.setItem("thisUser", user.username);
           this.setState({ loggedIn: true });
-        localStorage.setItem("loggedIn", "true");
+        }
       });
       console.log("got it");
     };

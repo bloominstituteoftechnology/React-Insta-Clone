@@ -11,13 +11,15 @@ class App extends Component {
     this.state = {
       posts: [],
       staticData: [],
-      user: "thisUser",
+      user: "",
       search: ""
     };
   }
 
   componentDidMount() {
-    this.setState({ posts: dummyData, staticData: dummyData });
+    let username = localStorage.getItem("thisUser");
+    console.log(username);
+    this.setState({ posts: dummyData, staticData: dummyData, user: username });
   }
 
   searchInput = event => {
