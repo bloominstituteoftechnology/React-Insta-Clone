@@ -14,9 +14,10 @@ class Login extends Component {
         this.setState({ [input.target.name]: input.target.value })
     }
 
-    loginSubmitHandler=el=>{
-        const user=this.state.username;
-        localStorage.setItem('user',user);
+    loginSubmitHandler=()=>{
+        // const user=this.state.username;
+        // localStorage.setItem('user',user);
+        this.props.toggleLogIn()
     }
     
     render(){
@@ -34,7 +35,7 @@ class Login extends Component {
                 >
 
                 </input>
-                <button onClick="loginSubmitHandler">
+                <button onClick={this.loginSubmitHandler}>
                     Log In
                 </button>
             </form>

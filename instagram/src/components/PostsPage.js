@@ -17,6 +17,7 @@ class PostsPage extends Component {
 
 
 searchPostsFilterHandler = banana => {
+    //eslint-disable-next-line
     const posts = this.state.posts.filter(apple => {
         if (apple.username.includes(banana.target.value)){
             return apple;

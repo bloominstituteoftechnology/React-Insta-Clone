@@ -17,9 +17,16 @@ class extends React.Component{
             this.setState({ userLoggedIn: true });
         }
     }
+
+    toggleLogIn=()=>{
+        console.log('Heyo!')
+        this.setState({
+            userLoggedIn: true
+        })
+    }
     render(){
         if(this.state.userLoggedIn) return <App />;
-        return <Login />
+        return <Login toggleLogIn={this.toggleLogIn}/>
     }
 };
 
