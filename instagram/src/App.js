@@ -26,10 +26,15 @@ class App extends React.Component {
     this.setState({ searchPosts: posts });
   };
 
+  logout = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
+
   render() {
     return (
       <div className="App">
-        <PostPage search={this.searchPostsHandler} posts={this.state.searchPosts.length > 0 ? this.state.searchPosts : this.state.data}/>
+        <PostPage logout={this.logout} search={this.searchPostsHandler} posts={this.state.searchPosts.length > 0 ? this.state.searchPosts : this.state.data}/>
       </div>
     );
   }
