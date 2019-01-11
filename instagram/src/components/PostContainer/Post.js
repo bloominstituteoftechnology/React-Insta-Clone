@@ -32,7 +32,7 @@ class Post extends React.Component {
 
                 <div className="user-info ">
                     <UserThumbnail src={this.props.post.thumbnailUrl} alt=""></UserThumbnail>
-                    <Username>{this.props.post.username}</Username>
+                    <Username fontWeight="500">{this.props.post.username}</Username>
                 </div>
                 <div className="post-image">
                     <img src={this.props.post.imageUrl} alt=""/>
