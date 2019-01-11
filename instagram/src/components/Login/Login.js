@@ -1,11 +1,29 @@
 import React, { Component } from 'react';
-import { Form, Button, Input} from 'reactstrap';
+import logo from '../SearchBar/Images/logo.png';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    width: 400px;
-    
-   
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+`
+const Button = styled.button`
+  width: 300px;
+  height: 30px;
+  background-color: palevioletred;
+  border-radius: 3px;
+  border: 2px solid palevioletred;
+  `
+  const Input = styled.input`
+  width: 300px;
+  background: papayawhip;
+  border: 2px solid papayawhip;
+  border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 15px;
 `
 class Login extends Component {
   constructor(props) {
@@ -28,8 +46,8 @@ class Login extends Component {
 render() {
   return (
       <Container>
-    <Form>
-    <h1>Instagram</h1>
+   
+    <a href="#"><img src={logo} alt="insta-logo" /></a>
     
     <Input 
       type="text" 
@@ -45,9 +63,9 @@ render() {
       value={this.state.password}
       onChange={this.handleInputChange}
       />
-      <Button type="submit" value="Login" onClick={this.handleLoginSubmit} >Log In</Button>
+      <Button type="submit" value="Login" onClick={this.handleLoginSubmit}>Log In</Button>
       
-      </Form>
+      
       </Container>
   )}
 }
