@@ -25,12 +25,14 @@ class Login extends Component {
                 <label>
                     Insta Clone Login Page
                 </label>
-                <input>
+                <input
                 type="password"               
                 placeholder="Please Enter Password"                
                 name="password"                
                 value={this.state.password}                
                 onChange={this.inputHandler}  
+                >
+
                 </input>
                 <button onClick="loginSubmitHandler">
                     Log In
