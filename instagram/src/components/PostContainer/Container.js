@@ -5,6 +5,7 @@ import './post.css';
 import CommentSection from "../CommentSection/CommentSection";
 import Likes from "../CommentSection/Likes";
 import styled from 'styled-components';
+import PostContainer from '../Styled/Reusables';
 
 
 const ContainerStyle = styled.section`
@@ -15,20 +16,19 @@ margin-left: 25%;
     background: lavender;
 `;
 
+const Username = styled.div``
+
+
+
 
 
 const Container = props => {
-    // const comments = props.post.comments;
-    // const commentsArray = comments.map( (comment, index) => (
-    //     <ul className="commentPostUl"key={index} value={comment}><span className="bold">{comment.username}</span> {comment.text}</ul> 
-    // ))
     console.log(props)
     return (
-        <div>
-            <section className="container">
+            <PostContainer type="mainContainer">
                 {props.post.id} 
                 <section className="userNameAndImage"> 
-                    <img src={props.post.thumbnailUrl} alt="thumb" id="thumbnail"/>
+                    <img src={props.post.thumbnailUrl} alt="thumb" className="thumbnail"/>
                     <div className="username">{props.post.username}</div>
                 </section>
                 <section className="imagePost">
@@ -38,15 +38,10 @@ const Container = props => {
                     {/* {<div className="heartContainer"><div className="heart"></div></div>} */}
                     {/* <div className="likes">{props.post.likes} likes </div> */}
                     <Likes like={props.post.likes} />
-                    {/* <div className="commentOnPost">{commentsArray}</div> */}
-                    {/* <Comment comment ={commentsArray}/> */}
                     <div className="timeStamp">{props.post.timestamp}</div>
-                    {/* <CommentSection usercomments={props.post.usercomments} /> */}
                     <CommentSection comments={props.post.comments} />
                 </section>
-            </section>
-        </div>
-      
+            </PostContainer> 
     )
 }
 

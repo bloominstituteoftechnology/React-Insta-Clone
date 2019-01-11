@@ -3,12 +3,11 @@ import PropTypes from "prop-types";
 import Container from './Container';
 import styled from 'styled-components';
 
-const PostContainerStyle = styled.div`
+const PostContainerStyle = styled.section`
 display: flex;
 flex-direction: column;
 align-items: center;
 height: 600px;
-margin-bottom: 200px;
 `;
 
 

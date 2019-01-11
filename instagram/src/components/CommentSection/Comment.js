@@ -1,5 +1,6 @@
 import React from 'react';
 import './comment.css';
+import PostContainer from '../Styled/Reusables';
 // import PropTypes from 'prop-types';
 // import CommentSection from "./CommentSection";
 
@@ -12,7 +13,7 @@ const Comment = props => {
     ))
     console.log(props)
     return (
-        <div>{commentsArray}</div>
+        <PostContainer>{commentsArray}</PostContainer>
     )
 }
 

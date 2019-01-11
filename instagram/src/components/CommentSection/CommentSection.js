@@ -2,7 +2,7 @@ import React from 'react';
 import './comment.css';
 // import dummyData from '../../dummy-data';
 import Comment from './Comment';
-// import Authenticate from '../Authentication/Authenticate';
+import PostContainer from '../Styled/Reusables';
 
 class CommentSection extends React.Component{
     constructor(props){
@@ -58,7 +58,7 @@ class CommentSection extends React.Component{
             <div>
                 <Comment comments={this.state.commentInput} />
                 <form onSubmit={this.addNewComment}>
-                    <div className="commentSectionContainer">
+                <PostContainer>
                         <input placeholder={this.state.placeholder}
                             type="text"
                             name="newComment"
@@ -67,7 +67,7 @@ class CommentSection extends React.Component{
                             onChange={this.handleComments}
                         />
                         <div className="commentMenu">...</div>
-                    </div>
+                 </PostContainer>
                 </form>
              </div>
         )

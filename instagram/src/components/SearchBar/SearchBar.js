@@ -23,6 +23,8 @@ border-color: silver;
 `;
 
 
+
+
 const SearchBar = props => {
     console.log(props)
     return (

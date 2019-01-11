@@ -11,7 +11,9 @@ import logo from '../../images/instagramPost.png';
 const LogoHeader = styled.header`
  display: flex;
  flex-direction: column;
-`
+`;
+
+
 
 
 
