@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { LoginForm,
+         FooterLinks } from '../../styled-components/LoginStyles';
+
 import iconSet from '../../img/app-icon-set.png';
 import iconMicro from '../../img/microsoft-icon.png';
 import phoneBG from '../../img/phone-bg.png';
@@ -22,13 +25,13 @@ const Login = props => {
 
 
         <div className="form-container">
-          <form className="login__form">
+          <LoginForm>
             <img src={title} alt="Instagram" />
             <input type="text" name="username" onChange={props.handleUser} placeholder="Username"/>
             <input type="text" name="password" onChange={props.handlePass} placeholder="Password"/>
             <button onClick={props.login}>Log In</button>
             <button onClick={props.signup}>Sign Up</button>
-          </form>
+          </LoginForm>
 
           <p>Get The App</p>
 
@@ -40,9 +43,9 @@ const Login = props => {
       </div>
 
       <div className="form__footer">
-        <div className="form__footer__links">
+        <FooterLinks>
           {links.map(link => <a href="#" key={Math.random()}>{link}</a>)}
-        </div>
+        </FooterLinks>
 
         <p>&copy; 2019 INSTAGRAM</p>
       </div>
