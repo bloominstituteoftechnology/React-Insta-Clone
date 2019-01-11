@@ -10,7 +10,8 @@ const Authenticate = ReactComponent => {
       super(props);
       this.state = {
         loggedIn: status,
-        error: ""
+        error: "",
+        errorState: false
       };
     }
     signIn = (e, user, pass) => {
@@ -25,12 +26,14 @@ const Authenticate = ReactComponent => {
           });
         } else {
           this.setState({
-            error: <div>username is too long</div>
+            error: <div>username is too long</div>,
+            errorState: "true"
           });
         }
       } else {
         this.setState({
-          error: <div>username or password field is empty</div>
+          error: <div>username or password field is empty</div>,
+          errorState: "true"
         });
       }
     };
@@ -39,12 +42,16 @@ const Authenticate = ReactComponent => {
         <ReactComponent />
       ) : this.state.loggedIn === "false" ? (
         <>
-          <div className="error">{this.state.error}</div>
+          <div className={`error ${this.state.errorState}`}>
+            {this.state.error}
+          </div>
           <LoginPage signIn={this.signIn} />
         </>
       ) : (
         <>
-          <div className="error">{this.state.error}</div>
+          <div className={`error ${this.state.errorState}`}>
+            {this.state.error}
+          </div>
           <LoginPage signIn={this.signIn} />
         </>
       );

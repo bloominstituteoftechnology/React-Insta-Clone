@@ -48,6 +48,13 @@ code {
 i {
   cursor: pointer;
 }
+.error {
+  display: none;
+  border: 1px solid rgba(238, 172, 172, 0.548);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+  padding: 0.25rem 1rem 0.5rem;
+  border-radius: 3px;
+}
 .post__comment {
   font-size: 0.9rem;
   width: 100%;
@@ -167,6 +174,12 @@ i {
   right: 50%;
   top: 1rem;
   transform: translateX(50%);
+}
+.true {
+  display: block;
+}
+.false {
+  display: none;
 }
 .post {
   display: flex;
