@@ -3,8 +3,19 @@ import logo from './logo.png';
 import './Search.css';
 
 import '../../../node_modules/font-awesome/css/font-awesome.min.css';
+import styled from 'styled-components';
 
-
+const Button = styled.button`
+  font-size: 14px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  border-left: none;
+  border: 1px solid black;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  padding: 0px;
+`
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
@@ -43,9 +54,9 @@ class SearchBar extends React.Component {
                             value={this.state.term}
                             onChange={this.changeHandler}
                         />
-                        <button type="submit">
+                        <Button type="submit">
                             <i className="fa fa-search"></i>
-                        </button>
+                        </Button>
                     </form>
                 </div>
                 
