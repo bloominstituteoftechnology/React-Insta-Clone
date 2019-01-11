@@ -1,8 +1,8 @@
 import React from "react";
 import LoginPage from "../LoginPage/LoginPage";
 
-localStorage.setItem("loggedIn", false);
-let status = localStorage.getItem("loggedIn");
+window.localStorage.setItem("loggedIn", false);
+let status = window.localStorage.getItem("loggedIn");
 
 const Authenticate = ReactComponent => {
   return class extends React.Component {
@@ -15,13 +15,19 @@ const Authenticate = ReactComponent => {
     }
     signIn = (e, user, pass) => {
       e.preventDefault();
-      localStorage.setItem("loggedIn", true);
-      localStorage.setItem("user", user);
-      status = localStorage.getItem("loggedIn");
+      window.localStorage.setItem("loggedIn", true);
+      window.localStorage.setItem("user", user);
+      status = window.localStorage.getItem("loggedIn");
       if (pass.length > 0 && user.length > 0) {
-        this.setState({
-          loggedIn: status
-        });
+        if (user.length <= 12) {
+          this.setState({
+            loggedIn: status
+          });
+        } else {
+          this.setState({
+            error: <div>username is too long</div>
+          });
+        }
       } else {
         this.setState({
           error: <div>username or password field is empty</div>
@@ -33,13 +39,13 @@ const Authenticate = ReactComponent => {
         <ReactComponent />
       ) : this.state.loggedIn === "false" ? (
         <>
+          <div className="error">{this.state.error}</div>
           <LoginPage signIn={this.signIn} />
-          {this.state.error}
         </>
       ) : (
         <>
+          <div className="error">{this.state.error}</div>
           <LoginPage signIn={this.signIn} />
-          {this.state.error}
         </>
       );
     }
