@@ -23,4 +23,12 @@ const LoginPage = props => {
   );
 };
 
+LoginPage.propTypes = {
+  userName: PropTypes.string,
+  password: PropTypes.string,
+  nameInput: PropTypes.func,
+  passInput: PropTypes.func,
+  onSubmit: PropTypes.func
+};
+
 export default LoginPage;
