@@ -7,6 +7,8 @@ const Authenticate = WrappedApp =>{
             this.state={isLoggedIn :false}
         }
 
+
+
         componentWillMount () {
             console.log(localStorage.getItem("user"))
             if (localStorage.getItem("user")) {
@@ -19,7 +21,7 @@ const Authenticate = WrappedApp =>{
         render(){
             console.log(this.state.isLoggedIn)
             if (this.state.isLoggedIn) {
-                return <WrappedApp/>
+                return <WrappedApp logOut = {this.logOut}/>
             } else {
                 return <Login />
             }

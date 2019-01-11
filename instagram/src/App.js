@@ -11,14 +11,18 @@ class App extends Component {
         }
     }
 
-    handler = (username, password) => {
+    logout=()=>{
 
+        console.log("Logout called")
+        localStorage.clear();
+        window.location.reload();
+//we did setstate so that post page is rerender and user bis given with login password page.
     }
 
     render() {
         return (
             <div className="App">
-                <PostsPage/>
+                <PostsPage logout={this.logout}/>
             </div>
         );
     }

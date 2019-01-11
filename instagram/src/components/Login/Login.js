@@ -1,4 +1,7 @@
 import React from "react";
+import StyledInput from "./StyledInput";
+import Button from"./Button";
+
 class Login extends React.Component{
     constructor(props){
         super(props);
@@ -22,9 +25,13 @@ class Login extends React.Component{
     render(){
        return (
            <form onSubmit={this.clickHandler}>
-             <input type="text"  placeholder="username" name="username" onChange={this.inputHandler}/>
-             <input type = "password" placeholder="password" name="password" onChange={this.inputHandler}/>
-             <button >Login</button>
+               <h1 style={{textAlign:"center",color:"blue"}}>SIGN UP!!!!</h1>
+               ;
+             <StyledInput type="text"  placeholder="USERNAME" name="username" onChange={this.inputHandler}/>
+
+
+             <br/> <StyledInput type = "password" placeholder="PASSWORD" name="password" onChange={this.inputHandler}/>
+             <Button >Login</Button>
            </form>
        );
 
