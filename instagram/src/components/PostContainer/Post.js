@@ -2,7 +2,17 @@ import React from "react";
 import CommentSection from './../CommentSection/CommentSection';
 import Likes from './Likes';
 import PropTypes from 'prop-types';
-import './Post.css'
+import './Post.css';
+import styled from 'styled-components';
+
+import Username from './../Styles-Reusables/StyledComponent';
+
+const UserThumbnail = styled.img`
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    margin-right: 15px;
+`;
 
 class Post extends React.Component {
     constructor(props) {
@@ -19,9 +29,10 @@ class Post extends React.Component {
     render() {
         return(
             <div className="post-container container">
+
                 <div className="user-info ">
-                    <div><img src={this.props.post.thumbnailUrl} alt=""/></div>
-                    <div>{this.props.post.username}</div>
+                    <UserThumbnail src={this.props.post.thumbnailUrl} alt=""></UserThumbnail>
+                    <Username>{this.props.post.username}</Username>
                 </div>
                 <div className="post-image">
                     <img src={this.props.post.imageUrl} alt=""/>
