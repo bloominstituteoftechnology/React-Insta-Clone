@@ -4,6 +4,29 @@ import logo from './Images/logo.png';
 import location from './Images/location.png';
 import like from './Images/like.png';
 import user from './Images/user.png';
+import styled from 'styled-components';
+import {} from 'reactstrap';
+
+const NavBar = styled.div`
+ margin: 0 auto;
+  max-width: 800px;
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+`
+const Nav = styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+`
+const Input = styled.div`
+background-color: #f3f3f3;
+border-radius: 4px;
+padding: 5px;
+`
 
 class SearchBar extends Component {
     constructor() {
@@ -28,25 +51,22 @@ class SearchBar extends Component {
      render() {
 
         return (
-        <div className="searchContainer">
-            
-            <div className="logo">
+        <NavBar>
+
                 <a href="#"><img src={logo} alt="insta-logo" /></a>
-            </div>
-            <div className="search"> 
-            
+           
+            <Input>
                 <input placeholder="Search" 
                 value={this.state.search} 
                 onChange={this.handleInputChange} />
-                
-            </div>
+           </Input>
             
-            <div className="navigation">
+            <Nav>
                 <a href="#"><img src={location} alt="location" /></a>
                 <a href="#"><img src={like} alt="like" /></a>
                 <a href="#" onClick={this.handleLogOut}><img src={user} alt="user" /></a>
-            </div>
-        </div>
+            </Nav>
+        </NavBar>
         
     )
 }

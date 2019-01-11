@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { Form, Button, Input} from 'reactstrap';
+import styled from 'styled-components';
 
+const Container = styled.div`
+    width: 400px;
+    
+   
+`
 class Login extends Component {
   constructor(props) {
       super(props);
@@ -21,6 +27,7 @@ class Login extends Component {
 }
 render() {
   return (
+      <Container>
     <Form>
     <h1>Instagram</h1>
     
@@ -41,6 +48,7 @@ render() {
       <Button type="submit" value="Login" onClick={this.handleLoginSubmit} >Log In</Button>
       
       </Form>
+      </Container>
   )}
 }
 export default Login
