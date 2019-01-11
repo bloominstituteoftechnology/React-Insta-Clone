@@ -36,13 +36,8 @@ class CommentSection extends React.Component{
         console.log('retained..', retainNewComment)
         commentInputs.push(retainNewComment);
         this.setState({commentInput: commentInputs, newComment:''})
-        // const theComment = {
-        //     username: 'Jamar', text: this.state.newComment
-        // }
-        // commentInputs.push({      
-        //     commentInput: [...this.state.commentInput, {username: 'Jamar', text: this.state.newComment }]
-        //     }
-        // )
+        // text: JSON.stringify(this.state.newComment
+
         // this.setState({ commentInput: [...this.state.commentInput, {username: this.state.user, 
         //     text: this.state.newComment }], newComment: '', placeholder: "Add a comment..."});
         // console.log(commentInput)
@@ -52,6 +47,10 @@ class CommentSection extends React.Component{
         // console.log(commentInput)
         
     };
+
+    // keepComment = (e) => {
+    //     localStorage.setItem('newComment': commentInputs, newComment:'');
+    // }
 
     render() {
         console.log("commentInput", this.state.commentInput)

@@ -8,6 +8,7 @@ import PropTypes from "prop-types";
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
 import Login from './components/Login/Login';
+import logo from './App.css';
 
 
 class App extends Component {
@@ -24,9 +25,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        </header>
+        {/* <header className="App-header">
+          <img src={logo} className="banner" alt="logo" />
+        </header> */}
         <PostsPage />
       </div>
     );

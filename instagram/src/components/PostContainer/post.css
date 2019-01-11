@@ -1,13 +1,19 @@
+.app-header{
+    display: flex;
+    flex-direction: column;
+}
+
 .container{
     /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center; */
-    margin-left: 25%;
+    /* margin-left: 25%; */
     width: 100%;
     max-width: 600px;
     border: solid 1px silver;
     background: lavender;
+    margin-bottom: 5%;
 }
 
 .userNameAndImage{
@@ -89,3 +95,14 @@
 .bold{
     font-weight: bold;
 }
+
+logo{
+    background-image: url('../../images/instagramPost.png');
+    /* width: 100px;
+    display: flex;
+    flex-direction: column; */
+  }
+/* 
+.banner{
+    background-image: url('../../images/instagramPost.png')
+} */

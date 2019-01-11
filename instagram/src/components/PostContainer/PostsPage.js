@@ -5,6 +5,17 @@ import dummyData from '../../dummy-data';
 // import PropTypes from "prop-types";
 import '../../App.css';
 import styled from 'styled-components';
+import logo from '../../images/instagramPost.png';
+
+
+const LogoHeader = styled.header`
+ display: flex;
+ flex-direction: column;
+`
+
+
+
+console.log(logo)
 
 
 class PostsPage extends React.Component {
@@ -41,12 +52,12 @@ class PostsPage extends React.Component {
         return (
             // <div className="App">
             <div>
-            <header className="App-header">
-                {/* <img src={logo} className="App-logo" alt="logo" /> */}
-            </header>
-            <SearchBar 
-                        searchFilteredPosts={this.searchFilter}
-            />
+            <LogoHeader>
+                <img src={logo} alt="logo" width="150px"/>
+              <SearchBar 
+                          searchFilteredPosts={this.searchFilter}
+              />
+            </LogoHeader>
             <PostContainer 
             posts={
             this.state.filteredPosts.length > 0 

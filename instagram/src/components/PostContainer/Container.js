@@ -4,6 +4,16 @@ import PropTypes from 'prop-types';
 import './post.css';
 import CommentSection from "../CommentSection/CommentSection";
 import Likes from "../CommentSection/Likes";
+import styled from 'styled-components';
+
+
+const ContainerStyle = styled.section`
+margin-left: 25%;
+    width: 100%;
+    max-width: 600px;
+    border: solid 1px silver;
+    background: lavender;
+`;
 
 
 
