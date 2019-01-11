@@ -19,7 +19,10 @@ class SearchBar extends Component {
         });
         this.props.handleSearch(input);
       };
-
+      handleLogOut = () => {
+        localStorage.clear('user');
+        window.location.reload();
+    }
       
 
      render() {
@@ -41,7 +44,7 @@ class SearchBar extends Component {
             <div className="navigation">
                 <a href="#"><img src={location} alt="location" /></a>
                 <a href="#"><img src={like} alt="like" /></a>
-                <a href="#"><img src={user} alt="user" /></a>
+                <a href="#" onClick={this.handleLogOut}><img src={user} alt="user" /></a>
             </div>
         </div>
         

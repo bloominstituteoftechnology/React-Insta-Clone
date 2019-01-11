@@ -30,7 +30,7 @@ render() {
       placeholder="User Name" 
       value={this.state.username}
       onChange={this.handleInputChange}
-            />
+      />
       <Input 
       type="password" 
       name="password" 

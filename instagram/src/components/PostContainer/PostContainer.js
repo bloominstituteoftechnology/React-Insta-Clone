@@ -16,7 +16,7 @@ const PostContainer = props => {
                 <div className="contentImage">
                     <img src={post.imageUrl} />
                 </div>
-                <CommentSection comments={post.comments}/>
+                <CommentSection comments={post.comments} likes={post.likes}/>
             </div>
             )
         })}
@@ -27,8 +27,7 @@ const PostContainer = props => {
         data: PropTypes.shape({
             username: PropTypes.string,
             imageUrl: PropTypes.string,
-            likes: PropTypes.number,
-            timestamp: PropTypes.string,     
+            timestamp: PropTypes.string     
         }) 
 }
 

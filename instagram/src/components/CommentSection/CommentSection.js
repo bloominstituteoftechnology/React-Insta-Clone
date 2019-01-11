@@ -9,7 +9,7 @@ class CommentSection extends Component {
  constructor (props) {
    super();
    this.state={
-    likes:props.likes,
+    likes: props.likes,
     comments:props.comments,
     newComment:" ",
     likeStatus: false,
@@ -20,7 +20,7 @@ class CommentSection extends Component {
  addNewComment = (e) =>{
    e.preventDefault();
    let enteredValue = [...this.state.comments]
-   enteredValue.push({username:'My User Name', 
+   enteredValue.push({username:[localStorage.getItem('user')], 
    text: this.state.comment
   })
    this.setState({comments: enteredValue, comment:''
@@ -39,19 +39,26 @@ class CommentSection extends Component {
  
    
    clickedImg = (e) =>{
+   
     e.preventDefault();
     if (this.state.likeStatus === false){
+      console.log('likes are here')
       this.setState({
         likeStatus: true,
         likes: this.state.likes + 1,
-      })
+      }
+      )
+      console.log(this.state.likeStatus)
     } else {
       this.setState(
         {
         likeStatus: false,
         likes: this.state.likes - 1,
+        
       })
     }
+    
+    console.log(this.state.likeStatus)
   }
 
  render() {
@@ -61,7 +68,9 @@ class CommentSection extends Component {
         <a href="#"><img src={like} onClick={this.clickedImg} alt="like" /></a>
         <a href="#"><img src={comments} alt="comments" /></a>
       </div>
+      
       <div className="likes">
+    
         <p>{this.state.likes} likes</p>
       </div>
       
@@ -73,6 +82,7 @@ class CommentSection extends Component {
       />
       
   })}
+
   <div className="timestamp"><p>{this.state.timestamp}</p></div>
   <div className="addComment">
         <form>
@@ -84,9 +94,10 @@ class CommentSection extends Component {
     </div>
 )}}
 CommentSection.propTypes = {
-  comments: PropTypes.arrayOf(PropTypes.shape({
+   comments: PropTypes.arrayOf(PropTypes.shape({
       username: PropTypes.string,
-      text: PropTypes.string
+      text: PropTypes.string,
+      likes: PropTypes.number
   }))
 }
  export default CommentSection;
