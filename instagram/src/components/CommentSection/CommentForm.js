@@ -1,5 +1,14 @@
 import React from 'react';
 
+import styled from 'styled-components';
+
+const Button = styled.button`
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+`
+
 class CommentForm extends React.Component {
     constructor(props) {
         super(props);
@@ -27,7 +36,7 @@ class CommentForm extends React.Component {
                     placeholder="Add a comment"
                     value={this.state.inputText}
                 />
-                <button type="submit">...</button>
+                <Button>...</Button>
             </form>
         )
     }
