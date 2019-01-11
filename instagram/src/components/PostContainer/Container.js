@@ -16,7 +16,19 @@ margin-left: 25%;
     background: lavender;
 `;
 
-const Username = styled.div``
+const Username = styled.div`
+padding: 0 1.5%;
+font-weight: bold;
+`;
+
+const UserThumbnail = styled.section`
+display: flex;
+align-items: center;
+justify-content: flex-start;
+justify-items: flex-start;
+margin-right: 20px;
+padding: 2%;
+`;
 
 
 
@@ -27,10 +39,10 @@ const Container = props => {
     return (
             <PostContainer type="mainContainer">
                 {props.post.id} 
-                <section className="userNameAndImage"> 
+                <UserThumbnail> 
                     <img src={props.post.thumbnailUrl} alt="thumb" className="thumbnail"/>
-                    <div className="username">{props.post.username}</div>
-                </section>
+                    <Username>{props.post.username}</Username>
+                </UserThumbnail>
                 <section className="imagePost">
                     <img src={props.post.imageUrl} alt="lgImage" className="postedImage"/>
                 </section>
