@@ -1,4 +1,17 @@
 import React from "react";
+import styled from "styled-components";
+
+const Button = styled.div`
+  .login__btn {
+    width: 100%;
+    color: white;
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+    background-color: @clr-highlight;
+    border: 1px solid @clr-highlight;
+    border-radius: 4px;
+  }
+`;
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -42,17 +55,19 @@ class LoginPage extends React.Component {
             onChange={this.typingPass}
             required
           />
-          <button
-            className="login__btn"
-            onSubmit={e =>
-              this.props.signIn(e, this.state.userText, this.state.passText)
-            }
-            onClick={e =>
-              this.props.signIn(e, this.state.userText, this.state.passText)
-            }
-          >
-            Log In
-          </button>
+          <Button>
+            <button
+              className="login__btn"
+              onSubmit={e =>
+                this.props.signIn(e, this.state.userText, this.state.passText)
+              }
+              onClick={e =>
+                this.props.signIn(e, this.state.userText, this.state.passText)
+              }
+            >
+              Log In
+            </button>
+          </Button>
           <div className="login__tos">
             By signing in, you agree to our <a>Terms</a>, <a>Data Policy</a> and{" "}
             <a>Cookies Policy</a>.
