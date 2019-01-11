@@ -1,7 +1,32 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
-import './comment.css';
+import styled from 'styled-components';
+
+const CommentContainer = styled.div `
+  padding: 10px;
+  line-height: 1;
+`;
+
+const Comments = styled.div `
+  margin-bottom: 20px;
+`;
+
+const CommentFormContainer = styled.div `
+  padding-top: 20px;
+  border-top: 1px solid rgba(170, 170, 170, 0.637);
+`;
+
+const CommentInput = styled.input `
+  border: none;
+  width: 100%;
+  color: rgba(170, 170, 170, 0.637);
+  font-weight: bold;
+
+  &:focus {
+    outline: none;
+  }
+`;
 
 
 class CommentSection extends Component {
@@ -35,16 +60,16 @@ class CommentSection extends Component {
 
   render() {
     return (
-      <div className="comment-container">
-        <div className="comments">
+      <CommentContainer>
+        <Comments>
           {this.state.comments.map(entry => <Comment comment={entry} key={entry.text} />)}
-        </div>
-        <div className="comment-form">
+        </Comments>
+        <CommentFormContainer>
           <form onSubmit={this.addComment}>
-            <input onChange={this.changeInput} type="textarea" value={this.state.commentInput} placeholder="Add a comment..."></input>
+            <CommentInput onChange={this.changeInput} type="textarea" value={this.state.commentInput} placeholder="Add a comment..."></CommentInput>
           </form>
-        </div>
-      </div>
+        </CommentFormContainer>
+      </CommentContainer>
     );
   }
 }
