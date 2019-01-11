@@ -34,26 +34,26 @@ const LikesImage = styled.img `
 
 const PostContainer = props => {
   return (
-    <div className="post-container">
-      <div className="post-header">
-        <img src={props.data.thumbnailUrl} alt="" />
+    <Post>
+      <PostHeader>
+        <PostImage src={props.data.thumbnailUrl} alt="" />
         <h2 className="user-name">{props.data.username}</h2>
-      </div>
+      </PostHeader>
 
       <div className="post-content">
         <img src={props.data.imageUrl} alt="" />
       </div>
 
-      <div className="likes-container">
+      <LikesContainer>
         <div>
-          <img onClick={() => props.like(props.data.timestamp)} src={require('../images/favourite-heart-lrg.png')} alt="" />
-          <img src={require('../images/speech-bubble.png')} alt="" />
+          <LikesImage onClick={() => props.like(props.data.timestamp)} src={require('../images/favourite-heart-lrg.png')}></LikesImage>
+          <LikesImage src={require('../images/speech-bubble.png')}></LikesImage>
         </div>
         <p>{props.data.likes} likes</p>
-      </div>
+      </LikesContainer>
 
       <CommentSection comments={props.data.comments} />
-    </div>
+    </Post>
   )
 }
 
