@@ -16,22 +16,12 @@ import profile from '../../img/insta-profile.png';
 const SearchBar = (props) => {
 
   const Header = styled.header`
-    border: 1px solid rgba(0, 0, 0, 0.2);
-
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-    z-index: 1040;
-    background-color: white;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
 
     width: 100%;
-    max-width: 642px;
+    max-width: 942px;
 
     box-sizing: border-box;
     padding: 5px 0px;
@@ -61,7 +51,7 @@ const SearchBar = (props) => {
   `;
 
   return(
-    <div>
+    <div className="search-container">
     <Header>
       <LogoHeader>
         <LogoImg src={logo} alt="instagram logo" />
@@ -69,7 +59,7 @@ const SearchBar = (props) => {
         <LogoImg src={title} alt="Instagram" />
       </LogoHeader>
 
-      <input type="text" placeholder={"search..."} onChange={props.searchHandler} defaultValue={props.term}/>
+      <input type="text" placeholder={"Search"} onChange={props.searchHandler} defaultValue={props.term}/>
 
       <div className="search-bar__icons">
         <img src={compass} alt="Instagram" />

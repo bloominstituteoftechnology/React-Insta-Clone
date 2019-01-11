@@ -2,6 +2,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  backhround-color: #fafafa;
+}
+
 .App:nth-child(1) {
   margin-top: 70px;
 }
