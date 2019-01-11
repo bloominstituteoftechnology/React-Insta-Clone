@@ -9,7 +9,7 @@ import {} from 'reactstrap';
 
 const NavBar = styled.div`
  margin: 0 auto;
-  max-width: 800px;
+  max-width: 600px;
   background-color: white;
   border: 1px solid black;
   display: flex;

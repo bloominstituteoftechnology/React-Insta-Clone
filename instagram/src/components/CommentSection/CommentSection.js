@@ -4,6 +4,14 @@ import React, { Component } from 'react';
  import like from './img/like.png';
  import comments from './img/comments.png';
  import PropTypes from "prop-types";
+ import styled from 'styled-components';
+
+ const  Container = styled.div`
+  margin: 0 auto;
+  max-width: 600px;
+  background-color: white;
+  border: 1px solid black;
+ `
 
 class CommentSection extends Component {
  constructor (props) {
@@ -63,7 +71,7 @@ class CommentSection extends Component {
 
  render() {
     return (
-    <div className="commentSection">
+    <Container>
       <div className="likeComments">
         <a href="#"><img src={like} onClick={this.clickedImg} alt="like" /></a>
         <a href="#"><img src={comments} alt="comments" /></a>
@@ -91,7 +99,7 @@ class CommentSection extends Component {
         </form>
        
       </div>
-    </div>
+    </Container>
 )}}
 CommentSection.propTypes = {
    comments: PropTypes.arrayOf(PropTypes.shape({

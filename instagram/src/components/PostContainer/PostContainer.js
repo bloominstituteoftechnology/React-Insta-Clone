@@ -3,7 +3,14 @@ import CommentSection from '../CommentSection/CommentSection.js';
 import PostHeader from '../PostContainer/PostHeader.js';
 import './PostContainer.css';
 import PropTypes from "prop-types";
+import styled from 'styled-components';
 
+const  Post = styled.div`
+margin: 0 auto;
+max-width: 600px;
+background-color: white;
+border: 1px solid black;
+`
 
 
 const PostContainer = props => {
@@ -11,13 +18,13 @@ const PostContainer = props => {
         <div>
         {props.data.map(post => {
             return (
-            <div className="post">
-                <PostHeader username={post.username} thumbnail={post.thumbnailUrl} />
-                <div className="contentImage">
+            <Post>
+             <PostHeader username={post.username} thumbnail={post.thumbnailUrl} />
+                
                     <img src={post.imageUrl} />
-                </div>
+                
                 <CommentSection comments={post.comments} likes={post.likes}/>
-            </div>
+            </Post>
             )
         })}
         </div>

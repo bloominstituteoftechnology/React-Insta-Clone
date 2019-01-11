@@ -1,17 +1,13 @@
-.postContainer{
-max-width: 800px;
-margin: 0 auto;
-border: solid 1px #d3d0d0;
-}
-.postHeader{
-  display: flex;
-  align-items: center;
-  padding: 20px;
-}
-.userThumbnail{
-  height: 35px;
-  border-radius: 50%;
-}
-.commentUser{
-  padding-left: 20px;
-}
+
+ 
+  .userThumbnail{
+    height: 35px;
+    border-radius: 50%;
+  }
+  .commentUser{
+    padding-left: 20px;
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+  }
