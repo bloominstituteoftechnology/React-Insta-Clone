@@ -1,5 +1,6 @@
 import React from 'react';
 import UserPosts from './UserPost'
+import styled from 'styled-components'
 
 
 const PostContainer = props => {

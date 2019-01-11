@@ -3,26 +3,54 @@ import logo from '../../data/pics/logo.png'
 import title from '../../data/pics/title.png'
 import heart from '../../data/pics/heart.png'
 import nav from '../../data/pics/nav.png'
+import background from '../../data/pics/background.jpg'
+
 import empty_user from '../../data/pics/empty_user.png'
-import './SearchBar.css'
+// import './SearchBar.css'
+
+import styled from 'styled-components'
+
 
 const SearchBar = props => {
+
+	const Header = styled.div`
+		display:flex;
+		justify-Content: center;
+		background-img: {background}
+
+	`
+	const Title = styled.img`
+		width: 100px;
+		height: 40px;
+	`
+
+	const Icon = styled.img `
+		width: 30px;
+		height: 30px;
+		padding: 0px 10px 0px 10px;
+	`
+
+
+
   	return (
-  		<div className = "searchBar">
-	  		<img className ="logo" src= {logo} alt="Logo" />,
-	  		<h4> | </h4>
-	  		<img className ="title" src = {title} alt ="Title"/>
+  		<Header>
+	  		<div className = "searchBar">
 
-	  		<input type="text" placeholder="Search" 
-	  			onKeyDown = {props.searchPosts}/>
+		  		<Icon src={logo}></Icon>
+		  		<Title src={title}></Title>
 
-	  		<img className ="nav" src = {nav} alt ="Nav"/>
+		  		<input type="text" placeholder="Search" 
+		  			onKeyDown = {props.searchPosts}/>
 
-	  		<img className ="heart" src = {heart} alt ="Heart"/>
+		  		<Icon src={nav}></Icon>
+		  		<Icon src={heart}></Icon>
+		  		<Icon src={empty_user}></Icon>
 
-	  		<img className ="empty_user" src = {empty_user} alt ="Empty_user"/>
+		  		
 
-  		</div>
+	  		</div>
+  		</Header>
+
   	)
 
 }

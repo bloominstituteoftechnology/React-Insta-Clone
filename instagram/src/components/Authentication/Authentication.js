@@ -22,7 +22,6 @@ const Authenticate = App => {
       	this.state.login 
       			? <PostPage /> 
       			: <Login 
-      				loggingIn = {this.state.login}
       				loggingInInsta = {this.changeLogIn} />
       )
     }

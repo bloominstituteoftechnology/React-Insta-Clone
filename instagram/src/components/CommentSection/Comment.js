@@ -1,11 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 const Comment = props => {
+
+		const Username = styled.p `
+			margin: 0px 0px 0px 10px;
+		`
+
 	return (
 		<div>
 			<h4>{props.comment.text}</h4>
-			<p> - {props.comment.username}</p>
+
+			<Username> - {props.comment.username} </Username>
 		</div>
 	)
 }
