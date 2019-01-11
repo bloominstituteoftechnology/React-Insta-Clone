@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "./App.css";
 import PostsPage from "./components/PostContainer/PostsPage";
 import SearchBar from "./components/SearchBar/SearchBar";
@@ -53,5 +54,9 @@ class App extends Component {
     );
   }
 }
+
+App.Proptypes = {
+  logout: PropTypes.func
+};
 
 export default Authenticate(App);

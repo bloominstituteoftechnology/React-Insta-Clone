@@ -1,5 +1,6 @@
 import React from "react";
 import PostContainer from "./PostContainer";
+import PropTypes from "prop-types";
 
 const PostsPage = props => {
   return (
@@ -16,6 +17,11 @@ const PostsPage = props => {
       })}
     </div>
   );
+};
+
+PostsPage.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.object),
+  user: PropTypes.string
 };
 
 export default PostsPage;

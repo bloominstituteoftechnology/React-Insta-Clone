@@ -20,10 +20,9 @@ const PostContainer = props => {
 
 PostContainer.propTypes = {
   className: PropTypes.string,
-  data: PropTypes.shape({
-    imageUrl: PropTypes.string,
-    timestamp: PropTypes.string
-  })
+  data: PropTypes.object,
+  user: PropTypes.string,
+  key: PropTypes.string
 };
 
 export default PostContainer;
