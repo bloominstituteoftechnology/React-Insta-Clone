@@ -4,7 +4,9 @@ import './PostContainer.css';
 import instaHeart2 from './insta-heart.png';
 import instaReply from './insta-reply.png';
 import CommentSection from '../CommentSection/CommentSection';
-
+import Wrapper from './WrapperStyles';
+import UserInfo from './UserInfoStyles';
+import LikedSection from './LikeSectionStyles';
 
 class PostContainer extends React.Component {
     constructor(props) {
@@ -26,23 +28,26 @@ class PostContainer extends React.Component {
 
     render() {
         return (
-            <div className="postcontainer">
-                <div className="user-info">
+            <Wrapper>
+                <UserInfo>
                     <img src={this.props.data.thumbnailUrl} className="thumbnail" alt="data thumbnail"/>
                     <p className="username">{this.props.data.username}</p>
-                </div>
+                </UserInfo>
                 <div>
                     <img src={this.props.data.imageUrl} className="imageurl" alt="data url pic" />
                 </div>
-                <div className="png-images">
-                    <img className="insta-heart2" alt="instagram heart" src={instaHeart2} onClick={this.handleLikes} />
-                    <img className="insta-reply" alt="instagram reply" src={instaReply} />
-                </div>
-                <div>
-                    <p>{this.state.likes} likes </p>
-                </div>             
+                <LikedSection>
+                    <div>
+                        <img className="insta-heart2" alt="instagram heart" src={instaHeart2} onClick={this.handleLikes} />
+                        <img className="insta-reply" alt="instagram reply" src={instaReply} />
+                    </div>
+                    <div>
+                        <p>{this.state.likes} likes </p>
+                    </div> 
+                </LikedSection>
+                            
                     <CommentSection comments={this.props.data.comments} />                                 
-            </div>
+            </Wrapper>
         )
     }
  

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import Form from './LoginStyles';
 import instaTitle from '../SearchBar/insta-title.png';
 import Button from './ButtonStyles';

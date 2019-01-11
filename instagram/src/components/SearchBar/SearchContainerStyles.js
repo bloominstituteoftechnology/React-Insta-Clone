@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const WrapperDiv = styled.div`
     display: flex;
     width: 100%;
-    max-width: 1024px;
+    max-width: 800px;
     justify-content: space-between;
     margin: 15px 0;
 `

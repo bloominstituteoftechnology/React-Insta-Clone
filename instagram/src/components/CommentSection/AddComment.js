@@ -14,8 +14,7 @@ class AddComment extends React.Component {
         return(
             <div className="addComment">
                 <div>
-                  <strong>{this.props.comment.username}</strong>
-                  {this.props.comment.text}
+                  <strong>{this.props.comment.username} : </strong>{this.props.comment.text}
                 </div>
                 <div>
                     <img className="insta-comment" alt="instagram comment" src={instaComment} />

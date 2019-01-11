@@ -1,5 +1,7 @@
 import React from 'react';
 import AddComment from './AddComment';
+import Input from '../Login/InputStyles';
+import CommentStyles from './CommentStyles'
 
 class CommentSection extends React.Component {
     constructor(props){
@@ -28,7 +30,7 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <div>
+            <CommentStyles>
                  {this.state.comments.map((comment, index) => (
                     <AddComment 
                         key={index} 
@@ -36,14 +38,14 @@ class CommentSection extends React.Component {
                     />
                  ))}
                  <form onSubmit={this.addNewComment}>
-                     <input
+                     <Input
                         type="text" 
                         placeholder="Add a comment..."
                         value={this.state.value}
                         onChange={this.handleChange}
                     />
                  </form>
-            </div>
+            </CommentStyles>
         )
     }
 
