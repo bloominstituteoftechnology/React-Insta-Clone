@@ -3,17 +3,19 @@ import styled from 'styled-components';
 
 const LoginForm = styled.form`
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: ${props => props.row ? 'row' : 'column'};
+    justify-content: ${props => props.row ? 'center' : 'space-around'};
     align-items: center;
 
-    height: 60%;
+    height: ${props => props.small ? '10%' : '60%'};
     width: 100%;
-    padding: 40px 0;
+    padding: ${props => props.small ? '0 0' : '40px 0'};
 
     background-color: #fff;
     border: 1px solid #e6e6e6;
     border-radius: 3px;
+
+    font-size: 1.4rem;
 
     input {
       margin-top: 10px;
@@ -49,6 +51,11 @@ const LoginForm = styled.form`
       outline: none;
     }
 
+    a {
+      margin-left: 10px;
+      font-size: ${props => props.smLink ? '1.2rem' : 'inherit'};
+    }
+
     @media(max-width: 952px) {
       .login__form button {
         width: 34%;
@@ -65,7 +72,6 @@ const FooterLinks = styled.div`
   flex-wrap: wrap;
 
   margin-right: 50px;
-  width:80%;
 
   a {
     color: #003569;

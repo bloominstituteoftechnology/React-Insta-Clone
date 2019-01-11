@@ -2,7 +2,6 @@ import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 import PropTypes from 'prop-types';
-import { Spinner } from 'reactstrap';
 
 import dummyData from '../../dummy-data';
 

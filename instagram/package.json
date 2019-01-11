@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.2.1",
+    "font-awesome": "^4.7.0",
     "jquery": "1.9.1",
     "moment": "^2.22.2",
     "popper.js": "1.14.6",

@@ -53,6 +53,23 @@
   margin: 0;
 }
 
+.fa-facebook-square {
+  color: #3b5998;
+  margin-right: 7px;
+}
+
+#fb-login {
+  font-size: 1.4rem;
+
+  cursor: pointer;
+  color: #385185;
+  font-weight: 500;
+}
+
+#fb-login i {
+  font-size: 2rem;
+}
+
 @media(max-width: 891px) {
   .login__main__img {
     display: none;

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { LoginForm,
          FooterLinks } from '../../styled-components/LoginStyles';
 
+
 import iconSet from '../../img/app-icon-set.png';
 import iconMicro from '../../img/microsoft-icon.png';
 import phoneBG from '../../img/phone-bg.png';
@@ -25,12 +26,21 @@ const Login = props => {
 
 
         <div className="form-container">
-          <LoginForm>
+          <LoginForm smLink>
             <img src={title} alt="Instagram" />
             <input type="text" name="username" onChange={props.handleUser} placeholder="Username"/>
             <input type="text" name="password" onChange={props.handlePass} placeholder="Password"/>
             <button onClick={props.login}>Log In</button>
-            <button onClick={props.signup}>Sign Up</button>
+            OR
+            <p id="fb-login"><i className="fab fa-facebook-square"></i> Log in With Facebook</p>
+            <a href="#">Forgot Password?</a>
+          </LoginForm>
+
+
+
+          <LoginForm small row>
+            <p>Dont have an account?</p>
+            <a href="#" onClick={props.signup}>Sign Up</a>
           </LoginForm>
 
           <p>Get The App</p>

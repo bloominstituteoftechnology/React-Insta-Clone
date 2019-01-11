@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
-import Username from '../../styled-components/Username';
+import { Username } from '../../styled-components/Username';
 import {
   Post,
   User,
   UserImg
 } from '../../styled-components/PostContainerStyles';
 
-
-import styled from 'styled-components';
 import './PostContainer.css';
 
 class PostContainer extends React.Component {

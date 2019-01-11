@@ -8,4 +8,6 @@ const UsernameComment = styled(Username)`
   fontWeight: 400;
 `;
 
-export default Username;
+export {
+  Username,
+  UsernameComment };
