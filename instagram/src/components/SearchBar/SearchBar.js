@@ -61,6 +61,7 @@ const SearchBar = (props) => {
   `;
 
   return(
+    <div>
     <Header>
       <LogoHeader>
         <LogoImg src={logo} alt="instagram logo" />
@@ -68,7 +69,7 @@ const SearchBar = (props) => {
         <LogoImg src={title} alt="Instagram" />
       </LogoHeader>
 
-      <input type="text" placeholder={"search..."} onChange={props.searchHandler}/>
+      <input type="text" placeholder={"search..."} onChange={props.searchHandler} defaultValue={props.term}/>
 
       <div className="search-bar__icons">
         <img src={compass} alt="Instagram" />
@@ -76,7 +77,8 @@ const SearchBar = (props) => {
         <img src={profile} alt="Instagram" />
         <Button onClick={props.logout}>Sign Out</Button>
       </div>
-    </Header>
+      </Header>
+    </div>
   );
 
 }

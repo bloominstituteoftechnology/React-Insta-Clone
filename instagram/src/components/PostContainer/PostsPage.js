@@ -11,16 +11,20 @@ class PostsPage extends React.Component {
     super(props);
 
     this.state = {
-      data: []
+      data: [],
+      term: ""
     }
   }
 
 
   searchPosts = (event) => {
       const term = event.target.value;
-
+      console.log(typeof term);
       if(term === '') {
-        this.setState({data: dummyData});
+        this.setState({
+          data: dummyData,
+          term: term
+        });
       }
 
       const newList = this.state.data.filter(post => post.username === term);
@@ -30,9 +34,11 @@ class PostsPage extends React.Component {
       }
 
 
-
+      console.log(term)
       this.setState({
-        data: newList})
+        data: newList,
+        term: term
+      })
     }
 
     componentDidMount() {
@@ -53,7 +59,9 @@ class PostsPage extends React.Component {
       <div className="posts-page">
         <SearchBar data={this.state.data}
                    searchHandler={this.searchPosts}
-                   logout={this.props.logout}/>
+                   logout={this.props.logout}
+                   term={this.state.term}
+                   />
 
         { this.state.data.length === 0 ?  <div className="d-flex justify-content-center">
                                             <div className="spinner-border" style={spinnerStyle} role="status"></div>

@@ -48,8 +48,6 @@ class PostContainer extends React.Component {
         margin:  0 6% 0 8%;
      `;
 
-
-
     return(
       <Post>
         <User>
