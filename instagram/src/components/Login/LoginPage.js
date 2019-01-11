@@ -13,6 +13,7 @@ const LoginPage = props => {
           onChange={props.nameInput}
         />
         <Input
+          type="password"
           placeholder="password"
           value={props.password}
           onChange={props.passInput}
