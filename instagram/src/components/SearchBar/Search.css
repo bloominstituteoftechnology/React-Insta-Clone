@@ -1,10 +1,4 @@
 
-.searchbar-wrapper {
-    display: flex;
-    justify-content: space-around;
-    height: 100px;
-    align-items: center;
-  }
   nav a {
     display: flex;
   }
@@ -51,19 +45,6 @@
     display: flex;
 
   }
-  .searchbar-wrapper button {
-    /* background-color: rgba(255, 255, 255, .4);
-    font-size: 14px;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    border-left: none;
-    border: 1px solid black;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    padding: 0px; */
-  }
-
   .searchbar-wrapper input {
     border: 1px solid black;
     border-right: none;

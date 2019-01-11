@@ -5,6 +5,13 @@ import './Search.css';
 import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 import styled from 'styled-components';
 
+const Header = styled.header`
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+`
+
 const Button = styled.button`
   font-size: 14px;
   border-radius: 3px;
@@ -39,39 +46,39 @@ class SearchBar extends React.Component {
 
         return(
             <div className="searchbar-wrapper">
-                
-                <div className="navs img-logo">
-                    <a href="/"><img src={logo} alt="insta-logo" /></a>
-                    <h3>Instagram</h3>
-                </div>
-                
-                <div className="navs search">
+                <Header>
+                    <div className="navs img-logo">
+                        <a href="/"><img src={logo} alt="insta-logo" /></a>
+                        <h3>Instagram</h3>
+                    </div>
+                    
+                    <div className="navs search">
 
-                    <form onSubmit={this.submitHandler}>
-                        <input 
-                            type="text" 
-                            placeholder="Search"
-                            value={this.state.term}
-                            onChange={this.changeHandler}
-                        />
-                        <Button type="submit">
-                            <i className="fa fa-search"></i>
-                        </Button>
-                    </form>
-                </div>
-                
-                <div className="navs icons">
-                    <div className="icons">
-                        <i className="fa fa-compass"></i>
+                        <form onSubmit={this.submitHandler}>
+                            <input 
+                                type="text" 
+                                placeholder="Search"
+                                value={this.state.term}
+                                onChange={this.changeHandler}
+                            />
+                            <Button type="submit">
+                                <i className="fa fa-search"></i>
+                            </Button>
+                        </form>
                     </div>
-                    <div className="icons">
-                        <i className="fa fa-heart-o"></i>
+                    
+                    <div className="navs icons">
+                        <div className="icons">
+                            <i className="fa fa-compass"></i>
+                        </div>
+                        <div className="icons">
+                            <i className="fa fa-heart-o"></i>
+                        </div>
+                        <div className="icons">
+                            <i className="fa fa-user-o"></i>
+                        </div>
                     </div>
-                    <div className="icons">
-                        <i className="fa fa-user-o"></i>
-                    </div>
-                </div>
-            
+                </Header>
             </div>
         )
     };
