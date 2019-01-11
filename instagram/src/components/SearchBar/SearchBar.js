@@ -11,7 +11,6 @@ const Header = styled.header`
     height: 100px;
     align-items: center;
 `
-
 const Button = styled.button`
   font-size: 14px;
   border-radius: 3px;
@@ -22,6 +21,20 @@ const Button = styled.button`
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   padding: 0px;
+`
+const LogoHeader = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: flex-start;
+    width: 33%;
+`
+
+const LogoImage = styled.img`
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    align-self: center;
+    background-image: url(${logo});
 `
 class SearchBar extends React.Component {
     constructor(props) {
@@ -47,11 +60,13 @@ class SearchBar extends React.Component {
         return(
             <div className="searchbar-wrapper">
                 <Header>
-                    <div className="navs img-logo">
-                        <a href="/"><img src={logo} alt="insta-logo" /></a>
+                    <LogoHeader>
+                        <a href="/">
+                            <LogoImage src={logo} alt="insta-logo">
+                            </LogoImage>
+                        </a>
                         <h3>Instagram</h3>
-                    </div>
-                    
+                    </LogoHeader>
                     <div className="navs search">
 
                         <form onSubmit={this.submitHandler}>

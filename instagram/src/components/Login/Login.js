@@ -1,20 +1,5 @@
 import React from 'react';
 
-const Username = (props) => {
-    return (
-        <input 
-            placeholder="username"
-        />
-    )
-}
-
-const Password = (props) => {
-    return (
-        <input 
-            placeholder="password"
-        />
-    )    
-}
 
 class Login extends React.Component {
     constructor(props) {
