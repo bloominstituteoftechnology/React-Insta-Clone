@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SimpleStorage from "react-simple-storage";
 import LoginPage from '../Login/LoginPage'
 
 class Login extends Component {
@@ -18,7 +17,7 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <SimpleStorage parent={this} />
+        {/* <SimpleStorage parent={this} /> */}
         <LoginPage
           username={this.state.username}
           password={this.state.password}

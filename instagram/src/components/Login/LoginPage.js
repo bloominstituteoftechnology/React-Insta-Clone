@@ -1,32 +1,50 @@
-import React from 'react'
-import iglogo from '../../assets/iglogo.png'
-import './Login.css'
+import React from "react";
+import iglogo from "../../assets/iglogo.png";
+import styled from "styled-components";
+import "./Login.css";
+
+const LoginImg = styled.img`
+  margin: 0 auto;
+  padding: 10% 0;
+  width: 70%;
+`;
+const LoginForm = styled.form`
+  margin: 0 auto;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+`;
+const LoginInput = styled.input`
+  margin: 5% 0;
+  font-size: .7rem;
+  height: 40px;
+  width: 100%;
+  background-color: lightyellow;
+  border-radius: 5px;
+`
 
 const LoginPage = props => {
   return (
     <div>
-      <img className="LoginPage-img"
-           src={iglogo} alt="ig logo" />
-      <form className="login-page-form">
-        <input
-          className="LoginPage-input"
+      <LoginImg src={iglogo} alt="ig logo" />
+      <LoginForm>
+        <LoginInput
           type="text"
           placeholder="Phone number, username, or email"
           value={props.username}
           name="username"
-          onChange={e => props.updateInput("username", e.target.value)}>
-        </input>
-        <input
-          className="LoginPage-input"
+          onChange={e => props.updateInput("username", e.target.value)}
+        />
+        <LoginInput
           type="password"
           placeholder="Password"
           value={props.password}
           name="password"
-          onChange={e => props.updateInput("password", e.target.value)}>
-        </input>
-      </form>
+          onChange={e => props.updateInput("password", e.target.value)}
+        />
+      </LoginForm>
     </div>
-  )
-}
+  );
+};
 
 export default LoginPage;

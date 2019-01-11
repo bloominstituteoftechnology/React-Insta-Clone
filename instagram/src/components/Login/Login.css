@@ -8,24 +8,3 @@
   border: 1px solid grey;
 }
 
-.LoginPage-img {
-  margin: 0 auto;
-  padding: 10% 0;
-  width: 70%;
-}
-
-.login-page-form {
-  margin: 0 auto;
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-}
-
-.LoginPage-input {
-  margin: 5% 0;
-  font-size: .7rem;
-  height: 40px;
-  width: 100%;
-  background-color: lightyellow;
-  border-radius: 5px;
-}
