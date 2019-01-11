@@ -1,8 +1,8 @@
 import React from 'react';
 import './SearchBar.css';
 import styled from 'styled-components';
-import Input from '../StyledComponents/Input';
-import Icon from '../StyledComponents/Icon';
+import Input from '../StyledComponents/Reusables/Input';
+import Icon from '../StyledComponents/Reusables/Icon';
 
 const Header = styled.div`
   padding: 20px 0;

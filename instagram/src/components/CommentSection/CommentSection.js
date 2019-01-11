@@ -1,11 +1,13 @@
 import React from 'react';
-import './CommentSection.css';
+// import './CommentSection.css';
 import PropTypes from 'prop-types';
 import CommentInput from './CommentInput';
 import Comment from './Comment';
 import styled from 'styled-components';
 
 const CommentsCon = styled.div`
+  text-align: left;
+  padding: 2%;
 `
 const CommentsIcons = styled.div`
   display: flex;
@@ -19,6 +21,11 @@ const CommentsConAll = styled.div`
   > div {
   padding-bottom: 5px;
   }
+`
+const Timestamp = styled.div`
+`
+const CommentsInput = styled.div`
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 `
 
 class CommentSection extends React.Component {
@@ -72,14 +79,15 @@ class CommentSection extends React.Component {
           <Comment key={i} comment={c} />
         ))}
         </CommentsConAll>
-        <div className="timestamp">{this.props.timestamp}</div>
-        <div className="comments-input">
+        <Timestamp>{this.props.timestamp}</Timestamp>
+        <CommentsInput>
           <CommentInput handleNewComment={this.handleNewComment} newComment={this.state.newComment} onCommentAdd={this.onCommentAdd}/>
-        </div>
+        </CommentsInput>
       </CommentsCon>
     )
   }
 }
+
 
 
 

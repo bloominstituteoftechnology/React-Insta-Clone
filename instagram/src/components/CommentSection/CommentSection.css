@@ -4,26 +4,26 @@
 .comment-icon {
   width: 24px;
 } */
-.comment-icon img {
+/* .comment-icon img {
   width: 24px;
-}
-.user-comments {
+} */
+/* .user-comments {
   text-align: left;
   padding: 2%;
-}
-.comments-comment {
+} */
+/* .comments-comment {
   display: flex;
-}
-.comments-username {
+} */
+/* .comments-username {
   font-weight: bold;
   margin-right: 5px;
-}
+} */
 /* .comments-con > div {
   padding-bottom: 5px;
 } */
-.comments-input {
+/* .comments-input {
   border-top: 1px solid rgba(0, 0, 0, 0.1)
-}
+} */
 /* .comments-input input {
   border: none;
   width: 100%;
