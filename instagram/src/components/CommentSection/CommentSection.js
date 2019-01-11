@@ -3,6 +3,23 @@ import './CommentSection.css';
 import PropTypes from 'prop-types';
 import CommentInput from './CommentInput';
 import Comment from './Comment';
+import styled from 'styled-components';
+
+const CommentsCon = styled.div`
+`
+const CommentsIcons = styled.div`
+  display: flex;
+`
+const CommentIcon = styled.div`
+  width: 24px;
+`
+const CommentsLikes = styled.div`
+`
+const CommentsConAll = styled.div`
+  > div {
+  padding-bottom: 5px;
+  }
+`
 
 class CommentSection extends React.Component {
   constructor(props){
@@ -41,28 +58,34 @@ class CommentSection extends React.Component {
 
   render(){
     return (
-      <div className="comments-con">
-        <div className="comments-icons">
-          <div className="comment-heart-icon comment-icon" onClick={this.onCommentLike}>
+      <CommentsCon>
+        <CommentsIcons>
+          <CommentIcon className="comment-heart-icon" onClick={this.onCommentLike}>
             <i className="far fa-heart"></i>
-          </div>
-          <div className="comment-comment-icon comment-icon">
+          </CommentIcon>
+          <CommentIcon className="comment-comment-icon">
             <i className="far fa-comment"></i>
-          </div>
-        </div>
-        <div className="comments-likes">{this.state.likes} likes</div>
-        <div className="comments-con">{this.state.comments.map((c, i) => (
+          </CommentIcon>
+        </CommentsIcons>
+        <CommentsLikes className="comments-likes">{this.state.likes} likes</CommentsLikes>
+        <CommentsConAll className="comments-con">{this.state.comments.map((c, i) => (
           <Comment key={i} comment={c} />
         ))}
-        </div>
+        </CommentsConAll>
         <div className="timestamp">{this.props.timestamp}</div>
         <div className="comments-input">
-          <CommentInput  handleNewComment={this.handleNewComment} newComment={this.state.newComment} onCommentAdd={this.onCommentAdd}/>
+          <CommentInput handleNewComment={this.handleNewComment} newComment={this.state.newComment} onCommentAdd={this.onCommentAdd}/>
         </div>
-      </div>
+      </CommentsCon>
     )
   }
 }
+
+
+
+
+
+
 
 CommentSection.propTypes = {
   likes: PropTypes.number,

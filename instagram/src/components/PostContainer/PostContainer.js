@@ -1,5 +1,5 @@
 import React from 'react';
-import './PostContainer.css';
+// import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -14,7 +14,7 @@ const UserInfo = styled.div`
   display: flex;
   align-items: center;
 `
-const ProfilePic = styled.div`
+const ProfilePicCon = styled.div`
   border-radius: 50%;
   overflow: hidden;
   height: 30px;
@@ -25,26 +25,43 @@ const ProfilePic = styled.div`
 const UserName = styled.div`
   font-weight: bold;
 `
+const ProfilePic = styled.img`
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  max-width: 30px;
+`
+
+const UserPost = styled.div`
+
+`
+
+const UserComments = styled.div`
+
+`
+
+
 
 const PostContainer = props => {
     return (  
-      <div className="post-container">{props.data.map((d,i) => (
+      <>{props.data.map((d,i) => (
         <Post key={i}>
           <UserInfo>
-            <ProfilePic>
-              <img src={d.thumbnailUrl} alt="" />
-            </ProfilePic>
+            <ProfilePicCon>
+              <ProfilePic src={d.thumbnailUrl} alt="" />
+            </ProfilePicCon>
             <UserName>{d.username}</UserName>
           </UserInfo>
-          <div className="user-post">
+          <UserPost>
             <img src={d.imageUrl} alt="" />
-          </div>
-          <div className="user-comments">
+          </UserPost>
+          <UserComments>
             <CommentSection comments={d.comments} likes={d.likes} timestamp={d.timestamp}/>
-          </div>
+          </UserComments>
         </Post>
   ))}
-      </div>
+      </>
   )
 }
 

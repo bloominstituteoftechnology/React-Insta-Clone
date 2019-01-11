@@ -4,7 +4,7 @@ import PostContainer from '../PostContainer/PostContainer';
 
 const PostsPage = (props) => {
   return (
-    <div className="posts-page">
+    <>
       <SearchBar 
         data={props.data} 
         onSearch={props.onSearch} 
@@ -15,7 +15,7 @@ const PostsPage = (props) => {
       <PostContainer
         data={props.data} 
         users={props.users}/>
-    </div>
+    </>
   )
 }
 

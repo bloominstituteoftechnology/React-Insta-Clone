@@ -1,9 +1,9 @@
-.comments-icons {
+/* .comments-icons {
   display: flex;
 }
 .comment-icon {
   width: 24px;
-}
+} */
 .comment-icon img {
   width: 24px;
 }
@@ -18,14 +18,14 @@
   font-weight: bold;
   margin-right: 5px;
 }
-.comments-con > div {
+/* .comments-con > div {
   padding-bottom: 5px;
-}
+} */
 .comments-input {
   border-top: 1px solid rgba(0, 0, 0, 0.1)
 }
-.comments-input input {
+/* .comments-input input {
   border: none;
   width: 100%;
   font-size: 1.2rem;
-}
+} */
