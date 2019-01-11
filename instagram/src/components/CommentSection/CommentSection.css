@@ -1,0 +1,39 @@
+.commentUser{
+ font-weight: bold;
+}
+.commentSection{
+  padding-left: 10px;
+  
+}
+.likeComments{
+  padding-left: 10px;
+  
+}
+
+.likes{
+  font-weight: bold;
+  padding-left: 20px;
+}
+.addComment
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-top: solid 1px #d3d0d0;
+  border-bottom: solid 1px #d3d0d0;
+}
+.addComment input{
+  outline: none;
+  width: 95%;
+  height: 100%;
+  border: 0px;
+  height: 18px;
+  color:  #9c9797;
+}
+.threeDots{
+  font-weight: bold;
+}
+.comment{
+  padding-bottom: 10px;
+  }
+  
