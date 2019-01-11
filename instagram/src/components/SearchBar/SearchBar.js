@@ -4,7 +4,13 @@ import instaTitle from './insta-title.png';
 import instaCompass from './insta-compass.png';
 import instaHeart from './insta-heart.png';
 import instaProfile from './insta-profile.png';
-import './SearchBar.css';
+// import styled from 'styled-components';
+import WrapperDiv from './SearchBarStyles';
+
+// const LeftHeader = styled.div`
+//     padding-right: 30px;
+//     border-right: 1px solid grey;
+// `
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -26,11 +32,9 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div className="header">
-                <div className="header-left">
+            <WrapperDiv>
                     <img className="insta-logo" alt="instagram logo" src={instaLogo} />
-                    <img className="insta-title" alt="instagram title" src={instaTitle} />
-                </div>
+                    <img className="insta-title" alt="instagram title" src={instaTitle} />      
                 <div>
                     <form onSubmit={this.submitHandler}>
                         <input 
@@ -48,7 +52,7 @@ class SearchBar extends React.Component {
                     <img className="insta-heart" alt="instagram heart" src={instaHeart} />
                     <img className="insta-profile" alt="instagram profile" src={instaProfile} />
                 </div>
-            </div>
+            </WrapperDiv>
         )
     }
 
