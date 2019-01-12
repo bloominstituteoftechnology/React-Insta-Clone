@@ -16,6 +16,8 @@ class Login extends Component{
         window.location.reload()
     }
 
+  
+
     handleLogin = e => {
         this.setState({
                 loggedInState: e.target.value
@@ -39,6 +41,7 @@ class Login extends Component{
                     value={this.state.password}
                 />
             <button type="submit" onClick={this.checkLogin}>Log In</button>
+  
           </form>
             </div>
         )

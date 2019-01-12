@@ -14,12 +14,6 @@ const LogoHeader = styled.header`
 `;
 
 
-
-
-
-console.log(logo)
-
-
 class PostsPage extends React.Component {
     constructor(props) {
         super(props);
@@ -50,6 +44,13 @@ class PostsPage extends React.Component {
           filteredPosts: filteredPostResults
         })
       }
+
+      checkLogout = e => {
+        e.preventDefault();
+        localStorage.removeItem('username', this.state.loggedInState);
+        window.location.reload()
+    }
+    
     render () {
         return (
             // <div className="App">
@@ -59,6 +60,7 @@ class PostsPage extends React.Component {
               <SearchBar 
                           searchFilteredPosts={this.searchFilter}
               />
+                        <button type="logout" onClick={this.checkLogout}>Log Out</button>
             </LogoHeader>
             <PostContainer 
             posts={

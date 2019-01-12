@@ -30,6 +30,9 @@ margin-right: 20px;
 padding: 2%;
 `;
 
+const ImagePost = styled.section`
+`;
+
 
 
 
