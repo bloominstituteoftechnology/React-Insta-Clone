@@ -1,7 +1,6 @@
 import React from 'react';
 import { Username } from '../../styled-components/Username';
 
-import defaultProfile from '../../img/profile-default.jpg';
 import tempProfile from '../../img/profile-temp.jpg';
 
 
@@ -21,7 +20,7 @@ class Pane extends React.Component {
         <div className="stories__img-container">
 
           <div className="sidep__user">
-            <img src={tempProfile} alt="user image" />
+            <img src={tempProfile} alt="user" />
 
             <div className="sidep__user--name">
               <Username>User 1</Username>
@@ -30,7 +29,7 @@ class Pane extends React.Component {
           </div>
 
           <div className="sidep__user">
-            <img src={tempProfile} alt="user image" />
+            <img src={tempProfile} alt="user" />
 
             <div className="sidep__user--name">
               <Username>User 2</Username>
@@ -39,7 +38,7 @@ class Pane extends React.Component {
           </div>
 
           <div className="sidep__user">
-            <img src={tempProfile} alt="user image" />
+            <img src={tempProfile} alt="user" />
 
             <div className="sidep__user--name">
               <Username>User 3</Username>

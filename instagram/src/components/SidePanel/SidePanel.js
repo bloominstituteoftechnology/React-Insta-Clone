@@ -11,7 +11,7 @@ const SidePanel = props => {
   return(
     <section className="sidep">
       <div className="sidep__user">
-        <img src={props.img ? props.img : defaultProfile} alt="user image" />
+        <img src={props.img ? props.img : defaultProfile} alt="user" />
 
         <div className="sidep__user--name" id="user">
           <Username>{props.user}</Username>
