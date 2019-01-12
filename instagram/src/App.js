@@ -14,6 +14,7 @@ class App extends Component {
 }
 componentDidMount() {
  this.setState({ post: dummyData });
+//  search will go here
 }
   render() {
     return (
