@@ -26,7 +26,7 @@ class CommentSection extends React.Component {
     return (
       <div>
         <div>{this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}</div>
-        <div>{this.state.timestamp}</div>
+        <div>{this.props.timestamp}</div>
         <form onSubmit={this.handleCommentSubmit}>
           <input type='text' placeholder='Add a comment...' onChange={this.commentHandler} value={this.state.newComment}/>
         </form>

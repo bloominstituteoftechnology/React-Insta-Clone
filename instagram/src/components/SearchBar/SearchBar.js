@@ -1,5 +1,4 @@
 import React from 'react';
-import './SearchBar.css';
 import logo from './img/instagram-new-logo.png';
 import logoCam from './img/icons8-instagram-50.png';
 import logoUser from './img/icons8-user-64.png';
