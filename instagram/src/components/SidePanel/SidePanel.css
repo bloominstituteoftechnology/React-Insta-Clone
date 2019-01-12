@@ -65,7 +65,7 @@
   padding: 5px 0 0 5px;
 }
 
-.footer-sp a, .footer-sp p {
+.sidep .footer-sp a, .footer-sp p {
   font-size: 1rem;
   color: grey;
   cursor: pointer;
