@@ -32,14 +32,16 @@ const LoginPage = props => {
       <LoginForm className="login-form" name="login" onSubmit={props.onSubmit}>
         <InputField
           placeholder="username"
-          value={props.userName}
-          onChange={props.nameInput}
+          value={props.username}
+          onChange={props.changeHandler}
+          name="username"
         />
         <InputField
           type="password"
           placeholder="password"
           value={props.password}
-          onChange={props.passInput}
+          onChange={props.changeHandler}
+          name="password"
         />
         <SubmitButton type="submit">Submit</SubmitButton>
       </LoginForm>

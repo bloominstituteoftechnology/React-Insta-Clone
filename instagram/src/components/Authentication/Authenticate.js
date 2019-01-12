@@ -7,10 +7,9 @@ const Authenticate = WrappedComponent => {
       super();
       this.state = {
         loggedIn: false,
-        loginInfo: {
-          username: "",
-          password: ""
-        },
+        username: "",
+        password: "",
+
         users: [
           { username: "default", password: "default" },
           { username: "tommytutone", password: "jenny" },
@@ -19,24 +18,8 @@ const Authenticate = WrappedComponent => {
       };
     }
 
-    nameHandler = event => {
-      // event.preventDefault();
-      this.setState({
-        loginInfo: {
-          username: event.target.value,
-          password: this.state.loginInfo.password
-        }
-      });
-    };
-
-    passHandler = event => {
-      // event.preventDefault();
-      this.setState({
-        loginInfo: {
-          username: this.state.loginInfo.username,
-          password: event.target.value
-        }
-      });
+    changeHandler = event => {
+      this.setState({ [event.target.name]: event.target.value });
     };
 
     checkCreds = event => {
@@ -44,8 +27,8 @@ const Authenticate = WrappedComponent => {
       console.log("submit");
       this.state.users.forEach(user => {
         if (
-          this.state.loginInfo.username === user.username &&
-          this.state.loginInfo.password === user.password
+          this.state.username === user.username &&
+          this.state.password === user.password
         ) {
           localStorage.setItem("loggedIn", "true");
           localStorage.setItem("thisUser", user.username);
@@ -59,10 +42,8 @@ const Authenticate = WrappedComponent => {
       console.log("logout");
       this.setState({
         loggedIn: false,
-        loginInfo: {
-          username: "",
-          password: ""
-        }
+        username: "",
+        password: ""
       });
       localStorage.clear();
       console.log(localStorage);
@@ -77,10 +58,9 @@ const Authenticate = WrappedComponent => {
       if (!this.state.loggedIn) {
         return (
           <LoginPage
-            userName={this.state.loginInfo.username}
-            password={this.state.loginInfo.password}
-            nameInput={this.nameHandler}
-            passInput={this.passHandler}
+            username={this.state.username}
+            password={this.state.password}
+            changeHandler={this.changeHandler}
             onSubmit={this.checkCreds}
           />
         );
