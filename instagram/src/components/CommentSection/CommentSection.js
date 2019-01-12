@@ -1,5 +1,16 @@
 import React from 'react';
 import Comment from './Comment';
+import styled from 'styled-components';
+
+const CommentForm = styled.form`
+  width: 100%;
+  border: none;
+  border-top: 1px solid black;
+`
+const CommentInput = styled.input`
+  width: 100%;
+  border: none;
+`
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -27,9 +38,9 @@ class CommentSection extends React.Component {
       <div>
         <div>{this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}</div>
         <div>{this.props.timestamp}</div>
-        <form onSubmit={this.handleCommentSubmit}>
-          <input type='text' placeholder='Add a comment...' onChange={this.commentHandler} value={this.state.newComment}/>
-        </form>
+        <CommentForm onSubmit={this.handleCommentSubmit}>
+          <CommentInput type='text' placeholder='Add a comment...' onChange={this.commentHandler} value={this.state.newComment}/>
+        </CommentForm>
       </div>
     );
   }
