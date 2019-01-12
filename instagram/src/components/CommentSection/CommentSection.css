@@ -65,8 +65,13 @@
 .modal-container__btn {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .modal-container__btn:focus {
   outline: none;
+}
+
+.modal-content {
+  top: 25vh;
 }
