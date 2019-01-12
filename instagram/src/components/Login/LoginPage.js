@@ -2,10 +2,26 @@ import React from "react";
 import PropTypes from "prop-types";
 // import { Input } from "reactstrap";
 import styled from "styled-components";
+import HeaderLogo from "../StyledComponents";
 import "./Login.css";
 
-const InputField = styled.input`
+const LoginHeaderLogo = styled(HeaderLogo)`
+  border: none;
+  font-size: 4.8rem;
+`;
+
+const LogInBox = styled.div`
+  border: 2px solid #c9c9c9;
+  border-style: inset;
   max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5%;
+  text-align: center;
+`;
+
+const LogInputField = styled.input`
+  ${"" /* max-width: 600px; */}
   width: 100%;
   font-size: 2.5rem;
   margin: 10px auto;
@@ -28,15 +44,16 @@ const LoginForm = styled.form`
 
 const LoginPage = props => {
   return (
-    <div className="login-page">
+    <LogInBox className="login-page">
+      <LoginHeaderLogo>SlightDelayGram</LoginHeaderLogo>
       <LoginForm className="login-form" name="login" onSubmit={props.onSubmit}>
-        <InputField
+        <LogInputField
           placeholder="username"
           value={props.username}
           onChange={props.changeHandler}
           name="username"
         />
-        <InputField
+        <LogInputField
           type="password"
           placeholder="password"
           value={props.password}
@@ -45,7 +62,7 @@ const LoginPage = props => {
         />
         <SubmitButton type="submit">Submit</SubmitButton>
       </LoginForm>
-    </div>
+    </LogInBox>
   );
 };
 

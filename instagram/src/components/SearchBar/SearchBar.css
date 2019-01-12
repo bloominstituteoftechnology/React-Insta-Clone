@@ -23,18 +23,18 @@
   margin-top: 10px;
 } */
 
-.logo-container {
+/* .logo-container {
   display: flex;
   align-items: center;
   width: 25%;
-}
+} */
 
-.header-icon-container {
+/* .header-icon-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 25%;
-}
+} */
 
 .header-icon-container .icon {
   margin: auto 2%;
@@ -44,22 +44,20 @@
   font-size: 2.4rem;
 }
 
-@media (max-width: 600px) {
-  #search-input {
+/* #search-input {
     order: 2;
     width: 98%;
     margin-top: 5px;
-  }
+  } */
 
-  #header-logo {
+/* #header-logo {
     font-size: 2.2rem;
-  }
+  } */
 
-  .search-bar-container {
+/* .search-bar-container {
     flex-wrap: wrap;
-  }
+  } */
 
-  .logo-container {
+/* .logo-container {
     width: 50%;
-  }
-}
+  } */
