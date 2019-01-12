@@ -7,6 +7,11 @@ const Post = styled.div`
   margin-left: 20%;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: white;
+
+  @media(max-width: 1322px) {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
 `;
 
 const User = styled.div`

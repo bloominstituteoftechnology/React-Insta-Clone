@@ -1,6 +1,7 @@
 import React from 'react';
 import { Username } from '../../styled-components/Username';
 import Pane from './Pane';
+import Footer from './Footer';
 
 import defaultProfile from '../../img/profile-default.jpg';
 
@@ -20,6 +21,8 @@ const SidePanel = props => {
 
       <Pane title="Stories" link="Watch All" />
       <Pane title="Suggestions For You" link="See All" />
+
+      <Footer />
     </section>
   );
 }
