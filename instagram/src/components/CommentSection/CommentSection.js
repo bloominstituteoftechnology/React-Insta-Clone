@@ -11,6 +11,11 @@ const CommentInput = styled.input`
   width: 100%;
   border: none;
 `
+const TimeStamp = styled.div`
+  display: flex;
+  margin-left: 20px;
+  margin-top: 10px;
+`
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -37,7 +42,7 @@ class CommentSection extends React.Component {
     return (
       <div>
         <div>{this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}</div>
-        <div>{this.props.timestamp}</div>
+        <TimeStamp>{this.props.timestamp}</TimeStamp>
         <CommentForm onSubmit={this.handleCommentSubmit}>
           <CommentInput type='text' placeholder='Add a comment...' onChange={this.commentHandler} value={this.state.newComment}/>
         </CommentForm>

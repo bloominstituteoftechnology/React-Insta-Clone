@@ -1,12 +1,21 @@
 import React from 'react';
-import './CommentSection.css'
+import styled from 'styled-components';
+
+const CommentDiv = styled.div`
+  display: flex;
+  margin-left: 20px;
+`
+const UserName = styled.div`
+  font-weight: bold;
+  padding-right: 5px;
+`
 
 const Comment = props => {
   return (
-    <div className='comment'>
-      <div className='username'>{props.comment.username}</div>
+    <CommentDiv>
+      <UserName>{props.comment.username}</UserName>
       <div>{props.comment.text}</div>
-    </div>
+    </CommentDiv>
   );
 };
 
