@@ -21,8 +21,7 @@ const PostContainer = props => {
 PostContainer.propTypes = {
   className: PropTypes.string,
   data: PropTypes.object,
-  user: PropTypes.string,
-  key: PropTypes.string
+  user: PropTypes.string
 };
 
 export default PostContainer;
