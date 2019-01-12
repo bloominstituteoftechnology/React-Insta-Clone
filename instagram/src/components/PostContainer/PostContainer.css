@@ -5,3 +5,9 @@
 .post__thumbnail {
   width: 100%;
 }
+
+#spinner {
+  position: fixed;
+  top: 38vh;
+  left: 33vw;
+}

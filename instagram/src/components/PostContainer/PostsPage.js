@@ -62,7 +62,7 @@ class PostsPage extends React.Component {
                    term={this.state.term}
                    />
 
-        { this.state.data.length === 0 ?  <div className="d-flex justify-content-center">
+        { this.state.data.length === 0 ?  <div className="d-flex justify-content-center" id="spinner">
                                             <div className="spinner-border" style={spinnerStyle} role="status"></div>
                                           </div>
                                           : this.state.data.map(obj => <PostContainer key={Math.random()}
