@@ -21,6 +21,14 @@ const LoginInput = styled.input`
   background-color: lightyellow;
   border-radius: 5px;
 `
+const Button = styled.button`
+  margin: 4% auto;
+  height: 30px;
+  width: 100%;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 5px;
+`
 
 const LoginPage = props => {
   return (
@@ -41,6 +49,7 @@ const LoginPage = props => {
           name="password"
           onChange={e => props.updateInput("password", e.target.value)}
         />
+        <Button onClick={e => props.submitHandler() }>Log In</Button>
       </LoginForm>
     </div>
   );

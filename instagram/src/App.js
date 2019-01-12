@@ -50,14 +50,6 @@ img {
 }
 `;
 
-const Button = styled.button`
-  margin: 4% auto;
-  height: 30px;
-  width: 85%;
-  background-color: dodgerblue;
-  color: white;
-  border-radius: 5px;
-`
 class App extends React.Component {
   constructor() {
     super();
@@ -66,15 +58,19 @@ class App extends React.Component {
     };
   }
 
-  validate = () => {
-    this.setState({ validated: true });
-  };
+  componentDidMount() {
+    if (!localStorage.getItem('user')) {
+      this.setState({ validated: false });
+    } else {
+      this.setState({ validated: true });
+    }
+  }
 
   render() {
     return (
       <div className="App">
         <GlobalStyle />
-        <Authenticate validated={this.state.validated} validate={this.validate}>
+        <Authenticate validated={this.state.validated}>
           <PostsPage />
         </Authenticate>
       </div>
@@ -98,10 +94,6 @@ const Authenticate = props => {
   ) : (
     <LoginPageContainer>
       <Login />
-      <Button onClick={props.validate}>
-      {/* <button className="App-button" onClick={props.validate} value="Log in">*/}
-        Log In
-      </Button>
     </LoginPageContainer>
   );
 };

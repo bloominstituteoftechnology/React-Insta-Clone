@@ -14,6 +14,12 @@ class Login extends Component {
     this.setState({ [key]: value })
   }
 
+  submitHandler = e => {
+    const user = this.state.username;
+    localStorage.setItem('user', user);
+    window.location.reload();
+  };
+
   render() {
     return (
       <div>
@@ -22,6 +28,7 @@ class Login extends Component {
           username={this.state.username}
           password={this.state.password}
           updateInput={this.updateInput}
+          submitHandler={this.submitHandler}
         />
       </div>
     )
