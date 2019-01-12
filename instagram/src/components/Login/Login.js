@@ -8,8 +8,8 @@ import Input from './InputStyles'
 
 
 class Login extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state={
             username : "",
             password : ""

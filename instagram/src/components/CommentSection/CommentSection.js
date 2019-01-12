@@ -16,10 +16,10 @@ class CommentSection extends React.Component {
 
     addNewComment = event => {
         event.preventDefault()
-        const newComment = {username: "leeroy", text: this.state.comment}
+        const newComment = {username: localStorage.getItem('user'), text: this.state.comment}
         const comments = this.state.comments.slice()
         comments.push(newComment)
-        this.setState({ comments, comment: ""})
+        this.setState({comments: comments, comment: ""})
         console.log("working?")
     }
 
