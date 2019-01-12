@@ -18,9 +18,8 @@ const Authenticate = WrappedComponent => {
       };
     }
 
-    changeHandler = event => {
+    changeHandler = event =>
       this.setState({ [event.target.name]: event.target.value });
-    };
 
     checkCreds = event => {
       event.preventDefault();
