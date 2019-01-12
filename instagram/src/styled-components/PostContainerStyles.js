@@ -3,8 +3,10 @@ import styled from 'styled-components';
 const Post = styled.div`
   width: 100%;
   max-width: 640px;
-  margin: 40px auto;
+  margin: 40px 0;
+  margin-left: 20%;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: white;
 `;
 
 const User = styled.div`

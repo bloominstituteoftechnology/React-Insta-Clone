@@ -1,0 +1,62 @@
+.sidep {
+    width: 20%;
+    background-color: transparent;
+
+    position: fixed;
+    top: 100px;
+    right: 17%;
+}
+
+.sidep__user img {
+  height: 50px;
+  width: 55px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.sidep__user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.sidep__user--name {
+  font-size: 1.2rem;
+}
+
+.sidep__user--name p {
+  margin: 0;
+}
+
+.stories-container {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  padding: 15px 20px 25px 20px;
+  margin-top: 15px;
+}
+
+.stories__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.stories__header p {
+  margin: 0;
+}
+
+.stories__header {
+  font-weight: bold;
+}
+
+.stories__img-container img {
+  width: 50px;
+  height: 50px;
+}
+
+#user {
+  font-size: 1.4rem;
+}
