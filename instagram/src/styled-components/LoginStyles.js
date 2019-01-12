@@ -31,6 +31,8 @@ const LoginForm = styled.form`
       border-radius: 7px;
       width: 60%;
       height: 35px;
+      min-height: 25px;
+      margin: 5px 0;
       background-color: #405de6;
 
       color: white;

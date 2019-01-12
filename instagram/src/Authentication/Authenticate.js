@@ -58,6 +58,16 @@ const Authenticate = Component => {
       });
     }
 
+    componentDidMount() {
+      if(this.state.firstLoad === null) {
+        alert("Step 1: Enter text to both input fields\n Step 2: Click Sign Up\n Step 3: Click Sign In")
+        localStorage.setItem('firstLoad', "true");
+        this.setState({
+          firstLoad: true
+        })
+      }
+    }
+
     render() {
       const page = this.state.loggedIn === "false" || this.state.loggedIn === null
                                                       ? <Login login={this.login}
@@ -66,11 +76,6 @@ const Authenticate = Component => {
                                                                signup={this.signUp}
                                                            />
                                                       : <Component logout={this.logout} />
-
-      if(!this.state.firstLoad) {
-        alert("Step 1: Enter text to both input fields\n Step 2: Click Sign Up\n Step 3: Click Sign In")
-        localStorage.setItem('firstLoad', "true");
-      }
 
       return(
         <div>

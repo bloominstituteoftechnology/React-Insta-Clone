@@ -71,6 +71,10 @@
 }
 
 @media(max-width: 891px) {
+  .login--container {
+    height: 100%;
+  }
+
   .login__main__img {
     display: none;
   }
