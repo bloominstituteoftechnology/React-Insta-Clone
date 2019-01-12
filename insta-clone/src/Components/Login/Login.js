@@ -42,6 +42,7 @@ class Login extends Component {
         const { username, password } = this.state.newUser;
         return (
             <div>
+                <h1>Welcome to my Instagram Clone App</h1>
                 <h2>please login</h2>
                 <div>
                 <form onSubmit={this.login}>

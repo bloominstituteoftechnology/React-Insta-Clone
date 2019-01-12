@@ -4,10 +4,6 @@ import Authenticate from './Components/Authentication/Authenticate';
 import './App.css';
 
 class App extends Component {
-  
-
-  //create a componentDidMount(){}
-  //create a login function
 
   render() {
     return (
