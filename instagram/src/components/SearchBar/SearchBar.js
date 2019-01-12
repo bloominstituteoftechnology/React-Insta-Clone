@@ -1,24 +1,50 @@
 import React from "react";
+import styled from 'styled-components'
 import IGLogo from "../../assets/iglogo.png";
 import PropTypes from "prop-types";
 import "./SearchBar.css";
 
+const SearchBarWrapper = styled.div`
+  border-bottom: 1px solid #3333;
+  height: 60px;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+`
+const ImageWrapper = styled.div`
+  height: 50px;
+  display: flex;
+  align-items: center;
+`
+const LogoImage = styled.img`
+  height: 100%;
+  margin-top: 5px;
+  padding-left: 10px;
+`
+const InputWrapper = styled.div`
+  width: 40%;
+`
+const SocialWrapper = styled.div`
+  display: flex;
+`
+
 const SearchBar = props => {
   return (
-    <div className="search-bar-wrapper">
-      <div className="image-wrapper">
+    <SearchBarWrapper>
+      <ImageWrapper>
         <i className="fab fa-instagram" />
-        <img alt="instagram logo" src={IGLogo} className="logo-image" />
-      </div>
-      <div className="input-wrapper">
+        <LogoImage alt="instagram logo" src={IGLogo} />
+      </ImageWrapper>
+      <InputWrapper>
         <input
           className="input-field-search"
           type="text"
           placeholder=" Search"
-          onKeyUp={props.searchPosts}
+          onChange={props.searchPosts}
         />
-      </div>
-      <div className="social-wrapper">
+      </InputWrapper>
+      <SocialWrapper>
         <div className="social">
           <i className="far fa-compass" />
         </div>
@@ -28,8 +54,8 @@ const SearchBar = props => {
         <div className="social">
           <i className="far fa-user-circle" />
         </div>
-      </div>
-    </div>
+      </SocialWrapper>
+    </SearchBarWrapper>
   );
 };
 

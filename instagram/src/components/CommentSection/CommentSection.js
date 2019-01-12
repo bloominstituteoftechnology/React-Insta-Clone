@@ -1,8 +1,13 @@
 import React from "react";
+import styled from "styled-components";
 import PropTypes from "prop-types";
 import Comment from "./Comment";
 import CommentInput from "./CommentInput";
 
+const DisplayTime = styled.div`
+  display: flex;
+  padding-left: 5px;
+`;
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
@@ -14,12 +19,13 @@ class CommentSection extends React.Component {
 
   componentDidMount() {
     const id = this.props.postId;
-    if (localStorage.getItem(id)) { // if still in memory
+    if (localStorage.getItem(id)) {
+      // if still in memory
       this.setState({
         comments: JSON.parse(localStorage.getItem(this.props.postId)) // update with memory vals
       });
     } else {
-      this.setComments();  // if not in memory, set comments to what is in state in local memory
+      this.setComments(); // if not in memory, set comments to what is in state in local memory
     }
   }
 
@@ -32,7 +38,7 @@ class CommentSection extends React.Component {
     localStorage.setItem(
       this.props.postId,
       JSON.stringify(this.state.comments)
-    )
+    );
   };
 
   commentHandler = e => {
@@ -52,11 +58,11 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <div className="comment-section-container">
+      <div>
         {this.state.comments.map((c, i) => (
           <Comment key={i} comment={c} />
         ))}
-        <div className="display-time">{this.props.dTime}</div>
+        <DisplayTime>{this.props.dTime}</DisplayTime>
         <CommentInput
           comment={this.state.comment}
           submitComment={this.addNewComment}

@@ -1,7 +1,6 @@
 import React from "react";
 import iglogo from "../../assets/iglogo.png";
 import styled from "styled-components";
-import "./Login.css";
 
 const LoginImg = styled.img`
   margin: 0 auto;

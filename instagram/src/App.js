@@ -82,17 +82,27 @@ class App extends React.Component {
   }
 }
 
+const LoginPageContainer = styled.div`
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgrey;
+`
+
 const Authenticate = props => {
   return props.validated ? (
     <div>{props.children}</div>
   ) : (
-    <div className="login-page-container">
+    <LoginPageContainer>
       <Login />
-      <Button onClick={props.validate} value="Log in">
+      <Button onClick={props.validate}>
       {/* <button className="App-button" onClick={props.validate} value="Log in">*/}
         Log In
       </Button>
-    </div>
+    </LoginPageContainer>
   );
 };
 

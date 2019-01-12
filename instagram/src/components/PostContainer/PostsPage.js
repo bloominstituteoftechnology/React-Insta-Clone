@@ -17,9 +17,9 @@ class PostsPage extends React.Component {
   }
 
   searchPostsHandler = e => {
-    const filteredPosts = this.state.posts.filter(p => {
-      if (p.username.includes(e.target.value)) {
-        return p;
+    const filteredPosts = this.state.posts.filter(post => {
+      if (post.username.includes(e.target.value)) {
+        return post;
       }
     });
     this.setState({ filteredPosts: filteredPosts });
@@ -27,7 +27,7 @@ class PostsPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div >
         <SearchBar searchPosts={this.searchPostsHandler} />
         <PostsContainer
           posts={
