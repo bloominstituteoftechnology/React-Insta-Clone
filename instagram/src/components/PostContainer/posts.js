@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from './post';
+import PropTypes from 'prop-types';
 
 /* Each PostContainer component will then pass the array of comments on each post object as a prop to an instance of the CommentSection component. 
 
@@ -37,6 +38,18 @@ const Posts = props => {
 
         </div>
     )
+}
+
+Posts.propTypes = {
+    posts: PropTypes.shape({
+        key: PropTypes.string.isRequired,
+        user: PropTypes.string.isRequired,
+        thumbnail: PropTypes.string.isRequired,
+        postImage: PropTypes.string.isRequired,
+        likes: PropTypes.string.isRequired,
+        comments: PropTypes.string.isRequired,
+        timestamp: PropTypes.string.isRequired,
+    })
 }
 
 export default Posts

@@ -13,21 +13,23 @@ comments (the entire object)
 timestamp
 */
 
-
-
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      instaData: dummyData
-    }
+      instaData: []
+    } 
   }
+
+  componentDidMount() {
+    this.setState({ instaData: dummyData });
+  }
+
   render() {
     return (
       <div className="App">
-      <SearchBar />
-      <Posts data = {this.state.instaData} />
-      
+        <SearchBar />
+        <Posts data = {this.state.instaData} />
       </div>
     );
   }

@@ -1,8 +1,7 @@
 import React from 'react';
 import './posts.css';
-import Moment from 'react-moment';
-
-import Comments from '../CommentSection/comments';
+import PropTypes from 'prop-types';
+import CommentSect from '../CommentSection/commentSect';
 
 
 /*
@@ -12,6 +11,8 @@ receives data from posts.js:
     thumbnail={post.thumbnailUrl}
     postImage={post.imageUrl}
     likes={post.likes}
+    comments={post.comments}
+    timestamp={post.timestamp}
 */
 
 const Post = props => {
@@ -27,31 +28,20 @@ const Post = props => {
             <img className="post-image" src={props.postImage} alt="user posted"/>
         </div>
         
-        <div className="comment-section-wrapper">
-            <div className = "icons">
-                <img src="https://img.icons8.com/ios/50/000000/like.png" alt="like post"/>
-                <img src="https://img.icons8.com/ios/50/000000/speech-bubble.png" alt = "comment on post"/>
-            </div>
-        
-
-            <div className="likes">
-                <strong>{props.likes} likes</strong>
-            </div>
-
-            <div>
-                {props.comments.map( data => <Comments key = {data.key} user={data.username} text={data.text}/>)}
-            </div>
-            <div className="time-stamp">
-                <Moment fromNow>{props.timestamp}</Moment>
-                
-            </div>
-
-            <div className="comment-input">
-                <input className="input-comment" type="text" placeholder="Add a comment..." />
-            </div>
-        </div>
+        <CommentSect 
+        time={props.timestamp}
+        comments={props.comments}
+        likes={props.likes}/>
     </div>
     )
+}
+
+Post.propTypes = {
+    postComments: PropTypes.shape({
+        key: PropTypes.string.isRequired,
+        user: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired,
+    })
 }
 
 export default Post
