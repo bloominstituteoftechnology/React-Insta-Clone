@@ -9,6 +9,7 @@
   z-index: 1040;
   background-color: white;
   width: 100%;
+  padding: .3% 0;
 }
 
 
@@ -40,4 +41,8 @@ header input {
 
 .search-bar input:focus {
   outline: none;
+}
+
+.hide {
+  display: none;
 }
