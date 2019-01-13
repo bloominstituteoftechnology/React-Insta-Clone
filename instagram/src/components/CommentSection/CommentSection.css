@@ -62,6 +62,11 @@
   cursor: pointer;
 }
 
+.comment-like img {
+  height: 15px;
+  width: 15px;
+}
+
 .modal-container__btn {
   background-color: transparent;
   border: none;
