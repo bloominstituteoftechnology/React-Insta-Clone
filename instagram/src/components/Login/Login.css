@@ -25,10 +25,17 @@
   align-items: center;
 }
 
+.form-container form {
+  margin: 8px 0;
+}
 
 .form-container p {
   font-size: 1.8rem;
-  margin: 0;
+  margin: 12px 0;
+}
+
+.app-icons {
+  display: flex;
 }
 
 .app-icons img {
@@ -87,5 +94,12 @@
 @media(max-width: 742px) {
   .login {
     width: 80%;
+  }
+}
+
+@media(max-width: 432px) {
+  .app-icons {
+    flex-direction: column;
+    align-items: center;
   }
 }
