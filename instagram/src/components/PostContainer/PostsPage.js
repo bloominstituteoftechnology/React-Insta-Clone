@@ -37,7 +37,7 @@ class PostsPage extends React.Component {
 
   setSearchResult = (users) => {
     this.setState({searchResult: users});
-    this.props.history.push("/search-result");
+    this.props.history.push("/search-result"); //Direct to page /search-result to display result
   }
 
   getUser = (id) => {
