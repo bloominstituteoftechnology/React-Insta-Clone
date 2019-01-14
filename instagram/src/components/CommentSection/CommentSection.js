@@ -7,7 +7,6 @@ const CommentSection = props => {
     <div>
       {props.comments.map(comment => {
         return <Comment username={comment.username} text={comment.text}/>
-        
       })}
     </div>
     

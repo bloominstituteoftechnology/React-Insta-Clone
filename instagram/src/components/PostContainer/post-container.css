@@ -1,0 +1,4 @@
+.post-container .post-heading {
+    display: flex;
+    flex-direction: row;
+}
