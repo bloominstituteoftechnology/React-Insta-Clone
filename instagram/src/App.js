@@ -4,7 +4,7 @@ import './App.css';
 import './components/PostContainer/PostContainer.css';
 import './components/CommentSection/CommentSection.css';
 import PostsPage from './components/PostContainer/PostsPage';
-import Authenticate from './components/Authentication/Authentication'
+import Authenticate from './components/Authentication/Authenticate'
 
  const AppWrapper = styled.div`
   display: flex;
