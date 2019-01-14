@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Grand+Hotel");
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logos {
+    display: flex;
+    align-items: center;
+}
+
+.header-img-logo {
+    padding-right:  30px;
+    border-right: 1px solid var(--header-img);
+    margin-right:  30px;
+}
+
+.header-txt-logo {
+    font-family: "Grand Hotel";
+    font-size: 5rem;
+    padding-left:  0;
+}

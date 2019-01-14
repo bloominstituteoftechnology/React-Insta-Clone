@@ -1,0 +1,7 @@
+:root {
+    /* Color assignments */
+    --header-img: var(--black);
+
+    /* Color values */
+    --black: #000000;
+}
