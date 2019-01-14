@@ -11,15 +11,20 @@ class App extends Component {
     super();
     this.state = {
       dummyData: DummyData,
+      
     }
   }
+  handleChanges = ev => {
+    this.setState({ [ev.target.name]: ev.target.value });
+  }
+
   render() {
     console.log(this.state.dummyData);
     return (
       <div className="App">
         <SearchBar />
         {this.state.dummyData.map((post, i) =>{
-          return <PostContainer key={i} post={post} />
+          return <PostContainer handleChanges={this.handleChanges} key={i} post={post} />
         })}
       </div>
     );

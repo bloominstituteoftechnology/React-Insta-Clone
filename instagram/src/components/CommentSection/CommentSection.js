@@ -1,24 +1,61 @@
-import React from 'react';
+import React, {Component}from 'react';
 import PropTypes from 'prop-types';
+import Comment from './Comment'
 
-const CommentSection = props =>{
-    console.log(props);
+class CommentSection extends Component {
+    constructor(props){
+        super(props);
+        this.state ={
+            commentList: props.comments,
+            comment: '',
+        }
+        console.log(this.state.commentList);
+    }
+    handleChanges = ev => {
+        this.setState({ [ev.target.name]: ev.target.value });  
+    }
+    
+    submitComment = (ev) =>{
+        ev.preventDefault();
+        this.setState({
+           commentList: [...this.state.commentList, {
+               username: 'test',
+               text: this.state.comment
+           }],
+           text: ''
+        })
+        this.state.comment = '';
+    };
+
+    render(){
     return (
-      <div >
-          <div>
+      <div className="comment-section" >
+          <div className="d-flex action-btns">
               <i className="far fa-heart"/>
               <i className="far fa-comment"/>
           </div>
-          <p>{props.likes} likes</p>
-          {props.comments.map((comment, i)=>{
-              return <p key={i}>{comment.username} {comment.text}</p>
-          })}
-          <p className="time-stamp">{props.timeStamp}</p>
-          <input placeholder="Add a comment..."/>
+          <p>{this.props.likes} likes</p>
+          
+          {this.state.commentList.map((comment, i) => {
+          return <Comment key={i} username={comment.username} text={comment.text} />}
+          )}
         
+          <p className="time-stamp">{this.props.timeStamp}</p>
 
+          <form 
+          onSubmit={this.submitComment}
+          className="add-comment d-flex">
+            <input 
+            onChange={this.handleChanges}
+            onSubmit={this.submitComment}
+            name="comment"
+            placeholder="Add a comment..."/>
+            <i className="fas fa-ellipsis-h"/>
+        </form>
+          
       </div>
     )
+    }
 }
 
 

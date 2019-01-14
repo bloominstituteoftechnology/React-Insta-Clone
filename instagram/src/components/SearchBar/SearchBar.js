@@ -10,7 +10,7 @@ const SearchBar = props =>{
             <img src={Logo} alt=""/>
         </div>
         <div className="col search-input">
-            <input placeholder="Search" type="text"/>
+            <input placeholder="&#128269; Search " type="text"/>
         </div>
         <div className="col act-logos">
             <i className="far fa-compass"/>
