@@ -5,8 +5,8 @@ const CommentSection = props =>{
     return (
       <div >
           <div>
-              <button>Heart</button>
-              <button>Comment</button>
+              <i class="far fa-heart"/>
+              <i class="far fa-comment"/>
           </div>
           <p>{373} likes</p>
           {props.comments.map((comment)=>{
