@@ -1,11 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import Comment from './Comment'
 const CommentSection = props => {
+  const { text, username } = props.comments;
   return (
     <div>
-      <h1>This is a comment!</h1>
+      {props.comments.map(comment => {
+        return <Comment username={comment.username} text={comment.text}/>
+        
+      })}
     </div>
+    
   )
 }
 
