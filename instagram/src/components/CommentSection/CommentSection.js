@@ -4,14 +4,14 @@ import Comment from './Comment';
 import './CommentSection.css'
 
 function CommentSection(props) {
-  const comments = props.commentData.map(commentData => {
-    return <Comment commentData={commentData} />
+  const comments = props.commentData.map((commentData, i) => {
+    return <Comment key={i} commentData={commentData} />
   });
   return (
     <div className="comment-section">
       {comments}
       <form className="new-comment-form">
-        <input type="text" value="New Comment"/>
+        <input type="text" defaultValue="New Comment"/>
       </form>
     </div>
   );

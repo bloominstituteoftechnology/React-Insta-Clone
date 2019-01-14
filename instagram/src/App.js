@@ -9,7 +9,7 @@ class App extends Component {
     super();
     this.postData = dummyData;
     this.posts = this.postData.map(post => {
-      return <PostContainer post={post} />
+      return <PostContainer key={post.timestamp} post={post} />
     });
   }
 
