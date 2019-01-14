@@ -4,16 +4,22 @@
     align-items: center;
 
 }
+.left-side i{
+    padding: 0 6%;
+    font-size: 1.5rem;
+    font-weight: 100;
+
+}
 
 .left-side {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 6%;
 }
 
 .search-icons i{
-    padding: 0 10%;
+    padding: 0 6%;
     font-size: 1.5rem;
     font-weight: 100;
 }
