@@ -26,9 +26,9 @@
 
 ### Focus (Day I)
 
-- Demonstrate the the ability to use create-react-app to boilerplate a react application
-- Describe and be able to use PropTypes to 'type check' specific data being passed down to a child component
-- Demonstrate the ability to use defaultProps in a React component
+- Demonstrate the the ability to use create-react-app to boilerplate a react application.
+- Describe and be able to use PropTypes to 'type check' specific data being passed down to a child component.
+- Demonstrate the ability to use defaultProps in a React component.
 
 ### Project Setup
 
