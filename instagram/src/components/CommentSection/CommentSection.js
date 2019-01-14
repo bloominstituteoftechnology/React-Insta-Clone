@@ -1,9 +1,39 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import "./CommentSection.css";
 import { FiHeart, FiMessageCircle, FiSend } from "react-icons/fi";
 import TimePosted from "./TimePosted";
 import { Input } from "reactstrap";
+
+const CommentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const Likes = styled.span`
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 4px;
+  margin-bottom: 4px;
+`;
+
+const CommentsField = styled.div`
+  p {
+    font-size: 1.4rem;
+
+    span {
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin-right: 1%;
+    }
+  }
+`;
+
+const CommentInput = styled(Input)`
+  width: 99%;
+  margin-top: 7px;
+  font-size: 1.4rem;
+`;
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -55,21 +85,21 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <div className={"comments-container"}>
+      <CommentContainer>
         <div className={"icon-container"}>
           <FiHeart className={"icon like"} onClick={this.addLikeHandler} />
           <FiMessageCircle className={"icon"} />
           <FiSend className={"icon"} />
         </div>
-        <span className={"likes"}>{this.state.likes} likes</span>
+        <Likes>{this.state.likes} likes</Likes>
         {this.props.data.comments.map((comments, index) => {
           return (
-            <div className={"comments-field"} key={comments.text}>
-              <p className={"comment-content"}>
-                <span className={"comment-username"}>{comments.username}</span>
+            <CommentsField key={comments.text}>
+              <p>
+                <span>{comments.username}</span>
                 {comments.text}
               </p>
-            </div>
+            </CommentsField>
           );
         })}
         <TimePosted
@@ -77,14 +107,14 @@ class CommentSection extends React.Component {
           timestamp={this.props.data.timestamp}
         />
         <form onSubmit={this.addNewComment}>
-          <Input
+          <CommentInput
             onChange={this.onChangeHandler}
             className={"comment-input"}
             placeholder={"Add comment..."}
             value={this.state.addComment}
           />
         </form>
-      </div>
+      </CommentContainer>
     );
   }
 }

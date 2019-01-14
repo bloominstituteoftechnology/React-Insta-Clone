@@ -1,34 +1,34 @@
-.likes {
+/* .likes {
   font-size: 1.4rem;
   font-weight: bold;
   margin-top: 4px;
   margin-bottom: 4px;
-}
+} */
 
-.comments-container {
+/* .comments-container {
   display: flex;
   flex-direction: column;
-}
+} */
 
-.comments-container .comment-username {
+/* .comments-container .comment-username {
   font-weight: bold;
   font-size: 1.4rem;
   margin-right: 1%;
-}
+} */
 
-.comments-container .comment-content {
+/* .comments-container .comment-content {
   font-size: 1.4rem;
-}
+} */
 
 .icon-container .icon {
   margin-right: 1%;
 }
 
-.comment-input {
+/* .comment-input {
   width: 99%;
   margin-top: 7px;
   font-size: 1.4rem;
-}
+} */
 
 .like {
   cursor: pointer;
