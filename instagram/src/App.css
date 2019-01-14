@@ -24,16 +24,16 @@
 
 .search-bar{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 70px;;
   border-bottom: 1px solid grey;
   align-items: center;
   font-size: 1.8rem;
 }
 .col{
-  width: 33%;
+  /* width: 33%; */
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -46,7 +46,7 @@
   
 }
 .main-logo img{
-  height: 60px;
+  height: 40px;
   max-width: 75%;
   margin-left: 10px;
 }
