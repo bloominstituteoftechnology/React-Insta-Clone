@@ -4,7 +4,9 @@ import './Header.css';
 
 const SearchBar = props => {
   return (
-    <div></div>
+    <div className="ig-search">
+      <input className="ig-search-bar" type="search" placeholder="&#xf002; Search"/>
+    </div>
   )
 };
 
