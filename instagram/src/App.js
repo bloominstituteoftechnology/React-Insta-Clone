@@ -1,28 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import styled from "styled-components"
 import './App.css';
+import './components/PostContainer/PostContainer.css';
+import './components/CommentSection/CommentSection.css';
+import PostsPage from './components/PostContainer/PostsPage';
+import Authenticate from './components/Authentication/Authentication'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+ const AppWrapper = styled.div`
+  display: flex;
+  max-width: 640px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+`;
+
+
+const App = () => {
+
+  return (
+    <AppWrapper>
+      <PostsPage/>
+    </AppWrapper>
+  );
 }
 
-export default App;
+export default Authenticate(App);
