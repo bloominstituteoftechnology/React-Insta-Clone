@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Comment from './Comment'
 const CommentSection = props => {
-  const { text, username } = props.comments;
   return (
     <div>
       {props.comments.map(comment => {
@@ -14,7 +13,12 @@ const CommentSection = props => {
 }
 
 CommentSection.propTypes = {
-
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string,
+      text: PropTypes.string,
+    })
+  )
 }
 
 export default CommentSection

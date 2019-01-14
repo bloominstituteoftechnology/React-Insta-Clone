@@ -4,7 +4,7 @@ import './comment-section.css'
 const Comment = props => {
 
   return (
-    <div class="comment">
+    <div className="comment">
       <h3>{props.username}</h3>
       <p>{props.text}</p>
     </div>
@@ -12,7 +12,8 @@ const Comment = props => {
 }
 
 Comment.propTypes = {
-
+    username: PropTypes.string,
+    text: PropTypes.string,
 }
 
 export default Comment
