@@ -1,9 +1,16 @@
 import React from 'react'
-
+import './search-bar.css'
 const SearchBar = props => {
   return (
-    <div>
-      <h1>This is a searchbar!</h1>
+    <div className="search-container">
+      <div className="search-item-container">
+        <div className="search-heading">
+          <i className="fas fa-camera fa-3x"></i>
+          <h1>Instagram</h1>      
+        </div>
+      </div>
+
+
     </div>
   )
 }

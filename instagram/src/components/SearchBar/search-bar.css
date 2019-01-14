@@ -1,0 +1,23 @@
+.search-container {
+    font-family: 'Grand Hotel', cursive;
+    width: 100%;
+}
+.search-container .search-item-container {
+    max-width: 900px;
+    margin: auto;
+}
+.search-container .search-item-container .search-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-container .search-item-container .search-heading i {
+    padding-right: 15px;
+    border-right: 1px solid black;
+}
+.search-container .search-item-container .search-heading h1 {
+    margin-left: 20px;
+    font-size: 3.5rem;
+    color: #343434;
+}
