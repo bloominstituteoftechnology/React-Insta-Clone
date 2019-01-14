@@ -2,5 +2,22 @@
   width: 50%;
   margin: 10px auto;
   border: 1px solid gray;
-  
+}
+.post-header{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 75px;
+  border: 1px solid blue;
+}
+.post-header img{
+  border-radius: 50%;
+  max-width: 100%;
+  height: 35px;
+  margin: 10px;
+}
+
+.post-img img{
+  max-width: 100%;
+  height: auto;
 }
