@@ -43,8 +43,9 @@ class CommentSection extends React.Component {
           name="currentComment"
           value={this.state.currentComment}
           onChange={this.handleChange}
-          onSubmit={this.addComment}/>
-          <button onClick={this.addComment}>Submit</button>
+          onSubmit={this.addComment}
+          isRequired={true}/>
+          <button onClick={this.addComment} disabled={this.state.currentComment === '' ? true : false}>Submit</button>
         </form>
 
       </div>
