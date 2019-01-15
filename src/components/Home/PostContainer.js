@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PostHeader from "./PostHeader";
 import PostImage from "./PostImage";
 import Comments from "./Comments";
@@ -6,45 +6,58 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addLike, addComment, getData } from "../../actions";
 
-const PostContainer = props => {
-  const { Insta, onLike, onComment, onGetData } = props;
-
-  const onLikeClick = username => {
-    onLike(username);
+class PostContainer extends Component {
+  state = {
+    commentField: ""
   };
 
-  const onGettingData = () => {
-    onGetData();
+  onLikeClick = username => {
+    this.props.onLike(username);
   };
 
-  const onCommentSubmit = (e, username, user, text) => {
+  onGettingData = () => {
+    this.props.onGetData();
+  };
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  onCommentSubmit = (e, username, user, text) => {
     e.preventDefault();
-    onComment(username, user, text);
-    document.querySelector("input[name='comment']").value = "";
+    this.props.onComment(username, user, text);
+    this.setState({ commentField: "" });
   };
-  return (
-    <>
-      {Insta.data.map(post => (
-        <div key={post.username} className="post-container">
-          <PostHeader
-            thumbnailUrl={post.thumbnailUrl}
-            username={post.username}
-          />
-          <PostImage imageUrl={post.imageUrl} />
-          <Comments
-            comments={post.comments}
-            onLikeClick={onLikeClick}
-            likes={post.likes}
-            username={post.username}
-            Insta={Insta}
-            onComment={onCommentSubmit}
-            onGettingData={onGettingData}
-          />
-        </div>
-      ))}
-    </>
-  );
-};
+
+  render() {
+    const { Insta } = this.props;
+
+    return (
+      <>
+        {Insta.data.map(post => (
+          <div key={post.username} className="post-container">
+            <PostHeader
+              thumbnailUrl={post.thumbnailUrl}
+              username={post.username}
+            />
+            <PostImage imageUrl={post.imageUrl} />
+            <Comments
+              comments={post.comments}
+              onLikeClick={this.onLikeClick}
+              likes={post.likes}
+              username={post.username}
+              Insta={Insta}
+              onComment={this.onCommentSubmit}
+              onGettingData={this.onGettingData}
+              handleChange={this.handleChange}
+              commentField={this.state.commentField}
+            />
+          </div>
+        ))}
+      </>
+    );
+  }
+}
 
 const mapStateToProps = state => ({
   Insta: state.Insta
