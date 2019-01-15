@@ -1,6 +1,8 @@
 .search-container {
     font-family: 'Grand Hotel', cursive;
     width: 100%;
+    padding: 20px 0;
+    border-bottom: 2px solid #E2E2E2;
 }
 .search-container .search-item-container {
     max-width: 900px;
