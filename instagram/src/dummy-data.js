@@ -2,6 +2,8 @@ const dummyData = [
   {
     username: "philzcoffee",
 
+    /* Boo hoo! My profile thumbnail URL was removed for demo purposes (defaultProps)! */
+    
     imageUrl:
       "https://tk-assets.lambdaschool.com/69cf901b-f96d-466e-a745-ff2a01effac9_philz-image.jpg",
     likes: 400,

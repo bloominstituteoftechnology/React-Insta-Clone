@@ -1,6 +1,6 @@
 @import url("//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
 
-@import '../../../variables.css';
+@import '../../variables.css';
 
 .post-comments-area {
     width: 95%;

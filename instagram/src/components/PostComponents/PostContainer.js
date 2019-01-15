@@ -8,8 +8,8 @@ import PostImage from './PostImage.js';
 import PostHeartsCount from './PostHeartsCount.js';
 import PostIcons from './PostIcons';
 import PostTimePeriod from './PostTimePeriod';
-import CommentContainer from './CommentComponents/CommentContainer.js';
-import NewCommentForm from './CommentComponents/NewCommentForm.js';
+import CommentContainer from '../CommentComponents/CommentContainer.js';
+import NewCommentForm from '../CommentComponents/NewCommentForm.js';
 
 const PostContainer = props => {
   return (
