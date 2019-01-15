@@ -35,3 +35,6 @@ function SearchBar(props) {
 }
 
 export default SearchBar; 
+
+// need to add search bar input icon and center placeholder
+// need to add image divider between logo and title 
