@@ -1,0 +1,17 @@
+span {
+    font-weight: bold;
+}
+
+.comment-container input {
+    width: 95%;
+    border-top: solid gray 1px;
+    border-bottom: none;
+    margin-bottom: 5%;
+    border-right: none;
+    border-left: none;
+    height: 50px;
+}
+
+.comment-container {
+    margin-left: 2%;
+}

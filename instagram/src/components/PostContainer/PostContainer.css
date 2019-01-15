@@ -1,8 +1,8 @@
 .post-container .post-head {
     height: 50px;
-    width: 140px;
+    width: 200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .post-container .post-head img {
@@ -17,4 +17,8 @@
     width: 640px;
     margin-top: 20px;
     margin-left: 25%;
+}
+
+span {
+    font-weight: bold;
 }

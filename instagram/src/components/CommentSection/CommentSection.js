@@ -1,8 +1,9 @@
 import React from 'react';
+import '../CommentSection/CommentSection.css'
 
 function CommentSection(props) {
     return (
-        <div>
+        <div className='comment-container'>
             <div className='comment-icons'>
                 <img alt='heart'/>
                 <img alt='bubble'/>
@@ -20,6 +21,9 @@ function CommentSection(props) {
             <p>
                 {props.data.timestamp}
             </p>
+            <div className='input'>
+                <input placeholder='Add a comment...'/>
+            </div>
 
         </div>
 

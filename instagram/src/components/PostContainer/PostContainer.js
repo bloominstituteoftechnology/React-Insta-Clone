@@ -9,7 +9,7 @@ const PostContainer = (props) => {
         <div className='post-container'>
             <div className='post-head'>
                 <img src={props.data.thumbnailUrl} />
-                <p>{props.data.username}</p>
+                <p> <span>{props.data.username}</span></p>
             </div>
             <div className='post-img'>
                 <img src={props.data.imageUrl}/> 
