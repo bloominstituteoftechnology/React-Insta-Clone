@@ -1,0 +1,50 @@
+@import url("//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
+
+@import '../../../variables.css';
+
+.post-comments-area {
+    width: 95%;
+    margin: 10px 25px 20px;
+}
+
+.post-comment {
+    font-size: 1.6rem;
+    margin: 15px 0;
+}
+
+.post-comment-username {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.post-comment-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.post-comment-form-text {
+    display: flex;
+    width: 95%;
+    height: 50px;
+    font-family: "Calibri";
+    font-size: 1.8rem;
+    padding: 15px 5px 5px 15px;
+    border: none;
+    resize: none;
+}
+
+.post-comment-form-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.5%;
+    height: 50px;
+    text-align: center;
+    font-family: "FontAwesome";
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+}

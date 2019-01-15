@@ -1,0 +1,57 @@
+@import '../../variables.css';
+
+.user-post {
+    border: 1px solid var(--user-post-border-color);
+    margin: 50px auto;
+}
+
+.user-post-header {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.user-post-header > * {
+    margin: 10px 5px;
+}
+
+.user-dp {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.username {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.post-icons {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 10px;
+}
+
+.post-icons > * {
+    width: 30px;
+    height: 30px;
+    margin: 10px 15px;
+}
+
+.post-heart-count {
+    display: block;
+    width: 90%;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 10px 25px 20px;
+}
+
+.post-time-period {
+    display: block;
+    width: 90%;
+    font-size: 1.2rem;
+    color: var(--post-timestamp-font-color);
+    text-transform: uppercase;
+    margin: 10px 25px 20px;
+}

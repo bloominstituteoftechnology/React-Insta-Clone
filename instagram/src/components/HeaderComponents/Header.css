@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Grand+Hotel");
 @import url("//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
 
+@import '../../variables.css';
+
 .header {
     display: flex;
     justify-content: space-between;
