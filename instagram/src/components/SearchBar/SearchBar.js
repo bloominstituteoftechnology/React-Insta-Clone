@@ -19,8 +19,11 @@ function SearchBar(props) {
                 </div>
             </div>
 
-            <form>
-                <input placeholder='Search'/>
+            <form onSubmit={props.filter}>
+                <input onChange={props.changer}
+                 placeholder='Search'
+
+                 />
             </form>
 
             <div className='search-icons'>

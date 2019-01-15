@@ -18,13 +18,35 @@ class App extends Component {
     this.setState({
       dummyData: dummyData
     })
-
+    console.log(dummyData);
   }
+
+  searchFilter = e => {
+    e.preventDefault();
+    this.setState({
+      dummyData: this.state.dummyData.filter(item => {
+        if (item.username === this.state.searchterm) {
+          return item;
+        }
+      })
+    })
+  }
+
+
+  changeHandler = (e) => {
+    this.setState({
+        searchterm: e.target.value
+    })
+  };
 
   render() {
     return (
       <div className='App'>
-        <SearchBar />
+        <SearchBar 
+          filter={this.searchFilter}
+          changer={this.changeHandler}
+        
+        />
         {this.state.dummyData.length === 0 ? <h1>LOADING</h1> : 
         this.state.dummyData.map(item => {return <PostContainer data={item}/>})}
       </div>
