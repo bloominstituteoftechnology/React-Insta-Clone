@@ -13,8 +13,9 @@ const PostContainer = props => {
         <h2>{username}</h2>
       </div>
       <img src={imageUrl} alt={`{username}'s post`}/>
-      <p>{likes} likes</p>
-      <CommentSection comments={comments} />
+
+      
+      <CommentSection comments={comments} likes={likes}/>
     </div>
   )
 }

@@ -1,19 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Comment from './Comment'
-import { DEFAULT_ECDH_CURVE } from 'tls';
+import PostContainer from '../PostContainer/PostContainer'
 class CommentSection extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       comments: [],
       currentComment: null,
+      likes: 0,
+      commentNumber: 0
     }
   }
   componentDidMount = () => {
     this.setState({
       comments: this.props.comments,
-      currentComment: ''
+      currentComment: '',
+      commentNumber: this.props.comments.length
     })
   }
   handleChange = (event) => {
@@ -27,13 +30,25 @@ class CommentSection extends React.Component {
     const newCommentList = [...this.state.comments, {username: 'DEFAULT', text: this.state.currentComment}]
     this.setState({
       comments: newCommentList,
-      currentComment: ''
+      currentComment: '',
+      commentNumber: newCommentList.length
     })
   }
 
-  render() {
+  render(props) {
     return (
       <div>
+        <div className="likes-comments">
+          <div className="likes-comments-icons">
+          
+          
+          </div>
+          <div className="likes-comments-stats">
+            <p>{this.state.commentNumber} comments</p>
+            <p>{this.state.likes} likes</p>
+          </div>
+        
+        </div>
         {this.state.comments.map(comment => {
           return <Comment username={comment.username} text={comment.text}/>
         })}
