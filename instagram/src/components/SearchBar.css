@@ -4,6 +4,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding-top: 20px;
+    
 }
 
 .searchBarLogo {
@@ -11,12 +12,13 @@
     align-items: center;
 }
 
-.searchBarLogoImg {
+.instaIcon {
     font-size: 28px;
     border-right: 1px solid black;
     padding-left: 0px;
     padding-bottom: 10px;
     height: 28px;
+   
 }
 
 .searchBarLogoText {
@@ -33,11 +35,6 @@ i {
 
 .icons {
     display: flex;
-}
-
-.icon {
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
 input {

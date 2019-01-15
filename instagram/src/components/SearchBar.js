@@ -6,7 +6,7 @@ class SearchBar extends Component {
     return (
       <div className="searchBarContainer">
         <div className="searchBarLogo">
-          <div className="searchBarLogoImg">
+          <div className="instaIcon">
             <i class="fab fa-instagram" />
           </div>
           <div className="searchBarLogoText">Instagram</div>
