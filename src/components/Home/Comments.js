@@ -27,7 +27,7 @@ class Comments extends Component {
         {props.comments.map((comment, i) => (
           <div key={i} className="comments-section">
             <h1>{comment.username}</h1>
-            <p>{comment.text}</p>
+            <span>{comment.text}</span>
           </div>
         ))}
 
