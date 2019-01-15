@@ -15,3 +15,23 @@ span {
 .comment-container {
     margin-left: 2%;
 }
+
+.comment-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60px;
+    margin-top: 10px;
+
+}
+
+.comment-icons img {
+    width: 25px;
+    height: 25px;
+}
+
+.comment-bub img {
+    width: 20px;
+    height: 20px;
+    margin-top: 2.4px;
+}

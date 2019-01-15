@@ -5,4 +5,32 @@
     border: solid gray 1px;
     height: 75px;
     margin-left: 15%;
+    align-items: center;
+}
+
+.search-imgs {
+    display: flex;
+    width: 270px;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.search-imgs img {
+    width: 150px;
+    height: 50px;
+}
+
+.search-imgs .logo img {
+    width: 60px;
+}
+
+.search-icons {
+    width: 175px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.search-icons img {
+    width: 30px;
+    height: 30px;
 }
