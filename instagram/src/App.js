@@ -10,7 +10,7 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      dummyData: DummyData,
+      dummyData: [],
       
     }
     console.log(this.state.dummyData)
@@ -18,9 +18,19 @@ class App extends Component {
   handleChanges = ev => {
     this.setState({ [ev.target.name]: ev.target.value });
   }
-
+  componentDidMount(){
+    console.log('CDM is running');
+    fetch(DummyData)
+    .then(
+      this.setState({
+        dummyData: DummyData,
+      })
+      )
+      .catch(err => console.log('noooo'));
+  }
   render() {
-    console.log(this.state.dummyData);
+    console.log('Render is running');
+    console.log(this.state.dummyData)
     return (
       <div className="App">
         <SearchBar />
