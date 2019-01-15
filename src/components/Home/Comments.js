@@ -38,6 +38,7 @@ class Comments extends Component {
             }
           >
             <input
+              className="comment-input-field"
               id="comment"
               onChange={this.handleChange}
               name="comment"

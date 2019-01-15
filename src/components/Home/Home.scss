@@ -119,9 +119,10 @@
         }
       }
       .comment-input {
-        input {
-          width: 97%;
-          padding: 10px 10px;
+        width: 100%;
+        .comment-input-field {
+          width: 100%;
+          padding: 10px 0;
           border: none;
         }
       }

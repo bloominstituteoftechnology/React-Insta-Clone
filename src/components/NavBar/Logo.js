@@ -1,9 +1,11 @@
 import React from "react";
 
 const Logo = props => {
+  let logo = "logo.instagram.png";
+                                            
   return (
     <div className="logo">
-      <img src="logo.instagram.png" alt="Hamza Elkhoudiri | Insta Clone" />
+      <img src={logo} alt="Hamza Elkhoudiri | Insta Clone" />
     </div>
   );
 };
