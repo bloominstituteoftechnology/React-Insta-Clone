@@ -1,14 +1,15 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection"
 import PropTypes from "prop-types";
+import './PostContainer.css'
 
 function PostContainer (props) {
     return (
-        <div>
-    {props.posts.map((post, index) => (
+        <div className="post-container">
+        {props.posts.map((post, index) => (
         
         <div key={index}>
-          <img
+          <img className= "avatar-img"
             src={post.thumbnailUrl}
             alt={`${post.username}s avatar thumbnail`}
           />
@@ -16,7 +17,7 @@ function PostContainer (props) {
           <h3>
             {index} :{post.username} - {post.likes} likes,
           </h3>
-          <img
+          <img className= 'post-img'
             src={post.imageUrl}
             alt='main post image'
             />

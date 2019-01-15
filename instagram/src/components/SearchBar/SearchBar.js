@@ -1,5 +1,5 @@
 import React from 'react'
-
+import igLogo from './img/insta-logo.png'
 import './SearchBar.css'
 
 const SearchBar = (props) => {
@@ -7,10 +7,14 @@ const SearchBar = (props) => {
         <div className="search-bar">
             <div className="left-side">
             <i className="fab fa-instagram"></i>
-            <h1>|</h1>
-            <h2 className="instagram-logo">Instagram</h2>
+            <div className="line"></div>
+            <img className="ig-logo" src= {igLogo} alt="insta logo" />
             </div>
-            <input className = "seach-input" type="text" placeholder= "Search"/>
+            <div className= "input-wrap">
+            
+            <input className = "input-box" type="text" placeholder = "       🔍 Search"/>
+            
+            </div>
             <div className="search-icons">
             <i className="far fa-compass"></i>
             <i className="far fa-heart"></i>
