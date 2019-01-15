@@ -6,6 +6,7 @@
   width: 100%;
   .far {
     font-size: 25px;
+    color: #262626;
   }
   .navbar-container {
     max-width: 1000px;
@@ -16,9 +17,13 @@
     .icons {
       i {
         padding: 0 10px;
+        color: #262626;
       }
     }
     .search {
+      @media #{'(max-width: 500px)'} {
+        display: none;
+      }
       input {
         text-align: center;
         border: gray;
