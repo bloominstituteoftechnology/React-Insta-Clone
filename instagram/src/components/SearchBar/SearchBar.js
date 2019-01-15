@@ -2,8 +2,8 @@ import React from "react";
 
 const SearchBar = props => {
   return (
-    <form>
-      <input />
+    <form className="search">
+      <input className="mytext" placeholder="🔍 Search" />
     </form>
   );
 };
