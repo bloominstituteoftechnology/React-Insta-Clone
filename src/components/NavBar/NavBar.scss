@@ -1,0 +1,43 @@
+.container {
+  border-bottom: 1px solid gray;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  .navbar-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    .icons {
+      i {
+        padding: 0 10px;
+      }
+    }
+    .search {
+      input {
+        text-align: center;
+        border: gray;
+        padding: 5px;
+      }
+    }
+    .logo {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      width: 25px;
+      height: 25px;
+      img {
+        width: 25px;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .logo-text {
+        border-left: 1px solid black;
+        margin-left: 10px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
