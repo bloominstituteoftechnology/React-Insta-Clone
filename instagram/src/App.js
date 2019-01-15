@@ -11,13 +11,25 @@ class App extends Component {
     super();
     this.state = {
       dummyData: [],
-      
+      filteredData: [],
+      search: '',
     }
-    console.log(this.state.dummyData)
+    // console.log(this.state.dummyData)
+    // console.log(this.state.userNames)
   }
   handleChanges = ev => {
     this.setState({ [ev.target.name]: ev.target.value });
+    if(ev.target.name === 'search'){
+        console.log('filterSearch');
+    const filtered = this.state.dummyData.filter(post=>{
+      if(post.username.includes(ev.target.value)){
+        return post
+      }
+    });
+    this.setState({filteredData: filtered});
+    }
   }
+
   componentDidMount(){
     console.log('CDM is running');
     fetch(DummyData)
@@ -28,14 +40,32 @@ class App extends Component {
       )
       .catch(err => console.log('noooo'));
   }
+  filterSearch = ev => {
+  
+  }
   render() {
-    console.log('Render is running');
-    console.log(this.state.dummyData)
+    console.log(this.state.filteredData.length)
+    // console.log('Render is running');
+    // console.log(this.state.dummyData)
+    // console.log(this.state.userNames)
     return (
       <div className="App">
-        <SearchBar />
-        {this.state.dummyData.map((post, i) =>{
-          return <PostContainer handleChanges={this.handleChanges} key={i} post={post} />
+        <SearchBar handleChanges={this.handleChanges} />
+        {this.state.filteredData.length > 0
+        ? this.state.filteredData.map((post) =>{
+          return <PostContainer 
+          handleChanges={this.handleChanges}
+          key={post.username}
+          post={post} 
+        /> })
+        : this.state.dummyData.map((post) =>{
+          return <PostContainer 
+          handleChanges={this.handleChanges}
+          key={post.username}
+          post={
+            this.state.filteredData.length > 0
+            ? this.state.filteredData
+            : post } />
         })}
       </div>
     );

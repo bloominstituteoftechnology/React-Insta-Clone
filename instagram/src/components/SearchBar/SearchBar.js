@@ -2,6 +2,10 @@ import React from 'react';
 import Logo from '../logo.png'
 import PropTypes from 'prop-types';
 
+
+
+
+
 const SearchBar = props =>{
     return (
       <div className="search-bar">
@@ -10,7 +14,11 @@ const SearchBar = props =>{
             <img src={Logo} alt=""/>
         </div>
         <div className="col search-input">
-            <input placeholder="&#128269; Search " type="text"/>
+            <input placeholder="&#128269; Search "
+             type="text"
+             name="search"
+             onChange={props.handleChanges}
+             />
         </div>
         <div className="col act-logos">
             <i className="far fa-compass"/>

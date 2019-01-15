@@ -30,10 +30,10 @@ class CommentSection extends Component {
     };
 
     render(){
-        // console.log(this.props.likes)
     return (
       <div className="comment-section" >
           <ActionHeader likes={this.props.likes}/>
+          {/* <p className="font-weight-bold">{this.props.likes} likes</p> */}
           
           {this.state.commentList.map((comment, i) => {
           return <Comment key={i} username={comment.username} text={comment.text} />}

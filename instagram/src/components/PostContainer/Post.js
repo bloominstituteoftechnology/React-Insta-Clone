@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 const Post = props =>{
-    console.log(props)
+    // console.log(props)
     return (
       <div className="post">
         <div className="post-header">
@@ -14,6 +14,7 @@ const Post = props =>{
         <div className="post-img">
             <img src={props.imageUrl} alt=""/>
         </div>
+        {/* <CommentSection handleChanges={props.post.handleChanges} timeStamp={props.post.timestamp} likes={props.post.likes} comments={props.post.comments} />  */}
       </div>
     );
 }
