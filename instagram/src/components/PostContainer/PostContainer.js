@@ -7,8 +7,10 @@ const PostContainer = props => {
   return (
     <div className="post-container">
       <div className="post-heading">
-        <img src={thumbnailUrl} alt={`{username}'s profile picture`}/>
-        <h1>{username}</h1>
+        <div className="post-heading-img-container">
+          <img src={thumbnailUrl} alt={`{username}'s profile picture`}/>
+        </div>
+        <h2>{username}</h2>
       </div>
       <img src={imageUrl} alt={`{username}'s post`}/>
       <p>{likes} likes</p>

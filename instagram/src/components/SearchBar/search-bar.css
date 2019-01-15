@@ -26,6 +26,7 @@
     margin-left: 20px;
     font-size: 3rem;
     color: #343434;
+    letter-spacing: 1px;
 }
 .search-container .search-item-container input {
     padding: 3px 18px;

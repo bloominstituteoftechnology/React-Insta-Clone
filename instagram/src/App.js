@@ -14,9 +14,13 @@ class App extends Component {
     return (
       <div className="app-container">
         <SearchBar />
-        {this.state.posts.map(post => {
-        return <PostContainer post={post} />
-      })}
+        <div className="main-content-container">
+            {this.state.posts.map(post => {
+            return <PostContainer post={post} />
+          })}        
+        </div>
+        
+
       </div>
     );
   }
