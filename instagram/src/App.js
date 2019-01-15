@@ -20,13 +20,8 @@ class App extends Component {
     return (
       <div className="ig-clone">
         <HeaderContainer />
-        <div className="posts-area">
-          {this.state.posts.map((postData, i) => 
-            <PostContainer
-              key={i}
-              postData={postData} />
-          )}
-        </div>
+        <PostContainer 
+          posts={this.state.posts}/>
       </div>
     );
   }

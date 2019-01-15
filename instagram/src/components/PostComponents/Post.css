@@ -1,5 +1,11 @@
 @import '../../variables.css';
 
+.posts-area {
+    width: 75%;
+    max-width: 642px;
+    margin: 50px auto;
+}
+
 .user-post {
     border: 1px solid var(--user-post-border-color);
     margin: 50px auto;
