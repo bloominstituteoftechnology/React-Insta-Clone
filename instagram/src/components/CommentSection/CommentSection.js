@@ -24,7 +24,7 @@ class CommentSection extends Component {
            }],
            text: ''
         })
-        this.state.comment = '';
+        this.setState({comment: ''})
         ev.target.firstChild.value="";
     };
 

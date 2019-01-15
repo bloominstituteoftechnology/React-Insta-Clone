@@ -13,6 +13,7 @@ class App extends Component {
       dummyData: DummyData,
       
     }
+    console.log(this.state.dummyData)
   }
   handleChanges = ev => {
     this.setState({ [ev.target.name]: ev.target.value });
@@ -41,7 +42,6 @@ App.propTypes={
     likes: PropTypes.number,
     thumbnailUrl: PropTypes.string,
     timeStamp: PropTypes.string,
-    username: PropTypes.string,
   })
 }
 
