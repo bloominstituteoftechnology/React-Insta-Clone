@@ -71,12 +71,18 @@ class CommentSection extends React.Component {
             }) 
         };
 
+    upLikes = e => {
+        this.setState({
+            likes: this.state.likes + 1
+        })
+    };
+
     render () {
         return (
             <div className='comment-container'>
 
                 <div className='comment-icons'>
-                    <div className='comment-heart'>
+                    <div onClick={this.upLikes} className='comment-heart'>
                         <img src={instaheart} alt='heart'/>
                     </div>
 
