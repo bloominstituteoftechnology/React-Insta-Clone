@@ -112,13 +112,7 @@
       .comments-section {
         display: flex;
         padding: 10px 0;
-        span {
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          width: 160px;
-          display: inline-block;
-        }
+
         h1 {
           padding-right: 10px;
           color: #262626;
