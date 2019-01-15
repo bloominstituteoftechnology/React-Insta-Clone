@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import './App.css';
-import SearchBar from './components/SearchBar/search';
-import Posts from './components/PostContainer/posts';
+import SearchBar from './components/SearchBar/SearchBar';
+import PostContainer from './components/PostContainer/PostContainer';
 
 /*The root App component of your application should import the dummy data from the dummy-data.js file with import dummyData from './dummy-data'; and iterate over said data, passing each individual object as a prop to an instance of PostContainer. 
 needs to pass Posts the following: 
@@ -22,14 +22,18 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({ instaData: dummyData });
+    this.setState({
+      instaData: dummyData
+    })
   }
 
   render() {
     return (
       <div className="App">
+
         <SearchBar />
-        <Posts data = {this.state.instaData} />
+        <PostContainer posts = {this.state.instaData} />
+        
       </div>
     );
   }
