@@ -1,5 +1,6 @@
 import React from 'react'
 import Post from './Post';
+import PropTypes from 'prop-types';
 
 
 
@@ -20,7 +21,9 @@ function PostContainer(props) {
 } // main curly 
 
 
-
+PostContainer.propTypes = {
+    datasetInfo: PropTypes.array
+}
 
 
 export default PostContainer;

@@ -4,6 +4,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer';
 import SearchBar from './components/SearchBar';
+import PropTypes from 'prop-types';
 
 
 
@@ -28,6 +29,20 @@ render() {
   )
 }
 }// end curly
+
+App.propTypes={
+  dummyData: PropTypes.shape({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    timeStampL:PropTypes.string,
+  }),
+  comments: PropTypes.arrayOf(PropTypes.shape({
+    username: PropTypes.string,
+    text: PropTypes.string
+}))
+}
 
 
 
