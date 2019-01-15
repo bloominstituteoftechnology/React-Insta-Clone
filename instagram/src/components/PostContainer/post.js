@@ -27,11 +27,21 @@ const Post = props => {
         <div className="post">
             <img className="post-image" src={props.postImage} alt="user posted"/>
         </div>
-        
-        <CommentSect 
-        time={props.timestamp}
-        comments={props.comments}
-        likes={props.likes}/>
+        <div className="comment-section-wrapper">
+            <div className = "icons">
+                        <img src="https://img.icons8.com/ios/50/000000/like.png" alt="like post"/>
+                        <img src="https://img.icons8.com/ios/50/000000/speech-bubble.png" alt = "comment on post"/>
+                    </div>
+                
+
+                    <div className="likes">
+                        <strong>{props.likes} likes</strong>
+                    </div>
+            
+            <CommentSect 
+            time={props.timestamp}
+            comments={props.comments}/>
+        </div>
     </div>
     )
 }

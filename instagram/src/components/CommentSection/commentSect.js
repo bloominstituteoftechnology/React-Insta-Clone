@@ -16,51 +16,51 @@ class CommentSect extends Component {
         this.state = {}
     }
 
-    handleAddComment  = (event) => {
-           event.preventDefault();
-           console.log(event)
-       }
-
-
 componentDidMount() { 
     this.setState({
-        commentData: this.props.comments,
-        time: this.props.time,
-        likes: this.props.likes
+        comments: this.props.comments,
+        comment: ''
     })
 }
 
+handleAddComment  = (event) => {
+    event.preventDefault();
+    const comments = this.state.comments.slice();
+    comments.push({
+        username: "dumDum12",
+        text: this.state.comment
+    })
+
+    this.setState( {comments, comment: ""} )
+}
+
+handleChange = (event) => {
+    this.setState( {
+        comment: event.target.value
+    })
+}
+
+
     render() {
+        console.log(this.state.comments)
         return(
-            
-            <div className="comment-section-wrapper">
-
-                <div className = "icons">
-                    <img src="https://img.icons8.com/ios/50/000000/like.png" alt="like post"/>
-                    <img src="https://img.icons8.com/ios/50/000000/speech-bubble.png" alt = "comment on post"/>
-                </div>
-            
-
-                <div className="likes">
-                    <strong>{this.props.likes} likes</strong>
-                </div>
-
+            <div>
                 <div>
-                    {this.props.comments.map( data => <Comments key = {data.key} user={data.username} text={data.text}/>)}
+                    {this.props.comments.map( (data, i) => <Comments key = {i} user={data.username} text={data.text}/>)}
                 </div>
-                
+                    
                 <div className="time-stamp">
                     {this.props.time}
                 </div> 
 
-                    <div className="comment-input">
-                    <form onSubmit={(event) => this.handleAddComment} >
-                        <input className="input-comment" type="text" placeholder="Add a comment..." />
-                    </form>
-                        <img className="comment-dots" src="https://img.icons8.com/ios-glyphs/30/000000/more.png" alt="more options"></img>
-                    </div>
-            </div>
-            
+                <div className="comment-input">
+
+                <form onSubmit={this.handleAddComment}>
+                    <input onChange={this.handleChange} className="input-comment" type="text" placeholder="Add a comment..."/>
+                </form>
+                    <img className="comment-dots" src="https://img.icons8.com/ios-glyphs/30/000000/more.png" alt="more options"></img>
+            </div>  
+        </div>
         )
     }
 }
