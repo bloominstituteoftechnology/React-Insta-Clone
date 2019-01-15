@@ -25,6 +25,7 @@ class CommentSection extends Component {
            text: ''
         })
         this.state.comment = '';
+        ev.target.firstChild.value="";
     };
 
     render(){
