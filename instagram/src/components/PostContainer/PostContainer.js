@@ -22,5 +22,4 @@ function PostContainer(props) {
   );
 }
 
-
 export default PostContainer;
