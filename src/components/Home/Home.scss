@@ -5,9 +5,70 @@
   justify-content: space-between;
   padding-top: 130px;
   .side-bar {
-    border: 1px solid purple;
     position: fixed;
-    right: 180px;
+    right: 140px;
+    width: 300px;
+    .suggestions {
+      margin-top: 12px;
+      border: 1px solid #e6e6e6;
+      .suggestions-header {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      .suggestions-content {
+        margin-top: 8px;
+        height: 250px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        border: 0 solid #000;
+      }
+    }
+    .stories {
+      margin-top: 4px;
+      border: 1px solid #e6e6e6;
+      .stories-header {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .stories-content {
+        margin-top: 8px;
+        height: 250px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        border: 0 solid #000;
+      }
+    }
+    .loggedin-user {
+      display: flex;
+      padding: 10px 10px;
+      justify-content: baseline;
+      .username-container {
+        text-align: center;
+        padding: 10px 0;
+      }
+      h1 {
+        color: #262626;
+      }
+      small {
+        font-size: 10px;
+        text-align: center;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding-right: 10px;
+      }
+    }
 
     @media #{'(max-width: 500px)'} {
       display: none;
