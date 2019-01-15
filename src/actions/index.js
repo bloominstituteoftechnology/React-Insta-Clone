@@ -13,3 +13,12 @@ export const addComment = (username, user, text) => {
     text
   };
 };
+
+export const getData = () => dispatch => {
+  fetch(
+    "https://cors-anywhere.herokuapp.com/" +
+      "https://jsonplaceholder.typicode.com/todos"
+  )
+    .then(res => res.json())
+    .then(data => dispatch({ type: "GET_DATA", data }));
+};

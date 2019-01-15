@@ -29,6 +29,9 @@ const instaReducer = (state = initalState, action) => {
         newComment
       };
 
+    case "GET_DATA":
+      console.log(action.data);
+
     default:
       return state;
   }

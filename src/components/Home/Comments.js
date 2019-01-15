@@ -19,7 +19,7 @@ class Comments extends Component {
             onClick={() => props.onLikeClick(props.username)}
             className="fas fa-heart"
           />
-          <i className="fas fa-comment" />
+          <i className="fas fa-comment" onClick={() => props.onGettingData()} />
           <i className="fas fa-share" />
         </div>
         <h1>{props.likes} Likes</h1>
@@ -33,13 +33,12 @@ class Comments extends Component {
 
         <div className="comment-input">
           <form
-            onSubmit={e =>
-              props.onComment(e, props.username, "TEST", this.state.comment)
-            }
+            onSubmit={e => {
+              props.onComment(e, props.username, "TEST", this.state.comment);
+            }}
           >
             <input
               className="comment-input-field"
-              id="comment"
               onChange={this.handleChange}
               name="comment"
               placeholder="Comment..."
