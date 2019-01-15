@@ -1,6 +1,7 @@
 import React, {Component}from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment'
+import ActionHeader from './ActionHeader'
 
 class CommentSection extends Component {
     constructor(props){
@@ -29,13 +30,10 @@ class CommentSection extends Component {
     };
 
     render(){
+        // console.log(this.props.likes)
     return (
       <div className="comment-section" >
-          <div className="d-flex action-btns">
-              <i className="far fa-heart"/>
-              <i className="far fa-comment"/>
-          </div>
-          <p className="font-weight-bold">{this.props.likes} likes</p>
+          <ActionHeader likes={this.props.likes}/>
           
           {this.state.commentList.map((comment, i) => {
           return <Comment key={i} username={comment.username} text={comment.text} />}
