@@ -5,8 +5,8 @@ p{
 .post-container{
   width: 604px;
   height: auto;
-  margin: 10px auto;
-  border: 1px solid gray;
+  margin: 30px auto;
+  border: 1px solid rgb(189, 189, 189);
 }
 .post{
   width: 100%;
@@ -22,7 +22,8 @@ p{
 .comment-section input{
   width: 100%;
   border: 0;
-  padding: 15px 0; 
+  padding: 15px 0;
+  font-size: .9rem; 
 }
 .action-btns{
   font-size: 1.5rem;
@@ -34,8 +35,9 @@ p{
 .add-comment{
   align-items: center;
   justify-content: space-between;
-   border-top: 1px solid black;
+  border-top: 1px solid black;
 }
+
 .post-header{
   display: flex;
   align-items: center;

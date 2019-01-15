@@ -19,7 +19,7 @@ class CommentSection extends Component {
         ev.preventDefault();
         this.setState({
            commentList: [...this.state.commentList, {
-               username: 'test',
+               username: "mattbasile2",
                text: this.state.comment
            }],
            text: ''
@@ -35,7 +35,7 @@ class CommentSection extends Component {
               <i className="far fa-heart"/>
               <i className="far fa-comment"/>
           </div>
-          <p>{this.props.likes} likes</p>
+          <p className="font-weight-bold">{this.props.likes} likes</p>
           
           {this.state.commentList.map((comment, i) => {
           return <Comment key={i} username={comment.username} text={comment.text} />}
