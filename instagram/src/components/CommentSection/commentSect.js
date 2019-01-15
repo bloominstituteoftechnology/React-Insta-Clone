@@ -23,6 +23,12 @@ componentDidMount() {
     })
 }
 
+handleChange = (event) => {
+    this.setState( {
+        comment: event.target.value
+    })
+}
+
 handleAddComment  = (event) => {
     event.preventDefault();
     const comments = this.state.comments.slice();
@@ -33,13 +39,6 @@ handleAddComment  = (event) => {
 
     this.setState( {comments, comment: ""} )
 }
-
-handleChange = (event) => {
-    this.setState( {
-        comment: event.target.value
-    })
-}
-
 
     render() {
         console.log(this.state.comments)
