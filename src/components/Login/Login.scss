@@ -1,0 +1,113 @@
+.login-page {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fafafa;
+  align-items: center;
+  .left-side {
+    padding-top: 30px;
+    padding-left: 45px;
+    margin: 0 auto;
+    margin-right: 0;
+    @media #{'(max-width: 500px)'} {
+      display: none;
+    }
+  }
+
+  .right-side {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    justify-content: center;
+    margin-top: 12px;
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 0;
+    @media #{'(max-width: 500px)'} {
+      margin: 30px auto;
+    }
+    .signup-form {
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        .terms {
+          color: #999;
+          margin: 10px 60px;
+          font-size: 14px;
+          line-height: 18px;
+          margin: 10px 40px;
+          text-align: center;
+          a {
+            text-decoration: none;
+            color: #999;
+          }
+        }
+
+        .signup-btn {
+          width: 75%;
+          padding: 8px 10px;
+          margin: 15px 0;
+          background-color: #3897f0;
+          border: 1px solid #3897f0;
+          border-radius: 4px;
+          color: #fff;
+          position: relative;
+          font-size: 14px;
+          font-weight: bold;
+        }
+        input {
+          font-size: 14px;
+          background: #fafafa;
+          border: 0;
+          -webkit-box-flex: 1;
+          -webkit-flex: 1 0 0;
+          -ms-flex: 1 0 0;
+          flex: 1 0 0px;
+          margin: 10px 10px;
+          outline: 0;
+          overflow: hidden;
+          padding: 9px 10px;
+          text-overflow: ellipsis;
+          line-height: 18px;
+          border: 1px solid #efefef;
+          width: 75%;
+          border-radius: 3px;
+        }
+      }
+    }
+    .fb-signup-btn {
+      background-color: #3897f0;
+      border: 1px solid #3897f0;
+      border-radius: 4px;
+      color: #fff;
+      position: relative;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  .sign-up-text {
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 17px;
+    margin: 0 40px 10px;
+    color: #999;
+    text-align: center;
+  }
+
+  .title_sprite {
+    background-repeat: no-repeat;
+    background-position: -98px -150px;
+    height: 51px;
+    width: 175px;
+    display: block;
+    overflow: hidden;
+    text-indent: 110%;
+    white-space: nowrap;
+    margin: 52px auto 22px;
+  }
+}

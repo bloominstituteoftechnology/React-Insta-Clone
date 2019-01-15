@@ -4,15 +4,22 @@ import NavBar from "./components/NavBar/NavBarContainer";
 import HomeContainer from "./components/Home/HomeContainer";
 
 import "./App.scss";
+import LoginContainer from "./components/Login/LoginContainer";
 
 class App extends Component {
+  state = {
+    isLoggedIn: false
+  };
   render() {
-    return (
+    const app = this.state.isLoggedIn ? (
       <div className="App">
         <NavBar />
         <HomeContainer />
       </div>
+    ) : (
+      <LoginContainer />
     );
+    return <>{app}</>;
   }
 }
 
