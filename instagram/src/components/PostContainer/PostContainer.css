@@ -1,0 +1,20 @@
+.post-container .post-head {
+    height: 50px;
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-container .post-head img {
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    align-self: center;
+}
+
+.post-container {
+    border: solid gray 1px;
+    width: 640px;
+    margin-top: 20px;
+    margin-left: 25%;
+}
