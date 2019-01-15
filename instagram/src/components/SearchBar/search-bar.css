@@ -1,0 +1,41 @@
+.search-container {
+    font-family: 'Grand Hotel', cursive;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 2px solid #E2E2E2;
+}
+.search-container .search-item-container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-container .search-item-container .search-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-container .search-item-container .search-heading i {
+    padding-right: 15px;
+    border-right: 1px solid black;
+}
+.search-container .search-item-container .search-heading h1 {
+    margin-left: 20px;
+    font-size: 3rem;
+    color: #343434;
+    letter-spacing: 1px;
+}
+.search-container .search-item-container input {
+    padding: 3px 18px;
+}
+.search-container .search-item-container .search-actions {
+    width: 133px;
+    display: flex;
+    justify-content: space-between;
+}
+.search-container .search-item-container .search-actions i {
+    margin-left: 10px;
+}

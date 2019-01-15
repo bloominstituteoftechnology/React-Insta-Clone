@@ -1,0 +1,8 @@
+.comment {
+    display: flex;
+    flex-direction: row;
+}
+.comment h3 {
+    font-weight: 700;
+    margin-right: 10px;
+}
