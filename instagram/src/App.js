@@ -12,8 +12,14 @@ class App extends Component {
     super();
 
     this.state = {
-      posts: dummyData
+      posts: []
     }
+  }
+
+  componentDidMount() {
+    this.setState({
+      posts: JSON.parse(localStorage.getItem("posts")) || dummyData
+    }, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
   }
 
   render() {
