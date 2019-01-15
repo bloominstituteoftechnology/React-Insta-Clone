@@ -14,6 +14,7 @@
 
 .post-comment-username {
     font-weight: bold;
+    cursor: pointer;
     margin-right: 5px;
 }
 

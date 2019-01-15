@@ -12,6 +12,7 @@
 }
 
 .user-post-header > * {
+    cursor: pointer;
     margin: 10px 5px;
 }
 
@@ -26,6 +27,10 @@
     font-weight: bold;
 }
 
+.post-image {
+    cursor: pointer;
+}
+
 .post-icons {
     display: flex;
     align-items: center;
@@ -36,6 +41,7 @@
 .post-icons > * {
     width: 30px;
     height: 30px;
+    cursor: pointer;
     margin: 10px 15px;
 }
 
@@ -44,6 +50,7 @@
     width: 90%;
     font-size: 1.4rem;
     font-weight: bold;
+    cursor: pointer;
     margin: 10px 25px 20px;
 }
 
@@ -53,5 +60,6 @@
     font-size: 1.2rem;
     color: var(--post-timestamp-font-color);
     text-transform: uppercase;
+    cursor: pointer;
     margin: 10px 25px 20px;
 }
