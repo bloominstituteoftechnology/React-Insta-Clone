@@ -4,27 +4,37 @@ import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from '../src/components/SearchBar/SearchBar';
 import PostContainer from '../src/components/PostContainer/PostContainer';
+import propTypes from 'prop-types';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: dummyData
+      dummyData: []
     };
+  }
+
+  componentDidMount() {
+    this.setState({
+      dummyData: dummyData
+    })
+
   }
 
   render() {
     return (
       <div className='App'>
         <SearchBar />
-        <PostContainer data={this.state.dummyData[0]} />
-        <PostContainer data={this.state.dummyData[1]} />
-        <PostContainer data={this.state.dummyData[2]} />
-
+        {this.state.dummyData.length === 0 ? <h1>LOADING</h1> : 
+        this.state.dummyData.map(item => {return <PostContainer data={item}/>})}
       </div>
     )
   }
 
+}
+
+App.propTypes = {
+  dummyData: propTypes.array,
 }
 
 export default App;
