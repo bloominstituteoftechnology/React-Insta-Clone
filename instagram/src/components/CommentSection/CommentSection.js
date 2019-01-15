@@ -48,9 +48,28 @@ class CommentSection extends React.Component {
         this.state = {
             comments: [...props.data.comments],
             likes: props.data.likes,
-            timestamp: props.data.timestamp
+            timestamp: props.data.timestamp,
+            addNewComment: props.addNewComment,
+            newComm: ''
         }
     }
+
+    changeHandler = (e) => {
+        this.setState({
+            newComm: e.target.value
+        })
+      };
+
+    addNewComment = (e) => {
+        e.preventDefault();
+        this.setState({
+            comments: [...this.state.comments,
+                {text: this.state.newComm,
+                    username: 'InstaDoggo'
+                }],
+                newComm: '',
+            }) 
+        };
 
     render () {
         return (
@@ -74,9 +93,15 @@ class CommentSection extends React.Component {
 
                 <p> {this.state.timestamp} </p>
 
-                <div className='input'>
-                    <input placeholder='Add a comment...'/>
-                </div>
+                <form onSubmit={this.addNewComment} className='input'>
+                    <input 
+                    placeholder='Add a comment...'
+                    name='newComm'
+                    value={this.state.newComm}
+                    onChange={this.changeHandler}
+
+                    />
+                </form>
 
             </div>
 
@@ -90,6 +115,7 @@ export default CommentSection;
 CommentSection.propTypes = {
     comments: propTypes.array,
     likes: propTypes.string,
-    timestamp: propTypes.string
+    timestamp: propTypes.string,
+    addNewComment: propTypes.func
   }
   
