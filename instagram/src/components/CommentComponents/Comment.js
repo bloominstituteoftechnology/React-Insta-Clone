@@ -18,4 +18,8 @@ Comment.propTypes = {
   })
 };
 
+Comment.defaultProps = {
+  username: "Instagram User" // Temporary until user authentication functionality is built
+}
+
 export default Comment;

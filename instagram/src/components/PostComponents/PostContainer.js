@@ -39,7 +39,7 @@ PostContainer.propTypes = {
     likes: PropTypes.number.isRequired,
     timestamp: PropTypes.string.isRequired,
     comments: PropTypes.arrayOf(PropTypes.shape({
-      username: PropTypes.string.isRequired,
+      username: PropTypes.string,
       text: PropTypes.string.isRequired
     })).isRequired
   })
