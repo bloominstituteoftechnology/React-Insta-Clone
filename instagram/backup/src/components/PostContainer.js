@@ -2,6 +2,7 @@ import React from "react";
 import CommentSection from './CommentSection';
 import './PostContainer.css'
 
+
 function PostContainer(props) {
     //console.log(props)
     return (
@@ -31,6 +32,7 @@ function PostContainer(props) {
              {post.likes} likes
             </h3>
             <p>{post.timestamp}</p>
+           
   
             <CommentSection commentsarray={post.comments} />
             <form>

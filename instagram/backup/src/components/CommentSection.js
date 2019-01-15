@@ -2,7 +2,7 @@ import React from "react";
 import './PostContainer.css'
 
 const CommentSection = props =>  {
-    //console.log(props)
+    console.log(props)
     return(
         <div className='comment-container'>
             {props.commentsarray.map(({username, text}, index) => (
