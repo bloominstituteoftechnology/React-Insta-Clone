@@ -8,6 +8,7 @@ const HeaderLogos = props => {
       <div className="header-img-logo">
         <img src="images/ig-logo.png" alt="Instagram logo"/>
       </div>
+      <hr className="header-logos-separator"/>
       <h1 className="header-txt-logo">Instagram</h1>
     </div>
   );

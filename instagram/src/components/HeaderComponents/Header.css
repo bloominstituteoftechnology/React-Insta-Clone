@@ -11,17 +11,21 @@
 .header-logos {
     display: flex;
     align-items: center;
+    width: 15%;
 }
 
 .header-img-logo {
-    padding-right:  30px;
-    border-right: 1px solid var(--header-img);
-    margin-right:  30px;
+    cursor: pointer;
+}
+
+.header-logos-separator {
+    height: 100%;
+    background-color: var(--header-img);
 }
 
 .header-txt-logo {
     font-family: "Grand Hotel";
-    font-size: 5rem;
+    font-size: 4rem;
     cursor: pointer;
     padding-left: 0;
 }
