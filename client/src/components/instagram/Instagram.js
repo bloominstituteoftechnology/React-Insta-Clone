@@ -15,18 +15,38 @@ const InstagramStyle = styled.div`
 `;
 
 class Instagram extends Component {
+  state = {
+    searchTerm: ""
+  };
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
   render() {
-    const { instagram } = this.props;
-    const cardComponent = instagram.map((item, index) => (
+    const { instagram, onLogoutClick } = this.props;
+    const { searchTerm } = this.state;
+
+    const filterDummyData = instagram.filter(ig => {
+      return ig.username.indexOf(this.state.searchTerm) !== -1;
+    });
+
+    const cardComponent = filterDummyData.map((item, index) => (
       <InstaCard key={index} item={item} />
     ));
     return (
       <InstagramStyle>
-        <InstaNavbar />
+        <InstaNavbar
+          onLogoutClick={onLogoutClick}
+          searchTerm={searchTerm}
+          handleChange={this.handleChange}
+        />
         <Container className="wrapper">
           <Row style={{ marginTop: "50px" }}>
-            <Col sm="9">{cardComponent}</Col>
-            <Col sm="3">
+            <Col sm="8">{cardComponent}</Col>
+            <Col sm="4">
               <div className="right_side">Right side!</div>
             </Col>
           </Row>

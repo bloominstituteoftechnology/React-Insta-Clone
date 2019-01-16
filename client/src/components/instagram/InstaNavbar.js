@@ -48,6 +48,8 @@ class InstaNavbar extends Component {
     });
   }
   render() {
+    const { onLogoutClick, searchTerm, handleChange } = this.props;
+
     return (
       <NavbarStyle>
         <Navbar color="light" light expand="md">
@@ -56,7 +58,12 @@ class InstaNavbar extends Component {
             <span style={{ paddingLeft: "15px" }}>Instagram</span>
           </NavbarBrand>
           <NavbarBrand className="ml-auto">
-            <Input placeholder="Search" />
+            <Input
+              placeholder="Search"
+              name="searchTerm"
+              value={searchTerm}
+              onChange={handleChange}
+            />
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -79,7 +86,7 @@ class InstaNavbar extends Component {
                   <DropdownItem>Option 1</DropdownItem>
                   <DropdownItem>Option 2</DropdownItem>
                   <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
+                  <DropdownItem onClick={onLogoutClick}>Logout</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>

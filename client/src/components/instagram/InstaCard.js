@@ -2,7 +2,10 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { connect } from "react-redux";
-import { onToggleLikesHandler } from "../../store/action/instaAction";
+import {
+  onToggleLikesHandler,
+  onAddHandler
+} from "../../store/action/instaAction";
 
 import {
   Card,
@@ -43,14 +46,23 @@ class InstaCard extends Component {
 
   handleSubmit = (e, id) => {
     e.preventDefault();
-
-    console.log(this.state.message);
+    const { data } = this.props.instagram;
+    if (!this.state.message) return;
+    const newItem = data.map(post => {
+      if (post.id === id) {
+        post.comments.push({
+          text: this.state.message,
+          username: post.username
+        });
+      }
+      return post;
+    });
+    this.props.onAddHandler(newItem);
     this.setState({ message: "" });
   };
 
   likeHanlder = id => {
     const { data } = this.props.instagram;
-    console.log(data);
     this.props.onToggleLikesHandler(id, data);
   };
 
@@ -123,14 +135,16 @@ class InstaCard extends Component {
             >
               {isLiked ? likes + 1 : likes} likes
             </CardSubtitle>
-            {comments.map(comment => (
+            {comments.map((comment, index) => (
               <CardText
-                key={comment.id}
+                key={index}
                 style={{
                   margin: "6px 0"
                 }}
               >
-                <span style={{ fontWeight: "bold" }}>{comment.username}</span>{" "}
+                <span style={{ fontWeight: "bold", marginRight: 5 }}>
+                  {comment.username}
+                </span>
                 <span>{comment.text}</span>
               </CardText>
             ))}
@@ -143,7 +157,7 @@ class InstaCard extends Component {
               {timestamp}
             </span>
           </CardBody>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={e => this.handleSubmit(e, id)}>
             <Input
               type="text"
               name="message"
@@ -152,7 +166,6 @@ class InstaCard extends Component {
               className="input_comment"
               placeholder="Add a comment..."
               style={{
-                borderBottom: "none",
                 minWidth: "60%",
                 borderTopColor: "#DFDFDF",
                 fontSize: 14
@@ -185,5 +198,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { onToggleLikesHandler }
+  { onToggleLikesHandler, onAddHandler }
 )(InstaCard);

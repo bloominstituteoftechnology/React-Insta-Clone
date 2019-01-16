@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Instagram from "./components/instagram/Instagram";
+import LoginProtected from "./container/LoginProtected";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Instagram />
+        <LoginProtected />
       </div>
     );
   }

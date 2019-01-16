@@ -1,6 +1,5 @@
 import data from "../../dummyData";
-import { TOGGLE_LIKES } from "../action/types";
-import uuid from "uuid";
+import { TOGGLE_LIKES, ADD_COMMENT } from "../action/types";
 const initialState = {
   data
 };
@@ -8,15 +7,14 @@ const initialState = {
 export default function instagramReducer(state = initialState, action) {
   switch (action.type) {
     case TOGGLE_LIKES:
-      // const newData = state.data.map(item => {
-      //   if (item.id === action.payload) {
-      //     item.isLiked = !item.isLiked;
-      //   }
-      //   return item;
-      // });
       return {
         ...state,
         data: action.newData
+      };
+    case ADD_COMMENT:
+      return {
+        ...state,
+        data: action.newItem
       };
     default:
       return state;
