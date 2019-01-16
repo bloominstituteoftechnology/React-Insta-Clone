@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar'
-import PostContainer from './components/PostContainer/PostContainer'
+import PostsPage from './components/PostContainer/PostsPage'
 import './App.css';
 import dummyData from './dummy-data';
 class App extends Component {
@@ -41,16 +41,11 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="app-container">
-        <SearchBar onChange={this.searchPosts} value={this.state.searchValue}/>
-        <div className="main-content-container">
-            {this.state.displayedPosts.map(post => {
-            return <PostContainer post={post} />
-          })}        
-        </div>
-        
-
-      </div>
+      <PostsPage
+      searchValue={this.state.searchValue}
+      searchPosts={this.searchPosts}
+      displayedPosts={this.state.displayedPosts}
+      />
     );
   }
 }
