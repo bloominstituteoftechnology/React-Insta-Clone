@@ -9,7 +9,7 @@ class CommentSection extends React.Component{
  this.state = {comment:''}
  this.onFormSubmit = (e) =>  {
   e.preventDefault();
-  this.setState.value
+  // this.setState.value
   //some action to render comment to screen ???????????
 }
   }
