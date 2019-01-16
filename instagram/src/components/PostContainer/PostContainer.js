@@ -10,8 +10,17 @@ const PostContainer = props => {
     <div className="post-container-wrapper">
       <PostHeader data={props.data} />
       <PostPicture data={props.data} />
-      <PostIcons data={props.data} />
-      <CommentContainer data={props.data} />
+      <PostIcons data={props.data} addLike={props.addLike} />
+      <div className="comment-container">
+        <CommentContainer
+          comments={props.comments}
+          data={props.data}
+          addComment={props.addComment}
+          inputText={props.inputText}
+          handleChange={props.handleChange}
+          username={props.username}
+        />
+      </div>
     </div>
   );
 };

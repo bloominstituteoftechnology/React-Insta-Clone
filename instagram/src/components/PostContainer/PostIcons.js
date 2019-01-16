@@ -10,6 +10,7 @@ const PostIcons = props => {
             src={require(`../SearchBar/Images/largeHeart.png`)}
             alt=""
             className="post-icons"
+            onClick={e => props.addLike(e, props.data.username)}
           />
           <img
             src={require(`../SearchBar/Images/bubble.png`)}
@@ -19,7 +20,6 @@ const PostIcons = props => {
         </div>
 
         <a href="#" className="likes">
-          {" "}
           {props.data.likes} likes
         </a>
       </div>
