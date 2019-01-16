@@ -5,15 +5,11 @@ import Authenticate from './components/Authentication/Authenticate';
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      validated: [],
-    };
   }
 
   render () {
     return (
       <div>
-        <Authenticate App={<App/>}/>
         <PostsPage />
       </div>
     )
@@ -22,4 +18,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default Authenticate(App);
