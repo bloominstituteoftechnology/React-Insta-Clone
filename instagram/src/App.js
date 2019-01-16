@@ -37,6 +37,7 @@ class App extends Component {
     this.setState({
         searchterm: e.target.value
     })
+    this.setState({dummyData: dummyData});
   };
 
   render() {
@@ -47,7 +48,7 @@ class App extends Component {
           changer={this.changeHandler}
         
         />
-        {this.state.dummyData.length === 0 ? <h1>LOADING</h1> : 
+        {this.state.dummyData.length === 0 ? <h1>No Matches</h1> : 
         this.state.dummyData.map(item => {return <PostContainer data={item}/>})}
       </div>
     )
