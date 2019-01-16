@@ -3,9 +3,11 @@
     --header-img: var(--black);
     --user-post-border-color: var(--lightgrey);
     --post-timestamp-font-color: var(--silver);
+    --comment-option-font-color: var(--grey);
 
     /* Color values */
     --black: #000000;
     --lightgrey: #D3D3D3;
     --silver: #C0C0C0;
+    --grey: #808080;
 }

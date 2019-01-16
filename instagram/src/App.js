@@ -67,9 +67,9 @@ class App extends Component {
 
   deleteComment(e) {
     const postIndex = this.state.posts.findIndex(post => post._id === e.currentTarget.dataset.post_id);
-    const commentIndex = this.state.posts[postIndex].comments.findIndex(comment => comment._id === e.currentTarget.comment_id);
+    const commentIndex = this.state.posts[postIndex].comments.findIndex(comment => comment._id === e.currentTarget.dataset.comment_id);
 
-    const posts = update(this.setState.post, {
+    const posts = update(this.state.posts, {
                            [postIndex]: {
                              comments: { $splice: [[commentIndex, 1]] }
                            }
@@ -96,7 +96,7 @@ class App extends Component {
   }
 
   handleClick = e => {
-    switch (e.currentTarget.name) {
+    switch (e.currentTarget.name || e.currentTarget.dataset.name) {
       case "heart-post-btn" :
         this.togglePostHeart(e);
         break;
