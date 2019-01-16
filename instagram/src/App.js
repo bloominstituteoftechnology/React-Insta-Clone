@@ -37,7 +37,7 @@ class App extends Component {
       this.setState({
         displayedPosts: this.state.posts
       })
-    }//IF THERE IS NO SEARCH VALUE, DISPLAY THE DEFAULT POST ARRAY
+    }//IF THERE IS NO SEARCH VALUE, DISPLAY THE INITIAL POST ARRAY
   }
   render() {
     return (
