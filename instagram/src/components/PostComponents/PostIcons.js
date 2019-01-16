@@ -12,7 +12,12 @@ const PostIcons = props => {
         name="heart-btn" 
         data-_id={props._id}
         onClick={props.handleClick}/>
-      <img src="images/comment.png" alt="comment"/>
+      <img 
+        src="images/comment.png" 
+        alt="comment"
+        name="comment-btn"
+        data-_id={props._id}
+        onClick={props.handleClick}/>
     </div>
   );
 };

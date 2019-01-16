@@ -13,6 +13,7 @@ const Comment = props => {
 
 Comment.propTypes = {
   commentData: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired
   }).isRequired

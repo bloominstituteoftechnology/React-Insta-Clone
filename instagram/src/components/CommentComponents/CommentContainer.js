@@ -20,6 +20,7 @@ const CommentContainer = props => {
 CommentContainer.propTypes = {
   comments: PropTypes.arrayOf(
     PropTypes.shape({
+      _id: PropTypes.string.isRequired,
       username: PropTypes.string,
       text: PropTypes.string.isRequired
     }).isRequired

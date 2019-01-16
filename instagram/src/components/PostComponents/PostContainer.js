@@ -10,10 +10,12 @@ const PostContainer = props => {
     <div className="posts-area">
       {props.posts.map((postData, i) => 
         <Post
-          key={postData.imageUrl}
+          key={postData._id}
           currentUser={props.currentUser}
           postData={postData}
-          handleClick={props.handleClick} />
+          commentInput={props.commentInputs[i]}
+          handleClick={props.handleClick}
+          handleChange={props.handleChange} />
       )}
     </div>
   );
@@ -33,13 +35,18 @@ PostContainer.propTypes = {
       timestamp: PropTypes.string.isRequired,
       comments: PropTypes.arrayOf(
         PropTypes.shape({
+          _id: PropTypes.string.isRequired,
           username: PropTypes.string,
           text: PropTypes.string.isRequired
         }).isRequired
       ).isRequired
     }).isRequired
   ).isRequired,
-  handleClick: PropTypes.func.isRequired
+  commentInputs: PropTypes.arrayOf(
+    PropTypes.string.isRequired
+  ).isRequired,
+  handleClick: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired
 };
 
 PostContainer.defaultProps = {

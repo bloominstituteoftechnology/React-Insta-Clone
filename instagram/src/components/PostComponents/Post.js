@@ -30,7 +30,10 @@ const Post = props => {
         comments={props.postData.comments} />
       <PostTimePeriod
         timestamp={props.postData.timestamp} />
-      <NewCommentForm />
+      <NewCommentForm 
+        _id={props.postData._id}
+        commentInput={props.commentInput}
+        handleChange={props.handleChange} />
     </div>
   );
 };
@@ -48,12 +51,15 @@ Post.propTypes = {
     timestamp: PropTypes.string.isRequired,
     comments: PropTypes.arrayOf(
       PropTypes.shape({
+        _id: PropTypes.string.isRequired,
         username: PropTypes.string,
         text: PropTypes.string.isRequired
       }).isRequired
     ).isRequired
   }).isRequired,
-  handleClick: PropTypes.func.isRequired
+  commentInput: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired
 };
 
 Post.defaultProps = {
