@@ -13,6 +13,7 @@ class App extends Component {
       dummyData: [],
       filteredData: [],
       search: '',
+      storage: '',
     }
     // console.log(this.state.dummyData)
     // console.log(this.state.userNames)
@@ -23,13 +24,16 @@ class App extends Component {
         console.log('filterSearch');
     const filtered = this.state.dummyData.filter(post=>{
       if(post.username.includes(ev.target.value)){
+        localStorage.setItem('search', post)
         return post
       }
     });
     this.setState({filteredData: filtered});
+    console.log(localStorage.search);
     }
   }
 
+  
   componentDidMount(){
     console.log('CDM is running');
     fetch(DummyData)
@@ -62,10 +66,7 @@ class App extends Component {
           return <PostContainer 
           handleChanges={this.handleChanges}
           key={post.username}
-          post={
-            this.state.filteredData.length > 0
-            ? this.state.filteredData
-            : post } />
+          post={post } />
         })}
       </div>
     );
