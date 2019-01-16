@@ -1,24 +1,20 @@
-/*font-family: 'Allura', cursive;
-font-family: 'Grand Hotel', cursive; */
-
-
 
 .search-bar {
     margin-top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
-   background-color: #FFFFFF;
-   width: 100%;
-   position: sticky;
-   top: 0;
-   border-bottom: 1px solid #E6E6E6;
+    background-color: #FFFFFF;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #E6E6E6;
     padding-bottom: 2rem;
     padding-top: 1rem;
 }
 .left-side i{
     padding: 0 1%;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 100;
 
 }
@@ -46,7 +42,7 @@ font-family: 'Grand Hotel', cursive; */
 }
 .search-icons i{
     padding: 0 9%;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 100;
 }
 .input-wrap {
@@ -61,5 +57,6 @@ font-family: 'Grand Hotel', cursive; */
     outline: 0;
     padding: 3px 10px 3px 26px;
     background-color: #fafafa;
+    margin-left: -25rem;
 
 }
