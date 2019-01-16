@@ -13,8 +13,8 @@ font-family: 'Grand Hotel', cursive; */
    position: sticky;
    top: 0;
    border-bottom: 1px solid #E6E6E6;
-
-
+    padding-bottom: 2rem;
+    padding-top: 1rem;
 }
 .left-side i{
     padding: 0 1%;
