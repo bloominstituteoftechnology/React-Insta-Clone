@@ -1,39 +1,42 @@
-import React, { Component } from "react";
-import "./App.css";
-import SearchBar from "./components/SearchBar";
-import PostContainer from './components/PostContainer';
-import dummyData from './dummy-data'
-//console.log(dummyData);
+import React, { Component } from 'react';
+import dummyData from './dummy-data';
+import './App.css';
+import SearchBar from './components/SearchBar/SearchBar';
+import PostContainer from './components/PostContainer/PostContainer';
+
+/*The root App component of your application should import the dummy data from the dummy-data.js file with import dummyData from './dummy-data'; and iterate over said data, passing each individual object as a prop to an instance of PostContainer. 
+needs to pass Posts the following: 
+thumbnailUrl
+imageUrl
+likes
+comments (the entire object)
+timestamp
+*/
 
 class App extends Component {
-  constructor(){
-    console.log('Constructor is running')
+  constructor() {
     super();
     this.state = {
-      mainData: dummyData 
-    }
+      instaData: []
+    } 
   }
 
   componentDidMount() {
-    console.log('CDM is running');
-    fetch("./dummy-data")
-      .then(res => res.json())
-      .then(dogs => this.setState({  mainData: dummyData  }))
-      .catch(err => console.log("noooo"));
+    this.setState({
+      instaData: dummyData
+    })
   }
-  
 
-render(){
-  return(
-    <div>
-      <SearchBar />
-      <PostContainer postsarray = {this.state.mainData} />
-    </div>
-  )
-}
+  render() {
+    return (
+      <div className="App">
 
-
+        <SearchBar />
+        <PostContainer posts = {this.state.instaData} />
+        
+      </div>
+    );
+  }
 }
 
 export default App;
-
