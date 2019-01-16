@@ -1,31 +1,22 @@
+/* eslint-disable default-case */
 import React, { Component } from "react";
 import "./App.css";
+// eslint-disable-next-line no-unused-vars
 import PostPage from "../src/components/PostContainer/PostPage";
-import dummyData from "./dummy-data";
 
+import { authenticate } from "./components/authentication/authenticate";
+import Login from "../src/components/Login/Login";
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      data: [],
-      inputText: ""
-    };
+  constructor(props) {
+    super(props);
   }
-  handleChange = e => {
-    this.setState(
-      {
-        [e.target.name]: e.target.value
-      },
-      console.log("you typing")
-    );
-  };
 
   addComment = (e, username) => {
     e.preventDefault();
 
-    let data = this.state.data.map(post => {
+    let data = this.props.data.map(post => {
       if (post.username === username) {
-        post.comments.push({ username: username, text: this.state.inputText });
+        post.comments.push({ username: username, text: this.props.inputText });
       }
       return post;
     });
@@ -33,33 +24,24 @@ class App extends Component {
   };
 
   addLike = (e, username) => {
-    let count = this.state.data.map(post => {
+    let count = this.props.data.map(post => {
       if (post.username === username) {
-        post.likes.push({ likes: this.state.count + 1 });
+        post.likes.push({ likes: this.props.count + 1 });
       }
       return count;
     });
     this.setState({ count: count });
   };
 
-  componentDidMount() {
-    this.setState(
-      {
-        data: dummyData
-      },
-      () => console.log(this.state.data)
-    );
-  }
-
   render() {
     return (
       <PostPage
-        data={this.state.data}
-        inputText={this.state.inputText}
+        data={this.props.data}
+        inputText={this.props.inputText}
         addComment={this.addComment}
         handleChange={this.handleChange}
       />
     );
   }
 }
-export default App;
+export default authenticate(App)(Login);
