@@ -1,7 +1,9 @@
 .post-container {
-    width: 640px;
+    width: 600px;
     margin: auto;
+    margin-bottom: 30px;
     border: 1px solid #E2E2E2;
+    background-color: white;
 }
 
 .post-container .post-heading {
@@ -22,4 +24,12 @@
 }
 .post-container .post-heading h2 {
     font-size: 1.5rem;
+}
+
+.post-container .post-img-container {
+    width: 600px;
+}
+.post-container .post-img-container img {
+    width: 100%;
+    height: auto;
 }

@@ -60,11 +60,11 @@ class CommentSection extends React.Component {
 
   render(props) {
     return (
-      <div>
+      <div className="comment-section">
         <div className="likes-comments">
           <div className="likes-comments-icons">
-            <i className="far fa-heart" onClick={this.toggleLike}></i>
-            <i className="far fa-comment"></i>
+            <i className="far fa-heart fa-2x" onClick={this.toggleLike}></i>
+            <i className="far fa-comment fa-2x"></i>
           </div>
           <div className="likes-comments-stats">
             <p>{this.state.likes} likes</p>
