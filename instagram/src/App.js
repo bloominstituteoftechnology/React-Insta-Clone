@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import DummyData from './dummy-data';
 import './App.css';
 import PropTypes from 'prop-types';
+import Fuse from 'fuse.js';
 
 
 class App extends Component {
