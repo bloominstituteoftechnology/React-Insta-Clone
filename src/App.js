@@ -8,7 +8,7 @@ import LoginContainer from "./components/Login/LoginContainer";
 
 class App extends Component {
   state = {
-    isLoggedIn: false
+    isLoggedIn: true
   };
   render() {
     const app = this.state.isLoggedIn ? (
