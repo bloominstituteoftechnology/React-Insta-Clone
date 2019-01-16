@@ -44,7 +44,9 @@ class SearchBar extends React.Component{
             </div>
             {this.state.hidden === true 
                 ? null 
-                : <LogOutMenu  username={this.state.username}/>}
+                : <LogOutMenu  
+                  username={this.state.username}
+                  logout={this.props.logout}/>}
             
           </div>
         )
