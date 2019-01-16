@@ -25,7 +25,7 @@ class Login extends Component {
             type="text"
             onChange={this.props.handleChanges}
             name="password"/>
-            <button>Login</button>
+            <button onClick={this.props.loginSubmit}>Login</button>
         </form>
       </div>
     );
