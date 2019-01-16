@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './Header.css';
 
@@ -10,10 +11,17 @@ const HeaderContainer = props => {
   return (
     <div className="header">
       <HeaderLogos />
-      <SearchBar />
+      <SearchBar
+        postQueryInput={props.postQueryInput}
+        handleChange={props.handleChange} />
       <HeaderIcons />
     </div>
   );
+};
+
+HeaderContainer.propTypes = {
+  postQueryInput: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired
 };
 
 export default HeaderContainer;

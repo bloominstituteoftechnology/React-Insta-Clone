@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import update from  'immutability-helper';
 
+import Fuse from 'fuse.js';
+
 import './App.css';
 
 import HeaderContainer from './components/HeaderComponents/HeaderContainer.js';
@@ -15,13 +17,18 @@ class App extends Component {
     this.state = {
       currentUser: "Instagram User",
       posts: [],
+      postQueryResults: [],
+      postQueryInput: "",
       commentInputs: []
     }
   }
 
   componentDidMount() {
+    const posts = JSON.parse(localStorage.getItem("posts")) || dummyData;
     this.setState({
-      posts: JSON.parse(localStorage.getItem("posts")) || dummyData,
+      posts: [...posts],
+      postQueryResults: [...posts],
+      postQueryInput: "",
       commentInputs: Array(dummyData.length).fill("")
     }, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
   }
@@ -30,8 +37,27 @@ class App extends Component {
     return `${Date.now()}${Math.floor(Math.random() * 100000000)}`;
   }
 
+  searchPosts(postQueryInput) {
+    const postQueryResults = postQueryInput ?
+                              [...new Fuse(this.state.posts, {
+                                shouldSort: false,
+                                threshold: 0.1,
+                                minMatchCharLength: 1,
+                                keys: [
+                                  "username"
+                                ]
+                              }).search(postQueryInput)] :
+                              [...this.state.posts];
+    this.setState({
+      postQueryResults,
+      postQueryInput,
+      commentInputs: Array(postQueryResults.length).fill("")
+    });
+  }
+
   togglePostHeart(e) {
     const postIndex = this.state.posts.findIndex(post => post._id === e.currentTarget.dataset._id);
+    const postQueryResultsIndex = this.state.postQueryResults.findIndex(post => post._id === e.currentTarget.dataset._id);
     const likeIndex = this.state.posts[postIndex].likes.findIndex(liker => liker === this.state.currentUser);
 
     const posts =  update(this.state.posts, {
@@ -41,58 +67,113 @@ class App extends Component {
                                       { $splice: [[likeIndex, 1]]}
                             }
                           });
+    const postQueryResults =  update(this.state.postQueryResults, {
+                                [postQueryResultsIndex]: {
+                                  likes: likeIndex === -1 ? 
+                                          { $push: [this.state.currentUser] } : 
+                                          { $splice: [[likeIndex, 1]]}
+                                }
+                              });
       
-    this.setState({posts}, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
+    this.setState({
+      posts,
+      postQueryResults
+    }, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
   }
 
   toggleCommentHeart(e) {
     const postIndex = this.state.posts.findIndex(post => post._id === e.currentTarget.dataset.post_id);
-    const commentIndex = this.state.posts[postIndex].comments.findIndex(comment => comment._id === e.currentTarget.dataset.comment_id);
-    const likeIndex = this.state.posts[postIndex].comments[commentIndex].likes.findIndex(liker => liker === this.state.currentUser);
+    const postCommentIndex = this.state.posts[postIndex].comments.findIndex(comment => comment._id === e.currentTarget.dataset.comment_id);
+    const postLikeIndex = this.state.posts[postIndex].comments[postCommentIndex].likes.findIndex(liker => liker === this.state.currentUser);
+
+    const postQueryResultsIndex = this.state.postQueryResults.findIndex(post => post._id === e.currentTarget.dataset.post_id);
+    const postQueryResultsCommentIndex = this.state.postQueryResults[postQueryResultsIndex].comments.findIndex(comment => comment._id === e.currentTarget.dataset.comment_id);
+    const postQueryResultsLikeIndex = this.state.postQueryResults[postQueryResultsIndex].comments[postQueryResultsCommentIndex].likes.findIndex(liker => liker === this.state.currentUser);
 
     const posts = update(this.state.posts, {
                            [postIndex]: {
                              comments: {
-                               [commentIndex] : {
-                                 likes: likeIndex === -1 ?
+                               [postCommentIndex] : {
+                                 likes: postLikeIndex === -1 ?
                                           { $push: [this.state.currentUser] } :
-                                          { $splice: [[likeIndex, 1]] } 
+                                          { $splice: [[postLikeIndex, 1]] } 
                                }
                              }
                            }
                          });
+    const postQueryResults = update(this.state.postQueryResults, {
+                                      [postQueryResultsIndex]: {
+                                        comments: {
+                                          [postQueryResultsCommentIndex] : {
+                                            likes: postQueryResultsLikeIndex === -1 ?
+                                                      { $push: [this.state.currentUser] } :
+                                                      { $splice: [[postQueryResultsLikeIndex, 1]] } 
+                                          }
+                                        }
+                                      }
+                                    });
 
-    this.setState({posts}, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
+    this.setState({
+      posts,
+      postQueryResults
+    }, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
   }
 
   deleteComment(e) {
     const postIndex = this.state.posts.findIndex(post => post._id === e.currentTarget.dataset.post_id);
-    const commentIndex = this.state.posts[postIndex].comments.findIndex(comment => comment._id === e.currentTarget.dataset.comment_id);
+    const postCommentIndex = this.state.posts[postIndex].comments.findIndex(comment => comment._id === e.currentTarget.dataset.comment_id);
+
+    const postQueryResultsIndex = this.state.postQueryResults.findIndex(post => post._id === e.currentTarget.dataset.post_id);
+    const postQueryResultsCommentIndex = this.state.postQueryResults[postQueryResultsIndex].comments.findIndex(comment => comment._id === e.currentTarget.dataset.comment_id);
 
     const posts = update(this.state.posts, {
                            [postIndex]: {
-                             comments: { $splice: [[commentIndex, 1]] }
+                             comments: { $splice: [[postCommentIndex, 1]] }
                            }
                          });
+    const postQueryResults = update(this.state.postQueryResults, {
+                                      [postQueryResultsIndex]: {
+                                        comments: { $splice: [[postQueryResultsCommentIndex, 1]] }
+                                      }
+                                    });
 
-    this.setState({posts}, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
+    this.setState({
+      posts,
+      postQueryResults
+    }, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
   }
 
   addNewComment(_id, newCommentText) {
+    const new_id = this.generateId();
+
     const postIndex = this.state.posts.findIndex(post => post._id === _id);
+    const postQueryResultsIndex = this.state.postQueryResults.findIndex(post => post._id === _id);
 
     const posts = update(this.state.posts, {
                            [postIndex]: {
                              comments: { $push: [{
-                               _id: this.generateId(),
+                               _id: new_id,
                                username: this.state.currentUser,
                                text: newCommentText,
                                likes: []
                              }] }
                            }
                          })
+    const postQueryResults = update(this.state.postQueryResults, {
+                          [postQueryResultsIndex]: {
+                            comments: { $push: [{
+                              _id: new_id,
+                              username: this.state.currentUser,
+                              text: newCommentText,
+                              likes: []
+                            }] }
+                          }
+                         })
 
-    this.setState({posts}, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
+    this.setState({
+      posts,
+      postQueryResults
+    }, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
   }
 
   handleClick = e => {
@@ -117,14 +198,17 @@ class App extends Component {
 
   handleChange = e => {
     switch (e.currentTarget.name) {
+      case "postQueryInput" :
+        this.searchPosts(e.currentTarget.value);
+        break;
+
       case "comment-input" :
-        const postIndex = this.state.posts.findIndex(post => post._id === e.currentTarget.dataset._id);
+        const postIndex = this.state.postQueryResults.findIndex(post => post._id === e.currentTarget.dataset._id);
         const commentInputs = update(this.state.commentInputs, {
                                        [postIndex]: { $set: e.currentTarget.value }
                                      });  
 
         this.setState({commentInputs});
-
         break;
     }
   };
@@ -136,7 +220,7 @@ class App extends Component {
         case "comment-input" :
           const newCommentText = e.currentTarget.value;
 
-          const postIndex = this.state.posts.findIndex(post => post._id === e.currentTarget.dataset._id);
+          const postIndex = this.state.postQueryResults.findIndex(post => post._id === e.currentTarget.dataset._id);
           const commentInputs = update(this.state.commentInputs, {
                                          [postIndex]: { $set: "" }
                                        });  
@@ -152,10 +236,13 @@ class App extends Component {
   render() {
     return (
       <div className="ig-clone">
-        <HeaderContainer />
+        <HeaderContainer
+          postQueryInput={this.state.postQueryInput}
+          handleChange={this.handleChange} />
         <PostContainer 
           currentUser={this.state.currentUser}
-          posts={this.state.posts}
+          posts={this.state.postQueryResults}
+          postQueryInput={this.state.postQueryInput}
           commentInputs={this.state.commentInputs}
           handleClick={this.handleClick}
           handleChange={this.handleChange}
