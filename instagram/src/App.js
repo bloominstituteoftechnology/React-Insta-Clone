@@ -48,7 +48,7 @@ class App extends Component {
           changer={this.changeHandler}
         
         />
-        {this.state.dummyData.length === 0 ? <h1>No Matches</h1> : 
+        {this.state.dummyData.length === 0 ? <h3>No Matches. Try entering a valid username</h3> : 
         this.state.dummyData.map(item => {return <PostContainer data={item}/>})}
       </div>
     )
