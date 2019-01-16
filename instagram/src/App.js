@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import SearchBarContainer from "./components/SearchBar/SearchBarContainer";
 import "./App.css";
+import PostPage from "../src/components/PostContainer/PostPage";
 import dummyData from "./dummy-data";
-import PostContainer from "./components/PostContainer/PostContainer";
 
 class App extends Component {
   constructor() {
@@ -12,16 +11,6 @@ class App extends Component {
       inputText: ""
     };
   }
-
-  componentDidMount() {
-    this.setState(
-      {
-        data: dummyData
-      },
-      () => console.log(this.state.data)
-    );
-  }
-
   handleChange = e => {
     this.setState(
       {
@@ -53,28 +42,24 @@ class App extends Component {
     this.setState({ count: count });
   };
 
+  componentDidMount() {
+    this.setState(
+      {
+        data: dummyData
+      },
+      () => console.log(this.state.data)
+    );
+  }
+
   render() {
     return (
-      <div className="App">
-        <SearchBarContainer />
-        <div className="post-container-container">
-          {this.state.data.map(dataOnMap => {
-            return (
-              <PostContainer
-                comments={dataOnMap.comments}
-                data={dataOnMap}
-                username={dataOnMap.username}
-                addComment={this.addComment}
-                inputText={this.state.inputText}
-                handleChange={this.handleChange}
-                addLike={this.addLike}
-              />
-            );
-          })}
-        </div>
-      </div>
+      <PostPage
+        data={this.state.data}
+        inputText={this.state.inputText}
+        addComment={this.addComment}
+        handleChange={this.handleChange}
+      />
     );
   }
 }
-
 export default App;
