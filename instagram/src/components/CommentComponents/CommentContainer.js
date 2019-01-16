@@ -18,10 +18,12 @@ const CommentContainer = props => {
 }
 
 CommentContainer.propTypes = {
-  comments: PropTypes.arrayOf(PropTypes.shape({
-    username: PropTypes.string,
-    text: PropTypes.string.isRequired
-  })).isRequired
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string,
+      text: PropTypes.string.isRequired
+    }).isRequired
+  ).isRequired
 };
 
 export default CommentContainer;

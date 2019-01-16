@@ -19,9 +19,13 @@ const Post = props => {
         username={props.postData.username} />
       <PostImage
         postImage={props.postData.imageUrl} />
-      <PostIcons />
+      <PostIcons 
+        currentUser={props.currentUser}
+        _id={props.postData._id}
+        likes={props.postData.likes}
+        handleClick={props.handleClick} />
       <PostHeartsCount 
-        hearts={props.postData.likes}/>
+        likes={props.postData.likes} />
       <CommentContainer
         comments={props.postData.comments} />
       <PostTimePeriod
@@ -32,17 +36,28 @@ const Post = props => {
 };
 
 Post.propTypes = {
+  currentUser: PropTypes.string.isRequired,
   postData: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
     thumbnailUrl: PropTypes.string,
     imageUrl: PropTypes.string.isRequired,
-    likes: PropTypes.arrayOf(PropTypes.string),
+    likes: PropTypes.arrayOf(
+      PropTypes.string.isRequired
+    ).isRequired,
     timestamp: PropTypes.string.isRequired,
-    comments: PropTypes.arrayOf(PropTypes.shape({
-    username: PropTypes.string,
-    text: PropTypes.string.isRequired
-    })).isRequired
-  }).isRequired
+    comments: PropTypes.arrayOf(
+      PropTypes.shape({
+        username: PropTypes.string,
+        text: PropTypes.string.isRequired
+      }).isRequired
+    ).isRequired
+  }).isRequired,
+  handleClick: PropTypes.func.isRequired
 };
+
+Post.defaultProps = {
+  currentUser: "Instagram User"
+}
 
 export default Post;

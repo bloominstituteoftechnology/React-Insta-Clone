@@ -12,6 +12,7 @@ class App extends Component {
     super();
 
     this.state = {
+      currentUser: "Instagram User",
       posts: []
     }
   }
@@ -22,12 +23,37 @@ class App extends Component {
     }, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
   }
 
+  toggleHeart(e) {
+    const posts = this.state.posts;
+
+    const postIndex = posts.findIndex(post => post._id === e.currentTarget.dataset._id);
+    const likeIndex = posts[postIndex].likes.findIndex(liker => liker === this.state.currentUser);
+
+    if (likeIndex === -1) {
+      posts[postIndex].likes.push(this.state.currentUser);
+    } else {
+      posts[postIndex].likes.splice(likeIndex, 1);
+    }
+
+    this.setState({posts});
+  }
+
+  handleClick = e => {
+    switch (e.currentTarget.name) {
+      case "heart-btn" :
+        this.toggleHeart(e);
+        break;
+    }
+  };
+
   render() {
     return (
       <div className="ig-clone">
         <HeaderContainer />
         <PostContainer 
-          posts={this.state.posts}/>
+          currentUser={this.state.currentUser}
+          posts={this.state.posts}
+          handleClick={this.handleClick} />
       </div>
     );
   }

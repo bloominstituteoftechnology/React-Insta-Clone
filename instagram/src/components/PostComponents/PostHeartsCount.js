@@ -5,12 +5,14 @@ import './Post.css';
 
 const PostHeartsCount = props => {
   return (
-    <span className="post-heart-count">{props.hearts.length} likes</span>
+    <span className="post-heart-count">{props.likes.length} likes</span>
   );
 };
 
 PostHeartsCount.propTypes = {
-  hearts: PropTypes.arrayOf(PropTypes.string),
+  likes: PropTypes.arrayOf(
+      PropTypes.string.isRequired
+    ).isRequired
 };
 
 export default PostHeartsCount;
