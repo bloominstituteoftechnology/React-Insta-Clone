@@ -1,5 +1,8 @@
 
-
+.post-container {
+    max-width: 800px;
+  margin: 0 auto;
+}
     
     .post-wrap {
         display: flex;
@@ -35,7 +38,7 @@
     .date {
         color: grey;
         font-size: 1.6rem;
-        font-weight: bold;
+        font-weight: 500;
         padding: 2%;
     }
     

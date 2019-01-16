@@ -1,6 +1,7 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection"
 import PropTypes from "prop-types";
+import moment from 'moment'
 import './PostContainer.css'
 
 function PostContainer (props) {
@@ -31,7 +32,7 @@ function PostContainer (props) {
            <p className = "num-likes"> {post.likes} likes</p>
           
           <CommentSection commentsarray={post.comments} />
-          <p className= "date">{post.timestamp}</p>
+          <p className= "date">{moment(post.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}</p>
 
           <form className= "comm-form">
             <input className= "comm-input"type="text" name="titlevalue" placeholder="Add a comment..." />

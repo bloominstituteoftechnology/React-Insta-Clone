@@ -6,7 +6,7 @@ font-family: 'Grand Hotel', cursive; */
 .search-bar {
     margin-top: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
    background-color: #FFFFFF;
    width: 100%;
