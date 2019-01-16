@@ -8,7 +8,7 @@ const SearchBar = props => {
           <i className="fas fa-camera fa-3x"></i>
           <h1>Instagram</h1>      
         </div>
-        <input type="text" />
+        <input type="text" onChange={props.onChange} name="searchValue" value={props.value}/>
         <div className="search-actions">
           <i className="far fa-compass fa-2x"></i>
           <i className="far fa-heart fa-2x"></i>

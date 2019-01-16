@@ -10,7 +10,7 @@ class CommentSection extends React.Component {
       currentComment: '',
       commentNumber: 0,
       likes: 0,
-      isLiked: false,
+      notLiked: false,
     }
   }
   componentDidMount = () => {
@@ -19,7 +19,7 @@ class CommentSection extends React.Component {
       currentComment: '',
       commentNumber: this.props.comments.length,
       likes: this.props.likes,
-      isLiked: true
+      notLiked: true
     })
   }
   handleChange = (event) => {
@@ -31,10 +31,10 @@ class CommentSection extends React.Component {
   toggleLike = () => {
     this.setState(previousState => { 
       return {
-        isLiked: !previousState.isLiked,
+        notLiked: !previousState.notLiked,
       }
     })
-    {this.state.isLiked ? 
+    {this.state.notLiked ? 
     this.setState(previousState => {
       return {
         likes: previousState.likes +=1,
@@ -47,7 +47,6 @@ class CommentSection extends React.Component {
       }
     })
     }
-    console.log(this.state.isLiked)
   }
   addComment = (event) => {
     event.preventDefault()
