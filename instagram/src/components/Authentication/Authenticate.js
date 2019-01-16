@@ -6,21 +6,21 @@ const Authenticate = App => class HOC extends React.Component {
     constructor(props) {
         super(props); 
         this.state = {
-            valid: false
+            valid: false,
         } 
     }
 
     login = e => {
-        this.setState({
-          username: e.target.value,
-          valid: true
-        })
-        localStorage.setItem('username', `${this.state.username}`)
+        this.setState({valid: true})
     } 
 
+    changeHandler = (e) => {
+        this.setState({username: e.target.value})
+    }
+    
     render() { 
         return (
-        this.state.valid === true ? <App/> : <Login login={this.login}/>
+        this.state.valid === true ? <App username={this.state.username}/> : <Login login={this.login} changer={this.changeHandler}/>
     )}
 }
 

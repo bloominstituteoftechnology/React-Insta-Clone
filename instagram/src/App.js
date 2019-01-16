@@ -3,8 +3,16 @@ import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: this.props.username
+    }
+  }
+
+  componentDidMount() {
+    localStorage.setItem('username', this.state.username)
+    console.log(localStorage.getItem('username'))
   }
 
   render () {

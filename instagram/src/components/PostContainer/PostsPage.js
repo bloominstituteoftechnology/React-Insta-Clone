@@ -17,7 +17,6 @@ class PostsPage extends Component {
       this.setState({
         dummyData: dummyData
       })
-      console.log(this.state.dummyData);
     }
   
     searchFilter = e => {
