@@ -4,7 +4,7 @@ import PostImage from "./PostImage";
 import Comments from "./Comments";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { addLike, addComment, getData } from "../../actions";
+import { addLike, addComment } from "../../actions";
 
 class PostContainer extends Component {
   state = {
@@ -66,8 +66,7 @@ const mapStateToProps = state => ({
 
 const mapActionsToProps = {
   onLike: addLike,
-  onComment: addComment,
-  onGetData: getData
+  onComment: addComment
   // more methods
 };
 
