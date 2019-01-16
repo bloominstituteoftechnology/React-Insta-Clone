@@ -1,7 +1,6 @@
 import React from 'react';
-import LoginPage from '../Login/Login';
 
-const Authenticate = App =>
+const authenticate = App => LoginPage =>
   class extends React.Component {
     constructor(props) {
       super(props);
