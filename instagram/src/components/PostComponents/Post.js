@@ -33,7 +33,8 @@ const Post = props => {
       <NewCommentForm 
         _id={props.postData._id}
         commentInput={props.commentInput}
-        handleChange={props.handleChange} />
+        handleChange={props.handleChange}
+        handleKeyDown={props.handleKeyDown} />
     </div>
   );
 };
@@ -59,7 +60,8 @@ Post.propTypes = {
   }).isRequired,
   commentInput: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
-  handleChange: PropTypes.func.isRequired
+  handleChange: PropTypes.func.isRequired,
+  handleKeyDown: PropTypes.func.isRequired
 };
 
 Post.defaultProps = {

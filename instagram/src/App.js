@@ -26,9 +26,13 @@ class App extends Component {
     }, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
   }
 
+  generateId() {
+    return `${Date.now()}${Math.floor(Math.random() * 100000000)}`;
+  }
+
   toggleHeart(e) {
-    const postIndex = posts.findIndex(post => post._id === e.currentTarget.dataset._id);
-    const likeIndex = posts[postIndex].likes.findIndex(liker => liker === this.state.currentUser);
+    const postIndex = this.state.posts.findIndex(post => post._id === e.currentTarget.dataset._id);
+    const likeIndex = this.state.posts[postIndex].likes.findIndex(liker => liker === this.state.currentUser);
 
     const posts =  update(this.state.posts, {
                             [postIndex]: {
@@ -38,6 +42,22 @@ class App extends Component {
                             }
                           });
       
+    this.setState({posts}, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
+  }
+
+  addNewComment(_id, newCommentText) {
+    const postIndex = this.state.posts.findIndex(post => post._id === _id);
+
+    const posts = update(this.state.posts, {
+                           [postIndex]: {
+                             comments: { $push: [{
+                               _id: this.generateId(),
+                               username: this.state.currentUser,
+                               text: newCommentText
+                             }] }
+                           }
+                         })
+
     this.setState({posts}, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
   }
 
@@ -55,17 +75,37 @@ class App extends Component {
 
   handleChange = e => {
     switch (e.currentTarget.name) {
-      case "commentInput" :
+      case "comment-input" :
         const postIndex = this.state.posts.findIndex(post => post._id === e.currentTarget.dataset._id);
-    
         const commentInputs = update(this.state.commentInputs, {
-                                      [postIndex]: { $set: e.currentTarget.value }
+                                       [postIndex]: { $set: e.currentTarget.value }
                                      });  
 
         this.setState({commentInputs});
+
         break;
     }
   };
+
+  handleKeyDown = e => {
+    if ((e.keyCode || e.which) === 13 && !e.shiftKey) {
+      e.preventDefault();
+      switch(e.currentTarget.name) {
+        case "comment-input" :
+          const newCommentText = e.currentTarget.value;
+
+          const postIndex = this.state.posts.findIndex(post => post._id === e.currentTarget.dataset._id);
+          const commentInputs = update(this.state.commentInputs, {
+                                         [postIndex]: { $set: "" }
+                                       });  
+
+          this.setState({commentInputs});
+
+          this.addNewComment(e.currentTarget.dataset._id, newCommentText);
+          break;
+      }
+    }
+  }
 
   render() {
     return (
@@ -76,7 +116,8 @@ class App extends Component {
           posts={this.state.posts}
           commentInputs={this.state.commentInputs}
           handleClick={this.handleClick}
-          handleChange={this.handleChange} />
+          handleChange={this.handleChange}
+          handleKeyDown={this.handleKeyDown} />
       </div>
     );
   }

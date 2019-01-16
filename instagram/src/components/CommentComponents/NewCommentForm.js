@@ -9,10 +9,11 @@ const NewCommentForm = props => {
       <textarea 
         className="post-comment-form-text" 
         placeholder="Add a comment..."
-        name="commentInput"
+        name="comment-input"
         data-_id={props._id}
         value={props.commentInput}
-        onChange={props.handleChange} >
+        onChange={props.handleChange}
+        onKeyDown={props.handleKeyDown} >
       </textarea>
       <div className="post-comment-form-options">&#xf141;</div>
     </form>
@@ -22,7 +23,8 @@ const NewCommentForm = props => {
 NewCommentForm.propTypes = {
   _id: PropTypes.string.isRequired,
   commentInput: PropTypes.string.isRequired,
-  handleChange: PropTypes.func.isRequired
+  handleChange: PropTypes.func.isRequired,
+  handleKeyDown: PropTypes.func.isRequired
 }
 
 export default NewCommentForm;

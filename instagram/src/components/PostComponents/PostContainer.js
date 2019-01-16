@@ -15,7 +15,8 @@ const PostContainer = props => {
           postData={postData}
           commentInput={props.commentInputs[i]}
           handleClick={props.handleClick}
-          handleChange={props.handleChange} />
+          handleChange={props.handleChange}
+          handleKeyDown={props.handleKeyDown} />
       )}
     </div>
   );
@@ -46,7 +47,8 @@ PostContainer.propTypes = {
     PropTypes.string.isRequired
   ).isRequired,
   handleClick: PropTypes.func.isRequired,
-  handleChange: PropTypes.func.isRequired
+  handleChange: PropTypes.func.isRequired,
+  handleKeyDown: PropTypes.func.isRequired
 };
 
 PostContainer.defaultProps = {
