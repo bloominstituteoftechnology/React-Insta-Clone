@@ -12,7 +12,6 @@ class App extends Component {
 
   componentDidMount() {
     localStorage.setItem('username', this.state.username)
-    console.log(localStorage.getItem('username'))
   }
 
   render () {
