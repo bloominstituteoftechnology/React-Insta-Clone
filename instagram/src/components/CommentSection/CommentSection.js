@@ -72,9 +72,10 @@ class CommentSection extends React.Component {
         };
 
     upLikes = e => {
-        this.setState({
-            likes: this.state.likes + 1
-        })
+        if (this.state.likes === this.props.data.likes) {
+            this.setState({likes: this.state.likes + 1})
+        }
+        else {this.setState({likes: this.props.data.likes})}
     };
 
     render () {

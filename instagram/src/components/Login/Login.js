@@ -10,6 +10,9 @@ let Login = props => {
                 placeholder='username'
                 onChange={props.changer}
                 />
+                <input
+                    placeholder='password'
+                />
                 <button type='submit'>Login</button>
             </form>
         </div>
