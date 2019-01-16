@@ -25,24 +25,11 @@ const LoginContainer = props => {
             <button className="signup-btn">Sign Up</button>
             <p class="terms">
               By signing up, you agree to our{" "}
-              <a
-                target="_blank"
-                href="https://help.instagram.com/581066165581870"
-              >
-                Terms
-              </a>
-              ,{" "}
-              <a
-                target="_blank"
-                href="https://help.instagram.com/519522125107875"
-              >
+              <a href="https://help.instagram.com/581066165581870">Terms</a>,{" "}
+              <a href="https://help.instagram.com/519522125107875">
                 Data Policy
               </a>{" "}
-              and{" "}
-              <a target="_blank" href="/legal/cookies/">
-                Cookies Policy
-              </a>
-              .
+              and <a href="/legal/cookies/">Cookies Policy</a>.
             </p>
           </form>
         </div>
