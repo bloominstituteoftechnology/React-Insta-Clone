@@ -38,7 +38,10 @@ PostContainer.propTypes = {
         PropTypes.shape({
           _id: PropTypes.string.isRequired,
           username: PropTypes.string,
-          text: PropTypes.string.isRequired
+          text: PropTypes.string.isRequired,
+          likes: PropTypes.arrayOf(
+            PropTypes.string.isRequired
+          ).isRequired
         }).isRequired
       ).isRequired
     }).isRequired

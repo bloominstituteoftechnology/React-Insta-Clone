@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "fuse.js": "^3.3.0",
     "immutability-helper": "^2.9.0",
     "moment": "^2.23.0",
     "prop-types": "^15.6.2",

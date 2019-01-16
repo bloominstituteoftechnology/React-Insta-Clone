@@ -13,25 +13,34 @@ const dummyData = [
       "twitch",
       "michaelmarzetta",
       "themexican_leprechaun",
-      "dennis_futbol",
+      "dennis_futbol"
     ],
     timestamp: "July 17th 2017, 12:42:40 pm",
     comments: [
       {
         _id: "154759444904864946",
         username: "philzcoffee",
-        text:
-          "We've got more than just delicious coffees to offer at our shops!"
+        text: "We've got more than just delicious coffees to offer at our shops!",
+        likes: [
+          "themexican_leprechaun",
+          "dennis_futbol"
+        ]
       },
       {
         _id: "15475944494151575420",
         username: "biancasaurus",
-        text: "Looks delicious!"
+        text: "Looks delicious!",
+        likes: [
+          "themexican_leprechaun"
+        ]
       },
       {
         _id: "15475944498317961871",
         username: "martinseludo",
-        text: "Can't wait to try it!"
+        text: "Can't wait to try it!",
+        likes: [
+          "themexican_leprechaun"
+        ]
       }
     ]
   },
@@ -59,27 +68,42 @@ const dummyData = [
       {
         _id: "15475943895587357794",
         username: "twitch",
-        text: "Epic Street Fighter action here in Las Vegas at #EVO2017!"
+        text: "Epic Street Fighter action here in Las Vegas at #EVO2017!",
+        likes: [
+          "themexican_leprechaun"
+        ]
       },
       {
         _id: "15475943987635881808",
         username: "michaelmarzetta",
-        text: "Omg that match was crazy"
+        text: "Omg that match was crazy",
+        likes: [
+          "themexican_leprechaun"
+        ]
       },
       {
         _id: "15475944080539286962",
         username: "themexican_leprechaun",
-        text: "What a setup"
+        text: "What a setup",
+        likes: [
+          "themexican_leprechaun"
+        ]
       },
       {
         _id: "1547594418175902893",
         username: "dennis_futbol",
-        text: "It that injustice"
+        text: "It that injustice",
+        likes: [
+          "themexican_leprechaun"
+        ]
       },
       {
         _id: "1547594434538343681",
         username: "dennis_futbol",
-        text: "Is"
+        text: "Is",
+        likes: [
+          "themexican_leprechaun"
+        ]
       }
     ]
   },
@@ -101,17 +125,26 @@ const dummyData = [
       {
         _id: "15475943316226872124",
         username: "playhearthstone",
-        text: "Love this shot!"
+        text: "Love this shot!",
+        likes: [
+          "themexican_leprechaun"
+        ]
       },
       {
         _id: "15475943345972035596",
         username: "awaywetravel",
-        text: "Yosemite is my most favorite place in the universe"
+        text: "Yosemite is my most favorite place in the universe",
+        likes: [
+          "themexican_leprechaun"
+        ]
       },
       {
         _id: "15475943510794241041",
         username: "awesomebt28",
-        text: "I like how Half Dome looks so old and useless"
+        text: "I like how Half Dome looks so old and useless",
+        likes: [
+          "themexican_leprechaun"
+        ]
       }
     ]
   }

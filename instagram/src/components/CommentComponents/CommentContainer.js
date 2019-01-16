@@ -10,21 +10,30 @@ const CommentContainer = props => {
     <div className="post-comments-area">
       {props.comments.map((commentData, i) =>
         <Comment
-          key={i}
-          commentData={commentData} />
+          key={commentData._id}
+          currentUser={props.currentUser}
+          post_id={props.post_id}
+          commentData={commentData}
+          handleClick={props.handleClick} />
       )}
     </div>
   );
 }
 
 CommentContainer.propTypes = {
+  currentUser: PropTypes.string.isRequired,
+  post_id: PropTypes.string.isRequired,
   comments: PropTypes.arrayOf(
     PropTypes.shape({
       _id: PropTypes.string.isRequired,
       username: PropTypes.string,
-      text: PropTypes.string.isRequired
+      text: PropTypes.string.isRequired,
+      likes: PropTypes.arrayOf(
+        PropTypes.string.isRequired
+      ).isRequired
     }).isRequired
-  ).isRequired
+  ).isRequired,
+  handleClick: PropTypes.func.isRequired
 };
 
 export default CommentContainer;

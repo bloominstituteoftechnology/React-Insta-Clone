@@ -27,7 +27,10 @@ const Post = props => {
       <PostHeartsCount 
         likes={props.postData.likes} />
       <CommentContainer
-        comments={props.postData.comments} />
+        currentUser={props.currentUser}
+        post_id={props.postData._id}
+        comments={props.postData.comments}
+        handleClick={props.handleClick} />
       <PostTimePeriod
         timestamp={props.postData.timestamp} />
       <NewCommentForm 
@@ -54,7 +57,10 @@ Post.propTypes = {
       PropTypes.shape({
         _id: PropTypes.string.isRequired,
         username: PropTypes.string,
-        text: PropTypes.string.isRequired
+        text: PropTypes.string.isRequired,
+        likes: PropTypes.arrayOf(
+          PropTypes.string.isRequired
+        ).isRequired
       }).isRequired
     ).isRequired
   }).isRequired,

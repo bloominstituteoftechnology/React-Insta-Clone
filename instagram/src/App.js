@@ -30,7 +30,7 @@ class App extends Component {
     return `${Date.now()}${Math.floor(Math.random() * 100000000)}`;
   }
 
-  toggleHeart(e) {
+  togglePostHeart(e) {
     const postIndex = this.state.posts.findIndex(post => post._id === e.currentTarget.dataset._id);
     const likeIndex = this.state.posts[postIndex].likes.findIndex(liker => liker === this.state.currentUser);
 
@@ -45,6 +45,39 @@ class App extends Component {
     this.setState({posts}, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
   }
 
+  toggleCommentHeart(e) {
+    const postIndex = this.state.posts.findIndex(post => post._id === e.currentTarget.dataset.post_id);
+    const commentIndex = this.state.posts[postIndex].comments.findIndex(comment => comment._id === e.currentTarget.dataset.comment_id);
+    const likeIndex = this.state.posts[postIndex].comments[commentIndex].likes.findIndex(liker => liker === this.state.currentUser);
+
+    const posts = update(this.state.posts, {
+                           [postIndex]: {
+                             comments: {
+                               [commentIndex] : {
+                                 likes: likeIndex === -1 ?
+                                          { $push: [this.state.currentUser] } :
+                                          { $splice: [[likeIndex, 1]] } 
+                               }
+                             }
+                           }
+                         });
+
+    this.setState({posts}, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
+  }
+
+  deleteComment(e) {
+    const postIndex = this.state.posts.findIndex(post => post._id === e.currentTarget.dataset.post_id);
+    const commentIndex = this.state.posts[postIndex].comments.findIndex(comment => comment._id === e.currentTarget.comment_id);
+
+    const posts = update(this.setState.post, {
+                           [postIndex]: {
+                             comments: { $splice: [[commentIndex, 1]] }
+                           }
+                         });
+
+    this.setState({posts}, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
+  }
+
   addNewComment(_id, newCommentText) {
     const postIndex = this.state.posts.findIndex(post => post._id === _id);
 
@@ -53,7 +86,8 @@ class App extends Component {
                              comments: { $push: [{
                                _id: this.generateId(),
                                username: this.state.currentUser,
-                               text: newCommentText
+                               text: newCommentText,
+                               likes: []
                              }] }
                            }
                          })
@@ -63,12 +97,20 @@ class App extends Component {
 
   handleClick = e => {
     switch (e.currentTarget.name) {
-      case "heart-btn" :
-        this.toggleHeart(e);
+      case "heart-post-btn" :
+        this.togglePostHeart(e);
         break;
       
       case "comment-btn" :
         this.focusToCommentForm(e);
+        break;
+
+      case "heart-comment-btn" :
+        this.toggleCommentHeart(e);
+        break;
+
+      case "delete-comment-btn" :
+        this.deleteComment(e)
         break;
     }
   };

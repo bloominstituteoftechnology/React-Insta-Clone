@@ -9,7 +9,7 @@ const PostIcons = props => {
       <img 
         src={props.likes.includes(props.currentUser) ? "images/heart-on.png" : "images/heart-off.png"}
         alt="Heart"
-        name="heart-btn" 
+        name="heart-post-btn" 
         data-_id={props._id}
         onClick={props.handleClick}/>
       <img 

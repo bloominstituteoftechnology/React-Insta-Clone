@@ -3,19 +3,46 @@
 @import '../../variables.css';
 
 .post-comments-area {
-    width: 95%;
+    width: 92.5%;
     margin: 10px 25px 20px;
 }
 
 .post-comment {
-    font-size: 1.6rem;
-    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.post-comment-username {
+.post-comment > * {
+    margin: 0 0 15px;
+}
+
+.post-comment-text {
+    width: 95%;
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+/* .post-comment-text > * {
+    display: inline-block;
+} */
+
+.post-comment-text-username {
+    float: left;
     font-weight: bold;
     cursor: pointer;
-    margin-right: 5px;
+    margin-right: 10px;
+}
+
+.post-comment-text-usercomment {
+    overflow-wrap: break-word;
+}
+
+.post-comment-heart {
+    width: 3.75%;
+    max-width: 20px;
+    cursor: pointer;
+    margin-left: 10px;
 }
 
 .post-comment-form {

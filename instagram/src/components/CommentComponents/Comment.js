@@ -6,17 +6,35 @@ import './Comment.css';
 const Comment = props => {
   return (
     <div className="post-comment">
-      <span className="post-comment-username">{props.commentData.username}</span> <span className="post-comment-text">{props.commentData.text}</span>
+      <div className="post-comment-text">
+        <span className="post-comment-text-username">{props.commentData.username}</span> 
+        <span className="post-comment-text-usercomment">{props.commentData.text}</span>
+      </div>
+      <div className="post-comment-heart">
+        <img 
+          src={props.commentData.likes.includes(props.currentUser) ? "images/heart-on.png" : "images/heart-off.png"} 
+          alt="Heart"
+          name="heart-comment-btn"
+          data-post_id={props.post_id}
+          data-comment_id={props.commentData._id}
+          onClick={props.handleClick} /> 
+      </div>
     </div>
   )
 };
 
 Comment.propTypes = {
+  currentUser: PropTypes.string.isRequired,
+  post_id: PropTypes.string.isRequired,
   commentData: PropTypes.shape({
     _id: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
-  }).isRequired
+    text: PropTypes.string.isRequired,
+    likes: PropTypes.arrayOf(
+      PropTypes.string.isRequired
+    ).isRequired
+  }).isRequired,
+  handleClick: PropTypes.func.isRequired
 };
 
 Comment.defaultProps = {
