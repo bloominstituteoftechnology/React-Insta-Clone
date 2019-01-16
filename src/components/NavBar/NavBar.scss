@@ -4,7 +4,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding-bottom: 20px;
   .far {
     font-size: 25px;
     color: #262626;
@@ -29,6 +28,7 @@
         text-align: center;
         border: gray;
         padding: 5px;
+        color: gray;
       }
     }
     .logo {
