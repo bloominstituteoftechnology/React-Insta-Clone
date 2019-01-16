@@ -27,7 +27,11 @@ const PostTimePeriod = props => {
       const minutes = timeParts[1].padStart(2, "0");
       const seconds = timeParts[2].padStart(2, "0");
 
-      return Moment(`${year}-${month}-${date}T${hours}:${minutes}:${seconds}`).fromNow();
+      const formattedTimestamp = `${year}-${month}-${date}T${hours}:${minutes}:${seconds}`
+
+      return Moment().diff(Moment(formattedTimestamp), 'days') ?
+              Moment(formattedTimestamp).format('MMMM D, YYYY') :
+              Moment(formattedTimestamp).fromNow();
   }
 
   return (

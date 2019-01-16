@@ -15,7 +15,7 @@ const dummyData = [
       "themexican_leprechaun",
       "dennis_futbol"
     ],
-    timestamp: "July 17th 2017, 12:42:40 pm",
+    timestamp: "January 16th 2019, 12:42:40 pm",
     comments: [
       {
         _id: "154759444904864946",
