@@ -48,16 +48,23 @@ class PostPage extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar handleChanges={this.handleChanges} />
+        <SearchBar 
+        handleChanges={this.handleChanges}
+        logout={this.props.logout}
+        username={this.props.username}
+        />
+
         {this.state.filteredData.length > 0
         ? this.state.filteredData.map((post) =>{
           return <PostContainer 
+          username={this.props.username}
           handleChanges={this.handleChanges}
           key={post.username}
           post={post} 
         /> })
         : this.state.dummyData.map((post) =>{
           return <PostContainer 
+          username={this.props.username}
           handleChanges={this.handleChanges}
           key={post.username}
           post={post } />

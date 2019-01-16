@@ -5,11 +5,17 @@ import PropTypes from 'prop-types';
 import Post from './Post'
 
 const PostContainer = props =>{
-    return (
+    return ( 
       <div className="post-container card">
             <Post username={props.post.username} thumbnailUrl={props.post.thumbnailUrl} imageUrl={props.post.imageUrl}/>
             {console.log(props.post)}
-            <CommentSection handleChanges={props.post.handleChanges} timeStamp={props.post.timestamp} likes={props.post.likes} comments={props.post.comments} /> 
+            <CommentSection 
+            handleChanges={props.post.handleChanges}
+            timeStamp={props.post.timestamp}
+            likes={props.post.likes}
+            comments={props.post.comments}
+            username={props.username}
+            /> 
       </div>
     );
 }

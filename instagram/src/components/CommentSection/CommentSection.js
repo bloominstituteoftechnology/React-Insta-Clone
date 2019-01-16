@@ -9,6 +9,7 @@ class CommentSection extends Component {
         this.state ={
             commentList: props.comments,
             comment: '',
+            username: props.username
         }
         console.log(this.state.commentList);
     }
@@ -20,7 +21,7 @@ class CommentSection extends Component {
         ev.preventDefault();
         this.setState({
            commentList: [...this.state.commentList, {
-               username: "mattbasile2",
+               username: this.state.username,
                text: this.state.comment
            }],
            text: ''

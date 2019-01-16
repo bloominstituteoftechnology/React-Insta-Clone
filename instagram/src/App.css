@@ -107,3 +107,9 @@ p{
 .hide{
   display:none;
 }
+.logout-menu{
+  right: 0;
+  top: 70px;
+  text-align: center;
+  
+}

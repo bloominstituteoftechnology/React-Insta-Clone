@@ -4,46 +4,40 @@ import Login from './components/Login/Login'
 import './App.css';
 import authenticate from './components/authentication/authenticate';
 
-
 class App extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
-      username: "",
+      username: props.username,
       password: "",
-      loggedIn: false,
-    }
-  }
-  handleChanges = ev => {
-    this.setState({ [ev.target.name]: ev.target.value });
-  }
-  loginSubmit = e => {
-    // e.preventDefault();
-    if(this.state.username && this.state.password){
-      localStorage.setItem("username", `${this.state.username}`);
-      localStorage.setItem("password", `${this.state.password}`);
-      console.log(localStorage);
-    }
-  }
-  loggedIn = () =>{
-    if(localStorage.username){
-      this.setState({loggedIn: true});
+      loggedIn: props.loggedIn,
     }
   }
 
+  // userLogIn = () =>{
+  //   if(this.state.loggedIn === true){
+  //     let newUsername = localStorage.getItem('username');
+  //     console.log(newUsername);
+  //     this.setState({username: newUsername});
+  //   }
+  //   this.setState({username: ''})
+  // }
+  // componentDidMount(){
+  //   userLogIn();
+  // }
   render() {
+    
     return (
       <div className="App">
-       {window.onload = this.loggedIn}
-        <Login 
-        handleChanges={this.handleChanges}
-        loginSubmit={this.loginSubmit}
+       {/* {window.onload = this.loggedIn} */}
+        <PostPage 
+        username={this.state.username}
+        logout={this.props.logout}
         />
-        <PostPage />
       </div>
     );
   }
 }
 
 
-export default App;
+export default authenticate(App)(Login);
