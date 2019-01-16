@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import update from  'immutability-helper';
 
 import './App.css';
 
@@ -24,17 +25,19 @@ class App extends Component {
   }
 
   toggleHeart(e) {
-    const posts = this.state.posts;
+    let posts = [...this.state.posts];
 
     const postIndex = posts.findIndex(post => post._id === e.currentTarget.dataset._id);
     const likeIndex = posts[postIndex].likes.findIndex(liker => liker === this.state.currentUser);
 
-    if (likeIndex === -1) {
-      posts[postIndex].likes.push(this.state.currentUser);
-    } else {
-      posts[postIndex].likes.splice(likeIndex, 1);
-    }
-
+    posts =  update(posts, {
+                      [postIndex]: {
+                        likes: likeIndex === -1 ? 
+                                { $push: [this.state.currentUser] } : 
+                                { $splice: [[likeIndex, 1]]}
+                      }
+                    });
+      
     this.setState({posts}, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
   }
 
