@@ -35,7 +35,7 @@ class App extends Component {
       posts[postIndex].likes.splice(likeIndex, 1);
     }
 
-    this.setState({posts});
+    this.setState({posts}, () => localStorage.setItem("posts", JSON.stringify(this.state.posts)));
   }
 
   handleClick = e => {
