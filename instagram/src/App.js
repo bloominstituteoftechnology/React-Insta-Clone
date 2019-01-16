@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar'
+import './components/Authentication/Authenticate'
 import PostsPage from './components/PostContainer/PostsPage'
 import './App.css';
 import dummyData from './dummy-data';
+import Authenticate from './components/Authentication/Authenticate';
 class App extends Component {
   constructor() {
     super()
@@ -50,4 +52,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Authenticate(App);

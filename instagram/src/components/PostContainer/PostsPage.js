@@ -17,8 +17,8 @@ const PostsPage = props => {
   )
 }
 
-// PostsPage.propTypes = {
+PostsPage.propTypes = {
 
-// }
+}
 
 export default PostsPage
