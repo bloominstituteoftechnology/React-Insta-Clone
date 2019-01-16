@@ -11,7 +11,10 @@ const Authenticate = App => class HOC extends React.Component {
     }
 
     login = e => {
-        this.setState({valid: true})
+        if (this.state.username !== undefined) {
+            this.setState({valid: true}) 
+        }
+        else {alert('invalid username')}
     } 
 
     changeHandler = (e) => {
