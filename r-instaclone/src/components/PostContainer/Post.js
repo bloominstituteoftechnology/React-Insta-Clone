@@ -1,5 +1,5 @@
 import React from 'react'
-import Comments from './Comments';
+import Comments from '../Comments';
 
 function Post(props) {
     return (

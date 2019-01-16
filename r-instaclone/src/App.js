@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer';
-import SearchBar from './components/SearchBar';
-import PropTypes from 'prop-types';
+// import dummyData from './dummy-data';
+// import PostContainer from './components/PostContainer/PostContainer';
+// import SearchBar from './components/SearchBar';
+// import PropTypes from 'prop-types';
+import PostsPage from './components/PostContainer/PostsPage';
 
 
 
@@ -13,36 +14,29 @@ class App extends Component {
     super();
      
         this.state = {
-          dataSet: dummyData
+          // dataSet: dummyData
         }
   }
+
+
+  
+
+
 
 
 
 render() {
   return (
     <div className="App">
-    <SearchBar />
-    <PostContainer datasetInfo={this.state.dataSet} />
+    <PostsPage />
+    
     
     </div>
   )
 }
 }// end curly
 
-App.propTypes={
-  dummyData: PropTypes.shape({
-    username: PropTypes.string,
-    thumbnailUrl: PropTypes.string,
-    imageUrl: PropTypes.string,
-    likes: PropTypes.number,
-    timeStampL:PropTypes.string,
-  }),
-  comments: PropTypes.arrayOf(PropTypes.shape({
-    username: PropTypes.string,
-    text: PropTypes.string
-}))
-}
+
 
 
 

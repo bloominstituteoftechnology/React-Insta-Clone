@@ -21,7 +21,7 @@ function SearchBar(props) {
     <div className = "SearchBar">
     
     <form>
-    <input type="text" placeholder="Search.." name="search" autocomplete="off"></input>
+    <input type="text" placeholder="Search.." name="search" autoComplete="off"></input>
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
 
@@ -34,3 +34,6 @@ function SearchBar(props) {
     )}
 
     export default SearchBar;
+
+
+    // class SearchBar
