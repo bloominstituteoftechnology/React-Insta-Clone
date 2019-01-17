@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const addLike = username => {
   return {
     type: "ADD_LIKE",
@@ -24,61 +26,72 @@ export const newUser = (email, fullName, username, password) => dispatch => {
   //     password
   //   }
   // });
-  fetch("https://comptagroup.com/api/instagram/register", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      email,
-      fullName,
-      username,
-      password
-    })
-  })
-    .then(res => res.json())
-    .then(data => {
-      return dispatch({
-        type: "NEW_USER",
-        data: {
-          email: data.email,
-          fullName: data.fullName,
-          username: data.username,
-          password: data.password
-        }
-      });
-    })
-    .catch(err => err);
+
+  // fetch("https://comptagroup.com/api/instagram/register", {
+  //   method: "POST",
+  //   headers: {
+  //     Accept: "application/json",
+  //     "Content-Type": "application/json"
+  //   },
+  //   body: JSON.stringify({
+  //     email,
+  //     fullName,
+  //     username,
+  //     password
+  //   })
+  // })
+  //   .then(res => res.json())
+  //   .then(data => {
+  //     return dispatch({
+  //       type: "NEW_USER",
+  //       data: {
+  //         email: data.email,
+  //         fullName: data.fullName,
+  //         username: data.username,
+  //         password: data.password
+  //       }
+  //     });
+  //   });
+
+  axios.post("https://comptagroup.com/api/instagram/register", {
+    email,
+    fullName,
+    username,
+    password
+  });
 };
 
 export const login = (email, password) => dispatch => {
-  // dispatch({
-  //   type: "LOGIN",
-  //   data: {
+  // fetch("https://comptagroup.com/api/instagram/login", {
+  //   method: "POST",
+  //   headers: {
+  //     Accept: "application/json",
+  //     "Content-Type": "application/json"
+  //   },
+  //   body: JSON.stringify({
   //     email,
   //     password
-  //   }
-  // });
-
-  fetch("https://comptagroup.com/api/instagram/login", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
+  //   })
+  // })
+  //   .then(res => res.json())
+  //   .then(data => {
+  //     // console.log(data.user);
+  //     return dispatch({
+  //       type: "LOGIN",
+  //       data: data
+  //     });
+  //   });
+  return axios
+    .post("https://comptagroup.com/api/instagram/login", {
       email,
       password
     })
-  })
-    .then(res => res.json())
-    .then(data => {
-      // console.log(data.user);
-      return dispatch({
-        type: "LOGIN",
-        data: data
-      });
-    })
-    .catch(err => err);
+    .then(res => {
+      const { token, user } = res.data;
+      console.log(res.data);
+      localStorage.setItem("token", token);
+      localStorage.setItem("username", user.username);
+      localStorage.setItem("fullName", user.fullName);
+      dispatch({ type: "LOGGING_IN" });
+    });
 };

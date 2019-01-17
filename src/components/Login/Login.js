@@ -10,22 +10,20 @@ class Login extends Component {
     data: []
   };
 
+  componentDidMount = () => {};
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  onLogginIn = async (e, email, password) => {
+  onLogginIn = (e, email, password) => {
     e.preventDefault();
-    await this.props.onLogin(email, password);
-    await this.setState({ data: this.props.user });
-    if (this.state.data.token) {
-      window.localStorage.setItem("token", this.state.data.token);
-      window.localStorage.setItem("username", this.state.data.user.username);
-      window.localStorage.setItem("fullName", this.state.data.user.fullName);
-      window.location.href = "/";
-    }
+    this.props.onLogin(email, password);
   };
   render() {
+    console.log(this.props.isAuthenticated);
+    if (this.props.isAuthenticated) {
+      window.location.href = "/";
+    }
     return (
       <div className="login-page">
         <div className="left-side">
@@ -37,7 +35,15 @@ class Login extends Component {
             style={{ backgroundImage: `url(${sprite})` }}
           />
           <div className="signup-form">
-            <form>
+            <form
+              onSubmit={e => {
+                e.preventDefault();
+                return this.props.onLoggin(
+                  this.state.email,
+                  this.state.password
+                );
+              }}
+            >
               <input
                 onChange={this.handleChange}
                 name="email"
@@ -72,7 +78,10 @@ class Login extends Component {
                 .
               </p>
               <p className="terms">
-                Don't Have an account? <a href="/">Sign Up</a>
+                Don't Have an account?{" "}
+                <a style={{ color: "blue" }} href="/">
+                  Sign Up
+                </a>
               </p>
             </form>
           </div>
@@ -83,7 +92,8 @@ class Login extends Component {
 }
 
 const mapStateToProps = state => ({
-  user: state.Insta.user
+  user: state.Insta.user,
+  isAuthenticated: state.Insta.isLoggedIn
 });
 
 const mapActionsToProps = {
