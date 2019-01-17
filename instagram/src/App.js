@@ -20,12 +20,10 @@ class App extends Component {
       fieldValue: name
     }
   }
-
  searchName = (event) =>{
    name = event.target.value;
    this.setState({fieldValue: name})
  }
-
  findPosts = (event) =>{
   event.preventDefault();
   dataContainer = displayData.filter(post => {
@@ -34,11 +32,9 @@ class App extends Component {
   displayData = dataContainer;
   this.setState((prevState, props) => ({data: displayData}))
  }
-
  componentDidMount(){
    this.setState({data: displayData});
  }
-
   render() {
     return (
       <div className="App">
