@@ -48,7 +48,7 @@ const authenticate = App =>
 
   - In your `components` directory, create a directory called `Login` and add a new file called `Login.js`.
   - There should be a `username` input, a `password` input, and a `Login` button.
-  - The component should invoke the `login` function in `app.js` when a user logs in.
+  - The component should invoke the `login` function in `Login.js` when a user logs in.
   - This login function should set a `username` on `localStorage`. You'll need to check local storage to see if a user is logged in.
   - Be sure to force the page to reload when a user logs in so that our component un-mounts and mounts again.
 
