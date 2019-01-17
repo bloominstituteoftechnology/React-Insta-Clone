@@ -4,15 +4,19 @@ import PostImage from "./PostImage";
 import Comments from "./Comments";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { addLike, addComment } from "../../actions";
+import { addLike, addComment, getData } from "../../actions";
 
 class PostContainer extends Component {
   state = {
     commentField: ""
   };
 
-  onLikeClick = username => {
-    this.props.onLike(username);
+  componentDidMount = () => {
+    this.props.onGetData();
+  };
+
+  onLikeClick = id => {
+    this.props.onLike(id);
   };
 
   onGettingData = () => {
@@ -30,11 +34,11 @@ class PostContainer extends Component {
   };
 
   render() {
-    const { Insta } = this.props;
-
+    const { Insta, data } = this.props;
+    console.log(this.props.data);
     return (
       <>
-        {Insta.data.map(post => (
+        {data.map(post => (
           <div key={post.username} className="post-container">
             <PostHeader
               thumbnailUrl={post.thumbnailUrl}
@@ -45,7 +49,7 @@ class PostContainer extends Component {
               comments={post.comments}
               onLikeClick={this.onLikeClick}
               likes={post.likes}
-              username={post.username}
+              id={post._id}
               Insta={Insta}
               onComment={this.onCommentSubmit}
               onGettingData={this.onGettingData}
@@ -60,13 +64,15 @@ class PostContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  Insta: state.Insta
+  Insta: state.Insta,
+  data: state.Insta.data
   //more state
 });
 
 const mapActionsToProps = {
   onLike: addLike,
-  onComment: addComment
+  onComment: addComment,
+  onGetData: getData
   // more methods
 };
 

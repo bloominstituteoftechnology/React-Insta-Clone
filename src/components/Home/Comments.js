@@ -6,7 +6,7 @@ const Comments = props => {
     <div className="comments">
       <div className="icons">
         <i
-          onClick={() => props.onLikeClick(props.username)}
+          onClick={() => props.onLikeClick(props.id)}
           className="far fa-heart"
         />
         <i className="far fa-comment" onClick={() => props.onGettingData()} />
@@ -17,7 +17,7 @@ const Comments = props => {
       {props.comments.map((comment, i) => (
         <div key={i} className="comments-section">
           <h1>{comment.username}</h1>
-          <span>{comment.text}</span>
+          <span>{comment.comment}</span>
         </div>
       ))}
 
@@ -26,7 +26,7 @@ const Comments = props => {
           onSubmit={e => {
             props.onComment(
               e,
-              props.username,
+              props.id,
               window.localStorage.username,
               props.commentField
             );
