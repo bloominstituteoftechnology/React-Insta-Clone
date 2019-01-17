@@ -27,6 +27,7 @@ const Heart = styled.i`
   margin-left: 6%;
 `;
 
+const CommentForm = styled.form``;
 
 const Count = styled.div`
   margin-left:6%;
@@ -36,6 +37,7 @@ const Count = styled.div`
 `;
 const PostReactions = styled.div`
   margin-right:0;
+  margin-top:10px;
   padding-right:0;
   display:flex;
   flex-direction: column;
@@ -159,13 +161,13 @@ class CommentSection extends Component{
 
         </ul>
 
-        <form onSubmit = {this.addNewComment}>
+        <CommentForm onSubmit = {this.addNewComment}>
 
           <CommentBox placeholder = "Add Comment..." onChange = {this.getNewComment} type = "text" name = "comment" value = {this.state.currentComment} />
 
           <CommentSubmit type = "submit" value = "Submit " />
 
-        </form>
+        </CommentForm>
 
       </CommentSectionContainer>
 
