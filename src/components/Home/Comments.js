@@ -24,7 +24,12 @@ const Comments = props => {
       <div className="comment-input">
         <form
           onSubmit={e => {
-            props.onComment(e, props.username, "TEST", props.commentField);
+            props.onComment(
+              e,
+              props.username,
+              window.localStorage.username,
+              props.commentField
+            );
           }}
         >
           <input
