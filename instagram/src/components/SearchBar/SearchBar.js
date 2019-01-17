@@ -10,7 +10,9 @@ class SearchBar extends React.Component{
         super(props);
         this.state={
             username: props.username,
-            hidden: true
+            hidden: true,
+            profilePage: false,
+            postPage: true
         }
     }
     toggleMenu = () =>{

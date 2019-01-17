@@ -8,11 +8,9 @@ import PropTypes from 'prop-types';
 
 
 class PostPage extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
-      dummyData: [],
-      filteredData: [],
       search: '',
       storage: '',
     }
@@ -43,26 +41,18 @@ class PostPage extends Component {
       )
       .catch(err => console.log('noooo'));
   }
-  filterSearch = ev => {
-  }
   render() {
     return (
       <div className="App">
-        <SearchBar 
-        handleChanges={this.handleChanges}
-        logout={this.props.logout}
-        username={this.props.username}
-        />
-
-        {this.state.filteredData.length > 0
-        ? this.state.filteredData.map((post) =>{
+        {this.props.filteredData.length > 0
+        ? this.props.filteredData.map((post) =>{
           return <PostContainer 
           username={this.props.username}
           handleChanges={this.handleChanges}
           key={post.username}
           post={post} 
         /> })
-        : this.state.dummyData.map((post) =>{
+        : this.props.dummyData.map((post) =>{
           return <PostContainer 
           username={this.props.username}
           handleChanges={this.handleChanges}

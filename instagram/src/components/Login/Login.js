@@ -22,6 +22,14 @@ class Login extends Component {
         if(this.state.username && this.state.password){
             localStorage.setItem("username", `${this.state.username}`);
             localStorage.setItem("password", `${this.state.password}`);
+        } 
+        else if(this.state.username){
+          e.preventDefault();
+          alert('Sorry, please insert your password')
+        }
+        else if(this.state.password){
+          e.preventDefault();
+          alert('Sorry, please enter a valid username')
         }
 
      }
