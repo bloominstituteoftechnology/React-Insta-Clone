@@ -20,6 +20,8 @@ class Login extends Component {
     await this.setState({ data: this.props.user });
     if (this.state.data.token) {
       window.localStorage.setItem("token", this.state.data.token);
+      window.localStorage.setItem("username", this.state.data.user.username);
+      window.localStorage.setItem("fullName", this.state.data.user.fullName);
       window.location.href = "/";
     }
   };

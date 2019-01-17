@@ -9,8 +9,8 @@ const LoggedInUser = props => {
         alt="Hamza Elkhodiri"
       />
       <div className="username-container">
-        <h1>Test User</h1>
-        <small>Profile Name</small>
+        <h1>{props.fullName}</h1>
+        <small>{props.username}</small>
       </div>
     </div>
   );
