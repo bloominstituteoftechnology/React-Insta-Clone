@@ -65,7 +65,7 @@ class CommentSection extends React.Component {
         <div className="likes-comments">
           <div className="likes-comments-icons">
             <i className="far fa-heart fa-2x" onClick={this.toggleLike}></i>
-            <i className="far fa-comment fa-2x"></i>
+            <i className="far fa-comment fa-2x" onClick={this.commentInputFocus}></i>
           </div>
           <div className="likes-comments-stats">
             <p>{this.state.likes} likes</p>
@@ -84,7 +84,8 @@ class CommentSection extends React.Component {
           onChange={this.handleChange}
           onSubmit={this.addComment}
           />
-          <button onClick={this.addComment} disabled={this.state.currentComment === '' ? true : false}>Submit</button>
+          <button onClick={this.addComment} disabled={this.state.currentComment === '' ? true : false} >Submit</button>
+          
         </form>
 
       </div>

@@ -1,4 +1,4 @@
-.post-container {
+ .post-container {
     width: 600px;
     margin: auto;
     margin-bottom: 30px;
@@ -16,7 +16,7 @@
     width: 30px;
     margin-right: 10px;
 }
-.post-container .post-heading .post-heading-img-container img {
+.post-container .post-heading .post-heading-img-container img { 
     display: block;
     width: 100%;
     height: auto;
