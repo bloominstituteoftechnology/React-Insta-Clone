@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PostPage from './components/PostContainer/PostPage';
+import ProfilePage from './components/ProfilePage/ProfilePage';
 import Login from './components/Login/Login'
 import './App.css';
 import authenticate from './components/authentication/authenticate';
@@ -62,18 +63,22 @@ class App extends Component {
   render() {
     
     return (
+
       <div className="App">
          <SearchBar 
         handleChanges={this.handleChanges}
         logout={this.props.logout}
         username={this.props.username}
         />
-        <PostPage 
+        {this.state.profilePage === false 
+        ? <PostPage 
         dummyData={this.state.dummyData}
         filteredData={this.state.filteredData}
         username={this.state.username}
         logout={this.props.logout}
         />
+        : <ProfilePage />
+        }
       </div>
     );
   }
