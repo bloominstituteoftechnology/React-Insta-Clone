@@ -39,3 +39,6 @@
 .search-container .search-item-container .search-actions i {
     margin-left: 10px;
 }
+.search-container .search-item-container .search-actions .fa-user:hover {
+    cursor: pointer;
+}

@@ -7,7 +7,7 @@ import '../../App.css'
 const PostsPage = props => {
   return (
     <div className="app-container">
-        <SearchBar onChange={props.searchPosts} value={props.searchValue}/>
+        <SearchBar onChange={props.searchPosts} value={props.searchValue} logout={props.logout}/>
         <div className="main-content-container">
             {props.displayedPosts.map(post => {
             return <PostContainer post={post} userProfile={props.userProfile}/>

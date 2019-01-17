@@ -5,8 +5,8 @@ import './App.css';
 import dummyData from './dummy-data';
 import Authenticate from './components/Authentication/Authenticate';
 class App extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       posts: [],
       displayedPosts: [],
@@ -43,6 +43,7 @@ class App extends Component {
   render() {
     return (
       <PostsPage
+      logout={this.props.logout}
       searchValue={this.state.searchValue}
       searchPosts={this.searchPosts}
       displayedPosts={this.state.displayedPosts}

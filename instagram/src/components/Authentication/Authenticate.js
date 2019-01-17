@@ -12,20 +12,17 @@ const Authenticate = App =>
     }
     componentDidMount() {
       const user = localStorage.getItem('username')
-      {user ?
-      this.setState({
-        loggedIn: true
-      })
-      :
-      this.setState({
-        loggedIn: false
-      })
+      user ? this.setState({ loggedIn: true }) : this.setState({ loggedIn: false })
     }
+    logout = (event) => {
+      event.preventDefault()
+      localStorage.clear()
+      this.setState({ loggedIn: false })
     }
     render() {
       return(
         <React.Fragment>
-          {this.state.loggedIn ? <App /> : <Login />}
+          {this.state.loggedIn ? <App logout={this.logout}/> : <Login />}
         </React.Fragment>
       )
     }
