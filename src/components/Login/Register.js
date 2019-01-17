@@ -33,7 +33,9 @@ class Register extends Component {
   };
   render() {
     const { email, username, fullName, password } = this.state;
-
+    if (this.props.isRegistered) {
+      window.location.href = "/login";
+    }
     return (
       <div className="login-page">
         <div className="left-side">
@@ -48,7 +50,12 @@ class Register extends Component {
             Sign up to see photos and videos from your friends.
           </h2>
           <div className="signup-form">
-            <form>
+            <form
+              onSubmit={e => {
+                e.preventDefault();
+                return this.props.addUser(email, fullName, username, password);
+              }}
+            >
               <input
                 onChange={this.handleChange}
                 name="email"
@@ -77,9 +84,15 @@ class Register extends Component {
                 required
               />
               <button
-                onClick={e =>
-                  this.onAddingUser(e, email, fullName, username, password)
-                }
+                onClick={e => {
+                  e.preventDefault();
+                  return this.props.addUser(
+                    email,
+                    fullName,
+                    username,
+                    password
+                  );
+                }}
                 className="signup-btn"
               >
                 Sign Up
@@ -107,7 +120,8 @@ class Register extends Component {
 }
 
 const mapStateToProps = state => ({
-  user: state.Insta.user
+  user: state.Insta.user,
+  isRegistered: state.Insta.isRegistered
 });
 
 const mapActionsToProps = {

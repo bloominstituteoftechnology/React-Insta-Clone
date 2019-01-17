@@ -1,6 +1,11 @@
 import Data from "../dummy-data";
 
-const initalState = { data: Data, user: {}, isLoggedIn: false };
+const initalState = {
+  data: Data,
+  user: {},
+  isLoggedIn: false,
+  isRegistered: false
+};
 
 const instaReducer = (state = initalState, action) => {
   switch (action.type) {
@@ -45,6 +50,12 @@ const instaReducer = (state = initalState, action) => {
       return {
         ...state,
         isLoggedIn: true
+      };
+
+    case "REGISTERING":
+      return {
+        ...state,
+        isRegistered: true
       };
 
     default:

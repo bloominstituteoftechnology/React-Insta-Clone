@@ -53,12 +53,16 @@ export const newUser = (email, fullName, username, password) => dispatch => {
   //     });
   //   });
 
-  axios.post("https://comptagroup.com/api/instagram/register", {
-    email,
-    fullName,
-    username,
-    password
-  });
+  return axios
+    .post("https://comptagroup.com/api/instagram/register", {
+      email,
+      fullName,
+      username,
+      password
+    })
+    .then(res => {
+      dispatch({ type: "REGISTERING" });
+    });
 };
 
 export const login = (email, password) => dispatch => {
