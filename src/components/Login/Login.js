@@ -58,9 +58,13 @@ class Login extends Component {
                 required
               />
               <button
-                onClick={e =>
-                  this.onLogginIn(e, this.state.email, this.state.password)
-                }
+                onClick={e => {
+                  e.preventDefault();
+                  return this.props.onLoggin(
+                    this.state.email,
+                    this.state.password
+                  );
+                }}
                 className="signup-btn"
               >
                 Login
