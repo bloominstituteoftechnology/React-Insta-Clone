@@ -1,22 +1,9 @@
-.post-container .post-head {
-    height: 50px;
-    width: 200px;
-    display: flex;
-    justify-content: space-evenly;
-}
 
-.post-container .post-head img {
+#post {
     border-radius: 30px;
     width: 40px;
     height: 40px;
     align-self: center;
-}
-
-.post-container {
-    border: solid gray 1px;
-    width: 640px;
-    margin-top: 20px;
-    margin-left: 25%;
 }
 
 span {
