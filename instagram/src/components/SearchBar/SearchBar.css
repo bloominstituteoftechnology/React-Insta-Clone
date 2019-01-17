@@ -4,45 +4,41 @@
     margin-bottom: 7rem;
     padding-left: 8rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid lightgray;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
-.ig-icon-div{
-    /* width: 50%; */
-}
-
-.ig-icon {
-    width: 4%;
-    height: auto;
-    margin-left: 1rem;
-    margin-right: 2rem;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    padding-right: 2rem;
-    border-right: 1px solid black;
-}
-
-.ig-letters {
-    width: 15%;
-    height: auto;
-    /* margin-bottom: 2rem; */
-}
-
-/* .search-div{
+.ig-icon-a {
     display: flex;
-    justify-content: center;
-} */
-
-.search {
-    text-align: center;
-    height: 2rem;
-    width: 15rem;
-    font-size: 1.2rem;
+    /* justify-content: flex-start;  */
+    /* width: 50%; */
+    
 }
+
+.ig-icon-div{
+    /* display: flex; */
+    justify-content: flex-start; 
+    /* position: relative; */
+}
+
+    .ig-icon {
+        width: 4%;
+        height: auto;
+        margin-left: 1rem;
+        margin-right: 2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        padding-right: 2rem;
+        border-right: 1px solid black;
+    }
+
+    .ig-letters {
+        width: 15%;
+        height: auto;
+        /* margin-bottom: 2rem; */
+    }
 
 .search-div {
     /* border: 1px solid lightgray; */
@@ -58,24 +54,35 @@
     /* padding-right: 10rem; */
 }
 
-.searchbar-icon {
-    width: 15%;
-    height: auto;
-}
+    .searchbar-icon {
+        width: 15%;
+        height: auto;
+    }
 
-.explore-icon {
-    width: 15%;
-    height: auto;
-    /* padding-right: 1rem; */
-}
+    .input-search {
+        text-align: center;
+        height: 2rem;
+        width: 15rem;
+        font-size: 1.2rem;
+    }
 
-.heart-icon {
-    width: 20%;
-    height: auto;
-    padding-right: 1rem;
+.profile-div{
+    /* display: flex; */
+    justify-content: flex-end;
 }
+    .explore-icon {
+        width: 15%;
+        height: auto;
+        /* padding-right: 1rem; */
+    }
 
-.profile-icon {
-    width: 13%;
-    height: auto; 
-}
+    .heart-icon {
+        width: 20%;
+        height: auto;
+        padding-right: 1rem;
+    }
+
+    .profile-icon {
+        width: 13%;
+        height: auto; 
+    }

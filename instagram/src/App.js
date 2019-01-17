@@ -9,26 +9,26 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      data: dummyData
-      // data: [],
+      // data: dummyData
+      data: [],
     }
   }
 
-  // componentDidMount() {
-  //   setTimeout(() => {
-  //     this.setState({data: dummyData})
-  //   }, 2000)
-  // }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({data: dummyData})
+    }, 2000)
+  }
 
   render() {
     console.log(this.state.data)
     return (
       <div className="App">
-        {/* <SearchBar data={this.state.data}/> */}
-        {/* {this.state.data.map(dataItem => (
+        <SearchBar data={this.state.data}/>
+        {this.state.data.map(dataItem => (
           <PostContainer data={dataItem} key={dataItem.timestamp}/>
-        ))} */}
-        <PostContainer data={this.state.data}/>
+        ))}
+        {/* <PostContainer data={this.state.data}/> */}
       </div>
     );
   }
