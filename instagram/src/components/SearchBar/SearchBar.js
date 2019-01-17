@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components'
 
 const SearchBarContainer = styled.div``;
-const SearchForm = styled.form``;
+const StyledForm = styled.form``;
 const SearchInput = styled.input``;
 const SubmitSearch = styled.input``;
 const SearchHeader = styled.header``;
+
 
 const SearchBar= props =>{
   return(
@@ -16,7 +17,7 @@ const SearchBar= props =>{
             <SubmitSearch type ="submit" value = "Submit"/>
           </StyledForm>
       </SearchBarContainer>
-    </SearchHeader
+    </SearchHeader>
 
   );
 }
