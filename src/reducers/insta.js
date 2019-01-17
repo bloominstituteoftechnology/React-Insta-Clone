@@ -4,7 +4,8 @@ const initalState = {
   data: Data,
   user: {},
   isLoggedIn: false,
-  isRegistered: false
+  isRegistered: false,
+  isLoading: false
 };
 
 const instaReducer = (state = initalState, action) => {
@@ -56,6 +57,12 @@ const instaReducer = (state = initalState, action) => {
       return {
         ...state,
         isRegistered: true
+      };
+
+    case "LOADING":
+      return {
+        ...state,
+        isLoading: action.isLoading
       };
 
     default:

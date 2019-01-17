@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import sprite from "./sprite.png";
 import { connect } from "react-redux";
 import { login } from "../../actions";
+import Loading from "../Loading";
 
 class Login extends Component {
   state = {
@@ -21,9 +22,13 @@ class Login extends Component {
   };
   render() {
     console.log(this.props.isAuthenticated);
+    if (this.props.isLoading) {
+      return <Loading />;
+    }
     if (this.props.isAuthenticated) {
       window.location.href = "/";
     }
+
     return (
       <div className="login-page">
         <div className="left-side">
@@ -93,7 +98,8 @@ class Login extends Component {
 
 const mapStateToProps = state => ({
   user: state.Insta.user,
-  isAuthenticated: state.Insta.isLoggedIn
+  isAuthenticated: state.Insta.isLoggedIn,
+  isLoading: state.Insta.isLoading
 });
 
 const mapActionsToProps = {

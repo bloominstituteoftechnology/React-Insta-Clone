@@ -52,7 +52,7 @@ export const newUser = (email, fullName, username, password) => dispatch => {
   //       }
   //     });
   //   });
-
+  dispatch({ type: "LOADING", isLoading: true });
   return axios
     .post("https://comptagroup.com/api/instagram/register", {
       email,
@@ -62,6 +62,7 @@ export const newUser = (email, fullName, username, password) => dispatch => {
     })
     .then(res => {
       dispatch({ type: "REGISTERING" });
+      dispatch({ type: "LOADING", isLoading: false });
     });
 };
 
@@ -85,6 +86,7 @@ export const login = (email, password) => dispatch => {
   //       data: data
   //     });
   //   });
+  dispatch({ type: "LOADING", isLoading: true });
   return axios
     .post("https://comptagroup.com/api/instagram/login", {
       email,
@@ -97,5 +99,6 @@ export const login = (email, password) => dispatch => {
       localStorage.setItem("username", user.username);
       localStorage.setItem("fullName", user.fullName);
       dispatch({ type: "LOGGING_IN" });
+      dispatch({ type: "LOADING", isLoading: false });
     });
 };

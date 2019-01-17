@@ -3,6 +3,7 @@ import "./Login.scss";
 import sprite from "./sprite.png";
 import { connect } from "react-redux";
 import { newUser } from "../../actions";
+import Loading from "../Loading";
 
 class Register extends Component {
   state = {
@@ -33,6 +34,9 @@ class Register extends Component {
   };
   render() {
     const { email, username, fullName, password } = this.state;
+    if (this.props.isLoading) {
+      return <Loading />;
+    }
     if (this.props.isRegistered) {
       window.location.href = "/login";
     }
@@ -121,7 +125,8 @@ class Register extends Component {
 
 const mapStateToProps = state => ({
   user: state.Insta.user,
-  isRegistered: state.Insta.isRegistered
+  isRegistered: state.Insta.isRegistered,
+  isLoading: state.Insta.isLoading
 });
 
 const mapActionsToProps = {
