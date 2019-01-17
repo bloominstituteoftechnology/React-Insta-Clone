@@ -13,13 +13,19 @@ class SearchBar extends React.Component{
     console.log(this.state)
     return (
         <div className="search-header-wrapper">
-        <form onSubmit={this.onFormSubmit}>
-            <div>
+            <div className = "logo">     
                 <img src="https://img.icons8.com/ios/50/000000/instagram-new.png" alt="instagram logo" id="insta-logo"/>
-                <label> 
-                <h1 className="title">Instagram</h1>
-                </label>
             </div>
+            <div className="titlediv">
+                
+                
+                <h1 className="title">Instagram</h1>
+                
+            </div>
+
+
+            <form onSubmit={this.onFormSubmit} className="forminput">
+             
             <input type = "text" 
         value= {this.state.term} 
         onChange={e=>this.setState({term: e.target.value})}></input>
