@@ -55,12 +55,20 @@ export const login = (email, password) => dispatch => {
     })
     .then(res => {
       const { token, user } = res.data;
-      localStorage.setItem("token", token);
-      localStorage.setItem("username", user.username);
-      localStorage.setItem("fullName", user.fullName);
-      dispatch({ type: "LOGGING_IN" });
-      dispatch({ type: "LOADING", isLoading: false });
+      if (res.data.err) {
+        dispatch({ type: "ERROR", data: res.data });
+        dispatch({ type: "LOADING", isLoading: false });
+      } else {
+        localStorage.setItem("token", token);
+        localStorage.setItem("username", user.username);
+        localStorage.setItem("fullName", user.fullName);
+        dispatch({ type: "LOGGING_IN" });
+        dispatch({ type: "LOADING", isLoading: false });
+      }
     });
+  // .catch(err => {
+  //   dispatch({ type: "ERROR", data: err });
+  // });
 };
 
 export const getData = () => dispatch => {

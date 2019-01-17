@@ -4,7 +4,7 @@ const initalState = {
   isLoggedIn: false,
   isRegistered: false,
   isLoading: false,
-  error: {}
+  error: []
 };
 
 const instaReducer = (state = initalState, action) => {
@@ -54,7 +54,7 @@ const instaReducer = (state = initalState, action) => {
     case "ERROR":
       return {
         ...state,
-        error: action.error
+        error: action.data
       };
     case "CURRENT_USER":
       return {
