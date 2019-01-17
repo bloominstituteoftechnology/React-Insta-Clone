@@ -1,5 +1,3 @@
-import Data from "../dummy-data";
-
 const initalState = {
   data: [],
   user: {},

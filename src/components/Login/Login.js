@@ -52,8 +52,9 @@ class Login extends Component {
               <input
                 onChange={this.handleChange}
                 name="email"
-                placeholder="Username"
+                placeholder="Email"
                 required
+                autoComplete="off"
               />
               <input
                 onChange={this.handleChange}
@@ -61,6 +62,7 @@ class Login extends Component {
                 name="password"
                 placeholder="Password"
                 required
+                autoComplete="off"
               />
               <button
                 onClick={e =>

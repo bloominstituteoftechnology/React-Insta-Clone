@@ -66,6 +66,7 @@ class Register extends Component {
                 placeholder="Mobile Number or Email"
                 type="email"
                 required
+                autoComplete="off"
               />
               <input
                 onChange={this.handleChange}
@@ -73,12 +74,14 @@ class Register extends Component {
                 placeholder="Full Name"
                 type="text"
                 required
+                autoComplete="off"
               />
               <input
                 onChange={this.handleChange}
                 name="username"
                 placeholder="Username"
                 required
+                autoComplete="off"
               />
               <input
                 onChange={this.handleChange}
@@ -86,6 +89,7 @@ class Register extends Component {
                 name="password"
                 placeholder="Password"
                 required
+                autoComplete="off"
               />
               <button
                 onClick={e => {
