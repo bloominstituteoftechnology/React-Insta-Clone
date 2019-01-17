@@ -67,6 +67,9 @@ class Login extends Component {
                 </a>{" "}
                 and <a href="/legal/cookies/">Cookies Policy</a>.
               </p>
+              <p className="terms">
+                Don't Have an account? <a href="/">Sign Up</a>
+              </p>
             </form>
           </div>
         </div>
