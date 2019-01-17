@@ -35,13 +35,15 @@ class SearchBar extends Component {
         // console.log("usernames: ", (this.props.data).length)
         return(
             <div className="searchBar">
-                <a href="" className="ig-icon-a">
-                    <div className="ig-icon-div">
-                        <img src={ig_icon} alt="IG icon" className="ig-icon"/>
-                        <img src={ig_letters} alt="IG letters" className="ig-letters"/>
-                    </div>
-                </a>
-
+                <div className="wrapped-ig">
+                    <a href="" className="ig-icon-a">
+                        <div className="ig-icon-div">
+                            <img src={ig_icon} alt="IG icon" className="ig-icon"/>
+                            <img src={ig_letters} alt="IG letters" className="ig-letters"/>
+                        </div>
+                    </a>
+                </div>
+                
                 <div className="search-div">
                     <img src={searchbar} alt="searchbar icon" className="searchbar-icon"/>
                     <input

@@ -18,12 +18,18 @@
     height: 3vh;
     margin-left: 2rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding-top: 1rem;
     color: grey;
     font-size: 1.5rem;
     border: none;
     border-top: 1px solid lightgray;
+}
+
+.input-comment {
+    border: none;
+    font-size: 1.5rem;
+    line-height: 18px;
 }
 
 .heart-icon{

@@ -10,21 +10,23 @@
     padding-bottom: 1rem;
 }
 
+.wrapped-ig{
+    width: 35%;
+    display: flex;
+    justify-content: flex-start; 
+}
+
 .ig-icon-a {
     display: flex;
-    /* justify-content: flex-start;  */
-    /* width: 50%; */
     
 }
 
 .ig-icon-div{
-    /* display: flex; */
     justify-content: flex-start; 
-    /* position: relative; */
 }
 
     .ig-icon {
-        width: 4%;
+        width: 10%;
         height: auto;
         margin-left: 1rem;
         margin-right: 2rem;
@@ -35,13 +37,11 @@
     }
 
     .ig-letters {
-        width: 15%;
+        width: 37%;
         height: auto;
-        /* margin-bottom: 2rem; */
     }
 
 .search-div {
-    /* border: 1px solid lightgray; */
     color: gray;
     height: 2rem;
     width: 30rem;
@@ -55,19 +55,21 @@
 }
 
     .searchbar-icon {
-        width: 15%;
+        width: 9%;
         height: auto;
     }
 
     .input-search {
         text-align: center;
-        height: 2rem;
+        height: 2.5rem;
         width: 15rem;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
 .profile-div{
-    /* display: flex; */
+    width: 25%;
+    height: 100%;
+    display: flex;
     justify-content: flex-end;
 }
     .explore-icon {

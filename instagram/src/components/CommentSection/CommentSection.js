@@ -74,12 +74,12 @@ class CommentSection extends Component {
             key={index}
           />
         ))}
-        <form>
+        <form className='input'>
           <input
             name="comment"
             type="text" 
             placeholder="Add a comment..." 
-            className='input'   
+            className='input-comment'   
             onChange={this.changeComment}
             onKeyDown={this.changeComment}
             value={this.state.comment}
